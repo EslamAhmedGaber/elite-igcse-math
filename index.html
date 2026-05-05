@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IGCSE Math Classified Practice Bank — v2 (Preview)</title>
+  <meta name="description" content="Edexcel IGCSE 4MA1 Higher Mathematics — classified past-paper questions by topic. Practice, track progress, and download PDFs. Prepared by Dr Eslam Ahmed, Cairo University.">
+  <meta name="robots" content="noindex,nofollow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Elite IGCSE Mathematics — Classified Past-Paper Practice">
+  <meta property="og:description" content="974 classified Edexcel 4MA1 questions + 214 Q20+ expertise problems. Practice by topic, track progress, download PDFs. By Dr Eslam Ahmed, Cairo University.">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:locale:alternate" content="ar_EG">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Elite IGCSE Mathematics — Classified Past-Paper Practice">
+  <meta name="twitter:description" content="974 classified Edexcel 4MA1 questions + 214 Q20+ expertise problems. By Dr Eslam Ahmed, Cairo University.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"]],
+        displayMath: [["\\[", "\\]"]]
+      },
+      svg: { fontCache: "global" }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <script defer src="questions-data.js"></script>
+  <script defer src="solutions-data.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-block">
+      <div class="brand"><span class="brand-mark">IGCSE</span><span class="brand-title">Math Classified Practice Bank</span><span class="v2-badge" title="Local v2 redesign workspace — not the live site">v2 PREVIEW</span></div>
+      <div class="teacher">Dr Eslam Ahmed | Assistant Lecturer, Cairo University Faculty of Engineering | 01120009622</div>
+    </div>
+    <nav class="top-actions" aria-label="Student actions">
+      <a class="button primary" data-lead-trigger="whatsapp" href="https://wa.me/201120009622?text=I%20want%20to%20enroll%20in%20the%20IGCSE%20Math%20Expertise%20practice%20course" target="_blank" rel="noreferrer">Enroll by WhatsApp</a>
+      <a class="button ghost" href="tel:01120009622">Call 01120009622</a>
+      <a class="button ghost" href="downloads/classified_problems.pdf" target="_blank" rel="noreferrer">classified_problems.pdf</a>
+      <a class="button ghost" href="downloads/Classified_Expertise.pdf" target="_blank" rel="noreferrer">Classified_Expertise.pdf</a>
+      <a class="button ghost" href="downloads/answer_book.pdf" target="_blank" rel="noreferrer">Answer Book</a>
+      <button id="printSelectedBtn" class="button ghost" type="button">Print Selected</button>
+    </nav>
+  </header>
+
+  <main class="shell">
+    <aside class="sidebar">
+      <section class="quick-stats">
+        <div><strong id="totalQuestions">214</strong><span>questions</span></div>
+        <div><strong id="selectedCount">0</strong><span>selected</span></div>
+        <div><strong id="solvedCount">0</strong><span>solved</span></div>
+        <div><strong id="visibleCount">0</strong><span>visible</span></div>
+      </section>
+      <section class="study-card">
+        <h2 class="panel-title">Study Timer</h2>
+        <div class="timer-face">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="timer-track" cx="60" cy="60" r="52"></circle>
+            <circle id="timerRing" class="timer-ring" cx="60" cy="60" r="52"></circle>
+          </svg>
+          <strong id="timerDisplay">25:00</strong>
+        </div>
+        <div class="timer-controls">
+          <button id="timerToggleBtn" type="button">Start</button>
+          <button id="timerResetBtn" type="button">Reset</button>
+        </div>
+        <div class="timer-presets">
+          <button type="button" data-minutes="25">25 min</button>
+          <button type="button" data-minutes="15">15 min</button>
+          <button type="button" data-minutes="5">5 min</button>
+        </div>
+      </section>
+      <section class="filters">
+        <h2 class="panel-title">Find Your Question</h2>
+        <label>Search<input id="searchBox" type="search" placeholder="topic, paper, keyword"></label>
+        <label>Unit<select id="unitFilter"></select></label>
+        <label>Topic<select id="topicFilter"></select></label>
+        <label>Paper<select id="paperFilter"></select></label>
+        <label>View<select id="viewFilter">
+          <option value="">All questions</option>
+          <option value="selected">Selected only</option>
+          <option value="unsolved">Unsolved only</option>
+          <option value="solved">Solved only</option>
+        </select></label>
+        <label>Minimum marks<input id="minMarks" type="number" min="0" step="1"></label>
+        <div class="filter-buttons">
+          <button id="resetBtn" type="button">Reset</button>
+          <button id="randomBtn" type="button">Random 10</button>
+          <button id="clearSelectedBtn" type="button">Clear Selected</button>
+        </div>
+      </section>
+      <section class="progress-card">
+        <h2 class="panel-title">Topic Mastery</h2>
+        <div id="topicProgress" class="topic-progress"></div>
+      </section>
+      <section class="teacher-card">
+        <span class="card-label">Prepared by</span>
+        <strong>Dr Eslam Ahmed</strong>
+        <span>Assistant Lecturer, Cairo University Faculty of Engineering</span>
+        <a href="tel:01120009622">Call: 01120009622</a>
+        <a class="enroll-link" data-lead-trigger="whatsapp" href="https://wa.me/201120009622?text=I%20want%20to%20enroll%20in%20the%20IGCSE%20Math%20Expertise%20practice%20course" target="_blank" rel="noreferrer">Enroll by WhatsApp</a>
+      </section>
+    </aside>
+
+    <section class="content">
+      <section class="hero-panel" aria-labelledby="heroTitle">
+        <div class="hero-copy">
+          <span class="eyebrow">IGCSE Mathematics | Full Bank + Q20+ Expertise</span>
+          <h1 id="heroTitle">All classified questions plus focused expertise practice.</h1>
+          <p>Switch between the full classified question bank and the Q20+ expertise bank, choose topics, zoom every problem, track solved and unsolved questions, then download or print your own worksheet.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="downloads/classified_problems.pdf" target="_blank" rel="noreferrer">Download classified_problems.pdf</a>
+            <a class="button light" href="downloads/Classified_Expertise.pdf" target="_blank" rel="noreferrer">Download Classified_Expertise.pdf</a>
+            <a class="button light" href="downloads/answer_book.pdf" target="_blank" rel="noreferrer">Download Answer / Mark Scheme</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Question bank preview">
+          <div class="hero-card-head">
+            <span>Live Practice Bank</span>
+            <strong id="heroQuestionCount">974 full questions + 214 Q20+ questions</strong>
+          </div>
+          <div id="heroPreview" class="hero-preview"></div>
+          <div class="hero-contact">
+            <strong>Dr Eslam Ahmed</strong>
+            <span>Assistant Lecturer, Cairo University Faculty of Engineering</span>
+            <a data-lead-trigger="whatsapp" href="https://wa.me/201120009622?text=I%20want%20to%20enroll%20in%20the%20IGCSE%20Math%20Expertise%20practice%20course" target="_blank" rel="noreferrer">WhatsApp: 01120009622</a>
+          </div>
+        </aside>
+      </section>
+
+      <section class="trust-panel" aria-labelledby="trustTitle">
+        <div class="trust-head">
+          <span class="eyebrow">Why Dr Eslam Ahmed</span>
+          <h2 id="trustTitle">Taught by a Cairo University engineer who lives inside Edexcel 4MA1.</h2>
+          <p>Every classified question on this site was solved, marked, and topic-tagged by Dr Eslam personally — the same way he teaches his enrolled students.</p>
+        </div>
+        <ul class="credentials-list">
+          <li><strong>Assistant Lecturer</strong><span>Cairo University Faculty of Engineering</span></li>
+          <li><strong>Specialty</strong><span>Edexcel IGCSE 4MA1 Higher Mathematics</span></li>
+          <li><strong>Bank size</strong><span>974 classified + 214 Q20+ expertise questions</span></li>
+          <li><strong>Languages</strong><span>English &middot; Arabic</span></li>
+        </ul>
+        <div class="testimonials" aria-label="Student results">
+          <article class="testimonial placeholder">
+            <span class="t-grade">A*</span>
+            <blockquote>“Add a real student testimonial here — name, school, year, the result they achieved with Dr Eslam.”</blockquote>
+            <cite>— Student name, School, Year</cite>
+          </article>
+          <article class="testimonial placeholder">
+            <span class="t-grade">9</span>
+            <blockquote>“Add a parent or student quote about how the practice bank helped them improve specific topics or exam confidence.”</blockquote>
+            <cite>— Student or parent name</cite>
+          </article>
+          <article class="testimonial placeholder">
+            <span class="t-grade">A*</span>
+            <blockquote>“Add a third short quote — ideally one that mentions a specific weak topic that became a strength.”</blockquote>
+            <cite>— Student name</cite>
+          </article>
+        </div>
+        <p class="placeholder-note">Replace these three placeholder cards with real testimonials before publishing. Never use fabricated quotes.</p>
+      </section>
+
+      <section class="pricing-panel" aria-labelledby="pricingTitle">
+        <div class="pricing-head">
+          <span class="eyebrow">Course Packages</span>
+          <h2 id="pricingTitle">Pick the path that matches your exam date.</h2>
+          <p>Three ways to study with Dr Eslam — group, private one-to-one, or short intensive sprint before the exam window.</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <header>
+              <span class="p-tag">Most popular</span>
+              <strong>Group Course</strong>
+              <span class="p-fee">Contact for fee</span>
+            </header>
+            <ul>
+              <li>Live classes by Zoom or in person</li>
+              <li>Full Edexcel 4MA1 syllabus over the term</li>
+              <li>Weekly classified problem sets</li>
+              <li>Mock papers with detailed marking</li>
+            </ul>
+            <button type="button" class="enroll-trigger" data-package="group">Enroll in Group Course</button>
+          </article>
+          <article class="pricing-card highlight">
+            <header>
+              <span class="p-tag">Best results</span>
+              <strong>Private 1-to-1</strong>
+              <span class="p-fee">Contact for fee</span>
+            </header>
+            <ul>
+              <li>Sessions tailored to your weak topics</li>
+              <li>Flexible timing — including weekends</li>
+              <li>Direct WhatsApp support between sessions</li>
+              <li>Personal target tracking to A* / 9</li>
+            </ul>
+            <button type="button" class="enroll-trigger" data-package="private">Enroll in Private 1-to-1</button>
+          </article>
+          <article class="pricing-card">
+            <header>
+              <span class="p-tag">Pre-exam</span>
+              <strong>Intensive Sprint</strong>
+              <span class="p-fee">Contact for fee</span>
+            </header>
+            <ul>
+              <li>4–6 weeks before the exam session</li>
+              <li>Focus on Q20+ expertise questions</li>
+              <li>Past-paper mocks under timed conditions</li>
+              <li>Topic-by-topic confidence boost</li>
+            </ul>
+            <button type="button" class="enroll-trigger" data-package="intensive">Enroll in Intensive Sprint</button>
+          </article>
+        </div>
+        <p class="placeholder-note">Add real fees and the next batch start date before publishing. Until then, leads will simply ask via WhatsApp.</p>
+      </section>
+
+      <section class="feature-grid" aria-label="Website features">
+        <article class="feature-card">
+          <span class="feature-kicker">01</span>
+          <strong>Choose Questions</strong>
+          <p>Switch between all classified questions and Q20+ expertise questions, then filter by unit, topic, paper, marks, selected, solved, or unsolved.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-kicker">02</span>
+          <strong>Download Books</strong>
+          <p>Download both books directly: classified_problems.pdf for the full bank and Classified_Expertise.pdf for Q20+ practice.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-kicker">03</span>
+          <strong>Build Practice</strong>
+          <p>Select your own questions, generate a random mixed set, print selected questions, and continue later.</p>
+        </article>
+      </section>
+
+      <section class="download-panel" aria-label="Download center">
+        <div>
+          <span class="eyebrow">Download Center</span>
+          <h2>Everything students need is one click away.</h2>
+          <p>Use the PDF books for revision, print selected questions as worksheets, or continue directly in the question bank.</p>
+        </div>
+        <div class="download-actions">
+          <a href="downloads/classified_problems.pdf" target="_blank" rel="noreferrer">classified_problems.pdf<br>Full Classified Bank</a>
+          <a href="downloads/Classified_Expertise.pdf" target="_blank" rel="noreferrer">Classified_Expertise.pdf<br>Q20+ Expertise Book</a>
+          <a href="downloads/answer_book.pdf" target="_blank" rel="noreferrer">Answer / Mark Scheme Book</a>
+          <a href="downloads/coordinate_geometry_10_clean.pdf" target="_blank" rel="noreferrer">Coordinate Geometry Worksheet</a>
+          <button id="printSelectedBtnHero" type="button">Print Selected Worksheet</button>
+        </div>
+      </section>
+
+      <section class="progress-panel" aria-label="Progress snapshot">
+        <div>
+          <span class="eyebrow">My Progress</span>
+          <h2>Track solved questions and focus the next practice session.</h2>
+          <p>The progress shown here is saved in this browser, so students can come back and continue their own practice list.</p>
+        </div>
+        <div class="progress-summary">
+          <div><strong id="progressSolved">0</strong><span>Solved</span></div>
+          <div><strong id="progressUnsolved">0</strong><span>Unsolved</span></div>
+          <div><strong id="progressSelected">0</strong><span>Selected</span></div>
+          <div><strong id="progressPercent">0%</strong><span>Complete</span></div>
+        </div>
+        <div class="overall-progress" aria-label="Overall solved progress">
+          <span id="progressLabel">0% complete</span>
+          <div><i id="progressBar"></i></div>
+        </div>
+      </section>
+
+      <section class="bank-panel" aria-label="Question bank mode">
+        <div>
+          <span class="eyebrow">Question Bank Mode</span>
+          <h2 id="bankTitle">All Classified Questions</h2>
+          <p id="bankDescription">All cropped classified questions from the full output folder.</p>
+        </div>
+        <div class="bank-buttons">
+          <button class="active" type="button" data-bank="all">
+            <strong>All Classified Questions</strong>
+            <span id="allBankCount">974 questions</span>
+          </button>
+          <button type="button" data-bank="expertise">
+            <strong>Expertise Q20+</strong>
+            <span id="expertiseBankCount">214 questions</span>
+          </button>
+        </div>
+      </section>
+
+      <div class="content-head">
+        <div>
+          <h2>Question Bank</h2>
+          <p id="bankSubtitle">Search, filter, zoom, select, solve, and print questions from the active bank.</p>
+        </div>
+        <div class="head-tools">
+          <label class="sort-label">Sort<select id="sortMode">
+            <option value="topic">Topic order</option>
+            <option value="paper">Paper</option>
+            <option value="marks_desc">Marks high to low</option>
+          </select></label>
+          <div class="layout-toggle" aria-label="Question layout">
+            <button id="gridLayoutBtn" class="active" type="button">Grid</button>
+            <button id="listLayoutBtn" type="button">List</button>
+          </div>
+        </div>
+      </div>
+      <section class="practice-panel">
+        <button type="button" data-practice="all">Question Bank</button>
+        <button type="button" data-practice="topic">Choose Topic</button>
+        <button type="button" data-practice="mixed">Mixed Expertise</button>
+        <button type="button" data-practice="unsolved">Continue Unsolved</button>
+        <a data-lead-trigger="whatsapp" href="https://wa.me/201120009622?text=I%20want%20to%20enroll%20in%20the%20IGCSE%20Math%20Expertise%20practice%20course" target="_blank" rel="noreferrer">Enroll with Dr Eslam</a>
+      </section>
+      <div id="topicStrip" class="topic-strip"></div>
+      <div id="questionGrid" class="question-grid"></div>
+    </section>
+  </main>
+
+  <dialog id="viewerDialog" class="viewer-dialog">
+    <div class="viewer-head">
+      <div>
+        <strong id="viewerTitle"></strong>
+        <div id="viewerMeta"></div>
+      </div>
+      <button id="closeViewerBtn" type="button">Close</button>
+    </div>
+    <img id="viewerImage" alt="">
+  </dialog>
+
+  <dialog id="solutionDialog" class="viewer-dialog solution-dialog">
+    <div class="viewer-head">
+      <div>
+        <strong id="solutionTitle"></strong>
+        <div id="solutionMeta"></div>
+      </div>
+      <button id="closeSolutionBtn" type="button">Close</button>
+    </div>
+    <div id="solutionBody" class="solution-body"></div>
+  </dialog>
+
+  <section id="printArea" class="print-area"></section>
+
+  <dialog id="leadDialog" class="lead-dialog" aria-labelledby="leadDialogTitle">
+    <form id="leadForm" method="dialog">
+      <header class="lead-head">
+        <strong id="leadDialogTitle">Enroll with Dr Eslam</strong>
+        <button type="button" id="leadCloseBtn" aria-label="Close">&times;</button>
+      </header>
+      <p class="lead-sub">Tell us a little about you so Dr Eslam can reply with the right course details on WhatsApp.</p>
+      <label>Your name<input id="leadName" name="name" type="text" required autocomplete="name" placeholder="e.g. Yousef Hassan"></label>
+      <label>Year / Grade<select id="leadYear" name="year" required>
+        <option value="">Select year</option>
+        <option>Year 9</option>
+        <option>Year 10</option>
+        <option>Year 11</option>
+        <option>Repeat / Retake</option>
+        <option>Other</option>
+      </select></label>
+      <label>Target exam session<select id="leadExam" name="exam" required>
+        <option value="">Select session</option>
+        <option>January 2027</option>
+        <option>May/June 2027</option>
+        <option>January 2028</option>
+        <option>Later / Undecided</option>
+      </select></label>
+      <label>Interested in<select id="leadPackage" name="package">
+        <option value="">Any package</option>
+        <option value="group">Group Course</option>
+        <option value="private">Private 1-to-1</option>
+        <option value="intensive">Intensive Sprint</option>
+      </select></label>
+      <div class="lead-actions">
+        <button type="submit" class="button primary">Open WhatsApp</button>
+        <button type="button" id="leadSkipBtn" class="button ghost">Skip and chat directly</button>
+      </div>
+      <p class="lead-privacy">We don't store anything on a server. Your details are saved only in this browser and added to the WhatsApp message you send.</p>
+    </form>
+  </dialog>
+</body>
+</html>
