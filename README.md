@@ -1,12 +1,10 @@
-# IGCSE Mathematics Classified Practice Bank — v2 (Working Copy)
+# Elite IGCSE Mathematics
 
-> **This is the v2 redesign workspace.** It was cloned from the live site to safely test conversion, performance, and SEO improvements without affecting the public website.
->
-> - Live (untouched): `https://eslamahmedgaber.github.io/expertise-math-practice-bank/`
-> - v2 GitHub repo: _to be created via GitHub Desktop — not yet linked_
-> - v2 location on disk: `C:\Users\Eslam\Documents\Elite IGCSE v2\website`
->
-> Until a new repo is connected in GitHub Desktop, this folder has **no git remote**, so changes cannot be pushed to the live site by accident.
+Live student website for Edexcel IGCSE 4MA1 Higher Mathematics — classified past-paper questions, downloadable PDFs, and online classes by Dr Eslam Ahmed.
+
+- **Live site:** https://eslamahmedgaber.github.io/elite-igcse-math/
+- **Pages:** Home (`index.html`) · Practice (`practice.html`) · About (`about.html`) · Downloads (`downloads.html`)
+- **Tech:** static HTML/CSS/vanilla JS — no build step. Hosted on GitHub Pages from the repo root.
 
 Prepared by:
 
