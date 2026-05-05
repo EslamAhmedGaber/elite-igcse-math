@@ -993,7 +993,11 @@ p { margin: 4px 0 0; color: var(--muted); }
   padding: 3px 10px; border-radius: 999px; text-transform: uppercase;
 }
 .pricing-card strong { font-size: 20px; }
-.p-fee { font-size: 14px; opacity: 0.85; }
+.p-fee { font-size: 14px; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.p-old { text-decoration: line-through; opacity: 0.55; font-size: 14px; }
+.p-now { font-size: 26px; font-weight: 800; color: var(--accent); letter-spacing: -0.5px; }
+.pricing-card.highlight .p-now { color: #f4cb61; }
+.p-unit { font-size: 12px; opacity: 0.75; }
 .pricing-card ul { list-style: none; padding: 0; margin: 4px 0; display: flex; flex-direction: column; gap: 8px; }
 .pricing-card ul li { font-size: 14px; color: var(--ink); position: relative; padding-left: 18px; line-height: 1.45; }
 .pricing-card ul li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
