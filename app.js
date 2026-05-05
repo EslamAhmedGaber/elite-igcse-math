@@ -1,3 +1,9 @@
+if (!document.getElementById("questionGrid")) {
+  // Not the practice page — bail. lead.js handles the enrollment dialog globally.
+  console.info("[app.js] questionGrid not found; skipping bank initialisation.");
+  throw new Error("__app_js_no_bank__");
+}
+
 const allQuestions = window.QUESTION_DATA || [];
 const meta = window.SITE_META || {};
 const solutionData = window.SOLUTION_DATA || {};
@@ -469,108 +475,6 @@ els.bankButtons.forEach((button) => {
 els.practicePanel.addEventListener("click", (event) => {
   const button = event.target.closest("[data-practice]");
   if (button) practiceMode(button.dataset.practice);
-});
-
-const LEAD_PHONE = "201120009622";
-const LEAD_KEY = "leadInfoV1";
-const leadDialog = document.getElementById("leadDialog");
-const leadForm = document.getElementById("leadForm");
-const leadCloseBtn = document.getElementById("leadCloseBtn");
-const leadSkipBtn = document.getElementById("leadSkipBtn");
-const leadName = document.getElementById("leadName");
-const leadYear = document.getElementById("leadYear");
-const leadExam = document.getElementById("leadExam");
-const leadPackageSelect = document.getElementById("leadPackage");
-let pendingLeadPackage = "";
-
-function readLead() {
-  try {
-    return JSON.parse(localStorage.getItem(LEAD_KEY) || "{}");
-  } catch (err) {
-    return {};
-  }
-}
-
-function prefillLeadForm() {
-  const saved = readLead();
-  if (saved.name) leadName.value = saved.name;
-  if (saved.year) leadYear.value = saved.year;
-  if (saved.exam) leadExam.value = saved.exam;
-  if (pendingLeadPackage) {
-    leadPackageSelect.value = pendingLeadPackage;
-  } else if (saved.package) {
-    leadPackageSelect.value = saved.package;
-  }
-}
-
-function buildLeadWhatsAppUrl(info) {
-  const pkgLabel = ({
-    group: "Group Course",
-    private: "Private 1-to-1",
-    intensive: "Intensive Sprint",
-  })[info.package] || "Any package";
-  const lines = [
-    "Hello Dr Eslam, I would like to enroll in the IGCSE Math course.",
-    `Name: ${info.name}`,
-    `Year: ${info.year}`,
-    `Target exam: ${info.exam}`,
-    `Interested in: ${pkgLabel}`,
-  ];
-  return `https://wa.me/${LEAD_PHONE}?text=${encodeURIComponent(lines.join("\n"))}`;
-}
-
-function openLeadDialog(pkg) {
-  pendingLeadPackage = pkg || "";
-  prefillLeadForm();
-  if (typeof leadDialog.showModal === "function") {
-    leadDialog.showModal();
-  } else {
-    leadDialog.setAttribute("open", "");
-  }
-  setTimeout(() => leadName.focus(), 30);
-}
-
-function closeLeadDialog() {
-  if (leadDialog.open) leadDialog.close();
-}
-
-document.addEventListener("click", (event) => {
-  const trigger = event.target.closest("[data-lead-trigger]");
-  if (trigger) {
-    event.preventDefault();
-    openLeadDialog("");
-    return;
-  }
-  const pkgBtn = event.target.closest(".enroll-trigger");
-  if (pkgBtn) {
-    event.preventDefault();
-    openLeadDialog(pkgBtn.dataset.package || "");
-  }
-});
-
-leadForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const info = {
-    name: leadName.value.trim(),
-    year: leadYear.value,
-    exam: leadExam.value,
-    package: leadPackageSelect.value,
-  };
-  if (!info.name || !info.year || !info.exam) return;
-  localStorage.setItem(LEAD_KEY, JSON.stringify(info));
-  const url = buildLeadWhatsAppUrl(info);
-  closeLeadDialog();
-  window.open(url, "_blank", "noopener,noreferrer");
-});
-
-leadCloseBtn.addEventListener("click", closeLeadDialog);
-leadSkipBtn.addEventListener("click", () => {
-  closeLeadDialog();
-  const fallback = `https://wa.me/${LEAD_PHONE}?text=${encodeURIComponent("Hello Dr Eslam, I would like to ask about the IGCSE Math course.")}`;
-  window.open(fallback, "_blank", "noopener,noreferrer");
-});
-leadDialog.addEventListener("click", (event) => {
-  if (event.target === leadDialog) closeLeadDialog();
 });
 
 init();

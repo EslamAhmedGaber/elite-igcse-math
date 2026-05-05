@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Practice Bank — Elite IGCSE Mathematics</title>
+  <meta name="description" content="Practice 974 classified Edexcel IGCSE 4MA1 questions and 214 Q20+ expertise problems. Filter by topic, paper, and marks. Track solved questions and topic mastery.">
+  <meta name="robots" content="noindex,nofollow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Practice Bank — Elite IGCSE Mathematics">
+  <meta property="og:description" content="Filter, zoom, solve, and print every classified Edexcel 4MA1 question. By Dr Eslam Ahmed.">
+  <meta property="og:image" content="assets/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"]],
+        displayMath: [["\\[", "\\]"]]
+      },
+      svg: { fontCache: "global" }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <script defer src="questions-data.js"></script>
+  <script defer src="solutions-data.js"></script>
+  <script defer src="app.js"></script>
+  <script defer src="lead.js"></script>
+</head>
+<body data-page="practice">
+
+  <header class="site-header">
+    <a class="site-brand" href="index.html" aria-label="Elite IGCSE Mathematics home">
+      <span class="brand-mark">IGCSE</span>
+      <span class="brand-title">Elite IGCSE Mathematics</span>
+      <span class="v2-badge" title="Local v2 redesign workspace — not the live site">v2 PREVIEW</span>
+    </a>
+    <button id="navToggle" class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="practice.html" aria-current="page">Practice</a>
+      <a href="about.html">About</a>
+      <a href="downloads.html">Downloads</a>
+    </nav>
+    <div class="site-cta">
+      <button id="printSelectedBtn" class="button ghost" type="button">Print Selected</button>
+      <a class="button primary" data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Enroll</a>
+    </div>
+  </header>
+
+  <main class="shell">
+    <aside class="sidebar">
+      <section class="quick-stats">
+        <div><strong id="totalQuestions">214</strong><span>questions</span></div>
+        <div><strong id="selectedCount">0</strong><span>selected</span></div>
+        <div><strong id="solvedCount">0</strong><span>solved</span></div>
+        <div><strong id="visibleCount">0</strong><span>visible</span></div>
+      </section>
+      <section class="study-card">
+        <h2 class="panel-title">Study Timer</h2>
+        <div class="timer-face">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="timer-track" cx="60" cy="60" r="52"></circle>
+            <circle id="timerRing" class="timer-ring" cx="60" cy="60" r="52"></circle>
+          </svg>
+          <strong id="timerDisplay">25:00</strong>
+        </div>
+        <div class="timer-controls">
+          <button id="timerToggleBtn" type="button">Start</button>
+          <button id="timerResetBtn" type="button">Reset</button>
+        </div>
+        <div class="timer-presets">
+          <button type="button" data-minutes="25">25 min</button>
+          <button type="button" data-minutes="15">15 min</button>
+          <button type="button" data-minutes="5">5 min</button>
+        </div>
+      </section>
+      <section class="filters">
+        <h2 class="panel-title">Find Your Question</h2>
+        <label>Search<input id="searchBox" type="search" placeholder="topic, paper, keyword"></label>
+        <label>Unit<select id="unitFilter"></select></label>
+        <label>Topic<select id="topicFilter"></select></label>
+        <label>Paper<select id="paperFilter"></select></label>
+        <label>View<select id="viewFilter">
+          <option value="">All questions</option>
+          <option value="selected">Selected only</option>
+          <option value="unsolved">Unsolved only</option>
+          <option value="solved">Solved only</option>
+        </select></label>
+        <label>Minimum marks<input id="minMarks" type="number" min="0" step="1"></label>
+        <div class="filter-buttons">
+          <button id="resetBtn" type="button">Reset</button>
+          <button id="randomBtn" type="button">Random 10</button>
+          <button id="clearSelectedBtn" type="button">Clear Selected</button>
+        </div>
+      </section>
+      <section class="progress-card">
+        <h2 class="panel-title">Topic Mastery</h2>
+        <div id="topicProgress" class="topic-progress"></div>
+      </section>
+      <section class="teacher-card">
+        <span class="card-label">Prepared by</span>
+        <strong>Dr Eslam Ahmed</strong>
+        <span>Assistant Lecturer, Cairo University Faculty of Engineering</span>
+        <a href="tel:01120009622">Call: 01120009622</a>
+        <a class="enroll-link" data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Enroll by WhatsApp</a>
+      </section>
+    </aside>
+
+    <section class="content">
+      <section class="practice-hero" aria-labelledby="practiceTitle">
+        <div>
+          <span class="eyebrow">Practice Bank</span>
+          <h1 id="practiceTitle">All your IGCSE 4MA1 practice in one place.</h1>
+          <p>Filter by unit, topic, paper, marks, or status. Mark questions solved. Print your own worksheet. Everything saves automatically in your browser.</p>
+        </div>
+        <div class="practice-progress" aria-label="Progress snapshot">
+          <div><strong id="progressSolved">0</strong><span>Solved</span></div>
+          <div><strong id="progressUnsolved">0</strong><span>Unsolved</span></div>
+          <div><strong id="progressSelected">0</strong><span>Selected</span></div>
+          <div><strong id="progressPercent">0%</strong><span>Complete</span></div>
+        </div>
+        <div class="overall-progress" aria-label="Overall solved progress">
+          <span id="progressLabel">0% complete</span>
+          <div><i id="progressBar"></i></div>
+        </div>
+      </section>
+
+      <!-- These elements are referenced by app.js but are not visually shown on the practice page;
+           kept hidden so the script remains compatible without changes. -->
+      <div class="hero-card-shadow" hidden>
+        <span id="heroQuestionCount"></span>
+        <div id="heroPreview"></div>
+      </div>
+
+      <section class="bank-panel" aria-label="Question bank mode">
+        <div>
+          <span class="eyebrow">Question Bank Mode</span>
+          <h2 id="bankTitle">All Classified Questions</h2>
+          <p id="bankDescription">All cropped classified questions from the full output folder.</p>
+        </div>
+        <div class="bank-buttons">
+          <button class="active" type="button" data-bank="all">
+            <strong>All Classified Questions</strong>
+            <span id="allBankCount">974 questions</span>
+          </button>
+          <button type="button" data-bank="expertise">
+            <strong>Expertise Q20+</strong>
+            <span id="expertiseBankCount">214 questions</span>
+          </button>
+        </div>
+      </section>
+
+      <div class="content-head">
+        <div>
+          <h2>Question Bank</h2>
+          <p id="bankSubtitle">Search, filter, zoom, select, solve, and print questions from the active bank.</p>
+        </div>
+        <div class="head-tools">
+          <label class="sort-label">Sort<select id="sortMode">
+            <option value="topic">Topic order</option>
+            <option value="paper">Paper</option>
+            <option value="marks_desc">Marks high to low</option>
+          </select></label>
+          <div class="layout-toggle" aria-label="Question layout">
+            <button id="gridLayoutBtn" class="active" type="button">Grid</button>
+            <button id="listLayoutBtn" type="button">List</button>
+          </div>
+        </div>
+      </div>
+      <section class="practice-panel">
+        <button type="button" data-practice="all">Question Bank</button>
+        <button type="button" data-practice="topic">Choose Topic</button>
+        <button type="button" data-practice="mixed">Mixed Expertise</button>
+        <button type="button" data-practice="unsolved">Continue Unsolved</button>
+        <a data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Enroll with Dr Eslam</a>
+      </section>
+      <div id="topicStrip" class="topic-strip"></div>
+      <div id="questionGrid" class="question-grid"></div>
+
+      <div class="practice-cta">
+        <p>Want a teacher to walk you through the hardest topics?</p>
+        <a class="button gold" data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Book free first class</a>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="viewerDialog" class="viewer-dialog">
+    <div class="viewer-head">
+      <div>
+        <strong id="viewerTitle"></strong>
+        <div id="viewerMeta"></div>
+      </div>
+      <button id="closeViewerBtn" type="button">Close</button>
+    </div>
+    <img id="viewerImage" alt="">
+  </dialog>
+
+  <dialog id="solutionDialog" class="viewer-dialog solution-dialog">
+    <div class="viewer-head">
+      <div>
+        <strong id="solutionTitle"></strong>
+        <div id="solutionMeta"></div>
+      </div>
+      <button id="closeSolutionBtn" type="button">Close</button>
+    </div>
+    <div id="solutionBody" class="solution-body"></div>
+  </dialog>
+
+  <section id="printArea" class="print-area"></section>
+
+  <!-- printSelectedBtnHero is referenced by app.js but isn't shown on the practice page;
+       hidden duplicate keeps the script's listener happy. -->
+  <button id="printSelectedBtnHero" type="button" hidden></button>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <strong>Elite IGCSE Mathematics</strong>
+        <p>Edexcel 4MA1 Higher · Online · Recorded sessions</p>
+        <p class="muted">Prepared by Dr Eslam Ahmed</p>
+      </div>
+      <div>
+        <strong>Contact</strong>
+        <p><a href="https://wa.me/201120009622" data-lead-trigger="whatsapp">WhatsApp +20 112 000 9622</a></p>
+        <p><a href="tel:01120009622">Call 01120009622</a></p>
+      </div>
+      <div>
+        <strong>Pages</strong>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="practice.html">Practice bank</a></p>
+        <p><a href="about.html">About Dr Eslam</a></p>
+        <p><a href="downloads.html">Downloads</a></p>
+      </div>
+    </div>
+    <p class="footer-fineprint">© Dr Eslam Ahmed · For students of Edexcel IGCSE 4MA1 Higher Mathematics. Cairo University Faculty of Engineering.</p>
+  </footer>
+
+</body>
+</html>
