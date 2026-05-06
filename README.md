@@ -4,6 +4,19 @@ The live student website for **Edexcel IGCSE 4MA1 Higher Mathematics** by Dr Esl
 
 This document is the single source of truth for running and updating the site. Read the **Common Tasks** and **Adding Solutions** sections first — those cover 95% of what you'll do.
 
+> Last updated: 2026-05-06 · Section index: §1 Live URLs · §2 Stack · §3 Directory tree · §4 Common tasks · **§5 Adding solutions** · §6 Local testing · §7 Deploy · §8 Settings cheat-sheet · §9 Gotchas · §10 Troubleshooting · §11 Credits
+
+## Quick start (the 4 things you'll do most)
+
+| If you want to... | Go to | TL;DR |
+|---|---|---|
+| **Add a worked solution to a question** | §5 | Edit `solutions-data.js`, key by question ID, commit, push |
+| **Change a price** | §4.1 | Search `p-now` in `index.html` and `about.html`, replace |
+| **Update a testimonial** | §4.2 | Edit `<article class="testimonial light">` blocks in `about.html` |
+| **Replace your photo** | §4.5 | Drop new image at `assets/Mine.png` (overwrite), commit, push |
+
+**Deploy = `git push`**. GitHub Pages rebuilds in 30–90 seconds. Live URL: **https://eliteigcse.com**.
+
 ---
 
 ## 1. Live URLs & repo
