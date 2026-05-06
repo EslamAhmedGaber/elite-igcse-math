@@ -1,121 +1,335 @@
-# Elite IGCSE Mathematics
+# Elite IGCSE Mathematics — Operator Handbook
 
-Live student website for Edexcel IGCSE 4MA1 Higher Mathematics — classified past-paper questions, downloadable PDFs, and online classes by Dr Eslam Ahmed.
+The live student website for **Edexcel IGCSE 4MA1 Higher Mathematics** by Dr Eslam Ahmed.
 
-- **Live site:** https://eslamahmedgaber.github.io/elite-igcse-math/
-- **Pages:** Home (`index.html`) · Practice (`practice.html`) · About (`about.html`) · Downloads (`downloads.html`)
-- **Tech:** static HTML/CSS/vanilla JS — no build step. Hosted on GitHub Pages from the repo root.
+This document is the single source of truth for running and updating the site. Read the **Common Tasks** and **Adding Solutions** sections first — those cover 95% of what you'll do.
 
-Prepared by:
+---
 
-- Dr Eslam Ahmed
-- Assistant Lecturer, Cairo University Faculty of Engineering
-- Phone / WhatsApp: 01120009622
+## 1. Live URLs & repo
 
-## What This Website Provides
+| Where | URL |
+|---|---|
+| **Production site** | https://eliteigcse.com (or `https://www.eliteigcse.com`) |
+| GitHub Pages mirror | https://eslamahmedgaber.github.io/elite-igcse-math/ |
+| GitHub repo | https://github.com/EslamAhmedGaber/elite-igcse-math |
+| Domain registrar | Namecheap (auto-renews on **2027-05-05**) |
+| Local working copy | `C:\Users\Eslam\Documents\Elite IGCSE v2\website` |
 
-This is a student-facing IGCSE / O Level Mathematics practice website built from classified past-paper questions.
+Pages served:
 
-It contains two practice banks:
+- `/` — Home (sales/landing)
+- `/practice.html` — Question bank tool (the daily-use page)
+- `/about.html` — Dr Eslam bio + testimonials + pricing
+- `/downloads.html` — Free PDF books
 
-| Bank | Questions | Purpose |
-| --- | ---: | --- |
-| All Classified Questions | 974 | Full classified question bank by topic |
-| Expertise Q20+ | 214 | Harder exam questions from question 20 and above |
+---
 
-## Student Features
+## 2. Stack — what runs where
 
-Students can:
+- **Pure static site.** No backend, no build step, no framework. HTML + CSS + vanilla JS only.
+- **Hosted on GitHub Pages** from the `main` branch root (`/`).
+- **Deploys automatically** on every push to `main`. Pages takes 30–90 seconds to rebuild.
+- **HTTPS** is provisioned by GitHub via Let's Encrypt and renews automatically.
+- **DNS** at Namecheap → 4 A records (185.199.108–111.153) on `@` and a CNAME on `www` → `eslamahmedgaber.github.io.`
 
-- Switch between the full bank and the Q20+ expertise bank.
-- Choose questions by unit, topic, paper, marks, solved, unsolved, or selected.
-- Search inside the question bank.
-- Open/zoom each problem.
-- Mark questions as solved.
-- Continue unsolved questions later.
-- Track progress, unsolved count, and topic mastery.
-- Use a built-in study timer.
-- Switch between grid and list layouts.
-- View worked solutions when published by the teacher.
-- Select questions and print a custom worksheet.
-- Generate a random 10-question practice set.
-- Download the full classified book.
-- Download the Q20+ expertise book.
-- Download the answer / mark scheme book.
-- Download the focused Coordinate Geometry worksheet.
-- Enroll or ask questions through WhatsApp.
+> **Deploy rule:** push to `main` = ship. There's no preview environment. Always test locally first (see §6).
 
-## Main Downloads
+---
 
-The website includes:
+## 3. Directory tree
 
-```text
-downloads/classified_problems.pdf
-downloads/Classified_Expertise.pdf
-downloads/answer_book.pdf
-downloads/coordinate_geometry_10_clean.pdf
 ```
-
-## Website Structure
-
-```text
 website/
-├── index.html
-├── styles.css
-├── app.js
-├── questions-data.js
-├── solutions-data.js
+├── index.html              # Home page
+├── practice.html           # Question bank page
+├── about.html              # About Dr Eslam
+├── downloads.html          # PDF library
+│
+├── styles.css              # All styles for all pages
+├── app.js                  # Practice-bank logic (only loaded on practice.html)
+├── lead.js                 # Lead-capture dialog + mobile nav (loaded on every page)
+├── questions-data.js       # 1,188 questions metadata (~1 MB) — generated, do not hand-edit
+├── solutions-data.js       # Worked solutions for the questions (~360 KB) — see §5
+│
+├── CNAME                   # Custom-domain marker for GitHub Pages: "eliteigcse.com"
+├── .nojekyll               # Tells GitHub Pages: serve files as-is, no Jekyll processing
+├── .gitignore
+├── README.md               # This file
+│
 ├── assets/
-│   ├── questions_all/
-│   └── questions_expertise/
-├── downloads/
-└── README.md
+│   ├── Me.jpeg             # Dr Eslam's headshot (used in trust panel + hero card)
+│   ├── og-image.png        # 1200×630 social-share card (Facebook/WhatsApp/Twitter)
+│   ├── og-image.svg        # Vector source for the OG card
+│   ├── build_og.py         # Pillow script that regenerates og-image.png from scratch
+│   ├── questions_all/      # 974 cropped question PNGs for the full bank
+│   └── questions_expertise/  # 214 cropped Q20+ question PNGs
+│
+└── downloads/
+    ├── classified_problems.pdf      # Full classified bank PDF (V2, ~97 MB)
+    └── Classified_Expertise.pdf     # Q20+ expertise book (~24 MB)
 ```
 
-## Current Goal
+---
 
-The technical question bank is now working. The next goal is enrollment growth.
+## 4. Common tasks
 
-We want expert advice on:
+All edits follow the same rhythm: **edit file → preview locally → commit → push → check live in ~1 minute**.
 
-- How to make the offer clearer for students and parents.
-- Whether downloads should stay fully public or become partly gated.
-- How to turn website visitors into WhatsApp leads.
-- How to present Dr Eslam Ahmed's expertise more strongly.
-- What Facebook/Instagram/WhatsApp campaign should be used.
-- Whether to add testimonials, diagnostic tests, course packages, or a lead form.
-- How to create a stronger path from “free practice” to “enrolled student”.
+### 4.1 Change a price
 
-## Suggested Next Marketing Enhancements
+**Files:** `index.html` and `about.html` (pricing cards appear on both).
 
-Possible future improvements:
+Search for the dollar amount or `EGP / session` and replace. Example: change Group from `$10` to `$12`:
 
-- Add a clear “Enroll in the Expertise Course” section.
-- Add course package cards.
-- Add a parent-facing Arabic section.
-- Add testimonials or previous student results.
-- Add a short diagnostic quiz.
-- Add a lead form before some downloads.
-- Add analytics to measure clicks, downloads, and WhatsApp leads.
-- Add QR-code posters for school groups and social media.
-- Add answer explanations for selected hard problems.
+1. Open `index.html`, find `<span class="p-now">$10</span>` in the Group card → change to `$12`.
+2. Update the matching strikethrough `<span class="p-old">$15</span>` if you want.
+3. Update the EGP line if the rate changed.
+4. **Repeat in `about.html`** — same card.
+5. Also check `assets/build_og.py` if the headline `$10` price needs to change in the social-share image, then re-run it (see §4.6).
 
-## GitHub Pages
+### 4.2 Edit the testimonials
 
-This repository is published from the repository root using GitHub Pages:
+**Files:** `about.html` only. They no longer appear on Home (Home links to About).
 
-- Source: `Deploy from a branch`
-- Branch: `main`
-- Folder: `/ (root)`
+Find `<article class="testimonial light">` blocks. Each has:
 
-The public site is:
-
-```text
-https://eslamahmedgaber.github.io/expertise-math-practice-bank/
+```html
+<article class="testimonial light">
+  <span class="t-grade">9</span>
+  <blockquote>"…the quote text…"</blockquote>
+  <cite>— First name, school/country</cite>
+</article>
 ```
 
-## Important Note
+Replace the quote and the cite line. **Always use real student quotes** — never fabricated. If you only have voice-note approval, paraphrase faithfully and confirm with the student that they're OK with the wording.
 
-The website is public. Anyone with the link can view the questions and download the PDFs.
+### 4.3 Update Dr Eslam's bio / credentials
 
-If access should be limited to enrolled students only, the next version should use an authenticated platform or protected download workflow.
+**File:** `about.html`. Edit:
+- The intro paragraph in `<section class="about-hero">`
+- The `<ul class="credentials-list">` items
+
+If credentials change in a way that affects the home page hero, also edit `index.html` (search for "Cairo University").
+
+### 4.4 Add or replace a PDF download
+
+**Folder:** `downloads/`
+
+1. Drop the new PDF into `downloads/`.
+2. If you want existing links to keep working, **rename** the new file to match the existing one (e.g. `classified_problems.pdf`) and overwrite.
+3. If it's a brand-new download, also add a `<article class="download-card">` to `downloads.html`.
+4. **Hard limit:** GitHub blocks files >100 MB. Soft warning at 50 MB. If a PDF approaches 100 MB, reduce its size (Acrobat → "Reduce File Size") rather than committing it.
+
+### 4.5 Replace the headshot
+
+Drop the new image at `assets/Me.jpeg` (overwrite). It's referenced as `assets/Me.jpeg` from:
+- `index.html` (home hero card + trust panel)
+- `about.html` (about hero portrait)
+
+Square aspect ratio works best (it's displayed in a circle).
+
+### 4.6 Regenerate the social-share image
+
+The social-share PNG (`assets/og-image.png`) is what shows when someone pastes the site link into WhatsApp / Facebook / Twitter. To change the headline price, copy, or design:
+
+```powershell
+"C:/Users/Eslam/Documents/New project 5/classified_exam_problems/.venv/Scripts/python.exe" assets/build_og.py
+```
+
+The script uses Pillow (already in the existing venv). Edit the constants at the top of `assets/build_og.py` to change colors / text / price hook, then re-run. The script writes `assets/og-image.png` in place.
+
+> **OG cache:** Facebook and WhatsApp aggressively cache OG images. After re-uploading, paste the URL into the [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) → "Scrape Again" to refresh.
+
+### 4.7 Add a new page
+
+1. Copy `about.html` as a starting point — it has the simplest structure.
+2. Change `<title>`, `<meta name="description">`, `<body data-page="…">`.
+3. Update the `<nav>` block: only the new page's `<a>` should have `aria-current="page"`.
+4. Add a link to the new page in the topbar nav of **all four** existing pages and in the footer's "Pages" column.
+5. Push.
+
+---
+
+## 5. Adding solutions to questions
+
+This is the most frequent ongoing task. **There are two paths — pick based on what you have.**
+
+### Solution data format
+
+`solutions-data.js` is a single JavaScript object keyed by question ID:
+
+```js
+window.SOLUTION_DATA = {
+  "all::Nov2024_P2H__Q21__p21-21__m04__Set-Notation-and-Venn-Diagrams": {
+    "status": "checked",
+    "source": "**Topic check:** Set notation … \\(n(A' \\cap C)=21\\)",
+    "updated": "2026-05-05T00:12:46",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  …
+}
+```
+
+Field rules:
+
+- **Key** = the question's `id` (find it in `questions-data.js`). Format is `bank::paper__Qnn__pXX-XX__mNN__Topic-Slug`. The `bank` prefix is `all` or `expertise`.
+- **`status`** — anything you like; the website only renders it as a small label. Common values: `"checked"`, `"draft"`.
+- **`source`** — the worked solution as a single JSON string. Supports:
+  - **Markdown lite:** `**bold**`, `` `code` ``, blank-line paragraphs, `- ` or `* ` bullet lines.
+  - **MathJax LaTeX:** `\(inline\)` and `\[display\]` math. **Always escape backslashes** as `\\(`, `\\)`, `\\[`, `\\]` because this is a JSON string. Example: `"\\(\\dfrac{a}{b}\\)"`.
+- **`updated`** — ISO date string. Used for tracking, not displayed.
+- **`checked_by`** — short attribution, not displayed.
+
+A question without an entry in `solutions-data.js` simply has no "Solution" button — there's no error, no warning. The entry is the only thing that turns the button on.
+
+> **Current coverage:** ~418 of 1,188 questions have solutions (~35%). The remaining ~770 still need to be written.
+
+### Path A — Quick edit directly in this repo (recommended for one-offs)
+
+Use this when you want to add a single solution fast, without touching the original Python pipeline.
+
+1. Open `practice.html` in your browser locally (see §6) and find the question you want to solve.
+2. Right-click the question card → Inspect → find the `data-id="…"` attribute. That's the question's full ID.
+3. Open `solutions-data.js`. Add a new entry, keyed by that ID, alphabetically ordered if you can but order doesn't matter functionally.
+4. Format example (note the escaped backslashes):
+
+```js
+"all::Jun2024_P1H__Q15__p18-18__m04__Quadratic-Equations": {
+  "status": "checked",
+  "source": "**Method**\n\nFactor first: \\(x^2-5x+6=(x-2)(x-3)\\).\n\nSo \\(x=2\\) or \\(x=3\\).\n\n**Answer:** \\(x=2,\\ 3\\)",
+  "updated": "2026-06-15",
+  "checked_by": "Dr Eslam Ahmed"
+},
+```
+
+5. Save → refresh `practice.html` locally → click the question → confirm the **Solution** button appears and renders MathJax correctly.
+6. Commit and push (see §7).
+
+### Path B — Source-of-truth pipeline (recommended for batch work)
+
+The Markdown source files for solutions live in the **original** classified-problems project (not in this repo):
+
+```
+C:\Users\Eslam\Documents\New project 5\classified_exam_problems\
+├── solutions\
+│   ├── solution_index.csv      # tracks every question, status, file path, reviewer, notes
+│   ├── source\all\             # Markdown/LaTeX solution files for the full bank
+│   ├── source\expertise\       # Markdown/LaTeX solution files for the Q20+ bank
+│   └── templates\solution_template.md
+└── scripts\                    # generators that build solutions-data.js from these
+```
+
+Workflow:
+
+1. From the original project root, run the local solution manager:
+   ```powershell
+   cd "C:\Users\Eslam\Documents\New project 5\classified_exam_problems"
+   .\run_solution_manager.bat
+   ```
+2. Open http://127.0.0.1:8767/ in your browser.
+3. Write / edit solutions in the manager — saves Markdown files in `solutions\source\…`.
+4. When done, regenerate the data file. (The original project has a script for this; it produces a fresh `solutions-data.js`.)
+5. **Copy the regenerated `solutions-data.js` over the one in this repo:**
+   ```powershell
+   copy "C:\Users\Eslam\Documents\New project 5\classified_exam_problems\student_publish\solutions-data.js" "C:\Users\Eslam\Documents\Elite IGCSE v2\website\solutions-data.js"
+   ```
+6. Commit and push from this repo (see §7).
+
+Use Path B when adding many solutions in a session. Use Path A for single edits.
+
+> **Don't hand-edit `questions-data.js`.** It's regenerated from the upstream classifier and any manual change will be wiped the next time the dataset is rebuilt. Solutions are different — `solutions-data.js` is editable by hand or via the pipeline.
+
+---
+
+## 6. Test locally before pushing
+
+You can just double-click `index.html` and most things work. But some features (like fetching neighbouring pages) behave better over HTTP. To run a real local server:
+
+```powershell
+cd "C:\Users\Eslam\Documents\Elite IGCSE v2\website"
+python -m http.server 8000
+```
+
+Open http://localhost:8000 — every page works, links between pages work, MathJax renders.
+
+**Before every push, click through:**
+- Home → click Practice link → grid of questions loads
+- On Practice → click a question → image opens in dialog
+- On Practice → click "Solution" on a question that has one → MathJax renders cleanly
+- Click any "Book Free First Class" / "Enroll" → lead form opens, submit goes to WhatsApp
+- Resize browser to phone width → hamburger menu appears and works
+
+---
+
+## 7. Deploying (push to ship)
+
+You can use either GitHub Desktop or the command line.
+
+### GitHub Desktop
+
+1. Open the repo in GitHub Desktop. It already knows about this folder.
+2. Bottom-left: write a one-line commit message describing what you changed.
+3. Click **Commit to main**.
+4. Top: click **Push origin**.
+5. Within 90 seconds, https://eliteigcse.com is updated.
+
+### Command line
+
+```powershell
+cd "C:\Users\Eslam\Documents\Elite IGCSE v2\website"
+git add -A
+git commit -m "Add solutions for Quadratic Equations Q15 and Q22"
+git push
+```
+
+After push, you can verify the build:
+- https://github.com/EslamAhmedGaber/elite-igcse-math/actions — green check = deployed.
+- Hard-refresh the live page (Ctrl-F5) to bypass the browser cache.
+
+> **Don't push secrets** (API keys, tokens, passwords). Public repo. The token in your Git Credential Manager is fine — that's local-only — but never paste credentials into source files.
+
+---
+
+## 8. Settings cheat-sheet
+
+| Thing | Where to change it | Notes |
+|---|---|---|
+| Course prices (USD) | `index.html` + `about.html`, search `p-now` | Update the strikethrough `p-old` too |
+| Course prices (EGP) | Same files, search `p-egp` | Group 300 / Private 600 / Intensive 600 |
+| Class size, frequency, duration | `index.html` + `about.html`, in `<ul class="p-meta">` | Per-card |
+| WhatsApp number | All HTML files + `lead.js` (`LEAD_PHONE`) | Currently `201120009622` |
+| OG image headline `$10` | `assets/build_og.py` then re-run | See §4.6 |
+| Page titles & meta description | Top of each `.html` file | Important for Google |
+| Footer copy | All 4 HTML files (duplicated) | Single-source via JS template later if it gets painful |
+
+---
+
+## 9. Common gotchas
+
+1. **GitHub Pages takes 30–90s to rebuild.** A push doesn't show instantly. Wait, then hard-refresh.
+2. **Browser caching after pushes.** Use Ctrl-F5 (Windows) or Cmd-Shift-R (Mac).
+3. **OG image cache on Facebook/WhatsApp.** Use the [FB Sharing Debugger](https://developers.facebook.com/tools/debug/) "Scrape Again" button.
+4. **MathJax silent failure.** If a solution renders raw `\(...\)` instead of math, you forgot to double-escape. JSON strings need `\\(` not `\(`.
+5. **Custom domain still showing https warning.** First HTTPS cert provisioning can take up to 30 min after DNS resolves. Be patient.
+6. **PDF push fails with "file too large".** GitHub hard-limits 100 MB per file. Reduce the PDF (Acrobat → Reduce File Size) or host it on Google Drive and link out.
+7. **Question image missing for a new question.** The `image` field in `questions-data.js` points to `assets/questions_all/all_qNNNN.png` or `assets/questions_expertise/expertise_qNNNN.png`. The PNG must exist at that path with that exact name.
+
+---
+
+## 10. When something breaks — first 5 things to check
+
+1. **Hard-refresh** the page (Ctrl-F5). 80% of "it's broken" is browser cache.
+2. **Open browser DevTools → Console** (F12). Any red errors? Read them — they usually name the offending file and line.
+3. **GitHub Actions tab** of the repo. Was the latest deploy green? If red, it'll tell you why (rare for static sites).
+4. **DNS sanity:** `nslookup eliteigcse.com 8.8.8.8` should return the four 185.199.x.x IPs. If not, DNS is wrong.
+5. **Cert sanity:** open https://eliteigcse.com — if browser warns "Not Secure", the cert isn't issued yet. Wait 15 min and refresh.
+
+---
+
+## 11. Credits & contact
+
+**Dr Eslam Ahmed** — Assistant Lecturer, Cairo University Faculty of Engineering.
+WhatsApp / phone: +20 112 000 9622 · [`https://wa.me/201120009622`](https://wa.me/201120009622)
+
+Site built with Claude Code as collaborator. All teaching content, classification, solutions, and student outcomes belong to Dr Eslam.
