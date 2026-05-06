@@ -27,10 +27,21 @@ const els = {
   topicFilter: document.getElementById("topicFilter"),
   paperFilter: document.getElementById("paperFilter"),
   viewFilter: document.getElementById("viewFilter"),
+  difficultyFilter: document.getElementById("difficultyFilter"),
   minMarks: document.getElementById("minMarks"),
+  maxMarks: document.getElementById("maxMarks"),
+  minQuestion: document.getElementById("minQuestion"),
+  maxQuestion: document.getElementById("maxQuestion"),
   resetBtn: document.getElementById("resetBtn"),
   randomBtn: document.getElementById("randomBtn"),
   clearSelectedBtn: document.getElementById("clearSelectedBtn"),
+  worksheetTopic: document.getElementById("worksheetTopic"),
+  worksheetCount: document.getElementById("worksheetCount"),
+  worksheetMode: document.getElementById("worksheetMode"),
+  buildWorksheetBtn: document.getElementById("buildWorksheetBtn"),
+  printWorksheetBtn: document.getElementById("printWorksheetBtn"),
+  helperTitle: document.getElementById("helperTitle"),
+  helperText: document.getElementById("helperText"),
   printSelectedBtn: document.getElementById("printSelectedBtn"),
   printSelectedBtnHero: document.getElementById("printSelectedBtnHero"),
   heroQuestionCount: document.getElementById("heroQuestionCount"),
@@ -95,6 +106,7 @@ function escapeHtml(value) {
 function init() {
   if (!meta.banks?.[activeBank]) activeBank = "all";
   configureBank();
+  applyInitialParams();
   setLayout(currentLayout);
   updateTimerDisplay();
   redraw();
@@ -120,8 +132,30 @@ function configureBank() {
   fillSelect(els.unitFilter, uniqueSorted(questions.map((q) => q.unit)), "All units");
   fillSelect(els.topicFilter, info.topics || uniqueSorted(questions.map((q) => q.topic)), "All topics");
   fillSelect(els.paperFilter, uniqueSorted(questions.map((q) => q.paper)), "All papers");
+  fillSelect(els.worksheetTopic, info.topics || uniqueSorted(questions.map((q) => q.topic)), "Use current filters");
   renderHeroPreview();
   renderTopicStrip();
+}
+
+function applyInitialParams() {
+  const params = new URLSearchParams(window.location.search);
+  const requestedBank = params.get("bank");
+  if (requestedBank && meta.banks?.[requestedBank] && requestedBank !== activeBank) {
+    activeBank = requestedBank;
+    localStorage.setItem("activeQuestionBank", activeBank);
+    configureBank();
+  }
+  const topic = params.get("topic");
+  const unit = params.get("unit");
+  const mode = params.get("mode");
+  if (unit && [...els.unitFilter.options].some((option) => option.value === unit)) els.unitFilter.value = unit;
+  if (topic && [...els.topicFilter.options].some((option) => option.value === topic)) {
+    els.topicFilter.value = topic;
+    els.worksheetTopic.value = topic;
+    setTopicChip(topic);
+  }
+  if (mode === "q20") els.difficultyFilter.value = "q20";
+  if (mode === "long") els.difficultyFilter.value = "long";
 }
 
 function resetFilters() {
@@ -130,7 +164,13 @@ function resetFilters() {
   els.topicFilter.value = "";
   els.paperFilter.value = "";
   els.viewFilter.value = "";
+  els.difficultyFilter.value = "";
   els.minMarks.value = "";
+  els.maxMarks.value = "";
+  els.minQuestion.value = "";
+  els.maxQuestion.value = "";
+  els.worksheetTopic.value = "";
+  els.worksheetMode.value = "current";
   setTopicChip("");
 }
 
@@ -167,7 +207,11 @@ function applyFilters() {
   const topic = els.topicFilter.value;
   const paper = els.paperFilter.value;
   const viewMode = els.viewFilter.value;
+  const difficulty = els.difficultyFilter.value;
   const minMarks = Number(els.minMarks.value || 0);
+  const maxMarks = Number(els.maxMarks.value || 0);
+  const minQuestion = Number(els.minQuestion.value || 0);
+  const maxQuestion = Number(els.maxQuestion.value || 0);
   visible = questions.filter((question) => {
     if (unit && question.unit !== unit) return false;
     if (topic && question.topic !== topic) return false;
@@ -176,6 +220,13 @@ function applyFilters() {
     if (viewMode === "solved" && !solved.has(question.id)) return false;
     if (viewMode === "unsolved" && solved.has(question.id)) return false;
     if (minMarks && question.marks < minMarks) return false;
+    if (maxMarks && question.marks > maxMarks) return false;
+    if (minQuestion && question.question < minQuestion) return false;
+    if (maxQuestion && question.question > maxQuestion) return false;
+    if (difficulty === "quick" && question.marks > 3) return false;
+    if (difficulty === "standard" && (question.marks < 4 || question.marks > 6)) return false;
+    if (difficulty === "long" && question.marks < 7) return false;
+    if (difficulty === "q20" && question.question < 20) return false;
     if (search) {
       const text = `${question.paper} ${question.topic} ${question.unit} ${question.question_text}`.toLowerCase();
       if (!text.includes(search)) return false;
@@ -186,6 +237,8 @@ function applyFilters() {
   visible.sort((a, b) => {
     if (mode === "paper") return a.paper.localeCompare(b.paper) || a.question - b.question;
     if (mode === "marks_desc") return b.marks - a.marks || a.topic_order - b.topic_order;
+    if (mode === "marks_asc") return a.marks - b.marks || a.topic_order - b.topic_order;
+    if (mode === "question_desc") return b.question - a.question || b.marks - a.marks;
     return a.topic_order - b.topic_order || a.paper.localeCompare(b.paper) || a.question - b.question;
   });
 }
@@ -201,7 +254,32 @@ function redraw() {
   localStorage.setItem("selectedExpertiseQuestions", JSON.stringify([...selected]));
   localStorage.setItem("solvedExpertiseQuestions", JSON.stringify([...solved]));
   updateProgressSnapshot(selectedActive, solvedActive);
+  updateHelper(selectedActive, solvedActive);
   renderCards();
+}
+
+function updateHelper(selectedActive, solvedActive) {
+  const topic = els.topicFilter.value;
+  const difficulty = els.difficultyFilter.value;
+  if (selectedActive) {
+    els.helperTitle.textContent = "Worksheet ready.";
+    els.helperText.textContent = `${selectedActive} selected question${selectedActive === 1 ? "" : "s"} can be printed now. Try them before opening solutions.`;
+    return;
+  }
+  if (topic) {
+    els.helperTitle.textContent = `Focus: ${topic}`;
+    els.helperText.textContent = `Solve a small set from this topic, mark them solved, then open the roadmap to see your progress grow.`;
+    return;
+  }
+  if (difficulty === "q20" || activeBank === "expertise") {
+    els.helperTitle.textContent = "Expertise mode.";
+    els.helperText.textContent = "Use this when you want long end-of-paper questions. Build a 6-10 question worksheet and time yourself.";
+    return;
+  }
+  els.helperTitle.textContent = solvedActive ? "Keep the streak moving." : "Start simple.";
+  els.helperText.textContent = solvedActive
+    ? "Use Continue Unsolved or Weak Topics to avoid repeating only the questions you already know."
+    : "Pick a topic, solve 5 questions, then open the solutions only after you try.";
 }
 
 function renderCards() {
@@ -218,6 +296,12 @@ function renderCards() {
         <div class="card-title"><span>${escapeHtml(question.paper)} Q${question.question}</span><span>${question.marks}m</span></div>
         <div class="topic-name">${escapeHtml(question.topic)}</div>
         <div class="meta-line">${escapeHtml(question.unit)}</div>
+        <div class="question-tags">
+          <span>Q${question.question}</span>
+          <span>${question.marks >= 7 ? "Long" : question.marks >= 4 ? "Standard" : "Quick"}</span>
+          ${question.question >= 20 ? "<span>Q20+</span>" : ""}
+          ${hasSolution ? "<span>Solution</span>" : ""}
+        </div>
         <div class="status-line">
           ${isSelected ? `<span class="pill">Selected</span>` : ""}
           ${isSolved ? `<span class="pill done">Solved</span>` : ""}
@@ -227,7 +311,7 @@ function renderCards() {
       <div class="card-actions">
         <button type="button" data-action="select">${isSelected ? "Remove" : "Select"}</button>
         <button type="button" data-action="solve">${isSolved ? "Unsolve" : "Solved"}</button>
-        ${hasSolution ? `<button type="button" data-action="solution">Solution</button>` : ""}
+        ${hasSolution ? `<button type="button" data-action="solution">Show Solution</button>` : ""}
       </div>
     </article>`;
   }).join("");
@@ -343,6 +427,48 @@ function randomTen() {
   redraw();
 }
 
+function matchesWorksheetMode(question, mode) {
+  if (mode === "quick") return question.marks <= 3;
+  if (mode === "standard") return question.marks >= 4 && question.marks <= 6;
+  if (mode === "long") return question.marks >= 7;
+  if (mode === "q20") return question.question >= 20;
+  return true;
+}
+
+function shuffled(items) {
+  const pool = [...items];
+  for (let i = pool.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+  return pool;
+}
+
+function buildWorksheet({ printAfter = false } = {}) {
+  const topic = els.worksheetTopic.value;
+  const mode = els.worksheetMode.value || "current";
+  const count = Math.max(1, Math.min(40, Number(els.worksheetCount.value || 12)));
+  const basePool = mode === "current" ? visible : questions;
+  const pool = basePool.filter((question) => {
+    if (topic && question.topic !== topic) return false;
+    return matchesWorksheetMode(question, mode);
+  });
+  if (!pool.length) {
+    els.helperTitle.textContent = "No worksheet questions found.";
+    els.helperText.textContent = "Relax the filters or choose another topic, then build again.";
+    return;
+  }
+  questions.forEach((question) => selected.delete(question.id));
+  shuffled(pool).slice(0, count).forEach((question) => selected.add(question.id));
+  els.viewFilter.value = "selected";
+  if (topic && [...els.topicFilter.options].some((option) => option.value === topic)) {
+    els.topicFilter.value = topic;
+    setTopicChip(topic);
+  }
+  redraw();
+  if (printAfter) printSelected();
+}
+
 function practiceMode(mode) {
   if (mode === "all") {
     els.viewFilter.value = "";
@@ -363,6 +489,25 @@ function practiceMode(mode) {
   if (mode === "unsolved") {
     els.viewFilter.value = "unsolved";
     redraw();
+  }
+  if (mode === "weak") {
+    const byTopic = new Map();
+    questions.forEach((question) => {
+      const current = byTopic.get(question.topic) || { total: 0, solved: 0 };
+      current.total += 1;
+      if (solved.has(question.id)) current.solved += 1;
+      byTopic.set(question.topic, current);
+    });
+    const weakest = [...byTopic.entries()]
+      .filter(([, counts]) => counts.solved < counts.total)
+      .sort((a, b) => (a[1].solved / a[1].total) - (b[1].solved / b[1].total))[0]?.[0];
+    if (weakest) {
+      els.topicFilter.value = weakest;
+      els.viewFilter.value = "unsolved";
+      els.worksheetTopic.value = weakest;
+      setTopicChip(weakest);
+      redraw();
+    }
   }
 }
 
@@ -439,8 +584,12 @@ els.topicStrip.addEventListener("click", (event) => {
   redraw();
 });
 
-[els.searchBox, els.unitFilter, els.topicFilter, els.paperFilter, els.viewFilter, els.minMarks, els.sortMode].forEach((control) => {
+[els.searchBox, els.unitFilter, els.topicFilter, els.paperFilter, els.viewFilter, els.difficultyFilter, els.minMarks, els.maxMarks, els.minQuestion, els.maxQuestion, els.sortMode].forEach((control) => {
   control.addEventListener("input", redraw);
+});
+els.topicFilter.addEventListener("input", () => {
+  setTopicChip(els.topicFilter.value);
+  if (!els.worksheetTopic.value) els.worksheetTopic.value = els.topicFilter.value;
 });
 
 els.resetBtn.addEventListener("click", () => {
@@ -448,6 +597,8 @@ els.resetBtn.addEventListener("click", () => {
   redraw();
 });
 els.randomBtn.addEventListener("click", randomTen);
+els.buildWorksheetBtn.addEventListener("click", () => buildWorksheet());
+els.printWorksheetBtn.addEventListener("click", () => buildWorksheet({ printAfter: true }));
 els.clearSelectedBtn.addEventListener("click", () => {
   questions.forEach((question) => selected.delete(question.id));
   redraw();

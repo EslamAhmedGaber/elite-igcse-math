@@ -41,6 +41,7 @@
     <nav class="site-nav" aria-label="Main">
       <a href="index.html">Home</a>
       <a href="practice.html" aria-current="page">Practice</a>
+      <a href="topics.html">Topics</a>
       <a href="about.html">About</a>
       <a href="downloads.html">Downloads</a>
     </nav>
@@ -89,7 +90,19 @@
           <option value="unsolved">Unsolved only</option>
           <option value="solved">Solved only</option>
         </select></label>
+        <label>Difficulty<select id="difficultyFilter">
+          <option value="">All difficulties</option>
+          <option value="quick">Quick wins (1-3 marks)</option>
+          <option value="standard">Standard (4-6 marks)</option>
+          <option value="long">Long problems (7+ marks)</option>
+          <option value="q20">Q20+ exam finishers</option>
+        </select></label>
         <label>Minimum marks<input id="minMarks" type="number" min="0" step="1"></label>
+        <label>Maximum marks<input id="maxMarks" type="number" min="0" step="1"></label>
+        <div class="range-pair">
+          <label>Question from<input id="minQuestion" type="number" min="1" step="1"></label>
+          <label>Question to<input id="maxQuestion" type="number" min="1" step="1"></label>
+        </div>
         <div class="filter-buttons">
           <button id="resetBtn" type="button">Reset</button>
           <button id="randomBtn" type="button">Random 10</button>
@@ -106,6 +119,23 @@
         <span>Assistant Lecturer, Cairo University Faculty of Engineering</span>
         <a href="tel:01120009622">Call: 01120009622</a>
         <a class="enroll-link" data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Enroll by WhatsApp</a>
+      </section>
+      <section class="worksheet-card">
+        <h2 class="panel-title">Worksheet Builder</h2>
+        <p>Choose a topic or use the current filters, then build a printable worksheet.</p>
+        <label>Topic<select id="worksheetTopic"></select></label>
+        <label>Question count<input id="worksheetCount" type="number" min="1" max="40" value="12"></label>
+        <label>Challenge<select id="worksheetMode">
+          <option value="current">Use current filters</option>
+          <option value="quick">Quick wins</option>
+          <option value="standard">Standard practice</option>
+          <option value="long">Long problems</option>
+          <option value="q20">Q20+ only</option>
+        </select></label>
+        <div class="worksheet-actions">
+          <button id="buildWorksheetBtn" type="button">Build</button>
+          <button id="printWorksheetBtn" type="button">Print</button>
+        </div>
       </section>
     </aside>
 
@@ -163,6 +193,8 @@
             <option value="topic">Topic order</option>
             <option value="paper">Paper</option>
             <option value="marks_desc">Marks high to low</option>
+            <option value="marks_asc">Marks low to high</option>
+            <option value="question_desc">Question number high to low</option>
           </select></label>
           <div class="layout-toggle" aria-label="Question layout">
             <button id="gridLayoutBtn" class="active" type="button">Grid</button>
@@ -175,7 +207,15 @@
         <button type="button" data-practice="topic">Choose Topic</button>
         <button type="button" data-practice="mixed">Mixed Expertise</button>
         <button type="button" data-practice="unsolved">Continue Unsolved</button>
+        <button type="button" data-practice="weak">Weak Topics</button>
         <a data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Enroll with Dr Eslam</a>
+      </section>
+      <section class="student-helper" aria-label="Student helper">
+        <div>
+          <strong id="helperTitle">Start simple.</strong>
+          <p id="helperText">Pick a topic, solve 5 questions, then open the solutions only after you try. Mark each question solved so the site can show your progress.</p>
+        </div>
+        <a class="button light" href="topics.html">Open roadmap</a>
       </section>
       <div id="topicStrip" class="topic-strip"></div>
       <div id="questionGrid" class="question-grid"></div>
@@ -231,12 +271,21 @@
         <strong>Pages</strong>
         <p><a href="index.html">Home</a></p>
         <p><a href="practice.html">Practice bank</a></p>
+        <p><a href="topics.html">Topic roadmap</a></p>
         <p><a href="about.html">About Dr Eslam</a></p>
         <p><a href="downloads.html">Downloads</a></p>
       </div>
     </div>
     <p class="footer-fineprint">© Dr Eslam Ahmed · For students of Edexcel IGCSE 4MA1 Higher Mathematics. Cairo University Faculty of Engineering.</p>
   </footer>
+
+  <nav class="mobile-bottom-nav" aria-label="Student shortcuts">
+    <a href="index.html">Home</a>
+    <a href="practice.html" aria-current="page">Practice</a>
+    <a href="topics.html">Topics</a>
+    <a href="downloads.html">Books</a>
+    <a data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Enroll</a>
+  </nav>
 
 </body>
 </html>
