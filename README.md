@@ -58,7 +58,7 @@ website/
 ├── README.md               # This file
 │
 ├── assets/
-│   ├── Me.jpeg             # Dr Eslam's headshot (used in trust panel + hero card)
+│   ├── Mine.png            # Dr Eslam's headshot (home hero card + about hero portrait)
 │   ├── og-image.png        # 1200×630 social-share card (Facebook/WhatsApp/Twitter)
 │   ├── og-image.svg        # Vector source for the OG card
 │   ├── build_og.py         # Pillow script that regenerates og-image.png from scratch
@@ -123,7 +123,7 @@ If credentials change in a way that affects the home page hero, also edit `index
 
 ### 4.5 Replace the headshot
 
-Drop the new image at `assets/Me.jpeg` (overwrite). It's referenced as `assets/Me.jpeg` from:
+Drop the new image at `assets/Mine.png` (overwrite). It's referenced as `assets/Mine.png` from:
 - `index.html` (home hero card + trust panel)
 - `about.html` (about hero portrait)
 
