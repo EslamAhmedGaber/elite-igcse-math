@@ -1,5 +1,5 @@
 window.SITE_META = {
-  "generatedAt": "2026-05-05T16:28:27",
+  "generatedAt": "2026-05-06T18:54:25",
   "questionCount": 1188,
   "topics": [
     "Set Notation & Venn Diagrams",
@@ -22,6 +22,7 @@ window.SITE_META = {
     "Algebraic Fractions",
     "Rearranging Formulas",
     "Algebraic Proof",
+    "Solving Linear Equations",
     "Solving Quadratic Equations",
     "Solving Inequalities",
     "Simultaneous Equations",
@@ -83,6 +84,7 @@ window.SITE_META = {
         "Algebraic Fractions",
         "Rearranging Formulas",
         "Algebraic Proof",
+        "Solving Linear Equations",
         "Solving Quadratic Equations",
         "Solving Inequalities",
         "Simultaneous Equations",
@@ -223,6 +225,20 @@ window.QUESTION_DATA = [
     "filename": "Jan2021_P2H__Q16__p17-17__m06__Set-Notation-and-Venn-Diagrams.png",
     "image": "assets/questions_all/all_q0004.png",
     "question_text": "16 Some students were asked the following question. \u201cWhich of the subjects Russian (R), French (F) and German (G) do you study?\u201d Of these students 4 study all three of Russian, French and German 10 study Russian and French 13 study French and German 6 study Russian and German 24 study German 11 study none of the three subjects the number who study Russian only is twice the number who study French only. Let x be the number of students who study French only. (a) Show all this information on the Venn diagram, giving the number of students in each appropriate subset, in terms of x where necessary. R G E F x (3) Given that the number of students who were asked the question was 80 (b) work out the number of these students that study Russian. ...................................................... (3) (Total for Question 16 is 6 marks)"
+  },
+  {
+    "id": "all::Jan2021_P2HR__Q03__p05-05__m03__Set-Notation-and-Venn-Diagrams",
+    "source_id": "Jan2021_P2HR__Q03__p05-05__m03__Set-Notation-and-Venn-Diagrams",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Set Notation & Venn Diagrams",
+    "topic_order": 1,
+    "paper": "Jan 2021 P2HR",
+    "question": 3,
+    "marks": 3,
+    "filename": "Jan2021_P2HR__Q03__p05-05__m03__Set-Notation-and-Venn-Diagrams.png",
+    "image": "assets/questions_all/all_q0750.png",
+    "question_text": "3 E = {21, 22, 23, 24, 25, 26, 27, 28, 29, 30} A = {22, 24, 26, 28, 30} B = {21, 24, 27, 30} (a) List the members of the set (i) A \u2229 B ............................................................................................................ (ii) A\u02b9 ............................................................................................................ (2) C = {23, 25, 29} (b) Using set notation, find an expression for C in terms of A and B. ...................................................... (1) (Total for Question 3 is 3 marks)"
   },
   {
     "id": "all::Jan2022_P1H__Q07__p08-08__m03__Set-Notation-and-Venn-Diagrams",
@@ -533,6 +549,20 @@ window.QUESTION_DATA = [
     "question_text": "2 Write 1200 as a product of powers of its prime factors. Show your working clearly. ..................................................................................................................................................................... (Total for Question 2 is 3 marks)"
   },
   {
+    "id": "all::Jun2023_P2HR__Q02__p04-04__m04__Prime-Factors-HCF-and-LCM",
+    "source_id": "Jun2023_P2HR__Q02__p04-04__m04__Prime-Factors-HCF-and-LCM",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Prime Factors, HCF & LCM",
+    "topic_order": 2,
+    "paper": "Jun 2023 P2HR",
+    "question": 2,
+    "marks": 4,
+    "filename": "Jun2023_P2HR__Q02__p04-04__m04__Prime-Factors-HCF-and-LCM.png",
+    "image": "assets/questions_all/all_q0793.png",
+    "question_text": "2 Sandeep wants to buy some packets of pens and some boxes of pencils for his stationery shop. Each packet of pens contains 9 pens. Each box of pencils contains 12 pencils. Each packet of pens costs \u00a37.60 Each box of pencils costs \u00a34.80 Sandeep can only buy full packets of pens and full boxes of pencils. He wants to buy exactly the same number of pens as pencils. Work out the minimum amount Sandeep needs to pay. \u00a3...................................................... (Total for Question 2 is 4 marks)"
+  },
+  {
     "id": "all::Jun2024_P2HR__Q01__p03-03__m03__Prime-Factors-HCF-and-LCM",
     "source_id": "Jun2024_P2HR__Q01__p03-03__m03__Prime-Factors-HCF-and-LCM",
     "bank": "all",
@@ -715,20 +745,6 @@ window.QUESTION_DATA = [
     "question_text": "6 (a) Write 7.8 \u00d7 10-4 as an ordinary number. .................................................................................. (1) (b) Work out 5 6 10 7 10 2 8 10 4 3 3 . . \u00d7 + \u00d7 \u00d7 - Give your answer in standard form. .................................................................................. (2) (Total for Question 6 is 3 marks)"
   },
   {
-    "id": "all::Jan2020_P2H__Q12__p12-12__m04__Powers-Roots-and-Standard-Form",
-    "source_id": "Jan2020_P2H__Q12__p12-12__m04__Powers-Roots-and-Standard-Form",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Powers, Roots & Standard Form",
-    "topic_order": 3,
-    "paper": "Jan 2020 P2H",
-    "question": 12,
-    "marks": 4,
-    "filename": "Jan2020_P2H__Q12__p12-12__m04__Powers-Roots-and-Standard-Form.png",
-    "image": "assets/questions_all/all_q0040.png",
-    "question_text": "12 Astrid wants to buy some oil. She can buy the oil from either Dane Oil or Arctic Oil. Here is information about the price that each company will charge Astrid. Dane Oil Arctic Oil (4.2 \u00d7 105) litres for 2 500 000 Krone (8.6 \u00d7 105) litres for 770 000 Dollars Astrid wants to get the better value for money for the oil. 1 Dollar = 6.57 Krone From which company should she buy her oil, Dane Oil or Arctic Oil? You must show your working. (Total for Question 12 is 4 marks)"
-  },
-  {
     "id": "all::Jan2020_P2HR__Q10__p10-10__m03__Powers-Roots-and-Standard-Form",
     "source_id": "Jan2020_P2HR__Q10__p10-10__m03__Powers-Roots-and-Standard-Form",
     "bank": "all",
@@ -883,20 +899,6 @@ window.QUESTION_DATA = [
     "question_text": "6 (a) Write 76 000 000 in standard form. ....................................................... (1) (b) Write 5.4 \u00d7 10-4 as an ordinary number. ....................................................... (1) (Total for Question 6 is 2 marks)"
   },
   {
-    "id": "all::Jun2023_P2HR__Q11__p12-12__m02__Powers-Roots-and-Standard-Form",
-    "source_id": "Jun2023_P2HR__Q11__p12-12__m02__Powers-Roots-and-Standard-Form",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Powers, Roots & Standard Form",
-    "topic_order": 3,
-    "paper": "Jun 2023 P2HR",
-    "question": 11,
-    "marks": 2,
-    "filename": "Jun2023_P2HR__Q11__p12-12__m02__Powers-Roots-and-Standard-Form.png",
-    "image": "assets/questions_all/all_q0052.png",
-    "question_text": "11 Express m k 6 10 3 2 25 \u001b\u001a in the form m k c a b where a, b and c are integers to be found. ...................................................... (Total for Question 11 is 2 marks)"
-  },
-  {
     "id": "all::Jun2024_P2HR__Q09__p10-10__m04__Powers-Roots-and-Standard-Form",
     "source_id": "Jun2024_P2HR__Q09__p10-10__m04__Powers-Roots-and-Standard-Form",
     "bank": "all",
@@ -1009,20 +1011,6 @@ window.QUESTION_DATA = [
     "question_text": "5 (a) Write 5.7 \u00d7 10 -3 as an ordinary number. ....................................................... (1) (b) Write 800 000 in standard form. ....................................................... (1) (c) Work out 3 10 2 7 10 6 10 5 4 2 \u00d7 - \u00d7 \u00d7 - . ....................................................... (2) (Total for Question 5 is 4 marks)"
   },
   {
-    "id": "all::MayNov2020_P1H__Q17__p19-19__m04__Powers-Roots-and-Standard-Form",
-    "source_id": "MayNov2020_P1H__Q17__p19-19__m04__Powers-Roots-and-Standard-Form",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Powers, Roots & Standard Form",
-    "topic_order": 3,
-    "paper": "May-Nov 2020 P1H",
-    "question": 17,
-    "marks": 4,
-    "filename": "MayNov2020_P1H__Q17__p19-19__m04__Powers-Roots-and-Standard-Form.png",
-    "image": "assets/questions_all/all_q0061.png",
-    "question_text": "17 A metal block has a mass of 5 kg, correct to the nearest 50 grams. The block has a volume of (1.84 \u00d7 10 -3 ) m3, correct to 3 significant figures. Work out the upper bound for the density of the block. Give your answer in kg/m3 correct to 1 decimal place. Show your working clearly. ....................................................... kg/m3 (Total for Question 17 is 4 marks)"
-  },
-  {
     "id": "all::Nov2021_P2H__Q09__p11-11__m05__Powers-Roots-and-Standard-Form",
     "source_id": "Nov2021_P2H__Q09__p11-11__m05__Powers-Roots-and-Standard-Form",
     "bank": "all",
@@ -1077,20 +1065,6 @@ window.QUESTION_DATA = [
     "filename": "Nov2025_P2H__Q08__p08-08__m03__Powers-Roots-and-Standard-Form.png",
     "image": "assets/questions_all/all_q0065.png",
     "question_text": "8 (a) Write 5.76 \u00d7 10 4 as an ordinary number. ...................................................... (1) (b) Work out 5 3 2 3 10 8 10 4 10 Give your answer in standard form. ...................................................... (2) (Total for Question 8 is 3 marks)"
-  },
-  {
-    "id": "all::Jan2020_P1H__Q17__p21-21__m06__Fractions",
-    "source_id": "Jan2020_P1H__Q17__p21-21__m06__Fractions",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Fractions",
-    "topic_order": 4,
-    "paper": "Jan 2020 P1H",
-    "question": 17,
-    "marks": 6,
-    "filename": "Jan2020_P1H__Q17__p21-21__m06__Fractions.png",
-    "image": "assets/questions_all/all_q0066.png",
-    "question_text": "17 (a) Show that 6 2 12 12 7 4 3 2 + ( ) = + ( ) Show each stage of your working. (3) (b) Simplify fully 27 12 15 2 3 a t \uf8eb \uf8ed\uf8ec \uf8f6 \uf8f8\uf8f7 - ....................................................... (3) (Total for Question 17 is 6 marks)"
   },
   {
     "id": "all::Jan2020_P1HR__Q02__p03-03__m03__Fractions",
@@ -1233,18 +1207,32 @@ window.QUESTION_DATA = [
     "question_text": "3 A box contains only 9 red bricks 43 blue bricks and some yellow bricks 7 20 of the bricks are yellow bricks. Each brick weighs 35 grams. Work out the total weight of the yellow bricks. ...................................................... grams (Total for Question 3 is 4 marks)"
   },
   {
-    "id": "all::Jan2021_P1H__Q03__p05-05__m04__Percentages",
-    "source_id": "Jan2021_P1H__Q03__p05-05__m04__Percentages",
+    "id": "all::Jan2020_P1HR__Q07__p07-07__m03__Percentages",
+    "source_id": "Jan2020_P1HR__Q07__p07-07__m03__Percentages",
     "bank": "all",
     "unit": "Numbers & the Number System",
     "topic": "Percentages",
     "topic_order": 5,
-    "paper": "Jan 2021 P1H",
-    "question": 3,
-    "marks": 4,
-    "filename": "Jan2021_P1H__Q03__p05-05__m04__Percentages.png",
-    "image": "assets/questions_all/all_q0077.png",
-    "question_text": "3 The diagram shows a container for water in the shape of a prism. Diagram NOT accurately drawn 125 cm 40 cm 30 cm 60 cm 85 cm 20 cm The rectangular base of the prism, shown shaded in the diagram, is horizontal. The container is completely full of water. Tuah is going to use a pump to empty the water from the container so that the volume of water in the container decreases at a constant rate. The pump starts to empty water from the container at 10 30 and at 12 00 the water level in the container has dropped by 20 cm. Find the time at which all the water has been pumped out of the container. ...................................................... (Total for Question 3 is 4 marks)"
+    "paper": "Jan 2020 P1HR",
+    "question": 7,
+    "marks": 3,
+    "filename": "Jan2020_P1HR__Q07__p07-07__m03__Percentages.png",
+    "image": "assets/questions_all/all_q0184.png",
+    "question_text": "7 In a sale, the normal price of a hat is reduced by 15% The sale price of the hat is 20.40 euros. Work out the normal price of the hat. ...................................................... euros (Total for Question 7 is 3 marks)"
+  },
+  {
+    "id": "all::Jan2020_P2H__Q08__p09-09__m07__Percentages",
+    "source_id": "Jan2020_P2H__Q08__p09-09__m07__Percentages",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Percentages",
+    "topic_order": 5,
+    "paper": "Jan 2020 P2H",
+    "question": 8,
+    "marks": 7,
+    "filename": "Jan2020_P2H__Q08__p09-09__m07__Percentages.png",
+    "image": "assets/questions_all/all_q0185.png",
+    "question_text": "8 The table shows the cost, in euros, of Brigitte\u2019s car insurance in each of the years 2016, 2017 and 2018 Year 2016 2017 2018 Cost of insurance (euros) 500 545 592 Brigitte says, \u201cThe percentage increase in the cost of my car insurance from 2017 to 2018 is more than the percentage increase in the cost of my car insurance from 2016 to 2017\u201d (a) Is Brigitte correct? You must show how you get your answer. (4) Henri wants to insure his car. He gets a discount of 15% off the normal price. Henri pays 952 euros for his car insurance after the discount. (b) Work out the discount that Henri gets. ....................................................... euros (3) (Total for Question 8 is 7 marks)"
   },
   {
     "id": "all::Jan2021_P2H__Q03__p05-05__m06__Percentages",
@@ -1289,20 +1277,6 @@ window.QUESTION_DATA = [
     "question_text": "6 On Wednesday, the price of 1 litre of petrol was \u00a31.26 The price of petrol on Wednesday was 5% more than the price of petrol on the previous Monday. Calculate the price of 30 litres of petrol on the previous Monday. \u00a3...................................................... (Total for Question 6 is 3 marks)"
   },
   {
-    "id": "all::Jan2021_P2HR__Q14__p13-13__m04__Percentages",
-    "source_id": "Jan2021_P2HR__Q14__p13-13__m04__Percentages",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Percentages",
-    "topic_order": 5,
-    "paper": "Jan 2021 P2HR",
-    "question": 14,
-    "marks": 4,
-    "filename": "Jan2021_P2HR__Q14__p13-13__m04__Percentages.png",
-    "image": "assets/questions_all/all_q0081.png",
-    "question_text": "14 Simon bought a house at the beginning of 2018 The value of Simon\u2019s house had decreased by 15% by the end of 2018 The house increased in value during both 2019 and 2020 The percentage increases in the value of the house during 2019 and 2020 were the same. The value of Simon\u2019s house at the end of 2020 was 2.85% greater than the amount he paid for his house at the beginning of 2018 Calculate the percentage increase in the value of the house during 2019 ......................................................% (Total for Question 14 is 4 marks)"
-  },
-  {
     "id": "all::Jan2022_P1H__Q04__p05-05__m05__Percentages",
     "source_id": "Jan2022_P1H__Q04__p05-05__m05__Percentages",
     "bank": "all",
@@ -1315,20 +1289,6 @@ window.QUESTION_DATA = [
     "filename": "Jan2022_P1H__Q04__p05-05__m05__Percentages.png",
     "image": "assets/questions_all/all_q0082.png",
     "question_text": "4 Sarah makes and sells mugs. One day she makes 150 mugs. Her total cost for making these mugs is \u00a31140 Of these mugs 2 5 are small mugs 32% are medium mugs and the rest are large mugs Here is Sarah\u2019s price list for selling each mug. MUGS Small \u00a38.50 Medium \u00a311.20 Large \u00a314.20 Sarah sells all 150 mugs. Work out her percentage profit. Give your answer correct to the nearest whole number. ......................................................% (Total for Question 4 is 5 marks)"
-  },
-  {
-    "id": "all::Jan2022_P1HR__Q10__p12-13__m06__Percentages",
-    "source_id": "Jan2022_P1HR__Q10__p12-13__m06__Percentages",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Percentages",
-    "topic_order": 5,
-    "paper": "Jan 2022 P1HR",
-    "question": 10,
-    "marks": 6,
-    "filename": "Jan2022_P1HR__Q10__p12-13__m06__Percentages.png",
-    "image": "assets/questions_all/all_q0083.png",
-    "question_text": "10 Jonty has a storage container in the shape of a cuboid, as shown in the diagram. 3 m 2.5 m 12 m Diagram NOT accurately drawn Jonty is going to paint the outside of his storage container, apart from the base which is shown shaded in the diagram. He needs enough paint to cover the four sides and the top. Each tin of paint covers an area of 15 m2 The cost of each tin of paint recently increased by 10% After the increase, the cost of each tin of paint is \u00a326.95 Jonty says \u201cBefore the increase, I could have bought enough paint for less than \u00a3200\u201d Show that Jonty is correct. Show your working clearly. (Total for Question 10 is 6 marks)"
   },
   {
     "id": "all::Jan2022_P2H__Q08__p10-10__m05__Percentages",
@@ -1415,32 +1375,18 @@ window.QUESTION_DATA = [
     "question_text": "8 A cinema increased the cost of an adult ticket by 12% After the increase, the cost of an adult ticket was \u00a318.20 Work out the cost of an adult ticket before the increase. \u00a3....................................................... (Total for Question 8 is 3 marks)"
   },
   {
-    "id": "all::Jun2023_P2H__Q08__p09-09__m03__Percentages",
-    "source_id": "Jun2023_P2H__Q08__p09-09__m03__Percentages",
+    "id": "all::Jun2023_P2HR__Q06__p07-07__m07__Percentages",
+    "source_id": "Jun2023_P2HR__Q06__p07-07__m07__Percentages",
     "bank": "all",
     "unit": "Numbers & the Number System",
     "topic": "Percentages",
     "topic_order": 5,
-    "paper": "Jun 2023 P2H",
-    "question": 8,
-    "marks": 3,
-    "filename": "Jun2023_P2H__Q08__p09-09__m03__Percentages.png",
-    "image": "assets/questions_all/all_q0091.png",
-    "question_text": "8 Charlotte buys a painting for $680 The value of the painting increases by 4% each year. Work out the value of the painting at the end of 3 years. Give your answer correct to the nearest $ $....................................................... (Total for Question 8 is 3 marks)"
-  },
-  {
-    "id": "all::Jun2023_P2H__Q16__p16-16__m05__Percentages",
-    "source_id": "Jun2023_P2H__Q16__p16-16__m05__Percentages",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Percentages",
-    "topic_order": 5,
-    "paper": "Jun 2023 P2H",
-    "question": 16,
-    "marks": 5,
-    "filename": "Jun2023_P2H__Q16__p16-16__m05__Percentages.png",
-    "image": "assets/questions_all/all_q0092.png",
-    "question_text": "16 Q is directly proportional to t The graph shows the relationship between Q and t for 0 < t < 8 9 8 7 6 5 4 3 2 1 8 7 6 5 4 3 2 1 O t Q (a) Find a formula for Q in terms of t ....................................................... (3) Q is increased by 20% (b) Find the percentage increase in t .......................................................% (2) (Total for Question 16 is 5 marks)"
+    "paper": "Jun 2023 P2HR",
+    "question": 6,
+    "marks": 7,
+    "filename": "Jun2023_P2HR__Q06__p07-07__m07__Percentages.png",
+    "image": "assets/questions_all/all_q0188.png",
+    "question_text": "6 In his previous job, Pierre was paid 400 euros in total for working a 5-day week. In his new job, Pierre is paid 14 euros per hour. In his new job, Pierre works for 7 hours each day for a 5-day week. (a) Work out the percentage increase in the amount that Pierre is paid for a 5-day week. ......................................................% (4) Marie changes her job. Her salary decreases by 6% Her new salary is 23 030 euros. (b) Work out Marie\u2019s salary before she changes her job. ...................................................... euros (3) (Total for Question 6 is 7 marks)"
   },
   {
     "id": "all::Jun2024_P2H__Q08__p08-08__m05__Percentages",
@@ -1471,18 +1417,32 @@ window.QUESTION_DATA = [
     "question_text": "8 In a sale, all normal prices are reduced by 17% The sale price of a fridge is 6225 rupees. Work out the normal price of the fridge. \b .......................................................... rupees (Total for Question 8 is 3 marks)"
   },
   {
-    "id": "all::Jun2025_P2H__Q07__p08-08__m03__Percentages",
-    "source_id": "Jun2025_P2H__Q07__p08-08__m03__Percentages",
+    "id": "all::Jun2025_P1H__Q02__p04-04__m06__Percentages",
+    "source_id": "Jun2025_P1H__Q02__p04-04__m06__Percentages",
     "bank": "all",
     "unit": "Numbers & the Number System",
     "topic": "Percentages",
     "topic_order": 5,
-    "paper": "Jun 2025 P2H",
-    "question": 7,
+    "paper": "Jun 2025 P1H",
+    "question": 2,
+    "marks": 6,
+    "filename": "Jun2025_P1H__Q02__p04-04__m06__Percentages.png",
+    "image": "assets/questions_all/all_q0146.png",
+    "question_text": "2 Anna makes cups. Each cup costs 6 Swiss francs to make. Anna puts the cups into boxes to sell. Each box contains 4 cups. Anna sells 80 boxes of cups for a total of 2160 Swiss francs. (a) Work out the percentage profit Anna makes. Show your working clearly. .......................................................% (4) The height of each cup is 9 cm, correct to the nearest cm (b) Write down the lower bound of the height. ....................................................... cm (1) The weight of each cup is 120 g, correct to the nearest 10 g (c) Write down the upper bound of the weight. ....................................................... g (1) (Total for Question 2 is 6 marks)"
+  },
+  {
+    "id": "all::Jun2025_P1H__Q05__p06-06__m03__Percentages",
+    "source_id": "Jun2025_P1H__Q05__p06-06__m03__Percentages",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Percentages",
+    "topic_order": 5,
+    "paper": "Jun 2025 P1H",
+    "question": 5,
     "marks": 3,
-    "filename": "Jun2025_P2H__Q07__p08-08__m03__Percentages.png",
-    "image": "assets/questions_all/all_q0096.png",
-    "question_text": "7 Tim buys a bracelet for 4000 Swiss francs. The value of the bracelet increases by 7% each year. Work out the value of the bracelet at the end of 3 years. Give your answer correct to the nearest Swiss franc. ........................................................ Swiss francs (Total for Question 7 is 3 marks)"
+    "filename": "Jun2025_P1H__Q05__p06-06__m03__Percentages.png",
+    "image": "assets/questions_all/all_q0189.png",
+    "question_text": "5 In a sale, normal prices are reduced by 28% The sale price of a watch is 198 euros. Work out the normal price of the watch. ....................................................... euros (Total for Question 5 is 3 marks)"
   },
   {
     "id": "all::Jun2025_P2HR__Q04__p05-05__m05__Percentages",
@@ -1597,18 +1557,18 @@ window.QUESTION_DATA = [
     "question_text": "9 In a sale, normal prices are reduced by 20% A bag costs 1080 rupees in the sale. Work out the normal price of the bag. ....................................................... rupees (Total for Question 9 is 3 marks)"
   },
   {
-    "id": "all::MayNov2020_P1HR__Q08__p08-08__m03__Percentages",
-    "source_id": "MayNov2020_P1HR__Q08__p08-08__m03__Percentages",
+    "id": "all::MayNov2020_P1HR__Q05__p06-06__m06__Percentages",
+    "source_id": "MayNov2020_P1HR__Q05__p06-06__m06__Percentages",
     "bank": "all",
     "unit": "Numbers & the Number System",
     "topic": "Percentages",
     "topic_order": 5,
     "paper": "May-Nov 2020 P1HR",
-    "question": 8,
-    "marks": 3,
-    "filename": "MayNov2020_P1HR__Q08__p08-08__m03__Percentages.png",
-    "image": "assets/questions_all/all_q0105.png",
-    "question_text": "8 Harold bought an antique clock for \u00a31200 The clock increased in value by 8% per year. Find the value of the clock exactly 3 years after Harold bought the clock. Give your answer correct to the nearest \u00a3. \u00a3 ....................................................... (Total for Question 8 is 3 marks)"
+    "question": 5,
+    "marks": 6,
+    "filename": "MayNov2020_P1HR__Q05__p06-06__m06__Percentages.png",
+    "image": "assets/questions_all/all_q0192.png",
+    "question_text": "5 In 2017, the population of a village was 7500 In 2019, the population of the village was 8265 (a) Work out the percentage increase in the population of the village from 2017 to 2019 .......................................................% (3) In a sale, normal prices are reduced by 30% The sale price of a T\u2010shirt was 31.50 euros. (b) Work out the normal price of the T\u2010shirt. ....................................................... euros (3) (Total for Question 5 is 6 marks)"
   },
   {
     "id": "all::MayNov2020_P1HR__Q10__p09-09__m05__Percentages",
@@ -1665,6 +1625,34 @@ window.QUESTION_DATA = [
     "filename": "Nov2023_P1H__Q03__p05-05__m04__Percentages.png",
     "image": "assets/questions_all/all_q0109.png",
     "question_text": "3 Joshua buys a car for $12 500 He sells the car to Nina. Nina pays \u2022 a deposit of $1500 \u2022 followed by 36 monthly payments of $450 Work out Joshua\u2019s percentage profit. ..............................................................% (Total for Question 3 is 4 marks)"
+  },
+  {
+    "id": "all::Nov2023_P1H__Q06__p08-08__m04__Percentages",
+    "source_id": "Nov2023_P1H__Q06__p08-08__m04__Percentages",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Percentages",
+    "topic_order": 5,
+    "paper": "Nov 2023 P1H",
+    "question": 6,
+    "marks": 4,
+    "filename": "Nov2023_P1H__Q06__p08-08__m04__Percentages.png",
+    "image": "assets/questions_all/all_q0193.png",
+    "question_text": "6 Juan wants to buy a ticket to fly from Madrid to Berlin. He finds two different types of ticket he can buy in a sale, ticket A and ticket B 1 6 ticket B 20% off normal price ticket A off normal price The sale price of ticket A is 140 euros. The sale price of ticket B is 136 euros. Work out the difference between the normal price of ticket A and the normal price of ticket B .............................................................. euros (Total for Question 6 is 4 marks)"
+  },
+  {
+    "id": "all::Nov2024_P1H__Q07__p09-09__m04__Percentages",
+    "source_id": "Nov2024_P1H__Q07__p09-09__m04__Percentages",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Percentages",
+    "topic_order": 5,
+    "paper": "Nov 2024 P1H",
+    "question": 7,
+    "marks": 4,
+    "filename": "Nov2024_P1H__Q07__p09-09__m04__Percentages.png",
+    "image": "assets/questions_all/all_q0194.png",
+    "question_text": "7 Shop A and Shop B have offers for buying the same type of laptop. The normal price of the laptop in Shop A is different to the normal price of the laptop in Shop B Shop A Our normal price \u00a3475 Get 16% off our normal price Shop B Get 15% off our normal price Only pay \u00a3408 Which shop gives more money off their normal price? Show your working clearly. (Total for Question 7 is 4 marks)"
   },
   {
     "id": "all::Nov2024_P2H__Q04__p05-05__m05__Percentages",
@@ -1751,6 +1739,20 @@ window.QUESTION_DATA = [
     "question_text": "7 Kuro invests 50 000 yen for 3 years in a savings account. She gets 2.4% per year compound interest. Work out how much money Kuro will have in her savings account at the end of the 3 years. Give your answer correct to the nearest yen. ..................................................... yen (Total for Question 7 is 3 marks)"
   },
   {
+    "id": "all::Jan2021_P2HR__Q14__p13-13__m04__Compound-Interest-and-Depreciation",
+    "source_id": "Jan2021_P2HR__Q14__p13-13__m04__Compound-Interest-and-Depreciation",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Compound Interest & Depreciation",
+    "topic_order": 6,
+    "paper": "Jan 2021 P2HR",
+    "question": 14,
+    "marks": 4,
+    "filename": "Jan2021_P2HR__Q14__p13-13__m04__Compound-Interest-and-Depreciation.png",
+    "image": "assets/questions_all/all_q0081.png",
+    "question_text": "14 Simon bought a house at the beginning of 2018 The value of Simon\u2019s house had decreased by 15% by the end of 2018 The house increased in value during both 2019 and 2020 The percentage increases in the value of the house during 2019 and 2020 were the same. The value of Simon\u2019s house at the end of 2020 was 2.85% greater than the amount he paid for his house at the beginning of 2018 Calculate the percentage increase in the value of the house during 2019 ......................................................% (Total for Question 14 is 4 marks)"
+  },
+  {
     "id": "all::Jan2022_P1H__Q11__p11-11__m03__Compound-Interest-and-Depreciation",
     "source_id": "Jan2022_P1H__Q11__p11-11__m03__Compound-Interest-and-Depreciation",
     "bank": "all",
@@ -1821,6 +1823,20 @@ window.QUESTION_DATA = [
     "question_text": "9 Pasha invests 50 000 dollars in a savings account for 4 years. He gets 1.3% per year compound interest. Work out how much money Pasha will have in his savings account at the end of 4 years. Give your answer correct to the nearest dollar. ...................................................... dollars (Total for Question 9 is 3 marks)"
   },
   {
+    "id": "all::Jun2023_P2H__Q08__p09-09__m03__Compound-Interest-and-Depreciation",
+    "source_id": "Jun2023_P2H__Q08__p09-09__m03__Compound-Interest-and-Depreciation",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Compound Interest & Depreciation",
+    "topic_order": 6,
+    "paper": "Jun 2023 P2H",
+    "question": 8,
+    "marks": 3,
+    "filename": "Jun2023_P2H__Q08__p09-09__m03__Compound-Interest-and-Depreciation.png",
+    "image": "assets/questions_all/all_q0091.png",
+    "question_text": "8 Charlotte buys a painting for $680 The value of the painting increases by 4% each year. Work out the value of the painting at the end of 3 years. Give your answer correct to the nearest $ $....................................................... (Total for Question 8 is 3 marks)"
+  },
+  {
     "id": "all::Jun2023_P2HR__Q13__p14-14__m03__Compound-Interest-and-Depreciation",
     "source_id": "Jun2023_P2HR__Q13__p14-14__m03__Compound-Interest-and-Depreciation",
     "bank": "all",
@@ -1877,6 +1893,20 @@ window.QUESTION_DATA = [
     "question_text": "11 Zhou invests some money for 2 years. He invests $2500 with Bank A and $3000 with Bank B. Invests $2500 amount of money invested total amount of interest after 2 years Bank A : 20 : 3 Invests $3000 4% per year compound interest for 2 years Bank B = Zhou receives more interest from Bank A than from Bank B. How much more? $ ............................................................ (Total for Question 11 is 5 marks)"
   },
   {
+    "id": "all::Jun2025_P2H__Q07__p08-08__m03__Compound-Interest-and-Depreciation",
+    "source_id": "Jun2025_P2H__Q07__p08-08__m03__Compound-Interest-and-Depreciation",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Compound Interest & Depreciation",
+    "topic_order": 6,
+    "paper": "Jun 2025 P2H",
+    "question": 7,
+    "marks": 3,
+    "filename": "Jun2025_P2H__Q07__p08-08__m03__Compound-Interest-and-Depreciation.png",
+    "image": "assets/questions_all/all_q0096.png",
+    "question_text": "7 Tim buys a bracelet for 4000 Swiss francs. The value of the bracelet increases by 7% each year. Work out the value of the bracelet at the end of 3 years. Give your answer correct to the nearest Swiss franc. ........................................................ Swiss francs (Total for Question 7 is 3 marks)"
+  },
+  {
     "id": "all::Jun2025_P2HR__Q12__p12-12__m03__Compound-Interest-and-Depreciation",
     "source_id": "Jun2025_P2HR__Q12__p12-12__m03__Compound-Interest-and-Depreciation",
     "bank": "all",
@@ -1889,6 +1919,20 @@ window.QUESTION_DATA = [
     "filename": "Jun2025_P2HR__Q12__p12-12__m03__Compound-Interest-and-Depreciation.png",
     "image": "assets/questions_all/all_q0125.png",
     "question_text": "12 Osman buys a car for $16 000 The car depreciates at a rate of 12% each year for the first 2 years. In the third year, the car depreciates at a rate of x % At the end of 3 years, the value of the car is $11 461.12 Work out the value of x ............................................................. (Total for Question 12 is 3 marks)"
+  },
+  {
+    "id": "all::May2021_P2H__Q11__p11-11__m06__Compound-Interest-and-Depreciation",
+    "source_id": "May2021_P2H__Q11__p11-11__m06__Compound-Interest-and-Depreciation",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Compound Interest & Depreciation",
+    "topic_order": 6,
+    "paper": "May 2021 P2H",
+    "question": 11,
+    "marks": 6,
+    "filename": "May2021_P2H__Q11__p11-11__m06__Compound-Interest-and-Depreciation.png",
+    "image": "assets/questions_all/all_q0190.png",
+    "question_text": "11 Chengbo sold a house for 180 000 yuan. The amount for which he sold the house is 24% more than the amount he paid for the house. (a) Work out how much Chengbo paid for the house. Give your answer correct to 3 significant figures. ....................................................... yuan (3) Zhi bought a house on 1st January 2017 When she bought the house, its value was 120 000 yuan. The value of the house increased by 1.8% per year. (b) Work out the value of Zhi\u2019s house on 1st January 2020 Give your answer correct to 3 significant figures. ....................................................... yuan (3) (Total for Question 11 is 6 marks)"
   },
   {
     "id": "all::May2023_P1HR__Q09__p09-09__m03__Compound-Interest-and-Depreciation",
@@ -1931,6 +1975,20 @@ window.QUESTION_DATA = [
     "filename": "MayNov2020_P1H__Q13__p14-14__m03__Compound-Interest-and-Depreciation.png",
     "image": "assets/questions_all/all_q0128.png",
     "question_text": "13 Jan invests $8000 in a savings account. The account pays compound interest at a rate of x % per year. At the end of 6 years, there is a total of $8877.62 in the account. Work out the value of x. Give your answer correct to 2 decimal places. x = ....................................................... (Total for Question 13 is 3 marks)"
+  },
+  {
+    "id": "all::MayNov2020_P1HR__Q08__p08-08__m03__Compound-Interest-and-Depreciation",
+    "source_id": "MayNov2020_P1HR__Q08__p08-08__m03__Compound-Interest-and-Depreciation",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Compound Interest & Depreciation",
+    "topic_order": 6,
+    "paper": "May-Nov 2020 P1HR",
+    "question": 8,
+    "marks": 3,
+    "filename": "MayNov2020_P1HR__Q08__p08-08__m03__Compound-Interest-and-Depreciation.png",
+    "image": "assets/questions_all/all_q0105.png",
+    "question_text": "8 Harold bought an antique clock for \u00a31200 The clock increased in value by 8% per year. Find the value of the clock exactly 3 years after Harold bought the clock. Give your answer correct to the nearest \u00a3. \u00a3 ....................................................... (Total for Question 8 is 3 marks)"
   },
   {
     "id": "all::Nov2021_P2H__Q07__p09-09__m04__Compound-Interest-and-Depreciation",
@@ -2171,20 +2229,6 @@ window.QUESTION_DATA = [
     "question_text": "19 Aviv goes on a cycle journey. For the cycle journey average speed = 19 km/h correct to the nearest whole number time = 1.5 hours correct to one decimal place Work out the upper bound for the distance Aviv travels. Give your answer correct to 3 significant figures. \b .............................................................. km (Total for Question 19 is 3 marks)"
   },
   {
-    "id": "all::Jun2025_P1H__Q02__p04-04__m06__Rounding-Estimation-and-Bounds",
-    "source_id": "Jun2025_P1H__Q02__p04-04__m06__Rounding-Estimation-and-Bounds",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Rounding, Estimation & Bounds",
-    "topic_order": 8,
-    "paper": "Jun 2025 P1H",
-    "question": 2,
-    "marks": 6,
-    "filename": "Jun2025_P1H__Q02__p04-04__m06__Rounding-Estimation-and-Bounds.png",
-    "image": "assets/questions_all/all_q0146.png",
-    "question_text": "2 Anna makes cups. Each cup costs 6 Swiss francs to make. Anna puts the cups into boxes to sell. Each box contains 4 cups. Anna sells 80 boxes of cups for a total of 2160 Swiss francs. (a) Work out the percentage profit Anna makes. Show your working clearly. .......................................................% (4) The height of each cup is 9 cm, correct to the nearest cm (b) Write down the lower bound of the height. ....................................................... cm (1) The weight of each cup is 120 g, correct to the nearest 10 g (c) Write down the upper bound of the weight. ....................................................... g (1) (Total for Question 2 is 6 marks)"
-  },
-  {
     "id": "all::Jun2025_P1HR__Q02__p04-04__m02__Rounding-Estimation-and-Bounds",
     "source_id": "Jun2025_P1HR__Q02__p04-04__m02__Rounding-Estimation-and-Bounds",
     "bank": "all",
@@ -2239,6 +2283,20 @@ window.QUESTION_DATA = [
     "filename": "May2023_P1HR__Q18__p18-18__m04__Rounding-Estimation-and-Bounds.png",
     "image": "assets/questions_all/all_q0150.png",
     "question_text": "18 Diego builds a fence using fence panels. The total length of the fence is 50 metres, correct to the nearest 5 metres. The length of each fence panel is 1.3 metres, correct to the nearest 10 cm. The cost of each fence panel is \u00a38.65 Diego may only buy complete fence panels. Diego only pays for the number of panels he needs to build the fence. Work out the greatest difference in the possible amounts that Diego could pay to build the fence. Show your working clearly. \u00a3...................................................... (Total for Question 18 is 4 marks)"
+  },
+  {
+    "id": "all::MayNov2020_P1H__Q17__p19-19__m04__Rounding-Estimation-and-Bounds",
+    "source_id": "MayNov2020_P1H__Q17__p19-19__m04__Rounding-Estimation-and-Bounds",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Rounding, Estimation & Bounds",
+    "topic_order": 8,
+    "paper": "May-Nov 2020 P1H",
+    "question": 17,
+    "marks": 4,
+    "filename": "MayNov2020_P1H__Q17__p19-19__m04__Rounding-Estimation-and-Bounds.png",
+    "image": "assets/questions_all/all_q0061.png",
+    "question_text": "17 A metal block has a mass of 5 kg, correct to the nearest 50 grams. The block has a volume of (1.84 \u00d7 10 -3 ) m3, correct to 3 significant figures. Work out the upper bound for the density of the block. Give your answer in kg/m3 correct to 1 decimal place. Show your working clearly. ....................................................... kg/m3 (Total for Question 17 is 4 marks)"
   },
   {
     "id": "all::MayNov2020_P1HR__Q19__p19-19__m03__Rounding-Estimation-and-Bounds",
@@ -2367,6 +2425,34 @@ window.QUESTION_DATA = [
     "question_text": "20 The area of a rectangle is 18 cm2 The length of the rectangle is 7 1 + ( ) cm. Without using a calculator and showing each stage of your working, find the width of the rectangle. Give your answer in the form a b + c where a, b and c are integers. ....................................................... cm (Total for Question 20 is 3 marks)"
   },
   {
+    "id": "all::Jan2021_P1H__Q18__p21-21__m03__Surds",
+    "source_id": "Jan2021_P1H__Q18__p21-21__m03__Surds",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Surds",
+    "topic_order": 9,
+    "paper": "Jan 2021 P1H",
+    "question": 18,
+    "marks": 3,
+    "filename": "Jan2021_P1H__Q18__p21-21__m03__Surds.png",
+    "image": "assets/questions_all/all_q0289.png",
+    "question_text": "18 Given that (8 - x )(5 + x ) = y x + 21 where x is a prime number and y is an integer, find the value of x and the value of y. Show each stage of your working clearly. x = ...................................................... y = ...................................................... (Total for Question 18 is 3 marks)"
+  },
+  {
+    "id": "all::Jun2022_P1H__Q16__p17-17__m03__Surds",
+    "source_id": "Jun2022_P1H__Q16__p17-17__m03__Surds",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Surds",
+    "topic_order": 9,
+    "paper": "Jun 2022 P1H",
+    "question": 16,
+    "marks": 3,
+    "filename": "Jun2022_P1H__Q16__p17-17__m03__Surds.png",
+    "image": "assets/questions_all/all_q0757.png",
+    "question_text": "16 Without using a calculator, show that 12 2 1 2 2 32 12 5 - -( ) = + Show your working clearly. (Total for Question 16 is 3 marks)"
+  },
+  {
     "id": "all::Jun2022_P1HR__Q21__p23-23__m04__Surds",
     "source_id": "Jun2022_P1HR__Q21__p23-23__m04__Surds",
     "bank": "all",
@@ -2381,20 +2467,6 @@ window.QUESTION_DATA = [
     "question_text": "21 Express 3 8 2 1 2 + - ( ) in the form p + q where p and q are integers. Show each stage of your working clearly. ....................................................... (Total for Question 21 is 4 marks)"
   },
   {
-    "id": "all::Jun2023_P2H__Q15__p15-15__m07__Surds",
-    "source_id": "Jun2023_P2H__Q15__p15-15__m07__Surds",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Surds",
-    "topic_order": 9,
-    "paper": "Jun 2023 P2H",
-    "question": 15,
-    "marks": 7,
-    "filename": "Jun2023_P2H__Q15__p15-15__m07__Surds.png",
-    "image": "assets/questions_all/all_q0160.png",
-    "question_text": "15 (a) Simplify fully 32 15 3 5 a ....................................................... (2) (b) Express 1 10 3 x \u001b\u001a \u0019 in the form pxn where p and n are integers. ....................................................... (2) (c) Solve 1 2 3 4 5 2 1 2 y y Show clear algebraic working. y = ....................................................... (3) (Total for Question 15 is 7 marks)"
-  },
-  {
     "id": "all::Jun2023_P2H__Q23__p24-25__m04__Surds",
     "source_id": "Jun2023_P2H__Q23__p24-25__m04__Surds",
     "bank": "all",
@@ -2407,20 +2479,6 @@ window.QUESTION_DATA = [
     "filename": "Jun2023_P2H__Q23__p24-25__m04__Surds.png",
     "image": "assets/questions_all/all_q0761.png",
     "question_text": "23 The diagram shows a cuboid with a square cross section. x cm x cm (2 5 - 3) cm Diagram NOT accurately drawn The volume of the cuboid is (13 + 6 5 ) cm3 Without using a calculator, find the value of x Give your answer in the form a + b where a and b are integers. Show your working clearly. x = ....................................................... (Total for Question 23 is 4 marks)"
-  },
-  {
-    "id": "all::Jun2025_P1HR__Q15__p15-15__m06__Surds",
-    "source_id": "Jun2025_P1HR__Q15__p15-15__m06__Surds",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Surds",
-    "topic_order": 9,
-    "paper": "Jun 2025 P1HR",
-    "question": 15,
-    "marks": 6,
-    "filename": "Jun2025_P1HR__Q15__p15-15__m06__Surds.png",
-    "image": "assets/questions_all/all_q0161.png",
-    "question_text": "15 (a) Solve 5 8 3 2 5 4 23 a a Show clear algebraic working. a = ............................................................ (4) (b) Express y 3 1 \u001b \u001a\u001a \u0019 in the form cyn where c and n are numbers to be found. ............................................................ (2) (Total for Question 15 is 6 marks)"
   },
   {
     "id": "all::MayNov2020_P1H__Q19__p21-21__m03__Surds",
@@ -2451,20 +2509,6 @@ window.QUESTION_DATA = [
     "question_text": "17 Express 8 5 1 - in the form a b + where a and b are integers. Show each stage of your working clearly. ....................................................... (Total for Question 17 is 3 marks)"
   },
   {
-    "id": "all::Nov2024_P1H__Q15__p16-16__m03__Surds",
-    "source_id": "Nov2024_P1H__Q15__p16-16__m03__Surds",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Surds",
-    "topic_order": 9,
-    "paper": "Nov 2024 P1H",
-    "question": 15,
-    "marks": 3,
-    "filename": "Nov2024_P1H__Q15__p16-16__m03__Surds.png",
-    "image": "assets/questions_all/all_q0165.png",
-    "question_text": "15 Write 3 2 1 5 4 x x x in the form ax bx cx 3 2 + + where a, b and c are integers. ............................................................................................. (Total for Question 15 is 3 marks)"
-  },
-  {
     "id": "all::Jan2020_P1H__Q05__p07-07__m06__Ratio-Toolkit",
     "source_id": "Jan2020_P1H__Q05__p07-07__m06__Ratio-Toolkit",
     "bank": "all",
@@ -2477,34 +2521,6 @@ window.QUESTION_DATA = [
     "filename": "Jan2020_P1H__Q05__p07-07__m06__Ratio-Toolkit.png",
     "image": "assets/questions_all/all_q0166.png",
     "question_text": "5 120 children go on an activity holiday. The ratio of the number of girls to the number of boys is 3 : 5 On Sunday, all the children either go sailing or go climbing. 16 25 of the boys go climbing. Twice as many girls go sailing as go climbing. Work out how many children go sailing on Sunday. ....................................................... (Total for Question 5 is 6 marks)"
-  },
-  {
-    "id": "all::Jan2022_P1HR__Q18__p22-22__m04__Ratio-Toolkit",
-    "source_id": "Jan2022_P1HR__Q18__p22-22__m04__Ratio-Toolkit",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Ratio Toolkit",
-    "topic_order": 11,
-    "paper": "Jan 2022 P1HR",
-    "question": 18,
-    "marks": 4,
-    "filename": "Jan2022_P1HR__Q18__p22-22__m04__Ratio-Toolkit.png",
-    "image": "assets/questions_all/all_q0168.png",
-    "question_text": "18 The three solids A, B and C are similar such that the surface area of A : the surface area of B = 4 : 9 and the volume of B : the volume of C = 125 : 343 Work out the ratio the height of A : the height of C Give your ratio in its simplest form. ...................................................... (Total for Question 18 is 4 marks)"
-  },
-  {
-    "id": "all::Jan2022_P2H__Q06__p08-08__m05__Ratio-Toolkit",
-    "source_id": "Jan2022_P2H__Q06__p08-08__m05__Ratio-Toolkit",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Ratio Toolkit",
-    "topic_order": 11,
-    "paper": "Jan 2022 P2H",
-    "question": 6,
-    "marks": 5,
-    "filename": "Jan2022_P2H__Q06__p08-08__m05__Ratio-Toolkit.png",
-    "image": "assets/questions_all/all_q0169.png",
-    "question_text": "6 A bag contains only pink sweets, white sweets, green sweets and red sweets. The table gives each of the probabilities that, when a sweet is taken at random from the bag, the sweet will be green or the sweet will be red. Sweet pink white green red Probability 0.2 0.35 The ratio number of pink sweets : number of white sweets = 2 : 1 There are 28 red sweets in the bag. Work out the number of white sweets in the bag. ....................................................... (Total for Question 6 is 5 marks)"
   },
   {
     "id": "all::Jun2023_P2H__Q05__p07-07__m04__Ratio-Toolkit",
@@ -2549,20 +2565,6 @@ window.QUESTION_DATA = [
     "question_text": "1 Last season, the number of goals scored by Arjun, by Simon and by Kath for their football team were in the ratios 2 : 5 : 8 Simon scored 12 more goals than Arjun. Work out the number of goals scored by Kath. ....................................................... (Total for Question 1 is 3 marks)"
   },
   {
-    "id": "all::May2023_P1H__Q19__p20-21__m05__Ratio-Toolkit",
-    "source_id": "May2023_P1H__Q19__p20-21__m05__Ratio-Toolkit",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Ratio Toolkit",
-    "topic_order": 11,
-    "paper": "May 2023 P1H",
-    "question": 19,
-    "marks": 5,
-    "filename": "May2023_P1H__Q19__p20-21__m05__Ratio-Toolkit.png",
-    "image": "assets/questions_all/all_q0176.png",
-    "question_text": "19 A B N O P M a b Diagram NOT accurately drawn OMA, ONB, MPB and NPA are straight lines. M is the midpoint of OA ON : NB = 1 : 5 OM \u2192 = a ON \u2192 = b (a) Find in terms of a and b the vector AN \u2192 ....................................................... (1) (b) Use a vector method to find the ratio AP : PN AP : PN = ....................................................... (4) (Total for Question 19 is 5 marks)"
-  },
-  {
     "id": "all::Nov2023_P2H__Q05__p07-07__m03__Ratio-Toolkit",
     "source_id": "Nov2023_P2H__Q05__p07-07__m03__Ratio-Toolkit",
     "bank": "all",
@@ -2577,20 +2579,6 @@ window.QUESTION_DATA = [
     "question_text": "5 Avril bakes a cake. She uses flour, butter and sugar such that weight of flour : weight of butter = 6 : 5 weight of butter : weight of sugar = 3 : 2 Avril uses 120 grams of sugar. Work out the weight of flour Avril uses. .............................................................. grams (Total for Question 5 is 3 marks)"
   },
   {
-    "id": "all::Nov2023_P2H__Q18__p16-16__m04__Ratio-Toolkit",
-    "source_id": "Nov2023_P2H__Q18__p16-16__m04__Ratio-Toolkit",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Ratio Toolkit",
-    "topic_order": 11,
-    "paper": "Nov 2023 P2H",
-    "question": 18,
-    "marks": 4,
-    "filename": "Nov2023_P2H__Q18__p16-16__m04__Ratio-Toolkit.png",
-    "image": "assets/questions_all/all_q0178.png",
-    "question_text": "18 A particle is moving along a straight line that passes through the fixed point O The displacement, s metres, of the particle from O at time t seconds is given by s t t t 2 5 6 5 3 2 Find the value of t when the acceleration of the particle is 5 m/s2 t = .............................................................. (Total for Question 18 is 4 marks)"
-  },
-  {
     "id": "all::Jan2020_P1HR__Q01__p03-03__m03__Ratio-Problem-Solving",
     "source_id": "Jan2020_P1HR__Q01__p03-03__m03__Ratio-Problem-Solving",
     "bank": "all",
@@ -2603,6 +2591,34 @@ window.QUESTION_DATA = [
     "filename": "Jan2020_P1HR__Q01__p03-03__m03__Ratio-Problem-Solving.png",
     "image": "assets/questions_all/all_q0181.png",
     "question_text": "1 Brendon, Asha and Julie share some money in the ratios 3 : 2 : 6 The total amount of money that Asha and Julie receive is $36 Work out the amount of money that Brendon receives. $...................................................... (Total for Question 1 is 3 marks) 1 5 2"
+  },
+  {
+    "id": "all::Jan2021_P1H__Q01__p03-03__m04__Ratio-Problem-Solving",
+    "source_id": "Jan2021_P1H__Q01__p03-03__m04__Ratio-Problem-Solving",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Ratio Problem Solving",
+    "topic_order": 12,
+    "paper": "Jan 2021 P1H",
+    "question": 1,
+    "marks": 4,
+    "filename": "Jan2021_P1H__Q01__p03-03__m04__Ratio-Problem-Solving.png",
+    "image": "assets/questions_all/all_q0186.png",
+    "question_text": "1 Pieter owns a currency conversion shop. Last Monday, Pieter changed a total of 20 160 rand into a number of different currencies. He changed 3 10 of the 20 160 rand into euros. He changed the rest of the rands into dollars, rupees and francs in the ratios 9 : 5 : 2 Pieter changed more rands into dollars than he changed into francs. Work out how many more. ...................................................... rand (Total for Question 1 is 4 marks)"
+  },
+  {
+    "id": "all::Jan2022_P1H__Q02__p04-04__m03__Ratio-Problem-Solving",
+    "source_id": "Jan2022_P1H__Q02__p04-04__m03__Ratio-Problem-Solving",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Ratio Problem Solving",
+    "topic_order": 12,
+    "paper": "Jan 2022 P1H",
+    "question": 2,
+    "marks": 3,
+    "filename": "Jan2022_P1H__Q02__p04-04__m03__Ratio-Problem-Solving.png",
+    "image": "assets/questions_all/all_q0187.png",
+    "question_text": "2 Danil, Gabriel and Hadley share some money in the ratios 3 : 5 : 9 The difference between the amount of money that Gabriel receives and the amount of money that Hadley receives is 196 euros. Work out the amount of money that Danil receives. ...................................................... euros (Total for Question 2 is 3 marks)"
   },
   {
     "id": "all::Jun2025_P2H__Q06__p07-07__m04__Ratio-Problem-Solving",
@@ -2633,158 +2649,18 @@ window.QUESTION_DATA = [
     "question_text": "6 Eli and Peta share $275 in the ratio 2 : 3 Eli gives 3 11 of his share to charity. Peta gives 0.32 of her share to charity. Work out the total amount that Eli and Peta give to charity. $...................................................... (Total for Question 6 is 4 marks)"
   },
   {
-    "id": "all::Jan2020_P1HR__Q07__p07-07__m03__Exchange-Rates-and-Best-Buys",
-    "source_id": "Jan2020_P1HR__Q07__p07-07__m03__Exchange-Rates-and-Best-Buys",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Exchange Rates & Best Buys",
-    "topic_order": 13,
-    "paper": "Jan 2020 P1HR",
-    "question": 7,
-    "marks": 3,
-    "filename": "Jan2020_P1HR__Q07__p07-07__m03__Exchange-Rates-and-Best-Buys.png",
-    "image": "assets/questions_all/all_q0184.png",
-    "question_text": "7 In a sale, the normal price of a hat is reduced by 15% The sale price of the hat is 20.40 euros. Work out the normal price of the hat. ...................................................... euros (Total for Question 7 is 3 marks)"
-  },
-  {
-    "id": "all::Jan2020_P2H__Q08__p09-09__m07__Exchange-Rates-and-Best-Buys",
-    "source_id": "Jan2020_P2H__Q08__p09-09__m07__Exchange-Rates-and-Best-Buys",
+    "id": "all::Jan2020_P2H__Q12__p12-12__m04__Exchange-Rates-and-Best-Buys",
+    "source_id": "Jan2020_P2H__Q12__p12-12__m04__Exchange-Rates-and-Best-Buys",
     "bank": "all",
     "unit": "Numbers & the Number System",
     "topic": "Exchange Rates & Best Buys",
     "topic_order": 13,
     "paper": "Jan 2020 P2H",
-    "question": 8,
-    "marks": 7,
-    "filename": "Jan2020_P2H__Q08__p09-09__m07__Exchange-Rates-and-Best-Buys.png",
-    "image": "assets/questions_all/all_q0185.png",
-    "question_text": "8 The table shows the cost, in euros, of Brigitte\u2019s car insurance in each of the years 2016, 2017 and 2018 Year 2016 2017 2018 Cost of insurance (euros) 500 545 592 Brigitte says, \u201cThe percentage increase in the cost of my car insurance from 2017 to 2018 is more than the percentage increase in the cost of my car insurance from 2016 to 2017\u201d (a) Is Brigitte correct? You must show how you get your answer. (4) Henri wants to insure his car. He gets a discount of 15% off the normal price. Henri pays 952 euros for his car insurance after the discount. (b) Work out the discount that Henri gets. ....................................................... euros (3) (Total for Question 8 is 7 marks)"
-  },
-  {
-    "id": "all::Jan2021_P1H__Q01__p03-03__m04__Exchange-Rates-and-Best-Buys",
-    "source_id": "Jan2021_P1H__Q01__p03-03__m04__Exchange-Rates-and-Best-Buys",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Exchange Rates & Best Buys",
-    "topic_order": 13,
-    "paper": "Jan 2021 P1H",
-    "question": 1,
+    "question": 12,
     "marks": 4,
-    "filename": "Jan2021_P1H__Q01__p03-03__m04__Exchange-Rates-and-Best-Buys.png",
-    "image": "assets/questions_all/all_q0186.png",
-    "question_text": "1 Pieter owns a currency conversion shop. Last Monday, Pieter changed a total of 20 160 rand into a number of different currencies. He changed 3 10 of the 20 160 rand into euros. He changed the rest of the rands into dollars, rupees and francs in the ratios 9 : 5 : 2 Pieter changed more rands into dollars than he changed into francs. Work out how many more. ...................................................... rand (Total for Question 1 is 4 marks)"
-  },
-  {
-    "id": "all::Jan2022_P1H__Q02__p04-04__m03__Exchange-Rates-and-Best-Buys",
-    "source_id": "Jan2022_P1H__Q02__p04-04__m03__Exchange-Rates-and-Best-Buys",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Exchange Rates & Best Buys",
-    "topic_order": 13,
-    "paper": "Jan 2022 P1H",
-    "question": 2,
-    "marks": 3,
-    "filename": "Jan2022_P1H__Q02__p04-04__m03__Exchange-Rates-and-Best-Buys.png",
-    "image": "assets/questions_all/all_q0187.png",
-    "question_text": "2 Danil, Gabriel and Hadley share some money in the ratios 3 : 5 : 9 The difference between the amount of money that Gabriel receives and the amount of money that Hadley receives is 196 euros. Work out the amount of money that Danil receives. ...................................................... euros (Total for Question 2 is 3 marks)"
-  },
-  {
-    "id": "all::Jun2023_P2HR__Q06__p07-07__m07__Exchange-Rates-and-Best-Buys",
-    "source_id": "Jun2023_P2HR__Q06__p07-07__m07__Exchange-Rates-and-Best-Buys",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Exchange Rates & Best Buys",
-    "topic_order": 13,
-    "paper": "Jun 2023 P2HR",
-    "question": 6,
-    "marks": 7,
-    "filename": "Jun2023_P2HR__Q06__p07-07__m07__Exchange-Rates-and-Best-Buys.png",
-    "image": "assets/questions_all/all_q0188.png",
-    "question_text": "6 In his previous job, Pierre was paid 400 euros in total for working a 5-day week. In his new job, Pierre is paid 14 euros per hour. In his new job, Pierre works for 7 hours each day for a 5-day week. (a) Work out the percentage increase in the amount that Pierre is paid for a 5-day week. ......................................................% (4) Marie changes her job. Her salary decreases by 6% Her new salary is 23 030 euros. (b) Work out Marie\u2019s salary before she changes her job. ...................................................... euros (3) (Total for Question 6 is 7 marks)"
-  },
-  {
-    "id": "all::Jun2025_P1H__Q05__p06-06__m03__Exchange-Rates-and-Best-Buys",
-    "source_id": "Jun2025_P1H__Q05__p06-06__m03__Exchange-Rates-and-Best-Buys",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Exchange Rates & Best Buys",
-    "topic_order": 13,
-    "paper": "Jun 2025 P1H",
-    "question": 5,
-    "marks": 3,
-    "filename": "Jun2025_P1H__Q05__p06-06__m03__Exchange-Rates-and-Best-Buys.png",
-    "image": "assets/questions_all/all_q0189.png",
-    "question_text": "5 In a sale, normal prices are reduced by 28% The sale price of a watch is 198 euros. Work out the normal price of the watch. ....................................................... euros (Total for Question 5 is 3 marks)"
-  },
-  {
-    "id": "all::May2021_P2H__Q11__p11-11__m06__Exchange-Rates-and-Best-Buys",
-    "source_id": "May2021_P2H__Q11__p11-11__m06__Exchange-Rates-and-Best-Buys",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Exchange Rates & Best Buys",
-    "topic_order": 13,
-    "paper": "May 2021 P2H",
-    "question": 11,
-    "marks": 6,
-    "filename": "May2021_P2H__Q11__p11-11__m06__Exchange-Rates-and-Best-Buys.png",
-    "image": "assets/questions_all/all_q0190.png",
-    "question_text": "11 Chengbo sold a house for 180 000 yuan. The amount for which he sold the house is 24% more than the amount he paid for the house. (a) Work out how much Chengbo paid for the house. Give your answer correct to 3 significant figures. ....................................................... yuan (3) Zhi bought a house on 1st January 2017 When she bought the house, its value was 120 000 yuan. The value of the house increased by 1.8% per year. (b) Work out the value of Zhi\u2019s house on 1st January 2020 Give your answer correct to 3 significant figures. ....................................................... yuan (3) (Total for Question 11 is 6 marks)"
-  },
-  {
-    "id": "all::May2024_P1H__Q11__p12-12__m04__Exchange-Rates-and-Best-Buys",
-    "source_id": "May2024_P1H__Q11__p12-12__m04__Exchange-Rates-and-Best-Buys",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Exchange Rates & Best Buys",
-    "topic_order": 13,
-    "paper": "May 2024 P1H",
-    "question": 11,
-    "marks": 4,
-    "filename": "May2024_P1H__Q11__p12-12__m04__Exchange-Rates-and-Best-Buys.png",
-    "image": "assets/questions_all/all_q0191.png",
-    "question_text": "11 The diagram shows a roof support. A B C M 9 m 12 m Diagram NOT accurately drawn The roof support is made from four lengths of wood, AB, AC, BC and MC AC = BC = 9 m AB = 12 m angle AMC = 90\u00b0 Lewis is going to buy lengths of wood to make the roof support. The wood costs 21.50 euros per metre. Each length of wood he buys has to be a whole number of metres. Work out the total cost of the wood Lewis needs to buy. Show your working clearly. ...................................................... euros (Total for Question 11 is 4 marks)"
-  },
-  {
-    "id": "all::MayNov2020_P1HR__Q05__p06-06__m06__Exchange-Rates-and-Best-Buys",
-    "source_id": "MayNov2020_P1HR__Q05__p06-06__m06__Exchange-Rates-and-Best-Buys",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Exchange Rates & Best Buys",
-    "topic_order": 13,
-    "paper": "May-Nov 2020 P1HR",
-    "question": 5,
-    "marks": 6,
-    "filename": "MayNov2020_P1HR__Q05__p06-06__m06__Exchange-Rates-and-Best-Buys.png",
-    "image": "assets/questions_all/all_q0192.png",
-    "question_text": "5 In 2017, the population of a village was 7500 In 2019, the population of the village was 8265 (a) Work out the percentage increase in the population of the village from 2017 to 2019 .......................................................% (3) In a sale, normal prices are reduced by 30% The sale price of a T\u2010shirt was 31.50 euros. (b) Work out the normal price of the T\u2010shirt. ....................................................... euros (3) (Total for Question 5 is 6 marks)"
-  },
-  {
-    "id": "all::Nov2023_P1H__Q06__p08-08__m04__Exchange-Rates-and-Best-Buys",
-    "source_id": "Nov2023_P1H__Q06__p08-08__m04__Exchange-Rates-and-Best-Buys",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Exchange Rates & Best Buys",
-    "topic_order": 13,
-    "paper": "Nov 2023 P1H",
-    "question": 6,
-    "marks": 4,
-    "filename": "Nov2023_P1H__Q06__p08-08__m04__Exchange-Rates-and-Best-Buys.png",
-    "image": "assets/questions_all/all_q0193.png",
-    "question_text": "6 Juan wants to buy a ticket to fly from Madrid to Berlin. He finds two different types of ticket he can buy in a sale, ticket A and ticket B 1 6 ticket B 20% off normal price ticket A off normal price The sale price of ticket A is 140 euros. The sale price of ticket B is 136 euros. Work out the difference between the normal price of ticket A and the normal price of ticket B .............................................................. euros (Total for Question 6 is 4 marks)"
-  },
-  {
-    "id": "all::Nov2024_P1H__Q07__p09-09__m04__Exchange-Rates-and-Best-Buys",
-    "source_id": "Nov2024_P1H__Q07__p09-09__m04__Exchange-Rates-and-Best-Buys",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Exchange Rates & Best Buys",
-    "topic_order": 13,
-    "paper": "Nov 2024 P1H",
-    "question": 7,
-    "marks": 4,
-    "filename": "Nov2024_P1H__Q07__p09-09__m04__Exchange-Rates-and-Best-Buys.png",
-    "image": "assets/questions_all/all_q0194.png",
-    "question_text": "7 Shop A and Shop B have offers for buying the same type of laptop. The normal price of the laptop in Shop A is different to the normal price of the laptop in Shop B Shop A Our normal price \u00a3475 Get 16% off our normal price Shop B Get 15% off our normal price Only pay \u00a3408 Which shop gives more money off their normal price? Show your working clearly. (Total for Question 7 is 4 marks)"
+    "filename": "Jan2020_P2H__Q12__p12-12__m04__Exchange-Rates-and-Best-Buys.png",
+    "image": "assets/questions_all/all_q0040.png",
+    "question_text": "12 Astrid wants to buy some oil. She can buy the oil from either Dane Oil or Arctic Oil. Here is information about the price that each company will charge Astrid. Dane Oil Arctic Oil (4.2 \u00d7 105) litres for 2 500 000 Krone (8.6 \u00d7 105) litres for 770 000 Dollars Astrid wants to get the better value for money for the oil. 1 Dollar = 6.57 Krone From which company should she buy her oil, Dane Oil or Arctic Oil? You must show your working. (Total for Question 12 is 4 marks)"
   },
   {
     "id": "all::Jan2022_P1H__Q15__p16-16__m03__Direct-and-Inverse-Proportion",
@@ -2829,6 +2705,20 @@ window.QUESTION_DATA = [
     "question_text": "17 M varies directly as the cube of h M = 4 when h = 0.5 Find the value of h when M = 500 ...................................................... (Total for Question 17 is 4 marks)"
   },
   {
+    "id": "all::Jun2023_P2H__Q16__p16-16__m05__Direct-and-Inverse-Proportion",
+    "source_id": "Jun2023_P2H__Q16__p16-16__m05__Direct-and-Inverse-Proportion",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Direct & Inverse Proportion",
+    "topic_order": 14,
+    "paper": "Jun 2023 P2H",
+    "question": 16,
+    "marks": 5,
+    "filename": "Jun2023_P2H__Q16__p16-16__m05__Direct-and-Inverse-Proportion.png",
+    "image": "assets/questions_all/all_q0092.png",
+    "question_text": "16 Q is directly proportional to t The graph shows the relationship between Q and t for 0 < t < 8 9 8 7 6 5 4 3 2 1 8 7 6 5 4 3 2 1 O t Q (a) Find a formula for Q in terms of t ....................................................... (3) Q is increased by 20% (b) Find the percentage increase in t .......................................................% (2) (Total for Question 16 is 5 marks)"
+  },
+  {
     "id": "all::Jun2024_P2H__Q17__p17-17__m03__Direct-and-Inverse-Proportion",
     "source_id": "Jun2024_P2H__Q17__p17-17__m03__Direct-and-Inverse-Proportion",
     "bank": "all",
@@ -2869,20 +2759,6 @@ window.QUESTION_DATA = [
     "filename": "Jun2025_P1HR__Q18__p18-18__m05__Direct-and-Inverse-Proportion.png",
     "image": "assets/questions_all/all_q0201.png",
     "question_text": "18 F is inversely proportional to the cube of r F = 6 when r = 2 (a) Find a formula for F in terms of r ............................................................ (3) (b) Find the value of r when F = 3072 r = ............................................................ (2) (Total for Question 18 is 5 marks)"
-  },
-  {
-    "id": "all::Jun2025_P2HR__Q06__p08-08__m05__Direct-and-Inverse-Proportion",
-    "source_id": "Jun2025_P2HR__Q06__p08-08__m05__Direct-and-Inverse-Proportion",
-    "bank": "all",
-    "unit": "Numbers & the Number System",
-    "topic": "Direct & Inverse Proportion",
-    "topic_order": 14,
-    "paper": "Jun 2025 P2HR",
-    "question": 6,
-    "marks": 5,
-    "filename": "Jun2025_P2HR__Q06__p08-08__m05__Direct-and-Inverse-Proportion.png",
-    "image": "assets/questions_all/all_q0202.png",
-    "question_text": "6 (a) Write down the value of 50 ............................................................. (1) 5 5 5 5 9 3 2 k (b) Find the value of k k = ............................................................. (2) (c) Simplify fully 2 4 5 3 d e ............................................................. (2) (Total for Question 6 is 5 marks)"
   },
   {
     "id": "all::May2021_P2H__Q16__p18-18__m06__Direct-and-Inverse-Proportion",
@@ -2955,6 +2831,34 @@ window.QUESTION_DATA = [
     "question_text": "17 T is inversely proportional to m T = 15 when m = 36 Find a formula for T in terms of m ...................................................... (Total for Question 17 is 3 marks)"
   },
   {
+    "id": "all::Jan2020_P1H__Q17__p21-21__m06__Algebraic-Roots-and-Indices",
+    "source_id": "Jan2020_P1H__Q17__p21-21__m06__Algebraic-Roots-and-Indices",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Roots & Indices",
+    "topic_order": 16,
+    "paper": "Jan 2020 P1H",
+    "question": 17,
+    "marks": 6,
+    "filename": "Jan2020_P1H__Q17__p21-21__m06__Algebraic-Roots-and-Indices.png",
+    "image": "assets/questions_all/all_q0066.png",
+    "question_text": "17 (a) Show that 6 2 12 12 7 4 3 2 + ( ) = + ( ) Show each stage of your working. (3) (b) Simplify fully 27 12 15 2 3 a t \uf8eb \uf8ed\uf8ec \uf8f6 \uf8f8\uf8f7 - ....................................................... (3) (Total for Question 17 is 6 marks)"
+  },
+  {
+    "id": "all::Jan2020_P2H__Q01__p03-03__m03__Algebraic-Roots-and-Indices",
+    "source_id": "Jan2020_P2H__Q01__p03-03__m03__Algebraic-Roots-and-Indices",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Roots & Indices",
+    "topic_order": 16,
+    "paper": "Jan 2020 P2H",
+    "question": 1,
+    "marks": 3,
+    "filename": "Jan2020_P2H__Q01__p03-03__m03__Algebraic-Roots-and-Indices.png",
+    "image": "assets/questions_all/all_q0782.png",
+    "question_text": "1 (a) Simplify x x 9 2 ....................................................... (1) (b) Write 7 7 7 8 4 3 \u00d7 as a single power of 7 ....................................................... (2) (Total for Question 1 is 3 marks)"
+  },
+  {
     "id": "all::Jan2020_P2HR__Q21__p22-22__m07__Algebraic-Roots-and-Indices",
     "source_id": "Jan2020_P2HR__Q21__p22-22__m07__Algebraic-Roots-and-Indices",
     "bank": "all",
@@ -2967,6 +2871,34 @@ window.QUESTION_DATA = [
     "filename": "Jan2020_P2HR__Q21__p22-22__m07__Algebraic-Roots-and-Indices.png",
     "image": "assets/questions_all/all_q0208.png",
     "question_text": "21 (a) Simplify fully 10 23 12 4 9 2 2 x x x + + - ....................................................... (3) 2 2 8 4 2 3 2 5 y y y n \u00d7 = + (b) Find an expression for n in terms of y. Show clear algebraic working and simplify your expression. ....................................................... (4) (Total for Question 21 is 7 marks)"
+  },
+  {
+    "id": "all::Jan2021_P1HR__Q12__p14-14__m09__Algebraic-Roots-and-Indices",
+    "source_id": "Jan2021_P1HR__Q12__p14-14__m09__Algebraic-Roots-and-Indices",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Roots & Indices",
+    "topic_order": 16,
+    "paper": "Jan 2021 P1HR",
+    "question": 12,
+    "marks": 9,
+    "filename": "Jan2021_P1HR__Q12__p14-14__m09__Algebraic-Roots-and-Indices.png",
+    "image": "assets/questions_all/all_q0785.png",
+    "question_text": "12 (a) Simplify (16e 10 f 6) 1 2 ...................................................... (2) (b) Write 2 1 4 2 3 x x + + - as a single fraction in its simplest form. ...................................................... (3) Given that 4 k + 3 = 16 \u00d7 2 k (c) find the value of k. Show your working clearly. k = ...................................................... (4) (Total for Question 12 is 9 marks)"
+  },
+  {
+    "id": "all::Jan2021_P2H__Q11__p13-13__m03__Algebraic-Roots-and-Indices",
+    "source_id": "Jan2021_P2H__Q11__p13-13__m03__Algebraic-Roots-and-Indices",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Roots & Indices",
+    "topic_order": 16,
+    "paper": "Jan 2021 P2H",
+    "question": 11,
+    "marks": 3,
+    "filename": "Jan2021_P2H__Q11__p13-13__m03__Algebraic-Roots-and-Indices.png",
+    "image": "assets/questions_all/all_q0899.png",
+    "question_text": "11 Simplify fully 9 18 4 9 6 10 2 t w t w \uf8eb \uf8ed\uf8ec \uf8f6 \uf8f8\uf8f7 - ...................................................... (Total for Question 11 is 3 marks)"
   },
   {
     "id": "all::Jan2021_P2HR__Q04__p05-05__m04__Algebraic-Roots-and-Indices",
@@ -2995,6 +2927,20 @@ window.QUESTION_DATA = [
     "filename": "Jan2021_P2HR__Q19__p18-18__m07__Algebraic-Roots-and-Indices.png",
     "image": "assets/questions_all/all_q0210.png",
     "question_text": "19 (a) Simplify 8 4 2 6 3 \u00d7 Give your answer in the form 2 a where a is an integer. Show each stage of your working clearly. ...................................................... (3) Given that n - \uf8eb \uf8ed\uf8ec \uf8f6 \uf8f8\uf8f7= \uf8eb \uf8ed\uf8ec \uf8f6 \uf8f8\uf8f7 4 5 4 1 2 where n > 0 (b) find the value of n. n = ...................................................... (4) (Total for Question 19 is 7 marks)"
+  },
+  {
+    "id": "all::Jan2022_P1H__Q01__p03-03__m06__Algebraic-Roots-and-Indices",
+    "source_id": "Jan2022_P1H__Q01__p03-03__m06__Algebraic-Roots-and-Indices",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Roots & Indices",
+    "topic_order": 16,
+    "paper": "Jan 2022 P1H",
+    "question": 1,
+    "marks": 6,
+    "filename": "Jan2022_P1H__Q01__p03-03__m06__Algebraic-Roots-and-Indices.png",
+    "image": "assets/questions_all/all_q0296.png",
+    "question_text": "1 (a) Simplify a7 \u00d7 a4 ...................................................... (1) (b) Simplify w15 \u00f7 w3 ...................................................... (1) (c) Simplify (8x5y3)2 ...................................................... (2) (d) Make t the subject of c = t3 - 8v ...................................................... (2) (Total for Question 1 is 6 marks)"
   },
   {
     "id": "all::Jan2022_P2HR__Q06__p09-09__m04__Algebraic-Roots-and-Indices",
@@ -3053,6 +2999,20 @@ window.QUESTION_DATA = [
     "question_text": "7 2 4 2 k n x = Find an expression for x in terms of k and n x = ....................................................... (Total for Question 7 is 2 marks)"
   },
   {
+    "id": "all::Jun2023_P2H__Q15__p15-15__m07__Algebraic-Roots-and-Indices",
+    "source_id": "Jun2023_P2H__Q15__p15-15__m07__Algebraic-Roots-and-Indices",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Roots & Indices",
+    "topic_order": 16,
+    "paper": "Jun 2023 P2H",
+    "question": 15,
+    "marks": 7,
+    "filename": "Jun2023_P2H__Q15__p15-15__m07__Algebraic-Roots-and-Indices.png",
+    "image": "assets/questions_all/all_q0160.png",
+    "question_text": "15 (a) Simplify fully 32 15 3 5 a ....................................................... (2) (b) Express 1 10 3 x \u001b\u001a \u0019 in the form pxn where p and n are integers. ....................................................... (2) (c) Solve 1 2 3 4 5 2 1 2 y y Show clear algebraic working. y = ....................................................... (3) (Total for Question 15 is 7 marks)"
+  },
+  {
     "id": "all::Jun2023_P2HR__Q07__p08-08__m02__Algebraic-Roots-and-Indices",
     "source_id": "Jun2023_P2HR__Q07__p08-08__m02__Algebraic-Roots-and-Indices",
     "bank": "all",
@@ -3065,6 +3025,20 @@ window.QUESTION_DATA = [
     "filename": "Jun2023_P2HR__Q07__p08-08__m02__Algebraic-Roots-and-Indices.png",
     "image": "assets/questions_all/all_q0215.png",
     "question_text": "7 (a) Simplify (4-2)0 ...................................................... (1) 3-14 \u00d7 38 = 3m (b) Find the value of m m = ...................................................... (1) (Total for Question 7 is 2 marks)"
+  },
+  {
+    "id": "all::Jun2023_P2HR__Q11__p12-12__m02__Algebraic-Roots-and-Indices",
+    "source_id": "Jun2023_P2HR__Q11__p12-12__m02__Algebraic-Roots-and-Indices",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Roots & Indices",
+    "topic_order": 16,
+    "paper": "Jun 2023 P2HR",
+    "question": 11,
+    "marks": 2,
+    "filename": "Jun2023_P2HR__Q11__p12-12__m02__Algebraic-Roots-and-Indices.png",
+    "image": "assets/questions_all/all_q0052.png",
+    "question_text": "11 Express m k 6 10 3 2 25 \u001b\u001a in the form m k c a b where a, b and c are integers to be found. ...................................................... (Total for Question 11 is 2 marks)"
   },
   {
     "id": "all::Jun2024_P2H__Q23__p23-23__m03__Algebraic-Roots-and-Indices",
@@ -3121,6 +3095,20 @@ window.QUESTION_DATA = [
     "filename": "Jun2025_P2H__Q15__p15-15__m03__Algebraic-Roots-and-Indices.png",
     "image": "assets/questions_all/all_q0219.png",
     "question_text": "15 Simplify fully 2 10 3 7 2 3 a a c \u001b \u001a \u0019 ............................................................. (Total for Question 15 is 3 marks) t 2 3"
+  },
+  {
+    "id": "all::Jun2025_P2HR__Q06__p08-08__m05__Algebraic-Roots-and-Indices",
+    "source_id": "Jun2025_P2HR__Q06__p08-08__m05__Algebraic-Roots-and-Indices",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Roots & Indices",
+    "topic_order": 16,
+    "paper": "Jun 2025 P2HR",
+    "question": 6,
+    "marks": 5,
+    "filename": "Jun2025_P2HR__Q06__p08-08__m05__Algebraic-Roots-and-Indices.png",
+    "image": "assets/questions_all/all_q0202.png",
+    "question_text": "6 (a) Write down the value of 50 ............................................................. (1) 5 5 5 5 9 3 2 k (b) Find the value of k k = ............................................................. (2) (c) Simplify fully 2 4 5 3 d e ............................................................. (2) (Total for Question 6 is 5 marks)"
   },
   {
     "id": "all::May2021_P1H__Q11__p11-11__m04__Algebraic-Roots-and-Indices",
@@ -3235,6 +3223,34 @@ window.QUESTION_DATA = [
     "question_text": "1 (a) Write down the value of m, given that 34 \u0301 35 = 3m m = ....................................................... (1) (b) Write down the value of n, given that (53)7 = 5n n = ....................................................... (1) (c) Find the value of p, given that 7 7 7 7 8 2 6 p p = ....................................................... (2) (Total for Question 1 is 4 marks)"
   },
   {
+    "id": "all::Nov2023_P2H__Q04__p06-06__m08__Algebraic-Roots-and-Indices",
+    "source_id": "Nov2023_P2H__Q04__p06-06__m08__Algebraic-Roots-and-Indices",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Roots & Indices",
+    "topic_order": 16,
+    "paper": "Nov 2023 P2H",
+    "question": 4,
+    "marks": 8,
+    "filename": "Nov2023_P2H__Q04__p06-06__m08__Algebraic-Roots-and-Indices.png",
+    "image": "assets/questions_all/all_q0351.png",
+    "question_text": "4 (a) Solve 2 5 6 2 5 x x Show clear algebraic working. x = .............................................................. (3) (b) Simplify h h 15 3 \u00f7 .............................................................. (1) (c) Simplify fully 2 3 5 4 g k .............................................................. (2) (d) Given that y y y y n 5 7 12 work out the value of n n = .............................................................. (2) (Total for Question 4 is 8 marks)"
+  },
+  {
+    "id": "all::Nov2023_P2H__Q12__p12-12__m04__Algebraic-Roots-and-Indices",
+    "source_id": "Nov2023_P2H__Q12__p12-12__m04__Algebraic-Roots-and-Indices",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Roots & Indices",
+    "topic_order": 16,
+    "paper": "Nov 2023 P2H",
+    "question": 12,
+    "marks": 4,
+    "filename": "Nov2023_P2H__Q12__p12-12__m04__Algebraic-Roots-and-Indices.png",
+    "image": "assets/questions_all/all_q0291.png",
+    "question_text": "12 2 4 4 7 5 x (a) Calculate the value of x x = .............................................................. (2) (b) Simplify fully 125 6 24 2 3 p y .............................................................. (2) (Total for Question 12 is 4 marks)"
+  },
+  {
     "id": "all::Nov2024_P2H__Q14__p16-16__m03__Algebraic-Roots-and-Indices",
     "source_id": "Nov2024_P2H__Q14__p16-16__m03__Algebraic-Roots-and-Indices",
     "bank": "all",
@@ -3277,20 +3293,6 @@ window.QUESTION_DATA = [
     "question_text": "13 (a) Simplify fully 6 3 15 125x y \u001b \u001a ...................................................... (2) Given that 4 n = 4 64 m p (b) Express n in terms of m and p n = ...................................................... (2) (Total for Question 13 is 4 marks)"
   },
   {
-    "id": "all::Jan2020_P1H__Q07__p08-09__m09__Expanding-Brackets",
-    "source_id": "Jan2020_P1H__Q07__p08-09__m09__Expanding-Brackets",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Expanding Brackets",
-    "topic_order": 17,
-    "paper": "Jan 2020 P1H",
-    "question": 7,
-    "marks": 9,
-    "filename": "Jan2020_P1H__Q07__p08-09__m09__Expanding-Brackets.png",
-    "image": "assets/questions_all/all_q0231.png",
-    "question_text": "7 (a) Expand and simplify (m - 8)(m + 5) ....................................................... (2) (b) Factorise fully 5y + 20y2 ....................................................... (2) (c) Simplify ( p2 + 3)0 ....................................................... (1) (d) Solve 3(2x - 5) = 9 2 -x Show clear algebraic working. x = ....................................................... (4) (Total for Question 7 is 9 marks)"
-  },
-  {
     "id": "all::Jan2021_P1H__Q12__p14-14__m06__Expanding-Brackets",
     "source_id": "Jan2021_P1H__Q12__p14-14__m06__Expanding-Brackets",
     "bank": "all",
@@ -3305,18 +3307,18 @@ window.QUESTION_DATA = [
     "question_text": "12 (a) Express 4 2 3 1 x x - - + as a single fraction. Give your answer in its simplest form. ...................................................... (3) (b) Expand and simplify 2x(x - 5)(x - 3) ...................................................... (3) (Total for Question 12 is 6 marks)"
   },
   {
-    "id": "all::Jan2021_P2H__Q05__p07-07__m07__Expanding-Brackets",
-    "source_id": "Jan2021_P2H__Q05__p07-07__m07__Expanding-Brackets",
+    "id": "all::Jan2021_P1HR__Q16__p18-18__m05__Expanding-Brackets",
+    "source_id": "Jan2021_P1HR__Q16__p18-18__m05__Expanding-Brackets",
     "bank": "all",
     "unit": "Equations, Formulae & Identities",
     "topic": "Expanding Brackets",
     "topic_order": 17,
-    "paper": "Jan 2021 P2H",
-    "question": 5,
-    "marks": 7,
-    "filename": "Jan2021_P2H__Q05__p07-07__m07__Expanding-Brackets.png",
-    "image": "assets/questions_all/all_q0233.png",
-    "question_text": "5 (a) Expand and simplify 4x(2x + 5) - 3x(2x - 3) ...................................................... (2) Given that y y y n 5 6 \u00d7 = y13 (b) work out the value of n. n = ...................................................... (2) (c) (i) Solve the inequality 7t - 8 < 2t + 7 ...................................................... (2) (ii) On the number line below, represent the solution set of the inequality solved in part (c)(i) -5 -4 -3 -2 -1 0 1 2 3 4 5 t (1) (Total for Question 5 is 7 marks)"
+    "paper": "Jan 2021 P1HR",
+    "question": 16,
+    "marks": 5,
+    "filename": "Jan2021_P1HR__Q16__p18-18__m05__Expanding-Brackets.png",
+    "image": "assets/questions_all/all_q0279.png",
+    "question_text": "16 (a) Expand and simplify (x + 4)(x - 2)(x + 1) ............................................................................................................ (3) (b) Express x 2 - 10x + 40 in the form (x + a) 2 + b, where a and b are integers. ............................................................................................................ (2) (Total for Question 16 is 5 marks)"
   },
   {
     "id": "all::Jan2021_P2HR__Q01__p03-03__m08__Expanding-Brackets",
@@ -3347,20 +3349,6 @@ window.QUESTION_DATA = [
     "question_text": "13 (a) Expand and simplify 5x(x + 2)(3x - 4) ................................................................................. (3) (b) Simplify completely 16 8 20 3 4 w y \uf8eb \uf8ed\uf8ec \uf8f6 \uf8f8\uf8f7 - ...................................................... (3) (Total for Question 13 is 6 marks)"
   },
   {
-    "id": "all::Jan2022_P1HR__Q12__p15-15__m05__Expanding-Brackets",
-    "source_id": "Jan2022_P1HR__Q12__p15-15__m05__Expanding-Brackets",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Expanding Brackets",
-    "topic_order": 17,
-    "paper": "Jan 2022 P1HR",
-    "question": 12,
-    "marks": 5,
-    "filename": "Jan2022_P1HR__Q12__p15-15__m05__Expanding-Brackets.png",
-    "image": "assets/questions_all/all_q0236.png",
-    "question_text": "12 (a) Expand and simplify n(n - 4)(3n + 5) ...................................................... (2) (b) Express 3 2 2 1 4 x x x + + + as a single fraction in its simplest form. ...................................................... (3) (Total for Question 12 is 5 marks)"
-  },
-  {
     "id": "all::Jan2022_P2H__Q01__p03-03__m04__Expanding-Brackets",
     "source_id": "Jan2022_P2H__Q01__p03-03__m04__Expanding-Brackets",
     "bank": "all",
@@ -3373,34 +3361,6 @@ window.QUESTION_DATA = [
     "filename": "Jan2022_P2H__Q01__p03-03__m04__Expanding-Brackets.png",
     "image": "assets/questions_all/all_q0237.png",
     "question_text": "1 (a) Expand and simplify (y + 4)(2 - y) ....................................................... (2) (b) Factorise fully 15b5c - 35b3c9 ....................................................... (2) (Total for Question 1 is 4 marks)"
-  },
-  {
-    "id": "all::Jun2022_P1H__Q05__p07-07__m05__Expanding-Brackets",
-    "source_id": "Jun2022_P1H__Q05__p07-07__m05__Expanding-Brackets",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Expanding Brackets",
-    "topic_order": 17,
-    "paper": "Jun 2022 P1H",
-    "question": 5,
-    "marks": 5,
-    "filename": "Jun2022_P1H__Q05__p07-07__m05__Expanding-Brackets.png",
-    "image": "assets/questions_all/all_q0238.png",
-    "question_text": "5 (a) Expand and simplify (n - 6)(n + 4) ...................................................... (2) (b) Solve 2x - 3 = 3 5 4 x - Show clear algebraic working. x = ...................................................... (3) (Total for Question 5 is 5 marks)"
-  },
-  {
-    "id": "all::Jun2022_P1HR__Q05__p07-07__m05__Expanding-Brackets",
-    "source_id": "Jun2022_P1HR__Q05__p07-07__m05__Expanding-Brackets",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Expanding Brackets",
-    "topic_order": 17,
-    "paper": "Jun 2022 P1HR",
-    "question": 5,
-    "marks": 5,
-    "filename": "Jun2022_P1HR__Q05__p07-07__m05__Expanding-Brackets.png",
-    "image": "assets/questions_all/all_q0239.png",
-    "question_text": "5 (a) Expand 3c 3(c + 4) ....................................................... (2) (b) (i) Factorise x 2 + 8x - 9 ....................................................... (2) (ii) Hence, solve x 2 + 8x -9 = 0 ....................................................... (1) (Total for Question 5 is 5 marks)"
   },
   {
     "id": "all::Jun2022_P1HR__Q16__p18-18__m06__Expanding-Brackets",
@@ -3445,6 +3405,20 @@ window.QUESTION_DATA = [
     "question_text": "12 Expand and simplify 3 2 5 7 4 x x x ............................................................................................. (Total for Question 12 is 3 marks)"
   },
   {
+    "id": "all::Jun2025_P2HR__Q13__p13-13__m05__Expanding-Brackets",
+    "source_id": "Jun2025_P2HR__Q13__p13-13__m05__Expanding-Brackets",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Expanding Brackets",
+    "topic_order": 17,
+    "paper": "Jun 2025 P2HR",
+    "question": 13,
+    "marks": 5,
+    "filename": "Jun2025_P2HR__Q13__p13-13__m05__Expanding-Brackets.png",
+    "image": "assets/questions_all/all_q0266.png",
+    "question_text": "13 (a) Factorise 4 25 2 2 x y - ............................................................. (2) (b) Show that 4 3 2 5 x x x ( )( ) can be written in the form ax bx cx 3 2 + + where a, b and c are integers to be found. (3) (Total for Question 13 is 5 marks)"
+  },
+  {
     "id": "all::May2021_P1H__Q13__p13-13__m03__Expanding-Brackets",
     "source_id": "May2021_P1H__Q13__p13-13__m03__Expanding-Brackets",
     "bank": "all",
@@ -3457,48 +3431,6 @@ window.QUESTION_DATA = [
     "filename": "May2021_P1H__Q13__p13-13__m03__Expanding-Brackets.png",
     "image": "assets/questions_all/all_q0243.png",
     "question_text": "13 Expand and simplify 4x(3x + 1)(2x - 3) Show your working clearly. ....................................................... (Total for Question 13 is 3 marks)"
-  },
-  {
-    "id": "all::May2023_P1HR__Q07__p08-08__m03__Expanding-Brackets",
-    "source_id": "May2023_P1HR__Q07__p08-08__m03__Expanding-Brackets",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Expanding Brackets",
-    "topic_order": 17,
-    "paper": "May 2023 P1HR",
-    "question": 7,
-    "marks": 3,
-    "filename": "May2023_P1HR__Q07__p08-08__m03__Expanding-Brackets.png",
-    "image": "assets/questions_all/all_q0244.png",
-    "question_text": "7 (a) Expand 4x(x - 5) .................................................................................. (1) (b) Factorise y2 - 9y + 20 .................................................................................. (2) (Total for Question 7 is 3 marks)"
-  },
-  {
-    "id": "all::May2024_P1H__Q06__p07-07__m05__Expanding-Brackets",
-    "source_id": "May2024_P1H__Q06__p07-07__m05__Expanding-Brackets",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Expanding Brackets",
-    "topic_order": 17,
-    "paper": "May 2024 P1H",
-    "question": 6,
-    "marks": 5,
-    "filename": "May2024_P1H__Q06__p07-07__m05__Expanding-Brackets.png",
-    "image": "assets/questions_all/all_q0245.png",
-    "question_text": "6 (a) Expand and simplify (m + 5) (m - 8) ...................................................... (2) (b) Solve 3n - 4 = 5 6 3 n + Show clear algebraic working. n = ...................................................... (3) (Total for Question 6 is 5 marks)"
-  },
-  {
-    "id": "all::May2024_P1HR__Q07__p08-08__m09__Expanding-Brackets",
-    "source_id": "May2024_P1HR__Q07__p08-08__m09__Expanding-Brackets",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Expanding Brackets",
-    "topic_order": 17,
-    "paper": "May 2024 P1HR",
-    "question": 7,
-    "marks": 9,
-    "filename": "May2024_P1HR__Q07__p08-08__m09__Expanding-Brackets.png",
-    "image": "assets/questions_all/all_q0246.png",
-    "question_text": "7 (a) Simplify g g 9 2 \u00f7 \b .............................................................. (1) (b) Expand 5 4 2 3 k k ( ) + \b .............................................................. (2) (c) (i) Factorise x x 2 2 63 - - \b .............................................................. (2) (ii) Hence, solve x x 2 2 63 - - = 0 \b .............................................................. (1) (d) Solve the inequality 7 2 3 12 y y \b .............................................................. (3) (Total for Question 7 is 9 marks)"
   },
   {
     "id": "all::May2024_P1HR__Q14__p14-14__m06__Expanding-Brackets",
@@ -3571,18 +3503,18 @@ window.QUESTION_DATA = [
     "question_text": "16 Expand and simplify (2x + 3)(x - 5)(x + 4) .............................................................. (Total for Question 16 is 3 marks)"
   },
   {
-    "id": "all::Nov2024_P1H__Q03__p05-05__m06__Expanding-Brackets",
-    "source_id": "Nov2024_P1H__Q03__p05-05__m06__Expanding-Brackets",
+    "id": "all::Nov2024_P1H__Q15__p16-16__m03__Expanding-Brackets",
+    "source_id": "Nov2024_P1H__Q15__p16-16__m03__Expanding-Brackets",
     "bank": "all",
     "unit": "Equations, Formulae & Identities",
     "topic": "Expanding Brackets",
     "topic_order": 17,
     "paper": "Nov 2024 P1H",
-    "question": 3,
-    "marks": 6,
-    "filename": "Nov2024_P1H__Q03__p05-05__m06__Expanding-Brackets.png",
-    "image": "assets/questions_all/all_q0252.png",
-    "question_text": "3 (a) Simplify p3 5 ............................................................... (1) (b) Expand and simplify 2 4 3 4 n n n n ............................................................... (2) (c) Solve 2 5 3 4 x x Show clear algebraic working. x = ................................................................ (3) (Total for Question 3 is 6 marks)"
+    "question": 15,
+    "marks": 3,
+    "filename": "Nov2024_P1H__Q15__p16-16__m03__Expanding-Brackets.png",
+    "image": "assets/questions_all/all_q0165.png",
+    "question_text": "15 Write 3 2 1 5 4 x x x in the form ax bx cx 3 2 + + where a, b and c are integers. ............................................................................................. (Total for Question 15 is 3 marks)"
   },
   {
     "id": "all::Nov2025_P1H__Q14__p12-12__m06__Expanding-Brackets",
@@ -3597,20 +3529,6 @@ window.QUESTION_DATA = [
     "filename": "Nov2025_P1H__Q14__p12-12__m06__Expanding-Brackets.png",
     "image": "assets/questions_all/all_q0253.png",
     "question_text": "14 (a) Expand and simplify 7x(3x + 2)(2x - 5) ................................................................................. (3) (b) Solve 9 2 5 7 5 y Show clear algebraic working. y = ...................................................... (3) (Total for Question 14 is 6 marks)"
-  },
-  {
-    "id": "all::Jan2021_P1H__Q05__p07-07__m05__Factorising",
-    "source_id": "Jan2021_P1H__Q05__p07-07__m05__Factorising",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Factorising",
-    "topic_order": 18,
-    "paper": "Jan 2021 P1H",
-    "question": 5,
-    "marks": 5,
-    "filename": "Jan2021_P1H__Q05__p07-07__m05__Factorising.png",
-    "image": "assets/questions_all/all_q0254.png",
-    "question_text": "5 (a) Factorise fully 15y 4 + 20uy 3 ...................................................... (2) (b) Solve 4 - 3x = 5 8 4 - x Show clear algebraic working. x = ...................................................... (3) (Total for Question 5 is 5 marks)"
   },
   {
     "id": "all::Jan2021_P1H__Q09__p10-10__m05__Factorising",
@@ -3669,6 +3587,20 @@ window.QUESTION_DATA = [
     "question_text": "11 (a) Factorise 9x2 - 4y2 ...................................................... (2) (b) Express 7 8 3 4 - + x x as a single fraction in its simplest form. ...................................................... (3) (Total for Question 11 is 5 marks)"
   },
   {
+    "id": "all::Jun2022_P1HR__Q05__p07-07__m05__Factorising",
+    "source_id": "Jun2022_P1HR__Q05__p07-07__m05__Factorising",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Factorising",
+    "topic_order": 18,
+    "paper": "Jun 2022 P1HR",
+    "question": 5,
+    "marks": 5,
+    "filename": "Jun2022_P1HR__Q05__p07-07__m05__Factorising.png",
+    "image": "assets/questions_all/all_q0239.png",
+    "question_text": "5 (a) Expand 3c 3(c + 4) ....................................................... (2) (b) (i) Factorise x 2 + 8x - 9 ....................................................... (2) (ii) Hence, solve x 2 + 8x -9 = 0 ....................................................... (1) (Total for Question 5 is 5 marks)"
+  },
+  {
     "id": "all::Jun2022_P2H__Q11__p10-10__m03__Factorising",
     "source_id": "Jun2022_P2H__Q11__p10-10__m03__Factorising",
     "bank": "all",
@@ -3683,20 +3615,6 @@ window.QUESTION_DATA = [
     "question_text": "11 (i) Factorise x2 + 5x - 24 ...................................................... (2) (ii) Hence, solve x2 + 5x - 24 = 0 ...................................................... (1) (Total for Question 11 is 3 marks)"
   },
   {
-    "id": "all::Jun2022_P2HR__Q06__p08-08__m08__Factorising",
-    "source_id": "Jun2022_P2HR__Q06__p08-08__m08__Factorising",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Factorising",
-    "topic_order": 18,
-    "paper": "Jun 2022 P2HR",
-    "question": 6,
-    "marks": 8,
-    "filename": "Jun2022_P2HR__Q06__p08-08__m08__Factorising.png",
-    "image": "assets/questions_all/all_q0260.png",
-    "question_text": "6 (a) Solve p = 3 5 10 p - Show clear algebraic working. p = ....................................................... (3) (b) Simplify a 0 where a > 0 ....................................................... (1) (c) Simplify fully 3 6 3 2 xy x y ....................................................... (2) (d) Factorise fully 10c 3d 2 + 15cd 4 ....................................................... (2) (Total for Question 6 is 8 marks)"
-  },
-  {
     "id": "all::Jun2024_P2H__Q11__p10-10__m03__Factorising",
     "source_id": "Jun2024_P2H__Q11__p10-10__m03__Factorising",
     "bank": "all",
@@ -3709,20 +3627,6 @@ window.QUESTION_DATA = [
     "filename": "Jun2024_P2H__Q11__p10-10__m03__Factorising.png",
     "image": "assets/questions_all/all_q0261.png",
     "question_text": "11 (i) Factorise x 2 + 9x - 22 ...................................................... (2) (ii) Hence, solve x 2 + 9x - 22 = 0 ...................................................... (1) (Total for Question 11 is 3 marks)"
-  },
-  {
-    "id": "all::Jun2024_P2HR__Q06__p08-08__m08__Factorising",
-    "source_id": "Jun2024_P2HR__Q06__p08-08__m08__Factorising",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Factorising",
-    "topic_order": 18,
-    "paper": "Jun 2024 P2HR",
-    "question": 6,
-    "marks": 8,
-    "filename": "Jun2024_P2HR__Q06__p08-08__m08__Factorising.png",
-    "image": "assets/questions_all/all_q0262.png",
-    "question_text": "6 (a) Solve 2 3 4 17 f f Show clear algebraic working. \b f = .......................................................... (3) (b) Simplify (e + 12)0 where e > 0 \b .......................................................... (1) (c) Simplify fully 12 4 4 6 2 a h ah \b .......................................................... (2) (d) Factorise fully 20x5y + 12x3y4 \b ........................................................................................... (2) (Total for Question 6 is 8 marks)"
   },
   {
     "id": "all::Jun2025_P1H__Q06__p07-07__m06__Factorising",
@@ -3751,34 +3655,6 @@ window.QUESTION_DATA = [
     "filename": "Jun2025_P1HR__Q08__p08-08__m05__Factorising.png",
     "image": "assets/questions_all/all_q0264.png",
     "question_text": "8 (a) Simplify a a 6 10 \u00d7 ............................................................ (1) (b) Simplify c c 30 12 \u00f7 ............................................................ (1) (c) (i) Factorise y y 2 10 21 ............................................................ (2) (ii) Hence, solve y y 2 10 21 0 ............................................................ (1) (Total for Question 8 is 5 marks)"
-  },
-  {
-    "id": "all::Jun2025_P2HR__Q01__p03-03__m05__Factorising",
-    "source_id": "Jun2025_P2HR__Q01__p03-03__m05__Factorising",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Factorising",
-    "topic_order": 18,
-    "paper": "Jun 2025 P2HR",
-    "question": 1,
-    "marks": 5,
-    "filename": "Jun2025_P2HR__Q01__p03-03__m05__Factorising.png",
-    "image": "assets/questions_all/all_q0265.png",
-    "question_text": "1 (a) Factorise fully 18 45 c cd - ............................................................ (2) (b) Solve 5 2 6 3 4 x x Show clear algebraic working. x = ............................................................. (3) (Total for Question 1 is 5 marks)"
-  },
-  {
-    "id": "all::Jun2025_P2HR__Q13__p13-13__m05__Factorising",
-    "source_id": "Jun2025_P2HR__Q13__p13-13__m05__Factorising",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Factorising",
-    "topic_order": 18,
-    "paper": "Jun 2025 P2HR",
-    "question": 13,
-    "marks": 5,
-    "filename": "Jun2025_P2HR__Q13__p13-13__m05__Factorising.png",
-    "image": "assets/questions_all/all_q0266.png",
-    "question_text": "13 (a) Factorise 4 25 2 2 x y - ............................................................. (2) (b) Show that 4 3 2 5 x x x ( )( ) can be written in the form ax bx cx 3 2 + + where a, b and c are integers to be found. (3) (Total for Question 13 is 5 marks)"
   },
   {
     "id": "all::May2021_P1H__Q09__p10-10__m05__Factorising",
@@ -3837,18 +3713,32 @@ window.QUESTION_DATA = [
     "question_text": "14 Factorise fully 50g 2 - 18 ....................................................... (Total for Question 14 is 3 marks)"
   },
   {
-    "id": "all::May2024_P1H__Q12__p13-13__m05__Factorising",
-    "source_id": "May2024_P1H__Q12__p13-13__m05__Factorising",
+    "id": "all::May2023_P1HR__Q07__p08-08__m03__Factorising",
+    "source_id": "May2023_P1HR__Q07__p08-08__m03__Factorising",
     "bank": "all",
     "unit": "Equations, Formulae & Identities",
     "topic": "Factorising",
     "topic_order": 18,
-    "paper": "May 2024 P1H",
-    "question": 12,
-    "marks": 5,
-    "filename": "May2024_P1H__Q12__p13-13__m05__Factorising.png",
-    "image": "assets/questions_all/all_q0271.png",
-    "question_text": "12 (a) Factorise fully 6y 2 - 5y - 4 ...................................................... (2) (b) Express 2 1 4 7 5 3 x x x x as a single fraction in its simplest form. ...................................................... (3) (Total for Question 12 is 5 marks)"
+    "paper": "May 2023 P1HR",
+    "question": 7,
+    "marks": 3,
+    "filename": "May2023_P1HR__Q07__p08-08__m03__Factorising.png",
+    "image": "assets/questions_all/all_q0244.png",
+    "question_text": "7 (a) Expand 4x(x - 5) .................................................................................. (1) (b) Factorise y2 - 9y + 20 .................................................................................. (2) (Total for Question 7 is 3 marks)"
+  },
+  {
+    "id": "all::May2024_P1HR__Q07__p08-08__m09__Factorising",
+    "source_id": "May2024_P1HR__Q07__p08-08__m09__Factorising",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Factorising",
+    "topic_order": 18,
+    "paper": "May 2024 P1HR",
+    "question": 7,
+    "marks": 9,
+    "filename": "May2024_P1HR__Q07__p08-08__m09__Factorising.png",
+    "image": "assets/questions_all/all_q0246.png",
+    "question_text": "7 (a) Simplify g g 9 2 \u00f7 \b .............................................................. (1) (b) Expand 5 4 2 3 k k ( ) + \b .............................................................. (2) (c) (i) Factorise x x 2 2 63 - - \b .............................................................. (2) (ii) Hence, solve x x 2 2 63 - - = 0 \b .............................................................. (1) (d) Solve the inequality 7 2 3 12 y y \b .............................................................. (3) (Total for Question 7 is 9 marks)"
   },
   {
     "id": "all::MayNov2020_P1H__Q07__p08-08__m08__Factorising",
@@ -3877,20 +3767,6 @@ window.QUESTION_DATA = [
     "filename": "Nov2021_P2H__Q08__p10-10__m04__Factorising.png",
     "image": "assets/questions_all/all_q0273.png",
     "question_text": "8 (a) Simplify (3x2y)0 ....................................................... (1) (b) (i) Factorise x2 - 5x - 36 ....................................................... (2) (ii) Hence solve x2 - 5x - 36 = 0 ....................................................... (1) (Total for Question 8 is 4 marks)"
-  },
-  {
-    "id": "all::Nov2023_P1H__Q02__p04-04__m06__Factorising",
-    "source_id": "Nov2023_P1H__Q02__p04-04__m06__Factorising",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Factorising",
-    "topic_order": 18,
-    "paper": "Nov 2023 P1H",
-    "question": 2,
-    "marks": 6,
-    "filename": "Nov2023_P1H__Q02__p04-04__m06__Factorising.png",
-    "image": "assets/questions_all/all_q0274.png",
-    "question_text": "2 (a) Factorise fully 12 18 pq p - .............................................................. (2) There are 56 metal bars in a box. Each metal bar is gold or silver or zinc. y metal bars are gold. (3y + 7) metal bars are silver. (2y - 5) metal bars are zinc. (b) Work out the number of metal bars that are zinc. Show clear algebraic working. .............................................................. (4) (Total for Question 2 is 6 marks)"
   },
   {
     "id": "all::Nov2024_P1H__Q08__p10-10__m06__Factorising",
@@ -3947,20 +3823,6 @@ window.QUESTION_DATA = [
     "filename": "Jan2020_P2HR__Q23__p23-23__m03__Completing-the-Square.png",
     "image": "assets/questions_all/all_q0278.png",
     "question_text": "23 Express 7 - 12x - 2x2 in the form a + b(x + c)2 where a, b and c are integers. ....................................................... (Total for Question 23 is 3 marks)"
-  },
-  {
-    "id": "all::Jan2021_P1HR__Q16__p18-18__m05__Completing-the-Square",
-    "source_id": "Jan2021_P1HR__Q16__p18-18__m05__Completing-the-Square",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Completing the Square",
-    "topic_order": 19,
-    "paper": "Jan 2021 P1HR",
-    "question": 16,
-    "marks": 5,
-    "filename": "Jan2021_P1HR__Q16__p18-18__m05__Completing-the-Square.png",
-    "image": "assets/questions_all/all_q0279.png",
-    "question_text": "16 (a) Expand and simplify (x + 4)(x - 2)(x + 1) ............................................................................................................ (3) (b) Express x 2 - 10x + 40 in the form (x + a) 2 + b, where a and b are integers. ............................................................................................................ (2) (Total for Question 16 is 5 marks)"
   },
   {
     "id": "all::Jan2022_P1H__Q20__p21-21__m04__Completing-the-Square",
@@ -4117,20 +3979,6 @@ window.QUESTION_DATA = [
     "question_text": "24 Express 4 2 5 3 2 3 9 4 6 17 5 3 2 x x x x x x - - - \uf8eb \uf8ed\uf8ec \uf8f6 \uf8f8\uf8f7\u00f7 - - + as a single fraction in its simplest form. ....................................................... (Total for Question 24 is 4 marks)"
   },
   {
-    "id": "all::Jan2021_P1H__Q18__p21-21__m03__Algebraic-Fractions",
-    "source_id": "Jan2021_P1H__Q18__p21-21__m03__Algebraic-Fractions",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Algebraic Fractions",
-    "topic_order": 20,
-    "paper": "Jan 2021 P1H",
-    "question": 18,
-    "marks": 3,
-    "filename": "Jan2021_P1H__Q18__p21-21__m03__Algebraic-Fractions.png",
-    "image": "assets/questions_all/all_q0289.png",
-    "question_text": "18 Given that (8 - x )(5 + x ) = y x + 21 where x is a prime number and y is an integer, find the value of x and the value of y. Show each stage of your working clearly. x = ...................................................... y = ...................................................... (Total for Question 18 is 3 marks)"
-  },
-  {
     "id": "all::Jan2021_P2H__Q21__p24-25__m04__Algebraic-Fractions",
     "source_id": "Jan2021_P2H__Q21__p24-25__m04__Algebraic-Fractions",
     "bank": "all",
@@ -4143,6 +3991,34 @@ window.QUESTION_DATA = [
     "filename": "Jan2021_P2H__Q21__p24-25__m04__Algebraic-Fractions.png",
     "image": "assets/questions_all/all_q0786.png",
     "question_text": "21 Write 25 64 5 13 6 8 15 5 8 7 2 2 2 x x x x x x x - - - \u00d7 - + + - - ( ) as a single fraction in its simplest form. Show clear algebraic working. ...................................................... (Total for Question 21 is 4 marks)"
+  },
+  {
+    "id": "all::Jan2021_P2HR__Q18__p17-17__m05__Algebraic-Fractions",
+    "source_id": "Jan2021_P2HR__Q18__p17-17__m05__Algebraic-Fractions",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Fractions",
+    "topic_order": 20,
+    "paper": "Jan 2021 P2HR",
+    "question": 18,
+    "marks": 5,
+    "filename": "Jan2021_P2HR__Q18__p17-17__m05__Algebraic-Fractions.png",
+    "image": "assets/questions_all/all_q0392.png",
+    "question_text": "18 Solve the equation 5 2 3 2 2 2 x x x + + + = Show clear algebraic working. ...................................................... (Total for Question 18 is 5 marks)"
+  },
+  {
+    "id": "all::Jan2022_P1HR__Q12__p15-15__m05__Algebraic-Fractions",
+    "source_id": "Jan2022_P1HR__Q12__p15-15__m05__Algebraic-Fractions",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Fractions",
+    "topic_order": 20,
+    "paper": "Jan 2022 P1HR",
+    "question": 12,
+    "marks": 5,
+    "filename": "Jan2022_P1HR__Q12__p15-15__m05__Algebraic-Fractions.png",
+    "image": "assets/questions_all/all_q0236.png",
+    "question_text": "12 (a) Expand and simplify n(n - 4)(3n + 5) ...................................................... (2) (b) Express 3 2 2 1 4 x x x + + + as a single fraction in its simplest form. ...................................................... (3) (Total for Question 12 is 5 marks)"
   },
   {
     "id": "all::Jun2022_P2H__Q19__p19-19__m03__Algebraic-Fractions",
@@ -4201,6 +4077,20 @@ window.QUESTION_DATA = [
     "question_text": "26 Write 4 3 5 3 10 4 1 2 \u001b \u001a \u0019\u0018 \u0017 \u0016\u0015 x x x x as a single fraction in its simplest form. \b .............................................................. (Total for Question 26 is 4 marks)"
   },
   {
+    "id": "all::Jun2025_P1H__Q12__p12-12__m03__Algebraic-Fractions",
+    "source_id": "Jun2025_P1H__Q12__p12-12__m03__Algebraic-Fractions",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Fractions",
+    "topic_order": 20,
+    "paper": "Jun 2025 P1H",
+    "question": 12,
+    "marks": 3,
+    "filename": "Jun2025_P1H__Q12__p12-12__m03__Algebraic-Fractions.png",
+    "image": "assets/questions_all/all_q0797.png",
+    "question_text": "12 Express 5 4 3 6 x x as a single fraction in its simplest form. ....................................................... (Total for Question 12 is 3 marks)"
+  },
+  {
     "id": "all::Jun2025_P2H__Q23__p21-21__m04__Algebraic-Fractions",
     "source_id": "Jun2025_P2H__Q23__p21-21__m04__Algebraic-Fractions",
     "bank": "all",
@@ -4243,6 +4133,20 @@ window.QUESTION_DATA = [
     "question_text": "23 Simplify x x x x x 2 2 4 4 7 2 2 \u001b \u001a\u0019 \u0018 \u0017\u0016 Give your answer in the form ax bx c 2 + where a, b and c are integers. ...................................................... (Total for Question 23 is 4 marks)"
   },
   {
+    "id": "all::May2024_P1H__Q12__p13-13__m05__Algebraic-Fractions",
+    "source_id": "May2024_P1H__Q12__p13-13__m05__Algebraic-Fractions",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Fractions",
+    "topic_order": 20,
+    "paper": "May 2024 P1H",
+    "question": 12,
+    "marks": 5,
+    "filename": "May2024_P1H__Q12__p13-13__m05__Algebraic-Fractions.png",
+    "image": "assets/questions_all/all_q0271.png",
+    "question_text": "12 (a) Factorise fully 6y 2 - 5y - 4 ...................................................... (2) (b) Express 2 1 4 7 5 3 x x x x as a single fraction in its simplest form. ...................................................... (3) (Total for Question 12 is 5 marks)"
+  },
+  {
     "id": "all::MayNov2020_P1H__Q21__p23-23__m05__Algebraic-Fractions",
     "source_id": "MayNov2020_P1H__Q21__p23-23__m05__Algebraic-Fractions",
     "bank": "all",
@@ -4257,18 +4161,18 @@ window.QUESTION_DATA = [
     "question_text": "21 Express 1 3 2 9 4 3 13 10 7 1 2 2 x x x x x - \u00d7 - - - - - as a single fraction in its simplest form. .................................................................................. (Total for Question 21 is 5 marks)"
   },
   {
-    "id": "all::Nov2023_P2H__Q12__p12-12__m04__Algebraic-Fractions",
-    "source_id": "Nov2023_P2H__Q12__p12-12__m04__Algebraic-Fractions",
+    "id": "all::Nov2023_P1H__Q11__p13-13__m03__Algebraic-Fractions",
+    "source_id": "Nov2023_P1H__Q11__p13-13__m03__Algebraic-Fractions",
     "bank": "all",
     "unit": "Equations, Formulae & Identities",
     "topic": "Algebraic Fractions",
     "topic_order": 20,
-    "paper": "Nov 2023 P2H",
-    "question": 12,
-    "marks": 4,
-    "filename": "Nov2023_P2H__Q12__p12-12__m04__Algebraic-Fractions.png",
-    "image": "assets/questions_all/all_q0291.png",
-    "question_text": "12 2 4 4 7 5 x (a) Calculate the value of x x = .............................................................. (2) (b) Simplify fully 125 6 24 2 3 p y .............................................................. (2) (Total for Question 12 is 4 marks)"
+    "paper": "Nov 2023 P1H",
+    "question": 11,
+    "marks": 3,
+    "filename": "Nov2023_P1H__Q11__p13-13__m03__Algebraic-Fractions.png",
+    "image": "assets/questions_all/all_q0803.png",
+    "question_text": "11 Express 3 4 5 6 x x as a single fraction in its simplest terms. .............................................................. (Total for Question 11 is 3 marks)"
   },
   {
     "id": "all::Nov2023_P2H__Q24__p24-24__m05__Algebraic-Fractions",
@@ -4353,20 +4257,6 @@ window.QUESTION_DATA = [
     "filename": "Jan2021_P2H__Q14__p15-15__m07__Rearranging-Formulas.png",
     "image": "assets/questions_all/all_q0295.png",
     "question_text": "14 (a) Solve 9 7 5 3 7 4 a a - - - = 4.55 Show clear algebraic working. a = ...................................................... (3) (b) Make c the subject of the formula p = ac c + + 8 3 ...................................................... (4) (Total for Question 14 is 7 marks)"
-  },
-  {
-    "id": "all::Jan2022_P1H__Q01__p03-03__m06__Rearranging-Formulas",
-    "source_id": "Jan2022_P1H__Q01__p03-03__m06__Rearranging-Formulas",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Rearranging Formulas",
-    "topic_order": 21,
-    "paper": "Jan 2022 P1H",
-    "question": 1,
-    "marks": 6,
-    "filename": "Jan2022_P1H__Q01__p03-03__m06__Rearranging-Formulas.png",
-    "image": "assets/questions_all/all_q0296.png",
-    "question_text": "1 (a) Simplify a7 \u00d7 a4 ...................................................... (1) (b) Simplify w15 \u00f7 w3 ...................................................... (1) (c) Simplify (8x5y3)2 ...................................................... (2) (d) Make t the subject of c = t3 - 8v ...................................................... (2) (Total for Question 1 is 6 marks)"
   },
   {
     "id": "all::Jan2022_P2HR__Q15__p20-20__m04__Rearranging-Formulas",
@@ -4591,6 +4481,20 @@ window.QUESTION_DATA = [
     "filename": "Jan2021_P1HR__Q15__p17-17__m05__Algebraic-Proof.png",
     "image": "assets/questions_all/all_q0311.png",
     "question_text": "15 (a) Use algebra to show that 4.5. 7. = 4 19 33 (2) (b) Show that 2 6 3 2 - can be written in the form a a b + where a and b are integers. Show your working clearly. (3) (Total for Question 15 is 5 marks)"
+  },
+  {
+    "id": "all::Jan2021_P2HR__Q15__p14-14__m04__Algebraic-Proof",
+    "source_id": "Jan2021_P2HR__Q15__p14-14__m04__Algebraic-Proof",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Proof",
+    "topic_order": 22,
+    "paper": "Jan 2021 P2HR",
+    "question": 15,
+    "marks": 4,
+    "filename": "Jan2021_P2HR__Q15__p14-14__m04__Algebraic-Proof.png",
+    "image": "assets/questions_all/all_q0572.png",
+    "question_text": "15 Prove algebraically that the product of any two odd numbers is always an odd number. (Total for Question 15 is 4 marks)"
   },
   {
     "id": "all::Jan2022_P1HR__Q15__p19-19__m03__Algebraic-Proof",
@@ -5027,6 +4931,174 @@ window.QUESTION_DATA = [
     "question_text": "16 Use algebra to show that 0.37. 8. = 25 66 (Total for Question 16 is 2 marks)"
   },
   {
+    "id": "all::Jan2020_P1H__Q07__p08-09__m09__Solving-Linear-Equations",
+    "source_id": "Jan2020_P1H__Q07__p08-09__m09__Solving-Linear-Equations",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Solving Linear Equations",
+    "topic_order": 23,
+    "paper": "Jan 2020 P1H",
+    "question": 7,
+    "marks": 9,
+    "filename": "Jan2020_P1H__Q07__p08-09__m09__Solving-Linear-Equations.png",
+    "image": "assets/questions_all/all_q0231.png",
+    "question_text": "7 (a) Expand and simplify (m - 8)(m + 5) ....................................................... (2) (b) Factorise fully 5y + 20y2 ....................................................... (2) (c) Simplify ( p2 + 3)0 ....................................................... (1) (d) Solve 3(2x - 5) = 9 2 -x Show clear algebraic working. x = ....................................................... (4) (Total for Question 7 is 9 marks)"
+  },
+  {
+    "id": "all::Jan2021_P1H__Q05__p07-07__m05__Solving-Linear-Equations",
+    "source_id": "Jan2021_P1H__Q05__p07-07__m05__Solving-Linear-Equations",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Solving Linear Equations",
+    "topic_order": 23,
+    "paper": "Jan 2021 P1H",
+    "question": 5,
+    "marks": 5,
+    "filename": "Jan2021_P1H__Q05__p07-07__m05__Solving-Linear-Equations.png",
+    "image": "assets/questions_all/all_q0254.png",
+    "question_text": "5 (a) Factorise fully 15y 4 + 20uy 3 ...................................................... (2) (b) Solve 4 - 3x = 5 8 4 - x Show clear algebraic working. x = ...................................................... (3) (Total for Question 5 is 5 marks)"
+  },
+  {
+    "id": "all::Jan2022_P2HR__Q03__p06-06__m05__Solving-Linear-Equations",
+    "source_id": "Jan2022_P2HR__Q03__p06-06__m05__Solving-Linear-Equations",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Solving Linear Equations",
+    "topic_order": 23,
+    "paper": "Jan 2022 P2HR",
+    "question": 3,
+    "marks": 5,
+    "filename": "Jan2022_P2HR__Q03__p06-06__m05__Solving-Linear-Equations.png",
+    "image": "assets/questions_all/all_q0393.png",
+    "question_text": "3 (a) Solve 4y + 5 > 12 ....................................................... (2) (b) Solve 6 5 4 7 2 x x Show clear algebraic working. x = ....................................................... (3) (Total for Question 3 is 5 marks)"
+  },
+  {
+    "id": "all::Jun2022_P1H__Q05__p07-07__m05__Solving-Linear-Equations",
+    "source_id": "Jun2022_P1H__Q05__p07-07__m05__Solving-Linear-Equations",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Solving Linear Equations",
+    "topic_order": 23,
+    "paper": "Jun 2022 P1H",
+    "question": 5,
+    "marks": 5,
+    "filename": "Jun2022_P1H__Q05__p07-07__m05__Solving-Linear-Equations.png",
+    "image": "assets/questions_all/all_q0238.png",
+    "question_text": "5 (a) Expand and simplify (n - 6)(n + 4) ...................................................... (2) (b) Solve 2x - 3 = 3 5 4 x - Show clear algebraic working. x = ...................................................... (3) (Total for Question 5 is 5 marks)"
+  },
+  {
+    "id": "all::Jun2022_P2H__Q15__p15-15__m07__Solving-Linear-Equations",
+    "source_id": "Jun2022_P2H__Q15__p15-15__m07__Solving-Linear-Equations",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Solving Linear Equations",
+    "topic_order": 23,
+    "paper": "Jun 2022 P2H",
+    "question": 15,
+    "marks": 7,
+    "filename": "Jun2022_P2H__Q15__p15-15__m07__Solving-Linear-Equations.png",
+    "image": "assets/questions_all/all_q0358.png",
+    "question_text": "15 (a) Solve 4 5 3 3 2 2 x x + - - = 13 Show clear algebraic working. x = ...................................................... (4) (b) Solve the inequality 2y2 - 7y - 30 < 0 Show your working clearly. ...................................................... (3) (Total for Question 15 is 7 marks)"
+  },
+  {
+    "id": "all::Jun2022_P2HR__Q06__p08-08__m08__Solving-Linear-Equations",
+    "source_id": "Jun2022_P2HR__Q06__p08-08__m08__Solving-Linear-Equations",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Solving Linear Equations",
+    "topic_order": 23,
+    "paper": "Jun 2022 P2HR",
+    "question": 6,
+    "marks": 8,
+    "filename": "Jun2022_P2HR__Q06__p08-08__m08__Solving-Linear-Equations.png",
+    "image": "assets/questions_all/all_q0260.png",
+    "question_text": "6 (a) Solve p = 3 5 10 p - Show clear algebraic working. p = ....................................................... (3) (b) Simplify a 0 where a > 0 ....................................................... (1) (c) Simplify fully 3 6 3 2 xy x y ....................................................... (2) (d) Factorise fully 10c 3d 2 + 15cd 4 ....................................................... (2) (Total for Question 6 is 8 marks)"
+  },
+  {
+    "id": "all::Jun2024_P2HR__Q06__p08-08__m08__Solving-Linear-Equations",
+    "source_id": "Jun2024_P2HR__Q06__p08-08__m08__Solving-Linear-Equations",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Solving Linear Equations",
+    "topic_order": 23,
+    "paper": "Jun 2024 P2HR",
+    "question": 6,
+    "marks": 8,
+    "filename": "Jun2024_P2HR__Q06__p08-08__m08__Solving-Linear-Equations.png",
+    "image": "assets/questions_all/all_q0262.png",
+    "question_text": "6 (a) Solve 2 3 4 17 f f Show clear algebraic working. \b f = .......................................................... (3) (b) Simplify (e + 12)0 where e > 0 \b .......................................................... (1) (c) Simplify fully 12 4 4 6 2 a h ah \b .......................................................... (2) (d) Factorise fully 20x5y + 12x3y4 \b ........................................................................................... (2) (Total for Question 6 is 8 marks)"
+  },
+  {
+    "id": "all::Jun2025_P1HR__Q15__p15-15__m06__Solving-Linear-Equations",
+    "source_id": "Jun2025_P1HR__Q15__p15-15__m06__Solving-Linear-Equations",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Solving Linear Equations",
+    "topic_order": 23,
+    "paper": "Jun 2025 P1HR",
+    "question": 15,
+    "marks": 6,
+    "filename": "Jun2025_P1HR__Q15__p15-15__m06__Solving-Linear-Equations.png",
+    "image": "assets/questions_all/all_q0161.png",
+    "question_text": "15 (a) Solve 5 8 3 2 5 4 23 a a Show clear algebraic working. a = ............................................................ (4) (b) Express y 3 1 \u001b \u001a\u001a \u0019 in the form cyn where c and n are numbers to be found. ............................................................ (2) (Total for Question 15 is 6 marks)"
+  },
+  {
+    "id": "all::Jun2025_P2HR__Q01__p03-03__m05__Solving-Linear-Equations",
+    "source_id": "Jun2025_P2HR__Q01__p03-03__m05__Solving-Linear-Equations",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Solving Linear Equations",
+    "topic_order": 23,
+    "paper": "Jun 2025 P2HR",
+    "question": 1,
+    "marks": 5,
+    "filename": "Jun2025_P2HR__Q01__p03-03__m05__Solving-Linear-Equations.png",
+    "image": "assets/questions_all/all_q0265.png",
+    "question_text": "1 (a) Factorise fully 18 45 c cd - ............................................................ (2) (b) Solve 5 2 6 3 4 x x Show clear algebraic working. x = ............................................................. (3) (Total for Question 1 is 5 marks)"
+  },
+  {
+    "id": "all::May2024_P1H__Q06__p07-07__m05__Solving-Linear-Equations",
+    "source_id": "May2024_P1H__Q06__p07-07__m05__Solving-Linear-Equations",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Solving Linear Equations",
+    "topic_order": 23,
+    "paper": "May 2024 P1H",
+    "question": 6,
+    "marks": 5,
+    "filename": "May2024_P1H__Q06__p07-07__m05__Solving-Linear-Equations.png",
+    "image": "assets/questions_all/all_q0245.png",
+    "question_text": "6 (a) Expand and simplify (m + 5) (m - 8) ...................................................... (2) (b) Solve 3n - 4 = 5 6 3 n + Show clear algebraic working. n = ...................................................... (3) (Total for Question 6 is 5 marks)"
+  },
+  {
+    "id": "all::MayNov2020_P1HR__Q03__p04-04__m06__Solving-Linear-Equations",
+    "source_id": "MayNov2020_P1HR__Q03__p04-04__m06__Solving-Linear-Equations",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Solving Linear Equations",
+    "topic_order": 23,
+    "paper": "May-Nov 2020 P1HR",
+    "question": 3,
+    "marks": 6,
+    "filename": "MayNov2020_P1HR__Q03__p04-04__m06__Solving-Linear-Equations.png",
+    "image": "assets/questions_all/all_q0350.png",
+    "question_text": "3 (a) Simplify h7\u00d7 h2 ....................................................... (1) G = c2 - 4c (b) Find the value of G when c = -5 G = ....................................................... (2) (c) Solve 5 3 4 x - = 2x + 3 Show clear algebraic working. x = ....................................................... (3) (Total for Question 3 is 6 marks)"
+  },
+  {
+    "id": "all::Nov2024_P1H__Q03__p05-05__m06__Solving-Linear-Equations",
+    "source_id": "Nov2024_P1H__Q03__p05-05__m06__Solving-Linear-Equations",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Solving Linear Equations",
+    "topic_order": 23,
+    "paper": "Nov 2024 P1H",
+    "question": 3,
+    "marks": 6,
+    "filename": "Nov2024_P1H__Q03__p05-05__m06__Solving-Linear-Equations.png",
+    "image": "assets/questions_all/all_q0252.png",
+    "question_text": "3 (a) Simplify p3 5 ............................................................... (1) (b) Expand and simplify 2 4 3 4 n n n n ............................................................... (2) (c) Solve 2 5 3 4 x x Show clear algebraic working. x = ................................................................ (3) (Total for Question 3 is 6 marks)"
+  },
+  {
     "id": "all::Jan2020_P1HR__Q06__p07-07__m03__Solving-Quadratic-Equations",
     "source_id": "Jan2020_P1HR__Q06__p07-07__m03__Solving-Quadratic-Equations",
     "bank": "all",
@@ -5041,6 +5113,20 @@ window.QUESTION_DATA = [
     "question_text": "6 Solve x2 - 5x - 36 = 0 Show clear algebraic working. ...................................................... (Total for Question 6 is 3 marks)"
   },
   {
+    "id": "all::Jan2020_P2H__Q07__p08-08__m05__Solving-Quadratic-Equations",
+    "source_id": "Jan2020_P2H__Q07__p08-08__m05__Solving-Quadratic-Equations",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Solving Quadratic Equations",
+    "topic_order": 24,
+    "paper": "Jan 2020 P2H",
+    "question": 7,
+    "marks": 5,
+    "filename": "Jan2020_P2H__Q07__p08-08__m05__Solving-Quadratic-Equations.png",
+    "image": "assets/questions_all/all_q0353.png",
+    "question_text": "7 (a) Solve the inequality 2x + 7 > 4 ....................................................... (2) (b) Solve x2 - 3x - 40 = 0 Show clear algebraic working. ....................................................... (3) (Total for Question 7 is 5 marks)"
+  },
+  {
     "id": "all::Jan2021_P2HR__Q09__p09-09__m03__Solving-Quadratic-Equations",
     "source_id": "Jan2021_P2HR__Q09__p09-09__m03__Solving-Quadratic-Equations",
     "bank": "all",
@@ -5053,104 +5139,6 @@ window.QUESTION_DATA = [
     "filename": "Jan2021_P2HR__Q09__p09-09__m03__Solving-Quadratic-Equations.png",
     "image": "assets/questions_all/all_q0344.png",
     "question_text": "9 Solve x 2 - 21x + 20 = 0 Show your working clearly. ...................................................... (Total for Question 9 is 3 marks)"
-  },
-  {
-    "id": "all::Jan2021_P2HR__Q17__p16-16__m09__Solving-Quadratic-Equations",
-    "source_id": "Jan2021_P2HR__Q17__p16-16__m09__Solving-Quadratic-Equations",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Solving Quadratic Equations",
-    "topic_order": 24,
-    "paper": "Jan 2021 P2HR",
-    "question": 17,
-    "marks": 9,
-    "filename": "Jan2021_P2HR__Q17__p16-16__m09__Solving-Quadratic-Equations.png",
-    "image": "assets/questions_all/all_q0345.png",
-    "question_text": "17 The functions f and g are defined as f(x) = x 2 + 6 g(x) = x - 10 (a) Find fg(3) ...................................................... (2) (b) Solve the equation fg(x) = f(x) Show clear algebraic working. ...................................................... (3) The function h is defined as h(x) = 2 4 x x - (c) State the value of x that cannot be included in the domain of h ...................................................... (1) (d) Express the inverse function h -1 in the form h -1(x) = ... h -1(x) = ...................................................... (3) (Total for Question 17 is 9 marks)"
-  },
-  {
-    "id": "all::Jun2022_P2HR__Q19__p21-21__m04__Solving-Quadratic-Equations",
-    "source_id": "Jun2022_P2HR__Q19__p21-21__m04__Solving-Quadratic-Equations",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Solving Quadratic Equations",
-    "topic_order": 24,
-    "paper": "Jun 2022 P2HR",
-    "question": 19,
-    "marks": 4,
-    "filename": "Jun2022_P2HR__Q19__p21-21__m04__Solving-Quadratic-Equations.png",
-    "image": "assets/questions_all/all_q0346.png",
-    "question_text": "19 f(x) = x 2 - 4 g(x) = 2x + 1 Solve fg(x) > 0 Show clear algebraic working. ....................................................... (Total for Question 19 is 4 marks)"
-  },
-  {
-    "id": "all::Jun2025_P1H__Q16__p16-16__m04__Solving-Quadratic-Equations",
-    "source_id": "Jun2025_P1H__Q16__p16-16__m04__Solving-Quadratic-Equations",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Solving Quadratic Equations",
-    "topic_order": 24,
-    "paper": "Jun 2025 P1H",
-    "question": 16,
-    "marks": 4,
-    "filename": "Jun2025_P1H__Q16__p16-16__m04__Solving-Quadratic-Equations.png",
-    "image": "assets/questions_all/all_q0348.png",
-    "question_text": "16 f (x) = 9 - x where x \uf085 0 g (x) = 4x 2 (a) Find f (9) ....................................................... (1) (b) Solve fg (x) < 0 Show clear algebraic working. ....................................................... (3) (Total for Question 16 is 4 marks)"
-  },
-  {
-    "id": "all::May2023_P1H__Q17__p18-18__m04__Solving-Quadratic-Equations",
-    "source_id": "May2023_P1H__Q17__p18-18__m04__Solving-Quadratic-Equations",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Solving Quadratic Equations",
-    "topic_order": 24,
-    "paper": "May 2023 P1H",
-    "question": 17,
-    "marks": 4,
-    "filename": "May2023_P1H__Q17__p18-18__m04__Solving-Quadratic-Equations.png",
-    "image": "assets/questions_all/all_q0349.png",
-    "question_text": "17 The functions g and h are such that g(x) = 11 2 5 x - h(x) = x 2 + 4 x \uf085 0 (a) What value of x must be excluded from any domain of g? ....................................................... (1) (b) Solve gh(x) = 1 ....................................................... (3) (Total for Question 17 is 4 marks)"
-  },
-  {
-    "id": "all::MayNov2020_P1HR__Q03__p04-04__m06__Solving-Quadratic-Equations",
-    "source_id": "MayNov2020_P1HR__Q03__p04-04__m06__Solving-Quadratic-Equations",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Solving Quadratic Equations",
-    "topic_order": 24,
-    "paper": "May-Nov 2020 P1HR",
-    "question": 3,
-    "marks": 6,
-    "filename": "MayNov2020_P1HR__Q03__p04-04__m06__Solving-Quadratic-Equations.png",
-    "image": "assets/questions_all/all_q0350.png",
-    "question_text": "3 (a) Simplify h7\u00d7 h2 ....................................................... (1) G = c2 - 4c (b) Find the value of G when c = -5 G = ....................................................... (2) (c) Solve 5 3 4 x - = 2x + 3 Show clear algebraic working. x = ....................................................... (3) (Total for Question 3 is 6 marks)"
-  },
-  {
-    "id": "all::Nov2023_P2H__Q04__p06-06__m08__Solving-Quadratic-Equations",
-    "source_id": "Nov2023_P2H__Q04__p06-06__m08__Solving-Quadratic-Equations",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Solving Quadratic Equations",
-    "topic_order": 24,
-    "paper": "Nov 2023 P2H",
-    "question": 4,
-    "marks": 8,
-    "filename": "Nov2023_P2H__Q04__p06-06__m08__Solving-Quadratic-Equations.png",
-    "image": "assets/questions_all/all_q0351.png",
-    "question_text": "4 (a) Solve 2 5 6 2 5 x x Show clear algebraic working. x = .............................................................. (3) (b) Simplify h h 15 3 \u00f7 .............................................................. (1) (c) Simplify fully 2 3 5 4 g k .............................................................. (2) (d) Given that y y y y n 5 7 12 work out the value of n n = .............................................................. (2) (Total for Question 4 is 8 marks)"
-  },
-  {
-    "id": "all::Jan2020_P2H__Q07__p08-08__m05__Solving-Inequalities",
-    "source_id": "Jan2020_P2H__Q07__p08-08__m05__Solving-Inequalities",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Solving Inequalities",
-    "topic_order": 25,
-    "paper": "Jan 2020 P2H",
-    "question": 7,
-    "marks": 5,
-    "filename": "Jan2020_P2H__Q07__p08-08__m05__Solving-Inequalities.png",
-    "image": "assets/questions_all/all_q0353.png",
-    "question_text": "7 (a) Solve the inequality 2x + 7 > 4 ....................................................... (2) (b) Solve x2 - 3x - 40 = 0 Show clear algebraic working. ....................................................... (3) (Total for Question 7 is 5 marks)"
   },
   {
     "id": "all::Jan2020_P2HR__Q19__p20-20__m06__Solving-Inequalities",
@@ -5179,6 +5167,20 @@ window.QUESTION_DATA = [
     "filename": "Jan2021_P1HR__Q03__p04-04__m04__Solving-Inequalities.png",
     "image": "assets/questions_all/all_q0355.png",
     "question_text": "3 (a) On the number line, show the inequality -2 < y < 1 -3 -2 -1 0 1 2 3 y (2) n is an integer. (b) Write down all the values of n that satisfy -3.4 < n < 2 ............................................................................................................ (2) (Total for Question 3 is 4 marks)"
+  },
+  {
+    "id": "all::Jan2021_P2H__Q05__p07-07__m07__Solving-Inequalities",
+    "source_id": "Jan2021_P2H__Q05__p07-07__m07__Solving-Inequalities",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Solving Inequalities",
+    "topic_order": 25,
+    "paper": "Jan 2021 P2H",
+    "question": 5,
+    "marks": 7,
+    "filename": "Jan2021_P2H__Q05__p07-07__m07__Solving-Inequalities.png",
+    "image": "assets/questions_all/all_q0233.png",
+    "question_text": "5 (a) Expand and simplify 4x(2x + 5) - 3x(2x - 3) ...................................................... (2) Given that y y y n 5 6 \u00d7 = y13 (b) work out the value of n. n = ...................................................... (2) (c) (i) Solve the inequality 7t - 8 < 2t + 7 ...................................................... (2) (ii) On the number line below, represent the solution set of the inequality solved in part (c)(i) -5 -4 -3 -2 -1 0 1 2 3 4 5 t (1) (Total for Question 5 is 7 marks)"
   },
   {
     "id": "all::Jan2022_P1HR__Q01__p03-03__m03__Solving-Inequalities",
@@ -5221,20 +5223,6 @@ window.QUESTION_DATA = [
     "filename": "Jun2022_P1HR__Q09__p10-10__m02__Solving-Inequalities.png",
     "image": "assets/questions_all/all_q0357.png",
     "question_text": "9 Solve the inequality 3 - 4x < 11 ....................................................... (Total for Question 9 is 2 marks)"
-  },
-  {
-    "id": "all::Jun2022_P2H__Q15__p15-15__m07__Solving-Inequalities",
-    "source_id": "Jun2022_P2H__Q15__p15-15__m07__Solving-Inequalities",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Solving Inequalities",
-    "topic_order": 25,
-    "paper": "Jun 2022 P2H",
-    "question": 15,
-    "marks": 7,
-    "filename": "Jun2022_P2H__Q15__p15-15__m07__Solving-Inequalities.png",
-    "image": "assets/questions_all/all_q0358.png",
-    "question_text": "15 (a) Solve 4 5 3 3 2 2 x x + - - = 13 Show clear algebraic working. x = ...................................................... (4) (b) Solve the inequality 2y2 - 7y - 30 < 0 Show your working clearly. ...................................................... (3) (Total for Question 15 is 7 marks)"
   },
   {
     "id": "all::Jun2024_P2HR__Q20__p22-22__m04__Solving-Inequalities",
@@ -5389,20 +5377,6 @@ window.QUESTION_DATA = [
     "filename": "Jan2021_P1HR__Q17__p19-19__m05__Simultaneous-Equations.png",
     "image": "assets/questions_all/all_q0368.png",
     "question_text": "17 Solve the simultaneous equations x - 6y = 5 xy - 2y 2 = 6 Show clear algebraic working. ..................................................................................................................................................... (Total for Question 17 is 5 marks)"
-  },
-  {
-    "id": "all::Jan2021_P2H__Q13__p14-14__m03__Simultaneous-Equations",
-    "source_id": "Jan2021_P2H__Q13__p14-14__m03__Simultaneous-Equations",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Simultaneous Equations",
-    "topic_order": 26,
-    "paper": "Jan 2021 P2H",
-    "question": 13,
-    "marks": 3,
-    "filename": "Jan2021_P2H__Q13__p14-14__m03__Simultaneous-Equations.png",
-    "image": "assets/questions_all/all_q0369.png",
-    "question_text": "13 P, Q, R, S and T are points on a circle with centre O. P T O 124\u00b0 m\u00b0 n\u00b0 Q S R Diagram NOT accurately drawn QOS is a diameter of the circle. angle POS = 124\u00b0 angle PRS = m\u00b0 angle PTS = n\u00b0 (a) Find the value of (i) m ...................................................... (ii) n ...................................................... (2) (b) Find the size of angle QPO. ...................................................... \u00b0 (1) (Total for Question 13 is 3 marks)"
   },
   {
     "id": "all::Jan2021_P2HR__Q12__p11-11__m04__Simultaneous-Equations",
@@ -5671,6 +5645,20 @@ window.QUESTION_DATA = [
     "question_text": "12 Solve the simultaneous equations 7x + 2y = 5.5 3x - 5y = 17 Show clear algebraic working. x = ....................................................... y = ....................................................... (Total for Question 12 is 4 marks)"
   },
   {
+    "id": "all::Nov2021_P1H__Q06__p07-07__m05__Simultaneous-Equations",
+    "source_id": "Nov2021_P1H__Q06__p07-07__m05__Simultaneous-Equations",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Simultaneous Equations",
+    "topic_order": 26,
+    "paper": "Nov 2021 P1H",
+    "question": 6,
+    "marks": 5,
+    "filename": "Nov2021_P1H__Q06__p07-07__m05__Simultaneous-Equations.png",
+    "image": "assets/questions_all/all_q0802.png",
+    "question_text": "6 Alison buys 5 apples and 3 pears for a total cost of $1.96 Greg buys 3 apples and 2 pears for a total cost of $1.22 Michael buys 10 apples and 10 pears. Work out how much Michael pays for his 10 apples and 10 pears. Show your working clearly. $...................................................... (Total for Question 6 is 5 marks)"
+  },
+  {
     "id": "all::Nov2023_P2H__Q14__p13-13__m03__Simultaneous-Equations",
     "source_id": "Nov2023_P2H__Q14__p13-13__m03__Simultaneous-Equations",
     "bank": "all",
@@ -5713,46 +5701,60 @@ window.QUESTION_DATA = [
     "question_text": "2 Solve the simultaneous equations 5x + y = 11 3x - y = 9 Show clear algebraic working. x = ...................................................... y = ...................................................... (Total for Question 2 is 3 marks)"
   },
   {
-    "id": "all::Jan2021_P2HR__Q18__p17-17__m05__Forming-and-Solving-Equations",
-    "source_id": "Jan2021_P2HR__Q18__p17-17__m05__Forming-and-Solving-Equations",
+    "id": "all::Jan2020_P2HR__Q03__p05-05__m04__Forming-and-Solving-Equations",
+    "source_id": "Jan2020_P2HR__Q03__p05-05__m04__Forming-and-Solving-Equations",
     "bank": "all",
     "unit": "Equations, Formulae & Identities",
     "topic": "Forming & Solving Equations",
     "topic_order": 27,
-    "paper": "Jan 2021 P2HR",
-    "question": 18,
-    "marks": 5,
-    "filename": "Jan2021_P2HR__Q18__p17-17__m05__Forming-and-Solving-Equations.png",
-    "image": "assets/questions_all/all_q0392.png",
-    "question_text": "18 Solve the equation 5 2 3 2 2 2 x x x + + + = Show clear algebraic working. ...................................................... (Total for Question 18 is 5 marks)"
-  },
-  {
-    "id": "all::Jan2022_P2HR__Q03__p06-06__m05__Forming-and-Solving-Equations",
-    "source_id": "Jan2022_P2HR__Q03__p06-06__m05__Forming-and-Solving-Equations",
-    "bank": "all",
-    "unit": "Equations, Formulae & Identities",
-    "topic": "Forming & Solving Equations",
-    "topic_order": 27,
-    "paper": "Jan 2022 P2HR",
+    "paper": "Jan 2020 P2HR",
     "question": 3,
-    "marks": 5,
-    "filename": "Jan2022_P2HR__Q03__p06-06__m05__Forming-and-Solving-Equations.png",
-    "image": "assets/questions_all/all_q0393.png",
-    "question_text": "3 (a) Solve 4y + 5 > 12 ....................................................... (2) (b) Solve 6 5 4 7 2 x x Show clear algebraic working. x = ....................................................... (3) (Total for Question 3 is 5 marks)"
+    "marks": 4,
+    "filename": "Jan2020_P2HR__Q03__p05-05__m04__Forming-and-Solving-Equations.png",
+    "image": "assets/questions_all/all_q0918.png",
+    "question_text": "3 Three tins, A, B and C, each contain buttons. Tin A contains x buttons. Tin B contains 4 times the number of buttons that tin A contains. Tin C contains 7 fewer buttons than tin A. The total number of buttons in the three tins is 137 Work out the number of buttons in tin C. ....................................................... (Total for Question 3 is 4 marks)"
   },
   {
-    "id": "all::Jun2025_P2H__Q14__p14-14__m02__Forming-and-Solving-Equations",
-    "source_id": "Jun2025_P2H__Q14__p14-14__m02__Forming-and-Solving-Equations",
+    "id": "all::Nov2021_P1H__Q05__p06-06__m05__Forming-and-Solving-Equations",
+    "source_id": "Nov2021_P1H__Q05__p06-06__m05__Forming-and-Solving-Equations",
     "bank": "all",
     "unit": "Equations, Formulae & Identities",
     "topic": "Forming & Solving Equations",
     "topic_order": 27,
-    "paper": "Jun 2025 P2H",
-    "question": 14,
-    "marks": 2,
-    "filename": "Jun2025_P2H__Q14__p14-14__m02__Forming-and-Solving-Equations.png",
-    "image": "assets/questions_all/all_q0394.png",
-    "question_text": "14 Here are five graphs. E B A O y O y O O O y y x y x x x x D C (a) Write down the letter of the graph that could have the equation y x 5 2 ............................... (1) (b) Write down the letter of the graph that could have the equation y x = 2 3 ............................... (1) (Total for Question 14 is 2 marks)"
+    "paper": "Nov 2021 P1H",
+    "question": 5,
+    "marks": 5,
+    "filename": "Nov2021_P1H__Q05__p06-06__m05__Forming-and-Solving-Equations.png",
+    "image": "assets/questions_all/all_q0772.png",
+    "question_text": "5 Yasmin has some identical rectangular tiles. Each tile is L cm by W cm. L cm Diagram NOT accurately drawn W cm Using 9 of her tiles, Yasmin makes rectangle ABCD, shown in the diagram below. A Diagram NOT accurately drawn B D C The area of ABCD is 1620 cm2 Work out the value of L and the value of W. L = ............................. W = ............................. (Total for Question 5 is 5 marks)"
+  },
+  {
+    "id": "all::Nov2021_P2H__Q02__p04-04__m04__Forming-and-Solving-Equations",
+    "source_id": "Nov2021_P2H__Q02__p04-04__m04__Forming-and-Solving-Equations",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Forming & Solving Equations",
+    "topic_order": 27,
+    "paper": "Nov 2021 P2H",
+    "question": 2,
+    "marks": 4,
+    "filename": "Nov2021_P2H__Q02__p04-04__m04__Forming-and-Solving-Equations.png",
+    "image": "assets/questions_all/all_q0774.png",
+    "question_text": "2 Here are two rectangles, rectangle A and rectangle B. Diagram NOT accurately drawn 4 cm 5 cm (5 - x) cm (2x - 1) cm rectangle B rectangle A The area of rectangle B is twice the area of rectangle A. Work out the value of x. Show your working clearly. x = ....................................................... (Total for Question 2 is 4 marks)"
+  },
+  {
+    "id": "all::Nov2023_P1H__Q02__p04-04__m06__Forming-and-Solving-Equations",
+    "source_id": "Nov2023_P1H__Q02__p04-04__m06__Forming-and-Solving-Equations",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Forming & Solving Equations",
+    "topic_order": 27,
+    "paper": "Nov 2023 P1H",
+    "question": 2,
+    "marks": 6,
+    "filename": "Nov2023_P1H__Q02__p04-04__m06__Forming-and-Solving-Equations.png",
+    "image": "assets/questions_all/all_q0274.png",
+    "question_text": "2 (a) Factorise fully 12 18 pq p - .............................................................. (2) There are 56 metal bars in a box. Each metal bar is gold or silver or zinc. y metal bars are gold. (3y + 7) metal bars are silver. (2y - 5) metal bars are zinc. (b) Work out the number of metal bars that are zinc. Show clear algebraic working. .............................................................. (4) (Total for Question 2 is 6 marks)"
   },
   {
     "id": "all::Nov2025_P2H__Q20__p20-20__m03__Forming-and-Solving-Equations",
@@ -6161,6 +6163,20 @@ window.QUESTION_DATA = [
     "question_text": "22 The function f is such that f(x) = x 2 - 8x + 5 where x < 4 Express the inverse function f -1 in the form f -1(x) = ... f -1(x) = ...................................................... (Total for Question 22 is 3 marks)"
   },
   {
+    "id": "all::Jan2021_P2HR__Q17__p16-16__m09__Functions",
+    "source_id": "Jan2021_P2HR__Q17__p16-16__m09__Functions",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Functions",
+    "topic_order": 29,
+    "paper": "Jan 2021 P2HR",
+    "question": 17,
+    "marks": 9,
+    "filename": "Jan2021_P2HR__Q17__p16-16__m09__Functions.png",
+    "image": "assets/questions_all/all_q0345.png",
+    "question_text": "17 The functions f and g are defined as f(x) = x 2 + 6 g(x) = x - 10 (a) Find fg(3) ...................................................... (2) (b) Solve the equation fg(x) = f(x) Show clear algebraic working. ...................................................... (3) The function h is defined as h(x) = 2 4 x x - (c) State the value of x that cannot be included in the domain of h ...................................................... (1) (d) Express the inverse function h -1 in the form h -1(x) = ... h -1(x) = ...................................................... (3) (Total for Question 17 is 9 marks)"
+  },
+  {
     "id": "all::Jan2022_P2H__Q25__p27-27__m05__Functions",
     "source_id": "Jan2022_P2H__Q25__p27-27__m05__Functions",
     "bank": "all",
@@ -6203,6 +6219,20 @@ window.QUESTION_DATA = [
     "question_text": "14 The function f is defined as f : x \uf061 2 6 x x - x \u2260 6 (a) Find f(10) ...................................................... (1) (b) Express the inverse function f -1 in the form f -1 : x \uf061 ... f -1 : x \uf061 ...................................................... (3) (Total for Question 14 is 4 marks)"
   },
   {
+    "id": "all::Jun2022_P2HR__Q19__p21-21__m04__Functions",
+    "source_id": "Jun2022_P2HR__Q19__p21-21__m04__Functions",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Functions",
+    "topic_order": 29,
+    "paper": "Jun 2022 P2HR",
+    "question": 19,
+    "marks": 4,
+    "filename": "Jun2022_P2HR__Q19__p21-21__m04__Functions.png",
+    "image": "assets/questions_all/all_q0346.png",
+    "question_text": "19 f(x) = x 2 - 4 g(x) = 2x + 1 Solve fg(x) > 0 Show clear algebraic working. ....................................................... (Total for Question 19 is 4 marks)"
+  },
+  {
     "id": "all::Jun2024_P2HR__Q17__p19-19__m03__Functions",
     "source_id": "Jun2024_P2HR__Q17__p19-19__m03__Functions",
     "bank": "all",
@@ -6215,6 +6245,20 @@ window.QUESTION_DATA = [
     "filename": "Jun2024_P2HR__Q17__p19-19__m03__Functions.png",
     "image": "assets/questions_all/all_q0428.png",
     "question_text": "17 f( ) x x x 2 4 g( ) x x 3 1 Given that fg(k) = 2 work out the value of k \b k = .............................................................. (Total for Question 17 is 3 marks)"
+  },
+  {
+    "id": "all::Jun2025_P1H__Q16__p16-16__m04__Functions",
+    "source_id": "Jun2025_P1H__Q16__p16-16__m04__Functions",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Functions",
+    "topic_order": 29,
+    "paper": "Jun 2025 P1H",
+    "question": 16,
+    "marks": 4,
+    "filename": "Jun2025_P1H__Q16__p16-16__m04__Functions.png",
+    "image": "assets/questions_all/all_q0348.png",
+    "question_text": "16 f (x) = 9 - x where x \uf085 0 g (x) = 4x 2 (a) Find f (9) ....................................................... (1) (b) Solve fg (x) < 0 Show clear algebraic working. ....................................................... (3) (Total for Question 16 is 4 marks)"
   },
   {
     "id": "all::Jun2025_P2HR__Q19__p19-19__m03__Functions",
@@ -6243,6 +6287,20 @@ window.QUESTION_DATA = [
     "filename": "May2021_P1H__Q24__p23-23__m06__Functions.png",
     "image": "assets/questions_all/all_q0430.png",
     "question_text": "24 The functions f and g are defined as f(x) = 5x2 - 10x + 7 where x \uf085 1 g(x) = 7x - 6 (a) Find fg(2) ....................................................... (2) (b) Express the inverse function f -1 in the form f -1 (x) = ... f -1 (x) = ....................................................... (4) (Total for Question 24 is 6 marks)"
+  },
+  {
+    "id": "all::May2023_P1H__Q17__p18-18__m04__Functions",
+    "source_id": "May2023_P1H__Q17__p18-18__m04__Functions",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Functions",
+    "topic_order": 29,
+    "paper": "May 2023 P1H",
+    "question": 17,
+    "marks": 4,
+    "filename": "May2023_P1H__Q17__p18-18__m04__Functions.png",
+    "image": "assets/questions_all/all_q0349.png",
+    "question_text": "17 The functions g and h are such that g(x) = 11 2 5 x - h(x) = x 2 + 4 x \uf085 0 (a) What value of x must be excluded from any domain of g? ....................................................... (1) (b) Solve gh(x) = 1 ....................................................... (3) (Total for Question 17 is 4 marks)"
   },
   {
     "id": "all::May2024_P1H__Q15__p16-16__m04__Functions",
@@ -6399,20 +6457,6 @@ window.QUESTION_DATA = [
     "question_text": "24 L1 and L2 are two straight lines. The origin of the coordinate axes is O. L1 has equation 5x + 10y = 8 L2 is perpendicular to L1 and passes through the point with coordinates (8, 6) L2 crosses the x-axis at the point A. L2 intersects the straight line with equation x = -3 at the point B. Find the area of triangle AOB. Show your working clearly. ....................................................... (Total for Question 24 is 5 marks)"
   },
   {
-    "id": "all::Jan2021_P1H__Q10__p11-11__m04__Coordinate-Geometry",
-    "source_id": "Jan2021_P1H__Q10__p11-11__m04__Coordinate-Geometry",
-    "bank": "all",
-    "unit": "Sequences, Functions & Graphs",
-    "topic": "Coordinate Geometry",
-    "topic_order": 30,
-    "paper": "Jan 2021 P1H",
-    "question": 10,
-    "marks": 4,
-    "filename": "Jan2021_P1H__Q10__p11-11__m04__Coordinate-Geometry.png",
-    "image": "assets/questions_all/all_q0445.png",
-    "question_text": "10 Here is isosceles triangle ABC. A 16 cm 65\u00b0 D B C Diagram NOT accurately drawn D is the midpoint of AC and DB = 16 cm. Angle DAB = 65\u00b0 Work out the perimeter of triangle ABC. Give your answer correct to one decimal place. ...................................................... cm (Total for Question 10 is 4 marks)"
-  },
-  {
     "id": "all::Jan2021_P1H__Q13__p15-15__m03__Coordinate-Geometry",
     "source_id": "Jan2021_P1H__Q13__p15-15__m03__Coordinate-Geometry",
     "bank": "all",
@@ -6439,20 +6483,6 @@ window.QUESTION_DATA = [
     "filename": "Jan2021_P1HR__Q22__p26-27__m05__Coordinate-Geometry.png",
     "image": "assets/questions_all/all_q0448.png",
     "question_text": "22 ABC is an isosceles triangle with AB = AC. B is the point with coordinates (-1, 5) C is the point with coordinates (2, 10) M is the midpoint of BC. Find an equation of the line through the points A and M. Give your answer in the form py + qx = r where p, q and r are integers. ............................................................................................................ (Total for Question 22 is 5 marks)"
-  },
-  {
-    "id": "all::Jan2021_P2H__Q17__p18-19__m07__Coordinate-Geometry",
-    "source_id": "Jan2021_P2H__Q17__p18-19__m07__Coordinate-Geometry",
-    "bank": "all",
-    "unit": "Sequences, Functions & Graphs",
-    "topic": "Coordinate Geometry",
-    "topic_order": 30,
-    "paper": "Jan 2021 P2H",
-    "question": 17,
-    "marks": 7,
-    "filename": "Jan2021_P2H__Q17__p18-19__m07__Coordinate-Geometry.png",
-    "image": "assets/questions_all/all_q0449.png",
-    "question_text": "17 The diagram shows a solid prism ABCDEFGH. A 28 cm 24 cm 20 cm D E F G H B C Diagram NOT accurately drawn 37 cm The trapezium ABCD, in which AD is parallel to BC, is a cross section of the prism. The base ADEH of the prism is a horizontal plane. ADEH and BCFG are rectangles. The midpoint of BC is vertically above the midpoint of AD so that BA = CD. AD = 37 cm GF = 28 cm DE = 24 cm The perpendicular distance between edges AD and BC is 20 cm. (a) Work out the total surface area of the prism. ...................................................... cm2 (4) (b) Calculate the size of the angle between AF and the plane ADEH. Give your answer correct to one decimal place. ...................................................... \u00b0 (3) (Total for Question 17 is 7 marks)"
   },
   {
     "id": "all::Jan2021_P2H__Q18__p20-21__m07__Coordinate-Geometry",
@@ -6523,34 +6553,6 @@ window.QUESTION_DATA = [
     "filename": "Jun2022_P1H__Q10__p11-11__m04__Coordinate-Geometry.png",
     "image": "assets/questions_all/all_q0458.png",
     "question_text": "10 Two circles, C1 and C2 , are drawn on a centimetre grid, with a scale of 1 cm for 1 unit on each axis. The centre of circle C1 is at the point with coordinates (-1, 3) and the radius of C1 is 13 cm. The centre of circle C2 is at the point with coordinates (7, 18) and the radius of C2 is 6 cm. (a) Work out the distance between the centre of C1 and the centre of C2 ...................................................... cm (3) (b) Explain why circle C1 intersects circle C2 ................................................................................................................................................................................................................................................... ................................................................................................................................................................................................................................................... (1) (Total for Question 10 is 4 marks)"
-  },
-  {
-    "id": "all::Jun2022_P1HR__Q10__p11-11__m03__Coordinate-Geometry",
-    "source_id": "Jun2022_P1HR__Q10__p11-11__m03__Coordinate-Geometry",
-    "bank": "all",
-    "unit": "Sequences, Functions & Graphs",
-    "topic": "Coordinate Geometry",
-    "topic_order": 30,
-    "paper": "Jun 2022 P1HR",
-    "question": 10,
-    "marks": 3,
-    "filename": "Jun2022_P1HR__Q10__p11-11__m03__Coordinate-Geometry.png",
-    "image": "assets/questions_all/all_q0459.png",
-    "question_text": "10 Line L is drawn on the grid. L x y 6 5 4 3 2 1 1 2 3 4 5 6 O -1 -2 -3 -4 -3 -2 -1 Find an equation for L Give your answer in the form y = mx + c ....................................................... (Total for Question 10 is 3 marks)"
-  },
-  {
-    "id": "all::Jun2022_P1HR__Q18__p20-20__m04__Coordinate-Geometry",
-    "source_id": "Jun2022_P1HR__Q18__p20-20__m04__Coordinate-Geometry",
-    "bank": "all",
-    "unit": "Sequences, Functions & Graphs",
-    "topic": "Coordinate Geometry",
-    "topic_order": 30,
-    "paper": "Jun 2022 P1HR",
-    "question": 18,
-    "marks": 4,
-    "filename": "Jun2022_P1HR__Q18__p20-20__m04__Coordinate-Geometry.png",
-    "image": "assets/questions_all/all_q0460.png",
-    "question_text": "18 The diagram shows a cube ABCDEFGH with sides of length 6 cm. Diagram NOT accurately drawn A T 6 cm D E V F G B C H T is the midpoint of AB and V is the midpoint of CH Work out the distance from T to V in a straight line through the cube. Give your answer in the form a cm where a is an integer. ....................................................... cm (Total for Question 18 is 4 marks)"
   },
   {
     "id": "all::Jun2022_P2H__Q22__p22-23__m07__Coordinate-Geometry",
@@ -6693,20 +6695,6 @@ window.QUESTION_DATA = [
     "question_text": "17 The straight line L passes through the points (4, -1) and (6, 4) The straight line M is perpendicular to L and intersects the y-axis at the point (0, 8) Find the coordinates of the point where M intersects the x-axis. (............................. , .............................) (Total for Question 17 is 4 marks)"
   },
   {
-    "id": "all::May2023_P1H__Q11__p13-13__m06__Coordinate-Geometry",
-    "source_id": "May2023_P1H__Q11__p13-13__m06__Coordinate-Geometry",
-    "bank": "all",
-    "unit": "Sequences, Functions & Graphs",
-    "topic": "Coordinate Geometry",
-    "topic_order": 30,
-    "paper": "May 2023 P1H",
-    "question": 11,
-    "marks": 6,
-    "filename": "May2023_P1H__Q11__p13-13__m06__Coordinate-Geometry.png",
-    "image": "assets/questions_all/all_q0475.png",
-    "question_text": "11 The curve C has equation y = 4x 3 + x 2 - 20x (a) Find d d y x d d y x = ....................................................... (2) (b) Find the x coordinates of the points on C where the gradient is 4 Show clear algebraic working. ....................................................... (4) (Total for Question 11 is 6 marks)"
-  },
-  {
     "id": "all::May2023_P1H__Q13__p15-15__m03__Coordinate-Geometry",
     "source_id": "May2023_P1H__Q13__p15-15__m03__Coordinate-Geometry",
     "bank": "all",
@@ -6719,34 +6707,6 @@ window.QUESTION_DATA = [
     "filename": "May2023_P1H__Q13__p15-15__m03__Coordinate-Geometry.png",
     "image": "assets/questions_all/all_q0476.png",
     "question_text": "13 A is the point with coordinates (-5, 12) B is the point with coordinates (19, -48) Find an equation of the straight line that passes through the points A and B ....................................................... (Total for Question 13 is 3 marks)"
-  },
-  {
-    "id": "all::May2024_P1H__Q18__p19-19__m05__Coordinate-Geometry",
-    "source_id": "May2024_P1H__Q18__p19-19__m05__Coordinate-Geometry",
-    "bank": "all",
-    "unit": "Sequences, Functions & Graphs",
-    "topic": "Coordinate Geometry",
-    "topic_order": 30,
-    "paper": "May 2024 P1H",
-    "question": 18,
-    "marks": 5,
-    "filename": "May2024_P1H__Q18__p19-19__m05__Coordinate-Geometry.png",
-    "image": "assets/questions_all/all_q0477.png",
-    "question_text": "18 A curve C has equation y = x 3 \u2012 40x + 1 Find the coordinates of both the points on C at which the gradient is 8 ( ............................ , ............................ ) ( ............................ , ............................ ) (Total for Question 18 is 5 marks)"
-  },
-  {
-    "id": "all::May2024_P1HR__Q09__p10-10__m03__Coordinate-Geometry",
-    "source_id": "May2024_P1HR__Q09__p10-10__m03__Coordinate-Geometry",
-    "bank": "all",
-    "unit": "Sequences, Functions & Graphs",
-    "topic": "Coordinate Geometry",
-    "topic_order": 30,
-    "paper": "May 2024 P1HR",
-    "question": 9,
-    "marks": 3,
-    "filename": "May2024_P1HR__Q09__p10-10__m03__Coordinate-Geometry.png",
-    "image": "assets/questions_all/all_q0478.png",
-    "question_text": "9 Line L is drawn on the grid. y x O -4 -1 L -2 -3 1 2 4 3 -1 -2 1 2 3 4 Find an equation for L Give your answer in the form y = mx + c \b .............................................................. (Total for Question 9 is 3 marks)"
   },
   {
     "id": "all::MayNov2020_P1H__Q22__p24-24__m04__Coordinate-Geometry",
@@ -6805,20 +6765,6 @@ window.QUESTION_DATA = [
     "question_text": "19 The straight line L has equation x - y = 3 The curve C has equation 3x2 - y2 + xy = 9 L and C intersect at the points P and Q. Find the coordinates of the midpoint of PQ. Show clear algebraic working. (............................ , ............................) (Total for Question 19 is 6 marks)"
   },
   {
-    "id": "all::Nov2023_P1H__Q16__p19-19__m04__Coordinate-Geometry",
-    "source_id": "Nov2023_P1H__Q16__p19-19__m04__Coordinate-Geometry",
-    "bank": "all",
-    "unit": "Sequences, Functions & Graphs",
-    "topic": "Coordinate Geometry",
-    "topic_order": 30,
-    "paper": "Nov 2023 P1H",
-    "question": 16,
-    "marks": 4,
-    "filename": "Nov2023_P1H__Q16__p19-19__m04__Coordinate-Geometry.png",
-    "image": "assets/questions_all/all_q0485.png",
-    "question_text": "16 A curve has equation y x x 4 8 5 3 Find the x coordinates of the two points on the curve where the gradient is 1 3 .............................................................. (Total for Question 16 is 4 marks)"
-  },
-  {
     "id": "all::Nov2023_P1H__Q22__p25-25__m06__Coordinate-Geometry",
     "source_id": "Nov2023_P1H__Q22__p25-25__m06__Coordinate-Geometry",
     "bank": "all",
@@ -6833,20 +6779,6 @@ window.QUESTION_DATA = [
     "question_text": "22 [In this question 1 cm = 1 unit on the x-axis and 1 cm = 1 unit on the y-axis] P is a point on a circle with centre (0, 0) The coordinates of P are (8, -10) The line L is the tangent to the circle at the point P L crosses the x-axis at the point Q and crosses the y-axis at the point R Work out the length of RQ Give your answer correct to 3 significant figures. .............................................................. cm (Total for Question 22 is 6 marks)"
   },
   {
-    "id": "all::Nov2023_P2H__Q09__p09-09__m02__Coordinate-Geometry",
-    "source_id": "Nov2023_P2H__Q09__p09-09__m02__Coordinate-Geometry",
-    "bank": "all",
-    "unit": "Sequences, Functions & Graphs",
-    "topic": "Coordinate Geometry",
-    "topic_order": 30,
-    "paper": "Nov 2023 P2H",
-    "question": 9,
-    "marks": 2,
-    "filename": "Nov2023_P2H__Q09__p09-09__m02__Coordinate-Geometry.png",
-    "image": "assets/questions_all/all_q0487.png",
-    "question_text": "9 A straight line passes through the points with coordinates (0, -3) and (2, 0) Find an equation of the line. ...................................................................................... (Total for Question 9 is 2 marks)"
-  },
-  {
     "id": "all::Nov2023_P2H__Q21__p19-19__m05__Coordinate-Geometry",
     "source_id": "Nov2023_P2H__Q21__p19-19__m05__Coordinate-Geometry",
     "bank": "all",
@@ -6859,34 +6791,6 @@ window.QUESTION_DATA = [
     "filename": "Nov2023_P2H__Q21__p19-19__m05__Coordinate-Geometry.png",
     "image": "assets/questions_all/all_q0488.png",
     "question_text": "21 The line with equation x y 2 5 intersects the curve with equation x y 2 2 3 13 at the points A and B Find the coordinates of A and the coordinates of B Show clear algebraic working. (............................... , ...............................) (............................... , ...............................) (Total for Question 21 is 5 marks)"
-  },
-  {
-    "id": "all::Nov2024_P2H__Q18__p19-19__m04__Coordinate-Geometry",
-    "source_id": "Nov2024_P2H__Q18__p19-19__m04__Coordinate-Geometry",
-    "bank": "all",
-    "unit": "Sequences, Functions & Graphs",
-    "topic": "Coordinate Geometry",
-    "topic_order": 30,
-    "paper": "Nov 2024 P2H",
-    "question": 18,
-    "marks": 4,
-    "filename": "Nov2024_P2H__Q18__p19-19__m04__Coordinate-Geometry.png",
-    "image": "assets/questions_all/all_q0490.png",
-    "question_text": "18 The straight line L is perpendicular to the straight line with equation 2 9 x y and passes through the point with coordinates (8, 11) Find an equation for L Give your answer in the form y mx c .............................................................. (Total for Question 18 is 4 marks)"
-  },
-  {
-    "id": "all::Nov2024_P2H__Q19__p20-20__m03__Coordinate-Geometry",
-    "source_id": "Nov2024_P2H__Q19__p20-20__m03__Coordinate-Geometry",
-    "bank": "all",
-    "unit": "Sequences, Functions & Graphs",
-    "topic": "Coordinate Geometry",
-    "topic_order": 30,
-    "paper": "Nov 2024 P2H",
-    "question": 19,
-    "marks": 3,
-    "filename": "Nov2024_P2H__Q19__p20-20__m03__Coordinate-Geometry.png",
-    "image": "assets/questions_all/all_q0491.png",
-    "question_text": "19 A curve has equation y x f There is only one minimum point on the curve. The coordinates of this minimum point are (5, 4) Write down the coordinates of the minimum point on the curve with equation (i) y x f 5 (............................... , ...............................) (1) (ii) y x 3f (............................... , ...............................) (1) (iii) y x f 7 (............................... , ...............................) (1) (Total for Question 19 is 3 marks)"
   },
   {
     "id": "all::Nov2025_P1H__Q20__p16-16__m03__Coordinate-Geometry",
@@ -6931,88 +6835,18 @@ window.QUESTION_DATA = [
     "question_text": "1 The point P has coordinates (3, 4) The point Q has coordinates (9, 16) M is the midpoint of the line PQ Find the coordinates of M (........................... , ...........................) (Total for Question 1 is 2 marks)"
   },
   {
-    "id": "all::Jan2021_P1H__Q08__p09-09__m03__Linear-Graphs-y-mx-c",
-    "source_id": "Jan2021_P1H__Q08__p09-09__m03__Linear-Graphs-y-mx-c",
+    "id": "all::Jun2022_P1HR__Q10__p11-11__m03__Linear-Graphs-y-mx-c",
+    "source_id": "Jun2022_P1HR__Q10__p11-11__m03__Linear-Graphs-y-mx-c",
     "bank": "all",
     "unit": "Sequences, Functions & Graphs",
     "topic": "Linear Graphs (y = mx + c)",
     "topic_order": 31,
-    "paper": "Jan 2021 P1H",
-    "question": 8,
+    "paper": "Jun 2022 P1HR",
+    "question": 10,
     "marks": 3,
-    "filename": "Jan2021_P1H__Q08__p09-09__m03__Linear-Graphs-y-mx-c.png",
-    "image": "assets/questions_all/all_q0496.png",
-    "question_text": "8 The region, shown shaded in the diagram, is a path. Diagram NOT accurately drawn 2 m O 7 m The boundary of the path is formed by two semicircles, with the same centre O, and two straight lines. The inner semicircle has a radius of 7 metres. The path has a width of 2 metres. Work out the perimeter of the path. Give your answer correct to one decimal place. ...................................................... m (Total for Question 8 is 3 marks)"
-  },
-  {
-    "id": "all::Jan2021_P1HR__Q08__p09-09__m05__Linear-Graphs-y-mx-c",
-    "source_id": "Jan2021_P1HR__Q08__p09-09__m05__Linear-Graphs-y-mx-c",
-    "bank": "all",
-    "unit": "Sequences, Functions & Graphs",
-    "topic": "Linear Graphs (y = mx + c)",
-    "topic_order": 31,
-    "paper": "Jan 2021 P1HR",
-    "question": 8,
-    "marks": 5,
-    "filename": "Jan2021_P1HR__Q08__p09-09__m05__Linear-Graphs-y-mx-c.png",
-    "image": "assets/questions_all/all_q0497.png",
-    "question_text": "8 The diagram shows a regular pentagon, ABCDE, a regular hexagon, CFGHID, and a quadrilateral, EDIJ. A B F G H C D I x J E Diagram NOT accurately drawn AEJ and HIJ are straight lines. Work out the size of the angle marked x. Show your working clearly. ......................................................\u00b0 (Total for Question 8 is 5 marks)"
-  },
-  {
-    "id": "all::Jan2021_P2H__Q19__p22-22__m05__Linear-Graphs-y-mx-c",
-    "source_id": "Jan2021_P2H__Q19__p22-22__m05__Linear-Graphs-y-mx-c",
-    "bank": "all",
-    "unit": "Sequences, Functions & Graphs",
-    "topic": "Linear Graphs (y = mx + c)",
-    "topic_order": 31,
-    "paper": "Jan 2021 P2H",
-    "question": 19,
-    "marks": 5,
-    "filename": "Jan2021_P2H__Q19__p22-22__m05__Linear-Graphs-y-mx-c.png",
-    "image": "assets/questions_all/all_q0499.png",
-    "question_text": "19 A particle P is moving along a straight line. The fixed point O lies on this line. At time t seconds where t \uf085 0, the displacement, s metres, of P from O is given by s = t3 + 5t2 - 8t + 10 Find the displacement of P from O when P is instantaneously at rest. Give your answer in the form a b where a and b are integers. ...................................................... metres (Total for Question 19 is 5 marks)"
-  },
-  {
-    "id": "all::Jun2022_P2HR__Q12__p14-14__m03__Linear-Graphs-y-mx-c",
-    "source_id": "Jun2022_P2HR__Q12__p14-14__m03__Linear-Graphs-y-mx-c",
-    "bank": "all",
-    "unit": "Sequences, Functions & Graphs",
-    "topic": "Linear Graphs (y = mx + c)",
-    "topic_order": 31,
-    "paper": "Jun 2022 P2HR",
-    "question": 12,
-    "marks": 3,
-    "filename": "Jun2022_P2HR__Q12__p14-14__m03__Linear-Graphs-y-mx-c.png",
-    "image": "assets/questions_all/all_q0501.png",
-    "question_text": "12 Diagram NOT accurately drawn A (2x + 9) cm 2x cm 1.2 cm 6 cm D E B C ACE and BCD are straight lines. AB is parallel to DE Work out the value of x x = ....................................................... (Total for Question 12 is 3 marks)"
-  },
-  {
-    "id": "all::Jun2023_P2H__Q11__p11-11__m03__Linear-Graphs-y-mx-c",
-    "source_id": "Jun2023_P2H__Q11__p11-11__m03__Linear-Graphs-y-mx-c",
-    "bank": "all",
-    "unit": "Sequences, Functions & Graphs",
-    "topic": "Linear Graphs (y = mx + c)",
-    "topic_order": 31,
-    "paper": "Jun 2023 P2H",
-    "question": 11,
-    "marks": 3,
-    "filename": "Jun2023_P2H__Q11__p11-11__m03__Linear-Graphs-y-mx-c.png",
-    "image": "assets/questions_all/all_q0503.png",
-    "question_text": "11 Here is a 9-sided regular polygon ABCDEFGHJ, with centre O G J A B C D E F H O K x\u00b0 Diagram NOT accurately drawn ODK and FEK are straight lines. Work out the value of x x = ....................................................... (Total for Question 11 is 3 marks)"
-  },
-  {
-    "id": "all::Jun2023_P2HR__Q18__p18-18__m03__Linear-Graphs-y-mx-c",
-    "source_id": "Jun2023_P2HR__Q18__p18-18__m03__Linear-Graphs-y-mx-c",
-    "bank": "all",
-    "unit": "Sequences, Functions & Graphs",
-    "topic": "Linear Graphs (y = mx + c)",
-    "topic_order": 31,
-    "paper": "Jun 2023 P2HR",
-    "question": 18,
-    "marks": 3,
-    "filename": "Jun2023_P2HR__Q18__p18-18__m03__Linear-Graphs-y-mx-c.png",
-    "image": "assets/questions_all/all_q0504.png",
-    "question_text": "18 A B C D P 16 cm 14 cm 12 cm Diagram NOT accurately drawn A, B, C and D are points on a circle. ABP and DCP are straight lines. AB = 16 cm BP = 14 cm CP = 12 cm Work out the length of DC ...................................................... cm (Total for Question 18 is 3 marks)"
+    "filename": "Jun2022_P1HR__Q10__p11-11__m03__Linear-Graphs-y-mx-c.png",
+    "image": "assets/questions_all/all_q0459.png",
+    "question_text": "10 Line L is drawn on the grid. L x y 6 5 4 3 2 1 1 2 3 4 5 6 O -1 -2 -3 -4 -3 -2 -1 Find an equation for L Give your answer in the form y = mx + c ....................................................... (Total for Question 10 is 3 marks)"
   },
   {
     "id": "all::Jun2024_P2H__Q18__p18-18__m02__Linear-Graphs-y-mx-c",
@@ -7029,34 +6863,6 @@ window.QUESTION_DATA = [
     "question_text": "18 The straight line P has equation 5y + 2x = 7 Find the gradient of a straight line that is perpendicular to P ...................................................... (Total for Question 18 is 2 marks) c"
   },
   {
-    "id": "all::Jun2024_P2HR__Q12__p14-14__m04__Linear-Graphs-y-mx-c",
-    "source_id": "Jun2024_P2HR__Q12__p14-14__m04__Linear-Graphs-y-mx-c",
-    "bank": "all",
-    "unit": "Sequences, Functions & Graphs",
-    "topic": "Linear Graphs (y = mx + c)",
-    "topic_order": 31,
-    "paper": "Jun 2024 P2HR",
-    "question": 12,
-    "marks": 4,
-    "filename": "Jun2024_P2HR__Q12__p14-14__m04__Linear-Graphs-y-mx-c.png",
-    "image": "assets/questions_all/all_q0507.png",
-    "question_text": "12 10 cm Diagram NOT accurately drawn E D C A B In the diagram, ABC and AED are straight lines. BE is parallel to CD AE = 10 cm and CD = 1.5 \u00d7 BE (a) Work out the length of ED \b .............................................................. cm (2) AB = (2x + 5) cm and BC = (3x - 5) cm (b) Work out the value of x x = .............................................................. (2) (Total for Question 12 is 4 marks)"
-  },
-  {
-    "id": "all::Jun2024_P2HR__Q15__p17-17__m03__Linear-Graphs-y-mx-c",
-    "source_id": "Jun2024_P2HR__Q15__p17-17__m03__Linear-Graphs-y-mx-c",
-    "bank": "all",
-    "unit": "Sequences, Functions & Graphs",
-    "topic": "Linear Graphs (y = mx + c)",
-    "topic_order": 31,
-    "paper": "Jun 2024 P2HR",
-    "question": 15,
-    "marks": 3,
-    "filename": "Jun2024_P2HR__Q15__p17-17__m03__Linear-Graphs-y-mx-c.png",
-    "image": "assets/questions_all/all_q0508.png",
-    "question_text": "15 D E C B A 3 cm 6.5 cm Diagram NOT accurately drawn AB, BC and CD are three sides of a regular pentagon and CDE is a triangle. BCE is a straight line. CD = 6.5 cm CE = 3 cm Work out the area of triangle CDE Give your answer correct to 3 significant figures. \b .............................................................. cm2 (Total for Question 15 is 3 marks)"
-  },
-  {
     "id": "all::Jun2025_P2HR__Q10__p10-10__m02__Linear-Graphs-y-mx-c",
     "source_id": "Jun2025_P2HR__Q10__p10-10__m02__Linear-Graphs-y-mx-c",
     "bank": "all",
@@ -7071,102 +6877,60 @@ window.QUESTION_DATA = [
     "question_text": "10 A straight line, L, is parallel to the line with equation y = 2 - 5x The line L passes through the point (0, 6) Find an equation of the line L ............................................................. (Total for Question 10 is 2 marks)"
   },
   {
-    "id": "all::Jun2025_P2HR__Q11__p11-11__m05__Linear-Graphs-y-mx-c",
-    "source_id": "Jun2025_P2HR__Q11__p11-11__m05__Linear-Graphs-y-mx-c",
+    "id": "all::May2024_P1HR__Q09__p10-10__m03__Linear-Graphs-y-mx-c",
+    "source_id": "May2024_P1HR__Q09__p10-10__m03__Linear-Graphs-y-mx-c",
     "bank": "all",
     "unit": "Sequences, Functions & Graphs",
     "topic": "Linear Graphs (y = mx + c)",
     "topic_order": 31,
-    "paper": "Jun 2025 P2HR",
-    "question": 11,
-    "marks": 5,
-    "filename": "Jun2025_P2HR__Q11__p11-11__m05__Linear-Graphs-y-mx-c.png",
-    "image": "assets/questions_all/all_q0510.png",
-    "question_text": "11 The diagram shows two triangles, ADE and CDB D C B A E Diagram NOT accurately drawn ABD is a straight line. AE = 28 cm ED = 45 cm AB = 21 cm CD = 35 cm angle AED = angle CBD = 90\u00b0 Work out the area of triangle CDB Give your answer correct to 3 significant figures. ............................................................ cm2 (Total for Question 11 is 5 marks)"
-  },
-  {
-    "id": "all::May2021_P2H__Q05__p06-06__m05__Linear-Graphs-y-mx-c",
-    "source_id": "May2021_P2H__Q05__p06-06__m05__Linear-Graphs-y-mx-c",
-    "bank": "all",
-    "unit": "Sequences, Functions & Graphs",
-    "topic": "Linear Graphs (y = mx + c)",
-    "topic_order": 31,
-    "paper": "May 2021 P2H",
-    "question": 5,
-    "marks": 5,
-    "filename": "May2021_P2H__Q05__p06-06__m05__Linear-Graphs-y-mx-c.png",
-    "image": "assets/questions_all/all_q0511.png",
-    "question_text": "5 A F D I E B G C H J 44\u00b0 Diagram NOT accurately drawn ABCD and FGHI are parallel straight lines. EBGJ and ECH are straight lines. BE = CE Angle BEC = 44\u00b0 Work out the size of angle JGH. Give a reason for each stage of your working. ....................................................... \u00b0 (Total for Question 5 is 5 marks)"
-  },
-  {
-    "id": "all::Nov2021_P2H__Q11__p13-13__m03__Linear-Graphs-y-mx-c",
-    "source_id": "Nov2021_P2H__Q11__p13-13__m03__Linear-Graphs-y-mx-c",
-    "bank": "all",
-    "unit": "Sequences, Functions & Graphs",
-    "topic": "Linear Graphs (y = mx + c)",
-    "topic_order": 31,
-    "paper": "Nov 2021 P2H",
-    "question": 11,
+    "paper": "May 2024 P1HR",
+    "question": 9,
     "marks": 3,
-    "filename": "Nov2021_P2H__Q11__p13-13__m03__Linear-Graphs-y-mx-c.png",
-    "image": "assets/questions_all/all_q0512.png",
-    "question_text": "11 B A C 48\u00b0 D O F E Diagram NOT accurately drawn B, D, E and F are points on a circle, centre O. ABC is a tangent to the circle. ODC is a straight line. BOE is a diameter of the circle. Angle BCD = 48\u00b0 Find the size of angle DFE. .......................................................\u00b0 (Total for Question 11 is 3 marks)"
+    "filename": "May2024_P1HR__Q09__p10-10__m03__Linear-Graphs-y-mx-c.png",
+    "image": "assets/questions_all/all_q0478.png",
+    "question_text": "9 Line L is drawn on the grid. y x O -4 -1 L -2 -3 1 2 4 3 -1 -2 1 2 3 4 Find an equation for L Give your answer in the form y = mx + c \b .............................................................. (Total for Question 9 is 3 marks)"
   },
   {
-    "id": "all::Nov2023_P1H__Q05__p07-07__m03__Linear-Graphs-y-mx-c",
-    "source_id": "Nov2023_P1H__Q05__p07-07__m03__Linear-Graphs-y-mx-c",
+    "id": "all::MayNov2020_P1H__Q03__p05-05__m03__Linear-Graphs-y-mx-c",
+    "source_id": "MayNov2020_P1H__Q03__p05-05__m03__Linear-Graphs-y-mx-c",
     "bank": "all",
     "unit": "Sequences, Functions & Graphs",
     "topic": "Linear Graphs (y = mx + c)",
     "topic_order": 31,
-    "paper": "Nov 2023 P1H",
-    "question": 5,
+    "paper": "May-Nov 2020 P1H",
+    "question": 3,
     "marks": 3,
-    "filename": "Nov2023_P1H__Q05__p07-07__m03__Linear-Graphs-y-mx-c.png",
-    "image": "assets/questions_all/all_q0513.png",
-    "question_text": "5 The diagram shows a shaded shape made from three identical semicircles, X, Y and Z X Y Z C A B D E Diagram NOT accurately drawn ABCDE is a straight line. AC is the diameter of semicircle X and B is the centre of semicircle X BD is the diameter of semicircle Y and C is the centre of semicircle Y CE is the diameter of semicircle Z and D is the centre of semicircle Z AC = BD = CE = 20 cm Work out the perimeter of the shaded shape. Give your answer correct to the nearest whole number. .............................................................. cm (Total for Question 5 is 3 marks)"
+    "filename": "MayNov2020_P1H__Q03__p05-05__m03__Linear-Graphs-y-mx-c.png",
+    "image": "assets/questions_all/all_q0529.png",
+    "question_text": "3 On the grid, draw the graph of y = 7 - 4x for values of x from -2 to 3 14 12 4 2 O 1 2 3 -2 -1 y x 6 8 16 10 -2 -4 -6 -8 (Total for Question 3 is 3 marks)"
   },
   {
-    "id": "all::Nov2023_P2H__Q02__p04-04__m04__Linear-Graphs-y-mx-c",
-    "source_id": "Nov2023_P2H__Q02__p04-04__m04__Linear-Graphs-y-mx-c",
+    "id": "all::Nov2023_P2H__Q09__p09-09__m02__Linear-Graphs-y-mx-c",
+    "source_id": "Nov2023_P2H__Q09__p09-09__m02__Linear-Graphs-y-mx-c",
     "bank": "all",
     "unit": "Sequences, Functions & Graphs",
     "topic": "Linear Graphs (y = mx + c)",
     "topic_order": 31,
     "paper": "Nov 2023 P2H",
-    "question": 2,
-    "marks": 4,
-    "filename": "Nov2023_P2H__Q02__p04-04__m04__Linear-Graphs-y-mx-c.png",
-    "image": "assets/questions_all/all_q0514.png",
-    "question_text": "2 The diagram shows triangle ABC and triangle ECD B w cm 14 cm 5 cm 10 cm 8 cm D C A E Diagram NOT accurately drawn ACD and EBC are straight lines. AB = 10 cm AC = 8 cm EB = 5 cm CD = 14 cm ED = w cm Work out the value of w Give your answer correct to one decimal place. w = .............................................................. (Total for Question 2 is 4 marks)"
+    "question": 9,
+    "marks": 2,
+    "filename": "Nov2023_P2H__Q09__p09-09__m02__Linear-Graphs-y-mx-c.png",
+    "image": "assets/questions_all/all_q0487.png",
+    "question_text": "9 A straight line passes through the points with coordinates (0, -3) and (2, 0) Find an equation of the line. ...................................................................................... (Total for Question 9 is 2 marks)"
   },
   {
-    "id": "all::Nov2024_P2H__Q11__p12-12__m05__Linear-Graphs-y-mx-c",
-    "source_id": "Nov2024_P2H__Q11__p12-12__m05__Linear-Graphs-y-mx-c",
+    "id": "all::Nov2024_P2H__Q18__p19-19__m04__Linear-Graphs-y-mx-c",
+    "source_id": "Nov2024_P2H__Q18__p19-19__m04__Linear-Graphs-y-mx-c",
     "bank": "all",
     "unit": "Sequences, Functions & Graphs",
     "topic": "Linear Graphs (y = mx + c)",
     "topic_order": 31,
     "paper": "Nov 2024 P2H",
-    "question": 11,
-    "marks": 5,
-    "filename": "Nov2024_P2H__Q11__p12-12__m05__Linear-Graphs-y-mx-c.png",
-    "image": "assets/questions_all/all_q0516.png",
-    "question_text": "11 Diagram NOT accurately drawn A B C D E I H G F ABCDE is a regular pentagon. DEFGHI is a regular hexagon. AF is a straight line. Work out the size of angle EAF ..............................................................\u00b0 (Total for Question 11 is 5 marks)"
-  },
-  {
-    "id": "all::Nov2025_P2H__Q06__p07-07__m05__Linear-Graphs-y-mx-c",
-    "source_id": "Nov2025_P2H__Q06__p07-07__m05__Linear-Graphs-y-mx-c",
-    "bank": "all",
-    "unit": "Sequences, Functions & Graphs",
-    "topic": "Linear Graphs (y = mx + c)",
-    "topic_order": 31,
-    "paper": "Nov 2025 P2H",
-    "question": 6,
-    "marks": 5,
-    "filename": "Nov2025_P2H__Q06__p07-07__m05__Linear-Graphs-y-mx-c.png",
-    "image": "assets/questions_all/all_q0518.png",
-    "question_text": "6 A large circle with centre O contains 3 identical small circles. Each circle touches two other circles. A B O Diagram NOT accurately drawn A, O and B are the centres of the small circles. AOB is a straight line. The circumference of the large circle is 160 cm Work out the area of one small circle. Give your answer correct to 3 significant figures. ...................................................... cm 2 (Total for Question 6 is 5 marks)"
+    "question": 18,
+    "marks": 4,
+    "filename": "Nov2024_P2H__Q18__p19-19__m04__Linear-Graphs-y-mx-c.png",
+    "image": "assets/questions_all/all_q0490.png",
+    "question_text": "18 The straight line L is perpendicular to the straight line with equation 2 9 x y and passes through the point with coordinates (8, 11) Find an equation for L Give your answer in the form y mx c .............................................................. (Total for Question 18 is 4 marks)"
   },
   {
     "id": "all::Jan2020_P1H__Q20__p24-24__m04__Graphs-of-Functions",
@@ -7267,6 +7031,20 @@ window.QUESTION_DATA = [
     "question_text": "23 The diagram shows a sketch of the graph of y = cos x 2 \uf8eb \uf8ed\uf8ec \uf8f6 \uf8f8\uf8f7 \u00b0 y x B A y = cos x 2 \uf8eb \uf8ed\uf8ec \uf8f6 \uf8f8\uf8f7 \u00b0 O (i) Find the coordinates of the point A (............................ , ............................) (1) (ii) Find the coordinates of the point B (............................ , ............................) (1) (Total for Question 23 is 2 marks)"
   },
   {
+    "id": "all::Jun2022_P2HR__Q16__p18-19__m03__Graphs-of-Functions",
+    "source_id": "Jun2022_P2HR__Q16__p18-19__m03__Graphs-of-Functions",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Graphs of Functions",
+    "topic_order": 32,
+    "paper": "Jun 2022 P2HR",
+    "question": 16,
+    "marks": 3,
+    "filename": "Jun2022_P2HR__Q16__p18-19__m03__Graphs-of-Functions.png",
+    "image": "assets/questions_all/all_q0759.png",
+    "question_text": "16 Here are nine graphs. y y y y y y y y y Graph A Graph D Graph G Graph B Graph E Graph H Graph C Graph F Graph I O O O O O O O O O x x x x x x x x x Complete the table below with the letter of the graph that could represent each given equation. Write each answer on the dotted line. Equation Graph y = -2x + 3 ....................................................... y = - 1 x ....................................................... y = tan x\u00b0 ....................................................... y = (x + 1)(x - 1)(x - 2) ....................................................... (Total for Question 16 is 3 marks)"
+  },
+  {
     "id": "all::Jun2023_P2H__Q04__p06-06__m04__Graphs-of-Functions",
     "source_id": "Jun2023_P2H__Q04__p06-06__m04__Graphs-of-Functions",
     "bank": "all",
@@ -7279,6 +7057,34 @@ window.QUESTION_DATA = [
     "filename": "Jun2023_P2H__Q04__p06-06__m04__Graphs-of-Functions.png",
     "image": "assets/questions_all/all_q0524.png",
     "question_text": "4 (a) Complete the table of values for y = x2 - x - 4 x -3 -2 -1 0 1 2 3 y 2 -4 (2) (b) On the grid below, draw the graph of y = x2 - x - 4 for values of x from -3 to 3 y 10 9 8 7 6 5 4 3 2 1 O -1 -2 -3 -4 -5 x -3 -2 -1 1 2 3 (2) (Total for Question 4 is 4 marks)"
+  },
+  {
+    "id": "all::Jun2023_P2H__Q18__p18-18__m03__Graphs-of-Functions",
+    "source_id": "Jun2023_P2H__Q18__p18-18__m03__Graphs-of-Functions",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Graphs of Functions",
+    "topic_order": 32,
+    "paper": "Jun 2023 P2H",
+    "question": 18,
+    "marks": 3,
+    "filename": "Jun2023_P2H__Q18__p18-18__m03__Graphs-of-Functions.png",
+    "image": "assets/questions_all/all_q0792.png",
+    "question_text": "18 Here are 6 graphs. Graph A y x O Graph B y x O Graph C y x O Graph D y x O Graph E y x O Graph F y x O Complete the table below with the letter of the graph that could represent each given equation. Write your answers on the dotted lines. Equation Graph y = sin x ............................ y = - 3 x ............................ y = 4x3 - 5x ............................ (Total for Question 18 is 3 marks)"
+  },
+  {
+    "id": "all::Jun2023_P2HR__Q12__p13-13__m03__Graphs-of-Functions",
+    "source_id": "Jun2023_P2HR__Q12__p13-13__m03__Graphs-of-Functions",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Graphs of Functions",
+    "topic_order": 32,
+    "paper": "Jun 2023 P2HR",
+    "question": 12,
+    "marks": 3,
+    "filename": "Jun2023_P2HR__Q12__p13-13__m03__Graphs-of-Functions.png",
+    "image": "assets/questions_all/all_q0558.png",
+    "question_text": "12 Here are six graphs. Graph A O y x Graph B O y x Graph C O y x Graph D O y x Graph E O y x Graph F O y x Write down the letter of the graph of (a) y = 10 2x ...................................................... (1) (b) y = x - 3 + 3x2 - x3 ...................................................... (1) (c) y = - 3 x ...................................................... (1) (Total for Question 12 is 3 marks)"
   },
   {
     "id": "all::Jun2023_P2HR__Q26__p28-28__m03__Graphs-of-Functions",
@@ -7309,6 +7115,20 @@ window.QUESTION_DATA = [
     "question_text": "25 The diagram shows a sketch of the graph of y = 2sin (x + 60)\u00b0 O A B x y (i) Find the coordinates of the point A (........................... , ...........................) (1) (ii) Find the coordinates of the point B (........................... , ...........................) (1) (Total for Question 25 is 2 marks)"
   },
   {
+    "id": "all::Jun2024_P2HR__Q16__p18-18__m02__Graphs-of-Functions",
+    "source_id": "Jun2024_P2HR__Q16__p18-18__m02__Graphs-of-Functions",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Graphs of Functions",
+    "topic_order": 32,
+    "paper": "Jun 2024 P2HR",
+    "question": 16,
+    "marks": 2,
+    "filename": "Jun2024_P2HR__Q16__p18-18__m02__Graphs-of-Functions.png",
+    "image": "assets/questions_all/all_q0795.png",
+    "question_text": "16 Here are six graphs. A D B E O y x O y x O y x O y x O y x O y C F x Write down the letter of the graph that could have the equation (i) y x 1 \b .............................................................. (1) (ii) y = sin x\u00b0 \b .............................................................. (1) (Total for Question 16 is 2 marks)"
+  },
+  {
     "id": "all::Jun2025_P1H__Q10__p11-11__m03__Graphs-of-Functions",
     "source_id": "Jun2025_P1H__Q10__p11-11__m03__Graphs-of-Functions",
     "bank": "all",
@@ -7323,18 +7143,18 @@ window.QUESTION_DATA = [
     "question_text": "10 (a) Complete the table of values for y = x 3 + 2x + 3 x -3 -2 -1 0 1 2 3 y -9 0 3 6 36 (1) (b) On the grid, draw the graph of y = x 3 + 2x + 3 for -3 < x < 3 -10 -20 -30 -2 -3 -1 2 1 3 10 O 20 30 40 y x (2) (Total for Question 10 is 3 marks)"
   },
   {
-    "id": "all::Jun2025_P2H__Q17__p16-16__m06__Graphs-of-Functions",
-    "source_id": "Jun2025_P2H__Q17__p16-16__m06__Graphs-of-Functions",
+    "id": "all::Jun2025_P2H__Q14__p14-14__m02__Graphs-of-Functions",
+    "source_id": "Jun2025_P2H__Q14__p14-14__m02__Graphs-of-Functions",
     "bank": "all",
     "unit": "Sequences, Functions & Graphs",
     "topic": "Graphs of Functions",
     "topic_order": 32,
     "paper": "Jun 2025 P2H",
-    "question": 17,
-    "marks": 6,
-    "filename": "Jun2025_P2H__Q17__p16-16__m06__Graphs-of-Functions.png",
-    "image": "assets/questions_all/all_q0526.png",
-    "question_text": "17 y x x x 4 5 2 3 2 (a) Find d d y x d d y x = ............................................................. (2) (b) Find the coordinates of the turning points on the graph with equation y x x x 4 5 2 3 2 Show clear algebraic working. ............................................................................................. (4) (Total for Question 17 is 6 marks)"
+    "question": 14,
+    "marks": 2,
+    "filename": "Jun2025_P2H__Q14__p14-14__m02__Graphs-of-Functions.png",
+    "image": "assets/questions_all/all_q0394.png",
+    "question_text": "14 Here are five graphs. E B A O y O y O O O y y x y x x x x D C (a) Write down the letter of the graph that could have the equation y x 5 2 ............................... (1) (b) Write down the letter of the graph that could have the equation y x = 2 3 ............................... (1) (Total for Question 14 is 2 marks)"
   },
   {
     "id": "all::Jun2025_P2HR__Q25__p25-25__m03__Graphs-of-Functions",
@@ -7363,20 +7183,6 @@ window.QUESTION_DATA = [
     "filename": "May2021_P2H__Q15__p16-17__m04__Graphs-of-Functions.png",
     "image": "assets/questions_all/all_q0528.png",
     "question_text": "15 (a) Complete the table of values for y x x = + 1 4 2 ( ) x 0.25 0.5 1 2 4 8 y 16.25 8.5 (2) (b) On the grid, draw the graph of y x x = + 1 4 2 ( ) for 0.25 < x < 8 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 O 1 2 3 4 5 6 7 8 y x (2) (Total for Question 15 is 4 marks)"
-  },
-  {
-    "id": "all::MayNov2020_P1H__Q03__p05-05__m03__Graphs-of-Functions",
-    "source_id": "MayNov2020_P1H__Q03__p05-05__m03__Graphs-of-Functions",
-    "bank": "all",
-    "unit": "Sequences, Functions & Graphs",
-    "topic": "Graphs of Functions",
-    "topic_order": 32,
-    "paper": "May-Nov 2020 P1H",
-    "question": 3,
-    "marks": 3,
-    "filename": "MayNov2020_P1H__Q03__p05-05__m03__Graphs-of-Functions.png",
-    "image": "assets/questions_all/all_q0529.png",
-    "question_text": "3 On the grid, draw the graph of y = 7 - 4x for values of x from -2 to 3 14 12 4 2 O 1 2 3 -2 -1 y x 6 8 16 10 -2 -4 -6 -8 (Total for Question 3 is 3 marks)"
   },
   {
     "id": "all::Nov2023_P1H__Q12__p14-15__m05__Graphs-of-Functions",
@@ -7447,6 +7253,20 @@ window.QUESTION_DATA = [
     "filename": "Jan2020_P1HR__Q18__p18-18__m07__Estimating-Gradients.png",
     "image": "assets/questions_all/all_q0533.png",
     "question_text": "18 The diagram shows the graph of y = f (x) for -4 < x < 12 P -4 -2 O 2 4 6 8 10 12 2 4 -2 The point P on the curve has x coordinate 2 (a) (i) Use the graph to find an estimate for the gradient of the curve at P. ...................................................... (3) (ii) Hence find an equation of the tangent to the curve at P. Give your answer in the form y = mx + c ...................................................... (2) The equation f (x) = k has exactly two different solutions for -4 < x < 12 (b) Use the graph to find the two possible values of k. ............................ , ............................ (2) (Total for Question 18 is 7 marks)"
+  },
+  {
+    "id": "all::Jan2022_P2HR__Q17__p22-22__m03__Estimating-Gradients",
+    "source_id": "Jan2022_P2HR__Q17__p22-22__m03__Estimating-Gradients",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Estimating Gradients",
+    "topic_order": 33,
+    "paper": "Jan 2022 P2HR",
+    "question": 17,
+    "marks": 3,
+    "filename": "Jan2022_P2HR__Q17__p22-22__m03__Estimating-Gradients.png",
+    "image": "assets/questions_all/all_q0574.png",
+    "question_text": "17 Part of the curve with equation y = f (x) is shown on the grid. -2 -3 -2 -1 -1 1 1 O 2 2 3 3 4 4 5 6 x y Find an estimate for the gradient of the curve at the point where x = 2 Show your working clearly. ....................................................... (Total for Question 17 is 3 marks)"
   },
   {
     "id": "all::Jan2020_P1H__Q10__p12-12__m03__Graphing-Inequalities",
@@ -7757,20 +7577,6 @@ window.QUESTION_DATA = [
     "question_text": "22 The point A with coordinates (-3, 2) lies on the straight line with equation y = f(x) (a) Find the coordinates of the image of the point A on the straight line with equation (i) y = f(x) - 3 (............................ , ............................) (1) (ii) y = f x 2 \uf8eb \uf8ed\uf8ec \uf8f6 \uf8f8\uf8f7 (............................ , ............................) (1) Here is a sketch of part of the curve with equation y = g(x) y y = g(x) ( p, q) O B x The point B with coordinates ( p, q) lies on the curve. (b) Find the coordinates of the image of the point B on the curve with equation y = -g(x - c) where c is a constant. (............................ , ............................) (2) (Total for Question 22 is 4 marks)"
   },
   {
-    "id": "all::Jun2023_P2HR__Q12__p13-13__m03__Transformations-of-Graphs",
-    "source_id": "Jun2023_P2HR__Q12__p13-13__m03__Transformations-of-Graphs",
-    "bank": "all",
-    "unit": "Sequences, Functions & Graphs",
-    "topic": "Transformations of Graphs",
-    "topic_order": 36,
-    "paper": "Jun 2023 P2HR",
-    "question": 12,
-    "marks": 3,
-    "filename": "Jun2023_P2HR__Q12__p13-13__m03__Transformations-of-Graphs.png",
-    "image": "assets/questions_all/all_q0558.png",
-    "question_text": "12 Here are six graphs. Graph A O y x Graph B O y x Graph C O y x Graph D O y x Graph E O y x Graph F O y x Write down the letter of the graph of (a) y = 10 2x ...................................................... (1) (b) y = x - 3 + 3x2 - x3 ...................................................... (1) (c) y = - 3 x ...................................................... (1) (Total for Question 12 is 3 marks)"
-  },
-  {
     "id": "all::Jun2024_P2HR__Q23__p25-25__m02__Transformations-of-Graphs",
     "source_id": "Jun2024_P2HR__Q23__p25-25__m02__Transformations-of-Graphs",
     "bank": "all",
@@ -7911,6 +7717,20 @@ window.QUESTION_DATA = [
     "question_text": "24 The curve with equation f(x) = 5 9 2 2 x x + + is transformed to the curve with equation g(x) = 5 4 9 4 8 2 x x by the translation a b \u001b\u001a (a) Write down the value of a and the value of b a = .............................................................. b = .............................................................. (2) The graph of y p x q cos \uf06ffor 0 360 < < x is drawn on the grid below. y x 90 180 270 360 -1 -2 -3 -4 1 O 2 3 4 Given that p > 0 and 0 < q < 360 (b) find the value of p and the value of q p = .............................................................. q = .............................................................. (2) (Total for Question 24 is 4 marks)"
   },
   {
+    "id": "all::Nov2024_P2H__Q19__p20-20__m03__Transformations-of-Graphs",
+    "source_id": "Nov2024_P2H__Q19__p20-20__m03__Transformations-of-Graphs",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Transformations of Graphs",
+    "topic_order": 36,
+    "paper": "Nov 2024 P2H",
+    "question": 19,
+    "marks": 3,
+    "filename": "Nov2024_P2H__Q19__p20-20__m03__Transformations-of-Graphs.png",
+    "image": "assets/questions_all/all_q0491.png",
+    "question_text": "19 A curve has equation y x f There is only one minimum point on the curve. The coordinates of this minimum point are (5, 4) Write down the coordinates of the minimum point on the curve with equation (i) y x f 5 (............................... , ...............................) (1) (ii) y x 3f (............................... , ...............................) (1) (iii) y x f 7 (............................... , ...............................) (1) (Total for Question 19 is 3 marks)"
+  },
+  {
     "id": "all::Nov2025_P1H__Q24__p20-20__m03__Transformations-of-Graphs",
     "source_id": "Nov2025_P1H__Q24__p20-20__m03__Transformations-of-Graphs",
     "bank": "all",
@@ -7981,18 +7801,18 @@ window.QUESTION_DATA = [
     "question_text": "20 A particle P is moving along a straight line. The fixed point O lies on the line. At time t seconds (t \uf085 0), the displacement of P from O is s metres where s = t 3 - 9t 2 + 33t - 6 Find the minimum speed of P. ...................................................... m/s (Total for Question 20 is 5 marks)"
   },
   {
-    "id": "all::Jan2021_P2HR__Q15__p14-14__m04__Differentiation",
-    "source_id": "Jan2021_P2HR__Q15__p14-14__m04__Differentiation",
+    "id": "all::Jan2021_P2H__Q19__p22-22__m05__Differentiation",
+    "source_id": "Jan2021_P2H__Q19__p22-22__m05__Differentiation",
     "bank": "all",
     "unit": "Sequences, Functions & Graphs",
     "topic": "Differentiation",
     "topic_order": 37,
-    "paper": "Jan 2021 P2HR",
-    "question": 15,
-    "marks": 4,
-    "filename": "Jan2021_P2HR__Q15__p14-14__m04__Differentiation.png",
-    "image": "assets/questions_all/all_q0572.png",
-    "question_text": "15 Prove algebraically that the product of any two odd numbers is always an odd number. (Total for Question 15 is 4 marks)"
+    "paper": "Jan 2021 P2H",
+    "question": 19,
+    "marks": 5,
+    "filename": "Jan2021_P2H__Q19__p22-22__m05__Differentiation.png",
+    "image": "assets/questions_all/all_q0499.png",
+    "question_text": "19 A particle P is moving along a straight line. The fixed point O lies on this line. At time t seconds where t \uf085 0, the displacement, s metres, of P from O is given by s = t3 + 5t2 - 8t + 10 Find the displacement of P from O when P is instantaneously at rest. Give your answer in the form a b where a and b are integers. ...................................................... metres (Total for Question 19 is 5 marks)"
   },
   {
     "id": "all::Jan2022_P1H__Q24__p27-27__m06__Differentiation",
@@ -8037,20 +7857,6 @@ window.QUESTION_DATA = [
     "question_text": "24 A particle P moves along a straight line that passes through the fixed point O The displacement, x metres, of P from O at time t seconds, where t \uf085 0 , is given by x = 4t3 - 27t + 8 The direction of motion of P reverses when P is at the point A on the line. The acceleration of P at the instant when P is at A is a m / s2 Find the value of a a = ....................................................... (Total for Question 24 is 5 marks)"
   },
   {
-    "id": "all::Jan2022_P2HR__Q17__p22-22__m03__Differentiation",
-    "source_id": "Jan2022_P2HR__Q17__p22-22__m03__Differentiation",
-    "bank": "all",
-    "unit": "Sequences, Functions & Graphs",
-    "topic": "Differentiation",
-    "topic_order": 37,
-    "paper": "Jan 2022 P2HR",
-    "question": 17,
-    "marks": 3,
-    "filename": "Jan2022_P2HR__Q17__p22-22__m03__Differentiation.png",
-    "image": "assets/questions_all/all_q0574.png",
-    "question_text": "17 Part of the curve with equation y = f (x) is shown on the grid. -2 -3 -2 -1 -1 1 1 O 2 2 3 3 4 4 5 6 x y Find an estimate for the gradient of the curve at the point where x = 2 Show your working clearly. ....................................................... (Total for Question 17 is 3 marks)"
-  },
-  {
     "id": "all::Jun2022_P1H__Q17__p18-18__m05__Differentiation",
     "source_id": "Jun2022_P1H__Q17__p18-18__m05__Differentiation",
     "bank": "all",
@@ -8077,6 +7883,20 @@ window.QUESTION_DATA = [
     "filename": "Jun2022_P1HR__Q22__p24-25__m07__Differentiation.png",
     "image": "assets/questions_all/all_q0534.png",
     "question_text": "22 The diagram shows a sketch of part of the curve with equation y = x 2 - p x where p is a positive constant. Diagram NOT accurately drawn y x T O For all values of p, the curve has exactly one turning point and this turning point is a minimum shown as the point T in the sketch. For the curve where the x coordinate of T is -3 (a) find the value of p p = ....................................................... (4) The line with equation y = k is a tangent to the curve with equation y = x 2 - 16 x (b) Find the value of k k = ....................................................... (3) (Total for Question 22 is 7 marks)"
+  },
+  {
+    "id": "all::Jun2025_P2H__Q17__p16-16__m06__Differentiation",
+    "source_id": "Jun2025_P2H__Q17__p16-16__m06__Differentiation",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Differentiation",
+    "topic_order": 37,
+    "paper": "Jun 2025 P2H",
+    "question": 17,
+    "marks": 6,
+    "filename": "Jun2025_P2H__Q17__p16-16__m06__Differentiation.png",
+    "image": "assets/questions_all/all_q0526.png",
+    "question_text": "17 y x x x 4 5 2 3 2 (a) Find d d y x d d y x = ............................................................. (2) (b) Find the coordinates of the turning points on the graph with equation y x x x 4 5 2 3 2 Show clear algebraic working. ............................................................................................. (4) (Total for Question 17 is 6 marks)"
   },
   {
     "id": "all::Jun2025_P2HR__Q22__p22-22__m05__Differentiation",
@@ -8107,6 +7927,20 @@ window.QUESTION_DATA = [
     "question_text": "21 The point A is the only stationary point on the curve with equation y kx x = + 2 16 where k is a constant. Given that the coordinates of A are 2 3 , a \uf8eb \uf8ed\uf8ec \uf8f6 \uf8f8\uf8f7 find the value of a. Show your working clearly. a = ....................................................... (Total for Question 21 is 5 marks)"
   },
   {
+    "id": "all::May2023_P1H__Q11__p13-13__m06__Differentiation",
+    "source_id": "May2023_P1H__Q11__p13-13__m06__Differentiation",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Differentiation",
+    "topic_order": 37,
+    "paper": "May 2023 P1H",
+    "question": 11,
+    "marks": 6,
+    "filename": "May2023_P1H__Q11__p13-13__m06__Differentiation.png",
+    "image": "assets/questions_all/all_q0475.png",
+    "question_text": "11 The curve C has equation y = 4x 3 + x 2 - 20x (a) Find d d y x d d y x = ....................................................... (2) (b) Find the x coordinates of the points on C where the gradient is 4 Show clear algebraic working. ....................................................... (4) (Total for Question 11 is 6 marks)"
+  },
+  {
     "id": "all::May2023_P1HR__Q21__p21-21__m06__Differentiation",
     "source_id": "May2023_P1HR__Q21__p21-21__m06__Differentiation",
     "bank": "all",
@@ -8119,6 +7953,20 @@ window.QUESTION_DATA = [
     "filename": "May2023_P1HR__Q21__p21-21__m06__Differentiation.png",
     "image": "assets/questions_all/all_q0431.png",
     "question_text": "21 The curve T has equation y = x3 - 2x2 - 9x + 15 (a) Find d d y x d d y x = ...................................................... (2) (b) Find the range of values of x for which T has a positive gradient. Give your values correct to 3 significant figures. Show your working clearly. ............................................................................................................ (4) (Total for Question 21 is 6 marks)"
+  },
+  {
+    "id": "all::May2024_P1H__Q18__p19-19__m05__Differentiation",
+    "source_id": "May2024_P1H__Q18__p19-19__m05__Differentiation",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Differentiation",
+    "topic_order": 37,
+    "paper": "May 2024 P1H",
+    "question": 18,
+    "marks": 5,
+    "filename": "May2024_P1H__Q18__p19-19__m05__Differentiation.png",
+    "image": "assets/questions_all/all_q0477.png",
+    "question_text": "18 A curve C has equation y = x 3 \u2012 40x + 1 Find the coordinates of both the points on C at which the gradient is 8 ( ............................ , ............................ ) ( ............................ , ............................ ) (Total for Question 18 is 5 marks)"
   },
   {
     "id": "all::May2024_P1HR__Q19__p19-19__m05__Differentiation",
@@ -8161,6 +8009,34 @@ window.QUESTION_DATA = [
     "filename": "MayNov2020_P1HR__Q13__p13-13__m06__Differentiation.png",
     "image": "assets/questions_all/all_q0579.png",
     "question_text": "13 The curve C has equation y = 5x3 - x2 - 6x + 4 (a) Find d d y x d d y x = ....................................................... (2) There are two points on the curve C at which the gradient of the curve is 2 (b) Find the x coordinate of each of these two points. Show clear algebraic working. ....................................................... (4) (Total for Question 13 is 6 marks)"
+  },
+  {
+    "id": "all::Nov2023_P1H__Q16__p19-19__m04__Differentiation",
+    "source_id": "Nov2023_P1H__Q16__p19-19__m04__Differentiation",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Differentiation",
+    "topic_order": 37,
+    "paper": "Nov 2023 P1H",
+    "question": 16,
+    "marks": 4,
+    "filename": "Nov2023_P1H__Q16__p19-19__m04__Differentiation.png",
+    "image": "assets/questions_all/all_q0485.png",
+    "question_text": "16 A curve has equation y x x 4 8 5 3 Find the x coordinates of the two points on the curve where the gradient is 1 3 .............................................................. (Total for Question 16 is 4 marks)"
+  },
+  {
+    "id": "all::Nov2023_P2H__Q18__p16-16__m04__Differentiation",
+    "source_id": "Nov2023_P2H__Q18__p16-16__m04__Differentiation",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Differentiation",
+    "topic_order": 37,
+    "paper": "Nov 2023 P2H",
+    "question": 18,
+    "marks": 4,
+    "filename": "Nov2023_P2H__Q18__p16-16__m04__Differentiation.png",
+    "image": "assets/questions_all/all_q0178.png",
+    "question_text": "18 A particle is moving along a straight line that passes through the fixed point O The displacement, s metres, of the particle from O at time t seconds is given by s t t t 2 5 6 5 3 2 Find the value of t when the acceleration of the particle is 5 m/s2 t = .............................................................. (Total for Question 18 is 4 marks)"
   },
   {
     "id": "all::Nov2024_P1H__Q20__p21-21__m04__Differentiation",
@@ -8261,6 +8137,62 @@ window.QUESTION_DATA = [
     "question_text": "10 Change a speed of 50 metres per second to a speed in kilometres per hour. ....................................................... kilometres per hour (Total for Question 10 is 3 marks)"
   },
   {
+    "id": "all::Jan2020_P2HR__Q05__p06-06__m03__Standard-and-Compound-Units",
+    "source_id": "Jan2020_P2HR__Q05__p06-06__m03__Standard-and-Compound-Units",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Standard & Compound Units",
+    "topic_order": 38,
+    "paper": "Jan 2020 P2HR",
+    "question": 5,
+    "marks": 3,
+    "filename": "Jan2020_P2HR__Q05__p06-06__m03__Standard-and-Compound-Units.png",
+    "image": "assets/questions_all/all_q0744.png",
+    "question_text": "5 A plane takes 3 hours 36 minutes to fly from the Cayman Islands to New York. The plane flies a distance of 2470 km. Work out the average speed of the plane in km/h. Give your answer correct to the nearest whole number. ....................................................... km/h (Total for Question 5 is 3 marks)"
+  },
+  {
+    "id": "all::Jan2020_P2HR__Q09__p09-09__m03__Standard-and-Compound-Units",
+    "source_id": "Jan2020_P2HR__Q09__p09-09__m03__Standard-and-Compound-Units",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Standard & Compound Units",
+    "topic_order": 38,
+    "paper": "Jan 2020 P2HR",
+    "question": 9,
+    "marks": 3,
+    "filename": "Jan2020_P2HR__Q09__p09-09__m03__Standard-and-Compound-Units.png",
+    "image": "assets/questions_all/all_q0806.png",
+    "question_text": "9 The diagram shows a box in the shape of a cuboid. Diagram NOT accurately drawn x cm 1.2 cm The box is put on a table. The face of the box in contact with the table has length 1.2 metres and width x metres. The force exerted by the box on the table is 27 newtons. The pressure on the table due to the box is 30 newtons/m2 pressure force area = Work out the value of x. x = ....................................................... (Total for Question 9 is 3 marks)"
+  },
+  {
+    "id": "all::Jan2021_P1HR__Q04__p05-05__m03__Standard-and-Compound-Units",
+    "source_id": "Jan2021_P1HR__Q04__p05-05__m03__Standard-and-Compound-Units",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Standard & Compound Units",
+    "topic_order": 38,
+    "paper": "Jan 2021 P1HR",
+    "question": 4,
+    "marks": 3,
+    "filename": "Jan2021_P1HR__Q04__p05-05__m03__Standard-and-Compound-Units.png",
+    "image": "assets/questions_all/all_q0747.png",
+    "question_text": "4 A train journey from Paris to Amsterdam took 3 hours 24 minutes. The total distance the train travelled was 433.5 km. Work out the average speed of the train. Give your answer in kilometres per hour. ...................................................... km/h (Total for Question 4 is 3 marks)"
+  },
+  {
+    "id": "all::Jan2021_P2H__Q01__p03-03__m03__Standard-and-Compound-Units",
+    "source_id": "Jan2021_P2H__Q01__p03-03__m03__Standard-and-Compound-Units",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Standard & Compound Units",
+    "topic_order": 38,
+    "paper": "Jan 2021 P2H",
+    "question": 1,
+    "marks": 3,
+    "filename": "Jan2021_P2H__Q01__p03-03__m03__Standard-and-Compound-Units.png",
+    "image": "assets/questions_all/all_q0748.png",
+    "question_text": "1 A train takes 6 hours 39 minutes to travel from New Delhi to Kanpur. The train travels a distance of 429 km. Work out the average speed of the train. Give your answer in km/h correct to one decimal place. ...................................................... km/h (Total for Question 1 is 3 marks)"
+  },
+  {
     "id": "all::Jan2022_P1HR__Q07__p09-09__m04__Standard-and-Compound-Units",
     "source_id": "Jan2022_P1HR__Q07__p09-09__m04__Standard-and-Compound-Units",
     "bank": "all",
@@ -8317,6 +8249,20 @@ window.QUESTION_DATA = [
     "question_text": "7 The diagram shows a solid cylinder made from iron. Diagram NOT accurately drawn 3.5 cm 18 cm The cylinder has diameter 18 cm and height 3.5 cm The mass of the cylinder is 7.04 kg Work out the density of the iron. Give your answer in g/cm 3 correct to 2 significant figures. ....................................................... g/cm 3 (Total for Question 7 is 3 marks)"
   },
   {
+    "id": "all::Jun2022_P2H__Q03__p05-05__m03__Standard-and-Compound-Units",
+    "source_id": "Jun2022_P2H__Q03__p05-05__m03__Standard-and-Compound-Units",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Standard & Compound Units",
+    "topic_order": 38,
+    "paper": "Jun 2022 P2H",
+    "question": 3,
+    "marks": 3,
+    "filename": "Jun2022_P2H__Q03__p05-05__m03__Standard-and-Compound-Units.png",
+    "image": "assets/questions_all/all_q0758.png",
+    "question_text": "3 An aeroplane travelled from New York City to Los Angeles. The aeroplane travelled a distance of 3980 kilometres in 5 hours 24 minutes. Work out the average speed of the aeroplane. Give your answer in kilometres per hour correct to the nearest whole number. ...................................................... kilometres per hour (Total for Question 3 is 3 marks) 1 6 10"
+  },
+  {
     "id": "all::Jun2022_P2H__Q07__p07-07__m03__Standard-and-Compound-Units",
     "source_id": "Jun2022_P2H__Q07__p07-07__m03__Standard-and-Compound-Units",
     "bank": "all",
@@ -8343,6 +8289,34 @@ window.QUESTION_DATA = [
     "filename": "Jun2023_P2H__Q09__p09-09__m03__Standard-and-Compound-Units.png",
     "image": "assets/questions_all/all_q0590.png",
     "question_text": "9 Change a speed of 27 kilometres per hour to a speed in metres per second. ....................................................... m / s (Total for Question 9 is 3 marks)"
+  },
+  {
+    "id": "all::Jun2023_P2HR__Q03__p05-05__m03__Standard-and-Compound-Units",
+    "source_id": "Jun2023_P2HR__Q03__p05-05__m03__Standard-and-Compound-Units",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Standard & Compound Units",
+    "topic_order": 38,
+    "paper": "Jun 2023 P2HR",
+    "question": 3,
+    "marks": 3,
+    "filename": "Jun2023_P2HR__Q03__p05-05__m03__Standard-and-Compound-Units.png",
+    "image": "assets/questions_all/all_q0762.png",
+    "question_text": "3 Anjali travels on the Eurostar train from Paris to Amsterdam. The distance the train travels between Paris and Amsterdam is 515 km. The time taken by the train to travel between Paris and Amsterdam is 3 hours 18 minutes. Work out the average speed of the train. Give your answer in km/h correct to the nearest whole number. ...................................................... km/h (Total for Question 3 is 3 marks)"
+  },
+  {
+    "id": "all::Jun2024_P2H__Q03__p05-05__m03__Standard-and-Compound-Units",
+    "source_id": "Jun2024_P2H__Q03__p05-05__m03__Standard-and-Compound-Units",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Standard & Compound Units",
+    "topic_order": 38,
+    "paper": "Jun 2024 P2H",
+    "question": 3,
+    "marks": 3,
+    "filename": "Jun2024_P2H__Q03__p05-05__m03__Standard-and-Compound-Units.png",
+    "image": "assets/questions_all/all_q0764.png",
+    "question_text": "3 A plane takes 9 hours 36 minutes to fly from New Delhi to Perth. The plane flies at an average speed of 820 km/h. Work out the total distance the plane flies. ...................................................... km (Total for Question 3 is 3 marks) 4 1"
   },
   {
     "id": "all::Jun2024_P2H__Q06__p06-06__m03__Standard-and-Compound-Units",
@@ -8385,6 +8359,34 @@ window.QUESTION_DATA = [
     "filename": "Jun2025_P2HR__Q07__p09-09__m02__Standard-and-Compound-Units.png",
     "image": "assets/questions_all/all_q0594.png",
     "question_text": "7 The mass of a silver coin is 48.3 g The density of silver is 10.5 g/cm3 Work out the volume of the silver coin. ............................................................ cm3 (Total for Question 7 is 2 marks)"
+  },
+  {
+    "id": "all::May2021_P1H__Q01__p03-03__m03__Standard-and-Compound-Units",
+    "source_id": "May2021_P1H__Q01__p03-03__m03__Standard-and-Compound-Units",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Standard & Compound Units",
+    "topic_order": 38,
+    "paper": "May 2021 P1H",
+    "question": 1,
+    "marks": 3,
+    "filename": "May2021_P1H__Q01__p03-03__m03__Standard-and-Compound-Units.png",
+    "image": "assets/questions_all/all_q0766.png",
+    "question_text": "1 A plane flew from Madrid to Dubai. The distance the plane flew was 5658 km. The flight time was 8 hours 12 minutes. Work out the average speed of the plane. ....................................................... km/h (Total for Question 1 is 3 marks)"
+  },
+  {
+    "id": "all::May2023_P1HR__Q11__p11-11__m03__Standard-and-Compound-Units",
+    "source_id": "May2023_P1HR__Q11__p11-11__m03__Standard-and-Compound-Units",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Standard & Compound Units",
+    "topic_order": 38,
+    "paper": "May 2023 P1HR",
+    "question": 11,
+    "marks": 3,
+    "filename": "May2023_P1HR__Q11__p11-11__m03__Standard-and-Compound-Units.png",
+    "image": "assets/questions_all/all_q0810.png",
+    "question_text": "11 The diagram shows a block of iron in the shape of a cuboid. w cm 5 cm 4 cm Diagram NOT accurately drawn The block has length w cm, width 5 cm and height 4 cm The density of iron is 7.8 g / cm3 The mass of the block is 1950 g Work out the value of w w = ...................................................... (Total for Question 11 is 3 marks)"
   },
   {
     "id": "all::May2024_P1H__Q08__p09-09__m03__Standard-and-Compound-Units",
@@ -8485,18 +8487,32 @@ window.QUESTION_DATA = [
     "question_text": "26 A solid cone is joined to a solid hemisphere to make the solid shown below. x cm Diagram NOT accurately drawn 5x cm The cone is made from copper. The density of copper is 9 g/cm 3 The hemisphere is made from a different metal. The total mass of the solid is 4752\u03c0 grams The total volume of the solid is 504\u03c0 cm 3 Work out the density of the hemisphere. Show your working clearly. ...................................................... g/cm 3 (Total for Question 26 is 6 marks)"
   },
   {
-    "id": "all::Jan2020_P1HR__Q10__p10-10__m05__Angles-in-Polygons-and-Parallel-Lines",
-    "source_id": "Jan2020_P1HR__Q10__p10-10__m05__Angles-in-Polygons-and-Parallel-Lines",
+    "id": "all::Jan2020_P2H__Q04__p05-05__m04__Angles-in-Polygons-and-Parallel-Lines",
+    "source_id": "Jan2020_P2H__Q04__p05-05__m04__Angles-in-Polygons-and-Parallel-Lines",
     "bank": "all",
     "unit": "Geometry & Trigonometry",
     "topic": "Angles in Polygons & Parallel Lines",
     "topic_order": 39,
-    "paper": "Jan 2020 P1HR",
-    "question": 10,
+    "paper": "Jan 2020 P2H",
+    "question": 4,
+    "marks": 4,
+    "filename": "Jan2020_P2H__Q04__p05-05__m04__Angles-in-Polygons-and-Parallel-Lines.png",
+    "image": "assets/questions_all/all_q0656.png",
+    "question_text": "4 The diagram shows a triangle. Diagram NOT accurately drawn 30\u00b0 (4x + 10)\u00b0 (x + 20)\u00b0 Work out the value of x. x = ....................................................... (Total for Question 4 is 4 marks)"
+  },
+  {
+    "id": "all::Jan2021_P1HR__Q08__p09-09__m05__Angles-in-Polygons-and-Parallel-Lines",
+    "source_id": "Jan2021_P1HR__Q08__p09-09__m05__Angles-in-Polygons-and-Parallel-Lines",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Angles in Polygons & Parallel Lines",
+    "topic_order": 39,
+    "paper": "Jan 2021 P1HR",
+    "question": 8,
     "marks": 5,
-    "filename": "Jan2020_P1HR__Q10__p10-10__m05__Angles-in-Polygons-and-Parallel-Lines.png",
-    "image": "assets/questions_all/all_q0602.png",
-    "question_text": "10 The diagram shows a regular hexagon, ABCDEF, and an isosceles triangle, GHJ. E D F C A B (x - 1) cm G H (2x - 3) cm J (x + 5) cm Diagram NOT accurately drawn The perimeter of the hexagon is equal to the perimeter of the triangle. Find the length of each side of the hexagon. Show clear algebraic working. ...................................................... cm (Total for Question 10 is 5 marks)"
+    "filename": "Jan2021_P1HR__Q08__p09-09__m05__Angles-in-Polygons-and-Parallel-Lines.png",
+    "image": "assets/questions_all/all_q0497.png",
+    "question_text": "8 The diagram shows a regular pentagon, ABCDE, a regular hexagon, CFGHID, and a quadrilateral, EDIJ. A B F G H C D I x J E Diagram NOT accurately drawn AEJ and HIJ are straight lines. Work out the size of the angle marked x. Show your working clearly. ......................................................\u00b0 (Total for Question 8 is 5 marks)"
   },
   {
     "id": "all::Jan2022_P2H__Q11__p13-13__m04__Angles-in-Polygons-and-Parallel-Lines",
@@ -8555,18 +8571,32 @@ window.QUESTION_DATA = [
     "question_text": "23 A polygon has n sides, where n > 5 When arranged in order of size, starting with the largest number, the sizes of the interior angles of the polygon, in degrees, are the terms of an arithmetic sequence. Here are the first five terms of this sequence. 177 175 173 171 169 Find the value of n Show clear algebraic working. Question 23 continued n = ...................................................... (Total for Question 23 is 6 marks)"
   },
   {
-    "id": "all::Jun2022_P2HR__Q10__p11-11__m05__Angles-in-Polygons-and-Parallel-Lines",
-    "source_id": "Jun2022_P2HR__Q10__p11-11__m05__Angles-in-Polygons-and-Parallel-Lines",
+    "id": "all::Jun2023_P2H__Q03__p05-05__m04__Angles-in-Polygons-and-Parallel-Lines",
+    "source_id": "Jun2023_P2H__Q03__p05-05__m04__Angles-in-Polygons-and-Parallel-Lines",
     "bank": "all",
     "unit": "Geometry & Trigonometry",
     "topic": "Angles in Polygons & Parallel Lines",
     "topic_order": 39,
-    "paper": "Jun 2022 P2HR",
-    "question": 10,
-    "marks": 5,
-    "filename": "Jun2022_P2HR__Q10__p11-11__m05__Angles-in-Polygons-and-Parallel-Lines.png",
-    "image": "assets/questions_all/all_q0608.png",
-    "question_text": "10 The diagram shows triangle ABP inside the regular hexagon ABCDEF Diagram NOT accurately drawn A D E F P B C AB = 5 cm BP = 2 cm Angle ABP = 90\u00b0 Work out the size of angle PAF Give your answer correct to 3 significant figures. .......................................................\u00b0 (Total for Question 10 is 5 marks)"
+    "paper": "Jun 2023 P2H",
+    "question": 3,
+    "marks": 4,
+    "filename": "Jun2023_P2H__Q03__p05-05__m04__Angles-in-Polygons-and-Parallel-Lines.png",
+    "image": "assets/questions_all/all_q0668.png",
+    "question_text": "3 ABCD is a trapezium. B A C D (3x + 46)\u00b0 (4x - 27)\u00b0 (3x + 10)\u00b0 Diagram NOT accurately drawn BC is parallel to AD Find the size of the largest angle inside the trapezium. ....................................................... \u00b0 (Total for Question 3 is 4 marks)"
+  },
+  {
+    "id": "all::Jun2023_P2H__Q11__p11-11__m03__Angles-in-Polygons-and-Parallel-Lines",
+    "source_id": "Jun2023_P2H__Q11__p11-11__m03__Angles-in-Polygons-and-Parallel-Lines",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Angles in Polygons & Parallel Lines",
+    "topic_order": 39,
+    "paper": "Jun 2023 P2H",
+    "question": 11,
+    "marks": 3,
+    "filename": "Jun2023_P2H__Q11__p11-11__m03__Angles-in-Polygons-and-Parallel-Lines.png",
+    "image": "assets/questions_all/all_q0503.png",
+    "question_text": "11 Here is a 9-sided regular polygon ABCDEFGHJ, with centre O G J A B C D E F H O K x\u00b0 Diagram NOT accurately drawn ODK and FEK are straight lines. Work out the value of x x = ....................................................... (Total for Question 11 is 3 marks)"
   },
   {
     "id": "all::Jun2025_P1H__Q03__p05-05__m04__Angles-in-Polygons-and-Parallel-Lines",
@@ -8581,6 +8611,20 @@ window.QUESTION_DATA = [
     "filename": "Jun2025_P1H__Q03__p05-05__m04__Angles-in-Polygons-and-Parallel-Lines.png",
     "image": "assets/questions_all/all_q0609.png",
     "question_text": "3 A B C 148 50 Diagram NOT accurately drawn AB and BC are two sides of a regular polygon with n sides. Work out the value of n Show your working clearly. n = ....................................................... (Total for Question 3 is 4 marks)"
+  },
+  {
+    "id": "all::May2021_P2H__Q05__p06-06__m05__Angles-in-Polygons-and-Parallel-Lines",
+    "source_id": "May2021_P2H__Q05__p06-06__m05__Angles-in-Polygons-and-Parallel-Lines",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Angles in Polygons & Parallel Lines",
+    "topic_order": 39,
+    "paper": "May 2021 P2H",
+    "question": 5,
+    "marks": 5,
+    "filename": "May2021_P2H__Q05__p06-06__m05__Angles-in-Polygons-and-Parallel-Lines.png",
+    "image": "assets/questions_all/all_q0511.png",
+    "question_text": "5 A F D I E B G C H J 44\u00b0 Diagram NOT accurately drawn ABCD and FGHI are parallel straight lines. EBGJ and ECH are straight lines. BE = CE Angle BEC = 44\u00b0 Work out the size of angle JGH. Give a reason for each stage of your working. ....................................................... \u00b0 (Total for Question 5 is 5 marks)"
   },
   {
     "id": "all::May2023_P1HR__Q15__p16-16__m04__Angles-in-Polygons-and-Parallel-Lines",
@@ -8625,20 +8669,6 @@ window.QUESTION_DATA = [
     "question_text": "8 Here is a 10-sided polygon. Diagram NOT accurately drawn 134\u00b0 168\u00b0 150\u00b0 148\u00b0 150\u00b0 168\u00b0 134\u00b0 125\u00b0 125\u00b0 x\u00b0 Work out the value of x. x = ....................................................... (Total for Question 8 is 4 marks)"
   },
   {
-    "id": "all::Nov2021_P1H__Q04__p05-05__m05__Angles-in-Polygons-and-Parallel-Lines",
-    "source_id": "Nov2021_P1H__Q04__p05-05__m05__Angles-in-Polygons-and-Parallel-Lines",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Angles in Polygons & Parallel Lines",
-    "topic_order": 39,
-    "paper": "Nov 2021 P1H",
-    "question": 4,
-    "marks": 5,
-    "filename": "Nov2021_P1H__Q04__p05-05__m05__Angles-in-Polygons-and-Parallel-Lines.png",
-    "image": "assets/questions_all/all_q0614.png",
-    "question_text": "4 The diagram shows the front of a wooden door with a semicircular glass window. 0.75 m 2 m Diagram NOT accurately drawn 0.5 m Julie wants to apply 2 coats of wood varnish to the front of the door, shown shaded in the diagram. 250 millilitres of wood varnish covers 4 m2 of the wood. Work out how many millilitres of wood varnish Julie will need. Give your answer correct to the nearest millilitre. ...................................................... millilitres (Total for Question 4 is 5 marks)"
-  },
-  {
     "id": "all::Nov2021_P2H__Q05__p07-07__m05__Angles-in-Polygons-and-Parallel-Lines",
     "source_id": "Nov2021_P2H__Q05__p07-07__m05__Angles-in-Polygons-and-Parallel-Lines",
     "bank": "all",
@@ -8651,6 +8681,20 @@ window.QUESTION_DATA = [
     "filename": "Nov2021_P2H__Q05__p07-07__m05__Angles-in-Polygons-and-Parallel-Lines.png",
     "image": "assets/questions_all/all_q0615.png",
     "question_text": "5 The diagram shows a regular octagon ABCDHIJK and a pentagon DEFGH. Diagram NOT accurately drawn B 112\u00b0 A C E D F G H x I J K 102\u00b0 96\u00b0 Angle GHD = angle FGH. Work out the size of the angle marked x. Show your working clearly. .......................................................\u00b0 (Total for Question 5 is 5 marks)"
+  },
+  {
+    "id": "all::Nov2024_P2H__Q11__p12-12__m05__Angles-in-Polygons-and-Parallel-Lines",
+    "source_id": "Nov2024_P2H__Q11__p12-12__m05__Angles-in-Polygons-and-Parallel-Lines",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Angles in Polygons & Parallel Lines",
+    "topic_order": 39,
+    "paper": "Nov 2024 P2H",
+    "question": 11,
+    "marks": 5,
+    "filename": "Nov2024_P2H__Q11__p12-12__m05__Angles-in-Polygons-and-Parallel-Lines.png",
+    "image": "assets/questions_all/all_q0516.png",
+    "question_text": "11 Diagram NOT accurately drawn A B C D E I H G F ABCDE is a regular pentagon. DEFGHI is a regular hexagon. AF is a straight line. Work out the size of angle EAF ..............................................................\u00b0 (Total for Question 11 is 5 marks)"
   },
   {
     "id": "all::Nov2025_P1H__Q12__p10-10__m04__Angles-in-Polygons-and-Parallel-Lines",
@@ -8877,6 +8921,20 @@ window.QUESTION_DATA = [
     "question_text": "14 A E F 18\u00b0 39\u00b0 D B C Diagram NOT accurately drawn B, D, E and F are points on a circle. ABC is the tangent at B to the circle. Angle ABD = 39\u00b0 Angle EFD = 18\u00b0 Work out the size of angle BDE. Give reasons for your working. ......................................................\u00b0 (Total for Question 14 is 4 marks)"
   },
   {
+    "id": "all::Jan2021_P2H__Q13__p14-14__m03__Circle-Theorems",
+    "source_id": "Jan2021_P2H__Q13__p14-14__m03__Circle-Theorems",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Circle Theorems",
+    "topic_order": 41,
+    "paper": "Jan 2021 P2H",
+    "question": 13,
+    "marks": 3,
+    "filename": "Jan2021_P2H__Q13__p14-14__m03__Circle-Theorems.png",
+    "image": "assets/questions_all/all_q0369.png",
+    "question_text": "13 P, Q, R, S and T are points on a circle with centre O. P T O 124\u00b0 m\u00b0 n\u00b0 Q S R Diagram NOT accurately drawn QOS is a diameter of the circle. angle POS = 124\u00b0 angle PRS = m\u00b0 angle PTS = n\u00b0 (a) Find the value of (i) m ...................................................... (ii) n ...................................................... (2) (b) Find the size of angle QPO. ...................................................... \u00b0 (1) (Total for Question 13 is 3 marks)"
+  },
+  {
     "id": "all::Jan2022_P1HR__Q14__p18-18__m04__Circle-Theorems",
     "source_id": "Jan2022_P1HR__Q14__p18-18__m04__Circle-Theorems",
     "bank": "all",
@@ -8961,6 +9019,20 @@ window.QUESTION_DATA = [
     "question_text": "14 Diagram NOT accurately drawn P R S Q 22\u00b0 O P, Q, R and S are points on a circle, centre O ROP is a diameter of the circle. Angle PRQ = 22\u00b0 (a) (i) Find the size of angle RQP ....................................................... \u00b0 (1) (ii) Give a reason for your answer. .................................................................................................................................................................................................................................................. .................................................................................................................................................................................................................................................. (1) (b) (i) Find the size of angle PSQ ....................................................... \u00b0 (1) (ii) Give a reason for your answer. .................................................................................................................................................................................................................................................. .................................................................................................................................................................................................................................................. (1) (Total for Question 14 is 4 marks)"
   },
   {
+    "id": "all::Jun2023_P2HR__Q18__p18-18__m03__Circle-Theorems",
+    "source_id": "Jun2023_P2HR__Q18__p18-18__m03__Circle-Theorems",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Circle Theorems",
+    "topic_order": 41,
+    "paper": "Jun 2023 P2HR",
+    "question": 18,
+    "marks": 3,
+    "filename": "Jun2023_P2HR__Q18__p18-18__m03__Circle-Theorems.png",
+    "image": "assets/questions_all/all_q0504.png",
+    "question_text": "18 A B C D P 16 cm 14 cm 12 cm Diagram NOT accurately drawn A, B, C and D are points on a circle. ABP and DCP are straight lines. AB = 16 cm BP = 14 cm CP = 12 cm Work out the length of DC ...................................................... cm (Total for Question 18 is 3 marks)"
+  },
+  {
     "id": "all::Jun2023_P2HR__Q20__p20-20__m02__Circle-Theorems",
     "source_id": "Jun2023_P2HR__Q20__p20-20__m02__Circle-Theorems",
     "bank": "all",
@@ -9017,6 +9089,20 @@ window.QUESTION_DATA = [
     "question_text": "15 P, Q and R are points on a circle, centre O. TRV is the tangent to the circle at R. Q P R O 238\u00b0 60\u00b0 T V Diagram NOT accurately drawn Reflex angle POR = 238\u00b0 Angle QRV = 60\u00b0 Calculate the size of angle OPQ. Give a reason for each stage of your working. .......................................................\u00b0 (Total for Question 15 is 4 marks)"
   },
   {
+    "id": "all::May2021_P2H__Q18__p20-21__m06__Circle-Theorems",
+    "source_id": "May2021_P2H__Q18__p20-21__m06__Circle-Theorems",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Circle Theorems",
+    "topic_order": 41,
+    "paper": "May 2021 P2H",
+    "question": 18,
+    "marks": 6,
+    "filename": "May2021_P2H__Q18__p20-21__m06__Circle-Theorems.png",
+    "image": "assets/questions_all/all_q0681.png",
+    "question_text": "18 7.5 cm A 35\u00b0 Diagram NOT accurately drawn B C D 98\u00b0 8 cm ABCD is a quadrilateral where A, B, C and D are points on a circle. AB = 8 cm BC = 7.5 cm Angle ABC = 98\u00b0 Angle ACD = 35\u00b0 Work out the perimeter of quadrilateral ABCD. Give your answer correct to one decimal place. ....................................................... cm (Total for Question 18 is 6 marks)"
+  },
+  {
     "id": "all::May2024_P1HR__Q13__p13-13__m05__Circle-Theorems",
     "source_id": "May2024_P1HR__Q13__p13-13__m05__Circle-Theorems",
     "bank": "all",
@@ -9057,6 +9143,20 @@ window.QUESTION_DATA = [
     "filename": "MayNov2020_P1HR__Q15__p15-15__m04__Circle-Theorems.png",
     "image": "assets/questions_all/all_q0647.png",
     "question_text": "15 40\u00b0 70\u00b0 B C A D E F Diagram NOT accurately drawn B, D, E and F are points on a circle. ABC is the tangent to the circle at B. Angle EDF = 40\u00b0 Angle FBC = 70\u00b0 Prove that the tangent ABC is parallel to EF. Give a reason for each stage of your working. (Total for Question 15 is 4 marks)"
+  },
+  {
+    "id": "all::Nov2021_P2H__Q11__p13-13__m03__Circle-Theorems",
+    "source_id": "Nov2021_P2H__Q11__p13-13__m03__Circle-Theorems",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Circle Theorems",
+    "topic_order": 41,
+    "paper": "Nov 2021 P2H",
+    "question": 11,
+    "marks": 3,
+    "filename": "Nov2021_P2H__Q11__p13-13__m03__Circle-Theorems.png",
+    "image": "assets/questions_all/all_q0512.png",
+    "question_text": "11 B A C 48\u00b0 D O F E Diagram NOT accurately drawn B, D, E and F are points on a circle, centre O. ABC is a tangent to the circle. ODC is a straight line. BOE is a diameter of the circle. Angle BCD = 48\u00b0 Find the size of angle DFE. .......................................................\u00b0 (Total for Question 11 is 3 marks)"
   },
   {
     "id": "all::Nov2023_P1H__Q14__p17-17__m03__Circle-Theorems",
@@ -9129,18 +9229,18 @@ window.QUESTION_DATA = [
     "question_text": "5 The diagram shows Yuen\u2019s garden. 7.2 m Diagram NOT accurately drawn The garden is in the shape of a semicircle of radius 7.2 m. Yuen is going to cover his garden with grass seed. Yuen has 12 boxes of grass seed. Each box of grass seed contains enough seed to cover 6 m2 of the garden. Has Yuen enough grass seed for his garden? Show your working clearly. (Total for Question 5 is 3 marks)"
   },
   {
-    "id": "all::Jan2020_P2H__Q04__p05-05__m04__Area-and-Perimeter",
-    "source_id": "Jan2020_P2H__Q04__p05-05__m04__Area-and-Perimeter",
+    "id": "all::Jan2020_P1HR__Q10__p10-10__m05__Area-and-Perimeter",
+    "source_id": "Jan2020_P1HR__Q10__p10-10__m05__Area-and-Perimeter",
     "bank": "all",
     "unit": "Geometry & Trigonometry",
     "topic": "Area & Perimeter",
     "topic_order": 42,
-    "paper": "Jan 2020 P2H",
-    "question": 4,
-    "marks": 4,
-    "filename": "Jan2020_P2H__Q04__p05-05__m04__Area-and-Perimeter.png",
-    "image": "assets/questions_all/all_q0656.png",
-    "question_text": "4 The diagram shows a triangle. Diagram NOT accurately drawn 30\u00b0 (4x + 10)\u00b0 (x + 20)\u00b0 Work out the value of x. x = ....................................................... (Total for Question 4 is 4 marks)"
+    "paper": "Jan 2020 P1HR",
+    "question": 10,
+    "marks": 5,
+    "filename": "Jan2020_P1HR__Q10__p10-10__m05__Area-and-Perimeter.png",
+    "image": "assets/questions_all/all_q0602.png",
+    "question_text": "10 The diagram shows a regular hexagon, ABCDEF, and an isosceles triangle, GHJ. E D F C A B (x - 1) cm G H (2x - 3) cm J (x + 5) cm Diagram NOT accurately drawn The perimeter of the hexagon is equal to the perimeter of the triangle. Find the length of each side of the hexagon. Show clear algebraic working. ...................................................... cm (Total for Question 10 is 5 marks)"
   },
   {
     "id": "all::Jan2020_P2H__Q11__p11-11__m05__Area-and-Perimeter",
@@ -9155,6 +9255,20 @@ window.QUESTION_DATA = [
     "filename": "Jan2020_P2H__Q11__p11-11__m05__Area-and-Perimeter.png",
     "image": "assets/questions_all/all_q0657.png",
     "question_text": "11 The diagram shows a shaded shape ABCD made from a semicircle ABC and a right\u2010angled triangle ACD. Diagram NOT accurately drawn 17 cm 15 cm A B C D AC is the diameter of the semicircle ABC. Work out the perimeter of the shaded shape. Give your answer correct to 3 significant figures. ....................................................... cm (Total for Question 11 is 5 marks)"
+  },
+  {
+    "id": "all::Jan2021_P1HR__Q10__p11-11__m05__Area-and-Perimeter",
+    "source_id": "Jan2021_P1HR__Q10__p11-11__m05__Area-and-Perimeter",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Area & Perimeter",
+    "topic_order": 42,
+    "paper": "Jan 2021 P1HR",
+    "question": 10,
+    "marks": 5,
+    "filename": "Jan2021_P1HR__Q10__p11-11__m05__Area-and-Perimeter.png",
+    "image": "assets/questions_all/all_q0831.png",
+    "question_text": "10 The diagram shows one face of a wall. This face is in the shape of a pentagon with exactly one line of symmetry. Diagram NOT accurately drawn 6 m 6 m 7 m 7 m 10 m Omondi is going to paint this face of the wall once. He has to buy all the paint that he needs to use. The paint in each tin of paint Omondi is going to buy will cover 16 m 2 of the face of the wall. Work out the least number of tins of paint Omondi will need to buy. Show your working clearly. ...................................................... (Total for Question 10 is 5 marks)"
   },
   {
     "id": "all::Jan2021_P2H__Q08__p10-11__m05__Area-and-Perimeter",
@@ -9185,32 +9299,18 @@ window.QUESTION_DATA = [
     "question_text": "20 A B F P Q C D R E Diagram NOT accurately drawn T The diagram shows a shaded region T formed by removing an equilateral triangle PQR from a regular hexagon ABCDEF. The points P and Q lie on AB such that AB = 1.5 \u00d7 PQ Given that the area of region T is 72 3 cm2 work out the length of PQ. ...................................................... cm (Total for Question 20 is 4 marks)"
   },
   {
-    "id": "all::Jan2022_P1H__Q03__p04-04__m03__Area-and-Perimeter",
-    "source_id": "Jan2022_P1H__Q03__p04-04__m03__Area-and-Perimeter",
+    "id": "all::Jan2021_P2HR__Q02__p04-04__m03__Area-and-Perimeter",
+    "source_id": "Jan2021_P2HR__Q02__p04-04__m03__Area-and-Perimeter",
     "bank": "all",
     "unit": "Geometry & Trigonometry",
     "topic": "Area & Perimeter",
     "topic_order": 42,
-    "paper": "Jan 2022 P1H",
-    "question": 3,
+    "paper": "Jan 2021 P2HR",
+    "question": 2,
     "marks": 3,
-    "filename": "Jan2022_P1H__Q03__p04-04__m03__Area-and-Perimeter.png",
-    "image": "assets/questions_all/all_q0660.png",
-    "question_text": "3 The diagram shows triangle ABC Diagram NOT accurately drawn A 8.4 cm 65\u00b0 B C Work out the length of the side AB Give your answer correct to 3 significant figures. ...................................................... cm (Total for Question 3 is 3 marks)"
-  },
-  {
-    "id": "all::Jun2022_P1H__Q18__p19-19__m05__Area-and-Perimeter",
-    "source_id": "Jun2022_P1H__Q18__p19-19__m05__Area-and-Perimeter",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Area & Perimeter",
-    "topic_order": 42,
-    "paper": "Jun 2022 P1H",
-    "question": 18,
-    "marks": 5,
-    "filename": "Jun2022_P1H__Q18__p19-19__m05__Area-and-Perimeter.png",
-    "image": "assets/questions_all/all_q0661.png",
-    "question_text": "18 Here is triangle ABC A C B 115\u00b0 x\u00b0 12.3 m 9.7 m Diagram NOT accurately drawn Work out the value of x Give your answer correct to 3 significant figures. x = ...................................................... (Total for Question 18 is 5 marks)"
+    "filename": "Jan2021_P2HR__Q02__p04-04__m03__Area-and-Perimeter.png",
+    "image": "assets/questions_all/all_q0749.png",
+    "question_text": "2 The diagram shows a rectangle ABCD and a semicircle with diameter AB where AB = 12 cm. The point E lies on DC and also on the semicircle. A 12 cm E D B C Diagram NOT accurately drawn Work out the area of the shaded region. Give your answer correct to 3 significant figures. ...................................................... cm 2 (Total for Question 2 is 3 marks)"
   },
   {
     "id": "all::Jun2022_P1HR__Q11__p12-13__m06__Area-and-Perimeter",
@@ -9241,20 +9341,6 @@ window.QUESTION_DATA = [
     "question_text": "5 The diagram shows an 8-sided shape ABCDEFGH. B A H G F E D C 28 cm 5 cm 5 cm 20 cm 12 cm Diagram NOT accurately drawn HG = 28 cm FG = 12 cm AB = EF = 5 cm The height of the shape is 20 cm CD is parallel to HG The area of shape ABCDEFGH is 434 cm2 Find the length of CD. ...................................................... cm (Total for Question 5 is 4 marks)"
   },
   {
-    "id": "all::Jun2022_P2H__Q06__p07-07__m03__Area-and-Perimeter",
-    "source_id": "Jun2022_P2H__Q06__p07-07__m03__Area-and-Perimeter",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Area & Perimeter",
-    "topic_order": 42,
-    "paper": "Jun 2022 P2H",
-    "question": 6,
-    "marks": 3,
-    "filename": "Jun2022_P2H__Q06__p07-07__m03__Area-and-Perimeter.png",
-    "image": "assets/questions_all/all_q0664.png",
-    "question_text": "6 The diagram shows triangle PQR. P 42\u00b0 9.5 cm x cm R Q Diagram NOT accurately drawn Work out the value of x Give your answer correct to one decimal place. x = ...................................................... (Total for Question 6 is 3 marks)"
-  },
-  {
     "id": "all::Jun2022_P2HR__Q05__p07-07__m04__Area-and-Perimeter",
     "source_id": "Jun2022_P2HR__Q05__p07-07__m04__Area-and-Perimeter",
     "bank": "all",
@@ -9269,34 +9355,6 @@ window.QUESTION_DATA = [
     "question_text": "5 The diagram shows a shape made from a square ABCD and 4 identical semicircles. Diagram NOT accurately drawn A C B D As shown in the diagram, the semicircles have AB, BC, CD and DA as diameters. The area of the square is 36 cm 2 Calculate the total area of the shape. Give your answer correct to one decimal place. ....................................................... cm 2 (Total for Question 5 is 4 marks)"
   },
   {
-    "id": "all::Jun2022_P2HR__Q15__p17-17__m03__Area-and-Perimeter",
-    "source_id": "Jun2022_P2HR__Q15__p17-17__m03__Area-and-Perimeter",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Area & Perimeter",
-    "topic_order": 42,
-    "paper": "Jun 2022 P2HR",
-    "question": 15,
-    "marks": 3,
-    "filename": "Jun2022_P2HR__Q15__p17-17__m03__Area-and-Perimeter.png",
-    "image": "assets/questions_all/all_q0667.png",
-    "question_text": "15 The diagram shows a kite ABCD Diagram NOT accurately drawn A 118\u00b0 6 cm 11 cm D B C AB = 6 cm BC = 11 cm Angle ABC = 118\u00b0 Calculate the area of the kite. Give your answer correct to 3 significant figures. ....................................................... cm 2 (Total for Question 15 is 3 marks)"
-  },
-  {
-    "id": "all::Jun2023_P2H__Q03__p05-05__m04__Area-and-Perimeter",
-    "source_id": "Jun2023_P2H__Q03__p05-05__m04__Area-and-Perimeter",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Area & Perimeter",
-    "topic_order": 42,
-    "paper": "Jun 2023 P2H",
-    "question": 3,
-    "marks": 4,
-    "filename": "Jun2023_P2H__Q03__p05-05__m04__Area-and-Perimeter.png",
-    "image": "assets/questions_all/all_q0668.png",
-    "question_text": "3 ABCD is a trapezium. B A C D (3x + 46)\u00b0 (4x - 27)\u00b0 (3x + 10)\u00b0 Diagram NOT accurately drawn BC is parallel to AD Find the size of the largest angle inside the trapezium. ....................................................... \u00b0 (Total for Question 3 is 4 marks)"
-  },
-  {
     "id": "all::Jun2023_P2HR__Q05__p06-06__m04__Area-and-Perimeter",
     "source_id": "Jun2023_P2HR__Q05__p06-06__m04__Area-and-Perimeter",
     "bank": "all",
@@ -9309,20 +9367,6 @@ window.QUESTION_DATA = [
     "filename": "Jun2023_P2HR__Q05__p06-06__m04__Area-and-Perimeter.png",
     "image": "assets/questions_all/all_q0670.png",
     "question_text": "5 A field is in the shape of a trapezium. 330 m 170 m 240 m Diagram NOT accurately drawn The field is sold for a price of $49 650 Given that 1 hectare = 10 000 m2 work out the average price of the field per hectare. $...................................................... (Total for Question 5 is 4 marks)"
-  },
-  {
-    "id": "all::Jun2024_P2H__Q05__p06-06__m03__Area-and-Perimeter",
-    "source_id": "Jun2024_P2H__Q05__p06-06__m03__Area-and-Perimeter",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Area & Perimeter",
-    "topic_order": 42,
-    "paper": "Jun 2024 P2H",
-    "question": 5,
-    "marks": 3,
-    "filename": "Jun2024_P2H__Q05__p06-06__m03__Area-and-Perimeter.png",
-    "image": "assets/questions_all/all_q0671.png",
-    "question_text": "5 The diagram shows triangle ABC Diagram NOT accurately drawn A B C x cm 34\u00b0 6.5 cm Work out the value of x Give your answer correct to one decimal place. x = ...................................................... (Total for Question 5 is 3 marks)"
   },
   {
     "id": "all::Jun2024_P2H__Q07__p07-07__m04__Area-and-Perimeter",
@@ -9367,48 +9411,6 @@ window.QUESTION_DATA = [
     "question_text": "9 A B C D 12 cm 47 cm 60 Diagram NOT accurately drawn ABCD is a trapezium with one line of symmetry. angle ADC = 60\u00b0 AD = 12 cm DC = 47 cm Work out the area of the trapezium. Give your answer correct to 3 significant figures. Show your working clearly. ....................................................... cm 2 (Total for Question 9 is 5 marks)"
   },
   {
-    "id": "all::Jun2025_P1HR__Q09__p09-09__m03__Area-and-Perimeter",
-    "source_id": "Jun2025_P1HR__Q09__p09-09__m03__Area-and-Perimeter",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Area & Perimeter",
-    "topic_order": 42,
-    "paper": "Jun 2025 P1HR",
-    "question": 9,
-    "marks": 3,
-    "filename": "Jun2025_P1HR__Q09__p09-09__m03__Area-and-Perimeter.png",
-    "image": "assets/questions_all/all_q0675.png",
-    "question_text": "9 The diagram shows triangle PQR 24\u00b0 6.5 cm P Q R Diagram NOT accurately drawn Work out the length of QR Give your answer correct to 3 significant figures. ........................................................... cm (Total for Question 9 is 3 marks)"
-  },
-  {
-    "id": "all::Jun2025_P2H__Q10__p10-10__m05__Area-and-Perimeter",
-    "source_id": "Jun2025_P2H__Q10__p10-10__m05__Area-and-Perimeter",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Area & Perimeter",
-    "topic_order": 42,
-    "paper": "Jun 2025 P2H",
-    "question": 10,
-    "marks": 5,
-    "filename": "Jun2025_P2H__Q10__p10-10__m05__Area-and-Perimeter.png",
-    "image": "assets/questions_all/all_q0676.png",
-    "question_text": "10 ABD and ABC are right\u2010angled triangles. A B C D 12 cm 16 cm Diagram NOT accurately drawn AB = 16 cm BC = 12 cm AD = 1.5 \u00d7 AC Find the length of CD Give your answer correct to 3 significant figures. ........................................................ cm (Total for Question 10 is 5 marks)"
-  },
-  {
-    "id": "all::Jun2025_P2HR__Q18__p18-18__m03__Area-and-Perimeter",
-    "source_id": "Jun2025_P2HR__Q18__p18-18__m03__Area-and-Perimeter",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Area & Perimeter",
-    "topic_order": 42,
-    "paper": "Jun 2025 P2HR",
-    "question": 18,
-    "marks": 3,
-    "filename": "Jun2025_P2HR__Q18__p18-18__m03__Area-and-Perimeter.png",
-    "image": "assets/questions_all/all_q0677.png",
-    "question_text": "18 OAB is a triangle. A P 4b 4a B O Diagram NOT accurately drawn = 4a = 4b P is the point on AB such that AP : PB = 1 : 3 (a) Write down in terms of a and b ........................................................... (1) (b) Express in terms of a and b Give your answer in its simplest form. ........................................................... (2) (Total for Question 18 is 3 marks)"
-  },
-  {
     "id": "all::May2021_P1H__Q03__p04-04__m04__Area-and-Perimeter",
     "source_id": "May2021_P1H__Q03__p04-04__m04__Area-and-Perimeter",
     "bank": "all",
@@ -9421,34 +9423,6 @@ window.QUESTION_DATA = [
     "filename": "May2021_P1H__Q03__p04-04__m04__Area-and-Perimeter.png",
     "image": "assets/questions_all/all_q0678.png",
     "question_text": "3 Diagram NOT accurately drawn A B D E C x cm 8 cm 14 cm 13 cm The diagram shows the shape ABCDE. The area of the shape is 91.8 cm2 Work out the value of x. x = ...................................................... (Total for Question 3 is 4 marks)"
-  },
-  {
-    "id": "all::May2021_P2H__Q18__p20-21__m06__Area-and-Perimeter",
-    "source_id": "May2021_P2H__Q18__p20-21__m06__Area-and-Perimeter",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Area & Perimeter",
-    "topic_order": 42,
-    "paper": "May 2021 P2H",
-    "question": 18,
-    "marks": 6,
-    "filename": "May2021_P2H__Q18__p20-21__m06__Area-and-Perimeter.png",
-    "image": "assets/questions_all/all_q0681.png",
-    "question_text": "18 7.5 cm A 35\u00b0 Diagram NOT accurately drawn B C D 98\u00b0 8 cm ABCD is a quadrilateral where A, B, C and D are points on a circle. AB = 8 cm BC = 7.5 cm Angle ABC = 98\u00b0 Angle ACD = 35\u00b0 Work out the perimeter of quadrilateral ABCD. Give your answer correct to one decimal place. ....................................................... cm (Total for Question 18 is 6 marks)"
-  },
-  {
-    "id": "all::May2023_P1HR__Q19__p19-19__m05__Area-and-Perimeter",
-    "source_id": "May2023_P1HR__Q19__p19-19__m05__Area-and-Perimeter",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Area & Perimeter",
-    "topic_order": 42,
-    "paper": "May 2023 P1HR",
-    "question": 19,
-    "marks": 5,
-    "filename": "May2023_P1HR__Q19__p19-19__m05__Area-and-Perimeter.png",
-    "image": "assets/questions_all/all_q0682.png",
-    "question_text": "19 The diagram shows a triangle ABC where A, B and C represent the positions of three towns. A C B Diagram NOT accurately drawn AB \u2192 = 7 2 \u001b \u001a\u0019 BC \u2192 = \u001b \u001a\u0019 3 5 Pru travels directly from A to B and then directly from B to C Yang travels directly from A to C Given that the values for AB \u2192 and BC \u2192 are in kilometres, work out how much further Pru travels than Yang travels. Give your answer in km, correct to one decimal place. ...................................................... km (Total for Question 19 is 5 marks)"
   },
   {
     "id": "all::May2024_P1HR__Q08__p09-09__m06__Area-and-Perimeter",
@@ -9493,6 +9467,20 @@ window.QUESTION_DATA = [
     "question_text": "22 The diagram shows a regular octagon ABCDEFGH. Diagram NOT accurately drawn A B C D 10 cm E F G H Each side of the octagon has length 10 cm. Find the area of the shaded region ACDEH. Give your answer correct to the nearest cm2 ....................................................... cm2 (Total for Question 22 is 6 marks)"
   },
   {
+    "id": "all::Nov2021_P1H__Q04__p05-05__m05__Area-and-Perimeter",
+    "source_id": "Nov2021_P1H__Q04__p05-05__m05__Area-and-Perimeter",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Area & Perimeter",
+    "topic_order": 42,
+    "paper": "Nov 2021 P1H",
+    "question": 4,
+    "marks": 5,
+    "filename": "Nov2021_P1H__Q04__p05-05__m05__Area-and-Perimeter.png",
+    "image": "assets/questions_all/all_q0614.png",
+    "question_text": "4 The diagram shows the front of a wooden door with a semicircular glass window. 0.75 m 2 m Diagram NOT accurately drawn 0.5 m Julie wants to apply 2 coats of wood varnish to the front of the door, shown shaded in the diagram. 250 millilitres of wood varnish covers 4 m2 of the wood. Work out how many millilitres of wood varnish Julie will need. Give your answer correct to the nearest millilitre. ...................................................... millilitres (Total for Question 4 is 5 marks)"
+  },
+  {
     "id": "all::Nov2021_P2H__Q10__p12-12__m04__Area-and-Perimeter",
     "source_id": "Nov2021_P2H__Q10__p12-12__m04__Area-and-Perimeter",
     "bank": "all",
@@ -9505,34 +9493,6 @@ window.QUESTION_DATA = [
     "filename": "Nov2021_P2H__Q10__p12-12__m04__Area-and-Perimeter.png",
     "image": "assets/questions_all/all_q0687.png",
     "question_text": "10 ABC is an isosceles triangle with BA = BC. B 9.3 cm A C N 38\u00b0 Diagram NOT accurately drawn N is the point on AC such that AN = 9.3 cm and BN is perpendicular to AC. Work out the perimeter of triangle ABC. Give your answer correct to 3 significant figures. ....................................................... cm (Total for Question 10 is 4 marks)"
-  },
-  {
-    "id": "all::Nov2021_P2H__Q18__p21-21__m05__Area-and-Perimeter",
-    "source_id": "Nov2021_P2H__Q18__p21-21__m05__Area-and-Perimeter",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Area & Perimeter",
-    "topic_order": 42,
-    "paper": "Nov 2021 P2H",
-    "question": 18,
-    "marks": 5,
-    "filename": "Nov2021_P2H__Q18__p21-21__m05__Area-and-Perimeter.png",
-    "image": "assets/questions_all/all_q0688.png",
-    "question_text": "18 Here is a quadrilateral ABCD. A C 84\u00b0 D B 12 cm Diagram NOT accurately drawn 60\u00b0 7 cm 9 cm Calculate the area of quadrilateral ABCD. Give your answer correct to 3 significant figures. Show your working clearly. ....................................................... cm2 (Total for Question 18 is 5 marks)"
-  },
-  {
-    "id": "all::Nov2023_P1H__Q10__p12-12__m05__Area-and-Perimeter",
-    "source_id": "Nov2023_P1H__Q10__p12-12__m05__Area-and-Perimeter",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Area & Perimeter",
-    "topic_order": 42,
-    "paper": "Nov 2023 P1H",
-    "question": 10,
-    "marks": 5,
-    "filename": "Nov2023_P1H__Q10__p12-12__m05__Area-and-Perimeter.png",
-    "image": "assets/questions_all/all_q0689.png",
-    "question_text": "10 Here is triangle ABC 8 m 22 m 40\u00b0 A B C x\u00b0 Diagram NOT accurately drawn Work out the value of x Give your answer correct to one decimal place. Show your working clearly. x = .............................................................. (Total for Question 10 is 5 marks)"
   },
   {
     "id": "all::Nov2023_P2H__Q10__p10-10__m05__Area-and-Perimeter",
@@ -9549,32 +9509,18 @@ window.QUESTION_DATA = [
     "question_text": "10 The diagram shows a hexagon ABCDEF 25 cm 7 cm E F A B C D 8 cm (x + 6) cm (x + 2) cm Diagram NOT accurately drawn AB = 25 cm BC = (x + 2) cm CD = 8 cm EF = 7 cm AF = (x + 6) cm The area of hexagon ABCDEF is 258 cm2 Work out the value of x x = .............................................................. (Total for Question 10 is 5 marks)"
   },
   {
-    "id": "all::Nov2024_P2H__Q03__p04-04__m03__Area-and-Perimeter",
-    "source_id": "Nov2024_P2H__Q03__p04-04__m03__Area-and-Perimeter",
+    "id": "all::Jan2021_P1H__Q08__p09-09__m03__Circles-Arcs-and-Sectors",
+    "source_id": "Jan2021_P1H__Q08__p09-09__m03__Circles-Arcs-and-Sectors",
     "bank": "all",
     "unit": "Geometry & Trigonometry",
-    "topic": "Area & Perimeter",
-    "topic_order": 42,
-    "paper": "Nov 2024 P2H",
-    "question": 3,
+    "topic": "Circles, Arcs & Sectors",
+    "topic_order": 43,
+    "paper": "Jan 2021 P1H",
+    "question": 8,
     "marks": 3,
-    "filename": "Nov2024_P2H__Q03__p04-04__m03__Area-and-Perimeter.png",
-    "image": "assets/questions_all/all_q0691.png",
-    "question_text": "3 The diagram shows triangle PQR 43\u00b0 Diagram NOT accurately drawn 8.6 cm x cm P Q R Work out the value of x Give your answer correct to one decimal place. x = .............................................................. (Total for Question 3 is 3 marks)"
-  },
-  {
-    "id": "all::Nov2025_P1H__Q19__p15-15__m03__Area-and-Perimeter",
-    "source_id": "Nov2025_P1H__Q19__p15-15__m03__Area-and-Perimeter",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Area & Perimeter",
-    "topic_order": 42,
-    "paper": "Nov 2025 P1H",
-    "question": 19,
-    "marks": 3,
-    "filename": "Nov2025_P1H__Q19__p15-15__m03__Area-and-Perimeter.png",
-    "image": "assets/questions_all/all_q0692.png",
-    "question_text": "19 The diagram shows triangle ABC 10 cm 8 cm 9 cm Diagram NOT accurately drawn A B C AB = 8 cm BC = 10 cm CA = 9 cm Work out the size of angle BAC Give your answer correct to one decimal place. ......................................................\u00b0 (Total for Question 19 is 3 marks)"
+    "filename": "Jan2021_P1H__Q08__p09-09__m03__Circles-Arcs-and-Sectors.png",
+    "image": "assets/questions_all/all_q0496.png",
+    "question_text": "8 The region, shown shaded in the diagram, is a path. Diagram NOT accurately drawn 2 m O 7 m The boundary of the path is formed by two semicircles, with the same centre O, and two straight lines. The inner semicircle has a radius of 7 metres. The path has a width of 2 metres. Work out the perimeter of the path. Give your answer correct to one decimal place. ...................................................... m (Total for Question 8 is 3 marks)"
   },
   {
     "id": "all::Jan2021_P2H__Q22__p26-27__m06__Circles-Arcs-and-Sectors",
@@ -9647,6 +9593,20 @@ window.QUESTION_DATA = [
     "question_text": "11 The diagram shows sector OPQ of a circle, centre O P O Q 7.1 cm 7.1 cm 110\u00b0 Diagram NOT accurately drawn OP = OQ = 7.1 cm Angle POQ = 110\u00b0 Calculate the area of sector OPQ Give your answer correct to one decimal place. ...................................................... cm2 (Total for Question 11 is 2 marks)"
   },
   {
+    "id": "all::Jan2022_P2HR__Q09__p12-13__m05__Circles-Arcs-and-Sectors",
+    "source_id": "Jan2022_P2HR__Q09__p12-13__m05__Circles-Arcs-and-Sectors",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Circles, Arcs & Sectors",
+    "topic_order": 43,
+    "paper": "Jan 2022 P2HR",
+    "question": 9,
+    "marks": 5,
+    "filename": "Jan2022_P2HR__Q09__p12-13__m05__Circles-Arcs-and-Sectors.png",
+    "image": "assets/questions_all/all_q0755.png",
+    "question_text": "9 In the diagram, ABC is a right-angled triangle and DEF is a semicircular arc. A B C D E F 3 cm 30\u00b0 24 cm Diagram NOT accurately drawn In triangle ABC BC = 24 cm angle ABC = 90\u00b0 angle BCA = 30\u00b0 The points D and F lie on AC so that DF is the diameter of the semicircular arc DEF The radius of the semicircular arc is 3 cm. Work out the length of AFEDC Give your answer correct to 2 significant figures. ....................................................... cm (Total for Question 9 is 5 marks)"
+  },
+  {
     "id": "all::Jun2022_P1H__Q19__p20-21__m05__Circles-Arcs-and-Sectors",
     "source_id": "Jun2022_P1H__Q19__p20-21__m05__Circles-Arcs-and-Sectors",
     "bank": "all",
@@ -9701,6 +9661,20 @@ window.QUESTION_DATA = [
     "filename": "Jun2024_P2H__Q21__p20-21__m05__Circles-Arcs-and-Sectors.png",
     "image": "assets/questions_all/all_q0641.png",
     "question_text": "21 The diagram shows a square ABCD and a circle. A B C D Diagram NOT accurately drawn The sides of the square are tangents to the circle. The total area of the shaded regions is 80 cm 2 Work out the length of AC Give your answer correct to 3 significant figures. ......................................... cm (Total for Question 21 is 5 marks)"
+  },
+  {
+    "id": "all::Jun2024_P2HR__Q05__p07-07__m04__Circles-Arcs-and-Sectors",
+    "source_id": "Jun2024_P2HR__Q05__p07-07__m04__Circles-Arcs-and-Sectors",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Circles, Arcs & Sectors",
+    "topic_order": 43,
+    "paper": "Jun 2024 P2HR",
+    "question": 5,
+    "marks": 4,
+    "filename": "Jun2024_P2HR__Q05__p07-07__m04__Circles-Arcs-and-Sectors.png",
+    "image": "assets/questions_all/all_q0765.png",
+    "question_text": "5 The diagram shows the design for a badge, which will be made using wire. The design is a circle inside a square ABCD D G C A E B Diagram NOT accurately drawn F H The circle touches the square at the points E, F, G and H The area of the square is 81 cm2 Calculate the total length of wire that will be needed to make the square and the circle. Give your answer correct to 3 significant figures. \b .......................................................... cm (Total for Question 5 is 4 marks)"
   },
   {
     "id": "all::Jun2024_P2HR__Q13__p15-15__m03__Circles-Arcs-and-Sectors",
@@ -9787,6 +9761,20 @@ window.QUESTION_DATA = [
     "question_text": "22 The diagram shows two circles with centre O and a regular pentagon ABCDE A B C D E O Diagram NOT accurately drawn A, B, C, D and E are points on the larger circle. The pentagon has sides of length 8 cm. The diagram is shaded such that shaded area = unshaded area Work out the radius of the smaller circle. Give your answer correct to 3 significant figures. ....................................................... cm (Total for Question 22 is 6 marks)"
   },
   {
+    "id": "all::May2023_P1HR__Q04__p06-06__m05__Circles-Arcs-and-Sectors",
+    "source_id": "May2023_P1HR__Q04__p06-06__m05__Circles-Arcs-and-Sectors",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Circles, Arcs & Sectors",
+    "topic_order": 43,
+    "paper": "May 2023 P1HR",
+    "question": 4,
+    "marks": 5,
+    "filename": "May2023_P1HR__Q04__p06-06__m05__Circles-Arcs-and-Sectors.png",
+    "image": "assets/questions_all/all_q0769.png",
+    "question_text": "4 The diagram shows a shape made up of three semicircles, enclosing a right\u2010angled triangle. A B C 6 cm 6 cm Diagram NOT accurately drawn AB, BC and CA are each the diameter of a semicircle. BC = CA = 6 cm. Work out the perimeter of the shape. Give your answer correct to one decimal place. ...................................................... cm (Total for Question 4 is 5 marks)"
+  },
+  {
     "id": "all::May2024_P1H__Q20__p21-21__m04__Circles-Arcs-and-Sectors",
     "source_id": "May2024_P1H__Q20__p21-21__m04__Circles-Arcs-and-Sectors",
     "bank": "all",
@@ -9801,6 +9789,20 @@ window.QUESTION_DATA = [
     "question_text": "20 The diagram shows a sector OABC of a circle centre O O C A Diagram NOT accurately drawn B 60\u00b0 Angle AOC = 60\u00b0 The area of the shaded segment ABC is 38 cm 2 Work out the perimeter of the shaded segment ABC Give your answer correct to one decimal place. ...................................................... cm (Total for Question 20 is 4 marks)"
   },
   {
+    "id": "all::Nov2023_P1H__Q05__p07-07__m03__Circles-Arcs-and-Sectors",
+    "source_id": "Nov2023_P1H__Q05__p07-07__m03__Circles-Arcs-and-Sectors",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Circles, Arcs & Sectors",
+    "topic_order": 43,
+    "paper": "Nov 2023 P1H",
+    "question": 5,
+    "marks": 3,
+    "filename": "Nov2023_P1H__Q05__p07-07__m03__Circles-Arcs-and-Sectors.png",
+    "image": "assets/questions_all/all_q0513.png",
+    "question_text": "5 The diagram shows a shaded shape made from three identical semicircles, X, Y and Z X Y Z C A B D E Diagram NOT accurately drawn ABCDE is a straight line. AC is the diameter of semicircle X and B is the centre of semicircle X BD is the diameter of semicircle Y and C is the centre of semicircle Y CE is the diameter of semicircle Z and D is the centre of semicircle Z AC = BD = CE = 20 cm Work out the perimeter of the shaded shape. Give your answer correct to the nearest whole number. .............................................................. cm (Total for Question 5 is 3 marks)"
+  },
+  {
     "id": "all::Nov2023_P2H__Q20__p18-18__m04__Circles-Arcs-and-Sectors",
     "source_id": "Nov2023_P2H__Q20__p18-18__m04__Circles-Arcs-and-Sectors",
     "bank": "all",
@@ -9813,6 +9815,20 @@ window.QUESTION_DATA = [
     "filename": "Nov2023_P2H__Q20__p18-18__m04__Circles-Arcs-and-Sectors.png",
     "image": "assets/questions_all/all_q0649.png",
     "question_text": "20 The diagram shows equilateral triangle ABC with sides of length 10 cm. A circle is drawn inside the triangle. 10 cm A B E F C D Diagram NOT accurately drawn D, E and F are points on the circle. ADB, BEC and CFA are tangents to the circle. Calculate the total area of the regions shown shaded in the diagram. Give your answer correct to 3 significant figures. .............................................................. cm2 (Total for Question 20 is 4 marks)"
+  },
+  {
+    "id": "all::Nov2024_P1H__Q16__p17-17__m04__Circles-Arcs-and-Sectors",
+    "source_id": "Nov2024_P1H__Q16__p17-17__m04__Circles-Arcs-and-Sectors",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Circles, Arcs & Sectors",
+    "topic_order": 43,
+    "paper": "Nov 2024 P1H",
+    "question": 16,
+    "marks": 4,
+    "filename": "Nov2024_P1H__Q16__p17-17__m04__Circles-Arcs-and-Sectors.png",
+    "image": "assets/questions_all/all_q0804.png",
+    "question_text": "16 OAPB is a sector of a circle, centre O Diagram NOT accurately drawn 50\u00b0 A B O P Angle AOB 50 Area of triangle OAB = 120 2 cm Work out the area of the sector OAPB Give your answer correct to 3 significant figures. ................................................................ cm2 (Total for Question 16 is 4 marks)"
   },
   {
     "id": "all::Nov2024_P2H__Q25__p26-27__m05__Circles-Arcs-and-Sectors",
@@ -9843,6 +9859,20 @@ window.QUESTION_DATA = [
     "question_text": "15 AOB is a sector of a circle with centre O and radius 12 cm 12 cm Diagram NOT accurately drawn A B O 75 Work out the area of the sector. Give your answer correct to 3 significant figures. ...................................................... cm 2 (Total for Question 15 is 2 marks)"
   },
   {
+    "id": "all::Nov2025_P2H__Q06__p07-07__m05__Circles-Arcs-and-Sectors",
+    "source_id": "Nov2025_P2H__Q06__p07-07__m05__Circles-Arcs-and-Sectors",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Circles, Arcs & Sectors",
+    "topic_order": 43,
+    "paper": "Nov 2025 P2H",
+    "question": 6,
+    "marks": 5,
+    "filename": "Nov2025_P2H__Q06__p07-07__m05__Circles-Arcs-and-Sectors.png",
+    "image": "assets/questions_all/all_q0518.png",
+    "question_text": "6 A large circle with centre O contains 3 identical small circles. Each circle touches two other circles. A B O Diagram NOT accurately drawn A, O and B are the centres of the small circles. AOB is a straight line. The circumference of the large circle is 160 cm Work out the area of one small circle. Give your answer correct to 3 significant figures. ...................................................... cm 2 (Total for Question 6 is 5 marks)"
+  },
+  {
     "id": "all::Jan2020_P2H__Q26__p26-27__m06__Volume-and-Surface-Area",
     "source_id": "Jan2020_P2H__Q26__p26-27__m06__Volume-and-Surface-Area",
     "bank": "all",
@@ -9855,6 +9885,34 @@ window.QUESTION_DATA = [
     "filename": "Jan2020_P2H__Q26__p26-27__m06__Volume-and-Surface-Area.png",
     "image": "assets/questions_all/all_q0693.png",
     "question_text": "26 Here is a sector, AOB, of a circle with centre O and angle AOB = x\u00b0 Diagram NOT accurately drawn x\u00b0 A B O The sector can form the curved surface of a cone by joining OA to OB. Diagram NOT accurately drawn 25 cm A B O The height of the cone is 25 cm. The volume of the cone is 1600 cm3 Work out the value of x. Give your answer correct to the nearest whole number. ` x = ....................................................... (Total for Question 26 is 6 marks)"
+  },
+  {
+    "id": "all::Jan2020_P2HR__Q13__p13-13__m03__Volume-and-Surface-Area",
+    "source_id": "Jan2020_P2HR__Q13__p13-13__m03__Volume-and-Surface-Area",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Volume & Surface Area",
+    "topic_order": 44,
+    "paper": "Jan 2020 P2HR",
+    "question": 13,
+    "marks": 3,
+    "filename": "Jan2020_P2HR__Q13__p13-13__m03__Volume-and-Surface-Area.png",
+    "image": "assets/questions_all/all_q0745.png",
+    "question_text": "13 Diagram NOT accurately drawn A B D C 7 cm E 10 cm 12 cm h cm F G H The diagram shows a prism ABCDEFGH in which ABCD is a trapezium with BC parallel to AD and CDEF is a rectangle. BC = 7 cm AD = 12 cm DE = 10 cm The height of trapezium ABCD is h cm The volume of the prism is 608 cm3 Work out the value of h. h = ....................................................... (Total for Question 13 is 3 marks)"
+  },
+  {
+    "id": "all::Jan2021_P1H__Q03__p05-05__m04__Volume-and-Surface-Area",
+    "source_id": "Jan2021_P1H__Q03__p05-05__m04__Volume-and-Surface-Area",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Volume & Surface Area",
+    "topic_order": 44,
+    "paper": "Jan 2021 P1H",
+    "question": 3,
+    "marks": 4,
+    "filename": "Jan2021_P1H__Q03__p05-05__m04__Volume-and-Surface-Area.png",
+    "image": "assets/questions_all/all_q0077.png",
+    "question_text": "3 The diagram shows a container for water in the shape of a prism. Diagram NOT accurately drawn 125 cm 40 cm 30 cm 60 cm 85 cm 20 cm The rectangular base of the prism, shown shaded in the diagram, is horizontal. The container is completely full of water. Tuah is going to use a pump to empty the water from the container so that the volume of water in the container decreases at a constant rate. The pump starts to empty water from the container at 10 30 and at 12 00 the water level in the container has dropped by 20 cm. Find the time at which all the water has been pumped out of the container. ...................................................... (Total for Question 3 is 4 marks)"
   },
   {
     "id": "all::Jan2021_P1HR__Q05__p06-06__m04__Volume-and-Surface-Area",
@@ -9871,6 +9929,34 @@ window.QUESTION_DATA = [
     "question_text": "5 The diagram shows a cuboid and a cylinder. Diagram NOT accurately drawn x cm x cm 2x cm 12 cm 5 cm The dimensions of the cuboid are x cm by 12 cm by 5 cm. The volume of the cuboid is 270 cm 3 The radius of the cylinder is x cm. The height of the cylinder is 2x cm. (a) Work out the volume of the cylinder. Give your answer correct to the nearest whole number. ...................................................... cm 3 (3) (b) Change 1 m 3 to cm 3 ...................................................... cm 3 (1) (Total for Question 5 is 4 marks)"
   },
   {
+    "id": "all::Jan2021_P2H__Q17__p18-19__m07__Volume-and-Surface-Area",
+    "source_id": "Jan2021_P2H__Q17__p18-19__m07__Volume-and-Surface-Area",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Volume & Surface Area",
+    "topic_order": 44,
+    "paper": "Jan 2021 P2H",
+    "question": 17,
+    "marks": 7,
+    "filename": "Jan2021_P2H__Q17__p18-19__m07__Volume-and-Surface-Area.png",
+    "image": "assets/questions_all/all_q0449.png",
+    "question_text": "17 The diagram shows a solid prism ABCDEFGH. A 28 cm 24 cm 20 cm D E F G H B C Diagram NOT accurately drawn 37 cm The trapezium ABCD, in which AD is parallel to BC, is a cross section of the prism. The base ADEH of the prism is a horizontal plane. ADEH and BCFG are rectangles. The midpoint of BC is vertically above the midpoint of AD so that BA = CD. AD = 37 cm GF = 28 cm DE = 24 cm The perpendicular distance between edges AD and BC is 20 cm. (a) Work out the total surface area of the prism. ...................................................... cm2 (4) (b) Calculate the size of the angle between AF and the plane ADEH. Give your answer correct to one decimal place. ...................................................... \u00b0 (3) (Total for Question 17 is 7 marks)"
+  },
+  {
+    "id": "all::Jan2022_P1HR__Q10__p12-13__m06__Volume-and-Surface-Area",
+    "source_id": "Jan2022_P1HR__Q10__p12-13__m06__Volume-and-Surface-Area",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Volume & Surface Area",
+    "topic_order": 44,
+    "paper": "Jan 2022 P1HR",
+    "question": 10,
+    "marks": 6,
+    "filename": "Jan2022_P1HR__Q10__p12-13__m06__Volume-and-Surface-Area.png",
+    "image": "assets/questions_all/all_q0083.png",
+    "question_text": "10 Jonty has a storage container in the shape of a cuboid, as shown in the diagram. 3 m 2.5 m 12 m Diagram NOT accurately drawn Jonty is going to paint the outside of his storage container, apart from the base which is shown shaded in the diagram. He needs enough paint to cover the four sides and the top. Each tin of paint covers an area of 15 m2 The cost of each tin of paint recently increased by 10% After the increase, the cost of each tin of paint is \u00a326.95 Jonty says \u201cBefore the increase, I could have bought enough paint for less than \u00a3200\u201d Show that Jonty is correct. Show your working clearly. (Total for Question 10 is 6 marks)"
+  },
+  {
     "id": "all::Jun2022_P1H__Q22__p23-23__m05__Volume-and-Surface-Area",
     "source_id": "Jun2022_P1H__Q22__p23-23__m05__Volume-and-Surface-Area",
     "bank": "all",
@@ -9883,6 +9969,20 @@ window.QUESTION_DATA = [
     "filename": "Jun2022_P1H__Q22__p23-23__m05__Volume-and-Surface-Area.png",
     "image": "assets/questions_all/all_q0707.png",
     "question_text": "22 A solid is made from a cone and a hemisphere. 20 cm Diagram NOT accurately drawn The circular plane face of the hemisphere coincides with the circular base of the cone. The radius of the hemisphere and the radius of the circular base of the cone are both 20 cm. The curved surface area of the cone is 580\u03c0 cm2 The volume of the solid is k\u03c0 cm3 Work out the exact value of k k = ...................................................... (Total for Question 22 is 5 marks)"
+  },
+  {
+    "id": "all::Jun2023_P2HR__Q09__p10-11__m06__Volume-and-Surface-Area",
+    "source_id": "Jun2023_P2HR__Q09__p10-11__m06__Volume-and-Surface-Area",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Volume & Surface Area",
+    "topic_order": 44,
+    "paper": "Jun 2023 P2HR",
+    "question": 9,
+    "marks": 6,
+    "filename": "Jun2023_P2HR__Q09__p10-11__m06__Volume-and-Surface-Area.png",
+    "image": "assets/questions_all/all_q0763.png",
+    "question_text": "9 The diagram shows a rectangular sheet of metal ABCD A D B C 32\u00b0 50 cm Diagram NOT accurately drawn BD = 50 cm and angle BDC = 32\u00b0 Nasser joins side AD to side BC to form a cylinder. BC is the height of the cylinder. DC is the circumference of the cross section of the cylinder. Work out the volume, in cm3, of the cylinder. Give your answer correct to 3 significant figures. ...................................................... cm3 (Total for Question 9 is 6 marks)"
   },
   {
     "id": "all::Jun2023_P2HR__Q24__p25-25__m05__Volume-and-Surface-Area",
@@ -10081,6 +10181,34 @@ window.QUESTION_DATA = [
     "question_text": "3 Diagram NOT accurately drawn A R Q P C B 4 cm x cm 12 cm y cm 16.5 cm Triangle ABC is similar to triangle PQR AB = 4 cm PQ = 12 cm RQ = 16.5 cm AC = x cm PR = y cm (a) Calculate the length of BC ....................................................... cm (2) (b) Write down an expression for y in terms of x y = ....................................................... (1) (Total for Question 3 is 3 marks)"
   },
   {
+    "id": "all::Jun2022_P2HR__Q12__p14-14__m03__Congruence-Similarity-and-Geometrical-Proof",
+    "source_id": "Jun2022_P2HR__Q12__p14-14__m03__Congruence-Similarity-and-Geometrical-Proof",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Congruence, Similarity & Geometrical Proof",
+    "topic_order": 45,
+    "paper": "Jun 2022 P2HR",
+    "question": 12,
+    "marks": 3,
+    "filename": "Jun2022_P2HR__Q12__p14-14__m03__Congruence-Similarity-and-Geometrical-Proof.png",
+    "image": "assets/questions_all/all_q0501.png",
+    "question_text": "12 Diagram NOT accurately drawn A (2x + 9) cm 2x cm 1.2 cm 6 cm D E B C ACE and BCD are straight lines. AB is parallel to DE Work out the value of x x = ....................................................... (Total for Question 12 is 3 marks)"
+  },
+  {
+    "id": "all::Jun2024_P2HR__Q12__p14-14__m04__Congruence-Similarity-and-Geometrical-Proof",
+    "source_id": "Jun2024_P2HR__Q12__p14-14__m04__Congruence-Similarity-and-Geometrical-Proof",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Congruence, Similarity & Geometrical Proof",
+    "topic_order": 45,
+    "paper": "Jun 2024 P2HR",
+    "question": 12,
+    "marks": 4,
+    "filename": "Jun2024_P2HR__Q12__p14-14__m04__Congruence-Similarity-and-Geometrical-Proof.png",
+    "image": "assets/questions_all/all_q0507.png",
+    "question_text": "12 10 cm Diagram NOT accurately drawn E D C A B In the diagram, ABC and AED are straight lines. BE is parallel to CD AE = 10 cm and CD = 1.5 \u00d7 BE (a) Work out the length of ED \b .............................................................. cm (2) AB = (2x + 5) cm and BC = (3x - 5) cm (b) Work out the value of x x = .............................................................. (2) (Total for Question 12 is 4 marks)"
+  },
+  {
     "id": "all::Jun2025_P2H__Q05__p06-06__m04__Congruence-Similarity-and-Geometrical-Proof",
     "source_id": "Jun2025_P2H__Q05__p06-06__m04__Congruence-Similarity-and-Geometrical-Proof",
     "bank": "all",
@@ -10205,6 +10333,20 @@ window.QUESTION_DATA = [
     "filename": "Jan2022_P1H__Q17__p18-18__m04__Area-and-Volume-of-Similar-Shapes.png",
     "image": "assets/questions_all/all_q0729.png",
     "question_text": "17 A and B are two similar vases. Diagram NOT accurately drawn A B 10 cm 15 cm Vase A has height 10 cm. Vase B has height 15 cm. The difference between the volume of vase A and the volume of vase B is 1197 cm3 Calculate the volume of vase A ...................................................... cm3 (Total for Question 17 is 4 marks)"
+  },
+  {
+    "id": "all::Jan2022_P1HR__Q18__p22-22__m04__Area-and-Volume-of-Similar-Shapes",
+    "source_id": "Jan2022_P1HR__Q18__p22-22__m04__Area-and-Volume-of-Similar-Shapes",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Area & Volume of Similar Shapes",
+    "topic_order": 46,
+    "paper": "Jan 2022 P1HR",
+    "question": 18,
+    "marks": 4,
+    "filename": "Jan2022_P1HR__Q18__p22-22__m04__Area-and-Volume-of-Similar-Shapes.png",
+    "image": "assets/questions_all/all_q0168.png",
+    "question_text": "18 The three solids A, B and C are similar such that the surface area of A : the surface area of B = 4 : 9 and the volume of B : the volume of C = 125 : 343 Work out the ratio the height of A : the height of C Give your ratio in its simplest form. ...................................................... (Total for Question 18 is 4 marks)"
   },
   {
     "id": "all::Jun2022_P1HR__Q20__p22-22__m04__Area-and-Volume-of-Similar-Shapes",
@@ -10403,88 +10545,32 @@ window.QUESTION_DATA = [
     "question_text": "15 The diagram shows two right-angled triangles, DEF and EFG. 12 cm 40\u00b0 G E F D 28\u00b0 Diagram NOT accurately drawn Work out the length of EG. Give your answer correct to 3 significant figures. ...................................................... cm (Total for Question 15 is 4 marks)"
   },
   {
-    "id": "all::Jan2020_P2HR__Q05__p06-06__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "source_id": "Jan2020_P2HR__Q05__p06-06__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "id": "all::Jan2020_P2HR__Q04__p06-06__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "source_id": "Jan2020_P2HR__Q04__p06-06__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
     "bank": "all",
     "unit": "Geometry & Trigonometry",
     "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
     "topic_order": 47,
     "paper": "Jan 2020 P2HR",
-    "question": 5,
-    "marks": 3,
-    "filename": "Jan2020_P2HR__Q05__p06-06__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
-    "image": "assets/questions_all/all_q0744.png",
-    "question_text": "5 A plane takes 3 hours 36 minutes to fly from the Cayman Islands to New York. The plane flies a distance of 2470 km. Work out the average speed of the plane in km/h. Give your answer correct to the nearest whole number. ....................................................... km/h (Total for Question 5 is 3 marks)"
-  },
-  {
-    "id": "all::Jan2020_P2HR__Q13__p13-13__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "source_id": "Jan2020_P2HR__Q13__p13-13__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
-    "topic_order": 47,
-    "paper": "Jan 2020 P2HR",
-    "question": 13,
-    "marks": 3,
-    "filename": "Jan2020_P2HR__Q13__p13-13__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
-    "image": "assets/questions_all/all_q0745.png",
-    "question_text": "13 Diagram NOT accurately drawn A B D C 7 cm E 10 cm 12 cm h cm F G H The diagram shows a prism ABCDEFGH in which ABCD is a trapezium with BC parallel to AD and CDEF is a rectangle. BC = 7 cm AD = 12 cm DE = 10 cm The height of trapezium ABCD is h cm The volume of the prism is 608 cm3 Work out the value of h. h = ....................................................... (Total for Question 13 is 3 marks)"
-  },
-  {
-    "id": "all::Jan2021_P1HR__Q04__p05-05__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "source_id": "Jan2021_P1HR__Q04__p05-05__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
-    "topic_order": 47,
-    "paper": "Jan 2021 P1HR",
     "question": 4,
     "marks": 3,
-    "filename": "Jan2021_P1HR__Q04__p05-05__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
-    "image": "assets/questions_all/all_q0747.png",
-    "question_text": "4 A train journey from Paris to Amsterdam took 3 hours 24 minutes. The total distance the train travelled was 433.5 km. Work out the average speed of the train. Give your answer in kilometres per hour. ...................................................... km/h (Total for Question 4 is 3 marks)"
+    "filename": "Jan2020_P2HR__Q04__p06-06__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
+    "image": "assets/questions_all/all_q0784.png",
+    "question_text": "4 The diagram shows a rectangle and a diagonal of the rectangle. Diagram NOT accurately drawn 8.5 cm 5.6 cm Work out the length of the diagonal of the rectangle. Give your answer correct to 1 decimal place. ....................................................... cm (Total for Question 4 is 3 marks)"
   },
   {
-    "id": "all::Jan2021_P2H__Q01__p03-03__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "source_id": "Jan2021_P2H__Q01__p03-03__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "id": "all::Jan2021_P1H__Q10__p11-11__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "source_id": "Jan2021_P1H__Q10__p11-11__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
     "bank": "all",
     "unit": "Geometry & Trigonometry",
     "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
     "topic_order": 47,
-    "paper": "Jan 2021 P2H",
-    "question": 1,
-    "marks": 3,
-    "filename": "Jan2021_P2H__Q01__p03-03__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
-    "image": "assets/questions_all/all_q0748.png",
-    "question_text": "1 A train takes 6 hours 39 minutes to travel from New Delhi to Kanpur. The train travels a distance of 429 km. Work out the average speed of the train. Give your answer in km/h correct to one decimal place. ...................................................... km/h (Total for Question 1 is 3 marks)"
-  },
-  {
-    "id": "all::Jan2021_P2HR__Q02__p04-04__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "source_id": "Jan2021_P2HR__Q02__p04-04__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
-    "topic_order": 47,
-    "paper": "Jan 2021 P2HR",
-    "question": 2,
-    "marks": 3,
-    "filename": "Jan2021_P2HR__Q02__p04-04__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
-    "image": "assets/questions_all/all_q0749.png",
-    "question_text": "2 The diagram shows a rectangle ABCD and a semicircle with diameter AB where AB = 12 cm. The point E lies on DC and also on the semicircle. A 12 cm E D B C Diagram NOT accurately drawn Work out the area of the shaded region. Give your answer correct to 3 significant figures. ...................................................... cm 2 (Total for Question 2 is 3 marks)"
-  },
-  {
-    "id": "all::Jan2021_P2HR__Q03__p05-05__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "source_id": "Jan2021_P2HR__Q03__p05-05__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
-    "topic_order": 47,
-    "paper": "Jan 2021 P2HR",
-    "question": 3,
-    "marks": 3,
-    "filename": "Jan2021_P2HR__Q03__p05-05__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
-    "image": "assets/questions_all/all_q0750.png",
-    "question_text": "3 E = {21, 22, 23, 24, 25, 26, 27, 28, 29, 30} A = {22, 24, 26, 28, 30} B = {21, 24, 27, 30} (a) List the members of the set (i) A \u2229 B ............................................................................................................ (ii) A\u02b9 ............................................................................................................ (2) C = {23, 25, 29} (b) Using set notation, find an expression for C in terms of A and B. ...................................................... (1) (Total for Question 3 is 3 marks)"
+    "paper": "Jan 2021 P1H",
+    "question": 10,
+    "marks": 4,
+    "filename": "Jan2021_P1H__Q10__p11-11__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
+    "image": "assets/questions_all/all_q0445.png",
+    "question_text": "10 Here is isosceles triangle ABC. A 16 cm 65\u00b0 D B C Diagram NOT accurately drawn D is the midpoint of AC and DB = 16 cm. Angle DAB = 65\u00b0 Work out the perimeter of triangle ABC. Give your answer correct to one decimal place. ...................................................... cm (Total for Question 10 is 4 marks)"
   },
   {
     "id": "all::Jan2021_P2HR__Q13__p12-12__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
@@ -10499,6 +10585,20 @@ window.QUESTION_DATA = [
     "filename": "Jan2021_P2HR__Q13__p12-12__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
     "image": "assets/questions_all/all_q0751.png",
     "question_text": "13 The diagram shows two hot air balloons. A is a point on the base of one of the balloons and B is a point on the base of the other balloon. 500 m A B Diagram NOT accurately drawn The distance between A and B is 500 metres. The angle of depression of B from A is 23\u00b0 Calculate the vertical height of A above B. Give your answer correct to one decimal place. ...................................................... metres (Total for Question 13 is 3 marks)"
+  },
+  {
+    "id": "all::Jan2022_P1H__Q03__p04-04__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "source_id": "Jan2022_P1H__Q03__p04-04__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
+    "topic_order": 47,
+    "paper": "Jan 2022 P1H",
+    "question": 3,
+    "marks": 3,
+    "filename": "Jan2022_P1H__Q03__p04-04__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
+    "image": "assets/questions_all/all_q0660.png",
+    "question_text": "3 The diagram shows triangle ABC Diagram NOT accurately drawn A 8.4 cm 65\u00b0 B C Work out the length of the side AB Give your answer correct to 3 significant figures. ...................................................... cm (Total for Question 3 is 3 marks)"
   },
   {
     "id": "all::Jan2022_P1HR__Q03__p05-05__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
@@ -10529,20 +10629,6 @@ window.QUESTION_DATA = [
     "question_text": "14 A zip wire is shown as the dashed line AC in the diagram. A 2.6 m 12 m x C D B Diagram NOT accurately drawn The zip wire is supported by two vertical posts AB and CD standing on horizontal ground. CD = 2.6 m BD = 12 m The zip wire makes an angle x with the horizontal, as shown in the diagram. The design of the zip wire requires the angle x to be at least 5\u00b0 Work out the least possible height of the post AB Give your answer correct to 3 significant figures. ....................................................... m (Total for Question 14 is 3 marks)"
   },
   {
-    "id": "all::Jan2022_P2HR__Q09__p12-13__m05__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "source_id": "Jan2022_P2HR__Q09__p12-13__m05__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
-    "topic_order": 47,
-    "paper": "Jan 2022 P2HR",
-    "question": 9,
-    "marks": 5,
-    "filename": "Jan2022_P2HR__Q09__p12-13__m05__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
-    "image": "assets/questions_all/all_q0755.png",
-    "question_text": "9 In the diagram, ABC is a right-angled triangle and DEF is a semicircular arc. A B C D E F 3 cm 30\u00b0 24 cm Diagram NOT accurately drawn In triangle ABC BC = 24 cm angle ABC = 90\u00b0 angle BCA = 30\u00b0 The points D and F lie on AC so that DF is the diameter of the semicircular arc DEF The radius of the semicircular arc is 3 cm. Work out the length of AFEDC Give your answer correct to 2 significant figures. ....................................................... cm (Total for Question 9 is 5 marks)"
-  },
-  {
     "id": "all::Jan2022_P2HR__Q12__p16-16__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
     "source_id": "Jan2022_P2HR__Q12__p16-16__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
     "bank": "all",
@@ -10557,46 +10643,32 @@ window.QUESTION_DATA = [
     "question_text": "12 The diagram shows two vertical phone masts, AB and CD, on horizontal ground. 244 m A B C D 6.2 m 30.7 m Diagram NOT accurately drawn AB = 6.2 m AC = 244 m CD = 30.7 m Work out the size of the angle of depression of B from D Give your answer correct to one decimal place. .......................................................\u00b0 (Total for Question 12 is 3 marks)"
   },
   {
-    "id": "all::Jun2022_P1H__Q16__p17-17__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "source_id": "Jun2022_P1H__Q16__p17-17__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
-    "topic_order": 47,
-    "paper": "Jun 2022 P1H",
-    "question": 16,
-    "marks": 3,
-    "filename": "Jun2022_P1H__Q16__p17-17__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
-    "image": "assets/questions_all/all_q0757.png",
-    "question_text": "16 Without using a calculator, show that 12 2 1 2 2 32 12 5 - -( ) = + Show your working clearly. (Total for Question 16 is 3 marks)"
-  },
-  {
-    "id": "all::Jun2022_P2H__Q03__p05-05__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "source_id": "Jun2022_P2H__Q03__p05-05__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "id": "all::Jun2022_P2H__Q06__p07-07__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "source_id": "Jun2022_P2H__Q06__p07-07__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
     "bank": "all",
     "unit": "Geometry & Trigonometry",
     "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
     "topic_order": 47,
     "paper": "Jun 2022 P2H",
-    "question": 3,
+    "question": 6,
     "marks": 3,
-    "filename": "Jun2022_P2H__Q03__p05-05__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
-    "image": "assets/questions_all/all_q0758.png",
-    "question_text": "3 An aeroplane travelled from New York City to Los Angeles. The aeroplane travelled a distance of 3980 kilometres in 5 hours 24 minutes. Work out the average speed of the aeroplane. Give your answer in kilometres per hour correct to the nearest whole number. ...................................................... kilometres per hour (Total for Question 3 is 3 marks) 1 6 10"
+    "filename": "Jun2022_P2H__Q06__p07-07__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
+    "image": "assets/questions_all/all_q0664.png",
+    "question_text": "6 The diagram shows triangle PQR. P 42\u00b0 9.5 cm x cm R Q Diagram NOT accurately drawn Work out the value of x Give your answer correct to one decimal place. x = ...................................................... (Total for Question 6 is 3 marks)"
   },
   {
-    "id": "all::Jun2022_P2HR__Q16__p18-19__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "source_id": "Jun2022_P2HR__Q16__p18-19__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "id": "all::Jun2022_P2HR__Q10__p11-11__m05__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "source_id": "Jun2022_P2HR__Q10__p11-11__m05__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
     "bank": "all",
     "unit": "Geometry & Trigonometry",
     "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
     "topic_order": 47,
     "paper": "Jun 2022 P2HR",
-    "question": 16,
-    "marks": 3,
-    "filename": "Jun2022_P2HR__Q16__p18-19__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
-    "image": "assets/questions_all/all_q0759.png",
-    "question_text": "16 Here are nine graphs. y y y y y y y y y Graph A Graph D Graph G Graph B Graph E Graph H Graph C Graph F Graph I O O O O O O O O O x x x x x x x x x Complete the table below with the letter of the graph that could represent each given equation. Write each answer on the dotted line. Equation Graph y = -2x + 3 ....................................................... y = - 1 x ....................................................... y = tan x\u00b0 ....................................................... y = (x + 1)(x - 1)(x - 2) ....................................................... (Total for Question 16 is 3 marks)"
+    "question": 10,
+    "marks": 5,
+    "filename": "Jun2022_P2HR__Q10__p11-11__m05__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
+    "image": "assets/questions_all/all_q0608.png",
+    "question_text": "10 The diagram shows triangle ABP inside the regular hexagon ABCDEF Diagram NOT accurately drawn A D E F P B C AB = 5 cm BP = 2 cm Angle ABP = 90\u00b0 Work out the size of angle PAF Give your answer correct to 3 significant figures. .......................................................\u00b0 (Total for Question 10 is 5 marks)"
   },
   {
     "id": "all::Jun2023_P2H__Q12__p12-12__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
@@ -10613,74 +10685,60 @@ window.QUESTION_DATA = [
     "question_text": "12 The diagram shows right-angled triangle ABD Diagram NOT accurately drawn A B C D 38\u00b0 14 cm 8 cm AB = 14 cm AD = 8 cm C is the point on BD such that angle BAC = 38\u00b0 Work out the length of CD Give your answer correct to 3 significant figures. ....................................................... cm (Total for Question 12 is 4 marks)"
   },
   {
-    "id": "all::Jun2023_P2HR__Q03__p05-05__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "source_id": "Jun2023_P2HR__Q03__p05-05__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
-    "topic_order": 47,
-    "paper": "Jun 2023 P2HR",
-    "question": 3,
-    "marks": 3,
-    "filename": "Jun2023_P2HR__Q03__p05-05__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
-    "image": "assets/questions_all/all_q0762.png",
-    "question_text": "3 Anjali travels on the Eurostar train from Paris to Amsterdam. The distance the train travels between Paris and Amsterdam is 515 km. The time taken by the train to travel between Paris and Amsterdam is 3 hours 18 minutes. Work out the average speed of the train. Give your answer in km/h correct to the nearest whole number. ...................................................... km/h (Total for Question 3 is 3 marks)"
-  },
-  {
-    "id": "all::Jun2023_P2HR__Q09__p10-11__m06__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "source_id": "Jun2023_P2HR__Q09__p10-11__m06__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
-    "topic_order": 47,
-    "paper": "Jun 2023 P2HR",
-    "question": 9,
-    "marks": 6,
-    "filename": "Jun2023_P2HR__Q09__p10-11__m06__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
-    "image": "assets/questions_all/all_q0763.png",
-    "question_text": "9 The diagram shows a rectangular sheet of metal ABCD A D B C 32\u00b0 50 cm Diagram NOT accurately drawn BD = 50 cm and angle BDC = 32\u00b0 Nasser joins side AD to side BC to form a cylinder. BC is the height of the cylinder. DC is the circumference of the cross section of the cylinder. Work out the volume, in cm3, of the cylinder. Give your answer correct to 3 significant figures. ...................................................... cm3 (Total for Question 9 is 6 marks)"
-  },
-  {
-    "id": "all::Jun2024_P2H__Q03__p05-05__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "source_id": "Jun2024_P2H__Q03__p05-05__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "id": "all::Jun2024_P2H__Q05__p06-06__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "source_id": "Jun2024_P2H__Q05__p06-06__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
     "bank": "all",
     "unit": "Geometry & Trigonometry",
     "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
     "topic_order": 47,
     "paper": "Jun 2024 P2H",
-    "question": 3,
-    "marks": 3,
-    "filename": "Jun2024_P2H__Q03__p05-05__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
-    "image": "assets/questions_all/all_q0764.png",
-    "question_text": "3 A plane takes 9 hours 36 minutes to fly from New Delhi to Perth. The plane flies at an average speed of 820 km/h. Work out the total distance the plane flies. ...................................................... km (Total for Question 3 is 3 marks) 4 1"
-  },
-  {
-    "id": "all::Jun2024_P2HR__Q05__p07-07__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "source_id": "Jun2024_P2HR__Q05__p07-07__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
-    "topic_order": 47,
-    "paper": "Jun 2024 P2HR",
     "question": 5,
-    "marks": 4,
-    "filename": "Jun2024_P2HR__Q05__p07-07__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
-    "image": "assets/questions_all/all_q0765.png",
-    "question_text": "5 The diagram shows the design for a badge, which will be made using wire. The design is a circle inside a square ABCD D G C A E B Diagram NOT accurately drawn F H The circle touches the square at the points E, F, G and H The area of the square is 81 cm2 Calculate the total length of wire that will be needed to make the square and the circle. Give your answer correct to 3 significant figures. \b .......................................................... cm (Total for Question 5 is 4 marks)"
+    "marks": 3,
+    "filename": "Jun2024_P2H__Q05__p06-06__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
+    "image": "assets/questions_all/all_q0671.png",
+    "question_text": "5 The diagram shows triangle ABC Diagram NOT accurately drawn A B C x cm 34\u00b0 6.5 cm Work out the value of x Give your answer correct to one decimal place. x = ...................................................... (Total for Question 5 is 3 marks)"
   },
   {
-    "id": "all::May2021_P1H__Q01__p03-03__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "source_id": "May2021_P1H__Q01__p03-03__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "id": "all::Jun2025_P1HR__Q09__p09-09__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "source_id": "Jun2025_P1HR__Q09__p09-09__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
     "bank": "all",
     "unit": "Geometry & Trigonometry",
     "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
     "topic_order": 47,
-    "paper": "May 2021 P1H",
-    "question": 1,
+    "paper": "Jun 2025 P1HR",
+    "question": 9,
     "marks": 3,
-    "filename": "May2021_P1H__Q01__p03-03__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
-    "image": "assets/questions_all/all_q0766.png",
-    "question_text": "1 A plane flew from Madrid to Dubai. The distance the plane flew was 5658 km. The flight time was 8 hours 12 minutes. Work out the average speed of the plane. ....................................................... km/h (Total for Question 1 is 3 marks)"
+    "filename": "Jun2025_P1HR__Q09__p09-09__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
+    "image": "assets/questions_all/all_q0675.png",
+    "question_text": "9 The diagram shows triangle PQR 24\u00b0 6.5 cm P Q R Diagram NOT accurately drawn Work out the length of QR Give your answer correct to 3 significant figures. ........................................................... cm (Total for Question 9 is 3 marks)"
+  },
+  {
+    "id": "all::Jun2025_P2H__Q10__p10-10__m05__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "source_id": "Jun2025_P2H__Q10__p10-10__m05__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
+    "topic_order": 47,
+    "paper": "Jun 2025 P2H",
+    "question": 10,
+    "marks": 5,
+    "filename": "Jun2025_P2H__Q10__p10-10__m05__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
+    "image": "assets/questions_all/all_q0676.png",
+    "question_text": "10 ABD and ABC are right\u2010angled triangles. A B C D 12 cm 16 cm Diagram NOT accurately drawn AB = 16 cm BC = 12 cm AD = 1.5 \u00d7 AC Find the length of CD Give your answer correct to 3 significant figures. ........................................................ cm (Total for Question 10 is 5 marks)"
+  },
+  {
+    "id": "all::Jun2025_P2HR__Q11__p11-11__m05__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "source_id": "Jun2025_P2HR__Q11__p11-11__m05__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
+    "topic_order": 47,
+    "paper": "Jun 2025 P2HR",
+    "question": 11,
+    "marks": 5,
+    "filename": "Jun2025_P2HR__Q11__p11-11__m05__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
+    "image": "assets/questions_all/all_q0510.png",
+    "question_text": "11 The diagram shows two triangles, ADE and CDB D C B A E Diagram NOT accurately drawn ABD is a straight line. AE = 28 cm ED = 45 cm AB = 21 cm CD = 35 cm angle AED = angle CBD = 90\u00b0 Work out the area of triangle CDB Give your answer correct to 3 significant figures. ............................................................ cm2 (Total for Question 11 is 5 marks)"
   },
   {
     "id": "all::May2021_P2H__Q07__p08-08__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
@@ -10711,18 +10769,18 @@ window.QUESTION_DATA = [
     "question_text": "5 The diagram shows a shaded shape AEBCD made by removing triangle AEB from rectangle ABCD A D B C E 7.2 cm 5.4 cm 6 cm Diagram NOT accurately drawn AE = 7.2 cm BE = 5.4 cm BC = 6 cm angle AEB = 90\u00b0 Work out the perimeter of the shaded shape. ....................................................... cm (Total for Question 5 is 4 marks)"
   },
   {
-    "id": "all::May2023_P1HR__Q04__p06-06__m05__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "source_id": "May2023_P1HR__Q04__p06-06__m05__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "id": "all::May2024_P1H__Q11__p12-12__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "source_id": "May2024_P1H__Q11__p12-12__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
     "bank": "all",
     "unit": "Geometry & Trigonometry",
     "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
     "topic_order": 47,
-    "paper": "May 2023 P1HR",
-    "question": 4,
-    "marks": 5,
-    "filename": "May2023_P1HR__Q04__p06-06__m05__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
-    "image": "assets/questions_all/all_q0769.png",
-    "question_text": "4 The diagram shows a shape made up of three semicircles, enclosing a right\u2010angled triangle. A B C 6 cm 6 cm Diagram NOT accurately drawn AB, BC and CA are each the diameter of a semicircle. BC = CA = 6 cm. Work out the perimeter of the shape. Give your answer correct to one decimal place. ...................................................... cm (Total for Question 4 is 5 marks)"
+    "paper": "May 2024 P1H",
+    "question": 11,
+    "marks": 4,
+    "filename": "May2024_P1H__Q11__p12-12__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
+    "image": "assets/questions_all/all_q0191.png",
+    "question_text": "11 The diagram shows a roof support. A B C M 9 m 12 m Diagram NOT accurately drawn The roof support is made from four lengths of wood, AB, AC, BC and MC AC = BC = 9 m AB = 12 m angle AMC = 90\u00b0 Lewis is going to buy lengths of wood to make the roof support. The wood costs 21.50 euros per metre. Each length of wood he buys has to be a whole number of metres. Work out the total cost of the wood Lewis needs to buy. Show your working clearly. ...................................................... euros (Total for Question 11 is 4 marks)"
   },
   {
     "id": "all::Nov2021_P1H__Q02__p03-03__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
@@ -10739,34 +10797,6 @@ window.QUESTION_DATA = [
     "question_text": "2 Here is a right-angled triangle. 30 cm 52 cm h cm Diagram NOT accurately drawn Calculate the value of h. Give your answer correct to 3 significant figures. h = ...................................................... (Total for Question 2 is 3 marks)"
   },
   {
-    "id": "all::Nov2021_P1H__Q03__p04-04__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "source_id": "Nov2021_P1H__Q03__p04-04__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
-    "topic_order": 47,
-    "paper": "Nov 2021 P1H",
-    "question": 3,
-    "marks": 4,
-    "filename": "Nov2021_P1H__Q03__p04-04__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
-    "image": "assets/questions_all/all_q0771.png",
-    "question_text": "3 There are 54 fish in a tank. Some of the fish are white and the rest of the fish are red. Jeevan takes at random a fish from the tank. The probability that he takes a white fish is 4 9 (a) Work out the number of white fish originally in the tank. ....................................................... (2) Jeevan puts the fish he took out, back into the tank. He puts some more white fish into the tank. Jeevan takes at random a fish from the tank. The probability that he takes a white fish is now 1 2 (b) Work out the number of white fish Jeevan put into the tank. ....................................................... (2) (Total for Question 3 is 4 marks)"
-  },
-  {
-    "id": "all::Nov2021_P1H__Q05__p06-06__m05__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "source_id": "Nov2021_P1H__Q05__p06-06__m05__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
-    "topic_order": 47,
-    "paper": "Nov 2021 P1H",
-    "question": 5,
-    "marks": 5,
-    "filename": "Nov2021_P1H__Q05__p06-06__m05__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
-    "image": "assets/questions_all/all_q0772.png",
-    "question_text": "5 Yasmin has some identical rectangular tiles. Each tile is L cm by W cm. L cm Diagram NOT accurately drawn W cm Using 9 of her tiles, Yasmin makes rectangle ABCD, shown in the diagram below. A Diagram NOT accurately drawn B D C The area of ABCD is 1620 cm2 Work out the value of L and the value of W. L = ............................. W = ............................. (Total for Question 5 is 5 marks)"
-  },
-  {
     "id": "all::Nov2021_P1H__Q12__p12-12__m06__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
     "source_id": "Nov2021_P1H__Q12__p12-12__m06__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
     "bank": "all",
@@ -10781,18 +10811,32 @@ window.QUESTION_DATA = [
     "question_text": "12 The diagram shows a vertical cliff with a vertical radio mast on top of the cliff and a buoy in the sea. 100 m Diagram NOT accurately drawn d m 20\u00b0 B A The height of the cliff is 100 metres. The buoy is at the point B that is d metres from the base of the cliff. The angle of elevation from B to the top of the cliff is 20\u00b0 (a) Calculate the value of d. Give your answer correct to 3 significant figures. d = ....................................................... (3) The point A at the top of the radio mast is vertically above the top of the cliff. The angle of elevation from B to A is 25\u00b0 (b) Calculate the height of the radio mast. Give your answer correct to 3 significant figures. ....................................................... m (3) (Total for Question 12 is 6 marks)"
   },
   {
-    "id": "all::Nov2021_P2H__Q02__p04-04__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
-    "source_id": "Nov2021_P2H__Q02__p04-04__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "id": "all::Nov2023_P1H__Q10__p12-12__m05__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "source_id": "Nov2023_P1H__Q10__p12-12__m05__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
     "bank": "all",
     "unit": "Geometry & Trigonometry",
     "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
     "topic_order": 47,
-    "paper": "Nov 2021 P2H",
+    "paper": "Nov 2023 P1H",
+    "question": 10,
+    "marks": 5,
+    "filename": "Nov2023_P1H__Q10__p12-12__m05__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
+    "image": "assets/questions_all/all_q0689.png",
+    "question_text": "10 Here is triangle ABC 8 m 22 m 40\u00b0 A B C x\u00b0 Diagram NOT accurately drawn Work out the value of x Give your answer correct to one decimal place. Show your working clearly. x = .............................................................. (Total for Question 10 is 5 marks)"
+  },
+  {
+    "id": "all::Nov2023_P2H__Q02__p04-04__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "source_id": "Nov2023_P2H__Q02__p04-04__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
+    "topic_order": 47,
+    "paper": "Nov 2023 P2H",
     "question": 2,
     "marks": 4,
-    "filename": "Nov2021_P2H__Q02__p04-04__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
-    "image": "assets/questions_all/all_q0774.png",
-    "question_text": "2 Here are two rectangles, rectangle A and rectangle B. Diagram NOT accurately drawn 4 cm 5 cm (5 - x) cm (2x - 1) cm rectangle B rectangle A The area of rectangle B is twice the area of rectangle A. Work out the value of x. Show your working clearly. x = ....................................................... (Total for Question 2 is 4 marks)"
+    "filename": "Nov2023_P2H__Q02__p04-04__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
+    "image": "assets/questions_all/all_q0514.png",
+    "question_text": "2 The diagram shows triangle ABC and triangle ECD B w cm 14 cm 5 cm 10 cm 8 cm D C A E Diagram NOT accurately drawn ACD and EBC are straight lines. AB = 10 cm AC = 8 cm EB = 5 cm CD = 14 cm ED = w cm Work out the value of w Give your answer correct to one decimal place. w = .............................................................. (Total for Question 2 is 4 marks)"
   },
   {
     "id": "all::Nov2024_P1H__Q12__p14-14__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
@@ -10807,6 +10851,20 @@ window.QUESTION_DATA = [
     "filename": "Nov2024_P1H__Q12__p14-14__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
     "image": "assets/questions_all/all_q0776.png",
     "question_text": "12 ABC is a right-angled triangle. D is a point on BC 47\u00b0 24\u00b0 Diagram NOT accurately drawn D B A C AB = 4250 m angle BAD 47 angle BCA 24 Work out the length of DC Give your answer correct to the nearest integer. ............................................................... m (Total for Question 12 is 4 marks)"
+  },
+  {
+    "id": "all::Nov2024_P2H__Q03__p04-04__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "source_id": "Nov2024_P2H__Q03__p04-04__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
+    "topic_order": 47,
+    "paper": "Nov 2024 P2H",
+    "question": 3,
+    "marks": 3,
+    "filename": "Nov2024_P2H__Q03__p04-04__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
+    "image": "assets/questions_all/all_q0691.png",
+    "question_text": "3 The diagram shows triangle PQR 43\u00b0 Diagram NOT accurately drawn 8.6 cm x cm P Q R Work out the value of x Give your answer correct to one decimal place. x = .............................................................. (Total for Question 3 is 3 marks)"
   },
   {
     "id": "all::Nov2025_P1H__Q11__p09-09__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry",
@@ -10865,48 +10923,6 @@ window.QUESTION_DATA = [
     "question_text": "21 The diagram shows the prism ABCDEF with cross section triangle ABC. Diagram NOT accurately drawn C D F E A B Angle BEC = 40\u00b0 and angle ACB is obtuse. AC = 6 cm and CE = 13 cm The area of triangle ABC is 22 cm2 Calculate the length of AB. Give your answer correct to one decimal place. ...................................................... cm (Total for Question 21 is 6 marks)"
   },
   {
-    "id": "all::Jan2020_P2H__Q01__p03-03__m03__Sine-Cosine-Rule-and-Area-of-Triangles",
-    "source_id": "Jan2020_P2H__Q01__p03-03__m03__Sine-Cosine-Rule-and-Area-of-Triangles",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Sine, Cosine Rule & Area of Triangles",
-    "topic_order": 48,
-    "paper": "Jan 2020 P2H",
-    "question": 1,
-    "marks": 3,
-    "filename": "Jan2020_P2H__Q01__p03-03__m03__Sine-Cosine-Rule-and-Area-of-Triangles.png",
-    "image": "assets/questions_all/all_q0782.png",
-    "question_text": "1 (a) Simplify x x 9 2 ....................................................... (1) (b) Write 7 7 7 8 4 3 \u00d7 as a single power of 7 ....................................................... (2) (Total for Question 1 is 3 marks)"
-  },
-  {
-    "id": "all::Jan2020_P2HR__Q04__p06-06__m03__Sine-Cosine-Rule-and-Area-of-Triangles",
-    "source_id": "Jan2020_P2HR__Q04__p06-06__m03__Sine-Cosine-Rule-and-Area-of-Triangles",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Sine, Cosine Rule & Area of Triangles",
-    "topic_order": 48,
-    "paper": "Jan 2020 P2HR",
-    "question": 4,
-    "marks": 3,
-    "filename": "Jan2020_P2HR__Q04__p06-06__m03__Sine-Cosine-Rule-and-Area-of-Triangles.png",
-    "image": "assets/questions_all/all_q0784.png",
-    "question_text": "4 The diagram shows a rectangle and a diagonal of the rectangle. Diagram NOT accurately drawn 8.5 cm 5.6 cm Work out the length of the diagonal of the rectangle. Give your answer correct to 1 decimal place. ....................................................... cm (Total for Question 4 is 3 marks)"
-  },
-  {
-    "id": "all::Jan2021_P1HR__Q12__p14-14__m09__Sine-Cosine-Rule-and-Area-of-Triangles",
-    "source_id": "Jan2021_P1HR__Q12__p14-14__m09__Sine-Cosine-Rule-and-Area-of-Triangles",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Sine, Cosine Rule & Area of Triangles",
-    "topic_order": 48,
-    "paper": "Jan 2021 P1HR",
-    "question": 12,
-    "marks": 9,
-    "filename": "Jan2021_P1HR__Q12__p14-14__m09__Sine-Cosine-Rule-and-Area-of-Triangles.png",
-    "image": "assets/questions_all/all_q0785.png",
-    "question_text": "12 (a) Simplify (16e 10 f 6) 1 2 ...................................................... (2) (b) Write 2 1 4 2 3 x x + + - as a single fraction in its simplest form. ...................................................... (3) Given that 4 k + 3 = 16 \u00d7 2 k (c) find the value of k. Show your working clearly. k = ...................................................... (4) (Total for Question 12 is 9 marks)"
-  },
-  {
     "id": "all::Jan2022_P1H__Q09__p09-09__m04__Sine-Cosine-Rule-and-Area-of-Triangles",
     "source_id": "Jan2022_P1H__Q09__p09-09__m04__Sine-Cosine-Rule-and-Area-of-Triangles",
     "bank": "all",
@@ -10949,6 +10965,20 @@ window.QUESTION_DATA = [
     "question_text": "16 The diagram shows quadrilateral ABCD A B C D 36 cm 45 cm 28 cm 19 cm Diagram NOT accurately drawn The angle BCD is acute. Given that the area of triangle BCD = 405 cm2 work out the size of angle ABD Give your answer correct to one decimal place. .......................................................\u00b0 (Total for Question 16 is 5 marks)"
   },
   {
+    "id": "all::Jun2022_P1H__Q18__p19-19__m05__Sine-Cosine-Rule-and-Area-of-Triangles",
+    "source_id": "Jun2022_P1H__Q18__p19-19__m05__Sine-Cosine-Rule-and-Area-of-Triangles",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Sine, Cosine Rule & Area of Triangles",
+    "topic_order": 48,
+    "paper": "Jun 2022 P1H",
+    "question": 18,
+    "marks": 5,
+    "filename": "Jun2022_P1H__Q18__p19-19__m05__Sine-Cosine-Rule-and-Area-of-Triangles.png",
+    "image": "assets/questions_all/all_q0661.png",
+    "question_text": "18 Here is triangle ABC A C B 115\u00b0 x\u00b0 12.3 m 9.7 m Diagram NOT accurately drawn Work out the value of x Give your answer correct to 3 significant figures. x = ...................................................... (Total for Question 18 is 5 marks)"
+  },
+  {
     "id": "all::Jun2022_P1HR__Q17__p19-19__m05__Sine-Cosine-Rule-and-Area-of-Triangles",
     "source_id": "Jun2022_P1HR__Q17__p19-19__m05__Sine-Cosine-Rule-and-Area-of-Triangles",
     "bank": "all",
@@ -10963,18 +10993,18 @@ window.QUESTION_DATA = [
     "question_text": "17 Here is a parallelogram PQRS, in which angle SPQ is acute. Diagram NOT accurately drawn 3.8 cm 6.1 cm P S Q R PQ = 6.1 cm PS = 3.8 cm The area of the parallelogram is 18 cm 2 Work out the length of QS Give your answer correct to 3 significant figures. ....................................................... cm (Total for Question 17 is 5 marks)"
   },
   {
-    "id": "all::Jun2023_P2H__Q18__p18-18__m03__Sine-Cosine-Rule-and-Area-of-Triangles",
-    "source_id": "Jun2023_P2H__Q18__p18-18__m03__Sine-Cosine-Rule-and-Area-of-Triangles",
+    "id": "all::Jun2022_P2HR__Q15__p17-17__m03__Sine-Cosine-Rule-and-Area-of-Triangles",
+    "source_id": "Jun2022_P2HR__Q15__p17-17__m03__Sine-Cosine-Rule-and-Area-of-Triangles",
     "bank": "all",
     "unit": "Geometry & Trigonometry",
     "topic": "Sine, Cosine Rule & Area of Triangles",
     "topic_order": 48,
-    "paper": "Jun 2023 P2H",
-    "question": 18,
+    "paper": "Jun 2022 P2HR",
+    "question": 15,
     "marks": 3,
-    "filename": "Jun2023_P2H__Q18__p18-18__m03__Sine-Cosine-Rule-and-Area-of-Triangles.png",
-    "image": "assets/questions_all/all_q0792.png",
-    "question_text": "18 Here are 6 graphs. Graph A y x O Graph B y x O Graph C y x O Graph D y x O Graph E y x O Graph F y x O Complete the table below with the letter of the graph that could represent each given equation. Write your answers on the dotted lines. Equation Graph y = sin x ............................ y = - 3 x ............................ y = 4x3 - 5x ............................ (Total for Question 18 is 3 marks)"
+    "filename": "Jun2022_P2HR__Q15__p17-17__m03__Sine-Cosine-Rule-and-Area-of-Triangles.png",
+    "image": "assets/questions_all/all_q0667.png",
+    "question_text": "15 The diagram shows a kite ABCD Diagram NOT accurately drawn A 118\u00b0 6 cm 11 cm D B C AB = 6 cm BC = 11 cm Angle ABC = 118\u00b0 Calculate the area of the kite. Give your answer correct to 3 significant figures. ....................................................... cm 2 (Total for Question 15 is 3 marks)"
   },
   {
     "id": "all::Jun2023_P2H__Q22__p22-23__m05__Sine-Cosine-Rule-and-Area-of-Triangles",
@@ -10991,46 +11021,18 @@ window.QUESTION_DATA = [
     "question_text": "22 The diagram shows a triangle ABC and a flagpole BF A B F C 16 m 9 m 10 m 11 m Diagram NOT accurately drawn A, B and C are points on horizontal ground. BF is vertical. AB = 9 m BC = 11 m AC = 16 m BF = 10 m D is the point on AC such that angle BDC = 90\u00b0 Work out the size of the angle of elevation of the point F from the point D Give your answer correct to one decimal place. ....................................................... \u00b0 (Total for Question 22 is 5 marks)"
   },
   {
-    "id": "all::Jun2023_P2HR__Q02__p04-04__m04__Sine-Cosine-Rule-and-Area-of-Triangles",
-    "source_id": "Jun2023_P2HR__Q02__p04-04__m04__Sine-Cosine-Rule-and-Area-of-Triangles",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Sine, Cosine Rule & Area of Triangles",
-    "topic_order": 48,
-    "paper": "Jun 2023 P2HR",
-    "question": 2,
-    "marks": 4,
-    "filename": "Jun2023_P2HR__Q02__p04-04__m04__Sine-Cosine-Rule-and-Area-of-Triangles.png",
-    "image": "assets/questions_all/all_q0793.png",
-    "question_text": "2 Sandeep wants to buy some packets of pens and some boxes of pencils for his stationery shop. Each packet of pens contains 9 pens. Each box of pencils contains 12 pencils. Each packet of pens costs \u00a37.60 Each box of pencils costs \u00a34.80 Sandeep can only buy full packets of pens and full boxes of pencils. He wants to buy exactly the same number of pens as pencils. Work out the minimum amount Sandeep needs to pay. \u00a3...................................................... (Total for Question 2 is 4 marks)"
-  },
-  {
-    "id": "all::Jun2024_P2HR__Q16__p18-18__m02__Sine-Cosine-Rule-and-Area-of-Triangles",
-    "source_id": "Jun2024_P2HR__Q16__p18-18__m02__Sine-Cosine-Rule-and-Area-of-Triangles",
+    "id": "all::Jun2024_P2HR__Q15__p17-17__m03__Sine-Cosine-Rule-and-Area-of-Triangles",
+    "source_id": "Jun2024_P2HR__Q15__p17-17__m03__Sine-Cosine-Rule-and-Area-of-Triangles",
     "bank": "all",
     "unit": "Geometry & Trigonometry",
     "topic": "Sine, Cosine Rule & Area of Triangles",
     "topic_order": 48,
     "paper": "Jun 2024 P2HR",
-    "question": 16,
-    "marks": 2,
-    "filename": "Jun2024_P2HR__Q16__p18-18__m02__Sine-Cosine-Rule-and-Area-of-Triangles.png",
-    "image": "assets/questions_all/all_q0795.png",
-    "question_text": "16 Here are six graphs. A D B E O y x O y x O y x O y x O y x O y C F x Write down the letter of the graph that could have the equation (i) y x 1 \b .............................................................. (1) (ii) y = sin x\u00b0 \b .............................................................. (1) (Total for Question 16 is 2 marks)"
-  },
-  {
-    "id": "all::Jun2025_P1H__Q12__p12-12__m03__Sine-Cosine-Rule-and-Area-of-Triangles",
-    "source_id": "Jun2025_P1H__Q12__p12-12__m03__Sine-Cosine-Rule-and-Area-of-Triangles",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Sine, Cosine Rule & Area of Triangles",
-    "topic_order": 48,
-    "paper": "Jun 2025 P1H",
-    "question": 12,
+    "question": 15,
     "marks": 3,
-    "filename": "Jun2025_P1H__Q12__p12-12__m03__Sine-Cosine-Rule-and-Area-of-Triangles.png",
-    "image": "assets/questions_all/all_q0797.png",
-    "question_text": "12 Express 5 4 3 6 x x as a single fraction in its simplest form. ....................................................... (Total for Question 12 is 3 marks)"
+    "filename": "Jun2024_P2HR__Q15__p17-17__m03__Sine-Cosine-Rule-and-Area-of-Triangles.png",
+    "image": "assets/questions_all/all_q0508.png",
+    "question_text": "15 D E C B A 3 cm 6.5 cm Diagram NOT accurately drawn AB, BC and CD are three sides of a regular pentagon and CDE is a triangle. BCE is a straight line. CD = 6.5 cm CE = 3 cm Work out the area of triangle CDE Give your answer correct to 3 significant figures. \b .............................................................. cm2 (Total for Question 15 is 3 marks)"
   },
   {
     "id": "all::Jun2025_P1H__Q20__p19-19__m05__Sine-Cosine-Rule-and-Area-of-Triangles",
@@ -11089,46 +11091,32 @@ window.QUESTION_DATA = [
     "question_text": "15 The diagram shows isosceles triangle EFG Diagram NOT accurately drawn G F E 130\u00b0 EF = GF Angle EFG = 130\u00b0 The area of triangle EFG is 74 cm2 Work out the length of EF Give your answer correct to 3 significant figures. \b .............................................................. cm (Total for Question 15 is 3 marks)"
   },
   {
-    "id": "all::Nov2021_P1H__Q06__p07-07__m05__Sine-Cosine-Rule-and-Area-of-Triangles",
-    "source_id": "Nov2021_P1H__Q06__p07-07__m05__Sine-Cosine-Rule-and-Area-of-Triangles",
+    "id": "all::Nov2021_P2H__Q18__p21-21__m05__Sine-Cosine-Rule-and-Area-of-Triangles",
+    "source_id": "Nov2021_P2H__Q18__p21-21__m05__Sine-Cosine-Rule-and-Area-of-Triangles",
     "bank": "all",
     "unit": "Geometry & Trigonometry",
     "topic": "Sine, Cosine Rule & Area of Triangles",
     "topic_order": 48,
-    "paper": "Nov 2021 P1H",
-    "question": 6,
+    "paper": "Nov 2021 P2H",
+    "question": 18,
     "marks": 5,
-    "filename": "Nov2021_P1H__Q06__p07-07__m05__Sine-Cosine-Rule-and-Area-of-Triangles.png",
-    "image": "assets/questions_all/all_q0802.png",
-    "question_text": "6 Alison buys 5 apples and 3 pears for a total cost of $1.96 Greg buys 3 apples and 2 pears for a total cost of $1.22 Michael buys 10 apples and 10 pears. Work out how much Michael pays for his 10 apples and 10 pears. Show your working clearly. $...................................................... (Total for Question 6 is 5 marks)"
+    "filename": "Nov2021_P2H__Q18__p21-21__m05__Sine-Cosine-Rule-and-Area-of-Triangles.png",
+    "image": "assets/questions_all/all_q0688.png",
+    "question_text": "18 Here is a quadrilateral ABCD. A C 84\u00b0 D B 12 cm Diagram NOT accurately drawn 60\u00b0 7 cm 9 cm Calculate the area of quadrilateral ABCD. Give your answer correct to 3 significant figures. Show your working clearly. ....................................................... cm2 (Total for Question 18 is 5 marks)"
   },
   {
-    "id": "all::Nov2023_P1H__Q11__p13-13__m03__Sine-Cosine-Rule-and-Area-of-Triangles",
-    "source_id": "Nov2023_P1H__Q11__p13-13__m03__Sine-Cosine-Rule-and-Area-of-Triangles",
+    "id": "all::Nov2025_P1H__Q19__p15-15__m03__Sine-Cosine-Rule-and-Area-of-Triangles",
+    "source_id": "Nov2025_P1H__Q19__p15-15__m03__Sine-Cosine-Rule-and-Area-of-Triangles",
     "bank": "all",
     "unit": "Geometry & Trigonometry",
     "topic": "Sine, Cosine Rule & Area of Triangles",
     "topic_order": 48,
-    "paper": "Nov 2023 P1H",
-    "question": 11,
+    "paper": "Nov 2025 P1H",
+    "question": 19,
     "marks": 3,
-    "filename": "Nov2023_P1H__Q11__p13-13__m03__Sine-Cosine-Rule-and-Area-of-Triangles.png",
-    "image": "assets/questions_all/all_q0803.png",
-    "question_text": "11 Express 3 4 5 6 x x as a single fraction in its simplest terms. .............................................................. (Total for Question 11 is 3 marks)"
-  },
-  {
-    "id": "all::Nov2024_P1H__Q16__p17-17__m04__Sine-Cosine-Rule-and-Area-of-Triangles",
-    "source_id": "Nov2024_P1H__Q16__p17-17__m04__Sine-Cosine-Rule-and-Area-of-Triangles",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "Sine, Cosine Rule & Area of Triangles",
-    "topic_order": 48,
-    "paper": "Nov 2024 P1H",
-    "question": 16,
-    "marks": 4,
-    "filename": "Nov2024_P1H__Q16__p17-17__m04__Sine-Cosine-Rule-and-Area-of-Triangles.png",
-    "image": "assets/questions_all/all_q0804.png",
-    "question_text": "16 OAPB is a sector of a circle, centre O Diagram NOT accurately drawn 50\u00b0 A B O P Angle AOB 50 Area of triangle OAB = 120 2 cm Work out the area of the sector OAPB Give your answer correct to 3 significant figures. ................................................................ cm2 (Total for Question 16 is 4 marks)"
+    "filename": "Nov2025_P1H__Q19__p15-15__m03__Sine-Cosine-Rule-and-Area-of-Triangles.png",
+    "image": "assets/questions_all/all_q0692.png",
+    "question_text": "19 The diagram shows triangle ABC 10 cm 8 cm 9 cm Diagram NOT accurately drawn A B C AB = 8 cm BC = 10 cm CA = 9 cm Work out the size of angle BAC Give your answer correct to one decimal place. ......................................................\u00b0 (Total for Question 19 is 3 marks)"
   },
   {
     "id": "all::Jan2020_P1H__Q19__p23-23__m04__3D-Pythagoras-and-Trigonometry",
@@ -11143,20 +11131,6 @@ window.QUESTION_DATA = [
     "filename": "Jan2020_P1H__Q19__p23-23__m04__3D-Pythagoras-and-Trigonometry.png",
     "image": "assets/questions_all/all_q0805.png",
     "question_text": "19 The diagram shows a cuboid ABCDEFGH. A D 6 cm 5 cm 9 cm C F E H G B Diagram NOT accurately drawn EH = 9 cm, HG = 5 cm and GB = 6 cm. Work out the size of the angle between AH and the plane EFGH. Give your answer correct to 3 significant figures. .......................................................\u00b0 (Total for Question 19 is 4 marks)"
-  },
-  {
-    "id": "all::Jan2020_P2HR__Q09__p09-09__m03__3D-Pythagoras-and-Trigonometry",
-    "source_id": "Jan2020_P2HR__Q09__p09-09__m03__3D-Pythagoras-and-Trigonometry",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "3D Pythagoras & Trigonometry",
-    "topic_order": 49,
-    "paper": "Jan 2020 P2HR",
-    "question": 9,
-    "marks": 3,
-    "filename": "Jan2020_P2HR__Q09__p09-09__m03__3D-Pythagoras-and-Trigonometry.png",
-    "image": "assets/questions_all/all_q0806.png",
-    "question_text": "9 The diagram shows a box in the shape of a cuboid. Diagram NOT accurately drawn x cm 1.2 cm The box is put on a table. The face of the box in contact with the table has length 1.2 metres and width x metres. The force exerted by the box on the table is 27 newtons. The pressure on the table due to the box is 30 newtons/m2 pressure force area = Work out the value of x. x = ....................................................... (Total for Question 9 is 3 marks)"
   },
   {
     "id": "all::Jan2021_P2HR__Q22__p22-23__m04__3D-Pythagoras-and-Trigonometry",
@@ -11199,6 +11173,20 @@ window.QUESTION_DATA = [
     "filename": "Jan2022_P2HR__Q19__p24-24__m03__3D-Pythagoras-and-Trigonometry.png",
     "image": "assets/questions_all/all_q0807.png",
     "question_text": "19 ABCD is a horizontal rectangular field. A B C D E 12 m 8 m 18 m Diagram NOT accurately drawn A vertical pole, AE, is placed at the corner A of the field. AE = 12 m AB = 18 m AD = 8 m Calculate the size of the angle between EC and the plane ABCD Give your answer correct to one decimal place. .......................................................\u00b0 (Total for Question 19 is 3 marks)"
+  },
+  {
+    "id": "all::Jun2022_P1HR__Q18__p20-20__m04__3D-Pythagoras-and-Trigonometry",
+    "source_id": "Jun2022_P1HR__Q18__p20-20__m04__3D-Pythagoras-and-Trigonometry",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "3D Pythagoras & Trigonometry",
+    "topic_order": 49,
+    "paper": "Jun 2022 P1HR",
+    "question": 18,
+    "marks": 4,
+    "filename": "Jun2022_P1HR__Q18__p20-20__m04__3D-Pythagoras-and-Trigonometry.png",
+    "image": "assets/questions_all/all_q0460.png",
+    "question_text": "18 The diagram shows a cube ABCDEFGH with sides of length 6 cm. Diagram NOT accurately drawn A T 6 cm D E V F G B C H T is the midpoint of AB and V is the midpoint of CH Work out the distance from T to V in a straight line through the cube. Give your answer in the form a cm where a is an integer. ....................................................... cm (Total for Question 18 is 4 marks)"
   },
   {
     "id": "all::Jun2023_P2HR__Q22__p22-23__m05__3D-Pythagoras-and-Trigonometry",
@@ -11269,20 +11257,6 @@ window.QUESTION_DATA = [
     "filename": "May2021_P1H__Q22__p21-21__m04__3D-Pythagoras-and-Trigonometry.png",
     "image": "assets/questions_all/all_q0809.png",
     "question_text": "22 The diagram shows a triangular prism ABCDEF with a horizontal base ABEF. A Diagram NOT accurately drawn 12 cm D B C F E 15 cm 10 cm 12 cm AC = BC = FD = ED = 12 cm AB = 10 cm BE = 15 cm Calculate the size of the angle between AD and the base ABEF. Give your answer correct to 3 significant figures. ......................................................\u00b0 (Total for Question 22 is 4 marks)"
-  },
-  {
-    "id": "all::May2023_P1HR__Q11__p11-11__m03__3D-Pythagoras-and-Trigonometry",
-    "source_id": "May2023_P1HR__Q11__p11-11__m03__3D-Pythagoras-and-Trigonometry",
-    "bank": "all",
-    "unit": "Geometry & Trigonometry",
-    "topic": "3D Pythagoras & Trigonometry",
-    "topic_order": 49,
-    "paper": "May 2023 P1HR",
-    "question": 11,
-    "marks": 3,
-    "filename": "May2023_P1HR__Q11__p11-11__m03__3D-Pythagoras-and-Trigonometry.png",
-    "image": "assets/questions_all/all_q0810.png",
-    "question_text": "11 The diagram shows a block of iron in the shape of a cuboid. w cm 5 cm 4 cm Diagram NOT accurately drawn The block has length w cm, width 5 cm and height 4 cm The density of iron is 7.8 g / cm3 The mass of the block is 1950 g Work out the value of w w = ...................................................... (Total for Question 11 is 3 marks)"
   },
   {
     "id": "all::May2024_P1HR__Q22__p22-23__m06__3D-Pythagoras-and-Trigonometry",
@@ -11481,6 +11455,20 @@ window.QUESTION_DATA = [
     "question_text": "23 A P Q O B R Diagram NOT accurately drawn OAB is a triangle. P is the midpoint of OA Q is a point on OB ABR and PQR are straight lines. OA \u2192 = 12a OB \u2192 = 8b (a) Express AB \u2192 in terms of a and b ....................................................... (1) AB : BR = 1 : 2 OQ \u2192 = nb (b) Use a vector method to find the value of n n = ....................................................... (4) (Total for Question 23 is 5 marks)"
   },
   {
+    "id": "all::Jun2025_P2HR__Q18__p18-18__m03__Vectors",
+    "source_id": "Jun2025_P2HR__Q18__p18-18__m03__Vectors",
+    "bank": "all",
+    "unit": "Vectors & Transformation Geometry",
+    "topic": "Vectors",
+    "topic_order": 50,
+    "paper": "Jun 2025 P2HR",
+    "question": 18,
+    "marks": 3,
+    "filename": "Jun2025_P2HR__Q18__p18-18__m03__Vectors.png",
+    "image": "assets/questions_all/all_q0677.png",
+    "question_text": "18 OAB is a triangle. A P 4b 4a B O Diagram NOT accurately drawn = 4a = 4b P is the point on AB such that AP : PB = 1 : 3 (a) Write down in terms of a and b ........................................................... (1) (b) Express in terms of a and b Give your answer in its simplest form. ........................................................... (2) (Total for Question 18 is 3 marks)"
+  },
+  {
     "id": "all::May2021_P1H__Q26__p26-27__m05__Vectors",
     "source_id": "May2021_P1H__Q26__p26-27__m05__Vectors",
     "bank": "all",
@@ -11493,6 +11481,48 @@ window.QUESTION_DATA = [
     "filename": "May2021_P1H__Q26__p26-27__m05__Vectors.png",
     "image": "assets/questions_all/all_q0680.png",
     "question_text": "26 OACB is a trapezium. A P B O 3b C Diagram NOT accurately drawn 2a 5b OA \u2192 = 2a OB \u2192 = 5b AC \u2192 = 3b The diagonals, OC and AB, of the trapezium intersect at the point P. Find and simplify an expression, in terms of a and b, for OP \u2192 Show your working clearly. OP \u2192 = ...................................................... (Total for Question 26 is 5 marks)"
+  },
+  {
+    "id": "all::May2023_P1H__Q19__p20-21__m05__Vectors",
+    "source_id": "May2023_P1H__Q19__p20-21__m05__Vectors",
+    "bank": "all",
+    "unit": "Vectors & Transformation Geometry",
+    "topic": "Vectors",
+    "topic_order": 50,
+    "paper": "May 2023 P1H",
+    "question": 19,
+    "marks": 5,
+    "filename": "May2023_P1H__Q19__p20-21__m05__Vectors.png",
+    "image": "assets/questions_all/all_q0176.png",
+    "question_text": "19 A B N O P M a b Diagram NOT accurately drawn OMA, ONB, MPB and NPA are straight lines. M is the midpoint of OA ON : NB = 1 : 5 OM \u2192 = a ON \u2192 = b (a) Find in terms of a and b the vector AN \u2192 ....................................................... (1) (b) Use a vector method to find the ratio AP : PN AP : PN = ....................................................... (4) (Total for Question 19 is 5 marks)"
+  },
+  {
+    "id": "all::May2023_P1HR__Q19__p19-19__m05__Vectors",
+    "source_id": "May2023_P1HR__Q19__p19-19__m05__Vectors",
+    "bank": "all",
+    "unit": "Vectors & Transformation Geometry",
+    "topic": "Vectors",
+    "topic_order": 50,
+    "paper": "May 2023 P1HR",
+    "question": 19,
+    "marks": 5,
+    "filename": "May2023_P1HR__Q19__p19-19__m05__Vectors.png",
+    "image": "assets/questions_all/all_q0682.png",
+    "question_text": "19 The diagram shows a triangle ABC where A, B and C represent the positions of three towns. A C B Diagram NOT accurately drawn AB \u2192 = 7 2 \u001b \u001a\u0019 BC \u2192 = \u001b \u001a\u0019 3 5 Pru travels directly from A to B and then directly from B to C Yang travels directly from A to C Given that the values for AB \u2192 and BC \u2192 are in kilometres, work out how much further Pru travels than Yang travels. Give your answer in km, correct to one decimal place. ...................................................... km (Total for Question 19 is 5 marks)"
+  },
+  {
+    "id": "all::Nov2021_P1H__Q14__p14-15__m08__Vectors",
+    "source_id": "Nov2021_P1H__Q14__p14-15__m08__Vectors",
+    "bank": "all",
+    "unit": "Vectors & Transformation Geometry",
+    "topic": "Vectors",
+    "topic_order": 50,
+    "paper": "Nov 2021 P1H",
+    "question": 14,
+    "marks": 8,
+    "filename": "Nov2021_P1H__Q14__p14-15__m08__Vectors.png",
+    "image": "assets/questions_all/all_q0823.png",
+    "question_text": "14 ABCDEF and GHIJKL are regular hexagons each with centre O. Diagram NOT accurately drawn G L I H K J E D A B F C O a b GHIJKL is an enlargement of ABCDEF, with centre O and scale factor 2 OA \u2192 = a OB \u2192 = b (a) Write the following vectors, in terms of a and b. Simplify your answers. (i) AB \u2192 ....................................................... (1) (ii) KI \u2192 ....................................................... (2) (iii) LD \u2192 ....................................................... (2) The triangle OAB has an area of 5 cm2 (b) Calculate the area of the shaded region. ....................................................... cm2 (3) (Total for Question 14 is 8 marks)"
   },
   {
     "id": "all::Nov2023_P2H__Q22__p20-21__m05__Vectors",
@@ -11663,20 +11693,6 @@ window.QUESTION_DATA = [
     "question_text": "10 y x 14 13 12 11 10 9 8 7 6 5 4 3 2 1 O 14 13 12 11 10 9 8 7 6 5 4 3 2 1 On the grid, enlarge the shaded shape with scale factor 1 3 and centre (1, 7) (Total for Question 10 is 2 marks)"
   },
   {
-    "id": "all::Nov2021_P1H__Q14__p14-15__m08__Transformations",
-    "source_id": "Nov2021_P1H__Q14__p14-15__m08__Transformations",
-    "bank": "all",
-    "unit": "Vectors & Transformation Geometry",
-    "topic": "Transformations",
-    "topic_order": 51,
-    "paper": "Nov 2021 P1H",
-    "question": 14,
-    "marks": 8,
-    "filename": "Nov2021_P1H__Q14__p14-15__m08__Transformations.png",
-    "image": "assets/questions_all/all_q0823.png",
-    "question_text": "14 ABCDEF and GHIJKL are regular hexagons each with centre O. Diagram NOT accurately drawn G L I H K J E D A B F C O a b GHIJKL is an enlargement of ABCDEF, with centre O and scale factor 2 OA \u2192 = a OB \u2192 = b (a) Write the following vectors, in terms of a and b. Simplify your answers. (i) AB \u2192 ....................................................... (1) (ii) KI \u2192 ....................................................... (2) (iii) LD \u2192 ....................................................... (2) The triangle OAB has an area of 5 cm2 (b) Calculate the area of the shaded region. ....................................................... cm2 (3) (Total for Question 14 is 8 marks)"
-  },
-  {
     "id": "all::Nov2023_P2H__Q03__p05-05__m05__Transformations",
     "source_id": "Nov2023_P2H__Q03__p05-05__m05__Transformations",
     "bank": "all",
@@ -11773,20 +11789,6 @@ window.QUESTION_DATA = [
     "filename": "Jan2021_P1HR__Q02__p04-04__m04__Statistics-Toolkit.png",
     "image": "assets/questions_all/all_q0830.png",
     "question_text": "2 Given that a < b < c the four whole numbers a, a, b and c have a mode of 7 a median of 8.5 a mean of 9 Work out the value of a, the value of b and the value of c. a = ...................................................... b = ...................................................... c = ...................................................... (Total for Question 2 is 4 marks)"
-  },
-  {
-    "id": "all::Jan2021_P1HR__Q10__p11-11__m05__Statistics-Toolkit",
-    "source_id": "Jan2021_P1HR__Q10__p11-11__m05__Statistics-Toolkit",
-    "bank": "all",
-    "unit": "Statistics & Probability",
-    "topic": "Statistics Toolkit",
-    "topic_order": 52,
-    "paper": "Jan 2021 P1HR",
-    "question": 10,
-    "marks": 5,
-    "filename": "Jan2021_P1HR__Q10__p11-11__m05__Statistics-Toolkit.png",
-    "image": "assets/questions_all/all_q0831.png",
-    "question_text": "10 The diagram shows one face of a wall. This face is in the shape of a pentagon with exactly one line of symmetry. Diagram NOT accurately drawn 6 m 6 m 7 m 7 m 10 m Omondi is going to paint this face of the wall once. He has to buy all the paint that he needs to use. The paint in each tin of paint Omondi is going to buy will cover 16 m 2 of the face of the wall. Work out the least number of tins of paint Omondi will need to buy. Show your working clearly. ...................................................... (Total for Question 10 is 5 marks)"
   },
   {
     "id": "all::Jan2021_P2H__Q02__p04-04__m03__Statistics-Toolkit",
@@ -12713,20 +12715,6 @@ window.QUESTION_DATA = [
     "question_text": "11 The manager of a call centre asked the 120 people, who rang the call centre last week, how long they each waited before their call was answered. The table gives information about their replies. Time waited (t minutes) Frequency 0 < t < 5 8 5 < t < 10 15 10 < t < 15 17 15 < t < 20 28 20 < t < 25 33 25 < t < 30 19 (a) Complete the cumulative frequency table. Time waited (t minutes) Cumulative frequency 0 < t < 5 0 < t < 10 0 < t < 15 0 < t < 20 0 < t < 25 0 < t < 30 (1) (b) On the grid below, draw a cumulative frequency graph for your table. 0 5 10 15 20 25 30 120 110 100 90 80 70 60 50 40 30 20 10 0 Time waited (minutes) Cumulative frequency (2) (c) Use your graph to find an estimate for the median of the times waited. ...................................................... minutes (1) (d) Using your graph, find an estimate for the percentage of the 120 people who said that they waited longer than 23 minutes before their call was answered. Show your working clearly. ......................................................% (2) (Total for Question 11 is 6 marks)"
   },
   {
-    "id": "all::Jan2021_P2H__Q11__p13-13__m03__Cumulative-Frequency-Diagrams",
-    "source_id": "Jan2021_P2H__Q11__p13-13__m03__Cumulative-Frequency-Diagrams",
-    "bank": "all",
-    "unit": "Statistics & Probability",
-    "topic": "Cumulative Frequency Diagrams",
-    "topic_order": 54,
-    "paper": "Jan 2021 P2H",
-    "question": 11,
-    "marks": 3,
-    "filename": "Jan2021_P2H__Q11__p13-13__m03__Cumulative-Frequency-Diagrams.png",
-    "image": "assets/questions_all/all_q0899.png",
-    "question_text": "11 Simplify fully 9 18 4 9 6 10 2 t w t w \uf8eb \uf8ed\uf8ec \uf8f6 \uf8f8\uf8f7 - ...................................................... (Total for Question 11 is 3 marks)"
-  },
-  {
     "id": "all::Jan2022_P1H__Q12__p12-13__m06__Cumulative-Frequency-Diagrams",
     "source_id": "Jan2022_P1H__Q12__p12-13__m06__Cumulative-Frequency-Diagrams",
     "bank": "all",
@@ -12979,20 +12967,6 @@ window.QUESTION_DATA = [
     "question_text": "6 A bag contains only red beads, blue beads, green beads and yellow beads. The table gives the probabilities that, when a bead is taken at random from the bag, the bead will be blue or the bead will be yellow. Colour red blue green yellow Probability 0.24 0.31 The probability that the bead will be green is twice the probability that the bead will be red. Sofia takes at random a bead from the bag. She writes down the colour of the bead and puts the bead back into the bag. She does this 180 times. Work out an estimate for the number of times she takes a red bead from the bag. ....................................................... (Total for Question 6 is 4 marks)"
   },
   {
-    "id": "all::Jan2020_P2HR__Q03__p05-05__m04__Probability-Toolkit",
-    "source_id": "Jan2020_P2HR__Q03__p05-05__m04__Probability-Toolkit",
-    "bank": "all",
-    "unit": "Statistics & Probability",
-    "topic": "Probability Toolkit",
-    "topic_order": 55,
-    "paper": "Jan 2020 P2HR",
-    "question": 3,
-    "marks": 4,
-    "filename": "Jan2020_P2HR__Q03__p05-05__m04__Probability-Toolkit.png",
-    "image": "assets/questions_all/all_q0918.png",
-    "question_text": "3 Three tins, A, B and C, each contain buttons. Tin A contains x buttons. Tin B contains 4 times the number of buttons that tin A contains. Tin C contains 7 fewer buttons than tin A. The total number of buttons in the three tins is 137 Work out the number of buttons in tin C. ....................................................... (Total for Question 3 is 4 marks)"
-  },
-  {
     "id": "all::Jan2021_P2HR__Q21__p20-21__m06__Probability-Toolkit",
     "source_id": "Jan2021_P2HR__Q21__p20-21__m06__Probability-Toolkit",
     "bank": "all",
@@ -13019,6 +12993,20 @@ window.QUESTION_DATA = [
     "filename": "Jan2022_P1HR__Q02__p04-04__m02__Probability-Toolkit.png",
     "image": "assets/questions_all/all_q0919.png",
     "question_text": "2 Each time John plays a game, the probability that he wins the game is 0.65 John is going to play the game 300 times. Work out an estimate for the number of games that John wins. ...................................................... (Total for Question 2 is 2 marks)"
+  },
+  {
+    "id": "all::Jan2022_P2H__Q06__p08-08__m05__Probability-Toolkit",
+    "source_id": "Jan2022_P2H__Q06__p08-08__m05__Probability-Toolkit",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Probability Toolkit",
+    "topic_order": 55,
+    "paper": "Jan 2022 P2H",
+    "question": 6,
+    "marks": 5,
+    "filename": "Jan2022_P2H__Q06__p08-08__m05__Probability-Toolkit.png",
+    "image": "assets/questions_all/all_q0169.png",
+    "question_text": "6 A bag contains only pink sweets, white sweets, green sweets and red sweets. The table gives each of the probabilities that, when a sweet is taken at random from the bag, the sweet will be green or the sweet will be red. Sweet pink white green red Probability 0.2 0.35 The ratio number of pink sweets : number of white sweets = 2 : 1 There are 28 red sweets in the bag. Work out the number of white sweets in the bag. ....................................................... (Total for Question 6 is 5 marks)"
   },
   {
     "id": "all::Jan2022_P2HR__Q01__p03-03__m04__Probability-Toolkit",
@@ -13313,6 +13301,20 @@ window.QUESTION_DATA = [
     "filename": "MayNov2020_P1HR__Q23__p24-24__m04__Probability-Toolkit.png",
     "image": "assets/questions_all/all_q0940.png",
     "question_text": "23 In a bag, there are only \u00073 blue beads 4 white beads and x orange beads. Jean is going to take at random two beads from the bag. The probability that Jean will take two beads of the same colour is 3 8 Find the total number of beads in the bag. Show clear algebraic working. ....................................................... (Total for Question 23 is 4 marks) TOTAL FOR PAPER IS 100 MARKS"
+  },
+  {
+    "id": "all::Nov2021_P1H__Q03__p04-04__m04__Probability-Toolkit",
+    "source_id": "Nov2021_P1H__Q03__p04-04__m04__Probability-Toolkit",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Probability Toolkit",
+    "topic_order": 55,
+    "paper": "Nov 2021 P1H",
+    "question": 3,
+    "marks": 4,
+    "filename": "Nov2021_P1H__Q03__p04-04__m04__Probability-Toolkit.png",
+    "image": "assets/questions_all/all_q0771.png",
+    "question_text": "3 There are 54 fish in a tank. Some of the fish are white and the rest of the fish are red. Jeevan takes at random a fish from the tank. The probability that he takes a white fish is 4 9 (a) Work out the number of white fish originally in the tank. ....................................................... (2) Jeevan puts the fish he took out, back into the tank. He puts some more white fish into the tank. Jeevan takes at random a fish from the tank. The probability that he takes a white fish is now 1 2 (b) Work out the number of white fish Jeevan put into the tank. ....................................................... (2) (Total for Question 3 is 4 marks)"
   },
   {
     "id": "all::Nov2023_P1H__Q04__p06-06__m04__Probability-Toolkit",

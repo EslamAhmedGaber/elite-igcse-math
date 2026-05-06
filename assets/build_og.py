@@ -1,4 +1,4 @@
-"""Render assets/og-image.png at 1200x630 using Pillow.
+﻿"""Render assets/og-image.png at 1200x630 using Pillow.
 
 Run with the existing project venv:
     "C:/Users/Eslam/Documents/New project 5/classified_exam_problems/.venv/Scripts/python.exe" assets/build_og.py
@@ -90,7 +90,7 @@ def main():
     # Subhead
     draw.text((80, 380), "974 classified past-paper questions  ·  214 Q20+ expertise problems",
               font=font(26, bold=False), fill=(255, 255, 255, 235))
-    draw.text((80, 420), "Practice by topic. Track progress. Reach A* / 9.",
+    draw.text((80, 420), "1188 worked solutions. Practice by topic. Reach A* / 9.",
               font=font(22, bold=False), fill=(255, 255, 255, 199))
 
     # Teacher chip
@@ -113,7 +113,7 @@ def main():
 
     cx = (card[0] + card[2]) // 2
     draw.text((cx, 130), "FROM", anchor="mm", font=font(14, bold=True), fill=GOLD)
-    draw.text((cx, 195), "$10", anchor="mm", font=font(64, bold=True), fill=WHITE)
+    draw.text((cx, 195), "$12", anchor="mm", font=font(64, bold=True), fill=WHITE)
     draw.text((cx, 235), "per session", anchor="mm", font=font(15, bold=False), fill=(255, 255, 255, 200))
 
     draw.line((card[0] + 40, 268, card[2] - 40, 268), fill=(255, 255, 255, 80), width=1)
@@ -140,3 +140,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

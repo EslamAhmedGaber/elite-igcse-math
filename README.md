@@ -1,4 +1,4 @@
-# Elite IGCSE Mathematics — Operator Handbook
+﻿# Elite IGCSE Mathematics — Operator Handbook
 
 The live student website for **Edexcel IGCSE 4MA1 Higher Mathematics** by Dr Eslam Ahmed.
 
@@ -45,6 +45,7 @@ Pages served:
 - **Deploys automatically** on every push to `main`. Pages takes 30–90 seconds to rebuild.
 - **HTTPS** is provisioned by GitHub via Let's Encrypt and renews automatically.
 - **DNS** at Namecheap → 4 A records (185.199.108–111.153) on `@` and a CNAME on `www` → `eslamahmedgaber.github.io.`
+- If the browser says **Not secure**, open GitHub repo → **Settings → Pages**, wait until the custom-domain DNS check passes, then tick **Enforce HTTPS**. DNS is already correct in this repo setup; the final certificate switch is a GitHub Pages setting.
 
 > **Deploy rule:** push to `main` = ship. There's no preview environment. Always test locally first (see §6).
 
@@ -63,7 +64,7 @@ website/
 ├── app.js                  # Practice-bank logic (only loaded on practice.html)
 ├── lead.js                 # Lead-capture dialog + mobile nav (loaded on every page)
 ├── questions-data.js       # 1,188 questions metadata (~1 MB) — generated, do not hand-edit
-├── solutions-data.js       # Worked solutions for the questions (~360 KB) — see §5
+├── solutions-data.js       # Worked solutions for every question (~850 KB) — see §5
 │
 ├── CNAME                   # Custom-domain marker for GitHub Pages: "eliteigcse.com"
 ├── .nojekyll               # Tells GitHub Pages: serve files as-is, no Jekyll processing
@@ -79,9 +80,18 @@ website/
 │   └── questions_expertise/  # 214 cropped Q20+ question PNGs
 │
 └── downloads/
-    ├── classified_problems.pdf      # Full classified bank PDF (V2, ~97 MB)
-    └── Classified_Expertise.pdf     # Q20+ expertise book (~24 MB)
+    ├── Classified_Problems_Corrected_Watermarked.pdf      # Full classified bank, corrected + Dr Eslam watermark
+    ├── Classified_Expertise_Corrected_Watermarked.pdf     # Q20+ expertise book, corrected + Dr Eslam watermark
+    ├── classified_problems.pdf                            # Legacy filename kept for older links
+    └── Classified_Expertise.pdf                           # Legacy filename kept for older links
 ```
+
+Private teacher PDFs with answers are generated outside the public website at:
+
+- `C:\Users\Eslam\Documents\New project 5\classified_exam_problems\private_books\classified_problems_with_answers.pdf`
+- `C:\Users\Eslam\Documents\New project 5\classified_exam_problems\private_books\Classified_Expertise_with_answers.pdf`
+
+Do **not** copy those answer PDFs into `website/downloads/` unless you intentionally want to make them public.
 
 ---
 
@@ -93,13 +103,13 @@ All edits follow the same rhythm: **edit file → preview locally → commit →
 
 **Files:** `index.html` and `about.html` (pricing cards appear on both).
 
-Search for the dollar amount or `EGP / session` and replace. Example: change Group from `$10` to `$12`:
+Search for the dollar amount or `EGP / session` and replace. Example: change Group from `$12` to `$14`:
 
-1. Open `index.html`, find `<span class="p-now">$10</span>` in the Group card → change to `$12`.
-2. Update the matching strikethrough `<span class="p-old">$15</span>` if you want.
+1. Open `index.html`, find `<span class="p-now">$12</span>` in the Group card → change to `$14`.
+2. Update the matching strikethrough `<span class="p-old">$18</span>` if you want.
 3. Update the EGP line if the rate changed.
 4. **Repeat in `about.html`** — same card.
-5. Also check `assets/build_og.py` if the headline `$10` price needs to change in the social-share image, then re-run it (see §4.6).
+5. Also check `assets/build_og.py` if the headline `$12` price needs to change in the social-share image, then re-run it (see §4.6).
 
 ### 4.2 Edit the testimonials
 
@@ -196,11 +206,11 @@ Field rules:
 
 A question without an entry in `solutions-data.js` simply has no "Solution" button — there's no error, no warning. The entry is the only thing that turns the button on.
 
-> **Current coverage:** ~418 of 1,188 questions have solutions (~35%). The remaining ~770 still need to be written.
+> **Current coverage:** 1,188 of 1,188 questions have checked worked solutions. Full bank: 974 / 974. Expertise bank: 214 / 214.
 
 ### Path A — Quick edit directly in this repo (recommended for one-offs)
 
-Use this when you want to add a single solution fast, without touching the original Python pipeline.
+Use this only for a future correction or replacement, without touching the original Python pipeline.
 
 1. Open `practice.html` in your browser locally (see §6) and find the question you want to solve.
 2. Right-click the question card → Inspect → find the `data-id="…"` attribute. That's the question's full ID.
@@ -249,7 +259,7 @@ Workflow:
    ```
 6. Commit and push from this repo (see §7).
 
-Use Path B when adding many solutions in a session. Use Path A for single edits.
+Use Path B when regenerating many solutions or after topic corrections. Use Path A for small future fixes.
 
 > **Don't hand-edit `questions-data.js`.** It's regenerated from the upstream classifier and any manual change will be wiped the next time the dataset is rebuilt. Solutions are different — `solutions-data.js` is editable by hand or via the pipeline.
 
@@ -309,10 +319,10 @@ After push, you can verify the build:
 | Thing | Where to change it | Notes |
 |---|---|---|
 | Course prices (USD) | `index.html` + `about.html`, search `p-now` | Update the strikethrough `p-old` too |
-| Course prices (EGP) | Same files, search `p-egp` | Group 300 / Private 600 / Intensive 600 |
+| Course prices (EGP) | Same files, search `p-egp` | Group 350 / Private 700 / Intensive 850 |
 | Class size, frequency, duration | `index.html` + `about.html`, in `<ul class="p-meta">` | Per-card |
 | WhatsApp number | All HTML files + `lead.js` (`LEAD_PHONE`) | Currently `201120009622` |
-| OG image headline `$10` | `assets/build_og.py` then re-run | See §4.6 |
+| OG image headline `$12` | `assets/build_og.py` then re-run | See §4.6 |
 | Page titles & meta description | Top of each `.html` file | Important for Google |
 | Footer copy | All 4 HTML files (duplicated) | Single-source via JS template later if it gets painful |
 
@@ -346,3 +356,4 @@ After push, you can verify the build:
 WhatsApp / phone: +20 112 000 9622 · [`https://wa.me/201120009622`](https://wa.me/201120009622)
 
 Site built with Claude Code as collaborator. All teaching content, classification, solutions, and student outcomes belong to Dr Eslam.
+
