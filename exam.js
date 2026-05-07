@@ -301,6 +301,10 @@
       const solution = solutions[id]?.source || "";
       const savedScore = state.scores?.[id] ?? "";
       return `<article class="exam-question" data-id="${escapeHtml(id)}">
+        <div class="print-paper-brand">
+          <strong>Elite IGCSE Mathematics - Dr Eslam Ahmed</strong>
+          <span>Assistant Lecturer, Cairo University Faculty of Engineering | WhatsApp: 01120009622 | eliteigcse.com</span>
+        </div>
         <header>
           <div>
             <span>Question ${index + 1}</span>
@@ -314,6 +318,7 @@
           ${canMark ? `<label>Score <input data-score-id="${escapeHtml(id)}" type="number" min="0" max="${question.marks}" value="${savedScore}"> / ${question.marks}</label>` : `<span>Solutions hidden during exam</span>`}
         </footer>
         ${canMark ? `<details class="exam-solution"><summary>Show worked solution</summary>${formatSolutionText(solution)}</details>` : ""}
+        <div class="print-paper-footer">Prepared by Dr Eslam Ahmed | Assistant Lecturer, Cairo University Faculty of Engineering | 01120009622</div>
       </article>`;
     }).join("");
     if (window.MathJax?.typesetPromise && canMark) {

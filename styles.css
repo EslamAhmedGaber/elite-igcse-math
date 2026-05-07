@@ -969,6 +969,10 @@ p { margin: 4px 0 0; color: var(--muted); }
   color: var(--muted);
 }
 .print-area { display: none; }
+.print-paper-brand,
+.print-paper-footer {
+  display: none;
+}
 
 @media (max-width: 980px) {
   .shell { grid-template-columns: 1fr; padding: 10px; }
@@ -1009,9 +1013,39 @@ p { margin: 4px 0 0; color: var(--muted); }
 @media print {
   body[data-page="practice"] > *:not(.print-area) { display: none !important; }
   .print-area { display: block; }
-  .print-question { page-break-after: always; padding: 12mm; font-family: Arial, Helvetica, sans-serif; }
-  .print-question h2 { font-size: 16pt; margin: 0 0 5mm; }
-  .print-question img { width: 100%; max-height: 245mm; object-fit: contain; }
+  .print-question { page-break-after: always; padding: 10mm 12mm; font-family: Arial, Helvetica, sans-serif; }
+  .print-question h2 { font-size: 15pt; margin: 0 0 5mm; }
+  .print-question img { width: 100%; max-height: 232mm; object-fit: contain; }
+  .print-paper-brand {
+    display: flex;
+    justify-content: space-between;
+    gap: 8mm;
+    align-items: center;
+    margin-bottom: 5mm;
+    padding-bottom: 3mm;
+    border-bottom: 0.5mm solid #0f766e;
+    color: #12324a;
+  }
+  .print-paper-brand strong {
+    font-size: 12pt;
+    line-height: 1.2;
+  }
+  .print-paper-brand span {
+    max-width: 95mm;
+    color: #34495e;
+    font-size: 8.5pt;
+    line-height: 1.35;
+    text-align: right;
+  }
+  .print-paper-footer {
+    display: block;
+    margin-top: 4mm;
+    padding-top: 2mm;
+    border-top: 0.3mm solid #d8e1e8;
+    color: #607080;
+    font-size: 8.5pt;
+    text-align: center;
+  }
 }
 
 /* ===== v2: Trust panel ===== */
@@ -2853,8 +2887,13 @@ p { margin: 4px 0 0; color: var(--muted); }
     border: 0;
     border-radius: 0;
   }
+  body[data-page="exam"] .exam-question header {
+    padding: 4mm 0 3mm;
+    background: #fff;
+  }
   body[data-page="exam"] .exam-question img {
-    max-height: 245mm;
+    max-height: 220mm;
+    padding: 4mm 0 0;
   }
   body[data-page="exam"] .exam-question footer,
   body[data-page="exam"] .exam-solution {
