@@ -15,6 +15,7 @@ This document is the single source of truth for running and updating the site. R
 | **Update a testimonial** | §4.2 | Edit `<article class="testimonial light">` blocks in `about.html` |
 | **Replace your photo** | §4.5 | Drop new image at `assets/Mine.png` (overwrite), commit, push |
 | **Check saved student progress** | `/progress.html` | Name, target, topic sheet, backup export/import, WhatsApp summary |
+| **Activate free Google progress login** | `docs/firebase-free-setup.md` | Firebase Spark plan, Google login, Firestore rules, paste config |
 
 **Deploy = `git push`**. GitHub Pages rebuilds in 30–90 seconds. Live URL: **https://eliteigcse.com**.
 
@@ -77,6 +78,8 @@ website/
 ├── app.js                  # Practice-bank logic (only loaded on practice.html)
 ├── exam.js                 # Mock exam timer, self-marking, and Mistake Box integration
 ├── progress.js             # Saved profile, topic sheet, progress backup import/export
+├── cloud-progress.js       # Optional free Firebase Google login + cloud progress sync
+├── firebase-config.js      # Public Firebase config; disabled until you paste free project keys
 ├── lead.js                 # Lead-capture dialog + mobile nav (loaded on every page)
 ├── service-worker.js       # PWA install/offline shell + runtime cache for opened assets
 ├── manifest.webmanifest    # Installable app metadata

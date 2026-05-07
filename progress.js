@@ -298,6 +298,7 @@
       updatedAt: new Date().toISOString()
     };
     writeJSON(PROFILE_KEY, profile);
+    if (window.EliteCloud?.queueSync) window.EliteCloud.queueSync();
     els.saveStatus.textContent = "Saved. Your progress sheet is ready.";
     setTimeout(() => {
       els.saveStatus.textContent = "Progress saves automatically in this browser.";

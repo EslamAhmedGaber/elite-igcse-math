@@ -17,6 +17,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script defer src="questions-data.js"></script>
+  <script defer src="firebase-config.js"></script>
+  <script defer src="cloud-progress.js"></script>
   <script defer src="progress.js"></script>
   <script defer src="lead.js"></script>
 </head>
@@ -92,6 +94,21 @@
         <strong id="studyStreak">0</strong>
         <p>active days</p>
       </article>
+    </section>
+
+    <section class="cloud-sync-panel" id="cloudSyncPanel" aria-labelledby="cloudSyncTitle">
+      <div>
+        <span class="eyebrow">Free Cloud Sync</span>
+        <h2 id="cloudSyncTitle">Login with Google and keep progress across devices.</h2>
+        <p id="cloudStatus">Cloud login is ready in the code. Add the free Firebase config to activate it.</p>
+        <strong id="cloudUser">Local progress is still saving on this device.</strong>
+      </div>
+      <div class="cloud-sync-actions">
+        <button class="primary" id="googleLoginBtn" type="button">Continue with Google</button>
+        <button id="syncCloudBtn" type="button">Sync now</button>
+        <button id="restoreCloudBtn" type="button">Restore from cloud</button>
+        <button id="googleLogoutBtn" type="button" hidden>Log out</button>
+      </div>
     </section>
 
     <section class="progress-two-col">
@@ -177,7 +194,7 @@
       <div>
         <span class="eyebrow">Backup</span>
         <h2 id="backupTitle">Keep progress safe.</h2>
-        <p>The website is static, so progress is stored in the browser. Export a backup file before changing phone, clearing browser data, or using another device.</p>
+        <p>Progress saves locally first. When the free Google login is active, students can also sync it to the cloud. The export file remains a manual safety backup.</p>
       </div>
       <div class="progress-backup-actions">
         <button class="primary" id="exportProgressBtn" type="button">Export progress file</button>

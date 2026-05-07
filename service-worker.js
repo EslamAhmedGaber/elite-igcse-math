@@ -1,5 +1,5 @@
-const CACHE_VERSION = "elite-igcse-v9";
-const RUNTIME_CACHE = "elite-igcse-runtime-v9";
+const CACHE_VERSION = "elite-igcse-v10";
+const RUNTIME_CACHE = "elite-igcse-runtime-v10";
 
 const APP_SHELL = [
   "./",
@@ -17,6 +17,8 @@ const APP_SHELL = [
   "offline.html",
   "styles.css",
   "lead.js",
+  "firebase-config.js",
+  "cloud-progress.js",
   "app.js",
   "exam.js",
   "checkup.js",

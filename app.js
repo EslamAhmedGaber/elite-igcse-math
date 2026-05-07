@@ -346,6 +346,7 @@ function redraw() {
   localStorage.setItem("selectedExpertiseQuestions", JSON.stringify([...selected]));
   localStorage.setItem("solvedExpertiseQuestions", JSON.stringify([...solved]));
   saveReviewItems();
+  if (window.EliteCloud?.queueSync) window.EliteCloud.queueSync();
   updateProgressSnapshot(selectedActive, solvedActive);
   updateReviewSnapshot(activeIds);
   updateHelper(selectedActive, solvedActive);
