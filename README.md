@@ -16,6 +16,7 @@ This document is the single source of truth for running and updating the site. R
 | **Replace your photo** | §4.5 | Drop new image at `assets/Mine.png` (overwrite), commit, push |
 | **Check saved student progress** | `/progress.html` | Name, target, topic sheet, backup export/import, WhatsApp summary |
 | **Activate free Google progress login** | `docs/firebase-free-setup.md` | Firebase Spark plan, Google login, Firestore rules, paste config |
+| **Fast Firebase checklist** | `docs/firebase-activation-short.md` | Short click-by-click activation checklist |
 
 **Deploy = `git push`**. GitHub Pages rebuilds in 30–90 seconds. Live URL: **https://eliteigcse.com**.
 

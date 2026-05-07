@@ -80,15 +80,7 @@ Make sure these exist:
 Then set these rules:
 
 ```txt
-rules_version = '2';
-
-service cloud.firestore {
-  match /databases/{database}/documents {
-    match /student_progress/{userId} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
-    }
-  }
-}
+Copy the contents of docs/firestore.rules
 ```
 
 These rules mean each student can only read/write their own progress.
