@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Elite IGCSE Mathematics — TikTok Promo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* =========================================================
+       TikTok promo — 28-second auto-playing motion graphic.
+       Open in phone landscape -> screen-record -> TikTok.
+       Designed for 9:16 portrait viewport (1080x1920).
+       Total runtime: 28s exactly (7 scenes × 4s).
+       ========================================================= */
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; width: 100%; overflow: hidden; }
+    body {
+      font-family: 'Sora', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(160deg, #12324a 0%, #0a5651 55%, #0f766e 100%);
+      color: #fff;
+      position: relative;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* dotted texture overlay */
+    body::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.08) 1px, transparent 0);
+      background-size: 28px 28px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* small gold accent ribbon top-left, persistent */
+    .corner-brand {
+      position: absolute;
+      top: 6vmin;
+      left: 6vmin;
+      z-index: 5;
+      display: flex; align-items: center; gap: 8px;
+      animation: subtleBlink 4s ease-in-out infinite;
+    }
+    .corner-brand .dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: #f4cb61;
+      box-shadow: 0 0 12px rgba(244, 203, 97, 0.7);
+    }
+    .corner-brand .label {
+      font-size: 14px; font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #f4cb61;
+      text-transform: uppercase;
+    }
+    @keyframes subtleBlink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.85; }
+    }
+
+    /* progress bar at top — visual feedback for the 28-second timeline */
+    .timeline {
+      position: absolute;
+      top: 0; left: 0;
+      height: 4px;
+      background: #f4cb61;
+      z-index: 5;
+      animation: timelineGrow 28s linear forwards;
+    }
+    @keyframes timelineGrow {
+      from { width: 0%; }
+      to { width: 100%; }
+    }
+
+    /* Each scene fills the viewport, fades in/out */
+    .scene {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 12vmin 8vmin;
+      opacity: 0;
+      pointer-events: none;
+      animation-fill-mode: forwards;
+      z-index: 1;
+      text-align: center;
+    }
+
+    /* Common fade-in / fade-out template:
+       scene runs for 4s; in 0.4s, hold ~3.2s, out 0.4s. */
+    @keyframes sceneFade {
+      0%   { opacity: 0; transform: scale(0.96); }
+      10%  { opacity: 1; transform: scale(1); }
+      90%  { opacity: 1; transform: scale(1); }
+      100% { opacity: 0; transform: scale(1.04); }
+    }
+
+    .scene-1 { animation: sceneFade 4s ease 0s forwards; }
+    .scene-2 { animation: sceneFade 4s ease 4s forwards; }
+    .scene-3 { animation: sceneFade 4s ease 8s forwards; }
+    .scene-4 { animation: sceneFade 4s ease 12s forwards; }
+    .scene-5 { animation: sceneFade 4s ease 16s forwards; }
+    .scene-6 { animation: sceneFade 4s ease 20s forwards; }
+    .scene-7 { animation: sceneFade 4s ease 24s forwards; }
+
+    /* shared building blocks */
+    .eyebrow {
+      font-size: 3.2vmin;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: #f4cb61;
+      text-transform: uppercase;
+      margin-bottom: 3vmin;
+    }
+    .scene h2 {
+      font-size: 6.5vmin;
+      font-weight: 800;
+      line-height: 1.15;
+      max-width: 90vw;
+    }
+    .scene h2 strong { color: #f4cb61; }
+    .scene p {
+      font-size: 4vmin;
+      font-weight: 500;
+      color: rgba(255,255,255,0.85);
+      margin-top: 3vmin;
+      max-width: 80vw;
+      line-height: 1.45;
+    }
+
+    /* ============================
+       Scene 1: BIG STAT
+       ============================ */
+    .big-number {
+      font-size: 28vmin;
+      font-weight: 900;
+      line-height: 0.9;
+      letter-spacing: -1.5vmin;
+      color: #f4cb61;
+      text-shadow: 0 8px 36px rgba(244, 203, 97, 0.35);
+      margin-bottom: 1vmin;
+      font-variant-numeric: tabular-nums;
+    }
+    .scene-1 .ribbon {
+      display: inline-block;
+      margin-top: 4vmin;
+      padding: 1.2vmin 3vmin;
+      border-radius: 999px;
+      background: rgba(244, 203, 97, 0.15);
+      border: 1.5px solid rgba(244, 203, 97, 0.45);
+      color: #f4cb61;
+      font-size: 3.4vmin;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    /* ============================
+       Scene 2: FREE STAMP
+       ============================ */
+    .free-stamp {
+      font-size: 30vmin;
+      font-weight: 900;
+      letter-spacing: 0.5vmin;
+      color: #f4cb61;
+      text-shadow: 0 8px 40px rgba(244, 203, 97, 0.4);
+      transform: rotate(-6deg);
+      animation: stampSlam 1s cubic-bezier(0.34, 1.56, 0.64, 1) 4.2s backwards;
+    }
+    @keyframes stampSlam {
+      0%   { opacity: 0; transform: scale(3) rotate(-6deg); }
+      40%  { opacity: 1; transform: scale(0.9) rotate(-6deg); }
+      60%  { transform: scale(1.05) rotate(-6deg); }
+      100% { transform: scale(1) rotate(-6deg); }
+    }
+    .scene-2 .sub-bullets {
+      display: flex; flex-direction: column;
+      gap: 1.5vmin;
+      margin-top: 5vmin;
+      font-size: 4.5vmin;
+      font-weight: 700;
+      color: rgba(255,255,255,0.92);
+    }
+
+    /* ============================
+       Scene 3: MOCK EXAM
+       ============================ */
+    .feature-icon {
+      font-size: 14vmin;
+      margin-bottom: 3vmin;
+      filter: drop-shadow(0 4px 18px rgba(244, 203, 97, 0.4));
+    }
+    .timer-display {
+      margin-top: 4vmin;
+      font-family: 'Sora', monospace;
+      font-size: 12vmin;
+      font-weight: 800;
+      color: #f4cb61;
+      letter-spacing: 0.4vmin;
+      font-variant-numeric: tabular-nums;
+    }
+    .timer-label {
+      margin-top: 1vmin;
+      font-size: 3vmin;
+      letter-spacing: 2px;
+      color: rgba(255,255,255,0.7);
+      text-transform: uppercase;
+    }
+
+    /* ============================
+       Scene 4: WORKED SOLUTIONS
+       ============================ */
+    .equation-card {
+      background: rgba(255,255,255,0.08);
+      border: 1.5px solid rgba(255,255,255,0.18);
+      border-radius: 4vmin;
+      padding: 5vmin 6vmin;
+      margin-top: 4vmin;
+      backdrop-filter: blur(8px);
+      max-width: 80vw;
+    }
+    .equation-card .step {
+      font-size: 4.5vmin;
+      font-weight: 600;
+      line-height: 1.6;
+      color: #fff;
+      font-family: 'Cambria Math', 'STIX Two Math', 'Times New Roman', serif;
+    }
+    .equation-card .step + .step {
+      margin-top: 1.5vmin;
+      color: rgba(255,255,255,0.78);
+    }
+
+    /* ============================
+       Scene 5: VISUAL NOTES
+       ============================ */
+    .pdf-stack {
+      position: relative;
+      width: 50vmin;
+      height: 60vmin;
+      margin-top: 2vmin;
+    }
+    .pdf-card {
+      position: absolute;
+      inset: 0;
+      background: #fff;
+      color: #12324a;
+      border-radius: 3vmin;
+      padding: 5vmin 4vmin;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+      display: flex;
+      flex-direction: column;
+      gap: 2vmin;
+    }
+    .pdf-card.back  { transform: rotate(-7deg) translateX(-3vmin) translateY(2vmin); opacity: 0.5; }
+    .pdf-card.mid   { transform: rotate(3deg)  translateX(2vmin)  translateY(0vmin); opacity: 0.75; }
+    .pdf-card.front { transform: rotate(-1deg) translateX(0)      translateY(-2vmin); }
+    .pdf-card .title-row { display: flex; align-items: center; gap: 1.5vmin; }
+    .pdf-card .pdf-tag {
+      background: #b13f55;
+      color: #fff;
+      font-size: 1.6vmin;
+      font-weight: 800;
+      padding: 0.5vmin 1.2vmin;
+      border-radius: 4px;
+      letter-spacing: 1px;
+    }
+    .pdf-card h3 { font-size: 3.6vmin; line-height: 1.15; color: #12324a; }
+    .pdf-card .lines { display: flex; flex-direction: column; gap: 1vmin; margin-top: auto; }
+    .pdf-card .line { background: #d8e1e8; height: 1.2vmin; border-radius: 999px; }
+    .pdf-card .line.short { width: 60%; }
+
+    /* ============================
+       Scene 6: TEACHER
+       ============================ */
+    .portrait {
+      width: 48vmin;
+      height: 48vmin;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1vmin solid #f4cb61;
+      box-shadow: 0 14px 50px rgba(0,0,0,0.45), 0 0 0 2vmin rgba(244, 203, 97, 0.12);
+      animation: portraitReveal 1s cubic-bezier(0.22, 1, 0.36, 1) 20.2s backwards;
+    }
+    @keyframes portraitReveal {
+      0%   { transform: scale(0.4); opacity: 0; }
+      100% { transform: scale(1);   opacity: 1; }
+    }
+    .scene-6 .name {
+      margin-top: 5vmin;
+      font-size: 7vmin;
+      font-weight: 800;
+      color: #fff;
+    }
+    .scene-6 .role {
+      margin-top: 1vmin;
+      font-size: 3.6vmin;
+      font-weight: 600;
+      color: #f4cb61;
+      letter-spacing: 0.5px;
+    }
+    .scene-6 .uni {
+      margin-top: 0.6vmin;
+      font-size: 3vmin;
+      color: rgba(255,255,255,0.78);
+    }
+
+    /* ============================
+       Scene 7: FINAL CTA
+       ============================ */
+    .url-big {
+      font-size: 12vmin;
+      font-weight: 900;
+      letter-spacing: -0.5vmin;
+      color: #f4cb61;
+      animation: pulse 1.5s ease-in-out 24s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50%      { transform: scale(1.04); }
+    }
+    .cta-line {
+      margin-top: 4vmin;
+      font-size: 4.5vmin;
+      font-weight: 700;
+      color: #fff;
+    }
+    .wa-line {
+      margin-top: 2vmin;
+      font-size: 3.6vmin;
+      color: rgba(255,255,255,0.85);
+      display: flex; align-items: center; gap: 1.5vmin;
+    }
+    .wa-icon {
+      display: inline-flex;
+      width: 5vmin; height: 5vmin;
+      border-radius: 50%;
+      background: #25d366;
+      align-items: center; justify-content: center;
+      font-size: 2.8vmin;
+    }
+
+    /* hide scenes from search/screen readers - it's purely visual */
+    .scene { speak: none; }
+
+    /* If someone opens this page on desktop, give it a max
+       sensible portrait window so it still looks right. */
+    @media (min-aspect-ratio: 9/16) {
+      body {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+      }
+      body::before { display: none; }
+      .stage {
+        position: relative;
+        width: calc(100vh * 9 / 16);
+        height: 100vh;
+        background: linear-gradient(160deg, #12324a 0%, #0a5651 55%, #0f766e 100%);
+        overflow: hidden;
+      }
+      .stage::before {
+        content: '';
+        position: absolute; inset: 0;
+        background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.08) 1px, transparent 0);
+        background-size: 28px 28px;
+        pointer-events: none;
+      }
+    }
+    @media (max-aspect-ratio: 9/16) {
+      .stage { position: absolute; inset: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stage">
+
+    <!-- persistent timeline + brand corner -->
+    <div class="timeline" aria-hidden="true"></div>
+    <div class="corner-brand" aria-hidden="true">
+      <span class="dot"></span>
+      <span class="label">Elite IGCSE Mathematics</span>
+    </div>
+
+    <!-- =================================================
+         SCENE 1 (0:00 – 0:04)  —  BIG STAT HOOK
+         ================================================= -->
+    <section class="scene scene-1">
+      <span class="eyebrow">Edexcel IGCSE 4MA1 Higher</span>
+      <div class="big-number" id="counter">0</div>
+      <h2>past-paper questions<br><strong>with worked solutions</strong></h2>
+      <span class="ribbon">974 classified · 214 Q20+ expertise</span>
+    </section>
+
+    <!-- =================================================
+         SCENE 2 (0:04 – 0:08)  —  FREE STAMP
+         ================================================= -->
+    <section class="scene scene-2">
+      <div class="free-stamp">FREE</div>
+      <div class="sub-bullets">
+        <span>No login.</span>
+        <span>No paywall.</span>
+        <span>Nothing locked.</span>
+      </div>
+    </section>
+
+    <!-- =================================================
+         SCENE 3 (0:08 – 0:12)  —  MOCK EXAM
+         ================================================= -->
+    <section class="scene scene-3">
+      <span class="eyebrow">Feature 1 of 3</span>
+      <div class="feature-icon">📝</div>
+      <h2>Timed <strong>mock exams</strong>, on demand.</h2>
+      <div class="timer-display" id="timer">90:00</div>
+      <div class="timer-label">runs as many times as you want</div>
+    </section>
+
+    <!-- =================================================
+         SCENE 4 (0:12 – 0:16)  —  WORKED SOLUTIONS
+         ================================================= -->
+    <section class="scene scene-4">
+      <span class="eyebrow">Feature 2 of 3</span>
+      <div class="feature-icon">✅</div>
+      <h2>Every question. <strong>Every solution.</strong></h2>
+      <div class="equation-card">
+        <div class="step">x² − 5x + 6 = 0</div>
+        <div class="step">⇒ (x − 2)(x − 3) = 0</div>
+        <div class="step">⇒ x = 2 or x = 3</div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         SCENE 5 (0:16 – 0:20)  —  VISUAL NOTES
+         ================================================= -->
+    <section class="scene scene-5">
+      <span class="eyebrow">Feature 3 of 3</span>
+      <h2>Visual chapter <strong>notes</strong>, downloadable.</h2>
+      <div class="pdf-stack" aria-hidden="true">
+        <div class="pdf-card back">
+          <div class="title-row"><span class="pdf-tag">PDF</span><h3>Functions &amp; Graphs</h3></div>
+          <div class="lines"><div class="line"></div><div class="line short"></div></div>
+        </div>
+        <div class="pdf-card mid">
+          <div class="title-row"><span class="pdf-tag">PDF</span><h3>Algebra</h3></div>
+          <div class="lines"><div class="line"></div><div class="line short"></div></div>
+        </div>
+        <div class="pdf-card front">
+          <div class="title-row"><span class="pdf-tag">PDF</span><h3>Coordinate Geometry</h3></div>
+          <div class="lines"><div class="line"></div><div class="line short"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         SCENE 6 (0:20 – 0:24)  —  TEACHER CREDIBILITY
+         ================================================= -->
+    <section class="scene scene-6">
+      <img class="portrait" src="assets/Mine.png" alt="Dr Eslam Ahmed">
+      <div class="name">Dr Eslam Ahmed</div>
+      <div class="role">Edexcel IGCSE 4MA1 Specialist</div>
+      <div class="uni">Cairo University · Faculty of Engineering</div>
+    </section>
+
+    <!-- =================================================
+         SCENE 7 (0:24 – 0:28)  —  FINAL CTA
+         ================================================= -->
+    <section class="scene scene-7">
+      <span class="eyebrow">Free for every student</span>
+      <div class="url-big">eliteigcse.com</div>
+      <div class="cta-line">First class with me — free</div>
+      <div class="wa-line">
+        <span class="wa-icon">💬</span>
+        <span>WhatsApp +20 112 000 9622</span>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    /* Tiny JS for the two scene-internal counters
+       (number count-up in scene 1, mock-exam timer in scene 3). */
+
+    // Scene 1: count 0 → 1188 over the first ~1.6s of the scene
+    (function () {
+      const target = 1188;
+      const el = document.getElementById('counter');
+      const startDelay = 200;     // small delay so the fade-in is visible first
+      const duration = 1600;
+      let started = false;
+
+      function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+      function tick(start, now) {
+        const t = Math.min((now - start) / duration, 1);
+        el.textContent = Math.floor(easeOutCubic(t) * target).toLocaleString();
+        if (t < 1) requestAnimationFrame((n) => tick(start, n));
+      }
+      function go() {
+        const start = performance.now();
+        requestAnimationFrame((n) => tick(start, n));
+      }
+      setTimeout(go, startDelay);
+    })();
+
+    // Scene 3: timer ticks 90:00 → 89:55 during scene 3 (8000 → 12000 ms)
+    (function () {
+      const el = document.getElementById('timer');
+      const sceneStart = 8000;
+      const sceneDuration = 4000;
+      const startSeconds = 90 * 60;     // 90:00
+      const endSeconds = 89 * 60 + 55;  // 89:55
+      const startTime = performance.now();
+
+      function format(total) {
+        const m = Math.floor(total / 60);
+        const s = total % 60;
+        return String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+      }
+
+      function tick(now) {
+        const elapsed = now - startTime;
+        if (elapsed < sceneStart) {
+          el.textContent = format(startSeconds);
+        } else if (elapsed < sceneStart + sceneDuration) {
+          const t = (elapsed - sceneStart) / sceneDuration;
+          const cur = Math.round(startSeconds - t * (startSeconds - endSeconds));
+          el.textContent = format(cur);
+        } else {
+          el.textContent = format(endSeconds);
+        }
+        if (elapsed < 28000) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    })();
+  </script>
+</body>
+</html>
