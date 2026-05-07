@@ -76,7 +76,11 @@
       to { width: 100%; }
     }
 
-    /* Each scene fills the viewport, fades in/out */
+    /* Each scene fills the viewport, fades in/out.
+       Generous top padding clears the timeline (top:0, 4px) and the
+       corner-brand label so they never collide with the scene text.
+       overflow:hidden + max-width safeguards prevent any element from
+       escaping the 9:16 frame on narrow phones. */
     .scene {
       position: absolute;
       inset: 0;
@@ -84,13 +88,15 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 12vmin 8vmin;
+      padding: 18vmin 6vmin 12vmin;
       opacity: 0;
       pointer-events: none;
       animation-fill-mode: forwards;
       z-index: 1;
       text-align: center;
+      overflow: hidden;
     }
+    .scene > * { max-width: 92%; }
 
     /* Common fade-in / fade-out template:
        scene runs for 4s; in 0.4s, hold ~3.2s, out 0.4s. */
@@ -109,28 +115,33 @@
     .scene-6 { animation: sceneFade 4s ease 20s forwards; }
     .scene-7 { animation: sceneFade 4s ease 24s forwards; }
 
-    /* shared building blocks */
+    /* shared building blocks — every text size now uses clamp()
+       so it stays inside the frame on tiny phones AND doesn't get
+       absurdly large on tablets/desktop. */
     .eyebrow {
-      font-size: 3.2vmin;
+      font-size: clamp(11px, 2.6vmin, 18px);
       font-weight: 700;
-      letter-spacing: 3px;
+      letter-spacing: 2.4px;
       color: #f4cb61;
       text-transform: uppercase;
-      margin-bottom: 3vmin;
+      margin-bottom: 2.4vmin;
     }
     .scene h2 {
-      font-size: 6.5vmin;
+      font-size: clamp(20px, 5.2vmin, 44px);
       font-weight: 800;
-      line-height: 1.15;
-      max-width: 90vw;
+      line-height: 1.18;
+      max-width: 88%;
+      overflow-wrap: break-word;
+      word-break: keep-all;
+      hyphens: auto;
     }
     .scene h2 strong { color: #f4cb61; }
     .scene p {
-      font-size: 4vmin;
+      font-size: clamp(14px, 3.2vmin, 22px);
       font-weight: 500;
       color: rgba(255,255,255,0.85);
-      margin-top: 3vmin;
-      max-width: 80vw;
+      margin-top: 2.4vmin;
+      max-width: 86%;
       line-height: 1.45;
     }
 
@@ -138,51 +149,53 @@
        Scene 1: BIG STAT
        ============================ */
     .big-number {
-      font-size: 28vmin;
+      font-size: clamp(80px, 22vmin, 200px);
       font-weight: 900;
-      line-height: 0.9;
-      letter-spacing: -1.5vmin;
+      line-height: 0.95;
+      letter-spacing: -2px;
       color: #f4cb61;
       text-shadow: 0 8px 36px rgba(244, 203, 97, 0.35);
       margin-bottom: 1vmin;
       font-variant-numeric: tabular-nums;
+      max-width: 90%;
     }
     .scene-1 .ribbon {
       display: inline-block;
-      margin-top: 4vmin;
-      padding: 1.2vmin 3vmin;
+      margin-top: 3vmin;
+      padding: 1vmin 2.4vmin;
       border-radius: 999px;
       background: rgba(244, 203, 97, 0.15);
       border: 1.5px solid rgba(244, 203, 97, 0.45);
       color: #f4cb61;
-      font-size: 3.4vmin;
+      font-size: clamp(11px, 2.8vmin, 18px);
       font-weight: 700;
       letter-spacing: 1px;
+      max-width: 88%;
     }
 
     /* ============================
        Scene 2: FREE STAMP
        ============================ */
     .free-stamp {
-      font-size: 30vmin;
+      font-size: clamp(80px, 22vmin, 200px);
       font-weight: 900;
-      letter-spacing: 0.5vmin;
+      letter-spacing: 0.4vmin;
       color: #f4cb61;
       text-shadow: 0 8px 40px rgba(244, 203, 97, 0.4);
-      transform: rotate(-6deg);
+      transform: rotate(-4deg);
       animation: stampSlam 1s cubic-bezier(0.34, 1.56, 0.64, 1) 4.2s backwards;
     }
     @keyframes stampSlam {
-      0%   { opacity: 0; transform: scale(3) rotate(-6deg); }
-      40%  { opacity: 1; transform: scale(0.9) rotate(-6deg); }
-      60%  { transform: scale(1.05) rotate(-6deg); }
-      100% { transform: scale(1) rotate(-6deg); }
+      0%   { opacity: 0; transform: scale(2.4) rotate(-4deg); }
+      40%  { opacity: 1; transform: scale(0.9) rotate(-4deg); }
+      60%  { transform: scale(1.04) rotate(-4deg); }
+      100% { transform: scale(1) rotate(-4deg); }
     }
     .scene-2 .sub-bullets {
       display: flex; flex-direction: column;
-      gap: 1.5vmin;
-      margin-top: 5vmin;
-      font-size: 4.5vmin;
+      gap: 1.2vmin;
+      margin-top: 4vmin;
+      font-size: clamp(15px, 3.6vmin, 24px);
       font-weight: 700;
       color: rgba(255,255,255,0.92);
     }
@@ -191,22 +204,22 @@
        Scene 3: MOCK EXAM
        ============================ */
     .feature-icon {
-      font-size: 14vmin;
-      margin-bottom: 3vmin;
+      font-size: clamp(48px, 11vmin, 96px);
+      margin-bottom: 2vmin;
       filter: drop-shadow(0 4px 18px rgba(244, 203, 97, 0.4));
     }
     .timer-display {
-      margin-top: 4vmin;
+      margin-top: 3vmin;
       font-family: 'Sora', monospace;
-      font-size: 12vmin;
+      font-size: clamp(48px, 10vmin, 96px);
       font-weight: 800;
       color: #f4cb61;
-      letter-spacing: 0.4vmin;
+      letter-spacing: 0.3vmin;
       font-variant-numeric: tabular-nums;
     }
     .timer-label {
       margin-top: 1vmin;
-      font-size: 3vmin;
+      font-size: clamp(10px, 2.4vmin, 16px);
       letter-spacing: 2px;
       color: rgba(255,255,255,0.7);
       text-transform: uppercase;
@@ -218,21 +231,21 @@
     .equation-card {
       background: rgba(255,255,255,0.08);
       border: 1.5px solid rgba(255,255,255,0.18);
-      border-radius: 4vmin;
-      padding: 5vmin 6vmin;
-      margin-top: 4vmin;
+      border-radius: 18px;
+      padding: 4vmin 5vmin;
+      margin-top: 3vmin;
       backdrop-filter: blur(8px);
-      max-width: 80vw;
+      max-width: min(86%, 460px);
     }
     .equation-card .step {
-      font-size: 4.5vmin;
+      font-size: clamp(15px, 3.6vmin, 24px);
       font-weight: 600;
-      line-height: 1.6;
+      line-height: 1.55;
       color: #fff;
       font-family: 'Cambria Math', 'STIX Two Math', 'Times New Roman', serif;
     }
     .equation-card .step + .step {
-      margin-top: 1.5vmin;
+      margin-top: 1.2vmin;
       color: rgba(255,255,255,0.78);
     }
 
@@ -241,8 +254,8 @@
        ============================ */
     .pdf-stack {
       position: relative;
-      width: 50vmin;
-      height: 60vmin;
+      width: clamp(160px, 42vmin, 280px);
+      height: clamp(200px, 50vmin, 340px);
       margin-top: 2vmin;
     }
     .pdf-card {
@@ -250,41 +263,47 @@
       inset: 0;
       background: #fff;
       color: #12324a;
-      border-radius: 3vmin;
-      padding: 5vmin 4vmin;
+      border-radius: 14px;
+      padding: 16px 14px;
       box-shadow: 0 12px 40px rgba(0,0,0,0.35);
       display: flex;
       flex-direction: column;
-      gap: 2vmin;
+      gap: 8px;
     }
-    .pdf-card.back  { transform: rotate(-7deg) translateX(-3vmin) translateY(2vmin); opacity: 0.5; }
-    .pdf-card.mid   { transform: rotate(3deg)  translateX(2vmin)  translateY(0vmin); opacity: 0.75; }
-    .pdf-card.front { transform: rotate(-1deg) translateX(0)      translateY(-2vmin); }
-    .pdf-card .title-row { display: flex; align-items: center; gap: 1.5vmin; }
+    .pdf-card.back  { transform: rotate(-6deg) translateX(-2vmin) translateY(1.5vmin); opacity: 0.5; }
+    .pdf-card.mid   { transform: rotate(3deg)  translateX(1.5vmin) translateY(0); opacity: 0.78; }
+    .pdf-card.front { transform: rotate(-1deg) translateX(0) translateY(-1.5vmin); }
+    .pdf-card .title-row { display: flex; align-items: center; gap: 8px; }
     .pdf-card .pdf-tag {
       background: #b13f55;
       color: #fff;
-      font-size: 1.6vmin;
+      font-size: 9px;
       font-weight: 800;
-      padding: 0.5vmin 1.2vmin;
-      border-radius: 4px;
+      padding: 3px 6px;
+      border-radius: 3px;
       letter-spacing: 1px;
     }
-    .pdf-card h3 { font-size: 3.6vmin; line-height: 1.15; color: #12324a; }
-    .pdf-card .lines { display: flex; flex-direction: column; gap: 1vmin; margin-top: auto; }
-    .pdf-card .line { background: #d8e1e8; height: 1.2vmin; border-radius: 999px; }
+    .pdf-card h3 {
+      font-size: clamp(13px, 2.8vmin, 18px);
+      line-height: 1.15;
+      color: #12324a;
+      max-width: 100%;
+      overflow-wrap: break-word;
+    }
+    .pdf-card .lines { display: flex; flex-direction: column; gap: 5px; margin-top: auto; }
+    .pdf-card .line { background: #d8e1e8; height: 5px; border-radius: 999px; }
     .pdf-card .line.short { width: 60%; }
 
     /* ============================
        Scene 6: TEACHER
        ============================ */
     .portrait {
-      width: 48vmin;
-      height: 48vmin;
+      width: clamp(140px, 38vmin, 260px);
+      height: clamp(140px, 38vmin, 260px);
       border-radius: 50%;
       object-fit: cover;
-      border: 1vmin solid #f4cb61;
-      box-shadow: 0 14px 50px rgba(0,0,0,0.45), 0 0 0 2vmin rgba(244, 203, 97, 0.12);
+      border: 6px solid #f4cb61;
+      box-shadow: 0 14px 50px rgba(0,0,0,0.45), 0 0 0 12px rgba(244, 203, 97, 0.12);
       animation: portraitReveal 1s cubic-bezier(0.22, 1, 0.36, 1) 20.2s backwards;
     }
     @keyframes portraitReveal {
@@ -292,32 +311,35 @@
       100% { transform: scale(1);   opacity: 1; }
     }
     .scene-6 .name {
-      margin-top: 5vmin;
-      font-size: 7vmin;
+      margin-top: 4vmin;
+      font-size: clamp(22px, 5.6vmin, 42px);
       font-weight: 800;
       color: #fff;
     }
     .scene-6 .role {
-      margin-top: 1vmin;
-      font-size: 3.6vmin;
+      margin-top: 0.8vmin;
+      font-size: clamp(13px, 3vmin, 20px);
       font-weight: 600;
       color: #f4cb61;
       letter-spacing: 0.5px;
     }
     .scene-6 .uni {
       margin-top: 0.6vmin;
-      font-size: 3vmin;
+      font-size: clamp(12px, 2.6vmin, 17px);
       color: rgba(255,255,255,0.78);
+      max-width: 88%;
     }
 
     /* ============================
        Scene 7: FINAL CTA
        ============================ */
     .url-big {
-      font-size: 12vmin;
+      font-size: clamp(36px, 9vmin, 84px);
       font-weight: 900;
-      letter-spacing: -0.5vmin;
+      letter-spacing: -0.4vmin;
       color: #f4cb61;
+      max-width: 96%;
+      overflow-wrap: anywhere;
       animation: pulse 1.5s ease-in-out 24s infinite;
     }
     @keyframes pulse {

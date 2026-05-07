@@ -3810,3 +3810,196 @@ p { margin: 4px 0 0; color: var(--muted); }
     width: min(calc(100vw - 20px), 370px);
   }
 }
+
+/* ============================================================
+   Past Papers page (pastpapers.html)
+   ============================================================ */
+.page-pastpapers { gap: 24px; }
+
+.pp-hero {
+  background: linear-gradient(135deg, #12324a, #0f766e);
+  color: #fff;
+  border-radius: 22px;
+  padding: 44px 48px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.pp-hero .eyebrow {
+  color: #f4cb61;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.pp-hero h1 {
+  font-size: clamp(28px, 3vw, 40px);
+  margin: 8px 0 12px;
+  line-height: 1.15;
+}
+.pp-hero p {
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 auto 22px;
+  max-width: 720px;
+  line-height: 1.5;
+}
+.pp-hero-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pp-explainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.pp-explainer article {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 26px 28px;
+  box-shadow: 0 6px 18px rgba(18, 50, 74, 0.06);
+}
+.pp-explainer h2 {
+  font-size: 22px;
+  color: var(--ink);
+  margin: 10px 0 8px;
+}
+.pp-explainer p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+  font-size: 15px;
+}
+.pp-explainer p strong { color: var(--accent-dark); }
+.pp-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--accent-dark);
+}
+.pp-tag.gold {
+  background: #f4cb61;
+  color: #12324a;
+}
+@media (max-width: 720px) {
+  .pp-explainer { grid-template-columns: 1fr; }
+}
+
+.pp-section {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 36px 38px;
+  box-shadow: var(--shadow);
+}
+.pp-section-head { margin-bottom: 22px; max-width: 720px; }
+.pp-section-head .eyebrow {
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.pp-section-head h2 {
+  font-size: clamp(22px, 2.4vw, 30px);
+  margin: 6px 0 6px;
+  color: var(--ink);
+}
+.pp-section-head p { margin: 0; color: var(--muted); }
+
+.pp-year-block { margin-top: 26px; }
+.pp-year-block:first-of-type { margin-top: 0; }
+.pp-year-block h3 {
+  font-size: 18px;
+  color: var(--ink);
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pp-year-block h3::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 18px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.pp-papers {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.pp-session {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--surface);
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
+.pp-session > strong {
+  font-size: 14px;
+  color: var(--ink);
+  letter-spacing: 0.3px;
+  margin-right: 8px;
+  min-width: 120px;
+}
+
+.pp-paper {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--accent-dark);
+  font-size: 13px;
+  font-weight: 700;
+  transition: transform 0.12s ease, border-color 0.12s ease, background 0.12s ease;
+}
+.pp-paper::before {
+  content: '↓';
+  font-weight: 800;
+  font-size: 11px;
+  color: var(--accent);
+}
+.pp-paper:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent);
+  background: var(--soft);
+}
+.pp-paper.ms {
+  background: rgba(244, 203, 97, 0.12);
+  border-color: rgba(244, 203, 97, 0.6);
+  color: #8b5a0e;
+}
+.pp-paper.ms::before {
+  content: '✓';
+  color: #bb7d23;
+}
+.pp-paper.ms:hover {
+  background: rgba(244, 203, 97, 0.22);
+  border-color: #bb7d23;
+}
+
+@media (max-width: 720px) {
+  .pp-section { padding: 26px 22px; }
+  .pp-hero { padding: 30px 22px; }
+  .pp-session { padding: 10px 12px; }
+  .pp-session > strong { min-width: 100%; margin-bottom: 4px; }
+}
