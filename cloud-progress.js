@@ -198,6 +198,11 @@
       updateUi("Sign in with Google first.");
       return false;
     }
+    const originalSyncText = els.sync?.textContent || "Sync now";
+    if (els.sync && source === "manual") {
+      els.sync.disabled = true;
+      els.sync.textContent = "Saving...";
+    }
     try {
       const data = payload();
       await state.modules.firestore.setDoc(
@@ -210,7 +215,11 @@
         { merge: true }
       );
       state.lastSyncAt = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
-      updateUi();
+      if (els.sync && source === "manual") {
+        els.sync.textContent = "Saved";
+        setTimeout(() => { els.sync.textContent = originalSyncText; }, 1600);
+      }
+      updateUi(source === "manual" ? `Saved to cloud at ${state.lastSyncAt}.` : "");
       emitState();
       return true;
     } catch (err) {
@@ -218,6 +227,8 @@
       updateUi(state.error);
       emitState();
       return false;
+    } finally {
+      if (els.sync) els.sync.disabled = !state.user;
     }
   }
 
