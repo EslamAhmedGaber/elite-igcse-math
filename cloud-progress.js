@@ -5,6 +5,9 @@
   const REVIEW_KEY = "eliteMistakeBoxV1";
   const READINESS_KEY = "eliteReadinessCheck";
   const ACTIVITY_KEY = "eliteStudyActivityV1";
+  const PAPER_ATTEMPTS_KEY = "elitePaperAttemptsV1";
+  const STUDY_TASKS_KEY = "eliteStudyTasksV1";
+  const MOCK_HISTORY_KEY = "eliteMockExamHistoryV1";
   const COLLECTION = "student_progress";
   const SDK_VERSION = "10.12.5";
 
@@ -73,7 +76,10 @@
       selected: readJSON(SELECTED_KEY, []),
       reviewItems: readJSON(REVIEW_KEY, {}),
       readiness: readJSON(READINESS_KEY, {}),
-      activity: readJSON(ACTIVITY_KEY, {})
+      activity: readJSON(ACTIVITY_KEY, {}),
+      paperAttempts: readJSON(PAPER_ATTEMPTS_KEY, []),
+      studyTasks: readJSON(STUDY_TASKS_KEY, []),
+      mockHistory: readJSON(MOCK_HISTORY_KEY, [])
     };
   }
 
@@ -85,6 +91,9 @@
     if (data.reviewItems) writeJSON(REVIEW_KEY, data.reviewItems);
     if (data.readiness) writeJSON(READINESS_KEY, data.readiness);
     if (data.activity) writeJSON(ACTIVITY_KEY, data.activity);
+    if (Array.isArray(data.paperAttempts)) writeJSON(PAPER_ATTEMPTS_KEY, data.paperAttempts);
+    if (Array.isArray(data.studyTasks)) writeJSON(STUDY_TASKS_KEY, data.studyTasks);
+    if (Array.isArray(data.mockHistory)) writeJSON(MOCK_HISTORY_KEY, data.mockHistory);
   }
 
   function updateUi(message = "") {
