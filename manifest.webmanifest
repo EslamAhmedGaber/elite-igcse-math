@@ -18,14 +18,26 @@
   ],
   "shortcuts": [
     {
-      "name": "Practice Bank",
-      "short_name": "Practice",
+      "name": "Visual Notes",
+      "short_name": "Notes",
+      "url": "notes.html",
+      "icons": [{ "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+    },
+    {
+      "name": "Classified Bank",
+      "short_name": "Classified",
       "url": "practice.html",
       "icons": [{ "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
     },
     {
-      "name": "Mock Exam",
-      "short_name": "Exam",
+      "name": "Past Papers",
+      "short_name": "Papers",
+      "url": "pastpapers.html",
+      "icons": [{ "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+    },
+    {
+      "name": "Mock Exams",
+      "short_name": "Mocks",
       "url": "exam.html",
       "icons": [{ "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
     }
