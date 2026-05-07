@@ -40,6 +40,12 @@
       "short_name": "Mocks",
       "url": "exam.html",
       "icons": [{ "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+    },
+    {
+      "name": "My Progress",
+      "short_name": "Progress",
+      "url": "progress.html",
+      "icons": [{ "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
     }
   ]
 }

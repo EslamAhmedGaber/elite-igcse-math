@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Progress - Elite IGCSE Mathematics</title>
+  <meta name="description" content="Save your IGCSE Mathematics target, track solved classified questions, see weak topics, and export your progress backup.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="My Progress - Elite IGCSE Mathematics">
+  <meta property="og:description" content="A personal progress sheet for Elite IGCSE Mathematics students. Saved on the student's device.">
+  <meta property="og:image" content="assets/og-image.png">
+  <meta name="theme-color" content="#0f766e">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="questions-data.js"></script>
+  <script defer src="progress.js"></script>
+  <script defer src="lead.js"></script>
+</head>
+<body data-page="progress">
+
+  <header class="site-header">
+    <a class="site-brand" href="index.html" aria-label="Elite IGCSE Mathematics home">
+      <span class="brand-mark">IGCSE</span>
+      <span class="brand-title">Elite IGCSE Mathematics</span>
+    </a>
+    <button id="navToggle" class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" aria-label="Main">
+      <a href="notes.html">Notes</a>
+      <a href="practice.html">Classified</a>
+      <a href="pastpapers.html">Past Papers</a>
+      <a href="exam.html">Mocks</a>
+      <a href="progress.html" aria-current="page">Progress</a>
+      <a href="topics.html">Topics</a>
+      <a href="checkup.html">Check</a>
+      <a href="planner.html">Plan</a>
+      <a href="about.html">About</a>
+      <a href="downloads.html">Downloads</a>
+    </nav>
+    <div class="site-cta">
+      <a class="button primary" data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Enroll</a>
+    </div>
+  </header>
+
+  <main class="page page-progress">
+    <section class="progress-hero" aria-labelledby="progressTitle">
+      <div>
+        <span class="eyebrow">Student Progress Sheet</span>
+        <h1 id="progressTitle">Save your target. Track every topic. Know the next question to solve.</h1>
+        <p>This page turns the classified bank into a live progress sheet. Your name, target grade, solved questions, selected questions, and mistake box are saved on this device.</p>
+        <div class="planner-hero-actions">
+          <a class="button primary" href="practice.html">Continue solving</a>
+          <a class="button light" href="#topicSheet">Open topic sheet</a>
+        </div>
+      </div>
+      <aside class="progress-save-card" aria-label="Saved profile summary">
+        <span>Saved student</span>
+        <strong id="profilePreviewName">Student</strong>
+        <p id="profilePreviewTarget">Target not set yet</p>
+        <div class="progress-save-status" id="saveStatus">Progress saves automatically in this browser.</div>
+      </aside>
+    </section>
+
+    <section class="progress-dashboard" aria-label="Progress summary">
+      <article>
+        <span>Full classified</span>
+        <strong id="fullSolved">0</strong>
+        <p id="fullPercent">0% solved</p>
+      </article>
+      <article>
+        <span>Q20+ expertise</span>
+        <strong id="expertiseSolved">0</strong>
+        <p id="expertisePercent">0% solved</p>
+      </article>
+      <article>
+        <span>Selected worksheet</span>
+        <strong id="selectedCountProgress">0</strong>
+        <p>questions ready</p>
+      </article>
+      <article>
+        <span>Mistake box</span>
+        <strong id="mistakeDue">0</strong>
+        <p>due today</p>
+      </article>
+      <article>
+        <span>Study streak</span>
+        <strong id="studyStreak">0</strong>
+        <p>active days</p>
+      </article>
+    </section>
+
+    <section class="progress-two-col">
+      <section class="progress-profile-panel" aria-labelledby="profileTitle">
+        <div class="section-head">
+          <span class="eyebrow">Student Info</span>
+          <h2 id="profileTitle">Make the website feel personal.</h2>
+          <p>Saved locally on this device. Export a backup if the student wants to move progress to another laptop or phone.</p>
+        </div>
+        <form class="progress-profile-form" id="progressProfileForm">
+          <label>Student name
+            <input id="studentName" type="text" autocomplete="name" placeholder="Your name">
+          </label>
+          <label>Target grade
+            <select id="targetGrade">
+              <option value="">Choose target</option>
+              <option value="9">Grade 9 / A*</option>
+              <option value="8">Grade 8</option>
+              <option value="7">Grade 7</option>
+              <option value="6">Grade 6</option>
+            </select>
+          </label>
+          <label>Exam session
+            <input id="examSession" type="text" placeholder="Example: June 2026">
+          </label>
+          <label>Weekly question target
+            <input id="weeklyTarget" type="number" min="5" max="200" step="5" value="30">
+          </label>
+          <button class="primary" type="submit">Save my information</button>
+        </form>
+      </section>
+
+      <section class="progress-next-panel" aria-labelledby="nextTitle">
+        <div class="section-head">
+          <span class="eyebrow">Next Best Move</span>
+          <h2 id="nextTitle">What should I solve now?</h2>
+        </div>
+        <div id="nextMoveCards" class="next-move-cards"></div>
+      </section>
+    </section>
+
+    <section class="progress-sheet-panel" id="topicSheet" aria-labelledby="topicSheetTitle">
+      <div class="sheet-head">
+        <div>
+          <span class="eyebrow">Topic Sheet</span>
+          <h2 id="topicSheetTitle">Live topic-by-topic progress.</h2>
+          <p>Inspired by the Excel progress sheets, but connected directly to the website solved-question data.</p>
+        </div>
+        <div class="sheet-filters">
+          <label>Unit
+            <select id="progressUnitFilter"></select>
+          </label>
+          <label>Status
+            <select id="progressStatusFilter">
+              <option value="">All topics</option>
+              <option value="not-started">Not started</option>
+              <option value="started">Started</option>
+              <option value="strong">Strong</option>
+            </select>
+          </label>
+          <label>Search
+            <input id="progressSearch" type="search" placeholder="topic name">
+          </label>
+        </div>
+      </div>
+      <div class="progress-table-wrap">
+        <table class="progress-table">
+          <thead>
+            <tr>
+              <th>Topic</th>
+              <th>Full bank</th>
+              <th>Q20+</th>
+              <th>Progress</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="topicProgressRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="progress-backup-panel" aria-labelledby="backupTitle">
+      <div>
+        <span class="eyebrow">Backup</span>
+        <h2 id="backupTitle">Keep progress safe.</h2>
+        <p>The website is static, so progress is stored in the browser. Export a backup file before changing phone, clearing browser data, or using another device.</p>
+      </div>
+      <div class="progress-backup-actions">
+        <button class="primary" id="exportProgressBtn" type="button">Export progress file</button>
+        <label class="import-button">Import progress file
+          <input id="importProgressInput" type="file" accept="application/json,.json">
+        </label>
+        <a class="button light" id="sendProgressBtn" data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Send summary to Dr Eslam</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <strong>Elite IGCSE Mathematics</strong>
+        <p>Edexcel 4MA1 Higher - Online - Recorded sessions</p>
+        <p class="muted">Prepared by Dr Eslam Ahmed</p>
+      </div>
+      <div>
+        <strong>Contact</strong>
+        <p><a data-lead-trigger="whatsapp" href="https://wa.me/201120009622">WhatsApp +20 112 000 9622</a></p>
+        <p><a href="tel:01120009622">Call 01120009622</a></p>
+      </div>
+      <div>
+        <strong>Student Tools</strong>
+        <p><a href="notes.html">Notes</a></p>
+        <p><a href="practice.html">Classified bank</a></p>
+        <p><a href="pastpapers.html">Past papers</a></p>
+        <p><a href="exam.html">Mock exams</a></p>
+        <p><a href="progress.html">My progress</a></p>
+        <p><a href="topics.html">Topic roadmap</a></p>
+        <p><a href="checkup.html">Readiness check</a></p>
+        <p><a href="planner.html">Study plan</a></p>
+        <p><a href="downloads.html">Downloads</a></p>
+      </div>
+    </div>
+    <p class="footer-fineprint">© Dr Eslam Ahmed - For students of Edexcel IGCSE 4MA1 Higher Mathematics. Cairo University Faculty of Engineering.</p>
+  </footer>
+
+  <nav class="mobile-bottom-nav" aria-label="Student shortcuts">
+    <a href="notes.html">Notes</a>
+    <a href="practice.html">Classified</a>
+    <a href="pastpapers.html">Papers</a>
+    <a href="exam.html">Mocks</a>
+    <a href="progress.html" aria-current="page">Progress</a>
+  </nav>
+
+</body>
+</html>

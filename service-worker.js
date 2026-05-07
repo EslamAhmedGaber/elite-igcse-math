@@ -1,5 +1,5 @@
-const CACHE_VERSION = "elite-igcse-v8";
-const RUNTIME_CACHE = "elite-igcse-runtime-v8";
+const CACHE_VERSION = "elite-igcse-v9";
+const RUNTIME_CACHE = "elite-igcse-runtime-v9";
 
 const APP_SHELL = [
   "./",
@@ -10,6 +10,7 @@ const APP_SHELL = [
   "topics.html",
   "notes.html",
   "pastpapers.html",
+  "progress.html",
   "planner.html",
   "about.html",
   "downloads.html",
@@ -19,6 +20,7 @@ const APP_SHELL = [
   "app.js",
   "exam.js",
   "checkup.js",
+  "progress.js",
   "planner.js",
   "topics.js",
   "questions-data.js",

@@ -10,6 +10,7 @@ const solutionData = window.SOLUTION_DATA || {};
 const selected = new Set(JSON.parse(localStorage.getItem("selectedExpertiseQuestions") || "[]"));
 const solved = new Set(JSON.parse(localStorage.getItem("solvedExpertiseQuestions") || "[]"));
 const REVIEW_KEY = "eliteMistakeBoxV1";
+const ACTIVITY_KEY = "eliteStudyActivityV1";
 const REVIEW_INTERVALS = [1, 3, 7, 14];
 let reviewItems = readReviewItems();
 let activeBank = localStorage.getItem("activeQuestionBank") || "all";
@@ -122,6 +123,19 @@ function readReviewItems() {
 
 function saveReviewItems() {
   localStorage.setItem(REVIEW_KEY, JSON.stringify(reviewItems));
+}
+
+function recordStudyActivity(amount = 1) {
+  const today = new Date().toISOString().slice(0, 10);
+  let activity = {};
+  try {
+    const raw = JSON.parse(localStorage.getItem(ACTIVITY_KEY) || "{}");
+    activity = raw && typeof raw === "object" && !Array.isArray(raw) ? raw : {};
+  } catch (err) {
+    activity = {};
+  }
+  activity[today] = Number(activity[today] || 0) + amount;
+  localStorage.setItem(ACTIVITY_KEY, JSON.stringify(activity));
 }
 
 function reviewState(id) {
@@ -473,6 +487,7 @@ function toggleSolved(id) {
     solved.delete(id);
   } else {
     solved.add(id);
+    recordStudyActivity();
     advanceReview(id);
   }
   redraw();
@@ -480,6 +495,7 @@ function toggleSolved(id) {
 
 function reviewDone(id) {
   solved.add(id);
+  recordStudyActivity();
   advanceReview(id);
   redraw();
 }

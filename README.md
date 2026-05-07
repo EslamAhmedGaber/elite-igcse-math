@@ -14,6 +14,7 @@ This document is the single source of truth for running and updating the site. R
 | **Change a price** | §4.1 | Search `p-now` in `index.html` and `about.html`, replace |
 | **Update a testimonial** | §4.2 | Edit `<article class="testimonial light">` blocks in `about.html` |
 | **Replace your photo** | §4.5 | Drop new image at `assets/Mine.png` (overwrite), commit, push |
+| **Check saved student progress** | `/progress.html` | Name, target, topic sheet, backup export/import, WhatsApp summary |
 
 **Deploy = `git push`**. GitHub Pages rebuilds in 30–90 seconds. Live URL: **https://eliteigcse.com**.
 
@@ -34,6 +35,7 @@ Pages served:
 - `/` — Home (sales/landing)
 - `/practice.html` — Question bank tool (the daily-use page)
 - `/exam.html` — Free mock exam mode with timer, self-marking, and Mistake Box integration
+- `/progress.html` — Personal progress sheet, saved profile, topic tracker, backup import/export
 - `/checkup.html` — Exam readiness check and next-action recommender
 - `/topics.html` — Topic roadmap
 - `/notes.html` — Visual notes library
@@ -63,6 +65,7 @@ website/
 ├── index.html              # Home page
 ├── practice.html           # Question bank page
 ├── exam.html               # Mock exam mode
+├── progress.html           # Personal student progress sheet
 ├── checkup.html            # Exam readiness check
 ├── topics.html             # Topic roadmap
 ├── notes.html              # Visual notes library
@@ -73,6 +76,7 @@ website/
 ├── styles.css              # All styles for all pages
 ├── app.js                  # Practice-bank logic (only loaded on practice.html)
 ├── exam.js                 # Mock exam timer, self-marking, and Mistake Box integration
+├── progress.js             # Saved profile, topic sheet, progress backup import/export
 ├── lead.js                 # Lead-capture dialog + mobile nav (loaded on every page)
 ├── service-worker.js       # PWA install/offline shell + runtime cache for opened assets
 ├── manifest.webmanifest    # Installable app metadata
