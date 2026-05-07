@@ -35,6 +35,11 @@
       pointer-events: none;
       z-index: 0;
     }
+    body:not(.promo-play) *,
+    body:not(.promo-play) *::before,
+    body:not(.promo-play) *::after {
+      animation-play-state: paused !important;
+    }
 
     /* small gold accent ribbon top-left, persistent */
     .corner-brand {
@@ -557,6 +562,15 @@
         if (elapsed < 28000) requestAnimationFrame(tick);
       }
       requestAnimationFrame(tick);
+    })();
+  </script>
+  <script>
+    (function () {
+      if (!new URLSearchParams(window.location.search).has('manual')) {
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          document.body.classList.add('promo-play');
+        }));
+      }
     })();
   </script>
 </body>
