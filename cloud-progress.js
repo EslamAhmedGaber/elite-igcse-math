@@ -8,8 +8,25 @@
   const PAPER_ATTEMPTS_KEY = "elitePaperAttemptsV1";
   const STUDY_TASKS_KEY = "eliteStudyTasksV1";
   const MOCK_HISTORY_KEY = "eliteMockExamHistoryV1";
+  const EXAM_KEY = "eliteMockExamV1";
+  const PLAN_KEY = "eliteStudyPlanSettings";
+  const LEAD_KEY = "leadInfoV1";
   const COLLECTION = "student_progress";
   const SDK_VERSION = "10.12.5";
+  const SYNC_KEYS = new Set([
+    PROFILE_KEY,
+    SOLVED_KEY,
+    SELECTED_KEY,
+    REVIEW_KEY,
+    READINESS_KEY,
+    ACTIVITY_KEY,
+    PAPER_ATTEMPTS_KEY,
+    STUDY_TASKS_KEY,
+    MOCK_HISTORY_KEY,
+    EXAM_KEY,
+    PLAN_KEY,
+    LEAD_KEY
+  ]);
 
   const state = {
     configured: false,
@@ -32,6 +49,28 @@
     sync: document.getElementById("syncCloudBtn"),
     restore: document.getElementById("restoreCloudBtn")
   };
+
+  function all(selector) {
+    return [...document.querySelectorAll(selector)];
+  }
+
+  function firstName() {
+    return (state.user?.displayName || "My").split(/\s+/).filter(Boolean)[0] || "My";
+  }
+
+  function ensureFloatingWidget() {
+    if (!document.body || document.body.dataset.page === "progress" || document.querySelector(".cloud-floating-widget")) return;
+    const widget = document.createElement("aside");
+    widget.className = "cloud-floating-widget";
+    widget.setAttribute("aria-label", "Google progress sync");
+    widget.innerHTML = `
+      <span data-cloud-mini-status>Save progress across devices</span>
+      <button class="cloud-floating-login" type="button" data-cloud-login>Continue with Google</button>
+      <a class="cloud-floating-account" href="progress.html" data-cloud-account hidden>My progress</a>
+      <button class="cloud-floating-sync" type="button" data-cloud-sync hidden>Sync</button>
+    `;
+    document.body.append(widget);
+  }
 
   function readJSON(key, fallback) {
     try {
@@ -79,7 +118,10 @@
       activity: readJSON(ACTIVITY_KEY, {}),
       paperAttempts: readJSON(PAPER_ATTEMPTS_KEY, []),
       studyTasks: readJSON(STUDY_TASKS_KEY, []),
-      mockHistory: readJSON(MOCK_HISTORY_KEY, [])
+      mockHistory: readJSON(MOCK_HISTORY_KEY, []),
+      activeMock: readJSON(EXAM_KEY, {}),
+      studyPlan: readJSON(PLAN_KEY, {}),
+      leadInfo: readJSON(LEAD_KEY, {})
     };
   }
 
@@ -94,9 +136,65 @@
     if (Array.isArray(data.paperAttempts)) writeJSON(PAPER_ATTEMPTS_KEY, data.paperAttempts);
     if (Array.isArray(data.studyTasks)) writeJSON(STUDY_TASKS_KEY, data.studyTasks);
     if (Array.isArray(data.mockHistory)) writeJSON(MOCK_HISTORY_KEY, data.mockHistory);
+    if (data.activeMock) writeJSON(EXAM_KEY, data.activeMock);
+    if (data.studyPlan) writeJSON(PLAN_KEY, data.studyPlan);
+    if (data.leadInfo) writeJSON(LEAD_KEY, data.leadInfo);
+  }
+
+  function patchLocalStorageSync() {
+    if (window.__eliteCloudStoragePatched) return;
+    window.__eliteCloudStoragePatched = true;
+    const originalSetItem = Storage.prototype.setItem;
+    Storage.prototype.setItem = function patchedSetItem(key, value) {
+      const result = originalSetItem.apply(this, arguments);
+      try {
+        if (this === localStorage && SYNC_KEYS.has(String(key)) && window.EliteCloud?.queueSync) {
+          window.EliteCloud.queueSync();
+        }
+      } catch (err) {
+        // Local storage writes should never be blocked by cloud sync.
+      }
+      return result;
+    };
+  }
+
+  function updateGlobalUi(message = "") {
+    ensureFloatingWidget();
+    const signedIn = Boolean(state.user);
+    const miniStatus = message
+      || (!state.configured ? "Local progress only"
+        : !signedIn ? "Save progress across devices"
+          : state.lastSyncAt ? `Synced ${state.lastSyncAt}` : "Cloud sync active");
+
+    all("[data-cloud-login]").forEach((button) => {
+      button.hidden = signedIn;
+      button.disabled = !state.configured;
+      button.textContent = state.configured ? "Continue with Google" : "Google Sync";
+    });
+
+    all("[data-cloud-account]").forEach((link) => {
+      link.hidden = !signedIn;
+      link.textContent = `${firstName()} progress`;
+      link.setAttribute("title", state.user?.email || "Open progress");
+    });
+
+    all("[data-cloud-sync]").forEach((button) => {
+      button.hidden = !signedIn;
+      button.disabled = !signedIn || !state.ready;
+    });
+
+    all("[data-cloud-mini-status]").forEach((status) => {
+      status.textContent = miniStatus;
+    });
+
+    all(".cloud-floating-widget").forEach((widget) => {
+      widget.classList.toggle("is-signed-in", signedIn);
+      widget.classList.toggle("is-disabled", !state.configured);
+    });
   }
 
   function updateUi(message = "") {
+    updateGlobalUi(message);
     if (!els.panel) return;
     els.panel.classList.toggle("cloud-disabled", !state.configured);
     if (!state.configured) {
@@ -178,7 +276,10 @@
   }
 
   async function signIn() {
-    if (!state.ready) return;
+    if (!state.ready) {
+      updateUi("Google login is loading. Try again in a moment.");
+      return;
+    }
     const provider = new state.modules.auth.GoogleAuthProvider();
     provider.setCustomParameters({ prompt: "select_account" });
     try {
@@ -208,9 +309,16 @@
       return false;
     }
     const originalSyncText = els.sync?.textContent || "Sync now";
+    const globalSyncButtons = all("[data-cloud-sync]");
     if (els.sync && source === "manual") {
       els.sync.disabled = true;
       els.sync.textContent = "Saving...";
+    }
+    if (source === "manual") {
+      globalSyncButtons.forEach((button) => {
+        button.disabled = true;
+        button.textContent = "Saving";
+      });
     }
     try {
       const data = payload();
@@ -228,6 +336,12 @@
         els.sync.textContent = "Saved";
         setTimeout(() => { els.sync.textContent = originalSyncText; }, 1600);
       }
+      if (source === "manual") {
+        globalSyncButtons.forEach((button) => {
+          button.textContent = "Saved";
+          setTimeout(() => { button.textContent = "Sync"; }, 1600);
+        });
+      }
       updateUi(source === "manual" ? `Saved to cloud at ${state.lastSyncAt}.` : "");
       emitState();
       return true;
@@ -238,6 +352,7 @@
       return false;
     } finally {
       if (els.sync) els.sync.disabled = !state.user;
+      globalSyncButtons.forEach((button) => { button.disabled = !state.user; });
     }
   }
 
@@ -276,6 +391,21 @@
   if (els.logout) els.logout.addEventListener("click", signOut);
   if (els.sync) els.sync.addEventListener("click", () => syncNow("manual"));
   if (els.restore) els.restore.addEventListener("click", restoreNow);
+  document.addEventListener("click", (event) => {
+    const login = event.target.closest("[data-cloud-login]");
+    const sync = event.target.closest("[data-cloud-sync]");
+    const logout = event.target.closest("[data-cloud-logout]");
+    if (login) {
+      event.preventDefault();
+      signIn();
+    } else if (sync) {
+      event.preventDefault();
+      syncNow("manual");
+    } else if (logout) {
+      event.preventDefault();
+      signOut();
+    }
+  });
 
   window.EliteCloud = {
     init,
@@ -287,5 +417,6 @@
     state: () => ({ ...state, auth: null, db: null, modules: null })
   };
 
+  patchLocalStorageSync();
   init();
 })();

@@ -1380,6 +1380,82 @@ p { margin: 4px 0 0; color: var(--muted); }
 }
 .site-cta { display: flex; gap: 10px; flex-shrink: 0; }
 .site-cta .button { font-size: 13px; }
+.cloud-auth-button,
+.cloud-account-button {
+  border-color: rgba(15, 118, 110, 0.18);
+  background: #fff;
+  color: var(--accent-dark);
+}
+.cloud-auth-button::before {
+  content: "G";
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--accent);
+  font-size: 11px;
+  font-weight: 900;
+}
+.cloud-account-button {
+  background: var(--soft);
+}
+
+.cloud-floating-widget {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 95;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 7px;
+  align-items: center;
+  max-width: min(360px, calc(100vw - 36px));
+  padding: 10px;
+  border: 1px solid rgba(15, 118, 110, 0.20);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 14px 36px rgba(18, 50, 74, 0.18);
+  backdrop-filter: blur(14px);
+}
+
+.cloud-floating-widget span {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+
+.cloud-floating-widget button,
+.cloud-floating-widget a {
+  min-height: 34px;
+  padding: 7px 11px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.cloud-floating-widget .cloud-floating-sync {
+  border-color: var(--line);
+  background: #fff;
+  color: var(--accent-dark);
+}
+
+.cloud-floating-widget.is-signed-in {
+  border-color: rgba(15, 118, 110, 0.28);
+}
+
+.cloud-floating-widget.is-disabled {
+  opacity: 0.68;
+}
 
 .nav-toggle {
   display: none;
@@ -1435,6 +1511,17 @@ p { margin: 4px 0 0; color: var(--muted); }
   .site-brand .brand-title { display: none; }
   .nav-toggle { position: fixed; top: 10px; right: 16px; z-index: 120; }
   .site-cta { display: none; }
+  .cloud-floating-widget {
+    left: 12px;
+    right: 12px;
+    bottom: 82px;
+    grid-template-columns: 1fr;
+    max-width: calc(100vw - 24px);
+  }
+  .cloud-floating-widget button,
+  .cloud-floating-widget a {
+    width: 100%;
+  }
   .v2-badge { font-size: 10px; padding: 2px 6px; }
 }
 

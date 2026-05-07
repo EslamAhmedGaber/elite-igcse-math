@@ -16,6 +16,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script defer src="firebase-config.js"></script>
+  <script defer src="cloud-progress.js"></script>
   <script defer src="questions-data.js"></script>
   <script defer src="checkup.js"></script>
   <script defer src="lead.js"></script>
@@ -43,6 +45,8 @@
       <a href="downloads.html">Downloads</a>
     </nav>
     <div class="site-cta">
+      <button class="button cloud-auth-button" type="button" data-cloud-login>Continue with Google</button>
+      <a class="button cloud-account-button" href="progress.html" data-cloud-account hidden>My Progress</a>
       <a class="button primary" data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Book Free First Class</a>
     </div>
   </header>

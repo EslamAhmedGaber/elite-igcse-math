@@ -9,6 +9,9 @@
   const PAPER_ATTEMPTS_KEY = "elitePaperAttemptsV1";
   const STUDY_TASKS_KEY = "eliteStudyTasksV1";
   const MOCK_HISTORY_KEY = "eliteMockExamHistoryV1";
+  const EXAM_KEY = "eliteMockExamV1";
+  const PLAN_KEY = "eliteStudyPlanSettings";
+  const LEAD_KEY = "leadInfoV1";
 
   const els = {
     previewName: document.getElementById("profilePreviewName"),
@@ -732,7 +735,10 @@
       activity: readActivity(),
       paperAttempts,
       studyTasks,
-      mockHistory
+      mockHistory,
+      activeMock: readJSON(EXAM_KEY, {}),
+      studyPlan: readJSON(PLAN_KEY, {}),
+      leadInfo: readJSON(LEAD_KEY, {})
     };
   }
 
@@ -764,6 +770,9 @@
         if (Array.isArray(data.paperAttempts)) writeJSON(PAPER_ATTEMPTS_KEY, data.paperAttempts);
         if (Array.isArray(data.studyTasks)) writeJSON(STUDY_TASKS_KEY, data.studyTasks);
         if (Array.isArray(data.mockHistory)) writeJSON(MOCK_HISTORY_KEY, data.mockHistory);
+        if (data.activeMock) writeJSON(EXAM_KEY, data.activeMock);
+        if (data.studyPlan) writeJSON(PLAN_KEY, data.studyPlan);
+        if (data.leadInfo) writeJSON(LEAD_KEY, data.leadInfo);
         els.saveStatus.textContent = "Progress imported. Reloading the sheet.";
         setTimeout(() => window.location.reload(), 600);
       } catch (err) {
