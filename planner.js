@@ -99,10 +99,12 @@
 
   function loadSettings() {
     const defaultExam = addDays(new Date(), 56);
+    const params = new URLSearchParams(window.location.search);
+    const focus = params.get("focus");
     els.examDate.value = saved.examDate || isoDate(defaultExam);
     els.targetGrade.value = saved.targetGrade || "9";
     els.weeklyHours.value = saved.weeklyHours || "5";
-    els.focusUnit.value = saved.focusUnit || "";
+    els.focusUnit.value = focus || saved.focusUnit || "";
     els.planLength.value = saved.planLength || "auto";
     els.confidence.value = saved.confidence || "medium";
   }
