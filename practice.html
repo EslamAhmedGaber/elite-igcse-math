@@ -9,6 +9,9 @@
   <meta property="og:title" content="Practice Bank — Elite IGCSE Mathematics">
   <meta property="og:description" content="Filter, zoom, solve, and print every classified Edexcel 4MA1 question. By Dr Eslam Ahmed.">
   <meta property="og:image" content="assets/og-image.png">
+  <meta name="theme-color" content="#0f766e">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -42,6 +45,7 @@
       <a href="index.html">Home</a>
       <a href="practice.html" aria-current="page">Practice</a>
       <a href="topics.html">Topics</a>
+      <a href="exam.html">Exam</a>
       <a href="checkup.html">Check</a>
       <a href="notes.html">Notes</a>
       <a href="planner.html">Plan</a>
@@ -115,6 +119,19 @@
       <section class="progress-card">
         <h2 class="panel-title">Topic Mastery</h2>
         <div id="topicProgress" class="topic-progress"></div>
+      </section>
+      <section class="review-card">
+        <h2 class="panel-title">Mistake Box</h2>
+        <p>Questions you find difficult come back later until they become safe.</p>
+        <div class="review-stats">
+          <div><strong id="reviewDueCount">0</strong><span>due</span></div>
+          <div><strong id="reviewBoxCount">0</strong><span>saved</span></div>
+          <div><strong id="reviewMasteredCount">0</strong><span>mastered</span></div>
+        </div>
+        <div class="review-actions">
+          <button id="dueReviewBtn" type="button">Due Today</button>
+          <button id="allReviewBtn" type="button">All Mistakes</button>
+        </div>
       </section>
       <section class="teacher-card">
         <span class="card-label">Prepared by</span>
@@ -211,6 +228,8 @@
         <button type="button" data-practice="mixed">Mixed Expertise</button>
         <button type="button" data-practice="unsolved">Continue Unsolved</button>
         <button type="button" data-practice="weak">Weak Topics</button>
+        <button type="button" data-practice="review">Mistake Box</button>
+        <a href="exam.html">Mock Exam</a>
         <a data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Enroll with Dr Eslam</a>
       </section>
       <section class="student-helper" aria-label="Student helper">
@@ -274,6 +293,7 @@
         <strong>Pages</strong>
         <p><a href="index.html">Home</a></p>
         <p><a href="practice.html">Practice bank</a></p>
+        <p><a href="exam.html">Mock exam mode</a></p>
         <p><a href="checkup.html">Readiness check</a></p>
         <p><a href="topics.html">Topic roadmap</a></p>
         <p><a href="notes.html">Visual notes</a></p>
@@ -288,7 +308,7 @@
   <nav class="mobile-bottom-nav" aria-label="Student shortcuts">
     <a href="index.html">Home</a>
     <a href="practice.html" aria-current="page">Practice</a>
-    <a href="checkup.html">Check</a>
+    <a href="exam.html">Exam</a>
     <a href="planner.html">Plan</a>
     <a data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Enroll</a>
   </nav>

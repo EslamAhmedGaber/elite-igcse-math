@@ -11,6 +11,7 @@
         </header>
         <p class="lead-sub">Tell Dr Eslam a little about you so he can reply with the right course details on WhatsApp.</p>
         <label>Your name<input id="leadName" name="name" type="text" required autocomplete="name" placeholder="e.g. Yousef Hassan"></label>
+        <label>Email (optional)<input id="leadEmail" name="email" type="email" autocomplete="email" placeholder="parent or student email"></label>
         <label>Year / Grade<select id="leadYear" name="year" required>
           <option value="">Select year</option>
           <option>Year 9</option>
@@ -64,10 +65,11 @@
     const lines = [
       "Hello Dr Eslam, I would like to enroll in the IGCSE Math course.",
       `Name: ${info.name}`,
+      info.email ? `Email: ${info.email}` : "",
       `Year: ${info.year}`,
       `Target exam: ${info.exam}`,
       `Interested in: ${pkgLabel}`,
-    ];
+    ].filter(Boolean);
     return `https://wa.me/${LEAD_PHONE}?text=${encodeURIComponent(lines.join("\n"))}`;
   }
 
@@ -79,6 +81,7 @@
     const closeBtn = document.getElementById("leadCloseBtn");
     const skipBtn = document.getElementById("leadSkipBtn");
     const nameInput = document.getElementById("leadName");
+    const emailInput = document.getElementById("leadEmail");
     const yearSelect = document.getElementById("leadYear");
     const examSelect = document.getElementById("leadExam");
     const packageSelect = document.getElementById("leadPackage");
@@ -87,6 +90,7 @@
     function prefill() {
       const saved = readLead();
       if (saved.name) nameInput.value = saved.name;
+      if (saved.email) emailInput.value = saved.email;
       if (saved.year) yearSelect.value = saved.year;
       if (saved.exam) examSelect.value = saved.exam;
       if (pendingPackage) packageSelect.value = pendingPackage;
@@ -123,6 +127,7 @@
       event.preventDefault();
       const info = {
         name: nameInput.value.trim(),
+        email: emailInput.value.trim(),
         year: yearSelect.value,
         exam: examSelect.value,
         package: packageSelect.value,
@@ -155,9 +160,18 @@
     });
   }
 
+  function initPwa() {
+    if (!("serviceWorker" in navigator)) return;
+    if (!/^https?:$/.test(window.location.protocol)) return;
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("service-worker.js").catch(() => {});
+    });
+  }
+
   function bootstrap() {
     init();
     initNavToggle();
+    initPwa();
   }
 
   if (document.readyState === "loading") {

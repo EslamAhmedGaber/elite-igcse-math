@@ -4,7 +4,7 @@ The live student website for **Edexcel IGCSE 4MA1 Higher Mathematics** by Dr Esl
 
 This document is the single source of truth for running and updating the site. Read the **Common Tasks** and **Adding Solutions** sections first — those cover 95% of what you'll do.
 
-> Last updated: 2026-05-06 · Section index: §1 Live URLs · §2 Stack · §3 Directory tree · §4 Common tasks · **§5 Adding solutions** · §6 Local testing · §7 Deploy · §8 Settings cheat-sheet · §9 Gotchas · §10 Troubleshooting · §11 Credits
+> Last updated: 2026-05-07 · Section index: §1 Live URLs · §2 Stack · §3 Directory tree · §4 Common tasks · **§5 Adding solutions** · §6 Local testing · §7 Deploy · §8 Settings cheat-sheet · §9 Gotchas · §10 Troubleshooting · §11 Credits
 
 ## Quick start (the 4 things you'll do most)
 
@@ -33,6 +33,11 @@ Pages served:
 
 - `/` — Home (sales/landing)
 - `/practice.html` — Question bank tool (the daily-use page)
+- `/exam.html` — Free mock exam mode with timer, self-marking, and Mistake Box integration
+- `/checkup.html` — Exam readiness check and next-action recommender
+- `/topics.html` — Topic roadmap
+- `/notes.html` — Visual notes library
+- `/planner.html` — Study plan generator
 - `/about.html` — Dr Eslam bio + testimonials + pricing
 - `/downloads.html` — Free PDF books
 
@@ -57,14 +62,26 @@ Pages served:
 website/
 ├── index.html              # Home page
 ├── practice.html           # Question bank page
+├── exam.html               # Mock exam mode
+├── checkup.html            # Exam readiness check
+├── topics.html             # Topic roadmap
+├── notes.html              # Visual notes library
+├── planner.html            # Study plan generator
 ├── about.html              # About Dr Eslam
 ├── downloads.html          # PDF library
 │
 ├── styles.css              # All styles for all pages
 ├── app.js                  # Practice-bank logic (only loaded on practice.html)
+├── exam.js                 # Mock exam timer, self-marking, and Mistake Box integration
 ├── lead.js                 # Lead-capture dialog + mobile nav (loaded on every page)
+├── service-worker.js       # PWA install/offline shell + runtime cache for opened assets
+├── manifest.webmanifest    # Installable app metadata
 ├── questions-data.js       # 1,188 questions metadata (~1 MB) — generated, do not hand-edit
 ├── solutions-data.js       # Worked solutions for every question (~850 KB) — see §5
+├── offline.html            # Offline fallback page
+├── 404.html                # Friendly not-found page
+├── robots.txt
+├── sitemap.xml
 │
 ├── CNAME                   # Custom-domain marker for GitHub Pages: "eliteigcse.com"
 ├── .nojekyll               # Tells GitHub Pages: serve files as-is, no Jekyll processing

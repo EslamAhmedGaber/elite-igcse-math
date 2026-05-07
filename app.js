@@ -9,10 +9,14 @@ const meta = window.SITE_META || {};
 const solutionData = window.SOLUTION_DATA || {};
 const selected = new Set(JSON.parse(localStorage.getItem("selectedExpertiseQuestions") || "[]"));
 const solved = new Set(JSON.parse(localStorage.getItem("solvedExpertiseQuestions") || "[]"));
+const REVIEW_KEY = "eliteMistakeBoxV1";
+const REVIEW_INTERVALS = [1, 3, 7, 14];
+let reviewItems = readReviewItems();
 let activeBank = localStorage.getItem("activeQuestionBank") || "all";
 let currentLayout = localStorage.getItem("questionLayout") || "grid";
 let questions = [];
 let visible = [];
+let reviewMode = "";
 let timerDuration = 25 * 60;
 let timerRemaining = timerDuration;
 let timerInterval = null;
@@ -59,6 +63,11 @@ const els = {
   progressLabel: document.getElementById("progressLabel"),
   progressBar: document.getElementById("progressBar"),
   topicProgress: document.getElementById("topicProgress"),
+  reviewDueCount: document.getElementById("reviewDueCount"),
+  reviewBoxCount: document.getElementById("reviewBoxCount"),
+  reviewMasteredCount: document.getElementById("reviewMasteredCount"),
+  dueReviewBtn: document.getElementById("dueReviewBtn"),
+  allReviewBtn: document.getElementById("allReviewBtn"),
   timerRing: document.getElementById("timerRing"),
   timerDisplay: document.getElementById("timerDisplay"),
   timerToggleBtn: document.getElementById("timerToggleBtn"),
@@ -101,6 +110,68 @@ function escapeHtml(value) {
     '"': "&quot;",
     "'": "&#39;",
   }[char]));
+}
+
+function readReviewItems() {
+  try {
+    return JSON.parse(localStorage.getItem(REVIEW_KEY) || "{}");
+  } catch (err) {
+    return {};
+  }
+}
+
+function saveReviewItems() {
+  localStorage.setItem(REVIEW_KEY, JSON.stringify(reviewItems));
+}
+
+function reviewState(id) {
+  return reviewItems[id] || null;
+}
+
+function reviewLabel(id) {
+  const item = reviewState(id);
+  if (!item) return "";
+  if (item.masteredAt) return "Mastered";
+  return Number(item.dueAt || 0) <= Date.now() ? "Due Today" : "Review Later";
+}
+
+function isReviewDue(id) {
+  const item = reviewState(id);
+  return Boolean(item && !item.masteredAt && Number(item.dueAt || 0) <= Date.now());
+}
+
+function addToReview(id, reason = "manual") {
+  const now = Date.now();
+  reviewItems[id] = {
+    id,
+    reason,
+    level: 0,
+    attempts: (reviewItems[id]?.attempts || 0) + 1,
+    addedAt: reviewItems[id]?.addedAt || now,
+    updatedAt: now,
+    dueAt: now
+  };
+  saveReviewItems();
+}
+
+function advanceReview(id) {
+  const item = reviewState(id);
+  if (!item) return;
+  const level = Math.min(3, Number(item.level || 0) + 1);
+  const now = Date.now();
+  reviewItems[id] = {
+    ...item,
+    level,
+    updatedAt: now,
+    masteredAt: level >= 3 ? now : null,
+    dueAt: level >= 3 ? now + 365 * 86400000 : now + REVIEW_INTERVALS[level] * 86400000
+  };
+  saveReviewItems();
+}
+
+function removeReview(id) {
+  delete reviewItems[id];
+  saveReviewItems();
 }
 
 function init() {
@@ -156,9 +227,11 @@ function applyInitialParams() {
   }
   if (mode === "q20") els.difficultyFilter.value = "q20";
   if (mode === "long") els.difficultyFilter.value = "long";
+  if (mode === "review") reviewMode = "due";
 }
 
 function resetFilters() {
+  reviewMode = "";
   els.searchBox.value = "";
   els.unitFilter.value = "";
   els.topicFilter.value = "";
@@ -213,6 +286,10 @@ function applyFilters() {
   const minQuestion = Number(els.minQuestion.value || 0);
   const maxQuestion = Number(els.maxQuestion.value || 0);
   visible = questions.filter((question) => {
+    const review = reviewState(question.id);
+    if (reviewMode === "due" && !isReviewDue(question.id)) return false;
+    if (reviewMode === "box" && !review) return false;
+    if (reviewMode === "mastered" && !review?.masteredAt) return false;
     if (unit && question.unit !== unit) return false;
     if (topic && question.topic !== topic) return false;
     if (paper && question.paper !== paper) return false;
@@ -253,14 +330,33 @@ function redraw() {
   els.solvedCount.textContent = solvedActive;
   localStorage.setItem("selectedExpertiseQuestions", JSON.stringify([...selected]));
   localStorage.setItem("solvedExpertiseQuestions", JSON.stringify([...solved]));
+  saveReviewItems();
   updateProgressSnapshot(selectedActive, solvedActive);
+  updateReviewSnapshot(activeIds);
   updateHelper(selectedActive, solvedActive);
   renderCards();
+}
+
+function updateReviewSnapshot(activeIds) {
+  const activeReview = Object.values(reviewItems).filter((item) => activeIds.has(item.id));
+  const due = activeReview.filter((item) => !item.masteredAt && Number(item.dueAt || 0) <= Date.now()).length;
+  const mastered = activeReview.filter((item) => item.masteredAt).length;
+  if (els.reviewDueCount) els.reviewDueCount.textContent = due;
+  if (els.reviewBoxCount) els.reviewBoxCount.textContent = activeReview.length;
+  if (els.reviewMasteredCount) els.reviewMasteredCount.textContent = mastered;
 }
 
 function updateHelper(selectedActive, solvedActive) {
   const topic = els.topicFilter.value;
   const difficulty = els.difficultyFilter.value;
+  const dueCount = Object.values(reviewItems).filter((item) => !item.masteredAt && Number(item.dueAt || 0) <= Date.now()).length;
+  if (reviewMode === "due" || reviewMode === "box") {
+    els.helperTitle.textContent = dueCount ? "Mistakes due today." : "Mistake Box is calm.";
+    els.helperText.textContent = dueCount
+      ? "Redo these questions without opening the solution first. If you solve one correctly, press Review Done so it comes back later."
+      : "Add difficult questions to the Mistake Box while practising. They will reappear until you master them.";
+    return;
+  }
   if (selectedActive) {
     els.helperTitle.textContent = "Worksheet ready.";
     els.helperText.textContent = `${selectedActive} selected question${selectedActive === 1 ? "" : "s"} can be printed now. Try them before opening solutions.`;
@@ -291,6 +387,8 @@ function renderCards() {
     const isSelected = selected.has(question.id);
     const isSolved = solved.has(question.id);
     const hasSolution = Boolean(solutionData[question.id]?.source);
+    const review = reviewState(question.id);
+    const reviewText = reviewLabel(question.id);
     return `<article class="question-card ${isSelected ? "selected" : ""} ${isSolved ? "solved" : ""}" data-id="${question.id}">
       <div>
         <div class="card-title"><span>${escapeHtml(question.paper)} Q${question.question}</span><span>${question.marks}m</span></div>
@@ -301,16 +399,20 @@ function renderCards() {
           <span>${question.marks >= 7 ? "Long" : question.marks >= 4 ? "Standard" : "Quick"}</span>
           ${question.question >= 20 ? "<span>Q20+</span>" : ""}
           ${hasSolution ? "<span>Solution</span>" : ""}
+          ${reviewText ? `<span>${escapeHtml(reviewText)}</span>` : ""}
         </div>
         <div class="status-line">
           ${isSelected ? `<span class="pill">Selected</span>` : ""}
           ${isSolved ? `<span class="pill done">Solved</span>` : ""}
+          ${reviewText ? `<span class="pill review">${escapeHtml(reviewText)}</span>` : ""}
         </div>
       </div>
       <button class="thumb" type="button" data-action="zoom"><img loading="lazy" src="${question.image}" alt="${escapeHtml(question.paper)} Q${question.question}"></button>
       <div class="card-actions">
         <button type="button" data-action="select">${isSelected ? "Remove" : "Select"}</button>
         <button type="button" data-action="solve">${isSolved ? "Unsolve" : "Solved"}</button>
+        <button type="button" data-action="${review ? "reviewDone" : "reviewAdd"}">${review ? "Review Done" : "Mistake Box"}</button>
+        ${review ? `<button type="button" data-action="reviewRemove">Remove Review</button>` : ""}
         ${hasSolution ? `<button type="button" data-action="solution">Show Solution</button>` : ""}
       </div>
     </article>`;
@@ -366,8 +468,18 @@ function toggleSelect(id) {
 }
 
 function toggleSolved(id) {
-  if (solved.has(id)) solved.delete(id);
-  else solved.add(id);
+  if (solved.has(id)) {
+    solved.delete(id);
+  } else {
+    solved.add(id);
+    advanceReview(id);
+  }
+  redraw();
+}
+
+function reviewDone(id) {
+  solved.add(id);
+  advanceReview(id);
   redraw();
 }
 
@@ -471,6 +583,7 @@ function buildWorksheet({ printAfter = false } = {}) {
 
 function practiceMode(mode) {
   if (mode === "all") {
+    reviewMode = "";
     els.viewFilter.value = "";
     els.topicFilter.value = "";
     setTopicChip("");
@@ -480,6 +593,7 @@ function practiceMode(mode) {
     els.topicFilter.focus();
   }
   if (mode === "mixed") {
+    reviewMode = "";
     els.viewFilter.value = "";
     els.topicFilter.value = "";
     setTopicChip("");
@@ -487,10 +601,12 @@ function practiceMode(mode) {
     randomTen();
   }
   if (mode === "unsolved") {
+    reviewMode = "";
     els.viewFilter.value = "unsolved";
     redraw();
   }
   if (mode === "weak") {
+    reviewMode = "";
     const byTopic = new Map();
     questions.forEach((question) => {
       const current = byTopic.get(question.topic) || { total: 0, solved: 0 };
@@ -508,6 +624,11 @@ function practiceMode(mode) {
       setTopicChip(weakest);
       redraw();
     }
+  }
+  if (mode === "review") {
+    reviewMode = "due";
+    els.viewFilter.value = "";
+    redraw();
   }
 }
 
@@ -572,6 +693,15 @@ els.questionGrid.addEventListener("click", (event) => {
   if (!card || !action) return;
   if (action === "select") toggleSelect(card.dataset.id);
   if (action === "solve") toggleSolved(card.dataset.id);
+  if (action === "reviewAdd") {
+    addToReview(card.dataset.id);
+    redraw();
+  }
+  if (action === "reviewDone") reviewDone(card.dataset.id);
+  if (action === "reviewRemove") {
+    removeReview(card.dataset.id);
+    redraw();
+  }
   if (action === "zoom") zoom(card.dataset.id);
   if (action === "solution") showSolution(card.dataset.id);
 });
@@ -585,7 +715,10 @@ els.topicStrip.addEventListener("click", (event) => {
 });
 
 [els.searchBox, els.unitFilter, els.topicFilter, els.paperFilter, els.viewFilter, els.difficultyFilter, els.minMarks, els.maxMarks, els.minQuestion, els.maxQuestion, els.sortMode].forEach((control) => {
-  control.addEventListener("input", redraw);
+  control.addEventListener("input", () => {
+    if (control !== els.sortMode) reviewMode = "";
+    redraw();
+  });
 });
 els.topicFilter.addEventListener("input", () => {
   setTopicChip(els.topicFilter.value);
@@ -597,6 +730,14 @@ els.resetBtn.addEventListener("click", () => {
   redraw();
 });
 els.randomBtn.addEventListener("click", randomTen);
+els.dueReviewBtn?.addEventListener("click", () => {
+  reviewMode = "due";
+  redraw();
+});
+els.allReviewBtn?.addEventListener("click", () => {
+  reviewMode = "box";
+  redraw();
+});
 els.buildWorksheetBtn.addEventListener("click", () => buildWorksheet());
 els.printWorksheetBtn.addEventListener("click", () => buildWorksheet({ printAfter: true }));
 els.clearSelectedBtn.addEventListener("click", () => {
