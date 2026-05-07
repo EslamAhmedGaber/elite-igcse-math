@@ -178,6 +178,7 @@ function init() {
   if (!meta.banks?.[activeBank]) activeBank = "all";
   configureBank();
   applyInitialParams();
+  setPracticeTab(reviewMode ? "review" : "all");
   setLayout(currentLayout);
   updateTimerDisplay();
   redraw();
@@ -582,6 +583,7 @@ function buildWorksheet({ printAfter = false } = {}) {
 }
 
 function practiceMode(mode) {
+  setPracticeTab(mode);
   if (mode === "all") {
     reviewMode = "";
     els.viewFilter.value = "";
@@ -630,6 +632,13 @@ function practiceMode(mode) {
     els.viewFilter.value = "";
     redraw();
   }
+}
+
+function setPracticeTab(mode) {
+  if (!els.practicePanel) return;
+  els.practicePanel.querySelectorAll("[data-practice]").forEach((item) => {
+    item.classList.toggle("active", item.dataset.practice === mode);
+  });
 }
 
 function printSelected() {
