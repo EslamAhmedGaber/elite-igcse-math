@@ -2,15 +2,15 @@
 
 The live student website for **Edexcel IGCSE 4MA1 Higher Mathematics** by Dr Eslam Ahmed.
 
-This document is the single source of truth for running and updating the site. Read the **Common Tasks** and **Adding Solutions** sections first — those cover 95% of what you'll do.
+This document is the single source of truth for running and updating the site. Read the **Common Tasks** and **Private answer workflow** sections first — those cover 95% of what you'll do.
 
-> Last updated: 2026-05-07 · Section index: §1 Live URLs · §2 Stack · §3 Directory tree · §4 Common tasks · **§5 Adding solutions** · §6 Local testing · §7 Deploy · §8 Settings cheat-sheet · §9 Gotchas · §10 Troubleshooting · §11 Credits
+> Last updated: 2026-05-07 · Section index: §1 Live URLs · §2 Stack · §3 Directory tree · §4 Common tasks · **§5 Private answer workflow** · §6 Local testing · §7 Deploy · §8 Settings cheat-sheet · §9 Gotchas · §10 Troubleshooting · §11 Credits
 
 ## Quick start (the 4 things you'll do most)
 
 | If you want to... | Go to | TL;DR |
 |---|---|---|
-| **Add a worked solution to a question** | §5 | Edit `solutions-data.js`, key by question ID, commit, push |
+| **Update private answer review** | §5 | Use the private workflow outside the public site |
 | **Change a price** | §4.1 | Search `p-now` in `index.html` and `about.html`, replace |
 | **Update a testimonial** | §4.2 | Edit `<article class="testimonial light">` blocks in `about.html` |
 | **Replace your photo** | §4.5 | Drop new image at `assets/Mine.png` (overwrite), commit, push |
@@ -85,7 +85,7 @@ website/
 ├── service-worker.js       # PWA install/offline shell + runtime cache for opened assets
 ├── manifest.webmanifest    # Installable app metadata
 ├── questions-data.js       # 1,188 questions metadata (~1 MB) — generated, do not hand-edit
-├── solutions-data.js       # Worked solutions for every question (~850 KB) — see §5
+├── private_output/         # Private answer material kept out of the public site
 ├── offline.html            # Offline fallback page
 ├── 404.html                # Friendly not-found page
 ├── robots.txt
@@ -113,8 +113,8 @@ website/
 
 Private teacher PDFs with answers are generated outside the public website at:
 
-- `C:\Users\Eslam\Documents\New project 5\classified_exam_problems\private_books\classified_problems_with_answers.pdf`
-- `C:\Users\Eslam\Documents\New project 5\classified_exam_problems\private_books\Classified_Expertise_with_answers.pdf`
+- `C:\Users\Eslam\Documents\New project 5\classified_exam_problems\private_output\answer_books\classified_problems_with_answers.pdf`
+- `C:\Users\Eslam\Documents\New project 5\classified_exam_problems\private_output\answer_books\Classified_Expertise_with_answers.pdf`
 
 Do **not** copy those answer PDFs into `website/downloads/` unless you intentionally want to make them public.
 
@@ -199,94 +199,17 @@ The script uses Pillow (already in the existing venv). Edit the constants at the
 
 ---
 
-## 5. Adding solutions to questions
+## 5. Private answer workflow
 
-This is the most frequent ongoing task. **There are two paths — pick based on what you have.**
+The public site does **not** ship answer files. Any answer-review material should stay in the private project and only be copied into the public site if that is an intentional release.
 
-### Solution data format
+If you are updating answer review for the private build:
 
-`solutions-data.js` is a single JavaScript object keyed by question ID:
+1. Work in the private project that stores the answer sources.
+2. Rebuild the private output there.
+3. Keep the resulting answer files out of the public website repo.
 
-```js
-window.SOLUTION_DATA = {
-  "all::Nov2024_P2H__Q21__p21-21__m04__Set-Notation-and-Venn-Diagrams": {
-    "status": "checked",
-    "source": "**Topic check:** Set notation … \\(n(A' \\cap C)=21\\)",
-    "updated": "2026-05-05T00:12:46",
-    "checked_by": "Dr Eslam Ahmed + Codex"
-  },
-  …
-}
-```
-
-Field rules:
-
-- **Key** = the question's `id` (find it in `questions-data.js`). Format is `bank::paper__Qnn__pXX-XX__mNN__Topic-Slug`. The `bank` prefix is `all` or `expertise`.
-- **`status`** — anything you like; the website only renders it as a small label. Common values: `"checked"`, `"draft"`.
-- **`source`** — the worked solution as a single JSON string. Supports:
-  - **Markdown lite:** `**bold**`, `` `code` ``, blank-line paragraphs, `- ` or `* ` bullet lines.
-  - **MathJax LaTeX:** `\(inline\)` and `\[display\]` math. **Always escape backslashes** as `\\(`, `\\)`, `\\[`, `\\]` because this is a JSON string. Example: `"\\(\\dfrac{a}{b}\\)"`.
-- **`updated`** — ISO date string. Used for tracking, not displayed.
-- **`checked_by`** — short attribution, not displayed.
-
-A question without an entry in `solutions-data.js` simply has no "Solution" button — there's no error, no warning. The entry is the only thing that turns the button on.
-
-> **Current coverage:** 1,188 of 1,188 questions have checked worked solutions. Full bank: 974 / 974. Expertise bank: 214 / 214.
-
-### Path A — Quick edit directly in this repo (recommended for one-offs)
-
-Use this only for a future correction or replacement, without touching the original Python pipeline.
-
-1. Open `practice.html` in your browser locally (see §6) and find the question you want to solve.
-2. Right-click the question card → Inspect → find the `data-id="…"` attribute. That's the question's full ID.
-3. Open `solutions-data.js`. Add a new entry, keyed by that ID, alphabetically ordered if you can but order doesn't matter functionally.
-4. Format example (note the escaped backslashes):
-
-```js
-"all::Jun2024_P1H__Q15__p18-18__m04__Quadratic-Equations": {
-  "status": "checked",
-  "source": "**Method**\n\nFactor first: \\(x^2-5x+6=(x-2)(x-3)\\).\n\nSo \\(x=2\\) or \\(x=3\\).\n\n**Answer:** \\(x=2,\\ 3\\)",
-  "updated": "2026-06-15",
-  "checked_by": "Dr Eslam Ahmed"
-},
-```
-
-5. Save → refresh `practice.html` locally → click the question → confirm the **Solution** button appears and renders MathJax correctly.
-6. Commit and push (see §7).
-
-### Path B — Source-of-truth pipeline (recommended for batch work)
-
-The Markdown source files for solutions live in the **original** classified-problems project (not in this repo):
-
-```
-C:\Users\Eslam\Documents\New project 5\classified_exam_problems\
-├── solutions\
-│   ├── solution_index.csv      # tracks every question, status, file path, reviewer, notes
-│   ├── source\all\             # Markdown/LaTeX solution files for the full bank
-│   ├── source\expertise\       # Markdown/LaTeX solution files for the Q20+ bank
-│   └── templates\solution_template.md
-└── scripts\                    # generators that build solutions-data.js from these
-```
-
-Workflow:
-
-1. From the original project root, run the local solution manager:
-   ```powershell
-   cd "C:\Users\Eslam\Documents\New project 5\classified_exam_problems"
-   .\run_solution_manager.bat
-   ```
-2. Open http://127.0.0.1:8767/ in your browser.
-3. Write / edit solutions in the manager — saves Markdown files in `solutions\source\…`.
-4. When done, regenerate the data file. (The original project has a script for this; it produces a fresh `solutions-data.js`.)
-5. **Copy the regenerated `solutions-data.js` over the one in this repo:**
-   ```powershell
-   copy "C:\Users\Eslam\Documents\New project 5\classified_exam_problems\student_publish\solutions-data.js" "C:\Users\Eslam\Documents\Elite IGCSE v2\website\solutions-data.js"
-   ```
-6. Commit and push from this repo (see §7).
-
-Use Path B when regenerating many solutions or after topic corrections. Use Path A for small future fixes.
-
-> **Don't hand-edit `questions-data.js`.** It's regenerated from the upstream classifier and any manual change will be wiped the next time the dataset is rebuilt. Solutions are different — `solutions-data.js` is editable by hand or via the pipeline.
+> **Don't hand-edit `questions-data.js`.** It's regenerated from the upstream classifier and any manual change will be wiped the next time the dataset is rebuilt.
 
 ---
 
@@ -304,7 +227,7 @@ Open http://localhost:8000 — every page works, links between pages work, MathJ
 **Before every push, click through:**
 - Home → click Practice link → grid of questions loads
 - On Practice → click a question → image opens in dialog
-- On Practice → click "Solution" on a question that has one → MathJax renders cleanly
+- On Practice → open a question card and confirm the page layout and image zoom behave cleanly
 - Click any "Book Free First Class" / "Enroll" → lead form opens, submit goes to WhatsApp
 - Resize browser to phone width → hamburger menu appears and works
 
@@ -327,7 +250,7 @@ You can use either GitHub Desktop or the command line.
 ```powershell
 cd "C:\Users\Eslam\Documents\Elite IGCSE v2\website"
 git add -A
-git commit -m "Add solutions for Quadratic Equations Q15 and Q22"
+git commit -m "Update site content and pathway flow"
 git push
 ```
 
@@ -380,5 +303,5 @@ After push, you can verify the build:
 **Dr Eslam Ahmed** — Assistant Lecturer, Cairo University Faculty of Engineering.
 WhatsApp / phone: +20 112 000 9622 · [`https://wa.me/201120009622`](https://wa.me/201120009622)
 
-Site built with Claude Code as collaborator. All teaching content, classification, solutions, and student outcomes belong to Dr Eslam.
+Site built with Claude Code as collaborator. All teaching content, classification, and student outcomes belong to Dr Eslam.
 

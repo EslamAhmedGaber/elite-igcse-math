@@ -5,3 +5,7 @@ desktop.ini
 node_modules/
 .vscode/
 .idea/
+solutions-data.js
+answer_book.pdf
+*_with_answers.pdf
+private_output/

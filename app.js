@@ -203,6 +203,7 @@ function getBankInfo(bank) {
 }
 
 function configureBank() {
+  const unitLabel = window.ELITE_PATHWAY?.label("unitLowerPlural") || "units";
   questions = allQuestions.filter((question) => question.bank === activeBank);
   els.totalQuestions.textContent = questions.length;
   const allCount = getBankInfo("all").count || allQuestions.filter((question) => question.bank === "all").length;
@@ -215,7 +216,7 @@ function configureBank() {
   els.bankDescription.textContent = info.description || "";
   els.bankSubtitle.textContent = info.subtitle || "Search, filter, zoom, select, solve, and print questions from the active bank.";
   els.bankButtons.forEach((button) => button.classList.toggle("active", button.dataset.bank === activeBank));
-  fillSelect(els.unitFilter, uniqueSorted(questions.map((q) => q.unit)), "All units");
+  fillSelect(els.unitFilter, uniqueSorted(questions.map((q) => q.unit)), `All ${unitLabel}`);
   fillSelect(els.topicFilter, info.topics || uniqueSorted(questions.map((q) => q.topic)), "All topics");
   fillSelect(els.paperFilter, uniqueSorted(questions.map((q) => q.paper)), "All papers");
   fillSelect(els.worksheetTopic, info.topics || uniqueSorted(questions.map((q) => q.topic)), "Use current filters");
@@ -375,7 +376,7 @@ function updateHelper(selectedActive, solvedActive) {
   }
   if (selectedActive) {
     els.helperTitle.textContent = "Worksheet ready.";
-    els.helperText.textContent = `${selectedActive} selected question${selectedActive === 1 ? "" : "s"} can be printed now. Try them before opening solutions.`;
+    els.helperText.textContent = `${selectedActive} selected question${selectedActive === 1 ? "" : "s"} can be printed now. Try them before opening the answer review card or marking them solved.`;
     return;
   }
   if (topic) {
@@ -391,7 +392,7 @@ function updateHelper(selectedActive, solvedActive) {
   els.helperTitle.textContent = solvedActive ? "Keep the streak moving." : "Start simple.";
   els.helperText.textContent = solvedActive
     ? "Use Continue Unsolved or Weak Topics to avoid repeating only the questions you already know."
-    : "Pick a topic, solve 5 questions, then open the solutions only after you try.";
+    : "Pick a topic, solve 5 questions, then check the answers only after you try.";
 }
 
 function renderCards() {

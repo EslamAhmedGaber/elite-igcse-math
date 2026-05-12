@@ -88,8 +88,9 @@
   let topics = topicStats();
 
   function fillUnitFilter() {
+    const unitLabel = window.ELITE_PATHWAY?.label("unitLowerPlural") || "units";
     els.unit.innerHTML = "";
-    els.unit.append(new Option("All units", ""));
+    els.unit.append(new Option(`All ${unitLabel}`, ""));
     uniqueSorted(topics.map((row) => row.unit)).forEach((unit) => els.unit.append(new Option(unit, unit)));
   }
 

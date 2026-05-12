@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -16,6 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script defer src="pathway-mode.js"></script>
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js"></script>
   <script defer src="questions-data.js"></script>
@@ -57,7 +58,7 @@
       <div>
         <span class="eyebrow">Exam Readiness Check</span>
         <h1 id="checkupTitle">Find your next best move in two minutes.</h1>
-        <p>Students feel better when they know exactly what to do next. This check uses your goal, confidence, weak units, and solved-question progress to suggest the next study actions.</p>
+        <p>Students feel better when they know exactly what to do next. This check uses your goal, confidence, weak chapters or units, and solved-question progress to suggest the next study actions.</p>
         <div class="planner-hero-actions">
           <a class="button primary" href="#checkupForm">Start check</a>
           <a class="button light" href="planner.html">Build full plan</a>
@@ -66,7 +67,7 @@
       <div class="checkup-score-preview">
         <strong>Output</strong>
         <span>Readiness score</span>
-        <span>Weak unit route</span>
+        <span>Weak chapter route</span>
         <span>Q20+ recommendation</span>
         <span>Printable next steps</span>
       </div>
@@ -113,7 +114,7 @@
         </label>
       </form>
       <div class="weak-unit-picker" aria-labelledby="weakUnitsTitle">
-        <strong id="weakUnitsTitle">Which units feel weakest?</strong>
+        <strong id="weakUnitsTitle">Which chapters or units feel weakest?</strong>
         <div id="weakUnits"></div>
       </div>
       <div class="planner-actions">
@@ -133,7 +134,7 @@
     <section class="final-cta" aria-label="Ask about readiness">
       <div>
         <h2>Want a teacher to read the result?</h2>
-        <p>Send Dr Eslam your readiness result and weakest unit. He will tell you the first topic to fix.</p>
+      <p>Send Dr Eslam your readiness result and weakest chapter. He will tell you the first topic to fix.</p>
       </div>
       <div class="final-cta-actions">
         <a class="button gold" data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Send result</a>
@@ -168,7 +169,7 @@
         <p><a href="downloads.html">Downloads</a></p>
       </div>
     </div>
-    <p class="footer-fineprint">© Dr Eslam Ahmed - For students of Edexcel IGCSE 4MA1 Higher Mathematics. Cairo University Faculty of Engineering.</p>
+    <p class="footer-fineprint">Â© Dr Eslam Ahmed - For students of Edexcel IGCSE 4MA1 Higher Mathematics. Cairo University Faculty of Engineering.</p>
   </footer>
 
   <nav class="mobile-bottom-nav" aria-label="Student shortcuts">

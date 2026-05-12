@@ -1,66 +1,185 @@
 (function () {
-  const TOPIC_CATALOG = [
-    ["Types of Numbers", "Numbers & the Number System"],
-    ["Prime Factors, HCF & LCM", "Numbers & the Number System"],
-    ["Fractions", "Numbers & the Number System"],
-    ["Fractions, Decimals & Percentages", "Numbers & the Number System"],
-    ["Recurring Decimals", "Numbers & the Number System"],
-    ["Percentages", "Numbers & the Number System"],
-    ["Compound Interest & Depreciation", "Numbers & the Number System"],
-    ["Reverse Percentages", "Numbers & the Number System"],
-    ["Rounding, Estimation & Bounds", "Numbers & the Number System"],
-    ["Powers, Roots & Standard Form", "Numbers & the Number System"],
-    ["Surds", "Numbers & the Number System"],
-    ["Ratio Toolkit", "Numbers & the Number System"],
-    ["Standard & Compound Units", "Numbers & the Number System"],
-    ["Algebra Toolkit", "Equations, Formulae & Identities"],
-    ["Expanding Brackets", "Equations, Formulae & Identities"],
-    ["Factorising", "Equations, Formulae & Identities"],
-    ["Algebraic Fractions", "Equations, Formulae & Identities"],
-    ["Algebraic Roots & Indices", "Equations, Formulae & Identities"],
-    ["Forming & Solving Equations", "Equations, Formulae & Identities"],
-    ["Rearranging Formulae", "Equations, Formulae & Identities"],
-    ["Simultaneous Equations", "Equations, Formulae & Identities"],
-    ["Solving Inequalities", "Equations, Formulae & Identities"],
-    ["Completing the Square", "Equations, Formulae & Identities"],
-    ["Quadratic Formula", "Equations, Formulae & Identities"],
-    ["Quadratic Equations", "Equations, Formulae & Identities"],
-    ["Algebraic Proof", "Equations, Formulae & Identities"],
-    ["Sequences", "Sequences, Functions & Graphs"],
-    ["Direct & Inverse Proportion", "Sequences, Functions & Graphs"],
-    ["Coordinates & Linear Graphs", "Sequences, Functions & Graphs"],
-    ["Graphs of Functions", "Sequences, Functions & Graphs"],
-    ["Functions", "Sequences, Functions & Graphs"],
-    ["Differentiation & Turning Points", "Sequences, Functions & Graphs"],
-    ["Transformations of Graphs", "Sequences, Functions & Graphs"],
-    ["Kinematic Graphs", "Sequences, Functions & Graphs"],
-    ["Angles in Polygons & Parallel Lines", "Geometry & Trigonometry"],
-    ["Constructions & Loci", "Geometry & Trigonometry"],
-    ["Perimeter & Area", "Geometry & Trigonometry"],
-    ["Circles, Arcs & Sectors", "Geometry & Trigonometry"],
-    ["Volume & Surface Area", "Geometry & Trigonometry"],
-    ["Right-Angled Triangles - Pythagoras & Trigonometry", "Geometry & Trigonometry"],
-    ["3D Pythagoras & Trigonometry", "Geometry & Trigonometry"],
-    ["Sine & Cosine Rules", "Geometry & Trigonometry"],
-    ["Congruent Shapes", "Geometry & Trigonometry"],
-    ["Similar Shapes", "Geometry & Trigonometry"],
-    ["Area & Volume of Similar Shapes", "Geometry & Trigonometry"],
-    ["Circle Theorems", "Geometry & Trigonometry"],
-    ["Bearings", "Geometry & Trigonometry"],
-    ["Transformations", "Vectors & Transformation Geometry"],
-    ["Vectors", "Vectors & Transformation Geometry"],
-    ["Statistics Toolkit", "Statistics & Probability"],
-    ["Averages from Frequency Tables", "Statistics & Probability"],
-    ["Histograms", "Statistics & Probability"],
-    ["Cumulative Frequency Diagrams", "Statistics & Probability"],
-    ["Probability Toolkit", "Statistics & Probability"],
-    ["Tree Diagrams & Conditional Probability", "Statistics & Probability"],
-    ["Set Notation & Venn Diagrams", "Statistics & Probability"],
-  ].map(([topic, unit], index) => ({ topic, unit, order: index + 1 }));
+  const LINEAR_CHAPTERS = [
+    {
+      unit: "Chapter 1: Numbers & the Number System",
+      topics: [
+        "Number Toolkit",
+        "Prime Factors, HCF & LCM",
+        "Fractions",
+        "Fractions, Decimals & Percentages",
+        "Recurring Decimals",
+        "Percentages",
+        "Compound Interest & Depreciation",
+        "Reverse Percentages",
+        "Rounding, Estimation & Bounds",
+        "Powers & Roots",
+        "Standard Form",
+        "Surds",
+        "Using a Calculator",
+        "Ratio Toolkit",
+        "Standard & Compound Units",
+      ],
+    },
+    {
+      unit: "Chapter 2: Equations, Formulae & Identities",
+      topics: [
+        "Algebra Toolkit",
+        "Expanding Brackets",
+        "Factorising",
+        "Algebraic Fractions",
+        "Algebraic Roots & Indices",
+        "Forming & Solving Equations",
+        "Rearranging Formulae",
+        "Simultaneous Equations",
+        "Solving Inequalities",
+        "Completing the Square",
+        "Quadratic Formula",
+        "Quadratic Equations",
+        "Algebraic Proof",
+      ],
+    },
+    {
+      unit: "Chapter 3: Sequences, Functions & Graphs",
+      topics: [
+        "Sequences",
+        "Direct & Inverse Proportion",
+        "Coordinates & Linear Graphs",
+        "Graphs of Functions",
+        "Functions",
+        "Differentiation & Turning Points",
+        "Transformations of Graphs",
+        "Kinematic Graphs",
+      ],
+    },
+    {
+      unit: "Chapter 4: Geometry & Trigonometry",
+      topics: [
+        "Angles in Polygons & Parallel Lines",
+        "Constructions & Loci",
+        "Perimeter & Area",
+        "Circles, Arcs & Sectors",
+        "Volume & Surface Area",
+        "Right-Angled Triangles - Pythagoras & Trigonometry",
+        "3D Pythagoras & Trigonometry",
+        "Sine & Cosine Rules",
+        "Congruent Shapes",
+        "Similar Shapes",
+        "Area & Volume of Similar Shapes",
+        "Circle Theorems",
+        "Bearings",
+      ],
+    },
+    {
+      unit: "Chapter 5: Vectors & Transformation Geometry",
+      topics: ["Transformations", "Vectors"],
+    },
+    {
+      unit: "Chapter 6: Statistics & Probability",
+      topics: [
+        "Statistics Toolkit",
+        "Averages from Frequency Tables",
+        "Histograms",
+        "Cumulative Frequency Diagrams",
+        "Probability Toolkit",
+        "Tree Diagrams & Conditional Probability",
+        "Set Notation & Venn Diagrams",
+      ],
+    },
+  ];
 
-  const TOPIC_ORDER = new Map(TOPIC_CATALOG.map((entry) => [entry.topic, entry.order]));
-  const TOPIC_UNIT = new Map(TOPIC_CATALOG.map((entry) => [entry.topic, entry.unit]));
-  const TOPIC_SET = new Set(TOPIC_CATALOG.map((entry) => entry.topic));
+  const MODULAR_UNITS = {
+    "Unit 1": [
+      "Number Toolkit",
+      "Fractions",
+      "Fractions, Decimals & Percentages",
+      "Recurring Decimals",
+      "Rounding, Estimation & Bounds",
+      "Powers & Roots",
+      "Surds",
+      "Using a Calculator",
+      "Standard & Compound Units",
+      "Algebra Toolkit",
+      "Expanding Brackets",
+      "Factorising",
+      "Algebraic Fractions",
+      "Algebraic Roots & Indices",
+      "Completing the Square",
+      "Quadratic Formula",
+      "Quadratic Equations",
+      "Coordinates & Linear Graphs",
+      "Graphs of Functions",
+      "Kinematic Graphs",
+      "Perimeter & Area",
+      "Circles, Arcs & Sectors",
+      "Right-Angled Triangles - Pythagoras & Trigonometry",
+      "3D Pythagoras & Trigonometry",
+      "Sine & Cosine Rules",
+      "Histograms",
+      "Probability Toolkit",
+      "Tree Diagrams & Conditional Probability",
+      "Set Notation & Venn Diagrams",
+    ],
+    "Unit 2": [
+      "Prime Factors, HCF & LCM",
+      "Percentages",
+      "Compound Interest & Depreciation",
+      "Reverse Percentages",
+      "Standard Form",
+      "Ratio Toolkit",
+      "Forming & Solving Equations",
+      "Rearranging Formulae",
+      "Simultaneous Equations",
+      "Solving Inequalities",
+      "Algebraic Proof",
+      "Sequences",
+      "Direct & Inverse Proportion",
+      "Functions",
+      "Differentiation & Turning Points",
+      "Transformations of Graphs",
+      "Angles in Polygons & Parallel Lines",
+      "Constructions & Loci",
+      "Volume & Surface Area",
+      "Congruent Shapes",
+      "Similar Shapes",
+      "Area & Volume of Similar Shapes",
+      "Circle Theorems",
+      "Bearings",
+      "Transformations",
+      "Vectors",
+      "Statistics Toolkit",
+      "Averages from Frequency Tables",
+      "Cumulative Frequency Diagrams",
+    ],
+  };
+
+  const LINEAR_CATALOG = LINEAR_CHAPTERS.flatMap((chapter, chapterIndex) =>
+    chapter.topics.map((topic, topicIndex) => ({
+      topic,
+      unit: chapter.unit,
+      order: chapterIndex * 100 + topicIndex + 1,
+    }))
+  );
+
+  const MODULAR_CATALOG = Object.entries(MODULAR_UNITS).flatMap(([unit, topics], unitIndex) =>
+    topics.map((topic, topicIndex) => ({
+      topic,
+      unit,
+      order: unitIndex * 100 + topicIndex + 1,
+    }))
+  );
+
+  const LINEAR_UNIT = new Map(LINEAR_CATALOG.map((entry) => [entry.topic, entry.unit]));
+  const LINEAR_ORDER = new Map(LINEAR_CATALOG.map((entry) => [entry.topic, entry.order]));
+  const MODULAR_UNIT = new Map(MODULAR_CATALOG.map((entry) => [entry.topic, entry.unit]));
+  const MODULAR_ORDER = new Map(MODULAR_CATALOG.map((entry) => [entry.topic, entry.order]));
+
+  function activePathway() {
+    return window.ELITE_PATHWAY?.mode === "modular" ? "modular" : "linear";
+  }
+
+  function activeCatalog() {
+    return activePathway() === "modular" ? MODULAR_CATALOG : LINEAR_CATALOG;
+  }
 
   function lower(value) {
     return String(value ?? "").toLowerCase();
@@ -68,6 +187,31 @@
 
   function matches(text, patterns) {
     return patterns.some((pattern) => pattern.test(text));
+  }
+
+  function splitPowerTopic(question) {
+    const body = lower(question.question_text || "");
+    const text = `${body} ${question.source_id || ""}`;
+    if (matches(text, [
+      /standard form/,
+      /scientific notation/,
+      /\b\d+(?:\.\d+)?\s*(?:x|×|\\times)\s*10\b/,
+      /\b10\s*(?:\^|\*\*)\s*[-+]?\d+/,
+      /\bpower(?:s)? of 10\b/,
+    ])) return "Standard Form";
+    if (matches(text, [
+      /\bprime number\b/,
+      /\bodd\b/,
+      /\beven\b/,
+      /\binteger\b/,
+      /\bwhole number\b/,
+      /\bsquare number\b/,
+      /\bcube number\b/,
+      /\brational\b/,
+      /\birrational\b/,
+      /types? of numbers?/,
+    ])) return "Number Toolkit";
+    return "Powers & Roots";
   }
 
   function canonicalTopic(question) {
@@ -78,6 +222,9 @@
     if (current === "Rearranging Formulas") return "Rearranging Formulae";
 
     switch (current) {
+      case "Number Toolkit":
+      case "Types of Numbers":
+        return "Number Toolkit";
       case "Ratio Problem Solving":
       case "Exchange Rates & Best Buys":
         return "Ratio Toolkit";
@@ -104,14 +251,16 @@
           : "Tree Diagrams & Conditional Probability";
       case "Congruence, Similarity & Geometrical Proof":
         if (matches(body, [/area of similar/, /volume of similar/])) return "Area & Volume of Similar Shapes";
-        if (matches(body, [/congruent/, /proof/])) return "Congruent Shapes";
         if (matches(body, [/similar/, /scale factor/, /enlarg/])) return "Similar Shapes";
+        if (matches(body, [/congruent/, /proof/])) return "Congruent Shapes";
         return "Similar Shapes";
       case "Bearings, Scale Drawing & Constructions":
+        if (matches(body, [/loci/, /locus/, /construction/, /construct/, /compasses/, /bisector/, /perpendicular/, /scale drawing/, /scale diagram/])) {
+          return "Constructions & Loci";
+        }
         if (matches(body, [/\bbear(?:ing|ings)?\b/, /\bnorth\b/, /\bclockwise\b/, /\banticlockwise\b/, /\beast\b/, /\bwest\b/, /\bnorth-east\b/, /\bnorth-west\b/, /\bsouth-east\b/, /\bsouth-west\b/])) {
           return "Bearings";
         }
-        if (matches(body, [/loci/, /locus/, /construction/, /bisector/, /perpendicular/])) return "Constructions & Loci";
         return "Bearings";
       case "Percentages":
         if (matches(text, [/\breduced\b/, /\bdiscount\b/, /\bsale\b/, /\bincrease\b/, /\bdecrease\b/, /\bprofit\b/, /\bloss\b/, /original price/, /\bmore than\b/, /\bless than\b/, /after/, /before/])) {
@@ -127,15 +276,14 @@
         }
         return "Statistics Toolkit";
       case "Powers, Roots & Standard Form":
-        if (matches(text, [/\bprime number\b/, /\bodd\b/, /\beven\b/, /\binteger\b/, /\bwhole number\b/, /\bsquare number\b/, /\bcube number\b/, /\brational\b/, /\birrational\b/, /types? of numbers?/])) {
-          return "Types of Numbers";
-        }
-        return "Powers, Roots & Standard Form";
+        return splitPowerTopic(question);
       case "Prime Factors, HCF & LCM":
-        if (matches(text, [/hcf/, /lcm/, /highest common factor/, /lowest common multiple/])) return "Prime Factors, HCF & LCM";
-        if (matches(text, [/\bprime factor\b/, /\bfactor\b/, /\bmultiple\b/])) return "Prime Factors, HCF & LCM";
-        return "Types of Numbers";
+        if (matches(text, [/hcf/, /lcm/, /highest common factor/, /lowest common multiple/, /\bprime factor\b/, /\bfactor\b/, /\bmultiple\b/])) {
+          return "Prime Factors, HCF & LCM";
+        }
+        return "Number Toolkit";
       case "Graphs of Functions":
+      case "Real-Life Graphs":
         if (matches(text, [/\bspeed\b/, /\bdistance\b/, /\btime\b/, /\bjourney\b/, /\btravel\b/, /\bvelocity\b/, /\bacceleration\b/, /\bmotion\b/])) {
           return "Kinematic Graphs";
         }
@@ -145,6 +293,8 @@
       case "Fractions":
         if (matches(text, [/recurring/, /repeating/])) return "Recurring Decimals";
         return "Fractions";
+      case "Using a Calculator":
+        return "Using a Calculator";
       default:
         return current;
     }
@@ -152,48 +302,53 @@
 
   function normalizeQuestion(question) {
     const originalTopic = question.topic || "";
+    const originalUnit = question.unit || "";
     const canonical = canonicalTopic(question);
-    const canonicalOrder = TOPIC_ORDER.get(canonical) || Number(question.topic_order || 999);
+    const mode = activePathway();
+    const displayUnit = mode === "modular"
+      ? MODULAR_UNIT.get(canonical) || "Unit 2"
+      : LINEAR_UNIT.get(canonical) || originalUnit || "";
+    const displayOrder = mode === "modular"
+      ? MODULAR_ORDER.get(canonical) || Number(question.topic_order || 999)
+      : LINEAR_ORDER.get(canonical) || Number(question.topic_order || 999);
+
     question.original_topic = question.original_topic || originalTopic;
-    question.original_unit = question.original_unit || question.unit || "";
+    question.original_unit = question.original_unit || originalUnit;
+    question.linear_topic = canonical;
+    question.linear_unit = LINEAR_UNIT.get(canonical) || originalUnit || "";
+    question.modular_topic = canonical;
+    question.modular_unit = MODULAR_UNIT.get(canonical) || "Unit 2";
     question.canonical_topic = canonical;
-    question.canonical_topic_order = canonicalOrder;
+    question.canonical_topic_order = LINEAR_ORDER.get(canonical) || Number(question.topic_order || 999);
     question.topic = canonical;
-    question.topic_order = canonicalOrder;
-    question.canonical_unit = question.unit || TOPIC_UNIT.get(canonical) || "";
+    question.unit = displayUnit;
+    question.topic_order = displayOrder;
+    question.pathway = mode;
     return question;
   }
 
   function normalizeMeta(meta) {
-    const topics = TOPIC_CATALOG.map((entry) => entry.topic);
-    const topicValues = {
-      all: {
-        title: "All Classified Questions",
-        description: meta.banks?.all?.description || "",
-        subtitle: meta.banks?.all?.subtitle || "",
-        count: meta.banks?.all?.count || 0,
-        topics
-      },
-      expertise: {
-        title: "Expertise Q20+ Questions",
-        description: meta.banks?.expertise?.description || "",
-        subtitle: meta.banks?.expertise?.subtitle || "",
-        count: meta.banks?.expertise?.count || 0,
-        topics
-      }
-    };
+    const catalog = activeCatalog();
+    const topics = catalog.map((entry) => entry.topic);
+    const unitLabel = window.ELITE_PATHWAY?.label?.("unit") || "Chapter";
+    const subtitle = `${unitLabel}-aware practice with filters, worksheets, progress tracking, and private teacher support.`;
     return {
       ...meta,
       topics,
+      pathway: activePathway(),
       banks: {
         ...(meta.banks || {}),
         all: {
           ...(meta.banks?.all || {}),
-          ...topicValues.all,
+          title: activePathway() === "modular" ? "Modular Classified Questions" : "All Classified Questions",
+          subtitle,
+          topics,
         },
         expertise: {
           ...(meta.banks?.expertise || {}),
-          ...topicValues.expertise,
+          title: activePathway() === "modular" ? "Modular Q20+ Expertise Questions" : "Expertise Q20+ Questions",
+          subtitle,
+          topics,
         },
       },
     };
@@ -202,8 +357,10 @@
   if (Array.isArray(window.QUESTION_DATA)) {
     window.QUESTION_DATA.forEach(normalizeQuestion);
   }
-  window.TOPIC_CATALOG = TOPIC_CATALOG;
-  window.TOPIC_ORDER_MAP = TOPIC_ORDER;
-  window.TOPIC_UNIT_MAP = TOPIC_UNIT;
+  window.TOPIC_CATALOG = activeCatalog();
+  window.TOPIC_ORDER_MAP = new Map(window.TOPIC_CATALOG.map((entry) => [entry.topic, entry.order]));
+  window.TOPIC_UNIT_MAP = new Map(window.TOPIC_CATALOG.map((entry) => [entry.topic, entry.unit]));
+  window.LINEAR_TOPIC_CATALOG = LINEAR_CATALOG;
+  window.MODULAR_TOPIC_CATALOG = MODULAR_CATALOG;
   window.SITE_META = normalizeMeta(window.SITE_META || {});
 })();

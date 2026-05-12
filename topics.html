@@ -1,12 +1,12 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Topic Roadmap — Elite IGCSE Mathematics</title>
+  <title>Topic Roadmap â€” Elite IGCSE Mathematics</title>
   <meta name="description" content="Explore the full Edexcel IGCSE 4MA1 classified topic roadmap. Choose a topic, see question counts, track progress, and jump straight into practice.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Topic Roadmap — Elite IGCSE Mathematics">
+  <meta property="og:title" content="Topic Roadmap â€” Elite IGCSE Mathematics">
   <meta property="og:description" content="A student-friendly roadmap for every classified Edexcel IGCSE 4MA1 topic, with direct practice links and progress tracking.">
   <meta property="og:image" content="assets/og-image.png">
   <meta name="theme-color" content="#0f766e">
@@ -16,6 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script defer src="pathway-mode.js"></script>
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js"></script>
   <script defer src="questions-data.js"></script>
@@ -68,7 +69,7 @@
 
     <section class="roadmap-controls" aria-label="Roadmap filters">
       <label>Search topic<input id="roadmapSearch" type="search" placeholder="e.g. Circle Theorems, Probability, Surds"></label>
-      <label>Unit<select id="roadmapUnit"></select></label>
+      <label><span data-pathway-label="unit">Chapter</span><select id="roadmapUnit"></select></label>
       <label>Bank<select id="roadmapBank">
         <option value="all">All classified</option>
         <option value="expertise">Q20+ expertise</option>
@@ -84,11 +85,11 @@
     <section class="roadmap-guide" aria-label="How to use the roadmap">
       <article>
         <strong>1. Choose a topic</strong>
-        <p>Start with a weak topic or follow the course order from Unit 1 to Unit 6.</p>
+        <p>Start with a weak topic or follow the course order shown for your selected pathway.</p>
       </article>
       <article>
         <strong>2. Solve before checking</strong>
-        <p>Try the question first, then open the worked solution inside the Practice page.</p>
+        <p>Try the question first, then mark it solved or save it in the Mistake Box.</p>
       </article>
       <article>
         <strong>3. Build a worksheet</strong>
@@ -114,7 +115,7 @@
     <div class="footer-grid">
       <div>
         <strong>Elite IGCSE Mathematics</strong>
-        <p>Edexcel 4MA1 Higher · Online · Recorded sessions</p>
+        <p>Edexcel 4MA1 Higher Â· Online Â· Recorded sessions</p>
         <p class="muted">Prepared by Dr Eslam Ahmed</p>
       </div>
       <div>
@@ -135,7 +136,7 @@
         <p><a href="downloads.html">Downloads</a></p>
       </div>
     </div>
-    <p class="footer-fineprint">© Dr Eslam Ahmed · For students of Edexcel IGCSE 4MA1 Higher Mathematics. Cairo University Faculty of Engineering.</p>
+    <p class="footer-fineprint">Â© Dr Eslam Ahmed Â· For students of Edexcel IGCSE 4MA1 Higher Mathematics. Cairo University Faculty of Engineering.</p>
   </footer>
 
   <nav class="mobile-bottom-nav" aria-label="Student shortcuts">

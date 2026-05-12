@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -16,6 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script defer src="pathway-mode.js"></script>
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js"></script>
   <script>
@@ -30,7 +31,6 @@
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
   <script defer src="questions-data.js"></script>
   <script defer src="topic-normalizer.js"></script>
-  <script defer src="solutions-data.js"></script>
   <script defer src="exam.js"></script>
   <script defer src="lead.js"></script>
 </head>
@@ -68,7 +68,7 @@
       <div>
         <span class="eyebrow">Free Mock Exam Mode</span>
         <h1 id="examTitle">Sit a timed paper, then find exactly what cost you marks.</h1>
-        <p>Generate a balanced 25-question mock from the classified bank. Finish, self-mark with the worked solutions, and the site sends weak questions into your Mistake Box.</p>
+        <p>Generate a balanced mock from the classified bank. Finish, enter your marks, and the site sends weak questions into your Mistake Box.</p>
         <div class="planner-hero-actions">
           <a class="button primary" href="#examBuilder">Build mock exam</a>
           <a class="button light" href="practice.html?bank=expertise">Train Q20+</a>
@@ -91,6 +91,13 @@
           <select id="examBank">
             <option value="all">Full classified bank</option>
             <option value="expertise">Q20+ expertise only</option>
+          </select>
+        </label>
+        <label class="modular-only">Modular unit
+          <select id="examModularUnit">
+            <option value="">Both units</option>
+            <option value="Unit 1">Unit 1 only</option>
+            <option value="Unit 2">Unit 2 only</option>
           </select>
         </label>
         <label>Time limit
@@ -120,7 +127,7 @@
     <section class="exam-summary" aria-live="polite">
       <div id="examResultCard" class="exam-result-card">
         <strong>No active mock yet.</strong>
-        <p>Generate a paper to begin. Solutions stay hidden until you finish.</p>
+        <p>Generate a paper to begin. Answers are kept private; use your score entry to update progress.</p>
       </div>
       <div id="examWeaknessGrid" class="exam-weakness-grid"></div>
     </section>

@@ -413,8 +413,9 @@
   }
 
   function renderUnitFilter() {
+    const unitLabel = window.ELITE_PATHWAY?.label("unitLowerPlural") || "units";
     const units = uniqueSorted(topicRows().map((row) => row.unit));
-    els.unitFilter.innerHTML = `<option value="">All units</option>${units.map((unit) => `<option>${escapeHtml(unit)}</option>`).join("")}`;
+    els.unitFilter.innerHTML = `<option value="">All ${escapeHtml(unitLabel)}</option>${units.map((unit) => `<option>${escapeHtml(unit)}</option>`).join("")}`;
   }
 
   function renderNextMoves() {

@@ -17,8 +17,8 @@
   };
 
   const notesByUnit = {
-    "Equations, Formulae & Identities": "downloads/notes/chapter-2-algebra-notes.pdf",
-    "Sequences, Functions & Graphs": "downloads/notes/chapter-3-functions-graphs-notes.pdf"
+    "Chapter 2: Equations, Formulae & Identities": "downloads/notes/chapter-2-algebra-notes.pdf",
+    "Chapter 3: Sequences, Functions & Graphs": "downloads/notes/chapter-3-functions-graphs-notes.pdf"
   };
 
   function escapeHtml(value) {
@@ -57,6 +57,7 @@
   }
 
   function populateWeakUnits() {
+    const unitLabel = window.ELITE_PATHWAY?.label("unitLowerPlural") || "units";
     els.weakUnits.innerHTML = unitStats().map((row) => {
       const checked = saved.weakUnits?.includes(row.unit) ? "checked" : "";
       return `<label><input type="checkbox" value="${escapeHtml(row.unit)}" ${checked}>${escapeHtml(row.unit)}</label>`;
@@ -129,9 +130,9 @@
       actionCard("Fix one weak topic first", `Start with ${topic.topic}. Solve a small set before checking solutions.`, topicLink(topic.unit, topic.topic), "Open practice"),
       noteUnit
         ? actionCard("Read the matching notes", `${noteUnit} has visual notes ready. Use them before the question set.`, notesByUnit[noteUnit], "Read notes")
-        : actionCard("Use the roadmap", "Choose one topic from your weakest unit and work through it in order.", "topics.html", "Open roadmap"),
+        : actionCard("Use the roadmap", "Choose one topic from your weakest chapter or unit and work through it in order.", "topics.html", "Open roadmap"),
       actionCard("Train the hard questions", "Do one Q20+ set each week so long questions stop feeling scary.", "practice.html?bank=expertise&mode=q20", "Train Q20+"),
-      actionCard("Turn this into a plan", "Build a weekly route using your exam date, target grade, and weak unit.", `planner.html?focus=${encodeURIComponent(units[0])}`, "Build plan")
+      actionCard("Turn this into a plan", "Build a weekly route using your exam date, target grade, and weak chapter or unit.", `planner.html?focus=${encodeURIComponent(units[0])}`, "Build plan")
     ];
     els.recommendations.innerHTML = cards.join("");
     return settings;

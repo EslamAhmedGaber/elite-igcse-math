@@ -1571,6 +1571,116 @@ p { margin: 4px 0 0; color: var(--muted); }
   padding: 48px;
   box-shadow: var(--shadow);
 }
+
+body.pathway-unset .page-home > :not(.pathway-gate),
+body.pathway-unset .site-nav,
+body.pathway-unset .site-cta > :not(.pathway-switch) {
+  display: none !important;
+}
+
+.pathway-gate {
+  display: grid;
+  gap: 18px;
+  padding: 28px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #0f766e, #12324a);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+.pathway-gate-person {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.pathway-gate-person img {
+  width: 92px;
+  height: 92px;
+  object-fit: cover;
+  border-radius: 22px;
+  border: 3px solid rgba(244, 203, 97, 0.88);
+  flex-shrink: 0;
+}
+.pathway-gate-person h1 {
+  margin: 6px 0 8px;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.05;
+  letter-spacing: -0.6px;
+}
+.pathway-gate-person p {
+  margin: 0;
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+.pathway-gate-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.pathway-gate-card {
+  display: grid;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.08);
+  min-height: 150px;
+}
+.pathway-gate-card.accent {
+  background: rgba(244, 203, 97, 0.14);
+  border-color: rgba(244, 203, 97, 0.35);
+}
+.pathway-gate-card span {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #f4cb61;
+}
+.pathway-gate-card strong {
+  font-size: 24px;
+  line-height: 1.1;
+}
+.pathway-gate-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  line-height: 1.45;
+}
+.pathway-switch {
+  display: grid;
+  gap: 4px;
+  align-items: center;
+  padding: 8px 10px;
+  border: 1px solid rgba(15, 118, 110, 0.16);
+  border-radius: 14px;
+  background: #fff;
+}
+.pathway-switch span {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+.pathway-switch select {
+  border: none;
+  background: transparent;
+  color: var(--ink);
+  font-weight: 700;
+  padding: 0;
+  min-width: 108px;
+}
+
+.pathway-linear .modular-only {
+  display: none !important;
+}
+
+body.pathway-unset .site-header .site-cta {
+  margin-left: auto;
+}
+
 .home-hero-copy .eyebrow {
   display: inline-block;
   background: rgba(244, 203, 97, 0.16);
@@ -1669,6 +1779,9 @@ p { margin: 4px 0 0; color: var(--muted); }
 @media (max-width: 900px) {
   .home-hero { grid-template-columns: 1fr; padding: 32px 24px; }
   .feature-tabs-head { align-items: flex-start; flex-direction: column; }
+  .pathway-gate-person { align-items: flex-start; }
+  .pathway-gate-grid { grid-template-columns: 1fr; }
+  .pathway-gate { padding: 22px; }
 }
 
 /* Stats band */

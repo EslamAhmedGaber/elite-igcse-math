@@ -1,21 +1,21 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Elite IGCSE Mathematics — Edexcel 4MA1 Practice with Dr Eslam Ahmed</title>
-  <meta name="description" content="974 classified Edexcel IGCSE 4MA1 past-paper questions plus 214 Q20+ expertise problems, all with worked solutions. Live online classes from $12/session with Dr Eslam Ahmed, Cairo University.">
+  <title>Elite IGCSE Mathematics â€” Edexcel 4MA1 Practice with Dr Eslam Ahmed</title>
+  <meta name="description" content="974 classified Edexcel IGCSE 4MA1 past-paper questions plus 214 Q20+ expertise problems. Choose Linear or Modular, track progress, and study live online with Dr Eslam Ahmed, Cairo University.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Elite IGCSE Mathematics — Classified Past-Paper Practice">
-  <meta property="og:description" content="974 classified Edexcel 4MA1 questions + 214 Q20+ expertise problems. Practice by topic, track progress, download PDFs. By Dr Eslam Ahmed, Cairo University.">
+  <meta property="og:title" content="Elite IGCSE Mathematics â€” Classified Past-Paper Practice">
+  <meta property="og:description" content="974 classified Edexcel 4MA1 questions + 214 Q20+ expertise problems. Choose Linear or Modular, track progress, and download PDFs. By Dr Eslam Ahmed, Cairo University.">
   <meta property="og:locale" content="en_GB">
   <meta property="og:locale:alternate" content="ar_EG">
   <meta property="og:image" content="assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Elite IGCSE Mathematics — 974 classified questions, from $12 per session, online with Dr Eslam Ahmed.">
+  <meta property="og:image:alt" content="Elite IGCSE Mathematics â€” 974 classified questions, from $12 per session, online with Dr Eslam Ahmed.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Elite IGCSE Mathematics — Classified Past-Paper Practice">
+  <meta name="twitter:title" content="Elite IGCSE Mathematics â€” Classified Past-Paper Practice">
   <meta name="twitter:description" content="974 classified Edexcel 4MA1 questions + 214 Q20+ expertise problems. By Dr Eslam Ahmed, Cairo University.">
   <meta name="twitter:image" content="assets/og-image.png">
   <meta name="theme-color" content="#0f766e">
@@ -25,6 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script defer src="pathway-mode.js"></script>
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js"></script>
   <script defer src="lead.js"></script>
@@ -59,21 +60,44 @@
   </header>
 
   <main class="page page-home">
+    <section class="pathway-gate" aria-labelledby="pathwayGateTitle">
+      <div class="pathway-gate-person">
+        <img src="assets/Mine-formal-bright.jpg" alt="Dr Eslam Ahmed" loading="eager">
+        <div>
+          <span class="eyebrow">Dr Eslam Ahmed</span>
+          <h1 id="pathwayGateTitle">Choose your pathway.</h1>
+          <p>Pick Linear for the full Chapter 1 to Chapter 6 journey, or Modular for the Unit 1 and Unit 2 pathway.</p>
+        </div>
+      </div>
+      <div class="pathway-gate-grid">
+        <a class="pathway-gate-card" href="practice.html?pathway=linear" data-pathway-choice="linear" data-pathway-target="practice.html?pathway=linear">
+          <span>Linear Pathway</span>
+          <strong>Chapter 1 to Chapter 6</strong>
+          <p>Full classified bank, roadmap, mocks, notes, and progress tools.</p>
+        </a>
+        <a class="pathway-gate-card accent" href="practice.html?pathway=modular" data-pathway-choice="modular" data-pathway-target="practice.html?pathway=modular">
+          <span>Modular Pathway</span>
+          <strong>Unit 1 and Unit 2</strong>
+          <p>Filtered Modular topics, modular mock exams, and the same progress tools.</p>
+        </a>
+      </div>
+    </section>
 
     <section class="home-hero" aria-labelledby="heroTitle">
       <div class="home-hero-copy">
         <span class="eyebrow">Edexcel IGCSE 4MA1 Higher Mathematics</span>
         <h1 id="heroTitle">From shaky topics to a confident A* / 9.</h1>
-        <p>Practice every classified past-paper question by topic. Open worked solutions for all 1188 questions. Study live online with Dr Eslam Ahmed — the same Cairo University engineer who personally classified and solved the full bank.</p>
+        <p>Practice every classified past-paper question by topic. Choose your pathway, track your progress, build worksheets, and study live online with Dr Eslam Ahmed â€” the same Cairo University engineer who personally classified the full bank.</p>
         <div class="home-hero-actions">
-          <a class="button primary" href="practice.html">Start practicing free →</a>
+          <a class="button primary" href="practice.html">Start practicing free â†’</a>
           <a class="button light" data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Book free first class</a>
         </div>
         <ul class="hero-bullets">
           <li><strong>974</strong> classified Edexcel 4MA1 questions</li>
           <li><strong>214</strong> Q20+ expertise problems</li>
-          <li><strong>$12</strong>/session · 100% online · Recorded</li>
-          <li><strong>EN + AR</strong> · taught in mixed English &amp; Arabic</li>
+          <li><strong>Linear + Modular</strong> pathway choice</li>
+          <li><strong>$12</strong>/session Â· 100% online Â· Recorded</li>
+          <li><strong>EN + AR</strong> Â· taught in mixed English &amp; Arabic</li>
         </ul>
       </div>
       <aside class="home-hero-card" aria-label="Course at a glance">
@@ -81,7 +105,7 @@
           <img src="assets/Mine-formal-bright.jpg" alt="Dr Eslam Ahmed" loading="lazy">
         </figure>
         <strong>Dr Eslam Ahmed</strong>
-        <span>Assistant Lecturer · Cairo University Faculty of Engineering</span>
+        <span>Assistant Lecturer Â· Cairo University Faculty of Engineering</span>
         <ul>
           <li>Live online by Zoom</li>
           <li>Recorded sessions for rewatch</li>
@@ -175,26 +199,26 @@
       <article class="feature-card">
         <span class="feature-kicker">01</span>
         <strong>Practice by topic</strong>
-        <p>Filter by unit, topic, paper, marks, solved/unsolved. Switch between the full bank and the Q20+ expertise bank in one click.</p>
-        <a href="practice.html">Open question bank →</a>
+        <p>Filter by chapter or unit, topic, paper, marks, solved/unsolved. Switch between the full bank and the Q20+ expertise bank in one click.</p>
+        <a href="practice.html">Open question bank â†’</a>
       </article>
       <article class="feature-card">
         <span class="feature-kicker">02</span>
         <strong>Track your progress</strong>
         <p>Save your name, target grade, weekly question goal, solved questions, selected worksheet, mistake box, and topic-by-topic mastery.</p>
-        <a href="progress.html">Open progress sheet →</a>
+        <a href="progress.html">Open progress sheet â†’</a>
       </article>
       <article class="feature-card">
         <span class="feature-kicker">03</span>
         <strong>Download &amp; print</strong>
         <p>Grab the corrected full classified PDF and Q20+ book. Then use the Practice page to open every worked solution or print your own selected worksheet.</p>
-        <a href="downloads.html">See downloads →</a>
+        <a href="downloads.html">See downloads â†’</a>
       </article>
       <article class="feature-card">
         <span class="feature-kicker">04</span>
         <strong>Visual notes first</strong>
         <p>Read Chapter 2 and Chapter 3 notes, then jump straight into the matching classified questions. Chapter 1 is being rebuilt before publishing.</p>
-        <a href="notes.html">Open notes →</a>
+        <a href="notes.html">Open notes â†’</a>
       </article>
       <article class="feature-card">
         <span class="feature-kicker">05</span>
@@ -205,7 +229,7 @@
       <article class="feature-card">
         <span class="feature-kicker">06</span>
         <strong>Mock exam mode</strong>
-        <p>Generate a timed paper, self-mark with worked solutions, and send weak questions automatically into the Mistake Box for review.</p>
+          <p>Generate a timed paper, self-mark, and send weak questions automatically into the Mistake Box for review.</p>
         <a href="exam.html">Start mock exam -></a>
       </article>
       <article class="feature-card">
@@ -220,7 +244,7 @@
       <div>
         <span class="eyebrow">Topic Roadmap</span>
         <h2 id="roadmapPreviewTitle">See the whole course before you start.</h2>
-        <p>The roadmap groups the full bank into units and topics, shows how many questions are available, and opens practice already filtered to the topic you choose.</p>
+        <p>The roadmap groups the full bank into chapters or units depending on the pathway, shows how many questions are available, and opens practice already filtered to the topic you choose.</p>
       </div>
       <div class="roadmap-preview-list" aria-label="Roadmap sample">
         <span>Numbers &amp; the Number System</span>
@@ -249,7 +273,7 @@
       <div>
         <span class="eyebrow">Study Plan Generator</span>
         <h2 id="planPreviewTitle">Students revise better when the next step is obvious.</h2>
-        <p>The new planner converts exam date, target grade, weekly hours, and weakest unit into a weekly checklist connected to notes, topic practice, Q20+ questions, and solutions.</p>
+        <p>The new planner converts exam date, target grade, weekly hours, and weakest chapter or unit into a weekly checklist connected to notes, topic practice, Q20+ questions, and private review support.</p>
       </div>
       <div class="notes-preview-actions">
         <a class="button primary" href="planner.html">Build my plan</a>
@@ -261,7 +285,7 @@
       <div>
         <span class="eyebrow">Exam Readiness Check</span>
         <h2 id="checkupPreviewTitle">Not sure where to start? Let the site choose the first move.</h2>
-        <p>The readiness check gives students a score, finds a weak unit, and recommends the next notes, practice set, Q20+ task, or study plan.</p>
+        <p>The readiness check gives students a score, finds a weak chapter or unit, and recommends the next notes, practice set, Q20+ task, or study plan.</p>
       </div>
       <div class="notes-preview-actions">
         <a class="button primary" href="checkup.html">Take readiness check</a>
@@ -273,7 +297,7 @@
       <div>
         <span class="eyebrow">Mock Exam + Mistake Box</span>
         <h2 id="examPreviewTitle">Practise like the real paper, then revise only what went wrong.</h2>
-        <p>The free mock exam hides solutions while the timer runs. After self-marking, missed marks become review questions in the Mistake Box.</p>
+        <p>The free mock exam keeps answers private while the timer runs. After self-marking, missed marks become review questions in the Mistake Box.</p>
       </div>
       <div class="notes-preview-actions">
         <a class="button primary" href="exam.html">Start mock exam</a>
@@ -290,8 +314,8 @@
         <div class="trust-head">
           <span class="eyebrow">Why Dr Eslam Ahmed</span>
           <h2 id="trustTitle">Taught by a Cairo University engineer who lives inside Edexcel 4MA1.</h2>
-          <p>Every classified question on this site was solved, marked, and topic-tagged by Dr Eslam personally — the same way he teaches his enrolled students.</p>
-          <p><a class="link-arrow" href="about.html">Read full bio &amp; testimonials →</a></p>
+          <p>Every classified question on this site was solved, marked, and topic-tagged by Dr Eslam personally â€” the same way he teaches his enrolled students.</p>
+          <p><a class="link-arrow" href="about.html">Read full bio &amp; testimonials â†’</a></p>
         </div>
       </div>
     </section>
@@ -352,9 +376,9 @@
 
     <section class="pricing-panel" aria-labelledby="pricingTitle">
       <div class="pricing-head">
-        <span class="eyebrow">Course Packages — 100% Online</span>
+        <span class="eyebrow">Course Packages â€” 100% Online</span>
         <h2 id="pricingTitle">Pick the path that matches your exam date.</h2>
-        <p>All classes are live online by Zoom and every session is recorded so you can rewatch any problem. <strong>First class is free</strong> — try the course before you commit. Class times: Cairo timezone (GMT+2).</p>
+        <p>All classes are live online by Zoom and every session is recorded so you can rewatch any problem. <strong>First class is free</strong> â€” try the course before you commit. Class times: Cairo timezone (GMT+2).</p>
       </div>
       <div class="pricing-grid">
         <article class="pricing-card">
@@ -366,7 +390,7 @@
           </header>
           <ul class="p-meta">
             <li>Max <strong>5 students</strong> per group</li>
-            <li><strong>60 min</strong> sessions, <strong>2× per week</strong></li>
+            <li><strong>60 min</strong> sessions, <strong>2Ã— per week</strong></li>
             <li><strong>6-month</strong> programme</li>
             <li>First class <strong>free</strong></li>
           </ul>
@@ -387,8 +411,8 @@
             <span class="p-egp">Egyptian residents: <strong>700 EGP / session</strong></span>
           </header>
           <ul class="p-meta">
-            <li><strong>1-to-1</strong> — only you and Dr Eslam</li>
-            <li><strong>60 min</strong> sessions, <strong>2× per week</strong></li>
+            <li><strong>1-to-1</strong> â€” only you and Dr Eslam</li>
+            <li><strong>60 min</strong> sessions, <strong>2Ã— per week</strong></li>
             <li><strong>6-month</strong> programme (flexible)</li>
             <li>First class <strong>free</strong></li>
           </ul>
@@ -396,7 +420,7 @@
             <li>Live online one-to-one by Zoom (mixed English &amp; Arabic)</li>
             <li>Recorded sessions for personal review</li>
             <li>Tailored to your weak topics</li>
-            <li>Flexible timing — weekends included</li>
+            <li>Flexible timing â€” weekends included</li>
             <li>Direct WhatsApp support between sessions</li>
             <li>Personal target tracking to A* / 9</li>
           </ul>
@@ -411,8 +435,8 @@
           </header>
           <ul class="p-meta">
             <li>Small group up to <strong>5</strong> or <strong>1-to-1</strong></li>
-            <li><strong>60 min</strong> sessions, <strong>2× per week</strong></li>
-            <li><strong>4–6 weeks</strong> before the exam</li>
+            <li><strong>60 min</strong> sessions, <strong>2Ã— per week</strong></li>
+            <li><strong>4â€“6 weeks</strong> before the exam</li>
             <li>First class <strong>free</strong></li>
           </ul>
           <ul>
@@ -429,10 +453,10 @@
     <section class="final-cta" aria-label="Get started">
       <div>
         <h2>Ready to stop guessing on exam day?</h2>
-        <p>Open the practice bank and try a topic right now. No login, no email — just pick a topic and start.</p>
+        <p>Open the practice bank and try a topic right now. No login, no email â€” just pick a topic and start.</p>
       </div>
       <div class="final-cta-actions">
-        <a class="button primary" href="practice.html">Open practice bank →</a>
+        <a class="button primary" href="practice.html">Open practice bank â†’</a>
         <a class="button light" data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Book free first class</a>
       </div>
     </section>
@@ -443,7 +467,7 @@
     <div class="footer-grid">
       <div>
         <strong>Elite IGCSE Mathematics</strong>
-        <p>Edexcel 4MA1 Higher · Online · Recorded sessions</p>
+        <p>Edexcel 4MA1 Higher Â· Online Â· Recorded sessions</p>
         <p class="muted">Prepared by Dr Eslam Ahmed</p>
       </div>
       <div>
@@ -464,7 +488,7 @@
         <p><a href="downloads.html">Downloads</a></p>
       </div>
     </div>
-    <p class="footer-fineprint">© Dr Eslam Ahmed · For students of Edexcel IGCSE 4MA1 Higher Mathematics. Cairo University Faculty of Engineering.</p>
+    <p class="footer-fineprint">Â© Dr Eslam Ahmed Â· For students of Edexcel IGCSE 4MA1 Higher Mathematics. Cairo University Faculty of Engineering.</p>
   </footer>
 
   <nav class="mobile-bottom-nav" aria-label="Student shortcuts">

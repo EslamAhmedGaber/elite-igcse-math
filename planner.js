@@ -2,6 +2,7 @@
   const questions = window.QUESTION_DATA || [];
   const solved = new Set(JSON.parse(localStorage.getItem("solvedExpertiseQuestions") || "[]"));
   const saved = JSON.parse(localStorage.getItem("eliteStudyPlanSettings") || "{}");
+  const pathway = window.ELITE_PATHWAY?.mode || "linear";
 
   const els = {
     form: document.getElementById("plannerForm"),
@@ -18,19 +19,23 @@
     weeks: document.getElementById("planWeeks")
   };
 
-  const unitOrder = [
-    "Numbers & the Number System",
-    "Equations, Formulae & Identities",
-    "Sequences, Functions & Graphs",
-    "Geometry & Trigonometry",
-    "Vectors & Transformation Geometry",
-    "Statistics & Probability"
-  ];
+  const unitOrder = pathway === "modular"
+    ? ["Unit 1", "Unit 2"]
+    : [
+      "Chapter 1: Numbers & the Number System",
+      "Chapter 2: Equations, Formulae & Identities",
+      "Chapter 3: Sequences, Functions & Graphs",
+      "Chapter 4: Geometry & Trigonometry",
+      "Chapter 5: Vectors & Transformation Geometry",
+      "Chapter 6: Statistics & Probability"
+    ];
 
-  const notesByUnit = {
-    "Equations, Formulae & Identities": "downloads/notes/chapter-2-algebra-notes.pdf",
-    "Sequences, Functions & Graphs": "downloads/notes/chapter-3-functions-graphs-notes.pdf"
-  };
+  const notesByUnit = pathway === "modular"
+    ? {}
+    : {
+      "Chapter 2: Equations, Formulae & Identities": "downloads/notes/chapter-2-algebra-notes.pdf",
+      "Chapter 3: Sequences, Functions & Graphs": "downloads/notes/chapter-3-functions-graphs-notes.pdf"
+    };
 
   function uniqueSorted(items) {
     return [...new Set(items.filter(Boolean))].sort((a, b) => a.localeCompare(b));
@@ -206,7 +211,7 @@
           </li>`;
         }).join("")}
         ${expertiseTask}
-        <li><span>After solving, check the worked solutions and mark solved.</span><a href="practice.html">Open bank</a></li>
+        <li><span>After solving, mark solved and review the next step.</span><a href="practice.html">Open bank</a></li>
       </ul>
     </article>`;
   }

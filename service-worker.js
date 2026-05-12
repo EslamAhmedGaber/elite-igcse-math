@@ -1,5 +1,5 @@
-const CACHE_VERSION = "elite-igcse-v12";
-const RUNTIME_CACHE = "elite-igcse-runtime-v12";
+const CACHE_VERSION = "elite-igcse-v13";
+const RUNTIME_CACHE = "elite-igcse-runtime-v13";
 
 const APP_SHELL = [
   "./",
@@ -17,6 +17,7 @@ const APP_SHELL = [
   "offline.html",
   "styles.css",
   "lead.js",
+  "pathway-mode.js",
   "firebase-config.js",
   "cloud-progress.js",
   "app.js",
@@ -27,7 +28,6 @@ const APP_SHELL = [
   "topics.js",
   "questions-data.js",
   "topic-normalizer.js",
-  "solutions-data.js",
   "manifest.webmanifest",
   "assets/icon.svg",
   "assets/og-image.png",

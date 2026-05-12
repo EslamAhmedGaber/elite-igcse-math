@@ -8,6 +8,7 @@
 
   const els = {
     bank: document.getElementById("examBank"),
+    modularUnit: document.getElementById("examModularUnit"),
     duration: document.getElementById("examDuration"),
     count: document.getElementById("examCount"),
     start: document.getElementById("startExamBtn"),
@@ -73,8 +74,8 @@
     });
   }
 
-  function buildBalancedPaper(bank, count) {
-    const pool = questions.filter((question) => question.bank === bank);
+  function buildBalancedPaper(bank, count, unit = "") {
+    const pool = questions.filter((question) => question.bank === bank && (!unit || question.unit === unit));
     const quickTarget = Math.max(3, Math.round(count * 0.28));
     const standardTarget = Math.max(5, Math.round(count * 0.4));
     const longTarget = count - quickTarget - standardTarget;
@@ -128,10 +129,11 @@
 
   function startExam() {
     const count = Number(els.count.value || 25);
-    const picked = buildBalancedPaper(els.bank.value, count);
+    const picked = buildBalancedPaper(els.bank.value, count, els.modularUnit?.value || "");
     state = {
       status: "running",
       bank: els.bank.value,
+      modularUnit: els.modularUnit?.value || "",
       durationSeconds: Number(els.duration.value || 90) * 60,
       startedAt: Date.now(),
       finishedAt: null,
@@ -268,7 +270,7 @@
       const last = readJson(HISTORY_KEY, [])[0];
       els.result.innerHTML = last
         ? `<strong>Last mock: ${last.score}/${last.total} (${last.percent}%).</strong><p>Generate a fresh paper when you are ready for the next check.</p>`
-        : `<strong>No active mock yet.</strong><p>Generate a paper to begin. Solutions stay hidden until you finish.</p>`;
+        : `<strong>No active mock yet.</strong><p>Generate a paper to begin. Answers stay private until you finish.</p>`;
       els.weakness.innerHTML = "";
       return;
     }
@@ -276,8 +278,8 @@
     const score = achievedMarks();
     const percent = total ? Math.round((score / total) * 100) : 0;
     const label = state.status === "running" ? "Exam in progress" : state.status === "marking" ? "Self-marking mode" : "Mock result saved";
-    els.result.innerHTML = `<div class="exam-score-ring" style="--score:${percent}%"><strong>${percent}%</strong><span>${score}/${total}</span></div>
-      <div><strong>${label}</strong><p>${state.ids.length} questions. ${state.status === "running" ? "Solutions are hidden until you finish." : "Enter your marks, then save to update the Mistake Box."}</p></div>`;
+      els.result.innerHTML = `<div class="exam-score-ring" style="--score:${percent}%"><strong>${percent}%</strong><span>${score}/${total}</span></div>
+      <div><strong>${label}</strong><p>${state.ids.length} questions. ${state.status === "running" ? "Answers are kept private until you finish." : "Enter your marks, then save to update the Mistake Box."}</p></div>`;
     if (state.status === "running") {
       els.weakness.innerHTML = "";
       return;
@@ -299,6 +301,7 @@
       const question = questionById(id);
       if (!question) return "";
       const solution = solutions[id]?.source || "";
+      const hasSolution = Boolean(solution);
       const savedScore = state.scores?.[id] ?? "";
       return `<article class="exam-question" data-id="${escapeHtml(id)}">
         <div class="print-paper-brand">
@@ -315,9 +318,9 @@
         <img src="${question.image}" alt="${escapeHtml(question.paper)} Q${question.question}" loading="lazy">
         <footer>
           <span>${escapeHtml(question.topic)}</span>
-          ${canMark ? `<label>Score <input data-score-id="${escapeHtml(id)}" type="number" min="0" max="${question.marks}" value="${savedScore}"> / ${question.marks}</label>` : `<span>Solutions hidden during exam</span>`}
+          ${canMark ? `<label>Score <input data-score-id="${escapeHtml(id)}" type="number" min="0" max="${question.marks}" value="${savedScore}"> / ${question.marks}</label>` : `<span>Answers stay private during the exam</span>`}
         </footer>
-        ${canMark ? `<details class="exam-solution"><summary>Show worked solution</summary>${formatSolutionText(solution)}</details>` : ""}
+        ${canMark && hasSolution ? `<details class="exam-solution"><summary>Show worked solution</summary>${formatSolutionText(solution)}</details>` : ""}
         <div class="print-paper-footer">Prepared by Dr Eslam Ahmed | Assistant Lecturer, Cairo University Faculty of Engineering | 01120009622</div>
       </article>`;
     }).join("");
@@ -352,6 +355,9 @@
     renderResult();
   });
   els.duration.addEventListener("change", () => {
+    if (state.status === "idle") updateTimer();
+  });
+  els.modularUnit?.addEventListener("change", () => {
     if (state.status === "idle") updateTimer();
   });
 

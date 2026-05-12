@@ -1,12 +1,12 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Practice Bank — Elite IGCSE Mathematics</title>
+  <title>Practice Bank â€” Elite IGCSE Mathematics</title>
   <meta name="description" content="Practice 974 classified Edexcel IGCSE 4MA1 questions and 214 Q20+ expertise problems. Filter by topic, paper, and marks. Track solved questions and topic mastery.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Practice Bank — Elite IGCSE Mathematics">
+  <meta property="og:title" content="Practice Bank â€” Elite IGCSE Mathematics">
   <meta property="og:description" content="Filter, zoom, solve, and print every classified Edexcel 4MA1 question. By Dr Eslam Ahmed.">
   <meta property="og:image" content="assets/og-image.png">
   <meta name="theme-color" content="#0f766e">
@@ -16,6 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script defer src="pathway-mode.js"></script>
   <script>
     window.MathJax = {
       tex: {
@@ -28,7 +29,6 @@
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
   <script defer src="questions-data.js"></script>
   <script defer src="topic-normalizer.js"></script>
-  <script defer src="solutions-data.js"></script>
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js"></script>
   <script defer src="app.js"></script>
@@ -94,7 +94,7 @@
       <section class="filters">
         <h2 class="panel-title">Find Your Question</h2>
         <label>Search<input id="searchBox" type="search" placeholder="topic, paper, keyword"></label>
-        <label>Unit<select id="unitFilter"></select></label>
+        <label><span data-pathway-label="unit">Chapter</span><select id="unitFilter"></select></label>
         <label>Topic<select id="topicFilter"></select></label>
         <label>Paper<select id="paperFilter"></select></label>
         <label>View<select id="viewFilter">
@@ -170,7 +170,7 @@
         <div>
           <span class="eyebrow">Practice Bank</span>
           <h1 id="practiceTitle">All your IGCSE 4MA1 practice in one place.</h1>
-          <p>Filter by unit, topic, paper, marks, or status. Open worked solutions for every question, mark questions solved, and print your own worksheet. Everything saves automatically in your browser.</p>
+          <p>Filter by <span data-pathway-label="unitLower">chapter</span>, topic, paper, marks, or status. Mark questions solved, save difficult ones in the Mistake Box, and print your own worksheet. Everything saves automatically.</p>
         </div>
         <div class="practice-progress" aria-label="Progress snapshot">
           <div><strong id="progressSolved">0</strong><span>Solved</span></div>
@@ -212,7 +212,7 @@
       <div class="content-head">
         <div>
           <h2>Question Bank</h2>
-          <p id="bankSubtitle">Search, filter, zoom, select, solve, and print questions from the active bank.</p>
+        <p id="bankSubtitle">Search, filter, zoom, select, solve, and print questions from the active bank.</p>
         </div>
         <div class="head-tools">
           <label class="sort-label">Sort<select id="sortMode">
@@ -262,7 +262,7 @@
         <a href="exam.html">
           <span>07</span>
           <strong>Mock Exam</strong>
-          <small>Timed paper with hidden solutions.</small>
+          <small>Timed paper with private answer review.</small>
         </a>
         <a data-lead-trigger="whatsapp" href="https://wa.me/201120009622">
           <span>08</span>
@@ -273,7 +273,7 @@
       <section class="student-helper" aria-label="Student helper">
         <div>
           <strong id="helperTitle">Start simple.</strong>
-          <p id="helperText">Pick a topic, solve 5 questions, then open the solutions only after you try. Mark each question solved so the site can show your progress.</p>
+        <p id="helperText">Pick a topic, solve 5 questions, then mark each one solved so the site can show your progress.</p>
         </div>
         <a class="button light" href="topics.html">Open roadmap</a>
       </section>
@@ -319,7 +319,7 @@
     <div class="footer-grid">
       <div>
         <strong>Elite IGCSE Mathematics</strong>
-        <p>Edexcel 4MA1 Higher · Online · Recorded sessions</p>
+        <p>Edexcel 4MA1 Higher Â· Online Â· Recorded sessions</p>
         <p class="muted">Prepared by Dr Eslam Ahmed</p>
       </div>
       <div>
@@ -340,7 +340,7 @@
         <p><a href="downloads.html">Downloads</a></p>
       </div>
     </div>
-    <p class="footer-fineprint">© Dr Eslam Ahmed · For students of Edexcel IGCSE 4MA1 Higher Mathematics. Cairo University Faculty of Engineering.</p>
+    <p class="footer-fineprint">Â© Dr Eslam Ahmed Â· For students of Edexcel IGCSE 4MA1 Higher Mathematics. Cairo University Faculty of Engineering.</p>
   </footer>
 
   <nav class="mobile-bottom-nav" aria-label="Student shortcuts">
