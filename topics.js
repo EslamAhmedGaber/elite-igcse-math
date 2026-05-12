@@ -1,6 +1,8 @@
 (function () {
   const questions = window.QUESTION_DATA || [];
   const meta = window.SITE_META || {};
+  const catalog = Array.isArray(window.TOPIC_CATALOG) ? window.TOPIC_CATALOG : [];
+  const catalogByTopic = new Map(catalog.map((entry) => [entry.topic, entry]));
   const selected = new Set(JSON.parse(localStorage.getItem("selectedExpertiseQuestions") || "[]"));
   const solved = new Set(JSON.parse(localStorage.getItem("solvedExpertiseQuestions") || "[]"));
 
@@ -33,12 +35,36 @@
 
   function topicStats() {
     const byTopic = new Map();
+    const baseTopics = catalog.length
+      ? catalog
+      : [...new Set(questions.map((question) => question.topic).filter(Boolean))]
+        .sort((a, b) => a.localeCompare(b))
+        .map((topic, index) => ({ topic, unit: "Mixed", order: index + 1 }));
+
+    baseTopics.forEach((entry) => {
+      const key = `${entry.unit}|||${entry.topic}`;
+      byTopic.set(key, {
+        unit: entry.unit,
+        topic: entry.topic,
+        topicOrder: entry.order || 999,
+        all: 0,
+        expertise: 0,
+        marks: 0,
+        solvedAll: 0,
+        solvedExpertise: 0,
+        selected: 0,
+        papers: new Set(),
+      });
+    });
+
     questions.forEach((question) => {
-      const key = `${question.unit}|||${question.topic}`;
+      const topic = question.canonical_topic || question.topic;
+      const catalogEntry = catalogByTopic.get(topic);
+      const key = `${(catalogEntry?.unit || question.unit || "Mixed")}|||${topic}`;
       const row = byTopic.get(key) || {
-        unit: question.unit,
-        topic: question.topic,
-        topicOrder: question.topic_order || 999,
+        unit: catalogEntry?.unit || question.unit || "Mixed",
+        topic,
+        topicOrder: catalogEntry?.order || question.topic_order || 999,
         all: 0,
         expertise: 0,
         marks: 0,
@@ -89,7 +115,6 @@
 
     const rows = topics.filter((row) => {
       const total = bank === "expertise" ? row.expertise : row.all;
-      if (!total) return false;
       if (unit && row.unit !== unit) return false;
       if (search && !`${row.topic} ${row.unit}`.toLowerCase().includes(search)) return false;
       if (progress && progressState(row, total, bank) !== progress) return false;

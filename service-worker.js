@@ -1,5 +1,5 @@
-const CACHE_VERSION = "elite-igcse-v11";
-const RUNTIME_CACHE = "elite-igcse-runtime-v11";
+const CACHE_VERSION = "elite-igcse-v12";
+const RUNTIME_CACHE = "elite-igcse-runtime-v12";
 
 const APP_SHELL = [
   "./",
@@ -26,6 +26,7 @@ const APP_SHELL = [
   "planner.js",
   "topics.js",
   "questions-data.js",
+  "topic-normalizer.js",
   "solutions-data.js",
   "manifest.webmanifest",
   "assets/icon.svg",
