@@ -211,7 +211,8 @@ function getBankInfo(bank) {
 function configureBank() {
   const unitLabel = window.ELITE_PATHWAY?.label("unitLowerPlural") || "units";
   questions = allQuestions.filter((question) => question.bank === activeBank);
-  els.totalQuestions.textContent = questions.length;
+  const scopedQuestions = window.ELITE_PATHWAY?.isModular ? getScopedQuestions() : questions;
+  els.totalQuestions.textContent = scopedQuestions.length;
   const allCount = getBankInfo("all").count || allQuestions.filter((question) => question.bank === "all").length;
   const expertiseCount = getBankInfo("expertise").count || allQuestions.filter((question) => question.bank === "expertise").length;
   els.allBankCount.textContent = `${allCount} questions`;
@@ -224,8 +225,7 @@ function configureBank() {
   els.bankButtons.forEach((button) => button.classList.toggle("active", button.dataset.bank === activeBank));
   fillSelect(els.unitFilter, uniqueSorted(questions.map((q) => q.unit)), `All ${unitLabel}`);
   syncModularUnitSelection();
-  const scope = getScopedQuestions();
-  const topicSource = window.ELITE_PATHWAY?.isModular ? scope : questions;
+  const topicSource = window.ELITE_PATHWAY?.isModular ? scopedQuestions : questions;
   fillSelect(els.topicFilter, info.topics || uniqueSorted(topicSource.map((q) => q.topic)), "All topics");
   fillSelect(els.paperFilter, uniqueSorted(questions.map((q) => q.paper)), "All papers");
   fillSelect(els.worksheetTopic, info.topics || uniqueSorted(topicSource.map((q) => q.topic)), "Use current filters");
