@@ -213,11 +213,18 @@ function getBankInfo(bank) {
 function configureBank() {
   const unitLabel = window.ELITE_PATHWAY?.label("unitLowerPlural") || "units";
   questions = allQuestions.filter((question) => question.bank === activeBank);
+
+  // Fill and sync the unit filter BEFORE any count computation,
+  // so getScopedQuestions() reads the correct unit on first render.
+  fillSelect(els.unitFilter, uniqueSorted(questions.map((q) => q.unit)), `All ${unitLabel}`);
+  syncModeUI();
+  syncModularUnitSelection();
+
   const scopedQuestions = window.ELITE_PATHWAY?.isModular ? getScopedQuestions() : questions;
   els.totalQuestions.textContent = scopedQuestions.length;
   const scopedAll = window.ELITE_PATHWAY?.mode === "modular" ? getScopedQuestions(allQuestions).filter((q) => q.bank === "all") : allQuestions.filter((q) => q.bank === "all");
   const scopedExpertise = window.ELITE_PATHWAY?.mode === "modular" ? getScopedQuestions(allQuestions).filter((q) => q.bank === "expertise") : allQuestions.filter((q) => q.bank === "expertise");
-  
+
   const allCount = scopedAll.length;
   const expertiseCount = scopedExpertise.length;
   els.allBankCount.textContent = `${allCount} questions`;
@@ -228,9 +235,6 @@ function configureBank() {
   els.bankDescription.textContent = info.description || "";
   els.bankSubtitle.textContent = info.subtitle || "Search, filter, zoom, select, solve, and print questions from the active bank.";
   els.bankButtons.forEach((button) => button.classList.toggle("active", button.dataset.bank === activeBank));
-  fillSelect(els.unitFilter, uniqueSorted(questions.map((q) => q.unit)), `All ${unitLabel}`);
-  syncModeUI();
-  syncModularUnitSelection();
   const topicSource = window.ELITE_PATHWAY?.isModular ? scopedQuestions : questions;
   fillSelect(els.topicFilter, info.topics || uniqueSorted(topicSource.map((q) => q.topic)), "All topics");
   fillSelect(els.paperFilter, uniqueSorted(questions.map((q) => q.paper)), "All papers");
