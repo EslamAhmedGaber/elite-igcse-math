@@ -262,11 +262,11 @@ function syncModularUnitSelection() {
   if (!window.ELITE_PATHWAY?.isModular) return;
   const storedUnit = localStorage.getItem("modularUnit");
   const availableUnits = [...els.unitFilter.options].map((option) => option.value).filter(Boolean);
-  const preferredUnit = [els.unitFilter.value, storedUnit, "Unit 1"].find((unit) => unit && availableUnits.includes(unit));
-  if (preferredUnit) {
-    els.unitFilter.value = preferredUnit;
-    localStorage.setItem("modularUnit", preferredUnit);
-  }
+  const preferredUnit = [els.unitFilter.value, storedUnit, "Unit 1"].find((unit) => unit && availableUnits.includes(unit))
+    || availableUnits[0]
+    || "Unit 1";
+  els.unitFilter.value = preferredUnit;
+  localStorage.setItem("modularUnit", preferredUnit);
 }
 
 function syncModeUI() {
@@ -280,9 +280,8 @@ function syncModeUI() {
 
 function getScopedQuestions(source = questions) {
   if (!window.ELITE_PATHWAY?.isModular) return source;
-  const unit = els.unitFilter.value || localStorage.getItem("modularUnit");
-  if (!unit) return source;
-  return source.filter((question) => question.unit === unit);
+  const unit = els.unitFilter.value || localStorage.getItem("modularUnit") || "Unit 1";
+  return source.filter((question) => question.unit === unit || question.modular_unit === unit || question.modular_force_unit === unit);
 }
 
 function applyInitialParams() {

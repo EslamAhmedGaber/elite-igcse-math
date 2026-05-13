@@ -1336,7 +1336,7 @@ p { margin: 4px 0 0; color: var(--muted); }
   top: 0;
   z-index: 50;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 16px;
   padding: 14px 28px;
   background: rgba(255, 255, 255, 0.92);
@@ -1368,16 +1368,18 @@ p { margin: 4px 0 0; color: var(--muted); }
 }
 .site-nav {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 6px;
   margin-left: 14px;
   flex: 1;
   min-width: 0;
   padding: 4px;
   border: 1px solid rgba(216, 225, 232, 0.9);
-  border-radius: 999px;
+  border-radius: 18px;
   background: rgba(245, 248, 251, 0.86);
-  overflow-x: auto;
-  scrollbar-width: none;
+  overflow: visible;
+  scrollbar-width: auto;
 }
 .site-nav::-webkit-scrollbar { display: none; }
 .site-nav a {
@@ -1385,7 +1387,7 @@ p { margin: 4px 0 0; color: var(--muted); }
   text-decoration: none;
   font-weight: 600;
   font-size: 13px;
-  padding: 8px 11px;
+  padding: 8px 10px;
   border: 1px solid transparent;
   border-radius: 999px;
   white-space: nowrap;
@@ -1402,7 +1404,7 @@ p { margin: 4px 0 0; color: var(--muted); }
   border-color: rgba(15, 118, 110, 0.28);
   box-shadow: 0 10px 24px rgba(18, 50, 74, 0.08);
 }
-.site-cta { display: flex; gap: 10px; flex-shrink: 0; }
+.site-cta { display: flex; gap: 10px; flex-shrink: 0; align-items: flex-start; }
 .site-cta .button { font-size: 13px; }
 .cloud-auth-button,
 .cloud-account-button {
@@ -3638,6 +3640,16 @@ body.pathway-unset .site-header .site-cta {
 .download-card.download-note .d-tag {
   background: var(--accent);
   color: #fff;
+}
+
+.download-card.modular-book {
+  border-color: rgba(187, 125, 35, 0.28);
+  background: linear-gradient(180deg, #fffdf8 0%, #ffffff 58%);
+}
+
+.download-card.modular-book .d-tag {
+  background: #f4cb61;
+  color: #12324a;
 }
 
 .downloads-cta {
