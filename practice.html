@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -307,6 +307,20 @@
       <button id="closeSolutionBtn" type="button">Close</button>
     </div>
     <div id="solutionBody" class="solution-body"></div>
+  </dialog>
+
+  <dialog id="fixTopicDialog" class="viewer-dialog">
+    <div class="viewer-head">
+      <div>
+        <strong id="fixTopicTitle">Fix Topic</strong>
+        <div id="fixTopicMeta"></div>
+      </div>
+      <button id="closeFixTopicBtn" type="button">Close</button>
+    </div>
+    <div style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+      <label>Override Topic<select id="fixTopicSelect"></select></label>
+      <button id="saveFixTopicBtn" class="button primary" type="button">Save Correction</button>
+    </div>
   </dialog>
 
   <section id="printArea" class="print-area"></section>

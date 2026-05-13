@@ -28,10 +28,11 @@
         "Factorising",
         "Algebraic Fractions",
         "Algebraic Roots & Indices",
+        "Linear Equations",
         "Forming & Solving Equations",
         "Rearranging Formulae",
         "Simultaneous Equations",
-        "Solving Inequalities",
+        "Inequalities (Solving & Graphing)",
         "Completing the Square",
         "Quadratic Formula",
         "Quadratic Equations",
@@ -43,7 +44,7 @@
       topics: [
         "Sequences",
         "Direct & Inverse Proportion",
-        "Coordinates & Linear Graphs",
+        "Linear Graphs",
         "Graphs of Functions",
         "Functions",
         "Differentiation & Turning Points",
@@ -106,7 +107,8 @@
       "Completing the Square",
       "Quadratic Formula",
       "Quadratic Equations",
-      "Coordinates & Linear Graphs",
+      "Linear Graphs",
+      "Linear Equations",
       "Graphs of Functions",
       "Kinematic Graphs",
       "Perimeter & Area",
@@ -129,7 +131,7 @@
       "Forming & Solving Equations",
       "Rearranging Formulae",
       "Simultaneous Equations",
-      "Solving Inequalities",
+      "Inequalities (Solving & Graphing)",
       "Algebraic Proof",
       "Sequences",
       "Direct & Inverse Proportion",
@@ -189,6 +191,55 @@
     return patterns.some((pattern) => pattern.test(text));
   }
 
+  function hasInequalitySignal(text) {
+    return matches(text, [
+      /\binequalit(?:y|ies)\b/,
+      /\bgraphing inequalities?\b/,
+      /\blinear programming\b/,
+      /\bshaded?\s+region\b/,
+      /\bshade(?:d| the)?\b/,
+      /\binteger values?\b/,
+      /\brange of possible values\b/,
+      /\bvalues? of [xyztn] that satisfy\b/,
+      /\bsolve the inequality\b/,
+      /\brepresent the inequality\b/,
+      /\bat least\b/,
+      /\bat most\b/,
+      /\bgreater than\b/,
+      /\bless than\b/,
+      /\bno more than\b/,
+      /\bno less than\b/,
+      /\bregion\b/,
+      /\bbound(?:ed|ary)\b/,
+      /\bshading\b/,
+      /\bgraph the inequalit\b/,
+      /\by\s*[<>]=?/,
+      /\bx\s*[<>]=?/,
+      /\bn\s*[<>]=?/,
+      /\bt\s*[<>]=?/,
+      /\bp\s*[<>]=?/,
+    ]);
+  }
+
+  function hasLinearGraphSignal(text) {
+    return matches(text, [
+      /\bgraph(?:s|ing)?\b/,
+      /\bplot\b/,
+      /\bgradient\b/,
+      /\by\s*=\s*m\s*x\b/,
+      /\bstraight line\b/,
+      /\bline\s+[a-z]\b/,
+      /\bperpendicular\b/,
+      /\bparallel\b/,
+      /\bintersect(?:s|ion)?\b/,
+      /\bequation of (?:a|the) line\b/,
+      /\bfind an equation\b/,
+      /\bwrite down an equation\b/,
+      /\bdraw the graph\b/,
+      /\bline l\b/,
+    ]);
+  }
+
   function splitPowerTopic(question) {
     const body = lower(question.question_text || "");
     const text = `${body} ${question.source_id || ""}`;
@@ -219,7 +270,20 @@
     const body = lower(question.question_text || "");
     const text = `${body} ${question.source_id || ""}`.toLowerCase();
 
+    const override = localStorage.getItem(`elite_topic_override_${question.id || question.source_id}`);
+    if (override) {
+        try {
+            const parsed = JSON.parse(override);
+            if (parsed.topic) return parsed.topic;
+        } catch(e) {}
+    }
+
     if (current === "Rearranging Formulas") return "Rearranging Formulae";
+
+    // Global inequality catch
+    if (matches(current.toLowerCase(), [/inequalit/, /programming/]) || hasInequalitySignal(text)) {
+      return "Inequalities (Solving & Graphing)";
+    }
 
     switch (current) {
       case "Number Toolkit":
@@ -229,14 +293,22 @@
       case "Exchange Rates & Best Buys":
         return "Ratio Toolkit";
       case "Solving Linear Equations":
-        return "Forming & Solving Equations";
+        return hasInequalitySignal(text) ? "Inequalities (Solving & Graphing)" : "Linear Equations";
+      case "Coordinate Geometry":
+        return hasLinearGraphSignal(text) ? "Linear Graphs" : "Linear Equations";
+      case "Linear Graphs (y = mx + c)":
+        return "Linear Graphs";
+      case "Solving Inequalities":
+      case "Graphing Inequalities":
+      case "Graphing Inequalities and Regions":
+      case "Inequalities":
+      case "Linear Inequalities":
+      case "Linear Programming":
+        return "Inequalities (Solving & Graphing)";
       case "Solving Quadratic Equations":
         return matches(text, [/quadratic\s+formula/, /\bformula\b/]) ? "Quadratic Formula" : "Quadratic Equations";
-      case "Coordinate Geometry":
-      case "Linear Graphs (y = mx + c)":
       case "Estimating Gradients":
-      case "Graphing Inequalities":
-        return "Coordinates & Linear Graphs";
+        return "Graphs of Functions";
       case "Differentiation":
         return "Differentiation & Turning Points";
       case "Area & Perimeter":

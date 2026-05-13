@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -75,11 +75,37 @@
           <strong>Chapter 1 to Chapter 6</strong>
           <p>Full classified bank, roadmap, mocks, notes, and progress tools.</p>
         </a>
-        <a class="pathway-gate-card accent" href="practice.html?pathway=modular" data-pathway-choice="modular" data-pathway-target="practice.html?pathway=modular">
+        <a class="pathway-gate-card accent" href="javascript:void(0)" onclick="document.querySelector('.pathway-gate').hidden=true; document.getElementById('modularUnitGate').hidden=false;">
           <span>Modular Pathway</span>
           <strong>Unit 1 and Unit 2</strong>
           <p>Filtered Modular topics, modular mock exams, and the same progress tools.</p>
         </a>
+      </div>
+    </section>
+
+    <section id="modularUnitGate" class="pathway-gate" aria-labelledby="modularUnitGateTitle" hidden>
+      <div class="pathway-gate-person">
+        <img src="assets/Mine-formal-bright.jpg" alt="Dr Eslam Ahmed" loading="lazy">
+        <div>
+          <span class="eyebrow">Modular Pathway</span>
+          <h1 id="modularUnitGateTitle">Which unit are you revising?</h1>
+          <p>Choose Unit 1 or Unit 2 to see the topics, practice questions, and mock exams for that specific unit.</p>
+        </div>
+      </div>
+      <div class="pathway-gate-grid">
+        <a class="pathway-gate-card" href="practice.html?pathway=modular&unit=Unit+1" onclick="localStorage.setItem('modularUnit', 'Unit 1'); window.ELITE_PATHWAY.setMode('modular', 'practice.html?pathway=modular'); return false;">
+          <span>Unit 1</span>
+          <strong>Numbers, Algebra & Geometry</strong>
+          <p>The first half of the modular course.</p>
+        </a>
+        <a class="pathway-gate-card accent" href="practice.html?pathway=modular&unit=Unit+2" onclick="localStorage.setItem('modularUnit', 'Unit 2'); window.ELITE_PATHWAY.setMode('modular', 'practice.html?pathway=modular'); return false;">
+          <span>Unit 2</span>
+          <strong>Advanced Algebra, Stats & Probability</strong>
+          <p>The second half of the modular course.</p>
+        </a>
+      </div>
+      <div style="text-align:center; margin-top: 1.5rem;">
+        <button id="modularGateBackBtn" type="button" class="button light" onclick="document.getElementById('modularUnitGate').hidden=true; document.querySelector('.pathway-gate').hidden=false;">&larr; Back to pathways</button>
       </div>
     </section>
 

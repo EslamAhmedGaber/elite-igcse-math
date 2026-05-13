@@ -91,6 +91,12 @@ const els = {
   closeSolutionBtn: document.getElementById("closeSolutionBtn"),
   printArea: document.getElementById("printArea"),
   practicePanel: document.querySelector(".practice-panel"),
+  fixTopicDialog: document.getElementById("fixTopicDialog"),
+  fixTopicTitle: document.getElementById("fixTopicTitle"),
+  fixTopicMeta: document.getElementById("fixTopicMeta"),
+  closeFixTopicBtn: document.getElementById("closeFixTopicBtn"),
+  fixTopicSelect: document.getElementById("fixTopicSelect"),
+  saveFixTopicBtn: document.getElementById("saveFixTopicBtn"),
 };
 
 function uniqueSorted(values) {
@@ -431,6 +437,7 @@ function renderCards() {
         <button type="button" data-action="${review ? "reviewDone" : "reviewAdd"}">${review ? "Review Done" : "Mistake Box"}</button>
         ${review ? `<button type="button" data-action="reviewRemove">Remove Review</button>` : ""}
         ${hasSolution ? `<button type="button" data-action="solution">Show Solution</button>` : ""}
+        ${window.CLOUD_SYNC?.state?.user?.email?.toLowerCase().includes('eslam') ? `<button type="button" data-action="fixTopic">Fix Topic</button>` : ""}
       </div>
     </article>`;
   }).join("");
@@ -545,6 +552,29 @@ function showSolution(id) {
   if (window.MathJax?.typesetPromise) {
     window.MathJax.typesetPromise([els.solutionBody]).catch(() => {});
   }
+}
+
+let activeFixId = null;
+function openFixTopic(id) {
+  const question = questionById(id);
+  if (!question) return;
+  activeFixId = id;
+  els.fixTopicTitle.textContent = `${question.paper} Q${question.question}`;
+  els.fixTopicMeta.textContent = `Current: ${question.topic} | ${question.unit}`;
+  fillSelect(els.fixTopicSelect, [...els.topicFilter.options].map(o => o.value).filter(Boolean), "Select correct topic");
+  els.fixTopicSelect.value = question.topic;
+  els.fixTopicDialog.showModal();
+}
+
+function saveFixTopic() {
+  const topic = els.fixTopicSelect.value;
+  if (!topic || !activeFixId) return;
+  const question = questionById(activeFixId);
+  const override = { topic: topic };
+  localStorage.setItem(`elite_topic_override_${activeFixId}`, JSON.stringify(override));
+  question.topic = topic;
+  els.fixTopicDialog.close();
+  location.reload();
 }
 
 function randomTen() {
@@ -736,6 +766,7 @@ els.questionGrid.addEventListener("click", (event) => {
   }
   if (action === "zoom") zoom(card.dataset.id);
   if (action === "solution") showSolution(card.dataset.id);
+  if (action === "fixTopic") openFixTopic(card.dataset.id);
 });
 
 els.topicStrip.addEventListener("click", (event) => {
@@ -780,6 +811,8 @@ els.printSelectedBtn.addEventListener("click", printSelected);
 els.printSelectedBtnHero.addEventListener("click", printSelected);
 els.closeViewerBtn.addEventListener("click", () => els.viewerDialog.close());
 els.closeSolutionBtn.addEventListener("click", () => els.solutionDialog.close());
+els.closeFixTopicBtn.addEventListener("click", () => els.fixTopicDialog.close());
+els.saveFixTopicBtn.addEventListener("click", saveFixTopic);
 els.gridLayoutBtn.addEventListener("click", () => setLayout("grid"));
 els.listLayoutBtn.addEventListener("click", () => setLayout("list"));
 els.timerToggleBtn.addEventListener("click", toggleTimer);
