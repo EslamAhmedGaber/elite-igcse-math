@@ -91,6 +91,8 @@ const els = {
   closeSolutionBtn: document.getElementById("closeSolutionBtn"),
   printArea: document.getElementById("printArea"),
   practicePanel: document.querySelector(".practice-panel"),
+  heroModeEyebrow: document.querySelector(".practice-hero .eyebrow"),
+  heroTitle: document.getElementById("practiceTitle"),
   fixTopicDialog: document.getElementById("fixTopicDialog"),
   fixTopicTitle: document.getElementById("fixTopicTitle"),
   fixTopicMeta: document.getElementById("fixTopicMeta"),
@@ -213,8 +215,11 @@ function configureBank() {
   questions = allQuestions.filter((question) => question.bank === activeBank);
   const scopedQuestions = window.ELITE_PATHWAY?.isModular ? getScopedQuestions() : questions;
   els.totalQuestions.textContent = scopedQuestions.length;
-  const allCount = getBankInfo("all").count || allQuestions.filter((question) => question.bank === "all").length;
-  const expertiseCount = getBankInfo("expertise").count || allQuestions.filter((question) => question.bank === "expertise").length;
+  const scopedAll = window.ELITE_PATHWAY?.mode === "modular" ? getScopedQuestions(allQuestions).filter((q) => q.bank === "all") : allQuestions.filter((q) => q.bank === "all");
+  const scopedExpertise = window.ELITE_PATHWAY?.mode === "modular" ? getScopedQuestions(allQuestions).filter((q) => q.bank === "expertise") : allQuestions.filter((q) => q.bank === "expertise");
+  
+  const allCount = scopedAll.length;
+  const expertiseCount = scopedExpertise.length;
   els.allBankCount.textContent = `${allCount} questions`;
   els.expertiseBankCount.textContent = `${expertiseCount} Q20+ questions`;
   els.heroQuestionCount.textContent = `${allCount} full questions + ${expertiseCount} Q20+ questions`;
@@ -224,13 +229,14 @@ function configureBank() {
   els.bankSubtitle.textContent = info.subtitle || "Search, filter, zoom, select, solve, and print questions from the active bank.";
   els.bankButtons.forEach((button) => button.classList.toggle("active", button.dataset.bank === activeBank));
   fillSelect(els.unitFilter, uniqueSorted(questions.map((q) => q.unit)), `All ${unitLabel}`);
+  syncModeUI();
   syncModularUnitSelection();
   const topicSource = window.ELITE_PATHWAY?.isModular ? scopedQuestions : questions;
   fillSelect(els.topicFilter, info.topics || uniqueSorted(topicSource.map((q) => q.topic)), "All topics");
   fillSelect(els.paperFilter, uniqueSorted(questions.map((q) => q.paper)), "All papers");
   fillSelect(els.worksheetTopic, info.topics || uniqueSorted(topicSource.map((q) => q.topic)), "Use current filters");
-  renderHeroPreview();
-  renderTopicStrip();
+  renderHeroPreview(window.ELITE_PATHWAY?.mode === "modular" ? getScopedQuestions(questions) : questions);
+  renderTopicStrip(window.ELITE_PATHWAY?.mode === "modular" ? getScopedQuestions(questions) : questions);
 }
 
 function syncModularUnitSelection() {
@@ -244,11 +250,20 @@ function syncModularUnitSelection() {
   }
 }
 
-function getScopedQuestions() {
-  if (!window.ELITE_PATHWAY?.isModular) return questions;
+function syncModeUI() {
+  const isMod = window.ELITE_PATHWAY?.mode === "modular";
+  if (els.heroModeEyebrow) els.heroModeEyebrow.textContent = isMod ? "IGCSE Mathematics | Modular Pathway" : "IGCSE Mathematics | Linear Pathway";
+  if (els.heroTitle) els.heroTitle.textContent = isMod ? "Choose Unit 1 or Unit 2, then practice only those topics." : "All your IGCSE 4MA1 practice in one place.";
+  if (els.bankTitle) els.bankTitle.textContent = isMod ? "Modular Classified Questions" : "All Classified Questions";
+  if (els.bankDescription) els.bankDescription.textContent = isMod ? "Choose a unit to see only its matching topics and questions." : "All cropped classified questions from the full output folder.";
+  if (els.bankSubtitle) els.bankSubtitle.textContent = isMod ? "Search, filter, zoom, select, solve, and print questions from the selected modular unit." : "Search, filter, zoom, select, solve, and print questions from the active bank.";
+}
+
+function getScopedQuestions(source = questions) {
+  if (!window.ELITE_PATHWAY?.isModular) return source;
   const unit = els.unitFilter.value || localStorage.getItem("modularUnit");
-  if (!unit) return questions;
-  return questions.filter((question) => question.unit === unit);
+  if (!unit) return source;
+  return source.filter((question) => question.unit === unit);
 }
 
 function applyInitialParams() {
@@ -301,8 +316,8 @@ function resetFilters() {
   setTopicChip("");
 }
 
-function renderHeroPreview() {
-  const examples = getScopedQuestions().slice(0, 3);
+function renderHeroPreview(scope = getScopedQuestions()) {
+  const examples = scope.slice(0, 3);
   els.heroPreview.innerHTML = examples.map((question) => `<article class="preview-item">
     <img loading="lazy" src="${question.image}" alt="${escapeHtml(question.paper)} Q${question.question}">
     <div>
@@ -312,7 +327,7 @@ function renderHeroPreview() {
   </article>`).join("");
 }
 
-function renderTopicStrip() {
+function renderTopicStrip(scope = questions) {
   const counts = new Map();
   const info = getBankInfo(activeBank);
   getScopedQuestions().forEach((question) => counts.set(question.topic, (counts.get(question.topic) || 0) + 1));
