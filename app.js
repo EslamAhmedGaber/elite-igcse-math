@@ -204,6 +204,21 @@ function init() {
   setLayout(currentLayout);
   updateTimerDisplay();
   redraw();
+  showPathwayResumeBanner();
+}
+
+function showPathwayResumeBanner() {
+  const banner = document.getElementById("pathwayResumeBanner");
+  const textEl = document.getElementById("pathwayResumeText");
+  if (!banner || !textEl) return;
+  const mode = (localStorage.getItem("pathway") || window.ELITE_PATHWAY?.mode || "").toLowerCase();
+  if (mode !== "linear" && mode !== "modular") return;
+  const pathwayLabel = mode === "modular" ? "Modular Pathway" : "Linear Pathway";
+  const unit = mode === "modular" ? (localStorage.getItem("modularUnit") || "Unit 1") : "";
+  textEl.textContent = mode === "modular"
+    ? `Welcome back — practising the ${pathwayLabel}, ${unit}.`
+    : `Welcome back — practising the ${pathwayLabel}.`;
+  banner.hidden = false;
 }
 
 function getBankInfo(bank) {

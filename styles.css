@@ -1307,6 +1307,30 @@ p { margin: 4px 0 0; color: var(--muted); }
    v2 multi-page chrome: shared site header, nav, footer
    ============================================================ */
 
+.pathway-resume {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 18px;
+  background: linear-gradient(90deg, rgba(15, 118, 110, 0.10), rgba(187, 125, 35, 0.10));
+  border-bottom: 1px solid rgba(18, 50, 74, 0.10);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy, #12324a);
+}
+
+.pathway-resume[hidden] { display: none; }
+
+.pathway-resume a {
+  color: var(--accent-dark, #0a5651);
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.pathway-resume a:hover { color: var(--navy, #12324a); }
+
 .site-header {
   position: sticky;
   top: 0;
