@@ -223,11 +223,32 @@ function configureBank() {
   els.bankSubtitle.textContent = info.subtitle || "Search, filter, zoom, select, solve, and print questions from the active bank.";
   els.bankButtons.forEach((button) => button.classList.toggle("active", button.dataset.bank === activeBank));
   fillSelect(els.unitFilter, uniqueSorted(questions.map((q) => q.unit)), `All ${unitLabel}`);
-  fillSelect(els.topicFilter, info.topics || uniqueSorted(questions.map((q) => q.topic)), "All topics");
+  syncModularUnitSelection();
+  const scope = getScopedQuestions();
+  const topicSource = window.ELITE_PATHWAY?.isModular ? scope : questions;
+  fillSelect(els.topicFilter, info.topics || uniqueSorted(topicSource.map((q) => q.topic)), "All topics");
   fillSelect(els.paperFilter, uniqueSorted(questions.map((q) => q.paper)), "All papers");
-  fillSelect(els.worksheetTopic, info.topics || uniqueSorted(questions.map((q) => q.topic)), "Use current filters");
+  fillSelect(els.worksheetTopic, info.topics || uniqueSorted(topicSource.map((q) => q.topic)), "Use current filters");
   renderHeroPreview();
   renderTopicStrip();
+}
+
+function syncModularUnitSelection() {
+  if (!window.ELITE_PATHWAY?.isModular) return;
+  const storedUnit = localStorage.getItem("modularUnit");
+  const availableUnits = [...els.unitFilter.options].map((option) => option.value).filter(Boolean);
+  const preferredUnit = [els.unitFilter.value, storedUnit, "Unit 1"].find((unit) => unit && availableUnits.includes(unit));
+  if (preferredUnit) {
+    els.unitFilter.value = preferredUnit;
+    localStorage.setItem("modularUnit", preferredUnit);
+  }
+}
+
+function getScopedQuestions() {
+  if (!window.ELITE_PATHWAY?.isModular) return questions;
+  const unit = els.unitFilter.value || localStorage.getItem("modularUnit");
+  if (!unit) return questions;
+  return questions.filter((question) => question.unit === unit);
 }
 
 function applyInitialParams() {
@@ -242,6 +263,13 @@ function applyInitialParams() {
   const unit = params.get("unit");
   const mode = params.get("mode");
   if (unit && [...els.unitFilter.options].some((option) => option.value === unit)) els.unitFilter.value = unit;
+  if (window.ELITE_PATHWAY?.isModular) {
+    const storedUnit = localStorage.getItem("modularUnit");
+    if (!unit && storedUnit && [...els.unitFilter.options].some((option) => option.value === storedUnit)) {
+      els.unitFilter.value = storedUnit;
+    }
+    syncModularUnitSelection();
+  }
   if (topic && [...els.topicFilter.options].some((option) => option.value === topic)) {
     els.topicFilter.value = topic;
     els.worksheetTopic.value = topic;
@@ -255,7 +283,11 @@ function applyInitialParams() {
 function resetFilters() {
   reviewMode = "";
   els.searchBox.value = "";
-  els.unitFilter.value = "";
+  if (window.ELITE_PATHWAY?.isModular) {
+    syncModularUnitSelection();
+  } else {
+    els.unitFilter.value = "";
+  }
   els.topicFilter.value = "";
   els.paperFilter.value = "";
   els.viewFilter.value = "";
@@ -270,7 +302,7 @@ function resetFilters() {
 }
 
 function renderHeroPreview() {
-  const examples = questions.slice(0, 3);
+  const examples = getScopedQuestions().slice(0, 3);
   els.heroPreview.innerHTML = examples.map((question) => `<article class="preview-item">
     <img loading="lazy" src="${question.image}" alt="${escapeHtml(question.paper)} Q${question.question}">
     <div>
@@ -283,7 +315,7 @@ function renderHeroPreview() {
 function renderTopicStrip() {
   const counts = new Map();
   const info = getBankInfo(activeBank);
-  questions.forEach((question) => counts.set(question.topic, (counts.get(question.topic) || 0) + 1));
+  getScopedQuestions().forEach((question) => counts.set(question.topic, (counts.get(question.topic) || 0) + 1));
   els.topicStrip.innerHTML = [
     `<button class="topic-chip active" type="button" data-topic="">All</button>`,
     ...(info.topics || uniqueSorted([...counts.keys()])).filter((topic) => counts.has(topic)).map((topic) =>
@@ -297,6 +329,7 @@ function setTopicChip(topic) {
 }
 
 function applyFilters() {
+  const pool = getScopedQuestions();
   const search = els.searchBox.value.trim().toLowerCase();
   const unit = els.unitFilter.value;
   const topic = els.topicFilter.value;
@@ -307,7 +340,7 @@ function applyFilters() {
   const maxMarks = Number(els.maxMarks.value || 0);
   const minQuestion = Number(els.minQuestion.value || 0);
   const maxQuestion = Number(els.maxQuestion.value || 0);
-  visible = questions.filter((question) => {
+  visible = pool.filter((question) => {
     const review = reviewState(question.id);
     if (reviewMode === "due" && !isReviewDue(question.id)) return false;
     if (reviewMode === "box" && !review) return false;
@@ -345,7 +378,7 @@ function applyFilters() {
 function redraw() {
   applyFilters();
   els.visibleCount.textContent = visible.length;
-  const activeIds = new Set(questions.map((question) => question.id));
+  const activeIds = new Set(getScopedQuestions().map((question) => question.id));
   const selectedActive = [...selected].filter((id) => activeIds.has(id)).length;
   const solvedActive = [...solved].filter((id) => activeIds.has(id)).length;
   els.selectedCount.textContent = selectedActive;
@@ -444,8 +477,9 @@ function renderCards() {
 }
 
 function updateProgressSnapshot(selectedActive, solvedActive) {
-  const total = questions.length || 1;
-  const unsolved = questions.length - solvedActive;
+  const pool = getScopedQuestions();
+  const total = pool.length || 1;
+  const unsolved = pool.length - solvedActive;
   const percent = Math.round((solvedActive / total) * 100);
   els.progressSolved.textContent = solvedActive;
   els.progressUnsolved.textContent = unsolved;
@@ -455,7 +489,7 @@ function updateProgressSnapshot(selectedActive, solvedActive) {
   els.progressBar.style.width = `${percent}%`;
 
   const byTopic = new Map();
-  questions.forEach((question) => {
+  pool.forEach((question) => {
     const current = byTopic.get(question.topic) || { total: 0, solved: 0 };
     current.total += 1;
     if (solved.has(question.id)) current.solved += 1;
@@ -583,7 +617,7 @@ function randomTen() {
     const j = Math.floor(Math.random() * (i + 1));
     [pool[i], pool[j]] = [pool[j], pool[i]];
   }
-  questions.forEach((question) => selected.delete(question.id));
+  getScopedQuestions().forEach((question) => selected.delete(question.id));
   pool.slice(0, 10).forEach((question) => selected.add(question.id));
   redraw();
 }
@@ -609,7 +643,7 @@ function buildWorksheet({ printAfter = false } = {}) {
   const topic = els.worksheetTopic.value;
   const mode = els.worksheetMode.value || "current";
   const count = Math.max(1, Math.min(40, Number(els.worksheetCount.value || 12)));
-  const basePool = mode === "current" ? visible : questions;
+  const basePool = mode === "current" ? visible : getScopedQuestions();
   const pool = basePool.filter((question) => {
     if (topic && question.topic !== topic) return false;
     return matchesWorksheetMode(question, mode);
@@ -619,7 +653,7 @@ function buildWorksheet({ printAfter = false } = {}) {
     els.helperText.textContent = "Relax the filters or choose another topic, then build again.";
     return;
   }
-  questions.forEach((question) => selected.delete(question.id));
+  getScopedQuestions().forEach((question) => selected.delete(question.id));
   shuffled(pool).slice(0, count).forEach((question) => selected.add(question.id));
   els.viewFilter.value = "selected";
   if (topic && [...els.topicFilter.options].some((option) => option.value === topic)) {
@@ -658,7 +692,7 @@ function practiceMode(mode) {
   if (mode === "weak") {
     reviewMode = "";
     const byTopic = new Map();
-    questions.forEach((question) => {
+    getScopedQuestions().forEach((question) => {
       const current = byTopic.get(question.topic) || { total: 0, solved: 0 };
       current.total += 1;
       if (solved.has(question.id)) current.solved += 1;
@@ -780,6 +814,10 @@ els.topicStrip.addEventListener("click", (event) => {
 [els.searchBox, els.unitFilter, els.topicFilter, els.paperFilter, els.viewFilter, els.difficultyFilter, els.minMarks, els.maxMarks, els.minQuestion, els.maxQuestion, els.sortMode].forEach((control) => {
   control.addEventListener("input", () => {
     if (control !== els.sortMode) reviewMode = "";
+    if (control === els.unitFilter && window.ELITE_PATHWAY?.isModular && control.value) {
+      localStorage.setItem("modularUnit", control.value);
+      configureBank();
+    }
     redraw();
   });
 });
@@ -804,7 +842,7 @@ els.allReviewBtn?.addEventListener("click", () => {
 els.buildWorksheetBtn.addEventListener("click", () => buildWorksheet());
 els.printWorksheetBtn.addEventListener("click", () => buildWorksheet({ printAfter: true }));
 els.clearSelectedBtn.addEventListener("click", () => {
-  questions.forEach((question) => selected.delete(question.id));
+  getScopedQuestions().forEach((question) => selected.delete(question.id));
   redraw();
 });
 els.printSelectedBtn.addEventListener("click", printSelected);
