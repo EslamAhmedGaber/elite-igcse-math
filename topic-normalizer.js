@@ -377,8 +377,15 @@
     const originalUnit = question.unit || "";
     const canonical = canonicalTopic(question);
     const mode = activePathway();
+
+    // Modular-paper questions (4WM1H/4WM1HR -> Unit 1, 4WM2H/4WM2HR -> Unit 2)
+    // carry an explicit override that beats the topic-based mapping, since
+    // the Edexcel paper code is a stronger signal than the question text.
+    const forcedModular = question.modular_force_unit;
+
+    const modularUnit = forcedModular || MODULAR_UNIT.get(canonical) || "Unit 2";
     const displayUnit = mode === "modular"
-      ? MODULAR_UNIT.get(canonical) || "Unit 2"
+      ? modularUnit
       : LINEAR_UNIT.get(canonical) || originalUnit || "";
     const displayOrder = mode === "modular"
       ? MODULAR_ORDER.get(canonical) || Number(question.topic_order || 999)
@@ -389,7 +396,7 @@
     question.linear_topic = canonical;
     question.linear_unit = LINEAR_UNIT.get(canonical) || originalUnit || "";
     question.modular_topic = canonical;
-    question.modular_unit = MODULAR_UNIT.get(canonical) || "Unit 2";
+    question.modular_unit = modularUnit;
     question.canonical_topic = canonical;
     question.canonical_topic_order = LINEAR_ORDER.get(canonical) || Number(question.topic_order || 999);
     question.topic = canonical;
