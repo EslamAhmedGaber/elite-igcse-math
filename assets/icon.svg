@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Elite IGCSE Mathematics">
-  <rect width="512" height="512" rx="96" fill="#0f766e"/>
-  <rect x="56" y="56" width="400" height="400" rx="68" fill="#12324a"/>
-  <path d="M114 338h284v42H114zM114 132h284v42H114z" fill="#f4cb61"/>
-  <path d="M136 248c0-58 43-101 103-101 31 0 58 11 78 32l-31 31c-12-12-27-18-45-18-34 0-57 24-57 56s23 56 57 56c18 0 33-6 45-18l31 31c-20 21-47 32-78 32-60 0-103-43-103-101z" fill="#fff"/>
-  <path d="M322 224h58v38h-58z" fill="#fff"/>
-</svg>
