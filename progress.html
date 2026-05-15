@@ -1,0 +1,526 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Progress - Elite IGCSE Mathematics</title>
+  <meta name="description" content="Save your IGCSE Mathematics target, track solved classified questions, see weak topics, and export your progress backup.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="My Progress - Elite IGCSE Mathematics">
+  <meta property="og:description" content="A personal progress sheet for Elite IGCSE Mathematics students. Saved on the student's device.">
+  <meta property="og:image" content="assets/og-image.png">
+  <meta name="theme-color" content="#0f766e">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="pathway-mode.js"></script>
+  <script defer src="questions-data.js"></script>
+  <script defer src="topic-normalizer.js"></script>
+  <script defer src="firebase-config.js"></script>
+  <script defer src="cloud-progress.js"></script>
+  <script defer src="progress.js"></script>
+  <script defer src="lead.js"></script>
+</head>
+<body data-page="progress">
+
+  <header class="site-header">
+    <a class="site-brand" href="index.html" aria-label="Elite IGCSE Mathematics home">
+      <span class="brand-mark">IGCSE</span>
+      <span class="brand-title">Elite IGCSE Mathematics</span>
+    </a>
+    <button id="navToggle" class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" aria-label="Main">
+      <a href="downloads.html">Books</a>
+      <a href="pastpapers.html">Papers</a>
+      <a href="practice.html">Classified</a>
+      <a href="exam.html">Mocks</a>
+      <a href="progress.html" aria-current="page">Progress</a>
+      <a href="topics.html">Topics</a>
+      <a href="notes.html">Notes</a>
+      <a href="checkup.html">Check</a>
+      <a href="planner.html">Plan</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="site-cta">
+      <button class="button cloud-auth-button" type="button" data-cloud-login>Continue with Google</button>
+      <a class="button cloud-account-button" href="progress.html" data-cloud-account hidden>My Progress</a>
+      <a class="button primary" data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Enroll</a>
+    </div>
+  </header>
+
+  <main class="page page-progress">
+    <section class="progress-hero" aria-labelledby="progressTitle">
+      <div>
+        <span class="eyebrow">Student Progress Sheet</span>
+        <h1 id="progressTitle">Your live IGCSE progress workbook.</h1>
+        <p>Track classified questions, past paper scores, assignments, quizzes, deadlines, weak topics, and revision priorities in one place.</p>
+        <div class="planner-hero-actions">
+          <a class="button primary" href="practice.html">Continue solving</a>
+          <a class="button light" href="#topicSheet">Open topic sheet</a>
+        </div>
+      </div>
+      <aside class="progress-save-card" aria-label="Saved profile summary">
+        <span>Saved student</span>
+        <strong id="profilePreviewName">Student</strong>
+        <p id="profilePreviewTarget">Target not set yet</p>
+        <div class="progress-save-status" id="saveStatus">Progress saves automatically in this browser.</div>
+      </aside>
+    </section>
+
+    <section class="progress-dashboard" aria-label="Progress summary">
+      <article>
+        <span>Full classified</span>
+        <strong id="fullSolved">0</strong>
+        <p id="fullPercent">0% solved</p>
+      </article>
+      <article>
+        <span>Q20+ expertise</span>
+        <strong id="expertiseSolved">0</strong>
+        <p id="expertisePercent">0% solved</p>
+      </article>
+      <article>
+        <span>Selected worksheet</span>
+        <strong id="selectedCountProgress">0</strong>
+        <p>questions ready</p>
+      </article>
+      <article>
+        <span>Mistake box</span>
+        <strong id="mistakeDue">0</strong>
+        <p>due today</p>
+      </article>
+      <article>
+        <span>Study streak</span>
+        <strong id="studyStreak">0</strong>
+        <p>active days</p>
+      </article>
+      <article>
+        <span>Past papers</span>
+        <strong id="paperDoneCount">0</strong>
+        <p>logged attempts</p>
+      </article>
+      <article>
+        <span>Score average</span>
+        <strong id="paperAverage">0%</strong>
+        <p id="gradeForecast">grade forecast pending</p>
+      </article>
+      <article>
+        <span>Urgent topics</span>
+        <strong id="urgentTopicCount">0</strong>
+        <p>need attention</p>
+      </article>
+      <article>
+        <span>Deadlines</span>
+        <strong id="overdueTaskCount">0</strong>
+        <p>overdue or missing</p>
+      </article>
+    </section>
+
+    <nav class="progress-workbook-nav" aria-label="Progress workbook shortcuts">
+      <a href="#overviewPanel">Overview</a>
+      <a href="#topicSheet">Topic sheet</a>
+      <a href="#paperTracker">Past paper log</a>
+      <a href="#assignmentTracker">Assignments and quizzes</a>
+      <a href="#revisionPriority">Revision priority</a>
+      <a href="#backupPanel">Backup</a>
+    </nav>
+
+    <section class="cloud-sync-panel" id="cloudSyncPanel" aria-labelledby="cloudSyncTitle">
+      <div>
+        <span class="eyebrow">Free Cloud Sync</span>
+        <h2 id="cloudSyncTitle">Login with Google and keep progress across devices.</h2>
+        <p id="cloudStatus">Cloud login is ready in the code. Add the free Firebase config to activate it.</p>
+        <strong id="cloudUser">Local progress is still saving on this device.</strong>
+      </div>
+      <div class="cloud-sync-actions">
+        <button class="primary" id="googleLoginBtn" type="button">Continue with Google</button>
+        <button id="syncCloudBtn" type="button">Sync now</button>
+        <button id="restoreCloudBtn" type="button">Restore from cloud</button>
+        <button id="googleLogoutBtn" type="button" hidden>Log out</button>
+      </div>
+    </section>
+
+    <section class="progress-sheet-guide" id="overviewPanel" aria-label="Workbook overview">
+      <article>
+        <strong>1. Set target</strong>
+        <p>Name, target grade, exam session, and weekly target personalize the dashboard.</p>
+      </article>
+      <article>
+        <strong>2. Log results</strong>
+        <p>Use dropdowns for past papers, assignments, quizzes, topics, and difficulty.</p>
+      </article>
+      <article>
+        <strong>3. Follow priorities</strong>
+        <p>The sheet highlights urgent topics, overdue work, and the next best practice move.</p>
+      </article>
+      <article>
+        <strong>4. Sync safely</strong>
+        <p>Google login keeps the workbook available across devices.</p>
+      </article>
+    </section>
+
+    <section class="progress-two-col">
+      <section class="progress-profile-panel" aria-labelledby="profileTitle">
+        <div class="section-head">
+          <span class="eyebrow">Student Info</span>
+          <h2 id="profileTitle">Make the website feel personal.</h2>
+          <p>Saved locally on this device. Export a backup if the student wants to move progress to another laptop or phone.</p>
+        </div>
+        <form class="progress-profile-form" id="progressProfileForm">
+          <label>Student name
+            <input id="studentName" type="text" autocomplete="name" placeholder="Your name">
+          </label>
+          <label>Target grade
+            <select id="targetGrade">
+              <option value="">Choose target</option>
+              <option value="9">Grade 9 / A*</option>
+              <option value="8">Grade 8</option>
+              <option value="7">Grade 7</option>
+              <option value="6">Grade 6</option>
+            </select>
+          </label>
+          <label>Exam session
+            <input id="examSession" type="text" placeholder="Example: June 2026">
+          </label>
+          <label>Weekly question target
+            <input id="weeklyTarget" type="number" min="5" max="200" step="5" value="30">
+          </label>
+          <button class="primary" type="submit">Save my information</button>
+        </form>
+      </section>
+
+      <section class="progress-next-panel" aria-labelledby="nextTitle">
+        <div class="section-head">
+          <span class="eyebrow">Next Best Move</span>
+          <h2 id="nextTitle">What should I solve now?</h2>
+        </div>
+        <div id="nextMoveCards" class="next-move-cards"></div>
+      </section>
+    </section>
+
+    <section class="progress-priority-panel" id="revisionPriority" aria-labelledby="priorityTitle">
+      <div class="sheet-head">
+        <div>
+          <span class="eyebrow">Revision Priority</span>
+          <h2 id="priorityTitle">The topics to fix first.</h2>
+          <p>Ranked from your solved questions, Q20+ coverage, selected questions, and mistake box.</p>
+        </div>
+        <div class="priority-legend" aria-label="Priority colors">
+          <span class="priority-chip urgent">Urgent</span>
+          <span class="priority-chip needs">Needs work</span>
+          <span class="priority-chip steady">On track</span>
+          <span class="priority-chip strong">Strong</span>
+        </div>
+      </div>
+      <div class="progress-table-wrap">
+        <table class="progress-table priority-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Topic</th>
+              <th>Progress</th>
+              <th>Mistakes</th>
+              <th>Verdict</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="priorityRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="progress-sheet-panel" id="topicSheet" aria-labelledby="topicSheetTitle">
+      <div class="sheet-head">
+        <div>
+          <span class="eyebrow">Topic Sheet</span>
+          <h2 id="topicSheetTitle">Live topic-by-topic progress.</h2>
+          <p>Inspired by the Excel progress sheets, but connected directly to the website solved-question data.</p>
+        </div>
+        <div class="sheet-filters">
+          <label><span data-pathway-label="unit">Unit</span>
+            <select id="progressUnitFilter"></select>
+          </label>
+          <label>Status
+            <select id="progressStatusFilter">
+              <option value="">All topics</option>
+              <option value="not-started">Not started</option>
+              <option value="started">Started</option>
+              <option value="strong">Strong</option>
+            </select>
+          </label>
+          <label>Search
+            <input id="progressSearch" type="search" placeholder="topic name">
+          </label>
+        </div>
+      </div>
+      <section class="progress-print-toolbar" aria-label="Topic print tools">
+        <div>
+          <strong id="selectedTopicSummary">0 topics selected</strong>
+          <span id="visibleTopicSummary">0 visible</span>
+        </div>
+        <div class="selection-actions">
+          <button id="selectVisibleTopicsBtn" type="button">Select visible</button>
+          <button id="clearVisibleTopicsBtn" type="button">Clear visible</button>
+          <button id="printVisibleTopicsBtn" type="button">Print current view</button>
+          <button id="printSelectedTopicsBtn" class="primary" type="button">Print selected topics</button>
+        </div>
+      </section>
+      <div class="progress-table-wrap">
+        <table class="progress-table">
+          <thead>
+            <tr>
+              <th>Select</th>
+              <th>Topic</th>
+              <th>Full bank</th>
+              <th>Q20+</th>
+              <th>Progress</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="topicProgressRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="progress-log-grid" id="paperTracker" aria-labelledby="paperTrackerTitle">
+      <section class="progress-entry-panel" aria-label="Past paper attempt entry">
+        <div class="section-head">
+          <span class="eyebrow">Past Paper Tracker</span>
+          <h2 id="paperTrackerTitle">Log each paper attempt.</h2>
+          <p>Dropdowns mirror the Excel tracker: year, session, paper code, score, time, notes, and wrong questions.</p>
+        </div>
+        <form class="progress-log-form" id="paperAttemptForm">
+          <label>Year
+            <select id="paperYear"></select>
+          </label>
+          <label>Session
+            <select id="paperSession"></select>
+          </label>
+          <label>Paper code
+            <select id="paperCode"></select>
+          </label>
+          <label>Date attempted
+            <input id="paperDate" type="date">
+          </label>
+          <label>Raw score /100
+            <input id="paperRawScore" type="number" min="0" max="100" step="1" placeholder="82">
+          </label>
+          <label>Time in minutes
+            <input id="paperTime" type="number" min="1" max="240" step="1" placeholder="105">
+          </label>
+          <label>Wrong questions
+            <input id="paperWrongQuestions" type="text" placeholder="3, 7, 12, 20">
+          </label>
+          <label>Notes
+            <input id="paperNotes" type="text" placeholder="Timing, algebra slips, calculator">
+          </label>
+          <button class="primary" type="submit">Save paper attempt</button>
+        </form>
+      </section>
+
+      <section class="progress-entry-panel" aria-label="Past paper dashboard">
+        <div class="section-head">
+          <span class="eyebrow">Paper Dashboard</span>
+          <h2>Best, lowest, and remaining papers.</h2>
+        </div>
+        <div class="mini-kpi-grid">
+          <article><span>Best score</span><strong id="bestPaperScore">-</strong></article>
+          <article><span>Lowest score</span><strong id="lowestPaperScore">-</strong></article>
+          <article><span>Average time</span><strong id="averagePaperTime">-</strong></article>
+        </div>
+        <div class="progress-table-wrap compact">
+          <table class="progress-table compact-table">
+            <thead>
+              <tr>
+                <th>Recent paper</th>
+                <th>Score</th>
+                <th>Time</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="paperAttemptRows"></tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+
+    <section class="progress-sheet-panel" aria-labelledby="allPapersTitle">
+      <div class="sheet-head">
+        <div>
+          <span class="eyebrow">All Papers</span>
+          <h2 id="allPapersTitle">Past paper completion status.</h2>
+          <p>Automatically updates from the attempts saved above.</p>
+        </div>
+        <div class="sheet-filters">
+          <label>Status
+            <select id="paperStatusFilter">
+              <option value="">All papers</option>
+              <option value="done">Done</option>
+              <option value="not-done">Not done</option>
+            </select>
+          </label>
+          <label>Search
+            <input id="paperSearch" type="search" placeholder="2024, Jun, P1H">
+          </label>
+        </div>
+      </div>
+      <div class="progress-table-wrap">
+        <table class="progress-table compact-table">
+          <thead>
+            <tr>
+              <th>Paper</th>
+              <th>Attempts</th>
+              <th>Best score</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="allPapersRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="progress-log-grid" id="assignmentTracker" aria-labelledby="assignmentTrackerTitle">
+      <section class="progress-entry-panel" aria-label="Assignment and quiz entry">
+        <div class="section-head">
+          <span class="eyebrow">Assignments and Quizzes</span>
+          <h2 id="assignmentTrackerTitle">Track homework, quizzes, and deadlines.</h2>
+          <p>Use dropdowns for chapter or unit, topic, task type, difficulty, score, and status.</p>
+        </div>
+        <form class="progress-log-form" id="studyTaskForm">
+          <label>Type
+            <select id="taskKind">
+              <option>Homework</option>
+              <option>Classwork</option>
+              <option>Worksheet</option>
+              <option>Topic Quiz</option>
+              <option>Mock Homework</option>
+              <option>Revision Task</option>
+            </select>
+          </label>
+          <label><span data-pathway-label="unit">Unit</span>
+            <select id="taskUnit"></select>
+          </label>
+          <label>Topic
+            <select id="taskTopic"></select>
+          </label>
+          <label>Difficulty
+            <select id="taskDifficulty">
+              <option>Easy</option>
+              <option selected>Medium</option>
+              <option>Hard</option>
+              <option>Exam level</option>
+            </select>
+          </label>
+          <label>Title
+            <input id="taskTitle" type="text" placeholder="Topic quiz 3">
+          </label>
+          <label>Due date
+            <input id="taskDueDate" type="date">
+          </label>
+          <label>Raw mark
+            <input id="taskRawScore" type="number" min="0" step="1" placeholder="18">
+          </label>
+          <label>Max mark
+            <input id="taskMaxScore" type="number" min="1" step="1" placeholder="25">
+          </label>
+          <label>Status
+            <select id="taskStatus">
+              <option>Pending</option>
+              <option>Submitted</option>
+              <option>Late</option>
+              <option>Missing</option>
+              <option>Revised</option>
+            </select>
+          </label>
+          <button class="primary" type="submit">Save assignment or quiz</button>
+        </form>
+      </section>
+
+      <section class="progress-entry-panel" aria-label="Assignment and quiz dashboard">
+        <div class="section-head">
+          <span class="eyebrow">Deadline Dashboard</span>
+          <h2>Upcoming work and performance.</h2>
+        </div>
+        <div class="mini-kpi-grid">
+          <article><span>Logged tasks</span><strong id="loggedTaskCount">0</strong></article>
+          <article><span>Average score</span><strong id="taskAverage">-</strong></article>
+          <article><span>Due this week</span><strong id="tasksDueWeek">0</strong></article>
+        </div>
+        <div class="progress-table-wrap compact">
+          <table class="progress-table compact-table">
+            <thead>
+              <tr>
+                <th>Task</th>
+                <th>Topic</th>
+                <th>Due</th>
+                <th>Status</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="studyTaskRows"></tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+
+    <section class="progress-backup-panel" id="backupPanel" aria-labelledby="backupTitle">
+      <div>
+        <span class="eyebrow">Backup</span>
+        <h2 id="backupTitle">Keep progress safe.</h2>
+        <p>Progress saves locally first. When the free Google login is active, students can also sync it to the cloud. The export file remains a manual safety backup.</p>
+      </div>
+      <div class="progress-backup-actions">
+        <button class="primary" id="exportProgressBtn" type="button">Export progress file</button>
+        <label class="import-button">Import progress file
+          <input id="importProgressInput" type="file" accept="application/json,.json">
+        </label>
+        <a class="button light" id="sendProgressBtn" data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Send summary to Dr Eslam</a>
+      </div>
+    </section>
+  </main>
+
+  <section id="progressPrintArea" class="print-area progress-print-area"></section>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <strong>Elite IGCSE Mathematics</strong>
+        <p>Edexcel 4MA1 Higher - Online - Recorded sessions</p>
+        <p class="muted">Prepared by Dr Eslam Ahmed</p>
+      </div>
+      <div>
+        <strong>Contact</strong>
+        <p><a data-lead-trigger="whatsapp" href="https://wa.me/201120009622">WhatsApp +20 112 000 9622</a></p>
+        <p><a href="tel:01120009622">Call 01120009622</a></p>
+      </div>
+      <div>
+        <strong>Student Tools</strong>
+        <p><a href="notes.html">Notes</a></p>
+        <p><a href="practice.html">Classified bank</a></p>
+        <p><a href="pastpapers.html">Past papers</a></p>
+        <p><a href="exam.html">Mock exams</a></p>
+        <p><a href="progress.html">My progress</a></p>
+        <p><a href="topics.html">Topic roadmap</a></p>
+        <p><a href="checkup.html">Readiness check</a></p>
+        <p><a href="planner.html">Study plan</a></p>
+        <p><a href="downloads.html">Downloads</a></p>
+      </div>
+    </div>
+    <p class="footer-fineprint">Â© Dr Eslam Ahmed - For students of Edexcel IGCSE 4MA1 Higher Mathematics. Cairo University Faculty of Engineering.</p>
+  </footer>
+
+  <nav class="mobile-bottom-nav" aria-label="Student shortcuts">
+    <a href="notes.html">Notes</a>
+    <a href="practice.html">Classified</a>
+    <a href="pastpapers.html">Papers</a>
+    <a href="exam.html">Mocks</a>
+    <a href="progress.html" aria-current="page">Progress</a>
+  </nav>
+
+</body>
+</html>
+
