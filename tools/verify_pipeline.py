@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 from typing import Any
@@ -171,6 +172,28 @@ def verify_guardrails(report: Report) -> None:
         report.error("downloads/ is missing; public classified books need a deploy folder.")
 
 
+def verify_runtime_js(report: Report) -> None:
+    for filename in ("questions-data.js", "solutions-data.js"):
+        path = ROOT / filename
+        if not path.exists():
+            report.error(f"{filename} is missing; rebuild the runtime data before publishing.")
+            continue
+        try:
+            subprocess.run(
+                ["node", "--check", str(path)],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+        except FileNotFoundError:
+            report.warn("Node.js is unavailable; skipped runtime JS syntax checks.")
+            return
+        except subprocess.CalledProcessError as exc:
+            detail = (exc.stderr or exc.stdout or "").strip().splitlines()
+            summary = detail[0] if detail else "syntax check failed"
+            report.error(f"{filename} is not valid JavaScript: {summary}")
+
+
 def verify_questions(report: Report) -> tuple[dict[str, dict[str, Any]], set[str], set[str]]:
     topics_doc = read_json(TOPICS_PATH, report) or {}
     known_topics = set(topics_doc.get("topics") or []) | CANONICAL_TOPICS
@@ -330,6 +353,7 @@ def print_report(report: Report) -> int:
 def main() -> int:
     report = Report()
     verify_guardrails(report)
+    verify_runtime_js(report)
     question_by_id, paper_slugs, _used_topics = verify_questions(report)
     verify_catalogue(report, paper_slugs)
     verify_solutions(report, question_by_id)

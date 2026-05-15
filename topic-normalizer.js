@@ -184,7 +184,7 @@
   }
 
   function lower(value) {
-    return String(value | "").toLowerCase();
+    return String(value ?? "").toLowerCase();
   }
 
   function matches(text, patterns) {

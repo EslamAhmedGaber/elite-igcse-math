@@ -27,7 +27,7 @@
   let tickHandle = null;
 
   function escapeHtml(value) {
-    return String(value | "").replace(/[&<>"']/g, (char) => ({
+    return String(value ?? "").replace(/[&<>"']/g, (char) => ({
       "&": "&amp;",
       "<": "&lt;",
       ">": "&gt;",
@@ -302,7 +302,7 @@
       if (!question) return "";
       const solution = solutions[id]?.source || "";
       const hasSolution = Boolean(solution);
-      const savedScore = state.scores?.[id] | "";
+      const savedScore = state.scores?.[id] ?? "";
       return `<article class="exam-question" data-id="${escapeHtml(id)}">
         <div class="print-paper-brand">
           <strong>Elite IGCSE Mathematics - Dr Eslam Ahmed</strong>
