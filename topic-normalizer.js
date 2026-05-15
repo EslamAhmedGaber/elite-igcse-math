@@ -184,7 +184,7 @@
   }
 
   function lower(value) {
-    return String(value ?? "").toLowerCase();
+    return String(value | "").toLowerCase();
   }
 
   function matches(text, patterns) {
@@ -246,7 +246,7 @@
     if (matches(text, [
       /standard form/,
       /scientific notation/,
-      /\b\d+(?:\.\d+)?\s*(?:x|×|\\times)\s*10\b/,
+      /\b\d+(?:\.\d+)?\s*(?:x|x|\\times)\s*10\b/,
       /\b10\s*(?:\^|\*\*)\s*[-+]?\d+/,
       /\bpower(?:s)? of 10\b/,
     ])) return "Standard Form";

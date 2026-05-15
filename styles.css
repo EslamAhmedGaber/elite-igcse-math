@@ -2198,7 +2198,7 @@ body.pathway-unset .site-header .site-cta {
   }
 }
 
-/* Trust panel — compact variant for home */
+/* Trust panel - compact variant for home */
 .trust-compact { padding: 30px 36px; }
 .trust-compact .trust-intro { margin-bottom: 0; }
 .trust-compact .link-arrow { color: #f4cb61; }
@@ -2273,7 +2273,7 @@ body.pathway-unset .site-header .site-cta {
   .about-actions { justify-content: center; }
 }
 
-/* Testimonials panel — light variant for about page */
+/* Testimonials panel - light variant for about page */
 .testimonials-panel {
   background: var(--surface);
   border: 1px solid var(--line);

@@ -75,7 +75,7 @@
   function readJSON(key, fallback) {
     try {
       const value = JSON.parse(localStorage.getItem(key) || "null");
-      return value ?? fallback;
+      return value | fallback;
     } catch (err) {
       return fallback;
     }

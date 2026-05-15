@@ -279,7 +279,7 @@ window.QUESTION_DATA = [
     "marks": 3,
     "filename": "Jan2020_P1H__Q06__p08-08__m03__Powers-Roots-and-Standard-Form.png",
     "image": "assets/questions/Jan2020_P1H__Q06__p08-08__m03__Powers-Roots-and-Standard-Form.png",
-    "question_text": "6 (a) Write 7.8 × 10-4 as an ordinary number. .................................................................................. (1) (b) Work out 5 6 10 7 10 2 8 10 4 3 3 . . × + × × - Give your answer in standard form. .................................................................................. (2) (Total for Question 6 is 3 marks)",
+    "question_text": "6 (a) Write 7.8 x 10-4 as an ordinary number. .................................................................................. (1) (b) Work out 5 6 10 7 10 2 8 10 4 3 3 . . x + x x - Give your answer in standard form. .................................................................................. (2) (Total for Question 6 is 3 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -615,7 +615,7 @@ window.QUESTION_DATA = [
     "marks": 3,
     "filename": "Jan2020_P1HR__Q02__p03-03__m03__Fractions.png",
     "image": "assets/questions/Jan2020_P1HR__Q02__p03-03__m03__Fractions.png",
-    "question_text": "2 Show that 3 1 5 × 2 5 8 = 8 2 5 (Total for Question 2 is 3 marks)",
+    "question_text": "2 Show that 3 1 5 x 2 5 8 = 8 2 5 (Total for Question 2 is 3 marks)",
     "paper_code": "P1HR",
     "modular_force_unit": null
   },
@@ -631,7 +631,7 @@ window.QUESTION_DATA = [
     "marks": 8,
     "filename": "Jan2020_P1HR__Q03__p04-04__m08__Rearranging-Formulas.png",
     "image": "assets/questions/Jan2020_P1HR__Q03__p04-04__m08__Rearranging-Formulas.png",
-    "question_text": "3 (a) Make a the subject of d = g + 2ac ...................................................... (2) (b) Factorise fully 9e f - 12 f ...................................................... (2) (c) Expand and simplify (x + 2)(x - 5) ...................................................... (2) (d) Simplify fully n n n 4 7 5 × ...................................................... (2) (Total for Question 3 is 8 marks)",
+    "question_text": "3 (a) Make a the subject of d = g + 2ac ...................................................... (2) (b) Factorise fully 9e f - 12 f ...................................................... (2) (c) Expand and simplify (x + 2)(x - 5) ...................................................... (2) (d) Simplify fully n n n 4 7 5 x ...................................................... (2) (Total for Question 3 is 8 marks)",
     "paper_code": "P1HR",
     "modular_force_unit": null
   },
@@ -1031,7 +1031,7 @@ window.QUESTION_DATA = [
     "marks": 3,
     "filename": "Jan2020_P2H__Q01__p03-03__m03__Algebraic-Roots-and-Indices.png",
     "image": "assets/questions/Jan2020_P2H__Q01__p03-03__m03__Algebraic-Roots-and-Indices.png",
-    "question_text": "1 (a) Simplify x x 9 2 ....................................................... (1) (b) Write 7 7 7 8 4 3 × as a single power of 7 ....................................................... (2) (Total for Question 1 is 3 marks)",
+    "question_text": "1 (a) Simplify x x 9 2 ....................................................... (1) (b) Write 7 7 7 8 4 3 x as a single power of 7 ....................................................... (2) (Total for Question 1 is 3 marks)",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -1143,7 +1143,7 @@ window.QUESTION_DATA = [
     "marks": 7,
     "filename": "Jan2020_P2H__Q08__p09-09__m07__Percentages.png",
     "image": "assets/questions/Jan2020_P2H__Q08__p09-09__m07__Percentages.png",
-    "question_text": "8 The table shows the cost, in euros, of Brigitte’s car insurance in each of the years 2016, 2017 and 2018 Year 2016 2017 2018 Cost of insurance (euros) 500 545 592 Brigitte says, “The percentage increase in the cost of my car insurance from 2017 to 2018 is more than the percentage increase in the cost of my car insurance from 2016 to 2017” (a) Is Brigitte correct? You must show how you get your answer. (4) Henri wants to insure his car. He gets a discount of 15% off the normal price. Henri pays 952 euros for his car insurance after the discount. (b) Work out the discount that Henri gets. ....................................................... euros (3) (Total for Question 8 is 7 marks)",
+    "question_text": "8 The table shows the cost, in euros, of Brigitte’s car insurance in each of the years 2016, 2017 and 2018 Year 2016 2017 2018 Cost of insurance (euros) 500 545 592 Brigitte says, "The percentage increase in the cost of my car insurance from 2017 to 2018 is more than the percentage increase in the cost of my car insurance from 2016 to 2017" (a) Is Brigitte correct? You must show how you get your answer. (4) Henri wants to insure his car. He gets a discount of 15% off the normal price. Henri pays 952 euros for his car insurance after the discount. (b) Work out the discount that Henri gets. ....................................................... euros (3) (Total for Question 8 is 7 marks)",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -1207,7 +1207,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "Jan2020_P2H__Q12__p12-12__m04__Exchange-Rates-and-Best-Buys.png",
     "image": "assets/questions/Jan2020_P2H__Q12__p12-12__m04__Exchange-Rates-and-Best-Buys.png",
-    "question_text": "12 Astrid wants to buy some oil. She can buy the oil from either Dane Oil or Arctic Oil. Here is information about the price that each company will charge Astrid. Dane Oil Arctic Oil (4.2 × 105) litres for 2 500 000 Krone (8.6 × 105) litres for 770 000 Dollars Astrid wants to get the better value for money for the oil. 1 Dollar = 6.57 Krone From which company should she buy her oil, Dane Oil or Arctic Oil? You must show your working. (Total for Question 12 is 4 marks)",
+    "question_text": "12 Astrid wants to buy some oil. She can buy the oil from either Dane Oil or Arctic Oil. Here is information about the price that each company will charge Astrid. Dane Oil Arctic Oil (4.2 x 105) litres for 2 500 000 Krone (8.6 x 105) litres for 770 000 Dollars Astrid wants to get the better value for money for the oil. 1 Dollar = 6.57 Krone From which company should she buy her oil, Dane Oil or Arctic Oil? You must show your working. (Total for Question 12 is 4 marks)",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -1431,7 +1431,7 @@ window.QUESTION_DATA = [
     "marks": 3,
     "filename": "Jan2020_P2H__Q23__p23-23__m03__Vectors.png",
     "image": "assets/questions/Jan2020_P2H__Q23__p23-23__m03__Vectors.png",
-    "question_text": "23 Diagram NOT accurately drawn 4a 2b A B C M P ABC is a triangle. The midpoint of BC is M. P is a point on AM. AB → = 4a AC → = 2b AP → = 3 2 a + 3 4 b Find the ratio AP : PM ....................................................... (Total for Question 23 is 3 marks)",
+    "question_text": "23 Diagram NOT accurately drawn 4a 2b A B C M P ABC is a triangle. The midpoint of BC is M. P is a point on AM. AB -> = 4a AC -> = 2b AP -> = 3 2 a + 3 4 b Find the ratio AP : PM ....................................................... (Total for Question 23 is 3 marks)",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -1447,7 +1447,7 @@ window.QUESTION_DATA = [
     "marks": 3,
     "filename": "Jan2020_P2H__Q23__p23-23__m03__Vectors.png",
     "image": "assets/questions/Jan2020_P2H__Q23__p23-23__m03__Vectors.png",
-    "question_text": "23 Diagram NOT accurately drawn 4a 2b A B C M P ABC is a triangle. The midpoint of BC is M. P is a point on AM. AB → = 4a AC → = 2b AP → = 3 2 a + 3 4 b Find the ratio AP : PM ....................................................... (Total for Question 23 is 3 marks)",
+    "question_text": "23 Diagram NOT accurately drawn 4a 2b A B C M P ABC is a triangle. The midpoint of BC is M. P is a point on AM. AB -> = 4a AC -> = 2b AP -> = 3 2 a + 3 4 b Find the ratio AP : PM ....................................................... (Total for Question 23 is 3 marks)",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -1559,7 +1559,7 @@ window.QUESTION_DATA = [
     "marks": 3,
     "filename": "Jan2020_P2HR__Q01__p03-03__m03__Prime-Factors-HCF-and-LCM.png",
     "image": "assets/questions/Jan2020_P2HR__Q01__p03-03__m03__Prime-Factors-HCF-and-LCM.png",
-    "question_text": "1 (a) Write 517 × 52 as a single power of 5 ....................................................... (1) (b) Write 800 as a product of its prime factors. Show your working clearly. ................................................................................. (2) (Total for Question 1 is 3 marks)",
+    "question_text": "1 (a) Write 517 x 52 as a single power of 5 ....................................................... (1) (b) Write 800 as a product of its prime factors. Show your working clearly. ................................................................................. (2) (Total for Question 1 is 3 marks)",
     "paper_code": "P2HR",
     "modular_force_unit": null
   },
@@ -1703,7 +1703,7 @@ window.QUESTION_DATA = [
     "marks": 3,
     "filename": "Jan2020_P2HR__Q10__p10-10__m03__Powers-Roots-and-Standard-Form.png",
     "image": "assets/questions/Jan2020_P2HR__Q10__p10-10__m03__Powers-Roots-and-Standard-Form.png",
-    "question_text": "10 The table shows information about the surface area of each of the world’s oceans. Ocean Surface area in square kilometres Pacific 1.56 × 108 Indian 6.86 × 107 Southern 2.03 × 107 Arctic 1.41 × 107 Atlantic 1.06 × 108 (a) Work out the difference, in square kilometres, between the surface area of the Atlantic Ocean and the surface area of the Indian Ocean. Give your answer in standard form. ....................................................... square kilometres (2) The surface area of the Pacific Ocean is k times the surface area of the Arctic Ocean. (b) Work out the value of k. Give your answer correct to the nearest whole number. k = ....................................................... (1) (Total for Question 10 is 3 marks)",
+    "question_text": "10 The table shows information about the surface area of each of the world’s oceans. Ocean Surface area in square kilometres Pacific 1.56 x 108 Indian 6.86 x 107 Southern 2.03 x 107 Arctic 1.41 x 107 Atlantic 1.06 x 108 (a) Work out the difference, in square kilometres, between the surface area of the Atlantic Ocean and the surface area of the Indian Ocean. Give your answer in standard form. ....................................................... square kilometres (2) The surface area of the Pacific Ocean is k times the surface area of the Arctic Ocean. (b) Work out the value of k. Give your answer correct to the nearest whole number. k = ....................................................... (1) (Total for Question 10 is 3 marks)",
     "paper_code": "P2HR",
     "modular_force_unit": null
   },
@@ -1815,7 +1815,7 @@ window.QUESTION_DATA = [
     "marks": 6,
     "filename": "Jan2020_P2HR__Q17__p18-19__m06__Set-Notation-and-Venn-Diagrams.png",
     "image": "assets/questions/Jan2020_P2HR__Q17__p18-19__m06__Set-Notation-and-Venn-Diagrams.png",
-    "question_text": "17 Some students in a school were asked the following question. “ Do you have a dog (D), a cat (C) or a rabbit (R)?” Of these students 28 have a dog 18 have a cat 20 have a rabbit 8 have both a cat and a rabbit 9 have both a dog and a rabbit x have both a dog and a cat 6 have a dog, a cat and a rabbit 5 have not got a dog or a cat or a rabbit (a) Using this information, complete the Venn diagram to show the number of students in each appropriate subset. Give the numbers in terms of x where necessary. D R E C (3) Given that a total of 50 students answered the question, (b) work out the value of x. x = ....................................................... (2) (c) Find n(C ʹ ∩ D ʹ ) ....................................................... (1) (Total for Question 17 is 6 marks)",
+    "question_text": "17 Some students in a school were asked the following question. " Do you have a dog (D), a cat (C) or a rabbit (R)?" Of these students 28 have a dog 18 have a cat 20 have a rabbit 8 have both a cat and a rabbit 9 have both a dog and a rabbit x have both a dog and a cat 6 have a dog, a cat and a rabbit 5 have not got a dog or a cat or a rabbit (a) Using this information, complete the Venn diagram to show the number of students in each appropriate subset. Give the numbers in terms of x where necessary. D R E C (3) Given that a total of 50 students answered the question, (b) work out the value of x. x = ....................................................... (2) (c) Find n(C ʹ ∩ D ʹ ) ....................................................... (1) (Total for Question 17 is 6 marks)",
     "paper_code": "P2HR",
     "modular_force_unit": null
   },
@@ -1895,7 +1895,7 @@ window.QUESTION_DATA = [
     "marks": 7,
     "filename": "Jan2020_P2HR__Q21__p22-22__m07__Algebraic-Roots-and-Indices.png",
     "image": "assets/questions/Jan2020_P2HR__Q21__p22-22__m07__Algebraic-Roots-and-Indices.png",
-    "question_text": "21 (a) Simplify fully 10 23 12 4 9 2 2 x x x + + - ....................................................... (3) 2 2 8 4 2 3 2 5 y y y n × = + (b) Find an expression for n in terms of y. Show clear algebraic working and simplify your expression. ....................................................... (4) (Total for Question 21 is 7 marks)",
+    "question_text": "21 (a) Simplify fully 10 23 12 4 9 2 2 x x x + + - ....................................................... (3) 2 2 8 4 2 3 2 5 y y y n x = + (b) Find an expression for n in terms of y. Show clear algebraic working and simplify your expression. ....................................................... (4) (Total for Question 21 is 7 marks)",
     "paper_code": "P2HR",
     "modular_force_unit": null
   },
@@ -1911,7 +1911,7 @@ window.QUESTION_DATA = [
     "marks": 7,
     "filename": "Jan2020_P2HR__Q21__p22-22__m07__Algebraic-Roots-and-Indices.png",
     "image": "assets/questions/Jan2020_P2HR__Q21__p22-22__m07__Algebraic-Roots-and-Indices.png",
-    "question_text": "21 (a) Simplify fully 10 23 12 4 9 2 2 x x x + + - ....................................................... (3) 2 2 8 4 2 3 2 5 y y y n × = + (b) Find an expression for n in terms of y. Show clear algebraic working and simplify your expression. ....................................................... (4) (Total for Question 21 is 7 marks)",
+    "question_text": "21 (a) Simplify fully 10 23 12 4 9 2 2 x x x + + - ....................................................... (3) 2 2 8 4 2 3 2 5 y y y n x = + (b) Find an expression for n in terms of y. Show clear algebraic working and simplify your expression. ....................................................... (4) (Total for Question 21 is 7 marks)",
     "paper_code": "P2HR",
     "modular_force_unit": null
   },
@@ -2055,7 +2055,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "Jan2020_P2HR__Q26__p26-26__m05__Vectors.png",
     "image": "assets/questions/Jan2020_P2HR__Q26__p26-26__m05__Vectors.png",
-    "question_text": "26 The diagram shows trapezium OACB. Diagram NOT accurately drawn A B C O 4b 6b 3a OA → = 3a OB → = 6b AC → = 4b N is the point on OC such that ANB is a straight line. Find ON → as a simplified expression in terms of a and b. ....................................................... (Total for Question 26 is 5 marks)",
+    "question_text": "26 The diagram shows trapezium OACB. Diagram NOT accurately drawn A B C O 4b 6b 3a OA -> = 3a OB -> = 6b AC -> = 4b N is the point on OC such that ANB is a straight line. Find ON -> as a simplified expression in terms of a and b. ....................................................... (Total for Question 26 is 5 marks)",
     "paper_code": "P2HR",
     "modular_force_unit": null
   },
@@ -2071,7 +2071,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "Jan2020_P2HR__Q26__p26-26__m05__Vectors.png",
     "image": "assets/questions/Jan2020_P2HR__Q26__p26-26__m05__Vectors.png",
-    "question_text": "26 The diagram shows trapezium OACB. Diagram NOT accurately drawn A B C O 4b 6b 3a OA → = 3a OB → = 6b AC → = 4b N is the point on OC such that ANB is a straight line. Find ON → as a simplified expression in terms of a and b. ....................................................... (Total for Question 26 is 5 marks)",
+    "question_text": "26 The diagram shows trapezium OACB. Diagram NOT accurately drawn A B C O 4b 6b 3a OA -> = 3a OB -> = 6b AC -> = 4b N is the point on OC such that ANB is a straight line. Find ON -> as a simplified expression in terms of a and b. ....................................................... (Total for Question 26 is 5 marks)",
     "paper_code": "P2HR",
     "modular_force_unit": null
   },
@@ -2167,7 +2167,7 @@ window.QUESTION_DATA = [
     "marks": 2,
     "filename": "Jan2021_P1H__Q06__p07-07__m02__Powers-Roots-and-Standard-Form.png",
     "image": "assets/questions/Jan2021_P1H__Q06__p07-07__m02__Powers-Roots-and-Standard-Form.png",
-    "question_text": "6 (a) Write 2 840 000 000 in standard form. ...................................................... (1) (b) Write 2.5 × 10 -4 as an ordinary number. ...................................................... (1) (Total for Question 6 is 2 marks)",
+    "question_text": "6 (a) Write 2 840 000 000 in standard form. ...................................................... (1) (b) Write 2.5 x 10 -4 as an ordinary number. ...................................................... (1) (Total for Question 6 is 2 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -2487,7 +2487,7 @@ window.QUESTION_DATA = [
     "marks": 6,
     "filename": "Jan2021_P1H__Q23__p26-27__m06__Vectors.png",
     "image": "assets/questions/Jan2021_P1H__Q23__p26-27__m06__Vectors.png",
-    "question_text": "23 OAB is a triangle. A B O P M N Diagram NOT accurately drawn OA → = 2a and OB → = 2b M is the midpoint of AB. N is the point on OB such that ON : NB = 2 : 1 P is the point on AN such that OPM is a straight line. Use a vector method to find OP : PM Show your working clearly. ...................................................... (Total for Question 23 is 6 marks)",
+    "question_text": "23 OAB is a triangle. A B O P M N Diagram NOT accurately drawn OA -> = 2a and OB -> = 2b M is the midpoint of AB. N is the point on OB such that ON : NB = 2 : 1 P is the point on AN such that OPM is a straight line. Use a vector method to find OP : PM Show your working clearly. ...................................................... (Total for Question 23 is 6 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -2503,7 +2503,7 @@ window.QUESTION_DATA = [
     "marks": 6,
     "filename": "Jan2021_P1H__Q23__p26-27__m06__Vectors.png",
     "image": "assets/questions/Jan2021_P1H__Q23__p26-27__m06__Vectors.png",
-    "question_text": "23 OAB is a triangle. A B O P M N Diagram NOT accurately drawn OA → = 2a and OB → = 2b M is the midpoint of AB. N is the point on OB such that ON : NB = 2 : 1 P is the point on AN such that OPM is a straight line. Use a vector method to find OP : PM Show your working clearly. ...................................................... (Total for Question 23 is 6 marks)",
+    "question_text": "23 OAB is a triangle. A B O P M N Diagram NOT accurately drawn OA -> = 2a and OB -> = 2b M is the midpoint of AB. N is the point on OB such that ON : NB = 2 : 1 P is the point on AN such that OPM is a straight line. Use a vector method to find OP : PM Show your working clearly. ...................................................... (Total for Question 23 is 6 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -2551,7 +2551,7 @@ window.QUESTION_DATA = [
     "marks": 3,
     "filename": "Jan2021_P1HR__Q01__p03-03__m03__Fractions.png",
     "image": "assets/questions/Jan2021_P1HR__Q01__p03-03__m03__Fractions.png",
-    "question_text": "1 Show that 3 1 5 × 1 5 6 = 513 15 (Total for Question 1 is 3 marks)",
+    "question_text": "1 Show that 3 1 5 x 1 5 6 = 513 15 (Total for Question 1 is 3 marks)",
     "paper_code": "P1HR",
     "modular_force_unit": null
   },
@@ -2679,7 +2679,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "Jan2021_P1HR__Q09__p10-10__m04__Prime-Factors-HCF-and-LCM.png",
     "image": "assets/questions/Jan2021_P1HR__Q09__p10-10__m04__Prime-Factors-HCF-and-LCM.png",
-    "question_text": "9 A = 2 8 × 3 5 × 11 4 B = 2 6 × 3 × 11 8 (a) Find the highest common factor (HCF) of A and B. ............................................................................................................ (2) (b) Find the lowest common multiple (LCM) of 2A and 3B. Give the LCM as a product of powers of its prime factors. ............................................................................................................ (2) (Total for Question 9 is 4 marks)",
+    "question_text": "9 A = 2 8 x 3 5 x 11 4 B = 2 6 x 3 x 11 8 (a) Find the highest common factor (HCF) of A and B. ............................................................................................................ (2) (b) Find the lowest common multiple (LCM) of 2A and 3B. Give the LCM as a product of powers of its prime factors. ............................................................................................................ (2) (Total for Question 9 is 4 marks)",
     "paper_code": "P1HR",
     "modular_force_unit": null
   },
@@ -2727,7 +2727,7 @@ window.QUESTION_DATA = [
     "marks": 9,
     "filename": "Jan2021_P1HR__Q12__p14-14__m09__Algebraic-Roots-and-Indices.png",
     "image": "assets/questions/Jan2021_P1HR__Q12__p14-14__m09__Algebraic-Roots-and-Indices.png",
-    "question_text": "12 (a) Simplify (16e 10 f 6) 1 2 ...................................................... (2) (b) Write 2 1 4 2 3 x x + + - as a single fraction in its simplest form. ...................................................... (3) Given that 4 k + 3 = 16 × 2 k (c) find the value of k. Show your working clearly. k = ...................................................... (4) (Total for Question 12 is 9 marks)",
+    "question_text": "12 (a) Simplify (16e 10 f 6) 1 2 ...................................................... (2) (b) Write 2 1 4 2 3 x x + + - as a single fraction in its simplest form. ...................................................... (3) Given that 4 k + 3 = 16 x 2 k (c) find the value of k. Show your working clearly. k = ...................................................... (4) (Total for Question 12 is 9 marks)",
     "paper_code": "P1HR",
     "modular_force_unit": null
   },
@@ -2743,7 +2743,7 @@ window.QUESTION_DATA = [
     "marks": 2,
     "filename": "Jan2021_P1HR__Q13__p15-15__m02__Vectors.png",
     "image": "assets/questions/Jan2021_P1HR__Q13__p15-15__m02__Vectors.png",
-    "question_text": "13 Here are two vectors. AB → = 5 3     CB → = -     2 4 Find, as a column vector, AC → ...................................................... (Total for Question 13 is 2 marks)",
+    "question_text": "13 Here are two vectors. AB -> = 5 3     CB -> = -     2 4 Find, as a column vector, AC -> ...................................................... (Total for Question 13 is 2 marks)",
     "paper_code": "P1HR",
     "modular_force_unit": null
   },
@@ -3015,7 +3015,7 @@ window.QUESTION_DATA = [
     "marks": 7,
     "filename": "Jan2021_P2H__Q05__p07-07__m07__Solving-Inequalities.png",
     "image": "assets/questions/Jan2021_P2H__Q05__p07-07__m07__Solving-Inequalities.png",
-    "question_text": "5 (a) Expand and simplify 4x(2x + 5) - 3x(2x - 3) ...................................................... (2) Given that y y y n 5 6 × = y13 (b) work out the value of n. n = ...................................................... (2) (c) (i) Solve the inequality 7t - 8 < 2t + 7 ...................................................... (2) (ii) On the number line below, represent the solution set of the inequality solved in part (c)(i) -5 -4 -3 -2 -1 0 1 2 3 4 5 t (1) (Total for Question 5 is 7 marks)",
+    "question_text": "5 (a) Expand and simplify 4x(2x + 5) - 3x(2x - 3) ...................................................... (2) Given that y y y n 5 6 x = y13 (b) work out the value of n. n = ...................................................... (2) (c) (i) Solve the inequality 7t - 8 < 2t + 7 ...................................................... (2) (ii) On the number line below, represent the solution set of the inequality solved in part (c)(i) -5 -4 -3 -2 -1 0 1 2 3 4 5 t (1) (Total for Question 5 is 7 marks)",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -3031,7 +3031,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "Jan2021_P2H__Q06__p08-08__m04__Powers-Roots-and-Standard-Form.png",
     "image": "assets/questions/Jan2021_P2H__Q06__p08-08__m04__Powers-Roots-and-Standard-Form.png",
-    "question_text": "6 (a) Write down the value of y0 ...................................................... (1) (b) Work out 9 6 10 6 4 10 3 2 10 141 140 16 . . . × + × × Give your answer in standard form. ...................................................... (3) (Total for Question 6 is 4 marks)",
+    "question_text": "6 (a) Write down the value of y0 ...................................................... (1) (b) Work out 9 6 10 6 4 10 3 2 10 141 140 16 . . . x + x x Give your answer in standard form. ...................................................... (3) (Total for Question 6 is 4 marks)",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -3079,7 +3079,7 @@ window.QUESTION_DATA = [
     "marks": 2,
     "filename": "Jan2021_P2H__Q09__p11-11__m02__Prime-Factors-HCF-and-LCM.png",
     "image": "assets/questions/Jan2021_P2H__Q09__p11-11__m02__Prime-Factors-HCF-and-LCM.png",
-    "question_text": "9 A = 23 × 32 × 52 × 11 B = 24 × 3 × 54 × 13 Find the lowest common multiple (LCM) of A and B. Give your answer as a product of powers of prime numbers. ...................................................... (Total for Question 9 is 2 marks)",
+    "question_text": "9 A = 23 x 32 x 52 x 11 B = 24 x 3 x 54 x 13 Find the lowest common multiple (LCM) of A and B. Give your answer as a product of powers of prime numbers. ...................................................... (Total for Question 9 is 2 marks)",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -3191,7 +3191,7 @@ window.QUESTION_DATA = [
     "marks": 6,
     "filename": "Jan2021_P2H__Q16__p17-17__m06__Set-Notation-and-Venn-Diagrams.png",
     "image": "assets/questions/Jan2021_P2H__Q16__p17-17__m06__Set-Notation-and-Venn-Diagrams.png",
-    "question_text": "16 Some students were asked the following question. “Which of the subjects Russian (R), French (F) and German (G) do you study?” Of these students 4 study all three of Russian, French and German 10 study Russian and French 13 study French and German 6 study Russian and German 24 study German 11 study none of the three subjects the number who study Russian only is twice the number who study French only. Let x be the number of students who study French only. (a) Show all this information on the Venn diagram, giving the number of students in each appropriate subset, in terms of x where necessary. R G E F x (3) Given that the number of students who were asked the question was 80 (b) work out the number of these students that study Russian. ...................................................... (3) (Total for Question 16 is 6 marks)",
+    "question_text": "16 Some students were asked the following question. "Which of the subjects Russian (R), French (F) and German (G) do you study?" Of these students 4 study all three of Russian, French and German 10 study Russian and French 13 study French and German 6 study Russian and German 24 study German 11 study none of the three subjects the number who study Russian only is twice the number who study French only. Let x be the number of students who study French only. (a) Show all this information on the Venn diagram, giving the number of students in each appropriate subset, in terms of x where necessary. R G E F x (3) Given that the number of students who were asked the question was 80 (b) work out the number of these students that study Russian. ...................................................... (3) (Total for Question 16 is 6 marks)",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -3255,7 +3255,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "Jan2021_P2H__Q20__p23-23__m04__Area-and-Perimeter.png",
     "image": "assets/questions/Jan2021_P2H__Q20__p23-23__m04__Area-and-Perimeter.png",
-    "question_text": "20 A B F P Q C D R E Diagram NOT accurately drawn T The diagram shows a shaded region T formed by removing an equilateral triangle PQR from a regular hexagon ABCDEF. The points P and Q lie on AB such that AB = 1.5 × PQ Given that the area of region T is 72 3 cm2 work out the length of PQ. ...................................................... cm (Total for Question 20 is 4 marks)",
+    "question_text": "20 A B F P Q C D R E Diagram NOT accurately drawn T The diagram shows a shaded region T formed by removing an equilateral triangle PQR from a regular hexagon ABCDEF. The points P and Q lie on AB such that AB = 1.5 x PQ Given that the area of region T is 72 3 cm2 work out the length of PQ. ...................................................... cm (Total for Question 20 is 4 marks)",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -3271,7 +3271,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "Jan2021_P2H__Q20__p23-23__m04__Area-and-Perimeter.png",
     "image": "assets/questions/Jan2021_P2H__Q20__p23-23__m04__Area-and-Perimeter.png",
-    "question_text": "20 A B F P Q C D R E Diagram NOT accurately drawn T The diagram shows a shaded region T formed by removing an equilateral triangle PQR from a regular hexagon ABCDEF. The points P and Q lie on AB such that AB = 1.5 × PQ Given that the area of region T is 72 3 cm2 work out the length of PQ. ...................................................... cm (Total for Question 20 is 4 marks)",
+    "question_text": "20 A B F P Q C D R E Diagram NOT accurately drawn T The diagram shows a shaded region T formed by removing an equilateral triangle PQR from a regular hexagon ABCDEF. The points P and Q lie on AB such that AB = 1.5 x PQ Given that the area of region T is 72 3 cm2 work out the length of PQ. ...................................................... cm (Total for Question 20 is 4 marks)",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -3287,7 +3287,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "Jan2021_P2H__Q21__p24-25__m04__Algebraic-Fractions.png",
     "image": "assets/questions/Jan2021_P2H__Q21__p24-25__m04__Algebraic-Fractions.png",
-    "question_text": "21 Write 25 64 5 13 6 8 15 5 8 7 2 2 2 x x x x x x x - - - × - + + - - ( ) as a single fraction in its simplest form. Show clear algebraic working. ...................................................... (Total for Question 21 is 4 marks)",
+    "question_text": "21 Write 25 64 5 13 6 8 15 5 8 7 2 2 2 x x x x x x x - - - x - + + - - ( ) as a single fraction in its simplest form. Show clear algebraic working. ...................................................... (Total for Question 21 is 4 marks)",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -3303,7 +3303,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "Jan2021_P2H__Q21__p24-25__m04__Algebraic-Fractions.png",
     "image": "assets/questions/Jan2021_P2H__Q21__p24-25__m04__Algebraic-Fractions.png",
-    "question_text": "21 Write 25 64 5 13 6 8 15 5 8 7 2 2 2 x x x x x x x - - - × - + + - - ( ) as a single fraction in its simplest form. Show clear algebraic working. ...................................................... (Total for Question 21 is 4 marks)",
+    "question_text": "21 Write 25 64 5 13 6 8 15 5 8 7 2 2 2 x x x x x x x - - - x - + + - - ( ) as a single fraction in its simplest form. Show clear algebraic working. ...................................................... (Total for Question 21 is 4 marks)",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -3319,7 +3319,7 @@ window.QUESTION_DATA = [
     "marks": 6,
     "filename": "Jan2021_P2H__Q22__p26-27__m06__Circles-Arcs-and-Sectors.png",
     "image": "assets/questions/Jan2021_P2H__Q22__p26-27__m06__Circles-Arcs-and-Sectors.png",
-    "question_text": "22 The diagram shows a sector OBC of a circle with centre O and radius (6 + x) cm. A 50° D x cm O B C Diagram NOT accurately drawn 6 cm A is the point on OB and D is the point on OC such that OA = OD = 6 cm Angle BOC = 50° Given that the perimeter of sector OBC = 2 × the perimeter of triangle OAD find the value of x. Give your answer correct to 3 significant figures. x = ...................................................... (Total for Question 22 is 6 marks)",
+    "question_text": "22 The diagram shows a sector OBC of a circle with centre O and radius (6 + x) cm. A 50° D x cm O B C Diagram NOT accurately drawn 6 cm A is the point on OB and D is the point on OC such that OA = OD = 6 cm Angle BOC = 50° Given that the perimeter of sector OBC = 2 x the perimeter of triangle OAD find the value of x. Give your answer correct to 3 significant figures. x = ...................................................... (Total for Question 22 is 6 marks)",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -3335,7 +3335,7 @@ window.QUESTION_DATA = [
     "marks": 6,
     "filename": "Jan2021_P2H__Q22__p26-27__m06__Circles-Arcs-and-Sectors.png",
     "image": "assets/questions/Jan2021_P2H__Q22__p26-27__m06__Circles-Arcs-and-Sectors.png",
-    "question_text": "22 The diagram shows a sector OBC of a circle with centre O and radius (6 + x) cm. A 50° D x cm O B C Diagram NOT accurately drawn 6 cm A is the point on OB and D is the point on OC such that OA = OD = 6 cm Angle BOC = 50° Given that the perimeter of sector OBC = 2 × the perimeter of triangle OAD find the value of x. Give your answer correct to 3 significant figures. x = ...................................................... (Total for Question 22 is 6 marks)",
+    "question_text": "22 The diagram shows a sector OBC of a circle with centre O and radius (6 + x) cm. A 50° D x cm O B C Diagram NOT accurately drawn 6 cm A is the point on OB and D is the point on OC such that OA = OD = 6 cm Angle BOC = 50° Given that the perimeter of sector OBC = 2 x the perimeter of triangle OAD find the value of x. Give your answer correct to 3 significant figures. x = ...................................................... (Total for Question 22 is 6 marks)",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -3463,7 +3463,7 @@ window.QUESTION_DATA = [
     "marks": 3,
     "filename": "Jan2021_P2HR__Q08__p09-09__m03__Powers-Roots-and-Standard-Form.png",
     "image": "assets/questions/Jan2021_P2HR__Q08__p09-09__m03__Powers-Roots-and-Standard-Form.png",
-    "question_text": "8 The table gives the length of the coastline, in kilometres, of each of five oceans. Ocean Length of coastline (km) Arctic 4.539 × 10 4 Atlantic 1.119 × 10 5 Pacific 1.357 × 10 5 Indian 6.653 × 10 4 Southern 1.797 × 10 4 (a) Which ocean has the greatest length of coastline? ...................................................... (1) (b) Calculate the difference between the length of the Atlantic Ocean’s coastline and the length of the Southern Ocean’s coastline. Give your answer in standard form. ...................................................... km (2) (Total for Question 8 is 3 marks)",
+    "question_text": "8 The table gives the length of the coastline, in kilometres, of each of five oceans. Ocean Length of coastline (km) Arctic 4.539 x 10 4 Atlantic 1.119 x 10 5 Pacific 1.357 x 10 5 Indian 6.653 x 10 4 Southern 1.797 x 10 4 (a) Which ocean has the greatest length of coastline? ...................................................... (1) (b) Calculate the difference between the length of the Atlantic Ocean’s coastline and the length of the Southern Ocean’s coastline. Give your answer in standard form. ...................................................... km (2) (Total for Question 8 is 3 marks)",
     "paper_code": "P2HR",
     "modular_force_unit": null
   },
@@ -3639,7 +3639,7 @@ window.QUESTION_DATA = [
     "marks": 7,
     "filename": "Jan2021_P2HR__Q19__p18-18__m07__Algebraic-Roots-and-Indices.png",
     "image": "assets/questions/Jan2021_P2HR__Q19__p18-18__m07__Algebraic-Roots-and-Indices.png",
-    "question_text": "19 (a) Simplify 8 4 2 6 3 × Give your answer in the form 2 a where a is an integer. Show each stage of your working clearly. ...................................................... (3) Given that n -    =     4 5 4 1 2 where n > 0 (b) find the value of n. n = ...................................................... (4) (Total for Question 19 is 7 marks)",
+    "question_text": "19 (a) Simplify 8 4 2 6 3 x Give your answer in the form 2 a where a is an integer. Show each stage of your working clearly. ...................................................... (3) Given that n -    =     4 5 4 1 2 where n > 0 (b) find the value of n. n = ...................................................... (4) (Total for Question 19 is 7 marks)",
     "paper_code": "P2HR",
     "modular_force_unit": null
   },
@@ -3751,7 +3751,7 @@ window.QUESTION_DATA = [
     "marks": 6,
     "filename": "Jan2022_P1H__Q01__p03-03__m06__Algebraic-Roots-and-Indices.png",
     "image": "assets/questions/Jan2022_P1H__Q01__p03-03__m06__Algebraic-Roots-and-Indices.png",
-    "question_text": "1 (a) Simplify a7 × a4 ...................................................... (1) (b) Simplify w15 ÷ w3 ...................................................... (1) (c) Simplify (8x5y3)2 ...................................................... (2) (d) Make t the subject of c = t3 - 8v ...................................................... (2) (Total for Question 1 is 6 marks)",
+    "question_text": "1 (a) Simplify a7 x a4 ...................................................... (1) (b) Simplify w15 ÷ w3 ...................................................... (1) (c) Simplify (8x5y3)2 ...................................................... (2) (d) Make t the subject of c = t3 - 8v ...................................................... (2) (Total for Question 1 is 6 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -3863,7 +3863,7 @@ window.QUESTION_DATA = [
     "marks": 2,
     "filename": "Jan2022_P1H__Q08__p08-08__m02__Powers-Roots-and-Standard-Form.png",
     "image": "assets/questions/Jan2022_P1H__Q08__p08-08__m02__Powers-Roots-and-Standard-Form.png",
-    "question_text": "8 a = 4.2 × 10-24 b = 3 × 10145 Work out the value of a × b Give your answer in standard form. ...................................................... (Total for Question 8 is 2 marks)",
+    "question_text": "8 a = 4.2 x 10-24 b = 3 x 10145 Work out the value of a x b Give your answer in standard form. ...................................................... (Total for Question 8 is 2 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -4087,7 +4087,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "Jan2022_P1H__Q21__p22-23__m05__3D-Pythagoras-and-Trigonometry.png",
     "image": "assets/questions/Jan2022_P1H__Q21__p22-23__m05__3D-Pythagoras-and-Trigonometry.png",
-    "question_text": "21 The diagram shows the prism ABCDEFGHJK with horizontal base AEFG Diagram NOT accurately drawn A D E F K G B C H M J ABCDE\u0007 is a cross section of the prism where ABDE is a square BCD is an equilateral triangle EF = 2 × AE M is the midpoint of GF so that JM is vertical. Angle MAJ = y° Given that tan y° = T find the value of T, giving your answer in the form p q + 17 where p and q are integers. T = ...................................................... (Total for Question 21 is 5 marks)",
+    "question_text": "21 The diagram shows the prism ABCDEFGHJK with horizontal base AEFG Diagram NOT accurately drawn A D E F K G B C H M J ABCDE\u0007 is a cross section of the prism where ABDE is a square BCD is an equilateral triangle EF = 2 x AE M is the midpoint of GF so that JM is vertical. Angle MAJ = y° Given that tan y° = T find the value of T, giving your answer in the form p q + 17 where p and q are integers. T = ...................................................... (Total for Question 21 is 5 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -4103,7 +4103,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "Jan2022_P1H__Q21__p22-23__m05__3D-Pythagoras-and-Trigonometry.png",
     "image": "assets/questions/Jan2022_P1H__Q21__p22-23__m05__3D-Pythagoras-and-Trigonometry.png",
-    "question_text": "21 The diagram shows the prism ABCDEFGHJK with horizontal base AEFG Diagram NOT accurately drawn A D E F K G B C H M J ABCDE\u0007 is a cross section of the prism where ABDE is a square BCD is an equilateral triangle EF = 2 × AE M is the midpoint of GF so that JM is vertical. Angle MAJ = y° Given that tan y° = T find the value of T, giving your answer in the form p q + 17 where p and q are integers. T = ...................................................... (Total for Question 21 is 5 marks)",
+    "question_text": "21 The diagram shows the prism ABCDEFGHJK with horizontal base AEFG Diagram NOT accurately drawn A D E F K G B C H M J ABCDE\u0007 is a cross section of the prism where ABDE is a square BCD is an equilateral triangle EF = 2 x AE M is the midpoint of GF so that JM is vertical. Angle MAJ = y° Given that tan y° = T find the value of T, giving your answer in the form p q + 17 where p and q are integers. T = ...................................................... (Total for Question 21 is 5 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -4119,7 +4119,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "Jan2022_P1H__Q22__p24-25__m05__Vectors.png",
     "image": "assets/questions/Jan2022_P1H__Q22__p24-25__m05__Vectors.png",
-    "question_text": "22 The diagram shows triangle OAB Diagram NOT accurately drawn A O N B P M OA → = 8a OB → = 6b M is the point on OB such that OM : MB = 1 : 2 N is the midpoint of AB P is the point of intersection of ON and AM Using a vector method, find OP → as a simplified expression in terms of a and b Show your working clearly. OP → = ...................................................... (Total for Question 22 is 5 marks)",
+    "question_text": "22 The diagram shows triangle OAB Diagram NOT accurately drawn A O N B P M OA -> = 8a OB -> = 6b M is the point on OB such that OM : MB = 1 : 2 N is the midpoint of AB P is the point of intersection of ON and AM Using a vector method, find OP -> as a simplified expression in terms of a and b Show your working clearly. OP -> = ...................................................... (Total for Question 22 is 5 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -4135,7 +4135,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "Jan2022_P1H__Q22__p24-25__m05__Vectors.png",
     "image": "assets/questions/Jan2022_P1H__Q22__p24-25__m05__Vectors.png",
-    "question_text": "22 The diagram shows triangle OAB Diagram NOT accurately drawn A O N B P M OA → = 8a OB → = 6b M is the point on OB such that OM : MB = 1 : 2 N is the midpoint of AB P is the point of intersection of ON and AM Using a vector method, find OP → as a simplified expression in terms of a and b Show your working clearly. OP → = ...................................................... (Total for Question 22 is 5 marks)",
+    "question_text": "22 The diagram shows triangle OAB Diagram NOT accurately drawn A O N B P M OA -> = 8a OB -> = 6b M is the point on OB such that OM : MB = 1 : 2 N is the midpoint of AB P is the point of intersection of ON and AM Using a vector method, find OP -> as a simplified expression in terms of a and b Show your working clearly. OP -> = ...................................................... (Total for Question 22 is 5 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -4295,7 +4295,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "Jan2022_P1HR__Q06__p08-08__m04__Prime-Factors-HCF-and-LCM.png",
     "image": "assets/questions/Jan2022_P1HR__Q06__p08-08__m04__Prime-Factors-HCF-and-LCM.png",
-    "question_text": "6 (a) Work out the lowest common multiple (LCM) of 36 and 120 ...................................................... (2) A = 52 × 74 × 11p B = 5m × 7n-5 × 11 m, n and p are integers such that m > 2 n > 10 p > 1 (b) Find the highest common factor (HCF) of A and B Give your answer as a product of powers of its prime factors. ...................................................... (2) (Total for Question 6 is 4 marks)",
+    "question_text": "6 (a) Work out the lowest common multiple (LCM) of 36 and 120 ...................................................... (2) A = 52 x 74 x 11p B = 5m x 7n-5 x 11 m, n and p are integers such that m > 2 n > 10 p > 1 (b) Find the highest common factor (HCF) of A and B Give your answer as a product of powers of its prime factors. ...................................................... (2) (Total for Question 6 is 4 marks)",
     "paper_code": "P1HR",
     "modular_force_unit": null
   },
@@ -4327,7 +4327,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "Jan2022_P1HR__Q08__p10-10__m04__Powers-Roots-and-Standard-Form.png",
     "image": "assets/questions/Jan2022_P1HR__Q08__p10-10__m04__Powers-Roots-and-Standard-Form.png",
-    "question_text": "8 (a) Write 5 × 104 as an ordinary number. ...................................................... (1) (b) Write 0.000 06 in standard form. ...................................................... (1) (c) Work out (4 × 10512 ) ÷ (1.6 × 10700 ) Give your answer in standard form. ...................................................... (2) (Total for Question 8 is 4 marks)",
+    "question_text": "8 (a) Write 5 x 104 as an ordinary number. ...................................................... (1) (b) Write 0.000 06 in standard form. ...................................................... (1) (c) Work out (4 x 10512 ) ÷ (1.6 x 10700 ) Give your answer in standard form. ...................................................... (2) (Total for Question 8 is 4 marks)",
     "paper_code": "P1HR",
     "modular_force_unit": null
   },
@@ -4343,7 +4343,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "Jan2022_P1HR__Q09__p11-11__m05__Factorising.png",
     "image": "assets/questions/Jan2022_P1HR__Q09__p11-11__m05__Factorising.png",
-    "question_text": "9 (a) Simplify x4 × x5 ...................................................... (1) (b) Simplify (4y2)3 ...................................................... (2) (c) Factorise n2 - 7n + 12 ...................................................... (2) (Total for Question 9 is 5 marks)",
+    "question_text": "9 (a) Simplify x4 x x5 ...................................................... (1) (b) Simplify (4y2)3 ...................................................... (2) (c) Factorise n2 - 7n + 12 ...................................................... (2) (Total for Question 9 is 5 marks)",
     "paper_code": "P1HR",
     "modular_force_unit": null
   },
@@ -4359,7 +4359,7 @@ window.QUESTION_DATA = [
     "marks": 6,
     "filename": "Jan2022_P1HR__Q10__p12-13__m06__Volume-and-Surface-Area.png",
     "image": "assets/questions/Jan2022_P1HR__Q10__p12-13__m06__Volume-and-Surface-Area.png",
-    "question_text": "10 Jonty has a storage container in the shape of a cuboid, as shown in the diagram. 3 m 2.5 m 12 m Diagram NOT accurately drawn Jonty is going to paint the outside of his storage container, apart from the base which is shown shaded in the diagram. He needs enough paint to cover the four sides and the top. Each tin of paint covers an area of 15 m2 The cost of each tin of paint recently increased by 10% After the increase, the cost of each tin of paint is £26.95 Jonty says “Before the increase, I could have bought enough paint for less than £200” Show that Jonty is correct. Show your working clearly. (Total for Question 10 is 6 marks)",
+    "question_text": "10 Jonty has a storage container in the shape of a cuboid, as shown in the diagram. 3 m 2.5 m 12 m Diagram NOT accurately drawn Jonty is going to paint the outside of his storage container, apart from the base which is shown shaded in the diagram. He needs enough paint to cover the four sides and the top. Each tin of paint covers an area of 15 m2 The cost of each tin of paint recently increased by 10% After the increase, the cost of each tin of paint is £26.95 Jonty says "Before the increase, I could have bought enough paint for less than £200" Show that Jonty is correct. Show your working clearly. (Total for Question 10 is 6 marks)",
     "paper_code": "P1HR",
     "modular_force_unit": null
   },
@@ -4743,7 +4743,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "Jan2022_P2H__Q05__p07-07__m04__Bearings-Scale-Drawing-and-Constructions.png",
     "image": "assets/questions/Jan2022_P2H__Q05__p07-07__m04__Bearings-Scale-Drawing-and-Constructions.png",
-    "question_text": "5 The scale diagram shows the position on a map of a house, A A North Scale: 1 cm represents 200 metres House C is on a bearing of 110° from A The distance from A to C is 700 m (a) Mark the position of C on the diagram with a cross (×) Label your cross C (3) (b) Write the scale of the map in the form 1 : n 1 : ............................ (1) (Total for Question 5 is 4 marks)",
+    "question_text": "5 The scale diagram shows the position on a map of a house, A A North Scale: 1 cm represents 200 metres House C is on a bearing of 110° from A The distance from A to C is 700 m (a) Mark the position of C on the diagram with a cross (x) Label your cross C (3) (b) Write the scale of the map in the form 1 : n 1 : ............................ (1) (Total for Question 5 is 4 marks)",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -4855,7 +4855,7 @@ window.QUESTION_DATA = [
     "marks": 3,
     "filename": "Jan2022_P2H__Q12__p14-14__m03__Powers-Roots-and-Standard-Form.png",
     "image": "assets/questions/Jan2022_P2H__Q12__p14-14__m03__Powers-Roots-and-Standard-Form.png",
-    "question_text": "12 a = 6 × 1040 Work out the value of a3 Give your answer in standard form. ....................................................... (Total for Question 12 is 3 marks)",
+    "question_text": "12 a = 6 x 1040 Work out the value of a3 Give your answer in standard form. ....................................................... (Total for Question 12 is 3 marks)",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -5287,7 +5287,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "Jan2022_P2HR__Q06__p09-09__m04__Algebraic-Roots-and-Indices.png",
     "image": "assets/questions/Jan2022_P2HR__Q06__p09-09__m04__Algebraic-Roots-and-Indices.png",
-    "question_text": "6 (a) Write down the value of x0 ....................................................... (1) Given that 2-3 × 29 = 2 n (b) find the value of n n = ....................................................... (1) Given that 7 7 7 7 206 214 3 m (c) find the value of m m = ....................................................... (2) (Total for Question 6 is 4 marks)",
+    "question_text": "6 (a) Write down the value of x0 ....................................................... (1) Given that 2-3 x 29 = 2 n (b) find the value of n n = ....................................................... (1) Given that 7 7 7 7 206 214 3 m (c) find the value of m m = ....................................................... (2) (Total for Question 6 is 4 marks)",
     "paper_code": "P2HR",
     "modular_force_unit": null
   },
@@ -5351,7 +5351,7 @@ window.QUESTION_DATA = [
     "marks": 3,
     "filename": "Jan2022_P2HR__Q10__p14-14__m03__Powers-Roots-and-Standard-Form.png",
     "image": "assets/questions/Jan2022_P2HR__Q10__p14-14__m03__Powers-Roots-and-Standard-Form.png",
-    "question_text": "10 The table gives information about the population and the total amount of money, in dollars, spent on healthcare for two countries in 2016 Country Total population Total spent on healthcare ($) Austria 8.7 × 106 4.2 × 1010 Luxembourg 6.3 × 105 3.7 × 109 Work out how much more was spent per person on healthcare in Luxembourg than in Austria. Give your answer correct to the nearest whole number. ....................................................... dollars (Total for Question 10 is 3 marks)",
+    "question_text": "10 The table gives information about the population and the total amount of money, in dollars, spent on healthcare for two countries in 2016 Country Total population Total spent on healthcare ($) Austria 8.7 x 106 4.2 x 1010 Luxembourg 6.3 x 105 3.7 x 109 Work out how much more was spent per person on healthcare in Luxembourg than in Austria. Give your answer correct to the nearest whole number. ....................................................... dollars (Total for Question 10 is 3 marks)",
     "paper_code": "P2HR",
     "modular_force_unit": null
   },
@@ -5415,7 +5415,7 @@ window.QUESTION_DATA = [
     "marks": 8,
     "filename": "Jan2022_P2HR__Q14__p18-19__m08__Cumulative-Frequency-Diagrams.png",
     "image": "assets/questions/Jan2022_P2HR__Q14__p18-19__m08__Cumulative-Frequency-Diagrams.png",
-    "question_text": "14 A group of 60 students each sat an algebra test and a geometry test. Each test was marked out of 110 The cumulative frequency graph gives information about the marks gained by the 60 students in the algebra test. 0 10 20 30 40 50 60 70 80 90 100 110 60 50 40 30 20 10 0 Algebra mark Cumulative frequency (a) Use the graph to find an estimate for the median mark in the algebra test. ....................................................... (1) (b) Use the graph to find an estimate for the number of students who gained 58 marks or less in the algebra test. ....................................................... (1) (c) Use the graph to find an estimate for the interquartile range of the marks gained in the algebra test. ....................................................... (2) The interquartile range of the marks gained in the geometry test is 9 Luis says “The students’ marks are more spread out in the algebra test than in the geometry test.” (d) Is Luis correct? Give a reason for your answer. .................................................................................................................................................................................................................................................. .................................................................................................................................................................................................................................................. (1) To be awarded a grade A in the algebra test, a student had to gain a mark greater than 64 Two students are to be selected at random from the 60 students in the group. (e) Use the graph to find an estimate for the probability that both of these students were awarded a grade A in the algebra test. ....................................................... (3) (Total for Question 14 is 8 marks)",
+    "question_text": "14 A group of 60 students each sat an algebra test and a geometry test. Each test was marked out of 110 The cumulative frequency graph gives information about the marks gained by the 60 students in the algebra test. 0 10 20 30 40 50 60 70 80 90 100 110 60 50 40 30 20 10 0 Algebra mark Cumulative frequency (a) Use the graph to find an estimate for the median mark in the algebra test. ....................................................... (1) (b) Use the graph to find an estimate for the number of students who gained 58 marks or less in the algebra test. ....................................................... (1) (c) Use the graph to find an estimate for the interquartile range of the marks gained in the algebra test. ....................................................... (2) The interquartile range of the marks gained in the geometry test is 9 Luis says "The students’ marks are more spread out in the algebra test than in the geometry test." (d) Is Luis correct? Give a reason for your answer. .................................................................................................................................................................................................................................................. .................................................................................................................................................................................................................................................. (1) To be awarded a grade A in the algebra test, a student had to gain a mark greater than 64 Two students are to be selected at random from the 60 students in the group. (e) Use the graph to find an estimate for the probability that both of these students were awarded a grade A in the algebra test. ....................................................... (3) (Total for Question 14 is 8 marks)",
     "paper_code": "P2HR",
     "modular_force_unit": null
   },
@@ -5751,7 +5751,7 @@ window.QUESTION_DATA = [
     "marks": 2,
     "filename": "Jun2022_P1H__Q08__p10-10__m02__Powers-Roots-and-Standard-Form.png",
     "image": "assets/questions/Jun2022_P1H__Q08__p10-10__m02__Powers-Roots-and-Standard-Form.png",
-    "question_text": "8 (a) Write 0.000 089 in standard form. ...................................................... (1) (b) Write 8.34 × 104 as an ordinary number. ...................................................... (1) (Total for Question 8 is 2 marks)",
+    "question_text": "8 (a) Write 0.000 089 in standard form. ...................................................... (1) (b) Write 8.34 x 104 as an ordinary number. ...................................................... (1) (Total for Question 8 is 2 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -5767,7 +5767,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "Jun2022_P1H__Q09__p10-10__m04__Algebraic-Roots-and-Indices.png",
     "image": "assets/questions/Jun2022_P1H__Q09__p10-10__m04__Algebraic-Roots-and-Indices.png",
-    "question_text": "9 (a) Simplify 8 × (4t)0 ...................................................... (1) x6 ÷ x-5 = xp (b) Find the value of p p = ...................................................... (1) (c) Simplify fully (2k2m4) 3 ...................................................... (2) (Total for Question 9 is 4 marks)",
+    "question_text": "9 (a) Simplify 8 x (4t)0 ...................................................... (1) x6 ÷ x-5 = xp (b) Find the value of p p = ...................................................... (1) (c) Simplify fully (2k2m4) 3 ...................................................... (2) (Total for Question 9 is 4 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -6279,7 +6279,7 @@ window.QUESTION_DATA = [
     "marks": 3,
     "filename": "Jun2022_P1HR__Q12__p14-14__m03__Prime-Factors-HCF-and-LCM.png",
     "image": "assets/questions/Jun2022_P1HR__Q12__p14-14__m03__Prime-Factors-HCF-and-LCM.png",
-    "question_text": "12 P = 3 3 × 5 2 × 7 Q = 3 2 × 5 × 7 2 (a) Write down the highest common factor (HCF) of P and Q ....................................................... (1) P = 3 3 × 5 2 × 7 Q = 3 2 × 5 × 7 2 (b) Work out the value of P 3 × Q Give your answer in the form 3 x × 5 y × 7 z where x, y and z are positive integers. ....................................................... (2) (Total for Question 12 is 3 marks)",
+    "question_text": "12 P = 3 3 x 5 2 x 7 Q = 3 2 x 5 x 7 2 (a) Write down the highest common factor (HCF) of P and Q ....................................................... (1) P = 3 3 x 5 2 x 7 Q = 3 2 x 5 x 7 2 (b) Work out the value of P 3 x Q Give your answer in the form 3 x x 5 y x 7 z where x, y and z are positive integers. ....................................................... (2) (Total for Question 12 is 3 marks)",
     "paper_code": "P1HR",
     "modular_force_unit": null
   },
@@ -6935,7 +6935,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "Jun2022_P2H__Q21__p21-21__m05__Vectors.png",
     "image": "assets/questions/Jun2022_P2H__Q21__p21-21__m05__Vectors.png",
-    "question_text": "21 Diagram NOT accurately drawn O Q B P A 4a 6b OAB is a triangle. Q is the point on AB such that OQP is a straight line. OA → = 4a OB → = 6b AP → = 2a + 8b Using a vector method, find the ratio AQ : QB AQ : QB = ...................................................... (Total for Question 21 is 5 marks)",
+    "question_text": "21 Diagram NOT accurately drawn O Q B P A 4a 6b OAB is a triangle. Q is the point on AB such that OQP is a straight line. OA -> = 4a OB -> = 6b AP -> = 2a + 8b Using a vector method, find the ratio AQ : QB AQ : QB = ...................................................... (Total for Question 21 is 5 marks)",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -6951,7 +6951,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "Jun2022_P2H__Q21__p21-21__m05__Vectors.png",
     "image": "assets/questions/Jun2022_P2H__Q21__p21-21__m05__Vectors.png",
-    "question_text": "21 Diagram NOT accurately drawn O Q B P A 4a 6b OAB is a triangle. Q is the point on AB such that OQP is a straight line. OA → = 4a OB → = 6b AP → = 2a + 8b Using a vector method, find the ratio AQ : QB AQ : QB = ...................................................... (Total for Question 21 is 5 marks)",
+    "question_text": "21 Diagram NOT accurately drawn O Q B P A 4a 6b OAB is a triangle. Q is the point on AB such that OQP is a straight line. OA -> = 4a OB -> = 6b AP -> = 2a + 8b Using a vector method, find the ratio AQ : QB AQ : QB = ...................................................... (Total for Question 21 is 5 marks)",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -7031,7 +7031,7 @@ window.QUESTION_DATA = [
     "marks": 3,
     "filename": "Jun2022_P2H__Q24__p24-24__m03__Algebraic-Roots-and-Indices.png",
     "image": "assets/questions/Jun2022_P2H__Q24__p24-24__m03__Algebraic-Roots-and-Indices.png",
-    "question_text": "24 18 27 6 9 3 4 6 2 8 × ( ) × = + + n n x Express x in terms of n Show your working clearly and simplify your expression. x = ...................................................... (Total for Question 24 is 3 marks) O A O A S 100 A S",
+    "question_text": "24 18 27 6 9 3 4 6 2 8 x ( ) x = + + n n x Express x in terms of n Show your working clearly and simplify your expression. x = ...................................................... (Total for Question 24 is 3 marks) O A O A S 100 A S",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -7047,7 +7047,7 @@ window.QUESTION_DATA = [
     "marks": 3,
     "filename": "Jun2022_P2H__Q24__p24-24__m03__Algebraic-Roots-and-Indices.png",
     "image": "assets/questions/Jun2022_P2H__Q24__p24-24__m03__Algebraic-Roots-and-Indices.png",
-    "question_text": "24 18 27 6 9 3 4 6 2 8 × ( ) × = + + n n x Express x in terms of n Show your working clearly and simplify your expression. x = ...................................................... (Total for Question 24 is 3 marks) O A O A S 100 A S",
+    "question_text": "24 18 27 6 9 3 4 6 2 8 x ( ) x = + + n n x Express x in terms of n Show your working clearly and simplify your expression. x = ...................................................... (Total for Question 24 is 3 marks) O A O A S 100 A S",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -7191,7 +7191,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "Jun2022_P2HR__Q09__p10-10__m04__Powers-Roots-and-Standard-Form.png",
     "image": "assets/questions/Jun2022_P2HR__Q09__p10-10__m04__Powers-Roots-and-Standard-Form.png",
-    "question_text": "9 The table gives information about the population, correct to 2 significant figures, of each of five cities in 2018 City Population (2018) Ahmedabad 7.7 × 10 6 Barcelona 5.5 × 10 6 Chicago 8.8 × 10 6 Lagos 1.3 × 10 7 Tokyo 3.7 × 10 7 (a) Write 8.8 × 10 6 as an ordinary number. ....................................................... (1) (b) Which of these cities had the least population in 2018? ....................................................... (1) (c) Work out the difference between the population of Tokyo and the population of Ahmedabad in 2018 Give your answer in standard form correct to 2 significant figures. ....................................................... (2) (Total for Question 9 is 4 marks)",
+    "question_text": "9 The table gives information about the population, correct to 2 significant figures, of each of five cities in 2018 City Population (2018) Ahmedabad 7.7 x 10 6 Barcelona 5.5 x 10 6 Chicago 8.8 x 10 6 Lagos 1.3 x 10 7 Tokyo 3.7 x 10 7 (a) Write 8.8 x 10 6 as an ordinary number. ....................................................... (1) (b) Which of these cities had the least population in 2018? ....................................................... (1) (c) Work out the difference between the population of Tokyo and the population of Ahmedabad in 2018 Give your answer in standard form correct to 2 significant figures. ....................................................... (2) (Total for Question 9 is 4 marks)",
     "paper_code": "P2HR",
     "modular_force_unit": null
   },
@@ -7335,7 +7335,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "Jun2022_P2HR__Q18__p20-20__m04__Rounding-Estimation-and-Bounds.png",
     "image": "assets/questions/Jun2022_P2HR__Q18__p20-20__m04__Rounding-Estimation-and-Bounds.png",
-    "question_text": "18 Kaidan and Sonja went on two different car journeys. For Kaidan’s journey \u0007distance = 80 km correct to the nearest 5 km time = 2.7 hours correct to 1 decimal place For Sonja’s journey \u0007distance = 33 km correct to 2 significant figures time = 1 hour correct to the nearest 0.1 hour Kaidan says, “My average speed could have been greater than Sonja’s average speed.” By considering bounds, show that Kaidan is correct. Show your working clearly. (Total for Question 18 is 4 marks)",
+    "question_text": "18 Kaidan and Sonja went on two different car journeys. For Kaidan’s journey \u0007distance = 80 km correct to the nearest 5 km time = 2.7 hours correct to 1 decimal place For Sonja’s journey \u0007distance = 33 km correct to 2 significant figures time = 1 hour correct to the nearest 0.1 hour Kaidan says, "My average speed could have been greater than Sonja’s average speed." By considering bounds, show that Kaidan is correct. Show your working clearly. (Total for Question 18 is 4 marks)",
     "paper_code": "P2HR",
     "modular_force_unit": null
   },
@@ -7463,7 +7463,7 @@ window.QUESTION_DATA = [
     "marks": 3,
     "filename": "Jun2022_P2HR__Q23__p25-25__m03__Algebraic-Fractions.png",
     "image": "assets/questions/Jun2022_P2HR__Q23__p25-25__m03__Algebraic-Fractions.png",
-    "question_text": "23 Express 20 36 2 6 1 4 2 x x x - - -    × - as a single fraction in its simplest form. ....................................................... (Total for Question 23 is 3 marks)",
+    "question_text": "23 Express 20 36 2 6 1 4 2 x x x - - -    x - as a single fraction in its simplest form. ....................................................... (Total for Question 23 is 3 marks)",
     "paper_code": "P2HR",
     "modular_force_unit": null
   },
@@ -7479,7 +7479,7 @@ window.QUESTION_DATA = [
     "marks": 3,
     "filename": "Jun2022_P2HR__Q23__p25-25__m03__Algebraic-Fractions.png",
     "image": "assets/questions/Jun2022_P2HR__Q23__p25-25__m03__Algebraic-Fractions.png",
-    "question_text": "23 Express 20 36 2 6 1 4 2 x x x - - -    × - as a single fraction in its simplest form. ....................................................... (Total for Question 23 is 3 marks)",
+    "question_text": "23 Express 20 36 2 6 1 4 2 x x x - - -    x - as a single fraction in its simplest form. ....................................................... (Total for Question 23 is 3 marks)",
     "paper_code": "P2HR",
     "modular_force_unit": null
   },
@@ -7527,7 +7527,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "Jun2022_P2HR__Q25__p28-28__m05__Vectors.png",
     "image": "assets/questions/Jun2022_P2HR__Q25__p28-28__m05__Vectors.png",
-    "question_text": "25 ABCD is a parallelogram and ADM is a straight line. Diagram NOT accurately drawn A D K M B L C AB → = a BC → = b DM → = 1 2 b K is the point on AB such that AK : AB = λ : 1 L is the point on CD such that CL : CD = μ : 1 KLM is a straight line. Given that λ : μ = 1 : 2 use a vector method to find the value of λ and the value of μ λ = ....................................................... μ = ....................................................... (Total for Question 25 is 5 marks) O A O A S 100 A S",
+    "question_text": "25 ABCD is a parallelogram and ADM is a straight line. Diagram NOT accurately drawn A D K M B L C AB -> = a BC -> = b DM -> = 1 2 b K is the point on AB such that AK : AB = λ : 1 L is the point on CD such that CL : CD = μ : 1 KLM is a straight line. Given that λ : μ = 1 : 2 use a vector method to find the value of λ and the value of μ λ = ....................................................... μ = ....................................................... (Total for Question 25 is 5 marks) O A O A S 100 A S",
     "paper_code": "P2HR",
     "modular_force_unit": null
   },
@@ -7543,7 +7543,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "Jun2022_P2HR__Q25__p28-28__m05__Vectors.png",
     "image": "assets/questions/Jun2022_P2HR__Q25__p28-28__m05__Vectors.png",
-    "question_text": "25 ABCD is a parallelogram and ADM is a straight line. Diagram NOT accurately drawn A D K M B L C AB → = a BC → = b DM → = 1 2 b K is the point on AB such that AK : AB = λ : 1 L is the point on CD such that CL : CD = μ : 1 KLM is a straight line. Given that λ : μ = 1 : 2 use a vector method to find the value of λ and the value of μ λ = ....................................................... μ = ....................................................... (Total for Question 25 is 5 marks) O A O A S 100 A S",
+    "question_text": "25 ABCD is a parallelogram and ADM is a straight line. Diagram NOT accurately drawn A D K M B L C AB -> = a BC -> = b DM -> = 1 2 b K is the point on AB such that AK : AB = λ : 1 L is the point on CD such that CL : CD = μ : 1 KLM is a straight line. Given that λ : μ = 1 : 2 use a vector method to find the value of λ and the value of μ λ = ....................................................... μ = ....................................................... (Total for Question 25 is 5 marks) O A O A S 100 A S",
     "paper_code": "P2HR",
     "modular_force_unit": null
   },
@@ -7639,7 +7639,7 @@ window.QUESTION_DATA = [
     "marks": 2,
     "filename": "Jun2023_P2H__Q06__p07-07__m02__Powers-Roots-and-Standard-Form.png",
     "image": "assets/questions/Jun2023_P2H__Q06__p07-07__m02__Powers-Roots-and-Standard-Form.png",
-    "question_text": "6 (a) Write 76 000 000 in standard form. ....................................................... (1) (b) Write 5.4 × 10-4 as an ordinary number. ....................................................... (1) (Total for Question 6 is 2 marks)",
+    "question_text": "6 (a) Write 76 000 000 in standard form. ....................................................... (1) (b) Write 5.4 x 10-4 as an ordinary number. ....................................................... (1) (Total for Question 6 is 2 marks)",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -8151,7 +8151,7 @@ window.QUESTION_DATA = [
     "marks": 2,
     "filename": "Jun2023_P2HR__Q07__p08-08__m02__Algebraic-Roots-and-Indices.png",
     "image": "assets/questions/Jun2023_P2HR__Q07__p08-08__m02__Algebraic-Roots-and-Indices.png",
-    "question_text": "7 (a) Simplify (4-2)0 ...................................................... (1) 3-14 × 38 = 3m (b) Find the value of m m = ...................................................... (1) (Total for Question 7 is 2 marks)",
+    "question_text": "7 (a) Simplify (4-2)0 ...................................................... (1) 3-14 x 38 = 3m (b) Find the value of m m = ...................................................... (1) (Total for Question 7 is 2 marks)",
     "paper_code": "P2HR",
     "modular_force_unit": null
   },
@@ -8631,7 +8631,7 @@ window.QUESTION_DATA = [
     "marks": 3,
     "filename": "Jun2024_P2H__Q04__p05-05__m03__Fractions.png",
     "image": "assets/questions/Jun2024_P2H__Q04__p05-05__m03__Fractions.png",
-    "question_text": "4 Show that 2 4 7 × 3 1 9 = 8 (Total for Question 4 is 3 marks)",
+    "question_text": "4 Show that 2 4 7 x 3 1 9 = 8 (Total for Question 4 is 3 marks)",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -9015,7 +9015,7 @@ window.QUESTION_DATA = [
     "marks": 6,
     "filename": "Jun2024_P2H__Q24__p24-25__m06__Vectors.png",
     "image": "assets/questions/Jun2024_P2H__Q24__p24-25__m06__Vectors.png",
-    "question_text": "24 A B C O P 4a 2a + b 3b Diagram NOT accurately drawn The diagram shows a quadrilateral OACB in which OA → = 4a OB → = 3b BC → = 2a + b (a) Find AC → in terms of a and b Give your answer in its simplest form. AC → = ...................................................... (2) The point P lies on AC such that AP : PC = 3 : 2 The point Q is such that OPQ and BCQ are straight lines. (b) Using a vector method, find OQ → in terms of a and b Give your answer in its simplest form. Show your working clearly. OQ → = ...................................................... (4) (Total for Question 24 is 6 marks)",
+    "question_text": "24 A B C O P 4a 2a + b 3b Diagram NOT accurately drawn The diagram shows a quadrilateral OACB in which OA -> = 4a OB -> = 3b BC -> = 2a + b (a) Find AC -> in terms of a and b Give your answer in its simplest form. AC -> = ...................................................... (2) The point P lies on AC such that AP : PC = 3 : 2 The point Q is such that OPQ and BCQ are straight lines. (b) Using a vector method, find OQ -> in terms of a and b Give your answer in its simplest form. Show your working clearly. OQ -> = ...................................................... (4) (Total for Question 24 is 6 marks)",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -9031,7 +9031,7 @@ window.QUESTION_DATA = [
     "marks": 6,
     "filename": "Jun2024_P2H__Q24__p24-25__m06__Vectors.png",
     "image": "assets/questions/Jun2024_P2H__Q24__p24-25__m06__Vectors.png",
-    "question_text": "24 A B C O P 4a 2a + b 3b Diagram NOT accurately drawn The diagram shows a quadrilateral OACB in which OA → = 4a OB → = 3b BC → = 2a + b (a) Find AC → in terms of a and b Give your answer in its simplest form. AC → = ...................................................... (2) The point P lies on AC such that AP : PC = 3 : 2 The point Q is such that OPQ and BCQ are straight lines. (b) Using a vector method, find OQ → in terms of a and b Give your answer in its simplest form. Show your working clearly. OQ → = ...................................................... (4) (Total for Question 24 is 6 marks)",
+    "question_text": "24 A B C O P 4a 2a + b 3b Diagram NOT accurately drawn The diagram shows a quadrilateral OACB in which OA -> = 4a OB -> = 3b BC -> = 2a + b (a) Find AC -> in terms of a and b Give your answer in its simplest form. AC -> = ...................................................... (2) The point P lies on AC such that AP : PC = 3 : 2 The point Q is such that OPQ and BCQ are straight lines. (b) Using a vector method, find OQ -> in terms of a and b Give your answer in its simplest form. Show your working clearly. OQ -> = ...................................................... (4) (Total for Question 24 is 6 marks)",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -9207,7 +9207,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "Jun2024_P2HR__Q09__p10-10__m04__Powers-Roots-and-Standard-Form.png",
     "image": "assets/questions/Jun2024_P2HR__Q09__p10-10__m04__Powers-Roots-and-Standard-Form.png",
-    "question_text": "9 (a) Write 6.04 × 105 as an ordinary number. \b .......................................................... (1) (b) Write 0.000 07 in standard form. \b .......................................................... (1) (c) Work out 7 6 10 4 10 2 10 10 5 4 . Give your answer in standard form. \b .......................................................... (2) (Total for Question 9 is 4 marks)",
+    "question_text": "9 (a) Write 6.04 x 105 as an ordinary number. \b .......................................................... (1) (b) Write 0.000 07 in standard form. \b .......................................................... (1) (c) Work out 7 6 10 4 10 2 10 10 5 4 . Give your answer in standard form. \b .......................................................... (2) (Total for Question 9 is 4 marks)",
     "paper_code": "P2HR",
     "modular_force_unit": null
   },
@@ -9255,7 +9255,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "Jun2024_P2HR__Q12__p14-14__m04__Congruence-Similarity-and-Geometrical-Proof.png",
     "image": "assets/questions/Jun2024_P2HR__Q12__p14-14__m04__Congruence-Similarity-and-Geometrical-Proof.png",
-    "question_text": "12 10 cm Diagram NOT accurately drawn E D C A B In the diagram, ABC and AED are straight lines. BE is parallel to CD AE = 10 cm and CD = 1.5 × BE (a) Work out the length of ED \b .............................................................. cm (2) AB = (2x + 5) cm and BC = (3x - 5) cm (b) Work out the value of x x = .............................................................. (2) (Total for Question 12 is 4 marks)",
+    "question_text": "12 10 cm Diagram NOT accurately drawn E D C A B In the diagram, ABC and AED are straight lines. BE is parallel to CD AE = 10 cm and CD = 1.5 x BE (a) Work out the length of ED \b .............................................................. cm (2) AB = (2x + 5) cm and BC = (3x - 5) cm (b) Work out the value of x x = .............................................................. (2) (Total for Question 12 is 4 marks)",
     "paper_code": "P2HR",
     "modular_force_unit": null
   },
@@ -9511,7 +9511,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "Jun2024_P2HR__Q24__p26-27__m05__Area-and-Volume-of-Similar-Shapes.png",
     "image": "assets/questions/Jun2024_P2HR__Q24__p26-27__m05__Area-and-Volume-of-Similar-Shapes.png",
-    "question_text": "24 The diagram shows a solid, S, made from a cone and a hemisphere. Diagram NOT accurately drawn The centre of the circular face of the cone coincides with the centre of the flat surface of the hemisphere. The radius of the circular face of the cone, x cm, is equal to the radius of the hemisphere. The total height of S is 4 × the radius of the hemisphere. A separate sphere has radius kx cm. The volume of this sphere is 12.5 × the volume of S (a) Work out the value of k \b k = .............................................................. (4) A solid, T, is similar to solid S The volume of T is 512 × the volume of S The total surface area of T is d × the total surface area of S (b) Find the value of d \b d = .............................................................. (1) (Total for Question 24 is 5 marks)",
+    "question_text": "24 The diagram shows a solid, S, made from a cone and a hemisphere. Diagram NOT accurately drawn The centre of the circular face of the cone coincides with the centre of the flat surface of the hemisphere. The radius of the circular face of the cone, x cm, is equal to the radius of the hemisphere. The total height of S is 4 x the radius of the hemisphere. A separate sphere has radius kx cm. The volume of this sphere is 12.5 x the volume of S (a) Work out the value of k \b k = .............................................................. (4) A solid, T, is similar to solid S The volume of T is 512 x the volume of S The total surface area of T is d x the total surface area of S (b) Find the value of d \b d = .............................................................. (1) (Total for Question 24 is 5 marks)",
     "paper_code": "P2HR",
     "modular_force_unit": null
   },
@@ -9527,7 +9527,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "Jun2024_P2HR__Q24__p26-27__m05__Area-and-Volume-of-Similar-Shapes.png",
     "image": "assets/questions/Jun2024_P2HR__Q24__p26-27__m05__Area-and-Volume-of-Similar-Shapes.png",
-    "question_text": "24 The diagram shows a solid, S, made from a cone and a hemisphere. Diagram NOT accurately drawn The centre of the circular face of the cone coincides with the centre of the flat surface of the hemisphere. The radius of the circular face of the cone, x cm, is equal to the radius of the hemisphere. The total height of S is 4 × the radius of the hemisphere. A separate sphere has radius kx cm. The volume of this sphere is 12.5 × the volume of S (a) Work out the value of k \b k = .............................................................. (4) A solid, T, is similar to solid S The volume of T is 512 × the volume of S The total surface area of T is d × the total surface area of S (b) Find the value of d \b d = .............................................................. (1) (Total for Question 24 is 5 marks)",
+    "question_text": "24 The diagram shows a solid, S, made from a cone and a hemisphere. Diagram NOT accurately drawn The centre of the circular face of the cone coincides with the centre of the flat surface of the hemisphere. The radius of the circular face of the cone, x cm, is equal to the radius of the hemisphere. The total height of S is 4 x the radius of the hemisphere. A separate sphere has radius kx cm. The volume of this sphere is 12.5 x the volume of S (a) Work out the value of k \b k = .............................................................. (4) A solid, T, is similar to solid S The volume of T is 512 x the volume of S The total surface area of T is d x the total surface area of S (b) Find the value of d \b d = .............................................................. (1) (Total for Question 24 is 5 marks)",
     "paper_code": "P2HR",
     "modular_force_unit": null
   },
@@ -9543,7 +9543,7 @@ window.QUESTION_DATA = [
     "marks": 6,
     "filename": "Jun2024_P2HR__Q25__p28-29__m06__Vectors.png",
     "image": "assets/questions/Jun2024_P2HR__Q25__p28-29__m06__Vectors.png",
-    "question_text": "25 OPQR is a parallelogram. Diagram NOT accurately drawn Q N R M P O Y OP → = 2a and OR → = 3b The point M lies on PQ such that PM PQ = 1 4 The point N lies on RQ such that RN RQ = 4 5 (a) Find, in terms of a and b, giving your answers in simplest form (i) ON → \b .............................................................. (1) (ii) MR → \b .............................................................. (1) MR and ON intersect at the point Y Given that OY = k × ON (b) use a vector method to find the value of k \b k = .............................................................. (4) (Total for Question 25 is 6 marks)",
+    "question_text": "25 OPQR is a parallelogram. Diagram NOT accurately drawn Q N R M P O Y OP -> = 2a and OR -> = 3b The point M lies on PQ such that PM PQ = 1 4 The point N lies on RQ such that RN RQ = 4 5 (a) Find, in terms of a and b, giving your answers in simplest form (i) ON -> \b .............................................................. (1) (ii) MR -> \b .............................................................. (1) MR and ON intersect at the point Y Given that OY = k x ON (b) use a vector method to find the value of k \b k = .............................................................. (4) (Total for Question 25 is 6 marks)",
     "paper_code": "P2HR",
     "modular_force_unit": null
   },
@@ -9559,7 +9559,7 @@ window.QUESTION_DATA = [
     "marks": 6,
     "filename": "Jun2024_P2HR__Q25__p28-29__m06__Vectors.png",
     "image": "assets/questions/Jun2024_P2HR__Q25__p28-29__m06__Vectors.png",
-    "question_text": "25 OPQR is a parallelogram. Diagram NOT accurately drawn Q N R M P O Y OP → = 2a and OR → = 3b The point M lies on PQ such that PM PQ = 1 4 The point N lies on RQ such that RN RQ = 4 5 (a) Find, in terms of a and b, giving your answers in simplest form (i) ON → \b .............................................................. (1) (ii) MR → \b .............................................................. (1) MR and ON intersect at the point Y Given that OY = k × ON (b) use a vector method to find the value of k \b k = .............................................................. (4) (Total for Question 25 is 6 marks)",
+    "question_text": "25 OPQR is a parallelogram. Diagram NOT accurately drawn Q N R M P O Y OP -> = 2a and OR -> = 3b The point M lies on PQ such that PM PQ = 1 4 The point N lies on RQ such that RN RQ = 4 5 (a) Find, in terms of a and b, giving your answers in simplest form (i) ON -> \b .............................................................. (1) (ii) MR -> \b .............................................................. (1) MR and ON intersect at the point Y Given that OY = k x ON (b) use a vector method to find the value of k \b k = .............................................................. (4) (Total for Question 25 is 6 marks)",
     "paper_code": "P2HR",
     "modular_force_unit": null
   },
@@ -9655,7 +9655,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "Jun2025_P1H__Q04__p06-06__m04__Algebraic-Roots-and-Indices.png",
     "image": "assets/questions/Jun2025_P1H__Q04__p06-06__m04__Algebraic-Roots-and-Indices.png",
-    "question_text": "4 x 5 × x 7 = x m (a) Find the value of m m = ....................................................... (1) y 8 ÷ y 3 = y n (b) Find the value of n n = ....................................................... (1) (c) Simplify fully (5a 4r 2)3 ....................................................... (2) (Total for Question 4 is 4 marks)",
+    "question_text": "4 x 5 x x 7 = x m (a) Find the value of m m = ....................................................... (1) y 8 ÷ y 3 = y n (b) Find the value of n n = ....................................................... (1) (c) Simplify fully (5a 4r 2)3 ....................................................... (2) (Total for Question 4 is 4 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -9719,7 +9719,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "Jun2025_P1H__Q08__p09-09__m04__Powers-Roots-and-Standard-Form.png",
     "image": "assets/questions/Jun2025_P1H__Q08__p09-09__m04__Powers-Roots-and-Standard-Form.png",
-    "question_text": "8 (a) Write 520 million in standard form. ....................................................... (1) (b) Write 8.79 × 10 -5 as an ordinary number. ....................................................... (1) (c) Work out (5 × 10 42) × (7 × 10 -180) Give your answer in standard form. ....................................................... (2) (Total for Question 8 is 4 marks)",
+    "question_text": "8 (a) Write 520 million in standard form. ....................................................... (1) (b) Write 8.79 x 10 -5 as an ordinary number. ....................................................... (1) (c) Work out (5 x 10 42) x (7 x 10 -180) Give your answer in standard form. ....................................................... (2) (Total for Question 8 is 4 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -10007,7 +10007,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "Jun2025_P1H__Q23__p22-23__m05__Vectors.png",
     "image": "assets/questions/Jun2025_P1H__Q23__p22-23__m05__Vectors.png",
-    "question_text": "23 A P Q O B R Diagram NOT accurately drawn OAB is a triangle. P is the midpoint of OA Q is a point on OB ABR and PQR are straight lines. OA → = 12a OB → = 8b (a) Express AB → in terms of a and b ....................................................... (1) AB : BR = 1 : 2 OQ → = nb (b) Use a vector method to find the value of n n = ....................................................... (4) (Total for Question 23 is 5 marks)",
+    "question_text": "23 A P Q O B R Diagram NOT accurately drawn OAB is a triangle. P is the midpoint of OA Q is a point on OB ABR and PQR are straight lines. OA -> = 12a OB -> = 8b (a) Express AB -> in terms of a and b ....................................................... (1) AB : BR = 1 : 2 OQ -> = nb (b) Use a vector method to find the value of n n = ....................................................... (4) (Total for Question 23 is 5 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -10023,7 +10023,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "Jun2025_P1H__Q23__p22-23__m05__Vectors.png",
     "image": "assets/questions/Jun2025_P1H__Q23__p22-23__m05__Vectors.png",
-    "question_text": "23 A P Q O B R Diagram NOT accurately drawn OAB is a triangle. P is the midpoint of OA Q is a point on OB ABR and PQR are straight lines. OA → = 12a OB → = 8b (a) Express AB → in terms of a and b ....................................................... (1) AB : BR = 1 : 2 OQ → = nb (b) Use a vector method to find the value of n n = ....................................................... (4) (Total for Question 23 is 5 marks)",
+    "question_text": "23 A P Q O B R Diagram NOT accurately drawn OAB is a triangle. P is the midpoint of OA Q is a point on OB ABR and PQR are straight lines. OA -> = 12a OB -> = 8b (a) Express AB -> in terms of a and b ....................................................... (1) AB : BR = 1 : 2 OQ -> = nb (b) Use a vector method to find the value of n n = ....................................................... (4) (Total for Question 23 is 5 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -10215,7 +10215,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "Jun2025_P1HR__Q08__p08-08__m05__Factorising.png",
     "image": "assets/questions/Jun2025_P1HR__Q08__p08-08__m05__Factorising.png",
-    "question_text": "8 (a) Simplify a a 6 10 × ............................................................ (1) (b) Simplify c c 30 12 ÷ ............................................................ (1) (c) (i) Factorise y y 2 10 21 ............................................................ (2) (ii) Hence, solve y y 2 10 21 0 ............................................................ (1) (Total for Question 8 is 5 marks)",
+    "question_text": "8 (a) Simplify a a 6 10 x ............................................................ (1) (b) Simplify c c 30 12 ÷ ............................................................ (1) (c) (i) Factorise y y 2 10 21 ............................................................ (2) (ii) Hence, solve y y 2 10 21 0 ............................................................ (1) (Total for Question 8 is 5 marks)",
     "paper_code": "P1HR",
     "modular_force_unit": null
   },
@@ -10775,7 +10775,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "Jun2025_P2H__Q10__p10-10__m05__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
     "image": "assets/questions/Jun2025_P2H__Q10__p10-10__m05__Right-Angled-Triangles-Pythagoras-and-Trigonometry.png",
-    "question_text": "10 ABD and ABC are right‐angled triangles. A B C D 12 cm 16 cm Diagram NOT accurately drawn AB = 16 cm BC = 12 cm AD = 1.5 × AC Find the length of CD Give your answer correct to 3 significant figures. ........................................................ cm (Total for Question 10 is 5 marks)",
+    "question_text": "10 ABD and ABC are right‐angled triangles. A B C D 12 cm 16 cm Diagram NOT accurately drawn AB = 16 cm BC = 12 cm AD = 1.5 x AC Find the length of CD Give your answer correct to 3 significant figures. ........................................................ cm (Total for Question 10 is 5 marks)",
     "paper_code": "P2H",
     "modular_force_unit": null
   },
@@ -11751,7 +11751,7 @@ window.QUESTION_DATA = [
     "marks": 6,
     "filename": "May2021_P1H__Q05__p06-06__m06__Rearranging-Formulas.png",
     "image": "assets/questions/May2021_P1H__Q05__p06-06__m06__Rearranging-Formulas.png",
-    "question_text": "5 (a) Expand and simplify 3x(2x + 3) - x(3x + 5) ....................................................... (2) (b) Make t the subject of the formula p = at - d ....................................................... (2) Given that w w w w n 5 3 10 × = (c) work out the value of n. n = ....................................................... (2) (Total for Question 5 is 6 marks)",
+    "question_text": "5 (a) Expand and simplify 3x(2x + 3) - x(3x + 5) ....................................................... (2) (b) Make t the subject of the formula p = at - d ....................................................... (2) Given that w w w w n 5 3 10 x = (c) work out the value of n. n = ....................................................... (2) (Total for Question 5 is 6 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -11799,7 +11799,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "May2021_P1H__Q08__p09-09__m04__Powers-Roots-and-Standard-Form.png",
     "image": "assets/questions/May2021_P1H__Q08__p09-09__m04__Powers-Roots-and-Standard-Form.png",
-    "question_text": "8 The table shows the populations of five countries. Country Population China 1.4 × 109 Germany 8.2 × 107 Sweden 9.9 × 106 Fiji 9.1 × 105 Malta 4.3 × 105 (a) Work out the difference between the population of China and the population of Germany. Give your answer in standard form. ....................................................... (2) Given that population of Fiji population of Sweden = × 1 k (b) work out the value of k. Give your answer correct to the nearest whole number. k = ....................................................... (2) (Total for Question 8 is 4 marks)",
+    "question_text": "8 The table shows the populations of five countries. Country Population China 1.4 x 109 Germany 8.2 x 107 Sweden 9.9 x 106 Fiji 9.1 x 105 Malta 4.3 x 105 (a) Work out the difference between the population of China and the population of Germany. Give your answer in standard form. ....................................................... (2) Given that population of Fiji population of Sweden = x 1 k (b) work out the value of k. Give your answer correct to the nearest whole number. k = ....................................................... (2) (Total for Question 8 is 4 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -11847,7 +11847,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "May2021_P1H__Q11__p11-11__m04__Algebraic-Roots-and-Indices.png",
     "image": "assets/questions/May2021_P1H__Q11__p11-11__m04__Algebraic-Roots-and-Indices.png",
-    "question_text": "11 2 16 2 × = x (a) Find the value of x. Show your working clearly. x = ....................................................... (2) ( ) 11 11 11 6 5 4 - = n (b) Find the value of n. Show your working clearly. n = ....................................................... (2) (Total for Question 11 is 4 marks)",
+    "question_text": "11 2 16 2 x = x (a) Find the value of x. Show your working clearly. x = ....................................................... (2) ( ) 11 11 11 6 5 4 - = n (b) Find the value of n. Show your working clearly. n = ....................................................... (2) (Total for Question 11 is 4 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -12183,7 +12183,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "May2021_P1H__Q26__p26-27__m05__Vectors.png",
     "image": "assets/questions/May2021_P1H__Q26__p26-27__m05__Vectors.png",
-    "question_text": "26 OACB is a trapezium. A P B O 3b C Diagram NOT accurately drawn 2a 5b OA → = 2a OB → = 5b AC → = 3b The diagonals, OC and AB, of the trapezium intersect at the point P. Find and simplify an expression, in terms of a and b, for OP → Show your working clearly. OP → = ...................................................... (Total for Question 26 is 5 marks)",
+    "question_text": "26 OACB is a trapezium. A P B O 3b C Diagram NOT accurately drawn 2a 5b OA -> = 2a OB -> = 5b AC -> = 3b The diagonals, OC and AB, of the trapezium intersect at the point P. Find and simplify an expression, in terms of a and b, for OP -> Show your working clearly. OP -> = ...................................................... (Total for Question 26 is 5 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -12199,7 +12199,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "May2021_P1H__Q26__p26-27__m05__Vectors.png",
     "image": "assets/questions/May2021_P1H__Q26__p26-27__m05__Vectors.png",
-    "question_text": "26 OACB is a trapezium. A P B O 3b C Diagram NOT accurately drawn 2a 5b OA → = 2a OB → = 5b AC → = 3b The diagonals, OC and AB, of the trapezium intersect at the point P. Find and simplify an expression, in terms of a and b, for OP → Show your working clearly. OP → = ...................................................... (Total for Question 26 is 5 marks)",
+    "question_text": "26 OACB is a trapezium. A P B O 3b C Diagram NOT accurately drawn 2a 5b OA -> = 2a OB -> = 5b AC -> = 3b The diagonals, OC and AB, of the trapezium intersect at the point P. Find and simplify an expression, in terms of a and b, for OP -> Show your working clearly. OP -> = ...................................................... (Total for Question 26 is 5 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -12759,7 +12759,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "May2023_P1H__Q08__p11-11__m04__Prime-Factors-HCF-and-LCM.png",
     "image": "assets/questions/May2023_P1H__Q08__p11-11__m04__Prime-Factors-HCF-and-LCM.png",
-    "question_text": "8 (a) Write 300 as a product of its prime factors. Show your working clearly. ....................................................... (2) A = 2 × 2 × 2 × 3 × 3 × 5 B = 2 × 2 × 3 × 3 × 3 × 5 (b) Find the lowest common multiple (LCM) of 5A and 7B Show your working clearly. ....................................................... (2) (Total for Question 8 is 4 marks)",
+    "question_text": "8 (a) Write 300 as a product of its prime factors. Show your working clearly. ....................................................... (2) A = 2 x 2 x 2 x 3 x 3 x 5 B = 2 x 2 x 3 x 3 x 3 x 5 (b) Find the lowest common multiple (LCM) of 5A and 7B Show your working clearly. ....................................................... (2) (Total for Question 8 is 4 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -12871,7 +12871,7 @@ window.QUESTION_DATA = [
     "marks": 6,
     "filename": "May2023_P1H__Q15__p16-16__m06__Powers-Roots-and-Standard-Form.png",
     "image": "assets/questions/May2023_P1H__Q15__p16-16__m06__Powers-Roots-and-Standard-Form.png",
-    "question_text": "15 (a) 2 8 16 2 3 3 2 n Work out the value of n Show your working clearly. n = ....................................................... (3) (b) Find 4% of 4.5 × 10 157 Give your answer in standard form. ....................................................... (3) (Total for Question 15 is 6 marks)",
+    "question_text": "15 (a) 2 8 16 2 3 3 2 n Work out the value of n Show your working clearly. n = ....................................................... (3) (b) Find 4% of 4.5 x 10 157 Give your answer in standard form. ....................................................... (3) (Total for Question 15 is 6 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -12935,7 +12935,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "May2023_P1H__Q19__p20-21__m05__Vectors.png",
     "image": "assets/questions/May2023_P1H__Q19__p20-21__m05__Vectors.png",
-    "question_text": "19 A B N O P M a b Diagram NOT accurately drawn OMA, ONB, MPB and NPA are straight lines. M is the midpoint of OA ON : NB = 1 : 5 OM → = a ON → = b (a) Find in terms of a and b the vector AN → ....................................................... (1) (b) Use a vector method to find the ratio AP : PN AP : PN = ....................................................... (4) (Total for Question 19 is 5 marks)",
+    "question_text": "19 A B N O P M a b Diagram NOT accurately drawn OMA, ONB, MPB and NPA are straight lines. M is the midpoint of OA ON : NB = 1 : 5 OM -> = a ON -> = b (a) Find in terms of a and b the vector AN -> ....................................................... (1) (b) Use a vector method to find the ratio AP : PN AP : PN = ....................................................... (4) (Total for Question 19 is 5 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -13159,7 +13159,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "May2023_P1HR__Q06__p07-07__m04__Algebraic-Roots-and-Indices.png",
     "image": "assets/questions/May2023_P1HR__Q06__p07-07__m04__Algebraic-Roots-and-Indices.png",
-    "question_text": "6 (a) Simplify m10 ÷ m3 ...................................................... (1) k n × k 4 = k12 (b) Write down the value of n n = ...................................................... (1) (c) Simplify (3x6 y8)2 .................................................................................. (2) (Total for Question 6 is 4 marks)",
+    "question_text": "6 (a) Simplify m10 ÷ m3 ...................................................... (1) k n x k 4 = k12 (b) Write down the value of n n = ...................................................... (1) (c) Simplify (3x6 y8)2 .................................................................................. (2) (Total for Question 6 is 4 marks)",
     "paper_code": "P1HR",
     "modular_force_unit": null
   },
@@ -13191,7 +13191,7 @@ window.QUESTION_DATA = [
     "marks": 3,
     "filename": "May2023_P1HR__Q08__p08-08__m03__Powers-Roots-and-Standard-Form.png",
     "image": "assets/questions/May2023_P1HR__Q08__p08-08__m03__Powers-Roots-and-Standard-Form.png",
-    "question_text": "8 (a) Write 5.6 × 10-3 as an ordinary number. ...................................................... (1) (b) Work out 6 10 2 1 10 9 10 3 4 5 . Give your answer in standard form. ...................................................... (2) (Total for Question 8 is 3 marks)",
+    "question_text": "8 (a) Write 5.6 x 10-3 as an ordinary number. ...................................................... (1) (b) Work out 6 10 2 1 10 9 10 3 4 5 . Give your answer in standard form. ...................................................... (2) (Total for Question 8 is 3 marks)",
     "paper_code": "P1HR",
     "modular_force_unit": null
   },
@@ -13367,7 +13367,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "May2023_P1HR__Q19__p19-19__m05__Vectors.png",
     "image": "assets/questions/May2023_P1HR__Q19__p19-19__m05__Vectors.png",
-    "question_text": "19 The diagram shows a triangle ABC where A, B and C represent the positions of three towns. A C B Diagram NOT accurately drawn AB → = 7 2 \u001b \u001a\u0019 BC → = \u001b \u001a\u0019 3 5 Pru travels directly from A to B and then directly from B to C Yang travels directly from A to C Given that the values for AB → and BC → are in kilometres, work out how much further Pru travels than Yang travels. Give your answer in km, correct to one decimal place. ...................................................... km (Total for Question 19 is 5 marks)",
+    "question_text": "19 The diagram shows a triangle ABC where A, B and C represent the positions of three towns. A C B Diagram NOT accurately drawn AB -> = 7 2 \u001b \u001a\u0019 BC -> = \u001b \u001a\u0019 3 5 Pru travels directly from A to B and then directly from B to C Yang travels directly from A to C Given that the values for AB -> and BC -> are in kilometres, work out how much further Pru travels than Yang travels. Give your answer in km, correct to one decimal place. ...................................................... km (Total for Question 19 is 5 marks)",
     "paper_code": "P1HR",
     "modular_force_unit": null
   },
@@ -13511,7 +13511,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "May2023_P1HR__Q24__p25-25__m05__Algebraic-Roots-and-Indices.png",
     "image": "assets/questions/May2023_P1HR__Q24__p25-25__m05__Algebraic-Roots-and-Indices.png",
-    "question_text": "24 Given that 2n = 2x2 × 16x × 8 and x > 0 find an expression for x in terms of n State any restrictions on n .................................................................................................................................................................................................................................................. (Total for Question 24 is 5 marks)",
+    "question_text": "24 Given that 2n = 2x2 x 16x x 8 and x > 0 find an expression for x in terms of n State any restrictions on n .................................................................................................................................................................................................................................................. (Total for Question 24 is 5 marks)",
     "paper_code": "P1HR",
     "modular_force_unit": null
   },
@@ -13527,7 +13527,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "May2023_P1HR__Q24__p25-25__m05__Algebraic-Roots-and-Indices.png",
     "image": "assets/questions/May2023_P1HR__Q24__p25-25__m05__Algebraic-Roots-and-Indices.png",
-    "question_text": "24 Given that 2n = 2x2 × 16x × 8 and x > 0 find an expression for x in terms of n State any restrictions on n .................................................................................................................................................................................................................................................. (Total for Question 24 is 5 marks)",
+    "question_text": "24 Given that 2n = 2x2 x 16x x 8 and x > 0 find an expression for x in terms of n State any restrictions on n .................................................................................................................................................................................................................................................. (Total for Question 24 is 5 marks)",
     "paper_code": "P1HR",
     "modular_force_unit": null
   },
@@ -13703,7 +13703,7 @@ window.QUESTION_DATA = [
     "marks": 3,
     "filename": "May2024_P1H__Q09__p10-10__m03__Powers-Roots-and-Standard-Form.png",
     "image": "assets/questions/May2024_P1H__Q09__p10-10__m03__Powers-Roots-and-Standard-Form.png",
-    "question_text": "9 The table gives the amount of rice produced by each of two countries in 2020 Country Amount of rice (tonnes) Indonesia 3.5 × 10 7 Argentina 8.2 × 10 5 (a) Write 3.5 × 10 7 as an ordinary number. ...................................................... (1) In 2020, Japan produced 6 780 000 more tonnes of rice than Argentina. (b) Work out the amount of rice Japan produced in 2020 Give your answer in standard form. ...................................................... tonnes (2) (Total for Question 9 is 3 marks)",
+    "question_text": "9 The table gives the amount of rice produced by each of two countries in 2020 Country Amount of rice (tonnes) Indonesia 3.5 x 10 7 Argentina 8.2 x 10 5 (a) Write 3.5 x 10 7 as an ordinary number. ...................................................... (1) In 2020, Japan produced 6 780 000 more tonnes of rice than Argentina. (b) Work out the amount of rice Japan produced in 2020 Give your answer in standard form. ...................................................... tonnes (2) (Total for Question 9 is 3 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -13719,7 +13719,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "May2024_P1H__Q10__p11-11__m04__Algebraic-Roots-and-Indices.png",
     "image": "assets/questions/May2024_P1H__Q10__p11-11__m04__Algebraic-Roots-and-Indices.png",
-    "question_text": "10 (a) Simplify (2p) 0 where p > 0 ...................................................... (1) y 9 × y -3 = y n (b) Find the value of n n = ...................................................... (1) (c) Simplify fully (5a 4c 2 ) 3 ...................................................... (2) (Total for Question 10 is 4 marks)",
+    "question_text": "10 (a) Simplify (2p) 0 where p > 0 ...................................................... (1) y 9 x y -3 = y n (b) Find the value of n n = ...................................................... (1) (c) Simplify fully (5a 4c 2 ) 3 ...................................................... (2) (Total for Question 10 is 4 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -14567,7 +14567,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "MayNov2020_P1H__Q05__p07-07__m04__Powers-Roots-and-Standard-Form.png",
     "image": "assets/questions/MayNov2020_P1H__Q05__p07-07__m04__Powers-Roots-and-Standard-Form.png",
-    "question_text": "5 (a) Write 5.7 × 10 -3 as an ordinary number. ....................................................... (1) (b) Write 800 000 in standard form. ....................................................... (1) (c) Work out 3 10 2 7 10 6 10 5 4 2 × - × × - . ....................................................... (2) (Total for Question 5 is 4 marks)",
+    "question_text": "5 (a) Write 5.7 x 10 -3 as an ordinary number. ....................................................... (1) (b) Write 800 000 in standard form. ....................................................... (1) (c) Work out 3 10 2 7 10 6 10 5 4 2 x - x x - . ....................................................... (2) (Total for Question 5 is 4 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -14647,7 +14647,7 @@ window.QUESTION_DATA = [
     "marks": 3,
     "filename": "MayNov2020_P1H__Q10__p11-11__m03__Prime-Factors-HCF-and-LCM.png",
     "image": "assets/questions/MayNov2020_P1H__Q10__p11-11__m03__Prime-Factors-HCF-and-LCM.png",
-    "question_text": "10 A = 2 × 343 B = 16 × 337 (a) Find the highest common factor (HCF) of A and B. ....................................................... (1) (b) Express the number A × B as a product of powers of its prime factors. Give your answer in its simplest form. ....................................................... (2) (Total for Question 10 is 3 marks)",
+    "question_text": "10 A = 2 x 343 B = 16 x 337 (a) Find the highest common factor (HCF) of A and B. ....................................................... (1) (b) Express the number A x B as a product of powers of its prime factors. Give your answer in its simplest form. ....................................................... (2) (Total for Question 10 is 3 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -14759,7 +14759,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "MayNov2020_P1H__Q17__p19-19__m04__Rounding-Estimation-and-Bounds.png",
     "image": "assets/questions/MayNov2020_P1H__Q17__p19-19__m04__Rounding-Estimation-and-Bounds.png",
-    "question_text": "17 A metal block has a mass of 5 kg, correct to the nearest 50 grams. The block has a volume of (1.84 × 10 -3 ) m3, correct to 3 significant figures. Work out the upper bound for the density of the block. Give your answer in kg/m3 correct to 1 decimal place. Show your working clearly. ....................................................... kg/m3 (Total for Question 17 is 4 marks)",
+    "question_text": "17 A metal block has a mass of 5 kg, correct to the nearest 50 grams. The block has a volume of (1.84 x 10 -3 ) m3, correct to 3 significant figures. Work out the upper bound for the density of the block. Give your answer in kg/m3 correct to 1 decimal place. Show your working clearly. ....................................................... kg/m3 (Total for Question 17 is 4 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -14839,7 +14839,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "MayNov2020_P1H__Q21__p23-23__m05__Algebraic-Fractions.png",
     "image": "assets/questions/MayNov2020_P1H__Q21__p23-23__m05__Algebraic-Fractions.png",
-    "question_text": "21 Express 1 3 2 9 4 3 13 10 7 1 2 2 x x x x x - × - - - - - as a single fraction in its simplest form. .................................................................................. (Total for Question 21 is 5 marks)",
+    "question_text": "21 Express 1 3 2 9 4 3 13 10 7 1 2 2 x x x x x - x - - - - - as a single fraction in its simplest form. .................................................................................. (Total for Question 21 is 5 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -14855,7 +14855,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "MayNov2020_P1H__Q21__p23-23__m05__Algebraic-Fractions.png",
     "image": "assets/questions/MayNov2020_P1H__Q21__p23-23__m05__Algebraic-Fractions.png",
-    "question_text": "21 Express 1 3 2 9 4 3 13 10 7 1 2 2 x x x x x - × - - - - - as a single fraction in its simplest form. .................................................................................. (Total for Question 21 is 5 marks)",
+    "question_text": "21 Express 1 3 2 9 4 3 13 10 7 1 2 2 x x x x x - x - - - - - as a single fraction in its simplest form. .................................................................................. (Total for Question 21 is 5 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -14999,7 +14999,7 @@ window.QUESTION_DATA = [
     "marks": 3,
     "filename": "MayNov2020_P1HR__Q01__p03-03__m03__Fractions.png",
     "image": "assets/questions/MayNov2020_P1HR__Q01__p03-03__m03__Fractions.png",
-    "question_text": "1 Show that 3 3 4 7 9 211 12 × = (Total for Question 1 is 3 marks)",
+    "question_text": "1 Show that 3 3 4 7 9 211 12 x = (Total for Question 1 is 3 marks)",
     "paper_code": "P1HR",
     "modular_force_unit": null
   },
@@ -15031,7 +15031,7 @@ window.QUESTION_DATA = [
     "marks": 6,
     "filename": "MayNov2020_P1HR__Q03__p04-04__m06__Solving-Linear-Equations.png",
     "image": "assets/questions/MayNov2020_P1HR__Q03__p04-04__m06__Solving-Linear-Equations.png",
-    "question_text": "3 (a) Simplify h7× h2 ....................................................... (1) G = c2 - 4c (b) Find the value of G when c = -5 G = ....................................................... (2) (c) Solve 5 3 4 x - = 2x + 3 Show clear algebraic working. x = ....................................................... (3) (Total for Question 3 is 6 marks)",
+    "question_text": "3 (a) Simplify h7x h2 ....................................................... (1) G = c2 - 4c (b) Find the value of G when c = -5 G = ....................................................... (2) (c) Solve 5 3 4 x - = 2x + 3 Show clear algebraic working. x = ....................................................... (3) (Total for Question 3 is 6 marks)",
     "paper_code": "P1HR",
     "modular_force_unit": null
   },
@@ -15335,7 +15335,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "MayNov2020_P1HR__Q21__p21-21__m05__Algebraic-Roots-and-Indices.png",
     "image": "assets/questions/MayNov2020_P1HR__Q21__p21-21__m05__Algebraic-Roots-and-Indices.png",
-    "question_text": "21 Given that M = 18 2 3 12 4 3 6 2 1 4 2 2 n n n n × × - - ( ) ( ) find the values of n for which M = 2 ....................................................... (Total for Question 21 is 5 marks)",
+    "question_text": "21 Given that M = 18 2 3 12 4 3 6 2 1 4 2 2 n n n n x x - - ( ) ( ) find the values of n for which M = 2 ....................................................... (Total for Question 21 is 5 marks)",
     "paper_code": "P1HR",
     "modular_force_unit": null
   },
@@ -15351,7 +15351,7 @@ window.QUESTION_DATA = [
     "marks": 5,
     "filename": "MayNov2020_P1HR__Q21__p21-21__m05__Algebraic-Roots-and-Indices.png",
     "image": "assets/questions/MayNov2020_P1HR__Q21__p21-21__m05__Algebraic-Roots-and-Indices.png",
-    "question_text": "21 Given that M = 18 2 3 12 4 3 6 2 1 4 2 2 n n n n × × - - ( ) ( ) find the values of n for which M = 2 ....................................................... (Total for Question 21 is 5 marks)",
+    "question_text": "21 Given that M = 18 2 3 12 4 3 6 2 1 4 2 2 n n n n x x - - ( ) ( ) find the values of n for which M = 2 ....................................................... (Total for Question 21 is 5 marks)",
     "paper_code": "P1HR",
     "modular_force_unit": null
   },
@@ -15639,7 +15639,7 @@ window.QUESTION_DATA = [
     "marks": 8,
     "filename": "Nov2021_P1H__Q14__p14-15__m08__Vectors.png",
     "image": "assets/questions/Nov2021_P1H__Q14__p14-15__m08__Vectors.png",
-    "question_text": "14 ABCDEF and GHIJKL are regular hexagons each with centre O. Diagram NOT accurately drawn G L I H K J E D A B F C O a b GHIJKL is an enlargement of ABCDEF, with centre O and scale factor 2 OA → = a OB → = b (a) Write the following vectors, in terms of a and b. Simplify your answers. (i) AB → ....................................................... (1) (ii) KI → ....................................................... (2) (iii) LD → ....................................................... (2) The triangle OAB has an area of 5 cm2 (b) Calculate the area of the shaded region. ....................................................... cm2 (3) (Total for Question 14 is 8 marks)",
+    "question_text": "14 ABCDEF and GHIJKL are regular hexagons each with centre O. Diagram NOT accurately drawn G L I H K J E D A B F C O a b GHIJKL is an enlargement of ABCDEF, with centre O and scale factor 2 OA -> = a OB -> = b (a) Write the following vectors, in terms of a and b. Simplify your answers. (i) AB -> ....................................................... (1) (ii) KI -> ....................................................... (2) (iii) LD -> ....................................................... (2) The triangle OAB has an area of 5 cm2 (b) Calculate the area of the shaded region. ....................................................... cm2 (3) (Total for Question 14 is 8 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -16295,7 +16295,7 @@ window.QUESTION_DATA = [
     "marks": 4,
     "filename": "Nov2023_P1H__Q09__p11-11__m04__Powers-Roots-and-Standard-Form.png",
     "image": "assets/questions/Nov2023_P1H__Q09__p11-11__m04__Powers-Roots-and-Standard-Form.png",
-    "question_text": "9 (a) Write 5 87 10 4 . as an ordinary number. .............................................................. (1) (b) Write 84 000 000 in standard form. .............................................................. (1) The number of neurons in a human brain is 8 5 1010 . × The number of neurons in a monkey brain is 1 47 109 . × The number of neurons in a human brain is K × the number of neurons in a monkey brain. (c) Work out the value of K Give your answer correct to one decimal place. K = .............................................................. (2) (Total for Question 9 is 4 marks)",
+    "question_text": "9 (a) Write 5 87 10 4 . as an ordinary number. .............................................................. (1) (b) Write 84 000 000 in standard form. .............................................................. (1) The number of neurons in a human brain is 8 5 1010 . x The number of neurons in a monkey brain is 1 47 109 . x The number of neurons in a human brain is K x the number of neurons in a monkey brain. (c) Work out the value of K Give your answer correct to one decimal place. K = .............................................................. (2) (Total for Question 9 is 4 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -18103,7 +18103,7 @@ window.QUESTION_DATA = [
     "marks": 2,
     "filename": "Nov2025_P1H__Q02__p04-04__m02__Rounding-Estimation-and-Bounds.png",
     "image": "assets/questions/Nov2025_P1H__Q02__p04-04__m02__Rounding-Estimation-and-Bounds.png",
-    "question_text": "2 By rounding each number to one significant figure, work out an estimate for the value of 2 11 58 9 8 859 2 . . . × Show your working clearly. ...................................................... (Total for Question 2 is 2 marks)",
+    "question_text": "2 By rounding each number to one significant figure, work out an estimate for the value of 2 11 58 9 8 859 2 . . . x Show your working clearly. ...................................................... (Total for Question 2 is 2 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -18615,7 +18615,7 @@ window.QUESTION_DATA = [
     "marks": 6,
     "filename": "Nov2025_P1H__Q27__p24-25__m06__Vectors.png",
     "image": "assets/questions/Nov2025_P1H__Q27__p24-25__m06__Vectors.png",
-    "question_text": "27 A O C D B P 2a 5b - 3a 4b - a Diagram NOT accurately drawn OABC is a quadrilateral. ABP and ODP are straight lines. OA → = 2a AB → = 4b - a OC → = 5b - 3a (a) Find an expression in terms of a and b for the vector BC → Simplify your answer. ...................................................... (2) The point D lies on BC such that BD : DC = 1 : 3 Given that OP → = nOD → (b) use a vector method to find the value of n n = ...................................................... (4) (Total for Question 27 is 6 marks)",
+    "question_text": "27 A O C D B P 2a 5b - 3a 4b - a Diagram NOT accurately drawn OABC is a quadrilateral. ABP and ODP are straight lines. OA -> = 2a AB -> = 4b - a OC -> = 5b - 3a (a) Find an expression in terms of a and b for the vector BC -> Simplify your answer. ...................................................... (2) The point D lies on BC such that BD : DC = 1 : 3 Given that OP -> = nOD -> (b) use a vector method to find the value of n n = ...................................................... (4) (Total for Question 27 is 6 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -18631,7 +18631,7 @@ window.QUESTION_DATA = [
     "marks": 6,
     "filename": "Nov2025_P1H__Q27__p24-25__m06__Vectors.png",
     "image": "assets/questions/Nov2025_P1H__Q27__p24-25__m06__Vectors.png",
-    "question_text": "27 A O C D B P 2a 5b - 3a 4b - a Diagram NOT accurately drawn OABC is a quadrilateral. ABP and ODP are straight lines. OA → = 2a AB → = 4b - a OC → = 5b - 3a (a) Find an expression in terms of a and b for the vector BC → Simplify your answer. ...................................................... (2) The point D lies on BC such that BD : DC = 1 : 3 Given that OP → = nOD → (b) use a vector method to find the value of n n = ...................................................... (4) (Total for Question 27 is 6 marks)",
+    "question_text": "27 A O C D B P 2a 5b - 3a 4b - a Diagram NOT accurately drawn OABC is a quadrilateral. ABP and ODP are straight lines. OA -> = 2a AB -> = 4b - a OC -> = 5b - 3a (a) Find an expression in terms of a and b for the vector BC -> Simplify your answer. ...................................................... (2) The point D lies on BC such that BD : DC = 1 : 3 Given that OP -> = nOD -> (b) use a vector method to find the value of n n = ...................................................... (4) (Total for Question 27 is 6 marks)",
     "paper_code": "P1H",
     "modular_force_unit": null
   },
@@ -18791,7 +18791,7 @@ window.QUESTION_DATA = [
     "marks": 3,
     "filename": "Nov2025_P2H__Q08__p08-08__m03__Powers-Roots-and-Standard-Form.png",
     "image": "assets/questions/Nov2025_P2H__Q08__p08-08__m03__Powers-Roots-and-Standard-Form.png",
-    "question_text": "8 (a) Write 5.76 × 10 4 as an ordinary number. ...................................................... (1) (b) Work out 5 3 2 3 10 8 10 4 10 Give your answer in standard form. ...................................................... (2) (Total for Question 8 is 3 marks)",
+    "question_text": "8 (a) Write 5.76 x 10 4 as an ordinary number. ...................................................... (1) (b) Work out 5 3 2 3 10 8 10 4 10 Give your answer in standard form. ...................................................... (2) (Total for Question 8 is 3 marks)",
     "paper_code": "P2H",
     "modular_force_unit": null
   },

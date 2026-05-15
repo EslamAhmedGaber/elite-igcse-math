@@ -1,5 +1,5 @@
 if (!document.getElementById("questionGrid")) {
-  // Not the practice page — bail. lead.js handles the enrollment dialog globally.
+  // Not the practice page - bail. lead.js handles the enrollment dialog globally.
   console.info("[app.js] questionGrid not found; skipping bank initialisation.");
   throw new Error("__app_js_no_bank__");
 }
@@ -118,7 +118,7 @@ function fillSelect(select, values, label) {
 }
 
 function escapeHtml(value) {
-  return String(value ?? "").replace(/[&<>"']/g, (char) => ({
+  return String(value | "").replace(/[&<>"']/g, (char) => ({
     "&": "&amp;",
     "<": "&lt;",
     ">": "&gt;",
@@ -222,8 +222,8 @@ function showPathwayResumeBanner() {
   const pathwayLabel = mode === "modular" ? "Modular Pathway" : "Linear Pathway";
   const unit = mode === "modular" ? (localStorage.getItem("modularUnit") || "Unit 1") : "";
   textEl.textContent = mode === "modular"
-    ? `Welcome back — practising the ${pathwayLabel}, ${unit}.`
-    : `Welcome back — practising the ${pathwayLabel}.`;
+    ? `Welcome back - practising the ${pathwayLabel}, ${unit}.`
+    : `Welcome back - practising the ${pathwayLabel}.`;
   banner.hidden = false;
 }
 

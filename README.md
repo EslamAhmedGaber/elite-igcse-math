@@ -1,10 +1,10 @@
-﻿# Elite IGCSE Mathematics — Operator Handbook
+﻿# Elite IGCSE Mathematics - Operator Handbook
 
 The live student website for **Edexcel IGCSE 4MA1 Higher Mathematics** by Dr Eslam Ahmed.
 
-This document is the single source of truth for running and updating the site. Read the **Common Tasks** and **Private answer workflow** sections first — those cover 95% of what you'll do.
+This document is the single source of truth for running and updating the site. Read the **Common Tasks** and **Private answer workflow** sections first - those cover 95% of what you'll do.
 
-> Last updated: 2026-05-15 · Section index: §1 Live URLs · §2 Stack · §3 Directory tree · §4 Common tasks · **§5 Private answer workflow** · §6 Local testing · §7 Deploy · §8 Settings cheat-sheet · §9 Gotchas · §10 Troubleshooting · §11 Credits
+> Last updated: 2026-05-15 | Section index: §1 Live URLs | §2 Stack | §3 Directory tree | §4 Common tasks | **§5 Private answer workflow** | §6 Local testing | §7 Deploy | §8 Settings cheat-sheet | §9 Gotchas | §10 Troubleshooting | §11 Credits
 
 ## Quick start (the 4 things you'll do most)
 
@@ -19,7 +19,7 @@ This document is the single source of truth for running and updating the site. R
 | **Activate free Google progress login** | `docs/firebase-free-setup.md` | Firebase Spark plan, Google login, Firestore rules, paste config |
 | **Fast Firebase checklist** | `docs/firebase-activation-short.md` | Short click-by-click activation checklist |
 
-**Deploy = `git push`**. GitHub Pages rebuilds in 30–90 seconds. Live URL: **https://eliteigcse.com**.
+**Deploy = `git push`**. GitHub Pages rebuilds in 30-90 seconds. Live URL: **https://eliteigcse.com**.
 
 ---
 
@@ -35,28 +35,28 @@ This document is the single source of truth for running and updating the site. R
 
 Pages served:
 
-- `/` — Home (sales/landing)
-- `/practice.html` — Question bank tool (the daily-use page)
-- `/exam.html` — Free mock exam mode with timer, self-marking, and Mistake Box integration
-- `/progress.html` — Personal progress sheet, saved profile, topic tracker, backup import/export
-- `/checkup.html` — Exam readiness check and next-action recommender
-- `/topics.html` — Topic roadmap
-- `/notes.html` — Visual notes library
-- `/planner.html` — Study plan generator
-- `/about.html` — Dr Eslam bio + testimonials + pricing
-- `/downloads.html` — Free PDF books
+- `/` - Home (sales/landing)
+- `/practice.html` - Question bank tool (the daily-use page)
+- `/exam.html` - Free mock exam mode with timer, self-marking, and Mistake Box integration
+- `/progress.html` - Personal progress sheet, saved profile, topic tracker, backup import/export
+- `/checkup.html` - Exam readiness check and next-action recommender
+- `/topics.html` - Topic roadmap
+- `/notes.html` - Visual notes library
+- `/planner.html` - Study plan generator
+- `/about.html` - Dr Eslam bio + testimonials + pricing
+- `/downloads.html` - Free PDF books
 
 ---
 
-## 2. Stack — what runs where
+## 2. Stack - what runs where
 
 - **Pure static student site.** HTML + CSS + vanilla JS only.
 - **Structured paper pipeline behind it.** New paper metadata lives in `src/data/`, then `tools/build_runtime_data.py` regenerates the legacy browser files `questions-data.js` and `solutions-data.js`.
 - **Hosted on GitHub Pages** from the `main` branch root (`/`).
-- **Deploys automatically** on every push to `main`. Pages takes 30–90 seconds to rebuild.
+- **Deploys automatically** on every push to `main`. Pages takes 30-90 seconds to rebuild.
 - **HTTPS** is provisioned by GitHub via Let's Encrypt and renews automatically.
-- **DNS** at Namecheap → 4 A records (185.199.108–111.153) on `@` and a CNAME on `www` → `eslamahmedgaber.github.io.`
-- If the browser says **Not secure**, open GitHub repo → **Settings → Pages**, wait until the custom-domain DNS check passes, then tick **Enforce HTTPS**. DNS is already correct in this repo setup; the final certificate switch is a GitHub Pages setting.
+- **DNS** at Namecheap -> 4 A records (185.199.108-111.153) on `@` and a CNAME on `www` -> `eslamahmedgaber.github.io.`
+- If the browser says **Not secure**, open GitHub repo -> **Settings -> Pages**, wait until the custom-domain DNS check passes, then tick **Enforce HTTPS**. DNS is already correct in this repo setup; the final certificate switch is a GitHub Pages setting.
 
 > **Deploy rule:** push to `main` = ship. There's no preview environment. Always test locally first (see §6).
 
@@ -86,8 +86,8 @@ website/
 ├── lead.js                 # Lead-capture dialog + mobile nav (loaded on every page)
 ├── service-worker.js       # PWA install/offline shell + runtime cache for opened assets
 ├── manifest.webmanifest    # Installable app metadata
-├── questions-data.js       # 1,188 questions metadata (~1 MB) — generated, do not hand-edit
-├── solutions-data.js       # Public website solution payload — generated, do not hand-edit
+├── questions-data.js       # 1,188 questions metadata (~1 MB) - generated, do not hand-edit
+├── solutions-data.js       # Public website solution payload - generated, do not hand-edit
 ├── private_output/         # Private answer material kept out of the public site
 ├── offline.html            # Offline fallback page
 ├── 404.html                # Friendly not-found page
@@ -101,7 +101,7 @@ website/
 │
 ├── assets/
 │   ├── Mine.png            # Dr Eslam's headshot (home hero card + about hero portrait)
-│   ├── og-image.png        # 1200×630 social-share card (Facebook/WhatsApp/Twitter)
+│   ├── og-image.png        # 1200x630 social-share card (Facebook/WhatsApp/Twitter)
 │   ├── og-image.svg        # Vector source for the OG card
 │   ├── build_og.py         # Pillow script that regenerates og-image.png from scratch
 │   └── questions/          # 1,188 descriptive question PNGs used by the active site
@@ -132,7 +132,7 @@ Do **not** copy answer PDFs into `downloads/`; public students should use `Show 
 
 ## 4. Common tasks
 
-All edits follow the same rhythm: **edit file → preview locally → commit → push → check live in ~1 minute**.
+All edits follow the same rhythm: **edit file -> preview locally -> commit -> push -> check live in ~1 minute**.
 
 ### 4.1 Change a price
 
@@ -140,10 +140,10 @@ All edits follow the same rhythm: **edit file → preview locally → commit →
 
 Search for the dollar amount or `EGP / session` and replace. Example: change Group from `$12` to `$14`:
 
-1. Open `index.html`, find `<span class="p-now">$12</span>` in the Group card → change to `$14`.
+1. Open `index.html`, find `<span class="p-now">$12</span>` in the Group card -> change to `$14`.
 2. Update the matching strikethrough `<span class="p-old">$18</span>` if you want.
 3. Update the EGP line if the rate changed.
-4. **Repeat in `about.html`** — same card.
+4. **Repeat in `about.html`** - same card.
 5. Also check `assets/build_og.py` if the headline `$12` price needs to change in the social-share image, then re-run it (see §4.6).
 
 ### 4.2 Edit the testimonials
@@ -156,11 +156,11 @@ Find `<article class="testimonial light">` blocks. Each has:
 <article class="testimonial light">
   <span class="t-grade">9</span>
   <blockquote>"…the quote text…"</blockquote>
-  <cite>— First name, school/country</cite>
+  <cite>- First name, school/country</cite>
 </article>
 ```
 
-Replace the quote and the cite line. **Always use real student quotes** — never fabricated. If you only have voice-note approval, paraphrase faithfully and confirm with the student that they're OK with the wording.
+Replace the quote and the cite line. **Always use real student quotes** - never fabricated. If you only have voice-note approval, paraphrase faithfully and confirm with the student that they're OK with the wording.
 
 ### 4.3 Update Dr Eslam's bio / credentials
 
@@ -196,7 +196,7 @@ Routing rule:
 1. Drop the new PDF into `downloads/`.
 2. If you want existing links to keep working, **rename** the new file to match the existing one (e.g. `classified_problems.pdf`) and overwrite.
 3. If it's a brand-new download, also add a `<article class="download-card">` to `downloads.html`.
-4. **Hard limit:** GitHub blocks files >100 MB. Soft warning at 50 MB. If a PDF approaches 100 MB, reduce its size (Acrobat → "Reduce File Size") rather than committing it.
+4. **Hard limit:** GitHub blocks files >100 MB. Soft warning at 50 MB. If a PDF approaches 100 MB, reduce its size (Acrobat -> "Reduce File Size") rather than committing it.
 
 ### 4.6 Replace the headshot
 
@@ -216,11 +216,11 @@ The social-share PNG (`assets/og-image.png`) is what shows when someone pastes t
 
 The script uses Pillow (already in the existing venv). Edit the constants at the top of `assets/build_og.py` to change colors / text / price hook, then re-run. The script writes `assets/og-image.png` in place.
 
-> **OG cache:** Facebook and WhatsApp aggressively cache OG images. After re-uploading, paste the URL into the [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) → "Scrape Again" to refresh.
+> **OG cache:** Facebook and WhatsApp aggressively cache OG images. After re-uploading, paste the URL into the [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) -> "Scrape Again" to refresh.
 
 ### 4.8 Add a new page
 
-1. Copy `about.html` as a starting point — it has the simplest structure.
+1. Copy `about.html` as a starting point - it has the simplest structure.
 2. Change `<title>`, `<meta name="description">`, `<body data-page="…">`.
 3. Update the `<nav>` block: only the new page's `<a>` should have `aria-current="page"`.
 4. Add a link to the new page in the topbar nav of **all four** existing pages and in the footer's "Pages" column.
@@ -252,14 +252,14 @@ cd "C:\Users\Eslam\Documents\Elite IGCSE v2\website"
 python -m http.server 8000
 ```
 
-Open http://localhost:8000 — every page works, links between pages work, MathJax renders.
+Open http://localhost:8000 - every page works, links between pages work, MathJax renders.
 
 **Before every push, click through:**
-- Home → click Practice link → grid of questions loads
-- On Practice → click a question → image opens in dialog
-- On Practice → open a question card and confirm the page layout and image zoom behave cleanly
-- Click any "Book Free First Class" / "Enroll" → lead form opens, submit goes to WhatsApp
-- Resize browser to phone width → hamburger menu appears and works
+- Home -> click Practice link -> grid of questions loads
+- On Practice -> click a question -> image opens in dialog
+- On Practice -> open a question card and confirm the page layout and image zoom behave cleanly
+- Click any "Book Free First Class" / "Enroll" -> lead form opens, submit goes to WhatsApp
+- Resize browser to phone width -> hamburger menu appears and works
 
 ---
 
@@ -285,10 +285,10 @@ git push
 ```
 
 After push, you can verify the build:
-- https://github.com/EslamAhmedGaber/elite-igcse-math/actions — green check = deployed.
+- https://github.com/EslamAhmedGaber/elite-igcse-math/actions - green check = deployed.
 - Hard-refresh the live page (Ctrl-F5) to bypass the browser cache.
 
-> **Don't push secrets** (API keys, tokens, passwords). Public repo. The token in your Git Credential Manager is fine — that's local-only — but never paste credentials into source files.
+> **Don't push secrets** (API keys, tokens, passwords). Public repo. The token in your Git Credential Manager is fine - that's local-only - but never paste credentials into source files.
 
 ---
 
@@ -308,30 +308,30 @@ After push, you can verify the build:
 
 ## 9. Common gotchas
 
-1. **GitHub Pages takes 30–90s to rebuild.** A push doesn't show instantly. Wait, then hard-refresh.
+1. **GitHub Pages takes 30-90s to rebuild.** A push doesn't show instantly. Wait, then hard-refresh.
 2. **Browser caching after pushes.** Use Ctrl-F5 (Windows) or Cmd-Shift-R (Mac).
 3. **OG image cache on Facebook/WhatsApp.** Use the [FB Sharing Debugger](https://developers.facebook.com/tools/debug/) "Scrape Again" button.
 4. **MathJax silent failure.** If a solution renders raw `\(...\)` instead of math, you forgot to double-escape. JSON strings need `\\(` not `\(`.
 5. **Custom domain still showing https warning.** First HTTPS cert provisioning can take up to 30 min after DNS resolves. Be patient.
-6. **PDF push fails with "file too large".** GitHub hard-limits 100 MB per file. Reduce the PDF (Acrobat → Reduce File Size) or host it on Google Drive and link out.
+6. **PDF push fails with "file too large".** GitHub hard-limits 100 MB per file. Reduce the PDF (Acrobat -> Reduce File Size) or host it on Google Drive and link out.
 7. **Question image missing for a new question.** The structured question JSON should point to `assets/questions/<descriptive-name>.png`, and that PNG must exist before regenerating `questions-data.js`.
 
 ---
 
-## 10. When something breaks — first 5 things to check
+## 10. When something breaks - first 5 things to check
 
 1. **Hard-refresh** the page (Ctrl-F5). 80% of "it's broken" is browser cache.
-2. **Open browser DevTools → Console** (F12). Any red errors? Read them — they usually name the offending file and line.
+2. **Open browser DevTools -> Console** (F12). Any red errors? Read them - they usually name the offending file and line.
 3. **GitHub Actions tab** of the repo. Was the latest deploy green? If red, it'll tell you why (rare for static sites).
 4. **DNS sanity:** `nslookup eliteigcse.com 8.8.8.8` should return the four 185.199.x.x IPs. If not, DNS is wrong.
-5. **Cert sanity:** open https://eliteigcse.com — if browser warns "Not Secure", the cert isn't issued yet. Wait 15 min and refresh.
+5. **Cert sanity:** open https://eliteigcse.com - if browser warns "Not Secure", the cert isn't issued yet. Wait 15 min and refresh.
 
 ---
 
 ## 11. Credits & contact
 
-**Dr Eslam Ahmed** — Assistant Lecturer, Cairo University Faculty of Engineering.
-WhatsApp / phone: +20 112 000 9622 · [`https://wa.me/201120009622`](https://wa.me/201120009622)
+**Dr Eslam Ahmed** - Assistant Lecturer, Cairo University Faculty of Engineering.
+WhatsApp / phone: +20 112 000 9622 | [`https://wa.me/201120009622`](https://wa.me/201120009622)
 
 Site built with Claude Code as collaborator. All teaching content, classification, and student outcomes belong to Dr Eslam.
 

@@ -85,7 +85,7 @@
   function readJSON(key, fallback) {
     try {
       const value = JSON.parse(localStorage.getItem(key) || "null");
-      return value ?? fallback;
+      return value | fallback;
     } catch (err) {
       return fallback;
     }
@@ -96,7 +96,7 @@
   }
 
   function escapeHtml(value) {
-    return String(value ?? "").replace(/[&<>"']/g, (char) => ({
+    return String(value | "").replace(/[&<>"']/g, (char) => ({
       "&": "&amp;",
       "<": "&lt;",
       ">": "&gt;",
@@ -659,7 +659,7 @@
       const row = attemptsByPaper.get(key) || { attempts: 0, best: null };
       const percent = scorePercent(attempt.rawScore, 100);
       row.attempts += 1;
-      row.best = percent === null ? row.best : Math.max(row.best ?? 0, percent);
+      row.best = percent === null ? row.best : Math.max(row.best | 0, percent);
       attemptsByPaper.set(key, row);
     });
     const rows = allPaperOptions().filter((paper) => {
@@ -749,7 +749,7 @@
     const sorted = [...studyTasks].sort((a, b) => {
       const aDays = daysUntil(a.dueDate);
       const bDays = daysUntil(b.dueDate);
-      return (aDays ?? 9999) - (bDays ?? 9999);
+      return (aDays | 9999) - (bDays | 9999);
     });
     els.studyTaskRows.innerHTML = sorted.slice(0, 10).map((task) => {
       const percent = taskScore(task);
