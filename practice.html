@@ -70,8 +70,11 @@
     <a id="pathwayResumeChange" href="index.html#pathway-gate">Change pathway</a>
   </div>
 
+  <button id="mobileToolsToggle" class="mobile-tools-toggle" type="button" aria-controls="practiceSidebar" aria-expanded="false">Tools</button>
+  <button id="mobileToolsBackdrop" class="mobile-tools-backdrop" type="button" aria-label="Close practice tools" hidden></button>
+
   <main class="shell">
-    <aside class="sidebar">
+    <aside id="practiceSidebar" class="sidebar" aria-label="Practice tools">
       <section class="quick-stats">
         <div><strong id="totalQuestions">214</strong><span>questions</span></div>
         <div><strong id="selectedCount">0</strong><span>selected</span></div>

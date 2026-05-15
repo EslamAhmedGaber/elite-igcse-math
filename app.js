@@ -105,6 +105,9 @@ const els = {
   closeFixTopicBtn: document.getElementById("closeFixTopicBtn"),
   fixTopicSelect: document.getElementById("fixTopicSelect"),
   saveFixTopicBtn: document.getElementById("saveFixTopicBtn"),
+  mobileToolsToggle: document.getElementById("mobileToolsToggle"),
+  mobileToolsBackdrop: document.getElementById("mobileToolsBackdrop"),
+  practiceSidebar: document.getElementById("practiceSidebar"),
 };
 
 function uniqueSorted(values) {
@@ -566,6 +569,14 @@ function toggleSelect(id) {
   redraw();
 }
 
+function setMobileToolsOpen(open) {
+  if (!els.practiceSidebar || !els.mobileToolsToggle || !els.mobileToolsBackdrop) return;
+  els.practiceSidebar.classList.toggle("open", open);
+  els.mobileToolsToggle.setAttribute("aria-expanded", String(open));
+  els.mobileToolsBackdrop.hidden = !open;
+  document.body.classList.toggle("practice-tools-open", open);
+}
+
 function selectVisible() {
   visible.forEach((question) => selected.add(question.id));
   redraw();
@@ -921,6 +932,17 @@ els.closeViewerBtn.addEventListener("click", () => els.viewerDialog.close());
 els.closeSolutionBtn.addEventListener("click", () => els.solutionDialog.close());
 els.closeFixTopicBtn.addEventListener("click", () => els.fixTopicDialog.close());
 els.saveFixTopicBtn.addEventListener("click", saveFixTopic);
+document.addEventListener("click", (event) => {
+  if (event.target.closest("#mobileToolsToggle")) {
+    setMobileToolsOpen(!els.practiceSidebar.classList.contains("open"));
+  }
+  if (event.target.closest("#mobileToolsBackdrop")) {
+    setMobileToolsOpen(false);
+  }
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") setMobileToolsOpen(false);
+});
 els.gridLayoutBtn.addEventListener("click", () => setLayout("grid"));
 els.listLayoutBtn.addEventListener("click", () => setLayout("list"));
 els.timerToggleBtn.addEventListener("click", toggleTimer);
