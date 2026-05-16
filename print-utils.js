@@ -6,7 +6,7 @@
     image.decoding = "sync";
     if ("fetchPriority" in image) image.fetchPriority = "high";
 
-    if (image.complete && image.naturalWidth > 0) {
+    if (image.complete) {
       return image.decode ? image.decode().catch(() => {}) : Promise.resolve();
     }
 
