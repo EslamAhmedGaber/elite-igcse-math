@@ -1,0 +1,192 @@
+{
+  "paperSlug": "May2025_4WM1HR",
+  "solutions": {
+    "all::May2025_4WM1HR__Q02__p03-03__m03__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Topic check:** Algebraic proof. The tag is acceptable because the question asks to show the exact result.\n\n**Solution**\n\n\\[\n2\\frac14=\\frac94,\\qquad 1\\frac57=\\frac{12}{7}\n\\]\n\n\\[\n2\\frac14\\times1\\frac57=\\frac94\\times\\frac{12}{7}\n\\]\n\n\\[\n=\\frac{108}{28}=\\frac{27}{7}=3\\frac67\n\\]\n\n**Answer:** \\(3\\frac67\\).",
+      "updated": "2026-05-16T08:42:24",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Jun2025_P1HR__Q03__p04-04__m03__Algebraic-Proof"
+    },
+    "all::May2025_4WM1HR__Q03__p04-04__m05__Probability-Toolkit": {
+      "status": "checked",
+      "source": "**Topic check:** Probability Toolkit. The tag is correct.\n\n**Solution**\n\nLet the yellow probability be \\(x\\). Then the red probability is \\(4x\\).\n\n\\[\n0.12+0.20+0.30+4x+x=1\n\\]\n\n\\[\n5x=0.38\n\\]\n\n\\[\nx=0.076\n\\]\n\nSo\n\n\\[\nP(\\text{red})=4x=0.304\n\\]\n\n\\[\nP(\\text{blue, green or purple})=0.12+0.20+0.30=0.62\n\\]\n\nExpected red:\n\n\\[\n350\\times 0.304=106.4\n\\]\n\n**Answers:** \\(0.62\\), and about \\(106\\).",
+      "updated": "2026-05-16T08:42:24",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Jun2025_P1HR__Q04__p05-05__m05__Probability-Toolkit"
+    },
+    "all::May2025_4WM1HR__Q04__p05-05__m04__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Topic check:** Set notation and Venn diagrams. The tag is correct.\n\n**Method**\n\n\\[\n\\mathcal{E}=\\{1,2,3,4,5,6,7,8,9,10,11,12\\}\n\\]\n\n\\[\nA=\\{2,4,6,8,10,12\\}\n\\]\n\n\\[\nB=\\{3,6,9,12\\}\n\\]\n\n\\[\nC=\\{1,3,5,7,9,11\\}\n\\]\n\nTherefore\n\n\\[\nA\\cup B=\\{2,3,4,6,8,9,10,12\\}\n\\]\n\nand\n\n\\[\nB'=\\{1,2,4,5,7,8,10,11\\}\n\\]\n\nNo number is both even and odd, so\n\n\\[\nA\\cap C=\\emptyset\n\\]\n\nAlso \\(13\\notin \\mathcal{E}\\) because \\(13\\) is not in the universal set.\n\n**Answer:** (a)(i) \\(\\{2,3,4,6,8,9,10,12\\}\\), (a)(ii) \\(\\{1,2,4,5,7,8,10,11\\}\\), (b)(i) \\(\\emptyset\\), (b)(ii) \\(13\\notin\\mathcal{E}\\)",
+      "updated": "2026-05-16T08:42:24",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Jun2025_P1HR__Q05__p06-06__m04__Set-Notation-and-Venn-Diagrams"
+    },
+    "all::May2025_4WM1HR__Q12__p13-13__m06__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Topic check:** Corrected to Solving Linear Equations. The equation is the main part of the question; the index form is secondary.\n\n**Method**\n\nFor part (a),\n\n\\[\n\\frac{5a+8}{3}-\\frac{2a+5}{4}=23\n\\]\n\nMultiply by \\(12\\):\n\n\\[\n4(5a+8)-3(2a+5)=276\n\\]\n\n\\[\n20a+32-6a-15=276\n\\]\n\n\\[\n14a+17=276\n\\]\n\n\\[\n14a=259\n\\]\n\n\\[\na=\\frac{259}{14}=\\frac{37}{2}\n\\]\n\nFor part (b),\n\n\\[\n\\left(\\frac{\\sqrt y}{3}\\right)^{-1}=\\frac{3}{\\sqrt y}\n\\]\n\n\\[\n=3y^{-1/2}\n\\]\n\n**Answer:** (a) \\(a=\\frac{37}{2}\\), (b) \\(3y^{-1/2}\\)",
+      "updated": "2026-05-16T08:42:24",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Jun2025_P1HR__Q15__p15-15__m06__Solving-Linear-Equations"
+    },
+    "all::May2025_4WM1HR__Q14__p15-15__m02__Fractions-Decimals-Percentages": {
+      "status": "checked",
+      "source": "**Topic check:** Algebraic proof. The tag is correct.\n\n**Solution**\n\nLet\n\\[\nx=0.6121212\\ldots\n\\]\n\nThen\n\\[\n10x=6.121212\\ldots\n\\]\n\nand\n\\[\n1000x=612.121212\\ldots\n\\]\n\nSubtract:\n\\[\n1000x-10x=612.121212\\ldots-6.121212\\ldots\n\\]\n\n\\[\n990x=606\n\\]\n\n\\[\nx=\\frac{606}{990}=\\frac{101}{165}\n\\]\n\n**Answer:** \\(0.6121212\\ldots=\\dfrac{101}{165}\\).",
+      "updated": "2026-05-16T08:42:24",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Jun2025_P1HR__Q16__p16-16__m02__Algebraic-Proof"
+    },
+    "all::May2025_4WM1HR__Q17__p18-18__m03__Probability-Toolkit": {
+      "status": "checked",
+      "source": "**Topic check:** Probability Toolkit. The tag is correct.\n\n**Solution**\n\nThe counters are\n\n\\[\n1,\\ 1,\\ 2,\\ 3,\\ 3,\\ 3,\\ 5,\\ 6,\\ 6\n\\]\n\nThere are\n\n\\[\n\\binom{9}{2}=36\n\\]\n\nways to choose two counters.\n\nFor a sum less than \\(5\\), the pairs are:\n\n\\[\n(1,1),\\quad (1,2),\\quad (1,3)\n\\]\n\nCounting the repeated counters gives\n\n\\[\n1+2+6=9\n\\]\n\nSo\n\n\\[\nP(\\text{sum}<5)=\\frac{9}{36}=\\frac14\n\\]\n\n**Answer:** \\(\\frac14\\).",
+      "updated": "2026-05-16T08:42:24",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Jun2025_P1HR__Q19__p19-19__m03__Probability-Toolkit"
+    },
+    "all::May2025_4WM1HR__Q20__p22-22__m03__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Topic check:** Correct.\n\n**Method**\n\nIn the rectangle \\(ABCF\\), use Pythagoras with the diagonal \\(FC\\):\n\n\\[\nAC^2=FC^2-AF^2\n\\]\n\n\\[\nAC^2=18^2-7^2=324-49=275\n\\]\n\nNow use Pythagoras in triangle \\(ABC\\):\n\n\\[\nBC^2=AC^2-AB^2\n\\]\n\n\\[\nBC^2=275-9^2=275-81=194\n\\]\n\n\\[\nBC=\\sqrt{194}=13.928\\ldots\n\\]\n\n**Answer:** \\(13.9\\text{ cm}\\) to 3 significant figures",
+      "updated": "2026-05-16T08:42:24",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Jun2025_P1HR__Q20__p20-20__m03__3D-Pythagoras-and-Trigonometry"
+    },
+    "expertise::May2025_4WM1HR__Q20__p22-22__m03__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Topic check:** Correct.\n\n**Method**\n\nIn the rectangle \\(ABCF\\), use Pythagoras with the diagonal \\(FC\\):\n\n\\[\nAC^2=FC^2-AF^2\n\\]\n\n\\[\nAC^2=18^2-7^2=324-49=275\n\\]\n\nNow use Pythagoras in triangle \\(ABC\\):\n\n\\[\nBC^2=AC^2-AB^2\n\\]\n\n\\[\nBC^2=275-9^2=275-81=194\n\\]\n\n\\[\nBC=\\sqrt{194}=13.928\\ldots\n\\]\n\n**Answer:** \\(13.9\\text{ cm}\\) to 3 significant figures",
+      "updated": "2026-05-16T08:42:24",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::May2025_4WM1HR__Q20__p22-22__m03__Algebra-Toolkit"
+    },
+    "all::May2025_4WM1HR__Q22__p24-25__m06__Circles-Arcs-Sectors": {
+      "status": "checked",
+      "source": "**Topic check:** Correct.\n\n**Method**\n\nLet the radius of sector \\(BAC\\) be \\(R\\).\n\nThe shaded segment is the segment cut off by chord \\(BC\\) in the sector with centre \\(A\\).\n\nIts area is\n\n\\[\n\\text{sector area}-\\text{triangle area}\n\\]\n\n\\[\n28=\\frac{40}{360}\\pi R^2-\\frac{1}{2}R^2\\sin 40^\\circ\n\\]\n\n\\[\n28=R^2\\left(\\frac{\\pi}{9}-\\frac{1}{2}\\sin 40^\\circ\\right)\n\\]\n\n\\[\nR=31.8096\\ldots\n\\]\n\nNow find the chord \\(BC\\):\n\n\\[\nBC=2R\\sin 20^\\circ\n\\]\n\n\\[\nBC=2(31.8096\\ldots)\\sin 20^\\circ\n=21.7591\\ldots\n\\]\n\nIn sector \\(BCD\\), the centre is \\(C\\), so the radius is\n\n\\[\nCB=CD=21.7591\\ldots\n\\]\n\nThe arc \\(BD\\) has angle \\(130^\\circ\\), so\n\n\\[\n\\text{arc }BD\n=\\frac{130}{360}\\times 2\\pi(21.7591\\ldots)\n\\]\n\n\\[\n=49.3697\\ldots\n\\]\n\n**Answer:** \\(\\boxed{49.4\\text{ cm}}\\)",
+      "updated": "2026-05-16T08:42:24",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Jun2025_P1HR__Q25__p26-27__m06__Circles-Arcs-and-Sectors"
+    },
+    "expertise::May2025_4WM1HR__Q22__p24-25__m06__Circles-Arcs-Sectors": {
+      "status": "checked",
+      "source": "**Topic check:** Correct.\n\n**Method**\n\nLet the radius of sector \\(BAC\\) be \\(R\\).\n\nThe shaded segment is the segment cut off by chord \\(BC\\) in the sector with centre \\(A\\).\n\nIts area is\n\n\\[\n\\text{sector area}-\\text{triangle area}\n\\]\n\n\\[\n28=\\frac{40}{360}\\pi R^2-\\frac{1}{2}R^2\\sin 40^\\circ\n\\]\n\n\\[\n28=R^2\\left(\\frac{\\pi}{9}-\\frac{1}{2}\\sin 40^\\circ\\right)\n\\]\n\n\\[\nR=31.8096\\ldots\n\\]\n\nNow find the chord \\(BC\\):\n\n\\[\nBC=2R\\sin 20^\\circ\n\\]\n\n\\[\nBC=2(31.8096\\ldots)\\sin 20^\\circ\n=21.7591\\ldots\n\\]\n\nIn sector \\(BCD\\), the centre is \\(C\\), so the radius is\n\n\\[\nCB=CD=21.7591\\ldots\n\\]\n\nThe arc \\(BD\\) has angle \\(130^\\circ\\), so\n\n\\[\n\\text{arc }BD\n=\\frac{130}{360}\\times 2\\pi(21.7591\\ldots)\n\\]\n\n\\[\n=49.3697\\ldots\n\\]\n\n**Answer:** \\(\\boxed{49.4\\text{ cm}}\\)",
+      "updated": "2026-05-16T08:42:24",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::May2025_4WM1HR__Q22__p24-25__m06__Circles-Arcs-Sectors"
+    },
+    "all::May2025_4WM1HR__Q01__p03-03__m02__Rounding-Estimation-Bounds": {
+      "status": "checked",
+      "source": "**Solution**\n\nThe value is correct to 1 decimal place, so the half-unit is \\(0.05\\).\n\n\\[\n142.8-0.05=142.75, \\qquad 142.8+0.05=142.85\n\\]\n\n**Answer:** lower bound \\(142.75\\) m, upper bound \\(142.85\\) m.",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM1HR__Q05__p06-06__m04__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\n\\[\n3^8\\times 3^4 = 3^{8+4}=3^{12}\n\\]\n\n\\[\n\\frac{4^{12}}{4^7}=4^{12-7}=4^5\n\\]\n\n\\[\n(6^2)^{10}=6^{20}\n\\]\n\n\\[\n5^0=1\n\\]\n\n**Answers:** \\(m=12\\), \\(n=5\\), \\(p=20\\), \\(r=0\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM1HR__Q06__p06-07__m03__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\nThe base angles are equal, so the opposite sides are equal.\n\n\\[\n4x+6=30-x\n\\]\n\n\\[\n5x=24\n\\]\n\n\\[\nx=4.8\n\\]\n\n**Answer:** \\(x=4.8\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM1HR__Q07__p08-08__m03__Standard-Compound-Units": {
+      "status": "checked",
+      "source": "**Solution**\n\n\\[\n40\\text{ m/s}=40\\times \\frac{3600}{1000}\\text{ km/h}\n\\]\n\n\\[\n=144\\text{ km/h}\n\\]\n\n**Answer:** \\(144\\) kilometres per hour.",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM1HR__Q08__p09-09__m04__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\nIn right triangle \\(BCD\\),\n\n\\[\n\\tan 32^\\circ=\\frac{17}{BD}\n\\]\n\n\\[\nBD=\\frac{17}{\\tan 32^\\circ}\n\\]\n\nIn right triangle \\(ABD\\),\n\n\\[\n\\sin 65^\\circ=\\frac{AD}{BD}\n\\]\n\n\\[\nAD=\\frac{17}{\\tan 32^\\circ}\\sin 65^\\circ \\approx 24.6567\n\\]\n\n**Answer:** \\(AD=24.7\\) cm to 3 significant figures.",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM1HR__Q09__p10-10__m07__Factorising": {
+      "status": "checked",
+      "source": "**Solution**\n\n(a)\n\\[\n(5k^3n^4)^2=25k^6n^8\n\\]\n\n(b)\n\\[\n12m^2y^4+18m^3y^3=6m^2y^3(2y+3m)\n\\]\n\n(c)\n\\[\nx^2-13x+42=(x-6)(x-7)\n\\]\n\nSo\n\\[\nx=6 \\quad \\text{or} \\quad x=7\n\\]\n\n**Answers:** \\(25k^6n^8\\), \\(6m^2y^3(2y+3m)\\), \\((x-6)(x-7)\\), \\(x=6,7\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM1HR__Q10__p11-11__m05__Standard-Compound-Units": {
+      "status": "checked",
+      "source": "**Solution**\n\nUse Pythagoras to find the other side of the rectangle.\n\n\\[\nDC=\\sqrt{17^2-8^2}=15\n\\]\n\n\\[\n\\text{area}=15\\times 8=120\\text{ cm}^2\n\\]\n\n\\[\n\\text{pressure}=\\frac{150}{120}=1.25\n\\]\n\n**Answer:** \\(1.25\\) newtons/cm\\(^2\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM1HR__Q11__p12-12__m04__Probability-Diagrams-Venn-Tree-Diagrams": {
+      "status": "checked",
+      "source": "**Solution**\n\nThe missing branch probabilities are complements.\n\n\\[\nP(\\text{not snow on Saturday})=0.8\n\\]\n\n\\[\nP(\\text{not snow on Sunday} \\mid \\text{snow Saturday})=0.65\n\\]\n\n\\[\nP(\\text{not snow on Sunday} \\mid \\text{not snow Saturday})=0.6\n\\]\n\nFor snow on both days,\n\n\\[\n0.2\\times 0.35=0.07\n\\]\n\n**Answer:** tree labels \\(0.2,0.8,0.35,0.65,0.4,0.6\\); probability \\(0.07\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM1HR__Q13__p14-15__m05__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\nThe height of the building is\n\n\\[\nCD=25\\tan 42^\\circ\n\\]\n\nThe extra height from \\(C\\) to \\(A\\) is\n\n\\[\n25\\tan 30^\\circ\n\\]\n\nSo\n\n\\[\nAB=25\\tan 42^\\circ+25\\tan 30^\\circ \\approx 36.9439\n\\]\n\nFor the angle of elevation \\(\\theta\\) from \\(D\\),\n\n\\[\n\\tan \\theta=\\frac{AB}{25}\n\\]\n\n\\[\n\\theta \\approx 55.9137^\\circ\n\\]\n\n**Answers:** \\(AB=36.9\\) m, angle of elevation \\(55.9^\\circ\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM1HR__Q15__p16-16__m06__Expanding-Brackets": {
+      "status": "checked",
+      "source": "**Solution**\n\n(a) For \\(3x^2+4x-18=0\\),\n\n\\[\nx=\\frac{-4\\pm\\sqrt{4^2-4(3)(-18)}}{2(3)}\n\\]\n\n\\[\nx\\approx 1.87 \\quad \\text{or} \\quad x\\approx -3.21\n\\]\n\n(b)\n\\[\n(2x-3)(x+4)(x-1)\n\\]\n\n\\[\n=(2x^2+5x-12)(x-1)\n\\]\n\n\\[\n=2x^3+3x^2-17x+12\n\\]\n\n**Answers:** \\(x=1.87\\) or \\(x=-3.21\\); \\(2x^3+3x^2-17x+12\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM1HR__Q16__p17-17__m04__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\n(a)\n\\[\n\\sqrt{96}=4\\sqrt 6=2\\sqrt{24}\n\\]\n\nSo \\(k=24\\).\n\n(b)\n\\[\n\\frac{8}{3-\\sqrt5}\\times\\frac{3+\\sqrt5}{3+\\sqrt5}\n\\]\n\n\\[\n=\\frac{8(3+\\sqrt5)}{9-5}=2(3+\\sqrt5)\n\\]\n\n\\[\n=6+2\\sqrt5\n\\]\n\n**Answers:** \\(k=24\\), \\(6+2\\sqrt5\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM1HR__Q18__p19-19__m04__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\n\\[\n2x^2-12x+23=2(x^2-6x)+23\n\\]\n\n\\[\n=2\\big((x-3)^2-9\\big)+23\n\\]\n\n\\[\n=2(x-3)^2+5\n\\]\n\nThe squared part is at least zero.\n\n**Answers:** \\(2(x-3)^2+5\\); least value \\(5\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM1HR__Q19__p20-21__m05__Coordinate-Geometry": {
+      "status": "checked",
+      "source": "**Solution**\n\nSquare area:\n\n\\[\n(2x+3)^2\n\\]\n\nTriangle area:\n\n\\[\n\\frac12(2x+3)(2x)\n\\]\n\nSo\n\n\\[\n(2x+3)^2+\\frac12(2x+3)(2x)=84\n\\]\n\n\\[\n6x^2+15x-75=0\n\\]\n\n\\[\n2x^2+5x-25=0\n\\]\n\n\\[\n(2x-5)(x+5)=0\n\\]\n\nThe positive solution is \\(x=2.5\\), so\n\n\\[\n(2x+3)^2=8^2=64\n\\]\n\n**Answer:** \\(64\\text{ cm}^2\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM1HR__Q21__p23-23__m03__Standard-Compound-Units": {
+      "status": "checked",
+      "source": "**Solution**\n\nThe interval \\(10\\) to \\(25\\) has width \\(15\\) and frequency \\(60\\), so its frequency density is\n\n\\[\n\\frac{60}{15}=4\n\\]\n\nUsing that scale from the histogram:\n\n\\[\n35\\text{ to }40: 5\\times 1=5\n\\]\n\n\\[\n40\\text{ to }70: 30\\times 0.75=22.5\n\\]\n\n\\[\n5+22.5=27.5\n\\]\n\n**Answer:** about \\(28\\) members.",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM1HR__Q23__p26-27__m05__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\nThe tangent point lies on the tangent line, so\n\n\\[\np+3=-\\frac54p+\\frac{21}{4}\n\\]\n\n\\[\np=1\n\\]\n\nThe tangent gradient is \\(-\\frac54\\), so the radius gradient is \\(\\frac45\\).\n\nUsing centre \\((3q,4q)\\) and tangent point \\((1,4)\\),\n\n\\[\n\\frac{4-4q}{1-3q}=\\frac45\n\\]\n\n\\[\nq=2\n\\]\n\nSo the centre is \\((6,8)\\). Therefore\n\n\\[\nr=\\sqrt{(6-1)^2+(8-4)^2}=\\sqrt{41}\n\\]\n\n**Answer:** \\(\\sqrt{41}\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM1HR__Q24__p28-28__m04__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\nFactor the fractional part first:\n\n\\[\n\\frac{2x^2-5x-12}{x^2-16}\\times\\frac{x^2+4x}{6x^2+11x+3}\n\\]\n\n\\[\n=\\frac{(2x+3)(x-4)}{(x-4)(x+4)}\\times\\frac{x(x+4)}{(3x+1)(2x+3)}\n\\]\n\n\\[\n=\\frac{x}{3x+1}\n\\]\n\nSo\n\n\\[\n(2x-1)+\\frac{x}{3x+1}\n=\\frac{(2x-1)(3x+1)+x}{3x+1}\n\\]\n\n\\[\n=\\frac{6x^2-1}{3x+1}\n\\]\n\n**Answer:** \\(\\dfrac{6x^2-1}{3x+1}\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "expertise::May2025_4WM1HR__Q21__p23-23__m03__Standard-Compound-Units": {
+      "status": "checked",
+      "source": "**Solution**\n\nThe interval \\(10\\) to \\(25\\) has width \\(15\\) and frequency \\(60\\), so its frequency density is\n\n\\[\n\\frac{60}{15}=4\n\\]\n\nUsing that scale from the histogram:\n\n\\[\n35\\text{ to }40: 5\\times 1=5\n\\]\n\n\\[\n40\\text{ to }70: 30\\times 0.75=22.5\n\\]\n\n\\[\n5+22.5=27.5\n\\]\n\n**Answer:** about \\(28\\) members.",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::May2025_4WM1HR__Q21__p23-23__m03__Standard-Compound-Units"
+    },
+    "expertise::May2025_4WM1HR__Q23__p26-27__m05__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\nThe tangent point lies on the tangent line, so\n\n\\[\np+3=-\\frac54p+\\frac{21}{4}\n\\]\n\n\\[\np=1\n\\]\n\nThe tangent gradient is \\(-\\frac54\\), so the radius gradient is \\(\\frac45\\).\n\nUsing centre \\((3q,4q)\\) and tangent point \\((1,4)\\),\n\n\\[\n\\frac{4-4q}{1-3q}=\\frac45\n\\]\n\n\\[\nq=2\n\\]\n\nSo the centre is \\((6,8)\\). Therefore\n\n\\[\nr=\\sqrt{(6-1)^2+(8-4)^2}=\\sqrt{41}\n\\]\n\n**Answer:** \\(\\sqrt{41}\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::May2025_4WM1HR__Q23__p26-27__m05__Algebra-Toolkit"
+    },
+    "expertise::May2025_4WM1HR__Q24__p28-28__m04__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\nFactor the fractional part first:\n\n\\[\n\\frac{2x^2-5x-12}{x^2-16}\\times\\frac{x^2+4x}{6x^2+11x+3}\n\\]\n\n\\[\n=\\frac{(2x+3)(x-4)}{(x-4)(x+4)}\\times\\frac{x(x+4)}{(3x+1)(2x+3)}\n\\]\n\n\\[\n=\\frac{x}{3x+1}\n\\]\n\nSo\n\n\\[\n(2x-1)+\\frac{x}{3x+1}\n=\\frac{(2x-1)(3x+1)+x}{3x+1}\n\\]\n\n\\[\n=\\frac{6x^2-1}{3x+1}\n\\]\n\n**Answer:** \\(\\dfrac{6x^2-1}{3x+1}\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::May2025_4WM1HR__Q24__p28-28__m04__Algebra-Toolkit"
+    }
+  }
+}

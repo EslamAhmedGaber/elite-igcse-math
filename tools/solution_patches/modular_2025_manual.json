@@ -1,0 +1,304 @@
+{
+  "entries": [
+    {
+      "paperSlug": "May2025_4WM1HR",
+      "q": 1,
+      "source": "**Solution**\n\nThe value is correct to 1 decimal place, so the half-unit is \\(0.05\\).\n\n\\[\n142.8-0.05=142.75, \\qquad 142.8+0.05=142.85\n\\]\n\n**Answer:** lower bound \\(142.75\\) m, upper bound \\(142.85\\) m."
+    },
+    {
+      "paperSlug": "May2025_4WM1HR",
+      "q": 5,
+      "source": "**Solution**\n\n\\[\n3^8\\times 3^4 = 3^{8+4}=3^{12}\n\\]\n\n\\[\n\\frac{4^{12}}{4^7}=4^{12-7}=4^5\n\\]\n\n\\[\n(6^2)^{10}=6^{20}\n\\]\n\n\\[\n5^0=1\n\\]\n\n**Answers:** \\(m=12\\), \\(n=5\\), \\(p=20\\), \\(r=0\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM1HR",
+      "q": 6,
+      "source": "**Solution**\n\nThe base angles are equal, so the opposite sides are equal.\n\n\\[\n4x+6=30-x\n\\]\n\n\\[\n5x=24\n\\]\n\n\\[\nx=4.8\n\\]\n\n**Answer:** \\(x=4.8\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM1HR",
+      "q": 7,
+      "source": "**Solution**\n\n\\[\n40\\text{ m/s}=40\\times \\frac{3600}{1000}\\text{ km/h}\n\\]\n\n\\[\n=144\\text{ km/h}\n\\]\n\n**Answer:** \\(144\\) kilometres per hour."
+    },
+    {
+      "paperSlug": "May2025_4WM1HR",
+      "q": 8,
+      "source": "**Solution**\n\nIn right triangle \\(BCD\\),\n\n\\[\n\\tan 32^\\circ=\\frac{17}{BD}\n\\]\n\n\\[\nBD=\\frac{17}{\\tan 32^\\circ}\n\\]\n\nIn right triangle \\(ABD\\),\n\n\\[\n\\sin 65^\\circ=\\frac{AD}{BD}\n\\]\n\n\\[\nAD=\\frac{17}{\\tan 32^\\circ}\\sin 65^\\circ \\approx 24.6567\n\\]\n\n**Answer:** \\(AD=24.7\\) cm to 3 significant figures."
+    },
+    {
+      "paperSlug": "May2025_4WM1HR",
+      "q": 9,
+      "source": "**Solution**\n\n(a)\n\\[\n(5k^3n^4)^2=25k^6n^8\n\\]\n\n(b)\n\\[\n12m^2y^4+18m^3y^3=6m^2y^3(2y+3m)\n\\]\n\n(c)\n\\[\nx^2-13x+42=(x-6)(x-7)\n\\]\n\nSo\n\\[\nx=6 \\quad \\text{or} \\quad x=7\n\\]\n\n**Answers:** \\(25k^6n^8\\), \\(6m^2y^3(2y+3m)\\), \\((x-6)(x-7)\\), \\(x=6,7\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM1HR",
+      "q": 10,
+      "source": "**Solution**\n\nUse Pythagoras to find the other side of the rectangle.\n\n\\[\nDC=\\sqrt{17^2-8^2}=15\n\\]\n\n\\[\n\\text{area}=15\\times 8=120\\text{ cm}^2\n\\]\n\n\\[\n\\text{pressure}=\\frac{150}{120}=1.25\n\\]\n\n**Answer:** \\(1.25\\) newtons/cm\\(^2\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM1HR",
+      "q": 11,
+      "source": "**Solution**\n\nThe missing branch probabilities are complements.\n\n\\[\nP(\\text{not snow on Saturday})=0.8\n\\]\n\n\\[\nP(\\text{not snow on Sunday} \\mid \\text{snow Saturday})=0.65\n\\]\n\n\\[\nP(\\text{not snow on Sunday} \\mid \\text{not snow Saturday})=0.6\n\\]\n\nFor snow on both days,\n\n\\[\n0.2\\times 0.35=0.07\n\\]\n\n**Answer:** tree labels \\(0.2,0.8,0.35,0.65,0.4,0.6\\); probability \\(0.07\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM1HR",
+      "q": 13,
+      "source": "**Solution**\n\nThe height of the building is\n\n\\[\nCD=25\\tan 42^\\circ\n\\]\n\nThe extra height from \\(C\\) to \\(A\\) is\n\n\\[\n25\\tan 30^\\circ\n\\]\n\nSo\n\n\\[\nAB=25\\tan 42^\\circ+25\\tan 30^\\circ \\approx 36.9439\n\\]\n\nFor the angle of elevation \\(\\theta\\) from \\(D\\),\n\n\\[\n\\tan \\theta=\\frac{AB}{25}\n\\]\n\n\\[\n\\theta \\approx 55.9137^\\circ\n\\]\n\n**Answers:** \\(AB=36.9\\) m, angle of elevation \\(55.9^\\circ\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM1HR",
+      "q": 15,
+      "source": "**Solution**\n\n(a) For \\(3x^2+4x-18=0\\),\n\n\\[\nx=\\frac{-4\\pm\\sqrt{4^2-4(3)(-18)}}{2(3)}\n\\]\n\n\\[\nx\\approx 1.87 \\quad \\text{or} \\quad x\\approx -3.21\n\\]\n\n(b)\n\\[\n(2x-3)(x+4)(x-1)\n\\]\n\n\\[\n=(2x^2+5x-12)(x-1)\n\\]\n\n\\[\n=2x^3+3x^2-17x+12\n\\]\n\n**Answers:** \\(x=1.87\\) or \\(x=-3.21\\); \\(2x^3+3x^2-17x+12\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM1HR",
+      "q": 16,
+      "source": "**Solution**\n\n(a)\n\\[\n\\sqrt{96}=4\\sqrt 6=2\\sqrt{24}\n\\]\n\nSo \\(k=24\\).\n\n(b)\n\\[\n\\frac{8}{3-\\sqrt5}\\times\\frac{3+\\sqrt5}{3+\\sqrt5}\n\\]\n\n\\[\n=\\frac{8(3+\\sqrt5)}{9-5}=2(3+\\sqrt5)\n\\]\n\n\\[\n=6+2\\sqrt5\n\\]\n\n**Answers:** \\(k=24\\), \\(6+2\\sqrt5\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM1HR",
+      "q": 18,
+      "source": "**Solution**\n\n\\[\n2x^2-12x+23=2(x^2-6x)+23\n\\]\n\n\\[\n=2\\big((x-3)^2-9\\big)+23\n\\]\n\n\\[\n=2(x-3)^2+5\n\\]\n\nThe squared part is at least zero.\n\n**Answers:** \\(2(x-3)^2+5\\); least value \\(5\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM1HR",
+      "q": 19,
+      "source": "**Solution**\n\nSquare area:\n\n\\[\n(2x+3)^2\n\\]\n\nTriangle area:\n\n\\[\n\\frac12(2x+3)(2x)\n\\]\n\nSo\n\n\\[\n(2x+3)^2+\\frac12(2x+3)(2x)=84\n\\]\n\n\\[\n6x^2+15x-75=0\n\\]\n\n\\[\n2x^2+5x-25=0\n\\]\n\n\\[\n(2x-5)(x+5)=0\n\\]\n\nThe positive solution is \\(x=2.5\\), so\n\n\\[\n(2x+3)^2=8^2=64\n\\]\n\n**Answer:** \\(64\\text{ cm}^2\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM1HR",
+      "q": 21,
+      "source": "**Solution**\n\nThe interval \\(10\\) to \\(25\\) has width \\(15\\) and frequency \\(60\\), so its frequency density is\n\n\\[\n\\frac{60}{15}=4\n\\]\n\nUsing that scale from the histogram:\n\n\\[\n35\\text{ to }40: 5\\times 1=5\n\\]\n\n\\[\n40\\text{ to }70: 30\\times 0.75=22.5\n\\]\n\n\\[\n5+22.5=27.5\n\\]\n\n**Answer:** about \\(28\\) members."
+    },
+    {
+      "paperSlug": "May2025_4WM1HR",
+      "q": 23,
+      "source": "**Solution**\n\nThe tangent point lies on the tangent line, so\n\n\\[\np+3=-\\frac54p+\\frac{21}{4}\n\\]\n\n\\[\np=1\n\\]\n\nThe tangent gradient is \\(-\\frac54\\), so the radius gradient is \\(\\frac45\\).\n\nUsing centre \\((3q,4q)\\) and tangent point \\((1,4)\\),\n\n\\[\n\\frac{4-4q}{1-3q}=\\frac45\n\\]\n\n\\[\nq=2\n\\]\n\nSo the centre is \\((6,8)\\). Therefore\n\n\\[\nr=\\sqrt{(6-1)^2+(8-4)^2}=\\sqrt{41}\n\\]\n\n**Answer:** \\(\\sqrt{41}\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM1HR",
+      "q": 24,
+      "source": "**Solution**\n\nFactor the fractional part first:\n\n\\[\n\\frac{2x^2-5x-12}{x^2-16}\\times\\frac{x^2+4x}{6x^2+11x+3}\n\\]\n\n\\[\n=\\frac{(2x+3)(x-4)}{(x-4)(x+4)}\\times\\frac{x(x+4)}{(3x+1)(2x+3)}\n\\]\n\n\\[\n=\\frac{x}{3x+1}\n\\]\n\nSo\n\n\\[\n(2x-1)+\\frac{x}{3x+1}\n=\\frac{(2x-1)(3x+1)+x}{3x+1}\n\\]\n\n\\[\n=\\frac{6x^2-1}{3x+1}\n\\]\n\n**Answer:** \\(\\dfrac{6x^2-1}{3x+1}\\)."
+    },
+    {
+      "paperSlug": "Nov2025_4WM1H",
+      "q": 1,
+      "source": "**Solution**\n\nRadius \\(=6\\) cm.\n\n\\[\n\\text{perimeter}=\\pi r+12=6\\pi+12\\approx 30.8496\n\\]\n\n**Answer:** \\(30.8\\) cm to 3 significant figures."
+    },
+    {
+      "paperSlug": "Nov2025_4WM1H",
+      "q": 4,
+      "source": "**Solution**\n\n\\[\nA=\\{9,11,13,15,17\\},\\quad B=\\{9,12,15,18\\},\\quad C=\\{11,13,17\\}\n\\]\n\n\\[\nA\\cup C=\\{9,11,13,15,17\\}\n\\]\n\n\\[\nA\\cap B'=\\{11,13,17\\}\n\\]\n\n\\(15\\notin B\\cap C\\) because \\(15\\) is not prime.\n\nSince \\(D\\cup C=A\\) and \\(D\\) has two members,\n\n\\[\nD=\\{9,15\\}\n\\]\n\n**Answers:** \\(\\{9,11,13,15,17\\}\\), \\(\\{11,13,17\\}\\), No, \\(D=\\{9,15\\}\\)."
+    },
+    {
+      "paperSlug": "Nov2025_4WM1H",
+      "q": 5,
+      "source": "**Solution**\n\n\\[\nP(\\text{tennis or cricket})=0.2+0.35=0.55\n\\]\n\nAlso,\n\n\\[\n2x+0.2+x+0.35=1\n\\]\n\n\\[\n3x=0.45\n\\]\n\n\\[\nx=0.15\n\\]\n\nSo\n\n\\[\nP(\\text{football})=2x=0.30\n\\]\n\n\\[\n700\\times 0.30=210\n\\]\n\n**Answers:** \\(0.55\\), \\(210\\) students."
+    },
+    {
+      "paperSlug": "Nov2025_4WM1H",
+      "q": 8,
+      "source": "**Solution**\n\n(a)\n\\[\n5w(3w-4w^2)=15w^2-20w^3\n\\]\n\n(b)\n\\[\n(4a^3c^5)^3=64a^9c^{15}\n\\]\n\n(c)\n\\[\n14m^3p^2+21m^2p^4=7m^2p^2(2m+3p^2)\n\\]\n\n(d)\n\\[\nx^2-10x+24=(x-4)(x-6)\n\\]\n\nSo\n\\[\nx=4 \\quad \\text{or} \\quad x=6\n\\]\n\n**Answers:** \\(15w^2-20w^3\\), \\(64a^9c^{15}\\), \\(7m^2p^2(2m+3p^2)\\), \\((x-4)(x-6)\\), \\(x=4,6\\)."
+    },
+    {
+      "paperSlug": "Nov2025_4WM1H",
+      "q": 9,
+      "source": "**Solution**\n\n\\[\nAB=\\sqrt{(10-2)^2+(15-0)^2}\n\\]\n\n\\[\n=\\sqrt{64+225}=17\n\\]\n\nSince \\(D\\) is on the positive \\(x\\)-axis and \\(AD=17\\),\n\n\\[\nD=(2+17,0)=(19,0)\n\\]\n\n**Answer:** \\((19,0)\\)."
+    },
+    {
+      "paperSlug": "Nov2025_4WM1H",
+      "q": 10,
+      "source": "**Solution**\n\nThe contact area is one square face:\n\n\\[\n7\\times 7=49\\text{ cm}^2\n\\]\n\n\\[\n\\text{force}=\\text{pressure}\\times\\text{area}=62\\times 49=3038\n\\]\n\n**Answer:** \\(3038\\) newtons."
+    },
+    {
+      "paperSlug": "Nov2025_4WM1H",
+      "q": 13,
+      "source": "**Solution**\n\n(a)\n\\[\n7x(3x+2)(2x-5)\n\\]\n\n\\[\n=7x(6x^2-11x-10)\n\\]\n\n\\[\n=42x^3-77x^2-70x\n\\]\n\n(b)\n\\[\n\\frac{9}{2y}+\\frac57=5\n\\]\n\n\\[\n\\frac{9}{2y}=\\frac{30}{7}\n\\]\n\n\\[\n63=60y\n\\]\n\n\\[\ny=\\frac{21}{20}\n\\]\n\n**Answers:** \\(42x^3-77x^2-70x\\), \\(y=\\frac{21}{20}\\)."
+    },
+    {
+      "paperSlug": "Nov2025_4WM1H",
+      "q": 14,
+      "source": "**Solution**\n\n\\[\n\\text{area}=\\frac{75}{360}\\pi(12)^2\n\\]\n\n\\[\n=30\\pi \\approx 94.2478\n\\]\n\n**Answer:** \\(94.2\\text{ cm}^2\\) to 3 significant figures."
+    },
+    {
+      "paperSlug": "Nov2025_4WM1H",
+      "q": 15,
+      "source": "**Solution**\n\n\\[\n\\frac{16^{x-3}\\times 8^{x+1}}{32^x}\n=\\frac{2^{4x-12}\\times 2^{3x+3}}{2^{5x}}\n\\]\n\n\\[\n=2^{4x-12+3x+3-5x}=2^{2x-9}\n\\]\n\n**Answer:** \\(n=2x-9\\)."
+    },
+    {
+      "paperSlug": "Nov2025_4WM1H",
+      "q": 16,
+      "source": "**Solution**\n\n\\[\n\\frac{2\\sqrt7+2}{\\sqrt7-3}\\times\\frac{\\sqrt7+3}{\\sqrt7+3}\n\\]\n\n\\[\n=\\frac{(2\\sqrt7+2)(\\sqrt7+3)}{7-9}\n\\]\n\n\\[\n=\\frac{20+8\\sqrt7}{-2}\n\\]\n\n\\[\n=-10-4\\sqrt7=-10-\\sqrt{112}\n\\]\n\n**Answer:** \\(-10-\\sqrt{112}\\)."
+    },
+    {
+      "paperSlug": "Nov2025_4WM1H",
+      "q": 17,
+      "source": "**Solution**\n\nLet\n\\[\nx=0.95454545\\ldots\n\\]\n\nThen\n\\[\n10x=9.5454545\\ldots\n\\]\n\nand\n\\[\n1000x=954.5454545\\ldots\n\\]\n\nSubtract:\n\\[\n990x=945\n\\]\n\n\\[\nx=\\frac{945}{990}=\\frac{21}{22}\n\\]\n\n**Answer:** \\(0.954545\\ldots=\\dfrac{21}{22}\\)."
+    },
+    {
+      "paperSlug": "Nov2025_4WM1H",
+      "q": 18,
+      "source": "**Solution**\n\n\\[\n(8x+2)(3x-2)=500\n\\]\n\n\\[\n24x^2-10x-4=500\n\\]\n\n\\[\n12x^2-5x-252=0\n\\]\n\nUsing the quadratic formula,\n\n\\[\nx=\\frac{5\\pm\\sqrt{(-5)^2-4(12)(-252)}}{24}\n\\]\n\nThe positive solution is\n\n\\[\nx\\approx 4.79564\n\\]\n\n**Answer:** \\(x=4.80\\) to 3 significant figures."
+    },
+    {
+      "paperSlug": "Nov2025_4WM1H",
+      "q": 20,
+      "source": "**Solution**\n\nFrequency density \\(=\\dfrac{\\text{frequency}}{\\text{class width}}\\).\n\n\\[\n0<h\\le 5: \\frac{12}{5}=2.4\n\\]\n\n\\[\n5<h\\le 15: \\frac{34}{10}=3.4\n\\]\n\n\\[\n15<h\\le 30: \\frac{45}{15}=3\n\\]\n\n\\[\n30<h\\le 50: \\frac{28}{20}=1.4\n\\]\n\n**Answer:** draw bars with densities \\(2.4, 3.4, 3, 1.4\\)."
+    },
+    {
+      "paperSlug": "Nov2025_4WM1H",
+      "q": 21,
+      "source": "**Solution**\n\nTriangle area:\n\n\\[\n\\frac{\\sqrt3}{4}(5r)^2=\\frac{25\\sqrt3}{4}r^2\n\\]\n\nCircle area:\n\n\\[\n\\pi r^2\n\\]\n\nSo\n\n\\[\n\\left(\\frac{25\\sqrt3}{4}-\\pi\\right)r^2=610\\pi\n\\]\n\n\\[\nr\\approx 15.7926\n\\]\n\n**Answer:** \\(r=15.8\\) to 3 significant figures."
+    },
+    {
+      "paperSlug": "Nov2025_4WM1H",
+      "q": 22,
+      "source": "**Solution**\n\n\\[\n9x^2-12x+q=(3x-2)^2\n\\]\n\n\\[\n(3x-2)^2=9x^2-12x+4\n\\]\n\n**Answer:** \\(q=4\\)."
+    },
+    {
+      "paperSlug": "Nov2025_4WM1H",
+      "q": 24,
+      "source": "**Solution**\n\n\\[\n5x^2-20x+23=5(x^2-4x)+23\n\\]\n\n\\[\n=5\\big((x-2)^2-4\\big)+23\n\\]\n\n\\[\n=5(x-2)^2+3\n\\]\n\n**Answer:** \\(5(x-2)^2+3\\)."
+    },
+    {
+      "paperSlug": "Nov2025_4WM1H",
+      "q": 26,
+      "source": "**Solution**\n\nFrom triangle \\(GMF\\),\n\n\\[\n\\tan 60^\\circ=\\frac{FG}{FM}=\\frac{18}{FM}\n\\]\n\n\\[\nFM=\\frac{18}{\\tan 60^\\circ}=6\\sqrt3\n\\]\n\nSince \\(FM=\\frac35FE\\),\n\n\\[\nFE=10\\sqrt3\n\\]\n\nThe horizontal distance from \\(D\\) to the point below \\(G\\) is\n\n\\[\n\\sqrt{20^2+(10\\sqrt3)^2}=10\\sqrt7\n\\]\n\nIf \\(\\theta\\) is the angle of elevation,\n\n\\[\n\\tan\\theta=\\frac{18}{10\\sqrt7}\n\\]\n\n\\[\n\\theta\\approx 34.2289^\\circ\n\\]\n\n**Answer:** \\(34.2^\\circ\\)."
+    },
+    {
+      "paperSlug": "Nov2025_4WM1H",
+      "q": 27,
+      "source": "**Solution**\n\nDiagonals of a rhombus bisect each other at right angles.\n\nMidpoint of \\(AC\\):\n\n\\[\n\\left(\\frac{16+24}{2},\\frac{-9+15}{2}\\right)=(20,3)\n\\]\n\nGradient of \\(AC\\):\n\n\\[\n\\frac{15-(-9)}{24-16}=3\n\\]\n\nSo gradient of \\(BD\\) is \\(-\\frac13\\).\n\n\\[\ny-3=-\\frac13(x-20)\n\\]\n\n\\[\nx+3y-29=0\n\\]\n\n**Answer:** \\(x+3y-29=0\\)."
+    },
+    {
+      "paperSlug": "Nov2025_4WM1H",
+      "q": 28,
+      "source": "**Solution**\n\nFactor each expression:\n\n\\[\n\\frac{x(3x+1)(2x+1)}{(2x-1)(2x+1)}\\div\\frac{(5x-2)(3x+1)}{4(2x-1)}=2x\n\\]\n\n\\[\n\\frac{x(3x+1)}{2x-1}\\times\\frac{4(2x-1)}{(5x-2)(3x+1)}=2x\n\\]\n\n\\[\n\\frac{4x}{5x-2}=2x\n\\]\n\n\\[\n4x=2x(5x-2)\n\\]\n\n\\[\n10x^2-8x=0\n\\]\n\n\\[\n2x(5x-4)=0\n\\]\n\nThe original fractions do not allow \\(x=0\\), so\n\n\\[\nx=\\frac45\n\\]\n\n**Answer:** \\(x=\\frac45\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM2H",
+      "q": 1,
+      "source": "**Solution**\n\nThe range is \\(10\\), so the first number is\n\n\\[\n14-10=4\n\\]\n\nFor six numbers, the median is the mean of the third and fourth values.\n\n\\[\n\\frac{6+\\text{fourth value}}{2}=7.5\n\\]\n\nSo the fourth value is \\(9\\). To make \\(6\\) the mode, the second value must also be \\(6\\).\n\n**Answer:** the hidden numbers are \\(4,6,9\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM2H",
+      "q": 2,
+      "source": "**Solution**\n\nArea of one trapezium:\n\n\\[\n\\frac12(8+12)\\times 3=30\n\\]\n\nPerimeter of the trapezium:\n\n\\[\n8+12+3+5=28\n\\]\n\nRectangular faces:\n\n\\[\n28\\times 9=252\n\\]\n\nTotal surface area:\n\n\\[\n252+2(30)=312\n\\]\n\n**Answer:** \\(312\\text{ cm}^2\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM2H",
+      "q": 3,
+      "source": "**Solution**\n\n\\[\n\\text{loss}=8000-5600=2400\n\\]\n\n\\[\n\\text{percentage loss}=\\frac{2400}{8000}\\times 100=30\\%\n\\]\n\n**Answer:** \\(30\\%\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM2H",
+      "q": 4,
+      "source": "**Solution**\n\nUse a compass radius greater than half of \\(AB\\). Draw matching arcs from \\(A\\) above and below the line, then draw matching arcs from \\(B\\) with the same radius. Join the two arc-intersection points.\n\n**Answer:** the joined line is the perpendicular bisector of \\(AB\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM2H",
+      "q": 5,
+      "source": "**Solution**\n\nThe sequence increases by \\(4\\), so\n\n\\[\nu_n=4n+7\n\\]\n\nFor the sequence \\(5n+4\\), take \\(n=3\\):\n\n\\[\n5(3)+4=19\n\\]\n\nand \\(19\\) is prime.\n\n**Answers:** \\(4n+7\\); a suitable counterexample is \\(19\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM2H",
+      "q": 6,
+      "source": "**Solution**\n\nThe scale factor from \\(ABCD\\) to \\(EFGH\\) is\n\n\\[\n\\frac{FG}{BC}=\\frac{10}{4}=2.5\n\\]\n\nSo\n\n\\[\nx=EF=5\\times 2.5=12.5\n\\]\n\nand\n\n\\[\ny=CD=\\frac{24}{2.5}=9.6\n\\]\n\n**Answers:** \\(x=12.5\\), \\(y=9.6\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM2H",
+      "q": 8,
+      "source": "**Solution**\n\nUse class midpoints \\(5,15,25,35,45\\).\n\n\\[\n\\frac{5x+15(3)+25(2)+35(4)+45(2)}{x+3+2+4+2}=20\n\\]\n\n\\[\n\\frac{5x+325}{x+11}=20\n\\]\n\n\\[\n5x+325=20x+220\n\\]\n\n\\[\n105=15x\n\\]\n\n\\[\nx=7\n\\]\n\n**Answer:** \\(x=7\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM2H",
+      "q": 10,
+      "source": "**Solution**\n\nFrom\n\n\\[\n4x+y=-3.5\n\\]\n\n\\[\ny=-3.5-4x\n\\]\n\nSubstitute into \\(3x+5y=8\\):\n\n\\[\n3x+5(-3.5-4x)=8\n\\]\n\n\\[\n-17x=25.5\n\\]\n\n\\[\nx=-1.5\n\\]\n\nThen\n\n\\[\ny=-3.5-4(-1.5)=2.5\n\\]\n\n**Answers:** \\(x=-1.5\\), \\(y=2.5\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM2H",
+      "q": 11,
+      "source": "**Solution**\n\n(a)\n\\[\n7-3t<2t+15\n\\]\n\n\\[\n-8<5t\n\\]\n\n\\[\nt>-1.6\n\\]\n\n(b) The three boundary lines are \\(x=2\\), \\(y=3\\), and \\(x+y=9\\). The shaded side gives\n\n\\[\nx\\ge 2, \\qquad y\\ge 3, \\qquad x+y\\le 9\n\\]\n\n**Answers:** \\(t>-1.6\\); \\(x\\ge2\\), \\(y\\ge3\\), \\(x+y\\le9\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM2H",
+      "q": 12,
+      "source": "**Solution**\n\n(a)\n\\[\n8.6\\times 10^{-5}=0.000086\n\\]\n\n(b)\n\\[\n(3\\times 10^{43})\\div(6\\times 10^{37})\n\\]\n\n\\[\n=0.5\\times 10^6=5\\times 10^5\n\\]\n\n**Answers:** \\(0.000086\\), \\(5\\times10^5\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM2H",
+      "q": 13,
+      "source": "**Solution**\n\nBy the alternate segment theorem,\n\n\\[\n\\angle EAB=\\angle ADB=56^\\circ\n\\]\n\nIn triangle \\(ABD\\),\n\n\\[\n\\angle BAD=180^\\circ-42^\\circ-56^\\circ=82^\\circ\n\\]\n\nSo\n\n\\[\n\\angle BAC=82^\\circ-60^\\circ=22^\\circ\n\\]\n\nAngles subtended by the same chord \\(CB\\) are equal, so\n\n\\[\n\\angle CDB=22^\\circ\n\\]\n\n**Answers:** \\(56^\\circ\\), alternate segment theorem, \\(22^\\circ\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM2H",
+      "q": 14,
+      "source": "**Solution**\n\nCumulative frequencies:\n\n\\[\n8,\\ 21,\\ 33,\\ 50,\\ 57,\\ 60\n\\]\n\nPlot the points\n\n\\[\n(10,8),(20,21),(30,33),(40,50),(50,57),(60,60)\n\\]\n\nThe median is the \\(30\\)th value. Interpolating in the \\(20\\) to \\(30\\) interval gives about \\(27.5\\) minutes.\n\nFor more than \\(45\\) minutes, the estimate is about \\(7\\) people.\n\n**Answers:** cumulative frequencies \\(8,21,33,50,57,60\\); median about \\(27.5\\) minutes; more than \\(45\\) minutes about \\(7\\) people."
+    },
+    {
+      "paperSlug": "May2025_4WM2H",
+      "q": 15,
+      "source": "**Solution**\n\nUse multipliers:\n\n\\[\n1.12\\times 0.85=0.952\n\\]\n\nSo the final value is \\(95.2\\%\\) of the original.\n\n\\[\n100-95.2=4.8\n\\]\n\n**Answer:** \\(4.8\\%\\) decrease."
+    },
+    {
+      "paperSlug": "May2025_4WM2H",
+      "q": 16,
+      "source": "**Solution**\n\nThere are \\(11\\) values. Excluding the median \\(14\\):\n\nLower half: \\(7,8,10,11,13\\), so \\(Q_1=10\\).\n\nUpper half: \\(16,17,19,21,24\\), so \\(Q_3=19\\).\n\n\\[\n\\text{IQR}=19-10=9\n\\]\n\n**Answer:** \\(9\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM2H",
+      "q": 17,
+      "source": "**Solution**\n\n(a)\n\\[\nABC=(3^2\\times5^4)(2^5\\times3^2)(2^3\\times5^6)\n\\]\n\n\\[\n=2^8\\times3^4\\times5^{10}\n\\]\n\n\\[\n(ABC)^3=2^{24}\\times3^{12}\\times5^{30}\n\\]\n\n(b)\n\\[\n(5\\times10^{150})(3\\times10^{140})=15\\times10^{290}\n\\]\n\n\\[\n=3\\times5\\times(2\\times5)^{290}\n\\]\n\n\\[\n=2^{290}\\times3\\times5^{291}\n\\]\n\n**Answers:** \\(2^{24}\\times3^{12}\\times5^{30}\\); \\(2^{290}\\times3\\times5^{291}\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM2H",
+      "q": 18,
+      "source": "**Solution**\n\nSince \\(W\\) is inversely proportional to \\(y^2\\),\n\n\\[\nW=\\frac{k}{y^2}\n\\]\n\nUsing \\(W=50\\) when \\(y=4\\):\n\n\\[\n50=\\frac{k}{16}\n\\]\n\n\\[\nk=800\n\\]\n\n**Answer:** \\(W=\\dfrac{800}{y^2}\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM2H",
+      "q": 19,
+      "source": "**Solution**\n\n\\[\nc=\\frac{t^2+3}{7-8t^2}\n\\]\n\n\\[\nc(7-8t^2)=t^2+3\n\\]\n\n\\[\n7c-3=t^2(8c+1)\n\\]\n\n\\[\nt^2=\\frac{7c-3}{8c+1}\n\\]\n\n**Answer:** \\(t=\\pm\\sqrt{\\dfrac{7c-3}{8c+1}}\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM2H",
+      "q": 20,
+      "source": "**Solution**\n\nLet\n\n\\[\na=2n, \\qquad b=2n+2, \\qquad c=2n+4\n\\]\n\nThen\n\n\\[\nac+4=(2n)(2n+4)+4\n\\]\n\n\\[\n=4n^2+8n+4\n\\]\n\n\\[\n=(2n+2)^2=b^2\n\\]\n\nSo \\(b^2=ac+4\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM2H",
+      "q": 21,
+      "source": "**Solution**\n\n(a) If \\(g(g(x))=6\\), then\n\n\\[\n\\frac{7g(x)+20}{2g(x)}=6\n\\]\n\n\\[\n7g(x)+20=12g(x)\n\\]\n\n\\[\ng(x)=4\n\\]\n\nSo\n\n\\[\n\\frac{7x+20}{2x}=4\n\\]\n\n\\[\n7x+20=8x\n\\]\n\n\\[\nx=20\n\\]\n\n(b)\n\\[\nh(x)=5x^2+30x-7=5(x+3)^2-52\n\\]\n\nLet \\(y=5(x+3)^2-52\\). Since \\(x\\ge -3\\), use the positive square root:\n\n\\[\nx+3=\\sqrt{\\frac{y+52}{5}}\n\\]\n\n\\[\nh^{-1}(x)=\\sqrt{\\frac{x+52}{5}}-3\n\\]\n\n**Answers:** \\(x=20\\); \\(h^{-1}(x)=\\sqrt{\\dfrac{x+52}{5}}-3\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM2H",
+      "q": 22,
+      "source": "**Solution**\n\n\\[\n\\frac{dy}{dx}=3x^2+2x-10\n\\]\n\nFor a positive gradient,\n\n\\[\n3x^2+2x-10>0\n\\]\n\nThe roots are\n\n\\[\nx=\\frac{-1\\pm\\sqrt{31}}{3}\n\\]\n\nSince the quadratic opens upwards,\n\n\\[\nx<\\frac{-1-\\sqrt{31}}{3}\n\\quad \\text{or} \\quad\nx>\\frac{-1+\\sqrt{31}}{3}\n\\]\n\n**Answer:** \\(x<\\dfrac{-1-\\sqrt{31}}{3}\\) or \\(x>\\dfrac{-1+\\sqrt{31}}{3}\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM2H",
+      "q": 23,
+      "source": "**Solution**\n\n\\[\n3x\\times 2x\\times y=1014\n\\]\n\n\\[\n6x^2y=1014\n\\]\n\n\\[\ny=\\frac{169}{x^2}\n\\]\n\nSurface area:\n\n\\[\nA=2(3x\\cdot2x+3x\\cdot y+2x\\cdot y)\n\\]\n\n\\[\n=12x^2+10xy\n\\]\n\n\\[\n=12x^2+10x\\left(\\frac{169}{x^2}\\right)\n\\]\n\n\\[\n=12x^2+\\frac{1690}{x}\n\\]\n\n**Answer:** \\(A=12x^2+\\dfrac{1690}{x}\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM2H",
+      "q": 24,
+      "source": "**Solution**\n\nFor an arithmetic series,\n\n\\[\na+20d=109\n\\]\n\nand\n\n\\[\n\\frac{52}{2}(2a+51d)=4381\n\\]\n\n\\[\n26(2a+51d)=4381\n\\]\n\nSolving gives\n\n\\[\nd=-4.5, \\qquad a=199\n\\]\n\nThe fifth term is\n\n\\[\na+4d=199+4(-4.5)=181\n\\]\n\n**Answer:** \\(181\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM2H",
+      "q": 25,
+      "source": "**Solution**\n\nLinear scale factor from solid \\(A\\) to solid \\(B\\):\n\n\\[\n\\frac{18.6}{31}=0.6\n\\]\n\nSo the volume scale factor is\n\n\\[\n0.6^3=0.216\n\\]\n\nLet the volume of \\(A\\) be \\(V\\). Then\n\n\\[\nV-0.216V=735\n\\]\n\n\\[\n0.784V=735\n\\]\n\n\\[\nV=937.5\n\\]\n\n**Answer:** \\(937.5\\text{ cm}^3\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM2H",
+      "q": 26,
+      "source": "**Solution**\n\n(a)\n\\[\n\\overrightarrow{QR}=\\overrightarrow{OR}-\\overrightarrow{OQ}\n\\]\n\n\\[\n\\overrightarrow{OQ}=2a+(a+3c)=3a+3c\n\\]\n\n\\[\n\\overrightarrow{QR}=6c-(3a+3c)=3c-3a\n\\]\n\n(b) Let \\(X\\) divide \\(QR\\) so that\n\n\\[\n\\overrightarrow{QX}=\\lambda\\overrightarrow{QR}\n\\]\n\nThen\n\n\\[\n\\overrightarrow{OX}=3a+3c+\\lambda(3c-3a)\n\\]\n\nAlso \\(X\\) lies on \\(PT\\), where \\(\\overrightarrow{OT}=14c\\), so\n\n\\[\n\\overrightarrow{OX}=2a+\\mu(14c-2a)\n\\]\n\nEquating coefficients gives \\(\\lambda=\\frac59\\). Therefore\n\n\\[\nQX:XR=\\frac59:\\frac49=5:4\n\\]\n\n**Answers:** \\(\\overrightarrow{QR}=3c-3a\\); \\(QX:XR=5:4\\)."
+    },
+    {
+      "paperSlug": "May2025_4WM2H",
+      "q": 27,
+      "source": "**Solution**\n\n(a)\n\nFor \\(y=f(x-4)\\), move the graph \\(4\\) units right:\n\n\\[\n(6,-5)\\to(10,-5)\n\\]\n\nFor \\(y=f(3x)\\), divide the \\(x\\)-coordinate by \\(3\\):\n\n\\[\n(6,-5)\\to(2,-5)\n\\]\n\n(b) For \\(y=g(2x)-3\\), halve each \\(x\\)-coordinate and subtract \\(3\\) from each \\(y\\)-coordinate.\n\nUseful transformed points are\n\n\\[\n(-4,1)\\to(-2,-2),\\quad (2,4)\\to(1,1),\\quad (6,2)\\to(3,-1)\n\\]\n\nJoin these points with straight line segments.\n\n**Answers:** \\((10,-5)\\), \\((2,-5)\\), graph through \\((-2,-2),(1,1),(3,-1)\\)."
+    }
+  ]
+}

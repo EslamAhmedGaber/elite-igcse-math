@@ -894,6 +894,7 @@ els.topicStrip.addEventListener("click", (event) => {
     if (control === els.unitFilter && window.ELITE_PATHWAY?.isModular && control.value) {
       localStorage.setItem("modularUnit", control.value);
       configureBank();
+      showPathwayResumeBanner();
     }
     redraw();
   });

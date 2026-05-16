@@ -1,5 +1,5 @@
-const CACHE_VERSION = "elite-igcse-v18";
-const RUNTIME_CACHE = "elite-igcse-runtime-v18";
+const CACHE_VERSION = "elite-igcse-v19";
+const RUNTIME_CACHE = "elite-igcse-runtime-v19";
 
 const APP_SHELL = [
   "./",
@@ -75,6 +75,17 @@ async function staleWhileRevalidate(request) {
   return cached || network;
 }
 
+async function networkFirst(request) {
+  const cache = await caches.open(CACHE_VERSION);
+  try {
+    const response = await fetch(request);
+    if (response.ok) cache.put(request, response.clone());
+    return response;
+  } catch (error) {
+    return cache.match(request);
+  }
+}
+
 self.addEventListener("fetch", (event) => {
   const { request } = event;
   if (request.method !== "GET") return;
@@ -91,6 +102,17 @@ self.addEventListener("fetch", (event) => {
 
   if (request.destination === "image" || url.pathname.includes("/downloads/")) {
     event.respondWith(cacheFirst(request));
+    return;
+  }
+
+  if (
+    url.pathname.endsWith("/questions-data.js") ||
+    url.pathname.endsWith("/solutions-data.js") ||
+    url.pathname.endsWith("/topic-normalizer.js") ||
+    url.pathname.endsWith("/app.js") ||
+    url.pathname.endsWith("/styles.css")
+  ) {
+    event.respondWith(networkFirst(request));
     return;
   }
 

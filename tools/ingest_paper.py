@@ -43,12 +43,18 @@ INBOX = ROOT / "tools" / "inbox"
 PROCESSED = ROOT / "tools" / "processed"
 DATA_QUESTIONS = ROOT / "src" / "data" / "questions"
 DATA_PAPERS = ROOT / "src" / "data" / "papers.json"
+DATA_TOPICS = ROOT / "src" / "data" / "topics.json"
 PUBLIC_IMG = ROOT / "assets" / "questions"
 
 for d in (INBOX, PROCESSED, DATA_QUESTIONS, PUBLIC_IMG):
     d.mkdir(parents=True, exist_ok=True)
 
 QUESTION_TOTAL_RE = re.compile(r"Total for Question\s+(\d+)\s+is\s+(\d+)\s+marks?", re.IGNORECASE)
+QUESTION_START_RE = re.compile(r"^\s*(\d+)\s+\S", re.DOTALL)
+TOPIC_ORDER = {
+    topic: index + 1
+    for index, topic in enumerate(json.loads(DATA_TOPICS.read_text(encoding="utf-8")).get("topics", []))
+}
 
 # --- Paper code detection -------------------------------------------
 
@@ -141,6 +147,32 @@ class Block:
     filename: str = ""
 
 
+def locate_question_starts(doc: fitz.Document) -> dict[int, tuple[int, float]]:
+    """Find the first real text block for each numbered question."""
+    starts: dict[int, tuple[int, float]] = {}
+    for page_num in range(len(doc)):
+        page = doc.load_page(page_num)
+        for blk in page.get_text("blocks"):
+            text = re.sub(r"\s+", " ", blk[4]).strip()
+            x0, y0 = float(blk[0]), float(blk[1])
+            # Real question starts sit in the left content gutter near the top
+            # of the usable page. Diagram labels and page numbers otherwise
+            # create convincing false positives such as "10 cm" or "25 cm".
+            if x0 >= 80 or y0 >= 760:
+                continue
+            match = QUESTION_START_RE.match(text)
+            if not match and text.isdigit():
+                match = re.match(r"^(\d+)$", text)
+            if not match:
+                continue
+            q_num = int(match.group(1))
+            candidate = (page_num, y0)
+            previous = starts.get(q_num)
+            if previous is None or candidate < previous:
+                starts[q_num] = candidate
+    return starts
+
+
 def locate_blocks(doc: fitz.Document) -> list[Block]:
     footers: list[tuple[int, int, int, float, float]] = []
     for page_num in range(len(doc)):
@@ -151,9 +183,14 @@ def locate_blocks(doc: fitz.Document) -> list[Block]:
                 footers.append((int(m.group(1)), int(m.group(2)), page_num, float(blk[1]), float(blk[3])))
 
     footers.sort(key=lambda t: t[0])
+    starts = locate_question_starts(doc)
     out: list[Block] = []
     for i, (q, marks, end_page, fy0, fy1) in enumerate(footers):
-        if i == 0:
+        anchor = starts.get(q)
+        if anchor is not None:
+            start_page, start_y = anchor
+            start_y = max(0.0, start_y - 4)
+        elif i == 0:
             start_page = 2 if len(doc) > 2 else 0
             start_y = 0.0
         else:
@@ -174,14 +211,15 @@ def render_block(doc, block: Block, zoom: float = 2.0) -> Image.Image:
     parts: list[Image.Image] = []
     for p in range(block.start_page, block.end_page + 1):
         page = doc.load_page(p)
+        continuation_bottom = page.rect.height - 42
         if p == block.start_page and p == block.end_page:
-            clip = fitz.Rect(0, block.start_y, page.rect.width, block.end_y)
+            clip = fitz.Rect(34, block.start_y, page.rect.width - 34, block.end_y)
         elif p == block.start_page:
-            clip = fitz.Rect(0, block.start_y, page.rect.width, page.rect.height)
+            clip = fitz.Rect(34, block.start_y, page.rect.width - 34, continuation_bottom)
         elif p == block.end_page:
-            clip = fitz.Rect(0, 0, page.rect.width, block.end_y)
+            clip = fitz.Rect(34, 0, page.rect.width - 34, block.end_y)
         else:
-            clip = page.rect
+            clip = fitz.Rect(34, 0, page.rect.width - 34, continuation_bottom)
         clip = clip & page.rect
         if clip.is_empty or clip.height < 10:
             continue
@@ -208,14 +246,15 @@ def block_text(doc, block: Block) -> str:
     chunks: list[str] = []
     for p in range(block.start_page, block.end_page + 1):
         page = doc.load_page(p)
+        continuation_bottom = page.rect.height - 42
         if p == block.start_page and p == block.end_page:
-            clip = fitz.Rect(0, block.start_y, page.rect.width, block.end_y)
+            clip = fitz.Rect(34, block.start_y, page.rect.width - 34, block.end_y)
         elif p == block.start_page:
-            clip = fitz.Rect(0, block.start_y, page.rect.width, page.rect.height)
+            clip = fitz.Rect(34, block.start_y, page.rect.width - 34, continuation_bottom)
         elif p == block.end_page:
-            clip = fitz.Rect(0, 0, page.rect.width, block.end_y)
+            clip = fitz.Rect(34, 0, page.rect.width - 34, block.end_y)
         else:
-            clip = page.rect
+            clip = fitz.Rect(34, 0, page.rect.width - 34, continuation_bottom)
         chunks.append(page.get_text(clip=clip))
     return re.sub(r"\s+", " ", " ".join(chunks)).strip()
 
@@ -252,9 +291,12 @@ def classify(text: str) -> tuple[str, str]:
     if has("compound interest", "depreciat"):       return ("Compound Interest & Depreciation", "Numbers & the Number System")
     if has("reverse percent", "original price"):    return ("Percentages", "Numbers & the Number System")
     if "percent" in t or "%" in t:                  return ("Percentages", "Numbers & the Number System")
+    if has("ratio", "exchange rate", "best buy", "share"): return ("Ratio Toolkit", "Numbers & the Number System")
+    if has("direct proportion", "inverse proportion", "proportional"): return ("Direct & Inverse Proportion", "Numbers & the Number System")
     if has("hcf", "lcm", "prime factor"):           return ("Prime Factors, HCF & LCM", "Numbers & the Number System")
     if "surd" in t:                                 return ("Surds", "Numbers & the Number System")
-    if has("upper bound", "lower bound"):           return ("Rounding, Estimation & Bounds", "Numbers & the Number System")
+    if has("upper bound", "lower bound", "rounded to"): return ("Rounding, Estimation & Bounds", "Numbers & the Number System")
+    if has("speed", "density", "pressure"):         return ("Standard & Compound Units", "Numbers & the Number System")
     if has("simultaneous"):                         return ("Simultaneous Equations", "Equations, Formulae & Identities")
     if has("complete the square"):                  return ("Completing the Square", "Equations, Formulae & Identities")
     if has("quadratic formula"):                    return ("Solving Quadratic Equations", "Equations, Formulae & Identities")
@@ -262,22 +304,33 @@ def classify(text: str) -> tuple[str, str]:
     if has("expand"):                               return ("Expanding Brackets", "Equations, Formulae & Identities")
     if has("rearrange", "make x the subject"):      return ("Rearranging Formulas", "Equations, Formulae & Identities")
     if has("prove that", "algebraic proof"):        return ("Algebraic Proof", "Equations, Formulae & Identities")
+    if has("algebraic fraction"):                   return ("Algebraic Fractions", "Equations, Formulae & Identities")
     if has("nth term", "sequence"):                 return ("Sequences", "Sequences, Functions & Graphs")
+    if has("function f(x)", "f(x)", "inverse function", "composite"): return ("Functions", "Sequences, Functions & Graphs")
     if has("differentiate", "turning point"):       return ("Differentiation", "Sequences, Functions & Graphs")
+    if has("transformation of", "f(x+", "f(-x)", "f(x)+"): return ("Transformations of Graphs", "Sequences, Functions & Graphs")
     if has("gradient", "midpoint", "perpendicular", "parallel line"): return ("Coordinate Geometry", "Sequences, Functions & Graphs")
+    if has("graph of y =", "draw the graph", "plot"): return ("Graphs of Functions", "Sequences, Functions & Graphs")
     if has("circle theorem"):                       return ("Circle Theorems", "Geometry & Trigonometry")
     if has("arc", "sector"):                        return ("Circles, Arcs & Sectors", "Geometry & Trigonometry")
     if has("sine rule", "cosine rule"):             return ("Sine, Cosine Rule & Area of Triangles", "Geometry & Trigonometry")
+    if has("pythagoras", "right-angled", "right angled", "trigonometry") and has("3-d", "3d", "three-dimensional", "cuboid", "pyramid"):
+        return ("3D Pythagoras & Trigonometry", "Geometry & Trigonometry")
     if has("pythagoras"):                           return ("Right-Angled Triangles - Pythagoras & Trigonometry", "Geometry & Trigonometry")
     if has("similar", "scale factor"):              return ("Congruence, Similarity & Geometrical Proof", "Geometry & Trigonometry")
     if has("polygon", "interior angle"):            return ("Angles in Polygons & Parallel Lines", "Geometry & Trigonometry")
     if "bearing" in t:                              return ("Bearings, Scale Drawing & Constructions", "Geometry & Trigonometry")
+    if has("construct", "bisector", "locus", "loci"): return ("Bearings, Scale Drawing & Constructions", "Geometry & Trigonometry")
     if "vector" in t:                               return ("Vectors", "Vectors & Transformation Geometry")
+    if has("rotat", "reflect", "translate", "enlarge"): return ("Transformations", "Vectors & Transformation Geometry")
     if has("histogram", "frequency density"):       return ("Histograms", "Statistics & Probability")
     if has("cumulative frequency"):                 return ("Cumulative Frequency Diagrams", "Statistics & Probability")
     if has("tree diagram"):                         return ("Probability Diagrams - Venn & Tree Diagrams", "Statistics & Probability")
+    if has("conditional", "given that") and "probabilit" in t:
+        return ("Combined & Conditional Probability", "Statistics & Probability")
     if has("venn", "set notation"):                 return ("Set Notation & Venn Diagrams", "Statistics & Probability")
     if "probabilit" in t:                           return ("Probability Toolkit", "Statistics & Probability")
+    if has("mean", "median", "mode", "frequency table"): return ("Statistics Toolkit", "Statistics & Probability")
     if has("find the area", "perimeter of"):        return ("Area & Perimeter", "Geometry & Trigonometry")
     if has("volume", "surface area"):               return ("Volume & Surface Area", "Geometry & Trigonometry")
     return ("Algebra Toolkit", "Equations, Formulae & Identities")
@@ -328,12 +381,26 @@ def process_paper(pdf_path: Path) -> dict | None:
             "marks": blk.marks,
             "topic": topic,
             "unit": linear_unit,
-            "topicOrder": None,
+            "topicOrder": TOPIC_ORDER.get(topic),
             "image": f"/assets/questions/{blk.filename}",
             "filename": blk.filename,
             "text": blk.text[:1500],
             "modularForceUnit": info.modular_unit,
         })
+        if blk.q >= 20:
+            questions.append({
+                "id": f"expertise::{blk.filename.rsplit('.', 1)[0]}",
+                "bank": "expertise",
+                "q": blk.q,
+                "marks": blk.marks,
+                "topic": topic,
+                "unit": linear_unit,
+                "topicOrder": TOPIC_ORDER.get(topic),
+                "image": f"/assets/questions/{blk.filename}",
+                "filename": blk.filename,
+                "text": blk.text[:1500],
+                "modularForceUnit": info.modular_unit,
+            })
 
     doc.close()
 
@@ -355,6 +422,11 @@ def process_paper(pdf_path: Path) -> dict | None:
 
 
 def update_catalogue():
+    solved_papers = {
+        path.stem
+        for path in (ROOT / "src" / "data" / "solutions").glob("*.json")
+        if json.loads(path.read_text(encoding="utf-8")).get("solutions")
+    }
     papers = []
     for f in sorted(DATA_QUESTIONS.glob("*.json")):
         if f.name == "papers.json":
@@ -368,7 +440,7 @@ def update_catalogue():
             "isModular": data.get("isModular", False),
             "modularUnit": data.get("modularUnit"),
             "questionCount": data["questionCount"],
-            "hasSolutions": False,  # solutions tracked separately
+            "hasSolutions": data["paperSlug"] in solved_papers,
         })
     DATA_PAPERS.write_text(json.dumps(papers, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Updated catalogue: {len(papers)} papers in src/data/papers.json")

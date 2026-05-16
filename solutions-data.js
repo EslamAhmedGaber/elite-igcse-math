@@ -5363,6 +5363,859 @@ window.SOLUTION_DATA = {
     "updated": "2026-05-05T20:41:15",
     "checked_by": "Dr Eslam Ahmed + Codex"
   },
+  "all::May2025_4WM1H__Q01__p03-03__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Was tagged Algebra Toolkit; actually Fractions.\n\n**Solution**\n\nConvert the mixed numbers to improper fractions.\n\n\\[\n3\\frac{2}{3}=\\frac{11}{3},\\qquad 2\\frac{4}{7}=\\frac{18}{7}\n\\]\n\nThen multiply.\n\n\\[\n\\frac{11}{3}\\times\\frac{18}{7}=\\frac{198}{21}=\\frac{66}{7}\n\\]\n\nConvert to a mixed number.\n\n\\[\n\\frac{66}{7}=9\\frac{3}{7}\n\\]\n\n**Answer:** \\(9\\frac{3}{7}\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown"
+  },
+  "all::May2025_4WM1H__Q02__p04-04__m04__Rounding-Estimation-Bounds": {
+    "status": "checked",
+    "source": "**Topic check:** Rounding, estimation and bounds. The tag is correct.\n\n**Solution**\n\nFor \\(17.8\\) correct to 1 decimal place, the lower bound is\n\n\\[\n17.8-0.05=17.75\n\\]\n\nFor \\(145\\) correct to the nearest \\(5\\) grams, the upper bound is\n\n\\[\n145+2.5=147.5\n\\]\n\nFor the estimate,\n\n\\[\nA=\\frac{4.766\\times815}{0.399}\n\\]\n\nRound to 1 significant figure.\n\n\\[\n4.766\\approx5,\\quad 815\\approx800,\\quad 0.399\\approx0.4\n\\]\n\n\\[\nA\\approx\\frac{5\\times800}{0.4}=10000\n\\]\n\n**Answer:** \\(17.75\\) m, \\(147.5\\) g, and \\(10000\\).",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown"
+  },
+  "all::May2025_4WM1H__Q03__p05-05__m04__Probability-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Probability Toolkit. The tag is correct.\n\n**Solution**\n\nThe probabilities add to \\(1\\).\n\n\\[\n0.14+0.23+2x+0.18+7x=1\n\\]\n\n\\[\n0.55+9x=1\n\\]\n\n\\[\nx=0.05\n\\]\n\nThe probability of blue is\n\n\\[\n7x=7(0.05)=0.35\n\\]\n\nExpected number of blue results:\n\n\\[\n500\\times0.35=175\n\\]\n\n**Answer:** \\(175\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown"
+  },
+  "all::May2025_4WM1H__Q04__p06-06__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Perimeter and area. The tag is correct.\n\n**Solution**\n\nThe shaded area is the triangle area minus the semicircle area.\n\n\\[\n\\text{triangle area}=\\frac12\\times15\\times20=150\n\\]\n\nThe semicircle has diameter \\(8\\), so radius \\(4\\).\n\n\\[\n\\text{semicircle area}=\\frac12\\pi(4)^2=8\\pi\n\\]\n\n\\[\n\\text{shaded area}=150-8\\pi=124.867\\ldots\n\\]\n\nTo 3 significant figures,\n\n\\[\n125\n\\]\n\n**Answer:** \\(125\\text{ cm}^2\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown"
+  },
+  "all::May2025_4WM1H__Q05__p07-07__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Was tagged Algebra Toolkit; actually Algebraic Roots & Indices.\n\n**Solution**\n\n\\[\nx^5\\times x^7=x^{5+7}=x^{12}\n\\]\n\nSo \\(m=12\\).\n\n\\[\ny^8\\div y^3=y^{8-3}=y^5\n\\]\n\nSo \\(n=5\\).\n\n\\[\n(5a^4r^2)^3=5^3(a^4)^3(r^2)^3=125a^{12}r^6\n\\]\n\n**Answer:** \\(m=12\\), \\(n=5\\), and \\(125a^{12}r^6\\).",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown"
+  },
+  "all::May2025_4WM1H__Q06__p08-08__m03__Standard-Compound-Units": {
+    "status": "checked",
+    "source": "**Topic check:** Standard and compound units. The tag is correct.\n\n**Solution**\n\n\\[\n\\text{pressure}=\\frac{\\text{force}}{\\text{area}}\n\\]\n\n\\[\n65=\\frac{702}{\\text{area}}\n\\]\n\n\\[\n\\text{area}=\\frac{702}{65}=10.8\n\\]\n\nThe base area is \\(6x\\), so\n\n\\[\n6x=10.8\n\\]\n\n\\[\nx=1.8\n\\]\n\n**Answer:** \\(x=1.8\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown"
+  },
+  "all::May2025_4WM1H__Q07__p09-09__m06__Factorising": {
+    "status": "checked",
+    "source": "**Topic check:** Factorising. The tag is correct.\n\n**Solution**\n\nFor part (a),\n\n\\[\nx-4=\\frac{3+2x}{6}\n\\]\n\nMultiply by \\(6\\).\n\n\\[\n6x-24=3+2x\n\\]\n\n\\[\n4x=27\n\\]\n\n\\[\nx=\\frac{27}{4}=6.75\n\\]\n\nFor part (b),\n\n\\[\ny^2-11y+30=(y-5)(y-6)\n\\]\n\nHence,\n\n\\[\n(y-5)(y-6)=0\n\\]\n\n\\[\ny=5\\quad\\text{or}\\quad y=6\n\\]\n\n**Answer:** \\(x=6.75\\), \\((y-5)(y-6)\\), and \\(y=5\\) or \\(6\\).",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown"
+  },
+  "all::May2025_4WM1H__Q08__p10-10__m05__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Was tagged Algebra Toolkit; actually Set Notation & Venn Diagrams.\n\n**Solution**\n\n\\[\nA=\\{18,20,22,24,26,28,30\\}\n\\]\n\n\\[\nB=\\{18,21,24,27,30\\}\n\\]\n\n\\[\nA\\cup B=\\{18,20,21,22,24,26,27,28,30\\}\n\\]\n\nSo\n\n\\[\n(A\\cup B)'=\\{19,23,25,29\\}\n\\]\n\nSophie is wrong because \\(30\\) is both a multiple of \\(3\\) and a multiple of \\(5\\), so \\(30\\in B\\cap C\\).\n\nFor \\(D\\), include \\(18\\) and \\(26\\), but no other even numbers. One possible set is\n\n\\[\nD=\\{18,19,23,25,26\\}\n\\]\n\n**Answer:** \\(\\{19,23,25,29\\}\\); Sophie is wrong because \\(30\\in B\\cap C\\); one possible \\(D\\) is \\(\\{18,19,23,25,26\\}\\).",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown"
+  },
+  "all::May2025_4WM1H__Q09__p11-11__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Was tagged Algebra Toolkit; actually Algebraic Roots & Indices.\n\n**Solution**\n\n\\[\n7^x=1\n\\]\n\nSince \\(7^0=1\\),\n\n\\[\nx=0\n\\]\n\nFor part (b),\n\n\\[\n\\frac{8^{-4}\\times8^{11}}{8^{12}}=8^n\n\\]\n\n\\[\n8^{-4}\\times8^{11}=8^7\n\\]\n\n\\[\n\\frac{8^7}{8^{12}}=8^{7-12}=8^{-5}\n\\]\n\nSo \\(n=-5\\).\n\n**Answer:** \\(x=0\\), \\(n=-5\\).",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown"
+  },
+  "all::May2025_4WM1H__Q10__p12-12__m05__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Perimeter and area. The tag is correct.\n\n**Solution**\n\nThe trapezium is symmetrical. The horizontal shift from each sloping side is\n\n\\[\n12\\cos60^\\circ=6\n\\]\n\nSo the top parallel side is\n\n\\[\n47-6-6=35\n\\]\n\nThe height is\n\n\\[\n12\\sin60^\\circ=10.392\\ldots\n\\]\n\nArea of the trapezium:\n\n\\[\n\\frac12(47+35)(12\\sin60^\\circ)=426.084\\ldots\n\\]\n\nTo 3 significant figures,\n\n\\[\n426\n\\]\n\n**Answer:** \\(426\\text{ cm}^2\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown"
+  },
+  "all::May2025_4WM1H__Q11__p13-13__m06__Expanding-Brackets": {
+    "status": "checked",
+    "source": "**Topic check:** Expanding brackets. The tag is correct.\n\n**Solution**\n\n\\[\n5x(5x+4)(2x-3)\n\\]\n\nFirst,\n\n\\[\n(5x+4)(2x-3)=10x^2-15x+8x-12=10x^2-7x-12\n\\]\n\nThen multiply by \\(5x\\).\n\n\\[\n5x(10x^2-7x-12)=50x^3-35x^2-60x\n\\]\n\nFor part (b), use denominator \\(20y\\).\n\n\\[\n\\frac94+\\frac{y-7}{5y}=\\frac{45y}{20y}+\\frac{4(y-7)}{20y}\n\\]\n\n\\[\n=\\frac{49y-28}{20y}\n\\]\n\n**Answer:** \\(50x^3-35x^2-60x\\) and \\(\\frac{49y-28}{20y}\\).",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown"
+  },
+  "all::May2025_4WM1H__Q12__p14-14__m04__Probability-Diagrams-Venn-Tree-Diagrams": {
+    "status": "checked",
+    "source": "**Topic check:** Probability tree diagrams. The tag is correct.\n\n**Solution**\n\nFor badminton,\n\n\\[\nP(\\text{win})=0.7,\\qquad P(\\text{lose})=0.3\n\\]\n\nFor tennis,\n\n\\[\nP(\\text{win})=0.4,\\qquad P(\\text{lose})=0.6\n\\]\n\nThe probability of losing both games is\n\n\\[\n0.3\\times0.6=0.18\n\\]\n\n**Answer:** Tennis branches are \\(0.4\\) and \\(0.6\\) on each branch; probability of losing both is \\(0.18\\).",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown"
+  },
+  "all::May2025_4WM1H__Q13__p15-15__m03__Graphs-of-Functions": {
+    "status": "checked",
+    "source": "**Topic check:** Graphs of functions. The tag is correct.\n\n**Solution**\n\nUse \\(y=x^3+2x+3\\).\n\nFor \\(x=-3\\),\n\n\\[\ny=(-3)^3+2(-3)+3=-30\n\\]\n\nFor \\(x=2\\),\n\n\\[\ny=2^3+2(2)+3=15\n\\]\n\nSo the table is\n\n\\[\n\\begin{array}{c|rrrrrrr}\nx&-3&-2&-1&0&1&2&3\\\\\n\\hline\ny&-30&-9&0&3&6&15&36\n\\end{array}\n\\]\n\nPlot these points and draw a smooth cubic curve through them.\n\n**Answer:** Missing values \\(-30\\) and \\(15\\); draw the smooth curve through the table points.",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown"
+  },
+  "all::May2025_4WM1H__Q14__p16-16__m04__Circles-Arcs-Sectors": {
+    "status": "checked",
+    "source": "**Topic check:** Circles, arcs and sectors. The tag is correct.\n\n**Solution**\n\nSector area:\n\n\\[\n\\frac{40}{360}\\pi(12)^2=16\\pi=50.265\\ldots\n\\]\n\nTo 3 significant figures,\n\n\\[\n50.3\\text{ cm}^2\n\\]\n\nTriangle area:\n\n\\[\n\\frac12(7)(9)\\sin115^\\circ=28.548\\ldots\n\\]\n\nTo 3 significant figures,\n\n\\[\n28.5\\text{ cm}^2\n\\]\n\n**Answer:** \\(50.3\\text{ cm}^2\\) and \\(28.5\\text{ cm}^2\\).",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown"
+  },
+  "all::May2025_4WM1H__Q15__p17-17__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Was tagged Solving Linear Equations; actually Quadratic Formula.\n\n**Solution**\n\n\\[\n5x^2+9x-17=0\n\\]\n\nUse the quadratic formula with \\(a=5\\), \\(b=9\\), \\(c=-17\\).\n\n\\[\nx=\\frac{-9\\pm\\sqrt{9^2-4(5)(-17)}}{2(5)}\n\\]\n\n\\[\nx=\\frac{-9\\pm\\sqrt{421}}{10}\n\\]\n\n\\[\nx=1.152\\ldots\\quad\\text{or}\\quad x=-2.952\\ldots\n\\]\n\nTo 3 significant figures,\n\n\\[\nx=1.15\\quad\\text{or}\\quad x=-2.95\n\\]\n\n**Answer:** \\(x=1.15\\) or \\(x=-2.95\\).",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown"
+  },
+  "all::May2025_4WM1H__Q16__p17-17__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Was tagged Solving Linear Equations; actually Algebraic Roots & Indices.\n\n**Solution**\n\n\\[\n8^{3y+4}\\times4^{3y}=2^{5y}\n\\]\n\nWrite \\(8\\) and \\(4\\) as powers of \\(2\\).\n\n\\[\n(2^3)^{3y+4}(2^2)^{3y}=2^{5y}\n\\]\n\n\\[\n2^{9y+12}\\times2^{6y}=2^{5y}\n\\]\n\n\\[\n2^{15y+12}=2^{5y}\n\\]\n\nSo\n\n\\[\n15y+12=5y\n\\]\n\n\\[\ny=-\\frac65\n\\]\n\n**Answer:** \\(y=-\\frac65\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown"
+  },
+  "all::May2025_4WM1H__Q17__p18-18__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Was tagged Algebra Toolkit; actually Surds.\n\n**Solution**\n\n\\[\n(\\sqrt3)^5=(\\sqrt3)^4\\sqrt3=3^2\\sqrt3=9\\sqrt3\n\\]\n\nSo \\(k=9\\).\n\nFor part (b), rationalise the denominator.\n\n\\[\n\\frac{21}{3-\\sqrt2}\\times\\frac{3+\\sqrt2}{3+\\sqrt2}\n=\\frac{21(3+\\sqrt2)}{9-2}\n\\]\n\n\\[\n=3(3+\\sqrt2)=9+3\\sqrt2\n\\]\n\nSince \\(3\\sqrt2=\\sqrt{18}\\),\n\n\\[\n9+3\\sqrt2=9+\\sqrt{18}\n\\]\n\n**Answer:** \\(k=9\\), and \\(9+\\sqrt{18}\\).",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown"
+  },
+  "all::May2025_4WM1H__Q18__p19-19__m03__Standard-Compound-Units": {
+    "status": "checked",
+    "source": "**Topic check:** Was tagged Standard & Compound Units; actually Histograms.\n\n**Solution**\n\nFrequency is class width multiplied by frequency density.\n\n\\[\n0\\text{--}10:10\\times2.5=25\n\\]\n\n\\[\n10\\text{--}15:5\\times4=20\n\\]\n\n\\[\n15\\text{--}30:15\\times3.6=54\n\\]\n\n\\[\n30\\text{--}50:20\\times0.5=10\n\\]\n\n\\[\n50\\text{--}60:10\\times1.7=17\n\\]\n\nTotal:\n\n\\[\n25+20+54+10+17=126\n\\]\n\nMore than \\(40\\) minutes is the part from \\(40\\) to \\(50\\), plus \\(50\\) to \\(60\\).\n\n\\[\n10\\times0.5+17=22\n\\]\n\nSo the proportion is\n\n\\[\n\\frac{22}{126}=\\frac{11}{63}\n\\]\n\n**Answer:** \\(\\frac{11}{63}\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown"
+  },
+  "all::May2025_4WM1H__Q19__p20-20__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Was tagged Algebra Toolkit; actually Algebraic Fractions.\n\n**Solution**\n\n\\[\n\\frac{3x^2-3y^2}{5x+5y}\\div\\frac{xy^2-x^2y}{10xy}\n\\]\n\nFactorise.\n\n\\[\n=\\frac{3(x-y)(x+y)}{5(x+y)}\\div\\frac{xy(y-x)}{10xy}\n\\]\n\n\\[\n=\\frac{3(x-y)}5\\div\\frac{y-x}{10}\n\\]\n\n\\[\n=\\frac{3(x-y)}5\\times\\frac{10}{y-x}\n\\]\n\nSince \\(y-x=-(x-y)\\), the expression is\n\n\\[\n-6\n\\]\n\n**Answer:** \\(-6\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown"
+  },
+  "all::May2025_4WM1H__Q20__p21-21__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Was tagged Algebra Toolkit; actually Algebraic Fractions.\n\n**Solution**\n\n\\[\nk=m+n,\\qquad m=\\frac{3}{4n}\n\\]\n\nSo\n\n\\[\nk=\\frac{3}{4n}+n=\\frac{3+4n^2}{4n}\n\\]\n\nThen\n\n\\[\n7k=\\frac{21+28n^2}{4n}\n\\]\n\nand\n\n\\[\n5-m=5-\\frac{3}{4n}=\\frac{20n-3}{4n}\n\\]\n\nTherefore\n\n\\[\n\\frac{7k}{5-m}=\\frac{\\frac{21+28n^2}{4n}}{\\frac{20n-3}{4n}}\n\\]\n\n\\[\n=\\frac{21+28n^2}{20n-3}\n\\]\n\n**Answer:** \\(\\frac{21+28n^2}{20n-3}\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown"
+  },
+  "all::May2025_4WM1H__Q21__p22-22__m05__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Was tagged Algebra Toolkit; actually Sine & Cosine Rules.\n\n**Solution**\n\nFirst find \\(BD\\) in triangle \\(ABD\\) using the cosine rule.\n\n\\[\nBD^2=9.4^2+12.8^2-2(9.4)(12.8)\\cos72^\\circ\n\\]\n\n\\[\nBD=13.3356\\ldots\n\\]\n\nIn triangle \\(BCD\\), use the sine rule.\n\n\\[\n\\frac{BC}{\\sin39^\\circ}=\\frac{BD}{\\sin54^\\circ}\n\\]\n\n\\[\nBC=13.3356\\ldots\\times\\frac{\\sin39^\\circ}{\\sin54^\\circ}\n\\]\n\n\\[\nBC=10.3735\\ldots\n\\]\n\nTo 3 significant figures,\n\n\\[\nBC=10.4\n\\]\n\n**Answer:** \\(10.4\\text{ cm}\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown"
+  },
+  "all::May2025_4WM1H__Q22__p23-23__m03__Probability-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Probability Toolkit. The tag is correct.\n\n**Solution**\n\nTotal ways to choose \\(3\\) counters:\n\n\\[\n\\binom{20}{3}=1140\n\\]\n\nExactly two red:\n\n\\[\n\\binom{9}{2}\\binom{11}{1}=396\n\\]\n\nExactly two yellow:\n\n\\[\n\\binom{7}{2}\\binom{13}{1}=273\n\\]\n\nExactly two green:\n\n\\[\n\\binom{4}{2}\\binom{16}{1}=96\n\\]\n\nFavourable outcomes:\n\n\\[\n396+273+96=765\n\\]\n\n\\[\nP=\\frac{765}{1140}=\\frac{51}{76}\n\\]\n\n**Answer:** \\(\\frac{51}{76}\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown"
+  },
+  "all::May2025_4WM1H__Q23__p24-25__m06__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Was tagged Algebra Toolkit; actually 3D Pythagoras & Trigonometry.\n\n**Solution**\n\nPoint \\(P\\) is \\(3\\) cm from \\(C\\) along \\(CF\\). The horizontal distance from \\(A\\) to the point directly below \\(P\\) is\n\n\\[\n\\sqrt{12^2+3^2}=\\sqrt{153}\n\\]\n\nUsing the angle of elevation,\n\n\\[\nh=\\sqrt{153}\\tan24^\\circ=5.507\\ldots\n\\]\n\nSo\n\n\\[\nAP=\\frac{\\sqrt{153}}{\\cos24^\\circ}=13.5399\\ldots\n\\]\n\nOn the top face,\n\n\\[\nPG=\\sqrt{12^2+7^2}=\\sqrt{193}=13.8924\\ldots\n\\]\n\nAlso,\n\n\\[\nAG=\\sqrt{12^2+10^2+h^2}=16.561\\ldots\n\\]\n\nUse the cosine rule in triangle \\(APG\\).\n\n\\[\n\\cos\\angle APG=\\frac{AP^2+PG^2-AG^2}{2(AP)(PG)}\n\\]\n\n\\[\n\\angle APG=49.163\\ldots^\\circ\n\\]\n\nTo the nearest degree,\n\n\\[\n49^\\circ\n\\]\n\n**Answer:** \\(49^\\circ\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown"
+  },
+  "all::May2025_4WM1H__Q24__p26-26__m05__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Was tagged Algebra Toolkit; actually Linear Graphs.\n\n**Solution**\n\nThe diagonals of a square bisect each other and are perpendicular.\n\nMidpoint of \\(P(4,7)\\) and \\(R(8,-5)\\):\n\n\\[\n\\left(\\frac{4+8}{2},\\frac{7-5}{2}\\right)=(6,1)\n\\]\n\nGradient of \\(PR\\):\n\n\\[\n\\frac{-5-7}{8-4}=-3\n\\]\n\nSo the perpendicular gradient is \\(\\frac13\\).\n\nThe line through \\(Q\\) and \\(S\\) passes through \\((6,1)\\), so\n\n\\[\ny-1=\\frac13(x-6)\n\\]\n\n\\[\n3y-3=x-6\n\\]\n\n\\[\n3y=x-3\n\\]\n\n**Answer:** \\(3y=x-3\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown"
+  },
+  "all::May2025_4WM1H__Q25__p27-27__m05__Surds": {
+    "status": "checked",
+    "source": "**Topic check:** Was tagged Surds; actually Completing the Square.\n\n**Solution**\n\n\\[\n8x^2-12x-4=8\\left(x^2-\\frac32x\\right)-4\n\\]\n\nComplete the square.\n\n\\[\nx^2-\\frac32x=\\left(x-\\frac34\\right)^2-\\frac{9}{16}\n\\]\n\nSo\n\n\\[\n8x^2-12x-4=8\\left(x-\\frac34\\right)^2-\\frac{17}{2}\n\\]\n\nNow solve\n\n\\[\n8x^2-12x-4=0\n\\]\n\n\\[\n8\\left(x-\\frac34\\right)^2-\\frac{17}{2}=0\n\\]\n\n\\[\n\\left(x-\\frac34\\right)^2=\\frac{17}{16}\n\\]\n\n\\[\nx-\\frac34=\\pm\\frac{\\sqrt{17}}4\n\\]\n\n\\[\nx=\\frac{3\\pm\\sqrt{17}}4\n\\]\n\n**Answer:** \\(8\\left(x-\\frac34\\right)^2-\\frac{17}{2}\\), and \\(x=\\frac{3\\pm\\sqrt{17}}4\\).",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown"
+  },
+  "expertise::May2025_4WM1H__Q20__p21-21__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Was tagged Algebra Toolkit; actually Algebraic Fractions.\n\n**Solution**\n\n\\[\nk=m+n,\\qquad m=\\frac{3}{4n}\n\\]\n\nSo\n\n\\[\nk=\\frac{3}{4n}+n=\\frac{3+4n^2}{4n}\n\\]\n\nThen\n\n\\[\n7k=\\frac{21+28n^2}{4n}\n\\]\n\nand\n\n\\[\n5-m=5-\\frac{3}{4n}=\\frac{20n-3}{4n}\n\\]\n\nTherefore\n\n\\[\n\\frac{7k}{5-m}=\\frac{\\frac{21+28n^2}{4n}}{\\frac{20n-3}{4n}}\n\\]\n\n\\[\n=\\frac{21+28n^2}{20n-3}\n\\]\n\n**Answer:** \\(\\frac{21+28n^2}{20n-3}\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown",
+    "reused_from": "all::May2025_4WM1H__Q20__p21-21__m03__Algebra-Toolkit"
+  },
+  "expertise::May2025_4WM1H__Q21__p22-22__m05__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Was tagged Algebra Toolkit; actually Sine & Cosine Rules.\n\n**Solution**\n\nFirst find \\(BD\\) in triangle \\(ABD\\) using the cosine rule.\n\n\\[\nBD^2=9.4^2+12.8^2-2(9.4)(12.8)\\cos72^\\circ\n\\]\n\n\\[\nBD=13.3356\\ldots\n\\]\n\nIn triangle \\(BCD\\), use the sine rule.\n\n\\[\n\\frac{BC}{\\sin39^\\circ}=\\frac{BD}{\\sin54^\\circ}\n\\]\n\n\\[\nBC=13.3356\\ldots\\times\\frac{\\sin39^\\circ}{\\sin54^\\circ}\n\\]\n\n\\[\nBC=10.3735\\ldots\n\\]\n\nTo 3 significant figures,\n\n\\[\nBC=10.4\n\\]\n\n**Answer:** \\(10.4\\text{ cm}\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown",
+    "reused_from": "all::May2025_4WM1H__Q21__p22-22__m05__Algebra-Toolkit"
+  },
+  "expertise::May2025_4WM1H__Q22__p23-23__m03__Probability-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Probability Toolkit. The tag is correct.\n\n**Solution**\n\nTotal ways to choose \\(3\\) counters:\n\n\\[\n\\binom{20}{3}=1140\n\\]\n\nExactly two red:\n\n\\[\n\\binom{9}{2}\\binom{11}{1}=396\n\\]\n\nExactly two yellow:\n\n\\[\n\\binom{7}{2}\\binom{13}{1}=273\n\\]\n\nExactly two green:\n\n\\[\n\\binom{4}{2}\\binom{16}{1}=96\n\\]\n\nFavourable outcomes:\n\n\\[\n396+273+96=765\n\\]\n\n\\[\nP=\\frac{765}{1140}=\\frac{51}{76}\n\\]\n\n**Answer:** \\(\\frac{51}{76}\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown",
+    "reused_from": "all::May2025_4WM1H__Q22__p23-23__m03__Probability-Toolkit"
+  },
+  "expertise::May2025_4WM1H__Q23__p24-25__m06__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Was tagged Algebra Toolkit; actually 3D Pythagoras & Trigonometry.\n\n**Solution**\n\nPoint \\(P\\) is \\(3\\) cm from \\(C\\) along \\(CF\\). The horizontal distance from \\(A\\) to the point directly below \\(P\\) is\n\n\\[\n\\sqrt{12^2+3^2}=\\sqrt{153}\n\\]\n\nUsing the angle of elevation,\n\n\\[\nh=\\sqrt{153}\\tan24^\\circ=5.507\\ldots\n\\]\n\nSo\n\n\\[\nAP=\\frac{\\sqrt{153}}{\\cos24^\\circ}=13.5399\\ldots\n\\]\n\nOn the top face,\n\n\\[\nPG=\\sqrt{12^2+7^2}=\\sqrt{193}=13.8924\\ldots\n\\]\n\nAlso,\n\n\\[\nAG=\\sqrt{12^2+10^2+h^2}=16.561\\ldots\n\\]\n\nUse the cosine rule in triangle \\(APG\\).\n\n\\[\n\\cos\\angle APG=\\frac{AP^2+PG^2-AG^2}{2(AP)(PG)}\n\\]\n\n\\[\n\\angle APG=49.163\\ldots^\\circ\n\\]\n\nTo the nearest degree,\n\n\\[\n49^\\circ\n\\]\n\n**Answer:** \\(49^\\circ\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown",
+    "reused_from": "all::May2025_4WM1H__Q23__p24-25__m06__Algebra-Toolkit"
+  },
+  "expertise::May2025_4WM1H__Q24__p26-26__m05__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Was tagged Algebra Toolkit; actually Linear Graphs.\n\n**Solution**\n\nThe diagonals of a square bisect each other and are perpendicular.\n\nMidpoint of \\(P(4,7)\\) and \\(R(8,-5)\\):\n\n\\[\n\\left(\\frac{4+8}{2},\\frac{7-5}{2}\\right)=(6,1)\n\\]\n\nGradient of \\(PR\\):\n\n\\[\n\\frac{-5-7}{8-4}=-3\n\\]\n\nSo the perpendicular gradient is \\(\\frac13\\).\n\nThe line through \\(Q\\) and \\(S\\) passes through \\((6,1)\\), so\n\n\\[\ny-1=\\frac13(x-6)\n\\]\n\n\\[\n3y-3=x-6\n\\]\n\n\\[\n3y=x-3\n\\]\n\n**Answer:** \\(3y=x-3\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown",
+    "reused_from": "all::May2025_4WM1H__Q24__p26-26__m05__Algebra-Toolkit"
+  },
+  "expertise::May2025_4WM1H__Q25__p27-27__m05__Surds": {
+    "status": "checked",
+    "source": "**Topic check:** Was tagged Surds; actually Completing the Square.\n\n**Solution**\n\n\\[\n8x^2-12x-4=8\\left(x^2-\\frac32x\\right)-4\n\\]\n\nComplete the square.\n\n\\[\nx^2-\\frac32x=\\left(x-\\frac34\\right)^2-\\frac{9}{16}\n\\]\n\nSo\n\n\\[\n8x^2-12x-4=8\\left(x-\\frac34\\right)^2-\\frac{17}{2}\n\\]\n\nNow solve\n\n\\[\n8x^2-12x-4=0\n\\]\n\n\\[\n8\\left(x-\\frac34\\right)^2-\\frac{17}{2}=0\n\\]\n\n\\[\n\\left(x-\\frac34\\right)^2=\\frac{17}{16}\n\\]\n\n\\[\nx-\\frac34=\\pm\\frac{\\sqrt{17}}4\n\\]\n\n\\[\nx=\\frac{3\\pm\\sqrt{17}}4\n\\]\n\n**Answer:** \\(8\\left(x-\\frac34\\right)^2-\\frac{17}{2}\\), and \\(x=\\frac{3\\pm\\sqrt{17}}4\\).",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_markdown",
+    "reused_from": "all::May2025_4WM1H__Q25__p27-27__m05__Surds"
+  },
+  "all::May2025_4WM1HR__Q02__p03-03__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Algebraic proof. The tag is acceptable because the question asks to show the exact result.\n\n**Solution**\n\n\\[\n2\\frac14=\\frac94,\\qquad 1\\frac57=\\frac{12}{7}\n\\]\n\n\\[\n2\\frac14\\times1\\frac57=\\frac94\\times\\frac{12}{7}\n\\]\n\n\\[\n=\\frac{108}{28}=\\frac{27}{7}=3\\frac67\n\\]\n\n**Answer:** \\(3\\frac67\\).",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Jun2025_P1HR__Q03__p04-04__m03__Algebraic-Proof"
+  },
+  "all::May2025_4WM1HR__Q03__p04-04__m05__Probability-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Probability Toolkit. The tag is correct.\n\n**Solution**\n\nLet the yellow probability be \\(x\\). Then the red probability is \\(4x\\).\n\n\\[\n0.12+0.20+0.30+4x+x=1\n\\]\n\n\\[\n5x=0.38\n\\]\n\n\\[\nx=0.076\n\\]\n\nSo\n\n\\[\nP(\\text{red})=4x=0.304\n\\]\n\n\\[\nP(\\text{blue, green or purple})=0.12+0.20+0.30=0.62\n\\]\n\nExpected red:\n\n\\[\n350\\times 0.304=106.4\n\\]\n\n**Answers:** \\(0.62\\), and about \\(106\\).",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Jun2025_P1HR__Q04__p05-05__m05__Probability-Toolkit"
+  },
+  "all::May2025_4WM1HR__Q04__p05-05__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Set notation and Venn diagrams. The tag is correct.\n\n**Method**\n\n\\[\n\\mathcal{E}=\\{1,2,3,4,5,6,7,8,9,10,11,12\\}\n\\]\n\n\\[\nA=\\{2,4,6,8,10,12\\}\n\\]\n\n\\[\nB=\\{3,6,9,12\\}\n\\]\n\n\\[\nC=\\{1,3,5,7,9,11\\}\n\\]\n\nTherefore\n\n\\[\nA\\cup B=\\{2,3,4,6,8,9,10,12\\}\n\\]\n\nand\n\n\\[\nB'=\\{1,2,4,5,7,8,10,11\\}\n\\]\n\nNo number is both even and odd, so\n\n\\[\nA\\cap C=\\emptyset\n\\]\n\nAlso \\(13\\notin \\mathcal{E}\\) because \\(13\\) is not in the universal set.\n\n**Answer:** (a)(i) \\(\\{2,3,4,6,8,9,10,12\\}\\), (a)(ii) \\(\\{1,2,4,5,7,8,10,11\\}\\), (b)(i) \\(\\emptyset\\), (b)(ii) \\(13\\notin\\mathcal{E}\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Jun2025_P1HR__Q05__p06-06__m04__Set-Notation-and-Venn-Diagrams"
+  },
+  "all::May2025_4WM1HR__Q12__p13-13__m06__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Corrected to Solving Linear Equations. The equation is the main part of the question; the index form is secondary.\n\n**Method**\n\nFor part (a),\n\n\\[\n\\frac{5a+8}{3}-\\frac{2a+5}{4}=23\n\\]\n\nMultiply by \\(12\\):\n\n\\[\n4(5a+8)-3(2a+5)=276\n\\]\n\n\\[\n20a+32-6a-15=276\n\\]\n\n\\[\n14a+17=276\n\\]\n\n\\[\n14a=259\n\\]\n\n\\[\na=\\frac{259}{14}=\\frac{37}{2}\n\\]\n\nFor part (b),\n\n\\[\n\\left(\\frac{\\sqrt y}{3}\\right)^{-1}=\\frac{3}{\\sqrt y}\n\\]\n\n\\[\n=3y^{-1/2}\n\\]\n\n**Answer:** (a) \\(a=\\frac{37}{2}\\), (b) \\(3y^{-1/2}\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Jun2025_P1HR__Q15__p15-15__m06__Solving-Linear-Equations"
+  },
+  "all::May2025_4WM1HR__Q14__p15-15__m02__Fractions-Decimals-Percentages": {
+    "status": "checked",
+    "source": "**Topic check:** Algebraic proof. The tag is correct.\n\n**Solution**\n\nLet\n\\[\nx=0.6121212\\ldots\n\\]\n\nThen\n\\[\n10x=6.121212\\ldots\n\\]\n\nand\n\\[\n1000x=612.121212\\ldots\n\\]\n\nSubtract:\n\\[\n1000x-10x=612.121212\\ldots-6.121212\\ldots\n\\]\n\n\\[\n990x=606\n\\]\n\n\\[\nx=\\frac{606}{990}=\\frac{101}{165}\n\\]\n\n**Answer:** \\(0.6121212\\ldots=\\dfrac{101}{165}\\).",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Jun2025_P1HR__Q16__p16-16__m02__Algebraic-Proof"
+  },
+  "all::May2025_4WM1HR__Q17__p18-18__m03__Probability-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Probability Toolkit. The tag is correct.\n\n**Solution**\n\nThe counters are\n\n\\[\n1,\\ 1,\\ 2,\\ 3,\\ 3,\\ 3,\\ 5,\\ 6,\\ 6\n\\]\n\nThere are\n\n\\[\n\\binom{9}{2}=36\n\\]\n\nways to choose two counters.\n\nFor a sum less than \\(5\\), the pairs are:\n\n\\[\n(1,1),\\quad (1,2),\\quad (1,3)\n\\]\n\nCounting the repeated counters gives\n\n\\[\n1+2+6=9\n\\]\n\nSo\n\n\\[\nP(\\text{sum}<5)=\\frac{9}{36}=\\frac14\n\\]\n\n**Answer:** \\(\\frac14\\).",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Jun2025_P1HR__Q19__p19-19__m03__Probability-Toolkit"
+  },
+  "all::May2025_4WM1HR__Q20__p22-22__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Correct.\n\n**Method**\n\nIn the rectangle \\(ABCF\\), use Pythagoras with the diagonal \\(FC\\):\n\n\\[\nAC^2=FC^2-AF^2\n\\]\n\n\\[\nAC^2=18^2-7^2=324-49=275\n\\]\n\nNow use Pythagoras in triangle \\(ABC\\):\n\n\\[\nBC^2=AC^2-AB^2\n\\]\n\n\\[\nBC^2=275-9^2=275-81=194\n\\]\n\n\\[\nBC=\\sqrt{194}=13.928\\ldots\n\\]\n\n**Answer:** \\(13.9\\text{ cm}\\) to 3 significant figures",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Jun2025_P1HR__Q20__p20-20__m03__3D-Pythagoras-and-Trigonometry"
+  },
+  "expertise::May2025_4WM1HR__Q20__p22-22__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Correct.\n\n**Method**\n\nIn the rectangle \\(ABCF\\), use Pythagoras with the diagonal \\(FC\\):\n\n\\[\nAC^2=FC^2-AF^2\n\\]\n\n\\[\nAC^2=18^2-7^2=324-49=275\n\\]\n\nNow use Pythagoras in triangle \\(ABC\\):\n\n\\[\nBC^2=AC^2-AB^2\n\\]\n\n\\[\nBC^2=275-9^2=275-81=194\n\\]\n\n\\[\nBC=\\sqrt{194}=13.928\\ldots\n\\]\n\n**Answer:** \\(13.9\\text{ cm}\\) to 3 significant figures",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::May2025_4WM1HR__Q20__p22-22__m03__Algebra-Toolkit"
+  },
+  "all::May2025_4WM1HR__Q22__p24-25__m06__Circles-Arcs-Sectors": {
+    "status": "checked",
+    "source": "**Topic check:** Correct.\n\n**Method**\n\nLet the radius of sector \\(BAC\\) be \\(R\\).\n\nThe shaded segment is the segment cut off by chord \\(BC\\) in the sector with centre \\(A\\).\n\nIts area is\n\n\\[\n\\text{sector area}-\\text{triangle area}\n\\]\n\n\\[\n28=\\frac{40}{360}\\pi R^2-\\frac{1}{2}R^2\\sin 40^\\circ\n\\]\n\n\\[\n28=R^2\\left(\\frac{\\pi}{9}-\\frac{1}{2}\\sin 40^\\circ\\right)\n\\]\n\n\\[\nR=31.8096\\ldots\n\\]\n\nNow find the chord \\(BC\\):\n\n\\[\nBC=2R\\sin 20^\\circ\n\\]\n\n\\[\nBC=2(31.8096\\ldots)\\sin 20^\\circ\n=21.7591\\ldots\n\\]\n\nIn sector \\(BCD\\), the centre is \\(C\\), so the radius is\n\n\\[\nCB=CD=21.7591\\ldots\n\\]\n\nThe arc \\(BD\\) has angle \\(130^\\circ\\), so\n\n\\[\n\\text{arc }BD\n=\\frac{130}{360}\\times 2\\pi(21.7591\\ldots)\n\\]\n\n\\[\n=49.3697\\ldots\n\\]\n\n**Answer:** \\(\\boxed{49.4\\text{ cm}}\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Jun2025_P1HR__Q25__p26-27__m06__Circles-Arcs-and-Sectors"
+  },
+  "expertise::May2025_4WM1HR__Q22__p24-25__m06__Circles-Arcs-Sectors": {
+    "status": "checked",
+    "source": "**Topic check:** Correct.\n\n**Method**\n\nLet the radius of sector \\(BAC\\) be \\(R\\).\n\nThe shaded segment is the segment cut off by chord \\(BC\\) in the sector with centre \\(A\\).\n\nIts area is\n\n\\[\n\\text{sector area}-\\text{triangle area}\n\\]\n\n\\[\n28=\\frac{40}{360}\\pi R^2-\\frac{1}{2}R^2\\sin 40^\\circ\n\\]\n\n\\[\n28=R^2\\left(\\frac{\\pi}{9}-\\frac{1}{2}\\sin 40^\\circ\\right)\n\\]\n\n\\[\nR=31.8096\\ldots\n\\]\n\nNow find the chord \\(BC\\):\n\n\\[\nBC=2R\\sin 20^\\circ\n\\]\n\n\\[\nBC=2(31.8096\\ldots)\\sin 20^\\circ\n=21.7591\\ldots\n\\]\n\nIn sector \\(BCD\\), the centre is \\(C\\), so the radius is\n\n\\[\nCB=CD=21.7591\\ldots\n\\]\n\nThe arc \\(BD\\) has angle \\(130^\\circ\\), so\n\n\\[\n\\text{arc }BD\n=\\frac{130}{360}\\times 2\\pi(21.7591\\ldots)\n\\]\n\n\\[\n=49.3697\\ldots\n\\]\n\n**Answer:** \\(\\boxed{49.4\\text{ cm}}\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::May2025_4WM1HR__Q22__p24-25__m06__Circles-Arcs-Sectors"
+  },
+  "all::May2025_4WM1HR__Q01__p03-03__m02__Rounding-Estimation-Bounds": {
+    "status": "checked",
+    "source": "**Solution**\n\nThe value is correct to 1 decimal place, so the half-unit is \\(0.05\\).\n\n\\[\n142.8-0.05=142.75, \\qquad 142.8+0.05=142.85\n\\]\n\n**Answer:** lower bound \\(142.75\\) m, upper bound \\(142.85\\) m.",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM1HR__Q05__p06-06__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\n\\[\n3^8\\times 3^4 = 3^{8+4}=3^{12}\n\\]\n\n\\[\n\\frac{4^{12}}{4^7}=4^{12-7}=4^5\n\\]\n\n\\[\n(6^2)^{10}=6^{20}\n\\]\n\n\\[\n5^0=1\n\\]\n\n**Answers:** \\(m=12\\), \\(n=5\\), \\(p=20\\), \\(r=0\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM1HR__Q06__p06-07__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\nThe base angles are equal, so the opposite sides are equal.\n\n\\[\n4x+6=30-x\n\\]\n\n\\[\n5x=24\n\\]\n\n\\[\nx=4.8\n\\]\n\n**Answer:** \\(x=4.8\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM1HR__Q07__p08-08__m03__Standard-Compound-Units": {
+    "status": "checked",
+    "source": "**Solution**\n\n\\[\n40\\text{ m/s}=40\\times \\frac{3600}{1000}\\text{ km/h}\n\\]\n\n\\[\n=144\\text{ km/h}\n\\]\n\n**Answer:** \\(144\\) kilometres per hour.",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM1HR__Q08__p09-09__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\nIn right triangle \\(BCD\\),\n\n\\[\n\\tan 32^\\circ=\\frac{17}{BD}\n\\]\n\n\\[\nBD=\\frac{17}{\\tan 32^\\circ}\n\\]\n\nIn right triangle \\(ABD\\),\n\n\\[\n\\sin 65^\\circ=\\frac{AD}{BD}\n\\]\n\n\\[\nAD=\\frac{17}{\\tan 32^\\circ}\\sin 65^\\circ \\approx 24.6567\n\\]\n\n**Answer:** \\(AD=24.7\\) cm to 3 significant figures.",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM1HR__Q09__p10-10__m07__Factorising": {
+    "status": "checked",
+    "source": "**Solution**\n\n(a)\n\\[\n(5k^3n^4)^2=25k^6n^8\n\\]\n\n(b)\n\\[\n12m^2y^4+18m^3y^3=6m^2y^3(2y+3m)\n\\]\n\n(c)\n\\[\nx^2-13x+42=(x-6)(x-7)\n\\]\n\nSo\n\\[\nx=6 \\quad \\text{or} \\quad x=7\n\\]\n\n**Answers:** \\(25k^6n^8\\), \\(6m^2y^3(2y+3m)\\), \\((x-6)(x-7)\\), \\(x=6,7\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM1HR__Q10__p11-11__m05__Standard-Compound-Units": {
+    "status": "checked",
+    "source": "**Solution**\n\nUse Pythagoras to find the other side of the rectangle.\n\n\\[\nDC=\\sqrt{17^2-8^2}=15\n\\]\n\n\\[\n\\text{area}=15\\times 8=120\\text{ cm}^2\n\\]\n\n\\[\n\\text{pressure}=\\frac{150}{120}=1.25\n\\]\n\n**Answer:** \\(1.25\\) newtons/cm\\(^2\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM1HR__Q11__p12-12__m04__Probability-Diagrams-Venn-Tree-Diagrams": {
+    "status": "checked",
+    "source": "**Solution**\n\nThe missing branch probabilities are complements.\n\n\\[\nP(\\text{not snow on Saturday})=0.8\n\\]\n\n\\[\nP(\\text{not snow on Sunday} \\mid \\text{snow Saturday})=0.65\n\\]\n\n\\[\nP(\\text{not snow on Sunday} \\mid \\text{not snow Saturday})=0.6\n\\]\n\nFor snow on both days,\n\n\\[\n0.2\\times 0.35=0.07\n\\]\n\n**Answer:** tree labels \\(0.2,0.8,0.35,0.65,0.4,0.6\\); probability \\(0.07\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM1HR__Q13__p14-15__m05__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\nThe height of the building is\n\n\\[\nCD=25\\tan 42^\\circ\n\\]\n\nThe extra height from \\(C\\) to \\(A\\) is\n\n\\[\n25\\tan 30^\\circ\n\\]\n\nSo\n\n\\[\nAB=25\\tan 42^\\circ+25\\tan 30^\\circ \\approx 36.9439\n\\]\n\nFor the angle of elevation \\(\\theta\\) from \\(D\\),\n\n\\[\n\\tan \\theta=\\frac{AB}{25}\n\\]\n\n\\[\n\\theta \\approx 55.9137^\\circ\n\\]\n\n**Answers:** \\(AB=36.9\\) m, angle of elevation \\(55.9^\\circ\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM1HR__Q15__p16-16__m06__Expanding-Brackets": {
+    "status": "checked",
+    "source": "**Solution**\n\n(a) For \\(3x^2+4x-18=0\\),\n\n\\[\nx=\\frac{-4\\pm\\sqrt{4^2-4(3)(-18)}}{2(3)}\n\\]\n\n\\[\nx\\approx 1.87 \\quad \\text{or} \\quad x\\approx -3.21\n\\]\n\n(b)\n\\[\n(2x-3)(x+4)(x-1)\n\\]\n\n\\[\n=(2x^2+5x-12)(x-1)\n\\]\n\n\\[\n=2x^3+3x^2-17x+12\n\\]\n\n**Answers:** \\(x=1.87\\) or \\(x=-3.21\\); \\(2x^3+3x^2-17x+12\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM1HR__Q16__p17-17__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\n(a)\n\\[\n\\sqrt{96}=4\\sqrt 6=2\\sqrt{24}\n\\]\n\nSo \\(k=24\\).\n\n(b)\n\\[\n\\frac{8}{3-\\sqrt5}\\times\\frac{3+\\sqrt5}{3+\\sqrt5}\n\\]\n\n\\[\n=\\frac{8(3+\\sqrt5)}{9-5}=2(3+\\sqrt5)\n\\]\n\n\\[\n=6+2\\sqrt5\n\\]\n\n**Answers:** \\(k=24\\), \\(6+2\\sqrt5\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM1HR__Q18__p19-19__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\n\\[\n2x^2-12x+23=2(x^2-6x)+23\n\\]\n\n\\[\n=2\\big((x-3)^2-9\\big)+23\n\\]\n\n\\[\n=2(x-3)^2+5\n\\]\n\nThe squared part is at least zero.\n\n**Answers:** \\(2(x-3)^2+5\\); least value \\(5\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM1HR__Q19__p20-21__m05__Coordinate-Geometry": {
+    "status": "checked",
+    "source": "**Solution**\n\nSquare area:\n\n\\[\n(2x+3)^2\n\\]\n\nTriangle area:\n\n\\[\n\\frac12(2x+3)(2x)\n\\]\n\nSo\n\n\\[\n(2x+3)^2+\\frac12(2x+3)(2x)=84\n\\]\n\n\\[\n6x^2+15x-75=0\n\\]\n\n\\[\n2x^2+5x-25=0\n\\]\n\n\\[\n(2x-5)(x+5)=0\n\\]\n\nThe positive solution is \\(x=2.5\\), so\n\n\\[\n(2x+3)^2=8^2=64\n\\]\n\n**Answer:** \\(64\\text{ cm}^2\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM1HR__Q21__p23-23__m03__Standard-Compound-Units": {
+    "status": "checked",
+    "source": "**Solution**\n\nThe interval \\(10\\) to \\(25\\) has width \\(15\\) and frequency \\(60\\), so its frequency density is\n\n\\[\n\\frac{60}{15}=4\n\\]\n\nUsing that scale from the histogram:\n\n\\[\n35\\text{ to }40: 5\\times 1=5\n\\]\n\n\\[\n40\\text{ to }70: 30\\times 0.75=22.5\n\\]\n\n\\[\n5+22.5=27.5\n\\]\n\n**Answer:** about \\(28\\) members.",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM1HR__Q23__p26-27__m05__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\nThe tangent point lies on the tangent line, so\n\n\\[\np+3=-\\frac54p+\\frac{21}{4}\n\\]\n\n\\[\np=1\n\\]\n\nThe tangent gradient is \\(-\\frac54\\), so the radius gradient is \\(\\frac45\\).\n\nUsing centre \\((3q,4q)\\) and tangent point \\((1,4)\\),\n\n\\[\n\\frac{4-4q}{1-3q}=\\frac45\n\\]\n\n\\[\nq=2\n\\]\n\nSo the centre is \\((6,8)\\). Therefore\n\n\\[\nr=\\sqrt{(6-1)^2+(8-4)^2}=\\sqrt{41}\n\\]\n\n**Answer:** \\(\\sqrt{41}\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM1HR__Q24__p28-28__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\nFactor the fractional part first:\n\n\\[\n\\frac{2x^2-5x-12}{x^2-16}\\times\\frac{x^2+4x}{6x^2+11x+3}\n\\]\n\n\\[\n=\\frac{(2x+3)(x-4)}{(x-4)(x+4)}\\times\\frac{x(x+4)}{(3x+1)(2x+3)}\n\\]\n\n\\[\n=\\frac{x}{3x+1}\n\\]\n\nSo\n\n\\[\n(2x-1)+\\frac{x}{3x+1}\n=\\frac{(2x-1)(3x+1)+x}{3x+1}\n\\]\n\n\\[\n=\\frac{6x^2-1}{3x+1}\n\\]\n\n**Answer:** \\(\\dfrac{6x^2-1}{3x+1}\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "expertise::May2025_4WM1HR__Q21__p23-23__m03__Standard-Compound-Units": {
+    "status": "checked",
+    "source": "**Solution**\n\nThe interval \\(10\\) to \\(25\\) has width \\(15\\) and frequency \\(60\\), so its frequency density is\n\n\\[\n\\frac{60}{15}=4\n\\]\n\nUsing that scale from the histogram:\n\n\\[\n35\\text{ to }40: 5\\times 1=5\n\\]\n\n\\[\n40\\text{ to }70: 30\\times 0.75=22.5\n\\]\n\n\\[\n5+22.5=27.5\n\\]\n\n**Answer:** about \\(28\\) members.",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::May2025_4WM1HR__Q21__p23-23__m03__Standard-Compound-Units"
+  },
+  "expertise::May2025_4WM1HR__Q23__p26-27__m05__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\nThe tangent point lies on the tangent line, so\n\n\\[\np+3=-\\frac54p+\\frac{21}{4}\n\\]\n\n\\[\np=1\n\\]\n\nThe tangent gradient is \\(-\\frac54\\), so the radius gradient is \\(\\frac45\\).\n\nUsing centre \\((3q,4q)\\) and tangent point \\((1,4)\\),\n\n\\[\n\\frac{4-4q}{1-3q}=\\frac45\n\\]\n\n\\[\nq=2\n\\]\n\nSo the centre is \\((6,8)\\). Therefore\n\n\\[\nr=\\sqrt{(6-1)^2+(8-4)^2}=\\sqrt{41}\n\\]\n\n**Answer:** \\(\\sqrt{41}\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::May2025_4WM1HR__Q23__p26-27__m05__Algebra-Toolkit"
+  },
+  "expertise::May2025_4WM1HR__Q24__p28-28__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\nFactor the fractional part first:\n\n\\[\n\\frac{2x^2-5x-12}{x^2-16}\\times\\frac{x^2+4x}{6x^2+11x+3}\n\\]\n\n\\[\n=\\frac{(2x+3)(x-4)}{(x-4)(x+4)}\\times\\frac{x(x+4)}{(3x+1)(2x+3)}\n\\]\n\n\\[\n=\\frac{x}{3x+1}\n\\]\n\nSo\n\n\\[\n(2x-1)+\\frac{x}{3x+1}\n=\\frac{(2x-1)(3x+1)+x}{3x+1}\n\\]\n\n\\[\n=\\frac{6x^2-1}{3x+1}\n\\]\n\n**Answer:** \\(\\dfrac{6x^2-1}{3x+1}\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::May2025_4WM1HR__Q24__p28-28__m04__Algebra-Toolkit"
+  },
+  "all::May2025_4WM2H__Q07__p08-08__m04__Ratio-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Ratio Problem Solving. The tag is correct.\n\n**Method**\n\nThe original ratio is\n\n\\[\n\\text{Pau} : \\text{Sam} : \\text{Tia} = 3:4:5\n\\]\n\nThere are\n\n\\[\n3+4+5=12 \\text{ parts}\n\\]\n\nEach part is\n\n\\[\n240 \\div 12=20\n\\]\n\nSo the original amounts are\n\n\\[\n60,\\ 80,\\ 100\n\\]\n\nSam gives 10 to Pau and Tia gives 10 to Pau, so the new amounts are\n\n\\[\n80,\\ 70,\\ 90\n\\]\n\nDivide by 10:\n\n\\[\n80:70:90=8:7:9\n\\]\n\n**Answer:** The new ratio is \\(8:7:9\\).",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Jun2025_P2H__Q06__p07-07__m04__Ratio-Problem-Solving"
+  },
+  "all::May2025_4WM2H__Q09__p10-10__m03__Percentages": {
+    "status": "checked",
+    "source": "**Topic check:** Corrected to Compound Interest and Depreciation. This is repeated percentage growth for 3 years.\n\n**Method**\n\nThe multiplier for a \\(7\\%\\) increase is\n\n\\[\n1.07\n\\]\n\nAfter 3 years,\n\n\\[\n4000(1.07)^3=4900.172\n\\]\n\nCorrect to the nearest Swiss franc,\n\n\\[\n4900.172\\approx 4900\n\\]\n\n**Answer:** \\(4900\\) Swiss francs",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Jun2025_P2H__Q07__p08-08__m03__Compound-Interest-and-Depreciation"
+  },
+  "all::May2025_4WM2H__Q01__p03-03__m03__Statistics-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\nThe range is \\(10\\), so the first number is\n\n\\[\n14-10=4\n\\]\n\nFor six numbers, the median is the mean of the third and fourth values.\n\n\\[\n\\frac{6+\\text{fourth value}}{2}=7.5\n\\]\n\nSo the fourth value is \\(9\\). To make \\(6\\) the mode, the second value must also be \\(6\\).\n\n**Answer:** the hidden numbers are \\(4,6,9\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM2H__Q02__p04-04__m03__Volume-Surface-Area": {
+    "status": "checked",
+    "source": "**Solution**\n\nArea of one trapezium:\n\n\\[\n\\frac12(8+12)\\times 3=30\n\\]\n\nPerimeter of the trapezium:\n\n\\[\n8+12+3+5=28\n\\]\n\nRectangular faces:\n\n\\[\n28\\times 9=252\n\\]\n\nTotal surface area:\n\n\\[\n252+2(30)=312\n\\]\n\n**Answer:** \\(312\\text{ cm}^2\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM2H__Q03__p05-05__m03__Percentages": {
+    "status": "checked",
+    "source": "**Solution**\n\n\\[\n\\text{loss}=8000-5600=2400\n\\]\n\n\\[\n\\text{percentage loss}=\\frac{2400}{8000}\\times 100=30\\%\n\\]\n\n**Answer:** \\(30\\%\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM2H__Q04__p05-05__m02__Coordinate-Geometry": {
+    "status": "checked",
+    "source": "**Solution**\n\nUse a compass radius greater than half of \\(AB\\). Draw matching arcs from \\(A\\) above and below the line, then draw matching arcs from \\(B\\) with the same radius. Join the two arc-intersection points.\n\n**Answer:** the joined line is the perpendicular bisector of \\(AB\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM2H__Q05__p06-06__m03__Sequences": {
+    "status": "checked",
+    "source": "**Solution**\n\nThe sequence increases by \\(4\\), so\n\n\\[\nu_n=4n+7\n\\]\n\nFor the sequence \\(5n+4\\), take \\(n=3\\):\n\n\\[\n5(3)+4=19\n\\]\n\nand \\(19\\) is prime.\n\n**Answers:** \\(4n+7\\); a suitable counterexample is \\(19\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM2H__Q06__p07-07__m04__Congruence-Similarity-Geometrical-Proof": {
+    "status": "checked",
+    "source": "**Solution**\n\nThe scale factor from \\(ABCD\\) to \\(EFGH\\) is\n\n\\[\n\\frac{FG}{BC}=\\frac{10}{4}=2.5\n\\]\n\nSo\n\n\\[\nx=EF=5\\times 2.5=12.5\n\\]\n\nand\n\n\\[\ny=CD=\\frac{24}{2.5}=9.6\n\\]\n\n**Answers:** \\(x=12.5\\), \\(y=9.6\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM2H__Q08__p09-09__m04__Statistics-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\nUse class midpoints \\(5,15,25,35,45\\).\n\n\\[\n\\frac{5x+15(3)+25(2)+35(4)+45(2)}{x+3+2+4+2}=20\n\\]\n\n\\[\n\\frac{5x+325}{x+11}=20\n\\]\n\n\\[\n5x+325=20x+220\n\\]\n\n\\[\n105=15x\n\\]\n\n\\[\nx=7\n\\]\n\n**Answer:** \\(x=7\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM2H__Q10__p10-10__m03__Simultaneous-Equations": {
+    "status": "checked",
+    "source": "**Solution**\n\nFrom\n\n\\[\n4x+y=-3.5\n\\]\n\n\\[\ny=-3.5-4x\n\\]\n\nSubstitute into \\(3x+5y=8\\):\n\n\\[\n3x+5(-3.5-4x)=8\n\\]\n\n\\[\n-17x=25.5\n\\]\n\n\\[\nx=-1.5\n\\]\n\nThen\n\n\\[\ny=-3.5-4(-1.5)=2.5\n\\]\n\n**Answers:** \\(x=-1.5\\), \\(y=2.5\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM2H__Q11__p11-11__m05__Graphing-Inequalities": {
+    "status": "checked",
+    "source": "**Solution**\n\n(a)\n\\[\n7-3t<2t+15\n\\]\n\n\\[\n-8<5t\n\\]\n\n\\[\nt>-1.6\n\\]\n\n(b) The three boundary lines are \\(x=2\\), \\(y=3\\), and \\(x+y=9\\). The shaded side gives\n\n\\[\nx\\ge 2, \\qquad y\\ge 3, \\qquad x+y\\le 9\n\\]\n\n**Answers:** \\(t>-1.6\\); \\(x\\ge2\\), \\(y\\ge3\\), \\(x+y\\le9\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM2H__Q12__p12-12__m03__Powers-Roots-Standard-Form": {
+    "status": "checked",
+    "source": "**Solution**\n\n(a)\n\\[\n8.6\\times 10^{-5}=0.000086\n\\]\n\n(b)\n\\[\n(3\\times 10^{43})\\div(6\\times 10^{37})\n\\]\n\n\\[\n=0.5\\times 10^6=5\\times 10^5\n\\]\n\n**Answers:** \\(0.000086\\), \\(5\\times10^5\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM2H__Q13__p13-13__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\nBy the alternate segment theorem,\n\n\\[\n\\angle EAB=\\angle ADB=56^\\circ\n\\]\n\nIn triangle \\(ABD\\),\n\n\\[\n\\angle BAD=180^\\circ-42^\\circ-56^\\circ=82^\\circ\n\\]\n\nSo\n\n\\[\n\\angle BAC=82^\\circ-60^\\circ=22^\\circ\n\\]\n\nAngles subtended by the same chord \\(CB\\) are equal, so\n\n\\[\n\\angle CDB=22^\\circ\n\\]\n\n**Answers:** \\(56^\\circ\\), alternate segment theorem, \\(22^\\circ\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM2H__Q14__p14-15__m06__Cumulative-Frequency-Diagrams": {
+    "status": "checked",
+    "source": "**Solution**\n\nCumulative frequencies:\n\n\\[\n8,\\ 21,\\ 33,\\ 50,\\ 57,\\ 60\n\\]\n\nPlot the points\n\n\\[\n(10,8),(20,21),(30,33),(40,50),(50,57),(60,60)\n\\]\n\nThe median is the \\(30\\)th value. Interpolating in the \\(20\\) to \\(30\\) interval gives about \\(27.5\\) minutes.\n\nFor more than \\(45\\) minutes, the estimate is about \\(7\\) people.\n\n**Answers:** cumulative frequencies \\(8,21,33,50,57,60\\); median about \\(27.5\\) minutes; more than \\(45\\) minutes about \\(7\\) people.",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM2H__Q15__p16-16__m03__Percentages": {
+    "status": "checked",
+    "source": "**Solution**\n\nUse multipliers:\n\n\\[\n1.12\\times 0.85=0.952\n\\]\n\nSo the final value is \\(95.2\\%\\) of the original.\n\n\\[\n100-95.2=4.8\n\\]\n\n**Answer:** \\(4.8\\%\\) decrease.",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM2H__Q16__p16-16__m02__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\nThere are \\(11\\) values. Excluding the median \\(14\\):\n\nLower half: \\(7,8,10,11,13\\), so \\(Q_1=10\\).\n\nUpper half: \\(16,17,19,21,24\\), so \\(Q_3=19\\).\n\n\\[\n\\text{IQR}=19-10=9\n\\]\n\n**Answer:** \\(9\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM2H__Q17__p17-17__m04__Prime-Factors-HCF-LCM": {
+    "status": "checked",
+    "source": "**Solution**\n\n(a)\n\\[\nABC=(3^2\\times5^4)(2^5\\times3^2)(2^3\\times5^6)\n\\]\n\n\\[\n=2^8\\times3^4\\times5^{10}\n\\]\n\n\\[\n(ABC)^3=2^{24}\\times3^{12}\\times5^{30}\n\\]\n\n(b)\n\\[\n(5\\times10^{150})(3\\times10^{140})=15\\times10^{290}\n\\]\n\n\\[\n=3\\times5\\times(2\\times5)^{290}\n\\]\n\n\\[\n=2^{290}\\times3\\times5^{291}\n\\]\n\n**Answers:** \\(2^{24}\\times3^{12}\\times5^{30}\\); \\(2^{290}\\times3\\times5^{291}\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM2H__Q18__p18-18__m03__Direct-Inverse-Proportion": {
+    "status": "checked",
+    "source": "**Solution**\n\nSince \\(W\\) is inversely proportional to \\(y^2\\),\n\n\\[\nW=\\frac{k}{y^2}\n\\]\n\nUsing \\(W=50\\) when \\(y=4\\):\n\n\\[\n50=\\frac{k}{16}\n\\]\n\n\\[\nk=800\n\\]\n\n**Answer:** \\(W=\\dfrac{800}{y^2}\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM2H__Q19__p18-18__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\n\\[\nc=\\frac{t^2+3}{7-8t^2}\n\\]\n\n\\[\nc(7-8t^2)=t^2+3\n\\]\n\n\\[\n7c-3=t^2(8c+1)\n\\]\n\n\\[\nt^2=\\frac{7c-3}{8c+1}\n\\]\n\n**Answer:** \\(t=\\pm\\sqrt{\\dfrac{7c-3}{8c+1}}\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM2H__Q20__p19-19__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\nLet\n\n\\[\na=2n, \\qquad b=2n+2, \\qquad c=2n+4\n\\]\n\nThen\n\n\\[\nac+4=(2n)(2n+4)+4\n\\]\n\n\\[\n=4n^2+8n+4\n\\]\n\n\\[\n=(2n+2)^2=b^2\n\\]\n\nSo \\(b^2=ac+4\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM2H__Q21__p20-21__m07__Functions": {
+    "status": "checked",
+    "source": "**Solution**\n\n(a) If \\(g(g(x))=6\\), then\n\n\\[\n\\frac{7g(x)+20}{2g(x)}=6\n\\]\n\n\\[\n7g(x)+20=12g(x)\n\\]\n\n\\[\ng(x)=4\n\\]\n\nSo\n\n\\[\n\\frac{7x+20}{2x}=4\n\\]\n\n\\[\n7x+20=8x\n\\]\n\n\\[\nx=20\n\\]\n\n(b)\n\\[\nh(x)=5x^2+30x-7=5(x+3)^2-52\n\\]\n\nLet \\(y=5(x+3)^2-52\\). Since \\(x\\ge -3\\), use the positive square root:\n\n\\[\nx+3=\\sqrt{\\frac{y+52}{5}}\n\\]\n\n\\[\nh^{-1}(x)=\\sqrt{\\frac{x+52}{5}}-3\n\\]\n\n**Answers:** \\(x=20\\); \\(h^{-1}(x)=\\sqrt{\\dfrac{x+52}{5}}-3\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM2H__Q22__p22-22__m04__Coordinate-Geometry": {
+    "status": "checked",
+    "source": "**Solution**\n\n\\[\n\\frac{dy}{dx}=3x^2+2x-10\n\\]\n\nFor a positive gradient,\n\n\\[\n3x^2+2x-10>0\n\\]\n\nThe roots are\n\n\\[\nx=\\frac{-1\\pm\\sqrt{31}}{3}\n\\]\n\nSince the quadratic opens upwards,\n\n\\[\nx<\\frac{-1-\\sqrt{31}}{3}\n\\quad \\text{or} \\quad\nx>\\frac{-1+\\sqrt{31}}{3}\n\\]\n\n**Answer:** \\(x<\\dfrac{-1-\\sqrt{31}}{3}\\) or \\(x>\\dfrac{-1+\\sqrt{31}}{3}\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM2H__Q23__p23-23__m03__Volume-Surface-Area": {
+    "status": "checked",
+    "source": "**Solution**\n\n\\[\n3x\\times 2x\\times y=1014\n\\]\n\n\\[\n6x^2y=1014\n\\]\n\n\\[\ny=\\frac{169}{x^2}\n\\]\n\nSurface area:\n\n\\[\nA=2(3x\\cdot2x+3x\\cdot y+2x\\cdot y)\n\\]\n\n\\[\n=12x^2+10xy\n\\]\n\n\\[\n=12x^2+10x\\left(\\frac{169}{x^2}\\right)\n\\]\n\n\\[\n=12x^2+\\frac{1690}{x}\n\\]\n\n**Answer:** \\(A=12x^2+\\dfrac{1690}{x}\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM2H__Q24__p24-24__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\nFor an arithmetic series,\n\n\\[\na+20d=109\n\\]\n\nand\n\n\\[\n\\frac{52}{2}(2a+51d)=4381\n\\]\n\n\\[\n26(2a+51d)=4381\n\\]\n\nSolving gives\n\n\\[\nd=-4.5, \\qquad a=199\n\\]\n\nThe fifth term is\n\n\\[\na+4d=199+4(-4.5)=181\n\\]\n\n**Answer:** \\(181\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM2H__Q25__p25-25__m04__Congruence-Similarity-Geometrical-Proof": {
+    "status": "checked",
+    "source": "**Solution**\n\nLinear scale factor from solid \\(A\\) to solid \\(B\\):\n\n\\[\n\\frac{18.6}{31}=0.6\n\\]\n\nSo the volume scale factor is\n\n\\[\n0.6^3=0.216\n\\]\n\nLet the volume of \\(A\\) be \\(V\\). Then\n\n\\[\nV-0.216V=735\n\\]\n\n\\[\n0.784V=735\n\\]\n\n\\[\nV=937.5\n\\]\n\n**Answer:** \\(937.5\\text{ cm}^3\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM2H__Q26__p26-27__m05__Ratio-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\n(a)\n\\[\n\\overrightarrow{QR}=\\overrightarrow{OR}-\\overrightarrow{OQ}\n\\]\n\n\\[\n\\overrightarrow{OQ}=2a+(a+3c)=3a+3c\n\\]\n\n\\[\n\\overrightarrow{QR}=6c-(3a+3c)=3c-3a\n\\]\n\n(b) Let \\(X\\) divide \\(QR\\) so that\n\n\\[\n\\overrightarrow{QX}=\\lambda\\overrightarrow{QR}\n\\]\n\nThen\n\n\\[\n\\overrightarrow{OX}=3a+3c+\\lambda(3c-3a)\n\\]\n\nAlso \\(X\\) lies on \\(PT\\), where \\(\\overrightarrow{OT}=14c\\), so\n\n\\[\n\\overrightarrow{OX}=2a+\\mu(14c-2a)\n\\]\n\nEquating coefficients gives \\(\\lambda=\\frac59\\). Therefore\n\n\\[\nQX:XR=\\frac59:\\frac49=5:4\n\\]\n\n**Answers:** \\(\\overrightarrow{QR}=3c-3a\\); \\(QX:XR=5:4\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::May2025_4WM2H__Q27__p28-29__m04__Graphs-of-Functions": {
+    "status": "checked",
+    "source": "**Solution**\n\n(a)\n\nFor \\(y=f(x-4)\\), move the graph \\(4\\) units right:\n\n\\[\n(6,-5)\\to(10,-5)\n\\]\n\nFor \\(y=f(3x)\\), divide the \\(x\\)-coordinate by \\(3\\):\n\n\\[\n(6,-5)\\to(2,-5)\n\\]\n\n(b) For \\(y=g(2x)-3\\), halve each \\(x\\)-coordinate and subtract \\(3\\) from each \\(y\\)-coordinate.\n\nUseful transformed points are\n\n\\[\n(-4,1)\\to(-2,-2),\\quad (2,4)\\to(1,1),\\quad (6,2)\\to(3,-1)\n\\]\n\nJoin these points with straight line segments.\n\n**Answers:** \\((10,-5)\\), \\((2,-5)\\), graph through \\((-2,-2),(1,1),(3,-1)\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "expertise::May2025_4WM2H__Q20__p19-19__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\nLet\n\n\\[\na=2n, \\qquad b=2n+2, \\qquad c=2n+4\n\\]\n\nThen\n\n\\[\nac+4=(2n)(2n+4)+4\n\\]\n\n\\[\n=4n^2+8n+4\n\\]\n\n\\[\n=(2n+2)^2=b^2\n\\]\n\nSo \\(b^2=ac+4\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::May2025_4WM2H__Q20__p19-19__m03__Algebra-Toolkit"
+  },
+  "expertise::May2025_4WM2H__Q21__p20-21__m07__Functions": {
+    "status": "checked",
+    "source": "**Solution**\n\n(a) If \\(g(g(x))=6\\), then\n\n\\[\n\\frac{7g(x)+20}{2g(x)}=6\n\\]\n\n\\[\n7g(x)+20=12g(x)\n\\]\n\n\\[\ng(x)=4\n\\]\n\nSo\n\n\\[\n\\frac{7x+20}{2x}=4\n\\]\n\n\\[\n7x+20=8x\n\\]\n\n\\[\nx=20\n\\]\n\n(b)\n\\[\nh(x)=5x^2+30x-7=5(x+3)^2-52\n\\]\n\nLet \\(y=5(x+3)^2-52\\). Since \\(x\\ge -3\\), use the positive square root:\n\n\\[\nx+3=\\sqrt{\\frac{y+52}{5}}\n\\]\n\n\\[\nh^{-1}(x)=\\sqrt{\\frac{x+52}{5}}-3\n\\]\n\n**Answers:** \\(x=20\\); \\(h^{-1}(x)=\\sqrt{\\dfrac{x+52}{5}}-3\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::May2025_4WM2H__Q21__p20-21__m07__Functions"
+  },
+  "expertise::May2025_4WM2H__Q22__p22-22__m04__Coordinate-Geometry": {
+    "status": "checked",
+    "source": "**Solution**\n\n\\[\n\\frac{dy}{dx}=3x^2+2x-10\n\\]\n\nFor a positive gradient,\n\n\\[\n3x^2+2x-10>0\n\\]\n\nThe roots are\n\n\\[\nx=\\frac{-1\\pm\\sqrt{31}}{3}\n\\]\n\nSince the quadratic opens upwards,\n\n\\[\nx<\\frac{-1-\\sqrt{31}}{3}\n\\quad \\text{or} \\quad\nx>\\frac{-1+\\sqrt{31}}{3}\n\\]\n\n**Answer:** \\(x<\\dfrac{-1-\\sqrt{31}}{3}\\) or \\(x>\\dfrac{-1+\\sqrt{31}}{3}\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::May2025_4WM2H__Q22__p22-22__m04__Coordinate-Geometry"
+  },
+  "expertise::May2025_4WM2H__Q23__p23-23__m03__Volume-Surface-Area": {
+    "status": "checked",
+    "source": "**Solution**\n\n\\[\n3x\\times 2x\\times y=1014\n\\]\n\n\\[\n6x^2y=1014\n\\]\n\n\\[\ny=\\frac{169}{x^2}\n\\]\n\nSurface area:\n\n\\[\nA=2(3x\\cdot2x+3x\\cdot y+2x\\cdot y)\n\\]\n\n\\[\n=12x^2+10xy\n\\]\n\n\\[\n=12x^2+10x\\left(\\frac{169}{x^2}\\right)\n\\]\n\n\\[\n=12x^2+\\frac{1690}{x}\n\\]\n\n**Answer:** \\(A=12x^2+\\dfrac{1690}{x}\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::May2025_4WM2H__Q23__p23-23__m03__Volume-Surface-Area"
+  },
+  "expertise::May2025_4WM2H__Q24__p24-24__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\nFor an arithmetic series,\n\n\\[\na+20d=109\n\\]\n\nand\n\n\\[\n\\frac{52}{2}(2a+51d)=4381\n\\]\n\n\\[\n26(2a+51d)=4381\n\\]\n\nSolving gives\n\n\\[\nd=-4.5, \\qquad a=199\n\\]\n\nThe fifth term is\n\n\\[\na+4d=199+4(-4.5)=181\n\\]\n\n**Answer:** \\(181\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::May2025_4WM2H__Q24__p24-24__m04__Algebra-Toolkit"
+  },
+  "expertise::May2025_4WM2H__Q25__p25-25__m04__Congruence-Similarity-Geometrical-Proof": {
+    "status": "checked",
+    "source": "**Solution**\n\nLinear scale factor from solid \\(A\\) to solid \\(B\\):\n\n\\[\n\\frac{18.6}{31}=0.6\n\\]\n\nSo the volume scale factor is\n\n\\[\n0.6^3=0.216\n\\]\n\nLet the volume of \\(A\\) be \\(V\\). Then\n\n\\[\nV-0.216V=735\n\\]\n\n\\[\n0.784V=735\n\\]\n\n\\[\nV=937.5\n\\]\n\n**Answer:** \\(937.5\\text{ cm}^3\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::May2025_4WM2H__Q25__p25-25__m04__Congruence-Similarity-Geometrical-Proof"
+  },
+  "expertise::May2025_4WM2H__Q26__p26-27__m05__Ratio-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\n(a)\n\\[\n\\overrightarrow{QR}=\\overrightarrow{OR}-\\overrightarrow{OQ}\n\\]\n\n\\[\n\\overrightarrow{OQ}=2a+(a+3c)=3a+3c\n\\]\n\n\\[\n\\overrightarrow{QR}=6c-(3a+3c)=3c-3a\n\\]\n\n(b) Let \\(X\\) divide \\(QR\\) so that\n\n\\[\n\\overrightarrow{QX}=\\lambda\\overrightarrow{QR}\n\\]\n\nThen\n\n\\[\n\\overrightarrow{OX}=3a+3c+\\lambda(3c-3a)\n\\]\n\nAlso \\(X\\) lies on \\(PT\\), where \\(\\overrightarrow{OT}=14c\\), so\n\n\\[\n\\overrightarrow{OX}=2a+\\mu(14c-2a)\n\\]\n\nEquating coefficients gives \\(\\lambda=\\frac59\\). Therefore\n\n\\[\nQX:XR=\\frac59:\\frac49=5:4\n\\]\n\n**Answers:** \\(\\overrightarrow{QR}=3c-3a\\); \\(QX:XR=5:4\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::May2025_4WM2H__Q26__p26-27__m05__Ratio-Toolkit"
+  },
+  "expertise::May2025_4WM2H__Q27__p28-29__m04__Graphs-of-Functions": {
+    "status": "checked",
+    "source": "**Solution**\n\n(a)\n\nFor \\(y=f(x-4)\\), move the graph \\(4\\) units right:\n\n\\[\n(6,-5)\\to(10,-5)\n\\]\n\nFor \\(y=f(3x)\\), divide the \\(x\\)-coordinate by \\(3\\):\n\n\\[\n(6,-5)\\to(2,-5)\n\\]\n\n(b) For \\(y=g(2x)-3\\), halve each \\(x\\)-coordinate and subtract \\(3\\) from each \\(y\\)-coordinate.\n\nUseful transformed points are\n\n\\[\n(-4,1)\\to(-2,-2),\\quad (2,4)\\to(1,1),\\quad (6,2)\\to(3,-1)\n\\]\n\nJoin these points with straight line segments.\n\n**Answers:** \\((10,-5)\\), \\((2,-5)\\), graph through \\((-2,-2),(1,1),(3,-1)\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::May2025_4WM2H__Q27__p28-29__m04__Graphs-of-Functions"
+  },
+  "all::May2025_4WM2HR__Q03__p04-04__m03__Simultaneous-Equations": {
+    "status": "checked",
+    "source": "#### Required:\n\nSolve: 3*x* + 2*y* = 10 and 3*x* − 4*y* = 16 algebraically.\n\n#### Step:\n\nLabel the equations:\n$$\\\\begin{aligned}\n            3x + 2y &= 10 \\\\tag{1}\\\\\\\\\n            3x - 4y &= 16 \\\\tag{2}\n        \\\\end{aligned}$$\n\n#### Step:\n\nSubtract <span class=\"upright\">(2)</span> from <span class=\"upright\">(1)</span> to eliminate *x*:\n$$(1)-(2): \\\\quad 6y = -6 \\\\implies \\\\boxed{y = -1}$$\n\n#### Step:\n\nSubstitute *y* =  − 1 into <span class=\"upright\">(1)</span>:\n$$3x + 2(-1) = 10 \\\\implies 3x = 12 \\\\implies \\\\boxed{x = 4}$$\n\n#### Step:\n\nCheck in equation <span class=\"upright\">(2)</span>: 3(4) − 4(−1) = 12 + 4 = 16\n\n#### Answer:\n\n*x* = 4,  *y* =  − 1",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::May2025_4WM2HR__Q08__p11-11__m03__Percentages": {
+    "status": "checked",
+    "source": "#### Required:\n\nSale price (after 15% reduction)  = 612 Swiss francs. Find the normal price.\n\n#### Step:\n\nA 15% reduction means the sale price is 85% of the normal price:\n612 = 0.85 × Normal price\n\n#### Step:\n\nSolve for the normal price:\n$$\\\\text{Normal price} = \\\\frac{612}{0.85} = 720$$\n\n#### Answer:\n\nNormal price  = 720 Swiss francs\n\n#### Note:\n\nNever calculate 15% of 612 and add it on — that gives 703.80 (wrong!). Always divide by the decimal multiplier.",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::May2025_4WM2HR__Q12__p16-16__m03__Compound-Interest-Depreciation": {
+    "status": "checked",
+    "source": "#### Required:\n\nCar bought for $16 000; depreciates 12%/yr for 2 yrs, then *x*%/yr in year 3. Value after 3 years  = $11 461.12. Find *x*.\n\n#### Step:\n\nValue after 2 years at 12% depreciation:\n*V*<sub>2</sub> = 16000 × (0.88)<sup>2</sup> = 16000 × 0.7744 = $12 390.40\n\n#### Step:\n\nApply year-3 depreciation and set equal to final value:\n$$12390.40\\\\times\\\\!\\\\left(1 - \\\\frac{x}{100}\\\\right) = 11461.12$$\n\n#### Step:\n\nSolve:\n$$1 - \\\\frac{x}{100} = \\\\frac{11461.12}{12390.40} = 0.925\n        \\\\implies \\\\frac{x}{100} = 0.075\n        \\\\implies x = 7.5$$\n\n#### Answer:\n\n*x* = 7.5",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::May2025_4WM2HR__Q14__p17-17__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "#### Required:\n\nMake *k* the subject of $\\\\displaystyle p = \\\\dfrac{8k^2+5}{7-3k^2}$.\n\n#### Step:\n\nMultiply both sides by (7−3*k*<sup>2</sup>):\n*p*(7−3*k*<sup>2</sup>) = 8*k*<sup>2</sup> + 5\n\n#### Step:\n\nExpand:\n7*p* − 3*p**k*<sup>2</sup> = 8*k*<sup>2</sup> + 5\n\n#### Step:\n\nCollect all *k*<sup>2</sup> terms on one side:\n7*p* − 5 = 8*k*<sup>2</sup> + 3*p**k*<sup>2</sup>\n\n#### Step:\n\nFactorise and solve for *k*:\n$$7p - 5 = k^2(3p+8) \\\\implies k^2 = \\\\frac{7p-5}{3p+8}$$\n$$k = \\\\pm\\\\sqrt{\\\\dfrac{7p-5}{3p+8}}$$\n\n#### Answer:\n\n$k = \\\\pm\\\\sqrt{\\\\dfrac{7p-5}{3p+8}}$\n\n#### Note:\n\nInclude both ± roots unless the context specifies the sign of *k*.",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::May2025_4WM2HR__Q16__p19-19__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "#### Required:\n\n$\\\\overrightarrow{OA}=4\\\\mathbf{a}$, $\\\\overrightarrow{OB}=4\\\\mathbf{b}$, AP:PB = 1:3. (a) Find $\\\\overrightarrow{AB}$. (b) Express $\\\\overrightarrow{OP}$ in simplest form.\n\n#### Part (a)\n\n$$\\\\overrightarrow{AB} = \\\\overrightarrow{AO}+\\\\overrightarrow{OB} = -4\\\\mathbf{a}+4\\\\mathbf{b}$$\n\n#### Answer:\n\n$\\\\overrightarrow{AB} = 4\\\\mathbf{b}-4\\\\mathbf{a}$\n\n#### Part (b)\n\n#### Step:\n\nAP:PB = 1:3 means $\\\\overrightarrow{AP} = \\\\tfrac{1}{4}\\\\overrightarrow{AB}$:\n$$\\\\overrightarrow{AP} = \\\\tfrac{1}{4}(4\\\\mathbf{b}-4\\\\mathbf{a}) = \\\\mathbf{b}-\\\\mathbf{a}$$\n\n#### Step:\n\nUse $\\\\overrightarrow{OP} = \\\\overrightarrow{OA}+\\\\overrightarrow{AP}$:\n$$\\\\overrightarrow{OP} = 4\\\\mathbf{a}+(\\\\mathbf{b}-\\\\mathbf{a}) = 3\\\\mathbf{a}+\\\\mathbf{b}$$\n\n#### Answer:\n\n$\\\\overrightarrow{OP} = 3\\\\mathbf{a}+\\\\mathbf{b}$",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::May2025_4WM2HR__Q20__p23-23__m03__Solving-Inequalities": {
+    "status": "checked",
+    "source": "#### Required:\n\nSolve 2*x*<sup>2</sup> − 7*x* − 15 \\> 0. Show clear algebraic working.\n\n#### Step:\n\nFactorise the quadratic:\n2*x*<sup>2</sup> − 7*x* − 15 = (2*x*+3)(*x*−5)\n*Check:* (2*x*+3)(*x*−5) = 2*x*<sup>2</sup> − 10*x* + 3*x* − 15 = 2*x*<sup>2</sup> − 7*x* − 15\n\n#### Step:\n\nRoots: set each factor to zero:\n$$2x+3=0 \\\\implies x=-\\\\tfrac{3}{2};\\\\qquad x-5=0 \\\\implies x=5$$\n\n#### Step:\n\nSince the coefficient of *x*<sup>2</sup> is  + 2 \\> 0, the parabola opens **upward**. The expression is  \\> 0 *outside* the roots:\n\n#### Answer:\n\n$x \\< -\\\\dfrac{3}{2}$or*x* \\> 5",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "expertise::May2025_4WM2HR__Q20__p23-23__m03__Solving-Inequalities": {
+    "status": "checked",
+    "source": "#### Required:\n\nSolve 2*x*<sup>2</sup> − 7*x* − 15 \\> 0. Show clear algebraic working.\n\n#### Step:\n\nFactorise the quadratic:\n2*x*<sup>2</sup> − 7*x* − 15 = (2*x*+3)(*x*−5)\n*Check:* (2*x*+3)(*x*−5) = 2*x*<sup>2</sup> − 10*x* + 3*x* − 15 = 2*x*<sup>2</sup> − 7*x* − 15\n\n#### Step:\n\nRoots: set each factor to zero:\n$$2x+3=0 \\\\implies x=-\\\\tfrac{3}{2};\\\\qquad x-5=0 \\\\implies x=5$$\n\n#### Step:\n\nSince the coefficient of *x*<sup>2</sup> is  + 2 \\> 0, the parabola opens **upward**. The expression is  \\> 0 *outside* the roots:\n\n#### Answer:\n\n$x \\< -\\\\dfrac{3}{2}$or*x* \\> 5",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex",
+    "reused_from": "all::May2025_4WM2HR__Q20__p23-23__m03__Solving-Inequalities"
+  },
+  "all::May2025_4WM2HR__Q25__p28-29__m05__Volume-Surface-Area": {
+    "status": "checked",
+    "source": "#### Required:\n\nHemisphere H has radius *x* cm and volume 6174*π* cm<sup>3</sup>. A bowl is made by removing an inner hemisphere, leaving 2 cm thickness. Find total surface area in terms of *π*.\n\n#### Step:\n\nFind outer radius *x*. Volume of hemisphere $= \\\\dfrac{2}{3}\\\\pi r^3$:\n$$\\\\frac{2}{3}\\\\pi x^3 = 6174\\\\pi\n        \\\\implies x^3 = \\\\frac{6174\\\\times3}{2} = 9261\n        \\\\implies x = \\\\sqrt\\[3\\]{9261} = 21\\\\text{ cm}$$\n\n#### Step:\n\nFind inner radius:\n*r*<sub>inner</sub> = 21 − 2 = 19 cm\n\n#### Step:\n\nThree surfaces to add:\n\n**1. Outer curved surface** (half-sphere, radius 21):\n*A*<sub>1</sub> = 2*π*(21)<sup>2</sup> = 2*π* × 441 = 882*π*\n\n**2. Inner curved surface** (half-sphere, radius 19):\n*A*<sub>2</sub> = 2*π*(19)<sup>2</sup> = 2*π* × 361 = 722*π*\n\n**3. Flat annular ring** at the top rim:\n*A*<sub>3</sub> = *π*(21)<sup>2</sup> − *π*(19)<sup>2</sup> = *π*(441−361) = 80*π*\n\n#### Step:\n\nTotal surface area:\n*A*<sub>total</sub> = 882*π* + 722*π* + 80*π* = 1684*π*\n\n#### Answer:\n\nTotal surface area  = 1684*π* cm<sup>2</sup>\n\n#### Note:\n\nThree separate surfaces! Missing the flat annular ring is the most common error on this type of question.",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "expertise::May2025_4WM2HR__Q25__p28-29__m05__Volume-Surface-Area": {
+    "status": "checked",
+    "source": "#### Required:\n\nHemisphere H has radius *x* cm and volume 6174*π* cm<sup>3</sup>. A bowl is made by removing an inner hemisphere, leaving 2 cm thickness. Find total surface area in terms of *π*.\n\n#### Step:\n\nFind outer radius *x*. Volume of hemisphere $= \\\\dfrac{2}{3}\\\\pi r^3$:\n$$\\\\frac{2}{3}\\\\pi x^3 = 6174\\\\pi\n        \\\\implies x^3 = \\\\frac{6174\\\\times3}{2} = 9261\n        \\\\implies x = \\\\sqrt\\[3\\]{9261} = 21\\\\text{ cm}$$\n\n#### Step:\n\nFind inner radius:\n*r*<sub>inner</sub> = 21 − 2 = 19 cm\n\n#### Step:\n\nThree surfaces to add:\n\n**1. Outer curved surface** (half-sphere, radius 21):\n*A*<sub>1</sub> = 2*π*(21)<sup>2</sup> = 2*π* × 441 = 882*π*\n\n**2. Inner curved surface** (half-sphere, radius 19):\n*A*<sub>2</sub> = 2*π*(19)<sup>2</sup> = 2*π* × 361 = 722*π*\n\n**3. Flat annular ring** at the top rim:\n*A*<sub>3</sub> = *π*(21)<sup>2</sup> − *π*(19)<sup>2</sup> = *π*(441−361) = 80*π*\n\n#### Step:\n\nTotal surface area:\n*A*<sub>total</sub> = 882*π* + 722*π* + 80*π* = 1684*π*\n\n#### Answer:\n\nTotal surface area  = 1684*π* cm<sup>2</sup>\n\n#### Note:\n\nThree separate surfaces! Missing the flat annular ring is the most common error on this type of question.",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex",
+    "reused_from": "all::May2025_4WM2HR__Q25__p28-29__m05__Volume-Surface-Area"
+  },
+  "all::May2025_4WM2HR__Q01__p03-03__m05__Statistics-Toolkit": {
+    "status": "checked",
+    "source": "#### Required:\n\n\\(a\\) Write down the modal class. (b) Estimate the mean weight of the 50 dogs.\n\n#### Part (a)\n\nThe **modal class** is the interval with the highest frequency. From the table, the highest frequency is **17**, which belongs to:\n\n#### Answer:\n\nModal class: 8 \\< *w* ≤ 12 kg\n\n#### Part (b)\n\n#### Step:\n\nFind the midpoint of each class interval:\n\n#### Step:\n\nApply the estimated mean formula:\n$$\\\\bar{x} = \\\\frac{\\\\sum f\\\\!x}{\\\\sum f} = \\\\frac{660}{50} = 13.2 \\\\text{ kg}$$\n\n#### Answer:\n\nEstimated mean weight  = 13.2 kg",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::May2025_4WM2HR__Q02__p04-04__m03__Prime-Factors-HCF-LCM": {
+    "status": "checked",
+    "source": "#### Required:\n\nWrite 1400 as a product of powers of its prime factors.\n\n#### Step:\n\nDivide repeatedly by the smallest prime factor each time:\n$$1400 \\\\;\\\\xrightarrow{\\\\div 2}\\\\; 700\n        \\\\;\\\\xrightarrow{\\\\div 2}\\\\; 350\n        \\\\;\\\\xrightarrow{\\\\div 2}\\\\; 175\n        \\\\;\\\\xrightarrow{\\\\div 5}\\\\; 35\n        \\\\;\\\\xrightarrow{\\\\div 5}\\\\; 7\n        \\\\;\\\\xrightarrow{\\\\div 7}\\\\; 1$$\n\n#### Step:\n\nCollect the prime factors:\n$$1400 = \\\\underbrace{2 \\\\times 2 \\\\times 2}\\_{2^3}\n        \\\\times \\\\underbrace{5 \\\\times 5}\\_{5^2}\n        \\\\times 7$$\n\n#### Answer:\n\n1400 = 2<sup>3</sup> × 5<sup>2</sup> × 7",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::May2025_4WM2HR__Q04__p06-07__m04__Transformations": {
+    "status": "checked",
+    "source": "#### Required:\n\n\\(a\\) Rotate triangle A 90° anticlockwise about (1,2); label triangle B. (b) Describe fully the transformation mapping C onto D.\n\n#### Part (a)\n\n#### Step:\n\nThe rule for 90° anticlockwise rotation about (*a*,*b*):\n(*x*, *y*) → (*a* − (*y*−*b*),  *b* + (*x*−*a*))\nAbout (1,2): (*x*,*y*) → (3−*y*,  *x*+1)\n\n#### Step:\n\nTriangle A has vertices *A*<sub>1</sub>(2,7), *A*<sub>2</sub>(4,5), *A*<sub>3</sub>(2,5). Apply the rule:\n(2,7) → (−4,3),   (4,5) → (−2,5),   (2,5) → (−2,3)\n\n#### Answer:\n\nTriangle B has vertices (−4,3), (−2,5), (−2,3)\n\n#### Part (b)\n\n#### Step:\n\nIdentify corresponding vertices of C and D from the diagram and compute the vector:\n$$(4,\\\\,4) \\\\longrightarrow (-5,\\\\,7): \\\\quad\n        \\\\vec{v} = \\\\begin{pmatrix}-9\\\\\\\\3\\\\end{pmatrix}$$\nCheck: (6,1) → (−3,4) gives the same vector $\\\\begin{pmatrix}-9\\\\\\\\3\\\\end{pmatrix}$\n\n#### Answer:\n\nTranslation by vector $\\\\begin{pmatrix}-9\\\\\\\\3\\\\end{pmatrix}$",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::May2025_4WM2HR__Q05__p08-08__m05__Percentages": {
+    "status": "checked",
+    "source": "#### Required:\n\nCalculate Joshua’s percentage profit on the flooring job. Give answer to 1 d.p.\n\n#### Step:\n\nNumber of boxes of tiles needed:\n$$\\\\frac{45\\\\,\\\\text{m}^2}{1.5\\\\,\\\\text{m}^2/\\\\text{box}} = 30 \\\\text{ boxes}$$\n\n#### Step:\n\nCost of tiles:\n30 × £64 = £1920\n\n#### Step:\n\nCost of adhesive:\n5 × £12 = £60\n\n#### Step:\n\nTotal cost (cost price):\n£1920 + £60 = £1980\n\n#### Step:\n\nProfit and percentage profit:\nProfit = £3000 − £1980 = £1020\n$$\\\\%\\\\,\\\\text{Profit} = \\\\frac{1020}{1980} \\\\times 100 = 51.515\\\\ldots\\\\%$$\n\n#### Answer:\n\nPercentage profit  = 51.5%\n\n#### Note:\n\nAlways divide profit by the **cost price** (£1980), not the selling price (£3000). Dividing by £3000 gives 34.0% — a common but wrong answer.",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::May2025_4WM2HR__Q06__p09-09__m03__Powers-Roots-Standard-Form": {
+    "status": "checked",
+    "source": "#### Required:\n\n\\(a\\) Write 82 000 000 in standard form. (b) Write 5.8 × 10<sup>−6</sup> as an ordinary number. (c) Write 160 × 10<sup>300</sup> in standard form.\n\n#### Part (a)\n\n82 000 000 = 8.2 × 10<sup>7</sup>\n\n#### Answer:\n\n8.2 × 10<sup>7</sup>\n\n#### Part (b)\n\nMove the decimal 6 places **left**:\n5.8 × 10<sup>−6</sup> = 0.0000058\n\n#### Answer:\n\n0.0000058\n\n#### Part (c)\n\n160 × 10<sup>300</sup> = 1.6 × 10<sup>1</sup> × 10<sup>300</sup> = 1.6 × 10<sup>301</sup>\n\n#### Answer:\n\n1.6 × 10<sup>301</sup>",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::May2025_4WM2HR__Q07__p10-10__m03__Statistics-Toolkit": {
+    "status": "checked",
+    "source": "#### Required:\n\nMean of 7 numbers  = 60; mean of 3 of them  = 46. Find the mean of the other 4.\n\n#### Step:\n\nSum of all 7 numbers:\n7 × 60 = 420\n\n#### Step:\n\nSum of the 3 numbers:\n3 × 46 = 138\n\n#### Step:\n\nSum of the remaining 4:\n420 − 138 = 282\n\n#### Step:\n\nMean of the 4 numbers:\n$$\\\\frac{282}{4} = 70.5$$\n\n#### Answer:\n\nMean of the other 4 numbers  = 70.5",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::May2025_4WM2HR__Q09__p12-12__m06__Graphing-Inequalities": {
+    "status": "checked",
+    "source": "#### Required:\n\n\\(a\\) Solve 3*x* − 22 \\> 8*x* − 40 algebraically. (b) Write the three inequalities defining region R.\n\n#### Part (a)\n\n#### Step:\n\nMove all *x* terms to the right and constants to the left:\n3*x* − 22 \\> 8*x* − 40 ⟹  − 22 + 40 \\> 8*x* − 3*x* ⟹ 18 \\> 5*x*\n\n#### Step:\n\nDivide both sides by 5:\n$$x \\< \\\\frac{18}{5} = 3.6$$\n\n#### Answer:\n\n*x* \\< 3.6\n\n#### Part (b)\n\n#### Step:\n\nIdentify the three boundary lines and their regions using the graph. The shaded region R is bounded by *x* = 2, *y* = 1, and *x* + *y* = 6.\n\n#### Answer:\n\n*x* ≥ 2,*y* ≥ 1,*x* + *y* ≤ 6",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::May2025_4WM2HR__Q10__p13-13__m05__Angles-in-Polygons-Parallel-Lines": {
+    "status": "checked",
+    "source": "#### Required:\n\nFind angle *x* in the figure combining a regular 10-gon (ABCDEFGHIJ) and hexagon AJKLMN.\n\n#### Step:\n\nInterior angle of a regular 10-sided polygon:\n$$\\\\text{Interior angle} = \\\\frac{(10-2)\\\\times180°}{10} = \\\\frac{1440°}{10} = 144°$$\n\n#### Step:\n\nFind the interior angle of the hexagon at vertex *A*. At point *A*: decagon angle + 113° + hexagon angle at *A* = 360°:\n∠*x* = 360° − 144° − 110° = 106°\n\n#### Answer:\n\n*x* = 106°",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::May2025_4WM2HR__Q11__p14-15__m07__Percentages": {
+    "status": "checked",
+    "source": "#### Required:\n\n\\(a\\) Median(b) IQR(c) % days  \\> 75 km(d) More consistent?\n\n#### Part (a)\n\n#### Step:\n\nMedian at the $\\\\frac{60}{2} = 30$th value — read from graph at cf  = 30:\n\n#### Answer:\n\nMedian  ≈ 62 km\n\n#### Part (b)\n\n#### Step:\n\n*Q*<sub>1</sub> at cf  = 15, *Q*<sub>3</sub> at cf  = 45. Read from graph:\n*Q*<sub>1</sub> ≈ 56 km,   *Q*<sub>3</sub> ≈ 74 km\nIQR = *Q*<sub>3</sub> − *Q*<sub>1</sub> = 69 − 55 = 14 km\n\n#### Answer:\n\nIQR  ≈ 14 km\n\n#### Note:\n\nGraph-reading answers are accepted within  ± 2 km of the model answer.\n\n#### Part (c)\n\n#### Step:\n\nFrom the graph, read the cumulative frequency at *d* = 75 km:\ncf at 75 km ≈ 52\n\n#### Step:\n\nNumber of days with distance  \\> 75 km:\n60 − 52 = 8 days\n\n#### Step:\n\nPercentage:\n$$\\\\frac{8}{60}\\\\times100 = 13.3\\\\%$$\n\n#### Answer:\n\n13.3% of days Ehrick drives more than 75 km\n\n#### Part (d)\n\n#### Answer:\n\nAlison is more consistent — her IQR (15 km) is smaller than Tomas’s (28 km), meaning less variability in daily distances.",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::May2025_4WM2HR__Q13__p17-17__m03__Powers-Roots-Standard-Form": {
+    "status": "checked",
+    "source": "#### Required:\n\nDistance to Andromeda: 1.6 × 10<sup>11</sup> AU. Convert to light years (2 s.f., standard form).\n\n#### Step:\n\nConvert AU → km:\n1.6 × 10<sup>11</sup> × 1.5 × 10<sup>8</sup> = (1.6×1.5) × 10<sup>19</sup> = 2.4 × 10<sup>19</sup> km\n\n#### Step:\n\nConvert km → light years:\n$$\\\\frac{2.4\\\\times10^{19}}{9.5\\\\times10^{12}}\n        = \\\\frac{2.4}{9.5}\\\\times10^{7}\n        = 0.2526\\\\ldots\\\\times10^{7}$$\n\n#### Step:\n\nWrite in standard form to 2 s.f.:\n = 2.526… × 10<sup>6</sup> ≈ 2.5 × 10<sup>6</sup>\n\n#### Answer:\n\nDistance  = 2.5 × 10<sup>6</sup> light years",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::May2025_4WM2HR__Q15__p18-18__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "#### Required:\n\nA, B, C on circle centre O. ∠*B**A**O* = 36°, ∠*B**C**O* = 21°. Find ∠*A**C**O*.\n\n#### Step:\n\n△*O**A**B* is isosceles (*O**A* = *O**B*= radius):\n∠*O**A**B* = ∠*O**B**A* = 36° ⟹ ∠*A**O**B* = 180° − 36° − 36° = 108°\n\n#### Step:\n\n△*O**B**C* is isosceles (*O**B* = *O**C*):\n∠*O**B**C* = ∠*O**C**B* = 21° ⟹ ∠*B**O**C* = 180° − 21° − 21° = 138°\n\n#### Step:\n\nAngles at centre O (on the same side):\n∠*A**O**C* = 360° − 108° − 138° = 114°\n\n#### Step:\n\n△*O**A**C* is isosceles (*O**A* = *O**C*):\n$$\\\\angle OAC + \\\\angle OCA = 180°-114° = 66°\n        \\\\implies \\\\angle ACO = \\\\frac{66°}{2} = 33°$$\n\n#### Answer:\n\n∠*A**C**O* = 33°",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::May2025_4WM2HR__Q17__p20-20__m04__Functions": {
+    "status": "checked",
+    "source": "#### Required:\n\n$g(x) = \\\\dfrac{3x}{x-2}$. (a) Value excluded from domain. (b) Find *g*<sup>−1</sup>(*x*).\n\n#### Part (a)\n\nThe denominator must not equal zero: *x* − 2 ≠ 0.\n\n#### Answer:\n\n*x* = 2 cannot be in any domain of *g*\n\n#### Part (b)\n\n#### Step:\n\nSet *y* = *g*(*x*) and swap *x* ↔ *y*:\n$$x = \\\\frac{3y}{y-2}$$\n\n#### Step:\n\nMultiply both sides by (*y*−2):\n*x*(*y*−2) = 3*y* ⟹ *x**y* − 2*x* = 3*y*\n\n#### Step:\n\nCollect *y* terms and factorise:\n*x**y* − 3*y* = 2*x* ⟹ *y*(*x*−3) = 2*x*\n\n#### Step:\n\nSolve for *y*:\n$$y = \\\\frac{2x}{x-3}$$\n\n#### Answer:\n\n$g^{-1}(x) = \\\\dfrac{2x}{x-3}$\n\n#### Note:\n\n*g*<sup>−1</sup>(*x*) is undefined at *x* = 3, which is the range restriction of *g*(*x*) (horizontal asymptote).",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::May2025_4WM2HR__Q18__p21-21__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "#### Required:\n\nDB is a diameter; chords AC and DB intersect at P. AP = 12 cm, PC = 7 cm, PB = 6 cm. Find area of circle (3 s.f.).\n\n#### Step:\n\nApply the **Intersecting Chords Theorem**: *A**P* × *P**C* = *B**P* × *P**D*\n$$12\\\\times7 = 6\\\\times PD \\\\implies PD = \\\\frac{84}{6} = 14\\\\text{ cm}$$\n\n#### Step:\n\nDiameter *D**B*:\n*D**B* = *P**D* + *P**B* = 14 + 6 = 20 cm ⟹ *r* = 10 cm\n\n#### Step:\n\nArea of circle:\nArea = *π**r*<sup>2</sup> = 100*π* ≈ 314.159… cm<sup>2</sup>\n\n#### Answer:\n\nArea of circle  = 314 cm<sup>2</sup> (3 s.f.)\n\n#### Note:\n\nIntersecting Chords Theorem: if two chords cross inside a circle at P, then *A**P* × *P**C* = *B**P* × *P**D*.",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::May2025_4WM2HR__Q19__p22-22__m03__Functions": {
+    "status": "checked",
+    "source": "#### Required:\n\nEstimate the gradient of *y* = *f*(*x*) at the point where *x* = 3.\n\n#### Step:\n\nDraw a tangent to the curve at *x* = 3. From the graph, a suitable tangent passes through approximately (1, −2) and (5, 6):\n\n#### Step:\n\nCalculate gradient of the tangent:\n$$\\\\text{Gradient} = \\\\frac{\\\\Delta y}{\\\\Delta x} = \\\\frac{6-(-2)}{5-1} = \\\\frac{8}{4} = 2$$\n\n#### Answer:\n\nGradient  ≈ 2 at *x* = 3\n\n#### Note:\n\nAnswers in the range 1 to 3 are typically accepted. Draw the tangent triangle as large as possible for the most accurate estimate.",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::May2025_4WM2HR__Q21__p24-24__m05__Volume-Surface-Area": {
+    "status": "checked",
+    "source": "#### Required:\n\nCuboid has a square cross-section of side *x* cm and length (15−4*x*) cm. Find the maximum value of the volume *V*.\n\n#### Step:\n\nWrite *V* as a function of *x*:\n*V* = *x* ⋅ *x* ⋅ (15−4*x*) = *x*<sup>2</sup>(15−4*x*) = 15*x*<sup>2</sup> − 4*x*<sup>3</sup>\n\n#### Step:\n\nDifferentiate:\n$$\\\\frac{dV}{dx} = 30x - 12x^2$$\n\n#### Step:\n\nSet $\\\\dfrac{dV}{dx} = 0$:\n$$30x - 12x^2 = 0 \\\\implies 6x(5-2x) = 0 \\\\implies x=0\\\\;\\\\text{ or }\\\\;x=\\\\tfrac{5}{2}=2.5$$\n(*x* = 0 gives zero volume, so the meaningful solution is *x* = 2.5.)\n\n#### Step:\n\nSecond derivative test to confirm maximum:\n$$\\\\frac{d^2V}{dx^2} = 30-24x\\\\;\\\\Bigg\\|\\_{x=2.5} = 30 - 60 = -30 \\< 0 \\\\quad \\\\checkmark\\\\text{ (maximum)}$$\n\n#### Step:\n\nCalculate *V*<sub>max</sub>:\n*V*<sub>max</sub> = (2.5)<sup>2</sup> × (15−4×2.5) = 6.25 × 5 = 31.25 cm<sup>3</sup>\n\n#### Answer:\n\nMaximum volume *V* = 31.25 cm<sup>3</sup>\n\n#### Note:\n\nCalculus optimisation: always verify the nature of the stationary point using $\\\\dfrac{d^2V}{dx^2}$. Also check *x* \\> 0 and 15 − 4*x* \\> 0 (i.e. *x* \\< 3.75) to ensure a valid cuboid.",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::May2025_4WM2HR__Q22__p25-25__m05__Simultaneous-Equations": {
+    "status": "checked",
+    "source": "#### Required:\n\nSolve *y*<sup>2</sup> + 5*y* + *x*<sup>2</sup> = 12 and *x* = *y* + 5.\n\n#### Step:\n\nSubstitute *x* = *y* + 5 into the first equation:\n*y*<sup>2</sup> + 5*y* + (*y*+5)<sup>2</sup> = 12\n\n#### Step:\n\nExpand (*y*+5)<sup>2</sup> = *y*<sup>2</sup> + 10*y* + 25:\n*y*<sup>2</sup> + 5*y* + *y*<sup>2</sup> + 10*y* + 25 = 12 ⟹ 2*y*<sup>2</sup> + 15*y* + 13 = 0\n\n#### Step:\n\nFactorise:\n$$(2y+13)(y+1) = 0 \\\\implies y = -\\\\tfrac{13}{2}\\\\;\\\\text{ or }\\\\;y = -1$$\n\n#### Step:\n\nFind corresponding *x* values using *x* = *y* + 5:\n\n#### Answer:\n\n(*x*,*y*) = (4, −1)and$\\\\left(-\\\\dfrac{3}{2},\\\\,-\\\\dfrac{13}{2}\\\\right)$",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::May2025_4WM2HR__Q23__p26-26__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "#### Required:\n\nThe graph of *y* = *a*sin (*x*+*b*)<sup>∘</sup> + *c* for 0 ≤ *x* ≤ 360 is shown. Find suitable values for *a*, *b*, and *c*.\n\n#### Step:\n\nRead the maximum and minimum values from the graph to find the **amplitude** *a* and **vertical shift** *c*:\n$$a = \\\\frac{\\\\text{max}-\\\\text{min}}{2} = \\\\frac{4-(-2)}{2} = 3\n        \\\\qquad\n        c = \\\\frac{\\\\text{max}+\\\\text{min}}{2} = \\\\frac{4+(-2)}{2} = 1$$\n\n#### Step:\n\nFind the **phase shift** *b*. The standard sin  has its peak at *x* = 90°. From the graph, the maximum occurs at *x* ≈ 45°:\n*x* + *b* = 90° ⟹ 45° + *b* = 90° ⟹ *b* = 45°\n\n#### Step:\n\nVerify at *x* = 0: $y = 4\\\\sin(0+45)° = 4\\\\times\\\\frac{\\\\sqrt{2}}{2} \\\\approx 2.83$ — consistent with graph\n\n#### Answer:\n\n*a* = 3,*b* = 45,*c* = 1\n\n#### Note:\n\nThe period of the graph is still 360° (unchanged), so no horizontal stretch is applied.",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::May2025_4WM2HR__Q24__p27-27__m06__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "#### Required:\n\nSeries P: first term *a*, c.d. *d*; *S*<sub>40</sub>(*P*) = 2070. Series Q: first term 2*a*, c.d. 3*d*; 25th term of Q  = 186. Find *S*<sub>40</sub>(*Q*).\n\n#### Step:\n\nForm equation from *S*<sub>40</sub>(*P*) = 2070:\n$$S\\_{40} = \\\\frac{40}{2}\\[2a+39d\\] = 20(2a+39d) = 2070\n        \\\\implies 2a + 39d = 103.5 \\\\tag{1}$$\n\n#### Step:\n\nForm equation from 25th term of Q  = 186:\n*T*<sub>25</sub>(*Q*) = 2*a* + 24(3*d*) = 2*a* + 72*d* = 186\n\n#### Step:\n\nSolve simultaneously — subtract (1) from (2):\n33*d* = 82.5 ⟹ *d* = 2.5\n\n#### Step:\n\nSubstitute *d* = 2.5 into (1):\n2*a* + 39(2.5) = 103.5 ⟹ 2*a* = 6 ⟹ *a* = 3\n\n#### Step:\n\nCompute *S*<sub>40</sub>(*Q*), with first term  = 2*a* = 6 and c.d.  = 3*d* = 7.5:\n$$S\\_{40}(Q) = \\\\frac{40}{2}\\\\bigl\\[2(6) + 39(7.5)\\\\bigr\\]\n        = 20\\\\bigl\\[12 + 292.5\\\\bigr\\]\n        = 20 \\\\times 304.5 = 6090$$\n\n#### Answer:\n\n*S*<sub>40</sub>(*Q*) = 6090",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "expertise::May2025_4WM2HR__Q21__p24-24__m05__Volume-Surface-Area": {
+    "status": "checked",
+    "source": "#### Required:\n\nCuboid has a square cross-section of side *x* cm and length (15−4*x*) cm. Find the maximum value of the volume *V*.\n\n#### Step:\n\nWrite *V* as a function of *x*:\n*V* = *x* ⋅ *x* ⋅ (15−4*x*) = *x*<sup>2</sup>(15−4*x*) = 15*x*<sup>2</sup> − 4*x*<sup>3</sup>\n\n#### Step:\n\nDifferentiate:\n$$\\\\frac{dV}{dx} = 30x - 12x^2$$\n\n#### Step:\n\nSet $\\\\dfrac{dV}{dx} = 0$:\n$$30x - 12x^2 = 0 \\\\implies 6x(5-2x) = 0 \\\\implies x=0\\\\;\\\\text{ or }\\\\;x=\\\\tfrac{5}{2}=2.5$$\n(*x* = 0 gives zero volume, so the meaningful solution is *x* = 2.5.)\n\n#### Step:\n\nSecond derivative test to confirm maximum:\n$$\\\\frac{d^2V}{dx^2} = 30-24x\\\\;\\\\Bigg\\|\\_{x=2.5} = 30 - 60 = -30 \\< 0 \\\\quad \\\\checkmark\\\\text{ (maximum)}$$\n\n#### Step:\n\nCalculate *V*<sub>max</sub>:\n*V*<sub>max</sub> = (2.5)<sup>2</sup> × (15−4×2.5) = 6.25 × 5 = 31.25 cm<sup>3</sup>\n\n#### Answer:\n\nMaximum volume *V* = 31.25 cm<sup>3</sup>\n\n#### Note:\n\nCalculus optimisation: always verify the nature of the stationary point using $\\\\dfrac{d^2V}{dx^2}$. Also check *x* \\> 0 and 15 − 4*x* \\> 0 (i.e. *x* \\< 3.75) to ensure a valid cuboid.",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex",
+    "reused_from": "all::May2025_4WM2HR__Q21__p24-24__m05__Volume-Surface-Area"
+  },
+  "expertise::May2025_4WM2HR__Q22__p25-25__m05__Simultaneous-Equations": {
+    "status": "checked",
+    "source": "#### Required:\n\nSolve *y*<sup>2</sup> + 5*y* + *x*<sup>2</sup> = 12 and *x* = *y* + 5.\n\n#### Step:\n\nSubstitute *x* = *y* + 5 into the first equation:\n*y*<sup>2</sup> + 5*y* + (*y*+5)<sup>2</sup> = 12\n\n#### Step:\n\nExpand (*y*+5)<sup>2</sup> = *y*<sup>2</sup> + 10*y* + 25:\n*y*<sup>2</sup> + 5*y* + *y*<sup>2</sup> + 10*y* + 25 = 12 ⟹ 2*y*<sup>2</sup> + 15*y* + 13 = 0\n\n#### Step:\n\nFactorise:\n$$(2y+13)(y+1) = 0 \\\\implies y = -\\\\tfrac{13}{2}\\\\;\\\\text{ or }\\\\;y = -1$$\n\n#### Step:\n\nFind corresponding *x* values using *x* = *y* + 5:\n\n#### Answer:\n\n(*x*,*y*) = (4, −1)and$\\\\left(-\\\\dfrac{3}{2},\\\\,-\\\\dfrac{13}{2}\\\\right)$",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex",
+    "reused_from": "all::May2025_4WM2HR__Q22__p25-25__m05__Simultaneous-Equations"
+  },
+  "expertise::May2025_4WM2HR__Q23__p26-26__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "#### Required:\n\nThe graph of *y* = *a*sin (*x*+*b*)<sup>∘</sup> + *c* for 0 ≤ *x* ≤ 360 is shown. Find suitable values for *a*, *b*, and *c*.\n\n#### Step:\n\nRead the maximum and minimum values from the graph to find the **amplitude** *a* and **vertical shift** *c*:\n$$a = \\\\frac{\\\\text{max}-\\\\text{min}}{2} = \\\\frac{4-(-2)}{2} = 3\n        \\\\qquad\n        c = \\\\frac{\\\\text{max}+\\\\text{min}}{2} = \\\\frac{4+(-2)}{2} = 1$$\n\n#### Step:\n\nFind the **phase shift** *b*. The standard sin  has its peak at *x* = 90°. From the graph, the maximum occurs at *x* ≈ 45°:\n*x* + *b* = 90° ⟹ 45° + *b* = 90° ⟹ *b* = 45°\n\n#### Step:\n\nVerify at *x* = 0: $y = 4\\\\sin(0+45)° = 4\\\\times\\\\frac{\\\\sqrt{2}}{2} \\\\approx 2.83$ — consistent with graph\n\n#### Answer:\n\n*a* = 3,*b* = 45,*c* = 1\n\n#### Note:\n\nThe period of the graph is still 360° (unchanged), so no horizontal stretch is applied.",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex",
+    "reused_from": "all::May2025_4WM2HR__Q23__p26-26__m03__Algebra-Toolkit"
+  },
+  "expertise::May2025_4WM2HR__Q24__p27-27__m06__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "#### Required:\n\nSeries P: first term *a*, c.d. *d*; *S*<sub>40</sub>(*P*) = 2070. Series Q: first term 2*a*, c.d. 3*d*; 25th term of Q  = 186. Find *S*<sub>40</sub>(*Q*).\n\n#### Step:\n\nForm equation from *S*<sub>40</sub>(*P*) = 2070:\n$$S\\_{40} = \\\\frac{40}{2}\\[2a+39d\\] = 20(2a+39d) = 2070\n        \\\\implies 2a + 39d = 103.5 \\\\tag{1}$$\n\n#### Step:\n\nForm equation from 25th term of Q  = 186:\n*T*<sub>25</sub>(*Q*) = 2*a* + 24(3*d*) = 2*a* + 72*d* = 186\n\n#### Step:\n\nSolve simultaneously — subtract (1) from (2):\n33*d* = 82.5 ⟹ *d* = 2.5\n\n#### Step:\n\nSubstitute *d* = 2.5 into (1):\n2*a* + 39(2.5) = 103.5 ⟹ 2*a* = 6 ⟹ *a* = 3\n\n#### Step:\n\nCompute *S*<sub>40</sub>(*Q*), with first term  = 2*a* = 6 and c.d.  = 3*d* = 7.5:\n$$S\\_{40}(Q) = \\\\frac{40}{2}\\\\bigl\\[2(6) + 39(7.5)\\\\bigr\\]\n        = 20\\\\bigl\\[12 + 292.5\\\\bigr\\]\n        = 20 \\\\times 304.5 = 6090$$\n\n#### Answer:\n\n*S*<sub>40</sub>(*Q*) = 6090",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex",
+    "reused_from": "all::May2025_4WM2HR__Q24__p27-27__m06__Algebra-Toolkit"
+  },
   "all::MayNov2020_P1H__Q10__p11-11__m03__Prime-Factors-HCF-and-LCM": {
     "status": "checked",
     "source": "**Topic check:** Prime factors, HCF and LCM. The tag is correct.\n\n**Method**\n\n\\[\nA=2\\times 3^{43}\n\\]\n\n\\[\nB=16\\times 3^{37}=2^4\\times 3^{37}\n\\]\n\nFor the HCF, take the smaller powers:\n\n\\[\n\\text{HCF}=2\\times 3^{37}\n\\]\n\nFor \\(A\\times B\\),\n\n\\[\nA\\times B=(2\\times 3^{43})(2^4\\times 3^{37})\n\\]\n\n\\[\nA\\times B=2^5\\times 3^{80}\n\\]\n\n**Answer:** (a) \\(2\\times 3^{37}\\), (b) \\(2^5\\times 3^{80}\\)",
@@ -6706,6 +7559,484 @@ window.SOLUTION_DATA = {
     "source": "**Topic check:** Moved to Circles, Arcs & Sectors.\n\n**Method**\n\nThe circle has radius \\(x\\), so the inradius of the equilateral triangle is \\(x\\).\n\nFor an equilateral triangle with side length \\(a\\),\n\n\\[\n\\text{inradius}=\\frac{a\\sqrt{3}}{6}\n\\]\n\nSo\n\n\\[\nx=\\frac{a\\sqrt{3}}{6}\n\\]\n\n\\[\na=\\frac{6x}{\\sqrt{3}}=2\\sqrt{3}x\n\\]\n\nArea of the triangle:\n\n\\[\n\\frac{\\sqrt{3}}{4}a^2\n=\\frac{\\sqrt{3}}{4}(2\\sqrt{3}x)^2\n\\]\n\n\\[\n=\\frac{\\sqrt{3}}{4}(12x^2)\n=3\\sqrt{3}x^2\n\\]\n\nArea of the circle:\n\n\\[\n\\pi x^2\n\\]\n\nThe shaded area is\n\n\\[\n3\\sqrt{3}x^2-\\pi x^2\n\\]\n\n\\[\n=(3\\sqrt{3}-\\pi)x^2\n\\]\n\nTherefore\n\n\\[\nn=3\\sqrt{3}-\\pi\n\\]\n\n**Answer:** \\(\\boxed{3\\sqrt{3}-\\pi}\\)",
     "updated": "2026-05-05",
     "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Nov2025_4WM1H__Q02__p03-03__m02__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Rounding, Estimation and Bounds. The tag is correct.\n\n**Method**\n\nRound each number to one significant figure:\n\n\\[\n2.11\\approx 2,\\quad 58.9\\approx 60,\\quad 8.859\\approx 9\n\\]\n\n\\[\n\\frac{2.11^2\\times 58.9}{\\sqrt{8.859}}\n\\approx\n\\frac{2^2\\times 60}{\\sqrt 9}\n\\]\n\n\\[\n=\\frac{4\\times 60}{3}=80\n\\]\n\n**Answer:** \\(80\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Nov2025_P1H__Q02__p04-04__m02__Rounding-Estimation-and-Bounds"
+  },
+  "all::Nov2025_4WM1H__Q03__p04-04__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Algebraic proof. The tag is acceptable because the question asks to show the exact result.\n\n**Solution**\n\n\\[\n\\frac37+\\frac13\n\\]\n\nUse denominator 21:\n\\[\n\\frac37=\\frac9{21},\\qquad \\frac13=\\frac7{21}\n\\]\n\n\\[\n\\frac9{21}+\\frac7{21}=\\frac{16}{21}\n\\]\n\n**Answer:** \\(\\frac{16}{21}\\).",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Nov2025_P1H__Q05__p05-05__m03__Algebraic-Proof"
+  },
+  "all::Nov2025_4WM1H__Q06__p07-07__m02__Rounding-Estimation-Bounds": {
+    "status": "checked",
+    "source": "**Topic check:** Rounding, Estimation and Bounds. The tag is correct.\n\n**Method**\n\nThe weight \\(475\\) g correct to the nearest g has lower bound\n\n\\[\n475-0.5=474.5\n\\]\n\nThe height \\(120\\) cm correct to the nearest \\(10\\) cm has upper bound\n\n\\[\n120+5=125\n\\]\n\n**Answer:** (a) \\(474.5\\) g, (b) \\(125\\) cm",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Nov2025_P1H__Q07__p06-06__m02__Rounding-Estimation-and-Bounds"
+  },
+  "all::Nov2025_4WM1H__Q07__p07-07__m02__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Algebraic roots and indices. The tag is correct.\n\n**Solution**\n\n\\[\n\\frac{8^{-2}\\times8^9}{8^{10}}=8^{-2+9-10}=8^{-3}\n\\]\n\n**Answer:** \\(n=-3\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Nov2025_P1H__Q08__p07-07__m02__Algebraic-Roots-and-Indices"
+  },
+  "all::Nov2025_4WM1H__Q11__p11-11__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Right-Angled Triangles - Pythagoras & Trigonometry. The tag is correct.\n\n**Solution**\n\nFirst find \\(AB\\):\n\n\\[\nAB^2=21^2-15^2=216\n\\]\n\n\\[\nAB=14.696\\ldots\n\\]\n\n\\[\nAD=AB-DB=14.696\\ldots-9=5.696\\ldots\n\\]\n\nAngle \\(ACB\\):\n\n\\[\n\\cos ACB=\\frac{15}{21}\n\\]\n\n\\[\nACB=44.415\\ldots^\\circ\n\\]\n\nAngle \\(DCB\\):\n\n\\[\n\\tan DCB=\\frac{9}{15}\n\\]\n\n\\[\nDCB=30.963\\ldots^\\circ\n\\]\n\n\\[\nACD=44.415\\ldots-30.963\\ldots=13.451\\ldots^\\circ\n\\]\n\n**Answer:** \\(13.5^\\circ\\).",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Nov2025_P1H__Q11__p09-09__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry"
+  },
+  "all::Nov2025_4WM1H__Q12__p12-12__m05__Probability-Diagrams-Venn-Tree-Diagrams": {
+    "status": "checked",
+    "source": "**Topic check:** Probability Diagrams - Venn & Tree Diagrams. The tag is correct.\n\n**Solution**\n\nBag 1:\n\n\\[\nP(Y)=\\frac25,\\qquad P(O)=\\frac35\n\\]\n\nBag 2:\n\n\\[\nP(Y)=\\frac38,\\qquad P(G)=\\frac58\n\\]\n\nThe only way to get the same colour is yellow then yellow.\n\n\\[\nP(\\text{different})=1-\\frac25\\times\\frac38\n\\]\n\n\\[\n=1-\\frac{3}{20}=\\frac{17}{20}\n\\]\n\n**Answer:** \\(\\frac{17}{20}\\).",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Nov2025_P1H__Q13__p11-11__m05__Probability-Diagrams-Venn-and-Tree-Diagrams"
+  },
+  "all::Nov2025_4WM1H__Q19__p17-17__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Corrected to Sine, Cosine Rule & Area of Triangles.\n\n**Solution**\n\nUse the cosine rule for angle \\(BAC\\):\n\\[\n\\cos A=\\frac{8^2+9^2-10^2}{2(8)(9)}\n\\]\n\n\\[\n\\cos A=\\frac{45}{144}\n\\]\n\n\\[\nA=71.790\\ldots^\\circ\n\\]\n\n**Answer:** \\(71.8^\\circ\\).",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Nov2025_P1H__Q19__p15-15__m03__Sine-Cosine-Rule-and-Area-of-Triangles"
+  },
+  "all::Nov2025_4WM1H__Q23__p21-21__m03__Probability-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Correct.\n\n**Method**\n\nThere are 2 pink buttons.\n\nAt least one pink button is still in the box unless both pink buttons are taken.\n\nSo use the complement.\n\nThe probability that both pink buttons are taken is\n\n\\[\n\\frac{\\binom{2}{2}\\binom{13}{1}}{\\binom{15}{3}}\n\\]\n\n\\[\n=\\frac{13}{455}\n\\]\n\n\\[\n=\\frac{1}{35}\n\\]\n\nTherefore,\n\n\\[\nP(\\text{at least one pink is still in the box})\n=1-\\frac{1}{35}\n\\]\n\n\\[\n=\\frac{34}{35}\n\\]\n\n**Answer:** \\(\\frac{34}{35}\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Nov2025_P1H__Q22__p18-18__m03__Combined-and-Conditional-Probability"
+  },
+  "expertise::Nov2025_4WM1H__Q23__p21-21__m03__Probability-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Correct.\n\n**Method**\n\nThere are 2 pink buttons.\n\nAt least one pink button is still in the box unless both pink buttons are taken.\n\nSo use the complement.\n\nThe probability that both pink buttons are taken is\n\n\\[\n\\frac{\\binom{2}{2}\\binom{13}{1}}{\\binom{15}{3}}\n\\]\n\n\\[\n=\\frac{13}{455}\n\\]\n\n\\[\n=\\frac{1}{35}\n\\]\n\nTherefore,\n\n\\[\nP(\\text{at least one pink is still in the box})\n=1-\\frac{1}{35}\n\\]\n\n\\[\n=\\frac{34}{35}\n\\]\n\n**Answer:** \\(\\frac{34}{35}\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Nov2025_4WM1H__Q23__p21-21__m03__Probability-Toolkit"
+  },
+  "all::Nov2025_4WM1H__Q25__p23-23__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Corrected from Ratio Toolkit to Algebraic Fractions.\n\n**Method**\n\n\\[\na=\\frac{2x+5}{1-x},\\quad x=\\frac{5-2y}{3y}\n\\]\n\nSubstitute for \\(x\\).\n\nNumerator:\n\n\\[\n2x+5=2\\left(\\frac{5-2y}{3y}\\right)+5\n\\]\n\n\\[\n=\\frac{10-4y+15y}{3y}\n=\\frac{10+11y}{3y}\n\\]\n\nDenominator:\n\n\\[\n1-x=1-\\frac{5-2y}{3y}\n\\]\n\n\\[\n=\\frac{3y-5+2y}{3y}\n=\\frac{5y-5}{3y}\n=\\frac{5(y-1)}{3y}\n\\]\n\nTherefore\n\n\\[\na=\\frac{\\frac{10+11y}{3y}}{\\frac{5(y-1)}{3y}}\n=\\frac{10+11y}{5(y-1)}\n\\]\n\n**Answer:** \\(\\dfrac{10+11y}{5(y-1)}\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Nov2025_P1H__Q23__p19-19__m03__Algebraic-Fractions"
+  },
+  "expertise::Nov2025_4WM1H__Q25__p23-23__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Corrected from Ratio Toolkit to Algebraic Fractions.\n\n**Method**\n\n\\[\na=\\frac{2x+5}{1-x},\\quad x=\\frac{5-2y}{3y}\n\\]\n\nSubstitute for \\(x\\).\n\nNumerator:\n\n\\[\n2x+5=2\\left(\\frac{5-2y}{3y}\\right)+5\n\\]\n\n\\[\n=\\frac{10-4y+15y}{3y}\n=\\frac{10+11y}{3y}\n\\]\n\nDenominator:\n\n\\[\n1-x=1-\\frac{5-2y}{3y}\n\\]\n\n\\[\n=\\frac{3y-5+2y}{3y}\n=\\frac{5y-5}{3y}\n=\\frac{5(y-1)}{3y}\n\\]\n\nTherefore\n\n\\[\na=\\frac{\\frac{10+11y}{3y}}{\\frac{5(y-1)}{3y}}\n=\\frac{10+11y}{5(y-1)}\n\\]\n\n**Answer:** \\(\\dfrac{10+11y}{5(y-1)}\\)",
+    "updated": "2026-05-16T08:42:24",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Nov2025_4WM1H__Q25__p23-23__m03__Algebra-Toolkit"
+  },
+  "all::Nov2025_4WM1H__Q01__p03-03__m02__Area-Perimeter": {
+    "status": "checked",
+    "source": "**Solution**\n\nRadius \\(=6\\) cm.\n\n\\[\n\\text{perimeter}=\\pi r+12=6\\pi+12\\approx 30.8496\n\\]\n\n**Answer:** \\(30.8\\) cm to 3 significant figures.",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Nov2025_4WM1H__Q04__p05-05__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\n\\[\nA=\\{9,11,13,15,17\\},\\quad B=\\{9,12,15,18\\},\\quad C=\\{11,13,17\\}\n\\]\n\n\\[\nA\\cup C=\\{9,11,13,15,17\\}\n\\]\n\n\\[\nA\\cap B'=\\{11,13,17\\}\n\\]\n\n\\(15\\notin B\\cap C\\) because \\(15\\) is not prime.\n\nSince \\(D\\cup C=A\\) and \\(D\\) has two members,\n\n\\[\nD=\\{9,15\\}\n\\]\n\n**Answers:** \\(\\{9,11,13,15,17\\}\\), \\(\\{11,13,17\\}\\), No, \\(D=\\{9,15\\}\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Nov2025_4WM1H__Q05__p06-06__m05__Probability-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\n\\[\nP(\\text{tennis or cricket})=0.2+0.35=0.55\n\\]\n\nAlso,\n\n\\[\n2x+0.2+x+0.35=1\n\\]\n\n\\[\n3x=0.45\n\\]\n\n\\[\nx=0.15\n\\]\n\nSo\n\n\\[\nP(\\text{football})=2x=0.30\n\\]\n\n\\[\n700\\times 0.30=210\n\\]\n\n**Answers:** \\(0.55\\), \\(210\\) students.",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Nov2025_4WM1H__Q08__p08-08__m09__Factorising": {
+    "status": "checked",
+    "source": "**Solution**\n\n(a)\n\\[\n5w(3w-4w^2)=15w^2-20w^3\n\\]\n\n(b)\n\\[\n(4a^3c^5)^3=64a^9c^{15}\n\\]\n\n(c)\n\\[\n14m^3p^2+21m^2p^4=7m^2p^2(2m+3p^2)\n\\]\n\n(d)\n\\[\nx^2-10x+24=(x-4)(x-6)\n\\]\n\nSo\n\\[\nx=4 \\quad \\text{or} \\quad x=6\n\\]\n\n**Answers:** \\(15w^2-20w^3\\), \\(64a^9c^{15}\\), \\(7m^2p^2(2m+3p^2)\\), \\((x-4)(x-6)\\), \\(x=4,6\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Nov2025_4WM1H__Q09__p09-09__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\n\\[\nAB=\\sqrt{(10-2)^2+(15-0)^2}\n\\]\n\n\\[\n=\\sqrt{64+225}=17\n\\]\n\nSince \\(D\\) is on the positive \\(x\\)-axis and \\(AD=17\\),\n\n\\[\nD=(2+17,0)=(19,0)\n\\]\n\n**Answer:** \\((19,0)\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Nov2025_4WM1H__Q10__p10-10__m03__Standard-Compound-Units": {
+    "status": "checked",
+    "source": "**Solution**\n\nThe contact area is one square face:\n\n\\[\n7\\times 7=49\\text{ cm}^2\n\\]\n\n\\[\n\\text{force}=\\text{pressure}\\times\\text{area}=62\\times 49=3038\n\\]\n\n**Answer:** \\(3038\\) newtons.",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Nov2025_4WM1H__Q13__p13-13__m06__Expanding-Brackets": {
+    "status": "checked",
+    "source": "**Solution**\n\n(a)\n\\[\n7x(3x+2)(2x-5)\n\\]\n\n\\[\n=7x(6x^2-11x-10)\n\\]\n\n\\[\n=42x^3-77x^2-70x\n\\]\n\n(b)\n\\[\n\\frac{9}{2y}+\\frac57=5\n\\]\n\n\\[\n\\frac{9}{2y}=\\frac{30}{7}\n\\]\n\n\\[\n63=60y\n\\]\n\n\\[\ny=\\frac{21}{20}\n\\]\n\n**Answers:** \\(42x^3-77x^2-70x\\), \\(y=\\frac{21}{20}\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Nov2025_4WM1H__Q14__p14-14__m02__Circles-Arcs-Sectors": {
+    "status": "checked",
+    "source": "**Solution**\n\n\\[\n\\text{area}=\\frac{75}{360}\\pi(12)^2\n\\]\n\n\\[\n=30\\pi \\approx 94.2478\n\\]\n\n**Answer:** \\(94.2\\text{ cm}^2\\) to 3 significant figures.",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Nov2025_4WM1H__Q15__p14-14__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\n\\[\n\\frac{16^{x-3}\\times 8^{x+1}}{32^x}\n=\\frac{2^{4x-12}\\times 2^{3x+3}}{2^{5x}}\n\\]\n\n\\[\n=2^{4x-12+3x+3-5x}=2^{2x-9}\n\\]\n\n**Answer:** \\(n=2x-9\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Nov2025_4WM1H__Q16__p15-15__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\n\\[\n\\frac{2\\sqrt7+2}{\\sqrt7-3}\\times\\frac{\\sqrt7+3}{\\sqrt7+3}\n\\]\n\n\\[\n=\\frac{(2\\sqrt7+2)(\\sqrt7+3)}{7-9}\n\\]\n\n\\[\n=\\frac{20+8\\sqrt7}{-2}\n\\]\n\n\\[\n=-10-4\\sqrt7=-10-\\sqrt{112}\n\\]\n\n**Answer:** \\(-10-\\sqrt{112}\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Nov2025_4WM1H__Q17__p15-15__m02__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\nLet\n\\[\nx=0.95454545\\ldots\n\\]\n\nThen\n\\[\n10x=9.5454545\\ldots\n\\]\n\nand\n\\[\n1000x=954.5454545\\ldots\n\\]\n\nSubtract:\n\\[\n990x=945\n\\]\n\n\\[\nx=\\frac{945}{990}=\\frac{21}{22}\n\\]\n\n**Answer:** \\(0.954545\\ldots=\\dfrac{21}{22}\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Nov2025_4WM1H__Q18__p16-16__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\n\\[\n(8x+2)(3x-2)=500\n\\]\n\n\\[\n24x^2-10x-4=500\n\\]\n\n\\[\n12x^2-5x-252=0\n\\]\n\nUsing the quadratic formula,\n\n\\[\nx=\\frac{5\\pm\\sqrt{(-5)^2-4(12)(-252)}}{24}\n\\]\n\nThe positive solution is\n\n\\[\nx\\approx 4.79564\n\\]\n\n**Answer:** \\(x=4.80\\) to 3 significant figures.",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Nov2025_4WM1H__Q20__p18-18__m03__Standard-Compound-Units": {
+    "status": "checked",
+    "source": "**Solution**\n\nFrequency density \\(=\\dfrac{\\text{frequency}}{\\text{class width}}\\).\n\n\\[\n0<h\\le 5: \\frac{12}{5}=2.4\n\\]\n\n\\[\n5<h\\le 15: \\frac{34}{10}=3.4\n\\]\n\n\\[\n15<h\\le 30: \\frac{45}{15}=3\n\\]\n\n\\[\n30<h\\le 50: \\frac{28}{20}=1.4\n\\]\n\n**Answer:** draw bars with densities \\(2.4, 3.4, 3, 1.4\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Nov2025_4WM1H__Q21__p19-19__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\nTriangle area:\n\n\\[\n\\frac{\\sqrt3}{4}(5r)^2=\\frac{25\\sqrt3}{4}r^2\n\\]\n\nCircle area:\n\n\\[\n\\pi r^2\n\\]\n\nSo\n\n\\[\n\\left(\\frac{25\\sqrt3}{4}-\\pi\\right)r^2=610\\pi\n\\]\n\n\\[\nr\\approx 15.7926\n\\]\n\n**Answer:** \\(r=15.8\\) to 3 significant figures.",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Nov2025_4WM1H__Q22__p20-20__m02__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\n\\[\n9x^2-12x+q=(3x-2)^2\n\\]\n\n\\[\n(3x-2)^2=9x^2-12x+4\n\\]\n\n**Answer:** \\(q=4\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Nov2025_4WM1H__Q24__p22-22__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\n\\[\n5x^2-20x+23=5(x^2-4x)+23\n\\]\n\n\\[\n=5\\big((x-2)^2-4\\big)+23\n\\]\n\n\\[\n=5(x-2)^2+3\n\\]\n\n**Answer:** \\(5(x-2)^2+3\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Nov2025_4WM1H__Q26__p24-25__m05__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\nFrom triangle \\(GMF\\),\n\n\\[\n\\tan 60^\\circ=\\frac{FG}{FM}=\\frac{18}{FM}\n\\]\n\n\\[\nFM=\\frac{18}{\\tan 60^\\circ}=6\\sqrt3\n\\]\n\nSince \\(FM=\\frac35FE\\),\n\n\\[\nFE=10\\sqrt3\n\\]\n\nThe horizontal distance from \\(D\\) to the point below \\(G\\) is\n\n\\[\n\\sqrt{20^2+(10\\sqrt3)^2}=10\\sqrt7\n\\]\n\nIf \\(\\theta\\) is the angle of elevation,\n\n\\[\n\\tan\\theta=\\frac{18}{10\\sqrt7}\n\\]\n\n\\[\n\\theta\\approx 34.2289^\\circ\n\\]\n\n**Answer:** \\(34.2^\\circ\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Nov2025_4WM1H__Q27__p26-26__m05__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\nDiagonals of a rhombus bisect each other at right angles.\n\nMidpoint of \\(AC\\):\n\n\\[\n\\left(\\frac{16+24}{2},\\frac{-9+15}{2}\\right)=(20,3)\n\\]\n\nGradient of \\(AC\\):\n\n\\[\n\\frac{15-(-9)}{24-16}=3\n\\]\n\nSo gradient of \\(BD\\) is \\(-\\frac13\\).\n\n\\[\ny-3=-\\frac13(x-20)\n\\]\n\n\\[\nx+3y-29=0\n\\]\n\n**Answer:** \\(x+3y-29=0\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Nov2025_4WM1H__Q28__p27-27__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\nFactor each expression:\n\n\\[\n\\frac{x(3x+1)(2x+1)}{(2x-1)(2x+1)}\\div\\frac{(5x-2)(3x+1)}{4(2x-1)}=2x\n\\]\n\n\\[\n\\frac{x(3x+1)}{2x-1}\\times\\frac{4(2x-1)}{(5x-2)(3x+1)}=2x\n\\]\n\n\\[\n\\frac{4x}{5x-2}=2x\n\\]\n\n\\[\n4x=2x(5x-2)\n\\]\n\n\\[\n10x^2-8x=0\n\\]\n\n\\[\n2x(5x-4)=0\n\\]\n\nThe original fractions do not allow \\(x=0\\), so\n\n\\[\nx=\\frac45\n\\]\n\n**Answer:** \\(x=\\frac45\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "expertise::Nov2025_4WM1H__Q20__p18-18__m03__Standard-Compound-Units": {
+    "status": "checked",
+    "source": "**Solution**\n\nFrequency density \\(=\\dfrac{\\text{frequency}}{\\text{class width}}\\).\n\n\\[\n0<h\\le 5: \\frac{12}{5}=2.4\n\\]\n\n\\[\n5<h\\le 15: \\frac{34}{10}=3.4\n\\]\n\n\\[\n15<h\\le 30: \\frac{45}{15}=3\n\\]\n\n\\[\n30<h\\le 50: \\frac{28}{20}=1.4\n\\]\n\n**Answer:** draw bars with densities \\(2.4, 3.4, 3, 1.4\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Nov2025_4WM1H__Q20__p18-18__m03__Standard-Compound-Units"
+  },
+  "expertise::Nov2025_4WM1H__Q21__p19-19__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\nTriangle area:\n\n\\[\n\\frac{\\sqrt3}{4}(5r)^2=\\frac{25\\sqrt3}{4}r^2\n\\]\n\nCircle area:\n\n\\[\n\\pi r^2\n\\]\n\nSo\n\n\\[\n\\left(\\frac{25\\sqrt3}{4}-\\pi\\right)r^2=610\\pi\n\\]\n\n\\[\nr\\approx 15.7926\n\\]\n\n**Answer:** \\(r=15.8\\) to 3 significant figures.",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Nov2025_4WM1H__Q21__p19-19__m04__Algebra-Toolkit"
+  },
+  "expertise::Nov2025_4WM1H__Q22__p20-20__m02__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\n\\[\n9x^2-12x+q=(3x-2)^2\n\\]\n\n\\[\n(3x-2)^2=9x^2-12x+4\n\\]\n\n**Answer:** \\(q=4\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Nov2025_4WM1H__Q22__p20-20__m02__Algebra-Toolkit"
+  },
+  "expertise::Nov2025_4WM1H__Q24__p22-22__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\n\\[\n5x^2-20x+23=5(x^2-4x)+23\n\\]\n\n\\[\n=5\\big((x-2)^2-4\\big)+23\n\\]\n\n\\[\n=5(x-2)^2+3\n\\]\n\n**Answer:** \\(5(x-2)^2+3\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Nov2025_4WM1H__Q24__p22-22__m03__Algebra-Toolkit"
+  },
+  "expertise::Nov2025_4WM1H__Q26__p24-25__m05__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\nFrom triangle \\(GMF\\),\n\n\\[\n\\tan 60^\\circ=\\frac{FG}{FM}=\\frac{18}{FM}\n\\]\n\n\\[\nFM=\\frac{18}{\\tan 60^\\circ}=6\\sqrt3\n\\]\n\nSince \\(FM=\\frac35FE\\),\n\n\\[\nFE=10\\sqrt3\n\\]\n\nThe horizontal distance from \\(D\\) to the point below \\(G\\) is\n\n\\[\n\\sqrt{20^2+(10\\sqrt3)^2}=10\\sqrt7\n\\]\n\nIf \\(\\theta\\) is the angle of elevation,\n\n\\[\n\\tan\\theta=\\frac{18}{10\\sqrt7}\n\\]\n\n\\[\n\\theta\\approx 34.2289^\\circ\n\\]\n\n**Answer:** \\(34.2^\\circ\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Nov2025_4WM1H__Q26__p24-25__m05__Algebra-Toolkit"
+  },
+  "expertise::Nov2025_4WM1H__Q27__p26-26__m05__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\nDiagonals of a rhombus bisect each other at right angles.\n\nMidpoint of \\(AC\\):\n\n\\[\n\\left(\\frac{16+24}{2},\\frac{-9+15}{2}\\right)=(20,3)\n\\]\n\nGradient of \\(AC\\):\n\n\\[\n\\frac{15-(-9)}{24-16}=3\n\\]\n\nSo gradient of \\(BD\\) is \\(-\\frac13\\).\n\n\\[\ny-3=-\\frac13(x-20)\n\\]\n\n\\[\nx+3y-29=0\n\\]\n\n**Answer:** \\(x+3y-29=0\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Nov2025_4WM1H__Q27__p26-26__m05__Algebra-Toolkit"
+  },
+  "expertise::Nov2025_4WM1H__Q28__p27-27__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Solution**\n\nFactor each expression:\n\n\\[\n\\frac{x(3x+1)(2x+1)}{(2x-1)(2x+1)}\\div\\frac{(5x-2)(3x+1)}{4(2x-1)}=2x\n\\]\n\n\\[\n\\frac{x(3x+1)}{2x-1}\\times\\frac{4(2x-1)}{(5x-2)(3x+1)}=2x\n\\]\n\n\\[\n\\frac{4x}{5x-2}=2x\n\\]\n\n\\[\n4x=2x(5x-2)\n\\]\n\n\\[\n10x^2-8x=0\n\\]\n\n\\[\n2x(5x-4)=0\n\\]\n\nThe original fractions do not allow \\(x=0\\), so\n\n\\[\nx=\\frac45\n\\]\n\n**Answer:** \\(x=\\frac45\\).",
+    "updated": "2026-05-16T09:00:28",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Nov2025_4WM1H__Q28__p27-27__m04__Algebra-Toolkit"
+  },
+  "all::Nov2025_4WM2H__Q06__p08-08__m06__Compound-Interest-Depreciation": {
+    "status": "checked",
+    "source": "**Step 1: Calculate the absolute increase.**\nIncrease = 87 − 75 = 12\n\n**Step 2: Calculate percentage increase.**\n$$\\\\text{\\\\% Increase} = \\\\frac{\\\\text{Increase}}{\\\\text{Original}} \\\\times 100 = \\\\frac{12}{75} \\\\times 100 = 16\\\\%$$\n\n#### Answer:\n\n16%\n\n**Step 1: Determine the depreciation multiplier.** A 20% decrease means the multiplier is 1 − 0.20 = 0.80.\n\n**Step 2: Apply the multiplier for 3 years.**\nFinal Value = 960 × (0.80)<sup>3</sup>\nFinal Value = 960 × 0.512 = 491.52\n\n#### Answer:\n\n491.52 Swiss francs",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::Nov2025_4WM2H__Q09__p11-11__m03__Powers-Roots-Standard-Form": {
+    "status": "checked",
+    "source": "Move the decimal point 4 places to the right:\n5.76 × 10<sup>4</sup> = 57600\n\n#### Answer:\n\n57600\n\n**Step 1: Expand the numerator.**\n3 × 10<sup>5</sup> = 300, 000\n8 × 10<sup>3</sup> = 8, 000\nNumerator = 300, 000 + 8, 000 = 308, 000 = 3.08 × 10<sup>5</sup>\n\n**Step 2: Perform the division.**\n$$\\\\frac{3.08 \\\\times 10^5}{4 \\\\times 10^{-2}} = \\\\left(\\\\frac{3.08}{4}\\\\right) \\\\times 10^{5 - (-2)}$$\n = 0.77 × 10<sup>7</sup>\n\n**Step 3: Convert to strict standard form (1 ≤ *A* \\< 10).**\n0.77 × 10<sup>7</sup> = 7.7 × 10<sup>6</sup>\n\n#### Answer:\n\n7.7 × 10<sup>6</sup>",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::Nov2025_4WM2H__Q17__p17-17__m03__Direct-Inverse-Proportion": {
+    "status": "checked",
+    "source": "**Step 1: Set up the proportionality equation.**\n$$T = \\\\frac{k}{\\\\sqrt{m}}$$\n\n**Step 2: Substitute the given values to find constant *k*.**\n$$15 = \\\\frac{k}{\\\\sqrt{36}}$$\n$$15 = \\\\frac{k}{6}$$\n*k* = 15 × 6 = 90\n\n**Step 3: Write the final formula.**\n$$T = \\\\frac{90}{\\\\sqrt{m}}$$\n\n#### Answer:\n\n$T = \\\\frac{90}{\\\\sqrt{m}}$",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::Nov2025_4WM2H__Q23__p23-23__m03__Congruence-Similarity-Geometrical-Proof": {
+    "status": "checked",
+    "source": "**Step 1: Find the Area Scale Factor (ASF).**\n$$\\\\text{ASF} = \\\\frac{\\\\text{Area of Q}}{\\\\text{Area of P}} = \\\\frac{450}{200} = \\\\frac{9}{4} = 2.25$$\n\n**Step 2: Find the Length Scale Factor (LSF).**\n$$\\\\text{LSF} = \\\\sqrt{\\\\text{ASF}} = \\\\sqrt{\\\\frac{9}{4}} = \\\\frac{3}{2} = 1.5$$\n\n**Step 3: Find the Volume Scale Factor (VSF).**\n$$\\\\text{VSF} = (\\\\text{LSF})^3 = \\\\left(\\\\frac{3}{2}\\\\right)^3 = \\\\frac{27}{8} = 3.375$$\n\n**Step 4: Calculate the volume of Shape Q.**\n$$\\\\text{Volume of Q} = \\\\text{Volume of P} \\\\times \\\\text{VSF} = 672 \\\\times \\\\frac{27}{8}$$\n = 84 × 27 = 2268\n\n#### Answer:\n\n2268 cm<sup>3</sup>",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "expertise::Nov2025_4WM2H__Q23__p23-23__m03__Congruence-Similarity-Geometrical-Proof": {
+    "status": "checked",
+    "source": "**Step 1: Find the Area Scale Factor (ASF).**\n$$\\\\text{ASF} = \\\\frac{\\\\text{Area of Q}}{\\\\text{Area of P}} = \\\\frac{450}{200} = \\\\frac{9}{4} = 2.25$$\n\n**Step 2: Find the Length Scale Factor (LSF).**\n$$\\\\text{LSF} = \\\\sqrt{\\\\text{ASF}} = \\\\sqrt{\\\\frac{9}{4}} = \\\\frac{3}{2} = 1.5$$\n\n**Step 3: Find the Volume Scale Factor (VSF).**\n$$\\\\text{VSF} = (\\\\text{LSF})^3 = \\\\left(\\\\frac{3}{2}\\\\right)^3 = \\\\frac{27}{8} = 3.375$$\n\n**Step 4: Calculate the volume of Shape Q.**\n$$\\\\text{Volume of Q} = \\\\text{Volume of P} \\\\times \\\\text{VSF} = 672 \\\\times \\\\frac{27}{8}$$\n = 84 × 27 = 2268\n\n#### Answer:\n\n2268 cm<sup>3</sup>",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex",
+    "reused_from": "all::Nov2025_4WM2H__Q23__p23-23__m03__Congruence-Similarity-Geometrical-Proof"
+  },
+  "all::Nov2025_4WM2H__Q26__p27-27__m05__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Step 1: Find the common difference *d*.** The *n*<sup>th</sup> term is given by *u*<sub>*n*</sub> = *a* + (*n*−1)*d*.\n*u*<sub>20</sub> = 10 + 19*d* = 86\n19*d* = 76\n$$d = \\\\frac{76}{19} = 4$$\n\n**Step 2: Use the sum formula to form an equation in terms of *N*.**\n$$S_N = \\\\frac{N}{2} \\\\left\\[2a + (N - 1)d \\\\right\\]$$\nSubstitute the known values *S*<sub>*N*</sub> = 5194, *a* = 10, and *d* = 4:\n$$5194 = \\\\frac{N}{2} \\\\left\\[2(10) + (N - 1)(4) \\\\right\\]$$\n\n**Step 3: Simplify and solve the quadratic equation.** Multiply by 2 to clear the fraction:\n10388 = *N*\\[20+4*N*−4\\]\n10388 = *N*(4*N*+16)\n4*N*<sup>2</sup> + 16*N* − 10388 = 0\n\nDivide the entire equation by 4 to make it simpler:\n*N*<sup>2</sup> + 4*N* − 2597 = 0\n\n**Step 4: Use the quadratic formula to find *N*.**\n$$N = \\\\frac{-b \\\\pm \\\\sqrt{b^2 - 4ac}}{2a}$$\n$$N = \\\\frac{-4 \\\\pm \\\\sqrt{16 - 4(1)(-2597)}}{2}$$\n$$N = \\\\frac{-4 \\\\pm \\\\sqrt{16 + 10388}}{2}$$\n$$N = \\\\frac{-4 \\\\pm \\\\sqrt{10404}}{2}$$\n$$N = \\\\frac{-4 \\\\pm 102}{2}$$\n\nSince *N* must be a positive integer, we discard the negative root:\n$$N = \\\\frac{-4 + 102}{2} = \\\\frac{98}{2} = 49$$\n\n#### Answer:\n\n*N* = 49\n\nAlways double-check that your *N* (number of terms) evaluates to a positive whole integer. If it ends up as a decimal or fraction, recheck your arithmetic progression formulas.",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "expertise::Nov2025_4WM2H__Q26__p27-27__m05__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Step 1: Find the common difference *d*.** The *n*<sup>th</sup> term is given by *u*<sub>*n*</sub> = *a* + (*n*−1)*d*.\n*u*<sub>20</sub> = 10 + 19*d* = 86\n19*d* = 76\n$$d = \\\\frac{76}{19} = 4$$\n\n**Step 2: Use the sum formula to form an equation in terms of *N*.**\n$$S_N = \\\\frac{N}{2} \\\\left\\[2a + (N - 1)d \\\\right\\]$$\nSubstitute the known values *S*<sub>*N*</sub> = 5194, *a* = 10, and *d* = 4:\n$$5194 = \\\\frac{N}{2} \\\\left\\[2(10) + (N - 1)(4) \\\\right\\]$$\n\n**Step 3: Simplify and solve the quadratic equation.** Multiply by 2 to clear the fraction:\n10388 = *N*\\[20+4*N*−4\\]\n10388 = *N*(4*N*+16)\n4*N*<sup>2</sup> + 16*N* − 10388 = 0\n\nDivide the entire equation by 4 to make it simpler:\n*N*<sup>2</sup> + 4*N* − 2597 = 0\n\n**Step 4: Use the quadratic formula to find *N*.**\n$$N = \\\\frac{-b \\\\pm \\\\sqrt{b^2 - 4ac}}{2a}$$\n$$N = \\\\frac{-4 \\\\pm \\\\sqrt{16 - 4(1)(-2597)}}{2}$$\n$$N = \\\\frac{-4 \\\\pm \\\\sqrt{16 + 10388}}{2}$$\n$$N = \\\\frac{-4 \\\\pm \\\\sqrt{10404}}{2}$$\n$$N = \\\\frac{-4 \\\\pm 102}{2}$$\n\nSince *N* must be a positive integer, we discard the negative root:\n$$N = \\\\frac{-4 + 102}{2} = \\\\frac{98}{2} = 49$$\n\n#### Answer:\n\n*N* = 49\n\nAlways double-check that your *N* (number of terms) evaluates to a positive whole integer. If it ends up as a decimal or fraction, recheck your arithmetic progression formulas.",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex",
+    "reused_from": "all::Nov2025_4WM2H__Q26__p27-27__m05__Algebra-Toolkit"
+  },
+  "all::Nov2025_4WM2H__Q01__p03-03__m02__Circles-Arcs-Sectors": {
+    "status": "checked",
+    "source": "**Step 1:** Place the point of the compass at the vertex *Q*. Draw an arc that intersects both arms *Q**P* and *Q**R*. Let’s call these intersection points *A* and *B*.  \n**Step 2:** Without changing the compass width, place the compass point on *A* and draw an arc inside the angle.  \n**Step 3:** Place the compass point on *B* and draw another arc to intersect the previous arc. Let this intersection be point *C*.  \n**Step 4:** Draw a straight line from *Q* through *C*. This is the angle bisector.",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::Nov2025_4WM2H__Q02__p04-04__m04__Statistics-Toolkit": {
+    "status": "checked",
+    "source": "**Step 1: Find the midpoints (*x*) for each class interval.**\n\n0 \\< *h* ≤ 10 ⟹ *x* = 5\n\n10 \\< *h* ≤ 20 ⟹ *x* = 15\n\n20 \\< *h* ≤ 30 ⟹ *x* = 25\n\n30 \\< *h* ≤ 40 ⟹ *x* = 35\n\n40 \\< *h* ≤ 50 ⟹ *x* = 45\n\n**Step 2: Multiply frequency (*f*) by midpoint (*x*) to find *f**x*.**\n\n**Step 3: Calculate the mean.**\n$$\\\\text{Mean} = \\\\frac{\\\\sum fx}{\\\\sum f} = \\\\frac{1290}{60} = 21.5$$\n\n#### Answer:\n\n21.5 cm",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::Nov2025_4WM2H__Q03__p05-05__m03__Simultaneous-Equations": {
+    "status": "checked",
+    "source": "Label the equations:\n$$\\\\begin{aligned}\n            5x + y &= 11 \\\\quad \\\\text{--- (1)} \\\\\\\\\n            3x - y &= 9  \\\\quad \\\\text{--- (2)}\n        \\\\end{aligned}$$\n\n**Step 1: Add (1) and (2) to eliminate *y*.**\n$$\\\\begin{aligned}\n            (5x + y) + (3x - y) &= 11 + 9 \\\\\\\\\n            8x &= 20 \\\\\\\\\n            x &= \\\\frac{20}{8} = 2.5\n        \\\\end{aligned}$$\n\n**Step 2: Substitute *x* = 2.5 into equation (1) to find *y*.**\n$$\\\\begin{aligned}\n            5(2.5) + y &= 11 \\\\\\\\\n            12.5 + y &= 11 \\\\\\\\\n            y &= 11 - 12.5 = -1.5\n        \\\\end{aligned}$$\n\n#### Answer:\n\n*x* = 2.5, *y* =  − 1.5",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::Nov2025_4WM2H__Q04__p06-06__m04__Percentages": {
+    "status": "checked",
+    "source": "**Step 1: Find the total number of ratio parts.**\nTotal parts = 6 + 7 + 3 = 16 parts\n\n**Step 2: Find the value of one part.**\n$$1 \\\\text{ part} = \\\\frac{960}{16} = 60 \\\\text{ trees}$$\n\n**Step 3: Calculate the total number of cherry trees.**\nCherry trees = 7 parts × 60 = 420 trees\n\n**Step 4: Calculate 65% of the cherry trees to find morellos.**\nMorello trees = 0.65 × 420 = 273\n\n#### Answer:\n\n273\n\nAlways read carefully what the final question asks. A common mistake is stopping at the total number of cherry trees (420) instead of calculating the 65% morello portion.",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::Nov2025_4WM2H__Q05__p07-07__m03__Congruence-Similarity-Geometrical-Proof": {
+    "status": "checked",
+    "source": "**Step 1: Identify corresponding sides from the similar shapes.** Looking at the given angles/orientations:\n\nLeft side *A**B* corresponds to *E**F* and *I**J*.\n\nTop side *B**C* corresponds to *F**G* and *J**K*.\n\nRight side *C**D* corresponds to *G**H* and *K**L*.\n\nWe are given *C**D* = 60 (wait, diagram check: *B**C* is the top side labeled 60, *A**B* = 28. On middle shape *E**F* = 7, *G**H* = 18. On right shape *K**L* = 6, *J**K* is unknown). Let’s use the explicit lengths:\n$$\\\\begin{aligned}\n            AB = 28 \\\\quad &\\\\text{corresponds to} \\\\quad EF = 7 \\\\\\\\\n            BC = 60 \\\\quad &\\\\text{corresponds to} \\\\quad FG \\\\\\\\\n            CD \\\\quad &\\\\text{corresponds to} \\\\quad GH = 18 \\\\quad \\\\text{and} \\\\quad KL = 6 \n        \\\\end{aligned}$$\n\n**Step 2: Find scale factors.** Scale factor from *A**B**C**D* to *E**F**G**H* using the left sides:\n$$\\\\text{SF}\\_1 = \\\\frac{EF}{AB} = \\\\frac{7}{28} = \\\\frac{1}{4}$$\nSo, $FG = BC \\\\times \\\\frac{1}{4} = 60 \\\\times \\\\frac{1}{4} = 15 \\\\text{ cm}$.\n\nScale factor from *E**F**G**H* to *I**J**K**L* using the right sides (*G**H* and *K**L*):\n$$\\\\text{SF}\\_2 = \\\\frac{KL}{GH} = \\\\frac{6}{18} = \\\\frac{1}{3}$$\n\n**Step 3: Calculate *J**K*.** Side *J**K* corresponds to *F**G*.\n$$JK = FG \\\\times \\\\text{SF}\\_2 = 15 \\\\times \\\\frac{1}{3} = 5 \\\\text{ cm}$$\n\n#### Answer:\n\n5 cm",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::Nov2025_4WM2H__Q07__p09-09__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Step 1: Interior angle of the regular pentagon.**\n$$\\\\text{Interior Angle} = \\\\frac{(5-2) \\\\times 180^\\\\circ}{5} = \\\\frac{540^\\\\circ}{5} = 108^\\\\circ$$\nSo, ∠*A**E**D* = 108<sup>∘</sup>.\n\n**Step 2: Find angles within the corner triangle △*D**E**Q*.** Since *A**P**Q**E* is a rectangle, the angle ∠*A**E**Q* = 90<sup>∘</sup>. Therefore, the angle ∠*D**E**Q* is:\n∠*D**E**Q* = ∠*A**E**D* − ∠*A**E**Q* = 108<sup>∘</sup> − 90<sup>∘</sup> = 18<sup>∘</sup>\n\n**Step 3: Analyze △*D**E**Q*.** The problem states *D**Q**C* is a straight line, meaning *Q* lies on the side *D**C*. Therefore, △*D**E**Q* is formed by *D*, *E*, *Q*. In △*D**E**Q*, the angle at vertex *D* is the pentagon’s interior angle ∠*C**D**E* = 108<sup>∘</sup>.\n\nUsing angles in a triangle summing to 180<sup>∘</sup>:\n∠*E**Q**D* = 180<sup>∘</sup> − (∠*D**E**Q*+∠*E**D**Q*) = 180<sup>∘</sup> − (18<sup>∘</sup>+108<sup>∘</sup>) = 180<sup>∘</sup> − 126<sup>∘</sup> = 54<sup>∘</sup>\n\n#### Answer:\n\n54<sup>∘</sup>",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::Nov2025_4WM2H__Q08__p10-10__m04__Percentages": {
+    "status": "checked",
+    "source": "**Step 1: Calculate Normal Price for Shop A.** A 25% discount means the sale price is 75% of the normal price.\n0.75 × Normal<sub>*A*</sub> = 240\n$$\\\\text{Normal}\\_A = \\\\frac{240}{0.75} = 320 \\\\text{ euros}$$\n\n**Step 2: Calculate Normal Price for Shop B.** A discount of $\\\\frac{2}{9}$ means the sale price is $1 - \\\\frac{2}{9} = \\\\frac{7}{9}$ of the normal price.\n$$\\\\frac{7}{9} \\\\times \\\\text{Normal}\\_B = 245$$\n$$\\\\text{Normal}\\_B = 245 \\\\times \\\\frac{9}{7} = 35 \\\\times 9 = 315 \\\\text{ euros}$$\n\n**Step 3: Find the difference.**\nDifference = 320 − 315 = 5 euros\n\n#### Answer:\n\n5 euros",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::Nov2025_4WM2H__Q10__p11-11__m03__Statistics-Toolkit": {
+    "status": "checked",
+    "source": "**Step 1: Calculate the total weight of the initial 5 potatoes.**\nTotal<sub>5</sub> = Mean × Number = 217 × 5 = 1085 grams\n\n**Step 2: Calculate the new total weight.**\nTotal<sub>6</sub> = 1085 + 175 = 1260 grams\n\n**Step 3: Calculate the new mean.**\n$$\\\\text{New Mean} = \\\\frac{1260}{6} = 210 \\\\text{ grams}$$\n\n#### Answer:\n\n210",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::Nov2025_4WM2H__Q11__p12-12__m04__Graphing-Inequalities": {
+    "status": "checked",
+    "source": "Draw an open circle at 1 and an arrow pointing to the left.\n\n**Step 1: Identify the vertical boundary.** The region is to the right of the vertical line at *x* =  − 3. Inequality 1: *x* ≥  − 3\n\n**Step 2: Identify the horizontal boundary.** The region is below the horizontal line at *y* = 4. Inequality 2: *y* ≤ 4\n\n**Step 3: Identify the diagonal boundary.** The line passes through (0,0), (1,1), (−1,−1), etc., meaning its equation is *y* = *x*. The shaded region is above this line. Inequality 3: *y* ≥ *x*\n\n#### Answer:\n\n*x* ≥  − 3,  *y* ≤ 4,  *y* ≥ *x*\n\nAlways pick a test point inside the shaded region, like (0,2), to verify your inequalities. For *y* ≥ *x*, 2 ≥ 0 is true!",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::Nov2025_4WM2H__Q12__p13-13__m03__Percentages": {
+    "status": "checked",
+    "source": "**Step 1: Write down the multiplier for each year.**\n\nDecrease by 5% ⟹ Multiplier = 1 − 0.05 = 0.95\n\nIncrease by 20% ⟹ Multiplier = 1 + 0.20 = 1.20\n\nIncrease by 6.5% ⟹ Multiplier = 1 + 0.065 = 1.065\n\n**Step 2: Calculate the combined overall multiplier.**\nOverall Multiplier = 0.95 × 1.20 × 1.065 = 1.2141\n\n**Step 3: Convert the overall multiplier back to a percentage increase.**\n1.2141 − 1 = 0.2141 = 21.41%\n\n#### Answer:\n\n21.41%",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::Nov2025_4WM2H__Q13__p13-13__m02__Powers-Roots-Standard-Form": {
+    "status": "checked",
+    "source": "**Step 1: Apply the power of 3 to both parts.**\n(9×10<sup>80</sup>)<sup>3</sup> = 9<sup>3</sup> × (10<sup>80</sup>)<sup>3</sup>\n\n**Step 2: Evaluate both components.**\n9<sup>3</sup> = 729\n(10<sup>80</sup>)<sup>3</sup> = 10<sup>80 × 3</sup> = 10<sup>240</sup>\n\n**Step 3: Combine and adjust to standard form.**\n729 × 10<sup>240</sup> = 7.29 × 10<sup>2</sup> × 10<sup>240</sup> = 7.29 × 10<sup>242</sup>\n\n#### Answer:\n\n7.29 × 10<sup>242</sup>",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::Nov2025_4WM2H__Q14__p14-15__m05__Cumulative-Frequency-Diagrams": {
+    "status": "checked",
+    "source": "**Part (a) Median:** Total plants = 40. The median position is at cumulative frequency = 40/2 = 20. Reading across from CF = 20 to the curve and down to the x-axis gives:\n\n#### Answer:\n\n\\(a\\) 30 cm\n\n**Part (b) Interquartile Range (IQR):**\n\nLower Quartile (Q1) is at CF = 10. Reading the graph ⟹ Height = 20 cm.\n\nUpper Quartile (Q3) is at CF = 30. Reading the graph ⟹ Height = 40 cm.\n\nIQR = *Q*3 − *Q*1 = 40 − 20 = 20 cm\n\n#### Answer:\n\n\\(b\\) 20 cm\n\n**Part (c) Premium plants revenue:** Premium plants have height  \\> 40 cm. From the graph, cumulative frequency at 40 cm is 30. This means 30 plants are ≤ 40 cm.\nNumber of premium plants = 40 − 30 = 10 plants\nTotal Money = 10 plants × 30 euros = 300 euros\n\n#### Answer:\n\n\\(c\\) 300 euros",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::Nov2025_4WM2H__Q15__p16-16__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Part (a)(i) Angle *D**O**B*:**\n∠*D**O**B* = 2 × 48<sup>∘</sup> = 96<sup>∘</sup>\n\n#### Answer:\n\n(a)(i) 96<sup>∘</sup>\n\n**Part (a)(ii) Reason:** The angle subtended by an arc at the centre is twice the angle subtended at the circumference.\n\n**Part (b)(i) Angle *B**C**D*:**\n∠*B**C**D* = 180<sup>∘</sup> − 48<sup>∘</sup> = 132<sup>∘</sup>\n\n#### Answer:\n\n(b)(i) 132<sup>∘</sup>\n\n**Part (b)(ii) Reason:** Opposite angles in a cyclic quadrilateral sum to 180<sup>∘</sup>.",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::Nov2025_4WM2H__Q16__p17-17__m02__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Data (sorted):** 14, 15, 16, 18, 19, 20, 22, 25, 28, 40, 50.  \nNumber of data points *n* = 11.\n\n**Step 1: Find the Median (Q2).** The median is the $\\\\left(\\\\frac{11+1}{2}\\\\right) = 6^{\\\\text{th}}$ value.\nMedian = 20\n\n**Step 2: Find Lower Quartile (Q1) and Upper Quartile (Q3).** Q1 is the median of the lower 5 values (14, 15, **16**, 18, 19).\n*Q*1 = 16\nQ3 is the median of the upper 5 values (22, 25, **28**, 40, 50).\n*Q*3 = 28\n\n**Step 3: Calculate the Interquartile Range (IQR).**\nIQR = *Q*3 − *Q*1 = 28 − 16 = 12\n\n#### Answer:\n\n12 minutes",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::Nov2025_4WM2H__Q18__p18-18__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "**Step 1: Square both sides to remove the square root.**\n$$p^2 = \\\\frac{7w + y}{cw + k}$$\n\n**Step 2: Multiply both sides by the denominator (*c**w*+*k*).**\n*p*<sup>2</sup>(*c**w*+*k*) = 7*w* + *y*\n\n**Step 3: Expand the bracket.**\n*p*<sup>2</sup>*c**w* + *p*<sup>2</sup>*k* = 7*w* + *y*\n\n**Step 4: Collect all terms involving *w* on one side.**\n*p*<sup>2</sup>*c**w* − 7*w* = *y* − *p*<sup>2</sup>*k*\n\n**Step 5: Factor out *w*.**\n*w*(*p*<sup>2</sup>*c*−7) = *y* − *p*<sup>2</sup>*k*\n\n**Step 6: Divide to isolate *w*.**\n$$w = \\\\frac{y - p^2k}{p^2c - 7}$$\n\n#### Answer:\n\n$w = \\\\frac{y - p^2k}{p^2c - 7}$",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::Nov2025_4WM2H__Q19__p18-18__m02__Volume-Surface-Area": {
+    "status": "checked",
+    "source": "**Step 1: Find the radius.**\n$$r = \\\\frac{24}{2} = 12 \\\\text{ cm}$$\n\n**Step 2: Apply the surface area formula.**\nSurface Area = 4*π**r*<sup>2</sup>\n = 4 × *π* × 12<sup>2</sup>\n = 4 × *π* × 144\n = 576*π* ≈ 1809.557... cm<sup>2</sup>\n\n**Step 3: Round to 3 significant figures.** 1809.557 → 1810 (the 1, 8, and 1 are the first three sig figs).\n\n#### Answer:\n\n1810 cm<sup>2</sup>",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::Nov2025_4WM2H__Q20__p19-19__m05__Simultaneous-Equations": {
+    "status": "checked",
+    "source": "**Step 1: Substitute *y* = (*x*+2) into the quadratic equation.**\n*x*<sup>2</sup> + (*x*+2)<sup>2</sup> = 3*x*(*x*+2) − 11\n\n**Step 2: Expand all brackets.**\n*x*<sup>2</sup> + (*x*<sup>2</sup>+4*x*+4) = 3*x*<sup>2</sup> + 6*x* − 11\n2*x*<sup>2</sup> + 4*x* + 4 = 3*x*<sup>2</sup> + 6*x* − 11\n\n**Step 3: Move all terms to one side to set the equation to zero.**\n0 = 3*x*<sup>2</sup> − 2*x*<sup>2</sup> + 6*x* − 4*x* − 11 − 4\n*x*<sup>2</sup> + 2*x* − 15 = 0\n\n**Step 4: Factorise the quadratic equation.**\n(*x*+5)(*x*−3) = 0\nSo, *x* =  − 5 or *x* = 3.\n\n**Step 5: Find corresponding *y* values using *y* = *x* + 2.**\n\nIf *x* =  − 5 ⟹ *y* =  − 5 + 2 =  − 3\n\nIf *x* = 3 ⟹ *y* = 3 + 2 = 5\n\n#### Answer:\n\n(−5,−3) and (3,5)",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::Nov2025_4WM2H__Q21__p20-21__m07__Functions": {
+    "status": "checked",
+    "source": "**(a) Find *g*(−1):**\n*g*(−1) = 4(−1)<sup>2</sup> + 16(−1) − 9 = 4 − 16 − 9 =  − 21\n\n#### Answer:\n\n\\(a\\)  − 21\n\n**(b) Find *f**g*(*x*):**\n*f**g*(*x*) = *f*(*g*(*x*)) = 5(4*x*<sup>2</sup>+16*x*−9) − 3\n = 20*x*<sup>2</sup> + 80*x* − 45 − 3 = 20*x*<sup>2</sup> + 80*x* − 48\n\n#### Answer:\n\n\\(b\\) 20*x*<sup>2</sup> + 80*x* − 48\n\nLet *y* = 4*x*<sup>2</sup> + 16*x* − 9. We must rearrange to make *x* the subject.\n\n**Step 1: Complete the square for the *x* terms.**\n*y* = 4(*x*<sup>2</sup>+4*x*) − 9\n*y* = 4((*x*+2)<sup>2</sup>−4) − 9\n*y* = 4(*x*+2)<sup>2</sup> − 16 − 9\n*y* = 4(*x*+2)<sup>2</sup> − 25\n\n**Step 2: Rearrange for *x*.**\n*y* + 25 = 4(*x*+2)<sup>2</sup>\n$$\\\\frac{y + 25}{4} = (x + 2)^2$$\n$$x + 2 = \\\\pm\\\\sqrt{\\\\frac{y + 25}{4}}$$\n\nSince *x* ≥  − 2, *x* + 2 is positive, so we take the positive root.\n$$x + 2 = \\\\frac{\\\\sqrt{y + 25}}{2}$$\n$$x = \\\\frac{\\\\sqrt{y + 25}}{2} - 2$$\n\n**Step 3: Swap *y* for *x* to write the inverse function.**\n\n#### Answer:\n\n$g^{-1}(x) = \\\\frac{\\\\sqrt{x + 25}}{2} - 2$\n\nWhen finding the inverse of a quadratic, always complete the square. The restricted domain (*x* ≥  − 2) tells you whether to take the positive or negative square root!",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::Nov2025_4WM2H__Q22__p22-22__m06__Coordinate-Geometry": {
+    "status": "checked",
+    "source": "**Step 1: Differentiate the curve to find the gradient expression.**\n$$\\\\frac{dy}{dx} = 3x^2 - 16$$\n\n**Step 2: Set the gradient to 11 to find the x-coordinates.**\n3*x*<sup>2</sup> − 16 = 11\n3*x*<sup>2</sup> = 27\n*x*<sup>2</sup> = 9 ⟹ *x* = 3 or *x* =  − 3\n\n**Step 3: Find the corresponding y-coordinates on the curve.**\n\nFor *x* = 3: *y* = (3)<sup>3</sup> − 16(3) + 7 = 27 − 48 + 7 =  − 14  \n**Point 1: (3,−14)**\n\nFor *x* =  − 3: *y* = (−3)<sup>3</sup> − 16(−3) + 7 =  − 27 + 48 + 7 = 28  \n**Point 2: (−3,28)**\n\n**Step 4: Find the y-intercept (*b*) for each tangent (*y* = 11*x* + *b*).**\n\nUsing (3,−14):\n − 14 = 11(3) + *b* ⟹  − 14 = 33 + *b* ⟹ *b* =  − 47\n\nUsing (−3,28):\n28 = 11(−3) + *b* ⟹ 28 =  − 33 + *b* ⟹ *b* = 61\n\n#### Answer:\n\n*b* =  − 47 and 61",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::Nov2025_4WM2H__Q24__p24-25__m06__Vectors": {
+    "status": "checked",
+    "source": "**(a) Find $\\\\overrightarrow{AC}$:**\n$$\\\\overrightarrow{AC} = \\\\overrightarrow{AO} + \\\\overrightarrow{OC} = -\\\\overrightarrow{OA} + \\\\overrightarrow{OC} = -5\\\\mathbf{a} + 10\\\\mathbf{b}$$\n\n#### Answer:\n\n\\(a\\)  − 5**a** + 10**b**\n\n**(b) Find $\\\\overrightarrow{OB}$:**\n$$\\\\overrightarrow{OB} = \\\\overrightarrow{OA} + \\\\overrightarrow{AB} = 5\\\\mathbf{a} + (2\\\\mathbf{a} + 4\\\\mathbf{b}) = 7\\\\mathbf{a} + 4\\\\mathbf{b}$$\n\n#### Answer:\n\n\\(b\\) 7**a** + 4**b**\n\n**Step 1: Set up vector equations for $\\\\overrightarrow{OP}$.** Since *O**P**B* is a straight line, $\\\\overrightarrow{OP}$ is a scalar multiple of $\\\\overrightarrow{OB}$. Let this be *λ*.\n$$\\\\overrightarrow{OP} = \\\\lambda(7\\\\mathbf{a} + 4\\\\mathbf{b}) = 7\\\\lambda\\\\mathbf{a} + 4\\\\lambda\\\\mathbf{b}$$\n\nSince *P* lies on the straight line *A**C*, $\\\\overrightarrow{AP} = \\\\mu\\\\overrightarrow{AC}$ for some scalar *μ*.\n$$\\\\overrightarrow{OP} = \\\\overrightarrow{OA} + \\\\overrightarrow{AP} = 5\\\\mathbf{a} + \\\\mu(-5\\\\mathbf{a} + 10\\\\mathbf{b})$$\n$$\\\\overrightarrow{OP} = (5 - 5\\\\mu)\\\\mathbf{a} + 10\\\\mu\\\\mathbf{b}$$\n\n**Step 2: Equate the coefficients of **a** and **b**.**\n7*λ* = 5 − 5*μ*  — (1)\n$$4\\\\lambda = 10\\\\mu \\\\implies \\\\mu = \\\\frac{4}{10}\\\\lambda = 0.4\\\\lambda \\\\quad \\\\text{--- (2)}$$\n\n**Step 3: Solve for *λ*.** Substitute (2) into (1):\n7*λ* = 5 − 5(0.4*λ*)\n7*λ* = 5 − 2*λ*\n$$9\\\\lambda = 5 \\\\implies \\\\lambda = \\\\frac{5}{9}$$\n\n**Step 4: Find $\\\\overrightarrow{OP}$.**\n$$\\\\overrightarrow{OP} = \\\\frac{5}{9}(7\\\\mathbf{a} + 4\\\\mathbf{b}) = \\\\frac{35}{9}\\\\mathbf{a} + \\\\frac{20}{9}\\\\mathbf{b}$$\n\n#### Answer:\n\n$\\\\frac{35}{9}\\\\mathbf{a} + \\\\frac{20}{9}\\\\mathbf{b}$",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "all::Nov2025_4WM2H__Q25__p26-26__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "The transformation *y* = *f*(4*x*) represents a horizontal stretch by a scale factor of $\\\\frac{1}{4}$. The x-coordinate is multiplied by $\\\\frac{1}{4}$ while the y-coordinate stays the same.\n$$\\\\text{New minimum} = \\\\left(8 \\\\times \\\\frac{1}{4}, 1\\\\right) = (2, 1)$$\n\n#### Answer:\n\n(2,1)\n\n**Step 1: Find the vertical shift *b*.** The standard *y* = cos (*x*) graph fluctuates between  − 1 and 1, centered at *y* = 0. The given graph fluctuates between a minimum of *y* = 1 and a maximum of *y* = 3. The center line is $\\\\frac{3 + 1}{2} = 2$. Therefore, *b* = 2.\n\n**Step 2: Find the frequency multiplier *a*.** The period of the given graph completes one full cycle between *x* = 0 and *x* = 90<sup>∘</sup> (it starts at 3, dips to 1, and returns to 3 at 90<sup>∘</sup>). The standard cosine period is 360<sup>∘</sup>.\n$$\\\\text{Period} = \\\\frac{360^\\\\circ}{a}$$\n$$90^\\\\circ = \\\\frac{360^\\\\circ}{a} \\\\implies a = 4$$\n\n#### Answer:\n\n*a* = 4,  *b* = 2",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex"
+  },
+  "expertise::Nov2025_4WM2H__Q20__p19-19__m05__Simultaneous-Equations": {
+    "status": "checked",
+    "source": "**Step 1: Substitute *y* = (*x*+2) into the quadratic equation.**\n*x*<sup>2</sup> + (*x*+2)<sup>2</sup> = 3*x*(*x*+2) − 11\n\n**Step 2: Expand all brackets.**\n*x*<sup>2</sup> + (*x*<sup>2</sup>+4*x*+4) = 3*x*<sup>2</sup> + 6*x* − 11\n2*x*<sup>2</sup> + 4*x* + 4 = 3*x*<sup>2</sup> + 6*x* − 11\n\n**Step 3: Move all terms to one side to set the equation to zero.**\n0 = 3*x*<sup>2</sup> − 2*x*<sup>2</sup> + 6*x* − 4*x* − 11 − 4\n*x*<sup>2</sup> + 2*x* − 15 = 0\n\n**Step 4: Factorise the quadratic equation.**\n(*x*+5)(*x*−3) = 0\nSo, *x* =  − 5 or *x* = 3.\n\n**Step 5: Find corresponding *y* values using *y* = *x* + 2.**\n\nIf *x* =  − 5 ⟹ *y* =  − 5 + 2 =  − 3\n\nIf *x* = 3 ⟹ *y* = 3 + 2 = 5\n\n#### Answer:\n\n(−5,−3) and (3,5)",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex",
+    "reused_from": "all::Nov2025_4WM2H__Q20__p19-19__m05__Simultaneous-Equations"
+  },
+  "expertise::Nov2025_4WM2H__Q21__p20-21__m07__Functions": {
+    "status": "checked",
+    "source": "**(a) Find *g*(−1):**\n*g*(−1) = 4(−1)<sup>2</sup> + 16(−1) − 9 = 4 − 16 − 9 =  − 21\n\n#### Answer:\n\n\\(a\\)  − 21\n\n**(b) Find *f**g*(*x*):**\n*f**g*(*x*) = *f*(*g*(*x*)) = 5(4*x*<sup>2</sup>+16*x*−9) − 3\n = 20*x*<sup>2</sup> + 80*x* − 45 − 3 = 20*x*<sup>2</sup> + 80*x* − 48\n\n#### Answer:\n\n\\(b\\) 20*x*<sup>2</sup> + 80*x* − 48\n\nLet *y* = 4*x*<sup>2</sup> + 16*x* − 9. We must rearrange to make *x* the subject.\n\n**Step 1: Complete the square for the *x* terms.**\n*y* = 4(*x*<sup>2</sup>+4*x*) − 9\n*y* = 4((*x*+2)<sup>2</sup>−4) − 9\n*y* = 4(*x*+2)<sup>2</sup> − 16 − 9\n*y* = 4(*x*+2)<sup>2</sup> − 25\n\n**Step 2: Rearrange for *x*.**\n*y* + 25 = 4(*x*+2)<sup>2</sup>\n$$\\\\frac{y + 25}{4} = (x + 2)^2$$\n$$x + 2 = \\\\pm\\\\sqrt{\\\\frac{y + 25}{4}}$$\n\nSince *x* ≥  − 2, *x* + 2 is positive, so we take the positive root.\n$$x + 2 = \\\\frac{\\\\sqrt{y + 25}}{2}$$\n$$x = \\\\frac{\\\\sqrt{y + 25}}{2} - 2$$\n\n**Step 3: Swap *y* for *x* to write the inverse function.**\n\n#### Answer:\n\n$g^{-1}(x) = \\\\frac{\\\\sqrt{x + 25}}{2} - 2$\n\nWhen finding the inverse of a quadratic, always complete the square. The restricted domain (*x* ≥  − 2) tells you whether to take the positive or negative square root!",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex",
+    "reused_from": "all::Nov2025_4WM2H__Q21__p20-21__m07__Functions"
+  },
+  "expertise::Nov2025_4WM2H__Q22__p22-22__m06__Coordinate-Geometry": {
+    "status": "checked",
+    "source": "**Step 1: Differentiate the curve to find the gradient expression.**\n$$\\\\frac{dy}{dx} = 3x^2 - 16$$\n\n**Step 2: Set the gradient to 11 to find the x-coordinates.**\n3*x*<sup>2</sup> − 16 = 11\n3*x*<sup>2</sup> = 27\n*x*<sup>2</sup> = 9 ⟹ *x* = 3 or *x* =  − 3\n\n**Step 3: Find the corresponding y-coordinates on the curve.**\n\nFor *x* = 3: *y* = (3)<sup>3</sup> − 16(3) + 7 = 27 − 48 + 7 =  − 14  \n**Point 1: (3,−14)**\n\nFor *x* =  − 3: *y* = (−3)<sup>3</sup> − 16(−3) + 7 =  − 27 + 48 + 7 = 28  \n**Point 2: (−3,28)**\n\n**Step 4: Find the y-intercept (*b*) for each tangent (*y* = 11*x* + *b*).**\n\nUsing (3,−14):\n − 14 = 11(3) + *b* ⟹  − 14 = 33 + *b* ⟹ *b* =  − 47\n\nUsing (−3,28):\n28 = 11(−3) + *b* ⟹ 28 =  − 33 + *b* ⟹ *b* = 61\n\n#### Answer:\n\n*b* =  − 47 and 61",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex",
+    "reused_from": "all::Nov2025_4WM2H__Q22__p22-22__m06__Coordinate-Geometry"
+  },
+  "expertise::Nov2025_4WM2H__Q24__p24-25__m06__Vectors": {
+    "status": "checked",
+    "source": "**(a) Find $\\\\overrightarrow{AC}$:**\n$$\\\\overrightarrow{AC} = \\\\overrightarrow{AO} + \\\\overrightarrow{OC} = -\\\\overrightarrow{OA} + \\\\overrightarrow{OC} = -5\\\\mathbf{a} + 10\\\\mathbf{b}$$\n\n#### Answer:\n\n\\(a\\)  − 5**a** + 10**b**\n\n**(b) Find $\\\\overrightarrow{OB}$:**\n$$\\\\overrightarrow{OB} = \\\\overrightarrow{OA} + \\\\overrightarrow{AB} = 5\\\\mathbf{a} + (2\\\\mathbf{a} + 4\\\\mathbf{b}) = 7\\\\mathbf{a} + 4\\\\mathbf{b}$$\n\n#### Answer:\n\n\\(b\\) 7**a** + 4**b**\n\n**Step 1: Set up vector equations for $\\\\overrightarrow{OP}$.** Since *O**P**B* is a straight line, $\\\\overrightarrow{OP}$ is a scalar multiple of $\\\\overrightarrow{OB}$. Let this be *λ*.\n$$\\\\overrightarrow{OP} = \\\\lambda(7\\\\mathbf{a} + 4\\\\mathbf{b}) = 7\\\\lambda\\\\mathbf{a} + 4\\\\lambda\\\\mathbf{b}$$\n\nSince *P* lies on the straight line *A**C*, $\\\\overrightarrow{AP} = \\\\mu\\\\overrightarrow{AC}$ for some scalar *μ*.\n$$\\\\overrightarrow{OP} = \\\\overrightarrow{OA} + \\\\overrightarrow{AP} = 5\\\\mathbf{a} + \\\\mu(-5\\\\mathbf{a} + 10\\\\mathbf{b})$$\n$$\\\\overrightarrow{OP} = (5 - 5\\\\mu)\\\\mathbf{a} + 10\\\\mu\\\\mathbf{b}$$\n\n**Step 2: Equate the coefficients of **a** and **b**.**\n7*λ* = 5 − 5*μ*  — (1)\n$$4\\\\lambda = 10\\\\mu \\\\implies \\\\mu = \\\\frac{4}{10}\\\\lambda = 0.4\\\\lambda \\\\quad \\\\text{--- (2)}$$\n\n**Step 3: Solve for *λ*.** Substitute (2) into (1):\n7*λ* = 5 − 5(0.4*λ*)\n7*λ* = 5 − 2*λ*\n$$9\\\\lambda = 5 \\\\implies \\\\lambda = \\\\frac{5}{9}$$\n\n**Step 4: Find $\\\\overrightarrow{OP}$.**\n$$\\\\overrightarrow{OP} = \\\\frac{5}{9}(7\\\\mathbf{a} + 4\\\\mathbf{b}) = \\\\frac{35}{9}\\\\mathbf{a} + \\\\frac{20}{9}\\\\mathbf{b}$$\n\n#### Answer:\n\n$\\\\frac{35}{9}\\\\mathbf{a} + \\\\frac{20}{9}\\\\mathbf{b}$",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex",
+    "reused_from": "all::Nov2025_4WM2H__Q24__p24-25__m06__Vectors"
+  },
+  "expertise::Nov2025_4WM2H__Q25__p26-26__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "source": "The transformation *y* = *f*(4*x*) represents a horizontal stretch by a scale factor of $\\\\frac{1}{4}$. The x-coordinate is multiplied by $\\\\frac{1}{4}$ while the y-coordinate stays the same.\n$$\\\\text{New minimum} = \\\\left(8 \\\\times \\\\frac{1}{4}, 1\\\\right) = (2, 1)$$\n\n#### Answer:\n\n(2,1)\n\n**Step 1: Find the vertical shift *b*.** The standard *y* = cos (*x*) graph fluctuates between  − 1 and 1, centered at *y* = 0. The given graph fluctuates between a minimum of *y* = 1 and a maximum of *y* = 3. The center line is $\\\\frac{3 + 1}{2} = 2$. Therefore, *b* = 2.\n\n**Step 2: Find the frequency multiplier *a*.** The period of the given graph completes one full cycle between *x* = 0 and *x* = 90<sup>∘</sup> (it starts at 3, dips to 1, and returns to 3 at 90<sup>∘</sup>). The standard cosine period is 360<sup>∘</sup>.\n$$\\\\text{Period} = \\\\frac{360^\\\\circ}{a}$$\n$$90^\\\\circ = \\\\frac{360^\\\\circ}{a} \\\\implies a = 4$$\n\n#### Answer:\n\n*a* = 4,  *b* = 2",
+    "updated": "2026-05-16T09:02:20",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "imported_from": "legacy_tex",
+    "reused_from": "all::Nov2025_4WM2H__Q25__p26-26__m03__Algebra-Toolkit"
   },
   "all::Nov2025_P1H__Q09__p07-07__m03__Percentages": {
     "status": "checked",

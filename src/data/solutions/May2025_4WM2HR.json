@@ -1,0 +1,228 @@
+{
+  "paperSlug": "May2025_4WM2HR",
+  "solutions": {
+    "all::May2025_4WM2HR__Q03__p04-04__m03__Simultaneous-Equations": {
+      "status": "checked",
+      "source": "#### Required:\n\nSolve: 3*x* + 2*y* = 10 and 3*x* − 4*y* = 16 algebraically.\n\n#### Step:\n\nLabel the equations:\n$$\\\\begin{aligned}\n            3x + 2y &= 10 \\\\tag{1}\\\\\\\\\n            3x - 4y &= 16 \\\\tag{2}\n        \\\\end{aligned}$$\n\n#### Step:\n\nSubtract <span class=\"upright\">(2)</span> from <span class=\"upright\">(1)</span> to eliminate *x*:\n$$(1)-(2): \\\\quad 6y = -6 \\\\implies \\\\boxed{y = -1}$$\n\n#### Step:\n\nSubstitute *y* =  − 1 into <span class=\"upright\">(1)</span>:\n$$3x + 2(-1) = 10 \\\\implies 3x = 12 \\\\implies \\\\boxed{x = 4}$$\n\n#### Step:\n\nCheck in equation <span class=\"upright\">(2)</span>: 3(4) − 4(−1) = 12 + 4 = 16\n\n#### Answer:\n\n*x* = 4,  *y* =  − 1",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::May2025_4WM2HR__Q08__p11-11__m03__Percentages": {
+      "status": "checked",
+      "source": "#### Required:\n\nSale price (after 15% reduction)  = 612 Swiss francs. Find the normal price.\n\n#### Step:\n\nA 15% reduction means the sale price is 85% of the normal price:\n612 = 0.85 × Normal price\n\n#### Step:\n\nSolve for the normal price:\n$$\\\\text{Normal price} = \\\\frac{612}{0.85} = 720$$\n\n#### Answer:\n\nNormal price  = 720 Swiss francs\n\n#### Note:\n\nNever calculate 15% of 612 and add it on — that gives 703.80 (wrong!). Always divide by the decimal multiplier.",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::May2025_4WM2HR__Q12__p16-16__m03__Compound-Interest-Depreciation": {
+      "status": "checked",
+      "source": "#### Required:\n\nCar bought for $16 000; depreciates 12%/yr for 2 yrs, then *x*%/yr in year 3. Value after 3 years  = $11 461.12. Find *x*.\n\n#### Step:\n\nValue after 2 years at 12% depreciation:\n*V*<sub>2</sub> = 16000 × (0.88)<sup>2</sup> = 16000 × 0.7744 = $12 390.40\n\n#### Step:\n\nApply year-3 depreciation and set equal to final value:\n$$12390.40\\\\times\\\\!\\\\left(1 - \\\\frac{x}{100}\\\\right) = 11461.12$$\n\n#### Step:\n\nSolve:\n$$1 - \\\\frac{x}{100} = \\\\frac{11461.12}{12390.40} = 0.925\n        \\\\implies \\\\frac{x}{100} = 0.075\n        \\\\implies x = 7.5$$\n\n#### Answer:\n\n*x* = 7.5",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::May2025_4WM2HR__Q14__p17-17__m04__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "#### Required:\n\nMake *k* the subject of $\\\\displaystyle p = \\\\dfrac{8k^2+5}{7-3k^2}$.\n\n#### Step:\n\nMultiply both sides by (7−3*k*<sup>2</sup>):\n*p*(7−3*k*<sup>2</sup>) = 8*k*<sup>2</sup> + 5\n\n#### Step:\n\nExpand:\n7*p* − 3*p**k*<sup>2</sup> = 8*k*<sup>2</sup> + 5\n\n#### Step:\n\nCollect all *k*<sup>2</sup> terms on one side:\n7*p* − 5 = 8*k*<sup>2</sup> + 3*p**k*<sup>2</sup>\n\n#### Step:\n\nFactorise and solve for *k*:\n$$7p - 5 = k^2(3p+8) \\\\implies k^2 = \\\\frac{7p-5}{3p+8}$$\n$$k = \\\\pm\\\\sqrt{\\\\dfrac{7p-5}{3p+8}}$$\n\n#### Answer:\n\n$k = \\\\pm\\\\sqrt{\\\\dfrac{7p-5}{3p+8}}$\n\n#### Note:\n\nInclude both ± roots unless the context specifies the sign of *k*.",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::May2025_4WM2HR__Q16__p19-19__m03__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "#### Required:\n\n$\\\\overrightarrow{OA}=4\\\\mathbf{a}$, $\\\\overrightarrow{OB}=4\\\\mathbf{b}$, AP:PB = 1:3. (a) Find $\\\\overrightarrow{AB}$. (b) Express $\\\\overrightarrow{OP}$ in simplest form.\n\n#### Part (a)\n\n$$\\\\overrightarrow{AB} = \\\\overrightarrow{AO}+\\\\overrightarrow{OB} = -4\\\\mathbf{a}+4\\\\mathbf{b}$$\n\n#### Answer:\n\n$\\\\overrightarrow{AB} = 4\\\\mathbf{b}-4\\\\mathbf{a}$\n\n#### Part (b)\n\n#### Step:\n\nAP:PB = 1:3 means $\\\\overrightarrow{AP} = \\\\tfrac{1}{4}\\\\overrightarrow{AB}$:\n$$\\\\overrightarrow{AP} = \\\\tfrac{1}{4}(4\\\\mathbf{b}-4\\\\mathbf{a}) = \\\\mathbf{b}-\\\\mathbf{a}$$\n\n#### Step:\n\nUse $\\\\overrightarrow{OP} = \\\\overrightarrow{OA}+\\\\overrightarrow{AP}$:\n$$\\\\overrightarrow{OP} = 4\\\\mathbf{a}+(\\\\mathbf{b}-\\\\mathbf{a}) = 3\\\\mathbf{a}+\\\\mathbf{b}$$\n\n#### Answer:\n\n$\\\\overrightarrow{OP} = 3\\\\mathbf{a}+\\\\mathbf{b}$",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::May2025_4WM2HR__Q20__p23-23__m03__Solving-Inequalities": {
+      "status": "checked",
+      "source": "#### Required:\n\nSolve 2*x*<sup>2</sup> − 7*x* − 15 \\> 0. Show clear algebraic working.\n\n#### Step:\n\nFactorise the quadratic:\n2*x*<sup>2</sup> − 7*x* − 15 = (2*x*+3)(*x*−5)\n*Check:* (2*x*+3)(*x*−5) = 2*x*<sup>2</sup> − 10*x* + 3*x* − 15 = 2*x*<sup>2</sup> − 7*x* − 15\n\n#### Step:\n\nRoots: set each factor to zero:\n$$2x+3=0 \\\\implies x=-\\\\tfrac{3}{2};\\\\qquad x-5=0 \\\\implies x=5$$\n\n#### Step:\n\nSince the coefficient of *x*<sup>2</sup> is  + 2 \\> 0, the parabola opens **upward**. The expression is  \\> 0 *outside* the roots:\n\n#### Answer:\n\n$x \\< -\\\\dfrac{3}{2}$or*x* \\> 5",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "expertise::May2025_4WM2HR__Q20__p23-23__m03__Solving-Inequalities": {
+      "status": "checked",
+      "source": "#### Required:\n\nSolve 2*x*<sup>2</sup> − 7*x* − 15 \\> 0. Show clear algebraic working.\n\n#### Step:\n\nFactorise the quadratic:\n2*x*<sup>2</sup> − 7*x* − 15 = (2*x*+3)(*x*−5)\n*Check:* (2*x*+3)(*x*−5) = 2*x*<sup>2</sup> − 10*x* + 3*x* − 15 = 2*x*<sup>2</sup> − 7*x* − 15\n\n#### Step:\n\nRoots: set each factor to zero:\n$$2x+3=0 \\\\implies x=-\\\\tfrac{3}{2};\\\\qquad x-5=0 \\\\implies x=5$$\n\n#### Step:\n\nSince the coefficient of *x*<sup>2</sup> is  + 2 \\> 0, the parabola opens **upward**. The expression is  \\> 0 *outside* the roots:\n\n#### Answer:\n\n$x \\< -\\\\dfrac{3}{2}$or*x* \\> 5",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex",
+      "reused_from": "all::May2025_4WM2HR__Q20__p23-23__m03__Solving-Inequalities"
+    },
+    "all::May2025_4WM2HR__Q25__p28-29__m05__Volume-Surface-Area": {
+      "status": "checked",
+      "source": "#### Required:\n\nHemisphere H has radius *x* cm and volume 6174*π* cm<sup>3</sup>. A bowl is made by removing an inner hemisphere, leaving 2 cm thickness. Find total surface area in terms of *π*.\n\n#### Step:\n\nFind outer radius *x*. Volume of hemisphere $= \\\\dfrac{2}{3}\\\\pi r^3$:\n$$\\\\frac{2}{3}\\\\pi x^3 = 6174\\\\pi\n        \\\\implies x^3 = \\\\frac{6174\\\\times3}{2} = 9261\n        \\\\implies x = \\\\sqrt\\[3\\]{9261} = 21\\\\text{ cm}$$\n\n#### Step:\n\nFind inner radius:\n*r*<sub>inner</sub> = 21 − 2 = 19 cm\n\n#### Step:\n\nThree surfaces to add:\n\n**1. Outer curved surface** (half-sphere, radius 21):\n*A*<sub>1</sub> = 2*π*(21)<sup>2</sup> = 2*π* × 441 = 882*π*\n\n**2. Inner curved surface** (half-sphere, radius 19):\n*A*<sub>2</sub> = 2*π*(19)<sup>2</sup> = 2*π* × 361 = 722*π*\n\n**3. Flat annular ring** at the top rim:\n*A*<sub>3</sub> = *π*(21)<sup>2</sup> − *π*(19)<sup>2</sup> = *π*(441−361) = 80*π*\n\n#### Step:\n\nTotal surface area:\n*A*<sub>total</sub> = 882*π* + 722*π* + 80*π* = 1684*π*\n\n#### Answer:\n\nTotal surface area  = 1684*π* cm<sup>2</sup>\n\n#### Note:\n\nThree separate surfaces! Missing the flat annular ring is the most common error on this type of question.",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "expertise::May2025_4WM2HR__Q25__p28-29__m05__Volume-Surface-Area": {
+      "status": "checked",
+      "source": "#### Required:\n\nHemisphere H has radius *x* cm and volume 6174*π* cm<sup>3</sup>. A bowl is made by removing an inner hemisphere, leaving 2 cm thickness. Find total surface area in terms of *π*.\n\n#### Step:\n\nFind outer radius *x*. Volume of hemisphere $= \\\\dfrac{2}{3}\\\\pi r^3$:\n$$\\\\frac{2}{3}\\\\pi x^3 = 6174\\\\pi\n        \\\\implies x^3 = \\\\frac{6174\\\\times3}{2} = 9261\n        \\\\implies x = \\\\sqrt\\[3\\]{9261} = 21\\\\text{ cm}$$\n\n#### Step:\n\nFind inner radius:\n*r*<sub>inner</sub> = 21 − 2 = 19 cm\n\n#### Step:\n\nThree surfaces to add:\n\n**1. Outer curved surface** (half-sphere, radius 21):\n*A*<sub>1</sub> = 2*π*(21)<sup>2</sup> = 2*π* × 441 = 882*π*\n\n**2. Inner curved surface** (half-sphere, radius 19):\n*A*<sub>2</sub> = 2*π*(19)<sup>2</sup> = 2*π* × 361 = 722*π*\n\n**3. Flat annular ring** at the top rim:\n*A*<sub>3</sub> = *π*(21)<sup>2</sup> − *π*(19)<sup>2</sup> = *π*(441−361) = 80*π*\n\n#### Step:\n\nTotal surface area:\n*A*<sub>total</sub> = 882*π* + 722*π* + 80*π* = 1684*π*\n\n#### Answer:\n\nTotal surface area  = 1684*π* cm<sup>2</sup>\n\n#### Note:\n\nThree separate surfaces! Missing the flat annular ring is the most common error on this type of question.",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex",
+      "reused_from": "all::May2025_4WM2HR__Q25__p28-29__m05__Volume-Surface-Area"
+    },
+    "all::May2025_4WM2HR__Q01__p03-03__m05__Statistics-Toolkit": {
+      "status": "checked",
+      "source": "#### Required:\n\n\\(a\\) Write down the modal class. (b) Estimate the mean weight of the 50 dogs.\n\n#### Part (a)\n\nThe **modal class** is the interval with the highest frequency. From the table, the highest frequency is **17**, which belongs to:\n\n#### Answer:\n\nModal class: 8 \\< *w* ≤ 12 kg\n\n#### Part (b)\n\n#### Step:\n\nFind the midpoint of each class interval:\n\n#### Step:\n\nApply the estimated mean formula:\n$$\\\\bar{x} = \\\\frac{\\\\sum f\\\\!x}{\\\\sum f} = \\\\frac{660}{50} = 13.2 \\\\text{ kg}$$\n\n#### Answer:\n\nEstimated mean weight  = 13.2 kg",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::May2025_4WM2HR__Q02__p04-04__m03__Prime-Factors-HCF-LCM": {
+      "status": "checked",
+      "source": "#### Required:\n\nWrite 1400 as a product of powers of its prime factors.\n\n#### Step:\n\nDivide repeatedly by the smallest prime factor each time:\n$$1400 \\\\;\\\\xrightarrow{\\\\div 2}\\\\; 700\n        \\\\;\\\\xrightarrow{\\\\div 2}\\\\; 350\n        \\\\;\\\\xrightarrow{\\\\div 2}\\\\; 175\n        \\\\;\\\\xrightarrow{\\\\div 5}\\\\; 35\n        \\\\;\\\\xrightarrow{\\\\div 5}\\\\; 7\n        \\\\;\\\\xrightarrow{\\\\div 7}\\\\; 1$$\n\n#### Step:\n\nCollect the prime factors:\n$$1400 = \\\\underbrace{2 \\\\times 2 \\\\times 2}\\_{2^3}\n        \\\\times \\\\underbrace{5 \\\\times 5}\\_{5^2}\n        \\\\times 7$$\n\n#### Answer:\n\n1400 = 2<sup>3</sup> × 5<sup>2</sup> × 7",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::May2025_4WM2HR__Q04__p06-07__m04__Transformations": {
+      "status": "checked",
+      "source": "#### Required:\n\n\\(a\\) Rotate triangle A 90° anticlockwise about (1,2); label triangle B. (b) Describe fully the transformation mapping C onto D.\n\n#### Part (a)\n\n#### Step:\n\nThe rule for 90° anticlockwise rotation about (*a*,*b*):\n(*x*, *y*) → (*a* − (*y*−*b*),  *b* + (*x*−*a*))\nAbout (1,2): (*x*,*y*) → (3−*y*,  *x*+1)\n\n#### Step:\n\nTriangle A has vertices *A*<sub>1</sub>(2,7), *A*<sub>2</sub>(4,5), *A*<sub>3</sub>(2,5). Apply the rule:\n(2,7) → (−4,3),   (4,5) → (−2,5),   (2,5) → (−2,3)\n\n#### Answer:\n\nTriangle B has vertices (−4,3), (−2,5), (−2,3)\n\n#### Part (b)\n\n#### Step:\n\nIdentify corresponding vertices of C and D from the diagram and compute the vector:\n$$(4,\\\\,4) \\\\longrightarrow (-5,\\\\,7): \\\\quad\n        \\\\vec{v} = \\\\begin{pmatrix}-9\\\\\\\\3\\\\end{pmatrix}$$\nCheck: (6,1) → (−3,4) gives the same vector $\\\\begin{pmatrix}-9\\\\\\\\3\\\\end{pmatrix}$\n\n#### Answer:\n\nTranslation by vector $\\\\begin{pmatrix}-9\\\\\\\\3\\\\end{pmatrix}$",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::May2025_4WM2HR__Q05__p08-08__m05__Percentages": {
+      "status": "checked",
+      "source": "#### Required:\n\nCalculate Joshua’s percentage profit on the flooring job. Give answer to 1 d.p.\n\n#### Step:\n\nNumber of boxes of tiles needed:\n$$\\\\frac{45\\\\,\\\\text{m}^2}{1.5\\\\,\\\\text{m}^2/\\\\text{box}} = 30 \\\\text{ boxes}$$\n\n#### Step:\n\nCost of tiles:\n30 × £64 = £1920\n\n#### Step:\n\nCost of adhesive:\n5 × £12 = £60\n\n#### Step:\n\nTotal cost (cost price):\n£1920 + £60 = £1980\n\n#### Step:\n\nProfit and percentage profit:\nProfit = £3000 − £1980 = £1020\n$$\\\\%\\\\,\\\\text{Profit} = \\\\frac{1020}{1980} \\\\times 100 = 51.515\\\\ldots\\\\%$$\n\n#### Answer:\n\nPercentage profit  = 51.5%\n\n#### Note:\n\nAlways divide profit by the **cost price** (£1980), not the selling price (£3000). Dividing by £3000 gives 34.0% — a common but wrong answer.",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::May2025_4WM2HR__Q06__p09-09__m03__Powers-Roots-Standard-Form": {
+      "status": "checked",
+      "source": "#### Required:\n\n\\(a\\) Write 82 000 000 in standard form. (b) Write 5.8 × 10<sup>−6</sup> as an ordinary number. (c) Write 160 × 10<sup>300</sup> in standard form.\n\n#### Part (a)\n\n82 000 000 = 8.2 × 10<sup>7</sup>\n\n#### Answer:\n\n8.2 × 10<sup>7</sup>\n\n#### Part (b)\n\nMove the decimal 6 places **left**:\n5.8 × 10<sup>−6</sup> = 0.0000058\n\n#### Answer:\n\n0.0000058\n\n#### Part (c)\n\n160 × 10<sup>300</sup> = 1.6 × 10<sup>1</sup> × 10<sup>300</sup> = 1.6 × 10<sup>301</sup>\n\n#### Answer:\n\n1.6 × 10<sup>301</sup>",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::May2025_4WM2HR__Q07__p10-10__m03__Statistics-Toolkit": {
+      "status": "checked",
+      "source": "#### Required:\n\nMean of 7 numbers  = 60; mean of 3 of them  = 46. Find the mean of the other 4.\n\n#### Step:\n\nSum of all 7 numbers:\n7 × 60 = 420\n\n#### Step:\n\nSum of the 3 numbers:\n3 × 46 = 138\n\n#### Step:\n\nSum of the remaining 4:\n420 − 138 = 282\n\n#### Step:\n\nMean of the 4 numbers:\n$$\\\\frac{282}{4} = 70.5$$\n\n#### Answer:\n\nMean of the other 4 numbers  = 70.5",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::May2025_4WM2HR__Q09__p12-12__m06__Graphing-Inequalities": {
+      "status": "checked",
+      "source": "#### Required:\n\n\\(a\\) Solve 3*x* − 22 \\> 8*x* − 40 algebraically. (b) Write the three inequalities defining region R.\n\n#### Part (a)\n\n#### Step:\n\nMove all *x* terms to the right and constants to the left:\n3*x* − 22 \\> 8*x* − 40 ⟹  − 22 + 40 \\> 8*x* − 3*x* ⟹ 18 \\> 5*x*\n\n#### Step:\n\nDivide both sides by 5:\n$$x \\< \\\\frac{18}{5} = 3.6$$\n\n#### Answer:\n\n*x* \\< 3.6\n\n#### Part (b)\n\n#### Step:\n\nIdentify the three boundary lines and their regions using the graph. The shaded region R is bounded by *x* = 2, *y* = 1, and *x* + *y* = 6.\n\n#### Answer:\n\n*x* ≥ 2,*y* ≥ 1,*x* + *y* ≤ 6",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::May2025_4WM2HR__Q10__p13-13__m05__Angles-in-Polygons-Parallel-Lines": {
+      "status": "checked",
+      "source": "#### Required:\n\nFind angle *x* in the figure combining a regular 10-gon (ABCDEFGHIJ) and hexagon AJKLMN.\n\n#### Step:\n\nInterior angle of a regular 10-sided polygon:\n$$\\\\text{Interior angle} = \\\\frac{(10-2)\\\\times180°}{10} = \\\\frac{1440°}{10} = 144°$$\n\n#### Step:\n\nFind the interior angle of the hexagon at vertex *A*. At point *A*: decagon angle + 113° + hexagon angle at *A* = 360°:\n∠*x* = 360° − 144° − 110° = 106°\n\n#### Answer:\n\n*x* = 106°",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::May2025_4WM2HR__Q11__p14-15__m07__Percentages": {
+      "status": "checked",
+      "source": "#### Required:\n\n\\(a\\) Median(b) IQR(c) % days  \\> 75 km(d) More consistent?\n\n#### Part (a)\n\n#### Step:\n\nMedian at the $\\\\frac{60}{2} = 30$th value — read from graph at cf  = 30:\n\n#### Answer:\n\nMedian  ≈ 62 km\n\n#### Part (b)\n\n#### Step:\n\n*Q*<sub>1</sub> at cf  = 15, *Q*<sub>3</sub> at cf  = 45. Read from graph:\n*Q*<sub>1</sub> ≈ 56 km,   *Q*<sub>3</sub> ≈ 74 km\nIQR = *Q*<sub>3</sub> − *Q*<sub>1</sub> = 69 − 55 = 14 km\n\n#### Answer:\n\nIQR  ≈ 14 km\n\n#### Note:\n\nGraph-reading answers are accepted within  ± 2 km of the model answer.\n\n#### Part (c)\n\n#### Step:\n\nFrom the graph, read the cumulative frequency at *d* = 75 km:\ncf at 75 km ≈ 52\n\n#### Step:\n\nNumber of days with distance  \\> 75 km:\n60 − 52 = 8 days\n\n#### Step:\n\nPercentage:\n$$\\\\frac{8}{60}\\\\times100 = 13.3\\\\%$$\n\n#### Answer:\n\n13.3% of days Ehrick drives more than 75 km\n\n#### Part (d)\n\n#### Answer:\n\nAlison is more consistent — her IQR (15 km) is smaller than Tomas’s (28 km), meaning less variability in daily distances.",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::May2025_4WM2HR__Q13__p17-17__m03__Powers-Roots-Standard-Form": {
+      "status": "checked",
+      "source": "#### Required:\n\nDistance to Andromeda: 1.6 × 10<sup>11</sup> AU. Convert to light years (2 s.f., standard form).\n\n#### Step:\n\nConvert AU → km:\n1.6 × 10<sup>11</sup> × 1.5 × 10<sup>8</sup> = (1.6×1.5) × 10<sup>19</sup> = 2.4 × 10<sup>19</sup> km\n\n#### Step:\n\nConvert km → light years:\n$$\\\\frac{2.4\\\\times10^{19}}{9.5\\\\times10^{12}}\n        = \\\\frac{2.4}{9.5}\\\\times10^{7}\n        = 0.2526\\\\ldots\\\\times10^{7}$$\n\n#### Step:\n\nWrite in standard form to 2 s.f.:\n = 2.526… × 10<sup>6</sup> ≈ 2.5 × 10<sup>6</sup>\n\n#### Answer:\n\nDistance  = 2.5 × 10<sup>6</sup> light years",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::May2025_4WM2HR__Q15__p18-18__m03__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "#### Required:\n\nA, B, C on circle centre O. ∠*B**A**O* = 36°, ∠*B**C**O* = 21°. Find ∠*A**C**O*.\n\n#### Step:\n\n△*O**A**B* is isosceles (*O**A* = *O**B*= radius):\n∠*O**A**B* = ∠*O**B**A* = 36° ⟹ ∠*A**O**B* = 180° − 36° − 36° = 108°\n\n#### Step:\n\n△*O**B**C* is isosceles (*O**B* = *O**C*):\n∠*O**B**C* = ∠*O**C**B* = 21° ⟹ ∠*B**O**C* = 180° − 21° − 21° = 138°\n\n#### Step:\n\nAngles at centre O (on the same side):\n∠*A**O**C* = 360° − 108° − 138° = 114°\n\n#### Step:\n\n△*O**A**C* is isosceles (*O**A* = *O**C*):\n$$\\\\angle OAC + \\\\angle OCA = 180°-114° = 66°\n        \\\\implies \\\\angle ACO = \\\\frac{66°}{2} = 33°$$\n\n#### Answer:\n\n∠*A**C**O* = 33°",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::May2025_4WM2HR__Q17__p20-20__m04__Functions": {
+      "status": "checked",
+      "source": "#### Required:\n\n$g(x) = \\\\dfrac{3x}{x-2}$. (a) Value excluded from domain. (b) Find *g*<sup>−1</sup>(*x*).\n\n#### Part (a)\n\nThe denominator must not equal zero: *x* − 2 ≠ 0.\n\n#### Answer:\n\n*x* = 2 cannot be in any domain of *g*\n\n#### Part (b)\n\n#### Step:\n\nSet *y* = *g*(*x*) and swap *x* ↔ *y*:\n$$x = \\\\frac{3y}{y-2}$$\n\n#### Step:\n\nMultiply both sides by (*y*−2):\n*x*(*y*−2) = 3*y* ⟹ *x**y* − 2*x* = 3*y*\n\n#### Step:\n\nCollect *y* terms and factorise:\n*x**y* − 3*y* = 2*x* ⟹ *y*(*x*−3) = 2*x*\n\n#### Step:\n\nSolve for *y*:\n$$y = \\\\frac{2x}{x-3}$$\n\n#### Answer:\n\n$g^{-1}(x) = \\\\dfrac{2x}{x-3}$\n\n#### Note:\n\n*g*<sup>−1</sup>(*x*) is undefined at *x* = 3, which is the range restriction of *g*(*x*) (horizontal asymptote).",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::May2025_4WM2HR__Q18__p21-21__m03__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "#### Required:\n\nDB is a diameter; chords AC and DB intersect at P. AP = 12 cm, PC = 7 cm, PB = 6 cm. Find area of circle (3 s.f.).\n\n#### Step:\n\nApply the **Intersecting Chords Theorem**: *A**P* × *P**C* = *B**P* × *P**D*\n$$12\\\\times7 = 6\\\\times PD \\\\implies PD = \\\\frac{84}{6} = 14\\\\text{ cm}$$\n\n#### Step:\n\nDiameter *D**B*:\n*D**B* = *P**D* + *P**B* = 14 + 6 = 20 cm ⟹ *r* = 10 cm\n\n#### Step:\n\nArea of circle:\nArea = *π**r*<sup>2</sup> = 100*π* ≈ 314.159… cm<sup>2</sup>\n\n#### Answer:\n\nArea of circle  = 314 cm<sup>2</sup> (3 s.f.)\n\n#### Note:\n\nIntersecting Chords Theorem: if two chords cross inside a circle at P, then *A**P* × *P**C* = *B**P* × *P**D*.",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::May2025_4WM2HR__Q19__p22-22__m03__Functions": {
+      "status": "checked",
+      "source": "#### Required:\n\nEstimate the gradient of *y* = *f*(*x*) at the point where *x* = 3.\n\n#### Step:\n\nDraw a tangent to the curve at *x* = 3. From the graph, a suitable tangent passes through approximately (1, −2) and (5, 6):\n\n#### Step:\n\nCalculate gradient of the tangent:\n$$\\\\text{Gradient} = \\\\frac{\\\\Delta y}{\\\\Delta x} = \\\\frac{6-(-2)}{5-1} = \\\\frac{8}{4} = 2$$\n\n#### Answer:\n\nGradient  ≈ 2 at *x* = 3\n\n#### Note:\n\nAnswers in the range 1 to 3 are typically accepted. Draw the tangent triangle as large as possible for the most accurate estimate.",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::May2025_4WM2HR__Q21__p24-24__m05__Volume-Surface-Area": {
+      "status": "checked",
+      "source": "#### Required:\n\nCuboid has a square cross-section of side *x* cm and length (15−4*x*) cm. Find the maximum value of the volume *V*.\n\n#### Step:\n\nWrite *V* as a function of *x*:\n*V* = *x* ⋅ *x* ⋅ (15−4*x*) = *x*<sup>2</sup>(15−4*x*) = 15*x*<sup>2</sup> − 4*x*<sup>3</sup>\n\n#### Step:\n\nDifferentiate:\n$$\\\\frac{dV}{dx} = 30x - 12x^2$$\n\n#### Step:\n\nSet $\\\\dfrac{dV}{dx} = 0$:\n$$30x - 12x^2 = 0 \\\\implies 6x(5-2x) = 0 \\\\implies x=0\\\\;\\\\text{ or }\\\\;x=\\\\tfrac{5}{2}=2.5$$\n(*x* = 0 gives zero volume, so the meaningful solution is *x* = 2.5.)\n\n#### Step:\n\nSecond derivative test to confirm maximum:\n$$\\\\frac{d^2V}{dx^2} = 30-24x\\\\;\\\\Bigg\\|\\_{x=2.5} = 30 - 60 = -30 \\< 0 \\\\quad \\\\checkmark\\\\text{ (maximum)}$$\n\n#### Step:\n\nCalculate *V*<sub>max</sub>:\n*V*<sub>max</sub> = (2.5)<sup>2</sup> × (15−4×2.5) = 6.25 × 5 = 31.25 cm<sup>3</sup>\n\n#### Answer:\n\nMaximum volume *V* = 31.25 cm<sup>3</sup>\n\n#### Note:\n\nCalculus optimisation: always verify the nature of the stationary point using $\\\\dfrac{d^2V}{dx^2}$. Also check *x* \\> 0 and 15 − 4*x* \\> 0 (i.e. *x* \\< 3.75) to ensure a valid cuboid.",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::May2025_4WM2HR__Q22__p25-25__m05__Simultaneous-Equations": {
+      "status": "checked",
+      "source": "#### Required:\n\nSolve *y*<sup>2</sup> + 5*y* + *x*<sup>2</sup> = 12 and *x* = *y* + 5.\n\n#### Step:\n\nSubstitute *x* = *y* + 5 into the first equation:\n*y*<sup>2</sup> + 5*y* + (*y*+5)<sup>2</sup> = 12\n\n#### Step:\n\nExpand (*y*+5)<sup>2</sup> = *y*<sup>2</sup> + 10*y* + 25:\n*y*<sup>2</sup> + 5*y* + *y*<sup>2</sup> + 10*y* + 25 = 12 ⟹ 2*y*<sup>2</sup> + 15*y* + 13 = 0\n\n#### Step:\n\nFactorise:\n$$(2y+13)(y+1) = 0 \\\\implies y = -\\\\tfrac{13}{2}\\\\;\\\\text{ or }\\\\;y = -1$$\n\n#### Step:\n\nFind corresponding *x* values using *x* = *y* + 5:\n\n#### Answer:\n\n(*x*,*y*) = (4, −1)and$\\\\left(-\\\\dfrac{3}{2},\\\\,-\\\\dfrac{13}{2}\\\\right)$",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::May2025_4WM2HR__Q23__p26-26__m03__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "#### Required:\n\nThe graph of *y* = *a*sin (*x*+*b*)<sup>∘</sup> + *c* for 0 ≤ *x* ≤ 360 is shown. Find suitable values for *a*, *b*, and *c*.\n\n#### Step:\n\nRead the maximum and minimum values from the graph to find the **amplitude** *a* and **vertical shift** *c*:\n$$a = \\\\frac{\\\\text{max}-\\\\text{min}}{2} = \\\\frac{4-(-2)}{2} = 3\n        \\\\qquad\n        c = \\\\frac{\\\\text{max}+\\\\text{min}}{2} = \\\\frac{4+(-2)}{2} = 1$$\n\n#### Step:\n\nFind the **phase shift** *b*. The standard sin  has its peak at *x* = 90°. From the graph, the maximum occurs at *x* ≈ 45°:\n*x* + *b* = 90° ⟹ 45° + *b* = 90° ⟹ *b* = 45°\n\n#### Step:\n\nVerify at *x* = 0: $y = 4\\\\sin(0+45)° = 4\\\\times\\\\frac{\\\\sqrt{2}}{2} \\\\approx 2.83$ — consistent with graph\n\n#### Answer:\n\n*a* = 3,*b* = 45,*c* = 1\n\n#### Note:\n\nThe period of the graph is still 360° (unchanged), so no horizontal stretch is applied.",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::May2025_4WM2HR__Q24__p27-27__m06__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "#### Required:\n\nSeries P: first term *a*, c.d. *d*; *S*<sub>40</sub>(*P*) = 2070. Series Q: first term 2*a*, c.d. 3*d*; 25th term of Q  = 186. Find *S*<sub>40</sub>(*Q*).\n\n#### Step:\n\nForm equation from *S*<sub>40</sub>(*P*) = 2070:\n$$S\\_{40} = \\\\frac{40}{2}\\[2a+39d\\] = 20(2a+39d) = 2070\n        \\\\implies 2a + 39d = 103.5 \\\\tag{1}$$\n\n#### Step:\n\nForm equation from 25th term of Q  = 186:\n*T*<sub>25</sub>(*Q*) = 2*a* + 24(3*d*) = 2*a* + 72*d* = 186\n\n#### Step:\n\nSolve simultaneously — subtract (1) from (2):\n33*d* = 82.5 ⟹ *d* = 2.5\n\n#### Step:\n\nSubstitute *d* = 2.5 into (1):\n2*a* + 39(2.5) = 103.5 ⟹ 2*a* = 6 ⟹ *a* = 3\n\n#### Step:\n\nCompute *S*<sub>40</sub>(*Q*), with first term  = 2*a* = 6 and c.d.  = 3*d* = 7.5:\n$$S\\_{40}(Q) = \\\\frac{40}{2}\\\\bigl\\[2(6) + 39(7.5)\\\\bigr\\]\n        = 20\\\\bigl\\[12 + 292.5\\\\bigr\\]\n        = 20 \\\\times 304.5 = 6090$$\n\n#### Answer:\n\n*S*<sub>40</sub>(*Q*) = 6090",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "expertise::May2025_4WM2HR__Q21__p24-24__m05__Volume-Surface-Area": {
+      "status": "checked",
+      "source": "#### Required:\n\nCuboid has a square cross-section of side *x* cm and length (15−4*x*) cm. Find the maximum value of the volume *V*.\n\n#### Step:\n\nWrite *V* as a function of *x*:\n*V* = *x* ⋅ *x* ⋅ (15−4*x*) = *x*<sup>2</sup>(15−4*x*) = 15*x*<sup>2</sup> − 4*x*<sup>3</sup>\n\n#### Step:\n\nDifferentiate:\n$$\\\\frac{dV}{dx} = 30x - 12x^2$$\n\n#### Step:\n\nSet $\\\\dfrac{dV}{dx} = 0$:\n$$30x - 12x^2 = 0 \\\\implies 6x(5-2x) = 0 \\\\implies x=0\\\\;\\\\text{ or }\\\\;x=\\\\tfrac{5}{2}=2.5$$\n(*x* = 0 gives zero volume, so the meaningful solution is *x* = 2.5.)\n\n#### Step:\n\nSecond derivative test to confirm maximum:\n$$\\\\frac{d^2V}{dx^2} = 30-24x\\\\;\\\\Bigg\\|\\_{x=2.5} = 30 - 60 = -30 \\< 0 \\\\quad \\\\checkmark\\\\text{ (maximum)}$$\n\n#### Step:\n\nCalculate *V*<sub>max</sub>:\n*V*<sub>max</sub> = (2.5)<sup>2</sup> × (15−4×2.5) = 6.25 × 5 = 31.25 cm<sup>3</sup>\n\n#### Answer:\n\nMaximum volume *V* = 31.25 cm<sup>3</sup>\n\n#### Note:\n\nCalculus optimisation: always verify the nature of the stationary point using $\\\\dfrac{d^2V}{dx^2}$. Also check *x* \\> 0 and 15 − 4*x* \\> 0 (i.e. *x* \\< 3.75) to ensure a valid cuboid.",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex",
+      "reused_from": "all::May2025_4WM2HR__Q21__p24-24__m05__Volume-Surface-Area"
+    },
+    "expertise::May2025_4WM2HR__Q22__p25-25__m05__Simultaneous-Equations": {
+      "status": "checked",
+      "source": "#### Required:\n\nSolve *y*<sup>2</sup> + 5*y* + *x*<sup>2</sup> = 12 and *x* = *y* + 5.\n\n#### Step:\n\nSubstitute *x* = *y* + 5 into the first equation:\n*y*<sup>2</sup> + 5*y* + (*y*+5)<sup>2</sup> = 12\n\n#### Step:\n\nExpand (*y*+5)<sup>2</sup> = *y*<sup>2</sup> + 10*y* + 25:\n*y*<sup>2</sup> + 5*y* + *y*<sup>2</sup> + 10*y* + 25 = 12 ⟹ 2*y*<sup>2</sup> + 15*y* + 13 = 0\n\n#### Step:\n\nFactorise:\n$$(2y+13)(y+1) = 0 \\\\implies y = -\\\\tfrac{13}{2}\\\\;\\\\text{ or }\\\\;y = -1$$\n\n#### Step:\n\nFind corresponding *x* values using *x* = *y* + 5:\n\n#### Answer:\n\n(*x*,*y*) = (4, −1)and$\\\\left(-\\\\dfrac{3}{2},\\\\,-\\\\dfrac{13}{2}\\\\right)$",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex",
+      "reused_from": "all::May2025_4WM2HR__Q22__p25-25__m05__Simultaneous-Equations"
+    },
+    "expertise::May2025_4WM2HR__Q23__p26-26__m03__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "#### Required:\n\nThe graph of *y* = *a*sin (*x*+*b*)<sup>∘</sup> + *c* for 0 ≤ *x* ≤ 360 is shown. Find suitable values for *a*, *b*, and *c*.\n\n#### Step:\n\nRead the maximum and minimum values from the graph to find the **amplitude** *a* and **vertical shift** *c*:\n$$a = \\\\frac{\\\\text{max}-\\\\text{min}}{2} = \\\\frac{4-(-2)}{2} = 3\n        \\\\qquad\n        c = \\\\frac{\\\\text{max}+\\\\text{min}}{2} = \\\\frac{4+(-2)}{2} = 1$$\n\n#### Step:\n\nFind the **phase shift** *b*. The standard sin  has its peak at *x* = 90°. From the graph, the maximum occurs at *x* ≈ 45°:\n*x* + *b* = 90° ⟹ 45° + *b* = 90° ⟹ *b* = 45°\n\n#### Step:\n\nVerify at *x* = 0: $y = 4\\\\sin(0+45)° = 4\\\\times\\\\frac{\\\\sqrt{2}}{2} \\\\approx 2.83$ — consistent with graph\n\n#### Answer:\n\n*a* = 3,*b* = 45,*c* = 1\n\n#### Note:\n\nThe period of the graph is still 360° (unchanged), so no horizontal stretch is applied.",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex",
+      "reused_from": "all::May2025_4WM2HR__Q23__p26-26__m03__Algebra-Toolkit"
+    },
+    "expertise::May2025_4WM2HR__Q24__p27-27__m06__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "#### Required:\n\nSeries P: first term *a*, c.d. *d*; *S*<sub>40</sub>(*P*) = 2070. Series Q: first term 2*a*, c.d. 3*d*; 25th term of Q  = 186. Find *S*<sub>40</sub>(*Q*).\n\n#### Step:\n\nForm equation from *S*<sub>40</sub>(*P*) = 2070:\n$$S\\_{40} = \\\\frac{40}{2}\\[2a+39d\\] = 20(2a+39d) = 2070\n        \\\\implies 2a + 39d = 103.5 \\\\tag{1}$$\n\n#### Step:\n\nForm equation from 25th term of Q  = 186:\n*T*<sub>25</sub>(*Q*) = 2*a* + 24(3*d*) = 2*a* + 72*d* = 186\n\n#### Step:\n\nSolve simultaneously — subtract (1) from (2):\n33*d* = 82.5 ⟹ *d* = 2.5\n\n#### Step:\n\nSubstitute *d* = 2.5 into (1):\n2*a* + 39(2.5) = 103.5 ⟹ 2*a* = 6 ⟹ *a* = 3\n\n#### Step:\n\nCompute *S*<sub>40</sub>(*Q*), with first term  = 2*a* = 6 and c.d.  = 3*d* = 7.5:\n$$S\\_{40}(Q) = \\\\frac{40}{2}\\\\bigl\\[2(6) + 39(7.5)\\\\bigr\\]\n        = 20\\\\bigl\\[12 + 292.5\\\\bigr\\]\n        = 20 \\\\times 304.5 = 6090$$\n\n#### Answer:\n\n*S*<sub>40</sub>(*Q*) = 6090",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex",
+      "reused_from": "all::May2025_4WM2HR__Q24__p27-27__m06__Algebra-Toolkit"
+    }
+  }
+}

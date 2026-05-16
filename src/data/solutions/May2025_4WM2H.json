@@ -1,0 +1,225 @@
+{
+  "paperSlug": "May2025_4WM2H",
+  "solutions": {
+    "all::May2025_4WM2H__Q07__p08-08__m04__Ratio-Toolkit": {
+      "status": "checked",
+      "source": "**Topic check:** Ratio Problem Solving. The tag is correct.\n\n**Method**\n\nThe original ratio is\n\n\\[\n\\text{Pau} : \\text{Sam} : \\text{Tia} = 3:4:5\n\\]\n\nThere are\n\n\\[\n3+4+5=12 \\text{ parts}\n\\]\n\nEach part is\n\n\\[\n240 \\div 12=20\n\\]\n\nSo the original amounts are\n\n\\[\n60,\\ 80,\\ 100\n\\]\n\nSam gives 10 to Pau and Tia gives 10 to Pau, so the new amounts are\n\n\\[\n80,\\ 70,\\ 90\n\\]\n\nDivide by 10:\n\n\\[\n80:70:90=8:7:9\n\\]\n\n**Answer:** The new ratio is \\(8:7:9\\).",
+      "updated": "2026-05-16T08:42:24",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Jun2025_P2H__Q06__p07-07__m04__Ratio-Problem-Solving"
+    },
+    "all::May2025_4WM2H__Q09__p10-10__m03__Percentages": {
+      "status": "checked",
+      "source": "**Topic check:** Corrected to Compound Interest and Depreciation. This is repeated percentage growth for 3 years.\n\n**Method**\n\nThe multiplier for a \\(7\\%\\) increase is\n\n\\[\n1.07\n\\]\n\nAfter 3 years,\n\n\\[\n4000(1.07)^3=4900.172\n\\]\n\nCorrect to the nearest Swiss franc,\n\n\\[\n4900.172\\approx 4900\n\\]\n\n**Answer:** \\(4900\\) Swiss francs",
+      "updated": "2026-05-16T08:42:24",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Jun2025_P2H__Q07__p08-08__m03__Compound-Interest-and-Depreciation"
+    },
+    "all::May2025_4WM2H__Q01__p03-03__m03__Statistics-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\nThe range is \\(10\\), so the first number is\n\n\\[\n14-10=4\n\\]\n\nFor six numbers, the median is the mean of the third and fourth values.\n\n\\[\n\\frac{6+\\text{fourth value}}{2}=7.5\n\\]\n\nSo the fourth value is \\(9\\). To make \\(6\\) the mode, the second value must also be \\(6\\).\n\n**Answer:** the hidden numbers are \\(4,6,9\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM2H__Q02__p04-04__m03__Volume-Surface-Area": {
+      "status": "checked",
+      "source": "**Solution**\n\nArea of one trapezium:\n\n\\[\n\\frac12(8+12)\\times 3=30\n\\]\n\nPerimeter of the trapezium:\n\n\\[\n8+12+3+5=28\n\\]\n\nRectangular faces:\n\n\\[\n28\\times 9=252\n\\]\n\nTotal surface area:\n\n\\[\n252+2(30)=312\n\\]\n\n**Answer:** \\(312\\text{ cm}^2\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM2H__Q03__p05-05__m03__Percentages": {
+      "status": "checked",
+      "source": "**Solution**\n\n\\[\n\\text{loss}=8000-5600=2400\n\\]\n\n\\[\n\\text{percentage loss}=\\frac{2400}{8000}\\times 100=30\\%\n\\]\n\n**Answer:** \\(30\\%\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM2H__Q04__p05-05__m02__Coordinate-Geometry": {
+      "status": "checked",
+      "source": "**Solution**\n\nUse a compass radius greater than half of \\(AB\\). Draw matching arcs from \\(A\\) above and below the line, then draw matching arcs from \\(B\\) with the same radius. Join the two arc-intersection points.\n\n**Answer:** the joined line is the perpendicular bisector of \\(AB\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM2H__Q05__p06-06__m03__Sequences": {
+      "status": "checked",
+      "source": "**Solution**\n\nThe sequence increases by \\(4\\), so\n\n\\[\nu_n=4n+7\n\\]\n\nFor the sequence \\(5n+4\\), take \\(n=3\\):\n\n\\[\n5(3)+4=19\n\\]\n\nand \\(19\\) is prime.\n\n**Answers:** \\(4n+7\\); a suitable counterexample is \\(19\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM2H__Q06__p07-07__m04__Congruence-Similarity-Geometrical-Proof": {
+      "status": "checked",
+      "source": "**Solution**\n\nThe scale factor from \\(ABCD\\) to \\(EFGH\\) is\n\n\\[\n\\frac{FG}{BC}=\\frac{10}{4}=2.5\n\\]\n\nSo\n\n\\[\nx=EF=5\\times 2.5=12.5\n\\]\n\nand\n\n\\[\ny=CD=\\frac{24}{2.5}=9.6\n\\]\n\n**Answers:** \\(x=12.5\\), \\(y=9.6\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM2H__Q08__p09-09__m04__Statistics-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\nUse class midpoints \\(5,15,25,35,45\\).\n\n\\[\n\\frac{5x+15(3)+25(2)+35(4)+45(2)}{x+3+2+4+2}=20\n\\]\n\n\\[\n\\frac{5x+325}{x+11}=20\n\\]\n\n\\[\n5x+325=20x+220\n\\]\n\n\\[\n105=15x\n\\]\n\n\\[\nx=7\n\\]\n\n**Answer:** \\(x=7\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM2H__Q10__p10-10__m03__Simultaneous-Equations": {
+      "status": "checked",
+      "source": "**Solution**\n\nFrom\n\n\\[\n4x+y=-3.5\n\\]\n\n\\[\ny=-3.5-4x\n\\]\n\nSubstitute into \\(3x+5y=8\\):\n\n\\[\n3x+5(-3.5-4x)=8\n\\]\n\n\\[\n-17x=25.5\n\\]\n\n\\[\nx=-1.5\n\\]\n\nThen\n\n\\[\ny=-3.5-4(-1.5)=2.5\n\\]\n\n**Answers:** \\(x=-1.5\\), \\(y=2.5\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM2H__Q11__p11-11__m05__Graphing-Inequalities": {
+      "status": "checked",
+      "source": "**Solution**\n\n(a)\n\\[\n7-3t<2t+15\n\\]\n\n\\[\n-8<5t\n\\]\n\n\\[\nt>-1.6\n\\]\n\n(b) The three boundary lines are \\(x=2\\), \\(y=3\\), and \\(x+y=9\\). The shaded side gives\n\n\\[\nx\\ge 2, \\qquad y\\ge 3, \\qquad x+y\\le 9\n\\]\n\n**Answers:** \\(t>-1.6\\); \\(x\\ge2\\), \\(y\\ge3\\), \\(x+y\\le9\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM2H__Q12__p12-12__m03__Powers-Roots-Standard-Form": {
+      "status": "checked",
+      "source": "**Solution**\n\n(a)\n\\[\n8.6\\times 10^{-5}=0.000086\n\\]\n\n(b)\n\\[\n(3\\times 10^{43})\\div(6\\times 10^{37})\n\\]\n\n\\[\n=0.5\\times 10^6=5\\times 10^5\n\\]\n\n**Answers:** \\(0.000086\\), \\(5\\times10^5\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM2H__Q13__p13-13__m04__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\nBy the alternate segment theorem,\n\n\\[\n\\angle EAB=\\angle ADB=56^\\circ\n\\]\n\nIn triangle \\(ABD\\),\n\n\\[\n\\angle BAD=180^\\circ-42^\\circ-56^\\circ=82^\\circ\n\\]\n\nSo\n\n\\[\n\\angle BAC=82^\\circ-60^\\circ=22^\\circ\n\\]\n\nAngles subtended by the same chord \\(CB\\) are equal, so\n\n\\[\n\\angle CDB=22^\\circ\n\\]\n\n**Answers:** \\(56^\\circ\\), alternate segment theorem, \\(22^\\circ\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM2H__Q14__p14-15__m06__Cumulative-Frequency-Diagrams": {
+      "status": "checked",
+      "source": "**Solution**\n\nCumulative frequencies:\n\n\\[\n8,\\ 21,\\ 33,\\ 50,\\ 57,\\ 60\n\\]\n\nPlot the points\n\n\\[\n(10,8),(20,21),(30,33),(40,50),(50,57),(60,60)\n\\]\n\nThe median is the \\(30\\)th value. Interpolating in the \\(20\\) to \\(30\\) interval gives about \\(27.5\\) minutes.\n\nFor more than \\(45\\) minutes, the estimate is about \\(7\\) people.\n\n**Answers:** cumulative frequencies \\(8,21,33,50,57,60\\); median about \\(27.5\\) minutes; more than \\(45\\) minutes about \\(7\\) people.",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM2H__Q15__p16-16__m03__Percentages": {
+      "status": "checked",
+      "source": "**Solution**\n\nUse multipliers:\n\n\\[\n1.12\\times 0.85=0.952\n\\]\n\nSo the final value is \\(95.2\\%\\) of the original.\n\n\\[\n100-95.2=4.8\n\\]\n\n**Answer:** \\(4.8\\%\\) decrease.",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM2H__Q16__p16-16__m02__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\nThere are \\(11\\) values. Excluding the median \\(14\\):\n\nLower half: \\(7,8,10,11,13\\), so \\(Q_1=10\\).\n\nUpper half: \\(16,17,19,21,24\\), so \\(Q_3=19\\).\n\n\\[\n\\text{IQR}=19-10=9\n\\]\n\n**Answer:** \\(9\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM2H__Q17__p17-17__m04__Prime-Factors-HCF-LCM": {
+      "status": "checked",
+      "source": "**Solution**\n\n(a)\n\\[\nABC=(3^2\\times5^4)(2^5\\times3^2)(2^3\\times5^6)\n\\]\n\n\\[\n=2^8\\times3^4\\times5^{10}\n\\]\n\n\\[\n(ABC)^3=2^{24}\\times3^{12}\\times5^{30}\n\\]\n\n(b)\n\\[\n(5\\times10^{150})(3\\times10^{140})=15\\times10^{290}\n\\]\n\n\\[\n=3\\times5\\times(2\\times5)^{290}\n\\]\n\n\\[\n=2^{290}\\times3\\times5^{291}\n\\]\n\n**Answers:** \\(2^{24}\\times3^{12}\\times5^{30}\\); \\(2^{290}\\times3\\times5^{291}\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM2H__Q18__p18-18__m03__Direct-Inverse-Proportion": {
+      "status": "checked",
+      "source": "**Solution**\n\nSince \\(W\\) is inversely proportional to \\(y^2\\),\n\n\\[\nW=\\frac{k}{y^2}\n\\]\n\nUsing \\(W=50\\) when \\(y=4\\):\n\n\\[\n50=\\frac{k}{16}\n\\]\n\n\\[\nk=800\n\\]\n\n**Answer:** \\(W=\\dfrac{800}{y^2}\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM2H__Q19__p18-18__m04__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\n\\[\nc=\\frac{t^2+3}{7-8t^2}\n\\]\n\n\\[\nc(7-8t^2)=t^2+3\n\\]\n\n\\[\n7c-3=t^2(8c+1)\n\\]\n\n\\[\nt^2=\\frac{7c-3}{8c+1}\n\\]\n\n**Answer:** \\(t=\\pm\\sqrt{\\dfrac{7c-3}{8c+1}}\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM2H__Q20__p19-19__m03__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\nLet\n\n\\[\na=2n, \\qquad b=2n+2, \\qquad c=2n+4\n\\]\n\nThen\n\n\\[\nac+4=(2n)(2n+4)+4\n\\]\n\n\\[\n=4n^2+8n+4\n\\]\n\n\\[\n=(2n+2)^2=b^2\n\\]\n\nSo \\(b^2=ac+4\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM2H__Q21__p20-21__m07__Functions": {
+      "status": "checked",
+      "source": "**Solution**\n\n(a) If \\(g(g(x))=6\\), then\n\n\\[\n\\frac{7g(x)+20}{2g(x)}=6\n\\]\n\n\\[\n7g(x)+20=12g(x)\n\\]\n\n\\[\ng(x)=4\n\\]\n\nSo\n\n\\[\n\\frac{7x+20}{2x}=4\n\\]\n\n\\[\n7x+20=8x\n\\]\n\n\\[\nx=20\n\\]\n\n(b)\n\\[\nh(x)=5x^2+30x-7=5(x+3)^2-52\n\\]\n\nLet \\(y=5(x+3)^2-52\\). Since \\(x\\ge -3\\), use the positive square root:\n\n\\[\nx+3=\\sqrt{\\frac{y+52}{5}}\n\\]\n\n\\[\nh^{-1}(x)=\\sqrt{\\frac{x+52}{5}}-3\n\\]\n\n**Answers:** \\(x=20\\); \\(h^{-1}(x)=\\sqrt{\\dfrac{x+52}{5}}-3\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM2H__Q22__p22-22__m04__Coordinate-Geometry": {
+      "status": "checked",
+      "source": "**Solution**\n\n\\[\n\\frac{dy}{dx}=3x^2+2x-10\n\\]\n\nFor a positive gradient,\n\n\\[\n3x^2+2x-10>0\n\\]\n\nThe roots are\n\n\\[\nx=\\frac{-1\\pm\\sqrt{31}}{3}\n\\]\n\nSince the quadratic opens upwards,\n\n\\[\nx<\\frac{-1-\\sqrt{31}}{3}\n\\quad \\text{or} \\quad\nx>\\frac{-1+\\sqrt{31}}{3}\n\\]\n\n**Answer:** \\(x<\\dfrac{-1-\\sqrt{31}}{3}\\) or \\(x>\\dfrac{-1+\\sqrt{31}}{3}\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM2H__Q23__p23-23__m03__Volume-Surface-Area": {
+      "status": "checked",
+      "source": "**Solution**\n\n\\[\n3x\\times 2x\\times y=1014\n\\]\n\n\\[\n6x^2y=1014\n\\]\n\n\\[\ny=\\frac{169}{x^2}\n\\]\n\nSurface area:\n\n\\[\nA=2(3x\\cdot2x+3x\\cdot y+2x\\cdot y)\n\\]\n\n\\[\n=12x^2+10xy\n\\]\n\n\\[\n=12x^2+10x\\left(\\frac{169}{x^2}\\right)\n\\]\n\n\\[\n=12x^2+\\frac{1690}{x}\n\\]\n\n**Answer:** \\(A=12x^2+\\dfrac{1690}{x}\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM2H__Q24__p24-24__m04__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\nFor an arithmetic series,\n\n\\[\na+20d=109\n\\]\n\nand\n\n\\[\n\\frac{52}{2}(2a+51d)=4381\n\\]\n\n\\[\n26(2a+51d)=4381\n\\]\n\nSolving gives\n\n\\[\nd=-4.5, \\qquad a=199\n\\]\n\nThe fifth term is\n\n\\[\na+4d=199+4(-4.5)=181\n\\]\n\n**Answer:** \\(181\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM2H__Q25__p25-25__m04__Congruence-Similarity-Geometrical-Proof": {
+      "status": "checked",
+      "source": "**Solution**\n\nLinear scale factor from solid \\(A\\) to solid \\(B\\):\n\n\\[\n\\frac{18.6}{31}=0.6\n\\]\n\nSo the volume scale factor is\n\n\\[\n0.6^3=0.216\n\\]\n\nLet the volume of \\(A\\) be \\(V\\). Then\n\n\\[\nV-0.216V=735\n\\]\n\n\\[\n0.784V=735\n\\]\n\n\\[\nV=937.5\n\\]\n\n**Answer:** \\(937.5\\text{ cm}^3\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM2H__Q26__p26-27__m05__Ratio-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\n(a)\n\\[\n\\overrightarrow{QR}=\\overrightarrow{OR}-\\overrightarrow{OQ}\n\\]\n\n\\[\n\\overrightarrow{OQ}=2a+(a+3c)=3a+3c\n\\]\n\n\\[\n\\overrightarrow{QR}=6c-(3a+3c)=3c-3a\n\\]\n\n(b) Let \\(X\\) divide \\(QR\\) so that\n\n\\[\n\\overrightarrow{QX}=\\lambda\\overrightarrow{QR}\n\\]\n\nThen\n\n\\[\n\\overrightarrow{OX}=3a+3c+\\lambda(3c-3a)\n\\]\n\nAlso \\(X\\) lies on \\(PT\\), where \\(\\overrightarrow{OT}=14c\\), so\n\n\\[\n\\overrightarrow{OX}=2a+\\mu(14c-2a)\n\\]\n\nEquating coefficients gives \\(\\lambda=\\frac59\\). Therefore\n\n\\[\nQX:XR=\\frac59:\\frac49=5:4\n\\]\n\n**Answers:** \\(\\overrightarrow{QR}=3c-3a\\); \\(QX:XR=5:4\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::May2025_4WM2H__Q27__p28-29__m04__Graphs-of-Functions": {
+      "status": "checked",
+      "source": "**Solution**\n\n(a)\n\nFor \\(y=f(x-4)\\), move the graph \\(4\\) units right:\n\n\\[\n(6,-5)\\to(10,-5)\n\\]\n\nFor \\(y=f(3x)\\), divide the \\(x\\)-coordinate by \\(3\\):\n\n\\[\n(6,-5)\\to(2,-5)\n\\]\n\n(b) For \\(y=g(2x)-3\\), halve each \\(x\\)-coordinate and subtract \\(3\\) from each \\(y\\)-coordinate.\n\nUseful transformed points are\n\n\\[\n(-4,1)\\to(-2,-2),\\quad (2,4)\\to(1,1),\\quad (6,2)\\to(3,-1)\n\\]\n\nJoin these points with straight line segments.\n\n**Answers:** \\((10,-5)\\), \\((2,-5)\\), graph through \\((-2,-2),(1,1),(3,-1)\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "expertise::May2025_4WM2H__Q20__p19-19__m03__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\nLet\n\n\\[\na=2n, \\qquad b=2n+2, \\qquad c=2n+4\n\\]\n\nThen\n\n\\[\nac+4=(2n)(2n+4)+4\n\\]\n\n\\[\n=4n^2+8n+4\n\\]\n\n\\[\n=(2n+2)^2=b^2\n\\]\n\nSo \\(b^2=ac+4\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::May2025_4WM2H__Q20__p19-19__m03__Algebra-Toolkit"
+    },
+    "expertise::May2025_4WM2H__Q21__p20-21__m07__Functions": {
+      "status": "checked",
+      "source": "**Solution**\n\n(a) If \\(g(g(x))=6\\), then\n\n\\[\n\\frac{7g(x)+20}{2g(x)}=6\n\\]\n\n\\[\n7g(x)+20=12g(x)\n\\]\n\n\\[\ng(x)=4\n\\]\n\nSo\n\n\\[\n\\frac{7x+20}{2x}=4\n\\]\n\n\\[\n7x+20=8x\n\\]\n\n\\[\nx=20\n\\]\n\n(b)\n\\[\nh(x)=5x^2+30x-7=5(x+3)^2-52\n\\]\n\nLet \\(y=5(x+3)^2-52\\). Since \\(x\\ge -3\\), use the positive square root:\n\n\\[\nx+3=\\sqrt{\\frac{y+52}{5}}\n\\]\n\n\\[\nh^{-1}(x)=\\sqrt{\\frac{x+52}{5}}-3\n\\]\n\n**Answers:** \\(x=20\\); \\(h^{-1}(x)=\\sqrt{\\dfrac{x+52}{5}}-3\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::May2025_4WM2H__Q21__p20-21__m07__Functions"
+    },
+    "expertise::May2025_4WM2H__Q22__p22-22__m04__Coordinate-Geometry": {
+      "status": "checked",
+      "source": "**Solution**\n\n\\[\n\\frac{dy}{dx}=3x^2+2x-10\n\\]\n\nFor a positive gradient,\n\n\\[\n3x^2+2x-10>0\n\\]\n\nThe roots are\n\n\\[\nx=\\frac{-1\\pm\\sqrt{31}}{3}\n\\]\n\nSince the quadratic opens upwards,\n\n\\[\nx<\\frac{-1-\\sqrt{31}}{3}\n\\quad \\text{or} \\quad\nx>\\frac{-1+\\sqrt{31}}{3}\n\\]\n\n**Answer:** \\(x<\\dfrac{-1-\\sqrt{31}}{3}\\) or \\(x>\\dfrac{-1+\\sqrt{31}}{3}\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::May2025_4WM2H__Q22__p22-22__m04__Coordinate-Geometry"
+    },
+    "expertise::May2025_4WM2H__Q23__p23-23__m03__Volume-Surface-Area": {
+      "status": "checked",
+      "source": "**Solution**\n\n\\[\n3x\\times 2x\\times y=1014\n\\]\n\n\\[\n6x^2y=1014\n\\]\n\n\\[\ny=\\frac{169}{x^2}\n\\]\n\nSurface area:\n\n\\[\nA=2(3x\\cdot2x+3x\\cdot y+2x\\cdot y)\n\\]\n\n\\[\n=12x^2+10xy\n\\]\n\n\\[\n=12x^2+10x\\left(\\frac{169}{x^2}\\right)\n\\]\n\n\\[\n=12x^2+\\frac{1690}{x}\n\\]\n\n**Answer:** \\(A=12x^2+\\dfrac{1690}{x}\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::May2025_4WM2H__Q23__p23-23__m03__Volume-Surface-Area"
+    },
+    "expertise::May2025_4WM2H__Q24__p24-24__m04__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\nFor an arithmetic series,\n\n\\[\na+20d=109\n\\]\n\nand\n\n\\[\n\\frac{52}{2}(2a+51d)=4381\n\\]\n\n\\[\n26(2a+51d)=4381\n\\]\n\nSolving gives\n\n\\[\nd=-4.5, \\qquad a=199\n\\]\n\nThe fifth term is\n\n\\[\na+4d=199+4(-4.5)=181\n\\]\n\n**Answer:** \\(181\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::May2025_4WM2H__Q24__p24-24__m04__Algebra-Toolkit"
+    },
+    "expertise::May2025_4WM2H__Q25__p25-25__m04__Congruence-Similarity-Geometrical-Proof": {
+      "status": "checked",
+      "source": "**Solution**\n\nLinear scale factor from solid \\(A\\) to solid \\(B\\):\n\n\\[\n\\frac{18.6}{31}=0.6\n\\]\n\nSo the volume scale factor is\n\n\\[\n0.6^3=0.216\n\\]\n\nLet the volume of \\(A\\) be \\(V\\). Then\n\n\\[\nV-0.216V=735\n\\]\n\n\\[\n0.784V=735\n\\]\n\n\\[\nV=937.5\n\\]\n\n**Answer:** \\(937.5\\text{ cm}^3\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::May2025_4WM2H__Q25__p25-25__m04__Congruence-Similarity-Geometrical-Proof"
+    },
+    "expertise::May2025_4WM2H__Q26__p26-27__m05__Ratio-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\n(a)\n\\[\n\\overrightarrow{QR}=\\overrightarrow{OR}-\\overrightarrow{OQ}\n\\]\n\n\\[\n\\overrightarrow{OQ}=2a+(a+3c)=3a+3c\n\\]\n\n\\[\n\\overrightarrow{QR}=6c-(3a+3c)=3c-3a\n\\]\n\n(b) Let \\(X\\) divide \\(QR\\) so that\n\n\\[\n\\overrightarrow{QX}=\\lambda\\overrightarrow{QR}\n\\]\n\nThen\n\n\\[\n\\overrightarrow{OX}=3a+3c+\\lambda(3c-3a)\n\\]\n\nAlso \\(X\\) lies on \\(PT\\), where \\(\\overrightarrow{OT}=14c\\), so\n\n\\[\n\\overrightarrow{OX}=2a+\\mu(14c-2a)\n\\]\n\nEquating coefficients gives \\(\\lambda=\\frac59\\). Therefore\n\n\\[\nQX:XR=\\frac59:\\frac49=5:4\n\\]\n\n**Answers:** \\(\\overrightarrow{QR}=3c-3a\\); \\(QX:XR=5:4\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::May2025_4WM2H__Q26__p26-27__m05__Ratio-Toolkit"
+    },
+    "expertise::May2025_4WM2H__Q27__p28-29__m04__Graphs-of-Functions": {
+      "status": "checked",
+      "source": "**Solution**\n\n(a)\n\nFor \\(y=f(x-4)\\), move the graph \\(4\\) units right:\n\n\\[\n(6,-5)\\to(10,-5)\n\\]\n\nFor \\(y=f(3x)\\), divide the \\(x\\)-coordinate by \\(3\\):\n\n\\[\n(6,-5)\\to(2,-5)\n\\]\n\n(b) For \\(y=g(2x)-3\\), halve each \\(x\\)-coordinate and subtract \\(3\\) from each \\(y\\)-coordinate.\n\nUseful transformed points are\n\n\\[\n(-4,1)\\to(-2,-2),\\quad (2,4)\\to(1,1),\\quad (6,2)\\to(3,-1)\n\\]\n\nJoin these points with straight line segments.\n\n**Answers:** \\((10,-5)\\), \\((2,-5)\\), graph through \\((-2,-2),(1,1),(3,-1)\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::May2025_4WM2H__Q27__p28-29__m04__Graphs-of-Functions"
+    }
+  }
+}

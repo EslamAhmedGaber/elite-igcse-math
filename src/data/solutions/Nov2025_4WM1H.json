@@ -1,0 +1,245 @@
+{
+  "paperSlug": "Nov2025_4WM1H",
+  "solutions": {
+    "all::Nov2025_4WM1H__Q02__p03-03__m02__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Topic check:** Rounding, Estimation and Bounds. The tag is correct.\n\n**Method**\n\nRound each number to one significant figure:\n\n\\[\n2.11\\approx 2,\\quad 58.9\\approx 60,\\quad 8.859\\approx 9\n\\]\n\n\\[\n\\frac{2.11^2\\times 58.9}{\\sqrt{8.859}}\n\\approx\n\\frac{2^2\\times 60}{\\sqrt 9}\n\\]\n\n\\[\n=\\frac{4\\times 60}{3}=80\n\\]\n\n**Answer:** \\(80\\)",
+      "updated": "2026-05-16T08:42:24",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Nov2025_P1H__Q02__p04-04__m02__Rounding-Estimation-and-Bounds"
+    },
+    "all::Nov2025_4WM1H__Q03__p04-04__m03__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Topic check:** Algebraic proof. The tag is acceptable because the question asks to show the exact result.\n\n**Solution**\n\n\\[\n\\frac37+\\frac13\n\\]\n\nUse denominator 21:\n\\[\n\\frac37=\\frac9{21},\\qquad \\frac13=\\frac7{21}\n\\]\n\n\\[\n\\frac9{21}+\\frac7{21}=\\frac{16}{21}\n\\]\n\n**Answer:** \\(\\frac{16}{21}\\).",
+      "updated": "2026-05-16T08:42:24",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Nov2025_P1H__Q05__p05-05__m03__Algebraic-Proof"
+    },
+    "all::Nov2025_4WM1H__Q06__p07-07__m02__Rounding-Estimation-Bounds": {
+      "status": "checked",
+      "source": "**Topic check:** Rounding, Estimation and Bounds. The tag is correct.\n\n**Method**\n\nThe weight \\(475\\) g correct to the nearest g has lower bound\n\n\\[\n475-0.5=474.5\n\\]\n\nThe height \\(120\\) cm correct to the nearest \\(10\\) cm has upper bound\n\n\\[\n120+5=125\n\\]\n\n**Answer:** (a) \\(474.5\\) g, (b) \\(125\\) cm",
+      "updated": "2026-05-16T08:42:24",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Nov2025_P1H__Q07__p06-06__m02__Rounding-Estimation-and-Bounds"
+    },
+    "all::Nov2025_4WM1H__Q07__p07-07__m02__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Topic check:** Algebraic roots and indices. The tag is correct.\n\n**Solution**\n\n\\[\n\\frac{8^{-2}\\times8^9}{8^{10}}=8^{-2+9-10}=8^{-3}\n\\]\n\n**Answer:** \\(n=-3\\)",
+      "updated": "2026-05-16T08:42:24",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Nov2025_P1H__Q08__p07-07__m02__Algebraic-Roots-and-Indices"
+    },
+    "all::Nov2025_4WM1H__Q11__p11-11__m04__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Topic check:** Right-Angled Triangles - Pythagoras & Trigonometry. The tag is correct.\n\n**Solution**\n\nFirst find \\(AB\\):\n\n\\[\nAB^2=21^2-15^2=216\n\\]\n\n\\[\nAB=14.696\\ldots\n\\]\n\n\\[\nAD=AB-DB=14.696\\ldots-9=5.696\\ldots\n\\]\n\nAngle \\(ACB\\):\n\n\\[\n\\cos ACB=\\frac{15}{21}\n\\]\n\n\\[\nACB=44.415\\ldots^\\circ\n\\]\n\nAngle \\(DCB\\):\n\n\\[\n\\tan DCB=\\frac{9}{15}\n\\]\n\n\\[\nDCB=30.963\\ldots^\\circ\n\\]\n\n\\[\nACD=44.415\\ldots-30.963\\ldots=13.451\\ldots^\\circ\n\\]\n\n**Answer:** \\(13.5^\\circ\\).",
+      "updated": "2026-05-16T08:42:24",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Nov2025_P1H__Q11__p09-09__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry"
+    },
+    "all::Nov2025_4WM1H__Q12__p12-12__m05__Probability-Diagrams-Venn-Tree-Diagrams": {
+      "status": "checked",
+      "source": "**Topic check:** Probability Diagrams - Venn & Tree Diagrams. The tag is correct.\n\n**Solution**\n\nBag 1:\n\n\\[\nP(Y)=\\frac25,\\qquad P(O)=\\frac35\n\\]\n\nBag 2:\n\n\\[\nP(Y)=\\frac38,\\qquad P(G)=\\frac58\n\\]\n\nThe only way to get the same colour is yellow then yellow.\n\n\\[\nP(\\text{different})=1-\\frac25\\times\\frac38\n\\]\n\n\\[\n=1-\\frac{3}{20}=\\frac{17}{20}\n\\]\n\n**Answer:** \\(\\frac{17}{20}\\).",
+      "updated": "2026-05-16T08:42:24",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Nov2025_P1H__Q13__p11-11__m05__Probability-Diagrams-Venn-and-Tree-Diagrams"
+    },
+    "all::Nov2025_4WM1H__Q19__p17-17__m03__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Topic check:** Corrected to Sine, Cosine Rule & Area of Triangles.\n\n**Solution**\n\nUse the cosine rule for angle \\(BAC\\):\n\\[\n\\cos A=\\frac{8^2+9^2-10^2}{2(8)(9)}\n\\]\n\n\\[\n\\cos A=\\frac{45}{144}\n\\]\n\n\\[\nA=71.790\\ldots^\\circ\n\\]\n\n**Answer:** \\(71.8^\\circ\\).",
+      "updated": "2026-05-16T08:42:24",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Nov2025_P1H__Q19__p15-15__m03__Sine-Cosine-Rule-and-Area-of-Triangles"
+    },
+    "all::Nov2025_4WM1H__Q23__p21-21__m03__Probability-Toolkit": {
+      "status": "checked",
+      "source": "**Topic check:** Correct.\n\n**Method**\n\nThere are 2 pink buttons.\n\nAt least one pink button is still in the box unless both pink buttons are taken.\n\nSo use the complement.\n\nThe probability that both pink buttons are taken is\n\n\\[\n\\frac{\\binom{2}{2}\\binom{13}{1}}{\\binom{15}{3}}\n\\]\n\n\\[\n=\\frac{13}{455}\n\\]\n\n\\[\n=\\frac{1}{35}\n\\]\n\nTherefore,\n\n\\[\nP(\\text{at least one pink is still in the box})\n=1-\\frac{1}{35}\n\\]\n\n\\[\n=\\frac{34}{35}\n\\]\n\n**Answer:** \\(\\frac{34}{35}\\)",
+      "updated": "2026-05-16T08:42:24",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Nov2025_P1H__Q22__p18-18__m03__Combined-and-Conditional-Probability"
+    },
+    "expertise::Nov2025_4WM1H__Q23__p21-21__m03__Probability-Toolkit": {
+      "status": "checked",
+      "source": "**Topic check:** Correct.\n\n**Method**\n\nThere are 2 pink buttons.\n\nAt least one pink button is still in the box unless both pink buttons are taken.\n\nSo use the complement.\n\nThe probability that both pink buttons are taken is\n\n\\[\n\\frac{\\binom{2}{2}\\binom{13}{1}}{\\binom{15}{3}}\n\\]\n\n\\[\n=\\frac{13}{455}\n\\]\n\n\\[\n=\\frac{1}{35}\n\\]\n\nTherefore,\n\n\\[\nP(\\text{at least one pink is still in the box})\n=1-\\frac{1}{35}\n\\]\n\n\\[\n=\\frac{34}{35}\n\\]\n\n**Answer:** \\(\\frac{34}{35}\\)",
+      "updated": "2026-05-16T08:42:24",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Nov2025_4WM1H__Q23__p21-21__m03__Probability-Toolkit"
+    },
+    "all::Nov2025_4WM1H__Q25__p23-23__m03__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Topic check:** Corrected from Ratio Toolkit to Algebraic Fractions.\n\n**Method**\n\n\\[\na=\\frac{2x+5}{1-x},\\quad x=\\frac{5-2y}{3y}\n\\]\n\nSubstitute for \\(x\\).\n\nNumerator:\n\n\\[\n2x+5=2\\left(\\frac{5-2y}{3y}\\right)+5\n\\]\n\n\\[\n=\\frac{10-4y+15y}{3y}\n=\\frac{10+11y}{3y}\n\\]\n\nDenominator:\n\n\\[\n1-x=1-\\frac{5-2y}{3y}\n\\]\n\n\\[\n=\\frac{3y-5+2y}{3y}\n=\\frac{5y-5}{3y}\n=\\frac{5(y-1)}{3y}\n\\]\n\nTherefore\n\n\\[\na=\\frac{\\frac{10+11y}{3y}}{\\frac{5(y-1)}{3y}}\n=\\frac{10+11y}{5(y-1)}\n\\]\n\n**Answer:** \\(\\dfrac{10+11y}{5(y-1)}\\)",
+      "updated": "2026-05-16T08:42:24",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Nov2025_P1H__Q23__p19-19__m03__Algebraic-Fractions"
+    },
+    "expertise::Nov2025_4WM1H__Q25__p23-23__m03__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Topic check:** Corrected from Ratio Toolkit to Algebraic Fractions.\n\n**Method**\n\n\\[\na=\\frac{2x+5}{1-x},\\quad x=\\frac{5-2y}{3y}\n\\]\n\nSubstitute for \\(x\\).\n\nNumerator:\n\n\\[\n2x+5=2\\left(\\frac{5-2y}{3y}\\right)+5\n\\]\n\n\\[\n=\\frac{10-4y+15y}{3y}\n=\\frac{10+11y}{3y}\n\\]\n\nDenominator:\n\n\\[\n1-x=1-\\frac{5-2y}{3y}\n\\]\n\n\\[\n=\\frac{3y-5+2y}{3y}\n=\\frac{5y-5}{3y}\n=\\frac{5(y-1)}{3y}\n\\]\n\nTherefore\n\n\\[\na=\\frac{\\frac{10+11y}{3y}}{\\frac{5(y-1)}{3y}}\n=\\frac{10+11y}{5(y-1)}\n\\]\n\n**Answer:** \\(\\dfrac{10+11y}{5(y-1)}\\)",
+      "updated": "2026-05-16T08:42:24",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Nov2025_4WM1H__Q25__p23-23__m03__Algebra-Toolkit"
+    },
+    "all::Nov2025_4WM1H__Q01__p03-03__m02__Area-Perimeter": {
+      "status": "checked",
+      "source": "**Solution**\n\nRadius \\(=6\\) cm.\n\n\\[\n\\text{perimeter}=\\pi r+12=6\\pi+12\\approx 30.8496\n\\]\n\n**Answer:** \\(30.8\\) cm to 3 significant figures.",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::Nov2025_4WM1H__Q04__p05-05__m04__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\n\\[\nA=\\{9,11,13,15,17\\},\\quad B=\\{9,12,15,18\\},\\quad C=\\{11,13,17\\}\n\\]\n\n\\[\nA\\cup C=\\{9,11,13,15,17\\}\n\\]\n\n\\[\nA\\cap B'=\\{11,13,17\\}\n\\]\n\n\\(15\\notin B\\cap C\\) because \\(15\\) is not prime.\n\nSince \\(D\\cup C=A\\) and \\(D\\) has two members,\n\n\\[\nD=\\{9,15\\}\n\\]\n\n**Answers:** \\(\\{9,11,13,15,17\\}\\), \\(\\{11,13,17\\}\\), No, \\(D=\\{9,15\\}\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::Nov2025_4WM1H__Q05__p06-06__m05__Probability-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\n\\[\nP(\\text{tennis or cricket})=0.2+0.35=0.55\n\\]\n\nAlso,\n\n\\[\n2x+0.2+x+0.35=1\n\\]\n\n\\[\n3x=0.45\n\\]\n\n\\[\nx=0.15\n\\]\n\nSo\n\n\\[\nP(\\text{football})=2x=0.30\n\\]\n\n\\[\n700\\times 0.30=210\n\\]\n\n**Answers:** \\(0.55\\), \\(210\\) students.",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::Nov2025_4WM1H__Q08__p08-08__m09__Factorising": {
+      "status": "checked",
+      "source": "**Solution**\n\n(a)\n\\[\n5w(3w-4w^2)=15w^2-20w^3\n\\]\n\n(b)\n\\[\n(4a^3c^5)^3=64a^9c^{15}\n\\]\n\n(c)\n\\[\n14m^3p^2+21m^2p^4=7m^2p^2(2m+3p^2)\n\\]\n\n(d)\n\\[\nx^2-10x+24=(x-4)(x-6)\n\\]\n\nSo\n\\[\nx=4 \\quad \\text{or} \\quad x=6\n\\]\n\n**Answers:** \\(15w^2-20w^3\\), \\(64a^9c^{15}\\), \\(7m^2p^2(2m+3p^2)\\), \\((x-4)(x-6)\\), \\(x=4,6\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::Nov2025_4WM1H__Q09__p09-09__m04__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\n\\[\nAB=\\sqrt{(10-2)^2+(15-0)^2}\n\\]\n\n\\[\n=\\sqrt{64+225}=17\n\\]\n\nSince \\(D\\) is on the positive \\(x\\)-axis and \\(AD=17\\),\n\n\\[\nD=(2+17,0)=(19,0)\n\\]\n\n**Answer:** \\((19,0)\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::Nov2025_4WM1H__Q10__p10-10__m03__Standard-Compound-Units": {
+      "status": "checked",
+      "source": "**Solution**\n\nThe contact area is one square face:\n\n\\[\n7\\times 7=49\\text{ cm}^2\n\\]\n\n\\[\n\\text{force}=\\text{pressure}\\times\\text{area}=62\\times 49=3038\n\\]\n\n**Answer:** \\(3038\\) newtons.",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::Nov2025_4WM1H__Q13__p13-13__m06__Expanding-Brackets": {
+      "status": "checked",
+      "source": "**Solution**\n\n(a)\n\\[\n7x(3x+2)(2x-5)\n\\]\n\n\\[\n=7x(6x^2-11x-10)\n\\]\n\n\\[\n=42x^3-77x^2-70x\n\\]\n\n(b)\n\\[\n\\frac{9}{2y}+\\frac57=5\n\\]\n\n\\[\n\\frac{9}{2y}=\\frac{30}{7}\n\\]\n\n\\[\n63=60y\n\\]\n\n\\[\ny=\\frac{21}{20}\n\\]\n\n**Answers:** \\(42x^3-77x^2-70x\\), \\(y=\\frac{21}{20}\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::Nov2025_4WM1H__Q14__p14-14__m02__Circles-Arcs-Sectors": {
+      "status": "checked",
+      "source": "**Solution**\n\n\\[\n\\text{area}=\\frac{75}{360}\\pi(12)^2\n\\]\n\n\\[\n=30\\pi \\approx 94.2478\n\\]\n\n**Answer:** \\(94.2\\text{ cm}^2\\) to 3 significant figures.",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::Nov2025_4WM1H__Q15__p14-14__m03__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\n\\[\n\\frac{16^{x-3}\\times 8^{x+1}}{32^x}\n=\\frac{2^{4x-12}\\times 2^{3x+3}}{2^{5x}}\n\\]\n\n\\[\n=2^{4x-12+3x+3-5x}=2^{2x-9}\n\\]\n\n**Answer:** \\(n=2x-9\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::Nov2025_4WM1H__Q16__p15-15__m03__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\n\\[\n\\frac{2\\sqrt7+2}{\\sqrt7-3}\\times\\frac{\\sqrt7+3}{\\sqrt7+3}\n\\]\n\n\\[\n=\\frac{(2\\sqrt7+2)(\\sqrt7+3)}{7-9}\n\\]\n\n\\[\n=\\frac{20+8\\sqrt7}{-2}\n\\]\n\n\\[\n=-10-4\\sqrt7=-10-\\sqrt{112}\n\\]\n\n**Answer:** \\(-10-\\sqrt{112}\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::Nov2025_4WM1H__Q17__p15-15__m02__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\nLet\n\\[\nx=0.95454545\\ldots\n\\]\n\nThen\n\\[\n10x=9.5454545\\ldots\n\\]\n\nand\n\\[\n1000x=954.5454545\\ldots\n\\]\n\nSubtract:\n\\[\n990x=945\n\\]\n\n\\[\nx=\\frac{945}{990}=\\frac{21}{22}\n\\]\n\n**Answer:** \\(0.954545\\ldots=\\dfrac{21}{22}\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::Nov2025_4WM1H__Q18__p16-16__m04__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\n\\[\n(8x+2)(3x-2)=500\n\\]\n\n\\[\n24x^2-10x-4=500\n\\]\n\n\\[\n12x^2-5x-252=0\n\\]\n\nUsing the quadratic formula,\n\n\\[\nx=\\frac{5\\pm\\sqrt{(-5)^2-4(12)(-252)}}{24}\n\\]\n\nThe positive solution is\n\n\\[\nx\\approx 4.79564\n\\]\n\n**Answer:** \\(x=4.80\\) to 3 significant figures.",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::Nov2025_4WM1H__Q20__p18-18__m03__Standard-Compound-Units": {
+      "status": "checked",
+      "source": "**Solution**\n\nFrequency density \\(=\\dfrac{\\text{frequency}}{\\text{class width}}\\).\n\n\\[\n0<h\\le 5: \\frac{12}{5}=2.4\n\\]\n\n\\[\n5<h\\le 15: \\frac{34}{10}=3.4\n\\]\n\n\\[\n15<h\\le 30: \\frac{45}{15}=3\n\\]\n\n\\[\n30<h\\le 50: \\frac{28}{20}=1.4\n\\]\n\n**Answer:** draw bars with densities \\(2.4, 3.4, 3, 1.4\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::Nov2025_4WM1H__Q21__p19-19__m04__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\nTriangle area:\n\n\\[\n\\frac{\\sqrt3}{4}(5r)^2=\\frac{25\\sqrt3}{4}r^2\n\\]\n\nCircle area:\n\n\\[\n\\pi r^2\n\\]\n\nSo\n\n\\[\n\\left(\\frac{25\\sqrt3}{4}-\\pi\\right)r^2=610\\pi\n\\]\n\n\\[\nr\\approx 15.7926\n\\]\n\n**Answer:** \\(r=15.8\\) to 3 significant figures.",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::Nov2025_4WM1H__Q22__p20-20__m02__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\n\\[\n9x^2-12x+q=(3x-2)^2\n\\]\n\n\\[\n(3x-2)^2=9x^2-12x+4\n\\]\n\n**Answer:** \\(q=4\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::Nov2025_4WM1H__Q24__p22-22__m03__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\n\\[\n5x^2-20x+23=5(x^2-4x)+23\n\\]\n\n\\[\n=5\\big((x-2)^2-4\\big)+23\n\\]\n\n\\[\n=5(x-2)^2+3\n\\]\n\n**Answer:** \\(5(x-2)^2+3\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::Nov2025_4WM1H__Q26__p24-25__m05__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\nFrom triangle \\(GMF\\),\n\n\\[\n\\tan 60^\\circ=\\frac{FG}{FM}=\\frac{18}{FM}\n\\]\n\n\\[\nFM=\\frac{18}{\\tan 60^\\circ}=6\\sqrt3\n\\]\n\nSince \\(FM=\\frac35FE\\),\n\n\\[\nFE=10\\sqrt3\n\\]\n\nThe horizontal distance from \\(D\\) to the point below \\(G\\) is\n\n\\[\n\\sqrt{20^2+(10\\sqrt3)^2}=10\\sqrt7\n\\]\n\nIf \\(\\theta\\) is the angle of elevation,\n\n\\[\n\\tan\\theta=\\frac{18}{10\\sqrt7}\n\\]\n\n\\[\n\\theta\\approx 34.2289^\\circ\n\\]\n\n**Answer:** \\(34.2^\\circ\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::Nov2025_4WM1H__Q27__p26-26__m05__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\nDiagonals of a rhombus bisect each other at right angles.\n\nMidpoint of \\(AC\\):\n\n\\[\n\\left(\\frac{16+24}{2},\\frac{-9+15}{2}\\right)=(20,3)\n\\]\n\nGradient of \\(AC\\):\n\n\\[\n\\frac{15-(-9)}{24-16}=3\n\\]\n\nSo gradient of \\(BD\\) is \\(-\\frac13\\).\n\n\\[\ny-3=-\\frac13(x-20)\n\\]\n\n\\[\nx+3y-29=0\n\\]\n\n**Answer:** \\(x+3y-29=0\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "all::Nov2025_4WM1H__Q28__p27-27__m04__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\nFactor each expression:\n\n\\[\n\\frac{x(3x+1)(2x+1)}{(2x-1)(2x+1)}\\div\\frac{(5x-2)(3x+1)}{4(2x-1)}=2x\n\\]\n\n\\[\n\\frac{x(3x+1)}{2x-1}\\times\\frac{4(2x-1)}{(5x-2)(3x+1)}=2x\n\\]\n\n\\[\n\\frac{4x}{5x-2}=2x\n\\]\n\n\\[\n4x=2x(5x-2)\n\\]\n\n\\[\n10x^2-8x=0\n\\]\n\n\\[\n2x(5x-4)=0\n\\]\n\nThe original fractions do not allow \\(x=0\\), so\n\n\\[\nx=\\frac45\n\\]\n\n**Answer:** \\(x=\\frac45\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex"
+    },
+    "expertise::Nov2025_4WM1H__Q20__p18-18__m03__Standard-Compound-Units": {
+      "status": "checked",
+      "source": "**Solution**\n\nFrequency density \\(=\\dfrac{\\text{frequency}}{\\text{class width}}\\).\n\n\\[\n0<h\\le 5: \\frac{12}{5}=2.4\n\\]\n\n\\[\n5<h\\le 15: \\frac{34}{10}=3.4\n\\]\n\n\\[\n15<h\\le 30: \\frac{45}{15}=3\n\\]\n\n\\[\n30<h\\le 50: \\frac{28}{20}=1.4\n\\]\n\n**Answer:** draw bars with densities \\(2.4, 3.4, 3, 1.4\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Nov2025_4WM1H__Q20__p18-18__m03__Standard-Compound-Units"
+    },
+    "expertise::Nov2025_4WM1H__Q21__p19-19__m04__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\nTriangle area:\n\n\\[\n\\frac{\\sqrt3}{4}(5r)^2=\\frac{25\\sqrt3}{4}r^2\n\\]\n\nCircle area:\n\n\\[\n\\pi r^2\n\\]\n\nSo\n\n\\[\n\\left(\\frac{25\\sqrt3}{4}-\\pi\\right)r^2=610\\pi\n\\]\n\n\\[\nr\\approx 15.7926\n\\]\n\n**Answer:** \\(r=15.8\\) to 3 significant figures.",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Nov2025_4WM1H__Q21__p19-19__m04__Algebra-Toolkit"
+    },
+    "expertise::Nov2025_4WM1H__Q22__p20-20__m02__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\n\\[\n9x^2-12x+q=(3x-2)^2\n\\]\n\n\\[\n(3x-2)^2=9x^2-12x+4\n\\]\n\n**Answer:** \\(q=4\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Nov2025_4WM1H__Q22__p20-20__m02__Algebra-Toolkit"
+    },
+    "expertise::Nov2025_4WM1H__Q24__p22-22__m03__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\n\\[\n5x^2-20x+23=5(x^2-4x)+23\n\\]\n\n\\[\n=5\\big((x-2)^2-4\\big)+23\n\\]\n\n\\[\n=5(x-2)^2+3\n\\]\n\n**Answer:** \\(5(x-2)^2+3\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Nov2025_4WM1H__Q24__p22-22__m03__Algebra-Toolkit"
+    },
+    "expertise::Nov2025_4WM1H__Q26__p24-25__m05__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\nFrom triangle \\(GMF\\),\n\n\\[\n\\tan 60^\\circ=\\frac{FG}{FM}=\\frac{18}{FM}\n\\]\n\n\\[\nFM=\\frac{18}{\\tan 60^\\circ}=6\\sqrt3\n\\]\n\nSince \\(FM=\\frac35FE\\),\n\n\\[\nFE=10\\sqrt3\n\\]\n\nThe horizontal distance from \\(D\\) to the point below \\(G\\) is\n\n\\[\n\\sqrt{20^2+(10\\sqrt3)^2}=10\\sqrt7\n\\]\n\nIf \\(\\theta\\) is the angle of elevation,\n\n\\[\n\\tan\\theta=\\frac{18}{10\\sqrt7}\n\\]\n\n\\[\n\\theta\\approx 34.2289^\\circ\n\\]\n\n**Answer:** \\(34.2^\\circ\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Nov2025_4WM1H__Q26__p24-25__m05__Algebra-Toolkit"
+    },
+    "expertise::Nov2025_4WM1H__Q27__p26-26__m05__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\nDiagonals of a rhombus bisect each other at right angles.\n\nMidpoint of \\(AC\\):\n\n\\[\n\\left(\\frac{16+24}{2},\\frac{-9+15}{2}\\right)=(20,3)\n\\]\n\nGradient of \\(AC\\):\n\n\\[\n\\frac{15-(-9)}{24-16}=3\n\\]\n\nSo gradient of \\(BD\\) is \\(-\\frac13\\).\n\n\\[\ny-3=-\\frac13(x-20)\n\\]\n\n\\[\nx+3y-29=0\n\\]\n\n**Answer:** \\(x+3y-29=0\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Nov2025_4WM1H__Q27__p26-26__m05__Algebra-Toolkit"
+    },
+    "expertise::Nov2025_4WM1H__Q28__p27-27__m04__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Solution**\n\nFactor each expression:\n\n\\[\n\\frac{x(3x+1)(2x+1)}{(2x-1)(2x+1)}\\div\\frac{(5x-2)(3x+1)}{4(2x-1)}=2x\n\\]\n\n\\[\n\\frac{x(3x+1)}{2x-1}\\times\\frac{4(2x-1)}{(5x-2)(3x+1)}=2x\n\\]\n\n\\[\n\\frac{4x}{5x-2}=2x\n\\]\n\n\\[\n4x=2x(5x-2)\n\\]\n\n\\[\n10x^2-8x=0\n\\]\n\n\\[\n2x(5x-4)=0\n\\]\n\nThe original fractions do not allow \\(x=0\\), so\n\n\\[\nx=\\frac45\n\\]\n\n**Answer:** \\(x=\\frac45\\).",
+      "updated": "2026-05-16T09:00:28",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "reused_from": "all::Nov2025_4WM1H__Q28__p27-27__m04__Algebra-Toolkit"
+    }
+  }
+}

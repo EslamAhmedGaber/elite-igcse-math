@@ -1,0 +1,243 @@
+{
+  "paperSlug": "Nov2025_4WM2H",
+  "solutions": {
+    "all::Nov2025_4WM2H__Q06__p08-08__m06__Compound-Interest-Depreciation": {
+      "status": "checked",
+      "source": "**Step 1: Calculate the absolute increase.**\nIncrease = 87 − 75 = 12\n\n**Step 2: Calculate percentage increase.**\n$$\\\\text{\\\\% Increase} = \\\\frac{\\\\text{Increase}}{\\\\text{Original}} \\\\times 100 = \\\\frac{12}{75} \\\\times 100 = 16\\\\%$$\n\n#### Answer:\n\n16%\n\n**Step 1: Determine the depreciation multiplier.** A 20% decrease means the multiplier is 1 − 0.20 = 0.80.\n\n**Step 2: Apply the multiplier for 3 years.**\nFinal Value = 960 × (0.80)<sup>3</sup>\nFinal Value = 960 × 0.512 = 491.52\n\n#### Answer:\n\n491.52 Swiss francs",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::Nov2025_4WM2H__Q09__p11-11__m03__Powers-Roots-Standard-Form": {
+      "status": "checked",
+      "source": "Move the decimal point 4 places to the right:\n5.76 × 10<sup>4</sup> = 57600\n\n#### Answer:\n\n57600\n\n**Step 1: Expand the numerator.**\n3 × 10<sup>5</sup> = 300, 000\n8 × 10<sup>3</sup> = 8, 000\nNumerator = 300, 000 + 8, 000 = 308, 000 = 3.08 × 10<sup>5</sup>\n\n**Step 2: Perform the division.**\n$$\\\\frac{3.08 \\\\times 10^5}{4 \\\\times 10^{-2}} = \\\\left(\\\\frac{3.08}{4}\\\\right) \\\\times 10^{5 - (-2)}$$\n = 0.77 × 10<sup>7</sup>\n\n**Step 3: Convert to strict standard form (1 ≤ *A* \\< 10).**\n0.77 × 10<sup>7</sup> = 7.7 × 10<sup>6</sup>\n\n#### Answer:\n\n7.7 × 10<sup>6</sup>",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::Nov2025_4WM2H__Q17__p17-17__m03__Direct-Inverse-Proportion": {
+      "status": "checked",
+      "source": "**Step 1: Set up the proportionality equation.**\n$$T = \\\\frac{k}{\\\\sqrt{m}}$$\n\n**Step 2: Substitute the given values to find constant *k*.**\n$$15 = \\\\frac{k}{\\\\sqrt{36}}$$\n$$15 = \\\\frac{k}{6}$$\n*k* = 15 × 6 = 90\n\n**Step 3: Write the final formula.**\n$$T = \\\\frac{90}{\\\\sqrt{m}}$$\n\n#### Answer:\n\n$T = \\\\frac{90}{\\\\sqrt{m}}$",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::Nov2025_4WM2H__Q23__p23-23__m03__Congruence-Similarity-Geometrical-Proof": {
+      "status": "checked",
+      "source": "**Step 1: Find the Area Scale Factor (ASF).**\n$$\\\\text{ASF} = \\\\frac{\\\\text{Area of Q}}{\\\\text{Area of P}} = \\\\frac{450}{200} = \\\\frac{9}{4} = 2.25$$\n\n**Step 2: Find the Length Scale Factor (LSF).**\n$$\\\\text{LSF} = \\\\sqrt{\\\\text{ASF}} = \\\\sqrt{\\\\frac{9}{4}} = \\\\frac{3}{2} = 1.5$$\n\n**Step 3: Find the Volume Scale Factor (VSF).**\n$$\\\\text{VSF} = (\\\\text{LSF})^3 = \\\\left(\\\\frac{3}{2}\\\\right)^3 = \\\\frac{27}{8} = 3.375$$\n\n**Step 4: Calculate the volume of Shape Q.**\n$$\\\\text{Volume of Q} = \\\\text{Volume of P} \\\\times \\\\text{VSF} = 672 \\\\times \\\\frac{27}{8}$$\n = 84 × 27 = 2268\n\n#### Answer:\n\n2268 cm<sup>3</sup>",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "expertise::Nov2025_4WM2H__Q23__p23-23__m03__Congruence-Similarity-Geometrical-Proof": {
+      "status": "checked",
+      "source": "**Step 1: Find the Area Scale Factor (ASF).**\n$$\\\\text{ASF} = \\\\frac{\\\\text{Area of Q}}{\\\\text{Area of P}} = \\\\frac{450}{200} = \\\\frac{9}{4} = 2.25$$\n\n**Step 2: Find the Length Scale Factor (LSF).**\n$$\\\\text{LSF} = \\\\sqrt{\\\\text{ASF}} = \\\\sqrt{\\\\frac{9}{4}} = \\\\frac{3}{2} = 1.5$$\n\n**Step 3: Find the Volume Scale Factor (VSF).**\n$$\\\\text{VSF} = (\\\\text{LSF})^3 = \\\\left(\\\\frac{3}{2}\\\\right)^3 = \\\\frac{27}{8} = 3.375$$\n\n**Step 4: Calculate the volume of Shape Q.**\n$$\\\\text{Volume of Q} = \\\\text{Volume of P} \\\\times \\\\text{VSF} = 672 \\\\times \\\\frac{27}{8}$$\n = 84 × 27 = 2268\n\n#### Answer:\n\n2268 cm<sup>3</sup>",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex",
+      "reused_from": "all::Nov2025_4WM2H__Q23__p23-23__m03__Congruence-Similarity-Geometrical-Proof"
+    },
+    "all::Nov2025_4WM2H__Q26__p27-27__m05__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Step 1: Find the common difference *d*.** The *n*<sup>th</sup> term is given by *u*<sub>*n*</sub> = *a* + (*n*−1)*d*.\n*u*<sub>20</sub> = 10 + 19*d* = 86\n19*d* = 76\n$$d = \\\\frac{76}{19} = 4$$\n\n**Step 2: Use the sum formula to form an equation in terms of *N*.**\n$$S_N = \\\\frac{N}{2} \\\\left\\[2a + (N - 1)d \\\\right\\]$$\nSubstitute the known values *S*<sub>*N*</sub> = 5194, *a* = 10, and *d* = 4:\n$$5194 = \\\\frac{N}{2} \\\\left\\[2(10) + (N - 1)(4) \\\\right\\]$$\n\n**Step 3: Simplify and solve the quadratic equation.** Multiply by 2 to clear the fraction:\n10388 = *N*\\[20+4*N*−4\\]\n10388 = *N*(4*N*+16)\n4*N*<sup>2</sup> + 16*N* − 10388 = 0\n\nDivide the entire equation by 4 to make it simpler:\n*N*<sup>2</sup> + 4*N* − 2597 = 0\n\n**Step 4: Use the quadratic formula to find *N*.**\n$$N = \\\\frac{-b \\\\pm \\\\sqrt{b^2 - 4ac}}{2a}$$\n$$N = \\\\frac{-4 \\\\pm \\\\sqrt{16 - 4(1)(-2597)}}{2}$$\n$$N = \\\\frac{-4 \\\\pm \\\\sqrt{16 + 10388}}{2}$$\n$$N = \\\\frac{-4 \\\\pm \\\\sqrt{10404}}{2}$$\n$$N = \\\\frac{-4 \\\\pm 102}{2}$$\n\nSince *N* must be a positive integer, we discard the negative root:\n$$N = \\\\frac{-4 + 102}{2} = \\\\frac{98}{2} = 49$$\n\n#### Answer:\n\n*N* = 49\n\nAlways double-check that your *N* (number of terms) evaluates to a positive whole integer. If it ends up as a decimal or fraction, recheck your arithmetic progression formulas.",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "expertise::Nov2025_4WM2H__Q26__p27-27__m05__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Step 1: Find the common difference *d*.** The *n*<sup>th</sup> term is given by *u*<sub>*n*</sub> = *a* + (*n*−1)*d*.\n*u*<sub>20</sub> = 10 + 19*d* = 86\n19*d* = 76\n$$d = \\\\frac{76}{19} = 4$$\n\n**Step 2: Use the sum formula to form an equation in terms of *N*.**\n$$S_N = \\\\frac{N}{2} \\\\left\\[2a + (N - 1)d \\\\right\\]$$\nSubstitute the known values *S*<sub>*N*</sub> = 5194, *a* = 10, and *d* = 4:\n$$5194 = \\\\frac{N}{2} \\\\left\\[2(10) + (N - 1)(4) \\\\right\\]$$\n\n**Step 3: Simplify and solve the quadratic equation.** Multiply by 2 to clear the fraction:\n10388 = *N*\\[20+4*N*−4\\]\n10388 = *N*(4*N*+16)\n4*N*<sup>2</sup> + 16*N* − 10388 = 0\n\nDivide the entire equation by 4 to make it simpler:\n*N*<sup>2</sup> + 4*N* − 2597 = 0\n\n**Step 4: Use the quadratic formula to find *N*.**\n$$N = \\\\frac{-b \\\\pm \\\\sqrt{b^2 - 4ac}}{2a}$$\n$$N = \\\\frac{-4 \\\\pm \\\\sqrt{16 - 4(1)(-2597)}}{2}$$\n$$N = \\\\frac{-4 \\\\pm \\\\sqrt{16 + 10388}}{2}$$\n$$N = \\\\frac{-4 \\\\pm \\\\sqrt{10404}}{2}$$\n$$N = \\\\frac{-4 \\\\pm 102}{2}$$\n\nSince *N* must be a positive integer, we discard the negative root:\n$$N = \\\\frac{-4 + 102}{2} = \\\\frac{98}{2} = 49$$\n\n#### Answer:\n\n*N* = 49\n\nAlways double-check that your *N* (number of terms) evaluates to a positive whole integer. If it ends up as a decimal or fraction, recheck your arithmetic progression formulas.",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex",
+      "reused_from": "all::Nov2025_4WM2H__Q26__p27-27__m05__Algebra-Toolkit"
+    },
+    "all::Nov2025_4WM2H__Q01__p03-03__m02__Circles-Arcs-Sectors": {
+      "status": "checked",
+      "source": "**Step 1:** Place the point of the compass at the vertex *Q*. Draw an arc that intersects both arms *Q**P* and *Q**R*. Let’s call these intersection points *A* and *B*.  \n**Step 2:** Without changing the compass width, place the compass point on *A* and draw an arc inside the angle.  \n**Step 3:** Place the compass point on *B* and draw another arc to intersect the previous arc. Let this intersection be point *C*.  \n**Step 4:** Draw a straight line from *Q* through *C*. This is the angle bisector.",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::Nov2025_4WM2H__Q02__p04-04__m04__Statistics-Toolkit": {
+      "status": "checked",
+      "source": "**Step 1: Find the midpoints (*x*) for each class interval.**\n\n0 \\< *h* ≤ 10 ⟹ *x* = 5\n\n10 \\< *h* ≤ 20 ⟹ *x* = 15\n\n20 \\< *h* ≤ 30 ⟹ *x* = 25\n\n30 \\< *h* ≤ 40 ⟹ *x* = 35\n\n40 \\< *h* ≤ 50 ⟹ *x* = 45\n\n**Step 2: Multiply frequency (*f*) by midpoint (*x*) to find *f**x*.**\n\n**Step 3: Calculate the mean.**\n$$\\\\text{Mean} = \\\\frac{\\\\sum fx}{\\\\sum f} = \\\\frac{1290}{60} = 21.5$$\n\n#### Answer:\n\n21.5 cm",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::Nov2025_4WM2H__Q03__p05-05__m03__Simultaneous-Equations": {
+      "status": "checked",
+      "source": "Label the equations:\n$$\\\\begin{aligned}\n            5x + y &= 11 \\\\quad \\\\text{--- (1)} \\\\\\\\\n            3x - y &= 9  \\\\quad \\\\text{--- (2)}\n        \\\\end{aligned}$$\n\n**Step 1: Add (1) and (2) to eliminate *y*.**\n$$\\\\begin{aligned}\n            (5x + y) + (3x - y) &= 11 + 9 \\\\\\\\\n            8x &= 20 \\\\\\\\\n            x &= \\\\frac{20}{8} = 2.5\n        \\\\end{aligned}$$\n\n**Step 2: Substitute *x* = 2.5 into equation (1) to find *y*.**\n$$\\\\begin{aligned}\n            5(2.5) + y &= 11 \\\\\\\\\n            12.5 + y &= 11 \\\\\\\\\n            y &= 11 - 12.5 = -1.5\n        \\\\end{aligned}$$\n\n#### Answer:\n\n*x* = 2.5, *y* =  − 1.5",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::Nov2025_4WM2H__Q04__p06-06__m04__Percentages": {
+      "status": "checked",
+      "source": "**Step 1: Find the total number of ratio parts.**\nTotal parts = 6 + 7 + 3 = 16 parts\n\n**Step 2: Find the value of one part.**\n$$1 \\\\text{ part} = \\\\frac{960}{16} = 60 \\\\text{ trees}$$\n\n**Step 3: Calculate the total number of cherry trees.**\nCherry trees = 7 parts × 60 = 420 trees\n\n**Step 4: Calculate 65% of the cherry trees to find morellos.**\nMorello trees = 0.65 × 420 = 273\n\n#### Answer:\n\n273\n\nAlways read carefully what the final question asks. A common mistake is stopping at the total number of cherry trees (420) instead of calculating the 65% morello portion.",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::Nov2025_4WM2H__Q05__p07-07__m03__Congruence-Similarity-Geometrical-Proof": {
+      "status": "checked",
+      "source": "**Step 1: Identify corresponding sides from the similar shapes.** Looking at the given angles/orientations:\n\nLeft side *A**B* corresponds to *E**F* and *I**J*.\n\nTop side *B**C* corresponds to *F**G* and *J**K*.\n\nRight side *C**D* corresponds to *G**H* and *K**L*.\n\nWe are given *C**D* = 60 (wait, diagram check: *B**C* is the top side labeled 60, *A**B* = 28. On middle shape *E**F* = 7, *G**H* = 18. On right shape *K**L* = 6, *J**K* is unknown). Let’s use the explicit lengths:\n$$\\\\begin{aligned}\n            AB = 28 \\\\quad &\\\\text{corresponds to} \\\\quad EF = 7 \\\\\\\\\n            BC = 60 \\\\quad &\\\\text{corresponds to} \\\\quad FG \\\\\\\\\n            CD \\\\quad &\\\\text{corresponds to} \\\\quad GH = 18 \\\\quad \\\\text{and} \\\\quad KL = 6 \n        \\\\end{aligned}$$\n\n**Step 2: Find scale factors.** Scale factor from *A**B**C**D* to *E**F**G**H* using the left sides:\n$$\\\\text{SF}\\_1 = \\\\frac{EF}{AB} = \\\\frac{7}{28} = \\\\frac{1}{4}$$\nSo, $FG = BC \\\\times \\\\frac{1}{4} = 60 \\\\times \\\\frac{1}{4} = 15 \\\\text{ cm}$.\n\nScale factor from *E**F**G**H* to *I**J**K**L* using the right sides (*G**H* and *K**L*):\n$$\\\\text{SF}\\_2 = \\\\frac{KL}{GH} = \\\\frac{6}{18} = \\\\frac{1}{3}$$\n\n**Step 3: Calculate *J**K*.** Side *J**K* corresponds to *F**G*.\n$$JK = FG \\\\times \\\\text{SF}\\_2 = 15 \\\\times \\\\frac{1}{3} = 5 \\\\text{ cm}$$\n\n#### Answer:\n\n5 cm",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::Nov2025_4WM2H__Q07__p09-09__m04__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Step 1: Interior angle of the regular pentagon.**\n$$\\\\text{Interior Angle} = \\\\frac{(5-2) \\\\times 180^\\\\circ}{5} = \\\\frac{540^\\\\circ}{5} = 108^\\\\circ$$\nSo, ∠*A**E**D* = 108<sup>∘</sup>.\n\n**Step 2: Find angles within the corner triangle △*D**E**Q*.** Since *A**P**Q**E* is a rectangle, the angle ∠*A**E**Q* = 90<sup>∘</sup>. Therefore, the angle ∠*D**E**Q* is:\n∠*D**E**Q* = ∠*A**E**D* − ∠*A**E**Q* = 108<sup>∘</sup> − 90<sup>∘</sup> = 18<sup>∘</sup>\n\n**Step 3: Analyze △*D**E**Q*.** The problem states *D**Q**C* is a straight line, meaning *Q* lies on the side *D**C*. Therefore, △*D**E**Q* is formed by *D*, *E*, *Q*. In △*D**E**Q*, the angle at vertex *D* is the pentagon’s interior angle ∠*C**D**E* = 108<sup>∘</sup>.\n\nUsing angles in a triangle summing to 180<sup>∘</sup>:\n∠*E**Q**D* = 180<sup>∘</sup> − (∠*D**E**Q*+∠*E**D**Q*) = 180<sup>∘</sup> − (18<sup>∘</sup>+108<sup>∘</sup>) = 180<sup>∘</sup> − 126<sup>∘</sup> = 54<sup>∘</sup>\n\n#### Answer:\n\n54<sup>∘</sup>",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::Nov2025_4WM2H__Q08__p10-10__m04__Percentages": {
+      "status": "checked",
+      "source": "**Step 1: Calculate Normal Price for Shop A.** A 25% discount means the sale price is 75% of the normal price.\n0.75 × Normal<sub>*A*</sub> = 240\n$$\\\\text{Normal}\\_A = \\\\frac{240}{0.75} = 320 \\\\text{ euros}$$\n\n**Step 2: Calculate Normal Price for Shop B.** A discount of $\\\\frac{2}{9}$ means the sale price is $1 - \\\\frac{2}{9} = \\\\frac{7}{9}$ of the normal price.\n$$\\\\frac{7}{9} \\\\times \\\\text{Normal}\\_B = 245$$\n$$\\\\text{Normal}\\_B = 245 \\\\times \\\\frac{9}{7} = 35 \\\\times 9 = 315 \\\\text{ euros}$$\n\n**Step 3: Find the difference.**\nDifference = 320 − 315 = 5 euros\n\n#### Answer:\n\n5 euros",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::Nov2025_4WM2H__Q10__p11-11__m03__Statistics-Toolkit": {
+      "status": "checked",
+      "source": "**Step 1: Calculate the total weight of the initial 5 potatoes.**\nTotal<sub>5</sub> = Mean × Number = 217 × 5 = 1085 grams\n\n**Step 2: Calculate the new total weight.**\nTotal<sub>6</sub> = 1085 + 175 = 1260 grams\n\n**Step 3: Calculate the new mean.**\n$$\\\\text{New Mean} = \\\\frac{1260}{6} = 210 \\\\text{ grams}$$\n\n#### Answer:\n\n210",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::Nov2025_4WM2H__Q11__p12-12__m04__Graphing-Inequalities": {
+      "status": "checked",
+      "source": "Draw an open circle at 1 and an arrow pointing to the left.\n\n**Step 1: Identify the vertical boundary.** The region is to the right of the vertical line at *x* =  − 3. Inequality 1: *x* ≥  − 3\n\n**Step 2: Identify the horizontal boundary.** The region is below the horizontal line at *y* = 4. Inequality 2: *y* ≤ 4\n\n**Step 3: Identify the diagonal boundary.** The line passes through (0,0), (1,1), (−1,−1), etc., meaning its equation is *y* = *x*. The shaded region is above this line. Inequality 3: *y* ≥ *x*\n\n#### Answer:\n\n*x* ≥  − 3,  *y* ≤ 4,  *y* ≥ *x*\n\nAlways pick a test point inside the shaded region, like (0,2), to verify your inequalities. For *y* ≥ *x*, 2 ≥ 0 is true!",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::Nov2025_4WM2H__Q12__p13-13__m03__Percentages": {
+      "status": "checked",
+      "source": "**Step 1: Write down the multiplier for each year.**\n\nDecrease by 5% ⟹ Multiplier = 1 − 0.05 = 0.95\n\nIncrease by 20% ⟹ Multiplier = 1 + 0.20 = 1.20\n\nIncrease by 6.5% ⟹ Multiplier = 1 + 0.065 = 1.065\n\n**Step 2: Calculate the combined overall multiplier.**\nOverall Multiplier = 0.95 × 1.20 × 1.065 = 1.2141\n\n**Step 3: Convert the overall multiplier back to a percentage increase.**\n1.2141 − 1 = 0.2141 = 21.41%\n\n#### Answer:\n\n21.41%",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::Nov2025_4WM2H__Q13__p13-13__m02__Powers-Roots-Standard-Form": {
+      "status": "checked",
+      "source": "**Step 1: Apply the power of 3 to both parts.**\n(9×10<sup>80</sup>)<sup>3</sup> = 9<sup>3</sup> × (10<sup>80</sup>)<sup>3</sup>\n\n**Step 2: Evaluate both components.**\n9<sup>3</sup> = 729\n(10<sup>80</sup>)<sup>3</sup> = 10<sup>80 × 3</sup> = 10<sup>240</sup>\n\n**Step 3: Combine and adjust to standard form.**\n729 × 10<sup>240</sup> = 7.29 × 10<sup>2</sup> × 10<sup>240</sup> = 7.29 × 10<sup>242</sup>\n\n#### Answer:\n\n7.29 × 10<sup>242</sup>",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::Nov2025_4WM2H__Q14__p14-15__m05__Cumulative-Frequency-Diagrams": {
+      "status": "checked",
+      "source": "**Part (a) Median:** Total plants = 40. The median position is at cumulative frequency = 40/2 = 20. Reading across from CF = 20 to the curve and down to the x-axis gives:\n\n#### Answer:\n\n\\(a\\) 30 cm\n\n**Part (b) Interquartile Range (IQR):**\n\nLower Quartile (Q1) is at CF = 10. Reading the graph ⟹ Height = 20 cm.\n\nUpper Quartile (Q3) is at CF = 30. Reading the graph ⟹ Height = 40 cm.\n\nIQR = *Q*3 − *Q*1 = 40 − 20 = 20 cm\n\n#### Answer:\n\n\\(b\\) 20 cm\n\n**Part (c) Premium plants revenue:** Premium plants have height  \\> 40 cm. From the graph, cumulative frequency at 40 cm is 30. This means 30 plants are ≤ 40 cm.\nNumber of premium plants = 40 − 30 = 10 plants\nTotal Money = 10 plants × 30 euros = 300 euros\n\n#### Answer:\n\n\\(c\\) 300 euros",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::Nov2025_4WM2H__Q15__p16-16__m04__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Part (a)(i) Angle *D**O**B*:**\n∠*D**O**B* = 2 × 48<sup>∘</sup> = 96<sup>∘</sup>\n\n#### Answer:\n\n(a)(i) 96<sup>∘</sup>\n\n**Part (a)(ii) Reason:** The angle subtended by an arc at the centre is twice the angle subtended at the circumference.\n\n**Part (b)(i) Angle *B**C**D*:**\n∠*B**C**D* = 180<sup>∘</sup> − 48<sup>∘</sup> = 132<sup>∘</sup>\n\n#### Answer:\n\n(b)(i) 132<sup>∘</sup>\n\n**Part (b)(ii) Reason:** Opposite angles in a cyclic quadrilateral sum to 180<sup>∘</sup>.",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::Nov2025_4WM2H__Q16__p17-17__m02__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Data (sorted):** 14, 15, 16, 18, 19, 20, 22, 25, 28, 40, 50.  \nNumber of data points *n* = 11.\n\n**Step 1: Find the Median (Q2).** The median is the $\\\\left(\\\\frac{11+1}{2}\\\\right) = 6^{\\\\text{th}}$ value.\nMedian = 20\n\n**Step 2: Find Lower Quartile (Q1) and Upper Quartile (Q3).** Q1 is the median of the lower 5 values (14, 15, **16**, 18, 19).\n*Q*1 = 16\nQ3 is the median of the upper 5 values (22, 25, **28**, 40, 50).\n*Q*3 = 28\n\n**Step 3: Calculate the Interquartile Range (IQR).**\nIQR = *Q*3 − *Q*1 = 28 − 16 = 12\n\n#### Answer:\n\n12 minutes",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::Nov2025_4WM2H__Q18__p18-18__m04__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "**Step 1: Square both sides to remove the square root.**\n$$p^2 = \\\\frac{7w + y}{cw + k}$$\n\n**Step 2: Multiply both sides by the denominator (*c**w*+*k*).**\n*p*<sup>2</sup>(*c**w*+*k*) = 7*w* + *y*\n\n**Step 3: Expand the bracket.**\n*p*<sup>2</sup>*c**w* + *p*<sup>2</sup>*k* = 7*w* + *y*\n\n**Step 4: Collect all terms involving *w* on one side.**\n*p*<sup>2</sup>*c**w* − 7*w* = *y* − *p*<sup>2</sup>*k*\n\n**Step 5: Factor out *w*.**\n*w*(*p*<sup>2</sup>*c*−7) = *y* − *p*<sup>2</sup>*k*\n\n**Step 6: Divide to isolate *w*.**\n$$w = \\\\frac{y - p^2k}{p^2c - 7}$$\n\n#### Answer:\n\n$w = \\\\frac{y - p^2k}{p^2c - 7}$",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::Nov2025_4WM2H__Q19__p18-18__m02__Volume-Surface-Area": {
+      "status": "checked",
+      "source": "**Step 1: Find the radius.**\n$$r = \\\\frac{24}{2} = 12 \\\\text{ cm}$$\n\n**Step 2: Apply the surface area formula.**\nSurface Area = 4*π**r*<sup>2</sup>\n = 4 × *π* × 12<sup>2</sup>\n = 4 × *π* × 144\n = 576*π* ≈ 1809.557... cm<sup>2</sup>\n\n**Step 3: Round to 3 significant figures.** 1809.557 → 1810 (the 1, 8, and 1 are the first three sig figs).\n\n#### Answer:\n\n1810 cm<sup>2</sup>",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::Nov2025_4WM2H__Q20__p19-19__m05__Simultaneous-Equations": {
+      "status": "checked",
+      "source": "**Step 1: Substitute *y* = (*x*+2) into the quadratic equation.**\n*x*<sup>2</sup> + (*x*+2)<sup>2</sup> = 3*x*(*x*+2) − 11\n\n**Step 2: Expand all brackets.**\n*x*<sup>2</sup> + (*x*<sup>2</sup>+4*x*+4) = 3*x*<sup>2</sup> + 6*x* − 11\n2*x*<sup>2</sup> + 4*x* + 4 = 3*x*<sup>2</sup> + 6*x* − 11\n\n**Step 3: Move all terms to one side to set the equation to zero.**\n0 = 3*x*<sup>2</sup> − 2*x*<sup>2</sup> + 6*x* − 4*x* − 11 − 4\n*x*<sup>2</sup> + 2*x* − 15 = 0\n\n**Step 4: Factorise the quadratic equation.**\n(*x*+5)(*x*−3) = 0\nSo, *x* =  − 5 or *x* = 3.\n\n**Step 5: Find corresponding *y* values using *y* = *x* + 2.**\n\nIf *x* =  − 5 ⟹ *y* =  − 5 + 2 =  − 3\n\nIf *x* = 3 ⟹ *y* = 3 + 2 = 5\n\n#### Answer:\n\n(−5,−3) and (3,5)",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::Nov2025_4WM2H__Q21__p20-21__m07__Functions": {
+      "status": "checked",
+      "source": "**(a) Find *g*(−1):**\n*g*(−1) = 4(−1)<sup>2</sup> + 16(−1) − 9 = 4 − 16 − 9 =  − 21\n\n#### Answer:\n\n\\(a\\)  − 21\n\n**(b) Find *f**g*(*x*):**\n*f**g*(*x*) = *f*(*g*(*x*)) = 5(4*x*<sup>2</sup>+16*x*−9) − 3\n = 20*x*<sup>2</sup> + 80*x* − 45 − 3 = 20*x*<sup>2</sup> + 80*x* − 48\n\n#### Answer:\n\n\\(b\\) 20*x*<sup>2</sup> + 80*x* − 48\n\nLet *y* = 4*x*<sup>2</sup> + 16*x* − 9. We must rearrange to make *x* the subject.\n\n**Step 1: Complete the square for the *x* terms.**\n*y* = 4(*x*<sup>2</sup>+4*x*) − 9\n*y* = 4((*x*+2)<sup>2</sup>−4) − 9\n*y* = 4(*x*+2)<sup>2</sup> − 16 − 9\n*y* = 4(*x*+2)<sup>2</sup> − 25\n\n**Step 2: Rearrange for *x*.**\n*y* + 25 = 4(*x*+2)<sup>2</sup>\n$$\\\\frac{y + 25}{4} = (x + 2)^2$$\n$$x + 2 = \\\\pm\\\\sqrt{\\\\frac{y + 25}{4}}$$\n\nSince *x* ≥  − 2, *x* + 2 is positive, so we take the positive root.\n$$x + 2 = \\\\frac{\\\\sqrt{y + 25}}{2}$$\n$$x = \\\\frac{\\\\sqrt{y + 25}}{2} - 2$$\n\n**Step 3: Swap *y* for *x* to write the inverse function.**\n\n#### Answer:\n\n$g^{-1}(x) = \\\\frac{\\\\sqrt{x + 25}}{2} - 2$\n\nWhen finding the inverse of a quadratic, always complete the square. The restricted domain (*x* ≥  − 2) tells you whether to take the positive or negative square root!",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::Nov2025_4WM2H__Q22__p22-22__m06__Coordinate-Geometry": {
+      "status": "checked",
+      "source": "**Step 1: Differentiate the curve to find the gradient expression.**\n$$\\\\frac{dy}{dx} = 3x^2 - 16$$\n\n**Step 2: Set the gradient to 11 to find the x-coordinates.**\n3*x*<sup>2</sup> − 16 = 11\n3*x*<sup>2</sup> = 27\n*x*<sup>2</sup> = 9 ⟹ *x* = 3 or *x* =  − 3\n\n**Step 3: Find the corresponding y-coordinates on the curve.**\n\nFor *x* = 3: *y* = (3)<sup>3</sup> − 16(3) + 7 = 27 − 48 + 7 =  − 14  \n**Point 1: (3,−14)**\n\nFor *x* =  − 3: *y* = (−3)<sup>3</sup> − 16(−3) + 7 =  − 27 + 48 + 7 = 28  \n**Point 2: (−3,28)**\n\n**Step 4: Find the y-intercept (*b*) for each tangent (*y* = 11*x* + *b*).**\n\nUsing (3,−14):\n − 14 = 11(3) + *b* ⟹  − 14 = 33 + *b* ⟹ *b* =  − 47\n\nUsing (−3,28):\n28 = 11(−3) + *b* ⟹ 28 =  − 33 + *b* ⟹ *b* = 61\n\n#### Answer:\n\n*b* =  − 47 and 61",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::Nov2025_4WM2H__Q24__p24-25__m06__Vectors": {
+      "status": "checked",
+      "source": "**(a) Find $\\\\overrightarrow{AC}$:**\n$$\\\\overrightarrow{AC} = \\\\overrightarrow{AO} + \\\\overrightarrow{OC} = -\\\\overrightarrow{OA} + \\\\overrightarrow{OC} = -5\\\\mathbf{a} + 10\\\\mathbf{b}$$\n\n#### Answer:\n\n\\(a\\)  − 5**a** + 10**b**\n\n**(b) Find $\\\\overrightarrow{OB}$:**\n$$\\\\overrightarrow{OB} = \\\\overrightarrow{OA} + \\\\overrightarrow{AB} = 5\\\\mathbf{a} + (2\\\\mathbf{a} + 4\\\\mathbf{b}) = 7\\\\mathbf{a} + 4\\\\mathbf{b}$$\n\n#### Answer:\n\n\\(b\\) 7**a** + 4**b**\n\n**Step 1: Set up vector equations for $\\\\overrightarrow{OP}$.** Since *O**P**B* is a straight line, $\\\\overrightarrow{OP}$ is a scalar multiple of $\\\\overrightarrow{OB}$. Let this be *λ*.\n$$\\\\overrightarrow{OP} = \\\\lambda(7\\\\mathbf{a} + 4\\\\mathbf{b}) = 7\\\\lambda\\\\mathbf{a} + 4\\\\lambda\\\\mathbf{b}$$\n\nSince *P* lies on the straight line *A**C*, $\\\\overrightarrow{AP} = \\\\mu\\\\overrightarrow{AC}$ for some scalar *μ*.\n$$\\\\overrightarrow{OP} = \\\\overrightarrow{OA} + \\\\overrightarrow{AP} = 5\\\\mathbf{a} + \\\\mu(-5\\\\mathbf{a} + 10\\\\mathbf{b})$$\n$$\\\\overrightarrow{OP} = (5 - 5\\\\mu)\\\\mathbf{a} + 10\\\\mu\\\\mathbf{b}$$\n\n**Step 2: Equate the coefficients of **a** and **b**.**\n7*λ* = 5 − 5*μ*  — (1)\n$$4\\\\lambda = 10\\\\mu \\\\implies \\\\mu = \\\\frac{4}{10}\\\\lambda = 0.4\\\\lambda \\\\quad \\\\text{--- (2)}$$\n\n**Step 3: Solve for *λ*.** Substitute (2) into (1):\n7*λ* = 5 − 5(0.4*λ*)\n7*λ* = 5 − 2*λ*\n$$9\\\\lambda = 5 \\\\implies \\\\lambda = \\\\frac{5}{9}$$\n\n**Step 4: Find $\\\\overrightarrow{OP}$.**\n$$\\\\overrightarrow{OP} = \\\\frac{5}{9}(7\\\\mathbf{a} + 4\\\\mathbf{b}) = \\\\frac{35}{9}\\\\mathbf{a} + \\\\frac{20}{9}\\\\mathbf{b}$$\n\n#### Answer:\n\n$\\\\frac{35}{9}\\\\mathbf{a} + \\\\frac{20}{9}\\\\mathbf{b}$",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "all::Nov2025_4WM2H__Q25__p26-26__m03__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "The transformation *y* = *f*(4*x*) represents a horizontal stretch by a scale factor of $\\\\frac{1}{4}$. The x-coordinate is multiplied by $\\\\frac{1}{4}$ while the y-coordinate stays the same.\n$$\\\\text{New minimum} = \\\\left(8 \\\\times \\\\frac{1}{4}, 1\\\\right) = (2, 1)$$\n\n#### Answer:\n\n(2,1)\n\n**Step 1: Find the vertical shift *b*.** The standard *y* = cos (*x*) graph fluctuates between  − 1 and 1, centered at *y* = 0. The given graph fluctuates between a minimum of *y* = 1 and a maximum of *y* = 3. The center line is $\\\\frac{3 + 1}{2} = 2$. Therefore, *b* = 2.\n\n**Step 2: Find the frequency multiplier *a*.** The period of the given graph completes one full cycle between *x* = 0 and *x* = 90<sup>∘</sup> (it starts at 3, dips to 1, and returns to 3 at 90<sup>∘</sup>). The standard cosine period is 360<sup>∘</sup>.\n$$\\\\text{Period} = \\\\frac{360^\\\\circ}{a}$$\n$$90^\\\\circ = \\\\frac{360^\\\\circ}{a} \\\\implies a = 4$$\n\n#### Answer:\n\n*a* = 4,  *b* = 2",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex"
+    },
+    "expertise::Nov2025_4WM2H__Q20__p19-19__m05__Simultaneous-Equations": {
+      "status": "checked",
+      "source": "**Step 1: Substitute *y* = (*x*+2) into the quadratic equation.**\n*x*<sup>2</sup> + (*x*+2)<sup>2</sup> = 3*x*(*x*+2) − 11\n\n**Step 2: Expand all brackets.**\n*x*<sup>2</sup> + (*x*<sup>2</sup>+4*x*+4) = 3*x*<sup>2</sup> + 6*x* − 11\n2*x*<sup>2</sup> + 4*x* + 4 = 3*x*<sup>2</sup> + 6*x* − 11\n\n**Step 3: Move all terms to one side to set the equation to zero.**\n0 = 3*x*<sup>2</sup> − 2*x*<sup>2</sup> + 6*x* − 4*x* − 11 − 4\n*x*<sup>2</sup> + 2*x* − 15 = 0\n\n**Step 4: Factorise the quadratic equation.**\n(*x*+5)(*x*−3) = 0\nSo, *x* =  − 5 or *x* = 3.\n\n**Step 5: Find corresponding *y* values using *y* = *x* + 2.**\n\nIf *x* =  − 5 ⟹ *y* =  − 5 + 2 =  − 3\n\nIf *x* = 3 ⟹ *y* = 3 + 2 = 5\n\n#### Answer:\n\n(−5,−3) and (3,5)",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex",
+      "reused_from": "all::Nov2025_4WM2H__Q20__p19-19__m05__Simultaneous-Equations"
+    },
+    "expertise::Nov2025_4WM2H__Q21__p20-21__m07__Functions": {
+      "status": "checked",
+      "source": "**(a) Find *g*(−1):**\n*g*(−1) = 4(−1)<sup>2</sup> + 16(−1) − 9 = 4 − 16 − 9 =  − 21\n\n#### Answer:\n\n\\(a\\)  − 21\n\n**(b) Find *f**g*(*x*):**\n*f**g*(*x*) = *f*(*g*(*x*)) = 5(4*x*<sup>2</sup>+16*x*−9) − 3\n = 20*x*<sup>2</sup> + 80*x* − 45 − 3 = 20*x*<sup>2</sup> + 80*x* − 48\n\n#### Answer:\n\n\\(b\\) 20*x*<sup>2</sup> + 80*x* − 48\n\nLet *y* = 4*x*<sup>2</sup> + 16*x* − 9. We must rearrange to make *x* the subject.\n\n**Step 1: Complete the square for the *x* terms.**\n*y* = 4(*x*<sup>2</sup>+4*x*) − 9\n*y* = 4((*x*+2)<sup>2</sup>−4) − 9\n*y* = 4(*x*+2)<sup>2</sup> − 16 − 9\n*y* = 4(*x*+2)<sup>2</sup> − 25\n\n**Step 2: Rearrange for *x*.**\n*y* + 25 = 4(*x*+2)<sup>2</sup>\n$$\\\\frac{y + 25}{4} = (x + 2)^2$$\n$$x + 2 = \\\\pm\\\\sqrt{\\\\frac{y + 25}{4}}$$\n\nSince *x* ≥  − 2, *x* + 2 is positive, so we take the positive root.\n$$x + 2 = \\\\frac{\\\\sqrt{y + 25}}{2}$$\n$$x = \\\\frac{\\\\sqrt{y + 25}}{2} - 2$$\n\n**Step 3: Swap *y* for *x* to write the inverse function.**\n\n#### Answer:\n\n$g^{-1}(x) = \\\\frac{\\\\sqrt{x + 25}}{2} - 2$\n\nWhen finding the inverse of a quadratic, always complete the square. The restricted domain (*x* ≥  − 2) tells you whether to take the positive or negative square root!",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex",
+      "reused_from": "all::Nov2025_4WM2H__Q21__p20-21__m07__Functions"
+    },
+    "expertise::Nov2025_4WM2H__Q22__p22-22__m06__Coordinate-Geometry": {
+      "status": "checked",
+      "source": "**Step 1: Differentiate the curve to find the gradient expression.**\n$$\\\\frac{dy}{dx} = 3x^2 - 16$$\n\n**Step 2: Set the gradient to 11 to find the x-coordinates.**\n3*x*<sup>2</sup> − 16 = 11\n3*x*<sup>2</sup> = 27\n*x*<sup>2</sup> = 9 ⟹ *x* = 3 or *x* =  − 3\n\n**Step 3: Find the corresponding y-coordinates on the curve.**\n\nFor *x* = 3: *y* = (3)<sup>3</sup> − 16(3) + 7 = 27 − 48 + 7 =  − 14  \n**Point 1: (3,−14)**\n\nFor *x* =  − 3: *y* = (−3)<sup>3</sup> − 16(−3) + 7 =  − 27 + 48 + 7 = 28  \n**Point 2: (−3,28)**\n\n**Step 4: Find the y-intercept (*b*) for each tangent (*y* = 11*x* + *b*).**\n\nUsing (3,−14):\n − 14 = 11(3) + *b* ⟹  − 14 = 33 + *b* ⟹ *b* =  − 47\n\nUsing (−3,28):\n28 = 11(−3) + *b* ⟹ 28 =  − 33 + *b* ⟹ *b* = 61\n\n#### Answer:\n\n*b* =  − 47 and 61",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex",
+      "reused_from": "all::Nov2025_4WM2H__Q22__p22-22__m06__Coordinate-Geometry"
+    },
+    "expertise::Nov2025_4WM2H__Q24__p24-25__m06__Vectors": {
+      "status": "checked",
+      "source": "**(a) Find $\\\\overrightarrow{AC}$:**\n$$\\\\overrightarrow{AC} = \\\\overrightarrow{AO} + \\\\overrightarrow{OC} = -\\\\overrightarrow{OA} + \\\\overrightarrow{OC} = -5\\\\mathbf{a} + 10\\\\mathbf{b}$$\n\n#### Answer:\n\n\\(a\\)  − 5**a** + 10**b**\n\n**(b) Find $\\\\overrightarrow{OB}$:**\n$$\\\\overrightarrow{OB} = \\\\overrightarrow{OA} + \\\\overrightarrow{AB} = 5\\\\mathbf{a} + (2\\\\mathbf{a} + 4\\\\mathbf{b}) = 7\\\\mathbf{a} + 4\\\\mathbf{b}$$\n\n#### Answer:\n\n\\(b\\) 7**a** + 4**b**\n\n**Step 1: Set up vector equations for $\\\\overrightarrow{OP}$.** Since *O**P**B* is a straight line, $\\\\overrightarrow{OP}$ is a scalar multiple of $\\\\overrightarrow{OB}$. Let this be *λ*.\n$$\\\\overrightarrow{OP} = \\\\lambda(7\\\\mathbf{a} + 4\\\\mathbf{b}) = 7\\\\lambda\\\\mathbf{a} + 4\\\\lambda\\\\mathbf{b}$$\n\nSince *P* lies on the straight line *A**C*, $\\\\overrightarrow{AP} = \\\\mu\\\\overrightarrow{AC}$ for some scalar *μ*.\n$$\\\\overrightarrow{OP} = \\\\overrightarrow{OA} + \\\\overrightarrow{AP} = 5\\\\mathbf{a} + \\\\mu(-5\\\\mathbf{a} + 10\\\\mathbf{b})$$\n$$\\\\overrightarrow{OP} = (5 - 5\\\\mu)\\\\mathbf{a} + 10\\\\mu\\\\mathbf{b}$$\n\n**Step 2: Equate the coefficients of **a** and **b**.**\n7*λ* = 5 − 5*μ*  — (1)\n$$4\\\\lambda = 10\\\\mu \\\\implies \\\\mu = \\\\frac{4}{10}\\\\lambda = 0.4\\\\lambda \\\\quad \\\\text{--- (2)}$$\n\n**Step 3: Solve for *λ*.** Substitute (2) into (1):\n7*λ* = 5 − 5(0.4*λ*)\n7*λ* = 5 − 2*λ*\n$$9\\\\lambda = 5 \\\\implies \\\\lambda = \\\\frac{5}{9}$$\n\n**Step 4: Find $\\\\overrightarrow{OP}$.**\n$$\\\\overrightarrow{OP} = \\\\frac{5}{9}(7\\\\mathbf{a} + 4\\\\mathbf{b}) = \\\\frac{35}{9}\\\\mathbf{a} + \\\\frac{20}{9}\\\\mathbf{b}$$\n\n#### Answer:\n\n$\\\\frac{35}{9}\\\\mathbf{a} + \\\\frac{20}{9}\\\\mathbf{b}$",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex",
+      "reused_from": "all::Nov2025_4WM2H__Q24__p24-25__m06__Vectors"
+    },
+    "expertise::Nov2025_4WM2H__Q25__p26-26__m03__Algebra-Toolkit": {
+      "status": "checked",
+      "source": "The transformation *y* = *f*(4*x*) represents a horizontal stretch by a scale factor of $\\\\frac{1}{4}$. The x-coordinate is multiplied by $\\\\frac{1}{4}$ while the y-coordinate stays the same.\n$$\\\\text{New minimum} = \\\\left(8 \\\\times \\\\frac{1}{4}, 1\\\\right) = (2, 1)$$\n\n#### Answer:\n\n(2,1)\n\n**Step 1: Find the vertical shift *b*.** The standard *y* = cos (*x*) graph fluctuates between  − 1 and 1, centered at *y* = 0. The given graph fluctuates between a minimum of *y* = 1 and a maximum of *y* = 3. The center line is $\\\\frac{3 + 1}{2} = 2$. Therefore, *b* = 2.\n\n**Step 2: Find the frequency multiplier *a*.** The period of the given graph completes one full cycle between *x* = 0 and *x* = 90<sup>∘</sup> (it starts at 3, dips to 1, and returns to 3 at 90<sup>∘</sup>). The standard cosine period is 360<sup>∘</sup>.\n$$\\\\text{Period} = \\\\frac{360^\\\\circ}{a}$$\n$$90^\\\\circ = \\\\frac{360^\\\\circ}{a} \\\\implies a = 4$$\n\n#### Answer:\n\n*a* = 4,  *b* = 2",
+      "updated": "2026-05-16T09:02:20",
+      "checked_by": "Dr Eslam Ahmed + Codex",
+      "imported_from": "legacy_tex",
+      "reused_from": "all::Nov2025_4WM2H__Q25__p26-26__m03__Algebra-Toolkit"
+    }
+  }
+}
