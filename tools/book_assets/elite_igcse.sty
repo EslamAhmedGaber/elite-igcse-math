@@ -1,0 +1,82 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{elite_igcse}[2026/05/16 Elite IGCSE Academy classified problem style]
+
+\RequirePackage{xcolor}
+\RequirePackage[most]{tcolorbox}
+\RequirePackage{tikz}
+\RequirePackage{graphicx}
+\RequirePackage{amsmath,amssymb}
+\RequirePackage{enumitem}
+\RequirePackage{etoolbox}
+\usetikzlibrary{calc,shapes.geometric}
+
+\definecolor{brandnavy}{HTML}{0B2545}
+\definecolor{brandnavydark}{HTML}{07182F}
+\definecolor{brandgold}{HTML}{D4AF37}
+\definecolor{brandgoldlight}{HTML}{F5E6B3}
+\definecolor{brandcream}{HTML}{FAF6EC}
+\definecolor{rulegrey}{HTML}{B8B8B8}
+\definecolor{textgrey}{HTML}{555555}
+
+\newcommand{\elitepagewatermark}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[
+      rotate=35,
+      scale=4.2,
+      text=brandnavy!6,
+      font=\sffamily\bfseries
+    ] at (current page.center) {Dr.~Eslam Ahmed};
+  \end{tikzpicture}%
+}
+\AddToHook{shipout/background}{\elitepagewatermark}
+
+\newcommand{\pillbadge}[2]{%
+  \tikz[baseline=(b.base)]{
+    \node[
+      fill=brandgold,
+      rounded corners=4pt,
+      inner xsep=6pt, inner ysep=2.5pt,
+      font=\sffamily\bfseries\footnotesize,
+      text=brandnavydark
+    ] (b) {#1\,\textcolor{brandnavydark}{\footnotesize\textbf{#2}}};
+  }%
+}
+
+\newcommand{\classifiedquestionheader}[7]{%
+  \clearpage\noindent
+  \begin{tcolorbox}[
+    enhanced,
+    colback=brandnavy, colframe=brandnavy,
+    boxrule=0pt, arc=4pt,
+    left=12pt, right=12pt, top=8pt, bottom=8pt,
+    borderline south={2pt}{0pt}{brandgold},
+  ]
+    {\sffamily\bfseries\color{white}\large CLASSIFIED PROBLEM}\hfill
+    \pillbadge{Paper:}{\,#1}\,\pillbadge{Session:}{\,#2}\,\pillbadge{Q\#:}{\,#3}\,\pillbadge{Marks:}{\,#4}\\[3pt]
+    {\sffamily\color{brandgoldlight}\small\textsc{Topic:} \textbf{#5}}\\[2pt]
+    {\sffamily\color{white!84}\footnotesize Source: #7}
+  \end{tcolorbox}
+  \par\vspace{6pt}
+}
+
+\newcommand{\problemimagepage}[1]{%
+  \begin{center}
+    \includegraphics[width=\linewidth,height=0.77\textheight,keepaspectratio]{#1}
+  \end{center}
+}
+
+\newcommand{\solutionheader}{%
+  \noindent
+  \begin{tcolorbox}[
+    enhanced,
+    colback=brandcream, colframe=brandnavy,
+    boxrule=0pt, arc=3pt,
+    left=10pt, right=10pt, top=5pt, bottom=5pt,
+    borderline west={3pt}{0pt}{brandgold},
+  ]
+    {\sffamily\bfseries\color{brandnavy}\large WORKED SOLUTION}\hfill
+    {\sffamily\footnotesize\color{textgrey}\itshape Dr.~Eslam Ahmed}
+  \end{tcolorbox}
+}
+
+\endinput
