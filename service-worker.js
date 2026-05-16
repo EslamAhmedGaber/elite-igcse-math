@@ -1,5 +1,5 @@
-const CACHE_VERSION = "elite-igcse-v20";
-const RUNTIME_CACHE = "elite-igcse-runtime-v20";
+const CACHE_VERSION = "elite-igcse-v21";
+const RUNTIME_CACHE = "elite-igcse-runtime-v21";
 
 const APP_SHELL = [
   "./",
@@ -110,6 +110,7 @@ self.addEventListener("fetch", (event) => {
     url.pathname.endsWith("/solutions-data.js") ||
     url.pathname.endsWith("/topic-normalizer.js") ||
     url.pathname.endsWith("/app.js") ||
+    url.pathname.endsWith("/exam.js") ||
     url.pathname.endsWith("/styles.css")
   ) {
     event.respondWith(networkFirst(request));

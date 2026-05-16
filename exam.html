@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mock Exam Mode - Elite IGCSE Mathematics</title>
-  <meta name="description" content="Generate a free timed Edexcel IGCSE 4MA1 mock exam from the classified question bank, self-mark it, and get weak-topic recommendations.">
+  <title>Mocks & Test Builder - Elite IGCSE Mathematics</title>
+  <meta name="description" content="Generate timed mocks, build custom topic tests, create smart revision sets, and save reusable worksheets from the Elite IGCSE Mathematics question bank.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Mock Exam Mode - Elite IGCSE Mathematics">
-  <meta property="og:description" content="A timed mock exam builder using Dr Eslam Ahmed's classified IGCSE Mathematics question bank.">
+  <meta property="og:title" content="Mocks & Test Builder - Elite IGCSE Mathematics">
+  <meta property="og:description" content="Timed mocks, custom tests, smart revision sets, and saved worksheets from Dr Eslam Ahmed's classified IGCSE Mathematics bank.">
   <meta property="og:image" content="assets/og-image.png">
   <meta name="theme-color" content="#0f766e">
   <link rel="manifest" href="manifest.webmanifest">
@@ -67,11 +67,11 @@
   <main class="page page-exam">
     <section class="exam-hero" aria-labelledby="examTitle">
       <div>
-        <span class="eyebrow">Free Mock Exam Mode</span>
-        <h1 id="examTitle">Sit a timed paper, then find exactly what cost you marks.</h1>
-        <p>Generate a balanced mock from the classified bank. Finish, enter your marks, and the site sends weak questions into your Mistake Box.</p>
+        <span class="eyebrow">Mocks &amp; Test Builder</span>
+        <h1 id="examTitle">Build the exact paper you need.</h1>
+        <p>Generate random mocks, hand-pick topic tests, or let the site build smart revision from mistakes and weak topics. Finish, mark, and keep the loop moving.</p>
         <div class="planner-hero-actions">
-          <a class="button primary" href="#examBuilder">Build mock exam</a>
+          <a class="button primary" href="#examBuilder">Build paper</a>
           <a class="button light" href="practice.html?bank=expertise">Train Q20+</a>
         </div>
       </div>
@@ -83,43 +83,188 @@
     </section>
 
     <section class="exam-builder" id="examBuilder" aria-labelledby="examBuilderTitle">
-      <div class="section-head">
-        <span class="eyebrow">Build Paper</span>
-        <h2 id="examBuilderTitle">Choose the challenge.</h2>
+      <div class="section-head exam-builder-head">
+        <div>
+          <span class="eyebrow">Build Paper</span>
+          <h2 id="examBuilderTitle">Choose how you want to build.</h2>
+        </div>
+        <div class="exam-mode-tabs" role="tablist" aria-label="Test builder modes">
+          <button class="active" type="button" data-exam-mode="random">Random Mock</button>
+          <button type="button" data-exam-mode="custom">Build Test</button>
+          <button type="button" data-exam-mode="smart">Smart Revision</button>
+          <button type="button" data-exam-mode="saved">Saved Tests</button>
+        </div>
       </div>
-      <div class="exam-controls">
-        <label>Question bank
-          <select id="examBank">
-            <option value="all">Full classified bank</option>
-            <option value="expertise">Q20+ expertise only</option>
-          </select>
-        </label>
-        <label class="modular-only">Modular unit
-          <select id="examModularUnit">
-            <option value="">Both units</option>
-            <option value="Unit 1">Unit 1 only</option>
-            <option value="Unit 2">Unit 2 only</option>
-          </select>
-        </label>
-        <label>Time limit
-          <select id="examDuration">
-            <option value="90">90 minutes</option>
-            <option value="120">120 minutes</option>
-            <option value="60">60 minutes</option>
-          </select>
-        </label>
-        <label>Question count
-          <select id="examCount">
-            <option value="25">25 questions</option>
-            <option value="20">20 questions</option>
-            <option value="15">15 questions</option>
-          </select>
-        </label>
-      </div>
+
+      <section class="exam-mode-panel" data-mode-panel="random">
+        <div class="exam-controls">
+          <label>Preset
+            <select id="randomPreset">
+              <option value="">Choose preset</option>
+              <option value="quiz">10-minute style quiz</option>
+              <option value="topic">20-mark topic test</option>
+              <option value="full">Full mock</option>
+              <option value="hard">Q20+ challenge</option>
+            </select>
+          </label>
+          <label>Question bank
+            <select id="examBank">
+              <option value="all">Full classified bank</option>
+              <option value="expertise">Q20+ expertise only</option>
+            </select>
+          </label>
+          <label><span data-pathway-label="unit">Chapter</span>
+            <select id="examUnit"></select>
+          </label>
+          <label>Topic
+            <select id="examTopic"></select>
+          </label>
+          <label>Time limit
+            <select id="examDuration">
+              <option value="90">90 minutes</option>
+              <option value="120">120 minutes</option>
+              <option value="60">60 minutes</option>
+              <option value="45">45 minutes</option>
+              <option value="30">30 minutes</option>
+            </select>
+          </label>
+          <label>Question count
+            <select id="examCount">
+              <option value="25">25 questions</option>
+              <option value="20">20 questions</option>
+              <option value="15">15 questions</option>
+              <option value="12">12 questions</option>
+              <option value="8">8 questions</option>
+            </select>
+          </label>
+          <label>Target marks
+            <input id="examTargetMarks" type="number" min="0" step="1" value="0">
+          </label>
+        </div>
+        <div class="exam-check-row">
+          <label><input id="examUnsolvedOnly" type="checkbox"> Use unsolved only</label>
+          <label><input id="examAvoidRepeats" type="checkbox"> Avoid recent mock repeats</label>
+        </div>
+      </section>
+
+      <section class="exam-mode-panel" data-mode-panel="custom" hidden>
+        <div class="builder-layout">
+          <div class="builder-column">
+            <div class="exam-controls builder-filters">
+              <label>Search
+                <input id="builderSearch" type="search" placeholder="topic, paper, keyword">
+              </label>
+              <label>Bank
+                <select id="builderBank">
+                  <option value="all">Full bank</option>
+                  <option value="expertise">Q20+ only</option>
+                </select>
+              </label>
+              <label><span data-pathway-label="unit">Chapter</span>
+                <select id="builderUnit"></select>
+              </label>
+              <label>Topic
+                <select id="builderTopic"></select>
+              </label>
+              <label>Paper
+                <select id="builderPaper"></select>
+              </label>
+              <label>Difficulty
+                <select id="builderDifficulty">
+                  <option value="">All</option>
+                  <option value="quick">Quick 1-3</option>
+                  <option value="standard">Standard 4-6</option>
+                  <option value="long">Long 7+</option>
+                  <option value="q20">Q20+</option>
+                </select>
+              </label>
+              <label>Status
+                <select id="builderStatus">
+                  <option value="">All</option>
+                  <option value="unsolved">Unsolved</option>
+                  <option value="solved">Solved</option>
+                  <option value="selected">Selected in Classified</option>
+                </select>
+              </label>
+              <label>Min marks
+                <input id="builderMinMarks" type="number" min="0" step="1">
+              </label>
+              <label>Max marks
+                <input id="builderMaxMarks" type="number" min="0" step="1">
+              </label>
+            </div>
+            <div class="builder-toolbar">
+              <strong id="builderSummary">0 matching questions</strong>
+              <div>
+                <button id="addVisibleBtn" type="button">Add visible</button>
+                <button id="addPracticeSelectedBtn" type="button">Use Classified selected</button>
+              </div>
+            </div>
+            <div id="builderResults" class="builder-results"></div>
+          </div>
+          <aside class="builder-draft">
+            <div class="builder-toolbar compact">
+              <strong>Current test</strong>
+              <span id="draftSummary">0 questions | 0 marks</span>
+            </div>
+            <div id="draftList" class="draft-list"></div>
+            <div class="planner-actions compact">
+              <button id="useDraftBtn" class="primary" type="button">Use as paper</button>
+              <button id="clearDraftBtn" type="button">Clear</button>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="exam-mode-panel" data-mode-panel="smart" hidden>
+        <div class="exam-controls">
+          <label>Question bank
+            <select id="smartBank">
+              <option value="all">Full classified bank</option>
+              <option value="expertise">Q20+ expertise only</option>
+            </select>
+          </label>
+          <label><span data-pathway-label="unit">Chapter</span>
+            <select id="smartUnit"></select>
+          </label>
+          <label>Question count
+            <select id="smartCount">
+              <option value="12">12 questions</option>
+              <option value="15">15 questions</option>
+              <option value="20">20 questions</option>
+            </select>
+          </label>
+          <label>Time limit
+            <select id="smartDuration">
+              <option value="45">45 minutes</option>
+              <option value="60">60 minutes</option>
+              <option value="90">90 minutes</option>
+            </select>
+          </label>
+        </div>
+        <div class="smart-source-grid">
+          <label><input id="smartMistakes" type="checkbox" checked> Due Mistake Box questions</label>
+          <label><input id="smartWeakTopics" type="checkbox" checked> Weakest topics</label>
+          <label><input id="smartUnsolved" type="checkbox" checked> Unsolved questions</label>
+        </div>
+        <div class="planner-actions compact">
+          <button id="generateSmartBtn" class="primary" type="button">Build smart revision</button>
+        </div>
+      </section>
+
+      <section class="exam-mode-panel" data-mode-panel="saved" hidden>
+        <div class="builder-toolbar compact">
+          <strong>Reusable tests</strong>
+          <span id="savedTestsSummary">0 saved tests</span>
+        </div>
+        <div id="savedTestsList" class="saved-tests-list"></div>
+      </section>
+
       <div class="planner-actions">
         <button class="primary" id="startExamBtn" type="button">Generate and start</button>
         <button id="finishExamBtn" type="button">Finish exam</button>
         <button id="saveExamBtn" type="button">Save marks</button>
+        <button id="saveCurrentTestBtn" type="button">Save test</button>
         <button id="resetExamBtn" type="button">New paper</button>
         <button id="printExamBtn" type="button">Print paper</button>
       </div>
