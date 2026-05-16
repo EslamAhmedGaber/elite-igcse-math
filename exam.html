@@ -150,66 +150,88 @@
       <section class="exam-mode-panel" data-mode-panel="custom" hidden>
         <div class="builder-layout">
           <div class="builder-column">
-            <div class="exam-controls builder-filters">
-              <label>Search
-                <input id="builderSearch" type="search" placeholder="topic, paper, keyword">
-              </label>
-              <label>Bank
-                <select id="builderBank">
-                  <option value="all">Full bank</option>
-                  <option value="expertise">Q20+ only</option>
-                </select>
-              </label>
-              <label><span data-pathway-label="unit">Chapter</span>
-                <select id="builderUnit"></select>
-              </label>
-              <label>Topic
-                <select id="builderTopic"></select>
-              </label>
-              <label>Paper
-                <select id="builderPaper"></select>
-              </label>
-              <label>Difficulty
-                <select id="builderDifficulty">
-                  <option value="">All</option>
-                  <option value="quick">Quick 1-3</option>
-                  <option value="standard">Standard 4-6</option>
-                  <option value="long">Long 7+</option>
-                  <option value="q20">Q20+</option>
-                </select>
-              </label>
-              <label>Status
-                <select id="builderStatus">
-                  <option value="">All</option>
-                  <option value="unsolved">Unsolved</option>
-                  <option value="solved">Solved</option>
-                  <option value="selected">Selected in Classified</option>
-                </select>
-              </label>
-              <label>Min marks
-                <input id="builderMinMarks" type="number" min="0" step="1">
-              </label>
-              <label>Max marks
-                <input id="builderMaxMarks" type="number" min="0" step="1">
-              </label>
-            </div>
-            <div class="builder-toolbar">
-              <strong id="builderSummary">0 matching questions</strong>
-              <div>
-                <button id="addVisibleBtn" type="button">Add visible</button>
-                <button id="addPracticeSelectedBtn" type="button">Use Classified selected</button>
+            <section class="builder-panel builder-panel-find">
+              <div class="builder-panel-head">
+                <span>1</span>
+                <strong>Find questions</strong>
               </div>
-            </div>
-            <div id="builderResults" class="builder-results"></div>
+              <div class="exam-controls builder-filters builder-filters-main">
+                <label>Search
+                  <input id="builderSearch" type="search" placeholder="topic, paper, keyword">
+                </label>
+                <label>Bank
+                  <select id="builderBank">
+                    <option value="all">Full bank</option>
+                    <option value="expertise">Q20+ only</option>
+                  </select>
+                </label>
+                <label><span data-pathway-label="unit">Chapter</span>
+                  <select id="builderUnit"></select>
+                </label>
+                <label>Topic
+                  <select id="builderTopic"></select>
+                </label>
+                <label>Paper
+                  <select id="builderPaper"></select>
+                </label>
+              </div>
+            </section>
+
+            <section class="builder-panel builder-panel-refine">
+              <div class="builder-panel-head">
+                <span>2</span>
+                <strong>Refine set</strong>
+              </div>
+              <div class="exam-controls builder-filters builder-filters-refine">
+                <label>Difficulty
+                  <select id="builderDifficulty">
+                    <option value="">All</option>
+                    <option value="quick">Quick 1-3</option>
+                    <option value="standard">Standard 4-6</option>
+                    <option value="long">Long 7+</option>
+                    <option value="q20">Q20+</option>
+                  </select>
+                </label>
+                <label>Status
+                  <select id="builderStatus">
+                    <option value="">All</option>
+                    <option value="unsolved">Unsolved</option>
+                    <option value="solved">Solved</option>
+                    <option value="selected">Selected in Classified</option>
+                  </select>
+                </label>
+                <label>Min marks
+                  <input id="builderMinMarks" type="number" min="0" step="1">
+                </label>
+                <label>Max marks
+                  <input id="builderMaxMarks" type="number" min="0" step="1">
+                </label>
+              </div>
+            </section>
+
+            <section class="builder-panel builder-panel-results">
+              <div class="builder-toolbar">
+                <strong id="builderSummary">0 matching questions</strong>
+                <div>
+                  <button id="addVisibleBtn" class="builder-primary-action" type="button">Add visible</button>
+                  <button id="addPracticeSelectedBtn" type="button">Use Classified selected</button>
+                </div>
+              </div>
+              <div id="builderResults" class="builder-results"></div>
+            </section>
           </div>
           <aside class="builder-draft">
-            <div class="builder-toolbar compact">
-              <strong>Current test</strong>
-              <span id="draftSummary">0 questions | 0 marks</span>
+            <div class="builder-draft-head">
+              <span>3</span>
+              <div>
+                <strong>Current test</strong>
+                <div id="draftSummary" class="builder-metric-row">0 questions | 0 marks</div>
+              </div>
             </div>
             <div id="draftList" class="draft-list"></div>
             <div class="planner-actions compact">
               <button id="useDraftBtn" class="primary" type="button">Use as paper</button>
+              <button id="printDraftBtn" class="builder-print-action" type="button">Print current test</button>
               <button id="clearDraftBtn" type="button">Clear</button>
             </div>
           </aside>

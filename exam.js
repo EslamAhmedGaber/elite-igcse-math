@@ -48,6 +48,7 @@
     addPracticeSelected: document.getElementById("addPracticeSelectedBtn"),
     clearDraft: document.getElementById("clearDraftBtn"),
     useDraft: document.getElementById("useDraftBtn"),
+    printDraft: document.getElementById("printDraftBtn"),
     draftList: document.getElementById("draftList"),
     draftSummary: document.getElementById("draftSummary"),
     smartBank: document.getElementById("smartBank"),
@@ -650,11 +651,14 @@
     els.customResults.innerHTML = shown.map((question) => {
       const inDraft = draftIds.includes(question.id);
       return `<article class="builder-result ${inDraft ? "selected" : ""}">
-        <div>
+        <div class="builder-result-copy">
           <strong>${escapeHtml(question.topic)}</strong>
-          <span>${escapeHtml(question.paper)} Q${question.question} | ${question.marks} marks | ${escapeHtml(displayUnit(question) || "")}</span>
+          <span>${escapeHtml(question.paper)} Q${question.question} | ${escapeHtml(displayUnit(question) || "")}</span>
         </div>
-        <button type="button" data-builder-toggle="${escapeHtml(question.id)}">${inDraft ? "Remove" : "Add"}</button>
+        <div class="builder-result-actions">
+          <em>${question.marks} marks</em>
+          <button type="button" data-builder-toggle="${escapeHtml(question.id)}">${inDraft ? "Remove" : "Add"}</button>
+        </div>
       </article>`;
     }).join("") || `<div class="empty-roadmap">No questions match these filters.</div>`;
   }
@@ -666,7 +670,9 @@
   function renderDraft() {
     const items = draftQuestions();
     const marks = totalMarksForQuestions(items);
-    els.draftSummary.textContent = `${items.length} question${items.length === 1 ? "" : "s"} | ${marks} marks | about ${items.length ? estimatedMinutes(items) : 0} min`;
+    const minutes = items.length ? estimatedMinutes(items) : 0;
+    els.draftSummary.innerHTML = `<span>${items.length} question${items.length === 1 ? "" : "s"}</span><span>${marks} marks</span><span>${minutes} min</span>`;
+    if (els.printDraft) els.printDraft.disabled = !items.length;
     els.draftList.innerHTML = items.map((question, index) => `<article class="draft-item">
       <div>
         <strong>${index + 1}. ${escapeHtml(question.topic)}</strong>
@@ -727,6 +733,19 @@
       durationMinutes: estimatedMinutes(items),
       title: "Custom test"
     });
+  }
+
+  function printDraftAsPaper() {
+    const items = draftQuestions();
+    if (!items.length) return;
+    createPaper([...draftIds], {
+      kind: "custom",
+      bank: els.customBank.value || "all",
+      unit: els.customUnit.value || "",
+      durationMinutes: estimatedMinutes(items),
+      title: "Custom test"
+    });
+    window.print();
   }
 
   function weakTopicPool(bank, unit) {
@@ -912,6 +931,7 @@
     renderDraft();
   });
   els.useDraft?.addEventListener("click", useDraftAsPaper);
+  els.printDraft?.addEventListener("click", printDraftAsPaper);
   els.generateSmart?.addEventListener("click", buildSmartRevision);
   els.customResults?.addEventListener("click", (event) => {
     const button = event.target.closest("[data-builder-toggle]");
