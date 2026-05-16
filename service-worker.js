@@ -1,5 +1,5 @@
-const CACHE_VERSION = "elite-igcse-v22";
-const RUNTIME_CACHE = "elite-igcse-runtime-v22";
+const CACHE_VERSION = "elite-igcse-v23";
+const RUNTIME_CACHE = "elite-igcse-runtime-v23";
 
 const APP_SHELL = [
   "./",
@@ -20,6 +20,7 @@ const APP_SHELL = [
   "pathway-mode.js",
   "firebase-config.js",
   "cloud-progress.js",
+  "print-utils.js",
   "app.js",
   "exam.js",
   "checkup.js",
@@ -111,6 +112,7 @@ self.addEventListener("fetch", (event) => {
     url.pathname.endsWith("/topic-normalizer.js") ||
     url.pathname.endsWith("/app.js") ||
     url.pathname.endsWith("/exam.js") ||
+    url.pathname.endsWith("/print-utils.js") ||
     url.pathname.endsWith("/styles.css")
   ) {
     event.respondWith(networkFirst(request));

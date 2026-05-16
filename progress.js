@@ -547,14 +547,14 @@
     </section>`).join("");
   }
 
-  function printTopicRows(rows) {
+  async function printTopicRows(rows, trigger) {
     const items = questionsForTopicRows(rows);
     if (!items.length) {
       els.saveStatus.textContent = "Choose at least one topic with questions before printing.";
       return;
     }
     renderPrintQuestions(items);
-    window.print();
+    await window.ElitePrint.printWhenReady(els.printArea, trigger);
   }
 
   function renderPriorityRows() {
@@ -907,8 +907,8 @@
     visibleTopicRows.forEach((row) => selectedTopics.delete(topicKey(row)));
     renderRows();
   });
-  els.printVisibleTopicsBtn?.addEventListener("click", () => printTopicRows(visibleTopicRows));
-  els.printSelectedTopicsBtn?.addEventListener("click", () => printTopicRows(selectedTopicRows()));
+  els.printVisibleTopicsBtn?.addEventListener("click", () => printTopicRows(visibleTopicRows, els.printVisibleTopicsBtn));
+  els.printSelectedTopicsBtn?.addEventListener("click", () => printTopicRows(selectedTopicRows(), els.printSelectedTopicsBtn));
   els.paperAttemptForm.addEventListener("submit", savePaperAttempt);
   els.paperStatusFilter.addEventListener("change", renderAllPapers);
   els.paperSearch.addEventListener("input", renderAllPapers);

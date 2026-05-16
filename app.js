@@ -723,7 +723,7 @@ function buildWorksheet({ printAfter = false } = {}) {
     setTopicChip(topic);
   }
   redraw();
-  if (printAfter) printSelected();
+  if (printAfter) printSelected(els.printWorksheetBtn);
 }
 
 function practiceMode(mode) {
@@ -798,9 +798,9 @@ function renderPrintArea(items) {
   </section>`).join("");
 }
 
-function printQuestions(items) {
+async function printQuestions(items, trigger) {
   renderPrintArea(items);
-  window.print();
+  await window.ElitePrint.printWhenReady(els.printArea, trigger);
 }
 
 function selectedQuestions() {
@@ -808,12 +808,12 @@ function selectedQuestions() {
   return [...selected].filter((id) => activeIds.has(id)).map(questionById).filter(Boolean);
 }
 
-function printSelected() {
-  printQuestions(selectedQuestions());
+function printSelected(trigger) {
+  printQuestions(selectedQuestions(), trigger);
 }
 
-function printVisible() {
-  printQuestions(visible);
+function printVisible(trigger) {
+  printQuestions(visible, trigger);
 }
 
 function updateTimerDisplay() {
@@ -925,10 +925,10 @@ els.clearSelectedBtn.addEventListener("click", () => {
 });
 els.selectVisibleBtn.addEventListener("click", selectVisible);
 els.clearVisibleBtn.addEventListener("click", clearVisible);
-els.printVisibleBtn.addEventListener("click", printVisible);
+els.printVisibleBtn.addEventListener("click", () => printVisible(els.printVisibleBtn));
 els.printSelectedInlineBtn.addEventListener("click", printSelected);
-els.printSelectedBtn.addEventListener("click", printSelected);
-els.printSelectedBtnHero.addEventListener("click", printSelected);
+els.printSelectedBtn.addEventListener("click", () => printSelected(els.printSelectedBtn));
+els.printSelectedBtnHero.addEventListener("click", () => printSelected(els.printSelectedBtnHero));
 els.closeViewerBtn.addEventListener("click", () => els.viewerDialog.close());
 els.closeSolutionBtn.addEventListener("click", () => els.solutionDialog.close());
 els.closeFixTopicBtn.addEventListener("click", () => els.fixTopicDialog.close());

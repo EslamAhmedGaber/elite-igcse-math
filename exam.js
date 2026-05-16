@@ -735,7 +735,7 @@
     });
   }
 
-  function printDraftAsPaper() {
+  async function printDraftAsPaper() {
     const items = draftQuestions();
     if (!items.length) return;
     createPaper([...draftIds], {
@@ -745,7 +745,7 @@
       durationMinutes: estimatedMinutes(items),
       title: "Custom test"
     });
-    window.print();
+    await window.ElitePrint.printWhenReady(els.paper, els.printDraft);
   }
 
   function weakTopicPool(bank, unit) {
@@ -843,7 +843,7 @@
     return savedTests().find((item) => item.id === id);
   }
 
-  function loadSavedTest(id, printAfter = false) {
+  async function loadSavedTest(id, printAfter = false, trigger) {
     const test = savedTestById(id);
     if (!test) return;
     state = {
@@ -860,7 +860,7 @@
     };
     saveState();
     render();
-    if (printAfter) window.print();
+    if (printAfter) await window.ElitePrint.printWhenReady(els.paper, trigger);
   }
 
   function deleteSavedTest(id) {
@@ -908,7 +908,7 @@
   els.save.addEventListener("click", saveMarks);
   els.saveTest.addEventListener("click", saveCurrentTest);
   els.reset.addEventListener("click", resetExam);
-  els.print.addEventListener("click", () => window.print());
+  els.print.addEventListener("click", () => window.ElitePrint.printWhenReady(els.paper, els.print));
   els.randomPreset?.addEventListener("change", () => applyPreset(els.randomPreset.value));
   els.unit?.addEventListener("change", refreshTopicOptions);
   els.customUnit?.addEventListener("change", () => {
@@ -954,7 +954,7 @@
     const print = event.target.closest("[data-print-test]");
     const remove = event.target.closest("[data-delete-test]");
     if (load) loadSavedTest(load.dataset.loadTest);
-    if (print) loadSavedTest(print.dataset.printTest, true);
+    if (print) loadSavedTest(print.dataset.printTest, true, print);
     if (remove) deleteSavedTest(remove.dataset.deleteTest);
   });
   els.paper.addEventListener("input", (event) => {
