@@ -1,5 +1,5 @@
-const CACHE_VERSION = "elite-igcse-v24";
-const RUNTIME_CACHE = "elite-igcse-runtime-v24";
+const CACHE_VERSION = "elite-igcse-v25";
+const RUNTIME_CACHE = "elite-igcse-runtime-v25";
 
 const APP_SHELL = [
   "./",
@@ -101,7 +101,10 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  if (url.pathname.includes("/downloads/PastPaperSolutions/")) {
+  if (
+    url.pathname.includes("/downloads/PastPaperSolutions/") ||
+    url.pathname.includes("/downloads/ClassifiedSolutions/")
+  ) {
     event.respondWith(networkFirst(request));
     return;
   }

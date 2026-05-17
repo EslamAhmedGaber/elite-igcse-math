@@ -1,0 +1,85 @@
+[
+  {
+    "title": "Complete Classified Solutions",
+    "scope": "Full bank",
+    "questionBook": "downloads/classified_problems.pdf",
+    "source": "private_output/classified_answers.pdf",
+    "files": [
+      {
+        "href": "downloads/ClassifiedSolutions/classified_answers_Part1_of_2.pdf",
+        "name": "classified_answers_Part1_of_2.pdf",
+        "sizeBytes": 41510347
+      },
+      {
+        "href": "downloads/ClassifiedSolutions/classified_answers_Part2_of_2.pdf",
+        "name": "classified_answers_Part2_of_2.pdf",
+        "sizeBytes": 73400562
+      }
+    ]
+  },
+  {
+    "title": "Classified Expertise Solutions",
+    "scope": "Q20+",
+    "questionBook": "downloads/Classified_Expertise.pdf",
+    "source": "private_output/Classified_Expertise_Answers.pdf",
+    "files": [
+      {
+        "href": "downloads/ClassifiedSolutions/Classified_Expertise_Answers.pdf",
+        "name": "Classified_Expertise_Answers.pdf",
+        "sizeBytes": 28102772
+      }
+    ]
+  },
+  {
+    "title": "Unit 1 Classified Solutions",
+    "scope": "4WM1",
+    "questionBook": "downloads/Classified_4WM1.pdf",
+    "source": "private_output/Classified_4WM1_Answers.pdf",
+    "files": [
+      {
+        "href": "downloads/ClassifiedSolutions/Classified_4WM1_Answers.pdf",
+        "name": "Classified_4WM1_Answers.pdf",
+        "sizeBytes": 53725137
+      }
+    ]
+  },
+  {
+    "title": "Unit 2 Classified Solutions",
+    "scope": "4WM2",
+    "questionBook": "downloads/Classified_4WM2.pdf",
+    "source": "private_output/Classified_4WM2_Answers.pdf",
+    "files": [
+      {
+        "href": "downloads/ClassifiedSolutions/Classified_4WM2_Answers.pdf",
+        "name": "Classified_4WM2_Answers.pdf",
+        "sizeBytes": 60708785
+      }
+    ]
+  },
+  {
+    "title": "Unit 1 Expertise Solutions",
+    "scope": "4WM1 Q20+",
+    "questionBook": "downloads/Classified_4WM1_Expertise.pdf",
+    "source": "private_output/Classified_4WM1_Expertise_Answers.pdf",
+    "files": [
+      {
+        "href": "downloads/ClassifiedSolutions/Classified_4WM1_Expertise_Answers.pdf",
+        "name": "Classified_4WM1_Expertise_Answers.pdf",
+        "sizeBytes": 13857062
+      }
+    ]
+  },
+  {
+    "title": "Unit 2 Expertise Solutions",
+    "scope": "4WM2 Q20+",
+    "questionBook": "downloads/Classified_4WM2_Expertise.pdf",
+    "source": "private_output/Classified_4WM2_Expertise_Answers.pdf",
+    "files": [
+      {
+        "href": "downloads/ClassifiedSolutions/Classified_4WM2_Expertise_Answers.pdf",
+        "name": "Classified_4WM2_Expertise_Answers.pdf",
+        "sizeBytes": 14596517
+      }
+    ]
+  }
+]

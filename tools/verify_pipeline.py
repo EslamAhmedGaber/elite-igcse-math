@@ -124,6 +124,7 @@ REQUIRED_PUBLIC_BOOKS = {
 }
 
 ALLOWED_PUBLIC_SOLUTION_DIRS = {
+    "downloads/ClassifiedSolutions",
     "downloads/PastPaperSolutions",
 }
 

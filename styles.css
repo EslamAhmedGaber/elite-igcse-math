@@ -4117,6 +4117,39 @@ body.pathway-unset .site-header .site-cta {
   color: rgba(255, 255, 255, 0.92);
 }
 .download-card .button { margin-top: auto; align-self: stretch; text-align: center; }
+.download-pair-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 9px;
+  margin-top: auto;
+}
+.download-card .download-pair-actions .button {
+  margin-top: 0;
+  align-self: stretch;
+  min-height: 44px;
+  padding-inline: 12px;
+}
+.button.solution {
+  background: #12324a;
+  color: #ffffff;
+  border-color: #12324a;
+  box-shadow: 0 12px 24px rgba(18, 50, 74, 0.12);
+}
+.button.solution:hover {
+  background: #0f766e;
+  border-color: #0f766e;
+}
+.download-card.highlight .button.solution,
+.button.solution.light-solution {
+  background: #ffffff;
+  color: #12324a;
+  border-color: rgba(255, 255, 255, 0.78);
+}
+.download-card.highlight .button.solution:hover,
+.button.solution.light-solution:hover {
+  background: #f4cb61;
+  border-color: #f4cb61;
+}
 
 .download-card.download-note {
   background: rgba(15, 118, 110, 0.06);
