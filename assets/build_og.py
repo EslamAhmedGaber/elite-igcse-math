@@ -101,7 +101,7 @@ def main():
     draw.text((172, cy + 12), "Assistant Lecturer · Cairo University Faculty of Engineering",
               font=font(15, bold=False), fill=(255, 255, 255, 199))
 
-    # Right-side price card — drawn on a separate transparent layer
+    # Right-side enrollment card — drawn on a separate transparent layer
     card_layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     cdraw = ImageDraw.Draw(card_layer, "RGBA")
     card = (870, 80, 1120, 550)
@@ -112,9 +112,9 @@ def main():
     draw = ImageDraw.Draw(img, "RGBA")
 
     cx = (card[0] + card[2]) // 2
-    draw.text((cx, 130), "FROM", anchor="mm", font=font(14, bold=True), fill=GOLD)
-    draw.text((cx, 195), "$12", anchor="mm", font=font(64, bold=True), fill=WHITE)
-    draw.text((cx, 235), "per session", anchor="mm", font=font(15, bold=False), fill=(255, 255, 255, 200))
+    draw.text((cx, 130), "FIRST CLASS", anchor="mm", font=font(14, bold=True), fill=GOLD)
+    draw.text((cx, 195), "FREE", anchor="mm", font=font(62, bold=True), fill=WHITE)
+    draw.text((cx, 235), "contact for packages", anchor="mm", font=font(15, bold=False), fill=(255, 255, 255, 200))
 
     draw.line((card[0] + 40, 268, card[2] - 40, 268), fill=(255, 255, 255, 80), width=1)
 

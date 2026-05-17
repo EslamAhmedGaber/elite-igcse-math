@@ -1352,7 +1352,7 @@ p { margin: 4px 0 0; color: var(--muted); }
 .pricing-card strong { font-size: 20px; }
 .p-fee { font-size: 14px; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
 .p-old { text-decoration: line-through; opacity: 0.55; font-size: 14px; }
-.p-now { font-size: 26px; font-weight: 800; color: var(--accent); letter-spacing: -0.5px; }
+.p-now { font-size: 26px; font-weight: 800; color: var(--accent); letter-spacing: 0; }
 .pricing-card.highlight .p-now { color: #f4cb61; }
 .p-unit { font-size: 12px; opacity: 0.75; }
 .p-egp { display: block; font-size: 12px; margin-top: 4px; opacity: 0.75; }
