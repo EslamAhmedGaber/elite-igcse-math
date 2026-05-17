@@ -4698,7 +4698,7 @@ body.pathway-unset .site-header .site-cta {
   transition: transform 0.12s ease, border-color 0.12s ease, background 0.12s ease;
 }
 .pp-paper::before {
-  content: '↓';
+  content: 'PDF';
   font-weight: 800;
   font-size: 11px;
   color: var(--accent);
@@ -4714,7 +4714,7 @@ body.pathway-unset .site-header .site-cta {
   color: #8b5a0e;
 }
 .pp-paper.ms::before {
-  content: '✓';
+  content: 'MS';
   color: #bb7d23;
 }
 .pp-paper.ms:hover {
@@ -4722,9 +4722,164 @@ body.pathway-unset .site-header .site-cta {
   border-color: #bb7d23;
 }
 
+.pp-solutions-band {
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  background: linear-gradient(135deg, #102d45 0%, #0f766e 58%, #c58b1c 140%);
+  border-radius: 22px;
+  padding: 38px;
+  box-shadow: var(--shadow);
+}
+.pp-solutions-band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 44px 44px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+.pp-solutions-band > * {
+  position: relative;
+  z-index: 1;
+}
+.pp-solutions-head {
+  max-width: 820px;
+  margin-bottom: 28px;
+}
+.pp-solutions-head .eyebrow {
+  color: #f4cb61;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.pp-solutions-head h2 {
+  margin: 8px 0 10px;
+  font-size: clamp(25px, 3vw, 38px);
+  line-height: 1.12;
+}
+.pp-solutions-head p {
+  margin: 0;
+  max-width: 680px;
+  color: rgba(255, 255, 255, 0.84);
+  line-height: 1.55;
+}
+.pp-solution-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+.pp-solution-stats span {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 7px;
+  padding: 9px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.11);
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 13px;
+  font-weight: 700;
+}
+.pp-solution-stats strong {
+  color: #f4cb61;
+  font-size: 18px;
+}
+.pp-solution-group {
+  margin-top: 30px;
+}
+.pp-solution-group-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.pp-solution-group-head h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 20px;
+}
+.pp-solution-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.pp-solution-card {
+  min-height: 154px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--ink);
+  text-decoration: none;
+  box-shadow: 0 16px 32px rgba(4, 18, 31, 0.16);
+  transition: transform 0.14s ease, box-shadow 0.14s ease, border-color 0.14s ease;
+}
+.pp-solution-card:hover {
+  transform: translateY(-2px);
+  border-color: #f4cb61;
+  box-shadow: 0 20px 38px rgba(4, 18, 31, 0.22);
+}
+.pp-solution-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+.pp-solution-chip {
+  flex: 0 0 auto;
+  padding: 5px 8px;
+  border-radius: 999px;
+  color: #ffffff;
+  background: var(--accent-dark);
+  letter-spacing: 0;
+}
+.pp-solution-card.is-modular .pp-solution-chip {
+  background: #9a670e;
+}
+.pp-solution-card strong {
+  display: block;
+  color: var(--ink);
+  font-size: 18px;
+  line-height: 1.25;
+}
+.pp-solution-card > span:not(.pp-solution-topline) {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+.pp-solution-card em {
+  font-style: normal;
+  color: var(--accent-dark);
+  font-size: 13px;
+  font-weight: 800;
+}
+
 @media (max-width: 720px) {
   .pp-section { padding: 26px 22px; }
   .pp-hero { padding: 30px 22px; }
+  .pp-solutions-band { padding: 28px 22px; }
+  .pp-solution-group-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
   .pp-session { padding: 10px 12px; }
   .pp-session > strong { min-width: 100%; margin-bottom: 4px; }
 }

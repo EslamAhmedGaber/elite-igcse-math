@@ -119,6 +119,12 @@ REQUIRED_PUBLIC_BOOKS = {
     "Classified_Expertise.pdf",
     "Classified_4WM1.pdf",
     "Classified_4WM2.pdf",
+    "Classified_4WM1_Expertise.pdf",
+    "Classified_4WM2_Expertise.pdf",
+}
+
+ALLOWED_PUBLIC_SOLUTION_DIRS = {
+    "downloads/PastPaperSolutions",
 }
 
 
@@ -153,6 +159,11 @@ def rel(path: Path) -> str:
         return str(path)
 
 
+def is_allowed_public_solution_file(path: Path) -> bool:
+    path_rel = rel(path)
+    return any(path_rel.startswith(f"{allowed}/") for allowed in ALLOWED_PUBLIC_SOLUTION_DIRS)
+
+
 def verify_guardrails(report: Report) -> None:
     if not PRIVATE_OUTPUT.exists():
         report.error("private_output/ is missing; private answer books need a safe home.")
@@ -163,7 +174,11 @@ def verify_guardrails(report: Report) -> None:
 
     if DOWNLOADS_DIR.exists():
         for file in DOWNLOADS_DIR.rglob("*"):
-            if file.is_file() and PUBLIC_LEAK_RE.search(file.name):
+            if (
+                file.is_file()
+                and PUBLIC_LEAK_RE.search(file.name)
+                and not is_allowed_public_solution_file(file)
+            ):
                 report.error(f"Potential private answer/solution file in public downloads: {rel(file)}")
         for filename in sorted(REQUIRED_PUBLIC_BOOKS):
             if not (DOWNLOADS_DIR / filename).is_file():

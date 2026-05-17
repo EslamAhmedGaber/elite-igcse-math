@@ -1,5 +1,5 @@
-const CACHE_VERSION = "elite-igcse-v23";
-const RUNTIME_CACHE = "elite-igcse-runtime-v23";
+const CACHE_VERSION = "elite-igcse-v24";
+const RUNTIME_CACHE = "elite-igcse-runtime-v24";
 
 const APP_SHELL = [
   "./",
@@ -98,6 +98,11 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(
       fetch(request).catch(() => caches.match("offline.html"))
     );
+    return;
+  }
+
+  if (url.pathname.includes("/downloads/PastPaperSolutions/")) {
+    event.respondWith(networkFirst(request));
     return;
   }
 
