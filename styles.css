@@ -4618,6 +4618,7 @@ body.pathway-unset .site-header .site-cta {
 }
 
 .pp-section {
+  scroll-margin-top: 120px;
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: 22px;
@@ -4723,6 +4724,7 @@ body.pathway-unset .site-header .site-cta {
 }
 
 .pp-solutions-band {
+  scroll-margin-top: 120px;
   position: relative;
   overflow: hidden;
   color: #ffffff;
