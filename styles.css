@@ -4755,6 +4755,20 @@ body.pathway-unset .site-header .site-cta {
   background: rgba(244, 203, 97, 0.22);
   border-color: #bb7d23;
 }
+.pp-paper.solution {
+  background: #12324a;
+  border-color: #12324a;
+  color: #ffffff;
+}
+.pp-paper.solution::before {
+  content: 'SOL';
+  color: #f4cb61;
+}
+.pp-paper.solution:hover {
+  background: #0f766e;
+  border-color: #0f766e;
+  color: #ffffff;
+}
 
 .pp-solutions-band {
   scroll-margin-top: 120px;

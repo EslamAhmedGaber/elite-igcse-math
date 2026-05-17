@@ -1,5 +1,5 @@
-const CACHE_VERSION = "elite-igcse-v25";
-const RUNTIME_CACHE = "elite-igcse-runtime-v25";
+const CACHE_VERSION = "elite-igcse-v26";
+const RUNTIME_CACHE = "elite-igcse-runtime-v26";
 
 const APP_SHELL = [
   "./",
