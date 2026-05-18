@@ -3479,6 +3479,12 @@ body.pathway-unset .site-header .site-cta {
   color: #7b5400;
 }
 
+.planner-actions.compact .solution-print-action {
+  border-color: rgba(15, 118, 110, 0.28);
+  background: #e8f6f3;
+  color: #0f5a5c;
+}
+
 .planner-actions.compact .builder-print-action:disabled {
   opacity: 0.55;
 }
@@ -3653,6 +3659,21 @@ body.pathway-unset .site-header .site-cta {
   line-height: 1.65;
 }
 
+.exam-print-solution {
+  display: none;
+}
+
+.exam-print-solution h3 {
+  margin: 0 0 8px;
+  color: var(--navy);
+}
+
+.exam-print-solution p,
+.exam-print-solution li {
+  color: var(--ink);
+  line-height: 1.55;
+}
+
 @media (max-width: 980px) {
   .exam-controls,
   .exam-weakness-grid {
@@ -3766,8 +3787,27 @@ body.pathway-unset .site-header .site-cta {
       padding: 4mm 0 0;
     }
   body[data-page="exam"] .exam-question footer,
-  body[data-page="exam"] .exam-solution {
+  body[data-page="exam"] .exam-solution,
+  body[data-page="exam"] .exam-print-solution {
     display: none;
+  }
+  body[data-page="exam"].print-solutions .exam-question img {
+    max-height: 132mm;
+  }
+  body[data-page="exam"].print-solutions .exam-print-solution {
+    display: block;
+    padding: 4mm 0 2mm;
+    border-top: 0.5pt solid #dbe7e5;
+    break-inside: avoid;
+  }
+  body[data-page="exam"].print-solutions .exam-print-solution h3 {
+    margin: 0 0 3mm;
+    font-size: 13pt;
+  }
+  body[data-page="exam"].print-solutions .exam-print-solution p,
+  body[data-page="exam"].print-solutions .exam-print-solution li {
+    font-size: 10.5pt;
+    line-height: 1.45;
   }
 }
 

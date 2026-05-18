@@ -28,6 +28,7 @@
     saveTest: document.getElementById("saveCurrentTestBtn"),
     reset: document.getElementById("resetExamBtn"),
     print: document.getElementById("printExamBtn"),
+    printSolution: document.getElementById("printSolutionBtn"),
     timer: document.getElementById("examTimer"),
     timerLabel: document.getElementById("examTimerLabel"),
     result: document.getElementById("examResultCard"),
@@ -49,6 +50,7 @@
     clearDraft: document.getElementById("clearDraftBtn"),
     useDraft: document.getElementById("useDraftBtn"),
     printDraft: document.getElementById("printDraftBtn"),
+    printDraftSolution: document.getElementById("printDraftSolutionBtn"),
     draftList: document.getElementById("draftList"),
     draftSummary: document.getElementById("draftSummary"),
     smartBank: document.getElementById("smartBank"),
@@ -578,6 +580,7 @@
       if (!question) return "";
       const solution = solutions[id]?.source || "";
       const hasSolution = Boolean(solution);
+      const solutionHtml = formatSolutionText(solution);
       const savedScore = state.scores?.[id] ?? "";
       return `<article class="exam-question" data-id="${escapeHtml(id)}">
         <div class="print-paper-brand">
@@ -596,7 +599,11 @@
           <span>${escapeHtml(question.topic)}</span>
           ${canMark ? `<label>Score <input data-score-id="${escapeHtml(id)}" type="number" min="0" max="${question.marks}" value="${savedScore}"> / ${question.marks}</label>` : `<span>${state.status === "running" ? "Answers stay private during the exam" : "Ready to start or print"}</span>`}
         </footer>
-        ${canMark && hasSolution ? `<details class="exam-solution"><summary>Show worked solution</summary>${formatSolutionText(solution)}</details>` : ""}
+        ${canMark && hasSolution ? `<details class="exam-solution"><summary>Show worked solution</summary>${solutionHtml}</details>` : ""}
+        ${state.status !== "running" ? `<section class="exam-print-solution" aria-label="Printable worked solution">
+          <h3>Worked solution</h3>
+          ${solutionHtml}
+        </section>` : ""}
         <div class="print-paper-footer">Prepared by Dr Eslam Ahmed | Assistant Lecturer, Cairo University Faculty of Engineering | 01120009622</div>
       </article>`;
     }).join("");
@@ -609,6 +616,7 @@
     els.finish.disabled = state.status !== "running";
     els.save.disabled = state.status !== "marking" && state.status !== "complete";
     els.print.disabled = !state.ids.length;
+    if (els.printSolution) els.printSolution.disabled = !state.ids.length || state.status === "running";
     els.saveTest.disabled = !state.ids.length;
     els.start.disabled = state.status === "running";
     els.start.textContent = state.ids.length && state.status === "idle" ? "Start current paper" : "Generate and start";
@@ -673,6 +681,7 @@
     const minutes = items.length ? estimatedMinutes(items) : 0;
     els.draftSummary.innerHTML = `<span>${items.length} question${items.length === 1 ? "" : "s"}</span><span>${marks} marks</span><span>${minutes} min</span>`;
     if (els.printDraft) els.printDraft.disabled = !items.length;
+    if (els.printDraftSolution) els.printDraftSolution.disabled = !items.length;
     els.draftList.innerHTML = items.map((question, index) => `<article class="draft-item">
       <div>
         <strong>${index + 1}. ${escapeHtml(question.topic)}</strong>
@@ -746,6 +755,32 @@
       title: "Custom test"
     });
     await window.ElitePrint.printWhenReady(els.paper, els.printDraft);
+  }
+
+  async function printCurrentSolutions(trigger = els.printSolution) {
+    if (!state.ids.length || state.status === "running") return;
+    if (window.MathJax?.typesetPromise) {
+      await window.MathJax.typesetPromise([els.paper]).catch(() => {});
+    }
+    document.body.classList.add("print-solutions");
+    try {
+      await window.ElitePrint.printWhenReady(els.paper, trigger);
+    } finally {
+      document.body.classList.remove("print-solutions");
+    }
+  }
+
+  async function printDraftSolutionsAsPaper() {
+    const items = draftQuestions();
+    if (!items.length) return;
+    createPaper([...draftIds], {
+      kind: "custom",
+      bank: els.customBank.value || "all",
+      unit: els.customUnit.value || "",
+      durationMinutes: estimatedMinutes(items),
+      title: "Custom test"
+    });
+    await printCurrentSolutions(els.printDraftSolution);
   }
 
   function weakTopicPool(bank, unit) {
@@ -909,6 +944,7 @@
   els.saveTest.addEventListener("click", saveCurrentTest);
   els.reset.addEventListener("click", resetExam);
   els.print.addEventListener("click", () => window.ElitePrint.printWhenReady(els.paper, els.print));
+  els.printSolution?.addEventListener("click", () => printCurrentSolutions(els.printSolution));
   els.randomPreset?.addEventListener("change", () => applyPreset(els.randomPreset.value));
   els.unit?.addEventListener("change", refreshTopicOptions);
   els.customUnit?.addEventListener("change", () => {
@@ -932,6 +968,7 @@
   });
   els.useDraft?.addEventListener("click", useDraftAsPaper);
   els.printDraft?.addEventListener("click", printDraftAsPaper);
+  els.printDraftSolution?.addEventListener("click", printDraftSolutionsAsPaper);
   els.generateSmart?.addEventListener("click", buildSmartRevision);
   els.customResults?.addEventListener("click", (event) => {
     const button = event.target.closest("[data-builder-toggle]");
