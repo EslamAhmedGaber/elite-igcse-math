@@ -527,148 +527,6 @@
       .join("");
   }
 
-  function slugify(value) {
-    return String(value || "elite-mock")
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/^-+|-+$/g, "")
-      .slice(0, 54) || "elite-mock";
-  }
-
-  function blobToDataUrl(blob) {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = () => resolve(reader.result);
-      reader.onerror = reject;
-      reader.readAsDataURL(blob);
-    });
-  }
-
-  async function imageForDownload(src) {
-    const absoluteUrl = new URL(src, window.location.href).href;
-    try {
-      const response = await fetch(absoluteUrl, { cache: "force-cache" });
-      if (!response.ok) throw new Error(`Image request failed: ${response.status}`);
-      return await blobToDataUrl(await response.blob());
-    } catch (error) {
-      console.warn("Using linked image in downloaded mock:", absoluteUrl, error);
-      return absoluteUrl;
-    }
-  }
-
-  async function withBusyButton(trigger, label, task) {
-    const originalLabel = trigger?.textContent;
-    if (trigger) {
-      trigger.disabled = true;
-      trigger.textContent = label;
-    }
-    try {
-      return await task();
-    } finally {
-      if (trigger) {
-        trigger.disabled = false;
-        trigger.textContent = originalLabel;
-      }
-    }
-  }
-
-  function paperTitle() {
-    if (state.title) return state.title;
-    if (state.kind === "smart") return "Smart revision";
-    if (state.kind === "custom") return "Custom test";
-    return "Random mock";
-  }
-
-  async function waitForPdfTool() {
-    const startedAt = Date.now();
-    while (!window.html2pdf && Date.now() - startedAt < 12000) {
-      await new Promise((resolve) => window.setTimeout(resolve, 150));
-    }
-    if (!window.html2pdf) {
-      throw new Error("The PDF tool did not load. Please check the connection and try again.");
-    }
-    return window.html2pdf;
-  }
-
-  async function buildSolutionsDownloadElement(items, meta = {}) {
-    const title = meta.title || paperTitle();
-    const totalMarks = totalMarksForQuestions(items);
-    const minutes = meta.durationMinutes || Math.ceil(Number(state.durationSeconds || 0) / 60) || estimatedMinutes(items);
-    const generated = new Date().toLocaleString("en-GB", {
-      day: "2-digit",
-      month: "short",
-      year: "numeric",
-      hour: "2-digit",
-      minute: "2-digit"
-    });
-    const questionHtml = await Promise.all(items.map(async (question, index) => {
-      const imageSrc = await imageForDownload(question.image);
-      const solution = solutions[question.id]?.source || "";
-      return `<article class="question">
-        <header>
-          <div>
-            <span>Question ${index + 1}</span>
-            <h2>${escapeHtml(question.paper)} Q${escapeHtml(question.question)}</h2>
-          </div>
-          <strong>${escapeHtml(question.marks)} marks</strong>
-        </header>
-        <img src="${escapeHtml(imageSrc)}" alt="${escapeHtml(question.paper)} Q${escapeHtml(question.question)}">
-        <section class="solution">
-          <h3>Worked solution</h3>
-          ${formatSolutionText(solution)}
-        </section>
-      </article>`;
-    }));
-    const shell = document.createElement("div");
-    shell.className = "pdf-export-shell";
-    shell.innerHTML = `<div class="pdf-download-document">
-      <section class="cover">
-        <span>Elite IGCSE Mathematics</span>
-        <h1>${escapeHtml(title)} - Mock + Worked Solutions</h1>
-        <p>${items.length} questions | ${totalMarks} marks | about ${minutes} minutes | Generated ${escapeHtml(generated)}</p>
-        <p>Prepared by Dr Eslam Ahmed | Assistant Lecturer, Cairo University Faculty of Engineering | WhatsApp: 01120009622</p>
-      </section>
-      <main>
-        ${questionHtml.join("\n")}
-      </main>
-      <p class="credit">eliteigcse.com | Prepared by Dr Eslam Ahmed | 01120009622</p>
-    </div>`;
-    return shell;
-  }
-
-  async function saveSolutionsPdf(items, trigger, meta = {}) {
-    await withBusyButton(trigger, "Building PDF...", async () => {
-      const html2pdf = await waitForPdfTool();
-      const shell = await buildSolutionsDownloadElement(items, meta);
-      document.body.append(shell);
-      const documentNode = shell.querySelector(".pdf-download-document");
-      try {
-        if (window.MathJax?.typesetPromise) {
-          await window.MathJax.typesetPromise([documentNode]).catch(() => {});
-        }
-        await window.ElitePrint.waitForPrintableAssets(documentNode);
-        await html2pdf()
-          .set({
-            margin: [8, 8, 8, 8],
-            filename: `${slugify(meta.title || paperTitle())}-mock-and-solutions.pdf`,
-            image: { type: "jpeg", quality: 0.98 },
-            html2canvas: {
-              scale: 2,
-              useCORS: true,
-              backgroundColor: "#ffffff",
-              windowWidth: 794
-            },
-            jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
-            pagebreak: { mode: ["css", "legacy"], avoid: [".question header", ".solution h3"] }
-          })
-          .from(documentNode)
-          .save();
-      } finally {
-        shell.remove();
-      }
-    });
-  }
-
   function renderResult() {
     if (state.status === "idle" && !state.ids.length) {
       const last = readJson(HISTORY_KEY, [])[0];
@@ -742,10 +600,10 @@
           ${canMark ? `<label>Score <input data-score-id="${escapeHtml(id)}" type="number" min="0" max="${question.marks}" value="${savedScore}"> / ${question.marks}</label>` : `<span>${state.status === "running" ? "Answers stay private during the exam" : "Ready to start or print"}</span>`}
         </footer>
         ${canMark && hasSolution ? `<details class="exam-solution"><summary>Show worked solution</summary>${solutionHtml}</details>` : ""}
-        ${state.status !== "running" ? `<section class="exam-print-solution" aria-label="Printable worked solution">
+        <section class="exam-print-solution" aria-label="Printable worked solution">
           <h3>Worked solution</h3>
           ${solutionHtml}
-        </section>` : ""}
+        </section>
         <div class="print-paper-footer">Prepared by Dr Eslam Ahmed | Assistant Lecturer, Cairo University Faculty of Engineering | 01120009622</div>
       </article>`;
     }).join("");
@@ -899,21 +757,20 @@
     await window.ElitePrint.printWhenReady(els.paper, els.printDraft);
   }
 
-  async function downloadCurrentSolutions(trigger = els.printSolution) {
-    const items = state.ids.map(questionById).filter(Boolean);
-    if (!items.length) return;
+  async function printCurrentSolutions(trigger = els.printSolution) {
+    if (!state.ids.length) return;
+    if (window.MathJax?.typesetPromise) {
+      await window.MathJax.typesetPromise([els.paper]).catch(() => {});
+    }
+    document.body.classList.add("print-solutions");
     try {
-      await saveSolutionsPdf(items, trigger, {
-        title: paperTitle(),
-        durationMinutes: Math.ceil(Number(state.durationSeconds || 0) / 60) || estimatedMinutes(items)
-      });
-    } catch (error) {
-      console.error(error);
-      window.alert(error.message || "Could not build the PDF. Please try again.");
+      await window.ElitePrint.printWhenReady(els.paper, trigger);
+    } finally {
+      document.body.classList.remove("print-solutions");
     }
   }
 
-  async function downloadDraftSolutionsAsPaper() {
+  async function printDraftSolutionsAsPaper() {
     const items = draftQuestions();
     if (!items.length) return;
     createPaper([...draftIds], {
@@ -923,7 +780,7 @@
       durationMinutes: estimatedMinutes(items),
       title: "Custom test"
     });
-    await downloadCurrentSolutions(els.printDraftSolution);
+    await printCurrentSolutions(els.printDraftSolution);
   }
 
   function weakTopicPool(bank, unit) {
@@ -1087,7 +944,7 @@
   els.saveTest.addEventListener("click", saveCurrentTest);
   els.reset.addEventListener("click", resetExam);
   els.print.addEventListener("click", () => window.ElitePrint.printWhenReady(els.paper, els.print));
-  els.printSolution?.addEventListener("click", () => downloadCurrentSolutions(els.printSolution));
+  els.printSolution?.addEventListener("click", () => printCurrentSolutions(els.printSolution));
   els.randomPreset?.addEventListener("change", () => applyPreset(els.randomPreset.value));
   els.unit?.addEventListener("change", refreshTopicOptions);
   els.customUnit?.addEventListener("change", () => {
@@ -1111,7 +968,7 @@
   });
   els.useDraft?.addEventListener("click", useDraftAsPaper);
   els.printDraft?.addEventListener("click", printDraftAsPaper);
-  els.printDraftSolution?.addEventListener("click", downloadDraftSolutionsAsPaper);
+  els.printDraftSolution?.addEventListener("click", printDraftSolutionsAsPaper);
   els.generateSmart?.addEventListener("click", buildSmartRevision);
   els.customResults?.addEventListener("click", (event) => {
     const button = event.target.closest("[data-builder-toggle]");
