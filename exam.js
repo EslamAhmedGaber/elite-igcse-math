@@ -527,6 +527,159 @@
       .join("");
   }
 
+  function slugify(value) {
+    return String(value || "elite-mock")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .slice(0, 54) || "elite-mock";
+  }
+
+  function blobToDataUrl(blob) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = reject;
+      reader.readAsDataURL(blob);
+    });
+  }
+
+  async function imageForDownload(src) {
+    const absoluteUrl = new URL(src, window.location.href).href;
+    try {
+      const response = await fetch(absoluteUrl, { cache: "force-cache" });
+      if (!response.ok) throw new Error(`Image request failed: ${response.status}`);
+      return await blobToDataUrl(await response.blob());
+    } catch (error) {
+      console.warn("Using linked image in downloaded mock:", absoluteUrl, error);
+      return absoluteUrl;
+    }
+  }
+
+  function downloadFile(filename, html) {
+    const blob = new Blob([html], { type: "text/html;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = filename;
+    document.body.append(link);
+    link.click();
+    link.remove();
+    window.setTimeout(() => URL.revokeObjectURL(url), 1500);
+  }
+
+  async function withBusyButton(trigger, label, task) {
+    const originalLabel = trigger?.textContent;
+    if (trigger) {
+      trigger.disabled = true;
+      trigger.textContent = label;
+    }
+    try {
+      return await task();
+    } finally {
+      if (trigger) {
+        trigger.disabled = false;
+        trigger.textContent = originalLabel;
+      }
+    }
+  }
+
+  function paperTitle() {
+    if (state.title) return state.title;
+    if (state.kind === "smart") return "Smart revision";
+    if (state.kind === "custom") return "Custom test";
+    return "Random mock";
+  }
+
+  async function buildSolutionsDownloadHtml(items, meta = {}) {
+    const title = meta.title || paperTitle();
+    const totalMarks = totalMarksForQuestions(items);
+    const minutes = meta.durationMinutes || Math.ceil(Number(state.durationSeconds || 0) / 60) || estimatedMinutes(items);
+    const generated = new Date().toLocaleString("en-GB", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit"
+    });
+    const questionHtml = await Promise.all(items.map(async (question, index) => {
+      const imageSrc = await imageForDownload(question.image);
+      const solution = solutions[question.id]?.source || "";
+      return `<article class="question">
+        <header>
+          <div>
+            <span>Question ${index + 1}</span>
+            <h2>${escapeHtml(question.paper)} Q${escapeHtml(question.question)}</h2>
+          </div>
+          <strong>${escapeHtml(question.marks)} marks</strong>
+        </header>
+        <img src="${escapeHtml(imageSrc)}" alt="${escapeHtml(question.paper)} Q${escapeHtml(question.question)}">
+        <section class="solution">
+          <h3>Worked solution</h3>
+          ${formatSolutionText(solution)}
+        </section>
+      </article>`;
+    }));
+    return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>${escapeHtml(title)} - questions and solutions</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f5f8fa; color: #1f2933; font-family: Arial, Helvetica, sans-serif; }
+    .cover { padding: 28px 34px; background: #12324a; color: #fff; }
+    .cover span { color: #f4cb61; font-size: 12px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; }
+    .cover h1 { margin: 8px 0 10px; font-size: 30px; }
+    .cover p { margin: 0; color: rgba(255,255,255,.86); line-height: 1.5; }
+    .print-button { margin-top: 18px; border: 0; border-radius: 10px; padding: 11px 16px; background: #0f766e; color: #fff; font-weight: 800; cursor: pointer; }
+    main { max-width: 980px; margin: 0 auto; padding: 22px; }
+    .question { margin: 0 0 18px; border: 1px solid #d9e5e2; border-radius: 14px; overflow: hidden; background: #fff; page-break-inside: avoid; break-inside: avoid; }
+    .question header { display: flex; justify-content: space-between; gap: 14px; padding: 14px 16px; background: #fffdf7; border-bottom: 1px solid #d9e5e2; }
+    .question header span { color: #697885; font-size: 12px; font-weight: 800; text-transform: uppercase; }
+    .question h2 { margin: 4px 0 0; color: #12324a; font-size: 18px; }
+    .question header strong { color: #8a5a00; white-space: nowrap; }
+    .question img { display: block; width: 100%; max-height: 820px; object-fit: contain; padding: 16px; background: #fff; }
+    .solution { padding: 15px 18px 18px; border-top: 1px solid #d9e5e2; background: #f8fffb; }
+    .solution h3 { margin: 0 0 9px; color: #0f5a5c; font-size: 16px; }
+    .solution p, .solution li { line-height: 1.55; }
+    .solution-empty { color: #697885; font-style: italic; }
+    .credit { padding: 0 34px 28px; color: #697885; text-align: center; }
+    @media print {
+      body { background: #fff; }
+      .cover { padding: 0 0 10mm; background: #fff; color: #12324a; }
+      .cover p { color: #4b5d6b; }
+      .print-button { display: none; }
+      main { max-width: none; padding: 0; }
+      .question { border: 0; border-radius: 0; margin-bottom: 8mm; }
+      .question header { padding: 4mm 0 3mm; background: #fff; }
+      .question img { padding: 3mm 0; max-height: 155mm; }
+      .solution { padding: 4mm 0 2mm; background: #fff; }
+      .credit { padding: 4mm 0 0; }
+    }
+  </style>
+  <script>
+    window.MathJax = { tex: { inlineMath: [["\\\\(", "\\\\)"]], displayMath: [["\\\\[", "\\\\]"]] }, svg: { fontCache: "global" } };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+  <section class="cover">
+    <span>Elite IGCSE Mathematics</span>
+    <h1>${escapeHtml(title)} - Mock + Worked Solutions</h1>
+    <p>${items.length} questions | ${totalMarks} marks | about ${minutes} minutes | Generated ${escapeHtml(generated)}</p>
+    <p>Prepared by Dr Eslam Ahmed | Assistant Lecturer, Cairo University Faculty of Engineering | WhatsApp: 01120009622</p>
+    <button class="print-button" type="button" onclick="window.print()">Print or save as PDF</button>
+  </section>
+  <main>
+    ${questionHtml.join("\n")}
+  </main>
+  <p class="credit">eliteigcse.com | Prepared by Dr Eslam Ahmed | 01120009622</p>
+</body>
+</html>`;
+  }
+
   function renderResult() {
     if (state.status === "idle" && !state.ids.length) {
       const last = readJson(HISTORY_KEY, [])[0];
@@ -616,7 +769,7 @@
     els.finish.disabled = state.status !== "running";
     els.save.disabled = state.status !== "marking" && state.status !== "complete";
     els.print.disabled = !state.ids.length;
-    if (els.printSolution) els.printSolution.disabled = !state.ids.length || state.status === "running";
+    if (els.printSolution) els.printSolution.disabled = !state.ids.length;
     els.saveTest.disabled = !state.ids.length;
     els.start.disabled = state.status === "running";
     els.start.textContent = state.ids.length && state.status === "idle" ? "Start current paper" : "Generate and start";
@@ -757,20 +910,20 @@
     await window.ElitePrint.printWhenReady(els.paper, els.printDraft);
   }
 
-  async function printCurrentSolutions(trigger = els.printSolution) {
-    if (!state.ids.length || state.status === "running") return;
-    if (window.MathJax?.typesetPromise) {
-      await window.MathJax.typesetPromise([els.paper]).catch(() => {});
-    }
-    document.body.classList.add("print-solutions");
-    try {
-      await window.ElitePrint.printWhenReady(els.paper, trigger);
-    } finally {
-      document.body.classList.remove("print-solutions");
-    }
+  async function downloadCurrentSolutions(trigger = els.printSolution) {
+    const items = state.ids.map(questionById).filter(Boolean);
+    if (!items.length) return;
+    await withBusyButton(trigger, "Building download...", async () => {
+      await window.ElitePrint.waitForPrintableAssets(els.paper);
+      const html = await buildSolutionsDownloadHtml(items, {
+        title: paperTitle(),
+        durationMinutes: Math.ceil(Number(state.durationSeconds || 0) / 60) || estimatedMinutes(items)
+      });
+      downloadFile(`${slugify(paperTitle())}-mock-and-solutions.html`, html);
+    });
   }
 
-  async function printDraftSolutionsAsPaper() {
+  async function downloadDraftSolutionsAsPaper() {
     const items = draftQuestions();
     if (!items.length) return;
     createPaper([...draftIds], {
@@ -780,7 +933,7 @@
       durationMinutes: estimatedMinutes(items),
       title: "Custom test"
     });
-    await printCurrentSolutions(els.printDraftSolution);
+    await downloadCurrentSolutions(els.printDraftSolution);
   }
 
   function weakTopicPool(bank, unit) {
@@ -944,7 +1097,7 @@
   els.saveTest.addEventListener("click", saveCurrentTest);
   els.reset.addEventListener("click", resetExam);
   els.print.addEventListener("click", () => window.ElitePrint.printWhenReady(els.paper, els.print));
-  els.printSolution?.addEventListener("click", () => printCurrentSolutions(els.printSolution));
+  els.printSolution?.addEventListener("click", () => downloadCurrentSolutions(els.printSolution));
   els.randomPreset?.addEventListener("change", () => applyPreset(els.randomPreset.value));
   els.unit?.addEventListener("change", refreshTopicOptions);
   els.customUnit?.addEventListener("change", () => {
@@ -968,7 +1121,7 @@
   });
   els.useDraft?.addEventListener("click", useDraftAsPaper);
   els.printDraft?.addEventListener("click", printDraftAsPaper);
-  els.printDraftSolution?.addEventListener("click", printDraftSolutionsAsPaper);
+  els.printDraftSolution?.addEventListener("click", downloadDraftSolutionsAsPaper);
   els.generateSmart?.addEventListener("click", buildSmartRevision);
   els.customResults?.addEventListener("click", (event) => {
     const button = event.target.closest("[data-builder-toggle]");

@@ -3485,7 +3485,8 @@ body.pathway-unset .site-header .site-cta {
   color: #0f5a5c;
 }
 
-.planner-actions.compact .builder-print-action:disabled {
+.planner-actions.compact .builder-print-action:disabled,
+.planner-actions.compact .solution-print-action:disabled {
   opacity: 0.55;
 }
 
