@@ -8457,5 +8457,184 @@ window.SOLUTION_DATA = {
     "source": "**Topic check:** Correct.\n\n**Method**\n\nFor a histogram,\n\n\\[\n\\text{frequency}=\\text{class width}\\times \\text{frequency density}\n\\]\n\nFor \\(10<t\\leq15\\), the frequency is 20 and the class width is 5, so\n\n\\[\n\\text{frequency density}=\\frac{20}{5}=4\n\\]\n\nUsing this scale from the histogram:\n\n\\[\n15<t\\leq30 \\quad \\text{has frequency density } 3\n\\]\n\n\\[\n30<t\\leq40 \\quad \\text{has frequency density } 1\n\\]\n\n\\[\n40<t\\leq60 \\quad \\text{has frequency density } 0.7\n\\]\n\nFor trains at least 25 minutes late:\n\n\\[\n(5)(3)+(10)(1)+(20)(0.7)\n\\]\n\n\\[\n=15+10+14\n\\]\n\n\\[\n=39\n\\]\n\n**Answer:** \\(39\\) trains",
     "updated": "2026-05-05T16:25:30",
     "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Specimen_4WM2H__Q01__p03-03__m03__Statistics-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Statistics Toolkit. The tag is correct.\n\n**Solution**\n\nThe mean is \\(12\\), so the total of the five numbers is\n\n\\[\n5 \\times 12 = 60\n\\]\n\nThe known numbers add to\n\n\\[\n15+7-2+23=43\n\\]\n\nTherefore\n\n\\[\n43+x=60\n\\]\n\n\\[\nx=17\n\\]\n\n**Answer:** \\(x=17\\).",
+    "updated": "2026-05-20T22:46:21",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Specimen_4WM2H__Q02__p04-04__m04__Prime-Factors-HCF-LCM": {
+    "status": "checked",
+    "source": "**Topic check:** Prime Factors, HCF & LCM. The tag is correct.\n\n**Solution**\n\n\\[\n56=2^3\\times 7,\\qquad 84=2^2\\times 3\\times 7\n\\]\n\nThe common prime factors are \\(2^2\\) and \\(7\\), so\n\n\\[\n\\text{HCF}=2^2\\times 7=28\n\\]\n\nAlso\n\n\\[\n60=2^2\\times 3\\times 5,\\qquad 72=2^3\\times 3^2\n\\]\n\nUse the highest powers of each prime:\n\n\\[\n\\text{LCM}=2^3\\times 3^2\\times 5=360\n\\]\n\n**Answers:** HCF \\(=28\\), LCM \\(=360\\).",
+    "updated": "2026-05-20T22:46:21",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Specimen_4WM2H__Q03__p05-05__m02__Algebraic-Roots-Indices": {
+    "status": "checked",
+    "source": "**Topic check:** Algebraic Roots & Indices. The tag is correct because the question uses index laws with letters.\n\n**Solution**\n\n\\[\n4^n=(2^2)^n=2^{2n}\n\\]\n\nSo\n\n\\[\n\\frac{2^k}{4^n}=\\frac{2^k}{2^{2n}}=2^{k-2n}\n\\]\n\nSince this equals \\(2^x\\),\n\n\\[\nx=k-2n\n\\]\n\n**Answer:** \\(x=k-2n\\).",
+    "updated": "2026-05-20T22:46:21",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Specimen_4WM2H__Q04__p06-06__m04__Angles-in-Polygons-Parallel-Lines": {
+    "status": "checked",
+    "source": "**Topic check:** Angles in Polygons & Parallel Lines. The main idea is angles around a point and the interior angle of a regular polygon.\n\n**Solution**\n\nAngles around a point add to \\(360^\\circ\\):\n\n\\[\n8x+7x+3x=360\n\\]\n\n\\[\n18x=360\n\\]\n\n\\[\nx=20\n\\]\n\nThe interior angle of polygon \\(B\\) is\n\n\\[\n7x=7(20)=140^\\circ\n\\]\n\nFor a regular \\(n\\)-sided polygon,\n\n\\[\n\\frac{180(n-2)}{n}=140\n\\]\n\n\\[\n180n-360=140n\n\\]\n\n\\[\n40n=360\n\\]\n\n\\[\nn=9\n\\]\n\n**Answer:** \\(n=9\\).",
+    "updated": "2026-05-20T22:46:21",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Specimen_4WM2H__Q05__p07-07__m04__Graphing-Inequalities": {
+    "status": "checked",
+    "source": "**Topic check:** Graphing Inequalities. The tag is correct.\n\n**Solution**\n\nDraw the three boundary lines:\n\n\\[\ny=1,\\qquad x=2,\\qquad x+y=7\n\\]\n\nFor \\(x+y=7\\), use points such as \\((0,7)\\) and \\((7,0)\\).\n\nThe required region is:\n\n\\[\ny\\ge 1,\\qquad x\\ge 2,\\qquad x+y\\le 7\n\\]\n\nSo shade the triangular region above \\(y=1\\), to the right of \\(x=2\\), and below the line \\(x+y=7\\). Its vertices are\n\n\\[\n(2,1),\\quad (2,5),\\quad (6,1)\n\\]\n\n**Answer:** the shaded region \\(R\\) is the triangle with vertices \\((2,1)\\), \\((2,5)\\), and \\((6,1)\\).",
+    "updated": "2026-05-20T22:46:21",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Specimen_4WM2H__Q06__p08-08__m03__Statistics-Toolkit": {
+    "status": "checked",
+    "source": "**Topic check:** Statistics Toolkit. The tag is correct.\n\n**Solution**\n\nThe mode is \\(9\\), and \\(d\\) appears three times, so\n\n\\[\nd=9\n\\]\n\nThe range is \\(4\\), so\n\n\\[\nd-a=4\n\\]\n\n\\[\n9-a=4\n\\]\n\n\\[\na=5\n\\]\n\nThere are six values, so the median is the mean of the 3rd and 4th values:\n\n\\[\n\\frac{c+d}{2}=8\n\\]\n\n\\[\n\\frac{c+9}{2}=8\n\\]\n\n\\[\nc=7\n\\]\n\nSince \\(a<b<c<d\\), the remaining integer is \\(b=6\\).\n\n**Answer:** \\(a=5,\\ b=6,\\ c=7,\\ d=9\\).",
+    "updated": "2026-05-20T22:46:21",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Specimen_4WM2H__Q07__p09-09__m04__Standard-Compound-Units": {
+    "status": "checked",
+    "source": "**Topic check:** Standard & Compound Units. The pressure formula is the key signal, with volume used at the end.\n\n**Solution**\n\n\\[\n\\text{pressure}=\\frac{\\text{force}}{\\text{area}}\n\\]\n\nSo the area of the base is\n\n\\[\n\\text{area}=\\frac{72}{1.4}=51.428571\\ldots\n\\]\n\nThe volume is\n\n\\[\n51.428571\\ldots \\times 18=925.714285\\ldots\n\\]\n\nCorrect to 3 significant figures,\n\n\\[\n925.714\\ldots \\approx 926\n\\]\n\n**Answer:** \\(926\\text{ cm}^3\\).",
+    "updated": "2026-05-20T22:46:21",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Specimen_4WM2H__Q08__p10-10__m06__Compound-Interest-Depreciation": {
+    "status": "checked",
+    "source": "**Topic check:** Compound Interest & Depreciation. The tag is correct.\n\n**Solution**\n\nFor part (a), the 2021 value is \\(104\\%\\) of the 2020 value.\n\n\\[\n\\text{2020 value}=\\frac{634400}{1.04}=610000\n\\]\n\nFor part (b), after one year the multiplier is \\(0.85\\). After two years:\n\n\\[\n0.85^2=0.7225\n\\]\n\nSo \\(72.25\\%\\) of the value remains, and the total depreciation is\n\n\\[\n100\\%-72.25\\%=27.75\\%\n\\]\n\n**Answers:** \\(610000\\) euros; \\(27.75\\%\\).",
+    "updated": "2026-05-20T22:46:21",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Specimen_4WM2H__Q09__p10-10__m02__Powers-Roots-Standard-Form": {
+    "status": "checked",
+    "source": "**Topic check:** Powers, Roots & Standard Form. The tag is correct.\n\n**Solution**\n\n\\[\n0.000089=8.9\\times 10^{-5}\n\\]\n\nAlso\n\n\\[\n8.34\\times 10^4=83400\n\\]\n\n**Answers:** \\(8.9\\times10^{-5}\\), \\(83400\\).",
+    "updated": "2026-05-20T22:46:21",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Specimen_4WM2H__Q10__p11-11__m05__Ratio-Problem-Solving": {
+    "status": "checked",
+    "source": "**Topic check:** Ratio Problem Solving. The ratio is needed before the fraction and percentage work.\n\n**Solution**\n\nThe total number of parts is\n\n\\[\n7+5+3=15\n\\]\n\nEach part is\n\n\\[\n300\\div 15=20\n\\]\n\nSo the numbers of cards are:\n\n\\[\n140,\\quad 100,\\quad 60\n\\]\n\nThe birthday cards with numbers are\n\n\\[\n\\frac25 \\times 140=56\n\\]\n\nThe anniversary cards with numbers are\n\n\\[\n36\\%\\times 100=36\n\\]\n\nSo the total with numbers is\n\n\\[\n56+36=92\n\\]\n\nThe fraction of all cards is\n\n\\[\n\\frac{92}{300}=\\frac{23}{75}\n\\]\n\n**Answer:** \\(\\frac{23}{75}\\).",
+    "updated": "2026-05-20T22:46:21",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Specimen_4WM2H__Q11__p12-12__m03__Simultaneous-Equations": {
+    "status": "checked",
+    "source": "**Topic check:** Simultaneous Equations. The tag is correct.\n\n**Solution**\n\nFrom\n\n\\[\n3x-y=7\n\\]\n\n\\[\ny=3x-7\n\\]\n\nSubstitute into \\(7x+3y=3\\):\n\n\\[\n7x+3(3x-7)=3\n\\]\n\n\\[\n16x-21=3\n\\]\n\n\\[\n16x=24\n\\]\n\n\\[\nx=1.5\n\\]\n\nThen\n\n\\[\ny=3(1.5)-7=-2.5\n\\]\n\n**Answers:** \\(x=1.5,\\ y=-2.5\\).",
+    "updated": "2026-05-20T22:46:21",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Specimen_4WM2H__Q12__p13-13__m05__Percentages": {
+    "status": "checked",
+    "source": "**Topic check:** Percentages. The tag is correct.\n\n**Solution**\n\n\\[\n\\frac25=40\\%\n\\]\n\nSo Payments 1 and 2 together are\n\n\\[\n40\\%+45\\%=85\\%\n\\]\n\nThis means Payment 3 is\n\n\\[\n100\\%-85\\%=15\\%\n\\]\n\nSo\n\n\\[\n15\\%=405\n\\]\n\n\\[\n1\\%=27\n\\]\n\nPayment 2 is \\(45\\%\\):\n\n\\[\n45\\times 27=1215\n\\]\n\n**Answer:** \\(\\$1215\\).",
+    "updated": "2026-05-20T22:46:21",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Specimen_4WM2H__Q13__p14-14__m04__Functions": {
+    "status": "checked",
+    "source": "**Topic check:** Functions. The tag is correct.\n\n**Solution**\n\n\\[\nf(10)=\\frac{2(10)}{10-6}=\\frac{20}{4}=5\n\\]\n\nFor the inverse, let\n\n\\[\ny=\\frac{2x}{x-6}\n\\]\n\n\\[\ny(x-6)=2x\n\\]\n\n\\[\nxy-6y=2x\n\\]\n\n\\[\nx(y-2)=6y\n\\]\n\n\\[\nx=\\frac{6y}{y-2}\n\\]\n\nSo\n\n\\[\nf^{-1}:x\\mapsto \\frac{6x}{x-2}\n\\]\n\n**Answers:** \\(5\\), and \\(f^{-1}:x\\mapsto \\frac{6x}{x-2}\\).",
+    "updated": "2026-05-20T22:46:21",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Specimen_4WM2H__Q14__p15-15__m05__Circle-Theorems": {
+    "status": "checked",
+    "source": "**Topic check:** Circle Theorems. The tag is correct.\n\n**Solution**\n\nIn cyclic quadrilateral \\(A D C B\\), opposite angles add to \\(180^\\circ\\).\n\n\\[\n\\angle DCB=180^\\circ-40^\\circ=140^\\circ\n\\]\n\nReason: opposite angles in a cyclic quadrilateral add to \\(180^\\circ\\).\n\nBy the alternate segment theorem,\n\n\\[\n\\angle ADB=66^\\circ\n\\]\n\nIn triangle \\(ADB\\),\n\n\\[\n\\angle ABD=180^\\circ-40^\\circ-66^\\circ=74^\\circ\n\\]\n\nThe angle at the centre is twice the angle at the circumference standing on the same chord \\(AD\\):\n\n\\[\n\\angle AOD=2(74^\\circ)=148^\\circ\n\\]\n\nSince \\(OA=OD\\), triangle \\(AOD\\) is isosceles:\n\n\\[\n\\angle ADO=\\frac{180^\\circ-148^\\circ}{2}=16^\\circ\n\\]\n\n**Answers:** \\(\\angle DCB=140^\\circ\\); reason: opposite angles in a cyclic quadrilateral; \\(\\angle ADO=16^\\circ\\).",
+    "updated": "2026-05-20T22:46:21",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Specimen_4WM2H__Q15__p16-17__m07__Cumulative-Frequency-Diagrams": {
+    "status": "checked",
+    "source": "**Topic check:** Cumulative Frequency Diagrams. The tag is correct.\n\n**Solution**\n\nPlot the cumulative frequency points and join with a smooth increasing curve:\n\n\\[\n(10,0),\\ (20,13),\\ (30,36),\\ (40,42),\\ (50,47),\\ (60,52),\\ (70,56),\\ (80,60)\n\\]\n\nThere are \\(60\\) people, so the median is read at cumulative frequency \\(30\\).\n\nUsing linear interpolation between \\((20,13)\\) and \\((30,36)\\):\n\n\\[\n20+\\frac{30-13}{36-13}\\times 10 \\approx 27.4\n\\]\n\nSo the median is about \\(27\\) years.\n\nFor the interquartile range, read \\(Q_1\\) at cumulative frequency \\(15\\) and \\(Q_3\\) at cumulative frequency \\(45\\):\n\n\\[\nQ_1 \\approx 20.9,\\qquad Q_3 \\approx 46\n\\]\n\n\\[\n\\text{IQR}\\approx 46-20.9=25.1\n\\]\n\nSo the IQR is about \\(25\\) years.\n\nAt age \\(55\\), the cumulative frequency is about \\(49.5\\), so the number older than \\(55\\) is\n\n\\[\n60-49.5\\approx 10.5\n\\]\n\nThis gives about \\(11\\) people.\n\n**Answers:** median about \\(27\\) years, IQR about \\(25\\) years, about \\(11\\) people older than \\(55\\).",
+    "updated": "2026-05-20T22:46:21",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Specimen_4WM2H__Q16__p18-18__m04__Direct-Inverse-Proportion": {
+    "status": "checked",
+    "source": "**Topic check:** Direct & Inverse Proportion. The tag is correct.\n\n**Solution**\n\nSince \\(M\\) is directly proportional to \\(h^3\\),\n\n\\[\nM=kh^3\n\\]\n\nUse \\(M=4\\) when \\(h=0.5\\):\n\n\\[\n4=k(0.5)^3\n\\]\n\n\\[\n4=0.125k\n\\]\n\n\\[\nk=32\n\\]\n\nNow use \\(M=500\\):\n\n\\[\n500=32h^3\n\\]\n\n\\[\nh^3=15.625\n\\]\n\n\\[\nh=2.5\n\\]\n\n**Answer:** \\(h=2.5\\).",
+    "updated": "2026-05-20T22:46:21",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Specimen_4WM2H__Q17__p19-19__m05__Differentiation": {
+    "status": "checked",
+    "source": "**Topic check:** Differentiation. The tag is correct.\n\n**Solution**\n\n\\[\ns=4t^2+\\frac{125}{t}\n\\]\n\nDifferentiate to find velocity:\n\n\\[\nv=\\frac{ds}{dt}=8t-\\frac{125}{t^2}\n\\]\n\nSet \\(v=0\\):\n\n\\[\n8t-\\frac{125}{t^2}=0\n\\]\n\n\\[\n8t^3=125\n\\]\n\n\\[\nt^3=\\frac{125}{8}\n\\]\n\n\\[\nt=2.5\n\\]\n\nNow find \\(s\\):\n\n\\[\ns=4(2.5)^2+\\frac{125}{2.5}\n\\]\n\n\\[\ns=25+50=75\n\\]\n\n**Answer:** \\(75\\text{ m}\\).",
+    "updated": "2026-05-20T22:46:21",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Specimen_4WM2H__Q18__p20-20__m03__Solving-Inequalities": {
+    "status": "checked",
+    "source": "**Topic check:** Solving Inequalities. The tag is correct.\n\n**Solution**\n\nFactorise:\n\n\\[\n2y^2-7y-30=(2y+5)(y-6)\n\\]\n\nSo\n\n\\[\n(2y+5)(y-6)\\le 0\n\\]\n\nThe roots are\n\n\\[\ny=-\\frac52,\\qquad y=6\n\\]\n\nThe quadratic opens upwards, so it is less than or equal to zero between the roots.\n\n**Answer:** \\(-\\frac52\\le y\\le 6\\).",
+    "updated": "2026-05-20T22:46:21",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Specimen_4WM2H__Q19__p21-21__m04__Area-Volume-of-Similar-Shapes": {
+    "status": "checked",
+    "source": "**Topic check:** Area & Volume of Similar Shapes. The tag is correct.\n\n**Solution**\n\nThe volume of statue \\(B\\) is \\(80\\%\\) of the volume of statue \\(A\\), so the volume scale factor is\n\n\\[\n0.8\n\\]\n\nFor similar solids:\n\n\\[\n\\text{linear scale factor}=\\sqrt[3]{0.8}\n\\]\n\nThe surface area scale factor is therefore\n\n\\[\n\\left(\\sqrt[3]{0.8}\\right)^2=0.8^{2/3}\n\\]\n\n\\[\n0.8^{2/3}=0.861773\\ldots\n\\]\n\nSo the percentage decrease in surface area is\n\n\\[\n(1-0.861773\\ldots)\\times 100=13.8226\\ldots\n\\]\n\nCorrect to 3 significant figures,\n\n\\[\nk=13.8\n\\]\n\n**Answer:** \\(k=13.8\\).",
+    "updated": "2026-05-20T22:46:21",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Specimen_4WM2H__Q20__p22-22__m05__Simultaneous-Equations": {
+    "status": "checked",
+    "source": "**Topic check:** Simultaneous Equations. The tag is correct; this is a linear and quadratic simultaneous equation.\n\n**Solution**\n\nFrom\n\n\\[\nx-2y=3\n\\]\n\n\\[\nx=2y+3\n\\]\n\nSubstitute into \\(x^2-y^2+2x=10\\):\n\n\\[\n(2y+3)^2-y^2+2(2y+3)=10\n\\]\n\n\\[\n4y^2+12y+9-y^2+4y+6=10\n\\]\n\n\\[\n3y^2+16y+5=0\n\\]\n\n\\[\n(3y+1)(y+5)=0\n\\]\n\nSo\n\n\\[\ny=-\\frac13\\quad\\text{or}\\quad y=-5\n\\]\n\nIf \\(y=-\\frac13\\),\n\n\\[\nx=2\\left(-\\frac13\\right)+3=\\frac73\n\\]\n\nIf \\(y=-5\\),\n\n\\[\nx=2(-5)+3=-7\n\\]\n\n**Answers:** \\(\\left(\\frac73,-\\frac13\\right)\\) and \\((-7,-5)\\).",
+    "updated": "2026-05-20T22:46:21",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Specimen_4WM2H__Q21__p23-23__m03__Algebraic-Fractions": {
+    "status": "checked",
+    "source": "**Topic check:** Algebraic Fractions. The tag is correct because the task is substitution and simplification of algebraic fractions.\n\n**Solution**\n\n\\[\na=\\frac{14}{3x-7},\\qquad x=\\frac{7}{4y-3}\n\\]\n\nSubstitute for \\(x\\):\n\n\\[\na=\\frac{14}{3\\left(\\frac{7}{4y-3}\\right)-7}\n\\]\n\nSimplify the denominator:\n\n\\[\n3\\left(\\frac{7}{4y-3}\\right)-7\n=\\frac{21}{4y-3}-7\n\\]\n\n\\[\n=\\frac{21-7(4y-3)}{4y-3}\n=\\frac{42-28y}{4y-3}\n\\]\n\nSo\n\n\\[\na=\\frac{14}{\\frac{42-28y}{4y-3}}\n=\\frac{14(4y-3)}{42-28y}\n\\]\n\n\\[\na=\\frac{4y-3}{3-2y}\n\\]\n\n**Answer:** \\(\\displaystyle a=\\frac{4y-3}{3-2y}\\).",
+    "updated": "2026-05-20T22:46:21",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Specimen_4WM2H__Q22__p24-25__m05__Volume-Surface-Area": {
+    "status": "checked",
+    "source": "**Topic check:** Volume & Surface Area. The tag is correct.\n\n**Solution**\n\nThe curved surface area of a cone is\n\n\\[\n\\pi r l\n\\]\n\nHere \\(r=20\\) and \\(\\pi r l=580\\pi\\), so\n\n\\[\n20l=580\n\\]\n\n\\[\nl=29\n\\]\n\nUse Pythagoras to find the height of the cone:\n\n\\[\nh^2=29^2-20^2\n\\]\n\n\\[\nh^2=841-400=441\n\\]\n\n\\[\nh=21\n\\]\n\nVolume of the cone:\n\n\\[\n\\frac13\\pi r^2h=\\frac13\\pi(20)^2(21)=2800\\pi\n\\]\n\nVolume of the hemisphere:\n\n\\[\n\\frac23\\pi r^3=\\frac23\\pi(20)^3=\\frac{16000}{3}\\pi\n\\]\n\nTotal volume:\n\n\\[\n2800\\pi+\\frac{16000}{3}\\pi\n=\\frac{24400}{3}\\pi\n\\]\n\nSince the volume is \\(k\\pi\\),\n\n\\[\nk=\\frac{24400}{3}\n\\]\n\n**Answer:** \\(\\displaystyle k=\\frac{24400}{3}\\).",
+    "updated": "2026-05-20T22:46:21",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Specimen_4WM2H__Q23__p26-26__m05__Vectors": {
+    "status": "checked",
+    "source": "**Topic check:** Vectors. The tag is correct.\n\n**Solution**\n\n\\[\n\\overrightarrow{OA}=4a,\\qquad \\overrightarrow{OB}=6b,\\qquad \\overrightarrow{AP}=2a+8b\n\\]\n\nSo\n\n\\[\n\\overrightarrow{OP}=\\overrightarrow{OA}+\\overrightarrow{AP}\n\\]\n\n\\[\n\\overrightarrow{OP}=4a+(2a+8b)=6a+8b\n\\]\n\nSince \\(O,Q,P\\) are collinear, let\n\n\\[\n\\overrightarrow{OQ}=\\lambda(6a+8b)\n\\]\n\nAlso \\(Q\\) lies on \\(AB\\). Let\n\n\\[\n\\overrightarrow{AQ}=\\mu\\overrightarrow{AB}\n\\]\n\nThen\n\n\\[\n\\overrightarrow{AB}=6b-4a\n\\]\n\n\\[\n\\overrightarrow{OQ}=4a+\\mu(6b-4a)\n\\]\n\n\\[\n\\overrightarrow{OQ}=(4-4\\mu)a+6\\mu b\n\\]\n\nCompare coefficients with\n\n\\[\n\\lambda(6a+8b)=6\\lambda a+8\\lambda b\n\\]\n\nSo\n\n\\[\n4-4\\mu=6\\lambda,\\qquad 6\\mu=8\\lambda\n\\]\n\nFrom \\(6\\mu=8\\lambda\\),\n\n\\[\n\\lambda=\\frac34\\mu\n\\]\n\nSubstitute:\n\n\\[\n4-4\\mu=6\\left(\\frac34\\mu\\right)\n\\]\n\n\\[\n4-4\\mu=\\frac92\\mu\n\\]\n\n\\[\n8=17\\mu\n\\]\n\n\\[\n\\mu=\\frac8{17}\n\\]\n\nTherefore\n\n\\[\nAQ:QB=\\frac8{17}:\\frac9{17}=8:9\n\\]\n\n**Answer:** \\(AQ:QB=8:9\\).",
+    "updated": "2026-05-20T22:46:21",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "all::Specimen_4WM2H__Q24__p27-27__m05__Sequences": {
+    "status": "checked",
+    "source": "**Topic check:** Sequences. The tag is correct.\n\n**Solution**\n\nLet the first term be \\(a\\) and the common difference be \\(d\\).\n\n\\[\nS_n=\\frac n2(2a+(n-1)d)\n\\]\n\nSo\n\n\\[\nS_{10}=5(2a+9d)\n\\]\n\nand\n\n\\[\nS_5=\\frac52(2a+4d)\n\\]\n\nGiven \\(S_{10}=4S_5\\):\n\n\\[\n5(2a+9d)=4\\left(\\frac52(2a+4d)\\right)\n\\]\n\n\\[\n10a+45d=20a+40d\n\\]\n\n\\[\n5d=10a\n\\]\n\n\\[\nd=2a\n\\]\n\nThe 8th term is \\(45\\):\n\n\\[\na+7d=45\n\\]\n\nSubstitute \\(d=2a\\):\n\n\\[\na+14a=45\n\\]\n\n\\[\n15a=45\n\\]\n\n\\[\na=3\n\\]\n\n**Answer:** the first term is \\(3\\).",
+    "updated": "2026-05-20T22:46:21",
+    "checked_by": "Dr Eslam Ahmed + Codex"
+  },
+  "expertise::Specimen_4WM2H__Q20__p22-22__m05__Simultaneous-Equations": {
+    "status": "checked",
+    "source": "**Topic check:** Simultaneous Equations. The tag is correct; this is a linear and quadratic simultaneous equation.\n\n**Solution**\n\nFrom\n\n\\[\nx-2y=3\n\\]\n\n\\[\nx=2y+3\n\\]\n\nSubstitute into \\(x^2-y^2+2x=10\\):\n\n\\[\n(2y+3)^2-y^2+2(2y+3)=10\n\\]\n\n\\[\n4y^2+12y+9-y^2+4y+6=10\n\\]\n\n\\[\n3y^2+16y+5=0\n\\]\n\n\\[\n(3y+1)(y+5)=0\n\\]\n\nSo\n\n\\[\ny=-\\frac13\\quad\\text{or}\\quad y=-5\n\\]\n\nIf \\(y=-\\frac13\\),\n\n\\[\nx=2\\left(-\\frac13\\right)+3=\\frac73\n\\]\n\nIf \\(y=-5\\),\n\n\\[\nx=2(-5)+3=-7\n\\]\n\n**Answers:** \\(\\left(\\frac73,-\\frac13\\right)\\) and \\((-7,-5)\\).",
+    "updated": "2026-05-20T22:48:04",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Specimen_4WM2H__Q20__p22-22__m05__Simultaneous-Equations"
+  },
+  "expertise::Specimen_4WM2H__Q21__p23-23__m03__Algebraic-Fractions": {
+    "status": "checked",
+    "source": "**Topic check:** Algebraic Fractions. The tag is correct because the task is substitution and simplification of algebraic fractions.\n\n**Solution**\n\n\\[\na=\\frac{14}{3x-7},\\qquad x=\\frac{7}{4y-3}\n\\]\n\nSubstitute for \\(x\\):\n\n\\[\na=\\frac{14}{3\\left(\\frac{7}{4y-3}\\right)-7}\n\\]\n\nSimplify the denominator:\n\n\\[\n3\\left(\\frac{7}{4y-3}\\right)-7\n=\\frac{21}{4y-3}-7\n\\]\n\n\\[\n=\\frac{21-7(4y-3)}{4y-3}\n=\\frac{42-28y}{4y-3}\n\\]\n\nSo\n\n\\[\na=\\frac{14}{\\frac{42-28y}{4y-3}}\n=\\frac{14(4y-3)}{42-28y}\n\\]\n\n\\[\na=\\frac{4y-3}{3-2y}\n\\]\n\n**Answer:** \\(\\displaystyle a=\\frac{4y-3}{3-2y}\\).",
+    "updated": "2026-05-20T22:48:04",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Specimen_4WM2H__Q21__p23-23__m03__Algebraic-Fractions"
+  },
+  "expertise::Specimen_4WM2H__Q22__p24-25__m05__Volume-Surface-Area": {
+    "status": "checked",
+    "source": "**Topic check:** Volume & Surface Area. The tag is correct.\n\n**Solution**\n\nThe curved surface area of a cone is\n\n\\[\n\\pi r l\n\\]\n\nHere \\(r=20\\) and \\(\\pi r l=580\\pi\\), so\n\n\\[\n20l=580\n\\]\n\n\\[\nl=29\n\\]\n\nUse Pythagoras to find the height of the cone:\n\n\\[\nh^2=29^2-20^2\n\\]\n\n\\[\nh^2=841-400=441\n\\]\n\n\\[\nh=21\n\\]\n\nVolume of the cone:\n\n\\[\n\\frac13\\pi r^2h=\\frac13\\pi(20)^2(21)=2800\\pi\n\\]\n\nVolume of the hemisphere:\n\n\\[\n\\frac23\\pi r^3=\\frac23\\pi(20)^3=\\frac{16000}{3}\\pi\n\\]\n\nTotal volume:\n\n\\[\n2800\\pi+\\frac{16000}{3}\\pi\n=\\frac{24400}{3}\\pi\n\\]\n\nSince the volume is \\(k\\pi\\),\n\n\\[\nk=\\frac{24400}{3}\n\\]\n\n**Answer:** \\(\\displaystyle k=\\frac{24400}{3}\\).",
+    "updated": "2026-05-20T22:48:04",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Specimen_4WM2H__Q22__p24-25__m05__Volume-Surface-Area"
+  },
+  "expertise::Specimen_4WM2H__Q23__p26-26__m05__Vectors": {
+    "status": "checked",
+    "source": "**Topic check:** Vectors. The tag is correct.\n\n**Solution**\n\n\\[\n\\overrightarrow{OA}=4a,\\qquad \\overrightarrow{OB}=6b,\\qquad \\overrightarrow{AP}=2a+8b\n\\]\n\nSo\n\n\\[\n\\overrightarrow{OP}=\\overrightarrow{OA}+\\overrightarrow{AP}\n\\]\n\n\\[\n\\overrightarrow{OP}=4a+(2a+8b)=6a+8b\n\\]\n\nSince \\(O,Q,P\\) are collinear, let\n\n\\[\n\\overrightarrow{OQ}=\\lambda(6a+8b)\n\\]\n\nAlso \\(Q\\) lies on \\(AB\\). Let\n\n\\[\n\\overrightarrow{AQ}=\\mu\\overrightarrow{AB}\n\\]\n\nThen\n\n\\[\n\\overrightarrow{AB}=6b-4a\n\\]\n\n\\[\n\\overrightarrow{OQ}=4a+\\mu(6b-4a)\n\\]\n\n\\[\n\\overrightarrow{OQ}=(4-4\\mu)a+6\\mu b\n\\]\n\nCompare coefficients with\n\n\\[\n\\lambda(6a+8b)=6\\lambda a+8\\lambda b\n\\]\n\nSo\n\n\\[\n4-4\\mu=6\\lambda,\\qquad 6\\mu=8\\lambda\n\\]\n\nFrom \\(6\\mu=8\\lambda\\),\n\n\\[\n\\lambda=\\frac34\\mu\n\\]\n\nSubstitute:\n\n\\[\n4-4\\mu=6\\left(\\frac34\\mu\\right)\n\\]\n\n\\[\n4-4\\mu=\\frac92\\mu\n\\]\n\n\\[\n8=17\\mu\n\\]\n\n\\[\n\\mu=\\frac8{17}\n\\]\n\nTherefore\n\n\\[\nAQ:QB=\\frac8{17}:\\frac9{17}=8:9\n\\]\n\n**Answer:** \\(AQ:QB=8:9\\).",
+    "updated": "2026-05-20T22:48:04",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Specimen_4WM2H__Q23__p26-26__m05__Vectors"
+  },
+  "expertise::Specimen_4WM2H__Q24__p27-27__m05__Sequences": {
+    "status": "checked",
+    "source": "**Topic check:** Sequences. The tag is correct.\n\n**Solution**\n\nLet the first term be \\(a\\) and the common difference be \\(d\\).\n\n\\[\nS_n=\\frac n2(2a+(n-1)d)\n\\]\n\nSo\n\n\\[\nS_{10}=5(2a+9d)\n\\]\n\nand\n\n\\[\nS_5=\\frac52(2a+4d)\n\\]\n\nGiven \\(S_{10}=4S_5\\):\n\n\\[\n5(2a+9d)=4\\left(\\frac52(2a+4d)\\right)\n\\]\n\n\\[\n10a+45d=20a+40d\n\\]\n\n\\[\n5d=10a\n\\]\n\n\\[\nd=2a\n\\]\n\nThe 8th term is \\(45\\):\n\n\\[\na+7d=45\n\\]\n\nSubstitute \\(d=2a\\):\n\n\\[\na+14a=45\n\\]\n\n\\[\n15a=45\n\\]\n\n\\[\na=3\n\\]\n\n**Answer:** the first term is \\(3\\).",
+    "updated": "2026-05-20T22:48:04",
+    "checked_by": "Dr Eslam Ahmed + Codex",
+    "reused_from": "all::Specimen_4WM2H__Q24__p27-27__m05__Sequences"
   }
 };
