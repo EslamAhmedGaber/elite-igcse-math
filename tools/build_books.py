@@ -2,7 +2,8 @@
 Build Elite IGCSE classified books from the normalized site data.
 
 Public outputs are question-only books for downloads/.
-Private outputs are answer books for private_output/ and must not be published.
+Answer outputs are built in private_output/ first, then published only through
+the approved student-facing mirror step.
 """
 
 from __future__ import annotations
@@ -34,10 +35,14 @@ BOOK_STYLE_SOURCE = ROOT / "tools" / "book_assets" / "elite_igcse.sty"
 A4_WIDTH = 595
 A4_HEIGHT = 842
 MARGIN = 42
-NAVY = (17 / 255, 34 / 255, 64 / 255)
-GOLD = (191 / 255, 147 / 255, 56 / 255)
+NAVY = (11 / 255, 37 / 255, 69 / 255)
+NAVY_DARK = (7 / 255, 24 / 255, 47 / 255)
+GOLD = (212 / 255, 175 / 255, 55 / 255)
+GOLD_LIGHT = (245 / 255, 230 / 255, 179 / 255)
+CREAM = (250 / 255, 246 / 255, 236 / 255)
+WHITE = (1, 1, 1)
 INK = (28 / 255, 32 / 255, 38 / 255)
-MUTED = (92 / 255, 99 / 255, 112 / 255)
+MUTED = (85 / 255, 85 / 255, 85 / 255)
 
 
 @dataclass(frozen=True)
@@ -652,74 +657,250 @@ def group_rows(rows: list[dict[str, Any]], spec: BookSpec, limit: int | None = N
     return filtered
 
 
-def add_footer(page: fitz.Page, label: str, page_number: int) -> None:
-    page.insert_text(
-        (MARGIN, A4_HEIGHT - 24),
-        clean_text(label),
-        fontsize=8,
+def mm(value: float) -> float:
+    return value * 72 / 25.4
+
+
+def draw_textbox(
+    page: fitz.Page,
+    rect: fitz.Rect,
+    text: str,
+    fontsize: float,
+    color: tuple[float, float, float],
+    align: int = fitz.TEXT_ALIGN_LEFT,
+) -> None:
+    page.insert_textbox(
+        rect,
+        clean_text(text),
+        fontsize=fontsize,
         fontname="helv",
-        color=MUTED,
+        color=color,
+        align=align,
     )
-    page.insert_text(
-        (A4_WIDTH - MARGIN - 28, A4_HEIGHT - 24),
+
+
+def book_subject(spec: BookSpec) -> str:
+    if spec.scope == "unit1":
+        return "Edexcel IGCSE Mathematics A - Unit 1 (4WM1)"
+    if spec.scope == "unit2":
+        return "Edexcel IGCSE Mathematics A - Unit 2 (4WM2)"
+    return "Edexcel IGCSE Mathematics A (4MA1)"
+
+
+def book_kind(spec: BookSpec) -> str:
+    if spec.include_solutions:
+        return "Student Worked Solutions"
+    if spec.bank == "expertise":
+        return "Q20+ Expertise Classified"
+    return "Classified Problems by Topic"
+
+
+def book_stat_line(spec: BookSpec, row_count: int) -> str:
+    pieces = [f"{row_count} Questions"]
+    if spec.scope != "complete":
+        pieces.append(scope_label(spec.scope))
+    if spec.bank == "expertise":
+        pieces.append("Q20+ Expertise")
+    pieces.append("Worked answers included" if spec.include_solutions else "Question book")
+    return "  |  ".join(pieces)
+
+
+def draw_elite_cover_bands(page: fitz.Page, subtitle: str) -> None:
+    page.draw_rect(fitz.Rect(0, 0, A4_WIDTH, A4_HEIGHT), color=None, fill=CREAM)
+    page.draw_rect(fitz.Rect(0, 0, A4_WIDTH, mm(75)), color=None, fill=NAVY)
+    page.draw_rect(fitz.Rect(0, mm(75), A4_WIDTH, mm(78)), color=None, fill=GOLD)
+    page.draw_rect(fitz.Rect(0, A4_HEIGHT - mm(42), A4_WIDTH, A4_HEIGHT), color=None, fill=NAVY)
+    page.draw_rect(fitz.Rect(0, A4_HEIGHT - mm(45), A4_WIDTH, A4_HEIGHT - mm(42)), color=None, fill=GOLD)
+    draw_textbox(
+        page,
+        fitz.Rect(MARGIN, mm(29), A4_WIDTH - MARGIN, mm(47)),
+        "ELITE IGCSE ACADEMY",
+        26,
+        GOLD,
+        fitz.TEXT_ALIGN_CENTER,
+    )
+    draw_textbox(
+        page,
+        fitz.Rect(MARGIN, mm(48), A4_WIDTH - MARGIN, mm(62)),
+        subtitle,
+        13,
+        WHITE,
+        fitz.TEXT_ALIGN_CENTER,
+    )
+
+
+def draw_identity_box(page: fitz.Page, rect: fitz.Rect, prepared_label: str) -> None:
+    page.draw_rect(rect, color=NAVY, fill=WHITE, width=0.9)
+    draw_textbox(
+        page,
+        fitz.Rect(rect.x0 + 12, rect.y0 + 12, rect.x1 - 12, rect.y0 + 29),
+        prepared_label,
+        8,
+        GOLD,
+        fitz.TEXT_ALIGN_CENTER,
+    )
+    draw_textbox(
+        page,
+        fitz.Rect(rect.x0 + 12, rect.y0 + 31, rect.x1 - 12, rect.y0 + 75),
+        "Dr. Eslam Ahmed",
+        20,
+        NAVY_DARK,
+        fitz.TEXT_ALIGN_CENTER,
+    )
+    draw_textbox(
+        page,
+        fitz.Rect(rect.x0 + 12, rect.y0 + 76, rect.x1 - 12, rect.y0 + 100),
+        "Assistant Lecturer, Cairo University Faculty of Engineering",
+        10.5,
+        MUTED,
+        fitz.TEXT_ALIGN_CENTER,
+    )
+
+
+def draw_badge(page: fitz.Page, rect: fitz.Rect, text: str) -> None:
+    page.draw_rect(rect, color=GOLD, fill=GOLD, width=0.5)
+    draw_textbox(
+        page,
+        fitz.Rect(rect.x0, rect.y0 + 2, rect.x1, rect.y1),
+        text,
+        8,
+        NAVY_DARK,
+        fitz.TEXT_ALIGN_CENTER,
+    )
+
+
+def add_footer(page: fitz.Page, label: str, page_number: int) -> None:
+    page.draw_line((MARGIN, A4_HEIGHT - 36), (A4_WIDTH - MARGIN, A4_HEIGHT - 36), color=GOLD, width=0.55)
+    draw_textbox(
+        page,
+        fitz.Rect(MARGIN, A4_HEIGHT - 31, A4_WIDTH - MARGIN - 70, A4_HEIGHT - 14),
+        f"Elite IGCSE Academy | Dr. Eslam Ahmed | {label}",
+        8,
+        MUTED,
+    )
+    draw_textbox(
+        page,
+        fitz.Rect(A4_WIDTH - MARGIN - 60, A4_HEIGHT - 31, A4_WIDTH - MARGIN, A4_HEIGHT - 14),
         str(page_number),
-        fontsize=8,
-        fontname="helv",
-        color=MUTED,
+        8,
+        NAVY,
+        fitz.TEXT_ALIGN_RIGHT,
     )
 
 
 def add_cover(doc: fitz.Document, spec: BookSpec, row_count: int) -> None:
     page = doc.new_page(width=A4_WIDTH, height=A4_HEIGHT)
-    page.draw_rect(fitz.Rect(0, 0, A4_WIDTH, A4_HEIGHT), color=None, fill=(250 / 255, 249 / 255, 245 / 255))
-    page.draw_rect(fitz.Rect(0, 0, 12, A4_HEIGHT), color=None, fill=GOLD)
-    page.insert_textbox(
-        fitz.Rect(MARGIN, 132, A4_WIDTH - MARGIN, 225),
-        clean_text(spec.title),
-        fontsize=25,
-        fontname="helv",
-        color=NAVY,
-        align=fitz.TEXT_ALIGN_CENTER,
+    draw_elite_cover_bands(page, "Excellence in Mathematics Education")
+
+    draw_textbox(
+        page,
+        fitz.Rect(MARGIN, mm(108), A4_WIDTH - MARGIN, mm(123)),
+        book_subject(spec),
+        13.5,
+        NAVY,
+        fitz.TEXT_ALIGN_CENTER,
     )
-    subtitle = "Private answer book" if spec.private else "Question-only classified book"
-    page.insert_textbox(
-        fitz.Rect(MARGIN, 238, A4_WIDTH - MARGIN, 300),
-        f"{subtitle}\n{row_count} questions",
-        fontsize=13,
-        fontname="helv",
-        color=MUTED,
-        align=fitz.TEXT_ALIGN_CENTER,
+    draw_textbox(
+        page,
+        fitz.Rect(MARGIN, mm(126), A4_WIDTH - MARGIN, mm(145)),
+        "Higher Tier",
+        24,
+        NAVY_DARK,
+        fitz.TEXT_ALIGN_CENTER,
     )
-    policy = "Keep this file private." if spec.private else "Public download file."
-    page.insert_textbox(
-        fitz.Rect(MARGIN, 620, A4_WIDTH - MARGIN, 700),
-        clean_text(policy),
-        fontsize=10,
-        fontname="helv",
-        color=INK,
-        align=fitz.TEXT_ALIGN_CENTER,
+    draw_textbox(
+        page,
+        fitz.Rect(MARGIN, mm(146), A4_WIDTH - MARGIN, mm(165)),
+        spec.title,
+        20,
+        NAVY,
+        fitz.TEXT_ALIGN_CENTER,
+    )
+    page.draw_line((A4_WIDTH / 2 - mm(25), mm(172)), (A4_WIDTH / 2 + mm(25), mm(172)), color=GOLD, width=1.4)
+    draw_textbox(
+        page,
+        fitz.Rect(MARGIN, mm(183), A4_WIDTH - MARGIN, mm(200)),
+        book_stat_line(spec, row_count),
+        10.5,
+        MUTED,
+        fitz.TEXT_ALIGN_CENTER,
+    )
+
+    draw_identity_box(page, fitz.Rect(mm(44), mm(205), A4_WIDTH - mm(44), mm(245)), "PREPARED & CLASSIFIED BY")
+
+    draw_textbox(
+        page,
+        fitz.Rect(mm(22), A4_HEIGHT - mm(27), mm(78), A4_HEIGHT - mm(10)),
+        "Call\n+20 112 000 9622",
+        9.5,
+        WHITE,
+    )
+    draw_textbox(
+        page,
+        fitz.Rect(mm(78), A4_HEIGHT - mm(27), mm(132), A4_HEIGHT - mm(10)),
+        f"2026 Edition\n{scope_label(spec.scope)}",
+        9.5,
+        WHITE,
+        fitz.TEXT_ALIGN_CENTER,
+    )
+    draw_textbox(
+        page,
+        fitz.Rect(mm(132), A4_HEIGHT - mm(27), A4_WIDTH - mm(22), A4_HEIGHT - mm(10)),
+        "Website\neliteigcse.com",
+        9.5,
+        WHITE,
+        fitz.TEXT_ALIGN_RIGHT,
     )
 
 
 def add_topic_page(doc: fitz.Document, topic: str, count: int) -> None:
     page = doc.new_page(width=A4_WIDTH, height=A4_HEIGHT)
-    page.draw_rect(fitz.Rect(0, 0, A4_WIDTH, A4_HEIGHT), color=None, fill=(247 / 255, 249 / 255, 251 / 255))
-    page.draw_rect(fitz.Rect(MARGIN, 220, A4_WIDTH - MARGIN, 222), color=GOLD, fill=GOLD)
-    page.insert_textbox(
-        fitz.Rect(MARGIN, 250, A4_WIDTH - MARGIN, 340),
-        clean_text(topic),
-        fontsize=22,
-        fontname="helv",
-        color=NAVY,
-        align=fitz.TEXT_ALIGN_CENTER,
+    page.draw_rect(fitz.Rect(0, 0, A4_WIDTH, A4_HEIGHT), color=None, fill=CREAM)
+    page.draw_rect(fitz.Rect(0, 0, A4_WIDTH, mm(40)), color=None, fill=NAVY)
+    page.draw_rect(fitz.Rect(0, mm(40), A4_WIDTH, mm(42)), color=None, fill=GOLD)
+    draw_textbox(
+        page,
+        fitz.Rect(MARGIN, mm(15), A4_WIDTH - MARGIN, mm(29)),
+        "ELITE IGCSE ACADEMY",
+        13,
+        GOLD,
+        fitz.TEXT_ALIGN_CENTER,
     )
-    page.insert_textbox(
-        fitz.Rect(MARGIN, 350, A4_WIDTH - MARGIN, 392),
+
+    card = fitz.Rect(MARGIN, mm(112), A4_WIDTH - MARGIN, mm(196))
+    page.draw_rect(card, color=NAVY, fill=WHITE, width=0.85)
+    page.draw_rect(fitz.Rect(card.x0, card.y0, card.x1, card.y0 + 7), color=GOLD, fill=GOLD)
+    draw_textbox(
+        page,
+        fitz.Rect(card.x0 + 16, card.y0 + 24, card.x1 - 16, card.y0 + 42),
+        "CLASSIFIED TOPIC",
+        10,
+        GOLD,
+        fitz.TEXT_ALIGN_CENTER,
+    )
+    draw_textbox(
+        page,
+        fitz.Rect(card.x0 + 22, card.y0 + 47, card.x1 - 22, card.y0 + 96),
+        topic,
+        18,
+        NAVY_DARK,
+        fitz.TEXT_ALIGN_CENTER,
+    )
+    draw_textbox(
+        page,
+        fitz.Rect(card.x0 + 22, card.y0 + 104, card.x1 - 22, card.y0 + 126),
         f"{count} questions",
-        fontsize=12,
-        fontname="helv",
-        color=MUTED,
-        align=fitz.TEXT_ALIGN_CENTER,
+        12,
+        MUTED,
+        fitz.TEXT_ALIGN_CENTER,
+    )
+    draw_textbox(
+        page,
+        fitz.Rect(MARGIN, A4_HEIGHT - mm(37), A4_WIDTH - MARGIN, A4_HEIGHT - mm(24)),
+        "Elite IGCSE Academy | Dr. Eslam Ahmed",
+        8.5,
+        MUTED,
+        fitz.TEXT_ALIGN_CENTER,
     )
 
 
@@ -741,19 +922,47 @@ def add_question_page(doc: fitz.Document, row: dict[str, Any], book_label: str, 
     question = row.get("q") or "?"
     marks = row.get("marks") or "?"
     paper = str(row.get("paper") or row.get("paperSlug") or "")
-    header = f"{topic}\n{paper} - Question {question} - {marks} marks"
-    page.insert_textbox(
-        fitz.Rect(MARGIN, 30, A4_WIDTH - MARGIN, 78),
-        clean_text(header),
-        fontsize=10.5,
-        fontname="helv",
-        color=NAVY,
+    session = str(row.get("session") or "")
+    code = str(row.get("code") or "")
+    page.draw_rect(fitz.Rect(0, 0, A4_WIDTH, A4_HEIGHT), color=None, fill=WHITE)
+    draw_textbox(
+        page,
+        fitz.Rect(MARGIN, 24, A4_WIDTH - MARGIN, 43),
+        book_label,
+        8.5,
+        MUTED,
+        fitz.TEXT_ALIGN_RIGHT,
     )
-    page.draw_line((MARGIN, 84), (A4_WIDTH - MARGIN, 84), color=GOLD, width=0.7)
+    header_rect = fitz.Rect(MARGIN, 52, A4_WIDTH - MARGIN, 116)
+    page.draw_rect(header_rect, color=NAVY, fill=NAVY, width=0)
+    page.draw_rect(fitz.Rect(header_rect.x0, header_rect.y1 - 3, header_rect.x1, header_rect.y1), color=GOLD, fill=GOLD)
+    draw_textbox(
+        page,
+        fitz.Rect(header_rect.x0 + 13, header_rect.y0 + 9, header_rect.x1 - 145, header_rect.y0 + 33),
+        "CLASSIFIED PROBLEM",
+        11.5,
+        WHITE,
+    )
+    draw_textbox(
+        page,
+        fitz.Rect(header_rect.x0 + 13, header_rect.y0 + 33, header_rect.x1 - 13, header_rect.y0 + 51),
+        f"Topic: {topic}",
+        9.2,
+        GOLD_LIGHT,
+    )
+    draw_textbox(
+        page,
+        fitz.Rect(header_rect.x0 + 13, header_rect.y0 + 50, header_rect.x1 - 13, header_rect.y0 + 64),
+        " | ".join(part for part in (paper, session, code) if part),
+        7.2,
+        WHITE,
+    )
+    draw_badge(page, fitz.Rect(header_rect.x1 - 116, header_rect.y0 + 13, header_rect.x1 - 62, header_rect.y0 + 30), f"Q#: {question}")
+    draw_badge(page, fitz.Rect(header_rect.x1 - 57, header_rect.y0 + 13, header_rect.x1 - 10, header_rect.y0 + 30), f"Marks: {marks}")
 
     path = question_image_path(row)
     if path.exists():
-        page.insert_image(image_rect(path, 98), filename=str(path), keep_proportion=True)
+        page.insert_image(image_rect(path, 132), filename=str(path), keep_proportion=True)
     else:
         page.insert_textbox(
             fitz.Rect(MARGIN, 170, A4_WIDTH - MARGIN, 250),
@@ -833,13 +1042,13 @@ def tex_image_path(build_dir: Path, row: dict[str, Any]) -> str:
 
 def private_latex_preamble(spec: BookSpec, row_count: int) -> list[str]:
     label = scope_label(spec.scope)
-    subtitle = "Private answer book"
+    subtitle = "Student worked-solution book"
     if spec.bank == "expertise":
         subtitle += " - Q20+ expertise"
     return [
         "%====================================================================",
         "%  Elite IGCSE Academy",
-        "%  Private worked-solution classified book",
+        "%  Student worked-solution classified book",
         "%====================================================================",
         r"\documentclass[11pt,a4paper,openany]{book}",
         "",
@@ -903,7 +1112,7 @@ def private_latex_preamble(spec: BookSpec, row_count: int) -> list[str]:
         r"  \fill[brandgold] ([yshift=42mm]current page.south west) rectangle ([yshift=45mm]current page.south east);",
         r"  \node[anchor=north, yshift=-30mm] at (current page.north) {\begin{minipage}{170mm}\centering",
         r"    {\sffamily\bfseries\color{brandgold}\fontsize{30}{34}\selectfont ELITE IGCSE ACADEMY}\\[6pt]",
-        r"    {\sffamily\itshape\color{white}\Large Private Teacher Edition}",
+        r"    {\sffamily\itshape\color{white}\Large Student Worked Solutions}",
         r"  \end{minipage}};",
         r"\end{tikzpicture}",
         "",
@@ -928,7 +1137,7 @@ def private_latex_preamble(spec: BookSpec, row_count: int) -> list[str]:
         r"\begin{tikzpicture}[remember picture,overlay]",
         r"  \node[anchor=south west, xshift=22mm, yshift=11mm] at (current page.south west) {\begin{minipage}{55mm}{\sffamily\color{brandgold}\footnotesize\textsc{Call}}\\{\sffamily\bfseries\color{white}\large +20\,112\,000\,9622}\end{minipage}};",
         rf"  \node[anchor=south, yshift=11mm] at (current page.south) {{\begin{{minipage}}{{78mm}}\centering{{\sffamily\color{{brandgold}}\footnotesize\textsc{{2026 Edition}}}}\\{{\sffamily\bfseries\color{{white}}\large {latex_escape(label)}}}\end{{minipage}}}};",
-        r"  \node[anchor=south east, xshift=-22mm, yshift=11mm] at (current page.south east) {\begin{minipage}{70mm}\raggedleft{\sffamily\color{brandgold}\footnotesize\textsc{Private}}\\{\sffamily\bfseries\color{white}\normalsize Not for public download}\end{minipage}};",
+        r"  \node[anchor=south east, xshift=-22mm, yshift=11mm] at (current page.south east) {\begin{minipage}{70mm}\raggedleft{\sffamily\color{brandgold}\footnotesize\textsc{Student Edition}}\\{\sffamily\bfseries\color{white}\normalsize Worked answers included}\end{minipage}};",
         r"\end{tikzpicture}",
         r"\end{titlepage}",
         "",

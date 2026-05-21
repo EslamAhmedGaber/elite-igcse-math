@@ -1,5 +1,5 @@
 """
-Build private paper-by-paper worked-solution books.
+Build paper-by-paper worked-solution books.
 
 These PDFs rebuild the classified question bank back into original past-paper
 order, with each question image followed by its worked solution.
@@ -108,7 +108,7 @@ def latex_preamble(paper: dict[str, Any]) -> list[str]:
     return [
         "%====================================================================",
         "%  Elite IGCSE Academy",
-        "%  Private past-paper worked-solution book",
+        "%  Student past-paper worked-solution book",
         "%====================================================================",
         r"\documentclass[11pt,a4paper,openany]{book}",
         r"\usepackage[utf8]{inputenc}",
@@ -153,7 +153,7 @@ def latex_preamble(paper: dict[str, Any]) -> list[str]:
         r"  \fill[brandgold] ([yshift=42mm]current page.south west) rectangle ([yshift=45mm]current page.south east);",
         r"  \node[anchor=north, yshift=-30mm] at (current page.north) {\begin{minipage}{170mm}\centering",
         r"    {\sffamily\bfseries\color{brandgold}\fontsize{30}{34}\selectfont ELITE IGCSE ACADEMY}\\[6pt]",
-        r"    {\sffamily\itshape\color{white}\Large Private Past Paper Solutions}",
+        r"    {\sffamily\itshape\color{white}\Large Student Past Paper Solutions}",
         r"  \end{minipage}};",
         r"\end{tikzpicture}",
         r"\vspace*{86mm}",
@@ -175,8 +175,8 @@ def latex_preamble(paper: dict[str, Any]) -> list[str]:
         r"\end{center}",
         r"\vfill",
         r"\begin{tikzpicture}[remember picture,overlay]",
-        r"  \node[anchor=south west, xshift=22mm, yshift=11mm] at (current page.south west) {\begin{minipage}{62mm}{\sffamily\color{brandgold}\footnotesize\textsc{Teacher Edition}}\\{\sffamily\bfseries\color{white}\large Worked answers included}\end{minipage}};",
-        r"  \node[anchor=south east, xshift=-22mm, yshift=11mm] at (current page.south east) {\begin{minipage}{76mm}\raggedleft{\sffamily\color{brandgold}\footnotesize\textsc{Private}}\\{\sffamily\bfseries\color{white}\normalsize Not for public download}\end{minipage}};",
+        r"  \node[anchor=south west, xshift=22mm, yshift=11mm] at (current page.south west) {\begin{minipage}{62mm}{\sffamily\color{brandgold}\footnotesize\textsc{Student Edition}}\\{\sffamily\bfseries\color{white}\large Worked answers included}\end{minipage}};",
+        r"  \node[anchor=south east, xshift=-22mm, yshift=11mm] at (current page.south east) {\begin{minipage}{76mm}\raggedleft{\sffamily\color{brandgold}\footnotesize\textsc{Download}}\\{\sffamily\bfseries\color{white}\normalsize eliteigcse.com}\end{minipage}};",
         r"\end{tikzpicture}",
         r"\end{titlepage}",
         r"\pagestyle{fancy}",
