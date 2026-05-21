@@ -1,5 +1,5 @@
-const CACHE_VERSION = "elite-igcse-v34";
-const RUNTIME_CACHE = "elite-igcse-runtime-v34";
+const CACHE_VERSION = "elite-igcse-v35";
+const RUNTIME_CACHE = "elite-igcse-runtime-v35";
 
 const APP_SHELL = [
   "./",
@@ -88,6 +88,22 @@ async function networkFirst(request) {
   }
 }
 
+async function navigationFirst(request) {
+  const cache = await caches.open(CACHE_VERSION);
+  try {
+    const response = await fetch(request);
+    if (response.ok) cache.put(request, response.clone());
+    return response;
+  } catch (error) {
+    const path = new URL(request.url).pathname.slice(1) || "./";
+    return (
+      (await cache.match(request)) ||
+      (await cache.match(path)) ||
+      (await cache.match("offline.html"))
+    );
+  }
+}
+
 self.addEventListener("fetch", (event) => {
   const { request } = event;
   if (request.method !== "GET") return;
@@ -96,9 +112,7 @@ self.addEventListener("fetch", (event) => {
   if (url.origin !== self.location.origin) return;
 
   if (request.mode === "navigate") {
-    event.respondWith(
-      fetch(request).catch(() => caches.match("offline.html"))
-    );
+    event.respondWith(navigationFirst(request));
     return;
   }
 
