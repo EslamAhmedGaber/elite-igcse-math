@@ -164,7 +164,18 @@
     if (!("serviceWorker" in navigator)) return;
     if (!/^https?:$/.test(window.location.protocol)) return;
     window.addEventListener("load", () => {
-      navigator.serviceWorker.register("service-worker.js").catch(() => {});
+      navigator.serviceWorker.getRegistrations()
+        .then((registrations) => Promise.all(registrations.map((registration) => registration.unregister())))
+        .catch(() => {});
+      if ("caches" in window) {
+        caches.keys()
+          .then((keys) => Promise.all(
+            keys
+              .filter((key) => key.indexOf("elite-igcse") === 0)
+              .map((key) => caches.delete(key))
+          ))
+          .catch(() => {});
+      }
     });
   }
 
