@@ -18,12 +18,67 @@
         <h1>You are offline, but the study habit is still alive.</h1>
         <p>Open a page you visited before, or reconnect to load new question images, papers, and solutions.</p>
         <div class="planner-hero-actions">
+          <a class="button primary" id="reconnectNow" href="./">Reconnect now</a>
           <a class="button primary" href="notes.html">Notes</a>
           <a class="button light" href="practice.html">Classified</a>
           <a class="button light" href="pastpapers.html">Past Papers</a>
+          <button class="button light" id="resetSavedSite" type="button">Reset saved site</button>
         </div>
       </div>
     </section>
   </main>
+  <script>
+    (function () {
+      const resetButton = document.getElementById("resetSavedSite");
+      const reconnectButton = document.getElementById("reconnectNow");
+
+      async function canReachHome() {
+        try {
+          const response = await fetch("index.html?online-check=" + Date.now(), {
+            cache: "reload",
+          });
+          return response.ok;
+        } catch (error) {
+          return false;
+        }
+      }
+
+      async function updateWorker() {
+        if (!("serviceWorker" in navigator)) return;
+        const registrations = await navigator.serviceWorker.getRegistrations();
+        await Promise.all(registrations.map((registration) => registration.update().catch(() => null)));
+      }
+
+      async function resetSavedSite() {
+        if ("serviceWorker" in navigator) {
+          const registrations = await navigator.serviceWorker.getRegistrations();
+          await Promise.all(registrations.map((registration) => registration.unregister()));
+        }
+        if ("caches" in window) {
+          const keys = await caches.keys();
+          await Promise.all(
+            keys
+              .filter((key) => key.indexOf("elite-igcse") === 0)
+              .map((key) => caches.delete(key))
+          );
+        }
+        window.location.replace("./?reset=" + Date.now());
+      }
+
+      async function reconnect() {
+        if (!(await canReachHome())) return;
+        await updateWorker();
+        window.location.replace("./?online=" + Date.now());
+      }
+
+      reconnectButton?.addEventListener("click", function (event) {
+        event.preventDefault();
+        reconnect();
+      });
+      resetButton?.addEventListener("click", resetSavedSite);
+      window.addEventListener("online", reconnect);
+      reconnect();
+    })();
+  </script>
 </body>
 </html>
