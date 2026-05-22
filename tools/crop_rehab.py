@@ -30,11 +30,35 @@ DEFAULT_SOURCE_ROOTS = [
     ROOT / "downloads" / "PastPapers",
 ]
 
+KNOWN_SOURCE_PDFS = {
+    "May2025_4WM1H": Path(
+        r"D:\Tyro4_Latex\0 Mathematics\OL\PastPapers\Modular\unnit 1\4wm1h-01-que-20250516 (1).pdf"
+    ),
+    "May2025_4WM1HR": Path(
+        r"D:\Tyro4_Latex\0 Mathematics\OL\PastPapers\Modular\unnit 1\4wm1h-01r-que-20250516 (4).pdf"
+    ),
+    "May2025_4WM2H": Path(
+        r"D:\Tyro4_Latex\0 Mathematics\OL\PastPapers\Modular\unnit 2\4wm2h-01-may-2025-exam-paper.pdf"
+    ),
+    "May2025_4WM2HR": Path(
+        r"D:\Tyro4_Latex\0 Mathematics\OL\PastPapers\Modular\unnit 2\4wm2h-01R-may-2025-exam-paper.pdf"
+    ),
+    "Nov2025_4WM1H": Path(
+        r"D:\Tyro4_Latex\0 Mathematics\OL\PastPapers\Modular\unnit 1\4wm1h-01-que-20251106.pdf"
+    ),
+    "Nov2025_4WM2H": Path(
+        r"D:\Tyro4_Latex\0 Mathematics\OL\PastPapers\Modular\unnit 2\4wm2h-01-Nov-2025-exam-paper.pdf"
+    ),
+    "Specimen_4WM2H": Path(
+        r"D:\Tyro4_Latex\0 Mathematics\OL\PastPapers\Modular\unnit 2\Specimen_Paper_Unit 2 Higher QP.pdf"
+    ),
+}
+
 QUESTION_TOTAL_RE = re.compile(r"Total for Question\s+(\d+)\s+is\s+(\d+)\s+marks?", re.IGNORECASE)
 QUESTION_START_RE = re.compile(r"^\s*(\d+)\s+\S", re.DOTALL)
 
 RENDER_ZOOM = 2.0
-X0 = 60.0
+X0 = 38.0
 X1 = 556.5
 CONTINUATION_BOTTOM_PAD = 42.0
 MULTI_PAGE_GAP = 18
@@ -75,6 +99,10 @@ def find_pdf(paper: dict, explicit_pdf: str | None) -> Path:
         if not pdf.exists():
             raise FileNotFoundError(f"PDF not found: {pdf}")
         return pdf
+
+    known_pdf = KNOWN_SOURCE_PDFS.get(str(paper.get("paperSlug") or ""))
+    if known_pdf and known_pdf.exists():
+        return known_pdf
 
     expected = f"{paper['paper']}.pdf"
     for root in DEFAULT_SOURCE_ROOTS:
@@ -174,7 +202,7 @@ def render_block(doc: fitz.Document, block: Block) -> Image.Image:
     if not fragments:
         raise RuntimeError(f"Q{block.q}: no renderable crop fragments")
     if len(fragments) == 1:
-        return fragments[0]
+        return resize_to_target_width(fragments[0])
 
     width = max(fragment.width for fragment in fragments)
     height = sum(fragment.height for fragment in fragments) + MULTI_PAGE_GAP * (len(fragments) - 1)
@@ -183,7 +211,7 @@ def render_block(doc: fitz.Document, block: Block) -> Image.Image:
     for fragment in fragments:
         combined.paste(fragment, ((width - fragment.width) // 2, y))
         y += fragment.height + MULTI_PAGE_GAP
-    return combined
+    return resize_to_target_width(combined)
 
 
 def image_metrics(path: Path) -> dict:
@@ -204,6 +232,13 @@ def resize_old_crop(old_path: Path) -> Image.Image:
     width, height = old_image.size
     new_height = max(1, int(round(height * TARGET_WIDTH / width)))
     return old_image.resize((TARGET_WIDTH, new_height), Image.Resampling.LANCZOS)
+
+
+def resize_to_target_width(image: Image.Image) -> Image.Image:
+    if image.width == TARGET_WIDTH:
+        return image
+    new_height = max(1, int(round(image.height * TARGET_WIDTH / image.width)))
+    return image.resize((TARGET_WIDTH, new_height), Image.Resampling.LANCZOS)
 
 
 def horizontal_ink_bands(image: Image.Image) -> list[tuple[int, int]]:
@@ -242,7 +277,7 @@ def merge_bands(bands: list[tuple[int, int]], max_gap: int) -> list[tuple[int, i
     return merged
 
 
-def remove_footer_band(bands: list[tuple[int, int]], image_height: int) -> tuple[list[tuple[int, int]], bool]:
+def mark_footer_band(bands: list[tuple[int, int]], image_height: int) -> tuple[list[tuple[int, int]], bool]:
     if not bands:
         return bands, False
     last_start, last_end = bands[-1]
@@ -250,16 +285,14 @@ def remove_footer_band(bands: list[tuple[int, int]], image_height: int) -> tuple
     footer_like = last_start > image_height * 0.80 and last_height <= 48
     if len(bands) >= 2:
         footer_like = footer_like and (last_start - bands[-2][1] > 45)
-    if footer_like:
-        return bands[:-1], True
-    return bands, False
+    return bands, footer_like
 
 
 def compact_display_crop(image: Image.Image) -> tuple[Image.Image, list[str]]:
-    """Build a display crop by stacking meaningful content bands and trimming dead space."""
+    """Build a display crop by stacking content bands while preserving the marks footer."""
     raw_bands = horizontal_ink_bands(image)
     bands = merge_bands(raw_bands, SMART_BAND_MERGE_GAP)
-    bands, removed_footer = remove_footer_band(bands, image.height)
+    bands, kept_footer = mark_footer_band(bands, image.height)
     if not bands:
         return image, []
 
@@ -277,7 +310,7 @@ def compact_display_crop(image: Image.Image) -> tuple[Image.Image, list[str]]:
 
     new_height = sum(end - start for start, end in chunks) + SMART_STACK_GAP * max(0, len(chunks) - 1)
     new_height = max(new_height, MIN_COMPACT_HEIGHT)
-    if image.height - new_height < SMART_MIN_REDUCTION and not removed_footer:
+    if image.height - new_height < SMART_MIN_REDUCTION:
         return image, []
 
     compact = Image.new("RGB", (image.width, new_height), "white")
@@ -291,8 +324,8 @@ def compact_display_crop(image: Image.Image) -> tuple[Image.Image, list[str]]:
 
     removed = image.height - compact.height
     notes = [f"stacked {len(chunks)} content bands"]
-    if removed_footer:
-        notes.append("removed footer")
+    if kept_footer:
+        notes.append("kept footer")
     if removed > 0:
         notes.append(f"removed {removed}px dead space")
     return compact, notes
@@ -385,37 +418,35 @@ def build_contact_sheet(rows: list[dict], out_dir: Path) -> Path:
     return sheet_path
 
 
-def build_rehab(slug: str, explicit_pdf: str | None, apply: bool, compact: bool) -> dict:
+def build_rehab(
+    slug: str,
+    explicit_pdf: str | None,
+    apply: bool,
+    compact: bool,
+    from_existing: bool = False,
+) -> dict:
     paper = load_paper(slug)
     rows = all_question_rows(paper)
-    pdf = find_pdf(paper, explicit_pdf)
-    mode_name = "compact" if compact else "safe"
+    pdf = None if from_existing else find_pdf(paper, explicit_pdf)
+    if from_existing:
+        mode_name = "image-compact" if compact else "image-safe"
+    else:
+        mode_name = "compact" if compact else "safe"
     out_dir = OUTPUT_ROOT / slug / mode_name
     candidates = out_dir / "candidates"
     backup = out_dir / "backup_before_apply"
     candidates.mkdir(parents=True, exist_ok=True)
 
     summary_rows: list[dict] = []
-    with fitz.open(pdf) as doc:
-        blocks = locate_blocks(doc)
-        missing = [row["q"] for row in rows if int(row["q"]) not in blocks]
-        if missing:
-            raise RuntimeError(f"Could not locate crop blocks for questions: {missing}")
-
+    if from_existing:
         for row in rows:
             q = int(row["q"])
             filename = row["filename"]
             old_path = QUESTION_ASSETS / filename
             new_path = candidates / filename
             old_metrics = image_metrics(old_path)
-            pdf_candidate = render_block(doc, blocks[q])
-            safe, reasons = candidate_is_safe(blocks[q], old_metrics, pdf_candidate, row)
-            if safe:
-                image = pdf_candidate
-                method = "pdf"
-            else:
-                image = resize_old_crop(old_path)
-                method = "fallback"
+            image = resize_old_crop(old_path)
+            method = "image"
             compact_reasons: list[str] = []
             if compact:
                 image, compact_reasons = compact_display_crop(image)
@@ -428,15 +459,57 @@ def build_rehab(slug: str, explicit_pdf: str | None, apply: bool, compact: bool)
                     "q": q,
                     "filename": filename,
                     "method": method,
-                    "reasons": reasons + compact_reasons,
+                    "reasons": compact_reasons,
                     "expectedPages": expected_pages(filename),
-                    "detectedPages": [blocks[q].start_page + 1, blocks[q].end_page + 1],
+                    "detectedPages": None,
                     "old": old_metrics,
                     "new": new_metrics,
                     "height_delta": new_metrics["height"] - old_metrics["height"],
                     "width_delta": new_metrics["width"] - old_metrics["width"],
                 }
             )
+    else:
+        with fitz.open(pdf) as doc:
+            blocks = locate_blocks(doc)
+            missing = [row["q"] for row in rows if int(row["q"]) not in blocks]
+            if missing:
+                raise RuntimeError(f"Could not locate crop blocks for questions: {missing}")
+
+            for row in rows:
+                q = int(row["q"])
+                filename = row["filename"]
+                old_path = QUESTION_ASSETS / filename
+                new_path = candidates / filename
+                old_metrics = image_metrics(old_path)
+                pdf_candidate = render_block(doc, blocks[q])
+                safe, reasons = candidate_is_safe(blocks[q], old_metrics, pdf_candidate, row)
+                if safe:
+                    image = pdf_candidate
+                    method = "pdf"
+                else:
+                    image = resize_old_crop(old_path)
+                    method = "fallback"
+                compact_reasons: list[str] = []
+                if compact:
+                    image, compact_reasons = compact_display_crop(image)
+                    method = f"{method}-compact" if compact_reasons else f"{method}-safe"
+                image.save(new_path, optimize=True)
+                new_metrics = image_metrics(new_path)
+                row["rehabMethod"] = method
+                summary_rows.append(
+                    {
+                        "q": q,
+                        "filename": filename,
+                        "method": method,
+                        "reasons": reasons + compact_reasons,
+                        "expectedPages": expected_pages(filename),
+                        "detectedPages": [blocks[q].start_page + 1, blocks[q].end_page + 1],
+                        "old": old_metrics,
+                        "new": new_metrics,
+                        "height_delta": new_metrics["height"] - old_metrics["height"],
+                        "width_delta": new_metrics["width"] - old_metrics["width"],
+                    }
+                )
 
     contact_sheet = build_contact_sheet(rows, out_dir)
 
@@ -452,7 +525,8 @@ def build_rehab(slug: str, explicit_pdf: str | None, apply: bool, compact: bool)
     summary = {
         "paper": paper["paper"],
         "paperSlug": slug,
-        "sourcePdf": str(pdf),
+        "sourcePdf": str(pdf) if pdf else None,
+        "fromExisting": from_existing,
         "questionCount": len(rows),
         "outputDir": str(out_dir),
         "contactSheet": str(contact_sheet),
@@ -473,9 +547,10 @@ def main() -> None:
     parser.add_argument("--pdf", help="Optional source PDF path")
     parser.add_argument("--apply", action="store_true", help="Replace live assets after building candidates")
     parser.add_argument("--compact", action="store_true", help="Preview/apply tighter display crops that remove dead footer space")
+    parser.add_argument("--from-existing", action="store_true", help="Build candidates from current question images when PDF text cannot be read")
     args = parser.parse_args()
 
-    summary = build_rehab(args.paper, args.pdf, args.apply, args.compact)
+    summary = build_rehab(args.paper, args.pdf, args.apply, args.compact, args.from_existing)
     print(f"Paper: {summary['paper']}")
     print(f"Questions: {summary['questionCount']}")
     print(f"Source PDF: {summary['sourcePdf']}")

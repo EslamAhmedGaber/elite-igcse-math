@@ -312,6 +312,7 @@ def prepare_solution_markdown(markdown: str) -> str:
     text = markdown.replace("\r\n", "\n").replace("\r", "\n")
     for space in ("\u00a0", "\u2001", "\u2004", "\u2005", "\u2006", "\u2009", "\u200a", "\u202f"):
         text = text.replace(space, " ")
+    text = re.sub(r"\*([A-Za-z])\*\*([A-Za-z])\*", r"*\1\2*", text)
     text = text.replace(r"\<", "<").replace(r"\>", ">")
     text = re.sub(r"</?span\b[^>]*>", "", text, flags=re.I)
     text = re.sub(r"<sup>(.*?)</sup>", r"^{\1}", text, flags=re.I | re.S)

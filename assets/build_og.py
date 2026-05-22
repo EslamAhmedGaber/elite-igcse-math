@@ -88,7 +88,7 @@ def main():
     draw.text((80, 265), "Mathematics", font=font(82, bold=True), fill=GOLD)
 
     # Subhead
-    draw.text((80, 380), "974 classified past-paper questions  ·  214 Q20+ expertise problems",
+    draw.text((80, 380), "1153 classified past-paper questions  ·  260 Q20+ expertise problems",
               font=font(26, bold=False), fill=(255, 255, 255, 235))
     draw.text((80, 420), "1188 worked solutions. Practice by topic. Reach A* / 9.",
               font=font(22, bold=False), fill=(255, 255, 255, 199))
