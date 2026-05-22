@@ -584,8 +584,14 @@
       const savedScore = state.scores?.[id] ?? "";
       return `<article class="exam-question" data-id="${escapeHtml(id)}">
         <div class="print-paper-brand">
-          <strong>Elite IGCSE Mathematics - Dr Eslam Ahmed</strong>
-          <span>Assistant Lecturer, Cairo University Faculty of Engineering | WhatsApp: 01120009622 | eliteigcse.com</span>
+          <div class="print-brand-lockup">
+            <span class="print-brand-mark">EA</span>
+            <div>
+              <strong>Elite IGCSE Academy</strong>
+              <small>${state.kind === "custom" ? "Custom Test" : state.kind === "smart" ? "Smart Revision" : "Generated Mock"} - Dr Eslam Ahmed</small>
+            </div>
+          </div>
+          <span class="print-brand-contact">Cairo University Faculty of Engineering<br>WhatsApp 01120009622 | eliteigcse.com</span>
         </div>
         <header>
           <div>
@@ -601,10 +607,10 @@
         </footer>
         ${canMark && hasSolution ? `<details class="exam-solution"><summary>Show worked solution</summary>${solutionHtml}</details>` : ""}
         <section class="exam-print-solution" aria-label="Printable worked solution">
-          <h3>Worked solution</h3>
+          <h3>Worked Solution</h3>
           ${solutionHtml}
         </section>
-        <div class="print-paper-footer">Prepared by Dr Eslam Ahmed | Assistant Lecturer, Cairo University Faculty of Engineering | 01120009622</div>
+        <div class="print-paper-footer">Downloaded from eliteigcse.com | Dr Eslam Ahmed | 01120009622</div>
       </article>`;
     }).join("");
     if (window.MathJax?.typesetPromise && canMark) {

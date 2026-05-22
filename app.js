@@ -789,12 +789,18 @@ function renderPrintArea(items) {
   const printable = items.length ? items : visible;
   els.printArea.innerHTML = printable.map((question, index) => `<section class="print-question">
     <div class="print-paper-brand">
-      <strong>Elite IGCSE Mathematics - Dr Eslam Ahmed</strong>
-      <span>Assistant Lecturer, Cairo University Faculty of Engineering | WhatsApp: 01120009622 | eliteigcse.com</span>
+      <div class="print-brand-lockup">
+        <span class="print-brand-mark">EA</span>
+      <div>
+        <strong>Elite IGCSE Academy</strong>
+        <small>Student Download - Dr Eslam Ahmed</small>
+      </div>
+    </div>
+      <span class="print-brand-contact">Cairo University Faculty of Engineering<br>WhatsApp 01120009622 | eliteigcse.com</span>
     </div>
     <h2>${index + 1}. ${escapeHtml(question.paper)} Q${question.question} | ${escapeHtml(question.topic)} | ${question.marks} marks</h2>
     <img src="${question.image}" alt="${escapeHtml(question.paper)} Q${question.question}">
-    <div class="print-paper-footer">Prepared by Dr Eslam Ahmed | Assistant Lecturer, Cairo University Faculty of Engineering | 01120009622</div>
+    <div class="print-paper-footer">Downloaded from eliteigcse.com | Dr Eslam Ahmed | 01120009622</div>
   </section>`).join("");
 }
 
