@@ -191,10 +191,10 @@
         <strong>${escapeHtml(week.title)}</strong>
       </header>
       <ul>
-        ${week.topics.map((topic, index) => {
+        ${week.topics.map((topic) => {
           return `<li>
-            <span>${index === 0 ? "Read trigger words, then practise" : "Practise topic"}: ${escapeHtml(topic.topic)}</span>
-            <a href="${index === 0 ? "trigger-notes.html" : topicLink(topic.topic, topic.unit)}">${index === 0 ? "Open triggers" : "Open practice"}</a>
+            <span>Practise topic: ${escapeHtml(topic.topic)}</span>
+            <a href="${topicLink(topic.topic, topic.unit)}">Open practice</a>
           </li>`;
         }).join("")}
         ${expertiseTask}

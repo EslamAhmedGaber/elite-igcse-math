@@ -91,7 +91,7 @@
   function readinessLabel(value) {
     if (value >= 78) return "Strong - polish exam technique";
     if (value >= 58) return "Building - practise weak topics";
-    if (value >= 38) return "Needs structure - use trigger notes and guided practice";
+    if (value >= 38) return "Needs structure - use guided practice";
     return "Start gently - rebuild core topics first";
   }
 
@@ -122,7 +122,7 @@
 
     const cards = [
       actionCard("Fix one weak topic first", `Start with ${topic.topic}. Solve a small set before checking solutions.`, topicLink(topic.unit, topic.topic), "Open practice"),
-      actionCard("Read the trigger words", "Choose one exam keyword before solving so the method is already in your head.", "trigger-notes.html", "Open triggers"),
+      actionCard("Use the topic roadmap", "Pick the next weak topic from the roadmap, then solve a small focused set.", "topics.html", "Open roadmap"),
       actionCard("Train the hard questions", "Do one Q20+ set each week so long questions stop feeling scary.", "practice.html?bank=expertise&mode=q20", "Train Q20+"),
       actionCard("Turn this into a plan", "Build a weekly route using your exam date, target grade, and weak chapter or unit.", `planner.html?focus=${encodeURIComponent(units[0])}`, "Build plan")
     ];
