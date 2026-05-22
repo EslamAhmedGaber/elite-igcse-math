@@ -21,6 +21,11 @@ ROOT = Path(__file__).resolve().parent.parent
 PRIVATE_DIR = ROOT / "private_output"
 PUBLIC_DIR = ROOT / "downloads" / "ClassifiedSolutions"
 MAX_PUBLIC_BYTES = 95 * 1024 * 1024
+DOWNLOAD_VERSION = "style-e-20260522"
+
+
+def versioned_href(href: str) -> str:
+    return f"{href}?v={DOWNLOAD_VERSION}"
 
 
 @dataclass(frozen=True)
@@ -107,11 +112,11 @@ def publish_book(book: ClassifiedSolutionBook) -> dict[str, object]:
     return {
         "title": book.title,
         "scope": book.scope,
-        "questionBook": book.question_book,
+        "questionBook": versioned_href(book.question_book),
         "source": f"private_output/{book.source}",
         "files": [
             {
-                "href": f"downloads/ClassifiedSolutions/{path.name}",
+                "href": versioned_href(f"downloads/ClassifiedSolutions/{path.name}"),
                 "name": path.name,
                 "sizeBytes": path.stat().st_size,
             }

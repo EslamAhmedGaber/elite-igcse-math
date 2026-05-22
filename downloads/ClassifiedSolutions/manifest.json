@@ -2,16 +2,16 @@
   {
     "title": "Complete Classified Solutions",
     "scope": "Full bank",
-    "questionBook": "downloads/classified_problems.pdf",
+    "questionBook": "downloads/classified_problems.pdf?v=style-e-20260522",
     "source": "private_output/classified_answers.pdf",
     "files": [
       {
-        "href": "downloads/ClassifiedSolutions/classified_answers_Part1_of_2.pdf",
+        "href": "downloads/ClassifiedSolutions/classified_answers_Part1_of_2.pdf?v=style-e-20260522",
         "name": "classified_answers_Part1_of_2.pdf",
         "sizeBytes": 40117026
       },
       {
-        "href": "downloads/ClassifiedSolutions/classified_answers_Part2_of_2.pdf",
+        "href": "downloads/ClassifiedSolutions/classified_answers_Part2_of_2.pdf?v=style-e-20260522",
         "name": "classified_answers_Part2_of_2.pdf",
         "sizeBytes": 80966018
       }
@@ -20,11 +20,11 @@
   {
     "title": "Classified Expertise Solutions",
     "scope": "Q20+",
-    "questionBook": "downloads/Classified_Expertise.pdf",
+    "questionBook": "downloads/Classified_Expertise.pdf?v=style-e-20260522",
     "source": "private_output/Classified_Expertise_Answers.pdf",
     "files": [
       {
-        "href": "downloads/ClassifiedSolutions/Classified_Expertise_Answers.pdf",
+        "href": "downloads/ClassifiedSolutions/Classified_Expertise_Answers.pdf?v=style-e-20260522",
         "name": "Classified_Expertise_Answers.pdf",
         "sizeBytes": 27901437
       }
@@ -33,11 +33,11 @@
   {
     "title": "Unit 1 Classified Solutions",
     "scope": "4WM1",
-    "questionBook": "downloads/Classified_4WM1.pdf",
+    "questionBook": "downloads/Classified_4WM1.pdf?v=style-e-20260522",
     "source": "private_output/Classified_4WM1_Answers.pdf",
     "files": [
       {
-        "href": "downloads/ClassifiedSolutions/Classified_4WM1_Answers.pdf",
+        "href": "downloads/ClassifiedSolutions/Classified_4WM1_Answers.pdf?v=style-e-20260522",
         "name": "Classified_4WM1_Answers.pdf",
         "sizeBytes": 56186123
       }
@@ -46,11 +46,11 @@
   {
     "title": "Unit 2 Classified Solutions",
     "scope": "4WM2",
-    "questionBook": "downloads/Classified_4WM2.pdf",
+    "questionBook": "downloads/Classified_4WM2.pdf?v=style-e-20260522",
     "source": "private_output/Classified_4WM2_Answers.pdf",
     "files": [
       {
-        "href": "downloads/ClassifiedSolutions/Classified_4WM2_Answers.pdf",
+        "href": "downloads/ClassifiedSolutions/Classified_4WM2_Answers.pdf?v=style-e-20260522",
         "name": "Classified_4WM2_Answers.pdf",
         "sizeBytes": 64609251
       }
@@ -59,11 +59,11 @@
   {
     "title": "Unit 1 Expertise Solutions",
     "scope": "4WM1 Q20+",
-    "questionBook": "downloads/Classified_4WM1_Expertise.pdf",
+    "questionBook": "downloads/Classified_4WM1_Expertise.pdf?v=style-e-20260522",
     "source": "private_output/Classified_4WM1_Expertise_Answers.pdf",
     "files": [
       {
-        "href": "downloads/ClassifiedSolutions/Classified_4WM1_Expertise_Answers.pdf",
+        "href": "downloads/ClassifiedSolutions/Classified_4WM1_Expertise_Answers.pdf?v=style-e-20260522",
         "name": "Classified_4WM1_Expertise_Answers.pdf",
         "sizeBytes": 14129988
       }
@@ -72,11 +72,11 @@
   {
     "title": "Unit 2 Expertise Solutions",
     "scope": "4WM2 Q20+",
-    "questionBook": "downloads/Classified_4WM2_Expertise.pdf",
+    "questionBook": "downloads/Classified_4WM2_Expertise.pdf?v=style-e-20260522",
     "source": "private_output/Classified_4WM2_Expertise_Answers.pdf",
     "files": [
       {
-        "href": "downloads/ClassifiedSolutions/Classified_4WM2_Expertise_Answers.pdf",
+        "href": "downloads/ClassifiedSolutions/Classified_4WM2_Expertise_Answers.pdf?v=style-e-20260522",
         "name": "Classified_4WM2_Expertise_Answers.pdf",
         "sizeBytes": 14124892
       }
