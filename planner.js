@@ -30,13 +30,6 @@
       "Chapter 6: Statistics & Probability"
     ];
 
-  const notesByUnit = pathway === "modular"
-    ? {}
-    : {
-      "Chapter 2: Equations, Formulae & Identities": "downloads/notes/chapter-2-algebra-notes.pdf",
-      "Chapter 3: Sequences, Functions & Graphs": "downloads/notes/chapter-3-functions-graphs-notes.pdf"
-    };
-
   function uniqueSorted(items) {
     return [...new Set(items.filter(Boolean))].sort((a, b) => a.localeCompare(b));
   }
@@ -155,10 +148,6 @@
     return `practice.html?${params.toString()}`;
   }
 
-  function notesLink(unit) {
-    return notesByUnit[unit] || "notes.html";
-  }
-
   function buildPlan() {
     const settings = currentSettings();
     saveSettings();
@@ -203,11 +192,9 @@
       </header>
       <ul>
         ${week.topics.map((topic, index) => {
-          const hasNotes = Boolean(notesByUnit[topic.unit]);
-          const useNotes = index === 0 && hasNotes;
           return `<li>
-            <span>${useNotes ? "Read strategy" : "Practise topic"}: ${escapeHtml(topic.topic)}</span>
-            <a href="${useNotes ? notesLink(topic.unit) : topicLink(topic.topic, topic.unit)}">${useNotes ? "Open notes" : "Open practice"}</a>
+            <span>${index === 0 ? "Read trigger words, then practise" : "Practise topic"}: ${escapeHtml(topic.topic)}</span>
+            <a href="${index === 0 ? "trigger-notes.html" : topicLink(topic.topic, topic.unit)}">${index === 0 ? "Open triggers" : "Open practice"}</a>
           </li>`;
         }).join("")}
         ${expertiseTask}

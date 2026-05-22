@@ -41,7 +41,7 @@ Pages served:
 - `/progress.html` - Personal progress sheet, saved profile, topic tracker, backup import/export
 - `/checkup.html` - Exam readiness check and next-action recommender
 - `/topics.html` - Topic roadmap
-- `/notes.html` - Visual notes library
+- `/trigger-notes.html` - Exam trigger notes and linked practice
 - `/planner.html` - Study plan generator
 - `/about.html` - Dr Eslam bio + testimonials + pricing
 - `/downloads.html` - Free PDF books
@@ -72,7 +72,8 @@ website/
 ├── progress.html           # Personal student progress sheet
 ├── checkup.html            # Exam readiness check
 ├── topics.html             # Topic roadmap
-├── notes.html              # Visual notes library
+├── trigger-notes.html      # Exam trigger notes and linked practice
+├── notes.html              # Redirects old notes links to trigger notes
 ├── planner.html            # Study plan generator
 ├── about.html              # About Dr Eslam
 ├── downloads.html          # PDF library

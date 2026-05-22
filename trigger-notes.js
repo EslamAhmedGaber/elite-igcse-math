@@ -128,7 +128,7 @@
         <div class="trigger-actions">
           <a class="button primary" href="${primaryTopic ? practiceUrl(primaryTopic) : "practice.html"}">Start practice</a>
           <a class="button light" href="${q20Link}">Try Q20+ version</a>
-          <a class="button light" href="notes.html">Open visual notes</a>
+          <a class="button light" href="topics.html">Open topic roadmap</a>
         </div>
       </article>
     `;

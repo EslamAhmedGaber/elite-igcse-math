@@ -1,7 +1,7 @@
 {
   "name": "Elite IGCSE Mathematics",
   "short_name": "Elite IGCSE",
-  "description": "Classified Edexcel IGCSE 4MA1 Mathematics practice, mock exams, visual notes, and study tools by Dr Eslam Ahmed.",
+  "description": "Classified Edexcel IGCSE 4MA1 Mathematics practice, trigger notes, mock exams, and study tools by Dr Eslam Ahmed.",
   "start_url": "index.html",
   "scope": "./",
   "display": "standalone",
@@ -18,9 +18,9 @@
   ],
   "shortcuts": [
     {
-      "name": "Visual Notes",
-      "short_name": "Notes",
-      "url": "notes.html",
+      "name": "Trigger Notes",
+      "short_name": "Triggers",
+      "url": "trigger-notes.html",
       "icons": [{ "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
     },
     {
