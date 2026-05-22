@@ -39,6 +39,10 @@ X1 = 556.5
 CONTINUATION_BOTTOM_PAD = 42.0
 MULTI_PAGE_GAP = 18
 TARGET_WIDTH = 993
+ROW_DARK_THRESHOLD = 0.003
+FINAL_BLANK_GAP = 140
+COMPACT_BOTTOM_PAD = 36
+MIN_COMPACT_HEIGHT = 180
 
 
 @dataclass
@@ -200,6 +204,50 @@ def resize_old_crop(old_path: Path) -> Image.Image:
     return old_image.resize((TARGET_WIDTH, new_height), Image.Resampling.LANCZOS)
 
 
+def horizontal_ink_bands(image: Image.Image) -> list[tuple[int, int]]:
+    grey = image.convert("L")
+    width, height = grey.size
+    bands: list[tuple[int, int]] = []
+    in_band = False
+    start = 0
+    for y in range(height):
+        row = grey.crop((0, y, width, y + 1))
+        hist = row.histogram()
+        dark_pixels = sum(hist[:230])
+        has_ink = (dark_pixels / width) > ROW_DARK_THRESHOLD
+        if has_ink and not in_band:
+            start = y
+            in_band = True
+        elif in_band and not has_ink:
+            if y - start > 2:
+                bands.append((start, y))
+            in_band = False
+    if in_band:
+        bands.append((start, height))
+    return bands
+
+
+def compact_display_crop(image: Image.Image) -> tuple[Image.Image, list[str]]:
+    """Remove dead answer space before the footer while keeping the question intact."""
+    bands = horizontal_ink_bands(image)
+    if len(bands) < 2:
+        return image, []
+
+    last_start, last_end = bands[-1]
+    prev_start, prev_end = bands[-2]
+    gap_before_footer = last_start - prev_end
+    footer_like = last_start > image.height * 0.82 and (last_end - last_start) <= 42
+
+    if not footer_like or gap_before_footer < FINAL_BLANK_GAP:
+        return image, []
+
+    cut_y = min(image.height, max(prev_end + COMPACT_BOTTOM_PAD, MIN_COMPACT_HEIGHT))
+
+    return image.crop((0, 0, image.width, cut_y)), [
+        f"removed {image.height - cut_y}px dead space before footer"
+    ]
+
+
 def candidate_is_safe(block: Block, old_metrics: dict, candidate: Image.Image, row: dict) -> tuple[bool, list[str]]:
     reasons: list[str] = []
     pages = expected_pages(row["filename"])
@@ -287,11 +335,12 @@ def build_contact_sheet(rows: list[dict], out_dir: Path) -> Path:
     return sheet_path
 
 
-def build_rehab(slug: str, explicit_pdf: str | None, apply: bool) -> dict:
+def build_rehab(slug: str, explicit_pdf: str | None, apply: bool, compact: bool) -> dict:
     paper = load_paper(slug)
     rows = all_question_rows(paper)
     pdf = find_pdf(paper, explicit_pdf)
-    out_dir = OUTPUT_ROOT / slug
+    mode_name = "compact" if compact else "safe"
+    out_dir = OUTPUT_ROOT / slug / mode_name
     candidates = out_dir / "candidates"
     backup = out_dir / "backup_before_apply"
     candidates.mkdir(parents=True, exist_ok=True)
@@ -317,6 +366,10 @@ def build_rehab(slug: str, explicit_pdf: str | None, apply: bool) -> dict:
             else:
                 image = resize_old_crop(old_path)
                 method = "fallback"
+            compact_reasons: list[str] = []
+            if compact:
+                image, compact_reasons = compact_display_crop(image)
+                method = f"{method}-compact" if compact_reasons else f"{method}-safe"
             image.save(new_path, optimize=True)
             new_metrics = image_metrics(new_path)
             row["rehabMethod"] = method
@@ -325,7 +378,7 @@ def build_rehab(slug: str, explicit_pdf: str | None, apply: bool) -> dict:
                     "q": q,
                     "filename": filename,
                     "method": method,
-                    "reasons": reasons,
+                    "reasons": reasons + compact_reasons,
                     "expectedPages": expected_pages(filename),
                     "detectedPages": [blocks[q].start_page + 1, blocks[q].end_page + 1],
                     "old": old_metrics,
@@ -354,6 +407,7 @@ def build_rehab(slug: str, explicit_pdf: str | None, apply: bool) -> dict:
         "outputDir": str(out_dir),
         "contactSheet": str(contact_sheet),
         "applied": apply,
+        "mode": mode_name,
         "rows": summary_rows,
     }
     (out_dir / "summary.json").write_text(
@@ -368,14 +422,16 @@ def main() -> None:
     parser.add_argument("--paper", required=True, help="Paper slug, e.g. Jan2020_P1H")
     parser.add_argument("--pdf", help="Optional source PDF path")
     parser.add_argument("--apply", action="store_true", help="Replace live assets after building candidates")
+    parser.add_argument("--compact", action="store_true", help="Preview/apply tighter display crops that remove dead footer space")
     args = parser.parse_args()
 
-    summary = build_rehab(args.paper, args.pdf, args.apply)
+    summary = build_rehab(args.paper, args.pdf, args.apply, args.compact)
     print(f"Paper: {summary['paper']}")
     print(f"Questions: {summary['questionCount']}")
     print(f"Source PDF: {summary['sourcePdf']}")
     print(f"Candidates: {Path(summary['outputDir']) / 'candidates'}")
     print(f"Contact sheet: {summary['contactSheet']}")
+    print(f"Mode: {summary['mode']}")
     print(f"Applied to live assets: {summary['applied']}")
 
 
