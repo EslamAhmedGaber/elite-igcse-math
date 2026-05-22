@@ -40,9 +40,11 @@ CONTINUATION_BOTTOM_PAD = 42.0
 MULTI_PAGE_GAP = 18
 TARGET_WIDTH = 993
 ROW_DARK_THRESHOLD = 0.003
-FINAL_BLANK_GAP = 140
-COMPACT_BOTTOM_PAD = 36
 MIN_COMPACT_HEIGHT = 180
+SMART_BAND_MERGE_GAP = 18
+SMART_CHUNK_PAD = 16
+SMART_STACK_GAP = 34
+SMART_MIN_REDUCTION = 90
 
 
 @dataclass
@@ -227,25 +229,73 @@ def horizontal_ink_bands(image: Image.Image) -> list[tuple[int, int]]:
     return bands
 
 
-def compact_display_crop(image: Image.Image) -> tuple[Image.Image, list[str]]:
-    """Remove dead answer space before the footer while keeping the question intact."""
-    bands = horizontal_ink_bands(image)
-    if len(bands) < 2:
-        return image, []
+def merge_bands(bands: list[tuple[int, int]], max_gap: int) -> list[tuple[int, int]]:
+    if not bands:
+        return []
+    merged: list[tuple[int, int]] = [bands[0]]
+    for start, end in bands[1:]:
+        prev_start, prev_end = merged[-1]
+        if start - prev_end <= max_gap:
+            merged[-1] = (prev_start, max(prev_end, end))
+        else:
+            merged.append((start, end))
+    return merged
 
+
+def remove_footer_band(bands: list[tuple[int, int]], image_height: int) -> tuple[list[tuple[int, int]], bool]:
+    if not bands:
+        return bands, False
     last_start, last_end = bands[-1]
-    prev_start, prev_end = bands[-2]
-    gap_before_footer = last_start - prev_end
-    footer_like = last_start > image.height * 0.82 and (last_end - last_start) <= 42
+    last_height = last_end - last_start
+    footer_like = last_start > image_height * 0.80 and last_height <= 48
+    if len(bands) >= 2:
+        footer_like = footer_like and (last_start - bands[-2][1] > 45)
+    if footer_like:
+        return bands[:-1], True
+    return bands, False
 
-    if not footer_like or gap_before_footer < FINAL_BLANK_GAP:
+
+def compact_display_crop(image: Image.Image) -> tuple[Image.Image, list[str]]:
+    """Build a display crop by stacking meaningful content bands and trimming dead space."""
+    raw_bands = horizontal_ink_bands(image)
+    bands = merge_bands(raw_bands, SMART_BAND_MERGE_GAP)
+    bands, removed_footer = remove_footer_band(bands, image.height)
+    if not bands:
         return image, []
 
-    cut_y = min(image.height, max(prev_end + COMPACT_BOTTOM_PAD, MIN_COMPACT_HEIGHT))
+    chunks: list[tuple[int, int]] = []
+    for start, end in bands:
+        chunk_start = max(0, start - SMART_CHUNK_PAD)
+        chunk_end = min(image.height, end + SMART_CHUNK_PAD)
+        if chunks and chunk_start - chunks[-1][1] <= SMART_STACK_GAP:
+            chunks[-1] = (chunks[-1][0], max(chunks[-1][1], chunk_end))
+        else:
+            chunks.append((chunk_start, chunk_end))
 
-    return image.crop((0, 0, image.width, cut_y)), [
-        f"removed {image.height - cut_y}px dead space before footer"
-    ]
+    if not chunks:
+        return image, []
+
+    new_height = sum(end - start for start, end in chunks) + SMART_STACK_GAP * max(0, len(chunks) - 1)
+    new_height = max(new_height, MIN_COMPACT_HEIGHT)
+    if image.height - new_height < SMART_MIN_REDUCTION and not removed_footer:
+        return image, []
+
+    compact = Image.new("RGB", (image.width, new_height), "white")
+    y = 0
+    for index, (start, end) in enumerate(chunks):
+        if index:
+            y += SMART_STACK_GAP
+        fragment = image.crop((0, start, image.width, end))
+        compact.paste(fragment, (0, y))
+        y += end - start
+
+    removed = image.height - compact.height
+    notes = [f"stacked {len(chunks)} content bands"]
+    if removed_footer:
+        notes.append("removed footer")
+    if removed > 0:
+        notes.append(f"removed {removed}px dead space")
+    return compact, notes
 
 
 def candidate_is_safe(block: Block, old_metrics: dict, candidate: Image.Image, row: dict) -> tuple[bool, list[str]]:
