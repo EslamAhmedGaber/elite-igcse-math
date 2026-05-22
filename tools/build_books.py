@@ -35,14 +35,20 @@ BOOK_STYLE_SOURCE = ROOT / "tools" / "book_assets" / "elite_igcse.sty"
 A4_WIDTH = 595
 A4_HEIGHT = 842
 MARGIN = 42
-NAVY = (11 / 255, 37 / 255, 69 / 255)
-NAVY_DARK = (7 / 255, 24 / 255, 47 / 255)
-GOLD = (212 / 255, 175 / 255, 55 / 255)
-GOLD_LIGHT = (245 / 255, 230 / 255, 179 / 255)
-CREAM = (250 / 255, 246 / 255, 236 / 255)
+NAVY = (22 / 255, 27 / 255, 46 / 255)
+NAVY_DARK = (14 / 255, 18 / 255, 32 / 255)
+RED = (192 / 255, 57 / 255, 43 / 255)
+RED_DARK = (141 / 255, 40 / 255, 32 / 255)
+GREEN = (90 / 255, 128 / 255, 116 / 255)
+GOLD = (192 / 255, 138 / 255, 62 / 255)
+GOLD_LIGHT = (220 / 255, 184 / 255, 119 / 255)
+CREAM = (251 / 255, 246 / 255, 230 / 255)
+VELLUM = (235 / 255, 223 / 255, 196 / 255)
 WHITE = (1, 1, 1)
-INK = (28 / 255, 32 / 255, 38 / 255)
-MUTED = (85 / 255, 85 / 255, 85 / 255)
+INK = (26 / 255, 24 / 255, 21 / 255)
+MUTED = (90 / 255, 82 / 255, 88 / 255)
+LINE = (207 / 255, 201 / 255, 190 / 255)
+WATERMARK = (244 / 255, 245 / 255, 248 / 255)
 
 
 @dataclass(frozen=True)
@@ -235,6 +241,18 @@ UNICODE_REPLACEMENTS = {
 }
 
 
+def repair_mojibake(text: str) -> str:
+    if "Ã" not in text and "â" not in text:
+        return text
+    try:
+        repaired = text.encode("cp1252").decode("utf-8")
+    except (UnicodeEncodeError, UnicodeDecodeError):
+        return text
+    original_noise = text.count("Ã") + text.count("â")
+    repaired_noise = repaired.count("Ã") + repaired.count("â")
+    return repaired if repaired_noise < original_noise else text
+
+
 def load_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -247,13 +265,14 @@ def rel(path: Path) -> str:
 
 
 def clean_text(text: str) -> str:
+    text = repair_mojibake(text)
     for old, new in UNICODE_REPLACEMENTS.items():
         text = text.replace(old, new)
     return text.encode("latin-1", "replace").decode("latin-1")
 
 
 def solution_markdown_to_text(markdown: str) -> str:
-    text = markdown.replace("\r\n", "\n").replace("\r", "\n")
+    text = repair_mojibake(markdown).replace("\r\n", "\n").replace("\r", "\n")
     text = re.sub(r"\\\[(.*?)\\\]", lambda m: "\n" + m.group(1).strip() + "\n", text, flags=re.S)
     text = text.replace(r"\(", "").replace(r"\)", "")
     text = text.replace(r"\[", "").replace(r"\]", "")
@@ -309,7 +328,7 @@ def normalize_latex_text(text: str) -> str:
 
 
 def prepare_solution_markdown(markdown: str) -> str:
-    text = markdown.replace("\r\n", "\n").replace("\r", "\n")
+    text = repair_mojibake(markdown).replace("\r\n", "\n").replace("\r", "\n")
     for space in ("\u00a0", "\u2001", "\u2004", "\u2005", "\u2006", "\u2009", "\u200a", "\u202f"):
         text = text.replace(space, " ")
     text = re.sub(r"\*([A-Za-z])\*\*([A-Za-z])\*", r"*\1\2*", text)
@@ -510,11 +529,22 @@ def convert_solution_markdown(markdown: str) -> str:
             close_itemize()
             output.extend(
                 [
-                    r"\begin{tcolorbox}[enhanced,breakable,colback=brandcream!65,colframe=brandgold!55,arc=3pt,boxrule=0.6pt,left=9pt,right=9pt,top=6pt,bottom=6pt]",
+                    r"\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=brandline,arc=2pt,boxrule=0.5pt,left=9pt,right=9pt,top=6pt,bottom=6pt,borderline west={2pt}{0pt}{brandochre}]",
                     r"{\sffamily\bfseries\color{brandnavy}Topic check.} " + format_inline_latex(topic_match.group(1)),
                     r"\end{tcolorbox}",
                 ]
             )
+            continue
+
+        step_match = re.match(r"^\*\*Step\s+(\d+)\s*:?\s*(.*?)\*\*\s*(.*)$", stripped, flags=re.I)
+        if step_match:
+            close_itemize()
+            step_number = step_match.group(1)
+            step_title = step_match.group(2).strip() or "Method"
+            remainder = step_match.group(3).strip()
+            output.append(r"\solutionstep{" + latex_escape(step_number) + "}{" + format_inline_latex(step_title) + "}")
+            if remainder:
+                output.append(format_inline_latex(remainder) + r"\par")
             continue
 
         answer_match = re.match(r"^\*\*Answers?:\*\*\s*(.*)$", stripped)
@@ -770,8 +800,19 @@ def draw_badge(page: fitz.Page, rect: fitz.Rect, text: str) -> None:
     )
 
 
+def draw_page_watermark(page: fitz.Page) -> None:
+    draw_textbox(
+        page,
+        fitz.Rect(mm(16), mm(95), A4_WIDTH - mm(16), mm(190)),
+        "EA",
+        148,
+        WATERMARK,
+        fitz.TEXT_ALIGN_CENTER,
+    )
+
+
 def add_footer(page: fitz.Page, label: str, page_number: int) -> None:
-    page.draw_line((MARGIN, A4_HEIGHT - 36), (A4_WIDTH - MARGIN, A4_HEIGHT - 36), color=GOLD, width=0.55)
+    page.draw_line((MARGIN, A4_HEIGHT - 36), (A4_WIDTH - MARGIN, A4_HEIGHT - 36), color=LINE, width=0.55)
     draw_textbox(
         page,
         fitz.Rect(MARGIN, A4_HEIGHT - 31, A4_WIDTH - MARGIN - 70, A4_HEIGHT - 14),
@@ -856,27 +897,28 @@ def add_cover(doc: fitz.Document, spec: BookSpec, row_count: int) -> None:
 
 def add_topic_page(doc: fitz.Document, topic: str, count: int) -> None:
     page = doc.new_page(width=A4_WIDTH, height=A4_HEIGHT)
-    page.draw_rect(fitz.Rect(0, 0, A4_WIDTH, A4_HEIGHT), color=None, fill=CREAM)
-    page.draw_rect(fitz.Rect(0, 0, A4_WIDTH, mm(40)), color=None, fill=NAVY)
-    page.draw_rect(fitz.Rect(0, mm(40), A4_WIDTH, mm(42)), color=None, fill=GOLD)
+    page.draw_rect(fitz.Rect(0, 0, A4_WIDTH, A4_HEIGHT), color=None, fill=WHITE)
+    draw_page_watermark(page)
+    page.draw_rect(fitz.Rect(0, 0, A4_WIDTH, mm(34)), color=None, fill=NAVY)
+    page.draw_rect(fitz.Rect(0, mm(34), A4_WIDTH, mm(36)), color=None, fill=RED)
     draw_textbox(
         page,
-        fitz.Rect(MARGIN, mm(15), A4_WIDTH - MARGIN, mm(29)),
+        fitz.Rect(MARGIN, mm(13), A4_WIDTH - MARGIN, mm(27)),
         "ELITE IGCSE ACADEMY",
         13,
-        GOLD,
+        GOLD_LIGHT,
         fitz.TEXT_ALIGN_CENTER,
     )
 
     card = fitz.Rect(MARGIN, mm(112), A4_WIDTH - MARGIN, mm(196))
-    page.draw_rect(card, color=NAVY, fill=WHITE, width=0.85)
-    page.draw_rect(fitz.Rect(card.x0, card.y0, card.x1, card.y0 + 7), color=GOLD, fill=GOLD)
+    page.draw_rect(card, color=LINE, fill=WHITE, width=0.85)
+    page.draw_rect(fitz.Rect(card.x0, card.y0, card.x1, card.y0 + 7), color=RED, fill=RED)
     draw_textbox(
         page,
         fitz.Rect(card.x0 + 16, card.y0 + 24, card.x1 - 16, card.y0 + 42),
         "CLASSIFIED TOPIC",
         10,
-        GOLD,
+        RED,
         fitz.TEXT_ALIGN_CENTER,
     )
     draw_textbox(
@@ -926,44 +968,50 @@ def add_question_page(doc: fitz.Document, row: dict[str, Any], book_label: str, 
     session = str(row.get("session") or "")
     code = str(row.get("code") or "")
     page.draw_rect(fitz.Rect(0, 0, A4_WIDTH, A4_HEIGHT), color=None, fill=WHITE)
-    draw_textbox(
-        page,
-        fitz.Rect(MARGIN, 24, A4_WIDTH - MARGIN, 43),
-        book_label,
-        8.5,
-        MUTED,
-        fitz.TEXT_ALIGN_RIGHT,
-    )
-    header_rect = fitz.Rect(MARGIN, 52, A4_WIDTH - MARGIN, 116)
+    draw_page_watermark(page)
+    header_rect = fitz.Rect(0, 0, A4_WIDTH, mm(23))
     page.draw_rect(header_rect, color=NAVY, fill=NAVY, width=0)
-    page.draw_rect(fitz.Rect(header_rect.x0, header_rect.y1 - 3, header_rect.x1, header_rect.y1), color=GOLD, fill=GOLD)
+    page.draw_rect(fitz.Rect(header_rect.x0, header_rect.y1 - 3, header_rect.x1, header_rect.y1), color=RED, fill=RED)
     draw_textbox(
         page,
-        fitz.Rect(header_rect.x0 + 13, header_rect.y0 + 9, header_rect.x1 - 145, header_rect.y0 + 33),
+        fitz.Rect(MARGIN, header_rect.y0 + 13, header_rect.x1 - 170, header_rect.y0 + 33),
         "CLASSIFIED PROBLEM",
-        11.5,
+        10.5,
         WHITE,
     )
     draw_textbox(
         page,
-        fitz.Rect(header_rect.x0 + 13, header_rect.y0 + 33, header_rect.x1 - 13, header_rect.y0 + 51),
-        f"Topic: {topic}",
-        9.2,
+        fitz.Rect(MARGIN, header_rect.y0 + 34, header_rect.x1 - 170, header_rect.y0 + 53),
+        topic,
+        8.5,
         GOLD_LIGHT,
     )
     draw_textbox(
         page,
-        fitz.Rect(header_rect.x0 + 13, header_rect.y0 + 50, header_rect.x1 - 13, header_rect.y0 + 64),
+        fitz.Rect(header_rect.x1 - 170, header_rect.y0 + 18, header_rect.x1 - MARGIN, header_rect.y0 + 35),
         " | ".join(part for part in (paper, session, code) if part),
-        7.2,
-        WHITE,
+        7.0,
+        GOLD_LIGHT,
+        fitz.TEXT_ALIGN_RIGHT,
     )
-    draw_badge(page, fitz.Rect(header_rect.x1 - 116, header_rect.y0 + 13, header_rect.x1 - 62, header_rect.y0 + 30), f"Q#: {question}")
-    draw_badge(page, fitz.Rect(header_rect.x1 - 57, header_rect.y0 + 13, header_rect.x1 - 10, header_rect.y0 + 30), f"Marks: {marks}")
+    draw_textbox(
+        page,
+        fitz.Rect(MARGIN, mm(33), A4_WIDTH - MARGIN, mm(47)),
+        topic,
+        16,
+        NAVY,
+    )
+    page.draw_line((MARGIN, mm(50)), (A4_WIDTH - MARGIN, mm(50)), color=LINE, width=0.5)
+    draw_badge(page, fitz.Rect(A4_WIDTH - MARGIN - 114, mm(34), A4_WIDTH - MARGIN - 62, mm(41)), f"Q#: {question}")
+    draw_badge(page, fitz.Rect(A4_WIDTH - MARGIN - 57, mm(34), A4_WIDTH - MARGIN, mm(41)), f"Marks: {marks}")
 
     path = question_image_path(row)
     if path.exists():
-        page.insert_image(image_rect(path, 132), filename=str(path), keep_proportion=True)
+        rect = image_rect(path, mm(59))
+        frame = fitz.Rect(max(MARGIN, rect.x0 - 8), rect.y0 - 8, min(A4_WIDTH - MARGIN, rect.x1 + 8), rect.y1 + 8)
+        page.draw_rect(frame, color=LINE, fill=WHITE, width=0.55)
+        page.draw_rect(fitz.Rect(frame.x0, frame.y0, frame.x0 + 3, frame.y1), color=GOLD, fill=GOLD, width=0)
+        page.insert_image(rect, filename=str(path), keep_proportion=True)
     else:
         page.insert_textbox(
             fitz.Rect(MARGIN, 170, A4_WIDTH - MARGIN, 250),
@@ -1070,9 +1118,10 @@ def private_latex_preamble(spec: BookSpec, row_count: int) -> list[str]:
         r"  pdfauthor={Dr. Eslam Ahmed - Elite IGCSE Academy},",
         r"}",
         "",
-        r"\newtcolorbox{solutionbody}{enhanced,breakable,colback=white,colframe=brandnavy!18,arc=4pt,boxrule=0.8pt,left=11pt,right=11pt,top=10pt,bottom=10pt,before skip=7pt,after skip=8pt,borderline west={2pt}{0pt}{brandgold}}",
-        r"\newcommand{\finalanswerbox}[1]{\par\vspace{7pt}\noindent\begin{tcolorbox}[enhanced,breakable,colback=brandgoldlight!45,colframe=brandgold,arc=4pt,boxrule=1pt,left=10pt,right=10pt,top=7pt,bottom=7pt]{\sffamily\bfseries\color{brandnavy}FINAL ANSWER}\par #1\end{tcolorbox}\par}",
-        r"\newcommand{\solutionmetabox}[3]{\begin{tcolorbox}[enhanced,colback=brandcream!75,colframe=brandgold!70,arc=4pt,boxrule=0.7pt,left=10pt,right=10pt,top=7pt,bottom=7pt,before skip=7pt,after skip=8pt]{\sffamily\bfseries\color{brandnavy}#1 \quad\textbar\quad Question #2}\\[-1pt]{\sffamily\small\color{textgrey}#3}\end{tcolorbox}}",
+        r"\newtcolorbox{solutionbody}{enhanced,breakable,colback=white,colframe=brandline,arc=2pt,boxrule=0.6pt,left=11pt,right=11pt,top=10pt,bottom=10pt,before skip=7pt,after skip=8pt,borderline west={2pt}{0pt}{brandred}}",
+        r"\newcommand{\solutionstep}[2]{\par\vspace{6pt}\noindent\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=brandline,arc=2pt,boxrule=0.45pt,left=8pt,right=8pt,top=5pt,bottom=5pt,borderline west={2pt}{0pt}{brandred},before skip=4pt,after skip=3pt]\tikz[baseline=(n.base)]{\node[fill=brandred,text=white,font=\sffamily\bfseries\scriptsize,inner xsep=5pt,inner ysep=2.5pt] (n) {#1};}\hspace{6pt}{\sffamily\bfseries\color{brandnavy}#2}\end{tcolorbox}}",
+        r"\newcommand{\finalanswerbox}[1]{\par\vspace{7pt}\noindent\begin{tcolorbox}[enhanced,breakable,colback=brandcream!45,colframe=brandochre,arc=2pt,boxrule=0.8pt,left=10pt,right=10pt,top=7pt,bottom=7pt,borderline west={2pt}{0pt}{brandnavy}]{\sffamily\bfseries\color{brandnavy}FINAL ANSWER}\par #1\end{tcolorbox}\par}",
+        r"\newcommand{\solutionmetabox}[3]{\begin{tcolorbox}[enhanced,colback=white,colframe=brandline,arc=2pt,boxrule=0.55pt,left=10pt,right=10pt,top=7pt,bottom=7pt,before skip=7pt,after skip=8pt,borderline west={2pt}{0pt}{brandochre}]{\sffamily\bfseries\color{brandnavy}#1 \quad\textbar\quad Question #2}\\[-1pt]{\sffamily\small\color{textgrey}#3}\end{tcolorbox}}",
         r"\sloppy",
         r"\emergencystretch=3em",
         "",
@@ -1096,7 +1145,7 @@ def private_latex_preamble(spec: BookSpec, row_count: int) -> list[str]:
         r"  {\filright\Large{\color{brandgold}\textsc{Topic~\thechapter}}}",
         r"  {6pt}",
         r"  {\Huge\filright}",
-        r"  [\vspace{4pt}{\color{brandgold}\hrule height 2pt}\vspace{-6pt}]",
+        r"  [\vspace{4pt}{\color{brandred}\hrule height 2pt}\vspace{-6pt}]",
         r"\titlespacing*{\chapter}{0pt}{-30pt}{18pt}",
         "",
         r"\setlength{\parskip}{4pt plus 1pt}",
@@ -1106,11 +1155,11 @@ def private_latex_preamble(spec: BookSpec, row_count: int) -> list[str]:
         r"\pagestyle{empty}",
         r"\begin{titlepage}",
         r"\begin{tikzpicture}[remember picture,overlay]",
-        r"  \fill[brandcream] (current page.south west) rectangle (current page.north east);",
+        r"  \fill[white] (current page.south west) rectangle (current page.north east);",
         r"  \fill[brandnavy] (current page.north west) rectangle ([yshift=-75mm]current page.north east);",
-        r"  \fill[brandgold] ([yshift=-75mm]current page.north west) rectangle ([yshift=-78mm]current page.north east);",
+        r"  \fill[brandred] ([yshift=-75mm]current page.north west) rectangle ([yshift=-78mm]current page.north east);",
         r"  \fill[brandnavy] (current page.south west) rectangle ([yshift=42mm]current page.south east);",
-        r"  \fill[brandgold] ([yshift=42mm]current page.south west) rectangle ([yshift=45mm]current page.south east);",
+        r"  \fill[brandred] ([yshift=42mm]current page.south west) rectangle ([yshift=45mm]current page.south east);",
         r"  \node[anchor=north, yshift=-30mm] at (current page.north) {\begin{minipage}{170mm}\centering",
         r"    {\sffamily\bfseries\color{brandgold}\fontsize{30}{34}\selectfont ELITE IGCSE ACADEMY}\\[6pt]",
         r"    {\sffamily\itshape\color{white}\Large Student Worked Solutions}",

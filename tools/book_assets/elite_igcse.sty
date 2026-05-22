@@ -10,22 +10,27 @@
 \RequirePackage{etoolbox}
 \usetikzlibrary{calc,shapes.geometric}
 
-\definecolor{brandnavy}{HTML}{0B2545}
-\definecolor{brandnavydark}{HTML}{07182F}
-\definecolor{brandgold}{HTML}{D4AF37}
-\definecolor{brandgoldlight}{HTML}{F5E6B3}
-\definecolor{brandcream}{HTML}{FAF6EC}
-\definecolor{rulegrey}{HTML}{B8B8B8}
-\definecolor{textgrey}{HTML}{555555}
+\definecolor{brandnavy}{HTML}{161B2E}
+\definecolor{brandnavydark}{HTML}{0E1220}
+\definecolor{brandred}{HTML}{C0392B}
+\definecolor{brandreddeep}{HTML}{8D2820}
+\definecolor{brandgreen}{HTML}{5A8074}
+\definecolor{brandochre}{HTML}{C08A3E}
+\definecolor{brandgold}{HTML}{C08A3E}
+\definecolor{brandgoldlight}{HTML}{DCB877}
+\definecolor{brandcream}{HTML}{FBF6E6}
+\definecolor{brandvellum}{HTML}{EBDFC4}
+\definecolor{brandline}{HTML}{CFC9BE}
+\definecolor{rulegrey}{HTML}{CFC9BE}
+\definecolor{textgrey}{HTML}{5A5258}
 
 \newcommand{\elitepagewatermark}{%
   \begin{tikzpicture}[remember picture,overlay]
     \node[
-      rotate=35,
-      scale=4.2,
-      text=brandnavy!6,
-      font=\sffamily\bfseries
-    ] at (current page.center) {Dr.~Eslam Ahmed};
+      scale=8.8,
+      text=brandnavy!4,
+      font=\rmfamily
+    ] at (current page.center) {EA};
   \end{tikzpicture}%
 }
 \AddToHook{shipout/background}{\elitepagewatermark}
@@ -33,8 +38,8 @@
 \newcommand{\pillbadge}[2]{%
   \tikz[baseline=(b.base)]{
     \node[
-      fill=brandgold,
-      rounded corners=4pt,
+      fill=brandochre,
+      rounded corners=2pt,
       inner xsep=6pt, inner ysep=2.5pt,
       font=\sffamily\bfseries\footnotesize,
       text=brandnavydark
@@ -47,9 +52,9 @@
   \begin{tcolorbox}[
     enhanced,
     colback=brandnavy, colframe=brandnavy,
-    boxrule=0pt, arc=4pt,
+    boxrule=0pt, arc=0pt,
     left=12pt, right=12pt, top=8pt, bottom=8pt,
-    borderline south={2pt}{0pt}{brandgold},
+    borderline south={2pt}{0pt}{brandred},
   ]
     {\sffamily\bfseries\color{white}\large CLASSIFIED PROBLEM}\hfill
     \pillbadge{Paper:}{\,#1}\,\pillbadge{Session:}{\,#2}\,\pillbadge{Q\#:}{\,#3}\,\pillbadge{Marks:}{\,#4}\\[3pt]
@@ -61,7 +66,17 @@
 
 \newcommand{\problemimagepage}[1]{%
   \begin{center}
-    \includegraphics[width=\linewidth,height=0.77\textheight,keepaspectratio]{#1}
+    \begin{tcolorbox}[
+      enhanced,
+      colback=white,
+      colframe=brandline,
+      arc=1pt,
+      boxrule=0.5pt,
+      left=8pt,right=8pt,top=8pt,bottom=8pt,
+      borderline west={2pt}{0pt}{brandochre},
+    ]
+      \centering\includegraphics[width=\linewidth,height=0.70\textheight,keepaspectratio]{#1}
+    \end{tcolorbox}
   \end{center}
 }
 
@@ -69,13 +84,13 @@
   \noindent
   \begin{tcolorbox}[
     enhanced,
-    colback=brandcream, colframe=brandnavy,
-    boxrule=0pt, arc=3pt,
-    left=10pt, right=10pt, top=5pt, bottom=5pt,
-    borderline west={3pt}{0pt}{brandgold},
+    colback=brandred, colframe=brandred,
+    boxrule=0pt, arc=0pt,
+    left=12pt, right=12pt, top=8pt, bottom=8pt,
+    borderline south={2pt}{0pt}{brandnavy},
   ]
-    {\sffamily\bfseries\color{brandnavy}\large WORKED SOLUTION}\hfill
-    {\sffamily\footnotesize\color{textgrey}\itshape Dr.~Eslam Ahmed}
+    {\sffamily\bfseries\color{white}\large WORKED SOLUTION}\hfill
+    {\sffamily\footnotesize\color{brandgoldlight}\itshape Dr.~Eslam Ahmed}
   \end{tcolorbox}
 }
 
