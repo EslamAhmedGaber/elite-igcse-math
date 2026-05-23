@@ -7174,6 +7174,234 @@ body[data-page="admin"] .cloud-floating-widget {
   letter-spacing: 1px;
 }
 
+/* Certificate design variants */
+.elite-certificate[data-design="classic"] {
+  display: block;
+  border: 18px solid var(--cert-inkwell);
+  background:
+    linear-gradient(90deg, transparent 0 16px, var(--cert-accent) 16px 22px, transparent 22px),
+    var(--cert-paper);
+}
+
+.elite-certificate[data-design="classic"] .cert-rail {
+  display: none;
+}
+
+.elite-certificate[data-design="classic"] .cert-page {
+  width: 100%;
+  height: 100%;
+  padding: 50px 86px 46px;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(192, 138, 62, 0.10), transparent 44%),
+    var(--cert-paper);
+}
+
+.elite-certificate[data-design="classic"] .cert-frame {
+  inset: 24px;
+  border-color: rgba(22, 27, 46, 0.72);
+}
+
+.elite-certificate[data-design="classic"] .cert-frame::before,
+.elite-certificate[data-design="classic"] .cert-frame::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.elite-certificate[data-design="classic"] .cert-frame::before {
+  inset: 11px;
+  border: 1px solid rgba(22, 27, 46, 0.22);
+}
+
+.elite-certificate[data-design="classic"] .cert-frame::after {
+  inset: -4px;
+  border-top: 4px solid var(--cert-accent);
+  border-bottom: 4px solid var(--cert-accent);
+  opacity: 0.9;
+}
+
+.elite-certificate[data-design="classic"] .cert-head {
+  color: var(--cert-inkwell);
+}
+
+.elite-certificate[data-design="classic"] .cert-brand-line {
+  margin-top: 28px;
+}
+
+.elite-certificate[data-design="classic"] .cert-page h2 {
+  margin-top: 22px;
+  font-size: 64px;
+}
+
+.elite-certificate[data-design="classic"] .cert-phrase {
+  margin-top: 26px;
+}
+
+.elite-certificate[data-design="classic"] .cert-page h3 {
+  font-size: 92px;
+}
+
+.elite-certificate[data-design="classic"].name-long .cert-page h3 { font-size: 78px; }
+.elite-certificate[data-design="classic"].name-very-long .cert-page h3 { font-size: 64px; }
+
+.elite-certificate[data-design="classic"] .cert-description {
+  max-width: 720px;
+}
+
+.elite-certificate[data-design="classic"] .cert-evidence {
+  width: 70%;
+}
+
+.elite-certificate[data-design="classic"] .cert-seal {
+  background: rgba(251, 246, 230, 0.78);
+}
+
+.elite-certificate[data-design="honours"] {
+  position: relative;
+  display: block;
+  background: var(--cert-paper);
+}
+
+.elite-certificate[data-design="honours"] .cert-rail {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 4;
+  height: 126px;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 24px;
+  padding: 26px 64px;
+  text-align: left;
+}
+
+.elite-certificate[data-design="honours"] .cert-rail::before {
+  display: none;
+}
+
+.elite-certificate[data-design="honours"] .cert-rail::after {
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+}
+
+.elite-certificate[data-design="honours"] .cert-rail-mark {
+  margin-top: 0;
+  min-width: 70px;
+  font-size: 56px;
+}
+
+.elite-certificate[data-design="honours"] .cert-rail-title {
+  margin-top: 0;
+  max-width: 220px;
+  font-size: 15px;
+}
+
+.elite-certificate[data-design="honours"] .cert-rail-sub {
+  margin-top: 0;
+  margin-left: 8px;
+  padding-left: 24px;
+  border-left: 1px solid rgba(251, 246, 230, 0.24);
+}
+
+.elite-certificate[data-design="honours"] .cert-rail-code {
+  margin-top: 0;
+  margin-left: auto;
+}
+
+.elite-certificate[data-design="honours"] .cert-page {
+  width: 100%;
+  height: 100%;
+  padding: 150px 76px 42px;
+  background:
+    linear-gradient(180deg, rgba(22, 27, 46, 0.04), transparent 33%),
+    var(--cert-paper);
+}
+
+.elite-certificate[data-design="honours"] .cert-frame {
+  inset: 140px 30px 28px;
+  border-color: rgba(22, 27, 46, 0.45);
+}
+
+.elite-certificate[data-design="honours"] .cert-watermark {
+  inset: 172px 0 auto;
+  font-size: 360px;
+  opacity: 0.04;
+}
+
+.elite-certificate[data-design="honours"] .cert-head {
+  color: var(--cert-accent);
+}
+
+.elite-certificate[data-design="honours"] .cert-brand-line {
+  margin-top: 13px;
+}
+
+.elite-certificate[data-design="honours"] .cert-brand-line strong {
+  font-size: 32px;
+}
+
+.elite-certificate[data-design="honours"] .cert-page h2 {
+  margin-top: 12px;
+  font-size: 56px;
+}
+
+.elite-certificate[data-design="honours"] .cert-phrase {
+  margin-top: 18px;
+  font-size: 22px;
+}
+
+.elite-certificate[data-design="honours"] .cert-page h3 {
+  margin-top: 16px;
+  font-size: 84px;
+}
+
+.elite-certificate[data-design="honours"].name-long .cert-page h3 { font-size: 70px; }
+.elite-certificate[data-design="honours"].name-very-long .cert-page h3 { font-size: 58px; }
+
+.elite-certificate[data-design="honours"] .cert-name-rule {
+  margin-top: 12px;
+}
+
+.elite-certificate[data-design="honours"] .cert-description {
+  min-height: 52px;
+  margin-top: 15px;
+  font-size: 17px;
+}
+
+.elite-certificate[data-design="honours"] .cert-evidence {
+  width: 72%;
+  margin-top: 14px;
+}
+
+.elite-certificate[data-design="honours"] .cert-evidence div {
+  padding-top: 6px;
+}
+
+.elite-certificate[data-design="honours"] .cert-evidence strong {
+  font-size: 19px;
+}
+
+.elite-certificate[data-design="honours"] .cert-foot {
+  right: 70px;
+  bottom: 50px;
+  left: 70px;
+  grid-template-columns: 1fr 94px 1fr;
+}
+
+.elite-certificate[data-design="honours"] .cert-seal {
+  width: 96px;
+  height: 96px;
+  background: rgba(251, 246, 230, 0.86);
+}
+
+.elite-certificate[data-design="honours"] .cert-verify {
+  bottom: 26px;
+}
+
 @media (max-width: 1180px) {
   .admin-workspace {
     grid-template-columns: 1fr;
@@ -7188,11 +7416,9 @@ body[data-page="admin"] .cloud-floating-widget {
 }
 
 @media (min-width: 1181px) and (max-width: 1540px) {
-  .certificate-stage {
-    min-height: 680px;
-  }
+  .certificate-stage { min-height: 600px; }
   .certificate-stage .elite-certificate {
-    transform: scale(0.84);
+    transform: scale(0.72);
   }
 }
 

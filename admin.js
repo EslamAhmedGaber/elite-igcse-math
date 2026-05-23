@@ -15,6 +15,7 @@
     fields: {
       studentName: document.getElementById("certStudentName"),
       awardType: document.getElementById("certAwardType"),
+      design: document.getElementById("certDesign"),
       achievement: document.getElementById("certAchievement"),
       evidence: document.getElementById("certEvidence"),
       date: document.getElementById("certDate"),
@@ -28,6 +29,7 @@
   const samples = {
     studentName: "Layla Naguib Hassan",
     awardType: "Certificate of Achievement",
+    design: "split",
     achievement: "Higher-Tier Mathematics - Edexcel IGCSE 4MA1 - 2025/2026 cohort",
     evidence: "for sustained progress, consistent practice, and excellent mathematical discipline",
     number: "EA-2026-DRAFT",
@@ -60,6 +62,7 @@
   function updatePreview() {
     const name = els.fields.studentName.value.trim() || "Student Name";
     const title = els.fields.awardType.value || "Certificate of Achievement";
+    const design = els.fields.design.value || "split";
     const achievement = els.fields.achievement.value.trim() || samples.achievement;
     const evidence = els.fields.evidence.value.trim() || samples.evidence;
     const date = prettyDate(els.fields.date.value);
@@ -68,6 +71,7 @@
     const average = Math.max(0, Math.min(100, Number(els.fields.average.value || 0)));
 
     els.certificate.dataset.accent = els.fields.accent.value || "vermilion";
+    els.certificate.dataset.design = design;
     text("[data-cert-title]", title);
     text("[data-cert-student]", name);
     text("[data-cert-achievement]", achievement);
@@ -78,12 +82,14 @@
     text("[data-cert-papers]", String(papers));
     text("[data-cert-average]", `${Math.round(average)}%`);
     text("[data-cert-verify]", `CERTIFICATE NO. ${number} - ELITEIGCSE.COM/VERIFY`);
+    text("#certificateModeLabel", `A4 landscape preview - ${els.fields.design.options[els.fields.design.selectedIndex]?.text || "certificate"}`);
     fitStudentName(name);
   }
 
   function resetSample() {
     els.fields.studentName.value = samples.studentName;
     els.fields.awardType.value = samples.awardType;
+    els.fields.design.value = samples.design;
     els.fields.achievement.value = samples.achievement;
     els.fields.evidence.value = samples.evidence;
     els.fields.date.value = todayValue();
