@@ -6925,6 +6925,13 @@ body[data-page="admin"] .cloud-floating-widget {
   font: 500 12px "JetBrains Mono", ui-monospace, monospace;
 }
 
+.cert-rail-phone {
+  margin-top: 18px;
+  color: rgba(251, 246, 230, 0.82);
+  font: 600 11px "Inter Tight", Sora, system-ui, sans-serif;
+  letter-spacing: 1px;
+}
+
 .cert-page {
   position: relative;
   overflow: hidden;
@@ -7192,6 +7199,13 @@ body[data-page="admin"] .cloud-floating-widget {
   font: 800 9px "Inter Tight", Sora, system-ui, sans-serif;
   letter-spacing: 3px;
   text-transform: uppercase;
+}
+
+.cert-foot [data-cert-phone] {
+  margin-top: 5px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: none;
 }
 
 .cert-signature {

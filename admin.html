@@ -119,7 +119,11 @@
         </label>
 
         <label>Certificate number
-          <input id="certNumber" type="text" value="EA-2026-DRAFT">
+          <input id="certNumber" type="text" value="EA-2026-0001">
+        </label>
+
+        <label>Contact phone
+          <input id="certPhone" type="text" value="+20 112 000 9622">
         </label>
 
         <label>Accent colour
@@ -142,10 +146,11 @@
         <div class="certificate-actions">
           <button class="primary" type="submit">Update preview</button>
           <button type="button" id="printCertificateBtn">Save as PDF</button>
+          <button type="button" id="nextCertificateBtn">Next no.</button>
           <button type="button" id="resetCertificateBtn">Reset sample</button>
         </div>
 
-        <p class="admin-note">Draft mode only: this creates the PDF design. Official issue/verification records will be added in the next Firebase step.</p>
+        <p class="admin-note">PDF issue mode: certificate numbers use a real sequence on this browser. After saving one certificate, use Next no. for the next student.</p>
       </form>
 
       <section class="certificate-stage" aria-label="Certificate preview">
@@ -159,7 +164,8 @@
             <div class="cert-rail-mark">E<span>A</span></div>
             <div class="cert-rail-title">Elite IGCSE Academy</div>
             <div class="cert-rail-sub">Mathematics - Edexcel</div>
-            <div class="cert-rail-code" data-cert-number>EA-2026-DRAFT</div>
+            <div class="cert-rail-phone" data-cert-phone>+20 112 000 9622</div>
+            <div class="cert-rail-code" data-cert-number>EA-2026-0001</div>
           </aside>
 
           <div class="cert-page">
@@ -209,10 +215,11 @@
               <div>
                 <strong class="cert-signature">Dr. Eslam Ahmed</strong>
                 <span>Founder and Lead Instructor</span>
+                <span data-cert-phone>+20 112 000 9622</span>
               </div>
             </footer>
 
-            <div class="cert-verify" data-cert-verify>CERTIFICATE NO. EA-2026-DRAFT - ELITEIGCSE.COM/VERIFY</div>
+            <div class="cert-verify" data-cert-verify>CERTIFICATE NO. EA-2026-0001 - ELITEIGCSE.COM/VERIFY</div>
           </div>
         </article>
       </section>

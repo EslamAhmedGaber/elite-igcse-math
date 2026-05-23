@@ -11,6 +11,7 @@
     printBtn: document.getElementById("printCertificateBtn"),
     resetBtn: document.getElementById("resetCertificateBtn"),
     fitNameBtn: document.getElementById("fitNameBtn"),
+    nextNumberBtn: document.getElementById("nextCertificateBtn"),
     certificate: document.getElementById("eliteCertificate"),
     fields: {
       studentName: document.getElementById("certStudentName"),
@@ -20,6 +21,7 @@
       evidence: document.getElementById("certEvidence"),
       date: document.getElementById("certDate"),
       number: document.getElementById("certNumber"),
+      phone: document.getElementById("certPhone"),
       accent: document.getElementById("certAccent"),
       papers: document.getElementById("certPapers"),
       average: document.getElementById("certAverage")
@@ -32,7 +34,8 @@
     design: "elite",
     achievement: "Higher-Tier Mathematics - Edexcel IGCSE 4MA1 - 2025/2026 cohort",
     evidence: "for exceptional consistency, elegant exam technique, and outstanding mathematical discipline",
-    number: "EA-2026-DRAFT",
+    number: "EA-2026-0001",
+    phone: "+20 112 000 9622",
     accent: "auto",
     papers: "12",
     average: "84"
@@ -62,6 +65,8 @@
     }
   };
 
+  const CERTIFICATE_SEQUENCE_KEY = "eliteCertificateNextNumberV1";
+
   function todayValue() {
     return new Date().toISOString().slice(0, 10);
   }
@@ -75,6 +80,45 @@
   function text(selector, value) {
     const node = document.querySelector(selector);
     if (node) node.textContent = value;
+  }
+
+  function textAll(selector, value) {
+    document.querySelectorAll(selector).forEach((node) => { node.textContent = value; });
+  }
+
+  function certificateYearPrefix() {
+    return `EA-${new Date().getFullYear()}-`;
+  }
+
+  function formatCertificateNumber(sequence) {
+    const safeSequence = Math.max(1, Number(sequence) || 1);
+    return `${certificateYearPrefix()}${String(safeSequence).padStart(4, "0")}`;
+  }
+
+  function sequenceFromCertificateNumber(value) {
+    const match = String(value || "").match(/(\d+)\s*$/);
+    return match ? Math.max(1, Number(match[1]) || 1) : 1;
+  }
+
+  function readNextCertificateNumber() {
+    try {
+      const stored = Number(localStorage.getItem(CERTIFICATE_SEQUENCE_KEY));
+      return formatCertificateNumber(stored || 1);
+    } catch {
+      return samples.number;
+    }
+  }
+
+  function rememberIssuedCertificateNumber(value) {
+    try {
+      localStorage.setItem(CERTIFICATE_SEQUENCE_KEY, String(sequenceFromCertificateNumber(value) + 1));
+    } catch {}
+  }
+
+  function useNextCertificateNumber() {
+    rememberIssuedCertificateNumber(els.fields.number.value);
+    els.fields.number.value = readNextCertificateNumber();
+    updatePreview();
   }
 
   function currentDesignPreset() {
@@ -101,6 +145,7 @@
     const evidence = els.fields.evidence.value.trim() || preset.evidence;
     const date = prettyDate(els.fields.date.value);
     const number = els.fields.number.value.trim() || samples.number;
+    const phone = els.fields.phone.value.trim() || samples.phone;
     const papers = Math.max(0, Number(els.fields.papers.value || 0));
     const average = Math.max(0, Math.min(100, Number(els.fields.average.value || 0)));
     const accent = els.fields.accent.value === "auto" ? preset.accent : (els.fields.accent.value || preset.accent);
@@ -117,6 +162,7 @@
     text("[data-cert-date]", date);
     text("[data-cert-date-foot]", date);
     document.querySelectorAll("[data-cert-number]").forEach((node) => { node.textContent = number; });
+    textAll("[data-cert-phone]", phone);
     text("[data-cert-papers]", String(papers));
     text("[data-cert-average]", `${Math.round(average)}%`);
     text("[data-cert-verify]", `CERTIFICATE NO. ${number} - ELITEIGCSE.COM/VERIFY`);
@@ -132,7 +178,8 @@
     els.fields.achievement.value = samples.achievement;
     els.fields.evidence.value = samples.evidence;
     els.fields.date.value = todayValue();
-    els.fields.number.value = samples.number;
+    els.fields.number.value = readNextCertificateNumber();
+    els.fields.phone.value = samples.phone;
     els.fields.accent.value = samples.accent;
     els.fields.papers.value = samples.papers;
     els.fields.average.value = samples.average;
@@ -196,9 +243,11 @@
 
   els.printBtn.addEventListener("click", () => {
     updatePreview();
+    rememberIssuedCertificateNumber(els.fields.number.value);
     window.print();
   });
 
+  els.nextNumberBtn.addEventListener("click", useNextCertificateNumber);
   els.resetBtn.addEventListener("click", resetSample);
   els.fitNameBtn.addEventListener("click", () => fitStudentName(els.fields.studentName.value.trim()));
 
