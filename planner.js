@@ -1,13 +1,25 @@
 (function () {
   const questions = window.QUESTION_DATA || [];
-  const solved = new Set(JSON.parse(localStorage.getItem("solvedExpertiseQuestions") || "[]"));
-  const saved = JSON.parse(localStorage.getItem("eliteStudyPlanSettings") || "{}");
+  let solvedIds = [];
+  try {
+    const rawSolved = JSON.parse(localStorage.getItem("solvedExpertiseQuestions") || "[]");
+    solvedIds = Array.isArray(rawSolved) ? rawSolved : [];
+  } catch (err) {
+    solvedIds = [];
+  }
+  const solved = new Set(solvedIds);
+  let saved = {};
+  try {
+    saved = JSON.parse(localStorage.getItem("eliteStudyPlanSettings") || "{}") || {};
+  } catch (err) {
+    saved = {};
+  }
   const pathway = window.ELITE_PATHWAY?.mode || "linear";
 
   const els = {
     form: document.getElementById("plannerForm"),
     examDate: document.getElementById("examDate"),
-    targetGrade: document.getElementById("targetGrade"),
+    targetGrade: document.getElementById("plannerTargetGrade") || document.getElementById("targetGrade"),
     weeklyHours: document.getElementById("weeklyHours"),
     focusUnit: document.getElementById("focusUnit"),
     planLength: document.getElementById("planLength"),
@@ -18,6 +30,10 @@
     summary: document.getElementById("planSummary"),
     weeks: document.getElementById("planWeeks")
   };
+
+  if (!els.form || !els.examDate || !els.targetGrade || !els.weeklyHours || !els.focusUnit || !els.planLength || !els.confidence || !els.build || !els.print || !els.reset || !els.summary || !els.weeks) {
+    return;
+  }
 
   const unitOrder = pathway === "modular"
     ? ["Unit 1", "Unit 2"]
@@ -87,6 +103,7 @@
   }
 
   function populateUnits() {
+    els.focusUnit.innerHTML = `<option value="">Let the plan balance everything</option>`;
     unitStats().forEach((row) => {
       const option = document.createElement("option");
       option.value = row.unit;
@@ -110,6 +127,7 @@
   function saveSettings() {
     const settings = currentSettings();
     localStorage.setItem("eliteStudyPlanSettings", JSON.stringify(settings));
+    if (window.EliteCloud?.queueSync) window.EliteCloud.queueSync();
   }
 
   function currentSettings() {
@@ -162,6 +180,12 @@
     const exam = new Date(settings.examDate);
     const totalSolved = [...solved].filter((id) => questions.some((question) => question.id === id)).length;
 
+    if (!topics.length) {
+      els.summary.innerHTML = `<strong>Plan needs question data.</strong><p>Reload the page once the question bank has finished loading.</p>`;
+      els.weeks.innerHTML = "";
+      return;
+    }
+
     const weeks = Array.from({ length: weekCount }, (_, index) => {
       const weekTopics = Array.from({ length: tasksPerWeek }, (_, offset) => topics[(index * tasksPerWeek + offset) % topics.length]).filter(Boolean);
       const isLate = index >= Math.max(1, weekCount - 2);
@@ -212,6 +236,8 @@
 
   function printPlan() {
     if (!els.weeks.children.length) buildPlan();
+    document.body.classList.add("printing-study-plan");
+    window.addEventListener("afterprint", () => document.body.classList.remove("printing-study-plan"), { once: true });
     window.print();
   }
 

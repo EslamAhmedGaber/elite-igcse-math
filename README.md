@@ -38,10 +38,10 @@ Pages served:
 - `/` - Home (sales/landing)
 - `/practice.html` - Question bank tool (the daily-use page)
 - `/exam.html` - Free mock exam mode with timer, self-marking, and Mistake Box integration
-- `/progress.html` - Personal progress sheet, saved profile, topic tracker, backup import/export
+- `/progress.html` - Personal progress sheet, study plan, topic tracker, backup import/export
 - `/checkup.html` - Exam readiness check and next-action recommender
 - `/topics.html` - Topic roadmap
-- `/planner.html` - Study plan generator
+- `/planner.html` - Backward-compatible redirect to the merged Progress study plan
 - `/about.html` - Dr Eslam bio + testimonials + pricing
 - `/downloads.html` - Free PDF books
 
@@ -68,11 +68,11 @@ website/
 ├── index.html              # Home page
 ├── practice.html           # Question bank page
 ├── exam.html               # Mock exam mode
-├── progress.html           # Personal student progress sheet
+├── progress.html           # Personal student progress sheet and study plan
 ├── checkup.html            # Exam readiness check
 ├── topics.html             # Topic roadmap
 ├── notes.html              # Redirects old notes links to the practice bank
-├── planner.html            # Study plan generator
+├── planner.html            # Redirect to the merged Progress study plan
 ├── about.html              # About Dr Eslam
 ├── downloads.html          # PDF library
 │

@@ -23,6 +23,7 @@
   <script defer src="cloud-progress.js"></script>
   <script defer src="print-utils.js"></script>
   <script defer src="progress.js"></script>
+  <script defer src="planner.js"></script>
   <script defer src="lead.js"></script>
 </head>
 <body data-page="progress">
@@ -43,7 +44,6 @@
       <a href="progress.html" aria-current="page">Progress</a>
       <a href="topics.html">Topics</a>
       <a href="checkup.html">Check</a>
-      <a href="planner.html">Plan</a>
       <a href="about.html">About</a>
     </nav>
     <div class="site-cta">
@@ -56,11 +56,12 @@
   <main class="page page-progress">
     <section class="progress-hero" aria-labelledby="progressTitle">
       <div>
-        <span class="eyebrow">Student Progress Sheet</span>
-        <h1 id="progressTitle">Your live IGCSE progress workbook.</h1>
-        <p>Track classified questions, past paper scores, assignments, quizzes, deadlines, weak topics, and revision priorities in one place.</p>
+        <span class="eyebrow">Progress & Plan Workbook</span>
+        <h1 id="progressTitle">Your progress, plan, and next move in one place.</h1>
+        <p>Track classified questions, past paper scores, assignments, deadlines, weak topics, and build a weekly study plan from the same live data.</p>
         <div class="planner-hero-actions">
           <a class="button primary" href="practice.html">Continue solving</a>
+          <a class="button light" href="#planBuilder">Build study plan</a>
           <a class="button light" href="#topicSheet">Open topic sheet</a>
         </div>
       </div>
@@ -122,12 +123,34 @@
 
     <nav class="progress-workbook-nav" aria-label="Progress workbook shortcuts">
       <a href="#overviewPanel">Overview</a>
+      <a href="#planBuilder">Study plan</a>
       <a href="#topicSheet">Topic sheet</a>
       <a href="#paperTracker">Past paper log</a>
       <a href="#assignmentTracker">Assignments and quizzes</a>
       <a href="#revisionPriority">Revision priority</a>
       <a href="#backupPanel">Backup</a>
     </nav>
+
+    <section class="progress-command-strip" aria-label="Today workflow">
+      <article>
+        <span>Start here</span>
+        <strong>Build this week</strong>
+        <p>Turn your target, exam date, and weakest area into weekly tasks.</p>
+        <a href="#planBuilder">Open plan</a>
+      </article>
+      <article>
+        <span>Then solve</span>
+        <strong>Priority practice</strong>
+        <p>Use the weakest topics and Q20+ rows before adding new work.</p>
+        <a href="#revisionPriority">See priorities</a>
+      </article>
+      <article>
+        <span>After studying</span>
+        <strong>Log the result</strong>
+        <p>Record papers, assignments, scores, and deadlines in the same sheet.</p>
+        <a href="#paperTracker">Log work</a>
+      </article>
+    </section>
 
     <section class="cloud-sync-panel" id="cloudSyncPanel" aria-labelledby="cloudSyncTitle">
       <div>
@@ -150,16 +173,16 @@
         <p>Name, target grade, exam session, and weekly target personalize the dashboard.</p>
       </article>
       <article>
-        <strong>2. Log results</strong>
-        <p>Use dropdowns for past papers, assignments, quizzes, topics, and difficulty.</p>
+        <strong>2. Build plan</strong>
+        <p>Generate weekly tasks from the same target, weak topic, and solved-question data.</p>
       </article>
       <article>
-        <strong>3. Follow priorities</strong>
-        <p>The sheet highlights urgent topics, overdue work, and the next best practice move.</p>
+        <strong>3. Log results</strong>
+        <p>Use dropdowns for papers, assignments, quizzes, topics, difficulty, and deadlines.</p>
       </article>
       <article>
-        <strong>4. Sync safely</strong>
-        <p>Google login keeps the workbook available across devices.</p>
+        <strong>4. Follow priorities</strong>
+        <p>The workbook highlights urgent topics, overdue work, and the next best move.</p>
       </article>
     </section>
 
@@ -200,6 +223,77 @@
         </div>
         <div id="nextMoveCards" class="next-move-cards"></div>
       </section>
+    </section>
+
+    <section class="progress-plan-panel planner-builder" id="planBuilder" aria-labelledby="planBuilderTitle">
+      <div class="sheet-head">
+        <div>
+          <span class="eyebrow">Study Plan</span>
+          <h2 id="planBuilderTitle">Build the next weeks from your real progress.</h2>
+          <p>Choose the exam date, target grade, weekly time, and focus area. The plan uses weaker topics first, then adds Q20+ training near the exam.</p>
+        </div>
+        <div class="plan-mini-brief" aria-label="Plan rules">
+          <strong>Plan logic</strong>
+          <span>Weak topics first</span>
+          <span>Q20+ for high targets</span>
+          <span>Print-ready weekly checklist</span>
+        </div>
+      </div>
+      <form class="planner-form progress-plan-form" id="plannerForm">
+        <label>Exam date
+          <input id="examDate" type="date">
+        </label>
+        <label>Target grade
+          <select id="plannerTargetGrade">
+            <option value="9">Grade 9 / A*</option>
+            <option value="8">Grade 8 / A*</option>
+            <option value="7">Grade 7 / A</option>
+            <option value="6">Grade 6 / B</option>
+          </select>
+        </label>
+        <label>Hours per week
+          <select id="weeklyHours">
+            <option value="3">3 hours - light</option>
+            <option value="5" selected>5 hours - steady</option>
+            <option value="8">8 hours - serious</option>
+            <option value="12">12 hours - exam sprint</option>
+          </select>
+        </label>
+        <label>Weakest chapter or unit
+          <select id="focusUnit">
+            <option value="">Let the plan balance everything</option>
+          </select>
+        </label>
+        <label>Plan length
+          <select id="planLength">
+            <option value="auto" selected>Automatic until exam</option>
+            <option value="4">4 weeks</option>
+            <option value="6">6 weeks</option>
+            <option value="8">8 weeks</option>
+            <option value="12">12 weeks</option>
+          </select>
+        </label>
+        <label>Confidence today
+          <select id="confidence">
+            <option value="low">Low - start gently</option>
+            <option value="medium" selected>Medium - normal pace</option>
+            <option value="high">High - push me</option>
+          </select>
+        </label>
+      </form>
+      <div class="planner-actions">
+        <button class="primary" id="buildPlanBtn" type="button">Build study plan</button>
+        <button id="printPlanBtn" type="button">Print plan</button>
+        <button id="resetPlanBtn" type="button">Reset</button>
+      </div>
+    </section>
+
+    <section class="progress-plan-output planner-output" aria-live="polite" aria-label="Generated study plan">
+      <div class="plan-summary" id="planSummary">
+        <strong>Your plan is ready to build.</strong>
+        <p>Choose your settings, then build a weekly route. You can print it or keep it saved in this browser.</p>
+      </div>
+      <div class="plan-weeks" id="planWeeks"></div>
     </section>
 
     <section class="progress-priority-panel" id="revisionPriority" aria-labelledby="priorityTitle">
@@ -505,7 +599,7 @@
         <p><a href="progress.html">My progress</a></p>
         <p><a href="topics.html">Topic roadmap</a></p>
         <p><a href="checkup.html">Readiness check</a></p>
-        <p><a href="planner.html">Study plan</a></p>
+        <p><a href="progress.html#planBuilder">Study plan</a></p>
         <p><a href="downloads.html">Downloads</a></p>
       </div>
     </div>

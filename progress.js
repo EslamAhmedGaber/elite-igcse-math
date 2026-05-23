@@ -85,7 +85,7 @@
   function readJSON(key, fallback) {
     try {
       const value = JSON.parse(localStorage.getItem(key) || "null");
-      return value | fallback;
+      return value ?? fallback;
     } catch (err) {
       return fallback;
     }
@@ -460,7 +460,7 @@
         <span>Weekly target</span>
         <strong>${weekly} questions</strong>
         <p>At this pace, the remaining full bank is about ${weeksLeft} week${weeksLeft === 1 ? "" : "s"} of work.</p>
-        <a class="button light" href="planner.html">Build weekly plan</a>
+        <a class="button light" href="#planBuilder">Build weekly plan</a>
       </article>`,
       `<article>
         <span>Exam finishers</span>

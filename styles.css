@@ -1179,7 +1179,42 @@ p { margin: 4px 0 0; color: var(--muted); }
 
 @media print {
   body[data-page="practice"] > *:not(.print-area),
-  body[data-page="progress"] > *:not(.print-area) { display: none !important; }
+  body[data-page="progress"]:not(.printing-study-plan) > *:not(.print-area) { display: none !important; }
+  body[data-page="progress"].printing-study-plan {
+    background: #fff;
+    padding-bottom: 0;
+  }
+  body[data-page="progress"].printing-study-plan .site-header,
+  body[data-page="progress"].printing-study-plan .site-footer,
+  body[data-page="progress"].printing-study-plan .mobile-bottom-nav,
+  body[data-page="progress"].printing-study-plan .progress-hero,
+  body[data-page="progress"].printing-study-plan .progress-dashboard,
+  body[data-page="progress"].printing-study-plan .progress-workbook-nav,
+  body[data-page="progress"].printing-study-plan .progress-command-strip,
+  body[data-page="progress"].printing-study-plan .cloud-sync-panel,
+  body[data-page="progress"].printing-study-plan .progress-sheet-guide,
+  body[data-page="progress"].printing-study-plan .progress-two-col,
+  body[data-page="progress"].printing-study-plan .progress-plan-panel,
+  body[data-page="progress"].printing-study-plan .progress-priority-panel,
+  body[data-page="progress"].printing-study-plan .progress-sheet-panel,
+  body[data-page="progress"].printing-study-plan .progress-log-grid,
+  body[data-page="progress"].printing-study-plan .progress-backup-panel,
+  body[data-page="progress"].printing-study-plan .print-area {
+    display: none !important;
+  }
+  body[data-page="progress"].printing-study-plan .page,
+  body[data-page="progress"].printing-study-plan .progress-plan-output {
+    display: block !important;
+  }
+  body[data-page="progress"].printing-study-plan .page {
+    max-width: none;
+    padding: 0;
+  }
+  body[data-page="progress"].printing-study-plan .progress-plan-output {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+  }
   .print-area { display: block; }
   .print-paper-brand,
   .print-brand-mark,
@@ -5105,6 +5140,7 @@ body.pathway-unset .site-header .site-cta {
 .progress-sheet-panel .eyebrow,
 .progress-profile-panel .eyebrow,
 .progress-next-panel .eyebrow,
+.progress-plan-panel .eyebrow,
 .progress-entry-panel .eyebrow,
 .progress-priority-panel .eyebrow,
 .progress-backup-panel .eyebrow {
@@ -5176,10 +5212,13 @@ body.pathway-unset .site-header .site-cta {
 }
 
 .progress-dashboard article,
+.progress-command-strip article,
 .cloud-sync-panel,
 .progress-sheet-guide article,
 .progress-profile-panel,
 .progress-next-panel,
+.progress-plan-panel,
+.progress-plan-output,
 .progress-sheet-panel,
 .progress-entry-panel,
 .progress-priority-panel,
@@ -5215,6 +5254,54 @@ body.pathway-unset .site-header .site-cta {
   margin: 8px 0 0;
   color: var(--muted);
   font-size: 13px;
+}
+
+.progress-command-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.progress-command-strip article {
+  display: grid;
+  gap: 9px;
+  min-height: 164px;
+  padding: 20px;
+  background: linear-gradient(180deg, #ffffff, #fbfaf7);
+}
+
+.progress-command-strip span {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.progress-command-strip strong {
+  color: var(--navy);
+  font-size: 20px;
+  line-height: 1.15;
+}
+
+.progress-command-strip p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.progress-command-strip a {
+  width: fit-content;
+  align-self: end;
+  min-height: 34px;
+  padding: 8px 12px;
+  border-radius: 9px;
+  background: var(--navy);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  text-decoration: none;
 }
 
 .progress-workbook-nav {
@@ -5339,6 +5426,7 @@ body.pathway-unset .site-header .site-cta {
 
 .progress-profile-panel,
 .progress-next-panel,
+.progress-plan-panel,
 .progress-sheet-panel,
 .progress-entry-panel,
 .progress-priority-panel,
@@ -5357,6 +5445,7 @@ body.pathway-unset .site-header .site-cta {
 
 .progress-profile-panel h2,
 .progress-next-panel h2,
+.progress-plan-panel h2,
 .progress-sheet-panel h2,
 .progress-entry-panel h2,
 .progress-priority-panel h2,
@@ -5368,6 +5457,7 @@ body.pathway-unset .site-header .site-cta {
 
 .progress-profile-panel p,
 .progress-next-panel p,
+.progress-plan-panel p,
 .progress-sheet-panel p,
 .progress-entry-panel p,
 .progress-priority-panel p,
@@ -5469,6 +5559,39 @@ body.pathway-unset .site-header .site-cta {
 .next-move-cards .button {
   justify-content: center;
   padding: 10px 14px;
+}
+
+.progress-plan-panel {
+  display: grid;
+  gap: 18px;
+}
+
+.progress-plan-panel .sheet-head {
+  margin-bottom: 0;
+}
+
+.plan-mini-brief {
+  display: grid;
+  gap: 8px;
+  padding: 18px;
+  border: 1px solid #ebdfc4;
+  border-radius: 16px;
+  background: #fbf6e6;
+}
+
+.plan-mini-brief strong {
+  color: var(--navy);
+  font-size: 16px;
+}
+
+.plan-mini-brief span {
+  color: var(--accent-dark);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.progress-plan-output {
+  padding: 30px;
 }
 
 .sheet-head {
@@ -5802,6 +5925,7 @@ body.pathway-unset .site-header .site-cta {
 @media (max-width: 980px) {
   .progress-hero,
   .cloud-sync-panel,
+  .progress-command-strip,
   .progress-two-col,
   .progress-log-grid,
   .progress-backup-panel,
@@ -5820,6 +5944,8 @@ body.pathway-unset .site-header .site-cta {
   .progress-hero,
   .progress-profile-panel,
   .progress-next-panel,
+  .progress-plan-panel,
+  .progress-plan-output,
   .progress-sheet-panel,
   .progress-entry-panel,
   .progress-priority-panel,
