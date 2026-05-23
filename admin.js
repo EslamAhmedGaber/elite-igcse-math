@@ -9,6 +9,7 @@
     studio: document.getElementById("certificateStudio"),
     form: document.getElementById("certificateForm"),
     printBtn: document.getElementById("printCertificateBtn"),
+    pngBtn: document.getElementById("downloadCertificatePngBtn"),
     resetBtn: document.getElementById("resetCertificateBtn"),
     fitNameBtn: document.getElementById("fitNameBtn"),
     nextNumberBtn: document.getElementById("nextCertificateBtn"),
@@ -23,6 +24,9 @@
       number: document.getElementById("certNumber"),
       phone: document.getElementById("certPhone"),
       accent: document.getElementById("certAccent"),
+      paper: document.getElementById("certPaper"),
+      frameColor: document.getElementById("certFrameColor"),
+      nameColor: document.getElementById("certNameColor"),
       papers: document.getElementById("certPapers"),
       average: document.getElementById("certAverage")
     }
@@ -31,50 +35,72 @@
   const samples = {
     studentName: "Layla Naguib Hassan",
     awardType: "Certificate of Achievement",
-    design: "diploma",
+    design: "story",
     achievement: "Higher-Tier Mathematics - Edexcel IGCSE 4MA1 - 2025/2026 cohort",
     evidence: "for exceptional consistency, elegant exam technique, and outstanding mathematical discipline",
     number: "EA-2026-0001",
     phone: "+20 112 000 9622",
     accent: "auto",
+    paper: "auto",
+    frameColor: "auto",
+    nameColor: "auto",
     papers: "12",
     average: "84"
   };
 
   const DESIGN_PRESETS = {
+    story: {
+      layout: "story",
+      accent: "vermilion",
+      paper: "blush",
+      frame: "vermilion",
+      nameColor: "vermilion",
+      evidence: "for beautiful effort, brave practice, and a learning journey worth celebrating",
+      exportName: "Story-Spark"
+    },
     diploma: {
-      stars: 9,
-      label: "Elite Distinction",
       layout: "diploma",
       accent: "vermilion",
+      paper: "inkwell",
+      frame: "vermilion",
+      nameColor: "vermilion",
+      exportName: "Diploma-Inkwell",
       evidence: "for exceptional consistency, elegant exam technique, and outstanding mathematical discipline"
     },
     banner: {
-      stars: 8,
-      label: "High Distinction",
       layout: "banner",
       accent: "vermilion",
+      paper: "cream",
+      frame: "vermilion",
+      nameColor: "inkwell",
+      exportName: "Banner-Vermilion",
       evidence: "for strong performance, careful revision habits, and reliable progress under exam conditions"
     },
     elite: {
-      stars: 9,
-      label: "Elite Distinction",
       layout: "honours",
       accent: "vermilion",
+      paper: "cream",
+      frame: "inkwell",
+      nameColor: "inkwell",
+      exportName: "Elite-Signature",
       evidence: "for exceptional consistency, elegant exam technique, and outstanding mathematical discipline"
     },
     academy: {
-      stars: 8,
-      label: "High Distinction",
       layout: "classic",
       accent: "verdigris",
+      paper: "cream",
+      frame: "verdigris",
+      nameColor: "inkwell",
+      exportName: "Academy-Frame",
       evidence: "for strong performance, careful revision habits, and reliable progress under exam conditions"
     },
     merit: {
-      stars: 7,
-      label: "Merit Award",
       layout: "split",
       accent: "ochre",
+      paper: "cream",
+      frame: "inkwell",
+      nameColor: "inkwell",
+      exportName: "Merit-Editorial",
       evidence: "for determined practice, steady improvement, and a committed Elite IGCSE learning routine"
     }
   };
@@ -98,6 +124,18 @@
 
   function textAll(selector, value) {
     document.querySelectorAll(selector).forEach((node) => { node.textContent = value; });
+  }
+
+  function selectedOrDefault(field, fallback) {
+    return field.value === "auto" ? fallback : (field.value || fallback);
+  }
+
+  function slug(value) {
+    return String(value || "certificate")
+      .trim()
+      .replace(/[^a-z0-9]+/gi, "-")
+      .replace(/^-+|-+$/g, "")
+      .slice(0, 80) || "certificate";
   }
 
   function certificateYearPrefix() {
@@ -136,13 +174,7 @@
   }
 
   function currentDesignPreset() {
-    return DESIGN_PRESETS[els.fields.design.value] || DESIGN_PRESETS.diploma;
-  }
-
-  function renderStars(preset) {
-    const starHolder = document.querySelector("[data-cert-stars]");
-    if (!starHolder) return;
-    starHolder.innerHTML = Array.from({ length: preset.stars }, () => "<i>&#9733;</i>").join("");
+    return DESIGN_PRESETS[els.fields.design.value] || DESIGN_PRESETS.story;
   }
 
   function fitStudentName(name) {
@@ -163,13 +195,17 @@
     const papers = Math.max(0, Number(els.fields.papers.value || 0));
     const average = Math.max(0, Math.min(100, Number(els.fields.average.value || 0)));
     const accent = els.fields.accent.value === "auto" ? preset.accent : (els.fields.accent.value || preset.accent);
+    const paper = selectedOrDefault(els.fields.paper, preset.paper);
+    const frame = selectedOrDefault(els.fields.frameColor, preset.frame);
+    const nameColor = selectedOrDefault(els.fields.nameColor, preset.nameColor);
 
     els.certificate.dataset.accent = accent;
     els.certificate.dataset.design = preset.layout;
-    els.certificate.dataset.tier = els.fields.design.value || "elite";
+    els.certificate.dataset.tier = els.fields.design.value || "story";
+    els.certificate.dataset.paper = paper;
+    els.certificate.dataset.frame = frame;
+    els.certificate.dataset.nameColor = nameColor;
     text("[data-cert-title]", title);
-    text("[data-cert-star-count]", String(preset.stars));
-    text("[data-cert-star-label]", preset.label);
     text("[data-cert-student]", name);
     text("[data-cert-achievement]", achievement);
     text("[data-cert-evidence]", evidence);
@@ -180,8 +216,8 @@
     text("[data-cert-papers]", String(papers));
     text("[data-cert-average]", `${Math.round(average)}%`);
     text("[data-cert-verify]", `CERTIFICATE NO. ${number} - ELITEIGCSE.COM/VERIFY`);
-    text("#certificateModeLabel", `A4 landscape preview - ${els.fields.design.options[els.fields.design.selectedIndex]?.text || "certificate"}`);
-    renderStars(preset);
+    const previewMode = preset.layout === "story" ? "Story portrait preview" : "A4 landscape preview";
+    text("#certificateModeLabel", `${previewMode} - ${els.fields.design.options[els.fields.design.selectedIndex]?.text || "certificate"}`);
     fitStudentName(name);
   }
 
@@ -195,6 +231,9 @@
     els.fields.number.value = readNextCertificateNumber();
     els.fields.phone.value = samples.phone;
     els.fields.accent.value = samples.accent;
+    els.fields.paper.value = samples.paper;
+    els.fields.frameColor.value = samples.frameColor;
+    els.fields.nameColor.value = samples.nameColor;
     els.fields.papers.value = samples.papers;
     els.fields.average.value = samples.average;
     updatePreview();
@@ -204,8 +243,63 @@
     const preset = currentDesignPreset();
     els.fields.evidence.value = preset.evidence;
     if (/^[789]-Star /.test(els.fields.awardType.value)) els.fields.awardType.value = samples.awardType;
-    if (!els.fields.accent.value) els.fields.accent.value = "auto";
+    els.fields.accent.value = "auto";
+    els.fields.paper.value = "auto";
+    els.fields.frameColor.value = "auto";
+    els.fields.nameColor.value = "auto";
     updatePreview();
+  }
+
+  async function downloadCertificatePng() {
+    updatePreview();
+    if (!window.htmlToImage?.toPng) {
+      window.alert("PNG export is still loading. Please wait a few seconds and try again.");
+      return;
+    }
+
+    els.pngBtn.disabled = true;
+    els.pngBtn.textContent = "Preparing PNG...";
+    try {
+      await document.fonts.ready;
+      const preset = currentDesignPreset();
+      const exportWidth = els.certificate.offsetWidth;
+      const exportHeight = els.certificate.offsetHeight;
+      const dataUrl = await window.htmlToImage.toPng(els.certificate, {
+        cacheBust: true,
+        width: exportWidth,
+        height: exportHeight,
+        pixelRatio: 2,
+        backgroundColor: getComputedStyle(els.certificate).backgroundColor,
+        style: {
+          transform: "none",
+          transformOrigin: "top left"
+        }
+      });
+      const link = document.createElement("a");
+      link.href = dataUrl;
+      link.download = `${els.fields.number.value.trim() || samples.number}-${preset.exportName || "Certificate"}-${slug(els.fields.studentName.value)}.png`;
+      link.click();
+    } catch (error) {
+      console.error(error);
+      window.alert("PNG export could not be prepared. Please try again after the page finishes loading.");
+    } finally {
+      els.pngBtn.disabled = false;
+      els.pngBtn.textContent = "Download PNG";
+    }
+  }
+
+  function setPrintPageSize() {
+    let style = document.getElementById("certificatePrintPageSize");
+    if (!style) {
+      style = document.createElement("style");
+      style.id = "certificatePrintPageSize";
+      document.head.appendChild(style);
+    }
+    const isStory = currentDesignPreset().layout === "story";
+    document.body.classList.toggle("is-story-print", isStory);
+    style.textContent = isStory
+      ? "@page { size: 108mm 192mm; margin: 0; }"
+      : "@page { size: A4 landscape; margin: 0; }";
   }
 
   function setAccess(state) {
@@ -254,10 +348,12 @@
   });
 
   els.fields.design.addEventListener("change", applyDesignDefaults);
+  els.pngBtn.addEventListener("click", downloadCertificatePng);
 
   els.printBtn.addEventListener("click", () => {
     updatePreview();
     rememberIssuedCertificateNumber(els.fields.number.value);
+    setPrintPageSize();
     window.print();
   });
 
@@ -269,5 +365,9 @@
     resetSample();
     const cloud = window.EliteCloud?.state ? window.EliteCloud.state() : null;
     if (cloud) setAccess(cloud);
+  });
+
+  window.addEventListener("afterprint", () => {
+    document.body.classList.remove("is-story-print");
   });
 })();

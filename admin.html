@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="styles.css">
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
   <script defer src="admin.js"></script>
   <script defer src="lead.js"></script>
 </head>
@@ -100,6 +101,7 @@
 
         <label>Design style
           <select id="certDesign">
+            <option value="story">Story Spark - Portrait</option>
             <option value="diploma">The Diploma - Inkwell</option>
             <option value="banner">The Banner - Vermilion</option>
             <option value="elite">Elite Signature</option>
@@ -137,6 +139,37 @@
           </select>
         </label>
 
+        <label>Background tone
+          <select id="certPaper">
+            <option value="auto">Auto by design</option>
+            <option value="cream">Elite cream</option>
+            <option value="pearl">Pearl white</option>
+            <option value="blush">Soft blush</option>
+            <option value="inkwell">Inkwell navy</option>
+          </select>
+        </label>
+
+        <label>Frame / banner colour
+          <select id="certFrameColor">
+            <option value="auto">Auto by design</option>
+            <option value="inkwell">Inkwell navy</option>
+            <option value="vermilion">Vermilion</option>
+            <option value="verdigris">Verdigris</option>
+            <option value="ochre">Ochre</option>
+          </select>
+        </label>
+
+        <label>Name colour
+          <select id="certNameColor">
+            <option value="auto">Auto by design</option>
+            <option value="inkwell">Inkwell navy</option>
+            <option value="vermilion">Vermilion</option>
+            <option value="verdigris">Verdigris</option>
+            <option value="ochre">Ochre</option>
+            <option value="paper">Cream/white</option>
+          </select>
+        </label>
+
         <label>Papers completed
           <input id="certPapers" type="number" min="0" step="1" value="12">
         </label>
@@ -148,6 +181,7 @@
         <div class="certificate-actions">
           <button class="primary" type="submit">Update preview</button>
           <button type="button" id="printCertificateBtn">Save as PDF</button>
+          <button type="button" id="downloadCertificatePngBtn">Download PNG</button>
           <button type="button" id="nextCertificateBtn">Next no.</button>
           <button type="button" id="resetCertificateBtn">Reset sample</button>
         </div>
@@ -161,7 +195,7 @@
           <button type="button" id="fitNameBtn">Auto-fit name</button>
         </div>
 
-        <article class="elite-certificate" id="eliteCertificate" data-accent="vermilion" data-design="diploma" data-tier="diploma">
+        <article class="elite-certificate" id="eliteCertificate" data-accent="vermilion" data-design="story" data-tier="story" data-paper="blush" data-frame="vermilion" data-name-color="vermilion">
           <aside class="cert-rail">
             <div class="cert-rail-mark">E<span>A</span></div>
             <div class="cert-rail-title">Elite IGCSE Academy</div>
@@ -180,12 +214,6 @@
 
             <div class="cert-brand-line">
               <span></span><i></i><strong>EA</strong><i></i><span></span>
-            </div>
-
-            <div class="cert-star-band" data-cert-star-band>
-              <strong data-cert-star-count>9</strong>
-              <span data-cert-stars><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></span>
-              <em data-cert-star-label>Elite Distinction</em>
             </div>
 
             <h2 data-cert-title>Certificate of Achievement</h2>
