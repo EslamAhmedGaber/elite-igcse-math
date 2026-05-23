@@ -31,7 +31,7 @@
   const samples = {
     studentName: "Layla Naguib Hassan",
     awardType: "Certificate of Achievement",
-    design: "elite",
+    design: "diploma",
     achievement: "Higher-Tier Mathematics - Edexcel IGCSE 4MA1 - 2025/2026 cohort",
     evidence: "for exceptional consistency, elegant exam technique, and outstanding mathematical discipline",
     number: "EA-2026-0001",
@@ -42,6 +42,20 @@
   };
 
   const DESIGN_PRESETS = {
+    diploma: {
+      stars: 9,
+      label: "Elite Distinction",
+      layout: "diploma",
+      accent: "vermilion",
+      evidence: "for exceptional consistency, elegant exam technique, and outstanding mathematical discipline"
+    },
+    banner: {
+      stars: 8,
+      label: "High Distinction",
+      layout: "banner",
+      accent: "vermilion",
+      evidence: "for strong performance, careful revision habits, and reliable progress under exam conditions"
+    },
     elite: {
       stars: 9,
       label: "Elite Distinction",
@@ -122,7 +136,7 @@
   }
 
   function currentDesignPreset() {
-    return DESIGN_PRESETS[els.fields.design.value] || DESIGN_PRESETS.elite;
+    return DESIGN_PRESETS[els.fields.design.value] || DESIGN_PRESETS.diploma;
   }
 
   function renderStars(preset) {
