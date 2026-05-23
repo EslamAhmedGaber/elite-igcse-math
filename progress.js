@@ -621,16 +621,16 @@
     els.paperWrongQuestions.value = "";
     els.paperNotes.value = "";
     els.saveStatus.textContent = "Past paper attempt saved.";
-    if (window.EliteTrackerV2?.refresh) window.EliteTrackerV2.refresh();
     render();
+    if (window.EliteTrackerV2?.refresh) window.EliteTrackerV2.refresh();
   }
 
   function deletePaperAttempt(id) {
     paperAttempts = paperAttempts.filter((attempt) => attempt.id !== id);
     writeJSON(PAPER_ATTEMPTS_KEY, paperAttempts);
     if (window.EliteCloud?.queueSync) window.EliteCloud.queueSync();
-    if (window.EliteTrackerV2?.refresh) window.EliteTrackerV2.refresh();
     render();
+    if (window.EliteTrackerV2?.refresh) window.EliteTrackerV2.refresh();
   }
 
   function renderPaperDashboard() {

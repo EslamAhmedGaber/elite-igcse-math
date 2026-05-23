@@ -77,6 +77,28 @@
     if (days < 0) return "Missing";
     return "Pending";
   }
+  function scorePercent(rawScore) {
+    const value = Number(rawScore);
+    if (!Number.isFinite(value)) return null;
+    return Math.max(0, Math.min(100, Math.round(value)));
+  }
+  function average(values) {
+    const clean = values.filter((value) => value !== null && value !== undefined && Number.isFinite(value));
+    if (!clean.length) return null;
+    return Math.round(clean.reduce((sum, value) => sum + value, 0) / clean.length);
+  }
+  function paperLabel(paper) {
+    return [paper.session, paper.year, paper.paperCode].filter(Boolean).join(" ") || "Past paper";
+  }
+  function shortDate(value) {
+    if (!value) return "-";
+    const bits = String(value).split("-");
+    if (bits.length === 3) return `${bits[2]}/${bits[1]}`;
+    return value;
+  }
+  function statusClass(status) {
+    return String(status || "pending").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  }
 
   // ---------- Migration ----------
   function runMigration() {
@@ -163,7 +185,10 @@
     });
     try { history.replaceState(null, "", `#${target}`); } catch (err) { /* noop */ }
     if (options.scroll) {
-      window.scrollTo({ top: document.querySelector(".tracker-tabs")?.offsetTop - 12 || 0, behavior: "smooth" });
+      const tabs = document.querySelector(".tracker-tabs");
+      const headerHeight = document.querySelector(".site-header")?.getBoundingClientRect().height || 80;
+      const headerOffset = Math.max(150, headerHeight + 60);
+      window.scrollTo({ top: Math.max(0, (tabs?.offsetTop || 0) - headerOffset - 14), behavior: "smooth" });
     }
     refreshAll();
   }
@@ -173,6 +198,19 @@
     const hash = (window.location.hash || "").replace("#", "");
     const valid = ["dashboard", "papers", "assignments", "quizzes", "revision", "backup"];
     activateTab(valid.includes(hash) ? hash : "dashboard");
+  }
+  function setupTabJumps() {
+    document.querySelectorAll("[data-tab-jump]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const target = button.dataset.tabJump;
+        activateTab(target, { scroll: true });
+        window.setTimeout(() => {
+          if (target === "assignments") document.getElementById("addAssignmentBtn")?.click();
+          if (target === "quizzes") document.getElementById("addQuizBtn")?.click();
+          if (target === "papers") document.getElementById("paperRawScore")?.focus();
+        }, 180);
+      });
+    });
   }
 
   // ---------- Unit/Topic options (derived from question data when available) ----------
@@ -569,6 +607,134 @@
       : `<tr><td colspan="4" class="empty-state">No weak topics yet. Log a few assignments or quizzes to populate this.</td></tr>`;
   }
 
+  // ---------- Dashboard ----------
+  function paperBankCount() {
+    if (window.SITE_META?.paperCount) return Number(window.SITE_META.paperCount) || 0;
+    const questions = window.QUESTION_DATA || [];
+    const keys = questions.map((q) => [q.session, q.year, q.paper_code || q.paperCode || q.paper].filter(Boolean).join("::"));
+    return uniqueSorted(keys).length;
+  }
+  function weakTopicRows(limit = 3) {
+    const buckets = new Map();
+    function add(topic, unit, pct) {
+      if (!topic || pct === null) return;
+      const key = `${unit || ""}::${topic}`;
+      const item = buckets.get(key) || { topic, unit, total: 0, count: 0 };
+      item.total += pct;
+      item.count += 1;
+      buckets.set(key, item);
+    }
+    readAssignments().forEach((a) => add(a.topic, a.unit, safePercent(a.rawMark, a.maxMark)));
+    readQuizzes().forEach((q) => add(q.topic, q.unit, safePercent(q.rawMark, q.maxMark)));
+    return [...buckets.values()]
+      .map((item) => ({ ...item, avg: Math.round(item.total / item.count) }))
+      .sort((a, b) => a.avg - b.avg || a.topic.localeCompare(b.topic))
+      .slice(0, limit);
+  }
+  function renderDashboardOverview() {
+    const papers = readJSON(PAPER_ATTEMPTS_KEY, []);
+    const paperList = Array.isArray(papers) ? papers : [];
+    const assignments = readAssignments();
+    const quizzes = readQuizzes();
+    const paperScores = paperList.map((paper) => scorePercent(paper.rawScore)).filter((score) => score !== null);
+    const avgScore = average(paperScores);
+    const bestScore = paperScores.length ? Math.max(...paperScores) : null;
+    const overdue = assignments.filter((assignment) => {
+      const status = autoAssignmentStatus(assignment);
+      return status === "Missing" || status === "Late";
+    });
+    const assignmentScores = assignments.map((a) => safePercent(a.rawMark, a.maxMark)).filter((score) => score !== null);
+    const quizScores = quizzes.map((q) => safePercent(q.rawMark, q.maxMark)).filter((score) => score !== null);
+    const bankCount = paperBankCount();
+
+    const setText = (id, value) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = value;
+    };
+    setText("paperDoneCount", String(paperList.length));
+    setText("dashPaperMeta", bankCount ? `of ${bankCount} papers in the bank` : "saved attempts");
+    setText("paperAverage", avgScore === null ? "0%" : `${avgScore}%`);
+    setText("gradeForecast", avgScore === null ? "no score yet" : `${gradeFromPercent(avgScore)} pace`);
+    setText("dashBestScore", bestScore === null ? "-" : `${bestScore}%`);
+    setText("dashBestMeta", bestScore === null ? "No best paper yet" : "best saved attempt");
+    setText("overdueTaskCount", String(overdue.length));
+    setText("dashOverdueMeta", overdue.length === 1 ? "assignment needs action" : "assignments need action");
+    setText("dashAssignmentCount", String(assignments.length));
+    setText("dashAssignmentMeta", assignmentScores.length ? `${average(assignmentScores)}% average` : "saved tasks");
+    setText("dashQuizCount", String(quizzes.length));
+    setText("dashQuizMeta", quizScores.length ? `${average(quizScores)}% average` : "saved quizzes");
+
+    const weakList = document.getElementById("dashboardWeakTopicList");
+    const weakMeta = document.getElementById("dashWeakMeta");
+    const weak = weakTopicRows(4);
+    if (weakMeta) weakMeta.textContent = weak.length ? "lowest averages" : "from marks";
+    if (weakList) {
+      weakList.innerHTML = weak.length
+        ? weak.map((item) => `<div class="weak-topic-row"><span><strong>${escapeHtml(item.topic)}</strong>${item.unit ? `<em>${escapeHtml(item.unit)}</em>` : ""}</span><b class="${gradeClass(item.avg)}">${item.avg}%</b></div>`).join("")
+        : `<div class="dashboard-empty">Save assignments or quizzes with marks to calculate weak topics.</div>`;
+    }
+
+    const paperRows = document.getElementById("dashboardPaperRows");
+    if (paperRows) {
+      const recent = [...paperList].sort((a, b) => String(b.date || b.createdAt || "").localeCompare(String(a.date || a.createdAt || ""))).slice(0, 6);
+      paperRows.innerHTML = recent.length
+        ? recent.map((paper) => {
+          const pct = scorePercent(paper.rawScore);
+          return `<tr>
+            <td><strong>${escapeHtml(paperLabel(paper))}</strong></td>
+            <td>${escapeHtml(shortDate(paper.date))}</td>
+            <td>${escapeHtml(paper.rawScore ?? "-")}</td>
+            <td><strong>${pct === null ? "-" : `${pct}%`}</strong></td>
+            <td>${paper.timeMinutes ? `${escapeHtml(paper.timeMinutes)}m` : "-"}</td>
+            <td>${escapeHtml(paper.wrongQuestions || "-")}</td>
+            <td><span class="status-pill ${statusClass(paper.revisionStatus || "In progress")}">${escapeHtml(paper.revisionStatus || "In progress")}</span></td>
+          </tr>`;
+        }).join("")
+        : `<tr><td colspan="7" class="empty-state">No paper attempts saved yet. Add a paper attempt to start the dashboard.</td></tr>`;
+    }
+
+    const assignmentRows = document.getElementById("dashboardAssignmentRows");
+    if (assignmentRows) {
+      const recent = [...assignments].sort((a, b) => String(b.dueDate || b.createdAt || "").localeCompare(String(a.dueDate || a.createdAt || ""))).slice(0, 6);
+      assignmentRows.innerHTML = recent.length
+        ? recent.map((assignment) => {
+          const pct = safePercent(assignment.rawMark, assignment.maxMark);
+          const grade = gradeFromPercent(pct);
+          const status = autoAssignmentStatus(assignment);
+          const marks = assignment.rawMark === "" || assignment.maxMark === "" ? "-" : `${assignment.rawMark}/${assignment.maxMark}`;
+          return `<tr>
+            <td><strong>${escapeHtml(assignment.title || "(untitled)")}</strong><span class="cell-sub">${escapeHtml(assignment.topic || assignment.unit || "")}</span></td>
+            <td>${escapeHtml(shortDate(assignment.dueDate))}</td>
+            <td>${escapeHtml(marks)}</td>
+            <td><strong>${pct === null ? "-" : `${pct}%`}</strong></td>
+            <td><span class="grade-pill ${gradeClass(pct)}">${escapeHtml(grade)}</span></td>
+            <td><span class="status-pill ${statusClass(status)}">${escapeHtml(status)}</span></td>
+          </tr>`;
+        }).join("")
+        : `<tr><td colspan="6" class="empty-state">No assignments saved yet. Add one and it will appear here with date, mark, grade, and status.</td></tr>`;
+    }
+
+    const quizRows = document.getElementById("dashboardQuizRows");
+    if (quizRows) {
+      const recent = [...quizzes].sort((a, b) => String(b.date || b.createdAt || "").localeCompare(String(a.date || a.createdAt || ""))).slice(0, 6);
+      quizRows.innerHTML = recent.length
+        ? recent.map((quiz) => {
+          const pct = safePercent(quiz.rawMark, quiz.maxMark);
+          const grade = gradeFromPercent(pct);
+          const marks = quiz.rawMark === "" || quiz.maxMark === "" ? "-" : `${quiz.rawMark}/${quiz.maxMark}`;
+          return `<tr>
+            <td><strong>${escapeHtml(quiz.quizTitle || "(untitled)")}</strong><span class="cell-sub">${escapeHtml(quiz.topic || quiz.unit || "")}</span></td>
+            <td>${escapeHtml(shortDate(quiz.date))}</td>
+            <td>${escapeHtml(marks)}</td>
+            <td><strong>${pct === null ? "-" : `${pct}%`}</strong></td>
+            <td><span class="grade-pill ${gradeClass(pct)}">${escapeHtml(grade)}</span></td>
+            <td>${escapeHtml(String(quiz.attemptNumber || 1))}</td>
+          </tr>`;
+        }).join("")
+        : `<tr><td colspan="6" class="empty-state">No quizzes saved yet. Add a quiz to see its mark, grade, and date here.</td></tr>`;
+    }
+  }
+
   // ---------- CSV export ----------
   function exportCsv(name, rows, columns) {
     if (!rows.length) { alert("Nothing to export yet."); return; }
@@ -638,7 +804,11 @@
 
   // ---------- Refresh all ----------
   function refreshAll() {
-    renderAssignments(); renderQuizzes(); renderRevision(); paintRecentTrend();
+    renderAssignments();
+    renderQuizzes();
+    renderRevision();
+    renderDashboardOverview();
+    paintRecentTrend();
   }
 
   // ---------- Init ----------
@@ -647,6 +817,7 @@
     backfillPaperRevisionStatus();
     renderDashboardTrend();
     setupTabs();
+    setupTabJumps();
     bindAssignmentForm(); bindAssignmentRowEvents();
     bindQuizForm(); bindQuizRowEvents();
     bindBackupCsvButtons();
