@@ -6044,6 +6044,98 @@ button.button {
 .tracker-stat-grid strong {
   color: var(--brand-red, #c0392b);
 }
+.dashboard-analysis-strip {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.9fr) minmax(320px, 1.1fr) minmax(250px, 0.85fr) minmax(260px, 0.95fr);
+  gap: 12px;
+  margin: 12px 0;
+}
+.analysis-card {
+  position: relative;
+  min-height: 214px;
+  background: linear-gradient(180deg, #fff 0%, #fbfaf7 100%);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 16px;
+  overflow: hidden;
+  box-shadow: 0 14px 30px rgba(22, 27, 46, 0.045);
+}
+.analysis-card h2 {
+  margin: 4px 0 0;
+  color: var(--ink);
+  font-size: 18px;
+}
+.analysis-card p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+.analysis-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+.analysis-head > span {
+  color: var(--muted);
+  font-size: 12px;
+}
+.analysis-gauge {
+  display: block;
+  width: 100%;
+  height: 128px;
+  margin-top: 4px;
+}
+.readiness-card > strong {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  color: var(--brand-red, #c0392b);
+  font-size: 34px;
+  line-height: 1;
+}
+.analysis-wide-svg,
+.analysis-donut {
+  display: block;
+  width: 100%;
+  height: 150px;
+  margin-top: 4px;
+}
+.action-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(135deg, var(--navy), #3a1720);
+  color: #fff;
+}
+.action-card .eyebrow,
+.action-card h2,
+.action-card p {
+  color: #fff;
+}
+.action-card .eyebrow {
+  color: var(--gold);
+}
+.action-card p {
+  color: rgba(255, 255, 255, 0.78);
+}
+.action-card .compact-action {
+  width: fit-content;
+  background: var(--brand-red, #c0392b);
+}
+.dashboard-detail-metrics {
+  margin-top: 16px;
+}
+.dashboard-detail-metrics::before {
+  content: "Detailed metrics";
+  grid-column: 1 / -1;
+  color: var(--gold-dark, #b7812a);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  font-weight: 800;
+}
 
 .tracker-dashboard-grid {
   display: grid;
@@ -6446,6 +6538,12 @@ button.button {
   }
   .tracker-stat-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .dashboard-analysis-strip {
+    grid-template-columns: 1fr;
+  }
+  .analysis-card {
+    min-height: 0;
   }
   .tracker-dashboard-grid {
     grid-template-columns: 1fr;

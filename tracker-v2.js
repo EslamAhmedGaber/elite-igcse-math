@@ -631,6 +631,141 @@
       .sort((a, b) => a.avg - b.avg || a.topic.localeCompare(b.topic))
       .slice(0, limit);
   }
+  function scoreItems(papers, assignments, quizzes) {
+    const paperItems = papers.map((paper) => ({ type: "paper", score: scorePercent(paper.rawScore), label: paperLabel(paper), date: paper.date || paper.createdAt || "" }));
+    const assignmentItems = assignments.map((assignment) => ({ type: "assignment", score: safePercent(assignment.rawMark, assignment.maxMark), label: assignment.title || "Assignment", date: assignment.dueDate || assignment.createdAt || "" }));
+    const quizItems = quizzes.map((quiz) => ({ type: "quiz", score: safePercent(quiz.rawMark, quiz.maxMark), label: quiz.quizTitle || "Quiz", date: quiz.date || quiz.createdAt || "" }));
+    return [...paperItems, ...assignmentItems, ...quizItems].filter((item) => item.score !== null);
+  }
+  function readinessLabel(score) {
+    if (score === null) return "Needs first score";
+    if (score >= 85) return "Exam-ready pace";
+    if (score >= 75) return "Strong trajectory";
+    if (score >= 60) return "Building steadily";
+    if (score >= 45) return "Needs focused repair";
+    return "High-risk zone";
+  }
+  function renderReadinessGauge(score, note) {
+    const svg = document.getElementById("dashboardReadinessSvg");
+    if (!svg) return;
+    const scoreText = document.getElementById("dashboardReadinessScore");
+    const label = document.getElementById("dashboardReadinessLabel");
+    const noteEl = document.getElementById("dashboardReadinessNote");
+    if (scoreText) scoreText.textContent = score === null ? "--" : `${score}%`;
+    if (label) label.textContent = readinessLabel(score);
+    if (noteEl) noteEl.textContent = note;
+    const value = Math.max(0, Math.min(100, score ?? 0));
+    const circumference = 251.2;
+    const dash = (value / 100) * circumference;
+    const color = value >= 80 ? "#0f6e56" : value >= 65 ? "#b7812a" : "#c0392b";
+    svg.innerHTML = `
+      <circle cx="90" cy="66" r="40" fill="none" stroke="#f0ebe3" stroke-width="14"/>
+      <circle cx="90" cy="66" r="40" fill="none" stroke="${color}" stroke-width="14" stroke-linecap="round" stroke-dasharray="${dash.toFixed(1)} ${circumference.toFixed(1)}" transform="rotate(-90 90 66)"/>
+      <text x="90" y="62" text-anchor="middle" fill="#161b2e" font-size="24" font-weight="800">${score === null ? "--" : value}</text>
+      <text x="90" y="82" text-anchor="middle" fill="#6b6269" font-size="10">${score === null ? "add marks" : "readiness"}</text>
+      <text x="32" y="120" fill="#7a7178" font-size="9">0</text>
+      <text x="138" y="120" fill="#7a7178" font-size="9">100</text>`;
+  }
+  function renderScoreBands(items) {
+    const svg = document.getElementById("dashboardScoreBandsSvg");
+    const meta = document.getElementById("scoreBandMeta");
+    if (!svg) return;
+    if (meta) meta.textContent = items.length ? `${items.length} marks` : "all marks";
+    if (!items.length) {
+      svg.innerHTML = `<rect x="12" y="18" width="276" height="86" rx="9" fill="#fbfaf7" stroke="#e1dacd"/><text x="150" y="62" text-anchor="middle" fill="#5a5258" font-size="11">Add marks to see score bands.</text>`;
+      return;
+    }
+    const bands = [
+      { label: "<50", min: 0, max: 49, color: "#c0392b" },
+      { label: "50-69", min: 50, max: 69, color: "#b7812a" },
+      { label: "70-84", min: 70, max: 84, color: "#161b2e" },
+      { label: "85+", min: 85, max: 100, color: "#0f6e56" }
+    ].map((band) => ({ ...band, count: items.filter((item) => item.score >= band.min && item.score <= band.max).length }));
+    let x = 18;
+    const total = items.length;
+    const stacked = bands.map((band) => {
+      const width = total ? Math.max(band.count ? 8 : 0, (band.count / total) * 264) : 0;
+      const rect = width ? `<rect x="${x.toFixed(1)}" y="34" width="${width.toFixed(1)}" height="24" rx="8" fill="${band.color}"/>` : "";
+      x += width + (width ? 2 : 0);
+      return rect;
+    }).join("");
+    const legend = bands.map((band, index) => {
+      const lx = 20 + index * 68;
+      return `<g><rect x="${lx}" y="82" width="8" height="8" rx="2" fill="${band.color}"/><text x="${lx + 12}" y="90" fill="#161b2e" font-size="9" font-weight="700">${band.label}</text><text x="${lx + 12}" y="104" fill="#7a7178" font-size="9">${band.count}</text></g>`;
+    }).join("");
+    const avg = average(items.map((item) => item.score));
+    svg.innerHTML = `<text x="18" y="20" fill="#7a7178" font-size="9">distribution</text>${stacked}<text x="280" y="22" text-anchor="end" fill="#161b2e" font-size="12" font-weight="800">${avg}% avg</text>${legend}`;
+  }
+  function renderWorkBalance(papers, assignments, quizzes) {
+    const svg = document.getElementById("dashboardWorkBalanceSvg");
+    const meta = document.getElementById("workBalanceMeta");
+    if (!svg) return;
+    const rows = [
+      { label: "Papers", count: papers.length, color: "#161b2e" },
+      { label: "Assign", count: assignments.length, color: "#c0392b" },
+      { label: "Quizzes", count: quizzes.length, color: "#b7812a" }
+    ];
+    const total = rows.reduce((sum, row) => sum + row.count, 0);
+    if (meta) meta.textContent = total ? `${total} saved` : "saved work";
+    if (!total) {
+      svg.innerHTML = `<circle cx="66" cy="64" r="34" fill="none" stroke="#f0ebe3" stroke-width="15"/><text x="66" y="66" text-anchor="middle" fill="#7a7178" font-size="10">No work</text><text x="136" y="44" fill="#5a5258" font-size="10">Log work to</text><text x="136" y="58" fill="#5a5258" font-size="10">see balance.</text>`;
+      return;
+    }
+    const circumference = 213.6;
+    let offset = 0;
+    const arcs = rows.map((row) => {
+      const len = (row.count / total) * circumference;
+      const arc = len ? `<circle cx="66" cy="64" r="34" fill="none" stroke="${row.color}" stroke-width="15" stroke-dasharray="${len.toFixed(1)} ${(circumference - len).toFixed(1)}" stroke-dashoffset="${(-offset).toFixed(1)}" transform="rotate(-90 66 64)"/>` : "";
+      offset += len;
+      return arc;
+    }).join("");
+    const legend = rows.map((row, index) => {
+      const y = 36 + index * 27;
+      const pct = Math.round((row.count / total) * 100);
+      return `<g><rect x="122" y="${y - 9}" width="8" height="8" rx="2" fill="${row.color}"/><text x="136" y="${y}" fill="#161b2e" font-size="10" font-weight="700">${row.label}</text><text x="202" y="${y}" text-anchor="end" fill="#7a7178" font-size="10">${pct}%</text></g>`;
+    }).join("");
+    svg.innerHTML = `<circle cx="66" cy="64" r="34" fill="none" stroke="#f0ebe3" stroke-width="15"/>${arcs}<text x="66" y="61" text-anchor="middle" fill="#161b2e" font-size="21" font-weight="800">${total}</text><text x="66" y="77" text-anchor="middle" fill="#7a7178" font-size="9">items</text>${legend}`;
+  }
+  function renderNextAction({ paperList, assignments, quizzes, overdue, weak, avgScore }) {
+    const title = document.getElementById("dashboardActionTitle");
+    const text = document.getElementById("dashboardActionText");
+    const button = document.getElementById("dashboardActionButton");
+    if (!title || !text || !button) return;
+    let target = "papers";
+    let cta = "Add paper attempt";
+    let actionTitle = "Add first paper score";
+    let actionText = "A paper attempt is the strongest signal for exam readiness. Save one score to unlock better trend analysis.";
+    if (overdue.length) {
+      target = "assignments";
+      cta = "Open assignments";
+      actionTitle = "Clear overdue work";
+      actionText = `${overdue.length} assignment${overdue.length === 1 ? " needs" : "s need"} action before the tracker can call the week safe.`;
+    } else if (!paperList.length && (assignments.length || quizzes.length)) {
+      target = "papers";
+      cta = "Add paper score";
+      actionTitle = "Add exam evidence";
+      actionText = "Assignments and quizzes are saved. Add one timed paper so the dashboard can compare class work to exam performance.";
+    } else if (weak.length) {
+      target = "revision";
+      cta = "Open revision";
+      actionTitle = `Repair ${weak[0].topic}`;
+      actionText = `${weak[0].avg}% is the lowest saved topic average. Do one focused revision set before adding new topics.`;
+    } else if (avgScore !== null && avgScore >= 80) {
+      target = "papers";
+      cta = "Add harder paper";
+      actionTitle = "Protect the strong pace";
+      actionText = "The average is strong. Add another timed paper or Q20+ set to confirm it under exam pressure.";
+    } else if (paperList.length || assignments.length || quizzes.length) {
+      target = "papers";
+      cta = "Add next result";
+      actionTitle = "Build the evidence trail";
+      actionText = "Keep logging results. The trend becomes more reliable after 4-5 saved scores.";
+    }
+    title.textContent = actionTitle;
+    text.textContent = actionText;
+    button.textContent = cta;
+    button.dataset.tabJump = target;
+  }
   function renderDashboardOverview() {
     const papers = readJSON(PAPER_ATTEMPTS_KEY, []);
     const paperList = Array.isArray(papers) ? papers : [];
@@ -646,6 +781,13 @@
     const assignmentScores = assignments.map((a) => safePercent(a.rawMark, a.maxMark)).filter((score) => score !== null);
     const quizScores = quizzes.map((q) => safePercent(q.rawMark, q.maxMark)).filter((score) => score !== null);
     const bankCount = paperBankCount();
+    const items = scoreItems(paperList, assignments, quizzes);
+    const assignmentAvg = average(assignmentScores);
+    const quizAvg = average(quizScores);
+    const readinessInputs = [avgScore, assignmentAvg, quizAvg].filter((score) => score !== null);
+    const readinessBase = readinessInputs.length ? average(readinessInputs) : null;
+    const readiness = readinessBase === null ? null : Math.max(0, Math.min(100, readinessBase - Math.min(20, overdue.length * 5)));
+    const weak = weakTopicRows(4);
 
     const setText = (id, value) => {
       const el = document.getElementById(id);
@@ -660,13 +802,22 @@
     setText("overdueTaskCount", String(overdue.length));
     setText("dashOverdueMeta", overdue.length === 1 ? "assignment needs action" : "assignments need action");
     setText("dashAssignmentCount", String(assignments.length));
-    setText("dashAssignmentMeta", assignmentScores.length ? `${average(assignmentScores)}% average` : "saved tasks");
+    setText("dashAssignmentMeta", assignmentScores.length ? `${assignmentAvg}% average` : "saved tasks");
     setText("dashQuizCount", String(quizzes.length));
-    setText("dashQuizMeta", quizScores.length ? `${average(quizScores)}% average` : "saved quizzes");
+    setText("dashQuizMeta", quizScores.length ? `${quizAvg}% average` : "saved quizzes");
+
+    const readinessNote = readiness === null
+      ? "Add a paper, assignment, or quiz mark to start the analysis."
+      : overdue.length
+        ? `${Math.min(20, overdue.length * 5)} points are held back by overdue work.`
+        : `${readinessInputs.length} score source${readinessInputs.length === 1 ? "" : "s"} feeding this estimate.`;
+    renderReadinessGauge(readiness, readinessNote);
+    renderScoreBands(items);
+    renderWorkBalance(paperList, assignments, quizzes);
+    renderNextAction({ paperList, assignments, quizzes, overdue, weak, avgScore });
 
     const weakList = document.getElementById("dashboardWeakTopicList");
     const weakMeta = document.getElementById("dashWeakMeta");
-    const weak = weakTopicRows(4);
     if (weakMeta) weakMeta.textContent = weak.length ? "lowest averages" : "from marks";
     if (weakList) {
       weakList.innerHTML = weak.length
@@ -772,8 +923,8 @@
 
   // ---------- Dashboard enhancements ----------
   function renderDashboardTrend() {
-    // Add a small "recent score trend" widget under the KPI tiles in dashboard tab.
-    if (document.getElementById("recentTrendCard")) return; // only once
+    // Older builds injected this card; the current dashboard ships it in the HTML.
+    if (document.getElementById("recentTrendSvg")) return; // already rendered by the dashboard markup
     const dashboardKpi = document.querySelector('section.progress-dashboard[data-tab="dashboard"]');
     if (!dashboardKpi) return;
     const card = document.createElement("section");

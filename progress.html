@@ -83,39 +83,6 @@
       <button type="button" class="tracker-tab" data-tab-target="backup" role="tab" aria-selected="false"><span class="tt-ic" aria-hidden="true">&#x25A4;</span>Backup</button>
     </nav>
 
-    <section class="progress-dashboard tracker-stat-grid" data-tab="dashboard" aria-label="Progress summary">
-      <article>
-        <span>Papers attempted</span>
-        <strong id="paperDoneCount">0</strong>
-        <p id="dashPaperMeta">No attempts yet</p>
-      </article>
-      <article>
-        <span>Average score</span>
-        <strong id="paperAverage">0%</strong>
-        <p id="gradeForecast">grade forecast pending</p>
-      </article>
-      <article>
-        <span>Best score</span>
-        <strong id="dashBestScore">-</strong>
-        <p id="dashBestMeta">No best paper yet</p>
-      </article>
-      <article>
-        <span>Overdue</span>
-        <strong id="overdueTaskCount">0</strong>
-        <p id="dashOverdueMeta">assignments</p>
-      </article>
-      <article>
-        <span>Assignments</span>
-        <strong id="dashAssignmentCount">0</strong>
-        <p id="dashAssignmentMeta">saved tasks</p>
-      </article>
-      <article>
-        <span>Quizzes</span>
-        <strong id="dashQuizCount">0</strong>
-        <p id="dashQuizMeta">saved quizzes</p>
-      </article>
-    </section>
-
     <div class="legacy-progress-bindings" hidden>
       <span id="fullSolved"></span>
       <span id="fullPercent"></span>
@@ -126,6 +93,44 @@
       <span id="studyStreak"></span>
       <span id="urgentTopicCount"></span>
     </div>
+
+    <section class="dashboard-analysis-strip" data-tab="dashboard" aria-label="Student analysis figures">
+      <article class="analysis-card readiness-card">
+        <div>
+          <span class="eyebrow">Readiness</span>
+          <h2 id="dashboardReadinessLabel">Needs first score</h2>
+        </div>
+        <svg id="dashboardReadinessSvg" class="analysis-gauge" viewBox="0 0 180 128" xmlns="http://www.w3.org/2000/svg" aria-label="Readiness score gauge"></svg>
+        <strong id="dashboardReadinessScore">--</strong>
+        <p id="dashboardReadinessNote">Add a paper, assignment, or quiz mark to start the analysis.</p>
+      </article>
+      <article class="analysis-card">
+        <div class="analysis-head">
+          <div>
+            <span class="eyebrow">Score Bands</span>
+            <h2>Where the marks sit</h2>
+          </div>
+          <span id="scoreBandMeta">all marks</span>
+        </div>
+        <svg id="dashboardScoreBandsSvg" class="analysis-wide-svg" viewBox="0 0 300 142" xmlns="http://www.w3.org/2000/svg" aria-label="Score band distribution"></svg>
+      </article>
+      <article class="analysis-card">
+        <div class="analysis-head">
+          <div>
+            <span class="eyebrow">Work Balance</span>
+            <h2>Practice mix</h2>
+          </div>
+          <span id="workBalanceMeta">saved work</span>
+        </div>
+        <svg id="dashboardWorkBalanceSvg" class="analysis-donut" viewBox="0 0 220 142" xmlns="http://www.w3.org/2000/svg" aria-label="Practice type balance"></svg>
+      </article>
+      <article class="analysis-card action-card">
+        <span class="eyebrow">Next Action</span>
+        <h2 id="dashboardActionTitle">Start with one saved mark</h2>
+        <p id="dashboardActionText">Log one paper, assignment, or quiz so the dashboard can recommend the next move.</p>
+        <button type="button" id="dashboardActionButton" class="compact-action" data-tab-jump="papers">Add first result</button>
+      </article>
+    </section>
 
     <section class="tracker-dashboard-grid" data-tab="dashboard" aria-label="Dashboard insights">
       <article class="dashboard-insight-card recent-trend-card" id="recentTrendCard">
@@ -224,6 +229,39 @@
             <tbody id="dashboardQuizRows"></tbody>
           </table>
         </div>
+      </article>
+    </section>
+
+    <section class="progress-dashboard tracker-stat-grid dashboard-detail-metrics" data-tab="dashboard" aria-label="Detailed metrics">
+      <article>
+        <span>Papers attempted</span>
+        <strong id="paperDoneCount">0</strong>
+        <p id="dashPaperMeta">No attempts yet</p>
+      </article>
+      <article>
+        <span>Average score</span>
+        <strong id="paperAverage">0%</strong>
+        <p id="gradeForecast">grade forecast pending</p>
+      </article>
+      <article>
+        <span>Best score</span>
+        <strong id="dashBestScore">-</strong>
+        <p id="dashBestMeta">No best paper yet</p>
+      </article>
+      <article>
+        <span>Overdue</span>
+        <strong id="overdueTaskCount">0</strong>
+        <p id="dashOverdueMeta">assignments</p>
+      </article>
+      <article>
+        <span>Assignments</span>
+        <strong id="dashAssignmentCount">0</strong>
+        <p id="dashAssignmentMeta">saved tasks</p>
+      </article>
+      <article>
+        <span>Quizzes</span>
+        <strong id="dashQuizCount">0</strong>
+        <p id="dashQuizMeta">saved quizzes</p>
       </article>
     </section>
 
