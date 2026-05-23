@@ -6047,7 +6047,7 @@ button.button {
 
 .tracker-dashboard-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  grid-template-columns: minmax(320px, 1.2fr) minmax(230px, 0.7fr) minmax(260px, 0.75fr);
   gap: 12px;
   margin: 12px 0;
 }
@@ -6076,8 +6076,8 @@ button.button {
   gap: 8px;
 }
 .weak-topic-row {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(78px, 0.55fr) auto;
   gap: 12px;
   align-items: center;
   padding: 7px 0;
@@ -6105,10 +6105,24 @@ button.button {
 .weak-topic-row b {
   color: var(--brand-red, #c0392b);
   font-size: 13px;
+  min-width: 38px;
+  text-align: right;
 }
 .weak-topic-row b.grade-b,
 .weak-topic-row b.grade-a {
   color: #0f6e56;
+}
+.weak-topic-meter {
+  height: 8px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #f1ece3;
+}
+.weak-topic-meter i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #c0392b, #b7812a);
 }
 .dashboard-empty {
   color: var(--muted);
@@ -6372,6 +6386,12 @@ button.button {
 }
 .recent-trend-card .rt-head strong { color: var(--ink); font-weight: 500; }
 .recent-trend-card svg { width: 100%; height: 90px; }
+.recent-trend-card svg,
+.dashboard-bar-svg {
+  width: 100%;
+  height: 128px;
+  display: block;
+}
 
 /* Revision tab three-column layout */
 .revision-grid {

@@ -670,7 +670,13 @@
     if (weakMeta) weakMeta.textContent = weak.length ? "lowest averages" : "from marks";
     if (weakList) {
       weakList.innerHTML = weak.length
-        ? weak.map((item) => `<div class="weak-topic-row"><span><strong>${escapeHtml(item.topic)}</strong>${item.unit ? `<em>${escapeHtml(item.unit)}</em>` : ""}</span><b class="${gradeClass(item.avg)}">${item.avg}%</b></div>`).join("")
+        ? weak.map((item) => `<div class="weak-topic-row">
+          <span><strong>${escapeHtml(item.topic)}</strong>${item.unit ? `<em>${escapeHtml(item.unit)}</em>` : ""}</span>
+          <div class="weak-topic-meter" aria-label="${escapeHtml(item.topic)} average ${item.avg}%">
+            <i style="width:${item.avg}%"></i>
+          </div>
+          <b class="${gradeClass(item.avg)}">${item.avg}%</b>
+        </div>`).join("")
         : `<div class="dashboard-empty">Save assignments or quizzes with marks to calculate weak topics.</div>`;
     }
 
@@ -779,27 +785,81 @@
         <strong>Recent score trend</strong>
         <span>last 8 attempts</span>
       </div>
-      <svg id="recentTrendSvg" viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg" aria-label="Recent score trend"></svg>`;
+      <svg id="recentTrendSvg" viewBox="0 0 320 120" xmlns="http://www.w3.org/2000/svg" aria-label="Recent score trend"></svg>`;
     dashboardKpi.insertAdjacentElement("afterend", card);
   }
   function paintRecentTrend() {
     const svg = document.getElementById("recentTrendSvg");
     if (!svg) return;
     const attempts = readJSON(PAPER_ATTEMPTS_KEY, []);
-    const last = (Array.isArray(attempts) ? attempts : []).slice(0, 8).reverse();
+    const last = (Array.isArray(attempts) ? attempts : [])
+      .slice()
+      .sort((a, b) => String(a.date || a.createdAt || "").localeCompare(String(b.date || b.createdAt || "")))
+      .slice(-8);
     if (!last.length) {
-      svg.innerHTML = `<text x="160" y="44" text-anchor="middle" fill="#5a5258" font-size="11">No paper attempts yet.</text>`;
+      svg.innerHTML = `<rect x="10" y="12" width="300" height="86" rx="8" fill="#fbfaf7" stroke="#e1dacd"/><text x="160" y="60" text-anchor="middle" fill="#5a5258" font-size="11">No paper attempts yet.</text>`;
       return;
     }
-    const w = 320; const h = 80; const pad = 8;
-    const xs = last.map((_, i) => pad + (i * (w - pad * 2)) / Math.max(1, last.length - 1));
+    const w = 320; const h = 120; const left = 24; const right = 12; const top = 12; const bottom = 28;
+    const plotW = w - left - right; const plotH = h - top - bottom;
+    const xs = last.map((_, i) => left + (i * plotW) / Math.max(1, last.length - 1));
     const ys = last.map((a) => {
-      const pct = Number(a.rawScore) || 0;
-      return h - pad - (pct / 100) * (h - pad * 2);
+      const pct = scorePercent(a.rawScore) || 0;
+      return top + (100 - pct) / 100 * plotH;
     });
+    const grid = [40, 60, 80, 100].map((score) => {
+      const y = top + (100 - score) / 100 * plotH;
+      return `<line x1="${left}" y1="${y.toFixed(1)}" x2="${w - right}" y2="${y.toFixed(1)}" stroke="#e8e1d7" stroke-width="0.7"/><text x="4" y="${(y + 3).toFixed(1)}" fill="#7a7178" font-size="8">${score}</text>`;
+    }).join("");
+    const labels = last.map((a, i) => {
+      const label = shortDate(a.date || a.createdAt || "");
+      return `<text x="${xs[i].toFixed(1)}" y="${h - 9}" text-anchor="middle" fill="#7a7178" font-size="8">${escapeHtml(label)}</text>`;
+    }).join("");
+    if (last.length === 1) {
+      const pct = scorePercent(last[0].rawScore) || 0;
+      const barH = Math.max(4, (pct / 100) * plotH);
+      const barX = left + plotW / 2 - 18;
+      const barY = top + plotH - barH;
+      svg.innerHTML = `${grid}<rect x="${barX}" y="${barY.toFixed(1)}" width="36" height="${barH.toFixed(1)}" rx="5" fill="#c0392b"/><circle cx="${(barX + 18).toFixed(1)}" cy="${barY.toFixed(1)}" r="3.5" fill="#161b2e"/><text x="${(barX + 18).toFixed(1)}" y="${(barY - 7).toFixed(1)}" text-anchor="middle" fill="#161b2e" font-size="10" font-weight="700">${pct}%</text>${labels}`;
+      return;
+    }
+    const area = `${left},${top + plotH} ${xs.map((x, i) => `${x.toFixed(1)},${ys[i].toFixed(1)}`).join(" ")} ${w - right},${top + plotH}`;
     const polyline = xs.map((x, i) => `${x.toFixed(1)},${ys[i].toFixed(1)}`).join(" ");
-    const dots = xs.map((x, i) => `<circle cx="${x.toFixed(1)}" cy="${ys[i].toFixed(1)}" r="2.5" fill="#c0392b"/>`).join("");
-    svg.innerHTML = `<line x1="0" y1="${h - pad}" x2="${w}" y2="${h - pad}" stroke="#cfc9be" stroke-width="0.5"/><polyline points="${polyline}" fill="none" stroke="#161b2e" stroke-width="1.5"/>${dots}`;
+    const dots = xs.map((x, i) => {
+      const pct = scorePercent(last[i].rawScore) || 0;
+      return `<g><circle cx="${x.toFixed(1)}" cy="${ys[i].toFixed(1)}" r="3" fill="#c0392b"/><text x="${x.toFixed(1)}" y="${(ys[i] - 7).toFixed(1)}" text-anchor="middle" fill="#161b2e" font-size="8">${pct}</text></g>`;
+    }).join("");
+    svg.innerHTML = `${grid}<polygon points="${area}" fill="rgba(192,57,43,0.08)"/><polyline points="${polyline}" fill="none" stroke="#161b2e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>${dots}${labels}`;
+  }
+  function paintPerformanceGraph() {
+    const svg = document.getElementById("dashboardPerformanceSvg");
+    if (!svg) return;
+    const papers = readJSON(PAPER_ATTEMPTS_KEY, []);
+    const paperAvg = average((Array.isArray(papers) ? papers : []).map((paper) => scorePercent(paper.rawScore)).filter((score) => score !== null));
+    const assignmentAvg = average(readAssignments().map((a) => safePercent(a.rawMark, a.maxMark)).filter((score) => score !== null));
+    const quizAvg = average(readQuizzes().map((q) => safePercent(q.rawMark, q.maxMark)).filter((score) => score !== null));
+    const rows = [
+      { label: "Papers", value: paperAvg, color: "#161b2e" },
+      { label: "Assign", value: assignmentAvg, color: "#c0392b" },
+      { label: "Quizzes", value: quizAvg, color: "#b7812a" }
+    ];
+    if (rows.every((row) => row.value === null)) {
+      svg.innerHTML = `<rect x="8" y="10" width="224" height="92" rx="8" fill="#fbfaf7" stroke="#e1dacd"/><text x="120" y="58" text-anchor="middle" fill="#5a5258" font-size="10">Add marks to build the graph.</text>`;
+      return;
+    }
+    const bars = rows.map((row, index) => {
+      const y = 22 + index * 30;
+      const value = row.value ?? 0;
+      const width = Math.max(2, (value / 100) * 132);
+      const label = row.value === null ? "-" : `${row.value}%`;
+      return `<g>
+        <text x="8" y="${y + 12}" fill="#161b2e" font-size="10" font-weight="700">${row.label}</text>
+        <rect x="62" y="${y}" width="132" height="14" rx="7" fill="#f1ece3"/>
+        <rect x="62" y="${y}" width="${width.toFixed(1)}" height="14" rx="7" fill="${row.color}"/>
+        <text x="206" y="${y + 11}" fill="#161b2e" font-size="10" font-weight="700">${label}</text>
+      </g>`;
+    }).join("");
+    svg.innerHTML = `<line x1="62" y1="102" x2="194" y2="102" stroke="#d8d0c3"/><text x="62" y="114" fill="#7a7178" font-size="8">0</text><text x="184" y="114" fill="#7a7178" font-size="8">100</text>${bars}`;
   }
 
   // ---------- Refresh all ----------
@@ -809,6 +869,7 @@
     renderRevision();
     renderDashboardOverview();
     paintRecentTrend();
+    paintPerformanceGraph();
   }
 
   // ---------- Init ----------
