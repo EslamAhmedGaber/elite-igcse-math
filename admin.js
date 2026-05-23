@@ -29,13 +29,37 @@
   const samples = {
     studentName: "Layla Naguib Hassan",
     awardType: "Certificate of Achievement",
-    design: "split",
+    design: "elite",
     achievement: "Higher-Tier Mathematics - Edexcel IGCSE 4MA1 - 2025/2026 cohort",
-    evidence: "for sustained progress, consistent practice, and excellent mathematical discipline",
+    evidence: "for exceptional consistency, elegant exam technique, and outstanding mathematical discipline",
     number: "EA-2026-DRAFT",
-    accent: "vermilion",
+    accent: "auto",
     papers: "12",
     average: "84"
+  };
+
+  const DESIGN_PRESETS = {
+    elite: {
+      stars: 9,
+      label: "Elite Distinction",
+      layout: "honours",
+      accent: "vermilion",
+      evidence: "for exceptional consistency, elegant exam technique, and outstanding mathematical discipline"
+    },
+    academy: {
+      stars: 8,
+      label: "High Distinction",
+      layout: "classic",
+      accent: "verdigris",
+      evidence: "for strong performance, careful revision habits, and reliable progress under exam conditions"
+    },
+    merit: {
+      stars: 7,
+      label: "Merit Award",
+      layout: "split",
+      accent: "ochre",
+      evidence: "for determined practice, steady improvement, and a committed Elite IGCSE learning routine"
+    }
   };
 
   function todayValue() {
@@ -53,6 +77,16 @@
     if (node) node.textContent = value;
   }
 
+  function currentDesignPreset() {
+    return DESIGN_PRESETS[els.fields.design.value] || DESIGN_PRESETS.elite;
+  }
+
+  function renderStars(preset) {
+    const starHolder = document.querySelector("[data-cert-stars]");
+    if (!starHolder) return;
+    starHolder.innerHTML = Array.from({ length: preset.stars }, () => "<i>&#9733;</i>").join("");
+  }
+
   function fitStudentName(name) {
     els.certificate.classList.remove("name-long", "name-very-long");
     if (name.length > 34) els.certificate.classList.add("name-very-long");
@@ -60,19 +94,23 @@
   }
 
   function updatePreview() {
+    const preset = currentDesignPreset();
     const name = els.fields.studentName.value.trim() || "Student Name";
-    const title = els.fields.awardType.value || "Certificate of Achievement";
-    const design = els.fields.design.value || "split";
+    const title = els.fields.awardType.value || samples.awardType;
     const achievement = els.fields.achievement.value.trim() || samples.achievement;
-    const evidence = els.fields.evidence.value.trim() || samples.evidence;
+    const evidence = els.fields.evidence.value.trim() || preset.evidence;
     const date = prettyDate(els.fields.date.value);
     const number = els.fields.number.value.trim() || samples.number;
     const papers = Math.max(0, Number(els.fields.papers.value || 0));
     const average = Math.max(0, Math.min(100, Number(els.fields.average.value || 0)));
+    const accent = els.fields.accent.value === "auto" ? preset.accent : (els.fields.accent.value || preset.accent);
 
-    els.certificate.dataset.accent = els.fields.accent.value || "vermilion";
-    els.certificate.dataset.design = design;
+    els.certificate.dataset.accent = accent;
+    els.certificate.dataset.design = preset.layout;
+    els.certificate.dataset.tier = els.fields.design.value || "elite";
     text("[data-cert-title]", title);
+    text("[data-cert-star-count]", String(preset.stars));
+    text("[data-cert-star-label]", preset.label);
     text("[data-cert-student]", name);
     text("[data-cert-achievement]", achievement);
     text("[data-cert-evidence]", evidence);
@@ -83,6 +121,7 @@
     text("[data-cert-average]", `${Math.round(average)}%`);
     text("[data-cert-verify]", `CERTIFICATE NO. ${number} - ELITEIGCSE.COM/VERIFY`);
     text("#certificateModeLabel", `A4 landscape preview - ${els.fields.design.options[els.fields.design.selectedIndex]?.text || "certificate"}`);
+    renderStars(preset);
     fitStudentName(name);
   }
 
@@ -97,6 +136,14 @@
     els.fields.accent.value = samples.accent;
     els.fields.papers.value = samples.papers;
     els.fields.average.value = samples.average;
+    updatePreview();
+  }
+
+  function applyDesignDefaults() {
+    const preset = currentDesignPreset();
+    els.fields.evidence.value = preset.evidence;
+    if (/^[789]-Star /.test(els.fields.awardType.value)) els.fields.awardType.value = samples.awardType;
+    if (!els.fields.accent.value) els.fields.accent.value = "auto";
     updatePreview();
   }
 
@@ -144,6 +191,8 @@
     field.addEventListener("input", updatePreview);
     field.addEventListener("change", updatePreview);
   });
+
+  els.fields.design.addEventListener("change", applyDesignDefaults);
 
   els.printBtn.addEventListener("click", () => {
     updatePreview();

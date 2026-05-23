@@ -100,9 +100,9 @@
 
         <label>Design style
           <select id="certDesign">
-            <option value="split">Split Editorial</option>
-            <option value="classic">Academy Frame</option>
-            <option value="honours">Honours Crest</option>
+            <option value="elite">Elite Signature</option>
+            <option value="academy">Academy Frame</option>
+            <option value="merit">Merit Editorial</option>
           </select>
         </label>
 
@@ -124,6 +124,7 @@
 
         <label>Accent colour
           <select id="certAccent">
+            <option value="auto">Auto by design</option>
             <option value="vermilion">Vermilion seal</option>
             <option value="verdigris">Verdigris distinction</option>
             <option value="ochre">Ochre honours</option>
@@ -153,7 +154,7 @@
           <button type="button" id="fitNameBtn">Auto-fit name</button>
         </div>
 
-        <article class="elite-certificate" id="eliteCertificate" data-accent="vermilion" data-design="split">
+        <article class="elite-certificate" id="eliteCertificate" data-accent="vermilion" data-design="honours" data-tier="elite">
           <aside class="cert-rail">
             <div class="cert-rail-mark">E<span>A</span></div>
             <div class="cert-rail-title">Elite IGCSE Academy</div>
@@ -171,6 +172,12 @@
 
             <div class="cert-brand-line">
               <span></span><i></i><strong>EA</strong><i></i><span></span>
+            </div>
+
+            <div class="cert-star-band" data-cert-star-band>
+              <strong data-cert-star-count>9</strong>
+              <span data-cert-stars><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></span>
+              <em data-cert-star-label>Elite Distinction</em>
             </div>
 
             <h2 data-cert-title>Certificate of Achievement</h2>
