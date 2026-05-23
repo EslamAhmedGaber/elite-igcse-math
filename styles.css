@@ -7228,14 +7228,15 @@ body[data-page="admin"] .cloud-floating-widget {
 
 .cert-seal strong {
   color: var(--cert-accent);
-  font: 500 34px "Cormorant Garamond", Georgia, serif;
+  font: 500 31px "Cormorant Garamond", Georgia, serif;
+  letter-spacing: 1px;
 }
 
 .cert-seal span {
   margin: 0;
   color: var(--cert-accent);
-  font-size: 8px;
-  letter-spacing: 2px;
+  font-size: 7px;
+  letter-spacing: 1.3px;
 }
 
 .cert-verify {
@@ -7338,7 +7339,7 @@ body[data-page="admin"] .cloud-floating-widget {
 }
 
 .elite-certificate[data-design="classic"] .cert-seal strong {
-  font-size: 30px;
+  font-size: 27px;
 }
 
 .elite-certificate[data-design="honours"] {
