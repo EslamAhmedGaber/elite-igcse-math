@@ -14,6 +14,20 @@
   const LEAD_KEY = "leadInfoV1";
   const ASSIGNMENTS_KEY = "eliteTrackerAssignmentsV2";
   const QUIZZES_KEY = "eliteTrackerQuizzesV2";
+  const TRACKER_EXTRA_YEARS = ["2026"];
+  const TRACKER_EXTRA_PAPER_CODES = ["Unit 1", "Unit 2"];
+  const PAPER_CODE_ORDER = [
+    "Unit 1",
+    "Unit 2",
+    "4WM1H",
+    "4WM1HR",
+    "4WM2H",
+    "4WM2HR",
+    "P1H",
+    "P1HR",
+    "P2H",
+    "P2HR"
+  ];
 
   const els = {
     previewName: document.getElementById("profilePreviewName"),
@@ -265,7 +279,7 @@
   }
 
   function parsePaperName(name) {
-    const match = String(name || "").match(/^([A-Za-z]+)\s+(\d{4})\s+(P?\dH[R]?)$/i);
+    const match = String(name || "").match(/^([A-Za-z]+)\s+(\d{4})\s+((?:P?\dH[R]?)|(?:4WM[12]H[R]?))$/i);
     if (!match) return null;
     return {
       session: match[1],
@@ -282,14 +296,31 @@
     return `${item.session || ""} ${item.year || ""} ${item.paperCode || ""}`.trim();
   }
 
+  function sortPaperCodes(codes) {
+    return [...new Set(codes.filter(Boolean))].sort((a, b) => {
+      const aOrder = PAPER_CODE_ORDER.indexOf(a);
+      const bOrder = PAPER_CODE_ORDER.indexOf(b);
+      if (aOrder !== -1 || bOrder !== -1) {
+        return (aOrder === -1 ? 999 : aOrder) - (bOrder === -1 ? 999 : bOrder);
+      }
+      return String(a).localeCompare(String(b), undefined, { numeric: true });
+    });
+  }
+
   function allPaperOptions() {
     const map = new Map();
+    const rememberPaper = (paper) => {
+      if (!paper?.year || !paper?.session || !paper?.paperCode) return;
+      const key = paperKey(paper);
+      if (!map.has(key)) map.set(key, paper);
+    };
     bankQuestions("all").forEach((question) => {
       const parsed = parsePaperName(question.paper);
       if (!parsed) return;
-      const key = paperKey(parsed);
-      if (!map.has(key)) map.set(key, parsed);
+      if (question.paper_code) parsed.paperCode = String(question.paper_code).toUpperCase();
+      rememberPaper(parsed);
     });
+    paperAttempts.forEach(rememberPaper);
     const sessionOrder = { Jan: 1, May: 2, Jun: 3, Nov: 4 };
     return [...map.values()].sort((a, b) => {
       const yearDiff = Number(b.year) - Number(a.year);
@@ -583,10 +614,12 @@
 
   function renderPaperControls() {
     const papers = allPaperOptions();
-    const years = uniqueSorted(papers.map((paper) => paper.year)).sort((a, b) => Number(b) - Number(a));
+    const currentYear = String(new Date().getFullYear());
+    const years = uniqueSorted([...papers.map((paper) => paper.year), ...TRACKER_EXTRA_YEARS, currentYear]).sort((a, b) => Number(b) - Number(a));
     const sessionOrder = ["Jan", "May", "Jun", "Nov"];
     const sessions = uniqueSorted(papers.map((paper) => paper.session)).sort((a, b) => sessionOrder.indexOf(a) - sessionOrder.indexOf(b));
-    const codes = uniqueSorted(papers.map((paper) => paper.paperCode));
+    const modularUnits = uniqueSorted(bankQuestions("all").map((question) => question.modular_force_unit));
+    const codes = sortPaperCodes([...papers.map((paper) => paper.paperCode), ...modularUnits, ...TRACKER_EXTRA_PAPER_CODES]);
     els.paperYear.innerHTML = years.map((year) => `<option>${escapeHtml(year)}</option>`).join("");
     els.paperSession.innerHTML = sessions.map((session) => `<option>${escapeHtml(session)}</option>`).join("");
     els.paperCode.innerHTML = codes.map((code) => `<option>${escapeHtml(code)}</option>`).join("");
