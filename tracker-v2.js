@@ -12,6 +12,18 @@
   const QUIZ_KINDS = new Set([
     "Topic Quiz", "Mock Quiz", "Quiz", "Unit Quiz", "Practice"
   ]);
+  const BRAND = {
+    navy: "#0B2545",
+    navyDark: "#07182F",
+    gold: "#D4AF37",
+    goldSoft: "#F5E6B3",
+    cream: "#FAF6EC",
+    rose: "#8D2820",
+    copper: "#C08A3E",
+    line: "#B8B8B8",
+    muted: "#555555",
+    paper: "#FFFFFF"
+  };
 
   function readJSON(key, fallback) {
     try {
@@ -81,6 +93,13 @@
     const value = Number(rawScore);
     if (!Number.isFinite(value)) return null;
     return Math.max(0, Math.min(100, Math.round(value)));
+  }
+  function brandScoreColor(score) {
+    if (score === null || score === undefined || !Number.isFinite(score)) return BRAND.line;
+    if (score >= 85) return BRAND.gold;
+    if (score >= 70) return BRAND.navy;
+    if (score >= 50) return BRAND.copper;
+    return BRAND.rose;
   }
   function average(values) {
     const clean = values.filter((value) => value !== null && value !== undefined && Number.isFinite(value));
@@ -657,14 +676,16 @@
     const value = Math.max(0, Math.min(100, score ?? 0));
     const circumference = 251.2;
     const dash = (value / 100) * circumference;
-    const color = value >= 80 ? "#0f6e56" : value >= 65 ? "#b7812a" : "#c0392b";
+    const color = brandScoreColor(value);
     svg.innerHTML = `
-      <circle cx="90" cy="66" r="40" fill="none" stroke="#f0ebe3" stroke-width="14"/>
+      <circle cx="90" cy="66" r="46" fill="${BRAND.cream}" opacity="0.92"/>
+      <circle cx="90" cy="66" r="40" fill="none" stroke="${BRAND.goldSoft}" stroke-width="14"/>
       <circle cx="90" cy="66" r="40" fill="none" stroke="${color}" stroke-width="14" stroke-linecap="round" stroke-dasharray="${dash.toFixed(1)} ${circumference.toFixed(1)}" transform="rotate(-90 90 66)"/>
-      <text x="90" y="62" text-anchor="middle" fill="#161b2e" font-size="24" font-weight="800">${score === null ? "--" : value}</text>
-      <text x="90" y="82" text-anchor="middle" fill="#6b6269" font-size="10">${score === null ? "add marks" : "readiness"}</text>
-      <text x="32" y="120" fill="#7a7178" font-size="9">0</text>
-      <text x="138" y="120" fill="#7a7178" font-size="9">100</text>`;
+      <circle cx="90" cy="26" r="3" fill="${BRAND.gold}"/>
+      <text x="90" y="62" text-anchor="middle" fill="${BRAND.navyDark}" font-size="24" font-weight="800">${score === null ? "--" : value}</text>
+      <text x="90" y="82" text-anchor="middle" fill="${BRAND.muted}" font-size="10">${score === null ? "add marks" : "readiness"}</text>
+      <text x="32" y="120" fill="${BRAND.muted}" font-size="9">0</text>
+      <text x="138" y="120" fill="${BRAND.muted}" font-size="9">100</text>`;
   }
   function renderScoreBands(items) {
     const svg = document.getElementById("dashboardScoreBandsSvg");
@@ -672,14 +693,14 @@
     if (!svg) return;
     if (meta) meta.textContent = items.length ? `${items.length} marks` : "all marks";
     if (!items.length) {
-      svg.innerHTML = `<rect x="12" y="18" width="276" height="86" rx="9" fill="#fbfaf7" stroke="#e1dacd"/><text x="150" y="62" text-anchor="middle" fill="#5a5258" font-size="11">Add marks to see score bands.</text>`;
+      svg.innerHTML = `<rect x="12" y="18" width="276" height="86" rx="9" fill="${BRAND.cream}" stroke="${BRAND.goldSoft}"/><text x="150" y="62" text-anchor="middle" fill="${BRAND.muted}" font-size="11">Add marks to see score bands.</text>`;
       return;
     }
     const bands = [
-      { label: "<50", min: 0, max: 49, color: "#c0392b" },
-      { label: "50-69", min: 50, max: 69, color: "#b7812a" },
-      { label: "70-84", min: 70, max: 84, color: "#161b2e" },
-      { label: "85+", min: 85, max: 100, color: "#0f6e56" }
+      { label: "<50", min: 0, max: 49, color: BRAND.rose },
+      { label: "50-69", min: 50, max: 69, color: BRAND.copper },
+      { label: "70-84", min: 70, max: 84, color: BRAND.navy },
+      { label: "85+", min: 85, max: 100, color: BRAND.gold }
     ].map((band) => ({ ...band, count: items.filter((item) => item.score >= band.min && item.score <= band.max).length }));
     let x = 18;
     const total = items.length;
@@ -691,24 +712,25 @@
     }).join("");
     const legend = bands.map((band, index) => {
       const lx = 20 + index * 68;
-      return `<g><rect x="${lx}" y="82" width="8" height="8" rx="2" fill="${band.color}"/><text x="${lx + 12}" y="90" fill="#161b2e" font-size="9" font-weight="700">${band.label}</text><text x="${lx + 12}" y="104" fill="#7a7178" font-size="9">${band.count}</text></g>`;
+      return `<g><rect x="${lx}" y="82" width="8" height="8" rx="2" fill="${band.color}"/><text x="${lx + 12}" y="90" fill="${BRAND.navyDark}" font-size="9" font-weight="700">${band.label}</text><text x="${lx + 12}" y="104" fill="${BRAND.muted}" font-size="9">${band.count}</text></g>`;
     }).join("");
     const avg = average(items.map((item) => item.score));
-    svg.innerHTML = `<text x="18" y="20" fill="#7a7178" font-size="9">distribution</text>${stacked}<text x="280" y="22" text-anchor="end" fill="#161b2e" font-size="12" font-weight="800">${avg}% avg</text>${legend}`;
+    const markerX = 18 + (Math.max(0, Math.min(100, avg)) / 100) * 264;
+    svg.innerHTML = `<text x="18" y="20" fill="${BRAND.muted}" font-size="9">distribution</text>${stacked}<line x1="${markerX.toFixed(1)}" y1="28" x2="${markerX.toFixed(1)}" y2="66" stroke="${BRAND.gold}" stroke-width="2"/><circle cx="${markerX.toFixed(1)}" cy="28" r="4" fill="${BRAND.paper}" stroke="${BRAND.gold}" stroke-width="2"/><text x="280" y="22" text-anchor="end" fill="${BRAND.navyDark}" font-size="12" font-weight="800">${avg}% avg</text>${legend}`;
   }
   function renderWorkBalance(papers, assignments, quizzes) {
     const svg = document.getElementById("dashboardWorkBalanceSvg");
     const meta = document.getElementById("workBalanceMeta");
     if (!svg) return;
     const rows = [
-      { label: "Papers", count: papers.length, color: "#161b2e" },
-      { label: "Assign", count: assignments.length, color: "#c0392b" },
-      { label: "Quizzes", count: quizzes.length, color: "#b7812a" }
+      { label: "Papers", count: papers.length, color: BRAND.navy },
+      { label: "Assign", count: assignments.length, color: BRAND.rose },
+      { label: "Quizzes", count: quizzes.length, color: BRAND.gold }
     ];
     const total = rows.reduce((sum, row) => sum + row.count, 0);
     if (meta) meta.textContent = total ? `${total} saved` : "saved work";
     if (!total) {
-      svg.innerHTML = `<circle cx="66" cy="64" r="34" fill="none" stroke="#f0ebe3" stroke-width="15"/><text x="66" y="66" text-anchor="middle" fill="#7a7178" font-size="10">No work</text><text x="136" y="44" fill="#5a5258" font-size="10">Log work to</text><text x="136" y="58" fill="#5a5258" font-size="10">see balance.</text>`;
+      svg.innerHTML = `<circle cx="66" cy="64" r="34" fill="none" stroke="${BRAND.goldSoft}" stroke-width="15"/><text x="66" y="66" text-anchor="middle" fill="${BRAND.muted}" font-size="10">No work</text><text x="136" y="44" fill="${BRAND.muted}" font-size="10">Log work to</text><text x="136" y="58" fill="${BRAND.muted}" font-size="10">see balance.</text>`;
       return;
     }
     const circumference = 213.6;
@@ -722,9 +744,69 @@
     const legend = rows.map((row, index) => {
       const y = 36 + index * 27;
       const pct = Math.round((row.count / total) * 100);
-      return `<g><rect x="122" y="${y - 9}" width="8" height="8" rx="2" fill="${row.color}"/><text x="136" y="${y}" fill="#161b2e" font-size="10" font-weight="700">${row.label}</text><text x="202" y="${y}" text-anchor="end" fill="#7a7178" font-size="10">${pct}%</text></g>`;
+      return `<g><rect x="122" y="${y - 9}" width="8" height="8" rx="2" fill="${row.color}"/><text x="136" y="${y}" fill="${BRAND.navyDark}" font-size="10" font-weight="700">${row.label}</text><text x="202" y="${y}" text-anchor="end" fill="${BRAND.muted}" font-size="10">${pct}%</text></g>`;
     }).join("");
-    svg.innerHTML = `<circle cx="66" cy="64" r="34" fill="none" stroke="#f0ebe3" stroke-width="15"/>${arcs}<text x="66" y="61" text-anchor="middle" fill="#161b2e" font-size="21" font-weight="800">${total}</text><text x="66" y="77" text-anchor="middle" fill="#7a7178" font-size="9">items</text>${legend}`;
+    svg.innerHTML = `<circle cx="66" cy="64" r="34" fill="none" stroke="${BRAND.goldSoft}" stroke-width="15"/>${arcs}<text x="66" y="61" text-anchor="middle" fill="${BRAND.navyDark}" font-size="21" font-weight="800">${total}</text><text x="66" y="77" text-anchor="middle" fill="${BRAND.muted}" font-size="9">items</text>${legend}`;
+  }
+  function renderStudentSignal({ scoreStrength, paperList, overdue, weak, items }) {
+    const svg = document.getElementById("dashboardSignalSvg");
+    if (!svg) return;
+    const hasData = Boolean(items.length || paperList.length || overdue.length || weak.length);
+    const scoreValue = hasData ? (scoreStrength ?? 0) : 0;
+    const paperEvidence = hasData ? Math.min(100, Math.round((paperList.length / 8) * 100)) : 0;
+    const deadlineSafety = hasData ? Math.max(0, 100 - Math.min(100, overdue.length * 28)) : 0;
+    const topicControl = weak.length ? weak[0].avg : (items.length ? scoreValue : 0);
+    const axes = [
+      { label: "Scores", value: scoreValue, angle: -90 },
+      { label: "Papers", value: paperEvidence, angle: 0 },
+      { label: "Deadlines", value: deadlineSafety, angle: 90 },
+      { label: "Topics", value: topicControl, angle: 180 }
+    ];
+    const cx = 58; const cy = 58; const radius = 39;
+    const point = (value, angle) => {
+      const rad = (angle * Math.PI) / 180;
+      const r = (Math.max(0, Math.min(100, value)) / 100) * radius;
+      return [cx + Math.cos(rad) * r, cy + Math.sin(rad) * r];
+    };
+    const ring = (scale) => axes.map((axis) => {
+      const [x, y] = point(scale * 100, axis.angle);
+      return `${x.toFixed(1)},${y.toFixed(1)}`;
+    }).join(" ");
+    const polygon = axes.map((axis) => {
+      const [x, y] = point(axis.value, axis.angle);
+      return `${x.toFixed(1)},${y.toFixed(1)}`;
+    }).join(" ");
+    const axisLines = axes.map((axis) => {
+      const [x, y] = point(100, axis.angle);
+      return `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="rgba(245,230,179,0.42)" stroke-width="0.8"/>`;
+    }).join("");
+    const dots = axes.map((axis) => {
+      const [x, y] = point(axis.value, axis.angle);
+      return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3" fill="${brandScoreColor(axis.value)}" stroke="${BRAND.paper}" stroke-width="1.2"/>`;
+    }).join("");
+    const labels = axes.map((axis, index) => {
+      const y = 24 + index * 22;
+      const barW = Math.max(2, (Math.max(0, Math.min(100, axis.value)) / 100) * 76);
+      return `<g>
+        <text x="124" y="${y}" fill="rgba(255,255,255,0.78)" font-size="9" font-weight="700">${axis.label}</text>
+        <rect x="184" y="${y - 8}" width="56" height="7" rx="4" fill="rgba(245,230,179,0.20)"/>
+        <rect x="184" y="${y - 8}" width="${(barW * 0.74).toFixed(1)}" height="7" rx="4" fill="${brandScoreColor(axis.value)}"/>
+        <text x="250" y="${y}" text-anchor="end" fill="${BRAND.goldSoft}" font-size="9" font-weight="800">${Math.round(axis.value)}</text>
+      </g>`;
+    }).join("");
+    const caption = items.length
+      ? "student signal"
+      : "awaiting data";
+    svg.innerHTML = `
+      <polygon points="${ring(1)}" fill="none" stroke="rgba(245,230,179,0.46)" stroke-width="1"/>
+      <polygon points="${ring(0.66)}" fill="none" stroke="rgba(245,230,179,0.25)" stroke-width="1"/>
+      <polygon points="${ring(0.33)}" fill="none" stroke="rgba(245,230,179,0.18)" stroke-width="1"/>
+      ${axisLines}
+      <polygon points="${polygon}" fill="rgba(212,175,55,0.28)" stroke="${BRAND.gold}" stroke-width="2" stroke-linejoin="round"/>
+      ${dots}
+      <circle cx="${cx}" cy="${cy}" r="2" fill="${BRAND.goldSoft}"/>
+      <text x="${cx}" y="112" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="9">${caption}</text>
+      ${labels}`;
   }
   function renderNextAction({ paperList, assignments, quizzes, overdue, weak, avgScore }) {
     const title = document.getElementById("dashboardActionTitle");
@@ -784,6 +866,7 @@
     const items = scoreItems(paperList, assignments, quizzes);
     const assignmentAvg = average(assignmentScores);
     const quizAvg = average(quizScores);
+    const allScoreAvg = average(items.map((item) => item.score));
     const readinessInputs = [avgScore, assignmentAvg, quizAvg].filter((score) => score !== null);
     const readinessBase = readinessInputs.length ? average(readinessInputs) : null;
     const readiness = readinessBase === null ? null : Math.max(0, Math.min(100, readinessBase - Math.min(20, overdue.length * 5)));
@@ -814,6 +897,7 @@
     renderReadinessGauge(readiness, readinessNote);
     renderScoreBands(items);
     renderWorkBalance(paperList, assignments, quizzes);
+    renderStudentSignal({ scoreStrength: allScoreAvg, paperList, overdue, weak, items });
     renderNextAction({ paperList, assignments, quizzes, overdue, weak, avgScore });
 
     const weakList = document.getElementById("dashboardWeakTopicList");
@@ -948,7 +1032,7 @@
       .sort((a, b) => String(a.date || a.createdAt || "").localeCompare(String(b.date || b.createdAt || "")))
       .slice(-8);
     if (!last.length) {
-      svg.innerHTML = `<rect x="10" y="12" width="300" height="86" rx="8" fill="#fbfaf7" stroke="#e1dacd"/><text x="160" y="60" text-anchor="middle" fill="#5a5258" font-size="11">No paper attempts yet.</text>`;
+      svg.innerHTML = `<rect x="10" y="12" width="300" height="86" rx="8" fill="${BRAND.cream}" stroke="${BRAND.goldSoft}"/><text x="160" y="60" text-anchor="middle" fill="${BRAND.muted}" font-size="11">No paper attempts yet.</text>`;
       return;
     }
     const w = 320; const h = 120; const left = 24; const right = 12; const top = 12; const bottom = 28;
@@ -960,27 +1044,27 @@
     });
     const grid = [40, 60, 80, 100].map((score) => {
       const y = top + (100 - score) / 100 * plotH;
-      return `<line x1="${left}" y1="${y.toFixed(1)}" x2="${w - right}" y2="${y.toFixed(1)}" stroke="#e8e1d7" stroke-width="0.7"/><text x="4" y="${(y + 3).toFixed(1)}" fill="#7a7178" font-size="8">${score}</text>`;
+      return `<line x1="${left}" y1="${y.toFixed(1)}" x2="${w - right}" y2="${y.toFixed(1)}" stroke="${BRAND.goldSoft}" stroke-width="0.7"/><text x="4" y="${(y + 3).toFixed(1)}" fill="${BRAND.muted}" font-size="8">${score}</text>`;
     }).join("");
     const labels = last.map((a, i) => {
       const label = shortDate(a.date || a.createdAt || "");
-      return `<text x="${xs[i].toFixed(1)}" y="${h - 9}" text-anchor="middle" fill="#7a7178" font-size="8">${escapeHtml(label)}</text>`;
+      return `<text x="${xs[i].toFixed(1)}" y="${h - 9}" text-anchor="middle" fill="${BRAND.muted}" font-size="8">${escapeHtml(label)}</text>`;
     }).join("");
     if (last.length === 1) {
       const pct = scorePercent(last[0].rawScore) || 0;
       const barH = Math.max(4, (pct / 100) * plotH);
       const barX = left + plotW / 2 - 18;
       const barY = top + plotH - barH;
-      svg.innerHTML = `${grid}<rect x="${barX}" y="${barY.toFixed(1)}" width="36" height="${barH.toFixed(1)}" rx="5" fill="#c0392b"/><circle cx="${(barX + 18).toFixed(1)}" cy="${barY.toFixed(1)}" r="3.5" fill="#161b2e"/><text x="${(barX + 18).toFixed(1)}" y="${(barY - 7).toFixed(1)}" text-anchor="middle" fill="#161b2e" font-size="10" font-weight="700">${pct}%</text>${labels}`;
+      svg.innerHTML = `${grid}<rect x="${barX}" y="${barY.toFixed(1)}" width="36" height="${barH.toFixed(1)}" rx="5" fill="${brandScoreColor(pct)}"/><circle cx="${(barX + 18).toFixed(1)}" cy="${barY.toFixed(1)}" r="3.5" fill="${BRAND.gold}"/><text x="${(barX + 18).toFixed(1)}" y="${(barY - 7).toFixed(1)}" text-anchor="middle" fill="${BRAND.navyDark}" font-size="10" font-weight="700">${pct}%</text>${labels}`;
       return;
     }
     const area = `${left},${top + plotH} ${xs.map((x, i) => `${x.toFixed(1)},${ys[i].toFixed(1)}`).join(" ")} ${w - right},${top + plotH}`;
     const polyline = xs.map((x, i) => `${x.toFixed(1)},${ys[i].toFixed(1)}`).join(" ");
     const dots = xs.map((x, i) => {
       const pct = scorePercent(last[i].rawScore) || 0;
-      return `<g><circle cx="${x.toFixed(1)}" cy="${ys[i].toFixed(1)}" r="3" fill="#c0392b"/><text x="${x.toFixed(1)}" y="${(ys[i] - 7).toFixed(1)}" text-anchor="middle" fill="#161b2e" font-size="8">${pct}</text></g>`;
+      return `<g><circle cx="${x.toFixed(1)}" cy="${ys[i].toFixed(1)}" r="3.4" fill="${brandScoreColor(pct)}" stroke="${BRAND.paper}" stroke-width="1"/><text x="${x.toFixed(1)}" y="${(ys[i] - 7).toFixed(1)}" text-anchor="middle" fill="${BRAND.navyDark}" font-size="8">${pct}</text></g>`;
     }).join("");
-    svg.innerHTML = `${grid}<polygon points="${area}" fill="rgba(192,57,43,0.08)"/><polyline points="${polyline}" fill="none" stroke="#161b2e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>${dots}${labels}`;
+    svg.innerHTML = `${grid}<polygon points="${area}" fill="rgba(212,175,55,0.15)"/><polyline points="${polyline}" fill="none" stroke="${BRAND.navy}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>${dots}${labels}`;
   }
   function paintPerformanceGraph() {
     const svg = document.getElementById("dashboardPerformanceSvg");
@@ -990,12 +1074,12 @@
     const assignmentAvg = average(readAssignments().map((a) => safePercent(a.rawMark, a.maxMark)).filter((score) => score !== null));
     const quizAvg = average(readQuizzes().map((q) => safePercent(q.rawMark, q.maxMark)).filter((score) => score !== null));
     const rows = [
-      { label: "Papers", value: paperAvg, color: "#161b2e" },
-      { label: "Assign", value: assignmentAvg, color: "#c0392b" },
-      { label: "Quizzes", value: quizAvg, color: "#b7812a" }
+      { label: "Papers", value: paperAvg, color: BRAND.navy },
+      { label: "Assign", value: assignmentAvg, color: BRAND.rose },
+      { label: "Quizzes", value: quizAvg, color: BRAND.gold }
     ];
     if (rows.every((row) => row.value === null)) {
-      svg.innerHTML = `<rect x="8" y="10" width="224" height="92" rx="8" fill="#fbfaf7" stroke="#e1dacd"/><text x="120" y="58" text-anchor="middle" fill="#5a5258" font-size="10">Add marks to build the graph.</text>`;
+      svg.innerHTML = `<rect x="8" y="10" width="224" height="92" rx="8" fill="${BRAND.cream}" stroke="${BRAND.goldSoft}"/><text x="120" y="58" text-anchor="middle" fill="${BRAND.muted}" font-size="10">Add marks to build the graph.</text>`;
       return;
     }
     const bars = rows.map((row, index) => {
@@ -1004,13 +1088,13 @@
       const width = Math.max(2, (value / 100) * 132);
       const label = row.value === null ? "-" : `${row.value}%`;
       return `<g>
-        <text x="8" y="${y + 12}" fill="#161b2e" font-size="10" font-weight="700">${row.label}</text>
-        <rect x="62" y="${y}" width="132" height="14" rx="7" fill="#f1ece3"/>
+        <text x="8" y="${y + 12}" fill="${BRAND.navyDark}" font-size="10" font-weight="700">${row.label}</text>
+        <rect x="62" y="${y}" width="132" height="14" rx="7" fill="${BRAND.goldSoft}" opacity="0.64"/>
         <rect x="62" y="${y}" width="${width.toFixed(1)}" height="14" rx="7" fill="${row.color}"/>
-        <text x="206" y="${y + 11}" fill="#161b2e" font-size="10" font-weight="700">${label}</text>
+        <text x="206" y="${y + 11}" fill="${BRAND.navyDark}" font-size="10" font-weight="700">${label}</text>
       </g>`;
     }).join("");
-    svg.innerHTML = `<line x1="62" y1="102" x2="194" y2="102" stroke="#d8d0c3"/><text x="62" y="114" fill="#7a7178" font-size="8">0</text><text x="184" y="114" fill="#7a7178" font-size="8">100</text>${bars}`;
+    svg.innerHTML = `<line x1="62" y1="102" x2="194" y2="102" stroke="${BRAND.line}"/><text x="62" y="114" fill="${BRAND.muted}" font-size="8">0</text><text x="184" y="114" fill="${BRAND.muted}" font-size="8">100</text>${bars}`;
   }
 
   // ---------- Refresh all ----------
