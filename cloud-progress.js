@@ -35,6 +35,7 @@
   const state = {
     configured: false,
     ready: false,
+    authKnown: false,
     user: null,
     auth: null,
     db: null,
@@ -63,6 +64,7 @@
   }
 
   function ensureFloatingWidget() {
+    if (authRequired()) return;
     if (!document.body || document.body.dataset.page === "progress" || document.querySelector(".cloud-floating-widget")) return;
     const widget = document.createElement("aside");
     widget.className = "cloud-floating-widget";
@@ -93,6 +95,9 @@
     const setup = window.ELITE_FIREBASE || {};
     const config = setup.config || {};
     return Boolean(setup.enabled && config.apiKey && config.authDomain && config.projectId && config.appId);
+  }
+  function authRequired() {
+    return Boolean((window.ELITE_FIREBASE || {}).requireAuth);
   }
 
   function profile() {
@@ -166,6 +171,84 @@
     };
   }
 
+  function hasMeaningfulLocalProgress() {
+    const arrayKeys = [
+      SOLVED_KEY,
+      SELECTED_KEY,
+      PAPER_ATTEMPTS_KEY,
+      STUDY_TASKS_KEY,
+      MOCK_HISTORY_KEY,
+      ASSIGNMENTS_KEY,
+      QUIZZES_KEY
+    ];
+    if (arrayKeys.some((key) => Array.isArray(readJSON(key, [])) && readJSON(key, []).length > 0)) return true;
+    const objectKeys = [PROFILE_KEY, REVIEW_KEY, READINESS_KEY, ACTIVITY_KEY, EXAM_KEY, PLAN_KEY];
+    return objectKeys.some((key) => {
+      const value = readJSON(key, {});
+      return value && typeof value === "object" && Object.keys(value).length > 0;
+    });
+  }
+
+  async function restoreCloudIfLocalEmpty() {
+    if (!state.ready || !state.user || hasMeaningfulLocalProgress()) return false;
+    try {
+      const snap = await state.modules.firestore.getDoc(
+        state.modules.firestore.doc(state.db, COLLECTION, state.user.uid)
+      );
+      if (!snap.exists()) return false;
+      applyPayload(snap.data());
+      updateUi("Cloud progress restored on this device.");
+      window.dispatchEvent(new CustomEvent("elite-cloud-restored"));
+      setTimeout(() => window.location.reload(), 500);
+      return true;
+    } catch (err) {
+      state.error = err.message || "Cloud restore failed.";
+      updateUi(state.error);
+      emitState();
+      return false;
+    }
+  }
+
+  function ensureAuthGate() {
+    if (!authRequired() || document.querySelector(".elite-auth-gate") || !document.body) return;
+    const gate = document.createElement("section");
+    gate.className = "elite-auth-gate";
+    gate.setAttribute("aria-label", "Google sign in required");
+    gate.setAttribute("role", "dialog");
+    gate.setAttribute("aria-modal", "true");
+    gate.innerHTML = `
+      <div class="elite-auth-card">
+        <span class="auth-brand">Elite IGCSE</span>
+        <h1>Sign in to continue.</h1>
+        <p>Your progress, mock tests, worksheets, and tracker stay connected to your Google account.</p>
+        <button class="button primary auth-gate-login" type="button" data-cloud-login>Continue with Google</button>
+        <p class="auth-gate-note" data-auth-gate-status>Checking Google login...</p>
+      </div>
+    `;
+    document.body.append(gate);
+  }
+
+  function updateAuthGate(message = "") {
+    if (!authRequired()) return;
+    ensureAuthGate();
+    const signedIn = Boolean(state.user);
+    const gate = document.querySelector(".elite-auth-gate");
+    document.documentElement.classList.toggle("elite-auth-required", true);
+    document.documentElement.classList.toggle("elite-auth-unlocked", signedIn);
+    document.body?.classList.toggle("elite-auth-locked", !signedIn);
+    if (!gate) return;
+    gate.hidden = signedIn;
+    const status = gate.querySelector("[data-auth-gate-status]");
+    const login = gate.querySelector("[data-cloud-login]");
+    if (login) login.disabled = !state.configured;
+    if (status) {
+      status.textContent = message
+        || (!state.configured ? "Google login is not configured yet."
+          : !state.ready || !state.authKnown ? "Checking Google login..."
+            : "Please continue with Google to use Elite IGCSE.");
+    }
+  }
+
   function updateGlobalUi(message = "") {
     ensureFloatingWidget();
     const signedIn = Boolean(state.user);
@@ -199,6 +282,8 @@
       widget.classList.toggle("is-signed-in", signedIn);
       widget.classList.toggle("is-disabled", !state.configured);
     });
+
+    updateAuthGate(message);
   }
 
   function updateUi(message = "") {
@@ -270,14 +355,19 @@
       state.db = modules.firestore.getFirestore(firebaseApp);
       state.ready = true;
       await modules.auth.getRedirectResult(state.auth).catch(() => null);
-      modules.auth.onAuthStateChanged(state.auth, (user) => {
+      modules.auth.onAuthStateChanged(state.auth, async (user) => {
+        state.authKnown = true;
         state.user = user;
         updateUi();
         emitState();
-        if (user) queueSync();
+        if (user) {
+          const restored = await restoreCloudIfLocalEmpty();
+          if (!restored) queueSync();
+        }
       });
     } catch (err) {
       state.error = err.message || "Firebase could not start.";
+      state.authKnown = true;
       updateUi(state.error);
       emitState();
     }
@@ -306,6 +396,7 @@
   async function signOut() {
     if (!state.ready) return;
     await state.modules.auth.signOut(state.auth);
+    state.authKnown = true;
     state.user = null;
     updateUi("Signed out. Local progress still remains on this device.");
     emitState();

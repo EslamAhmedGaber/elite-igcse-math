@@ -8,6 +8,7 @@
 // security comes from Firebase Auth + Firestore rules, not from hiding this file.
 window.ELITE_FIREBASE = {
   enabled: true,
+  requireAuth: true,
   config: {
     apiKey: "AIzaSyCY7NTJmsYyOvW-85A3fXIS2d8s2Yfll28",
     authDomain: "elite-igcse-progress.firebaseapp.com",
