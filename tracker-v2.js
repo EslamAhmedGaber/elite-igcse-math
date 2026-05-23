@@ -1,0 +1,671 @@
+// Elite IGCSE - Tracker V2
+// Adds tab navigation, splits assignments/quizzes into separate stores,
+// computes grades (IGCSE A*-U), builds a revision tab, and adds CSV export.
+// Runs alongside progress.js and reuses cloud-progress.js for Firebase sync.
+(function () {
+  const PAPER_ATTEMPTS_KEY = "elitePaperAttemptsV1";   // existing
+  const STUDY_TASKS_KEY = "eliteStudyTasksV1";         // existing (mixed)
+  const ASSIGNMENTS_KEY = "eliteTrackerAssignmentsV2"; // new
+  const QUIZZES_KEY = "eliteTrackerQuizzesV2";         // new
+  const MIGRATION_FLAG = "eliteTrackerV2MigratedAt";
+
+  const QUIZ_KINDS = new Set([
+    "Topic Quiz", "Mock Quiz", "Quiz", "Unit Quiz", "Practice"
+  ]);
+
+  function readJSON(key, fallback) {
+    try {
+      const value = JSON.parse(localStorage.getItem(key) || "null");
+      return value ?? fallback;
+    } catch (err) {
+      return fallback;
+    }
+  }
+  function writeJSON(key, value) {
+    localStorage.setItem(key, JSON.stringify(value));
+  }
+  function escapeHtml(value) {
+    return String(value ?? "").replace(/[&<>"']/g, (c) => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;"
+    }[c]));
+  }
+  function todayKey() { return new Date().toISOString().slice(0, 10); }
+  function uid(prefix) {
+    return `${prefix}-${Date.now()}-${Math.random().toString(16).slice(2, 8)}`;
+  }
+  function uniqueSorted(arr) {
+    return [...new Set(arr.filter(Boolean))].sort((a, b) => String(a).localeCompare(String(b)));
+  }
+  function safePercent(raw, max) {
+    const r = Number(raw); const m = Number(max);
+    if (!Number.isFinite(r) || !Number.isFinite(m) || m <= 0) return null;
+    return Math.max(0, Math.min(100, Math.round((r / m) * 100)));
+  }
+  function gradeFromPercent(pct) {
+    if (pct === null || pct === undefined || !Number.isFinite(pct)) return "-";
+    if (pct >= 90) return "A*";
+    if (pct >= 80) return "A";
+    if (pct >= 70) return "B";
+    if (pct >= 60) return "C";
+    if (pct >= 50) return "D";
+    if (pct >= 40) return "E";
+    if (pct >= 30) return "F";
+    return "U";
+  }
+  function gradeClass(pct) {
+    if (pct === null || pct === undefined) return "muted";
+    if (pct >= 80) return "grade-a";
+    if (pct >= 60) return "grade-b";
+    if (pct >= 40) return "grade-d";
+    return "grade-u";
+  }
+  function daysUntil(dateValue) {
+    if (!dateValue) return null;
+    const today = new Date(todayKey());
+    const due = new Date(dateValue);
+    if (Number.isNaN(due.getTime())) return null;
+    return Math.ceil((due - today) / 86400000);
+  }
+  function autoAssignmentStatus(a) {
+    if (a.manualStatus) return a.manualStatus;
+    const days = daysUntil(a.dueDate);
+    if (a.submitDate) {
+      if (a.dueDate && new Date(a.submitDate) > new Date(a.dueDate)) return "Late";
+      return "Submitted";
+    }
+    if (days === null) return "Pending";
+    if (days < 0) return "Missing";
+    return "Pending";
+  }
+
+  // ---------- Migration ----------
+  function runMigration() {
+    if (localStorage.getItem(MIGRATION_FLAG)) return;
+    const tasks = readJSON(STUDY_TASKS_KEY, []);
+    const existingAssignments = readJSON(ASSIGNMENTS_KEY, []);
+    const existingQuizzes = readJSON(QUIZZES_KEY, []);
+    if (Array.isArray(tasks) && tasks.length && !existingAssignments.length && !existingQuizzes.length) {
+      const assignments = []; const quizzes = [];
+      tasks.forEach((t) => {
+        const isQuiz = QUIZ_KINDS.has(String(t.kind || ""));
+        if (isQuiz) {
+          quizzes.push({
+            id: t.id || uid("quiz"),
+            date: t.dueDate || t.createdAt?.slice(0, 10) || todayKey(),
+            unit: t.unit || "",
+            topic: t.topic || "",
+            quizTitle: t.title || "",
+            quizType: t.kind === "Mock Homework" ? "Mock Quiz" : (t.kind || "Topic Quiz"),
+            difficulty: t.difficulty || "Medium",
+            rawMark: t.rawScore === "" ? "" : Number(t.rawScore),
+            maxMark: t.maxScore === "" ? "" : Number(t.maxScore),
+            durationMinutes: "",
+            timeTakenMinutes: "",
+            attemptNumber: 1,
+            notes: t.notes || "",
+            createdAt: t.createdAt || new Date().toISOString()
+          });
+        } else {
+          assignments.push({
+            id: t.id || uid("assign"),
+            dateAssigned: t.createdAt?.slice(0, 10) || todayKey(),
+            dueDate: t.dueDate || "",
+            unit: t.unit || "",
+            topic: t.topic || "",
+            assignmentType: t.kind || "Homework",
+            title: t.title || "",
+            difficulty: t.difficulty || "Medium",
+            submitDate: (t.status && (t.status === "Submitted" || t.status === "Late" || t.status === "Revised")) ? (t.dueDate || todayKey()) : "",
+            rawMark: t.rawScore === "" ? "" : Number(t.rawScore),
+            maxMark: t.maxScore === "" ? "" : Number(t.maxScore),
+            manualStatus: t.status === "Revised" ? "Revised" : "",
+            notes: t.notes || "",
+            createdAt: t.createdAt || new Date().toISOString()
+          });
+        }
+      });
+      writeJSON(ASSIGNMENTS_KEY, assignments);
+      writeJSON(QUIZZES_KEY, quizzes);
+    }
+    if (!Array.isArray(existingAssignments)) {
+      writeJSON(ASSIGNMENTS_KEY, []);
+    }
+    if (!Array.isArray(existingQuizzes)) {
+      writeJSON(QUIZZES_KEY, []);
+    }
+    localStorage.setItem(MIGRATION_FLAG, new Date().toISOString());
+  }
+
+  // Backfill revisionStatus on legacy paper attempts.
+  function backfillPaperRevisionStatus() {
+    const attempts = readJSON(PAPER_ATTEMPTS_KEY, []);
+    if (!Array.isArray(attempts) || !attempts.length) return;
+    let mutated = false;
+    attempts.forEach((a) => {
+      if (!a.revisionStatus) { a.revisionStatus = "In progress"; mutated = true; }
+    });
+    if (mutated) writeJSON(PAPER_ATTEMPTS_KEY, attempts);
+  }
+
+  // ---------- Tabs ----------
+  function activateTab(target, options = {}) {
+    const body = document.body;
+    body.dataset.activeTab = target;
+    document.querySelectorAll(".tracker-tab").forEach((tab) => {
+      const isActive = tab.dataset.tabTarget === target;
+      tab.classList.toggle("is-active", isActive);
+      tab.setAttribute("aria-selected", isActive ? "true" : "false");
+    });
+    document.querySelectorAll("[data-tab]").forEach((section) => {
+      const sectionTab = section.dataset.tab;
+      if (sectionTab === "__legacy") { section.hidden = true; return; }
+      section.hidden = sectionTab !== target;
+    });
+    try { history.replaceState(null, "", `#${target}`); } catch (err) { /* noop */ }
+    if (options.scroll) {
+      window.scrollTo({ top: document.querySelector(".tracker-tabs")?.offsetTop - 12 || 0, behavior: "smooth" });
+    }
+    refreshAll();
+  }
+  function setupTabs() {
+    const tabs = document.querySelectorAll(".tracker-tab");
+    tabs.forEach((tab) => tab.addEventListener("click", () => activateTab(tab.dataset.tabTarget, { scroll: true })));
+    const hash = (window.location.hash || "").replace("#", "");
+    const valid = ["dashboard", "papers", "assignments", "quizzes", "revision", "backup"];
+    activateTab(valid.includes(hash) ? hash : "dashboard");
+  }
+
+  // ---------- Unit/Topic options (derived from question data when available) ----------
+  function questionUnits() {
+    const questions = window.QUESTION_DATA || [];
+    return uniqueSorted(questions.map((q) => q.unit));
+  }
+  function questionTopicsByUnit(unit) {
+    const questions = window.QUESTION_DATA || [];
+    const list = questions.filter((q) => !unit || q.unit === unit).map((q) => q.topic);
+    return uniqueSorted(list);
+  }
+  function populateUnitSelect(select, includeBlank = false) {
+    const units = questionUnits();
+    const current = select.value;
+    const opts = (includeBlank ? `<option value="">All</option>` : "")
+      + units.map((u) => `<option ${u === current ? "selected" : ""}>${escapeHtml(u)}</option>`).join("");
+    select.innerHTML = opts;
+  }
+  function populateTopicSelect(select, unitValue) {
+    const topics = questionTopicsByUnit(unitValue);
+    const current = select.value;
+    select.innerHTML = topics.map((t) => `<option ${t === current ? "selected" : ""}>${escapeHtml(t)}</option>`).join("");
+  }
+
+  // ---------- Assignments ----------
+  function readAssignments() { return readJSON(ASSIGNMENTS_KEY, []); }
+  function writeAssignments(list) { writeJSON(ASSIGNMENTS_KEY, list); }
+
+  function bindAssignmentForm() {
+    const shell = document.getElementById("assignmentFormShell");
+    const form = document.getElementById("assignmentForm");
+    const unitSel = document.getElementById("assignmentUnit");
+    const topicSel = document.getElementById("assignmentTopic");
+    const addBtn = document.getElementById("addAssignmentBtn");
+    const cancelBtn = document.getElementById("assignmentCancelBtn");
+    populateUnitSelect(unitSel);
+    populateTopicSelect(topicSel, unitSel.value);
+    unitSel.addEventListener("change", () => populateTopicSelect(topicSel, unitSel.value));
+    addBtn.addEventListener("click", () => {
+      form.reset();
+      document.getElementById("assignmentEditId").value = "";
+      document.getElementById("assignmentDateAssigned").value = todayKey();
+      document.getElementById("assignmentSubmitBtn").textContent = "Save assignment";
+      populateUnitSelect(unitSel);
+      populateTopicSelect(topicSel, unitSel.value);
+      shell.open = true;
+      shell.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+    cancelBtn.addEventListener("click", () => { shell.open = false; form.reset(); document.getElementById("assignmentEditId").value = ""; });
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const id = document.getElementById("assignmentEditId").value;
+      const item = {
+        id: id || uid("assign"),
+        dateAssigned: document.getElementById("assignmentDateAssigned").value || todayKey(),
+        dueDate: document.getElementById("assignmentDueDate").value || "",
+        unit: unitSel.value,
+        topic: topicSel.value,
+        assignmentType: document.getElementById("assignmentType").value,
+        title: document.getElementById("assignmentTitle").value.trim(),
+        difficulty: document.getElementById("assignmentDifficulty").value,
+        submitDate: document.getElementById("assignmentSubmitDate").value || "",
+        rawMark: document.getElementById("assignmentRawMark").value === "" ? "" : Number(document.getElementById("assignmentRawMark").value),
+        maxMark: document.getElementById("assignmentMaxMark").value === "" ? "" : Number(document.getElementById("assignmentMaxMark").value),
+        manualStatus: document.getElementById("assignmentManualStatus").value || "",
+        notes: document.getElementById("assignmentNotes").value.trim(),
+        createdAt: new Date().toISOString()
+      };
+      if (!item.title) { alert("Title is required."); return; }
+      const list = readAssignments();
+      const index = list.findIndex((x) => x.id === item.id);
+      if (index >= 0) list[index] = { ...list[index], ...item };
+      else list.unshift(item);
+      writeAssignments(list);
+      shell.open = false; form.reset();
+      document.getElementById("assignmentEditId").value = "";
+      renderAssignments(); renderRevision();
+    });
+    document.getElementById("assignmentFilterUnit")?.addEventListener("change", renderAssignments);
+    document.getElementById("assignmentFilterStatus")?.addEventListener("change", renderAssignments);
+    document.getElementById("assignmentFilterSearch")?.addEventListener("input", renderAssignments);
+    document.getElementById("exportAssignmentsCsvBtn")?.addEventListener("click", () => exportCsv("assignments", readAssignments().map(prepareAssignmentForExport), ["title","unit","topic","assignmentType","dateAssigned","dueDate","submitDate","difficulty","rawMark","maxMark","percentage","grade","status","notes"]));
+  }
+  function prepareAssignmentForExport(a) {
+    const pct = safePercent(a.rawMark, a.maxMark);
+    return { ...a, percentage: pct === null ? "" : pct, grade: gradeFromPercent(pct), status: autoAssignmentStatus(a) };
+  }
+
+  function renderAssignments() {
+    const tbody = document.getElementById("assignmentRows");
+    if (!tbody) return;
+    const filterUnit = document.getElementById("assignmentFilterUnit");
+    const filterStatus = document.getElementById("assignmentFilterStatus");
+    const filterSearch = document.getElementById("assignmentFilterSearch");
+    const list = readAssignments();
+    // populate unit filter
+    if (filterUnit) {
+      const units = uniqueSorted(list.map((x) => x.unit));
+      const current = filterUnit.value;
+      filterUnit.innerHTML = `<option value="">All</option>` + units.map((u) => `<option ${u === current ? "selected" : ""}>${escapeHtml(u)}</option>`).join("");
+    }
+    const uVal = filterUnit?.value || "";
+    const sVal = filterStatus?.value || "";
+    const q = (filterSearch?.value || "").trim().toLowerCase();
+    const filtered = list.filter((a) => {
+      if (uVal && a.unit !== uVal) return false;
+      const status = autoAssignmentStatus(a);
+      if (sVal && status !== sVal) return false;
+      if (q && !`${a.title} ${a.topic} ${a.unit}`.toLowerCase().includes(q)) return false;
+      return true;
+    });
+    // KPI
+    const scored = list.map((a) => safePercent(a.rawMark, a.maxMark)).filter((p) => p !== null);
+    const avg = scored.length ? Math.round(scored.reduce((s, v) => s + v, 0) / scored.length) : null;
+    const dueWeek = list.filter((a) => {
+      const d = daysUntil(a.dueDate);
+      const status = autoAssignmentStatus(a);
+      return status === "Pending" && d !== null && d >= 0 && d <= 7;
+    }).length;
+    const overdue = list.filter((a) => {
+      const status = autoAssignmentStatus(a);
+      return status === "Missing" || status === "Late";
+    }).length;
+    document.getElementById("assignmentCount").textContent = list.length;
+    document.getElementById("assignmentAverage").textContent = avg === null ? "-" : `${avg}%`;
+    document.getElementById("assignmentDueWeek").textContent = dueWeek;
+    document.getElementById("assignmentOverdue").textContent = overdue;
+
+    if (!filtered.length) {
+      tbody.innerHTML = `<tr><td colspan="10" class="empty-state">No assignments saved yet. Click <strong>+ Add assignment</strong> to log your first one.</td></tr>`;
+      return;
+    }
+    tbody.innerHTML = filtered.map((a) => {
+      const pct = safePercent(a.rawMark, a.maxMark);
+      const grade = gradeFromPercent(pct);
+      const status = autoAssignmentStatus(a);
+      const marks = (a.rawMark === "" || a.maxMark === "") ? "-" : `${a.rawMark}/${a.maxMark}`;
+      return `<tr>
+        <td><strong>${escapeHtml(a.title || "(untitled)")}</strong>${a.notes ? `<span class="cell-sub">${escapeHtml(a.notes)}</span>` : ""}</td>
+        <td>${escapeHtml(a.unit || "-")}<span class="cell-sub">${escapeHtml(a.topic || "")}</span></td>
+        <td>${escapeHtml(a.assignmentType || "-")}<span class="cell-sub">${escapeHtml(a.difficulty || "")}</span></td>
+        <td>${escapeHtml(a.dueDate || "-")}</td>
+        <td>${escapeHtml(a.submitDate || "-")}</td>
+        <td>${marks}</td>
+        <td>${pct === null ? "-" : `${pct}%`}</td>
+        <td><span class="grade-pill ${gradeClass(pct)}">${grade}</span></td>
+        <td><span class="status-pill ${status.toLowerCase()}">${escapeHtml(status)}</span></td>
+        <td><button type="button" class="row-action" data-edit-assignment="${escapeHtml(a.id)}">Edit</button> <button type="button" class="row-action danger" data-delete-assignment="${escapeHtml(a.id)}">Delete</button></td>
+      </tr>`;
+    }).join("");
+  }
+
+  function bindAssignmentRowEvents() {
+    document.getElementById("assignmentRows")?.addEventListener("click", (event) => {
+      const editBtn = event.target.closest("[data-edit-assignment]");
+      const delBtn = event.target.closest("[data-delete-assignment]");
+      if (editBtn) {
+        const a = readAssignments().find((x) => x.id === editBtn.dataset.editAssignment);
+        if (!a) return;
+        document.getElementById("assignmentEditId").value = a.id;
+        document.getElementById("assignmentDateAssigned").value = a.dateAssigned || "";
+        document.getElementById("assignmentDueDate").value = a.dueDate || "";
+        const unitSel = document.getElementById("assignmentUnit");
+        const topicSel = document.getElementById("assignmentTopic");
+        populateUnitSelect(unitSel);
+        if (a.unit) unitSel.value = a.unit;
+        populateTopicSelect(topicSel, unitSel.value);
+        if (a.topic) topicSel.value = a.topic;
+        document.getElementById("assignmentType").value = a.assignmentType || "Homework";
+        document.getElementById("assignmentTitle").value = a.title || "";
+        document.getElementById("assignmentDifficulty").value = a.difficulty || "Medium";
+        document.getElementById("assignmentSubmitDate").value = a.submitDate || "";
+        document.getElementById("assignmentRawMark").value = a.rawMark ?? "";
+        document.getElementById("assignmentMaxMark").value = a.maxMark ?? "";
+        document.getElementById("assignmentManualStatus").value = a.manualStatus || "";
+        document.getElementById("assignmentNotes").value = a.notes || "";
+        document.getElementById("assignmentSubmitBtn").textContent = "Update assignment";
+        const shell = document.getElementById("assignmentFormShell");
+        shell.open = true;
+        shell.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+      if (delBtn) {
+        if (!confirm("Delete this assignment?")) return;
+        const list = readAssignments().filter((x) => x.id !== delBtn.dataset.deleteAssignment);
+        writeAssignments(list);
+        renderAssignments(); renderRevision();
+      }
+    });
+  }
+
+  // ---------- Quizzes ----------
+  function readQuizzes() { return readJSON(QUIZZES_KEY, []); }
+  function writeQuizzes(list) { writeJSON(QUIZZES_KEY, list); }
+
+  function bindQuizForm() {
+    const shell = document.getElementById("quizFormShell");
+    const form = document.getElementById("quizForm");
+    const unitSel = document.getElementById("quizUnit");
+    const topicSel = document.getElementById("quizTopic");
+    const addBtn = document.getElementById("addQuizBtn");
+    const cancelBtn = document.getElementById("quizCancelBtn");
+    populateUnitSelect(unitSel);
+    populateTopicSelect(topicSel, unitSel.value);
+    unitSel.addEventListener("change", () => populateTopicSelect(topicSel, unitSel.value));
+    addBtn.addEventListener("click", () => {
+      form.reset();
+      document.getElementById("quizEditId").value = "";
+      document.getElementById("quizDate").value = todayKey();
+      document.getElementById("quizAttemptNumber").value = 1;
+      document.getElementById("quizSubmitBtn").textContent = "Save quiz";
+      populateUnitSelect(unitSel);
+      populateTopicSelect(topicSel, unitSel.value);
+      shell.open = true;
+      shell.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+    cancelBtn.addEventListener("click", () => { shell.open = false; form.reset(); document.getElementById("quizEditId").value = ""; });
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const id = document.getElementById("quizEditId").value;
+      const item = {
+        id: id || uid("quiz"),
+        date: document.getElementById("quizDate").value || todayKey(),
+        unit: unitSel.value,
+        topic: topicSel.value,
+        quizTitle: document.getElementById("quizTitle").value.trim(),
+        quizType: document.getElementById("quizType").value,
+        difficulty: document.getElementById("quizDifficulty").value,
+        rawMark: document.getElementById("quizRawMark").value === "" ? "" : Number(document.getElementById("quizRawMark").value),
+        maxMark: document.getElementById("quizMaxMark").value === "" ? "" : Number(document.getElementById("quizMaxMark").value),
+        durationMinutes: document.getElementById("quizDuration").value === "" ? "" : Number(document.getElementById("quizDuration").value),
+        timeTakenMinutes: document.getElementById("quizTimeTaken").value === "" ? "" : Number(document.getElementById("quizTimeTaken").value),
+        attemptNumber: Number(document.getElementById("quizAttemptNumber").value || 1),
+        notes: document.getElementById("quizNotes").value.trim(),
+        createdAt: new Date().toISOString()
+      };
+      if (!item.quizTitle) { alert("Quiz title is required."); return; }
+      const list = readQuizzes();
+      const index = list.findIndex((x) => x.id === item.id);
+      if (index >= 0) list[index] = { ...list[index], ...item };
+      else list.unshift(item);
+      writeQuizzes(list);
+      shell.open = false; form.reset();
+      document.getElementById("quizEditId").value = "";
+      renderQuizzes(); renderRevision();
+    });
+    document.getElementById("quizFilterUnit")?.addEventListener("change", renderQuizzes);
+    document.getElementById("quizFilterDifficulty")?.addEventListener("change", renderQuizzes);
+    document.getElementById("quizFilterSearch")?.addEventListener("input", renderQuizzes);
+    document.getElementById("exportQuizzesCsvBtn")?.addEventListener("click", () => exportCsv("quizzes", readQuizzes().map(prepareQuizForExport), ["quizTitle","unit","topic","quizType","date","difficulty","rawMark","maxMark","percentage","grade","durationMinutes","timeTakenMinutes","attemptNumber","notes"]));
+  }
+  function prepareQuizForExport(q) {
+    const pct = safePercent(q.rawMark, q.maxMark);
+    return { ...q, percentage: pct === null ? "" : pct, grade: gradeFromPercent(pct) };
+  }
+
+  function renderQuizzes() {
+    const tbody = document.getElementById("quizRows");
+    if (!tbody) return;
+    const filterUnit = document.getElementById("quizFilterUnit");
+    const filterDiff = document.getElementById("quizFilterDifficulty");
+    const filterSearch = document.getElementById("quizFilterSearch");
+    const list = readQuizzes();
+    if (filterUnit) {
+      const units = uniqueSorted(list.map((x) => x.unit));
+      const current = filterUnit.value;
+      filterUnit.innerHTML = `<option value="">All</option>` + units.map((u) => `<option ${u === current ? "selected" : ""}>${escapeHtml(u)}</option>`).join("");
+    }
+    const uVal = filterUnit?.value || "";
+    const dVal = filterDiff?.value || "";
+    const q = (filterSearch?.value || "").trim().toLowerCase();
+    const filtered = list.filter((it) => {
+      if (uVal && it.unit !== uVal) return false;
+      if (dVal && it.difficulty !== dVal) return false;
+      if (q && !`${it.quizTitle} ${it.topic} ${it.unit}`.toLowerCase().includes(q)) return false;
+      return true;
+    });
+    const scored = list.map((it) => safePercent(it.rawMark, it.maxMark)).filter((p) => p !== null);
+    const avg = scored.length ? Math.round(scored.reduce((s, v) => s + v, 0) / scored.length) : null;
+    const best = scored.length ? Math.max(...scored) : null;
+    const thirty = list.filter((it) => {
+      const d = daysUntil(it.date);
+      return d !== null && d >= -30 && d <= 0;
+    }).length;
+    document.getElementById("quizCount").textContent = list.length;
+    document.getElementById("quizAverage").textContent = avg === null ? "-" : `${avg}%`;
+    document.getElementById("quizBest").textContent = best === null ? "-" : `${best}%`;
+    document.getElementById("quizRecent").textContent = thirty;
+
+    if (!filtered.length) {
+      tbody.innerHTML = `<tr><td colspan="10" class="empty-state">No quizzes saved yet. Click <strong>+ Add quiz</strong> to log your first one.</td></tr>`;
+      return;
+    }
+    tbody.innerHTML = filtered.map((it) => {
+      const pct = safePercent(it.rawMark, it.maxMark);
+      const grade = gradeFromPercent(pct);
+      const marks = (it.rawMark === "" || it.maxMark === "") ? "-" : `${it.rawMark}/${it.maxMark}`;
+      const time = (it.timeTakenMinutes === "" || it.timeTakenMinutes === undefined) ? "-" : `${it.timeTakenMinutes}m`;
+      return `<tr>
+        <td><strong>${escapeHtml(it.quizTitle || "(untitled)")}</strong>${it.notes ? `<span class="cell-sub">${escapeHtml(it.notes)}</span>` : ""}</td>
+        <td>${escapeHtml(it.unit || "-")}<span class="cell-sub">${escapeHtml(it.topic || "")}</span></td>
+        <td>${escapeHtml(it.quizType || "-")}<span class="cell-sub">${escapeHtml(it.difficulty || "")}</span></td>
+        <td>${escapeHtml(it.date || "-")}</td>
+        <td>${marks}</td>
+        <td>${pct === null ? "-" : `${pct}%`}</td>
+        <td><span class="grade-pill ${gradeClass(pct)}">${grade}</span></td>
+        <td>${escapeHtml(String(it.attemptNumber || 1))}</td>
+        <td>${time}</td>
+        <td><button type="button" class="row-action" data-edit-quiz="${escapeHtml(it.id)}">Edit</button> <button type="button" class="row-action danger" data-delete-quiz="${escapeHtml(it.id)}">Delete</button></td>
+      </tr>`;
+    }).join("");
+  }
+  function bindQuizRowEvents() {
+    document.getElementById("quizRows")?.addEventListener("click", (event) => {
+      const editBtn = event.target.closest("[data-edit-quiz]");
+      const delBtn = event.target.closest("[data-delete-quiz]");
+      if (editBtn) {
+        const q = readQuizzes().find((x) => x.id === editBtn.dataset.editQuiz);
+        if (!q) return;
+        document.getElementById("quizEditId").value = q.id;
+        document.getElementById("quizDate").value = q.date || "";
+        const unitSel = document.getElementById("quizUnit");
+        const topicSel = document.getElementById("quizTopic");
+        populateUnitSelect(unitSel);
+        if (q.unit) unitSel.value = q.unit;
+        populateTopicSelect(topicSel, unitSel.value);
+        if (q.topic) topicSel.value = q.topic;
+        document.getElementById("quizTitle").value = q.quizTitle || "";
+        document.getElementById("quizType").value = q.quizType || "Topic Quiz";
+        document.getElementById("quizDifficulty").value = q.difficulty || "Medium";
+        document.getElementById("quizRawMark").value = q.rawMark ?? "";
+        document.getElementById("quizMaxMark").value = q.maxMark ?? "";
+        document.getElementById("quizDuration").value = q.durationMinutes ?? "";
+        document.getElementById("quizTimeTaken").value = q.timeTakenMinutes ?? "";
+        document.getElementById("quizAttemptNumber").value = q.attemptNumber || 1;
+        document.getElementById("quizNotes").value = q.notes || "";
+        document.getElementById("quizSubmitBtn").textContent = "Update quiz";
+        const shell = document.getElementById("quizFormShell");
+        shell.open = true;
+        shell.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+      if (delBtn) {
+        if (!confirm("Delete this quiz?")) return;
+        const list = readQuizzes().filter((x) => x.id !== delBtn.dataset.deleteQuiz);
+        writeQuizzes(list);
+        renderQuizzes(); renderRevision();
+      }
+    });
+  }
+
+  // ---------- Revision ----------
+  function renderRevision() {
+    const wrongRows = document.getElementById("revisionWrongRows");
+    const overdueRows = document.getElementById("revisionOverdueRows");
+    const weakRows = document.getElementById("revisionWeakRows");
+    if (!wrongRows || !overdueRows || !weakRows) return;
+
+    // Wrong questions from past paper attempts
+    const papers = readJSON(PAPER_ATTEMPTS_KEY, []);
+    const wrongList = (Array.isArray(papers) ? papers : [])
+      .filter((p) => String(p.wrongQuestions || "").trim().length > 0)
+      .slice(0, 30);
+    wrongRows.innerHTML = wrongList.length
+      ? wrongList.map((p) => `<tr><td><strong>${escapeHtml(`${p.session || ""} ${p.year || ""} ${p.paperCode || ""}`.trim())}</strong></td><td>${escapeHtml(p.date || "-")}</td><td>${escapeHtml(p.wrongQuestions)}</td><td><span class="status-pill ${String(p.revisionStatus || "in-progress").toLowerCase().replace(/\s/g, "-")}">${escapeHtml(p.revisionStatus || "In progress")}</span></td></tr>`).join("")
+      : `<tr><td colspan="4" class="empty-state">No wrong questions logged yet. Add the wrong question numbers when saving a paper attempt.</td></tr>`;
+
+    // Overdue assignments
+    const assigns = readAssignments();
+    const overdue = assigns.filter((a) => {
+      const status = autoAssignmentStatus(a);
+      return status === "Missing" || status === "Late";
+    });
+    overdueRows.innerHTML = overdue.length
+      ? overdue.map((a) => `<tr><td><strong>${escapeHtml(a.title || "(untitled)")}</strong></td><td>${escapeHtml(a.unit || "-")}<span class="cell-sub">${escapeHtml(a.topic || "")}</span></td><td>${escapeHtml(a.dueDate || "-")}</td><td><span class="status-pill ${autoAssignmentStatus(a).toLowerCase()}">${autoAssignmentStatus(a)}</span></td></tr>`).join("")
+      : `<tr><td colspan="4" class="empty-state">No overdue assignments. Keep it up.</td></tr>`;
+
+    // Weak topics: aggregate percentage across assignments + quizzes per topic
+    const buckets = new Map();
+    function addToBucket(topic, unit, pct) {
+      if (!topic || pct === null) return;
+      const key = `${unit}::${topic}`;
+      const bucket = buckets.get(key) || { topic, unit, total: 0, count: 0 };
+      bucket.total += pct; bucket.count += 1; buckets.set(key, bucket);
+    }
+    assigns.forEach((a) => addToBucket(a.topic, a.unit, safePercent(a.rawMark, a.maxMark)));
+    readQuizzes().forEach((q) => addToBucket(q.topic, q.unit, safePercent(q.rawMark, q.maxMark)));
+    const weak = [...buckets.values()]
+      .map((b) => ({ ...b, avg: Math.round(b.total / b.count) }))
+      .filter((b) => b.avg < 60)
+      .sort((a, b) => a.avg - b.avg)
+      .slice(0, 15);
+    weakRows.innerHTML = weak.length
+      ? weak.map((b) => `<tr><td><strong>${escapeHtml(b.topic)}</strong></td><td>${escapeHtml(b.unit || "-")}</td><td><span class="grade-pill ${gradeClass(b.avg)}">${b.avg}%</span></td><td>${b.count}</td></tr>`).join("")
+      : `<tr><td colspan="4" class="empty-state">No weak topics yet. Log a few assignments or quizzes to populate this.</td></tr>`;
+  }
+
+  // ---------- CSV export ----------
+  function exportCsv(name, rows, columns) {
+    if (!rows.length) { alert("Nothing to export yet."); return; }
+    const head = columns.join(",");
+    const body = rows.map((row) => columns.map((c) => {
+      const v = row[c];
+      const s = v === null || v === undefined ? "" : String(v);
+      return /[,"\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+    }).join(",")).join("\n");
+    const blob = new Blob([head + "\n" + body], { type: "text/csv" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `elite-${name}-${todayKey()}.csv`;
+    document.body.appendChild(link); link.click(); link.remove();
+    URL.revokeObjectURL(url);
+  }
+  function bindBackupCsvButtons() {
+    document.getElementById("exportPastPapersCsvBtn")?.addEventListener("click", () => {
+      const rows = readJSON(PAPER_ATTEMPTS_KEY, []).map((p) => ({
+        ...p,
+        percentage: safePercent(p.rawScore, 100)
+      }));
+      exportCsv("past-papers", rows, ["year","session","paperCode","date","rawScore","percentage","timeMinutes","wrongQuestions","notes","revisionStatus"]);
+    });
+    document.getElementById("exportAssignmentsCsvBtn2")?.addEventListener("click", () => exportCsv("assignments", readAssignments().map(prepareAssignmentForExport), ["title","unit","topic","assignmentType","dateAssigned","dueDate","submitDate","difficulty","rawMark","maxMark","percentage","grade","status","notes"]));
+    document.getElementById("exportQuizzesCsvBtn2")?.addEventListener("click", () => exportCsv("quizzes", readQuizzes().map(prepareQuizForExport), ["quizTitle","unit","topic","quizType","date","difficulty","rawMark","maxMark","percentage","grade","durationMinutes","timeTakenMinutes","attemptNumber","notes"]));
+  }
+
+  // ---------- Dashboard enhancements ----------
+  function renderDashboardTrend() {
+    // Add a small "recent score trend" widget under the KPI tiles in dashboard tab.
+    if (document.getElementById("recentTrendCard")) return; // only once
+    const dashboardKpi = document.querySelector('section.progress-dashboard[data-tab="dashboard"]');
+    if (!dashboardKpi) return;
+    const card = document.createElement("section");
+    card.id = "recentTrendCard";
+    card.dataset.tab = "dashboard";
+    card.className = "recent-trend-card";
+    card.innerHTML = `
+      <div class="rt-head">
+        <strong>Recent score trend</strong>
+        <span>last 8 attempts</span>
+      </div>
+      <svg id="recentTrendSvg" viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg" aria-label="Recent score trend"></svg>`;
+    dashboardKpi.insertAdjacentElement("afterend", card);
+  }
+  function paintRecentTrend() {
+    const svg = document.getElementById("recentTrendSvg");
+    if (!svg) return;
+    const attempts = readJSON(PAPER_ATTEMPTS_KEY, []);
+    const last = (Array.isArray(attempts) ? attempts : []).slice(0, 8).reverse();
+    if (!last.length) {
+      svg.innerHTML = `<text x="160" y="44" text-anchor="middle" fill="#5a5258" font-size="11">No paper attempts yet.</text>`;
+      return;
+    }
+    const w = 320; const h = 80; const pad = 8;
+    const xs = last.map((_, i) => pad + (i * (w - pad * 2)) / Math.max(1, last.length - 1));
+    const ys = last.map((a) => {
+      const pct = Number(a.rawScore) || 0;
+      return h - pad - (pct / 100) * (h - pad * 2);
+    });
+    const polyline = xs.map((x, i) => `${x.toFixed(1)},${ys[i].toFixed(1)}`).join(" ");
+    const dots = xs.map((x, i) => `<circle cx="${x.toFixed(1)}" cy="${ys[i].toFixed(1)}" r="2.5" fill="#c0392b"/>`).join("");
+    svg.innerHTML = `<line x1="0" y1="${h - pad}" x2="${w}" y2="${h - pad}" stroke="#cfc9be" stroke-width="0.5"/><polyline points="${polyline}" fill="none" stroke="#161b2e" stroke-width="1.5"/>${dots}`;
+  }
+
+  // ---------- Refresh all ----------
+  function refreshAll() {
+    renderAssignments(); renderQuizzes(); renderRevision(); paintRecentTrend();
+  }
+
+  // ---------- Init ----------
+  function init() {
+    runMigration();
+    backfillPaperRevisionStatus();
+    renderDashboardTrend();
+    setupTabs();
+    bindAssignmentForm(); bindAssignmentRowEvents();
+    bindQuizForm(); bindQuizRowEvents();
+    bindBackupCsvButtons();
+    refreshAll();
+
+    window.EliteTrackerV2 = {
+      activateTab,
+      refresh: refreshAll
+    };
+
+    // Listen for storage writes from other modules (progress.js paper save).
+    window.addEventListener("storage", refreshAll);
+    // Repaint when user switches back to the tab.
+    document.addEventListener("visibilitychange", () => { if (!document.hidden) refreshAll(); });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();

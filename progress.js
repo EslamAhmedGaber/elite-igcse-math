@@ -12,6 +12,8 @@
   const EXAM_KEY = "eliteMockExamV1";
   const PLAN_KEY = "eliteStudyPlanSettings";
   const LEAD_KEY = "leadInfoV1";
+  const ASSIGNMENTS_KEY = "eliteTrackerAssignmentsV2";
+  const QUIZZES_KEY = "eliteTrackerQuizzesV2";
 
   const els = {
     previewName: document.getElementById("profilePreviewName"),
@@ -598,6 +600,7 @@
       els.saveStatus.textContent = "Add a raw score before saving the paper.";
       return;
     }
+    const revisionStatusEl = document.getElementById("paperRevisionStatus");
     paperAttempts.unshift({
       id: uid("paper"),
       year: els.paperYear.value,
@@ -608,6 +611,7 @@
       timeMinutes: Number(els.paperTime.value || 0),
       wrongQuestions: els.paperWrongQuestions.value.trim(),
       notes: els.paperNotes.value.trim(),
+      revisionStatus: (revisionStatusEl && revisionStatusEl.value) || "In progress",
       createdAt: new Date().toISOString()
     });
     writeJSON(PAPER_ATTEMPTS_KEY, paperAttempts);
@@ -617,6 +621,7 @@
     els.paperWrongQuestions.value = "";
     els.paperNotes.value = "";
     els.saveStatus.textContent = "Past paper attempt saved.";
+    if (window.EliteTrackerV2?.refresh) window.EliteTrackerV2.refresh();
     render();
   }
 
@@ -624,6 +629,7 @@
     paperAttempts = paperAttempts.filter((attempt) => attempt.id !== id);
     writeJSON(PAPER_ATTEMPTS_KEY, paperAttempts);
     if (window.EliteCloud?.queueSync) window.EliteCloud.queueSync();
+    if (window.EliteTrackerV2?.refresh) window.EliteTrackerV2.refresh();
     render();
   }
 
@@ -791,7 +797,7 @@
   function progressPayload() {
     return {
       exportedAt: new Date().toISOString(),
-      version: 1,
+      version: 2,
       profile,
       solved: [...solved],
       selected: [...selected],
@@ -800,6 +806,8 @@
       activity: readActivity(),
       paperAttempts,
       studyTasks,
+      assignmentsV2: readJSON(ASSIGNMENTS_KEY, []),
+      quizzesV2: readJSON(QUIZZES_KEY, []),
       mockHistory,
       activeMock: readJSON(EXAM_KEY, {}),
       studyPlan: readJSON(PLAN_KEY, {}),
@@ -834,6 +842,8 @@
         if (data.activity) writeJSON(ACTIVITY_KEY, data.activity);
         if (Array.isArray(data.paperAttempts)) writeJSON(PAPER_ATTEMPTS_KEY, data.paperAttempts);
         if (Array.isArray(data.studyTasks)) writeJSON(STUDY_TASKS_KEY, data.studyTasks);
+        if (Array.isArray(data.assignmentsV2)) writeJSON(ASSIGNMENTS_KEY, data.assignmentsV2);
+        if (Array.isArray(data.quizzesV2)) writeJSON(QUIZZES_KEY, data.quizzesV2);
         if (Array.isArray(data.mockHistory)) writeJSON(MOCK_HISTORY_KEY, data.mockHistory);
         if (data.activeMock) writeJSON(EXAM_KEY, data.activeMock);
         if (data.studyPlan) writeJSON(PLAN_KEY, data.studyPlan);

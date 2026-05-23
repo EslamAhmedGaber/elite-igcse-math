@@ -11,6 +11,8 @@
   const EXAM_KEY = "eliteMockExamV1";
   const PLAN_KEY = "eliteStudyPlanSettings";
   const LEAD_KEY = "leadInfoV1";
+  const ASSIGNMENTS_KEY = "eliteTrackerAssignmentsV2";
+  const QUIZZES_KEY = "eliteTrackerQuizzesV2";
   const COLLECTION = "student_progress";
   const SDK_VERSION = "10.12.5";
   const SYNC_KEYS = new Set([
@@ -25,7 +27,9 @@
     MOCK_HISTORY_KEY,
     EXAM_KEY,
     PLAN_KEY,
-    LEAD_KEY
+    LEAD_KEY,
+    ASSIGNMENTS_KEY,
+    QUIZZES_KEY
   ]);
 
   const state = {
@@ -118,6 +122,8 @@
       activity: readJSON(ACTIVITY_KEY, {}),
       paperAttempts: readJSON(PAPER_ATTEMPTS_KEY, []),
       studyTasks: readJSON(STUDY_TASKS_KEY, []),
+      assignmentsV2: readJSON(ASSIGNMENTS_KEY, []),
+      quizzesV2: readJSON(QUIZZES_KEY, []),
       mockHistory: readJSON(MOCK_HISTORY_KEY, []),
       activeMock: readJSON(EXAM_KEY, {}),
       studyPlan: readJSON(PLAN_KEY, {}),
@@ -135,6 +141,8 @@
     if (data.activity) writeJSON(ACTIVITY_KEY, data.activity);
     if (Array.isArray(data.paperAttempts)) writeJSON(PAPER_ATTEMPTS_KEY, data.paperAttempts);
     if (Array.isArray(data.studyTasks)) writeJSON(STUDY_TASKS_KEY, data.studyTasks);
+    if (Array.isArray(data.assignmentsV2)) writeJSON(ASSIGNMENTS_KEY, data.assignmentsV2);
+    if (Array.isArray(data.quizzesV2)) writeJSON(QUIZZES_KEY, data.quizzesV2);
     if (Array.isArray(data.mockHistory)) writeJSON(MOCK_HISTORY_KEY, data.mockHistory);
     if (data.activeMock) writeJSON(EXAM_KEY, data.activeMock);
     if (data.studyPlan) writeJSON(PLAN_KEY, data.studyPlan);
