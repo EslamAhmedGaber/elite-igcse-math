@@ -299,6 +299,27 @@
         </div>
       </section>
       <div id="topicStrip" class="topic-strip"></div>
+      <section id="focusFilterBar" class="focus-filter-bar" aria-label="Quick focus filters">
+        <div class="focus-filter-head">
+          <div>
+            <span>Quick filters</span>
+            <strong>Choose the exact set, then solve one question at a time.</strong>
+          </div>
+          <button id="focusMoreFiltersBtn" type="button">More filters</button>
+        </div>
+        <div class="focus-filter-grid">
+          <label>Search<input id="focusSearchBox" type="search" placeholder="topic, paper, keyword"></label>
+          <label><span data-pathway-label="unit">Chapter</span><select id="focusUnitFilter"></select></label>
+          <label>Topic<select id="focusTopicFilter"></select></label>
+          <label>Paper<select id="focusPaperFilter"></select></label>
+          <label>Status<select id="focusViewFilter">
+            <option value="">All questions</option>
+            <option value="unsolved">Unsolved</option>
+            <option value="solved">Solved</option>
+            <option value="selected">Selected only</option>
+          </select></label>
+        </div>
+      </section>
       <div id="questionGrid" class="question-grid"></div>
 
       <div class="practice-cta">

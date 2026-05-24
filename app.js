@@ -12,9 +12,14 @@ const solved = new Set(JSON.parse(localStorage.getItem("solvedExpertiseQuestions
 const REVIEW_KEY = "eliteMistakeBoxV1";
 const ACTIVITY_KEY = "eliteStudyActivityV1";
 const REVIEW_INTERVALS = [1, 3, 7, 14];
+const FOCUS_DEFAULT_KEY = "eliteFocusDefaultV1";
 let reviewItems = readReviewItems();
 let activeBank = localStorage.getItem("activeQuestionBank") || "all";
-let currentLayout = localStorage.getItem("questionLayout") || "grid";
+if (localStorage.getItem(FOCUS_DEFAULT_KEY) !== "done") {
+  localStorage.setItem("questionLayout", "focus");
+  localStorage.setItem(FOCUS_DEFAULT_KEY, "done");
+}
+let currentLayout = localStorage.getItem("questionLayout") || "focus";
 let questions = [];
 let visible = [];
 let reviewMode = "";
@@ -33,6 +38,13 @@ const els = {
   topicFilter: document.getElementById("topicFilter"),
   paperFilter: document.getElementById("paperFilter"),
   viewFilter: document.getElementById("viewFilter"),
+  focusFilterBar: document.getElementById("focusFilterBar"),
+  focusSearchBox: document.getElementById("focusSearchBox"),
+  focusUnitFilter: document.getElementById("focusUnitFilter"),
+  focusTopicFilter: document.getElementById("focusTopicFilter"),
+  focusPaperFilter: document.getElementById("focusPaperFilter"),
+  focusViewFilter: document.getElementById("focusViewFilter"),
+  focusMoreFiltersBtn: document.getElementById("focusMoreFiltersBtn"),
   difficultyFilter: document.getElementById("difficultyFilter"),
   minMarks: document.getElementById("minMarks"),
   maxMarks: document.getElementById("maxMarks"),
@@ -120,6 +132,50 @@ function fillSelect(select, values, label) {
   select.innerHTML = "";
   select.append(new Option(label, ""));
   values.forEach((value) => select.append(new Option(value, value)));
+}
+
+function copySelectOptions(source, target) {
+  if (!source || !target) return;
+  const value = source.value;
+  target.innerHTML = source.innerHTML;
+  target.value = [...target.options].some((option) => option.value === value) ? value : "";
+}
+
+function syncFocusFilterOptions() {
+  copySelectOptions(els.unitFilter, els.focusUnitFilter);
+  copySelectOptions(els.topicFilter, els.focusTopicFilter);
+  copySelectOptions(els.paperFilter, els.focusPaperFilter);
+  copySelectOptions(els.viewFilter, els.focusViewFilter);
+  syncFocusFiltersFromSidebar();
+}
+
+function syncFocusSelectValue(target, value) {
+  if (!target) return;
+  target.value = [...target.options].some((option) => option.value === value) ? value : "";
+}
+
+function syncFocusFiltersFromSidebar() {
+  if (els.focusSearchBox) els.focusSearchBox.value = els.searchBox.value;
+  syncFocusSelectValue(els.focusUnitFilter, els.unitFilter.value);
+  syncFocusSelectValue(els.focusTopicFilter, els.topicFilter.value);
+  syncFocusSelectValue(els.focusPaperFilter, els.paperFilter.value);
+  syncFocusSelectValue(els.focusViewFilter, els.viewFilter.value);
+}
+
+function applyFocusQuickFilter(source, target) {
+  if (!source || !target) return;
+  reviewMode = "";
+  target.value = source.value;
+  if (target === els.unitFilter && window.ELITE_PATHWAY?.isModular && target.value) {
+    localStorage.setItem("modularUnit", target.value);
+    configureBank();
+    showPathwayResumeBanner();
+  }
+  if (target === els.topicFilter) {
+    setTopicChip(target.value);
+    if (!els.worksheetTopic.value) els.worksheetTopic.value = target.value;
+  }
+  redraw();
 }
 
 function escapeHtml(value) {
@@ -267,6 +323,7 @@ function configureBank() {
   fillSelect(els.worksheetTopic, info.topics || uniqueSorted(topicSource.map((q) => q.topic)), "Use current filters");
   renderHeroPreview(window.ELITE_PATHWAY?.mode === "modular" ? getScopedQuestions(questions) : questions);
   renderTopicStrip(window.ELITE_PATHWAY?.mode === "modular" ? getScopedQuestions(questions) : questions);
+  syncFocusFilterOptions();
 }
 
 function syncModularUnitSelection() {
@@ -436,6 +493,7 @@ function redraw() {
   updateProgressSnapshot(selectedActive, solvedActive);
   updateReviewSnapshot(activeIds);
   updateHelper(selectedActive, solvedActive);
+  syncFocusFiltersFromSidebar();
   renderCards();
 }
 
@@ -612,7 +670,11 @@ function renderFocusQuestion() {
       ${renderQuestionActions(question)}
     </article>
   </section>`;
-  els.questionGrid.querySelector(".focus-number-strip .is-active")?.scrollIntoView({ inline: "center", block: "nearest" });
+  const activeNumber = els.questionGrid.querySelector(".focus-number-strip .is-active");
+  if (activeNumber?.parentElement) {
+    const strip = activeNumber.parentElement;
+    strip.scrollLeft = activeNumber.offsetLeft - (strip.clientWidth - activeNumber.clientWidth) / 2;
+  }
 }
 
 function updateProgressSnapshot(selectedActive, solvedActive) {
@@ -1024,6 +1086,16 @@ els.topicFilter.addEventListener("input", () => {
   if (!els.worksheetTopic.value) els.worksheetTopic.value = els.topicFilter.value;
 });
 
+[
+  [els.focusSearchBox, els.searchBox],
+  [els.focusUnitFilter, els.unitFilter],
+  [els.focusTopicFilter, els.topicFilter],
+  [els.focusPaperFilter, els.paperFilter],
+  [els.focusViewFilter, els.viewFilter],
+].forEach(([source, target]) => {
+  source?.addEventListener("input", () => applyFocusQuickFilter(source, target));
+});
+
 els.resetBtn.addEventListener("click", () => {
   resetFilters();
   redraw();
@@ -1072,6 +1144,13 @@ document.addEventListener("keydown", (event) => {
 els.gridLayoutBtn.addEventListener("click", () => setLayout("grid"));
 els.listLayoutBtn.addEventListener("click", () => setLayout("list"));
 els.focusLayoutBtn.addEventListener("click", () => setLayout("focus"));
+els.focusMoreFiltersBtn?.addEventListener("click", () => {
+  if (window.matchMedia("(max-width: 980px)").matches) {
+    setMobileToolsOpen(true);
+  } else {
+    els.searchBox.focus();
+  }
+});
 els.timerToggleBtn.addEventListener("click", toggleTimer);
 els.timerResetBtn.addEventListener("click", resetTimer);
 els.timerPresets.forEach((button) => {
