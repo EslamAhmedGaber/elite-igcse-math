@@ -58,13 +58,13 @@
   </header>
 
   <main class="page page-home">
-    <section class="pathway-gate" aria-labelledby="pathwayGateTitle">
+    <section class="pathway-gate" data-pathway-main-gate aria-labelledby="pathwayGateTitle">
       <div class="pathway-gate-person">
         <img src="assets/Mine-formal-bright.jpg" alt="Dr Eslam Ahmed" loading="eager">
         <div>
           <span class="eyebrow">Dr Eslam Ahmed</span>
           <h1 id="pathwayGateTitle">Choose your pathway.</h1>
-          <p>Pick Linear for the full Chapter 1 to Chapter 6 journey, or Modular for the Unit 1 and Unit 2 pathway.</p>
+          <p>Pick Linear for the full Chapter 1 to Chapter 6 journey, or Modular for the Unit 1 and Unit 2 route. Not sure yet? Use the quick guide below before choosing.</p>
         </div>
       </div>
       <div class="pathway-gate-grid">
@@ -73,12 +73,91 @@
           <strong>Chapter 1 to Chapter 6</strong>
           <p>Full classified bank, roadmap, mocks, notes, and progress tools.</p>
         </a>
-        <a class="pathway-gate-card accent" href="javascript:void(0)" onclick="document.querySelector('.pathway-gate').hidden=true; document.getElementById('modularUnitGate').hidden=false;">
+        <a class="pathway-gate-card accent" href="#modularUnitGate" data-show-modular-units>
           <span>Modular Pathway</span>
           <strong>Unit 1 and Unit 2</strong>
           <p>Filtered Modular topics, modular mock exams, and the same progress tools.</p>
         </a>
       </div>
+
+      <section class="pathway-explainer" aria-labelledby="pathwayExplainerTitle">
+        <div class="pathway-explainer-head">
+          <div>
+            <span class="mini-eyebrow">Quick decision guide</span>
+            <h2 id="pathwayExplainerTitle">Linear or Modular: same goal, different rhythm.</h2>
+            <p>Both routes can lead to the same strong mathematics outcome. The important choice is how the student handles pressure, memory, and retakes.</p>
+          </div>
+          <div class="pathway-toggle" role="tablist" aria-label="Compare Linear and Modular">
+            <button class="is-active" type="button" role="tab" aria-selected="true" data-route-toggle="modular">Modular</button>
+            <button type="button" role="tab" aria-selected="false" data-route-toggle="linear">Linear</button>
+          </div>
+        </div>
+
+        <div class="pathway-route-stage" data-route-stage="modular">
+          <article class="route-panel is-active" data-route-panel="modular">
+            <span>Modular Mathematics A</span>
+            <h3>Step by step pressure.</h3>
+            <p>Unit 1 and Unit 2 are assessed separately. A student can bank unit results, resit a unit when needed, then cash in for the full qualification.</p>
+            <div class="route-flow" aria-label="Modular route flow">
+              <strong>Unit 1</strong>
+              <i></i>
+              <strong>Unit 2</strong>
+              <i></i>
+              <strong>Cash-in</strong>
+            </div>
+          </article>
+
+          <article class="route-panel" data-route-panel="linear">
+            <span>Linear 4MA1</span>
+            <h3>One complete course.</h3>
+            <p>The student studies the whole Higher course, then sits Paper 1H and Paper 2H as one complete route. It rewards long-term course control.</p>
+            <div class="route-flow" aria-label="Linear route flow">
+              <strong>Course</strong>
+              <i></i>
+              <strong>Paper 1H</strong>
+              <i></i>
+              <strong>Paper 2H</strong>
+            </div>
+          </article>
+
+          <div class="route-facts">
+            <div>
+              <span>Best when</span>
+              <strong data-route-fact="best">The student wants smaller official steps and flexible resits.</strong>
+            </div>
+            <div>
+              <span>Main watch-out</span>
+              <strong data-route-fact="risk">The student may feel she is always close to an exam.</strong>
+            </div>
+            <div>
+              <span>Codes to know</span>
+              <strong data-route-fact="code">4WM1H + 4WM2H, with Higher cash-in 4XMAH.</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="decision-helper" aria-label="Pathway recommendation helper">
+          <div>
+            <span class="mini-eyebrow">Student profile</span>
+            <h3>Tap the sentence that sounds closest.</h3>
+          </div>
+          <div class="decision-buttons">
+            <button type="button" data-advice-choice data-route="modular" data-advice-title="Modular is probably the kinder route." data-advice-text="Choose it when the student forgets old work quickly, wants smaller checkpoints, or needs retake flexibility without repeating the whole course.">I forget old topics quickly.</button>
+            <button type="button" data-advice-choice data-route="modular" data-advice-title="Modular can protect the final exam season." data-advice-text="Choose it when the family wants to spread pressure and keep more room for Chemistry, Physics, or Biology near the main exam window.">I need less pressure near final exams.</button>
+            <button type="button" data-advice-choice data-route="linear" data-advice-title="Linear may feel cleaner." data-advice-text="Choose it when the student prefers one full course rhythm, fewer official exam moments, and a complete final revision campaign.">I prefer one big final push.</button>
+          </div>
+          <output class="decision-result" data-advice-result>
+            <strong data-advice-result-title>Start with the student's pressure style.</strong>
+            <span data-advice-result-text>There is no weaker route here. The stronger route is the one the student can follow consistently.</span>
+          </output>
+        </div>
+
+        <p class="pathway-source-note">Teacher note: this guide follows Pearson Edexcel International GCSE Mathematics A route structure. Centres should always confirm final entries and cash-in rules before exam entry.</p>
+        <div class="pathway-explainer-actions">
+          <a class="button primary" href="practice.html?pathway=linear" data-pathway-choice="linear" data-pathway-target="practice.html?pathway=linear">Continue with Linear</a>
+          <button class="button gold" type="button" data-show-modular-units>Choose Unit 1 or Unit 2</button>
+        </div>
+      </section>
     </section>
 
     <section id="modularUnitGate" class="pathway-gate" aria-labelledby="modularUnitGateTitle" hidden>
