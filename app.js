@@ -18,6 +18,7 @@ let currentLayout = localStorage.getItem("questionLayout") || "grid";
 let questions = [];
 let visible = [];
 let reviewMode = "";
+let focusQuestionId = localStorage.getItem("focusQuestionId") || "";
 let timerDuration = 25 * 60;
 let timerRemaining = timerDuration;
 let timerInterval = null;
@@ -82,6 +83,7 @@ const els = {
   timerPresets: document.querySelectorAll("[data-minutes]"),
   gridLayoutBtn: document.getElementById("gridLayoutBtn"),
   listLayoutBtn: document.getElementById("listLayoutBtn"),
+  focusLayoutBtn: document.getElementById("focusLayoutBtn"),
   sortMode: document.getElementById("sortMode"),
   topicStrip: document.getElementById("topicStrip"),
   questionGrid: document.getElementById("questionGrid"),
@@ -483,6 +485,10 @@ function renderCards() {
     els.questionGrid.innerHTML = `<p>No questions match.</p>`;
     return;
   }
+  if (currentLayout === "focus") {
+    renderFocusQuestion();
+    return;
+  }
   els.questionGrid.innerHTML = visible.map((question) => {
     const isSelected = selected.has(question.id);
     const isSolved = solved.has(question.id);
@@ -520,6 +526,95 @@ function renderCards() {
   }).join("");
 }
 
+function renderQuestionActions(question, { compact = false } = {}) {
+  const isSelected = selected.has(question.id);
+  const isSolved = solved.has(question.id);
+  const hasSolution = Boolean(solutionData[question.id]?.source);
+  const review = reviewState(question.id);
+  return `<div class="card-actions ${compact ? "compact" : ""}">
+    <button type="button" data-action="select">${isSelected ? "Remove" : "Select"}</button>
+    <button type="button" data-action="solve">${isSolved ? "Unsolve" : "Solved"}</button>
+    <button type="button" data-action="${review ? "reviewDone" : "reviewAdd"}">${review ? "Review Done" : "Mistake Box"}</button>
+    ${review ? `<button type="button" data-action="reviewRemove">Remove Review</button>` : ""}
+    ${hasSolution ? `<button type="button" data-action="solution">Show Solution</button>` : ""}
+    ${window.CLOUD_SYNC?.state?.user?.email?.toLowerCase().includes("eslam") ? `<button type="button" data-action="fixTopic">Fix Topic</button>` : ""}
+  </div>`;
+}
+
+function focusIndex() {
+  const index = visible.findIndex((question) => question.id === focusQuestionId);
+  return index >= 0 ? index : 0;
+}
+
+function setFocusQuestion(id) {
+  if (!id || !visible.some((question) => question.id === id)) return;
+  focusQuestionId = id;
+  localStorage.setItem("focusQuestionId", id);
+  renderCards();
+}
+
+function moveFocusQuestion(direction) {
+  if (!visible.length) return;
+  const nextIndex = Math.min(visible.length - 1, Math.max(0, focusIndex() + direction));
+  setFocusQuestion(visible[nextIndex].id);
+}
+
+function renderFocusQuestion() {
+  const index = focusIndex();
+  const question = visible[index];
+  focusQuestionId = question.id;
+  localStorage.setItem("focusQuestionId", question.id);
+  const isSelected = selected.has(question.id);
+  const isSolved = solved.has(question.id);
+  const reviewText = reviewLabel(question.id);
+  const nav = visible.map((item, itemIndex) => {
+    const active = item.id === question.id ? "is-active" : "";
+    const solvedClass = solved.has(item.id) ? "is-solved" : "";
+    const selectedClass = selected.has(item.id) ? "is-selected" : "";
+    return `<button class="${active} ${solvedClass} ${selectedClass}" type="button" data-action="focusNav" data-id="${item.id}" title="${escapeHtml(item.paper)} Q${item.question} | ${escapeHtml(item.topic)}">${itemIndex + 1}</button>`;
+  }).join("");
+
+  els.questionGrid.innerHTML = `<section class="focus-viewer" aria-label="Focused question viewer">
+    <div class="focus-topline">
+      <div>
+        <span class="mini-eyebrow">Focus Mode</span>
+        <strong>${index + 1} of ${visible.length}</strong>
+      </div>
+      <div class="focus-stepper" aria-label="Focused question navigation">
+        <button type="button" data-action="focusPrev" ${index === 0 ? "disabled" : ""}>Previous</button>
+        <button type="button" data-action="focusNext" ${index === visible.length - 1 ? "disabled" : ""}>Next</button>
+      </div>
+    </div>
+    <div class="focus-number-strip" aria-label="Question numbers">${nav}</div>
+    <article class="question-card focus-question-card ${isSelected ? "selected" : ""} ${isSolved ? "solved" : ""}" data-id="${question.id}">
+      <header class="focus-question-head">
+        <div>
+          <span>${escapeHtml(question.paper)}</span>
+          <h3>Question ${question.question}</h3>
+          <p>${escapeHtml(question.topic)} | ${escapeHtml(question.unit)}</p>
+        </div>
+        <div class="focus-marks">
+          <strong>${question.marks}</strong>
+          <span>marks</span>
+        </div>
+      </header>
+      <div class="focus-status-row">
+        <span>Q${question.question}</span>
+        <span>${question.marks >= 7 ? "Long" : question.marks >= 4 ? "Standard" : "Quick"}</span>
+        ${question.question >= 20 ? "<span>Q20+</span>" : ""}
+        ${isSelected ? `<span class="pill">Selected</span>` : ""}
+        ${isSolved ? `<span class="pill done">Solved</span>` : ""}
+        ${reviewText ? `<span class="pill review">${escapeHtml(reviewText)}</span>` : ""}
+      </div>
+      <button class="thumb focus-thumb" type="button" data-action="zoom">
+        <img loading="eager" src="${question.image}" alt="${escapeHtml(question.paper)} Q${question.question}">
+      </button>
+      ${renderQuestionActions(question)}
+    </article>
+  </section>`;
+  els.questionGrid.querySelector(".focus-number-strip .is-active")?.scrollIntoView({ inline: "center", block: "nearest" });
+}
+
 function updateProgressSnapshot(selectedActive, solvedActive) {
   const pool = getScopedQuestions();
   const total = pool.length || 1;
@@ -552,11 +647,18 @@ function updateProgressSnapshot(selectedActive, solvedActive) {
 }
 
 function setLayout(layout) {
-  currentLayout = layout === "list" ? "list" : "grid";
+  currentLayout = ["grid", "list", "focus"].includes(layout) ? layout : "grid";
   localStorage.setItem("questionLayout", currentLayout);
   els.questionGrid.classList.toggle("list-view", currentLayout === "list");
+  els.questionGrid.classList.toggle("focus-view", currentLayout === "focus");
+  document.body.classList.toggle("practice-focus-mode", currentLayout === "focus");
   els.gridLayoutBtn.classList.toggle("active", currentLayout === "grid");
   els.listLayoutBtn.classList.toggle("active", currentLayout === "list");
+  els.focusLayoutBtn.classList.toggle("active", currentLayout === "focus");
+  renderCards();
+  if (currentLayout === "focus" && visible.length) {
+    window.setTimeout(() => els.questionGrid.scrollIntoView({ block: "start" }), 0);
+  }
 }
 
 function questionById(id) {
@@ -867,8 +969,20 @@ function setTimerMinutes(minutes) {
 }
 
 els.questionGrid.addEventListener("click", (event) => {
-  const card = event.target.closest(".question-card");
   const action = event.target.closest("[data-action]")?.dataset.action;
+  if (action === "focusNav") {
+    setFocusQuestion(event.target.closest("[data-id]")?.dataset.id);
+    return;
+  }
+  if (action === "focusPrev") {
+    moveFocusQuestion(-1);
+    return;
+  }
+  if (action === "focusNext") {
+    moveFocusQuestion(1);
+    return;
+  }
+  const card = event.target.closest(".question-card");
   if (!card || !action) return;
   if (action === "select") toggleSelect(card.dataset.id);
   if (action === "solve") toggleSolved(card.dataset.id);
@@ -949,9 +1063,15 @@ document.addEventListener("click", (event) => {
 });
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") setMobileToolsOpen(false);
+  if (currentLayout === "focus" && !["INPUT", "SELECT", "TEXTAREA"].includes(document.activeElement?.tagName || "")) {
+    if (els.viewerDialog.open || els.solutionDialog.open || els.fixTopicDialog.open) return;
+    if (event.key === "ArrowLeft") moveFocusQuestion(-1);
+    if (event.key === "ArrowRight") moveFocusQuestion(1);
+  }
 });
 els.gridLayoutBtn.addEventListener("click", () => setLayout("grid"));
 els.listLayoutBtn.addEventListener("click", () => setLayout("list"));
+els.focusLayoutBtn.addEventListener("click", () => setLayout("focus"));
 els.timerToggleBtn.addEventListener("click", toggleTimer);
 els.timerResetBtn.addEventListener("click", resetTimer);
 els.timerPresets.forEach((button) => {
