@@ -13,6 +13,8 @@
   const LEAD_KEY = "leadInfoV1";
   const ASSIGNMENTS_KEY = "eliteTrackerAssignmentsV2";
   const QUIZZES_KEY = "eliteTrackerQuizzesV2";
+  const WMA11_SOLVED_KEY = "eliteWMA11SolvedV1";
+  const WMA11_MISTAKE_KEY = "eliteWMA11MistakeBoxV1";
   const COLLECTION = "student_progress";
   const SDK_VERSION = "10.12.5";
   const SYNC_KEYS = new Set([
@@ -29,7 +31,9 @@
     PLAN_KEY,
     LEAD_KEY,
     ASSIGNMENTS_KEY,
-    QUIZZES_KEY
+    QUIZZES_KEY,
+    WMA11_SOLVED_KEY,
+    WMA11_MISTAKE_KEY
   ]);
 
   const state = {
@@ -124,6 +128,8 @@
       studyTasks: readJSON(STUDY_TASKS_KEY, []),
       assignmentsV2: readJSON(ASSIGNMENTS_KEY, []),
       quizzesV2: readJSON(QUIZZES_KEY, []),
+      wma11Solved: readJSON(WMA11_SOLVED_KEY, []),
+      wma11Mistakes: readJSON(WMA11_MISTAKE_KEY, {}),
       mockHistory: readJSON(MOCK_HISTORY_KEY, []),
       activeMock: readJSON(EXAM_KEY, {}),
       studyPlan: readJSON(PLAN_KEY, {}),
@@ -143,6 +149,8 @@
     if (Array.isArray(data.studyTasks)) writeJSON(STUDY_TASKS_KEY, data.studyTasks);
     if (Array.isArray(data.assignmentsV2)) writeJSON(ASSIGNMENTS_KEY, data.assignmentsV2);
     if (Array.isArray(data.quizzesV2)) writeJSON(QUIZZES_KEY, data.quizzesV2);
+    if (Array.isArray(data.wma11Solved)) writeJSON(WMA11_SOLVED_KEY, data.wma11Solved);
+    if (data.wma11Mistakes) writeJSON(WMA11_MISTAKE_KEY, data.wma11Mistakes);
     if (Array.isArray(data.mockHistory)) writeJSON(MOCK_HISTORY_KEY, data.mockHistory);
     if (data.activeMock) writeJSON(EXAM_KEY, data.activeMock);
     if (data.studyPlan) writeJSON(PLAN_KEY, data.studyPlan);

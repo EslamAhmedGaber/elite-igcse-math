@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <base href="../../">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IAL Pure 1 WMA11 Question Bank - Elite IGCSE Mathematics</title>
+  <meta name="description" content="Standalone Edexcel IAL Pure 1 WMA11 past-paper question bank by topic, with filtered questions, worked solutions, and classified PDF books.">
+  <meta name="theme-color" content="#161b2e">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="ial/wma11/wma11.css?v=20260525a">
+  <script>
+    window.MathJax = { tex: { inlineMath: [["$", "$"], ["\\(", "\\)"]] }, svg: { fontCache: "global" } };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <script defer src="firebase-config.js"></script>
+  <script defer src="cloud-progress.js"></script>
+  <script defer src="lead.js"></script>
+  <script defer src="ial/wma11/wma11-data.js?v=20260525a"></script>
+  <script defer src="ial/wma11/wma11.js?v=20260525a"></script>
+</head>
+<body data-page="ial-wma11">
+
+  <header class="site-header">
+    <a class="site-brand" href="index.html" aria-label="Elite IGCSE Mathematics home">
+      <span class="brand-mark">IAL</span>
+      <span class="brand-title">Elite IGCSE Mathematics</span>
+    </a>
+    <button id="navToggle" class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" aria-label="Main">
+      <a href="downloads.html">Books</a>
+      <a href="pastpapers.html">Papers</a>
+      <a href="practice.html">Classified</a>
+      <a href="exam.html">Mocks</a>
+      <a href="progress.html">Progress</a>
+      <a href="ial/wma11/" aria-current="page">IAL Pure 1</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="site-cta">
+      <button class="button cloud-auth-button" type="button" data-cloud-login>Continue with Google</button>
+      <a class="button cloud-account-button" href="progress.html" data-cloud-account hidden>My Progress</a>
+      <a class="button primary" data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Book Free First Class</a>
+    </div>
+  </header>
+
+  <main class="ial-page">
+    <section class="ial-hero" aria-labelledby="ialTitle">
+      <div>
+        <span class="eyebrow">Standalone IAL route</span>
+        <h1 id="ialTitle">IAL Pure 1 (WMA11)</h1>
+        <p><strong>Past-paper bank by topic.</strong> Filtered WMA11 questions from 2019 October to 2026 January, solved and topic-checked after mark-scheme review. This sits outside the IGCSE Linear and Modular pathways.</p>
+      </div>
+      <div class="ial-book-actions" aria-label="WMA11 books">
+        <a class="button primary" href="downloads/IAL/WMA11/WMA11_Classified_Questions.pdf" target="_blank" rel="noreferrer">Classified PDF</a>
+        <a class="button solution" href="downloads/IAL/WMA11/WMA11_Classified_With_Answers.pdf" target="_blank" rel="noreferrer">Classified + Answers</a>
+        <a class="button gold" href="downloads/IAL/WMA11/WMA11_Expertise_Questions.pdf" target="_blank" rel="noreferrer">Expertise PDF</a>
+        <a class="button solution light-solution" href="downloads/IAL/WMA11/WMA11_Expertise_With_Answers.pdf" target="_blank" rel="noreferrer">Expertise + Answers</a>
+      </div>
+    </section>
+
+    <section class="ial-dashboard" aria-label="WMA11 summary">
+      <article><span>Total questions</span><strong data-ial-total>179</strong><small>13 checked topics</small></article>
+      <article><span>Filtered now</span><strong data-ial-filtered>0</strong><small>matching questions</small></article>
+      <article><span>Solved here</span><strong data-ial-solved>0</strong><small>saved to your account</small></article>
+      <article><span>Mistake box</span><strong data-ial-mistakes>0</strong><small>for revision</small></article>
+    </section>
+
+    <section class="ial-workbench">
+      <form class="ial-filters" id="ialFilters" aria-label="Filter WMA11 questions">
+        <label>
+          <span>Search</span>
+          <input id="ialSearch" type="search" placeholder="topic, paper, question id">
+        </label>
+        <label>
+          <span>Topic</span>
+          <select id="ialTopic"></select>
+        </label>
+        <label>
+          <span>Year</span>
+          <select id="ialYear"></select>
+        </label>
+        <label>
+          <span>Session</span>
+          <select id="ialSession"></select>
+        </label>
+        <label>
+          <span>Marks</span>
+          <select id="ialMarks"></select>
+        </label>
+        <label class="ial-toggle">
+          <input id="ialExpertiseOnly" type="checkbox">
+          <span>Expertise only Q6+</span>
+        </label>
+        <button class="button light" type="button" id="ialReset">Reset</button>
+      </form>
+
+      <div class="ial-strip-head">
+        <div>
+          <span class="eyebrow">Choose a question</span>
+          <strong id="ialResultLabel">Loading...</strong>
+        </div>
+        <div class="ial-stepper" aria-label="Question navigation">
+          <button class="button light" type="button" id="ialPrev">Previous</button>
+          <button class="button light" type="button" id="ialNext">Next</button>
+        </div>
+      </div>
+      <div class="ial-number-strip" id="ialNumbers" aria-label="Filtered question numbers"></div>
+
+      <article class="ial-question-stage" id="ialQuestionStage" aria-live="polite"></article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <strong>Elite IAL Mathematics</strong>
+        <p>Edexcel International Advanced Level Pure 1 | WMA11</p>
+        <p class="muted">Prepared by Dr Eslam Ahmed</p>
+      </div>
+      <div>
+        <strong>Contact</strong>
+        <p><a href="https://wa.me/201120009622" data-lead-trigger="whatsapp">WhatsApp +20 112 000 9622</a></p>
+        <p><a href="tel:+201120009622">Call +20 112 000 9622</a></p>
+      </div>
+      <div>
+        <strong>Pages</strong>
+        <p><a href="downloads.html">Books</a></p>
+        <p><a href="practice.html">IGCSE classified bank</a></p>
+        <p><a href="pastpapers.html">IGCSE past papers</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
