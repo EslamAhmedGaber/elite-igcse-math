@@ -87,7 +87,8 @@
   }
 
   function matches(item, filters) {
-    if (filters.topic && item.topic !== filters.topic) return false;
+    const itemTopics = item.topics || [item.topic];
+    if (filters.topic && !itemTopics.includes(filters.topic)) return false;
     if (filters.year && String(item.year) !== filters.year) return false;
     if (filters.session && item.session !== filters.session) return false;
     if (filters.marks && String(item.marks) !== filters.marks) return false;
@@ -99,6 +100,7 @@
       item.paperCode,
       item.topic,
       item.topicName,
+      ...(item.topicNames || []),
       item.year,
       item.session,
       `q${item.qNo}`
@@ -137,6 +139,16 @@
     }
     const solvedOn = state.solved.includes(item.id);
     const mistakeOn = Boolean(state.mistakes[item.id]);
+    const selectedTopic = els.topic.value;
+    const activeTopic = selectedTopic && (item.topics || [item.topic]).includes(selectedTopic) ? selectedTopic : item.primaryTopic || item.topic;
+    const activeTopicName = topicName(activeTopic, item.topicName);
+    const isCrossView = activeTopic !== (item.primaryTopic || item.topic);
+    const secondaryNames = item.secondaryTopicNames || [];
+    const topicBadges = `
+      <span class="ial-pill">${escapeHtml(activeTopicName)}</span>
+      ${isCrossView ? `<span class="ial-pill">Primary: ${escapeHtml(item.primaryTopicName || item.topicName)}</span>` : ""}
+      ${!isCrossView && secondaryNames.length ? `<span class="ial-pill">Also: ${escapeHtml(secondaryNames.join(", "))}</span>` : ""}
+    `;
     const steps = (item.steps || []).map((step, index) => `
       <section class="ial-step">
         <strong>${index + 1}. ${escapeHtml(step.title)}</strong>
@@ -152,7 +164,7 @@
           </div>
           <div class="ial-meta">
             <span class="ial-pill">${item.marks} marks</span>
-            <span class="ial-pill">${escapeHtml(item.topicName)}</span>
+            ${topicBadges}
             <span class="ial-pill">${item.session === "MayJune" ? "May/June" : item.session} ${item.year}</span>
           </div>
         </header>
@@ -186,11 +198,19 @@
     els.solved.textContent = state.solved.length;
     els.mistakes.textContent = Object.keys(state.mistakes).length;
     const item = state.filtered[state.activeIndex];
+    const selectedTopic = els.topic.value;
+    const labelTopic = item && selectedTopic && (item.topics || [item.topic]).includes(selectedTopic)
+      ? topicName(selectedTopic, item.topicName)
+      : item?.topicName;
     els.label.textContent = item
-      ? `${state.activeIndex + 1} of ${state.filtered.length} - ${item.topicName}`
+      ? `${state.activeIndex + 1} of ${state.filtered.length} - ${labelTopic}`
       : "No matching questions";
     els.prev.disabled = state.activeIndex <= 0;
     els.next.disabled = state.activeIndex >= state.filtered.length - 1;
+  }
+
+  function topicName(slug, fallback = "") {
+    return TOPICS.find((topic) => topic.slug === slug)?.name || fallback || slug;
   }
 
   function render() {

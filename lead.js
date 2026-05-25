@@ -42,6 +42,132 @@
     </dialog>
   `;
 
+  const NAV_GROUPS = [
+    {
+      id: "linear",
+      label: "Linear",
+      detail: "4MA1 route",
+      href: "/practice.html?pathway=linear",
+      pathway: "linear",
+      panelLabel: "Linear tools",
+      links: [
+        { title: "Classified View", detail: "Chapter bank", href: "/practice.html?pathway=linear&bank=all", pathway: "linear" },
+        { title: "Expertise", detail: "Q20+ finishers", href: "/practice.html?pathway=linear&bank=expertise&mode=q20", pathway: "linear" },
+        { title: "Mock Builder", detail: "Build tests", href: "/exam.html?pathway=linear&mode=custom", pathway: "linear" },
+        { title: "Books", detail: "Questions and answers", href: "/downloads.html?pathway=linear", pathway: "linear" },
+        { title: "Past Paper Solutions", detail: "Papers beside answers", href: "/pastpapers.html?pathway=linear", pathway: "linear" },
+        { title: "Progress", detail: "Track mastery", href: "/progress.html?pathway=linear", pathway: "linear" },
+      ],
+    },
+    {
+      id: "modular",
+      label: "Modular",
+      detail: "4WM route",
+      href: "/practice.html?pathway=modular&unit=Unit+1",
+      pathway: "modular",
+      units: [
+        {
+          title: "Unit 1",
+          detail: "4WM1",
+          links: [
+            { title: "Classified View", detail: "Unit 1 topics", href: "/practice.html?pathway=modular&unit=Unit+1&bank=all", pathway: "modular" },
+            { title: "Expertise", detail: "Unit 1 harder set", href: "/practice.html?pathway=modular&unit=Unit+1&bank=expertise&mode=q20", pathway: "modular" },
+            { title: "Mock Builder", detail: "Unit 1 tests", href: "/exam.html?pathway=modular&unit=Unit+1&mode=custom", pathway: "modular" },
+            { title: "Books", detail: "Unit 1 PDFs", href: "/downloads.html?pathway=modular&unit=Unit+1", pathway: "modular" },
+            { title: "Past Paper Solutions", detail: "4WM1 papers", href: "/pastpapers.html?pathway=modular&unit=Unit+1", pathway: "modular" },
+            { title: "Progress", detail: "Unit 1 mastery", href: "/progress.html?pathway=modular&unit=Unit+1", pathway: "modular" },
+          ],
+        },
+        {
+          title: "Unit 2",
+          detail: "4WM2",
+          links: [
+            { title: "Classified View", detail: "Unit 2 topics", href: "/practice.html?pathway=modular&unit=Unit+2&bank=all", pathway: "modular" },
+            { title: "Expertise", detail: "Unit 2 harder set", href: "/practice.html?pathway=modular&unit=Unit+2&bank=expertise&mode=q20", pathway: "modular" },
+            { title: "Mock Builder", detail: "Unit 2 tests", href: "/exam.html?pathway=modular&unit=Unit+2&mode=custom", pathway: "modular" },
+            { title: "Books", detail: "Unit 2 PDFs", href: "/downloads.html?pathway=modular&unit=Unit+2", pathway: "modular" },
+            { title: "Past Paper Solutions", detail: "4WM2 papers", href: "/pastpapers.html?pathway=modular&unit=Unit+2", pathway: "modular" },
+            { title: "Progress", detail: "Unit 2 mastery", href: "/progress.html?pathway=modular&unit=Unit+2", pathway: "modular" },
+          ],
+        },
+      ],
+    },
+    {
+      id: "pure",
+      label: "IAL Pure 1",
+      detail: "WMA11",
+      href: "/ial/wma11/index.html",
+      panelLabel: "WMA11 tools",
+      links: [
+        { title: "Classified View", detail: "Topic practice", href: "/ial/wma11/index.html" },
+        { title: "Classified PDF", detail: "Questions only", href: "/downloads/IAL/WMA11/WMA11_Classified_Questions.pdf", target: "_blank" },
+        { title: "With Answers", detail: "Worked solutions", href: "/downloads/IAL/WMA11/WMA11_Classified_With_Answers.pdf", target: "_blank" },
+        { title: "Expertise PDF", detail: "Q6+ route", href: "/downloads/IAL/WMA11/WMA11_Expertise_Questions.pdf", target: "_blank" },
+        { title: "Expertise Answers", detail: "Solutions set", href: "/downloads/IAL/WMA11/WMA11_Expertise_With_Answers.pdf", target: "_blank" },
+        { title: "Progress", detail: "Stats and mistake box", href: "/ial/wma11/index.html#ialStats" },
+      ],
+    },
+    {
+      id: "about",
+      label: "About",
+      detail: "Dr Eslam",
+      href: "/about.html",
+      panelLabel: "Support",
+      links: [
+        { title: "About Dr Eslam", detail: "Teacher profile", href: "/about.html" },
+        { title: "Download Centre", detail: "All public books", href: "/downloads.html" },
+        { title: "Topic Roadmap", detail: "Course map", href: "/topics.html" },
+        { title: "Readiness Check", detail: "Quick diagnosis", href: "/checkup.html" },
+        { title: "Contact", detail: "WhatsApp booking", href: "https://wa.me/201120009622", lead: "whatsapp" },
+      ],
+    },
+  ];
+
+  function navLink(item) {
+    const attrs = [
+      `href="${item.href}"`,
+      item.target ? `target="${item.target}" rel="noreferrer"` : "",
+      item.pathway ? `data-pathway-choice="${item.pathway}" data-pathway-target="${item.href}"` : "",
+      item.lead ? `data-lead-trigger="${item.lead}"` : "",
+    ].filter(Boolean).join(" ");
+    return `<a ${attrs}><strong>${item.title}</strong><span>${item.detail}</span></a>`;
+  }
+
+  function navTools(links) {
+    return `<div class="nav-tool-grid">${links.map(navLink).join("")}</div>`;
+  }
+
+  function renderStructuredNav(nav) {
+    nav.innerHTML = NAV_GROUPS.map((group) => {
+      const tabAttrs = [
+        `class="nav-tab-main"`,
+        `href="${group.href}"`,
+        `aria-expanded="false"`,
+        group.pathway ? `data-pathway-choice="${group.pathway}" data-pathway-target="${group.href}"` : "",
+      ].filter(Boolean).join(" ");
+      const panel = group.units
+        ? `<div class="nav-panel nav-panel-${group.id}" aria-label="${group.label} pathway links">
+            <div class="nav-panel-label">Choose a unit</div>
+            <div class="nav-unit-columns">
+              ${group.units.map((unit) => `
+                <section class="nav-unit-card">
+                  <div class="nav-unit-head"><strong>${unit.title}</strong><span>${unit.detail}</span></div>
+                  ${navTools(unit.links)}
+                </section>
+              `).join("")}
+            </div>
+          </div>`
+        : `<div class="nav-panel nav-panel-${group.id}" aria-label="${group.label} pathway links">
+            <div class="nav-panel-label">${group.panelLabel}</div>
+            ${navTools(group.links)}
+          </div>`;
+      return `<div class="nav-group nav-group-${group.id}" data-nav-group="${group.id}">
+        <a ${tabAttrs}><span>${group.label}</span><small>${group.detail}</small></a>
+        ${panel}
+      </div>`;
+    }).join("");
+  }
+
   function ensureDialog() {
     if (!document.getElementById("leadDialog")) {
       document.body.insertAdjacentHTML("beforeend", DIALOG_HTML);
@@ -160,6 +286,81 @@
     });
   }
 
+  function initStructuredNav() {
+    const nav = document.querySelector(".site-nav");
+    if (!nav) return;
+    renderStructuredNav(nav);
+    const groups = nav.querySelectorAll("[data-nav-group]");
+    const page = document.body?.dataset.page || "";
+    const params = new URLSearchParams(window.location.search);
+    const requestedPathway = params.get("pathway");
+    let active = "linear";
+
+    if (page === "ial-wma11" || window.location.pathname.includes("/ial/wma11/")) {
+      active = "pure";
+    } else if (page === "about") {
+      active = "about";
+    } else if (requestedPathway === "pure") {
+      active = "pure";
+    } else if (requestedPathway === "modular" || window.ELITE_PATHWAY?.mode === "modular") {
+      active = "modular";
+    }
+
+    groups.forEach((group) => {
+      const isActive = group.dataset.navGroup === active;
+      group.classList.toggle("is-active", isActive);
+      const main = group.querySelector(".nav-tab-main");
+      if (main) {
+        if (isActive) main.setAttribute("aria-current", "page");
+        else main.removeAttribute("aria-current");
+      }
+    });
+
+    nav.addEventListener("click", (event) => {
+      const pathwayLink = event.target.closest("[data-pathway-choice]");
+      if (pathwayLink && !pathwayLink.classList.contains("nav-tab-main")) {
+        const nextMode = pathwayLink.dataset.pathwayChoice;
+        const target = pathwayLink.dataset.pathwayTarget || pathwayLink.getAttribute("href") || "";
+        if (window.ELITE_PATHWAY?.setMode) {
+          event.preventDefault();
+          window.ELITE_PATHWAY.setMode(nextMode, target);
+        }
+        return;
+      }
+
+      const mainTab = event.target.closest(".nav-tab-main");
+      if (mainTab) {
+        event.preventDefault();
+        const group = mainTab.closest("[data-nav-group]");
+        const willOpen = !group?.classList.contains("is-open");
+        groups.forEach((item) => {
+          item.classList.remove("is-open");
+          item.querySelector(".nav-tab-main")?.setAttribute("aria-expanded", "false");
+        });
+        if (group && willOpen) {
+          group.classList.add("is-open");
+          mainTab.setAttribute("aria-expanded", "true");
+        }
+        return;
+      }
+
+      const link = event.target.closest("a");
+      if (!link || !window.matchMedia("(max-width: 1080px)").matches) return;
+      const header = document.querySelector(".site-header");
+      const toggle = document.getElementById("navToggle");
+      if (header) header.classList.remove("nav-open");
+      if (toggle) toggle.setAttribute("aria-expanded", "false");
+    });
+
+    document.addEventListener("click", (event) => {
+      if (event.target.closest(".site-nav")) return;
+      groups.forEach((group) => {
+        group.classList.remove("is-open");
+        group.querySelector(".nav-tab-main")?.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
   function initPwa() {
     if (!("serviceWorker" in navigator)) return;
     if (!/^https?:$/.test(window.location.protocol)) return;
@@ -182,6 +383,7 @@
   function bootstrap() {
     init();
     initNavToggle();
+    initStructuredNav();
     initPwa();
   }
 

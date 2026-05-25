@@ -179,6 +179,31 @@
     refreshBuilderTopicOptions();
   }
 
+  function setSelectIfPresent(select, value) {
+    if (!select || !value) return;
+    if ([...select.options].some((option) => option.value === value)) {
+      select.value = value;
+    }
+  }
+
+  function applyUrlDefaults() {
+    const params = new URLSearchParams(window.location.search);
+    const unit = params.get("unit");
+    const bank = params.get("bank");
+    const mode = params.get("mode");
+    setSelectIfPresent(els.unit, unit);
+    setSelectIfPresent(els.customUnit, unit);
+    setSelectIfPresent(els.smartUnit, unit);
+    setSelectIfPresent(els.bank, bank);
+    setSelectIfPresent(els.customBank, bank);
+    setSelectIfPresent(els.smartBank, bank);
+    if (mode && els.modeTabs.some((button) => button.dataset.examMode === mode)) {
+      activeMode = mode;
+    }
+    refreshTopicOptions();
+    refreshBuilderTopicOptions();
+  }
+
   function refreshTopicOptions() {
     fillSelect(els.topic, topicsForUnit(els.unit?.value || ""), "All topics");
   }
@@ -1011,6 +1036,7 @@
   });
 
   populatePathwayFilters();
+  applyUrlDefaults();
   refreshBuilderPaperOptions();
   render();
   startTicker();

@@ -469,6 +469,14 @@
     els.unitFilter.innerHTML = `<option value="">All ${escapeHtml(unitLabel)}</option>${units.map((unit) => `<option>${escapeHtml(unit)}</option>`).join("")}`;
   }
 
+  function applyUrlDefaults() {
+    const params = new URLSearchParams(window.location.search);
+    const unit = params.get("unit");
+    if (unit && [...els.unitFilter.options].some((option) => option.value === unit)) {
+      els.unitFilter.value = unit;
+    }
+  }
+
   function renderNextMoves() {
     const rows = topicRows();
     const weak = rows
@@ -927,6 +935,7 @@
   recordVisit();
   loadProfileForm();
   renderUnitFilter();
+  applyUrlDefaults();
   renderPaperControls();
   renderTaskControls();
   render();

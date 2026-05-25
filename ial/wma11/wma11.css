@@ -1,3 +1,45 @@
+body[data-page="ial-wma11"] {
+  --accent: #5a8074;
+  --accent-dark: #41645b;
+  --gold: #c08a3e;
+  --soft: #f1f6f3;
+  --focus: #dcb877;
+  --ial-ink: #161b2e;
+  --ial-accent: #5a8074;
+  --ial-accent-dark: #41645b;
+  --ial-ochre: #c08a3e;
+  --ial-ochre-soft: #dcb877;
+  --ial-paper: #fbf6e6;
+  --ial-surface: #ebdfc4;
+  --ial-line: rgba(90, 128, 116, 0.24);
+  background:
+    linear-gradient(90deg, rgba(90, 128, 116, 0.045) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(90, 128, 116, 0.045) 1px, transparent 1px),
+    linear-gradient(135deg, #fbfaf7 0%, #f1f6f3 55%, #fbf6e6 100%);
+  background-size: 44px 44px, 44px 44px, auto;
+}
+
+body[data-page="ial-wma11"] .primary {
+  background: var(--ial-accent);
+  border-color: var(--ial-accent);
+}
+
+body[data-page="ial-wma11"] .primary:hover {
+  background: var(--ial-accent-dark);
+  border-color: var(--ial-accent-dark);
+}
+
+body[data-page="ial-wma11"] .button.solution {
+  background: var(--ial-ink);
+  border-color: var(--ial-ink);
+  color: #fff;
+}
+
+body[data-page="ial-wma11"] .button.solution:hover {
+  background: var(--ial-accent);
+  border-color: var(--ial-accent);
+}
+
 .ial-page {
   width: min(1480px, calc(100% - 32px));
   margin: 0 auto;
@@ -11,11 +53,11 @@
   gap: 24px;
   align-items: end;
   padding: 30px;
-  border: 1px solid rgba(22, 27, 46, 0.12);
+  border: 1px solid var(--ial-line);
   border-radius: 8px;
   background:
-    linear-gradient(90deg, rgba(192, 57, 43, 0.06), transparent 40%, rgba(192, 138, 62, 0.10)),
-    #fffdf8;
+    linear-gradient(90deg, rgba(90, 128, 116, 0.13), transparent 42%, rgba(192, 138, 62, 0.13)),
+    var(--ial-paper);
 }
 
 .ial-hero h1 {
@@ -50,7 +92,7 @@
 .ial-dashboard article {
   min-height: 116px;
   padding: 18px;
-  border: 1px solid rgba(22, 27, 46, 0.12);
+  border: 1px solid var(--ial-line);
   border-radius: 8px;
   background: #fff;
 }
@@ -68,7 +110,7 @@
 .ial-dashboard strong {
   display: block;
   margin-top: 8px;
-  color: var(--accent-dark);
+  color: var(--ial-accent-dark);
   font-size: 34px;
   line-height: 1;
 }
@@ -82,7 +124,7 @@
 
 .ial-workbench {
   padding: 20px;
-  border: 1px solid rgba(22, 27, 46, 0.12);
+  border: 1px solid var(--ial-line);
   border-radius: 8px;
   background: #fff;
   overflow: hidden;
@@ -114,9 +156,9 @@
   width: 100%;
   min-height: 46px;
   padding: 0 13px;
-  border: 1px solid rgba(22, 27, 46, 0.18);
+  border: 1px solid var(--ial-line);
   border-radius: 8px;
-  background: #fffdf8;
+  background: var(--ial-paper);
   color: var(--ink);
   font: inherit;
   font-weight: 700;
@@ -129,9 +171,9 @@
   align-items: center;
   gap: 9px !important;
   padding: 0 12px;
-  border: 1px solid rgba(22, 27, 46, 0.14);
+  border: 1px solid var(--ial-line);
   border-radius: 8px;
-  background: #fbfaf7;
+  background: #f7fbf8;
 }
 
 .ial-toggle input {
@@ -152,7 +194,7 @@
   gap: 16px;
   align-items: center;
   padding: 14px 0;
-  border-top: 1px solid rgba(22, 27, 46, 0.10);
+  border-top: 1px solid var(--ial-line);
 }
 
 .ial-strip-head strong {
@@ -178,9 +220,9 @@
   flex: 0 0 auto;
   min-width: 44px;
   min-height: 40px;
-  border: 1px solid rgba(22, 27, 46, 0.15);
+  border: 1px solid var(--ial-line);
   border-radius: 8px;
-  background: #fffdf8;
+  background: var(--ial-paper);
   color: var(--navy);
   font-weight: 800;
   cursor: pointer;
@@ -197,7 +239,7 @@
 }
 
 .ial-question-card {
-  border-top: 4px solid var(--accent-dark);
+  border-top: 4px solid var(--ial-accent);
   background: #fff;
 }
 
@@ -228,18 +270,18 @@
   align-items: center;
   min-height: 34px;
   padding: 0 12px;
-  border: 1px solid #e4b39c;
+  border: 1px solid rgba(90, 128, 116, 0.35);
   border-radius: 999px;
-  color: var(--accent-dark);
+  color: var(--ial-accent-dark);
   font-weight: 800;
   white-space: nowrap;
 }
 
 .ial-question-image-wrap {
   padding: 14px;
-  border: 1px solid rgba(22, 27, 46, 0.10);
+  border: 1px solid var(--ial-line);
   border-radius: 8px;
-  background: #fffdf8;
+  background: var(--ial-paper);
 }
 
 .ial-question-image {
@@ -259,15 +301,15 @@
 }
 
 .ial-actions .is-on {
-  background: var(--navy);
-  border-color: var(--navy);
+  background: var(--ial-accent);
+  border-color: var(--ial-accent);
   color: #fff;
 }
 
 .ial-solution {
   display: none;
   margin-top: 14px;
-  border: 1px solid rgba(22, 27, 46, 0.14);
+  border: 1px solid var(--ial-line);
   border-radius: 8px;
   overflow: hidden;
   background: #fff;
@@ -281,7 +323,7 @@
   margin: 0;
   padding: 18px;
   color: var(--navy);
-  border-bottom: 3px solid var(--accent-dark);
+  border-bottom: 3px solid var(--ial-accent);
 }
 
 .ial-step {
@@ -297,7 +339,7 @@
 .ial-step strong {
   display: block;
   margin-bottom: 8px;
-  color: var(--accent-dark);
+  color: var(--ial-accent-dark);
 }
 
 .ial-math {
@@ -309,9 +351,9 @@
 .ial-final {
   margin: 18px;
   padding: 16px 18px;
-  border-left: 7px solid var(--gold);
+  border-left: 7px solid var(--ial-ochre);
   border-radius: 8px;
-  background: #fff7e4;
+  background: #fff8e8;
 }
 
 .ial-final strong {
@@ -336,11 +378,11 @@
 
 .ial-empty {
   padding: 28px;
-  border: 1px dashed rgba(22, 27, 46, 0.22);
+  border: 1px dashed rgba(90, 128, 116, 0.35);
   border-radius: 8px;
   color: var(--muted);
   text-align: center;
-  background: #fffdf8;
+  background: var(--ial-paper);
 }
 
 @media (max-width: 980px) {

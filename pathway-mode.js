@@ -121,21 +121,6 @@
     body.classList.toggle("pathway-linear", mode === "linear");
     body.classList.toggle("pathway-unset", body.dataset.page === "home" && !hasChosen);
 
-    const cta = document.querySelector(".site-cta");
-    if (cta && !cta.querySelector("[data-pathway-switch-wrap]")) {
-      const wrap = document.createElement("label");
-      wrap.className = "pathway-switch";
-      wrap.dataset.pathwaySwitchWrap = "true";
-      wrap.innerHTML = `
-        <span>Pathway</span>
-        <select data-pathway-switch>
-          <option value="linear">Linear</option>
-          <option value="modular">Modular</option>
-        </select>
-      `;
-      cta.prepend(wrap);
-    }
-
     document.querySelectorAll("[data-pathway-label]").forEach((node) => {
       node.textContent = label(node.dataset.pathwayLabel);
     });
@@ -150,11 +135,6 @@
     });
     document.querySelectorAll("[data-pathway-current]").forEach((node) => {
       node.textContent = mode === "modular" ? "Modular pathway" : "Linear pathway";
-    });
-    document.querySelectorAll("[data-pathway-switch]").forEach((node) => {
-      node.hidden = false;
-      node.value = mode;
-      node.addEventListener("change", () => setMode(node.value));
     });
     setupPathwayGateFlow();
   }

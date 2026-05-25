@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -40,16 +40,61 @@
     <button id="navToggle" class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
-    <nav class="site-nav" aria-label="Main">
-      <a href="downloads.html">Books</a>
-      <a href="pastpapers.html">Papers</a>
-      <a href="practice.html">Classified</a>
-      <a href="exam.html">Mocks</a>
-      <a href="progress.html">Progress</a>
-      <a href="ial/wma11/index.html">IAL Pure 1</a>
-      <a href="topics.html">Topics</a>
-      <a href="checkup.html">Check</a>
-      <a href="about.html">About</a>
+    <nav class="site-nav pathway-tabs" aria-label="Main">
+      <div class="nav-group nav-group-linear" data-nav-group="linear">
+        <a class="nav-tab-main" href="practice.html?pathway=linear" aria-expanded="false">
+          <span>Linear</span>
+          <small>4MA1 route</small>
+        </a>
+        <div class="nav-panel" aria-label="Linear pathway links">
+          <a href="practice.html?pathway=linear&bank=all" data-pathway-choice="linear" data-pathway-target="practice.html?pathway=linear&bank=all"><strong>Classified</strong><span>Full bank by chapter</span></a>
+          <a href="practice.html?pathway=linear&bank=expertise&mode=q20" data-pathway-choice="linear" data-pathway-target="practice.html?pathway=linear&bank=expertise&mode=q20"><strong>Expertise</strong><span>Q20+ finishers</span></a>
+          <a href="downloads.html?pathway=linear" data-pathway-choice="linear" data-pathway-target="downloads.html?pathway=linear"><strong>Books</strong><span>Questions and answers</span></a>
+          <a href="pastpapers.html?pathway=linear" data-pathway-choice="linear" data-pathway-target="pastpapers.html?pathway=linear"><strong>Papers</strong><span>4MA1 sessions</span></a>
+          <a href="exam.html?pathway=linear" data-pathway-choice="linear" data-pathway-target="exam.html?pathway=linear"><strong>Mocks</strong><span>Build a test</span></a>
+          <a href="progress.html?pathway=linear" data-pathway-choice="linear" data-pathway-target="progress.html?pathway=linear"><strong>Progress</strong><span>Track mastery</span></a>
+        </div>
+      </div>
+      <div class="nav-group nav-group-modular" data-nav-group="modular">
+        <a class="nav-tab-main" href="practice.html?pathway=modular&unit=Unit+1" aria-expanded="false">
+          <span>Modular</span>
+          <small>4WM route</small>
+        </a>
+        <div class="nav-panel" aria-label="Modular pathway links">
+          <a href="practice.html?pathway=modular&unit=Unit+1&bank=all" data-pathway-choice="modular" data-pathway-target="practice.html?pathway=modular&unit=Unit+1&bank=all"><strong>Unit 1 Classified</strong><span>4WM1 topics</span></a>
+          <a href="practice.html?pathway=modular&unit=Unit+2&bank=all" data-pathway-choice="modular" data-pathway-target="practice.html?pathway=modular&unit=Unit+2&bank=all"><strong>Unit 2 Classified</strong><span>4WM2 topics</span></a>
+          <a href="practice.html?pathway=modular&unit=Unit+1&bank=expertise&mode=q20" data-pathway-choice="modular" data-pathway-target="practice.html?pathway=modular&unit=Unit+1&bank=expertise&mode=q20"><strong>Unit 1 Expertise</strong><span>Harder set</span></a>
+          <a href="practice.html?pathway=modular&unit=Unit+2&bank=expertise&mode=q20" data-pathway-choice="modular" data-pathway-target="practice.html?pathway=modular&unit=Unit+2&bank=expertise&mode=q20"><strong>Unit 2 Expertise</strong><span>Harder set</span></a>
+          <a href="downloads.html?pathway=modular" data-pathway-choice="modular" data-pathway-target="downloads.html?pathway=modular"><strong>Books</strong><span>Unit PDFs</span></a>
+          <a href="exam.html?pathway=modular" data-pathway-choice="modular" data-pathway-target="exam.html?pathway=modular"><strong>Mocks</strong><span>Unit tests</span></a>
+        </div>
+      </div>
+      <div class="nav-group nav-group-pure" data-nav-group="pure">
+        <a class="nav-tab-main" href="ial/wma11/index.html" aria-expanded="false">
+          <span>IAL Pure 1</span>
+          <small>WMA11</small>
+        </a>
+        <div class="nav-panel" aria-label="IAL Pure 1 links">
+          <a href="ial/wma11/index.html"><strong>Classified Bank</strong><span>Topic practice</span></a>
+          <a href="downloads/IAL/WMA11/WMA11_Classified_Questions.pdf" target="_blank" rel="noreferrer"><strong>Classified PDF</strong><span>Questions only</span></a>
+          <a href="downloads/IAL/WMA11/WMA11_Classified_With_Answers.pdf" target="_blank" rel="noreferrer"><strong>With Answers</strong><span>Worked solutions</span></a>
+          <a href="downloads/IAL/WMA11/WMA11_Expertise_Questions.pdf" target="_blank" rel="noreferrer"><strong>Expertise PDF</strong><span>Q6+ route</span></a>
+          <a href="downloads/IAL/WMA11/WMA11_Expertise_With_Answers.pdf" target="_blank" rel="noreferrer"><strong>Expertise Answers</strong><span>Solutions set</span></a>
+        </div>
+      </div>
+      <div class="nav-group nav-group-about" data-nav-group="about">
+        <a class="nav-tab-main" href="about.html" aria-expanded="false">
+          <span>About</span>
+          <small>Dr Eslam</small>
+        </a>
+        <div class="nav-panel" aria-label="About and support links">
+          <a href="about.html"><strong>About Dr Eslam</strong><span>Teacher profile</span></a>
+          <a href="downloads.html"><strong>Download Centre</strong><span>All public books</span></a>
+          <a href="topics.html"><strong>Topic Roadmap</strong><span>Course map</span></a>
+          <a href="checkup.html"><strong>Readiness Check</strong><span>Quick diagnosis</span></a>
+          <a href="https://wa.me/201120009622" data-lead-trigger="whatsapp"><strong>Contact</strong><span>WhatsApp booking</span></a>
+        </div>
+      </div>
     </nav>
     <div class="site-cta">
       <button class="button cloud-auth-button" type="button" data-cloud-login>Continue with Google</button>
@@ -69,17 +114,17 @@
         </div>
       </div>
       <div class="pathway-gate-grid">
-        <a class="pathway-gate-card" href="practice.html?pathway=linear" data-pathway-choice="linear" data-pathway-target="practice.html?pathway=linear">
+        <a class="pathway-gate-card pathway-card-linear" href="practice.html?pathway=linear" data-pathway-choice="linear" data-pathway-target="practice.html?pathway=linear">
           <span>Linear Pathway</span>
           <strong>Chapter 1 to Chapter 6</strong>
           <p>Full classified bank, roadmap, mocks, notes, and progress tools.</p>
         </a>
-        <a class="pathway-gate-card accent" href="#modularUnitGate" data-show-modular-units>
+        <a class="pathway-gate-card pathway-card-modular" href="#modularUnitGate" data-show-modular-units>
           <span>Modular Pathway</span>
           <strong>Unit 1 and Unit 2</strong>
           <p>Filtered Modular topics, modular mock exams, and the same progress tools.</p>
         </a>
-        <a class="pathway-gate-card" href="ial/wma11/index.html">
+        <a class="pathway-gate-card pathway-card-pure" href="ial/wma11/index.html">
           <span>IAL Advanced Level</span>
           <strong>Pure 1 WMA11</strong>
           <p>A standalone IAL bank by topic with Show solution, mistake box, and WMA11 classified books.</p>
@@ -166,7 +211,7 @@
       </section>
     </section>
 
-    <section id="modularUnitGate" class="pathway-gate" aria-labelledby="modularUnitGateTitle" hidden>
+    <section id="modularUnitGate" class="pathway-gate modular-zone" aria-labelledby="modularUnitGateTitle" hidden>
       <div class="pathway-gate-person">
         <img src="assets/Eslam4.jpg" alt="Dr Eslam Ahmed" loading="lazy">
         <div>
@@ -176,12 +221,12 @@
         </div>
       </div>
       <div class="pathway-gate-grid">
-        <a class="pathway-gate-card" href="practice.html?pathway=modular&unit=Unit+1" data-pathway-choice="modular" data-pathway-target="practice.html?pathway=modular&unit=Unit+1">
+        <a class="pathway-gate-card pathway-card-modular" href="practice.html?pathway=modular&unit=Unit+1" data-pathway-choice="modular" data-pathway-target="practice.html?pathway=modular&unit=Unit+1">
           <span>Unit 1</span>
           <strong>Numbers, Algebra & Geometry</strong>
           <p>The first half of the modular course.</p>
         </a>
-        <a class="pathway-gate-card accent" href="practice.html?pathway=modular&unit=Unit+2" data-pathway-choice="modular" data-pathway-target="practice.html?pathway=modular&unit=Unit+2">
+        <a class="pathway-gate-card pathway-card-modular accent" href="practice.html?pathway=modular&unit=Unit+2" data-pathway-choice="modular" data-pathway-target="practice.html?pathway=modular&unit=Unit+2">
           <span>Unit 2</span>
           <strong>Advanced Algebra, Stats & Probability</strong>
           <p>The second half of the modular course.</p>
