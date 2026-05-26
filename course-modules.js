@@ -100,15 +100,15 @@
     },
     modular: {
       label: "Modular",
-      accent: "#c0392b",
-      accentDeep: "#8d2820",
-      soft: "rgba(192, 57, 43, 0.08)",
-    },
-    pure: {
-      label: "IAL Pure 1",
       accent: "#5a8074",
       accentDeep: "#41645b",
       soft: "rgba(90, 128, 116, 0.1)",
+    },
+    pure: {
+      label: "IAL Pure 1",
+      accent: "#36304a",
+      accentDeep: "#241f33",
+      soft: "rgba(54, 48, 74, 0.1)",
     },
   };
 
@@ -207,7 +207,7 @@
   ];
 
   window.ELITE_COURSE_MODULES = {
-    version: "2026-05-26-course-registry-v2",
+    version: "2026-05-26-course-registry-v3",
     moduleCatalog,
     moduleAliases,
     palettes,
