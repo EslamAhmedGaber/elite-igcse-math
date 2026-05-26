@@ -42,20 +42,29 @@ Use these names consistently in navigation and styling:
 - root-safe URLs for each module,
 - course palette names,
 - module aliases used by CSS and navigation.
+- paper rows through `pastPapers[]`,
+- download cards through `books[]`.
 
 `lead.js` consumes this registry and keeps an internal fallback so older cached pages do not break. New curricula should be added to `course-modules.js` first, then wired to data/books/builders.
 
+`pastpapers.html` and `downloads.html` are thin renderers now. They load `course-renderers.js`, which reads `course-modules.js` and draws the visible rows/cards. Adding a paper or a book card should not require editing either HTML page.
+
 ## Add A New Course
 
-1. Add the course to the shared registry in `course-modules.js`.
-2. Give every visible tool link an explicit stable `module`.
-3. Add the course palette token in `course-modules.js`, then apply its CSS in `styles.css` and the course-specific CSS file if it has one.
-4. Normalize question data into the shared question shape before connecting UI.
-5. Add an adapter to `exam.js` so the shared builder can power random mocks, custom tests, smart revision, and saved tests.
-6. Reuse existing progress and mistake-box keys only when they represent the same course. Otherwise create course-specific keys and render a course dashboard from those keys.
-7. Build all public question books and approved worked-solution books from source.
-8. Add downloads to the pathway hub, `downloads.html`, and `pastpapers.html` when the course has whole-paper PDFs.
-9. Verify the route, builder, progress, paper/solution rows, downloads, and at least one PDF before publishing.
+1. Pick a palette colour from the unused brand palette pool. Current signatures are Linear `#161B2E`, Modular `#5A8074`, and Pure 1 `#36304A`; do not change them without approval.
+2. Copy `tools/templates/course-stub.js` and fill `id`, `code`, `label`, `palette`, `paperSection`, `links`, `pastPapers[]`, `books[]`, and `storageKeys`.
+3. Append the new course object into `course-modules.js`. The top navigation and pathway hub should appear from the registry.
+4. Create the data file (`<code>-data.js` or equivalent) following the WMA11 shape: topics, questions, solutions, and paper metadata.
+5. Add an adapter to `exam.js` so random mocks, hand-built tests, smart revision, marking, printing, and saved tests use the shared builder.
+6. Add a real progress module. Reuse existing keys only for the same course; otherwise create namespaced keys such as `eliteWMA12SolvedV1`.
+7. Copy `tools/templates/book-builder-stub.py` to `tools/<code>/build_<code>_books.py` and connect it to the course data/palette.
+8. Create `downloads/IAL/<code>/` with `Papers/` and the approved public PDFs.
+9. Add the course's paper rows to `pastPapers[]` and book/download cards to `books[]` in `course-modules.js`.
+10. Update verification allow-lists if needed, bump the service worker, run checks, commit, push, and record Started/Completed entries in `PROJECT_LOG.md`.
+
+## Add Content To An Existing Course
+
+Use `docs/COURSE_UPDATE_PIPELINE.md`. Short version: update the structured source, regenerate runtime/book outputs, append one `pastPapers[]` session when a new whole paper is published, verify, bump cache, commit, push, and log. `pastpapers.html` and `downloads.html` should remain untouched for normal content additions.
 
 ## Current Courses
 

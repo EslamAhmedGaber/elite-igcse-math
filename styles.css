@@ -6503,6 +6503,14 @@ body.pathway-unset .site-header .site-cta {
   background: var(--pp-deep);
   border-color: var(--pp-deep);
 }
+.pp-empty {
+  border: 1px dashed rgba(22, 27, 46, 0.22);
+  border-radius: 12px;
+  color: var(--muted);
+  font-weight: 700;
+  padding: 18px 20px;
+  background: rgba(255, 255, 255, 0.72);
+}
 .pp-section-head { margin-bottom: 22px; max-width: 720px; }
 .pp-section-head .eyebrow {
   color: var(--accent);
