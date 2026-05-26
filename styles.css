@@ -6462,6 +6462,47 @@ body.pathway-unset .site-header .site-cta {
   background: #36304a;
   border-color: #36304a;
 }
+.pp-section[data-pathway] {
+  --pp-signature: var(--brand-ink);
+  --pp-deep: var(--brand-ink-deep);
+  --pp-soft: rgba(22, 27, 46, 0.08);
+  --pp-vellum: rgba(235, 223, 196, 0.28);
+  border-left-color: var(--pp-signature);
+  background:
+    linear-gradient(135deg, var(--pp-soft), transparent 48%, var(--pp-vellum)),
+    var(--paper);
+}
+.pp-section[data-pathway="modular"] {
+  --pp-signature: var(--brand-verdigris);
+  --pp-deep: var(--brand-verdigris-deep);
+  --pp-soft: rgba(90, 128, 116, 0.12);
+  --pp-vellum: rgba(169, 206, 197, 0.16);
+}
+.pp-section[data-pathway="pure"] {
+  --pp-signature: var(--brand-indigo);
+  --pp-deep: var(--brand-indigo-deep);
+  --pp-soft: rgba(54, 48, 74, 0.1);
+  --pp-vellum: rgba(220, 184, 119, 0.12);
+}
+.pp-section[data-pathway] .pp-section-head .eyebrow,
+.pp-section[data-pathway] .pp-paper::before {
+  color: var(--pp-deep);
+}
+.pp-section[data-pathway] .pp-year-block h3::before {
+  background: var(--pp-signature);
+}
+.pp-section[data-pathway] .pp-paper:hover {
+  border-color: var(--pp-signature);
+  background: var(--pp-soft);
+}
+.pp-section[data-pathway] .pp-paper.solution {
+  background: var(--pp-signature);
+  border-color: var(--pp-signature);
+}
+.pp-section[data-pathway] .pp-paper.solution:hover {
+  background: var(--pp-deep);
+  border-color: var(--pp-deep);
+}
 .pp-section-head { margin-bottom: 22px; max-width: 720px; }
 .pp-section-head .eyebrow {
   color: var(--accent);
