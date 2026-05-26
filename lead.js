@@ -63,7 +63,7 @@
       id: "modular",
       label: "Modular",
       detail: "4WM route",
-      href: "/practice.html?pathway=modular&unit=Unit+1",
+      href: "/practice.html?pathway=modular&choose=unit",
       pathway: "modular",
       units: [
         {
@@ -182,11 +182,32 @@
   function activeToolLinks(groupId) {
     const group = NAV_GROUPS.find((item) => item.id === groupId);
     if (!group || groupId === "about") return null;
-    if (!group.units) return { title: group.label, detail: group.detail, links: group.links };
+    const page = document.body?.dataset.page || "";
     const params = new URLSearchParams(window.location.search);
+    if (page === "home" && !params.get("pathway") && !window.ELITE_PATHWAY?.hasChosen) return null;
+    if (!group.units) return { title: group.label, detail: group.detail, links: group.links };
+    if (params.get("choose") === "unit" || (!params.get("unit") && page === "practice" && params.get("pathway") === "modular")) {
+      return {
+        kind: "unit-choice",
+        title: "Choose Modular Unit",
+        detail: "4WM route",
+        intro: "Start by choosing Unit 1 or Unit 2. Each unit opens its own Classified View, Expertise, Mock Builder, Books, Past Paper Solutions, and Progress.",
+        links: group.units.map((unit) => ({
+          title: unit.title,
+          detail: `${unit.detail} tools`,
+          href: `/practice.html?pathway=modular&unit=${encodeURIComponent(unit.title)}&bank=all`,
+          pathway: "modular",
+        })),
+      };
+    }
     const requestedUnit = params.get("unit") || localStorage.getItem("modularUnit") || "Unit 1";
     const unit = group.units.find((item) => item.title === requestedUnit) || group.units[0];
-    return { title: `${group.label} ${unit.title}`, detail: unit.detail, links: unit.links };
+    return {
+      title: `${group.label} ${unit.title}`,
+      detail: unit.detail,
+      intro: "Everything for this unit lives here, so students can move between practice, tests, books, solutions, and progress without hunting.",
+      links: unit.links,
+    };
   }
 
   function normalizePath(href) {
@@ -233,11 +254,15 @@
     document.body?.classList.toggle("pathway-pure", groupId === "pure");
     const toolData = activeToolLinks(groupId);
     if (!toolData) return;
+    document.body?.classList.add("has-pathway-hub");
+    document.body?.classList.toggle("pathway-unit-chooser", toolData.kind === "unit-choice");
     header.insertAdjacentHTML("afterend", `
-      <nav class="pathway-tool-strip" aria-label="${toolData.title} tools">
+      <nav class="pathway-tool-strip ${toolData.kind === "unit-choice" ? "is-unit-choice" : ""}" aria-label="${toolData.title} tools">
         <div class="pathway-tool-strip-title">
+          <span>Pathway tools</span>
           <strong>${toolData.title}</strong>
-          <span>${toolData.detail}</span>
+          <small>${toolData.detail}</small>
+          ${toolData.intro ? `<p>${toolData.intro}</p>` : ""}
         </div>
         <div class="pathway-tool-strip-links">
           ${toolData.links.map(renderToolStripLink).join("")}
