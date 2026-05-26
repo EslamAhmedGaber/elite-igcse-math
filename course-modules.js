@@ -38,7 +38,7 @@
     "past-solutions": {
       title: "Past Paper Solutions",
       role: "student",
-      description: "Original paper-order solution books.",
+      description: "Original papers listed beside matching worked-solution books.",
     },
     "mistake-box": {
       title: "Mistake Box",
@@ -176,18 +176,18 @@
       href: "/ial/wma11/index.html",
       palette: "pure",
       panelLabel: "WMA11 modules",
-      intro: "Pure 1 uses its own WMA11 palette and the same reusable module model: classified, builder, smart revision, progress, books, and solution books.",
+      intro: "Pure 1 uses its own WMA11 palette and the same reusable module model: classified, builder, smart revision, progress, books, paper listings, and solution books.",
       links: [
         { module: "classified", title: "Classified View", detail: "Topic practice", href: "/ial/wma11/index.html" },
         { module: "build-test", title: "Build Test", detail: "Full mock builder", href: "/exam.html?pathway=pure&course=wma11&mode=custom" },
         { module: "smart-revision", title: "Smart Revision", detail: "Mistakes and weak topics", href: "/exam.html?pathway=pure&course=wma11&mode=smart" },
-        { module: "progress", title: "Progress", detail: "Stats and mastery", href: "/ial/wma11/index.html#ialStats" },
-        { module: "mistake-box", title: "Mistake Box", detail: "Saved revision", href: "/ial/wma11/index.html#ialStats" },
+        { module: "progress", title: "Progress", detail: "Topic mastery", href: "/ial/wma11/index.html#ialProgressModule" },
+        { module: "mistake-box", title: "Mistake Box", detail: "Saved revision", href: "/ial/wma11/index.html#ialProgressModule" },
         { module: "books", title: "Question Book", detail: "Classified PDF", href: "/downloads/IAL/WMA11/WMA11_Classified_Questions.pdf", target: "_blank" },
         { module: "answers", title: "Answer Book", detail: "Worked solutions", href: "/downloads/IAL/WMA11/WMA11_Classified_With_Answers.pdf", target: "_blank" },
         { module: "expertise", title: "Expertise Book", detail: "Q6+ questions", href: "/downloads/IAL/WMA11/WMA11_Expertise_Questions.pdf", target: "_blank" },
         { module: "answers", title: "Expertise Answers", detail: "Q6+ solutions", href: "/downloads/IAL/WMA11/WMA11_Expertise_With_Answers.pdf", target: "_blank" },
-        { module: "past-solutions", title: "Past Paper Solutions", detail: "Paper-order answers", href: "/downloads/IAL/WMA11/WMA11_Past_Paper_Solutions.pdf", target: "_blank" },
+        { module: "past-solutions", title: "Past Papers", detail: "Paper + solution rows", href: "/pastpapers.html?pathway=pure#pure-wma11" },
       ],
     },
     {
@@ -207,7 +207,7 @@
   ];
 
   window.ELITE_COURSE_MODULES = {
-    version: "2026-05-26-course-registry-v1",
+    version: "2026-05-26-course-registry-v2",
     moduleCatalog,
     moduleAliases,
     palettes,

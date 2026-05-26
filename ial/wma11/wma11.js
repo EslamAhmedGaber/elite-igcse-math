@@ -30,6 +30,13 @@
     filtered: document.querySelector("[data-ial-filtered]"),
     solved: document.querySelector("[data-ial-solved]"),
     mistakes: document.querySelector("[data-ial-mistakes]"),
+    progressPercent: document.querySelector("[data-ial-progress-percent]"),
+    progressBar: document.querySelector("[data-ial-progress-bar]"),
+    progressStarted: document.querySelector("[data-ial-progress-started]"),
+    progressWeak: document.querySelector("[data-ial-progress-weak]"),
+    progressMistakes: document.querySelector("[data-ial-progress-mistakes]"),
+    progressTopics: document.querySelector("[data-ial-progress-topics]"),
+    paperList: document.querySelector("[data-ial-paper-list]"),
     mockTopic: document.getElementById("ialMockTopic"),
     mockCount: document.getElementById("ialMockCount"),
     mockExpertise: document.getElementById("ialMockExpertise"),
@@ -64,6 +71,28 @@
 
   function uniqueNumbers(values) {
     return [...new Set(values.map(Number).filter(Number.isFinite))].sort((a, b) => a - b);
+  }
+
+  function sessionLabel(session) {
+    return session === "MayJune" ? "May/June" : session;
+  }
+
+  function sessionOrder(session) {
+    return ({ Jan: 1, MayJune: 2, Oct: 3 })[session] || 9;
+  }
+
+  function paperSlug(item) {
+    return `WMA11_${item.year}_${item.session}`;
+  }
+
+  function courseQuestionIds() {
+    return new Set(QUESTIONS.map((item) => item.id));
+  }
+
+  function solvedSet() {
+    const validIds = courseQuestionIds();
+    const saved = Array.isArray(state.solved) ? state.solved : [];
+    return new Set(saved.filter((id) => validIds.has(id)));
   }
 
   function populateSelect(select, label, values, formatter = (value) => value) {
@@ -191,7 +220,7 @@
           <div class="ial-meta">
             <span class="ial-pill">${item.marks} marks</span>
             ${topicBadges}
-            <span class="ial-pill">${item.session === "MayJune" ? "May/June" : item.session} ${item.year}</span>
+            <span class="ial-pill">${sessionLabel(item.session)} ${item.year}</span>
           </div>
         </header>
         <div class="ial-question-image-wrap">
@@ -221,8 +250,8 @@
   function renderStats() {
     els.total.textContent = QUESTIONS.length;
     els.filtered.textContent = state.filtered.length;
-    els.solved.textContent = state.solved.length;
-    els.mistakes.textContent = Object.keys(state.mistakes).length;
+    els.solved.textContent = solvedSet().size;
+    els.mistakes.textContent = Object.keys(state.mistakes || {}).filter((id) => QUESTIONS.some((item) => item.id === id)).length;
     const item = state.filtered[state.activeIndex];
     const selectedTopic = els.topic.value;
     const labelTopic = item && selectedTopic && (item.topics || [item.topic]).includes(selectedTopic)
@@ -235,12 +264,99 @@
     els.next.disabled = state.activeIndex >= state.filtered.length - 1;
   }
 
+  function topicRows() {
+    const solved = solvedSet();
+    const mistakes = state.mistakes || {};
+    return TOPICS.map((topic) => {
+      const items = QUESTIONS.filter((item) => (item.topics || [item.topic]).includes(topic.slug));
+      const solvedCount = items.filter((item) => solved.has(item.id)).length;
+      const mistakeCount = items.filter((item) => Boolean(mistakes[item.id])).length;
+      const total = items.length || topic.count || 0;
+      const percent = total ? Math.round((solvedCount / total) * 100) : 0;
+      return { topic, items, total, solved: solvedCount, mistakes: mistakeCount, percent };
+    });
+  }
+
+  function renderProgress() {
+    if (!els.progressTopics) return;
+    const rows = topicRows();
+    const solved = solvedSet();
+    const mistakeCount = Object.keys(state.mistakes || {}).filter((id) => QUESTIONS.some((item) => item.id === id)).length;
+    const overall = QUESTIONS.length ? Math.round((solved.size / QUESTIONS.length) * 100) : 0;
+    const started = rows.filter((row) => row.solved > 0).length;
+    const weak = rows.filter((row) => row.mistakes > 0 || (row.solved > 0 && row.percent < 45)).length;
+    if (els.progressPercent) els.progressPercent.textContent = `${overall}%`;
+    if (els.progressBar) els.progressBar.style.width = `${overall}%`;
+    if (els.progressStarted) els.progressStarted.textContent = started;
+    if (els.progressWeak) els.progressWeak.textContent = weak;
+    if (els.progressMistakes) els.progressMistakes.textContent = mistakeCount;
+    els.progressTopics.innerHTML = rows.map((row) => `
+      <article class="ial-progress-topic" data-progress="${row.percent}">
+        <div class="ial-progress-topic-head">
+          <div>
+            <strong>${escapeHtml(row.topic.name)}</strong>
+            <span>${row.solved} of ${row.total} solved${row.mistakes ? ` | ${row.mistakes} in Mistake Box` : ""}</span>
+          </div>
+          <button class="button light" type="button" data-ial-topic-filter="${escapeHtml(row.topic.slug)}">Practice</button>
+        </div>
+        <div class="ial-topic-meter" aria-label="${escapeHtml(row.topic.name)} ${row.percent}% solved">
+          <i style="width:${row.percent}%"></i>
+        </div>
+      </article>
+    `).join("");
+  }
+
+  function paperRows() {
+    const groups = new Map();
+    QUESTIONS.forEach((item) => {
+      const key = `${item.year}_${item.session}`;
+      if (!groups.has(key)) {
+        groups.set(key, {
+          year: Number(item.year),
+          session: item.session,
+          paper: item.paper,
+          questions: 0,
+          marks: 0,
+          first: item
+        });
+      }
+      const group = groups.get(key);
+      group.questions += 1;
+      group.marks += Number(item.marks || 0);
+    });
+    return [...groups.values()].sort((a, b) => (
+      b.year - a.year || sessionOrder(b.session) - sessionOrder(a.session)
+    ));
+  }
+
+  function renderPaperLibrary() {
+    if (!els.paperList) return;
+    els.paperList.innerHTML = paperRows().map((row) => {
+      const slug = paperSlug(row.first);
+      return `
+        <article class="ial-paper-row">
+          <div>
+            <span>${sessionLabel(row.session)} ${row.year}</span>
+            <strong>${escapeHtml(row.paper)}</strong>
+            <small>${row.questions} questions | ${row.marks} marks</small>
+          </div>
+          <div class="ial-paper-actions">
+            <a class="button primary" href="downloads/IAL/WMA11/Papers/${slug}_QP.pdf" target="_blank" rel="noreferrer">Question Paper</a>
+            <a class="button solution" href="downloads/IAL/WMA11/Papers/${slug}_Solutions.pdf" target="_blank" rel="noreferrer">Worked Solution</a>
+          </div>
+        </article>
+      `;
+    }).join("");
+  }
+
   function topicName(slug, fallback = "") {
     return TOPICS.find((topic) => topic.slug === slug)?.name || fallback || slug;
   }
 
   function render() {
     renderStats();
+    renderProgress();
+    renderPaperLibrary();
     renderNumbers();
     renderQuestion();
     renderMock();
@@ -359,7 +475,7 @@
   }
 
   function toggleSolved(item) {
-    const set = new Set(state.solved);
+    const set = new Set(Array.isArray(state.solved) ? state.solved : []);
     if (set.has(item.id)) set.delete(item.id);
     else set.add(item.id);
     state.solved = [...set];
@@ -420,6 +536,13 @@
       if (!link) return;
       event.preventDefault();
       openMockQuestion(link.dataset.ialMockOpen);
+    });
+    els.progressTopics?.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-ial-topic-filter]");
+      if (!button || !els.topic) return;
+      els.topic.value = button.dataset.ialTopicFilter || "";
+      applyFilters(false);
+      els.filters?.scrollIntoView({ block: "start", behavior: "smooth" });
     });
   }
 

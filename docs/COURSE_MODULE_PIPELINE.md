@@ -22,10 +22,10 @@ Use these names consistently in navigation and styling:
 - `expertise`: harder-question route.
 - `build-test`: random mock and hand-built test engine.
 - `smart-revision`: mistake, weak-topic, and unsolved-question revision.
-- `progress`: solved, selected, and mastery tracking.
+- `progress`: a real course dashboard for solved state, mistake-box state, topic mastery, and weak-topic entry points.
 - `books`: public question books.
 - `answers`: worked-solution books.
-- `past-solutions`: original paper-order solution books.
+- `past-solutions`: original question papers listed beside their matching worked-solution PDFs.
 - `mistake-box`: saved difficult questions.
 - `saved-tests`: reusable built tests.
 - `book-builder`: source pipeline for public books and approved answer books.
@@ -52,16 +52,16 @@ Use these names consistently in navigation and styling:
 3. Add the course palette token in `course-modules.js`, then apply its CSS in `styles.css` and the course-specific CSS file if it has one.
 4. Normalize question data into the shared question shape before connecting UI.
 5. Add an adapter to `exam.js` so the shared builder can power random mocks, custom tests, smart revision, and saved tests.
-6. Reuse existing progress and mistake-box keys only when they represent the same course. Otherwise create course-specific keys.
+6. Reuse existing progress and mistake-box keys only when they represent the same course. Otherwise create course-specific keys and render a course dashboard from those keys.
 7. Build all public question books and approved worked-solution books from source.
-8. Add downloads to the pathway hub and `downloads.html`.
-9. Verify the route, builder, progress, downloads, and at least one PDF before publishing.
+8. Add downloads to the pathway hub, `downloads.html`, and `pastpapers.html` when the course has whole-paper PDFs.
+9. Verify the route, builder, progress, paper/solution rows, downloads, and at least one PDF before publishing.
 
 ## Current Courses
 
 - Linear 4MA1: full classified route, expertise, builder, books, past-paper solutions, progress.
 - Modular 4WM: Unit 1 and Unit 2 each expose the same module set.
-- IAL Pure 1 WMA11: classified route, full builder, smart revision, progress/mistake box, classified/expertise books, and paper-order solutions.
+- IAL Pure 1 WMA11: classified route, full builder, smart revision, real topic progress/mistake dashboard, classified/expertise books, and paper rows with matching worked solutions.
 
 ## Publish Checklist
 

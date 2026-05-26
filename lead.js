@@ -103,13 +103,13 @@
       links: [
         { title: "Classified View", detail: "Topic practice", href: "/ial/wma11/index.html" },
         { title: "Build Test", detail: "Full mock builder", href: "/exam.html?pathway=pure&course=wma11&mode=custom" },
-        { title: "Progress", detail: "Stats and mastery", href: "/ial/wma11/index.html#ialStats" },
-        { title: "Mistake Box", detail: "Saved revision", href: "/ial/wma11/index.html#ialStats" },
+        { title: "Progress", detail: "Topic mastery", href: "/ial/wma11/index.html#ialProgressModule" },
+        { title: "Mistake Box", detail: "Saved revision", href: "/ial/wma11/index.html#ialProgressModule" },
         { title: "Question Book", detail: "Classified PDF", href: "/downloads/IAL/WMA11/WMA11_Classified_Questions.pdf", target: "_blank" },
         { title: "Answer Book", detail: "Worked solutions", href: "/downloads/IAL/WMA11/WMA11_Classified_With_Answers.pdf", target: "_blank" },
         { title: "Expertise Book", detail: "Q6+ questions", href: "/downloads/IAL/WMA11/WMA11_Expertise_Questions.pdf", target: "_blank" },
         { title: "Expertise Answers", detail: "Q6+ solutions", href: "/downloads/IAL/WMA11/WMA11_Expertise_With_Answers.pdf", target: "_blank" },
-        { title: "Past Paper Solutions", detail: "Paper-order answers", href: "/downloads/IAL/WMA11/WMA11_Past_Paper_Solutions.pdf", target: "_blank" },
+        { title: "Past Papers", detail: "Paper + solution rows", href: "/pastpapers.html?pathway=pure#pure-wma11" },
       ],
     },
     {

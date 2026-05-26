@@ -87,6 +87,13 @@ body[data-page="ial-wma11"] .button.solution:hover {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
   margin: 18px 0;
+  padding: 16px;
+  border: 1px solid rgba(90, 128, 116, 0.26);
+  border-left: 7px solid var(--ial-accent);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(90, 128, 116, 0.13), rgba(255, 255, 255, 0.94) 52%, rgba(220, 184, 119, 0.16)),
+    #fff;
 }
 
 .ial-dashboard article {
@@ -142,16 +149,210 @@ body[data-page="ial-wma11"] .button.solution:hover {
   font-size: 14px;
 }
 
+.ial-module-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: end;
+}
+
+.ial-module-head h2 {
+  margin: 6px 0 6px;
+  color: var(--navy);
+  font-size: 26px;
+  line-height: 1.15;
+}
+
+.ial-module-head p {
+  max-width: 760px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.ial-progress-module,
+.ial-paper-library {
+  display: grid;
+  gap: 16px;
+  margin: 18px 0;
+  padding: 20px;
+  border: 1px solid rgba(38, 60, 99, 0.22);
+  border-left: 7px solid #263c63;
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(38, 60, 99, 0.11), rgba(255, 255, 255, 0.96) 54%),
+    #fff;
+}
+
+.ial-paper-library {
+  border-color: rgba(192, 138, 62, 0.28);
+  border-left-color: var(--ial-ochre);
+  background:
+    linear-gradient(135deg, rgba(220, 184, 119, 0.2), rgba(255, 255, 255, 0.96) 52%, rgba(90, 128, 116, 0.08)),
+    #fff;
+}
+
+.ial-progress-actions,
+.ial-paper-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  justify-content: flex-end;
+}
+
+.ial-progress-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ial-progress-summary article {
+  min-height: 116px;
+  padding: 16px;
+  border: 1px solid var(--ial-line);
+  border-left: 6px solid var(--ial-accent);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(90, 128, 116, 0.13), rgba(255, 255, 255, 0.98) 58%),
+    #fff;
+}
+
+.ial-progress-summary article:nth-child(2) {
+  border-left-color: var(--ial-ochre);
+  background:
+    linear-gradient(135deg, rgba(220, 184, 119, 0.22), rgba(255, 255, 255, 0.98) 58%),
+    #fff;
+}
+
+.ial-progress-summary article:nth-child(3) {
+  border-left-color: #263c63;
+  background:
+    linear-gradient(135deg, rgba(38, 60, 99, 0.12), rgba(255, 255, 255, 0.98) 58%),
+    #fff;
+}
+
+.ial-progress-summary article:nth-child(4) {
+  border-left-color: #6b1f25;
+  background:
+    linear-gradient(135deg, rgba(107, 31, 37, 0.12), rgba(255, 255, 255, 0.98) 58%),
+    #fff;
+}
+
+.ial-progress-summary span,
+.ial-paper-row span {
+  display: block;
+  color: #5c5660;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.ial-progress-summary strong {
+  display: block;
+  margin-top: 8px;
+  color: var(--ial-ink);
+  font-size: 32px;
+  line-height: 1;
+}
+
+.ial-progress-summary small {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+.ial-progress-summary i,
+.ial-topic-meter {
+  display: block;
+  width: 100%;
+  height: 9px;
+  margin-top: 14px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(22, 27, 46, 0.12);
+}
+
+.ial-progress-summary b,
+.ial-topic-meter i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--ial-accent), var(--ial-ochre-soft));
+}
+
+.ial-progress-topic-list,
+.ial-paper-list {
+  display: grid;
+  gap: 10px;
+}
+
+.ial-progress-topic,
+.ial-paper-row {
+  --row-accent: var(--ial-accent);
+  padding: 14px;
+  border: 1px solid var(--ial-line);
+  border-left: 6px solid var(--row-accent);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(90, 128, 116, 0.09), rgba(255, 255, 255, 0.98) 62%),
+    #fff;
+}
+
+.ial-progress-topic:nth-child(3n + 2),
+.ial-paper-row:nth-child(3n + 2) {
+  --row-accent: var(--ial-ochre);
+  background:
+    linear-gradient(135deg, rgba(220, 184, 119, 0.15), rgba(255, 255, 255, 0.98) 62%),
+    #fff;
+}
+
+.ial-progress-topic:nth-child(3n + 3),
+.ial-paper-row:nth-child(3n + 3) {
+  --row-accent: #263c63;
+  background:
+    linear-gradient(135deg, rgba(38, 60, 99, 0.1), rgba(255, 255, 255, 0.98) 62%),
+    #fff;
+}
+
+.ial-progress-topic-head,
+.ial-paper-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+}
+
+.ial-progress-topic strong,
+.ial-paper-row strong {
+  display: block;
+  color: var(--navy);
+  font-size: 17px;
+}
+
+.ial-progress-topic span,
+.ial-paper-row small {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
 .ial-workbench {
   padding: 20px;
   border: 1px solid var(--ial-line);
+  border-left: 7px solid var(--ial-accent-dark);
   border-radius: 8px;
-  background: #fff;
+  background:
+    linear-gradient(135deg, rgba(90, 128, 116, 0.08), #fff 42%),
+    #fff;
   overflow: hidden;
 }
 
 .ial-hero > *,
 .ial-workbench > *,
+.ial-progress-module > *,
+.ial-paper-library > *,
 .ial-question-card,
 .ial-question-head > *,
 .ial-book-actions .button {
@@ -413,7 +614,9 @@ body[data-page="ial-wma11"] .button.solution:hover {
   border: 1px solid var(--ial-line);
   border-left: 7px solid var(--ial-ink);
   border-radius: 8px;
-  background: #fff;
+  background:
+    linear-gradient(135deg, rgba(22, 27, 46, 0.09), rgba(255, 255, 255, 0.96) 50%, rgba(192, 138, 62, 0.1)),
+    #fff;
 }
 
 .ial-mock-head {
@@ -615,15 +818,24 @@ body.print-ial-mock .ial-print-question {
   .ial-hero,
   .ial-dashboard,
   .ial-filters,
+  .ial-progress-summary,
   .ial-mock-controls {
     grid-template-columns: 1fr;
   }
 
   .ial-question-head,
   .ial-strip-head,
+  .ial-module-head,
+  .ial-paper-row,
   .ial-mock-head {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .ial-module-head,
+  .ial-paper-row {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
   .ial-meta {
@@ -647,6 +859,8 @@ body.print-ial-mock .ial-print-question {
 
   .ial-hero > *,
   .ial-workbench > *,
+  .ial-progress-module > *,
+  .ial-paper-library > *,
   .ial-mock-builder > * {
     max-width: calc(100vw - 48px);
   }
@@ -657,6 +871,8 @@ body.print-ial-mock .ial-print-question {
 
   .ial-hero,
   .ial-workbench,
+  .ial-progress-module,
+  .ial-paper-library,
   .ial-mock-builder {
     padding: 16px;
   }
@@ -680,6 +896,8 @@ body.print-ial-mock .ial-print-question {
 
   .ial-actions .button,
   .ial-book-actions .button,
+  .ial-progress-actions .button,
+  .ial-paper-actions .button,
   .ial-mock-actions .button {
     width: 100%;
     justify-content: center;

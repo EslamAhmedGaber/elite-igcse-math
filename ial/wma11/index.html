@@ -13,17 +13,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="ial/wma11/wma11.css?v=20260526d">
+  <link rel="stylesheet" href="ial/wma11/wma11.css?v=20260526e">
   <script>
     window.MathJax = { tex: { inlineMath: [["$", "$"], ["\\(", "\\)"]] }, svg: { fontCache: "global" } };
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js"></script>
-  <script defer src="course-modules.js?v=20260526a"></script>
+  <script defer src="course-modules.js?v=20260526b"></script>
   <script defer src="lead.js"></script>
   <script defer src="ial/wma11/wma11-data.js?v=20260525a"></script>
-  <script defer src="ial/wma11/wma11.js?v=20260526b"></script>
+  <script defer src="ial/wma11/wma11.js?v=20260526c"></script>
 </head>
 <body data-page="ial-wma11">
 
@@ -110,7 +110,7 @@
         <a class="button solution" href="downloads/IAL/WMA11/WMA11_Classified_With_Answers.pdf" target="_blank" rel="noreferrer">Classified + Answers</a>
         <a class="button gold" href="downloads/IAL/WMA11/WMA11_Expertise_Questions.pdf" target="_blank" rel="noreferrer">Expertise PDF</a>
         <a class="button solution light-solution" href="downloads/IAL/WMA11/WMA11_Expertise_With_Answers.pdf" target="_blank" rel="noreferrer">Expertise + Answers</a>
-        <a class="button light" href="downloads/IAL/WMA11/WMA11_Past_Paper_Solutions.pdf" target="_blank" rel="noreferrer">Past Paper Solutions</a>
+        <a class="button light" href="ial/wma11/index.html#ialPastPapers">Papers + Solutions</a>
       </div>
     </section>
 
@@ -119,6 +119,43 @@
       <article><span>Filtered now</span><strong data-ial-filtered>0</strong><small>matching questions</small></article>
       <article><span>Solved here</span><strong data-ial-solved>0</strong><small>saved to your account</small></article>
       <article><span>Mistake box</span><strong data-ial-mistakes>0</strong><small>for revision</small></article>
+    </section>
+
+    <section id="ialProgressModule" class="ial-progress-module" aria-labelledby="ialProgressTitle">
+      <div class="ial-module-head">
+        <div>
+          <span class="eyebrow">Pure 1 Progress</span>
+          <h2 id="ialProgressTitle">Track WMA11 mastery by topic</h2>
+          <p>Topic progress uses the same solved and mistake-box state as this classified bank and the shared test builder.</p>
+        </div>
+        <div class="ial-progress-actions">
+          <a class="button primary" href="exam.html?pathway=pure&amp;course=wma11&amp;mode=smart">Smart Revision</a>
+          <a class="button light" href="ial/wma11/index.html#ialFilters">Open Classified</a>
+        </div>
+      </div>
+      <div class="ial-progress-summary" aria-label="Pure 1 progress summary">
+        <article>
+          <span>Overall solved</span>
+          <strong data-ial-progress-percent>0%</strong>
+          <i><b data-ial-progress-bar></b></i>
+        </article>
+        <article>
+          <span>Topics started</span>
+          <strong data-ial-progress-started>0</strong>
+          <small>of 13 topics</small>
+        </article>
+        <article>
+          <span>Needs attention</span>
+          <strong data-ial-progress-weak>0</strong>
+          <small>weak or saved topics</small>
+        </article>
+        <article>
+          <span>Mistake box</span>
+          <strong data-ial-progress-mistakes>0</strong>
+          <small>questions to revisit</small>
+        </article>
+      </div>
+      <div class="ial-progress-topic-list" data-ial-progress-topics aria-label="Topic mastery"></div>
     </section>
 
     <section id="ialMockBuilder" class="ial-mock-builder" aria-labelledby="ialMockTitle">
@@ -140,6 +177,18 @@
         <a data-module="smart-revision" href="exam.html?pathway=pure&amp;course=wma11&amp;mode=smart"><strong>Smart Revision</strong><span>Use mistakes, weak topics, and unsolved questions.</span></a>
         <a data-module="saved-tests" href="exam.html?pathway=pure&amp;course=wma11&amp;mode=saved"><strong>Saved Tests</strong><span>Reuse and print saved Pure 1 tests.</span></a>
       </div>
+    </section>
+
+    <section id="ialPastPapers" class="ial-paper-library" aria-labelledby="ialPaperTitle">
+      <div class="ial-module-head">
+        <div>
+          <span class="eyebrow">Past papers</span>
+          <h2 id="ialPaperTitle">WMA11 papers beside worked solutions</h2>
+          <p>Download the original question paper and the matching Elite worked-solution PDF from the same row.</p>
+        </div>
+        <a class="button light" href="downloads/IAL/WMA11/WMA11_Past_Paper_Solutions.pdf" target="_blank" rel="noreferrer">Combined Solutions Book</a>
+      </div>
+      <div class="ial-paper-list" data-ial-paper-list aria-label="WMA11 paper downloads"></div>
     </section>
 
     <section class="ial-workbench">
