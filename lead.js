@@ -138,6 +138,7 @@
     },
   ];
   const NAV_GROUPS = Array.isArray(COURSE_SYSTEM.navGroups) ? COURSE_SYSTEM.navGroups : DEFAULT_NAV_GROUPS;
+  const PALETTES = COURSE_SYSTEM.palettes || {};
 
   const DEFAULT_MODULE_ALIASES = {
     "classified view": "classified",
@@ -180,6 +181,43 @@
     return `<div class="nav-tool-grid">${links.map(navLink).join("")}</div>`;
   }
 
+  function groupPalette(group) {
+    return PALETTES[group?.palette] || null;
+  }
+
+  function navGroupStyle(group) {
+    const palette = groupPalette(group);
+    if (!palette?.accent) return "";
+    const active = palette.accentDeep || palette.accent;
+    const accent = palette.soft || palette.accent;
+    return ` style="--nav-tab-active: ${active}; --nav-tab-accent: ${accent};"`;
+  }
+
+  function applyCoursePalette(group) {
+    if (!group) return;
+    const palette = groupPalette(group);
+    const pathway = group.pathway || group.id;
+    if (group.palette) {
+      document.body.dataset.coursePalette = group.palette;
+      document.body.dataset.pathway = pathway;
+    }
+    document.body.dataset.activeCourse = group.id;
+    if (!palette?.accent) return;
+    const deep = palette.accentDeep || palette.accent;
+    const soft = palette.soft || "rgba(22, 27, 46, 0.08)";
+    document.body.style.setProperty("--course-signature", palette.accent);
+    document.body.style.setProperty("--course-deep", deep);
+    document.body.style.setProperty("--course-soft", soft);
+    document.body.style.setProperty("--pathway-active", palette.accent);
+    document.body.style.setProperty("--pathway-active-deep", deep);
+    document.body.style.setProperty("--pathway-soft", soft);
+  }
+
+  function findGroupByPathway(pathway) {
+    if (!pathway) return null;
+    return NAV_GROUPS.find((group) => group.id === pathway || group.pathway === pathway || group.palette === pathway) || null;
+  }
+
   function renderStructuredNav(nav) {
     nav.innerHTML = NAV_GROUPS.map((group) => {
       const tabAttrs = [
@@ -204,7 +242,7 @@
             <div class="nav-panel-label">${group.panelLabel}</div>
             ${navTools(group.links)}
           </div>`;
-    return `<div class="nav-group nav-group-${group.id}" data-nav-group="${group.id}">
+    return `<div class="nav-group nav-group-${group.id}" data-nav-group="${group.id}"${navGroupStyle(group)}>
         <a ${tabAttrs}><span>${group.label}</span><small>${group.detail}</small></a>
         ${panel}
       </div>`;
@@ -215,6 +253,8 @@
     const page = document.body?.dataset.page || "";
     const params = new URLSearchParams(window.location.search);
     const requestedPathway = params.get("pathway");
+    const requestedGroup = findGroupByPathway(requestedPathway);
+    if (requestedGroup) return requestedGroup.id;
     if (page === "ial-wma11" || window.location.pathname.includes("/ial/wma11/") || requestedPathway === "pure") return "pure";
     if (page === "about") return "about";
     if (requestedPathway === "modular" || window.ELITE_PATHWAY?.mode === "modular") return "modular";
@@ -303,11 +343,7 @@
     if (!header) return;
     const groupId = activeNavGroup();
     const group = NAV_GROUPS.find((item) => item.id === groupId);
-    if (group?.palette) {
-      document.body.dataset.coursePalette = group.palette;
-      document.body.dataset.pathway = group.palette;
-    }
-    document.body.dataset.activeCourse = groupId;
+    applyCoursePalette(group);
     document.body?.classList.toggle("pathway-pure", groupId === "pure");
     const toolData = activeToolLinks(groupId);
     if (!toolData) return;
@@ -454,15 +490,13 @@
     const page = document.body?.dataset.page || "";
     const params = new URLSearchParams(window.location.search);
     const requestedPathway = params.get("pathway");
-    let active = "linear";
+    let active = findGroupByPathway(requestedPathway)?.id || "linear";
 
     if (page === "ial-wma11" || window.location.pathname.includes("/ial/wma11/")) {
       active = "pure";
     } else if (page === "about") {
       active = "about";
-    } else if (requestedPathway === "pure") {
-      active = "pure";
-    } else if (requestedPathway === "modular" || window.ELITE_PATHWAY?.mode === "modular") {
+    } else if (!findGroupByPathway(requestedPathway) && (requestedPathway === "modular" || window.ELITE_PATHWAY?.mode === "modular")) {
       active = "modular";
     }
 
