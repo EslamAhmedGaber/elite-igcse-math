@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="ial/wma11/wma11.css?v=20260525b">
+  <link rel="stylesheet" href="ial/wma11/wma11.css?v=20260526c">
   <script>
     window.MathJax = { tex: { inlineMath: [["$", "$"], ["\\(", "\\)"]] }, svg: { fontCache: "global" } };
   </script>
@@ -22,7 +22,7 @@
   <script defer src="cloud-progress.js"></script>
   <script defer src="lead.js"></script>
   <script defer src="ial/wma11/wma11-data.js?v=20260525a"></script>
-  <script defer src="ial/wma11/wma11.js?v=20260525a"></script>
+  <script defer src="ial/wma11/wma11.js?v=20260526b"></script>
 </head>
 <body data-page="ial-wma11">
 
@@ -122,37 +122,22 @@
     <section id="ialMockBuilder" class="ial-mock-builder" aria-labelledby="ialMockTitle">
       <div class="ial-mock-head">
         <div>
-          <span class="eyebrow">Pure 1 Mock Builder</span>
-          <h2 id="ialMockTitle">Build a WMA11 test</h2>
-          <p>Generate a focused Pure 1 paper from the same classified question bank.</p>
+          <span class="eyebrow">Pure 1 Test Builder</span>
+          <h2 id="ialMockTitle">Open the full WMA11 builder</h2>
+          <p>Use the shared builder engine for random mocks, hand-built tests, smart revision, saved tests, marking, and printable worked solutions.</p>
         </div>
-        <div class="ial-mock-actions">
-          <button class="button primary" type="button" id="ialGenerateMock">Generate test</button>
-          <button class="button light" type="button" id="ialPrintMock">Print questions</button>
-          <button class="button solution" type="button" id="ialPrintMockSolutions">Print with answers</button>
+        <div class="ial-mock-actions ial-builder-actions">
+          <a class="button primary" href="exam.html?pathway=pure&amp;course=wma11&amp;mode=custom">Build Test</a>
+          <a class="button light" href="exam.html?pathway=pure&amp;course=wma11&amp;mode=random">Random Mock</a>
+          <a class="button solution" href="exam.html?pathway=pure&amp;course=wma11&amp;mode=smart">Smart Revision</a>
         </div>
       </div>
-      <form class="ial-mock-controls" aria-label="WMA11 mock builder controls">
-        <label>
-          <span>Topic</span>
-          <select id="ialMockTopic"></select>
-        </label>
-        <label>
-          <span>Question count</span>
-          <select id="ialMockCount">
-            <option value="6">6 questions</option>
-            <option value="8" selected>8 questions</option>
-            <option value="10">10 questions</option>
-            <option value="12">12 questions</option>
-          </select>
-        </label>
-        <label class="ial-toggle">
-          <input id="ialMockExpertise" type="checkbox">
-          <span>Expertise only Q6+</span>
-        </label>
-      </form>
-      <div id="ialMockSummary" class="ial-mock-summary">No mock generated yet.</div>
-      <div id="ialMockList" class="ial-mock-list" aria-live="polite"></div>
+      <div class="ial-builder-links" aria-label="WMA11 builder modes">
+        <a href="exam.html?pathway=pure&amp;course=wma11&amp;mode=random"><strong>Random Mock</strong><span>Timed Pure 1 papers from the full bank.</span></a>
+        <a href="exam.html?pathway=pure&amp;course=wma11&amp;mode=custom"><strong>Build Test</strong><span>Filter by topic, marks, status, and paper.</span></a>
+        <a href="exam.html?pathway=pure&amp;course=wma11&amp;mode=smart"><strong>Smart Revision</strong><span>Use mistakes, weak topics, and unsolved questions.</span></a>
+        <a href="exam.html?pathway=pure&amp;course=wma11&amp;mode=saved"><strong>Saved Tests</strong><span>Reuse and print saved Pure 1 tests.</span></a>
+      </div>
     </section>
 
     <section class="ial-workbench">

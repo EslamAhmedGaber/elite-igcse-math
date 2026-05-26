@@ -422,6 +422,42 @@ body[data-page="ial-wma11"] .button.solution:hover {
   justify-content: flex-end;
 }
 
+.ial-builder-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+}
+
+.ial-builder-links a {
+  display: grid;
+  min-height: 96px;
+  align-content: center;
+  gap: 8px;
+  padding: 16px;
+  border: 1px solid var(--ial-line);
+  border-left: 5px solid var(--ial-accent);
+  border-radius: 8px;
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--ial-paper);
+}
+
+.ial-builder-links a:hover,
+.ial-builder-links a:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.ial-builder-links strong {
+  color: var(--navy);
+  font-size: 17px;
+}
+
+.ial-builder-links span {
+  color: var(--muted);
+  line-height: 1.45;
+}
+
 .ial-mock-controls {
   display: grid;
   grid-template-columns: minmax(220px, 1fr) 180px minmax(190px, auto);

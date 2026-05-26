@@ -100,7 +100,7 @@
       panelLabel: "WMA11 tools",
       links: [
         { title: "Classified View", detail: "Topic practice", href: "/ial/wma11/index.html" },
-        { title: "Build Test", detail: "Pure 1 mock builder", href: "/ial/wma11/index.html#ialMockBuilder" },
+        { title: "Build Test", detail: "Full mock builder", href: "/exam.html?pathway=pure&course=wma11&mode=custom" },
         { title: "Progress", detail: "Stats and mastery", href: "/ial/wma11/index.html#ialStats" },
         { title: "Mistake Box", detail: "Saved revision", href: "/ial/wma11/index.html#ialStats" },
         { title: "Question Book", detail: "Classified PDF", href: "/downloads/IAL/WMA11/WMA11_Classified_Questions.pdf", target: "_blank" },

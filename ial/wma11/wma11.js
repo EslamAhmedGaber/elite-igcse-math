@@ -90,6 +90,17 @@
     populateSelect(els.marks, "All marks", marks, (value) => `${value} marks`);
   }
 
+  function applyUrlFilters() {
+    const params = new URLSearchParams(window.location.search);
+    const requestedTopic = params.get("topic");
+    if (!requestedTopic || !els.topic) return;
+    const match = TOPICS.find((topic) => topic.slug === requestedTopic || topic.name === requestedTopic);
+    const value = match?.slug || requestedTopic;
+    if ([...els.topic.options].some((option) => option.value === value)) {
+      els.topic.value = value;
+    }
+  }
+
   function currentFilters() {
     return {
       search: els.search.value.trim().toLowerCase(),
@@ -414,6 +425,7 @@
 
   function init() {
     setupFilters();
+    applyUrlFilters();
     bindEvents();
     applyFilters(false);
   }

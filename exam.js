@@ -1,13 +1,110 @@
 (function () {
-  const questions = window.QUESTION_DATA || [];
-  const solutions = window.SOLUTION_DATA || {};
-  const EXAM_KEY = "eliteMockExamV1";
-  const HISTORY_KEY = "eliteMockExamHistoryV1";
-  const REVIEW_KEY = "eliteMistakeBoxV1";
-  const SOLVED_KEY = "solvedExpertiseQuestions";
-  const SELECTED_KEY = "selectedExpertiseQuestions";
-  const SAVED_TESTS_KEY = "eliteSavedTestsV1";
-  const DRAFT_KEY = "eliteTestBuilderDraftV1";
+  const params = new URLSearchParams(window.location.search);
+  const requestedPathway = params.get("pathway");
+  const requestedCourse = params.get("course");
+  const isWma11Course = requestedPathway === "pure" || requestedCourse === "wma11";
+
+  function normalizeMathDelimiters(value) {
+    return String(value || "")
+      .replace(/\$\$([\s\S]+?)\$\$/g, "\\[$1\\]")
+      .replace(/\$([^$\n]+?)\$/g, "\\($1\\)");
+  }
+
+  function wma11TopicName(slug, fallback = "") {
+    return (window.WMA11_TOPICS || []).find((topic) => topic.slug === slug)?.name || fallback || slug;
+  }
+
+  function normalizeWma11Question(item) {
+    const primarySlug = item.primaryTopic || item.topic;
+    const primaryName = item.primaryTopicName || item.topicName || wma11TopicName(primarySlug);
+    const topicNames = item.topicNames?.length
+      ? item.topicNames
+      : (item.topics || [primarySlug]).map((slug) => wma11TopicName(slug, primaryName));
+    return {
+      id: item.id,
+      source_id: item.id,
+      bank: "all",
+      course: "wma11",
+      is_expertise: Number(item.qNo || 0) >= 6,
+      unit: "WMA11",
+      linear_unit: "WMA11",
+      modular_unit: "WMA11",
+      topic: primaryName,
+      topics: topicNames,
+      topic_slug: primarySlug,
+      topic_slugs: item.topics || [primarySlug],
+      paper: item.paper,
+      code: item.paperCode,
+      paper_code: item.paperCode,
+      question: item.qNo,
+      marks: item.marks,
+      filename: item.downloadName,
+      image: item.image,
+      question_text: [
+        item.id,
+        item.paper,
+        primaryName,
+        ...(topicNames || []),
+        `Question ${item.qNo}`,
+        `${item.marks} marks`
+      ].join(" "),
+      finalAnswer: item.finalAnswer,
+      steps: item.steps || []
+    };
+  }
+
+  function wma11SolutionSource(item) {
+    const steps = (item.steps || []).map((step, index) => (
+      `**${index + 1}. ${step.title || "Step"}**\n\n${normalizeMathDelimiters(step.body || "")}`
+    )).join("\n\n");
+    return [
+      `**Topic:** ${item.topicName || wma11TopicName(item.topic)}.`,
+      "**Method**",
+      steps,
+      `**Answer:** ${normalizeMathDelimiters(item.finalAnswer || "")}`
+    ].filter(Boolean).join("\n\n");
+  }
+
+  const course = isWma11Course
+    ? {
+        id: "wma11",
+        mode: "pure",
+        title: "IAL Pure 1 Test Builder",
+        heroTitle: "Build a full Pure 1 test.",
+        heroCopy: "Use the same builder engine for WMA11: random mocks, hand-built tests, smart revision, saved tests, timed attempts, marking, and printable worked solutions.",
+        unitLabel: "Course",
+        unitAllLabel: "All Pure 1",
+        units: ["WMA11"],
+        topics: (window.WMA11_TOPICS || []).map((topic) => ({ topic: topic.name, unit: "WMA11" })),
+        questions: (window.WMA11_QUESTIONS || []).map(normalizeWma11Question),
+        solutions: Object.fromEntries((window.WMA11_QUESTIONS || []).map((item) => [item.id, { source: wma11SolutionSource(item) }])),
+        reviewKey: "eliteWMA11MistakeBoxV1",
+        solvedKey: "eliteWMA11SolvedV1",
+        selectedKey: "eliteWMA11SelectedV1"
+      }
+    : {
+        id: "igcse",
+        mode: "igcse",
+        title: "Mocks & Test Builder",
+        heroTitle: "Build the exact paper you need.",
+        heroCopy: "Generate random mocks, hand-pick topic tests, or let the site build smart revision from mistakes and weak topics. Finish, mark, and keep the loop moving.",
+        questions: window.QUESTION_DATA || [],
+        solutions: window.SOLUTION_DATA || {},
+        reviewKey: "eliteMistakeBoxV1",
+        solvedKey: "solvedExpertiseQuestions",
+        selectedKey: "selectedExpertiseQuestions"
+      };
+
+  const questions = course.questions;
+  const solutions = course.solutions;
+  const keySuffix = course.id === "igcse" ? "" : `:${course.id}`;
+  const EXAM_KEY = `eliteMockExamV1${keySuffix}`;
+  const HISTORY_KEY = `eliteMockExamHistoryV1${keySuffix}`;
+  const REVIEW_KEY = course.reviewKey;
+  const SOLVED_KEY = course.solvedKey;
+  const SELECTED_KEY = course.selectedKey;
+  const SAVED_TESTS_KEY = `eliteSavedTestsV1${keySuffix}`;
+  const DRAFT_KEY = `eliteTestBuilderDraftV1${keySuffix}`;
   const MAX_FILTER_RESULTS = 80;
 
   const els = {
@@ -146,19 +243,25 @@
   }
 
   function activePathway() {
+    if (course.mode === "pure") return "pure";
     return window.ELITE_PATHWAY?.mode === "modular" ? "modular" : "linear";
   }
 
   function displayUnit(question) {
+    if (activePathway() === "pure") return question.unit || "WMA11";
     return activePathway() === "modular" ? question.modular_unit : question.linear_unit;
   }
 
   function unitsForPathway() {
+    if (activePathway() === "pure") return course.units || ["WMA11"];
     const catalog = activePathway() === "modular" ? window.MODULAR_TOPIC_CATALOG || [] : window.LINEAR_TOPIC_CATALOG || [];
     return [...new Set(catalog.map((entry) => entry.unit))];
   }
 
   function topicsForUnit(unit) {
+    if (activePathway() === "pure") {
+      return (course.topics || []).filter((entry) => !unit || entry.unit === unit).map((entry) => entry.topic);
+    }
     const catalog = activePathway() === "modular" ? window.MODULAR_TOPIC_CATALOG || [] : window.LINEAR_TOPIC_CATALOG || [];
     return catalog.filter((entry) => !unit || entry.unit === unit).map((entry) => entry.topic);
   }
@@ -172,9 +275,10 @@
 
   function populatePathwayFilters() {
     const units = unitsForPathway();
-    fillSelect(els.unit, units, activePathway() === "modular" ? "Both units" : "All chapters");
-    fillSelect(els.customUnit, units, activePathway() === "modular" ? "Both units" : "All chapters");
-    fillSelect(els.smartUnit, units, activePathway() === "modular" ? "Both units" : "All chapters");
+    const allLabel = course.unitAllLabel || (activePathway() === "modular" ? "Both units" : "All chapters");
+    fillSelect(els.unit, units, allLabel);
+    fillSelect(els.customUnit, units, allLabel);
+    fillSelect(els.smartUnit, units, allLabel);
     refreshTopicOptions();
     refreshBuilderTopicOptions();
   }
@@ -204,6 +308,33 @@
     refreshBuilderTopicOptions();
   }
 
+  function setOptionText(select, value, text) {
+    const option = select ? [...select.options].find((item) => item.value === value) : null;
+    if (option) option.textContent = text;
+  }
+
+  function applyCourseDom() {
+    if (course.mode !== "pure") return;
+    document.body?.classList.remove("pathway-linear", "pathway-modular");
+    document.body?.classList.add("pathway-pure", "exam-course-pure");
+    document.title = `${course.title} - Elite IGCSE Mathematics`;
+    const title = document.getElementById("examTitle");
+    if (title) title.textContent = course.heroTitle;
+    const heroCopy = document.querySelector(".exam-hero p");
+    if (heroCopy) heroCopy.textContent = course.heroCopy;
+    document.querySelectorAll("[data-pathway-label='unit']").forEach((node) => {
+      node.textContent = course.unitLabel;
+    });
+    [els.bank, els.customBank, els.smartBank].forEach((select) => {
+      setOptionText(select, "all", "Full WMA11 bank");
+      setOptionText(select, "expertise", "Q6+ expertise only");
+    });
+    const difficulty = [...(els.customDifficulty?.options || [])].find((option) => option.value === "q20");
+    if (difficulty) difficulty.textContent = "Q6+ expertise";
+    const preset = [...(els.randomPreset?.options || [])].find((option) => option.value === "hard");
+    if (preset) preset.textContent = "Q6+ challenge";
+  }
+
   function refreshTopicOptions() {
     fillSelect(els.topic, topicsForUnit(els.unit?.value || ""), "All topics");
   }
@@ -221,9 +352,9 @@
     const unit = els.customUnit?.value || "";
     const topic = els.customTopic?.value || "";
     const papers = questions
-      .filter((question) => question.bank === bank)
-      .filter((question) => !unit || displayUnit(question) === unit)
-      .filter((question) => !topic || question.topic === topic)
+      .filter((question) => questionMatchesBank(question, bank))
+      .filter((question) => questionMatchesUnit(question, unit))
+      .filter((question) => questionMatchesTopic(question, topic))
       .map((question) => question.paper);
     fillSelect(els.customPaper, uniqueSorted(papers), "All papers");
   }
@@ -246,8 +377,24 @@
     if (difficulty === "quick") return Number(question.marks || 0) <= 3;
     if (difficulty === "standard") return Number(question.marks || 0) >= 4 && Number(question.marks || 0) <= 6;
     if (difficulty === "long") return Number(question.marks || 0) >= 7;
-    if (difficulty === "q20") return Number(question.question || 0) >= 20;
+    if (difficulty === "q20") return activePathway() === "pure" ? Number(question.question || 0) >= 6 : Number(question.question || 0) >= 20;
     return true;
+  }
+
+  function questionMatchesBank(question, bank = "all") {
+    if (activePathway() === "pure") {
+      if (bank === "expertise") return Boolean(question.is_expertise);
+      return true;
+    }
+    return question.bank === bank;
+  }
+
+  function questionMatchesUnit(question, unit = "") {
+    return !unit || displayUnit(question) === unit;
+  }
+
+  function questionMatchesTopic(question, topic = "") {
+    return !topic || question.topic === topic || (question.topics || []).includes(topic);
   }
 
   function eligiblePool({
@@ -265,9 +412,9 @@
   } = {}) {
     const needle = search.trim().toLowerCase();
     return questions
-      .filter((question) => question.bank === bank)
-      .filter((question) => !unit || displayUnit(question) === unit)
-      .filter((question) => !topic || question.topic === topic)
+      .filter((question) => questionMatchesBank(question, bank))
+      .filter((question) => questionMatchesUnit(question, unit))
+      .filter((question) => questionMatchesTopic(question, topic))
       .filter((question) => !paper || question.paper === paper)
       .filter((question) => difficultyMatch(question, difficulty))
       .filter((question) => !unsolvedOnly || !isSolved(question))
@@ -284,6 +431,8 @@
         if (!needle) return true;
         return [
           question.topic,
+          ...(question.topics || []),
+          ...(question.topic_slugs || []),
           question.paper,
           question.code,
           question.question,
@@ -527,6 +676,10 @@
   }
 
   function topicLink(row) {
+    if (activePathway() === "pure") {
+      const topic = questions.find((question) => question.topic === row.topic)?.topic_slug || row.topic;
+      return `ial/wma11/index.html?topic=${encodeURIComponent(topic)}`;
+    }
     const params = new URLSearchParams({ bank: state.bank || "all", unit: row.unit, topic: row.topic, mode: "weak" });
     return `practice.html?${params.toString()}`;
   }
@@ -612,7 +765,7 @@
           <div class="print-brand-lockup">
             <span class="print-brand-mark">EA</span>
             <div>
-              <strong>Elite IGCSE Academy</strong>
+              <strong>${course.mode === "pure" ? "Elite IAL Mathematics" : "Elite IGCSE Academy"}</strong>
               <small>${state.kind === "custom" ? "Custom Test" : state.kind === "smart" ? "Smart Revision" : "Generated Mock"} - Dr Eslam Ahmed</small>
             </div>
           </div>
@@ -1035,6 +1188,7 @@
     if (state.status === "idle" && !state.ids.length) updateTimer();
   });
 
+  applyCourseDom();
   populatePathwayFilters();
   applyUrlDefaults();
   refreshBuilderPaperOptions();
