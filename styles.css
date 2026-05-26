@@ -42,6 +42,12 @@
   --brand-ochre-soft: #dcb877;
   --brand-paper: #fbf6e6;
   --brand-vellum: #ebdfc4;
+  --course-signature: var(--brand-ink);
+  --course-deep: var(--brand-ink-deep);
+  --course-soft: rgba(22, 27, 46, 0.08);
+  --course-vellum: rgba(235, 223, 196, 0.58);
+  --course-rail: rgba(22, 27, 46, 0.18);
+  --course-highlight: var(--brand-ochre-soft);
 }
 
 * { box-sizing: border-box; }
@@ -1613,7 +1619,7 @@ body.practice-focus-mode .mobile-tools-toggle {
     margin: 0 0 5mm;
     padding-bottom: 3mm;
     border-bottom: 0.3mm solid #cfc9be;
-    color: #161b2e;
+    color: var(--course-deep, #161b2e);
     font-size: 14pt;
     line-height: 1.25;
   }
@@ -1623,7 +1629,7 @@ body.practice-focus-mode .mobile-tools-toggle {
     object-fit: contain;
     padding: 4mm;
     border: 0.25mm solid #cfc9be;
-    border-left: 1mm solid #c08a3e;
+    border-left: 1mm solid var(--course-signature, #c08a3e);
     background: #fff;
   }
   .print-paper-brand {
@@ -1633,8 +1639,8 @@ body.practice-focus-mode .mobile-tools-toggle {
     align-items: center;
     margin: -7mm -12mm 6mm;
     padding: 5mm 12mm 4mm;
-    border-bottom: 1.2mm solid #c0392b;
-    background: #161b2e;
+    border-bottom: 1.2mm solid var(--course-signature, #c0392b);
+    background: var(--course-deep, #161b2e);
     color: #fff;
   }
   .print-brand-lockup {
@@ -1649,7 +1655,7 @@ body.practice-focus-mode .mobile-tools-toggle {
     width: 13mm;
     height: 13mm;
     border: 0.25mm solid rgba(220, 184, 119, 0.62);
-    color: #dcb877;
+    color: var(--course-highlight, #dcb877);
     font-family: Georgia, "Times New Roman", serif;
     font-size: 16pt;
     line-height: 1;
@@ -1664,7 +1670,7 @@ body.practice-focus-mode .mobile-tools-toggle {
   .print-paper-brand small {
     display: block;
     margin-top: 1mm;
-    color: #dcb877;
+    color: var(--course-highlight, #dcb877);
     font-size: 7.5pt;
     font-weight: 700;
     letter-spacing: 0.7pt;
@@ -2444,6 +2450,107 @@ body[data-course-palette="pure"] .pathway-tool-strip {
   --pathway-soft: var(--brand-indigo-soft);
 }
 
+/* ============================================================
+   Phase 5: palette-aware contrast layers
+   ============================================================ */
+
+body[data-course-palette] .hero-panel,
+body[data-course-palette] .exam-hero,
+body[data-course-palette] .pp-hero {
+  background:
+    linear-gradient(135deg, rgba(220, 184, 119, 0.18), transparent 42%),
+    linear-gradient(135deg, var(--course-deep) 0%, var(--course-signature) 68%, rgba(141, 40, 32, 0.62) 150%);
+}
+
+body[data-course-palette] .download-panel,
+body[data-course-palette] .progress-panel,
+body[data-course-palette] .bank-panel,
+body[data-course-palette] .filters,
+body[data-course-palette] .quick-stats,
+body[data-course-palette] .teacher-card,
+body[data-course-palette] .study-card,
+body[data-course-palette] .progress-card,
+body[data-course-palette] .worksheet-card,
+body[data-course-palette] .review-card,
+body[data-course-palette] .focus-filter-bar,
+body[data-course-palette] .exam-builder,
+body[data-course-palette] .exam-summary,
+body[data-course-palette] .exam-paper,
+body[data-course-palette] .downloads-cta,
+body[data-course-palette] .pp-explainer article,
+body[data-course-palette] .pp-section,
+body[data-course-palette] .progress-dashboard article,
+body[data-course-palette] .progress-command-strip article,
+body[data-course-palette] .cloud-sync-panel,
+body[data-course-palette] .progress-sheet-guide article,
+body[data-course-palette] .progress-profile-panel,
+body[data-course-palette] .progress-next-panel,
+body[data-course-palette] .progress-plan-panel,
+body[data-course-palette] .progress-plan-output,
+body[data-course-palette] .progress-sheet-panel,
+body[data-course-palette] .progress-entry-panel,
+body[data-course-palette] .progress-priority-panel,
+body[data-course-palette] .progress-backup-panel {
+  border-left: 6px solid var(--course-signature);
+}
+
+body[data-course-palette] .download-panel,
+body[data-course-palette] .exam-builder,
+body[data-course-palette] .pp-section,
+body[data-course-palette] .progress-command-strip article,
+body[data-course-palette] .progress-profile-panel,
+body[data-course-palette] .progress-plan-panel {
+  background:
+    linear-gradient(135deg, var(--course-soft), rgba(255, 255, 255, 0.96) 56%, rgba(235, 223, 196, 0.36)),
+    #fff;
+}
+
+body[data-course-palette] .progress-panel,
+body[data-course-palette] .exam-summary,
+body[data-course-palette] .progress-dashboard article:nth-child(even),
+body[data-course-palette] .pp-explainer article:nth-child(even) {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.98), var(--course-vellum)),
+    #fff;
+}
+
+body[data-course-palette] .bank-panel,
+body[data-course-palette] .exam-paper,
+body[data-course-palette] .filters,
+body[data-course-palette] .focus-filter-bar,
+body[data-course-palette] .quick-stats,
+body[data-course-palette] .progress-sheet-panel,
+body[data-course-palette] .progress-entry-panel,
+body[data-course-palette] .progress-backup-panel {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.98), var(--course-soft) 70%),
+    #fff;
+}
+
+body[data-course-palette] .worksheet-card,
+body[data-course-palette] .review-card,
+body[data-course-palette] .download-card.download-note {
+  border-top-color: var(--course-signature);
+}
+
+body[data-course-palette] .exam-mode-tabs button.active,
+body[data-course-palette] .layout-toggle button.active {
+  background: var(--course-signature);
+  border-color: var(--course-signature);
+}
+
+body[data-course-palette] .progress-dashboard strong,
+body[data-course-palette] .quick-stats strong,
+body[data-course-palette] .progress-summary strong,
+body[data-course-palette] .pp-section-head .eyebrow,
+body[data-course-palette] .progress-command-strip span {
+  color: var(--course-deep);
+}
+
+body[data-course-palette] .pp-year-block h3::before {
+  background: var(--course-signature);
+}
+
 .cloud-floating-widget {
   position: fixed;
   right: 18px;
@@ -2608,18 +2715,28 @@ body[data-course-palette="pure"] .pathway-tool-strip {
   .site-cta { display: none; }
   .nav-panel { padding: 10px; }
   .pathway-tool-strip {
-    width: calc(100% - 16px);
+    width: calc(100vw - 44px);
     margin: 10px auto 16px;
-    padding: 16px 14px;
+    padding: 14px 12px;
+    overflow: hidden;
   }
   .pathway-tool-strip-title {
     display: grid;
+    max-width: 100%;
+    padding-right: 12px;
   }
   .pathway-tool-strip-title strong { font-size: 22px; }
-  .pathway-tool-strip-title p { font-size: 13px; }
-  .pathway-tool-strip-links { grid-template-columns: 1fr; }
+  .pathway-tool-strip-title p {
+    display: none;
+  }
+  .pathway-tool-strip-links {
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+  }
   .pathway-tool-strip-links a {
+    max-width: 100%;
     min-height: 72px;
+    overflow-wrap: anywhere;
   }
   .cloud-floating-widget {
     position: static;
@@ -5322,21 +5439,21 @@ body.pathway-unset .site-header .site-cta {
     letter-spacing: 0.3pt;
   }
   body[data-page="exam"] .exam-question header strong {
-    color: #161b2e;
+    color: var(--course-deep, #161b2e);
     font-size: 13pt;
   }
   body[data-page="exam"] .exam-question header em {
     padding: 1.4mm 3mm;
-    border: 0.25mm solid #c08a3e;
-    background: #fbf6e6;
-    color: #8d2820;
+    border: 0.25mm solid var(--course-signature, #c08a3e);
+    background: var(--course-soft, #fbf6e6);
+    color: var(--course-deep, #8d2820);
     font-size: 11pt;
   }
   body[data-page="exam"] .exam-question img {
       max-height: 166mm;
       padding: 4mm;
       border: 0;
-      border-left: 1mm solid #c08a3e;
+      border-left: 1mm solid var(--course-signature, #c08a3e);
       background: #fff;
     }
   body[data-page="exam"] .exam-question footer,
@@ -5356,14 +5473,14 @@ body.pathway-unset .site-header .site-cta {
     margin-top: 4mm;
     padding: 0 4mm 4mm;
     border: 0.25mm solid #cfc9be;
-    border-left: 1mm solid #c0392b;
+    border-left: 1mm solid var(--course-signature, #c0392b);
     break-inside: auto;
   }
   body[data-page="exam"].print-solutions .exam-print-solution h3 {
     margin: 0 -4mm 3mm;
     padding: 3mm 4mm;
-    border-bottom: 0.8mm solid #161b2e;
-    background: #c0392b;
+    border-bottom: 0.8mm solid var(--course-deep, #161b2e);
+    background: var(--course-signature, #c0392b);
     color: #fff;
     font-size: 11pt;
     letter-spacing: 0.6pt;
@@ -8139,6 +8256,44 @@ body[data-page="admin"] {
     var(--cert-paper);
   background-size: 38px 38px;
   overflow-x: hidden;
+}
+
+body[data-course-palette="linear"],
+body[data-pathway="linear"] {
+  --course-signature: var(--brand-ink);
+  --course-deep: var(--brand-ink-deep);
+  --course-soft: rgba(22, 27, 46, 0.08);
+  --course-vellum: rgba(235, 223, 196, 0.58);
+  --course-rail: rgba(22, 27, 46, 0.2);
+}
+
+body[data-course-palette="modular"],
+body[data-pathway="modular"] {
+  --course-signature: var(--brand-verdigris);
+  --course-deep: var(--brand-verdigris-deep);
+  --course-soft: rgba(90, 128, 116, 0.11);
+  --course-vellum: rgba(235, 223, 196, 0.52);
+  --course-rail: rgba(90, 128, 116, 0.26);
+}
+
+body[data-course-palette="pure"],
+body[data-pathway="pure"] {
+  --course-signature: var(--brand-indigo);
+  --course-deep: var(--brand-indigo-deep);
+  --course-soft: rgba(54, 48, 74, 0.1);
+  --course-vellum: rgba(235, 223, 196, 0.5);
+  --course-rail: rgba(54, 48, 74, 0.26);
+}
+
+body[data-course-palette] {
+  --accent: var(--course-signature);
+  --accent-dark: var(--course-deep);
+  --soft: var(--course-soft);
+  background:
+    linear-gradient(90deg, var(--course-rail) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(22, 27, 46, 0.035) 1px, transparent 1px),
+    linear-gradient(135deg, #fbfaf7 0%, #f4f6f5 46%, var(--course-vellum) 100%);
+  background-size: 44px 44px, 44px 44px, auto;
 }
 
 body[data-page="admin"] .cloud-floating-widget {

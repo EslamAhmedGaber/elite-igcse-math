@@ -303,7 +303,10 @@
     if (!header) return;
     const groupId = activeNavGroup();
     const group = NAV_GROUPS.find((item) => item.id === groupId);
-    if (group?.palette) document.body.dataset.coursePalette = group.palette;
+    if (group?.palette) {
+      document.body.dataset.coursePalette = group.palette;
+      document.body.dataset.pathway = group.palette;
+    }
     document.body.dataset.activeCourse = groupId;
     document.body?.classList.toggle("pathway-pure", groupId === "pure");
     const toolData = activeToolLinks(groupId);

@@ -36,12 +36,29 @@
     await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
   }
 
+  function inferPrintPalette() {
+    const params = new URLSearchParams(window.location.search);
+    const requested = params.get("pathway");
+    if (requested === "pure" || params.get("course") === "wma11") return "pure";
+    if (requested === "modular" || window.ELITE_PATHWAY?.mode === "modular") return "modular";
+    return "linear";
+  }
+
+  function applyPrintPalette() {
+    const body = document.body;
+    if (!body) return;
+    const palette = body.dataset.coursePalette || body.dataset.pathway || inferPrintPalette();
+    body.dataset.coursePalette = palette;
+    body.dataset.pathway = palette;
+  }
+
   async function printWhenReady(root, trigger) {
     const originalLabel = trigger?.textContent;
     if (trigger) {
       trigger.disabled = true;
       trigger.textContent = "Preparing print...";
     }
+    applyPrintPalette();
     await waitForPrintableAssets(root);
     window.print();
     if (trigger) {
@@ -51,6 +68,7 @@
   }
 
   window.ElitePrint = {
+    applyPrintPalette,
     printWhenReady,
     waitForPrintableAssets
   };
