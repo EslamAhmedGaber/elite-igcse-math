@@ -20,6 +20,7 @@
     session: document.getElementById("ialSession"),
     marks: document.getElementById("ialMarks"),
     expertise: document.getElementById("ialExpertiseOnly"),
+    mistakeOnly: document.getElementById("ialMistakeOnly"),
     reset: document.getElementById("ialReset"),
     numbers: document.getElementById("ialNumbers"),
     stage: document.getElementById("ialQuestionStage"),
@@ -122,11 +123,19 @@
   function applyUrlFilters() {
     const params = new URLSearchParams(window.location.search);
     const requestedTopic = params.get("topic");
-    if (!requestedTopic || !els.topic) return;
-    const match = TOPICS.find((topic) => topic.slug === requestedTopic || topic.name === requestedTopic);
-    const value = match?.slug || requestedTopic;
-    if ([...els.topic.options].some((option) => option.value === value)) {
-      els.topic.value = value;
+    const requestedMode = params.get("mode");
+    if (els.expertise && (params.get("expertise") === "1" || params.get("bank") === "expertise" || requestedMode === "expertise")) {
+      els.expertise.checked = true;
+    }
+    if (els.mistakeOnly && (requestedMode === "mistakes" || requestedMode === "review" || params.get("mistakes") === "1")) {
+      els.mistakeOnly.checked = true;
+    }
+    if (requestedTopic && els.topic) {
+      const match = TOPICS.find((topic) => topic.slug === requestedTopic || topic.name === requestedTopic);
+      const value = match?.slug || requestedTopic;
+      if ([...els.topic.options].some((option) => option.value === value)) {
+        els.topic.value = value;
+      }
     }
   }
 
@@ -137,7 +146,8 @@
       year: els.year.value,
       session: els.session.value,
       marks: els.marks.value,
-      expertise: els.expertise.checked
+      expertise: els.expertise.checked,
+      mistakeOnly: Boolean(els.mistakeOnly?.checked)
     };
   }
 
@@ -148,6 +158,7 @@
     if (filters.session && item.session !== filters.session) return false;
     if (filters.marks && String(item.marks) !== filters.marks) return false;
     if (filters.expertise && item.qNo < 6) return false;
+    if (filters.mistakeOnly && !state.mistakes[item.id]) return false;
     if (!filters.search) return true;
     const haystack = [
       item.id,
@@ -522,7 +533,13 @@
       if (!item) return;
       if (button.dataset.action === "solution") state.showSolution = !state.showSolution;
       if (button.dataset.action === "solved") toggleSolved(item);
-      if (button.dataset.action === "mistake") toggleMistake(item);
+      if (button.dataset.action === "mistake") {
+        toggleMistake(item);
+        if (els.mistakeOnly?.checked) {
+          applyFilters(true);
+          return;
+        }
+      }
       render();
     });
     els.mockGenerate?.addEventListener("click", generateMock);

@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -20,10 +20,10 @@
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js"></script>
-  <script defer src="course-modules.js?v=20260526c"></script>
-  <script defer src="lead.js"></script>
+  <script defer src="course-modules.js?v=20260526d"></script>
+  <script defer src="lead.js?v=20260526a"></script>
   <script defer src="ial/wma11/wma11-data.js?v=20260525a"></script>
-  <script defer src="ial/wma11/wma11.js?v=20260526c"></script>
+  <script defer src="ial/wma11/wma11.js?v=20260526d"></script>
 </head>
 <body data-page="ial-wma11">
 
@@ -130,6 +130,7 @@
         </div>
         <div class="ial-progress-actions">
           <a class="button primary" href="exam.html?pathway=pure&amp;course=wma11&amp;mode=smart">Smart Revision</a>
+          <a class="button solution" href="ial/wma11/index.html?mode=mistakes#ialFilters">Mistake Box</a>
           <a class="button light" href="ial/wma11/index.html#ialFilters">Open Classified</a>
         </div>
       </div>
@@ -175,6 +176,7 @@
         <a data-module="build-test" href="exam.html?pathway=pure&amp;course=wma11&amp;mode=random"><strong>Random Mock</strong><span>Timed Pure 1 papers from the full bank.</span></a>
         <a data-module="build-test" href="exam.html?pathway=pure&amp;course=wma11&amp;mode=custom"><strong>Build Test</strong><span>Filter by topic, marks, status, and paper.</span></a>
         <a data-module="smart-revision" href="exam.html?pathway=pure&amp;course=wma11&amp;mode=smart"><strong>Smart Revision</strong><span>Use mistakes, weak topics, and unsolved questions.</span></a>
+        <a data-module="mistake-box" href="ial/wma11/index.html?mode=mistakes#ialFilters"><strong>Mistake Box</strong><span>Reopen saved Pure 1 revision questions.</span></a>
         <a data-module="saved-tests" href="exam.html?pathway=pure&amp;course=wma11&amp;mode=saved"><strong>Saved Tests</strong><span>Reuse and print saved Pure 1 tests.</span></a>
       </div>
     </section>
@@ -216,6 +218,10 @@
         <label class="ial-toggle">
           <input id="ialExpertiseOnly" type="checkbox">
           <span>Expertise only Q6+</span>
+        </label>
+        <label class="ial-toggle">
+          <input id="ialMistakeOnly" type="checkbox">
+          <span>Mistake Box only</span>
         </label>
         <button class="button light" type="button" id="ialReset">Reset</button>
       </form>

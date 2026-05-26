@@ -2622,9 +2622,10 @@ body[data-course-palette="pure"] .pathway-tool-strip {
     min-height: 72px;
   }
   .cloud-floating-widget {
+    position: static;
+    margin: 14px 12px;
     left: 12px;
     right: 12px;
-    bottom: 82px;
     grid-template-columns: 1fr;
     max-width: calc(100vw - 24px);
   }

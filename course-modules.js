@@ -116,9 +116,12 @@
     { module: "classified", title: "Classified View", detail: "Chapter bank", href: "/practice.html?pathway=linear&bank=all", pathway: "linear" },
     { module: "expertise", title: "Expertise", detail: "Q20+ finishers", href: "/practice.html?pathway=linear&bank=expertise&mode=q20", pathway: "linear" },
     { module: "build-test", title: "Build Test", detail: "Mocks and worksheets", href: "/exam.html?pathway=linear&mode=custom", pathway: "linear" },
+    { module: "smart-revision", title: "Smart Revision", detail: "Weak topics and mistakes", href: "/exam.html?pathway=linear&mode=smart", pathway: "linear" },
+    { module: "progress", title: "Progress", detail: "Track mastery", href: "/progress.html?pathway=linear", pathway: "linear" },
+    { module: "mistake-box", title: "Mistake Box", detail: "Due revision set", href: "/practice.html?pathway=linear&bank=all&mode=review", pathway: "linear" },
+    { module: "saved-tests", title: "Saved Tests", detail: "Reuse builder tests", href: "/exam.html?pathway=linear&mode=saved", pathway: "linear" },
     { module: "books", title: "Books", detail: "Questions and answers", href: "/downloads.html?pathway=linear", pathway: "linear" },
     { module: "past-solutions", title: "Past Paper Solutions", detail: "Papers beside answers", href: "/pastpapers.html?pathway=linear", pathway: "linear" },
-    { module: "progress", title: "Progress", detail: "Track mastery", href: "/progress.html?pathway=linear", pathway: "linear" },
   ];
 
   function modularLinks(unitTitle, unitCode) {
@@ -127,9 +130,12 @@
       { module: "classified", title: "Classified View", detail: `${unitCode} topics`, href: `/practice.html?pathway=modular&unit=${unitParam}&bank=all`, pathway: "modular" },
       { module: "expertise", title: "Expertise", detail: `${unitCode} harder set`, href: `/practice.html?pathway=modular&unit=${unitParam}&bank=expertise&mode=q20`, pathway: "modular" },
       { module: "build-test", title: "Build Test", detail: `${unitCode} mocks`, href: `/exam.html?pathway=modular&unit=${unitParam}&mode=custom`, pathway: "modular" },
+      { module: "smart-revision", title: "Smart Revision", detail: `${unitCode} weak topics`, href: `/exam.html?pathway=modular&unit=${unitParam}&mode=smart`, pathway: "modular" },
+      { module: "progress", title: "Progress", detail: `${unitCode} mastery`, href: `/progress.html?pathway=modular&unit=${unitParam}`, pathway: "modular" },
+      { module: "mistake-box", title: "Mistake Box", detail: `${unitCode} saved revision`, href: `/practice.html?pathway=modular&unit=${unitParam}&bank=all&mode=review`, pathway: "modular" },
+      { module: "saved-tests", title: "Saved Tests", detail: `${unitCode} reusable tests`, href: `/exam.html?pathway=modular&unit=${unitParam}&mode=saved`, pathway: "modular" },
       { module: "books", title: "Books", detail: `${unitCode} PDFs`, href: `/downloads.html?pathway=modular&unit=${unitParam}`, pathway: "modular" },
       { module: "past-solutions", title: "Past Paper Solutions", detail: `${unitCode} papers`, href: `/pastpapers.html?pathway=modular&unit=${unitParam}`, pathway: "modular" },
-      { module: "progress", title: "Progress", detail: `${unitCode} mastery`, href: `/progress.html?pathway=modular&unit=${unitParam}`, pathway: "modular" },
     ];
   }
 
@@ -138,11 +144,11 @@
       id: "linear",
       label: "Linear",
       detail: "4MA1 route",
-      href: "/practice.html?pathway=linear",
+      href: "/practice.html?pathway=linear&bank=all",
       pathway: "linear",
       palette: "linear",
       panelLabel: "Linear modules",
-      intro: "Everything for Linear lives as reusable modules: practice, expertise, builder, books, paper solutions, and progress.",
+      intro: "Everything for Linear lives as reusable modules: classified practice, expertise, builder, revision, progress, books, and paper solutions.",
       links: linearLinks,
     },
     {
@@ -176,17 +182,17 @@
       href: "/ial/wma11/index.html",
       palette: "pure",
       panelLabel: "WMA11 modules",
-      intro: "Pure 1 uses its own WMA11 palette and the same reusable module model: classified, builder, smart revision, progress, books, paper listings, and solution books.",
+      intro: "Pure 1 uses its own WMA11 palette and the same reusable module model: classified, expertise, builder, revision, progress, books, saved tests, and paper listings.",
       links: [
         { module: "classified", title: "Classified View", detail: "Topic practice", href: "/ial/wma11/index.html" },
+        { module: "expertise", title: "Expertise View", detail: "Q6+ filtered bank", href: "/ial/wma11/index.html?expertise=1#ialFilters" },
         { module: "build-test", title: "Build Test", detail: "Full mock builder", href: "/exam.html?pathway=pure&course=wma11&mode=custom" },
         { module: "smart-revision", title: "Smart Revision", detail: "Mistakes and weak topics", href: "/exam.html?pathway=pure&course=wma11&mode=smart" },
         { module: "progress", title: "Progress", detail: "Topic mastery", href: "/ial/wma11/index.html#ialProgressModule" },
-        { module: "mistake-box", title: "Mistake Box", detail: "Saved revision", href: "/ial/wma11/index.html#ialProgressModule" },
-        { module: "books", title: "Question Book", detail: "Classified PDF", href: "/downloads/IAL/WMA11/WMA11_Classified_Questions.pdf", target: "_blank" },
-        { module: "answers", title: "Answer Book", detail: "Worked solutions", href: "/downloads/IAL/WMA11/WMA11_Classified_With_Answers.pdf", target: "_blank" },
-        { module: "expertise", title: "Expertise Book", detail: "Q6+ questions", href: "/downloads/IAL/WMA11/WMA11_Expertise_Questions.pdf", target: "_blank" },
-        { module: "answers", title: "Expertise Answers", detail: "Q6+ solutions", href: "/downloads/IAL/WMA11/WMA11_Expertise_With_Answers.pdf", target: "_blank" },
+        { module: "mistake-box", title: "Mistake Box", detail: "Saved revision", href: "/ial/wma11/index.html?mode=mistakes#ialFilters" },
+        { module: "saved-tests", title: "Saved Tests", detail: "Reuse builder tests", href: "/exam.html?pathway=pure&course=wma11&mode=saved" },
+        { module: "books", title: "Books", detail: "Question and answer PDFs", href: "/downloads.html?pathway=pure" },
+        { module: "answers", title: "Answer Books", detail: "Worked solution PDFs", href: "/downloads.html?pathway=pure" },
         { module: "past-solutions", title: "Past Papers", detail: "Paper + solution rows", href: "/pastpapers.html?pathway=pure#pure-wma11" },
       ],
     },
@@ -207,7 +213,7 @@
   ];
 
   window.ELITE_COURSE_MODULES = {
-    version: "2026-05-26-course-registry-v3",
+    version: "2026-05-26-course-registry-v4",
     moduleCatalog,
     moduleAliases,
     palettes,
