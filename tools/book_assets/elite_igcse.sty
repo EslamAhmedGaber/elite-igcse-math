@@ -28,14 +28,20 @@
 \colorlet{brandanswer}{brandnavydark}
 \colorlet{brandaccent}{brandochre}
 \colorlet{brandaccentsoft}{brandgoldlight}
+\colorlet{eliterail}{brandquestion}
+
+\newcommand{\elitequestionrail}{\colorlet{eliterail}{brandquestion}}
+\newcommand{\elitesolutionrail}{\colorlet{eliterail}{brandanswer}}
 
 \newcommand{\elitepagewatermark}{%
   \begin{tikzpicture}[remember picture,overlay]
+    \fill[eliterail] (current page.south west) rectangle ([xshift=7mm]current page.north west);
+    \fill[brandaccentsoft] ([xshift=7mm]current page.south west) rectangle ([xshift=8.2mm]current page.north west);
     \node[
-      scale=8.8,
+      scale=9.2,
       text=brandquestion!4,
       font=\rmfamily
-    ] at (current page.center) {EA};
+    ] at ([xshift=7mm]current page.center) {EA};
   \end{tikzpicture}%
 }
 \AddToHook{shipout/background}{\elitepagewatermark}
@@ -53,13 +59,14 @@
 }
 
 \newcommand{\classifiedquestionheader}[7]{%
-  \clearpage\noindent
+  \clearpage\elitequestionrail\noindent
   \begin{tcolorbox}[
     enhanced,
     colback=brandquestion, colframe=brandquestion,
-    boxrule=0pt, arc=0pt,
-    left=12pt, right=12pt, top=8pt, bottom=8pt,
-    borderline south={2pt}{0pt}{brandaccent},
+    boxrule=0pt, arc=2mm,
+    left=5mm, right=5mm, top=4mm, bottom=4mm,
+    borderline south={1.4mm}{0pt}{brandaccentsoft},
+    drop shadow={black!10},
   ]
     {\sffamily\bfseries\color{white}\large CLASSIFIED PROBLEM}\hfill
     \pillbadge{Paper:}{\,#1}\,\pillbadge{Session:}{\,#2}\,\pillbadge{Q\#:}{\,#3}\,\pillbadge{Marks:}{\,#4}\\[3pt]
@@ -75,24 +82,27 @@
       enhanced,
       colback=white,
       colframe=brandline,
-      arc=1pt,
+      arc=2mm,
       boxrule=0.5pt,
-      left=8pt,right=8pt,top=8pt,bottom=8pt,
-      borderline west={2pt}{0pt}{brandaccent},
+      left=4mm,right=4mm,top=4mm,bottom=4mm,
+      borderline west={3mm}{0pt}{brandaccent},
+      drop shadow={black!8},
     ]
-      \centering\includegraphics[width=\linewidth,height=0.70\textheight,keepaspectratio]{#1}
+      \centering\includegraphics[width=\linewidth,height=0.72\textheight,keepaspectratio]{#1}
     \end{tcolorbox}
   \end{center}
 }
 
 \newcommand{\solutionheader}{%
+  \elitesolutionrail
   \noindent
   \begin{tcolorbox}[
     enhanced,
     colback=brandanswer, colframe=brandanswer,
-    boxrule=0pt, arc=0pt,
-    left=12pt, right=12pt, top=8pt, bottom=8pt,
-    borderline south={2pt}{0pt}{brandaccent},
+    boxrule=0pt, arc=2mm,
+    left=5mm, right=5mm, top=4mm, bottom=4mm,
+    borderline south={1.4mm}{0pt}{brandaccent},
+    drop shadow={black!10},
   ]
     {\sffamily\bfseries\color{white}\large WORKED SOLUTION}\hfill
     {\sffamily\footnotesize\color{brandaccentsoft}\itshape Dr.~Eslam Ahmed}

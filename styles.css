@@ -2273,7 +2273,8 @@ body.has-pathway-hub[data-page="downloads"] .downloads-hero,
 body.has-pathway-hub[data-page="exam"] .exam-hero,
 body.has-pathway-hub[data-page="progress"] .progress-hero,
 body.has-pathway-hub[data-page="pastpapers"] .pp-hero,
-body.has-pathway-hub[data-page="topics"] .topics-hero {
+body.has-pathway-hub[data-page="topics"] .topics-hero,
+body.has-pathway-hub[data-page="ial-wma11"] .ial-hero {
   display: none;
 }
 body.pathway-unit-chooser[data-page="practice"] main.shell {

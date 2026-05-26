@@ -557,8 +557,8 @@ def convert_solution_markdown(markdown: str) -> str:
             close_itemize()
             output.extend(
                 [
-                    r"\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=brandline,arc=2pt,boxrule=0.5pt,left=9pt,right=9pt,top=6pt,bottom=6pt,borderline west={2pt}{0pt}{brandochre}]",
-                    r"{\sffamily\bfseries\color{brandnavy}Topic check.} " + format_inline_latex(topic_match.group(1)),
+                    r"\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=brandline,arc=2mm,boxrule=0.5pt,left=9pt,right=9pt,top=6pt,bottom=6pt,borderline west={2mm}{0pt}{brandaccent}]",
+                    r"{\sffamily\bfseries\color{brandanswer}Topic check.} " + format_inline_latex(topic_match.group(1)),
                     r"\end{tcolorbox}",
                 ]
             )
@@ -584,7 +584,7 @@ def convert_solution_markdown(markdown: str) -> str:
         heading_match = re.match(r"^\*\*(.+?)\*\*$", stripped)
         if heading_match:
             close_itemize()
-            output.append(r"{\sffamily\bfseries\color{brandnavy} " + format_inline_latex(heading_match.group(1)) + r"}\par")
+            output.append(r"{\sffamily\bfseries\color{brandanswer} " + format_inline_latex(heading_match.group(1)) + r"}\par")
             continue
 
         markdown_heading_match = re.match(r"^#{1,6}\s*(.+?)\s*$", stripped)
@@ -594,7 +594,7 @@ def convert_solution_markdown(markdown: str) -> str:
             if heading.rstrip(":").strip().lower() in {"answer", "answers"}:
                 pending_answer = True
             else:
-                output.append(r"{\sffamily\bfseries\color{brandnavy} " + format_inline_latex(heading) + r"}\par")
+                output.append(r"{\sffamily\bfseries\color{brandanswer} " + format_inline_latex(heading) + r"}\par")
             continue
 
         if stripped.startswith("- "):
@@ -1148,7 +1148,8 @@ def private_latex_preamble(spec: BookSpec, row_count: int) -> list[str]:
         r"\usepackage[utf8]{inputenc}",
         r"\usepackage[T1]{fontenc}",
         r"\usepackage{lmodern}",
-        r"\usepackage[a4paper,margin=18mm,top=20mm,bottom=18mm]{geometry}",
+        r"\renewcommand{\familydefault}{\sfdefault}",
+        r"\usepackage[a4paper,left=20mm,right=14mm,top=14mm,bottom=16mm]{geometry}",
         r"\usepackage{fancyhdr}",
         r"\usepackage{titlesec}",
         r"\usepackage{elite_igcse}",
@@ -1163,10 +1164,10 @@ def private_latex_preamble(spec: BookSpec, row_count: int) -> list[str]:
         r"  pdfauthor={Dr. Eslam Ahmed - Elite IGCSE Academy},",
         r"}",
         "",
-        r"\newtcolorbox{solutionbody}{enhanced,breakable,colback=white,colframe=brandline,arc=2pt,boxrule=0.6pt,left=11pt,right=11pt,top=10pt,bottom=10pt,before skip=7pt,after skip=8pt,borderline west={2pt}{0pt}{brandanswer}}",
-        r"\newcommand{\solutionstep}[2]{\par\vspace{6pt}\noindent\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=brandline,arc=2pt,boxrule=0.45pt,left=8pt,right=8pt,top=5pt,bottom=5pt,borderline west={2pt}{0pt}{brandaccent},before skip=4pt,after skip=3pt]\tikz[baseline=(n.base)]{\node[fill=brandanswer,text=white,font=\sffamily\bfseries\scriptsize,inner xsep=5pt,inner ysep=2.5pt] (n) {#1};}\hspace{6pt}{\sffamily\bfseries\color{brandanswer}#2}\end{tcolorbox}}",
-        r"\newcommand{\finalanswerbox}[1]{\par\vspace{7pt}\noindent\begin{tcolorbox}[enhanced,breakable,colback=brandcream!45,colframe=brandaccent,arc=2pt,boxrule=0.8pt,left=10pt,right=10pt,top=7pt,bottom=7pt,borderline west={2pt}{0pt}{brandquestion}]{\sffamily\bfseries\color{brandanswer}FINAL ANSWER}\par #1\end{tcolorbox}\par}",
-        r"\newcommand{\solutionmetabox}[3]{\begin{tcolorbox}[enhanced,colback=white,colframe=brandline,arc=2pt,boxrule=0.55pt,left=10pt,right=10pt,top=7pt,bottom=7pt,before skip=7pt,after skip=8pt,borderline west={2pt}{0pt}{brandaccent}]{\sffamily\bfseries\color{brandanswer}#1 \quad\textbar\quad Question #2}\\[-1pt]{\sffamily\small\color{textgrey}#3}\end{tcolorbox}}",
+        r"\newtcolorbox{solutionbody}{enhanced,breakable,colback=white,colframe=brandline,arc=2mm,boxrule=0.55pt,left=5mm,right=5mm,top=4mm,bottom=4mm,before skip=5mm,after skip=5mm,borderline west={3mm}{0pt}{brandanswer},drop shadow={black!8}}",
+        r"\newcommand{\solutionstep}[2]{\par\vspace{3mm}\noindent{\sffamily\bfseries\color{brandanswer}#1.\ #2}\par\vspace{1mm}}",
+        r"\newcommand{\finalanswerbox}[1]{\par\vspace{4mm}\noindent\begin{tcolorbox}[enhanced,breakable,colback=brandcream!55,colframe=brandcream!55,arc=2mm,boxrule=0pt,left=4mm,right=4mm,top=3mm,bottom=3mm,borderline west={3mm}{0pt}{brandaccent}]{\sffamily\bfseries\color{brandanswer}Final answer}\par #1\end{tcolorbox}\par}",
+        r"\newcommand{\solutionmetabox}[3]{\begin{tcolorbox}[enhanced,colback=white,colframe=brandline,arc=2mm,boxrule=0.45pt,left=4mm,right=4mm,top=2.5mm,bottom=2.5mm,before skip=3mm,after skip=3mm,borderline west={1.4mm}{0pt}{brandaccent}]{\sffamily\bfseries\color{brandanswer}#1 \quad\textbar\quad Question #2}\\[-1pt]{\sffamily\small\color{textgrey}#3}\end{tcolorbox}}",
         r"\sloppy",
         r"\emergencystretch=3em",
         "",
@@ -1191,7 +1192,7 @@ def private_latex_preamble(spec: BookSpec, row_count: int) -> list[str]:
         r"  {6pt}",
         r"  {\Huge\filright}",
         r"  [\vspace{4pt}{\color{brandquestion}\hrule height 2pt}\vspace{-6pt}]",
-        r"\titlespacing*{\chapter}{0pt}{-30pt}{18pt}",
+        r"\titlespacing*{\chapter}{0pt}{-24pt}{18pt}",
         "",
         r"\setlength{\parskip}{4pt plus 1pt}",
         r"\setlength{\parindent}{0pt}",
