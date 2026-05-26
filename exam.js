@@ -53,16 +53,18 @@
     };
   }
 
-  function wma11SolutionSource(item) {
-    const steps = (item.steps || []).map((step, index) => (
-      `**${index + 1}. ${step.title || "Step"}**\n\n${normalizeMathDelimiters(step.body || "")}`
-    )).join("\n\n");
-    return [
-      `**Topic:** ${item.topicName || wma11TopicName(item.topic)}.`,
-      "**Method**",
-      steps,
-      `**Answer:** ${normalizeMathDelimiters(item.finalAnswer || "")}`
-    ].filter(Boolean).join("\n\n");
+  function wma11Solution(item) {
+    return {
+      status: "checked",
+      checkedBy: "Dr Eslam Ahmed + Codex",
+      updated: item.updated || "",
+      topicNote: item.topicName || wma11TopicName(item.topic),
+      steps: (item.steps || []).map((step) => ({
+        title: step.title || "Step",
+        body: normalizeMathDelimiters(step.body || "")
+      })),
+      finalAnswer: normalizeMathDelimiters(item.finalAnswer || "")
+    };
   }
 
   const course = isWma11Course
@@ -77,7 +79,7 @@
         units: ["WMA11"],
         topics: (window.WMA11_TOPICS || []).map((topic) => ({ topic: topic.name, unit: "WMA11" })),
         questions: (window.WMA11_QUESTIONS || []).map(normalizeWma11Question),
-        solutions: Object.fromEntries((window.WMA11_QUESTIONS || []).map((item) => [item.id, { source: wma11SolutionSource(item) }])),
+        solutions: Object.fromEntries((window.WMA11_QUESTIONS || []).map((item) => [item.id, wma11Solution(item)])),
         reviewKey: "eliteWMA11MistakeBoxV1",
         solvedKey: "eliteWMA11SolvedV1",
         selectedKey: "eliteWMA11SelectedV1"
@@ -705,6 +707,35 @@
       .join("");
   }
 
+  function hasSolutionContent(solution) {
+    if (!solution) return false;
+    if (solution.source) return true;
+    if (Array.isArray(solution.steps) && solution.steps.some((step) => step?.body || step?.title)) return true;
+    return Boolean(solution.finalAnswer);
+  }
+
+  function formatStructuredSolution(solution) {
+    if (!solution || !hasSolutionContent(solution)) {
+      return `<p class="solution-empty">Solution has not been written yet.</p>`;
+    }
+    if (!Array.isArray(solution.steps)) {
+      return formatSolutionText(solution.source || "");
+    }
+    const steps = solution.steps
+      .filter((step) => step && (step.body || step.title))
+      .map((step, index) => `
+        <section class="solution-step">
+          <strong>${escapeHtml(step.title || `Step ${index + 1}`)}</strong>
+          <div>${formatSolutionText(step.body || "")}</div>
+        </section>
+      `)
+      .join("");
+    const answer = solution.finalAnswer
+      ? `<section class="solution-final"><strong>Final Answer</strong><div>${formatSolutionText(solution.finalAnswer)}</div></section>`
+      : "";
+    return `${steps}${answer}` || `<p class="solution-empty">Solution has not been written yet.</p>`;
+  }
+
   function renderResult() {
     if (state.status === "idle" && !state.ids.length) {
       const last = readJson(HISTORY_KEY, [])[0];
@@ -756,9 +787,9 @@
     els.paper.innerHTML = state.ids.map((id, index) => {
       const question = questionById(id);
       if (!question) return "";
-      const solution = solutions[id]?.source || "";
-      const hasSolution = Boolean(solution);
-      const solutionHtml = formatSolutionText(solution);
+      const solution = solutions[id] || null;
+      const hasSolution = hasSolutionContent(solution);
+      const solutionHtml = formatStructuredSolution(solution);
       const savedScore = state.scores?.[id] ?? "";
       return `<article class="exam-question" data-id="${escapeHtml(id)}">
         <div class="print-paper-brand">

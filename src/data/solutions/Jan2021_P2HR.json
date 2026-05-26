@@ -3,153 +3,712 @@
   "solutions": {
     "all::Jan2021_P2HR__Q03__p05-05__m03__Set-Notation-and-Venn-Diagrams": {
       "status": "checked",
-      "source": "**Topic check:** Corrected to Set Notation & Venn Diagrams.\n\n**Solution**\n\n\\[\nA\\cap B=\\{24,30\\}\n\\]\n\nThe complement of \\(A\\), using the given universal set, is\n\\[\nA'=\\{21,23,25,27,29\\}\n\\]\n\nThe set\n\\[\nC=\\{23,25,29\\}\n\\]\n\nis everything not in \\(A\\) and not in \\(B\\), so\n\\[\nC=A'\\cap B'\n\\]\n\nEquivalently,\n\\[\nC=(A\\cup B)'\n\\]\n\n**Answer:** \\(A\\cap B=\\{24,30\\}\\), \\(A'=\\{21,23,25,27,29\\}\\), and \\(C=A'\\cap B'\\).",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T13:35:18",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Corrected to Set Notation & Venn Diagrams.",
+      "steps": [
+        {
+          "title": "Step 1",
+          "body": "\\[\nA\\cap B=\\{24,30\\}\n\\]"
+        },
+        {
+          "title": "The complement of , using",
+          "body": "The complement of \\(A\\), using the given universal set, is\n\\[\nA'=\\{21,23,25,27,29\\}\n\\]"
+        },
+        {
+          "title": "The set",
+          "body": "The set\n\\[\nC=\\{23,25,29\\}\n\\]"
+        },
+        {
+          "title": "is everything not in and",
+          "body": "is everything not in \\(A\\) and not in \\(B\\), so\n\\[\nC=A'\\cap B'\n\\]"
+        },
+        {
+          "title": "Equivalently,",
+          "body": "Equivalently,\n\\[\nC=(A\\cup B)'\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(A\\cap B=\\{24,30\\}\\), \\(A'=\\{21,23,25,27,29\\}\\), and \\(C=A'\\cap B'\\)."
     },
     "all::Jan2021_P2HR__Q08__p09-09__m03__Powers-Roots-and-Standard-Form": {
       "status": "checked",
-      "source": "**Topic check:** Powers, roots and standard form. The tag is correct.\n\n**Method**\n\nThe greatest coastline is the largest number in standard form.\n\n\\[\n1.357\\times 10^5\n\\]\n\nis the largest, so the answer is the Pacific Ocean.\n\nFor part (b),\n\n\\[\n1.119\\times 10^5=111900\n\\]\n\n\\[\n1.797\\times 10^4=17970\n\\]\n\nDifference:\n\n\\[\n111900-17970=93930\n\\]\n\n\\[\n93930=9.393\\times 10^4\n\\]\n\n**Answer:** (a) Pacific Ocean, (b) \\(9.393\\times 10^4\\) km",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-05T21:24:27",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Powers, roots and standard form. The tag is correct.",
+      "steps": [
+        {
+          "title": "The greatest coastline is the",
+          "body": "The greatest coastline is the largest number in standard form.\n\n\\[\n1.357\\times 10^5\n\\]"
+        },
+        {
+          "title": "is the largest, so the",
+          "body": "is the largest, so the answer is the Pacific Ocean."
+        },
+        {
+          "title": "For part (b),",
+          "body": "For part (b),\n\n\\[\n1.119\\times 10^5=111900\n\\]\n\n\\[\n1.797\\times 10^4=17970\n\\]"
+        },
+        {
+          "title": "Difference",
+          "body": "Difference:\n\n\\[\n111900-17970=93930\n\\]\n\n\\[\n93930=9.393\\times 10^4\n\\]"
+        }
+      ],
+      "finalAnswer": "(a) Pacific Ocean, (b) \\(9.393\\times 10^4\\) km"
     },
     "all::Jan2021_P2HR__Q06__p07-07__m03__Percentages": {
       "status": "checked",
-      "source": "**Topic check:** Percentages. The tag is correct.\n\n**Method**\n\nWednesday's price was \\(5\\%\\) more than Monday's price.\n\nSo\n\n\\[\n1.26=1.05\\times \\text{Monday price}\n\\]\n\n\\[\n\\text{Monday price}=\\frac{1.26}{1.05}=1.20\n\\]\n\nThe cost of \\(30\\) litres on Monday was\n\n\\[\n30\\times 1.20=36\n\\]\n\n**Answer:** \\(\\pounds 36\\)",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-05T21:44:08",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Percentages. The tag is correct.",
+      "steps": [
+        {
+          "title": "Wednesday s price was more",
+          "body": "Wednesday's price was \\(5\\%\\) more than Monday's price."
+        },
+        {
+          "title": "So",
+          "body": "So\n\n\\[\n1.26=1.05\\times \\text{Monday price}\n\\]\n\n\\[\n\\text{Monday price}=\\frac{1.26}{1.05}=1.20\n\\]"
+        },
+        {
+          "title": "The cost of litres on",
+          "body": "The cost of \\(30\\) litres on Monday was\n\n\\[\n30\\times 1.20=36\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(\\pounds 36\\)"
     },
     "all::Jan2021_P2HR__Q14__p13-13__m04__Compound-Interest-and-Depreciation": {
       "status": "checked",
-      "source": "**Topic check:** Corrected to Compound Interest & Depreciation. The value changes by repeated percentage multipliers.\n\n**Method**\n\nLet the original house value be \\(V\\).\n\nAfter the \\(15\\%\\) decrease in 2018:\n\n\\[\n0.85V\n\\]\n\nLet the percentage increase in each of 2019 and 2020 be \\(r\\).\n\nThe final value is \\(2.85\\%\\) greater than the original value:\n\n\\[\n1.0285V\n\\]\n\nSo\n\n\\[\n0.85V(1+r)^2=1.0285V\n\\]\n\n\\[\n(1+r)^2=\\frac{1.0285}{0.85}=1.21\n\\]\n\n\\[\n1+r=\\sqrt{1.21}=1.1\n\\]\n\n\\[\nr=0.1=10\\%\n\\]\n\n**Answer:** \\(10\\%\\)",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-05T21:44:08",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Corrected to Compound Interest & Depreciation. The value changes by repeated percentage multipliers.",
+      "steps": [
+        {
+          "title": "Let the original house value",
+          "body": "Let the original house value be \\(V\\)."
+        },
+        {
+          "title": "After the decrease in 2018",
+          "body": "After the \\(15\\%\\) decrease in 2018:\n\n\\[\n0.85V\n\\]"
+        },
+        {
+          "title": "Let the percentage increase in",
+          "body": "Let the percentage increase in each of 2019 and 2020 be \\(r\\)."
+        },
+        {
+          "title": "The final value is greater",
+          "body": "The final value is \\(2.85\\%\\) greater than the original value:\n\n\\[\n1.0285V\n\\]"
+        },
+        {
+          "title": "So",
+          "body": "So\n\n\\[\n0.85V(1+r)^2=1.0285V\n\\]\n\n\\[\n(1+r)^2=\\frac{1.0285}{0.85}=1.21\n\\]\n\n\\[\n1+r=\\sqrt{1.21}=1.1\n\\]\n\n\\[\nr=0.1=10\\%\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(10\\%\\)"
     },
     "all::Jan2021_P2HR__Q04__p05-05__m04__Algebraic-Roots-and-Indices": {
       "status": "checked",
-      "source": "**Topic check:** Algebraic Roots and Indices. The tag is correct.\n\n**Method**\n\nFor part (a),\n\n\\[\n(3k^2)^4=3^4(k^2)^4\n\\]\n\n\\[\n=81k^8\n\\]\n\nFor part (b),\n\n\\[\n(21m^4n)\\div(3n^{-5})=\\frac{21m^4n}{3n^{-5}}\n\\]\n\n\\[\n=7m^4n^{1-(-5)}\n\\]\n\n\\[\n=7m^4n^6\n\\]\n\n**Answer:** (a) \\(81k^8\\), (b) \\(7m^4n^6\\).",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T02:18:37",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Algebraic Roots and Indices. The tag is correct.",
+      "steps": [
+        {
+          "title": "For part (a),",
+          "body": "For part (a),\n\n\\[\n(3k^2)^4=3^4(k^2)^4\n\\]\n\n\\[\n=81k^8\n\\]"
+        },
+        {
+          "title": "For part (b),",
+          "body": "For part (b),\n\n\\[\n(21m^4n)\\div(3n^{-5})=\\frac{21m^4n}{3n^{-5}}\n\\]\n\n\\[\n=7m^4n^{1-(-5)}\n\\]\n\n\\[\n=7m^4n^6\n\\]"
+        }
+      ],
+      "finalAnswer": "(a) \\(81k^8\\), (b) \\(7m^4n^6\\)."
     },
     "all::Jan2021_P2HR__Q19__p18-18__m07__Algebraic-Roots-and-Indices": {
       "status": "checked",
-      "source": "**Topic check:** Algebraic Roots and Indices. The tag is correct.\n\n**Method**\n\n\\[\n8^2=(2^3)^2=2^6\n\\]\n\n\\[\n\\sqrt[3]{4^6}=\\sqrt[3]{(2^2)^6}=\\sqrt[3]{2^{12}}=2^4\n\\]\n\nSo\n\n\\[\n8^2\\times \\sqrt[3]{4^6}=2^6\\times 2^4=2^{10}\n\\]\n\nFor part (b),\n\n\\[\nn^{-4/5}=\\left(\\frac12\\right)^4=2^{-4}\n\\]\n\nSo\n\n\\[\nn^{4/5}=2^4\n\\]\n\nRaise both sides to the power \\(\\frac54\\):\n\n\\[\nn=(2^4)^{5/4}=2^5=32\n\\]\n\n**Answer:** (a) \\(2^{10}\\), (b) \\(n=32\\).",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T02:18:37",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Algebraic Roots and Indices. The tag is correct.",
+      "steps": [
+        {
+          "title": "Step 1",
+          "body": "\\[\n8^2=(2^3)^2=2^6\n\\]\n\n\\[\n\\sqrt[3]{4^6}=\\sqrt[3]{(2^2)^6}=\\sqrt[3]{2^{12}}=2^4\n\\]"
+        },
+        {
+          "title": "So",
+          "body": "So\n\n\\[\n8^2\\times \\sqrt[3]{4^6}=2^6\\times 2^4=2^{10}\n\\]"
+        },
+        {
+          "title": "For part (b),",
+          "body": "For part (b),\n\n\\[\nn^{-4/5}=\\left(\\frac12\\right)^4=2^{-4}\n\\]"
+        },
+        {
+          "title": "So",
+          "body": "So\n\n\\[\nn^{4/5}=2^4\n\\]"
+        },
+        {
+          "title": "Raise both sides to the",
+          "body": "Raise both sides to the power \\(\\frac54\\):\n\n\\[\nn=(2^4)^{5/4}=2^5=32\n\\]"
+        }
+      ],
+      "finalAnswer": "(a) \\(2^{10}\\), (b) \\(n=32\\)."
     },
     "all::Jan2021_P2HR__Q01__p03-03__m08__Expanding-Brackets": {
       "status": "checked",
-      "source": "**Topic check:** Expanding brackets. The tag is correct.\n\n**Solution**\n\nFor \\(w=5y^2-y^3\\) and \\(y=-2\\):\n\\[\nw=5(-2)^2-(-2)^3=20+8=28\n\\]\n\n\\[\n8p^2-2p=2p(4p-1)\n\\]\n\n\\[\n4t(3t-2)=12t^2-8t\n\\]\n\n\\[\n(5x-2)(x+4)=5x^2+18x-8\n\\]\n\n**Answer:** \\(28\\), \\(2p(4p-1)\\), \\(12t^2-8t\\), \\(5x^2+18x-8\\)",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T02:49:46",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Expanding brackets. The tag is correct.",
+      "steps": [
+        {
+          "title": "For and",
+          "body": "For \\(w=5y^2-y^3\\) and \\(y=-2\\):\n\\[\nw=5(-2)^2-(-2)^3=20+8=28\n\\]\n\n\\[\n8p^2-2p=2p(4p-1)\n\\]\n\n\\[\n4t(3t-2)=12t^2-8t\n\\]\n\n\\[\n(5x-2)(x+4)=5x^2+18x-8\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(28\\), \\(2p(4p-1)\\), \\(12t^2-8t\\), \\(5x^2+18x-8\\)"
     },
     "all::Jan2021_P2HR__Q18__p17-17__m05__Algebraic-Fractions": {
       "status": "checked",
-      "source": "**Topic check:** Corrected to algebraic fractions. The equation is solved by combining algebraic fractions.\n\n**Solution**\n\n\\[\n\\frac{5}{x+2}+\\frac{3}{x^2+2x}=2\n\\]\n\nSince\n\\[\nx^2+2x=x(x+2)\n\\]\n\nmultiply by \\(x(x+2)\\):\n\\[\n5x+3=2x(x+2)\n\\]\n\n\\[\n5x+3=2x^2+4x\n\\]\n\n\\[\n2x^2-x-3=0\n\\]\n\nFactorise:\n\\[\n(2x-3)(x+1)=0\n\\]\n\n\\[\nx=\\frac32 \\quad \\text{or} \\quad x=-1\n\\]\n\nBoth values are allowed because \\(x\\ne0\\) and \\(x\\ne-2\\).\n\n**Answer:** \\(x=\\frac32\\) or \\(x=-1\\).",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T07:57:33",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Corrected to algebraic fractions. The equation is solved by combining algebraic fractions.",
+      "steps": [
+        {
+          "title": "Step 1",
+          "body": "\\[\n\\frac{5}{x+2}+\\frac{3}{x^2+2x}=2\n\\]"
+        },
+        {
+          "title": "Since",
+          "body": "Since\n\\[\nx^2+2x=x(x+2)\n\\]"
+        },
+        {
+          "title": "multiply by",
+          "body": "multiply by \\(x(x+2)\\):\n\\[\n5x+3=2x(x+2)\n\\]\n\n\\[\n5x+3=2x^2+4x\n\\]\n\n\\[\n2x^2-x-3=0\n\\]"
+        },
+        {
+          "title": "Factorise",
+          "body": "Factorise:\n\\[\n(2x-3)(x+1)=0\n\\]\n\n\\[\nx=\\frac32 \\quad \\text{or} \\quad x=-1\n\\]"
+        },
+        {
+          "title": "Both values are allowed because",
+          "body": "Both values are allowed because \\(x\\ne0\\) and \\(x\\ne-2\\)."
+        }
+      ],
+      "finalAnswer": "\\(x=\\frac32\\) or \\(x=-1\\)."
     },
     "all::Jan2021_P2HR__Q15__p14-14__m04__Algebraic-Proof": {
       "status": "checked",
-      "source": "**Topic check:** Corrected to algebraic proof. The question asks for a general proof using odd numbers.\n\n**Solution**\n\nLet the two odd numbers be\n\\[\n2m+1 \\quad \\text{and} \\quad 2n+1\n\\]\n\nTheir product is\n\\[\n(2m+1)(2n+1)\n\\]\n\n\\[\n=4mn+2m+2n+1\n\\]\n\n\\[\n=2(2mn+m+n)+1\n\\]\n\nThis is of the form\n\\[\n2k+1\n\\]\nwhere \\(k\\) is an integer.\n\nSo the product is odd.\n\n**Answer:** The product of any two odd numbers is always odd.",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T12:16:55",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Corrected to algebraic proof. The question asks for a general proof using odd numbers.",
+      "steps": [
+        {
+          "title": "Let the two odd numbers",
+          "body": "Let the two odd numbers be\n\\[\n2m+1 \\quad \\text{and} \\quad 2n+1\n\\]"
+        },
+        {
+          "title": "Their product is",
+          "body": "Their product is\n\\[\n(2m+1)(2n+1)\n\\]\n\n\\[\n=4mn+2m+2n+1\n\\]\n\n\\[\n=2(2mn+m+n)+1\n\\]"
+        },
+        {
+          "title": "This is of the form",
+          "body": "This is of the form\n\\[\n2k+1\n\\]\nwhere \\(k\\) is an integer."
+        },
+        {
+          "title": "So the product is odd",
+          "body": "So the product is odd."
+        }
+      ],
+      "finalAnswer": "The product of any two odd numbers is always odd."
     },
     "all::Jan2021_P2HR__Q09__p09-09__m03__Solving-Quadratic-Equations": {
       "status": "checked",
-      "source": "**Topic check:** Solving quadratic equations. The tag is correct.\n\n**Solution**\n\n\\[\nx^2-21x+20=0\n\\]\n\nFactorise:\n\\[\n(x-20)(x-1)=0\n\\]\n\nSo\n\\[\nx=20 \\quad \\text{or} \\quad x=1\n\\]\n\n**Answer:** \\(x=20\\) or \\(x=1\\).",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T07:35:26",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Solving quadratic equations. The tag is correct.",
+      "steps": [
+        {
+          "title": "Step 1",
+          "body": "\\[\nx^2-21x+20=0\n\\]"
+        },
+        {
+          "title": "Factorise",
+          "body": "Factorise:\n\\[\n(x-20)(x-1)=0\n\\]"
+        },
+        {
+          "title": "So",
+          "body": "So\n\\[\nx=20 \\quad \\text{or} \\quad x=1\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(x=20\\) or \\(x=1\\)."
     },
     "all::Jan2021_P2HR__Q12__p11-11__m04__Simultaneous-Equations": {
       "status": "checked",
-      "source": "**Topic check:** Simultaneous equations. The tag is correct.\n\n**Solution**\n\n\\[\n2x+7y=17\n\\]\n\n\\[\n5x+3y=-1\n\\]\n\nMultiply the first equation by 5:\n\\[\n10x+35y=85\n\\]\n\nMultiply the second equation by 2:\n\\[\n10x+6y=-2\n\\]\n\nSubtract:\n\\[\n29y=87\n\\]\n\n\\[\ny=3\n\\]\n\nSubstitute into \\(2x+7y=17\\):\n\\[\n2x+21=17\n\\]\n\n\\[\n2x=-4\n\\]\n\n\\[\nx=-2\n\\]\n\n**Answer:** \\(x=-2\\), \\(y=3\\).",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T07:35:26",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Simultaneous equations. The tag is correct.",
+      "steps": [
+        {
+          "title": "Step 1",
+          "body": "\\[\n2x+7y=17\n\\]\n\n\\[\n5x+3y=-1\n\\]"
+        },
+        {
+          "title": "Multiply the first equation by",
+          "body": "Multiply the first equation by 5:\n\\[\n10x+35y=85\n\\]"
+        },
+        {
+          "title": "Multiply the second equation by",
+          "body": "Multiply the second equation by 2:\n\\[\n10x+6y=-2\n\\]"
+        },
+        {
+          "title": "Subtract",
+          "body": "Subtract:\n\\[\n29y=87\n\\]\n\n\\[\ny=3\n\\]"
+        },
+        {
+          "title": "Substitute into",
+          "body": "Substitute into \\(2x+7y=17\\):\n\\[\n2x+21=17\n\\]\n\n\\[\n2x=-4\n\\]\n\n\\[\nx=-2\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(x=-2\\), \\(y=3\\)."
     },
     "all::Jan2021_P2HR__Q17__p16-16__m09__Functions": {
       "status": "checked",
-      "source": "**Topic check:** Corrected to Functions. The original tag was solving quadratic equations, but this question is mainly function composition, domain, and inverse functions.\n\n**Solution**\n\n\\[\nf(x)=x^2+6,\\qquad g(x)=x-10\n\\]\n\n(a)\n\\[\ng(3)=3-10=-7\n\\]\n\n\\[\nfg(3)=f(-7)=(-7)^2+6=55\n\\]\n\n(b)\n\\[\nfg(x)=f(g(x))=(x-10)^2+6\n\\]\n\nSolve \\(fg(x)=f(x)\\):\n\\[\n(x-10)^2+6=x^2+6\n\\]\n\n\\[\nx^2-20x+100=x^2\n\\]\n\n\\[\n-20x+100=0\n\\]\n\n\\[\nx=5\n\\]\n\n(c)\n\\[\nh(x)=\\frac{2x-4}{x}\n\\]\n\nThe denominator cannot be zero, so \\(x=0\\) cannot be included.\n\n(d) Let\n\\[\ny=\\frac{2x-4}{x}\n\\]\n\n\\[\ny=2-\\frac4x\n\\]\n\n\\[\ny-2=-\\frac4x\n\\]\n\n\\[\nx=\\frac{4}{2-y}\n\\]\n\nTherefore\n\\[\nh^{-1}(x)=\\frac{4}{2-x}\n\\]\n\n**Answer:** \\(fg(3)=55\\), \\(x=5\\), excluded value \\(0\\), and \\(h^{-1}(x)=\\dfrac{4}{2-x}\\).",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T07:35:26",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Corrected to Functions. The original tag was solving quadratic equations, but this question is mainly function composition, domain, and inverse functions.",
+      "steps": [
+        {
+          "title": "Step 1",
+          "body": "\\[\nf(x)=x^2+6,\\qquad g(x)=x-10\n\\]"
+        },
+        {
+          "title": "(a)",
+          "body": "(a)\n\\[\ng(3)=3-10=-7\n\\]\n\n\\[\nfg(3)=f(-7)=(-7)^2+6=55\n\\]"
+        },
+        {
+          "title": "(b)",
+          "body": "(b)\n\\[\nfg(x)=f(g(x))=(x-10)^2+6\n\\]"
+        },
+        {
+          "title": "Solve",
+          "body": "Solve \\(fg(x)=f(x)\\):\n\\[\n(x-10)^2+6=x^2+6\n\\]\n\n\\[\nx^2-20x+100=x^2\n\\]\n\n\\[\n-20x+100=0\n\\]\n\n\\[\nx=5\n\\]"
+        },
+        {
+          "title": "(c)",
+          "body": "(c)\n\\[\nh(x)=\\frac{2x-4}{x}\n\\]"
+        },
+        {
+          "title": "The denominator cannot be zero,",
+          "body": "The denominator cannot be zero, so \\(x=0\\) cannot be included."
+        },
+        {
+          "title": "(d) Let",
+          "body": "(d) Let\n\\[\ny=\\frac{2x-4}{x}\n\\]\n\n\\[\ny=2-\\frac4x\n\\]\n\n\\[\ny-2=-\\frac4x\n\\]\n\n\\[\nx=\\frac{4}{2-y}\n\\]"
+        },
+        {
+          "title": "Therefore",
+          "body": "Therefore\n\\[\nh^{-1}(x)=\\frac{4}{2-x}\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(fg(3)=55\\), \\(x=5\\), excluded value \\(0\\), and \\(h^{-1}(x)=\\dfrac{4}{2-x}\\)."
     },
     "all::Jan2021_P2HR__Q07__p08-08__m03__Graphing-Inequalities": {
       "status": "checked",
-      "source": "**Topic check:** Correct. This is identifying inequalities from a shaded region.\n\n**Solution**\n\nThe sloping boundary is\n\\[\ny=3x-2\n\\]\n\nThe shaded region is below this line:\n\\[\ny\\leq3x-2\n\\]\n\nThe vertical boundary is\n\\[\nx=3\n\\]\nso the region has\n\\[\nx\\leq3\n\\]\n\nThe lower boundary is the \\(x\\)-axis, so\n\\[\ny\\geq0\n\\]\n\n**Answer:** \\(y\\leq3x-2\\), \\(x\\leq3\\), \\(y\\geq0\\).",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T12:16:55",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Correct. This is identifying inequalities from a shaded region.",
+      "steps": [
+        {
+          "title": "The sloping boundary is",
+          "body": "The sloping boundary is\n\\[\ny=3x-2\n\\]"
+        },
+        {
+          "title": "The shaded region is below",
+          "body": "The shaded region is below this line:\n\\[\ny\\leq3x-2\n\\]"
+        },
+        {
+          "title": "The vertical boundary is so",
+          "body": "The vertical boundary is\n\\[\nx=3\n\\]\nso the region has\n\\[\nx\\leq3\n\\]"
+        },
+        {
+          "title": "The lower boundary is the",
+          "body": "The lower boundary is the \\(x\\)-axis, so\n\\[\ny\\geq0\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(y\\leq3x-2\\), \\(x\\leq3\\), \\(y\\geq0\\)."
     },
     "all::Jan2021_P2HR__Q02__p04-04__m03__Area-and-Perimeter": {
       "status": "checked",
-      "source": "**Topic check:** Corrected to Area & Perimeter.\n\n**Solution**\n\nThe semicircle has diameter \\(12\\text{ cm}\\), so its radius is \\(6\\text{ cm}\\).\n\nThe rectangle has area\n\\[\n12\\times 6=72\n\\]\n\nArea of the semicircle:\n\\[\n\\frac12\\pi(6)^2=18\\pi\n\\]\n\nShaded area:\n\\[\n72-18\\pi=15.451\\ldots\n\\]\n\n**Answer:** \\(15.5\\text{ cm}^2\\).",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T13:35:18",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Corrected to Area & Perimeter.",
+      "steps": [
+        {
+          "title": "The semicircle has diameter ,",
+          "body": "The semicircle has diameter \\(12\\text{ cm}\\), so its radius is \\(6\\text{ cm}\\)."
+        },
+        {
+          "title": "The rectangle has area",
+          "body": "The rectangle has area\n\\[\n12\\times 6=72\n\\]"
+        },
+        {
+          "title": "Area of the semicircle",
+          "body": "Area of the semicircle:\n\\[\n\\frac12\\pi(6)^2=18\\pi\n\\]"
+        },
+        {
+          "title": "Shaded area",
+          "body": "Shaded area:\n\\[\n72-18\\pi=15.451\\ldots\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(15.5\\text{ cm}^2\\)."
     },
     "all::Jan2021_P2HR__Q11__p11-11__m04__Circles-Arcs-and-Sectors": {
       "status": "checked",
-      "source": "**Topic check:** Circles, Arcs & Sectors. The tag is correct.\n\n**Solution**\n\nThe shaded sector is the major sector:\n\\[\n360^\\circ-40^\\circ=320^\\circ\n\\]\n\nArc length:\n\\[\n\\frac{320}{360}\\times 2\\pi(9)=16\\pi\n\\]\n\nPerimeter:\n\\[\n16\\pi+2(9)=68.265\\ldots\n\\]\n\n**Answer:** \\(68.3\\text{ cm}\\).",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T13:35:18",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Circles, Arcs & Sectors. The tag is correct.",
+      "steps": [
+        {
+          "title": "The shaded sector is the",
+          "body": "The shaded sector is the major sector:\n\\[\n360^\\circ-40^\\circ=320^\\circ\n\\]"
+        },
+        {
+          "title": "Arc length",
+          "body": "Arc length:\n\\[\n\\frac{320}{360}\\times 2\\pi(9)=16\\pi\n\\]"
+        },
+        {
+          "title": "Perimeter",
+          "body": "Perimeter:\n\\[\n16\\pi+2(9)=68.265\\ldots\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(68.3\\text{ cm}\\)."
     },
     "all::Jan2021_P2HR__Q20__p19-19__m05__Circles-Arcs-and-Sectors": {
       "status": "checked",
-      "source": "**Topic check:** Moved to Circles, Arcs & Sectors.\n\n**Method**\n\n\\[\n\\angle ABC=75^\\circ\n\\]\n\nThe angle at the centre is twice the angle at the circumference, so\n\n\\[\n\\angle AOC=2(75^\\circ)=150^\\circ\n\\]\n\nThe shaded segment is:\n\n\\[\n\\text{sector } AOC-\\text{triangle } AOC\n\\]\n\nLet the radius be \\(r\\).\n\nSector area:\n\n\\[\n\\frac{150}{360}\\pi r^2\n\\]\n\nTriangle area:\n\n\\[\n\\frac{1}{2}r^2\\sin 150^\\circ\n\\]\n\nSo\n\n\\[\n\\frac{150}{360}\\pi r^2-\\frac{1}{2}r^2\\sin 150^\\circ=200\n\\]\n\n\\[\nr^2\\left(\\frac{5\\pi}{12}-\\frac{1}{4}\\right)=200\n\\]\n\n\\[\nr^2=\\frac{200}{\\frac{5\\pi}{12}-\\frac{1}{4}}\n\\]\n\n\\[\nr=13.7426\\ldots\n\\]\n\n**Answer:** \\(\\boxed{13.7\\text{ cm}}\\)",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T07:04:07",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Moved to Circles, Arcs & Sectors.",
+      "steps": [
+        {
+          "title": "Step 1",
+          "body": "\\[\n\\angle ABC=75^\\circ\n\\]"
+        },
+        {
+          "title": "The angle at the centre",
+          "body": "The angle at the centre is twice the angle at the circumference, so\n\n\\[\n\\angle AOC=2(75^\\circ)=150^\\circ\n\\]"
+        },
+        {
+          "title": "The shaded segment is",
+          "body": "The shaded segment is:\n\n\\[\n\\text{sector } AOC-\\text{triangle } AOC\n\\]"
+        },
+        {
+          "title": "Let the radius be",
+          "body": "Let the radius be \\(r\\)."
+        },
+        {
+          "title": "Sector area",
+          "body": "Sector area:\n\n\\[\n\\frac{150}{360}\\pi r^2\n\\]"
+        },
+        {
+          "title": "Triangle area",
+          "body": "Triangle area:\n\n\\[\n\\frac{1}{2}r^2\\sin 150^\\circ\n\\]"
+        },
+        {
+          "title": "So",
+          "body": "So\n\n\\[\n\\frac{150}{360}\\pi r^2-\\frac{1}{2}r^2\\sin 150^\\circ=200\n\\]\n\n\\[\nr^2\\left(\\frac{5\\pi}{12}-\\frac{1}{4}\\right)=200\n\\]\n\n\\[\nr^2=\\frac{200}{\\frac{5\\pi}{12}-\\frac{1}{4}}\n\\]\n\n\\[\nr=13.7426\\ldots\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(\\boxed{13.7\\text{ cm}}\\)"
     },
     "all::Jan2021_P2HR__Q13__p12-12__m03__Right-Angled-Triangles-Pythagoras-and-Trigonometry": {
       "status": "checked",
-      "source": "**Topic check:** Right-Angled Triangles - Pythagoras & Trigonometry. The tag is correct.\n\n**Solution**\n\nThe vertical height is opposite the \\(23^\\circ\\) angle, and \\(AB=500\\text{ m}\\) is the hypotenuse.\n\n\\[\n\\sin 23^\\circ=\\frac{h}{500}\n\\]\n\n\\[\nh=500\\sin 23^\\circ=195.365\\ldots\n\\]\n\n**Answer:** \\(195.4\\text{ m}\\).",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T13:35:18",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Right-Angled Triangles - Pythagoras & Trigonometry. The tag is correct.",
+      "steps": [
+        {
+          "title": "The vertical height is opposite",
+          "body": "The vertical height is opposite the \\(23^\\circ\\) angle, and \\(AB=500\\text{ m}\\) is the hypotenuse.\n\n\\[\n\\sin 23^\\circ=\\frac{h}{500}\n\\]\n\n\\[\nh=500\\sin 23^\\circ=195.365\\ldots\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(195.4\\text{ m}\\)."
     },
     "all::Jan2021_P2HR__Q22__p22-23__m04__3D-Pythagoras-and-Trigonometry": {
       "status": "checked",
-      "source": "**Topic check:** Moved from Coordinate Geometry to 3D Pythagoras & Trigonometry.\n\n**Method**\n\nSince \\(AB=BC=8\\), triangle \\(ABC\\) is isosceles.\n\nThe line from \\(B\\) to the midpoint \\(M\\) bisects angle \\(ABC\\).\n\n\\[\n\\angle ABM=\\frac{140^\\circ}{2}=70^\\circ\n\\]\n\nIn right triangle \\(ABM\\),\n\n\\[\n\\cos 70^\\circ=\\frac{BM}{8}\n\\]\n\n\\[\nBM=8\\cos 70^\\circ\n\\]\n\nSince \\(T\\) is vertically above \\(B\\), the projection of \\(MT\\) onto the horizontal plane is \\(MB\\).\n\nLet the required angle be \\(\\theta\\).\n\n\\[\n\\tan \\theta=\\frac{TB}{BM}\n\\]\n\n\\[\n\\tan \\theta=\\frac{10}{8\\cos70^\\circ}\n\\]\n\n\\[\n\\theta=74.7^\\circ\n\\]\n\n**Answer:** \\(74.7^\\circ\\)",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T07:04:07",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Moved from Coordinate Geometry to 3D Pythagoras & Trigonometry.",
+      "steps": [
+        {
+          "title": "Since , triangle is isosceles",
+          "body": "Since \\(AB=BC=8\\), triangle \\(ABC\\) is isosceles."
+        },
+        {
+          "title": "The line from to the",
+          "body": "The line from \\(B\\) to the midpoint \\(M\\) bisects angle \\(ABC\\).\n\n\\[\n\\angle ABM=\\frac{140^\\circ}{2}=70^\\circ\n\\]"
+        },
+        {
+          "title": "In right triangle ,",
+          "body": "In right triangle \\(ABM\\),\n\n\\[\n\\cos 70^\\circ=\\frac{BM}{8}\n\\]\n\n\\[\nBM=8\\cos 70^\\circ\n\\]"
+        },
+        {
+          "title": "Since is vertically above ,",
+          "body": "Since \\(T\\) is vertically above \\(B\\), the projection of \\(MT\\) onto the horizontal plane is \\(MB\\)."
+        },
+        {
+          "title": "Let the required angle be",
+          "body": "Let the required angle be \\(\\theta\\).\n\n\\[\n\\tan \\theta=\\frac{TB}{BM}\n\\]\n\n\\[\n\\tan \\theta=\\frac{10}{8\\cos70^\\circ}\n\\]\n\n\\[\n\\theta=74.7^\\circ\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(74.7^\\circ\\)"
     },
     "all::Jan2021_P2HR__Q05__p06-07__m06__Transformations": {
       "status": "checked",
-      "source": "**Topic check:** Transformations. The tag is correct.\n\n**Solution**\n\n(a) For a \\(180^\\circ\\) rotation about \\((-3,2)\\),\n\n\\[\n(x,y)\\mapsto(-6-x,\\ 4-y)\n\\]\n\nThe image has vertices\n\n\\[\n(-3,9),\\ (-9,9),\\ (-9,6),\\ (-6,6)\n\\]\n\n(b) Translate by\n\n\\[\n\\begin{pmatrix}10\\\\8\\end{pmatrix}\n\\]\n\nThe image has vertices\n\n\\[\n(7,3),\\ (13,3),\\ (13,6),\\ (10,6)\n\\]\n\n(c) Triangle \\(T\\) is mapped to triangle \\(U\\) by an enlargement with scale factor \\(2\\) and centre \\((-3,3)\\).\n\n**Answer:** (a) vertices \\((-3,9),(-9,9),(-9,6),(-6,6)\\); (b) vertices \\((7,3),(13,3),(13,6),(10,6)\\); (c) enlargement, scale factor \\(2\\), centre \\((-3,3)\\).",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T17:15:57",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Transformations. The tag is correct.",
+      "steps": [
+        {
+          "title": "(a) For a rotation about",
+          "body": "(a) For a \\(180^\\circ\\) rotation about \\((-3,2)\\),\n\n\\[\n(x,y)\\mapsto(-6-x,\\ 4-y)\n\\]"
+        },
+        {
+          "title": "The image has vertices",
+          "body": "The image has vertices\n\n\\[\n(-3,9),\\ (-9,9),\\ (-9,6),\\ (-6,6)\n\\]"
+        },
+        {
+          "title": "(b) Translate by",
+          "body": "(b) Translate by\n\n\\[\n\\begin{pmatrix}10\\\\8\\end{pmatrix}\n\\]"
+        },
+        {
+          "title": "The image has vertices",
+          "body": "The image has vertices\n\n\\[\n(7,3),\\ (13,3),\\ (13,6),\\ (10,6)\n\\]"
+        },
+        {
+          "title": "(c) Triangle is mapped to",
+          "body": "(c) Triangle \\(T\\) is mapped to triangle \\(U\\) by an enlargement with scale factor \\(2\\) and centre \\((-3,3)\\)."
+        }
+      ],
+      "finalAnswer": "(a) vertices \\((-3,9),(-9,9),(-9,6),(-6,6)\\); (b) vertices \\((7,3),(13,3),(13,6),(10,6)\\); (c) enlargement, scale factor \\(2\\), centre \\((-3,3)\\)."
     },
     "all::Jan2021_P2HR__Q10__p10-10__m04__Statistics-Toolkit": {
       "status": "checked",
-      "source": "**Topic check:** Statistics Toolkit. The tag is correct.\n\n**Solution**\n\nUse class midpoints \\(1,3,5,7,9\\).\n\nThe total frequency is\n\n\\[\nx+11+8+6+5=x+30\n\\]\n\nThe total estimated distance is\n\n\\[\n1x+3(11)+5(8)+7(6)+9(5)=x+160\n\\]\n\nThe estimated mean is \\(4.25\\):\n\n\\[\n\\frac{x+160}{x+30}=4.25\n\\]\n\n\\[\nx+160=4.25x+127.5\n\\]\n\n\\[\n32.5=3.25x\n\\]\n\n\\[\nx=10\n\\]\n\n**Answer:** \\(x=10\\).",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T17:15:57",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Statistics Toolkit. The tag is correct.",
+      "steps": [
+        {
+          "title": "Use class midpoints",
+          "body": "Use class midpoints \\(1,3,5,7,9\\)."
+        },
+        {
+          "title": "The total frequency is",
+          "body": "The total frequency is\n\n\\[\nx+11+8+6+5=x+30\n\\]"
+        },
+        {
+          "title": "The total estimated distance is",
+          "body": "The total estimated distance is\n\n\\[\n1x+3(11)+5(8)+7(6)+9(5)=x+160\n\\]"
+        },
+        {
+          "title": "The estimated mean is",
+          "body": "The estimated mean is \\(4.25\\):\n\n\\[\n\\frac{x+160}{x+30}=4.25\n\\]\n\n\\[\nx+160=4.25x+127.5\n\\]\n\n\\[\n32.5=3.25x\n\\]\n\n\\[\nx=10\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(x=10\\)."
     },
     "all::Jan2021_P2HR__Q21__p20-21__m06__Probability-Toolkit": {
       "status": "checked",
-      "source": "**Topic check:** Corrected from Right-Angled Triangles to Probability Toolkit.\n\n**Method**\n\nThere are \\(n\\) beads altogether.\n\nRed beads:\n\n\\[\n6\n\\]\n\nBlue beads:\n\n\\[\nn-6\n\\]\n\nThe probability of taking two beads of the same colour is\n\n\\[\nP(RR)+P(BB)=\\frac9{17}\n\\]\n\nSo\n\n\\[\n\\frac6n\\cdot\\frac5{n-1}\n+\\frac{n-6}{n}\\cdot\\frac{n-7}{n-1}\n=\\frac9{17}\n\\]\n\n\\[\n\\frac{30+(n-6)(n-7)}{n(n-1)}=\\frac9{17}\n\\]\n\nExpand:\n\n\\[\n(n-6)(n-7)=n^2-13n+42\n\\]\n\nSo\n\n\\[\n\\frac{n^2-13n+72}{n(n-1)}=\\frac9{17}\n\\]\n\nCross multiply:\n\n\\[\n17(n^2-13n+72)=9n(n-1)\n\\]\n\n\\[\n17n^2-221n+1224=9n^2-9n\n\\]\n\n\\[\n8n^2-212n+1224=0\n\\]\n\nDivide by 4:\n\n\\[\n2n^2-53n+306=0\n\\]\n\nFactor:\n\n\\[\n(2n-17)(n-18)=0\n\\]\n\nSo\n\n\\[\nn=\\frac{17}{2}\\quad\\text{or}\\quad n=18\n\\]\n\nThe number of beads must be a whole number, so\n\n\\[\nn=18\n\\]\n\n**Answer:** \\(\\boxed{18}\\)",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T07:04:07",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Corrected from Right-Angled Triangles to Probability Toolkit.",
+      "steps": [
+        {
+          "title": "There are beads altogether",
+          "body": "There are \\(n\\) beads altogether."
+        },
+        {
+          "title": "Red beads",
+          "body": "Red beads:\n\n\\[\n6\n\\]"
+        },
+        {
+          "title": "Blue beads",
+          "body": "Blue beads:\n\n\\[\nn-6\n\\]"
+        },
+        {
+          "title": "The probability of taking two",
+          "body": "The probability of taking two beads of the same colour is\n\n\\[\nP(RR)+P(BB)=\\frac9{17}\n\\]"
+        },
+        {
+          "title": "So",
+          "body": "So\n\n\\[\n\\frac6n\\cdot\\frac5{n-1}\n+\\frac{n-6}{n}\\cdot\\frac{n-7}{n-1}\n=\\frac9{17}\n\\]\n\n\\[\n\\frac{30+(n-6)(n-7)}{n(n-1)}=\\frac9{17}\n\\]"
+        },
+        {
+          "title": "Expand",
+          "body": "Expand:\n\n\\[\n(n-6)(n-7)=n^2-13n+42\n\\]"
+        },
+        {
+          "title": "So",
+          "body": "So\n\n\\[\n\\frac{n^2-13n+72}{n(n-1)}=\\frac9{17}\n\\]"
+        },
+        {
+          "title": "Cross multiply",
+          "body": "Cross multiply:\n\n\\[\n17(n^2-13n+72)=9n(n-1)\n\\]\n\n\\[\n17n^2-221n+1224=9n^2-9n\n\\]\n\n\\[\n8n^2-212n+1224=0\n\\]"
+        },
+        {
+          "title": "Divide by 4",
+          "body": "Divide by 4:\n\n\\[\n2n^2-53n+306=0\n\\]"
+        },
+        {
+          "title": "Factor",
+          "body": "Factor:\n\n\\[\n(2n-17)(n-18)=0\n\\]"
+        },
+        {
+          "title": "So",
+          "body": "So\n\n\\[\nn=\\frac{17}{2}\\quad\\text{or}\\quad n=18\n\\]"
+        },
+        {
+          "title": "The number of beads must",
+          "body": "The number of beads must be a whole number, so\n\n\\[\nn=18\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(\\boxed{18}\\)"
     },
     "all::Jan2021_P2HR__Q16__p15-15__m05__Probability-Diagrams-Venn-and-Tree-Diagrams": {
       "status": "missing",
-      "source": "**Topic check:** Probability Diagrams - Venn & Tree Diagrams. The tag is correct.\n\n**Solution**\n\n\\[\nn(A\\cap B)=62+30-68=24\n\\]\n\nSo the Venn diagram has:\n\n\\[\nA\\text{ only}=38,\\quad B\\text{ only}=6,\\quad A\\cap B=24,\\quad \\text{outside}=12\n\\]\n\n\\[\nP(A\\cap B)=\\frac{24}{80}=\\frac{3}{10}\n\\]\n\n\\[\nP(A\\cup B')=\\frac{74}{80}=\\frac{37}{40}\n\\]\n\n**Answers:** \\(\\frac{3}{10}\\), \\(\\frac{37}{40}\\).",
+      "checkedBy": "",
       "updated": "2026-05-06T18:49:24",
-      "checked_by": ""
+      "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
+      "steps": [
+        {
+          "title": "Step 1",
+          "body": "\\[\nn(A\\cap B)=62+30-68=24\n\\]"
+        },
+        {
+          "title": "So the Venn diagram has",
+          "body": "So the Venn diagram has:\n\n\\[\nA\\text{ only}=38,\\quad B\\text{ only}=6,\\quad A\\cap B=24,\\quad \\text{outside}=12\n\\]\n\n\\[\nP(A\\cap B)=\\frac{24}{80}=\\frac{3}{10}\n\\]\n\n\\[\nP(A\\cup B')=\\frac{74}{80}=\\frac{37}{40}\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(\\frac{3}{10}\\), \\(\\frac{37}{40}\\)."
     },
     "expertise::Jan2021_P2HR__Q20__p19-19__m05__Circles-Arcs-and-Sectors": {
       "status": "checked",
-      "source": "**Topic check:** Moved to Circles, Arcs & Sectors.\n\n**Method**\n\n\\[\n\\angle ABC=75^\\circ\n\\]\n\nThe angle at the centre is twice the angle at the circumference, so\n\n\\[\n\\angle AOC=2(75^\\circ)=150^\\circ\n\\]\n\nThe shaded segment is:\n\n\\[\n\\text{sector } AOC-\\text{triangle } AOC\n\\]\n\nLet the radius be \\(r\\).\n\nSector area:\n\n\\[\n\\frac{150}{360}\\pi r^2\n\\]\n\nTriangle area:\n\n\\[\n\\frac{1}{2}r^2\\sin 150^\\circ\n\\]\n\nSo\n\n\\[\n\\frac{150}{360}\\pi r^2-\\frac{1}{2}r^2\\sin 150^\\circ=200\n\\]\n\n\\[\nr^2\\left(\\frac{5\\pi}{12}-\\frac{1}{4}\\right)=200\n\\]\n\n\\[\nr^2=\\frac{200}{\\frac{5\\pi}{12}-\\frac{1}{4}}\n\\]\n\n\\[\nr=13.7426\\ldots\n\\]\n\n**Answer:** \\(\\boxed{13.7\\text{ cm}}\\)",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-05",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Moved to Circles, Arcs & Sectors.",
+      "steps": [
+        {
+          "title": "Step 1",
+          "body": "\\[\n\\angle ABC=75^\\circ\n\\]"
+        },
+        {
+          "title": "The angle at the centre",
+          "body": "The angle at the centre is twice the angle at the circumference, so\n\n\\[\n\\angle AOC=2(75^\\circ)=150^\\circ\n\\]"
+        },
+        {
+          "title": "The shaded segment is",
+          "body": "The shaded segment is:\n\n\\[\n\\text{sector } AOC-\\text{triangle } AOC\n\\]"
+        },
+        {
+          "title": "Let the radius be",
+          "body": "Let the radius be \\(r\\)."
+        },
+        {
+          "title": "Sector area",
+          "body": "Sector area:\n\n\\[\n\\frac{150}{360}\\pi r^2\n\\]"
+        },
+        {
+          "title": "Triangle area",
+          "body": "Triangle area:\n\n\\[\n\\frac{1}{2}r^2\\sin 150^\\circ\n\\]"
+        },
+        {
+          "title": "So",
+          "body": "So\n\n\\[\n\\frac{150}{360}\\pi r^2-\\frac{1}{2}r^2\\sin 150^\\circ=200\n\\]\n\n\\[\nr^2\\left(\\frac{5\\pi}{12}-\\frac{1}{4}\\right)=200\n\\]\n\n\\[\nr^2=\\frac{200}{\\frac{5\\pi}{12}-\\frac{1}{4}}\n\\]\n\n\\[\nr=13.7426\\ldots\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(\\boxed{13.7\\text{ cm}}\\)"
     },
     "expertise::Jan2021_P2HR__Q22__p22-23__m04__3D-Pythagoras-and-Trigonometry": {
       "status": "checked",
-      "source": "**Topic check:** Moved from Coordinate Geometry to 3D Pythagoras & Trigonometry.\n\n**Method**\n\nSince \\(AB=BC=8\\), triangle \\(ABC\\) is isosceles.\n\nThe line from \\(B\\) to the midpoint \\(M\\) bisects angle \\(ABC\\).\n\n\\[\n\\angle ABM=\\frac{140^\\circ}{2}=70^\\circ\n\\]\n\nIn right triangle \\(ABM\\),\n\n\\[\n\\cos 70^\\circ=\\frac{BM}{8}\n\\]\n\n\\[\nBM=8\\cos 70^\\circ\n\\]\n\nSince \\(T\\) is vertically above \\(B\\), the projection of \\(MT\\) onto the horizontal plane is \\(MB\\).\n\nLet the required angle be \\(\\theta\\).\n\n\\[\n\\tan \\theta=\\frac{TB}{BM}\n\\]\n\n\\[\n\\tan \\theta=\\frac{10}{8\\cos70^\\circ}\n\\]\n\n\\[\n\\theta=74.7^\\circ\n\\]\n\n**Answer:** \\(74.7^\\circ\\)",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-05",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Moved from Coordinate Geometry to 3D Pythagoras & Trigonometry.",
+      "steps": [
+        {
+          "title": "Since , triangle is isosceles",
+          "body": "Since \\(AB=BC=8\\), triangle \\(ABC\\) is isosceles."
+        },
+        {
+          "title": "The line from to the",
+          "body": "The line from \\(B\\) to the midpoint \\(M\\) bisects angle \\(ABC\\).\n\n\\[\n\\angle ABM=\\frac{140^\\circ}{2}=70^\\circ\n\\]"
+        },
+        {
+          "title": "In right triangle ,",
+          "body": "In right triangle \\(ABM\\),\n\n\\[\n\\cos 70^\\circ=\\frac{BM}{8}\n\\]\n\n\\[\nBM=8\\cos 70^\\circ\n\\]"
+        },
+        {
+          "title": "Since is vertically above ,",
+          "body": "Since \\(T\\) is vertically above \\(B\\), the projection of \\(MT\\) onto the horizontal plane is \\(MB\\)."
+        },
+        {
+          "title": "Let the required angle be",
+          "body": "Let the required angle be \\(\\theta\\).\n\n\\[\n\\tan \\theta=\\frac{TB}{BM}\n\\]\n\n\\[\n\\tan \\theta=\\frac{10}{8\\cos70^\\circ}\n\\]\n\n\\[\n\\theta=74.7^\\circ\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(74.7^\\circ\\)"
     },
     "expertise::Jan2021_P2HR__Q21__p20-21__m06__Probability-Toolkit": {
       "status": "checked",
-      "source": "**Topic check:** Corrected from Right-Angled Triangles to Probability Toolkit.\n\n**Method**\n\nThere are \\(n\\) beads altogether.\n\nRed beads:\n\n\\[\n6\n\\]\n\nBlue beads:\n\n\\[\nn-6\n\\]\n\nThe probability of taking two beads of the same colour is\n\n\\[\nP(RR)+P(BB)=\\frac9{17}\n\\]\n\nSo\n\n\\[\n\\frac6n\\cdot\\frac5{n-1}\n+\\frac{n-6}{n}\\cdot\\frac{n-7}{n-1}\n=\\frac9{17}\n\\]\n\n\\[\n\\frac{30+(n-6)(n-7)}{n(n-1)}=\\frac9{17}\n\\]\n\nExpand:\n\n\\[\n(n-6)(n-7)=n^2-13n+42\n\\]\n\nSo\n\n\\[\n\\frac{n^2-13n+72}{n(n-1)}=\\frac9{17}\n\\]\n\nCross multiply:\n\n\\[\n17(n^2-13n+72)=9n(n-1)\n\\]\n\n\\[\n17n^2-221n+1224=9n^2-9n\n\\]\n\n\\[\n8n^2-212n+1224=0\n\\]\n\nDivide by 4:\n\n\\[\n2n^2-53n+306=0\n\\]\n\nFactor:\n\n\\[\n(2n-17)(n-18)=0\n\\]\n\nSo\n\n\\[\nn=\\frac{17}{2}\\quad\\text{or}\\quad n=18\n\\]\n\nThe number of beads must be a whole number, so\n\n\\[\nn=18\n\\]\n\n**Answer:** \\(\\boxed{18}\\)",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-05",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Corrected from Right-Angled Triangles to Probability Toolkit.",
+      "steps": [
+        {
+          "title": "There are beads altogether",
+          "body": "There are \\(n\\) beads altogether."
+        },
+        {
+          "title": "Red beads",
+          "body": "Red beads:\n\n\\[\n6\n\\]"
+        },
+        {
+          "title": "Blue beads",
+          "body": "Blue beads:\n\n\\[\nn-6\n\\]"
+        },
+        {
+          "title": "The probability of taking two",
+          "body": "The probability of taking two beads of the same colour is\n\n\\[\nP(RR)+P(BB)=\\frac9{17}\n\\]"
+        },
+        {
+          "title": "So",
+          "body": "So\n\n\\[\n\\frac6n\\cdot\\frac5{n-1}\n+\\frac{n-6}{n}\\cdot\\frac{n-7}{n-1}\n=\\frac9{17}\n\\]\n\n\\[\n\\frac{30+(n-6)(n-7)}{n(n-1)}=\\frac9{17}\n\\]"
+        },
+        {
+          "title": "Expand",
+          "body": "Expand:\n\n\\[\n(n-6)(n-7)=n^2-13n+42\n\\]"
+        },
+        {
+          "title": "So",
+          "body": "So\n\n\\[\n\\frac{n^2-13n+72}{n(n-1)}=\\frac9{17}\n\\]"
+        },
+        {
+          "title": "Cross multiply",
+          "body": "Cross multiply:\n\n\\[\n17(n^2-13n+72)=9n(n-1)\n\\]\n\n\\[\n17n^2-221n+1224=9n^2-9n\n\\]\n\n\\[\n8n^2-212n+1224=0\n\\]"
+        },
+        {
+          "title": "Divide by 4",
+          "body": "Divide by 4:\n\n\\[\n2n^2-53n+306=0\n\\]"
+        },
+        {
+          "title": "Factor",
+          "body": "Factor:\n\n\\[\n(2n-17)(n-18)=0\n\\]"
+        },
+        {
+          "title": "So",
+          "body": "So\n\n\\[\nn=\\frac{17}{2}\\quad\\text{or}\\quad n=18\n\\]"
+        },
+        {
+          "title": "The number of beads must",
+          "body": "The number of beads must be a whole number, so\n\n\\[\nn=18\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(\\boxed{18}\\)"
     }
   }
 }

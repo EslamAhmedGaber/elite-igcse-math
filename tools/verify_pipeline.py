@@ -318,6 +318,11 @@ def verify_solutions(report: Report, question_by_id: dict[str, dict[str, Any]]) 
     files = sorted(SOLUTION_DIR.glob("*.json"))
     solution_count = 0
     checked_count = 0
+    structured_count = 0
+    private_text_pattern = re.compile(
+        r"(topic\s*check|topic-checked|mark[-\s]?scheme\s+review|checking\s+the\s+answer|answer\s+checked)",
+        re.IGNORECASE,
+    )
 
     for path in files:
         data = read_json(path, report)
@@ -337,9 +342,32 @@ def verify_solutions(report: Report, question_by_id: dict[str, dict[str, Any]]) 
             if not isinstance(solution, dict):
                 report.error(f"{rel(path)} solution for {qid} is not an object.")
                 continue
-            source = str(solution.get("source") or "").strip()
-            if not source:
-                report.error(f"{rel(path)} solution for {qid} has empty source.")
+            if "source" in solution:
+                report.error(f"{rel(path)} solution for {qid} still uses legacy source markdown.")
+            steps = solution.get("steps")
+            if not isinstance(steps, list) or not steps:
+                report.error(f"{rel(path)} solution for {qid} has no structured steps.")
+            else:
+                structured_count += 1
+                for index, step in enumerate(steps, start=1):
+                    if not isinstance(step, dict):
+                        report.error(f"{rel(path)} solution for {qid} step {index} is not an object.")
+                        continue
+                    if not str(step.get("title") or "").strip():
+                        report.error(f"{rel(path)} solution for {qid} step {index} has empty title.")
+                    if not str(step.get("body") or "").strip():
+                        report.error(f"{rel(path)} solution for {qid} step {index} has empty body.")
+            final_answer = str(solution.get("finalAnswer") or "").strip()
+            if not final_answer:
+                report.error(f"{rel(path)} solution for {qid} has empty finalAnswer.")
+            public_text = "\n".join(
+                [
+                    *(str(step.get("title", "")) + "\n" + str(step.get("body", "")) for step in steps or [] if isinstance(step, dict)),
+                    final_answer,
+                ]
+            )
+            if private_text_pattern.search(public_text):
+                report.error(f"{rel(path)} solution for {qid} exposes private checking text in public fields.")
             if solution.get("status") == "checked":
                 checked_count += 1
 
@@ -347,6 +375,7 @@ def verify_solutions(report: Report, question_by_id: dict[str, dict[str, Any]]) 
     if missing_solution_count:
         report.warn(f"{missing_solution_count} questions do not yet have website solutions.")
     report.set("solutions", solution_count)
+    report.set("structured_solutions", structured_count)
     report.set("checked_solutions", checked_count)
 
 

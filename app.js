@@ -550,7 +550,7 @@ function renderCards() {
   els.questionGrid.innerHTML = visible.map((question) => {
     const isSelected = selected.has(question.id);
     const isSolved = solved.has(question.id);
-    const hasSolution = Boolean(solutionData[question.id]?.source);
+    const hasSolution = hasSolutionContent(solutionData[question.id]);
     const review = reviewState(question.id);
     const reviewText = reviewLabel(question.id);
     return `<article class="question-card ${isSelected ? "selected" : ""} ${isSolved ? "solved" : ""}" data-id="${question.id}">
@@ -587,7 +587,7 @@ function renderCards() {
 function renderQuestionActions(question, { compact = false } = {}) {
   const isSelected = selected.has(question.id);
   const isSolved = solved.has(question.id);
-  const hasSolution = Boolean(solutionData[question.id]?.source);
+  const hasSolution = hasSolutionContent(solutionData[question.id]);
   const review = reviewState(question.id);
   return `<div class="card-actions ${compact ? "compact" : ""}">
     <button type="button" data-action="select">${isSelected ? "Remove" : "Select"}</button>
@@ -800,14 +800,42 @@ function formatSolutionText(text) {
     .join("");
 }
 
+function hasSolutionContent(solution) {
+  if (!solution) return false;
+  if (solution.source) return true;
+  if (Array.isArray(solution.steps) && solution.steps.some((step) => step?.body || step?.title)) return true;
+  return Boolean(solution.finalAnswer);
+}
+
+function formatStructuredSolution(solution) {
+  if (!solution || !hasSolutionContent(solution)) {
+    return `<p class="solution-empty">Solution has not been written yet.</p>`;
+  }
+  if (!Array.isArray(solution.steps)) {
+    return formatSolutionText(solution.source || "");
+  }
+  const steps = solution.steps
+    .filter((step) => step && (step.body || step.title))
+    .map((step, index) => `
+      <section class="solution-step">
+        <strong>${escapeHtml(step.title || `Step ${index + 1}`)}</strong>
+        <div>${formatSolutionText(step.body || "")}</div>
+      </section>
+    `)
+    .join("");
+  const answer = solution.finalAnswer
+    ? `<section class="solution-final"><strong>Final Answer</strong><div>${formatSolutionText(solution.finalAnswer)}</div></section>`
+    : "";
+  return `${steps}${answer}` || `<p class="solution-empty">Solution has not been written yet.</p>`;
+}
+
 function showSolution(id) {
   const question = questionById(id);
   const solution = solutionData[id];
   if (!question || !solution) return;
   els.solutionTitle.textContent = `${question.paper} Q${question.question} | Solution`;
   els.solutionMeta.textContent = `${question.topic} | ${question.marks} marks`;
-  const status = solution.status ? `<span class="solution-status">${escapeHtml(solution.status)}</span>` : "";
-  els.solutionBody.innerHTML = `${status}${formatSolutionText(solution.source)}`;
+  els.solutionBody.innerHTML = formatStructuredSolution(solution);
   els.solutionDialog.showModal();
   if (window.MathJax?.typesetPromise) {
     window.MathJax.typesetPromise([els.solutionBody]).catch(() => {});

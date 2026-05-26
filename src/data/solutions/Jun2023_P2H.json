@@ -3,189 +3,774 @@
   "solutions": {
     "all::Jun2023_P2H__Q06__p07-07__m02__Powers-Roots-and-Standard-Form": {
       "status": "checked",
-      "source": "**Topic check:** Powers, roots and standard form. The tag is correct.\n\n**Method**\n\n\\[\n76000000=7.6\\times 10^7\n\\]\n\n\\[\n5.4\\times 10^{-4}=0.00054\n\\]\n\n**Answer:** (a) \\(7.6\\times 10^7\\), (b) \\(0.00054\\)",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-05T21:24:27",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Powers, roots and standard form. The tag is correct.",
+      "steps": [
+        {
+          "title": "Step 1",
+          "body": "\\[\n76000000=7.6\\times 10^7\n\\]\n\n\\[\n5.4\\times 10^{-4}=0.00054\n\\]"
+        }
+      ],
+      "finalAnswer": "(a) \\(7.6\\times 10^7\\), (b) \\(0.00054\\)"
     },
     "all::Jun2023_P2H__Q08__p09-09__m03__Compound-Interest-and-Depreciation": {
       "status": "checked",
-      "source": "**Topic check:** Corrected to Compound Interest & Depreciation. The value increases by the same percentage each year.\n\n**Method**\n\nA \\(4\\%\\) increase each year gives a multiplier of\n\n\\[\n1.04\n\\]\n\nAfter 3 years, the value is\n\n\\[\n680(1.04)^3\n\\]\n\n\\[\n=680(1.124864)\n\\]\n\n\\[\n=764.90752\n\\]\n\nCorrect to the nearest dollar:\n\n\\[\n765\n\\]\n\n**Answer:** \\(\\$765\\)",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-05T21:44:08",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Corrected to Compound Interest & Depreciation. The value increases by the same percentage each year.",
+      "steps": [
+        {
+          "title": "A increase each year gives",
+          "body": "A \\(4\\%\\) increase each year gives a multiplier of\n\n\\[\n1.04\n\\]"
+        },
+        {
+          "title": "After 3 years, the value",
+          "body": "After 3 years, the value is\n\n\\[\n680(1.04)^3\n\\]\n\n\\[\n=680(1.124864)\n\\]\n\n\\[\n=764.90752\n\\]"
+        },
+        {
+          "title": "Correct to the nearest dollar",
+          "body": "Correct to the nearest dollar:\n\n\\[\n765\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(\\$765\\)"
     },
     "all::Jun2023_P2H__Q25__p28-28__m04__Rounding-Estimation-and-Bounds": {
       "status": "checked",
-      "source": "**Topic check:** Rounding, Estimation & Bounds is correct. The question is about choosing bounds before using the density formula.\n\n**Method**\n\nFor the upper bound of density, use the upper bound of the mass and the lower bound of the volume.\n\nThe radius is \\(2.8\\) cm correct to 1 decimal place, so the lower bound is\n\n\\(r=2.75\\)\n\n\\(M=260\\) correct to 2 significant figures, so the upper bound is\n\n\\(M=265\\)\n\nThe mass is \\(M\\pi\\) and the volume of the sphere is \\(\\dfrac{4}{3}\\pi r^3\\).\n\nSo\n\n\\(\\text{density}=\\dfrac{M\\pi}{\\frac{4}{3}\\pi r^3}=\\dfrac{3M}{4r^3}\\)\n\nUpper bound:\n\n\\(\\dfrac{3(265)}{4(2.75)^3}=9.5567...\\)\n\n**Answer:** \\(9.56\\text{ g/cm}^3\\) to 2 decimal places.",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-05T00:12:46",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Rounding, Estimation & Bounds is correct. The question is about choosing bounds before using the density formula.",
+      "steps": [
+        {
+          "title": "For the upper bound of",
+          "body": "For the upper bound of density, use the upper bound of the mass and the lower bound of the volume."
+        },
+        {
+          "title": "The radius is cm correct",
+          "body": "The radius is \\(2.8\\) cm correct to 1 decimal place, so the lower bound is\n\n\\(r=2.75\\)"
+        },
+        {
+          "title": "correct to 2 significant figures,",
+          "body": "\\(M=260\\) correct to 2 significant figures, so the upper bound is\n\n\\(M=265\\)"
+        },
+        {
+          "title": "The mass is and the",
+          "body": "The mass is \\(M\\pi\\) and the volume of the sphere is \\(\\dfrac{4}{3}\\pi r^3\\)."
+        },
+        {
+          "title": "So",
+          "body": "So\n\n\\(\\text{density}=\\dfrac{M\\pi}{\\frac{4}{3}\\pi r^3}=\\dfrac{3M}{4r^3}\\)"
+        },
+        {
+          "title": "Upper bound",
+          "body": "Upper bound:\n\n\\(\\dfrac{3(265)}{4(2.75)^3}=9.5567...\\)"
+        }
+      ],
+      "finalAnswer": "\\(9.56\\text{ g/cm}^3\\) to 2 decimal places."
     },
     "all::Jun2023_P2H__Q23__p24-25__m04__Surds": {
       "status": "checked",
-      "source": "**Topic check:** Surds. The tag is correct.\n\n**Method**\n\nThe volume is\n\n\\[\nx^2(2\\sqrt5-3)=13+6\\sqrt5\n\\]\n\nSo\n\n\\[\nx^2=\\frac{13+6\\sqrt5}{2\\sqrt5-3}\n\\]\n\nRationalise:\n\n\\[\nx^2=\\frac{(13+6\\sqrt5)(2\\sqrt5+3)}{(2\\sqrt5)^2-3^2}\n\\]\n\n\\[\n=\\frac{26\\sqrt5+39+60+18\\sqrt5}{20-9}\n\\]\n\n\\[\n=\\frac{99+44\\sqrt5}{11}=9+4\\sqrt5\n\\]\n\nSince\n\n\\[\n(\\sqrt5+2)^2=5+4+4\\sqrt5=9+4\\sqrt5\n\\]\n\n\\[\nx=\\sqrt5+2\n\\]\n\n**Answer:** \\(2+\\sqrt5\\)",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T01:57:17",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Surds. The tag is correct.",
+      "steps": [
+        {
+          "title": "The volume is",
+          "body": "The volume is\n\n\\[\nx^2(2\\sqrt5-3)=13+6\\sqrt5\n\\]"
+        },
+        {
+          "title": "So",
+          "body": "So\n\n\\[\nx^2=\\frac{13+6\\sqrt5}{2\\sqrt5-3}\n\\]"
+        },
+        {
+          "title": "Rationalise",
+          "body": "Rationalise:\n\n\\[\nx^2=\\frac{(13+6\\sqrt5)(2\\sqrt5+3)}{(2\\sqrt5)^2-3^2}\n\\]\n\n\\[\n=\\frac{26\\sqrt5+39+60+18\\sqrt5}{20-9}\n\\]\n\n\\[\n=\\frac{99+44\\sqrt5}{11}=9+4\\sqrt5\n\\]"
+        },
+        {
+          "title": "Since",
+          "body": "Since\n\n\\[\n(\\sqrt5+2)^2=5+4+4\\sqrt5=9+4\\sqrt5\n\\]\n\n\\[\nx=\\sqrt5+2\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(2+\\sqrt5\\)"
     },
     "all::Jun2023_P2H__Q05__p07-07__m04__Ratio-Toolkit": {
       "status": "checked",
-      "source": "**Topic check:** Ratio Toolkit. The tag is correct.\n\n**Method**\n\nLet the number of \\(2\\) pence coins be \\(x\\).\n\nThen the number of \\(5\\) pence coins is \\(3x\\).\n\nTotal value:\n\n\\[\n2x+5(3x)=85\n\\]\n\n\\[\n17x=85\n\\]\n\n\\[\nx=5\n\\]\n\nSo there are \\(5\\) two-pence coins and \\(15\\) five-pence coins.\n\n\\[\n15-5=10\n\\]\n\n**Answer:** \\(10\\) more \\(5\\) pence coins",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T01:57:17",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Ratio Toolkit. The tag is correct.",
+      "steps": [
+        {
+          "title": "Let the number of pence",
+          "body": "Let the number of \\(2\\) pence coins be \\(x\\)."
+        },
+        {
+          "title": "Then the number of pence",
+          "body": "Then the number of \\(5\\) pence coins is \\(3x\\)."
+        },
+        {
+          "title": "Total value",
+          "body": "Total value:\n\n\\[\n2x+5(3x)=85\n\\]\n\n\\[\n17x=85\n\\]\n\n\\[\nx=5\n\\]"
+        },
+        {
+          "title": "So there are two pence",
+          "body": "So there are \\(5\\) two-pence coins and \\(15\\) five-pence coins.\n\n\\[\n15-5=10\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(10\\) more \\(5\\) pence coins"
     },
     "all::Jun2023_P2H__Q16__p16-16__m05__Direct-and-Inverse-Proportion": {
       "status": "checked",
-      "source": "**Topic check:** Corrected to Direct & Inverse Proportion. The question states \\(Q\\) is directly proportional to \\(\\sqrt t\\).\n\n**Method**\n\n\\[\nQ\\propto \\sqrt t\n\\]\n\nSo\n\n\\[\nQ=k\\sqrt t\n\\]\n\nFrom the graph, when \\(t=4\\), \\(Q=6\\).\n\n\\[\n6=k\\sqrt4\n\\]\n\n\\[\n6=2k\n\\]\n\n\\[\nk=3\n\\]\n\nSo the formula is\n\n\\[\nQ=3\\sqrt t\n\\]\n\nFor part (b), \\(Q\\) is increased by \\(20\\%\\), so \\(Q\\) is multiplied by \\(1.2\\).\n\nSince \\(Q\\propto \\sqrt t\\),\n\n\\[\nt\\propto Q^2\n\\]\n\nSo \\(t\\) is multiplied by\n\n\\[\n1.2^2=1.44\n\\]\n\nThis is a \\(44\\%\\) increase.\n\n**Answer:** (a) \\(Q=3\\sqrt t\\), (b) \\(44\\%\\)",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-05T21:44:08",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Corrected to Direct & Inverse Proportion. The question states \\(Q\\) is directly proportional to \\(\\sqrt t\\).",
+      "steps": [
+        {
+          "title": "Step 1",
+          "body": "\\[\nQ\\propto \\sqrt t\n\\]"
+        },
+        {
+          "title": "So",
+          "body": "So\n\n\\[\nQ=k\\sqrt t\n\\]"
+        },
+        {
+          "title": "From the graph, when ,",
+          "body": "From the graph, when \\(t=4\\), \\(Q=6\\).\n\n\\[\n6=k\\sqrt4\n\\]\n\n\\[\n6=2k\n\\]\n\n\\[\nk=3\n\\]"
+        },
+        {
+          "title": "So the formula is",
+          "body": "So the formula is\n\n\\[\nQ=3\\sqrt t\n\\]"
+        },
+        {
+          "title": "For part (b), is increased",
+          "body": "For part (b), \\(Q\\) is increased by \\(20\\%\\), so \\(Q\\) is multiplied by \\(1.2\\)."
+        },
+        {
+          "title": "Since ,",
+          "body": "Since \\(Q\\propto \\sqrt t\\),\n\n\\[\nt\\propto Q^2\n\\]"
+        },
+        {
+          "title": "So is multiplied by",
+          "body": "So \\(t\\) is multiplied by\n\n\\[\n1.2^2=1.44\n\\]"
+        },
+        {
+          "title": "This is a increase",
+          "body": "This is a \\(44\\%\\) increase."
+        }
+      ],
+      "finalAnswer": "(a) \\(Q=3\\sqrt t\\), (b) \\(44\\%\\)"
     },
     "all::Jun2023_P2H__Q15__p15-15__m07__Algebraic-Roots-and-Indices": {
       "status": "checked",
-      "source": "**Topic check:** Corrected to Algebraic Roots and Indices. The first two parts are index laws; the final part is a linear equation.\n\n**Method**\n\nFor part (a),\n\n\\[\n(32a^{15})^{3/5}=32^{3/5}a^{15\\times 3/5}\n\\]\n\n\\[\n=8a^9\n\\]\n\nFor part (b),\n\n\\[\n\\left(\\frac{1}{10x}\\right)^{-3}=(10x)^3=1000x^3\n\\]\n\nFor part (c),\n\n\\[\n\\frac{1-2y}{3}=\\frac45-\\frac{2y-1}{2}\n\\]\n\nMultiply by \\(30\\):\n\n\\[\n10(1-2y)=24-15(2y-1)\n\\]\n\n\\[\n10-20y=39-30y\n\\]\n\n\\[\n10y=29\n\\]\n\n\\[\ny=\\frac{29}{10}\n\\]\n\n**Answer:** (a) \\(8a^9\\), (b) \\(1000x^3\\), (c) \\(y=\\frac{29}{10}\\)",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T01:57:17",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Corrected to Algebraic Roots and Indices. The first two parts are index laws; the final part is a linear equation.",
+      "steps": [
+        {
+          "title": "For part (a),",
+          "body": "For part (a),\n\n\\[\n(32a^{15})^{3/5}=32^{3/5}a^{15\\times 3/5}\n\\]\n\n\\[\n=8a^9\n\\]"
+        },
+        {
+          "title": "For part (b),",
+          "body": "For part (b),\n\n\\[\n\\left(\\frac{1}{10x}\\right)^{-3}=(10x)^3=1000x^3\n\\]"
+        },
+        {
+          "title": "For part (c),",
+          "body": "For part (c),\n\n\\[\n\\frac{1-2y}{3}=\\frac45-\\frac{2y-1}{2}\n\\]"
+        },
+        {
+          "title": "Multiply by",
+          "body": "Multiply by \\(30\\):\n\n\\[\n10(1-2y)=24-15(2y-1)\n\\]\n\n\\[\n10-20y=39-30y\n\\]\n\n\\[\n10y=29\n\\]\n\n\\[\ny=\\frac{29}{10}\n\\]"
+        }
+      ],
+      "finalAnswer": "(a) \\(8a^9\\), (b) \\(1000x^3\\), (c) \\(y=\\frac{29}{10}\\)"
     },
     "all::Jun2023_P2H__Q19__p19-19__m03__Completing-the-Square": {
       "status": "checked",
-      "source": "**Topic check:** Completing the square. The tag is correct.\n\n**Solution**\n\n\\[\n3x^2-6x+5=3(x^2-2x)+5\n\\]\n\n\\[\n=3\\big((x-1)^2-1\\big)+5\n\\]\n\n\\[\n=3(x-1)^2+2\n\\]\n\n**Answer:** \\(3(x-1)^2+2\\)",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T07:19:17",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Completing the square. The tag is correct.",
+      "steps": [
+        {
+          "title": "Step 1",
+          "body": "\\[\n3x^2-6x+5=3(x^2-2x)+5\n\\]\n\n\\[\n=3\\big((x-1)^2-1\\big)+5\n\\]\n\n\\[\n=3(x-1)^2+2\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(3(x-1)^2+2\\)"
     },
     "all::Jun2023_P2H__Q17__p17-17__m07__Rearranging-Formulas": {
       "status": "checked",
-      "source": "**Topic check:** Rearranging formulas. The tag is correct.\n\n**Solution**\n\n(a)\n\\[\n(x+6)(3x-2)(x+6)=(x+6)^2(3x-2)\n\\]\n\n\\[\n=(x^2+12x+36)(3x-2)\n\\]\n\n\\[\n=3x^3+34x^2+84x-72\n\\]\n\n(b)\n\\[\nw=\\sqrt{\\frac{e+g}{ef-d}}\n\\]\n\n\\[\nw^2=\\frac{e+g}{ef-d}\n\\]\n\n\\[\nw^2(ef-d)=e+g\n\\]\n\n\\[\ne(fw^2-1)=g+dw^2\n\\]\n\n**Answer:** (a) \\(3x^3+34x^2+84x-72\\), (b) \\(e=\\frac{g+dw^2}{fw^2-1}\\)",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T07:19:17",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Rearranging formulas. The tag is correct.",
+      "steps": [
+        {
+          "title": "(a)",
+          "body": "(a)\n\\[\n(x+6)(3x-2)(x+6)=(x+6)^2(3x-2)\n\\]\n\n\\[\n=(x^2+12x+36)(3x-2)\n\\]\n\n\\[\n=3x^3+34x^2+84x-72\n\\]"
+        },
+        {
+          "title": "(b)",
+          "body": "(b)\n\\[\nw=\\sqrt{\\frac{e+g}{ef-d}}\n\\]\n\n\\[\nw^2=\\frac{e+g}{ef-d}\n\\]\n\n\\[\nw^2(ef-d)=e+g\n\\]\n\n\\[\ne(fw^2-1)=g+dw^2\n\\]"
+        }
+      ],
+      "finalAnswer": "(a) \\(3x^3+34x^2+84x-72\\), (b) \\(e=\\frac{g+dw^2}{fw^2-1}\\)"
     },
     "all::Jun2023_P2H__Q01__p03-03__m03__Algebraic-Proof": {
       "status": "checked",
-      "source": "**Topic check:** Algebraic proof. The tag is acceptable because the question asks to show the exact result.\n\n**Solution**\n\n\\[\n4\\frac{2}{3}=\\frac{14}{3},\\qquad 1\\frac{1}{5}=\\frac{6}{5}\n\\]\n\n\\[\n4\\frac{2}{3}\\div1\\frac{1}{5}=\\frac{14}{3}\\div\\frac{6}{5}\n\\]\n\n\\[\n=\\frac{14}{3}\\times\\frac{5}{6}=\\frac{70}{18}=\\frac{35}{9}\n\\]\n\n\\[\n\\frac{35}{9}=3\\frac{8}{9}\n\\]\n\n**Answer:** \\(3\\frac{8}{9}\\).",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T07:35:26",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Algebraic proof. The tag is acceptable because the question asks to show the exact result.",
+      "steps": [
+        {
+          "title": "Step 1",
+          "body": "\\[\n4\\frac{2}{3}=\\frac{14}{3},\\qquad 1\\frac{1}{5}=\\frac{6}{5}\n\\]\n\n\\[\n4\\frac{2}{3}\\div1\\frac{1}{5}=\\frac{14}{3}\\div\\frac{6}{5}\n\\]\n\n\\[\n=\\frac{14}{3}\\times\\frac{5}{6}=\\frac{70}{18}=\\frac{35}{9}\n\\]\n\n\\[\n\\frac{35}{9}=3\\frac{8}{9}\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(3\\frac{8}{9}\\)."
     },
     "all::Jun2023_P2H__Q21__p21-21__m05__Simultaneous-Equations": {
       "status": "checked",
-      "source": "**Topic check:** Correct.\n\n**Method**\n\n\\[\n2x^2+3y^2=11\n\\]\n\n\\[\nx=3y-1\n\\]\n\nSubstitute:\n\n\\[\n2(3y-1)^2+3y^2=11\n\\]\n\n\\[\n18y^2-12y+2+3y^2=11\n\\]\n\n\\[\n21y^2-12y-9=0\n\\]\n\n\\[\n7y^2-4y-3=0\n\\]\n\n\\[\n(7y+3)(y-1)=0\n\\]\n\nSo\n\n\\[\ny=-\\frac37 \\quad \\text{or} \\quad y=1\n\\]\n\nFind \\(x\\):\n\n\\[\ny=-\\frac37 \\Rightarrow x=-\\frac{16}{7}\n\\]\n\n\\[\ny=1 \\Rightarrow x=2\n\\]\n\n**Answer:** \\((x,y)=\\left(-\\dfrac{16}{7},-\\dfrac37\\right)\\) or \\((2,1)\\)",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T07:04:07",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Correct.",
+      "steps": [
+        {
+          "title": "Step 1",
+          "body": "\\[\n2x^2+3y^2=11\n\\]\n\n\\[\nx=3y-1\n\\]"
+        },
+        {
+          "title": "Substitute",
+          "body": "Substitute:\n\n\\[\n2(3y-1)^2+3y^2=11\n\\]\n\n\\[\n18y^2-12y+2+3y^2=11\n\\]\n\n\\[\n21y^2-12y-9=0\n\\]\n\n\\[\n7y^2-4y-3=0\n\\]\n\n\\[\n(7y+3)(y-1)=0\n\\]"
+        },
+        {
+          "title": "So",
+          "body": "So\n\n\\[\ny=-\\frac37 \\quad \\text{or} \\quad y=1\n\\]"
+        },
+        {
+          "title": "Find",
+          "body": "Find \\(x\\):\n\n\\[\ny=-\\frac37 \\Rightarrow x=-\\frac{16}{7}\n\\]\n\n\\[\ny=1 \\Rightarrow x=2\n\\]"
+        }
+      ],
+      "finalAnswer": "\\((x,y)=\\left(-\\dfrac{16}{7},-\\dfrac37\\right)\\) or \\((2,1)\\)"
     },
     "all::Jun2023_P2H__Q24__p26-27__m06__Coordinate-Geometry": {
       "status": "checked",
-      "source": "**Topic check:** Correct.\n\n**Method**\n\nIn the kite, \\(AB=AD\\) and \\(CB=CD\\), so \\(AC\\) is the line of symmetry.\n\nTherefore \\(D\\) is the reflection of \\(B\\) in the line \\(AC\\).\n\n\\[\nA=(-2,10),\\qquad B=\\left(-\\frac{27}{5},4\\right),\\qquad C=(4,-5)\n\\]\n\nA direction vector for \\(AC\\) is\n\n\\[\n\\begin{pmatrix}4-(-2)\\\\-5-10\\end{pmatrix}\n=\n\\begin{pmatrix}6\\\\-15\\end{pmatrix}\n\\]\n\nUse the simpler direction vector\n\n\\[\n\\begin{pmatrix}2\\\\-5\\end{pmatrix}\n\\]\n\nLet \\(H\\) be the foot of the perpendicular from \\(B\\) to \\(AC\\).\n\n\\[\n\\vec{AB}=\\begin{pmatrix}-\\frac{17}{5}\\\\-6\\end{pmatrix}\n\\]\n\nThe fraction along \\(AC\\) to \\(H\\) is\n\n\\[\n\\frac{\\vec{AB}\\cdot \\begin{pmatrix}2\\\\-5\\end{pmatrix}}{2^2+(-5)^2}\n=\n\\frac{-\\frac{34}{5}+30}{29}\n\\]\n\n\\[\n=\\frac{\\frac{116}{5}}{29}=\\frac45\n\\]\n\nSo\n\n\\[\nH=A+\\frac45\\begin{pmatrix}2\\\\-5\\end{pmatrix}\n\\]\n\n\\[\nH=\\left(-2+\\frac85,10-4\\right)\n\\]\n\n\\[\nH=\\left(-\\frac25,6\\right)\n\\]\n\nSince \\(H\\) is the midpoint of \\(BD\\),\n\n\\[\nD=2H-B\n\\]\n\n\\[\nD=\\left(-\\frac45,12\\right)-\\left(-\\frac{27}{5},4\\right)\n\\]\n\n\\[\nD=\\left(\\frac{23}{5},8\\right)\n\\]\n\n**Answer:** \\(\\displaystyle D=\\left(\\frac{23}{5},8\\right)\\)",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T07:04:07",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Correct.",
+      "steps": [
+        {
+          "title": "In the kite, and ,",
+          "body": "In the kite, \\(AB=AD\\) and \\(CB=CD\\), so \\(AC\\) is the line of symmetry."
+        },
+        {
+          "title": "Therefore is the reflection of",
+          "body": "Therefore \\(D\\) is the reflection of \\(B\\) in the line \\(AC\\).\n\n\\[\nA=(-2,10),\\qquad B=\\left(-\\frac{27}{5},4\\right),\\qquad C=(4,-5)\n\\]"
+        },
+        {
+          "title": "A direction vector for is",
+          "body": "A direction vector for \\(AC\\) is\n\n\\[\n\\begin{pmatrix}4-(-2)\\\\-5-10\\end{pmatrix}\n=\n\\begin{pmatrix}6\\\\-15\\end{pmatrix}\n\\]"
+        },
+        {
+          "title": "Use the simpler direction vector",
+          "body": "Use the simpler direction vector\n\n\\[\n\\begin{pmatrix}2\\\\-5\\end{pmatrix}\n\\]"
+        },
+        {
+          "title": "Let be the foot of",
+          "body": "Let \\(H\\) be the foot of the perpendicular from \\(B\\) to \\(AC\\).\n\n\\[\n\\vec{AB}=\\begin{pmatrix}-\\frac{17}{5}\\\\-6\\end{pmatrix}\n\\]"
+        },
+        {
+          "title": "The fraction along to is",
+          "body": "The fraction along \\(AC\\) to \\(H\\) is\n\n\\[\n\\frac{\\vec{AB}\\cdot \\begin{pmatrix}2\\\\-5\\end{pmatrix}}{2^2+(-5)^2}\n=\n\\frac{-\\frac{34}{5}+30}{29}\n\\]\n\n\\[\n=\\frac{\\frac{116}{5}}{29}=\\frac45\n\\]"
+        },
+        {
+          "title": "So",
+          "body": "So\n\n\\[\nH=A+\\frac45\\begin{pmatrix}2\\\\-5\\end{pmatrix}\n\\]\n\n\\[\nH=\\left(-2+\\frac85,10-4\\right)\n\\]\n\n\\[\nH=\\left(-\\frac25,6\\right)\n\\]"
+        },
+        {
+          "title": "Since is the midpoint of",
+          "body": "Since \\(H\\) is the midpoint of \\(BD\\),\n\n\\[\nD=2H-B\n\\]\n\n\\[\nD=\\left(-\\frac45,12\\right)-\\left(-\\frac{27}{5},4\\right)\n\\]\n\n\\[\nD=\\left(\\frac{23}{5},8\\right)\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(\\displaystyle D=\\left(\\frac{23}{5},8\\right)\\)"
     },
     "all::Jun2023_P2H__Q04__p06-06__m04__Graphs-of-Functions": {
       "status": "checked",
-      "source": "**Topic check:** Correct. This is a table-and-graph question for a quadratic function.\n\n**Solution**\n\n\\[\ny=x^2-x-4\n\\]\n\nThe completed table is:\n\n\\[\n\\begin{array}{c|rrrrrrr}\nx&-3&-2&-1&0&1&2&3\\\\\n\\hline\ny&8&2&-2&-4&-4&-2&2\n\\end{array}\n\\]\n\nPlot the points and join them with a smooth U-shaped curve.\n\n**Answer:** Missing values are \\(8,-2,-4,-2,2\\).",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T12:16:55",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Correct. This is a table-and-graph question for a quadratic function.",
+      "steps": [
+        {
+          "title": "Step 1",
+          "body": "\\[\ny=x^2-x-4\n\\]"
+        },
+        {
+          "title": "The completed table is",
+          "body": "The completed table is:\n\n\\[\n\\begin{array}{c|rrrrrrr}\nx&-3&-2&-1&0&1&2&3\\\\\n\\hline\ny&8&2&-2&-4&-4&-2&2\n\\end{array}\n\\]"
+        },
+        {
+          "title": "Plot the points and join",
+          "body": "Plot the points and join them with a smooth U-shaped curve."
+        }
+      ],
+      "finalAnswer": "Missing values are \\(8,-2,-4,-2,2\\)."
     },
     "all::Jun2023_P2H__Q18__p18-18__m03__Graphs-of-Functions": {
       "status": "checked",
-      "source": "**Topic check:** Corrected to Graphs of Functions.\n\n**Solution**\n\n\\[\ny=\\sin x\n\\]\nis the periodic sine-shaped graph, so it is **Graph C**.\n\n\\[\ny=\\frac{3}{x}\n\\]\nis the positive reciprocal graph, so it is **Graph B**.\n\n\\[\ny=4x^3-5x\n\\]\nis a cubic graph with two turning points, so it is **Graph A**.\n\n**Answer:** \\(C,\\ B,\\ A\\).",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T17:15:57",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Corrected to Graphs of Functions.",
+      "steps": [
+        {
+          "title": "is the periodic sine shaped",
+          "body": "\\[\ny=\\sin x\n\\]\nis the periodic sine-shaped graph, so it is **Graph C**."
+        },
+        {
+          "title": "is the positive reciprocal graph,",
+          "body": "\\[\ny=\\frac{3}{x}\n\\]\nis the positive reciprocal graph, so it is **Graph B**."
+        },
+        {
+          "title": "is a cubic graph with",
+          "body": "\\[\ny=4x^3-5x\n\\]\nis a cubic graph with two turning points, so it is **Graph A**."
+        }
+      ],
+      "finalAnswer": "\\(C,\\ B,\\ A\\)."
     },
     "all::Jun2023_P2H__Q09__p09-09__m03__Standard-and-Compound-Units": {
       "status": "checked",
-      "source": "**Topic check:** Correct. This is converting kilometres per hour to metres per second.\n\n**Solution**\n\nTo convert km/h to m/s, divide by \\(3.6\\).\n\n\\[\n27\\div3.6=7.5\n\\]\n\n**Answer:** \\(7.5\\text{ m/s}\\).",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T12:16:55",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Correct. This is converting kilometres per hour to metres per second.",
+      "steps": [
+        {
+          "title": "To convert km/h to m/s,",
+          "body": "To convert km/h to m/s, divide by \\(3.6\\).\n\n\\[\n27\\div3.6=7.5\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(7.5\\text{ m/s}\\)."
     },
     "all::Jun2023_P2H__Q03__p05-05__m04__Angles-in-Polygons-and-Parallel-Lines": {
       "status": "checked",
-      "source": "**Topic check:** Corrected to Angles in Polygons & Parallel Lines. The question uses co-interior angles on parallel lines.\n\n**Solution**\n\nSince \\(BC\\parallel AD\\), the co-interior angles on side \\(AB\\) add to \\(180^\\circ\\):\n\\[\n(4x-27)+(3x+46)=180\n\\]\n\n\\[\n7x+19=180\n\\]\n\n\\[\n7x=161\n\\]\n\n\\[\nx=23\n\\]\n\nNow find the angles:\n\\[\n\\angle A=4(23)-27=65^\\circ\n\\]\n\n\\[\n\\angle B=3(23)+46=115^\\circ\n\\]\n\n\\[\n\\angle D=3(23)+10=79^\\circ\n\\]\n\nAlso, co-interior angles on side \\(CD\\) add to \\(180^\\circ\\):\n\\[\n\\angle C=180^\\circ-79^\\circ=101^\\circ\n\\]\n\nThe largest angle is \\(115^\\circ\\).\n\n**Answer:** \\(115^\\circ\\).",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T12:59:49",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Corrected to Angles in Polygons & Parallel Lines. The question uses co-interior angles on parallel lines.",
+      "steps": [
+        {
+          "title": "Since , the co interior",
+          "body": "Since \\(BC\\parallel AD\\), the co-interior angles on side \\(AB\\) add to \\(180^\\circ\\):\n\\[\n(4x-27)+(3x+46)=180\n\\]\n\n\\[\n7x+19=180\n\\]\n\n\\[\n7x=161\n\\]\n\n\\[\nx=23\n\\]"
+        },
+        {
+          "title": "Now find the angles",
+          "body": "Now find the angles:\n\\[\n\\angle A=4(23)-27=65^\\circ\n\\]\n\n\\[\n\\angle B=3(23)+46=115^\\circ\n\\]\n\n\\[\n\\angle D=3(23)+10=79^\\circ\n\\]"
+        },
+        {
+          "title": "Also, co interior angles on",
+          "body": "Also, co-interior angles on side \\(CD\\) add to \\(180^\\circ\\):\n\\[\n\\angle C=180^\\circ-79^\\circ=101^\\circ\n\\]"
+        },
+        {
+          "title": "The largest angle is",
+          "body": "The largest angle is \\(115^\\circ\\)."
+        }
+      ],
+      "finalAnswer": "\\(115^\\circ\\)."
     },
     "all::Jun2023_P2H__Q11__p11-11__m03__Angles-in-Polygons-and-Parallel-Lines": {
       "status": "checked",
-      "source": "**Topic check:** Corrected to angles in polygons and parallel lines. The question uses angles in a regular polygon.\n\n**Solution**\n\nFor a regular 9-sided polygon, the angle at the centre between adjacent vertices is\n\\[\n\\frac{360}{9}=40^\\circ\n\\]\n\nThe side \\(FE\\) is perpendicular to the radius drawn to the midpoint of side \\(FE\\).\n\nFrom \\(OD\\) to this midpoint radius is\n\\[\n40^\\circ+20^\\circ=60^\\circ\n\\]\n\nSo the angle between \\(OD\\) and the side \\(FE\\) is\n\\[\n90^\\circ-60^\\circ=30^\\circ\n\\]\n\nSince \\(ODK\\) and \\(FEK\\) are straight lines, this is the angle \\(x\\).\n\n**Answer:** \\(x=30^\\circ\\).",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T07:57:33",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Corrected to angles in polygons and parallel lines. The question uses angles in a regular polygon.",
+      "steps": [
+        {
+          "title": "For a regular 9 sided",
+          "body": "For a regular 9-sided polygon, the angle at the centre between adjacent vertices is\n\\[\n\\frac{360}{9}=40^\\circ\n\\]"
+        },
+        {
+          "title": "The side is perpendicular to",
+          "body": "The side \\(FE\\) is perpendicular to the radius drawn to the midpoint of side \\(FE\\)."
+        },
+        {
+          "title": "From to this midpoint radius",
+          "body": "From \\(OD\\) to this midpoint radius is\n\\[\n40^\\circ+20^\\circ=60^\\circ\n\\]"
+        },
+        {
+          "title": "So the angle between and",
+          "body": "So the angle between \\(OD\\) and the side \\(FE\\) is\n\\[\n90^\\circ-60^\\circ=30^\\circ\n\\]"
+        },
+        {
+          "title": "Since and are straight lines,",
+          "body": "Since \\(ODK\\) and \\(FEK\\) are straight lines, this is the angle \\(x\\)."
+        }
+      ],
+      "finalAnswer": "\\(x=30^\\circ\\)."
     },
     "all::Jun2023_P2H__Q07__p08-08__m03__Circle-Theorems": {
       "status": "checked",
-      "source": "**Topic check:** Circle Theorems. The tag is correct.\n\n**Solution**\n\nA radius is perpendicular to a tangent, so\n\\[\n\\angle OAD=90^\\circ\n\\]\n\nand\n\\[\n\\angle OCD=90^\\circ\n\\]\n\nIn quadrilateral \\(AOCD\\),\n\\[\n\\angle AOC=360^\\circ-90^\\circ-90^\\circ-48^\\circ=132^\\circ\n\\]\n\nThe question asks for the reflex angle:\n\\[\n360^\\circ-132^\\circ=228^\\circ\n\\]\n\n**Answer:** \\(228^\\circ\\).",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T12:59:49",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Circle Theorems. The tag is correct.",
+      "steps": [
+        {
+          "title": "A radius is perpendicular to",
+          "body": "A radius is perpendicular to a tangent, so\n\\[\n\\angle OAD=90^\\circ\n\\]"
+        },
+        {
+          "title": "and",
+          "body": "and\n\\[\n\\angle OCD=90^\\circ\n\\]"
+        },
+        {
+          "title": "In quadrilateral ,",
+          "body": "In quadrilateral \\(AOCD\\),\n\\[\n\\angle AOC=360^\\circ-90^\\circ-90^\\circ-48^\\circ=132^\\circ\n\\]"
+        },
+        {
+          "title": "The question asks for the",
+          "body": "The question asks for the reflex angle:\n\\[\n360^\\circ-132^\\circ=228^\\circ\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(228^\\circ\\)."
     },
     "all::Jun2023_P2H__Q14__p14-14__m04__Circle-Theorems": {
       "status": "checked",
-      "source": "**Topic check:** Circle Theorems. The tag is correct.\n\n**Solution**\n\n(a) Since \\(RP\\) is a diameter,\n\\[\n\\angle RQP=90^\\circ\n\\]\n\nReason: the angle in a semicircle is \\(90^\\circ\\).\n\n(b) Angles \\(PRQ\\) and \\(PSQ\\) stand on the same chord \\(PQ\\), so they are equal.\n\n\\[\n\\angle PSQ=22^\\circ\n\\]\n\n**Answer:** \\(\\angle RQP=90^\\circ\\), and \\(\\angle PSQ=22^\\circ\\).",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T12:59:49",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Circle Theorems. The tag is correct.",
+      "steps": [
+        {
+          "title": "(a) Since is a diameter,",
+          "body": "(a) Since \\(RP\\) is a diameter,\n\\[\n\\angle RQP=90^\\circ\n\\]"
+        },
+        {
+          "title": "Reason the angle in a",
+          "body": "Reason: the angle in a semicircle is \\(90^\\circ\\)."
+        },
+        {
+          "title": "(b) Angles and stand on",
+          "body": "(b) Angles \\(PRQ\\) and \\(PSQ\\) stand on the same chord \\(PQ\\), so they are equal.\n\n\\[\n\\angle PSQ=22^\\circ\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(\\angle RQP=90^\\circ\\), and \\(\\angle PSQ=22^\\circ\\)."
     },
     "all::Jun2023_P2H__Q12__p12-12__m04__Right-Angled-Triangles-Pythagoras-and-Trigonometry": {
       "status": "checked",
-      "source": "**Topic check:** Right-Angled Triangles - Pythagoras & Trigonometry. The tag is correct.\n\n**Solution**\n\nFirst find angle \\(DAB\\):\n\\[\n\\cos(\\angle DAB)=\\frac{8}{14}\n\\]\n\n\\[\n\\angle DAB=55.150\\ldots^\\circ\n\\]\n\nGiven\n\\[\n\\angle BAC=38^\\circ\n\\]\n\nSo\n\\[\n\\angle CAD=55.150\\ldots^\\circ-38^\\circ=17.150\\ldots^\\circ\n\\]\n\nIn right-angled triangle \\(ACD\\),\n\\[\n\\tan(17.150\\ldots^\\circ)=\\frac{CD}{8}\n\\]\n\n\\[\nCD=2.468\\ldots\n\\]\n\n**Answer:** \\(2.47\\text{ cm}\\).",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T13:35:18",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Right-Angled Triangles - Pythagoras & Trigonometry. The tag is correct.",
+      "steps": [
+        {
+          "title": "First find angle",
+          "body": "First find angle \\(DAB\\):\n\\[\n\\cos(\\angle DAB)=\\frac{8}{14}\n\\]\n\n\\[\n\\angle DAB=55.150\\ldots^\\circ\n\\]"
+        },
+        {
+          "title": "Given",
+          "body": "Given\n\\[\n\\angle BAC=38^\\circ\n\\]"
+        },
+        {
+          "title": "So",
+          "body": "So\n\\[\n\\angle CAD=55.150\\ldots^\\circ-38^\\circ=17.150\\ldots^\\circ\n\\]"
+        },
+        {
+          "title": "In right angled triangle ,",
+          "body": "In right-angled triangle \\(ACD\\),\n\\[\n\\tan(17.150\\ldots^\\circ)=\\frac{CD}{8}\n\\]\n\n\\[\nCD=2.468\\ldots\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(2.47\\text{ cm}\\)."
     },
     "all::Jun2023_P2H__Q22__p22-23__m05__Sine-Cosine-Rule-and-Area-of-Triangles": {
       "status": "checked",
-      "source": "**Topic check:** Moved to Sine, Cosine Rule & Area of Triangles.\n\n**Method**\n\nIn triangle \\(ABC\\),\n\n\\[\nAB=9,\\qquad BC=11,\\qquad AC=16\n\\]\n\nUse Heron's formula.\n\n\\[\ns=\\frac{9+11+16}{2}=18\n\\]\n\n\\[\n\\text{area}=\\sqrt{18(18-9)(18-11)(18-16)}\n\\]\n\n\\[\n=\\sqrt{18\\cdot 9\\cdot 7\\cdot 2}\n=47.6235\\ldots\n\\]\n\n\\(D\\) is the foot of the perpendicular from \\(B\\) to \\(AC\\), so \\(BD\\) is the height of triangle \\(ABC\\).\n\n\\[\n\\text{area}=\\frac{1}{2}\\times AC\\times BD\n\\]\n\n\\[\n47.6235\\ldots=\\frac{1}{2}\\times 16\\times BD\n\\]\n\n\\[\nBD=5.9529\\ldots\n\\]\n\nIn right-angled triangle \\(BDF\\),\n\n\\[\n\\tan \\theta=\\frac{BF}{BD}\n\\]\n\n\\[\n\\tan \\theta=\\frac{10}{5.9529\\ldots}\n\\]\n\n\\[\n\\theta=\\tan^{-1}\\left(\\frac{10}{5.9529\\ldots}\\right)\n=59.2349\\ldots^\\circ\n\\]\n\n**Answer:** \\(\\boxed{59.2^\\circ}\\)",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T07:04:07",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Moved to Sine, Cosine Rule & Area of Triangles.",
+      "steps": [
+        {
+          "title": "In triangle ,",
+          "body": "In triangle \\(ABC\\),\n\n\\[\nAB=9,\\qquad BC=11,\\qquad AC=16\n\\]"
+        },
+        {
+          "title": "Use Heron s formula",
+          "body": "Use Heron's formula.\n\n\\[\ns=\\frac{9+11+16}{2}=18\n\\]\n\n\\[\n\\text{area}=\\sqrt{18(18-9)(18-11)(18-16)}\n\\]\n\n\\[\n=\\sqrt{18\\cdot 9\\cdot 7\\cdot 2}\n=47.6235\\ldots\n\\]"
+        },
+        {
+          "title": "is the foot of the",
+          "body": "\\(D\\) is the foot of the perpendicular from \\(B\\) to \\(AC\\), so \\(BD\\) is the height of triangle \\(ABC\\).\n\n\\[\n\\text{area}=\\frac{1}{2}\\times AC\\times BD\n\\]\n\n\\[\n47.6235\\ldots=\\frac{1}{2}\\times 16\\times BD\n\\]\n\n\\[\nBD=5.9529\\ldots\n\\]"
+        },
+        {
+          "title": "In right angled triangle ,",
+          "body": "In right-angled triangle \\(BDF\\),\n\n\\[\n\\tan \\theta=\\frac{BF}{BD}\n\\]\n\n\\[\n\\tan \\theta=\\frac{10}{5.9529\\ldots}\n\\]\n\n\\[\n\\theta=\\tan^{-1}\\left(\\frac{10}{5.9529\\ldots}\\right)\n=59.2349\\ldots^\\circ\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(\\boxed{59.2^\\circ}\\)"
     },
     "all::Jun2023_P2H__Q10__p10-10__m04__Statistics-Toolkit": {
       "status": "checked",
-      "source": "**Topic check:** Statistics Toolkit. The tag is correct.\n\n**Solution**\n\nTeam A:\n\n\\[\n11 \\times 17=187\n\\]\n\nAfter the next round:\n\n\\[\n12 \\times 18.5=222\n\\]\n\n\\[\n\\text{next score}=222-187=35\n\\]\n\nTeam B:\n\n\\[\n9 \\times 18=162\n\\]\n\nAfter the next round:\n\n\\[\n10 \\times 18.5=185\n\\]\n\n\\[\n\\text{next score}=185-162=23\n\\]\n\nDifference:\n\n\\[\n35-23=12\n\\]\n\n**Answer:** \\(12\\).",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T18:13:48",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Statistics Toolkit. The tag is correct.",
+      "steps": [
+        {
+          "title": "Team A",
+          "body": "Team A:\n\n\\[\n11 \\times 17=187\n\\]"
+        },
+        {
+          "title": "After the next round",
+          "body": "After the next round:\n\n\\[\n12 \\times 18.5=222\n\\]\n\n\\[\n\\text{next score}=222-187=35\n\\]"
+        },
+        {
+          "title": "Team B",
+          "body": "Team B:\n\n\\[\n9 \\times 18=162\n\\]"
+        },
+        {
+          "title": "After the next round",
+          "body": "After the next round:\n\n\\[\n10 \\times 18.5=185\n\\]\n\n\\[\n\\text{next score}=185-162=23\n\\]"
+        },
+        {
+          "title": "Difference",
+          "body": "Difference:\n\n\\[\n35-23=12\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(12\\)."
     },
     "all::Jun2023_P2H__Q02__p04-04__m03__Probability-Toolkit": {
       "status": "missing",
-      "source": "**Topic check:** Probability Toolkit. The tag is correct.\n\n**Solution**\n\nThe probability of pink is\n\n\\[\n1-0.32-0.13-0.28=0.27\n\\]\n\nExpected number of pink sweets:\n\n\\[\n200\\times 0.27=54\n\\]\n\n**Answer:** \\(54\\).",
+      "checkedBy": "",
       "updated": "2026-05-06T18:49:24",
-      "checked_by": ""
+      "topicNote": "Probability Toolkit. The tag is correct.",
+      "steps": [
+        {
+          "title": "The probability of pink is",
+          "body": "The probability of pink is\n\n\\[\n1-0.32-0.13-0.28=0.27\n\\]"
+        },
+        {
+          "title": "Expected number of pink sweets",
+          "body": "Expected number of pink sweets:\n\n\\[\n200\\times 0.27=54\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(54\\)."
     },
     "all::Jun2023_P2H__Q13__p13-13__m04__Probability-Diagrams-Venn-and-Tree-Diagrams": {
       "status": "missing",
-      "source": "**Topic check:** Probability Diagrams - Venn & Tree Diagrams. The tag is correct.\n\n**Solution**\n\nDice A has \\(4\\) yellow faces out of \\(6\\).\nDice B has \\(5\\) yellow faces out of \\(6\\).\n\n\\[\nP(\\text{both yellow})=\\frac46\\times\\frac56\n\\]\n\n\\[\n=\\frac59\n\\]\n\n**Answer:** \\(\\frac59\\).",
+      "checkedBy": "",
       "updated": "2026-05-06T18:49:24",
-      "checked_by": ""
+      "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
+      "steps": [
+        {
+          "title": "Dice A has yellow faces",
+          "body": "Dice A has \\(4\\) yellow faces out of \\(6\\).\nDice B has \\(5\\) yellow faces out of \\(6\\).\n\n\\[\nP(\\text{both yellow})=\\frac46\\times\\frac56\n\\]\n\n\\[\n=\\frac59\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(\\frac59\\)."
     },
     "all::Jun2023_P2H__Q20__p20-20__m03__Combined-and-Conditional-Probability": {
       "status": "checked",
-      "source": "**Topic check:** Correct.\n\n**Method**\n\nThere are 3 red counters.\n\nAt least one red counter is still in the bag unless all 3 red counters are taken.\n\nSo use the complement:\n\n\\[\nP(\\text{all 3 red are taken})\n=\\frac{3}{12}\\cdot\\frac{2}{11}\\cdot\\frac{1}{10}\n\\]\n\n\\[\n=\\frac{6}{1320}\n\\]\n\n\\[\n=\\frac{1}{220}\n\\]\n\nTherefore,\n\n\\[\nP(\\text{at least one red is still in the bag})\n=1-\\frac{1}{220}\n\\]\n\n\\[\n=\\frac{219}{220}\n\\]\n\n**Answer:** \\(\\frac{219}{220}\\)",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-06T07:04:07",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Correct.",
+      "steps": [
+        {
+          "title": "There are 3 red counters",
+          "body": "There are 3 red counters."
+        },
+        {
+          "title": "At least one red counter",
+          "body": "At least one red counter is still in the bag unless all 3 red counters are taken."
+        },
+        {
+          "title": "So use the complement",
+          "body": "So use the complement:\n\n\\[\nP(\\text{all 3 red are taken})\n=\\frac{3}{12}\\cdot\\frac{2}{11}\\cdot\\frac{1}{10}\n\\]\n\n\\[\n=\\frac{6}{1320}\n\\]\n\n\\[\n=\\frac{1}{220}\n\\]"
+        },
+        {
+          "title": "Therefore,",
+          "body": "Therefore,\n\n\\[\nP(\\text{at least one red is still in the bag})\n=1-\\frac{1}{220}\n\\]\n\n\\[\n=\\frac{219}{220}\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(\\frac{219}{220}\\)"
     },
     "expertise::Jun2023_P2H__Q25__p28-28__m04__Rounding-Estimation-and-Bounds": {
       "status": "checked",
-      "source": "**Topic check:** Rounding, Estimation & Bounds is correct. The question is about choosing bounds before using the density formula.\n\n**Method**\n\nFor the upper bound of density, use the upper bound of the mass and the lower bound of the volume.\n\nThe radius is \\(2.8\\) cm correct to 1 decimal place, so the lower bound is\n\n\\(r=2.75\\)\n\n\\(M=260\\) correct to 2 significant figures, so the upper bound is\n\n\\(M=265\\)\n\nThe mass is given as \\(M\\pi\\) grams, where \\(M=265\\) for the upper bound.\n\nThe volume of the sphere is\n\n\\[\n\\frac{4}{3}\\pi r^3\n\\]\n\nSo\n\n\\[\n\\text{density}\n=\n\\frac{M\\pi}{\\frac{4}{3}\\pi r^3}\n\\]\n\nThe \\(\\pi\\) cancels:\n\n\\[\n\\text{density}=\\frac{3M}{4r^3}\n\\]\n\nUpper bound:\n\n\\(\\dfrac{3(265)}{4(2.75)^3}=9.5567...\\)\n\n**Answer:** \\(9.56\\text{ g/cm}^3\\) to 2 decimal places.",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-05",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Rounding, Estimation & Bounds is correct. The question is about choosing bounds before using the density formula.",
+      "steps": [
+        {
+          "title": "For the upper bound of",
+          "body": "For the upper bound of density, use the upper bound of the mass and the lower bound of the volume."
+        },
+        {
+          "title": "The radius is cm correct",
+          "body": "The radius is \\(2.8\\) cm correct to 1 decimal place, so the lower bound is\n\n\\(r=2.75\\)"
+        },
+        {
+          "title": "correct to 2 significant figures,",
+          "body": "\\(M=260\\) correct to 2 significant figures, so the upper bound is\n\n\\(M=265\\)"
+        },
+        {
+          "title": "The mass is given as",
+          "body": "The mass is given as \\(M\\pi\\) grams, where \\(M=265\\) for the upper bound."
+        },
+        {
+          "title": "The volume of the sphere",
+          "body": "The volume of the sphere is\n\n\\[\n\\frac{4}{3}\\pi r^3\n\\]"
+        },
+        {
+          "title": "So",
+          "body": "So\n\n\\[\n\\text{density}\n=\n\\frac{M\\pi}{\\frac{4}{3}\\pi r^3}\n\\]"
+        },
+        {
+          "title": "The cancels",
+          "body": "The \\(\\pi\\) cancels:\n\n\\[\n\\text{density}=\\frac{3M}{4r^3}\n\\]"
+        },
+        {
+          "title": "Upper bound",
+          "body": "Upper bound:\n\n\\(\\dfrac{3(265)}{4(2.75)^3}=9.5567...\\)"
+        }
+      ],
+      "finalAnswer": "\\(9.56\\text{ g/cm}^3\\) to 2 decimal places."
     },
     "expertise::Jun2023_P2H__Q23__p24-25__m04__Surds": {
       "status": "checked",
-      "source": "**Topic check:** Corrected from Right-Angled Triangles to Surds.\n\n**Method**\n\nThe cuboid has square cross section, so its volume is\n\n\\[\nx^2(2\\sqrt5-3)\n\\]\n\nGiven\n\n\\[\nx^2(2\\sqrt5-3)=13+6\\sqrt5\n\\]\n\nSo\n\n\\[\nx^2=\\frac{13+6\\sqrt5}{2\\sqrt5-3}\n\\]\n\nRationalise the denominator:\n\n\\[\nx^2=\\frac{13+6\\sqrt5}{2\\sqrt5-3}\\cdot\\frac{2\\sqrt5+3}{2\\sqrt5+3}\n\\]\n\n\\[\nx^2=\\frac{(13+6\\sqrt5)(2\\sqrt5+3)}{20-9}\n\\]\n\n\\[\nx^2=\\frac{99+44\\sqrt5}{11}\n\\]\n\n\\[\nx^2=9+4\\sqrt5\n\\]\n\nNow\n\n\\[\n(2+\\sqrt5)^2=4+4\\sqrt5+5=9+4\\sqrt5\n\\]\n\nTherefore\n\n\\[\nx=2+\\sqrt5\n\\]\n\n**Answer:** \\(\\boxed{2+\\sqrt5}\\)",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-05",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Corrected from Right-Angled Triangles to Surds.",
+      "steps": [
+        {
+          "title": "The cuboid has square cross",
+          "body": "The cuboid has square cross section, so its volume is\n\n\\[\nx^2(2\\sqrt5-3)\n\\]"
+        },
+        {
+          "title": "Given",
+          "body": "Given\n\n\\[\nx^2(2\\sqrt5-3)=13+6\\sqrt5\n\\]"
+        },
+        {
+          "title": "So",
+          "body": "So\n\n\\[\nx^2=\\frac{13+6\\sqrt5}{2\\sqrt5-3}\n\\]"
+        },
+        {
+          "title": "Rationalise the denominator",
+          "body": "Rationalise the denominator:\n\n\\[\nx^2=\\frac{13+6\\sqrt5}{2\\sqrt5-3}\\cdot\\frac{2\\sqrt5+3}{2\\sqrt5+3}\n\\]\n\n\\[\nx^2=\\frac{(13+6\\sqrt5)(2\\sqrt5+3)}{20-9}\n\\]\n\n\\[\nx^2=\\frac{99+44\\sqrt5}{11}\n\\]\n\n\\[\nx^2=9+4\\sqrt5\n\\]"
+        },
+        {
+          "title": "Now",
+          "body": "Now\n\n\\[\n(2+\\sqrt5)^2=4+4\\sqrt5+5=9+4\\sqrt5\n\\]"
+        },
+        {
+          "title": "Therefore",
+          "body": "Therefore\n\n\\[\nx=2+\\sqrt5\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(\\boxed{2+\\sqrt5}\\)"
     },
     "expertise::Jun2023_P2H__Q21__p21-21__m05__Simultaneous-Equations": {
       "status": "checked",
-      "source": "**Topic check:** Correct.\n\n**Method**\n\n\\[\n2x^2+3y^2=11\n\\]\n\n\\[\nx=3y-1\n\\]\n\nSubstitute:\n\n\\[\n2(3y-1)^2+3y^2=11\n\\]\n\n\\[\n18y^2-12y+2+3y^2=11\n\\]\n\n\\[\n21y^2-12y-9=0\n\\]\n\n\\[\n7y^2-4y-3=0\n\\]\n\n\\[\n(7y+3)(y-1)=0\n\\]\n\nSo\n\n\\[\ny=-\\frac37 \\quad \\text{or} \\quad y=1\n\\]\n\nFind \\(x\\):\n\n\\[\ny=-\\frac37 \\Rightarrow x=-\\frac{16}{7}\n\\]\n\n\\[\ny=1 \\Rightarrow x=2\n\\]\n\n**Answer:** \\((x,y)=\\left(-\\dfrac{16}{7},-\\dfrac37\\right)\\) or \\((2,1)\\)",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-05",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Correct.",
+      "steps": [
+        {
+          "title": "Step 1",
+          "body": "\\[\n2x^2+3y^2=11\n\\]\n\n\\[\nx=3y-1\n\\]"
+        },
+        {
+          "title": "Substitute",
+          "body": "Substitute:\n\n\\[\n2(3y-1)^2+3y^2=11\n\\]\n\n\\[\n18y^2-12y+2+3y^2=11\n\\]\n\n\\[\n21y^2-12y-9=0\n\\]\n\n\\[\n7y^2-4y-3=0\n\\]\n\n\\[\n(7y+3)(y-1)=0\n\\]"
+        },
+        {
+          "title": "So",
+          "body": "So\n\n\\[\ny=-\\frac37 \\quad \\text{or} \\quad y=1\n\\]"
+        },
+        {
+          "title": "Find",
+          "body": "Find \\(x\\):\n\n\\[\ny=-\\frac37 \\Rightarrow x=-\\frac{16}{7}\n\\]\n\n\\[\ny=1 \\Rightarrow x=2\n\\]"
+        }
+      ],
+      "finalAnswer": "\\((x,y)=\\left(-\\dfrac{16}{7},-\\dfrac37\\right)\\) or \\((2,1)\\)"
     },
     "expertise::Jun2023_P2H__Q24__p26-27__m06__Coordinate-Geometry": {
       "status": "checked",
-      "source": "**Topic check:** Correct.\n\n**Method**\n\nIn the kite, \\(AB=AD\\) and \\(CB=CD\\), so \\(AC\\) is the line of symmetry.\n\nTherefore \\(D\\) is the reflection of \\(B\\) in the line \\(AC\\).\n\n\\[\nA=(-2,10),\\qquad B=\\left(-\\frac{27}{5},4\\right),\\qquad C=(4,-5)\n\\]\n\nA direction vector for \\(AC\\) is\n\n\\[\n\\begin{pmatrix}4-(-2)\\\\-5-10\\end{pmatrix}\n=\n\\begin{pmatrix}6\\\\-15\\end{pmatrix}\n\\]\n\nUse the simpler direction vector\n\n\\[\n\\begin{pmatrix}2\\\\-5\\end{pmatrix}\n\\]\n\nLet \\(H\\) be the foot of the perpendicular from \\(B\\) to \\(AC\\).\n\n\\[\n\\vec{AB}=\\begin{pmatrix}-\\frac{17}{5}\\\\-6\\end{pmatrix}\n\\]\n\nThe fraction along \\(AC\\) to \\(H\\) is\n\n\\[\n\\frac{\\vec{AB}\\cdot \\begin{pmatrix}2\\\\-5\\end{pmatrix}}{2^2+(-5)^2}\n=\n\\frac{-\\frac{34}{5}+30}{29}\n\\]\n\n\\[\n=\\frac{\\frac{116}{5}}{29}=\\frac45\n\\]\n\nSo\n\n\\[\nH=A+\\frac45\\begin{pmatrix}2\\\\-5\\end{pmatrix}\n\\]\n\n\\[\nH=\\left(-2+\\frac85,10-4\\right)\n\\]\n\n\\[\nH=\\left(-\\frac25,6\\right)\n\\]\n\nSince \\(H\\) is the midpoint of \\(BD\\),\n\n\\[\nD=2H-B\n\\]\n\n\\[\nD=\\left(-\\frac45,12\\right)-\\left(-\\frac{27}{5},4\\right)\n\\]\n\n\\[\nD=\\left(\\frac{23}{5},8\\right)\n\\]\n\n**Answer:** \\(\\displaystyle D=\\left(\\frac{23}{5},8\\right)\\)",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-05",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Correct.",
+      "steps": [
+        {
+          "title": "In the kite, and ,",
+          "body": "In the kite, \\(AB=AD\\) and \\(CB=CD\\), so \\(AC\\) is the line of symmetry."
+        },
+        {
+          "title": "Therefore is the reflection of",
+          "body": "Therefore \\(D\\) is the reflection of \\(B\\) in the line \\(AC\\).\n\n\\[\nA=(-2,10),\\qquad B=\\left(-\\frac{27}{5},4\\right),\\qquad C=(4,-5)\n\\]"
+        },
+        {
+          "title": "A direction vector for is",
+          "body": "A direction vector for \\(AC\\) is\n\n\\[\n\\begin{pmatrix}4-(-2)\\\\-5-10\\end{pmatrix}\n=\n\\begin{pmatrix}6\\\\-15\\end{pmatrix}\n\\]"
+        },
+        {
+          "title": "Use the simpler direction vector",
+          "body": "Use the simpler direction vector\n\n\\[\n\\begin{pmatrix}2\\\\-5\\end{pmatrix}\n\\]"
+        },
+        {
+          "title": "Let be the foot of",
+          "body": "Let \\(H\\) be the foot of the perpendicular from \\(B\\) to \\(AC\\).\n\n\\[\n\\vec{AB}=\\begin{pmatrix}-\\frac{17}{5}\\\\-6\\end{pmatrix}\n\\]"
+        },
+        {
+          "title": "The fraction along to is",
+          "body": "The fraction along \\(AC\\) to \\(H\\) is\n\n\\[\n\\frac{\\vec{AB}\\cdot \\begin{pmatrix}2\\\\-5\\end{pmatrix}}{2^2+(-5)^2}\n=\n\\frac{-\\frac{34}{5}+30}{29}\n\\]\n\n\\[\n=\\frac{\\frac{116}{5}}{29}=\\frac45\n\\]"
+        },
+        {
+          "title": "So",
+          "body": "So\n\n\\[\nH=A+\\frac45\\begin{pmatrix}2\\\\-5\\end{pmatrix}\n\\]\n\n\\[\nH=\\left(-2+\\frac85,10-4\\right)\n\\]\n\n\\[\nH=\\left(-\\frac25,6\\right)\n\\]"
+        },
+        {
+          "title": "Since is the midpoint of",
+          "body": "Since \\(H\\) is the midpoint of \\(BD\\),\n\n\\[\nD=2H-B\n\\]\n\n\\[\nD=\\left(-\\frac45,12\\right)-\\left(-\\frac{27}{5},4\\right)\n\\]\n\n\\[\nD=\\left(\\frac{23}{5},8\\right)\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(\\displaystyle D=\\left(\\frac{23}{5},8\\right)\\)"
     },
     "expertise::Jun2023_P2H__Q22__p22-23__m05__Sine-Cosine-Rule-and-Area-of-Triangles": {
       "status": "checked",
-      "source": "**Topic check:** Moved to Sine, Cosine Rule & Area of Triangles.\n\n**Method**\n\nIn triangle \\(ABC\\),\n\n\\[\nAB=9,\\qquad BC=11,\\qquad AC=16\n\\]\n\nUse Heron's formula.\n\n\\[\ns=\\frac{9+11+16}{2}=18\n\\]\n\n\\[\n\\text{area}=\\sqrt{18(18-9)(18-11)(18-16)}\n\\]\n\n\\[\n=\\sqrt{18\\cdot 9\\cdot 7\\cdot 2}\n=47.6235\\ldots\n\\]\n\n\\(D\\) is the foot of the perpendicular from \\(B\\) to \\(AC\\), so \\(BD\\) is the height of triangle \\(ABC\\).\n\n\\[\n\\text{area}=\\frac{1}{2}\\times AC\\times BD\n\\]\n\n\\[\n47.6235\\ldots=\\frac{1}{2}\\times 16\\times BD\n\\]\n\n\\[\nBD=5.9529\\ldots\n\\]\n\nIn right-angled triangle \\(BDF\\),\n\n\\[\n\\tan \\theta=\\frac{BF}{BD}\n\\]\n\n\\[\n\\tan \\theta=\\frac{10}{5.9529\\ldots}\n\\]\n\n\\[\n\\theta=\\tan^{-1}\\left(\\frac{10}{5.9529\\ldots}\\right)\n=59.2349\\ldots^\\circ\n\\]\n\n**Answer:** \\(\\boxed{59.2^\\circ}\\)",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-05",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Moved to Sine, Cosine Rule & Area of Triangles.",
+      "steps": [
+        {
+          "title": "In triangle ,",
+          "body": "In triangle \\(ABC\\),\n\n\\[\nAB=9,\\qquad BC=11,\\qquad AC=16\n\\]"
+        },
+        {
+          "title": "Use Heron s formula",
+          "body": "Use Heron's formula.\n\n\\[\ns=\\frac{9+11+16}{2}=18\n\\]\n\n\\[\n\\text{area}=\\sqrt{18(18-9)(18-11)(18-16)}\n\\]\n\n\\[\n=\\sqrt{18\\cdot 9\\cdot 7\\cdot 2}\n=47.6235\\ldots\n\\]"
+        },
+        {
+          "title": "is the foot of the",
+          "body": "\\(D\\) is the foot of the perpendicular from \\(B\\) to \\(AC\\), so \\(BD\\) is the height of triangle \\(ABC\\).\n\n\\[\n\\text{area}=\\frac{1}{2}\\times AC\\times BD\n\\]\n\n\\[\n47.6235\\ldots=\\frac{1}{2}\\times 16\\times BD\n\\]\n\n\\[\nBD=5.9529\\ldots\n\\]"
+        },
+        {
+          "title": "In right angled triangle ,",
+          "body": "In right-angled triangle \\(BDF\\),\n\n\\[\n\\tan \\theta=\\frac{BF}{BD}\n\\]\n\n\\[\n\\tan \\theta=\\frac{10}{5.9529\\ldots}\n\\]\n\n\\[\n\\theta=\\tan^{-1}\\left(\\frac{10}{5.9529\\ldots}\\right)\n=59.2349\\ldots^\\circ\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(\\boxed{59.2^\\circ}\\)"
     },
     "expertise::Jun2023_P2H__Q20__p20-20__m03__Combined-and-Conditional-Probability": {
       "status": "checked",
-      "source": "**Topic check:** Correct.\n\n**Method**\n\nThere are 3 red counters.\n\nAt least one red counter is still in the bag unless all 3 red counters are taken.\n\nSo use the complement:\n\n\\[\nP(\\text{all 3 red are taken})\n=\\frac{3}{12}\\cdot\\frac{2}{11}\\cdot\\frac{1}{10}\n\\]\n\n\\[\n=\\frac{6}{1320}\n\\]\n\n\\[\n=\\frac{1}{220}\n\\]\n\nTherefore,\n\n\\[\nP(\\text{at least one red is still in the bag})\n=1-\\frac{1}{220}\n\\]\n\n\\[\n=\\frac{219}{220}\n\\]\n\n**Answer:** \\(\\frac{219}{220}\\)",
+      "checkedBy": "Dr Eslam Ahmed + Codex",
       "updated": "2026-05-05T20:41:15",
-      "checked_by": "Dr Eslam Ahmed + Codex"
+      "topicNote": "Correct.",
+      "steps": [
+        {
+          "title": "There are 3 red counters",
+          "body": "There are 3 red counters."
+        },
+        {
+          "title": "At least one red counter",
+          "body": "At least one red counter is still in the bag unless all 3 red counters are taken."
+        },
+        {
+          "title": "So use the complement",
+          "body": "So use the complement:\n\n\\[\nP(\\text{all 3 red are taken})\n=\\frac{3}{12}\\cdot\\frac{2}{11}\\cdot\\frac{1}{10}\n\\]\n\n\\[\n=\\frac{6}{1320}\n\\]\n\n\\[\n=\\frac{1}{220}\n\\]"
+        },
+        {
+          "title": "Therefore,",
+          "body": "Therefore,\n\n\\[\nP(\\text{at least one red is still in the bag})\n=1-\\frac{1}{220}\n\\]\n\n\\[\n=\\frac{219}{220}\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(\\frac{219}{220}\\)"
     }
   }
 }

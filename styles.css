@@ -1379,6 +1379,32 @@ body.practice-focus-mode .mobile-tools-toggle {
 .solution-body .solution-empty {
   color: var(--muted);
 }
+.solution-step,
+.solution-final {
+  margin: 0 0 14px;
+  padding: 14px 16px;
+  border: 1px solid rgba(207, 201, 190, 0.74);
+  border-left: 5px solid var(--accent);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(251, 246, 230, 0.72), #fff 58%);
+}
+.solution-step > strong,
+.solution-final > strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent-dark);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.solution-step p:last-child,
+.solution-final p:last-child {
+  margin-bottom: 0;
+}
+.solution-final {
+  border-left-color: var(--brand-ochre);
+  background: linear-gradient(135deg, rgba(220, 184, 119, 0.2), #fff 60%);
+}
 .print-area { display: none; }
 .print-paper-brand,
 .print-paper-footer {
