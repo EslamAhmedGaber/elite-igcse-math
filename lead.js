@@ -100,6 +100,7 @@
       panelLabel: "WMA11 tools",
       links: [
         { title: "Classified View", detail: "Topic practice", href: "/ial/wma11/index.html" },
+        { title: "Mock Builder", detail: "Build a Pure 1 test", href: "/ial/wma11/index.html#ialMockBuilder" },
         { title: "Classified PDF", detail: "Questions only", href: "/downloads/IAL/WMA11/WMA11_Classified_Questions.pdf", target: "_blank" },
         { title: "With Answers", detail: "Worked solutions", href: "/downloads/IAL/WMA11/WMA11_Classified_With_Answers.pdf", target: "_blank" },
         { title: "Expertise PDF", detail: "Q6+ route", href: "/downloads/IAL/WMA11/WMA11_Expertise_Questions.pdf", target: "_blank" },
@@ -161,11 +162,88 @@
             <div class="nav-panel-label">${group.panelLabel}</div>
             ${navTools(group.links)}
           </div>`;
-      return `<div class="nav-group nav-group-${group.id}" data-nav-group="${group.id}">
+    return `<div class="nav-group nav-group-${group.id}" data-nav-group="${group.id}">
         <a ${tabAttrs}><span>${group.label}</span><small>${group.detail}</small></a>
         ${panel}
       </div>`;
     }).join("");
+  }
+
+  function activeNavGroup() {
+    const page = document.body?.dataset.page || "";
+    const params = new URLSearchParams(window.location.search);
+    const requestedPathway = params.get("pathway");
+    if (page === "ial-wma11" || window.location.pathname.includes("/ial/wma11/") || requestedPathway === "pure") return "pure";
+    if (page === "about") return "about";
+    if (requestedPathway === "modular" || window.ELITE_PATHWAY?.mode === "modular") return "modular";
+    return "linear";
+  }
+
+  function activeToolLinks(groupId) {
+    const group = NAV_GROUPS.find((item) => item.id === groupId);
+    if (!group || groupId === "about") return null;
+    if (!group.units) return { title: group.label, detail: group.detail, links: group.links };
+    const params = new URLSearchParams(window.location.search);
+    const requestedUnit = params.get("unit") || localStorage.getItem("modularUnit") || "Unit 1";
+    const unit = group.units.find((item) => item.title === requestedUnit) || group.units[0];
+    return { title: `${group.label} ${unit.title}`, detail: unit.detail, links: unit.links };
+  }
+
+  function normalizePath(href) {
+    try {
+      return new URL(href, window.location.origin).pathname.replace(/\/+$/, "") || "/";
+    } catch (err) {
+      return "";
+    }
+  }
+
+  function isToolActive(link) {
+    const currentPath = window.location.pathname.replace(/\/+$/, "") || "/";
+    const linkPath = normalizePath(link.href);
+    const params = new URLSearchParams(window.location.search);
+    const linkUrl = new URL(link.href, window.location.origin);
+    const linkParams = linkUrl.searchParams;
+    if (link.href.includes("#") && window.location.hash && linkUrl.hash === window.location.hash) return true;
+    if (currentPath !== linkPath) return false;
+    const bank = params.get("bank") || "all";
+    const linkBank = linkParams.get("bank") || "all";
+    const mode = params.get("mode") || "";
+    const linkMode = linkParams.get("mode") || "";
+    if (linkPath.endsWith("/practice.html")) return bank === linkBank && mode === linkMode;
+    if (linkPath.endsWith("/exam.html")) return linkMode ? mode === linkMode : true;
+    return true;
+  }
+
+  function renderToolStripLink(link) {
+    const attrs = [
+      `href="${link.href}"`,
+      link.target ? `target="${link.target}" rel="noreferrer"` : "",
+      link.pathway ? `data-pathway-choice="${link.pathway}" data-pathway-target="${link.href}"` : "",
+      link.lead ? `data-lead-trigger="${link.lead}"` : "",
+      isToolActive(link) ? `aria-current="page"` : "",
+    ].filter(Boolean).join(" ");
+    return `<a ${attrs}><strong>${link.title}</strong><span>${link.detail}</span></a>`;
+  }
+
+  function initPathwayToolStrip() {
+    if (document.querySelector(".pathway-tool-strip")) return;
+    const header = document.querySelector(".site-header");
+    if (!header) return;
+    const groupId = activeNavGroup();
+    document.body?.classList.toggle("pathway-pure", groupId === "pure");
+    const toolData = activeToolLinks(groupId);
+    if (!toolData) return;
+    header.insertAdjacentHTML("afterend", `
+      <nav class="pathway-tool-strip" aria-label="${toolData.title} tools">
+        <div class="pathway-tool-strip-title">
+          <strong>${toolData.title}</strong>
+          <span>${toolData.detail}</span>
+        </div>
+        <div class="pathway-tool-strip-links">
+          ${toolData.links.map(renderToolStripLink).join("")}
+        </div>
+      </nav>
+    `);
   }
 
   function ensureDialog() {
@@ -330,17 +408,10 @@
 
       const mainTab = event.target.closest(".nav-tab-main");
       if (mainTab) {
-        event.preventDefault();
-        const group = mainTab.closest("[data-nav-group]");
-        const willOpen = !group?.classList.contains("is-open");
-        groups.forEach((item) => {
-          item.classList.remove("is-open");
-          item.querySelector(".nav-tab-main")?.setAttribute("aria-expanded", "false");
-        });
-        if (group && willOpen) {
-          group.classList.add("is-open");
-          mainTab.setAttribute("aria-expanded", "true");
-        }
+        const header = document.querySelector(".site-header");
+        const toggle = document.getElementById("navToggle");
+        if (header) header.classList.remove("nav-open");
+        if (toggle) toggle.setAttribute("aria-expanded", "false");
         return;
       }
 
@@ -384,6 +455,7 @@
     init();
     initNavToggle();
     initStructuredNav();
+    initPathwayToolStrip();
     initPwa();
   }
 

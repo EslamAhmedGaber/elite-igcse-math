@@ -23,12 +23,17 @@
 \definecolor{brandline}{HTML}{CFC9BE}
 \definecolor{rulegrey}{HTML}{CFC9BE}
 \definecolor{textgrey}{HTML}{5A5258}
+\colorlet{brandquestion}{brandnavy}
+\colorlet{brandquestiondark}{brandnavydark}
+\colorlet{brandanswer}{brandnavydark}
+\colorlet{brandaccent}{brandochre}
+\colorlet{brandaccentsoft}{brandgoldlight}
 
 \newcommand{\elitepagewatermark}{%
   \begin{tikzpicture}[remember picture,overlay]
     \node[
       scale=8.8,
-      text=brandnavy!4,
+      text=brandquestion!4,
       font=\rmfamily
     ] at (current page.center) {EA};
   \end{tikzpicture}%
@@ -38,12 +43,12 @@
 \newcommand{\pillbadge}[2]{%
   \tikz[baseline=(b.base)]{
     \node[
-      fill=brandochre,
+      fill=brandaccent,
       rounded corners=2pt,
       inner xsep=6pt, inner ysep=2.5pt,
       font=\sffamily\bfseries\footnotesize,
-      text=brandnavydark
-    ] (b) {#1\,\textcolor{brandnavydark}{\footnotesize\textbf{#2}}};
+      text=brandanswer
+    ] (b) {#1\,\textcolor{brandanswer}{\footnotesize\textbf{#2}}};
   }%
 }
 
@@ -51,14 +56,14 @@
   \clearpage\noindent
   \begin{tcolorbox}[
     enhanced,
-    colback=brandnavy, colframe=brandnavy,
+    colback=brandquestion, colframe=brandquestion,
     boxrule=0pt, arc=0pt,
     left=12pt, right=12pt, top=8pt, bottom=8pt,
-    borderline south={2pt}{0pt}{brandred},
+    borderline south={2pt}{0pt}{brandaccent},
   ]
     {\sffamily\bfseries\color{white}\large CLASSIFIED PROBLEM}\hfill
     \pillbadge{Paper:}{\,#1}\,\pillbadge{Session:}{\,#2}\,\pillbadge{Q\#:}{\,#3}\,\pillbadge{Marks:}{\,#4}\\[3pt]
-    {\sffamily\color{brandgoldlight}\small\textsc{Topic:} \textbf{#5}}\\[2pt]
+    {\sffamily\color{brandaccentsoft}\small\textsc{Topic:} \textbf{#5}}\\[2pt]
     {\sffamily\color{white!84}\footnotesize Source: #7}
   \end{tcolorbox}
   \par\vspace{6pt}
@@ -73,7 +78,7 @@
       arc=1pt,
       boxrule=0.5pt,
       left=8pt,right=8pt,top=8pt,bottom=8pt,
-      borderline west={2pt}{0pt}{brandochre},
+      borderline west={2pt}{0pt}{brandaccent},
     ]
       \centering\includegraphics[width=\linewidth,height=0.70\textheight,keepaspectratio]{#1}
     \end{tcolorbox}
@@ -84,13 +89,13 @@
   \noindent
   \begin{tcolorbox}[
     enhanced,
-    colback=brandred, colframe=brandred,
+    colback=brandanswer, colframe=brandanswer,
     boxrule=0pt, arc=0pt,
     left=12pt, right=12pt, top=8pt, bottom=8pt,
-    borderline south={2pt}{0pt}{brandnavy},
+    borderline south={2pt}{0pt}{brandaccent},
   ]
     {\sffamily\bfseries\color{white}\large WORKED SOLUTION}\hfill
-    {\sffamily\footnotesize\color{brandgoldlight}\itshape Dr.~Eslam Ahmed}
+    {\sffamily\footnotesize\color{brandaccentsoft}\itshape Dr.~Eslam Ahmed}
   \end{tcolorbox}
 }
 

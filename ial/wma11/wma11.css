@@ -385,15 +385,182 @@ body[data-page="ial-wma11"] .button.solution:hover {
   background: var(--ial-paper);
 }
 
+.ial-mock-builder {
+  display: grid;
+  gap: 16px;
+  margin: 18px 0;
+  padding: 20px;
+  border: 1px solid var(--ial-line);
+  border-left: 7px solid var(--ial-ink);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.ial-mock-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: end;
+}
+
+.ial-mock-head h2 {
+  margin: 6px 0 6px;
+  color: var(--navy);
+  font-size: 26px;
+  line-height: 1.15;
+}
+
+.ial-mock-head p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.ial-mock-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  justify-content: flex-end;
+}
+
+.ial-mock-controls {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) 180px minmax(190px, auto);
+  gap: 12px;
+  align-items: end;
+}
+
+.ial-mock-controls label {
+  display: grid;
+  gap: 7px;
+}
+
+.ial-mock-controls span,
+.ial-mock-summary {
+  color: #5c5660;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.ial-mock-controls select {
+  width: 100%;
+  min-height: 46px;
+  padding: 0 13px;
+  border: 1px solid var(--ial-line);
+  border-radius: 8px;
+  background: var(--ial-paper);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+}
+
+.ial-mock-summary {
+  padding-top: 2px;
+  color: var(--ial-accent-dark);
+}
+
+.ial-mock-list {
+  display: grid;
+  gap: 10px;
+}
+
+.ial-mock-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid var(--ial-line);
+  border-radius: 8px;
+  background: var(--ial-paper);
+}
+
+.ial-mock-index {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  color: #fff;
+  background: var(--ial-ink);
+  font-weight: 900;
+}
+
+.ial-mock-item strong {
+  display: block;
+  color: var(--navy);
+}
+
+.ial-mock-item span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.ial-mock-item a {
+  color: var(--ial-accent-dark);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+body.print-ial-mock .site-header,
+body.print-ial-mock .pathway-tool-strip,
+body.print-ial-mock .ial-hero,
+body.print-ial-mock .ial-dashboard,
+body.print-ial-mock .ial-workbench,
+body.print-ial-mock .site-footer,
+body.print-ial-mock .mobile-bottom-nav,
+body.print-ial-mock .cloud-floating-widget,
+body.print-ial-mock .ial-mock-head,
+body.print-ial-mock .ial-mock-controls,
+body.print-ial-mock .ial-mock-summary,
+body.print-ial-mock .ial-mock-list {
+  display: none !important;
+}
+
+.ial-print-area {
+  display: none;
+}
+
+body.print-ial-mock .ial-print-area {
+  display: block;
+  width: 100%;
+}
+
+body.print-ial-mock .ial-print-page {
+  page-break-after: always;
+  padding: 16mm;
+}
+
+body.print-ial-mock .ial-print-page h2 {
+  margin: 0 0 6mm;
+  color: var(--ial-ink);
+}
+
+body.print-ial-mock .ial-print-meta {
+  margin-bottom: 8mm;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+body.print-ial-mock .ial-print-question {
+  max-width: 100%;
+  max-height: 205mm;
+  object-fit: contain;
+  border-left: 4mm solid var(--ial-ochre);
+}
+
 @media (max-width: 980px) {
   .ial-hero,
   .ial-dashboard,
-  .ial-filters {
+  .ial-filters,
+  .ial-mock-controls {
     grid-template-columns: 1fr;
   }
 
   .ial-question-head,
-  .ial-strip-head {
+  .ial-strip-head,
+  .ial-mock-head {
     align-items: stretch;
     flex-direction: column;
   }
@@ -418,7 +585,8 @@ body[data-page="ial-wma11"] .button.solution:hover {
   }
 
   .ial-hero > *,
-  .ial-workbench > * {
+  .ial-workbench > *,
+  .ial-mock-builder > * {
     max-width: calc(100vw - 48px);
   }
 
@@ -427,7 +595,8 @@ body[data-page="ial-wma11"] .button.solution:hover {
   }
 
   .ial-hero,
-  .ial-workbench {
+  .ial-workbench,
+  .ial-mock-builder {
     padding: 16px;
   }
 
@@ -449,9 +618,18 @@ body[data-page="ial-wma11"] .button.solution:hover {
   }
 
   .ial-actions .button,
-  .ial-book-actions .button {
+  .ial-book-actions .button,
+  .ial-mock-actions .button {
     width: 100%;
     justify-content: center;
     white-space: normal;
+  }
+
+  .ial-mock-item {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .ial-mock-item a {
+    grid-column: 2;
   }
 }

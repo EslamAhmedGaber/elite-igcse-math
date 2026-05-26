@@ -7,6 +7,7 @@
     filtered: [],
     activeIndex: 0,
     showSolution: false,
+    mock: [],
     solved: readJSON(SOLVED_KEY, []),
     mistakes: readJSON(MISTAKE_KEY, {})
   };
@@ -28,7 +29,15 @@
     total: document.querySelector("[data-ial-total]"),
     filtered: document.querySelector("[data-ial-filtered]"),
     solved: document.querySelector("[data-ial-solved]"),
-    mistakes: document.querySelector("[data-ial-mistakes]")
+    mistakes: document.querySelector("[data-ial-mistakes]"),
+    mockTopic: document.getElementById("ialMockTopic"),
+    mockCount: document.getElementById("ialMockCount"),
+    mockExpertise: document.getElementById("ialMockExpertise"),
+    mockGenerate: document.getElementById("ialGenerateMock"),
+    mockPrint: document.getElementById("ialPrintMock"),
+    mockPrintSolutions: document.getElementById("ialPrintMockSolutions"),
+    mockSummary: document.getElementById("ialMockSummary"),
+    mockList: document.getElementById("ialMockList")
   };
 
   function readJSON(key, fallback) {
@@ -70,6 +79,12 @@
       const topic = TOPICS.find((entry) => entry.slug === slug);
       return topic ? `${topic.name} (${topic.count})` : slug;
     });
+    if (els.mockTopic) {
+      populateSelect(els.mockTopic, "All topics", TOPICS.map((topic) => topic.slug), (slug) => {
+        const topic = TOPICS.find((entry) => entry.slug === slug);
+        return topic ? `${topic.name} (${topic.count})` : slug;
+      });
+    }
     populateSelect(els.year, "All years", years);
     populateSelect(els.session, "All sessions", ["Jan", "MayJune", "Oct"], (value) => value === "MayJune" ? "May/June" : value);
     populateSelect(els.marks, "All marks", marks, (value) => `${value} marks`);
@@ -217,6 +232,112 @@
     renderStats();
     renderNumbers();
     renderQuestion();
+    renderMock();
+  }
+
+  function shuffle(items) {
+    const copy = [...items];
+    for (let index = copy.length - 1; index > 0; index -= 1) {
+      const swapIndex = Math.floor(Math.random() * (index + 1));
+      [copy[index], copy[swapIndex]] = [copy[swapIndex], copy[index]];
+    }
+    return copy;
+  }
+
+  function mockPool() {
+    const topic = els.mockTopic?.value || "";
+    const expertise = Boolean(els.mockExpertise?.checked);
+    return QUESTIONS
+      .filter((item) => !topic || (item.topics || [item.topic]).includes(topic))
+      .filter((item) => !expertise || item.qNo >= 6);
+  }
+
+  function generateMock() {
+    const count = Number(els.mockCount?.value || 8);
+    state.mock = shuffle(mockPool()).slice(0, Math.max(1, count));
+    renderMock();
+  }
+
+  function renderMock() {
+    if (!els.mockSummary || !els.mockList) return;
+    if (!state.mock.length) {
+      els.mockSummary.textContent = "No mock generated yet.";
+      els.mockList.innerHTML = "";
+      return;
+    }
+    const totalMarks = state.mock.reduce((sum, item) => sum + Number(item.marks || 0), 0);
+    els.mockSummary.textContent = `${state.mock.length} questions | ${totalMarks} marks`;
+    els.mockList.innerHTML = state.mock.map((item, index) => `
+      <article class="ial-mock-item">
+        <span class="ial-mock-index">${index + 1}</span>
+        <div>
+          <strong>${escapeHtml(item.paper)} - Question ${item.qNo}</strong>
+          <span>${escapeHtml(item.topicName)} | ${item.marks} marks</span>
+        </div>
+        <a href="#ialQuestionStage" data-ial-mock-open="${escapeHtml(item.id)}">Open</a>
+      </article>
+    `).join("");
+  }
+
+  function solutionHtml(item) {
+    const steps = (item.steps || []).map((step, index) => `
+      <section class="ial-step">
+        <strong>${index + 1}. ${escapeHtml(step.title)}</strong>
+        <div class="ial-math">${step.body || ""}</div>
+      </section>
+    `).join("");
+    return `
+      <section class="ial-solution" style="display:block">
+        <h3>Worked solution</h3>
+        ${steps}
+        <div class="ial-final">
+          <strong>Final answer</strong>
+          <div class="ial-math">${splitFinalAnswer(item.finalAnswer)}</div>
+        </div>
+      </section>
+    `;
+  }
+
+  function printMock(includeSolutions = false) {
+    if (!state.mock.length) generateMock();
+    const printArea = document.createElement("section");
+    printArea.className = "ial-print-area";
+    printArea.innerHTML = state.mock.map((item, index) => `
+      <article class="ial-print-page">
+        <h2>WMA11 Pure 1 Mock - Question ${index + 1}</h2>
+        <div class="ial-print-meta">${escapeHtml(item.paper)} | Q${item.qNo} | ${escapeHtml(item.topicName)} | ${item.marks} marks</div>
+        <img class="ial-print-question" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.id)}">
+        ${includeSolutions ? solutionHtml(item) : ""}
+      </article>
+    `).join("");
+    document.body.appendChild(printArea);
+
+    const finish = () => {
+      document.body.classList.add("print-ial-mock");
+      window.print();
+      setTimeout(() => {
+        document.body.classList.remove("print-ial-mock");
+        printArea.remove();
+      }, 600);
+    };
+    const images = [...printArea.querySelectorAll("img")];
+    Promise.all(images.map((image) => image.complete ? true : new Promise((resolve) => {
+      image.addEventListener("load", resolve, { once: true });
+      image.addEventListener("error", resolve, { once: true });
+    })))
+      .then(() => window.MathJax?.typesetPromise ? window.MathJax.typesetPromise([printArea]) : undefined)
+      .then(finish)
+      .catch(finish);
+  }
+
+  function openMockQuestion(id) {
+    const index = QUESTIONS.findIndex((item) => item.id === id);
+    if (index < 0) return;
+    state.filtered = QUESTIONS;
+    state.activeIndex = index;
+    state.showSolution = false;
+    render();
+    els.stage?.scrollIntoView({ block: "start" });
   }
 
   function move(delta) {
@@ -276,6 +397,18 @@
       if (button.dataset.action === "solved") toggleSolved(item);
       if (button.dataset.action === "mistake") toggleMistake(item);
       render();
+    });
+    els.mockGenerate?.addEventListener("click", generateMock);
+    els.mockPrint?.addEventListener("click", () => printMock(false));
+    els.mockPrintSolutions?.addEventListener("click", () => printMock(true));
+    els.mockTopic?.addEventListener("change", () => { state.mock = []; renderMock(); });
+    els.mockCount?.addEventListener("change", () => { state.mock = []; renderMock(); });
+    els.mockExpertise?.addEventListener("change", () => { state.mock = []; renderMock(); });
+    els.mockList?.addEventListener("click", (event) => {
+      const link = event.target.closest("[data-ial-mock-open]");
+      if (!link) return;
+      event.preventDefault();
+      openMockQuestion(link.dataset.ialMockOpen);
     });
   }
 

@@ -2159,6 +2159,90 @@ body.practice-focus-mode .mobile-tools-toggle {
   background: var(--soft);
 }
 
+.pathway-tool-strip {
+  --pathway-active: var(--brand-ink);
+  --pathway-active-deep: var(--brand-ink-deep);
+  --pathway-soft: rgba(251, 246, 230, 0.62);
+  position: sticky;
+  top: 74px;
+  z-index: 45;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  padding: 8px 28px;
+  border-bottom: 1px solid rgba(235, 223, 196, 0.95);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.pathway-tool-strip-title {
+  min-width: 120px;
+  display: grid;
+  gap: 1px;
+}
+.pathway-tool-strip-title strong {
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.1;
+}
+.pathway-tool-strip-title span {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.pathway-tool-strip-links {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  padding-bottom: 2px;
+}
+.pathway-tool-strip-links a {
+  flex: 0 0 auto;
+  min-width: 132px;
+  display: grid;
+  gap: 1px;
+  padding: 8px 11px;
+  border: 1px solid rgba(235, 223, 196, 0.95);
+  border-radius: 8px;
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--pathway-soft);
+}
+.pathway-tool-strip-links a:hover,
+.pathway-tool-strip-links a:focus-visible,
+.pathway-tool-strip-links a[aria-current="page"] {
+  color: #fff;
+  border-color: var(--pathway-active);
+  background: var(--pathway-active);
+}
+.pathway-tool-strip-links strong {
+  font-size: 12px;
+  line-height: 1.1;
+}
+.pathway-tool-strip-links span {
+  color: inherit;
+  opacity: 0.76;
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+body.pathway-modular .pathway-tool-strip {
+  --pathway-active: var(--brand-vermilion);
+  --pathway-active-deep: var(--brand-vermilion-deep);
+  --pathway-soft: rgba(192, 57, 43, 0.08);
+}
+
+body[data-page="ial-wma11"] .pathway-tool-strip,
+body.pathway-pure .pathway-tool-strip {
+  --pathway-active: var(--brand-verdigris);
+  --pathway-active-deep: var(--brand-verdigris-deep);
+  --pathway-soft: rgba(90, 128, 116, 0.1);
+}
+
 .cloud-floating-widget {
   position: fixed;
   right: 18px;
@@ -2290,6 +2374,15 @@ body.practice-focus-mode .mobile-tools-toggle {
   .nav-toggle span { background: #fff; }
   .site-cta { margin-left: 8px; }
   .site-cta .button:not(.primary) { display: none; }
+  .pathway-tool-strip {
+    top: 66px;
+    grid-template-columns: 1fr;
+    gap: 7px;
+    padding: 8px 18px;
+  }
+  .pathway-tool-strip-links a {
+    min-width: 124px;
+  }
 }
 
 @media (max-width: 520px) {
@@ -2307,6 +2400,16 @@ body.practice-focus-mode .mobile-tools-toggle {
   }
   .site-cta { display: none; }
   .nav-panel { padding: 10px; }
+  .pathway-tool-strip {
+    top: 62px;
+    padding: 7px 12px;
+  }
+  .pathway-tool-strip-title {
+    display: none;
+  }
+  .pathway-tool-strip-links a {
+    min-width: 116px;
+  }
   .cloud-floating-widget {
     left: 12px;
     right: 12px;

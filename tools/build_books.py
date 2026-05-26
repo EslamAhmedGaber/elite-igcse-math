@@ -52,6 +52,34 @@ WATERMARK = (244 / 255, 245 / 255, 248 / 255)
 
 
 @dataclass(frozen=True)
+class BookPalette:
+    label: str
+    question: tuple[float, float, float]
+    question_dark: tuple[float, float, float]
+    answer: tuple[float, float, float]
+    accent: tuple[float, float, float]
+    accent_soft: tuple[float, float, float]
+
+
+LINEAR_PALETTE = BookPalette(
+    label="Linear",
+    question=NAVY,
+    question_dark=NAVY_DARK,
+    answer=NAVY_DARK,
+    accent=GOLD,
+    accent_soft=GOLD_LIGHT,
+)
+MODULAR_PALETTE = BookPalette(
+    label="Modular",
+    question=RED,
+    question_dark=RED_DARK,
+    answer=NAVY_DARK,
+    accent=GOLD,
+    accent_soft=GOLD_LIGHT,
+)
+
+
+@dataclass(frozen=True)
 class BookSpec:
     filename: str
     title: str
@@ -736,26 +764,27 @@ def book_stat_line(spec: BookSpec, row_count: int) -> str:
     return "  |  ".join(pieces)
 
 
-def draw_elite_cover_bands(page: fitz.Page, subtitle: str) -> None:
-    page.draw_rect(fitz.Rect(0, 0, A4_WIDTH, A4_HEIGHT), color=None, fill=CREAM)
-    page.draw_rect(fitz.Rect(0, 0, A4_WIDTH, mm(75)), color=None, fill=NAVY)
-    page.draw_rect(fitz.Rect(0, mm(75), A4_WIDTH, mm(78)), color=None, fill=GOLD)
-    page.draw_rect(fitz.Rect(0, A4_HEIGHT - mm(42), A4_WIDTH, A4_HEIGHT), color=None, fill=NAVY)
-    page.draw_rect(fitz.Rect(0, A4_HEIGHT - mm(45), A4_WIDTH, A4_HEIGHT - mm(42)), color=None, fill=GOLD)
+def book_palette(spec: BookSpec) -> BookPalette:
+    return MODULAR_PALETTE if spec.scope in {"unit1", "unit2"} else LINEAR_PALETTE
+
+
+def color_hex(color: tuple[float, float, float]) -> str:
+    return "".join(f"{max(0, min(255, round(part * 255))):02X}" for part in color)
+
+
+def draw_page_base(page: fitz.Page, palette: BookPalette) -> None:
+    page.draw_rect(fitz.Rect(0, 0, A4_WIDTH, A4_HEIGHT), color=None, fill=WHITE)
+    page.draw_rect(fitz.Rect(0, 0, mm(8), A4_HEIGHT), color=None, fill=palette.question)
+    page.draw_rect(fitz.Rect(mm(8), 0, mm(10), A4_HEIGHT), color=None, fill=palette.accent_soft)
+
+
+def draw_soft_watermark(page: fitz.Page, text: str = "EA") -> None:
     draw_textbox(
         page,
-        fitz.Rect(MARGIN, mm(29), A4_WIDTH - MARGIN, mm(47)),
-        "ELITE IGCSE ACADEMY",
-        26,
-        GOLD,
-        fitz.TEXT_ALIGN_CENTER,
-    )
-    draw_textbox(
-        page,
-        fitz.Rect(MARGIN, mm(48), A4_WIDTH - MARGIN, mm(62)),
-        subtitle,
-        13,
-        WHITE,
+        fitz.Rect(mm(130), mm(222), A4_WIDTH - mm(4), mm(284)),
+        text,
+        76,
+        WATERMARK,
         fitz.TEXT_ALIGN_CENTER,
     )
 
@@ -788,14 +817,14 @@ def draw_identity_box(page: fitz.Page, rect: fitz.Rect, prepared_label: str) -> 
     )
 
 
-def draw_badge(page: fitz.Page, rect: fitz.Rect, text: str) -> None:
-    page.draw_rect(rect, color=GOLD, fill=GOLD, width=0.5)
+def draw_badge(page: fitz.Page, rect: fitz.Rect, text: str, palette: BookPalette) -> None:
+    page.draw_rect(rect, color=palette.accent, fill=palette.accent, width=0.5)
     draw_textbox(
         page,
         fitz.Rect(rect.x0, rect.y0 + 2, rect.x1, rect.y1),
         text,
         8,
-        NAVY_DARK,
+        palette.answer,
         fitz.TEXT_ALIGN_CENTER,
     )
 
@@ -811,7 +840,7 @@ def draw_page_watermark(page: fitz.Page) -> None:
     )
 
 
-def add_footer(page: fitz.Page, label: str, page_number: int) -> None:
+def add_footer(page: fitz.Page, label: str, page_number: int, palette: BookPalette) -> None:
     page.draw_line((MARGIN, A4_HEIGHT - 36), (A4_WIDTH - MARGIN, A4_HEIGHT - 36), color=LINE, width=0.55)
     draw_textbox(
         page,
@@ -825,109 +854,105 @@ def add_footer(page: fitz.Page, label: str, page_number: int) -> None:
         fitz.Rect(A4_WIDTH - MARGIN - 60, A4_HEIGHT - 31, A4_WIDTH - MARGIN, A4_HEIGHT - 14),
         str(page_number),
         8,
-        NAVY,
+        palette.question,
         fitz.TEXT_ALIGN_RIGHT,
     )
 
 
 def add_cover(doc: fitz.Document, spec: BookSpec, row_count: int) -> None:
+    palette = book_palette(spec)
     page = doc.new_page(width=A4_WIDTH, height=A4_HEIGHT)
-    draw_elite_cover_bands(page, "Excellence in Mathematics Education")
-
+    draw_page_base(page, palette)
+    draw_soft_watermark(page, "MATH")
     draw_textbox(
         page,
-        fitz.Rect(MARGIN, mm(108), A4_WIDTH - MARGIN, mm(123)),
+        fitz.Rect(MARGIN, mm(58), A4_WIDTH - MARGIN, mm(73)),
+        "ELITE IGCSE ACADEMY",
+        10,
+        palette.question_dark,
+    )
+    draw_textbox(
+        page,
+        fitz.Rect(MARGIN, mm(82), A4_WIDTH - MARGIN, mm(98)),
         book_subject(spec),
         13.5,
-        NAVY,
-        fitz.TEXT_ALIGN_CENTER,
+        palette.question,
     )
     draw_textbox(
         page,
-        fitz.Rect(MARGIN, mm(126), A4_WIDTH - MARGIN, mm(145)),
+        fitz.Rect(MARGIN, mm(101), A4_WIDTH - MARGIN, mm(132)),
         "Higher Tier",
-        24,
-        NAVY_DARK,
-        fitz.TEXT_ALIGN_CENTER,
+        34,
+        palette.answer,
     )
     draw_textbox(
         page,
-        fitz.Rect(MARGIN, mm(146), A4_WIDTH - MARGIN, mm(165)),
+        fitz.Rect(MARGIN, mm(134), A4_WIDTH - MARGIN, mm(164)),
         spec.title,
-        20,
-        NAVY,
-        fitz.TEXT_ALIGN_CENTER,
+        22,
+        palette.answer,
     )
-    page.draw_line((A4_WIDTH / 2 - mm(25), mm(172)), (A4_WIDTH / 2 + mm(25), mm(172)), color=GOLD, width=1.4)
+    page.draw_line((MARGIN, mm(172)), (MARGIN + mm(64), mm(172)), color=palette.accent, width=1.6)
     draw_textbox(
         page,
         fitz.Rect(MARGIN, mm(183), A4_WIDTH - MARGIN, mm(200)),
         book_stat_line(spec, row_count),
         10.5,
         MUTED,
-        fitz.TEXT_ALIGN_CENTER,
     )
 
-    draw_identity_box(page, fitz.Rect(mm(44), mm(205), A4_WIDTH - mm(44), mm(245)), "PREPARED & CLASSIFIED BY")
+    info_cards = [
+        (str(row_count), "classified questions"),
+        (palette.label, "pathway palette"),
+        (scope_label(spec.scope), "course scope"),
+    ]
+    x = MARGIN
+    for value, label in info_cards:
+        card = fitz.Rect(x, mm(212), x + mm(47), mm(252))
+        page.draw_rect(card, color=LINE, fill=(1, 0.99, 0.97), width=0.65)
+        page.draw_rect(fitz.Rect(card.x0, card.y0, card.x0 + 4, card.y1), color=palette.question, fill=palette.question, width=0)
+        draw_textbox(page, fitz.Rect(card.x0 + 12, card.y0 + 14, card.x1 - 8, card.y0 + 30), value, 15, palette.answer)
+        draw_textbox(page, fitz.Rect(card.x0 + 12, card.y0 + 33, card.x1 - 8, card.y1 - 8), label, 8.2, MUTED)
+        x += mm(54)
 
     draw_textbox(
         page,
-        fitz.Rect(mm(22), A4_HEIGHT - mm(27), mm(78), A4_HEIGHT - mm(10)),
-        "Call\n+20 112 000 9622",
-        9.5,
-        WHITE,
-    )
-    draw_textbox(
-        page,
-        fitz.Rect(mm(78), A4_HEIGHT - mm(27), mm(132), A4_HEIGHT - mm(10)),
-        f"2026 Edition\n{scope_label(spec.scope)}",
-        9.5,
-        WHITE,
-        fitz.TEXT_ALIGN_CENTER,
-    )
-    draw_textbox(
-        page,
-        fitz.Rect(mm(132), A4_HEIGHT - mm(27), A4_WIDTH - mm(22), A4_HEIGHT - mm(10)),
-        "Website\neliteigcse.com",
-        9.5,
-        WHITE,
-        fitz.TEXT_ALIGN_RIGHT,
+        fitz.Rect(MARGIN, A4_HEIGHT - mm(30), A4_WIDTH - MARGIN, A4_HEIGHT - mm(12)),
+        "Prepared for Dr Eslam Ahmed - eliteigcse.com",
+        9,
+        MUTED,
     )
 
 
-def add_topic_page(doc: fitz.Document, topic: str, count: int) -> None:
+def add_topic_page(doc: fitz.Document, topic: str, count: int, palette: BookPalette) -> None:
     page = doc.new_page(width=A4_WIDTH, height=A4_HEIGHT)
-    page.draw_rect(fitz.Rect(0, 0, A4_WIDTH, A4_HEIGHT), color=None, fill=WHITE)
-    draw_page_watermark(page)
-    page.draw_rect(fitz.Rect(0, 0, A4_WIDTH, mm(34)), color=None, fill=NAVY)
-    page.draw_rect(fitz.Rect(0, mm(34), A4_WIDTH, mm(36)), color=None, fill=RED)
+    draw_page_base(page, palette)
+    draw_soft_watermark(page, "TOPIC")
     draw_textbox(
         page,
-        fitz.Rect(MARGIN, mm(13), A4_WIDTH - MARGIN, mm(27)),
-        "ELITE IGCSE ACADEMY",
+        fitz.Rect(MARGIN, mm(78), A4_WIDTH - MARGIN, mm(94)),
+        "CLASSIFIED TOPIC",
         13,
-        GOLD_LIGHT,
-        fitz.TEXT_ALIGN_CENTER,
+        palette.question,
     )
 
-    card = fitz.Rect(MARGIN, mm(112), A4_WIDTH - MARGIN, mm(196))
+    card = fitz.Rect(MARGIN, mm(112), A4_WIDTH - MARGIN, mm(198))
     page.draw_rect(card, color=LINE, fill=WHITE, width=0.85)
-    page.draw_rect(fitz.Rect(card.x0, card.y0, card.x1, card.y0 + 7), color=RED, fill=RED)
+    page.draw_rect(fitz.Rect(card.x0, card.y0, card.x0 + 6, card.y1), color=palette.question, fill=palette.question)
+    page.draw_rect(fitz.Rect(card.x0 + 6, card.y0, card.x0 + 8, card.y1), color=palette.accent_soft, fill=palette.accent_soft)
     draw_textbox(
         page,
-        fitz.Rect(card.x0 + 16, card.y0 + 24, card.x1 - 16, card.y0 + 42),
-        "CLASSIFIED TOPIC",
+        fitz.Rect(card.x0 + 22, card.y0 + 22, card.x1 - 18, card.y0 + 44),
+        palette.label.upper(),
         10,
-        RED,
-        fitz.TEXT_ALIGN_CENTER,
+        palette.question_dark,
     )
     draw_textbox(
         page,
         fitz.Rect(card.x0 + 22, card.y0 + 47, card.x1 - 22, card.y0 + 96),
         topic,
         18,
-        NAVY_DARK,
-        fitz.TEXT_ALIGN_CENTER,
+        palette.answer,
     )
     draw_textbox(
         page,
@@ -935,7 +960,6 @@ def add_topic_page(doc: fitz.Document, topic: str, count: int) -> None:
         f"{count} questions",
         12,
         MUTED,
-        fitz.TEXT_ALIGN_CENTER,
     )
     draw_textbox(
         page,
@@ -959,7 +983,7 @@ def image_rect(path: Path, top: float) -> fitz.Rect:
     return fitz.Rect(left, top, left + rendered_width, top + rendered_height)
 
 
-def add_question_page(doc: fitz.Document, row: dict[str, Any], book_label: str, page_number: int) -> None:
+def add_question_page(doc: fitz.Document, row: dict[str, Any], book_label: str, page_number: int, palette: BookPalette) -> None:
     page = doc.new_page(width=A4_WIDTH, height=A4_HEIGHT)
     topic = str(row.get("topic") or "Unclassified")
     question = row.get("q") or "?"
@@ -967,50 +991,48 @@ def add_question_page(doc: fitz.Document, row: dict[str, Any], book_label: str, 
     paper = str(row.get("paper") or row.get("paperSlug") or "")
     session = str(row.get("session") or "")
     code = str(row.get("code") or "")
-    page.draw_rect(fitz.Rect(0, 0, A4_WIDTH, A4_HEIGHT), color=None, fill=WHITE)
-    draw_page_watermark(page)
-    header_rect = fitz.Rect(0, 0, A4_WIDTH, mm(23))
-    page.draw_rect(header_rect, color=NAVY, fill=NAVY, width=0)
-    page.draw_rect(fitz.Rect(header_rect.x0, header_rect.y1 - 3, header_rect.x1, header_rect.y1), color=RED, fill=RED)
+    draw_page_base(page, palette)
+    header_rect = fitz.Rect(MARGIN, mm(18), A4_WIDTH - MARGIN, mm(47))
+    page.draw_rect(header_rect, color=palette.question, fill=palette.question, width=0)
+    page.draw_rect(fitz.Rect(header_rect.x0, header_rect.y1 - 3, header_rect.x1, header_rect.y1), color=palette.accent, fill=palette.accent)
     draw_textbox(
         page,
-        fitz.Rect(MARGIN, header_rect.y0 + 13, header_rect.x1 - 170, header_rect.y0 + 33),
+        fitz.Rect(header_rect.x0 + 12, header_rect.y0 + 8, header_rect.x1 - 170, header_rect.y0 + 24),
         "CLASSIFIED PROBLEM",
         10.5,
         WHITE,
     )
     draw_textbox(
         page,
-        fitz.Rect(MARGIN, header_rect.y0 + 34, header_rect.x1 - 170, header_rect.y0 + 53),
+        fitz.Rect(header_rect.x0 + 12, header_rect.y0 + 24, header_rect.x1 - 170, header_rect.y1 - 4),
         topic,
         8.5,
-        GOLD_LIGHT,
+        palette.accent_soft,
     )
     draw_textbox(
         page,
-        fitz.Rect(header_rect.x1 - 170, header_rect.y0 + 18, header_rect.x1 - MARGIN, header_rect.y0 + 35),
+        fitz.Rect(header_rect.x1 - 170, header_rect.y0 + 12, header_rect.x1 - 12, header_rect.y0 + 28),
         " | ".join(part for part in (paper, session, code) if part),
         7.0,
-        GOLD_LIGHT,
+        palette.accent_soft,
         fitz.TEXT_ALIGN_RIGHT,
     )
     draw_textbox(
         page,
-        fitz.Rect(MARGIN, mm(33), A4_WIDTH - MARGIN, mm(47)),
+        fitz.Rect(MARGIN, mm(58), A4_WIDTH - MARGIN - 125, mm(72)),
         topic,
         16,
-        NAVY,
+        palette.answer,
     )
-    page.draw_line((MARGIN, mm(50)), (A4_WIDTH - MARGIN, mm(50)), color=LINE, width=0.5)
-    draw_badge(page, fitz.Rect(A4_WIDTH - MARGIN - 114, mm(34), A4_WIDTH - MARGIN - 62, mm(41)), f"Q#: {question}")
-    draw_badge(page, fitz.Rect(A4_WIDTH - MARGIN - 57, mm(34), A4_WIDTH - MARGIN, mm(41)), f"Marks: {marks}")
+    draw_badge(page, fitz.Rect(A4_WIDTH - MARGIN - 114, mm(59), A4_WIDTH - MARGIN - 62, mm(67)), f"Q#: {question}", palette)
+    draw_badge(page, fitz.Rect(A4_WIDTH - MARGIN - 57, mm(59), A4_WIDTH - MARGIN, mm(67)), f"Marks: {marks}", palette)
 
     path = question_image_path(row)
     if path.exists():
-        rect = image_rect(path, mm(59))
+        rect = image_rect(path, mm(82))
         frame = fitz.Rect(max(MARGIN, rect.x0 - 8), rect.y0 - 8, min(A4_WIDTH - MARGIN, rect.x1 + 8), rect.y1 + 8)
         page.draw_rect(frame, color=LINE, fill=WHITE, width=0.55)
-        page.draw_rect(fitz.Rect(frame.x0, frame.y0, frame.x0 + 3, frame.y1), color=GOLD, fill=GOLD, width=0)
+        page.draw_rect(fitz.Rect(frame.x0, frame.y0, frame.x0 + 3, frame.y1), color=palette.accent, fill=palette.accent, width=0)
         page.insert_image(rect, filename=str(path), keep_proportion=True)
     else:
         page.insert_textbox(
@@ -1020,7 +1042,7 @@ def add_question_page(doc: fitz.Document, row: dict[str, Any], book_label: str, 
             fontname="helv",
             color=(0.7, 0.0, 0.0),
         )
-    add_footer(page, book_label, page_number)
+    add_footer(page, book_label, page_number, palette)
 
 
 def wrapped_lines(text: str, width: int = 88) -> list[str]:
@@ -1045,6 +1067,7 @@ def add_solution_pages(
     solution: dict[str, Any] | None,
     book_label: str,
     page_counter: list[int],
+    palette: BookPalette,
 ) -> None:
     source = "No website solution is saved yet."
     status = "missing"
@@ -1060,20 +1083,40 @@ def add_solution_pages(
     for index, chunk in enumerate(chunks, start=1):
         page_counter[0] += 1
         page = doc.new_page(width=A4_WIDTH, height=A4_HEIGHT)
+        draw_page_base(page, palette)
+        header_rect = fitz.Rect(MARGIN, mm(18), A4_WIDTH - MARGIN, mm(47))
+        page.draw_rect(header_rect, color=palette.answer, fill=palette.answer, width=0)
+        page.draw_rect(fitz.Rect(header_rect.x0, header_rect.y1 - 3, header_rect.x1, header_rect.y1), color=palette.accent, fill=palette.accent)
         heading = title if len(chunks) == 1 else f"{title} - page {index}"
         page.insert_textbox(
-            fitz.Rect(MARGIN, 30, A4_WIDTH - MARGIN, 70),
+            fitz.Rect(header_rect.x0 + 12, header_rect.y0 + 8, header_rect.x1 - 12, header_rect.y1 - 4),
             clean_text(heading),
-            fontsize=11,
+            fontsize=11.5,
             fontname="helv",
-            color=NAVY,
+            color=WHITE,
         )
-        page.draw_line((MARGIN, 78), (A4_WIDTH - MARGIN, 78), color=GOLD, width=0.7)
-        y = 104
+        page.draw_rect(fitz.Rect(MARGIN, mm(62), A4_WIDTH - MARGIN, A4_HEIGHT - MARGIN - 28), color=LINE, fill=WHITE, width=0.55)
+        y = mm(78)
         for line in chunk:
-            page.insert_text((MARGIN, y), clean_text(line), fontsize=9.5, fontname="helv", color=INK)
+            page.insert_text((MARGIN + 12, y), clean_text(line), fontsize=9.5, fontname="helv", color=INK)
             y += 13
-        add_footer(page, book_label, page_counter[0])
+        add_footer(page, book_label, page_counter[0], palette)
+
+
+def latex_palette_setup(spec: BookSpec) -> list[str]:
+    palette = book_palette(spec)
+    return [
+        rf"\definecolor{{bookquestion}}{{HTML}}{{{color_hex(palette.question)}}}",
+        rf"\definecolor{{bookquestiondark}}{{HTML}}{{{color_hex(palette.question_dark)}}}",
+        rf"\definecolor{{bookanswer}}{{HTML}}{{{color_hex(palette.answer)}}}",
+        rf"\definecolor{{bookaccent}}{{HTML}}{{{color_hex(palette.accent)}}}",
+        rf"\definecolor{{bookaccentsoft}}{{HTML}}{{{color_hex(palette.accent_soft)}}}",
+        r"\colorlet{brandquestion}{bookquestion}",
+        r"\colorlet{brandquestiondark}{bookquestiondark}",
+        r"\colorlet{brandanswer}{bookanswer}",
+        r"\colorlet{brandaccent}{bookaccent}",
+        r"\colorlet{brandaccentsoft}{bookaccentsoft}",
+    ]
 
 
 def scope_label(scope: str) -> str:
@@ -1091,6 +1134,7 @@ def tex_image_path(build_dir: Path, row: dict[str, Any]) -> str:
 
 def private_latex_preamble(spec: BookSpec, row_count: int) -> list[str]:
     label = scope_label(spec.scope)
+    palette_label = book_palette(spec).label
     subtitle = "Student worked-solution book"
     if spec.bank == "expertise":
         subtitle += " - Q20+ expertise"
@@ -1108,6 +1152,7 @@ def private_latex_preamble(spec: BookSpec, row_count: int) -> list[str]:
         r"\usepackage{fancyhdr}",
         r"\usepackage{titlesec}",
         r"\usepackage{elite_igcse}",
+        *latex_palette_setup(spec),
         r"\usepackage[hidelinks,pdfencoding=auto,bookmarksopen=false]{hyperref}",
         r"\hypersetup{",
         r"  colorlinks=true,",
@@ -1118,10 +1163,10 @@ def private_latex_preamble(spec: BookSpec, row_count: int) -> list[str]:
         r"  pdfauthor={Dr. Eslam Ahmed - Elite IGCSE Academy},",
         r"}",
         "",
-        r"\newtcolorbox{solutionbody}{enhanced,breakable,colback=white,colframe=brandline,arc=2pt,boxrule=0.6pt,left=11pt,right=11pt,top=10pt,bottom=10pt,before skip=7pt,after skip=8pt,borderline west={2pt}{0pt}{brandred}}",
-        r"\newcommand{\solutionstep}[2]{\par\vspace{6pt}\noindent\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=brandline,arc=2pt,boxrule=0.45pt,left=8pt,right=8pt,top=5pt,bottom=5pt,borderline west={2pt}{0pt}{brandred},before skip=4pt,after skip=3pt]\tikz[baseline=(n.base)]{\node[fill=brandred,text=white,font=\sffamily\bfseries\scriptsize,inner xsep=5pt,inner ysep=2.5pt] (n) {#1};}\hspace{6pt}{\sffamily\bfseries\color{brandnavy}#2}\end{tcolorbox}}",
-        r"\newcommand{\finalanswerbox}[1]{\par\vspace{7pt}\noindent\begin{tcolorbox}[enhanced,breakable,colback=brandcream!45,colframe=brandochre,arc=2pt,boxrule=0.8pt,left=10pt,right=10pt,top=7pt,bottom=7pt,borderline west={2pt}{0pt}{brandnavy}]{\sffamily\bfseries\color{brandnavy}FINAL ANSWER}\par #1\end{tcolorbox}\par}",
-        r"\newcommand{\solutionmetabox}[3]{\begin{tcolorbox}[enhanced,colback=white,colframe=brandline,arc=2pt,boxrule=0.55pt,left=10pt,right=10pt,top=7pt,bottom=7pt,before skip=7pt,after skip=8pt,borderline west={2pt}{0pt}{brandochre}]{\sffamily\bfseries\color{brandnavy}#1 \quad\textbar\quad Question #2}\\[-1pt]{\sffamily\small\color{textgrey}#3}\end{tcolorbox}}",
+        r"\newtcolorbox{solutionbody}{enhanced,breakable,colback=white,colframe=brandline,arc=2pt,boxrule=0.6pt,left=11pt,right=11pt,top=10pt,bottom=10pt,before skip=7pt,after skip=8pt,borderline west={2pt}{0pt}{brandanswer}}",
+        r"\newcommand{\solutionstep}[2]{\par\vspace{6pt}\noindent\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=brandline,arc=2pt,boxrule=0.45pt,left=8pt,right=8pt,top=5pt,bottom=5pt,borderline west={2pt}{0pt}{brandaccent},before skip=4pt,after skip=3pt]\tikz[baseline=(n.base)]{\node[fill=brandanswer,text=white,font=\sffamily\bfseries\scriptsize,inner xsep=5pt,inner ysep=2.5pt] (n) {#1};}\hspace{6pt}{\sffamily\bfseries\color{brandanswer}#2}\end{tcolorbox}}",
+        r"\newcommand{\finalanswerbox}[1]{\par\vspace{7pt}\noindent\begin{tcolorbox}[enhanced,breakable,colback=brandcream!45,colframe=brandaccent,arc=2pt,boxrule=0.8pt,left=10pt,right=10pt,top=7pt,bottom=7pt,borderline west={2pt}{0pt}{brandquestion}]{\sffamily\bfseries\color{brandanswer}FINAL ANSWER}\par #1\end{tcolorbox}\par}",
+        r"\newcommand{\solutionmetabox}[3]{\begin{tcolorbox}[enhanced,colback=white,colframe=brandline,arc=2pt,boxrule=0.55pt,left=10pt,right=10pt,top=7pt,bottom=7pt,before skip=7pt,after skip=8pt,borderline west={2pt}{0pt}{brandaccent}]{\sffamily\bfseries\color{brandanswer}#1 \quad\textbar\quad Question #2}\\[-1pt]{\sffamily\small\color{textgrey}#3}\end{tcolorbox}}",
         r"\sloppy",
         r"\emergencystretch=3em",
         "",
@@ -1129,23 +1174,23 @@ def private_latex_preamble(spec: BookSpec, row_count: int) -> list[str]:
         r"\fancyhf{}",
         r"\renewcommand{\headrulewidth}{0pt}",
         r"\renewcommand{\footrulewidth}{0pt}",
-        r"\fancyfoot[LE,RO]{\small\textcolor{brandnavy}{\thepage}}",
+        r"\fancyfoot[LE,RO]{\small\textcolor{brandquestion}{\thepage}}",
         r"\fancyfoot[RE,LO]{\small\textcolor{textgrey}{\itshape Elite IGCSE Academy \,\textbar\, Dr.~Eslam Ahmed}}",
         r"\fancyhead[RE,LO]{\small\textcolor{textgrey}{\leftmark}}",
         "",
         r"\fancypagestyle{plain}{%",
         r"  \fancyhf{}",
         r"  \renewcommand{\headrulewidth}{0pt}",
-        r"  \fancyfoot[LE,RO]{\small\textcolor{brandnavy}{\thepage}}",
+        r"  \fancyfoot[LE,RO]{\small\textcolor{brandquestion}{\thepage}}",
         r"  \fancyfoot[RE,LO]{\small\textcolor{textgrey}{\itshape Elite IGCSE Academy \,\textbar\, Dr.~Eslam Ahmed}}",
         r"}",
         "",
         r"\titleformat{\chapter}[display]",
-        r"  {\normalfont\sffamily\bfseries\color{brandnavy}}",
-        r"  {\filright\Large{\color{brandgold}\textsc{Topic~\thechapter}}}",
+        r"  {\normalfont\sffamily\bfseries\color{brandanswer}}",
+        r"  {\filright\Large{\color{brandaccent}\textsc{Topic~\thechapter}}}",
         r"  {6pt}",
         r"  {\Huge\filright}",
-        r"  [\vspace{4pt}{\color{brandred}\hrule height 2pt}\vspace{-6pt}]",
+        r"  [\vspace{4pt}{\color{brandquestion}\hrule height 2pt}\vspace{-6pt}]",
         r"\titlespacing*{\chapter}{0pt}{-30pt}{18pt}",
         "",
         r"\setlength{\parskip}{4pt plus 1pt}",
@@ -1156,38 +1201,35 @@ def private_latex_preamble(spec: BookSpec, row_count: int) -> list[str]:
         r"\begin{titlepage}",
         r"\begin{tikzpicture}[remember picture,overlay]",
         r"  \fill[white] (current page.south west) rectangle (current page.north east);",
-        r"  \fill[brandnavy] (current page.north west) rectangle ([yshift=-75mm]current page.north east);",
-        r"  \fill[brandred] ([yshift=-75mm]current page.north west) rectangle ([yshift=-78mm]current page.north east);",
-        r"  \fill[brandnavy] (current page.south west) rectangle ([yshift=42mm]current page.south east);",
-        r"  \fill[brandred] ([yshift=42mm]current page.south west) rectangle ([yshift=45mm]current page.south east);",
-        r"  \node[anchor=north, yshift=-30mm] at (current page.north) {\begin{minipage}{170mm}\centering",
-        r"    {\sffamily\bfseries\color{brandgold}\fontsize{30}{34}\selectfont ELITE IGCSE ACADEMY}\\[6pt]",
-        r"    {\sffamily\itshape\color{white}\Large Student Worked Solutions}",
-        r"  \end{minipage}};",
+        r"  \fill[brandquestion] (current page.south west) rectangle ([xshift=8mm]current page.north west);",
+        r"  \fill[brandaccentsoft] ([xshift=8mm]current page.south west) rectangle ([xshift=10mm]current page.north west);",
+        r"  \node[anchor=south east, xshift=-8mm, yshift=14mm] at (current page.south east) {\sffamily\bfseries\color{brandquestion!5}\fontsize{70}{78}\selectfont MATH};",
         r"\end{tikzpicture}",
         "",
-        r"\vspace*{86mm}",
-        r"\begin{center}",
-        rf"{{\sffamily\bfseries\color{{brandnavy}}\fontsize{{23}}{{28}}\selectfont {latex_escape(spec.title)}}}\\[10pt]",
-        r"{\color{brandgold}\rule{50mm}{1.6pt}}",
-        "",
-        rf"\vspace{{14pt}}{{\sffamily\color{{textgrey}}\large {row_count} Questions \quad\textbullet\quad Question page then worked-solution page}}",
-        r"\end{center}",
+        r"\vspace*{42mm}",
+        r"\hspace*{10mm}\begin{minipage}{158mm}",
+        r"{\sffamily\bfseries\color{brandquestiondark}\small ELITE IGCSE ACADEMY}\\[12pt]",
+        rf"{{\sffamily\color{{brandquestion}}\large {latex_escape(book_subject(spec))}}}\\[8pt]",
+        r"{\sffamily\bfseries\color{brandanswer}\fontsize{34}{40}\selectfont Higher Tier}\\[5pt]",
+        rf"{{\sffamily\bfseries\color{{brandanswer}}\fontsize{{22}}{{27}}\selectfont {latex_escape(spec.title)}}}\\[12pt]",
+        r"{\color{brandaccent}\rule{62mm}{1.6pt}}\\[12pt]",
+        rf"{{\sffamily\color{{textgrey}}\large {row_count} Questions \quad\textbar\quad Question page then worked-solution page}}",
+        r"\end{minipage}",
         "",
         r"\vspace{18mm}",
-        r"\begin{center}",
-        r"\begin{tcolorbox}[enhanced, width=118mm, colback=white, colframe=brandnavy,arc=4pt, boxrule=1.2pt, left=14pt, right=14pt, top=12pt, bottom=12pt,drop shadow={brandnavy!30}, halign=center,]",
-        r"{\sffamily\color{brandgold}\small\textsc{Prepared \& Classified by}}\\[6pt]",
-        r"{\sffamily\bfseries\color{brandnavydark}\fontsize{24}{28}\selectfont Dr.~Eslam Ahmed}\\[3pt]",
-        r"{\sffamily\itshape\color{textgrey} Assistant Lecturer, Cairo University Faculty of Engineering}",
+        r"\hspace*{10mm}\begin{tcolorbox}[enhanced, width=150mm, colback=white, colframe=brandline,arc=2pt, boxrule=0.7pt, left=14pt, right=14pt, top=12pt, bottom=12pt,borderline west={3pt}{0pt}{brandquestion}]",
+        r"{\sffamily\color{brandaccent}\small\textsc{Prepared \& Classified by}}\\[6pt]",
+        r"{\sffamily\bfseries\color{brandanswer}\fontsize{24}{28}\selectfont Dr.~Eslam Ahmed}\\[3pt]",
+        r"{\sffamily\itshape\color{textgrey} Assistant Lecturer, Cairo University Faculty of Engineering}\\[8pt]",
+        rf"{{\sffamily\bfseries\color{{brandquestion}}\small {latex_escape(palette_label)} palette \quad\textbar\quad {latex_escape(label)}}}",
         r"\end{tcolorbox}",
-        r"\end{center}",
         "",
         r"\vfill",
         r"\begin{tikzpicture}[remember picture,overlay]",
-        r"  \node[anchor=south west, xshift=22mm, yshift=11mm] at (current page.south west) {\begin{minipage}{55mm}{\sffamily\color{brandgold}\footnotesize\textsc{Call}}\\{\sffamily\bfseries\color{white}\large +20\,112\,000\,9622}\end{minipage}};",
-        rf"  \node[anchor=south, yshift=11mm] at (current page.south) {{\begin{{minipage}}{{78mm}}\centering{{\sffamily\color{{brandgold}}\footnotesize\textsc{{2026 Edition}}}}\\{{\sffamily\bfseries\color{{white}}\large {latex_escape(label)}}}\end{{minipage}}}};",
-        r"  \node[anchor=south east, xshift=-22mm, yshift=11mm] at (current page.south east) {\begin{minipage}{70mm}\raggedleft{\sffamily\color{brandgold}\footnotesize\textsc{Student Edition}}\\{\sffamily\bfseries\color{white}\normalsize Worked answers included}\end{minipage}};",
+        r"  \draw[brandline,line width=0.6pt] ([xshift=22mm,yshift=24mm]current page.south west) -- ([xshift=-22mm,yshift=24mm]current page.south east);",
+        r"  \node[anchor=south west, xshift=22mm, yshift=10mm] at (current page.south west) {\begin{minipage}{60mm}{\sffamily\color{brandaccent}\footnotesize\textsc{Call}}\\{\sffamily\bfseries\color{brandanswer}\large +20\,112\,000\,9622}\end{minipage}};",
+        rf"  \node[anchor=south, yshift=10mm] at (current page.south) {{\begin{{minipage}}{{78mm}}\centering{{\sffamily\color{{brandaccent}}\footnotesize\textsc{{2026 Edition}}}}\\{{\sffamily\bfseries\color{{brandanswer}}\large {latex_escape(label)}}}\end{{minipage}}}};",
+        r"  \node[anchor=south east, xshift=-22mm, yshift=10mm] at (current page.south east) {\begin{minipage}{70mm}\raggedleft{\sffamily\color{brandaccent}\footnotesize\textsc{Student Edition}}\\{\sffamily\bfseries\color{brandanswer}\normalsize Worked answers included}\end{minipage}};",
         r"\end{tikzpicture}",
         r"\end{titlepage}",
         "",
@@ -1293,6 +1335,7 @@ def build_vector_pdf(
     solutions: dict[str, dict[str, Any]],
     output_path: Path,
 ) -> None:
+    palette = book_palette(spec)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     doc = fitz.open()
     doc.set_metadata(
@@ -1318,13 +1361,13 @@ def build_vector_pdf(
         if topic != current_topic:
             current_topic = topic
             page_counter[0] += 1
-            add_topic_page(doc, topic, topic_counts[topic])
+            add_topic_page(doc, topic, topic_counts[topic], palette)
             toc.append([1, topic, page_counter[0]])
 
         page_counter[0] += 1
-        add_question_page(doc, row, spec.title, page_counter[0])
+        add_question_page(doc, row, spec.title, page_counter[0], palette)
         if spec.include_solutions:
-            add_solution_pages(doc, row, solutions.get(str(row.get("id"))), spec.title, page_counter)
+            add_solution_pages(doc, row, solutions.get(str(row.get("id"))), spec.title, page_counter, palette)
 
     if toc:
         doc.set_toc(toc)

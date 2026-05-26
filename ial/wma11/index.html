@@ -112,11 +112,47 @@
       </div>
     </section>
 
-    <section class="ial-dashboard" aria-label="WMA11 summary">
+    <section id="ialStats" class="ial-dashboard" aria-label="WMA11 summary">
       <article><span>Total questions</span><strong data-ial-total>179</strong><small>13 checked topics</small></article>
       <article><span>Filtered now</span><strong data-ial-filtered>0</strong><small>matching questions</small></article>
       <article><span>Solved here</span><strong data-ial-solved>0</strong><small>saved to your account</small></article>
       <article><span>Mistake box</span><strong data-ial-mistakes>0</strong><small>for revision</small></article>
+    </section>
+
+    <section id="ialMockBuilder" class="ial-mock-builder" aria-labelledby="ialMockTitle">
+      <div class="ial-mock-head">
+        <div>
+          <span class="eyebrow">Pure 1 Mock Builder</span>
+          <h2 id="ialMockTitle">Build a WMA11 test</h2>
+          <p>Generate a focused Pure 1 paper from the same classified question bank.</p>
+        </div>
+        <div class="ial-mock-actions">
+          <button class="button primary" type="button" id="ialGenerateMock">Generate test</button>
+          <button class="button light" type="button" id="ialPrintMock">Print questions</button>
+          <button class="button solution" type="button" id="ialPrintMockSolutions">Print with answers</button>
+        </div>
+      </div>
+      <form class="ial-mock-controls" aria-label="WMA11 mock builder controls">
+        <label>
+          <span>Topic</span>
+          <select id="ialMockTopic"></select>
+        </label>
+        <label>
+          <span>Question count</span>
+          <select id="ialMockCount">
+            <option value="6">6 questions</option>
+            <option value="8" selected>8 questions</option>
+            <option value="10">10 questions</option>
+            <option value="12">12 questions</option>
+          </select>
+        </label>
+        <label class="ial-toggle">
+          <input id="ialMockExpertise" type="checkbox">
+          <span>Expertise only Q6+</span>
+        </label>
+      </form>
+      <div id="ialMockSummary" class="ial-mock-summary">No mock generated yet.</div>
+      <div id="ialMockList" class="ial-mock-list" aria-live="polite"></div>
     </section>
 
     <section class="ial-workbench">

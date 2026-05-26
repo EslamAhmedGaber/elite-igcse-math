@@ -128,6 +128,11 @@ ALLOWED_PUBLIC_SOLUTION_DIRS = {
     "downloads/PastPaperSolutions",
 }
 
+ALLOWED_PUBLIC_SOLUTION_FILES = {
+    "downloads/IAL/WMA11/WMA11_Classified_With_Answers.pdf",
+    "downloads/IAL/WMA11/WMA11_Expertise_With_Answers.pdf",
+}
+
 
 class Report:
     def __init__(self) -> None:
@@ -162,7 +167,10 @@ def rel(path: Path) -> str:
 
 def is_allowed_public_solution_file(path: Path) -> bool:
     path_rel = rel(path)
-    return any(path_rel.startswith(f"{allowed}/") for allowed in ALLOWED_PUBLIC_SOLUTION_DIRS)
+    return (
+        path_rel in ALLOWED_PUBLIC_SOLUTION_FILES
+        or any(path_rel.startswith(f"{allowed}/") for allowed in ALLOWED_PUBLIC_SOLUTION_DIRS)
+    )
 
 
 def verify_guardrails(report: Report) -> None:
