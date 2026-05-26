@@ -2683,15 +2683,6 @@ body[data-course-palette="pure"] .pathway-tool-strip {
   box-shadow: var(--shadow);
 }
 
-body.pathway-unset .page-home > :not(.pathway-gate) {
-  display: none !important;
-}
-
-body.pathway-unset .cloud-floating-widget,
-body.pathway-unset .mobile-bottom-nav {
-  display: none !important;
-}
-
 .pathway-gate {
   display: grid;
   gap: 18px;
@@ -3547,6 +3538,240 @@ body.pathway-unset .site-header .site-cta {
 }
 .final-cta p { margin: 0; color: rgba(255, 255, 255, 0.85); max-width: 540px; }
 .final-cta-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* Phase 4 compact home rebuild */
+.home-rebuild {
+  gap: 28px;
+}
+
+.home-entry {
+  position: relative;
+  display: block;
+  min-height: 560px;
+  padding: clamp(34px, 5vw, 72px);
+  overflow: hidden;
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(22, 27, 46, 0.96) 0%, rgba(22, 27, 46, 0.86) 46%, rgba(22, 27, 46, 0.38) 100%),
+    url("assets/Eslam4.jpg") right center / min(48vw, 560px) auto no-repeat,
+    #161b2e;
+}
+
+.home-entry-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 980px;
+  display: grid;
+  gap: 24px;
+}
+
+.home-entry .eyebrow {
+  color: #dcb877;
+}
+
+.home-entry h1 {
+  margin: 0;
+  max-width: 720px;
+  color: #fff;
+  font-size: clamp(42px, 6vw, 78px);
+  line-height: 1.02;
+}
+
+.home-entry p {
+  max-width: 720px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+.home-pathway-picker {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 980px;
+}
+
+.home-pathway-choice {
+  min-height: 132px;
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-top: 6px solid var(--brand-inkwell);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--ink);
+  text-decoration: none;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.16);
+}
+
+.home-pathway-choice:hover,
+.home-pathway-choice:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.22);
+}
+
+.home-pathway-choice span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.home-pathway-choice strong {
+  font-size: 22px;
+}
+
+.home-pathway-choice small {
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.home-pathway-choice.is-modular {
+  border-top-color: var(--brand-verdigris);
+}
+
+.home-pathway-choice.is-pure {
+  border-top-color: var(--brand-indigo);
+}
+
+.hero-stat-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  max-width: 920px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.hero-stat-strip span {
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.10);
+  color: rgba(255, 255, 255, 0.80);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.hero-stat-strip strong {
+  display: block;
+  color: #dcb877;
+  font-size: 22px;
+}
+
+.home-module-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.home-module-card {
+  min-height: 210px;
+}
+
+.feature-open-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.feature-open-links a {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--accent-dark);
+  font-size: 12px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.feature-open-links a:hover,
+.feature-open-links a:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.home-trust-about {
+  border-radius: 8px;
+}
+
+.home-proof-pricing {
+  padding: 32px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: linear-gradient(135deg, #fff 0%, #f8f6ef 100%);
+}
+
+.home-reviews-compact,
+.home-pricing-compact {
+  margin-top: 20px;
+}
+
+.home-pricing-compact .pricing-card {
+  min-height: 0;
+}
+
+.home-pricing-compact .pricing-card header {
+  min-height: 92px;
+}
+
+.home-pricing-compact .pricing-card ul {
+  margin-bottom: 14px;
+}
+
+@media (max-width: 980px) {
+  .home-entry {
+    background:
+      linear-gradient(180deg, rgba(22, 27, 46, 0.96) 0%, rgba(22, 27, 46, 0.90) 62%, rgba(22, 27, 46, 0.74) 100%),
+      url("assets/Eslam4.jpg") right bottom / 320px auto no-repeat,
+      #161b2e;
+  }
+  .home-pathway-picker,
+  .hero-stat-strip,
+  .home-module-grid {
+    grid-template-columns: 1fr;
+  }
+  .home-entry p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-entry {
+    min-height: 0;
+    padding: 28px 18px 220px;
+    background:
+      linear-gradient(180deg, rgba(22, 27, 46, 0.97) 0%, rgba(22, 27, 46, 0.92) 66%, rgba(22, 27, 46, 0.66) 100%),
+      url("assets/Eslam4.jpg") right bottom / 250px auto no-repeat,
+      #161b2e;
+  }
+  .home-entry h1 {
+    font-size: 42px;
+  }
+  .home-proof-pricing {
+    padding: 22px 18px;
+  }
+}
+
+@media (max-width: 760px) {
+  .cloud-floating-widget {
+    position: static;
+    margin: 14px 12px;
+    grid-template-columns: 1fr;
+    max-width: calc(100vw - 24px);
+  }
+  .cloud-floating-widget button,
+  .cloud-floating-widget a {
+    width: 100%;
+  }
+}
 
 /* ============================================================
    About page
