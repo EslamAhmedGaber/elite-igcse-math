@@ -42,7 +42,9 @@
     </dialog>
   `;
 
-  const NAV_GROUPS = [
+  const COURSE_SYSTEM = window.ELITE_COURSE_MODULES || {};
+
+  const DEFAULT_NAV_GROUPS = [
     {
       id: "linear",
       label: "Linear",
@@ -125,8 +127,9 @@
       ],
     },
   ];
+  const NAV_GROUPS = Array.isArray(COURSE_SYSTEM.navGroups) ? COURSE_SYSTEM.navGroups : DEFAULT_NAV_GROUPS;
 
-  const MODULE_ALIASES = {
+  const DEFAULT_MODULE_ALIASES = {
     "classified view": "classified",
     "classified bank": "classified",
     "expertise": "expertise",
@@ -144,6 +147,7 @@
     "progress": "progress",
     "mistake box": "mistake-box",
   };
+  const MODULE_ALIASES = COURSE_SYSTEM.moduleAliases || DEFAULT_MODULE_ALIASES;
 
   function moduleKey(item) {
     const title = String(item.module || item.title || "").trim().toLowerCase();
@@ -213,14 +217,15 @@
     const page = document.body?.dataset.page || "";
     const params = new URLSearchParams(window.location.search);
     if (page === "home" && !params.get("pathway") && !window.ELITE_PATHWAY?.hasChosen) return null;
-    if (!group.units) return { title: group.label, detail: group.detail, links: group.links };
+    if (!group.units) return { title: group.label, detail: group.detail, intro: group.intro, links: group.links };
     if (params.get("choose") === "unit" || (!params.get("unit") && page === "practice" && params.get("pathway") === "modular")) {
       return {
         kind: "unit-choice",
-        title: "Choose Modular Unit",
+        title: group.unitChoiceTitle || "Choose Modular Unit",
         detail: "4WM route",
-        intro: "Start by choosing Unit 1 or Unit 2. Each unit opens its own Classified View, Expertise, Mock Builder, Books, Past Paper Solutions, and Progress.",
+        intro: group.unitChoiceIntro || "Start by choosing Unit 1 or Unit 2. Each unit opens its own Classified View, Expertise, Mock Builder, Books, Past Paper Solutions, and Progress.",
         links: group.units.map((unit) => ({
+          module: "unit-choice",
           title: unit.title,
           detail: `${unit.detail} tools`,
           href: `/practice.html?pathway=modular&unit=${encodeURIComponent(unit.title)}&bank=all`,
@@ -233,7 +238,7 @@
     return {
       title: `${group.label} ${unit.title}`,
       detail: unit.detail,
-      intro: "Everything for this unit lives here, so students can move between practice, tests, books, solutions, and progress without hunting.",
+      intro: unit.intro || "Everything for this unit lives here, so students can move between practice, tests, books, solutions, and progress without hunting.",
       links: unit.links,
     };
   }
@@ -258,6 +263,9 @@
     const linkBank = linkParams.get("bank") || "all";
     const mode = params.get("mode") || "";
     const linkMode = linkParams.get("mode") || "";
+    const unit = params.get("unit") || "";
+    const linkUnit = linkParams.get("unit") || "";
+    if (linkUnit && unit !== linkUnit) return false;
     if (linkPath.endsWith("/practice.html")) return bank === linkBank && mode === linkMode;
     if (linkPath.endsWith("/exam.html")) return linkMode ? mode === linkMode : true;
     return true;
@@ -280,6 +288,9 @@
     const header = document.querySelector(".site-header");
     if (!header) return;
     const groupId = activeNavGroup();
+    const group = NAV_GROUPS.find((item) => item.id === groupId);
+    if (group?.palette) document.body.dataset.coursePalette = group.palette;
+    document.body.dataset.activeCourse = groupId;
     document.body?.classList.toggle("pathway-pure", groupId === "pure");
     const toolData = activeToolLinks(groupId);
     if (!toolData) return;
@@ -288,7 +299,7 @@
     header.insertAdjacentHTML("afterend", `
       <nav class="pathway-tool-strip ${toolData.kind === "unit-choice" ? "is-unit-choice" : ""}" aria-label="${toolData.title} tools">
         <div class="pathway-tool-strip-title">
-          <span>Pathway tools</span>
+          <span>Course modules</span>
           <strong>${toolData.title}</strong>
           <small>${toolData.detail}</small>
           ${toolData.intro ? `<p>${toolData.intro}</p>` : ""}

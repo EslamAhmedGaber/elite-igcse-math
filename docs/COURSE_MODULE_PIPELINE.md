@@ -11,7 +11,7 @@ Every course should be treated as:
 - `identity`: public name, exam code, route, default landing page, and storage keys.
 - `palette`: a small set of course colors applied to the pathway hub, builder, progress, book cards, and PDF covers.
 - `data adapter`: normalizes questions into the shared shape used by practice and `exam.js`.
-- `feature modules`: reusable tools exposed from the same pathway navigation.
+- `feature modules`: reusable tools exposed from the same pathway navigation and course registry.
 - `generated books`: question books, answer books, expertise books, and paper-order solution books.
 
 ## Feature Modules
@@ -28,12 +28,28 @@ Use these names consistently in navigation and styling:
 - `past-solutions`: original paper-order solution books.
 - `mistake-box`: saved difficult questions.
 - `saved-tests`: reusable built tests.
+- `book-builder`: source pipeline for public books and approved answer books.
+- `classified-builder`: source pipeline for topic/unit classification.
+- `paper-solution-builder`: source pipeline for original paper-order solution books.
+- `solution-method`: the shared solution-writing style and final-answer format.
+
+## Registry Source
+
+`course-modules.js` is the front-end course registry. It defines:
+
+- current course groups and unit groups,
+- which modules appear for each course,
+- root-safe URLs for each module,
+- course palette names,
+- module aliases used by CSS and navigation.
+
+`lead.js` consumes this registry and keeps an internal fallback so older cached pages do not break. New curricula should be added to `course-modules.js` first, then wired to data/books/builders.
 
 ## Add A New Course
 
-1. Add the course to the shared pathway/tool source in `lead.js`.
-2. Give every tool link a stable module identity, either by title or explicit `module`.
-3. Add the course palette in `styles.css` and the course-specific CSS file if it has one.
+1. Add the course to the shared registry in `course-modules.js`.
+2. Give every visible tool link an explicit stable `module`.
+3. Add the course palette token in `course-modules.js`, then apply its CSS in `styles.css` and the course-specific CSS file if it has one.
 4. Normalize question data into the shared question shape before connecting UI.
 5. Add an adapter to `exam.js` so the shared builder can power random mocks, custom tests, smart revision, and saved tests.
 6. Reuse existing progress and mistake-box keys only when they represent the same course. Otherwise create course-specific keys.
