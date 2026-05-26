@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parent.parent
 PRIVATE_DIR = ROOT / "private_output"
 PUBLIC_DIR = ROOT / "downloads" / "ClassifiedSolutions"
 MAX_PUBLIC_BYTES = 95 * 1024 * 1024
-DOWNLOAD_VERSION = "style-g-20260526"
+DOWNLOAD_VERSION = "style-h-20260527"
 
 
 def versioned_href(href: str) -> str:

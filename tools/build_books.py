@@ -37,10 +37,11 @@ A4_HEIGHT = 842
 MARGIN = 42
 NAVY = (22 / 255, 27 / 255, 46 / 255)
 NAVY_DARK = (14 / 255, 18 / 255, 32 / 255)
-RED = (192 / 255, 57 / 255, 43 / 255)
-RED_DARK = (141 / 255, 40 / 255, 32 / 255)
-GREEN = (90 / 255, 128 / 255, 116 / 255)
-GOLD = (192 / 255, 138 / 255, 62 / 255)
+VERMILION = (200 / 255, 57 / 255, 43 / 255)
+VERDIGRIS = (90 / 255, 128 / 255, 116 / 255)
+VERDIGRIS_DARK = (65 / 255, 100 / 255, 91 / 255)
+OCHRE = (200 / 255, 106 / 255, 63 / 255)
+GOLD = OCHRE
 GOLD_LIGHT = (220 / 255, 184 / 255, 119 / 255)
 CREAM = (251 / 255, 246 / 255, 230 / 255)
 VELLUM = (235 / 255, 223 / 255, 196 / 255)
@@ -59,6 +60,8 @@ class BookPalette:
     answer: tuple[float, float, float]
     accent: tuple[float, float, float]
     accent_soft: tuple[float, float, float]
+    final: tuple[float, float, float]
+    examiner: tuple[float, float, float]
 
 
 LINEAR_PALETTE = BookPalette(
@@ -68,14 +71,18 @@ LINEAR_PALETTE = BookPalette(
     answer=NAVY_DARK,
     accent=GOLD,
     accent_soft=GOLD_LIGHT,
+    final=VERMILION,
+    examiner=OCHRE,
 )
 MODULAR_PALETTE = BookPalette(
     label="Modular",
-    question=RED,
-    question_dark=RED_DARK,
-    answer=NAVY_DARK,
+    question=VERDIGRIS,
+    question_dark=VERDIGRIS_DARK,
+    answer=VERDIGRIS_DARK,
     accent=GOLD,
     accent_soft=GOLD_LIGHT,
+    final=VERMILION,
+    examiner=OCHRE,
 )
 
 
@@ -555,13 +562,6 @@ def convert_solution_markdown(markdown: str) -> str:
         topic_match = re.match(r"^\*\*Topic check:\*\*\s*(.*)$", stripped)
         if topic_match:
             close_itemize()
-            output.extend(
-                [
-                    r"\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=brandline,arc=2mm,boxrule=0.5pt,left=9pt,right=9pt,top=6pt,bottom=6pt,borderline west={2mm}{0pt}{brandaccent}]",
-                    r"{\sffamily\bfseries\color{brandanswer}Topic check.} " + format_inline_latex(topic_match.group(1)),
-                    r"\end{tcolorbox}",
-                ]
-            )
             continue
 
         step_match = re.match(r"^\*\*Step\s+(\d+)\s*:?\s*(.*?)\*\*\s*(.*)$", stripped, flags=re.I)
@@ -614,6 +614,34 @@ def convert_solution_markdown(markdown: str) -> str:
 
     close_itemize()
     return "\n".join(output).strip() or r"\emph{No worked solution is saved yet.}"
+
+
+def solution_to_markdown(solution: dict[str, Any] | None) -> str:
+    if not solution:
+        return "No worked solution is saved yet."
+
+    steps = solution.get("steps")
+    final_answer = solution.get("finalAnswer")
+    if isinstance(steps, list) and steps:
+        chunks: list[str] = []
+        for index, step in enumerate(steps, start=1):
+            if not isinstance(step, dict):
+                continue
+            title = str(step.get("title") or "Method").strip()
+            body = str(step.get("body") or "").strip()
+            chunks.append(f"**Step {index}: {title}**")
+            if body:
+                chunks.append(body)
+        if final_answer:
+            chunks.extend(["", f"**Answer:** {str(final_answer).strip()}"])
+        return "\n\n".join(chunks).strip() or "No worked solution is saved yet."
+
+    source = str(solution.get("source") or "").strip()
+    if source:
+        return source
+    if final_answer:
+        return f"**Answer:** {str(final_answer).strip()}"
+    return "No worked solution is saved yet."
 
 
 def question_image_path(question: dict[str, Any]) -> Path:
@@ -1069,13 +1097,8 @@ def add_solution_pages(
     page_counter: list[int],
     palette: BookPalette,
 ) -> None:
-    source = "No website solution is saved yet."
-    status = "missing"
-    if solution:
-        source = str(solution.get("source") or "No solution text is saved yet.")
-        status = str(solution.get("status") or "saved")
-
-    title = f"Solution - {row.get('paper')} Q{row.get('q')} ({status})"
+    source = solution_to_markdown(solution)
+    title = f"Worked Solution - {row.get('paper')} Q{row.get('q')}"
     lines = wrapped_lines(solution_markdown_to_text(source))
     lines_per_page = 50
     chunks = [lines[i : i + lines_per_page] for i in range(0, len(lines), lines_per_page)] or [[]]
@@ -1111,11 +1134,15 @@ def latex_palette_setup(spec: BookSpec) -> list[str]:
         rf"\definecolor{{bookanswer}}{{HTML}}{{{color_hex(palette.answer)}}}",
         rf"\definecolor{{bookaccent}}{{HTML}}{{{color_hex(palette.accent)}}}",
         rf"\definecolor{{bookaccentsoft}}{{HTML}}{{{color_hex(palette.accent_soft)}}}",
+        rf"\definecolor{{bookfinal}}{{HTML}}{{{color_hex(palette.final)}}}",
+        rf"\definecolor{{bookexaminer}}{{HTML}}{{{color_hex(palette.examiner)}}}",
         r"\colorlet{brandquestion}{bookquestion}",
         r"\colorlet{brandquestiondark}{bookquestiondark}",
         r"\colorlet{brandanswer}{bookanswer}",
         r"\colorlet{brandaccent}{bookaccent}",
         r"\colorlet{brandaccentsoft}{bookaccentsoft}",
+        r"\colorlet{brandfinal}{bookfinal}",
+        r"\colorlet{brandexaminer}{bookexaminer}",
     ]
 
 
@@ -1166,8 +1193,8 @@ def private_latex_preamble(spec: BookSpec, row_count: int) -> list[str]:
         "",
         r"\newtcolorbox{solutionbody}{enhanced,breakable,colback=white,colframe=brandline,arc=2mm,boxrule=0.55pt,left=5mm,right=5mm,top=4mm,bottom=4mm,before skip=5mm,after skip=5mm,borderline west={3mm}{0pt}{brandanswer},drop shadow={black!8}}",
         r"\newcommand{\solutionstep}[2]{\par\vspace{3mm}\noindent{\sffamily\bfseries\color{brandanswer}#1.\ #2}\par\vspace{1mm}}",
-        r"\newcommand{\finalanswerbox}[1]{\par\vspace{4mm}\noindent\begin{tcolorbox}[enhanced,breakable,colback=brandcream!55,colframe=brandcream!55,arc=2mm,boxrule=0pt,left=4mm,right=4mm,top=3mm,bottom=3mm,borderline west={3mm}{0pt}{brandaccent}]{\sffamily\bfseries\color{brandanswer}Final answer}\par #1\end{tcolorbox}\par}",
-        r"\newcommand{\solutionmetabox}[3]{\begin{tcolorbox}[enhanced,colback=white,colframe=brandline,arc=2mm,boxrule=0.45pt,left=4mm,right=4mm,top=2.5mm,bottom=2.5mm,before skip=3mm,after skip=3mm,borderline west={1.4mm}{0pt}{brandaccent}]{\sffamily\bfseries\color{brandanswer}#1 \quad\textbar\quad Question #2}\\[-1pt]{\sffamily\small\color{textgrey}#3}\end{tcolorbox}}",
+        r"\newcommand{\finalanswerbox}[1]{\par\vspace{4mm}\noindent\begin{tcolorbox}[enhanced,breakable,colback=brandfinal!7,colframe=brandfinal!18,arc=2mm,boxrule=0.2pt,left=4mm,right=4mm,top=3mm,bottom=3mm,borderline west={3mm}{0pt}{brandfinal}]{\sffamily\bfseries\color{brandfinal}Final answer}\par #1\end{tcolorbox}\par}",
+        r"\newcommand{\solutionmetabox}[3]{\begin{tcolorbox}[enhanced,colback=white,colframe=brandline,arc=2mm,boxrule=0.45pt,left=4mm,right=4mm,top=2.5mm,bottom=2.5mm,before skip=3mm,after skip=3mm,borderline west={1.4mm}{0pt}{brandexaminer}]{\sffamily\bfseries\color{brandanswer}#1 \quad\textbar\quad Question #2}\\[-1pt]{\sffamily\small\color{textgrey}#3}\end{tcolorbox}}",
         r"\sloppy",
         r"\emergencystretch=3em",
         "",
@@ -1208,7 +1235,7 @@ def private_latex_preamble(spec: BookSpec, row_count: int) -> list[str]:
         r"\end{tikzpicture}",
         "",
         r"\vspace*{42mm}",
-        r"\hspace*{10mm}\begin{minipage}{158mm}",
+        r"\hspace*{10mm}\begin{minipage}{158mm}\raggedright",
         r"{\sffamily\bfseries\color{brandquestiondark}\small ELITE IGCSE ACADEMY}\\[12pt]",
         rf"{{\sffamily\color{{brandquestion}}\large {latex_escape(book_subject(spec))}}}\\[8pt]",
         r"{\sffamily\bfseries\color{brandanswer}\fontsize{34}{40}\selectfont Higher Tier}\\[5pt]",
@@ -1272,7 +1299,7 @@ def write_private_latex(
         session = str(row.get("session") or "")
         image_path = tex_image_path(build_dir, row)
         solution = solutions.get(str(row.get("id"))) or {}
-        solution_tex = convert_solution_markdown(str(solution.get("source") or ""))
+        solution_tex = convert_solution_markdown(solution_to_markdown(solution))
 
         lines.extend(
             [
