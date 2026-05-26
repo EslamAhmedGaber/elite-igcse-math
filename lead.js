@@ -107,6 +107,7 @@
         { title: "Answer Book", detail: "Worked solutions", href: "/downloads/IAL/WMA11/WMA11_Classified_With_Answers.pdf", target: "_blank" },
         { title: "Expertise Book", detail: "Q6+ questions", href: "/downloads/IAL/WMA11/WMA11_Expertise_Questions.pdf", target: "_blank" },
         { title: "Expertise Answers", detail: "Q6+ solutions", href: "/downloads/IAL/WMA11/WMA11_Expertise_With_Answers.pdf", target: "_blank" },
+        { title: "Past Paper Solutions", detail: "Paper-order answers", href: "/downloads/IAL/WMA11/WMA11_Past_Paper_Solutions.pdf", target: "_blank" },
       ],
     },
     {
@@ -125,9 +126,35 @@
     },
   ];
 
+  const MODULE_ALIASES = {
+    "classified view": "classified",
+    "classified bank": "classified",
+    "expertise": "expertise",
+    "mock builder": "build-test",
+    "build test": "build-test",
+    "random mock": "build-test",
+    "smart revision": "smart-revision",
+    "saved tests": "saved-tests",
+    "books": "books",
+    "question book": "books",
+    "answer book": "answers",
+    "expertise book": "expertise",
+    "expertise answers": "answers",
+    "past paper solutions": "past-solutions",
+    "progress": "progress",
+    "mistake box": "mistake-box",
+  };
+
+  function moduleKey(item) {
+    const title = String(item.module || item.title || "").trim().toLowerCase();
+    if (MODULE_ALIASES[title]) return MODULE_ALIASES[title];
+    return title.replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "general";
+  }
+
   function navLink(item) {
     const attrs = [
       `href="${item.href}"`,
+      `data-module="${moduleKey(item)}"`,
       item.target ? `target="${item.target}" rel="noreferrer"` : "",
       item.pathway ? `data-pathway-choice="${item.pathway}" data-pathway-target="${item.href}"` : "",
       item.lead ? `data-lead-trigger="${item.lead}"` : "",
@@ -239,6 +266,7 @@
   function renderToolStripLink(link) {
     const attrs = [
       `href="${link.href}"`,
+      `data-module="${moduleKey(link)}"`,
       link.target ? `target="${link.target}" rel="noreferrer"` : "",
       link.pathway ? `data-pathway-choice="${link.pathway}" data-pathway-target="${link.href}"` : "",
       link.lead ? `data-lead-trigger="${link.lead}"` : "",
