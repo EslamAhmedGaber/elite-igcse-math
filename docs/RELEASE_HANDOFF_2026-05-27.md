@@ -7,11 +7,12 @@ This is the release handoff for the restored static Elite IGCSE Mathematics site
 - Domain: https://eliteigcse.com
 - Live repository root: `C:\Users\Eslam\Documents\Elite IGCSE v2\website`
 - Project log: `C:\Users\Eslam\Documents\Elite IGCSE v2\PROJECT_LOG.md`
-- Current branch/head: `main` at the latest polish-pass acceptance commit; baseline production content before Phase 7 was `c89fc91`.
+- Current branch/head: `main` at the latest polish-pass-2 acceptance/PDF commit; baseline production content before Phase 7 was `c89fc91`.
 - Registry version: `2026-05-27-course-registry-v6`
-- Service worker cache: `elite-igcse-kill-v91`
+- Service worker cache: `elite-igcse-kill-v95`
 - Classified answer PDF version: `title-polish-20260527`
-- WMA11 PDF version: `wma11-indigo-20260527`
+- Linear/Modular past-paper solution PDF version: `paper-solutions-20260527`
+- WMA11 PDF version: `wma11-polish2-20260527`
 
 ## Canonical Course Signatures
 
@@ -47,9 +48,9 @@ Linear exposes its tools directly. Modular first shows Unit 1 / Unit 2, then exp
 - Pure 1 hub: https://eliteigcse.com/ial/wma11/index.html?cb=bd1f14e
 - Pure 1 past papers: https://eliteigcse.com/pastpapers.html?pathway=pure&cb=bd1f14e#pure-wma11
 - Downloads: https://eliteigcse.com/downloads.html?pathway=pure&cb=bd1f14e
-- WMA11 classified with answers: https://eliteigcse.com/downloads/IAL/WMA11/WMA11_Classified_With_Answers.pdf?v=wma11-indigo-20260527
+- WMA11 classified with answers: https://eliteigcse.com/downloads/IAL/WMA11/WMA11_Classified_With_Answers.pdf?v=wma11-polish2-20260527
 - Unit 1 classified answers: https://eliteigcse.com/downloads/ClassifiedSolutions/Classified_4WM1_Answers.pdf?v=title-polish-20260527
-- WMA11 Jan 2026 solution: https://eliteigcse.com/downloads/IAL/WMA11/Papers/WMA11_2026_Jan_Solutions.pdf?v=wma11-indigo-20260527
+- WMA11 Jan 2026 solution: https://eliteigcse.com/downloads/IAL/WMA11/Papers/WMA11_2026_Jan_Solutions.pdf?v=wma11-polish2-20260527
 
 ## Phase Commits
 
