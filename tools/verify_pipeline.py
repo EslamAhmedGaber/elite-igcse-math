@@ -221,6 +221,68 @@ def verify_runtime_js(report: Report) -> None:
             report.error(f"{filename} is not valid JavaScript: {summary}")
 
 
+def verify_pathway_palette_activation(report: Report) -> None:
+    """Guard the early pathway palette activation hook used by all public pages."""
+    js_files = ("pathway-bootstrap.js", "lead.js", "pathway-mode.js", "service-worker.js")
+    for filename in js_files:
+        path = ROOT / filename
+        if not path.exists():
+            report.error(f"{filename} is missing; pathway palette activation cannot run.")
+            continue
+        try:
+            subprocess.run(
+                ["node", "--check", str(path)],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+        except FileNotFoundError:
+            report.warn("Node.js is unavailable; skipped pathway activation JS syntax checks.")
+            break
+        except subprocess.CalledProcessError as exc:
+            detail = (exc.stderr or exc.stdout or "").strip().splitlines()
+            summary = detail[0] if detail else "syntax check failed"
+            report.error(f"{filename} is not valid JavaScript: {summary}")
+
+    bootstrap_text = (ROOT / "pathway-bootstrap.js").read_text(encoding="utf-8")
+    if "ELITE_PATHWAY_BOOTSTRAP" not in bootstrap_text or "dataset.pathway" not in bootstrap_text:
+        report.error("pathway-bootstrap.js must set ELITE_PATHWAY_BOOTSTRAP and data-pathway.")
+
+    lead_text = (ROOT / "lead.js").read_text(encoding="utf-8")
+    if "applyPathwayContext" not in lead_text or "ELITE_PATHWAY_BOOTSTRAP" not in lead_text:
+        report.error("lead.js must re-apply the bootstrap pathway context to body/html.")
+
+    css_text = (ROOT / "styles.css").read_text(encoding="utf-8")
+    for pathway in ("linear", "modular", "pure"):
+        if f'html[data-pathway="{pathway}"]' not in css_text or f'body[data-pathway="{pathway}"]' not in css_text:
+            report.error(f"styles.css must expose palette variables for html/body data-pathway={pathway}.")
+
+    required_pages = [
+        "index.html",
+        "practice.html",
+        "exam.html",
+        "progress.html",
+        "downloads.html",
+        "pastpapers.html",
+        "topics.html",
+        "checkup.html",
+        "about.html",
+        "admin.html",
+        "ial/wma11/index.html",
+    ]
+    for page in required_pages:
+        path = ROOT / page
+        text = path.read_text(encoding="utf-8")
+        bootstrap_pos = text.find("pathway-bootstrap.js")
+        styles_pos = text.find("styles.css")
+        if bootstrap_pos == -1:
+            report.error(f"{page} must load pathway-bootstrap.js before site CSS.")
+        elif styles_pos != -1 and bootstrap_pos > styles_pos:
+            report.error(f"{page} loads pathway-bootstrap.js after styles.css; palette may flash incorrectly.")
+        if "lead.js?v=" in text and "lead.js?v=20260527c" not in text:
+            report.error(f"{page} must reference the current lead.js cache-buster.")
+
+
 def verify_questions(report: Report) -> tuple[dict[str, dict[str, Any]], set[str], set[str]]:
     topics_doc = read_json(TOPICS_PATH, report) or {}
     known_topics = set(topics_doc.get("topics") or []) | CANONICAL_TOPICS
@@ -487,6 +549,7 @@ def main() -> int:
     report = Report()
     verify_guardrails(report)
     verify_runtime_js(report)
+    verify_pathway_palette_activation(report)
     question_by_id, paper_slugs, _used_topics = verify_questions(report)
     verify_catalogue(report, paper_slugs)
     verify_solutions(report, question_by_id)

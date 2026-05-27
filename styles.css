@@ -8451,6 +8451,8 @@ body[data-page="admin"] {
   overflow-x: hidden;
 }
 
+html[data-course-palette="linear"],
+html[data-pathway="linear"],
 body[data-course-palette="linear"],
 body[data-pathway="linear"] {
   --course-signature: var(--brand-ink);
@@ -8460,6 +8462,8 @@ body[data-pathway="linear"] {
   --course-rail: rgba(22, 27, 46, 0.2);
 }
 
+html[data-course-palette="modular"],
+html[data-pathway="modular"],
 body[data-course-palette="modular"],
 body[data-pathway="modular"] {
   --course-signature: var(--brand-verdigris);
@@ -8469,6 +8473,8 @@ body[data-pathway="modular"] {
   --course-rail: rgba(90, 128, 116, 0.26);
 }
 
+html[data-course-palette="pure"],
+html[data-pathway="pure"],
 body[data-course-palette="pure"],
 body[data-pathway="pure"] {
   --course-signature: var(--brand-indigo);

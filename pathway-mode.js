@@ -13,7 +13,13 @@
   const hasChosen = validModes.has(requested) || validModes.has(saved);
 
   function setMode(nextMode, targetUrl = "") {
-    if (!validModes.has(nextMode)) return;
+    if (!validModes.has(nextMode)) {
+      if (targetUrl) {
+        const url = new URL(targetUrl, window.location.href);
+        window.location.href = url.pathname + url.search + url.hash;
+      }
+      return;
+    }
     localStorage.setItem(STORAGE_KEY, nextMode);
     if (targetUrl) {
       const url = new URL(targetUrl, window.location.href);

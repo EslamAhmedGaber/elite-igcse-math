@@ -139,6 +139,8 @@
   ];
   const NAV_GROUPS = Array.isArray(COURSE_SYSTEM.navGroups) ? COURSE_SYSTEM.navGroups : DEFAULT_NAV_GROUPS;
   const PALETTES = COURSE_SYSTEM.palettes || {};
+  const VALID_PATHWAYS = new Set(["linear", "modular", "pure"]);
+  const PATHWAY_CHOICE_KEYS = ["elitePathwayChoice", "elitePathwayMode"];
 
   const DEFAULT_MODULE_ALIASES = {
     "classified view": "classified",
@@ -185,6 +187,53 @@
     return PALETTES[group?.palette] || null;
   }
 
+  function normalizePathway(value) {
+    const pathway = String(value || "").trim().toLowerCase();
+    return VALID_PATHWAYS.has(pathway) ? pathway : "";
+  }
+
+  function normalizeUnit(value) {
+    const unit = String(value || "").trim().toLowerCase();
+    if (!unit) return "";
+    return unit.replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  }
+
+  function readStoredPathway() {
+    for (const key of PATHWAY_CHOICE_KEYS) {
+      try {
+        const saved = normalizePathway(localStorage.getItem(key));
+        if (saved) return saved;
+      } catch (err) {
+        return "";
+      }
+    }
+    return "";
+  }
+
+  function resolvePathwayContext() {
+    const params = new URLSearchParams(window.location.search);
+    const requested = normalizePathway(params.get("pathway"));
+    const boot = window.ELITE_PATHWAY_BOOTSTRAP || {};
+    const pathIsPure = window.location.pathname.toLowerCase().includes("/ial/wma11/");
+    const pathway = requested || normalizePathway(boot.pathway) || (pathIsPure ? "pure" : "") || readStoredPathway() || "linear";
+    const course = params.get("course") || boot.course || (pathIsPure ? "wma11" : "");
+    const unit = normalizeUnit(params.get("unit") || boot.unit || "");
+    return { pathway, course, unit };
+  }
+
+  function applyPathwayContext(context = resolvePathwayContext()) {
+    [document.documentElement, document.body].filter(Boolean).forEach((target) => {
+      target.dataset.pathway = context.pathway;
+      target.dataset.coursePalette = context.pathway;
+      if (context.course) target.dataset.course = context.course;
+      else delete target.dataset.course;
+      if (context.unit) target.dataset.unit = context.unit;
+      else delete target.dataset.unit;
+    });
+    window.ELITE_PATHWAY_BOOTSTRAP = context;
+    return context;
+  }
+
   function navGroupStyle(group) {
     const palette = groupPalette(group);
     if (!palette?.accent) return "";
@@ -198,8 +247,10 @@
     const palette = groupPalette(group);
     const pathway = group.pathway || group.id;
     if (group.palette) {
-      document.body.dataset.coursePalette = group.palette;
-      document.body.dataset.pathway = pathway;
+      [document.documentElement, document.body].filter(Boolean).forEach((target) => {
+        target.dataset.coursePalette = group.palette;
+        target.dataset.pathway = pathway;
+      });
     }
     document.body.dataset.activeCourse = group.id;
     if (!palette?.accent) return;
@@ -252,7 +303,8 @@
   function activeNavGroup() {
     const page = document.body?.dataset.page || "";
     const params = new URLSearchParams(window.location.search);
-    const requestedPathway = params.get("pathway");
+    const context = resolvePathwayContext();
+    const requestedPathway = params.get("pathway") || context.pathway;
     const requestedGroup = findGroupByPathway(requestedPathway);
     if (requestedGroup) return requestedGroup.id;
     if (page === "ial-wma11" || window.location.pathname.includes("/ial/wma11/") || requestedPathway === "pure") return "pure";
@@ -489,7 +541,8 @@
     const groups = nav.querySelectorAll("[data-nav-group]");
     const page = document.body?.dataset.page || "";
     const params = new URLSearchParams(window.location.search);
-    const requestedPathway = params.get("pathway");
+    const context = resolvePathwayContext();
+    const requestedPathway = params.get("pathway") || context.pathway;
     let active = findGroupByPathway(requestedPathway)?.id || "linear";
 
     if (page === "ial-wma11" || window.location.pathname.includes("/ial/wma11/")) {
@@ -568,6 +621,7 @@
   }
 
   function bootstrap() {
+    applyPathwayContext();
     init();
     initNavToggle();
     initStructuredNav();
