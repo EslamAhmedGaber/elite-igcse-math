@@ -1,8 +1,9 @@
 (function () {
-  const questions = window.QUESTION_DATA || [];
+  const coursePack = window.EliteProgressCoursePack || {};
+  const questions = coursePack.questions || window.QUESTION_DATA || [];
   let solvedIds = [];
   try {
-    const rawSolved = JSON.parse(localStorage.getItem("solvedExpertiseQuestions") || "[]");
+    const rawSolved = JSON.parse(localStorage.getItem(coursePack.solvedKey || "solvedExpertiseQuestions") || "[]");
     solvedIds = Array.isArray(rawSolved) ? rawSolved : [];
   } catch (err) {
     solvedIds = [];
@@ -10,11 +11,11 @@
   const solved = new Set(solvedIds);
   let saved = {};
   try {
-    saved = JSON.parse(localStorage.getItem("eliteStudyPlanSettings") || "{}") || {};
+    saved = JSON.parse(localStorage.getItem(coursePack.planKey || "eliteStudyPlanSettings") || "{}") || {};
   } catch (err) {
     saved = {};
   }
-  const pathway = window.ELITE_PATHWAY?.mode || "linear";
+  const pathway = coursePack.pathway || window.ELITE_PATHWAY?.mode || "linear";
 
   const els = {
     form: document.getElementById("plannerForm"),
@@ -37,6 +38,8 @@
 
   const unitOrder = pathway === "modular"
     ? ["Unit 1", "Unit 2"]
+    : pathway === "pure"
+      ? ["Pure 1"]
     : [
       "Chapter 1: Numbers & the Number System",
       "Chapter 2: Equations, Formulae & Identities",
@@ -88,15 +91,17 @@
     questions.forEach((question) => {
       const unit = question.unit || "Other";
       const topic = question.topic || "Mixed";
+      const topicSlug = question.topic_slug || question.topicSlug || topic;
+      const isExpertise = question.bank === "expertise" || (typeof coursePack.expertiseFilter === "function" && coursePack.expertiseFilter(question));
       const row = map.get(unit) || { unit, total: 0, expertise: 0, solved: 0, topics: new Map() };
       row.total += 1;
-      if (question.bank === "expertise") row.expertise += 1;
+      if (isExpertise) row.expertise += 1;
       if (solved.has(question.id)) row.solved += 1;
-      const topicRow = row.topics.get(topic) || { topic, total: 0, expertise: 0, solved: 0 };
+      const topicRow = row.topics.get(topicSlug) || { topic, topicSlug, total: 0, expertise: 0, solved: 0 };
       topicRow.total += 1;
-      if (question.bank === "expertise") topicRow.expertise += 1;
+      if (isExpertise) topicRow.expertise += 1;
       if (solved.has(question.id)) topicRow.solved += 1;
-      row.topics.set(topic, topicRow);
+      row.topics.set(topicSlug, topicRow);
       map.set(unit, row);
     });
     return [...map.values()].sort((a, b) => unitOrder.indexOf(a.unit) - unitOrder.indexOf(b.unit));
@@ -126,7 +131,7 @@
 
   function saveSettings() {
     const settings = currentSettings();
-    localStorage.setItem("eliteStudyPlanSettings", JSON.stringify(settings));
+    localStorage.setItem(coursePack.planKey || "eliteStudyPlanSettings", JSON.stringify(settings));
     if (window.EliteCloud?.queueSync) window.EliteCloud.queueSync();
   }
 
@@ -158,6 +163,10 @@
   }
 
   function topicLink(topic, unit, bank = "all", mode = "") {
+    if (typeof coursePack.practiceLink === "function") {
+      const match = topicPool(currentSettings()).find((row) => row.topic === topic && row.unit === unit);
+      return coursePack.practiceLink(match || { topic, unit }, bank);
+    }
     const params = new URLSearchParams();
     params.set("unit", unit);
     params.set("topic", topic);
@@ -205,8 +214,9 @@
   }
 
   function renderWeek(week) {
+    const expertiseLabel = coursePack.expertiseLabel || "Q20+";
     const expertiseTask = week.includeExpertise
-      ? `<li><span>Hard question training</span><a href="practice.html?bank=expertise&mode=q20">Train Q20+</a></li>`
+      ? `<li><span>Hard question training</span><a href="${topicLink(week.topics[0]?.topic || "", week.topics[0]?.unit || "", "expertise")}">Train ${escapeHtml(expertiseLabel)}</a></li>`
       : `<li><span>Confidence set</span><a href="practice.html?mode=unsolved">Continue unsolved</a></li>`;
 
     return `<article class="plan-week">
@@ -228,7 +238,7 @@
   }
 
   function resetPlan() {
-    localStorage.removeItem("eliteStudyPlanSettings");
+    localStorage.removeItem(coursePack.planKey || "eliteStudyPlanSettings");
     els.weeks.innerHTML = "";
     els.summary.innerHTML = `<strong>Your plan is ready to build.</strong><p>Choose your settings, then build a weekly route. You can print it or keep it saved in this browser.</p>`;
     loadSettings();

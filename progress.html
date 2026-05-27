@@ -22,11 +22,12 @@
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js"></script>
   <script defer src="print-utils.js?v=20260526a"></script>
+  <script defer src="ial/wma11/wma11-data.js?v=20260527b"></script>
   <script defer src="progress.js"></script>
   <script defer src="planner.js"></script>
   <script defer src="tracker-v2.js"></script>
-  <script defer src="course-modules.js?v=20260527c"></script>
-  <script defer src="lead.js?v=20260527a"></script>
+  <script defer src="course-modules.js?v=20260527d"></script>
+  <script defer src="lead.js?v=20260527b"></script>
 </head>
 <body data-page="progress" data-active-tab="dashboard">
 
@@ -123,6 +124,8 @@
 
     <nav class="tracker-tabs" id="trackerTabs" aria-label="Tracker tabs" role="tablist">
       <button type="button" class="tracker-tab" data-tab-target="dashboard" role="tab" aria-selected="true"><span class="tt-ic" aria-hidden="true">&#x25A4;</span>Dashboard</button>
+      <button type="button" class="tracker-tab" data-tab-target="topics" role="tab" aria-selected="false"><span class="tt-ic" aria-hidden="true">&#x25A4;</span>Topic Mastery</button>
+      <button type="button" class="tracker-tab" data-tab-target="plan" role="tab" aria-selected="false"><span class="tt-ic" aria-hidden="true">&#x25A4;</span>Study Plan</button>
       <button type="button" class="tracker-tab" data-tab-target="papers" role="tab" aria-selected="false"><span class="tt-ic" aria-hidden="true">&#x25A4;</span>Past Papers</button>
       <button type="button" class="tracker-tab" data-tab-target="assignments" role="tab" aria-selected="false"><span class="tt-ic" aria-hidden="true">&#x25A4;</span>Assignments</button>
       <button type="button" class="tracker-tab" data-tab-target="quizzes" role="tab" aria-selected="false"><span class="tt-ic" aria-hidden="true">&#x25A4;</span>Quizzes</button>
@@ -328,7 +331,7 @@
       </div>
     </section>
 
-    <section class="progress-sheet-guide" data-tab="__legacy" id="overviewPanel" aria-label="Workbook overview" hidden>
+    <section class="progress-sheet-guide" data-tab="plan" id="overviewPanel" aria-label="Workbook overview">
       <article>
         <strong>1. Set target</strong>
         <p>Name, target grade, exam session, and weekly target personalize the dashboard.</p>
@@ -347,7 +350,7 @@
       </article>
     </section>
 
-    <section class="progress-two-col" data-tab="__legacy" hidden>
+    <section class="progress-two-col" data-tab="plan">
       <section class="progress-profile-panel" aria-labelledby="profileTitle">
         <div class="section-head">
           <span class="eyebrow">Student Info</span>
@@ -386,17 +389,17 @@
       </section>
     </section>
 
-    <section class="progress-plan-panel planner-builder" data-tab="__legacy" id="planBuilder" aria-labelledby="planBuilderTitle" hidden>
+    <section class="progress-plan-panel planner-builder" data-tab="plan" id="planBuilder" aria-labelledby="planBuilderTitle">
       <div class="sheet-head">
         <div>
           <span class="eyebrow">Study Plan</span>
           <h2 id="planBuilderTitle">Build the next weeks from your real progress.</h2>
-          <p>Choose the exam date, target grade, weekly time, and focus area. The plan uses weaker topics first, then adds Q20+ training near the exam.</p>
+          <p>Choose the exam date, target grade, weekly time, and focus area. The plan uses weaker topics first, then adds harder-question training near the exam.</p>
         </div>
         <div class="plan-mini-brief" aria-label="Plan rules">
           <strong>Plan logic</strong>
           <span>Weak topics first</span>
-          <span>Q20+ for high targets</span>
+          <span><span data-progress-expertise-label>Q20+</span> for high targets</span>
           <span>Print-ready weekly checklist</span>
         </div>
       </div>
@@ -449,7 +452,7 @@
       </div>
     </section>
 
-    <section class="progress-plan-output planner-output" data-tab="__legacy" aria-live="polite" aria-label="Generated study plan" hidden>
+    <section class="progress-plan-output planner-output" data-tab="plan" aria-live="polite" aria-label="Generated study plan">
       <div class="plan-summary" id="planSummary">
         <strong>Your plan is ready to build.</strong>
         <p>Choose your settings, then build a weekly route. You can print it or keep it saved in this browser.</p>
@@ -462,7 +465,7 @@
         <div>
           <span class="eyebrow">Revision Priority</span>
           <h2 id="priorityTitle">The topics to fix first.</h2>
-          <p>Ranked from your solved questions, Q20+ coverage, selected questions, and mistake box.</p>
+          <p>Ranked from your solved questions, harder-question coverage, selected questions, and mistake box.</p>
         </div>
         <div class="priority-legend" aria-label="Priority colors">
           <span class="priority-chip urgent">Urgent</span>
@@ -488,7 +491,7 @@
       </div>
     </section>
 
-    <section class="progress-sheet-panel" data-tab="__legacy" id="topicSheet" aria-labelledby="topicSheetTitle" hidden>
+    <section class="progress-sheet-panel" data-tab="topics" id="topicSheet" aria-labelledby="topicSheetTitle">
       <div class="sheet-head">
         <div>
           <span class="eyebrow">Topic Sheet</span>
@@ -531,7 +534,7 @@
               <th>Select</th>
               <th>Topic</th>
               <th>Full bank</th>
-              <th>Q20+</th>
+              <th><span data-progress-expertise-label>Q20+</span></th>
               <th>Progress</th>
               <th>Action</th>
             </tr>

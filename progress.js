@@ -1,24 +1,11 @@
 (function () {
-  const questions = window.QUESTION_DATA || [];
-  const PROFILE_KEY = "eliteStudentProfileV1";
-  const SOLVED_KEY = "solvedExpertiseQuestions";
-  const SELECTED_KEY = "selectedExpertiseQuestions";
-  const REVIEW_KEY = "eliteMistakeBoxV1";
-  const READINESS_KEY = "eliteReadinessCheck";
-  const ACTIVITY_KEY = "eliteStudyActivityV1";
-  const PAPER_ATTEMPTS_KEY = "elitePaperAttemptsV1";
-  const STUDY_TASKS_KEY = "eliteStudyTasksV1";
-  const MOCK_HISTORY_KEY = "eliteMockExamHistoryV1";
-  const EXAM_KEY = "eliteMockExamV1";
-  const PLAN_KEY = "eliteStudyPlanSettings";
-  const LEAD_KEY = "leadInfoV1";
-  const ASSIGNMENTS_KEY = "eliteTrackerAssignmentsV2";
-  const QUIZZES_KEY = "eliteTrackerQuizzesV2";
-  const TRACKER_EXTRA_YEARS = ["2026"];
-  const TRACKER_EXTRA_PAPER_CODES = ["Unit 1", "Unit 2"];
+  const params = new URLSearchParams(window.location.search);
+  const DEFAULT_TRACKER_EXTRA_YEARS = ["2026"];
+  const DEFAULT_TRACKER_EXTRA_PAPER_CODES = ["Unit 1", "Unit 2"];
   const PAPER_CODE_ORDER = [
     "Unit 1",
     "Unit 2",
+    "WMA11",
     "4WM1H",
     "4WM1HR",
     "4WM2H",
@@ -28,6 +15,136 @@
     "P2H",
     "P2HR"
   ];
+
+  function sessionLabel(session) {
+    return session === "MayJune" ? "May/June" : session;
+  }
+
+  function resolveProgressCoursePack() {
+    const pathway = (params.get("pathway") || window.ELITE_PATHWAY?.mode || "linear").toLowerCase();
+    const course = (params.get("course") || "").toLowerCase();
+    if (pathway === "pure" && (!course || course === "wma11")) {
+      const topics = window.WMA11_TOPICS || [];
+      const topicOrder = new Map(topics.map((topic, index) => [topic.slug, index + 1]));
+      const topicNames = new Map(topics.map((topic) => [topic.slug, topic.name]));
+      const rawQuestions = window.WMA11_QUESTIONS || [];
+      const questions = rawQuestions.map((item) => {
+        const topicSlug = item.primaryTopic || item.topic;
+        const topicName = item.primaryTopicName || item.topicName || topicNames.get(topicSlug) || topicSlug;
+        return {
+          ...item,
+          id: item.id,
+          source_id: item.id,
+          bank: "all",
+          unit: "Pure 1",
+          modular_force_unit: "Pure 1",
+          topic: topicName,
+          topic_slug: topicSlug,
+          topic_order: topicOrder.get(topicSlug) || 999,
+          question: item.qNo,
+          paper: `${sessionLabel(item.session)} ${item.year} WMA11`,
+          paperCode: item.paperCode || "WMA11",
+          paper_code: item.paperCode || "WMA11",
+          image: item.image,
+          marks: item.marks
+        };
+      });
+      return {
+        pathway: "pure",
+        course: "wma11",
+        label: "IAL Pure 1",
+        unitLowerPlural: "courses",
+        questions,
+        solvedKey: "eliteWMA11SolvedV1",
+        selectedKey: "eliteWMA11SelectedV1",
+        reviewKey: "eliteWMA11MistakeBoxV1",
+        readinessKey: "eliteWMA11ReadinessCheck",
+        activityKey: "eliteWMA11StudyActivityV1",
+        paperAttemptsKey: "eliteWMA11PaperAttemptsV1",
+        studyTasksKey: "eliteWMA11StudyTasksV1",
+        mockHistoryKey: "eliteWMA11MockExamHistoryV1",
+        examKey: "eliteWMA11MockExamV1",
+        planKey: "eliteWMA11StudyPlanV1",
+        profileKey: "eliteWMA11StudentProfileV1",
+        assignmentsKey: "eliteWMA11TrackerAssignmentsV1",
+        quizzesKey: "eliteWMA11TrackerQuizzesV1",
+        trackerExtraYears: DEFAULT_TRACKER_EXTRA_YEARS,
+        trackerExtraPaperCodes: ["WMA11"],
+        expertiseLabel: "Q6+",
+        expertiseName: "Expertise",
+        expertiseFilter: (question) => Number(question.qNo || question.question || 0) >= 6,
+        practiceLink(row, bank = "all") {
+          const linkParams = new URLSearchParams();
+          linkParams.set("course", "wma11");
+          if (row?.topicSlug || row?.topic_slug) linkParams.set("topic", row.topicSlug || row.topic_slug);
+          if (bank === "expertise") linkParams.set("expertise", "1");
+          return `ial/wma11/index.html?${linkParams.toString()}#ialFilters`;
+        },
+        paperOptions() {
+          const groups = new Map();
+          rawQuestions.forEach((item) => {
+            const key = `${item.year}|${item.session}|WMA11`;
+            if (!groups.has(key)) {
+              groups.set(key, {
+                year: String(item.year),
+                session: item.session,
+                paperCode: "WMA11"
+              });
+            }
+          });
+          return [...groups.values()];
+        }
+      };
+    }
+    const mode = pathway === "modular" ? "modular" : "linear";
+    return {
+      pathway: mode,
+      course: "4ma1",
+      label: mode === "modular" ? "Modular" : "Linear",
+      unitLowerPlural: window.ELITE_PATHWAY?.label("unitLowerPlural") || (mode === "modular" ? "units" : "chapters"),
+      questions: window.QUESTION_DATA || [],
+      solvedKey: "solvedExpertiseQuestions",
+      selectedKey: "selectedExpertiseQuestions",
+      reviewKey: "eliteMistakeBoxV1",
+      readinessKey: "eliteReadinessCheck",
+      activityKey: "eliteStudyActivityV1",
+      paperAttemptsKey: "elitePaperAttemptsV1",
+      studyTasksKey: "eliteStudyTasksV1",
+      mockHistoryKey: "eliteMockExamHistoryV1",
+      examKey: "eliteMockExamV1",
+      planKey: "eliteStudyPlanSettings",
+      profileKey: "eliteStudentProfileV1",
+      assignmentsKey: "eliteTrackerAssignmentsV2",
+      quizzesKey: "eliteTrackerQuizzesV2",
+      trackerExtraYears: DEFAULT_TRACKER_EXTRA_YEARS,
+      trackerExtraPaperCodes: DEFAULT_TRACKER_EXTRA_PAPER_CODES,
+      expertiseLabel: "Q20+",
+      expertiseName: "Q20+",
+      practiceLink(row, bank = "all") {
+        const linkParams = new URLSearchParams({ pathway: mode, bank, unit: row.unit, topic: row.topic });
+        if (bank === "expertise") linkParams.set("mode", "q20");
+        return `practice.html?${linkParams.toString()}`;
+      }
+    };
+  }
+
+  const coursePack = resolveProgressCoursePack();
+  window.EliteProgressCoursePack = coursePack;
+  const questions = coursePack.questions || [];
+  const PROFILE_KEY = coursePack.profileKey;
+  const SOLVED_KEY = coursePack.solvedKey;
+  const SELECTED_KEY = coursePack.selectedKey;
+  const REVIEW_KEY = coursePack.reviewKey;
+  const READINESS_KEY = coursePack.readinessKey;
+  const ACTIVITY_KEY = coursePack.activityKey;
+  const PAPER_ATTEMPTS_KEY = coursePack.paperAttemptsKey;
+  const STUDY_TASKS_KEY = coursePack.studyTasksKey;
+  const MOCK_HISTORY_KEY = coursePack.mockHistoryKey;
+  const EXAM_KEY = coursePack.examKey;
+  const PLAN_KEY = coursePack.planKey;
+  const LEAD_KEY = "leadInfoV1";
+  const ASSIGNMENTS_KEY = coursePack.assignmentsKey;
+  const QUIZZES_KEY = coursePack.quizzesKey;
 
   const els = {
     previewName: document.getElementById("profilePreviewName"),
@@ -185,6 +302,9 @@
   }
 
   function bankQuestions(bank) {
+    if (bank === "expertise" && typeof coursePack.expertiseFilter === "function") {
+      return questions.filter(coursePack.expertiseFilter);
+    }
     return questions.filter((question) => question.bank === bank);
   }
 
@@ -195,7 +315,7 @@
   function topicRows() {
     const expertiseByTopic = new Map();
     bankQuestions("expertise").forEach((question) => {
-      const key = `${question.unit}|||${question.topic}`;
+      const key = `${question.unit}|||${question.topic_slug || question.topic}`;
       const row = expertiseByTopic.get(key) || { total: 0, solved: 0 };
       row.total += 1;
       if (isSolved(question)) row.solved += 1;
@@ -204,10 +324,11 @@
 
     const rows = new Map();
     bankQuestions("all").forEach((question) => {
-      const key = `${question.unit}|||${question.topic}`;
+      const key = `${question.unit}|||${question.topic_slug || question.topic}`;
       const row = rows.get(key) || {
         unit: question.unit || "Mixed",
         topic: question.topic || "Mixed",
+        topicSlug: question.topic_slug || question.topic,
         topicOrder: Number(question.topic_order || 999),
         total: 0,
         solved: 0,
@@ -243,12 +364,12 @@
   }
 
   function topicKey(row) {
-    return `${row.unit}|||${row.topic}`;
+    return `${row.unit}|||${row.topicSlug || row.topic}`;
   }
 
   function questionsForTopicRows(rows) {
     const keys = new Set(rows.map(topicKey));
-    return bankQuestions("all").filter((question) => keys.has(`${question.unit}|||${question.topic}`));
+    return bankQuestions("all").filter((question) => keys.has(`${question.unit}|||${question.topic_slug || question.topic}`));
   }
 
   function average(values) {
@@ -314,14 +435,18 @@
       const key = paperKey(paper);
       if (!map.has(key)) map.set(key, paper);
     };
-    bankQuestions("all").forEach((question) => {
-      const parsed = parsePaperName(question.paper);
-      if (!parsed) return;
-      if (question.paper_code) parsed.paperCode = String(question.paper_code).toUpperCase();
-      rememberPaper(parsed);
-    });
+    if (typeof coursePack.paperOptions === "function") {
+      coursePack.paperOptions().forEach(rememberPaper);
+    } else {
+      bankQuestions("all").forEach((question) => {
+        const parsed = parsePaperName(question.paper);
+        if (!parsed) return;
+        if (question.paper_code) parsed.paperCode = String(question.paper_code).toUpperCase();
+        rememberPaper(parsed);
+      });
+    }
     paperAttempts.forEach(rememberPaper);
-    const sessionOrder = { Jan: 1, May: 2, Jun: 3, Nov: 4 };
+    const sessionOrder = { Jan: 1, May: 2, MayJune: 2, Jun: 3, Oct: 4, Nov: 5 };
     return [...map.values()].sort((a, b) => {
       const yearDiff = Number(b.year) - Number(a.year);
       if (yearDiff) return yearDiff;
@@ -348,9 +473,7 @@
   }
 
   function practiceLink(row, bank = "all") {
-    const params = new URLSearchParams({ bank, unit: row.unit, topic: row.topic });
-    if (bank === "expertise") params.set("mode", "q20");
-    return `practice.html?${params.toString()}`;
+    return coursePack.practiceLink(row, bank);
   }
 
   function loadProfileForm() {
@@ -398,10 +521,11 @@
     Object.values(reviewItems || {}).forEach((item) => {
       const question = byId.get(item.id);
       if (!question) return;
-      const row = map.get(question.topic) || { total: 0, due: 0 };
+      const key = question.topic_slug || question.topic;
+      const row = map.get(key) || { total: 0, due: 0 };
       row.total += 1;
       if (!item.masteredAt && Number(item.dueAt || 0) <= Date.now()) row.due += 1;
-      map.set(question.topic, row);
+      map.set(key, row);
     });
     return map;
   }
@@ -411,7 +535,7 @@
     return topicRows().map((row) => {
       const fullPct = pct(row.solved, row.total);
       const expertisePct = pct(row.expertiseSolved, row.expertiseTotal);
-      const review = reviewCounts.get(row.topic) || { total: 0, due: 0 };
+      const review = reviewCounts.get(row.topicSlug || row.topic) || { total: 0, due: 0 };
       const gap = Math.max(0, 100 - fullPct);
       const expertiseGap = row.expertiseTotal ? Math.max(0, 100 - expertisePct) : 25;
       let score = Math.round(gap * 0.55 + expertiseGap * 0.20 + Math.min(4, review.total) * 9 + Math.min(3, review.due) * 7 + Math.min(4, row.selected) * 2);
@@ -464,9 +588,21 @@
   }
 
   function renderUnitFilter() {
-    const unitLabel = window.ELITE_PATHWAY?.label("unitLowerPlural") || "units";
+    const unitLabel = coursePack.unitLowerPlural || window.ELITE_PATHWAY?.label("unitLowerPlural") || "units";
     const units = uniqueSorted(topicRows().map((row) => row.unit));
     els.unitFilter.innerHTML = `<option value="">All ${escapeHtml(unitLabel)}</option>${units.map((unit) => `<option>${escapeHtml(unit)}</option>`).join("")}`;
+  }
+
+  function applyCourseCopy() {
+    document.body.dataset.progressPathway = coursePack.pathway;
+    const title = document.getElementById("progressTitle");
+    if (title) title.textContent = `${coursePack.label} progress dashboard.`;
+    document.querySelectorAll("[data-pathway-label='unit']").forEach((node) => {
+      node.textContent = coursePack.pathway === "pure" ? "Course" : (window.ELITE_PATHWAY?.label("unit") || "Unit");
+    });
+    document.querySelectorAll("[data-progress-expertise-label]").forEach((node) => {
+      node.textContent = coursePack.expertiseLabel || "Q20+";
+    });
   }
 
   function applyUrlDefaults() {
@@ -489,6 +625,8 @@
     const solvedCount = all.filter(isSolved).length;
     const remaining = Math.max(0, all.length - solvedCount);
     const weeksLeft = Math.max(1, Math.ceil(remaining / weekly));
+    const expertiseLabel = coursePack.expertiseLabel || "Q20+";
+    const expertiseName = coursePack.expertiseName || expertiseLabel;
 
     els.nextMoveCards.innerHTML = [
       `<article>
@@ -505,9 +643,9 @@
       </article>`,
       `<article>
         <span>Exam finishers</span>
-        <strong>Q20+ training</strong>
-        <p>Use expertise questions when a topic is started but not yet strong.</p>
-        <a class="button light" href="practice.html?bank=expertise&mode=q20">Open Q20+</a>
+        <strong>${escapeHtml(expertiseName)} training</strong>
+        <p>Use harder questions when a topic is started but not yet strong.</p>
+        <a class="button light" href="${first ? practiceLink(first, "expertise") : practiceLink({ unit: "", topic: "" }, "expertise")}">Open ${escapeHtml(expertiseLabel)}</a>
       </article>`
     ].join("");
   }
@@ -516,6 +654,7 @@
     const unit = els.unitFilter.value;
     const status = els.statusFilter.value;
     const search = els.search.value.trim().toLowerCase();
+    const expertiseLabel = coursePack.expertiseLabel || "Q20+";
     const rows = topicRows().filter((row) => {
       if (unit && row.unit !== unit) return false;
       if (status && statusFor(row) !== status) return false;
@@ -554,7 +693,7 @@
         <td>
           <div class="sheet-actions">
             <a href="${practiceLink(row)}">Practice</a>
-            ${row.expertiseTotal ? `<a href="${practiceLink(row, "expertise")}">Q20+</a>` : ""}
+            ${row.expertiseTotal ? `<a href="${practiceLink(row, "expertise")}">${escapeHtml(expertiseLabel)}</a>` : ""}
           </div>
         </td>
       </tr>`;
@@ -600,6 +739,7 @@
 
   function renderPriorityRows() {
     const rows = priorityRowsData().slice(0, 10);
+    const expertiseLabel = coursePack.expertiseLabel || "Q20+";
     if (!rows.length) {
       els.priorityRows.innerHTML = `<tr><td colspan="6">Start solving questions to build your revision priorities.</td></tr>`;
       return;
@@ -611,23 +751,25 @@
         <span>${escapeHtml(row.unit)}</span>
       </td>
       <td>
-        <div class="sheet-progress-label"><span>${row.fullPct}% full</span><span>${row.expertisePct}% Q20+</span></div>
+        <div class="sheet-progress-label"><span>${row.fullPct}% full</span><span>${row.expertisePct}% ${escapeHtml(expertiseLabel)}</span></div>
         <div class="topic-bar"><i style="width:${row.fullPct}%"></i></div>
       </td>
       <td>${row.review.total} saved <span class="muted-cell">(${row.review.due} due)</span></td>
       <td><span class="status-pill ${row.className}">${escapeHtml(row.verdict)}</span></td>
-      <td><div class="sheet-actions"><a href="${practiceLink(row)}">Practice</a>${row.expertiseTotal ? `<a href="${practiceLink(row, "expertise")}">Q20+</a>` : ""}</div></td>
+      <td><div class="sheet-actions"><a href="${practiceLink(row)}">Practice</a>${row.expertiseTotal ? `<a href="${practiceLink(row, "expertise")}">${escapeHtml(expertiseLabel)}</a>` : ""}</div></td>
     </tr>`).join("");
   }
 
   function renderPaperControls() {
     const papers = allPaperOptions();
     const currentYear = String(new Date().getFullYear());
-    const years = uniqueSorted([...papers.map((paper) => paper.year), ...TRACKER_EXTRA_YEARS, currentYear]).sort((a, b) => Number(b) - Number(a));
-    const sessionOrder = ["Jan", "May", "Jun", "Nov"];
+    const extraYears = coursePack.trackerExtraYears || DEFAULT_TRACKER_EXTRA_YEARS;
+    const extraPaperCodes = coursePack.trackerExtraPaperCodes || DEFAULT_TRACKER_EXTRA_PAPER_CODES;
+    const years = uniqueSorted([...papers.map((paper) => paper.year), ...extraYears, currentYear]).sort((a, b) => Number(b) - Number(a));
+    const sessionOrder = ["Jan", "May", "MayJune", "Jun", "Oct", "Nov"];
     const sessions = uniqueSorted(papers.map((paper) => paper.session)).sort((a, b) => sessionOrder.indexOf(a) - sessionOrder.indexOf(b));
     const modularUnits = uniqueSorted(bankQuestions("all").map((question) => question.modular_force_unit));
-    const codes = sortPaperCodes([...papers.map((paper) => paper.paperCode), ...modularUnits, ...TRACKER_EXTRA_PAPER_CODES]);
+    const codes = sortPaperCodes([...papers.map((paper) => paper.paperCode), ...modularUnits, ...extraPaperCodes]);
     els.paperYear.innerHTML = years.map((year) => `<option>${escapeHtml(year)}</option>`).join("");
     els.paperSession.innerHTML = sessions.map((session) => `<option>${escapeHtml(session)}</option>`).join("");
     els.paperCode.innerHTML = codes.map((code) => `<option>${escapeHtml(code)}</option>`).join("");
@@ -911,8 +1053,8 @@
       profile.name ? `Name: ${profile.name}` : "",
       profile.targetGrade ? `Target grade: ${profile.targetGrade}` : "",
       profile.examSession ? `Exam session: ${profile.examSession}` : "",
-      `Full classified solved: ${allSolved}/${all.length}`,
-      `Q20+ solved: ${expertiseSolved}/${expertise.length}`,
+      `${coursePack.label} classified solved: ${allSolved}/${all.length}`,
+      `${coursePack.expertiseLabel || "Q20+"} solved: ${expertiseSolved}/${expertise.length}`,
       `Past paper average: ${papers.average || 0}%`,
       `Assignments/quizzes logged: ${tasks.count}`,
       weak ? `Top revision priority: ${weak.topic} (${weak.verdict})` : "",
@@ -933,6 +1075,7 @@
   }
 
   recordVisit();
+  applyCourseCopy();
   loadProfileForm();
   renderUnitFilter();
   applyUrlDefaults();

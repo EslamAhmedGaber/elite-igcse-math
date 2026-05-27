@@ -16,7 +16,7 @@ Legend:
 | Expertise | Real: Q20+ bank filter | Real: unit-scoped Q20+ bank filter | Real: Q6+ WMA11 filter via `/ial/wma11/index.html?expertise=1#ialFilters` |
 | Build Test | Real: shared `exam.html` custom mode | Real: shared `exam.html` custom mode with unit scope | Real: shared `exam.html` WMA11 adapter |
 | Smart Revision | Real: shared `exam.html` smart mode | Real: shared `exam.html` smart mode with unit scope | Real: shared `exam.html` WMA11 smart mode |
-| Progress | Real: `progress.html` with existing IGCSE progress keys | Real: `progress.html` with unit scope | Real: WMA11 progress module with `eliteWMA11SolvedV1` and `eliteWMA11MistakeBoxV1` |
+| Progress | Real: shared `progress.html` with existing IGCSE progress keys | Real: shared `progress.html` with unit scope | Real: shared `progress.html?pathway=pure&course=wma11` with `eliteWMA11SolvedV1` and `eliteWMA11MistakeBoxV1`; inline WMA11 progress remains a quick summary |
 | Mistake Box | Real: practice review mode | Real: unit-scoped practice review mode | Real: WMA11 Mistake Box filter via `/ial/wma11/index.html?mode=mistakes#ialFilters` |
 | Saved Tests | Real: shared `exam.html` saved mode | Real: shared `exam.html` saved mode with unit scope | Real: shared `exam.html` saved mode with WMA11 storage suffix |
 | Books | Real: `downloads.html?pathway=linear` | Real: `downloads.html?pathway=modular&unit=...` | Real: `downloads.html?pathway=pure` |
@@ -33,4 +33,4 @@ Constraints kept:
 
 - No PDFs or LaTeX rebuilds.
 - No storage-key changes.
-- Progress remains adapter-based; no full progress component refactor in Phase 3.
+- Progress now uses the shared course resolver; Pure 1 receives the same target profile, topic mastery, study-plan, tracker, backup, and revision tabs as Linear/Modular.

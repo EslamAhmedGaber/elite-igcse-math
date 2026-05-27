@@ -3,11 +3,13 @@
 // computes grades (IGCSE A*-U), builds a revision tab, and adds CSV export.
 // Runs alongside progress.js and reuses cloud-progress.js for Firebase sync.
 (function () {
-  const PAPER_ATTEMPTS_KEY = "elitePaperAttemptsV1";   // existing
-  const STUDY_TASKS_KEY = "eliteStudyTasksV1";         // existing (mixed)
-  const ASSIGNMENTS_KEY = "eliteTrackerAssignmentsV2"; // new
-  const QUIZZES_KEY = "eliteTrackerQuizzesV2";         // new
-  const MIGRATION_FLAG = "eliteTrackerV2MigratedAt";
+  const COURSE_PACK = window.EliteProgressCoursePack || {};
+  const QUESTION_DATA = COURSE_PACK.questions || window.QUESTION_DATA || [];
+  const PAPER_ATTEMPTS_KEY = COURSE_PACK.paperAttemptsKey || "elitePaperAttemptsV1";   // existing
+  const STUDY_TASKS_KEY = COURSE_PACK.studyTasksKey || "eliteStudyTasksV1";         // existing (mixed)
+  const ASSIGNMENTS_KEY = COURSE_PACK.assignmentsKey || "eliteTrackerAssignmentsV2"; // new
+  const QUIZZES_KEY = COURSE_PACK.quizzesKey || "eliteTrackerQuizzesV2";         // new
+  const MIGRATION_FLAG = COURSE_PACK.trackerMigrationKey || (COURSE_PACK.pathway === "pure" ? "eliteWMA11TrackerV1MigratedAt" : "eliteTrackerV2MigratedAt");
 
   const QUIZ_KINDS = new Set([
     "Topic Quiz", "Mock Quiz", "Quiz", "Unit Quiz", "Practice"
@@ -215,7 +217,7 @@
     const tabs = document.querySelectorAll(".tracker-tab");
     tabs.forEach((tab) => tab.addEventListener("click", () => activateTab(tab.dataset.tabTarget, { scroll: true })));
     const hash = (window.location.hash || "").replace("#", "");
-    const valid = ["dashboard", "papers", "assignments", "quizzes", "revision", "backup"];
+    const valid = ["dashboard", "topics", "plan", "papers", "assignments", "quizzes", "revision", "backup"];
     activateTab(valid.includes(hash) ? hash : "dashboard");
   }
   function setupTabJumps() {
@@ -234,12 +236,10 @@
 
   // ---------- Unit/Topic options (derived from question data when available) ----------
   function questionUnits() {
-    const questions = window.QUESTION_DATA || [];
-    return uniqueSorted(questions.map((q) => q.unit));
+    return uniqueSorted(QUESTION_DATA.map((q) => q.unit));
   }
   function questionTopicsByUnit(unit) {
-    const questions = window.QUESTION_DATA || [];
-    const list = questions.filter((q) => !unit || q.unit === unit).map((q) => q.topic);
+    const list = QUESTION_DATA.filter((q) => !unit || q.unit === unit).map((q) => q.topic);
     return uniqueSorted(list);
   }
   function populateUnitSelect(select, includeBlank = false) {
@@ -629,8 +629,7 @@
   // ---------- Dashboard ----------
   function paperBankCount() {
     if (window.SITE_META?.paperCount) return Number(window.SITE_META.paperCount) || 0;
-    const questions = window.QUESTION_DATA || [];
-    const keys = questions.map((q) => [q.session, q.year, q.paper_code || q.paperCode || q.paper].filter(Boolean).join("::"));
+    const keys = QUESTION_DATA.map((q) => [q.session, q.year, q.paper_code || q.paperCode || q.paper].filter(Boolean).join("::"));
     return uniqueSorted(keys).length;
   }
   function weakTopicRows(limit = 3) {
@@ -836,7 +835,7 @@
       target = "papers";
       cta = "Add harder paper";
       actionTitle = "Protect the strong pace";
-      actionText = "The average is strong. Add another timed paper or Q20+ set to confirm it under exam pressure.";
+      actionText = `The average is strong. Add another timed paper or ${COURSE_PACK.expertiseLabel || "Q20+"} set to confirm it under exam pressure.`;
     } else if (paperList.length || assignments.length || quizzes.length) {
       target = "papers";
       cta = "Add next result";

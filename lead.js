@@ -114,7 +114,7 @@
         { title: "Expertise View", detail: "Q6+ filtered bank", href: "/ial/wma11/index.html?expertise=1#ialFilters" },
         { title: "Build Test", detail: "Full mock builder", href: "/exam.html?pathway=pure&course=wma11&mode=custom" },
         { title: "Smart Revision", detail: "Mistakes and weak topics", href: "/exam.html?pathway=pure&course=wma11&mode=smart" },
-        { title: "Progress", detail: "Topic mastery", href: "/ial/wma11/index.html#ialProgressModule" },
+        { title: "Progress", detail: "Topic mastery", href: "/progress.html?pathway=pure&course=wma11" },
         { title: "Mistake Box", detail: "Saved revision", href: "/ial/wma11/index.html?mode=mistakes#ialFilters" },
         { title: "Saved Tests", detail: "Reuse builder tests", href: "/exam.html?pathway=pure&course=wma11&mode=saved" },
         { title: "Books", detail: "Question and answer PDFs", href: "/downloads.html?pathway=pure" },

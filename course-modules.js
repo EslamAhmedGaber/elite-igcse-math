@@ -1375,7 +1375,7 @@
         { module: "expertise", title: "Expertise View", detail: "Q6+ filtered bank", href: "/ial/wma11/index.html?expertise=1#ialFilters" },
         { module: "build-test", title: "Build Test", detail: "Full mock builder", href: "/exam.html?pathway=pure&course=wma11&mode=custom" },
         { module: "smart-revision", title: "Smart Revision", detail: "Mistakes and weak topics", href: "/exam.html?pathway=pure&course=wma11&mode=smart" },
-        { module: "progress", title: "Progress", detail: "Topic mastery", href: "/ial/wma11/index.html#ialProgressModule" },
+        { module: "progress", title: "Progress", detail: "Topic mastery", href: "/progress.html?pathway=pure&course=wma11" },
         { module: "mistake-box", title: "Mistake Box", detail: "Saved revision", href: "/ial/wma11/index.html?mode=mistakes#ialFilters" },
         { module: "saved-tests", title: "Saved Tests", detail: "Reuse builder tests", href: "/exam.html?pathway=pure&course=wma11&mode=saved" },
         { module: "books", title: "Books", detail: "Question and answer PDFs", href: "/downloads.html?pathway=pure" },
