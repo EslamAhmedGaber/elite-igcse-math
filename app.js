@@ -119,6 +119,8 @@ const els = {
   closeFixTopicBtn: document.getElementById("closeFixTopicBtn"),
   fixTopicSelect: document.getElementById("fixTopicSelect"),
   saveFixTopicBtn: document.getElementById("saveFixTopicBtn"),
+  advancedFiltersToggle: document.getElementById("advancedFiltersToggle"),
+  advancedFilters: document.getElementById("advancedFilters"),
   mobileToolsToggle: document.getElementById("mobileToolsToggle"),
   mobileToolsBackdrop: document.getElementById("mobileToolsBackdrop"),
   practiceSidebar: document.getElementById("practiceSidebar"),
@@ -689,6 +691,8 @@ function updateProgressSnapshot(selectedActive, solvedActive) {
   els.progressLabel.textContent = `${percent}% complete in this bank`;
   els.progressBar.style.width = `${percent}%`;
 
+  if (!els.topicProgress) return;
+
   const byTopic = new Map();
   pool.forEach((question) => {
     const current = byTopic.get(question.topic) || { total: 0, solved: 0 };
@@ -739,6 +743,13 @@ function setMobileToolsOpen(open) {
   els.mobileToolsToggle.setAttribute("aria-expanded", String(open));
   els.mobileToolsBackdrop.hidden = !open;
   document.body.classList.toggle("practice-tools-open", open);
+}
+
+function setAdvancedFiltersOpen(open) {
+  if (!els.advancedFilters || !els.advancedFiltersToggle) return;
+  els.advancedFilters.hidden = !open;
+  els.advancedFiltersToggle.setAttribute("aria-expanded", String(open));
+  els.advancedFiltersToggle.textContent = open ? "Hide filters" : "More filters";
 }
 
 function selectVisible() {
@@ -1154,6 +1165,9 @@ els.closeSolutionBtn.addEventListener("click", () => els.solutionDialog.close())
 els.closeFixTopicBtn.addEventListener("click", () => els.fixTopicDialog.close());
 els.saveFixTopicBtn.addEventListener("click", saveFixTopic);
 document.addEventListener("click", (event) => {
+  if (event.target.closest("#advancedFiltersToggle")) {
+    setAdvancedFiltersOpen(els.advancedFilters?.hidden !== false);
+  }
   if (event.target.closest("#mobileToolsToggle")) {
     setMobileToolsOpen(!els.practiceSidebar.classList.contains("open"));
   }
@@ -1173,11 +1187,9 @@ els.gridLayoutBtn.addEventListener("click", () => setLayout("grid"));
 els.listLayoutBtn.addEventListener("click", () => setLayout("list"));
 els.focusLayoutBtn.addEventListener("click", () => setLayout("focus"));
 els.focusMoreFiltersBtn?.addEventListener("click", () => {
-  if (window.matchMedia("(max-width: 980px)").matches) {
-    setMobileToolsOpen(true);
-  } else {
-    els.searchBox.focus();
-  }
+  setAdvancedFiltersOpen(true);
+  els.searchBox?.scrollIntoView({ block: "center", behavior: "smooth" });
+  els.searchBox?.focus();
 });
 els.timerToggleBtn.addEventListener("click", toggleTimer);
 els.timerResetBtn.addEventListener("click", resetTimer);
