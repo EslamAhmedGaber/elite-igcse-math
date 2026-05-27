@@ -69,6 +69,78 @@
   --t-base: 220ms var(--ease-out);
 }
 
+/* === Elite breadcrumb === */
+.elite-breadcrumb {
+  width: min(1240px, calc(100% - 56px));
+  margin: 14px auto 0;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: var(--letter-eyebrow);
+  text-transform: uppercase;
+  color: var(--muted);
+  animation: elite-fade-in 480ms var(--ease-out) both;
+}
+.elite-breadcrumb ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.elite-breadcrumb-item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+}
+.elite-breadcrumb-item a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color var(--t-fast);
+  border-bottom: 1px solid transparent;
+}
+.elite-breadcrumb-item a:hover {
+  color: var(--course-signature);
+  border-bottom-color: var(--course-soft);
+}
+.elite-breadcrumb-item.is-current {
+  color: var(--course-signature);
+  font-weight: 800;
+}
+.elite-breadcrumb-sub {
+  margin-left: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--brand-ochre);
+  text-transform: uppercase;
+}
+.elite-breadcrumb-item.is-current .elite-breadcrumb-sub {
+  color: var(--brand-ochre);
+}
+.elite-breadcrumb-sep {
+  color: rgba(26, 24, 21, 0.28);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+body.pathway-pure .elite-breadcrumb-item.is-current {
+  color: var(--brand-indigo-deep);
+}
+body[data-pathway="modular"] .elite-breadcrumb-item.is-current {
+  color: var(--brand-verdigris-deep);
+}
+@media (max-width: 720px) {
+  .elite-breadcrumb {
+    width: calc(100% - 32px);
+    margin-top: 10px;
+    font-size: 10.5px;
+    letter-spacing: 0.06em;
+  }
+  .elite-breadcrumb ol { gap: 6px; }
+}
+
 /* === Elite entrance animations === */
 @keyframes elite-fade-up {
   from { opacity: 0; transform: translateY(14px); }

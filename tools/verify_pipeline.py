@@ -279,7 +279,7 @@ def verify_pathway_palette_activation(report: Report) -> None:
             report.error(f"{page} must load pathway-bootstrap.js before site CSS.")
         elif styles_pos != -1 and bootstrap_pos > styles_pos:
             report.error(f"{page} loads pathway-bootstrap.js after styles.css; palette may flash incorrectly.")
-        if "lead.js?v=" in text and "lead.js?v=20260527e" not in text:
+        if "lead.js?v=" in text and "lead.js?v=20260528a" not in text:
             report.error(f"{page} must reference the current lead.js cache-buster.")
 
 

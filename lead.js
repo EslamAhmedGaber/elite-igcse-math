@@ -450,6 +450,134 @@
     return `<a ${attrs}>${icon}<div class="module-text"><strong>${link.title}</strong><span>${link.detail}</span></div></a>`;
   }
 
+  function escapeHtml(value) {
+    return String(value == null ? "" : value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  const PATHWAY_BREADCRUMB_LABELS = {
+    linear: { label: "Linear", code: "4MA1" },
+    modular: { label: "Modular", code: "4WM" },
+    pure: { label: "IAL Pure 1", code: "WMA11" },
+  };
+
+  const MODULE_BREADCRUMB_LABELS = {
+    classified: "Classified View",
+    expertise: "Expertise View",
+    "build-test": "Build Test",
+    "smart-revision": "Smart Revision",
+    progress: "Progress",
+    "mistake-box": "Mistake Box",
+    "saved-tests": "Saved Tests",
+    books: "Books",
+    answers: "Answer Books",
+    "past-solutions": "Past Papers",
+    "unit-choice": "Choose Unit",
+  };
+
+  function currentModuleLabel() {
+    const page = document.body?.dataset?.page || "";
+    const params = new URLSearchParams(window.location.search);
+    const path = window.location.pathname;
+    if (path.includes("/ial/wma11/")) {
+      if (params.get("mode") === "mistakes") return "Mistake Box";
+      if (params.get("expertise") === "1") return "Expertise View";
+      return "Classified View";
+    }
+    if (page === "practice" || path.endsWith("/practice.html")) {
+      const mode = params.get("mode");
+      if (mode === "review") return "Mistake Box";
+      if (params.get("bank") === "expertise" || mode === "q20") return "Expertise View";
+      return "Classified View";
+    }
+    if (page === "exam" || path.endsWith("/exam.html")) {
+      const mode = params.get("mode");
+      if (mode === "smart") return "Smart Revision";
+      if (mode === "saved") return "Saved Tests";
+      return "Build Test";
+    }
+    if (page === "progress" || path.endsWith("/progress.html")) return "Progress";
+    if (page === "pastpapers" || path.endsWith("/pastpapers.html")) return "Past Papers";
+    if (page === "downloads" || path.endsWith("/downloads.html")) return "Books";
+    if (page === "topics" || path.endsWith("/topics.html")) return "Topic Roadmap";
+    if (page === "checkup" || path.endsWith("/checkup.html")) return "Readiness Check";
+    if (page === "about" || path.endsWith("/about.html")) return "About";
+    return "";
+  }
+
+  function activePathwayId() {
+    const id = activeNavGroup();
+    return (id === "linear" || id === "modular" || id === "pure") ? id : "";
+  }
+
+  function buildBreadcrumbCrumbs() {
+    const crumbs = [{ label: "Home", href: "/index.html" }];
+    const pathwayId = activePathwayId();
+    if (!pathwayId) {
+      const page = document.body?.dataset?.page || "";
+      const moduleLabel = currentModuleLabel();
+      if (page === "about") crumbs.push({ label: "About", current: true });
+      else if (moduleLabel) crumbs.push({ label: moduleLabel, current: true });
+      return crumbs;
+    }
+    const meta = PATHWAY_BREADCRUMB_LABELS[pathwayId];
+    if (meta) {
+      const pathwayHref = pathwayId === "pure"
+        ? "/ial/wma11/index.html"
+        : (pathwayId === "modular"
+          ? "/practice.html?pathway=modular&choose=unit"
+          : "/practice.html?pathway=linear&bank=all");
+      crumbs.push({ label: meta.label, sub: meta.code, href: pathwayHref });
+    }
+    if (pathwayId === "modular") {
+      const params = new URLSearchParams(window.location.search);
+      const unit = params.get("unit");
+      if (unit) {
+        const unitCode = unit === "Unit 2" ? "4WM2H" : "4WM1H";
+        const moduleLabel = currentModuleLabel();
+        crumbs.push({
+          label: unit,
+          sub: unitCode,
+          href: moduleLabel
+            ? `/practice.html?pathway=modular&unit=${encodeURIComponent(unit)}&bank=all`
+            : "",
+          current: !moduleLabel,
+        });
+      }
+    }
+    const moduleLabel = currentModuleLabel();
+    if (moduleLabel) crumbs.push({ label: moduleLabel, current: true });
+    return crumbs;
+  }
+
+  function renderEliteBreadcrumb() {
+    if (document.querySelector(".elite-breadcrumb")) return;
+    const header = document.querySelector(".site-header");
+    if (!header) return;
+    const page = document.body?.dataset?.page || "";
+    if (page === "home") return;
+    const crumbs = buildBreadcrumbCrumbs();
+    if (!crumbs || crumbs.length < 2) return;
+    const items = crumbs.map((crumb, idx) => {
+      const isCurrent = !!crumb.current;
+      const subText = crumb.sub ? `<span class="elite-breadcrumb-sub">${escapeHtml(crumb.sub)}</span>` : "";
+      const inner = `${escapeHtml(crumb.label)}${subText}`;
+      if (isCurrent || !crumb.href) {
+        return `<li class="elite-breadcrumb-item is-current" aria-current="${isCurrent ? "page" : "false"}">${inner}</li>`;
+      }
+      return `<li class="elite-breadcrumb-item"><a href="${crumb.href}">${inner}</a></li>`;
+    }).join('<li class="elite-breadcrumb-sep" aria-hidden="true">/</li>');
+    header.insertAdjacentHTML("afterend", `
+      <nav class="elite-breadcrumb" aria-label="Breadcrumb">
+        <ol>${items}</ol>
+      </nav>
+    `);
+  }
+
   function initPathwayToolStrip() {
     if (document.querySelector(".pathway-tool-strip")) return;
     const header = document.querySelector(".site-header");
@@ -686,6 +814,7 @@
     init();
     initNavToggle();
     initStructuredNav();
+    renderEliteBreadcrumb();
     initPathwayToolStrip();
     ensureIconsOnTiles();
     initPwa();
