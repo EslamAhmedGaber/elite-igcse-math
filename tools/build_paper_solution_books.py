@@ -25,6 +25,7 @@ from build_books import (
     convert_solution_markdown,
     latex_escape,
     question_image_path,
+    solution_to_markdown,
 )
 
 
@@ -127,6 +128,7 @@ def latex_preamble(paper: dict[str, Any]) -> list[str]:
         r"}",
         r"\newtcolorbox{paperinfobox}{enhanced,colback=brandcream!75,colframe=brandgold!80,arc=4pt,boxrule=0.8pt,left=12pt,right=12pt,top=9pt,bottom=9pt}",
         r"\newtcolorbox{solutionbody}{enhanced,breakable,colback=white,colframe=brandnavy!18,arc=4pt,boxrule=0.8pt,left=11pt,right=11pt,top=10pt,bottom=10pt,before skip=7pt,after skip=8pt,borderline west={2pt}{0pt}{brandgold}}",
+        r"\newcommand{\solutionstep}[2]{\par\vspace{3mm}\noindent{\sffamily\bfseries\color{brandanswer}#1.\ #2}\par\vspace{1mm}}",
         r"\newcommand{\finalanswerbox}[1]{\par\vspace{7pt}\noindent\begin{tcolorbox}[enhanced,breakable,colback=brandgoldlight!45,colframe=brandgold,arc=4pt,boxrule=1pt,left=10pt,right=10pt,top=7pt,bottom=7pt]{\sffamily\bfseries\color{brandnavy}FINAL ANSWER}\par #1\end{tcolorbox}\par}",
         r"\newcommand{\papersolutionheader}[4]{\clearpage\noindent\begin{tcolorbox}[enhanced,colback=brandnavy,colframe=brandnavy,boxrule=0pt,arc=4pt,left=12pt,right=12pt,top=8pt,bottom=8pt,borderline south={2pt}{0pt}{brandgold}]{\sffamily\bfseries\color{white}\large PAST PAPER SOLUTION}\hfill\pillbadge{Q\#:}{\,#1}\,\pillbadge{Marks:}{\,#2}\\[3pt]{\sffamily\color{brandgoldlight}\small\textsc{Topic:} \textbf{#3}}\\[2pt]{\sffamily\color{white!84}\footnotesize #4}\end{tcolorbox}\par\vspace{6pt}}",
         r"\newcommand{\questionpageheader}[4]{\clearpage\noindent\begin{tcolorbox}[enhanced,colback=brandnavy,colframe=brandnavy,boxrule=0pt,arc=4pt,left=12pt,right=12pt,top=8pt,bottom=8pt,borderline south={2pt}{0pt}{brandgold}]{\sffamily\bfseries\color{white}\large PAST PAPER QUESTION}\hfill\pillbadge{Q\#:}{\,#1}\,\pillbadge{Marks:}{\,#2}\\[3pt]{\sffamily\color{brandgoldlight}\small\textsc{Topic:} \textbf{#3}}\\[2pt]{\sffamily\color{white!84}\footnotesize #4}\end{tcolorbox}\par\vspace{6pt}}",
@@ -195,7 +197,8 @@ def write_latex(paper: dict[str, Any], solutions: dict[str, dict[str, Any]], bui
         q_number = str(row.get("q") or "?")
         marks = str(row.get("marks") or "?")
         topic = str(row.get("topic") or "Unclassified")
-        source = str(solutions.get(str(row.get("id")), {}).get("source") or "No worked solution is saved yet.")
+        solution = solutions.get(str(row.get("id")))
+        source = solution_to_markdown(solution)
 
         lines.extend(
             [

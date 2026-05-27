@@ -1,4 +1,4 @@
-# Elite IGCSE Release Handoff - 2026-05-27
+﻿# Elite IGCSE Release Handoff - 2026-05-27
 
 This is the release handoff for the restored static Elite IGCSE Mathematics site after the course-module rebuild, palette correction, solution-schema migration, and final PDF rebuild.
 
@@ -9,9 +9,9 @@ This is the release handoff for the restored static Elite IGCSE Mathematics site
 - Project log: `C:\Users\Eslam\Documents\Elite IGCSE v2\PROJECT_LOG.md`
 - Current branch/head: `main` at the latest polish-pass-2 acceptance/PDF commit; baseline production content before Phase 7 was `c89fc91`.
 - Registry version: `2026-05-27-course-registry-v6`
-- Service worker cache: `elite-igcse-kill-v95`
+- Service worker cache: `elite-igcse-kill-v96`
 - Classified answer PDF version: `title-polish-20260527`
-- Linear/Modular past-paper solution PDF version: `paper-solutions-20260527`
+- Linear/Modular past-paper solution PDF version: `paper-solutions-fixed-20260527`
 - WMA11 PDF version: `wma11-polish2-20260527`
 
 ## Canonical Course Signatures

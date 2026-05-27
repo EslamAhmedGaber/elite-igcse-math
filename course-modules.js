@@ -154,7 +154,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/Nov2025_P1H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Nov2025_P1H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -164,7 +164,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2H",
-                          "href": "downloads/PastPaperSolutions/Nov2025_P2H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Nov2025_P2H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       }
                   ]
               },
@@ -179,7 +179,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/Jun2025_P1H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Jun2025_P1H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -189,7 +189,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1HR",
-                          "href": "downloads/PastPaperSolutions/Jun2025_P1HR_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Jun2025_P1HR_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -199,7 +199,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2H",
-                          "href": "downloads/PastPaperSolutions/Jun2025_P2H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Jun2025_P2H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -209,7 +209,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2HR",
-                          "href": "downloads/PastPaperSolutions/Jun2025_P2HR_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Jun2025_P2HR_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       }
                   ]
               }
@@ -229,7 +229,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/Nov2024_P1H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Nov2024_P1H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -239,7 +239,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2H",
-                          "href": "downloads/PastPaperSolutions/Nov2024_P2H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Nov2024_P2H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       }
                   ]
               },
@@ -254,7 +254,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2H",
-                          "href": "downloads/PastPaperSolutions/Jun2024_P2H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Jun2024_P2H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -264,7 +264,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2HR",
-                          "href": "downloads/PastPaperSolutions/Jun2024_P2HR_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Jun2024_P2HR_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       }
                   ]
               },
@@ -279,7 +279,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/May2024_P1H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/May2024_P1H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -289,7 +289,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1HR",
-                          "href": "downloads/PastPaperSolutions/May2024_P1HR_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/May2024_P1HR_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       }
                   ]
               }
@@ -309,7 +309,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/Nov2023_P1H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Nov2023_P1H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -319,7 +319,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2H",
-                          "href": "downloads/PastPaperSolutions/Nov2023_P2H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Nov2023_P2H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       }
                   ]
               },
@@ -334,7 +334,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2H",
-                          "href": "downloads/PastPaperSolutions/Jun2023_P2H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Jun2023_P2H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -344,7 +344,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2HR",
-                          "href": "downloads/PastPaperSolutions/Jun2023_P2HR_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Jun2023_P2HR_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       }
                   ]
               },
@@ -359,7 +359,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/May2023_P1H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/May2023_P1H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -369,7 +369,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1HR",
-                          "href": "downloads/PastPaperSolutions/May2023_P1HR_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/May2023_P1HR_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       }
                   ]
               }
@@ -389,7 +389,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/Jun2022_P1H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Jun2022_P1H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -399,7 +399,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1HR",
-                          "href": "downloads/PastPaperSolutions/Jun2022_P1HR_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Jun2022_P1HR_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -409,7 +409,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2H",
-                          "href": "downloads/PastPaperSolutions/Jun2022_P2H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Jun2022_P2H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -419,7 +419,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2HR",
-                          "href": "downloads/PastPaperSolutions/Jun2022_P2HR_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Jun2022_P2HR_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       }
                   ]
               },
@@ -434,7 +434,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/Jan2022_P1H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Jan2022_P1H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -444,7 +444,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1HR",
-                          "href": "downloads/PastPaperSolutions/Jan2022_P1HR_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Jan2022_P1HR_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -454,7 +454,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2H",
-                          "href": "downloads/PastPaperSolutions/Jan2022_P2H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Jan2022_P2H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -464,7 +464,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2HR",
-                          "href": "downloads/PastPaperSolutions/Jan2022_P2HR_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Jan2022_P2HR_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       }
                   ]
               }
@@ -484,7 +484,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/Nov2021_P1H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Nov2021_P1H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -494,7 +494,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2H",
-                          "href": "downloads/PastPaperSolutions/Nov2021_P2H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Nov2021_P2H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       }
                   ]
               },
@@ -509,7 +509,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/May2021_P1H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/May2021_P1H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -519,7 +519,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2H",
-                          "href": "downloads/PastPaperSolutions/May2021_P2H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/May2021_P2H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       }
                   ]
               },
@@ -534,7 +534,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/Jan2021_P1H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Jan2021_P1H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -544,7 +544,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1HR",
-                          "href": "downloads/PastPaperSolutions/Jan2021_P1HR_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Jan2021_P1HR_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -554,7 +554,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2H",
-                          "href": "downloads/PastPaperSolutions/Jan2021_P2H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Jan2021_P2H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -564,7 +564,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2HR",
-                          "href": "downloads/PastPaperSolutions/Jan2021_P2HR_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Jan2021_P2HR_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       }
                   ]
               }
@@ -584,7 +584,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/MayNov2020_P1H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/MayNov2020_P1H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -594,7 +594,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1HR",
-                          "href": "downloads/PastPaperSolutions/MayNov2020_P1HR_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/MayNov2020_P1HR_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       }
                   ]
               },
@@ -609,7 +609,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/Jan2020_P1H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Jan2020_P1H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -619,7 +619,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1HR",
-                          "href": "downloads/PastPaperSolutions/Jan2020_P1HR_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Jan2020_P1HR_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -629,7 +629,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2H",
-                          "href": "downloads/PastPaperSolutions/Jan2020_P2H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Jan2020_P2H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -639,7 +639,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2HR",
-                          "href": "downloads/PastPaperSolutions/Jan2020_P2HR_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Jan2020_P2HR_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       }
                   ]
               }
@@ -662,7 +662,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution",
-                          "href": "downloads/PastPaperSolutions/Nov2025_4WM1H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Nov2025_4WM1H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       }
                   ]
               },
@@ -677,7 +677,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution",
-                          "href": "downloads/PastPaperSolutions/May2025_4WM1H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/May2025_4WM1H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -687,7 +687,7 @@
                       {
                           "kind": "solution",
                           "title": "R Solution",
-                          "href": "downloads/PastPaperSolutions/May2025_4WM1HR_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/May2025_4WM1HR_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       }
                   ]
               }
@@ -707,7 +707,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution",
-                          "href": "downloads/PastPaperSolutions/Specimen_4WM2H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Specimen_4WM2H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       }
                   ]
               },
@@ -722,7 +722,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution",
-                          "href": "downloads/PastPaperSolutions/Nov2025_4WM2H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/Nov2025_4WM2H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       }
                   ]
               },
@@ -737,7 +737,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution",
-                          "href": "downloads/PastPaperSolutions/May2025_4WM2H_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/May2025_4WM2H_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       },
                       {
                           "kind": "paper",
@@ -747,7 +747,7 @@
                       {
                           "kind": "solution",
                           "title": "R Solution",
-                          "href": "downloads/PastPaperSolutions/May2025_4WM2HR_Solutions.pdf?v=paper-solutions-20260527"
+                          "href": "downloads/PastPaperSolutions/May2025_4WM2HR_Solutions.pdf?v=paper-solutions-fixed-20260527"
                       }
                   ]
               }
