@@ -99,6 +99,16 @@
 
   const questions = course.questions;
   const solutions = course.solutions;
+  const activePrintPalette = course.mode === "pure"
+    ? "pure"
+    : requestedPathway === "modular" || window.ELITE_PATHWAY?.mode === "modular"
+      ? "modular"
+      : "linear";
+  if (document.body) {
+    document.body.dataset.pathway = activePrintPalette;
+    document.body.dataset.coursePalette = activePrintPalette;
+    window.ElitePrint?.applyPrintPalette?.();
+  }
   const keySuffix = course.id === "igcse" ? "" : `:${course.id}`;
   const EXAM_KEY = `eliteMockExamV1${keySuffix}`;
   const HISTORY_KEY = `eliteMockExamHistoryV1${keySuffix}`;
