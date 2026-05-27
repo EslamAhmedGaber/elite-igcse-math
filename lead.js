@@ -516,22 +516,31 @@
 
   function buildBreadcrumbCrumbs() {
     const crumbs = [{ label: "Home", href: "/index.html" }];
+    const page = document.body?.dataset?.page || "";
     const pathwayId = activePathwayId();
+    // IAL hub page (lists Pure 1, Pure 2, ...)
+    if (page === "ial-hub") {
+      crumbs.push({ label: "IAL", sub: "Edexcel", current: true });
+      return crumbs;
+    }
     if (!pathwayId) {
-      const page = document.body?.dataset?.page || "";
       const moduleLabel = currentModuleLabel();
       if (page === "about") crumbs.push({ label: "About", current: true });
       else if (moduleLabel) crumbs.push({ label: moduleLabel, current: true });
       return crumbs;
     }
-    const meta = PATHWAY_BREADCRUMB_LABELS[pathwayId];
-    if (meta) {
-      const pathwayHref = pathwayId === "pure"
-        ? "/ial/wma11/index.html"
-        : (pathwayId === "modular"
+    // For Pure 1 (and future IAL subjects), insert "IAL" as a parent crumb
+    if (pathwayId === "pure") {
+      crumbs.push({ label: "IAL", sub: "Edexcel", href: "/ial/index.html" });
+      crumbs.push({ label: "Pure 1", sub: "WMA11", href: "/ial/wma11/index.html" });
+    } else {
+      const meta = PATHWAY_BREADCRUMB_LABELS[pathwayId];
+      if (meta) {
+        const pathwayHref = pathwayId === "modular"
           ? "/practice.html?pathway=modular&choose=unit"
-          : "/practice.html?pathway=linear&bank=all");
-      crumbs.push({ label: meta.label, sub: meta.code, href: pathwayHref });
+          : "/practice.html?pathway=linear&bank=all";
+        crumbs.push({ label: meta.label, sub: meta.code, href: pathwayHref });
+      }
     }
     if (pathwayId === "modular") {
       const params = new URLSearchParams(window.location.search);
@@ -550,8 +559,58 @@
       }
     }
     const moduleLabel = currentModuleLabel();
-    if (moduleLabel) crumbs.push({ label: moduleLabel, current: true });
+    if (moduleLabel) {
+      // For Pure 1 page itself with no specific module, the last crumb (Pure 1) is already the page; don't add another.
+      const path = window.location.pathname;
+      const isPureLanding = pathwayId === "pure" && path.endsWith("/ial/wma11/index.html")
+        && !window.location.search && !window.location.hash;
+      if (!isPureLanding) {
+        crumbs.push({ label: moduleLabel, current: true });
+      } else {
+        // mark the Pure 1 crumb as current
+        const last = crumbs[crumbs.length - 1];
+        if (last) { delete last.href; last.current = true; }
+      }
+    }
     return crumbs;
+  }
+
+  function renderIalSubjectHub() {
+    const grid = document.querySelector("[data-ial-subject-grid]");
+    if (!grid) return;
+    const tree = (window.ELITE_COURSE_MODULES || {}).siteTree;
+    if (!tree || !Array.isArray(tree.children)) return;
+    const ial = tree.children.find((node) => node.id === "ial");
+    if (!ial || !Array.isArray(ial.children)) return;
+    const cards = ial.children.map((subject) => {
+      const isLive = subject.status === "live";
+      const href = isLive ? subject.href : "#";
+      const tag = isLive ? "Live" : "Coming soon";
+      const tagClass = isLive ? "ial-subject-tag is-live" : "ial-subject-tag is-coming";
+      const paletteClass = `is-${subject.palette || "pure"}`;
+      const attrs = isLive
+        ? `href="${escapeHtml(href)}"`
+        : `href="#" aria-disabled="true" role="link"`;
+      return `
+        <a class="ial-subject-card ${paletteClass} ${isLive ? "" : "is-disabled"}" ${attrs}>
+          <span class="${tagClass}">${tag}</span>
+          <strong>${escapeHtml(subject.label)}</strong>
+          <span class="ial-subject-code">${escapeHtml(subject.code || "")}</span>
+          <p>${escapeHtml(subjectBlurb(subject.id))}</p>
+        </a>
+      `;
+    }).join("");
+    grid.innerHTML = cards;
+  }
+
+  function subjectBlurb(id) {
+    switch (id) {
+      case "pure1": return "Algebra, coordinate geometry, sequences, differentiation, integration.";
+      case "pure2": return "Algebraic functions, trigonometry, exponentials, integration techniques.";
+      case "stats1": return "Probability distributions, regression, correlation, hypothesis testing.";
+      case "mech1": return "Kinematics, dynamics, statics, vectors in mechanics.";
+      default: return "";
+    }
   }
 
   function renderEliteBreadcrumb() {
@@ -815,6 +874,7 @@
     initNavToggle();
     initStructuredNav();
     renderEliteBreadcrumb();
+    renderIalSubjectHub();
     initPathwayToolStrip();
     ensureIconsOnTiles();
     initPwa();

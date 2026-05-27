@@ -1399,11 +1399,102 @@
     },
   ];
 
+  // =====================================================================
+  // SITE_TREE — Single hierarchical source of truth for navigation,
+  // breadcrumbs, and hub pages. Add a new course by appending an entry
+  // here, and the nav / breadcrumb / hub will all update automatically.
+  // =====================================================================
+  const SITE_TREE = {
+    id: "home",
+    label: "Home",
+    href: "/index.html",
+    children: [
+      {
+        id: "linear",
+        label: "Linear",
+        code: "4MA1",
+        palette: "linear",
+        href: "/practice.html?pathway=linear&bank=all",
+        intro: "Edexcel IGCSE Linear — Chapters 1 to 6 in one continuous bank.",
+        status: "live",
+      },
+      {
+        id: "modular",
+        label: "Modular",
+        code: "4WM",
+        palette: "modular",
+        href: "/practice.html?pathway=modular&choose=unit",
+        intro: "Edexcel IGCSE Modular — Unit 1 and Unit 2 each scoped separately.",
+        status: "live",
+        children: [
+          {
+            id: "unit-1",
+            label: "Unit 1",
+            code: "4WM1H",
+            href: "/practice.html?pathway=modular&unit=Unit+1&bank=all",
+            status: "live",
+          },
+          {
+            id: "unit-2",
+            label: "Unit 2",
+            code: "4WM2H",
+            href: "/practice.html?pathway=modular&unit=Unit+2&bank=all",
+            status: "live",
+          },
+        ],
+      },
+      {
+        id: "ial",
+        label: "IAL",
+        code: "International A-Level",
+        palette: "pure",
+        href: "/ial/index.html",
+        intro: "Pearson Edexcel International Advanced Level — Pure, Statistics, and Mechanics units.",
+        status: "live",
+        children: [
+          {
+            id: "pure1",
+            label: "Pure 1",
+            code: "WMA11",
+            palette: "pure",
+            href: "/ial/wma11/index.html",
+            status: "live",
+          },
+          {
+            id: "pure2",
+            label: "Pure 2",
+            code: "WMA12",
+            palette: "mulberry",
+            href: "/ial/wma12/index.html",
+            status: "planned",
+          },
+          {
+            id: "stats1",
+            label: "Statistics 1",
+            code: "WST01",
+            palette: "amber",
+            href: "/ial/wst01/index.html",
+            status: "planned",
+          },
+          {
+            id: "mech1",
+            label: "Mechanics 1",
+            code: "WME01",
+            palette: "teal",
+            href: "/ial/wme01/index.html",
+            status: "planned",
+          },
+        ],
+      },
+    ],
+  };
+
   window.ELITE_COURSE_MODULES = {
-    version: "2026-05-27-course-registry-v6",
+    version: "2026-05-28-course-registry-v7-tree",
     moduleCatalog,
     moduleAliases,
     palettes,
     navGroups,
+    siteTree: SITE_TREE,
   };
 })();
