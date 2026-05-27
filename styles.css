@@ -48,6 +48,25 @@
   --course-vellum: rgba(235, 223, 196, 0.58);
   --course-rail: rgba(22, 27, 46, 0.18);
   --course-highlight: var(--brand-ochre-soft);
+
+  /* === Phase 1 design tokens (Elite refinement) === */
+  /* Radii — 4 canonical sizes */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 20px;
+  --r-pill: 999px;
+  /* Elevation — 3 canonical levels */
+  --shadow-sm: 0 2px 8px rgba(14, 18, 32, 0.06);
+  --shadow-md: 0 8px 24px rgba(14, 18, 32, 0.08);
+  --shadow-lg: 0 16px 40px rgba(14, 18, 32, 0.12);
+  /* Display type spacing */
+  --letter-display: -0.01em;
+  --letter-body: 0;
+  --letter-eyebrow: 0.08em;
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --t-fast: 150ms var(--ease-out);
+  --t-base: 220ms var(--ease-out);
 }
 
 * { box-sizing: border-box; }
@@ -74,7 +93,7 @@ button, input, select { font: inherit; }
 .button, button {
   min-height: 36px;
   border: 1px solid var(--line);
-  border-radius: 6px;
+  border-radius: var(--r-sm);
   padding: 8px 13px;
   background: var(--paper);
   color: var(--ink);
@@ -84,15 +103,28 @@ button, input, select { font: inherit; }
   align-items: center;
   justify-content: center;
   gap: 7px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
   text-align: center;
   white-space: normal;
+  transition: background var(--t-fast), border-color var(--t-fast), transform var(--t-fast), box-shadow var(--t-fast);
 }
 
-.button:hover, button:hover { border-color: var(--accent); transform: translateY(-1px); }
-.primary { color: white; background: var(--accent); border-color: var(--accent); }
-.primary:hover { background: var(--accent-dark); }
+.button:hover, button:hover {
+  border-color: var(--course-signature);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+.primary {
+  color: white;
+  background: var(--course-signature);
+  border-color: var(--course-signature);
+  font-weight: 700;
+}
+.primary:hover {
+  background: var(--course-deep);
+  border-color: var(--course-deep);
+}
 .ghost { background: transparent; }
 .light { background: rgba(255, 255, 255, 0.86); color: var(--navy); }
 
@@ -585,8 +617,9 @@ button:focus-visible, .button:focus-visible, input:focus-visible, select:focus-v
   background: var(--navy);
 }
 
-h1 { margin: 0; font-size: clamp(30px, 4vw, 54px); line-height: 1.04; letter-spacing: 0; }
-h2 { margin: 0; font-size: 22px; letter-spacing: 0; }
+h1 { margin: 0; font-size: clamp(28px, 3.2vw, 44px); line-height: 1.08; letter-spacing: var(--letter-display); font-weight: 800; }
+h2 { margin: 0; font-size: clamp(20px, 2.2vw, 26px); line-height: 1.18; letter-spacing: var(--letter-display); font-weight: 700; }
+h3 { margin: 0; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.25; letter-spacing: var(--letter-display); font-weight: 700; }
 p { margin: 4px 0 0; color: var(--muted); }
 
 .hero-panel {
