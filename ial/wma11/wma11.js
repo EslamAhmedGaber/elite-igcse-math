@@ -233,7 +233,7 @@
 
   function renderNumbers() {
     els.numbers.innerHTML = state.filtered.map((item, index) => (
-      `<button type="button" class="${index === state.activeIndex ? "is-active" : ""}" data-index="${index}" aria-label="Open ${escapeHtml(item.paper)} question ${item.qNo}">${item.qNo}</button>`
+      `<button type="button" class="${index === state.activeIndex ? "is-active" : ""}" data-index="${index}" aria-label="Open ${escapeHtml(item.paper)} question ${item.qNo} (item ${index + 1} of ${state.filtered.length})">${index + 1}</button>`
     )).join("");
   }
 

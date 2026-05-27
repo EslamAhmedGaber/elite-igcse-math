@@ -2429,10 +2429,10 @@ body.practice-focus-mode .mobile-tools-toggle {
   z-index: 20;
   width: min(1440px, calc(100% - 32px));
   display: grid;
-  grid-template-columns: minmax(240px, 0.24fr) minmax(0, 1fr);
-  gap: 18px;
+  grid-template-columns: minmax(180px, 0.18fr) minmax(0, 1fr);
+  gap: 10px;
   align-items: stretch;
-  margin: 18px auto 22px;
+  margin: 10px auto 12px;
   padding: 0;
   border: 0;
   border-radius: 0;
@@ -2446,46 +2446,43 @@ body.practice-focus-mode .mobile-tools-toggle {
   min-width: 0;
   display: grid;
   align-content: center;
-  gap: 7px;
-  padding: 20px 18px 20px 24px;
+  gap: 2px;
+  padding: 8px 12px 8px 14px;
   border: 1px solid rgba(235, 223, 196, 0.95);
-  border-left: 8px solid var(--pathway-active);
-  border-radius: 14px;
+  border-left: 5px solid var(--pathway-active);
+  border-radius: 10px;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.96), var(--pathway-soft)),
     #fff;
-  box-shadow: 0 14px 34px rgba(14, 18, 32, 0.08);
+  box-shadow: 0 6px 14px rgba(14, 18, 32, 0.06);
 }
 .pathway-tool-strip-title strong {
   color: var(--pathway-active-deep);
-  font-size: clamp(24px, 2.4vw, 34px);
-  line-height: 1.05;
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.1;
 }
 .pathway-tool-strip-title span {
   color: var(--brand-ochre);
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 900;
-  letter-spacing: 1.2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 .pathway-tool-strip-title small {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 900;
-  letter-spacing: 0.7px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 .pathway-tool-strip-title p {
-  max-width: 460px;
-  margin: 0;
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.45;
+  display: none;
 }
 .pathway-tool-strip-links {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 6px;
+  align-content: center;
 }
 .pathway-tool-strip-links a {
   --module-accent: var(--pathway-active);
@@ -2493,28 +2490,23 @@ body.practice-focus-mode .mobile-tools-toggle {
   --module-ink: var(--ink);
   position: relative;
   overflow: hidden;
-  min-height: 116px;
-  display: grid;
-  align-content: center;
-  gap: 6px;
-  padding: 19px 18px;
-  border: 1px solid rgba(207, 201, 190, 0.95);
-  border-left: 7px solid var(--module-accent);
-  border-radius: 12px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid rgba(207, 201, 190, 0.85);
+  border-left: 4px solid var(--module-accent);
+  border-radius: 8px;
   color: var(--module-ink);
   text-decoration: none;
   background:
     linear-gradient(135deg, var(--module-bg), rgba(255, 255, 255, 0.94) 58%),
     #fff;
-  box-shadow: 0 12px 28px rgba(14, 18, 32, 0.08);
+  box-shadow: 0 4px 10px rgba(14, 18, 32, 0.05);
 }
 .pathway-tool-strip-links a::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 5px;
-  background: var(--module-accent);
-  opacity: 0.82;
+  display: none;
 }
 .pathway-tool-strip-links a:hover,
 .pathway-tool-strip-links a:focus-visible,
@@ -2526,14 +2518,12 @@ body.practice-focus-mode .mobile-tools-toggle {
     var(--module-accent);
 }
 .pathway-tool-strip-links strong {
-  font-size: 17px;
+  font-size: 13px;
   line-height: 1.15;
+  font-weight: 700;
 }
 .pathway-tool-strip-links span {
-  color: inherit;
-  opacity: 0.76;
-  font-size: 13px;
-  line-height: 1.35;
+  display: none;
 }
 .pathway-tool-strip.is-unit-choice {
   grid-template-columns: minmax(250px, 0.35fr) minmax(0, 1fr);
