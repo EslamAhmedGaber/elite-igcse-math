@@ -396,6 +396,47 @@
     return MODULE_ICONS[key] || MODULE_ICONS.general;
   }
 
+  function deriveModuleKeyFromTile(link) {
+    const explicit = link.dataset?.module || "";
+    if (explicit) {
+      const lower = explicit.trim().toLowerCase();
+      if (MODULE_ALIASES[lower]) return MODULE_ALIASES[lower];
+      return lower.replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    }
+    const strong = link.querySelector("strong");
+    const title = (strong ? strong.textContent : link.textContent || "").trim().toLowerCase();
+    if (MODULE_ALIASES[title]) return MODULE_ALIASES[title];
+    return title.replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  }
+
+  function ensureIconsOnTiles() {
+    const tileSelectors = [
+      ".pathway-tool-strip-links a",
+      ".ial-builder-links a",
+    ];
+    tileSelectors.forEach((selector) => {
+      document.querySelectorAll(selector).forEach((link) => {
+        if (link.querySelector(".module-icon")) return;
+        const key = deriveModuleKeyFromTile(link);
+        const icon = getModuleIcon(key);
+        const strong = link.querySelector("strong");
+        const span = link.querySelector("span");
+        if (strong && !link.querySelector(".module-text")) {
+          const wrapper = document.createElement("div");
+          wrapper.className = "module-text";
+          wrapper.appendChild(strong.cloneNode(true));
+          if (span) wrapper.appendChild(span.cloneNode(true));
+          if (strong.parentElement === link) strong.remove();
+          if (span && span.parentElement === link) span.remove();
+          link.insertAdjacentHTML("afterbegin", icon);
+          link.appendChild(wrapper);
+        } else {
+          link.insertAdjacentHTML("afterbegin", icon);
+        }
+      });
+    });
+  }
+
   function renderToolStripLink(link) {
     const attrs = [
       `href="${link.href}"`,
@@ -646,6 +687,7 @@
     initNavToggle();
     initStructuredNav();
     initPathwayToolStrip();
+    ensureIconsOnTiles();
     initPwa();
   }
 

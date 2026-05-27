@@ -681,18 +681,37 @@ body[data-page="ial-wma11"] .button.solution:hover {
   --ial-card-bg: var(--module-bg, rgba(54, 48, 74, 0.12));
   --ial-card-ink: var(--module-ink, var(--navy));
   display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
   min-height: 96px;
   align-content: center;
-  gap: 8px;
+  align-items: center;
+  gap: 12px;
   padding: 16px;
   border: 1px solid var(--ial-line);
   border-left: 6px solid var(--ial-card-accent);
-  border-radius: 8px;
+  border-radius: var(--r-md, 12px);
   color: var(--ink);
   text-decoration: none;
   background:
     linear-gradient(135deg, var(--ial-card-bg), rgba(255, 255, 255, 0.96) 58%),
     var(--ial-paper);
+  transition: transform var(--t-base), box-shadow var(--t-base), border-color var(--t-fast);
+}
+.ial-builder-links a .module-icon {
+  width: 26px;
+  height: 26px;
+  color: var(--ial-card-accent);
+  flex-shrink: 0;
+  transition: color var(--t-fast), transform var(--t-base);
+}
+.ial-builder-links a:hover .module-icon,
+.ial-builder-links a:focus-visible .module-icon {
+  transform: scale(1.08);
+}
+.ial-builder-links a .module-text {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
 }
 
 .ial-builder-links a:hover,
