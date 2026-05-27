@@ -3408,11 +3408,23 @@ body[data-course-palette] .pp-year-block h3::before {
   grid-template-columns: 1.4fr 1fr;
   gap: 32px;
   align-items: stretch;
-  background: linear-gradient(135deg, #161b2e 0%, #0e1220 58%, #8d2820 135%);
+  background:
+    radial-gradient(120% 140% at 100% 0%, rgba(192, 138, 62, 0.20), transparent 55%),
+    linear-gradient(135deg, var(--brand-ink) 0%, var(--brand-ink-deep) 55%, var(--brand-vermilion-deep) 145%);
   color: #fff;
-  border-radius: 22px;
+  border-radius: var(--r-lg);
   padding: 48px;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+.home-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand-ochre) 0%, transparent 60%);
+  opacity: 0.7;
 }
 
 .pathway-gate {
@@ -4649,25 +4661,39 @@ body.pathway-unset .site-header .site-cta {
    ============================================================ */
 
 .practice-hero {
-  background: linear-gradient(135deg, #161b2e 0%, #0e1220 58%, #8d2820 135%);
+  background:
+    radial-gradient(120% 140% at 100% 0%, rgba(192, 138, 62, 0.18), transparent 55%),
+    linear-gradient(135deg, var(--course-signature) 0%, var(--course-deep) 60%, rgba(14, 18, 32, 0.92) 140%);
   color: #fff;
-  border-radius: 22px;
-  padding: 32px 36px;
-  margin-bottom: 22px;
-  box-shadow: var(--shadow);
+  border-radius: var(--r-lg);
+  padding: 36px 40px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+.practice-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand-ochre) 0%, transparent 60%);
+  opacity: 0.7;
 }
 .practice-hero .eyebrow {
-  color: #dcb877;
-  font-weight: 700;
-  letter-spacing: 1.2px;
-  font-size: 12px;
+  color: var(--brand-ochre-soft);
+  font-weight: 800;
+  letter-spacing: var(--letter-eyebrow);
+  font-size: 11px;
   text-transform: uppercase;
 }
 .practice-hero h1 {
-  font-size: clamp(24px, 2.6vw, 32px);
-  margin: 6px 0 8px;
+  font-size: clamp(24px, 2.6vw, 34px);
+  margin: 8px 0 10px;
+  letter-spacing: var(--letter-display);
+  font-weight: 800;
 }
-.practice-hero p { color: rgba(255, 255, 255, 0.85); margin: 0 0 20px; max-width: 700px; }
+.practice-hero p { color: rgba(255, 255, 255, 0.86); margin: 0 0 20px; max-width: 700px; line-height: 1.55; }
 
 .practice-progress {
   display: grid;
@@ -4732,11 +4758,23 @@ body.pathway-unset .site-header .site-cta {
   grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
   gap: 28px;
   align-items: center;
-  background: linear-gradient(135deg, #161b2e 0%, #0e1220 58%, #8d2820 135%);
+  background:
+    radial-gradient(120% 140% at 100% 0%, rgba(192, 138, 62, 0.18), transparent 55%),
+    linear-gradient(135deg, var(--course-signature) 0%, var(--course-deep) 60%, rgba(14, 18, 32, 0.92) 140%);
   color: #fff;
-  border-radius: 22px;
+  border-radius: var(--r-lg);
   padding: 44px 48px;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+.notes-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand-ochre) 0%, transparent 60%);
+  opacity: 0.7;
 }
 
 .notes-hero > *,
@@ -4985,11 +5023,23 @@ body.pathway-unset .site-header .site-cta {
   grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
   gap: 28px;
   align-items: center;
-  background: linear-gradient(135deg, #161b2e 0%, #0e1220 58%, #8d2820 135%);
+  background:
+    radial-gradient(120% 140% at 100% 0%, rgba(192, 138, 62, 0.18), transparent 55%),
+    linear-gradient(135deg, var(--course-signature) 0%, var(--course-deep) 60%, rgba(14, 18, 32, 0.92) 140%);
   color: #fff;
-  border-radius: 22px;
+  border-radius: var(--r-lg);
   padding: 44px 48px;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+.planner-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand-ochre) 0%, transparent 60%);
+  opacity: 0.7;
 }
 
 .planner-hero > *,
@@ -5292,12 +5342,22 @@ body.pathway-unset .site-header .site-cta {
   gap: 28px;
   align-items: center;
   background:
-    linear-gradient(135deg, rgba(192, 57, 43, 0.28) 0%, transparent 38%),
-    linear-gradient(135deg, #161b2e 0%, #0e1220 58%, #8d2820 132%);
+    radial-gradient(120% 140% at 100% 0%, rgba(192, 138, 62, 0.18), transparent 55%),
+    linear-gradient(135deg, var(--course-signature) 0%, var(--course-deep) 60%, rgba(14, 18, 32, 0.92) 140%);
   color: #fff;
-  border-radius: 22px;
+  border-radius: var(--r-lg);
   padding: 44px 48px;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+.exam-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand-ochre) 0%, transparent 60%);
+  opacity: 0.7;
 }
 
 .exam-hero > *,
@@ -5310,10 +5370,10 @@ body.pathway-unset .site-header .site-cta {
 
 .exam-hero .eyebrow,
 .exam-builder .eyebrow {
-  color: #dcb877;
+  color: var(--brand-ochre-soft);
   font-weight: 800;
-  letter-spacing: 1.2px;
-  font-size: 12px;
+  letter-spacing: var(--letter-eyebrow);
+  font-size: 11px;
   text-transform: uppercase;
 }
 
@@ -6121,11 +6181,23 @@ body.pathway-unset .site-header .site-cta {
   grid-template-columns: minmax(0, 1.25fr) minmax(270px, 0.75fr);
   gap: 28px;
   align-items: center;
-  background: linear-gradient(135deg, #161b2e 0%, #0e1220 58%, #8d2820 135%);
+  background:
+    radial-gradient(120% 140% at 100% 0%, rgba(192, 138, 62, 0.18), transparent 55%),
+    linear-gradient(135deg, var(--course-signature) 0%, var(--course-deep) 60%, rgba(14, 18, 32, 0.92) 140%);
   color: #fff;
-  border-radius: 22px;
+  border-radius: var(--r-lg);
   padding: 44px 48px;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+.checkup-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand-ochre) 0%, transparent 60%);
+  opacity: 0.7;
 }
 
 .checkup-hero > *,
@@ -6584,11 +6656,23 @@ body.pathway-unset .site-header .site-cta {
   grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.8fr);
   gap: 28px;
   align-items: center;
-  background: linear-gradient(135deg, #161b2e 0%, #0e1220 58%, #8d2820 135%);
+  background:
+    radial-gradient(120% 140% at 100% 0%, rgba(192, 138, 62, 0.18), transparent 55%),
+    linear-gradient(135deg, var(--course-signature) 0%, var(--course-deep) 60%, rgba(14, 18, 32, 0.92) 140%);
   color: #fff;
-  border-radius: 22px;
+  border-radius: var(--r-lg);
   padding: 42px 46px;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+.topics-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand-ochre) 0%, transparent 60%);
+  opacity: 0.7;
 }
 
 .topics-hero .eyebrow {
@@ -7051,12 +7135,24 @@ body.pathway-unset .site-header .site-cta {
 .page-pastpapers { gap: 24px; }
 
 .pp-hero {
-  background: linear-gradient(135deg, #161b2e 0%, #0e1220 58%, #8d2820 135%);
+  background:
+    radial-gradient(120% 140% at 100% 0%, rgba(192, 138, 62, 0.18), transparent 55%),
+    linear-gradient(135deg, var(--course-signature) 0%, var(--course-deep) 60%, rgba(14, 18, 32, 0.92) 140%);
   color: #fff;
-  border-radius: 22px;
+  border-radius: var(--r-lg);
   padding: 44px 48px;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-lg);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.pp-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand-ochre) 0%, transparent 60%);
+  opacity: 0.7;
 }
 .pp-hero .eyebrow {
   color: #dcb877;
