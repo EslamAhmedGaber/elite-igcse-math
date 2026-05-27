@@ -565,8 +565,8 @@
       "finalAnswer": "\\(39\\) trains"
     },
     "all::Nov2025_P2H__Q14__p14-15__m05__Cumulative-Frequency-Diagrams": {
-      "status": "missing",
-      "checkedBy": "",
+      "status": "needs-review",
+      "checkedBy": "Pending review",
       "updated": "2026-05-06T18:49:24",
       "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
       "steps": [
@@ -586,8 +586,8 @@
       "finalAnswer": "median about \\(26\\) cm, IQR about \\(16\\) cm, and \\(180\\) euros."
     },
     "all::Nov2025_P2H__Q09__p09-09__m03__Probability-Toolkit": {
-      "status": "missing",
-      "checkedBy": "",
+      "status": "needs-review",
+      "checkedBy": "Pending review",
       "updated": "2026-05-06T18:49:24",
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
@@ -619,8 +619,8 @@
       "finalAnswer": "\\(0.39\\)."
     },
     "all::Nov2025_P2H__Q18__p18-18__m03__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-      "status": "missing",
-      "checkedBy": "",
+      "status": "needs-review",
+      "checkedBy": "Pending review",
       "updated": "2026-05-06T18:49:24",
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [

@@ -575,8 +575,8 @@
       "finalAnswer": "histogram densities \\(0.8,2.6,1.9,1.6,0.3\\), and probability \\(\\frac{1}{10}\\)."
     },
     "all::Nov2021_P2H__Q16__p19-19__m03__Combined-and-Conditional-Probability": {
-      "status": "missing",
-      "checkedBy": "",
+      "status": "needs-review",
+      "checkedBy": "Pending review",
       "updated": "2026-05-06T18:49:24",
       "topicNote": "Combined & Conditional Probability. The tag is correct.",
       "steps": [

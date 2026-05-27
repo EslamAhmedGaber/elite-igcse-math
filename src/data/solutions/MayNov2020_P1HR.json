@@ -515,8 +515,8 @@
       "finalAnswer": "modal class \\(30<t\\le 40\\), estimated mean \\(28.2\\) minutes."
     },
     "all::MayNov2020_P1HR__Q11__p10-11__m05__Cumulative-Frequency-Diagrams": {
-      "status": "missing",
-      "checkedBy": "",
+      "status": "needs-review",
+      "checkedBy": "Pending review",
       "updated": "2026-05-06T18:49:24",
       "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
       "steps": [

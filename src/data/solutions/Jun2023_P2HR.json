@@ -590,8 +590,8 @@
       "finalAnswer": "Akari's IQR is \\(6\\), and Akari is more consistent."
     },
     "all::Jun2023_P2HR__Q15__p16-16__m03__Probability-Toolkit": {
-      "status": "missing",
-      "checkedBy": "",
+      "status": "needs-review",
+      "checkedBy": "Pending review",
       "updated": "2026-05-06T18:49:24",
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
@@ -611,8 +611,8 @@
       "finalAnswer": "\\(\\frac{1}{64}\\)."
     },
     "all::Jun2023_P2HR__Q19__p19-19__m04__Probability-Toolkit": {
-      "status": "missing",
-      "checkedBy": "",
+      "status": "needs-review",
+      "checkedBy": "Pending review",
       "updated": "2026-05-06T18:49:24",
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [

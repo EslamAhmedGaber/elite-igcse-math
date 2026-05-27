@@ -636,8 +636,8 @@
       "finalAnswer": "missing frequencies \\(25,60\\), and missing densities \\(4.6,1.8,0.7\\)."
     },
     "all::May2023_P1H__Q12__p14-14__m04__Cumulative-Frequency-Diagrams": {
-      "status": "missing",
-      "checkedBy": "",
+      "status": "needs-review",
+      "checkedBy": "Pending review",
       "updated": "2026-05-06T18:49:24",
       "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
       "steps": [

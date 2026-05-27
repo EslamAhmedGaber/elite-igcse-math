@@ -25,6 +25,7 @@ ASSET_ROOT = ROOT
 DOWNLOADS_DIR = ROOT / "downloads"
 PRIVATE_OUTPUT = ROOT / "private_output"
 GITIGNORE = ROOT / ".gitignore"
+WMA11_DATA_PATH = ROOT / "ial" / "wma11" / "wma11-data.js"
 
 LINEAR_UNITS = {
     "Numbers & the Number System",
@@ -368,7 +369,13 @@ def verify_solutions(report: Report, question_by_id: dict[str, dict[str, Any]]) 
             )
             if private_text_pattern.search(public_text):
                 report.error(f"{rel(path)} solution for {qid} exposes private checking text in public fields.")
-            if solution.get("status") == "checked":
+            status = str(solution.get("status") or "").strip()
+            checked_by = str(solution.get("checkedBy") or "").strip()
+            if not status:
+                report.error(f"{rel(path)} solution for {qid} is missing status metadata.")
+            if not checked_by:
+                report.error(f"{rel(path)} solution for {qid} is missing checkedBy metadata.")
+            if status == "checked":
                 checked_count += 1
 
     missing_solution_count = max(0, len(question_by_id) - solution_count)
@@ -377,6 +384,77 @@ def verify_solutions(report: Report, question_by_id: dict[str, dict[str, Any]]) 
     report.set("solutions", solution_count)
     report.set("structured_solutions", structured_count)
     report.set("checked_solutions", checked_count)
+
+
+def extract_js_assignment_array(text: str, name: str) -> list[Any] | None:
+    match = re.search(rf"window\.{re.escape(name)}\s*=\s*(\[.*?\]);", text, re.DOTALL)
+    if not match:
+        return None
+    return json.loads(match.group(1))
+
+
+def verify_wma11_solutions(report: Report) -> None:
+    if not WMA11_DATA_PATH.exists():
+        report.error("ial/wma11/wma11-data.js is missing.")
+        return
+    try:
+        text = WMA11_DATA_PATH.read_text(encoding="utf-8")
+        questions = extract_js_assignment_array(text, "WMA11_QUESTIONS")
+    except Exception as exc:  # noqa: BLE001 - verifier should show exact data failure
+        report.error(f"ial/wma11/wma11-data.js could not be parsed: {exc}")
+        return
+
+    if not isinstance(questions, list):
+        report.error("ial/wma11/wma11-data.js has no WMA11_QUESTIONS array.")
+        return
+
+    private_text_pattern = re.compile(
+        r"(topic\s*check|topic-checked|mark[-\s]?scheme\s+review|checking\s+the\s+answer|answer\s+checked)",
+        re.IGNORECASE,
+    )
+    structured_count = 0
+    checked_count = 0
+    for index, item in enumerate(questions, start=1):
+        if not isinstance(item, dict):
+            report.error(f"wma11-data.js question #{index} is not an object.")
+            continue
+        qid = str(item.get("id") or f"#{index}")
+        steps = item.get("steps")
+        if not isinstance(steps, list) or not steps:
+            report.error(f"wma11-data.js solution for {qid} has no structured steps.")
+        else:
+            structured_count += 1
+            for step_index, step in enumerate(steps, start=1):
+                if not isinstance(step, dict):
+                    report.error(f"wma11-data.js solution for {qid} step {step_index} is not an object.")
+                    continue
+                if not str(step.get("title") or "").strip():
+                    report.error(f"wma11-data.js solution for {qid} step {step_index} has empty title.")
+                if not str(step.get("body") or "").strip():
+                    report.error(f"wma11-data.js solution for {qid} step {step_index} has empty body.")
+        final_answer = str(item.get("finalAnswer") or "").strip()
+        if not final_answer:
+            report.error(f"wma11-data.js solution for {qid} has empty finalAnswer.")
+        status = str(item.get("status") or "").strip()
+        checked_by = str(item.get("checkedBy") or "").strip()
+        if not status:
+            report.error(f"wma11-data.js solution for {qid} is missing status metadata.")
+        if not checked_by:
+            report.error(f"wma11-data.js solution for {qid} is missing checkedBy metadata.")
+        if status == "checked":
+            checked_count += 1
+        public_text = "\n".join(
+            [
+                *(str(step.get("title", "")) + "\n" + str(step.get("body", "")) for step in steps or [] if isinstance(step, dict)),
+                final_answer,
+            ]
+        )
+        if private_text_pattern.search(public_text):
+            report.error(f"wma11-data.js solution for {qid} exposes private checking text in public fields.")
+
+    report.set("wma11_solutions", len(questions))
+    report.set("wma11_structured_solutions", structured_count)
+    report.set("wma11_checked_solutions", checked_count)
 
 
 def print_report(report: Report) -> int:
@@ -412,6 +490,7 @@ def main() -> int:
     question_by_id, paper_slugs, _used_topics = verify_questions(report)
     verify_catalogue(report, paper_slugs)
     verify_solutions(report, question_by_id)
+    verify_wma11_solutions(report)
     return print_report(report)
 
 

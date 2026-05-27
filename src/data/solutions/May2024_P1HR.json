@@ -495,8 +495,8 @@
       "finalAnswer": "draw bars with heights \\(2.5,4,3.6,1.4,0.6\\)."
     },
     "all::May2024_P1HR__Q02__p04-04__m04__Probability-Toolkit": {
-      "status": "missing",
-      "checkedBy": "",
+      "status": "needs-review",
+      "checkedBy": "Pending review",
       "updated": "2026-05-06T18:49:24",
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [

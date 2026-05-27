@@ -519,8 +519,8 @@
       "finalAnswer": "about \\(42\\) medium oranges."
     },
     "all::Nov2023_P1H__Q13__p16-16__m04__Cumulative-Frequency-Diagrams": {
-      "status": "missing",
-      "checkedBy": "",
+      "status": "needs-review",
+      "checkedBy": "Pending review",
       "updated": "2026-05-06T18:49:24",
       "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
       "steps": [
@@ -540,8 +540,8 @@
       "finalAnswer": "median about \\(25\\) seconds, and about \\(6\\%\\)."
     },
     "all::Nov2023_P1H__Q04__p06-06__m04__Probability-Toolkit": {
-      "status": "missing",
-      "checkedBy": "",
+      "status": "needs-review",
+      "checkedBy": "Pending review",
       "updated": "2026-05-06T18:49:24",
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [

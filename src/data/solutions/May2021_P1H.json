@@ -611,8 +611,8 @@
       "finalAnswer": "completed frequencies \\(35,40,60\\), missing histogram density \\(1\\), and probability \\(\\frac{12}{41}\\)."
     },
     "all::May2021_P1H__Q06__p07-07__m05__Probability-Toolkit": {
-      "status": "missing",
-      "checkedBy": "",
+      "status": "needs-review",
+      "checkedBy": "Pending review",
       "updated": "2026-05-06T18:49:24",
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
