@@ -1088,13 +1088,13 @@
               },
               {
                   "label": "Solutions Part 1",
-                  "href": "downloads/ClassifiedSolutions/classified_answers_Part1_of_2.pdf?v=style-h-20260527",
+                  "href": "downloads/ClassifiedSolutions/classified_answers_Part1_of_2.pdf?v=title-polish-20260527",
                   "variant": "solution",
                   "target": "_blank"
               },
               {
                   "label": "Solutions Part 2",
-                  "href": "downloads/ClassifiedSolutions/classified_answers_Part2_of_2.pdf?v=style-h-20260527",
+                  "href": "downloads/ClassifiedSolutions/classified_answers_Part2_of_2.pdf?v=title-polish-20260527",
                   "variant": "solution",
                   "target": "_blank"
               }
@@ -1120,7 +1120,7 @@
               },
               {
                   "label": "Solutions PDF",
-                  "href": "downloads/ClassifiedSolutions/Classified_Expertise_Answers.pdf?v=style-h-20260527",
+                  "href": "downloads/ClassifiedSolutions/Classified_Expertise_Answers.pdf?v=title-polish-20260527",
                   "variant": "solution light-solution",
                   "target": "_blank"
               }
@@ -1148,7 +1148,7 @@
               },
               {
                   "label": "Solutions PDF",
-                  "href": "downloads/ClassifiedSolutions/Classified_4WM1_Answers.pdf?v=style-h-20260527",
+                  "href": "downloads/ClassifiedSolutions/Classified_4WM1_Answers.pdf?v=title-polish-20260527",
                   "variant": "solution",
                   "target": "_blank"
               }
@@ -1173,7 +1173,7 @@
               },
               {
                   "label": "Solutions PDF",
-                  "href": "downloads/ClassifiedSolutions/Classified_4WM2_Answers.pdf?v=style-h-20260527",
+                  "href": "downloads/ClassifiedSolutions/Classified_4WM2_Answers.pdf?v=title-polish-20260527",
                   "variant": "solution",
                   "target": "_blank"
               }
@@ -1199,7 +1199,7 @@
               },
               {
                   "label": "Solutions PDF",
-                  "href": "downloads/ClassifiedSolutions/Classified_4WM1_Expertise_Answers.pdf?v=style-h-20260527",
+                  "href": "downloads/ClassifiedSolutions/Classified_4WM1_Expertise_Answers.pdf?v=title-polish-20260527",
                   "variant": "solution",
                   "target": "_blank"
               }
@@ -1225,7 +1225,7 @@
               },
               {
                   "label": "Solutions PDF",
-                  "href": "downloads/ClassifiedSolutions/Classified_4WM2_Expertise_Answers.pdf?v=style-h-20260527",
+                  "href": "downloads/ClassifiedSolutions/Classified_4WM2_Expertise_Answers.pdf?v=title-polish-20260527",
                   "variant": "solution",
                   "target": "_blank"
               }
