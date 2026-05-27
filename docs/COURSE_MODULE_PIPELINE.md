@@ -2,6 +2,8 @@
 
 This file is the handoff map for adding a new curriculum without rebuilding the site from scratch.
 
+Latest release baseline: see `docs\RELEASE_HANDOFF_2026-05-27.md` before adding Pure 2, Mechanics, Statistics, or Lower Secondary.
+
 ## Course Shape
 
 Every course should be treated as:

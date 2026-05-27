@@ -2,6 +2,8 @@
 
 Use this when adding new papers, new classified questions, or corrected solutions to an existing course. Keep updates in structured source files first; the visible site should be generated from the registry and builders.
 
+Latest release baseline: see `docs\RELEASE_HANDOFF_2026-05-27.md` for current palettes, cache versions, live links, and verification expectations.
+
 ## Add A New Past Paper To Linear Or Modular
 
 1. Drop the question paper and mark scheme into the active intake folder.
