@@ -8,11 +8,11 @@
       "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Find the LCM",
           "body": "\\[\nA=2^5\\times 5\\times 7^2\n\\]\n\n\\[\nB=2^3\\times 5^3\\times 7^4\n\\]"
         },
         {
-          "title": "For part (a),",
+          "title": "Find the LCM",
           "body": "For part (a),\n\n\\[\n5A=2^5\\times 5^2\\times 7^2\n\\]\n\n\\[\n2B=2^4\\times 5^3\\times 7^4\n\\]"
         },
         {
@@ -20,11 +20,11 @@
           "body": "The HCF takes the smaller powers:\n\n\\[\n\\text{HCF}=2^4\\times 5^2\\times 7^2\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Find the LCM",
           "body": "For part (b),\n\n\\[\nAB=2^{5+3}\\times 5^{1+3}\\times 7^{2+4}\n\\]\n\n\\[\nAB=2^8\\times 5^4\\times 7^6\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Find the LCM",
           "body": "Therefore\n\n\\[\n(AB)^2=2^{16}\\times 5^8\\times 7^{12}\n\\]"
         }
       ],
@@ -74,11 +74,11 @@
           "body": "The multiplier for \\(2.5\\%\\) compound interest is\n\n\\[\n1.025\n\\]"
         },
         {
-          "title": "After 4 years,",
+          "title": "Use compound interest",
           "body": "After 4 years,\n\n\\[\n5200(1.025)^4=5739.827\\ldots\n\\]"
         },
         {
-          "title": "Correct to the nearest euro,",
+          "title": "Use compound interest",
           "body": "Correct to the nearest euro,\n\n\\[\n5739.827\\ldots\\approx 5740\n\\]"
         }
       ],
@@ -137,7 +137,7 @@
           "body": "(c)(i)\n\\[\nx^2-2x-63=(x-9)(x+7)\n\\]"
         },
         {
-          "title": "(c)(ii) or",
+          "title": "Solve quadratic equation",
           "body": "(c)(ii) \\(x=9\\) or \\(x=-7\\)."
         },
         {
@@ -154,7 +154,7 @@
       "topicNote": "Moved from Coordinate Geometry to Completing the Square.",
       "steps": [
         {
-          "title": "For part (a),",
+          "title": "Use Moved Coordinate Geometry Completing",
           "body": "For part (a),\n\n\\[\n2x^2-11x+9\n\\]"
         },
         {
@@ -166,11 +166,11 @@
           "body": "Complete the square:\n\n\\[\n2\\left[\\left(x-\\frac{11}{4}\\right)^2-\\frac{121}{16}\\right]+9\n\\]\n\n\\[\n2\\left(x-\\frac{11}{4}\\right)^2-\\frac{121}{8}+9\n\\]\n\n\\[\n2\\left(x-\\frac{11}{4}\\right)^2-\\frac{121}{8}+\\frac{72}{8}\n\\]\n\n\\[\n2\\left(x-\\frac{11}{4}\\right)^2-\\frac{49}{8}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\n2x^2-11x+9=2\\left(x-\\frac{11}{4}\\right)^2-\\frac{49}{8}\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Calculate value",
           "body": "For part (b),\n\n\\[\ny=2(x-3)^2-11(x-3)+9\n\\]"
         },
         {
@@ -178,11 +178,11 @@
           "body": "Let\n\n\\[\nu=x-3\n\\]"
         },
         {
-          "title": "From part (a), the minimum",
+          "title": "Evaluate fraction",
           "body": "From part (a), the minimum occurs when\n\n\\[\nu=\\frac{11}{4}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\nx-3=\\frac{11}{4}\n\\]\n\n\\[\nx=\\frac{23}{4}\n\\]"
         },
         {
@@ -199,7 +199,7 @@
       "topicNote": "Algebraic proof. The tag is acceptable because the question asks to show the exact result.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\n2\\frac13=\\frac73,\\qquad 5\\frac14=\\frac{21}{4}\n\\]\n\n\\[\n2\\frac13\\div5\\frac14=\\frac73\\div\\frac{21}{4}\n\\]\n\n\\[\n=\\frac73\\times\\frac4{21}=\\frac{28}{63}=\\frac49\n\\]"
         }
       ],
@@ -212,7 +212,7 @@
       "topicNote": "Simultaneous equations. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve simultaneous equations",
           "body": "\\[\n4x+3y=9.6\n\\]\n\n\\[\n6x+5y=16.8\n\\]"
         },
         {
@@ -228,7 +228,7 @@
           "body": "Subtract:\n\\[\n2x=-2.4\n\\]\n\n\\[\nx=-1.2\n\\]"
         },
         {
-          "title": "Substitute into",
+          "title": "Solve simultaneous equations",
           "body": "Substitute into \\(4x+3y=9.6\\):\n\\[\n4(-1.2)+3y=9.6\n\\]\n\n\\[\n3y=14.4\n\\]\n\n\\[\ny=4.8\n\\]"
         }
       ],
@@ -249,7 +249,7 @@
           "body": "Equal differences give\n\n\\[\n(x+2)-(4x-14)=(7x-9)-(x+2)\n\\]\n\n\\[\n-3x+16=6x-11\n\\]\n\n\\[\n9x=27\n\\]\n\n\\[\nx=3\n\\]"
         },
         {
-          "title": "So the sequence is",
+          "title": "Find the nth term",
           "body": "So the sequence is\n\n\\[\n-2,\\ 5,\\ 12,\\ldots\n\\]"
         },
         {
@@ -266,7 +266,7 @@
       "topicNote": "Corrected to linear graphs. The question asks for an equation of a drawn line.",
       "steps": [
         {
-          "title": "From the graph, the line",
+          "title": "Solve equation",
           "body": "From the graph, the line crosses the y-axis at \\(1\\), so\n\\[\nc=1\n\\]"
         },
         {
@@ -274,7 +274,7 @@
           "body": "It also crosses the x-axis at \\(2\\), so using \\((0,1)\\) and \\((2,0)\\),\n\\[\nm=\\frac{0-1}{2-0}=-\\frac12\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Solve equation",
           "body": "Therefore\n\\[\ny=-\\frac12x+1\n\\]"
         }
       ],
@@ -287,7 +287,7 @@
       "topicNote": "Correct. This is finding stationary points using differentiation.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Differentiate",
           "body": "\\[\ny=x^3-8x^2-12x+5\n\\]\n\n\\[\n\\frac{dy}{dx}=3x^2-16x-12\n\\]"
         },
         {
@@ -295,7 +295,7 @@
           "body": "Stationary points have\n\\[\n3x^2-16x-12=0\n\\]\n\n\\[\nx=\\frac{16\\pm\\sqrt{(-16)^2-4(3)(-12)}}{6}\n\\]\n\n\\[\nx=\\frac{16\\pm20}{6}\n\\]\n\n\\[\nx=6 \\quad \\text{or} \\quad x=-\\frac23\n\\]"
         },
         {
-          "title": "Point has the greater coordinate,",
+          "title": "Differentiate",
           "body": "Point \\(A\\) has the greater \\(x\\)-coordinate, so \\(x=6\\).\n\n\\[\ny=6^3-8(6^2)-12(6)+5\n\\]\n\n\\[\ny=216-288-72+5=-139\n\\]"
         }
       ],
@@ -308,15 +308,15 @@
       "topicNote": "Standard & Compound Units. The tag is correct.",
       "steps": [
         {
-          "title": "For the cylinder,",
+          "title": "Evaluate fraction",
           "body": "For the cylinder,\n\\[\nV=\\pi r^2h\n\\]\n\n\\[\n1208=\\pi(8)^2h\n\\]\n\n\\[\nh=\\frac{1208}{64\\pi}=6.006\\ldots\n\\]"
         },
         {
-          "title": "So, to the nearest whole",
+          "title": "Calculate value",
           "body": "So, to the nearest whole number,\n\\[\nh=6\n\\]"
         },
         {
-          "title": "For the mass, use the",
+          "title": "Calculate volume",
           "body": "For the mass, use the given volume:\n\\[\n\\text{mass}=\\text{density}\\times \\text{volume}\n\\]\n\n\\[\n1.25\\times 1208=1510\\text{ g}\n\\]\n\n\\[\n1510\\text{ g}=1.51\\text{ kg}\n\\]"
         }
       ],
@@ -337,7 +337,7 @@
           "body": "The angle at the centre is twice the angle at the circumference standing on the same arc \\(BD\\):\n\\[\n\\angle BOD=2\\times 52^\\circ=104^\\circ\n\\]"
         },
         {
-          "title": "Since , triangle is isosceles",
+          "title": "Use trigonometry",
           "body": "Since \\(OB=OD\\), triangle \\(OBD\\) is isosceles:\n\\[\n\\angle OBD=\\frac{180^\\circ-104^\\circ}{2}=38^\\circ\n\\]"
         }
       ],
@@ -354,11 +354,11 @@
           "body": "Use the trapezium area formula:\n\\[\n360=\\frac12(AB+14)(15)\n\\]\n\n\\[\nAB+14=48\n\\]\n\n\\[\nAB=34\n\\]"
         },
         {
-          "title": "Triangle is right angled with",
+          "title": "Use trigonometry",
           "body": "Triangle \\(ABC\\) is right-angled with horizontal length\n\\[\n34-14=20\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate area",
           "body": "So\n\\[\nBC=\\sqrt{20^2+15^2}=25\n\\]"
         },
         {
@@ -375,19 +375,19 @@
       "topicNote": "Area & Volume of Similar Shapes. The tag is correct.",
       "steps": [
         {
-          "title": "The linear scale factor from",
+          "title": "Calculate area",
           "body": "The linear scale factor from vase \\(B\\) to vase \\(A\\) is\n\\[\n\\frac{30}{12}=2.5\n\\]"
         },
         {
-          "title": "So the surface area scale",
+          "title": "Calculate area",
           "body": "So the surface area scale factor is\n\\[\n2.5^2=6.25\n\\]"
         },
         {
-          "title": "Let the surface area of",
+          "title": "Calculate surface area",
           "body": "Let the surface area of vase \\(B\\) be \\(S\\).\n\n\\[\n6.25S-S=178.5\n\\]\n\n\\[\n5.25S=178.5\n\\]\n\n\\[\nS=34\n\\]"
         },
         {
-          "title": "Therefore the surface area of",
+          "title": "Calculate area",
           "body": "Therefore the surface area of vase \\(A\\) is\n\\[\n6.25\\times 34=212.5\n\\]"
         }
       ],
@@ -417,11 +417,11 @@
       "topicNote": "Moved from Coordinate Geometry to 3D Pythagoras & Trigonometry.",
       "steps": [
         {
-          "title": "Use coordinates with",
+          "title": "Use trigonometry",
           "body": "Use coordinates with\n\n\\[\nA=(0,0,0)\n\\]"
         },
         {
-          "title": "Since",
+          "title": "Use trigonometry",
           "body": "Since\n\n\\[\nAD=12,\\qquad DE=20,\\qquad AB=8\n\\]"
         },
         {
@@ -433,11 +433,11 @@
           "body": "The centre of the rectangular base \\(ADEH\\) is\n\n\\[\nM=(6,10,0)\n\\]"
         },
         {
-          "title": "Point is the midpoint of",
+          "title": "Find the midpoint",
           "body": "Point \\(P\\) is the midpoint of \\(CF\\).\n\n\\[\nC=(12,0,8),\\qquad F=(12,20,8)\n\\]\n\n\\[\nP=(12,10,8)\n\\]"
         },
         {
-          "title": "Now",
+          "title": "Use trigonometry",
           "body": "Now\n\n\\[\n\\vec{MB}=B-M=(-6,-10,8)\n\\]\n\n\\[\n\\vec{MP}=P-M=(6,0,8)\n\\]"
         },
         {
@@ -484,7 +484,7 @@
       "topicNote": "Histograms. The tag is correct.",
       "steps": [
         {
-          "title": "For a histogram,",
+          "title": "Use histogram",
           "body": "For a histogram,\n\n\\[\n\\text{frequency density}=\\frac{\\text{frequency}}{\\text{class width}}\n\\]"
         },
         {
@@ -538,15 +538,15 @@
           "body": "The probability of taking one orange and one pink in either order is\n\n\\[\n\\frac{x}{25}\\cdot\\frac{19-x}{24}\n+\\frac{19-x}{25}\\cdot\\frac{x}{24}\n\\]\n\n\\[\n=\\frac{2x(19-x)}{25\\cdot24}\n\\]"
         },
         {
-          "title": "This is equal to ,",
+          "title": "Evaluate fraction",
           "body": "This is equal to \\(\\frac{22}{75}\\), so\n\n\\[\n\\frac{2x(19-x)}{600}=\\frac{22}{75}\n\\]\n\n\\[\n\\frac{x(19-x)}{300}=\\frac{22}{75}\n\\]\n\n\\[\nx(19-x)=88\n\\]\n\n\\[\n19x-x^2=88\n\\]\n\n\\[\nx^2-19x+88=0\n\\]\n\n\\[\n(x-8)(x-11)=0\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Solve inequality",
           "body": "Since \\(x>9\\),\n\n\\[\nx=11\n\\]"
         },
         {
-          "title": "So the number of pink",
+          "title": "Calculate value",
           "body": "So the number of pink counters is\n\n\\[\n19-11=8\n\\]"
         },
         {
@@ -563,7 +563,7 @@
       "topicNote": "Moved from Coordinate Geometry to Completing the Square.",
       "steps": [
         {
-          "title": "For part (a),",
+          "title": "Use Moved Coordinate Geometry Completing",
           "body": "For part (a),\n\n\\[\n2x^2-11x+9\n\\]"
         },
         {
@@ -575,11 +575,11 @@
           "body": "Complete the square:\n\n\\[\n2\\left[\\left(x-\\frac{11}{4}\\right)^2-\\frac{121}{16}\\right]+9\n\\]\n\n\\[\n2\\left(x-\\frac{11}{4}\\right)^2-\\frac{121}{8}+9\n\\]\n\n\\[\n2\\left(x-\\frac{11}{4}\\right)^2-\\frac{121}{8}+\\frac{72}{8}\n\\]\n\n\\[\n2\\left(x-\\frac{11}{4}\\right)^2-\\frac{49}{8}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\n2x^2-11x+9=2\\left(x-\\frac{11}{4}\\right)^2-\\frac{49}{8}\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Calculate value",
           "body": "For part (b),\n\n\\[\ny=2(x-3)^2-11(x-3)+9\n\\]"
         },
         {
@@ -587,11 +587,11 @@
           "body": "Let\n\n\\[\nu=x-3\n\\]"
         },
         {
-          "title": "From part (a), the minimum",
+          "title": "Evaluate fraction",
           "body": "From part (a), the minimum occurs when\n\n\\[\nu=\\frac{11}{4}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\nx-3=\\frac{11}{4}\n\\]\n\n\\[\nx=\\frac{23}{4}\n\\]"
         },
         {
@@ -616,7 +616,7 @@
           "body": "Equal differences give\n\n\\[\n(x+2)-(4x-14)=(7x-9)-(x+2)\n\\]\n\n\\[\n-3x+16=6x-11\n\\]\n\n\\[\n9x=27\n\\]\n\n\\[\nx=3\n\\]"
         },
         {
-          "title": "So the sequence is",
+          "title": "Find the nth term",
           "body": "So the sequence is\n\n\\[\n-2,\\ 5,\\ 12,\\ldots\n\\]"
         },
         {
@@ -633,11 +633,11 @@
       "topicNote": "Moved from Coordinate Geometry to 3D Pythagoras & Trigonometry.",
       "steps": [
         {
-          "title": "Use coordinates with",
+          "title": "Use trigonometry",
           "body": "Use coordinates with\n\n\\[\nA=(0,0,0)\n\\]"
         },
         {
-          "title": "Since",
+          "title": "Use trigonometry",
           "body": "Since\n\n\\[\nAD=12,\\qquad DE=20,\\qquad AB=8\n\\]"
         },
         {
@@ -649,11 +649,11 @@
           "body": "The centre of the rectangular base \\(ADEH\\) is\n\n\\[\nM=(6,10,0)\n\\]"
         },
         {
-          "title": "Point is the midpoint of",
+          "title": "Find the midpoint",
           "body": "Point \\(P\\) is the midpoint of \\(CF\\).\n\n\\[\nC=(12,0,8),\\qquad F=(12,20,8)\n\\]\n\n\\[\nP=(12,10,8)\n\\]"
         },
         {
-          "title": "Now",
+          "title": "Use trigonometry",
           "body": "Now\n\n\\[\n\\vec{MB}=B-M=(-6,-10,8)\n\\]\n\n\\[\n\\vec{MP}=P-M=(6,0,8)\n\\]"
         },
         {
@@ -690,15 +690,15 @@
           "body": "The probability of taking one orange and one pink in either order is\n\n\\[\n\\frac{x}{25}\\cdot\\frac{19-x}{24}\n+\\frac{19-x}{25}\\cdot\\frac{x}{24}\n\\]\n\n\\[\n=\\frac{2x(19-x)}{25\\cdot24}\n\\]"
         },
         {
-          "title": "This is equal to ,",
+          "title": "Evaluate fraction",
           "body": "This is equal to \\(\\frac{22}{75}\\), so\n\n\\[\n\\frac{2x(19-x)}{600}=\\frac{22}{75}\n\\]\n\n\\[\n\\frac{x(19-x)}{300}=\\frac{22}{75}\n\\]\n\n\\[\nx(19-x)=88\n\\]\n\n\\[\n19x-x^2=88\n\\]\n\n\\[\nx^2-19x+88=0\n\\]\n\n\\[\n(x-8)(x-11)=0\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Solve inequality",
           "body": "Since \\(x>9\\),\n\n\\[\nx=11\n\\]"
         },
         {
-          "title": "So the number of pink",
+          "title": "Calculate value",
           "body": "So the number of pink counters is\n\n\\[\n19-11=8\n\\]"
         },
         {

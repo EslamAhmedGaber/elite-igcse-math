@@ -8,11 +8,11 @@
       "topicNote": "Fractions. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify fraction",
           "body": "\\[\n2\\frac47=\\frac{18}{7}\n\\]\n\n\\[\n3\\frac19=\\frac{28}{9}\n\\]"
         },
         {
-          "title": "Now multiply",
+          "title": "Simplify fraction",
           "body": "Now multiply:\n\n\\[\n\\frac{18}{7}\\times \\frac{28}{9}\n\\]"
         },
         {
@@ -58,11 +58,11 @@
           "body": "The multiplier for \\(2.4\\%\\) compound interest is\n\n\\[\n1.024\n\\]"
         },
         {
-          "title": "After 4 years,",
+          "title": "Use compound interest",
           "body": "After 4 years,\n\n\\[\n4500(1.024)^4=4947.8023\\ldots\n\\]"
         },
         {
-          "title": "Correct to the nearest koruna,",
+          "title": "Use compound interest",
           "body": "Correct to the nearest koruna,\n\n\\[\n4947.8023\\ldots\\approx 4948\n\\]"
         }
       ],
@@ -75,11 +75,11 @@
       "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Estimate the value",
           "body": "\\[\nG=\\frac{c}{2f-3h}\n\\]"
         },
         {
-          "title": "For the lower bound, use",
+          "title": "Find lower bound",
           "body": "For the lower bound, use the lower bound of \\(c\\) and make the denominator as large as possible.\n\n\\[\nc\\ge 7.5\n\\]\n\n\\[\nf<6.625,\\quad h\\ge 1.15\n\\]\n\n\\[\n(2f-3h)_{\\text{upper}}=2(6.625)-3(1.15)=9.8\n\\]\n\n\\[\nG_{\\text{lower}}=\\frac{7.5}{9.8}=0.765306\\ldots\n\\]"
         }
       ],
@@ -92,7 +92,7 @@
       "topicNote": "Direct and Inverse Proportion. The tag is correct.",
       "steps": [
         {
-          "title": "is directly proportional to ,",
+          "title": "Find inverse function",
           "body": "\\(Q\\) is directly proportional to \\(\\sqrt{d}\\), so\n\n\\[\nQ=k\\sqrt{d}\n\\]"
         },
         {
@@ -100,7 +100,7 @@
           "body": "Use \\(Q=4.5\\) when \\(d=324\\):\n\n\\[\n4.5=k\\sqrt{324}\n\\]\n\n\\[\n4.5=18k\n\\]\n\n\\[\nk=0.25\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Find inverse function",
           "body": "Therefore\n\n\\[\nQ=\\frac{1}{4}\\sqrt{d}\n\\]"
         }
       ],
@@ -113,7 +113,7 @@
       "topicNote": "Algebraic Roots and Indices. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify surd",
           "body": "\\[\n\\frac{30\\times 25^{2x+7}}{\\sqrt{180}\\times (\\sqrt5)^{4x+9}}\n\\]"
         },
         {
@@ -121,11 +121,11 @@
           "body": "Simplify the number part:\n\n\\[\n\\sqrt{180}=6\\sqrt5\n\\]\n\n\\[\n\\frac{30}{6\\sqrt5}=\\frac{5}{\\sqrt5}=\\sqrt5=5^{1/2}\n\\]"
         },
         {
-          "title": "Now write the powers with",
+          "title": "Simplify surd",
           "body": "Now write the powers with base 5:\n\n\\[\n25^{2x+7}=(5^2)^{2x+7}=5^{4x+14}\n\\]\n\n\\[\n(\\sqrt5)^{4x+9}=5^{(4x+9)/2}=5^{2x+9/2}\n\\]"
         },
         {
-          "title": "So the full expression is",
+          "title": "Use index laws",
           "body": "So the full expression is\n\n\\[\n5^{1/2+4x+14-(2x+9/2)}\n\\]\n\n\\[\n=5^{2x+10}\n\\]"
         }
       ],
@@ -138,11 +138,11 @@
       "topicNote": "Factorising. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Factorise expression",
           "body": "\\[\nx^2+9x-22=(x+11)(x-2)\n\\]"
         },
         {
-          "title": "So",
+          "title": "Factorise expression",
           "body": "So\n\\[\n(x+11)(x-2)=0\n\\]"
         }
       ],
@@ -155,19 +155,19 @@
       "topicNote": "Corrected from Direct & Inverse Proportion to Algebraic Fractions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify fraction",
           "body": "\\[\nk=x-y,\\quad x=\\frac{1}{4y}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Simplify fraction",
           "body": "So\n\n\\[\nk=\\frac{1}{4y}-y=\\frac{1-4y^2}{4y}\n\\]"
         },
         {
-          "title": "Also",
+          "title": "Simplify fraction",
           "body": "Also\n\n\\[\nx+2=\\frac{1}{4y}+2=\\frac{1+8y}{4y}\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Simplify fraction",
           "body": "Therefore\n\n\\[\n\\frac{5k}{x+2}\n=\\frac{5\\left(\\frac{1-4y^2}{4y}\\right)}{\\frac{1+8y}{4y}}\n\\]"
         },
         {
@@ -192,7 +192,7 @@
           "body": "(b)\n\\[\n3y^2+4y-32=(3y-8)(y+4)\n\\]"
         },
         {
-          "title": "The critical values are and",
+          "title": "Solve quadratic equation",
           "body": "The critical values are \\(y=-4\\) and \\(y=\\frac83\\). Since the quadratic is positive outside the roots,\n\\[\ny<-4 \\quad \\text{or} \\quad y>\\frac83\n\\]"
         }
       ],
@@ -209,15 +209,15 @@
           "body": "(a)\n\\[\n3y(2y+5)(y+7)\n\\]"
         },
         {
-          "title": "First expand the two brackets",
+          "title": "Expand brackets",
           "body": "First expand the two brackets:\n\\[\n(2y+5)(y+7)=2y^2+14y+5y+35=2y^2+19y+35\n\\]"
         },
         {
-          "title": "Now multiply by",
+          "title": "Multiply by",
           "body": "Now multiply by \\(3y\\):\n\\[\n3y(2y^2+19y+35)=6y^3+57y^2+105y\n\\]"
         },
         {
-          "title": "So , , and",
+          "title": "Calculate value",
           "body": "So \\(a=6\\), \\(b=57\\), and \\(c=105\\)."
         },
         {
@@ -238,7 +238,7 @@
       "topicNote": "Simultaneous equations. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve simultaneous equations",
           "body": "\\[\n6x+4y=1\n\\]\n\n\\[\n3x+5y=8\n\\]"
         },
         {
@@ -250,7 +250,7 @@
           "body": "Subtract the first equation:\n\\[\n6y=15\n\\]\n\n\\[\ny=\\frac52\n\\]"
         },
         {
-          "title": "Substitute into",
+          "title": "Solve simultaneous equations",
           "body": "Substitute into \\(3x+5y=8\\):\n\\[\n3x+5\\left(\\frac52\\right)=8\n\\]\n\n\\[\n3x+\\frac{25}{2}=8\n\\]\n\n\\[\n3x=-\\frac92\n\\]\n\n\\[\nx=-\\frac32\n\\]"
         }
       ],
@@ -267,7 +267,7 @@
           "body": "The line is\n\n\\[\nx+y=5\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\ny=5-x\n\\]"
         },
         {
@@ -283,11 +283,11 @@
           "body": "Factorise:\n\n\\[\n(x-9)(x+3)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\nx=9 \\quad \\text{or} \\quad x=-3\n\\]"
         },
         {
-          "title": "Using",
+          "title": "Calculate value",
           "body": "Using \\(y=5-x\\):\n\n\\[\nx=9 \\Rightarrow y=-4\n\\]\n\n\\[\nx=-3 \\Rightarrow y=8\n\\]"
         }
       ],
@@ -304,7 +304,7 @@
           "body": "The line is\n\\[\n5y+2x=7\n\\]\n\n\\[\n5y=-2x+7\n\\]\n\n\\[\ny=-\\frac25x+\\frac75\n\\]"
         },
         {
-          "title": "So the gradient of line",
+          "title": "Find the gradient",
           "body": "So the gradient of line P is \\(-\\frac25\\)."
         },
         {
@@ -321,7 +321,7 @@
       "topicNote": "Moved from Coordinate Geometry to Graphs of Functions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use trigonometry",
           "body": "\\[\ny=2\\sin(x+60)^\\circ\n\\]"
         },
         {
@@ -337,7 +337,7 @@
           "body": "This happens when\n\n\\[\nx+60=90\n\\]\n\n\\[\nx=30\n\\]"
         },
         {
-          "title": "So",
+          "title": "Read the graph",
           "body": "So\n\n\\[\nA=(30,2)\n\\]"
         },
         {
@@ -345,11 +345,11 @@
           "body": "Point \\(B\\) is the positive \\(x\\)-intercept after the minimum.\n\n\\[\n2\\sin(x+60)^\\circ=0\n\\]\n\n\\[\n\\sin(x+60)^\\circ=0\n\\]"
         },
         {
-          "title": "For this point,",
+          "title": "Read the graph",
           "body": "For this point,\n\n\\[\nx+60=360\n\\]\n\n\\[\nx=300\n\\]"
         },
         {
-          "title": "So",
+          "title": "Read the graph",
           "body": "So\n\n\\[\nB=(300,0)\n\\]"
         }
       ],
@@ -379,7 +379,7 @@
       "topicNote": "Corrected to Standard & Compound Units.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\n9\\text{ h }36\\text{ min}=9+\\frac{36}{60}=9.6\\text{ hours}\n\\]\n\n\\[\n\\text{distance}=820\\times 9.6=7872\n\\]"
         }
       ],
@@ -392,7 +392,7 @@
       "topicNote": "Correct. This is converting metres per second to kilometres per hour algebraically.",
       "steps": [
         {
-          "title": "To convert m/s to km/h,",
+          "title": "Convert m/s to km/h multiply",
           "body": "To convert m/s to km/h, multiply by \\(3.6\\).\n\n\\[\nw\\text{ m/s}=3.6w\\text{ km/h}\n\\]\n\n\\[\n3.6w=\\frac{18w}{5}\n\\]"
         }
       ],
@@ -422,11 +422,11 @@
       "topicNote": "Moved to Circles, Arcs & Sectors.",
       "steps": [
         {
-          "title": "Let the side length of",
+          "title": "Let the side length",
           "body": "Let the side length of the square be \\(s\\)."
         },
         {
-          "title": "The circle is inscribed in",
+          "title": "Square",
           "body": "The circle is inscribed in the square, so its radius is\n\n\\[\n\\frac{s}{2}\n\\]"
         },
         {
@@ -447,7 +447,7 @@
       "topicNote": "Corrected to Right-Angled Triangles - Pythagoras & Trigonometry.",
       "steps": [
         {
-          "title": "The hypotenuse is , and",
+          "title": "Use trigonometry",
           "body": "The hypotenuse is \\(6.5\\text{ cm}\\), and \\(x\\) is opposite the \\(34^\\circ\\) angle.\n\n\\[\n\\sin 34^\\circ=\\frac{x}{6.5}\n\\]\n\n\\[\nx=6.5\\sin 34^\\circ=3.634\\ldots\n\\]"
         }
       ],
@@ -460,27 +460,27 @@
       "topicNote": "Moved from Linear Graphs to Vectors.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Read the graph",
           "body": "\\[\n\\vec{OA}=4\\mathbf a,\\qquad \\vec{OB}=3\\mathbf b,\\qquad \\vec{BC}=2\\mathbf a+\\mathbf b\n\\]"
         },
         {
-          "title": "So",
+          "title": "Read the graph",
           "body": "So\n\n\\[\n\\vec{OC}=\\vec{OB}+\\vec{BC}\n\\]\n\n\\[\n\\vec{OC}=2\\mathbf a+4\\mathbf b\n\\]"
         },
         {
-          "title": "For part (a),",
+          "title": "Read the graph",
           "body": "For part (a),\n\n\\[\n\\vec{AC}=\\vec{OC}-\\vec{OA}\n\\]\n\n\\[\n\\vec{AC}=(2\\mathbf a+4\\mathbf b)-4\\mathbf a\n\\]\n\n\\[\n\\vec{AC}=4\\mathbf b-2\\mathbf a\n\\]"
         },
         {
-          "title": "For part (b), , so",
+          "title": "Read the graph",
           "body": "For part (b), \\(AP:PC=3:2\\), so\n\n\\[\n\\vec{OP}=\\vec{OA}+\\frac35\\vec{AC}\n\\]\n\n\\[\n\\vec{OP}=4\\mathbf a+\\frac35(4\\mathbf b-2\\mathbf a)\n\\]\n\n\\[\n\\vec{OP}=\\frac{14}{5}\\mathbf a+\\frac{12}{5}\\mathbf b\n\\]"
         },
         {
-          "title": "Since are collinear,",
+          "title": "Read the graph",
           "body": "Since \\(O,P,Q\\) are collinear,\n\n\\[\n\\vec{OQ}=t\\vec{OP}\n\\]\n\n\\[\n\\vec{OQ}=t\\left(\\frac{14}{5}\\mathbf a+\\frac{12}{5}\\mathbf b\\right)\n\\]"
         },
         {
-          "title": "Since are collinear,",
+          "title": "Read the graph",
           "body": "Since \\(B,C,Q\\) are collinear,\n\n\\[\n\\vec{OQ}=\\vec{OB}+s\\vec{BC}\n\\]\n\n\\[\n\\vec{OQ}=3\\mathbf b+s(2\\mathbf a+\\mathbf b)\n\\]\n\n\\[\n\\vec{OQ}=2s\\mathbf a+(3+s)\\mathbf b\n\\]"
         },
         {
@@ -488,7 +488,7 @@
           "body": "Equate coefficients:\n\n\\[\n\\frac{14}{5}t=2s\n\\]\n\n\\[\n\\frac{12}{5}t=3+s\n\\]"
         },
         {
-          "title": "From the first equation,",
+          "title": "Solve equation",
           "body": "From the first equation,\n\n\\[\ns=\\frac75t\n\\]"
         },
         {
@@ -496,7 +496,7 @@
           "body": "Substitute into the second:\n\n\\[\n\\frac{12}{5}t=3+\\frac75t\n\\]\n\n\\[\nt=3\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Read the graph",
           "body": "Therefore\n\n\\[\n\\vec{OQ}=3\\vec{OP}\n\\]\n\n\\[\n\\vec{OQ}=\\frac{42}{5}\\mathbf a+\\frac{36}{5}\\mathbf b\n\\]"
         }
       ],
@@ -513,7 +513,7 @@
           "body": "The median is \\(10\\):\n\n\\[\n\\frac{8+j}{2}=10\n\\]\n\n\\[\nj=12\n\\]"
         },
         {
-          "title": "The mode is , so",
+          "title": "Calculate statistic",
           "body": "The mode is \\(18\\), so\n\n\\[\nk=18\n\\]"
         },
         {
@@ -563,15 +563,15 @@
           "body": "Plot these points and join them with a smooth curve:\n\n\\[\n(0,0),(10,7),(20,24),(30,42),(40,56),(50,66),(60,70)\n\\]"
         },
         {
-          "title": "For teachers,",
+          "title": "Use cumulative frequency",
           "body": "For \\(70\\) teachers,\n\n\\[\nQ_1=17.5,\\qquad Q_3=52.5\n\\]"
         },
         {
-          "title": "From the graph,",
+          "title": "Use cumulative frequency",
           "body": "From the graph,\n\n\\[\nQ_1 \\approx 16.2,\\qquad Q_3 \\approx 37.5\n\\]\n\n\\[\n\\text{IQR}\\approx 37.5-16.2=21.3\n\\]"
         },
         {
-          "title": "At km, the cumulative frequency",
+          "title": "Use cumulative frequency",
           "body": "At \\(46\\) km, the cumulative frequency is about \\(62\\).\n\n\\[\n70-62=8\n\\]"
         }
       ],
@@ -601,11 +601,11 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify surd",
           "body": "\\[\n\\frac{30\\times 25^{2x+7}}{\\sqrt{180}\\times (\\sqrt{5})^{4x+9}}\n\\]\n\n\\[\n\\frac{30}{\\sqrt{180}}=\\frac{30}{6\\sqrt{5}}=\\sqrt{5}=5^{1/2}\n\\]\n\n\\[\n25^{2x+7}=(5^2)^{2x+7}=5^{4x+14}\n\\]\n\n\\[\n(\\sqrt{5})^{4x+9}=5^{2x+\\frac92}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\n5^{1/2}\\times 5^{4x+14}\\div 5^{2x+\\frac92}\n=5^{\\frac12+4x+14-2x-\\frac92}\n\\]\n\n\\[\n=5^{2x+10}\n\\]"
         }
       ],
@@ -618,19 +618,19 @@
       "topicNote": "Corrected from Direct & Inverse Proportion to Algebraic Fractions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify fraction",
           "body": "\\[\nk=x-y,\\quad x=\\frac{1}{4y}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Simplify fraction",
           "body": "So\n\n\\[\nk=\\frac{1}{4y}-y=\\frac{1-4y^2}{4y}\n\\]"
         },
         {
-          "title": "Also",
+          "title": "Simplify fraction",
           "body": "Also\n\n\\[\nx+2=\\frac{1}{4y}+2=\\frac{1+8y}{4y}\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Simplify fraction",
           "body": "Therefore\n\n\\[\n\\frac{5k}{x+2}\n=\\frac{5\\left(\\frac{1-4y^2}{4y}\\right)}{\\frac{1+8y}{4y}}\n\\]"
         },
         {
@@ -651,7 +651,7 @@
           "body": "The line is\n\n\\[\nx+y=5\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\ny=5-x\n\\]"
         },
         {
@@ -667,11 +667,11 @@
           "body": "Factorise:\n\n\\[\n(x-9)(x+3)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\nx=9 \\quad \\text{or} \\quad x=-3\n\\]"
         },
         {
-          "title": "Using",
+          "title": "Calculate value",
           "body": "Using \\(y=5-x\\):\n\n\\[\nx=9 \\Rightarrow y=-4\n\\]\n\n\\[\nx=-3 \\Rightarrow y=8\n\\]"
         }
       ],
@@ -684,7 +684,7 @@
       "topicNote": "Moved from Coordinate Geometry to Graphs of Functions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use trigonometry",
           "body": "\\[\ny=2\\sin(x+60)^\\circ\n\\]"
         },
         {
@@ -700,7 +700,7 @@
           "body": "This happens when\n\n\\[\nx+60=90\n\\]\n\n\\[\nx=30\n\\]"
         },
         {
-          "title": "So",
+          "title": "Read the graph",
           "body": "So\n\n\\[\nA=(30,2)\n\\]"
         },
         {
@@ -708,11 +708,11 @@
           "body": "Point \\(B\\) is the positive \\(x\\)-intercept after the minimum.\n\n\\[\n2\\sin(x+60)^\\circ=0\n\\]\n\n\\[\n\\sin(x+60)^\\circ=0\n\\]"
         },
         {
-          "title": "For this point,",
+          "title": "Read the graph",
           "body": "For this point,\n\n\\[\nx+60=360\n\\]\n\n\\[\nx=300\n\\]"
         },
         {
-          "title": "So",
+          "title": "Read the graph",
           "body": "So\n\n\\[\nB=(300,0)\n\\]"
         }
       ],
@@ -725,11 +725,11 @@
       "topicNote": "Moved to Circles, Arcs & Sectors.",
       "steps": [
         {
-          "title": "Let the side length of",
+          "title": "Let the side length",
           "body": "Let the side length of the square be \\(s\\)."
         },
         {
-          "title": "The circle is inscribed in",
+          "title": "Square",
           "body": "The circle is inscribed in the square, so its radius is\n\n\\[\n\\frac{s}{2}\n\\]"
         },
         {
@@ -750,27 +750,27 @@
       "topicNote": "Moved from Linear Graphs to Vectors.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Read the graph",
           "body": "\\[\n\\vec{OA}=4\\mathbf a,\\qquad \\vec{OB}=3\\mathbf b,\\qquad \\vec{BC}=2\\mathbf a+\\mathbf b\n\\]"
         },
         {
-          "title": "So",
+          "title": "Read the graph",
           "body": "So\n\n\\[\n\\vec{OC}=\\vec{OB}+\\vec{BC}\n\\]\n\n\\[\n\\vec{OC}=2\\mathbf a+4\\mathbf b\n\\]"
         },
         {
-          "title": "For part (a),",
+          "title": "Read the graph",
           "body": "For part (a),\n\n\\[\n\\vec{AC}=\\vec{OC}-\\vec{OA}\n\\]\n\n\\[\n\\vec{AC}=(2\\mathbf a+4\\mathbf b)-4\\mathbf a\n\\]\n\n\\[\n\\vec{AC}=4\\mathbf b-2\\mathbf a\n\\]"
         },
         {
-          "title": "For part (b), , so",
+          "title": "Read the graph",
           "body": "For part (b), \\(AP:PC=3:2\\), so\n\n\\[\n\\vec{OP}=\\vec{OA}+\\frac35\\vec{AC}\n\\]\n\n\\[\n\\vec{OP}=4\\mathbf a+\\frac35(4\\mathbf b-2\\mathbf a)\n\\]\n\n\\[\n\\vec{OP}=\\frac{14}{5}\\mathbf a+\\frac{12}{5}\\mathbf b\n\\]"
         },
         {
-          "title": "Since are collinear,",
+          "title": "Read the graph",
           "body": "Since \\(O,P,Q\\) are collinear,\n\n\\[\n\\vec{OQ}=t\\vec{OP}\n\\]\n\n\\[\n\\vec{OQ}=t\\left(\\frac{14}{5}\\mathbf a+\\frac{12}{5}\\mathbf b\\right)\n\\]"
         },
         {
-          "title": "Since are collinear,",
+          "title": "Read the graph",
           "body": "Since \\(B,C,Q\\) are collinear,\n\n\\[\n\\vec{OQ}=\\vec{OB}+s\\vec{BC}\n\\]\n\n\\[\n\\vec{OQ}=3\\mathbf b+s(2\\mathbf a+\\mathbf b)\n\\]\n\n\\[\n\\vec{OQ}=2s\\mathbf a+(3+s)\\mathbf b\n\\]"
         },
         {
@@ -778,7 +778,7 @@
           "body": "Equate coefficients:\n\n\\[\n\\frac{14}{5}t=2s\n\\]\n\n\\[\n\\frac{12}{5}t=3+s\n\\]"
         },
         {
-          "title": "From the first equation,",
+          "title": "Solve equation",
           "body": "From the first equation,\n\n\\[\ns=\\frac75t\n\\]"
         },
         {
@@ -786,7 +786,7 @@
           "body": "Substitute into the second:\n\n\\[\n\\frac{12}{5}t=3+\\frac75t\n\\]\n\n\\[\nt=3\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Read the graph",
           "body": "Therefore\n\n\\[\n\\vec{OQ}=3\\vec{OP}\n\\]\n\n\\[\n\\vec{OQ}=\\frac{42}{5}\\mathbf a+\\frac{36}{5}\\mathbf b\n\\]"
         }
       ],

@@ -8,7 +8,7 @@
       "topicNote": "Set notation and Venn diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\n\\mathcal{E}=\\{4,5,6,7,8,9,10,11,12,13,14,15\\}\n\\]"
         },
         {
@@ -16,23 +16,23 @@
           "body": "We are given\n\n\\[\nA\\cap B=\\{5,10,15\\}\n\\]"
         },
         {
-          "title": "Also,",
+          "title": "Calculate value",
           "body": "Also,\n\n\\[\nB'=\\{7,8,9,11,12,13,14\\}\n\\]"
         },
         {
-          "title": "so",
+          "title": "Calculate value",
           "body": "so\n\n\\[\nB=\\{4,5,6,10,15\\}\n\\]"
         },
         {
-          "title": "And",
+          "title": "Calculate value",
           "body": "And\n\n\\[\nA'=\\{4,6,7,8,14\\}\n\\]"
         },
         {
-          "title": "so",
+          "title": "Calculate value",
           "body": "so\n\n\\[\nA=\\{5,9,10,11,12,13,15\\}\n\\]"
         },
         {
-          "title": "Therefore the Venn diagram regions",
+          "title": "Use Set notation Venn diagrams",
           "body": "Therefore the Venn diagram regions are:"
         },
         {
@@ -49,11 +49,11 @@
       "topicNote": "Powers, roots and standard form. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Convert standard form",
           "body": "\\[\na=4.2\\times 10^{-24}\n\\]\n\n\\[\nb=3\\times 10^{145}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Convert standard form",
           "body": "So\n\n\\[\nab=(4.2\\times 3)\\times 10^{-24+145}\n\\]\n\n\\[\nab=12.6\\times 10^{121}\n\\]"
         },
         {
@@ -124,11 +124,11 @@
       "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Estimate the value",
           "body": "\\[\nA=w-\\frac{x^2}{y}\n\\]"
         },
         {
-          "title": "For the lower bound, use",
+          "title": "Find lower bound",
           "body": "For the lower bound, use the lower bound of \\(w\\), and make \\(\\frac{x^2}{y}\\) as large as possible.\n\n\\[\nw\\ge 3.445,\\quad x<1.95,\\quad y\\ge 4.5\n\\]\n\n\\[\nA_{\\text{lower}}=3.445-\\frac{1.95^2}{4.5}\n\\]\n\n\\[\nA_{\\text{lower}}=2.6\n\\]"
         }
       ],
@@ -145,11 +145,11 @@
           "body": "The ratio is\n\n\\[\n\\text{Danil} : \\text{Gabriel} : \\text{Hadley}=3:5:9\n\\]"
         },
         {
-          "title": "The difference between Gabriel and",
+          "title": "Split the ratio",
           "body": "The difference between Gabriel and Hadley is\n\n\\[\n9-5=4 \\text{ parts}\n\\]"
         },
         {
-          "title": "These 4 parts are euros,",
+          "title": "Split the ratio",
           "body": "These 4 parts are \\(196\\) euros, so one part is\n\n\\[\n196 \\div 4=49\n\\]"
         },
         {
@@ -166,7 +166,7 @@
       "topicNote": "Direct and Inverse Proportion. The tag is correct.",
       "steps": [
         {
-          "title": "is inversely proportional to ,",
+          "title": "Find inverse function",
           "body": "\\(A\\) is inversely proportional to \\(C^2\\), so\n\n\\[\nA=\\frac{k}{C^2}\n\\]"
         },
         {
@@ -174,11 +174,11 @@
           "body": "Use \\(A=40\\) when \\(C=1.5\\):\n\n\\[\n40=\\frac{k}{1.5^2}\n\\]\n\n\\[\nk=40\\times 1.5^2=90\n\\]"
         },
         {
-          "title": "So",
+          "title": "Find inverse function",
           "body": "So\n\n\\[\nA=\\frac{90}{C^2}\n\\]"
         },
         {
-          "title": "When ,",
+          "title": "Find inverse function",
           "body": "When \\(A=1000\\),\n\n\\[\n1000=\\frac{90}{C^2}\n\\]\n\n\\[\nC^2=0.09\n\\]\n\n\\[\nC=0.3\n\\]"
         }
       ],
@@ -224,7 +224,7 @@
           "body": "(b)\n\\[\n\\left(\\frac{16w^8}{y^{20}}\\right)^{-3/4}\n=16^{-3/4}w^{-6}y^{15}\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Expand brackets",
           "body": "Since \\(16^{3/4}=8\\),\n\\[\n=\\frac{y^{15}}{8w^6}\n\\]"
         }
       ],
@@ -245,7 +245,7 @@
           "body": "(b)(i)\n\\[\ny^2-2y-35=(y-7)(y+5)\n\\]"
         },
         {
-          "title": "(b)(ii) or",
+          "title": "Factorise expression",
           "body": "(b)(ii) \\(y=7\\) or \\(y=-5\\)."
         }
       ],
@@ -270,7 +270,7 @@
           "body": "(b) The maximum point is read from the completed square form.\n\n\\[\ny=19-3(x-2)^2\n\\]"
         },
         {
-          "title": "The maximum occurs when ,",
+          "title": "Calculate value",
           "body": "The maximum occurs when \\(x=2\\), giving \\(y=19\\)."
         }
       ],
@@ -283,7 +283,7 @@
       "topicNote": "Simultaneous equations. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve simultaneous equations",
           "body": "\\[\n3x^2+y^2-xy=5\n\\]\n\n\\[\ny=2x-3\n\\]"
         },
         {
@@ -295,15 +295,15 @@
           "body": "Factorise:\n\\[\n(5x-4)(x-1)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Solve simultaneous equations",
           "body": "So\n\\[\nx=\\frac45 \\quad \\text{or} \\quad x=1\n\\]"
         },
         {
-          "title": "If",
+          "title": "Solve simultaneous equations",
           "body": "If \\(x=\\frac45\\):\n\\[\ny=2\\left(\\frac45\\right)-3=-\\frac75\n\\]"
         },
         {
-          "title": "If",
+          "title": "Solve simultaneous equations",
           "body": "If \\(x=1\\):\n\\[\ny=2(1)-3=-1\n\\]"
         }
       ],
@@ -320,11 +320,11 @@
           "body": "The line is\n\\[\n2y+7x=10\n\\]\n\n\\[\n2y=-7x+10\n\\]\n\n\\[\ny=-\\frac72x+5\n\\]"
         },
         {
-          "title": "So the gradient is",
+          "title": "Find the gradient",
           "body": "So the gradient is\n\\[\n-\\frac72\n\\]"
         },
         {
-          "title": "For the x axis,",
+          "title": "Evaluate fraction",
           "body": "For the x-axis, \\(y=0\\):\n\\[\n2(0)+7x=10\n\\]\n\n\\[\nx=\\frac{10}{7}\n\\]"
         }
       ],
@@ -341,7 +341,7 @@
           "body": "The maximum point of \\(y=f(x)\\) is \\((5,7)\\)."
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(x+9)\n\\]"
         },
         {
@@ -349,7 +349,7 @@
           "body": "the graph moves 9 units left:\n\n\\[\n(5,7)\\to(-4,7)\n\\]"
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(x)+3\n\\]"
         },
         {
@@ -366,7 +366,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\ny=ax^3+bx^2-12x+6\n\\]"
         },
         {
@@ -382,7 +382,7 @@
           "body": "The gradient at \\(x=2\\) is 16:\n\n\\[\n16=12a+4b-12\n\\]\n\n\\[\n12a+4b=28\n\\]\n\n\\[\n3a+b=7\n\\]"
         },
         {
-          "title": "Now solve",
+          "title": "Solve",
           "body": "Now solve\n\n\\[\n2a+b=3\n\\]\n\n\\[\n3a+b=7\n\\]"
         },
         {
@@ -390,11 +390,11 @@
           "body": "Subtracting gives\n\n\\[\na=4\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate value",
           "body": "Then\n\n\\[\n2(4)+b=3\n\\]\n\n\\[\nb=-5\n\\]"
         },
         {
-          "title": "For ,",
+          "title": "Calculate value",
           "body": "For \\(x=3\\),\n\n\\[\ny=4(3)^3-5(3)^2-12(3)+6\n\\]\n\n\\[\ny=108-45-36+6\n\\]\n\n\\[\ny=33\n\\]"
         }
       ],
@@ -407,7 +407,7 @@
       "topicNote": "Circles, Arcs & Sectors. The tag is correct.",
       "steps": [
         {
-          "title": "The arc length is ,",
+          "title": "Use trigonometry",
           "body": "The arc length is \\(5\\text{ cm}\\), and the angle is \\(55^\\circ\\).\n\n\\[\n5=\\frac{55}{360}\\times 2\\pi r\n\\]\n\n\\[\nr=5.208\\ldots\n\\]"
         },
         {
@@ -424,11 +424,11 @@
       "topicNote": "Area & Volume of Similar Shapes. The tag is correct.",
       "steps": [
         {
-          "title": "The linear scale factor from",
+          "title": "Calculate area",
           "body": "The linear scale factor from vase \\(A\\) to vase \\(B\\) is\n\\[\n\\frac{15}{10}=1.5\n\\]"
         },
         {
-          "title": "So the volume scale factor",
+          "title": "Calculate area",
           "body": "So the volume scale factor is\n\\[\n1.5^3=3.375\n\\]"
         },
         {
@@ -445,7 +445,7 @@
       "topicNote": "Corrected to Right-Angled Triangles - Pythagoras & Trigonometry. This is a right-angled trigonometry problem.",
       "steps": [
         {
-          "title": "Side is opposite the angle,",
+          "title": "Use trigonometry",
           "body": "Side \\(AB\\) is opposite the \\(65^\\circ\\) angle, and \\(AC=8.4\\text{ cm}\\) is the hypotenuse.\n\n\\[\n\\sin 65^\\circ=\\frac{AB}{8.4}\n\\]\n\n\\[\nAB=8.4\\sin 65^\\circ=7.613\\ldots\n\\]"
         }
       ],
@@ -458,7 +458,7 @@
       "topicNote": "Sine, Cosine Rule & Area of Triangles. The tag is correct.",
       "steps": [
         {
-          "title": "Split the isosceles triangle into",
+          "title": "Use cosine rule",
           "body": "Split the isosceles triangle into two right-angled triangles.\n\n\\[\n\\frac{BC}{2}=14\n\\]\n\n\\[\nh^2=17.5^2-14^2=110.25\n\\]\n\n\\[\nh=10.5\n\\]\n\n\\[\n\\text{area}=\\frac12\\times 28\\times 10.5=147\n\\]"
         }
       ],
@@ -475,27 +475,27 @@
           "body": "Let\n\n\\[\nAE=x\n\\]"
         },
         {
-          "title": "Since is a square,",
+          "title": "Use trigonometry",
           "body": "Since \\(ABDE\\) is a square,\n\n\\[\nAB=BD=DE=AE=x\n\\]"
         },
         {
-          "title": "Since is an equilateral triangle,",
+          "title": "Use trigonometry",
           "body": "Since \\(BCD\\) is an equilateral triangle, the height from \\(C\\) to \\(BD\\) is\n\n\\[\n\\frac{\\sqrt3}{2}x\n\\]"
         },
         {
-          "title": "Therefore the vertical height from",
+          "title": "Use trigonometry",
           "body": "Therefore the vertical height from the base to \\(J\\) is\n\n\\[\nJM=x+\\frac{\\sqrt3}{2}x\n\\]\n\n\\[\nJM=\\frac{x(2+\\sqrt3)}{2}\n\\]"
         },
         {
-          "title": "Also,",
+          "title": "Use trigonometry",
           "body": "Also,\n\n\\[\nEF=2AE=2x\n\\]"
         },
         {
-          "title": "Since is the midpoint of",
+          "title": "Find the midpoint",
           "body": "Since \\(M\\) is the midpoint of \\(GF\\), the horizontal distance from \\(A\\) to \\(M\\) is\n\n\\[\nAM=\\sqrt{\\left(\\frac{x}{2}\\right)^2+(2x)^2}\n\\]\n\n\\[\nAM=\\sqrt{\\frac{x^2}{4}+4x^2}\n\\]\n\n\\[\nAM=\\frac{x\\sqrt{17}}{2}\n\\]"
         },
         {
-          "title": "In right triangle ,",
+          "title": "Use trigonometry",
           "body": "In right triangle \\(AMJ\\),\n\n\\[\n\\tan y^\\circ=\\frac{JM}{AM}\n\\]\n\n\\[\nT=\\frac{\\frac{x(2+\\sqrt3)}{2}}{\\frac{x\\sqrt{17}}{2}}\n\\]\n\n\\[\nT=\\frac{2+\\sqrt3}{\\sqrt{17}}\n\\]"
         },
         {
@@ -512,23 +512,23 @@
       "topicNote": "Moved from Coordinate Geometry to Vectors.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use vectors",
           "body": "\\[\n\\vec{OA}=8\\mathbf a,\\qquad \\vec{OB}=6\\mathbf b\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Use vectors",
           "body": "Since \\(OM:MB=1:2\\),\n\n\\[\n\\vec{OM}=\\frac13\\vec{OB}\n\\]\n\n\\[\n\\vec{OM}=2\\mathbf b\n\\]"
         },
         {
-          "title": "Since is the midpoint of",
+          "title": "Find the midpoint",
           "body": "Since \\(N\\) is the midpoint of \\(AB\\),\n\n\\[\n\\vec{ON}=\\frac{8\\mathbf a+6\\mathbf b}{2}\n\\]\n\n\\[\n\\vec{ON}=4\\mathbf a+3\\mathbf b\n\\]"
         },
         {
-          "title": "Point lies on , so",
+          "title": "Use vectors",
           "body": "Point \\(P\\) lies on \\(ON\\), so\n\n\\[\n\\vec{OP}=\\lambda(4\\mathbf a+3\\mathbf b)\n\\]"
         },
         {
-          "title": "Point also lies on ,",
+          "title": "Use vectors",
           "body": "Point \\(P\\) also lies on \\(AM\\), so\n\n\\[\n\\vec{OP}=8\\mathbf a+\\mu(2\\mathbf b-8\\mathbf a)\n\\]\n\n\\[\n\\vec{OP}=(8-8\\mu)\\mathbf a+2\\mu\\mathbf b\n\\]"
         },
         {
@@ -536,7 +536,7 @@
           "body": "Equate coefficients:\n\n\\[\n4\\lambda=8-8\\mu\n\\]\n\n\\[\n3\\lambda=2\\mu\n\\]"
         },
         {
-          "title": "From ,",
+          "title": "Use vectors",
           "body": "From \\(3\\lambda=2\\mu\\),\n\n\\[\n\\mu=\\frac32\\lambda\n\\]"
         },
         {
@@ -544,7 +544,7 @@
           "body": "Substitute:\n\n\\[\n4\\lambda=8-8\\left(\\frac32\\lambda\\right)\n\\]\n\n\\[\n4\\lambda=8-12\\lambda\n\\]\n\n\\[\n16\\lambda=8\n\\]\n\n\\[\n\\lambda=\\frac12\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Use vectors",
           "body": "Therefore\n\n\\[\n\\vec{OP}=\\frac12(4\\mathbf a+3\\mathbf b)\n\\]\n\n\\[\n\\vec{OP}=2\\mathbf a+\\frac32\\mathbf b\n\\]"
         }
       ],
@@ -565,11 +565,11 @@
           "body": "Check:\n\n\\[\n\\text{median}=\\frac{8+20}{2}=14\n\\]"
         },
         {
-          "title": "The mode is , the",
+          "title": "Calculate statistic",
           "body": "The mode is \\(8\\), the smallest number is \\(5\\), and the largest number is \\(24\\)."
         },
         {
-          "title": "For the basketball scores",
+          "title": "Calculate value",
           "body": "For the basketball scores:\n\n\\[\n5 \\times 21=105\n\\]\n\n\\[\n6 \\times 23=138\n\\]\n\n\\[\n138-105=33\n\\]"
         }
       ],
@@ -594,11 +594,11 @@
           "body": "The median is at cumulative frequency \\(40\\)."
         },
         {
-          "title": "This is between and",
+          "title": "Convert standard form",
           "body": "This is between \\((20,33)\\) and \\((30,57)\\):\n\n\\[\n20+\\frac{40-33}{57-33}\\times 10=22.9\n\\]"
         },
         {
-          "title": "So the median is about",
+          "title": "Use cumulative frequency",
           "body": "So the median is about \\(23\\) minutes."
         },
         {
@@ -627,7 +627,7 @@
           "body": "Packet B:\n\n\\[\nP(\\text{sunflower})=\\frac{8}{15}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate probability",
           "body": "So\n\n\\[\nP(\\text{two sunflower seeds})=\\frac{7}{12}\\times\\frac{8}{15}\n\\]\n\n\\[\n=\\frac{14}{45}\n\\]"
         }
       ],
@@ -652,7 +652,7 @@
           "body": "(b) The maximum point is read from the completed square form.\n\n\\[\ny=19-3(x-2)^2\n\\]"
         },
         {
-          "title": "The maximum occurs when ,",
+          "title": "Calculate value",
           "body": "The maximum occurs when \\(x=2\\), giving \\(y=19\\)."
         }
       ],
@@ -669,7 +669,7 @@
           "body": "The maximum point of \\(y=f(x)\\) is \\((5,7)\\)."
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(x+9)\n\\]"
         },
         {
@@ -677,7 +677,7 @@
           "body": "the graph moves 9 units left:\n\n\\[\n(5,7)\\to(-4,7)\n\\]"
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(x)+3\n\\]"
         },
         {
@@ -694,7 +694,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\ny=ax^3+bx^2-12x+6\n\\]"
         },
         {
@@ -710,7 +710,7 @@
           "body": "The gradient at \\(x=2\\) is 16:\n\n\\[\n16=12a+4b-12\n\\]\n\n\\[\n12a+4b=28\n\\]\n\n\\[\n3a+b=7\n\\]"
         },
         {
-          "title": "Now solve",
+          "title": "Solve",
           "body": "Now solve\n\n\\[\n2a+b=3\n\\]\n\n\\[\n3a+b=7\n\\]"
         },
         {
@@ -718,11 +718,11 @@
           "body": "Subtracting gives\n\n\\[\na=4\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate value",
           "body": "Then\n\n\\[\n2(4)+b=3\n\\]\n\n\\[\nb=-5\n\\]"
         },
         {
-          "title": "For ,",
+          "title": "Calculate value",
           "body": "For \\(x=3\\),\n\n\\[\ny=4(3)^3-5(3)^2-12(3)+6\n\\]\n\n\\[\ny=108-45-36+6\n\\]\n\n\\[\ny=33\n\\]"
         }
       ],
@@ -739,27 +739,27 @@
           "body": "Let\n\n\\[\nAE=x\n\\]"
         },
         {
-          "title": "Since is a square,",
+          "title": "Use trigonometry",
           "body": "Since \\(ABDE\\) is a square,\n\n\\[\nAB=BD=DE=AE=x\n\\]"
         },
         {
-          "title": "Since is an equilateral triangle,",
+          "title": "Use trigonometry",
           "body": "Since \\(BCD\\) is an equilateral triangle, the height from \\(C\\) to \\(BD\\) is\n\n\\[\n\\frac{\\sqrt3}{2}x\n\\]"
         },
         {
-          "title": "Therefore the vertical height from",
+          "title": "Use trigonometry",
           "body": "Therefore the vertical height from the base to \\(J\\) is\n\n\\[\nJM=x+\\frac{\\sqrt3}{2}x\n\\]\n\n\\[\nJM=\\frac{x(2+\\sqrt3)}{2}\n\\]"
         },
         {
-          "title": "Also,",
+          "title": "Use trigonometry",
           "body": "Also,\n\n\\[\nEF=2AE=2x\n\\]"
         },
         {
-          "title": "Since is the midpoint of",
+          "title": "Find the midpoint",
           "body": "Since \\(M\\) is the midpoint of \\(GF\\), the horizontal distance from \\(A\\) to \\(M\\) is\n\n\\[\nAM=\\sqrt{\\left(\\frac{x}{2}\\right)^2+(2x)^2}\n\\]\n\n\\[\nAM=\\sqrt{\\frac{x^2}{4}+4x^2}\n\\]\n\n\\[\nAM=\\frac{x\\sqrt{17}}{2}\n\\]"
         },
         {
-          "title": "In right triangle ,",
+          "title": "Use trigonometry",
           "body": "In right triangle \\(AMJ\\),\n\n\\[\n\\tan y^\\circ=\\frac{JM}{AM}\n\\]\n\n\\[\nT=\\frac{\\frac{x(2+\\sqrt3)}{2}}{\\frac{x\\sqrt{17}}{2}}\n\\]\n\n\\[\nT=\\frac{2+\\sqrt3}{\\sqrt{17}}\n\\]"
         },
         {
@@ -776,23 +776,23 @@
       "topicNote": "Moved from Coordinate Geometry to Vectors.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use vectors",
           "body": "\\[\n\\vec{OA}=8\\mathbf a,\\qquad \\vec{OB}=6\\mathbf b\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Use vectors",
           "body": "Since \\(OM:MB=1:2\\),\n\n\\[\n\\vec{OM}=\\frac13\\vec{OB}\n\\]\n\n\\[\n\\vec{OM}=2\\mathbf b\n\\]"
         },
         {
-          "title": "Since is the midpoint of",
+          "title": "Find the midpoint",
           "body": "Since \\(N\\) is the midpoint of \\(AB\\),\n\n\\[\n\\vec{ON}=\\frac{8\\mathbf a+6\\mathbf b}{2}\n\\]\n\n\\[\n\\vec{ON}=4\\mathbf a+3\\mathbf b\n\\]"
         },
         {
-          "title": "Point lies on , so",
+          "title": "Use vectors",
           "body": "Point \\(P\\) lies on \\(ON\\), so\n\n\\[\n\\vec{OP}=\\lambda(4\\mathbf a+3\\mathbf b)\n\\]"
         },
         {
-          "title": "Point also lies on ,",
+          "title": "Use vectors",
           "body": "Point \\(P\\) also lies on \\(AM\\), so\n\n\\[\n\\vec{OP}=8\\mathbf a+\\mu(2\\mathbf b-8\\mathbf a)\n\\]\n\n\\[\n\\vec{OP}=(8-8\\mu)\\mathbf a+2\\mu\\mathbf b\n\\]"
         },
         {
@@ -800,7 +800,7 @@
           "body": "Equate coefficients:\n\n\\[\n4\\lambda=8-8\\mu\n\\]\n\n\\[\n3\\lambda=2\\mu\n\\]"
         },
         {
-          "title": "From ,",
+          "title": "Use vectors",
           "body": "From \\(3\\lambda=2\\mu\\),\n\n\\[\n\\mu=\\frac32\\lambda\n\\]"
         },
         {
@@ -808,7 +808,7 @@
           "body": "Substitute:\n\n\\[\n4\\lambda=8-8\\left(\\frac32\\lambda\\right)\n\\]\n\n\\[\n4\\lambda=8-12\\lambda\n\\]\n\n\\[\n16\\lambda=8\n\\]\n\n\\[\n\\lambda=\\frac12\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Use vectors",
           "body": "Therefore\n\n\\[\n\\vec{OP}=\\frac12(4\\mathbf a+3\\mathbf b)\n\\]\n\n\\[\n\\vec{OP}=2\\mathbf a+\\frac32\\mathbf b\n\\]"
         }
       ],

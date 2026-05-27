@@ -29,7 +29,7 @@
       "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Find the LCM",
           "body": "\\[\nA=5^3\\times 7^3\\times 11^6\n\\]\n\n\\[\nB=5^6\\times 7^2\\times 11^4\n\\]"
         },
         {
@@ -46,15 +46,15 @@
       "topicNote": "Powers, roots and standard form. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Convert standard form",
           "body": "\\[\n5.87\\times 10^{-4}=0.000587\n\\]\n\n\\[\n84000000=8.4\\times 10^7\n\\]"
         },
         {
-          "title": "For part (c),",
+          "title": "Convert standard form",
           "body": "For part (c),\n\n\\[\nK=\\frac{8.5\\times 10^{10}}{1.47\\times 10^9}\n\\]\n\n\\[\nK=\\frac{8.5}{1.47}\\times 10\n\\]\n\n\\[\nK=57.823\\ldots\n\\]"
         },
         {
-          "title": "Correct to one decimal place,",
+          "title": "Convert standard form",
           "body": "Correct to one decimal place,\n\n\\[\nK=57.8\n\\]"
         }
       ],
@@ -88,11 +88,11 @@
       "topicNote": "Corrected to Percentages. This is a reverse percentage discount comparison.",
       "steps": [
         {
-          "title": "Ticket A is sold for",
+          "title": "Calculate percentage",
           "body": "Ticket A is sold for \\(\\frac{5}{6}\\) of its normal price.\n\n\\[\n\\text{normal price of A}=140\\times \\frac{6}{5}=168\n\\]"
         },
         {
-          "title": "Ticket B has a discount,",
+          "title": "Calculate percentage",
           "body": "Ticket B has a \\(20\\%\\) discount, so its sale price is \\(80\\%\\) of the normal price.\n\n\\[\n\\text{normal price of B}=136\\div 0.80=170\n\\]"
         },
         {
@@ -109,7 +109,7 @@
       "topicNote": "Corrected to Algebraic Fractions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify fraction",
           "body": "\\[\n\\frac34+\\frac{5-x}{6x}\n\\]"
         },
         {
@@ -126,7 +126,7 @@
       "topicNote": "Rearranging formulas. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Rearrange formula",
           "body": "\\[\nx=\\frac{3p+n}{3n-4}\n\\]\n\n\\[\nx(3n-4)=3p+n\n\\]\n\n\\[\n3xn-4x=3p+n\n\\]\n\n\\[\nn(3x-1)=3p+4x\n\\]"
         }
       ],
@@ -143,7 +143,7 @@
           "body": "(a)\n\\[\n12pq-18p=6p(2q-3)\n\\]"
         },
         {
-          "title": "(b) The total number of",
+          "title": "Solve equation",
           "body": "(b) The total number of bars is 56, so\n\\[\ny+(3y+7)+(2y-5)=56\n\\]\n\n\\[\n6y+2=56\n\\]\n\n\\[\ny=9\n\\]"
         },
         {
@@ -164,11 +164,11 @@
           "body": "The sequence is\n\\[\n3,\\ 7,\\ 11,\\ 15\n\\]"
         },
         {
-          "title": "The common difference is ,",
+          "title": "Find the nth term",
           "body": "The common difference is \\(4\\), so the nth term is\n\\[\n4n-1\n\\]"
         },
         {
-          "title": "The last term is ,",
+          "title": "Find the nth term",
           "body": "The last term is \\(x\\), so\n\\[\nx=4n-1\n\\]\n\n\\[\nn=\\frac{x+1}{4}\n\\]"
         },
         {
@@ -184,7 +184,7 @@
           "body": "Factorise:\n\\[\n(x-239)(x+243)=0\n\\]"
         },
         {
-          "title": "The last term is positive,",
+          "title": "Find the nth term",
           "body": "The last term is positive, so\n\\[\nx=239\n\\]"
         }
       ],
@@ -205,7 +205,7 @@
           "body": "The gradient of \\(OP\\) is\n\n\\[\n\\frac{-10}{8}=-\\frac54\n\\]"
         },
         {
-          "title": "So the gradient of the",
+          "title": "Find the gradient",
           "body": "So the gradient of the tangent is\n\n\\[\n\\frac45\n\\]"
         },
         {
@@ -213,19 +213,19 @@
           "body": "The tangent through \\(P\\) is\n\n\\[\ny+10=\\frac45(x-8)\n\\]\n\n\\[\ny=\\frac45x-\\frac{82}{5}\n\\]"
         },
         {
-          "title": "At the axis,",
+          "title": "Evaluate fraction",
           "body": "At the \\(x\\)-axis, \\(y=0\\):\n\n\\[\n0=\\frac45x-\\frac{82}{5}\n\\]\n\n\\[\nx=\\frac{41}{2}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\nQ=\\left(\\frac{41}{2},0\\right)\n\\]"
         },
         {
-          "title": "At the axis,",
+          "title": "Evaluate fraction",
           "body": "At the \\(y\\)-axis, \\(x=0\\):\n\n\\[\nR=\\left(0,-\\frac{82}{5}\\right)\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Simplify surd",
           "body": "Therefore\n\n\\[\nRQ=\\sqrt{\\left(\\frac{41}{2}\\right)^2+\\left(\\frac{82}{5}\\right)^2}\n\\]\n\n\\[\nRQ=26.252...\n\\]"
         }
       ],
@@ -238,7 +238,7 @@
       "topicNote": "Correct. This is a table-and-graph question for a cubic function.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Read the graph",
           "body": "\\[\ny=x^3-3x+1\n\\]"
         },
         {
@@ -259,11 +259,11 @@
       "topicNote": "Correct. This combines solving and identifying inequalities.",
       "steps": [
         {
-          "title": "For part (a),",
+          "title": "Evaluate fraction",
           "body": "For part (a),\n\\[\n8x-4\\geq3x-10\n\\]\n\n\\[\n5x\\geq-6\n\\]\n\n\\[\nx\\geq-\\frac65\n\\]"
         },
         {
-          "title": "For part (b), the region",
+          "title": "Solve inequality",
           "body": "For part (b), the region is above \\(y=2\\), left of \\(x=7\\), and below \\(y=x\\):\n\\[\ny\\geq2\n\\]\n\n\\[\nx\\leq7\n\\]\n\n\\[\ny\\leq x\n\\]"
         }
       ],
@@ -276,19 +276,19 @@
       "topicNote": "Moved from Functions to Transformations of Graphs.",
       "steps": [
         {
-          "title": "For part (a),",
+          "title": "Read the graph",
           "body": "For part (a),\n\n\\[\nf(x)=5x^2+9x+2\n\\]\n\n\\[\ng(x)=5(x+4)^2+9(x+4)+8\n\\]"
         },
         {
-          "title": "Since",
+          "title": "Read the graph",
           "body": "Since\n\n\\[\nf(x+4)=5(x+4)^2+9(x+4)+2\n\\]\n\n\\[\ng(x)=f(x+4)+6\n\\]"
         },
         {
-          "title": "So the graph has moved",
+          "title": "Read the graph",
           "body": "So the graph has moved 4 units left and 6 units up.\n\n\\[\n\\begin{pmatrix}a\\\\b\\end{pmatrix}\n=\n\\begin{pmatrix}-4\\\\6\\end{pmatrix}\n\\]"
         },
         {
-          "title": "For part (b), the graph",
+          "title": "Read the graph",
           "body": "For part (b), the graph has maximum value \\(3\\) and minimum value \\(-3\\), so\n\n\\[\np=3\n\\]"
         },
         {
@@ -296,7 +296,7 @@
           "body": "The minimum occurs when\n\n\\[\nx+q=180\n\\]"
         },
         {
-          "title": "From the graph, the minimum",
+          "title": "Read the graph",
           "body": "From the graph, the minimum is at \\(x=135\\), so\n\n\\[\n135+q=180\n\\]\n\n\\[\nq=45\n\\]"
         }
       ],
@@ -309,11 +309,11 @@
       "topicNote": "Corrected to differentiation. The question asks where a curve has a given gradient.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Find the gradient",
           "body": "\\[\ny=4x^3-8x+5\n\\]\n\n\\[\n\\frac{dy}{dx}=12x^2-8\n\\]"
         },
         {
-          "title": "The gradient is , so",
+          "title": "Find the gradient",
           "body": "The gradient is \\(\\frac13\\), so\n\\[\n12x^2-8=\\frac13\n\\]\n\n\\[\n12x^2=\\frac{25}{3}\n\\]\n\n\\[\nx^2=\\frac{25}{36}\n\\]\n\n\\[\nx=\\frac56 \\quad \\text{or} \\quad x=-\\frac56\n\\]"
         }
       ],
@@ -334,11 +334,11 @@
           "body": "The bearing of \\(C\\) from \\(B\\) is \\(132^\\circ\\)."
         },
         {
-          "title": "So",
+          "title": "Use bearings",
           "body": "So\n\\[\n\\angle ABC=234^\\circ-132^\\circ=102^\\circ\n\\]"
         },
         {
-          "title": "Use the cosine rule to",
+          "title": "Use cosine rule",
           "body": "Use the cosine rule to find \\(AC\\):\n\\[\nAC^2=3.6^2+8.4^2-2(3.6)(8.4)\\cos 102^\\circ\n\\]\n\n\\[\nAC=9.8028\\ldots\\text{ km}\n\\]"
         },
         {
@@ -346,7 +346,7 @@
           "body": "Total distance walked:\n\\[\n3.6+8.4+9.8028\\ldots=21.8028\\ldots\\text{ km}\n\\]"
         },
         {
-          "title": "At , time is",
+          "title": "Use bearings",
           "body": "At \\(6\\text{ km/h}\\), time is\n\\[\n21.8028\\ldots\\div 6=3.6338\\ldots\\text{ hours}\n\\]\n\n\\[\n0.6338\\ldots\\times 60=38.0\\ldots\\text{ minutes}\n\\]"
         }
       ],
@@ -359,11 +359,11 @@
       "topicNote": "Circle Theorems. The tag is correct.",
       "steps": [
         {
-          "title": "Since , triangle is isosceles",
+          "title": "Use trigonometry",
           "body": "Since \\(OA=OC\\), triangle \\(AOC\\) is isosceles.\n\n\\[\n\\angle ACO=\\angle OAC=52^\\circ\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\\[\n\\angle AOC=180^\\circ-52^\\circ-52^\\circ=76^\\circ\n\\]"
         },
         {
@@ -380,7 +380,7 @@
       "topicNote": "Corrected to circles, arcs and sectors.",
       "steps": [
         {
-          "title": "Each semicircle has diameter ,",
+          "title": "Each semicircle has diameter",
           "body": "Each semicircle has diameter \\(20\\text{ cm}\\), so each has radius \\(10\\text{ cm}\\)."
         },
         {
@@ -392,7 +392,7 @@
           "body": "The two exposed straight parts are\n\\[\nAB=10,\n\\qquad\nDE=10\n\\]"
         },
         {
-          "title": "So the perimeter is",
+          "title": "Calculate value",
           "body": "So the perimeter is\n\\[\n30\\pi+20=114.2\\ldots\n\\]"
         }
       ],
@@ -413,15 +413,15 @@
           "body": "It is right-angled at \\(E\\), with\n\n\\[\nDF=28\n\\]"
         },
         {
-          "title": "and",
+          "title": "Use trigonometry",
           "body": "and\n\n\\[\n\\angle FDE=30^\\circ\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\nFE=28\\sin 30^\\circ=14\n\\]"
         },
         {
-          "title": "and",
+          "title": "Use trigonometry",
           "body": "and\n\n\\[\nDE=28\\cos 30^\\circ=14\\sqrt3\n\\]"
         },
         {
@@ -450,23 +450,23 @@
           "body": "The area ratio of solid A to solid B is\n\n\\[\n7776:486=16:1\n\\]"
         },
         {
-          "title": "So the linear ratio A",
+          "title": "Split the ratio",
           "body": "So the linear ratio A:B is\n\n\\[\n\\sqrt{16}:1=4:1\n\\]"
         },
         {
-          "title": "Therefore the volume ratio A",
+          "title": "Split the ratio",
           "body": "Therefore the volume ratio A:B is\n\n\\[\n4^3:1^3=64:1\n\\]"
         },
         {
-          "title": "The volumes are and ,",
+          "title": "Calculate volume",
           "body": "The volumes are \\(8^x\\) and \\(2^{x+4}\\), so\n\n\\[\n\\frac{8^x}{2^{x+4}}=64\n\\]"
         },
         {
-          "title": "Write as a power of",
+          "title": "Use index laws",
           "body": "Write \\(8^x\\) as a power of 2:\n\n\\[\n8^x=(2^3)^x=2^{3x}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\n\\frac{2^{3x}}{2^{x+4}}=2^6\n\\]\n\n\\[\n2^{3x-(x+4)}=2^6\n\\]\n\n\\[\n2x-4=6\n\\]\n\n\\[\nx=5\n\\]"
         },
         {
@@ -474,7 +474,7 @@
           "body": "The height of solid A is\n\n\\[\n3^x=3^5=243\n\\]"
         },
         {
-          "title": "Since the linear ratio A",
+          "title": "Split the ratio",
           "body": "Since the linear ratio A:B is \\(4:1\\), the height of solid B is\n\n\\[\n\\frac{243}{4}=60.75\n\\]"
         }
       ],
@@ -491,7 +491,7 @@
           "body": "Let the perpendicular from \\(C\\) meet \\(AB\\) at \\(F\\).\n\n\\[\nAF=\\frac{8}{\\tan 40^\\circ}=9.534\\ldots\n\\]\n\n\\[\nFB=22-9.534\\ldots=12.465\\ldots\n\\]"
         },
         {
-          "title": "In right angled triangle ,",
+          "title": "Use trigonometry",
           "body": "In right-angled triangle \\(CFB\\),\n\\[\n\\tan x=\\frac{8}{12.465\\ldots}\n\\]\n\n\\[\nx=32.7^\\circ\n\\]"
         }
       ],
@@ -508,7 +508,7 @@
           "body": "The \\(0\\) to \\(20\\) gram class has frequency \\(24\\), so its density is\n\n\\[\n\\frac{24}{20}=1.2\n\\]"
         },
         {
-          "title": "From the histogram scale, the",
+          "title": "Use histogram",
           "body": "From the histogram scale, the density for \\(30<w\\le 50\\) is about \\(2.2\\), and the density for \\(50<w\\le 65\\) is about \\(1.8\\)."
         },
         {
@@ -525,15 +525,15 @@
       "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "There are adults, so the",
+          "title": "Use cumulative frequency",
           "body": "There are \\(80\\) adults, so the median is the \\(40\\)th value."
         },
         {
-          "title": "From the graph,",
+          "title": "Use cumulative frequency",
           "body": "From the graph,\n\n\\[\n\\text{median}\\approx 25\\text{ seconds}\n\\]"
         },
         {
-          "title": "At seconds, the cumulative frequency",
+          "title": "Convert standard form",
           "body": "At \\(50\\) seconds, the cumulative frequency is about \\(75\\).\n\n\\[\n80-75=5\n\\]\n\n\\[\n\\frac{5}{80}\\times 100=6.25\\%\n\\]"
         }
       ],
@@ -571,7 +571,7 @@
           "body": "The mean is 10 cents only when both coins are 10 cent coins.\n\n\\[\np^2=\\frac{49}{121}\n\\]\n\n\\[\np=\\frac{7}{11}\n\\]"
         },
         {
-          "title": "So the probability of taking",
+          "title": "Calculate probability",
           "body": "So the probability of taking a 20 cent coin is\n\n\\[\n1-\\frac{7}{11}=\\frac{4}{11}\n\\]"
         },
         {
@@ -600,7 +600,7 @@
           "body": "The gradient of \\(OP\\) is\n\n\\[\n\\frac{-10}{8}=-\\frac54\n\\]"
         },
         {
-          "title": "So the gradient of the",
+          "title": "Find the gradient",
           "body": "So the gradient of the tangent is\n\n\\[\n\\frac45\n\\]"
         },
         {
@@ -608,19 +608,19 @@
           "body": "The tangent through \\(P\\) is\n\n\\[\ny+10=\\frac45(x-8)\n\\]\n\n\\[\ny=\\frac45x-\\frac{82}{5}\n\\]"
         },
         {
-          "title": "At the axis,",
+          "title": "Evaluate fraction",
           "body": "At the \\(x\\)-axis, \\(y=0\\):\n\n\\[\n0=\\frac45x-\\frac{82}{5}\n\\]\n\n\\[\nx=\\frac{41}{2}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\nQ=\\left(\\frac{41}{2},0\\right)\n\\]"
         },
         {
-          "title": "At the axis,",
+          "title": "Evaluate fraction",
           "body": "At the \\(y\\)-axis, \\(x=0\\):\n\n\\[\nR=\\left(0,-\\frac{82}{5}\\right)\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Simplify surd",
           "body": "Therefore\n\n\\[\nRQ=\\sqrt{\\left(\\frac{41}{2}\\right)^2+\\left(\\frac{82}{5}\\right)^2}\n\\]\n\n\\[\nRQ=26.252...\n\\]"
         }
       ],
@@ -633,19 +633,19 @@
       "topicNote": "Moved from Functions to Transformations of Graphs.",
       "steps": [
         {
-          "title": "For part (a),",
+          "title": "Read the graph",
           "body": "For part (a),\n\n\\[\nf(x)=5x^2+9x+2\n\\]\n\n\\[\ng(x)=5(x+4)^2+9(x+4)+8\n\\]"
         },
         {
-          "title": "Since",
+          "title": "Read the graph",
           "body": "Since\n\n\\[\nf(x+4)=5(x+4)^2+9(x+4)+2\n\\]\n\n\\[\ng(x)=f(x+4)+6\n\\]"
         },
         {
-          "title": "So the graph has moved",
+          "title": "Read the graph",
           "body": "So the graph has moved 4 units left and 6 units up.\n\n\\[\n\\begin{pmatrix}a\\\\b\\end{pmatrix}\n=\n\\begin{pmatrix}-4\\\\6\\end{pmatrix}\n\\]"
         },
         {
-          "title": "For part (b), the graph",
+          "title": "Read the graph",
           "body": "For part (b), the graph has maximum value \\(3\\) and minimum value \\(-3\\), so\n\n\\[\np=3\n\\]"
         },
         {
@@ -653,7 +653,7 @@
           "body": "The minimum occurs when\n\n\\[\nx+q=180\n\\]"
         },
         {
-          "title": "From the graph, the minimum",
+          "title": "Read the graph",
           "body": "From the graph, the minimum is at \\(x=135\\), so\n\n\\[\n135+q=180\n\\]\n\n\\[\nq=45\n\\]"
         }
       ],
@@ -674,15 +674,15 @@
           "body": "It is right-angled at \\(E\\), with\n\n\\[\nDF=28\n\\]"
         },
         {
-          "title": "and",
+          "title": "Use trigonometry",
           "body": "and\n\n\\[\n\\angle FDE=30^\\circ\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\nFE=28\\sin 30^\\circ=14\n\\]"
         },
         {
-          "title": "and",
+          "title": "Use trigonometry",
           "body": "and\n\n\\[\nDE=28\\cos 30^\\circ=14\\sqrt3\n\\]"
         },
         {
@@ -711,23 +711,23 @@
           "body": "The area ratio of solid A to solid B is\n\n\\[\n7776:486=16:1\n\\]"
         },
         {
-          "title": "So the linear ratio A",
+          "title": "Split the ratio",
           "body": "So the linear ratio A:B is\n\n\\[\n\\sqrt{16}:1=4:1\n\\]"
         },
         {
-          "title": "Therefore the volume ratio A",
+          "title": "Split the ratio",
           "body": "Therefore the volume ratio A:B is\n\n\\[\n4^3:1^3=64:1\n\\]"
         },
         {
-          "title": "The volumes are and ,",
+          "title": "Calculate volume",
           "body": "The volumes are \\(8^x\\) and \\(2^{x+4}\\), so\n\n\\[\n\\frac{8^x}{2^{x+4}}=64\n\\]"
         },
         {
-          "title": "Write as a power of",
+          "title": "Use index laws",
           "body": "Write \\(8^x\\) as a power of 2:\n\n\\[\n8^x=(2^3)^x=2^{3x}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\n\\frac{2^{3x}}{2^{x+4}}=2^6\n\\]\n\n\\[\n2^{3x-(x+4)}=2^6\n\\]\n\n\\[\n2x-4=6\n\\]\n\n\\[\nx=5\n\\]"
         },
         {
@@ -735,7 +735,7 @@
           "body": "The height of solid A is\n\n\\[\n3^x=3^5=243\n\\]"
         },
         {
-          "title": "Since the linear ratio A",
+          "title": "Split the ratio",
           "body": "Since the linear ratio A:B is \\(4:1\\), the height of solid B is\n\n\\[\n\\frac{243}{4}=60.75\n\\]"
         }
       ],
@@ -756,7 +756,7 @@
           "body": "The mean is 10 cents only when both coins are 10 cent coins.\n\n\\[\np^2=\\frac{49}{121}\n\\]\n\n\\[\np=\\frac{7}{11}\n\\]"
         },
         {
-          "title": "So the probability of taking",
+          "title": "Calculate probability",
           "body": "So the probability of taking a 20 cent coin is\n\n\\[\n1-\\frac{7}{11}=\\frac{4}{11}\n\\]"
         },
         {

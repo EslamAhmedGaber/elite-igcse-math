@@ -8,7 +8,7 @@
       "topicNote": "Set notation and Venn diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\n\\mathcal{E}=\\{20,21,22,23,24,25,26,27,28,29\\}\n\\]"
         },
         {
@@ -37,11 +37,11 @@
       "topicNote": "Powers, roots and standard form. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Convert standard form",
           "body": "\\[\n2840000000=2.84\\times 10^9\n\\]"
         },
         {
-          "title": "Also,",
+          "title": "Convert standard form",
           "body": "Also,\n\n\\[\n2.5\\times 10^{-4}=0.00025\n\\]"
         }
       ],
@@ -54,15 +54,15 @@
       "topicNote": "Compound Interest and Depreciation. The tag is correct.",
       "steps": [
         {
-          "title": "For part (a),",
+          "title": "Use compound interest",
           "body": "For part (a),\n\n\\[\n40000(1.035)^3=44348.715\n\\]"
         },
         {
-          "title": "Correct to the nearest yuan,",
+          "title": "Use compound interest",
           "body": "Correct to the nearest yuan,\n\n\\[\n44348.715\\approx 44349\n\\]"
         },
         {
-          "title": "For part (b), after one",
+          "title": "Use compound interest",
           "body": "For part (b), after one year the value is \\(93.5\\%\\) of \\(P\\).\n\n\\[\n0.935P=30481\n\\]\n\n\\[\nP=\\frac{30481}{0.935}=32600\n\\]"
         }
       ],
@@ -75,11 +75,11 @@
       "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Estimate the value",
           "body": "\\[\na=\\frac{v-u}{t}\n\\]"
         },
         {
-          "title": "For the upper bound, use",
+          "title": "Find upper bound",
           "body": "For the upper bound, use the upper bound of \\(v\\), the lower bound of \\(u\\), and the lower bound of \\(t\\).\n\n\\[\nv<9.65,\\quad u\\ge 3.75,\\quad t\\ge 1.835\n\\]\n\n\\[\na_{\\text{upper}}=\\frac{9.65-3.75}{1.835}=3.2152\\ldots\n\\]"
         }
       ],
@@ -92,11 +92,11 @@
       "topicNote": "Corrected to surds. The question uses surd expansion and coefficient matching.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify surd",
           "body": "\\[\n(8-\\sqrt{x})(5+\\sqrt{x})=40+8\\sqrt{x}-5\\sqrt{x}-x\n\\]\n\n\\[\n=40+3\\sqrt{x}-x\n\\]"
         },
         {
-          "title": "This is equal to",
+          "title": "Simplify surd",
           "body": "This is equal to\n\\[\ny\\sqrt{x}+21\n\\]"
         },
         {
@@ -121,7 +121,7 @@
           "body": "\\(\\frac{3}{10}\\) of the money is changed to euros, so the rest is\n\n\\[\n\\frac{7}{10}\\times 20160=14112\n\\]"
         },
         {
-          "title": "This rest is divided in",
+          "title": "Split the ratio",
           "body": "This rest is divided in the ratio\n\n\\[\n\\text{dollars} : \\text{rupees} : \\text{francs}=9:5:2\n\\]"
         },
         {
@@ -129,11 +129,11 @@
           "body": "There are\n\n\\[\n9+5+2=16 \\text{ parts}\n\\]"
         },
         {
-          "title": "The difference between dollars and",
+          "title": "Split the ratio",
           "body": "The difference between dollars and francs is\n\n\\[\n9-2=7 \\text{ parts}\n\\]"
         },
         {
-          "title": "So the difference is",
+          "title": "Split the ratio",
           "body": "So the difference is\n\n\\[\n\\frac{7}{16}\\times 14112=6174\n\\]"
         }
       ],
@@ -171,7 +171,7 @@
           "body": "(b)(i)\n\\[\nx^2+5x-36=(x+9)(x-4)\n\\]"
         },
         {
-          "title": "(b)(ii) or",
+          "title": "Factorise expression",
           "body": "(b)(ii) \\(x=-9\\) or \\(x=4\\)."
         }
       ],
@@ -201,7 +201,7 @@
       "topicNote": "Simultaneous equations. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve simultaneous equations",
           "body": "\\[\nx^2-9y-x=2y^2-12\n\\]\n\n\\[\nx+2y-1=0\n\\]"
         },
         {
@@ -217,15 +217,15 @@
           "body": "Factorise:\n\\[\n(2y-3)(y-4)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Solve simultaneous equations",
           "body": "So\n\\[\ny=\\frac32 \\quad \\text{or} \\quad y=4\n\\]"
         },
         {
-          "title": "If",
+          "title": "Solve simultaneous equations",
           "body": "If \\(y=\\frac32\\):\n\\[\nx=1-2\\left(\\frac32\\right)=-2\n\\]"
         },
         {
-          "title": "If",
+          "title": "Solve simultaneous equations",
           "body": "If \\(y=4\\):\n\\[\nx=1-8=-7\n\\]"
         }
       ],
@@ -238,7 +238,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\nS_n=\\frac n2(2a+(n-1)d)\n\\]\n\n\\[\nS_{2n}=n(2a+(2n-1)d)\n\\]"
         },
         {
@@ -259,7 +259,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nf(x)=x^2-8x+5\n\\]\n\n\\[\nf(x)=(x-4)^2-11\n\\]"
         },
         {
@@ -267,7 +267,7 @@
           "body": "Let\n\n\\[\ny=(x-4)^2-11\n\\]\n\n\\[\ny+11=(x-4)^2\n\\]"
         },
         {
-          "title": "Since the domain is ,",
+          "title": "Find inverse function",
           "body": "Since the domain is \\(x<4\\), take the negative square root:\n\n\\[\nx-4=-\\sqrt{y+11}\n\\]\n\n\\[\nx=4-\\sqrt{y+11}\n\\]"
         }
       ],
@@ -280,11 +280,11 @@
       "topicNote": "Coordinate geometry. The tag is correct.",
       "steps": [
         {
-          "title": "(a) The gradient of ,",
+          "title": "Find the gradient",
           "body": "(a) The gradient of \\(AB\\), where \\(A(5,8)\\) and \\(B(9,-4)\\), is\n\\[\n\\frac{-4-8}{9-5}=\\frac{-12}{4}=-3\n\\]"
         },
         {
-          "title": "(b) A line perpendicular to",
+          "title": "Find the gradient",
           "body": "(b) A line perpendicular to a line with gradient \\(-3\\) has gradient\n\\[\n\\frac13\n\\]"
         }
       ],
@@ -301,7 +301,7 @@
           "body": "The minimum point of \\(y=f(x)\\) is \\((-9,15)\\)."
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(x+3)\n\\]"
         },
         {
@@ -309,7 +309,7 @@
           "body": "the graph moves 3 units left:\n\n\\[\n(-9,15)\\to(-12,15)\n\\]"
         },
         {
-          "title": "For",
+          "title": "Evaluate fraction",
           "body": "For\n\n\\[\ny=\\frac13 f(x)\n\\]"
         },
         {
@@ -317,7 +317,7 @@
           "body": "the \\(y\\)-coordinate is divided by 3:\n\n\\[\n(-9,15)\\to(-9,5)\n\\]"
         },
         {
-          "title": "For part (b), the cosine",
+          "title": "Use trigonometry",
           "body": "For part (b), the cosine graph has maximum \\(2\\) and minimum \\(-2\\), so\n\n\\[\na=2\n\\]"
         },
         {
@@ -325,7 +325,7 @@
           "body": "The graph has a minimum at \\(x=90^\\circ\\). For \\(a\\cos(x+b)^\\circ\\), a minimum occurs when\n\n\\[\nx+b=180\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\n90+b=180\n\\]\n\n\\[\nb=90\n\\]"
         }
       ],
@@ -346,7 +346,7 @@
           "body": "The question gives\n\\[\nV=\\frac13\\pi y\n\\]"
         },
         {
-          "title": "So",
+          "title": "Differentiate",
           "body": "So\n\\[\ny=60x^2-10x^3\n\\]"
         },
         {
@@ -354,11 +354,11 @@
           "body": "Differentiate:\n\\[\n\\frac{dy}{dx}=120x-30x^2\n\\]"
         },
         {
-          "title": "For a maximum,",
+          "title": "Differentiate",
           "body": "For a maximum,\n\\[\n120x-30x^2=0\n\\]\n\n\\[\n30x(4-x)=0\n\\]"
         },
         {
-          "title": "So the valid value is",
+          "title": "Differentiate",
           "body": "So the valid value is\n\\[\nx=4\n\\]\n\n\\[\ny=60(4^2)-10(4^3)=960-640=320\n\\]"
         }
       ],
@@ -371,7 +371,7 @@
       "topicNote": "Bearings, Scale Drawing & Constructions. The tag is correct.",
       "steps": [
         {
-          "title": "From , ship is on",
+          "title": "Use bearings",
           "body": "From \\(A\\), ship \\(C\\) is on a bearing of \\(120^\\circ\\), and \\(AC=275\\text{ m}\\)."
         },
         {
@@ -379,11 +379,11 @@
           "body": "Resolve \\(AC\\):\n\\[\n\\text{east component}=275\\sin 120^\\circ=238.16\\ldots\n\\]\n\\[\n\\text{north component}=275\\cos 120^\\circ=-137.5\n\\]"
         },
         {
-          "title": "Ship is north of ,",
+          "title": "Use bearings",
           "body": "Ship \\(B\\) is \\(150\\text{ m}\\) north of \\(A\\), so from \\(B\\) to \\(C\\):\n\\[\n\\text{east}=238.16\\ldots,\\qquad \\text{north}=-137.5-150=-287.5\n\\]"
         },
         {
-          "title": "The bearing is therefore in",
+          "title": "Use bearings",
           "body": "The bearing is therefore in the south-east quadrant:\n\\[\n180^\\circ-\\tan^{-1}\\left(\\frac{238.16\\ldots}{287.5}\\right)=140.36\\ldots^\\circ\n\\]"
         }
       ],
@@ -400,7 +400,7 @@
           "body": "The inner radius is \\(7\\) m."
         },
         {
-          "title": "The path is m wide,",
+          "title": "Calculate value",
           "body": "The path is \\(2\\) m wide, so the outer radius is\n\\[\n7+2=9\\text{ m}\n\\]"
         },
         {
@@ -429,7 +429,7 @@
           "body": "Area of the upper rectangle:\n\n\\[\n30\\times 20=600\n\\]"
         },
         {
-          "title": "So the cross sectional area",
+          "title": "Calculate area",
           "body": "So the cross-sectional area is\n\n\\[\n3400+600=4000\\text{ cm}^2\n\\]"
         },
         {
@@ -437,11 +437,11 @@
           "body": "The full volume is\n\n\\[\n4000\\times 125=500000\\text{ cm}^3\n\\]"
         },
         {
-          "title": "In the first hours, the",
+          "title": "Calculate area",
           "body": "In the first \\(1.5\\) hours, the water level drops by \\(20\\) cm. This is the top rectangular part:\n\n\\[\n30\\times 20\\times 125=75000\\text{ cm}^3\n\\]"
         },
         {
-          "title": "So the pumping rate is",
+          "title": "Calculate area",
           "body": "So the pumping rate is\n\n\\[\n\\frac{75000}{1.5}=50000\\text{ cm}^3\\text{/hour}\n\\]"
         },
         {
@@ -449,7 +449,7 @@
           "body": "Time to empty the whole container:\n\n\\[\n\\frac{500000}{50000}=10\\text{ hours}\n\\]"
         },
         {
-          "title": "Starting at , ten hours",
+          "title": "Calculate area",
           "body": "Starting at \\(10{:}30\\), ten hours later is\n\n\\[\n20{:}30\n\\]"
         }
       ],
@@ -470,7 +470,7 @@
           "body": "Simplify:\n\n\\[\n\\frac{1836}{4352}=\\frac{27}{64}\n\\]"
         },
         {
-          "title": "So the linear ratio is",
+          "title": "Split the ratio",
           "body": "So the linear ratio is\n\n\\[\n\\sqrt[3]{27}:\\sqrt[3]{64}=3:4\n\\]"
         },
         {
@@ -491,15 +491,15 @@
       "topicNote": "Corrected to right-angled trigonometry. The solution uses right-triangle trigonometry in an isosceles triangle.",
       "steps": [
         {
-          "title": "Since is isosceles and is",
+          "title": "Find the gradient",
           "body": "Since \\(ABC\\) is isosceles and \\(D\\) is the midpoint of \\(AC\\), \\(BD\\) is perpendicular to \\(AC\\)."
         },
         {
-          "title": "In right triangle ,",
+          "title": "Use trigonometry",
           "body": "In right triangle \\(ABD\\),\n\\[\nBD=16,\\qquad \\angle DAB=65^\\circ\n\\]\n\n\\[\n\\sin 65^\\circ=\\frac{16}{AB}\n\\]\n\n\\[\nAB=\\frac{16}{\\sin65^\\circ}\n\\]"
         },
         {
-          "title": "Also,",
+          "title": "Use trigonometry",
           "body": "Also,\n\\[\n\\tan65^\\circ=\\frac{16}{AD}\n\\]\n\n\\[\nAD=\\frac{16}{\\tan65^\\circ}\n\\]"
         },
         {
@@ -516,39 +516,39 @@
       "topicNote": "Moved from Coordinate Geometry to Vectors.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use vectors",
           "body": "\\[\n\\vec{OA}=2\\mathbf a,\\qquad \\vec{OB}=2\\mathbf b\n\\]"
         },
         {
-          "title": "Since is the midpoint of",
+          "title": "Find the midpoint",
           "body": "Since \\(M\\) is the midpoint of \\(AB\\),\n\n\\[\n\\vec{OM}=\\frac{2\\mathbf a+2\\mathbf b}{2}\n\\]\n\n\\[\n\\vec{OM}=\\mathbf a+\\mathbf b\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Use vectors",
           "body": "Since \\(ON:NB=2:1\\),\n\n\\[\n\\vec{ON}=\\frac23\\vec{OB}\n\\]\n\n\\[\n\\vec{ON}=\\frac23(2\\mathbf b)=\\frac43\\mathbf b\n\\]"
         },
         {
-          "title": "Point lies on , so",
+          "title": "Use vectors",
           "body": "Point \\(P\\) lies on \\(OM\\), so\n\n\\[\n\\vec{OP}=t(\\mathbf a+\\mathbf b)\n\\]"
         },
         {
-          "title": "Point also lies on ,",
+          "title": "Use vectors",
           "body": "Point \\(P\\) also lies on \\(AN\\), so\n\n\\[\n\\vec{OP}=2\\mathbf a+s\\left(\\frac43\\mathbf b-2\\mathbf a\\right)\n\\]\n\n\\[\n\\vec{OP}=(2-2s)\\mathbf a+\\frac{4s}{3}\\mathbf b\n\\]"
         },
         {
-          "title": "Equate coefficients of and",
+          "title": "Use vectors",
           "body": "Equate coefficients of \\(\\mathbf a\\) and \\(\\mathbf b\\):\n\n\\[\nt=2-2s\n\\]\n\n\\[\nt=\\frac{4s}{3}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use vectors",
           "body": "So\n\n\\[\n\\frac{4s}{3}=2-2s\n\\]\n\n\\[\n4s=6-6s\n\\]\n\n\\[\n10s=6\n\\]\n\n\\[\ns=\\frac35\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Use vectors",
           "body": "Then\n\n\\[\nt=\\frac{4}{5}\n\\]"
         },
         {
-          "title": "So is of the way",
+          "title": "Use vectors",
           "body": "So \\(P\\) is \\(\\frac45\\) of the way from \\(O\\) to \\(M\\)."
         }
       ],
@@ -582,11 +582,11 @@
       "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "There are bags, so the",
+          "title": "Use cumulative frequency",
           "body": "There are \\(90\\) bags, so the median is at cumulative frequency \\(45\\)."
         },
         {
-          "title": "From the graph,",
+          "title": "Use cumulative frequency",
           "body": "From the graph,\n\n\\[\n\\text{median}\\approx 146\\text{ g}\n\\]"
         },
         {
@@ -594,7 +594,7 @@
           "body": "Large bags sold:\n\n\\[\n\\frac{93.75}{3.75}=25\n\\]"
         },
         {
-          "title": "So bags have weight greater",
+          "title": "Use cumulative frequency",
           "body": "So \\(25\\) bags have weight greater than \\(d\\)."
         },
         {
@@ -602,11 +602,11 @@
           "body": "That means\n\n\\[\n90-25=65\n\\]"
         },
         {
-          "title": "bags have weight grams or",
+          "title": "Use cumulative frequency",
           "body": "bags have weight \\(d\\) grams or less."
         },
         {
-          "title": "From the graph, cumulative frequency",
+          "title": "Use cumulative frequency",
           "body": "From the graph, cumulative frequency \\(65\\) gives\n\n\\[\nd\\approx 150\n\\]"
         }
       ],
@@ -636,7 +636,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\nS_n=\\frac n2(2a+(n-1)d)\n\\]\n\n\\[\nS_{2n}=n(2a+(2n-1)d)\n\\]"
         },
         {
@@ -657,7 +657,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nf(x)=x^2-8x+5\n\\]\n\n\\[\nf(x)=(x-4)^2-11\n\\]"
         },
         {
@@ -665,7 +665,7 @@
           "body": "Let\n\n\\[\ny=(x-4)^2-11\n\\]\n\n\\[\ny+11=(x-4)^2\n\\]"
         },
         {
-          "title": "Since the domain is ,",
+          "title": "Find inverse function",
           "body": "Since the domain is \\(x<4\\), take the negative square root:\n\n\\[\nx-4=-\\sqrt{y+11}\n\\]\n\n\\[\nx=4-\\sqrt{y+11}\n\\]"
         }
       ],
@@ -682,7 +682,7 @@
           "body": "The minimum point of \\(y=f(x)\\) is \\((-9,15)\\)."
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(x+3)\n\\]"
         },
         {
@@ -690,7 +690,7 @@
           "body": "the graph moves 3 units left:\n\n\\[\n(-9,15)\\to(-12,15)\n\\]"
         },
         {
-          "title": "For",
+          "title": "Evaluate fraction",
           "body": "For\n\n\\[\ny=\\frac13 f(x)\n\\]"
         },
         {
@@ -698,7 +698,7 @@
           "body": "the \\(y\\)-coordinate is divided by 3:\n\n\\[\n(-9,15)\\to(-9,5)\n\\]"
         },
         {
-          "title": "For part (b), the cosine",
+          "title": "Use trigonometry",
           "body": "For part (b), the cosine graph has maximum \\(2\\) and minimum \\(-2\\), so\n\n\\[\na=2\n\\]"
         },
         {
@@ -706,7 +706,7 @@
           "body": "The graph has a minimum at \\(x=90^\\circ\\). For \\(a\\cos(x+b)^\\circ\\), a minimum occurs when\n\n\\[\nx+b=180\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\n90+b=180\n\\]\n\n\\[\nb=90\n\\]"
         }
       ],
@@ -727,7 +727,7 @@
           "body": "Simplify:\n\n\\[\n\\frac{1836}{4352}=\\frac{27}{64}\n\\]"
         },
         {
-          "title": "So the linear ratio is",
+          "title": "Split the ratio",
           "body": "So the linear ratio is\n\n\\[\n\\sqrt[3]{27}:\\sqrt[3]{64}=3:4\n\\]"
         },
         {
@@ -748,39 +748,39 @@
       "topicNote": "Moved from Coordinate Geometry to Vectors.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use vectors",
           "body": "\\[\n\\vec{OA}=2\\mathbf a,\\qquad \\vec{OB}=2\\mathbf b\n\\]"
         },
         {
-          "title": "Since is the midpoint of",
+          "title": "Find the midpoint",
           "body": "Since \\(M\\) is the midpoint of \\(AB\\),\n\n\\[\n\\vec{OM}=\\frac{2\\mathbf a+2\\mathbf b}{2}\n\\]\n\n\\[\n\\vec{OM}=\\mathbf a+\\mathbf b\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Use vectors",
           "body": "Since \\(ON:NB=2:1\\),\n\n\\[\n\\vec{ON}=\\frac23\\vec{OB}\n\\]\n\n\\[\n\\vec{ON}=\\frac23(2\\mathbf b)=\\frac43\\mathbf b\n\\]"
         },
         {
-          "title": "Point lies on , so",
+          "title": "Use vectors",
           "body": "Point \\(P\\) lies on \\(OM\\), so\n\n\\[\n\\vec{OP}=t(\\mathbf a+\\mathbf b)\n\\]"
         },
         {
-          "title": "Point also lies on ,",
+          "title": "Use vectors",
           "body": "Point \\(P\\) also lies on \\(AN\\), so\n\n\\[\n\\vec{OP}=2\\mathbf a+s\\left(\\frac43\\mathbf b-2\\mathbf a\\right)\n\\]\n\n\\[\n\\vec{OP}=(2-2s)\\mathbf a+\\frac{4s}{3}\\mathbf b\n\\]"
         },
         {
-          "title": "Equate coefficients of and",
+          "title": "Use vectors",
           "body": "Equate coefficients of \\(\\mathbf a\\) and \\(\\mathbf b\\):\n\n\\[\nt=2-2s\n\\]\n\n\\[\nt=\\frac{4s}{3}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use vectors",
           "body": "So\n\n\\[\n\\frac{4s}{3}=2-2s\n\\]\n\n\\[\n4s=6-6s\n\\]\n\n\\[\n10s=6\n\\]\n\n\\[\ns=\\frac35\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Use vectors",
           "body": "Then\n\n\\[\nt=\\frac{4}{5}\n\\]"
         },
         {
-          "title": "So is of the way",
+          "title": "Use vectors",
           "body": "So \\(P\\) is \\(\\frac45\\) of the way from \\(O\\) to \\(M\\)."
         }
       ],

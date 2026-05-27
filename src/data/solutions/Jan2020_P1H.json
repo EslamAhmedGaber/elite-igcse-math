@@ -12,7 +12,7 @@
           "body": "Write both numbers as products of prime factors:\n\n\\[\n28=2^2\\times 7\n\\]\n\n\\[\n105=3\\times 5\\times 7\n\\]"
         },
         {
-          "title": "For the lowest common multiple,",
+          "title": "Find the LCM",
           "body": "For the lowest common multiple, take the highest power of each prime:\n\n\\[\n\\text{LCM}=2^2\\times 3\\times 5\\times 7=420\n\\]"
         }
       ],
@@ -25,15 +25,15 @@
       "topicNote": "Powers, roots and standard form. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Convert standard form",
           "body": "\\[\n7.8\\times 10^{-4}=0.00078\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Convert standard form",
           "body": "For part (b),\n\n\\[\n5.6\\times 10^4+7\\times 10^3=56000+7000=63000\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Convert standard form",
           "body": "Then\n\n\\[\n\\frac{63000}{2.8\\times 10^{-3}}=\\frac{63000}{0.0028}\n\\]\n\n\\[\n=22500000=2.25\\times 10^7\n\\]"
         }
       ],
@@ -46,7 +46,7 @@
       "topicNote": "Compound Interest and Depreciation. The tag is correct.",
       "steps": [
         {
-          "title": "After the first 2 years,",
+          "title": "Use compound interest",
           "body": "After the first 2 years,\n\n\\[\n6000(1.015)^2=6181.35\n\\]"
         },
         {
@@ -63,11 +63,11 @@
       "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Estimate the value",
           "body": "\\[\nP=\\frac{2a-c}{d}\n\\]"
         },
         {
-          "title": "For the upper bound of",
+          "title": "Find upper bound",
           "body": "For the upper bound of \\(P\\), make the numerator as large as possible and the denominator as small as possible.\n\n\\[\na<58.45,\\quad c\\ge 19.5,\\quad d\\ge 3.55\n\\]\n\n\\[\nP_{\\text{upper}}=\\frac{2(58.45)-19.5}{3.55}=27.4366\\ldots\n\\]"
         }
       ],
@@ -80,23 +80,23 @@
       "topicNote": "Ratio Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "Girls boys , so there",
+          "title": "Split the ratio",
           "body": "Girls : boys \\(=3:5\\), so there are \\(8\\) parts.\n\n\\[\n\\text{girls}=120\\times \\frac38=45\n\\]\n\n\\[\n\\text{boys}=120\\times \\frac58=75\n\\]"
         },
         {
-          "title": "Boys climbing",
+          "title": "Split the ratio",
           "body": "Boys climbing:\n\n\\[\n\\frac{16}{25}\\times 75=48\n\\]"
         },
         {
-          "title": "Boys sailing",
+          "title": "Split the ratio",
           "body": "Boys sailing:\n\n\\[\n75-48=27\n\\]"
         },
         {
-          "title": "For the girls, twice as",
+          "title": "Split the ratio",
           "body": "For the girls, twice as many go sailing as climbing, so the girls are split in the ratio\n\n\\[\n\\text{sailing}:\\text{climbing}=2:1\n\\]"
         },
         {
-          "title": "Girls sailing",
+          "title": "Split the ratio",
           "body": "Girls sailing:\n\n\\[\n\\frac23\\times 45=30\n\\]"
         },
         {
@@ -113,15 +113,15 @@
       "topicNote": "Corrected to Algebraic Roots & Indices. The question includes surds and fractional indices; the algebraic-index part is the stronger topic signal.",
       "steps": [
         {
-          "title": "First,",
+          "title": "Simplify surd",
           "body": "First,\n\n\\[\n\\sqrt{12}=2\\sqrt3\n\\]"
         },
         {
-          "title": "So",
+          "title": "Simplify surd",
           "body": "So\n\n\\[\n6+2\\sqrt{12}=6+4\\sqrt3\n\\]"
         },
         {
-          "title": "Now square",
+          "title": "Simplify surd",
           "body": "Now square:\n\n\\[\n(6+4\\sqrt3)^2=36+48\\sqrt3+48\n\\]\n\n\\[\n=84+48\\sqrt3\n\\]"
         },
         {
@@ -129,7 +129,7 @@
           "body": "Factor out \\(12\\):\n\n\\[\n84+48\\sqrt3=12(7+4\\sqrt3)\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Simplify surd",
           "body": "For part (b),\n\n\\[\n\\left(\\frac{27a^{12}}{t^{15}}\\right)^{-\\frac23}\n=\\left(\\frac{t^{15}}{27a^{12}}\\right)^{\\frac23}\n\\]\n\n\\[\n=\\frac{t^{10}}{9a^8}\n\\]"
         }
       ],
@@ -167,7 +167,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nf(x)=x^2-2x\n\\]\n\n\\[\ng(x)=x+3\n\\]\n\n\\[\nh(x)=fg(x)=f(g(x))\n\\]\n\n\\[\nh(x)=(x+3)^2-2(x+3)\n\\]\n\n\\[\nh(x)=x^2+4x+3\n\\]\n\n\\[\nh(x)=(x+2)^2-1\n\\]"
         },
         {
@@ -175,7 +175,7 @@
           "body": "Let\n\n\\[\ny=(x+2)^2-1\n\\]"
         },
         {
-          "title": "Since the domain is ,",
+          "title": "Find inverse function",
           "body": "Since the domain is \\(x\\ge -2\\), take the positive square root:\n\n\\[\nx+2=\\sqrt{y+1}\n\\]\n\n\\[\nx=\\sqrt{y+1}-2\n\\]"
         }
       ],
@@ -188,7 +188,7 @@
       "topicNote": "Coordinate geometry. The tag is correct.",
       "steps": [
         {
-          "title": "(a) The midpoint of and",
+          "title": "Find the midpoint",
           "body": "(a) The midpoint of \\(A(5,-4)\\) and \\(B(13,1)\\) is\n\\[\n\\left(\\frac{5+13}{2},\\frac{-4+1}{2}\\right)\n\\]\n\n\\[\n=(9,-1.5)\n\\]"
         },
         {
@@ -200,11 +200,11 @@
           "body": "The gradient is \\(-3\\)."
         },
         {
-          "title": "(c) For ,",
+          "title": "Calculate value",
           "body": "(c) For \\(x=100\\),\n\\[\ny=2-3(100)=-298\n\\]"
         },
         {
-          "title": "The point has , not",
+          "title": "Calculate value",
           "body": "The point has \\(y=-302\\), not \\(-298\\), so it does not lie on the line."
         }
       ],
@@ -217,19 +217,19 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Since is the midpoint of",
+          "title": "Find the midpoint",
           "body": "Since \\(M\\) is the midpoint of \\(JK\\),\n\n\\[\nM=\\left(\\frac{j+6}{2},\\frac{15+k}{2}\\right)\n\\]"
         },
         {
-          "title": "The gradient of is 2,",
+          "title": "Find the gradient",
           "body": "The gradient of \\(HM\\) is 2, and \\(H=(-4,1)\\).\n\n\\[\n\\frac{\\frac{15+k}{2}-1}{\\frac{j+6}{2}+4}=2\n\\]\n\n\\[\n\\frac{k+13}{j+14}=2\n\\]\n\n\\[\nk=2j+15\n\\]"
         },
         {
-          "title": "Also,",
+          "title": "Simplify surd",
           "body": "Also,\n\n\\[\nJK=\\sqrt{80}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\n(6-j)^2+(k-15)^2=80\n\\]"
         },
         {
@@ -237,11 +237,11 @@
           "body": "Substitute \\(k=2j+15\\):\n\n\\[\n(6-j)^2+(2j)^2=80\n\\]\n\n\\[\nj^2-12j+36+4j^2=80\n\\]\n\n\\[\n5j^2-12j-44=0\n\\]\n\n\\[\n(5j+10)(j-4.4)=0\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Solve inequality",
           "body": "Since \\(j<0\\),\n\n\\[\nj=-2\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate value",
           "body": "Then\n\n\\[\nk=2(-2)+15=11\n\\]"
         }
       ],
@@ -254,7 +254,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\ny=4(x-1)^2-a\n\\]"
         },
         {
@@ -262,23 +262,23 @@
           "body": "The turning point is read directly from the completed square form:\n\n\\[\n(1,-a)\n\\]"
         },
         {
-          "title": "For the intercept, put",
+          "title": "Find intercepts",
           "body": "For the \\(y\\)-intercept, put \\(x=0\\):\n\n\\[\ny=4(0-1)^2-a\n\\]\n\n\\[\ny=4-a\n\\]"
         },
         {
-          "title": "So the intercept is",
+          "title": "Find intercepts",
           "body": "So the \\(y\\)-intercept is\n\n\\[\n(0,4-a)\n\\]"
         },
         {
-          "title": "For the intercepts, put",
+          "title": "Find intercepts",
           "body": "For the \\(x\\)-intercepts, put \\(y=0\\):\n\n\\[\n4(x-1)^2-a=0\n\\]\n\n\\[\n4(x-1)^2=a\n\\]\n\n\\[\n(x-1)^2=\\frac{a}{4}\n\\]\n\n\\[\nx-1=\\pm \\frac{\\sqrt a}{2}\n\\]\n\n\\[\nx=1\\pm \\frac{\\sqrt a}{2}\n\\]"
         },
         {
-          "title": "So the intercepts are",
+          "title": "Find intercepts",
           "body": "So the \\(x\\)-intercepts are\n\n\\[\n\\left(1-\\frac{\\sqrt a}{2},0\\right)\n\\quad \\text{and} \\quad\n\\left(1+\\frac{\\sqrt a}{2},0\\right)\n\\]"
         },
         {
-          "title": "Since , the turning point",
+          "title": "Solve inequality",
           "body": "Since \\(a>4\\), the turning point is below the \\(x\\)-axis and the curve crosses the \\(x\\)-axis twice."
         }
       ],
@@ -303,7 +303,7 @@
           "body": "It is above the line\n\\[\ny=\\frac13x-2\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\\[\ny\\geq \\frac13x-2\n\\]"
         }
       ],
@@ -320,15 +320,15 @@
           "body": "The volume is\n\\[\nV=(2x+5)(x+1)(3-x)\n\\]"
         },
         {
-          "title": "First expand",
+          "title": "Expand brackets",
           "body": "First expand:\n\\[\n(2x+5)(x+1)=2x^2+7x+5\n\\]\n\n\\[\nV=(2x^2+7x+5)(3-x)\n\\]\n\n\\[\nV=15+16x-x^2-2x^3\n\\]"
         },
         {
-          "title": "For the maximum volume,",
+          "title": "Calculate volume",
           "body": "For the maximum volume,\n\\[\n\\frac{dV}{dx}=0\n\\]\n\n\\[\n\\frac{dV}{dx}=16-2x-6x^2\n\\]\n\n\\[\n16-2x-6x^2=0\n\\]\n\n\\[\n3x^2+x-8=0\n\\]"
         },
         {
-          "title": "Using the quadratic formula,",
+          "title": "Solve quadratic equation",
           "body": "Using the quadratic formula,\n\\[\nx=\\frac{-1\\pm\\sqrt{97}}{6}\n\\]"
         },
         {
@@ -345,7 +345,7 @@
       "topicNote": "Correct. This is a pressure and volume question.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate area",
           "body": "\\[\n\\text{pressure}=\\frac{\\text{force}}{\\text{area}}\n\\]\n\n\\[\n0.14=\\frac{56}{\\text{area}}\n\\]\n\n\\[\n\\text{area}=\\frac{56}{0.14}=400\\text{ cm}^2\n\\]"
         },
         {
@@ -378,7 +378,7 @@
           "body": "The right rectangle has height\n\\[\n9-6=3\\text{ cm}\n\\]"
         },
         {
-          "title": "So its area is",
+          "title": "Calculate area",
           "body": "So its area is\n\\[\n3x\n\\]"
         },
         {
@@ -395,7 +395,7 @@
       "topicNote": "Right-Angled Triangles - Pythagoras & Trigonometry. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use trigonometry",
           "body": "\\[\n\\cos 63^\\circ=\\frac{24.3}{PQ}\n\\]\n\n\\[\nPQ=\\frac{24.3}{\\cos 63^\\circ}=53.525\\ldots\n\\]"
         }
       ],
@@ -416,7 +416,7 @@
           "body": "**Answer:** \\(131\\text{ cm}^2\\)."
         },
         {
-          "title": "(b) In triangle ,",
+          "title": "Use trigonometry",
           "body": "(b) In triangle \\(EFG\\),\n\n\\[\nEG^2=9.3^2+14.7^2-2(9.3)(14.7)\\cos106^\\circ\n\\]\n\n\\[\nEG=19.440\\ldots\n\\]"
         }
       ],
@@ -433,7 +433,7 @@
           "body": "The projection of \\(AH\\) onto the base plane is the diagonal of the base rectangle:\n\n\\[\n\\sqrt{9^2+5^2}=\\sqrt{106}\n\\]"
         },
         {
-          "title": "The vertical height is ,",
+          "title": "Use trigonometry",
           "body": "The vertical height is \\(6\\text{ cm}\\), so\n\n\\[\n\\tan\\theta=\\frac{6}{\\sqrt{106}}\n\\]\n\n\\[\n\\theta=30.232\\ldots^\\circ\n\\]"
         }
       ],
@@ -492,19 +492,19 @@
           "body": "There are \\(80\\) people."
         },
         {
-          "title": "For the interquartile range",
+          "title": "Use cumulative frequency",
           "body": "For the interquartile range:\n\n\\[\nQ_1 \\text{ is at cumulative frequency }20\n\\]\n\n\\[\nQ_3 \\text{ is at cumulative frequency }60\n\\]"
         },
         {
-          "title": "From the graph,",
+          "title": "Use cumulative frequency",
           "body": "From the graph,\n\n\\[\nQ_1\\approx 38,\\qquad Q_3\\approx 56\n\\]\n\n\\[\n\\text{IQR}\\approx 56-38=18\n\\]"
         },
         {
-          "title": "At minutes, the cumulative frequency",
+          "title": "Use cumulative frequency",
           "body": "At \\(50\\) minutes, the cumulative frequency is about \\(42\\)."
         },
         {
-          "title": "No women took minutes or",
+          "title": "Use cumulative frequency",
           "body": "No women took \\(50\\) minutes or less, so these \\(42\\) people are men.\n\n\\[\n0.6 \\times \\text{number of men}=42\n\\]\n\n\\[\n\\text{number of men}=\\frac{42}{0.6}=70\n\\]"
         }
       ],
@@ -530,7 +530,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nf(x)=x^2-2x\n\\]\n\n\\[\ng(x)=x+3\n\\]\n\n\\[\nh(x)=fg(x)=f(g(x))\n\\]\n\n\\[\nh(x)=(x+3)^2-2(x+3)\n\\]\n\n\\[\nh(x)=x^2+4x+3\n\\]\n\n\\[\nh(x)=(x+2)^2-1\n\\]"
         },
         {
@@ -538,7 +538,7 @@
           "body": "Let\n\n\\[\ny=(x+2)^2-1\n\\]"
         },
         {
-          "title": "Since the domain is ,",
+          "title": "Find inverse function",
           "body": "Since the domain is \\(x\\ge -2\\), take the positive square root:\n\n\\[\nx+2=\\sqrt{y+1}\n\\]\n\n\\[\nx=\\sqrt{y+1}-2\n\\]"
         }
       ],
@@ -551,19 +551,19 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Since is the midpoint of",
+          "title": "Find the midpoint",
           "body": "Since \\(M\\) is the midpoint of \\(JK\\),\n\n\\[\nM=\\left(\\frac{j+6}{2},\\frac{15+k}{2}\\right)\n\\]"
         },
         {
-          "title": "The gradient of is 2,",
+          "title": "Find the gradient",
           "body": "The gradient of \\(HM\\) is 2, and \\(H=(-4,1)\\).\n\n\\[\n\\frac{\\frac{15+k}{2}-1}{\\frac{j+6}{2}+4}=2\n\\]\n\n\\[\n\\frac{k+13}{j+14}=2\n\\]\n\n\\[\nk=2j+15\n\\]"
         },
         {
-          "title": "Also,",
+          "title": "Simplify surd",
           "body": "Also,\n\n\\[\nJK=\\sqrt{80}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\n(6-j)^2+(k-15)^2=80\n\\]"
         },
         {
@@ -571,11 +571,11 @@
           "body": "Substitute \\(k=2j+15\\):\n\n\\[\n(6-j)^2+(2j)^2=80\n\\]\n\n\\[\nj^2-12j+36+4j^2=80\n\\]\n\n\\[\n5j^2-12j-44=0\n\\]\n\n\\[\n(5j+10)(j-4.4)=0\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Solve inequality",
           "body": "Since \\(j<0\\),\n\n\\[\nj=-2\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate value",
           "body": "Then\n\n\\[\nk=2(-2)+15=11\n\\]"
         }
       ],
@@ -588,7 +588,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\ny=4(x-1)^2-a\n\\]"
         },
         {
@@ -596,23 +596,23 @@
           "body": "The turning point is read directly from the completed square form:\n\n\\[\n(1,-a)\n\\]"
         },
         {
-          "title": "For the intercept, put",
+          "title": "Find intercepts",
           "body": "For the \\(y\\)-intercept, put \\(x=0\\):\n\n\\[\ny=4(0-1)^2-a\n\\]\n\n\\[\ny=4-a\n\\]"
         },
         {
-          "title": "So the intercept is",
+          "title": "Find intercepts",
           "body": "So the \\(y\\)-intercept is\n\n\\[\n(0,4-a)\n\\]"
         },
         {
-          "title": "For the intercepts, put",
+          "title": "Find intercepts",
           "body": "For the \\(x\\)-intercepts, put \\(y=0\\):\n\n\\[\n4(x-1)^2-a=0\n\\]\n\n\\[\n4(x-1)^2=a\n\\]\n\n\\[\n(x-1)^2=\\frac{a}{4}\n\\]\n\n\\[\nx-1=\\pm \\frac{\\sqrt a}{2}\n\\]\n\n\\[\nx=1\\pm \\frac{\\sqrt a}{2}\n\\]"
         },
         {
-          "title": "So the intercepts are",
+          "title": "Find intercepts",
           "body": "So the \\(x\\)-intercepts are\n\n\\[\n\\left(1-\\frac{\\sqrt a}{2},0\\right)\n\\quad \\text{and} \\quad\n\\left(1+\\frac{\\sqrt a}{2},0\\right)\n\\]"
         },
         {
-          "title": "Since , the turning point",
+          "title": "Solve inequality",
           "body": "Since \\(a>4\\), the turning point is below the \\(x\\)-axis and the curve crosses the \\(x\\)-axis twice."
         }
       ],

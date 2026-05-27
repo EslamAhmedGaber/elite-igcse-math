@@ -8,7 +8,7 @@
       "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Find the LCM",
           "body": "\\[\n1400=14\\times 100\n\\]\n\n\\[\n1400=(2\\times 7)(2^2\\times 5^2)\n\\]\n\n\\[\n1400=2^3\\times 5^2\\times 7\n\\]"
         }
       ],
@@ -67,11 +67,11 @@
       "topicNote": "Compound Interest and Depreciation. The tag is correct.",
       "steps": [
         {
-          "title": "After the first 2 years,",
+          "title": "Use compound interest",
           "body": "After the first 2 years,\n\n\\[\n16000(0.88)^2=12390.40\n\\]"
         },
         {
-          "title": "In the third year, the",
+          "title": "Use compound interest",
           "body": "In the third year, the value becomes \\(11461.12\\), so\n\n\\[\n12390.40\\left(1-\\frac{x}{100}\\right)=11461.12\n\\]\n\n\\[\n1-\\frac{x}{100}=\\frac{11461.12}{12390.40}=0.925\n\\]\n\n\\[\nx=7.5\n\\]"
         }
       ],
@@ -84,19 +84,19 @@
       "topicNote": "Corrected to Algebraic Roots and Indices. This question uses index laws, not proportion.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use index laws",
           "body": "\\[\n5^0=1\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Use index laws",
           "body": "For part (b),\n\n\\[\n\\frac{5^9\\times 5^{-3}}{5^{-2}}=5^{9+(-3)-(-2)}=5^8\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use index laws",
           "body": "So\n\n\\[\nk=8\n\\]"
         },
         {
-          "title": "For part (c),",
+          "title": "Use index laws",
           "body": "For part (c),\n\n\\[\n(2d^4e^5)^3=2^3d^{4\\times 3}e^{5\\times 3}\n\\]\n\n\\[\n=8d^{12}e^{15}\n\\]"
         }
       ],
@@ -117,15 +117,15 @@
           "body": "(b)\n\\[\n4x(x+3)(2x-5)\n\\]"
         },
         {
-          "title": "First,",
+          "title": "Factorise expression",
           "body": "First,\n\\[\n(x+3)(2x-5)=2x^2+x-15\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Factorise expression",
           "body": "Then\n\\[\n4x(2x^2+x-15)=8x^3+4x^2-60x\n\\]"
         },
         {
-          "title": "So , , and",
+          "title": "Factorise expression",
           "body": "So \\(a=8\\), \\(b=4\\), and \\(c=-60\\)."
         }
       ],
@@ -138,7 +138,7 @@
       "topicNote": "Rearranging formulas. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Rearrange formula",
           "body": "\\[\np=\\frac{8k^2+5}{7-3k^2}\n\\]\n\n\\[\np(7-3k^2)=8k^2+5\n\\]\n\n\\[\n7p-5=k^2(3p+8)\n\\]\n\n\\[\nk^2=\\frac{7p-5}{3p+8}\n\\]"
         }
       ],
@@ -151,11 +151,11 @@
       "topicNote": "Algebraic proof. The tag is acceptable because the question asks for exact-form proof.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify surd",
           "body": "\\[\n\\frac{4}{3\\sqrt5+7}\\times\\frac{7-3\\sqrt5}{7-3\\sqrt5}\n=\\frac{4(7-3\\sqrt5)}{49-45}\n\\]\n\n\\[\n=7-3\\sqrt5\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Simplify surd",
           "body": "Since \\(3\\sqrt5=\\sqrt{45}\\),\n\\[\n7-3\\sqrt5=7-\\sqrt{45}\n\\]"
         }
       ],
@@ -185,7 +185,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve inequality",
           "body": "\\[\n2x^2-7x-15>0\n\\]"
         },
         {
@@ -210,15 +210,15 @@
       "topicNote": "Simultaneous equations. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve simultaneous equations",
           "body": "\\[\n3x+2y=10\n\\]\n\n\\[\n3x-4y=16\n\\]"
         },
         {
-          "title": "Subtract the second equation from",
+          "title": "Solve simultaneous equations",
           "body": "Subtract the second equation from the first:\n\\[\n6y=-6\n\\]\n\n\\[\ny=-1\n\\]"
         },
         {
-          "title": "Substitute into",
+          "title": "Solve simultaneous equations",
           "body": "Substitute into \\(3x+2y=10\\):\n\\[\n3x+2(-1)=10\n\\]\n\n\\[\n3x=12\n\\]\n\n\\[\nx=4\n\\]"
         }
       ],
@@ -231,7 +231,7 @@
       "topicNote": "Functions. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\nf(x)=3x-4,\\qquad g(x)=\\frac{x}{2x+1}\n\\]"
         },
         {
@@ -252,11 +252,11 @@
       "topicNote": "Moved to Coordinate Geometry.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nP=(-5,a), \\qquad Q=(7,3a)\n\\]"
         },
         {
-          "title": "The length of is ,",
+          "title": "Simplify surd",
           "body": "The length of \\(PQ\\) is \\(4\\sqrt{10}\\), so\n\n\\[\n\\sqrt{(7-(-5))^2+(3a-a)^2}=4\\sqrt{10}\n\\]\n\n\\[\n\\sqrt{12^2+(2a)^2}=4\\sqrt{10}\n\\]"
         },
         {
@@ -264,11 +264,11 @@
           "body": "Square both sides:\n\n\\[\n144+4a^2=160\n\\]\n\n\\[\n4a^2=16\n\\]\n\n\\[\na^2=4\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Solve inequality",
           "body": "Since \\(a>0\\),\n\n\\[\na=2\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\nP=(-5,2), \\qquad Q=(7,6)\n\\]"
         },
         {
@@ -280,11 +280,11 @@
           "body": "The gradient of \\(PQ\\) is\n\n\\[\n\\frac{6-2}{7-(-5)}=\\frac{4}{12}=\\frac{1}{3}\n\\]"
         },
         {
-          "title": "So the gradient of the",
+          "title": "Find the gradient",
           "body": "So the gradient of the perpendicular bisector is\n\n\\[\n-3\n\\]"
         },
         {
-          "title": "Using point",
+          "title": "Calculate value",
           "body": "Using point \\((1,4)\\):\n\n\\[\ny-4=-3(x-1)\n\\]\n\n\\[\ny=-3x+7\n\\]"
         }
       ],
@@ -305,7 +305,7 @@
           "body": "A parallel line has the same gradient, so line L has form\n\\[\ny=-5x+c\n\\]"
         },
         {
-          "title": "Line L passes through ,",
+          "title": "Find the gradient",
           "body": "Line L passes through \\((0,6)\\), so\n\\[\n6=c\n\\]"
         }
       ],
@@ -318,7 +318,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "From the graph,",
+          "title": "Read the graph",
           "body": "From the graph,\n\n\\[\n\\text{maximum}=4\n\\]\n\n\\[\n\\text{minimum}=-2\n\\]"
         },
         {
@@ -330,7 +330,7 @@
           "body": "The centre line is\n\n\\[\nc=\\frac{4+(-2)}{2}=1\n\\]"
         },
         {
-          "title": "The maximum is about .",
+          "title": "Use trigonometry",
           "body": "The maximum is about \\(45^\\circ\\). For a sine graph, a maximum happens when the angle inside the sine is \\(90^\\circ\\), so\n\n\\[\n45+b=90\n\\]\n\n\\[\nb=45\n\\]"
         }
       ],
@@ -347,7 +347,7 @@
           "body": "The cuboid has dimensions\n\n\\[\nx,\\quad x,\\quad 15-4x\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\nV=x^2(15-4x)\n\\]\n\n\\[\nV=15x^2-4x^3\n\\]"
         },
         {
@@ -355,7 +355,7 @@
           "body": "Differentiate:\n\n\\[\n\\frac{dV}{dx}=30x-12x^2\n\\]"
         },
         {
-          "title": "At a maximum,",
+          "title": "Calculate value",
           "body": "At a maximum,\n\n\\[\n30x-12x^2=0\n\\]\n\n\\[\n6x(5-2x)=0\n\\]"
         },
         {
@@ -363,7 +363,7 @@
           "body": "The useful value is\n\n\\[\nx=2.5\n\\]"
         },
         {
-          "title": "Now substitute into the volume",
+          "title": "Calculate volume",
           "body": "Now substitute into the volume:\n\n\\[\nV=(2.5)^2(15-4(2.5))\n\\]\n\n\\[\nV=6.25\\times 5\n\\]\n\n\\[\nV=31.25\n\\]"
         }
       ],
@@ -380,7 +380,7 @@
           "body": "Use\n\\[\n\\text{density}=\\frac{\\text{mass}}{\\text{volume}}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate volume",
           "body": "So\n\\[\n\\text{volume}=\\frac{\\text{mass}}{\\text{density}}\n=\\frac{48.3}{10.5}=4.6\n\\]"
         }
       ],
@@ -393,27 +393,27 @@
       "topicNote": "Circle Theorems. The tag is correct.",
       "steps": [
         {
-          "title": "Since , triangle is isosceles",
+          "title": "Use trigonometry",
           "body": "Since \\(OA=OB\\), triangle \\(AOB\\) is isosceles:\n\\[\n\\angle ABO=36^\\circ\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\\[\n\\angle AOB=180^\\circ-36^\\circ-36^\\circ=108^\\circ\n\\]"
         },
         {
-          "title": "Since , triangle is isosceles",
+          "title": "Use trigonometry",
           "body": "Since \\(OB=OC\\), triangle \\(BOC\\) is isosceles:\n\\[\n\\angle OBC=21^\\circ\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\\[\n\\angle BOC=180^\\circ-21^\\circ-21^\\circ=138^\\circ\n\\]"
         },
         {
-          "title": "Angles around add to",
+          "title": "Use circle theorem",
           "body": "Angles around \\(O\\) add to \\(360^\\circ\\):\n\\[\n\\angle AOC=360^\\circ-108^\\circ-138^\\circ=114^\\circ\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Use trigonometry",
           "body": "Since \\(OA=OC\\),\n\\[\n\\angle ACO=\\frac{180^\\circ-114^\\circ}{2}=33^\\circ\n\\]"
         }
       ],
@@ -430,7 +430,7 @@
           "body": "The volume of a hemisphere is\n\n\\[\n\\frac{2}{3}\\pi r^3\n\\]"
         },
         {
-          "title": "For the original hemisphere ,",
+          "title": "Evaluate fraction",
           "body": "For the original hemisphere \\(H\\),\n\n\\[\n\\frac{2}{3}\\pi x^3=6174\\pi\n\\]"
         },
         {
@@ -442,7 +442,7 @@
           "body": "The outer radius of the bowl is \\(21\\) cm."
         },
         {
-          "title": "The thickness is cm, so",
+          "title": "Calculate value",
           "body": "The thickness is \\(2\\) cm, so the inner radius is\n\n\\[\n21-2=19\n\\]"
         },
         {
@@ -479,15 +479,15 @@
       "topicNote": "Corrected to right-angled triangles. The solution uses Pythagoras twice.",
       "steps": [
         {
-          "title": "In right angled triangle ,",
+          "title": "Use trigonometry",
           "body": "In right-angled triangle \\(AFD\\),\n\\[\nAD^2=28^2+45^2\n\\]\n\n\\[\nAD^2=2809\n\\]\n\n\\[\nAD=53\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Use trigonometry",
           "body": "Since \\(AB=21\\),\n\\[\nBD=53-21=32\n\\]"
         },
         {
-          "title": "In right angled triangle ,",
+          "title": "Use trigonometry",
           "body": "In right-angled triangle \\(CBD\\),\n\\[\nCB^2=35^2-32^2\n\\]\n\n\\[\nCB^2=201\n\\]\n\n\\[\nCB=\\sqrt{201}\n\\]"
         },
         {
@@ -504,7 +504,7 @@
       "topicNote": "Moved from Coordinate Geometry to 3D Pythagoras & Trigonometry.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use trigonometry",
           "body": "\\[\nAC=40\n\\]"
         },
         {
@@ -512,11 +512,11 @@
           "body": "The point \\(E\\) is vertically above \\(C\\), so triangle \\(ACE\\) is right-angled at \\(C\\).\n\n\\[\n\\angle CAE=35^\\circ\n\\]\n\n\\[\n\\tan35^\\circ=\\frac{CE}{AC}\n\\]\n\n\\[\nCE=40\\tan35^\\circ\n\\]"
         },
         {
-          "title": "Since is the midpoint of",
+          "title": "Find the midpoint",
           "body": "Since \\(M\\) is the midpoint of \\(AC\\),\n\n\\[\nCM=20\n\\]"
         },
         {
-          "title": "In right triangle ,",
+          "title": "Use trigonometry",
           "body": "In right triangle \\(CME\\),\n\n\\[\n\\tan \\angle CME=\\frac{CE}{CM}\n\\]\n\n\\[\n\\tan \\angle CME=\\frac{40\\tan35^\\circ}{20}\n\\]\n\n\\[\n\\tan \\angle CME=2\\tan35^\\circ\n\\]\n\n\\[\n\\angle CME=54.5^\\circ\n\\]"
         }
       ],
@@ -529,11 +529,11 @@
       "topicNote": "Corrected to Vectors.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use vectors",
           "body": "\\[\n\\overrightarrow{AB}=\\overrightarrow{OB}-\\overrightarrow{OA}=4\\mathbf b-4\\mathbf a\n\\]"
         },
         {
-          "title": "Since , point is one",
+          "title": "Use vectors",
           "body": "Since \\(AP:PB=1:3\\), point \\(P\\) is one quarter of the way from \\(A\\) to \\(B\\).\n\n\\[\n\\overrightarrow{AP}=\\frac14\\overrightarrow{AB}\n=\\frac14(4\\mathbf b-4\\mathbf a)\n=\\mathbf b-\\mathbf a\n\\]\n\n\\[\n\\overrightarrow{OP}=\\overrightarrow{OA}+\\overrightarrow{AP}\n=4\\mathbf a+\\mathbf b-\\mathbf a\n=3\\mathbf a+\\mathbf b\n\\]"
         }
       ],
@@ -596,15 +596,15 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "For a histogram,",
+          "title": "Use histogram",
           "body": "For a histogram,\n\n\\[\n\\text{frequency}=\\text{class width}\\times \\text{frequency density}\n\\]"
         },
         {
-          "title": "For books weighing less than",
+          "title": "Use frequency table",
           "body": "For books weighing less than 100 g, the frequency is 75 and the class width is 100, so\n\n\\[\n\\text{frequency density}=\\frac{75}{100}=0.75\n\\]"
         },
         {
-          "title": "Using this scale from the",
+          "title": "Use histogram",
           "body": "Using this scale from the histogram, the frequency densities are:\n\n\\[\n0.75,\\ 2.25,\\ 1.0,\\ 2.5,\\ 0.25\n\\]"
         },
         {
@@ -612,11 +612,11 @@
           "body": "The total number of books is\n\n\\[\n(100)(0.75)+(100)(2.25)+(250)(1.0)+(50)(2.5)+(200)(0.25)\n\\]\n\n\\[\n=75+225+250+125+50=725\n\\]"
         },
         {
-          "title": "For weights between 400 g",
+          "title": "Calculate value",
           "body": "For weights between 400 g and 600 g:\n\n\\[\n(50)(1.0)+(50)(2.5)+(100)(0.25)\n\\]\n\n\\[\n=50+125+25=200\n\\]"
         },
         {
-          "title": "So the probability is",
+          "title": "Calculate probability",
           "body": "So the probability is\n\n\\[\n\\frac{200}{725}=\\frac{8}{29}\n\\]"
         }
       ],
@@ -629,11 +629,11 @@
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Bag A has red and",
+          "title": "Calculate probability",
           "body": "Bag A has \\(5\\) red and \\(4\\) green beads:\n\n\\[\nP(A_R)=\\frac59,\\qquad P(A_G)=\\frac49\n\\]"
         },
         {
-          "title": "Bag B has red and",
+          "title": "Calculate probability",
           "body": "Bag B has \\(7\\) red and \\(3\\) green beads:\n\n\\[\nP(B_R)=\\frac7{10},\\qquad P(B_G)=\\frac3{10}\n\\]"
         },
         {
@@ -641,7 +641,7 @@
           "body": "Two red beads:\n\n\\[\n\\frac59\\times\\frac7{10}=\\frac7{18}\n\\]"
         },
         {
-          "title": "For part (c), the box",
+          "title": "Calculate probability",
           "body": "For part (c), the box has\n\n\\[\nP(\\text{green})=\\frac2{11},\\qquad P(\\text{red})=\\frac9{11}\n\\]"
         },
         {
@@ -658,7 +658,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve inequality",
           "body": "\\[\n2x^2-7x-15>0\n\\]"
         },
         {
@@ -683,11 +683,11 @@
       "topicNote": "Moved to Coordinate Geometry.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nP=(-5,a), \\qquad Q=(7,3a)\n\\]"
         },
         {
-          "title": "The length of is ,",
+          "title": "Simplify surd",
           "body": "The length of \\(PQ\\) is \\(4\\sqrt{10}\\), so\n\n\\[\n\\sqrt{(7-(-5))^2+(3a-a)^2}=4\\sqrt{10}\n\\]\n\n\\[\n\\sqrt{12^2+(2a)^2}=4\\sqrt{10}\n\\]"
         },
         {
@@ -695,11 +695,11 @@
           "body": "Square both sides:\n\n\\[\n144+4a^2=160\n\\]\n\n\\[\n4a^2=16\n\\]\n\n\\[\na^2=4\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Solve inequality",
           "body": "Since \\(a>0\\),\n\n\\[\na=2\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\nP=(-5,2), \\qquad Q=(7,6)\n\\]"
         },
         {
@@ -711,11 +711,11 @@
           "body": "The gradient of \\(PQ\\) is\n\n\\[\n\\frac{6-2}{7-(-5)}=\\frac{4}{12}=\\frac{1}{3}\n\\]"
         },
         {
-          "title": "So the gradient of the",
+          "title": "Find the gradient",
           "body": "So the gradient of the perpendicular bisector is\n\n\\[\n-3\n\\]"
         },
         {
-          "title": "Using point",
+          "title": "Calculate value",
           "body": "Using point \\((1,4)\\):\n\n\\[\ny-4=-3(x-1)\n\\]\n\n\\[\ny=-3x+7\n\\]"
         }
       ],
@@ -728,7 +728,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "From the graph,",
+          "title": "Read the graph",
           "body": "From the graph,\n\n\\[\n\\text{maximum}=4\n\\]\n\n\\[\n\\text{minimum}=-2\n\\]"
         },
         {
@@ -740,7 +740,7 @@
           "body": "The centre line is\n\n\\[\nc=\\frac{4+(-2)}{2}=1\n\\]"
         },
         {
-          "title": "The maximum is about .",
+          "title": "Use trigonometry",
           "body": "The maximum is about \\(45^\\circ\\). For a sine graph, a maximum happens when the angle inside the sine is \\(90^\\circ\\), so\n\n\\[\n45+b=90\n\\]\n\n\\[\nb=45\n\\]"
         }
       ],
@@ -757,7 +757,7 @@
           "body": "The cuboid has dimensions\n\n\\[\nx,\\quad x,\\quad 15-4x\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\nV=x^2(15-4x)\n\\]\n\n\\[\nV=15x^2-4x^3\n\\]"
         },
         {
@@ -765,7 +765,7 @@
           "body": "Differentiate:\n\n\\[\n\\frac{dV}{dx}=30x-12x^2\n\\]"
         },
         {
-          "title": "At a maximum,",
+          "title": "Calculate value",
           "body": "At a maximum,\n\n\\[\n30x-12x^2=0\n\\]\n\n\\[\n6x(5-2x)=0\n\\]"
         },
         {
@@ -773,7 +773,7 @@
           "body": "The useful value is\n\n\\[\nx=2.5\n\\]"
         },
         {
-          "title": "Now substitute into the volume",
+          "title": "Calculate volume",
           "body": "Now substitute into the volume:\n\n\\[\nV=(2.5)^2(15-4(2.5))\n\\]\n\n\\[\nV=6.25\\times 5\n\\]\n\n\\[\nV=31.25\n\\]"
         }
       ],
@@ -790,7 +790,7 @@
           "body": "The volume of a hemisphere is\n\n\\[\n\\frac{2}{3}\\pi r^3\n\\]"
         },
         {
-          "title": "For the original hemisphere ,",
+          "title": "Evaluate fraction",
           "body": "For the original hemisphere \\(H\\),\n\n\\[\n\\frac{2}{3}\\pi x^3=6174\\pi\n\\]"
         },
         {
@@ -802,7 +802,7 @@
           "body": "The outer radius of the bowl is \\(21\\) cm."
         },
         {
-          "title": "The thickness is cm, so",
+          "title": "Calculate value",
           "body": "The thickness is \\(2\\) cm, so the inner radius is\n\n\\[\n21-2=19\n\\]"
         },
         {
@@ -839,7 +839,7 @@
       "topicNote": "Moved from Coordinate Geometry to 3D Pythagoras & Trigonometry.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use trigonometry",
           "body": "\\[\nAC=40\n\\]"
         },
         {
@@ -847,11 +847,11 @@
           "body": "The point \\(E\\) is vertically above \\(C\\), so triangle \\(ACE\\) is right-angled at \\(C\\).\n\n\\[\n\\angle CAE=35^\\circ\n\\]\n\n\\[\n\\tan35^\\circ=\\frac{CE}{AC}\n\\]\n\n\\[\nCE=40\\tan35^\\circ\n\\]"
         },
         {
-          "title": "Since is the midpoint of",
+          "title": "Find the midpoint",
           "body": "Since \\(M\\) is the midpoint of \\(AC\\),\n\n\\[\nCM=20\n\\]"
         },
         {
-          "title": "In right triangle ,",
+          "title": "Use trigonometry",
           "body": "In right triangle \\(CME\\),\n\n\\[\n\\tan \\angle CME=\\frac{CE}{CM}\n\\]\n\n\\[\n\\tan \\angle CME=\\frac{40\\tan35^\\circ}{20}\n\\]\n\n\\[\n\\tan \\angle CME=2\\tan35^\\circ\n\\]\n\n\\[\n\\angle CME=54.5^\\circ\n\\]"
         }
       ],
@@ -864,15 +864,15 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "For a histogram,",
+          "title": "Use histogram",
           "body": "For a histogram,\n\n\\[\n\\text{frequency}=\\text{class width}\\times \\text{frequency density}\n\\]"
         },
         {
-          "title": "For books weighing less than",
+          "title": "Use frequency table",
           "body": "For books weighing less than 100 g, the frequency is 75 and the class width is 100, so\n\n\\[\n\\text{frequency density}=\\frac{75}{100}=0.75\n\\]"
         },
         {
-          "title": "Using this scale from the",
+          "title": "Use histogram",
           "body": "Using this scale from the histogram, the frequency densities are:\n\n\\[\n0.75,\\ 2.25,\\ 1.0,\\ 2.5,\\ 0.25\n\\]"
         },
         {
@@ -880,11 +880,11 @@
           "body": "The total number of books is\n\n\\[\n(100)(0.75)+(100)(2.25)+(250)(1.0)+(50)(2.5)+(200)(0.25)\n\\]\n\n\\[\n=75+225+250+125+50=725\n\\]"
         },
         {
-          "title": "For weights between 400 g",
+          "title": "Calculate value",
           "body": "For weights between 400 g and 600 g:\n\n\\[\n(50)(1.0)+(50)(2.5)+(100)(0.25)\n\\]\n\n\\[\n=50+125+25=200\n\\]"
         },
         {
-          "title": "So the probability is",
+          "title": "Calculate probability",
           "body": "So the probability is\n\n\\[\n\\frac{200}{725}=\\frac{8}{29}\n\\]"
         }
       ],

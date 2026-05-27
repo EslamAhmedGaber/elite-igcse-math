@@ -8,7 +8,7 @@
       "topicNote": "Algebraic proof. The tag is acceptable because the question asks to show the exact result.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\n2\\frac14=\\frac94,\\qquad 1\\frac57=\\frac{12}{7}\n\\]\n\n\\[\n2\\frac14\\times1\\frac57=\\frac94\\times\\frac{12}{7}\n\\]\n\n\\[\n=\\frac{108}{28}=\\frac{27}{7}=3\\frac67\n\\]"
         }
       ],
@@ -25,7 +25,7 @@
           "body": "Let the yellow probability be \\(x\\). Then the red probability is \\(4x\\).\n\n\\[\n0.12+0.20+0.30+4x+x=1\n\\]\n\n\\[\n5x=0.38\n\\]\n\n\\[\nx=0.076\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate probability",
           "body": "So\n\n\\[\nP(\\text{red})=4x=0.304\n\\]\n\n\\[\nP(\\text{blue, green or purple})=0.12+0.20+0.30=0.62\n\\]"
         },
         {
@@ -42,15 +42,15 @@
       "topicNote": "Set notation and Venn diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\n\\mathcal{E}=\\{1,2,3,4,5,6,7,8,9,10,11,12\\}\n\\]\n\n\\[\nA=\\{2,4,6,8,10,12\\}\n\\]\n\n\\[\nB=\\{3,6,9,12\\}\n\\]\n\n\\[\nC=\\{1,3,5,7,9,11\\}\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Calculate value",
           "body": "Therefore\n\n\\[\nA\\cup B=\\{2,3,4,6,8,9,10,12\\}\n\\]"
         },
         {
-          "title": "and",
+          "title": "Calculate value",
           "body": "and\n\n\\[\nB'=\\{1,2,4,5,7,8,10,11\\}\n\\]"
         },
         {
@@ -58,7 +58,7 @@
           "body": "No number is both even and odd, so\n\n\\[\nA\\cap C=\\emptyset\n\\]"
         },
         {
-          "title": "Also because is not in",
+          "title": "Set",
           "body": "Also \\(13\\notin \\mathcal{E}\\) because \\(13\\) is not in the universal set."
         }
       ],
@@ -71,7 +71,7 @@
       "topicNote": "Corrected to Solving Linear Equations. The equation is the main part of the question; the index form is secondary.",
       "steps": [
         {
-          "title": "For part (a),",
+          "title": "Solve equation",
           "body": "For part (a),\n\n\\[\n\\frac{5a+8}{3}-\\frac{2a+5}{4}=23\n\\]"
         },
         {
@@ -79,7 +79,7 @@
           "body": "Multiply by \\(12\\):\n\n\\[\n4(5a+8)-3(2a+5)=276\n\\]\n\n\\[\n20a+32-6a-15=276\n\\]\n\n\\[\n14a+17=276\n\\]\n\n\\[\n14a=259\n\\]\n\n\\[\na=\\frac{259}{14}=\\frac{37}{2}\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Solve equation",
           "body": "For part (b),\n\n\\[\n\\left(\\frac{\\sqrt y}{3}\\right)^{-1}=\\frac{3}{\\sqrt y}\n\\]\n\n\\[\n=3y^{-1/2}\n\\]"
         }
       ],
@@ -96,11 +96,11 @@
           "body": "Let\n\\[\nx=0.6121212\\ldots\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate value",
           "body": "Then\n\\[\n10x=6.121212\\ldots\n\\]"
         },
         {
-          "title": "and",
+          "title": "Calculate value",
           "body": "and\n\\[\n1000x=612.121212\\ldots\n\\]"
         },
         {
@@ -129,7 +129,7 @@
           "body": "ways to choose two counters."
         },
         {
-          "title": "For a sum less than",
+          "title": "Calculate probability",
           "body": "For a sum less than \\(5\\), the pairs are:\n\n\\[\n(1,1),\\quad (1,2),\\quad (1,3)\n\\]"
         },
         {
@@ -137,7 +137,7 @@
           "body": "Counting the repeated counters gives\n\n\\[\n1+2+6=9\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate probability",
           "body": "So\n\n\\[\nP(\\text{sum}<5)=\\frac{9}{36}=\\frac14\n\\]"
         }
       ],
@@ -150,11 +150,11 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "In the rectangle , use",
+          "title": "Use trigonometry",
           "body": "In the rectangle \\(ABCF\\), use Pythagoras with the diagonal \\(FC\\):\n\n\\[\nAC^2=FC^2-AF^2\n\\]\n\n\\[\nAC^2=18^2-7^2=324-49=275\n\\]"
         },
         {
-          "title": "Now use Pythagoras in triangle",
+          "title": "Use trigonometry",
           "body": "Now use Pythagoras in triangle \\(ABC\\):\n\n\\[\nBC^2=AC^2-AB^2\n\\]\n\n\\[\nBC^2=275-9^2=275-81=194\n\\]\n\n\\[\nBC=\\sqrt{194}=13.928\\ldots\n\\]"
         }
       ],
@@ -167,11 +167,11 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "In the rectangle , use",
+          "title": "Use trigonometry",
           "body": "In the rectangle \\(ABCF\\), use Pythagoras with the diagonal \\(FC\\):\n\n\\[\nAC^2=FC^2-AF^2\n\\]\n\n\\[\nAC^2=18^2-7^2=324-49=275\n\\]"
         },
         {
-          "title": "Now use Pythagoras in triangle",
+          "title": "Use trigonometry",
           "body": "Now use Pythagoras in triangle \\(ABC\\):\n\n\\[\nBC^2=AC^2-AB^2\n\\]\n\n\\[\nBC^2=275-9^2=275-81=194\n\\]\n\n\\[\nBC=\\sqrt{194}=13.928\\ldots\n\\]"
         }
       ],
@@ -196,15 +196,15 @@
           "body": "Its area is\n\n\\[\n\\text{sector area}-\\text{triangle area}\n\\]\n\n\\[\n28=\\frac{40}{360}\\pi R^2-\\frac{1}{2}R^2\\sin 40^\\circ\n\\]\n\n\\[\n28=R^2\\left(\\frac{\\pi}{9}-\\frac{1}{2}\\sin 40^\\circ\\right)\n\\]\n\n\\[\nR=31.8096\\ldots\n\\]"
         },
         {
-          "title": "Now find the chord",
+          "title": "Use trigonometry",
           "body": "Now find the chord \\(BC\\):\n\n\\[\nBC=2R\\sin 20^\\circ\n\\]\n\n\\[\nBC=2(31.8096\\ldots)\\sin 20^\\circ\n=21.7591\\ldots\n\\]"
         },
         {
-          "title": "In sector , the centre",
+          "title": "Calculate value",
           "body": "In sector \\(BCD\\), the centre is \\(C\\), so the radius is\n\n\\[\nCB=CD=21.7591\\ldots\n\\]"
         },
         {
-          "title": "The arc has angle ,",
+          "title": "Use trigonometry",
           "body": "The arc \\(BD\\) has angle \\(130^\\circ\\), so\n\n\\[\n\\text{arc }BD\n=\\frac{130}{360}\\times 2\\pi(21.7591\\ldots)\n\\]\n\n\\[\n=49.3697\\ldots\n\\]"
         }
       ],
@@ -229,15 +229,15 @@
           "body": "Its area is\n\n\\[\n\\text{sector area}-\\text{triangle area}\n\\]\n\n\\[\n28=\\frac{40}{360}\\pi R^2-\\frac{1}{2}R^2\\sin 40^\\circ\n\\]\n\n\\[\n28=R^2\\left(\\frac{\\pi}{9}-\\frac{1}{2}\\sin 40^\\circ\\right)\n\\]\n\n\\[\nR=31.8096\\ldots\n\\]"
         },
         {
-          "title": "Now find the chord",
+          "title": "Use trigonometry",
           "body": "Now find the chord \\(BC\\):\n\n\\[\nBC=2R\\sin 20^\\circ\n\\]\n\n\\[\nBC=2(31.8096\\ldots)\\sin 20^\\circ\n=21.7591\\ldots\n\\]"
         },
         {
-          "title": "In sector , the centre",
+          "title": "Calculate value",
           "body": "In sector \\(BCD\\), the centre is \\(C\\), so the radius is\n\n\\[\nCB=CD=21.7591\\ldots\n\\]"
         },
         {
-          "title": "The arc has angle ,",
+          "title": "Use trigonometry",
           "body": "The arc \\(BD\\) has angle \\(130^\\circ\\), so\n\n\\[\n\\text{arc }BD\n=\\frac{130}{360}\\times 2\\pi(21.7591\\ldots)\n\\]\n\n\\[\n=49.3697\\ldots\n\\]"
         }
       ],
@@ -250,7 +250,7 @@
       "topicNote": "",
       "steps": [
         {
-          "title": "The value is correct to",
+          "title": "Calculate value",
           "body": "The value is correct to 1 decimal place, so the half-unit is \\(0.05\\).\n\n\\[\n142.8-0.05=142.75, \\qquad 142.8+0.05=142.85\n\\]"
         }
       ],
@@ -263,7 +263,7 @@
       "topicNote": "",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\n3^8\\times 3^4 = 3^{8+4}=3^{12}\n\\]\n\n\\[\n\\frac{4^{12}}{4^7}=4^{12-7}=4^5\n\\]\n\n\\[\n(6^2)^{10}=6^{20}\n\\]\n\n\\[\n5^0=1\n\\]"
         }
       ],
@@ -276,7 +276,7 @@
       "topicNote": "",
       "steps": [
         {
-          "title": "The base angles are equal,",
+          "title": "Use trigonometry",
           "body": "The base angles are equal, so the opposite sides are equal.\n\n\\[\n4x+6=30-x\n\\]\n\n\\[\n5x=24\n\\]\n\n\\[\nx=4.8\n\\]"
         }
       ],
@@ -289,7 +289,7 @@
       "topicNote": "",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\n40\\text{ m/s}=40\\times \\frac{3600}{1000}\\text{ km/h}\n\\]\n\n\\[\n=144\\text{ km/h}\n\\]"
         }
       ],
@@ -302,11 +302,11 @@
       "topicNote": "",
       "steps": [
         {
-          "title": "In right triangle ,",
+          "title": "Use trigonometry",
           "body": "In right triangle \\(BCD\\),\n\n\\[\n\\tan 32^\\circ=\\frac{17}{BD}\n\\]\n\n\\[\nBD=\\frac{17}{\\tan 32^\\circ}\n\\]"
         },
         {
-          "title": "In right triangle ,",
+          "title": "Use trigonometry",
           "body": "In right triangle \\(ABD\\),\n\n\\[\n\\sin 65^\\circ=\\frac{AD}{BD}\n\\]\n\n\\[\nAD=\\frac{17}{\\tan 32^\\circ}\\sin 65^\\circ \\approx 24.6567\n\\]"
         }
       ],
@@ -331,7 +331,7 @@
           "body": "(c)\n\\[\nx^2-13x+42=(x-6)(x-7)\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\\[\nx=6 \\quad \\text{or} \\quad x=7\n\\]"
         }
       ],
@@ -361,7 +361,7 @@
           "body": "The missing branch probabilities are complements.\n\n\\[\nP(\\text{not snow on Saturday})=0.8\n\\]\n\n\\[\nP(\\text{not snow on Sunday} \\mid \\text{snow Saturday})=0.65\n\\]\n\n\\[\nP(\\text{not snow on Sunday} \\mid \\text{not snow Saturday})=0.6\n\\]"
         },
         {
-          "title": "For snow on both days,",
+          "title": "Calculate value",
           "body": "For snow on both days,\n\n\\[\n0.2\\times 0.35=0.07\n\\]"
         }
       ],
@@ -378,15 +378,15 @@
           "body": "The height of the building is\n\n\\[\nCD=25\\tan 42^\\circ\n\\]"
         },
         {
-          "title": "The extra height from to",
+          "title": "Use trigonometry",
           "body": "The extra height from \\(C\\) to \\(A\\) is\n\n\\[\n25\\tan 30^\\circ\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\nAB=25\\tan 42^\\circ+25\\tan 30^\\circ \\approx 36.9439\n\\]"
         },
         {
-          "title": "For the angle of elevation",
+          "title": "Use trigonometry",
           "body": "For the angle of elevation \\(\\theta\\) from \\(D\\),\n\n\\[\n\\tan \\theta=\\frac{AB}{25}\n\\]\n\n\\[\n\\theta \\approx 55.9137^\\circ\n\\]"
         }
       ],
@@ -399,7 +399,7 @@
       "topicNote": "",
       "steps": [
         {
-          "title": "(a) For ,",
+          "title": "Simplify surd",
           "body": "(a) For \\(3x^2+4x-18=0\\),\n\n\\[\nx=\\frac{-4\\pm\\sqrt{4^2-4(3)(-18)}}{2(3)}\n\\]\n\n\\[\nx\\approx 1.87 \\quad \\text{or} \\quad x\\approx -3.21\n\\]"
         },
         {
@@ -420,7 +420,7 @@
           "body": "(a)\n\\[\n\\sqrt{96}=4\\sqrt 6=2\\sqrt{24}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So \\(k=24\\)."
         },
         {
@@ -437,7 +437,7 @@
       "topicNote": "",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\n2x^2-12x+23=2(x^2-6x)+23\n\\]\n\n\\[\n=2\\big((x-3)^2-9\\big)+23\n\\]\n\n\\[\n=2(x-3)^2+5\n\\]"
         },
         {
@@ -462,11 +462,11 @@
           "body": "Triangle area:\n\n\\[\n\\frac12(2x+3)(2x)\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\n(2x+3)^2+\\frac12(2x+3)(2x)=84\n\\]\n\n\\[\n6x^2+15x-75=0\n\\]\n\n\\[\n2x^2+5x-25=0\n\\]\n\n\\[\n(2x-5)(x+5)=0\n\\]"
         },
         {
-          "title": "The positive solution is ,",
+          "title": "Calculate value",
           "body": "The positive solution is \\(x=2.5\\), so\n\n\\[\n(2x+3)^2=8^2=64\n\\]"
         }
       ],
@@ -483,7 +483,7 @@
           "body": "The interval \\(10\\) to \\(25\\) has width \\(15\\) and frequency \\(60\\), so its frequency density is\n\n\\[\n\\frac{60}{15}=4\n\\]"
         },
         {
-          "title": "Using that scale from the",
+          "title": "Use histogram",
           "body": "Using that scale from the histogram:\n\n\\[\n35\\text{ to }40: 5\\times 1=5\n\\]\n\n\\[\n40\\text{ to }70: 30\\times 0.75=22.5\n\\]\n\n\\[\n5+22.5=27.5\n\\]"
         }
       ],
@@ -500,15 +500,15 @@
           "body": "The tangent point lies on the tangent line, so\n\n\\[\np+3=-\\frac54p+\\frac{21}{4}\n\\]\n\n\\[\np=1\n\\]"
         },
         {
-          "title": "The tangent gradient is ,",
+          "title": "Find the gradient",
           "body": "The tangent gradient is \\(-\\frac54\\), so the radius gradient is \\(\\frac45\\)."
         },
         {
-          "title": "Using centre and tangent point",
+          "title": "Use trigonometry",
           "body": "Using centre \\((3q,4q)\\) and tangent point \\((1,4)\\),\n\n\\[\n\\frac{4-4q}{1-3q}=\\frac45\n\\]\n\n\\[\nq=2\n\\]"
         },
         {
-          "title": "So the centre is .",
+          "title": "Simplify surd",
           "body": "So the centre is \\((6,8)\\). Therefore\n\n\\[\nr=\\sqrt{(6-1)^2+(8-4)^2}=\\sqrt{41}\n\\]"
         }
       ],
@@ -525,7 +525,7 @@
           "body": "Factor the fractional part first:\n\n\\[\n\\frac{2x^2-5x-12}{x^2-16}\\times\\frac{x^2+4x}{6x^2+11x+3}\n\\]\n\n\\[\n=\\frac{(2x+3)(x-4)}{(x-4)(x+4)}\\times\\frac{x(x+4)}{(3x+1)(2x+3)}\n\\]\n\n\\[\n=\\frac{x}{3x+1}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\n(2x-1)+\\frac{x}{3x+1}\n=\\frac{(2x-1)(3x+1)+x}{3x+1}\n\\]\n\n\\[\n=\\frac{6x^2-1}{3x+1}\n\\]"
         }
       ],
@@ -542,7 +542,7 @@
           "body": "The interval \\(10\\) to \\(25\\) has width \\(15\\) and frequency \\(60\\), so its frequency density is\n\n\\[\n\\frac{60}{15}=4\n\\]"
         },
         {
-          "title": "Using that scale from the",
+          "title": "Use histogram",
           "body": "Using that scale from the histogram:\n\n\\[\n35\\text{ to }40: 5\\times 1=5\n\\]\n\n\\[\n40\\text{ to }70: 30\\times 0.75=22.5\n\\]\n\n\\[\n5+22.5=27.5\n\\]"
         }
       ],
@@ -559,15 +559,15 @@
           "body": "The tangent point lies on the tangent line, so\n\n\\[\np+3=-\\frac54p+\\frac{21}{4}\n\\]\n\n\\[\np=1\n\\]"
         },
         {
-          "title": "The tangent gradient is ,",
+          "title": "Find the gradient",
           "body": "The tangent gradient is \\(-\\frac54\\), so the radius gradient is \\(\\frac45\\)."
         },
         {
-          "title": "Using centre and tangent point",
+          "title": "Use trigonometry",
           "body": "Using centre \\((3q,4q)\\) and tangent point \\((1,4)\\),\n\n\\[\n\\frac{4-4q}{1-3q}=\\frac45\n\\]\n\n\\[\nq=2\n\\]"
         },
         {
-          "title": "So the centre is .",
+          "title": "Simplify surd",
           "body": "So the centre is \\((6,8)\\). Therefore\n\n\\[\nr=\\sqrt{(6-1)^2+(8-4)^2}=\\sqrt{41}\n\\]"
         }
       ],
@@ -584,7 +584,7 @@
           "body": "Factor the fractional part first:\n\n\\[\n\\frac{2x^2-5x-12}{x^2-16}\\times\\frac{x^2+4x}{6x^2+11x+3}\n\\]\n\n\\[\n=\\frac{(2x+3)(x-4)}{(x-4)(x+4)}\\times\\frac{x(x+4)}{(3x+1)(2x+3)}\n\\]\n\n\\[\n=\\frac{x}{3x+1}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\n(2x-1)+\\frac{x}{3x+1}\n=\\frac{(2x-1)(3x+1)+x}{3x+1}\n\\]\n\n\\[\n=\\frac{6x^2-1}{3x+1}\n\\]"
         }
       ],

@@ -16,7 +16,7 @@
           "body": "Label the equations:\n$$\\\\begin{aligned}\n            3x + 2y &= 10 \\\\tag{1}\\\\\\\\\n            3x - 4y &= 16 \\\\tag{2}\n        \\\\end{aligned}$$"
         },
         {
-          "title": "Subtract (2) from (1) to",
+          "title": "Subtract (2) from (1) eliminate",
           "body": "Subtract <span class=\"upright\">(2)</span> from <span class=\"upright\">(1)</span> to eliminate *x*:\n$$(1)-(2): \\\\quad 6y = -6 \\\\implies \\\\boxed{y = -1}$$"
         },
         {
@@ -70,7 +70,7 @@
           "body": "Value after 2 years at 12% depreciation:\n*V*<sub>2</sub> = 16000 × (0.88)<sup>2</sup> = 16000 × 0.7744 = $12 390.40"
         },
         {
-          "title": "Apply year 3 depreciation and",
+          "title": "Use compound interest",
           "body": "Apply year-3 depreciation and set equal to final value:\n$$12390.40\\\\times\\\\!\\\\left(1 - \\\\frac{x}{100}\\\\right) = 11461.12$$"
         },
         {
@@ -157,11 +157,11 @@
           "body": "Factorise the quadratic:\n2*x*<sup>2</sup> − 7*x* − 15 = (2*x*+3)(*x*−5)\n*Check:* (2*x*+3)(*x*−5) = 2*x*<sup>2</sup> − 10*x* + 3*x* − 15 = 2*x*<sup>2</sup> − 7*x* − 15"
         },
         {
-          "title": "Roots set each factor to",
+          "title": "Set each factor zero",
           "body": "Roots: set each factor to zero:\n$$2x+3=0 \\\\implies x=-\\\\tfrac{3}{2};\\\\qquad x-5=0 \\\\implies x=5$$"
         },
         {
-          "title": "Since the coefficient of x",
+          "title": "Solve inequality",
           "body": "Since the coefficient of *x*<sup>2</sup> is  + 2 \\> 0, the parabola opens **upward**. The expression is  \\> 0 *outside* the roots:"
         }
       ],
@@ -182,11 +182,11 @@
           "body": "Factorise the quadratic:\n2*x*<sup>2</sup> − 7*x* − 15 = (2*x*+3)(*x*−5)\n*Check:* (2*x*+3)(*x*−5) = 2*x*<sup>2</sup> − 10*x* + 3*x* − 15 = 2*x*<sup>2</sup> − 7*x* − 15"
         },
         {
-          "title": "Roots set each factor to",
+          "title": "Set each factor zero",
           "body": "Roots: set each factor to zero:\n$$2x+3=0 \\\\implies x=-\\\\tfrac{3}{2};\\\\qquad x-5=0 \\\\implies x=5$$"
         },
         {
-          "title": "Since the coefficient of x",
+          "title": "Solve inequality",
           "body": "Since the coefficient of *x*<sup>2</sup> is  + 2 \\> 0, the parabola opens **upward**. The expression is  \\> 0 *outside* the roots:"
         }
       ],
@@ -203,7 +203,7 @@
           "body": "Hemisphere H has radius *x* cm and volume 6174*π* cm<sup>3</sup>. A bowl is made by removing an inner hemisphere, leaving 2 cm thickness. Find total surface area in terms of *π*."
         },
         {
-          "title": "Find outer radius x .",
+          "title": "Calculate volume",
           "body": "Find outer radius *x*. Volume of hemisphere $= \\\\dfrac{2}{3}\\\\pi r^3$:\n$$\\\\frac{2}{3}\\\\pi x^3 = 6174\\\\pi\n        \\\\implies x^3 = \\\\frac{6174\\\\times3}{2} = 9261\n        \\\\implies x = \\\\sqrt\\[3\\]{9261} = 21\\\\text{ cm}$$"
         },
         {
@@ -211,7 +211,7 @@
           "body": "Find inner radius:\n*r*<sub>inner</sub> = 21 − 2 = 19 cm"
         },
         {
-          "title": "Three surfaces to add 1.",
+          "title": "Add 1",
           "body": "Three surfaces to add:\n\n**1. Outer curved surface** (half-sphere, radius 21):\n*A*<sub>1</sub> = 2*π*(21)<sup>2</sup> = 2*π* × 441 = 882*π*\n\n**2. Inner curved surface** (half-sphere, radius 19):\n*A*<sub>2</sub> = 2*π*(19)<sup>2</sup> = 2*π* × 361 = 722*π*\n\n**3. Flat annular ring** at the top rim:\n*A*<sub>3</sub> = *π*(21)<sup>2</sup> − *π*(19)<sup>2</sup> = *π*(441−361) = 80*π*"
         },
         {
@@ -236,7 +236,7 @@
           "body": "Hemisphere H has radius *x* cm and volume 6174*π* cm<sup>3</sup>. A bowl is made by removing an inner hemisphere, leaving 2 cm thickness. Find total surface area in terms of *π*."
         },
         {
-          "title": "Find outer radius x .",
+          "title": "Calculate volume",
           "body": "Find outer radius *x*. Volume of hemisphere $= \\\\dfrac{2}{3}\\\\pi r^3$:\n$$\\\\frac{2}{3}\\\\pi x^3 = 6174\\\\pi\n        \\\\implies x^3 = \\\\frac{6174\\\\times3}{2} = 9261\n        \\\\implies x = \\\\sqrt\\[3\\]{9261} = 21\\\\text{ cm}$$"
         },
         {
@@ -244,7 +244,7 @@
           "body": "Find inner radius:\n*r*<sub>inner</sub> = 21 − 2 = 19 cm"
         },
         {
-          "title": "Three surfaces to add 1.",
+          "title": "Add 1",
           "body": "Three surfaces to add:\n\n**1. Outer curved surface** (half-sphere, radius 21):\n*A*<sub>1</sub> = 2*π*(21)<sup>2</sup> = 2*π* × 441 = 882*π*\n\n**2. Inner curved surface** (half-sphere, radius 19):\n*A*<sub>2</sub> = 2*π*(19)<sup>2</sup> = 2*π* × 361 = 722*π*\n\n**3. Flat annular ring** at the top rim:\n*A*<sub>3</sub> = *π*(21)<sup>2</sup> − *π*(19)<sup>2</sup> = *π*(441−361) = 80*π*"
         },
         {
@@ -447,7 +447,7 @@
           "body": "\\(a\\) Solve 3*x* − 22 \\> 8*x* − 40 algebraically. (b) Write the three inequalities defining region R."
         },
         {
-          "title": "Move all x terms to",
+          "title": "Find the nth term",
           "body": "Move all *x* terms to the right and constants to the left:\n3*x* − 22 \\> 8*x* − 40 ⟹  − 22 + 40 \\> 8*x* − 3*x* ⟹ 18 \\> 5*x*"
         },
         {
@@ -480,7 +480,7 @@
           "body": "Interior angle of a regular 10-sided polygon:\n$$\\\\text{Interior angle} = \\\\frac{(10-2)\\\\times180°}{10} = \\\\frac{1440°}{10} = 144°$$"
         },
         {
-          "title": "Find the interior angle of",
+          "title": "Use trigonometry",
           "body": "Find the interior angle of the hexagon at vertex *A*. At point *A*: decagon angle + 113° + hexagon angle at *A* = 360°:\n∠*x* = 360° − 144° − 110° = 106°"
         }
       ],
@@ -505,7 +505,7 @@
           "body": "Median  ≈ 62 km"
         },
         {
-          "title": "Q 1 at cf 15,",
+          "title": "Read the graph",
           "body": "*Q*<sub>1</sub> at cf  = 15, *Q*<sub>3</sub> at cf  = 45. Read from graph:\n*Q*<sub>1</sub> ≈ 56 km,   *Q*<sub>3</sub> ≈ 74 km\nIQR = *Q*<sub>3</sub> − *Q*<sub>1</sub> = 69 − 55 = 14 km"
         },
         {
@@ -517,7 +517,7 @@
           "body": "Graph-reading answers are accepted within  ± 2 km of the model answer."
         },
         {
-          "title": "From the graph, read the",
+          "title": "Use cumulative frequency",
           "body": "From the graph, read the cumulative frequency at *d* = 75 km:\ncf at 75 km ≈ 52"
         },
         {
@@ -546,7 +546,7 @@
           "body": "Distance to Andromeda: 1.6 × 10<sup>11</sup> AU. Convert to light years (2 s.f., standard form)."
         },
         {
-          "title": "Convert AU km 1.6 10",
+          "title": "Convert AU km 1 6",
           "body": "Convert AU → km:\n1.6 × 10<sup>11</sup> × 1.5 × 10<sup>8</sup> = (1.6×1.5) × 10<sup>19</sup> = 2.4 × 10<sup>19</sup> km"
         },
         {
@@ -554,7 +554,7 @@
           "body": "Convert km → light years:\n$$\\\\frac{2.4\\\\times10^{19}}{9.5\\\\times10^{12}}\n        = \\\\frac{2.4}{9.5}\\\\times10^{7}\n        = 0.2526\\\\ldots\\\\times10^{7}$$"
         },
         {
-          "title": "Write in standard form to",
+          "title": "Convert standard form",
           "body": "Write in standard form to 2 s.f.:\n = 2.526… × 10<sup>6</sup> ≈ 2.5 × 10<sup>6</sup>"
         }
       ],
@@ -798,11 +798,11 @@
           "body": "Form equation from 25th term of Q  = 186:\n*T*<sub>25</sub>(*Q*) = 2*a* + 24(3*d*) = 2*a* + 72*d* = 186"
         },
         {
-          "title": "Solve simultaneously subtract (1) from",
+          "title": "Solve simultaneous equations",
           "body": "Solve simultaneously — subtract (1) from (2):\n33*d* = 82.5 ⟹ *d* = 2.5"
         },
         {
-          "title": "Substitute d 2.5 into (1)",
+          "title": "Substitute d 2 5 (1)",
           "body": "Substitute *d* = 2.5 into (1):\n2*a* + 39(2.5) = 103.5 ⟹ 2*a* = 6 ⟹ *a* = 3"
         },
         {
@@ -926,11 +926,11 @@
           "body": "Form equation from 25th term of Q  = 186:\n*T*<sub>25</sub>(*Q*) = 2*a* + 24(3*d*) = 2*a* + 72*d* = 186"
         },
         {
-          "title": "Solve simultaneously subtract (1) from",
+          "title": "Solve simultaneous equations",
           "body": "Solve simultaneously — subtract (1) from (2):\n33*d* = 82.5 ⟹ *d* = 2.5"
         },
         {
-          "title": "Substitute d 2.5 into (1)",
+          "title": "Substitute d 2 5 (1)",
           "body": "Substitute *d* = 2.5 into (1):\n2*a* + 39(2.5) = 103.5 ⟹ 2*a* = 6 ⟹ *a* = 3"
         },
         {

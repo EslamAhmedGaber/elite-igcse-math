@@ -1,0 +1,12 @@
+{
+  "mode": "audit",
+  "totalTitles": 6023,
+  "awkwardBefore": 0,
+  "changed": 0,
+  "awkwardRemaining": 0,
+  "filesChanged": 0,
+  "protectedMismatches": [],
+  "examplesBefore": [],
+  "examplesChanged": [],
+  "examplesRemaining": []
+}

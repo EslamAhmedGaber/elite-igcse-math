@@ -8,7 +8,7 @@
       "topicNote": "Fractions. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify fraction",
           "body": "\\[\n5\\frac13=\\frac{16}{3}\n\\]\n\n\\[\n2\\frac67=\\frac{20}{7}\n\\]"
         },
         {
@@ -74,11 +74,11 @@
           "body": "The multiplier for \\(1.3\\%\\) compound interest is\n\n\\[\n1.013\n\\]"
         },
         {
-          "title": "After 4 years,",
+          "title": "Use compound interest",
           "body": "After 4 years,\n\n\\[\n50000(1.013)^4=52651.1408\\ldots\n\\]"
         },
         {
-          "title": "Correct to the nearest dollar,",
+          "title": "Use compound interest",
           "body": "Correct to the nearest dollar,\n\n\\[\n52651.1408\\ldots\\approx 52651\n\\]"
         }
       ],
@@ -91,11 +91,11 @@
       "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Estimate the value",
           "body": "\\[\nX=\\frac{2a-b}{f}\n\\]"
         },
         {
-          "title": "For the upper bound, make",
+          "title": "Find upper bound",
           "body": "For the upper bound, make the numerator large and the denominator small.\n\n\\[\na<7.55,\\quad b\\ge 3.415,\\quad f\\ge 1.5\n\\]\n\n\\[\nX_{\\text{upper}}=\\frac{2(7.55)-3.415}{1.5}=7.79\n\\]"
         }
       ],
@@ -108,7 +108,7 @@
       "topicNote": "Direct and Inverse Proportion. The tag is correct.",
       "steps": [
         {
-          "title": "varies directly as , so",
+          "title": "Find inverse function",
           "body": "\\(M\\) varies directly as \\(h^3\\), so\n\n\\[\nM=kh^3\n\\]"
         },
         {
@@ -116,11 +116,11 @@
           "body": "Use \\(M=4\\) when \\(h=0.5\\):\n\n\\[\n4=k(0.5)^3\n\\]\n\n\\[\nk=\\frac{4}{0.125}=32\n\\]"
         },
         {
-          "title": "So",
+          "title": "Find inverse function",
           "body": "So\n\n\\[\nM=32h^3\n\\]"
         },
         {
-          "title": "When ,",
+          "title": "Find inverse function",
           "body": "When \\(M=500\\),\n\n\\[\n500=32h^3\n\\]\n\n\\[\nh^3=15.625\n\\]\n\n\\[\nh=2.5\n\\]"
         }
       ],
@@ -133,31 +133,31 @@
       "topicNote": "Algebraic Roots and Indices. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify surd",
           "body": "\\[\n\\frac{18(\\sqrt{27})^{4n+6}}{6\\times 9^{2n+8}}=3^x\n\\]"
         },
         {
-          "title": "First,",
+          "title": "Use index laws",
           "body": "First,\n\n\\[\n\\frac{18}{6}=3=3^1\n\\]"
         },
         {
-          "title": "Also,",
+          "title": "Simplify surd",
           "body": "Also,\n\n\\[\n\\sqrt{27}=\\sqrt{3^3}=3^{3/2}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Simplify surd",
           "body": "So\n\n\\[\n(\\sqrt{27})^{4n+6}=3^{\\frac32(4n+6)}=3^{6n+9}\n\\]"
         },
         {
-          "title": "And",
+          "title": "Use index laws",
           "body": "And\n\n\\[\n9^{2n+8}=(3^2)^{2n+8}=3^{4n+16}\n\\]"
         },
         {
-          "title": "Therefore the whole expression is",
+          "title": "Use index laws",
           "body": "Therefore the whole expression is\n\n\\[\n3^{1+6n+9-(4n+16)}=3^{2n-6}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use index laws",
           "body": "So\n\n\\[\nx=2n-6\n\\]"
         }
       ],
@@ -170,11 +170,11 @@
       "topicNote": "Factorising. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Factorise expression",
           "body": "\\[\nx^2+5x-24=(x+8)(x-3)\n\\]"
         },
         {
-          "title": "So",
+          "title": "Factorise expression",
           "body": "So\n\\[\n(x+8)(x-3)=0\n\\]"
         }
       ],
@@ -187,15 +187,15 @@
       "topicNote": "Algebraic fractions. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify fraction",
           "body": "\\[\na=\\frac{14}{3x-7}, \\qquad x=\\frac{7}{4y-3}\n\\]"
         },
         {
-          "title": "Substitute for",
+          "title": "Simplify fraction",
           "body": "Substitute for \\(x\\):\n\\[\n3x-7=\\frac{21}{4y-3}-7\n\\]\n\n\\[\n=\\frac{21-7(4y-3)}{4y-3}\n=\\frac{42-28y}{4y-3}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Simplify fraction",
           "body": "So\n\\[\na=\\frac{14}{\\frac{42-28y}{4y-3}}\n=\\frac{4y-3}{3-2y}\n\\]"
         }
       ],
@@ -241,7 +241,7 @@
           "body": "Factorise:\n\\[\n(2y+5)(y-6)\\le0\n\\]"
         },
         {
-          "title": "The roots are and .",
+          "title": "Solve quadratic equation",
           "body": "The roots are \\(-\\frac52\\) and \\(6\\). The quadratic is \\(\\le0\\) between the roots."
         }
       ],
@@ -254,7 +254,7 @@
       "topicNote": "Simultaneous equations. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve simultaneous equations",
           "body": "\\[\n7x+3y=3\n\\]\n\n\\[\n3x-y=7\n\\]"
         },
         {
@@ -266,7 +266,7 @@
           "body": "Substitute into the first equation:\n\\[\n7x+3(3x-7)=3\n\\]\n\n\\[\n7x+9x-21=3\n\\]\n\n\\[\n16x=24\n\\]\n\n\\[\nx=\\frac32\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Solve simultaneous equations",
           "body": "Then\n\\[\ny=3\\left(\\frac32\\right)-7=\\frac92-7=-\\frac52\n\\]"
         }
       ],
@@ -283,11 +283,11 @@
           "body": "The midpoint of \\(BD\\) is \\(M=(0,2)\\)."
         },
         {
-          "title": "Since , the gradient of",
+          "title": "Find the gradient",
           "body": "Since \\(A=(-3,4)\\), the gradient of \\(AM\\) is\n\n\\[\n\\frac{2-4}{0-(-3)}=-\\frac23\n\\]"
         },
         {
-          "title": "For the kite, diagonal is",
+          "title": "Find the gradient",
           "body": "For the kite, diagonal \\(AC\\) is perpendicular to \\(BD\\), so the gradient of \\(BD\\) is\n\n\\[\n\\frac32\n\\]"
         },
         {
@@ -299,15 +299,15 @@
           "body": "Let\n\n\\[\nB=(2t,2+3t)\n\\]"
         },
         {
-          "title": "and",
+          "title": "Calculate value",
           "body": "and\n\n\\[\nD=(-2t,2-3t)\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Calculate value",
           "body": "Since \\(AB=6.5\\),\n\n\\[\n(2t-(-3))^2+(2+3t-4)^2=6.5^2\n\\]\n\n\\[\n(2t+3)^2+(3t-2)^2=42.25\n\\]\n\n\\[\n4t^2+12t+9+9t^2-12t+4=42.25\n\\]\n\n\\[\n13t^2+13=42.25\n\\]\n\n\\[\n13t^2=29.25\n\\]\n\n\\[\nt^2=2.25\n\\]\n\n\\[\nt=1.5\n\\]"
         },
         {
-          "title": "The coordinate of is positive,",
+          "title": "Use",
           "body": "The \\(x\\)-coordinate of \\(B\\) is positive, so use \\(t=1.5\\).\n\n\\[\nB=(3,6.5)\n\\]\n\n\\[\nD=(-3,-2.5)\n\\]"
         }
       ],
@@ -328,7 +328,7 @@
           "body": "Point \\(A\\) is the first positive \\(x\\)-intercept, so \\(y=0\\).\n\n\\[\n\\cos\\left(\\frac{x}{2}\\right)=0\n\\]\n\n\\[\n\\frac{x}{2}=90^\\circ\n\\]\n\n\\[\nx=180\n\\]"
         },
         {
-          "title": "So",
+          "title": "Read the graph",
           "body": "So\n\n\\[\nA=(180,0)\n\\]"
         },
         {
@@ -340,7 +340,7 @@
           "body": "The minimum value of cosine is \\(-1\\), which occurs when\n\n\\[\n\\frac{x}{2}=180^\\circ\n\\]\n\n\\[\nx=360\n\\]"
         },
         {
-          "title": "So",
+          "title": "Read the graph",
           "body": "So\n\n\\[\nB=(360,-1)\n\\]"
         }
       ],
@@ -387,7 +387,7 @@
       "topicNote": "Correct. This is converting kilometres per hour to metres per second.",
       "steps": [
         {
-          "title": "To convert km/h to m/s,",
+          "title": "Convert km/h to m/s divide",
           "body": "To convert km/h to m/s, divide by \\(3.6\\).\n\n\\[\n81\\div3.6=22.5\n\\]"
         }
       ],
@@ -408,7 +408,7 @@
           "body": "The top part is a trapezium of height\n\\[\n20-12=8\\text{ cm}\n\\]"
         },
         {
-          "title": "The lower parallel side of",
+          "title": "Find the gradient",
           "body": "The lower parallel side of this trapezium is\n\\[\n28-5-5=18\\text{ cm}\n\\]"
         },
         {
@@ -445,7 +445,7 @@
           "body": "Area of the four circles:\n\n\\[\n4\\pi r^2\n\\]"
         },
         {
-          "title": "The shaded area is ,",
+          "title": "Calculate area",
           "body": "The shaded area is \\(40\\text{ cm}^2\\), so\n\n\\[\n16r^2-4\\pi r^2=40\n\\]\n\n\\[\nr^2(16-4\\pi)=40\n\\]\n\n\\[\nr=\\sqrt{\\frac{40}{16-4\\pi}}=3.4131\\ldots\n\\]"
         },
         {
@@ -462,7 +462,7 @@
       "topicNote": "Corrected to Right-Angled Triangles - Pythagoras & Trigonometry. This is a right-angled trigonometry problem.",
       "steps": [
         {
-          "title": "In the right angled triangle,",
+          "title": "Use trigonometry",
           "body": "In the right-angled triangle, \\(x\\) is adjacent to the \\(42^\\circ\\) angle and \\(9.5\\text{ cm}\\) is the hypotenuse.\n\n\\[\n\\cos 42^\\circ=\\frac{x}{9.5}\n\\]\n\n\\[\nx=9.5\\cos 42^\\circ=7.059\\ldots\n\\]"
         }
       ],
@@ -475,23 +475,23 @@
       "topicNote": "Corrected from Ratio Toolkit to Vectors.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Split the ratio",
           "body": "\\[\n\\overrightarrow{OA}=4a,\\quad \\overrightarrow{OB}=6b,\\quad \\overrightarrow{AP}=2a+8b\n\\]"
         },
         {
-          "title": "So",
+          "title": "Split the ratio",
           "body": "So\n\n\\[\n\\overrightarrow{OP}=\\overrightarrow{OA}+\\overrightarrow{AP}\n=4a+(2a+8b)=6a+8b\n\\]"
         },
         {
-          "title": "Since lies on , let",
+          "title": "Split the ratio",
           "body": "Since \\(Q\\) lies on \\(OP\\), let\n\n\\[\n\\overrightarrow{OQ}=\\lambda(6a+8b)\n\\]"
         },
         {
-          "title": "Since lies on , let",
+          "title": "Split the ratio",
           "body": "Since \\(Q\\) lies on \\(AB\\), let\n\n\\[\n\\overrightarrow{OQ}=\\overrightarrow{OA}+\\mu\\overrightarrow{AB}\n\\]\n\n\\[\n\\overrightarrow{AB}=6b-4a\n\\]"
         },
         {
-          "title": "So",
+          "title": "Split the ratio",
           "body": "So\n\n\\[\n\\overrightarrow{OQ}=4a+\\mu(6b-4a)=(4-4\\mu)a+6\\mu b\n\\]"
         },
         {
@@ -499,11 +499,11 @@
           "body": "Equating coefficients:\n\n\\[\n6\\lambda=4-4\\mu,\\quad 8\\lambda=6\\mu\n\\]"
         },
         {
-          "title": "From ,",
+          "title": "Split the ratio",
           "body": "From \\(8\\lambda=6\\mu\\), \\(\\mu=\\frac43\\lambda\\).\n\n\\[\n6\\lambda=4-\\frac{16}{3}\\lambda\n\\]\n\n\\[\n34\\lambda=12,\\quad \\lambda=\\frac6{17}\n\\]\n\n\\[\n\\mu=\\frac{8}{17}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Split the ratio",
           "body": "So \\(AQ:QB=\\frac8{17}:\\frac9{17}\\)."
         }
       ],
@@ -516,7 +516,7 @@
       "topicNote": "Statistics Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "The mode is , so",
+          "title": "Calculate statistic",
           "body": "The mode is \\(9\\), so\n\n\\[\nd=9\n\\]"
         },
         {
@@ -524,7 +524,7 @@
           "body": "The range is \\(4\\):\n\n\\[\n9-a=4\n\\]\n\n\\[\na=5\n\\]"
         },
         {
-          "title": "The median is , so",
+          "title": "Calculate statistic",
           "body": "The median is \\(8\\), so\n\n\\[\n\\frac{c+d}{2}=8\n\\]\n\n\\[\n\\frac{c+9}{2}=8\n\\]\n\n\\[\nc=7\n\\]"
         },
         {
@@ -578,11 +578,11 @@
           "body": "The median is at cumulative frequency \\(40\\)."
         },
         {
-          "title": "This is between and",
+          "title": "Convert standard form",
           "body": "This is between \\((30,32)\\) and \\((40,52)\\):\n\n\\[\n30+\\frac{40-32}{52-32}\\times 10=34\n\\]"
         },
         {
-          "title": "So the median age is",
+          "title": "Use cumulative frequency",
           "body": "So the median age is about \\(34\\) years."
         },
         {
@@ -611,7 +611,7 @@
           "body": "Pair-only regions:\n\n\\[\nS\\cap G\\text{ only}=11-6=5\n\\]\n\n\\[\nS\\cap C\\text{ only}=17-6=11\n\\]\n\n\\[\nG\\cap C\\text{ only}=18-6=12\n\\]\n\n\\[\nS\\text{ only}=31-5-11-6=9\n\\]\n\n\\[\nC\\text{ only}=53-11-12-6=24\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate probability",
           "body": "Then\n\n\\[\nG\\text{ only}=80-(9+24+5+11+12+6)=13\n\\]\n\n\\[\nn(G)=13+5+12+6=36\n\\]\n\n\\[\nn((G\\cup S)')=20+24=44\n\\]\n\n\\[\nn(G'\\cap C)=24+11=35\n\\]\n\n\\[\nP(G\\mid C)=\\frac{18}{53}\n\\]"
         }
       ],
@@ -624,7 +624,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify surd",
           "body": "\\[\n\\frac{18(\\sqrt{27})^{4n+6}}{6\\times 9^{2n+8}}=3^x\n\\]"
         },
         {
@@ -632,11 +632,11 @@
           "body": "Use powers of 3:\n\n\\[\n18\\div 6=3\n\\]\n\n\\[\n\\sqrt{27}=(3^3)^{1/2}=3^{3/2}\n\\]\n\n\\[\n(\\sqrt{27})^{4n+6}=3^{6n+9}\n\\]\n\n\\[\n9^{2n+8}=(3^2)^{2n+8}=3^{4n+16}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\n\\frac{3\\cdot 3^{6n+9}}{3^{4n+16}}\n=3^{1+6n+9-4n-16}\n=3^{2n-6}\n\\]"
         },
         {
-          "title": "Therefore,",
+          "title": "Calculate value",
           "body": "Therefore,\n\n\\[\nx=2n-6\n\\]"
         }
       ],
@@ -653,11 +653,11 @@
           "body": "The midpoint of \\(BD\\) is \\(M=(0,2)\\)."
         },
         {
-          "title": "Since , the gradient of",
+          "title": "Find the gradient",
           "body": "Since \\(A=(-3,4)\\), the gradient of \\(AM\\) is\n\n\\[\n\\frac{2-4}{0-(-3)}=-\\frac23\n\\]"
         },
         {
-          "title": "For the kite, diagonal is",
+          "title": "Find the gradient",
           "body": "For the kite, diagonal \\(AC\\) is perpendicular to \\(BD\\), so the gradient of \\(BD\\) is\n\n\\[\n\\frac32\n\\]"
         },
         {
@@ -669,15 +669,15 @@
           "body": "Let\n\n\\[\nB=(2t,2+3t)\n\\]"
         },
         {
-          "title": "and",
+          "title": "Calculate value",
           "body": "and\n\n\\[\nD=(-2t,2-3t)\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Calculate value",
           "body": "Since \\(AB=6.5\\),\n\n\\[\n(2t-(-3))^2+(2+3t-4)^2=6.5^2\n\\]\n\n\\[\n(2t+3)^2+(3t-2)^2=42.25\n\\]\n\n\\[\n4t^2+12t+9+9t^2-12t+4=42.25\n\\]\n\n\\[\n13t^2+13=42.25\n\\]\n\n\\[\n13t^2=29.25\n\\]\n\n\\[\nt^2=2.25\n\\]\n\n\\[\nt=1.5\n\\]"
         },
         {
-          "title": "The coordinate of is positive,",
+          "title": "Use",
           "body": "The \\(x\\)-coordinate of \\(B\\) is positive, so use \\(t=1.5\\).\n\n\\[\nB=(3,6.5)\n\\]\n\n\\[\nD=(-3,-2.5)\n\\]"
         }
       ],
@@ -698,7 +698,7 @@
           "body": "Point \\(A\\) is the first positive \\(x\\)-intercept, so \\(y=0\\).\n\n\\[\n\\cos\\left(\\frac{x}{2}\\right)=0\n\\]\n\n\\[\n\\frac{x}{2}=90^\\circ\n\\]\n\n\\[\nx=180\n\\]"
         },
         {
-          "title": "So",
+          "title": "Read the graph",
           "body": "So\n\n\\[\nA=(180,0)\n\\]"
         },
         {
@@ -710,7 +710,7 @@
           "body": "The minimum value of cosine is \\(-1\\), which occurs when\n\n\\[\n\\frac{x}{2}=180^\\circ\n\\]\n\n\\[\nx=360\n\\]"
         },
         {
-          "title": "So",
+          "title": "Read the graph",
           "body": "So\n\n\\[\nB=(360,-1)\n\\]"
         }
       ],
@@ -739,7 +739,7 @@
           "body": "Area of the four circles:\n\n\\[\n4\\pi r^2\n\\]"
         },
         {
-          "title": "The shaded area is ,",
+          "title": "Calculate area",
           "body": "The shaded area is \\(40\\text{ cm}^2\\), so\n\n\\[\n16r^2-4\\pi r^2=40\n\\]\n\n\\[\nr^2(16-4\\pi)=40\n\\]\n\n\\[\nr=\\sqrt{\\frac{40}{16-4\\pi}}=3.4131\\ldots\n\\]"
         },
         {
@@ -756,23 +756,23 @@
       "topicNote": "Corrected from Ratio Toolkit to Vectors.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Split the ratio",
           "body": "\\[\n\\overrightarrow{OA}=4a,\\quad \\overrightarrow{OB}=6b,\\quad \\overrightarrow{AP}=2a+8b\n\\]"
         },
         {
-          "title": "So",
+          "title": "Split the ratio",
           "body": "So\n\n\\[\n\\overrightarrow{OP}=\\overrightarrow{OA}+\\overrightarrow{AP}\n=4a+(2a+8b)=6a+8b\n\\]"
         },
         {
-          "title": "Since lies on , let",
+          "title": "Split the ratio",
           "body": "Since \\(Q\\) lies on \\(OP\\), let\n\n\\[\n\\overrightarrow{OQ}=\\lambda(6a+8b)\n\\]"
         },
         {
-          "title": "Since lies on , let",
+          "title": "Split the ratio",
           "body": "Since \\(Q\\) lies on \\(AB\\), let\n\n\\[\n\\overrightarrow{OQ}=\\overrightarrow{OA}+\\mu\\overrightarrow{AB}\n\\]\n\n\\[\n\\overrightarrow{AB}=6b-4a\n\\]"
         },
         {
-          "title": "So",
+          "title": "Split the ratio",
           "body": "So\n\n\\[\n\\overrightarrow{OQ}=4a+\\mu(6b-4a)=(4-4\\mu)a+6\\mu b\n\\]"
         },
         {
@@ -780,11 +780,11 @@
           "body": "Equating coefficients:\n\n\\[\n6\\lambda=4-4\\mu,\\quad 8\\lambda=6\\mu\n\\]"
         },
         {
-          "title": "From ,",
+          "title": "Split the ratio",
           "body": "From \\(8\\lambda=6\\mu\\), \\(\\mu=\\frac43\\lambda\\).\n\n\\[\n6\\lambda=4-\\frac{16}{3}\\lambda\n\\]\n\n\\[\n34\\lambda=12,\\quad \\lambda=\\frac6{17}\n\\]\n\n\\[\n\\mu=\\frac{8}{17}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Split the ratio",
           "body": "So \\(AQ:QB=\\frac8{17}:\\frac9{17}\\)."
         }
       ],

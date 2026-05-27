@@ -8,11 +8,11 @@
       "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Find the LCM",
           "body": "\\[\n28=2^2\\times 7\n\\]\n\n\\[\n42=2\\times 3\\times 7\n\\]\n\n\\[\n63=3^2\\times 7\n\\]"
         },
         {
-          "title": "For the LCM, take the",
+          "title": "Find the LCM",
           "body": "For the LCM, take the highest power of each prime:\n\n\\[\n\\text{LCM}=2^2\\times 3^2\\times 7=252\n\\]"
         }
       ],
@@ -25,7 +25,7 @@
       "topicNote": "Powers, roots and standard form. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Convert standard form",
           "body": "\\[\na=6\\times 10^{40}\n\\]\n\n\\[\na^3=(6\\times 10^{40})^3\n\\]\n\n\\[\na^3=6^3\\times 10^{120}\n\\]\n\n\\[\na^3=216\\times 10^{120}\n\\]"
         },
         {
@@ -71,7 +71,7 @@
           "body": "Correct to one decimal place:\n\n\\[\n1.5\\%\n\\]"
         },
         {
-          "title": "For part (b), the 2019",
+          "title": "Calculate percentage",
           "body": "For part (b), the 2019 price was \\(7.7\\%\\) greater than the 2017 price.\n\n\\[\n231776=1.077\\times \\text{2017 price}\n\\]\n\n\\[\n\\text{2017 price}=\\frac{231776}{1.077}=215205.19\\ldots\n\\]"
         },
         {
@@ -122,7 +122,7 @@
       "topicNote": "Algebraic proof. The tag is acceptable because the question asks for an exact-form proof.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify surd",
           "body": "\\[\n\\frac{\\sqrt{12}}{\\sqrt3+2}=\\frac{2\\sqrt3}{\\sqrt3+2}\n\\]"
         },
         {
@@ -130,7 +130,7 @@
           "body": "Multiply by the conjugate:\n\\[\n\\frac{2\\sqrt3}{\\sqrt3+2}\\times \\frac{2-\\sqrt3}{2-\\sqrt3}\n=\\frac{2\\sqrt3(2-\\sqrt3)}{4-3}\n\\]\n\n\\[\n=4\\sqrt3-6\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Simplify surd",
           "body": "Since \\(4\\sqrt3=\\sqrt{48}\\),\n\\[\n4\\sqrt3-6=-6+\\sqrt{48}\n\\]"
         }
       ],
@@ -151,7 +151,7 @@
           "body": "The sum of their squares is\n\\[\n(2n+1)^2+(2n+3)^2\n\\]\n\n\\[\n=4n^2+4n+1+4n^2+12n+9\n\\]\n\n\\[\n=8n^2+16n+10\n\\]\n\n\\[\n=8(n^2+2n+1)+2=8(n+1)^2+2\n\\]"
         },
         {
-          "title": "This is a multiple of",
+          "title": "Use Algebraic proof correct",
           "body": "This is a multiple of 8 plus 2, so the remainder is always 2."
         }
       ],
@@ -168,11 +168,11 @@
           "body": "The rectangle has side lengths\n\n\\[\n2x+3\n\\]"
         },
         {
-          "title": "and",
+          "title": "Use Functions Solving Inequalities",
           "body": "and\n\n\\[\nx-1\n\\]"
         },
         {
-          "title": "For the side lengths to",
+          "title": "Solve inequality",
           "body": "For the side lengths to be possible,\n\n\\[\nx>1\n\\]"
         },
         {
@@ -184,11 +184,11 @@
           "body": "Factorise:\n\n\\[\n2x^2+x-78=(2x+13)(x-6)\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\n-\\frac{13}{2}<x<6\n\\]"
         },
         {
-          "title": "Combining with",
+          "title": "Solve inequality",
           "body": "Combining with \\(x>1\\):\n\n\\[\n1<x<6\n\\]"
         }
       ],
@@ -201,7 +201,7 @@
       "topicNote": "Simultaneous equations. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve simultaneous equations",
           "body": "\\[\n3x+5y=3.1\n\\]\n\n\\[\n6x+3y=3.75\n\\]"
         },
         {
@@ -213,7 +213,7 @@
           "body": "Subtract the second equation:\n\\[\n7y=2.45\n\\]\n\n\\[\ny=0.35\n\\]"
         },
         {
-          "title": "Substitute into",
+          "title": "Solve simultaneous equations",
           "body": "Substitute into \\(3x+5y=3.1\\):\n\\[\n3x+5(0.35)=3.1\n\\]\n\n\\[\n3x+1.75=3.1\n\\]\n\n\\[\n3x=1.35\n\\]\n\n\\[\nx=0.45\n\\]"
         }
       ],
@@ -226,7 +226,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nS_m=39\n\\]\n\n\\[\nS_{2m}=320\n\\]"
         },
         {
@@ -234,11 +234,11 @@
           "body": "Use\n\n\\[\nS_n=\\frac n2(2a+(n-1)d)\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate value",
           "body": "Then\n\n\\[\n2S_m=m(2a+(m-1)d)=78\n\\]"
         },
         {
-          "title": "and",
+          "title": "Calculate value",
           "body": "and\n\n\\[\nS_{2m}=m(2a+(2m-1)d)=320\n\\]"
         },
         {
@@ -246,7 +246,7 @@
           "body": "Subtract:\n\n\\[\nS_{2m}-2S_m=m[(2m-1)d-(m-1)d]\n\\]\n\n\\[\n320-78=m(md)\n\\]\n\n\\[\n242=m^2d\n\\]\n\n\\[\n242=2\\times 11^2\n\\]"
         },
         {
-          "title": "Since is prime and is",
+          "title": "Square factor",
           "body": "Since \\(d\\) is prime and \\(m^2\\) is a square factor,\n\n\\[\nd=2,\\quad m^2=121\n\\]\n\n\\[\nm=11\n\\]"
         }
       ],
@@ -259,7 +259,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\ng(x)=5+6x-x^2\n\\]"
         },
         {
@@ -271,15 +271,15 @@
           "body": "Let\n\n\\[\ny=14-(x-3)^2\n\\]\n\n\\[\n(x-3)^2=14-y\n\\]"
         },
         {
-          "title": "The domain of is ,",
+          "title": "Find inverse function",
           "body": "The domain of \\(g\\) is \\(x\\ge 3\\), so take the positive square root:\n\n\\[\nx-3=\\sqrt{14-y}\n\\]\n\n\\[\nx=3+\\sqrt{14-y}\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Simplify surd",
           "body": "Therefore\n\n\\[\ng^{-1}:x\\mapsto 3+\\sqrt{14-x}\n\\]"
         },
         {
-          "title": "The range of is ,",
+          "title": "Calculate statistic",
           "body": "The range of \\(g\\) is \\(x\\le 14\\), so this is the domain of \\(g^{-1}\\)."
         }
       ],
@@ -292,15 +292,15 @@
       "topicNote": "Moved from Linear Graphs to Graphs of Functions.",
       "steps": [
         {
-          "title": "For part (a), solve",
+          "title": "Read the graph",
           "body": "For part (a), solve\n\n\\[\n2x^2-4x-1=0\n\\]"
         },
         {
-          "title": "Using the graph gives approximately",
+          "title": "Read the graph",
           "body": "Using the graph gives approximately\n\n\\[\nx=-0.2,\\quad x=2.2\n\\]"
         },
         {
-          "title": "For part (b), we need",
+          "title": "Read the graph",
           "body": "For part (b), we need to solve\n\n\\[\nx^2-x-1=0\n\\]"
         },
         {
@@ -312,11 +312,11 @@
           "body": "The given graph is\n\n\\[\ny=2x^2-4x-1\n\\]"
         },
         {
-          "title": "Now",
+          "title": "Read the graph",
           "body": "Now\n\n\\[\n2x^2-2x-2=(2x^2-4x-1)+2x-1\n\\]"
         },
         {
-          "title": "So draw the straight line",
+          "title": "Read the graph",
           "body": "So draw the straight line\n\n\\[\ny=1-2x\n\\]"
         },
         {
@@ -354,7 +354,7 @@
       "topicNote": "Corrected from Ratio Toolkit to Differentiation.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Split the ratio",
           "body": "\\[\nx=4t^3-27t+8\n\\]"
         },
         {
@@ -366,7 +366,7 @@
           "body": "The direction of motion reverses when velocity is zero:\n\n\\[\n12t^2-27=0\n\\]\n\n\\[\n12t^2=27\n\\]\n\n\\[\nt^2=\\frac94\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Split the ratio",
           "body": "Since \\(t\\geq 0\\), \\(t=\\frac32\\)."
         },
         {
@@ -374,7 +374,7 @@
           "body": "Acceleration is\n\n\\[\n\\frac{d^2x}{dt^2}=24t\n\\]"
         },
         {
-          "title": "At ,",
+          "title": "Split the ratio",
           "body": "At \\(t=\\frac32\\),\n\n\\[\na=24\\left(\\frac32\\right)=36\n\\]"
         }
       ],
@@ -420,19 +420,19 @@
           "body": "The scale is\n\\[\n1\\text{ cm represents }200\\text{ m}\n\\]"
         },
         {
-          "title": "So the map distance is",
+          "title": "Use bearings",
           "body": "So the map distance is\n\\[\n700\\div 200=3.5\\text{ cm}\n\\]"
         },
         {
-          "title": "Part (a) from , draw",
+          "title": "Use bearings",
           "body": "Part (a): from \\(A\\), draw a bearing of \\(110^\\circ\\) and mark \\(C\\) at \\(3.5\\text{ cm}\\) from \\(A\\)."
         },
         {
-          "title": "For part (b),",
+          "title": "Use bearings",
           "body": "For part (b),\n\\[\n200\\text{ m}=20000\\text{ cm}\n\\]"
         },
         {
-          "title": "So the scale is",
+          "title": "Use bearings",
           "body": "So the scale is\n\\[\n1:20000\n\\]"
         }
       ],
@@ -445,11 +445,11 @@
       "topicNote": "Circle Theorems. The tag is correct.",
       "steps": [
         {
-          "title": "Since is a diameter,",
+          "title": "Use trigonometry",
           "body": "Since \\(EOG\\) is a diameter,\n\\[\n\\angle EDG=90^\\circ\n\\]"
         },
         {
-          "title": "In triangle ,",
+          "title": "Use trigonometry",
           "body": "In triangle \\(EDG\\),\n\\[\n\\angle DEG=180^\\circ-90^\\circ-42^\\circ=48^\\circ\n\\]"
         },
         {
@@ -470,11 +470,11 @@
           "body": "Use the intersecting chords theorem:\n\\[\nPT\\times TQ=ST\\times TR\n\\]\n\n\\[\nPT\\times 3=4\\times 12\n\\]\n\n\\[\nPT=16\n\\]"
         },
         {
-          "title": "Since is a diameter,",
+          "title": "Use circle theorem",
           "body": "Since \\(PTQ\\) is a diameter,\n\\[\nPQ=PT+TQ=16+3=19\n\\]"
         },
         {
-          "title": "So the radius is",
+          "title": "Use circle theorem",
           "body": "So the radius is\n\\[\n19\\div 2=9.5\n\\]"
         }
       ],
@@ -491,11 +491,11 @@
           "body": "The scale factor from triangle \\(ABC\\) to triangle \\(PQR\\) is\n\\[\n\\frac{PQ}{AB}=\\frac{12}{4}=3\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\\[\nBC=\\frac{RQ}{3}=\\frac{16.5}{3}=5.5\n\\]"
         },
         {
-          "title": "Also corresponds to , so",
+          "title": "Calculate value",
           "body": "Also \\(PR\\) corresponds to \\(AC\\), so\n\\[\ny=3x\n\\]"
         }
       ],
@@ -508,7 +508,7 @@
       "topicNote": "Right-Angled Triangles - Pythagoras & Trigonometry. The tag is correct.",
       "steps": [
         {
-          "title": "The horizontal distance is and",
+          "title": "Use trigonometry",
           "body": "The horizontal distance is \\(12\\text{ m}\\) and the zip wire is \\(13\\text{ m}\\)."
         },
         {
@@ -516,7 +516,7 @@
           "body": "Vertical difference:\n\\[\n\\sqrt{13^2-12^2}=5\n\\]"
         },
         {
-          "title": "Since the shorter post is",
+          "title": "Use trigonometry",
           "body": "Since the shorter post is \\(2.6\\text{ m}\\),\n\\[\nAB=2.6+5=7.6\n\\]"
         }
       ],
@@ -529,7 +529,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "In triangle ,",
+          "title": "Use trigonometry",
           "body": "In triangle \\(PQR\\),\n\n\\[\nPQ=1.6,\\qquad PR=4.2,\\qquad \\angle PRQ=18^\\circ\n\\]"
         },
         {
@@ -537,11 +537,11 @@
           "body": "Use the sine rule:\n\n\\[\n\\frac{\\sin Q}{PR}=\\frac{\\sin R}{PQ}\n\\]\n\n\\[\n\\frac{\\sin Q}{4.2}=\\frac{\\sin18^\\circ}{1.6}\n\\]\n\n\\[\n\\sin Q=\\frac{4.2\\sin18^\\circ}{1.6}\n\\]\n\n\\[\n\\sin Q=0.811169\\ldots\n\\]"
         },
         {
-          "title": "Since angle is obtuse,",
+          "title": "Use trigonometry",
           "body": "Since angle \\(PQR\\) is obtuse,\n\n\\[\nQ=180^\\circ-\\sin^{-1}(0.811169\\ldots)\n\\]\n\n\\[\nQ=125.7896\\ldots^\\circ\n\\]"
         },
         {
-          "title": "Now find angle",
+          "title": "Use trigonometry",
           "body": "Now find angle \\(P\\):\n\n\\[\nP=180^\\circ-18^\\circ-125.7896\\ldots^\\circ\n\\]\n\n\\[\nP=36.2103\\ldots^\\circ\n\\]"
         },
         {
@@ -570,7 +570,7 @@
           "body": "The total frequency is\n\n\\[\n13+17+8+x+11=49+x\n\\]"
         },
         {
-          "title": "The mean is , so",
+          "title": "Calculate statistic",
           "body": "The mean is \\(2\\), so\n\n\\[\n\\frac{77+3x}{49+x}=2\n\\]\n\n\\[\n77+3x=98+2x\n\\]\n\n\\[\nx=21\n\\]"
         }
       ],
@@ -587,7 +587,7 @@
           "body": "Put the distances in order:\n\n\\[\n5,\\ 5,\\ 7,\\ 8,\\ 10,\\ 12,\\ 13,\\ 14,\\ 16,\\ 21,\\ 23\n\\]"
         },
         {
-          "title": "There are 11 values, so",
+          "title": "Calculate statistic",
           "body": "There are 11 values, so the median is the 6th value."
         },
         {
@@ -595,7 +595,7 @@
           "body": "The lower half is\n\n\\[\n5,\\ 5,\\ 7,\\ 8,\\ 10\n\\]"
         },
         {
-          "title": "so",
+          "title": "Calculate value",
           "body": "so\n\n\\[\nQ_1=7\n\\]"
         },
         {
@@ -603,7 +603,7 @@
           "body": "The upper half is\n\n\\[\n13,\\ 14,\\ 16,\\ 21,\\ 23\n\\]"
         },
         {
-          "title": "so",
+          "title": "Calculate value",
           "body": "so\n\n\\[\nQ_3=16\n\\]\n\n\\[\n\\text{IQR}=16-7=9\n\\]"
         }
       ],
@@ -616,15 +616,15 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "For a histogram,",
+          "title": "Use histogram",
           "body": "For a histogram,\n\n\\[\n\\text{frequency}=\\text{class width}\\times \\text{frequency density}\n\\]"
         },
         {
-          "title": "For , the frequency is",
+          "title": "Use frequency table",
           "body": "For \\(75<h\\leq85\\), the frequency is 12 and the class width is 10, so\n\n\\[\n\\text{frequency density}=\\frac{12}{10}=1.2\n\\]"
         },
         {
-          "title": "Using this scale from the",
+          "title": "Use histogram",
           "body": "Using this scale from the histogram, the frequency densities are:\n\n\\[\n0.6,\\ 0.8,\\ 1.0,\\ 1.2,\\ 0.4\n\\]"
         },
         {
@@ -632,11 +632,11 @@
           "body": "The total number of tomato plants is\n\n\\[\n(5)(0.6)+(10)(0.8)+(5)(1.0)+(10)(1.2)+(5)(0.4)\n\\]\n\n\\[\n=3+8+5+12+2=30\n\\]"
         },
         {
-          "title": "For",
+          "title": "Solve inequality",
           "body": "For \\(h>82.5\\):\n\n\\[\n(2.5)(1.2)+(5)(0.4)=3+2=5\n\\]"
         },
         {
-          "title": "So the probability is",
+          "title": "Calculate probability",
           "body": "So the probability is\n\n\\[\n\\frac{5}{30}=\\frac16\n\\]"
         }
       ],
@@ -649,19 +649,19 @@
       "topicNote": "Corrected to Probability Toolkit. The ratio is used, but the main structure is a probability table.",
       "steps": [
         {
-          "title": "The probabilities for green and",
+          "title": "Split the ratio",
           "body": "The probabilities for green and red are\n\n\\[\n0.20+0.35=0.55\n\\]"
         },
         {
-          "title": "So",
+          "title": "Split the ratio",
           "body": "So\n\n\\[\nP(\\text{pink or white})=1-0.55=0.45\n\\]"
         },
         {
-          "title": "Pink white , so white",
+          "title": "Split the ratio",
           "body": "Pink : white \\(=2:1\\), so white is \\(\\frac13\\) of \\(0.45\\).\n\n\\[\nP(\\text{white})=\\frac13\\times 0.45=0.15\n\\]"
         },
         {
-          "title": "The red probability is ,",
+          "title": "Split the ratio",
           "body": "The red probability is \\(0.35\\), and there are \\(28\\) red sweets.\n\n\\[\n\\text{total sweets}=\\frac{28}{0.35}=80\n\\]"
         },
         {
@@ -682,11 +682,11 @@
           "body": "The rectangle has side lengths\n\n\\[\n2x+3\n\\]"
         },
         {
-          "title": "and",
+          "title": "Use Functions Solving Inequalities",
           "body": "and\n\n\\[\nx-1\n\\]"
         },
         {
-          "title": "For the side lengths to",
+          "title": "Solve inequality",
           "body": "For the side lengths to be possible,\n\n\\[\nx>1\n\\]"
         },
         {
@@ -698,11 +698,11 @@
           "body": "Factorise:\n\n\\[\n2x^2+x-78=(2x+13)(x-6)\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\n-\\frac{13}{2}<x<6\n\\]"
         },
         {
-          "title": "Combining with",
+          "title": "Solve inequality",
           "body": "Combining with \\(x>1\\):\n\n\\[\n1<x<6\n\\]"
         }
       ],
@@ -715,7 +715,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nS_m=39\n\\]\n\n\\[\nS_{2m}=320\n\\]"
         },
         {
@@ -723,11 +723,11 @@
           "body": "Use\n\n\\[\nS_n=\\frac n2(2a+(n-1)d)\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate value",
           "body": "Then\n\n\\[\n2S_m=m(2a+(m-1)d)=78\n\\]"
         },
         {
-          "title": "and",
+          "title": "Calculate value",
           "body": "and\n\n\\[\nS_{2m}=m(2a+(2m-1)d)=320\n\\]"
         },
         {
@@ -735,7 +735,7 @@
           "body": "Subtract:\n\n\\[\nS_{2m}-2S_m=m[(2m-1)d-(m-1)d]\n\\]\n\n\\[\n320-78=m(md)\n\\]\n\n\\[\n242=m^2d\n\\]\n\n\\[\n242=2\\times 11^2\n\\]"
         },
         {
-          "title": "Since is prime and is",
+          "title": "Square factor",
           "body": "Since \\(d\\) is prime and \\(m^2\\) is a square factor,\n\n\\[\nd=2,\\quad m^2=121\n\\]\n\n\\[\nm=11\n\\]"
         }
       ],
@@ -748,7 +748,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\ng(x)=5+6x-x^2\n\\]"
         },
         {
@@ -760,15 +760,15 @@
           "body": "Let\n\n\\[\ny=14-(x-3)^2\n\\]\n\n\\[\n(x-3)^2=14-y\n\\]"
         },
         {
-          "title": "The domain of is ,",
+          "title": "Find inverse function",
           "body": "The domain of \\(g\\) is \\(x\\ge 3\\), so take the positive square root:\n\n\\[\nx-3=\\sqrt{14-y}\n\\]\n\n\\[\nx=3+\\sqrt{14-y}\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Simplify surd",
           "body": "Therefore\n\n\\[\ng^{-1}:x\\mapsto 3+\\sqrt{14-x}\n\\]"
         },
         {
-          "title": "The range of is ,",
+          "title": "Calculate statistic",
           "body": "The range of \\(g\\) is \\(x\\le 14\\), so this is the domain of \\(g^{-1}\\)."
         }
       ],
@@ -781,15 +781,15 @@
       "topicNote": "Moved from Linear Graphs to Graphs of Functions.",
       "steps": [
         {
-          "title": "For part (a), solve",
+          "title": "Read the graph",
           "body": "For part (a), solve\n\n\\[\n2x^2-4x-1=0\n\\]"
         },
         {
-          "title": "Using the graph gives approximately",
+          "title": "Read the graph",
           "body": "Using the graph gives approximately\n\n\\[\nx=-0.2,\\quad x=2.2\n\\]"
         },
         {
-          "title": "For part (b), we need",
+          "title": "Read the graph",
           "body": "For part (b), we need to solve\n\n\\[\nx^2-x-1=0\n\\]"
         },
         {
@@ -801,11 +801,11 @@
           "body": "The given graph is\n\n\\[\ny=2x^2-4x-1\n\\]"
         },
         {
-          "title": "Now",
+          "title": "Read the graph",
           "body": "Now\n\n\\[\n2x^2-2x-2=(2x^2-4x-1)+2x-1\n\\]"
         },
         {
-          "title": "So draw the straight line",
+          "title": "Read the graph",
           "body": "So draw the straight line\n\n\\[\ny=1-2x\n\\]"
         },
         {
@@ -822,7 +822,7 @@
       "topicNote": "Corrected from Ratio Toolkit to Differentiation.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Split the ratio",
           "body": "\\[\nx=4t^3-27t+8\n\\]"
         },
         {
@@ -834,7 +834,7 @@
           "body": "The direction of motion reverses when velocity is zero:\n\n\\[\n12t^2-27=0\n\\]\n\n\\[\n12t^2=27\n\\]\n\n\\[\nt^2=\\frac94\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Split the ratio",
           "body": "Since \\(t\\geq 0\\), \\(t=\\frac32\\)."
         },
         {
@@ -842,7 +842,7 @@
           "body": "Acceleration is\n\n\\[\n\\frac{d^2x}{dt^2}=24t\n\\]"
         },
         {
-          "title": "At ,",
+          "title": "Split the ratio",
           "body": "At \\(t=\\frac32\\),\n\n\\[\na=24\\left(\\frac32\\right)=36\n\\]"
         }
       ],
@@ -855,7 +855,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "In triangle ,",
+          "title": "Use trigonometry",
           "body": "In triangle \\(PQR\\),\n\n\\[\nPQ=1.6,\\qquad PR=4.2,\\qquad \\angle PRQ=18^\\circ\n\\]"
         },
         {
@@ -863,11 +863,11 @@
           "body": "Use the sine rule:\n\n\\[\n\\frac{\\sin Q}{PR}=\\frac{\\sin R}{PQ}\n\\]\n\n\\[\n\\frac{\\sin Q}{4.2}=\\frac{\\sin18^\\circ}{1.6}\n\\]\n\n\\[\n\\sin Q=\\frac{4.2\\sin18^\\circ}{1.6}\n\\]\n\n\\[\n\\sin Q=0.811169\\ldots\n\\]"
         },
         {
-          "title": "Since angle is obtuse,",
+          "title": "Use trigonometry",
           "body": "Since angle \\(PQR\\) is obtuse,\n\n\\[\nQ=180^\\circ-\\sin^{-1}(0.811169\\ldots)\n\\]\n\n\\[\nQ=125.7896\\ldots^\\circ\n\\]"
         },
         {
-          "title": "Now find angle",
+          "title": "Use trigonometry",
           "body": "Now find angle \\(P\\):\n\n\\[\nP=180^\\circ-18^\\circ-125.7896\\ldots^\\circ\n\\]\n\n\\[\nP=36.2103\\ldots^\\circ\n\\]"
         },
         {
@@ -888,15 +888,15 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "For a histogram,",
+          "title": "Use histogram",
           "body": "For a histogram,\n\n\\[\n\\text{frequency}=\\text{class width}\\times \\text{frequency density}\n\\]"
         },
         {
-          "title": "For , the frequency is",
+          "title": "Use frequency table",
           "body": "For \\(75<h\\leq85\\), the frequency is 12 and the class width is 10, so\n\n\\[\n\\text{frequency density}=\\frac{12}{10}=1.2\n\\]"
         },
         {
-          "title": "Using this scale from the",
+          "title": "Use histogram",
           "body": "Using this scale from the histogram, the frequency densities are:\n\n\\[\n0.6,\\ 0.8,\\ 1.0,\\ 1.2,\\ 0.4\n\\]"
         },
         {
@@ -904,11 +904,11 @@
           "body": "The total number of tomato plants is\n\n\\[\n(5)(0.6)+(10)(0.8)+(5)(1.0)+(10)(1.2)+(5)(0.4)\n\\]\n\n\\[\n=3+8+5+12+2=30\n\\]"
         },
         {
-          "title": "For",
+          "title": "Solve inequality",
           "body": "For \\(h>82.5\\):\n\n\\[\n(2.5)(1.2)+(5)(0.4)=3+2=5\n\\]"
         },
         {
-          "title": "So the probability is",
+          "title": "Calculate probability",
           "body": "So the probability is\n\n\\[\n\\frac{5}{30}=\\frac16\n\\]"
         }
       ],

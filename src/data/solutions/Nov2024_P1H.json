@@ -16,7 +16,7 @@
           "body": "The members of \\(A\\cap B\\) are the numbers in both circles:\n\n\\[\nA\\cap B=\\{3,7\\}\n\\]"
         },
         {
-          "title": "means all the numbers in",
+          "title": "Calculate statistic",
           "body": "\\(A'\\) means all the numbers in the universal set that are not in \\(A\\):\n\n\\[\nA'=\\{2,4,5,6,8\\}\n\\]"
         }
       ],
@@ -29,15 +29,15 @@
       "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Find the LCM",
           "body": "\\[\nA=2^3\\times 5^4\\times 7\\times 11\n\\]\n\n\\[\nB=2^2\\times 5^2\\times 7^2\n\\]\n\n\\[\nC=2^2\\times 5^3\\times 7^4\n\\]"
         },
         {
-          "title": "The HCF of , ,",
+          "title": "Find the LCM",
           "body": "The HCF of \\(A\\), \\(B\\), and \\(C\\) uses the smallest power of each prime common to all three.\n\n\\[\n2^2,\\quad 5^2,\\quad 7\n\\]"
         },
         {
-          "title": "The prime is not in",
+          "title": "Find the LCM",
           "body": "The prime \\(11\\) is not in all three numbers, so it is not included.\n\n\\[\n\\text{HCF}=2^2\\times 5^2\\times 7\n\\]"
         }
       ],
@@ -50,11 +50,11 @@
       "topicNote": "Powers, roots and standard form. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Convert standard form",
           "body": "\\[\n8.4\\times 10^{-5}=0.000084\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Convert standard form",
           "body": "For part (b),\n\n\\[\n(6.5\\times 10^{-40})(8\\times 10^{185})\n=52\\times 10^{145}\n\\]"
         },
         {
@@ -75,7 +75,7 @@
           "body": "Shop A discount:\n\n\\[\n16\\% \\text{ of } 475=0.16\\times 475=76\n\\]"
         },
         {
-          "title": "Shop B euros is of",
+          "title": "Calculate percentage",
           "body": "Shop B: \\(408\\) euros is \\(85\\%\\) of the normal price.\n\n\\[\n\\text{normal price}=408\\div 0.85=480\n\\]"
         },
         {
@@ -83,7 +83,7 @@
           "body": "Shop B discount:\n\n\\[\n480-408=72\n\\]"
         },
         {
-          "title": "Since",
+          "title": "Calculate percentage",
           "body": "Since\n\n\\[\n76>72\n\\]"
         },
         {
@@ -100,15 +100,15 @@
       "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Estimate the value",
           "body": "\\[\nT=\\frac{x^2+y^2}{w}\n\\]"
         },
         {
-          "title": "For the upper bound, use",
+          "title": "Find upper bound",
           "body": "For the upper bound, use the upper bounds of \\(x\\) and \\(y\\), and the lower bound of \\(w\\).\n\n\\[\nx<28.45,\\quad y<17.5,\\quad w\\ge 87.5\n\\]\n\n\\[\nT_{\\text{upper}}=\\frac{28.45^2+17.5^2}{87.5}=12.7503\\ldots\n\\]"
         },
         {
-          "title": "Correct to 3 significant figures,",
+          "title": "Estimate the value",
           "body": "Correct to 3 significant figures,\n\n\\[\n12.7503\\ldots\\approx 12.8\n\\]"
         }
       ],
@@ -121,7 +121,7 @@
       "topicNote": "Direct and Inverse Proportion. The tag is correct.",
       "steps": [
         {
-          "title": "is inversely proportional to ,",
+          "title": "Find inverse function",
           "body": "\\(B\\) is inversely proportional to \\(d^2\\), so\n\n\\[\nB=\\frac{k}{d^2}\n\\]"
         },
         {
@@ -129,7 +129,7 @@
           "body": "Use \\(B=0.25\\) when \\(d=12\\):\n\n\\[\n0.25=\\frac{k}{12^2}\n\\]\n\n\\[\nk=0.25\\times 144=36\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Find inverse function",
           "body": "Therefore\n\n\\[\nB=\\frac{36}{d^2}\n\\]"
         }
       ],
@@ -142,15 +142,15 @@
       "topicNote": "Corrected to Expanding Brackets. This is an expansion question, not a surds question.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Expand brackets",
           "body": "\\[\n3x(2x-1)(5x+4)\n\\]"
         },
         {
-          "title": "First expand the two brackets",
+          "title": "Expand brackets",
           "body": "First expand the two brackets:\n\n\\[\n(2x-1)(5x+4)=10x^2+8x-5x-4\n\\]\n\n\\[\n=10x^2+3x-4\n\\]"
         },
         {
-          "title": "Now multiply by",
+          "title": "Expand brackets",
           "body": "Now multiply by \\(3x\\):\n\n\\[\n3x(10x^2+3x-4)=30x^3+9x^2-12x\n\\]"
         }
       ],
@@ -167,7 +167,7 @@
           "body": "(a)(i)\n\\[\nx^2+5x-24=(x+8)(x-3)\n\\]"
         },
         {
-          "title": "(a)(ii) or",
+          "title": "Solve quadratic equation",
           "body": "(a)(ii) \\(x=-8\\) or \\(x=3\\)."
         },
         {
@@ -188,7 +188,7 @@
           "body": "(a)\n\\[\n\\sqrt{675}=\\sqrt{25\\times27}=5\\sqrt{27}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So \\(n=5\\)."
         },
         {
@@ -238,11 +238,11 @@
           "body": "Subtract the equations:\n\\[\n3d=9\n\\]\n\n\\[\nd=3\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Find the nth term",
           "body": "Then\n\\[\n2a+26(3)=284\n\\]\n\n\\[\n2a=206\n\\]\n\n\\[\na=103\n\\]"
         },
         {
-          "title": "Now find",
+          "title": "Find the nth term",
           "body": "Now find \\(S_{45}\\):\n\\[\nS_{45}=\\frac{45}{2}(2a+44d)\n\\]\n\n\\[\nS_{45}=\\frac{45}{2}(206+132)=7605\n\\]"
         }
       ],
@@ -255,7 +255,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nf(x)=2x^2-24x+7\n\\]"
         },
         {
@@ -267,7 +267,7 @@
           "body": "Let \\(y=f(x)\\).\n\n\\[\ny=2(x-6)^2-65\n\\]\n\n\\[\ny+65=2(x-6)^2\n\\]\n\n\\[\n\\frac{y+65}{2}=(x-6)^2\n\\]"
         },
         {
-          "title": "Since , take the positive",
+          "title": "Simplify surd",
           "body": "Since \\(x\\ge 6\\), take the positive square root:\n\n\\[\nx-6=\\sqrt{\\frac{y+65}{2}}\n\\]\n\n\\[\nx=6+\\sqrt{\\frac{y+65}{2}}\n\\]"
         },
         {
@@ -284,7 +284,7 @@
       "topicNote": "Correct. This is a reciprocal-curve table and graph question.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Read the graph",
           "body": "\\[\ny=2\\left(x+\\frac1x\\right)\n\\]"
         },
         {
@@ -313,15 +313,15 @@
           "body": "The line is\n\n\\[\ny=k\n\\]"
         },
         {
-          "title": "At the intersection points,",
+          "title": "Read the graph",
           "body": "At the intersection points,\n\n\\[\nx^2-8x-9=k\n\\]\n\n\\[\nx^2-8x-(9+k)=0\n\\]"
         },
         {
-          "title": "The two roots are and",
+          "title": "Read the graph",
           "body": "The two roots are \\(p\\) and \\(q\\)."
         },
         {
-          "title": "For this quadratic,",
+          "title": "Solve quadratic equation",
           "body": "For this quadratic,\n\n\\[\np+q=8\n\\]"
         },
         {
@@ -333,7 +333,7 @@
           "body": "Solve the two equations:\n\n\\[\n2p=22\n\\]\n\n\\[\np=11\n\\]\n\n\\[\nq=-3\n\\]"
         },
         {
-          "title": "Use one root in",
+          "title": "Read the graph",
           "body": "Use one root in \\(y=x^2-8x-9\\):\n\n\\[\nk=11^2-8(11)-9\n\\]\n\n\\[\nk=121-88-9\n\\]\n\n\\[\nk=24\n\\]"
         }
       ],
@@ -346,7 +346,7 @@
       "topicNote": "Moved from Estimating Gradients to Differentiation.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Find the gradient",
           "body": "\\[\ny=2x^4-64x\n\\]"
         },
         {
@@ -354,7 +354,7 @@
           "body": "Differentiate:\n\n\\[\n\\frac{dy}{dx}=8x^3-64\n\\]"
         },
         {
-          "title": "At the minimum point, the",
+          "title": "Find the gradient",
           "body": "At the minimum point, the gradient is 0.\n\n\\[\n8x^3-64=0\n\\]\n\n\\[\n8x^3=64\n\\]\n\n\\[\nx^3=8\n\\]\n\n\\[\nx=2\n\\]"
         },
         {
@@ -388,7 +388,7 @@
       "topicNote": "Corrected to Circles, Arcs & Sectors.",
       "steps": [
         {
-          "title": "For triangle ,",
+          "title": "Use trigonometry",
           "body": "For triangle \\(OAB\\),\n\n\\[\n120=\\frac12r^2\\sin50^\\circ\n\\]\n\n\\[\nr^2=\\frac{240}{\\sin50^\\circ}\n\\]"
         },
         {
@@ -405,11 +405,11 @@
       "topicNote": "Volume & Surface Area. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate area",
           "body": "\\[\nV=\\pi r^2h=\\pi(70)^2(18)\n\\]\n\n\\[\nV=277088.472\\ldots\\text{ cm}^3\n\\]"
         },
         {
-          "title": "Since litre,",
+          "title": "Calculate area",
           "body": "Since \\(1000\\text{ cm}^3=1\\) litre,\n\\[\n277088.472\\ldots\\text{ cm}^3=277.088\\ldots\\text{ litres}\n\\]"
         }
       ],
@@ -434,7 +434,7 @@
           "body": "Volume of a hemisphere:\n\n\\[\n\\frac{2}{3}\\pi r^3\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate volume",
           "body": "So\n\n\\[\n\\text{metal volume}\n=\\frac{2}{3}\\pi(12)^3-\\frac{2}{3}\\pi(9)^3\n\\]\n\n\\[\n=\\frac{2}{3}\\pi(12^3-9^3)\n\\]\n\n\\[\n=\\frac{2}{3}\\pi(1728-729)\n\\]\n\n\\[\n=666\\pi\n\\]\n\n\\[\n=2092.3007\\ldots\n\\]"
         }
       ],
@@ -447,7 +447,7 @@
       "topicNote": "Congruence, Similarity & Geometrical Proof. The tag is correct.",
       "steps": [
         {
-          "title": "In the larger triangle,",
+          "title": "Use trigonometry",
           "body": "In the larger triangle,\n\\[\nDE^2=51^2-24^2\n\\]\n\n\\[\nDE=45\n\\]"
         },
         {
@@ -455,7 +455,7 @@
           "body": "The scale factor from the large triangle to the small triangle is\n\\[\n\\frac{7.5}{45}=\\frac16\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\\[\nx=24\\times \\frac16=4\n\\]"
         }
       ],
@@ -468,11 +468,11 @@
       "topicNote": "Right-Angled Triangles - Pythagoras & Trigonometry. The tag is correct.",
       "steps": [
         {
-          "title": "In triangle ,",
+          "title": "Use trigonometry",
           "body": "In triangle \\(ABD\\),\n\n\\[\n\\tan47^\\circ=\\frac{BD}{4250}\n\\]\n\n\\[\nBD=4250\\tan47^\\circ=4557.567\\ldots\n\\]"
         },
         {
-          "title": "In triangle ,",
+          "title": "Use trigonometry",
           "body": "In triangle \\(ABC\\),\n\n\\[\n\\tan24^\\circ=\\frac{4250}{BC}\n\\]\n\n\\[\nBC=\\frac{4250}{\\tan24^\\circ}=9545.656\\ldots\n\\]\n\n\\[\nDC=BC-BD=4988.089\\ldots\n\\]"
         }
       ],
@@ -485,39 +485,39 @@
       "topicNote": "Moved from Linear Graphs to Vectors.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Read the graph",
           "body": "\\[\n\\vec{OA}=10\\mathbf a,\\qquad \\vec{OB}=10\\mathbf b\n\\]"
         },
         {
-          "title": "Also,",
+          "title": "Read the graph",
           "body": "Also,\n\n\\[\n\\vec{AP}=\\frac14\\vec{AB}\n\\]"
         },
         {
-          "title": "and",
+          "title": "Read the graph",
           "body": "and\n\n\\[\n\\vec{OQ}=\\frac15\\vec{OB}\n\\]"
         },
         {
-          "title": "For part (i),",
+          "title": "Read the graph",
           "body": "For part (i),\n\n\\[\n\\vec{OQ}=2\\mathbf b\n\\]\n\n\\[\n\\vec{AQ}=\\vec{OQ}-\\vec{OA}\n\\]\n\n\\[\n\\vec{AQ}=2\\mathbf b-10\\mathbf a\n\\]"
         },
         {
-          "title": "For part (ii),",
+          "title": "Read the graph",
           "body": "For part (ii),\n\n\\[\n\\vec{AB}=10\\mathbf b-10\\mathbf a\n\\]\n\n\\[\n\\vec{AP}=\\frac14(10\\mathbf b-10\\mathbf a)\n\\]\n\n\\[\n\\vec{AP}=\\frac52\\mathbf b-\\frac52\\mathbf a\n\\]\n\n\\[\n\\vec{OP}=\\vec{OA}+\\vec{AP}\n\\]\n\n\\[\n\\vec{OP}=10\\mathbf a-\\frac52\\mathbf a+\\frac52\\mathbf b\n\\]\n\n\\[\n\\vec{OP}=\\frac{15}{2}\\mathbf a+\\frac52\\mathbf b\n\\]"
         },
         {
-          "title": "For part (iii), lies on",
+          "title": "Read the graph",
           "body": "For part (iii), \\(R\\) lies on \\(OP\\), so\n\n\\[\n\\vec{OR}=t\\vec{OP}\n\\]"
         },
         {
-          "title": "It also lies on ,",
+          "title": "Read the graph",
           "body": "It also lies on \\(AQ\\), so\n\n\\[\n\\vec{OR}=\\vec{OA}+s\\vec{AQ}\n\\]\n\n\\[\n\\vec{OR}=10\\mathbf a+s(2\\mathbf b-10\\mathbf a)\n\\]\n\n\\[\n\\vec{OR}=(10-10s)\\mathbf a+2s\\mathbf b\n\\]"
         },
         {
-          "title": "Equate with",
+          "title": "Read the graph",
           "body": "Equate with\n\n\\[\nt\\left(\\frac{15}{2}\\mathbf a+\\frac52\\mathbf b\\right)\n\\]\n\n\\[\n\\frac{15}{2}t=10-10s\n\\]\n\n\\[\n\\frac52t=2s\n\\]"
         },
         {
-          "title": "From the second equation,",
+          "title": "Solve equation",
           "body": "From the second equation,\n\n\\[\ns=\\frac54t\n\\]"
         },
         {
@@ -525,7 +525,7 @@
           "body": "Substitute:\n\n\\[\n\\frac{15}{2}t=10-\\frac{25}{2}t\n\\]\n\n\\[\n20t=10\n\\]\n\n\\[\nt=\\frac12\n\\]"
         },
         {
-          "title": "So",
+          "title": "Read the graph",
           "body": "So\n\n\\[\n\\vec{OR}=\\frac12\\vec{OP}\n\\]\n\n\\[\n\\vec{OR}=\\frac{15}{4}\\mathbf a+\\frac54\\mathbf b\n\\]"
         }
       ],
@@ -576,7 +576,7 @@
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate probability",
           "body": "\\[\nP(\\text{not early on Saturday})=1-0.7=0.3\n\\]\n\n\\[\nP(\\text{early on both days})=0.7\\times 0.9=0.63\n\\]"
         }
       ],
@@ -589,11 +589,11 @@
       "topicNote": "Rounding, Estimation & Bounds is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Estimate the value",
           "body": "\\[\nT=\\frac{x^2+y^2}{w}\n\\]"
         },
         {
-          "title": "For the upper bound of",
+          "title": "Find upper bound",
           "body": "For the upper bound of \\(T\\), use the upper bounds of \\(x\\) and \\(y\\), and the lower bound of \\(w\\).\n\n\\(x=28.45,\\quad y=17.5,\\quad w=87.5\\)\n\n\\[\nT=\\frac{28.45^2+17.5^2}{87.5}\n\\]\n\n\\[\nT=12.7503...\n\\]"
         }
       ],
@@ -606,7 +606,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nf(x)=2x^2-24x+7\n\\]"
         },
         {
@@ -618,7 +618,7 @@
           "body": "Let \\(y=f(x)\\).\n\n\\[\ny=2(x-6)^2-65\n\\]\n\n\\[\ny+65=2(x-6)^2\n\\]\n\n\\[\n\\frac{y+65}{2}=(x-6)^2\n\\]"
         },
         {
-          "title": "Since , take the positive",
+          "title": "Simplify surd",
           "body": "Since \\(x\\ge 6\\), take the positive square root:\n\n\\[\nx-6=\\sqrt{\\frac{y+65}{2}}\n\\]\n\n\\[\nx=6+\\sqrt{\\frac{y+65}{2}}\n\\]"
         },
         {
@@ -643,15 +643,15 @@
           "body": "The line is\n\n\\[\ny=k\n\\]"
         },
         {
-          "title": "At the intersection points,",
+          "title": "Read the graph",
           "body": "At the intersection points,\n\n\\[\nx^2-8x-9=k\n\\]\n\n\\[\nx^2-8x-(9+k)=0\n\\]"
         },
         {
-          "title": "The two roots are and",
+          "title": "Read the graph",
           "body": "The two roots are \\(p\\) and \\(q\\)."
         },
         {
-          "title": "For this quadratic,",
+          "title": "Solve quadratic equation",
           "body": "For this quadratic,\n\n\\[\np+q=8\n\\]"
         },
         {
@@ -663,7 +663,7 @@
           "body": "Solve the two equations:\n\n\\[\n2p=22\n\\]\n\n\\[\np=11\n\\]\n\n\\[\nq=-3\n\\]"
         },
         {
-          "title": "Use one root in",
+          "title": "Read the graph",
           "body": "Use one root in \\(y=x^2-8x-9\\):\n\n\\[\nk=11^2-8(11)-9\n\\]\n\n\\[\nk=121-88-9\n\\]\n\n\\[\nk=24\n\\]"
         }
       ],
@@ -676,7 +676,7 @@
       "topicNote": "Moved from Estimating Gradients to Differentiation.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Find the gradient",
           "body": "\\[\ny=2x^4-64x\n\\]"
         },
         {
@@ -684,7 +684,7 @@
           "body": "Differentiate:\n\n\\[\n\\frac{dy}{dx}=8x^3-64\n\\]"
         },
         {
-          "title": "At the minimum point, the",
+          "title": "Find the gradient",
           "body": "At the minimum point, the gradient is 0.\n\n\\[\n8x^3-64=0\n\\]\n\n\\[\n8x^3=64\n\\]\n\n\\[\nx^3=8\n\\]\n\n\\[\nx=2\n\\]"
         },
         {
@@ -717,7 +717,7 @@
           "body": "Volume of a hemisphere:\n\n\\[\n\\frac{2}{3}\\pi r^3\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate volume",
           "body": "So\n\n\\[\n\\text{metal volume}\n=\\frac{2}{3}\\pi(12)^3-\\frac{2}{3}\\pi(9)^3\n\\]\n\n\\[\n=\\frac{2}{3}\\pi(12^3-9^3)\n\\]\n\n\\[\n=\\frac{2}{3}\\pi(1728-729)\n\\]\n\n\\[\n=666\\pi\n\\]\n\n\\[\n=2092.3007\\ldots\n\\]"
         }
       ],
@@ -730,39 +730,39 @@
       "topicNote": "Moved from Linear Graphs to Vectors.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Read the graph",
           "body": "\\[\n\\vec{OA}=10\\mathbf a,\\qquad \\vec{OB}=10\\mathbf b\n\\]"
         },
         {
-          "title": "Also,",
+          "title": "Read the graph",
           "body": "Also,\n\n\\[\n\\vec{AP}=\\frac14\\vec{AB}\n\\]"
         },
         {
-          "title": "and",
+          "title": "Read the graph",
           "body": "and\n\n\\[\n\\vec{OQ}=\\frac15\\vec{OB}\n\\]"
         },
         {
-          "title": "For part (i),",
+          "title": "Read the graph",
           "body": "For part (i),\n\n\\[\n\\vec{OQ}=2\\mathbf b\n\\]\n\n\\[\n\\vec{AQ}=\\vec{OQ}-\\vec{OA}\n\\]\n\n\\[\n\\vec{AQ}=2\\mathbf b-10\\mathbf a\n\\]"
         },
         {
-          "title": "For part (ii),",
+          "title": "Read the graph",
           "body": "For part (ii),\n\n\\[\n\\vec{AB}=10\\mathbf b-10\\mathbf a\n\\]\n\n\\[\n\\vec{AP}=\\frac14(10\\mathbf b-10\\mathbf a)\n\\]\n\n\\[\n\\vec{AP}=\\frac52\\mathbf b-\\frac52\\mathbf a\n\\]\n\n\\[\n\\vec{OP}=\\vec{OA}+\\vec{AP}\n\\]\n\n\\[\n\\vec{OP}=10\\mathbf a-\\frac52\\mathbf a+\\frac52\\mathbf b\n\\]\n\n\\[\n\\vec{OP}=\\frac{15}{2}\\mathbf a+\\frac52\\mathbf b\n\\]"
         },
         {
-          "title": "For part (iii), lies on",
+          "title": "Read the graph",
           "body": "For part (iii), \\(R\\) lies on \\(OP\\), so\n\n\\[\n\\vec{OR}=t\\vec{OP}\n\\]"
         },
         {
-          "title": "It also lies on ,",
+          "title": "Read the graph",
           "body": "It also lies on \\(AQ\\), so\n\n\\[\n\\vec{OR}=\\vec{OA}+s\\vec{AQ}\n\\]\n\n\\[\n\\vec{OR}=10\\mathbf a+s(2\\mathbf b-10\\mathbf a)\n\\]\n\n\\[\n\\vec{OR}=(10-10s)\\mathbf a+2s\\mathbf b\n\\]"
         },
         {
-          "title": "Equate with",
+          "title": "Read the graph",
           "body": "Equate with\n\n\\[\nt\\left(\\frac{15}{2}\\mathbf a+\\frac52\\mathbf b\\right)\n\\]\n\n\\[\n\\frac{15}{2}t=10-10s\n\\]\n\n\\[\n\\frac52t=2s\n\\]"
         },
         {
-          "title": "From the second equation,",
+          "title": "Solve equation",
           "body": "From the second equation,\n\n\\[\ns=\\frac54t\n\\]"
         },
         {
@@ -770,7 +770,7 @@
           "body": "Substitute:\n\n\\[\n\\frac{15}{2}t=10-\\frac{25}{2}t\n\\]\n\n\\[\n20t=10\n\\]\n\n\\[\nt=\\frac12\n\\]"
         },
         {
-          "title": "So",
+          "title": "Read the graph",
           "body": "So\n\n\\[\n\\vec{OR}=\\frac12\\vec{OP}\n\\]\n\n\\[\n\\vec{OR}=\\frac{15}{4}\\mathbf a+\\frac54\\mathbf b\n\\]"
         }
       ],

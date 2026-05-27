@@ -8,11 +8,11 @@
       "topicNote": "Powers, roots and standard form. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Convert standard form",
           "body": "\\[\n520\\text{ million}=520000000=5.2\\times 10^8\n\\]\n\n\\[\n8.79\\times 10^{-5}=0.0000879\n\\]"
         },
         {
-          "title": "For part (c),",
+          "title": "Convert standard form",
           "body": "For part (c),\n\n\\[\n(5\\times 10^{42})(7\\times 10^{-180})\n=35\\times 10^{-138}\n\\]"
         },
         {
@@ -45,11 +45,11 @@
           "body": "Percentage profit:\n\n\\[\n\\frac{240}{1920}\\times 100=12.5\n\\]"
         },
         {
-          "title": "The height cm correct to",
+          "title": "Find lower bound",
           "body": "The height \\(9\\) cm correct to the nearest cm has lower bound\n\n\\[\n8.5\\text{ cm}\n\\]"
         },
         {
-          "title": "The weight g correct to",
+          "title": "Find upper bound",
           "body": "The weight \\(120\\) g correct to the nearest \\(10\\) g has upper bound\n\n\\[\n125\\text{ g}\n\\]"
         }
       ],
@@ -79,11 +79,11 @@
       "topicNote": "Compound Interest and Depreciation. The tag is correct.",
       "steps": [
         {
-          "title": "After the first two years,",
+          "title": "Use compound interest",
           "body": "After the first two years, the value is\n\n\\[\n750000(0.96)(0.935)=673200\n\\]"
         },
         {
-          "title": "Then the value increases by",
+          "title": "Use compound interest",
           "body": "Then the value increases by \\(x\\%\\) to \\(698445\\), so\n\n\\[\n673200\\left(1+\\frac{x}{100}\\right)=698445\n\\]\n\n\\[\n1+\\frac{x}{100}=\\frac{698445}{673200}=1.0375\n\\]\n\n\\[\nx=3.75\n\\]"
         }
       ],
@@ -96,7 +96,7 @@
       "topicNote": "Direct and Inverse Proportion. The tag is correct.",
       "steps": [
         {
-          "title": "is inversely proportional to ,",
+          "title": "Find inverse function",
           "body": "\\(y\\) is inversely proportional to \\(x^3\\), so\n\n\\[\ny=\\frac{k}{x^3}\n\\]"
         },
         {
@@ -104,11 +104,11 @@
           "body": "Use \\(y=4\\) when \\(x=3\\):\n\n\\[\n4=\\frac{k}{3^3}\n\\]\n\n\\[\nk=4\\times 27=108\n\\]"
         },
         {
-          "title": "So",
+          "title": "Find inverse function",
           "body": "So\n\n\\[\ny=\\frac{108}{x^3}\n\\]"
         },
         {
-          "title": "When ,",
+          "title": "Find inverse function",
           "body": "When \\(y=864\\),\n\n\\[\n864=\\frac{108}{x^3}\n\\]\n\n\\[\nx^3=\\frac{108}{864}=\\frac18\n\\]\n\n\\[\nx=\\frac12\n\\]"
         }
       ],
@@ -121,23 +121,23 @@
       "topicNote": "Algebraic Roots and Indices. The tag is correct.",
       "steps": [
         {
-          "title": "For part (a),",
+          "title": "Use index laws",
           "body": "For part (a),\n\n\\[\nx^5\\times x^7=x^{12}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use index laws",
           "body": "So \\(m=12\\)."
         },
         {
-          "title": "For part (b),",
+          "title": "Use index laws",
           "body": "For part (b),\n\n\\[\ny^8\\div y^3=y^{8-3}=y^5\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use index laws",
           "body": "So \\(n=5\\)."
         },
         {
-          "title": "For part (c),",
+          "title": "Use index laws",
           "body": "For part (c),\n\n\\[\n(5a^4r^2)^3=5^3a^{4\\times 3}r^{2\\times 3}\n\\]\n\n\\[\n=125a^{12}r^6\n\\]"
         }
       ],
@@ -171,7 +171,7 @@
       "topicNote": "Corrected to Algebraic Fractions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify fraction",
           "body": "\\[\n\\frac54+\\frac{x-3}{6x}\n\\]"
         },
         {
@@ -192,7 +192,7 @@
           "body": "(a)\n\\[\n(\\sqrt3)^5=(\\sqrt3)^4\\sqrt3=9\\sqrt3\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So \\(k=9\\)."
         },
         {
@@ -200,7 +200,7 @@
           "body": "(b)\n\\[\n\\frac{21}{3-\\sqrt2}\\times\\frac{3+\\sqrt2}{3+\\sqrt2}\n=\\frac{21(3+\\sqrt2)}{9-2}\n\\]\n\n\\[\n=3(3+\\sqrt2)=9+3\\sqrt2\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Simplify surd",
           "body": "Since \\(3\\sqrt2=\\sqrt{18}\\),\n\\[\n9+3\\sqrt2=9+\\sqrt{18}\n\\]"
         }
       ],
@@ -213,7 +213,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nx^2+y^2+3y=7\n\\]\n\n\\[\ny=x+2\n\\]"
         },
         {
@@ -221,7 +221,7 @@
           "body": "Substitute:\n\n\\[\nx^2+(x+2)^2+3(x+2)=7\n\\]\n\n\\[\nx^2+x^2+4x+4+3x+6=7\n\\]\n\n\\[\n2x^2+7x+3=0\n\\]\n\n\\[\n(2x+1)(x+3)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\nx=-\\frac12 \\quad \\text{or} \\quad x=-3\n\\]"
         },
         {
@@ -238,7 +238,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\nu_{20}=a+19d=123\n\\]\n\n\\[\nS_{30}=\\frac{30}{2}(2a+29d)=2880\n\\]\n\n\\[\n2a+29d=192\n\\]"
         },
         {
@@ -259,7 +259,7 @@
       "topicNote": "Corrected to Functions. The original tag was solving quadratic equations, but the question uses function notation and composition.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve quadratic equation",
           "body": "\\[\nf(x)=9-\\sqrt{x},\\qquad g(x)=4x^2\n\\]"
         },
         {
@@ -275,11 +275,11 @@
           "body": "Solve\n\\[\n9-2|x|<0\n\\]\n\n\\[\n2|x|>9\n\\]\n\n\\[\n|x|>\\frac92\n\\]"
         },
         {
-          "title": "So",
+          "title": "Solve quadratic equation",
           "body": "So\n\\[\nx<-\\frac92 \\quad \\text{or} \\quad x>\\frac92\n\\]"
         },
         {
-          "title": "If the input is restricted",
+          "title": "Solve quadratic equation",
           "body": "If the input is restricted to \\(x\\ge0\\), this becomes \\(x>\\frac92\\)."
         }
       ],
@@ -292,7 +292,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nP=(4,7),\\qquad R=(8,-5)\n\\]"
         },
         {
@@ -312,7 +312,7 @@
           "body": "The midpoint of \\(PR\\) is\n\n\\[\n\\left(\\frac{4+8}{2},\\frac{7+(-5)}{2}\\right)=(6,1)\n\\]"
         },
         {
-          "title": "So passes through with gradient",
+          "title": "Find the gradient",
           "body": "So \\(QS\\) passes through \\((6,1)\\) with gradient \\(\\frac13\\).\n\n\\[\ny-1=\\frac13(x-6)\n\\]\n\n\\[\ny=\\frac13x-1\n\\]"
         },
         {
@@ -329,7 +329,7 @@
       "topicNote": "Correct. This is a table-and-graph question for a cubic function.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Read the graph",
           "body": "\\[\ny=x^3+2x+3\n\\]"
         },
         {
@@ -354,11 +354,11 @@
           "body": "The minimum point of \\(y=f(x)\\) is\n\\[\n(8,12)\n\\]"
         },
         {
-          "title": "For the graph moves up",
+          "title": "Read the graph",
           "body": "For\n\\[\ny=f(x)+5\n\\]\nthe graph moves up by 5:\n\\[\n(8,12)\\to(8,17)\n\\]"
         },
         {
-          "title": "For the graph is horizontally",
+          "title": "Read the graph",
           "body": "For\n\\[\ny=f(2x)\n\\]\nthe graph is horizontally compressed by scale factor \\(\\frac12\\), so the \\(x\\)-coordinate is halved:\n\\[\n(8,12)\\to(4,12)\n\\]"
         }
       ],
@@ -371,7 +371,7 @@
       "topicNote": "Angles in Polygons & Parallel Lines. The tag is correct.",
       "steps": [
         {
-          "title": "Angles around point add to",
+          "title": "Find the gradient",
           "body": "Angles around point \\(B\\) add to \\(360^\\circ\\)."
         },
         {
@@ -379,11 +379,11 @@
           "body": "The interior angle of the regular polygon is\n\\[\n360^\\circ-140^\\circ-50^\\circ=170^\\circ\n\\]"
         },
         {
-          "title": "So the exterior angle is",
+          "title": "Find the gradient",
           "body": "So the exterior angle is\n\\[\n180^\\circ-170^\\circ=10^\\circ\n\\]"
         },
         {
-          "title": "For a regular polygon,",
+          "title": "Find the gradient",
           "body": "For a regular polygon,\n\\[\nn=\\frac{360}{10}=36\n\\]"
         }
       ],
@@ -396,7 +396,7 @@
       "topicNote": "Area & Perimeter. The tag is correct.",
       "steps": [
         {
-          "title": "Because the trapezium has one",
+          "title": "Use trigonometry",
           "body": "Because the trapezium has one line of symmetry, each sloping side makes the same \\(60^\\circ\\) angle with the base."
         },
         {
@@ -421,7 +421,7 @@
       "topicNote": "Circles, Arcs & Sectors. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate area",
           "body": "\\[\n\\text{area}=\\frac{140}{360}\\times \\pi(16)^2\n\\]\n\n\\[\n=312.763\\ldots\n\\]"
         }
       ],
@@ -434,7 +434,7 @@
       "topicNote": "Volume & Surface Area. The tag is correct.",
       "steps": [
         {
-          "title": "For a cylinder,",
+          "title": "Calculate area",
           "body": "For a cylinder,\n\\[\nV=\\pi r^2h\n\\]\n\n\\[\n3892=\\pi(8)^2h\n\\]\n\n\\[\nh=\\frac{3892}{64\\pi}=19.357\\ldots\n\\]"
         }
       ],
@@ -447,15 +447,15 @@
       "topicNote": "Moved from Standard & Compound Units to Sine, Cosine Rule & Area of Triangles.",
       "steps": [
         {
-          "title": "First use triangle",
+          "title": "Use trigonometry",
           "body": "First use triangle \\(ABD\\).\n\n\\[\nAB=9.4,\\quad AD=12.8,\\quad \\angle BAD=72^\\circ\n\\]"
         },
         {
-          "title": "Use the cosine rule to",
+          "title": "Use cosine rule",
           "body": "Use the cosine rule to find \\(BD\\):\n\n\\[\nBD^2=9.4^2+12.8^2-2(9.4)(12.8)\\cos72^\\circ\n\\]\n\n\\[\nBD=13.3356\\ldots\n\\]"
         },
         {
-          "title": "In triangle ,",
+          "title": "Use trigonometry",
           "body": "In triangle \\(BCD\\),\n\n\\[\n\\angle BDC=39^\\circ,\\quad \\angle BCD=54^\\circ\n\\]"
         },
         {
@@ -463,7 +463,7 @@
           "body": "Use the sine rule:\n\n\\[\n\\frac{BC}{\\sin39^\\circ}=\\frac{BD}{\\sin54^\\circ}\n\\]\n\n\\[\nBC=\\frac{13.3356\\ldots\\sin39^\\circ}{\\sin54^\\circ}\n\\]\n\n\\[\nBC=10.3735\\ldots\n\\]"
         },
         {
-          "title": "Correct to 3 significant figures,",
+          "title": "Use trigonometry",
           "body": "Correct to 3 significant figures,\n\n\\[\nBC=10.4\n\\]"
         }
       ],
@@ -476,11 +476,11 @@
       "topicNote": "Moved from Coordinate Geometry to Vectors.",
       "steps": [
         {
-          "title": "For part (a),",
+          "title": "Use vectors",
           "body": "For part (a),\n\n\\[\n\\vec{OA}=12\\mathbf a,\\qquad \\vec{OB}=8\\mathbf b\n\\]\n\n\\[\n\\vec{AB}=\\vec{OB}-\\vec{OA}\n\\]\n\n\\[\n\\vec{AB}=8\\mathbf b-12\\mathbf a\n\\]"
         },
         {
-          "title": "For part (b), is the",
+          "title": "Find the midpoint",
           "body": "For part (b), \\(P\\) is the midpoint of \\(OA\\), so\n\n\\[\n\\vec{OP}=6\\mathbf a\n\\]"
         },
         {
@@ -488,23 +488,23 @@
           "body": "Given\n\n\\[\nAB:BR=1:2\n\\]\n\n\\[\n\\vec{BR}=2\\vec{AB}\n\\]\n\n\\[\n\\vec{BR}=16\\mathbf b-24\\mathbf a\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Use vectors",
           "body": "Therefore\n\n\\[\n\\vec{OR}=\\vec{OB}+\\vec{BR}\n\\]\n\n\\[\n\\vec{OR}=8\\mathbf b+16\\mathbf b-24\\mathbf a\n\\]\n\n\\[\n\\vec{OR}=-24\\mathbf a+24\\mathbf b\n\\]"
         },
         {
-          "title": "Since are collinear, write on",
+          "title": "Use vectors",
           "body": "Since \\(P,Q,R\\) are collinear, write \\(Q\\) on \\(PR\\):\n\n\\[\n\\vec{OQ}=\\vec{OP}+t(\\vec{OR}-\\vec{OP})\n\\]\n\n\\[\n\\vec{OQ}=6\\mathbf a+t(-30\\mathbf a+24\\mathbf b)\n\\]\n\n\\[\n\\vec{OQ}=(6-30t)\\mathbf a+24t\\mathbf b\n\\]"
         },
         {
-          "title": "But lies on , so",
+          "title": "Use vectors",
           "body": "But \\(Q\\) lies on \\(OB\\), so there is no \\(\\mathbf a\\) component:\n\n\\[\n6-30t=0\n\\]\n\n\\[\nt=\\frac15\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Use vectors",
           "body": "Then\n\n\\[\n\\vec{OQ}=24\\left(\\frac15\\right)\\mathbf b\n\\]\n\n\\[\n\\vec{OQ}=\\frac{24}{5}\\mathbf b\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Use vectors",
           "body": "Since \\(\\vec{OQ}=n\\mathbf b\\),\n\n\\[\nn=\\frac{24}{5}\n\\]"
         }
       ],
@@ -546,7 +546,7 @@
           "body": "More than \\(40\\) minutes:\n\n\\[\n10(0.5)+10(1.7)=22\n\\]"
         },
         {
-          "title": "So the proportion is",
+          "title": "Use histogram",
           "body": "So the proportion is\n\n\\[\n\\frac{22}{126}=\\frac{11}{63}\n\\]"
         }
       ],
@@ -571,7 +571,7 @@
           "body": "Exactly two counters are the same colour:\n\n\\[\n\\binom{9}{2}(11)+\\binom{7}{2}(13)+\\binom{4}{2}(16)\n\\]\n\n\\[\n=36(11)+21(13)+6(16)\n\\]\n\n\\[\n=396+273+96=765\n\\]"
         },
         {
-          "title": "So the probability is",
+          "title": "Calculate probability",
           "body": "So the probability is\n\n\\[\n\\frac{765}{1140}=\\frac{51}{76}\n\\]"
         }
       ],
@@ -584,7 +584,7 @@
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate probability",
           "body": "\\[\nP(\\text{loses badminton})=1-0.7=0.3\n\\]\n\n\\[\nP(\\text{loses tennis})=1-0.4=0.6\n\\]\n\n\\[\nP(\\text{loses both})=0.3\\times 0.6=0.18\n\\]"
         }
       ],
@@ -597,7 +597,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nx^2+y^2+3y=7\n\\]\n\n\\[\ny=x+2\n\\]"
         },
         {
@@ -605,7 +605,7 @@
           "body": "Substitute:\n\n\\[\nx^2+(x+2)^2+3(x+2)=7\n\\]\n\n\\[\nx^2+x^2+4x+4+3x+6=7\n\\]\n\n\\[\n2x^2+7x+3=0\n\\]\n\n\\[\n(2x+1)(x+3)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\nx=-\\frac12 \\quad \\text{or} \\quad x=-3\n\\]"
         },
         {
@@ -622,7 +622,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\nu_{20}=a+19d=123\n\\]\n\n\\[\nS_{30}=\\frac{30}{2}(2a+29d)=2880\n\\]\n\n\\[\n2a+29d=192\n\\]"
         },
         {
@@ -643,7 +643,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nP=(4,7),\\qquad R=(8,-5)\n\\]"
         },
         {
@@ -663,7 +663,7 @@
           "body": "The midpoint of \\(PR\\) is\n\n\\[\n\\left(\\frac{4+8}{2},\\frac{7+(-5)}{2}\\right)=(6,1)\n\\]"
         },
         {
-          "title": "So passes through with gradient",
+          "title": "Find the gradient",
           "body": "So \\(QS\\) passes through \\((6,1)\\) with gradient \\(\\frac13\\).\n\n\\[\ny-1=\\frac13(x-6)\n\\]\n\n\\[\ny=\\frac13x-1\n\\]"
         },
         {
@@ -680,15 +680,15 @@
       "topicNote": "Moved from Standard & Compound Units to Sine, Cosine Rule & Area of Triangles.",
       "steps": [
         {
-          "title": "First use triangle",
+          "title": "Use trigonometry",
           "body": "First use triangle \\(ABD\\).\n\n\\[\nAB=9.4,\\quad AD=12.8,\\quad \\angle BAD=72^\\circ\n\\]"
         },
         {
-          "title": "Use the cosine rule to",
+          "title": "Use cosine rule",
           "body": "Use the cosine rule to find \\(BD\\):\n\n\\[\nBD^2=9.4^2+12.8^2-2(9.4)(12.8)\\cos72^\\circ\n\\]\n\n\\[\nBD=13.3356\\ldots\n\\]"
         },
         {
-          "title": "In triangle ,",
+          "title": "Use trigonometry",
           "body": "In triangle \\(BCD\\),\n\n\\[\n\\angle BDC=39^\\circ,\\quad \\angle BCD=54^\\circ\n\\]"
         },
         {
@@ -696,7 +696,7 @@
           "body": "Use the sine rule:\n\n\\[\n\\frac{BC}{\\sin39^\\circ}=\\frac{BD}{\\sin54^\\circ}\n\\]\n\n\\[\nBC=\\frac{13.3356\\ldots\\sin39^\\circ}{\\sin54^\\circ}\n\\]\n\n\\[\nBC=10.3735\\ldots\n\\]"
         },
         {
-          "title": "Correct to 3 significant figures,",
+          "title": "Use trigonometry",
           "body": "Correct to 3 significant figures,\n\n\\[\nBC=10.4\n\\]"
         }
       ],
@@ -709,11 +709,11 @@
       "topicNote": "Moved from Coordinate Geometry to Vectors.",
       "steps": [
         {
-          "title": "For part (a),",
+          "title": "Use vectors",
           "body": "For part (a),\n\n\\[\n\\vec{OA}=12\\mathbf a,\\qquad \\vec{OB}=8\\mathbf b\n\\]\n\n\\[\n\\vec{AB}=\\vec{OB}-\\vec{OA}\n\\]\n\n\\[\n\\vec{AB}=8\\mathbf b-12\\mathbf a\n\\]"
         },
         {
-          "title": "For part (b), is the",
+          "title": "Find the midpoint",
           "body": "For part (b), \\(P\\) is the midpoint of \\(OA\\), so\n\n\\[\n\\vec{OP}=6\\mathbf a\n\\]"
         },
         {
@@ -721,23 +721,23 @@
           "body": "Given\n\n\\[\nAB:BR=1:2\n\\]\n\n\\[\n\\vec{BR}=2\\vec{AB}\n\\]\n\n\\[\n\\vec{BR}=16\\mathbf b-24\\mathbf a\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Use vectors",
           "body": "Therefore\n\n\\[\n\\vec{OR}=\\vec{OB}+\\vec{BR}\n\\]\n\n\\[\n\\vec{OR}=8\\mathbf b+16\\mathbf b-24\\mathbf a\n\\]\n\n\\[\n\\vec{OR}=-24\\mathbf a+24\\mathbf b\n\\]"
         },
         {
-          "title": "Since are collinear, write on",
+          "title": "Use vectors",
           "body": "Since \\(P,Q,R\\) are collinear, write \\(Q\\) on \\(PR\\):\n\n\\[\n\\vec{OQ}=\\vec{OP}+t(\\vec{OR}-\\vec{OP})\n\\]\n\n\\[\n\\vec{OQ}=6\\mathbf a+t(-30\\mathbf a+24\\mathbf b)\n\\]\n\n\\[\n\\vec{OQ}=(6-30t)\\mathbf a+24t\\mathbf b\n\\]"
         },
         {
-          "title": "But lies on , so",
+          "title": "Use vectors",
           "body": "But \\(Q\\) lies on \\(OB\\), so there is no \\(\\mathbf a\\) component:\n\n\\[\n6-30t=0\n\\]\n\n\\[\nt=\\frac15\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Use vectors",
           "body": "Then\n\n\\[\n\\vec{OQ}=24\\left(\\frac15\\right)\\mathbf b\n\\]\n\n\\[\n\\vec{OQ}=\\frac{24}{5}\\mathbf b\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Use vectors",
           "body": "Since \\(\\vec{OQ}=n\\mathbf b\\),\n\n\\[\nn=\\frac{24}{5}\n\\]"
         }
       ],
@@ -762,7 +762,7 @@
           "body": "Exactly two counters are the same colour:\n\n\\[\n\\binom{9}{2}(11)+\\binom{7}{2}(13)+\\binom{4}{2}(16)\n\\]\n\n\\[\n=36(11)+21(13)+6(16)\n\\]\n\n\\[\n=396+273+96=765\n\\]"
         },
         {
-          "title": "So the probability is",
+          "title": "Calculate probability",
           "body": "So the probability is\n\n\\[\n\\frac{765}{1140}=\\frac{51}{76}\n\\]"
         }
       ],

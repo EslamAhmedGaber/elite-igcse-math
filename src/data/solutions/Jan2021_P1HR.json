@@ -8,23 +8,23 @@
       "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Find the LCM",
           "body": "\\[\nA=2^8\\times 3^5\\times 11^4\n\\]\n\n\\[\nB=2^6\\times 3\\times 11^8\n\\]"
         },
         {
-          "title": "For the HCF, take the",
+          "title": "Find the LCM",
           "body": "For the HCF, take the smaller power of each common prime:\n\n\\[\n\\text{HCF}=2^6\\times 3\\times 11^4\n\\]"
         },
         {
-          "title": "Now",
+          "title": "Find the LCM",
           "body": "Now\n\n\\[\n2A=2^9\\times 3^5\\times 11^4\n\\]"
         },
         {
-          "title": "and",
+          "title": "Find the LCM",
           "body": "and\n\n\\[\n3B=2^6\\times 3^2\\times 11^8\n\\]"
         },
         {
-          "title": "For the LCM of and",
+          "title": "Find the LCM",
           "body": "For the LCM of \\(2A\\) and \\(3B\\), take the larger power of each prime:\n\n\\[\n\\text{LCM}=2^9\\times 3^5\\times 11^8\n\\]"
         }
       ],
@@ -37,11 +37,11 @@
       "topicNote": "Fractions. The tag is correct.",
       "steps": [
         {
-          "title": "Convert the mixed numbers to",
+          "title": "Simplify fraction",
           "body": "Convert the mixed numbers to improper fractions:\n\n\\[\n3\\frac15=\\frac{16}{5}\n\\]\n\n\\[\n1\\frac56=\\frac{11}{6}\n\\]"
         },
         {
-          "title": "Now multiply",
+          "title": "Simplify fraction",
           "body": "Now multiply:\n\n\\[\n\\frac{16}{5}\\times \\frac{11}{6}\n=\\frac{176}{30}\n\\]\n\n\\[\n=\\frac{88}{15}=5\\frac{13}{15}\n\\]"
         }
       ],
@@ -58,11 +58,11 @@
           "body": "The multiplier for a \\(2.4\\%\\) increase is\n\n\\[\n1.024\n\\]"
         },
         {
-          "title": "After 3 years,",
+          "title": "Use compound interest",
           "body": "After 3 years,\n\n\\[\n50000(1.024)^3=53687.0912\n\\]"
         },
         {
-          "title": "Correct to the nearest yen,",
+          "title": "Use compound interest",
           "body": "Correct to the nearest yen,\n\n\\[\n53687.0912\\approx 53687\n\\]"
         }
       ],
@@ -75,11 +75,11 @@
       "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Estimate the value",
           "body": "\\[\nk=\\frac{t}{a-h}\n\\]"
         },
         {
-          "title": "For the lower bound of",
+          "title": "Find lower bound",
           "body": "For the lower bound of \\(k\\), use the lower bound of \\(t\\) and make the denominator as large as possible.\n\n\\[\nt\\ge 13.5\n\\]\n\n\\[\na<7.85,\\quad h\\ge 3.35\n\\]\n\n\\[\n(a-h)_{\\text{upper}}=7.85-3.35=4.5\n\\]\n\n\\[\nk_{\\text{lower}}=\\frac{13.5}{4.5}=3\n\\]"
         }
       ],
@@ -155,7 +155,7 @@
           "body": "(a) Let\n\\[\nx=4.\\dot5\\dot7\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate value",
           "body": "Then\n\\[\n100x=457.\\dot5\\dot7\n\\]"
         },
         {
@@ -167,7 +167,7 @@
           "body": "(b)\n\\[\n\\frac{2}{6-3\\sqrt2}\\times \\frac{6+3\\sqrt2}{6+3\\sqrt2}\n=\\frac{12+6\\sqrt2}{36-18}\n\\]\n\n\\[\n=\\frac{12+6\\sqrt2}{18}=\\frac{2+\\sqrt2}{3}\n\\]"
         },
         {
-          "title": "So this is in the",
+          "title": "Simplify surd",
           "body": "So this is in the form \\(\\dfrac{a+\\sqrt a}{b}\\), with \\(a=2\\) and \\(b=3\\)."
         }
       ],
@@ -180,7 +180,7 @@
       "topicNote": "Solving inequalities. The tag is correct.",
       "steps": [
         {
-          "title": "(a) For",
+          "title": "Solve inequality",
           "body": "(a) For\n\\[\n-2\\le y<1\n\\]"
         },
         {
@@ -205,7 +205,7 @@
       "topicNote": "Simultaneous equations. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve simultaneous equations",
           "body": "\\[\nx-6y=5\n\\]\n\n\\[\nxy-2y^2=6\n\\]"
         },
         {
@@ -221,15 +221,15 @@
           "body": "Factorise:\n\\[\n(4y-3)(y+2)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Solve simultaneous equations",
           "body": "So\n\\[\ny=\\frac34 \\quad \\text{or} \\quad y=-2\n\\]"
         },
         {
-          "title": "If",
+          "title": "Solve simultaneous equations",
           "body": "If \\(y=\\frac34\\):\n\\[\nx=6\\left(\\frac34\\right)+5=\\frac{19}{2}\n\\]"
         },
         {
-          "title": "If",
+          "title": "Solve simultaneous equations",
           "body": "If \\(y=-2\\):\n\\[\nx=6(-2)+5=-7\n\\]"
         }
       ],
@@ -246,7 +246,7 @@
           "body": "Let \\(u_6=v\\)."
         },
         {
-          "title": "For an arithmetic series,",
+          "title": "Use series formula",
           "body": "For an arithmetic series,\n\n\\[\nS_{11}=\\frac{11}{2}(u_1+u_{11})\n\\]"
         },
         {
@@ -258,11 +258,11 @@
           "body": "Given\n\n\\[\nS_{11}=(u_6)^2+18\n\\]\n\n\\[\n11v=v^2+18\n\\]\n\n\\[\nv^2-11v+18=0\n\\]\n\n\\[\n(v-2)(v-9)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\nu_6=2 \\quad \\text{or} \\quad u_6=9\n\\]"
         },
         {
-          "title": "But . If , then",
+          "title": "Find the nth term",
           "body": "But \\(u_4=6\\). If \\(u_6=2\\), then the common difference is negative and later terms would not all be positive. Therefore,\n\n\\[\nu_6=9\n\\]\n\n\\[\nd=\\frac{u_6-u_4}{2}=\\frac{9-6}{2}=\\frac32\n\\]\n\n\\[\nu_{20}=u_6+14d\n\\]\n\n\\[\nu_{20}=9+14\\left(\\frac32\\right)=30\n\\]"
         }
       ],
@@ -275,7 +275,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Since , point lies on",
+          "title": "Find the gradient",
           "body": "Since \\(AB=AC\\), point \\(A\\) lies on the perpendicular bisector of \\(BC\\)."
         },
         {
@@ -287,11 +287,11 @@
           "body": "The gradient of \\(BC\\) is\n\n\\[\n\\frac{10-5}{2-(-1)}=\\frac53\n\\]"
         },
         {
-          "title": "So the gradient of the",
+          "title": "Find the gradient",
           "body": "So the gradient of the perpendicular bisector is\n\n\\[\n-\\frac35\n\\]"
         },
         {
-          "title": "Use the line through",
+          "title": "Find line equation",
           "body": "Use the line through \\(M\\):\n\n\\[\ny-\\frac{15}{2}=-\\frac35\\left(x-\\frac12\\right)\n\\]"
         },
         {
@@ -312,11 +312,11 @@
       "topicNote": "Moved from Linear Graphs to Differentiation.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Read the graph",
           "body": "\\[\ns=t^3-9t^2+33t-6\n\\]"
         },
         {
-          "title": "Velocity is the rate of",
+          "title": "Read the graph",
           "body": "Velocity is the rate of change of displacement:\n\n\\[\nv=\\frac{ds}{dt}\n\\]\n\n\\[\nv=3t^2-18t+33\n\\]"
         },
         {
@@ -324,11 +324,11 @@
           "body": "Complete the square:\n\n\\[\nv=3(t^2-6t+11)\n\\]\n\n\\[\nv=3[(t-3)^2+2]\n\\]\n\n\\[\nv=3(t-3)^2+6\n\\]"
         },
         {
-          "title": "Since , the minimum value",
+          "title": "Read the graph",
           "body": "Since \\((t-3)^2\\ge 0\\), the minimum value of \\(v\\) is\n\n\\[\n6\n\\]"
         },
         {
-          "title": "The velocity is always positive,",
+          "title": "Read the graph",
           "body": "The velocity is always positive, so the minimum speed is also \\(6\\)."
         }
       ],
@@ -366,19 +366,19 @@
           "body": "A regular hexagon has interior angle\n\\[\n\\frac{(6-2)180}{6}=120^\\circ\n\\]"
         },
         {
-          "title": "At , since is a",
+          "title": "Find the gradient",
           "body": "At \\(E\\), since \\(AEJ\\) is a straight line,\n\\[\n\\angle DEJ=180-108=72^\\circ\n\\]"
         },
         {
-          "title": "At , the angles around",
+          "title": "Find the gradient",
           "body": "At \\(D\\), the angles around the point include the pentagon angle \\(108^\\circ\\) and the hexagon angle \\(120^\\circ\\), so\n\\[\n\\angle EDI=360-108-120=132^\\circ\n\\]"
         },
         {
-          "title": "At , since is a",
+          "title": "Find the gradient",
           "body": "At \\(I\\), since \\(HIJ\\) is a straight line,\n\\[\n\\angle DIJ=180-120=60^\\circ\n\\]"
         },
         {
-          "title": "In quadrilateral , angles sum",
+          "title": "Find the gradient",
           "body": "In quadrilateral \\(EDIJ\\), angles sum to \\(360^\\circ\\):\n\\[\nx=360-72-132-60=96\n\\]"
         }
       ],
@@ -391,7 +391,7 @@
       "topicNote": "Circle Theorems. The tag is correct.",
       "steps": [
         {
-          "title": "By the alternate segment theorem,",
+          "title": "Use trigonometry",
           "body": "By the alternate segment theorem, the angle between the tangent and chord \\(BD\\) is equal to the angle in the opposite segment:\n\\[\n\\angle BFD=39^\\circ\n\\]"
         },
         {
@@ -399,7 +399,7 @@
           "body": "Given\n\\[\n\\angle EFD=18^\\circ\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\\[\n\\angle BFE=39^\\circ+18^\\circ=57^\\circ\n\\]"
         },
         {
@@ -424,7 +424,7 @@
           "body": "Rectangle area:\n\n\\[\n10\\times 6=60\n\\]"
         },
         {
-          "title": "For the triangle, half the",
+          "title": "Use trigonometry",
           "body": "For the triangle, half the base is \\(5\\) m.\n\n\\[\nh^2=7^2-5^2=24\n\\]\n\n\\[\nh=\\sqrt{24}\n\\]"
         },
         {
@@ -440,7 +440,7 @@
           "body": "Each tin covers \\(16\\text{ m}^2\\):\n\n\\[\n\\frac{84.494\\ldots}{16}=5.28\\ldots\n\\]"
         },
         {
-          "title": "Omondi must buy whole tins,",
+          "title": "Calculate area",
           "body": "Omondi must buy whole tins, so he needs 6 tins."
         }
       ],
@@ -453,15 +453,15 @@
       "topicNote": "Volume & Surface Area. The tag is correct.",
       "steps": [
         {
-          "title": "For the cuboid,",
+          "title": "Calculate area",
           "body": "For the cuboid,\n\\[\n12\\times 5\\times x=270\n\\]\n\n\\[\n60x=270\n\\]\n\n\\[\nx=4.5\n\\]"
         },
         {
-          "title": "The cylinder has radius and",
+          "title": "Calculate area",
           "body": "The cylinder has radius \\(4.5\\text{ cm}\\) and height \\(9\\text{ cm}\\).\n\n\\[\nV=\\pi r^2h=\\pi(4.5)^2(9)=572.555\\ldots\n\\]"
         },
         {
-          "title": "Also,",
+          "title": "Calculate area",
           "body": "Also,\n\\[\n1\\text{ m}^3=100^3=1000000\\text{ cm}^3\n\\]"
         }
       ],
@@ -474,15 +474,15 @@
       "topicNote": "Vectors. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use vectors",
           "body": "\\[\n\\overrightarrow{AB}=\\begin{pmatrix}5\\\\3\\end{pmatrix}\n\\]"
         },
         {
-          "title": "and",
+          "title": "Use vectors",
           "body": "and\n\n\\[\n\\overrightarrow{CB}=\\begin{pmatrix}-2\\\\4\\end{pmatrix}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use vectors",
           "body": "So\n\n\\[\n\\overrightarrow{BC}=-\\overrightarrow{CB}\n=\\begin{pmatrix}2\\\\-4\\end{pmatrix}\n\\]\n\n\\[\n\\overrightarrow{AC}\n=\\overrightarrow{AB}+\\overrightarrow{BC}\n=\\begin{pmatrix}5\\\\3\\end{pmatrix}\n+\\begin{pmatrix}2\\\\-4\\end{pmatrix}\n=\\begin{pmatrix}7\\\\-1\\end{pmatrix}\n\\]"
         }
       ],
@@ -495,7 +495,7 @@
       "topicNote": "Statistics Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "The mode is , and",
+          "title": "Calculate statistic",
           "body": "The mode is \\(7\\), and the numbers are \\(a,a,b,c\\), so\n\n\\[\na=7\n\\]"
         },
         {
@@ -503,11 +503,11 @@
           "body": "The median of four numbers is\n\n\\[\n\\frac{a+b}{2}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\n\\frac{7+b}{2}=8.5\n\\]\n\n\\[\n7+b=17\n\\]\n\n\\[\nb=10\n\\]"
         },
         {
-          "title": "The mean is , so",
+          "title": "Calculate statistic",
           "body": "The mean is \\(9\\), so the total is\n\n\\[\n4\\times 9=36\n\\]\n\n\\[\n7+7+10+c=36\n\\]\n\n\\[\nc=12\n\\]"
         }
       ],
@@ -520,11 +520,11 @@
       "topicNote": "Histograms. The tag is correct.",
       "steps": [
         {
-          "title": "The class has frequency .",
+          "title": "Use histogram",
           "body": "The \\(0<t\\le 2\\) class has frequency \\(28\\). From the histogram, the relative heights are\n\n\\[\n1,\\ 4,\\ 9,\\ 6,\\ 1\n\\]"
         },
         {
-          "title": "So the frequencies are",
+          "title": "Use histogram",
           "body": "So the frequencies are\n\n\\[\n28,\\ 112,\\ 126,\\ 84,\\ 42\n\\]"
         },
         {
@@ -553,11 +553,11 @@
           "body": "The median is at cumulative frequency \\(60\\)."
         },
         {
-          "title": "This lies between and",
+          "title": "Use cumulative frequency",
           "body": "This lies between \\((15,40)\\) and \\((20,68)\\):\n\n\\[\n15+\\frac{60-40}{68-40}\\times 5=18.57\\ldots\n\\]"
         },
         {
-          "title": "So the median is about",
+          "title": "Use cumulative frequency",
           "body": "So the median is about \\(18.6\\) minutes."
         },
         {
@@ -582,7 +582,7 @@
           "body": "Let \\(u_6=v\\)."
         },
         {
-          "title": "For an arithmetic series,",
+          "title": "Use series formula",
           "body": "For an arithmetic series,\n\n\\[\nS_{11}=\\frac{11}{2}(u_1+u_{11})\n\\]"
         },
         {
@@ -594,11 +594,11 @@
           "body": "Given\n\n\\[\nS_{11}=(u_6)^2+18\n\\]\n\n\\[\n11v=v^2+18\n\\]\n\n\\[\nv^2-11v+18=0\n\\]\n\n\\[\n(v-2)(v-9)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\nu_6=2 \\quad \\text{or} \\quad u_6=9\n\\]"
         },
         {
-          "title": "But . If , then",
+          "title": "Find the nth term",
           "body": "But \\(u_4=6\\). If \\(u_6=2\\), then the common difference is negative and later terms would not all be positive. Therefore,\n\n\\[\nu_6=9\n\\]\n\n\\[\nd=\\frac{u_6-u_4}{2}=\\frac{9-6}{2}=\\frac32\n\\]\n\n\\[\nu_{20}=u_6+14d\n\\]\n\n\\[\nu_{20}=9+14\\left(\\frac32\\right)=30\n\\]"
         }
       ],
@@ -611,7 +611,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Since , point lies on",
+          "title": "Find the gradient",
           "body": "Since \\(AB=AC\\), point \\(A\\) lies on the perpendicular bisector of \\(BC\\)."
         },
         {
@@ -623,11 +623,11 @@
           "body": "The gradient of \\(BC\\) is\n\n\\[\n\\frac{10-5}{2-(-1)}=\\frac53\n\\]"
         },
         {
-          "title": "So the gradient of the",
+          "title": "Find the gradient",
           "body": "So the gradient of the perpendicular bisector is\n\n\\[\n-\\frac35\n\\]"
         },
         {
-          "title": "Use the line through",
+          "title": "Find line equation",
           "body": "Use the line through \\(M\\):\n\n\\[\ny-\\frac{15}{2}=-\\frac35\\left(x-\\frac12\\right)\n\\]"
         },
         {
@@ -648,11 +648,11 @@
       "topicNote": "Moved from Linear Graphs to Differentiation.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Read the graph",
           "body": "\\[\ns=t^3-9t^2+33t-6\n\\]"
         },
         {
-          "title": "Velocity is the rate of",
+          "title": "Read the graph",
           "body": "Velocity is the rate of change of displacement:\n\n\\[\nv=\\frac{ds}{dt}\n\\]\n\n\\[\nv=3t^2-18t+33\n\\]"
         },
         {
@@ -660,11 +660,11 @@
           "body": "Complete the square:\n\n\\[\nv=3(t^2-6t+11)\n\\]\n\n\\[\nv=3[(t-3)^2+2]\n\\]\n\n\\[\nv=3(t-3)^2+6\n\\]"
         },
         {
-          "title": "Since , the minimum value",
+          "title": "Read the graph",
           "body": "Since \\((t-3)^2\\ge 0\\), the minimum value of \\(v\\) is\n\n\\[\n6\n\\]"
         },
         {
-          "title": "The velocity is always positive,",
+          "title": "Read the graph",
           "body": "The velocity is always positive, so the minimum speed is also \\(6\\)."
         }
       ],

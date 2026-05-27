@@ -12,7 +12,7 @@
           "body": "The numbers inside \\(A\\) are the numbers in the \\(A\\)-only region and the overlap with \\(B\\):\n\n\\[\nA=\\{5,7,11,13\\}\n\\]"
         },
         {
-          "title": "means every number inside or",
+          "title": "Calculate statistic",
           "body": "\\(B\\cup C\\) means every number inside \\(B\\) or \\(C\\):\n\n\\[\nB\\cup C=\\{5,6,8,10,12,14,15\\}\n\\]"
         },
         {
@@ -29,11 +29,11 @@
       "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Find the LCM",
           "body": "\\[\n2250=225\\times 10\n\\]\n\n\\[\n225=3^2\\times 5^2,\\qquad 10=2\\times 5\n\\]"
         },
         {
-          "title": "So",
+          "title": "Find the LCM",
           "body": "So\n\n\\[\n2250=3^2\\times 5^2\\times 2\\times 5\n\\]\n\n\\[\n2250=2\\times 3^2\\times 5^3\n\\]"
         }
       ],
@@ -46,15 +46,15 @@
       "topicNote": "Powers, roots and standard form. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Convert standard form",
           "body": "\\[\n5.6\\times 10^{-3}=0.0056\n\\]"
         },
         {
-          "title": "For part (b), simplify the",
+          "title": "Convert standard form",
           "body": "For part (b), simplify the denominator:\n\n\\[\n2.1\\times 10^{-4}+9\\times 10^{-5}\n=0.00021+0.00009\n\\]\n\n\\[\n=0.00030=3\\times 10^{-4}\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Convert standard form",
           "body": "Then\n\n\\[\n\\frac{6\\times 10^3}{3\\times 10^{-4}}\n=2\\times 10^{3-(-4)}\n\\]\n\n\\[\n=2\\times 10^7\n\\]"
         }
       ],
@@ -71,11 +71,11 @@
           "body": "A depreciation of \\(12\\%\\) gives multiplier\n\n\\[\n0.88\n\\]"
         },
         {
-          "title": "After 3 years,",
+          "title": "Use compound interest",
           "body": "After 3 years,\n\n\\[\n700000(0.88)^3=477030.4\n\\]"
         },
         {
-          "title": "Correct to the nearest taka,",
+          "title": "Use compound interest",
           "body": "Correct to the nearest taka,\n\n\\[\n477030.4\\approx 477030\n\\]"
         }
       ],
@@ -121,7 +121,7 @@
       "topicNote": "Direct and Inverse Proportion. The tag is correct.",
       "steps": [
         {
-          "title": "is inversely proportional to ,",
+          "title": "Find inverse function",
           "body": "\\(F\\) is inversely proportional to \\(r^2\\), so\n\n\\[\nF=\\frac{k}{r^2}\n\\]"
         },
         {
@@ -129,11 +129,11 @@
           "body": "Use \\(F=36\\) when \\(r=4\\):\n\n\\[\n36=\\frac{k}{4^2}\n\\]\n\n\\[\nk=36\\times 16=576\n\\]"
         },
         {
-          "title": "So",
+          "title": "Find inverse function",
           "body": "So\n\n\\[\nF=\\frac{576}{r^2}\n\\]"
         },
         {
-          "title": "When ,",
+          "title": "Find inverse function",
           "body": "When \\(r=48\\),\n\n\\[\nF=\\frac{576}{48^2}=\\frac{576}{2304}=0.25\n\\]"
         }
       ],
@@ -150,7 +150,7 @@
           "body": "(a) \\(m^{10}\\div m^3=m^{10-3}=m^7\\)."
         },
         {
-          "title": "(b) , so and",
+          "title": "Use index laws",
           "body": "(b) \\(k^n\\times k^4=k^{n+4}=k^{12}\\), so \\(n+4=12\\) and \\(n=8\\)."
         },
         {
@@ -167,11 +167,11 @@
       "topicNote": "Algebraic roots and indices. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use index laws",
           "body": "\\[\n16^x=2^{4x}, \\qquad 8=2^3\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use index laws",
           "body": "So\n\\[\n2^n=2^{x^2}\\times2^{4x}\\times2^3=2^{x^2+4x+3}\n\\]"
         },
         {
@@ -179,11 +179,11 @@
           "body": "Hence\n\\[\nn=x^2+4x+3=(x+2)^2-1\n\\]\n\n\\[\n(x+2)^2=n+1\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Simplify surd",
           "body": "Since \\(x>0\\),\n\\[\nx+2=\\sqrt{n+1}\n\\]\n\n\\[\nx=-2+\\sqrt{n+1}\n\\]"
         },
         {
-          "title": "For , , so",
+          "title": "Simplify surd",
           "body": "For \\(x>0\\), \\(\\sqrt{n+1}>2\\), so \\(n>3\\)."
         }
       ],
@@ -213,7 +213,7 @@
       "topicNote": "Corrected from Surds to Algebraic Fractions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify surd",
           "body": "\\[\n(x^2-4)\\div \\left(\\frac{4x^2-7x-2}{x}\\right)-2x\n\\]"
         },
         {
@@ -225,7 +225,7 @@
           "body": "Factorise:\n\n\\[\nx^2-4=(x-2)(x+2)\n\\]\n\n\\[\n4x^2-7x-2=(4x+1)(x-2)\n\\]"
         },
         {
-          "title": "So",
+          "title": "Simplify surd",
           "body": "So\n\n\\[\n\\frac{x(x-2)(x+2)}{(4x+1)(x-2)}-2x\n=\\frac{x(x+2)}{4x+1}-2x\n\\]\n\n\\[\n\\frac{x(x+2)-2x(4x+1)}{4x+1}\n=\\frac{x^2+2x-8x^2-2x}{4x+1}\n=\\frac{-7x^2}{4x+1}\n\\]"
         }
       ],
@@ -242,11 +242,11 @@
           "body": "Let\n\\[\nx=0.1767676\\ldots\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate value",
           "body": "Then\n\\[\n10x=1.767676\\ldots\n\\]"
         },
         {
-          "title": "and",
+          "title": "Calculate value",
           "body": "and\n\\[\n1000x=176.767676\\ldots\n\\]"
         },
         {
@@ -267,7 +267,7 @@
           "body": "The maximum point of \\(y=f(x)\\) is \\((3,5)\\)."
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=2f(x)\n\\]"
         },
         {
@@ -275,7 +275,7 @@
           "body": "the \\(y\\)-coordinate is multiplied by 2:\n\n\\[\n(3,5)\\to(3,10)\n\\]"
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(x)-7\n\\]"
         },
         {
@@ -283,7 +283,7 @@
           "body": "the graph moves 7 units down:\n\n\\[\n(3,5)\\to(3,-2)\n\\]"
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(-x)\n\\]"
         },
         {
@@ -291,7 +291,7 @@
           "body": "the graph reflects in the \\(y\\)-axis:\n\n\\[\n(3,5)\\to(-3,5)\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Calculate value",
           "body": "For part (b),\n\n\\[\ny=x^2+7x+20\n\\]"
         },
         {
@@ -299,7 +299,7 @@
           "body": "The translation vector is\n\n\\[\n\\begin{pmatrix}2\\\\0\\end{pmatrix}\n\\]"
         },
         {
-          "title": "So the graph moves 2",
+          "title": "Read the graph",
           "body": "So the graph moves 2 units right."
         },
         {
@@ -328,11 +328,11 @@
           "body": "Solve\n\n\\[\n3x^2-4x-9=0\n\\]\n\n\\[\nx=\\frac{4\\pm\\sqrt{16+108}}{6}\n\\]\n\n\\[\nx=\\frac{2\\pm\\sqrt{31}}{3}\n\\]"
         },
         {
-          "title": "To 3 significant figures, the",
+          "title": "Differentiate",
           "body": "To 3 significant figures, the roots are\n\n\\[\nx=-1.19,\\quad x=2.52\n\\]"
         },
         {
-          "title": "Since the quadratic opens upwards,",
+          "title": "Solve quadratic equation",
           "body": "Since the quadratic opens upwards, it is positive outside the roots."
         }
       ],
@@ -345,11 +345,11 @@
       "topicNote": "Corrected to Standard & Compound Units.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate volume",
           "body": "\\[\n\\text{density}=\\frac{\\text{mass}}{\\text{volume}}\n\\]\n\n\\[\n7.8=\\frac{1950}{\\text{volume}}\n\\]\n\n\\[\n\\text{volume}=\\frac{1950}{7.8}=250\\text{ cm}^3\n\\]"
         },
         {
-          "title": "For the cuboid,",
+          "title": "Calculate value",
           "body": "For the cuboid,\n\n\\[\nw\\times 5\\times 4=250\n\\]\n\n\\[\n20w=250\n\\]\n\n\\[\nw=12.5\n\\]"
         }
       ],
@@ -366,11 +366,11 @@
           "body": "The sum of the interior angles of a hexagon is\n\\[\n(6-2)\\times 180=720^\\circ\n\\]"
         },
         {
-          "title": "The reflex angle at in",
+          "title": "Find the gradient",
           "body": "The reflex angle at \\(C\\) in the hexagon is\n\\[\n720^\\circ-(90^\\circ+95^\\circ+149^\\circ+104^\\circ+57^\\circ)=225^\\circ\n\\]"
         },
         {
-          "title": "So the smaller angle is",
+          "title": "Find the gradient",
           "body": "So the smaller angle \\(BCD\\) is\n\\[\n360^\\circ-225^\\circ=135^\\circ\n\\]"
         },
         {
@@ -378,7 +378,7 @@
           "body": "This is the interior angle of the regular \\(n\\)-sided polygon."
         },
         {
-          "title": "So the exterior angle is",
+          "title": "Find the gradient",
           "body": "So the exterior angle is\n\\[\n180^\\circ-135^\\circ=45^\\circ\n\\]\n\n\\[\nn=\\frac{360}{45}=8\n\\]"
         }
       ],
@@ -391,7 +391,7 @@
       "topicNote": "Corrected to Circles, Arcs & Sectors.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify surd",
           "body": "\\[\nAB=\\sqrt{6^2+6^2}=\\sqrt{72}=8.485\\ldots\n\\]"
         },
         {
@@ -408,15 +408,15 @@
       "topicNote": "Congruence, Similarity & Geometrical Proof. The tag is correct.",
       "steps": [
         {
-          "title": "The scale factor from to",
+          "title": "Evaluate fraction",
           "body": "The scale factor from \\(EFGH\\) to \\(ABCD\\) is\n\\[\n\\frac{9.6}{6}=1.6\n\\]"
         },
         {
-          "title": "Since corresponds to ,",
+          "title": "Evaluate fraction",
           "body": "Since \\(GH\\) corresponds to \\(CD\\),\n\\[\nGH=\\frac{4}{1.6}=2.5\n\\]"
         },
         {
-          "title": "Since corresponds to ,",
+          "title": "Calculate value",
           "body": "Since \\(FG\\) corresponds to \\(BC\\),\n\\[\nBC=5.7\\times 1.6=9.12\n\\]"
         }
       ],
@@ -433,27 +433,27 @@
           "body": "The two sides around the \\(30^\\circ\\) angle are\n\n\\[\n2x-1 \\quad \\text{and} \\quad 2x+1\n\\]"
         },
         {
-          "title": "Using the area formula,",
+          "title": "Use trigonometry",
           "body": "Using the area formula,\n\n\\[\n\\text{area}=\\frac{1}{2}ab\\sin C\n\\]\n\n\\[\nx^2+x-3.75\n=\\frac{1}{2}(2x-1)(2x+1)\\sin 30^\\circ\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Use trigonometry",
           "body": "Since \\(\\sin 30^\\circ=\\frac{1}{2}\\),\n\n\\[\nx^2+x-3.75=\\frac{1}{4}(2x-1)(2x+1)\n\\]\n\n\\[\nx^2+x-3.75=\\frac{1}{4}(4x^2-1)\n\\]\n\n\\[\nx^2+x-3.75=x^2-0.25\n\\]\n\n\\[\nx=3.5\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\nAB=2x-1=6,\\qquad AC=2x+1=8\n\\]"
         },
         {
-          "title": "Use the cosine rule to",
+          "title": "Use cosine rule",
           "body": "Use the cosine rule to find \\(BC\\):\n\n\\[\nBC^2=6^2+8^2-2(6)(8)\\cos 30^\\circ\n\\]\n\n\\[\nBC=4.1063\\ldots\n\\]"
         },
         {
-          "title": "The largest side is ,",
+          "title": "Use trigonometry",
           "body": "The largest side is \\(AC=8\\), so the largest angle is \\(\\angle B\\)."
         },
         {
-          "title": "Using the cosine rule again",
+          "title": "Use trigonometry",
           "body": "Using the cosine rule again:\n\n\\[\n\\cos B=\\frac{6^2+BC^2-8^2}{2(6)(BC)}\n\\]\n\n\\[\nB=103.0643\\ldots^\\circ\n\\]"
         }
       ],
@@ -470,7 +470,7 @@
           "body": "Pru travels\n\\[\n|AB|+|BC|=\\sqrt{7^2+(-2)^2}+\\sqrt{(-3)^2+5^2}\n\\]\n\n\\[\n=\\sqrt{53}+\\sqrt{34}=13.111\\ldots\n\\]"
         },
         {
-          "title": "Yang travels from to",
+          "title": "Simplify surd",
           "body": "Yang travels from \\(A\\) to \\(C\\).\n\n\\[\n\\overrightarrow{AC}=\\overrightarrow{AB}+\\overrightarrow{BC}\n=\\begin{pmatrix}7\\\\-2\\end{pmatrix}+\\begin{pmatrix}-3\\\\5\\end{pmatrix}\n=\\begin{pmatrix}4\\\\3\\end{pmatrix}\n\\]\n\n\\[\n|AC|=\\sqrt{4^2+3^2}=5\n\\]"
         },
         {
@@ -512,15 +512,15 @@
           "body": "The scale of the frequency density axis is not needed because the percentage is found from areas."
         },
         {
-          "title": "Using the bar heights from",
+          "title": "Calculate area",
           "body": "Using the bar heights from the histogram, the relative areas are:\n\n\\[\n(5)(277)+(5)(866)+(10)(571)+(10)(329)+(25)(155)\n\\]\n\n\\[\n=1385+4330+5710+3290+3875\n\\]\n\n\\[\n=18590\n\\]"
         },
         {
-          "title": "For ages more than 55,",
+          "title": "Calculate value",
           "body": "For ages more than 55, use the part of the last bar from 55 to 75:\n\n\\[\n(20)(155)=3100\n\\]"
         },
         {
-          "title": "So the estimated percentage is",
+          "title": "Calculate percentage",
           "body": "So the estimated percentage is\n\n\\[\n\\frac{3100}{18590}\\times100=16.675\\ldots\n\\]"
         }
       ],
@@ -537,7 +537,7 @@
           "body": "The cumulative frequencies are\n\n\\[\n15,\\ 31,\\ 52,\\ 66,\\ 74,\\ 80\n\\]"
         },
         {
-          "title": "For runners,",
+          "title": "Convert standard form",
           "body": "For \\(80\\) runners,\n\n\\[\n\\text{median}=40,\\qquad Q_1=20,\\qquad Q_3=60\n\\]\n\n\\[\n\\text{median}=70+\\frac{40-31}{52-31}\\times 10\\approx 74.3\n\\]\n\n\\[\nQ_1=60+\\frac{20-15}{31-15}\\times 10\\approx 63.1\n\\]\n\n\\[\nQ_3=80+\\frac{60-52}{66-52}\\times 10\\approx 85.7\n\\]\n\n\\[\n\\text{IQR}\\approx 85.7-63.1=22.6\n\\]"
         }
       ],
@@ -550,7 +550,7 @@
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate probability",
           "body": "\\[\nP(\\text{lose})=1-0.74=0.26\n\\]"
         },
         {
@@ -571,7 +571,7 @@
           "body": "The missing branch probabilities are\n\n\\[\n0.1,\\quad 0.6\n\\]"
         },
         {
-          "title": "Novak wins both games with",
+          "title": "Calculate probability",
           "body": "Novak wins both games with probability\n\n\\[\n0.7\\times 0.9=0.63\n\\]"
         }
       ],
@@ -584,7 +584,7 @@
       "topicNote": "Combined & Conditional Probability. The tag is correct.",
       "steps": [
         {
-          "title": "The probabilities add to",
+          "title": "Calculate probability",
           "body": "The probabilities add to \\(1\\):\n\n\\[\nx+0.15+0.50+y+0.13+0.03=1\n\\]\n\n\\[\nx+y=0.19\n\\]"
         },
         {
@@ -605,11 +605,11 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\n2^n=2^{x^2}\\times 16^x\\times 8\n\\]\n\n\\[\n16^x=(2^4)^x=2^{4x}\n\\]\n\n\\[\n8=2^3\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\n2^n=2^{x^2+4x+3}\n\\]\n\n\\[\nn=x^2+4x+3\n\\]"
         },
         {
@@ -617,11 +617,11 @@
           "body": "Complete the square:\n\n\\[\nn=(x+2)^2-1\n\\]\n\n\\[\n(x+2)^2=n+1\n\\]"
         },
         {
-          "title": "Since , take the positive",
+          "title": "Simplify surd",
           "body": "Since \\(x>0\\), take the positive root:\n\n\\[\nx+2=\\sqrt{n+1}\n\\]\n\n\\[\nx=\\sqrt{n+1}-2\n\\]"
         },
         {
-          "title": "For ,",
+          "title": "Simplify surd",
           "body": "For \\(x>0\\),\n\n\\[\n\\sqrt{n+1}>2\n\\]\n\n\\[\nn>3\n\\]"
         }
       ],
@@ -634,7 +634,7 @@
       "topicNote": "Corrected from Surds to Algebraic Fractions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify surd",
           "body": "\\[\n(x^2-4)\\div \\left(\\frac{4x^2-7x-2}{x}\\right)-2x\n\\]"
         },
         {
@@ -646,7 +646,7 @@
           "body": "Factorise:\n\n\\[\nx^2-4=(x-2)(x+2)\n\\]\n\n\\[\n4x^2-7x-2=(4x+1)(x-2)\n\\]"
         },
         {
-          "title": "So",
+          "title": "Simplify surd",
           "body": "So\n\n\\[\n\\frac{x(x-2)(x+2)}{(4x+1)(x-2)}-2x\n=\\frac{x(x+2)}{4x+1}-2x\n\\]\n\n\\[\n\\frac{x(x+2)-2x(4x+1)}{4x+1}\n=\\frac{x^2+2x-8x^2-2x}{4x+1}\n=\\frac{-7x^2}{4x+1}\n\\]"
         }
       ],
@@ -663,7 +663,7 @@
           "body": "The maximum point of \\(y=f(x)\\) is \\((3,5)\\)."
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=2f(x)\n\\]"
         },
         {
@@ -671,7 +671,7 @@
           "body": "the \\(y\\)-coordinate is multiplied by 2:\n\n\\[\n(3,5)\\to(3,10)\n\\]"
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(x)-7\n\\]"
         },
         {
@@ -679,7 +679,7 @@
           "body": "the graph moves 7 units down:\n\n\\[\n(3,5)\\to(3,-2)\n\\]"
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(-x)\n\\]"
         },
         {
@@ -687,7 +687,7 @@
           "body": "the graph reflects in the \\(y\\)-axis:\n\n\\[\n(3,5)\\to(-3,5)\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Calculate value",
           "body": "For part (b),\n\n\\[\ny=x^2+7x+20\n\\]"
         },
         {
@@ -695,7 +695,7 @@
           "body": "The translation vector is\n\n\\[\n\\begin{pmatrix}2\\\\0\\end{pmatrix}\n\\]"
         },
         {
-          "title": "So the graph moves 2",
+          "title": "Read the graph",
           "body": "So the graph moves 2 units right."
         },
         {
@@ -724,11 +724,11 @@
           "body": "Solve\n\n\\[\n3x^2-4x-9=0\n\\]\n\n\\[\nx=\\frac{4\\pm\\sqrt{16+108}}{6}\n\\]\n\n\\[\nx=\\frac{2\\pm\\sqrt{31}}{3}\n\\]"
         },
         {
-          "title": "To 3 significant figures, the",
+          "title": "Differentiate",
           "body": "To 3 significant figures, the roots are\n\n\\[\nx=-1.19,\\quad x=2.52\n\\]"
         },
         {
-          "title": "Since the quadratic opens upwards,",
+          "title": "Solve quadratic equation",
           "body": "Since the quadratic opens upwards, it is positive outside the roots."
         }
       ],
@@ -745,27 +745,27 @@
           "body": "The two sides around the \\(30^\\circ\\) angle are\n\n\\[\n2x-1 \\quad \\text{and} \\quad 2x+1\n\\]"
         },
         {
-          "title": "Using the area formula,",
+          "title": "Use trigonometry",
           "body": "Using the area formula,\n\n\\[\n\\text{area}=\\frac{1}{2}ab\\sin C\n\\]\n\n\\[\nx^2+x-3.75\n=\\frac{1}{2}(2x-1)(2x+1)\\sin 30^\\circ\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Use trigonometry",
           "body": "Since \\(\\sin 30^\\circ=\\frac{1}{2}\\),\n\n\\[\nx^2+x-3.75=\\frac{1}{4}(2x-1)(2x+1)\n\\]\n\n\\[\nx^2+x-3.75=\\frac{1}{4}(4x^2-1)\n\\]\n\n\\[\nx^2+x-3.75=x^2-0.25\n\\]\n\n\\[\nx=3.5\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\nAB=2x-1=6,\\qquad AC=2x+1=8\n\\]"
         },
         {
-          "title": "Use the cosine rule to",
+          "title": "Use cosine rule",
           "body": "Use the cosine rule to find \\(BC\\):\n\n\\[\nBC^2=6^2+8^2-2(6)(8)\\cos 30^\\circ\n\\]\n\n\\[\nBC=4.1063\\ldots\n\\]"
         },
         {
-          "title": "The largest side is ,",
+          "title": "Use trigonometry",
           "body": "The largest side is \\(AC=8\\), so the largest angle is \\(\\angle B\\)."
         },
         {
-          "title": "Using the cosine rule again",
+          "title": "Use trigonometry",
           "body": "Using the cosine rule again:\n\n\\[\n\\cos B=\\frac{6^2+BC^2-8^2}{2(6)(BC)}\n\\]\n\n\\[\nB=103.0643\\ldots^\\circ\n\\]"
         }
       ],
@@ -782,15 +782,15 @@
           "body": "The scale of the frequency density axis is not needed because the percentage is found from areas."
         },
         {
-          "title": "Using the bar heights from",
+          "title": "Calculate area",
           "body": "Using the bar heights from the histogram, the relative areas are:\n\n\\[\n(5)(277)+(5)(866)+(10)(571)+(10)(329)+(25)(155)\n\\]\n\n\\[\n=1385+4330+5710+3290+3875\n\\]\n\n\\[\n=18590\n\\]"
         },
         {
-          "title": "For ages more than 55,",
+          "title": "Calculate value",
           "body": "For ages more than 55, use the part of the last bar from 55 to 75:\n\n\\[\n(20)(155)=3100\n\\]"
         },
         {
-          "title": "So the estimated percentage is",
+          "title": "Calculate percentage",
           "body": "So the estimated percentage is\n\n\\[\n\\frac{3100}{18590}\\times100=16.675\\ldots\n\\]"
         }
       ],

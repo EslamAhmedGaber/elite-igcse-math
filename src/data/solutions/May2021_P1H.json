@@ -16,15 +16,15 @@
           "body": "- \\(A\\) only is \\(12\\)\n- \\(A\\cap B\\) only is \\(5\\)\n- \\(B\\) only is \\(9\\)\n- \\(A\\cap C\\) only is \\(10\\)\n- all three is \\(6\\)\n- \\(B\\cap C\\) only is \\(3\\)\n- \\(C\\) only is \\(4\\)\n- outside is \\(8\\)"
         },
         {
-          "title": "For , add every region",
+          "title": "Add every region inside",
           "body": "For \\(A\\cup B\\), add every region inside \\(A\\) or \\(B\\):\n\n\\[\n12+5+9+10+6+3=45\n\\]"
         },
         {
-          "title": "For , add the regions",
+          "title": "Add the regions outside both",
           "body": "For \\(A'\\cap B'\\), add the regions outside both \\(A\\) and \\(B\\):\n\n\\[\n4+8=12\n\\]"
         },
         {
-          "title": "For , add and all",
+          "title": "Add and all",
           "body": "For \\((A\\cap B)\\cup C\\), add \\(A\\cap B\\) and all of \\(C\\):\n\n\\[\n5+6+10+3+4=28\n\\]"
         }
       ],
@@ -37,7 +37,7 @@
       "topicNote": "Powers, roots and standard form. The tag is correct.",
       "steps": [
         {
-          "title": "For part (a),",
+          "title": "Convert standard form",
           "body": "For part (a),\n\n\\[\n1.4\\times 10^9=1400000000\n\\]\n\n\\[\n8.2\\times 10^7=82000000\n\\]"
         },
         {
@@ -45,15 +45,15 @@
           "body": "Difference:\n\n\\[\n1400000000-82000000=1318000000\n\\]\n\n\\[\n1318000000=1.318\\times 10^9\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Convert standard form",
           "body": "For part (b),\n\n\\[\n\\text{population of Fiji}=\\frac{1}{k}\\times \\text{population of Sweden}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Convert standard form",
           "body": "So\n\n\\[\nk=\\frac{\\text{population of Sweden}}{\\text{population of Fiji}}\n\\]\n\n\\[\nk=\\frac{9.9\\times 10^6}{9.1\\times 10^5}=10.879\\ldots\n\\]"
         },
         {
-          "title": "To the nearest whole number,",
+          "title": "Convert standard form",
           "body": "To the nearest whole number,\n\n\\[\nk=11\n\\]"
         }
       ],
@@ -66,11 +66,11 @@
       "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Estimate the value",
           "body": "\\[\nP=\\frac{t-w}{y}\n\\]"
         },
         {
-          "title": "For the upper bound, make",
+          "title": "Find upper bound",
           "body": "For the upper bound, make the numerator large and the denominator small.\n\n\\[\nt<9.75,\\quad w\\ge 5.85,\\quad y\\ge 2.5\n\\]\n\n\\[\nP_{\\text{upper}}=\\frac{9.75-5.85}{2.5}=1.56\n\\]"
         }
       ],
@@ -87,7 +87,7 @@
           "body": "Ducks : pigs \\(=5:9\\)."
         },
         {
-          "title": "There are pigs, so",
+          "title": "Split the ratio",
           "body": "There are \\(36\\) pigs, so\n\n\\[\n9\\text{ parts}=36\n\\]\n\n\\[\n1\\text{ part}=4\n\\]\n\n\\[\n\\text{ducks}=5\\times 4=20\n\\]"
         },
         {
@@ -104,7 +104,7 @@
       "topicNote": "Algebraic Roots and Indices. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify surd",
           "body": "\\[\n\\sqrt2\\times 16=2^x\n\\]"
         },
         {
@@ -112,19 +112,19 @@
           "body": "Write both factors as powers of 2:\n\n\\[\n\\sqrt2=2^{1/2}, \\quad 16=2^4\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use index laws",
           "body": "So\n\n\\[\n2^{1/2}\\times 2^4=2^{9/2}\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Use index laws",
           "body": "Therefore\n\n\\[\nx=\\frac92\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Use index laws",
           "body": "For part (b),\n\n\\[\n\\frac{(11^{-6})^5}{11^4}=\\frac{11^{-30}}{11^4}=11^{-30-4}=11^{-34}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use index laws",
           "body": "So\n\n\\[\nn=-34\n\\]"
         }
       ],
@@ -137,7 +137,7 @@
       "topicNote": "Expanding brackets. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Expand brackets",
           "body": "\\[\n4x(3x+1)(2x-3)=4x(6x^2-7x-3)\n\\]\n\n\\[\n=24x^3-28x^2-12x\n\\]"
         }
       ],
@@ -171,11 +171,11 @@
           "body": "Given\n\n\\[\nx=\\frac5{9y+5}\n\\]"
         },
         {
-          "title": "and",
+          "title": "Use trigonometry",
           "body": "and\n\n\\[\ny=\\frac5{5a-2}\n\\]"
         },
         {
-          "title": "Substitute into the expression for",
+          "title": "Use cosine rule",
           "body": "Substitute \\(y=\\frac5{5a-2}\\) into the expression for \\(x\\):\n\n\\[\nx=\\frac5{9\\left(\\frac5{5a-2}\\right)+5}\n\\]\n\n\\[\nx=\\frac5{\\frac{45}{5a-2}+5}\n\\]"
         },
         {
@@ -183,7 +183,7 @@
           "body": "Write the denominator as a single fraction:\n\n\\[\n\\frac{45}{5a-2}+5\n=\\frac{45+5(5a-2)}{5a-2}\n\\]\n\n\\[\n=\\frac{45+25a-10}{5a-2}\n\\]\n\n\\[\n=\\frac{25a+35}{5a-2}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\nx=5\\div\\frac{25a+35}{5a-2}\n\\]\n\n\\[\nx=5\\times\\frac{5a-2}{25a+35}\n\\]\n\n\\[\nx=\\frac{5(5a-2)}{5(5a+7)}\n\\]\n\n\\[\nx=\\frac{5a-2}{5a+7}\n\\]"
         }
       ],
@@ -208,7 +208,7 @@
           "body": "(c)\n\\[\n\\frac{w^5\\times w^n}{w^3}=w^{n+2}=w^{10}\n\\]"
         },
         {
-          "title": "So , hence",
+          "title": "Rearrange formula",
           "body": "So \\(n+2=10\\), hence \\(n=8\\)."
         }
       ],
@@ -225,11 +225,11 @@
           "body": "Let\n\\[\nx=0.28131313\\ldots\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate value",
           "body": "Then\n\\[\n100x=28.131313\\ldots\n\\]"
         },
         {
-          "title": "and",
+          "title": "Calculate value",
           "body": "and\n\\[\n10000x=2813.131313\\ldots\n\\]"
         },
         {
@@ -258,7 +258,7 @@
           "body": "The difference between the square of the largest and the square of the smallest is\n\\[\n(2n+2)^2-(2n-2)^2\n\\]\n\n\\[\n=(4n^2+8n+4)-(4n^2-8n+4)\n\\]\n\n\\[\n=16n\n\\]"
         },
         {
-          "title": "Since , the result is",
+          "title": "Calculate value",
           "body": "Since \\(8\\times\\text{middle number}=8(2n)=16n\\), the result is 8 times the middle number."
         }
       ],
@@ -279,7 +279,7 @@
           "body": "Divide by 2:\n\\[\n-2\\le y<3\n\\]"
         },
         {
-          "title": "Since is an integer,",
+          "title": "Calculate value",
           "body": "Since \\(y\\) is an integer,\n\\[\ny=-2,-1,0,1,2\n\\]"
         },
         {
@@ -350,7 +350,7 @@
           "body": "Let\n\n\\[\ny=5(x-1)^2+2\n\\]\n\n\\[\n(x-1)^2=\\frac{y-2}{5}\n\\]"
         },
         {
-          "title": "Since the domain is ,",
+          "title": "Find inverse function",
           "body": "Since the domain is \\(x\\ge 1\\), take the positive square root:\n\n\\[\nx=1+\\sqrt{\\frac{y-2}{5}}\n\\]"
         }
       ],
@@ -363,7 +363,7 @@
       "topicNote": "Corrected to Standard & Compound Units.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\n8\\text{ h }12\\text{ min}=8+\\frac{12}{60}=8.2\\text{ hours}\n\\]\n\n\\[\n\\text{average speed}=\\frac{5658}{8.2}=690\n\\]"
         }
       ],
@@ -376,19 +376,19 @@
       "topicNote": "Circle Theorems. The tag is correct.",
       "steps": [
         {
-          "title": "The reflex angle is ,",
+          "title": "Use trigonometry",
           "body": "The reflex angle \\(POR\\) is \\(238^\\circ\\), so the smaller angle is\n\\[\n360^\\circ-238^\\circ=122^\\circ\n\\]"
         },
         {
-          "title": "Since , triangle is isosceles",
+          "title": "Use trigonometry",
           "body": "Since \\(OP=OR\\), triangle \\(OPR\\) is isosceles:\n\\[\n\\angle OPR=\\frac{180^\\circ-122^\\circ}{2}=29^\\circ\n\\]"
         },
         {
-          "title": "By the alternate segment theorem,",
+          "title": "Use trigonometry",
           "body": "By the alternate segment theorem,\n\\[\n\\angle QPR=60^\\circ\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Use trigonometry",
           "body": "Therefore\n\\[\n\\angle QPO=60^\\circ-29^\\circ=31^\\circ\n\\]"
         }
       ],
@@ -409,7 +409,7 @@
           "body": "Rectangle area:\n\\[\n14x\n\\]"
         },
         {
-          "title": "The triangle has base and",
+          "title": "Use trigonometry",
           "body": "The triangle has base \\(13-x\\) and height \\(6\\), so its area is\n\\[\n\\frac12(13-x)(6)=39-3x\n\\]"
         },
         {
@@ -426,7 +426,7 @@
       "topicNote": "Circles, Arcs & Sectors. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\n\\text{arc length}=\\frac{50}{360}\\times 2\\pi(7)\n\\]\n\n\\[\n=6.108\\ldots\n\\]"
         }
       ],
@@ -439,7 +439,7 @@
       "topicNote": "Moved to Circles, Arcs & Sectors.",
       "steps": [
         {
-          "title": "For the circle with centre",
+          "title": "Use trigonometry",
           "body": "For the circle with centre \\(O\\):\n\n\\[\n\\angle AOB=50^\\circ,\\qquad OA=OB=5\n\\]"
         },
         {
@@ -447,11 +447,11 @@
           "body": "The half chord length is\n\n\\[\n\\frac{AB}{2}=5\\sin 25^\\circ\n\\]"
         },
         {
-          "title": "For the circle with centre",
+          "title": "Use trigonometry",
           "body": "For the circle with centre \\(P\\), let\n\n\\[\n\\angle APB=\\theta\n\\]"
         },
         {
-          "title": "The radius is , so",
+          "title": "Use trigonometry",
           "body": "The radius is \\(4\\), so\n\n\\[\n4\\sin\\left(\\frac{\\theta}{2}\\right)=5\\sin 25^\\circ\n\\]\n\n\\[\n\\sin\\left(\\frac{\\theta}{2}\\right)=\\frac{5\\sin 25^\\circ}{4}\n\\]\n\n\\[\n\\theta=63.7777\\ldots^\\circ\n\\]"
         },
         {
@@ -459,11 +459,11 @@
           "body": "The common region is made from two minor segments."
         },
         {
-          "title": "For the circle with centre",
+          "title": "Use trigonometry",
           "body": "For the circle with centre \\(O\\):\n\n\\[\n\\text{segment area}\n=\\frac{50}{360}\\pi(5)^2-\\frac{1}{2}(5)^2\\sin 50^\\circ\n=1.3328\\ldots\n\\]"
         },
         {
-          "title": "For the circle with centre",
+          "title": "Use trigonometry",
           "body": "For the circle with centre \\(P\\):\n\n\\[\n\\text{segment area}\n=\\frac{\\theta}{360}\\pi(4)^2-\\frac{1}{2}(4)^2\\sin \\theta\n\\]\n\n\\[\n=1.7284\\ldots\n\\]"
         },
         {
@@ -480,7 +480,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "The triangular end is isosceles,",
+          "title": "Calculate value",
           "body": "The triangular end is isosceles, with\n\n\\[\nAC=BC=12,\\qquad AB=10\n\\]"
         },
         {
@@ -492,7 +492,7 @@
           "body": "The projection of \\(AD\\) on the horizontal base goes from \\(A\\) to the midpoint of \\(FE\\). Its length is\n\n\\[\n\\sqrt{15^2+5^2}=\\sqrt{250}\n\\]"
         },
         {
-          "title": "So, for the angle between",
+          "title": "Use trigonometry",
           "body": "So, for the angle \\(\\theta\\) between \\(AD\\) and the base,\n\n\\[\n\\tan \\theta=\\frac{\\sqrt{119}}{\\sqrt{250}}\n\\]\n\n\\[\n\\theta=\\tan^{-1}\\left(\\frac{\\sqrt{119}}{\\sqrt{250}}\\right)=34.602\\ldots\n\\]"
         }
       ],
@@ -505,31 +505,31 @@
       "topicNote": "Moved to Vectors.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use vectors",
           "body": "\\[\n\\overrightarrow{OA}=2\\mathbf a,\\qquad\n\\overrightarrow{OB}=5\\mathbf b,\\qquad\n\\overrightarrow{AC}=3\\mathbf b\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use vectors",
           "body": "So\n\n\\[\n\\overrightarrow{OC}\n=\\overrightarrow{OA}+\\overrightarrow{AC}\n=2\\mathbf a+3\\mathbf b\n\\]"
         },
         {
-          "title": "Since lies on , let",
+          "title": "Use vectors",
           "body": "Since \\(P\\) lies on \\(OC\\), let\n\n\\[\n\\overrightarrow{OP}=t(2\\mathbf a+3\\mathbf b)\n\\]"
         },
         {
-          "title": "Since also lies on ,",
+          "title": "Use vectors",
           "body": "Since \\(P\\) also lies on \\(AB\\), let\n\n\\[\n\\overrightarrow{OP}\n=\\overrightarrow{OA}+s\\overrightarrow{AB}\n\\]"
         },
         {
-          "title": "Now",
+          "title": "Use vectors",
           "body": "Now\n\n\\[\n\\overrightarrow{AB}\n=\\overrightarrow{OB}-\\overrightarrow{OA}\n=5\\mathbf b-2\\mathbf a\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use vectors",
           "body": "So\n\n\\[\n\\overrightarrow{OP}\n=2\\mathbf a+s(5\\mathbf b-2\\mathbf a)\n\\]\n\n\\[\n\\overrightarrow{OP}\n=(2-2s)\\mathbf a+5s\\mathbf b\n\\]"
         },
         {
-          "title": "Compare this with",
+          "title": "Use vectors",
           "body": "Compare this with\n\n\\[\nt(2\\mathbf a+3\\mathbf b)=2t\\mathbf a+3t\\mathbf b\n\\]"
         },
         {
@@ -537,15 +537,15 @@
           "body": "Equating coefficients:\n\n\\[\n2t=2-2s\n\\]\n\n\\[\n3t=5s\n\\]"
         },
         {
-          "title": "From ,",
+          "title": "Use vectors",
           "body": "From \\(t=1-s\\),\n\n\\[\n3(1-s)=5s\n\\]\n\n\\[\n3=8s\n\\]\n\n\\[\ns=\\frac{3}{8}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use vectors",
           "body": "So\n\n\\[\nt=1-\\frac{3}{8}=\\frac{5}{8}\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Use vectors",
           "body": "Therefore\n\n\\[\n\\overrightarrow{OP}\n=\\frac{5}{8}(2\\mathbf a+3\\mathbf b)\n\\]\n\n\\[\n\\overrightarrow{OP}\n=\\frac{5}{4}\\mathbf a+\\frac{15}{8}\\mathbf b\n\\]"
         }
       ],
@@ -562,11 +562,11 @@
           "body": "The total for the first 5 tests is\n\n\\[\n5 \\times 74=370\n\\]"
         },
         {
-          "title": "For an average of at",
+          "title": "Calculate value",
           "body": "For an average of at least \\(77\\) after 6 tests, the total must be at least\n\n\\[\n6 \\times 77=462\n\\]"
         },
         {
-          "title": "So the last test score",
+          "title": "Calculate value",
           "body": "So the last test score must be at least\n\n\\[\n462-370=92\n\\]"
         }
       ],
@@ -592,11 +592,11 @@
       "topicNote": "Histograms. The tag is correct.",
       "steps": [
         {
-          "title": "The class has frequency ,",
+          "title": "Use histogram",
           "body": "The \\(0\\le d<10\\) class has frequency \\(40\\), so its density is\n\n\\[\n\\frac{40}{10}=4\n\\]"
         },
         {
-          "title": "From the histogram, the missing",
+          "title": "Use histogram",
           "body": "From the histogram, the missing frequencies are\n\n\\[\n10\\le d<15:\\ 35,\\qquad 15\\le d<20:\\ 40,\\qquad 20\\le d<30:\\ 60\n\\]"
         },
         {
@@ -604,7 +604,7 @@
           "body": "Together with the table:\n\n\\[\n40+35+40+60+30=205\n\\]"
         },
         {
-          "title": "For",
+          "title": "Use histogram",
           "body": "For \\(d>25\\):\n\n\\[\n5(6)+30=60\n\\]\n\n\\[\nP(d>25)=\\frac{60}{205}=\\frac{12}{41}\n\\]"
         }
       ],
@@ -621,7 +621,7 @@
           "body": "Let the probability of pink be \\(x\\). Then the probability of orange is \\(3x\\).\n\n\\[\n0.20+0.12+0.08+x+3x=1\n\\]\n\n\\[\n4x=0.60\n\\]\n\n\\[\nx=0.15\n\\]"
         },
         {
-          "title": "So the probability of orange",
+          "title": "Calculate probability",
           "body": "So the probability of orange is\n\n\\[\n3x=0.45\n\\]"
         },
         {
@@ -638,11 +638,11 @@
       "topicNote": "Rounding, Estimation & Bounds is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Estimate the value",
           "body": "\\[\nP=\\frac{t-w}{y}\n\\]"
         },
         {
-          "title": "For the upper bound of",
+          "title": "Find upper bound",
           "body": "For the upper bound of \\(P\\), make the numerator as large as possible and the denominator as small as possible.\n\n\\(t=9.75,\\quad w=5.85,\\quad y=2.5\\)\n\n\\[\nP=\\frac{9.75-5.85}{2.5}\n\\]\n\n\\[\nP=\\frac{3.90}{2.5}=1.56\n\\]"
         }
       ],
@@ -659,11 +659,11 @@
           "body": "Given\n\n\\[\nx=\\frac5{9y+5}\n\\]"
         },
         {
-          "title": "and",
+          "title": "Use trigonometry",
           "body": "and\n\n\\[\ny=\\frac5{5a-2}\n\\]"
         },
         {
-          "title": "Substitute into the expression for",
+          "title": "Use cosine rule",
           "body": "Substitute \\(y=\\frac5{5a-2}\\) into the expression for \\(x\\):\n\n\\[\nx=\\frac5{9\\left(\\frac5{5a-2}\\right)+5}\n\\]\n\n\\[\nx=\\frac5{\\frac{45}{5a-2}+5}\n\\]"
         },
         {
@@ -671,7 +671,7 @@
           "body": "Write the denominator as a single fraction:\n\n\\[\n\\frac{45}{5a-2}+5\n=\\frac{45+5(5a-2)}{5a-2}\n\\]\n\n\\[\n=\\frac{45+25a-10}{5a-2}\n\\]\n\n\\[\n=\\frac{25a+35}{5a-2}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\nx=5\\div\\frac{25a+35}{5a-2}\n\\]\n\n\\[\nx=5\\times\\frac{5a-2}{25a+35}\n\\]\n\n\\[\nx=\\frac{5(5a-2)}{5(5a+7)}\n\\]\n\n\\[\nx=\\frac{5a-2}{5a+7}\n\\]"
         }
       ],
@@ -721,7 +721,7 @@
           "body": "Let\n\n\\[\ny=5(x-1)^2+2\n\\]\n\n\\[\n(x-1)^2=\\frac{y-2}{5}\n\\]"
         },
         {
-          "title": "Since the domain is ,",
+          "title": "Find inverse function",
           "body": "Since the domain is \\(x\\ge 1\\), take the positive square root:\n\n\\[\nx=1+\\sqrt{\\frac{y-2}{5}}\n\\]"
         }
       ],
@@ -734,7 +734,7 @@
       "topicNote": "Moved to Circles, Arcs & Sectors.",
       "steps": [
         {
-          "title": "For the circle with centre",
+          "title": "Use trigonometry",
           "body": "For the circle with centre \\(O\\):\n\n\\[\n\\angle AOB=50^\\circ,\\qquad OA=OB=5\n\\]"
         },
         {
@@ -742,11 +742,11 @@
           "body": "The half chord length is\n\n\\[\n\\frac{AB}{2}=5\\sin 25^\\circ\n\\]"
         },
         {
-          "title": "For the circle with centre",
+          "title": "Use trigonometry",
           "body": "For the circle with centre \\(P\\), let\n\n\\[\n\\angle APB=\\theta\n\\]"
         },
         {
-          "title": "The radius is , so",
+          "title": "Use trigonometry",
           "body": "The radius is \\(4\\), so\n\n\\[\n4\\sin\\left(\\frac{\\theta}{2}\\right)=5\\sin 25^\\circ\n\\]\n\n\\[\n\\sin\\left(\\frac{\\theta}{2}\\right)=\\frac{5\\sin 25^\\circ}{4}\n\\]\n\n\\[\n\\theta=63.7777\\ldots^\\circ\n\\]"
         },
         {
@@ -754,11 +754,11 @@
           "body": "The common region is made from two minor segments."
         },
         {
-          "title": "For the circle with centre",
+          "title": "Use trigonometry",
           "body": "For the circle with centre \\(O\\):\n\n\\[\n\\text{segment area}\n=\\frac{50}{360}\\pi(5)^2-\\frac{1}{2}(5)^2\\sin 50^\\circ\n=1.3328\\ldots\n\\]"
         },
         {
-          "title": "For the circle with centre",
+          "title": "Use trigonometry",
           "body": "For the circle with centre \\(P\\):\n\n\\[\n\\text{segment area}\n=\\frac{\\theta}{360}\\pi(4)^2-\\frac{1}{2}(4)^2\\sin \\theta\n\\]\n\n\\[\n=1.7284\\ldots\n\\]"
         },
         {
@@ -775,7 +775,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "The triangular end is isosceles,",
+          "title": "Calculate value",
           "body": "The triangular end is isosceles, with\n\n\\[\nAC=BC=12,\\qquad AB=10\n\\]"
         },
         {
@@ -787,7 +787,7 @@
           "body": "The projection of \\(AD\\) on the horizontal base goes from \\(A\\) to the midpoint of \\(FE\\). Its length is\n\n\\[\n\\sqrt{15^2+5^2}=\\sqrt{250}\n\\]"
         },
         {
-          "title": "So, for the angle between",
+          "title": "Use trigonometry",
           "body": "So, for the angle \\(\\theta\\) between \\(AD\\) and the base,\n\n\\[\n\\tan \\theta=\\frac{\\sqrt{119}}{\\sqrt{250}}\n\\]\n\n\\[\n\\theta=\\tan^{-1}\\left(\\frac{\\sqrt{119}}{\\sqrt{250}}\\right)=34.602\\ldots\n\\]"
         }
       ],
@@ -800,31 +800,31 @@
       "topicNote": "Moved to Vectors.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use vectors",
           "body": "\\[\n\\overrightarrow{OA}=2\\mathbf a,\\qquad\n\\overrightarrow{OB}=5\\mathbf b,\\qquad\n\\overrightarrow{AC}=3\\mathbf b\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use vectors",
           "body": "So\n\n\\[\n\\overrightarrow{OC}\n=\\overrightarrow{OA}+\\overrightarrow{AC}\n=2\\mathbf a+3\\mathbf b\n\\]"
         },
         {
-          "title": "Since lies on , let",
+          "title": "Use vectors",
           "body": "Since \\(P\\) lies on \\(OC\\), let\n\n\\[\n\\overrightarrow{OP}=t(2\\mathbf a+3\\mathbf b)\n\\]"
         },
         {
-          "title": "Since also lies on ,",
+          "title": "Use vectors",
           "body": "Since \\(P\\) also lies on \\(AB\\), let\n\n\\[\n\\overrightarrow{OP}\n=\\overrightarrow{OA}+s\\overrightarrow{AB}\n\\]"
         },
         {
-          "title": "Now",
+          "title": "Use vectors",
           "body": "Now\n\n\\[\n\\overrightarrow{AB}\n=\\overrightarrow{OB}-\\overrightarrow{OA}\n=5\\mathbf b-2\\mathbf a\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use vectors",
           "body": "So\n\n\\[\n\\overrightarrow{OP}\n=2\\mathbf a+s(5\\mathbf b-2\\mathbf a)\n\\]\n\n\\[\n\\overrightarrow{OP}\n=(2-2s)\\mathbf a+5s\\mathbf b\n\\]"
         },
         {
-          "title": "Compare this with",
+          "title": "Use vectors",
           "body": "Compare this with\n\n\\[\nt(2\\mathbf a+3\\mathbf b)=2t\\mathbf a+3t\\mathbf b\n\\]"
         },
         {
@@ -832,15 +832,15 @@
           "body": "Equating coefficients:\n\n\\[\n2t=2-2s\n\\]\n\n\\[\n3t=5s\n\\]"
         },
         {
-          "title": "From ,",
+          "title": "Use vectors",
           "body": "From \\(t=1-s\\),\n\n\\[\n3(1-s)=5s\n\\]\n\n\\[\n3=8s\n\\]\n\n\\[\ns=\\frac{3}{8}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use vectors",
           "body": "So\n\n\\[\nt=1-\\frac{3}{8}=\\frac{5}{8}\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Use vectors",
           "body": "Therefore\n\n\\[\n\\overrightarrow{OP}\n=\\frac{5}{8}(2\\mathbf a+3\\mathbf b)\n\\]\n\n\\[\n\\overrightarrow{OP}\n=\\frac{5}{4}\\mathbf a+\\frac{15}{8}\\mathbf b\n\\]"
         }
       ],

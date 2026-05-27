@@ -20,7 +20,7 @@
           "body": "Difference:\n\n\\[\n5873.015\\ldots-4827.586\\ldots=1045.429\\ldots\n\\]"
         },
         {
-          "title": "To the nearest whole number,",
+          "title": "Convert standard form",
           "body": "To the nearest whole number, this is\n\n\\[\n1045\n\\]"
         }
       ],
@@ -45,7 +45,7 @@
           "body": "Percentage increase:\n\n\\[\n\\frac{216}{720}\\times 100=30\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate percentage",
           "body": "So \\(P=30\\)."
         },
         {
@@ -74,11 +74,11 @@
           "body": "The multiplier for \\(2.5\\%\\) compound interest is\n\n\\[\n1.025\n\\]"
         },
         {
-          "title": "After 3 years,",
+          "title": "Use compound interest",
           "body": "After 3 years,\n\n\\[\n7200(1.025)^3=7753.6125\n\\]"
         },
         {
-          "title": "Correct to the nearest dollar,",
+          "title": "Use compound interest",
           "body": "Correct to the nearest dollar,\n\n\\[\n7753.6125\\approx 7754\n\\]"
         }
       ],
@@ -91,19 +91,19 @@
       "topicNote": "Direct and Inverse Proportion. The tag is correct.",
       "steps": [
         {
-          "title": "is inversely proportional to ,",
+          "title": "Find inverse function",
           "body": "\\(y\\) is inversely proportional to \\(\\sqrt{x}\\), so\n\n\\[\ny\\propto \\frac{1}{\\sqrt{x}}\n\\]"
         },
         {
-          "title": "is directly proportional to ,",
+          "title": "Find inverse function",
           "body": "\\(x\\) is directly proportional to \\(T^3\\), so \\(\\sqrt{x}\\propto T^{3/2}\\)."
         },
         {
-          "title": "Therefore",
+          "title": "Find inverse function",
           "body": "Therefore\n\n\\[\ny\\propto \\frac{1}{T^{3/2}}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Find inverse function",
           "body": "So\n\n\\[\nyT^{3/2}=k\n\\]"
         },
         {
@@ -111,7 +111,7 @@
           "body": "Use \\(y=8\\) when \\(T=25\\):\n\n\\[\nk=8\\times 25^{3/2}=8\\times 125=1000\n\\]"
         },
         {
-          "title": "When ,",
+          "title": "Find inverse function",
           "body": "When \\(y=27\\),\n\n\\[\n27T^{3/2}=1000\n\\]\n\n\\[\nT^{3/2}=\\frac{1000}{27}=\\left(\\frac{10}{3}\\right)^3\n\\]"
         },
         {
@@ -128,23 +128,23 @@
       "topicNote": "Algebraic Roots and Indices. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use index laws",
           "body": "\\[\nx^0=1\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Use index laws",
           "body": "For part (b),\n\n\\[\n2^{-3}\\times 2^9=2^{-3+9}=2^6\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use index laws",
           "body": "So\n\n\\[\nn=6\n\\]"
         },
         {
-          "title": "For part (c),",
+          "title": "Use index laws",
           "body": "For part (c),\n\n\\[\n\\frac{7^{206}\\times 7^m}{7^{214}}=7^{206+m-214}\n\\]"
         },
         {
-          "title": "This equals , so",
+          "title": "Use index laws",
           "body": "This equals \\(7^{-3}\\), so\n\n\\[\n206+m-214=-3\n\\]\n\n\\[\nm=5\n\\]"
         }
       ],
@@ -157,7 +157,7 @@
       "topicNote": "Rearranging formulas. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Rearrange formula",
           "body": "\\[\nn^2=\\frac{4d+t^3}{t^3}\n\\]\n\n\\[\nn^2t^3=4d+t^3\n\\]\n\n\\[\nt^3(n^2-1)=4d\n\\]\n\n\\[\nt^3=\\frac{4d}{n^2-1}\n\\]"
         }
       ],
@@ -170,11 +170,11 @@
       "topicNote": "Algebraic proof. The tag is acceptable because the question asks for exact algebraic working.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify surd",
           "body": "\\[\na=\\sqrt8+4,\\qquad b=\\sqrt8-4\n\\]\n\n\\[\na-b=(\\sqrt8+4)-(\\sqrt8-4)=8\n\\]\n\n\\[\na+b=(\\sqrt8+4)+(\\sqrt8-4)=2\\sqrt8=4\\sqrt2\n\\]"
         },
         {
-          "title": "So",
+          "title": "Simplify surd",
           "body": "So\n\\[\n(a-b)(a+b)=8\\times4\\sqrt2=32\\sqrt2\n\\]"
         },
         {
@@ -212,7 +212,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nf(x)=x+25\n\\]\n\n\\[\ng(x)=x^2-12x\n\\]\n\n\\[\nh(x)=fg(x)=f(g(x))\n\\]\n\n\\[\nh(x)=x^2-12x+25\n\\]\n\n\\[\nh(x)=(x-6)^2-11\n\\]"
         },
         {
@@ -220,7 +220,7 @@
           "body": "Let\n\n\\[\ny=(x-6)^2-11\n\\]\n\n\\[\ny+11=(x-6)^2\n\\]"
         },
         {
-          "title": "Since the domain of is",
+          "title": "Find inverse function",
           "body": "Since the domain of \\(h\\) is \\(x<6\\), take the negative square root:\n\n\\[\nx-6=-\\sqrt{y+11}\n\\]\n\n\\[\nx=6-\\sqrt{y+11}\n\\]"
         }
       ],
@@ -237,7 +237,7 @@
           "body": "The line is\n\\[\n2y=x+1\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\\[\nx=2y-1\n\\]"
         },
         {
@@ -245,15 +245,15 @@
           "body": "Substitute into the curve\n\\[\n3y^2+7y+16=x^2-x\n\\]\n\n\\[\n3y^2+7y+16=(2y-1)^2-(2y-1)\n\\]\n\n\\[\n3y^2+7y+16=4y^2-6y+2\n\\]\n\n\\[\ny^2-13y-14=0\n\\]\n\n\\[\n(y-14)(y+1)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\\[\ny=14 \\quad \\text{or} \\quad y=-1\n\\]"
         },
         {
-          "title": "If , then",
+          "title": "Calculate value",
           "body": "If \\(y=14\\), then \\(x=27\\)."
         },
         {
-          "title": "If , then",
+          "title": "Calculate value",
           "body": "If \\(y=-1\\), then \\(x=-3\\)."
         }
       ],
@@ -270,7 +270,7 @@
           "body": "The gradient of \\(AC\\) is \\(-\\frac67\\).\n\n\\[\n\\frac{q-10}{8-p}=-\\frac67\n\\]\n\n\\[\n7(q-10)=-6(8-p)\n\\]\n\n\\[\n7q-70=-48+6p\n\\]\n\n\\[\n6p-7q=-22\n\\]"
         },
         {
-          "title": "Since , lines and are",
+          "title": "Find the gradient",
           "body": "Since \\(\\angle ABC=90^\\circ\\), lines \\(AB\\) and \\(BC\\) are perpendicular.\n\n\\[\n\\text{gradient of }AB=\\frac{10-(-5)}{p-(-1)}=\\frac{15}{p+1}\n\\]\n\n\\[\n\\text{gradient of }BC=\\frac{q-(-5)}{8-(-1)}=\\frac{q+5}{9}\n\\]"
         },
         {
@@ -278,7 +278,7 @@
           "body": "The product of perpendicular gradients is \\(-1\\):\n\n\\[\n\\frac{15}{p+1}\\times \\frac{q+5}{9}=-1\n\\]\n\n\\[\n15(q+5)=-9(p+1)\n\\]\n\n\\[\n5(q+5)=-3(p+1)\n\\]\n\n\\[\n3p+5q=-28\n\\]"
         },
         {
-          "title": "Now solve",
+          "title": "Solve",
           "body": "Now solve\n\n\\[\n6p-7q=-22\n\\]\n\n\\[\n3p+5q=-28\n\\]"
         },
         {
@@ -290,7 +290,7 @@
           "body": "Subtract:\n\n\\[\n17q=-34\n\\]\n\n\\[\nq=-2\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate value",
           "body": "Then\n\n\\[\n3p+5(-2)=-28\n\\]\n\n\\[\n3p=-18\n\\]\n\n\\[\np=-6\n\\]"
         }
       ],
@@ -303,7 +303,7 @@
       "topicNote": "Correct. This is drawing a reciprocal graph.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Read the graph",
           "body": "\\[\ny=\\frac6x\n\\]"
         },
         {
@@ -328,7 +328,7 @@
           "body": "Draw a tangent to the curve at the point where\n\\[\nx=2\n\\]"
         },
         {
-          "title": "Using two clear points on",
+          "title": "Find the gradient",
           "body": "Using two clear points on the tangent, for example approximately \\((1.5,0.6)\\) and \\((2.3,2.2)\\),\n\\[\n\\text{gradient}\\approx\\frac{2.2-0.6}{2.3-1.5}\n\\]\n\n\\[\n\\text{gradient}\\approx2.0\n\\]"
         }
       ],
@@ -345,7 +345,7 @@
           "body": "A straight line with gradient \\(-3\\) passing through \\((0,5)\\) has equation\n\\[\ny=-3x+5\n\\]"
         },
         {
-          "title": "For the region, use the",
+          "title": "Use the inequalities",
           "body": "For the region, use the inequalities:\n\\[\nx<6\n\\]\n\n\\[\ny>2\n\\]\n\n\\[\ny\\leq x+1\n\\]"
         }
       ],
@@ -374,7 +374,7 @@
           "body": "curved surface area of hemisphere:\n\n\\[\n2\\pi x^2\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\n6\\pi x^2+\\pi x^2+2\\pi x^2=81\\pi\n\\]\n\n\\[\n9\\pi x^2=81\\pi\n\\]\n\n\\[\nx^2=9\n\\]\n\n\\[\nx=3\n\\]"
         },
         {
@@ -394,7 +394,7 @@
           "body": "Density:\n\n\\[\n\\frac{840}{99\\pi}=2.70\\ldots\n\\]"
         },
         {
-          "title": "This matches aluminium, whose density",
+          "title": "Compare density",
           "body": "This matches aluminium, whose density is \\(2.7\\text{ g/cm}^3\\)."
         }
       ],
@@ -415,15 +415,15 @@
           "body": "The interior angle of a regular pentagon is\n\\[\n\\frac{(5-2)\\times 180}{5}=108^\\circ\n\\]"
         },
         {
-          "title": "At ,",
+          "title": "Find the gradient",
           "body": "At \\(B\\),\n\\[\n\\angle IBC=135^\\circ-108^\\circ=27^\\circ\n\\]"
         },
         {
-          "title": "Since both polygons share side",
+          "title": "Find the gradient",
           "body": "Since both polygons share side \\(AB\\),\n\\[\nBI=BC\n\\]"
         },
         {
-          "title": "So triangle is isosceles",
+          "title": "Find the gradient",
           "body": "So triangle \\(BIC\\) is isosceles.\n\n\\[\nx=\\frac{180^\\circ-27^\\circ}{2}=76.5^\\circ\n\\]"
         }
       ],
@@ -436,11 +436,11 @@
       "topicNote": "Corrected to Circles, Arcs & Sectors.",
       "steps": [
         {
-          "title": "In triangle ,",
+          "title": "Use trigonometry",
           "body": "In triangle \\(ABC\\),\n\\[\n\\cos 30^\\circ=\\frac{24}{AC}\n\\]\n\n\\[\nAC=\\frac{24}{\\cos 30^\\circ}=27.712\\ldots\n\\]"
         },
         {
-          "title": "The semicircle has radius ,",
+          "title": "Calculate value",
           "body": "The semicircle has radius \\(3\\text{ cm}\\), so its diameter is \\(6\\text{ cm}\\).\n\n\\[\nAF+DC=AC-DF=27.712\\ldots-6\n\\]"
         },
         {
@@ -448,7 +448,7 @@
           "body": "Arc \\(FED\\) is a semicircle:\n\\[\n\\text{arc length}=3\\pi\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Calculate value",
           "body": "Therefore\n\\[\nAFEDC=27.712\\ldots-6+3\\pi=31.137\\ldots\n\\]"
         }
       ],
@@ -478,11 +478,11 @@
       "topicNote": "Sine, Cosine Rule & Area of Triangles. The tag is correct.",
       "steps": [
         {
-          "title": "For triangle ,",
+          "title": "Use trigonometry",
           "body": "For triangle \\(BCD\\),\n\n\\[\n405=\\frac12(36)(45)\\sin BCD\n\\]\n\n\\[\n\\sin BCD=0.5\n\\]"
         },
         {
-          "title": "The angle is acute, so",
+          "title": "Use trigonometry",
           "body": "The angle \\(BCD\\) is acute, so\n\n\\[\nBCD=30^\\circ\n\\]"
         },
         {
@@ -490,7 +490,7 @@
           "body": "Find \\(BD\\):\n\n\\[\nBD^2=36^2+45^2-2(36)(45)\\cos30^\\circ\n\\]\n\n\\[\nBD=22.695\\ldots\n\\]"
         },
         {
-          "title": "Now use cosine rule in",
+          "title": "Use trigonometry",
           "body": "Now use cosine rule in triangle \\(ABD\\):\n\n\\[\n\\cos ABD=\\frac{19^2+BD^2-28^2}{2(19)(BD)}\n\\]\n\n\\[\nABD=83.871\\ldots^\\circ\n\\]"
         }
       ],
@@ -507,7 +507,7 @@
           "body": "The projection of \\(EC\\) onto the field is \\(AC\\).\n\n\\[\nAC=\\sqrt{18^2+8^2}=\\sqrt{388}\n\\]"
         },
         {
-          "title": "The vertical height is ,",
+          "title": "Use trigonometry",
           "body": "The vertical height is \\(AE=12\\text{ m}\\), so\n\n\\[\n\\tan\\theta=\\frac{12}{\\sqrt{388}}\n\\]\n\n\\[\n\\theta=31.350\\ldots^\\circ\n\\]"
         }
       ],
@@ -553,23 +553,23 @@
           "body": "The median is at cumulative frequency \\(30\\). From the graph,\n\n\\[\n\\text{median}\\approx 49\n\\]"
         },
         {
-          "title": "At marks, the cumulative frequency",
+          "title": "Use cumulative frequency",
           "body": "At \\(58\\) marks, the cumulative frequency is about \\(45\\), so about \\(45\\) students gained \\(58\\) marks or less."
         },
         {
-          "title": "For the interquartile range",
+          "title": "Use cumulative frequency",
           "body": "For the interquartile range:\n\n\\[\nQ_1 \\text{ is at }15,\\qquad Q_3 \\text{ is at }45\n\\]"
         },
         {
-          "title": "From the graph,",
+          "title": "Use cumulative frequency",
           "body": "From the graph,\n\n\\[\nQ_1\\approx 40,\\qquad Q_3\\approx 57\n\\]\n\n\\[\n\\text{IQR}\\approx 57-40=17\n\\]"
         },
         {
-          "title": "The geometry IQR is ,",
+          "title": "Use cumulative frequency",
           "body": "The geometry IQR is \\(9\\), so Luis is correct because the algebra IQR is larger."
         },
         {
-          "title": "For grade A, use mark",
+          "title": "Use cumulative frequency",
           "body": "For grade A, use mark \\(64\\). From the graph, about \\(50\\) students gained \\(64\\) or less, so about\n\n\\[\n60-50=10\n\\]"
         },
         {
@@ -594,7 +594,7 @@
           "body": "The missing probability is\n\n\\[\n1-0.38-0.24-0.16=0.22\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate probability",
           "body": "So\n\n\\[\nP(\\text{Darjeeling or Rize})=0.24+0.16=0.40\n\\]"
         }
       ],
@@ -607,31 +607,31 @@
       "topicNote": "Direct & Inverse Proportion is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Find inverse function",
           "body": "\\[\ny \\propto \\frac{1}{\\sqrt{x}}\n\\]"
         },
         {
-          "title": "and",
+          "title": "Use Direct Inverse Proportion correct",
           "body": "and\n\n\\[\nx \\propto T^3\n\\]"
         },
         {
-          "title": "So",
+          "title": "Find inverse function",
           "body": "So\n\n\\[\n\\sqrt{x}\\propto T^{3/2}\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Find inverse function",
           "body": "Therefore\n\n\\[\ny\\propto \\frac{1}{T^{3/2}}\n\\]"
         },
         {
-          "title": "So is constant",
+          "title": "Use Direct Inverse Proportion correct",
           "body": "So \\(yT^{3/2}\\) is constant."
         },
         {
-          "title": "When and ,",
+          "title": "Find inverse function",
           "body": "When \\(y=8\\) and \\(T=25\\),\n\n\\[\n8(25)^{3/2}=8(125)=1000\n\\]"
         },
         {
-          "title": "When ,",
+          "title": "Find inverse function",
           "body": "When \\(y=27\\),\n\n\\[\n27T^{3/2}=1000\n\\]\n\n\\[\nT^{3/2}=\\frac{1000}{27}=\\left(\\frac{10}{3}\\right)^3\n\\]\n\n\\[\nT=\\left(\\frac{10}{3}\\right)^2=\\frac{100}{9}\n\\]"
         }
       ],
@@ -644,7 +644,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nf(x)=x+25\n\\]\n\n\\[\ng(x)=x^2-12x\n\\]\n\n\\[\nh(x)=fg(x)=f(g(x))\n\\]\n\n\\[\nh(x)=x^2-12x+25\n\\]\n\n\\[\nh(x)=(x-6)^2-11\n\\]"
         },
         {
@@ -652,7 +652,7 @@
           "body": "Let\n\n\\[\ny=(x-6)^2-11\n\\]\n\n\\[\ny+11=(x-6)^2\n\\]"
         },
         {
-          "title": "Since the domain of is",
+          "title": "Find inverse function",
           "body": "Since the domain of \\(h\\) is \\(x<6\\), take the negative square root:\n\n\\[\nx-6=-\\sqrt{y+11}\n\\]\n\n\\[\nx=6-\\sqrt{y+11}\n\\]"
         }
       ],
@@ -669,7 +669,7 @@
           "body": "The gradient of \\(AC\\) is \\(-\\frac67\\).\n\n\\[\n\\frac{q-10}{8-p}=-\\frac67\n\\]\n\n\\[\n7(q-10)=-6(8-p)\n\\]\n\n\\[\n7q-70=-48+6p\n\\]\n\n\\[\n6p-7q=-22\n\\]"
         },
         {
-          "title": "Since , lines and are",
+          "title": "Find the gradient",
           "body": "Since \\(\\angle ABC=90^\\circ\\), lines \\(AB\\) and \\(BC\\) are perpendicular.\n\n\\[\n\\text{gradient of }AB=\\frac{10-(-5)}{p-(-1)}=\\frac{15}{p+1}\n\\]\n\n\\[\n\\text{gradient of }BC=\\frac{q-(-5)}{8-(-1)}=\\frac{q+5}{9}\n\\]"
         },
         {
@@ -677,7 +677,7 @@
           "body": "The product of perpendicular gradients is \\(-1\\):\n\n\\[\n\\frac{15}{p+1}\\times \\frac{q+5}{9}=-1\n\\]\n\n\\[\n15(q+5)=-9(p+1)\n\\]\n\n\\[\n5(q+5)=-3(p+1)\n\\]\n\n\\[\n3p+5q=-28\n\\]"
         },
         {
-          "title": "Now solve",
+          "title": "Solve",
           "body": "Now solve\n\n\\[\n6p-7q=-22\n\\]\n\n\\[\n3p+5q=-28\n\\]"
         },
         {
@@ -689,7 +689,7 @@
           "body": "Subtract:\n\n\\[\n17q=-34\n\\]\n\n\\[\nq=-2\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate value",
           "body": "Then\n\n\\[\n3p+5(-2)=-28\n\\]\n\n\\[\n3p=-18\n\\]\n\n\\[\np=-6\n\\]"
         }
       ],
@@ -718,7 +718,7 @@
           "body": "curved surface area of hemisphere:\n\n\\[\n2\\pi x^2\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\n6\\pi x^2+\\pi x^2+2\\pi x^2=81\\pi\n\\]\n\n\\[\n9\\pi x^2=81\\pi\n\\]\n\n\\[\nx^2=9\n\\]\n\n\\[\nx=3\n\\]"
         },
         {
@@ -738,7 +738,7 @@
           "body": "Density:\n\n\\[\n\\frac{840}{99\\pi}=2.70\\ldots\n\\]"
         },
         {
-          "title": "This matches aluminium, whose density",
+          "title": "Compare density",
           "body": "This matches aluminium, whose density is \\(2.7\\text{ g/cm}^3\\)."
         }
       ],

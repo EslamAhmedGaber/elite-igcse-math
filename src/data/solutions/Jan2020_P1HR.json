@@ -8,7 +8,7 @@
       "topicNote": "Set notation and Venn diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nB=\\{b,l,u,e\\},\\quad G=\\{g,r,e,y\\},\\quad W=\\{w,h,i,t,e\\}\n\\]"
         },
         {
@@ -16,7 +16,7 @@
           "body": "\\(B \\cup G\\) means all the letters that are in \\(B\\) or in \\(G\\).\n\n\\[\nB \\cup G=\\{b,l,u,e,g,r,y\\}\n\\]"
         },
         {
-          "title": "means letters that are in",
+          "title": "Calculate statistic",
           "body": "\\(W \\cap G'\\) means letters that are in \\(W\\), but not in \\(G\\). Since \\(e\\) is in \\(G\\), it is not included.\n\n\\[\nW \\cap G'=\\{w,h,i,t\\}\n\\]"
         },
         {
@@ -33,11 +33,11 @@
       "topicNote": "Fractions. The tag is correct.",
       "steps": [
         {
-          "title": "Convert the mixed numbers to",
+          "title": "Simplify fraction",
           "body": "Convert the mixed numbers to improper fractions:\n\n\\[\n3\\frac15=\\frac{16}{5}\n\\]\n\n\\[\n2\\frac58=\\frac{21}{8}\n\\]"
         },
         {
-          "title": "Now multiply",
+          "title": "Simplify fraction",
           "body": "Now multiply:\n\n\\[\n\\frac{16}{5}\\times \\frac{21}{8}\n=\\frac{2\\times 21}{5}\n\\]\n\n\\[\n=\\frac{42}{5}=8\\frac25\n\\]"
         }
       ],
@@ -67,15 +67,15 @@
       "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
       "steps": [
         {
-          "title": "The weight kg correct to",
+          "title": "Estimate the value",
           "body": "The weight \\(4.3\\) kg correct to 2 significant figures has bounds\n\n\\[\n4.25\\le w<4.35\n\\]"
         },
         {
-          "title": "So the upper bound is",
+          "title": "Find upper bound",
           "body": "So the upper bound is \\(4.35\\) kg and the lower bound is \\(4.25\\) kg."
         },
         {
-          "title": "For",
+          "title": "Estimate the value",
           "body": "For\n\n\\[\nG=e-f\n\\]"
         },
         {
@@ -146,11 +146,11 @@
           "body": "(a) Let\n\\[\nx=0.5727272\\ldots\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate value",
           "body": "Then\n\\[\n1000x=572.727272\\ldots\n\\]"
         },
         {
-          "title": "and",
+          "title": "Calculate value",
           "body": "and\n\\[\n10x=5.727272\\ldots\n\\]"
         },
         {
@@ -158,7 +158,7 @@
           "body": "Subtract:\n\\[\n990x=567\n\\]\n\n\\[\nx=\\frac{567}{990}=\\frac{63}{110}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\\[\n0.5\\dot7\\dot2=\\frac{63}{110}\n\\]"
         },
         {
@@ -175,7 +175,7 @@
       "topicNote": "Solving quadratic equations. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve quadratic equation",
           "body": "\\[\nx^2-5x-36=0\n\\]"
         },
         {
@@ -183,7 +183,7 @@
           "body": "Factorise:\n\\[\n(x-9)(x+4)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Solve quadratic equation",
           "body": "So\n\\[\nx=9 \\quad \\text{or} \\quad x=-4\n\\]"
         }
       ],
@@ -196,7 +196,7 @@
       "topicNote": "Functions. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nf(x)=(x-4)^2\n\\]"
         },
         {
@@ -233,11 +233,11 @@
           "body": "The point \\(P\\) is approximately\n\\[\n(2,2.4)\n\\]"
         },
         {
-          "title": "Using ,",
+          "title": "Find the gradient",
           "body": "Using \\(y=mx+c\\),\n\\[\n2.4\\approx -0.6(2)+c\n\\]\n\n\\[\nc\\approx3.6\n\\]"
         },
         {
-          "title": "So an approximate tangent equation",
+          "title": "Find the gradient",
           "body": "So an approximate tangent equation is\n\\[\ny\\approx -0.6x+3.6\n\\]"
         },
         {
@@ -245,7 +245,7 @@
           "body": "The equation \\(f(x)=k\\) has exactly two different solutions when the horizontal line touches one turning level."
         },
         {
-          "title": "From the graph, these levels",
+          "title": "Find the gradient",
           "body": "From the graph, these levels are approximately\n\\[\nk=3 \\quad \\text{and} \\quad k=-1\n\\]"
         }
       ],
@@ -258,23 +258,23 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "For part (a), the graph",
+          "title": "Read the graph",
           "body": "For part (a), the graph has maximum \\(2.5\\) and minimum \\(-2.5\\), so\n\n\\[\na=2.5\n\\]"
         },
         {
-          "title": "The maximum occurs at .",
+          "title": "Use trigonometry",
           "body": "The maximum occurs at \\(x=60^\\circ\\). For \\(y=a\\cos(x+b)^\\circ\\), a maximum occurs when\n\n\\[\nx+b=360\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\n60+b=360\n\\]\n\n\\[\nb=300\n\\]"
         },
         {
-          "title": "For part (b), the minimum",
+          "title": "Calculate value",
           "body": "For part (b), the minimum point of \\(y=f(x)\\) is \\((4,5)\\)."
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(2x)\n\\]"
         },
         {
@@ -282,7 +282,7 @@
           "body": "the \\(x\\)-coordinate is divided by 2:\n\n\\[\n(4,5)\\to(2,5)\n\\]"
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(x)-7\n\\]"
         },
         {
@@ -299,15 +299,15 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\ns=t^3+4t^2-5t+7\n\\]"
         },
         {
-          "title": "Velocity is the derivative of",
+          "title": "Evaluate fraction",
           "body": "Velocity is the derivative of displacement:\n\n\\[\nv=\\frac{ds}{dt}=3t^2+8t-5\n\\]"
         },
         {
-          "title": "At time , the velocity",
+          "title": "Calculate value",
           "body": "At time \\(T\\), the velocity is \\(V\\), so\n\n\\[\nV=3T^2+8T-5\n\\]\n\n\\[\n3T^2+8T-(V+5)=0\n\\]"
         },
         {
@@ -315,7 +315,7 @@
           "body": "Use the quadratic formula:\n\n\\[\nT=\\frac{-8\\pm\\sqrt{8^2-4(3)(-(V+5))}}{2(3)}\n\\]\n\n\\[\nT=\\frac{-8\\pm\\sqrt{64+12V+60}}{6}\n\\]\n\n\\[\nT=\\frac{-8\\pm\\sqrt{124+12V}}{6}\n\\]\n\n\\[\nT=\\frac{-4\\pm\\sqrt{31+3V}}{3}\n\\]"
         },
         {
-          "title": "Since , take the positive",
+          "title": "Simplify surd",
           "body": "Since \\(T\\ge 0\\), take the positive root:\n\n\\[\nT=\\frac{-4+\\sqrt{31+3V}}{3}\n\\]"
         }
       ],
@@ -332,7 +332,7 @@
           "body": "Convert the mass to grams:\n\\[\n5.73\\text{ kg}=5730\\text{ g}\n\\]"
         },
         {
-          "title": "Using",
+          "title": "Calculate volume",
           "body": "Using\n\\[\n\\text{density}=\\frac{\\text{mass}}{\\text{volume}}\n\\]\n\n\\[\n\\text{volume of gold}=\\frac{5730}{19.32}=296.58\\ldots\\text{ cm}^3\n\\]"
         },
         {
@@ -365,7 +365,7 @@
           "body": "The angle at the centre is twice the angle at the circumference:\n\\[\n\\angle AOC=2\\times 38^\\circ=76^\\circ\n\\]"
         },
         {
-          "title": "Since , triangle is isosceles",
+          "title": "Use trigonometry",
           "body": "Since \\(OA=OC\\), triangle \\(AOC\\) is isosceles.\n\n\\[\n\\angle OAC=\\angle OCA=\\frac{180^\\circ-76^\\circ}{2}=52^\\circ\n\\]"
         }
       ],
@@ -382,11 +382,11 @@
           "body": "The garden is a semicircle of radius \\(7.2\\text{ m}\\).\n\n\\[\n\\text{area}=\\frac12\\pi r^2\n\\]\n\n\\[\n\\text{area}=\\frac12\\pi(7.2)^2=81.43\\ldots\\text{ m}^2\n\\]"
         },
         {
-          "title": "Yuen has 12 boxes, and",
+          "title": "Calculate area",
           "body": "Yuen has 12 boxes, and each box covers \\(6\\text{ m}^2\\):\n\\[\n12\\times 6=72\\text{ m}^2\n\\]"
         },
         {
-          "title": "Since",
+          "title": "Calculate area",
           "body": "Since\n\\[\n72<81.43\\ldots\n\\]"
         },
         {
@@ -440,7 +440,7 @@
           "body": "The small cone has height \\(h\\), so its linear scale factor compared with the large cone is\n\n\\[\n\\frac{h}{2h}=\\frac12\n\\]"
         },
         {
-          "title": "So the small cone has",
+          "title": "Define cone dimensions",
           "body": "So the small cone has radius\n\n\\[\n\\frac r2\n\\]"
         },
         {
@@ -452,11 +452,11 @@
           "body": "Volume of the small cone:\n\n\\[\n\\frac13\\pi\\left(\\frac r2\\right)^2h=\\frac1{12}\\pi r^2h\n\\]"
         },
         {
-          "title": "So the volume of the",
+          "title": "Calculate volume",
           "body": "So the volume of the frustum is\n\n\\[\n\\frac23\\pi r^2h-\\frac1{12}\\pi r^2h=\\frac7{12}\\pi r^2h\n\\]"
         },
         {
-          "title": "The sphere has radius ,",
+          "title": "Calculate volume",
           "body": "The sphere has radius \\(r\\), so its volume is\n\n\\[\n\\frac43\\pi r^3\n\\]"
         },
         {
@@ -477,11 +477,11 @@
       "topicNote": "Right-Angled Triangles - Pythagoras & Trigonometry. The tag is correct.",
       "steps": [
         {
-          "title": "In triangle ,",
+          "title": "Use trigonometry",
           "body": "In triangle \\(DEF\\),\n\\[\nEF=12\\cos 40^\\circ=9.192\\ldots\n\\]"
         },
         {
-          "title": "In triangle ,",
+          "title": "Use trigonometry",
           "body": "In triangle \\(EFG\\),\n\\[\n\\sin 28^\\circ=\\frac{EF}{EG}\n\\]\n\n\\[\nEG=\\frac{9.192\\ldots}{\\sin 28^\\circ}=19.580\\ldots\n\\]"
         }
       ],
@@ -494,11 +494,11 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "In triangle , and",
+          "title": "Use trigonometry",
           "body": "In triangle \\(BEC\\), \\(CE=13\\) and \\(\\angle BEC=40^\\circ\\)."
         },
         {
-          "title": "Since this is a prism,",
+          "title": "Find the gradient",
           "body": "Since this is a prism, \\(BE\\) is perpendicular to the cross section, so triangle \\(BEC\\) is right-angled at \\(B\\).\n\n\\[\nBC=13\\sin40^\\circ\n\\]\n\n\\[\nBC=8.356238\\ldots\n\\]"
         },
         {
@@ -506,11 +506,11 @@
           "body": "The area of triangle \\(ABC\\) is \\(22\\text{ cm}^2\\)."
         },
         {
-          "title": "Using",
+          "title": "Use trigonometry",
           "body": "Using\n\n\\[\n\\text{Area}=\\frac12 ab\\sin C\n\\]\n\n\\[\n22=\\frac12(AC)(BC)\\sin(\\angle ACB)\n\\]\n\n\\[\n22=\\frac12(6)(8.356238\\ldots)\\sin(\\angle ACB)\n\\]\n\n\\[\n\\sin(\\angle ACB)=0.877587\\ldots\n\\]"
         },
         {
-          "title": "The angle is obtuse, so",
+          "title": "Use trigonometry",
           "body": "The angle \\(ACB\\) is obtuse, so\n\n\\[\n\\angle ACB=180^\\circ-\\sin^{-1}(0.877587\\ldots)\n\\]\n\n\\[\n\\angle ACB=118.647\\ldots^\\circ\n\\]"
         },
         {
@@ -560,11 +560,11 @@
           "body": "Use the relative histogram heights."
         },
         {
-          "title": "For , the relative area",
+          "title": "Calculate area",
           "body": "For \\(155<h\\le 170\\), the relative area is\n\n\\[\n5(40)+10(20)=400\n\\]"
         },
         {
-          "title": "This represents students, so each",
+          "title": "Calculate area",
           "body": "This represents \\(160\\) students, so each relative area unit represents\n\n\\[\n\\frac{160}{400}=0.4\n\\]"
         },
         {
@@ -593,15 +593,15 @@
           "body": "The median is at cumulative frequency \\(30\\)."
         },
         {
-          "title": "From the graph,",
+          "title": "Use cumulative frequency",
           "body": "From the graph,\n\n\\[\n\\text{median}\\approx 22.5\\text{ minutes}\n\\]"
         },
         {
-          "title": "For the interquartile range",
+          "title": "Use cumulative frequency",
           "body": "For the interquartile range:\n\n\\[\nQ_1 \\text{ is at }15,\\qquad Q_3 \\text{ is at }45\n\\]"
         },
         {
-          "title": "From the graph,",
+          "title": "Use cumulative frequency",
           "body": "From the graph,\n\n\\[\nQ_1\\approx 16.5,\\qquad Q_3\\approx 28.5\n\\]\n\n\\[\n\\text{IQR}\\approx 28.5-16.5=12\n\\]"
         },
         {
@@ -609,7 +609,7 @@
           "body": "Hospital B has median \\(28\\) minutes and IQR \\(19\\) minutes."
         },
         {
-          "title": "So Hospital A has a",
+          "title": "Use cumulative frequency",
           "body": "So Hospital A has a shorter median waiting time and a smaller spread."
         }
       ],
@@ -622,15 +622,15 @@
       "topicNote": "Combined & Conditional Probability. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate probability",
           "body": "\\[\nP(\\text{win tennis})=0.6\n\\]\n\n\\[\nP(\\text{win both})=0.42\n\\]"
         },
         {
-          "title": "So the chess win probability",
+          "title": "Calculate probability",
           "body": "So the chess win probability used with the tennis result is\n\n\\[\n0.42\\div 0.6=0.7\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Calculate probability",
           "body": "Therefore\n\n\\[\nP(\\text{lose tennis})=0.4,\\qquad P(\\text{lose chess})=0.3\n\\]\n\n\\[\nP(\\text{not win either})=0.4\\times 0.3=0.12\n\\]"
         }
       ],
@@ -643,23 +643,23 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "For part (a), the graph",
+          "title": "Read the graph",
           "body": "For part (a), the graph has maximum \\(2.5\\) and minimum \\(-2.5\\), so\n\n\\[\na=2.5\n\\]"
         },
         {
-          "title": "The maximum occurs at .",
+          "title": "Use trigonometry",
           "body": "The maximum occurs at \\(x=60^\\circ\\). For \\(y=a\\cos(x+b)^\\circ\\), a maximum occurs when\n\n\\[\nx+b=360\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\n60+b=360\n\\]\n\n\\[\nb=300\n\\]"
         },
         {
-          "title": "For part (b), the minimum",
+          "title": "Calculate value",
           "body": "For part (b), the minimum point of \\(y=f(x)\\) is \\((4,5)\\)."
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(2x)\n\\]"
         },
         {
@@ -667,7 +667,7 @@
           "body": "the \\(x\\)-coordinate is divided by 2:\n\n\\[\n(4,5)\\to(2,5)\n\\]"
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(x)-7\n\\]"
         },
         {
@@ -684,15 +684,15 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\ns=t^3+4t^2-5t+7\n\\]"
         },
         {
-          "title": "Velocity is the derivative of",
+          "title": "Evaluate fraction",
           "body": "Velocity is the derivative of displacement:\n\n\\[\nv=\\frac{ds}{dt}=3t^2+8t-5\n\\]"
         },
         {
-          "title": "At time , the velocity",
+          "title": "Calculate value",
           "body": "At time \\(T\\), the velocity is \\(V\\), so\n\n\\[\nV=3T^2+8T-5\n\\]\n\n\\[\n3T^2+8T-(V+5)=0\n\\]"
         },
         {
@@ -700,7 +700,7 @@
           "body": "Use the quadratic formula:\n\n\\[\nT=\\frac{-8\\pm\\sqrt{8^2-4(3)(-(V+5))}}{2(3)}\n\\]\n\n\\[\nT=\\frac{-8\\pm\\sqrt{64+12V+60}}{6}\n\\]\n\n\\[\nT=\\frac{-8\\pm\\sqrt{124+12V}}{6}\n\\]\n\n\\[\nT=\\frac{-4\\pm\\sqrt{31+3V}}{3}\n\\]"
         },
         {
-          "title": "Since , take the positive",
+          "title": "Simplify surd",
           "body": "Since \\(T\\ge 0\\), take the positive root:\n\n\\[\nT=\\frac{-4+\\sqrt{31+3V}}{3}\n\\]"
         }
       ],
@@ -725,7 +725,7 @@
           "body": "The small cone has height \\(h\\), so its linear scale factor compared with the large cone is\n\n\\[\n\\frac{h}{2h}=\\frac12\n\\]"
         },
         {
-          "title": "So the small cone has",
+          "title": "Define cone dimensions",
           "body": "So the small cone has radius\n\n\\[\n\\frac r2\n\\]"
         },
         {
@@ -737,11 +737,11 @@
           "body": "Volume of the small cone:\n\n\\[\n\\frac13\\pi\\left(\\frac r2\\right)^2h=\\frac1{12}\\pi r^2h\n\\]"
         },
         {
-          "title": "So the volume of the",
+          "title": "Calculate volume",
           "body": "So the volume of the frustum is\n\n\\[\n\\frac23\\pi r^2h-\\frac1{12}\\pi r^2h=\\frac7{12}\\pi r^2h\n\\]"
         },
         {
-          "title": "The sphere has radius ,",
+          "title": "Calculate volume",
           "body": "The sphere has radius \\(r\\), so its volume is\n\n\\[\n\\frac43\\pi r^3\n\\]"
         },
         {
@@ -762,11 +762,11 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "In triangle , and",
+          "title": "Use trigonometry",
           "body": "In triangle \\(BEC\\), \\(CE=13\\) and \\(\\angle BEC=40^\\circ\\)."
         },
         {
-          "title": "Since this is a prism,",
+          "title": "Find the gradient",
           "body": "Since this is a prism, \\(BE\\) is perpendicular to the cross section, so triangle \\(BEC\\) is right-angled at \\(B\\).\n\n\\[\nBC=13\\sin40^\\circ\n\\]\n\n\\[\nBC=8.356238\\ldots\n\\]"
         },
         {
@@ -774,11 +774,11 @@
           "body": "The area of triangle \\(ABC\\) is \\(22\\text{ cm}^2\\)."
         },
         {
-          "title": "Using",
+          "title": "Use trigonometry",
           "body": "Using\n\n\\[\n\\text{Area}=\\frac12 ab\\sin C\n\\]\n\n\\[\n22=\\frac12(AC)(BC)\\sin(\\angle ACB)\n\\]\n\n\\[\n22=\\frac12(6)(8.356238\\ldots)\\sin(\\angle ACB)\n\\]\n\n\\[\n\\sin(\\angle ACB)=0.877587\\ldots\n\\]"
         },
         {
-          "title": "The angle is obtuse, so",
+          "title": "Use trigonometry",
           "body": "The angle \\(ACB\\) is obtuse, so\n\n\\[\n\\angle ACB=180^\\circ-\\sin^{-1}(0.877587\\ldots)\n\\]\n\n\\[\n\\angle ACB=118.647\\ldots^\\circ\n\\]"
         },
         {

@@ -8,15 +8,15 @@
       "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Find the LCM",
           "body": "\\[\nA=2\\times 3^{43}\n\\]\n\n\\[\nB=16\\times 3^{37}=2^4\\times 3^{37}\n\\]"
         },
         {
-          "title": "For the HCF, take the",
+          "title": "Find the LCM",
           "body": "For the HCF, take the smaller powers:\n\n\\[\n\\text{HCF}=2\\times 3^{37}\n\\]"
         },
         {
-          "title": "For ,",
+          "title": "Find the LCM",
           "body": "For \\(A\\times B\\),\n\n\\[\nA\\times B=(2\\times 3^{43})(2^4\\times 3^{37})\n\\]\n\n\\[\nA\\times B=2^5\\times 3^{80}\n\\]"
         }
       ],
@@ -29,15 +29,15 @@
       "topicNote": "Powers, roots and standard form. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Convert standard form",
           "body": "\\[\n5.7\\times 10^{-3}=0.0057\n\\]\n\n\\[\n800000=8\\times 10^5\n\\]"
         },
         {
-          "title": "For part (c), first simplify",
+          "title": "Convert standard form",
           "body": "For part (c), first simplify the numerator:\n\n\\[\n3\\times 10^5-2.7\\times 10^4=300000-27000=273000\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Convert standard form",
           "body": "Then\n\n\\[\n\\frac{273000}{6\\times 10^{-2}}=\\frac{273000}{0.06}=4550000\n\\]\n\n\\[\n4550000=4.55\\times 10^6\n\\]"
         }
       ],
@@ -67,7 +67,7 @@
           "body": "Let the compound interest rate be \\(x\\%\\).\n\n\\[\n8000\\left(1+\\frac{x}{100}\\right)^6=8877.62\n\\]\n\n\\[\n1+\\frac{x}{100}=\\sqrt[6]{\\frac{8877.62}{8000}}=1.017500\\ldots\n\\]\n\n\\[\nx=1.7500\\ldots\n\\]"
         },
         {
-          "title": "Correct to 2 decimal places,",
+          "title": "Use compound interest",
           "body": "Correct to 2 decimal places,\n\n\\[\nx=1.75\n\\]"
         }
       ],
@@ -92,11 +92,11 @@
           "body": "The mass is \\(5\\) kg correct to the nearest \\(50\\) g.\n\n\\[\n50\\text{ g}=0.05\\text{ kg}\n\\]"
         },
         {
-          "title": "Half of this is kg,",
+          "title": "Find upper bound",
           "body": "Half of this is \\(0.025\\) kg, so\n\n\\[\n\\text{upper bound for mass}=5+0.025=5.025\n\\]"
         },
         {
-          "title": "The volume is m ,",
+          "title": "Find upper bound",
           "body": "The volume is \\(1.84\\times 10^{-3}=0.00184\\) m\\(^3\\), correct to 3 significant figures."
         },
         {
@@ -104,11 +104,11 @@
           "body": "The lower bound is\n\n\\[\n0.00184-0.000005=0.001835\n\\]"
         },
         {
-          "title": "So the upper bound for",
+          "title": "Find upper bound",
           "body": "So the upper bound for the density is\n\n\\[\n\\frac{5.025}{0.001835}=2738.419\\ldots\n\\]"
         },
         {
-          "title": "Correct to 1 decimal place,",
+          "title": "Find upper bound",
           "body": "Correct to 1 decimal place,\n\n\\[\n2738.4\n\\]"
         }
       ],
@@ -121,7 +121,7 @@
       "topicNote": "Surds. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify surd",
           "body": "\\[\n\\frac{6}{3-\\sqrt7}\n\\]"
         },
         {
@@ -138,7 +138,7 @@
       "topicNote": "Direct and Inverse Proportion. The tag is correct.",
       "steps": [
         {
-          "title": "is inversely proportional to ,",
+          "title": "Find inverse function",
           "body": "\\(F\\) is inversely proportional to \\(v^2\\), so\n\n\\[\nF=\\frac{k}{v^2}\n\\]"
         },
         {
@@ -146,7 +146,7 @@
           "body": "Use \\(F=6.5\\) when \\(v=4\\):\n\n\\[\n6.5=\\frac{k}{4^2}\n\\]\n\n\\[\nk=6.5\\times 16=104\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Find inverse function",
           "body": "Therefore\n\n\\[\nF=\\frac{104}{v^2}\n\\]"
         }
       ],
@@ -171,7 +171,7 @@
           "body": "(c)(i)\n\\[\ny^2-2y-48=(y-8)(y+6)\n\\]"
         },
         {
-          "title": "(c)(ii) or",
+          "title": "Factorise expression",
           "body": "(c)(ii) \\(y=8\\) or \\(y=-6\\)."
         }
       ],
@@ -184,7 +184,7 @@
       "topicNote": "Corrected from Sine/Cosine Rule to Algebraic Fractions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use trigonometry",
           "body": "\\[\n\\frac1{3x-2}\\times\\frac{9x^2-4}{3x^2-13x-10}\n-\\frac7{x-1}\n\\]"
         },
         {
@@ -192,7 +192,7 @@
           "body": "Factor:\n\n\\[\n9x^2-4=(3x-2)(3x+2)\n\\]\n\n\\[\n3x^2-13x-10=(3x+2)(x-5)\n\\]"
         },
         {
-          "title": "So the first product becomes",
+          "title": "Use trigonometry",
           "body": "So the first product becomes\n\n\\[\n\\frac1{3x-2}\\times\n\\frac{(3x-2)(3x+2)}{(3x+2)(x-5)}\n\\]"
         },
         {
@@ -200,7 +200,7 @@
           "body": "Cancel common factors:\n\n\\[\n\\frac1{x-5}\n\\]"
         },
         {
-          "title": "Now subtract",
+          "title": "Use trigonometry",
           "body": "Now subtract:\n\n\\[\n\\frac1{x-5}-\\frac7{x-1}\n\\]"
         },
         {
@@ -217,7 +217,7 @@
       "topicNote": "Simultaneous equations. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve simultaneous equations",
           "body": "\\[\n7x-2y=34\n\\]\n\n\\[\n3x+5y=-3\n\\]"
         },
         {
@@ -233,7 +233,7 @@
           "body": "Add:\n\\[\n41x=164\n\\]\n\n\\[\nx=4\n\\]"
         },
         {
-          "title": "Substitute into",
+          "title": "Solve simultaneous equations",
           "body": "Substitute into \\(3x+5y=-3\\):\n\\[\n12+5y=-3\n\\]\n\n\\[\ny=-3\n\\]"
         }
       ],
@@ -250,7 +250,7 @@
           "body": "The arithmetic sequence is\n\n\\[\n8,\\ 15,\\ 22,\\ 29,\\ 36,\\ldots\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\na=8,\\quad d=7\n\\]"
         },
         {
@@ -262,7 +262,7 @@
           "body": "There are\n\n\\[\n100-50+1=51\n\\]"
         },
         {
-          "title": "terms from the 50th to",
+          "title": "Find the nth term",
           "body": "terms from the 50th to the 100th inclusive.\n\n\\[\n\\text{sum}=\\frac{51}{2}(351+701)\n\\]\n\n\\[\n=26826\n\\]"
         }
       ],
@@ -275,7 +275,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "In a rhombus, the diagonals",
+          "title": "Find the gradient",
           "body": "In a rhombus, the diagonals are perpendicular and bisect each other."
         },
         {
@@ -283,19 +283,19 @@
           "body": "The diagonal \\(AC\\) lies on\n\n\\[\n2y+7x=20\n\\]\n\n\\[\n2y=-7x+20\n\\]\n\n\\[\ny=-\\frac72x+10\n\\]"
         },
         {
-          "title": "So the gradient of is",
+          "title": "Find the gradient",
           "body": "So the gradient of \\(AC\\) is\n\n\\[\n-\\frac72\n\\]"
         },
         {
-          "title": "Therefore the gradient of is",
+          "title": "Find the gradient",
           "body": "Therefore the gradient of \\(BD\\) is\n\n\\[\n\\frac27\n\\]"
         },
         {
-          "title": "The line passes through",
+          "title": "Calculate value",
           "body": "The line \\(BD\\) passes through\n\n\\[\nM=(6,-11)\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\ny+11=\\frac27(x-6)\n\\]"
         },
         {
@@ -312,7 +312,7 @@
       "topicNote": "Corrected to linear graphs. The function is a straight line.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Read the graph",
           "body": "\\[\ny=7-4x\n\\]"
         },
         {
@@ -333,7 +333,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "For part (a),",
+          "title": "Apply transformation",
           "body": "For part (a),\n\n\\[\ny=g(x)\\to y=-g(x)\n\\]"
         },
         {
@@ -341,15 +341,15 @@
           "body": "The \\(x\\)-coordinates stay the same and the \\(y\\)-coordinates change sign."
         },
         {
-          "title": "So the transformation is a",
+          "title": "Apply transformation",
           "body": "So the transformation is a reflection in the \\(x\\)-axis."
         },
         {
-          "title": "For part (b),",
+          "title": "Calculate value",
           "body": "For part (b),\n\n\\[\ny=2f(x-1)\n\\]"
         },
         {
-          "title": "First, moves the graph 1",
+          "title": "Read the graph",
           "body": "First, \\(x-1\\) moves the graph 1 unit right. Then the factor 2 stretches the graph vertically by scale factor 2."
         },
         {
@@ -357,7 +357,7 @@
           "body": "Use points from the original graph:\n\n\\[\n(1,3)\\to(2,6)\n\\]\n\n\\[\n(2,0)\\to(3,0)\n\\]\n\n\\[\n(4,-3)\\to(5,-6)\n\\]\n\n\\[\n(6,0)\\to(7,0)\n\\]\n\n\\[\n(7,3)\\to(8,6)\n\\]"
         },
         {
-          "title": "Draw the transformed parabola through",
+          "title": "Apply transformation",
           "body": "Draw the transformed parabola through these points."
         }
       ],
@@ -370,7 +370,7 @@
       "topicNote": "Corrected from Functions to Differentiation.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Differentiate",
           "body": "\\[\ny=px^3-mx\n\\]"
         },
         {
@@ -382,7 +382,7 @@
           "body": "The gradient is negative when\n\n\\[\n3px^2-m<0\n\\]\n\n\\[\n3px^2<m\n\\]\n\n\\[\nx^2<\\frac{m}{3p}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Simplify surd",
           "body": "So\n\n\\[\n-\\sqrt{\\frac{m}{3p}}<x<\\sqrt{\\frac{m}{3p}}\n\\]"
         }
       ],
@@ -403,7 +403,7 @@
           "body": "Convert hours to seconds:\n\\[\n\\frac{100}{28440}\\times 3600=12.658\\ldots\n\\]"
         },
         {
-          "title": "To the nearest second,",
+          "title": "To the nearest second",
           "body": "To the nearest second,\n\\[\n12.658\\ldots \\approx 13\n\\]"
         }
       ],
@@ -424,7 +424,7 @@
           "body": "The sum of the 9 given interior angles is\n\\[\n150+168+134+125+125+134+168+150+148=1302^\\circ\n\\]"
         },
         {
-          "title": "So the missing interior angle",
+          "title": "Find the gradient",
           "body": "So the missing interior angle is\n\\[\n1440^\\circ-1302^\\circ=138^\\circ\n\\]"
         },
         {
@@ -466,7 +466,7 @@
           "body": "The average of the parallel sides is\n\\[\n\\frac{8.4+17.6}{2}=13\n\\]"
         },
         {
-          "title": "So the perpendicular height is",
+          "title": "Find the gradient",
           "body": "So the perpendicular height is\n\\[\n179.4\\div 13=13.8\n\\]"
         },
         {
@@ -474,11 +474,11 @@
           "body": "The horizontal offset on each side is\n\\[\n\\frac{17.6-8.4}{2}=4.6\n\\]"
         },
         {
-          "title": "The acute angle between and",
+          "title": "Use trigonometry",
           "body": "The acute angle between \\(AB\\) and the horizontal is\n\\[\n\\tan^{-1}\\left(\\frac{13.8}{4.6}\\right)=71.565\\ldots^\\circ\n\\]"
         },
         {
-          "title": "So the interior angle is",
+          "title": "Use trigonometry",
           "body": "So the interior angle \\(ABC\\) is\n\\[\n180^\\circ-71.565\\ldots^\\circ=108.434\\ldots^\\circ\n\\]"
         }
       ],
@@ -503,11 +503,11 @@
           "body": "Surface area ratio S:R:\n\n\\[\n300:108=25:9\n\\]"
         },
         {
-          "title": "So the linear ratio S",
+          "title": "Split the ratio",
           "body": "So the linear ratio S:R is\n\n\\[\n5:3\n\\]"
         },
         {
-          "title": "Therefore the volume ratio S",
+          "title": "Split the ratio",
           "body": "Therefore the volume ratio S:R is\n\n\\[\n5^3:3^3=125:27\n\\]"
         },
         {
@@ -528,7 +528,7 @@
           "body": "The median is \\(9\\):\n\n\\[\n\\frac{x+10}{2}=9\n\\]\n\n\\[\nx=8\n\\]"
         },
         {
-          "title": "The mean is , so",
+          "title": "Calculate statistic",
           "body": "The mean is \\(11\\), so the total is\n\n\\[\n6 \\times 11=66\n\\]\n\n\\[\n4+7+8+10+y+y=66\n\\]\n\n\\[\n29+2y=66\n\\]\n\n\\[\n2y=37\n\\]\n\n\\[\ny=18.5\n\\]"
         }
       ],
@@ -545,19 +545,19 @@
           "body": "The histogram densities are\n\n\\[\n\\frac{35}{10}=3.5,\\quad\n\\frac{45}{15}=3,\\quad\n\\frac{75}{15}=5,\\quad\n\\frac{40}{20}=2,\\quad\n\\frac{8}{10}=0.8\n\\]"
         },
         {
-          "title": "For plants taller than",
+          "title": "Use histogram",
           "body": "For plants taller than \\(40\\text{ cm}\\):"
         },
         {
-          "title": "From",
+          "title": "Use histogram",
           "body": "From \\(40<h\\le 50\\):\n\n\\[\n10(5)=50\n\\]"
         },
         {
-          "title": "From",
+          "title": "Use histogram",
           "body": "From \\(50<h\\le 70\\):\n\n\\[\n40\n\\]"
         },
         {
-          "title": "From",
+          "title": "Use histogram",
           "body": "From \\(70<h\\le 80\\):\n\n\\[\n8\n\\]\n\n\\[\n50+40+8=98\n\\]"
         }
       ],
@@ -570,7 +570,7 @@
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate probability",
           "body": "\\[\n15\\text{ hours}=15\\times 60\\times 60=54000\\text{ seconds}\n\\]"
         },
         {
@@ -595,7 +595,7 @@
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "From the Venn diagram,",
+          "title": "Calculate probability",
           "body": "From the Venn diagram,\n\n\\[\nA\\cap B=\\{2,4,6,12\\}\n\\]"
         },
         {
@@ -607,7 +607,7 @@
           "body": "The values in \\(A\\) but not in \\(B\\) are\n\n\\[\n\\{8,10,14\\}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate probability",
           "body": "So\n\n\\[\nP(A\\cap B')=\\frac{3}{14}\n\\]"
         }
       ],
@@ -641,7 +641,7 @@
       "topicNote": "Corrected from Sine/Cosine Rule to Algebraic Fractions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use trigonometry",
           "body": "\\[\n\\frac1{3x-2}\\times\\frac{9x^2-4}{3x^2-13x-10}\n-\\frac7{x-1}\n\\]"
         },
         {
@@ -649,7 +649,7 @@
           "body": "Factor:\n\n\\[\n9x^2-4=(3x-2)(3x+2)\n\\]\n\n\\[\n3x^2-13x-10=(3x+2)(x-5)\n\\]"
         },
         {
-          "title": "So the first product becomes",
+          "title": "Use trigonometry",
           "body": "So the first product becomes\n\n\\[\n\\frac1{3x-2}\\times\n\\frac{(3x-2)(3x+2)}{(3x+2)(x-5)}\n\\]"
         },
         {
@@ -657,7 +657,7 @@
           "body": "Cancel common factors:\n\n\\[\n\\frac1{x-5}\n\\]"
         },
         {
-          "title": "Now subtract",
+          "title": "Use trigonometry",
           "body": "Now subtract:\n\n\\[\n\\frac1{x-5}-\\frac7{x-1}\n\\]"
         },
         {
@@ -678,7 +678,7 @@
           "body": "The arithmetic sequence is\n\n\\[\n8,\\ 15,\\ 22,\\ 29,\\ 36,\\ldots\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\na=8,\\quad d=7\n\\]"
         },
         {
@@ -690,7 +690,7 @@
           "body": "There are\n\n\\[\n100-50+1=51\n\\]"
         },
         {
-          "title": "terms from the 50th to",
+          "title": "Find the nth term",
           "body": "terms from the 50th to the 100th inclusive.\n\n\\[\n\\text{sum}=\\frac{51}{2}(351+701)\n\\]\n\n\\[\n=26826\n\\]"
         }
       ],
@@ -703,7 +703,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "In a rhombus, the diagonals",
+          "title": "Find the gradient",
           "body": "In a rhombus, the diagonals are perpendicular and bisect each other."
         },
         {
@@ -711,19 +711,19 @@
           "body": "The diagonal \\(AC\\) lies on\n\n\\[\n2y+7x=20\n\\]\n\n\\[\n2y=-7x+20\n\\]\n\n\\[\ny=-\\frac72x+10\n\\]"
         },
         {
-          "title": "So the gradient of is",
+          "title": "Find the gradient",
           "body": "So the gradient of \\(AC\\) is\n\n\\[\n-\\frac72\n\\]"
         },
         {
-          "title": "Therefore the gradient of is",
+          "title": "Find the gradient",
           "body": "Therefore the gradient of \\(BD\\) is\n\n\\[\n\\frac27\n\\]"
         },
         {
-          "title": "The line passes through",
+          "title": "Calculate value",
           "body": "The line \\(BD\\) passes through\n\n\\[\nM=(6,-11)\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\ny+11=\\frac27(x-6)\n\\]"
         },
         {
@@ -740,7 +740,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "For part (a),",
+          "title": "Apply transformation",
           "body": "For part (a),\n\n\\[\ny=g(x)\\to y=-g(x)\n\\]"
         },
         {
@@ -748,15 +748,15 @@
           "body": "The \\(x\\)-coordinates stay the same and the \\(y\\)-coordinates change sign."
         },
         {
-          "title": "So the transformation is a",
+          "title": "Apply transformation",
           "body": "So the transformation is a reflection in the \\(x\\)-axis."
         },
         {
-          "title": "For part (b),",
+          "title": "Calculate value",
           "body": "For part (b),\n\n\\[\ny=2f(x-1)\n\\]"
         },
         {
-          "title": "First, moves the graph 1",
+          "title": "Read the graph",
           "body": "First, \\(x-1\\) moves the graph 1 unit right. Then the factor 2 stretches the graph vertically by scale factor 2."
         },
         {
@@ -764,7 +764,7 @@
           "body": "Use points from the original graph:\n\n\\[\n(1,3)\\to(2,6)\n\\]\n\n\\[\n(2,0)\\to(3,0)\n\\]\n\n\\[\n(4,-3)\\to(5,-6)\n\\]\n\n\\[\n(6,0)\\to(7,0)\n\\]\n\n\\[\n(7,3)\\to(8,6)\n\\]"
         },
         {
-          "title": "Draw the transformed parabola through",
+          "title": "Apply transformation",
           "body": "Draw the transformed parabola through these points."
         }
       ],
@@ -777,7 +777,7 @@
       "topicNote": "Corrected from Functions to Differentiation.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Differentiate",
           "body": "\\[\ny=px^3-mx\n\\]"
         },
         {
@@ -789,7 +789,7 @@
           "body": "The gradient is negative when\n\n\\[\n3px^2-m<0\n\\]\n\n\\[\n3px^2<m\n\\]\n\n\\[\nx^2<\\frac{m}{3p}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Simplify surd",
           "body": "So\n\n\\[\n-\\sqrt{\\frac{m}{3p}}<x<\\sqrt{\\frac{m}{3p}}\n\\]"
         }
       ],
@@ -814,11 +814,11 @@
           "body": "Surface area ratio S:R:\n\n\\[\n300:108=25:9\n\\]"
         },
         {
-          "title": "So the linear ratio S",
+          "title": "Split the ratio",
           "body": "So the linear ratio S:R is\n\n\\[\n5:3\n\\]"
         },
         {
-          "title": "Therefore the volume ratio S",
+          "title": "Split the ratio",
           "body": "Therefore the volume ratio S:R is\n\n\\[\n5^3:3^3=125:27\n\\]"
         },
         {

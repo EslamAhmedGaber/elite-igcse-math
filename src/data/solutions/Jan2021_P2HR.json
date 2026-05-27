@@ -8,11 +8,11 @@
       "topicNote": "Corrected to Set Notation & Venn Diagrams.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nA\\cap B=\\{24,30\\}\n\\]"
         },
         {
-          "title": "The complement of , using",
+          "title": "Set is",
           "body": "The complement of \\(A\\), using the given universal set, is\n\\[\nA'=\\{21,23,25,27,29\\}\n\\]"
         },
         {
@@ -20,11 +20,11 @@
           "body": "The set\n\\[\nC=\\{23,25,29\\}\n\\]"
         },
         {
-          "title": "is everything not in and",
+          "title": "Calculate value",
           "body": "is everything not in \\(A\\) and not in \\(B\\), so\n\\[\nC=A'\\cap B'\n\\]"
         },
         {
-          "title": "Equivalently,",
+          "title": "Calculate value",
           "body": "Equivalently,\n\\[\nC=(A\\cup B)'\n\\]"
         }
       ],
@@ -41,11 +41,11 @@
           "body": "The greatest coastline is the largest number in standard form.\n\n\\[\n1.357\\times 10^5\n\\]"
         },
         {
-          "title": "is the largest, so the",
+          "title": "Convert standard form",
           "body": "is the largest, so the answer is the Pacific Ocean."
         },
         {
-          "title": "For part (b),",
+          "title": "Convert standard form",
           "body": "For part (b),\n\n\\[\n1.119\\times 10^5=111900\n\\]\n\n\\[\n1.797\\times 10^4=17970\n\\]"
         },
         {
@@ -66,7 +66,7 @@
           "body": "Wednesday's price was \\(5\\%\\) more than Monday's price."
         },
         {
-          "title": "So",
+          "title": "Calculate percentage",
           "body": "So\n\n\\[\n1.26=1.05\\times \\text{Monday price}\n\\]\n\n\\[\n\\text{Monday price}=\\frac{1.26}{1.05}=1.20\n\\]"
         },
         {
@@ -87,11 +87,11 @@
           "body": "Let the original house value be \\(V\\)."
         },
         {
-          "title": "After the decrease in 2018",
+          "title": "Use compound interest",
           "body": "After the \\(15\\%\\) decrease in 2018:\n\n\\[\n0.85V\n\\]"
         },
         {
-          "title": "Let the percentage increase in",
+          "title": "Use compound interest",
           "body": "Let the percentage increase in each of 2019 and 2020 be \\(r\\)."
         },
         {
@@ -99,7 +99,7 @@
           "body": "The final value is \\(2.85\\%\\) greater than the original value:\n\n\\[\n1.0285V\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use compound interest",
           "body": "So\n\n\\[\n0.85V(1+r)^2=1.0285V\n\\]\n\n\\[\n(1+r)^2=\\frac{1.0285}{0.85}=1.21\n\\]\n\n\\[\n1+r=\\sqrt{1.21}=1.1\n\\]\n\n\\[\nr=0.1=10\\%\n\\]"
         }
       ],
@@ -112,11 +112,11 @@
       "topicNote": "Algebraic Roots and Indices. The tag is correct.",
       "steps": [
         {
-          "title": "For part (a),",
+          "title": "Use index laws",
           "body": "For part (a),\n\n\\[\n(3k^2)^4=3^4(k^2)^4\n\\]\n\n\\[\n=81k^8\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Use index laws",
           "body": "For part (b),\n\n\\[\n(21m^4n)\\div(3n^{-5})=\\frac{21m^4n}{3n^{-5}}\n\\]\n\n\\[\n=7m^4n^{1-(-5)}\n\\]\n\n\\[\n=7m^4n^6\n\\]"
         }
       ],
@@ -129,19 +129,19 @@
       "topicNote": "Algebraic Roots and Indices. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify surd",
           "body": "\\[\n8^2=(2^3)^2=2^6\n\\]\n\n\\[\n\\sqrt[3]{4^6}=\\sqrt[3]{(2^2)^6}=\\sqrt[3]{2^{12}}=2^4\n\\]"
         },
         {
-          "title": "So",
+          "title": "Simplify surd",
           "body": "So\n\n\\[\n8^2\\times \\sqrt[3]{4^6}=2^6\\times 2^4=2^{10}\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Use index laws",
           "body": "For part (b),\n\n\\[\nn^{-4/5}=\\left(\\frac12\\right)^4=2^{-4}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use index laws",
           "body": "So\n\n\\[\nn^{4/5}=2^4\n\\]"
         },
         {
@@ -158,7 +158,7 @@
       "topicNote": "Expanding brackets. The tag is correct.",
       "steps": [
         {
-          "title": "For and",
+          "title": "Expand brackets",
           "body": "For \\(w=5y^2-y^3\\) and \\(y=-2\\):\n\\[\nw=5(-2)^2-(-2)^3=20+8=28\n\\]\n\n\\[\n8p^2-2p=2p(4p-1)\n\\]\n\n\\[\n4t(3t-2)=12t^2-8t\n\\]\n\n\\[\n(5x-2)(x+4)=5x^2+18x-8\n\\]"
         }
       ],
@@ -171,11 +171,11 @@
       "topicNote": "Corrected to algebraic fractions. The equation is solved by combining algebraic fractions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve equation",
           "body": "\\[\n\\frac{5}{x+2}+\\frac{3}{x^2+2x}=2\n\\]"
         },
         {
-          "title": "Since",
+          "title": "Solve equation",
           "body": "Since\n\\[\nx^2+2x=x(x+2)\n\\]"
         },
         {
@@ -212,7 +212,7 @@
           "body": "This is of the form\n\\[\n2k+1\n\\]\nwhere \\(k\\) is an integer."
         },
         {
-          "title": "So the product is odd",
+          "title": "Use algebraic proof asks general",
           "body": "So the product is odd."
         }
       ],
@@ -225,7 +225,7 @@
       "topicNote": "Solving quadratic equations. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve quadratic equation",
           "body": "\\[\nx^2-21x+20=0\n\\]"
         },
         {
@@ -233,7 +233,7 @@
           "body": "Factorise:\n\\[\n(x-20)(x-1)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Solve quadratic equation",
           "body": "So\n\\[\nx=20 \\quad \\text{or} \\quad x=1\n\\]"
         }
       ],
@@ -246,7 +246,7 @@
       "topicNote": "Simultaneous equations. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve simultaneous equations",
           "body": "\\[\n2x+7y=17\n\\]\n\n\\[\n5x+3y=-1\n\\]"
         },
         {
@@ -262,7 +262,7 @@
           "body": "Subtract:\n\\[\n29y=87\n\\]\n\n\\[\ny=3\n\\]"
         },
         {
-          "title": "Substitute into",
+          "title": "Solve simultaneous equations",
           "body": "Substitute into \\(2x+7y=17\\):\n\\[\n2x+21=17\n\\]\n\n\\[\n2x=-4\n\\]\n\n\\[\nx=-2\n\\]"
         }
       ],
@@ -275,7 +275,7 @@
       "topicNote": "Corrected to Functions. The original tag was solving quadratic equations, but this question is mainly function composition, domain, and inverse functions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve quadratic equation",
           "body": "\\[\nf(x)=x^2+6,\\qquad g(x)=x-10\n\\]"
         },
         {
@@ -295,7 +295,7 @@
           "body": "(c)\n\\[\nh(x)=\\frac{2x-4}{x}\n\\]"
         },
         {
-          "title": "The denominator cannot be zero,",
+          "title": "Solve quadratic equation",
           "body": "The denominator cannot be zero, so \\(x=0\\) cannot be included."
         },
         {
@@ -303,7 +303,7 @@
           "body": "(d) Let\n\\[\ny=\\frac{2x-4}{x}\n\\]\n\n\\[\ny=2-\\frac4x\n\\]\n\n\\[\ny-2=-\\frac4x\n\\]\n\n\\[\nx=\\frac{4}{2-y}\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Solve quadratic equation",
           "body": "Therefore\n\\[\nh^{-1}(x)=\\frac{4}{2-x}\n\\]"
         }
       ],
@@ -341,7 +341,7 @@
       "topicNote": "Corrected to Area & Perimeter.",
       "steps": [
         {
-          "title": "The semicircle has diameter ,",
+          "title": "Calculate area",
           "body": "The semicircle has diameter \\(12\\text{ cm}\\), so its radius is \\(6\\text{ cm}\\)."
         },
         {
@@ -387,7 +387,7 @@
       "topicNote": "Moved to Circles, Arcs & Sectors.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use trigonometry",
           "body": "\\[\n\\angle ABC=75^\\circ\n\\]"
         },
         {
@@ -411,7 +411,7 @@
           "body": "Triangle area:\n\n\\[\n\\frac{1}{2}r^2\\sin 150^\\circ\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\n\\frac{150}{360}\\pi r^2-\\frac{1}{2}r^2\\sin 150^\\circ=200\n\\]\n\n\\[\nr^2\\left(\\frac{5\\pi}{12}-\\frac{1}{4}\\right)=200\n\\]\n\n\\[\nr^2=\\frac{200}{\\frac{5\\pi}{12}-\\frac{1}{4}}\n\\]\n\n\\[\nr=13.7426\\ldots\n\\]"
         }
       ],
@@ -437,7 +437,7 @@
       "topicNote": "Moved from Coordinate Geometry to 3D Pythagoras & Trigonometry.",
       "steps": [
         {
-          "title": "Since , triangle is isosceles",
+          "title": "Use trigonometry",
           "body": "Since \\(AB=BC=8\\), triangle \\(ABC\\) is isosceles."
         },
         {
@@ -445,11 +445,11 @@
           "body": "The line from \\(B\\) to the midpoint \\(M\\) bisects angle \\(ABC\\).\n\n\\[\n\\angle ABM=\\frac{140^\\circ}{2}=70^\\circ\n\\]"
         },
         {
-          "title": "In right triangle ,",
+          "title": "Use trigonometry",
           "body": "In right triangle \\(ABM\\),\n\n\\[\n\\cos 70^\\circ=\\frac{BM}{8}\n\\]\n\n\\[\nBM=8\\cos 70^\\circ\n\\]"
         },
         {
-          "title": "Since is vertically above ,",
+          "title": "Use trigonometry",
           "body": "Since \\(T\\) is vertically above \\(B\\), the projection of \\(MT\\) onto the horizontal plane is \\(MB\\)."
         },
         {
@@ -482,7 +482,7 @@
           "body": "The image has vertices\n\n\\[\n(7,3),\\ (13,3),\\ (13,6),\\ (10,6)\n\\]"
         },
         {
-          "title": "(c) Triangle is mapped to",
+          "title": "Use trigonometry",
           "body": "(c) Triangle \\(T\\) is mapped to triangle \\(U\\) by an enlargement with scale factor \\(2\\) and centre \\((-3,3)\\)."
         }
       ],
@@ -536,7 +536,7 @@
           "body": "The probability of taking two beads of the same colour is\n\n\\[\nP(RR)+P(BB)=\\frac9{17}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\n\\frac6n\\cdot\\frac5{n-1}\n+\\frac{n-6}{n}\\cdot\\frac{n-7}{n-1}\n=\\frac9{17}\n\\]\n\n\\[\n\\frac{30+(n-6)(n-7)}{n(n-1)}=\\frac9{17}\n\\]"
         },
         {
@@ -544,7 +544,7 @@
           "body": "Expand:\n\n\\[\n(n-6)(n-7)=n^2-13n+42\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\n\\frac{n^2-13n+72}{n(n-1)}=\\frac9{17}\n\\]"
         },
         {
@@ -560,7 +560,7 @@
           "body": "Factor:\n\n\\[\n(2n-17)(n-18)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\nn=\\frac{17}{2}\\quad\\text{or}\\quad n=18\n\\]"
         },
         {
@@ -577,11 +577,11 @@
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate probability",
           "body": "\\[\nn(A\\cap B)=62+30-68=24\n\\]"
         },
         {
-          "title": "So the Venn diagram has",
+          "title": "Calculate probability",
           "body": "So the Venn diagram has:\n\n\\[\nA\\text{ only}=38,\\quad B\\text{ only}=6,\\quad A\\cap B=24,\\quad \\text{outside}=12\n\\]\n\n\\[\nP(A\\cap B)=\\frac{24}{80}=\\frac{3}{10}\n\\]\n\n\\[\nP(A\\cup B')=\\frac{74}{80}=\\frac{37}{40}\n\\]"
         }
       ],
@@ -594,7 +594,7 @@
       "topicNote": "Moved to Circles, Arcs & Sectors.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use trigonometry",
           "body": "\\[\n\\angle ABC=75^\\circ\n\\]"
         },
         {
@@ -618,7 +618,7 @@
           "body": "Triangle area:\n\n\\[\n\\frac{1}{2}r^2\\sin 150^\\circ\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\n\\frac{150}{360}\\pi r^2-\\frac{1}{2}r^2\\sin 150^\\circ=200\n\\]\n\n\\[\nr^2\\left(\\frac{5\\pi}{12}-\\frac{1}{4}\\right)=200\n\\]\n\n\\[\nr^2=\\frac{200}{\\frac{5\\pi}{12}-\\frac{1}{4}}\n\\]\n\n\\[\nr=13.7426\\ldots\n\\]"
         }
       ],
@@ -631,7 +631,7 @@
       "topicNote": "Moved from Coordinate Geometry to 3D Pythagoras & Trigonometry.",
       "steps": [
         {
-          "title": "Since , triangle is isosceles",
+          "title": "Use trigonometry",
           "body": "Since \\(AB=BC=8\\), triangle \\(ABC\\) is isosceles."
         },
         {
@@ -639,11 +639,11 @@
           "body": "The line from \\(B\\) to the midpoint \\(M\\) bisects angle \\(ABC\\).\n\n\\[\n\\angle ABM=\\frac{140^\\circ}{2}=70^\\circ\n\\]"
         },
         {
-          "title": "In right triangle ,",
+          "title": "Use trigonometry",
           "body": "In right triangle \\(ABM\\),\n\n\\[\n\\cos 70^\\circ=\\frac{BM}{8}\n\\]\n\n\\[\nBM=8\\cos 70^\\circ\n\\]"
         },
         {
-          "title": "Since is vertically above ,",
+          "title": "Use trigonometry",
           "body": "Since \\(T\\) is vertically above \\(B\\), the projection of \\(MT\\) onto the horizontal plane is \\(MB\\)."
         },
         {
@@ -676,7 +676,7 @@
           "body": "The probability of taking two beads of the same colour is\n\n\\[\nP(RR)+P(BB)=\\frac9{17}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\n\\frac6n\\cdot\\frac5{n-1}\n+\\frac{n-6}{n}\\cdot\\frac{n-7}{n-1}\n=\\frac9{17}\n\\]\n\n\\[\n\\frac{30+(n-6)(n-7)}{n(n-1)}=\\frac9{17}\n\\]"
         },
         {
@@ -684,7 +684,7 @@
           "body": "Expand:\n\n\\[\n(n-6)(n-7)=n^2-13n+42\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\n\\frac{n^2-13n+72}{n(n-1)}=\\frac9{17}\n\\]"
         },
         {
@@ -700,7 +700,7 @@
           "body": "Factor:\n\n\\[\n(2n-17)(n-18)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\nn=\\frac{17}{2}\\quad\\text{or}\\quad n=18\n\\]"
         },
         {

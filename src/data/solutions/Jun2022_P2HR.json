@@ -8,7 +8,7 @@
       "topicNote": "Set notation and Venn diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\n\\mathcal{E}=\\{9,10,11,12,13,14,15,16,17,18,19,20\\}\n\\]"
         },
         {
@@ -20,11 +20,11 @@
           "body": "The odd numbers in \\(\\mathcal{E}\\) are\n\n\\[\nB=\\{9,11,13,15,17,19\\}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\nA\\cap B=\\{9,15\\}\n\\]"
         },
         {
-          "title": "and",
+          "title": "Calculate value",
           "body": "and\n\n\\[\nA\\cup B=\\{9,11,12,13,15,17,18,19\\}\n\\]"
         },
         {
@@ -32,7 +32,7 @@
           "body": "The statement \\(24\\in A\\) is false because \\(24\\) is not in the universal set \\(\\mathcal{E}\\)."
         },
         {
-          "title": "For , we need and",
+          "title": "Calculate value",
           "body": "For \\(C\\), we need \\(C\\cap B'=\\{10,18\\}\\) and \\(C\\) has \\(4\\) members. One valid choice is\n\n\\[\nC=\\{9,10,11,18\\}\n\\]"
         }
       ],
@@ -45,7 +45,7 @@
       "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Find the LCM",
           "body": "\\[\n1200=12\\times 100\n\\]\n\n\\[\n1200=(2^2\\times 3)(2^2\\times 5^2)\n\\]\n\n\\[\n1200=2^4\\times 3\\times 5^2\n\\]"
         }
       ],
@@ -58,7 +58,7 @@
       "topicNote": "Powers, roots and standard form. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Convert standard form",
           "body": "\\[\n8.8\\times 10^6=8800000\n\\]"
         },
         {
@@ -66,7 +66,7 @@
           "body": "The least population in the table is Barcelona, with\n\n\\[\n5.5\\times 10^6\n\\]"
         },
         {
-          "title": "For the difference between Tokyo",
+          "title": "Convert standard form",
           "body": "For the difference between Tokyo and Ahmedabad:\n\n\\[\n3.7\\times 10^7-7.7\\times 10^6\n\\]\n\n\\[\n37000000-7700000=29300000\n\\]\n\n\\[\n29300000=2.93\\times 10^7\n\\]"
         },
         {
@@ -83,7 +83,7 @@
       "topicNote": "Percentages. The tag is correct.",
       "steps": [
         {
-          "title": "After a increase, the ticket",
+          "title": "Calculate percentage",
           "body": "After a \\(12\\%\\) increase, the ticket price is \\(112\\%\\) of the original price.\n\n\\[\n18.20=1.12\\times \\text{original price}\n\\]\n\n\\[\n\\text{original price}=\\frac{18.20}{1.12}=16.25\n\\]"
         }
       ],
@@ -100,15 +100,15 @@
           "body": "To show Kaidan's average speed could be greater, compare Kaidan's greatest possible speed with Sonja's smallest possible speed."
         },
         {
-          "title": "For Kaidan",
+          "title": "Estimate the value",
           "body": "For Kaidan:\n\n\\[\nd<82.5,\\quad t\\ge 2.65\n\\]\n\n\\[\n\\text{greatest speed}=\\frac{82.5}{2.65}=31.13\\ldots\\text{ km/h}\n\\]"
         },
         {
-          "title": "For Sonja",
+          "title": "Estimate the value",
           "body": "For Sonja:\n\n\\[\nd\\ge 32.5,\\quad t<1.05\n\\]\n\n\\[\n\\text{smallest speed}=\\frac{32.5}{1.05}=30.95\\ldots\\text{ km/h}\n\\]"
         },
         {
-          "title": "Since",
+          "title": "Estimate the value",
           "body": "Since\n\n\\[\n31.13\\ldots>30.95\\ldots\n\\]"
         },
         {
@@ -125,19 +125,19 @@
       "topicNote": "Algebraic Roots and Indices. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use index laws",
           "body": "\\[\n\\frac{2^k}{4^n}=2^x\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Use index laws",
           "body": "Since \\(4=2^2\\),\n\n\\[\n4^n=(2^2)^n=2^{2n}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use index laws",
           "body": "So\n\n\\[\n\\frac{2^k}{2^{2n}}=2^{k-2n}\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Use index laws",
           "body": "Therefore\n\n\\[\nx=k-2n\n\\]"
         }
       ],
@@ -150,7 +150,7 @@
       "topicNote": "Corrected from Sine/Cosine Rule to Algebraic Fractions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use trigonometry",
           "body": "\\[\n\\left(\\frac{20}{x^2-36}-\\frac2{x-6}\\right)\\times\\frac1{4-x}\n\\]"
         },
         {
@@ -158,7 +158,7 @@
           "body": "Factor:\n\n\\[\nx^2-36=(x-6)(x+6)\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\n\\frac{20}{(x-6)(x+6)}-\\frac2{x-6}\n\\]"
         },
         {
@@ -166,7 +166,7 @@
           "body": "Use the common denominator \\((x-6)(x+6)\\):\n\n\\[\n\\frac{20-2(x+6)}{(x-6)(x+6)}\n\\]\n\n\\[\n=\\frac{20-2x-12}{(x-6)(x+6)}\n\\]\n\n\\[\n=\\frac{8-2x}{(x-6)(x+6)}\n\\]\n\n\\[\n=\\frac{-2(x-4)}{(x-6)(x+6)}\n\\]"
         },
         {
-          "title": "Now multiply by",
+          "title": "Use trigonometry",
           "body": "Now multiply by\n\n\\[\n\\frac1{4-x}=-\\frac1{x-4}\n\\]\n\n\\[\n\\frac{-2(x-4)}{(x-6)(x+6)}\\times\\left(-\\frac1{x-4}\\right)\n\\]"
         },
         {
@@ -187,11 +187,11 @@
           "body": "Let\n\\[\nx=0.3\\dot4\\dot5\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate value",
           "body": "Then\n\\[\n10x=3.\\dot4\\dot5\n\\]"
         },
         {
-          "title": "and",
+          "title": "Calculate value",
           "body": "and\n\\[\n1000x=345.\\dot4\\dot5\n\\]"
         },
         {
@@ -233,19 +233,19 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nx-2y=3\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\nx=2y+3\n\\]"
         },
         {
-          "title": "Substitute into",
+          "title": "Calculate value",
           "body": "Substitute into\n\n\\[\nx^2-y^2+2x=10\n\\]\n\n\\[\n(2y+3)^2-y^2+2(2y+3)=10\n\\]\n\n\\[\n4y^2+12y+9-y^2+4y+6=10\n\\]\n\n\\[\n3y^2+16y+5=0\n\\]\n\n\\[\n(3y+1)(y+5)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\ny=-\\frac13 \\quad \\text{or} \\quad y=-5\n\\]"
         },
         {
@@ -262,7 +262,7 @@
       "topicNote": "Corrected to Functions. The original tag was solving quadratic equations, but the question is built around composite-function notation.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve quadratic equation",
           "body": "\\[\nf(x)=x^2-4,\\qquad g(x)=2x+1\n\\]\n\n\\[\nfg(x)=f(g(x))=(2x+1)^2-4\n\\]\n\n\\[\n=4x^2+4x+1-4=4x^2+4x-3\n\\]"
         },
         {
@@ -299,7 +299,7 @@
           "body": "The point \\(A\\) is\n\n\\[\nA=(6,11)\n\\]"
         },
         {
-          "title": "Since is a diameter, is",
+          "title": "Find the midpoint",
           "body": "Since \\(AOP\\) is a diameter, \\(O\\) is the midpoint of \\(AP\\)."
         },
         {
@@ -311,11 +311,11 @@
           "body": "The gradient of \\(OP\\) is\n\n\\[\n\\frac{3-7}{2-4}=2\n\\]"
         },
         {
-          "title": "The tangent is perpendicular to",
+          "title": "Use circle theorem",
           "body": "The tangent is perpendicular to the radius, so its gradient is\n\n\\[\n-\\frac12\n\\]"
         },
         {
-          "title": "Using point ,",
+          "title": "Evaluate fraction",
           "body": "Using point \\(P=(2,3)\\),\n\n\\[\ny-3=-\\frac12(x-2)\n\\]\n\n\\[\ny=-\\frac12x+4\n\\]"
         }
       ],
@@ -332,7 +332,7 @@
           "body": "\\[\ny=-2x+3\n\\]\nis a negative straight line with positive \\(y\\)-intercept, so it is **Graph C**."
         },
         {
-          "title": "is the reciprocal graph in",
+          "title": "Read the graph",
           "body": "\\[\ny=\\frac1x\n\\]\nis the reciprocal graph in quadrants I and III, so it is **Graph B**."
         },
         {
@@ -340,7 +340,7 @@
           "body": "\\[\ny=\\tan x\n\\]\nhas repeating branches with vertical asymptotes and passes through the origin, so it is **Graph D**."
         },
         {
-          "title": "is a positive cubic with",
+          "title": "Read the graph",
           "body": "\\[\ny=(x+1)(x-1)(x-2)\n\\]\nis a positive cubic with three roots, so it is **Graph H**."
         }
       ],
@@ -357,7 +357,7 @@
           "body": "Point \\(A=(-3,2)\\) lies on \\(y=f(x)\\)."
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(x)-3\n\\]"
         },
         {
@@ -365,7 +365,7 @@
           "body": "the graph moves 3 units down:\n\n\\[\n(-3,2)\\to(-3,-1)\n\\]"
         },
         {
-          "title": "For",
+          "title": "Evaluate fraction",
           "body": "For\n\n\\[\ny=f\\left(\\frac{x}{2}\\right)\n\\]"
         },
         {
@@ -373,19 +373,19 @@
           "body": "the \\(x\\)-coordinate is multiplied by 2:\n\n\\[\n(-3,2)\\to(-6,2)\n\\]"
         },
         {
-          "title": "For part (b), point lies",
+          "title": "Calculate value",
           "body": "For part (b), point \\(B=(p,q)\\) lies on \\(y=g(x)\\)."
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=-g(x-c)\n\\]"
         },
         {
-          "title": "moves the graph units right,",
+          "title": "Read the graph",
           "body": "\\(x-c\\) moves the graph \\(c\\) units right, and the minus sign reflects the graph in the \\(x\\)-axis."
         },
         {
-          "title": "So",
+          "title": "Apply transformation",
           "body": "So\n\n\\[\n(p,q)\\to(p+c,-q)\n\\]"
         }
       ],
@@ -398,11 +398,11 @@
       "topicNote": "Area & Perimeter. The tag is correct.",
       "steps": [
         {
-          "title": "The square has area ,",
+          "title": "Calculate area",
           "body": "The square has area \\(36\\text{ cm}^2\\), so its side length is\n\\[\n\\sqrt{36}=6\\text{ cm}\n\\]"
         },
         {
-          "title": "Each semicircle has diameter ,",
+          "title": "Calculate area",
           "body": "Each semicircle has diameter \\(6\\text{ cm}\\), so radius\n\\[\nr=3\\text{ cm}\n\\]"
         },
         {
@@ -440,11 +440,11 @@
       "topicNote": "Corrected to congruence, similarity and geometrical proof. The solution uses similar triangles.",
       "steps": [
         {
-          "title": "Since is parallel to ,",
+          "title": "Find the gradient",
           "body": "Since \\(AB\\) is parallel to \\(DE\\), triangles \\(ACB\\) and \\(ECD\\) are similar."
         },
         {
-          "title": "So corresponding sides are in",
+          "title": "Split the ratio",
           "body": "So corresponding sides are in the same ratio:\n\\[\n\\frac{AC}{CE}=\\frac{BC}{CD}\n\\]"
         },
         {
@@ -469,7 +469,7 @@
           "body": "The larger similar cone has radius \\(kr\\) and height \\(kh\\), so its volume is\n\n\\[\nV_L=\\frac13\\pi(kr)^2(kh)=\\frac13\\pi k^3r^2h\n\\]"
         },
         {
-          "title": "So the frustum volume is",
+          "title": "Calculate volume",
           "body": "So the frustum volume is\n\n\\[\nV_L-V_s=\\frac13\\pi r^2h(k^3-1)\n\\]"
         },
         {
@@ -506,11 +506,11 @@
           "body": "A regular hexagon has interior angle\n\\[\n120^\\circ\n\\]"
         },
         {
-          "title": "In right angled triangle ,",
+          "title": "Use trigonometry",
           "body": "In right-angled triangle \\(ABP\\),\n\\[\n\\tan(\\angle PAB)=\\frac{BP}{AB}=\\frac{2}{5}\n\\]\n\n\\[\n\\angle PAB=\\tan^{-1}\\left(\\frac25\\right)=21.801\\ldots^\\circ\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Use trigonometry",
           "body": "Therefore\n\\[\n\\angle PAF=120^\\circ-21.801\\ldots^\\circ=98.198\\ldots^\\circ\n\\]"
         }
       ],
@@ -531,7 +531,7 @@
           "body": "Area of triangle \\(ABC\\):\n\\[\n\\frac12\\times 6\\times 11\\times \\sin 118^\\circ\n\\]"
         },
         {
-          "title": "So the area of the",
+          "title": "Use trigonometry",
           "body": "So the area of the kite is\n\\[\n2\\times \\frac12\\times 6\\times 11\\times \\sin 118^\\circ\n\\]\n\n\\[\n=6\\times 11\\times \\sin 118^\\circ=58.274\\ldots\n\\]"
         }
       ],
@@ -548,15 +548,15 @@
           "body": "Let \\(A\\) be the origin.\n\n\\[\n\\vec{AB}=\\mathbf a,\\qquad \\vec{BC}=\\mathbf b\n\\]"
         },
         {
-          "title": "So",
+          "title": "Read the graph",
           "body": "So\n\n\\[\nB=\\mathbf a,\\qquad D=\\mathbf b,\\qquad C=\\mathbf a+\\mathbf b\n\\]"
         },
         {
-          "title": "Also",
+          "title": "Read the graph",
           "body": "Also\n\n\\[\n\\vec{DM}=\\frac12\\mathbf b\n\\]"
         },
         {
-          "title": "So",
+          "title": "Read the graph",
           "body": "So\n\n\\[\nM=\\frac32\\mathbf b\n\\]"
         },
         {
@@ -564,7 +564,7 @@
           "body": "Point \\(K\\) is on \\(AB\\):\n\n\\[\nK=\\lambda\\mathbf a\n\\]"
         },
         {
-          "title": "Point is on , and",
+          "title": "Read the graph",
           "body": "Point \\(L\\) is on \\(CD\\), and \\(\\vec{CD}=-\\mathbf a\\):\n\n\\[\nL=C+\\mu(D-C)\n\\]\n\n\\[\nL=\\mathbf a+\\mathbf b+\\mu(-\\mathbf a)\n\\]\n\n\\[\nL=(1-\\mu)\\mathbf a+\\mathbf b\n\\]"
         },
         {
@@ -572,7 +572,7 @@
           "body": "Given\n\n\\[\n\\lambda:\\mu=1:2\n\\]\n\n\\[\n\\mu=2\\lambda\n\\]"
         },
         {
-          "title": "Since are collinear, is a",
+          "title": "Read the graph",
           "body": "Since \\(K,L,M\\) are collinear, \\(\\vec{KM}\\) is a multiple of \\(\\vec{KL}\\).\n\n\\[\n\\vec{KM}=-\\lambda\\mathbf a+\\frac32\\mathbf b\n\\]\n\n\\[\n\\vec{KL}=(1-\\mu-\\lambda)\\mathbf a+\\mathbf b\n\\]\n\n\\[\n\\vec{KL}=(1-3\\lambda)\\mathbf a+\\mathbf b\n\\]"
         },
         {
@@ -580,7 +580,7 @@
           "body": "Compare coefficients using\n\n\\[\n\\vec{KM}=\\frac32\\vec{KL}\n\\]\n\n\\[\n-\\lambda=\\frac32(1-3\\lambda)\n\\]\n\n\\[\n-2\\lambda=3-9\\lambda\n\\]\n\n\\[\n7\\lambda=3\n\\]\n\n\\[\n\\lambda=\\frac37\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Read the graph",
           "body": "Then\n\n\\[\n\\mu=2\\lambda=\\frac67\n\\]"
         }
       ],
@@ -593,7 +593,7 @@
       "topicNote": "Transformations. The tag is correct.",
       "steps": [
         {
-          "title": "(a) Triangle is enlarged to",
+          "title": "Use trigonometry",
           "body": "(a) Triangle \\(A\\) is enlarged to triangle \\(B\\)."
         },
         {
@@ -601,11 +601,11 @@
           "body": "The scale factor is\n\n\\[\n3\n\\]"
         },
         {
-          "title": "Using corresponding vertices gives centre",
+          "title": "Use Transformations tag correct",
           "body": "Using corresponding vertices gives centre \\((3,0)\\)."
         },
         {
-          "title": "So the transformation is an",
+          "title": "Use Transformations tag correct",
           "body": "So the transformation is an enlargement, scale factor \\(3\\), centre \\((3,0)\\)."
         },
         {
@@ -651,7 +651,7 @@
           "body": "The median is at cumulative frequency \\(30\\)."
         },
         {
-          "title": "This is between and",
+          "title": "Convert standard form",
           "body": "This is between \\((20,13)\\) and \\((30,36)\\):\n\n\\[\n20+\\frac{30-13}{36-13}\\times 10=27.39\\ldots\n\\]"
         },
         {
@@ -659,11 +659,11 @@
           "body": "Median age is about \\(27.4\\) years."
         },
         {
-          "title": "For the interquartile range",
+          "title": "Convert standard form",
           "body": "For the interquartile range:\n\n\\[\nQ_1 \\text{ is at }15,\\qquad Q_3 \\text{ is at }45\n\\]\n\n\\[\nQ_1\\approx 20+\\frac{15-13}{36-13}\\times 10=20.9\n\\]\n\n\\[\nQ_3\\approx 40+\\frac{45-42}{47-42}\\times 10=46\n\\]\n\n\\[\n\\text{IQR}\\approx 46-20.9=25.1\n\\]"
         },
         {
-          "title": "For people older than",
+          "title": "Use cumulative frequency",
           "body": "For people older than \\(55\\):\n\n\\[\nF(55)\\approx 47+\\frac{5}{10}(52-47)=49.5\n\\]\n\n\\[\n60-49.5=10.5\n\\]"
         }
       ],
@@ -689,7 +689,7 @@
       "topicNote": "Corrected from Sine/Cosine Rule to Algebraic Fractions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use trigonometry",
           "body": "\\[\n\\left(\\frac{20}{x^2-36}-\\frac2{x-6}\\right)\\times\\frac1{4-x}\n\\]"
         },
         {
@@ -697,7 +697,7 @@
           "body": "Factor:\n\n\\[\nx^2-36=(x-6)(x+6)\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\n\\frac{20}{(x-6)(x+6)}-\\frac2{x-6}\n\\]"
         },
         {
@@ -705,7 +705,7 @@
           "body": "Use the common denominator \\((x-6)(x+6)\\):\n\n\\[\n\\frac{20-2(x+6)}{(x-6)(x+6)}\n\\]\n\n\\[\n=\\frac{20-2x-12}{(x-6)(x+6)}\n\\]\n\n\\[\n=\\frac{8-2x}{(x-6)(x+6)}\n\\]\n\n\\[\n=\\frac{-2(x-4)}{(x-6)(x+6)}\n\\]"
         },
         {
-          "title": "Now multiply by",
+          "title": "Use trigonometry",
           "body": "Now multiply by\n\n\\[\n\\frac1{4-x}=-\\frac1{x-4}\n\\]\n\n\\[\n\\frac{-2(x-4)}{(x-6)(x+6)}\\times\\left(-\\frac1{x-4}\\right)\n\\]"
         },
         {
@@ -722,19 +722,19 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nx-2y=3\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\nx=2y+3\n\\]"
         },
         {
-          "title": "Substitute into",
+          "title": "Calculate value",
           "body": "Substitute into\n\n\\[\nx^2-y^2+2x=10\n\\]\n\n\\[\n(2y+3)^2-y^2+2(2y+3)=10\n\\]\n\n\\[\n4y^2+12y+9-y^2+4y+6=10\n\\]\n\n\\[\n3y^2+16y+5=0\n\\]\n\n\\[\n(3y+1)(y+5)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\ny=-\\frac13 \\quad \\text{or} \\quad y=-5\n\\]"
         },
         {
@@ -759,7 +759,7 @@
           "body": "The point \\(A\\) is\n\n\\[\nA=(6,11)\n\\]"
         },
         {
-          "title": "Since is a diameter, is",
+          "title": "Find the midpoint",
           "body": "Since \\(AOP\\) is a diameter, \\(O\\) is the midpoint of \\(AP\\)."
         },
         {
@@ -771,11 +771,11 @@
           "body": "The gradient of \\(OP\\) is\n\n\\[\n\\frac{3-7}{2-4}=2\n\\]"
         },
         {
-          "title": "The tangent is perpendicular to",
+          "title": "Use circle theorem",
           "body": "The tangent is perpendicular to the radius, so its gradient is\n\n\\[\n-\\frac12\n\\]"
         },
         {
-          "title": "Using point ,",
+          "title": "Evaluate fraction",
           "body": "Using point \\(P=(2,3)\\),\n\n\\[\ny-3=-\\frac12(x-2)\n\\]\n\n\\[\ny=-\\frac12x+4\n\\]"
         }
       ],
@@ -792,7 +792,7 @@
           "body": "Point \\(A=(-3,2)\\) lies on \\(y=f(x)\\)."
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(x)-3\n\\]"
         },
         {
@@ -800,7 +800,7 @@
           "body": "the graph moves 3 units down:\n\n\\[\n(-3,2)\\to(-3,-1)\n\\]"
         },
         {
-          "title": "For",
+          "title": "Evaluate fraction",
           "body": "For\n\n\\[\ny=f\\left(\\frac{x}{2}\\right)\n\\]"
         },
         {
@@ -808,19 +808,19 @@
           "body": "the \\(x\\)-coordinate is multiplied by 2:\n\n\\[\n(-3,2)\\to(-6,2)\n\\]"
         },
         {
-          "title": "For part (b), point lies",
+          "title": "Calculate value",
           "body": "For part (b), point \\(B=(p,q)\\) lies on \\(y=g(x)\\)."
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=-g(x-c)\n\\]"
         },
         {
-          "title": "moves the graph units right,",
+          "title": "Read the graph",
           "body": "\\(x-c\\) moves the graph \\(c\\) units right, and the minus sign reflects the graph in the \\(x\\)-axis."
         },
         {
-          "title": "So",
+          "title": "Apply transformation",
           "body": "So\n\n\\[\n(p,q)\\to(p+c,-q)\n\\]"
         }
       ],
@@ -841,7 +841,7 @@
           "body": "The larger similar cone has radius \\(kr\\) and height \\(kh\\), so its volume is\n\n\\[\nV_L=\\frac13\\pi(kr)^2(kh)=\\frac13\\pi k^3r^2h\n\\]"
         },
         {
-          "title": "So the frustum volume is",
+          "title": "Calculate volume",
           "body": "So the frustum volume is\n\n\\[\nV_L-V_s=\\frac13\\pi r^2h(k^3-1)\n\\]"
         },
         {
@@ -878,15 +878,15 @@
           "body": "Let \\(A\\) be the origin.\n\n\\[\n\\vec{AB}=\\mathbf a,\\qquad \\vec{BC}=\\mathbf b\n\\]"
         },
         {
-          "title": "So",
+          "title": "Read the graph",
           "body": "So\n\n\\[\nB=\\mathbf a,\\qquad D=\\mathbf b,\\qquad C=\\mathbf a+\\mathbf b\n\\]"
         },
         {
-          "title": "Also",
+          "title": "Read the graph",
           "body": "Also\n\n\\[\n\\vec{DM}=\\frac12\\mathbf b\n\\]"
         },
         {
-          "title": "So",
+          "title": "Read the graph",
           "body": "So\n\n\\[\nM=\\frac32\\mathbf b\n\\]"
         },
         {
@@ -894,7 +894,7 @@
           "body": "Point \\(K\\) is on \\(AB\\):\n\n\\[\nK=\\lambda\\mathbf a\n\\]"
         },
         {
-          "title": "Point is on , and",
+          "title": "Read the graph",
           "body": "Point \\(L\\) is on \\(CD\\), and \\(\\vec{CD}=-\\mathbf a\\):\n\n\\[\nL=C+\\mu(D-C)\n\\]\n\n\\[\nL=\\mathbf a+\\mathbf b+\\mu(-\\mathbf a)\n\\]\n\n\\[\nL=(1-\\mu)\\mathbf a+\\mathbf b\n\\]"
         },
         {
@@ -902,7 +902,7 @@
           "body": "Given\n\n\\[\n\\lambda:\\mu=1:2\n\\]\n\n\\[\n\\mu=2\\lambda\n\\]"
         },
         {
-          "title": "Since are collinear, is a",
+          "title": "Read the graph",
           "body": "Since \\(K,L,M\\) are collinear, \\(\\vec{KM}\\) is a multiple of \\(\\vec{KL}\\).\n\n\\[\n\\vec{KM}=-\\lambda\\mathbf a+\\frac32\\mathbf b\n\\]\n\n\\[\n\\vec{KL}=(1-\\mu-\\lambda)\\mathbf a+\\mathbf b\n\\]\n\n\\[\n\\vec{KL}=(1-3\\lambda)\\mathbf a+\\mathbf b\n\\]"
         },
         {
@@ -910,7 +910,7 @@
           "body": "Compare coefficients using\n\n\\[\n\\vec{KM}=\\frac32\\vec{KL}\n\\]\n\n\\[\n-\\lambda=\\frac32(1-3\\lambda)\n\\]\n\n\\[\n-2\\lambda=3-9\\lambda\n\\]\n\n\\[\n7\\lambda=3\n\\]\n\n\\[\n\\lambda=\\frac37\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Read the graph",
           "body": "Then\n\n\\[\n\\mu=2\\lambda=\\frac67\n\\]"
         }
       ],

@@ -8,7 +8,7 @@
       "topicNote": "Powers, roots and standard form. The tag is correct.",
       "steps": [
         {
-          "title": "For part (a), divide the",
+          "title": "Convert standard form",
           "body": "For part (a), divide the number of bacteria by the number of raindrops:\n\n\\[\n\\frac{1.75\\times 10^6}{2.4\\times 10^7}\n=\\frac{1.75}{2.4}\\times 10^{-1}\n\\]\n\n\\[\n=0.072916\\ldots\n\\]"
         },
         {
@@ -16,15 +16,15 @@
           "body": "Correct to 2 significant figures:\n\n\\[\n7.3\\times 10^{-2}\n\\]"
         },
         {
-          "title": "For part (b), one drop",
+          "title": "Convert standard form",
           "body": "For part (b), one drop contains \\(5.01\\times 10^{21}\\) atoms."
         },
         {
-          "title": "The number of molecules in",
+          "title": "Convert standard form",
           "body": "The number of molecules in one drop is\n\n\\[\n\\frac{5.01\\times 10^{21}}{3}=1.67\\times 10^{21}\n\\]"
         },
         {
-          "title": "There are drops, so the",
+          "title": "Convert standard form",
           "body": "There are \\(2.4\\times 10^7\\) drops, so the number of molecules in the tank is\n\n\\[\n(1.67\\times 10^{21})(2.4\\times 10^7)\n=4.008\\times 10^{28}\n\\]"
         },
         {
@@ -74,7 +74,7 @@
           "body": "Difference:\n\n\\[\n3529.153\\ldots-3450=79.153\\ldots\n\\]"
         },
         {
-          "title": "Correct to the nearest dollar,",
+          "title": "Use compound interest",
           "body": "Correct to the nearest dollar,\n\n\\[\n79.153\\ldots\\approx 79\n\\]"
         }
       ],
@@ -87,7 +87,7 @@
       "topicNote": "Surds. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify surd",
           "body": "\\[\n\\frac{8}{\\sqrt5-1}\n\\]"
         },
         {
@@ -95,7 +95,7 @@
           "body": "Rationalise the denominator:\n\n\\[\n\\frac{8}{\\sqrt5-1}\\times \\frac{\\sqrt5+1}{\\sqrt5+1}\n=\\frac{8(\\sqrt5+1)}{5-1}\n\\]\n\n\\[\n=2(\\sqrt5+1)=2\\sqrt5+2\n\\]"
         },
         {
-          "title": "In the form ,",
+          "title": "Simplify surd",
           "body": "In the form \\(\\sqrt a+b\\),\n\n\\[\n2\\sqrt5+2=\\sqrt{20}+2\n\\]"
         }
       ],
@@ -108,11 +108,11 @@
       "topicNote": "Algebraic roots and indices. The tag is correct.",
       "steps": [
         {
-          "title": "(a) , so",
+          "title": "Use index laws",
           "body": "(a) \\(3^4\\times3^5=3^9\\), so \\(m=9\\)."
         },
         {
-          "title": "(b) , so",
+          "title": "Use index laws",
           "body": "(b) \\((5^3)^7=5^{21}\\), so \\(n=21\\)."
         },
         {
@@ -120,7 +120,7 @@
           "body": "(c)\n\\[\n\\frac{7^8\\times7^2}{7^p}=7^{10-p}=7^6\n\\]"
         },
         {
-          "title": "So , hence",
+          "title": "Use index laws",
           "body": "So \\(10-p=6\\), hence \\(p=4\\)."
         }
       ],
@@ -162,7 +162,7 @@
           "body": "(b)(i)\n\\[\nx^2-5x-36=(x-9)(x+4)\n\\]"
         },
         {
-          "title": "(b)(ii) or",
+          "title": "Factorise expression",
           "body": "(b)(ii) \\(x=9\\) or \\(x=-4\\)."
         }
       ],
@@ -212,7 +212,7 @@
           "body": "Given\n\n\\[\n-\\frac{5k}{2}=90+2k\n\\]\n\n\\[\n-5k=180+4k\n\\]\n\n\\[\nk=-20\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\na=-20,\\quad d=5\n\\]\n\n\\[\nS_{30}=\\frac{30}{2}(2(-20)+29(5))\n\\]\n\n\\[\nS_{30}=15(105)=1575\n\\]"
         }
       ],
@@ -225,7 +225,7 @@
       "topicNote": "Functions. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\nf(x)=2x-3,\\qquad g(x)=\\frac{x}{3x+1}\n\\]"
         },
         {
@@ -241,7 +241,7 @@
           "body": "(c) Let\n\\[\ny=\\frac{x}{3x+1}\n\\]\n\n\\[\ny(3x+1)=x\n\\]\n\n\\[\n3xy+y=x\n\\]\n\n\\[\nx(3y-1)=-y\n\\]\n\n\\[\nx=\\frac{y}{1-3y}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\\[\ng^{-1}(x)=\\frac{x}{1-3x}\n\\]"
         }
       ],
@@ -258,7 +258,7 @@
           "body": "Line \\(L\\) is\n\\[\nx-y=3\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\\[\ny=x-3\n\\]"
         },
         {
@@ -270,11 +270,11 @@
           "body": "Substitute \\(y=x-3\\):\n\\[\n3x-(x-3)+(x-3)^2=9\n\\]\n\n\\[\n2x+3+x^2-6x+9=9\n\\]\n\n\\[\nx^2-4x+3=0\n\\]\n\n\\[\n(x-1)(x-3)=0\n\\]"
         },
         {
-          "title": "So or",
+          "title": "Calculate value",
           "body": "So \\(x=1\\) or \\(x=3\\)."
         },
         {
-          "title": "If , then . If",
+          "title": "Calculate value",
           "body": "If \\(x=1\\), then \\(y=-2\\). If \\(x=3\\), then \\(y=0\\)."
         },
         {
@@ -299,7 +299,7 @@
           "body": "The rising boundary is\n\\[\ny=2x+2\n\\]\nso the region has\n\\[\ny\\leq2x+2\n\\]"
         },
         {
-          "title": "The falling boundary goes through",
+          "title": "Calculate value",
           "body": "The falling boundary goes through \\((0,1)\\) and \\((1,0)\\), so\n\\[\nx+y=1\n\\]"
         },
         {
@@ -316,7 +316,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nf(x)=9-3(x+2)^2\n\\]"
         },
         {
@@ -324,7 +324,7 @@
           "body": "This is in completed square form, so the maximum point is\n\n\\[\n(-2,9)\n\\]"
         },
         {
-          "title": "For the translation",
+          "title": "Use matrices",
           "body": "For the translation\n\n\\[\n\\begin{pmatrix}4\\\\0\\end{pmatrix}\n\\]"
         },
         {
@@ -340,19 +340,19 @@
           "body": "This is\n\n\\[\ny=-\\left(9-3(x+2)^2\\right)\n\\]"
         },
         {
-          "title": "So is reflected in the",
+          "title": "Apply transformation",
           "body": "So \\(C\\) is reflected in the \\(x\\)-axis."
         },
         {
-          "title": "For the cosine graph, the",
+          "title": "Use trigonometry",
           "body": "For the cosine graph, the maximum is 5 and the minimum is \\(-1\\).\n\n\\[\na=\\frac{5-(-1)}{2}=3\n\\]\n\n\\[\nc=\\frac{5+(-1)}{2}=2\n\\]"
         },
         {
-          "title": "For",
+          "title": "Use trigonometry",
           "body": "For\n\n\\[\ny=a\\cos(x-b)^\\circ+c\n\\]"
         },
         {
-          "title": "a maximum occurs when .",
+          "title": "Read the graph",
           "body": "a maximum occurs when \\(x-b=0\\). The graph has a maximum at \\(x=270^\\circ\\), so\n\n\\[\nb=270\n\\]"
         }
       ],
@@ -365,7 +365,7 @@
       "topicNote": "Angles in Polygons & Parallel Lines. The tag is correct.",
       "steps": [
         {
-          "title": "For pentagon , the interior",
+          "title": "Find the gradient",
           "body": "For pentagon \\(DEFGH\\), the interior angle sum is\n\\[\n(5-2)\\times 180=540^\\circ\n\\]"
         },
         {
@@ -373,7 +373,7 @@
           "body": "Let\n\\[\n\\angle GHD=\\angle FGH=a\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Find the gradient",
           "body": "Then\n\\[\n112+102+96+a+a=540\n\\]\n\n\\[\n2a=230\n\\]\n\n\\[\na=115^\\circ\n\\]"
         },
         {
@@ -381,7 +381,7 @@
           "body": "A regular octagon has interior angle\n\\[\n\\frac{(8-2)\\times 180}{8}=135^\\circ\n\\]"
         },
         {
-          "title": "At , angles around a",
+          "title": "Find the gradient",
           "body": "At \\(H\\), angles around a point add to \\(360^\\circ\\):\n\\[\nx=360^\\circ-135^\\circ-115^\\circ=110^\\circ\n\\]"
         }
       ],
@@ -398,15 +398,15 @@
           "body": "The tangent at \\(B\\) is perpendicular to the radius \\(OB\\), so\n\\[\n\\angle OBC=90^\\circ\n\\]"
         },
         {
-          "title": "In triangle ,",
+          "title": "Use trigonometry",
           "body": "In triangle \\(OBC\\),\n\\[\n\\angle BOC=180^\\circ-90^\\circ-48^\\circ=42^\\circ\n\\]"
         },
         {
-          "title": "Since are on a straight",
+          "title": "Use trigonometry",
           "body": "Since \\(O,D,C\\) are on a straight line,\n\\[\n\\angle BOD=42^\\circ\n\\]"
         },
         {
-          "title": "is a diameter, so is",
+          "title": "Use trigonometry",
           "body": "\\(BOK\\) is a diameter, so \\(BOE\\) is a straight line and\n\\[\n\\angle DOE=180^\\circ-42^\\circ=138^\\circ\n\\]"
         },
         {
@@ -423,15 +423,15 @@
       "topicNote": "Area & Perimeter. The tag is correct.",
       "steps": [
         {
-          "title": "In right angled triangle ,",
+          "title": "Use trigonometry",
           "body": "In right-angled triangle \\(ABN\\),\n\\[\n\\cos 38^\\circ=\\frac{9.3}{AB}\n\\]\n\n\\[\nAB=\\frac{9.3}{\\cos 38^\\circ}=11.802\\ldots\n\\]"
         },
         {
-          "title": "Since is isosceles,",
+          "title": "Calculate area",
           "body": "Since \\(ABC\\) is isosceles,\n\\[\nBC=AB\n\\]"
         },
         {
-          "title": "Also,",
+          "title": "Calculate area",
           "body": "Also,\n\\[\nAC=2\\times 9.3=18.6\n\\]"
         },
         {
@@ -448,7 +448,7 @@
       "topicNote": "Corrected from Right-Angled Triangles to Volume & Surface Area.",
       "steps": [
         {
-          "title": "The sphere has diameter ,",
+          "title": "Use trigonometry",
           "body": "The sphere has diameter \\(x\\), so its radius is\n\n\\[\n\\frac x2\n\\]"
         },
         {
@@ -460,7 +460,7 @@
           "body": "The rectangular base of the pyramid has dimensions \\(x\\) and \\(2x\\), so its area is\n\n\\[\nx(2x)=2x^2\n\\]"
         },
         {
-          "title": "For the two faces with",
+          "title": "Use trigonometry",
           "body": "For the two faces with base \\(x\\), the slant height is\n\n\\[\n\\sqrt{(5x)^2+x^2}=x\\sqrt{26}\n\\]"
         },
         {
@@ -468,7 +468,7 @@
           "body": "Their total area is\n\n\\[\n2\\left(\\frac12 x\\cdot x\\sqrt{26}\\right)=x^2\\sqrt{26}\n\\]"
         },
         {
-          "title": "For the two faces with",
+          "title": "Use trigonometry",
           "body": "For the two faces with base \\(2x\\), the slant height is\n\n\\[\n\\sqrt{(5x)^2+\\left(\\frac x2\\right)^2}\n=\\frac{x\\sqrt{101}}2\n\\]"
         },
         {
@@ -501,7 +501,7 @@
           "body": "The scale factor from triangle \\(DEF\\) to triangle \\(ABC\\) is\n\\[\n\\frac{AC}{DF}=\\frac{45}{20}=2.25\n\\]\n\n\\[\nAB=DE\\times 2.25=36\\times 2.25=81\n\\]"
         },
         {
-          "title": "Given ,",
+          "title": "Evaluate fraction",
           "body": "Given \\(BC=54\\),\n\\[\nEF=\\frac{54}{2.25}=24\n\\]"
         }
       ],
@@ -564,11 +564,11 @@
           "body": "The histogram densities are\n\n\\[\n0<L\\le 10:\\frac{8}{10}=0.8\n\\]\n\n\\[\n10<L\\le 15:\\frac{13}{5}=2.6\n\\]\n\n\\[\n15<L\\le 25:\\frac{19}{10}=1.9\n\\]\n\n\\[\n25<L\\le 40:\\frac{24}{15}=1.6\n\\]\n\n\\[\n40<L\\le 60:\\frac{6}{20}=0.3\n\\]"
         },
         {
-          "title": "Given , the total frequency",
+          "title": "Use histogram",
           "body": "Given \\(L\\le 25\\), the total frequency is\n\n\\[\n8+13+19=40\n\\]"
         },
         {
-          "title": "For , estimate half of",
+          "title": "Use histogram",
           "body": "For \\(L\\le 5\\), estimate half of the first class:\n\n\\[\n5(0.8)=4\n\\]\n\n\\[\nP(L\\le 5\\mid L\\le 25)=\\frac{4}{40}=\\frac{1}{10}\n\\]"
         }
       ],
@@ -581,11 +581,11 @@
       "topicNote": "Combined & Conditional Probability. The tag is correct.",
       "steps": [
         {
-          "title": "There are red, green and",
+          "title": "Calculate probability",
           "body": "There are \\(4\\) red, \\(5\\) green and \\(6\\) yellow counters."
         },
         {
-          "title": "The first counter is replaced,",
+          "title": "Calculate probability",
           "body": "The first counter is replaced, so the probabilities are the same for Niklas and Sasha.\n\n\\[\nP(\\text{same colour})=\n\\left(\\frac4{15}\\right)^2+\n\\left(\\frac5{15}\\right)^2+\n\\left(\\frac6{15}\\right)^2\n\\]\n\n\\[\n=\\frac{16+25+36}{225}\n\\]\n\n\\[\n=\\frac{77}{225}\n\\]"
         }
       ],
@@ -614,7 +614,7 @@
           "body": "Given\n\n\\[\n-\\frac{5k}{2}=90+2k\n\\]\n\n\\[\n-5k=180+4k\n\\]\n\n\\[\nk=-20\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\na=-20,\\quad d=5\n\\]\n\n\\[\nS_{30}=\\frac{30}{2}(2(-20)+29(5))\n\\]\n\n\\[\nS_{30}=15(105)=1575\n\\]"
         }
       ],
@@ -627,7 +627,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nf(x)=9-3(x+2)^2\n\\]"
         },
         {
@@ -635,7 +635,7 @@
           "body": "This is in completed square form, so the maximum point is\n\n\\[\n(-2,9)\n\\]"
         },
         {
-          "title": "For the translation",
+          "title": "Use matrices",
           "body": "For the translation\n\n\\[\n\\begin{pmatrix}4\\\\0\\end{pmatrix}\n\\]"
         },
         {
@@ -651,19 +651,19 @@
           "body": "This is\n\n\\[\ny=-\\left(9-3(x+2)^2\\right)\n\\]"
         },
         {
-          "title": "So is reflected in the",
+          "title": "Apply transformation",
           "body": "So \\(C\\) is reflected in the \\(x\\)-axis."
         },
         {
-          "title": "For the cosine graph, the",
+          "title": "Use trigonometry",
           "body": "For the cosine graph, the maximum is 5 and the minimum is \\(-1\\).\n\n\\[\na=\\frac{5-(-1)}{2}=3\n\\]\n\n\\[\nc=\\frac{5+(-1)}{2}=2\n\\]"
         },
         {
-          "title": "For",
+          "title": "Use trigonometry",
           "body": "For\n\n\\[\ny=a\\cos(x-b)^\\circ+c\n\\]"
         },
         {
-          "title": "a maximum occurs when .",
+          "title": "Read the graph",
           "body": "a maximum occurs when \\(x-b=0\\). The graph has a maximum at \\(x=270^\\circ\\), so\n\n\\[\nb=270\n\\]"
         }
       ],
@@ -676,7 +676,7 @@
       "topicNote": "Corrected from Right-Angled Triangles to Volume & Surface Area.",
       "steps": [
         {
-          "title": "The sphere has diameter ,",
+          "title": "Use trigonometry",
           "body": "The sphere has diameter \\(x\\), so its radius is\n\n\\[\n\\frac x2\n\\]"
         },
         {
@@ -688,7 +688,7 @@
           "body": "The rectangular base of the pyramid has dimensions \\(x\\) and \\(2x\\), so its area is\n\n\\[\nx(2x)=2x^2\n\\]"
         },
         {
-          "title": "For the two faces with",
+          "title": "Use trigonometry",
           "body": "For the two faces with base \\(x\\), the slant height is\n\n\\[\n\\sqrt{(5x)^2+x^2}=x\\sqrt{26}\n\\]"
         },
         {
@@ -696,7 +696,7 @@
           "body": "Their total area is\n\n\\[\n2\\left(\\frac12 x\\cdot x\\sqrt{26}\\right)=x^2\\sqrt{26}\n\\]"
         },
         {
-          "title": "For the two faces with",
+          "title": "Use trigonometry",
           "body": "For the two faces with base \\(2x\\), the slant height is\n\n\\[\n\\sqrt{(5x)^2+\\left(\\frac x2\\right)^2}\n=\\frac{x\\sqrt{101}}2\n\\]"
         },
         {

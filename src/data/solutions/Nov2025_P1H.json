@@ -34,11 +34,11 @@
       "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
       "steps": [
         {
-          "title": "The weight g correct to",
+          "title": "Find lower bound",
           "body": "The weight \\(475\\) g correct to the nearest g has lower bound\n\n\\[\n475-0.5=474.5\n\\]"
         },
         {
-          "title": "The height cm correct to",
+          "title": "Find upper bound",
           "body": "The height \\(120\\) cm correct to the nearest \\(10\\) cm has upper bound\n\n\\[\n120+5=125\n\\]"
         }
       ],
@@ -55,7 +55,7 @@
           "body": "The ratio is\n\n\\[\n\\text{Eli} : \\text{Peta} = 2:3\n\\]"
         },
         {
-          "title": "There are 5 parts, so",
+          "title": "Split the ratio",
           "body": "There are 5 parts, so one part is\n\n\\[\n275 \\div 5=55\n\\]"
         },
         {
@@ -88,7 +88,7 @@
       "topicNote": "Algebraic roots and indices. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use index laws",
           "body": "\\[\n\\frac{8^{-2}\\times8^9}{8^{10}}=8^{-2+9-10}=8^{-3}\n\\]"
         }
       ],
@@ -143,7 +143,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve inequality",
           "body": "\\[\n5x^2-20x+23=5(x^2-4x)+23\n\\]\n\n\\[\n=5\\left((x-2)^2-4\\right)+23\n\\]\n\n\\[\n=5(x-2)^2-20+23\n\\]\n\n\\[\n=5(x-2)^2+3\n\\]"
         }
       ],
@@ -156,11 +156,11 @@
       "topicNote": "Corrected from Ratio Toolkit to Algebraic Fractions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Split the ratio",
           "body": "\\[\na=\\frac{2x+5}{1-x},\\quad x=\\frac{5-2y}{3y}\n\\]"
         },
         {
-          "title": "Substitute for",
+          "title": "Split the ratio",
           "body": "Substitute for \\(x\\)."
         },
         {
@@ -172,7 +172,7 @@
           "body": "Denominator:\n\n\\[\n1-x=1-\\frac{5-2y}{3y}\n\\]\n\n\\[\n=\\frac{3y-5+2y}{3y}\n=\\frac{5y-5}{3y}\n=\\frac{5(y-1)}{3y}\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Split the ratio",
           "body": "Therefore\n\n\\[\na=\\frac{\\frac{10+11y}{3y}}{\\frac{5(y-1)}{3y}}\n=\\frac{10+11y}{5(y-1)}\n\\]"
         }
       ],
@@ -185,7 +185,7 @@
       "topicNote": "Rearranging formulas. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Rearrange formula",
           "body": "\\[\np=\\sqrt{\\frac{y+w}{3y-t}}\n\\]\n\n\\[\np^2=\\frac{y+w}{3y-t}\n\\]\n\n\\[\np^2(3y-t)=y+w\n\\]\n\n\\[\n3p^2y-p^2t=y+w\n\\]\n\n\\[\ny(3p^2-1)=w+p^2t\n\\]"
         }
       ],
@@ -198,7 +198,7 @@
       "topicNote": "Algebraic proof. The tag is acceptable because the question asks to show the exact result.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\n\\frac37+\\frac13\n\\]"
         },
         {
@@ -215,11 +215,11 @@
       "topicNote": "Algebraic proof. The tag is acceptable because the question asks for exact-form proof.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify surd",
           "body": "\\[\n\\frac{2\\sqrt7+2}{\\sqrt7-3}\\times\\frac{\\sqrt7+3}{\\sqrt7+3}\n=\\frac{(2\\sqrt7+2)(\\sqrt7+3)}{7-9}\n\\]\n\n\\[\n=\\frac{14+6\\sqrt7+2\\sqrt7+6}{-2}\n\\]\n\n\\[\n=\\frac{20+8\\sqrt7}{-2}=-10-4\\sqrt7\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Simplify surd",
           "body": "Since \\(4\\sqrt7=\\sqrt{112}\\),\n\\[\n-10-4\\sqrt7=-10-\\sqrt{112}\n\\]"
         }
       ],
@@ -232,7 +232,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve inequality",
           "body": "\\[\n2x^2+x-28>0\n\\]"
         },
         {
@@ -261,15 +261,15 @@
           "body": "Line \\(L\\) has equation\n\n\\[\ny=4x+7\n\\]"
         },
         {
-          "title": "So its gradient is",
+          "title": "Find the gradient",
           "body": "So its gradient is\n\n\\[\n4\n\\]"
         },
         {
-          "title": "Line is perpendicular to ,",
+          "title": "Find the gradient",
           "body": "Line \\(M\\) is perpendicular to \\(L\\), so its gradient is\n\n\\[\n-\\frac14\n\\]"
         },
         {
-          "title": "Line passes through",
+          "title": "Evaluate fraction",
           "body": "Line \\(M\\) passes through \\((8,1)\\).\n\n\\[\ny-1=-\\frac14(x-8)\n\\]\n\n\\[\ny-1=-\\frac14x+2\n\\]\n\n\\[\ny=-\\frac14x+3\n\\]"
         }
       ],
@@ -290,7 +290,7 @@
           "body": "Point \\(A=(0.2,2.6)\\) lies on the line.\n\n\\[\n2.6=3(0.2)+e\n\\]\n\n\\[\n2.6=0.6+e\n\\]\n\n\\[\ne=2\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\ny=3x+2\n\\]"
         },
         {
@@ -302,7 +302,7 @@
           "body": "Use point \\(A=(0.2,2.6)\\):\n\n\\[\n0.2^2+2.6^2=d-11(0.2)\n\\]\n\n\\[\n0.04+6.76=d-2.2\n\\]\n\n\\[\nd=9\n\\]"
         },
         {
-          "title": "Now substitute into the curve",
+          "title": "Substitute into the curve",
           "body": "Now substitute \\(y=3x+2\\) into the curve:\n\n\\[\nx^2+(3x+2)^2=9-11x\n\\]\n\n\\[\nx^2+9x^2+12x+4=9-11x\n\\]\n\n\\[\n10x^2+23x-5=0\n\\]"
         },
         {
@@ -314,11 +314,11 @@
           "body": "The product of the roots is\n\n\\[\n\\frac{-5}{10}=-\\frac12\n\\]"
         },
         {
-          "title": "So the other root is",
+          "title": "Evaluate fraction",
           "body": "So the other root is\n\n\\[\n\\frac{-\\frac12}{\\frac15}=-\\frac52\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Evaluate fraction",
           "body": "Then\n\n\\[\ny=3\\left(-\\frac52\\right)+2\n\\]\n\n\\[\ny=-\\frac{11}{2}\n\\]"
         }
       ],
@@ -335,7 +335,7 @@
           "body": "The turning point of \\(y=f(x)\\) is \\((4,3)\\)."
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(x+5)\n\\]"
         },
         {
@@ -343,7 +343,7 @@
           "body": "the graph moves 5 units left:\n\n\\[\n(4,3)\\to(-1,3)\n\\]"
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(x)+7\n\\]"
         },
         {
@@ -351,7 +351,7 @@
           "body": "the graph moves 7 units up:\n\n\\[\n(4,3)\\to(4,10)\n\\]"
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(2x)\n\\]"
         },
         {
@@ -376,7 +376,7 @@
           "body": "The exterior angle is\n\\[\n2x-23=2(16)-23=9^\\circ\n\\]"
         },
         {
-          "title": "For a regular polygon,",
+          "title": "Find the gradient",
           "body": "For a regular polygon,\n\\[\nn=\\frac{360}{9}=40\n\\]"
         }
       ],
@@ -402,7 +402,7 @@
       "topicNote": "Circles, Arcs & Sectors. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate area",
           "body": "\\[\n\\text{area}=\\frac{75}{360}\\times \\pi(12)^2\n\\]\n\n\\[\n=94.247\\ldots\n\\]"
         }
       ],
@@ -415,7 +415,7 @@
       "topicNote": "Right-Angled Triangles - Pythagoras & Trigonometry. The tag is correct.",
       "steps": [
         {
-          "title": "First find",
+          "title": "Use trigonometry",
           "body": "First find \\(AB\\):\n\n\\[\nAB^2=21^2-15^2=216\n\\]\n\n\\[\nAB=14.696\\ldots\n\\]\n\n\\[\nAD=AB-DB=14.696\\ldots-9=5.696\\ldots\n\\]"
         },
         {
@@ -436,7 +436,7 @@
       "topicNote": "Corrected to Sine, Cosine Rule & Area of Triangles.",
       "steps": [
         {
-          "title": "Use the cosine rule for",
+          "title": "Use cosine rule",
           "body": "Use the cosine rule for angle \\(BAC\\):\n\\[\n\\cos A=\\frac{8^2+9^2-10^2}{2(8)(9)}\n\\]\n\n\\[\n\\cos A=\\frac{45}{144}\n\\]\n\n\\[\nA=71.790\\ldots^\\circ\n\\]"
         }
       ],
@@ -453,15 +453,15 @@
           "body": "The horizontal base \\(ABGF\\) is a rectangle.\n\n\\[\nAB=10,\\qquad BG=14\n\\]"
         },
         {
-          "title": "So the horizontal distance from",
+          "title": "Use trigonometry",
           "body": "So the horizontal distance from \\(B\\) to \\(F\\) is\n\n\\[\nBF=\\sqrt{10^2+14^2}=\\sqrt{296}\n\\]"
         },
         {
-          "title": "The angle of elevation of",
+          "title": "Use trigonometry",
           "body": "The angle of elevation of \\(E\\) from \\(B\\) is \\(50^\\circ\\)."
         },
         {
-          "title": "Since is vertically above ,",
+          "title": "Use trigonometry",
           "body": "Since \\(E\\) is vertically above \\(F\\),\n\n\\[\n\\tan 50^\\circ=\\frac{FE}{BF}\n\\]\n\n\\[\nFE=\\sqrt{296}\\tan50^\\circ\n\\]"
         },
         {
@@ -469,7 +469,7 @@
           "body": "The prism has the same cross section throughout, so\n\n\\[\nAD=FE=\\sqrt{296}\\tan50^\\circ\n\\]"
         },
         {
-          "title": "Also",
+          "title": "Use trigonometry",
           "body": "Also\n\n\\[\nBC=\\frac15AD\n\\]"
         },
         {
@@ -494,35 +494,35 @@
       "topicNote": "Moved from Linear Graphs to Vectors.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Read the graph",
           "body": "\\[\n\\vec{OA}=2\\mathbf a,\\qquad \\vec{AB}=4\\mathbf b-\\mathbf a,\\qquad \\vec{OC}=5\\mathbf b-3\\mathbf a\n\\]"
         },
         {
-          "title": "First find",
+          "title": "Read the graph",
           "body": "First find \\(\\vec{OB}\\):\n\n\\[\n\\vec{OB}=\\vec{OA}+\\vec{AB}\n\\]\n\n\\[\n\\vec{OB}=2\\mathbf a+4\\mathbf b-\\mathbf a\n\\]\n\n\\[\n\\vec{OB}=\\mathbf a+4\\mathbf b\n\\]"
         },
         {
-          "title": "For part (a),",
+          "title": "Read the graph",
           "body": "For part (a),\n\n\\[\n\\vec{BC}=\\vec{OC}-\\vec{OB}\n\\]\n\n\\[\n\\vec{BC}=(5\\mathbf b-3\\mathbf a)-(\\mathbf a+4\\mathbf b)\n\\]\n\n\\[\n\\vec{BC}=\\mathbf b-4\\mathbf a\n\\]"
         },
         {
-          "title": "For part (b), , so",
+          "title": "Read the graph",
           "body": "For part (b), \\(BD:DC=1:3\\), so\n\n\\[\n\\vec{OD}=\\vec{OB}+\\frac14\\vec{BC}\n\\]\n\n\\[\n\\vec{OD}=\\mathbf a+4\\mathbf b+\\frac14(\\mathbf b-4\\mathbf a)\n\\]\n\n\\[\n\\vec{OD}=\\frac{17}{4}\\mathbf b\n\\]"
         },
         {
-          "title": "Since are collinear, let",
+          "title": "Read the graph",
           "body": "Since \\(A,B,P\\) are collinear, let\n\n\\[\n\\vec{OP}=\\vec{OA}+s\\vec{AB}\n\\]\n\n\\[\n\\vec{OP}=2\\mathbf a+s(4\\mathbf b-\\mathbf a)\n\\]\n\n\\[\n\\vec{OP}=(2-s)\\mathbf a+4s\\mathbf b\n\\]"
         },
         {
-          "title": "But are collinear, and has",
+          "title": "Read the graph",
           "body": "But \\(O,D,P\\) are collinear, and \\(\\vec{OD}\\) has only a \\(\\mathbf b\\) component."
         },
         {
-          "title": "So",
+          "title": "Read the graph",
           "body": "So\n\n\\[\n2-s=0\n\\]\n\n\\[\ns=2\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Read the graph",
           "body": "Then\n\n\\[\n\\vec{OP}=8\\mathbf b\n\\]"
         },
         {
@@ -556,7 +556,7 @@
           "body": "The range is \\(15\\):\n\n\\[\n17-e=15\n\\]\n\n\\[\ne=2\n\\]"
         },
         {
-          "title": "The mean is , so",
+          "title": "Calculate statistic",
           "body": "The mean is \\(9\\), so the total is\n\n\\[\n6 \\times 9=54\n\\]\n\n\\[\n2+f+7+g+12+17=54\n\\]\n\n\\[\nf+g=16\n\\]"
         },
         {
@@ -573,7 +573,7 @@
       "topicNote": "Statistics Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "The data are already in",
+          "title": "Use Statistics Toolkit correct",
           "body": "The data are already in order:\n\n\\[\n1,\\ 1,\\ 3,\\ 4,\\ 6,\\ 7,\\ 8,\\ 9,\\ 10,\\ 12,\\ 15,\\ 25,\\ 30,\\ 37,\\ 50\n\\]"
         },
         {
@@ -619,7 +619,7 @@
           "body": "At least one pink button is still in the box unless both pink buttons are taken."
         },
         {
-          "title": "So use the complement",
+          "title": "Use the complement",
           "body": "So use the complement."
         },
         {
@@ -627,7 +627,7 @@
           "body": "The probability that both pink buttons are taken is\n\n\\[\n\\frac{\\binom{2}{2}\\binom{13}{1}}{\\binom{15}{3}}\n\\]\n\n\\[\n=\\frac{13}{455}\n\\]\n\n\\[\n=\\frac{1}{35}\n\\]"
         },
         {
-          "title": "Therefore,",
+          "title": "Evaluate fraction",
           "body": "Therefore,\n\n\\[\nP(\\text{at least one pink is still in the box})\n=1-\\frac{1}{35}\n\\]\n\n\\[\n=\\frac{34}{35}\n\\]"
         }
       ],
@@ -640,7 +640,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve inequality",
           "body": "\\[\n5x^2-20x+23=5(x^2-4x)+23\n\\]\n\n\\[\n=5\\left((x-2)^2-4\\right)+23\n\\]\n\n\\[\n=5(x-2)^2-20+23\n\\]\n\n\\[\n=5(x-2)^2+3\n\\]"
         }
       ],
@@ -653,11 +653,11 @@
       "topicNote": "Corrected from Ratio Toolkit to Algebraic Fractions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Split the ratio",
           "body": "\\[\na=\\frac{2x+5}{1-x},\\quad x=\\frac{5-2y}{3y}\n\\]"
         },
         {
-          "title": "Substitute for",
+          "title": "Split the ratio",
           "body": "Substitute for \\(x\\)."
         },
         {
@@ -669,7 +669,7 @@
           "body": "Denominator:\n\n\\[\n1-x=1-\\frac{5-2y}{3y}\n\\]\n\n\\[\n=\\frac{3y-5+2y}{3y}\n=\\frac{5y-5}{3y}\n=\\frac{5(y-1)}{3y}\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Split the ratio",
           "body": "Therefore\n\n\\[\na=\\frac{\\frac{10+11y}{3y}}{\\frac{5(y-1)}{3y}}\n=\\frac{10+11y}{5(y-1)}\n\\]"
         }
       ],
@@ -682,7 +682,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve inequality",
           "body": "\\[\n2x^2+x-28>0\n\\]"
         },
         {
@@ -711,15 +711,15 @@
           "body": "Line \\(L\\) has equation\n\n\\[\ny=4x+7\n\\]"
         },
         {
-          "title": "So its gradient is",
+          "title": "Find the gradient",
           "body": "So its gradient is\n\n\\[\n4\n\\]"
         },
         {
-          "title": "Line is perpendicular to ,",
+          "title": "Find the gradient",
           "body": "Line \\(M\\) is perpendicular to \\(L\\), so its gradient is\n\n\\[\n-\\frac14\n\\]"
         },
         {
-          "title": "Line passes through",
+          "title": "Evaluate fraction",
           "body": "Line \\(M\\) passes through \\((8,1)\\).\n\n\\[\ny-1=-\\frac14(x-8)\n\\]\n\n\\[\ny-1=-\\frac14x+2\n\\]\n\n\\[\ny=-\\frac14x+3\n\\]"
         }
       ],
@@ -740,7 +740,7 @@
           "body": "Point \\(A=(0.2,2.6)\\) lies on the line.\n\n\\[\n2.6=3(0.2)+e\n\\]\n\n\\[\n2.6=0.6+e\n\\]\n\n\\[\ne=2\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\ny=3x+2\n\\]"
         },
         {
@@ -752,7 +752,7 @@
           "body": "Use point \\(A=(0.2,2.6)\\):\n\n\\[\n0.2^2+2.6^2=d-11(0.2)\n\\]\n\n\\[\n0.04+6.76=d-2.2\n\\]\n\n\\[\nd=9\n\\]"
         },
         {
-          "title": "Now substitute into the curve",
+          "title": "Substitute into the curve",
           "body": "Now substitute \\(y=3x+2\\) into the curve:\n\n\\[\nx^2+(3x+2)^2=9-11x\n\\]\n\n\\[\nx^2+9x^2+12x+4=9-11x\n\\]\n\n\\[\n10x^2+23x-5=0\n\\]"
         },
         {
@@ -764,11 +764,11 @@
           "body": "The product of the roots is\n\n\\[\n\\frac{-5}{10}=-\\frac12\n\\]"
         },
         {
-          "title": "So the other root is",
+          "title": "Evaluate fraction",
           "body": "So the other root is\n\n\\[\n\\frac{-\\frac12}{\\frac15}=-\\frac52\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Evaluate fraction",
           "body": "Then\n\n\\[\ny=3\\left(-\\frac52\\right)+2\n\\]\n\n\\[\ny=-\\frac{11}{2}\n\\]"
         }
       ],
@@ -785,7 +785,7 @@
           "body": "The turning point of \\(y=f(x)\\) is \\((4,3)\\)."
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(x+5)\n\\]"
         },
         {
@@ -793,7 +793,7 @@
           "body": "the graph moves 5 units left:\n\n\\[\n(4,3)\\to(-1,3)\n\\]"
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(x)+7\n\\]"
         },
         {
@@ -801,7 +801,7 @@
           "body": "the graph moves 7 units up:\n\n\\[\n(4,3)\\to(4,10)\n\\]"
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(2x)\n\\]"
         },
         {
@@ -822,15 +822,15 @@
           "body": "The horizontal base \\(ABGF\\) is a rectangle.\n\n\\[\nAB=10,\\qquad BG=14\n\\]"
         },
         {
-          "title": "So the horizontal distance from",
+          "title": "Use trigonometry",
           "body": "So the horizontal distance from \\(B\\) to \\(F\\) is\n\n\\[\nBF=\\sqrt{10^2+14^2}=\\sqrt{296}\n\\]"
         },
         {
-          "title": "The angle of elevation of",
+          "title": "Use trigonometry",
           "body": "The angle of elevation of \\(E\\) from \\(B\\) is \\(50^\\circ\\)."
         },
         {
-          "title": "Since is vertically above ,",
+          "title": "Use trigonometry",
           "body": "Since \\(E\\) is vertically above \\(F\\),\n\n\\[\n\\tan 50^\\circ=\\frac{FE}{BF}\n\\]\n\n\\[\nFE=\\sqrt{296}\\tan50^\\circ\n\\]"
         },
         {
@@ -838,7 +838,7 @@
           "body": "The prism has the same cross section throughout, so\n\n\\[\nAD=FE=\\sqrt{296}\\tan50^\\circ\n\\]"
         },
         {
-          "title": "Also",
+          "title": "Use trigonometry",
           "body": "Also\n\n\\[\nBC=\\frac15AD\n\\]"
         },
         {
@@ -863,35 +863,35 @@
       "topicNote": "Moved from Linear Graphs to Vectors.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Read the graph",
           "body": "\\[\n\\vec{OA}=2\\mathbf a,\\qquad \\vec{AB}=4\\mathbf b-\\mathbf a,\\qquad \\vec{OC}=5\\mathbf b-3\\mathbf a\n\\]"
         },
         {
-          "title": "First find",
+          "title": "Read the graph",
           "body": "First find \\(\\vec{OB}\\):\n\n\\[\n\\vec{OB}=\\vec{OA}+\\vec{AB}\n\\]\n\n\\[\n\\vec{OB}=2\\mathbf a+4\\mathbf b-\\mathbf a\n\\]\n\n\\[\n\\vec{OB}=\\mathbf a+4\\mathbf b\n\\]"
         },
         {
-          "title": "For part (a),",
+          "title": "Read the graph",
           "body": "For part (a),\n\n\\[\n\\vec{BC}=\\vec{OC}-\\vec{OB}\n\\]\n\n\\[\n\\vec{BC}=(5\\mathbf b-3\\mathbf a)-(\\mathbf a+4\\mathbf b)\n\\]\n\n\\[\n\\vec{BC}=\\mathbf b-4\\mathbf a\n\\]"
         },
         {
-          "title": "For part (b), , so",
+          "title": "Read the graph",
           "body": "For part (b), \\(BD:DC=1:3\\), so\n\n\\[\n\\vec{OD}=\\vec{OB}+\\frac14\\vec{BC}\n\\]\n\n\\[\n\\vec{OD}=\\mathbf a+4\\mathbf b+\\frac14(\\mathbf b-4\\mathbf a)\n\\]\n\n\\[\n\\vec{OD}=\\frac{17}{4}\\mathbf b\n\\]"
         },
         {
-          "title": "Since are collinear, let",
+          "title": "Read the graph",
           "body": "Since \\(A,B,P\\) are collinear, let\n\n\\[\n\\vec{OP}=\\vec{OA}+s\\vec{AB}\n\\]\n\n\\[\n\\vec{OP}=2\\mathbf a+s(4\\mathbf b-\\mathbf a)\n\\]\n\n\\[\n\\vec{OP}=(2-s)\\mathbf a+4s\\mathbf b\n\\]"
         },
         {
-          "title": "But are collinear, and has",
+          "title": "Read the graph",
           "body": "But \\(O,D,P\\) are collinear, and \\(\\vec{OD}\\) has only a \\(\\mathbf b\\) component."
         },
         {
-          "title": "So",
+          "title": "Read the graph",
           "body": "So\n\n\\[\n2-s=0\n\\]\n\n\\[\ns=2\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Read the graph",
           "body": "Then\n\n\\[\n\\vec{OP}=8\\mathbf b\n\\]"
         },
         {
@@ -916,7 +916,7 @@
           "body": "At least one pink button is still in the box unless both pink buttons are taken."
         },
         {
-          "title": "So use the complement",
+          "title": "Use the complement",
           "body": "So use the complement."
         },
         {
@@ -924,7 +924,7 @@
           "body": "The probability that both pink buttons are taken is\n\n\\[\n\\frac{\\binom{2}{2}\\binom{13}{1}}{\\binom{15}{3}}\n\\]\n\n\\[\n=\\frac{13}{455}\n\\]\n\n\\[\n=\\frac{1}{35}\n\\]"
         },
         {
-          "title": "Therefore,",
+          "title": "Evaluate fraction",
           "body": "Therefore,\n\n\\[\nP(\\text{at least one pink is still in the box})\n=1-\\frac{1}{35}\n\\]\n\n\\[\n=\\frac{34}{35}\n\\]"
         }
       ],

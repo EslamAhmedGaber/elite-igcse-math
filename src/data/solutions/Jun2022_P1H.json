@@ -8,7 +8,7 @@
       "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
       "steps": [
         {
-          "title": "For the HCF of and",
+          "title": "Find the LCM",
           "body": "For the HCF of \\(56\\) and \\(84\\):\n\n\\[\n56=2^3\\times 7\n\\]\n\n\\[\n84=2^2\\times 3\\times 7\n\\]"
         },
         {
@@ -16,7 +16,7 @@
           "body": "Take the smaller powers:\n\n\\[\n\\text{HCF}=2^2\\times 7=28\n\\]"
         },
         {
-          "title": "For the LCM of and",
+          "title": "Find the LCM",
           "body": "For the LCM of \\(60\\) and \\(72\\):\n\n\\[\n60=2^2\\times 3\\times 5\n\\]\n\n\\[\n72=2^3\\times 3^2\n\\]"
         },
         {
@@ -33,7 +33,7 @@
       "topicNote": "Powers, roots and standard form. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Convert standard form",
           "body": "\\[\n0.000089=8.9\\times 10^{-5}\n\\]\n\n\\[\n8.34\\times 10^4=83400\n\\]"
         }
       ],
@@ -58,11 +58,11 @@
           "body": "Together:\n\n\\[\n\\frac38+\\frac9{20}\n=\\frac{15}{40}+\\frac{18}{40}\n=\\frac{33}{40}\n\\]"
         },
         {
-          "title": "So Payment 3 is",
+          "title": "Calculate percentage",
           "body": "So Payment 3 is\n\n\\[\n1-\\frac{33}{40}=\\frac7{40}\n\\]"
         },
         {
-          "title": "Payment 3 is , so",
+          "title": "Calculate percentage",
           "body": "Payment 3 is \\(\\$406\\), so\n\n\\[\n\\frac7{40}\\times \\text{total}=406\n\\]\n\n\\[\n\\text{total}=406\\times \\frac{40}{7}=2320\n\\]"
         },
         {
@@ -79,27 +79,27 @@
       "topicNote": "Compound Interest and Depreciation. The tag is correct.",
       "steps": [
         {
-          "title": "For part (a), the value",
+          "title": "Use compound interest",
           "body": "For part (a), the value in 2021 was \\(4\\%\\) more than in 2020.\n\n\\[\n\\text{2020 value}=\\frac{634400}{1.04}=610000\n\\]"
         },
         {
-          "title": "In 2020, , so the",
+          "title": "Use compound interest",
           "body": "In 2020, \\(600000<x<700000\\), so the service charge band was B."
         },
         {
-          "title": "In 2021, is also between",
+          "title": "Use compound interest",
           "body": "In 2021, \\(634400\\) is also between \\(600000\\) and \\(700000\\), so the band was still B."
         },
         {
-          "title": "For part (b), a depreciation",
+          "title": "Use compound interest",
           "body": "For part (b), a depreciation of \\(15\\%\\) has multiplier \\(0.85\\)."
         },
         {
-          "title": "After 2 years, the multiplier",
+          "title": "Use compound interest",
           "body": "After 2 years, the multiplier is\n\n\\[\n0.85^2=0.7225\n\\]"
         },
         {
-          "title": "So the value left is",
+          "title": "Use compound interest",
           "body": "So the value left is \\(72.25\\%\\), meaning the total depreciation is\n\n\\[\n100\\%-72.25\\%=27.75\\%\n\\]"
         }
       ],
@@ -125,19 +125,19 @@
       "topicNote": "Algebraic Roots and Indices. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use index laws",
           "body": "\\[\n8\\times (4t)^0=8\\times 1=8\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Use index laws",
           "body": "For part (b),\n\n\\[\nx^6\\div x^{-5}=x^{6-(-5)}=x^{11}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use index laws",
           "body": "So\n\n\\[\np=11\n\\]"
         },
         {
-          "title": "For part (c),",
+          "title": "Use index laws",
           "body": "For part (c),\n\n\\[\n(2k^2m^4)^3=2^3k^{2\\times 3}m^{4\\times 3}\n\\]\n\n\\[\n=8k^6m^{12}\n\\]"
         }
       ],
@@ -167,7 +167,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\nq+12x-qx^2=-q\\left(x^2-\\frac{12}{q}x\\right)+q\n\\]"
         },
         {
@@ -175,11 +175,11 @@
           "body": "Complete the square:\n\n\\[\nx^2-\\frac{12}{q}x=\\left(x-\\frac6q\\right)^2-\\frac{36}{q^2}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\nq+12x-qx^2\n=-q\\left[\\left(x-\\frac6q\\right)^2-\\frac{36}{q^2}\\right]+q\n\\]\n\n\\[\n=q+\\frac{36}{q}-q\\left(x-\\frac6q\\right)^2\n\\]"
         },
         {
-          "title": "Compare with",
+          "title": "Compare coefficients",
           "body": "Compare with\n\n\\[\na-b(x-c)^2\n\\]"
         }
       ],
@@ -213,11 +213,11 @@
           "body": "The sequence is\n\\[\n1,\\ 5,\\ 9,\\ 13,\\ 17\n\\]"
         },
         {
-          "title": "The common difference is ,",
+          "title": "Find the nth term",
           "body": "The common difference is \\(4\\), so the nth term is\n\\[\n4n-3\n\\]"
         },
         {
-          "title": "For the second sequence, the",
+          "title": "Find the nth term",
           "body": "For the second sequence, the nth term is \\(3n+5\\)."
         },
         {
@@ -234,7 +234,7 @@
       "topicNote": "Functions. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\nf(x)=\\frac{2x}{x-6}\n\\]"
         },
         {
@@ -246,7 +246,7 @@
           "body": "(b) Let\n\\[\ny=\\frac{2x}{x-6}\n\\]\n\n\\[\ny(x-6)=2x\n\\]\n\n\\[\nyx-6y=2x\n\\]\n\n\\[\nx(y-2)=6y\n\\]\n\n\\[\nx=\\frac{6y}{y-2}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\\[\nf^{-1}(x)=\\frac{6x}{x-2}\n\\]"
         }
       ],
@@ -267,11 +267,11 @@
           "body": "The distance between the centres is\n\\[\n\\sqrt{(7-(-1))^2+(18-3)^2}\n\\]\n\n\\[\n=\\sqrt{8^2+15^2}=\\sqrt{289}=17\n\\]"
         },
         {
-          "title": "The radii are cm and",
+          "title": "Calculate value",
           "body": "The radii are \\(3\\) cm and \\(15\\) cm.\n\n\\[\n3+15=18\n\\]"
         },
         {
-          "title": "Since the distance between the",
+          "title": "Use Coordinate geometry tag correct",
           "body": "Since the distance between the centres is \\(17\\) cm, which is less than the sum of the radii, the circles intersect."
         }
       ],
@@ -288,7 +288,7 @@
           "body": "The maximum point of \\(y=f(x)\\) is \\((s,t)\\)."
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(x-2)\n\\]"
         },
         {
@@ -296,7 +296,7 @@
           "body": "the graph moves 2 units right:\n\n\\[\n(s,t)\\to(s+2,t)\n\\]"
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=3f(x)\n\\]"
         },
         {
@@ -313,7 +313,7 @@
       "topicNote": "Correct. This is differentiation applied to motion.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Differentiate",
           "body": "\\[\ns=4t^2+\\frac{125}{t}\n\\]"
         },
         {
@@ -321,11 +321,11 @@
           "body": "Velocity is\n\\[\nv=\\frac{ds}{dt}=8t-\\frac{125}{t^2}\n\\]"
         },
         {
-          "title": "When ,",
+          "title": "Differentiate",
           "body": "When \\(v=0\\),\n\\[\n8t-\\frac{125}{t^2}=0\n\\]\n\n\\[\n8t^3=125\n\\]\n\n\\[\nt^3=15.625\n\\]\n\n\\[\nt=2.5\n\\]"
         },
         {
-          "title": "Now find",
+          "title": "Differentiate",
           "body": "Now find \\(s\\):\n\\[\ns=4(2.5)^2+\\frac{125}{2.5}\n\\]\n\n\\[\ns=25+50=75\n\\]"
         }
       ],
@@ -338,7 +338,7 @@
       "topicNote": "Correct. This is a pressure and cylinder volume question.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate area",
           "body": "\\[\n\\text{pressure}=\\frac{\\text{force}}{\\text{area}}\n\\]\n\n\\[\n1.4=\\frac{72}{\\text{area}}\n\\]\n\n\\[\n\\text{area}=\\frac{72}{1.4}=51.428\\ldots\\text{ cm}^2\n\\]"
         },
         {
@@ -367,11 +367,11 @@
           "body": "The interior angle of polygon \\(B\\) is\n\\[\n7x=7\\times 20=140^\\circ\n\\]"
         },
         {
-          "title": "So the exterior angle is",
+          "title": "Find the gradient",
           "body": "So the exterior angle is\n\\[\n180^\\circ-140^\\circ=40^\\circ\n\\]"
         },
         {
-          "title": "For a regular polygon,",
+          "title": "Find the gradient",
           "body": "For a regular polygon,\n\\[\nn=\\frac{360}{40}=9\n\\]"
         }
       ],
@@ -388,11 +388,11 @@
           "body": "The interior angles form an arithmetic sequence:\n\n\\[\n177,\\ 175,\\ 173,\\ 171,\\ 169,\\ldots\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\na=177,\\quad d=-2\n\\]"
         },
         {
-          "title": "For an sided polygon, the",
+          "title": "Use trigonometry",
           "body": "For an \\(n\\)-sided polygon, the sum of the interior angles is\n\n\\[\n180(n-2)\n\\]"
         },
         {
@@ -408,7 +408,7 @@
           "body": "Factorise:\n\n\\[\n(n+20)(n-18)=0\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Solve inequality",
           "body": "Since \\(n>5\\),\n\n\\[\nn=18\n\\]"
         }
       ],
@@ -433,7 +433,7 @@
           "body": "The sector area is twice the circle area:\n\\[\n\\frac18\\pi(r+7)^2=2\\pi(r-2)^2\n\\]\n\n\\[\n(r+7)^2=16(r-2)^2\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Solve inequality",
           "body": "Since \\(r>2\\),\n\\[\nr+7=4(r-2)\n\\]\n\n\\[\nr+7=4r-8\n\\]\n\n\\[\nr=5\n\\]"
         }
       ],
@@ -450,11 +450,11 @@
           "body": "The cone has radius \\(20\\) cm."
         },
         {
-          "title": "The curved surface area of",
+          "title": "Calculate surface area",
           "body": "The curved surface area of the cone is\n\n\\[\n\\pi rl\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\n\\pi(20)l=580\\pi\n\\]\n\n\\[\nl=29\n\\]"
         },
         {
@@ -474,7 +474,7 @@
           "body": "Total volume:\n\n\\[\n2800\\pi+\\frac{16000}{3}\\pi\n=\\frac{24400}{3}\\pi\n\\]"
         },
         {
-          "title": "The volume is , so",
+          "title": "Calculate volume",
           "body": "The volume is \\(k\\pi\\), so\n\n\\[\nk=\\frac{24400}{3}\n\\]"
         }
       ],
@@ -487,11 +487,11 @@
       "topicNote": "Corrected to Sine, Cosine Rule & Area of Triangles. The question needs the cosine rule and sine rule.",
       "steps": [
         {
-          "title": "First use the cosine rule",
+          "title": "Use trigonometry",
           "body": "First use the cosine rule to find \\(AC\\):\n\\[\nAC^2=9.7^2+12.3^2-2(9.7)(12.3)\\cos 115^\\circ\n\\]\n\n\\[\nAC=18.607\\ldots\n\\]"
         },
         {
-          "title": "Now use the sine rule",
+          "title": "Use trigonometry",
           "body": "Now use the sine rule:\n\\[\n\\frac{\\sin x}{9.7}=\\frac{\\sin 115^\\circ}{18.607\\ldots}\n\\]\n\n\\[\n\\sin x=\\frac{9.7\\sin 115^\\circ}{18.607\\ldots}\n\\]\n\n\\[\nx=28.194\\ldots^\\circ\n\\]"
         }
       ],
@@ -504,19 +504,19 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "For a histogram,",
+          "title": "Use histogram",
           "body": "For a histogram,\n\n\\[\n\\text{frequency}=\\text{class width}\\times \\text{frequency density}\n\\]"
         },
         {
-          "title": "For , the frequency is",
+          "title": "Use frequency table",
           "body": "For \\(m\\leq20\\), the frequency is 10 and the class width is 20, so\n\n\\[\n\\text{frequency density}=\\frac{10}{20}=0.5\n\\]"
         },
         {
-          "title": "Using this scale from the",
+          "title": "Use histogram",
           "body": "Using this scale from the histogram:\n\n\\[\n40<m\\leq60 \\quad \\text{has frequency density } 2.9\n\\]\n\n\\[\n60<m\\leq75 \\quad \\text{has frequency density } 3.2\n\\]\n\n\\[\n75<m\\leq100 \\quad \\text{has frequency density } 2.0\n\\]"
         },
         {
-          "title": "For , use part of",
+          "title": "Use part of each relevant",
           "body": "For \\(50<m\\leq80\\), use part of each relevant bar:\n\n\\[\n(10)(2.9)+(15)(3.2)+(5)(2.0)\n\\]\n\n\\[\n=29+48+10\n\\]\n\n\\[\n=87\n\\]"
         }
       ],
@@ -533,15 +533,15 @@
           "body": "The known probabilities are\n\n\\[\n0.26+0.18=0.44\n\\]"
         },
         {
-          "title": "So the probabilities for numbers",
+          "title": "Calculate probability",
           "body": "So the probabilities for numbers \\(2\\) and \\(4\\) add to\n\n\\[\n1-0.44=0.56\n\\]"
         },
         {
-          "title": "They are equal, so each",
+          "title": "Calculate probability",
           "body": "They are equal, so each is\n\n\\[\n0.56\\div 2=0.28\n\\]"
         },
         {
-          "title": "If the expected frequency for",
+          "title": "Calculate probability",
           "body": "If the expected frequency for number \\(3\\) is \\(45\\),\n\n\\[\n0.18n=45\n\\]\n\n\\[\nn=250\n\\]"
         },
         {
@@ -562,7 +562,7 @@
           "body": "To have a total score of \\(0\\) after three games:"
         },
         {
-          "title": "all three games are draws,",
+          "title": "Calculate probability",
           "body": "- all three games are draws, or\n- one game is won and two games are lost.\n\n\\[\nP(\\text{DDD})=0.5^3=0.125\n\\]\n\n\\[\nP(\\text{one win and two losses})=3(0.3)(0.2)^2=0.036\n\\]\n\n\\[\n0.125+0.036=0.161\n\\]"
         }
       ],
@@ -588,7 +588,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\nq+12x-qx^2=-q\\left(x^2-\\frac{12}{q}x\\right)+q\n\\]"
         },
         {
@@ -596,11 +596,11 @@
           "body": "Complete the square:\n\n\\[\nx^2-\\frac{12}{q}x=\\left(x-\\frac6q\\right)^2-\\frac{36}{q^2}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\nq+12x-qx^2\n=-q\\left[\\left(x-\\frac6q\\right)^2-\\frac{36}{q^2}\\right]+q\n\\]\n\n\\[\n=q+\\frac{36}{q}-q\\left(x-\\frac6q\\right)^2\n\\]"
         },
         {
-          "title": "Compare with",
+          "title": "Compare coefficients",
           "body": "Compare with\n\n\\[\na-b(x-c)^2\n\\]"
         }
       ],
@@ -617,7 +617,7 @@
           "body": "The maximum point of \\(y=f(x)\\) is \\((s,t)\\)."
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(x-2)\n\\]"
         },
         {
@@ -625,7 +625,7 @@
           "body": "the graph moves 2 units right:\n\n\\[\n(s,t)\\to(s+2,t)\n\\]"
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=3f(x)\n\\]"
         },
         {
@@ -646,11 +646,11 @@
           "body": "The interior angles form an arithmetic sequence:\n\n\\[\n177,\\ 175,\\ 173,\\ 171,\\ 169,\\ldots\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\na=177,\\quad d=-2\n\\]"
         },
         {
-          "title": "For an sided polygon, the",
+          "title": "Use trigonometry",
           "body": "For an \\(n\\)-sided polygon, the sum of the interior angles is\n\n\\[\n180(n-2)\n\\]"
         },
         {
@@ -666,7 +666,7 @@
           "body": "Factorise:\n\n\\[\n(n+20)(n-18)=0\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Solve inequality",
           "body": "Since \\(n>5\\),\n\n\\[\nn=18\n\\]"
         }
       ],
@@ -683,11 +683,11 @@
           "body": "The cone has radius \\(20\\) cm."
         },
         {
-          "title": "The curved surface area of",
+          "title": "Calculate surface area",
           "body": "The curved surface area of the cone is\n\n\\[\n\\pi rl\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\n\\pi(20)l=580\\pi\n\\]\n\n\\[\nl=29\n\\]"
         },
         {
@@ -707,7 +707,7 @@
           "body": "Total volume:\n\n\\[\n2800\\pi+\\frac{16000}{3}\\pi\n=\\frac{24400}{3}\\pi\n\\]"
         },
         {
-          "title": "The volume is , so",
+          "title": "Calculate volume",
           "body": "The volume is \\(k\\pi\\), so\n\n\\[\nk=\\frac{24400}{3}\n\\]"
         }
       ],
@@ -720,19 +720,19 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "For a histogram,",
+          "title": "Use histogram",
           "body": "For a histogram,\n\n\\[\n\\text{frequency}=\\text{class width}\\times \\text{frequency density}\n\\]"
         },
         {
-          "title": "For , the frequency is",
+          "title": "Use frequency table",
           "body": "For \\(m\\leq20\\), the frequency is 10 and the class width is 20, so\n\n\\[\n\\text{frequency density}=\\frac{10}{20}=0.5\n\\]"
         },
         {
-          "title": "Using this scale from the",
+          "title": "Use histogram",
           "body": "Using this scale from the histogram:\n\n\\[\n40<m\\leq60 \\quad \\text{has frequency density } 2.9\n\\]\n\n\\[\n60<m\\leq75 \\quad \\text{has frequency density } 3.2\n\\]\n\n\\[\n75<m\\leq100 \\quad \\text{has frequency density } 2.0\n\\]"
         },
         {
-          "title": "For , use part of",
+          "title": "Use part of each relevant",
           "body": "For \\(50<m\\leq80\\), use part of each relevant bar:\n\n\\[\n(10)(2.9)+(15)(3.2)+(5)(2.0)\n\\]\n\n\\[\n=29+48+10\n\\]\n\n\\[\n=87\n\\]"
         }
       ],

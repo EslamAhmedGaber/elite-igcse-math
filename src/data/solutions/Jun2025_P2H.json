@@ -12,7 +12,7 @@
           "body": "The multiplier for a \\(7\\%\\) increase is\n\n\\[\n1.07\n\\]"
         },
         {
-          "title": "After 3 years,",
+          "title": "Use compound interest",
           "body": "After 3 years,\n\n\\[\n4000(1.07)^3=4900.172\n\\]"
         },
         {
@@ -45,11 +45,11 @@
           "body": "Upper bound:\n\n\\[\n11.75(9.25)-4.05^2=92.285\n\\]"
         },
         {
-          "title": "So",
+          "title": "Estimate the value",
           "body": "So\n\n\\[\n85.715<X<92.285\n\\]"
         },
         {
-          "title": "Both bounds round to to",
+          "title": "Estimate the value",
           "body": "Both bounds round to \\(90\\) to the nearest \\(10\\)."
         }
       ],
@@ -74,7 +74,7 @@
           "body": "Each part is\n\n\\[\n240 \\div 12=20\n\\]"
         },
         {
-          "title": "So the original amounts are",
+          "title": "Split the ratio",
           "body": "So the original amounts are\n\n\\[\n60,\\ 80,\\ 100\n\\]"
         },
         {
@@ -95,11 +95,11 @@
       "topicNote": "Algebraic Roots and Indices. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use index laws",
           "body": "\\[\n\\left(\\frac{2a^3}{10a^7c^2}\\right)^{-3}\n\\]"
         },
         {
-          "title": "First simplify inside the bracket",
+          "title": "Use index laws",
           "body": "First simplify inside the bracket:\n\n\\[\n\\frac{2a^3}{10a^7c^2}=\\frac{1}{5a^4c^2}\n\\]"
         },
         {
@@ -116,7 +116,7 @@
       "topicNote": "Expanding brackets. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Expand brackets",
           "body": "\\[\n3x(2x+5)(7x-4)=3x(14x^2+27x-20)\n\\]\n\n\\[\n=42x^3+81x^2-60x\n\\]"
         }
       ],
@@ -145,11 +145,11 @@
           "body": "The turning point is\n\n\\[\n(2,52)\n\\]"
         },
         {
-          "title": "The point of intersection with",
+          "title": "Calculate value",
           "body": "The point of intersection with the \\(y\\)-axis is found by putting \\(x=0\\):\n\n\\[\ny=28\n\\]"
         },
         {
-          "title": "So the intercept is",
+          "title": "Find intercepts",
           "body": "So the \\(y\\)-intercept is\n\n\\[\n(0,28)\n\\]"
         }
       ],
@@ -162,7 +162,7 @@
       "topicNote": "Corrected from Ratio Toolkit to Algebraic Fractions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Split the ratio",
           "body": "\\[\n\\frac{4x^2-4x-120}{5x^2-180}\\div \\frac{x^2+5x}{10x^2+60x}\n\\]"
         },
         {
@@ -170,7 +170,7 @@
           "body": "Factorise:\n\n\\[\n4x^2-4x-120=4(x-6)(x+5)\n\\]\n\n\\[\n5x^2-180=5(x-6)(x+6)\n\\]\n\n\\[\nx^2+5x=x(x+5)\n\\]\n\n\\[\n10x^2+60x=10x(x+6)\n\\]"
         },
         {
-          "title": "So",
+          "title": "Split the ratio",
           "body": "So\n\n\\[\n\\frac{4(x-6)(x+5)}{5(x-6)(x+6)}\n\\div\n\\frac{x(x+5)}{10x(x+6)}\n\\]\n\n\\[\n=\\frac{4(x+5)}{5(x+6)}\\times \\frac{10(x+6)}{x+5}=8\n\\]"
         }
       ],
@@ -183,7 +183,7 @@
       "topicNote": "Rearranging formulas. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Rearrange formula",
           "body": "\\[\nc=\\frac{t^2+3}{7-8t^2}\n\\]\n\n\\[\nc(7-8t^2)=t^2+3\n\\]\n\n\\[\n7c-3=t^2(8c+1)\n\\]\n\n\\[\nt^2=\\frac{7c-3}{8c+1}\n\\]"
         }
       ],
@@ -196,7 +196,7 @@
       "topicNote": "Algebraic proof. The tag is acceptable because the question asks to show the exact result.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\n7\\frac13=\\frac{22}{3},\\qquad 5\\frac47=\\frac{39}{7}\n\\]\n\n\\[\n7\\frac13-5\\frac47=\\frac{22}{3}-\\frac{39}{7}\n\\]\n\n\\[\n=\\frac{154}{21}-\\frac{117}{21}=\\frac{37}{21}\n\\]\n\n\\[\n\\frac{37}{21}=1\\frac{16}{21}\n\\]"
         }
       ],
@@ -213,7 +213,7 @@
           "body": "Let\n\\[\nx=0.\\dot7\\dot0\\dot2\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate value",
           "body": "Then\n\\[\n1000x=702.\\dot7\\dot0\\dot2\n\\]"
         },
         {
@@ -230,7 +230,7 @@
       "topicNote": "Solving inequalities. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve inequality",
           "body": "\\[\n4x^2+4x-15<0\n\\]"
         },
         {
@@ -255,11 +255,11 @@
       "topicNote": "Simultaneous equations. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve simultaneous equations",
           "body": "\\[\n3x+5y=8\n\\]\n\n\\[\n4x+y=-3.5\n\\]"
         },
         {
-          "title": "From the second equation,",
+          "title": "Solve simultaneous equations",
           "body": "From the second equation,\n\\[\ny=-3.5-4x\n\\]"
         },
         {
@@ -267,7 +267,7 @@
           "body": "Substitute into the first equation:\n\\[\n3x+5(-3.5-4x)=8\n\\]\n\n\\[\n3x-17.5-20x=8\n\\]\n\n\\[\n-17x=25.5\n\\]\n\n\\[\nx=-1.5\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Solve simultaneous equations",
           "body": "Then\n\\[\ny=-3.5-4(-1.5)=2.5\n\\]"
         }
       ],
@@ -313,11 +313,11 @@
       "topicNote": "Correct. This combines solving and identifying inequalities.",
       "steps": [
         {
-          "title": "For part (a),",
+          "title": "Evaluate fraction",
           "body": "For part (a),\n\\[\n7-3x<2x+15\n\\]\n\n\\[\n-8<5x\n\\]\n\n\\[\nx>-\\frac85\n\\]"
         },
         {
-          "title": "For part (b), the boundaries",
+          "title": "Calculate value",
           "body": "For part (b), the boundaries are \\(x=2\\), \\(y=3\\), and \\(x+y=9\\)."
         },
         {
@@ -334,19 +334,19 @@
       "topicNote": "Corrected to differentiation. The question asks for a derivative and turning points.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Differentiate",
           "body": "\\[\ny=4x^3+5x^2+2x\n\\]\n\n\\[\n\\frac{dy}{dx}=12x^2+10x+2\n\\]"
         },
         {
-          "title": "At a turning point,",
+          "title": "Differentiate",
           "body": "At a turning point,\n\\[\n12x^2+10x+2=0\n\\]\n\n\\[\n2(6x^2+5x+1)=0\n\\]\n\n\\[\n(3x+1)(2x+1)=0\n\\]\n\n\\[\nx=-\\frac13 \\quad \\text{or} \\quad x=-\\frac12\n\\]"
         },
         {
-          "title": "When ,",
+          "title": "Differentiate",
           "body": "When \\(x=-\\frac13\\),\n\\[\ny=-\\frac7{27}\n\\]"
         },
         {
-          "title": "When ,",
+          "title": "Differentiate",
           "body": "When \\(x=-\\frac12\\),\n\\[\ny=-\\frac14\n\\]"
         }
       ],
@@ -376,7 +376,7 @@
           "body": "The cuboid has dimensions\n\n\\[\n3x,\\qquad 2x,\\qquad y\n\\]"
         },
         {
-          "title": "Its volume is , so",
+          "title": "Calculate volume",
           "body": "Its volume is \\(1014\\text{ cm}^3\\), so\n\n\\[\n(3x)(2x)(y)=1014\n\\]\n\n\\[\n6x^2y=1014\n\\]\n\n\\[\ny=\\frac{1014}{6x^2}\n\\]\n\n\\[\ny=\\frac{169}{x^2}\n\\]"
         },
         {
@@ -397,15 +397,15 @@
       "topicNote": "Congruence, Similarity & Geometrical Proof. The tag is correct.",
       "steps": [
         {
-          "title": "The scale factor from to",
+          "title": "Evaluate fraction",
           "body": "The scale factor from \\(ABCD\\) to \\(EFGH\\) is\n\\[\n\\frac{FG}{BC}=\\frac{10}{4}=2.5\n\\]"
         },
         {
-          "title": "Since corresponds to ,",
+          "title": "Calculate value",
           "body": "Since \\(AB\\) corresponds to \\(EF\\),\n\\[\nx=EF=5\\times 2.5=12.5\n\\]"
         },
         {
-          "title": "Since corresponds to ,",
+          "title": "Calculate value",
           "body": "Since \\(CD\\) corresponds to \\(GH\\),\n\\[\n2.5y=24\n\\]\n\n\\[\ny=9.6\n\\]"
         }
       ],
@@ -422,7 +422,7 @@
           "body": "The heights of solids A and B are \\(31\\) cm and \\(18.6\\) cm.\n\n\\[\n31:18.6=5:3\n\\]"
         },
         {
-          "title": "So the volumes are in",
+          "title": "Split the ratio",
           "body": "So the volumes are in the ratio\n\n\\[\n5^3:3^3=125:27\n\\]"
         },
         {
@@ -434,7 +434,7 @@
           "body": "parts."
         },
         {
-          "title": "This difference is , so",
+          "title": "Evaluate fraction",
           "body": "This difference is \\(735\\text{ cm}^3\\), so one part is\n\n\\[\n\\frac{735}{98}=7.5\n\\]"
         },
         {
@@ -451,19 +451,19 @@
       "topicNote": "Corrected to Right-Angled Triangles - Pythagoras & Trigonometry.",
       "steps": [
         {
-          "title": "In triangle ,",
+          "title": "Use trigonometry",
           "body": "In triangle \\(ABC\\),\n\\[\nAC^2=16^2+12^2=400\n\\]\n\n\\[\nAC=20\n\\]"
         },
         {
-          "title": "Given ,",
+          "title": "Use trigonometry",
           "body": "Given \\(AD=1.5AC\\),\n\\[\nAD=30\n\\]"
         },
         {
-          "title": "In triangle ,",
+          "title": "Use trigonometry",
           "body": "In triangle \\(ABD\\),\n\\[\nBD^2=30^2-16^2=644\n\\]\n\n\\[\nBD=25.377\\ldots\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\\[\nCD=BD-BC=25.377\\ldots-12=13.377\\ldots\n\\]"
         }
       ],
@@ -480,15 +480,15 @@
           "body": "Let\n\n\\[\nAB=s\n\\]"
         },
         {
-          "title": "Since is the centre of",
+          "title": "Find the midpoint",
           "body": "Since \\(M\\) is the centre of the square base and \\(Q\\) is the midpoint of \\(AB\\),\n\n\\[\nQM=\\frac{s}{2}\n\\]"
         },
         {
-          "title": "Since , the point is",
+          "title": "Use trigonometry",
           "body": "Since \\(EA=EB=EC=ED\\), the point \\(E\\) is vertically above \\(M\\)."
         },
         {
-          "title": "In right triangle ,",
+          "title": "Use trigonometry",
           "body": "In right triangle \\(EQM\\),\n\n\\[\n\\tan80^\\circ=\\frac{EM}{QM}\n\\]\n\n\\[\nEM=\\frac{s}{2}\\tan80^\\circ\n\\]"
         },
         {
@@ -496,11 +496,11 @@
           "body": "The distance from the centre of a square to a vertex is half the diagonal:\n\n\\[\nAM=\\frac{s\\sqrt2}{2}\n\\]"
         },
         {
-          "title": "In right triangle ,",
+          "title": "Use trigonometry",
           "body": "In right triangle \\(EMA\\),\n\n\\[\nEA^2=EM^2+AM^2\n\\]\n\n\\[\nEA^2=\\left(\\frac{s}{2}\\tan80^\\circ\\right)^2+\\left(\\frac{s\\sqrt2}{2}\\right)^2\n\\]\n\n\\[\nEA=s\\sqrt{\\frac{\\tan^2 80^\\circ}{4}+\\frac12}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\n\\frac{EA}{AB}=\\sqrt{\\frac{\\tan^2 80^\\circ}{4}+\\frac12}\n\\]\n\n\\[\nn=2.92\n\\]"
         }
       ],
@@ -513,7 +513,7 @@
       "topicNote": "Transformations. The tag is correct.",
       "steps": [
         {
-          "title": "(a) Enlarge from centre with",
+          "title": "Use Transformations correct",
           "body": "(a) Enlarge from centre \\((0,1)\\) with scale factor \\(3\\)."
         },
         {
@@ -521,7 +521,7 @@
           "body": "The vertices become\n\n\\[\n(3,1),\\ (9,1),\\ (9,10),\\ (6,10),\\ (6,4),\\ (3,4)\n\\]"
         },
         {
-          "title": "(b) Triangle is mapped to",
+          "title": "Use trigonometry",
           "body": "(b) Triangle \\(P\\) is mapped to triangle \\(Q\\) by a \\(180^\\circ\\) rotation about \\((5,5)\\)."
         }
       ],
@@ -534,19 +534,19 @@
       "topicNote": "Statistics Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "The range is , and",
+          "title": "Calculate statistic",
           "body": "The range is \\(10\\), and the greatest card is \\(14\\):\n\n\\[\n14-\\text{smallest}=10\n\\]"
         },
         {
-          "title": "So the smallest card is",
+          "title": "Use Statistics Toolkit tag correct",
           "body": "So the smallest card is \\(4\\)."
         },
         {
-          "title": "The median is . For",
+          "title": "Calculate statistic",
           "body": "The median is \\(7.5\\). For 6 cards, the median is the mean of the 3rd and 4th cards:\n\n\\[\n\\frac{6+x}{2}=7.5\n\\]\n\n\\[\nx=9\n\\]"
         },
         {
-          "title": "The mode is , so",
+          "title": "Calculate statistic",
           "body": "The mode is \\(6\\), so the other missing card must be \\(6\\)."
         }
       ],
@@ -571,11 +571,11 @@
           "body": "The median is the \\(30\\)th value.\n\n\\[\n20+\\frac{30-21}{33-21}\\times 10=27.5\n\\]"
         },
         {
-          "title": "At minutes,",
+          "title": "Use cumulative frequency",
           "body": "At \\(45\\) minutes,\n\n\\[\nF(45)\\approx 50+\\frac{5}{10}(57-50)=53.5\n\\]"
         },
         {
-          "title": "So the number taking more",
+          "title": "Use cumulative frequency",
           "body": "So the number taking more than \\(45\\) minutes is\n\n\\[\n60-53.5=6.5\n\\]"
         }
       ],
@@ -592,11 +592,11 @@
           "body": "There are \\(17+28=45\\) counters that are not orange.\n\n\\[\nP(\\text{orange})=\\frac49\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate probability",
           "body": "So\n\n\\[\nP(\\text{not orange})=\\frac59\n\\]"
         },
         {
-          "title": "Let the total number of",
+          "title": "Calculate probability",
           "body": "Let the total number of counters be \\(T\\).\n\n\\[\n\\frac{45}{T}=\\frac59\n\\]\n\n\\[\nT=81\n\\]"
         },
         {
@@ -613,7 +613,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "There are 120 gardeners in",
+          "title": "Calculate value",
           "body": "There are 120 gardeners in total and 29 are outside all three sets, so\n\n\\[\nn(C\\cup P\\cup T)=120-29=91\n\\]"
         },
         {
@@ -621,11 +621,11 @@
           "body": "The triple intersection is\n\n\\[\nn(C\\cap P\\cap T)=12\n\\]"
         },
         {
-          "title": "So the pair only regions",
+          "title": "Calculate value",
           "body": "So the pair-only regions are:\n\n\\[\nC\\cap P\\text{ only}=18-12=6\n\\]\n\n\\[\nC\\cap T\\text{ only}=27-12=15\n\\]\n\n\\[\nP\\cap T\\text{ only}=32-12=20\n\\]"
         },
         {
-          "title": "Since 43 grow carrots,",
+          "title": "Calculate value",
           "body": "Since 43 grow carrots,\n\n\\[\nC\\text{ only}=43-6-15-12=10\n\\]"
         },
         {
@@ -633,19 +633,19 @@
           "body": "Let the number who grow only potatoes be \\(y\\). The number who grow only tomatoes is also \\(y\\)."
         },
         {
-          "title": "Now add the regions in",
+          "title": "Add the regions union",
           "body": "Now add the regions in the union:\n\n\\[\n10+y+y+6+15+20+12=91\n\\]\n\n\\[\n63+2y=91\n\\]\n\n\\[\n2y=28\n\\]\n\n\\[\ny=14\n\\]"
         },
         {
-          "title": "So the Venn regions are",
+          "title": "Calculate value",
           "body": "So the Venn regions are:\n\n\\[\nC\\text{ only}=10,\\quad P\\text{ only}=14,\\quad T\\text{ only}=14\n\\]\n\n\\[\nC\\cap P\\text{ only}=6,\\quad C\\cap T\\text{ only}=15,\\quad P\\cap T\\text{ only}=20\n\\]\n\n\\[\nC\\cap P\\cap T=12,\\quad \\text{outside}=29\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Calculate value",
           "body": "For part (b),\n\n\\[\nn(T'\\cap C)=C\\text{ only}+C\\cap P\\text{ only}\n\\]\n\n\\[\n=10+6=16\n\\]"
         },
         {
-          "title": "For part (c), one gardener",
+          "title": "Evaluate fraction",
           "body": "For part (c), one gardener who grows carrots is chosen.\n\n\\[\nP(\\text{also grows potatoes})=\\frac{n(C\\cap P)}{n(C)}\n\\]\n\n\\[\n=\\frac{18}{43}\n\\]"
         }
       ],
@@ -666,15 +666,15 @@
           "body": "Bounds:\n\n\\(11.25 \\leq AB < 11.75\\)\n\n\\(9.15 \\leq BC < 9.25\\)\n\n\\(4.05 \\leq \\text{side of square} < 4.15\\)"
         },
         {
-          "title": "Lower bound for",
+          "title": "Find lower bound",
           "body": "Lower bound for \\(X\\):\n\n\\(11.25(9.15)-4.15^2=85.715\\)"
         },
         {
-          "title": "Upper bound for",
+          "title": "Find upper bound",
           "body": "Upper bound for \\(X\\):\n\n\\(11.75(9.25)-4.05^2=92.285\\)"
         },
         {
-          "title": "So . Both bounds round",
+          "title": "Estimate the value",
           "body": "So \\(85.715 \\leq X < 92.285\\). Both bounds round to \\(90\\) to the nearest 10."
         }
       ],
@@ -703,11 +703,11 @@
           "body": "The turning point is\n\n\\[\n(2,52)\n\\]"
         },
         {
-          "title": "The point of intersection with",
+          "title": "Calculate value",
           "body": "The point of intersection with the \\(y\\)-axis is found by putting \\(x=0\\):\n\n\\[\ny=28\n\\]"
         },
         {
-          "title": "So the intercept is",
+          "title": "Find intercepts",
           "body": "So the \\(y\\)-intercept is\n\n\\[\n(0,28)\n\\]"
         }
       ],
@@ -720,7 +720,7 @@
       "topicNote": "Corrected from Ratio Toolkit to Algebraic Fractions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Split the ratio",
           "body": "\\[\n\\frac{4x^2-4x-120}{5x^2-180}\\div \\frac{x^2+5x}{10x^2+60x}\n\\]"
         },
         {
@@ -728,7 +728,7 @@
           "body": "Factorise:\n\n\\[\n4x^2-4x-120=4(x-6)(x+5)\n\\]\n\n\\[\n5x^2-180=5(x-6)(x+6)\n\\]\n\n\\[\nx^2+5x=x(x+5)\n\\]\n\n\\[\n10x^2+60x=10x(x+6)\n\\]"
         },
         {
-          "title": "So",
+          "title": "Split the ratio",
           "body": "So\n\n\\[\n\\frac{4(x-6)(x+5)}{5(x-6)(x+6)}\n\\div\n\\frac{x(x+5)}{10x(x+6)}\n\\]\n\n\\[\n=\\frac{4(x+5)}{5(x+6)}\\times \\frac{10(x+6)}{x+5}=8\n\\]"
         }
       ],
@@ -745,7 +745,7 @@
           "body": "The cuboid has dimensions\n\n\\[\n3x,\\qquad 2x,\\qquad y\n\\]"
         },
         {
-          "title": "Its volume is , so",
+          "title": "Calculate volume",
           "body": "Its volume is \\(1014\\text{ cm}^3\\), so\n\n\\[\n(3x)(2x)(y)=1014\n\\]\n\n\\[\n6x^2y=1014\n\\]\n\n\\[\ny=\\frac{1014}{6x^2}\n\\]\n\n\\[\ny=\\frac{169}{x^2}\n\\]"
         },
         {
@@ -770,7 +770,7 @@
           "body": "The heights of solids A and B are \\(31\\) cm and \\(18.6\\) cm.\n\n\\[\n31:18.6=5:3\n\\]"
         },
         {
-          "title": "So the volumes are in",
+          "title": "Split the ratio",
           "body": "So the volumes are in the ratio\n\n\\[\n5^3:3^3=125:27\n\\]"
         },
         {
@@ -782,7 +782,7 @@
           "body": "parts."
         },
         {
-          "title": "This difference is , so",
+          "title": "Evaluate fraction",
           "body": "This difference is \\(735\\text{ cm}^3\\), so one part is\n\n\\[\n\\frac{735}{98}=7.5\n\\]"
         },
         {
@@ -803,15 +803,15 @@
           "body": "Let\n\n\\[\nAB=s\n\\]"
         },
         {
-          "title": "Since is the centre of",
+          "title": "Find the midpoint",
           "body": "Since \\(M\\) is the centre of the square base and \\(Q\\) is the midpoint of \\(AB\\),\n\n\\[\nQM=\\frac{s}{2}\n\\]"
         },
         {
-          "title": "Since , the point is",
+          "title": "Use trigonometry",
           "body": "Since \\(EA=EB=EC=ED\\), the point \\(E\\) is vertically above \\(M\\)."
         },
         {
-          "title": "In right triangle ,",
+          "title": "Use trigonometry",
           "body": "In right triangle \\(EQM\\),\n\n\\[\n\\tan80^\\circ=\\frac{EM}{QM}\n\\]\n\n\\[\nEM=\\frac{s}{2}\\tan80^\\circ\n\\]"
         },
         {
@@ -819,11 +819,11 @@
           "body": "The distance from the centre of a square to a vertex is half the diagonal:\n\n\\[\nAM=\\frac{s\\sqrt2}{2}\n\\]"
         },
         {
-          "title": "In right triangle ,",
+          "title": "Use trigonometry",
           "body": "In right triangle \\(EMA\\),\n\n\\[\nEA^2=EM^2+AM^2\n\\]\n\n\\[\nEA^2=\\left(\\frac{s}{2}\\tan80^\\circ\\right)^2+\\left(\\frac{s\\sqrt2}{2}\\right)^2\n\\]\n\n\\[\nEA=s\\sqrt{\\frac{\\tan^2 80^\\circ}{4}+\\frac12}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\n\\frac{EA}{AB}=\\sqrt{\\frac{\\tan^2 80^\\circ}{4}+\\frac12}\n\\]\n\n\\[\nn=2.92\n\\]"
         }
       ],
@@ -836,7 +836,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "There are 120 gardeners in",
+          "title": "Calculate value",
           "body": "There are 120 gardeners in total and 29 are outside all three sets, so\n\n\\[\nn(C\\cup P\\cup T)=120-29=91\n\\]"
         },
         {
@@ -844,11 +844,11 @@
           "body": "The triple intersection is\n\n\\[\nn(C\\cap P\\cap T)=12\n\\]"
         },
         {
-          "title": "So the pair only regions",
+          "title": "Calculate value",
           "body": "So the pair-only regions are:\n\n\\[\nC\\cap P\\text{ only}=18-12=6\n\\]\n\n\\[\nC\\cap T\\text{ only}=27-12=15\n\\]\n\n\\[\nP\\cap T\\text{ only}=32-12=20\n\\]"
         },
         {
-          "title": "Since 43 grow carrots,",
+          "title": "Calculate value",
           "body": "Since 43 grow carrots,\n\n\\[\nC\\text{ only}=43-6-15-12=10\n\\]"
         },
         {
@@ -856,19 +856,19 @@
           "body": "Let the number who grow only potatoes be \\(y\\). The number who grow only tomatoes is also \\(y\\)."
         },
         {
-          "title": "Now add the regions in",
+          "title": "Add the regions union",
           "body": "Now add the regions in the union:\n\n\\[\n10+y+y+6+15+20+12=91\n\\]\n\n\\[\n63+2y=91\n\\]\n\n\\[\n2y=28\n\\]\n\n\\[\ny=14\n\\]"
         },
         {
-          "title": "So the Venn regions are",
+          "title": "Calculate value",
           "body": "So the Venn regions are:\n\n\\[\nC\\text{ only}=10,\\quad P\\text{ only}=14,\\quad T\\text{ only}=14\n\\]\n\n\\[\nC\\cap P\\text{ only}=6,\\quad C\\cap T\\text{ only}=15,\\quad P\\cap T\\text{ only}=20\n\\]\n\n\\[\nC\\cap P\\cap T=12,\\quad \\text{outside}=29\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Calculate value",
           "body": "For part (b),\n\n\\[\nn(T'\\cap C)=C\\text{ only}+C\\cap P\\text{ only}\n\\]\n\n\\[\n=10+6=16\n\\]"
         },
         {
-          "title": "For part (c), one gardener",
+          "title": "Evaluate fraction",
           "body": "For part (c), one gardener who grows carrots is chosen.\n\n\\[\nP(\\text{also grows potatoes})=\\frac{n(C\\cap P)}{n(C)}\n\\]\n\n\\[\n=\\frac{18}{43}\n\\]"
         }
       ],

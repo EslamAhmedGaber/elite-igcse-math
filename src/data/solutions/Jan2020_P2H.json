@@ -25,19 +25,19 @@
       "topicNote": "Corrected to Percentages. The question compares percentage changes and a discount.",
       "steps": [
         {
-          "title": "From 2016 to 2017, the",
+          "title": "Convert standard form",
           "body": "From 2016 to 2017, the increase is\n\n\\[\n545-500=45\n\\]\n\n\\[\n\\frac{45}{500}\\times 100=9\\%\n\\]"
         },
         {
-          "title": "From 2017 to 2018, the",
+          "title": "Convert standard form",
           "body": "From 2017 to 2018, the increase is\n\n\\[\n592-545=47\n\\]\n\n\\[\n\\frac{47}{545}\\times 100\\approx 8.62\\%\n\\]"
         },
         {
-          "title": "So Brigitte is not correct",
+          "title": "Calculate percentage",
           "body": "So Brigitte is not correct because the second percentage increase is smaller."
         },
         {
-          "title": "For Henri, is of the",
+          "title": "Calculate percentage",
           "body": "For Henri, \\(952\\) is \\(85\\%\\) of the original price because there is a \\(15\\%\\) discount.\n\n\\[\n\\text{original price}=952\\div 0.85=1120\n\\]"
         },
         {
@@ -54,7 +54,7 @@
       "topicNote": "Surds. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify surd",
           "body": "\\[\n\\text{width}=\\frac{18}{\\sqrt7+1}\n\\]"
         },
         {
@@ -71,7 +71,7 @@
       "topicNote": "Corrected to Exchange Rates & Best Buys. The question is mainly about comparing value for money using an exchange rate; standard form is secondary.",
       "steps": [
         {
-          "title": "Dane Oil costs Krone for",
+          "title": "Convert standard form",
           "body": "Dane Oil costs \\(2500000\\) Krone for\n\n\\[\n4.2\\times 10^5=420000\n\\]"
         },
         {
@@ -79,7 +79,7 @@
           "body": "litres.\n\n\\[\n\\text{Dane cost per litre}=\\frac{2500000}{420000}=5.952\\ldots\n\\]"
         },
         {
-          "title": "So Dane Oil costs about",
+          "title": "Convert standard form",
           "body": "So Dane Oil costs about \\(5.95\\) Krone per litre."
         },
         {
@@ -125,15 +125,15 @@
       "topicNote": "Corrected from Sine/Cosine Rule to Algebraic Fractions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use trigonometry",
           "body": "\\[\n\\left(\\frac4{2x-5}-\\frac3{2x-3}\\right)\\div\n\\frac{9x-4x^3}{6x^2-17x+5}\n\\]"
         },
         {
-          "title": "First simplify the bracket",
+          "title": "Use trigonometry",
           "body": "First simplify the bracket:\n\n\\[\n\\frac4{2x-5}-\\frac3{2x-3}\n=\\frac{4(2x-3)-3(2x-5)}{(2x-5)(2x-3)}\n\\]\n\n\\[\n=\\frac{8x-12-6x+15}{(2x-5)(2x-3)}\n\\]\n\n\\[\n=\\frac{2x+3}{(2x-5)(2x-3)}\n\\]"
         },
         {
-          "title": "Now factor the second fraction",
+          "title": "Use trigonometry",
           "body": "Now factor the second fraction:\n\n\\[\n9x-4x^3=-x(2x-3)(2x+3)\n\\]\n\n\\[\n6x^2-17x+5=(2x-5)(3x-1)\n\\]"
         },
         {
@@ -154,7 +154,7 @@
       "topicNote": "Rearranging formulas. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Rearrange formula",
           "body": "\\[\ny=\\sqrt{\\frac{x+1}{x-4}}\n\\]"
         },
         {
@@ -200,7 +200,7 @@
           "body": "Factorise:\n\\[\n(x-8)(x+5)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Solve quadratic equation",
           "body": "So\n\\[\nx=8 \\quad \\text{or} \\quad x=-5\n\\]"
         }
       ],
@@ -225,7 +225,7 @@
           "body": "This is an arithmetic sequence."
         },
         {
-          "title": "First term",
+          "title": "Use trigonometry",
           "body": "First term:\n\n\\[\n50\n\\]"
         },
         {
@@ -266,7 +266,7 @@
           "body": "A perpendicular line has gradient \\(\\frac53\\)."
         },
         {
-          "title": "Through",
+          "title": "Evaluate fraction",
           "body": "Through \\((-6,4)\\):\n\\[\ny-4=\\frac53(x+6)\n\\]"
         },
         {
@@ -291,11 +291,11 @@
           "body": "Substitute this into the circle equation:\n\n\\[\nx^2+y^2-2y=24\n\\]\n\n\\[\nx^2+(x+2)^2-2(x+2)=24\n\\]\n\n\\[\nx^2+x^2+4x+4-2x-4=24\n\\]\n\n\\[\n2x^2+2x-24=0\n\\]\n\n\\[\nx^2+x-12=0\n\\]\n\n\\[\n(x+4)(x-3)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\nx=-4 \\quad \\text{or} \\quad x=3\n\\]"
         },
         {
-          "title": "Using",
+          "title": "Calculate value",
           "body": "Using \\(y=x+2\\):\n\n\\[\nx=-4 \\Rightarrow y=-2\n\\]\n\n\\[\nx=3 \\Rightarrow y=5\n\\]"
         }
       ],
@@ -308,7 +308,7 @@
       "topicNote": "Correct. This is matching equations to graph shapes.",
       "steps": [
         {
-          "title": "For the graph is negative",
+          "title": "Solve equation",
           "body": "For\n\\[\ny=-\\frac{2}{x^2}\n\\]\nthe graph is negative on both sides of the \\(y\\)-axis and is symmetrical in the \\(y\\)-axis."
         },
         {
@@ -316,7 +316,7 @@
           "body": "This is Graph D."
         },
         {
-          "title": "For the graph is a",
+          "title": "Solve equation",
           "body": "For\n\\[\ny=-\\frac12x^3\n\\]\nthe graph is a decreasing cubic through the origin."
         },
         {
@@ -324,7 +324,7 @@
           "body": "This is Graph B."
         },
         {
-          "title": "For the graph is a",
+          "title": "Solve equation",
           "body": "For\n\\[\ny=\\frac5x\n\\]\nthe graph is a positive reciprocal graph in quadrants 1 and 3."
         },
         {
@@ -345,7 +345,7 @@
           "body": "The maximum point of \\(y=f(x)\\) is \\((4,6)\\)."
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(x+4)\n\\]"
         },
         {
@@ -353,7 +353,7 @@
           "body": "the graph moves 4 units left:\n\n\\[\n(4,6)\\to(0,6)\n\\]"
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(2x)\n\\]"
         },
         {
@@ -361,7 +361,7 @@
           "body": "the \\(x\\)-coordinate is divided by 2:\n\n\\[\n(4,6)\\to(2,6)\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Calculate value",
           "body": "For part (b),\n\n\\[\ny=x^2+3x+4\n\\]"
         },
         {
@@ -369,11 +369,11 @@
           "body": "The translation vector is\n\n\\[\n\\begin{pmatrix}4\\\\6\\end{pmatrix}\n\\]"
         },
         {
-          "title": "So the graph moves 4",
+          "title": "Read the graph",
           "body": "So the graph moves 4 units right and 6 units up."
         },
         {
-          "title": "Replace by , then add",
+          "title": "Add 6",
           "body": "Replace \\(x\\) by \\(x-4\\), then add 6:\n\n\\[\ny=(x-4)^2+3(x-4)+4+6\n\\]\n\n\\[\ny=(x-4)^2+3(x-4)+10\n\\]"
         }
       ],
@@ -386,11 +386,11 @@
       "topicNote": "Correct. This is converting cubic units.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\n1\\text{ m}=100\\text{ cm}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\\[\n1\\text{ m}^3=100^3\\text{ cm}^3=1,000,000\\text{ cm}^3\n\\]\n\n\\[\n32.4\\text{ m}^3=32.4\\times1,000,000\n\\]\n\n\\[\n=32,400,000\\text{ cm}^3\n\\]"
         }
       ],
@@ -403,7 +403,7 @@
       "topicNote": "Correct. This is a density question.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate volume",
           "body": "\\[\n\\text{mass}=\\text{density}\\times\\text{volume}\n\\]\n\n\\[\n\\text{mass}=19.3\\times150\n\\]\n\n\\[\n\\text{mass}=2895\n\\]"
         }
       ],
@@ -416,7 +416,7 @@
       "topicNote": "Correct. This is converting metres per second to kilometres per hour.",
       "steps": [
         {
-          "title": "To convert m/s to km/h,",
+          "title": "Convert m/s to km/h multiply",
           "body": "To convert m/s to km/h, multiply by \\(3.6\\).\n\n\\[\n50\\times3.6=180\n\\]"
         }
       ],
@@ -455,7 +455,7 @@
       "topicNote": "Circle Theorems. The tag is correct.",
       "steps": [
         {
-          "title": "Since is a diameter,",
+          "title": "Use trigonometry",
           "body": "Since \\(AD\\) is a diameter,\n\\[\n\\angle ABD=90^\\circ\n\\]"
         },
         {
@@ -463,7 +463,7 @@
           "body": "Given\n\\[\n\\angle CBD=28^\\circ\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\\[\n\\angle ABC=90^\\circ-28^\\circ=62^\\circ\n\\]"
         },
         {
@@ -471,7 +471,7 @@
           "body": "Opposite angles in a cyclic quadrilateral add to \\(180^\\circ\\):\n\\[\n\\angle ADC=180^\\circ-62^\\circ=118^\\circ\n\\]"
         },
         {
-          "title": "At ,",
+          "title": "Use trigonometry",
           "body": "At \\(D\\),\n\\[\n\\angle ADC=\\angle BDA+\\angle BDC\n\\]\n\n\\[\n118^\\circ=32^\\circ+\\angle BDC\n\\]\n\n\\[\n\\angle BDC=86^\\circ\n\\]"
         }
       ],
@@ -484,7 +484,7 @@
       "topicNote": "Area & Perimeter. The tag is correct.",
       "steps": [
         {
-          "title": "Triangle is right angled, with",
+          "title": "Use trigonometry",
           "body": "Triangle \\(ACD\\) is right-angled, with\n\\[\nAD=17\\text{ cm},\\qquad CD=15\\text{ cm}\n\\]"
         },
         {
@@ -492,7 +492,7 @@
           "body": "Use Pythagoras to find \\(AC\\):\n\\[\nAC^2=17^2-15^2=289-225=64\n\\]\n\n\\[\nAC=8\\text{ cm}\n\\]"
         },
         {
-          "title": "So the semicircle has radius",
+          "title": "Calculate area",
           "body": "So the semicircle has radius\n\\[\nr=4\\text{ cm}\n\\]"
         },
         {
@@ -521,7 +521,7 @@
           "body": "The volume of the cone is\n\n\\[\n\\frac{1}{3}\\pi r^2h=1600\n\\]"
         },
         {
-          "title": "The height is cm, so",
+          "title": "Calculate area",
           "body": "The height is \\(25\\) cm, so\n\n\\[\n\\frac{1}{3}\\pi r^2(25)=1600\n\\]\n\n\\[\nr^2=\\frac{4800}{25\\pi}\n\\]\n\n\\[\nr=7.8176\\ldots\n\\]"
         },
         {
@@ -529,7 +529,7 @@
           "body": "The slant height is found using Pythagoras:\n\n\\[\nl^2=r^2+25^2\n\\]\n\n\\[\nl=26.1938\\ldots\n\\]"
         },
         {
-          "title": "When the sector is joined",
+          "title": "Calculate area",
           "body": "When the sector is joined to form the cone, the arc length of the sector becomes the circumference of the cone base.\n\n\\[\n\\frac{x}{360}\\times 2\\pi l=2\\pi r\n\\]"
         },
         {
@@ -546,7 +546,7 @@
       "topicNote": "Corrected from Ratio Toolkit to Vectors.",
       "steps": [
         {
-          "title": "Since is the midpoint of",
+          "title": "Split the ratio",
           "body": "Since \\(M\\) is the midpoint of \\(BC\\),\n\n\\[\n\\overrightarrow{AM}=\\frac{\\overrightarrow{AB}+\\overrightarrow{AC}}{2}\n\\]\n\n\\[\n\\overrightarrow{AM}=\\frac{4a+2b}{2}=2a+b\n\\]"
         },
         {
@@ -558,7 +558,7 @@
           "body": "Factorise:\n\n\\[\n\\overrightarrow{AP}=\\frac34(2a+b)=\\frac34\\overrightarrow{AM}\n\\]"
         },
         {
-          "title": "So is of , leaving",
+          "title": "Split the ratio",
           "body": "So \\(AP\\) is \\(\\frac34\\) of \\(AM\\), leaving \\(PM\\) as \\(\\frac14\\) of \\(AM\\)."
         }
       ],
@@ -613,7 +613,7 @@
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "There are large glasses and",
+          "title": "Calculate probability",
           "body": "There are \\(13\\) large glasses and \\(7\\) small glasses.\n\n\\[\nP(\\text{two small})=\\frac{7}{20}\\times\\frac{6}{19}\n\\]\n\n\\[\n=\\frac{21}{190}\n\\]"
         }
       ],
@@ -651,15 +651,15 @@
       "topicNote": "Corrected from Sine/Cosine Rule to Algebraic Fractions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use trigonometry",
           "body": "\\[\n\\left(\\frac4{2x-5}-\\frac3{2x-3}\\right)\\div\n\\frac{9x-4x^3}{6x^2-17x+5}\n\\]"
         },
         {
-          "title": "First simplify the bracket",
+          "title": "Use trigonometry",
           "body": "First simplify the bracket:\n\n\\[\n\\frac4{2x-5}-\\frac3{2x-3}\n=\\frac{4(2x-3)-3(2x-5)}{(2x-5)(2x-3)}\n\\]\n\n\\[\n=\\frac{8x-12-6x+15}{(2x-5)(2x-3)}\n\\]\n\n\\[\n=\\frac{2x+3}{(2x-5)(2x-3)}\n\\]"
         },
         {
-          "title": "Now factor the second fraction",
+          "title": "Use trigonometry",
           "body": "Now factor the second fraction:\n\n\\[\n9x-4x^3=-x(2x-3)(2x+3)\n\\]\n\n\\[\n6x^2-17x+5=(2x-5)(3x-1)\n\\]"
         },
         {
@@ -692,7 +692,7 @@
           "body": "This is an arithmetic sequence."
         },
         {
-          "title": "First term",
+          "title": "Use trigonometry",
           "body": "First term:\n\n\\[\n50\n\\]"
         },
         {
@@ -725,11 +725,11 @@
           "body": "Substitute this into the circle equation:\n\n\\[\nx^2+y^2-2y=24\n\\]\n\n\\[\nx^2+(x+2)^2-2(x+2)=24\n\\]\n\n\\[\nx^2+x^2+4x+4-2x-4=24\n\\]\n\n\\[\n2x^2+2x-24=0\n\\]\n\n\\[\nx^2+x-12=0\n\\]\n\n\\[\n(x+4)(x-3)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\nx=-4 \\quad \\text{or} \\quad x=3\n\\]"
         },
         {
-          "title": "Using",
+          "title": "Calculate value",
           "body": "Using \\(y=x+2\\):\n\n\\[\nx=-4 \\Rightarrow y=-2\n\\]\n\n\\[\nx=3 \\Rightarrow y=5\n\\]"
         }
       ],
@@ -746,7 +746,7 @@
           "body": "The maximum point of \\(y=f(x)\\) is \\((4,6)\\)."
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(x+4)\n\\]"
         },
         {
@@ -754,7 +754,7 @@
           "body": "the graph moves 4 units left:\n\n\\[\n(4,6)\\to(0,6)\n\\]"
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(2x)\n\\]"
         },
         {
@@ -762,7 +762,7 @@
           "body": "the \\(x\\)-coordinate is divided by 2:\n\n\\[\n(4,6)\\to(2,6)\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Calculate value",
           "body": "For part (b),\n\n\\[\ny=x^2+3x+4\n\\]"
         },
         {
@@ -770,11 +770,11 @@
           "body": "The translation vector is\n\n\\[\n\\begin{pmatrix}4\\\\6\\end{pmatrix}\n\\]"
         },
         {
-          "title": "So the graph moves 4",
+          "title": "Read the graph",
           "body": "So the graph moves 4 units right and 6 units up."
         },
         {
-          "title": "Replace by , then add",
+          "title": "Add 6",
           "body": "Replace \\(x\\) by \\(x-4\\), then add 6:\n\n\\[\ny=(x-4)^2+3(x-4)+4+6\n\\]\n\n\\[\ny=(x-4)^2+3(x-4)+10\n\\]"
         }
       ],
@@ -795,7 +795,7 @@
           "body": "The volume of the cone is\n\n\\[\n\\frac{1}{3}\\pi r^2h=1600\n\\]"
         },
         {
-          "title": "The height is cm, so",
+          "title": "Calculate area",
           "body": "The height is \\(25\\) cm, so\n\n\\[\n\\frac{1}{3}\\pi r^2(25)=1600\n\\]\n\n\\[\nr^2=\\frac{4800}{25\\pi}\n\\]\n\n\\[\nr=7.8176\\ldots\n\\]"
         },
         {
@@ -803,7 +803,7 @@
           "body": "The slant height is found using Pythagoras:\n\n\\[\nl^2=r^2+25^2\n\\]\n\n\\[\nl=26.1938\\ldots\n\\]"
         },
         {
-          "title": "When the sector is joined",
+          "title": "Calculate area",
           "body": "When the sector is joined to form the cone, the arc length of the sector becomes the circumference of the cone base.\n\n\\[\n\\frac{x}{360}\\times 2\\pi l=2\\pi r\n\\]"
         },
         {
@@ -820,7 +820,7 @@
       "topicNote": "Corrected from Ratio Toolkit to Vectors.",
       "steps": [
         {
-          "title": "Since is the midpoint of",
+          "title": "Split the ratio",
           "body": "Since \\(M\\) is the midpoint of \\(BC\\),\n\n\\[\n\\overrightarrow{AM}=\\frac{\\overrightarrow{AB}+\\overrightarrow{AC}}{2}\n\\]\n\n\\[\n\\overrightarrow{AM}=\\frac{4a+2b}{2}=2a+b\n\\]"
         },
         {
@@ -832,7 +832,7 @@
           "body": "Factorise:\n\n\\[\n\\overrightarrow{AP}=\\frac34(2a+b)=\\frac34\\overrightarrow{AM}\n\\]"
         },
         {
-          "title": "So is of , leaving",
+          "title": "Split the ratio",
           "body": "So \\(AP\\) is \\(\\frac34\\) of \\(AM\\), leaving \\(PM\\) as \\(\\frac14\\) of \\(AM\\)."
         }
       ],

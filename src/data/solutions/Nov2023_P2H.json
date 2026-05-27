@@ -12,11 +12,11 @@
           "body": "A depreciation of \\(8\\%\\) gives multiplier\n\n\\[\n0.92\n\\]"
         },
         {
-          "title": "After 3 years,",
+          "title": "Use compound interest",
           "body": "After 3 years,\n\n\\[\n26800(0.92)^3=20868.8384\n\\]"
         },
         {
-          "title": "Correct to the nearest dollar,",
+          "title": "Use compound interest",
           "body": "Correct to the nearest dollar,\n\n\\[\n20868.8384\\approx 20869\n\\]"
         }
       ],
@@ -29,11 +29,11 @@
       "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Estimate the value",
           "body": "\\[\nP=a(c+y)\n\\]"
         },
         {
-          "title": "For the upper bound, use",
+          "title": "Find upper bound",
           "body": "For the upper bound, use the upper bounds of all three values.\n\n\\[\na<8.35,\\quad c<2.5,\\quad y<17.5\n\\]\n\n\\[\nP_{\\text{upper}}=8.35(2.5+17.5)=167\n\\]"
         }
       ],
@@ -50,7 +50,7 @@
           "body": "Butter : sugar \\(=3:2\\)."
         },
         {
-          "title": "Sugar is g, so",
+          "title": "Split the ratio",
           "body": "Sugar is \\(120\\) g, so\n\n\\[\n2\\text{ parts}=120\n\\]\n\n\\[\n1\\text{ part}=60\n\\]\n\n\\[\n\\text{butter}=3\\times 60=180\n\\]"
         },
         {
@@ -83,7 +83,7 @@
           "body": "(d)\n\\[\n\\frac{y^5\\times y^n}{y^7}=y^{5+n-7}=y^{n-2}\n\\]"
         },
         {
-          "title": "Given that this equals ,",
+          "title": "Use index laws",
           "body": "Given that this equals \\(y^{12}\\),\n\\[\nn-2=12\n\\]\n\n\\[\nn=14\n\\]"
         }
       ],
@@ -100,11 +100,11 @@
           "body": "(a)\n\\[\n2^7\\times4^5=2^7\\times(2^2)^5=2^{17}\n\\]"
         },
         {
-          "title": "Also",
+          "title": "Use index laws",
           "body": "Also\n\\[\n4^x=(2^2)^x=2^{2x}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use index laws",
           "body": "So\n\\[\n2x=17\n\\]\n\n\\[\nx=\\frac{17}{2}\n\\]"
         },
         {
@@ -121,7 +121,7 @@
       "topicNote": "Expanding brackets. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Expand brackets",
           "body": "\\[\n(x-5)(x+4)=x^2-x-20\n\\]\n\n\\[\n(2x+3)(x^2-x-20)=2x^3+x^2-43x-60\n\\]"
         }
       ],
@@ -134,7 +134,7 @@
       "topicNote": "Corrected from Solving Quadratic Equations to Algebraic Fractions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve quadratic equation",
           "body": "\\[\n\\frac{45x^3-80x}{3x^2+x-4}\n\\left(\\frac{1}{3x-4}+\\frac{1}{x}\\right)\n=\\frac{4(x+2)}{5x-8}\n\\]"
         },
         {
@@ -142,15 +142,15 @@
           "body": "Factorise:\n\n\\[\n45x^3-80x=5x(3x-4)(3x+4)\n\\]\n\n\\[\n3x^2+x-4=(3x+4)(x-1)\n\\]"
         },
         {
-          "title": "Also,",
+          "title": "Solve quadratic equation",
           "body": "Also,\n\n\\[\n\\frac{1}{3x-4}+\\frac{1}{x}\n=\\frac{x+3x-4}{x(3x-4)}\n=\\frac{4(x-1)}{x(3x-4)}\n\\]"
         },
         {
-          "title": "So the left side becomes",
+          "title": "Solve quadratic equation",
           "body": "So the left side becomes\n\n\\[\n\\frac{5x(3x-4)(3x+4)}{(3x+4)(x-1)}\n\\times\n\\frac{4(x-1)}{x(3x-4)}\n=20\n\\]"
         },
         {
-          "title": "Therefore,",
+          "title": "Solve quadratic equation",
           "body": "Therefore,\n\n\\[\n20=\\frac{4(x+2)}{5x-8}\n\\]\n\n\\[\n20(5x-8)=4(x+2)\n\\]\n\n\\[\n100x-160=4x+8\n\\]\n\n\\[\n96x=168\n\\]\n\n\\[\nx=\\frac74\n\\]"
         }
       ],
@@ -163,7 +163,7 @@
       "topicNote": "Algebraic proof. The tag is acceptable because the question asks to show the exact result.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\n3\\frac37=\\frac{24}{7},\\qquad 2\\frac23=\\frac83\n\\]\n\n\\[\n3\\frac37\\div2\\frac23=\\frac{24}{7}\\div\\frac83\n\\]\n\n\\[\n=\\frac{24}{7}\\times\\frac38=\\frac97=1\\frac27\n\\]"
         }
       ],
@@ -180,11 +180,11 @@
           "body": "(a) Let\n\\[\nx=0.3727272\\ldots\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate value",
           "body": "Then\n\\[\n10x=3.727272\\ldots\n\\]"
         },
         {
-          "title": "and",
+          "title": "Calculate value",
           "body": "and\n\\[\n1000x=372.727272\\ldots\n\\]"
         },
         {
@@ -213,7 +213,7 @@
           "body": "The equations are\n\\[\ny-x-2=0\n\\]\n\n\\[\n2y+x=1\n\\]"
         },
         {
-          "title": "From the first equation,",
+          "title": "Solve simultaneous equations",
           "body": "From the first equation,\n\\[\ny=x+2\n\\]"
         },
         {
@@ -221,7 +221,7 @@
           "body": "Substitute into the second equation:\n\\[\n2(x+2)+x=1\n\\]\n\n\\[\n3x+4=1\n\\]\n\n\\[\n3x=-3\n\\]\n\n\\[\nx=-1\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Solve simultaneous equations",
           "body": "Then\n\\[\ny=-1+2=1\n\\]"
         }
       ],
@@ -234,7 +234,7 @@
       "topicNote": "Functions. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\nf(x)=5x+7,\\qquad g(x)=\\frac{5}{2x-9}\n\\]"
         },
         {
@@ -258,11 +258,11 @@
           "body": "Let\n\\[\ny=3(x-2)^2-4\n\\]\n\n\\[\ny+4=3(x-2)^2\n\\]\n\n\\[\nx-2=\\sqrt{\\frac{y+4}{3}}\n\\]"
         },
         {
-          "title": "Since , take the positive",
+          "title": "Simplify surd",
           "body": "Since \\(x>2\\), take the positive root:\n\\[\nx=2+\\sqrt{\\frac{y+4}{3}}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Simplify surd",
           "body": "So\n\\[\nh^{-1}(x)=2+\\sqrt{\\frac{x+4}{3}}\n\\]"
         }
       ],
@@ -279,11 +279,11 @@
           "body": "The line is\n\n\\[\nx+2y=5\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\nx=5-2y\n\\]"
         },
         {
-          "title": "Substitute into",
+          "title": "Calculate value",
           "body": "Substitute into\n\n\\[\nx^2+3y^2=13\n\\]\n\n\\[\n(5-2y)^2+3y^2=13\n\\]\n\n\\[\n25-20y+4y^2+3y^2=13\n\\]\n\n\\[\n7y^2-20y+12=0\n\\]"
         },
         {
@@ -291,11 +291,11 @@
           "body": "Factorise:\n\n\\[\n(7y-6)(y-2)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\ny=\\frac67 \\quad \\text{or} \\quad y=2\n\\]"
         },
         {
-          "title": "Using",
+          "title": "Evaluate fraction",
           "body": "Using \\(x=5-2y\\):\n\n\\[\ny=\\frac67 \\Rightarrow x=\\frac{23}{7}\n\\]\n\n\\[\ny=2 \\Rightarrow x=1\n\\]"
         }
       ],
@@ -308,7 +308,7 @@
       "topicNote": "Corrected to linear graphs. The question asks for an equation of a straight line through two points.",
       "steps": [
         {
-          "title": "The line passes through and",
+          "title": "Solve equation",
           "body": "The line passes through \\((0,-3)\\) and \\((2,0)\\)."
         },
         {
@@ -316,7 +316,7 @@
           "body": "The gradient is\n\\[\n\\frac{0-(-3)}{2-0}=\\frac32\n\\]"
         },
         {
-          "title": "The y intercept is ,",
+          "title": "Solve equation",
           "body": "The y-intercept is \\(-3\\), so\n\\[\ny=\\frac32x-3\n\\]"
         }
       ],
@@ -329,7 +329,7 @@
       "topicNote": "Corrected to Differentiation. Acceleration is found from the second derivative of displacement.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Split the ratio",
           "body": "\\[\ns=2t^3-5t^2+6t-5\n\\]"
         },
         {
@@ -341,7 +341,7 @@
           "body": "Acceleration is\n\n\\[\n\\frac{d^2s}{dt^2}=12t-10\n\\]"
         },
         {
-          "title": "The acceleration is , so",
+          "title": "Split the ratio",
           "body": "The acceleration is \\(5\\), so\n\n\\[\n12t-10=5\n\\]\n\n\\[\n12t=15\n\\]\n\n\\[\nt=\\frac{15}{12}=\\frac54\n\\]"
         }
       ],
@@ -358,11 +358,11 @@
           "body": "The area of the hexagon can be found from coordinates or by splitting the shape."
         },
         {
-          "title": "It simplifies to",
+          "title": "Calculate area",
           "body": "It simplifies to\n\\[\n\\text{area}=25x+98\n\\]"
         },
         {
-          "title": "Given the area is ,",
+          "title": "Calculate area",
           "body": "Given the area is \\(258\\text{ cm}^2\\),\n\\[\n25x+98=258\n\\]\n\n\\[\n25x=160\n\\]\n\n\\[\nx=6.4\n\\]"
         }
       ],
@@ -375,7 +375,7 @@
       "topicNote": "Moved to Circles, Arcs & Sectors.",
       "steps": [
         {
-          "title": "The triangle is equilateral with",
+          "title": "Use trigonometry",
           "body": "The triangle is equilateral with side length \\(10\\) cm."
         },
         {
@@ -383,11 +383,11 @@
           "body": "Area of the triangle:\n\n\\[\n\\frac{\\sqrt{3}}{4}(10)^2=25\\sqrt{3}\n\\]"
         },
         {
-          "title": "For an equilateral triangle, the",
+          "title": "Use trigonometry",
           "body": "For an equilateral triangle, the inradius is\n\n\\[\nr=\\frac{s\\sqrt{3}}{6}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Simplify surd",
           "body": "So\n\n\\[\nr=\\frac{10\\sqrt{3}}{6}=\\frac{5\\sqrt{3}}{3}\n\\]"
         },
         {
@@ -416,7 +416,7 @@
           "body": "The small cone has radius \\(x\\). Since the cones are similar,\n\n\\[\n\\frac{\\text{radius}}{\\text{height}}=\\frac6{15}=\\frac25\n\\]"
         },
         {
-          "title": "So for the small cone,",
+          "title": "Evaluate fraction",
           "body": "So for the small cone,\n\n\\[\n\\frac{x}{h}=\\frac25\n\\]\n\n\\[\nh=\\frac52x\n\\]"
         },
         {
@@ -432,7 +432,7 @@
           "body": "The frustum volume is\n\n\\[\n\\frac{4212}{25}\\pi\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\n180\\pi-\\frac56\\pi x^3=\\frac{4212}{25}\\pi\n\\]"
         },
         {
@@ -449,15 +449,15 @@
       "topicNote": "Corrected to right-angled triangles.",
       "steps": [
         {
-          "title": "In triangle ,",
+          "title": "Use trigonometry",
           "body": "In triangle \\(ABC\\),\n\\[\nBC^2=10^2-8^2\n\\]\n\n\\[\nBC^2=36\n\\]\n\n\\[\nBC=6\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\\[\nEC=EB+BC=5+6=11\n\\]"
         },
         {
-          "title": "In triangle ,",
+          "title": "Use trigonometry",
           "body": "In triangle \\(ECD\\),\n\\[\nw^2=11^2+14^2\n\\]\n\n\\[\nw^2=317\n\\]\n\n\\[\nw=17.804\\ldots\n\\]"
         }
       ],
@@ -470,7 +470,7 @@
       "topicNote": "Corrected from Ratio Toolkit to Vectors.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Split the ratio",
           "body": "\\[\n\\overrightarrow{OA}=3a,\\quad \\overrightarrow{OB}=4b,\\quad \\overrightarrow{BC}=2a-2b\n\\]"
         },
         {
@@ -478,15 +478,15 @@
           "body": "Part (a):\n\n\\[\n\\overrightarrow{OC}=\\overrightarrow{OB}+\\overrightarrow{BC}\n=4b+(2a-2b)=2a+2b\n\\]\n\n\\[\n\\overrightarrow{AB}=\\overrightarrow{OB}-\\overrightarrow{OA}\n=4b-3a\n\\]"
         },
         {
-          "title": "For part (b), let divide",
+          "title": "Split the ratio",
           "body": "For part (b), let \\(P\\) divide \\(AB\\) so that\n\n\\[\n\\overrightarrow{AP}=\\mu\\overrightarrow{AB}\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Split the ratio",
           "body": "Then\n\n\\[\n\\overrightarrow{OP}=3a+\\mu(4b-3a)=(3-3\\mu)a+4\\mu b\n\\]"
         },
         {
-          "title": "Since lies on , also",
+          "title": "Split the ratio",
           "body": "Since \\(P\\) lies on \\(OC\\), also let\n\n\\[\n\\overrightarrow{OP}=\\lambda(2a+2b)\n\\]"
         },
         {
@@ -494,11 +494,11 @@
           "body": "Equating coefficients:\n\n\\[\n3-3\\mu=2\\lambda,\\quad 4\\mu=2\\lambda\n\\]"
         },
         {
-          "title": "From ,",
+          "title": "Split the ratio",
           "body": "From \\(4\\mu=2\\lambda\\), \\(\\lambda=2\\mu\\).\n\n\\[\n3-3\\mu=4\\mu\n\\]\n\n\\[\n\\mu=\\frac37\n\\]"
         },
         {
-          "title": "So",
+          "title": "Split the ratio",
           "body": "So \\(AP:PB=\\frac37:\\frac47\\)."
         }
       ],
@@ -519,7 +519,7 @@
           "body": "The reflected T-shape has vertices\n\n\\[\n(6,1),(6,4),(5,4),(5,3),(4,3),(4,2),(5,2),(5,1)\n\\]"
         },
         {
-          "title": "(b) Triangle is mapped to",
+          "title": "Use trigonometry",
           "body": "(b) Triangle \\(A\\) is mapped to \\(B\\) by an enlargement with scale factor \\(3\\) and centre \\((7,2)\\)."
         }
       ],
@@ -557,7 +557,7 @@
           "body": "The total for all 10 matches is\n\n\\[\n10 \\times 7=70\n\\]"
         },
         {
-          "title": "So the last two matches",
+          "title": "Compare density",
           "body": "So the last two matches have total\n\n\\[\n70-48=22\n\\]"
         },
         {
@@ -591,7 +591,7 @@
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Box X has red and",
+          "title": "Calculate probability",
           "body": "Box X has \\(5\\) red and \\(11\\) not red crayons.\nBox Y has \\(7\\) red and \\(13\\) not red crayons."
         },
         {
@@ -608,7 +608,7 @@
       "topicNote": "Corrected from Solving Quadratic Equations to Algebraic Fractions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve quadratic equation",
           "body": "\\[\n\\frac{45x^3-80x}{3x^2+x-4}\n\\left(\\frac{1}{3x-4}+\\frac{1}{x}\\right)\n=\\frac{4(x+2)}{5x-8}\n\\]"
         },
         {
@@ -616,15 +616,15 @@
           "body": "Factorise:\n\n\\[\n45x^3-80x=5x(3x-4)(3x+4)\n\\]\n\n\\[\n3x^2+x-4=(3x+4)(x-1)\n\\]"
         },
         {
-          "title": "Also,",
+          "title": "Solve quadratic equation",
           "body": "Also,\n\n\\[\n\\frac{1}{3x-4}+\\frac{1}{x}\n=\\frac{x+3x-4}{x(3x-4)}\n=\\frac{4(x-1)}{x(3x-4)}\n\\]"
         },
         {
-          "title": "So the left side becomes",
+          "title": "Solve quadratic equation",
           "body": "So the left side becomes\n\n\\[\n\\frac{5x(3x-4)(3x+4)}{(3x+4)(x-1)}\n\\times\n\\frac{4(x-1)}{x(3x-4)}\n=20\n\\]"
         },
         {
-          "title": "Therefore,",
+          "title": "Solve quadratic equation",
           "body": "Therefore,\n\n\\[\n20=\\frac{4(x+2)}{5x-8}\n\\]\n\n\\[\n20(5x-8)=4(x+2)\n\\]\n\n\\[\n100x-160=4x+8\n\\]\n\n\\[\n96x=168\n\\]\n\n\\[\nx=\\frac74\n\\]"
         }
       ],
@@ -641,11 +641,11 @@
           "body": "The line is\n\n\\[\nx+2y=5\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\nx=5-2y\n\\]"
         },
         {
-          "title": "Substitute into",
+          "title": "Calculate value",
           "body": "Substitute into\n\n\\[\nx^2+3y^2=13\n\\]\n\n\\[\n(5-2y)^2+3y^2=13\n\\]\n\n\\[\n25-20y+4y^2+3y^2=13\n\\]\n\n\\[\n7y^2-20y+12=0\n\\]"
         },
         {
@@ -653,11 +653,11 @@
           "body": "Factorise:\n\n\\[\n(7y-6)(y-2)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\ny=\\frac67 \\quad \\text{or} \\quad y=2\n\\]"
         },
         {
-          "title": "Using",
+          "title": "Evaluate fraction",
           "body": "Using \\(x=5-2y\\):\n\n\\[\ny=\\frac67 \\Rightarrow x=\\frac{23}{7}\n\\]\n\n\\[\ny=2 \\Rightarrow x=1\n\\]"
         }
       ],
@@ -670,7 +670,7 @@
       "topicNote": "Moved to Circles, Arcs & Sectors.",
       "steps": [
         {
-          "title": "The triangle is equilateral with",
+          "title": "Use trigonometry",
           "body": "The triangle is equilateral with side length \\(10\\) cm."
         },
         {
@@ -678,11 +678,11 @@
           "body": "Area of the triangle:\n\n\\[\n\\frac{\\sqrt{3}}{4}(10)^2=25\\sqrt{3}\n\\]"
         },
         {
-          "title": "For an equilateral triangle, the",
+          "title": "Use trigonometry",
           "body": "For an equilateral triangle, the inradius is\n\n\\[\nr=\\frac{s\\sqrt{3}}{6}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Simplify surd",
           "body": "So\n\n\\[\nr=\\frac{10\\sqrt{3}}{6}=\\frac{5\\sqrt{3}}{3}\n\\]"
         },
         {
@@ -711,7 +711,7 @@
           "body": "The small cone has radius \\(x\\). Since the cones are similar,\n\n\\[\n\\frac{\\text{radius}}{\\text{height}}=\\frac6{15}=\\frac25\n\\]"
         },
         {
-          "title": "So for the small cone,",
+          "title": "Evaluate fraction",
           "body": "So for the small cone,\n\n\\[\n\\frac{x}{h}=\\frac25\n\\]\n\n\\[\nh=\\frac52x\n\\]"
         },
         {
@@ -727,7 +727,7 @@
           "body": "The frustum volume is\n\n\\[\n\\frac{4212}{25}\\pi\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\n180\\pi-\\frac56\\pi x^3=\\frac{4212}{25}\\pi\n\\]"
         },
         {
@@ -744,7 +744,7 @@
       "topicNote": "Corrected from Ratio Toolkit to Vectors.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Split the ratio",
           "body": "\\[\n\\overrightarrow{OA}=3a,\\quad \\overrightarrow{OB}=4b,\\quad \\overrightarrow{BC}=2a-2b\n\\]"
         },
         {
@@ -752,15 +752,15 @@
           "body": "Part (a):\n\n\\[\n\\overrightarrow{OC}=\\overrightarrow{OB}+\\overrightarrow{BC}\n=4b+(2a-2b)=2a+2b\n\\]\n\n\\[\n\\overrightarrow{AB}=\\overrightarrow{OB}-\\overrightarrow{OA}\n=4b-3a\n\\]"
         },
         {
-          "title": "For part (b), let divide",
+          "title": "Split the ratio",
           "body": "For part (b), let \\(P\\) divide \\(AB\\) so that\n\n\\[\n\\overrightarrow{AP}=\\mu\\overrightarrow{AB}\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Split the ratio",
           "body": "Then\n\n\\[\n\\overrightarrow{OP}=3a+\\mu(4b-3a)=(3-3\\mu)a+4\\mu b\n\\]"
         },
         {
-          "title": "Since lies on , also",
+          "title": "Split the ratio",
           "body": "Since \\(P\\) lies on \\(OC\\), also let\n\n\\[\n\\overrightarrow{OP}=\\lambda(2a+2b)\n\\]"
         },
         {
@@ -768,11 +768,11 @@
           "body": "Equating coefficients:\n\n\\[\n3-3\\mu=2\\lambda,\\quad 4\\mu=2\\lambda\n\\]"
         },
         {
-          "title": "From ,",
+          "title": "Split the ratio",
           "body": "From \\(4\\mu=2\\lambda\\), \\(\\lambda=2\\mu\\).\n\n\\[\n3-3\\mu=4\\mu\n\\]\n\n\\[\n\\mu=\\frac37\n\\]"
         },
         {
-          "title": "So",
+          "title": "Split the ratio",
           "body": "So \\(AP:PB=\\frac37:\\frac47\\)."
         }
       ],

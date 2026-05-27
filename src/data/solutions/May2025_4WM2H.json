@@ -20,7 +20,7 @@
           "body": "Each part is\n\n\\[\n240 \\div 12=20\n\\]"
         },
         {
-          "title": "So the original amounts are",
+          "title": "Split the ratio",
           "body": "So the original amounts are\n\n\\[\n60,\\ 80,\\ 100\n\\]"
         },
         {
@@ -45,7 +45,7 @@
           "body": "The multiplier for a \\(7\\%\\) increase is\n\n\\[\n1.07\n\\]"
         },
         {
-          "title": "After 3 years,",
+          "title": "Use compound interest",
           "body": "After 3 years,\n\n\\[\n4000(1.07)^3=4900.172\n\\]"
         },
         {
@@ -62,15 +62,15 @@
       "topicNote": "",
       "steps": [
         {
-          "title": "The range is , so",
+          "title": "Calculate statistic",
           "body": "The range is \\(10\\), so the first number is\n\n\\[\n14-10=4\n\\]"
         },
         {
-          "title": "For six numbers, the median",
+          "title": "Calculate statistic",
           "body": "For six numbers, the median is the mean of the third and fourth values.\n\n\\[\n\\frac{6+\\text{fourth value}}{2}=7.5\n\\]"
         },
         {
-          "title": "So the fourth value is",
+          "title": "Calculate statistic",
           "body": "So the fourth value is \\(9\\). To make \\(6\\) the mode, the second value must also be \\(6\\)."
         }
       ],
@@ -108,7 +108,7 @@
       "topicNote": "",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Convert standard form",
           "body": "\\[\n\\text{loss}=8000-5600=2400\n\\]\n\n\\[\n\\text{percentage loss}=\\frac{2400}{8000}\\times 100=30\\%\n\\]"
         }
       ],
@@ -134,15 +134,15 @@
       "topicNote": "",
       "steps": [
         {
-          "title": "The sequence increases by ,",
+          "title": "Find the nth term",
           "body": "The sequence increases by \\(4\\), so\n\n\\[\nu_n=4n+7\n\\]"
         },
         {
-          "title": "For the sequence , take",
+          "title": "Find the nth term",
           "body": "For the sequence \\(5n+4\\), take \\(n=3\\):\n\n\\[\n5(3)+4=19\n\\]"
         },
         {
-          "title": "and is prime",
+          "title": "Check prime condition",
           "body": "and \\(19\\) is prime."
         }
       ],
@@ -155,15 +155,15 @@
       "topicNote": "",
       "steps": [
         {
-          "title": "The scale factor from to",
+          "title": "Evaluate fraction",
           "body": "The scale factor from \\(ABCD\\) to \\(EFGH\\) is\n\n\\[\n\\frac{FG}{BC}=\\frac{10}{4}=2.5\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\nx=EF=5\\times 2.5=12.5\n\\]"
         },
         {
-          "title": "and",
+          "title": "Evaluate fraction",
           "body": "and\n\n\\[\ny=CD=\\frac{24}{2.5}=9.6\n\\]"
         }
       ],
@@ -189,15 +189,15 @@
       "topicNote": "",
       "steps": [
         {
-          "title": "From",
+          "title": "Calculate value",
           "body": "From\n\n\\[\n4x+y=-3.5\n\\]\n\n\\[\ny=-3.5-4x\n\\]"
         },
         {
-          "title": "Substitute into",
+          "title": "Substitute into equation",
           "body": "Substitute into \\(3x+5y=8\\):\n\n\\[\n3x+5(-3.5-4x)=8\n\\]\n\n\\[\n-17x=25.5\n\\]\n\n\\[\nx=-1.5\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate value",
           "body": "Then\n\n\\[\ny=-3.5-4(-1.5)=2.5\n\\]"
         }
       ],
@@ -244,15 +244,15 @@
       "topicNote": "",
       "steps": [
         {
-          "title": "By the alternate segment theorem,",
+          "title": "Use trigonometry",
           "body": "By the alternate segment theorem,\n\n\\[\n\\angle EAB=\\angle ADB=56^\\circ\n\\]"
         },
         {
-          "title": "In triangle ,",
+          "title": "Use trigonometry",
           "body": "In triangle \\(ABD\\),\n\n\\[\n\\angle BAD=180^\\circ-42^\\circ-56^\\circ=82^\\circ\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\n\\angle BAC=82^\\circ-60^\\circ=22^\\circ\n\\]"
         },
         {
@@ -281,7 +281,7 @@
           "body": "The median is the \\(30\\)th value. Interpolating in the \\(20\\) to \\(30\\) interval gives about \\(27.5\\) minutes."
         },
         {
-          "title": "For more than minutes, the",
+          "title": "Estimate the value",
           "body": "For more than \\(45\\) minutes, the estimate is about \\(7\\) people."
         }
       ],
@@ -298,7 +298,7 @@
           "body": "Use multipliers:\n\n\\[\n1.12\\times 0.85=0.952\n\\]"
         },
         {
-          "title": "So the final value is",
+          "title": "Calculate percentage",
           "body": "So the final value is \\(95.2\\%\\) of the original.\n\n\\[\n100-95.2=4.8\n\\]"
         }
       ],
@@ -315,11 +315,11 @@
           "body": "There are \\(11\\) values. Excluding the median \\(14\\):"
         },
         {
-          "title": "Lower half , so",
+          "title": "Calculate value",
           "body": "Lower half: \\(7,8,10,11,13\\), so \\(Q_1=10\\)."
         },
         {
-          "title": "Upper half , so",
+          "title": "Calculate value",
           "body": "Upper half: \\(16,17,19,21,24\\), so \\(Q_3=19\\).\n\n\\[\n\\text{IQR}=19-10=9\n\\]"
         }
       ],
@@ -349,11 +349,11 @@
       "topicNote": "",
       "steps": [
         {
-          "title": "Since is inversely proportional to",
+          "title": "Find inverse function",
           "body": "Since \\(W\\) is inversely proportional to \\(y^2\\),\n\n\\[\nW=\\frac{k}{y^2}\n\\]"
         },
         {
-          "title": "Using when",
+          "title": "Evaluate fraction",
           "body": "Using \\(W=50\\) when \\(y=4\\):\n\n\\[\n50=\\frac{k}{16}\n\\]\n\n\\[\nk=800\n\\]"
         }
       ],
@@ -366,7 +366,7 @@
       "topicNote": "",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\nc=\\frac{t^2+3}{7-8t^2}\n\\]\n\n\\[\nc(7-8t^2)=t^2+3\n\\]\n\n\\[\n7c-3=t^2(8c+1)\n\\]\n\n\\[\nt^2=\\frac{7c-3}{8c+1}\n\\]"
         }
       ],
@@ -383,11 +383,11 @@
           "body": "Let\n\n\\[\na=2n, \\qquad b=2n+2, \\qquad c=2n+4\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate value",
           "body": "Then\n\n\\[\nac+4=(2n)(2n+4)+4\n\\]\n\n\\[\n=4n^2+8n+4\n\\]\n\n\\[\n=(2n+2)^2=b^2\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So \\(b^2=ac+4\\)."
         }
       ],
@@ -400,11 +400,11 @@
       "topicNote": "",
       "steps": [
         {
-          "title": "(a) If , then",
+          "title": "Evaluate fraction",
           "body": "(a) If \\(g(g(x))=6\\), then\n\n\\[\n\\frac{7g(x)+20}{2g(x)}=6\n\\]\n\n\\[\n7g(x)+20=12g(x)\n\\]\n\n\\[\ng(x)=4\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\n\\frac{7x+20}{2x}=4\n\\]\n\n\\[\n7x+20=8x\n\\]\n\n\\[\nx=20\n\\]"
         },
         {
@@ -412,7 +412,7 @@
           "body": "(b)\n\\[\nh(x)=5x^2+30x-7=5(x+3)^2-52\n\\]"
         },
         {
-          "title": "Let . Since , use",
+          "title": "Simplify surd",
           "body": "Let \\(y=5(x+3)^2-52\\). Since \\(x\\ge -3\\), use the positive square root:\n\n\\[\nx+3=\\sqrt{\\frac{y+52}{5}}\n\\]\n\n\\[\nh^{-1}(x)=\\sqrt{\\frac{x+52}{5}}-3\n\\]"
         }
       ],
@@ -425,11 +425,11 @@
       "topicNote": "",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\n\\frac{dy}{dx}=3x^2+2x-10\n\\]"
         },
         {
-          "title": "For a positive gradient,",
+          "title": "Find the gradient",
           "body": "For a positive gradient,\n\n\\[\n3x^2+2x-10>0\n\\]"
         },
         {
@@ -437,7 +437,7 @@
           "body": "The roots are\n\n\\[\nx=\\frac{-1\\pm\\sqrt{31}}{3}\n\\]"
         },
         {
-          "title": "Since the quadratic opens upwards,",
+          "title": "Solve quadratic equation",
           "body": "Since the quadratic opens upwards,\n\n\\[\nx<\\frac{-1-\\sqrt{31}}{3}\n\\quad \\text{or} \\quad\nx>\\frac{-1+\\sqrt{31}}{3}\n\\]"
         }
       ],
@@ -450,7 +450,7 @@
       "topicNote": "",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\n3x\\times 2x\\times y=1014\n\\]\n\n\\[\n6x^2y=1014\n\\]\n\n\\[\ny=\\frac{169}{x^2}\n\\]"
         },
         {
@@ -467,11 +467,11 @@
       "topicNote": "",
       "steps": [
         {
-          "title": "For an arithmetic series,",
+          "title": "Use series formula",
           "body": "For an arithmetic series,\n\n\\[\na+20d=109\n\\]"
         },
         {
-          "title": "and",
+          "title": "Evaluate fraction",
           "body": "and\n\n\\[\n\\frac{52}{2}(2a+51d)=4381\n\\]\n\n\\[\n26(2a+51d)=4381\n\\]"
         },
         {
@@ -496,7 +496,7 @@
           "body": "Linear scale factor from solid \\(A\\) to solid \\(B\\):\n\n\\[\n\\frac{18.6}{31}=0.6\n\\]"
         },
         {
-          "title": "So the volume scale factor",
+          "title": "Calculate volume",
           "body": "So the volume scale factor is\n\n\\[\n0.6^3=0.216\n\\]"
         },
         {
@@ -521,11 +521,11 @@
           "body": "(b) Let \\(X\\) divide \\(QR\\) so that\n\n\\[\n\\overrightarrow{QX}=\\lambda\\overrightarrow{QR}\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate value",
           "body": "Then\n\n\\[\n\\overrightarrow{OX}=3a+3c+\\lambda(3c-3a)\n\\]"
         },
         {
-          "title": "Also lies on , where",
+          "title": "Calculate value",
           "body": "Also \\(X\\) lies on \\(PT\\), where \\(\\overrightarrow{OT}=14c\\), so\n\n\\[\n\\overrightarrow{OX}=2a+\\mu(14c-2a)\n\\]"
         },
         {
@@ -546,15 +546,15 @@
           "body": "(a)"
         },
         {
-          "title": "For , move the graph",
+          "title": "Read the graph",
           "body": "For \\(y=f(x-4)\\), move the graph \\(4\\) units right:\n\n\\[\n(6,-5)\\to(10,-5)\n\\]"
         },
         {
-          "title": "For , divide the coordinate",
+          "title": "Divide the -coordinate",
           "body": "For \\(y=f(3x)\\), divide the \\(x\\)-coordinate by \\(3\\):\n\n\\[\n(6,-5)\\to(2,-5)\n\\]"
         },
         {
-          "title": "(b) For , halve each",
+          "title": "Subtract from each -coordinate",
           "body": "(b) For \\(y=g(2x)-3\\), halve each \\(x\\)-coordinate and subtract \\(3\\) from each \\(y\\)-coordinate."
         },
         {
@@ -579,11 +579,11 @@
           "body": "Let\n\n\\[\na=2n, \\qquad b=2n+2, \\qquad c=2n+4\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate value",
           "body": "Then\n\n\\[\nac+4=(2n)(2n+4)+4\n\\]\n\n\\[\n=4n^2+8n+4\n\\]\n\n\\[\n=(2n+2)^2=b^2\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So \\(b^2=ac+4\\)."
         }
       ],
@@ -596,11 +596,11 @@
       "topicNote": "",
       "steps": [
         {
-          "title": "(a) If , then",
+          "title": "Evaluate fraction",
           "body": "(a) If \\(g(g(x))=6\\), then\n\n\\[\n\\frac{7g(x)+20}{2g(x)}=6\n\\]\n\n\\[\n7g(x)+20=12g(x)\n\\]\n\n\\[\ng(x)=4\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\n\\frac{7x+20}{2x}=4\n\\]\n\n\\[\n7x+20=8x\n\\]\n\n\\[\nx=20\n\\]"
         },
         {
@@ -608,7 +608,7 @@
           "body": "(b)\n\\[\nh(x)=5x^2+30x-7=5(x+3)^2-52\n\\]"
         },
         {
-          "title": "Let . Since , use",
+          "title": "Simplify surd",
           "body": "Let \\(y=5(x+3)^2-52\\). Since \\(x\\ge -3\\), use the positive square root:\n\n\\[\nx+3=\\sqrt{\\frac{y+52}{5}}\n\\]\n\n\\[\nh^{-1}(x)=\\sqrt{\\frac{x+52}{5}}-3\n\\]"
         }
       ],
@@ -621,11 +621,11 @@
       "topicNote": "",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\n\\frac{dy}{dx}=3x^2+2x-10\n\\]"
         },
         {
-          "title": "For a positive gradient,",
+          "title": "Find the gradient",
           "body": "For a positive gradient,\n\n\\[\n3x^2+2x-10>0\n\\]"
         },
         {
@@ -633,7 +633,7 @@
           "body": "The roots are\n\n\\[\nx=\\frac{-1\\pm\\sqrt{31}}{3}\n\\]"
         },
         {
-          "title": "Since the quadratic opens upwards,",
+          "title": "Solve quadratic equation",
           "body": "Since the quadratic opens upwards,\n\n\\[\nx<\\frac{-1-\\sqrt{31}}{3}\n\\quad \\text{or} \\quad\nx>\\frac{-1+\\sqrt{31}}{3}\n\\]"
         }
       ],
@@ -646,7 +646,7 @@
       "topicNote": "",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\n3x\\times 2x\\times y=1014\n\\]\n\n\\[\n6x^2y=1014\n\\]\n\n\\[\ny=\\frac{169}{x^2}\n\\]"
         },
         {
@@ -663,11 +663,11 @@
       "topicNote": "",
       "steps": [
         {
-          "title": "For an arithmetic series,",
+          "title": "Use series formula",
           "body": "For an arithmetic series,\n\n\\[\na+20d=109\n\\]"
         },
         {
-          "title": "and",
+          "title": "Evaluate fraction",
           "body": "and\n\n\\[\n\\frac{52}{2}(2a+51d)=4381\n\\]\n\n\\[\n26(2a+51d)=4381\n\\]"
         },
         {
@@ -692,7 +692,7 @@
           "body": "Linear scale factor from solid \\(A\\) to solid \\(B\\):\n\n\\[\n\\frac{18.6}{31}=0.6\n\\]"
         },
         {
-          "title": "So the volume scale factor",
+          "title": "Calculate volume",
           "body": "So the volume scale factor is\n\n\\[\n0.6^3=0.216\n\\]"
         },
         {
@@ -717,11 +717,11 @@
           "body": "(b) Let \\(X\\) divide \\(QR\\) so that\n\n\\[\n\\overrightarrow{QX}=\\lambda\\overrightarrow{QR}\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate value",
           "body": "Then\n\n\\[\n\\overrightarrow{OX}=3a+3c+\\lambda(3c-3a)\n\\]"
         },
         {
-          "title": "Also lies on , where",
+          "title": "Calculate value",
           "body": "Also \\(X\\) lies on \\(PT\\), where \\(\\overrightarrow{OT}=14c\\), so\n\n\\[\n\\overrightarrow{OX}=2a+\\mu(14c-2a)\n\\]"
         },
         {
@@ -742,15 +742,15 @@
           "body": "(a)"
         },
         {
-          "title": "For , move the graph",
+          "title": "Read the graph",
           "body": "For \\(y=f(x-4)\\), move the graph \\(4\\) units right:\n\n\\[\n(6,-5)\\to(10,-5)\n\\]"
         },
         {
-          "title": "For , divide the coordinate",
+          "title": "Divide the -coordinate",
           "body": "For \\(y=f(3x)\\), divide the \\(x\\)-coordinate by \\(3\\):\n\n\\[\n(6,-5)\\to(2,-5)\n\\]"
         },
         {
-          "title": "(b) For , halve each",
+          "title": "Subtract from each -coordinate",
           "body": "(b) For \\(y=g(2x)-3\\), halve each \\(x\\)-coordinate and subtract \\(3\\) from each \\(y\\)-coordinate."
         },
         {

@@ -8,15 +8,15 @@
       "topicNote": "Statistics Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "The mean is , so",
+          "title": "Calculate statistic",
           "body": "The mean is \\(12\\), so the total of the five numbers is\n\n\\[\n5 \\times 12 = 60\n\\]"
         },
         {
-          "title": "The known numbers add to",
+          "title": "Calculate value",
           "body": "The known numbers add to\n\n\\[\n15+7-2+23=43\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Calculate value",
           "body": "Therefore\n\n\\[\n43+x=60\n\\]\n\n\\[\nx=17\n\\]"
         }
       ],
@@ -29,7 +29,7 @@
       "topicNote": "Prime Factors, HCF & LCM. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Find the LCM",
           "body": "\\[\n56=2^3\\times 7,\\qquad 84=2^2\\times 3\\times 7\n\\]"
         },
         {
@@ -37,11 +37,11 @@
           "body": "The common prime factors are \\(2^2\\) and \\(7\\), so\n\n\\[\n\\text{HCF}=2^2\\times 7=28\n\\]"
         },
         {
-          "title": "Also",
+          "title": "Find the LCM",
           "body": "Also\n\n\\[\n60=2^2\\times 3\\times 5,\\qquad 72=2^3\\times 3^2\n\\]"
         },
         {
-          "title": "Use the highest powers of",
+          "title": "Find the LCM",
           "body": "Use the highest powers of each prime:\n\n\\[\n\\text{LCM}=2^3\\times 3^2\\times 5=360\n\\]"
         }
       ],
@@ -54,15 +54,15 @@
       "topicNote": "Algebraic Roots & Indices. The tag is correct because the question uses index laws with letters.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use index laws",
           "body": "\\[\n4^n=(2^2)^n=2^{2n}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use index laws",
           "body": "So\n\n\\[\n\\frac{2^k}{4^n}=\\frac{2^k}{2^{2n}}=2^{k-2n}\n\\]"
         },
         {
-          "title": "Since this equals ,",
+          "title": "Use index laws",
           "body": "Since this equals \\(2^x\\),\n\n\\[\nx=k-2n\n\\]"
         }
       ],
@@ -83,7 +83,7 @@
           "body": "The interior angle of polygon \\(B\\) is\n\n\\[\n7x=7(20)=140^\\circ\n\\]"
         },
         {
-          "title": "For a regular sided polygon,",
+          "title": "Find the gradient",
           "body": "For a regular \\(n\\)-sided polygon,\n\n\\[\n\\frac{180(n-2)}{n}=140\n\\]\n\n\\[\n180n-360=140n\n\\]\n\n\\[\n40n=360\n\\]\n\n\\[\nn=9\n\\]"
         }
       ],
@@ -100,7 +100,7 @@
           "body": "Draw the three boundary lines:\n\n\\[\ny=1,\\qquad x=2,\\qquad x+y=7\n\\]"
         },
         {
-          "title": "For , use points such",
+          "title": "Read the graph",
           "body": "For \\(x+y=7\\), use points such as \\((0,7)\\) and \\((7,0)\\)."
         },
         {
@@ -108,7 +108,7 @@
           "body": "The required region is:\n\n\\[\ny\\ge 1,\\qquad x\\ge 2,\\qquad x+y\\le 7\n\\]"
         },
         {
-          "title": "So shade the triangular region",
+          "title": "Read the graph",
           "body": "So shade the triangular region above \\(y=1\\), to the right of \\(x=2\\), and below the line \\(x+y=7\\). Its vertices are\n\n\\[\n(2,1),\\quad (2,5),\\quad (6,1)\n\\]"
         }
       ],
@@ -121,19 +121,19 @@
       "topicNote": "Statistics Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "The mode is , and",
+          "title": "Calculate statistic",
           "body": "The mode is \\(9\\), and \\(d\\) appears three times, so\n\n\\[\nd=9\n\\]"
         },
         {
-          "title": "The range is , so",
+          "title": "Calculate statistic",
           "body": "The range is \\(4\\), so\n\n\\[\nd-a=4\n\\]\n\n\\[\n9-a=4\n\\]\n\n\\[\na=5\n\\]"
         },
         {
-          "title": "There are six values, so",
+          "title": "Calculate statistic",
           "body": "There are six values, so the median is the mean of the 3rd and 4th values:\n\n\\[\n\\frac{c+d}{2}=8\n\\]\n\n\\[\n\\frac{c+9}{2}=8\n\\]\n\n\\[\nc=7\n\\]"
         },
         {
-          "title": "Since , the remaining integer",
+          "title": "Solve inequality",
           "body": "Since \\(a<b<c<d\\), the remaining integer is \\(b=6\\)."
         }
       ],
@@ -146,11 +146,11 @@
       "topicNote": "Standard & Compound Units. The pressure formula is the key signal, with volume used at the end.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate area",
           "body": "\\[\n\\text{pressure}=\\frac{\\text{force}}{\\text{area}}\n\\]"
         },
         {
-          "title": "So the area of the",
+          "title": "Calculate area",
           "body": "So the area of the base is\n\n\\[\n\\text{area}=\\frac{72}{1.4}=51.428571\\ldots\n\\]"
         },
         {
@@ -158,7 +158,7 @@
           "body": "The volume is\n\n\\[\n51.428571\\ldots \\times 18=925.714285\\ldots\n\\]"
         },
         {
-          "title": "Correct to 3 significant figures,",
+          "title": "Calculate volume",
           "body": "Correct to 3 significant figures,\n\n\\[\n925.714\\ldots \\approx 926\n\\]"
         }
       ],
@@ -171,15 +171,15 @@
       "topicNote": "Compound Interest & Depreciation. The tag is correct.",
       "steps": [
         {
-          "title": "For part (a), the 2021",
+          "title": "Use compound interest",
           "body": "For part (a), the 2021 value is \\(104\\%\\) of the 2020 value.\n\n\\[\n\\text{2020 value}=\\frac{634400}{1.04}=610000\n\\]"
         },
         {
-          "title": "For part (b), after one",
+          "title": "Use compound interest",
           "body": "For part (b), after one year the multiplier is \\(0.85\\). After two years:\n\n\\[\n0.85^2=0.7225\n\\]"
         },
         {
-          "title": "So of the value remains,",
+          "title": "Use compound interest",
           "body": "So \\(72.25\\%\\) of the value remains, and the total depreciation is\n\n\\[\n100\\%-72.25\\%=27.75\\%\n\\]"
         }
       ],
@@ -192,11 +192,11 @@
       "topicNote": "Powers, Roots & Standard Form. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Convert standard form",
           "body": "\\[\n0.000089=8.9\\times 10^{-5}\n\\]"
         },
         {
-          "title": "Also",
+          "title": "Convert standard form",
           "body": "Also\n\n\\[\n8.34\\times 10^4=83400\n\\]"
         }
       ],
@@ -217,7 +217,7 @@
           "body": "Each part is\n\n\\[\n300\\div 15=20\n\\]"
         },
         {
-          "title": "So the numbers of cards",
+          "title": "Split the ratio",
           "body": "So the numbers of cards are:\n\n\\[\n140,\\quad 100,\\quad 60\n\\]"
         },
         {
@@ -229,7 +229,7 @@
           "body": "The anniversary cards with numbers are\n\n\\[\n36\\%\\times 100=36\n\\]"
         },
         {
-          "title": "So the total with numbers",
+          "title": "Split the ratio",
           "body": "So the total with numbers is\n\n\\[\n56+36=92\n\\]"
         },
         {
@@ -246,15 +246,15 @@
       "topicNote": "Simultaneous Equations. The tag is correct.",
       "steps": [
         {
-          "title": "From",
+          "title": "Solve simultaneous equations",
           "body": "From\n\n\\[\n3x-y=7\n\\]\n\n\\[\ny=3x-7\n\\]"
         },
         {
-          "title": "Substitute into",
+          "title": "Solve simultaneous equations",
           "body": "Substitute into \\(7x+3y=3\\):\n\n\\[\n7x+3(3x-7)=3\n\\]\n\n\\[\n16x-21=3\n\\]\n\n\\[\n16x=24\n\\]\n\n\\[\nx=1.5\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Solve simultaneous equations",
           "body": "Then\n\n\\[\ny=3(1.5)-7=-2.5\n\\]"
         }
       ],
@@ -267,11 +267,11 @@
       "topicNote": "Percentages. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate percentage",
           "body": "\\[\n\\frac25=40\\%\n\\]"
         },
         {
-          "title": "So Payments 1 and 2",
+          "title": "Calculate percentage",
           "body": "So Payments 1 and 2 together are\n\n\\[\n40\\%+45\\%=85\\%\n\\]"
         },
         {
@@ -279,7 +279,7 @@
           "body": "This means Payment 3 is\n\n\\[\n100\\%-85\\%=15\\%\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate percentage",
           "body": "So\n\n\\[\n15\\%=405\n\\]\n\n\\[\n1\\%=27\n\\]"
         },
         {
@@ -296,15 +296,15 @@
       "topicNote": "Functions. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\nf(10)=\\frac{2(10)}{10-6}=\\frac{20}{4}=5\n\\]"
         },
         {
-          "title": "For the inverse, let",
+          "title": "Let",
           "body": "For the inverse, let\n\n\\[\ny=\\frac{2x}{x-6}\n\\]\n\n\\[\ny(x-6)=2x\n\\]\n\n\\[\nxy-6y=2x\n\\]\n\n\\[\nx(y-2)=6y\n\\]\n\n\\[\nx=\\frac{6y}{y-2}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\nf^{-1}:x\\mapsto \\frac{6x}{x-2}\n\\]"
         }
       ],
@@ -317,7 +317,7 @@
       "topicNote": "Circle Theorems. The tag is correct.",
       "steps": [
         {
-          "title": "In cyclic quadrilateral , opposite",
+          "title": "Use trigonometry",
           "body": "In cyclic quadrilateral \\(A D C B\\), opposite angles add to \\(180^\\circ\\).\n\n\\[\n\\angle DCB=180^\\circ-40^\\circ=140^\\circ\n\\]"
         },
         {
@@ -325,11 +325,11 @@
           "body": "Reason: opposite angles in a cyclic quadrilateral add to \\(180^\\circ\\)."
         },
         {
-          "title": "By the alternate segment theorem,",
+          "title": "Use trigonometry",
           "body": "By the alternate segment theorem,\n\n\\[\n\\angle ADB=66^\\circ\n\\]"
         },
         {
-          "title": "In triangle ,",
+          "title": "Use trigonometry",
           "body": "In triangle \\(ADB\\),\n\n\\[\n\\angle ABD=180^\\circ-40^\\circ-66^\\circ=74^\\circ\n\\]"
         },
         {
@@ -337,7 +337,7 @@
           "body": "The angle at the centre is twice the angle at the circumference standing on the same chord \\(AD\\):\n\n\\[\n\\angle AOD=2(74^\\circ)=148^\\circ\n\\]"
         },
         {
-          "title": "Since , triangle is isosceles",
+          "title": "Use trigonometry",
           "body": "Since \\(OA=OD\\), triangle \\(AOD\\) is isosceles:\n\n\\[\n\\angle ADO=\\frac{180^\\circ-148^\\circ}{2}=16^\\circ\n\\]"
         }
       ],
@@ -354,27 +354,27 @@
           "body": "Plot the cumulative frequency points and join with a smooth increasing curve:\n\n\\[\n(10,0),\\ (20,13),\\ (30,36),\\ (40,42),\\ (50,47),\\ (60,52),\\ (70,56),\\ (80,60)\n\\]"
         },
         {
-          "title": "There are people, so the",
+          "title": "Use cumulative frequency",
           "body": "There are \\(60\\) people, so the median is read at cumulative frequency \\(30\\)."
         },
         {
-          "title": "Using linear interpolation between and",
+          "title": "Convert standard form",
           "body": "Using linear interpolation between \\((20,13)\\) and \\((30,36)\\):\n\n\\[\n20+\\frac{30-13}{36-13}\\times 10 \\approx 27.4\n\\]"
         },
         {
-          "title": "So the median is about",
+          "title": "Use cumulative frequency",
           "body": "So the median is about \\(27\\) years."
         },
         {
-          "title": "For the interquartile range, read",
+          "title": "Use cumulative frequency",
           "body": "For the interquartile range, read \\(Q_1\\) at cumulative frequency \\(15\\) and \\(Q_3\\) at cumulative frequency \\(45\\):\n\n\\[\nQ_1 \\approx 20.9,\\qquad Q_3 \\approx 46\n\\]\n\n\\[\n\\text{IQR}\\approx 46-20.9=25.1\n\\]"
         },
         {
-          "title": "So the IQR is about",
+          "title": "Use cumulative frequency",
           "body": "So the IQR is about \\(25\\) years."
         },
         {
-          "title": "At age , the cumulative",
+          "title": "Use cumulative frequency",
           "body": "At age \\(55\\), the cumulative frequency is about \\(49.5\\), so the number older than \\(55\\) is\n\n\\[\n60-49.5\\approx 10.5\n\\]"
         },
         {
@@ -391,7 +391,7 @@
       "topicNote": "Direct & Inverse Proportion. The tag is correct.",
       "steps": [
         {
-          "title": "Since is directly proportional to",
+          "title": "Find inverse function",
           "body": "Since \\(M\\) is directly proportional to \\(h^3\\),\n\n\\[\nM=kh^3\n\\]"
         },
         {
@@ -399,7 +399,7 @@
           "body": "Use \\(M=4\\) when \\(h=0.5\\):\n\n\\[\n4=k(0.5)^3\n\\]\n\n\\[\n4=0.125k\n\\]\n\n\\[\nk=32\n\\]"
         },
         {
-          "title": "Now use",
+          "title": "Use",
           "body": "Now use \\(M=500\\):\n\n\\[\n500=32h^3\n\\]\n\n\\[\nh^3=15.625\n\\]\n\n\\[\nh=2.5\n\\]"
         }
       ],
@@ -412,7 +412,7 @@
       "topicNote": "Differentiation. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Differentiate",
           "body": "\\[\ns=4t^2+\\frac{125}{t}\n\\]"
         },
         {
@@ -424,7 +424,7 @@
           "body": "Set \\(v=0\\):\n\n\\[\n8t-\\frac{125}{t^2}=0\n\\]\n\n\\[\n8t^3=125\n\\]\n\n\\[\nt^3=\\frac{125}{8}\n\\]\n\n\\[\nt=2.5\n\\]"
         },
         {
-          "title": "Now find",
+          "title": "Differentiate",
           "body": "Now find \\(s\\):\n\n\\[\ns=4(2.5)^2+\\frac{125}{2.5}\n\\]\n\n\\[\ns=25+50=75\n\\]"
         }
       ],
@@ -441,7 +441,7 @@
           "body": "Factorise:\n\n\\[\n2y^2-7y-30=(2y+5)(y-6)\n\\]"
         },
         {
-          "title": "So",
+          "title": "Solve inequality",
           "body": "So\n\n\\[\n(2y+5)(y-6)\\le 0\n\\]"
         },
         {
@@ -449,7 +449,7 @@
           "body": "The roots are\n\n\\[\ny=-\\frac52,\\qquad y=6\n\\]"
         },
         {
-          "title": "The quadratic opens upwards, so",
+          "title": "Solve quadratic equation",
           "body": "The quadratic opens upwards, so it is less than or equal to zero between the roots."
         }
       ],
@@ -466,7 +466,7 @@
           "body": "The volume of statue \\(B\\) is \\(80\\%\\) of the volume of statue \\(A\\), so the volume scale factor is\n\n\\[\n0.8\n\\]"
         },
         {
-          "title": "For similar solids",
+          "title": "Calculate area",
           "body": "For similar solids:\n\n\\[\n\\text{linear scale factor}=\\sqrt[3]{0.8}\n\\]"
         },
         {
@@ -474,11 +474,11 @@
           "body": "The surface area scale factor is therefore\n\n\\[\n\\left(\\sqrt[3]{0.8}\\right)^2=0.8^{2/3}\n\\]\n\n\\[\n0.8^{2/3}=0.861773\\ldots\n\\]"
         },
         {
-          "title": "So the percentage decrease in",
+          "title": "Convert standard form",
           "body": "So the percentage decrease in surface area is\n\n\\[\n(1-0.861773\\ldots)\\times 100=13.8226\\ldots\n\\]"
         },
         {
-          "title": "Correct to 3 significant figures,",
+          "title": "Calculate area",
           "body": "Correct to 3 significant figures,\n\n\\[\nk=13.8\n\\]"
         }
       ],
@@ -491,23 +491,23 @@
       "topicNote": "Simultaneous Equations. The tag is correct; this is a linear and quadratic simultaneous equation.",
       "steps": [
         {
-          "title": "From",
+          "title": "Solve simultaneous equations",
           "body": "From\n\n\\[\nx-2y=3\n\\]\n\n\\[\nx=2y+3\n\\]"
         },
         {
-          "title": "Substitute into",
+          "title": "Solve simultaneous equations",
           "body": "Substitute into \\(x^2-y^2+2x=10\\):\n\n\\[\n(2y+3)^2-y^2+2(2y+3)=10\n\\]\n\n\\[\n4y^2+12y+9-y^2+4y+6=10\n\\]\n\n\\[\n3y^2+16y+5=0\n\\]\n\n\\[\n(3y+1)(y+5)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Solve simultaneous equations",
           "body": "So\n\n\\[\ny=-\\frac13\\quad\\text{or}\\quad y=-5\n\\]"
         },
         {
-          "title": "If ,",
+          "title": "Solve simultaneous equations",
           "body": "If \\(y=-\\frac13\\),\n\n\\[\nx=2\\left(-\\frac13\\right)+3=\\frac73\n\\]"
         },
         {
-          "title": "If ,",
+          "title": "Solve simultaneous equations",
           "body": "If \\(y=-5\\),\n\n\\[\nx=2(-5)+3=-7\n\\]"
         }
       ],
@@ -520,11 +520,11 @@
       "topicNote": "Algebraic Fractions. The tag is correct because the task is substitution and simplification of algebraic fractions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify fraction",
           "body": "\\[\na=\\frac{14}{3x-7},\\qquad x=\\frac{7}{4y-3}\n\\]"
         },
         {
-          "title": "Substitute for",
+          "title": "Simplify fraction",
           "body": "Substitute for \\(x\\):\n\n\\[\na=\\frac{14}{3\\left(\\frac{7}{4y-3}\\right)-7}\n\\]"
         },
         {
@@ -532,7 +532,7 @@
           "body": "Simplify the denominator:\n\n\\[\n3\\left(\\frac{7}{4y-3}\\right)-7\n=\\frac{21}{4y-3}-7\n\\]\n\n\\[\n=\\frac{21-7(4y-3)}{4y-3}\n=\\frac{42-28y}{4y-3}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Simplify fraction",
           "body": "So\n\n\\[\na=\\frac{14}{\\frac{42-28y}{4y-3}}\n=\\frac{14(4y-3)}{42-28y}\n\\]\n\n\\[\na=\\frac{4y-3}{3-2y}\n\\]"
         }
       ],
@@ -545,11 +545,11 @@
       "topicNote": "Volume & Surface Area. The tag is correct.",
       "steps": [
         {
-          "title": "The curved surface area of",
+          "title": "Calculate surface area",
           "body": "The curved surface area of a cone is\n\n\\[\n\\pi r l\n\\]"
         },
         {
-          "title": "Here and , so",
+          "title": "Calculate area",
           "body": "Here \\(r=20\\) and \\(\\pi r l=580\\pi\\), so\n\n\\[\n20l=580\n\\]\n\n\\[\nl=29\n\\]"
         },
         {
@@ -569,7 +569,7 @@
           "body": "Total volume:\n\n\\[\n2800\\pi+\\frac{16000}{3}\\pi\n=\\frac{24400}{3}\\pi\n\\]"
         },
         {
-          "title": "Since the volume is ,",
+          "title": "Calculate area",
           "body": "Since the volume is \\(k\\pi\\),\n\n\\[\nk=\\frac{24400}{3}\n\\]"
         }
       ],
@@ -582,35 +582,35 @@
       "topicNote": "Vectors. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use vectors",
           "body": "\\[\n\\overrightarrow{OA}=4a,\\qquad \\overrightarrow{OB}=6b,\\qquad \\overrightarrow{AP}=2a+8b\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use vectors",
           "body": "So\n\n\\[\n\\overrightarrow{OP}=\\overrightarrow{OA}+\\overrightarrow{AP}\n\\]\n\n\\[\n\\overrightarrow{OP}=4a+(2a+8b)=6a+8b\n\\]"
         },
         {
-          "title": "Since are collinear, let",
+          "title": "Use vectors",
           "body": "Since \\(O,Q,P\\) are collinear, let\n\n\\[\n\\overrightarrow{OQ}=\\lambda(6a+8b)\n\\]"
         },
         {
-          "title": "Also lies on . Let",
+          "title": "Use vectors",
           "body": "Also \\(Q\\) lies on \\(AB\\). Let\n\n\\[\n\\overrightarrow{AQ}=\\mu\\overrightarrow{AB}\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Use vectors",
           "body": "Then\n\n\\[\n\\overrightarrow{AB}=6b-4a\n\\]\n\n\\[\n\\overrightarrow{OQ}=4a+\\mu(6b-4a)\n\\]\n\n\\[\n\\overrightarrow{OQ}=(4-4\\mu)a+6\\mu b\n\\]"
         },
         {
-          "title": "Compare coefficients with",
+          "title": "Use vectors",
           "body": "Compare coefficients with\n\n\\[\n\\lambda(6a+8b)=6\\lambda a+8\\lambda b\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use vectors",
           "body": "So\n\n\\[\n4-4\\mu=6\\lambda,\\qquad 6\\mu=8\\lambda\n\\]"
         },
         {
-          "title": "From ,",
+          "title": "Use vectors",
           "body": "From \\(6\\mu=8\\lambda\\),\n\n\\[\n\\lambda=\\frac34\\mu\n\\]"
         },
         {
@@ -618,7 +618,7 @@
           "body": "Substitute:\n\n\\[\n4-4\\mu=6\\left(\\frac34\\mu\\right)\n\\]\n\n\\[\n4-4\\mu=\\frac92\\mu\n\\]\n\n\\[\n8=17\\mu\n\\]\n\n\\[\n\\mu=\\frac8{17}\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Use vectors",
           "body": "Therefore\n\n\\[\nAQ:QB=\\frac8{17}:\\frac9{17}=8:9\n\\]"
         }
       ],
@@ -635,11 +635,11 @@
           "body": "Let the first term be \\(a\\) and the common difference be \\(d\\).\n\n\\[\nS_n=\\frac n2(2a+(n-1)d)\n\\]"
         },
         {
-          "title": "So",
+          "title": "Find the nth term",
           "body": "So\n\n\\[\nS_{10}=5(2a+9d)\n\\]"
         },
         {
-          "title": "and",
+          "title": "Find the nth term",
           "body": "and\n\n\\[\nS_5=\\frac52(2a+4d)\n\\]"
         },
         {
@@ -664,23 +664,23 @@
       "topicNote": "Simultaneous Equations. The tag is correct; this is a linear and quadratic simultaneous equation.",
       "steps": [
         {
-          "title": "From",
+          "title": "Solve simultaneous equations",
           "body": "From\n\n\\[\nx-2y=3\n\\]\n\n\\[\nx=2y+3\n\\]"
         },
         {
-          "title": "Substitute into",
+          "title": "Solve simultaneous equations",
           "body": "Substitute into \\(x^2-y^2+2x=10\\):\n\n\\[\n(2y+3)^2-y^2+2(2y+3)=10\n\\]\n\n\\[\n4y^2+12y+9-y^2+4y+6=10\n\\]\n\n\\[\n3y^2+16y+5=0\n\\]\n\n\\[\n(3y+1)(y+5)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Solve simultaneous equations",
           "body": "So\n\n\\[\ny=-\\frac13\\quad\\text{or}\\quad y=-5\n\\]"
         },
         {
-          "title": "If ,",
+          "title": "Solve simultaneous equations",
           "body": "If \\(y=-\\frac13\\),\n\n\\[\nx=2\\left(-\\frac13\\right)+3=\\frac73\n\\]"
         },
         {
-          "title": "If ,",
+          "title": "Solve simultaneous equations",
           "body": "If \\(y=-5\\),\n\n\\[\nx=2(-5)+3=-7\n\\]"
         }
       ],
@@ -693,11 +693,11 @@
       "topicNote": "Algebraic Fractions. The tag is correct because the task is substitution and simplification of algebraic fractions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify fraction",
           "body": "\\[\na=\\frac{14}{3x-7},\\qquad x=\\frac{7}{4y-3}\n\\]"
         },
         {
-          "title": "Substitute for",
+          "title": "Simplify fraction",
           "body": "Substitute for \\(x\\):\n\n\\[\na=\\frac{14}{3\\left(\\frac{7}{4y-3}\\right)-7}\n\\]"
         },
         {
@@ -705,7 +705,7 @@
           "body": "Simplify the denominator:\n\n\\[\n3\\left(\\frac{7}{4y-3}\\right)-7\n=\\frac{21}{4y-3}-7\n\\]\n\n\\[\n=\\frac{21-7(4y-3)}{4y-3}\n=\\frac{42-28y}{4y-3}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Simplify fraction",
           "body": "So\n\n\\[\na=\\frac{14}{\\frac{42-28y}{4y-3}}\n=\\frac{14(4y-3)}{42-28y}\n\\]\n\n\\[\na=\\frac{4y-3}{3-2y}\n\\]"
         }
       ],
@@ -718,11 +718,11 @@
       "topicNote": "Volume & Surface Area. The tag is correct.",
       "steps": [
         {
-          "title": "The curved surface area of",
+          "title": "Calculate surface area",
           "body": "The curved surface area of a cone is\n\n\\[\n\\pi r l\n\\]"
         },
         {
-          "title": "Here and , so",
+          "title": "Calculate area",
           "body": "Here \\(r=20\\) and \\(\\pi r l=580\\pi\\), so\n\n\\[\n20l=580\n\\]\n\n\\[\nl=29\n\\]"
         },
         {
@@ -742,7 +742,7 @@
           "body": "Total volume:\n\n\\[\n2800\\pi+\\frac{16000}{3}\\pi\n=\\frac{24400}{3}\\pi\n\\]"
         },
         {
-          "title": "Since the volume is ,",
+          "title": "Calculate area",
           "body": "Since the volume is \\(k\\pi\\),\n\n\\[\nk=\\frac{24400}{3}\n\\]"
         }
       ],
@@ -755,35 +755,35 @@
       "topicNote": "Vectors. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use vectors",
           "body": "\\[\n\\overrightarrow{OA}=4a,\\qquad \\overrightarrow{OB}=6b,\\qquad \\overrightarrow{AP}=2a+8b\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use vectors",
           "body": "So\n\n\\[\n\\overrightarrow{OP}=\\overrightarrow{OA}+\\overrightarrow{AP}\n\\]\n\n\\[\n\\overrightarrow{OP}=4a+(2a+8b)=6a+8b\n\\]"
         },
         {
-          "title": "Since are collinear, let",
+          "title": "Use vectors",
           "body": "Since \\(O,Q,P\\) are collinear, let\n\n\\[\n\\overrightarrow{OQ}=\\lambda(6a+8b)\n\\]"
         },
         {
-          "title": "Also lies on . Let",
+          "title": "Use vectors",
           "body": "Also \\(Q\\) lies on \\(AB\\). Let\n\n\\[\n\\overrightarrow{AQ}=\\mu\\overrightarrow{AB}\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Use vectors",
           "body": "Then\n\n\\[\n\\overrightarrow{AB}=6b-4a\n\\]\n\n\\[\n\\overrightarrow{OQ}=4a+\\mu(6b-4a)\n\\]\n\n\\[\n\\overrightarrow{OQ}=(4-4\\mu)a+6\\mu b\n\\]"
         },
         {
-          "title": "Compare coefficients with",
+          "title": "Use vectors",
           "body": "Compare coefficients with\n\n\\[\n\\lambda(6a+8b)=6\\lambda a+8\\lambda b\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use vectors",
           "body": "So\n\n\\[\n4-4\\mu=6\\lambda,\\qquad 6\\mu=8\\lambda\n\\]"
         },
         {
-          "title": "From ,",
+          "title": "Use vectors",
           "body": "From \\(6\\mu=8\\lambda\\),\n\n\\[\n\\lambda=\\frac34\\mu\n\\]"
         },
         {
@@ -791,7 +791,7 @@
           "body": "Substitute:\n\n\\[\n4-4\\mu=6\\left(\\frac34\\mu\\right)\n\\]\n\n\\[\n4-4\\mu=\\frac92\\mu\n\\]\n\n\\[\n8=17\\mu\n\\]\n\n\\[\n\\mu=\\frac8{17}\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Use vectors",
           "body": "Therefore\n\n\\[\nAQ:QB=\\frac8{17}:\\frac9{17}=8:9\n\\]"
         }
       ],
@@ -808,11 +808,11 @@
           "body": "Let the first term be \\(a\\) and the common difference be \\(d\\).\n\n\\[\nS_n=\\frac n2(2a+(n-1)d)\n\\]"
         },
         {
-          "title": "So",
+          "title": "Find the nth term",
           "body": "So\n\n\\[\nS_{10}=5(2a+9d)\n\\]"
         },
         {
-          "title": "and",
+          "title": "Find the nth term",
           "body": "and\n\n\\[\nS_5=\\frac52(2a+4d)\n\\]"
         },
         {

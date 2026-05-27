@@ -10,7 +10,7 @@ window.SOLUTION_DATA = {
         "body": "Write both numbers as products of prime factors:\n\n\\[\n28=2^2\\times 7\n\\]\n\n\\[\n105=3\\times 5\\times 7\n\\]"
       },
       {
-        "title": "For the lowest common multiple,",
+        "title": "Find the LCM",
         "body": "For the lowest common multiple, take the highest power of each prime:\n\n\\[\n\\text{LCM}=2^2\\times 3\\times 5\\times 7=420\n\\]"
       }
     ],
@@ -23,15 +23,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Powers, roots and standard form. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Convert standard form",
         "body": "\\[\n7.8\\times 10^{-4}=0.00078\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Convert standard form",
         "body": "For part (b),\n\n\\[\n5.6\\times 10^4+7\\times 10^3=56000+7000=63000\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Convert standard form",
         "body": "Then\n\n\\[\n\\frac{63000}{2.8\\times 10^{-3}}=\\frac{63000}{0.0028}\n\\]\n\n\\[\n=22500000=2.25\\times 10^7\n\\]"
       }
     ],
@@ -44,7 +44,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Compound Interest and Depreciation. The tag is correct.",
     "steps": [
       {
-        "title": "After the first 2 years,",
+        "title": "Use compound interest",
         "body": "After the first 2 years,\n\n\\[\n6000(1.015)^2=6181.35\n\\]"
       },
       {
@@ -61,11 +61,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Estimate the value",
         "body": "\\[\nP=\\frac{2a-c}{d}\n\\]"
       },
       {
-        "title": "For the upper bound of",
+        "title": "Find upper bound",
         "body": "For the upper bound of \\(P\\), make the numerator as large as possible and the denominator as small as possible.\n\n\\[\na<58.45,\\quad c\\ge 19.5,\\quad d\\ge 3.55\n\\]\n\n\\[\nP_{\\text{upper}}=\\frac{2(58.45)-19.5}{3.55}=27.4366\\ldots\n\\]"
       }
     ],
@@ -78,23 +78,23 @@ window.SOLUTION_DATA = {
     "topicNote": "Ratio Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "Girls boys , so there",
+        "title": "Split the ratio",
         "body": "Girls : boys \\(=3:5\\), so there are \\(8\\) parts.\n\n\\[\n\\text{girls}=120\\times \\frac38=45\n\\]\n\n\\[\n\\text{boys}=120\\times \\frac58=75\n\\]"
       },
       {
-        "title": "Boys climbing",
+        "title": "Split the ratio",
         "body": "Boys climbing:\n\n\\[\n\\frac{16}{25}\\times 75=48\n\\]"
       },
       {
-        "title": "Boys sailing",
+        "title": "Split the ratio",
         "body": "Boys sailing:\n\n\\[\n75-48=27\n\\]"
       },
       {
-        "title": "For the girls, twice as",
+        "title": "Split the ratio",
         "body": "For the girls, twice as many go sailing as climbing, so the girls are split in the ratio\n\n\\[\n\\text{sailing}:\\text{climbing}=2:1\n\\]"
       },
       {
-        "title": "Girls sailing",
+        "title": "Split the ratio",
         "body": "Girls sailing:\n\n\\[\n\\frac23\\times 45=30\n\\]"
       },
       {
@@ -111,15 +111,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Algebraic Roots & Indices. The question includes surds and fractional indices; the algebraic-index part is the stronger topic signal.",
     "steps": [
       {
-        "title": "First,",
+        "title": "Simplify surd",
         "body": "First,\n\n\\[\n\\sqrt{12}=2\\sqrt3\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify surd",
         "body": "So\n\n\\[\n6+2\\sqrt{12}=6+4\\sqrt3\n\\]"
       },
       {
-        "title": "Now square",
+        "title": "Simplify surd",
         "body": "Now square:\n\n\\[\n(6+4\\sqrt3)^2=36+48\\sqrt3+48\n\\]\n\n\\[\n=84+48\\sqrt3\n\\]"
       },
       {
@@ -127,7 +127,7 @@ window.SOLUTION_DATA = {
         "body": "Factor out \\(12\\):\n\n\\[\n84+48\\sqrt3=12(7+4\\sqrt3)\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Simplify surd",
         "body": "For part (b),\n\n\\[\n\\left(\\frac{27a^{12}}{t^{15}}\\right)^{-\\frac23}\n=\\left(\\frac{t^{15}}{27a^{12}}\\right)^{\\frac23}\n\\]\n\n\\[\n=\\frac{t^{10}}{9a^8}\n\\]"
       }
     ],
@@ -165,7 +165,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nf(x)=x^2-2x\n\\]\n\n\\[\ng(x)=x+3\n\\]\n\n\\[\nh(x)=fg(x)=f(g(x))\n\\]\n\n\\[\nh(x)=(x+3)^2-2(x+3)\n\\]\n\n\\[\nh(x)=x^2+4x+3\n\\]\n\n\\[\nh(x)=(x+2)^2-1\n\\]"
       },
       {
@@ -173,7 +173,7 @@ window.SOLUTION_DATA = {
         "body": "Let\n\n\\[\ny=(x+2)^2-1\n\\]"
       },
       {
-        "title": "Since the domain is ,",
+        "title": "Find inverse function",
         "body": "Since the domain is \\(x\\ge -2\\), take the positive square root:\n\n\\[\nx+2=\\sqrt{y+1}\n\\]\n\n\\[\nx=\\sqrt{y+1}-2\n\\]"
       }
     ],
@@ -186,7 +186,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Coordinate geometry. The tag is correct.",
     "steps": [
       {
-        "title": "(a) The midpoint of and",
+        "title": "Find the midpoint",
         "body": "(a) The midpoint of \\(A(5,-4)\\) and \\(B(13,1)\\) is\n\\[\n\\left(\\frac{5+13}{2},\\frac{-4+1}{2}\\right)\n\\]\n\n\\[\n=(9,-1.5)\n\\]"
       },
       {
@@ -198,11 +198,11 @@ window.SOLUTION_DATA = {
         "body": "The gradient is \\(-3\\)."
       },
       {
-        "title": "(c) For ,",
+        "title": "Calculate value",
         "body": "(c) For \\(x=100\\),\n\\[\ny=2-3(100)=-298\n\\]"
       },
       {
-        "title": "The point has , not",
+        "title": "Calculate value",
         "body": "The point has \\(y=-302\\), not \\(-298\\), so it does not lie on the line."
       }
     ],
@@ -215,19 +215,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Since is the midpoint of",
+        "title": "Find the midpoint",
         "body": "Since \\(M\\) is the midpoint of \\(JK\\),\n\n\\[\nM=\\left(\\frac{j+6}{2},\\frac{15+k}{2}\\right)\n\\]"
       },
       {
-        "title": "The gradient of is 2,",
+        "title": "Find the gradient",
         "body": "The gradient of \\(HM\\) is 2, and \\(H=(-4,1)\\).\n\n\\[\n\\frac{\\frac{15+k}{2}-1}{\\frac{j+6}{2}+4}=2\n\\]\n\n\\[\n\\frac{k+13}{j+14}=2\n\\]\n\n\\[\nk=2j+15\n\\]"
       },
       {
-        "title": "Also,",
+        "title": "Simplify surd",
         "body": "Also,\n\n\\[\nJK=\\sqrt{80}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\n(6-j)^2+(k-15)^2=80\n\\]"
       },
       {
@@ -235,11 +235,11 @@ window.SOLUTION_DATA = {
         "body": "Substitute \\(k=2j+15\\):\n\n\\[\n(6-j)^2+(2j)^2=80\n\\]\n\n\\[\nj^2-12j+36+4j^2=80\n\\]\n\n\\[\n5j^2-12j-44=0\n\\]\n\n\\[\n(5j+10)(j-4.4)=0\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Solve inequality",
         "body": "Since \\(j<0\\),\n\n\\[\nj=-2\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\n\\[\nk=2(-2)+15=11\n\\]"
       }
     ],
@@ -252,7 +252,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\ny=4(x-1)^2-a\n\\]"
       },
       {
@@ -260,23 +260,23 @@ window.SOLUTION_DATA = {
         "body": "The turning point is read directly from the completed square form:\n\n\\[\n(1,-a)\n\\]"
       },
       {
-        "title": "For the intercept, put",
+        "title": "Find intercepts",
         "body": "For the \\(y\\)-intercept, put \\(x=0\\):\n\n\\[\ny=4(0-1)^2-a\n\\]\n\n\\[\ny=4-a\n\\]"
       },
       {
-        "title": "So the intercept is",
+        "title": "Find intercepts",
         "body": "So the \\(y\\)-intercept is\n\n\\[\n(0,4-a)\n\\]"
       },
       {
-        "title": "For the intercepts, put",
+        "title": "Find intercepts",
         "body": "For the \\(x\\)-intercepts, put \\(y=0\\):\n\n\\[\n4(x-1)^2-a=0\n\\]\n\n\\[\n4(x-1)^2=a\n\\]\n\n\\[\n(x-1)^2=\\frac{a}{4}\n\\]\n\n\\[\nx-1=\\pm \\frac{\\sqrt a}{2}\n\\]\n\n\\[\nx=1\\pm \\frac{\\sqrt a}{2}\n\\]"
       },
       {
-        "title": "So the intercepts are",
+        "title": "Find intercepts",
         "body": "So the \\(x\\)-intercepts are\n\n\\[\n\\left(1-\\frac{\\sqrt a}{2},0\\right)\n\\quad \\text{and} \\quad\n\\left(1+\\frac{\\sqrt a}{2},0\\right)\n\\]"
       },
       {
-        "title": "Since , the turning point",
+        "title": "Solve inequality",
         "body": "Since \\(a>4\\), the turning point is below the \\(x\\)-axis and the curve crosses the \\(x\\)-axis twice."
       }
     ],
@@ -301,7 +301,7 @@ window.SOLUTION_DATA = {
         "body": "It is above the line\n\\[\ny=\\frac13x-2\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\\[\ny\\geq \\frac13x-2\n\\]"
       }
     ],
@@ -318,15 +318,15 @@ window.SOLUTION_DATA = {
         "body": "The volume is\n\\[\nV=(2x+5)(x+1)(3-x)\n\\]"
       },
       {
-        "title": "First expand",
+        "title": "Expand brackets",
         "body": "First expand:\n\\[\n(2x+5)(x+1)=2x^2+7x+5\n\\]\n\n\\[\nV=(2x^2+7x+5)(3-x)\n\\]\n\n\\[\nV=15+16x-x^2-2x^3\n\\]"
       },
       {
-        "title": "For the maximum volume,",
+        "title": "Calculate volume",
         "body": "For the maximum volume,\n\\[\n\\frac{dV}{dx}=0\n\\]\n\n\\[\n\\frac{dV}{dx}=16-2x-6x^2\n\\]\n\n\\[\n16-2x-6x^2=0\n\\]\n\n\\[\n3x^2+x-8=0\n\\]"
       },
       {
-        "title": "Using the quadratic formula,",
+        "title": "Solve quadratic equation",
         "body": "Using the quadratic formula,\n\\[\nx=\\frac{-1\\pm\\sqrt{97}}{6}\n\\]"
       },
       {
@@ -343,7 +343,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This is a pressure and volume question.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate area",
         "body": "\\[\n\\text{pressure}=\\frac{\\text{force}}{\\text{area}}\n\\]\n\n\\[\n0.14=\\frac{56}{\\text{area}}\n\\]\n\n\\[\n\\text{area}=\\frac{56}{0.14}=400\\text{ cm}^2\n\\]"
       },
       {
@@ -376,7 +376,7 @@ window.SOLUTION_DATA = {
         "body": "The right rectangle has height\n\\[\n9-6=3\\text{ cm}\n\\]"
       },
       {
-        "title": "So its area is",
+        "title": "Calculate area",
         "body": "So its area is\n\\[\n3x\n\\]"
       },
       {
@@ -393,7 +393,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Right-Angled Triangles - Pythagoras & Trigonometry. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use trigonometry",
         "body": "\\[\n\\cos 63^\\circ=\\frac{24.3}{PQ}\n\\]\n\n\\[\nPQ=\\frac{24.3}{\\cos 63^\\circ}=53.525\\ldots\n\\]"
       }
     ],
@@ -414,7 +414,7 @@ window.SOLUTION_DATA = {
         "body": "**Answer:** \\(131\\text{ cm}^2\\)."
       },
       {
-        "title": "(b) In triangle ,",
+        "title": "Use trigonometry",
         "body": "(b) In triangle \\(EFG\\),\n\n\\[\nEG^2=9.3^2+14.7^2-2(9.3)(14.7)\\cos106^\\circ\n\\]\n\n\\[\nEG=19.440\\ldots\n\\]"
       }
     ],
@@ -431,7 +431,7 @@ window.SOLUTION_DATA = {
         "body": "The projection of \\(AH\\) onto the base plane is the diagonal of the base rectangle:\n\n\\[\n\\sqrt{9^2+5^2}=\\sqrt{106}\n\\]"
       },
       {
-        "title": "The vertical height is ,",
+        "title": "Use trigonometry",
         "body": "The vertical height is \\(6\\text{ cm}\\), so\n\n\\[\n\\tan\\theta=\\frac{6}{\\sqrt{106}}\n\\]\n\n\\[\n\\theta=30.232\\ldots^\\circ\n\\]"
       }
     ],
@@ -490,27 +490,27 @@ window.SOLUTION_DATA = {
         "body": "There are \\(80\\) people."
       },
       {
-        "title": "For the interquartile range",
+        "title": "Use cumulative frequency",
         "body": "For the interquartile range:\n\n\\[\nQ_1 \\text{ is at cumulative frequency }20\n\\]\n\n\\[\nQ_3 \\text{ is at cumulative frequency }60\n\\]"
       },
       {
-        "title": "From the graph,",
+        "title": "Use cumulative frequency",
         "body": "From the graph,\n\n\\[\nQ_1\\approx 38,\\qquad Q_3\\approx 56\n\\]\n\n\\[\n\\text{IQR}\\approx 56-38=18\n\\]"
       },
       {
-        "title": "At minutes, the cumulative frequency",
+        "title": "Use cumulative frequency",
         "body": "At \\(50\\) minutes, the cumulative frequency is about \\(42\\)."
       },
       {
-        "title": "No women took minutes or",
+        "title": "Use cumulative frequency",
         "body": "No women took \\(50\\) minutes or less, so these \\(42\\) people are men.\n\n\\[\n0.6 \\times \\text{number of men}=42\n\\]\n\n\\[\n\\text{number of men}=\\frac{42}{0.6}=70\n\\]"
       }
     ],
     "finalAnswer": "IQR about \\(18\\) minutes, and about \\(70\\) men."
   },
   "all::Jan2020_P1H__Q18__p22-22__m04__Probability-Toolkit": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
@@ -528,7 +528,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nf(x)=x^2-2x\n\\]\n\n\\[\ng(x)=x+3\n\\]\n\n\\[\nh(x)=fg(x)=f(g(x))\n\\]\n\n\\[\nh(x)=(x+3)^2-2(x+3)\n\\]\n\n\\[\nh(x)=x^2+4x+3\n\\]\n\n\\[\nh(x)=(x+2)^2-1\n\\]"
       },
       {
@@ -536,7 +536,7 @@ window.SOLUTION_DATA = {
         "body": "Let\n\n\\[\ny=(x+2)^2-1\n\\]"
       },
       {
-        "title": "Since the domain is ,",
+        "title": "Find inverse function",
         "body": "Since the domain is \\(x\\ge -2\\), take the positive square root:\n\n\\[\nx+2=\\sqrt{y+1}\n\\]\n\n\\[\nx=\\sqrt{y+1}-2\n\\]"
       }
     ],
@@ -549,19 +549,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Since is the midpoint of",
+        "title": "Find the midpoint",
         "body": "Since \\(M\\) is the midpoint of \\(JK\\),\n\n\\[\nM=\\left(\\frac{j+6}{2},\\frac{15+k}{2}\\right)\n\\]"
       },
       {
-        "title": "The gradient of is 2,",
+        "title": "Find the gradient",
         "body": "The gradient of \\(HM\\) is 2, and \\(H=(-4,1)\\).\n\n\\[\n\\frac{\\frac{15+k}{2}-1}{\\frac{j+6}{2}+4}=2\n\\]\n\n\\[\n\\frac{k+13}{j+14}=2\n\\]\n\n\\[\nk=2j+15\n\\]"
       },
       {
-        "title": "Also,",
+        "title": "Simplify surd",
         "body": "Also,\n\n\\[\nJK=\\sqrt{80}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\n(6-j)^2+(k-15)^2=80\n\\]"
       },
       {
@@ -569,11 +569,11 @@ window.SOLUTION_DATA = {
         "body": "Substitute \\(k=2j+15\\):\n\n\\[\n(6-j)^2+(2j)^2=80\n\\]\n\n\\[\nj^2-12j+36+4j^2=80\n\\]\n\n\\[\n5j^2-12j-44=0\n\\]\n\n\\[\n(5j+10)(j-4.4)=0\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Solve inequality",
         "body": "Since \\(j<0\\),\n\n\\[\nj=-2\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\n\\[\nk=2(-2)+15=11\n\\]"
       }
     ],
@@ -586,7 +586,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\ny=4(x-1)^2-a\n\\]"
       },
       {
@@ -594,23 +594,23 @@ window.SOLUTION_DATA = {
         "body": "The turning point is read directly from the completed square form:\n\n\\[\n(1,-a)\n\\]"
       },
       {
-        "title": "For the intercept, put",
+        "title": "Find intercepts",
         "body": "For the \\(y\\)-intercept, put \\(x=0\\):\n\n\\[\ny=4(0-1)^2-a\n\\]\n\n\\[\ny=4-a\n\\]"
       },
       {
-        "title": "So the intercept is",
+        "title": "Find intercepts",
         "body": "So the \\(y\\)-intercept is\n\n\\[\n(0,4-a)\n\\]"
       },
       {
-        "title": "For the intercepts, put",
+        "title": "Find intercepts",
         "body": "For the \\(x\\)-intercepts, put \\(y=0\\):\n\n\\[\n4(x-1)^2-a=0\n\\]\n\n\\[\n4(x-1)^2=a\n\\]\n\n\\[\n(x-1)^2=\\frac{a}{4}\n\\]\n\n\\[\nx-1=\\pm \\frac{\\sqrt a}{2}\n\\]\n\n\\[\nx=1\\pm \\frac{\\sqrt a}{2}\n\\]"
       },
       {
-        "title": "So the intercepts are",
+        "title": "Find intercepts",
         "body": "So the \\(x\\)-intercepts are\n\n\\[\n\\left(1-\\frac{\\sqrt a}{2},0\\right)\n\\quad \\text{and} \\quad\n\\left(1+\\frac{\\sqrt a}{2},0\\right)\n\\]"
       },
       {
-        "title": "Since , the turning point",
+        "title": "Solve inequality",
         "body": "Since \\(a>4\\), the turning point is below the \\(x\\)-axis and the curve crosses the \\(x\\)-axis twice."
       }
     ],
@@ -623,7 +623,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Set notation and Venn diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nB=\\{b,l,u,e\\},\\quad G=\\{g,r,e,y\\},\\quad W=\\{w,h,i,t,e\\}\n\\]"
       },
       {
@@ -631,7 +631,7 @@ window.SOLUTION_DATA = {
         "body": "\\(B \\cup G\\) means all the letters that are in \\(B\\) or in \\(G\\).\n\n\\[\nB \\cup G=\\{b,l,u,e,g,r,y\\}\n\\]"
       },
       {
-        "title": "means letters that are in",
+        "title": "Calculate statistic",
         "body": "\\(W \\cap G'\\) means letters that are in \\(W\\), but not in \\(G\\). Since \\(e\\) is in \\(G\\), it is not included.\n\n\\[\nW \\cap G'=\\{w,h,i,t\\}\n\\]"
       },
       {
@@ -648,11 +648,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Fractions. The tag is correct.",
     "steps": [
       {
-        "title": "Convert the mixed numbers to",
+        "title": "Simplify fraction",
         "body": "Convert the mixed numbers to improper fractions:\n\n\\[\n3\\frac15=\\frac{16}{5}\n\\]\n\n\\[\n2\\frac58=\\frac{21}{8}\n\\]"
       },
       {
-        "title": "Now multiply",
+        "title": "Simplify fraction",
         "body": "Now multiply:\n\n\\[\n\\frac{16}{5}\\times \\frac{21}{8}\n=\\frac{2\\times 21}{5}\n\\]\n\n\\[\n=\\frac{42}{5}=8\\frac25\n\\]"
       }
     ],
@@ -682,15 +682,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
     "steps": [
       {
-        "title": "The weight kg correct to",
+        "title": "Estimate the value",
         "body": "The weight \\(4.3\\) kg correct to 2 significant figures has bounds\n\n\\[\n4.25\\le w<4.35\n\\]"
       },
       {
-        "title": "So the upper bound is",
+        "title": "Find upper bound",
         "body": "So the upper bound is \\(4.35\\) kg and the lower bound is \\(4.25\\) kg."
       },
       {
-        "title": "For",
+        "title": "Estimate the value",
         "body": "For\n\n\\[\nG=e-f\n\\]"
       },
       {
@@ -761,11 +761,11 @@ window.SOLUTION_DATA = {
         "body": "(a) Let\n\\[\nx=0.5727272\\ldots\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\\[\n1000x=572.727272\\ldots\n\\]"
       },
       {
-        "title": "and",
+        "title": "Calculate value",
         "body": "and\n\\[\n10x=5.727272\\ldots\n\\]"
       },
       {
@@ -773,7 +773,7 @@ window.SOLUTION_DATA = {
         "body": "Subtract:\n\\[\n990x=567\n\\]\n\n\\[\nx=\\frac{567}{990}=\\frac{63}{110}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\\[\n0.5\\dot7\\dot2=\\frac{63}{110}\n\\]"
       },
       {
@@ -790,7 +790,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Solving quadratic equations. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve quadratic equation",
         "body": "\\[\nx^2-5x-36=0\n\\]"
       },
       {
@@ -798,7 +798,7 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\\[\n(x-9)(x+4)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Solve quadratic equation",
         "body": "So\n\\[\nx=9 \\quad \\text{or} \\quad x=-4\n\\]"
       }
     ],
@@ -811,7 +811,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Functions. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nf(x)=(x-4)^2\n\\]"
       },
       {
@@ -848,11 +848,11 @@ window.SOLUTION_DATA = {
         "body": "The point \\(P\\) is approximately\n\\[\n(2,2.4)\n\\]"
       },
       {
-        "title": "Using ,",
+        "title": "Find the gradient",
         "body": "Using \\(y=mx+c\\),\n\\[\n2.4\\approx -0.6(2)+c\n\\]\n\n\\[\nc\\approx3.6\n\\]"
       },
       {
-        "title": "So an approximate tangent equation",
+        "title": "Find the gradient",
         "body": "So an approximate tangent equation is\n\\[\ny\\approx -0.6x+3.6\n\\]"
       },
       {
@@ -860,7 +860,7 @@ window.SOLUTION_DATA = {
         "body": "The equation \\(f(x)=k\\) has exactly two different solutions when the horizontal line touches one turning level."
       },
       {
-        "title": "From the graph, these levels",
+        "title": "Find the gradient",
         "body": "From the graph, these levels are approximately\n\\[\nk=3 \\quad \\text{and} \\quad k=-1\n\\]"
       }
     ],
@@ -873,23 +873,23 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "For part (a), the graph",
+        "title": "Read the graph",
         "body": "For part (a), the graph has maximum \\(2.5\\) and minimum \\(-2.5\\), so\n\n\\[\na=2.5\n\\]"
       },
       {
-        "title": "The maximum occurs at .",
+        "title": "Use trigonometry",
         "body": "The maximum occurs at \\(x=60^\\circ\\). For \\(y=a\\cos(x+b)^\\circ\\), a maximum occurs when\n\n\\[\nx+b=360\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\n60+b=360\n\\]\n\n\\[\nb=300\n\\]"
       },
       {
-        "title": "For part (b), the minimum",
+        "title": "Calculate value",
         "body": "For part (b), the minimum point of \\(y=f(x)\\) is \\((4,5)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(2x)\n\\]"
       },
       {
@@ -897,7 +897,7 @@ window.SOLUTION_DATA = {
         "body": "the \\(x\\)-coordinate is divided by 2:\n\n\\[\n(4,5)\\to(2,5)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x)-7\n\\]"
       },
       {
@@ -914,15 +914,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\ns=t^3+4t^2-5t+7\n\\]"
       },
       {
-        "title": "Velocity is the derivative of",
+        "title": "Evaluate fraction",
         "body": "Velocity is the derivative of displacement:\n\n\\[\nv=\\frac{ds}{dt}=3t^2+8t-5\n\\]"
       },
       {
-        "title": "At time , the velocity",
+        "title": "Calculate value",
         "body": "At time \\(T\\), the velocity is \\(V\\), so\n\n\\[\nV=3T^2+8T-5\n\\]\n\n\\[\n3T^2+8T-(V+5)=0\n\\]"
       },
       {
@@ -930,7 +930,7 @@ window.SOLUTION_DATA = {
         "body": "Use the quadratic formula:\n\n\\[\nT=\\frac{-8\\pm\\sqrt{8^2-4(3)(-(V+5))}}{2(3)}\n\\]\n\n\\[\nT=\\frac{-8\\pm\\sqrt{64+12V+60}}{6}\n\\]\n\n\\[\nT=\\frac{-8\\pm\\sqrt{124+12V}}{6}\n\\]\n\n\\[\nT=\\frac{-4\\pm\\sqrt{31+3V}}{3}\n\\]"
       },
       {
-        "title": "Since , take the positive",
+        "title": "Simplify surd",
         "body": "Since \\(T\\ge 0\\), take the positive root:\n\n\\[\nT=\\frac{-4+\\sqrt{31+3V}}{3}\n\\]"
       }
     ],
@@ -947,7 +947,7 @@ window.SOLUTION_DATA = {
         "body": "Convert the mass to grams:\n\\[\n5.73\\text{ kg}=5730\\text{ g}\n\\]"
       },
       {
-        "title": "Using",
+        "title": "Calculate volume",
         "body": "Using\n\\[\n\\text{density}=\\frac{\\text{mass}}{\\text{volume}}\n\\]\n\n\\[\n\\text{volume of gold}=\\frac{5730}{19.32}=296.58\\ldots\\text{ cm}^3\n\\]"
       },
       {
@@ -980,7 +980,7 @@ window.SOLUTION_DATA = {
         "body": "The angle at the centre is twice the angle at the circumference:\n\\[\n\\angle AOC=2\\times 38^\\circ=76^\\circ\n\\]"
       },
       {
-        "title": "Since , triangle is isosceles",
+        "title": "Use trigonometry",
         "body": "Since \\(OA=OC\\), triangle \\(AOC\\) is isosceles.\n\n\\[\n\\angle OAC=\\angle OCA=\\frac{180^\\circ-76^\\circ}{2}=52^\\circ\n\\]"
       }
     ],
@@ -997,11 +997,11 @@ window.SOLUTION_DATA = {
         "body": "The garden is a semicircle of radius \\(7.2\\text{ m}\\).\n\n\\[\n\\text{area}=\\frac12\\pi r^2\n\\]\n\n\\[\n\\text{area}=\\frac12\\pi(7.2)^2=81.43\\ldots\\text{ m}^2\n\\]"
       },
       {
-        "title": "Yuen has 12 boxes, and",
+        "title": "Calculate area",
         "body": "Yuen has 12 boxes, and each box covers \\(6\\text{ m}^2\\):\n\\[\n12\\times 6=72\\text{ m}^2\n\\]"
       },
       {
-        "title": "Since",
+        "title": "Calculate area",
         "body": "Since\n\\[\n72<81.43\\ldots\n\\]"
       },
       {
@@ -1055,7 +1055,7 @@ window.SOLUTION_DATA = {
         "body": "The small cone has height \\(h\\), so its linear scale factor compared with the large cone is\n\n\\[\n\\frac{h}{2h}=\\frac12\n\\]"
       },
       {
-        "title": "So the small cone has",
+        "title": "Define cone dimensions",
         "body": "So the small cone has radius\n\n\\[\n\\frac r2\n\\]"
       },
       {
@@ -1067,11 +1067,11 @@ window.SOLUTION_DATA = {
         "body": "Volume of the small cone:\n\n\\[\n\\frac13\\pi\\left(\\frac r2\\right)^2h=\\frac1{12}\\pi r^2h\n\\]"
       },
       {
-        "title": "So the volume of the",
+        "title": "Calculate volume",
         "body": "So the volume of the frustum is\n\n\\[\n\\frac23\\pi r^2h-\\frac1{12}\\pi r^2h=\\frac7{12}\\pi r^2h\n\\]"
       },
       {
-        "title": "The sphere has radius ,",
+        "title": "Calculate volume",
         "body": "The sphere has radius \\(r\\), so its volume is\n\n\\[\n\\frac43\\pi r^3\n\\]"
       },
       {
@@ -1092,11 +1092,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Right-Angled Triangles - Pythagoras & Trigonometry. The tag is correct.",
     "steps": [
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(DEF\\),\n\\[\nEF=12\\cos 40^\\circ=9.192\\ldots\n\\]"
       },
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(EFG\\),\n\\[\n\\sin 28^\\circ=\\frac{EF}{EG}\n\\]\n\n\\[\nEG=\\frac{9.192\\ldots}{\\sin 28^\\circ}=19.580\\ldots\n\\]"
       }
     ],
@@ -1109,11 +1109,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "In triangle , and",
+        "title": "Use trigonometry",
         "body": "In triangle \\(BEC\\), \\(CE=13\\) and \\(\\angle BEC=40^\\circ\\)."
       },
       {
-        "title": "Since this is a prism,",
+        "title": "Find the gradient",
         "body": "Since this is a prism, \\(BE\\) is perpendicular to the cross section, so triangle \\(BEC\\) is right-angled at \\(B\\).\n\n\\[\nBC=13\\sin40^\\circ\n\\]\n\n\\[\nBC=8.356238\\ldots\n\\]"
       },
       {
@@ -1121,11 +1121,11 @@ window.SOLUTION_DATA = {
         "body": "The area of triangle \\(ABC\\) is \\(22\\text{ cm}^2\\)."
       },
       {
-        "title": "Using",
+        "title": "Use trigonometry",
         "body": "Using\n\n\\[\n\\text{Area}=\\frac12 ab\\sin C\n\\]\n\n\\[\n22=\\frac12(AC)(BC)\\sin(\\angle ACB)\n\\]\n\n\\[\n22=\\frac12(6)(8.356238\\ldots)\\sin(\\angle ACB)\n\\]\n\n\\[\n\\sin(\\angle ACB)=0.877587\\ldots\n\\]"
       },
       {
-        "title": "The angle is obtuse, so",
+        "title": "Use trigonometry",
         "body": "The angle \\(ACB\\) is obtuse, so\n\n\\[\n\\angle ACB=180^\\circ-\\sin^{-1}(0.877587\\ldots)\n\\]\n\n\\[\n\\angle ACB=118.647\\ldots^\\circ\n\\]"
       },
       {
@@ -1175,11 +1175,11 @@ window.SOLUTION_DATA = {
         "body": "Use the relative histogram heights."
       },
       {
-        "title": "For , the relative area",
+        "title": "Calculate area",
         "body": "For \\(155<h\\le 170\\), the relative area is\n\n\\[\n5(40)+10(20)=400\n\\]"
       },
       {
-        "title": "This represents students, so each",
+        "title": "Calculate area",
         "body": "This represents \\(160\\) students, so each relative area unit represents\n\n\\[\n\\frac{160}{400}=0.4\n\\]"
       },
       {
@@ -1208,15 +1208,15 @@ window.SOLUTION_DATA = {
         "body": "The median is at cumulative frequency \\(30\\)."
       },
       {
-        "title": "From the graph,",
+        "title": "Use cumulative frequency",
         "body": "From the graph,\n\n\\[\n\\text{median}\\approx 22.5\\text{ minutes}\n\\]"
       },
       {
-        "title": "For the interquartile range",
+        "title": "Use cumulative frequency",
         "body": "For the interquartile range:\n\n\\[\nQ_1 \\text{ is at }15,\\qquad Q_3 \\text{ is at }45\n\\]"
       },
       {
-        "title": "From the graph,",
+        "title": "Use cumulative frequency",
         "body": "From the graph,\n\n\\[\nQ_1\\approx 16.5,\\qquad Q_3\\approx 28.5\n\\]\n\n\\[\n\\text{IQR}\\approx 28.5-16.5=12\n\\]"
       },
       {
@@ -1224,28 +1224,28 @@ window.SOLUTION_DATA = {
         "body": "Hospital B has median \\(28\\) minutes and IQR \\(19\\) minutes."
       },
       {
-        "title": "So Hospital A has a",
+        "title": "Use cumulative frequency",
         "body": "So Hospital A has a shorter median waiting time and a smaller spread."
       }
     ],
     "finalAnswer": "median about \\(22.5\\) minutes, IQR about \\(12\\) minutes. Hospital A is quicker and more consistent."
   },
   "all::Jan2020_P1HR__Q16__p16-16__m04__Combined-and-Conditional-Probability": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Combined & Conditional Probability. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate probability",
         "body": "\\[\nP(\\text{win tennis})=0.6\n\\]\n\n\\[\nP(\\text{win both})=0.42\n\\]"
       },
       {
-        "title": "So the chess win probability",
+        "title": "Calculate probability",
         "body": "So the chess win probability used with the tennis result is\n\n\\[\n0.42\\div 0.6=0.7\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Calculate probability",
         "body": "Therefore\n\n\\[\nP(\\text{lose tennis})=0.4,\\qquad P(\\text{lose chess})=0.3\n\\]\n\n\\[\nP(\\text{not win either})=0.4\\times 0.3=0.12\n\\]"
       }
     ],
@@ -1258,23 +1258,23 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "For part (a), the graph",
+        "title": "Read the graph",
         "body": "For part (a), the graph has maximum \\(2.5\\) and minimum \\(-2.5\\), so\n\n\\[\na=2.5\n\\]"
       },
       {
-        "title": "The maximum occurs at .",
+        "title": "Use trigonometry",
         "body": "The maximum occurs at \\(x=60^\\circ\\). For \\(y=a\\cos(x+b)^\\circ\\), a maximum occurs when\n\n\\[\nx+b=360\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\n60+b=360\n\\]\n\n\\[\nb=300\n\\]"
       },
       {
-        "title": "For part (b), the minimum",
+        "title": "Calculate value",
         "body": "For part (b), the minimum point of \\(y=f(x)\\) is \\((4,5)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(2x)\n\\]"
       },
       {
@@ -1282,7 +1282,7 @@ window.SOLUTION_DATA = {
         "body": "the \\(x\\)-coordinate is divided by 2:\n\n\\[\n(4,5)\\to(2,5)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x)-7\n\\]"
       },
       {
@@ -1299,15 +1299,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\ns=t^3+4t^2-5t+7\n\\]"
       },
       {
-        "title": "Velocity is the derivative of",
+        "title": "Evaluate fraction",
         "body": "Velocity is the derivative of displacement:\n\n\\[\nv=\\frac{ds}{dt}=3t^2+8t-5\n\\]"
       },
       {
-        "title": "At time , the velocity",
+        "title": "Calculate value",
         "body": "At time \\(T\\), the velocity is \\(V\\), so\n\n\\[\nV=3T^2+8T-5\n\\]\n\n\\[\n3T^2+8T-(V+5)=0\n\\]"
       },
       {
@@ -1315,7 +1315,7 @@ window.SOLUTION_DATA = {
         "body": "Use the quadratic formula:\n\n\\[\nT=\\frac{-8\\pm\\sqrt{8^2-4(3)(-(V+5))}}{2(3)}\n\\]\n\n\\[\nT=\\frac{-8\\pm\\sqrt{64+12V+60}}{6}\n\\]\n\n\\[\nT=\\frac{-8\\pm\\sqrt{124+12V}}{6}\n\\]\n\n\\[\nT=\\frac{-4\\pm\\sqrt{31+3V}}{3}\n\\]"
       },
       {
-        "title": "Since , take the positive",
+        "title": "Simplify surd",
         "body": "Since \\(T\\ge 0\\), take the positive root:\n\n\\[\nT=\\frac{-4+\\sqrt{31+3V}}{3}\n\\]"
       }
     ],
@@ -1340,7 +1340,7 @@ window.SOLUTION_DATA = {
         "body": "The small cone has height \\(h\\), so its linear scale factor compared with the large cone is\n\n\\[\n\\frac{h}{2h}=\\frac12\n\\]"
       },
       {
-        "title": "So the small cone has",
+        "title": "Define cone dimensions",
         "body": "So the small cone has radius\n\n\\[\n\\frac r2\n\\]"
       },
       {
@@ -1352,11 +1352,11 @@ window.SOLUTION_DATA = {
         "body": "Volume of the small cone:\n\n\\[\n\\frac13\\pi\\left(\\frac r2\\right)^2h=\\frac1{12}\\pi r^2h\n\\]"
       },
       {
-        "title": "So the volume of the",
+        "title": "Calculate volume",
         "body": "So the volume of the frustum is\n\n\\[\n\\frac23\\pi r^2h-\\frac1{12}\\pi r^2h=\\frac7{12}\\pi r^2h\n\\]"
       },
       {
-        "title": "The sphere has radius ,",
+        "title": "Calculate volume",
         "body": "The sphere has radius \\(r\\), so its volume is\n\n\\[\n\\frac43\\pi r^3\n\\]"
       },
       {
@@ -1377,11 +1377,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "In triangle , and",
+        "title": "Use trigonometry",
         "body": "In triangle \\(BEC\\), \\(CE=13\\) and \\(\\angle BEC=40^\\circ\\)."
       },
       {
-        "title": "Since this is a prism,",
+        "title": "Find the gradient",
         "body": "Since this is a prism, \\(BE\\) is perpendicular to the cross section, so triangle \\(BEC\\) is right-angled at \\(B\\).\n\n\\[\nBC=13\\sin40^\\circ\n\\]\n\n\\[\nBC=8.356238\\ldots\n\\]"
       },
       {
@@ -1389,11 +1389,11 @@ window.SOLUTION_DATA = {
         "body": "The area of triangle \\(ABC\\) is \\(22\\text{ cm}^2\\)."
       },
       {
-        "title": "Using",
+        "title": "Use trigonometry",
         "body": "Using\n\n\\[\n\\text{Area}=\\frac12 ab\\sin C\n\\]\n\n\\[\n22=\\frac12(AC)(BC)\\sin(\\angle ACB)\n\\]\n\n\\[\n22=\\frac12(6)(8.356238\\ldots)\\sin(\\angle ACB)\n\\]\n\n\\[\n\\sin(\\angle ACB)=0.877587\\ldots\n\\]"
       },
       {
-        "title": "The angle is obtuse, so",
+        "title": "Use trigonometry",
         "body": "The angle \\(ACB\\) is obtuse, so\n\n\\[\n\\angle ACB=180^\\circ-\\sin^{-1}(0.877587\\ldots)\n\\]\n\n\\[\n\\angle ACB=118.647\\ldots^\\circ\n\\]"
       },
       {
@@ -1431,19 +1431,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Percentages. The question compares percentage changes and a discount.",
     "steps": [
       {
-        "title": "From 2016 to 2017, the",
+        "title": "Convert standard form",
         "body": "From 2016 to 2017, the increase is\n\n\\[\n545-500=45\n\\]\n\n\\[\n\\frac{45}{500}\\times 100=9\\%\n\\]"
       },
       {
-        "title": "From 2017 to 2018, the",
+        "title": "Convert standard form",
         "body": "From 2017 to 2018, the increase is\n\n\\[\n592-545=47\n\\]\n\n\\[\n\\frac{47}{545}\\times 100\\approx 8.62\\%\n\\]"
       },
       {
-        "title": "So Brigitte is not correct",
+        "title": "Calculate percentage",
         "body": "So Brigitte is not correct because the second percentage increase is smaller."
       },
       {
-        "title": "For Henri, is of the",
+        "title": "Calculate percentage",
         "body": "For Henri, \\(952\\) is \\(85\\%\\) of the original price because there is a \\(15\\%\\) discount.\n\n\\[\n\\text{original price}=952\\div 0.85=1120\n\\]"
       },
       {
@@ -1460,7 +1460,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Surds. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\n\\text{width}=\\frac{18}{\\sqrt7+1}\n\\]"
       },
       {
@@ -1477,7 +1477,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Exchange Rates & Best Buys. The question is mainly about comparing value for money using an exchange rate; standard form is secondary.",
     "steps": [
       {
-        "title": "Dane Oil costs Krone for",
+        "title": "Convert standard form",
         "body": "Dane Oil costs \\(2500000\\) Krone for\n\n\\[\n4.2\\times 10^5=420000\n\\]"
       },
       {
@@ -1485,7 +1485,7 @@ window.SOLUTION_DATA = {
         "body": "litres.\n\n\\[\n\\text{Dane cost per litre}=\\frac{2500000}{420000}=5.952\\ldots\n\\]"
       },
       {
-        "title": "So Dane Oil costs about",
+        "title": "Convert standard form",
         "body": "So Dane Oil costs about \\(5.95\\) Krone per litre."
       },
       {
@@ -1531,15 +1531,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Sine/Cosine Rule to Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use trigonometry",
         "body": "\\[\n\\left(\\frac4{2x-5}-\\frac3{2x-3}\\right)\\div\n\\frac{9x-4x^3}{6x^2-17x+5}\n\\]"
       },
       {
-        "title": "First simplify the bracket",
+        "title": "Use trigonometry",
         "body": "First simplify the bracket:\n\n\\[\n\\frac4{2x-5}-\\frac3{2x-3}\n=\\frac{4(2x-3)-3(2x-5)}{(2x-5)(2x-3)}\n\\]\n\n\\[\n=\\frac{8x-12-6x+15}{(2x-5)(2x-3)}\n\\]\n\n\\[\n=\\frac{2x+3}{(2x-5)(2x-3)}\n\\]"
       },
       {
-        "title": "Now factor the second fraction",
+        "title": "Use trigonometry",
         "body": "Now factor the second fraction:\n\n\\[\n9x-4x^3=-x(2x-3)(2x+3)\n\\]\n\n\\[\n6x^2-17x+5=(2x-5)(3x-1)\n\\]"
       },
       {
@@ -1560,7 +1560,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Rearranging formulas. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Rearrange formula",
         "body": "\\[\ny=\\sqrt{\\frac{x+1}{x-4}}\n\\]"
       },
       {
@@ -1606,7 +1606,7 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\\[\n(x-8)(x+5)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Solve quadratic equation",
         "body": "So\n\\[\nx=8 \\quad \\text{or} \\quad x=-5\n\\]"
       }
     ],
@@ -1631,7 +1631,7 @@ window.SOLUTION_DATA = {
         "body": "This is an arithmetic sequence."
       },
       {
-        "title": "First term",
+        "title": "Use trigonometry",
         "body": "First term:\n\n\\[\n50\n\\]"
       },
       {
@@ -1672,7 +1672,7 @@ window.SOLUTION_DATA = {
         "body": "A perpendicular line has gradient \\(\\frac53\\)."
       },
       {
-        "title": "Through",
+        "title": "Evaluate fraction",
         "body": "Through \\((-6,4)\\):\n\\[\ny-4=\\frac53(x+6)\n\\]"
       },
       {
@@ -1697,11 +1697,11 @@ window.SOLUTION_DATA = {
         "body": "Substitute this into the circle equation:\n\n\\[\nx^2+y^2-2y=24\n\\]\n\n\\[\nx^2+(x+2)^2-2(x+2)=24\n\\]\n\n\\[\nx^2+x^2+4x+4-2x-4=24\n\\]\n\n\\[\n2x^2+2x-24=0\n\\]\n\n\\[\nx^2+x-12=0\n\\]\n\n\\[\n(x+4)(x-3)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\nx=-4 \\quad \\text{or} \\quad x=3\n\\]"
       },
       {
-        "title": "Using",
+        "title": "Calculate value",
         "body": "Using \\(y=x+2\\):\n\n\\[\nx=-4 \\Rightarrow y=-2\n\\]\n\n\\[\nx=3 \\Rightarrow y=5\n\\]"
       }
     ],
@@ -1714,7 +1714,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This is matching equations to graph shapes.",
     "steps": [
       {
-        "title": "For the graph is negative",
+        "title": "Solve equation",
         "body": "For\n\\[\ny=-\\frac{2}{x^2}\n\\]\nthe graph is negative on both sides of the \\(y\\)-axis and is symmetrical in the \\(y\\)-axis."
       },
       {
@@ -1722,7 +1722,7 @@ window.SOLUTION_DATA = {
         "body": "This is Graph D."
       },
       {
-        "title": "For the graph is a",
+        "title": "Solve equation",
         "body": "For\n\\[\ny=-\\frac12x^3\n\\]\nthe graph is a decreasing cubic through the origin."
       },
       {
@@ -1730,7 +1730,7 @@ window.SOLUTION_DATA = {
         "body": "This is Graph B."
       },
       {
-        "title": "For the graph is a",
+        "title": "Solve equation",
         "body": "For\n\\[\ny=\\frac5x\n\\]\nthe graph is a positive reciprocal graph in quadrants 1 and 3."
       },
       {
@@ -1751,7 +1751,7 @@ window.SOLUTION_DATA = {
         "body": "The maximum point of \\(y=f(x)\\) is \\((4,6)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x+4)\n\\]"
       },
       {
@@ -1759,7 +1759,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 4 units left:\n\n\\[\n(4,6)\\to(0,6)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(2x)\n\\]"
       },
       {
@@ -1767,7 +1767,7 @@ window.SOLUTION_DATA = {
         "body": "the \\(x\\)-coordinate is divided by 2:\n\n\\[\n(4,6)\\to(2,6)\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Calculate value",
         "body": "For part (b),\n\n\\[\ny=x^2+3x+4\n\\]"
       },
       {
@@ -1775,11 +1775,11 @@ window.SOLUTION_DATA = {
         "body": "The translation vector is\n\n\\[\n\\begin{pmatrix}4\\\\6\\end{pmatrix}\n\\]"
       },
       {
-        "title": "So the graph moves 4",
+        "title": "Read the graph",
         "body": "So the graph moves 4 units right and 6 units up."
       },
       {
-        "title": "Replace by , then add",
+        "title": "Add 6",
         "body": "Replace \\(x\\) by \\(x-4\\), then add 6:\n\n\\[\ny=(x-4)^2+3(x-4)+4+6\n\\]\n\n\\[\ny=(x-4)^2+3(x-4)+10\n\\]"
       }
     ],
@@ -1792,11 +1792,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This is converting cubic units.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\n1\\text{ m}=100\\text{ cm}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\\[\n1\\text{ m}^3=100^3\\text{ cm}^3=1,000,000\\text{ cm}^3\n\\]\n\n\\[\n32.4\\text{ m}^3=32.4\\times1,000,000\n\\]\n\n\\[\n=32,400,000\\text{ cm}^3\n\\]"
       }
     ],
@@ -1809,7 +1809,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This is a density question.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate volume",
         "body": "\\[\n\\text{mass}=\\text{density}\\times\\text{volume}\n\\]\n\n\\[\n\\text{mass}=19.3\\times150\n\\]\n\n\\[\n\\text{mass}=2895\n\\]"
       }
     ],
@@ -1822,7 +1822,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This is converting metres per second to kilometres per hour.",
     "steps": [
       {
-        "title": "To convert m/s to km/h,",
+        "title": "Convert m/s to km/h multiply",
         "body": "To convert m/s to km/h, multiply by \\(3.6\\).\n\n\\[\n50\\times3.6=180\n\\]"
       }
     ],
@@ -1861,7 +1861,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Circle Theorems. The tag is correct.",
     "steps": [
       {
-        "title": "Since is a diameter,",
+        "title": "Use trigonometry",
         "body": "Since \\(AD\\) is a diameter,\n\\[\n\\angle ABD=90^\\circ\n\\]"
       },
       {
@@ -1869,7 +1869,7 @@ window.SOLUTION_DATA = {
         "body": "Given\n\\[\n\\angle CBD=28^\\circ\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\\[\n\\angle ABC=90^\\circ-28^\\circ=62^\\circ\n\\]"
       },
       {
@@ -1877,7 +1877,7 @@ window.SOLUTION_DATA = {
         "body": "Opposite angles in a cyclic quadrilateral add to \\(180^\\circ\\):\n\\[\n\\angle ADC=180^\\circ-62^\\circ=118^\\circ\n\\]"
       },
       {
-        "title": "At ,",
+        "title": "Use trigonometry",
         "body": "At \\(D\\),\n\\[\n\\angle ADC=\\angle BDA+\\angle BDC\n\\]\n\n\\[\n118^\\circ=32^\\circ+\\angle BDC\n\\]\n\n\\[\n\\angle BDC=86^\\circ\n\\]"
       }
     ],
@@ -1890,7 +1890,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Area & Perimeter. The tag is correct.",
     "steps": [
       {
-        "title": "Triangle is right angled, with",
+        "title": "Use trigonometry",
         "body": "Triangle \\(ACD\\) is right-angled, with\n\\[\nAD=17\\text{ cm},\\qquad CD=15\\text{ cm}\n\\]"
       },
       {
@@ -1898,7 +1898,7 @@ window.SOLUTION_DATA = {
         "body": "Use Pythagoras to find \\(AC\\):\n\\[\nAC^2=17^2-15^2=289-225=64\n\\]\n\n\\[\nAC=8\\text{ cm}\n\\]"
       },
       {
-        "title": "So the semicircle has radius",
+        "title": "Calculate area",
         "body": "So the semicircle has radius\n\\[\nr=4\\text{ cm}\n\\]"
       },
       {
@@ -1927,7 +1927,7 @@ window.SOLUTION_DATA = {
         "body": "The volume of the cone is\n\n\\[\n\\frac{1}{3}\\pi r^2h=1600\n\\]"
       },
       {
-        "title": "The height is cm, so",
+        "title": "Calculate area",
         "body": "The height is \\(25\\) cm, so\n\n\\[\n\\frac{1}{3}\\pi r^2(25)=1600\n\\]\n\n\\[\nr^2=\\frac{4800}{25\\pi}\n\\]\n\n\\[\nr=7.8176\\ldots\n\\]"
       },
       {
@@ -1935,7 +1935,7 @@ window.SOLUTION_DATA = {
         "body": "The slant height is found using Pythagoras:\n\n\\[\nl^2=r^2+25^2\n\\]\n\n\\[\nl=26.1938\\ldots\n\\]"
       },
       {
-        "title": "When the sector is joined",
+        "title": "Calculate area",
         "body": "When the sector is joined to form the cone, the arc length of the sector becomes the circumference of the cone base.\n\n\\[\n\\frac{x}{360}\\times 2\\pi l=2\\pi r\n\\]"
       },
       {
@@ -1952,7 +1952,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Ratio Toolkit to Vectors.",
     "steps": [
       {
-        "title": "Since is the midpoint of",
+        "title": "Split the ratio",
         "body": "Since \\(M\\) is the midpoint of \\(BC\\),\n\n\\[\n\\overrightarrow{AM}=\\frac{\\overrightarrow{AB}+\\overrightarrow{AC}}{2}\n\\]\n\n\\[\n\\overrightarrow{AM}=\\frac{4a+2b}{2}=2a+b\n\\]"
       },
       {
@@ -1964,7 +1964,7 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\n\\[\n\\overrightarrow{AP}=\\frac34(2a+b)=\\frac34\\overrightarrow{AM}\n\\]"
       },
       {
-        "title": "So is of , leaving",
+        "title": "Split the ratio",
         "body": "So \\(AP\\) is \\(\\frac34\\) of \\(AM\\), leaving \\(PM\\) as \\(\\frac14\\) of \\(AM\\)."
       }
     ],
@@ -1996,8 +1996,8 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(\\frac{23}{60}\\), then \\(\\frac35\\)."
   },
   "all::Jan2020_P2H__Q06__p07-07__m04__Probability-Toolkit": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
@@ -2013,13 +2013,13 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(27\\)."
   },
   "all::Jan2020_P2H__Q14__p14-14__m04__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "There are large glasses and",
+        "title": "Calculate probability",
         "body": "There are \\(13\\) large glasses and \\(7\\) small glasses.\n\n\\[\nP(\\text{two small})=\\frac{7}{20}\\times\\frac{6}{19}\n\\]\n\n\\[\n=\\frac{21}{190}\n\\]"
       }
     ],
@@ -2057,15 +2057,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Sine/Cosine Rule to Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use trigonometry",
         "body": "\\[\n\\left(\\frac4{2x-5}-\\frac3{2x-3}\\right)\\div\n\\frac{9x-4x^3}{6x^2-17x+5}\n\\]"
       },
       {
-        "title": "First simplify the bracket",
+        "title": "Use trigonometry",
         "body": "First simplify the bracket:\n\n\\[\n\\frac4{2x-5}-\\frac3{2x-3}\n=\\frac{4(2x-3)-3(2x-5)}{(2x-5)(2x-3)}\n\\]\n\n\\[\n=\\frac{8x-12-6x+15}{(2x-5)(2x-3)}\n\\]\n\n\\[\n=\\frac{2x+3}{(2x-5)(2x-3)}\n\\]"
       },
       {
-        "title": "Now factor the second fraction",
+        "title": "Use trigonometry",
         "body": "Now factor the second fraction:\n\n\\[\n9x-4x^3=-x(2x-3)(2x+3)\n\\]\n\n\\[\n6x^2-17x+5=(2x-5)(3x-1)\n\\]"
       },
       {
@@ -2098,7 +2098,7 @@ window.SOLUTION_DATA = {
         "body": "This is an arithmetic sequence."
       },
       {
-        "title": "First term",
+        "title": "Use trigonometry",
         "body": "First term:\n\n\\[\n50\n\\]"
       },
       {
@@ -2131,11 +2131,11 @@ window.SOLUTION_DATA = {
         "body": "Substitute this into the circle equation:\n\n\\[\nx^2+y^2-2y=24\n\\]\n\n\\[\nx^2+(x+2)^2-2(x+2)=24\n\\]\n\n\\[\nx^2+x^2+4x+4-2x-4=24\n\\]\n\n\\[\n2x^2+2x-24=0\n\\]\n\n\\[\nx^2+x-12=0\n\\]\n\n\\[\n(x+4)(x-3)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\nx=-4 \\quad \\text{or} \\quad x=3\n\\]"
       },
       {
-        "title": "Using",
+        "title": "Calculate value",
         "body": "Using \\(y=x+2\\):\n\n\\[\nx=-4 \\Rightarrow y=-2\n\\]\n\n\\[\nx=3 \\Rightarrow y=5\n\\]"
       }
     ],
@@ -2152,7 +2152,7 @@ window.SOLUTION_DATA = {
         "body": "The maximum point of \\(y=f(x)\\) is \\((4,6)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x+4)\n\\]"
       },
       {
@@ -2160,7 +2160,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 4 units left:\n\n\\[\n(4,6)\\to(0,6)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(2x)\n\\]"
       },
       {
@@ -2168,7 +2168,7 @@ window.SOLUTION_DATA = {
         "body": "the \\(x\\)-coordinate is divided by 2:\n\n\\[\n(4,6)\\to(2,6)\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Calculate value",
         "body": "For part (b),\n\n\\[\ny=x^2+3x+4\n\\]"
       },
       {
@@ -2176,11 +2176,11 @@ window.SOLUTION_DATA = {
         "body": "The translation vector is\n\n\\[\n\\begin{pmatrix}4\\\\6\\end{pmatrix}\n\\]"
       },
       {
-        "title": "So the graph moves 4",
+        "title": "Read the graph",
         "body": "So the graph moves 4 units right and 6 units up."
       },
       {
-        "title": "Replace by , then add",
+        "title": "Add 6",
         "body": "Replace \\(x\\) by \\(x-4\\), then add 6:\n\n\\[\ny=(x-4)^2+3(x-4)+4+6\n\\]\n\n\\[\ny=(x-4)^2+3(x-4)+10\n\\]"
       }
     ],
@@ -2201,7 +2201,7 @@ window.SOLUTION_DATA = {
         "body": "The volume of the cone is\n\n\\[\n\\frac{1}{3}\\pi r^2h=1600\n\\]"
       },
       {
-        "title": "The height is cm, so",
+        "title": "Calculate area",
         "body": "The height is \\(25\\) cm, so\n\n\\[\n\\frac{1}{3}\\pi r^2(25)=1600\n\\]\n\n\\[\nr^2=\\frac{4800}{25\\pi}\n\\]\n\n\\[\nr=7.8176\\ldots\n\\]"
       },
       {
@@ -2209,7 +2209,7 @@ window.SOLUTION_DATA = {
         "body": "The slant height is found using Pythagoras:\n\n\\[\nl^2=r^2+25^2\n\\]\n\n\\[\nl=26.1938\\ldots\n\\]"
       },
       {
-        "title": "When the sector is joined",
+        "title": "Calculate area",
         "body": "When the sector is joined to form the cone, the arc length of the sector becomes the circumference of the cone base.\n\n\\[\n\\frac{x}{360}\\times 2\\pi l=2\\pi r\n\\]"
       },
       {
@@ -2226,7 +2226,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Ratio Toolkit to Vectors.",
     "steps": [
       {
-        "title": "Since is the midpoint of",
+        "title": "Split the ratio",
         "body": "Since \\(M\\) is the midpoint of \\(BC\\),\n\n\\[\n\\overrightarrow{AM}=\\frac{\\overrightarrow{AB}+\\overrightarrow{AC}}{2}\n\\]\n\n\\[\n\\overrightarrow{AM}=\\frac{4a+2b}{2}=2a+b\n\\]"
       },
       {
@@ -2238,7 +2238,7 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\n\\[\n\\overrightarrow{AP}=\\frac34(2a+b)=\\frac34\\overrightarrow{AM}\n\\]"
       },
       {
-        "title": "So is of , leaving",
+        "title": "Split the ratio",
         "body": "So \\(AP\\) is \\(\\frac34\\) of \\(AM\\), leaving \\(PM\\) as \\(\\frac14\\) of \\(AM\\)."
       }
     ],
@@ -2251,7 +2251,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Set notation and Venn diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Let the sets be for",
+        "title": "Let the sets dogs",
         "body": "Let the sets be \\(D\\) for dogs, \\(C\\) for cats, and \\(R\\) for rabbits."
       },
       {
@@ -2259,7 +2259,7 @@ window.SOLUTION_DATA = {
         "body": "The number in all three sets is \\(6\\).\n\n\\[\nD\\cap R \\text{ only}=9-6=3\n\\]\n\n\\[\nC\\cap R \\text{ only}=8-6=2\n\\]\n\n\\[\nD\\cap C \\text{ only}=x-6\n\\]"
       },
       {
-        "title": "So the remaining one set",
+        "title": "Calculate value",
         "body": "So the remaining one-set regions are\n\n\\[\nD \\text{ only}=25-x,\\quad C \\text{ only}=16-x,\\quad R \\text{ only}=9\n\\]"
       },
       {
@@ -2267,7 +2267,7 @@ window.SOLUTION_DATA = {
         "body": "There are \\(5\\) students outside all three sets. The total number of students is \\(50\\), so\n\n\\[\n(25-x)+(16-x)+9+(x-6)+3+2+6+5=50\n\\]\n\n\\[\n60-x=50\n\\]\n\n\\[\nx=10\n\\]"
       },
       {
-        "title": "For , we need students",
+        "title": "Calculate value",
         "body": "For \\(C' \\cap D'\\), we need students who are not in \\(C\\) and not in \\(D\\). These are the rabbit-only students and the students outside all three sets.\n\n\\[\n9+5=14\n\\]"
       }
     ],
@@ -2284,7 +2284,7 @@ window.SOLUTION_DATA = {
         "body": "Use the index law \\(a^m\\times a^n=a^{m+n}\\):\n\n\\[\n5^{17}\\times 5^2=5^{19}\n\\]"
       },
       {
-        "title": "Now write as a product",
+        "title": "Find the LCM",
         "body": "Now write \\(800\\) as a product of prime factors:\n\n\\[\n800=8\\times 100\n\\]\n\n\\[\n800=2^3\\times 2^2\\times 5^2\n\\]\n\n\\[\n800=2^5\\times 5^2\n\\]"
       }
     ],
@@ -2309,11 +2309,11 @@ window.SOLUTION_DATA = {
         "body": "Difference:\n\n\\[\n106000000-68600000=37400000\n\\]\n\n\\[\n37400000=3.74\\times 10^7\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Convert standard form",
         "body": "For part (b),\n\n\\[\nk=\\frac{1.56\\times 10^8}{1.41\\times 10^7}\n\\]\n\n\\[\nk=11.063\\ldots\n\\]"
       },
       {
-        "title": "To the nearest whole number,",
+        "title": "Convert standard form",
         "body": "To the nearest whole number,\n\n\\[\nk=11\n\\]"
       }
     ],
@@ -2330,11 +2330,11 @@ window.SOLUTION_DATA = {
         "body": "A depreciation of \\(19\\%\\) gives a multiplier of\n\n\\[\n1-0.19=0.81\n\\]"
       },
       {
-        "title": "After 3 years,",
+        "title": "Use compound interest",
         "body": "After 3 years,\n\n\\[\n20000(0.81)^3=10628.82\n\\]"
       },
       {
-        "title": "Correct to the nearest dollar,",
+        "title": "Use compound interest",
         "body": "Correct to the nearest dollar,\n\n\\[\n10628.82\\approx 10629\n\\]"
       }
     ],
@@ -2347,19 +2347,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic Roots and Indices. The tag is acceptable because the index-law part carries the larger share of marks.",
     "steps": [
       {
-        "title": "For part (a), factorise the",
+        "title": "Factorise expression",
         "body": "For part (a), factorise the numerator and denominator:\n\n\\[\n10x^2+23x+12=(5x+4)(2x+3)\n\\]\n\n\\[\n4x^2-9=(2x-3)(2x+3)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use index laws",
         "body": "So\n\n\\[\n\\frac{10x^2+23x+12}{4x^2-9}=\\frac{(5x+4)(2x+3)}{(2x-3)(2x+3)}\n\\]\n\n\\[\n=\\frac{5x+4}{2x-3}\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Use index laws",
         "body": "For part (b),\n\n\\[\n2^{2y}\\times 2^{3y+2}=2^{5y+2}\n\\]"
       },
       {
-        "title": "Also,",
+        "title": "Use index laws",
         "body": "Also,\n\n\\[\n\\frac{8^{5y}}{4^n}=\\frac{(2^3)^{5y}}{(2^2)^n}=2^{15y-2n}\n\\]"
       },
       {
@@ -2376,7 +2376,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve inequality",
         "body": "\\[\n7-12x-2x^2=-2x^2-12x+7\n\\]\n\n\\[\n=-2(x^2+6x)+7\n\\]\n\n\\[\n=-2\\left((x+3)^2-9\\right)+7\n\\]\n\n\\[\n=-2(x+3)^2+18+7\n\\]\n\n\\[\n=25-2(x+3)^2\n\\]"
       }
     ],
@@ -2389,7 +2389,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Right-Angled Triangles to Algebraic Proof.",
     "steps": [
       {
-        "title": "Since is a multiple of",
+        "title": "Use trigonometry",
         "body": "Since \\(N\\) is a multiple of 5, let\n\n\\[\nN=5k\n\\]"
       },
       {
@@ -2401,7 +2401,7 @@ window.SOLUTION_DATA = {
         "body": "Given\n\n\\[\nA=N+1,\\qquad B=N-1\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\nA^2-B^2=(N+1)^2-(N-1)^2\n\\]"
       },
       {
@@ -2409,7 +2409,7 @@ window.SOLUTION_DATA = {
         "body": "Expand:\n\n\\[\n(N+1)^2=N^2+2N+1\n\\]\n\n\\[\n(N-1)^2=N^2-2N+1\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Use trigonometry",
         "body": "Therefore\n\n\\[\nA^2-B^2=(N^2+2N+1)-(N^2-2N+1)\n\\]\n\n\\[\n=4N\n\\]"
       },
       {
@@ -2417,7 +2417,7 @@ window.SOLUTION_DATA = {
         "body": "Substitute \\(N=5k\\):\n\n\\[\n4N=4(5k)=20k\n\\]"
       },
       {
-        "title": "Since is an integer, is",
+        "title": "Use trigonometry",
         "body": "Since \\(k\\) is an integer, \\(20k\\) is a multiple of 20."
       }
     ],
@@ -2446,7 +2446,7 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\\[\n(5y+8)(y-5)\\le0\n\\]"
       },
       {
-        "title": "The roots are and .",
+        "title": "Solve quadratic equation",
         "body": "The roots are \\(-\\frac85\\) and \\(5\\). The quadratic is \\(\\le0\\) between the roots."
       }
     ],
@@ -2459,7 +2459,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Simultaneous equations. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve simultaneous equations",
         "body": "\\[\n3x+5y=6\n\\]\n\n\\[\n7x-5y=-11\n\\]"
       },
       {
@@ -2467,15 +2467,15 @@ window.SOLUTION_DATA = {
         "body": "Add the equations:\n\\[\n10x=-5\n\\]\n\n\\[\nx=-\\frac12\n\\]"
       },
       {
-        "title": "Substitute into",
+        "title": "Solve simultaneous equations",
         "body": "Substitute into \\(3x+5y=6\\):\n\\[\n3\\left(-\\frac12\\right)+5y=6\n\\]\n\n\\[\n-\\frac32+5y=6\n\\]\n\n\\[\n5y=\\frac{15}{2}\n\\]\n\n\\[\ny=\\frac32\n\\]"
       }
     ],
     "finalAnswer": "\\(x=-\\frac12\\), \\(y=\\frac32\\)."
   },
   "all::Jan2020_P2HR__Q03__p05-05__m04__Forming-and-Solving-Equations": {
-    "status": "draft",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Corrected to Forming & Solving Equations.",
     "steps": [
@@ -2488,7 +2488,7 @@ window.SOLUTION_DATA = {
         "body": "Let the number of buttons in tin A be \\(x\\)."
       },
       {
-        "title": "Then tin B has buttons",
+        "title": "Solve equation",
         "body": "Then tin B has \\(4x\\) buttons and tin C has \\(x-7\\) buttons.\n\n\\[\nx+4x+(x-7)=137\n\\]\n\n\\[\n6x-7=137\n\\]\n\n\\[\n6x=144\n\\]\n\n\\[\nx=24\n\\]"
       },
       {
@@ -2505,7 +2505,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "First term",
+        "title": "Find the nth term",
         "body": "First term:\n\n\\[\na=-6\n\\]\n\n\\[\nS_{30}=2865\n\\]"
       },
       {
@@ -2526,35 +2526,35 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "For ,",
+        "title": "Evaluate fraction",
         "body": "For \\(L_1\\),\n\n\\[\n5x+10y=8\n\\]\n\n\\[\n10y=-5x+8\n\\]\n\n\\[\ny=-\\frac12x+\\frac45\n\\]"
       },
       {
-        "title": "So the gradient of is",
+        "title": "Find the gradient",
         "body": "So the gradient of \\(L_1\\) is \\(-\\frac12\\)."
       },
       {
-        "title": "Since is perpendicular to ,",
+        "title": "Find the gradient",
         "body": "Since \\(L_2\\) is perpendicular to \\(L_1\\), the gradient of \\(L_2\\) is \\(2\\)."
       },
       {
-        "title": "Using the point",
+        "title": "Calculate value",
         "body": "Using the point \\((8,6)\\):\n\n\\[\ny-6=2(x-8)\n\\]\n\n\\[\ny=2x-10\n\\]"
       },
       {
-        "title": "At , the line crosses",
+        "title": "Calculate value",
         "body": "At \\(A\\), the line crosses the \\(x\\)-axis, so \\(y=0\\):\n\n\\[\n0=2x-10\n\\]\n\n\\[\nx=5\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So \\(A=(5,0)\\)."
       },
       {
-        "title": "At ,",
+        "title": "Calculate value",
         "body": "At \\(B\\), \\(x=-3\\):\n\n\\[\ny=2(-3)-10=-16\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So \\(B=(-3,-16)\\)."
       },
       {
@@ -2571,7 +2571,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This is a table-and-graph question for a quadratic function.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve quadratic equation",
         "body": "\\[\ny=x^2-\\frac{x}{2}-3\n\\]"
       },
       {
@@ -2592,7 +2592,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This combines integer inequalities and a shaded region.",
     "steps": [
       {
-        "title": "For part (a),",
+        "title": "Solve inequality",
         "body": "For part (a),\n\\[\n2<x\\leq4\n\\]"
       },
       {
@@ -2600,7 +2600,7 @@ window.SOLUTION_DATA = {
         "body": "The integer values are\n\\[\n3,4\n\\]"
       },
       {
-        "title": "For the region , the",
+        "title": "Calculate value",
         "body": "For the region \\(R\\), the boundaries are\n\\[\ny=x-3,\n\\qquad\nx+y=5,\n\\qquad\ny=6\n\\]"
       },
       {
@@ -2634,7 +2634,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Standard & Compound Units.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate area",
         "body": "\\[\n\\text{pressure}=\\frac{\\text{force}}{\\text{area}}\n\\]\n\n\\[\n30=\\frac{27}{\\text{area}}\n\\]\n\n\\[\n\\text{area}=\\frac{27}{30}=0.9\\text{ m}^2\n\\]"
       },
       {
@@ -2702,7 +2702,7 @@ window.SOLUTION_DATA = {
         "body": "Each congruent isosceles triangle has two angles of \\(66^\\circ\\)."
       },
       {
-        "title": "So the angle at the",
+        "title": "Use trigonometry",
         "body": "So the angle at the point between the two polygons is\n\\[\n180^\\circ-66^\\circ-66^\\circ=48^\\circ\n\\]"
       },
       {
@@ -2731,7 +2731,7 @@ window.SOLUTION_DATA = {
         "body": "Their heights are in the ratio\n\n\\[\n9:13\n\\]"
       },
       {
-        "title": "So their surface areas are",
+        "title": "Split the ratio",
         "body": "So their surface areas are in the ratio\n\n\\[\n9^2:13^2=81:169\n\\]"
       },
       {
@@ -2756,7 +2756,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Right-Angled Triangles - Pythagoras & Trigonometry.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use trigonometry",
         "body": "\\[\nd^2=8.5^2+5.6^2\n\\]\n\n\\[\nd=\\sqrt{103.61}=10.178\\ldots\n\\]"
       }
     ],
@@ -2769,19 +2769,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Linear Graphs to Vectors.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Read the graph",
         "body": "\\[\n\\vec{OA}=3\\mathbf a,\\qquad \\vec{OB}=6\\mathbf b,\\qquad \\vec{AC}=4\\mathbf b\n\\]"
       },
       {
-        "title": "So",
+        "title": "Read the graph",
         "body": "So\n\n\\[\n\\vec{OC}=3\\mathbf a+4\\mathbf b\n\\]"
       },
       {
-        "title": "Point lies on , so",
+        "title": "Read the graph",
         "body": "Point \\(N\\) lies on \\(OC\\), so\n\n\\[\n\\vec{ON}=t(3\\mathbf a+4\\mathbf b)\n\\]"
       },
       {
-        "title": "Point also lies on ,",
+        "title": "Read the graph",
         "body": "Point \\(N\\) also lies on \\(AB\\), so\n\n\\[\n\\vec{ON}=3\\mathbf a+s(6\\mathbf b-3\\mathbf a)\n\\]\n\n\\[\n\\vec{ON}=(3-3s)\\mathbf a+6s\\mathbf b\n\\]"
       },
       {
@@ -2789,19 +2789,19 @@ window.SOLUTION_DATA = {
         "body": "Equate coefficients:\n\n\\[\n3t=3-3s\n\\]\n\n\\[\n4t=6s\n\\]"
       },
       {
-        "title": "So",
+        "title": "Read the graph",
         "body": "So\n\n\\[\nt=1-s\n\\]"
       },
       {
-        "title": "and",
+        "title": "Read the graph",
         "body": "and\n\n\\[\nt=\\frac32s\n\\]\n\n\\[\n\\frac32s=1-s\n\\]\n\n\\[\n5s=2\n\\]\n\n\\[\ns=\\frac25\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Read the graph",
         "body": "Then\n\n\\[\nt=\\frac35\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Read the graph",
         "body": "Therefore\n\n\\[\n\\vec{ON}=\\frac35(3\\mathbf a+4\\mathbf b)\n\\]\n\n\\[\n\\vec{ON}=\\frac95\\mathbf a+\\frac{12}{5}\\mathbf b\n\\]"
       }
     ],
@@ -2834,17 +2834,17 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(6\\)."
   },
   "all::Jan2020_P2HR__Q16__p16-17__m08__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "For Cody",
+        "title": "Calculate probability",
         "body": "For Cody:\n\n\\[\nP(A\\text{ odd})=\\frac{7}{10},\\qquad P(A\\text{ even})=\\frac{3}{10}\n\\]\n\n\\[\nP(B\\text{ odd})=\\frac{7}{12},\\qquad P(B\\text{ even})=\\frac{5}{12}\n\\]"
       },
       {
-        "title": "An odd total comes from",
+        "title": "Calculate probability",
         "body": "An odd total comes from odd + even or even + odd:\n\n\\[\n\\frac{7}{10}\\times\\frac{5}{12}+\\frac{3}{10}\\times\\frac{7}{12}\n=\\frac{7}{15}\n\\]"
       },
       {
@@ -2856,7 +2856,7 @@ window.SOLUTION_DATA = {
         "body": "Given Cody and Harriet both take two even counters:\n\n\\[\n\\frac18\\times P(H\\text{ even})=\\frac{3}{100}\n\\]\n\n\\[\nP(H\\text{ even})=\\frac{6}{25}\n\\]"
       },
       {
-        "title": "So Harriet s bag must",
+        "title": "Calculate probability",
         "body": "So Harriet's bag must have at least \\(25\\) counters."
       }
     ],
@@ -2877,7 +2877,7 @@ window.SOLUTION_DATA = {
         "body": "(b)\n\n\\[\n2^{2y}\\times 2^{3y+2}=2^{5y+2}\n\\]"
       },
       {
-        "title": "Also,",
+        "title": "Evaluate fraction",
         "body": "Also,\n\n\\[\n\\frac{8^{5y}}{4^n}\n=\\frac{(2^3)^{5y}}{(2^2)^n}\n=2^{15y-2n}\n\\]"
       },
       {
@@ -2894,7 +2894,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve inequality",
         "body": "\\[\n7-12x-2x^2=-2x^2-12x+7\n\\]\n\n\\[\n=-2(x^2+6x)+7\n\\]\n\n\\[\n=-2\\left((x+3)^2-9\\right)+7\n\\]\n\n\\[\n=-2(x+3)^2+18+7\n\\]\n\n\\[\n=25-2(x+3)^2\n\\]"
       }
     ],
@@ -2907,7 +2907,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Right-Angled Triangles to Algebraic Proof.",
     "steps": [
       {
-        "title": "Since is a multiple of",
+        "title": "Use trigonometry",
         "body": "Since \\(N\\) is a multiple of 5, let\n\n\\[\nN=5k\n\\]"
       },
       {
@@ -2919,7 +2919,7 @@ window.SOLUTION_DATA = {
         "body": "Given\n\n\\[\nA=N+1,\\qquad B=N-1\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\nA^2-B^2=(N+1)^2-(N-1)^2\n\\]"
       },
       {
@@ -2927,7 +2927,7 @@ window.SOLUTION_DATA = {
         "body": "Expand:\n\n\\[\n(N+1)^2=N^2+2N+1\n\\]\n\n\\[\n(N-1)^2=N^2-2N+1\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Use trigonometry",
         "body": "Therefore\n\n\\[\nA^2-B^2=(N^2+2N+1)-(N^2-2N+1)\n\\]\n\n\\[\n=4N\n\\]"
       },
       {
@@ -2935,7 +2935,7 @@ window.SOLUTION_DATA = {
         "body": "Substitute \\(N=5k\\):\n\n\\[\n4N=4(5k)=20k\n\\]"
       },
       {
-        "title": "Since is an integer, is",
+        "title": "Use trigonometry",
         "body": "Since \\(k\\) is an integer, \\(20k\\) is a multiple of 20."
       }
     ],
@@ -2948,7 +2948,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "First term",
+        "title": "Find the nth term",
         "body": "First term:\n\n\\[\na=-6\n\\]\n\n\\[\nS_{30}=2865\n\\]"
       },
       {
@@ -2969,35 +2969,35 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "For ,",
+        "title": "Evaluate fraction",
         "body": "For \\(L_1\\),\n\n\\[\n5x+10y=8\n\\]\n\n\\[\n10y=-5x+8\n\\]\n\n\\[\ny=-\\frac12x+\\frac45\n\\]"
       },
       {
-        "title": "So the gradient of is",
+        "title": "Find the gradient",
         "body": "So the gradient of \\(L_1\\) is \\(-\\frac12\\)."
       },
       {
-        "title": "Since is perpendicular to ,",
+        "title": "Find the gradient",
         "body": "Since \\(L_2\\) is perpendicular to \\(L_1\\), the gradient of \\(L_2\\) is \\(2\\)."
       },
       {
-        "title": "Using the point",
+        "title": "Calculate value",
         "body": "Using the point \\((8,6)\\):\n\n\\[\ny-6=2(x-8)\n\\]\n\n\\[\ny=2x-10\n\\]"
       },
       {
-        "title": "At , the line crosses",
+        "title": "Calculate value",
         "body": "At \\(A\\), the line crosses the \\(x\\)-axis, so \\(y=0\\):\n\n\\[\n0=2x-10\n\\]\n\n\\[\nx=5\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So \\(A=(5,0)\\)."
       },
       {
-        "title": "At ,",
+        "title": "Calculate value",
         "body": "At \\(B\\), \\(x=-3\\):\n\n\\[\ny=2(-3)-10=-16\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So \\(B=(-3,-16)\\)."
       },
       {
@@ -3022,7 +3022,7 @@ window.SOLUTION_DATA = {
         "body": "Their heights are in the ratio\n\n\\[\n9:13\n\\]"
       },
       {
-        "title": "So their surface areas are",
+        "title": "Split the ratio",
         "body": "So their surface areas are in the ratio\n\n\\[\n9^2:13^2=81:169\n\\]"
       },
       {
@@ -3047,19 +3047,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Linear Graphs to Vectors.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Read the graph",
         "body": "\\[\n\\vec{OA}=3\\mathbf a,\\qquad \\vec{OB}=6\\mathbf b,\\qquad \\vec{AC}=4\\mathbf b\n\\]"
       },
       {
-        "title": "So",
+        "title": "Read the graph",
         "body": "So\n\n\\[\n\\vec{OC}=3\\mathbf a+4\\mathbf b\n\\]"
       },
       {
-        "title": "Point lies on , so",
+        "title": "Read the graph",
         "body": "Point \\(N\\) lies on \\(OC\\), so\n\n\\[\n\\vec{ON}=t(3\\mathbf a+4\\mathbf b)\n\\]"
       },
       {
-        "title": "Point also lies on ,",
+        "title": "Read the graph",
         "body": "Point \\(N\\) also lies on \\(AB\\), so\n\n\\[\n\\vec{ON}=3\\mathbf a+s(6\\mathbf b-3\\mathbf a)\n\\]\n\n\\[\n\\vec{ON}=(3-3s)\\mathbf a+6s\\mathbf b\n\\]"
       },
       {
@@ -3067,19 +3067,19 @@ window.SOLUTION_DATA = {
         "body": "Equate coefficients:\n\n\\[\n3t=3-3s\n\\]\n\n\\[\n4t=6s\n\\]"
       },
       {
-        "title": "So",
+        "title": "Read the graph",
         "body": "So\n\n\\[\nt=1-s\n\\]"
       },
       {
-        "title": "and",
+        "title": "Read the graph",
         "body": "and\n\n\\[\nt=\\frac32s\n\\]\n\n\\[\n\\frac32s=1-s\n\\]\n\n\\[\n5s=2\n\\]\n\n\\[\ns=\\frac25\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Read the graph",
         "body": "Then\n\n\\[\nt=\\frac35\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Read the graph",
         "body": "Therefore\n\n\\[\n\\vec{ON}=\\frac35(3\\mathbf a+4\\mathbf b)\n\\]\n\n\\[\n\\vec{ON}=\\frac95\\mathbf a+\\frac{12}{5}\\mathbf b\n\\]"
       }
     ],
@@ -3092,7 +3092,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Set notation and Venn diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\n\\mathcal{E}=\\{20,21,22,23,24,25,26,27,28,29\\}\n\\]"
       },
       {
@@ -3121,11 +3121,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Powers, roots and standard form. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Convert standard form",
         "body": "\\[\n2840000000=2.84\\times 10^9\n\\]"
       },
       {
-        "title": "Also,",
+        "title": "Convert standard form",
         "body": "Also,\n\n\\[\n2.5\\times 10^{-4}=0.00025\n\\]"
       }
     ],
@@ -3138,15 +3138,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Compound Interest and Depreciation. The tag is correct.",
     "steps": [
       {
-        "title": "For part (a),",
+        "title": "Use compound interest",
         "body": "For part (a),\n\n\\[\n40000(1.035)^3=44348.715\n\\]"
       },
       {
-        "title": "Correct to the nearest yuan,",
+        "title": "Use compound interest",
         "body": "Correct to the nearest yuan,\n\n\\[\n44348.715\\approx 44349\n\\]"
       },
       {
-        "title": "For part (b), after one",
+        "title": "Use compound interest",
         "body": "For part (b), after one year the value is \\(93.5\\%\\) of \\(P\\).\n\n\\[\n0.935P=30481\n\\]\n\n\\[\nP=\\frac{30481}{0.935}=32600\n\\]"
       }
     ],
@@ -3159,11 +3159,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Estimate the value",
         "body": "\\[\na=\\frac{v-u}{t}\n\\]"
       },
       {
-        "title": "For the upper bound, use",
+        "title": "Find upper bound",
         "body": "For the upper bound, use the upper bound of \\(v\\), the lower bound of \\(u\\), and the lower bound of \\(t\\).\n\n\\[\nv<9.65,\\quad u\\ge 3.75,\\quad t\\ge 1.835\n\\]\n\n\\[\na_{\\text{upper}}=\\frac{9.65-3.75}{1.835}=3.2152\\ldots\n\\]"
       }
     ],
@@ -3176,11 +3176,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to surds. The question uses surd expansion and coefficient matching.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\n(8-\\sqrt{x})(5+\\sqrt{x})=40+8\\sqrt{x}-5\\sqrt{x}-x\n\\]\n\n\\[\n=40+3\\sqrt{x}-x\n\\]"
       },
       {
-        "title": "This is equal to",
+        "title": "Simplify surd",
         "body": "This is equal to\n\\[\ny\\sqrt{x}+21\n\\]"
       },
       {
@@ -3205,7 +3205,7 @@ window.SOLUTION_DATA = {
         "body": "\\(\\frac{3}{10}\\) of the money is changed to euros, so the rest is\n\n\\[\n\\frac{7}{10}\\times 20160=14112\n\\]"
       },
       {
-        "title": "This rest is divided in",
+        "title": "Split the ratio",
         "body": "This rest is divided in the ratio\n\n\\[\n\\text{dollars} : \\text{rupees} : \\text{francs}=9:5:2\n\\]"
       },
       {
@@ -3213,11 +3213,11 @@ window.SOLUTION_DATA = {
         "body": "There are\n\n\\[\n9+5+2=16 \\text{ parts}\n\\]"
       },
       {
-        "title": "The difference between dollars and",
+        "title": "Split the ratio",
         "body": "The difference between dollars and francs is\n\n\\[\n9-2=7 \\text{ parts}\n\\]"
       },
       {
-        "title": "So the difference is",
+        "title": "Split the ratio",
         "body": "So the difference is\n\n\\[\n\\frac{7}{16}\\times 14112=6174\n\\]"
       }
     ],
@@ -3255,7 +3255,7 @@ window.SOLUTION_DATA = {
         "body": "(b)(i)\n\\[\nx^2+5x-36=(x+9)(x-4)\n\\]"
       },
       {
-        "title": "(b)(ii) or",
+        "title": "Factorise expression",
         "body": "(b)(ii) \\(x=-9\\) or \\(x=4\\)."
       }
     ],
@@ -3285,7 +3285,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Simultaneous equations. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve simultaneous equations",
         "body": "\\[\nx^2-9y-x=2y^2-12\n\\]\n\n\\[\nx+2y-1=0\n\\]"
       },
       {
@@ -3301,15 +3301,15 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\\[\n(2y-3)(y-4)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Solve simultaneous equations",
         "body": "So\n\\[\ny=\\frac32 \\quad \\text{or} \\quad y=4\n\\]"
       },
       {
-        "title": "If",
+        "title": "Solve simultaneous equations",
         "body": "If \\(y=\\frac32\\):\n\\[\nx=1-2\\left(\\frac32\\right)=-2\n\\]"
       },
       {
-        "title": "If",
+        "title": "Solve simultaneous equations",
         "body": "If \\(y=4\\):\n\\[\nx=1-8=-7\n\\]"
       }
     ],
@@ -3322,7 +3322,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\nS_n=\\frac n2(2a+(n-1)d)\n\\]\n\n\\[\nS_{2n}=n(2a+(2n-1)d)\n\\]"
       },
       {
@@ -3343,7 +3343,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nf(x)=x^2-8x+5\n\\]\n\n\\[\nf(x)=(x-4)^2-11\n\\]"
       },
       {
@@ -3351,7 +3351,7 @@ window.SOLUTION_DATA = {
         "body": "Let\n\n\\[\ny=(x-4)^2-11\n\\]\n\n\\[\ny+11=(x-4)^2\n\\]"
       },
       {
-        "title": "Since the domain is ,",
+        "title": "Find inverse function",
         "body": "Since the domain is \\(x<4\\), take the negative square root:\n\n\\[\nx-4=-\\sqrt{y+11}\n\\]\n\n\\[\nx=4-\\sqrt{y+11}\n\\]"
       }
     ],
@@ -3364,11 +3364,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Coordinate geometry. The tag is correct.",
     "steps": [
       {
-        "title": "(a) The gradient of ,",
+        "title": "Find the gradient",
         "body": "(a) The gradient of \\(AB\\), where \\(A(5,8)\\) and \\(B(9,-4)\\), is\n\\[\n\\frac{-4-8}{9-5}=\\frac{-12}{4}=-3\n\\]"
       },
       {
-        "title": "(b) A line perpendicular to",
+        "title": "Find the gradient",
         "body": "(b) A line perpendicular to a line with gradient \\(-3\\) has gradient\n\\[\n\\frac13\n\\]"
       }
     ],
@@ -3385,7 +3385,7 @@ window.SOLUTION_DATA = {
         "body": "The minimum point of \\(y=f(x)\\) is \\((-9,15)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x+3)\n\\]"
       },
       {
@@ -3393,7 +3393,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 3 units left:\n\n\\[\n(-9,15)\\to(-12,15)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Evaluate fraction",
         "body": "For\n\n\\[\ny=\\frac13 f(x)\n\\]"
       },
       {
@@ -3401,7 +3401,7 @@ window.SOLUTION_DATA = {
         "body": "the \\(y\\)-coordinate is divided by 3:\n\n\\[\n(-9,15)\\to(-9,5)\n\\]"
       },
       {
-        "title": "For part (b), the cosine",
+        "title": "Use trigonometry",
         "body": "For part (b), the cosine graph has maximum \\(2\\) and minimum \\(-2\\), so\n\n\\[\na=2\n\\]"
       },
       {
@@ -3409,7 +3409,7 @@ window.SOLUTION_DATA = {
         "body": "The graph has a minimum at \\(x=90^\\circ\\). For \\(a\\cos(x+b)^\\circ\\), a minimum occurs when\n\n\\[\nx+b=180\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\n90+b=180\n\\]\n\n\\[\nb=90\n\\]"
       }
     ],
@@ -3430,7 +3430,7 @@ window.SOLUTION_DATA = {
         "body": "The question gives\n\\[\nV=\\frac13\\pi y\n\\]"
       },
       {
-        "title": "So",
+        "title": "Differentiate",
         "body": "So\n\\[\ny=60x^2-10x^3\n\\]"
       },
       {
@@ -3438,11 +3438,11 @@ window.SOLUTION_DATA = {
         "body": "Differentiate:\n\\[\n\\frac{dy}{dx}=120x-30x^2\n\\]"
       },
       {
-        "title": "For a maximum,",
+        "title": "Differentiate",
         "body": "For a maximum,\n\\[\n120x-30x^2=0\n\\]\n\n\\[\n30x(4-x)=0\n\\]"
       },
       {
-        "title": "So the valid value is",
+        "title": "Differentiate",
         "body": "So the valid value is\n\\[\nx=4\n\\]\n\n\\[\ny=60(4^2)-10(4^3)=960-640=320\n\\]"
       }
     ],
@@ -3455,7 +3455,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Bearings, Scale Drawing & Constructions. The tag is correct.",
     "steps": [
       {
-        "title": "From , ship is on",
+        "title": "Use bearings",
         "body": "From \\(A\\), ship \\(C\\) is on a bearing of \\(120^\\circ\\), and \\(AC=275\\text{ m}\\)."
       },
       {
@@ -3463,11 +3463,11 @@ window.SOLUTION_DATA = {
         "body": "Resolve \\(AC\\):\n\\[\n\\text{east component}=275\\sin 120^\\circ=238.16\\ldots\n\\]\n\\[\n\\text{north component}=275\\cos 120^\\circ=-137.5\n\\]"
       },
       {
-        "title": "Ship is north of ,",
+        "title": "Use bearings",
         "body": "Ship \\(B\\) is \\(150\\text{ m}\\) north of \\(A\\), so from \\(B\\) to \\(C\\):\n\\[\n\\text{east}=238.16\\ldots,\\qquad \\text{north}=-137.5-150=-287.5\n\\]"
       },
       {
-        "title": "The bearing is therefore in",
+        "title": "Use bearings",
         "body": "The bearing is therefore in the south-east quadrant:\n\\[\n180^\\circ-\\tan^{-1}\\left(\\frac{238.16\\ldots}{287.5}\\right)=140.36\\ldots^\\circ\n\\]"
       }
     ],
@@ -3484,7 +3484,7 @@ window.SOLUTION_DATA = {
         "body": "The inner radius is \\(7\\) m."
       },
       {
-        "title": "The path is m wide,",
+        "title": "Calculate value",
         "body": "The path is \\(2\\) m wide, so the outer radius is\n\\[\n7+2=9\\text{ m}\n\\]"
       },
       {
@@ -3513,7 +3513,7 @@ window.SOLUTION_DATA = {
         "body": "Area of the upper rectangle:\n\n\\[\n30\\times 20=600\n\\]"
       },
       {
-        "title": "So the cross sectional area",
+        "title": "Calculate area",
         "body": "So the cross-sectional area is\n\n\\[\n3400+600=4000\\text{ cm}^2\n\\]"
       },
       {
@@ -3521,11 +3521,11 @@ window.SOLUTION_DATA = {
         "body": "The full volume is\n\n\\[\n4000\\times 125=500000\\text{ cm}^3\n\\]"
       },
       {
-        "title": "In the first hours, the",
+        "title": "Calculate area",
         "body": "In the first \\(1.5\\) hours, the water level drops by \\(20\\) cm. This is the top rectangular part:\n\n\\[\n30\\times 20\\times 125=75000\\text{ cm}^3\n\\]"
       },
       {
-        "title": "So the pumping rate is",
+        "title": "Calculate area",
         "body": "So the pumping rate is\n\n\\[\n\\frac{75000}{1.5}=50000\\text{ cm}^3\\text{/hour}\n\\]"
       },
       {
@@ -3533,7 +3533,7 @@ window.SOLUTION_DATA = {
         "body": "Time to empty the whole container:\n\n\\[\n\\frac{500000}{50000}=10\\text{ hours}\n\\]"
       },
       {
-        "title": "Starting at , ten hours",
+        "title": "Calculate area",
         "body": "Starting at \\(10{:}30\\), ten hours later is\n\n\\[\n20{:}30\n\\]"
       }
     ],
@@ -3554,7 +3554,7 @@ window.SOLUTION_DATA = {
         "body": "Simplify:\n\n\\[\n\\frac{1836}{4352}=\\frac{27}{64}\n\\]"
       },
       {
-        "title": "So the linear ratio is",
+        "title": "Split the ratio",
         "body": "So the linear ratio is\n\n\\[\n\\sqrt[3]{27}:\\sqrt[3]{64}=3:4\n\\]"
       },
       {
@@ -3575,15 +3575,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to right-angled trigonometry. The solution uses right-triangle trigonometry in an isosceles triangle.",
     "steps": [
       {
-        "title": "Since is isosceles and is",
+        "title": "Find the gradient",
         "body": "Since \\(ABC\\) is isosceles and \\(D\\) is the midpoint of \\(AC\\), \\(BD\\) is perpendicular to \\(AC\\)."
       },
       {
-        "title": "In right triangle ,",
+        "title": "Use trigonometry",
         "body": "In right triangle \\(ABD\\),\n\\[\nBD=16,\\qquad \\angle DAB=65^\\circ\n\\]\n\n\\[\n\\sin 65^\\circ=\\frac{16}{AB}\n\\]\n\n\\[\nAB=\\frac{16}{\\sin65^\\circ}\n\\]"
       },
       {
-        "title": "Also,",
+        "title": "Use trigonometry",
         "body": "Also,\n\\[\n\\tan65^\\circ=\\frac{16}{AD}\n\\]\n\n\\[\nAD=\\frac{16}{\\tan65^\\circ}\n\\]"
       },
       {
@@ -3600,39 +3600,39 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Coordinate Geometry to Vectors.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use vectors",
         "body": "\\[\n\\vec{OA}=2\\mathbf a,\\qquad \\vec{OB}=2\\mathbf b\n\\]"
       },
       {
-        "title": "Since is the midpoint of",
+        "title": "Find the midpoint",
         "body": "Since \\(M\\) is the midpoint of \\(AB\\),\n\n\\[\n\\vec{OM}=\\frac{2\\mathbf a+2\\mathbf b}{2}\n\\]\n\n\\[\n\\vec{OM}=\\mathbf a+\\mathbf b\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Use vectors",
         "body": "Since \\(ON:NB=2:1\\),\n\n\\[\n\\vec{ON}=\\frac23\\vec{OB}\n\\]\n\n\\[\n\\vec{ON}=\\frac23(2\\mathbf b)=\\frac43\\mathbf b\n\\]"
       },
       {
-        "title": "Point lies on , so",
+        "title": "Use vectors",
         "body": "Point \\(P\\) lies on \\(OM\\), so\n\n\\[\n\\vec{OP}=t(\\mathbf a+\\mathbf b)\n\\]"
       },
       {
-        "title": "Point also lies on ,",
+        "title": "Use vectors",
         "body": "Point \\(P\\) also lies on \\(AN\\), so\n\n\\[\n\\vec{OP}=2\\mathbf a+s\\left(\\frac43\\mathbf b-2\\mathbf a\\right)\n\\]\n\n\\[\n\\vec{OP}=(2-2s)\\mathbf a+\\frac{4s}{3}\\mathbf b\n\\]"
       },
       {
-        "title": "Equate coefficients of and",
+        "title": "Use vectors",
         "body": "Equate coefficients of \\(\\mathbf a\\) and \\(\\mathbf b\\):\n\n\\[\nt=2-2s\n\\]\n\n\\[\nt=\\frac{4s}{3}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use vectors",
         "body": "So\n\n\\[\n\\frac{4s}{3}=2-2s\n\\]\n\n\\[\n4s=6-6s\n\\]\n\n\\[\n10s=6\n\\]\n\n\\[\ns=\\frac35\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Use vectors",
         "body": "Then\n\n\\[\nt=\\frac{4}{5}\n\\]"
       },
       {
-        "title": "So is of the way",
+        "title": "Use vectors",
         "body": "So \\(P\\) is \\(\\frac45\\) of the way from \\(O\\) to \\(M\\)."
       }
     ],
@@ -3666,11 +3666,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "There are bags, so the",
+        "title": "Use cumulative frequency",
         "body": "There are \\(90\\) bags, so the median is at cumulative frequency \\(45\\)."
       },
       {
-        "title": "From the graph,",
+        "title": "Use cumulative frequency",
         "body": "From the graph,\n\n\\[\n\\text{median}\\approx 146\\text{ g}\n\\]"
       },
       {
@@ -3678,7 +3678,7 @@ window.SOLUTION_DATA = {
         "body": "Large bags sold:\n\n\\[\n\\frac{93.75}{3.75}=25\n\\]"
       },
       {
-        "title": "So bags have weight greater",
+        "title": "Use cumulative frequency",
         "body": "So \\(25\\) bags have weight greater than \\(d\\)."
       },
       {
@@ -3686,19 +3686,19 @@ window.SOLUTION_DATA = {
         "body": "That means\n\n\\[\n90-25=65\n\\]"
       },
       {
-        "title": "bags have weight grams or",
+        "title": "Use cumulative frequency",
         "body": "bags have weight \\(d\\) grams or less."
       },
       {
-        "title": "From the graph, cumulative frequency",
+        "title": "Use cumulative frequency",
         "body": "From the graph, cumulative frequency \\(65\\) gives\n\n\\[\nd\\approx 150\n\\]"
       }
     ],
     "finalAnswer": "median about \\(146\\text{ g}\\), and \\(d\\approx 150\\)."
   },
   "all::Jan2021_P1H__Q14__p16-16__m05__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
@@ -3720,7 +3720,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\nS_n=\\frac n2(2a+(n-1)d)\n\\]\n\n\\[\nS_{2n}=n(2a+(2n-1)d)\n\\]"
       },
       {
@@ -3741,7 +3741,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nf(x)=x^2-8x+5\n\\]\n\n\\[\nf(x)=(x-4)^2-11\n\\]"
       },
       {
@@ -3749,7 +3749,7 @@ window.SOLUTION_DATA = {
         "body": "Let\n\n\\[\ny=(x-4)^2-11\n\\]\n\n\\[\ny+11=(x-4)^2\n\\]"
       },
       {
-        "title": "Since the domain is ,",
+        "title": "Find inverse function",
         "body": "Since the domain is \\(x<4\\), take the negative square root:\n\n\\[\nx-4=-\\sqrt{y+11}\n\\]\n\n\\[\nx=4-\\sqrt{y+11}\n\\]"
       }
     ],
@@ -3766,7 +3766,7 @@ window.SOLUTION_DATA = {
         "body": "The minimum point of \\(y=f(x)\\) is \\((-9,15)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x+3)\n\\]"
       },
       {
@@ -3774,7 +3774,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 3 units left:\n\n\\[\n(-9,15)\\to(-12,15)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Evaluate fraction",
         "body": "For\n\n\\[\ny=\\frac13 f(x)\n\\]"
       },
       {
@@ -3782,7 +3782,7 @@ window.SOLUTION_DATA = {
         "body": "the \\(y\\)-coordinate is divided by 3:\n\n\\[\n(-9,15)\\to(-9,5)\n\\]"
       },
       {
-        "title": "For part (b), the cosine",
+        "title": "Use trigonometry",
         "body": "For part (b), the cosine graph has maximum \\(2\\) and minimum \\(-2\\), so\n\n\\[\na=2\n\\]"
       },
       {
@@ -3790,7 +3790,7 @@ window.SOLUTION_DATA = {
         "body": "The graph has a minimum at \\(x=90^\\circ\\). For \\(a\\cos(x+b)^\\circ\\), a minimum occurs when\n\n\\[\nx+b=180\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\n90+b=180\n\\]\n\n\\[\nb=90\n\\]"
       }
     ],
@@ -3811,7 +3811,7 @@ window.SOLUTION_DATA = {
         "body": "Simplify:\n\n\\[\n\\frac{1836}{4352}=\\frac{27}{64}\n\\]"
       },
       {
-        "title": "So the linear ratio is",
+        "title": "Split the ratio",
         "body": "So the linear ratio is\n\n\\[\n\\sqrt[3]{27}:\\sqrt[3]{64}=3:4\n\\]"
       },
       {
@@ -3832,39 +3832,39 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Coordinate Geometry to Vectors.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use vectors",
         "body": "\\[\n\\vec{OA}=2\\mathbf a,\\qquad \\vec{OB}=2\\mathbf b\n\\]"
       },
       {
-        "title": "Since is the midpoint of",
+        "title": "Find the midpoint",
         "body": "Since \\(M\\) is the midpoint of \\(AB\\),\n\n\\[\n\\vec{OM}=\\frac{2\\mathbf a+2\\mathbf b}{2}\n\\]\n\n\\[\n\\vec{OM}=\\mathbf a+\\mathbf b\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Use vectors",
         "body": "Since \\(ON:NB=2:1\\),\n\n\\[\n\\vec{ON}=\\frac23\\vec{OB}\n\\]\n\n\\[\n\\vec{ON}=\\frac23(2\\mathbf b)=\\frac43\\mathbf b\n\\]"
       },
       {
-        "title": "Point lies on , so",
+        "title": "Use vectors",
         "body": "Point \\(P\\) lies on \\(OM\\), so\n\n\\[\n\\vec{OP}=t(\\mathbf a+\\mathbf b)\n\\]"
       },
       {
-        "title": "Point also lies on ,",
+        "title": "Use vectors",
         "body": "Point \\(P\\) also lies on \\(AN\\), so\n\n\\[\n\\vec{OP}=2\\mathbf a+s\\left(\\frac43\\mathbf b-2\\mathbf a\\right)\n\\]\n\n\\[\n\\vec{OP}=(2-2s)\\mathbf a+\\frac{4s}{3}\\mathbf b\n\\]"
       },
       {
-        "title": "Equate coefficients of and",
+        "title": "Use vectors",
         "body": "Equate coefficients of \\(\\mathbf a\\) and \\(\\mathbf b\\):\n\n\\[\nt=2-2s\n\\]\n\n\\[\nt=\\frac{4s}{3}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use vectors",
         "body": "So\n\n\\[\n\\frac{4s}{3}=2-2s\n\\]\n\n\\[\n4s=6-6s\n\\]\n\n\\[\n10s=6\n\\]\n\n\\[\ns=\\frac35\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Use vectors",
         "body": "Then\n\n\\[\nt=\\frac{4}{5}\n\\]"
       },
       {
-        "title": "So is of the way",
+        "title": "Use vectors",
         "body": "So \\(P\\) is \\(\\frac45\\) of the way from \\(O\\) to \\(M\\)."
       }
     ],
@@ -3877,23 +3877,23 @@ window.SOLUTION_DATA = {
     "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find the LCM",
         "body": "\\[\nA=2^8\\times 3^5\\times 11^4\n\\]\n\n\\[\nB=2^6\\times 3\\times 11^8\n\\]"
       },
       {
-        "title": "For the HCF, take the",
+        "title": "Find the LCM",
         "body": "For the HCF, take the smaller power of each common prime:\n\n\\[\n\\text{HCF}=2^6\\times 3\\times 11^4\n\\]"
       },
       {
-        "title": "Now",
+        "title": "Find the LCM",
         "body": "Now\n\n\\[\n2A=2^9\\times 3^5\\times 11^4\n\\]"
       },
       {
-        "title": "and",
+        "title": "Find the LCM",
         "body": "and\n\n\\[\n3B=2^6\\times 3^2\\times 11^8\n\\]"
       },
       {
-        "title": "For the LCM of and",
+        "title": "Find the LCM",
         "body": "For the LCM of \\(2A\\) and \\(3B\\), take the larger power of each prime:\n\n\\[\n\\text{LCM}=2^9\\times 3^5\\times 11^8\n\\]"
       }
     ],
@@ -3906,11 +3906,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Fractions. The tag is correct.",
     "steps": [
       {
-        "title": "Convert the mixed numbers to",
+        "title": "Simplify fraction",
         "body": "Convert the mixed numbers to improper fractions:\n\n\\[\n3\\frac15=\\frac{16}{5}\n\\]\n\n\\[\n1\\frac56=\\frac{11}{6}\n\\]"
       },
       {
-        "title": "Now multiply",
+        "title": "Simplify fraction",
         "body": "Now multiply:\n\n\\[\n\\frac{16}{5}\\times \\frac{11}{6}\n=\\frac{176}{30}\n\\]\n\n\\[\n=\\frac{88}{15}=5\\frac{13}{15}\n\\]"
       }
     ],
@@ -3927,11 +3927,11 @@ window.SOLUTION_DATA = {
         "body": "The multiplier for a \\(2.4\\%\\) increase is\n\n\\[\n1.024\n\\]"
       },
       {
-        "title": "After 3 years,",
+        "title": "Use compound interest",
         "body": "After 3 years,\n\n\\[\n50000(1.024)^3=53687.0912\n\\]"
       },
       {
-        "title": "Correct to the nearest yen,",
+        "title": "Use compound interest",
         "body": "Correct to the nearest yen,\n\n\\[\n53687.0912\\approx 53687\n\\]"
       }
     ],
@@ -3944,11 +3944,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Estimate the value",
         "body": "\\[\nk=\\frac{t}{a-h}\n\\]"
       },
       {
-        "title": "For the lower bound of",
+        "title": "Find lower bound",
         "body": "For the lower bound of \\(k\\), use the lower bound of \\(t\\) and make the denominator as large as possible.\n\n\\[\nt\\ge 13.5\n\\]\n\n\\[\na<7.85,\\quad h\\ge 3.35\n\\]\n\n\\[\n(a-h)_{\\text{upper}}=7.85-3.35=4.5\n\\]\n\n\\[\nk_{\\text{lower}}=\\frac{13.5}{4.5}=3\n\\]"
       }
     ],
@@ -4024,7 +4024,7 @@ window.SOLUTION_DATA = {
         "body": "(a) Let\n\\[\nx=4.\\dot5\\dot7\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\\[\n100x=457.\\dot5\\dot7\n\\]"
       },
       {
@@ -4036,7 +4036,7 @@ window.SOLUTION_DATA = {
         "body": "(b)\n\\[\n\\frac{2}{6-3\\sqrt2}\\times \\frac{6+3\\sqrt2}{6+3\\sqrt2}\n=\\frac{12+6\\sqrt2}{36-18}\n\\]\n\n\\[\n=\\frac{12+6\\sqrt2}{18}=\\frac{2+\\sqrt2}{3}\n\\]"
       },
       {
-        "title": "So this is in the",
+        "title": "Simplify surd",
         "body": "So this is in the form \\(\\dfrac{a+\\sqrt a}{b}\\), with \\(a=2\\) and \\(b=3\\)."
       }
     ],
@@ -4049,7 +4049,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Solving inequalities. The tag is correct.",
     "steps": [
       {
-        "title": "(a) For",
+        "title": "Solve inequality",
         "body": "(a) For\n\\[\n-2\\le y<1\n\\]"
       },
       {
@@ -4074,7 +4074,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Simultaneous equations. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve simultaneous equations",
         "body": "\\[\nx-6y=5\n\\]\n\n\\[\nxy-2y^2=6\n\\]"
       },
       {
@@ -4090,15 +4090,15 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\\[\n(4y-3)(y+2)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Solve simultaneous equations",
         "body": "So\n\\[\ny=\\frac34 \\quad \\text{or} \\quad y=-2\n\\]"
       },
       {
-        "title": "If",
+        "title": "Solve simultaneous equations",
         "body": "If \\(y=\\frac34\\):\n\\[\nx=6\\left(\\frac34\\right)+5=\\frac{19}{2}\n\\]"
       },
       {
-        "title": "If",
+        "title": "Solve simultaneous equations",
         "body": "If \\(y=-2\\):\n\\[\nx=6(-2)+5=-7\n\\]"
       }
     ],
@@ -4115,7 +4115,7 @@ window.SOLUTION_DATA = {
         "body": "Let \\(u_6=v\\)."
       },
       {
-        "title": "For an arithmetic series,",
+        "title": "Use series formula",
         "body": "For an arithmetic series,\n\n\\[\nS_{11}=\\frac{11}{2}(u_1+u_{11})\n\\]"
       },
       {
@@ -4127,11 +4127,11 @@ window.SOLUTION_DATA = {
         "body": "Given\n\n\\[\nS_{11}=(u_6)^2+18\n\\]\n\n\\[\n11v=v^2+18\n\\]\n\n\\[\nv^2-11v+18=0\n\\]\n\n\\[\n(v-2)(v-9)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\nu_6=2 \\quad \\text{or} \\quad u_6=9\n\\]"
       },
       {
-        "title": "But . If , then",
+        "title": "Find the nth term",
         "body": "But \\(u_4=6\\). If \\(u_6=2\\), then the common difference is negative and later terms would not all be positive. Therefore,\n\n\\[\nu_6=9\n\\]\n\n\\[\nd=\\frac{u_6-u_4}{2}=\\frac{9-6}{2}=\\frac32\n\\]\n\n\\[\nu_{20}=u_6+14d\n\\]\n\n\\[\nu_{20}=9+14\\left(\\frac32\\right)=30\n\\]"
       }
     ],
@@ -4144,7 +4144,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Since , point lies on",
+        "title": "Find the gradient",
         "body": "Since \\(AB=AC\\), point \\(A\\) lies on the perpendicular bisector of \\(BC\\)."
       },
       {
@@ -4156,11 +4156,11 @@ window.SOLUTION_DATA = {
         "body": "The gradient of \\(BC\\) is\n\n\\[\n\\frac{10-5}{2-(-1)}=\\frac53\n\\]"
       },
       {
-        "title": "So the gradient of the",
+        "title": "Find the gradient",
         "body": "So the gradient of the perpendicular bisector is\n\n\\[\n-\\frac35\n\\]"
       },
       {
-        "title": "Use the line through",
+        "title": "Find line equation",
         "body": "Use the line through \\(M\\):\n\n\\[\ny-\\frac{15}{2}=-\\frac35\\left(x-\\frac12\\right)\n\\]"
       },
       {
@@ -4181,11 +4181,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Linear Graphs to Differentiation.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Read the graph",
         "body": "\\[\ns=t^3-9t^2+33t-6\n\\]"
       },
       {
-        "title": "Velocity is the rate of",
+        "title": "Read the graph",
         "body": "Velocity is the rate of change of displacement:\n\n\\[\nv=\\frac{ds}{dt}\n\\]\n\n\\[\nv=3t^2-18t+33\n\\]"
       },
       {
@@ -4193,11 +4193,11 @@ window.SOLUTION_DATA = {
         "body": "Complete the square:\n\n\\[\nv=3(t^2-6t+11)\n\\]\n\n\\[\nv=3[(t-3)^2+2]\n\\]\n\n\\[\nv=3(t-3)^2+6\n\\]"
       },
       {
-        "title": "Since , the minimum value",
+        "title": "Read the graph",
         "body": "Since \\((t-3)^2\\ge 0\\), the minimum value of \\(v\\) is\n\n\\[\n6\n\\]"
       },
       {
-        "title": "The velocity is always positive,",
+        "title": "Read the graph",
         "body": "The velocity is always positive, so the minimum speed is also \\(6\\)."
       }
     ],
@@ -4235,19 +4235,19 @@ window.SOLUTION_DATA = {
         "body": "A regular hexagon has interior angle\n\\[\n\\frac{(6-2)180}{6}=120^\\circ\n\\]"
       },
       {
-        "title": "At , since is a",
+        "title": "Find the gradient",
         "body": "At \\(E\\), since \\(AEJ\\) is a straight line,\n\\[\n\\angle DEJ=180-108=72^\\circ\n\\]"
       },
       {
-        "title": "At , the angles around",
+        "title": "Find the gradient",
         "body": "At \\(D\\), the angles around the point include the pentagon angle \\(108^\\circ\\) and the hexagon angle \\(120^\\circ\\), so\n\\[\n\\angle EDI=360-108-120=132^\\circ\n\\]"
       },
       {
-        "title": "At , since is a",
+        "title": "Find the gradient",
         "body": "At \\(I\\), since \\(HIJ\\) is a straight line,\n\\[\n\\angle DIJ=180-120=60^\\circ\n\\]"
       },
       {
-        "title": "In quadrilateral , angles sum",
+        "title": "Find the gradient",
         "body": "In quadrilateral \\(EDIJ\\), angles sum to \\(360^\\circ\\):\n\\[\nx=360-72-132-60=96\n\\]"
       }
     ],
@@ -4260,7 +4260,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Circle Theorems. The tag is correct.",
     "steps": [
       {
-        "title": "By the alternate segment theorem,",
+        "title": "Use trigonometry",
         "body": "By the alternate segment theorem, the angle between the tangent and chord \\(BD\\) is equal to the angle in the opposite segment:\n\\[\n\\angle BFD=39^\\circ\n\\]"
       },
       {
@@ -4268,7 +4268,7 @@ window.SOLUTION_DATA = {
         "body": "Given\n\\[\n\\angle EFD=18^\\circ\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\\[\n\\angle BFE=39^\\circ+18^\\circ=57^\\circ\n\\]"
       },
       {
@@ -4293,7 +4293,7 @@ window.SOLUTION_DATA = {
         "body": "Rectangle area:\n\n\\[\n10\\times 6=60\n\\]"
       },
       {
-        "title": "For the triangle, half the",
+        "title": "Use trigonometry",
         "body": "For the triangle, half the base is \\(5\\) m.\n\n\\[\nh^2=7^2-5^2=24\n\\]\n\n\\[\nh=\\sqrt{24}\n\\]"
       },
       {
@@ -4309,7 +4309,7 @@ window.SOLUTION_DATA = {
         "body": "Each tin covers \\(16\\text{ m}^2\\):\n\n\\[\n\\frac{84.494\\ldots}{16}=5.28\\ldots\n\\]"
       },
       {
-        "title": "Omondi must buy whole tins,",
+        "title": "Calculate area",
         "body": "Omondi must buy whole tins, so he needs 6 tins."
       }
     ],
@@ -4322,15 +4322,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Volume & Surface Area. The tag is correct.",
     "steps": [
       {
-        "title": "For the cuboid,",
+        "title": "Calculate area",
         "body": "For the cuboid,\n\\[\n12\\times 5\\times x=270\n\\]\n\n\\[\n60x=270\n\\]\n\n\\[\nx=4.5\n\\]"
       },
       {
-        "title": "The cylinder has radius and",
+        "title": "Calculate area",
         "body": "The cylinder has radius \\(4.5\\text{ cm}\\) and height \\(9\\text{ cm}\\).\n\n\\[\nV=\\pi r^2h=\\pi(4.5)^2(9)=572.555\\ldots\n\\]"
       },
       {
-        "title": "Also,",
+        "title": "Calculate area",
         "body": "Also,\n\\[\n1\\text{ m}^3=100^3=1000000\\text{ cm}^3\n\\]"
       }
     ],
@@ -4343,15 +4343,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Vectors. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use vectors",
         "body": "\\[\n\\overrightarrow{AB}=\\begin{pmatrix}5\\\\3\\end{pmatrix}\n\\]"
       },
       {
-        "title": "and",
+        "title": "Use vectors",
         "body": "and\n\n\\[\n\\overrightarrow{CB}=\\begin{pmatrix}-2\\\\4\\end{pmatrix}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use vectors",
         "body": "So\n\n\\[\n\\overrightarrow{BC}=-\\overrightarrow{CB}\n=\\begin{pmatrix}2\\\\-4\\end{pmatrix}\n\\]\n\n\\[\n\\overrightarrow{AC}\n=\\overrightarrow{AB}+\\overrightarrow{BC}\n=\\begin{pmatrix}5\\\\3\\end{pmatrix}\n+\\begin{pmatrix}2\\\\-4\\end{pmatrix}\n=\\begin{pmatrix}7\\\\-1\\end{pmatrix}\n\\]"
       }
     ],
@@ -4364,7 +4364,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Statistics Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "The mode is , and",
+        "title": "Calculate statistic",
         "body": "The mode is \\(7\\), and the numbers are \\(a,a,b,c\\), so\n\n\\[\na=7\n\\]"
       },
       {
@@ -4372,11 +4372,11 @@ window.SOLUTION_DATA = {
         "body": "The median of four numbers is\n\n\\[\n\\frac{a+b}{2}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\n\\frac{7+b}{2}=8.5\n\\]\n\n\\[\n7+b=17\n\\]\n\n\\[\nb=10\n\\]"
       },
       {
-        "title": "The mean is , so",
+        "title": "Calculate statistic",
         "body": "The mean is \\(9\\), so the total is\n\n\\[\n4\\times 9=36\n\\]\n\n\\[\n7+7+10+c=36\n\\]\n\n\\[\nc=12\n\\]"
       }
     ],
@@ -4389,11 +4389,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Histograms. The tag is correct.",
     "steps": [
       {
-        "title": "The class has frequency .",
+        "title": "Use histogram",
         "body": "The \\(0<t\\le 2\\) class has frequency \\(28\\). From the histogram, the relative heights are\n\n\\[\n1,\\ 4,\\ 9,\\ 6,\\ 1\n\\]"
       },
       {
-        "title": "So the frequencies are",
+        "title": "Use histogram",
         "body": "So the frequencies are\n\n\\[\n28,\\ 112,\\ 126,\\ 84,\\ 42\n\\]"
       },
       {
@@ -4422,11 +4422,11 @@ window.SOLUTION_DATA = {
         "body": "The median is at cumulative frequency \\(60\\)."
       },
       {
-        "title": "This lies between and",
+        "title": "Use cumulative frequency",
         "body": "This lies between \\((15,40)\\) and \\((20,68)\\):\n\n\\[\n15+\\frac{60-40}{68-40}\\times 5=18.57\\ldots\n\\]"
       },
       {
-        "title": "So the median is about",
+        "title": "Use cumulative frequency",
         "body": "So the median is about \\(18.6\\) minutes."
       },
       {
@@ -4451,7 +4451,7 @@ window.SOLUTION_DATA = {
         "body": "Let \\(u_6=v\\)."
       },
       {
-        "title": "For an arithmetic series,",
+        "title": "Use series formula",
         "body": "For an arithmetic series,\n\n\\[\nS_{11}=\\frac{11}{2}(u_1+u_{11})\n\\]"
       },
       {
@@ -4463,11 +4463,11 @@ window.SOLUTION_DATA = {
         "body": "Given\n\n\\[\nS_{11}=(u_6)^2+18\n\\]\n\n\\[\n11v=v^2+18\n\\]\n\n\\[\nv^2-11v+18=0\n\\]\n\n\\[\n(v-2)(v-9)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\nu_6=2 \\quad \\text{or} \\quad u_6=9\n\\]"
       },
       {
-        "title": "But . If , then",
+        "title": "Find the nth term",
         "body": "But \\(u_4=6\\). If \\(u_6=2\\), then the common difference is negative and later terms would not all be positive. Therefore,\n\n\\[\nu_6=9\n\\]\n\n\\[\nd=\\frac{u_6-u_4}{2}=\\frac{9-6}{2}=\\frac32\n\\]\n\n\\[\nu_{20}=u_6+14d\n\\]\n\n\\[\nu_{20}=9+14\\left(\\frac32\\right)=30\n\\]"
       }
     ],
@@ -4480,7 +4480,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Since , point lies on",
+        "title": "Find the gradient",
         "body": "Since \\(AB=AC\\), point \\(A\\) lies on the perpendicular bisector of \\(BC\\)."
       },
       {
@@ -4492,11 +4492,11 @@ window.SOLUTION_DATA = {
         "body": "The gradient of \\(BC\\) is\n\n\\[\n\\frac{10-5}{2-(-1)}=\\frac53\n\\]"
       },
       {
-        "title": "So the gradient of the",
+        "title": "Find the gradient",
         "body": "So the gradient of the perpendicular bisector is\n\n\\[\n-\\frac35\n\\]"
       },
       {
-        "title": "Use the line through",
+        "title": "Find line equation",
         "body": "Use the line through \\(M\\):\n\n\\[\ny-\\frac{15}{2}=-\\frac35\\left(x-\\frac12\\right)\n\\]"
       },
       {
@@ -4517,11 +4517,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Linear Graphs to Differentiation.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Read the graph",
         "body": "\\[\ns=t^3-9t^2+33t-6\n\\]"
       },
       {
-        "title": "Velocity is the rate of",
+        "title": "Read the graph",
         "body": "Velocity is the rate of change of displacement:\n\n\\[\nv=\\frac{ds}{dt}\n\\]\n\n\\[\nv=3t^2-18t+33\n\\]"
       },
       {
@@ -4529,11 +4529,11 @@ window.SOLUTION_DATA = {
         "body": "Complete the square:\n\n\\[\nv=3(t^2-6t+11)\n\\]\n\n\\[\nv=3[(t-3)^2+2]\n\\]\n\n\\[\nv=3(t-3)^2+6\n\\]"
       },
       {
-        "title": "Since , the minimum value",
+        "title": "Read the graph",
         "body": "Since \\((t-3)^2\\ge 0\\), the minimum value of \\(v\\) is\n\n\\[\n6\n\\]"
       },
       {
-        "title": "The velocity is always positive,",
+        "title": "Read the graph",
         "body": "The velocity is always positive, so the minimum speed is also \\(6\\)."
       }
     ],
@@ -4550,7 +4550,7 @@ window.SOLUTION_DATA = {
         "body": "The number studying all three languages is \\(4\\)."
       },
       {
-        "title": "So the two language only",
+        "title": "Calculate value",
         "body": "So the two-language-only regions are\n\n\\[\nR\\cap F \\text{ only}=10-4=6\n\\]\n\n\\[\nF\\cap G \\text{ only}=13-4=9\n\\]\n\n\\[\nR\\cap G \\text{ only}=6-4=2\n\\]"
       },
       {
@@ -4562,7 +4562,7 @@ window.SOLUTION_DATA = {
         "body": "The French-only region is \\(x\\) and the Russian-only region is \\(2x\\). There are \\(11\\) students outside all three sets."
       },
       {
-        "title": "Using the total ,",
+        "title": "Calculate value",
         "body": "Using the total \\(80\\),\n\n\\[\n2x+x+9+6+9+2+4+11=80\n\\]\n\n\\[\n3x+41=80\n\\]\n\n\\[\nx=13\n\\]"
       },
       {
@@ -4579,11 +4579,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find the LCM",
         "body": "\\[\nA=2^3\\times 3^2\\times 5^2\\times 11\n\\]\n\n\\[\nB=2^4\\times 3\\times 5^4\\times 13\n\\]"
       },
       {
-        "title": "For the LCM, take the",
+        "title": "Find the LCM",
         "body": "For the LCM, take the highest power of every prime that appears:\n\n\\[\n\\text{LCM}=2^4\\times 3^2\\times 5^4\\times 11\\times 13\n\\]"
       }
     ],
@@ -4596,15 +4596,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Powers, roots and standard form. The tag is correct.",
     "steps": [
       {
-        "title": "Any non zero value to",
+        "title": "Convert standard form",
         "body": "Any non-zero value to the power \\(0\\) is \\(1\\), so\n\n\\[\ny^0=1\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Convert standard form",
         "body": "For part (b),\n\n\\[\n9.6\\times 10^{141}+6.4\\times 10^{140}\n=9.6\\times 10^{141}+0.64\\times 10^{141}\n\\]\n\n\\[\n=10.24\\times 10^{141}=1.024\\times 10^{142}\n\\]"
       },
       {
-        "title": "Now divide",
+        "title": "Convert standard form",
         "body": "Now divide:\n\n\\[\n\\frac{1.024\\times 10^{142}}{3.2\\times 10^{16}}\n=0.32\\times 10^{126}\n\\]\n\n\\[\n=3.2\\times 10^{125}\n\\]"
       }
     ],
@@ -4629,7 +4629,7 @@ window.SOLUTION_DATA = {
         "body": "Correct to 3 significant figures:\n\n\\[\n11.8\\%\n\\]"
       },
       {
-        "title": "For the sale price, a",
+        "title": "Calculate statistic",
         "body": "For the sale price, a \\(12\\%\\) decrease means \\(88\\%\\) of the original price:\n\n\\[\n550\\times 0.88=484\n\\]"
       }
     ],
@@ -4666,7 +4666,7 @@ window.SOLUTION_DATA = {
         "body": "Total parts:\n\n\\[\n3+4=7\n\\]"
       },
       {
-        "title": "So the fraction who work",
+        "title": "Simplify fraction",
         "body": "So the fraction who work full time is\n\n\\[\n\\frac{\\frac{84}{25}}{7}=\\frac{84}{175}=\\frac{12}{25}\n\\]"
       }
     ],
@@ -4679,7 +4679,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Algebraic Roots & Indices.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use index laws",
         "body": "\\[\n\\left(\\frac{9t^4w^9}{18t^6w^{10}}\\right)^{-2}\n\\]"
       },
       {
@@ -4687,7 +4687,7 @@ window.SOLUTION_DATA = {
         "body": "Simplify inside the brackets:\n\n\\[\n\\frac{9t^4w^9}{18t^6w^{10}}\n=\\frac{1}{2}t^{-2}w^{-1}\n=\\frac{1}{2t^2w}\n\\]"
       },
       {
-        "title": "Now apply the power",
+        "title": "Use index laws",
         "body": "Now apply the power \\(-2\\):\n\n\\[\n\\left(\\frac{1}{2t^2w}\\right)^{-2}\n=(2t^2w)^2\n\\]\n\n\\[\n=4t^4w^2\n\\]"
       }
     ],
@@ -4700,7 +4700,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Sine/Cosine Rule to Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use trigonometry",
         "body": "\\[\n\\frac{25x^2-64}{5x^2-13x-6}\n\\times\n\\frac{x^2-8x+15}{5x+8}\n-(x-7)\n\\]"
       },
       {
@@ -4708,7 +4708,7 @@ window.SOLUTION_DATA = {
         "body": "Factor:\n\n\\[\n25x^2-64=(5x-8)(5x+8)\n\\]\n\n\\[\n5x^2-13x-6=(5x+2)(x-3)\n\\]\n\n\\[\nx^2-8x+15=(x-3)(x-5)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\n\\frac{(5x-8)(5x+8)}{(5x+2)(x-3)}\n\\times\n\\frac{(x-3)(x-5)}{5x+8}\n-(x-7)\n\\]"
       },
       {
@@ -4724,7 +4724,7 @@ window.SOLUTION_DATA = {
         "body": "Expand:\n\n\\[\n(5x-8)(x-5)=5x^2-33x+40\n\\]\n\n\\[\n(x-7)(5x+2)=5x^2-33x-14\n\\]"
       },
       {
-        "title": "So the numerator is",
+        "title": "Use trigonometry",
         "body": "So the numerator is\n\n\\[\n5x^2-33x+40-(5x^2-33x-14)=54\n\\]"
       }
     ],
@@ -4762,7 +4762,7 @@ window.SOLUTION_DATA = {
         "body": "(a)\n\\[\n4x(2x+5)-3x(2x-3)=8x^2+20x-6x^2+9x=2x^2+29x\n\\]"
       },
       {
-        "title": "(b) so , hence",
+        "title": "Expand brackets",
         "body": "(b)\n\\[\n\\frac{y^5\\times y^n}{y^6}=y^{n-1}=y^{13}\n\\]\nso \\(n-1=13\\), hence \\(n=14\\)."
       },
       {
@@ -4770,7 +4770,7 @@ window.SOLUTION_DATA = {
         "body": "(c)\n\\[\n7t-8<2t+7\n\\]\n\n\\[\n5t<15\n\\]\n\n\\[\nt<3\n\\]"
       },
       {
-        "title": "On the number line, use",
+        "title": "Expand brackets",
         "body": "On the number line, use an open circle at 3 and shade to the left."
       }
     ],
@@ -4783,7 +4783,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Coordinate geometry. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nA=(-4,-2),\\quad B=(1,10),\\quad C=(19,a),\\quad D=(b,c)\n\\]"
       },
       {
@@ -4799,11 +4799,11 @@ window.SOLUTION_DATA = {
         "body": "Adjacent sides of a rectangle are perpendicular, so their dot product is zero:\n\\[\n5(18)+12(a-10)=0\n\\]\n\n\\[\n90+12a-120=0\n\\]\n\n\\[\na=\\frac52\n\\]"
       },
       {
-        "title": "Now",
+        "title": "Calculate value",
         "body": "Now\n\\[\nBC=(18,-7.5)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\\[\nD=A+BC=(-4,-2)+(18,-7.5)=(14,-9.5)\n\\]\n\n\\[\nb=14,\\qquad c=-9.5\n\\]"
       },
       {
@@ -4841,7 +4841,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to differentiation. Instantaneously at rest means the velocity is zero.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate statistic",
         "body": "\\[\ns=t^3+5t^2-8t+10\n\\]"
       },
       {
@@ -4849,7 +4849,7 @@ window.SOLUTION_DATA = {
         "body": "Velocity is\n\\[\n\\frac{ds}{dt}=3t^2+10t-8\n\\]"
       },
       {
-        "title": "At rest,",
+        "title": "Calculate statistic",
         "body": "At rest,\n\\[\n3t^2+10t-8=0\n\\]"
       },
       {
@@ -4857,15 +4857,15 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\\[\n(3t-2)(t+4)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate statistic",
         "body": "So\n\\[\nt=\\frac23 \\quad \\text{or} \\quad t=-4\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Calculate statistic",
         "body": "Since \\(t\\ge0\\),\n\\[\nt=\\frac23\n\\]"
       },
       {
-        "title": "Now find",
+        "title": "Calculate statistic",
         "body": "Now find \\(s\\):\n\\[\ns=\\left(\\frac23\\right)^3+5\\left(\\frac23\\right)^2-8\\left(\\frac23\\right)+10\n\\]\n\n\\[\ns=\\frac{8}{27}+\\frac{20}{9}-\\frac{16}{3}+10\n\\]\n\n\\[\ns=\\frac{194}{27}\n\\]"
       }
     ],
@@ -4895,19 +4895,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Circle Theorems. The original tag was simultaneous equations, but this is a circle geometry question.",
     "steps": [
       {
-        "title": "The central angle is .",
+        "title": "Use trigonometry",
         "body": "The central angle \\(\\angle POS\\) is \\(124^\\circ\\). The angle at the circumference standing on the same chord \\(PS\\) is half this angle.\n\n\\[\nm=\\frac{124}{2}=62\n\\]"
       },
       {
-        "title": "Angles opposite each other in",
+        "title": "Use circle theorem",
         "body": "Angles opposite each other in a cyclic quadrilateral add to \\(180^\\circ\\), so\n\\[\nn=180-62=118\n\\]"
       },
       {
-        "title": "Since is a diameter,",
+        "title": "Use trigonometry",
         "body": "Since \\(QOS\\) is a diameter,\n\\[\n\\angle QOP=180^\\circ-124^\\circ=56^\\circ\n\\]"
       },
       {
-        "title": "Triangle is isosceles because .",
+        "title": "Use trigonometry",
         "body": "Triangle \\(QOP\\) is isosceles because \\(OQ=OP\\). Therefore\n\\[\n\\angle QPO=\\frac{180-56}{2}=62^\\circ\n\\]"
       }
     ],
@@ -4924,7 +4924,7 @@ window.SOLUTION_DATA = {
         "body": "Triangle \\(ABC\\) is right-angled:\n\\[\nAC^2=8^2+15^2=64+225=289\n\\]\n\n\\[\nAC=17\\text{ cm}\n\\]"
       },
       {
-        "title": "Since is a diameter, the",
+        "title": "Calculate area",
         "body": "Since \\(AOC\\) is a diameter, the radius of the circle is\n\\[\n17\\div 2=8.5\\text{ cm}\n\\]"
       },
       {
@@ -4957,7 +4957,7 @@ window.SOLUTION_DATA = {
         "body": "Given\n\n\\[\nAB=1.5PQ\n\\]"
       },
       {
-        "title": "so the side length of",
+        "title": "Find the gradient",
         "body": "so the side length of the regular hexagon is\n\n\\[\n1.5p=\\frac32p\n\\]"
       },
       {
@@ -4965,11 +4965,11 @@ window.SOLUTION_DATA = {
         "body": "Area of a regular hexagon with side length \\(s\\) is\n\n\\[\n\\frac{3\\sqrt3}{2}s^2\n\\]"
       },
       {
-        "title": "So the area of the",
+        "title": "Find the gradient",
         "body": "So the area of the hexagon is\n\n\\[\n\\frac{3\\sqrt3}{2}\\left(\\frac32p\\right)^2\n\\]\n\n\\[\n=\\frac{27\\sqrt3}{8}p^2\n\\]"
       },
       {
-        "title": "The removed triangle is equilateral,",
+        "title": "Find the gradient",
         "body": "The removed triangle \\(PQR\\) is equilateral, so its area is\n\n\\[\n\\frac{\\sqrt3}{4}p^2\n\\]"
       },
       {
@@ -4977,7 +4977,7 @@ window.SOLUTION_DATA = {
         "body": "The shaded area is\n\n\\[\n\\frac{27\\sqrt3}{8}p^2-\\frac{\\sqrt3}{4}p^2\n\\]\n\n\\[\n=\\frac{25\\sqrt3}{8}p^2\n\\]"
       },
       {
-        "title": "This is , so",
+        "title": "Find the gradient",
         "body": "This is \\(72\\sqrt3\\), so\n\n\\[\n\\frac{25\\sqrt3}{8}p^2=72\\sqrt3\n\\]\n\n\\[\n\\frac{25}{8}p^2=72\n\\]\n\n\\[\np^2=\\frac{576}{25}\n\\]\n\n\\[\np=4.8\n\\]"
       }
     ],
@@ -4994,19 +4994,19 @@ window.SOLUTION_DATA = {
         "body": "The radius of sector \\(OBC\\) is\n\n\\[\n6+x\n\\]"
       },
       {
-        "title": "The angle is , so",
+        "title": "Use trigonometry",
         "body": "The angle is \\(50^\\circ\\), so the arc length of sector \\(OBC\\) is\n\n\\[\n\\frac{50}{360}\\times 2\\pi(6+x)\n\\]"
       },
       {
-        "title": "Therefore the perimeter of sector",
+        "title": "Evaluate fraction",
         "body": "Therefore the perimeter of sector \\(OBC\\) is\n\n\\[\n2(6+x)+\\frac{50}{360}\\times 2\\pi(6+x)\n\\]\n\n\\[\n=(6+x)\\left(2+\\frac{5\\pi}{18}\\right)\n\\]"
       },
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(OAD\\),\n\n\\[\nOA=OD=6,\\qquad \\angle AOD=50^\\circ\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\nAD=2(6)\\sin 25^\\circ=12\\sin 25^\\circ\n\\]"
       },
       {
@@ -5031,11 +5031,11 @@ window.SOLUTION_DATA = {
         "body": "The cross-section is a trapezium with parallel sides \\(37\\) cm and \\(28\\) cm, and perpendicular height \\(20\\) cm.\n\n\\[\n\\text{Area of cross-section}=\\frac12(37+28)(20)=650\n\\]"
       },
       {
-        "title": "Since the trapezium is isosceles,",
+        "title": "Calculate area",
         "body": "Since the trapezium is isosceles, the horizontal difference on each side is\n\\[\n\\frac{37-28}{2}=4.5\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate area",
         "body": "So\n\\[\nAB=CD=\\sqrt{20^2+4.5^2}=20.5\n\\]"
       },
       {
@@ -5047,11 +5047,11 @@ window.SOLUTION_DATA = {
         "body": "The length of the prism is \\(24\\) cm, so the total surface area is\n\\[\n2(650)+106(24)=3844\n\\]"
       },
       {
-        "title": "For the angle between and",
+        "title": "Use trigonometry",
         "body": "For the angle between \\(AF\\) and the horizontal plane, the horizontal projection has length\n\\[\n\\sqrt{24^2+4.5^2}\n\\]"
       },
       {
-        "title": "The vertical height is ,",
+        "title": "Use trigonometry",
         "body": "The vertical height is \\(20\\), so\n\\[\n\\tan\\theta=\\frac{20}{\\sqrt{24^2+4.5^2}}\n\\]\n\n\\[\n\\theta=39.3^\\circ\n\\]"
       }
     ],
@@ -5064,15 +5064,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Statistics Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "The median is , so",
+        "title": "Calculate statistic",
         "body": "The median is \\(7\\), so the middle number is \\(7\\)."
       },
       {
-        "title": "The mode is , so",
+        "title": "Calculate statistic",
         "body": "The mode is \\(8\\), so use two 8s."
       },
       {
-        "title": "The range is , so",
+        "title": "Calculate statistic",
         "body": "The range is \\(5\\), so choose the smallest and largest numbers to differ by \\(5\\).\nOne possible set is\n\n\\[\n3,\\ 6,\\ 7,\\ 8,\\ 8\n\\]"
       },
       {
@@ -5118,11 +5118,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Statistics Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "The data is already in",
+        "title": "Use Statistics Toolkit correct",
         "body": "The data is already in order:\n\n\\[\n2,3,3,4,5,6,6,8,9,10,11,13,14,15,18\n\\]"
       },
       {
-        "title": "For 15 values,",
+        "title": "Calculate value",
         "body": "For 15 values,\n\n\\[\nQ_1=4,\\qquad Q_3=13\n\\]\n\n\\[\n\\text{IQR}=13-4=9\n\\]"
       }
     ],
@@ -5135,19 +5135,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Histograms. The tag is correct.",
     "steps": [
       {
-        "title": "For , the frequency is",
+        "title": "Use histogram",
         "body": "For \\(0.5<w\\le 2\\), the frequency is \\(63\\), so the density is\n\n\\[\n\\frac{63}{1.5}=42\n\\]"
       },
       {
-        "title": "Using the histogram heights, the",
+        "title": "Use histogram",
         "body": "Using the histogram heights, the class frequencies are\n\n\\[\n9,\\ 63,\\ 24,\\ 30,\\ 16\n\\]"
       },
       {
-        "title": "So the total number of",
+        "title": "Use histogram",
         "body": "So the total number of parcels is\n\n\\[\n9+63+24+30+16=142\n\\]"
       },
       {
-        "title": "For weight greater than",
+        "title": "Use histogram",
         "body": "For weight greater than \\(2.25\\text{ kg}\\):\n\n\\[\n0.75(24)+30+16=64\n\\]"
       },
       {
@@ -5164,7 +5164,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Sine/Cosine Rule to Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use trigonometry",
         "body": "\\[\n\\frac{25x^2-64}{5x^2-13x-6}\n\\times\n\\frac{x^2-8x+15}{5x+8}\n-(x-7)\n\\]"
       },
       {
@@ -5172,7 +5172,7 @@ window.SOLUTION_DATA = {
         "body": "Factor:\n\n\\[\n25x^2-64=(5x-8)(5x+8)\n\\]\n\n\\[\n5x^2-13x-6=(5x+2)(x-3)\n\\]\n\n\\[\nx^2-8x+15=(x-3)(x-5)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\n\\frac{(5x-8)(5x+8)}{(5x+2)(x-3)}\n\\times\n\\frac{(x-3)(x-5)}{5x+8}\n-(x-7)\n\\]"
       },
       {
@@ -5188,7 +5188,7 @@ window.SOLUTION_DATA = {
         "body": "Expand:\n\n\\[\n(5x-8)(x-5)=5x^2-33x+40\n\\]\n\n\\[\n(x-7)(5x+2)=5x^2-33x-14\n\\]"
       },
       {
-        "title": "So the numerator is",
+        "title": "Use trigonometry",
         "body": "So the numerator is\n\n\\[\n5x^2-33x+40-(5x^2-33x-14)=54\n\\]"
       }
     ],
@@ -5209,7 +5209,7 @@ window.SOLUTION_DATA = {
         "body": "Given\n\n\\[\nAB=1.5PQ\n\\]"
       },
       {
-        "title": "so the side length of",
+        "title": "Find the gradient",
         "body": "so the side length of the regular hexagon is\n\n\\[\n1.5p=\\frac32p\n\\]"
       },
       {
@@ -5217,11 +5217,11 @@ window.SOLUTION_DATA = {
         "body": "Area of a regular hexagon with side length \\(s\\) is\n\n\\[\n\\frac{3\\sqrt3}{2}s^2\n\\]"
       },
       {
-        "title": "So the area of the",
+        "title": "Find the gradient",
         "body": "So the area of the hexagon is\n\n\\[\n\\frac{3\\sqrt3}{2}\\left(\\frac32p\\right)^2\n\\]\n\n\\[\n=\\frac{27\\sqrt3}{8}p^2\n\\]"
       },
       {
-        "title": "The removed triangle is equilateral,",
+        "title": "Find the gradient",
         "body": "The removed triangle \\(PQR\\) is equilateral, so its area is\n\n\\[\n\\frac{\\sqrt3}{4}p^2\n\\]"
       },
       {
@@ -5229,7 +5229,7 @@ window.SOLUTION_DATA = {
         "body": "The shaded area is\n\n\\[\n\\frac{27\\sqrt3}{8}p^2-\\frac{\\sqrt3}{4}p^2\n\\]\n\n\\[\n=\\frac{25\\sqrt3}{8}p^2\n\\]"
       },
       {
-        "title": "This is , so",
+        "title": "Find the gradient",
         "body": "This is \\(72\\sqrt3\\), so\n\n\\[\n\\frac{25\\sqrt3}{8}p^2=72\\sqrt3\n\\]\n\n\\[\n\\frac{25}{8}p^2=72\n\\]\n\n\\[\np^2=\\frac{576}{25}\n\\]\n\n\\[\np=4.8\n\\]"
       }
     ],
@@ -5246,19 +5246,19 @@ window.SOLUTION_DATA = {
         "body": "The radius of sector \\(OBC\\) is\n\n\\[\n6+x\n\\]"
       },
       {
-        "title": "The angle is , so",
+        "title": "Use trigonometry",
         "body": "The angle is \\(50^\\circ\\), so the arc length of sector \\(OBC\\) is\n\n\\[\n\\frac{50}{360}\\times 2\\pi(6+x)\n\\]"
       },
       {
-        "title": "Therefore the perimeter of sector",
+        "title": "Evaluate fraction",
         "body": "Therefore the perimeter of sector \\(OBC\\) is\n\n\\[\n2(6+x)+\\frac{50}{360}\\times 2\\pi(6+x)\n\\]\n\n\\[\n=(6+x)\\left(2+\\frac{5\\pi}{18}\\right)\n\\]"
       },
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(OAD\\),\n\n\\[\nOA=OD=6,\\qquad \\angle AOD=50^\\circ\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\nAD=2(6)\\sin 25^\\circ=12\\sin 25^\\circ\n\\]"
       },
       {
@@ -5279,11 +5279,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Set Notation & Venn Diagrams.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nA\\cap B=\\{24,30\\}\n\\]"
       },
       {
-        "title": "The complement of , using",
+        "title": "Set is",
         "body": "The complement of \\(A\\), using the given universal set, is\n\\[\nA'=\\{21,23,25,27,29\\}\n\\]"
       },
       {
@@ -5291,11 +5291,11 @@ window.SOLUTION_DATA = {
         "body": "The set\n\\[\nC=\\{23,25,29\\}\n\\]"
       },
       {
-        "title": "is everything not in and",
+        "title": "Calculate value",
         "body": "is everything not in \\(A\\) and not in \\(B\\), so\n\\[\nC=A'\\cap B'\n\\]"
       },
       {
-        "title": "Equivalently,",
+        "title": "Calculate value",
         "body": "Equivalently,\n\\[\nC=(A\\cup B)'\n\\]"
       }
     ],
@@ -5312,11 +5312,11 @@ window.SOLUTION_DATA = {
         "body": "The greatest coastline is the largest number in standard form.\n\n\\[\n1.357\\times 10^5\n\\]"
       },
       {
-        "title": "is the largest, so the",
+        "title": "Convert standard form",
         "body": "is the largest, so the answer is the Pacific Ocean."
       },
       {
-        "title": "For part (b),",
+        "title": "Convert standard form",
         "body": "For part (b),\n\n\\[\n1.119\\times 10^5=111900\n\\]\n\n\\[\n1.797\\times 10^4=17970\n\\]"
       },
       {
@@ -5337,7 +5337,7 @@ window.SOLUTION_DATA = {
         "body": "Wednesday's price was \\(5\\%\\) more than Monday's price."
       },
       {
-        "title": "So",
+        "title": "Calculate percentage",
         "body": "So\n\n\\[\n1.26=1.05\\times \\text{Monday price}\n\\]\n\n\\[\n\\text{Monday price}=\\frac{1.26}{1.05}=1.20\n\\]"
       },
       {
@@ -5358,11 +5358,11 @@ window.SOLUTION_DATA = {
         "body": "Let the original house value be \\(V\\)."
       },
       {
-        "title": "After the decrease in 2018",
+        "title": "Use compound interest",
         "body": "After the \\(15\\%\\) decrease in 2018:\n\n\\[\n0.85V\n\\]"
       },
       {
-        "title": "Let the percentage increase in",
+        "title": "Use compound interest",
         "body": "Let the percentage increase in each of 2019 and 2020 be \\(r\\)."
       },
       {
@@ -5370,7 +5370,7 @@ window.SOLUTION_DATA = {
         "body": "The final value is \\(2.85\\%\\) greater than the original value:\n\n\\[\n1.0285V\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use compound interest",
         "body": "So\n\n\\[\n0.85V(1+r)^2=1.0285V\n\\]\n\n\\[\n(1+r)^2=\\frac{1.0285}{0.85}=1.21\n\\]\n\n\\[\n1+r=\\sqrt{1.21}=1.1\n\\]\n\n\\[\nr=0.1=10\\%\n\\]"
       }
     ],
@@ -5383,11 +5383,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic Roots and Indices. The tag is correct.",
     "steps": [
       {
-        "title": "For part (a),",
+        "title": "Use index laws",
         "body": "For part (a),\n\n\\[\n(3k^2)^4=3^4(k^2)^4\n\\]\n\n\\[\n=81k^8\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Use index laws",
         "body": "For part (b),\n\n\\[\n(21m^4n)\\div(3n^{-5})=\\frac{21m^4n}{3n^{-5}}\n\\]\n\n\\[\n=7m^4n^{1-(-5)}\n\\]\n\n\\[\n=7m^4n^6\n\\]"
       }
     ],
@@ -5400,19 +5400,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic Roots and Indices. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\n8^2=(2^3)^2=2^6\n\\]\n\n\\[\n\\sqrt[3]{4^6}=\\sqrt[3]{(2^2)^6}=\\sqrt[3]{2^{12}}=2^4\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify surd",
         "body": "So\n\n\\[\n8^2\\times \\sqrt[3]{4^6}=2^6\\times 2^4=2^{10}\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Use index laws",
         "body": "For part (b),\n\n\\[\nn^{-4/5}=\\left(\\frac12\\right)^4=2^{-4}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use index laws",
         "body": "So\n\n\\[\nn^{4/5}=2^4\n\\]"
       },
       {
@@ -5429,7 +5429,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Expanding brackets. The tag is correct.",
     "steps": [
       {
-        "title": "For and",
+        "title": "Expand brackets",
         "body": "For \\(w=5y^2-y^3\\) and \\(y=-2\\):\n\\[\nw=5(-2)^2-(-2)^3=20+8=28\n\\]\n\n\\[\n8p^2-2p=2p(4p-1)\n\\]\n\n\\[\n4t(3t-2)=12t^2-8t\n\\]\n\n\\[\n(5x-2)(x+4)=5x^2+18x-8\n\\]"
       }
     ],
@@ -5442,11 +5442,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to algebraic fractions. The equation is solved by combining algebraic fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve equation",
         "body": "\\[\n\\frac{5}{x+2}+\\frac{3}{x^2+2x}=2\n\\]"
       },
       {
-        "title": "Since",
+        "title": "Solve equation",
         "body": "Since\n\\[\nx^2+2x=x(x+2)\n\\]"
       },
       {
@@ -5483,7 +5483,7 @@ window.SOLUTION_DATA = {
         "body": "This is of the form\n\\[\n2k+1\n\\]\nwhere \\(k\\) is an integer."
       },
       {
-        "title": "So the product is odd",
+        "title": "Use algebraic proof asks general",
         "body": "So the product is odd."
       }
     ],
@@ -5496,7 +5496,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Solving quadratic equations. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve quadratic equation",
         "body": "\\[\nx^2-21x+20=0\n\\]"
       },
       {
@@ -5504,7 +5504,7 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\\[\n(x-20)(x-1)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Solve quadratic equation",
         "body": "So\n\\[\nx=20 \\quad \\text{or} \\quad x=1\n\\]"
       }
     ],
@@ -5517,7 +5517,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Simultaneous equations. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve simultaneous equations",
         "body": "\\[\n2x+7y=17\n\\]\n\n\\[\n5x+3y=-1\n\\]"
       },
       {
@@ -5533,7 +5533,7 @@ window.SOLUTION_DATA = {
         "body": "Subtract:\n\\[\n29y=87\n\\]\n\n\\[\ny=3\n\\]"
       },
       {
-        "title": "Substitute into",
+        "title": "Solve simultaneous equations",
         "body": "Substitute into \\(2x+7y=17\\):\n\\[\n2x+21=17\n\\]\n\n\\[\n2x=-4\n\\]\n\n\\[\nx=-2\n\\]"
       }
     ],
@@ -5546,7 +5546,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Functions. The original tag was solving quadratic equations, but this question is mainly function composition, domain, and inverse functions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve quadratic equation",
         "body": "\\[\nf(x)=x^2+6,\\qquad g(x)=x-10\n\\]"
       },
       {
@@ -5566,7 +5566,7 @@ window.SOLUTION_DATA = {
         "body": "(c)\n\\[\nh(x)=\\frac{2x-4}{x}\n\\]"
       },
       {
-        "title": "The denominator cannot be zero,",
+        "title": "Solve quadratic equation",
         "body": "The denominator cannot be zero, so \\(x=0\\) cannot be included."
       },
       {
@@ -5574,7 +5574,7 @@ window.SOLUTION_DATA = {
         "body": "(d) Let\n\\[\ny=\\frac{2x-4}{x}\n\\]\n\n\\[\ny=2-\\frac4x\n\\]\n\n\\[\ny-2=-\\frac4x\n\\]\n\n\\[\nx=\\frac{4}{2-y}\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Solve quadratic equation",
         "body": "Therefore\n\\[\nh^{-1}(x)=\\frac{4}{2-x}\n\\]"
       }
     ],
@@ -5612,7 +5612,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Area & Perimeter.",
     "steps": [
       {
-        "title": "The semicircle has diameter ,",
+        "title": "Calculate area",
         "body": "The semicircle has diameter \\(12\\text{ cm}\\), so its radius is \\(6\\text{ cm}\\)."
       },
       {
@@ -5658,7 +5658,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved to Circles, Arcs & Sectors.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use trigonometry",
         "body": "\\[\n\\angle ABC=75^\\circ\n\\]"
       },
       {
@@ -5682,7 +5682,7 @@ window.SOLUTION_DATA = {
         "body": "Triangle area:\n\n\\[\n\\frac{1}{2}r^2\\sin 150^\\circ\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\n\\frac{150}{360}\\pi r^2-\\frac{1}{2}r^2\\sin 150^\\circ=200\n\\]\n\n\\[\nr^2\\left(\\frac{5\\pi}{12}-\\frac{1}{4}\\right)=200\n\\]\n\n\\[\nr^2=\\frac{200}{\\frac{5\\pi}{12}-\\frac{1}{4}}\n\\]\n\n\\[\nr=13.7426\\ldots\n\\]"
       }
     ],
@@ -5708,7 +5708,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Coordinate Geometry to 3D Pythagoras & Trigonometry.",
     "steps": [
       {
-        "title": "Since , triangle is isosceles",
+        "title": "Use trigonometry",
         "body": "Since \\(AB=BC=8\\), triangle \\(ABC\\) is isosceles."
       },
       {
@@ -5716,11 +5716,11 @@ window.SOLUTION_DATA = {
         "body": "The line from \\(B\\) to the midpoint \\(M\\) bisects angle \\(ABC\\).\n\n\\[\n\\angle ABM=\\frac{140^\\circ}{2}=70^\\circ\n\\]"
       },
       {
-        "title": "In right triangle ,",
+        "title": "Use trigonometry",
         "body": "In right triangle \\(ABM\\),\n\n\\[\n\\cos 70^\\circ=\\frac{BM}{8}\n\\]\n\n\\[\nBM=8\\cos 70^\\circ\n\\]"
       },
       {
-        "title": "Since is vertically above ,",
+        "title": "Use trigonometry",
         "body": "Since \\(T\\) is vertically above \\(B\\), the projection of \\(MT\\) onto the horizontal plane is \\(MB\\)."
       },
       {
@@ -5753,7 +5753,7 @@ window.SOLUTION_DATA = {
         "body": "The image has vertices\n\n\\[\n(7,3),\\ (13,3),\\ (13,6),\\ (10,6)\n\\]"
       },
       {
-        "title": "(c) Triangle is mapped to",
+        "title": "Use trigonometry",
         "body": "(c) Triangle \\(T\\) is mapped to triangle \\(U\\) by an enlargement with scale factor \\(2\\) and centre \\((-3,3)\\)."
       }
     ],
@@ -5807,7 +5807,7 @@ window.SOLUTION_DATA = {
         "body": "The probability of taking two beads of the same colour is\n\n\\[\nP(RR)+P(BB)=\\frac9{17}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\n\\frac6n\\cdot\\frac5{n-1}\n+\\frac{n-6}{n}\\cdot\\frac{n-7}{n-1}\n=\\frac9{17}\n\\]\n\n\\[\n\\frac{30+(n-6)(n-7)}{n(n-1)}=\\frac9{17}\n\\]"
       },
       {
@@ -5815,7 +5815,7 @@ window.SOLUTION_DATA = {
         "body": "Expand:\n\n\\[\n(n-6)(n-7)=n^2-13n+42\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\n\\frac{n^2-13n+72}{n(n-1)}=\\frac9{17}\n\\]"
       },
       {
@@ -5831,7 +5831,7 @@ window.SOLUTION_DATA = {
         "body": "Factor:\n\n\\[\n(2n-17)(n-18)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\nn=\\frac{17}{2}\\quad\\text{or}\\quad n=18\n\\]"
       },
       {
@@ -5842,17 +5842,17 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(\\boxed{18}\\)"
   },
   "all::Jan2021_P2HR__Q16__p15-15__m05__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate probability",
         "body": "\\[\nn(A\\cap B)=62+30-68=24\n\\]"
       },
       {
-        "title": "So the Venn diagram has",
+        "title": "Calculate probability",
         "body": "So the Venn diagram has:\n\n\\[\nA\\text{ only}=38,\\quad B\\text{ only}=6,\\quad A\\cap B=24,\\quad \\text{outside}=12\n\\]\n\n\\[\nP(A\\cap B)=\\frac{24}{80}=\\frac{3}{10}\n\\]\n\n\\[\nP(A\\cup B')=\\frac{74}{80}=\\frac{37}{40}\n\\]"
       }
     ],
@@ -5865,7 +5865,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved to Circles, Arcs & Sectors.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use trigonometry",
         "body": "\\[\n\\angle ABC=75^\\circ\n\\]"
       },
       {
@@ -5889,7 +5889,7 @@ window.SOLUTION_DATA = {
         "body": "Triangle area:\n\n\\[\n\\frac{1}{2}r^2\\sin 150^\\circ\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\n\\frac{150}{360}\\pi r^2-\\frac{1}{2}r^2\\sin 150^\\circ=200\n\\]\n\n\\[\nr^2\\left(\\frac{5\\pi}{12}-\\frac{1}{4}\\right)=200\n\\]\n\n\\[\nr^2=\\frac{200}{\\frac{5\\pi}{12}-\\frac{1}{4}}\n\\]\n\n\\[\nr=13.7426\\ldots\n\\]"
       }
     ],
@@ -5902,7 +5902,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Coordinate Geometry to 3D Pythagoras & Trigonometry.",
     "steps": [
       {
-        "title": "Since , triangle is isosceles",
+        "title": "Use trigonometry",
         "body": "Since \\(AB=BC=8\\), triangle \\(ABC\\) is isosceles."
       },
       {
@@ -5910,11 +5910,11 @@ window.SOLUTION_DATA = {
         "body": "The line from \\(B\\) to the midpoint \\(M\\) bisects angle \\(ABC\\).\n\n\\[\n\\angle ABM=\\frac{140^\\circ}{2}=70^\\circ\n\\]"
       },
       {
-        "title": "In right triangle ,",
+        "title": "Use trigonometry",
         "body": "In right triangle \\(ABM\\),\n\n\\[\n\\cos 70^\\circ=\\frac{BM}{8}\n\\]\n\n\\[\nBM=8\\cos 70^\\circ\n\\]"
       },
       {
-        "title": "Since is vertically above ,",
+        "title": "Use trigonometry",
         "body": "Since \\(T\\) is vertically above \\(B\\), the projection of \\(MT\\) onto the horizontal plane is \\(MB\\)."
       },
       {
@@ -5947,7 +5947,7 @@ window.SOLUTION_DATA = {
         "body": "The probability of taking two beads of the same colour is\n\n\\[\nP(RR)+P(BB)=\\frac9{17}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\n\\frac6n\\cdot\\frac5{n-1}\n+\\frac{n-6}{n}\\cdot\\frac{n-7}{n-1}\n=\\frac9{17}\n\\]\n\n\\[\n\\frac{30+(n-6)(n-7)}{n(n-1)}=\\frac9{17}\n\\]"
       },
       {
@@ -5955,7 +5955,7 @@ window.SOLUTION_DATA = {
         "body": "Expand:\n\n\\[\n(n-6)(n-7)=n^2-13n+42\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\n\\frac{n^2-13n+72}{n(n-1)}=\\frac9{17}\n\\]"
       },
       {
@@ -5971,7 +5971,7 @@ window.SOLUTION_DATA = {
         "body": "Factor:\n\n\\[\n(2n-17)(n-18)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\nn=\\frac{17}{2}\\quad\\text{or}\\quad n=18\n\\]"
       },
       {
@@ -5988,7 +5988,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Set notation and Venn diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\n\\mathcal{E}=\\{4,5,6,7,8,9,10,11,12,13,14,15\\}\n\\]"
       },
       {
@@ -5996,23 +5996,23 @@ window.SOLUTION_DATA = {
         "body": "We are given\n\n\\[\nA\\cap B=\\{5,10,15\\}\n\\]"
       },
       {
-        "title": "Also,",
+        "title": "Calculate value",
         "body": "Also,\n\n\\[\nB'=\\{7,8,9,11,12,13,14\\}\n\\]"
       },
       {
-        "title": "so",
+        "title": "Calculate value",
         "body": "so\n\n\\[\nB=\\{4,5,6,10,15\\}\n\\]"
       },
       {
-        "title": "And",
+        "title": "Calculate value",
         "body": "And\n\n\\[\nA'=\\{4,6,7,8,14\\}\n\\]"
       },
       {
-        "title": "so",
+        "title": "Calculate value",
         "body": "so\n\n\\[\nA=\\{5,9,10,11,12,13,15\\}\n\\]"
       },
       {
-        "title": "Therefore the Venn diagram regions",
+        "title": "Use Set notation Venn diagrams",
         "body": "Therefore the Venn diagram regions are:"
       },
       {
@@ -6029,11 +6029,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Powers, roots and standard form. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Convert standard form",
         "body": "\\[\na=4.2\\times 10^{-24}\n\\]\n\n\\[\nb=3\\times 10^{145}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Convert standard form",
         "body": "So\n\n\\[\nab=(4.2\\times 3)\\times 10^{-24+145}\n\\]\n\n\\[\nab=12.6\\times 10^{121}\n\\]"
       },
       {
@@ -6104,11 +6104,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Estimate the value",
         "body": "\\[\nA=w-\\frac{x^2}{y}\n\\]"
       },
       {
-        "title": "For the lower bound, use",
+        "title": "Find lower bound",
         "body": "For the lower bound, use the lower bound of \\(w\\), and make \\(\\frac{x^2}{y}\\) as large as possible.\n\n\\[\nw\\ge 3.445,\\quad x<1.95,\\quad y\\ge 4.5\n\\]\n\n\\[\nA_{\\text{lower}}=3.445-\\frac{1.95^2}{4.5}\n\\]\n\n\\[\nA_{\\text{lower}}=2.6\n\\]"
       }
     ],
@@ -6125,11 +6125,11 @@ window.SOLUTION_DATA = {
         "body": "The ratio is\n\n\\[\n\\text{Danil} : \\text{Gabriel} : \\text{Hadley}=3:5:9\n\\]"
       },
       {
-        "title": "The difference between Gabriel and",
+        "title": "Split the ratio",
         "body": "The difference between Gabriel and Hadley is\n\n\\[\n9-5=4 \\text{ parts}\n\\]"
       },
       {
-        "title": "These 4 parts are euros,",
+        "title": "Split the ratio",
         "body": "These 4 parts are \\(196\\) euros, so one part is\n\n\\[\n196 \\div 4=49\n\\]"
       },
       {
@@ -6146,7 +6146,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Direct and Inverse Proportion. The tag is correct.",
     "steps": [
       {
-        "title": "is inversely proportional to ,",
+        "title": "Find inverse function",
         "body": "\\(A\\) is inversely proportional to \\(C^2\\), so\n\n\\[\nA=\\frac{k}{C^2}\n\\]"
       },
       {
@@ -6154,11 +6154,11 @@ window.SOLUTION_DATA = {
         "body": "Use \\(A=40\\) when \\(C=1.5\\):\n\n\\[\n40=\\frac{k}{1.5^2}\n\\]\n\n\\[\nk=40\\times 1.5^2=90\n\\]"
       },
       {
-        "title": "So",
+        "title": "Find inverse function",
         "body": "So\n\n\\[\nA=\\frac{90}{C^2}\n\\]"
       },
       {
-        "title": "When ,",
+        "title": "Find inverse function",
         "body": "When \\(A=1000\\),\n\n\\[\n1000=\\frac{90}{C^2}\n\\]\n\n\\[\nC^2=0.09\n\\]\n\n\\[\nC=0.3\n\\]"
       }
     ],
@@ -6204,7 +6204,7 @@ window.SOLUTION_DATA = {
         "body": "(b)\n\\[\n\\left(\\frac{16w^8}{y^{20}}\\right)^{-3/4}\n=16^{-3/4}w^{-6}y^{15}\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Expand brackets",
         "body": "Since \\(16^{3/4}=8\\),\n\\[\n=\\frac{y^{15}}{8w^6}\n\\]"
       }
     ],
@@ -6225,7 +6225,7 @@ window.SOLUTION_DATA = {
         "body": "(b)(i)\n\\[\ny^2-2y-35=(y-7)(y+5)\n\\]"
       },
       {
-        "title": "(b)(ii) or",
+        "title": "Factorise expression",
         "body": "(b)(ii) \\(y=7\\) or \\(y=-5\\)."
       }
     ],
@@ -6250,7 +6250,7 @@ window.SOLUTION_DATA = {
         "body": "(b) The maximum point is read from the completed square form.\n\n\\[\ny=19-3(x-2)^2\n\\]"
       },
       {
-        "title": "The maximum occurs when ,",
+        "title": "Calculate value",
         "body": "The maximum occurs when \\(x=2\\), giving \\(y=19\\)."
       }
     ],
@@ -6263,7 +6263,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Simultaneous equations. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve simultaneous equations",
         "body": "\\[\n3x^2+y^2-xy=5\n\\]\n\n\\[\ny=2x-3\n\\]"
       },
       {
@@ -6275,15 +6275,15 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\\[\n(5x-4)(x-1)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Solve simultaneous equations",
         "body": "So\n\\[\nx=\\frac45 \\quad \\text{or} \\quad x=1\n\\]"
       },
       {
-        "title": "If",
+        "title": "Solve simultaneous equations",
         "body": "If \\(x=\\frac45\\):\n\\[\ny=2\\left(\\frac45\\right)-3=-\\frac75\n\\]"
       },
       {
-        "title": "If",
+        "title": "Solve simultaneous equations",
         "body": "If \\(x=1\\):\n\\[\ny=2(1)-3=-1\n\\]"
       }
     ],
@@ -6300,11 +6300,11 @@ window.SOLUTION_DATA = {
         "body": "The line is\n\\[\n2y+7x=10\n\\]\n\n\\[\n2y=-7x+10\n\\]\n\n\\[\ny=-\\frac72x+5\n\\]"
       },
       {
-        "title": "So the gradient is",
+        "title": "Find the gradient",
         "body": "So the gradient is\n\\[\n-\\frac72\n\\]"
       },
       {
-        "title": "For the x axis,",
+        "title": "Evaluate fraction",
         "body": "For the x-axis, \\(y=0\\):\n\\[\n2(0)+7x=10\n\\]\n\n\\[\nx=\\frac{10}{7}\n\\]"
       }
     ],
@@ -6321,7 +6321,7 @@ window.SOLUTION_DATA = {
         "body": "The maximum point of \\(y=f(x)\\) is \\((5,7)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x+9)\n\\]"
       },
       {
@@ -6329,7 +6329,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 9 units left:\n\n\\[\n(5,7)\\to(-4,7)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x)+3\n\\]"
       },
       {
@@ -6346,7 +6346,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\ny=ax^3+bx^2-12x+6\n\\]"
       },
       {
@@ -6362,7 +6362,7 @@ window.SOLUTION_DATA = {
         "body": "The gradient at \\(x=2\\) is 16:\n\n\\[\n16=12a+4b-12\n\\]\n\n\\[\n12a+4b=28\n\\]\n\n\\[\n3a+b=7\n\\]"
       },
       {
-        "title": "Now solve",
+        "title": "Solve",
         "body": "Now solve\n\n\\[\n2a+b=3\n\\]\n\n\\[\n3a+b=7\n\\]"
       },
       {
@@ -6370,11 +6370,11 @@ window.SOLUTION_DATA = {
         "body": "Subtracting gives\n\n\\[\na=4\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\n\\[\n2(4)+b=3\n\\]\n\n\\[\nb=-5\n\\]"
       },
       {
-        "title": "For ,",
+        "title": "Calculate value",
         "body": "For \\(x=3\\),\n\n\\[\ny=4(3)^3-5(3)^2-12(3)+6\n\\]\n\n\\[\ny=108-45-36+6\n\\]\n\n\\[\ny=33\n\\]"
       }
     ],
@@ -6387,7 +6387,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Circles, Arcs & Sectors. The tag is correct.",
     "steps": [
       {
-        "title": "The arc length is ,",
+        "title": "Use trigonometry",
         "body": "The arc length is \\(5\\text{ cm}\\), and the angle is \\(55^\\circ\\).\n\n\\[\n5=\\frac{55}{360}\\times 2\\pi r\n\\]\n\n\\[\nr=5.208\\ldots\n\\]"
       },
       {
@@ -6404,11 +6404,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Area & Volume of Similar Shapes. The tag is correct.",
     "steps": [
       {
-        "title": "The linear scale factor from",
+        "title": "Calculate area",
         "body": "The linear scale factor from vase \\(A\\) to vase \\(B\\) is\n\\[\n\\frac{15}{10}=1.5\n\\]"
       },
       {
-        "title": "So the volume scale factor",
+        "title": "Calculate area",
         "body": "So the volume scale factor is\n\\[\n1.5^3=3.375\n\\]"
       },
       {
@@ -6425,7 +6425,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Right-Angled Triangles - Pythagoras & Trigonometry. This is a right-angled trigonometry problem.",
     "steps": [
       {
-        "title": "Side is opposite the angle,",
+        "title": "Use trigonometry",
         "body": "Side \\(AB\\) is opposite the \\(65^\\circ\\) angle, and \\(AC=8.4\\text{ cm}\\) is the hypotenuse.\n\n\\[\n\\sin 65^\\circ=\\frac{AB}{8.4}\n\\]\n\n\\[\nAB=8.4\\sin 65^\\circ=7.613\\ldots\n\\]"
       }
     ],
@@ -6438,7 +6438,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Sine, Cosine Rule & Area of Triangles. The tag is correct.",
     "steps": [
       {
-        "title": "Split the isosceles triangle into",
+        "title": "Use cosine rule",
         "body": "Split the isosceles triangle into two right-angled triangles.\n\n\\[\n\\frac{BC}{2}=14\n\\]\n\n\\[\nh^2=17.5^2-14^2=110.25\n\\]\n\n\\[\nh=10.5\n\\]\n\n\\[\n\\text{area}=\\frac12\\times 28\\times 10.5=147\n\\]"
       }
     ],
@@ -6455,27 +6455,27 @@ window.SOLUTION_DATA = {
         "body": "Let\n\n\\[\nAE=x\n\\]"
       },
       {
-        "title": "Since is a square,",
+        "title": "Use trigonometry",
         "body": "Since \\(ABDE\\) is a square,\n\n\\[\nAB=BD=DE=AE=x\n\\]"
       },
       {
-        "title": "Since is an equilateral triangle,",
+        "title": "Use trigonometry",
         "body": "Since \\(BCD\\) is an equilateral triangle, the height from \\(C\\) to \\(BD\\) is\n\n\\[\n\\frac{\\sqrt3}{2}x\n\\]"
       },
       {
-        "title": "Therefore the vertical height from",
+        "title": "Use trigonometry",
         "body": "Therefore the vertical height from the base to \\(J\\) is\n\n\\[\nJM=x+\\frac{\\sqrt3}{2}x\n\\]\n\n\\[\nJM=\\frac{x(2+\\sqrt3)}{2}\n\\]"
       },
       {
-        "title": "Also,",
+        "title": "Use trigonometry",
         "body": "Also,\n\n\\[\nEF=2AE=2x\n\\]"
       },
       {
-        "title": "Since is the midpoint of",
+        "title": "Find the midpoint",
         "body": "Since \\(M\\) is the midpoint of \\(GF\\), the horizontal distance from \\(A\\) to \\(M\\) is\n\n\\[\nAM=\\sqrt{\\left(\\frac{x}{2}\\right)^2+(2x)^2}\n\\]\n\n\\[\nAM=\\sqrt{\\frac{x^2}{4}+4x^2}\n\\]\n\n\\[\nAM=\\frac{x\\sqrt{17}}{2}\n\\]"
       },
       {
-        "title": "In right triangle ,",
+        "title": "Use trigonometry",
         "body": "In right triangle \\(AMJ\\),\n\n\\[\n\\tan y^\\circ=\\frac{JM}{AM}\n\\]\n\n\\[\nT=\\frac{\\frac{x(2+\\sqrt3)}{2}}{\\frac{x\\sqrt{17}}{2}}\n\\]\n\n\\[\nT=\\frac{2+\\sqrt3}{\\sqrt{17}}\n\\]"
       },
       {
@@ -6492,23 +6492,23 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Coordinate Geometry to Vectors.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use vectors",
         "body": "\\[\n\\vec{OA}=8\\mathbf a,\\qquad \\vec{OB}=6\\mathbf b\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Use vectors",
         "body": "Since \\(OM:MB=1:2\\),\n\n\\[\n\\vec{OM}=\\frac13\\vec{OB}\n\\]\n\n\\[\n\\vec{OM}=2\\mathbf b\n\\]"
       },
       {
-        "title": "Since is the midpoint of",
+        "title": "Find the midpoint",
         "body": "Since \\(N\\) is the midpoint of \\(AB\\),\n\n\\[\n\\vec{ON}=\\frac{8\\mathbf a+6\\mathbf b}{2}\n\\]\n\n\\[\n\\vec{ON}=4\\mathbf a+3\\mathbf b\n\\]"
       },
       {
-        "title": "Point lies on , so",
+        "title": "Use vectors",
         "body": "Point \\(P\\) lies on \\(ON\\), so\n\n\\[\n\\vec{OP}=\\lambda(4\\mathbf a+3\\mathbf b)\n\\]"
       },
       {
-        "title": "Point also lies on ,",
+        "title": "Use vectors",
         "body": "Point \\(P\\) also lies on \\(AM\\), so\n\n\\[\n\\vec{OP}=8\\mathbf a+\\mu(2\\mathbf b-8\\mathbf a)\n\\]\n\n\\[\n\\vec{OP}=(8-8\\mu)\\mathbf a+2\\mu\\mathbf b\n\\]"
       },
       {
@@ -6516,7 +6516,7 @@ window.SOLUTION_DATA = {
         "body": "Equate coefficients:\n\n\\[\n4\\lambda=8-8\\mu\n\\]\n\n\\[\n3\\lambda=2\\mu\n\\]"
       },
       {
-        "title": "From ,",
+        "title": "Use vectors",
         "body": "From \\(3\\lambda=2\\mu\\),\n\n\\[\n\\mu=\\frac32\\lambda\n\\]"
       },
       {
@@ -6524,7 +6524,7 @@ window.SOLUTION_DATA = {
         "body": "Substitute:\n\n\\[\n4\\lambda=8-8\\left(\\frac32\\lambda\\right)\n\\]\n\n\\[\n4\\lambda=8-12\\lambda\n\\]\n\n\\[\n16\\lambda=8\n\\]\n\n\\[\n\\lambda=\\frac12\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Use vectors",
         "body": "Therefore\n\n\\[\n\\vec{OP}=\\frac12(4\\mathbf a+3\\mathbf b)\n\\]\n\n\\[\n\\vec{OP}=2\\mathbf a+\\frac32\\mathbf b\n\\]"
       }
     ],
@@ -6545,11 +6545,11 @@ window.SOLUTION_DATA = {
         "body": "Check:\n\n\\[\n\\text{median}=\\frac{8+20}{2}=14\n\\]"
       },
       {
-        "title": "The mode is , the",
+        "title": "Calculate statistic",
         "body": "The mode is \\(8\\), the smallest number is \\(5\\), and the largest number is \\(24\\)."
       },
       {
-        "title": "For the basketball scores",
+        "title": "Calculate value",
         "body": "For the basketball scores:\n\n\\[\n5 \\times 21=105\n\\]\n\n\\[\n6 \\times 23=138\n\\]\n\n\\[\n138-105=33\n\\]"
       }
     ],
@@ -6574,11 +6574,11 @@ window.SOLUTION_DATA = {
         "body": "The median is at cumulative frequency \\(40\\)."
       },
       {
-        "title": "This is between and",
+        "title": "Convert standard form",
         "body": "This is between \\((20,33)\\) and \\((30,57)\\):\n\n\\[\n20+\\frac{40-33}{57-33}\\times 10=22.9\n\\]"
       },
       {
-        "title": "So the median is about",
+        "title": "Use cumulative frequency",
         "body": "So the median is about \\(23\\) minutes."
       },
       {
@@ -6593,8 +6593,8 @@ window.SOLUTION_DATA = {
     "finalAnswer": "cumulative frequencies \\(7,33,57,71,78,80\\), median about \\(23\\) minutes, probability about \\(0.095\\)."
   },
   "all::Jan2022_P1H__Q14__p15-15__m04__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
@@ -6607,7 +6607,7 @@ window.SOLUTION_DATA = {
         "body": "Packet B:\n\n\\[\nP(\\text{sunflower})=\\frac{8}{15}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate probability",
         "body": "So\n\n\\[\nP(\\text{two sunflower seeds})=\\frac{7}{12}\\times\\frac{8}{15}\n\\]\n\n\\[\n=\\frac{14}{45}\n\\]"
       }
     ],
@@ -6632,7 +6632,7 @@ window.SOLUTION_DATA = {
         "body": "(b) The maximum point is read from the completed square form.\n\n\\[\ny=19-3(x-2)^2\n\\]"
       },
       {
-        "title": "The maximum occurs when ,",
+        "title": "Calculate value",
         "body": "The maximum occurs when \\(x=2\\), giving \\(y=19\\)."
       }
     ],
@@ -6649,7 +6649,7 @@ window.SOLUTION_DATA = {
         "body": "The maximum point of \\(y=f(x)\\) is \\((5,7)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x+9)\n\\]"
       },
       {
@@ -6657,7 +6657,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 9 units left:\n\n\\[\n(5,7)\\to(-4,7)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x)+3\n\\]"
       },
       {
@@ -6674,7 +6674,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\ny=ax^3+bx^2-12x+6\n\\]"
       },
       {
@@ -6690,7 +6690,7 @@ window.SOLUTION_DATA = {
         "body": "The gradient at \\(x=2\\) is 16:\n\n\\[\n16=12a+4b-12\n\\]\n\n\\[\n12a+4b=28\n\\]\n\n\\[\n3a+b=7\n\\]"
       },
       {
-        "title": "Now solve",
+        "title": "Solve",
         "body": "Now solve\n\n\\[\n2a+b=3\n\\]\n\n\\[\n3a+b=7\n\\]"
       },
       {
@@ -6698,11 +6698,11 @@ window.SOLUTION_DATA = {
         "body": "Subtracting gives\n\n\\[\na=4\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\n\\[\n2(4)+b=3\n\\]\n\n\\[\nb=-5\n\\]"
       },
       {
-        "title": "For ,",
+        "title": "Calculate value",
         "body": "For \\(x=3\\),\n\n\\[\ny=4(3)^3-5(3)^2-12(3)+6\n\\]\n\n\\[\ny=108-45-36+6\n\\]\n\n\\[\ny=33\n\\]"
       }
     ],
@@ -6719,27 +6719,27 @@ window.SOLUTION_DATA = {
         "body": "Let\n\n\\[\nAE=x\n\\]"
       },
       {
-        "title": "Since is a square,",
+        "title": "Use trigonometry",
         "body": "Since \\(ABDE\\) is a square,\n\n\\[\nAB=BD=DE=AE=x\n\\]"
       },
       {
-        "title": "Since is an equilateral triangle,",
+        "title": "Use trigonometry",
         "body": "Since \\(BCD\\) is an equilateral triangle, the height from \\(C\\) to \\(BD\\) is\n\n\\[\n\\frac{\\sqrt3}{2}x\n\\]"
       },
       {
-        "title": "Therefore the vertical height from",
+        "title": "Use trigonometry",
         "body": "Therefore the vertical height from the base to \\(J\\) is\n\n\\[\nJM=x+\\frac{\\sqrt3}{2}x\n\\]\n\n\\[\nJM=\\frac{x(2+\\sqrt3)}{2}\n\\]"
       },
       {
-        "title": "Also,",
+        "title": "Use trigonometry",
         "body": "Also,\n\n\\[\nEF=2AE=2x\n\\]"
       },
       {
-        "title": "Since is the midpoint of",
+        "title": "Find the midpoint",
         "body": "Since \\(M\\) is the midpoint of \\(GF\\), the horizontal distance from \\(A\\) to \\(M\\) is\n\n\\[\nAM=\\sqrt{\\left(\\frac{x}{2}\\right)^2+(2x)^2}\n\\]\n\n\\[\nAM=\\sqrt{\\frac{x^2}{4}+4x^2}\n\\]\n\n\\[\nAM=\\frac{x\\sqrt{17}}{2}\n\\]"
       },
       {
-        "title": "In right triangle ,",
+        "title": "Use trigonometry",
         "body": "In right triangle \\(AMJ\\),\n\n\\[\n\\tan y^\\circ=\\frac{JM}{AM}\n\\]\n\n\\[\nT=\\frac{\\frac{x(2+\\sqrt3)}{2}}{\\frac{x\\sqrt{17}}{2}}\n\\]\n\n\\[\nT=\\frac{2+\\sqrt3}{\\sqrt{17}}\n\\]"
       },
       {
@@ -6756,23 +6756,23 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Coordinate Geometry to Vectors.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use vectors",
         "body": "\\[\n\\vec{OA}=8\\mathbf a,\\qquad \\vec{OB}=6\\mathbf b\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Use vectors",
         "body": "Since \\(OM:MB=1:2\\),\n\n\\[\n\\vec{OM}=\\frac13\\vec{OB}\n\\]\n\n\\[\n\\vec{OM}=2\\mathbf b\n\\]"
       },
       {
-        "title": "Since is the midpoint of",
+        "title": "Find the midpoint",
         "body": "Since \\(N\\) is the midpoint of \\(AB\\),\n\n\\[\n\\vec{ON}=\\frac{8\\mathbf a+6\\mathbf b}{2}\n\\]\n\n\\[\n\\vec{ON}=4\\mathbf a+3\\mathbf b\n\\]"
       },
       {
-        "title": "Point lies on , so",
+        "title": "Use vectors",
         "body": "Point \\(P\\) lies on \\(ON\\), so\n\n\\[\n\\vec{OP}=\\lambda(4\\mathbf a+3\\mathbf b)\n\\]"
       },
       {
-        "title": "Point also lies on ,",
+        "title": "Use vectors",
         "body": "Point \\(P\\) also lies on \\(AM\\), so\n\n\\[\n\\vec{OP}=8\\mathbf a+\\mu(2\\mathbf b-8\\mathbf a)\n\\]\n\n\\[\n\\vec{OP}=(8-8\\mu)\\mathbf a+2\\mu\\mathbf b\n\\]"
       },
       {
@@ -6780,7 +6780,7 @@ window.SOLUTION_DATA = {
         "body": "Equate coefficients:\n\n\\[\n4\\lambda=8-8\\mu\n\\]\n\n\\[\n3\\lambda=2\\mu\n\\]"
       },
       {
-        "title": "From ,",
+        "title": "Use vectors",
         "body": "From \\(3\\lambda=2\\mu\\),\n\n\\[\n\\mu=\\frac32\\lambda\n\\]"
       },
       {
@@ -6788,7 +6788,7 @@ window.SOLUTION_DATA = {
         "body": "Substitute:\n\n\\[\n4\\lambda=8-8\\left(\\frac32\\lambda\\right)\n\\]\n\n\\[\n4\\lambda=8-12\\lambda\n\\]\n\n\\[\n16\\lambda=8\n\\]\n\n\\[\n\\lambda=\\frac12\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Use vectors",
         "body": "Therefore\n\n\\[\n\\vec{OP}=\\frac12(4\\mathbf a+3\\mathbf b)\n\\]\n\n\\[\n\\vec{OP}=2\\mathbf a+\\frac32\\mathbf b\n\\]"
       }
     ],
@@ -6805,15 +6805,15 @@ window.SOLUTION_DATA = {
         "body": "From the Venn diagram:\n\n\\[\nA\\text{ only}=6,\\quad A\\cap B=3,\\quad B\\text{ only}=8,\\quad B\\cap C=2,\\quad C\\text{ only}=5,\\quad \\text{outside}=4\n\\]"
       },
       {
-        "title": "There is no region in",
+        "title": "Calculate value",
         "body": "There is no region in both \\(A\\) and \\(C\\), and there is no triple intersection.\n\n\\[\nn(A\\cup B)=6+3+8+2=19\n\\]\n\n\\[\nn(A\\cap C)=0\n\\]\n\n\\[\nn(B\\cap C')=3+8=11\n\\]"
       },
       {
-        "title": "For , use",
+        "title": "Use",
         "body": "For \\(A'\\cup B'\\cup C'\\), use\n\n\\[\nA'\\cup B'\\cup C'=(A\\cap B\\cap C)'\n\\]"
       },
       {
-        "title": "Since is empty, this includes",
+        "title": "Set",
         "body": "Since \\(A\\cap B\\cap C\\) is empty, this includes everyone in the universal set.\n\n\\[\n6+3+8+2+5+4=28\n\\]"
       }
     ],
@@ -6826,27 +6826,27 @@ window.SOLUTION_DATA = {
     "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find the LCM",
         "body": "\\[\n36=2^2\\times 3^2\n\\]\n\n\\[\n120=2^3\\times 3\\times 5\n\\]"
       },
       {
-        "title": "For the LCM, take the",
+        "title": "Find the LCM",
         "body": "For the LCM, take the highest power of each prime:\n\n\\[\n\\text{LCM}=2^3\\times 3^2\\times 5=360\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Find the LCM",
         "body": "For part (b),\n\n\\[\nA=5^2\\times 7^4\\times 11^p\n\\]\n\n\\[\nB=5^m\\times 7^{n-5}\\times 11\n\\]"
       },
       {
-        "title": "Since , the smaller power",
+        "title": "Find the LCM",
         "body": "Since \\(m>2\\), the smaller power of \\(5\\) is \\(5^2\\)."
       },
       {
-        "title": "Since , , so the",
+        "title": "Find the LCM",
         "body": "Since \\(n>10\\), \\(n-5>5\\), so the smaller power of \\(7\\) is \\(7^4\\)."
       },
       {
-        "title": "Since , the smaller power",
+        "title": "Find the LCM",
         "body": "Since \\(p>1\\), the smaller power of \\(11\\) is \\(11^1\\).\n\n\\[\n\\text{HCF}=5^2\\times 7^4\\times 11\n\\]"
       }
     ],
@@ -6859,11 +6859,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Powers, roots and standard form. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Convert standard form",
         "body": "\\[\n5\\times 10^4=50000\n\\]\n\n\\[\n0.00006=6\\times 10^{-5}\n\\]"
       },
       {
-        "title": "For part (c),",
+        "title": "Convert standard form",
         "body": "For part (c),\n\n\\[\n\\frac{4\\times 10^{512}}{1.6\\times 10^{700}}\n=\\frac{4}{1.6}\\times 10^{512-700}\n\\]\n\n\\[\n=2.5\\times 10^{-188}\n\\]"
       }
     ],
@@ -6876,19 +6876,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Rounding, Estimation & Bounds is correct. The question also uses the sine rule, but the main demand is choosing the correct bounds.",
     "steps": [
       {
-        "title": "For an upper bound for",
+        "title": "Find upper bound",
         "body": "For an upper bound for \\(b\\), use the upper bound of \\(c\\):\n\n\\(c=11.55\\)"
       },
       {
-        "title": "Use the lower bounds of",
+        "title": "Use sine rule",
         "body": "Use the lower bounds of \\(x\\) and \\(y\\), because this makes angle \\(B\\) as large as possible and makes \\(\\sin y\\) as small as possible.\n\n\\(x=79.5^\\circ,\\quad y=74.5^\\circ\\)"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\(\\angle B=180^\\circ-79.5^\\circ-74.5^\\circ=26^\\circ\\)"
       },
       {
-        "title": "Using the sine rule,",
+        "title": "Use trigonometry",
         "body": "Using the sine rule,\n\n\\(\\dfrac{b}{\\sin 26^\\circ}=\\dfrac{11.55}{\\sin 74.5^\\circ}\\)\n\n\\(b=\\dfrac{11.55\\sin 26^\\circ}{\\sin 74.5^\\circ}=5.254...\\)"
       }
     ],
@@ -6926,7 +6926,7 @@ window.SOLUTION_DATA = {
         "body": "(a)\n\\[\n\\sqrt[3]{\\frac1x}=x^{-1/3}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So \\(m=-\\frac13\\)."
       },
       {
@@ -6976,7 +6976,7 @@ window.SOLUTION_DATA = {
         "body": "Twice the square of the middle number is\n\\[\n2(n+1)^2=2(n^2+2n+1)=2n^2+4n+2\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\\[\n2n^2+4n+4=(2n^2+4n+2)+2\n\\]"
       }
     ],
@@ -6993,11 +6993,11 @@ window.SOLUTION_DATA = {
         "body": "(a)\n\\[\n-2\\le n<3\n\\]"
       },
       {
-        "title": "Since is an integer,",
+        "title": "Calculate value",
         "body": "Since \\(n\\) is an integer,\n\\[\nn=-2,-1,0,1,2\n\\]"
       },
       {
-        "title": "(b) For",
+        "title": "Solve inequality",
         "body": "(b) For\n\\[\ny\\le1\n\\]"
       },
       {
@@ -7014,7 +7014,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Sequences. The tag is correct.",
     "steps": [
       {
-        "title": "The first term is and",
+        "title": "Find the nth term",
         "body": "The first term is \\(1\\) and the common difference is \\(4\\)."
       },
       {
@@ -7030,7 +7030,7 @@ window.SOLUTION_DATA = {
         "body": "There are\n\\[\n100-41+1=60\n\\]"
       },
       {
-        "title": "terms from the 41st to",
+        "title": "Find the nth term",
         "body": "terms from the 41st to the 100th inclusive.\n\n\\[\nS=\\frac{60}{2}(161+397)\n\\]\n\n\\[\nS=30\\times558=16740\n\\]"
       }
     ],
@@ -7043,7 +7043,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This is a table-and-graph question for a quadratic function.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve quadratic equation",
         "body": "\\[\ny=x^2-4x+3\n\\]"
       },
       {
@@ -7068,7 +7068,7 @@ window.SOLUTION_DATA = {
         "body": "The turning point of \\(y=f(x)\\) is \\((-6,-4)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x)+5\n\\]"
       },
       {
@@ -7076,7 +7076,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 5 units up:\n\n\\[\n(-6,-4)\\to(-6,1)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(3x)\n\\]"
       },
       {
@@ -7084,7 +7084,7 @@ window.SOLUTION_DATA = {
         "body": "the \\(x\\)-coordinate is divided by 3:\n\n\\[\n(-6,-4)\\to(-2,-4)\n\\]"
       },
       {
-        "title": "For the sketch of ,",
+        "title": "Read the graph",
         "body": "For the sketch of \\(y=2g(x)\\), keep every \\(x\\)-coordinate the same and double every \\(y\\)-coordinate."
       },
       {
@@ -7092,15 +7092,15 @@ window.SOLUTION_DATA = {
         "body": "Useful points are\n\n\\[\n(-1,3)\\to(-1,6)\n\\]\n\n\\[\n(2,0)\\to(2,0)\n\\]\n\n\\[\n(3,-1)\\to(3,-2)\n\\]\n\n\\[\n(4,0)\\to(4,0)\n\\]\n\n\\[\n(7,3)\\to(7,6)\n\\]"
       },
       {
-        "title": "Draw straight line segments through",
+        "title": "Solve inequality",
         "body": "Draw straight line segments through these points for \\(-1\\le x\\le 7\\)."
       },
       {
-        "title": "For part (c), has roots",
+        "title": "Calculate value",
         "body": "For part (c), \\(h(x)\\) has roots at \\(x=-1\\) and \\(x=6\\)."
       },
       {
-        "title": "For to pass through ,",
+        "title": "Calculate value",
         "body": "For \\(h(x+a)\\) to pass through \\((2,0)\\),\n\n\\[\n2+a=-1\n\\quad \\text{or} \\quad\n2+a=6\n\\]\n\n\\[\na=-3\n\\quad \\text{or} \\quad\na=4\n\\]"
       }
     ],
@@ -7121,7 +7121,7 @@ window.SOLUTION_DATA = {
         "body": "Particle \\(Q\\):\n\n\\[\nx=t^2-4t+4\n\\]\n\n\\[\n\\frac{dx}{dt}=2t-4=2(t-2)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Differentiate",
         "body": "For \\(t>1\\):"
       },
       {
@@ -7129,7 +7129,7 @@ window.SOLUTION_DATA = {
         "body": "- \\(P\\) moves in the negative direction when \\(1<t<\\frac53\\).\n- \\(P\\) moves in the positive direction when \\(t>\\frac53\\).\n- \\(Q\\) moves in the negative direction when \\(1<t<2\\).\n- \\(Q\\) moves in the positive direction when \\(t>2\\)."
       },
       {
-        "title": "So both particles move in",
+        "title": "Differentiate",
         "body": "So both particles move in the same direction when both velocities have the same sign."
       }
     ],
@@ -7142,7 +7142,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This is average speed over a whole journey.",
     "steps": [
       {
-        "title": "First part",
+        "title": "Calculate value",
         "body": "First part:\n\\[\n\\text{distance}=245\\text{ km},\n\\qquad\n\\text{time}=2.5\\text{ h}\n\\]"
       },
       {
@@ -7175,11 +7175,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Circle Theorems. The tag is correct.",
     "steps": [
       {
-        "title": "Since is a diameter,",
+        "title": "Use trigonometry",
         "body": "Since \\(AC\\) is a diameter,\n\\[\n\\angle ABC=90^\\circ\n\\]"
       },
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(ABC\\),\n\\[\n\\angle ACB=180^\\circ-90^\\circ-55^\\circ=35^\\circ\n\\]"
       },
       {
@@ -7196,7 +7196,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Circles, Arcs & Sectors. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate area",
         "body": "\\[\n\\text{area}=\\frac{110}{360}\\times \\pi(7.1)^2\n\\]\n\n\\[\n=48.390\\ldots\n\\]"
       }
     ],
@@ -7229,7 +7229,7 @@ window.SOLUTION_DATA = {
         "body": "Total area:\n\n\\[\n30+72+15=117\\text{ m}^2\n\\]"
       },
       {
-        "title": "Each tin covers , so",
+        "title": "Calculate area",
         "body": "Each tin covers \\(15\\text{ m}^2\\), so the number of tins needed is\n\n\\[\n\\frac{117}{15}=7.8\n\\]"
       },
       {
@@ -7237,15 +7237,15 @@ window.SOLUTION_DATA = {
         "body": "He must buy \\(8\\) tins."
       },
       {
-        "title": "After the increase, each tin",
+        "title": "Calculate area",
         "body": "After the \\(10\\%\\) increase, each tin costs \\(\\pounds 26.95\\). Before the increase:\n\n\\[\n\\frac{26.95}{1.10}=24.50\n\\]"
       },
       {
-        "title": "Before the increase, tins would",
+        "title": "Calculate area",
         "body": "Before the increase, \\(8\\) tins would cost\n\n\\[\n8\\times 24.50=196\n\\]"
       },
       {
-        "title": "Since , Jonty is correct",
+        "title": "Calculate area",
         "body": "Since \\(\\pounds 196<\\pounds 200\\), Jonty is correct."
       }
     ],
@@ -7258,15 +7258,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Area and Volume of Similar Shapes. The key idea is converting area and volume ratios into length ratios.",
     "steps": [
       {
-        "title": "Surface area ratio , so",
+        "title": "Split the ratio",
         "body": "Surface area ratio \\(A:B=4:9\\), so the length ratio is\n\n\\[\n\\sqrt4:\\sqrt9=2:3\n\\]"
       },
       {
-        "title": "Volume ratio , so the",
+        "title": "Split the ratio",
         "body": "Volume ratio \\(B:C=125:343\\), so the length ratio is\n\n\\[\n\\sqrt[3]{125}:\\sqrt[3]{343}=5:7\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Split the ratio",
         "body": "Therefore\n\n\\[\n\\frac{A}{C}=\\frac{2}{3}\\times \\frac{5}{7}=\\frac{10}{21}\n\\]"
       }
     ],
@@ -7279,7 +7279,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Right-Angled Triangles - Pythagoras & Trigonometry. The tag is correct.",
     "steps": [
       {
-        "title": "Each triangle has hypotenuse and",
+        "title": "Use trigonometry",
         "body": "Each triangle has hypotenuse \\(16\\text{ cm}\\) and one side \\(12.8\\text{ cm}\\)."
       },
       {
@@ -7308,27 +7308,27 @@ window.SOLUTION_DATA = {
         "body": "Take \\(O\\) as the origin.\n\n\\[\n\\vec{OX}=\\mathbf a,\\qquad \\vec{XY}=\\mathbf b,\\qquad \\vec{OZ}=3\\mathbf b\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use vectors",
         "body": "So\n\n\\[\n\\vec{OY}=\\mathbf a+\\mathbf b\n\\]"
       },
       {
-        "title": "Since is the midpoint of",
+        "title": "Find the midpoint",
         "body": "Since \\(M\\) is the midpoint of \\(OX\\),\n\n\\[\n\\vec{OM}=\\frac12\\mathbf a\n\\]"
       },
       {
-        "title": "Given ,",
+        "title": "Use vectors",
         "body": "Given \\(ON:OY=\\lambda:1\\),\n\n\\[\n\\vec{ON}=\\lambda(\\mathbf a+\\mathbf b)\n\\]"
       },
       {
-        "title": "Point also lies on ,",
+        "title": "Use vectors",
         "body": "Point \\(N\\) also lies on \\(MZ\\), so\n\n\\[\n\\vec{ON}=\\frac12\\mathbf a+t\\left(3\\mathbf b-\\frac12\\mathbf a\\right)\n\\]\n\n\\[\n\\vec{ON}=\\left(\\frac12-\\frac{t}{2}\\right)\\mathbf a+3t\\mathbf b\n\\]"
       },
       {
-        "title": "Equate coefficients with",
+        "title": "Use vectors",
         "body": "Equate coefficients with \\(\\lambda\\mathbf a+\\lambda\\mathbf b\\):\n\n\\[\n\\lambda=\\frac12-\\frac{t}{2}\n\\]\n\n\\[\n\\lambda=3t\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use vectors",
         "body": "So\n\n\\[\nt=\\frac{\\lambda}{3}\n\\]"
       },
       {
@@ -7349,19 +7349,19 @@ window.SOLUTION_DATA = {
         "body": "The range is \\(16\\). Since the greatest known mark is \\(80\\),\n\n\\[\n80-16=64\n\\]"
       },
       {
-        "title": "So one missing mark is",
+        "title": "Use Statistics Toolkit tag correct",
         "body": "So one missing mark is \\(64\\)."
       },
       {
-        "title": "The mode is , so",
+        "title": "Calculate statistic",
         "body": "The mode is \\(80\\), so another missing mark is \\(80\\)."
       },
       {
-        "title": "Now the marks in order",
+        "title": "Use Statistics Toolkit tag correct",
         "body": "Now the marks in order are\n\n\\[\n64,\\ 68,\\ 72,\\ x,\\ 75,\\ 77,\\ 80,\\ 80\n\\]"
       },
       {
-        "title": "The median is , so",
+        "title": "Calculate statistic",
         "body": "The median is \\(74\\), so\n\n\\[\n\\frac{x+75}{2}=74\n\\]\n\n\\[\nx=73\n\\]"
       }
     ],
@@ -7374,15 +7374,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "For a histogram,",
+        "title": "Use histogram",
         "body": "For a histogram,\n\n\\[\n\\text{frequency}=\\text{class width}\\times \\text{frequency density}\n\\]"
       },
       {
-        "title": "For , the frequency is",
+        "title": "Use frequency table",
         "body": "For \\(8\\leq w<8.5\\), the frequency is 16 and the class width is \\(0.5\\), so\n\n\\[\n\\text{frequency density}=\\frac{16}{0.5}=32\n\\]"
       },
       {
-        "title": "Using this scale from the",
+        "title": "Use histogram",
         "body": "Using this scale from the histogram, the frequency densities are:\n\n\\[\n15,\\ 32,\\ 23,\\ 30,\\ 12\n\\]"
       },
       {
@@ -7393,21 +7393,21 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(102\\) watermelons"
   },
   "all::Jan2022_P1HR__Q02__p04-04__m02__Probability-Toolkit": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate probability",
         "body": "\\[\n0.65\\times 300=195\n\\]"
       }
     ],
     "finalAnswer": "\\(195\\)."
   },
   "all::Jan2022_P1HR__Q13__p16-17__m07__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
@@ -7416,7 +7416,7 @@ window.SOLUTION_DATA = {
         "body": "Hector's probability of taking one green and one red is\n\n\\[\n2\\times\\frac{7}{12}\\times\\frac{5}{12}=\\frac{35}{72}\n\\]"
       },
       {
-        "title": "For all three counters to",
+        "title": "Calculate probability",
         "body": "For all three counters to be different, Meghan must take a blue counter."
       },
       {
@@ -7433,19 +7433,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Rounding, Estimation & Bounds is correct. The question also uses the sine rule, but the main demand is choosing the correct bounds.",
     "steps": [
       {
-        "title": "For an upper bound for",
+        "title": "Find upper bound",
         "body": "For an upper bound for \\(b\\), use the upper bound of \\(c\\):\n\n\\(c=11.55\\)"
       },
       {
-        "title": "Use the lower bounds of",
+        "title": "Use sine rule",
         "body": "Use the lower bounds of \\(x\\) and \\(y\\), because this makes angle \\(B\\) as large as possible and makes \\(\\sin y\\) as small as possible.\n\n\\(x=79.5^\\circ,\\quad y=74.5^\\circ\\)"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\(\\angle B=180^\\circ-79.5^\\circ-74.5^\\circ=26^\\circ\\)"
       },
       {
-        "title": "Using the sine rule,",
+        "title": "Use trigonometry",
         "body": "Using the sine rule,\n\n\\(\\dfrac{b}{\\sin 26^\\circ}=\\dfrac{11.55}{\\sin 74.5^\\circ}\\)\n\n\\(b=\\dfrac{11.55\\sin 26^\\circ}{\\sin 74.5^\\circ}=5.254...\\)"
       }
     ],
@@ -7462,7 +7462,7 @@ window.SOLUTION_DATA = {
         "body": "The turning point of \\(y=f(x)\\) is \\((-6,-4)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x)+5\n\\]"
       },
       {
@@ -7470,7 +7470,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 5 units up:\n\n\\[\n(-6,-4)\\to(-6,1)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(3x)\n\\]"
       },
       {
@@ -7478,7 +7478,7 @@ window.SOLUTION_DATA = {
         "body": "the \\(x\\)-coordinate is divided by 3:\n\n\\[\n(-6,-4)\\to(-2,-4)\n\\]"
       },
       {
-        "title": "For the sketch of ,",
+        "title": "Read the graph",
         "body": "For the sketch of \\(y=2g(x)\\), keep every \\(x\\)-coordinate the same and double every \\(y\\)-coordinate."
       },
       {
@@ -7486,15 +7486,15 @@ window.SOLUTION_DATA = {
         "body": "Useful points are\n\n\\[\n(-1,3)\\to(-1,6)\n\\]\n\n\\[\n(2,0)\\to(2,0)\n\\]\n\n\\[\n(3,-1)\\to(3,-2)\n\\]\n\n\\[\n(4,0)\\to(4,0)\n\\]\n\n\\[\n(7,3)\\to(7,6)\n\\]"
       },
       {
-        "title": "Draw straight line segments through",
+        "title": "Solve inequality",
         "body": "Draw straight line segments through these points for \\(-1\\le x\\le 7\\)."
       },
       {
-        "title": "For part (c), has roots",
+        "title": "Calculate value",
         "body": "For part (c), \\(h(x)\\) has roots at \\(x=-1\\) and \\(x=6\\)."
       },
       {
-        "title": "For to pass through ,",
+        "title": "Calculate value",
         "body": "For \\(h(x+a)\\) to pass through \\((2,0)\\),\n\n\\[\n2+a=-1\n\\quad \\text{or} \\quad\n2+a=6\n\\]\n\n\\[\na=-3\n\\quad \\text{or} \\quad\na=4\n\\]"
       }
     ],
@@ -7515,7 +7515,7 @@ window.SOLUTION_DATA = {
         "body": "Particle \\(Q\\):\n\n\\[\nx=t^2-4t+4\n\\]\n\n\\[\n\\frac{dx}{dt}=2t-4=2(t-2)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Differentiate",
         "body": "For \\(t>1\\):"
       },
       {
@@ -7523,7 +7523,7 @@ window.SOLUTION_DATA = {
         "body": "- \\(P\\) moves in the negative direction when \\(1<t<\\frac53\\).\n- \\(P\\) moves in the positive direction when \\(t>\\frac53\\).\n- \\(Q\\) moves in the negative direction when \\(1<t<2\\).\n- \\(Q\\) moves in the positive direction when \\(t>2\\)."
       },
       {
-        "title": "So both particles move in",
+        "title": "Differentiate",
         "body": "So both particles move in the same direction when both velocities have the same sign."
       }
     ],
@@ -7540,27 +7540,27 @@ window.SOLUTION_DATA = {
         "body": "Take \\(O\\) as the origin.\n\n\\[\n\\vec{OX}=\\mathbf a,\\qquad \\vec{XY}=\\mathbf b,\\qquad \\vec{OZ}=3\\mathbf b\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use vectors",
         "body": "So\n\n\\[\n\\vec{OY}=\\mathbf a+\\mathbf b\n\\]"
       },
       {
-        "title": "Since is the midpoint of",
+        "title": "Find the midpoint",
         "body": "Since \\(M\\) is the midpoint of \\(OX\\),\n\n\\[\n\\vec{OM}=\\frac12\\mathbf a\n\\]"
       },
       {
-        "title": "Given ,",
+        "title": "Use vectors",
         "body": "Given \\(ON:OY=\\lambda:1\\),\n\n\\[\n\\vec{ON}=\\lambda(\\mathbf a+\\mathbf b)\n\\]"
       },
       {
-        "title": "Point also lies on ,",
+        "title": "Use vectors",
         "body": "Point \\(N\\) also lies on \\(MZ\\), so\n\n\\[\n\\vec{ON}=\\frac12\\mathbf a+t\\left(3\\mathbf b-\\frac12\\mathbf a\\right)\n\\]\n\n\\[\n\\vec{ON}=\\left(\\frac12-\\frac{t}{2}\\right)\\mathbf a+3t\\mathbf b\n\\]"
       },
       {
-        "title": "Equate coefficients with",
+        "title": "Use vectors",
         "body": "Equate coefficients with \\(\\lambda\\mathbf a+\\lambda\\mathbf b\\):\n\n\\[\n\\lambda=\\frac12-\\frac{t}{2}\n\\]\n\n\\[\n\\lambda=3t\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use vectors",
         "body": "So\n\n\\[\nt=\\frac{\\lambda}{3}\n\\]"
       },
       {
@@ -7577,15 +7577,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "For a histogram,",
+        "title": "Use histogram",
         "body": "For a histogram,\n\n\\[\n\\text{frequency}=\\text{class width}\\times \\text{frequency density}\n\\]"
       },
       {
-        "title": "For , the frequency is",
+        "title": "Use frequency table",
         "body": "For \\(8\\leq w<8.5\\), the frequency is 16 and the class width is \\(0.5\\), so\n\n\\[\n\\text{frequency density}=\\frac{16}{0.5}=32\n\\]"
       },
       {
-        "title": "Using this scale from the",
+        "title": "Use histogram",
         "body": "Using this scale from the histogram, the frequency densities are:\n\n\\[\n15,\\ 32,\\ 23,\\ 30,\\ 12\n\\]"
       },
       {
@@ -7602,11 +7602,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find the LCM",
         "body": "\\[\n28=2^2\\times 7\n\\]\n\n\\[\n42=2\\times 3\\times 7\n\\]\n\n\\[\n63=3^2\\times 7\n\\]"
       },
       {
-        "title": "For the LCM, take the",
+        "title": "Find the LCM",
         "body": "For the LCM, take the highest power of each prime:\n\n\\[\n\\text{LCM}=2^2\\times 3^2\\times 7=252\n\\]"
       }
     ],
@@ -7619,7 +7619,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Powers, roots and standard form. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Convert standard form",
         "body": "\\[\na=6\\times 10^{40}\n\\]\n\n\\[\na^3=(6\\times 10^{40})^3\n\\]\n\n\\[\na^3=6^3\\times 10^{120}\n\\]\n\n\\[\na^3=216\\times 10^{120}\n\\]"
       },
       {
@@ -7665,7 +7665,7 @@ window.SOLUTION_DATA = {
         "body": "Correct to one decimal place:\n\n\\[\n1.5\\%\n\\]"
       },
       {
-        "title": "For part (b), the 2019",
+        "title": "Calculate percentage",
         "body": "For part (b), the 2019 price was \\(7.7\\%\\) greater than the 2017 price.\n\n\\[\n231776=1.077\\times \\text{2017 price}\n\\]\n\n\\[\n\\text{2017 price}=\\frac{231776}{1.077}=215205.19\\ldots\n\\]"
       },
       {
@@ -7716,7 +7716,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic proof. The tag is acceptable because the question asks for an exact-form proof.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\n\\frac{\\sqrt{12}}{\\sqrt3+2}=\\frac{2\\sqrt3}{\\sqrt3+2}\n\\]"
       },
       {
@@ -7724,7 +7724,7 @@ window.SOLUTION_DATA = {
         "body": "Multiply by the conjugate:\n\\[\n\\frac{2\\sqrt3}{\\sqrt3+2}\\times \\frac{2-\\sqrt3}{2-\\sqrt3}\n=\\frac{2\\sqrt3(2-\\sqrt3)}{4-3}\n\\]\n\n\\[\n=4\\sqrt3-6\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Simplify surd",
         "body": "Since \\(4\\sqrt3=\\sqrt{48}\\),\n\\[\n4\\sqrt3-6=-6+\\sqrt{48}\n\\]"
       }
     ],
@@ -7745,7 +7745,7 @@ window.SOLUTION_DATA = {
         "body": "The sum of their squares is\n\\[\n(2n+1)^2+(2n+3)^2\n\\]\n\n\\[\n=4n^2+4n+1+4n^2+12n+9\n\\]\n\n\\[\n=8n^2+16n+10\n\\]\n\n\\[\n=8(n^2+2n+1)+2=8(n+1)^2+2\n\\]"
       },
       {
-        "title": "This is a multiple of",
+        "title": "Use Algebraic proof correct",
         "body": "This is a multiple of 8 plus 2, so the remainder is always 2."
       }
     ],
@@ -7762,11 +7762,11 @@ window.SOLUTION_DATA = {
         "body": "The rectangle has side lengths\n\n\\[\n2x+3\n\\]"
       },
       {
-        "title": "and",
+        "title": "Use Functions Solving Inequalities",
         "body": "and\n\n\\[\nx-1\n\\]"
       },
       {
-        "title": "For the side lengths to",
+        "title": "Solve inequality",
         "body": "For the side lengths to be possible,\n\n\\[\nx>1\n\\]"
       },
       {
@@ -7778,11 +7778,11 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\n\\[\n2x^2+x-78=(2x+13)(x-6)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\n-\\frac{13}{2}<x<6\n\\]"
       },
       {
-        "title": "Combining with",
+        "title": "Solve inequality",
         "body": "Combining with \\(x>1\\):\n\n\\[\n1<x<6\n\\]"
       }
     ],
@@ -7795,7 +7795,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Simultaneous equations. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve simultaneous equations",
         "body": "\\[\n3x+5y=3.1\n\\]\n\n\\[\n6x+3y=3.75\n\\]"
       },
       {
@@ -7807,7 +7807,7 @@ window.SOLUTION_DATA = {
         "body": "Subtract the second equation:\n\\[\n7y=2.45\n\\]\n\n\\[\ny=0.35\n\\]"
       },
       {
-        "title": "Substitute into",
+        "title": "Solve simultaneous equations",
         "body": "Substitute into \\(3x+5y=3.1\\):\n\\[\n3x+5(0.35)=3.1\n\\]\n\n\\[\n3x+1.75=3.1\n\\]\n\n\\[\n3x=1.35\n\\]\n\n\\[\nx=0.45\n\\]"
       }
     ],
@@ -7820,7 +7820,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nS_m=39\n\\]\n\n\\[\nS_{2m}=320\n\\]"
       },
       {
@@ -7828,11 +7828,11 @@ window.SOLUTION_DATA = {
         "body": "Use\n\n\\[\nS_n=\\frac n2(2a+(n-1)d)\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\n\\[\n2S_m=m(2a+(m-1)d)=78\n\\]"
       },
       {
-        "title": "and",
+        "title": "Calculate value",
         "body": "and\n\n\\[\nS_{2m}=m(2a+(2m-1)d)=320\n\\]"
       },
       {
@@ -7840,7 +7840,7 @@ window.SOLUTION_DATA = {
         "body": "Subtract:\n\n\\[\nS_{2m}-2S_m=m[(2m-1)d-(m-1)d]\n\\]\n\n\\[\n320-78=m(md)\n\\]\n\n\\[\n242=m^2d\n\\]\n\n\\[\n242=2\\times 11^2\n\\]"
       },
       {
-        "title": "Since is prime and is",
+        "title": "Square factor",
         "body": "Since \\(d\\) is prime and \\(m^2\\) is a square factor,\n\n\\[\nd=2,\\quad m^2=121\n\\]\n\n\\[\nm=11\n\\]"
       }
     ],
@@ -7853,7 +7853,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\ng(x)=5+6x-x^2\n\\]"
       },
       {
@@ -7865,15 +7865,15 @@ window.SOLUTION_DATA = {
         "body": "Let\n\n\\[\ny=14-(x-3)^2\n\\]\n\n\\[\n(x-3)^2=14-y\n\\]"
       },
       {
-        "title": "The domain of is ,",
+        "title": "Find inverse function",
         "body": "The domain of \\(g\\) is \\(x\\ge 3\\), so take the positive square root:\n\n\\[\nx-3=\\sqrt{14-y}\n\\]\n\n\\[\nx=3+\\sqrt{14-y}\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Simplify surd",
         "body": "Therefore\n\n\\[\ng^{-1}:x\\mapsto 3+\\sqrt{14-x}\n\\]"
       },
       {
-        "title": "The range of is ,",
+        "title": "Calculate statistic",
         "body": "The range of \\(g\\) is \\(x\\le 14\\), so this is the domain of \\(g^{-1}\\)."
       }
     ],
@@ -7886,15 +7886,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Linear Graphs to Graphs of Functions.",
     "steps": [
       {
-        "title": "For part (a), solve",
+        "title": "Read the graph",
         "body": "For part (a), solve\n\n\\[\n2x^2-4x-1=0\n\\]"
       },
       {
-        "title": "Using the graph gives approximately",
+        "title": "Read the graph",
         "body": "Using the graph gives approximately\n\n\\[\nx=-0.2,\\quad x=2.2\n\\]"
       },
       {
-        "title": "For part (b), we need",
+        "title": "Read the graph",
         "body": "For part (b), we need to solve\n\n\\[\nx^2-x-1=0\n\\]"
       },
       {
@@ -7906,11 +7906,11 @@ window.SOLUTION_DATA = {
         "body": "The given graph is\n\n\\[\ny=2x^2-4x-1\n\\]"
       },
       {
-        "title": "Now",
+        "title": "Read the graph",
         "body": "Now\n\n\\[\n2x^2-2x-2=(2x^2-4x-1)+2x-1\n\\]"
       },
       {
-        "title": "So draw the straight line",
+        "title": "Read the graph",
         "body": "So draw the straight line\n\n\\[\ny=1-2x\n\\]"
       },
       {
@@ -7948,7 +7948,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Ratio Toolkit to Differentiation.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Split the ratio",
         "body": "\\[\nx=4t^3-27t+8\n\\]"
       },
       {
@@ -7960,7 +7960,7 @@ window.SOLUTION_DATA = {
         "body": "The direction of motion reverses when velocity is zero:\n\n\\[\n12t^2-27=0\n\\]\n\n\\[\n12t^2=27\n\\]\n\n\\[\nt^2=\\frac94\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Split the ratio",
         "body": "Since \\(t\\geq 0\\), \\(t=\\frac32\\)."
       },
       {
@@ -7968,7 +7968,7 @@ window.SOLUTION_DATA = {
         "body": "Acceleration is\n\n\\[\n\\frac{d^2x}{dt^2}=24t\n\\]"
       },
       {
-        "title": "At ,",
+        "title": "Split the ratio",
         "body": "At \\(t=\\frac32\\),\n\n\\[\na=24\\left(\\frac32\\right)=36\n\\]"
       }
     ],
@@ -8014,19 +8014,19 @@ window.SOLUTION_DATA = {
         "body": "The scale is\n\\[\n1\\text{ cm represents }200\\text{ m}\n\\]"
       },
       {
-        "title": "So the map distance is",
+        "title": "Use bearings",
         "body": "So the map distance is\n\\[\n700\\div 200=3.5\\text{ cm}\n\\]"
       },
       {
-        "title": "Part (a) from , draw",
+        "title": "Use bearings",
         "body": "Part (a): from \\(A\\), draw a bearing of \\(110^\\circ\\) and mark \\(C\\) at \\(3.5\\text{ cm}\\) from \\(A\\)."
       },
       {
-        "title": "For part (b),",
+        "title": "Use bearings",
         "body": "For part (b),\n\\[\n200\\text{ m}=20000\\text{ cm}\n\\]"
       },
       {
-        "title": "So the scale is",
+        "title": "Use bearings",
         "body": "So the scale is\n\\[\n1:20000\n\\]"
       }
     ],
@@ -8039,11 +8039,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Circle Theorems. The tag is correct.",
     "steps": [
       {
-        "title": "Since is a diameter,",
+        "title": "Use trigonometry",
         "body": "Since \\(EOG\\) is a diameter,\n\\[\n\\angle EDG=90^\\circ\n\\]"
       },
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(EDG\\),\n\\[\n\\angle DEG=180^\\circ-90^\\circ-42^\\circ=48^\\circ\n\\]"
       },
       {
@@ -8064,11 +8064,11 @@ window.SOLUTION_DATA = {
         "body": "Use the intersecting chords theorem:\n\\[\nPT\\times TQ=ST\\times TR\n\\]\n\n\\[\nPT\\times 3=4\\times 12\n\\]\n\n\\[\nPT=16\n\\]"
       },
       {
-        "title": "Since is a diameter,",
+        "title": "Use circle theorem",
         "body": "Since \\(PTQ\\) is a diameter,\n\\[\nPQ=PT+TQ=16+3=19\n\\]"
       },
       {
-        "title": "So the radius is",
+        "title": "Use circle theorem",
         "body": "So the radius is\n\\[\n19\\div 2=9.5\n\\]"
       }
     ],
@@ -8085,11 +8085,11 @@ window.SOLUTION_DATA = {
         "body": "The scale factor from triangle \\(ABC\\) to triangle \\(PQR\\) is\n\\[\n\\frac{PQ}{AB}=\\frac{12}{4}=3\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\\[\nBC=\\frac{RQ}{3}=\\frac{16.5}{3}=5.5\n\\]"
       },
       {
-        "title": "Also corresponds to , so",
+        "title": "Calculate value",
         "body": "Also \\(PR\\) corresponds to \\(AC\\), so\n\\[\ny=3x\n\\]"
       }
     ],
@@ -8102,7 +8102,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Right-Angled Triangles - Pythagoras & Trigonometry. The tag is correct.",
     "steps": [
       {
-        "title": "The horizontal distance is and",
+        "title": "Use trigonometry",
         "body": "The horizontal distance is \\(12\\text{ m}\\) and the zip wire is \\(13\\text{ m}\\)."
       },
       {
@@ -8110,7 +8110,7 @@ window.SOLUTION_DATA = {
         "body": "Vertical difference:\n\\[\n\\sqrt{13^2-12^2}=5\n\\]"
       },
       {
-        "title": "Since the shorter post is",
+        "title": "Use trigonometry",
         "body": "Since the shorter post is \\(2.6\\text{ m}\\),\n\\[\nAB=2.6+5=7.6\n\\]"
       }
     ],
@@ -8123,7 +8123,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(PQR\\),\n\n\\[\nPQ=1.6,\\qquad PR=4.2,\\qquad \\angle PRQ=18^\\circ\n\\]"
       },
       {
@@ -8131,11 +8131,11 @@ window.SOLUTION_DATA = {
         "body": "Use the sine rule:\n\n\\[\n\\frac{\\sin Q}{PR}=\\frac{\\sin R}{PQ}\n\\]\n\n\\[\n\\frac{\\sin Q}{4.2}=\\frac{\\sin18^\\circ}{1.6}\n\\]\n\n\\[\n\\sin Q=\\frac{4.2\\sin18^\\circ}{1.6}\n\\]\n\n\\[\n\\sin Q=0.811169\\ldots\n\\]"
       },
       {
-        "title": "Since angle is obtuse,",
+        "title": "Use trigonometry",
         "body": "Since angle \\(PQR\\) is obtuse,\n\n\\[\nQ=180^\\circ-\\sin^{-1}(0.811169\\ldots)\n\\]\n\n\\[\nQ=125.7896\\ldots^\\circ\n\\]"
       },
       {
-        "title": "Now find angle",
+        "title": "Use trigonometry",
         "body": "Now find angle \\(P\\):\n\n\\[\nP=180^\\circ-18^\\circ-125.7896\\ldots^\\circ\n\\]\n\n\\[\nP=36.2103\\ldots^\\circ\n\\]"
       },
       {
@@ -8164,7 +8164,7 @@ window.SOLUTION_DATA = {
         "body": "The total frequency is\n\n\\[\n13+17+8+x+11=49+x\n\\]"
       },
       {
-        "title": "The mean is , so",
+        "title": "Calculate statistic",
         "body": "The mean is \\(2\\), so\n\n\\[\n\\frac{77+3x}{49+x}=2\n\\]\n\n\\[\n77+3x=98+2x\n\\]\n\n\\[\nx=21\n\\]"
       }
     ],
@@ -8181,7 +8181,7 @@ window.SOLUTION_DATA = {
         "body": "Put the distances in order:\n\n\\[\n5,\\ 5,\\ 7,\\ 8,\\ 10,\\ 12,\\ 13,\\ 14,\\ 16,\\ 21,\\ 23\n\\]"
       },
       {
-        "title": "There are 11 values, so",
+        "title": "Calculate statistic",
         "body": "There are 11 values, so the median is the 6th value."
       },
       {
@@ -8189,7 +8189,7 @@ window.SOLUTION_DATA = {
         "body": "The lower half is\n\n\\[\n5,\\ 5,\\ 7,\\ 8,\\ 10\n\\]"
       },
       {
-        "title": "so",
+        "title": "Calculate value",
         "body": "so\n\n\\[\nQ_1=7\n\\]"
       },
       {
@@ -8197,7 +8197,7 @@ window.SOLUTION_DATA = {
         "body": "The upper half is\n\n\\[\n13,\\ 14,\\ 16,\\ 21,\\ 23\n\\]"
       },
       {
-        "title": "so",
+        "title": "Calculate value",
         "body": "so\n\n\\[\nQ_3=16\n\\]\n\n\\[\n\\text{IQR}=16-7=9\n\\]"
       }
     ],
@@ -8210,15 +8210,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "For a histogram,",
+        "title": "Use histogram",
         "body": "For a histogram,\n\n\\[\n\\text{frequency}=\\text{class width}\\times \\text{frequency density}\n\\]"
       },
       {
-        "title": "For , the frequency is",
+        "title": "Use frequency table",
         "body": "For \\(75<h\\leq85\\), the frequency is 12 and the class width is 10, so\n\n\\[\n\\text{frequency density}=\\frac{12}{10}=1.2\n\\]"
       },
       {
-        "title": "Using this scale from the",
+        "title": "Use histogram",
         "body": "Using this scale from the histogram, the frequency densities are:\n\n\\[\n0.6,\\ 0.8,\\ 1.0,\\ 1.2,\\ 0.4\n\\]"
       },
       {
@@ -8226,11 +8226,11 @@ window.SOLUTION_DATA = {
         "body": "The total number of tomato plants is\n\n\\[\n(5)(0.6)+(10)(0.8)+(5)(1.0)+(10)(1.2)+(5)(0.4)\n\\]\n\n\\[\n=3+8+5+12+2=30\n\\]"
       },
       {
-        "title": "For",
+        "title": "Solve inequality",
         "body": "For \\(h>82.5\\):\n\n\\[\n(2.5)(1.2)+(5)(0.4)=3+2=5\n\\]"
       },
       {
-        "title": "So the probability is",
+        "title": "Calculate probability",
         "body": "So the probability is\n\n\\[\n\\frac{5}{30}=\\frac16\n\\]"
       }
     ],
@@ -8243,19 +8243,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Probability Toolkit. The ratio is used, but the main structure is a probability table.",
     "steps": [
       {
-        "title": "The probabilities for green and",
+        "title": "Split the ratio",
         "body": "The probabilities for green and red are\n\n\\[\n0.20+0.35=0.55\n\\]"
       },
       {
-        "title": "So",
+        "title": "Split the ratio",
         "body": "So\n\n\\[\nP(\\text{pink or white})=1-0.55=0.45\n\\]"
       },
       {
-        "title": "Pink white , so white",
+        "title": "Split the ratio",
         "body": "Pink : white \\(=2:1\\), so white is \\(\\frac13\\) of \\(0.45\\).\n\n\\[\nP(\\text{white})=\\frac13\\times 0.45=0.15\n\\]"
       },
       {
-        "title": "The red probability is ,",
+        "title": "Split the ratio",
         "body": "The red probability is \\(0.35\\), and there are \\(28\\) red sweets.\n\n\\[\n\\text{total sweets}=\\frac{28}{0.35}=80\n\\]"
       },
       {
@@ -8276,11 +8276,11 @@ window.SOLUTION_DATA = {
         "body": "The rectangle has side lengths\n\n\\[\n2x+3\n\\]"
       },
       {
-        "title": "and",
+        "title": "Use Functions Solving Inequalities",
         "body": "and\n\n\\[\nx-1\n\\]"
       },
       {
-        "title": "For the side lengths to",
+        "title": "Solve inequality",
         "body": "For the side lengths to be possible,\n\n\\[\nx>1\n\\]"
       },
       {
@@ -8292,11 +8292,11 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\n\\[\n2x^2+x-78=(2x+13)(x-6)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\n-\\frac{13}{2}<x<6\n\\]"
       },
       {
-        "title": "Combining with",
+        "title": "Solve inequality",
         "body": "Combining with \\(x>1\\):\n\n\\[\n1<x<6\n\\]"
       }
     ],
@@ -8309,7 +8309,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nS_m=39\n\\]\n\n\\[\nS_{2m}=320\n\\]"
       },
       {
@@ -8317,11 +8317,11 @@ window.SOLUTION_DATA = {
         "body": "Use\n\n\\[\nS_n=\\frac n2(2a+(n-1)d)\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\n\\[\n2S_m=m(2a+(m-1)d)=78\n\\]"
       },
       {
-        "title": "and",
+        "title": "Calculate value",
         "body": "and\n\n\\[\nS_{2m}=m(2a+(2m-1)d)=320\n\\]"
       },
       {
@@ -8329,7 +8329,7 @@ window.SOLUTION_DATA = {
         "body": "Subtract:\n\n\\[\nS_{2m}-2S_m=m[(2m-1)d-(m-1)d]\n\\]\n\n\\[\n320-78=m(md)\n\\]\n\n\\[\n242=m^2d\n\\]\n\n\\[\n242=2\\times 11^2\n\\]"
       },
       {
-        "title": "Since is prime and is",
+        "title": "Square factor",
         "body": "Since \\(d\\) is prime and \\(m^2\\) is a square factor,\n\n\\[\nd=2,\\quad m^2=121\n\\]\n\n\\[\nm=11\n\\]"
       }
     ],
@@ -8342,7 +8342,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\ng(x)=5+6x-x^2\n\\]"
       },
       {
@@ -8354,15 +8354,15 @@ window.SOLUTION_DATA = {
         "body": "Let\n\n\\[\ny=14-(x-3)^2\n\\]\n\n\\[\n(x-3)^2=14-y\n\\]"
       },
       {
-        "title": "The domain of is ,",
+        "title": "Find inverse function",
         "body": "The domain of \\(g\\) is \\(x\\ge 3\\), so take the positive square root:\n\n\\[\nx-3=\\sqrt{14-y}\n\\]\n\n\\[\nx=3+\\sqrt{14-y}\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Simplify surd",
         "body": "Therefore\n\n\\[\ng^{-1}:x\\mapsto 3+\\sqrt{14-x}\n\\]"
       },
       {
-        "title": "The range of is ,",
+        "title": "Calculate statistic",
         "body": "The range of \\(g\\) is \\(x\\le 14\\), so this is the domain of \\(g^{-1}\\)."
       }
     ],
@@ -8375,15 +8375,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Linear Graphs to Graphs of Functions.",
     "steps": [
       {
-        "title": "For part (a), solve",
+        "title": "Read the graph",
         "body": "For part (a), solve\n\n\\[\n2x^2-4x-1=0\n\\]"
       },
       {
-        "title": "Using the graph gives approximately",
+        "title": "Read the graph",
         "body": "Using the graph gives approximately\n\n\\[\nx=-0.2,\\quad x=2.2\n\\]"
       },
       {
-        "title": "For part (b), we need",
+        "title": "Read the graph",
         "body": "For part (b), we need to solve\n\n\\[\nx^2-x-1=0\n\\]"
       },
       {
@@ -8395,11 +8395,11 @@ window.SOLUTION_DATA = {
         "body": "The given graph is\n\n\\[\ny=2x^2-4x-1\n\\]"
       },
       {
-        "title": "Now",
+        "title": "Read the graph",
         "body": "Now\n\n\\[\n2x^2-2x-2=(2x^2-4x-1)+2x-1\n\\]"
       },
       {
-        "title": "So draw the straight line",
+        "title": "Read the graph",
         "body": "So draw the straight line\n\n\\[\ny=1-2x\n\\]"
       },
       {
@@ -8416,7 +8416,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Ratio Toolkit to Differentiation.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Split the ratio",
         "body": "\\[\nx=4t^3-27t+8\n\\]"
       },
       {
@@ -8428,7 +8428,7 @@ window.SOLUTION_DATA = {
         "body": "The direction of motion reverses when velocity is zero:\n\n\\[\n12t^2-27=0\n\\]\n\n\\[\n12t^2=27\n\\]\n\n\\[\nt^2=\\frac94\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Split the ratio",
         "body": "Since \\(t\\geq 0\\), \\(t=\\frac32\\)."
       },
       {
@@ -8436,7 +8436,7 @@ window.SOLUTION_DATA = {
         "body": "Acceleration is\n\n\\[\n\\frac{d^2x}{dt^2}=24t\n\\]"
       },
       {
-        "title": "At ,",
+        "title": "Split the ratio",
         "body": "At \\(t=\\frac32\\),\n\n\\[\na=24\\left(\\frac32\\right)=36\n\\]"
       }
     ],
@@ -8449,7 +8449,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(PQR\\),\n\n\\[\nPQ=1.6,\\qquad PR=4.2,\\qquad \\angle PRQ=18^\\circ\n\\]"
       },
       {
@@ -8457,11 +8457,11 @@ window.SOLUTION_DATA = {
         "body": "Use the sine rule:\n\n\\[\n\\frac{\\sin Q}{PR}=\\frac{\\sin R}{PQ}\n\\]\n\n\\[\n\\frac{\\sin Q}{4.2}=\\frac{\\sin18^\\circ}{1.6}\n\\]\n\n\\[\n\\sin Q=\\frac{4.2\\sin18^\\circ}{1.6}\n\\]\n\n\\[\n\\sin Q=0.811169\\ldots\n\\]"
       },
       {
-        "title": "Since angle is obtuse,",
+        "title": "Use trigonometry",
         "body": "Since angle \\(PQR\\) is obtuse,\n\n\\[\nQ=180^\\circ-\\sin^{-1}(0.811169\\ldots)\n\\]\n\n\\[\nQ=125.7896\\ldots^\\circ\n\\]"
       },
       {
-        "title": "Now find angle",
+        "title": "Use trigonometry",
         "body": "Now find angle \\(P\\):\n\n\\[\nP=180^\\circ-18^\\circ-125.7896\\ldots^\\circ\n\\]\n\n\\[\nP=36.2103\\ldots^\\circ\n\\]"
       },
       {
@@ -8482,15 +8482,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "For a histogram,",
+        "title": "Use histogram",
         "body": "For a histogram,\n\n\\[\n\\text{frequency}=\\text{class width}\\times \\text{frequency density}\n\\]"
       },
       {
-        "title": "For , the frequency is",
+        "title": "Use frequency table",
         "body": "For \\(75<h\\leq85\\), the frequency is 12 and the class width is 10, so\n\n\\[\n\\text{frequency density}=\\frac{12}{10}=1.2\n\\]"
       },
       {
-        "title": "Using this scale from the",
+        "title": "Use histogram",
         "body": "Using this scale from the histogram, the frequency densities are:\n\n\\[\n0.6,\\ 0.8,\\ 1.0,\\ 1.2,\\ 0.4\n\\]"
       },
       {
@@ -8498,11 +8498,11 @@ window.SOLUTION_DATA = {
         "body": "The total number of tomato plants is\n\n\\[\n(5)(0.6)+(10)(0.8)+(5)(1.0)+(10)(1.2)+(5)(0.4)\n\\]\n\n\\[\n=3+8+5+12+2=30\n\\]"
       },
       {
-        "title": "For",
+        "title": "Solve inequality",
         "body": "For \\(h>82.5\\):\n\n\\[\n(2.5)(1.2)+(5)(0.4)=3+2=5\n\\]"
       },
       {
-        "title": "So the probability is",
+        "title": "Calculate probability",
         "body": "So the probability is\n\n\\[\n\\frac{5}{30}=\\frac16\n\\]"
       }
     ],
@@ -8527,7 +8527,7 @@ window.SOLUTION_DATA = {
         "body": "Difference:\n\n\\[\n5873.015\\ldots-4827.586\\ldots=1045.429\\ldots\n\\]"
       },
       {
-        "title": "To the nearest whole number,",
+        "title": "Convert standard form",
         "body": "To the nearest whole number, this is\n\n\\[\n1045\n\\]"
       }
     ],
@@ -8552,7 +8552,7 @@ window.SOLUTION_DATA = {
         "body": "Percentage increase:\n\n\\[\n\\frac{216}{720}\\times 100=30\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate percentage",
         "body": "So \\(P=30\\)."
       },
       {
@@ -8581,11 +8581,11 @@ window.SOLUTION_DATA = {
         "body": "The multiplier for \\(2.5\\%\\) compound interest is\n\n\\[\n1.025\n\\]"
       },
       {
-        "title": "After 3 years,",
+        "title": "Use compound interest",
         "body": "After 3 years,\n\n\\[\n7200(1.025)^3=7753.6125\n\\]"
       },
       {
-        "title": "Correct to the nearest dollar,",
+        "title": "Use compound interest",
         "body": "Correct to the nearest dollar,\n\n\\[\n7753.6125\\approx 7754\n\\]"
       }
     ],
@@ -8598,19 +8598,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Direct and Inverse Proportion. The tag is correct.",
     "steps": [
       {
-        "title": "is inversely proportional to ,",
+        "title": "Find inverse function",
         "body": "\\(y\\) is inversely proportional to \\(\\sqrt{x}\\), so\n\n\\[\ny\\propto \\frac{1}{\\sqrt{x}}\n\\]"
       },
       {
-        "title": "is directly proportional to ,",
+        "title": "Find inverse function",
         "body": "\\(x\\) is directly proportional to \\(T^3\\), so \\(\\sqrt{x}\\propto T^{3/2}\\)."
       },
       {
-        "title": "Therefore",
+        "title": "Find inverse function",
         "body": "Therefore\n\n\\[\ny\\propto \\frac{1}{T^{3/2}}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Find inverse function",
         "body": "So\n\n\\[\nyT^{3/2}=k\n\\]"
       },
       {
@@ -8618,7 +8618,7 @@ window.SOLUTION_DATA = {
         "body": "Use \\(y=8\\) when \\(T=25\\):\n\n\\[\nk=8\\times 25^{3/2}=8\\times 125=1000\n\\]"
       },
       {
-        "title": "When ,",
+        "title": "Find inverse function",
         "body": "When \\(y=27\\),\n\n\\[\n27T^{3/2}=1000\n\\]\n\n\\[\nT^{3/2}=\\frac{1000}{27}=\\left(\\frac{10}{3}\\right)^3\n\\]"
       },
       {
@@ -8635,23 +8635,23 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic Roots and Indices. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use index laws",
         "body": "\\[\nx^0=1\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Use index laws",
         "body": "For part (b),\n\n\\[\n2^{-3}\\times 2^9=2^{-3+9}=2^6\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use index laws",
         "body": "So\n\n\\[\nn=6\n\\]"
       },
       {
-        "title": "For part (c),",
+        "title": "Use index laws",
         "body": "For part (c),\n\n\\[\n\\frac{7^{206}\\times 7^m}{7^{214}}=7^{206+m-214}\n\\]"
       },
       {
-        "title": "This equals , so",
+        "title": "Use index laws",
         "body": "This equals \\(7^{-3}\\), so\n\n\\[\n206+m-214=-3\n\\]\n\n\\[\nm=5\n\\]"
       }
     ],
@@ -8664,7 +8664,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Rearranging formulas. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Rearrange formula",
         "body": "\\[\nn^2=\\frac{4d+t^3}{t^3}\n\\]\n\n\\[\nn^2t^3=4d+t^3\n\\]\n\n\\[\nt^3(n^2-1)=4d\n\\]\n\n\\[\nt^3=\\frac{4d}{n^2-1}\n\\]"
       }
     ],
@@ -8677,11 +8677,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic proof. The tag is acceptable because the question asks for exact algebraic working.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\na=\\sqrt8+4,\\qquad b=\\sqrt8-4\n\\]\n\n\\[\na-b=(\\sqrt8+4)-(\\sqrt8-4)=8\n\\]\n\n\\[\na+b=(\\sqrt8+4)+(\\sqrt8-4)=2\\sqrt8=4\\sqrt2\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify surd",
         "body": "So\n\\[\n(a-b)(a+b)=8\\times4\\sqrt2=32\\sqrt2\n\\]"
       },
       {
@@ -8719,7 +8719,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nf(x)=x+25\n\\]\n\n\\[\ng(x)=x^2-12x\n\\]\n\n\\[\nh(x)=fg(x)=f(g(x))\n\\]\n\n\\[\nh(x)=x^2-12x+25\n\\]\n\n\\[\nh(x)=(x-6)^2-11\n\\]"
       },
       {
@@ -8727,7 +8727,7 @@ window.SOLUTION_DATA = {
         "body": "Let\n\n\\[\ny=(x-6)^2-11\n\\]\n\n\\[\ny+11=(x-6)^2\n\\]"
       },
       {
-        "title": "Since the domain of is",
+        "title": "Find inverse function",
         "body": "Since the domain of \\(h\\) is \\(x<6\\), take the negative square root:\n\n\\[\nx-6=-\\sqrt{y+11}\n\\]\n\n\\[\nx=6-\\sqrt{y+11}\n\\]"
       }
     ],
@@ -8744,7 +8744,7 @@ window.SOLUTION_DATA = {
         "body": "The line is\n\\[\n2y=x+1\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\\[\nx=2y-1\n\\]"
       },
       {
@@ -8752,15 +8752,15 @@ window.SOLUTION_DATA = {
         "body": "Substitute into the curve\n\\[\n3y^2+7y+16=x^2-x\n\\]\n\n\\[\n3y^2+7y+16=(2y-1)^2-(2y-1)\n\\]\n\n\\[\n3y^2+7y+16=4y^2-6y+2\n\\]\n\n\\[\ny^2-13y-14=0\n\\]\n\n\\[\n(y-14)(y+1)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\\[\ny=14 \\quad \\text{or} \\quad y=-1\n\\]"
       },
       {
-        "title": "If , then",
+        "title": "Calculate value",
         "body": "If \\(y=14\\), then \\(x=27\\)."
       },
       {
-        "title": "If , then",
+        "title": "Calculate value",
         "body": "If \\(y=-1\\), then \\(x=-3\\)."
       }
     ],
@@ -8777,7 +8777,7 @@ window.SOLUTION_DATA = {
         "body": "The gradient of \\(AC\\) is \\(-\\frac67\\).\n\n\\[\n\\frac{q-10}{8-p}=-\\frac67\n\\]\n\n\\[\n7(q-10)=-6(8-p)\n\\]\n\n\\[\n7q-70=-48+6p\n\\]\n\n\\[\n6p-7q=-22\n\\]"
       },
       {
-        "title": "Since , lines and are",
+        "title": "Find the gradient",
         "body": "Since \\(\\angle ABC=90^\\circ\\), lines \\(AB\\) and \\(BC\\) are perpendicular.\n\n\\[\n\\text{gradient of }AB=\\frac{10-(-5)}{p-(-1)}=\\frac{15}{p+1}\n\\]\n\n\\[\n\\text{gradient of }BC=\\frac{q-(-5)}{8-(-1)}=\\frac{q+5}{9}\n\\]"
       },
       {
@@ -8785,7 +8785,7 @@ window.SOLUTION_DATA = {
         "body": "The product of perpendicular gradients is \\(-1\\):\n\n\\[\n\\frac{15}{p+1}\\times \\frac{q+5}{9}=-1\n\\]\n\n\\[\n15(q+5)=-9(p+1)\n\\]\n\n\\[\n5(q+5)=-3(p+1)\n\\]\n\n\\[\n3p+5q=-28\n\\]"
       },
       {
-        "title": "Now solve",
+        "title": "Solve",
         "body": "Now solve\n\n\\[\n6p-7q=-22\n\\]\n\n\\[\n3p+5q=-28\n\\]"
       },
       {
@@ -8797,7 +8797,7 @@ window.SOLUTION_DATA = {
         "body": "Subtract:\n\n\\[\n17q=-34\n\\]\n\n\\[\nq=-2\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\n\\[\n3p+5(-2)=-28\n\\]\n\n\\[\n3p=-18\n\\]\n\n\\[\np=-6\n\\]"
       }
     ],
@@ -8810,7 +8810,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This is drawing a reciprocal graph.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Read the graph",
         "body": "\\[\ny=\\frac6x\n\\]"
       },
       {
@@ -8835,7 +8835,7 @@ window.SOLUTION_DATA = {
         "body": "Draw a tangent to the curve at the point where\n\\[\nx=2\n\\]"
       },
       {
-        "title": "Using two clear points on",
+        "title": "Find the gradient",
         "body": "Using two clear points on the tangent, for example approximately \\((1.5,0.6)\\) and \\((2.3,2.2)\\),\n\\[\n\\text{gradient}\\approx\\frac{2.2-0.6}{2.3-1.5}\n\\]\n\n\\[\n\\text{gradient}\\approx2.0\n\\]"
       }
     ],
@@ -8852,7 +8852,7 @@ window.SOLUTION_DATA = {
         "body": "A straight line with gradient \\(-3\\) passing through \\((0,5)\\) has equation\n\\[\ny=-3x+5\n\\]"
       },
       {
-        "title": "For the region, use the",
+        "title": "Use the inequalities",
         "body": "For the region, use the inequalities:\n\\[\nx<6\n\\]\n\n\\[\ny>2\n\\]\n\n\\[\ny\\leq x+1\n\\]"
       }
     ],
@@ -8881,7 +8881,7 @@ window.SOLUTION_DATA = {
         "body": "curved surface area of hemisphere:\n\n\\[\n2\\pi x^2\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\n6\\pi x^2+\\pi x^2+2\\pi x^2=81\\pi\n\\]\n\n\\[\n9\\pi x^2=81\\pi\n\\]\n\n\\[\nx^2=9\n\\]\n\n\\[\nx=3\n\\]"
       },
       {
@@ -8901,7 +8901,7 @@ window.SOLUTION_DATA = {
         "body": "Density:\n\n\\[\n\\frac{840}{99\\pi}=2.70\\ldots\n\\]"
       },
       {
-        "title": "This matches aluminium, whose density",
+        "title": "Compare density",
         "body": "This matches aluminium, whose density is \\(2.7\\text{ g/cm}^3\\)."
       }
     ],
@@ -8922,15 +8922,15 @@ window.SOLUTION_DATA = {
         "body": "The interior angle of a regular pentagon is\n\\[\n\\frac{(5-2)\\times 180}{5}=108^\\circ\n\\]"
       },
       {
-        "title": "At ,",
+        "title": "Find the gradient",
         "body": "At \\(B\\),\n\\[\n\\angle IBC=135^\\circ-108^\\circ=27^\\circ\n\\]"
       },
       {
-        "title": "Since both polygons share side",
+        "title": "Find the gradient",
         "body": "Since both polygons share side \\(AB\\),\n\\[\nBI=BC\n\\]"
       },
       {
-        "title": "So triangle is isosceles",
+        "title": "Find the gradient",
         "body": "So triangle \\(BIC\\) is isosceles.\n\n\\[\nx=\\frac{180^\\circ-27^\\circ}{2}=76.5^\\circ\n\\]"
       }
     ],
@@ -8943,11 +8943,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Circles, Arcs & Sectors.",
     "steps": [
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(ABC\\),\n\\[\n\\cos 30^\\circ=\\frac{24}{AC}\n\\]\n\n\\[\nAC=\\frac{24}{\\cos 30^\\circ}=27.712\\ldots\n\\]"
       },
       {
-        "title": "The semicircle has radius ,",
+        "title": "Calculate value",
         "body": "The semicircle has radius \\(3\\text{ cm}\\), so its diameter is \\(6\\text{ cm}\\).\n\n\\[\nAF+DC=AC-DF=27.712\\ldots-6\n\\]"
       },
       {
@@ -8955,7 +8955,7 @@ window.SOLUTION_DATA = {
         "body": "Arc \\(FED\\) is a semicircle:\n\\[\n\\text{arc length}=3\\pi\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Calculate value",
         "body": "Therefore\n\\[\nAFEDC=27.712\\ldots-6+3\\pi=31.137\\ldots\n\\]"
       }
     ],
@@ -8985,11 +8985,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Sine, Cosine Rule & Area of Triangles. The tag is correct.",
     "steps": [
       {
-        "title": "For triangle ,",
+        "title": "Use trigonometry",
         "body": "For triangle \\(BCD\\),\n\n\\[\n405=\\frac12(36)(45)\\sin BCD\n\\]\n\n\\[\n\\sin BCD=0.5\n\\]"
       },
       {
-        "title": "The angle is acute, so",
+        "title": "Use trigonometry",
         "body": "The angle \\(BCD\\) is acute, so\n\n\\[\nBCD=30^\\circ\n\\]"
       },
       {
@@ -8997,7 +8997,7 @@ window.SOLUTION_DATA = {
         "body": "Find \\(BD\\):\n\n\\[\nBD^2=36^2+45^2-2(36)(45)\\cos30^\\circ\n\\]\n\n\\[\nBD=22.695\\ldots\n\\]"
       },
       {
-        "title": "Now use cosine rule in",
+        "title": "Use trigonometry",
         "body": "Now use cosine rule in triangle \\(ABD\\):\n\n\\[\n\\cos ABD=\\frac{19^2+BD^2-28^2}{2(19)(BD)}\n\\]\n\n\\[\nABD=83.871\\ldots^\\circ\n\\]"
       }
     ],
@@ -9014,7 +9014,7 @@ window.SOLUTION_DATA = {
         "body": "The projection of \\(EC\\) onto the field is \\(AC\\).\n\n\\[\nAC=\\sqrt{18^2+8^2}=\\sqrt{388}\n\\]"
       },
       {
-        "title": "The vertical height is ,",
+        "title": "Use trigonometry",
         "body": "The vertical height is \\(AE=12\\text{ m}\\), so\n\n\\[\n\\tan\\theta=\\frac{12}{\\sqrt{388}}\n\\]\n\n\\[\n\\theta=31.350\\ldots^\\circ\n\\]"
       }
     ],
@@ -9060,23 +9060,23 @@ window.SOLUTION_DATA = {
         "body": "The median is at cumulative frequency \\(30\\). From the graph,\n\n\\[\n\\text{median}\\approx 49\n\\]"
       },
       {
-        "title": "At marks, the cumulative frequency",
+        "title": "Use cumulative frequency",
         "body": "At \\(58\\) marks, the cumulative frequency is about \\(45\\), so about \\(45\\) students gained \\(58\\) marks or less."
       },
       {
-        "title": "For the interquartile range",
+        "title": "Use cumulative frequency",
         "body": "For the interquartile range:\n\n\\[\nQ_1 \\text{ is at }15,\\qquad Q_3 \\text{ is at }45\n\\]"
       },
       {
-        "title": "From the graph,",
+        "title": "Use cumulative frequency",
         "body": "From the graph,\n\n\\[\nQ_1\\approx 40,\\qquad Q_3\\approx 57\n\\]\n\n\\[\n\\text{IQR}\\approx 57-40=17\n\\]"
       },
       {
-        "title": "The geometry IQR is ,",
+        "title": "Use cumulative frequency",
         "body": "The geometry IQR is \\(9\\), so Luis is correct because the algebra IQR is larger."
       },
       {
-        "title": "For grade A, use mark",
+        "title": "Use cumulative frequency",
         "body": "For grade A, use mark \\(64\\). From the graph, about \\(50\\) students gained \\(64\\) or less, so about\n\n\\[\n60-50=10\n\\]"
       },
       {
@@ -9091,8 +9091,8 @@ window.SOLUTION_DATA = {
     "finalAnswer": "median about \\(49\\), about \\(45\\) students, IQR about \\(17\\), Luis is correct, probability about \\(0.025\\)."
   },
   "all::Jan2022_P2HR__Q01__p03-03__m04__Probability-Toolkit": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
@@ -9101,7 +9101,7 @@ window.SOLUTION_DATA = {
         "body": "The missing probability is\n\n\\[\n1-0.38-0.24-0.16=0.22\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate probability",
         "body": "So\n\n\\[\nP(\\text{Darjeeling or Rize})=0.24+0.16=0.40\n\\]"
       }
     ],
@@ -9114,31 +9114,31 @@ window.SOLUTION_DATA = {
     "topicNote": "Direct & Inverse Proportion is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find inverse function",
         "body": "\\[\ny \\propto \\frac{1}{\\sqrt{x}}\n\\]"
       },
       {
-        "title": "and",
+        "title": "Use Direct Inverse Proportion correct",
         "body": "and\n\n\\[\nx \\propto T^3\n\\]"
       },
       {
-        "title": "So",
+        "title": "Find inverse function",
         "body": "So\n\n\\[\n\\sqrt{x}\\propto T^{3/2}\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Find inverse function",
         "body": "Therefore\n\n\\[\ny\\propto \\frac{1}{T^{3/2}}\n\\]"
       },
       {
-        "title": "So is constant",
+        "title": "Use Direct Inverse Proportion correct",
         "body": "So \\(yT^{3/2}\\) is constant."
       },
       {
-        "title": "When and ,",
+        "title": "Find inverse function",
         "body": "When \\(y=8\\) and \\(T=25\\),\n\n\\[\n8(25)^{3/2}=8(125)=1000\n\\]"
       },
       {
-        "title": "When ,",
+        "title": "Find inverse function",
         "body": "When \\(y=27\\),\n\n\\[\n27T^{3/2}=1000\n\\]\n\n\\[\nT^{3/2}=\\frac{1000}{27}=\\left(\\frac{10}{3}\\right)^3\n\\]\n\n\\[\nT=\\left(\\frac{10}{3}\\right)^2=\\frac{100}{9}\n\\]"
       }
     ],
@@ -9151,7 +9151,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nf(x)=x+25\n\\]\n\n\\[\ng(x)=x^2-12x\n\\]\n\n\\[\nh(x)=fg(x)=f(g(x))\n\\]\n\n\\[\nh(x)=x^2-12x+25\n\\]\n\n\\[\nh(x)=(x-6)^2-11\n\\]"
       },
       {
@@ -9159,7 +9159,7 @@ window.SOLUTION_DATA = {
         "body": "Let\n\n\\[\ny=(x-6)^2-11\n\\]\n\n\\[\ny+11=(x-6)^2\n\\]"
       },
       {
-        "title": "Since the domain of is",
+        "title": "Find inverse function",
         "body": "Since the domain of \\(h\\) is \\(x<6\\), take the negative square root:\n\n\\[\nx-6=-\\sqrt{y+11}\n\\]\n\n\\[\nx=6-\\sqrt{y+11}\n\\]"
       }
     ],
@@ -9176,7 +9176,7 @@ window.SOLUTION_DATA = {
         "body": "The gradient of \\(AC\\) is \\(-\\frac67\\).\n\n\\[\n\\frac{q-10}{8-p}=-\\frac67\n\\]\n\n\\[\n7(q-10)=-6(8-p)\n\\]\n\n\\[\n7q-70=-48+6p\n\\]\n\n\\[\n6p-7q=-22\n\\]"
       },
       {
-        "title": "Since , lines and are",
+        "title": "Find the gradient",
         "body": "Since \\(\\angle ABC=90^\\circ\\), lines \\(AB\\) and \\(BC\\) are perpendicular.\n\n\\[\n\\text{gradient of }AB=\\frac{10-(-5)}{p-(-1)}=\\frac{15}{p+1}\n\\]\n\n\\[\n\\text{gradient of }BC=\\frac{q-(-5)}{8-(-1)}=\\frac{q+5}{9}\n\\]"
       },
       {
@@ -9184,7 +9184,7 @@ window.SOLUTION_DATA = {
         "body": "The product of perpendicular gradients is \\(-1\\):\n\n\\[\n\\frac{15}{p+1}\\times \\frac{q+5}{9}=-1\n\\]\n\n\\[\n15(q+5)=-9(p+1)\n\\]\n\n\\[\n5(q+5)=-3(p+1)\n\\]\n\n\\[\n3p+5q=-28\n\\]"
       },
       {
-        "title": "Now solve",
+        "title": "Solve",
         "body": "Now solve\n\n\\[\n6p-7q=-22\n\\]\n\n\\[\n3p+5q=-28\n\\]"
       },
       {
@@ -9196,7 +9196,7 @@ window.SOLUTION_DATA = {
         "body": "Subtract:\n\n\\[\n17q=-34\n\\]\n\n\\[\nq=-2\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\n\\[\n3p+5(-2)=-28\n\\]\n\n\\[\n3p=-18\n\\]\n\n\\[\np=-6\n\\]"
       }
     ],
@@ -9225,7 +9225,7 @@ window.SOLUTION_DATA = {
         "body": "curved surface area of hemisphere:\n\n\\[\n2\\pi x^2\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\n6\\pi x^2+\\pi x^2+2\\pi x^2=81\\pi\n\\]\n\n\\[\n9\\pi x^2=81\\pi\n\\]\n\n\\[\nx^2=9\n\\]\n\n\\[\nx=3\n\\]"
       },
       {
@@ -9245,7 +9245,7 @@ window.SOLUTION_DATA = {
         "body": "Density:\n\n\\[\n\\frac{840}{99\\pi}=2.70\\ldots\n\\]"
       },
       {
-        "title": "This matches aluminium, whose density",
+        "title": "Compare density",
         "body": "This matches aluminium, whose density is \\(2.7\\text{ g/cm}^3\\)."
       }
     ],
@@ -9258,7 +9258,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
     "steps": [
       {
-        "title": "For the HCF of and",
+        "title": "Find the LCM",
         "body": "For the HCF of \\(56\\) and \\(84\\):\n\n\\[\n56=2^3\\times 7\n\\]\n\n\\[\n84=2^2\\times 3\\times 7\n\\]"
       },
       {
@@ -9266,7 +9266,7 @@ window.SOLUTION_DATA = {
         "body": "Take the smaller powers:\n\n\\[\n\\text{HCF}=2^2\\times 7=28\n\\]"
       },
       {
-        "title": "For the LCM of and",
+        "title": "Find the LCM",
         "body": "For the LCM of \\(60\\) and \\(72\\):\n\n\\[\n60=2^2\\times 3\\times 5\n\\]\n\n\\[\n72=2^3\\times 3^2\n\\]"
       },
       {
@@ -9283,7 +9283,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Powers, roots and standard form. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Convert standard form",
         "body": "\\[\n0.000089=8.9\\times 10^{-5}\n\\]\n\n\\[\n8.34\\times 10^4=83400\n\\]"
       }
     ],
@@ -9308,11 +9308,11 @@ window.SOLUTION_DATA = {
         "body": "Together:\n\n\\[\n\\frac38+\\frac9{20}\n=\\frac{15}{40}+\\frac{18}{40}\n=\\frac{33}{40}\n\\]"
       },
       {
-        "title": "So Payment 3 is",
+        "title": "Calculate percentage",
         "body": "So Payment 3 is\n\n\\[\n1-\\frac{33}{40}=\\frac7{40}\n\\]"
       },
       {
-        "title": "Payment 3 is , so",
+        "title": "Calculate percentage",
         "body": "Payment 3 is \\(\\$406\\), so\n\n\\[\n\\frac7{40}\\times \\text{total}=406\n\\]\n\n\\[\n\\text{total}=406\\times \\frac{40}{7}=2320\n\\]"
       },
       {
@@ -9329,27 +9329,27 @@ window.SOLUTION_DATA = {
     "topicNote": "Compound Interest and Depreciation. The tag is correct.",
     "steps": [
       {
-        "title": "For part (a), the value",
+        "title": "Use compound interest",
         "body": "For part (a), the value in 2021 was \\(4\\%\\) more than in 2020.\n\n\\[\n\\text{2020 value}=\\frac{634400}{1.04}=610000\n\\]"
       },
       {
-        "title": "In 2020, , so the",
+        "title": "Use compound interest",
         "body": "In 2020, \\(600000<x<700000\\), so the service charge band was B."
       },
       {
-        "title": "In 2021, is also between",
+        "title": "Use compound interest",
         "body": "In 2021, \\(634400\\) is also between \\(600000\\) and \\(700000\\), so the band was still B."
       },
       {
-        "title": "For part (b), a depreciation",
+        "title": "Use compound interest",
         "body": "For part (b), a depreciation of \\(15\\%\\) has multiplier \\(0.85\\)."
       },
       {
-        "title": "After 2 years, the multiplier",
+        "title": "Use compound interest",
         "body": "After 2 years, the multiplier is\n\n\\[\n0.85^2=0.7225\n\\]"
       },
       {
-        "title": "So the value left is",
+        "title": "Use compound interest",
         "body": "So the value left is \\(72.25\\%\\), meaning the total depreciation is\n\n\\[\n100\\%-72.25\\%=27.75\\%\n\\]"
       }
     ],
@@ -9375,19 +9375,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic Roots and Indices. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use index laws",
         "body": "\\[\n8\\times (4t)^0=8\\times 1=8\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Use index laws",
         "body": "For part (b),\n\n\\[\nx^6\\div x^{-5}=x^{6-(-5)}=x^{11}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use index laws",
         "body": "So\n\n\\[\np=11\n\\]"
       },
       {
-        "title": "For part (c),",
+        "title": "Use index laws",
         "body": "For part (c),\n\n\\[\n(2k^2m^4)^3=2^3k^{2\\times 3}m^{4\\times 3}\n\\]\n\n\\[\n=8k^6m^{12}\n\\]"
       }
     ],
@@ -9417,7 +9417,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\nq+12x-qx^2=-q\\left(x^2-\\frac{12}{q}x\\right)+q\n\\]"
       },
       {
@@ -9425,11 +9425,11 @@ window.SOLUTION_DATA = {
         "body": "Complete the square:\n\n\\[\nx^2-\\frac{12}{q}x=\\left(x-\\frac6q\\right)^2-\\frac{36}{q^2}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\nq+12x-qx^2\n=-q\\left[\\left(x-\\frac6q\\right)^2-\\frac{36}{q^2}\\right]+q\n\\]\n\n\\[\n=q+\\frac{36}{q}-q\\left(x-\\frac6q\\right)^2\n\\]"
       },
       {
-        "title": "Compare with",
+        "title": "Compare coefficients",
         "body": "Compare with\n\n\\[\na-b(x-c)^2\n\\]"
       }
     ],
@@ -9463,11 +9463,11 @@ window.SOLUTION_DATA = {
         "body": "The sequence is\n\\[\n1,\\ 5,\\ 9,\\ 13,\\ 17\n\\]"
       },
       {
-        "title": "The common difference is ,",
+        "title": "Find the nth term",
         "body": "The common difference is \\(4\\), so the nth term is\n\\[\n4n-3\n\\]"
       },
       {
-        "title": "For the second sequence, the",
+        "title": "Find the nth term",
         "body": "For the second sequence, the nth term is \\(3n+5\\)."
       },
       {
@@ -9484,7 +9484,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Functions. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\nf(x)=\\frac{2x}{x-6}\n\\]"
       },
       {
@@ -9496,7 +9496,7 @@ window.SOLUTION_DATA = {
         "body": "(b) Let\n\\[\ny=\\frac{2x}{x-6}\n\\]\n\n\\[\ny(x-6)=2x\n\\]\n\n\\[\nyx-6y=2x\n\\]\n\n\\[\nx(y-2)=6y\n\\]\n\n\\[\nx=\\frac{6y}{y-2}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\\[\nf^{-1}(x)=\\frac{6x}{x-2}\n\\]"
       }
     ],
@@ -9517,11 +9517,11 @@ window.SOLUTION_DATA = {
         "body": "The distance between the centres is\n\\[\n\\sqrt{(7-(-1))^2+(18-3)^2}\n\\]\n\n\\[\n=\\sqrt{8^2+15^2}=\\sqrt{289}=17\n\\]"
       },
       {
-        "title": "The radii are cm and",
+        "title": "Calculate value",
         "body": "The radii are \\(3\\) cm and \\(15\\) cm.\n\n\\[\n3+15=18\n\\]"
       },
       {
-        "title": "Since the distance between the",
+        "title": "Use Coordinate geometry tag correct",
         "body": "Since the distance between the centres is \\(17\\) cm, which is less than the sum of the radii, the circles intersect."
       }
     ],
@@ -9538,7 +9538,7 @@ window.SOLUTION_DATA = {
         "body": "The maximum point of \\(y=f(x)\\) is \\((s,t)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x-2)\n\\]"
       },
       {
@@ -9546,7 +9546,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 2 units right:\n\n\\[\n(s,t)\\to(s+2,t)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=3f(x)\n\\]"
       },
       {
@@ -9563,7 +9563,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This is differentiation applied to motion.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Differentiate",
         "body": "\\[\ns=4t^2+\\frac{125}{t}\n\\]"
       },
       {
@@ -9571,11 +9571,11 @@ window.SOLUTION_DATA = {
         "body": "Velocity is\n\\[\nv=\\frac{ds}{dt}=8t-\\frac{125}{t^2}\n\\]"
       },
       {
-        "title": "When ,",
+        "title": "Differentiate",
         "body": "When \\(v=0\\),\n\\[\n8t-\\frac{125}{t^2}=0\n\\]\n\n\\[\n8t^3=125\n\\]\n\n\\[\nt^3=15.625\n\\]\n\n\\[\nt=2.5\n\\]"
       },
       {
-        "title": "Now find",
+        "title": "Differentiate",
         "body": "Now find \\(s\\):\n\\[\ns=4(2.5)^2+\\frac{125}{2.5}\n\\]\n\n\\[\ns=25+50=75\n\\]"
       }
     ],
@@ -9588,7 +9588,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This is a pressure and cylinder volume question.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate area",
         "body": "\\[\n\\text{pressure}=\\frac{\\text{force}}{\\text{area}}\n\\]\n\n\\[\n1.4=\\frac{72}{\\text{area}}\n\\]\n\n\\[\n\\text{area}=\\frac{72}{1.4}=51.428\\ldots\\text{ cm}^2\n\\]"
       },
       {
@@ -9617,11 +9617,11 @@ window.SOLUTION_DATA = {
         "body": "The interior angle of polygon \\(B\\) is\n\\[\n7x=7\\times 20=140^\\circ\n\\]"
       },
       {
-        "title": "So the exterior angle is",
+        "title": "Find the gradient",
         "body": "So the exterior angle is\n\\[\n180^\\circ-140^\\circ=40^\\circ\n\\]"
       },
       {
-        "title": "For a regular polygon,",
+        "title": "Find the gradient",
         "body": "For a regular polygon,\n\\[\nn=\\frac{360}{40}=9\n\\]"
       }
     ],
@@ -9638,11 +9638,11 @@ window.SOLUTION_DATA = {
         "body": "The interior angles form an arithmetic sequence:\n\n\\[\n177,\\ 175,\\ 173,\\ 171,\\ 169,\\ldots\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\na=177,\\quad d=-2\n\\]"
       },
       {
-        "title": "For an sided polygon, the",
+        "title": "Use trigonometry",
         "body": "For an \\(n\\)-sided polygon, the sum of the interior angles is\n\n\\[\n180(n-2)\n\\]"
       },
       {
@@ -9658,7 +9658,7 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\n\\[\n(n+20)(n-18)=0\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Solve inequality",
         "body": "Since \\(n>5\\),\n\n\\[\nn=18\n\\]"
       }
     ],
@@ -9683,7 +9683,7 @@ window.SOLUTION_DATA = {
         "body": "The sector area is twice the circle area:\n\\[\n\\frac18\\pi(r+7)^2=2\\pi(r-2)^2\n\\]\n\n\\[\n(r+7)^2=16(r-2)^2\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Solve inequality",
         "body": "Since \\(r>2\\),\n\\[\nr+7=4(r-2)\n\\]\n\n\\[\nr+7=4r-8\n\\]\n\n\\[\nr=5\n\\]"
       }
     ],
@@ -9700,11 +9700,11 @@ window.SOLUTION_DATA = {
         "body": "The cone has radius \\(20\\) cm."
       },
       {
-        "title": "The curved surface area of",
+        "title": "Calculate surface area",
         "body": "The curved surface area of the cone is\n\n\\[\n\\pi rl\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\n\\pi(20)l=580\\pi\n\\]\n\n\\[\nl=29\n\\]"
       },
       {
@@ -9724,7 +9724,7 @@ window.SOLUTION_DATA = {
         "body": "Total volume:\n\n\\[\n2800\\pi+\\frac{16000}{3}\\pi\n=\\frac{24400}{3}\\pi\n\\]"
       },
       {
-        "title": "The volume is , so",
+        "title": "Calculate volume",
         "body": "The volume is \\(k\\pi\\), so\n\n\\[\nk=\\frac{24400}{3}\n\\]"
       }
     ],
@@ -9737,11 +9737,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Sine, Cosine Rule & Area of Triangles. The question needs the cosine rule and sine rule.",
     "steps": [
       {
-        "title": "First use the cosine rule",
+        "title": "Use trigonometry",
         "body": "First use the cosine rule to find \\(AC\\):\n\\[\nAC^2=9.7^2+12.3^2-2(9.7)(12.3)\\cos 115^\\circ\n\\]\n\n\\[\nAC=18.607\\ldots\n\\]"
       },
       {
-        "title": "Now use the sine rule",
+        "title": "Use trigonometry",
         "body": "Now use the sine rule:\n\\[\n\\frac{\\sin x}{9.7}=\\frac{\\sin 115^\\circ}{18.607\\ldots}\n\\]\n\n\\[\n\\sin x=\\frac{9.7\\sin 115^\\circ}{18.607\\ldots}\n\\]\n\n\\[\nx=28.194\\ldots^\\circ\n\\]"
       }
     ],
@@ -9754,27 +9754,27 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "For a histogram,",
+        "title": "Use histogram",
         "body": "For a histogram,\n\n\\[\n\\text{frequency}=\\text{class width}\\times \\text{frequency density}\n\\]"
       },
       {
-        "title": "For , the frequency is",
+        "title": "Use frequency table",
         "body": "For \\(m\\leq20\\), the frequency is 10 and the class width is 20, so\n\n\\[\n\\text{frequency density}=\\frac{10}{20}=0.5\n\\]"
       },
       {
-        "title": "Using this scale from the",
+        "title": "Use histogram",
         "body": "Using this scale from the histogram:\n\n\\[\n40<m\\leq60 \\quad \\text{has frequency density } 2.9\n\\]\n\n\\[\n60<m\\leq75 \\quad \\text{has frequency density } 3.2\n\\]\n\n\\[\n75<m\\leq100 \\quad \\text{has frequency density } 2.0\n\\]"
       },
       {
-        "title": "For , use part of",
+        "title": "Use part of each relevant",
         "body": "For \\(50<m\\leq80\\), use part of each relevant bar:\n\n\\[\n(10)(2.9)+(15)(3.2)+(5)(2.0)\n\\]\n\n\\[\n=29+48+10\n\\]\n\n\\[\n=87\n\\]"
       }
     ],
     "finalAnswer": "\\(87\\) children"
   },
   "all::Jun2022_P1H__Q02__p04-04__m04__Probability-Toolkit": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
@@ -9783,15 +9783,15 @@ window.SOLUTION_DATA = {
         "body": "The known probabilities are\n\n\\[\n0.26+0.18=0.44\n\\]"
       },
       {
-        "title": "So the probabilities for numbers",
+        "title": "Calculate probability",
         "body": "So the probabilities for numbers \\(2\\) and \\(4\\) add to\n\n\\[\n1-0.44=0.56\n\\]"
       },
       {
-        "title": "They are equal, so each",
+        "title": "Calculate probability",
         "body": "They are equal, so each is\n\n\\[\n0.56\\div 2=0.28\n\\]"
       },
       {
-        "title": "If the expected frequency for",
+        "title": "Calculate probability",
         "body": "If the expected frequency for number \\(3\\) is \\(45\\),\n\n\\[\n0.18n=45\n\\]\n\n\\[\nn=250\n\\]"
       },
       {
@@ -9802,8 +9802,8 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(0.28\\), \\(250\\) spins, \\(70\\)."
   },
   "all::Jun2022_P1H__Q15__p16-16__m04__Probability-Toolkit": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
@@ -9812,15 +9812,15 @@ window.SOLUTION_DATA = {
         "body": "To have a total score of \\(0\\) after three games:"
       },
       {
-        "title": "all three games are draws,",
+        "title": "Calculate probability",
         "body": "- all three games are draws, or\n- one game is won and two games are lost.\n\n\\[\nP(\\text{DDD})=0.5^3=0.125\n\\]\n\n\\[\nP(\\text{one win and two losses})=3(0.3)(0.2)^2=0.036\n\\]\n\n\\[\n0.125+0.036=0.161\n\\]"
       }
     ],
     "finalAnswer": "\\(0.161\\)."
   },
   "all::Jun2022_P1H__Q12__p13-13__m04__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
@@ -9838,7 +9838,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\nq+12x-qx^2=-q\\left(x^2-\\frac{12}{q}x\\right)+q\n\\]"
       },
       {
@@ -9846,11 +9846,11 @@ window.SOLUTION_DATA = {
         "body": "Complete the square:\n\n\\[\nx^2-\\frac{12}{q}x=\\left(x-\\frac6q\\right)^2-\\frac{36}{q^2}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\nq+12x-qx^2\n=-q\\left[\\left(x-\\frac6q\\right)^2-\\frac{36}{q^2}\\right]+q\n\\]\n\n\\[\n=q+\\frac{36}{q}-q\\left(x-\\frac6q\\right)^2\n\\]"
       },
       {
-        "title": "Compare with",
+        "title": "Compare coefficients",
         "body": "Compare with\n\n\\[\na-b(x-c)^2\n\\]"
       }
     ],
@@ -9867,7 +9867,7 @@ window.SOLUTION_DATA = {
         "body": "The maximum point of \\(y=f(x)\\) is \\((s,t)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x-2)\n\\]"
       },
       {
@@ -9875,7 +9875,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 2 units right:\n\n\\[\n(s,t)\\to(s+2,t)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=3f(x)\n\\]"
       },
       {
@@ -9896,11 +9896,11 @@ window.SOLUTION_DATA = {
         "body": "The interior angles form an arithmetic sequence:\n\n\\[\n177,\\ 175,\\ 173,\\ 171,\\ 169,\\ldots\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\na=177,\\quad d=-2\n\\]"
       },
       {
-        "title": "For an sided polygon, the",
+        "title": "Use trigonometry",
         "body": "For an \\(n\\)-sided polygon, the sum of the interior angles is\n\n\\[\n180(n-2)\n\\]"
       },
       {
@@ -9916,7 +9916,7 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\n\\[\n(n+20)(n-18)=0\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Solve inequality",
         "body": "Since \\(n>5\\),\n\n\\[\nn=18\n\\]"
       }
     ],
@@ -9933,11 +9933,11 @@ window.SOLUTION_DATA = {
         "body": "The cone has radius \\(20\\) cm."
       },
       {
-        "title": "The curved surface area of",
+        "title": "Calculate surface area",
         "body": "The curved surface area of the cone is\n\n\\[\n\\pi rl\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\n\\pi(20)l=580\\pi\n\\]\n\n\\[\nl=29\n\\]"
       },
       {
@@ -9957,7 +9957,7 @@ window.SOLUTION_DATA = {
         "body": "Total volume:\n\n\\[\n2800\\pi+\\frac{16000}{3}\\pi\n=\\frac{24400}{3}\\pi\n\\]"
       },
       {
-        "title": "The volume is , so",
+        "title": "Calculate volume",
         "body": "The volume is \\(k\\pi\\), so\n\n\\[\nk=\\frac{24400}{3}\n\\]"
       }
     ],
@@ -9970,19 +9970,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "For a histogram,",
+        "title": "Use histogram",
         "body": "For a histogram,\n\n\\[\n\\text{frequency}=\\text{class width}\\times \\text{frequency density}\n\\]"
       },
       {
-        "title": "For , the frequency is",
+        "title": "Use frequency table",
         "body": "For \\(m\\leq20\\), the frequency is 10 and the class width is 20, so\n\n\\[\n\\text{frequency density}=\\frac{10}{20}=0.5\n\\]"
       },
       {
-        "title": "Using this scale from the",
+        "title": "Use histogram",
         "body": "Using this scale from the histogram:\n\n\\[\n40<m\\leq60 \\quad \\text{has frequency density } 2.9\n\\]\n\n\\[\n60<m\\leq75 \\quad \\text{has frequency density } 3.2\n\\]\n\n\\[\n75<m\\leq100 \\quad \\text{has frequency density } 2.0\n\\]"
       },
       {
-        "title": "For , use part of",
+        "title": "Use part of each relevant",
         "body": "For \\(50<m\\leq80\\), use part of each relevant bar:\n\n\\[\n(10)(2.9)+(15)(3.2)+(5)(2.0)\n\\]\n\n\\[\n=29+48+10\n\\]\n\n\\[\n=87\n\\]"
       }
     ],
@@ -9995,19 +9995,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find the LCM",
         "body": "\\[\nP=3^3\\times 5^2\\times 7\n\\]\n\n\\[\nQ=3^2\\times 5\\times 7^2\n\\]"
       },
       {
-        "title": "For the HCF, take the",
+        "title": "Find the LCM",
         "body": "For the HCF, take the smaller power of each common prime:\n\n\\[\n\\text{HCF}=3^2\\times 5\\times 7\n\\]"
       },
       {
-        "title": "For",
+        "title": "Find the LCM",
         "body": "For \\(P^3\\times Q\\):\n\n\\[\nP^3=(3^3\\times 5^2\\times 7)^3=3^9\\times 5^6\\times 7^3\n\\]"
       },
       {
-        "title": "Now multiply by",
+        "title": "Find the LCM",
         "body": "Now multiply by \\(Q\\):\n\n\\[\nP^3\\times Q=(3^9\\times 5^6\\times 7^3)(3^2\\times 5\\times 7^2)\n\\]\n\n\\[\nP^3\\times Q=3^{11}\\times 5^7\\times 7^5\n\\]"
       }
     ],
@@ -10020,7 +10020,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Fractions. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify fraction",
         "body": "\\[\n2\\frac23=\\frac83\n\\]\n\n\\[\n3\\frac34=\\frac{15}{4}\n\\]"
       },
       {
@@ -10057,7 +10057,7 @@ window.SOLUTION_DATA = {
         "body": "Italian or Spanish:\n\n\\[\n180-96=84\n\\]"
       },
       {
-        "title": "Write as a percentage of",
+        "title": "Convert standard form",
         "body": "Write \\(84\\) as a percentage of \\(96\\):\n\n\\[\n\\frac{84}{96}\\times 100=87.5\n\\]"
       }
     ],
@@ -10074,11 +10074,11 @@ window.SOLUTION_DATA = {
         "body": "A depreciation of \\(15\\%\\) gives multiplier\n\n\\[\n0.85\n\\]"
       },
       {
-        "title": "After 4 years,",
+        "title": "Use compound interest",
         "body": "After 4 years,\n\n\\[\n18000(0.85)^4=9396.1125\n\\]"
       },
       {
-        "title": "Correct to the nearest dollar,",
+        "title": "Use compound interest",
         "body": "Correct to the nearest dollar,\n\n\\[\n9396.1125\\approx 9396\n\\]"
       }
     ],
@@ -10091,19 +10091,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Surds. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\n\\frac{3+\\sqrt8}{(\\sqrt2-1)^2}\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Simplify surd",
         "body": "Since \\(\\sqrt8=2\\sqrt2\\),\n\n\\[\n\\frac{3+2\\sqrt2}{(\\sqrt2-1)^2}\n\\]"
       },
       {
-        "title": "Also",
+        "title": "Simplify surd",
         "body": "Also\n\n\\[\n(\\sqrt2-1)^2=3-2\\sqrt2\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify surd",
         "body": "So\n\n\\[\n\\frac{3+2\\sqrt2}{3-2\\sqrt2}\\times \\frac{3+2\\sqrt2}{3+2\\sqrt2}\n=\\frac{(3+2\\sqrt2)^2}{9-8}\n\\]\n\n\\[\n=(3+2\\sqrt2)^2=9+12\\sqrt2+8\n\\]\n\n\\[\n=17+12\\sqrt2=17+\\sqrt{288}\n\\]"
       }
     ],
@@ -10162,11 +10162,11 @@ window.SOLUTION_DATA = {
         "body": "(b)\n\n\\[\ny=2(x+4)^2-12(x+4)+3\n\\]"
       },
       {
-        "title": "Let . From part (a),",
+        "title": "Let",
         "body": "Let \\(u=x+4\\). From part (a),\n\n\\[\n2u^2-12u+3=2(u-3)^2-15\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\ny=2((x+4)-3)^2-15\n\\]\n\n\\[\ny=2(x+1)^2-15\n\\]"
       },
       {
@@ -10183,11 +10183,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Solving inequalities. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve inequality",
         "body": "\\[\n3-4x\\le11\n\\]\n\n\\[\n-4x\\le8\n\\]"
       },
       {
-        "title": "Divide by , reversing the",
+        "title": "Solve inequality",
         "body": "Divide by \\(-4\\), reversing the inequality:\n\\[\nx\\ge-2\n\\]"
       }
     ],
@@ -10200,7 +10200,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Simultaneous equations. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve simultaneous equations",
         "body": "\\[\n3x-5y=25\n\\]\n\n\\[\n4x+3y=14\n\\]"
       },
       {
@@ -10216,7 +10216,7 @@ window.SOLUTION_DATA = {
         "body": "Add:\n\\[\n29x=145\n\\]\n\n\\[\nx=5\n\\]"
       },
       {
-        "title": "Substitute into",
+        "title": "Solve simultaneous equations",
         "body": "Substitute into \\(3x-5y=25\\):\n\\[\n15-5y=25\n\\]\n\n\\[\n-5y=10\n\\]\n\n\\[\ny=-2\n\\]"
       }
     ],
@@ -10229,11 +10229,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Sequences. The tag is correct.",
     "steps": [
       {
-        "title": "For a shelving unit with",
+        "title": "Find the nth term",
         "body": "For a shelving unit with 6 type R shelves, there are 5 type S shelves.\n\n\\[\n6(2.4)+5(3.5)=14.4+17.5=31.9\n\\]"
       },
       {
-        "title": "For type R shelves, there",
+        "title": "Find the nth term",
         "body": "For \\(n\\) type R shelves, there are \\(n-1\\) type S shelves.\n\n\\[\nW=2.4n+3.5(n-1)\n\\]\n\n\\[\nW=2.4n+3.5n-3.5=5.9n-3.5\n\\]"
       }
     ],
@@ -10246,7 +10246,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nS_{10}=4S_5\n\\]"
       },
       {
@@ -10254,7 +10254,7 @@ window.SOLUTION_DATA = {
         "body": "Use\n\n\\[\nS_n=\\frac n2(2a+(n-1)d)\n\\]\n\n\\[\nS_{10}=5(2a+9d)\n\\]\n\n\\[\nS_5=\\frac52(2a+4d)=5(a+2d)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\n5(2a+9d)=4\\cdot 5(a+2d)\n\\]\n\n\\[\n2a+9d=4a+8d\n\\]\n\n\\[\nd=2a\n\\]"
       },
       {
@@ -10271,15 +10271,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to linear graphs. The question asks for an equation of a line from its graph.",
     "steps": [
       {
-        "title": "From the graph, the line",
+        "title": "Solve equation",
         "body": "From the graph, the line crosses the y-axis at \\(-1\\), so\n\\[\nc=-1\n\\]"
       },
       {
-        "title": "Using two points on the",
+        "title": "Find the gradient",
         "body": "Using two points on the line, for example \\((0,-1)\\) and \\((2,2)\\), the gradient is\n\\[\n\\frac{2-(-1)}{2-0}=\\frac32\n\\]"
       },
       {
-        "title": "So the equation is",
+        "title": "Solve equation",
         "body": "So the equation is\n\\[\ny=\\frac32x-1\n\\]"
       }
     ],
@@ -10292,23 +10292,23 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Estimating Gradients to Differentiation.",
     "steps": [
       {
-        "title": "For part (a),",
+        "title": "Find the gradient",
         "body": "For part (a),\n\n\\[\ny=x^2-\\frac{p}{x}\n\\]\n\n\\[\n\\frac{dy}{dx}=2x+\\frac{p}{x^2}\n\\]"
       },
       {
-        "title": "At the minimum point, and",
+        "title": "Find the gradient",
         "body": "At the minimum point, \\(x=-3\\) and the gradient is 0.\n\n\\[\n2(-3)+\\frac{p}{(-3)^2}=0\n\\]\n\n\\[\n-6+\\frac{p}{9}=0\n\\]\n\n\\[\np=54\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Find the gradient",
         "body": "For part (b),\n\n\\[\ny=x^2-\\frac{16}{x}\n\\]\n\n\\[\n\\frac{dy}{dx}=2x+\\frac{16}{x^2}\n\\]"
       },
       {
-        "title": "At a horizontal tangent,",
+        "title": "Find the gradient",
         "body": "At a horizontal tangent,\n\n\\[\n2x+\\frac{16}{x^2}=0\n\\]\n\n\\[\n2x^3+16=0\n\\]\n\n\\[\nx^3=-8\n\\]\n\n\\[\nx=-2\n\\]"
       },
       {
-        "title": "Now substitute into the curve",
+        "title": "Find the gradient",
         "body": "Now substitute \\(x=-2\\) into the curve:\n\n\\[\nk=(-2)^2-\\frac{16}{-2}\n\\]\n\n\\[\nk=4+8=12\n\\]"
       }
     ],
@@ -10350,11 +10350,11 @@ window.SOLUTION_DATA = {
         "body": "Opposite angles in a cyclic quadrilateral add to \\(180^\\circ\\):\n\\[\n\\angle PSR=180^\\circ-136^\\circ=44^\\circ\n\\]"
       },
       {
-        "title": "Since is a diameter,",
+        "title": "Use trigonometry",
         "body": "Since \\(PS\\) is a diameter,\n\\[\n\\angle PRS=90^\\circ\n\\]"
       },
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(PRS\\),\n\\[\n\\angle RPS=180^\\circ-90^\\circ-44^\\circ=46^\\circ\n\\]"
       }
     ],
@@ -10367,7 +10367,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Area & Perimeter. The tag is correct.",
     "steps": [
       {
-        "title": "In right angled triangle ,",
+        "title": "Use trigonometry",
         "body": "In right-angled triangle \\(ABC\\),\n\\[\nAB^2+BC^2=AC^2\n\\]\n\n\\[\nAB^2+6^2=7.5^2\n\\]\n\n\\[\nAB^2=56.25-36=20.25\n\\]\n\n\\[\nAB=4.5\\text{ cm}\n\\]"
       },
       {
@@ -10379,7 +10379,7 @@ window.SOLUTION_DATA = {
         "body": "Area of triangle \\(ADC\\):\n\\[\n31.5-13.5=18\\text{ cm}^2\n\\]"
       },
       {
-        "title": "Triangle is right angled, so",
+        "title": "Use trigonometry",
         "body": "Triangle \\(ADC\\) is right-angled, so\n\\[\n\\frac12\\times AD\\times 7.5=18\n\\]\n\n\\[\nAD=\\frac{36}{7.5}=4.8\n\\]"
       }
     ],
@@ -10396,7 +10396,7 @@ window.SOLUTION_DATA = {
         "body": "The volume of statue \\(B\\) is \\(20\\%\\) less than statue \\(A\\), so the volume scale factor is \\(0.8\\)."
       },
       {
-        "title": "For similar solids, the linear",
+        "title": "Calculate area",
         "body": "For similar solids, the linear scale factor is the cube root of the volume scale factor:\n\n\\(\\text{linear scale factor}=\\sqrt[3]{0.8}\\)"
       },
       {
@@ -10404,7 +10404,7 @@ window.SOLUTION_DATA = {
         "body": "Surface area scale factor is the square of the linear scale factor:\n\n\\(\\text{surface area scale factor}=(\\sqrt[3]{0.8})^2=0.8^{2/3}=0.861773...\\)"
       },
       {
-        "title": "So statue has of the",
+        "title": "Calculate area",
         "body": "So statue \\(B\\) has \\(86.1773...\\%\\) of the surface area of statue \\(A\\).\n\n\\(k=100-86.1773...=13.8226...\\)"
       }
     ],
@@ -10421,11 +10421,11 @@ window.SOLUTION_DATA = {
         "body": "Height of the parallelogram:\n\n\\[\nh=\\frac{18}{6.1}=2.9508\\ldots\n\\]"
       },
       {
-        "title": "The horizontal offset from to",
+        "title": "Use cosine rule",
         "body": "The horizontal offset from \\(P\\) to \\(S\\) is\n\n\\[\n\\sqrt{3.8^2-h^2}\n=\\sqrt{3.8^2-2.9508\\ldots^2}\n=2.394\\ldots\n\\]"
       },
       {
-        "title": "So the horizontal distance from",
+        "title": "Use trigonometry",
         "body": "So the horizontal distance from \\(S\\) to \\(Q\\) is\n\n\\[\n6.1-2.394\\ldots=3.705\\ldots\n\\]\n\n\\[\nQS=\\sqrt{3.705\\ldots^2+2.9508\\ldots^2}\n=4.737\\ldots\n\\]"
       }
     ],
@@ -10442,7 +10442,7 @@ window.SOLUTION_DATA = {
         "body": "The cube has side length \\(6\\) cm."
       },
       {
-        "title": "Let be the midpoint of",
+        "title": "Find the midpoint",
         "body": "Let \\(T\\) be the midpoint of \\(AB\\) and \\(V\\) be the midpoint of \\(CH\\)."
       },
       {
@@ -10450,7 +10450,7 @@ window.SOLUTION_DATA = {
         "body": "The changes in the three perpendicular directions from \\(T\\) to \\(V\\) are\n\\[\n3,\\quad 3,\\quad 6\n\\]"
       },
       {
-        "title": "So by 3D Pythagoras,",
+        "title": "Use trigonometry",
         "body": "So by 3D Pythagoras,\n\\[\nTV=\\sqrt{3^2+3^2+6^2}\n\\]\n\n\\[\nTV=\\sqrt{9+9+36}=\\sqrt{54}\n\\]"
       }
     ],
@@ -10480,11 +10480,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Statistics Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "The runs are already in",
+        "title": "Use Statistics Toolkit correct",
         "body": "The runs are already in order:\n\n\\[\n0,\\ 1,\\ 1,\\ 3,\\ 5,\\ 6,\\ 7,\\ 7,\\ 8,\\ 9,\\ 9,\\ 12,\\ 12,\\ 15,\\ 16\n\\]"
       },
       {
-        "title": "There are 15 values, so",
+        "title": "Calculate statistic",
         "body": "There are 15 values, so ignore the median when finding the quartiles.\n\n\\[\nQ_1=3,\\qquad Q_3=12\n\\]\n\n\\[\n\\text{IQR}=12-3=9\n\\]"
       }
     ],
@@ -10501,11 +10501,11 @@ window.SOLUTION_DATA = {
         "body": "Use relative densities from the histogram:\n\n\\[\n10,\\ 8,\\ 6,\\ 15,\\ 5,\\ 1\n\\]"
       },
       {
-        "title": "The number of trees with",
+        "title": "Use histogram",
         "body": "The number of trees with \\(300<h\\le 400\\) is\n\n\\[\n100(6s)=600s\n\\]"
       },
       {
-        "title": "The number of trees with",
+        "title": "Use histogram",
         "body": "The number of trees with \\(400<h\\le 500\\) is\n\n\\[\n50(15s)+50(5s)=1000s\n\\]"
       },
       {
@@ -10513,20 +10513,20 @@ window.SOLUTION_DATA = {
         "body": "The difference is \\(8\\):\n\n\\[\n1000s-600s=8\n\\]\n\n\\[\n400s=8\n\\]\n\n\\[\ns=0.02\n\\]"
       },
       {
-        "title": "For height greater than",
+        "title": "Use histogram",
         "body": "For height greater than \\(500\\):\n\n\\[\n100(5s)+200(1s)=700s\n\\]\n\n\\[\n700(0.02)=14\n\\]"
       }
     ],
     "finalAnswer": "\\(14\\) trees."
   },
   "all::Jun2022_P1HR__Q01__p03-03__m04__Probability-Toolkit": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate probability",
         "body": "\\[\nP(\\text{red or yellow})=0.25+0.20=0.45\n\\]"
       },
       {
@@ -10551,7 +10551,7 @@ window.SOLUTION_DATA = {
         "body": "There are \\(x\\) counters. Initially 5 show red, so \\(x-5\\) show green."
       },
       {
-        "title": "After two turns, there are",
+        "title": "List probability cases",
         "body": "After two turns, there are still 5 red faces if:"
       },
       {
@@ -10567,11 +10567,11 @@ window.SOLUTION_DATA = {
         "body": "The probability of picking one red and one green in either order is\n\n\\[\n\\frac{5}{x}\\cdot\\frac{x-5}{x}+\\frac{x-5}{x}\\cdot\\frac{5}{x}\n\\]\n\n\\[\n=\\frac{10(x-5)}{x^2}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\n\\frac{1}{x}+\\frac{10(x-5)}{x^2}=\\frac{19}{32}\n\\]\n\n\\[\n\\frac{11x-50}{x^2}=\\frac{19}{32}\n\\]\n\n\\[\n32(11x-50)=19x^2\n\\]\n\n\\[\n19x^2-352x+1600=0\n\\]\n\n\\[\n(x-8)(19x-200)=0\n\\]"
       },
       {
-        "title": "Since must be a whole",
+        "title": "Calculate value",
         "body": "Since \\(x\\) must be a whole number,\n\n\\[\nx=8\n\\]"
       }
     ],
@@ -10584,19 +10584,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Surds is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\n\\frac{3+\\sqrt{8}}{(\\sqrt{2}-1)^2}\n\\]"
       },
       {
-        "title": "First simplify",
+        "title": "Simplify surd",
         "body": "First simplify:\n\n\\[\n\\sqrt{8}=2\\sqrt{2}\n\\]"
       },
       {
-        "title": "and",
+        "title": "Simplify surd",
         "body": "and\n\n\\[\n(\\sqrt{2}-1)^2=2-2\\sqrt{2}+1=3-2\\sqrt{2}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify surd",
         "body": "So\n\n\\[\n\\frac{3+2\\sqrt{2}}{3-2\\sqrt{2}}\n\\]"
       },
       {
@@ -10621,11 +10621,11 @@ window.SOLUTION_DATA = {
         "body": "(b)\n\n\\[\ny=2(x+4)^2-12(x+4)+3\n\\]"
       },
       {
-        "title": "Let . From part (a),",
+        "title": "Let",
         "body": "Let \\(u=x+4\\). From part (a),\n\n\\[\n2u^2-12u+3=2(u-3)^2-15\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\ny=2((x+4)-3)^2-15\n\\]\n\n\\[\ny=2(x+1)^2-15\n\\]"
       },
       {
@@ -10642,7 +10642,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nS_{10}=4S_5\n\\]"
       },
       {
@@ -10650,7 +10650,7 @@ window.SOLUTION_DATA = {
         "body": "Use\n\n\\[\nS_n=\\frac n2(2a+(n-1)d)\n\\]\n\n\\[\nS_{10}=5(2a+9d)\n\\]\n\n\\[\nS_5=\\frac52(2a+4d)=5(a+2d)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\n5(2a+9d)=4\\cdot 5(a+2d)\n\\]\n\n\\[\n2a+9d=4a+8d\n\\]\n\n\\[\nd=2a\n\\]"
       },
       {
@@ -10667,23 +10667,23 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Estimating Gradients to Differentiation.",
     "steps": [
       {
-        "title": "For part (a),",
+        "title": "Find the gradient",
         "body": "For part (a),\n\n\\[\ny=x^2-\\frac{p}{x}\n\\]\n\n\\[\n\\frac{dy}{dx}=2x+\\frac{p}{x^2}\n\\]"
       },
       {
-        "title": "At the minimum point, and",
+        "title": "Find the gradient",
         "body": "At the minimum point, \\(x=-3\\) and the gradient is 0.\n\n\\[\n2(-3)+\\frac{p}{(-3)^2}=0\n\\]\n\n\\[\n-6+\\frac{p}{9}=0\n\\]\n\n\\[\np=54\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Find the gradient",
         "body": "For part (b),\n\n\\[\ny=x^2-\\frac{16}{x}\n\\]\n\n\\[\n\\frac{dy}{dx}=2x+\\frac{16}{x^2}\n\\]"
       },
       {
-        "title": "At a horizontal tangent,",
+        "title": "Find the gradient",
         "body": "At a horizontal tangent,\n\n\\[\n2x+\\frac{16}{x^2}=0\n\\]\n\n\\[\n2x^3+16=0\n\\]\n\n\\[\nx^3=-8\n\\]\n\n\\[\nx=-2\n\\]"
       },
       {
-        "title": "Now substitute into the curve",
+        "title": "Find the gradient",
         "body": "Now substitute \\(x=-2\\) into the curve:\n\n\\[\nk=(-2)^2-\\frac{16}{-2}\n\\]\n\n\\[\nk=4+8=12\n\\]"
       }
     ],
@@ -10700,7 +10700,7 @@ window.SOLUTION_DATA = {
         "body": "The volume of statue \\(B\\) is \\(20\\%\\) less than statue \\(A\\), so the volume scale factor is \\(0.8\\)."
       },
       {
-        "title": "For similar solids, the linear",
+        "title": "Calculate area",
         "body": "For similar solids, the linear scale factor is the cube root of the volume scale factor:\n\n\\(\\text{linear scale factor}=\\sqrt[3]{0.8}\\)"
       },
       {
@@ -10708,7 +10708,7 @@ window.SOLUTION_DATA = {
         "body": "Surface area scale factor is the square of the linear scale factor:\n\n\\(\\text{surface area scale factor}=(\\sqrt[3]{0.8})^2=0.8^{2/3}=0.861773...\\)"
       },
       {
-        "title": "So statue has of the",
+        "title": "Calculate area",
         "body": "So statue \\(B\\) has \\(86.1773...\\%\\) of the surface area of statue \\(A\\).\n\n\\(k=100-86.1773...=13.8226...\\)"
       }
     ],
@@ -10725,7 +10725,7 @@ window.SOLUTION_DATA = {
         "body": "There are \\(x\\) counters. Initially 5 show red, so \\(x-5\\) show green."
       },
       {
-        "title": "After two turns, there are",
+        "title": "List probability cases",
         "body": "After two turns, there are still 5 red faces if:"
       },
       {
@@ -10741,11 +10741,11 @@ window.SOLUTION_DATA = {
         "body": "The probability of picking one red and one green in either order is\n\n\\[\n\\frac{5}{x}\\cdot\\frac{x-5}{x}+\\frac{x-5}{x}\\cdot\\frac{5}{x}\n\\]\n\n\\[\n=\\frac{10(x-5)}{x^2}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\n\\frac{1}{x}+\\frac{10(x-5)}{x^2}=\\frac{19}{32}\n\\]\n\n\\[\n\\frac{11x-50}{x^2}=\\frac{19}{32}\n\\]\n\n\\[\n32(11x-50)=19x^2\n\\]\n\n\\[\n19x^2-352x+1600=0\n\\]\n\n\\[\n(x-8)(19x-200)=0\n\\]"
       },
       {
-        "title": "Since must be a whole",
+        "title": "Calculate value",
         "body": "Since \\(x\\) must be a whole number,\n\n\\[\nx=8\n\\]"
       }
     ],
@@ -10758,7 +10758,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Fractions. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify fraction",
         "body": "\\[\n5\\frac13=\\frac{16}{3}\n\\]\n\n\\[\n2\\frac67=\\frac{20}{7}\n\\]"
       },
       {
@@ -10824,11 +10824,11 @@ window.SOLUTION_DATA = {
         "body": "The multiplier for \\(1.3\\%\\) compound interest is\n\n\\[\n1.013\n\\]"
       },
       {
-        "title": "After 4 years,",
+        "title": "Use compound interest",
         "body": "After 4 years,\n\n\\[\n50000(1.013)^4=52651.1408\\ldots\n\\]"
       },
       {
-        "title": "Correct to the nearest dollar,",
+        "title": "Use compound interest",
         "body": "Correct to the nearest dollar,\n\n\\[\n52651.1408\\ldots\\approx 52651\n\\]"
       }
     ],
@@ -10841,11 +10841,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Estimate the value",
         "body": "\\[\nX=\\frac{2a-b}{f}\n\\]"
       },
       {
-        "title": "For the upper bound, make",
+        "title": "Find upper bound",
         "body": "For the upper bound, make the numerator large and the denominator small.\n\n\\[\na<7.55,\\quad b\\ge 3.415,\\quad f\\ge 1.5\n\\]\n\n\\[\nX_{\\text{upper}}=\\frac{2(7.55)-3.415}{1.5}=7.79\n\\]"
       }
     ],
@@ -10858,7 +10858,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Direct and Inverse Proportion. The tag is correct.",
     "steps": [
       {
-        "title": "varies directly as , so",
+        "title": "Find inverse function",
         "body": "\\(M\\) varies directly as \\(h^3\\), so\n\n\\[\nM=kh^3\n\\]"
       },
       {
@@ -10866,11 +10866,11 @@ window.SOLUTION_DATA = {
         "body": "Use \\(M=4\\) when \\(h=0.5\\):\n\n\\[\n4=k(0.5)^3\n\\]\n\n\\[\nk=\\frac{4}{0.125}=32\n\\]"
       },
       {
-        "title": "So",
+        "title": "Find inverse function",
         "body": "So\n\n\\[\nM=32h^3\n\\]"
       },
       {
-        "title": "When ,",
+        "title": "Find inverse function",
         "body": "When \\(M=500\\),\n\n\\[\n500=32h^3\n\\]\n\n\\[\nh^3=15.625\n\\]\n\n\\[\nh=2.5\n\\]"
       }
     ],
@@ -10883,31 +10883,31 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic Roots and Indices. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\n\\frac{18(\\sqrt{27})^{4n+6}}{6\\times 9^{2n+8}}=3^x\n\\]"
       },
       {
-        "title": "First,",
+        "title": "Use index laws",
         "body": "First,\n\n\\[\n\\frac{18}{6}=3=3^1\n\\]"
       },
       {
-        "title": "Also,",
+        "title": "Simplify surd",
         "body": "Also,\n\n\\[\n\\sqrt{27}=\\sqrt{3^3}=3^{3/2}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify surd",
         "body": "So\n\n\\[\n(\\sqrt{27})^{4n+6}=3^{\\frac32(4n+6)}=3^{6n+9}\n\\]"
       },
       {
-        "title": "And",
+        "title": "Use index laws",
         "body": "And\n\n\\[\n9^{2n+8}=(3^2)^{2n+8}=3^{4n+16}\n\\]"
       },
       {
-        "title": "Therefore the whole expression is",
+        "title": "Use index laws",
         "body": "Therefore the whole expression is\n\n\\[\n3^{1+6n+9-(4n+16)}=3^{2n-6}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use index laws",
         "body": "So\n\n\\[\nx=2n-6\n\\]"
       }
     ],
@@ -10920,11 +10920,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Factorising. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Factorise expression",
         "body": "\\[\nx^2+5x-24=(x+8)(x-3)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Factorise expression",
         "body": "So\n\\[\n(x+8)(x-3)=0\n\\]"
       }
     ],
@@ -10937,15 +10937,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic fractions. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify fraction",
         "body": "\\[\na=\\frac{14}{3x-7}, \\qquad x=\\frac{7}{4y-3}\n\\]"
       },
       {
-        "title": "Substitute for",
+        "title": "Simplify fraction",
         "body": "Substitute for \\(x\\):\n\\[\n3x-7=\\frac{21}{4y-3}-7\n\\]\n\n\\[\n=\\frac{21-7(4y-3)}{4y-3}\n=\\frac{42-28y}{4y-3}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify fraction",
         "body": "So\n\\[\na=\\frac{14}{\\frac{42-28y}{4y-3}}\n=\\frac{4y-3}{3-2y}\n\\]"
       }
     ],
@@ -10991,7 +10991,7 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\\[\n(2y+5)(y-6)\\le0\n\\]"
       },
       {
-        "title": "The roots are and .",
+        "title": "Solve quadratic equation",
         "body": "The roots are \\(-\\frac52\\) and \\(6\\). The quadratic is \\(\\le0\\) between the roots."
       }
     ],
@@ -11004,7 +11004,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Simultaneous equations. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve simultaneous equations",
         "body": "\\[\n7x+3y=3\n\\]\n\n\\[\n3x-y=7\n\\]"
       },
       {
@@ -11016,7 +11016,7 @@ window.SOLUTION_DATA = {
         "body": "Substitute into the first equation:\n\\[\n7x+3(3x-7)=3\n\\]\n\n\\[\n7x+9x-21=3\n\\]\n\n\\[\n16x=24\n\\]\n\n\\[\nx=\\frac32\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Solve simultaneous equations",
         "body": "Then\n\\[\ny=3\\left(\\frac32\\right)-7=\\frac92-7=-\\frac52\n\\]"
       }
     ],
@@ -11033,11 +11033,11 @@ window.SOLUTION_DATA = {
         "body": "The midpoint of \\(BD\\) is \\(M=(0,2)\\)."
       },
       {
-        "title": "Since , the gradient of",
+        "title": "Find the gradient",
         "body": "Since \\(A=(-3,4)\\), the gradient of \\(AM\\) is\n\n\\[\n\\frac{2-4}{0-(-3)}=-\\frac23\n\\]"
       },
       {
-        "title": "For the kite, diagonal is",
+        "title": "Find the gradient",
         "body": "For the kite, diagonal \\(AC\\) is perpendicular to \\(BD\\), so the gradient of \\(BD\\) is\n\n\\[\n\\frac32\n\\]"
       },
       {
@@ -11049,15 +11049,15 @@ window.SOLUTION_DATA = {
         "body": "Let\n\n\\[\nB=(2t,2+3t)\n\\]"
       },
       {
-        "title": "and",
+        "title": "Calculate value",
         "body": "and\n\n\\[\nD=(-2t,2-3t)\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Calculate value",
         "body": "Since \\(AB=6.5\\),\n\n\\[\n(2t-(-3))^2+(2+3t-4)^2=6.5^2\n\\]\n\n\\[\n(2t+3)^2+(3t-2)^2=42.25\n\\]\n\n\\[\n4t^2+12t+9+9t^2-12t+4=42.25\n\\]\n\n\\[\n13t^2+13=42.25\n\\]\n\n\\[\n13t^2=29.25\n\\]\n\n\\[\nt^2=2.25\n\\]\n\n\\[\nt=1.5\n\\]"
       },
       {
-        "title": "The coordinate of is positive,",
+        "title": "Use",
         "body": "The \\(x\\)-coordinate of \\(B\\) is positive, so use \\(t=1.5\\).\n\n\\[\nB=(3,6.5)\n\\]\n\n\\[\nD=(-3,-2.5)\n\\]"
       }
     ],
@@ -11078,7 +11078,7 @@ window.SOLUTION_DATA = {
         "body": "Point \\(A\\) is the first positive \\(x\\)-intercept, so \\(y=0\\).\n\n\\[\n\\cos\\left(\\frac{x}{2}\\right)=0\n\\]\n\n\\[\n\\frac{x}{2}=90^\\circ\n\\]\n\n\\[\nx=180\n\\]"
       },
       {
-        "title": "So",
+        "title": "Read the graph",
         "body": "So\n\n\\[\nA=(180,0)\n\\]"
       },
       {
@@ -11090,7 +11090,7 @@ window.SOLUTION_DATA = {
         "body": "The minimum value of cosine is \\(-1\\), which occurs when\n\n\\[\n\\frac{x}{2}=180^\\circ\n\\]\n\n\\[\nx=360\n\\]"
       },
       {
-        "title": "So",
+        "title": "Read the graph",
         "body": "So\n\n\\[\nB=(360,-1)\n\\]"
       }
     ],
@@ -11137,7 +11137,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This is converting kilometres per hour to metres per second.",
     "steps": [
       {
-        "title": "To convert km/h to m/s,",
+        "title": "Convert km/h to m/s divide",
         "body": "To convert km/h to m/s, divide by \\(3.6\\).\n\n\\[\n81\\div3.6=22.5\n\\]"
       }
     ],
@@ -11158,7 +11158,7 @@ window.SOLUTION_DATA = {
         "body": "The top part is a trapezium of height\n\\[\n20-12=8\\text{ cm}\n\\]"
       },
       {
-        "title": "The lower parallel side of",
+        "title": "Find the gradient",
         "body": "The lower parallel side of this trapezium is\n\\[\n28-5-5=18\\text{ cm}\n\\]"
       },
       {
@@ -11195,7 +11195,7 @@ window.SOLUTION_DATA = {
         "body": "Area of the four circles:\n\n\\[\n4\\pi r^2\n\\]"
       },
       {
-        "title": "The shaded area is ,",
+        "title": "Calculate area",
         "body": "The shaded area is \\(40\\text{ cm}^2\\), so\n\n\\[\n16r^2-4\\pi r^2=40\n\\]\n\n\\[\nr^2(16-4\\pi)=40\n\\]\n\n\\[\nr=\\sqrt{\\frac{40}{16-4\\pi}}=3.4131\\ldots\n\\]"
       },
       {
@@ -11212,7 +11212,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Right-Angled Triangles - Pythagoras & Trigonometry. This is a right-angled trigonometry problem.",
     "steps": [
       {
-        "title": "In the right angled triangle,",
+        "title": "Use trigonometry",
         "body": "In the right-angled triangle, \\(x\\) is adjacent to the \\(42^\\circ\\) angle and \\(9.5\\text{ cm}\\) is the hypotenuse.\n\n\\[\n\\cos 42^\\circ=\\frac{x}{9.5}\n\\]\n\n\\[\nx=9.5\\cos 42^\\circ=7.059\\ldots\n\\]"
       }
     ],
@@ -11225,23 +11225,23 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Ratio Toolkit to Vectors.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Split the ratio",
         "body": "\\[\n\\overrightarrow{OA}=4a,\\quad \\overrightarrow{OB}=6b,\\quad \\overrightarrow{AP}=2a+8b\n\\]"
       },
       {
-        "title": "So",
+        "title": "Split the ratio",
         "body": "So\n\n\\[\n\\overrightarrow{OP}=\\overrightarrow{OA}+\\overrightarrow{AP}\n=4a+(2a+8b)=6a+8b\n\\]"
       },
       {
-        "title": "Since lies on , let",
+        "title": "Split the ratio",
         "body": "Since \\(Q\\) lies on \\(OP\\), let\n\n\\[\n\\overrightarrow{OQ}=\\lambda(6a+8b)\n\\]"
       },
       {
-        "title": "Since lies on , let",
+        "title": "Split the ratio",
         "body": "Since \\(Q\\) lies on \\(AB\\), let\n\n\\[\n\\overrightarrow{OQ}=\\overrightarrow{OA}+\\mu\\overrightarrow{AB}\n\\]\n\n\\[\n\\overrightarrow{AB}=6b-4a\n\\]"
       },
       {
-        "title": "So",
+        "title": "Split the ratio",
         "body": "So\n\n\\[\n\\overrightarrow{OQ}=4a+\\mu(6b-4a)=(4-4\\mu)a+6\\mu b\n\\]"
       },
       {
@@ -11249,11 +11249,11 @@ window.SOLUTION_DATA = {
         "body": "Equating coefficients:\n\n\\[\n6\\lambda=4-4\\mu,\\quad 8\\lambda=6\\mu\n\\]"
       },
       {
-        "title": "From ,",
+        "title": "Split the ratio",
         "body": "From \\(8\\lambda=6\\mu\\), \\(\\mu=\\frac43\\lambda\\).\n\n\\[\n6\\lambda=4-\\frac{16}{3}\\lambda\n\\]\n\n\\[\n34\\lambda=12,\\quad \\lambda=\\frac6{17}\n\\]\n\n\\[\n\\mu=\\frac{8}{17}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Split the ratio",
         "body": "So \\(AQ:QB=\\frac8{17}:\\frac9{17}\\)."
       }
     ],
@@ -11266,7 +11266,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Statistics Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "The mode is , so",
+        "title": "Calculate statistic",
         "body": "The mode is \\(9\\), so\n\n\\[\nd=9\n\\]"
       },
       {
@@ -11274,7 +11274,7 @@ window.SOLUTION_DATA = {
         "body": "The range is \\(4\\):\n\n\\[\n9-a=4\n\\]\n\n\\[\na=5\n\\]"
       },
       {
-        "title": "The median is , so",
+        "title": "Calculate statistic",
         "body": "The median is \\(8\\), so\n\n\\[\n\\frac{c+d}{2}=8\n\\]\n\n\\[\n\\frac{c+9}{2}=8\n\\]\n\n\\[\nc=7\n\\]"
       },
       {
@@ -11328,11 +11328,11 @@ window.SOLUTION_DATA = {
         "body": "The median is at cumulative frequency \\(40\\)."
       },
       {
-        "title": "This is between and",
+        "title": "Convert standard form",
         "body": "This is between \\((30,32)\\) and \\((40,52)\\):\n\n\\[\n30+\\frac{40-32}{52-32}\\times 10=34\n\\]"
       },
       {
-        "title": "So the median age is",
+        "title": "Use cumulative frequency",
         "body": "So the median age is about \\(34\\) years."
       },
       {
@@ -11347,8 +11347,8 @@ window.SOLUTION_DATA = {
     "finalAnswer": "cumulative frequencies \\(7,32,52,66,74,80\\), median about \\(34\\) years, about \\(42\\) people going to work."
   },
   "all::Jun2022_P2H__Q16__p16-17__m08__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
@@ -11361,7 +11361,7 @@ window.SOLUTION_DATA = {
         "body": "Pair-only regions:\n\n\\[\nS\\cap G\\text{ only}=11-6=5\n\\]\n\n\\[\nS\\cap C\\text{ only}=17-6=11\n\\]\n\n\\[\nG\\cap C\\text{ only}=18-6=12\n\\]\n\n\\[\nS\\text{ only}=31-5-11-6=9\n\\]\n\n\\[\nC\\text{ only}=53-11-12-6=24\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate probability",
         "body": "Then\n\n\\[\nG\\text{ only}=80-(9+24+5+11+12+6)=13\n\\]\n\n\\[\nn(G)=13+5+12+6=36\n\\]\n\n\\[\nn((G\\cup S)')=20+24=44\n\\]\n\n\\[\nn(G'\\cap C)=24+11=35\n\\]\n\n\\[\nP(G\\mid C)=\\frac{18}{53}\n\\]"
       }
     ],
@@ -11374,7 +11374,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\n\\frac{18(\\sqrt{27})^{4n+6}}{6\\times 9^{2n+8}}=3^x\n\\]"
       },
       {
@@ -11382,11 +11382,11 @@ window.SOLUTION_DATA = {
         "body": "Use powers of 3:\n\n\\[\n18\\div 6=3\n\\]\n\n\\[\n\\sqrt{27}=(3^3)^{1/2}=3^{3/2}\n\\]\n\n\\[\n(\\sqrt{27})^{4n+6}=3^{6n+9}\n\\]\n\n\\[\n9^{2n+8}=(3^2)^{2n+8}=3^{4n+16}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\n\\frac{3\\cdot 3^{6n+9}}{3^{4n+16}}\n=3^{1+6n+9-4n-16}\n=3^{2n-6}\n\\]"
       },
       {
-        "title": "Therefore,",
+        "title": "Calculate value",
         "body": "Therefore,\n\n\\[\nx=2n-6\n\\]"
       }
     ],
@@ -11403,11 +11403,11 @@ window.SOLUTION_DATA = {
         "body": "The midpoint of \\(BD\\) is \\(M=(0,2)\\)."
       },
       {
-        "title": "Since , the gradient of",
+        "title": "Find the gradient",
         "body": "Since \\(A=(-3,4)\\), the gradient of \\(AM\\) is\n\n\\[\n\\frac{2-4}{0-(-3)}=-\\frac23\n\\]"
       },
       {
-        "title": "For the kite, diagonal is",
+        "title": "Find the gradient",
         "body": "For the kite, diagonal \\(AC\\) is perpendicular to \\(BD\\), so the gradient of \\(BD\\) is\n\n\\[\n\\frac32\n\\]"
       },
       {
@@ -11419,15 +11419,15 @@ window.SOLUTION_DATA = {
         "body": "Let\n\n\\[\nB=(2t,2+3t)\n\\]"
       },
       {
-        "title": "and",
+        "title": "Calculate value",
         "body": "and\n\n\\[\nD=(-2t,2-3t)\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Calculate value",
         "body": "Since \\(AB=6.5\\),\n\n\\[\n(2t-(-3))^2+(2+3t-4)^2=6.5^2\n\\]\n\n\\[\n(2t+3)^2+(3t-2)^2=42.25\n\\]\n\n\\[\n4t^2+12t+9+9t^2-12t+4=42.25\n\\]\n\n\\[\n13t^2+13=42.25\n\\]\n\n\\[\n13t^2=29.25\n\\]\n\n\\[\nt^2=2.25\n\\]\n\n\\[\nt=1.5\n\\]"
       },
       {
-        "title": "The coordinate of is positive,",
+        "title": "Use",
         "body": "The \\(x\\)-coordinate of \\(B\\) is positive, so use \\(t=1.5\\).\n\n\\[\nB=(3,6.5)\n\\]\n\n\\[\nD=(-3,-2.5)\n\\]"
       }
     ],
@@ -11448,7 +11448,7 @@ window.SOLUTION_DATA = {
         "body": "Point \\(A\\) is the first positive \\(x\\)-intercept, so \\(y=0\\).\n\n\\[\n\\cos\\left(\\frac{x}{2}\\right)=0\n\\]\n\n\\[\n\\frac{x}{2}=90^\\circ\n\\]\n\n\\[\nx=180\n\\]"
       },
       {
-        "title": "So",
+        "title": "Read the graph",
         "body": "So\n\n\\[\nA=(180,0)\n\\]"
       },
       {
@@ -11460,7 +11460,7 @@ window.SOLUTION_DATA = {
         "body": "The minimum value of cosine is \\(-1\\), which occurs when\n\n\\[\n\\frac{x}{2}=180^\\circ\n\\]\n\n\\[\nx=360\n\\]"
       },
       {
-        "title": "So",
+        "title": "Read the graph",
         "body": "So\n\n\\[\nB=(360,-1)\n\\]"
       }
     ],
@@ -11489,7 +11489,7 @@ window.SOLUTION_DATA = {
         "body": "Area of the four circles:\n\n\\[\n4\\pi r^2\n\\]"
       },
       {
-        "title": "The shaded area is ,",
+        "title": "Calculate area",
         "body": "The shaded area is \\(40\\text{ cm}^2\\), so\n\n\\[\n16r^2-4\\pi r^2=40\n\\]\n\n\\[\nr^2(16-4\\pi)=40\n\\]\n\n\\[\nr=\\sqrt{\\frac{40}{16-4\\pi}}=3.4131\\ldots\n\\]"
       },
       {
@@ -11506,23 +11506,23 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Ratio Toolkit to Vectors.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Split the ratio",
         "body": "\\[\n\\overrightarrow{OA}=4a,\\quad \\overrightarrow{OB}=6b,\\quad \\overrightarrow{AP}=2a+8b\n\\]"
       },
       {
-        "title": "So",
+        "title": "Split the ratio",
         "body": "So\n\n\\[\n\\overrightarrow{OP}=\\overrightarrow{OA}+\\overrightarrow{AP}\n=4a+(2a+8b)=6a+8b\n\\]"
       },
       {
-        "title": "Since lies on , let",
+        "title": "Split the ratio",
         "body": "Since \\(Q\\) lies on \\(OP\\), let\n\n\\[\n\\overrightarrow{OQ}=\\lambda(6a+8b)\n\\]"
       },
       {
-        "title": "Since lies on , let",
+        "title": "Split the ratio",
         "body": "Since \\(Q\\) lies on \\(AB\\), let\n\n\\[\n\\overrightarrow{OQ}=\\overrightarrow{OA}+\\mu\\overrightarrow{AB}\n\\]\n\n\\[\n\\overrightarrow{AB}=6b-4a\n\\]"
       },
       {
-        "title": "So",
+        "title": "Split the ratio",
         "body": "So\n\n\\[\n\\overrightarrow{OQ}=4a+\\mu(6b-4a)=(4-4\\mu)a+6\\mu b\n\\]"
       },
       {
@@ -11530,11 +11530,11 @@ window.SOLUTION_DATA = {
         "body": "Equating coefficients:\n\n\\[\n6\\lambda=4-4\\mu,\\quad 8\\lambda=6\\mu\n\\]"
       },
       {
-        "title": "From ,",
+        "title": "Split the ratio",
         "body": "From \\(8\\lambda=6\\mu\\), \\(\\mu=\\frac43\\lambda\\).\n\n\\[\n6\\lambda=4-\\frac{16}{3}\\lambda\n\\]\n\n\\[\n34\\lambda=12,\\quad \\lambda=\\frac6{17}\n\\]\n\n\\[\n\\mu=\\frac{8}{17}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Split the ratio",
         "body": "So \\(AQ:QB=\\frac8{17}:\\frac9{17}\\)."
       }
     ],
@@ -11547,7 +11547,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Set notation and Venn diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\n\\mathcal{E}=\\{9,10,11,12,13,14,15,16,17,18,19,20\\}\n\\]"
       },
       {
@@ -11559,11 +11559,11 @@ window.SOLUTION_DATA = {
         "body": "The odd numbers in \\(\\mathcal{E}\\) are\n\n\\[\nB=\\{9,11,13,15,17,19\\}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\nA\\cap B=\\{9,15\\}\n\\]"
       },
       {
-        "title": "and",
+        "title": "Calculate value",
         "body": "and\n\n\\[\nA\\cup B=\\{9,11,12,13,15,17,18,19\\}\n\\]"
       },
       {
@@ -11571,7 +11571,7 @@ window.SOLUTION_DATA = {
         "body": "The statement \\(24\\in A\\) is false because \\(24\\) is not in the universal set \\(\\mathcal{E}\\)."
       },
       {
-        "title": "For , we need and",
+        "title": "Calculate value",
         "body": "For \\(C\\), we need \\(C\\cap B'=\\{10,18\\}\\) and \\(C\\) has \\(4\\) members. One valid choice is\n\n\\[\nC=\\{9,10,11,18\\}\n\\]"
       }
     ],
@@ -11584,7 +11584,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find the LCM",
         "body": "\\[\n1200=12\\times 100\n\\]\n\n\\[\n1200=(2^2\\times 3)(2^2\\times 5^2)\n\\]\n\n\\[\n1200=2^4\\times 3\\times 5^2\n\\]"
       }
     ],
@@ -11597,7 +11597,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Powers, roots and standard form. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Convert standard form",
         "body": "\\[\n8.8\\times 10^6=8800000\n\\]"
       },
       {
@@ -11605,7 +11605,7 @@ window.SOLUTION_DATA = {
         "body": "The least population in the table is Barcelona, with\n\n\\[\n5.5\\times 10^6\n\\]"
       },
       {
-        "title": "For the difference between Tokyo",
+        "title": "Convert standard form",
         "body": "For the difference between Tokyo and Ahmedabad:\n\n\\[\n3.7\\times 10^7-7.7\\times 10^6\n\\]\n\n\\[\n37000000-7700000=29300000\n\\]\n\n\\[\n29300000=2.93\\times 10^7\n\\]"
       },
       {
@@ -11622,7 +11622,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Percentages. The tag is correct.",
     "steps": [
       {
-        "title": "After a increase, the ticket",
+        "title": "Calculate percentage",
         "body": "After a \\(12\\%\\) increase, the ticket price is \\(112\\%\\) of the original price.\n\n\\[\n18.20=1.12\\times \\text{original price}\n\\]\n\n\\[\n\\text{original price}=\\frac{18.20}{1.12}=16.25\n\\]"
       }
     ],
@@ -11639,15 +11639,15 @@ window.SOLUTION_DATA = {
         "body": "To show Kaidan's average speed could be greater, compare Kaidan's greatest possible speed with Sonja's smallest possible speed."
       },
       {
-        "title": "For Kaidan",
+        "title": "Estimate the value",
         "body": "For Kaidan:\n\n\\[\nd<82.5,\\quad t\\ge 2.65\n\\]\n\n\\[\n\\text{greatest speed}=\\frac{82.5}{2.65}=31.13\\ldots\\text{ km/h}\n\\]"
       },
       {
-        "title": "For Sonja",
+        "title": "Estimate the value",
         "body": "For Sonja:\n\n\\[\nd\\ge 32.5,\\quad t<1.05\n\\]\n\n\\[\n\\text{smallest speed}=\\frac{32.5}{1.05}=30.95\\ldots\\text{ km/h}\n\\]"
       },
       {
-        "title": "Since",
+        "title": "Estimate the value",
         "body": "Since\n\n\\[\n31.13\\ldots>30.95\\ldots\n\\]"
       },
       {
@@ -11664,19 +11664,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic Roots and Indices. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use index laws",
         "body": "\\[\n\\frac{2^k}{4^n}=2^x\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Use index laws",
         "body": "Since \\(4=2^2\\),\n\n\\[\n4^n=(2^2)^n=2^{2n}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use index laws",
         "body": "So\n\n\\[\n\\frac{2^k}{2^{2n}}=2^{k-2n}\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Use index laws",
         "body": "Therefore\n\n\\[\nx=k-2n\n\\]"
       }
     ],
@@ -11689,7 +11689,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Sine/Cosine Rule to Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use trigonometry",
         "body": "\\[\n\\left(\\frac{20}{x^2-36}-\\frac2{x-6}\\right)\\times\\frac1{4-x}\n\\]"
       },
       {
@@ -11697,7 +11697,7 @@ window.SOLUTION_DATA = {
         "body": "Factor:\n\n\\[\nx^2-36=(x-6)(x+6)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\n\\frac{20}{(x-6)(x+6)}-\\frac2{x-6}\n\\]"
       },
       {
@@ -11705,7 +11705,7 @@ window.SOLUTION_DATA = {
         "body": "Use the common denominator \\((x-6)(x+6)\\):\n\n\\[\n\\frac{20-2(x+6)}{(x-6)(x+6)}\n\\]\n\n\\[\n=\\frac{20-2x-12}{(x-6)(x+6)}\n\\]\n\n\\[\n=\\frac{8-2x}{(x-6)(x+6)}\n\\]\n\n\\[\n=\\frac{-2(x-4)}{(x-6)(x+6)}\n\\]"
       },
       {
-        "title": "Now multiply by",
+        "title": "Use trigonometry",
         "body": "Now multiply by\n\n\\[\n\\frac1{4-x}=-\\frac1{x-4}\n\\]\n\n\\[\n\\frac{-2(x-4)}{(x-6)(x+6)}\\times\\left(-\\frac1{x-4}\\right)\n\\]"
       },
       {
@@ -11726,11 +11726,11 @@ window.SOLUTION_DATA = {
         "body": "Let\n\\[\nx=0.3\\dot4\\dot5\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\\[\n10x=3.\\dot4\\dot5\n\\]"
       },
       {
-        "title": "and",
+        "title": "Calculate value",
         "body": "and\n\\[\n1000x=345.\\dot4\\dot5\n\\]"
       },
       {
@@ -11772,19 +11772,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nx-2y=3\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\nx=2y+3\n\\]"
       },
       {
-        "title": "Substitute into",
+        "title": "Calculate value",
         "body": "Substitute into\n\n\\[\nx^2-y^2+2x=10\n\\]\n\n\\[\n(2y+3)^2-y^2+2(2y+3)=10\n\\]\n\n\\[\n4y^2+12y+9-y^2+4y+6=10\n\\]\n\n\\[\n3y^2+16y+5=0\n\\]\n\n\\[\n(3y+1)(y+5)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\ny=-\\frac13 \\quad \\text{or} \\quad y=-5\n\\]"
       },
       {
@@ -11801,7 +11801,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Functions. The original tag was solving quadratic equations, but the question is built around composite-function notation.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve quadratic equation",
         "body": "\\[\nf(x)=x^2-4,\\qquad g(x)=2x+1\n\\]\n\n\\[\nfg(x)=f(g(x))=(2x+1)^2-4\n\\]\n\n\\[\n=4x^2+4x+1-4=4x^2+4x-3\n\\]"
       },
       {
@@ -11838,7 +11838,7 @@ window.SOLUTION_DATA = {
         "body": "The point \\(A\\) is\n\n\\[\nA=(6,11)\n\\]"
       },
       {
-        "title": "Since is a diameter, is",
+        "title": "Find the midpoint",
         "body": "Since \\(AOP\\) is a diameter, \\(O\\) is the midpoint of \\(AP\\)."
       },
       {
@@ -11850,11 +11850,11 @@ window.SOLUTION_DATA = {
         "body": "The gradient of \\(OP\\) is\n\n\\[\n\\frac{3-7}{2-4}=2\n\\]"
       },
       {
-        "title": "The tangent is perpendicular to",
+        "title": "Use circle theorem",
         "body": "The tangent is perpendicular to the radius, so its gradient is\n\n\\[\n-\\frac12\n\\]"
       },
       {
-        "title": "Using point ,",
+        "title": "Evaluate fraction",
         "body": "Using point \\(P=(2,3)\\),\n\n\\[\ny-3=-\\frac12(x-2)\n\\]\n\n\\[\ny=-\\frac12x+4\n\\]"
       }
     ],
@@ -11871,7 +11871,7 @@ window.SOLUTION_DATA = {
         "body": "\\[\ny=-2x+3\n\\]\nis a negative straight line with positive \\(y\\)-intercept, so it is **Graph C**."
       },
       {
-        "title": "is the reciprocal graph in",
+        "title": "Read the graph",
         "body": "\\[\ny=\\frac1x\n\\]\nis the reciprocal graph in quadrants I and III, so it is **Graph B**."
       },
       {
@@ -11879,7 +11879,7 @@ window.SOLUTION_DATA = {
         "body": "\\[\ny=\\tan x\n\\]\nhas repeating branches with vertical asymptotes and passes through the origin, so it is **Graph D**."
       },
       {
-        "title": "is a positive cubic with",
+        "title": "Read the graph",
         "body": "\\[\ny=(x+1)(x-1)(x-2)\n\\]\nis a positive cubic with three roots, so it is **Graph H**."
       }
     ],
@@ -11896,7 +11896,7 @@ window.SOLUTION_DATA = {
         "body": "Point \\(A=(-3,2)\\) lies on \\(y=f(x)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x)-3\n\\]"
       },
       {
@@ -11904,7 +11904,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 3 units down:\n\n\\[\n(-3,2)\\to(-3,-1)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Evaluate fraction",
         "body": "For\n\n\\[\ny=f\\left(\\frac{x}{2}\\right)\n\\]"
       },
       {
@@ -11912,19 +11912,19 @@ window.SOLUTION_DATA = {
         "body": "the \\(x\\)-coordinate is multiplied by 2:\n\n\\[\n(-3,2)\\to(-6,2)\n\\]"
       },
       {
-        "title": "For part (b), point lies",
+        "title": "Calculate value",
         "body": "For part (b), point \\(B=(p,q)\\) lies on \\(y=g(x)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=-g(x-c)\n\\]"
       },
       {
-        "title": "moves the graph units right,",
+        "title": "Read the graph",
         "body": "\\(x-c\\) moves the graph \\(c\\) units right, and the minus sign reflects the graph in the \\(x\\)-axis."
       },
       {
-        "title": "So",
+        "title": "Apply transformation",
         "body": "So\n\n\\[\n(p,q)\\to(p+c,-q)\n\\]"
       }
     ],
@@ -11937,11 +11937,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Area & Perimeter. The tag is correct.",
     "steps": [
       {
-        "title": "The square has area ,",
+        "title": "Calculate area",
         "body": "The square has area \\(36\\text{ cm}^2\\), so its side length is\n\\[\n\\sqrt{36}=6\\text{ cm}\n\\]"
       },
       {
-        "title": "Each semicircle has diameter ,",
+        "title": "Calculate area",
         "body": "Each semicircle has diameter \\(6\\text{ cm}\\), so radius\n\\[\nr=3\\text{ cm}\n\\]"
       },
       {
@@ -11979,11 +11979,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to congruence, similarity and geometrical proof. The solution uses similar triangles.",
     "steps": [
       {
-        "title": "Since is parallel to ,",
+        "title": "Find the gradient",
         "body": "Since \\(AB\\) is parallel to \\(DE\\), triangles \\(ACB\\) and \\(ECD\\) are similar."
       },
       {
-        "title": "So corresponding sides are in",
+        "title": "Split the ratio",
         "body": "So corresponding sides are in the same ratio:\n\\[\n\\frac{AC}{CE}=\\frac{BC}{CD}\n\\]"
       },
       {
@@ -12008,7 +12008,7 @@ window.SOLUTION_DATA = {
         "body": "The larger similar cone has radius \\(kr\\) and height \\(kh\\), so its volume is\n\n\\[\nV_L=\\frac13\\pi(kr)^2(kh)=\\frac13\\pi k^3r^2h\n\\]"
       },
       {
-        "title": "So the frustum volume is",
+        "title": "Calculate volume",
         "body": "So the frustum volume is\n\n\\[\nV_L-V_s=\\frac13\\pi r^2h(k^3-1)\n\\]"
       },
       {
@@ -12045,11 +12045,11 @@ window.SOLUTION_DATA = {
         "body": "A regular hexagon has interior angle\n\\[\n120^\\circ\n\\]"
       },
       {
-        "title": "In right angled triangle ,",
+        "title": "Use trigonometry",
         "body": "In right-angled triangle \\(ABP\\),\n\\[\n\\tan(\\angle PAB)=\\frac{BP}{AB}=\\frac{2}{5}\n\\]\n\n\\[\n\\angle PAB=\\tan^{-1}\\left(\\frac25\\right)=21.801\\ldots^\\circ\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Use trigonometry",
         "body": "Therefore\n\\[\n\\angle PAF=120^\\circ-21.801\\ldots^\\circ=98.198\\ldots^\\circ\n\\]"
       }
     ],
@@ -12070,7 +12070,7 @@ window.SOLUTION_DATA = {
         "body": "Area of triangle \\(ABC\\):\n\\[\n\\frac12\\times 6\\times 11\\times \\sin 118^\\circ\n\\]"
       },
       {
-        "title": "So the area of the",
+        "title": "Use trigonometry",
         "body": "So the area of the kite is\n\\[\n2\\times \\frac12\\times 6\\times 11\\times \\sin 118^\\circ\n\\]\n\n\\[\n=6\\times 11\\times \\sin 118^\\circ=58.274\\ldots\n\\]"
       }
     ],
@@ -12087,15 +12087,15 @@ window.SOLUTION_DATA = {
         "body": "Let \\(A\\) be the origin.\n\n\\[\n\\vec{AB}=\\mathbf a,\\qquad \\vec{BC}=\\mathbf b\n\\]"
       },
       {
-        "title": "So",
+        "title": "Read the graph",
         "body": "So\n\n\\[\nB=\\mathbf a,\\qquad D=\\mathbf b,\\qquad C=\\mathbf a+\\mathbf b\n\\]"
       },
       {
-        "title": "Also",
+        "title": "Read the graph",
         "body": "Also\n\n\\[\n\\vec{DM}=\\frac12\\mathbf b\n\\]"
       },
       {
-        "title": "So",
+        "title": "Read the graph",
         "body": "So\n\n\\[\nM=\\frac32\\mathbf b\n\\]"
       },
       {
@@ -12103,7 +12103,7 @@ window.SOLUTION_DATA = {
         "body": "Point \\(K\\) is on \\(AB\\):\n\n\\[\nK=\\lambda\\mathbf a\n\\]"
       },
       {
-        "title": "Point is on , and",
+        "title": "Read the graph",
         "body": "Point \\(L\\) is on \\(CD\\), and \\(\\vec{CD}=-\\mathbf a\\):\n\n\\[\nL=C+\\mu(D-C)\n\\]\n\n\\[\nL=\\mathbf a+\\mathbf b+\\mu(-\\mathbf a)\n\\]\n\n\\[\nL=(1-\\mu)\\mathbf a+\\mathbf b\n\\]"
       },
       {
@@ -12111,7 +12111,7 @@ window.SOLUTION_DATA = {
         "body": "Given\n\n\\[\n\\lambda:\\mu=1:2\n\\]\n\n\\[\n\\mu=2\\lambda\n\\]"
       },
       {
-        "title": "Since are collinear, is a",
+        "title": "Read the graph",
         "body": "Since \\(K,L,M\\) are collinear, \\(\\vec{KM}\\) is a multiple of \\(\\vec{KL}\\).\n\n\\[\n\\vec{KM}=-\\lambda\\mathbf a+\\frac32\\mathbf b\n\\]\n\n\\[\n\\vec{KL}=(1-\\mu-\\lambda)\\mathbf a+\\mathbf b\n\\]\n\n\\[\n\\vec{KL}=(1-3\\lambda)\\mathbf a+\\mathbf b\n\\]"
       },
       {
@@ -12119,7 +12119,7 @@ window.SOLUTION_DATA = {
         "body": "Compare coefficients using\n\n\\[\n\\vec{KM}=\\frac32\\vec{KL}\n\\]\n\n\\[\n-\\lambda=\\frac32(1-3\\lambda)\n\\]\n\n\\[\n-2\\lambda=3-9\\lambda\n\\]\n\n\\[\n7\\lambda=3\n\\]\n\n\\[\n\\lambda=\\frac37\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Read the graph",
         "body": "Then\n\n\\[\n\\mu=2\\lambda=\\frac67\n\\]"
       }
     ],
@@ -12132,7 +12132,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Transformations. The tag is correct.",
     "steps": [
       {
-        "title": "(a) Triangle is enlarged to",
+        "title": "Use trigonometry",
         "body": "(a) Triangle \\(A\\) is enlarged to triangle \\(B\\)."
       },
       {
@@ -12140,11 +12140,11 @@ window.SOLUTION_DATA = {
         "body": "The scale factor is\n\n\\[\n3\n\\]"
       },
       {
-        "title": "Using corresponding vertices gives centre",
+        "title": "Use Transformations tag correct",
         "body": "Using corresponding vertices gives centre \\((3,0)\\)."
       },
       {
-        "title": "So the transformation is an",
+        "title": "Use Transformations tag correct",
         "body": "So the transformation is an enlargement, scale factor \\(3\\), centre \\((3,0)\\)."
       },
       {
@@ -12190,7 +12190,7 @@ window.SOLUTION_DATA = {
         "body": "The median is at cumulative frequency \\(30\\)."
       },
       {
-        "title": "This is between and",
+        "title": "Convert standard form",
         "body": "This is between \\((20,13)\\) and \\((30,36)\\):\n\n\\[\n20+\\frac{30-13}{36-13}\\times 10=27.39\\ldots\n\\]"
       },
       {
@@ -12198,19 +12198,19 @@ window.SOLUTION_DATA = {
         "body": "Median age is about \\(27.4\\) years."
       },
       {
-        "title": "For the interquartile range",
+        "title": "Convert standard form",
         "body": "For the interquartile range:\n\n\\[\nQ_1 \\text{ is at }15,\\qquad Q_3 \\text{ is at }45\n\\]\n\n\\[\nQ_1\\approx 20+\\frac{15-13}{36-13}\\times 10=20.9\n\\]\n\n\\[\nQ_3\\approx 40+\\frac{45-42}{47-42}\\times 10=46\n\\]\n\n\\[\n\\text{IQR}\\approx 46-20.9=25.1\n\\]"
       },
       {
-        "title": "For people older than",
+        "title": "Use cumulative frequency",
         "body": "For people older than \\(55\\):\n\n\\[\nF(55)\\approx 47+\\frac{5}{10}(52-47)=49.5\n\\]\n\n\\[\n60-49.5=10.5\n\\]"
       }
     ],
     "finalAnswer": "median about \\(27.4\\) years, IQR about \\(25.1\\) years, about \\(11\\) people older than \\(55\\)."
   },
   "all::Jun2022_P2HR__Q14__p16-16__m03__Combined-and-Conditional-Probability": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Combined & Conditional Probability. The tag is correct.",
     "steps": [
@@ -12228,7 +12228,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Sine/Cosine Rule to Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use trigonometry",
         "body": "\\[\n\\left(\\frac{20}{x^2-36}-\\frac2{x-6}\\right)\\times\\frac1{4-x}\n\\]"
       },
       {
@@ -12236,7 +12236,7 @@ window.SOLUTION_DATA = {
         "body": "Factor:\n\n\\[\nx^2-36=(x-6)(x+6)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\n\\frac{20}{(x-6)(x+6)}-\\frac2{x-6}\n\\]"
       },
       {
@@ -12244,7 +12244,7 @@ window.SOLUTION_DATA = {
         "body": "Use the common denominator \\((x-6)(x+6)\\):\n\n\\[\n\\frac{20-2(x+6)}{(x-6)(x+6)}\n\\]\n\n\\[\n=\\frac{20-2x-12}{(x-6)(x+6)}\n\\]\n\n\\[\n=\\frac{8-2x}{(x-6)(x+6)}\n\\]\n\n\\[\n=\\frac{-2(x-4)}{(x-6)(x+6)}\n\\]"
       },
       {
-        "title": "Now multiply by",
+        "title": "Use trigonometry",
         "body": "Now multiply by\n\n\\[\n\\frac1{4-x}=-\\frac1{x-4}\n\\]\n\n\\[\n\\frac{-2(x-4)}{(x-6)(x+6)}\\times\\left(-\\frac1{x-4}\\right)\n\\]"
       },
       {
@@ -12261,19 +12261,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nx-2y=3\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\nx=2y+3\n\\]"
       },
       {
-        "title": "Substitute into",
+        "title": "Calculate value",
         "body": "Substitute into\n\n\\[\nx^2-y^2+2x=10\n\\]\n\n\\[\n(2y+3)^2-y^2+2(2y+3)=10\n\\]\n\n\\[\n4y^2+12y+9-y^2+4y+6=10\n\\]\n\n\\[\n3y^2+16y+5=0\n\\]\n\n\\[\n(3y+1)(y+5)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\ny=-\\frac13 \\quad \\text{or} \\quad y=-5\n\\]"
       },
       {
@@ -12298,7 +12298,7 @@ window.SOLUTION_DATA = {
         "body": "The point \\(A\\) is\n\n\\[\nA=(6,11)\n\\]"
       },
       {
-        "title": "Since is a diameter, is",
+        "title": "Find the midpoint",
         "body": "Since \\(AOP\\) is a diameter, \\(O\\) is the midpoint of \\(AP\\)."
       },
       {
@@ -12310,11 +12310,11 @@ window.SOLUTION_DATA = {
         "body": "The gradient of \\(OP\\) is\n\n\\[\n\\frac{3-7}{2-4}=2\n\\]"
       },
       {
-        "title": "The tangent is perpendicular to",
+        "title": "Use circle theorem",
         "body": "The tangent is perpendicular to the radius, so its gradient is\n\n\\[\n-\\frac12\n\\]"
       },
       {
-        "title": "Using point ,",
+        "title": "Evaluate fraction",
         "body": "Using point \\(P=(2,3)\\),\n\n\\[\ny-3=-\\frac12(x-2)\n\\]\n\n\\[\ny=-\\frac12x+4\n\\]"
       }
     ],
@@ -12331,7 +12331,7 @@ window.SOLUTION_DATA = {
         "body": "Point \\(A=(-3,2)\\) lies on \\(y=f(x)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x)-3\n\\]"
       },
       {
@@ -12339,7 +12339,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 3 units down:\n\n\\[\n(-3,2)\\to(-3,-1)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Evaluate fraction",
         "body": "For\n\n\\[\ny=f\\left(\\frac{x}{2}\\right)\n\\]"
       },
       {
@@ -12347,19 +12347,19 @@ window.SOLUTION_DATA = {
         "body": "the \\(x\\)-coordinate is multiplied by 2:\n\n\\[\n(-3,2)\\to(-6,2)\n\\]"
       },
       {
-        "title": "For part (b), point lies",
+        "title": "Calculate value",
         "body": "For part (b), point \\(B=(p,q)\\) lies on \\(y=g(x)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=-g(x-c)\n\\]"
       },
       {
-        "title": "moves the graph units right,",
+        "title": "Read the graph",
         "body": "\\(x-c\\) moves the graph \\(c\\) units right, and the minus sign reflects the graph in the \\(x\\)-axis."
       },
       {
-        "title": "So",
+        "title": "Apply transformation",
         "body": "So\n\n\\[\n(p,q)\\to(p+c,-q)\n\\]"
       }
     ],
@@ -12380,7 +12380,7 @@ window.SOLUTION_DATA = {
         "body": "The larger similar cone has radius \\(kr\\) and height \\(kh\\), so its volume is\n\n\\[\nV_L=\\frac13\\pi(kr)^2(kh)=\\frac13\\pi k^3r^2h\n\\]"
       },
       {
-        "title": "So the frustum volume is",
+        "title": "Calculate volume",
         "body": "So the frustum volume is\n\n\\[\nV_L-V_s=\\frac13\\pi r^2h(k^3-1)\n\\]"
       },
       {
@@ -12417,15 +12417,15 @@ window.SOLUTION_DATA = {
         "body": "Let \\(A\\) be the origin.\n\n\\[\n\\vec{AB}=\\mathbf a,\\qquad \\vec{BC}=\\mathbf b\n\\]"
       },
       {
-        "title": "So",
+        "title": "Read the graph",
         "body": "So\n\n\\[\nB=\\mathbf a,\\qquad D=\\mathbf b,\\qquad C=\\mathbf a+\\mathbf b\n\\]"
       },
       {
-        "title": "Also",
+        "title": "Read the graph",
         "body": "Also\n\n\\[\n\\vec{DM}=\\frac12\\mathbf b\n\\]"
       },
       {
-        "title": "So",
+        "title": "Read the graph",
         "body": "So\n\n\\[\nM=\\frac32\\mathbf b\n\\]"
       },
       {
@@ -12433,7 +12433,7 @@ window.SOLUTION_DATA = {
         "body": "Point \\(K\\) is on \\(AB\\):\n\n\\[\nK=\\lambda\\mathbf a\n\\]"
       },
       {
-        "title": "Point is on , and",
+        "title": "Read the graph",
         "body": "Point \\(L\\) is on \\(CD\\), and \\(\\vec{CD}=-\\mathbf a\\):\n\n\\[\nL=C+\\mu(D-C)\n\\]\n\n\\[\nL=\\mathbf a+\\mathbf b+\\mu(-\\mathbf a)\n\\]\n\n\\[\nL=(1-\\mu)\\mathbf a+\\mathbf b\n\\]"
       },
       {
@@ -12441,7 +12441,7 @@ window.SOLUTION_DATA = {
         "body": "Given\n\n\\[\n\\lambda:\\mu=1:2\n\\]\n\n\\[\n\\mu=2\\lambda\n\\]"
       },
       {
-        "title": "Since are collinear, is a",
+        "title": "Read the graph",
         "body": "Since \\(K,L,M\\) are collinear, \\(\\vec{KM}\\) is a multiple of \\(\\vec{KL}\\).\n\n\\[\n\\vec{KM}=-\\lambda\\mathbf a+\\frac32\\mathbf b\n\\]\n\n\\[\n\\vec{KL}=(1-\\mu-\\lambda)\\mathbf a+\\mathbf b\n\\]\n\n\\[\n\\vec{KL}=(1-3\\lambda)\\mathbf a+\\mathbf b\n\\]"
       },
       {
@@ -12449,7 +12449,7 @@ window.SOLUTION_DATA = {
         "body": "Compare coefficients using\n\n\\[\n\\vec{KM}=\\frac32\\vec{KL}\n\\]\n\n\\[\n-\\lambda=\\frac32(1-3\\lambda)\n\\]\n\n\\[\n-2\\lambda=3-9\\lambda\n\\]\n\n\\[\n7\\lambda=3\n\\]\n\n\\[\n\\lambda=\\frac37\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Read the graph",
         "body": "Then\n\n\\[\n\\mu=2\\lambda=\\frac67\n\\]"
       }
     ],
@@ -12462,7 +12462,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Powers, roots and standard form. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Convert standard form",
         "body": "\\[\n76000000=7.6\\times 10^7\n\\]\n\n\\[\n5.4\\times 10^{-4}=0.00054\n\\]"
       }
     ],
@@ -12479,7 +12479,7 @@ window.SOLUTION_DATA = {
         "body": "A \\(4\\%\\) increase each year gives a multiplier of\n\n\\[\n1.04\n\\]"
       },
       {
-        "title": "After 3 years, the value",
+        "title": "Use compound interest",
         "body": "After 3 years, the value is\n\n\\[\n680(1.04)^3\n\\]\n\n\\[\n=680(1.124864)\n\\]\n\n\\[\n=764.90752\n\\]"
       },
       {
@@ -12496,7 +12496,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Rounding, Estimation & Bounds is correct. The question is about choosing bounds before using the density formula.",
     "steps": [
       {
-        "title": "For the upper bound of",
+        "title": "Find upper bound",
         "body": "For the upper bound of density, use the upper bound of the mass and the lower bound of the volume."
       },
       {
@@ -12504,7 +12504,7 @@ window.SOLUTION_DATA = {
         "body": "The radius is \\(2.8\\) cm correct to 1 decimal place, so the lower bound is\n\n\\(r=2.75\\)"
       },
       {
-        "title": "correct to 2 significant figures,",
+        "title": "Find upper bound",
         "body": "\\(M=260\\) correct to 2 significant figures, so the upper bound is\n\n\\(M=265\\)"
       },
       {
@@ -12512,7 +12512,7 @@ window.SOLUTION_DATA = {
         "body": "The mass is \\(M\\pi\\) and the volume of the sphere is \\(\\dfrac{4}{3}\\pi r^3\\)."
       },
       {
-        "title": "So",
+        "title": "Rearrange formula",
         "body": "So\n\n\\(\\text{density}=\\dfrac{M\\pi}{\\frac{4}{3}\\pi r^3}=\\dfrac{3M}{4r^3}\\)"
       },
       {
@@ -12533,7 +12533,7 @@ window.SOLUTION_DATA = {
         "body": "The volume is\n\n\\[\nx^2(2\\sqrt5-3)=13+6\\sqrt5\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify surd",
         "body": "So\n\n\\[\nx^2=\\frac{13+6\\sqrt5}{2\\sqrt5-3}\n\\]"
       },
       {
@@ -12541,7 +12541,7 @@ window.SOLUTION_DATA = {
         "body": "Rationalise:\n\n\\[\nx^2=\\frac{(13+6\\sqrt5)(2\\sqrt5+3)}{(2\\sqrt5)^2-3^2}\n\\]\n\n\\[\n=\\frac{26\\sqrt5+39+60+18\\sqrt5}{20-9}\n\\]\n\n\\[\n=\\frac{99+44\\sqrt5}{11}=9+4\\sqrt5\n\\]"
       },
       {
-        "title": "Since",
+        "title": "Simplify surd",
         "body": "Since\n\n\\[\n(\\sqrt5+2)^2=5+4+4\\sqrt5=9+4\\sqrt5\n\\]\n\n\\[\nx=\\sqrt5+2\n\\]"
       }
     ],
@@ -12558,7 +12558,7 @@ window.SOLUTION_DATA = {
         "body": "Let the number of \\(2\\) pence coins be \\(x\\)."
       },
       {
-        "title": "Then the number of pence",
+        "title": "Split the ratio",
         "body": "Then the number of \\(5\\) pence coins is \\(3x\\)."
       },
       {
@@ -12566,7 +12566,7 @@ window.SOLUTION_DATA = {
         "body": "Total value:\n\n\\[\n2x+5(3x)=85\n\\]\n\n\\[\n17x=85\n\\]\n\n\\[\nx=5\n\\]"
       },
       {
-        "title": "So there are two pence",
+        "title": "Split the ratio",
         "body": "So there are \\(5\\) two-pence coins and \\(15\\) five-pence coins.\n\n\\[\n15-5=10\n\\]"
       }
     ],
@@ -12579,31 +12579,31 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Direct & Inverse Proportion. The question states \\(Q\\) is directly proportional to \\(\\sqrt t\\).",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find inverse function",
         "body": "\\[\nQ\\propto \\sqrt t\n\\]"
       },
       {
-        "title": "So",
+        "title": "Find inverse function",
         "body": "So\n\n\\[\nQ=k\\sqrt t\n\\]"
       },
       {
-        "title": "From the graph, when ,",
+        "title": "Read the graph",
         "body": "From the graph, when \\(t=4\\), \\(Q=6\\).\n\n\\[\n6=k\\sqrt4\n\\]\n\n\\[\n6=2k\n\\]\n\n\\[\nk=3\n\\]"
       },
       {
-        "title": "So the formula is",
+        "title": "Rearrange formula",
         "body": "So the formula is\n\n\\[\nQ=3\\sqrt t\n\\]"
       },
       {
-        "title": "For part (b), is increased",
+        "title": "Find inverse function",
         "body": "For part (b), \\(Q\\) is increased by \\(20\\%\\), so \\(Q\\) is multiplied by \\(1.2\\)."
       },
       {
-        "title": "Since ,",
+        "title": "Find inverse function",
         "body": "Since \\(Q\\propto \\sqrt t\\),\n\n\\[\nt\\propto Q^2\n\\]"
       },
       {
-        "title": "So is multiplied by",
+        "title": "Find inverse function",
         "body": "So \\(t\\) is multiplied by\n\n\\[\n1.2^2=1.44\n\\]"
       },
       {
@@ -12620,15 +12620,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Algebraic Roots and Indices. The first two parts are index laws; the final part is a linear equation.",
     "steps": [
       {
-        "title": "For part (a),",
+        "title": "Solve equation",
         "body": "For part (a),\n\n\\[\n(32a^{15})^{3/5}=32^{3/5}a^{15\\times 3/5}\n\\]\n\n\\[\n=8a^9\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Solve equation",
         "body": "For part (b),\n\n\\[\n\\left(\\frac{1}{10x}\\right)^{-3}=(10x)^3=1000x^3\n\\]"
       },
       {
-        "title": "For part (c),",
+        "title": "Solve equation",
         "body": "For part (c),\n\n\\[\n\\frac{1-2y}{3}=\\frac45-\\frac{2y-1}{2}\n\\]"
       },
       {
@@ -12645,7 +12645,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Completing the square. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\n3x^2-6x+5=3(x^2-2x)+5\n\\]\n\n\\[\n=3\\big((x-1)^2-1\\big)+5\n\\]\n\n\\[\n=3(x-1)^2+2\n\\]"
       }
     ],
@@ -12675,7 +12675,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic proof. The tag is acceptable because the question asks to show the exact result.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\n4\\frac{2}{3}=\\frac{14}{3},\\qquad 1\\frac{1}{5}=\\frac{6}{5}\n\\]\n\n\\[\n4\\frac{2}{3}\\div1\\frac{1}{5}=\\frac{14}{3}\\div\\frac{6}{5}\n\\]\n\n\\[\n=\\frac{14}{3}\\times\\frac{5}{6}=\\frac{70}{18}=\\frac{35}{9}\n\\]\n\n\\[\n\\frac{35}{9}=3\\frac{8}{9}\n\\]"
       }
     ],
@@ -12688,7 +12688,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\n2x^2+3y^2=11\n\\]\n\n\\[\nx=3y-1\n\\]"
       },
       {
@@ -12696,7 +12696,7 @@ window.SOLUTION_DATA = {
         "body": "Substitute:\n\n\\[\n2(3y-1)^2+3y^2=11\n\\]\n\n\\[\n18y^2-12y+2+3y^2=11\n\\]\n\n\\[\n21y^2-12y-9=0\n\\]\n\n\\[\n7y^2-4y-3=0\n\\]\n\n\\[\n(7y+3)(y-1)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\ny=-\\frac37 \\quad \\text{or} \\quad y=1\n\\]"
       },
       {
@@ -12713,11 +12713,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "In the kite, and ,",
+        "title": "Calculate value",
         "body": "In the kite, \\(AB=AD\\) and \\(CB=CD\\), so \\(AC\\) is the line of symmetry."
       },
       {
-        "title": "Therefore is the reflection of",
+        "title": "Apply transformation",
         "body": "Therefore \\(D\\) is the reflection of \\(B\\) in the line \\(AC\\).\n\n\\[\nA=(-2,10),\\qquad B=\\left(-\\frac{27}{5},4\\right),\\qquad C=(4,-5)\n\\]"
       },
       {
@@ -12729,7 +12729,7 @@ window.SOLUTION_DATA = {
         "body": "Use the simpler direction vector\n\n\\[\n\\begin{pmatrix}2\\\\-5\\end{pmatrix}\n\\]"
       },
       {
-        "title": "Let be the foot of",
+        "title": "Find the gradient",
         "body": "Let \\(H\\) be the foot of the perpendicular from \\(B\\) to \\(AC\\).\n\n\\[\n\\vec{AB}=\\begin{pmatrix}-\\frac{17}{5}\\\\-6\\end{pmatrix}\n\\]"
       },
       {
@@ -12737,11 +12737,11 @@ window.SOLUTION_DATA = {
         "body": "The fraction along \\(AC\\) to \\(H\\) is\n\n\\[\n\\frac{\\vec{AB}\\cdot \\begin{pmatrix}2\\\\-5\\end{pmatrix}}{2^2+(-5)^2}\n=\n\\frac{-\\frac{34}{5}+30}{29}\n\\]\n\n\\[\n=\\frac{\\frac{116}{5}}{29}=\\frac45\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use matrices",
         "body": "So\n\n\\[\nH=A+\\frac45\\begin{pmatrix}2\\\\-5\\end{pmatrix}\n\\]\n\n\\[\nH=\\left(-2+\\frac85,10-4\\right)\n\\]\n\n\\[\nH=\\left(-\\frac25,6\\right)\n\\]"
       },
       {
-        "title": "Since is the midpoint of",
+        "title": "Find the midpoint",
         "body": "Since \\(H\\) is the midpoint of \\(BD\\),\n\n\\[\nD=2H-B\n\\]\n\n\\[\nD=\\left(-\\frac45,12\\right)-\\left(-\\frac{27}{5},4\\right)\n\\]\n\n\\[\nD=\\left(\\frac{23}{5},8\\right)\n\\]"
       }
     ],
@@ -12754,7 +12754,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This is a table-and-graph question for a quadratic function.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve quadratic equation",
         "body": "\\[\ny=x^2-x-4\n\\]"
       },
       {
@@ -12779,11 +12779,11 @@ window.SOLUTION_DATA = {
         "body": "\\[\ny=\\sin x\n\\]\nis the periodic sine-shaped graph, so it is **Graph C**."
       },
       {
-        "title": "is the positive reciprocal graph,",
+        "title": "Read the graph",
         "body": "\\[\ny=\\frac{3}{x}\n\\]\nis the positive reciprocal graph, so it is **Graph B**."
       },
       {
-        "title": "is a cubic graph with",
+        "title": "Find turning point",
         "body": "\\[\ny=4x^3-5x\n\\]\nis a cubic graph with two turning points, so it is **Graph A**."
       }
     ],
@@ -12796,7 +12796,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This is converting kilometres per hour to metres per second.",
     "steps": [
       {
-        "title": "To convert km/h to m/s,",
+        "title": "Convert km/h to m/s divide",
         "body": "To convert km/h to m/s, divide by \\(3.6\\).\n\n\\[\n27\\div3.6=7.5\n\\]"
       }
     ],
@@ -12809,15 +12809,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Angles in Polygons & Parallel Lines. The question uses co-interior angles on parallel lines.",
     "steps": [
       {
-        "title": "Since , the co interior",
+        "title": "Find the gradient",
         "body": "Since \\(BC\\parallel AD\\), the co-interior angles on side \\(AB\\) add to \\(180^\\circ\\):\n\\[\n(4x-27)+(3x+46)=180\n\\]\n\n\\[\n7x+19=180\n\\]\n\n\\[\n7x=161\n\\]\n\n\\[\nx=23\n\\]"
       },
       {
-        "title": "Now find the angles",
+        "title": "Find the gradient",
         "body": "Now find the angles:\n\\[\n\\angle A=4(23)-27=65^\\circ\n\\]\n\n\\[\n\\angle B=3(23)+46=115^\\circ\n\\]\n\n\\[\n\\angle D=3(23)+10=79^\\circ\n\\]"
       },
       {
-        "title": "Also, co interior angles on",
+        "title": "Find the gradient",
         "body": "Also, co-interior angles on side \\(CD\\) add to \\(180^\\circ\\):\n\\[\n\\angle C=180^\\circ-79^\\circ=101^\\circ\n\\]"
       },
       {
@@ -12834,11 +12834,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to angles in polygons and parallel lines. The question uses angles in a regular polygon.",
     "steps": [
       {
-        "title": "For a regular 9 sided",
+        "title": "Find the gradient",
         "body": "For a regular 9-sided polygon, the angle at the centre between adjacent vertices is\n\\[\n\\frac{360}{9}=40^\\circ\n\\]"
       },
       {
-        "title": "The side is perpendicular to",
+        "title": "Find the gradient",
         "body": "The side \\(FE\\) is perpendicular to the radius drawn to the midpoint of side \\(FE\\)."
       },
       {
@@ -12846,11 +12846,11 @@ window.SOLUTION_DATA = {
         "body": "From \\(OD\\) to this midpoint radius is\n\\[\n40^\\circ+20^\\circ=60^\\circ\n\\]"
       },
       {
-        "title": "So the angle between and",
+        "title": "Find the gradient",
         "body": "So the angle between \\(OD\\) and the side \\(FE\\) is\n\\[\n90^\\circ-60^\\circ=30^\\circ\n\\]"
       },
       {
-        "title": "Since and are straight lines,",
+        "title": "Find the gradient",
         "body": "Since \\(ODK\\) and \\(FEK\\) are straight lines, this is the angle \\(x\\)."
       }
     ],
@@ -12863,15 +12863,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Circle Theorems. The tag is correct.",
     "steps": [
       {
-        "title": "A radius is perpendicular to",
+        "title": "Use circle theorem",
         "body": "A radius is perpendicular to a tangent, so\n\\[\n\\angle OAD=90^\\circ\n\\]"
       },
       {
-        "title": "and",
+        "title": "Use trigonometry",
         "body": "and\n\\[\n\\angle OCD=90^\\circ\n\\]"
       },
       {
-        "title": "In quadrilateral ,",
+        "title": "Use trigonometry",
         "body": "In quadrilateral \\(AOCD\\),\n\\[\n\\angle AOC=360^\\circ-90^\\circ-90^\\circ-48^\\circ=132^\\circ\n\\]"
       },
       {
@@ -12888,7 +12888,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Circle Theorems. The tag is correct.",
     "steps": [
       {
-        "title": "(a) Since is a diameter,",
+        "title": "Use trigonometry",
         "body": "(a) Since \\(RP\\) is a diameter,\n\\[\n\\angle RQP=90^\\circ\n\\]"
       },
       {
@@ -12909,7 +12909,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Right-Angled Triangles - Pythagoras & Trigonometry. The tag is correct.",
     "steps": [
       {
-        "title": "First find angle",
+        "title": "Use trigonometry",
         "body": "First find angle \\(DAB\\):\n\\[\n\\cos(\\angle DAB)=\\frac{8}{14}\n\\]\n\n\\[\n\\angle DAB=55.150\\ldots^\\circ\n\\]"
       },
       {
@@ -12917,11 +12917,11 @@ window.SOLUTION_DATA = {
         "body": "Given\n\\[\n\\angle BAC=38^\\circ\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\\[\n\\angle CAD=55.150\\ldots^\\circ-38^\\circ=17.150\\ldots^\\circ\n\\]"
       },
       {
-        "title": "In right angled triangle ,",
+        "title": "Use trigonometry",
         "body": "In right-angled triangle \\(ACD\\),\n\\[\n\\tan(17.150\\ldots^\\circ)=\\frac{CD}{8}\n\\]\n\n\\[\nCD=2.468\\ldots\n\\]"
       }
     ],
@@ -12934,7 +12934,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved to Sine, Cosine Rule & Area of Triangles.",
     "steps": [
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(ABC\\),\n\n\\[\nAB=9,\\qquad BC=11,\\qquad AC=16\n\\]"
       },
       {
@@ -12946,7 +12946,7 @@ window.SOLUTION_DATA = {
         "body": "\\(D\\) is the foot of the perpendicular from \\(B\\) to \\(AC\\), so \\(BD\\) is the height of triangle \\(ABC\\).\n\n\\[\n\\text{area}=\\frac{1}{2}\\times AC\\times BD\n\\]\n\n\\[\n47.6235\\ldots=\\frac{1}{2}\\times 16\\times BD\n\\]\n\n\\[\nBD=5.9529\\ldots\n\\]"
       },
       {
-        "title": "In right angled triangle ,",
+        "title": "Use trigonometry",
         "body": "In right-angled triangle \\(BDF\\),\n\n\\[\n\\tan \\theta=\\frac{BF}{BD}\n\\]\n\n\\[\n\\tan \\theta=\\frac{10}{5.9529\\ldots}\n\\]\n\n\\[\n\\theta=\\tan^{-1}\\left(\\frac{10}{5.9529\\ldots}\\right)\n=59.2349\\ldots^\\circ\n\\]"
       }
     ],
@@ -12963,7 +12963,7 @@ window.SOLUTION_DATA = {
         "body": "Team A:\n\n\\[\n11 \\times 17=187\n\\]"
       },
       {
-        "title": "After the next round",
+        "title": "Estimate the value",
         "body": "After the next round:\n\n\\[\n12 \\times 18.5=222\n\\]\n\n\\[\n\\text{next score}=222-187=35\n\\]"
       },
       {
@@ -12971,7 +12971,7 @@ window.SOLUTION_DATA = {
         "body": "Team B:\n\n\\[\n9 \\times 18=162\n\\]"
       },
       {
-        "title": "After the next round",
+        "title": "Estimate the value",
         "body": "After the next round:\n\n\\[\n10 \\times 18.5=185\n\\]\n\n\\[\n\\text{next score}=185-162=23\n\\]"
       },
       {
@@ -12982,8 +12982,8 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(12\\)."
   },
   "all::Jun2023_P2H__Q02__p04-04__m03__Probability-Toolkit": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
@@ -12999,8 +12999,8 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(54\\)."
   },
   "all::Jun2023_P2H__Q13__p13-13__m04__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
@@ -13026,11 +13026,11 @@ window.SOLUTION_DATA = {
         "body": "At least one red counter is still in the bag unless all 3 red counters are taken."
       },
       {
-        "title": "So use the complement",
+        "title": "Use the complement",
         "body": "So use the complement:\n\n\\[\nP(\\text{all 3 red are taken})\n=\\frac{3}{12}\\cdot\\frac{2}{11}\\cdot\\frac{1}{10}\n\\]\n\n\\[\n=\\frac{6}{1320}\n\\]\n\n\\[\n=\\frac{1}{220}\n\\]"
       },
       {
-        "title": "Therefore,",
+        "title": "Evaluate fraction",
         "body": "Therefore,\n\n\\[\nP(\\text{at least one red is still in the bag})\n=1-\\frac{1}{220}\n\\]\n\n\\[\n=\\frac{219}{220}\n\\]"
       }
     ],
@@ -13043,7 +13043,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Rounding, Estimation & Bounds is correct. The question is about choosing bounds before using the density formula.",
     "steps": [
       {
-        "title": "For the upper bound of",
+        "title": "Find upper bound",
         "body": "For the upper bound of density, use the upper bound of the mass and the lower bound of the volume."
       },
       {
@@ -13051,7 +13051,7 @@ window.SOLUTION_DATA = {
         "body": "The radius is \\(2.8\\) cm correct to 1 decimal place, so the lower bound is\n\n\\(r=2.75\\)"
       },
       {
-        "title": "correct to 2 significant figures,",
+        "title": "Find upper bound",
         "body": "\\(M=260\\) correct to 2 significant figures, so the upper bound is\n\n\\(M=265\\)"
       },
       {
@@ -13063,7 +13063,7 @@ window.SOLUTION_DATA = {
         "body": "The volume of the sphere is\n\n\\[\n\\frac{4}{3}\\pi r^3\n\\]"
       },
       {
-        "title": "So",
+        "title": "Rearrange formula",
         "body": "So\n\n\\[\n\\text{density}\n=\n\\frac{M\\pi}{\\frac{4}{3}\\pi r^3}\n\\]"
       },
       {
@@ -13092,7 +13092,7 @@ window.SOLUTION_DATA = {
         "body": "Given\n\n\\[\nx^2(2\\sqrt5-3)=13+6\\sqrt5\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\nx^2=\\frac{13+6\\sqrt5}{2\\sqrt5-3}\n\\]"
       },
       {
@@ -13100,11 +13100,11 @@ window.SOLUTION_DATA = {
         "body": "Rationalise the denominator:\n\n\\[\nx^2=\\frac{13+6\\sqrt5}{2\\sqrt5-3}\\cdot\\frac{2\\sqrt5+3}{2\\sqrt5+3}\n\\]\n\n\\[\nx^2=\\frac{(13+6\\sqrt5)(2\\sqrt5+3)}{20-9}\n\\]\n\n\\[\nx^2=\\frac{99+44\\sqrt5}{11}\n\\]\n\n\\[\nx^2=9+4\\sqrt5\n\\]"
       },
       {
-        "title": "Now",
+        "title": "Use trigonometry",
         "body": "Now\n\n\\[\n(2+\\sqrt5)^2=4+4\\sqrt5+5=9+4\\sqrt5\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Use trigonometry",
         "body": "Therefore\n\n\\[\nx=2+\\sqrt5\n\\]"
       }
     ],
@@ -13117,7 +13117,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\n2x^2+3y^2=11\n\\]\n\n\\[\nx=3y-1\n\\]"
       },
       {
@@ -13125,7 +13125,7 @@ window.SOLUTION_DATA = {
         "body": "Substitute:\n\n\\[\n2(3y-1)^2+3y^2=11\n\\]\n\n\\[\n18y^2-12y+2+3y^2=11\n\\]\n\n\\[\n21y^2-12y-9=0\n\\]\n\n\\[\n7y^2-4y-3=0\n\\]\n\n\\[\n(7y+3)(y-1)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\ny=-\\frac37 \\quad \\text{or} \\quad y=1\n\\]"
       },
       {
@@ -13142,11 +13142,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "In the kite, and ,",
+        "title": "Calculate value",
         "body": "In the kite, \\(AB=AD\\) and \\(CB=CD\\), so \\(AC\\) is the line of symmetry."
       },
       {
-        "title": "Therefore is the reflection of",
+        "title": "Apply transformation",
         "body": "Therefore \\(D\\) is the reflection of \\(B\\) in the line \\(AC\\).\n\n\\[\nA=(-2,10),\\qquad B=\\left(-\\frac{27}{5},4\\right),\\qquad C=(4,-5)\n\\]"
       },
       {
@@ -13158,7 +13158,7 @@ window.SOLUTION_DATA = {
         "body": "Use the simpler direction vector\n\n\\[\n\\begin{pmatrix}2\\\\-5\\end{pmatrix}\n\\]"
       },
       {
-        "title": "Let be the foot of",
+        "title": "Find the gradient",
         "body": "Let \\(H\\) be the foot of the perpendicular from \\(B\\) to \\(AC\\).\n\n\\[\n\\vec{AB}=\\begin{pmatrix}-\\frac{17}{5}\\\\-6\\end{pmatrix}\n\\]"
       },
       {
@@ -13166,11 +13166,11 @@ window.SOLUTION_DATA = {
         "body": "The fraction along \\(AC\\) to \\(H\\) is\n\n\\[\n\\frac{\\vec{AB}\\cdot \\begin{pmatrix}2\\\\-5\\end{pmatrix}}{2^2+(-5)^2}\n=\n\\frac{-\\frac{34}{5}+30}{29}\n\\]\n\n\\[\n=\\frac{\\frac{116}{5}}{29}=\\frac45\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use matrices",
         "body": "So\n\n\\[\nH=A+\\frac45\\begin{pmatrix}2\\\\-5\\end{pmatrix}\n\\]\n\n\\[\nH=\\left(-2+\\frac85,10-4\\right)\n\\]\n\n\\[\nH=\\left(-\\frac25,6\\right)\n\\]"
       },
       {
-        "title": "Since is the midpoint of",
+        "title": "Find the midpoint",
         "body": "Since \\(H\\) is the midpoint of \\(BD\\),\n\n\\[\nD=2H-B\n\\]\n\n\\[\nD=\\left(-\\frac45,12\\right)-\\left(-\\frac{27}{5},4\\right)\n\\]\n\n\\[\nD=\\left(\\frac{23}{5},8\\right)\n\\]"
       }
     ],
@@ -13183,7 +13183,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved to Sine, Cosine Rule & Area of Triangles.",
     "steps": [
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(ABC\\),\n\n\\[\nAB=9,\\qquad BC=11,\\qquad AC=16\n\\]"
       },
       {
@@ -13195,7 +13195,7 @@ window.SOLUTION_DATA = {
         "body": "\\(D\\) is the foot of the perpendicular from \\(B\\) to \\(AC\\), so \\(BD\\) is the height of triangle \\(ABC\\).\n\n\\[\n\\text{area}=\\frac{1}{2}\\times AC\\times BD\n\\]\n\n\\[\n47.6235\\ldots=\\frac{1}{2}\\times 16\\times BD\n\\]\n\n\\[\nBD=5.9529\\ldots\n\\]"
       },
       {
-        "title": "In right angled triangle ,",
+        "title": "Use trigonometry",
         "body": "In right-angled triangle \\(BDF\\),\n\n\\[\n\\tan \\theta=\\frac{BF}{BD}\n\\]\n\n\\[\n\\tan \\theta=\\frac{10}{5.9529\\ldots}\n\\]\n\n\\[\n\\theta=\\tan^{-1}\\left(\\frac{10}{5.9529\\ldots}\\right)\n=59.2349\\ldots^\\circ\n\\]"
       }
     ],
@@ -13216,11 +13216,11 @@ window.SOLUTION_DATA = {
         "body": "At least one red counter is still in the bag unless all 3 red counters are taken."
       },
       {
-        "title": "So use the complement",
+        "title": "Use the complement",
         "body": "So use the complement:\n\n\\[\nP(\\text{all 3 red are taken})\n=\\frac{3}{12}\\cdot\\frac{2}{11}\\cdot\\frac{1}{10}\n\\]\n\n\\[\n=\\frac{6}{1320}\n\\]\n\n\\[\n=\\frac{1}{220}\n\\]"
       },
       {
-        "title": "Therefore,",
+        "title": "Evaluate fraction",
         "body": "Therefore,\n\n\\[\nP(\\text{at least one red is still in the bag})\n=1-\\frac{1}{220}\n\\]\n\n\\[\n=\\frac{219}{220}\n\\]"
       }
     ],
@@ -13233,19 +13233,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Prime Factors, HCF & LCM.",
     "steps": [
       {
-        "title": "Pens come in packs of",
+        "title": "Find the LCM",
         "body": "Pens come in packs of 9 and pencils come in boxes of 12."
       },
       {
-        "title": "The smallest equal number of",
+        "title": "Find the LCM",
         "body": "The smallest equal number of pens and pencils is\n\n\\[\n\\operatorname{LCM}(9,12)=36\n\\]"
       },
       {
-        "title": "So Sandeep buys",
+        "title": "Find the LCM",
         "body": "So Sandeep buys\n\n\\[\n4\\text{ packs of pens}\n\\]"
       },
       {
-        "title": "and",
+        "title": "Find the LCM",
         "body": "and\n\n\\[\n3\\text{ boxes of pencils}\n\\]"
       },
       {
@@ -13308,15 +13308,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic Roots and Indices. The tag is correct.",
     "steps": [
       {
-        "title": "Any non zero expression to",
+        "title": "Use index laws",
         "body": "Any non-zero expression to the power 0 is 1:\n\n\\[\n(4^{-2})^0=1\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Use index laws",
         "body": "For part (b),\n\n\\[\n3^{-14}\\times 3^8=3^{-14+8}=3^{-6}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use index laws",
         "body": "So\n\n\\[\nm=-6\n\\]"
       }
     ],
@@ -13329,15 +13329,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Algebraic Roots & Indices. This is an algebraic fractional-index question, not a standard form question.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Convert standard form",
         "body": "\\[\n\\left(\\frac{m^6k^{10}}{25}\\right)^{\\frac32}\n=\\frac{(m^6)^{\\frac32}(k^{10})^{\\frac32}}{25^{\\frac32}}\n\\]\n\n\\[\n(m^6)^{\\frac32}=m^9\n\\]\n\n\\[\n(k^{10})^{\\frac32}=k^{15}\n\\]"
       },
       {
-        "title": "Also,",
+        "title": "Convert standard form",
         "body": "Also,\n\n\\[\n25^{\\frac32}=(\\sqrt{25})^3=5^3=125\n\\]"
       },
       {
-        "title": "So",
+        "title": "Convert standard form",
         "body": "So\n\n\\[\n\\left(\\frac{m^6k^{10}}{25}\\right)^{\\frac32}\n=\\frac{m^9k^{15}}{125}\n\\]"
       }
     ],
@@ -13350,7 +13350,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Expanding brackets. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Expand brackets",
         "body": "\\[\nP=m^2-4c=(-5)^2-4(3)=25-12=13\n\\]\n\n\\[\n(x+5)(x-7)=x^2-7x+5x-35=x^2-2x-35\n\\]"
       }
     ],
@@ -13363,7 +13363,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Rearranging formulas. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Rearrange formula",
         "body": "\\[\ny=\\sqrt[3]{\\frac{6+5x}{x+4}}\n\\]\n\n\\[\ny^3=\\frac{6+5x}{x+4}\n\\]\n\n\\[\ny^3(x+4)=6+5x\n\\]\n\n\\[\nx(y^3-5)=6-4y^3\n\\]"
       }
     ],
@@ -13376,7 +13376,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic proof. The tag is acceptable because the question asks for exact-form proof.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\n\\frac{2\\sqrt3}{\\sqrt3-1}\\times\\frac{\\sqrt3+1}{\\sqrt3+1}\n=\\frac{2\\sqrt3(\\sqrt3+1)}{3-1}\n\\]\n\n\\[\n=\\frac{6+2\\sqrt3}{2}=3+\\sqrt3\n\\]"
       },
       {
@@ -13414,15 +13414,15 @@ window.SOLUTION_DATA = {
         "body": "The first three terms are\n\n\\[\n8p,\\quad 7p-3,\\quad 4p+2\n\\]"
       },
       {
-        "title": "For an arithmetic sequence, consecutive",
+        "title": "Find the nth term",
         "body": "For an arithmetic sequence, consecutive differences are equal:\n\n\\[\n(7p-3)-8p=(4p+2)-(7p-3)\n\\]\n\n\\[\n-p-3=-3p+5\n\\]\n\n\\[\n2p=8\n\\]\n\n\\[\np=4\n\\]"
       },
       {
-        "title": "So the first term is",
+        "title": "Find the nth term",
         "body": "So the first term is\n\n\\[\n8p=32\n\\]"
       },
       {
-        "title": "and the common difference is",
+        "title": "Find common difference",
         "body": "and the common difference is\n\n\\[\n(7p-3)-8p=25-32=-7\n\\]"
       },
       {
@@ -13447,11 +13447,11 @@ window.SOLUTION_DATA = {
         "body": "The line is\n\n\\[\ny-2x=1\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\ny=2x+1\n\\]"
       },
       {
-        "title": "Substitute into",
+        "title": "Calculate value",
         "body": "Substitute into\n\n\\[\ny^2+xy=7\n\\]\n\n\\[\n(2x+1)^2+x(2x+1)=7\n\\]\n\n\\[\n4x^2+4x+1+2x^2+x=7\n\\]\n\n\\[\n6x^2+5x-6=0\n\\]"
       },
       {
@@ -13459,11 +13459,11 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\n\\[\n(3x-2)(2x+3)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\nx=\\frac23 \\quad \\text{or} \\quad x=-\\frac32\n\\]"
       },
       {
-        "title": "Using",
+        "title": "Evaluate fraction",
         "body": "Using \\(y=2x+1\\):\n\n\\[\nx=\\frac23 \\Rightarrow y=\\frac73\n\\]\n\n\\[\nx=-\\frac32 \\Rightarrow y=-2\n\\]"
       }
     ],
@@ -13480,7 +13480,7 @@ window.SOLUTION_DATA = {
         "body": "The perpendicular bisector is\n\n\\[\ny-2x=7\n\\]"
       },
       {
-        "title": "so",
+        "title": "Calculate value",
         "body": "so\n\n\\[\ny=2x+7\n\\]"
       },
       {
@@ -13488,7 +13488,7 @@ window.SOLUTION_DATA = {
         "body": "The gradient of the perpendicular bisector is \\(2\\), so the gradient of \\(AB\\) is\n\n\\[\n-\\frac{1}{2}\n\\]"
       },
       {
-        "title": "Since and ,",
+        "title": "Evaluate fraction",
         "body": "Since \\(A=(j,7)\\) and \\(B=(6,k)\\),\n\n\\[\n\\frac{k-7}{6-j}=-\\frac{1}{2}\n\\]\n\n\\[\n2(k-7)=-(6-j)\n\\]\n\n\\[\nj=2k-8\n\\]"
       },
       {
@@ -13500,15 +13500,15 @@ window.SOLUTION_DATA = {
         "body": "Substitute \\(j=2k-8\\):\n\n\\[\n\\left(k-1,\\frac{k+7}{2}\\right)\n\\]"
       },
       {
-        "title": "The midpoint lies on ,",
+        "title": "Find the midpoint",
         "body": "The midpoint lies on \\(y=2x+7\\), so\n\n\\[\n\\frac{k+7}{2}=2(k-1)+7\n\\]\n\n\\[\nk+7=4k+10\n\\]\n\n\\[\nk=-1\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\n\\[\nj=2(-1)-8=-10\n\\]"
       },
       {
-        "title": "Therefore the midpoint is",
+        "title": "Find the midpoint",
         "body": "Therefore the midpoint is\n\n\\[\n\\left(\\frac{-10+6}{2},\\frac{7+(-1)}{2}\\right)=(-2,3)\n\\]"
       }
     ],
@@ -13521,7 +13521,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to graphs of functions. This is matching equations to graph shapes.",
     "steps": [
       {
-        "title": "For the graph is positive",
+        "title": "Solve equation",
         "body": "For\n\\[\ny=\\frac{10}{x^2}\n\\]\nthe graph is positive on both sides and symmetrical in the \\(y\\)-axis."
       },
       {
@@ -13529,7 +13529,7 @@ window.SOLUTION_DATA = {
         "body": "This is Graph D."
       },
       {
-        "title": "For the leading term is",
+        "title": "Solve equation",
         "body": "For\n\\[\ny=x-3+3x^2-x^3\n\\]\nthe leading term is \\(-x^3\\), so it is a cubic falling to the right with two turning points."
       },
       {
@@ -13537,7 +13537,7 @@ window.SOLUTION_DATA = {
         "body": "This is Graph C."
       },
       {
-        "title": "For the graph is a",
+        "title": "Solve equation",
         "body": "For\n\\[\ny=-\\frac3x\n\\]\nthe graph is a negative reciprocal graph in quadrants 2 and 4."
       },
       {
@@ -13558,11 +13558,11 @@ window.SOLUTION_DATA = {
         "body": "The curve is\n\n\\[\ny=a\\cos bx^\\circ+c\n\\]"
       },
       {
-        "title": "From the graph, the maximum",
+        "title": "Use trigonometry",
         "body": "From the graph, the maximum value is\n\n\\[\n3\n\\]"
       },
       {
-        "title": "and the minimum value is",
+        "title": "Use trigonometry",
         "body": "and the minimum value is\n\n\\[\n-1\n\\]"
       },
       {
@@ -13578,11 +13578,11 @@ window.SOLUTION_DATA = {
         "body": "The distance between consecutive maxima is \\(120^\\circ\\), so the period is\n\n\\[\n120^\\circ\n\\]"
       },
       {
-        "title": "For , the period is",
+        "title": "Use trigonometry",
         "body": "For \\(y=a\\cos bx^\\circ+c\\), the period is\n\n\\[\n\\frac{360^\\circ}{b}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\n\\frac{360}{b}=120\n\\]\n\n\\[\nb=3\n\\]"
       }
     ],
@@ -13595,11 +13595,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This combines solving and graphing inequalities.",
     "steps": [
       {
-        "title": "For part (a),",
+        "title": "Read the graph",
         "body": "For part (a),\n\\[\n9-4x>17\n\\]\n\n\\[\n-4x>8\n\\]\n\n\\[\nx<-2\n\\]"
       },
       {
-        "title": "For part (b), the region",
+        "title": "Read the graph",
         "body": "For part (b), the region is above \\(y=2\\), left of \\(x=6\\), and below \\(y=x\\):\n\\[\ny\\geq2\n\\]\n\n\\[\nx\\leq6\n\\]\n\n\\[\ny\\leq x\n\\]"
       }
     ],
@@ -13625,19 +13625,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to circle theorems. The question uses the intersecting secants theorem.",
     "steps": [
       {
-        "title": "From the external point ,",
+        "title": "Use circle theorem",
         "body": "From the external point \\(P\\), two secants meet the circle."
       },
       {
-        "title": "For the upper secant,",
+        "title": "Use circle theorem",
         "body": "For the upper secant,\n\\[\nPB=14,\\qquad PA=14+16=30\n\\]"
       },
       {
-        "title": "For the lower secant,",
+        "title": "Use circle theorem",
         "body": "For the lower secant,\n\\[\nPC=12,\\qquad PD=12+DC\n\\]"
       },
       {
-        "title": "Using the secant theorem",
+        "title": "Use circle theorem",
         "body": "Using the secant theorem:\n\\[\nPB\\times PA=PC\\times PD\n\\]\n\n\\[\n14\\times30=12(12+DC)\n\\]\n\n\\[\n420=144+12DC\n\\]\n\n\\[\n276=12DC\n\\]\n\n\\[\nDC=23\n\\]"
       }
     ],
@@ -13654,19 +13654,19 @@ window.SOLUTION_DATA = {
         "body": "The angle between the tangent \\(CN\\) and the chord \\(CB\\) is \\(78^\\circ\\)."
       },
       {
-        "title": "By the alternate segment theorem,",
+        "title": "Use trigonometry",
         "body": "By the alternate segment theorem,\n\n\\[\n\\angle BAC=78^\\circ\n\\]"
       },
       {
-        "title": "Also,",
+        "title": "Calculate value",
         "body": "Also,\n\n\\[\nAB=CB\n\\]"
       },
       {
-        "title": "so triangle is isosceles and",
+        "title": "Use trigonometry",
         "body": "so triangle \\(ABC\\) is isosceles and the base angles are equal:\n\n\\[\n\\angle BAC=\\angle ACB=78^\\circ\n\\]"
       },
       {
-        "title": "Using the angle sum of",
+        "title": "Use trigonometry",
         "body": "Using the angle sum of a triangle:\n\n\\[\n\\angle ABC=180^\\circ-78^\\circ-78^\\circ\n\\]\n\n\\[\n\\angle ABC=24^\\circ\n\\]"
       }
     ],
@@ -13679,7 +13679,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Area & Perimeter. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate area",
         "body": "\\[\n\\text{area}=\\frac12(170+330)\\times 240=60000\\text{ m}^2\n\\]\n\n\\[\n60000\\text{ m}^2=6\\text{ hectares}\n\\]\n\n\\[\n\\text{price per hectare}=49650\\div 6=8275\n\\]"
       }
     ],
@@ -13692,7 +13692,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Volume & Surface Area.",
     "steps": [
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(DBC\\),\n\n\\[\nDC=50\\cos32^\\circ=42.402\\ldots,\\qquad BC=50\\sin32^\\circ=26.496\\ldots\n\\]"
       },
       {
@@ -13746,11 +13746,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Coordinate Geometry to 3D Pythagoras & Trigonometry.",
     "steps": [
       {
-        "title": "For part (a), is the",
+        "title": "Find the gradient",
         "body": "For part (a), \\(BE\\) is the space diagonal using the three perpendicular lengths:\n\n\\[\nAB=15,\\qquad BC=4,\\qquad CF=9\n\\]\n\n\\[\nBE^2=15^2+4^2+9^2\n\\]\n\n\\[\nBE^2=225+16+81=322\n\\]\n\n\\[\nBE=\\sqrt{322}=17.9\\text{ cm}\n\\]"
       },
       {
-        "title": "For part (b), the projection",
+        "title": "Use trigonometry",
         "body": "For part (b), the projection of \\(PU\\) onto the plane \\(PQRS\\) is \\(PR\\).\n\n\\[\nPR=42\n\\]"
       },
       {
@@ -13758,11 +13758,11 @@ window.SOLUTION_DATA = {
         "body": "The angle between \\(PU\\) and the plane is \\(30^\\circ\\), so\n\n\\[\n\\tan 30^\\circ=\\frac{RU}{PR}\n\\]\n\n\\[\nRU=42\\tan30^\\circ\n\\]"
       },
       {
-        "title": "Since is the midpoint of",
+        "title": "Find the midpoint",
         "body": "Since \\(M\\) is the midpoint of \\(PR\\),\n\n\\[\nMR=21\n\\]"
       },
       {
-        "title": "In right triangle ,",
+        "title": "Use trigonometry",
         "body": "In right triangle \\(MRU\\),\n\n\\[\n\\tan \\angle UMR=\\frac{RU}{MR}\n\\]\n\n\\[\n\\tan \\angle UMR=\\frac{42\\tan30^\\circ}{21}\n\\]\n\n\\[\n\\tan \\angle UMR=2\\tan30^\\circ\n\\]\n\n\\[\n\\angle UMR=49.1^\\circ\n\\]"
       }
     ],
@@ -13783,11 +13783,11 @@ window.SOLUTION_DATA = {
         "body": "Total for Monday to Sunday:\n\n\\[\n7 \\times 127=889\n\\]"
       },
       {
-        "title": "So the total for Saturday",
+        "title": "Calculate value",
         "body": "So the total for Saturday and Sunday is\n\n\\[\n889-520=369\n\\]"
       },
       {
-        "title": "Saturday was , so",
+        "title": "Calculate value",
         "body": "Saturday was \\(132\\text{ km}\\), so\n\n\\[\n369-132=237\n\\]"
       }
     ],
@@ -13815,29 +13815,29 @@ window.SOLUTION_DATA = {
     "finalAnswer": "Akari's IQR is \\(6\\), and Akari is more consistent."
   },
   "all::Jun2023_P2HR__Q15__p16-16__m03__Probability-Toolkit": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate probability",
         "body": "\\[\nP(\\text{three heads})=\\frac{27}{64}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate probability",
         "body": "So\n\n\\[\nP(H)^3=\\frac{27}{64}\n\\]\n\n\\[\nP(H)=\\frac{3}{4}\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Calculate probability",
         "body": "Therefore\n\n\\[\nP(T)=\\frac{1}{4}\n\\]\n\n\\[\nP(\\text{three tails})=\\left(\\frac14\\right)^3=\\frac{1}{64}\n\\]"
       }
     ],
     "finalAnswer": "\\(\\frac{1}{64}\\)."
   },
   "all::Jun2023_P2HR__Q19__p19-19__m04__Probability-Toolkit": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
@@ -13846,7 +13846,7 @@ window.SOLUTION_DATA = {
         "body": "There are \\(30\\) adults.\n\n\\[\nn(B)=19,\\quad n(D)=15,\\quad n(\\text{neither})=4\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate probability",
         "body": "So\n\n\\[\nn(B\\cup D)=30-4=26\n\\]\n\n\\[\nn(B\\cap D)=19+15-26=8\n\\]"
       },
       {
@@ -13867,15 +13867,15 @@ window.SOLUTION_DATA = {
         "body": "The first three terms are\n\n\\[\n8p,\\quad 7p-3,\\quad 4p+2\n\\]"
       },
       {
-        "title": "For an arithmetic sequence, consecutive",
+        "title": "Find the nth term",
         "body": "For an arithmetic sequence, consecutive differences are equal:\n\n\\[\n(7p-3)-8p=(4p+2)-(7p-3)\n\\]\n\n\\[\n-p-3=-3p+5\n\\]\n\n\\[\n2p=8\n\\]\n\n\\[\np=4\n\\]"
       },
       {
-        "title": "So the first term is",
+        "title": "Find the nth term",
         "body": "So the first term is\n\n\\[\n8p=32\n\\]"
       },
       {
-        "title": "and the common difference is",
+        "title": "Find common difference",
         "body": "and the common difference is\n\n\\[\n(7p-3)-8p=25-32=-7\n\\]"
       },
       {
@@ -13900,11 +13900,11 @@ window.SOLUTION_DATA = {
         "body": "The line is\n\n\\[\ny-2x=1\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\ny=2x+1\n\\]"
       },
       {
-        "title": "Substitute into",
+        "title": "Calculate value",
         "body": "Substitute into\n\n\\[\ny^2+xy=7\n\\]\n\n\\[\n(2x+1)^2+x(2x+1)=7\n\\]\n\n\\[\n4x^2+4x+1+2x^2+x=7\n\\]\n\n\\[\n6x^2+5x-6=0\n\\]"
       },
       {
@@ -13912,11 +13912,11 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\n\\[\n(3x-2)(2x+3)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\nx=\\frac23 \\quad \\text{or} \\quad x=-\\frac32\n\\]"
       },
       {
-        "title": "Using",
+        "title": "Evaluate fraction",
         "body": "Using \\(y=2x+1\\):\n\n\\[\nx=\\frac23 \\Rightarrow y=\\frac73\n\\]\n\n\\[\nx=-\\frac32 \\Rightarrow y=-2\n\\]"
       }
     ],
@@ -13933,7 +13933,7 @@ window.SOLUTION_DATA = {
         "body": "The perpendicular bisector is\n\n\\[\ny-2x=7\n\\]"
       },
       {
-        "title": "so",
+        "title": "Calculate value",
         "body": "so\n\n\\[\ny=2x+7\n\\]"
       },
       {
@@ -13941,7 +13941,7 @@ window.SOLUTION_DATA = {
         "body": "The gradient of the perpendicular bisector is \\(2\\), so the gradient of \\(AB\\) is\n\n\\[\n-\\frac{1}{2}\n\\]"
       },
       {
-        "title": "Since and ,",
+        "title": "Evaluate fraction",
         "body": "Since \\(A=(j,7)\\) and \\(B=(6,k)\\),\n\n\\[\n\\frac{k-7}{6-j}=-\\frac{1}{2}\n\\]\n\n\\[\n2(k-7)=-(6-j)\n\\]\n\n\\[\nj=2k-8\n\\]"
       },
       {
@@ -13953,15 +13953,15 @@ window.SOLUTION_DATA = {
         "body": "Substitute \\(j=2k-8\\):\n\n\\[\n\\left(k-1,\\frac{k+7}{2}\\right)\n\\]"
       },
       {
-        "title": "The midpoint lies on ,",
+        "title": "Find the midpoint",
         "body": "The midpoint lies on \\(y=2x+7\\), so\n\n\\[\n\\frac{k+7}{2}=2(k-1)+7\n\\]\n\n\\[\nk+7=4k+10\n\\]\n\n\\[\nk=-1\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\n\\[\nj=2(-1)-8=-10\n\\]"
       },
       {
-        "title": "Therefore the midpoint is",
+        "title": "Find the midpoint",
         "body": "Therefore the midpoint is\n\n\\[\n\\left(\\frac{-10+6}{2},\\frac{7+(-1)}{2}\\right)=(-2,3)\n\\]"
       }
     ],
@@ -13978,11 +13978,11 @@ window.SOLUTION_DATA = {
         "body": "The curve is\n\n\\[\ny=a\\cos bx^\\circ+c\n\\]"
       },
       {
-        "title": "From the graph, the maximum",
+        "title": "Use trigonometry",
         "body": "From the graph, the maximum value is\n\n\\[\n3\n\\]"
       },
       {
-        "title": "and the minimum value is",
+        "title": "Use trigonometry",
         "body": "and the minimum value is\n\n\\[\n-1\n\\]"
       },
       {
@@ -13998,11 +13998,11 @@ window.SOLUTION_DATA = {
         "body": "The distance between consecutive maxima is \\(120^\\circ\\), so the period is\n\n\\[\n120^\\circ\n\\]"
       },
       {
-        "title": "For , the period is",
+        "title": "Use trigonometry",
         "body": "For \\(y=a\\cos bx^\\circ+c\\), the period is\n\n\\[\n\\frac{360^\\circ}{b}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\n\\frac{360}{b}=120\n\\]\n\n\\[\nb=3\n\\]"
       }
     ],
@@ -14019,19 +14019,19 @@ window.SOLUTION_DATA = {
         "body": "The angle between the tangent \\(CN\\) and the chord \\(CB\\) is \\(78^\\circ\\)."
       },
       {
-        "title": "By the alternate segment theorem,",
+        "title": "Use trigonometry",
         "body": "By the alternate segment theorem,\n\n\\[\n\\angle BAC=78^\\circ\n\\]"
       },
       {
-        "title": "Also,",
+        "title": "Calculate value",
         "body": "Also,\n\n\\[\nAB=CB\n\\]"
       },
       {
-        "title": "so triangle is isosceles and",
+        "title": "Use trigonometry",
         "body": "so triangle \\(ABC\\) is isosceles and the base angles are equal:\n\n\\[\n\\angle BAC=\\angle ACB=78^\\circ\n\\]"
       },
       {
-        "title": "Using the angle sum of",
+        "title": "Use trigonometry",
         "body": "Using the angle sum of a triangle:\n\n\\[\n\\angle ABC=180^\\circ-78^\\circ-78^\\circ\n\\]\n\n\\[\n\\angle ABC=24^\\circ\n\\]"
       }
     ],
@@ -14077,11 +14077,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Coordinate Geometry to 3D Pythagoras & Trigonometry.",
     "steps": [
       {
-        "title": "For part (a), is the",
+        "title": "Find the gradient",
         "body": "For part (a), \\(BE\\) is the space diagonal using the three perpendicular lengths:\n\n\\[\nAB=15,\\qquad BC=4,\\qquad CF=9\n\\]\n\n\\[\nBE^2=15^2+4^2+9^2\n\\]\n\n\\[\nBE^2=225+16+81=322\n\\]\n\n\\[\nBE=\\sqrt{322}=17.9\\text{ cm}\n\\]"
       },
       {
-        "title": "For part (b), the projection",
+        "title": "Use trigonometry",
         "body": "For part (b), the projection of \\(PU\\) onto the plane \\(PQRS\\) is \\(PR\\).\n\n\\[\nPR=42\n\\]"
       },
       {
@@ -14089,11 +14089,11 @@ window.SOLUTION_DATA = {
         "body": "The angle between \\(PU\\) and the plane is \\(30^\\circ\\), so\n\n\\[\n\\tan 30^\\circ=\\frac{RU}{PR}\n\\]\n\n\\[\nRU=42\\tan30^\\circ\n\\]"
       },
       {
-        "title": "Since is the midpoint of",
+        "title": "Find the midpoint",
         "body": "Since \\(M\\) is the midpoint of \\(PR\\),\n\n\\[\nMR=21\n\\]"
       },
       {
-        "title": "In right triangle ,",
+        "title": "Use trigonometry",
         "body": "In right triangle \\(MRU\\),\n\n\\[\n\\tan \\angle UMR=\\frac{RU}{MR}\n\\]\n\n\\[\n\\tan \\angle UMR=\\frac{42\\tan30^\\circ}{21}\n\\]\n\n\\[\n\\tan \\angle UMR=2\\tan30^\\circ\n\\]\n\n\\[\n\\angle UMR=49.1^\\circ\n\\]"
       }
     ],
@@ -14106,11 +14106,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Fractions. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify fraction",
         "body": "\\[\n2\\frac47=\\frac{18}{7}\n\\]\n\n\\[\n3\\frac19=\\frac{28}{9}\n\\]"
       },
       {
-        "title": "Now multiply",
+        "title": "Simplify fraction",
         "body": "Now multiply:\n\n\\[\n\\frac{18}{7}\\times \\frac{28}{9}\n\\]"
       },
       {
@@ -14156,11 +14156,11 @@ window.SOLUTION_DATA = {
         "body": "The multiplier for \\(2.4\\%\\) compound interest is\n\n\\[\n1.024\n\\]"
       },
       {
-        "title": "After 4 years,",
+        "title": "Use compound interest",
         "body": "After 4 years,\n\n\\[\n4500(1.024)^4=4947.8023\\ldots\n\\]"
       },
       {
-        "title": "Correct to the nearest koruna,",
+        "title": "Use compound interest",
         "body": "Correct to the nearest koruna,\n\n\\[\n4947.8023\\ldots\\approx 4948\n\\]"
       }
     ],
@@ -14173,11 +14173,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Estimate the value",
         "body": "\\[\nG=\\frac{c}{2f-3h}\n\\]"
       },
       {
-        "title": "For the lower bound, use",
+        "title": "Find lower bound",
         "body": "For the lower bound, use the lower bound of \\(c\\) and make the denominator as large as possible.\n\n\\[\nc\\ge 7.5\n\\]\n\n\\[\nf<6.625,\\quad h\\ge 1.15\n\\]\n\n\\[\n(2f-3h)_{\\text{upper}}=2(6.625)-3(1.15)=9.8\n\\]\n\n\\[\nG_{\\text{lower}}=\\frac{7.5}{9.8}=0.765306\\ldots\n\\]"
       }
     ],
@@ -14190,7 +14190,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Direct and Inverse Proportion. The tag is correct.",
     "steps": [
       {
-        "title": "is directly proportional to ,",
+        "title": "Find inverse function",
         "body": "\\(Q\\) is directly proportional to \\(\\sqrt{d}\\), so\n\n\\[\nQ=k\\sqrt{d}\n\\]"
       },
       {
@@ -14198,7 +14198,7 @@ window.SOLUTION_DATA = {
         "body": "Use \\(Q=4.5\\) when \\(d=324\\):\n\n\\[\n4.5=k\\sqrt{324}\n\\]\n\n\\[\n4.5=18k\n\\]\n\n\\[\nk=0.25\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Find inverse function",
         "body": "Therefore\n\n\\[\nQ=\\frac{1}{4}\\sqrt{d}\n\\]"
       }
     ],
@@ -14211,7 +14211,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic Roots and Indices. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\n\\frac{30\\times 25^{2x+7}}{\\sqrt{180}\\times (\\sqrt5)^{4x+9}}\n\\]"
       },
       {
@@ -14219,11 +14219,11 @@ window.SOLUTION_DATA = {
         "body": "Simplify the number part:\n\n\\[\n\\sqrt{180}=6\\sqrt5\n\\]\n\n\\[\n\\frac{30}{6\\sqrt5}=\\frac{5}{\\sqrt5}=\\sqrt5=5^{1/2}\n\\]"
       },
       {
-        "title": "Now write the powers with",
+        "title": "Simplify surd",
         "body": "Now write the powers with base 5:\n\n\\[\n25^{2x+7}=(5^2)^{2x+7}=5^{4x+14}\n\\]\n\n\\[\n(\\sqrt5)^{4x+9}=5^{(4x+9)/2}=5^{2x+9/2}\n\\]"
       },
       {
-        "title": "So the full expression is",
+        "title": "Use index laws",
         "body": "So the full expression is\n\n\\[\n5^{1/2+4x+14-(2x+9/2)}\n\\]\n\n\\[\n=5^{2x+10}\n\\]"
       }
     ],
@@ -14236,11 +14236,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Factorising. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Factorise expression",
         "body": "\\[\nx^2+9x-22=(x+11)(x-2)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Factorise expression",
         "body": "So\n\\[\n(x+11)(x-2)=0\n\\]"
       }
     ],
@@ -14253,19 +14253,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Direct & Inverse Proportion to Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify fraction",
         "body": "\\[\nk=x-y,\\quad x=\\frac{1}{4y}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify fraction",
         "body": "So\n\n\\[\nk=\\frac{1}{4y}-y=\\frac{1-4y^2}{4y}\n\\]"
       },
       {
-        "title": "Also",
+        "title": "Simplify fraction",
         "body": "Also\n\n\\[\nx+2=\\frac{1}{4y}+2=\\frac{1+8y}{4y}\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Simplify fraction",
         "body": "Therefore\n\n\\[\n\\frac{5k}{x+2}\n=\\frac{5\\left(\\frac{1-4y^2}{4y}\\right)}{\\frac{1+8y}{4y}}\n\\]"
       },
       {
@@ -14290,7 +14290,7 @@ window.SOLUTION_DATA = {
         "body": "(b)\n\\[\n3y^2+4y-32=(3y-8)(y+4)\n\\]"
       },
       {
-        "title": "The critical values are and",
+        "title": "Solve quadratic equation",
         "body": "The critical values are \\(y=-4\\) and \\(y=\\frac83\\). Since the quadratic is positive outside the roots,\n\\[\ny<-4 \\quad \\text{or} \\quad y>\\frac83\n\\]"
       }
     ],
@@ -14307,15 +14307,15 @@ window.SOLUTION_DATA = {
         "body": "(a)\n\\[\n3y(2y+5)(y+7)\n\\]"
       },
       {
-        "title": "First expand the two brackets",
+        "title": "Expand brackets",
         "body": "First expand the two brackets:\n\\[\n(2y+5)(y+7)=2y^2+14y+5y+35=2y^2+19y+35\n\\]"
       },
       {
-        "title": "Now multiply by",
+        "title": "Multiply by",
         "body": "Now multiply by \\(3y\\):\n\\[\n3y(2y^2+19y+35)=6y^3+57y^2+105y\n\\]"
       },
       {
-        "title": "So , , and",
+        "title": "Calculate value",
         "body": "So \\(a=6\\), \\(b=57\\), and \\(c=105\\)."
       },
       {
@@ -14336,7 +14336,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Simultaneous equations. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve simultaneous equations",
         "body": "\\[\n6x+4y=1\n\\]\n\n\\[\n3x+5y=8\n\\]"
       },
       {
@@ -14348,7 +14348,7 @@ window.SOLUTION_DATA = {
         "body": "Subtract the first equation:\n\\[\n6y=15\n\\]\n\n\\[\ny=\\frac52\n\\]"
       },
       {
-        "title": "Substitute into",
+        "title": "Solve simultaneous equations",
         "body": "Substitute into \\(3x+5y=8\\):\n\\[\n3x+5\\left(\\frac52\\right)=8\n\\]\n\n\\[\n3x+\\frac{25}{2}=8\n\\]\n\n\\[\n3x=-\\frac92\n\\]\n\n\\[\nx=-\\frac32\n\\]"
       }
     ],
@@ -14365,7 +14365,7 @@ window.SOLUTION_DATA = {
         "body": "The line is\n\n\\[\nx+y=5\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\ny=5-x\n\\]"
       },
       {
@@ -14381,11 +14381,11 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\n\\[\n(x-9)(x+3)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\nx=9 \\quad \\text{or} \\quad x=-3\n\\]"
       },
       {
-        "title": "Using",
+        "title": "Calculate value",
         "body": "Using \\(y=5-x\\):\n\n\\[\nx=9 \\Rightarrow y=-4\n\\]\n\n\\[\nx=-3 \\Rightarrow y=8\n\\]"
       }
     ],
@@ -14402,7 +14402,7 @@ window.SOLUTION_DATA = {
         "body": "The line is\n\\[\n5y+2x=7\n\\]\n\n\\[\n5y=-2x+7\n\\]\n\n\\[\ny=-\\frac25x+\\frac75\n\\]"
       },
       {
-        "title": "So the gradient of line",
+        "title": "Find the gradient",
         "body": "So the gradient of line P is \\(-\\frac25\\)."
       },
       {
@@ -14419,7 +14419,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Coordinate Geometry to Graphs of Functions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use trigonometry",
         "body": "\\[\ny=2\\sin(x+60)^\\circ\n\\]"
       },
       {
@@ -14435,7 +14435,7 @@ window.SOLUTION_DATA = {
         "body": "This happens when\n\n\\[\nx+60=90\n\\]\n\n\\[\nx=30\n\\]"
       },
       {
-        "title": "So",
+        "title": "Read the graph",
         "body": "So\n\n\\[\nA=(30,2)\n\\]"
       },
       {
@@ -14443,11 +14443,11 @@ window.SOLUTION_DATA = {
         "body": "Point \\(B\\) is the positive \\(x\\)-intercept after the minimum.\n\n\\[\n2\\sin(x+60)^\\circ=0\n\\]\n\n\\[\n\\sin(x+60)^\\circ=0\n\\]"
       },
       {
-        "title": "For this point,",
+        "title": "Read the graph",
         "body": "For this point,\n\n\\[\nx+60=360\n\\]\n\n\\[\nx=300\n\\]"
       },
       {
-        "title": "So",
+        "title": "Read the graph",
         "body": "So\n\n\\[\nB=(300,0)\n\\]"
       }
     ],
@@ -14477,7 +14477,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Standard & Compound Units.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\n9\\text{ h }36\\text{ min}=9+\\frac{36}{60}=9.6\\text{ hours}\n\\]\n\n\\[\n\\text{distance}=820\\times 9.6=7872\n\\]"
       }
     ],
@@ -14490,7 +14490,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This is converting metres per second to kilometres per hour algebraically.",
     "steps": [
       {
-        "title": "To convert m/s to km/h,",
+        "title": "Convert m/s to km/h multiply",
         "body": "To convert m/s to km/h, multiply by \\(3.6\\).\n\n\\[\nw\\text{ m/s}=3.6w\\text{ km/h}\n\\]\n\n\\[\n3.6w=\\frac{18w}{5}\n\\]"
       }
     ],
@@ -14520,11 +14520,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved to Circles, Arcs & Sectors.",
     "steps": [
       {
-        "title": "Let the side length of",
+        "title": "Let the side length",
         "body": "Let the side length of the square be \\(s\\)."
       },
       {
-        "title": "The circle is inscribed in",
+        "title": "Square",
         "body": "The circle is inscribed in the square, so its radius is\n\n\\[\n\\frac{s}{2}\n\\]"
       },
       {
@@ -14545,7 +14545,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Right-Angled Triangles - Pythagoras & Trigonometry.",
     "steps": [
       {
-        "title": "The hypotenuse is , and",
+        "title": "Use trigonometry",
         "body": "The hypotenuse is \\(6.5\\text{ cm}\\), and \\(x\\) is opposite the \\(34^\\circ\\) angle.\n\n\\[\n\\sin 34^\\circ=\\frac{x}{6.5}\n\\]\n\n\\[\nx=6.5\\sin 34^\\circ=3.634\\ldots\n\\]"
       }
     ],
@@ -14558,27 +14558,27 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Linear Graphs to Vectors.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Read the graph",
         "body": "\\[\n\\vec{OA}=4\\mathbf a,\\qquad \\vec{OB}=3\\mathbf b,\\qquad \\vec{BC}=2\\mathbf a+\\mathbf b\n\\]"
       },
       {
-        "title": "So",
+        "title": "Read the graph",
         "body": "So\n\n\\[\n\\vec{OC}=\\vec{OB}+\\vec{BC}\n\\]\n\n\\[\n\\vec{OC}=2\\mathbf a+4\\mathbf b\n\\]"
       },
       {
-        "title": "For part (a),",
+        "title": "Read the graph",
         "body": "For part (a),\n\n\\[\n\\vec{AC}=\\vec{OC}-\\vec{OA}\n\\]\n\n\\[\n\\vec{AC}=(2\\mathbf a+4\\mathbf b)-4\\mathbf a\n\\]\n\n\\[\n\\vec{AC}=4\\mathbf b-2\\mathbf a\n\\]"
       },
       {
-        "title": "For part (b), , so",
+        "title": "Read the graph",
         "body": "For part (b), \\(AP:PC=3:2\\), so\n\n\\[\n\\vec{OP}=\\vec{OA}+\\frac35\\vec{AC}\n\\]\n\n\\[\n\\vec{OP}=4\\mathbf a+\\frac35(4\\mathbf b-2\\mathbf a)\n\\]\n\n\\[\n\\vec{OP}=\\frac{14}{5}\\mathbf a+\\frac{12}{5}\\mathbf b\n\\]"
       },
       {
-        "title": "Since are collinear,",
+        "title": "Read the graph",
         "body": "Since \\(O,P,Q\\) are collinear,\n\n\\[\n\\vec{OQ}=t\\vec{OP}\n\\]\n\n\\[\n\\vec{OQ}=t\\left(\\frac{14}{5}\\mathbf a+\\frac{12}{5}\\mathbf b\\right)\n\\]"
       },
       {
-        "title": "Since are collinear,",
+        "title": "Read the graph",
         "body": "Since \\(B,C,Q\\) are collinear,\n\n\\[\n\\vec{OQ}=\\vec{OB}+s\\vec{BC}\n\\]\n\n\\[\n\\vec{OQ}=3\\mathbf b+s(2\\mathbf a+\\mathbf b)\n\\]\n\n\\[\n\\vec{OQ}=2s\\mathbf a+(3+s)\\mathbf b\n\\]"
       },
       {
@@ -14586,7 +14586,7 @@ window.SOLUTION_DATA = {
         "body": "Equate coefficients:\n\n\\[\n\\frac{14}{5}t=2s\n\\]\n\n\\[\n\\frac{12}{5}t=3+s\n\\]"
       },
       {
-        "title": "From the first equation,",
+        "title": "Solve equation",
         "body": "From the first equation,\n\n\\[\ns=\\frac75t\n\\]"
       },
       {
@@ -14594,7 +14594,7 @@ window.SOLUTION_DATA = {
         "body": "Substitute into the second:\n\n\\[\n\\frac{12}{5}t=3+\\frac75t\n\\]\n\n\\[\nt=3\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Read the graph",
         "body": "Therefore\n\n\\[\n\\vec{OQ}=3\\vec{OP}\n\\]\n\n\\[\n\\vec{OQ}=\\frac{42}{5}\\mathbf a+\\frac{36}{5}\\mathbf b\n\\]"
       }
     ],
@@ -14611,7 +14611,7 @@ window.SOLUTION_DATA = {
         "body": "The median is \\(10\\):\n\n\\[\n\\frac{8+j}{2}=10\n\\]\n\n\\[\nj=12\n\\]"
       },
       {
-        "title": "The mode is , so",
+        "title": "Calculate statistic",
         "body": "The mode is \\(18\\), so\n\n\\[\nk=18\n\\]"
       },
       {
@@ -14647,8 +14647,8 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(12403\\)."
   },
   "all::Jun2024_P2H__Q13__p12-13__m07__Cumulative-Frequency-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
     "steps": [
@@ -14661,23 +14661,23 @@ window.SOLUTION_DATA = {
         "body": "Plot these points and join them with a smooth curve:\n\n\\[\n(0,0),(10,7),(20,24),(30,42),(40,56),(50,66),(60,70)\n\\]"
       },
       {
-        "title": "For teachers,",
+        "title": "Use cumulative frequency",
         "body": "For \\(70\\) teachers,\n\n\\[\nQ_1=17.5,\\qquad Q_3=52.5\n\\]"
       },
       {
-        "title": "From the graph,",
+        "title": "Use cumulative frequency",
         "body": "From the graph,\n\n\\[\nQ_1 \\approx 16.2,\\qquad Q_3 \\approx 37.5\n\\]\n\n\\[\n\\text{IQR}\\approx 37.5-16.2=21.3\n\\]"
       },
       {
-        "title": "At km, the cumulative frequency",
+        "title": "Use cumulative frequency",
         "body": "At \\(46\\) km, the cumulative frequency is about \\(62\\).\n\n\\[\n70-62=8\n\\]"
       }
     ],
     "finalAnswer": "IQR about \\(21\\) km, and about \\(8\\) teachers."
   },
   "all::Jun2024_P2H__Q16__p16-17__m07__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
@@ -14699,11 +14699,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\n\\frac{30\\times 25^{2x+7}}{\\sqrt{180}\\times (\\sqrt{5})^{4x+9}}\n\\]\n\n\\[\n\\frac{30}{\\sqrt{180}}=\\frac{30}{6\\sqrt{5}}=\\sqrt{5}=5^{1/2}\n\\]\n\n\\[\n25^{2x+7}=(5^2)^{2x+7}=5^{4x+14}\n\\]\n\n\\[\n(\\sqrt{5})^{4x+9}=5^{2x+\\frac92}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\n5^{1/2}\\times 5^{4x+14}\\div 5^{2x+\\frac92}\n=5^{\\frac12+4x+14-2x-\\frac92}\n\\]\n\n\\[\n=5^{2x+10}\n\\]"
       }
     ],
@@ -14716,19 +14716,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Direct & Inverse Proportion to Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify fraction",
         "body": "\\[\nk=x-y,\\quad x=\\frac{1}{4y}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify fraction",
         "body": "So\n\n\\[\nk=\\frac{1}{4y}-y=\\frac{1-4y^2}{4y}\n\\]"
       },
       {
-        "title": "Also",
+        "title": "Simplify fraction",
         "body": "Also\n\n\\[\nx+2=\\frac{1}{4y}+2=\\frac{1+8y}{4y}\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Simplify fraction",
         "body": "Therefore\n\n\\[\n\\frac{5k}{x+2}\n=\\frac{5\\left(\\frac{1-4y^2}{4y}\\right)}{\\frac{1+8y}{4y}}\n\\]"
       },
       {
@@ -14749,7 +14749,7 @@ window.SOLUTION_DATA = {
         "body": "The line is\n\n\\[\nx+y=5\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\ny=5-x\n\\]"
       },
       {
@@ -14765,11 +14765,11 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\n\\[\n(x-9)(x+3)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\nx=9 \\quad \\text{or} \\quad x=-3\n\\]"
       },
       {
-        "title": "Using",
+        "title": "Calculate value",
         "body": "Using \\(y=5-x\\):\n\n\\[\nx=9 \\Rightarrow y=-4\n\\]\n\n\\[\nx=-3 \\Rightarrow y=8\n\\]"
       }
     ],
@@ -14782,7 +14782,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Coordinate Geometry to Graphs of Functions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use trigonometry",
         "body": "\\[\ny=2\\sin(x+60)^\\circ\n\\]"
       },
       {
@@ -14798,7 +14798,7 @@ window.SOLUTION_DATA = {
         "body": "This happens when\n\n\\[\nx+60=90\n\\]\n\n\\[\nx=30\n\\]"
       },
       {
-        "title": "So",
+        "title": "Read the graph",
         "body": "So\n\n\\[\nA=(30,2)\n\\]"
       },
       {
@@ -14806,11 +14806,11 @@ window.SOLUTION_DATA = {
         "body": "Point \\(B\\) is the positive \\(x\\)-intercept after the minimum.\n\n\\[\n2\\sin(x+60)^\\circ=0\n\\]\n\n\\[\n\\sin(x+60)^\\circ=0\n\\]"
       },
       {
-        "title": "For this point,",
+        "title": "Read the graph",
         "body": "For this point,\n\n\\[\nx+60=360\n\\]\n\n\\[\nx=300\n\\]"
       },
       {
-        "title": "So",
+        "title": "Read the graph",
         "body": "So\n\n\\[\nB=(300,0)\n\\]"
       }
     ],
@@ -14823,11 +14823,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved to Circles, Arcs & Sectors.",
     "steps": [
       {
-        "title": "Let the side length of",
+        "title": "Let the side length",
         "body": "Let the side length of the square be \\(s\\)."
       },
       {
-        "title": "The circle is inscribed in",
+        "title": "Square",
         "body": "The circle is inscribed in the square, so its radius is\n\n\\[\n\\frac{s}{2}\n\\]"
       },
       {
@@ -14848,27 +14848,27 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Linear Graphs to Vectors.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Read the graph",
         "body": "\\[\n\\vec{OA}=4\\mathbf a,\\qquad \\vec{OB}=3\\mathbf b,\\qquad \\vec{BC}=2\\mathbf a+\\mathbf b\n\\]"
       },
       {
-        "title": "So",
+        "title": "Read the graph",
         "body": "So\n\n\\[\n\\vec{OC}=\\vec{OB}+\\vec{BC}\n\\]\n\n\\[\n\\vec{OC}=2\\mathbf a+4\\mathbf b\n\\]"
       },
       {
-        "title": "For part (a),",
+        "title": "Read the graph",
         "body": "For part (a),\n\n\\[\n\\vec{AC}=\\vec{OC}-\\vec{OA}\n\\]\n\n\\[\n\\vec{AC}=(2\\mathbf a+4\\mathbf b)-4\\mathbf a\n\\]\n\n\\[\n\\vec{AC}=4\\mathbf b-2\\mathbf a\n\\]"
       },
       {
-        "title": "For part (b), , so",
+        "title": "Read the graph",
         "body": "For part (b), \\(AP:PC=3:2\\), so\n\n\\[\n\\vec{OP}=\\vec{OA}+\\frac35\\vec{AC}\n\\]\n\n\\[\n\\vec{OP}=4\\mathbf a+\\frac35(4\\mathbf b-2\\mathbf a)\n\\]\n\n\\[\n\\vec{OP}=\\frac{14}{5}\\mathbf a+\\frac{12}{5}\\mathbf b\n\\]"
       },
       {
-        "title": "Since are collinear,",
+        "title": "Read the graph",
         "body": "Since \\(O,P,Q\\) are collinear,\n\n\\[\n\\vec{OQ}=t\\vec{OP}\n\\]\n\n\\[\n\\vec{OQ}=t\\left(\\frac{14}{5}\\mathbf a+\\frac{12}{5}\\mathbf b\\right)\n\\]"
       },
       {
-        "title": "Since are collinear,",
+        "title": "Read the graph",
         "body": "Since \\(B,C,Q\\) are collinear,\n\n\\[\n\\vec{OQ}=\\vec{OB}+s\\vec{BC}\n\\]\n\n\\[\n\\vec{OQ}=3\\mathbf b+s(2\\mathbf a+\\mathbf b)\n\\]\n\n\\[\n\\vec{OQ}=2s\\mathbf a+(3+s)\\mathbf b\n\\]"
       },
       {
@@ -14876,7 +14876,7 @@ window.SOLUTION_DATA = {
         "body": "Equate coefficients:\n\n\\[\n\\frac{14}{5}t=2s\n\\]\n\n\\[\n\\frac{12}{5}t=3+s\n\\]"
       },
       {
-        "title": "From the first equation,",
+        "title": "Solve equation",
         "body": "From the first equation,\n\n\\[\ns=\\frac75t\n\\]"
       },
       {
@@ -14884,7 +14884,7 @@ window.SOLUTION_DATA = {
         "body": "Substitute into the second:\n\n\\[\n\\frac{12}{5}t=3+\\frac75t\n\\]\n\n\\[\nt=3\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Read the graph",
         "body": "Therefore\n\n\\[\n\\vec{OQ}=3\\vec{OP}\n\\]\n\n\\[\n\\vec{OQ}=\\frac{42}{5}\\mathbf a+\\frac{36}{5}\\mathbf b\n\\]"
       }
     ],
@@ -14897,15 +14897,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Set notation and Venn diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\n\\mathcal{E}=\\{1,2,3,4,5,6,7,8,9,10\\}\n\\]\n\n\\[\nA=\\{1,2,3,6\\}\n\\]\n\n\\[\nB=\\{2,3,5,7\\}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\nA\\cup B=\\{1,2,3,5,6,7\\}\n\\]"
       },
       {
-        "title": "and",
+        "title": "Calculate value",
         "body": "and\n\n\\[\nA'=\\{4,5,7,8,9,10\\}\n\\]"
       },
       {
@@ -14913,7 +14913,7 @@ window.SOLUTION_DATA = {
         "body": "Harpreet is not correct because \\(2\\) and \\(3\\) are in both \\(A\\) and \\(B\\).\n\n\\[\nA\\cap B=\\{2,3\\}\n\\]"
       },
       {
-        "title": "For , it has members,",
+        "title": "Calculate value",
         "body": "For \\(C\\), it has \\(4\\) members, \\(n(A\\cap C)=2\\), \\(n(B\\cap C)=2\\), and no member is in both of those overlaps. So choose the two elements of \\(A\\) only and the two elements of \\(B\\) only:\n\n\\[\nC=\\{1,5,6,7\\}\n\\]"
       }
     ],
@@ -14926,7 +14926,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find the LCM",
         "body": "\\[\n1400=14\\times 100\n\\]\n\n\\[\n1400=(2\\times 7)(2^2\\times 5^2)\n\\]\n\n\\[\n1400=2^3\\times 5^2\\times 7\n\\]"
       }
     ],
@@ -14939,15 +14939,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Powers, roots and standard form. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Convert standard form",
         "body": "\\[\n6.04\\times 10^5=604000\n\\]\n\n\\[\n0.00007=7\\times 10^{-5}\n\\]"
       },
       {
-        "title": "For part (c), first simplify",
+        "title": "Convert standard form",
         "body": "For part (c), first simplify the denominator:\n\n\\[\n4\\times 10^5-2\\times 10^4=400000-20000=380000\n\\]\n\n\\[\n380000=3.8\\times 10^5\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Convert standard form",
         "body": "Then\n\n\\[\n\\frac{7.6\\times 10^{10}}{3.8\\times 10^5}\n=2\\times 10^5\n\\]"
       }
     ],
@@ -14977,11 +14977,11 @@ window.SOLUTION_DATA = {
         "body": "Distance is found using\n\n\\[\n\\text{distance}=\\text{speed}\\times \\text{time}\n\\]"
       },
       {
-        "title": "For the upper bound,",
+        "title": "Find upper bound",
         "body": "For the upper bound,\n\n\\[\n\\text{speed}<19.5,\\quad \\text{time}<1.55\n\\]\n\n\\[\n\\text{distance}_{\\text{upper}}=19.5\\times 1.55=30.225\n\\]"
       },
       {
-        "title": "Correct to 3 significant figures,",
+        "title": "Estimate the value",
         "body": "Correct to 3 significant figures,\n\n\\[\n30.225\\approx 30.2\n\\]"
       }
     ],
@@ -14994,7 +14994,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic Roots and Indices. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use index laws",
         "body": "\\[\n\\frac{3^{-2}\\times 3^5}{3^{10}}=3^n\n\\]"
       },
       {
@@ -15002,7 +15002,7 @@ window.SOLUTION_DATA = {
         "body": "Use index laws:\n\n\\[\n\\frac{3^{-2+5}}{3^{10}}=3^{3-10}=3^{-7}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use index laws",
         "body": "So\n\n\\[\nn=-7\n\\]"
       }
     ],
@@ -15015,7 +15015,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Sine/Cosine Rule to Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use trigonometry",
         "body": "\\[\n4-\\left[(3x-5)\\div\\frac{3x^2+x-10}{4x-1}\\right]\n\\]"
       },
       {
@@ -15023,7 +15023,7 @@ window.SOLUTION_DATA = {
         "body": "Factor the quadratic:\n\n\\[\n3x^2+x-10=(3x-5)(x+2)\n\\]"
       },
       {
-        "title": "So the expression inside the",
+        "title": "Use trigonometry",
         "body": "So the expression inside the square brackets is\n\n\\[\n(3x-5)\\div\\frac{(3x-5)(x+2)}{4x-1}\n\\]"
       },
       {
@@ -15035,7 +15035,7 @@ window.SOLUTION_DATA = {
         "body": "Cancel \\(3x-5\\):\n\n\\[\n\\frac{4x-1}{x+2}\n\\]"
       },
       {
-        "title": "Therefore the full expression is",
+        "title": "Use trigonometry",
         "body": "Therefore the full expression is\n\n\\[\n4-\\frac{4x-1}{x+2}\n\\]"
       },
       {
@@ -15056,7 +15056,7 @@ window.SOLUTION_DATA = {
         "body": "Let\n\\[\nx=0.\\dot3\\dot0\\dot6\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\\[\n1000x=306.\\dot3\\dot0\\dot6\n\\]"
       },
       {
@@ -15098,7 +15098,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Solving Quadratic Equations to Solving Inequalities.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve quadratic equation",
         "body": "\\[\n6x^2-7x-20>0\n\\]"
       },
       {
@@ -15110,7 +15110,7 @@ window.SOLUTION_DATA = {
         "body": "The critical values are\n\n\\[\nx=-\\frac43 \\quad \\text{and} \\quad x=\\frac52\n\\]"
       },
       {
-        "title": "Since the coefficient of is",
+        "title": "Solve quadratic equation",
         "body": "Since the coefficient of \\(x^2\\) is positive, the quadratic is greater than 0 outside the roots."
       }
     ],
@@ -15123,7 +15123,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nx^2+y^2=y+11\n\\]\n\n\\[\ny=3x-1\n\\]"
       },
       {
@@ -15131,7 +15131,7 @@ window.SOLUTION_DATA = {
         "body": "Substitute:\n\n\\[\nx^2+(3x-1)^2=3x-1+11\n\\]\n\n\\[\nx^2+9x^2-6x+1=3x+10\n\\]\n\n\\[\n10x^2-9x-9=0\n\\]\n\n\\[\n(5x+3)(2x-3)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\nx=-\\frac35 \\quad \\text{or} \\quad x=\\frac32\n\\]"
       },
       {
@@ -15148,7 +15148,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Functions. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\nf(x)=\\frac{k}{2x-4},\\qquad g(x)=3x+1\n\\]"
       },
       {
@@ -15160,11 +15160,11 @@ window.SOLUTION_DATA = {
         "body": "This means\n\\[\nf(g(k))=2\n\\]"
       },
       {
-        "title": "Now",
+        "title": "Calculate value",
         "body": "Now\n\\[\ng(k)=3k+1\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\\[\nf(g(k))=\\frac{k}{2(3k+1)-4}=\\frac{k}{6k-2}\n\\]\n\n\\[\n\\frac{k}{6k-2}=2\n\\]\n\n\\[\nk=12k-4\n\\]\n\n\\[\n11k=4\n\\]\n\n\\[\nk=\\frac{4}{11}\n\\]"
       }
     ],
@@ -15177,7 +15177,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nA=(-5,2),\\qquad B=(3,5)\n\\]"
       },
       {
@@ -15185,11 +15185,11 @@ window.SOLUTION_DATA = {
         "body": "The gradient of \\(AB\\) is\n\n\\[\n\\frac{5-2}{3-(-5)}=\\frac38\n\\]"
       },
       {
-        "title": "Since is a square, is",
+        "title": "Find the gradient",
         "body": "Since \\(ABCD\\) is a square, \\(BC\\) is perpendicular to \\(AB\\)."
       },
       {
-        "title": "So the gradient of is",
+        "title": "Find the gradient",
         "body": "So the gradient of \\(BC\\) is\n\n\\[\n-\\frac83\n\\]"
       },
       {
@@ -15231,7 +15231,7 @@ window.SOLUTION_DATA = {
         "body": "The minimum point of \\(y=f(x)\\) is \\((6,-3)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x)+10\n\\]"
       },
       {
@@ -15239,7 +15239,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 10 units up:\n\n\\[\n(6,-3)\\to(6,7)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(3x)\n\\]"
       },
       {
@@ -15281,7 +15281,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Circles, Arcs & Sectors.",
     "steps": [
       {
-        "title": "The square has area ,",
+        "title": "Calculate area",
         "body": "The square has area \\(81\\text{ cm}^2\\), so its side length is\n\n\\[\n\\sqrt{81}=9\\text{ cm}\n\\]"
       },
       {
@@ -15289,7 +15289,7 @@ window.SOLUTION_DATA = {
         "body": "Perimeter of the square:\n\n\\[\n4\\times 9=36\n\\]"
       },
       {
-        "title": "The circle has diameter ,",
+        "title": "Calculate value",
         "body": "The circle has diameter \\(9\\text{ cm}\\), so its circumference is\n\n\\[\n\\pi d=9\\pi\n\\]"
       },
       {
@@ -15323,31 +15323,31 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to congruence/similarity. The parallel line gives similar triangles.",
     "steps": [
       {
-        "title": "Since , triangles and are",
+        "title": "Find the gradient",
         "body": "Since \\(BE\\parallel CD\\), triangles \\(ABE\\) and \\(ACD\\) are similar."
       },
       {
-        "title": "Also so",
+        "title": "Find the gradient",
         "body": "Also\n\\[\nCD=1.5BE\n\\]\nso\n\\[\n\\frac{BE}{CD}=\\frac{1}{1.5}=\\frac23\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Find the gradient",
         "body": "Therefore\n\\[\n\\frac{AE}{AD}=\\frac23\n\\]"
       },
       {
-        "title": "Given ,",
+        "title": "Find the gradient",
         "body": "Given \\(AE=10\\),\n\\[\n\\frac{10}{AD}=\\frac23\n\\]\n\n\\[\nAD=15\n\\]"
       },
       {
-        "title": "So",
+        "title": "Find the gradient",
         "body": "So\n\\[\nED=AD-AE=15-10=5\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Find the gradient",
         "body": "For part (b),\n\\[\nAB=2x+5,\n\\qquad\nBC=3x-5\n\\]\n\n\\[\nAC=AB+BC=5x\n\\]"
       },
       {
-        "title": "Using similarity,",
+        "title": "Find the gradient",
         "body": "Using similarity,\n\\[\n\\frac{AB}{AC}=\\frac23\n\\]\n\n\\[\n\\frac{2x+5}{5x}=\\frac23\n\\]\n\n\\[\n3(2x+5)=10x\n\\]\n\n\\[\n6x+15=10x\n\\]\n\n\\[\nx=3.75\n\\]"
       }
     ],
@@ -15360,7 +15360,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "The hemisphere has radius ,",
+        "title": "The hemisphere has radius",
         "body": "The hemisphere has radius \\(x\\), so its height is \\(x\\)."
       },
       {
@@ -15376,11 +15376,11 @@ window.SOLUTION_DATA = {
         "body": "Volume of the hemisphere:\n\n\\[\n\\frac23\\pi x^3\n\\]"
       },
       {
-        "title": "So the volume of solid",
+        "title": "Calculate volume",
         "body": "So the volume of solid S is\n\n\\[\n\\pi x^3+\\frac23\\pi x^3=\\frac53\\pi x^3\n\\]"
       },
       {
-        "title": "The sphere has radius ,",
+        "title": "Calculate volume",
         "body": "The sphere has radius \\(kx\\), so its volume is\n\n\\[\n\\frac43\\pi(kx)^3=\\frac43\\pi k^3x^3\n\\]"
       },
       {
@@ -15392,11 +15392,11 @@ window.SOLUTION_DATA = {
         "body": "Cancel \\(\\frac13\\pi x^3\\):\n\n\\[\n4k^3=62.5\n\\]\n\n\\[\nk^3=15.625=\\frac{125}{8}\n\\]\n\n\\[\nk=2.5\n\\]"
       },
       {
-        "title": "For solid T, the volume",
+        "title": "Calculate volume",
         "body": "For solid T, the volume scale factor is \\(512\\).\n\n\\[\n512=8^3\n\\]"
       },
       {
-        "title": "So the linear scale factor",
+        "title": "Calculate area",
         "body": "So the linear scale factor is \\(8\\), and the surface area scale factor is\n\n\\[\n8^2=64\n\\]"
       }
     ],
@@ -15413,7 +15413,7 @@ window.SOLUTION_DATA = {
         "body": "A regular pentagon has interior angle\n\\[\n\\frac{(5-2)\\times180}{5}=108^\\circ\n\\]"
       },
       {
-        "title": "Since is a straight line,",
+        "title": "Use trigonometry",
         "body": "Since \\(BCE\\) is a straight line,\n\\[\n\\angle DCE=180^\\circ-108^\\circ=72^\\circ\n\\]"
       },
       {
@@ -15430,39 +15430,39 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\n\\overrightarrow{OP}=2a,\\qquad \\overrightarrow{OR}=3b\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\n\\overrightarrow{OQ}=2a+3b\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Evaluate fraction",
         "body": "Since \\(PM:PQ=1:4\\),\n\n\\[\n\\overrightarrow{PM}=\\frac14\\overrightarrow{PQ}\n\\]\n\n\\[\n\\overrightarrow{PM}=\\frac14(3b)=\\frac34b\n\\]\n\n\\[\n\\overrightarrow{OM}=2a+\\frac34b\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Evaluate fraction",
         "body": "Since \\(RN:RQ=4:5\\),\n\n\\[\n\\overrightarrow{RN}=\\frac45\\overrightarrow{RQ}\n\\]\n\n\\[\n\\overrightarrow{RN}=\\frac45(2a)=\\frac85a\n\\]\n\n\\[\n\\overrightarrow{ON}=3b+\\frac85a\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\n\\overrightarrow{MR}=\\overrightarrow{OR}-\\overrightarrow{OM}\n\\]\n\n\\[\n\\overrightarrow{MR}=3b-\\left(2a+\\frac34b\\right)\n\\]\n\n\\[\n\\overrightarrow{MR}=-2a+\\frac94b\n\\]"
       },
       {
-        "title": "Let be on , so",
+        "title": "Let be on",
         "body": "Let \\(Y\\) be on \\(ON\\), so\n\n\\[\n\\overrightarrow{OY}=k\\overrightarrow{ON}\n=k\\left(\\frac85a+3b\\right)\n\\]"
       },
       {
-        "title": "Also is on , so",
+        "title": "Evaluate fraction",
         "body": "Also \\(Y\\) is on \\(MR\\), so\n\n\\[\n\\overrightarrow{OY}=\\overrightarrow{OM}+t\\overrightarrow{MR}\n\\]\n\n\\[\n\\overrightarrow{OY}=2a+\\frac34b+t\\left(-2a+\\frac94b\\right)\n\\]"
       },
       {
-        "title": "Compare coefficients of and",
+        "title": "Evaluate fraction",
         "body": "Compare coefficients of \\(a\\) and \\(b\\):\n\n\\[\n\\frac85k=2-2t\n\\]\n\n\\[\n3k=\\frac34+\\frac94t\n\\]"
       },
       {
-        "title": "From the first equation,",
+        "title": "Solve equation",
         "body": "From the first equation,\n\n\\[\nt=1-\\frac45k\n\\]"
       },
       {
@@ -15483,7 +15483,7 @@ window.SOLUTION_DATA = {
         "body": "(a) Shape \\(A\\) moves to shape \\(B\\) by the vector\n\n\\[\n\\begin{pmatrix}3\\\\-5\\end{pmatrix}\n\\]"
       },
       {
-        "title": "So the transformation is a",
+        "title": "Use matrices",
         "body": "So the transformation is a translation by \\(\\begin{pmatrix}3\\\\-5\\end{pmatrix}\\)."
       },
       {
@@ -15515,8 +15515,8 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(x=11,\\ y=14\\)."
   },
   "all::Jun2024_P2HR__Q11__p12-13__m07__Cumulative-Frequency-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
     "steps": [
@@ -15529,28 +15529,28 @@ window.SOLUTION_DATA = {
         "body": "Plot\n\n\\[\n(0,0),(5,6),(10,17),(15,27),(20,42),(25,53),(30,60)\n\\]"
       },
       {
-        "title": "For workers,",
+        "title": "Use cumulative frequency",
         "body": "For \\(60\\) workers,\n\n\\[\nQ_1=15,\\qquad Q_3=45\n\\]"
       },
       {
-        "title": "From the graph,",
+        "title": "Use cumulative frequency",
         "body": "From the graph,\n\n\\[\nQ_1\\approx 9.1,\\qquad Q_3\\approx 21.4\n\\]\n\n\\[\n\\text{IQR}\\approx 21.4-9.1=12.3\n\\]"
       },
       {
-        "title": "If workers did more than",
+        "title": "Use cumulative frequency",
         "body": "If \\(25\\) workers did more than \\(W\\) hours, then \\(35\\) workers did \\(W\\) hours or less.\nFrom the graph, \\(W\\approx 17.7\\).\n\n\\[\nP(5<H\\leq 10)=\\frac{17-6}{60}=\\frac{11}{60}\n\\]"
       }
     ],
     "finalAnswer": "IQR about \\(12.3\\), \\(W\\approx 17.7\\), and \\(\\frac{11}{60}\\)."
   },
   "all::Jun2024_P2HR__Q14__p16-16__m03__Probability-Toolkit": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate probability",
         "body": "\\[\nP(H)=0.8\n\\]"
       },
       {
@@ -15558,7 +15558,7 @@ window.SOLUTION_DATA = {
         "body": "Given\n\n\\[\nP(\\text{6 and H})=0.24\n\\]\n\n\\[\nP(6)=0.24\\div 0.8=0.3\n\\]"
       },
       {
-        "title": "Also",
+        "title": "Calculate probability",
         "body": "Also\n\n\\[\nP(T)=1-0.8=0.2\n\\]\n\n\\[\nP(\\text{6 and T})=0.3\\times 0.2=0.06\n\\]"
       }
     ],
@@ -15571,7 +15571,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Sine/Cosine Rule to Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use trigonometry",
         "body": "\\[\n4-\\left[(3x-5)\\div\\frac{3x^2+x-10}{4x-1}\\right]\n\\]"
       },
       {
@@ -15579,7 +15579,7 @@ window.SOLUTION_DATA = {
         "body": "Factor the quadratic:\n\n\\[\n3x^2+x-10=(3x-5)(x+2)\n\\]"
       },
       {
-        "title": "So the expression inside the",
+        "title": "Use trigonometry",
         "body": "So the expression inside the square brackets is\n\n\\[\n(3x-5)\\div\\frac{(3x-5)(x+2)}{4x-1}\n\\]"
       },
       {
@@ -15591,7 +15591,7 @@ window.SOLUTION_DATA = {
         "body": "Cancel \\(3x-5\\):\n\n\\[\n\\frac{4x-1}{x+2}\n\\]"
       },
       {
-        "title": "Therefore the full expression is",
+        "title": "Use trigonometry",
         "body": "Therefore the full expression is\n\n\\[\n4-\\frac{4x-1}{x+2}\n\\]"
       },
       {
@@ -15608,7 +15608,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Solving Quadratic Equations to Solving Inequalities.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve quadratic equation",
         "body": "\\[\n6x^2-7x-20>0\n\\]"
       },
       {
@@ -15620,7 +15620,7 @@ window.SOLUTION_DATA = {
         "body": "The critical values are\n\n\\[\nx=-\\frac43 \\quad \\text{and} \\quad x=\\frac52\n\\]"
       },
       {
-        "title": "Since the coefficient of is",
+        "title": "Solve quadratic equation",
         "body": "Since the coefficient of \\(x^2\\) is positive, the quadratic is greater than 0 outside the roots."
       }
     ],
@@ -15633,7 +15633,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nx^2+y^2=y+11\n\\]\n\n\\[\ny=3x-1\n\\]"
       },
       {
@@ -15641,7 +15641,7 @@ window.SOLUTION_DATA = {
         "body": "Substitute:\n\n\\[\nx^2+(3x-1)^2=3x-1+11\n\\]\n\n\\[\nx^2+9x^2-6x+1=3x+10\n\\]\n\n\\[\n10x^2-9x-9=0\n\\]\n\n\\[\n(5x+3)(2x-3)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\nx=-\\frac35 \\quad \\text{or} \\quad x=\\frac32\n\\]"
       },
       {
@@ -15658,7 +15658,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nA=(-5,2),\\qquad B=(3,5)\n\\]"
       },
       {
@@ -15666,11 +15666,11 @@ window.SOLUTION_DATA = {
         "body": "The gradient of \\(AB\\) is\n\n\\[\n\\frac{5-2}{3-(-5)}=\\frac38\n\\]"
       },
       {
-        "title": "Since is a square, is",
+        "title": "Find the gradient",
         "body": "Since \\(ABCD\\) is a square, \\(BC\\) is perpendicular to \\(AB\\)."
       },
       {
-        "title": "So the gradient of is",
+        "title": "Find the gradient",
         "body": "So the gradient of \\(BC\\) is\n\n\\[\n-\\frac83\n\\]"
       },
       {
@@ -15695,7 +15695,7 @@ window.SOLUTION_DATA = {
         "body": "The minimum point of \\(y=f(x)\\) is \\((6,-3)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x)+10\n\\]"
       },
       {
@@ -15703,7 +15703,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 10 units up:\n\n\\[\n(6,-3)\\to(6,7)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(3x)\n\\]"
       },
       {
@@ -15720,7 +15720,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "The hemisphere has radius ,",
+        "title": "The hemisphere has radius",
         "body": "The hemisphere has radius \\(x\\), so its height is \\(x\\)."
       },
       {
@@ -15736,11 +15736,11 @@ window.SOLUTION_DATA = {
         "body": "Volume of the hemisphere:\n\n\\[\n\\frac23\\pi x^3\n\\]"
       },
       {
-        "title": "So the volume of solid",
+        "title": "Calculate volume",
         "body": "So the volume of solid S is\n\n\\[\n\\pi x^3+\\frac23\\pi x^3=\\frac53\\pi x^3\n\\]"
       },
       {
-        "title": "The sphere has radius ,",
+        "title": "Calculate volume",
         "body": "The sphere has radius \\(kx\\), so its volume is\n\n\\[\n\\frac43\\pi(kx)^3=\\frac43\\pi k^3x^3\n\\]"
       },
       {
@@ -15752,11 +15752,11 @@ window.SOLUTION_DATA = {
         "body": "Cancel \\(\\frac13\\pi x^3\\):\n\n\\[\n4k^3=62.5\n\\]\n\n\\[\nk^3=15.625=\\frac{125}{8}\n\\]\n\n\\[\nk=2.5\n\\]"
       },
       {
-        "title": "For solid T, the volume",
+        "title": "Calculate volume",
         "body": "For solid T, the volume scale factor is \\(512\\).\n\n\\[\n512=8^3\n\\]"
       },
       {
-        "title": "So the linear scale factor",
+        "title": "Calculate area",
         "body": "So the linear scale factor is \\(8\\), and the surface area scale factor is\n\n\\[\n8^2=64\n\\]"
       }
     ],
@@ -15769,39 +15769,39 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\n\\overrightarrow{OP}=2a,\\qquad \\overrightarrow{OR}=3b\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\n\\overrightarrow{OQ}=2a+3b\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Evaluate fraction",
         "body": "Since \\(PM:PQ=1:4\\),\n\n\\[\n\\overrightarrow{PM}=\\frac14\\overrightarrow{PQ}\n\\]\n\n\\[\n\\overrightarrow{PM}=\\frac14(3b)=\\frac34b\n\\]\n\n\\[\n\\overrightarrow{OM}=2a+\\frac34b\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Evaluate fraction",
         "body": "Since \\(RN:RQ=4:5\\),\n\n\\[\n\\overrightarrow{RN}=\\frac45\\overrightarrow{RQ}\n\\]\n\n\\[\n\\overrightarrow{RN}=\\frac45(2a)=\\frac85a\n\\]\n\n\\[\n\\overrightarrow{ON}=3b+\\frac85a\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\n\\overrightarrow{MR}=\\overrightarrow{OR}-\\overrightarrow{OM}\n\\]\n\n\\[\n\\overrightarrow{MR}=3b-\\left(2a+\\frac34b\\right)\n\\]\n\n\\[\n\\overrightarrow{MR}=-2a+\\frac94b\n\\]"
       },
       {
-        "title": "Let be on , so",
+        "title": "Let be on",
         "body": "Let \\(Y\\) be on \\(ON\\), so\n\n\\[\n\\overrightarrow{OY}=k\\overrightarrow{ON}\n=k\\left(\\frac85a+3b\\right)\n\\]"
       },
       {
-        "title": "Also is on , so",
+        "title": "Evaluate fraction",
         "body": "Also \\(Y\\) is on \\(MR\\), so\n\n\\[\n\\overrightarrow{OY}=\\overrightarrow{OM}+t\\overrightarrow{MR}\n\\]\n\n\\[\n\\overrightarrow{OY}=2a+\\frac34b+t\\left(-2a+\\frac94b\\right)\n\\]"
       },
       {
-        "title": "Compare coefficients of and",
+        "title": "Evaluate fraction",
         "body": "Compare coefficients of \\(a\\) and \\(b\\):\n\n\\[\n\\frac85k=2-2t\n\\]\n\n\\[\n3k=\\frac34+\\frac94t\n\\]"
       },
       {
-        "title": "From the first equation,",
+        "title": "Solve equation",
         "body": "From the first equation,\n\n\\[\nt=1-\\frac45k\n\\]"
       },
       {
@@ -15818,11 +15818,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Powers, roots and standard form. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Convert standard form",
         "body": "\\[\n520\\text{ million}=520000000=5.2\\times 10^8\n\\]\n\n\\[\n8.79\\times 10^{-5}=0.0000879\n\\]"
       },
       {
-        "title": "For part (c),",
+        "title": "Convert standard form",
         "body": "For part (c),\n\n\\[\n(5\\times 10^{42})(7\\times 10^{-180})\n=35\\times 10^{-138}\n\\]"
       },
       {
@@ -15855,11 +15855,11 @@ window.SOLUTION_DATA = {
         "body": "Percentage profit:\n\n\\[\n\\frac{240}{1920}\\times 100=12.5\n\\]"
       },
       {
-        "title": "The height cm correct to",
+        "title": "Find lower bound",
         "body": "The height \\(9\\) cm correct to the nearest cm has lower bound\n\n\\[\n8.5\\text{ cm}\n\\]"
       },
       {
-        "title": "The weight g correct to",
+        "title": "Find upper bound",
         "body": "The weight \\(120\\) g correct to the nearest \\(10\\) g has upper bound\n\n\\[\n125\\text{ g}\n\\]"
       }
     ],
@@ -15889,11 +15889,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Compound Interest and Depreciation. The tag is correct.",
     "steps": [
       {
-        "title": "After the first two years,",
+        "title": "Use compound interest",
         "body": "After the first two years, the value is\n\n\\[\n750000(0.96)(0.935)=673200\n\\]"
       },
       {
-        "title": "Then the value increases by",
+        "title": "Use compound interest",
         "body": "Then the value increases by \\(x\\%\\) to \\(698445\\), so\n\n\\[\n673200\\left(1+\\frac{x}{100}\\right)=698445\n\\]\n\n\\[\n1+\\frac{x}{100}=\\frac{698445}{673200}=1.0375\n\\]\n\n\\[\nx=3.75\n\\]"
       }
     ],
@@ -15906,7 +15906,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Direct and Inverse Proportion. The tag is correct.",
     "steps": [
       {
-        "title": "is inversely proportional to ,",
+        "title": "Find inverse function",
         "body": "\\(y\\) is inversely proportional to \\(x^3\\), so\n\n\\[\ny=\\frac{k}{x^3}\n\\]"
       },
       {
@@ -15914,11 +15914,11 @@ window.SOLUTION_DATA = {
         "body": "Use \\(y=4\\) when \\(x=3\\):\n\n\\[\n4=\\frac{k}{3^3}\n\\]\n\n\\[\nk=4\\times 27=108\n\\]"
       },
       {
-        "title": "So",
+        "title": "Find inverse function",
         "body": "So\n\n\\[\ny=\\frac{108}{x^3}\n\\]"
       },
       {
-        "title": "When ,",
+        "title": "Find inverse function",
         "body": "When \\(y=864\\),\n\n\\[\n864=\\frac{108}{x^3}\n\\]\n\n\\[\nx^3=\\frac{108}{864}=\\frac18\n\\]\n\n\\[\nx=\\frac12\n\\]"
       }
     ],
@@ -15931,23 +15931,23 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic Roots and Indices. The tag is correct.",
     "steps": [
       {
-        "title": "For part (a),",
+        "title": "Use index laws",
         "body": "For part (a),\n\n\\[\nx^5\\times x^7=x^{12}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use index laws",
         "body": "So \\(m=12\\)."
       },
       {
-        "title": "For part (b),",
+        "title": "Use index laws",
         "body": "For part (b),\n\n\\[\ny^8\\div y^3=y^{8-3}=y^5\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use index laws",
         "body": "So \\(n=5\\)."
       },
       {
-        "title": "For part (c),",
+        "title": "Use index laws",
         "body": "For part (c),\n\n\\[\n(5a^4r^2)^3=5^3a^{4\\times 3}r^{2\\times 3}\n\\]\n\n\\[\n=125a^{12}r^6\n\\]"
       }
     ],
@@ -15981,7 +15981,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify fraction",
         "body": "\\[\n\\frac54+\\frac{x-3}{6x}\n\\]"
       },
       {
@@ -16002,7 +16002,7 @@ window.SOLUTION_DATA = {
         "body": "(a)\n\\[\n(\\sqrt3)^5=(\\sqrt3)^4\\sqrt3=9\\sqrt3\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So \\(k=9\\)."
       },
       {
@@ -16010,7 +16010,7 @@ window.SOLUTION_DATA = {
         "body": "(b)\n\\[\n\\frac{21}{3-\\sqrt2}\\times\\frac{3+\\sqrt2}{3+\\sqrt2}\n=\\frac{21(3+\\sqrt2)}{9-2}\n\\]\n\n\\[\n=3(3+\\sqrt2)=9+3\\sqrt2\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Simplify surd",
         "body": "Since \\(3\\sqrt2=\\sqrt{18}\\),\n\\[\n9+3\\sqrt2=9+\\sqrt{18}\n\\]"
       }
     ],
@@ -16023,7 +16023,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nx^2+y^2+3y=7\n\\]\n\n\\[\ny=x+2\n\\]"
       },
       {
@@ -16031,7 +16031,7 @@ window.SOLUTION_DATA = {
         "body": "Substitute:\n\n\\[\nx^2+(x+2)^2+3(x+2)=7\n\\]\n\n\\[\nx^2+x^2+4x+4+3x+6=7\n\\]\n\n\\[\n2x^2+7x+3=0\n\\]\n\n\\[\n(2x+1)(x+3)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\nx=-\\frac12 \\quad \\text{or} \\quad x=-3\n\\]"
       },
       {
@@ -16048,7 +16048,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\nu_{20}=a+19d=123\n\\]\n\n\\[\nS_{30}=\\frac{30}{2}(2a+29d)=2880\n\\]\n\n\\[\n2a+29d=192\n\\]"
       },
       {
@@ -16069,7 +16069,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Functions. The original tag was solving quadratic equations, but the question uses function notation and composition.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve quadratic equation",
         "body": "\\[\nf(x)=9-\\sqrt{x},\\qquad g(x)=4x^2\n\\]"
       },
       {
@@ -16085,11 +16085,11 @@ window.SOLUTION_DATA = {
         "body": "Solve\n\\[\n9-2|x|<0\n\\]\n\n\\[\n2|x|>9\n\\]\n\n\\[\n|x|>\\frac92\n\\]"
       },
       {
-        "title": "So",
+        "title": "Solve quadratic equation",
         "body": "So\n\\[\nx<-\\frac92 \\quad \\text{or} \\quad x>\\frac92\n\\]"
       },
       {
-        "title": "If the input is restricted",
+        "title": "Solve quadratic equation",
         "body": "If the input is restricted to \\(x\\ge0\\), this becomes \\(x>\\frac92\\)."
       }
     ],
@@ -16102,7 +16102,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nP=(4,7),\\qquad R=(8,-5)\n\\]"
       },
       {
@@ -16122,7 +16122,7 @@ window.SOLUTION_DATA = {
         "body": "The midpoint of \\(PR\\) is\n\n\\[\n\\left(\\frac{4+8}{2},\\frac{7+(-5)}{2}\\right)=(6,1)\n\\]"
       },
       {
-        "title": "So passes through with gradient",
+        "title": "Find the gradient",
         "body": "So \\(QS\\) passes through \\((6,1)\\) with gradient \\(\\frac13\\).\n\n\\[\ny-1=\\frac13(x-6)\n\\]\n\n\\[\ny=\\frac13x-1\n\\]"
       },
       {
@@ -16139,7 +16139,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This is a table-and-graph question for a cubic function.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Read the graph",
         "body": "\\[\ny=x^3+2x+3\n\\]"
       },
       {
@@ -16164,11 +16164,11 @@ window.SOLUTION_DATA = {
         "body": "The minimum point of \\(y=f(x)\\) is\n\\[\n(8,12)\n\\]"
       },
       {
-        "title": "For the graph moves up",
+        "title": "Read the graph",
         "body": "For\n\\[\ny=f(x)+5\n\\]\nthe graph moves up by 5:\n\\[\n(8,12)\\to(8,17)\n\\]"
       },
       {
-        "title": "For the graph is horizontally",
+        "title": "Read the graph",
         "body": "For\n\\[\ny=f(2x)\n\\]\nthe graph is horizontally compressed by scale factor \\(\\frac12\\), so the \\(x\\)-coordinate is halved:\n\\[\n(8,12)\\to(4,12)\n\\]"
       }
     ],
@@ -16181,7 +16181,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Angles in Polygons & Parallel Lines. The tag is correct.",
     "steps": [
       {
-        "title": "Angles around point add to",
+        "title": "Find the gradient",
         "body": "Angles around point \\(B\\) add to \\(360^\\circ\\)."
       },
       {
@@ -16189,11 +16189,11 @@ window.SOLUTION_DATA = {
         "body": "The interior angle of the regular polygon is\n\\[\n360^\\circ-140^\\circ-50^\\circ=170^\\circ\n\\]"
       },
       {
-        "title": "So the exterior angle is",
+        "title": "Find the gradient",
         "body": "So the exterior angle is\n\\[\n180^\\circ-170^\\circ=10^\\circ\n\\]"
       },
       {
-        "title": "For a regular polygon,",
+        "title": "Find the gradient",
         "body": "For a regular polygon,\n\\[\nn=\\frac{360}{10}=36\n\\]"
       }
     ],
@@ -16206,7 +16206,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Area & Perimeter. The tag is correct.",
     "steps": [
       {
-        "title": "Because the trapezium has one",
+        "title": "Use trigonometry",
         "body": "Because the trapezium has one line of symmetry, each sloping side makes the same \\(60^\\circ\\) angle with the base."
       },
       {
@@ -16231,7 +16231,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Circles, Arcs & Sectors. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate area",
         "body": "\\[\n\\text{area}=\\frac{140}{360}\\times \\pi(16)^2\n\\]\n\n\\[\n=312.763\\ldots\n\\]"
       }
     ],
@@ -16244,7 +16244,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Volume & Surface Area. The tag is correct.",
     "steps": [
       {
-        "title": "For a cylinder,",
+        "title": "Calculate area",
         "body": "For a cylinder,\n\\[\nV=\\pi r^2h\n\\]\n\n\\[\n3892=\\pi(8)^2h\n\\]\n\n\\[\nh=\\frac{3892}{64\\pi}=19.357\\ldots\n\\]"
       }
     ],
@@ -16257,15 +16257,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Standard & Compound Units to Sine, Cosine Rule & Area of Triangles.",
     "steps": [
       {
-        "title": "First use triangle",
+        "title": "Use trigonometry",
         "body": "First use triangle \\(ABD\\).\n\n\\[\nAB=9.4,\\quad AD=12.8,\\quad \\angle BAD=72^\\circ\n\\]"
       },
       {
-        "title": "Use the cosine rule to",
+        "title": "Use cosine rule",
         "body": "Use the cosine rule to find \\(BD\\):\n\n\\[\nBD^2=9.4^2+12.8^2-2(9.4)(12.8)\\cos72^\\circ\n\\]\n\n\\[\nBD=13.3356\\ldots\n\\]"
       },
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(BCD\\),\n\n\\[\n\\angle BDC=39^\\circ,\\quad \\angle BCD=54^\\circ\n\\]"
       },
       {
@@ -16273,7 +16273,7 @@ window.SOLUTION_DATA = {
         "body": "Use the sine rule:\n\n\\[\n\\frac{BC}{\\sin39^\\circ}=\\frac{BD}{\\sin54^\\circ}\n\\]\n\n\\[\nBC=\\frac{13.3356\\ldots\\sin39^\\circ}{\\sin54^\\circ}\n\\]\n\n\\[\nBC=10.3735\\ldots\n\\]"
       },
       {
-        "title": "Correct to 3 significant figures,",
+        "title": "Use trigonometry",
         "body": "Correct to 3 significant figures,\n\n\\[\nBC=10.4\n\\]"
       }
     ],
@@ -16286,11 +16286,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Coordinate Geometry to Vectors.",
     "steps": [
       {
-        "title": "For part (a),",
+        "title": "Use vectors",
         "body": "For part (a),\n\n\\[\n\\vec{OA}=12\\mathbf a,\\qquad \\vec{OB}=8\\mathbf b\n\\]\n\n\\[\n\\vec{AB}=\\vec{OB}-\\vec{OA}\n\\]\n\n\\[\n\\vec{AB}=8\\mathbf b-12\\mathbf a\n\\]"
       },
       {
-        "title": "For part (b), is the",
+        "title": "Find the midpoint",
         "body": "For part (b), \\(P\\) is the midpoint of \\(OA\\), so\n\n\\[\n\\vec{OP}=6\\mathbf a\n\\]"
       },
       {
@@ -16298,23 +16298,23 @@ window.SOLUTION_DATA = {
         "body": "Given\n\n\\[\nAB:BR=1:2\n\\]\n\n\\[\n\\vec{BR}=2\\vec{AB}\n\\]\n\n\\[\n\\vec{BR}=16\\mathbf b-24\\mathbf a\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Use vectors",
         "body": "Therefore\n\n\\[\n\\vec{OR}=\\vec{OB}+\\vec{BR}\n\\]\n\n\\[\n\\vec{OR}=8\\mathbf b+16\\mathbf b-24\\mathbf a\n\\]\n\n\\[\n\\vec{OR}=-24\\mathbf a+24\\mathbf b\n\\]"
       },
       {
-        "title": "Since are collinear, write on",
+        "title": "Use vectors",
         "body": "Since \\(P,Q,R\\) are collinear, write \\(Q\\) on \\(PR\\):\n\n\\[\n\\vec{OQ}=\\vec{OP}+t(\\vec{OR}-\\vec{OP})\n\\]\n\n\\[\n\\vec{OQ}=6\\mathbf a+t(-30\\mathbf a+24\\mathbf b)\n\\]\n\n\\[\n\\vec{OQ}=(6-30t)\\mathbf a+24t\\mathbf b\n\\]"
       },
       {
-        "title": "But lies on , so",
+        "title": "Use vectors",
         "body": "But \\(Q\\) lies on \\(OB\\), so there is no \\(\\mathbf a\\) component:\n\n\\[\n6-30t=0\n\\]\n\n\\[\nt=\\frac15\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Use vectors",
         "body": "Then\n\n\\[\n\\vec{OQ}=24\\left(\\frac15\\right)\\mathbf b\n\\]\n\n\\[\n\\vec{OQ}=\\frac{24}{5}\\mathbf b\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Use vectors",
         "body": "Since \\(\\vec{OQ}=n\\mathbf b\\),\n\n\\[\nn=\\frac{24}{5}\n\\]"
       }
     ],
@@ -16356,7 +16356,7 @@ window.SOLUTION_DATA = {
         "body": "More than \\(40\\) minutes:\n\n\\[\n10(0.5)+10(1.7)=22\n\\]"
       },
       {
-        "title": "So the proportion is",
+        "title": "Use histogram",
         "body": "So the proportion is\n\n\\[\n\\frac{22}{126}=\\frac{11}{63}\n\\]"
       }
     ],
@@ -16381,20 +16381,20 @@ window.SOLUTION_DATA = {
         "body": "Exactly two counters are the same colour:\n\n\\[\n\\binom{9}{2}(11)+\\binom{7}{2}(13)+\\binom{4}{2}(16)\n\\]\n\n\\[\n=36(11)+21(13)+6(16)\n\\]\n\n\\[\n=396+273+96=765\n\\]"
       },
       {
-        "title": "So the probability is",
+        "title": "Calculate probability",
         "body": "So the probability is\n\n\\[\n\\frac{765}{1140}=\\frac{51}{76}\n\\]"
       }
     ],
     "finalAnswer": "\\(\\frac{51}{76}\\)"
   },
   "all::Jun2025_P1H__Q14__p14-14__m04__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate probability",
         "body": "\\[\nP(\\text{loses badminton})=1-0.7=0.3\n\\]\n\n\\[\nP(\\text{loses tennis})=1-0.4=0.6\n\\]\n\n\\[\nP(\\text{loses both})=0.3\\times 0.6=0.18\n\\]"
       }
     ],
@@ -16407,7 +16407,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nx^2+y^2+3y=7\n\\]\n\n\\[\ny=x+2\n\\]"
       },
       {
@@ -16415,7 +16415,7 @@ window.SOLUTION_DATA = {
         "body": "Substitute:\n\n\\[\nx^2+(x+2)^2+3(x+2)=7\n\\]\n\n\\[\nx^2+x^2+4x+4+3x+6=7\n\\]\n\n\\[\n2x^2+7x+3=0\n\\]\n\n\\[\n(2x+1)(x+3)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\nx=-\\frac12 \\quad \\text{or} \\quad x=-3\n\\]"
       },
       {
@@ -16432,7 +16432,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\nu_{20}=a+19d=123\n\\]\n\n\\[\nS_{30}=\\frac{30}{2}(2a+29d)=2880\n\\]\n\n\\[\n2a+29d=192\n\\]"
       },
       {
@@ -16453,7 +16453,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nP=(4,7),\\qquad R=(8,-5)\n\\]"
       },
       {
@@ -16473,7 +16473,7 @@ window.SOLUTION_DATA = {
         "body": "The midpoint of \\(PR\\) is\n\n\\[\n\\left(\\frac{4+8}{2},\\frac{7+(-5)}{2}\\right)=(6,1)\n\\]"
       },
       {
-        "title": "So passes through with gradient",
+        "title": "Find the gradient",
         "body": "So \\(QS\\) passes through \\((6,1)\\) with gradient \\(\\frac13\\).\n\n\\[\ny-1=\\frac13(x-6)\n\\]\n\n\\[\ny=\\frac13x-1\n\\]"
       },
       {
@@ -16490,15 +16490,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Standard & Compound Units to Sine, Cosine Rule & Area of Triangles.",
     "steps": [
       {
-        "title": "First use triangle",
+        "title": "Use trigonometry",
         "body": "First use triangle \\(ABD\\).\n\n\\[\nAB=9.4,\\quad AD=12.8,\\quad \\angle BAD=72^\\circ\n\\]"
       },
       {
-        "title": "Use the cosine rule to",
+        "title": "Use cosine rule",
         "body": "Use the cosine rule to find \\(BD\\):\n\n\\[\nBD^2=9.4^2+12.8^2-2(9.4)(12.8)\\cos72^\\circ\n\\]\n\n\\[\nBD=13.3356\\ldots\n\\]"
       },
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(BCD\\),\n\n\\[\n\\angle BDC=39^\\circ,\\quad \\angle BCD=54^\\circ\n\\]"
       },
       {
@@ -16506,7 +16506,7 @@ window.SOLUTION_DATA = {
         "body": "Use the sine rule:\n\n\\[\n\\frac{BC}{\\sin39^\\circ}=\\frac{BD}{\\sin54^\\circ}\n\\]\n\n\\[\nBC=\\frac{13.3356\\ldots\\sin39^\\circ}{\\sin54^\\circ}\n\\]\n\n\\[\nBC=10.3735\\ldots\n\\]"
       },
       {
-        "title": "Correct to 3 significant figures,",
+        "title": "Use trigonometry",
         "body": "Correct to 3 significant figures,\n\n\\[\nBC=10.4\n\\]"
       }
     ],
@@ -16519,11 +16519,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Coordinate Geometry to Vectors.",
     "steps": [
       {
-        "title": "For part (a),",
+        "title": "Use vectors",
         "body": "For part (a),\n\n\\[\n\\vec{OA}=12\\mathbf a,\\qquad \\vec{OB}=8\\mathbf b\n\\]\n\n\\[\n\\vec{AB}=\\vec{OB}-\\vec{OA}\n\\]\n\n\\[\n\\vec{AB}=8\\mathbf b-12\\mathbf a\n\\]"
       },
       {
-        "title": "For part (b), is the",
+        "title": "Find the midpoint",
         "body": "For part (b), \\(P\\) is the midpoint of \\(OA\\), so\n\n\\[\n\\vec{OP}=6\\mathbf a\n\\]"
       },
       {
@@ -16531,23 +16531,23 @@ window.SOLUTION_DATA = {
         "body": "Given\n\n\\[\nAB:BR=1:2\n\\]\n\n\\[\n\\vec{BR}=2\\vec{AB}\n\\]\n\n\\[\n\\vec{BR}=16\\mathbf b-24\\mathbf a\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Use vectors",
         "body": "Therefore\n\n\\[\n\\vec{OR}=\\vec{OB}+\\vec{BR}\n\\]\n\n\\[\n\\vec{OR}=8\\mathbf b+16\\mathbf b-24\\mathbf a\n\\]\n\n\\[\n\\vec{OR}=-24\\mathbf a+24\\mathbf b\n\\]"
       },
       {
-        "title": "Since are collinear, write on",
+        "title": "Use vectors",
         "body": "Since \\(P,Q,R\\) are collinear, write \\(Q\\) on \\(PR\\):\n\n\\[\n\\vec{OQ}=\\vec{OP}+t(\\vec{OR}-\\vec{OP})\n\\]\n\n\\[\n\\vec{OQ}=6\\mathbf a+t(-30\\mathbf a+24\\mathbf b)\n\\]\n\n\\[\n\\vec{OQ}=(6-30t)\\mathbf a+24t\\mathbf b\n\\]"
       },
       {
-        "title": "But lies on , so",
+        "title": "Use vectors",
         "body": "But \\(Q\\) lies on \\(OB\\), so there is no \\(\\mathbf a\\) component:\n\n\\[\n6-30t=0\n\\]\n\n\\[\nt=\\frac15\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Use vectors",
         "body": "Then\n\n\\[\n\\vec{OQ}=24\\left(\\frac15\\right)\\mathbf b\n\\]\n\n\\[\n\\vec{OQ}=\\frac{24}{5}\\mathbf b\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Use vectors",
         "body": "Since \\(\\vec{OQ}=n\\mathbf b\\),\n\n\\[\nn=\\frac{24}{5}\n\\]"
       }
     ],
@@ -16572,7 +16572,7 @@ window.SOLUTION_DATA = {
         "body": "Exactly two counters are the same colour:\n\n\\[\n\\binom{9}{2}(11)+\\binom{7}{2}(13)+\\binom{4}{2}(16)\n\\]\n\n\\[\n=36(11)+21(13)+6(16)\n\\]\n\n\\[\n=396+273+96=765\n\\]"
       },
       {
-        "title": "So the probability is",
+        "title": "Calculate probability",
         "body": "So the probability is\n\n\\[\n\\frac{765}{1140}=\\frac{51}{76}\n\\]"
       }
     ],
@@ -16585,15 +16585,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Set notation and Venn diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\n\\mathcal{E}=\\{1,2,3,4,5,6,7,8,9,10,11,12\\}\n\\]\n\n\\[\nA=\\{2,4,6,8,10,12\\}\n\\]\n\n\\[\nB=\\{3,6,9,12\\}\n\\]\n\n\\[\nC=\\{1,3,5,7,9,11\\}\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Calculate value",
         "body": "Therefore\n\n\\[\nA\\cup B=\\{2,3,4,6,8,9,10,12\\}\n\\]"
       },
       {
-        "title": "and",
+        "title": "Calculate value",
         "body": "and\n\n\\[\nB'=\\{1,2,4,5,7,8,10,11\\}\n\\]"
       },
       {
@@ -16601,7 +16601,7 @@ window.SOLUTION_DATA = {
         "body": "No number is both even and odd, so\n\n\\[\nA\\cap C=\\emptyset\n\\]"
       },
       {
-        "title": "Also because is not in",
+        "title": "Set",
         "body": "Also \\(13\\notin \\mathcal{E}\\) because \\(13\\) is not in the universal set."
       }
     ],
@@ -16614,11 +16614,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find the LCM",
         "body": "\\[\n45=3^2\\times 5\n\\]\n\n\\[\n70=2\\times 5\\times 7\n\\]"
       },
       {
-        "title": "For the LCM, take the",
+        "title": "Find the LCM",
         "body": "For the LCM, take the highest power of each prime:\n\n\\[\n\\text{LCM}=2\\times 3^2\\times 5\\times 7=630\n\\]"
       }
     ],
@@ -16631,7 +16631,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Powers, roots and standard form. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Convert standard form",
         "body": "\\[\n6.7\\times 10^{135}+3\\times 10^{134}\n\\]"
       },
       {
@@ -16639,7 +16639,7 @@ window.SOLUTION_DATA = {
         "body": "Write both terms using \\(10^{135}\\):\n\n\\[\n3\\times 10^{134}=0.3\\times 10^{135}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Convert standard form",
         "body": "So\n\n\\[\n6.7\\times 10^{135}+0.3\\times 10^{135}=7.0\\times 10^{135}\n\\]\n\n\\[\n=7\\times 10^{135}\n\\]"
       }
     ],
@@ -16652,15 +16652,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Compound Interest and Depreciation. The tag is correct, with a ratio used for Bank A.",
     "steps": [
       {
-        "title": "For Bank A,",
+        "title": "Use compound interest",
         "body": "For Bank A,\n\n\\[\n\\text{amount invested}:\\text{interest}=20:3\n\\]"
       },
       {
-        "title": "So the interest from Bank",
+        "title": "Use compound interest",
         "body": "So the interest from Bank A is\n\n\\[\n2500\\times \\frac{3}{20}=375\n\\]"
       },
       {
-        "title": "For Bank B, the compound",
+        "title": "Use compound interest",
         "body": "For Bank B, the compound interest after 2 years is\n\n\\[\n3000(1.04)^2-3000\n\\]\n\n\\[\n=3000(1.0816)-3000=244.80\n\\]"
       },
       {
@@ -16694,7 +16694,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Direct and Inverse Proportion. The tag is correct.",
     "steps": [
       {
-        "title": "is inversely proportional to ,",
+        "title": "Find inverse function",
         "body": "\\(F\\) is inversely proportional to \\(r^3\\), so\n\n\\[\nF=\\frac{k}{r^3}\n\\]"
       },
       {
@@ -16702,11 +16702,11 @@ window.SOLUTION_DATA = {
         "body": "Use \\(F=6\\) when \\(r=2\\):\n\n\\[\n6=\\frac{k}{2^3}\n\\]\n\n\\[\nk=48\n\\]"
       },
       {
-        "title": "So",
+        "title": "Find inverse function",
         "body": "So\n\n\\[\nF=\\frac{48}{r^3}\n\\]"
       },
       {
-        "title": "When ,",
+        "title": "Find inverse function",
         "body": "When \\(F=3072\\),\n\n\\[\n3072=\\frac{48}{r^3}\n\\]\n\n\\[\nr^3=\\frac{48}{3072}=\\frac{1}{64}\n\\]\n\n\\[\nr=\\frac14\n\\]"
       }
     ],
@@ -16744,7 +16744,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic proof. The tag is acceptable because the question asks to show the exact result.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\n2\\frac14=\\frac94,\\qquad 1\\frac57=\\frac{12}{7}\n\\]\n\n\\[\n2\\frac14\\times1\\frac57=\\frac94\\times\\frac{12}{7}\n\\]\n\n\\[\n=\\frac{108}{28}=\\frac{27}{7}=3\\frac67\n\\]"
       }
     ],
@@ -16761,11 +16761,11 @@ window.SOLUTION_DATA = {
         "body": "Let\n\\[\nx=0.6121212\\ldots\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\\[\n10x=6.121212\\ldots\n\\]"
       },
       {
-        "title": "and",
+        "title": "Calculate value",
         "body": "and\n\\[\n1000x=612.121212\\ldots\n\\]"
       },
       {
@@ -16803,7 +16803,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Solving Linear Equations. The equation is the main part of the question; the index form is secondary.",
     "steps": [
       {
-        "title": "For part (a),",
+        "title": "Solve equation",
         "body": "For part (a),\n\n\\[\n\\frac{5a+8}{3}-\\frac{2a+5}{4}=23\n\\]"
       },
       {
@@ -16811,7 +16811,7 @@ window.SOLUTION_DATA = {
         "body": "Multiply by \\(12\\):\n\n\\[\n4(5a+8)-3(2a+5)=276\n\\]\n\n\\[\n20a+32-6a-15=276\n\\]\n\n\\[\n14a+17=276\n\\]\n\n\\[\n14a=259\n\\]\n\n\\[\na=\\frac{259}{14}=\\frac{37}{2}\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Solve equation",
         "body": "For part (b),\n\n\\[\n\\left(\\frac{\\sqrt y}{3}\\right)^{-1}=\\frac{3}{\\sqrt y}\n\\]\n\n\\[\n=3y^{-1/2}\n\\]"
       }
     ],
@@ -16841,11 +16841,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nx^2+y^2=41\n\\]\n\n\\[\n2x+y=3\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\ny=3-2x\n\\]"
       },
       {
@@ -16853,7 +16853,7 @@ window.SOLUTION_DATA = {
         "body": "Substitute:\n\n\\[\nx^2+(3-2x)^2=41\n\\]\n\n\\[\nx^2+9-12x+4x^2=41\n\\]\n\n\\[\n5x^2-12x-32=0\n\\]\n\n\\[\n(5x+8)(x-4)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\nx=-\\frac85 \\quad \\text{or} \\quad x=4\n\\]"
       },
       {
@@ -16878,7 +16878,7 @@ window.SOLUTION_DATA = {
         "body": "Equal differences give\n\n\\[\n(3y-4)-(2x+5)=(4x-2)-(3y-4)\n\\]\n\n\\[\n6y-6x=11\n\\]"
       },
       {
-        "title": "For an arithmetic series,",
+        "title": "Use series formula",
         "body": "For an arithmetic series,\n\n\\[\nS_9=9(a+4d)\n\\]"
       },
       {
@@ -16890,7 +16890,7 @@ window.SOLUTION_DATA = {
         "body": "Given \\(S_9=216\\):\n\n\\[\n9[(2x+5)+4(3y-2x-9)]=216\n\\]\n\n\\[\n12y-6x=55\n\\]"
       },
       {
-        "title": "Now solve",
+        "title": "Solve",
         "body": "Now solve\n\n\\[\n6y-6x=11\n\\]\n\n\\[\n12y-6x=55\n\\]"
       },
       {
@@ -16898,7 +16898,7 @@ window.SOLUTION_DATA = {
         "body": "Subtracting gives\n\n\\[\n6y=44\n\\]\n\n\\[\ny=\\frac{22}{3}\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Evaluate fraction",
         "body": "Then\n\n\\[\n6\\left(\\frac{22}{3}\\right)-6x=11\n\\]\n\n\\[\nx=\\frac{11}{2}\n\\]"
       }
     ],
@@ -16915,7 +16915,7 @@ window.SOLUTION_DATA = {
         "body": "The turning point of \\(y=f(x)\\) is \\((-6,9)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(3x)\n\\]"
       },
       {
@@ -16923,15 +16923,15 @@ window.SOLUTION_DATA = {
         "body": "the \\(x\\)-coordinate is divided by 3:\n\n\\[\n(-6,9)\\to(-2,9)\n\\]"
       },
       {
-        "title": "For part (b), a point",
+        "title": "Calculate value",
         "body": "For part (b), a point \\((4,-5)\\) on \\(y=g(x)\\) maps to \\((1,-16)\\) on\n\n\\[\ny=g(x+a)+b\n\\]"
       },
       {
-        "title": "For the coordinate",
+        "title": "Calculate value",
         "body": "For the \\(x\\)-coordinate:\n\n\\[\n1+a=4\n\\]\n\n\\[\na=3\n\\]"
       },
       {
-        "title": "For the coordinate",
+        "title": "Calculate value",
         "body": "For the \\(y\\)-coordinate:\n\n\\[\n-5+b=-16\n\\]\n\n\\[\nb=-11\n\\]"
       }
     ],
@@ -16944,7 +16944,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This is converting metres per second to kilometres per hour algebraically.",
     "steps": [
       {
-        "title": "To convert m/s to km/h,",
+        "title": "Convert m/s to km/h multiply",
         "body": "To convert m/s to km/h, multiply by \\(3.6\\).\n\n\\[\n50x\\times3.6=180x\n\\]"
       }
     ],
@@ -16957,7 +16957,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "For two intersecting chords in",
+        "title": "Use chord theorem",
         "body": "For two intersecting chords in a circle,\n\n\\[\nPT\\times TR=QT\\times TS\n\\]"
       },
       {
@@ -16998,15 +16998,15 @@ window.SOLUTION_DATA = {
         "body": "Its area is\n\n\\[\n\\text{sector area}-\\text{triangle area}\n\\]\n\n\\[\n28=\\frac{40}{360}\\pi R^2-\\frac{1}{2}R^2\\sin 40^\\circ\n\\]\n\n\\[\n28=R^2\\left(\\frac{\\pi}{9}-\\frac{1}{2}\\sin 40^\\circ\\right)\n\\]\n\n\\[\nR=31.8096\\ldots\n\\]"
       },
       {
-        "title": "Now find the chord",
+        "title": "Use trigonometry",
         "body": "Now find the chord \\(BC\\):\n\n\\[\nBC=2R\\sin 20^\\circ\n\\]\n\n\\[\nBC=2(31.8096\\ldots)\\sin 20^\\circ\n=21.7591\\ldots\n\\]"
       },
       {
-        "title": "In sector , the centre",
+        "title": "Calculate value",
         "body": "In sector \\(BCD\\), the centre is \\(C\\), so the radius is\n\n\\[\nCB=CD=21.7591\\ldots\n\\]"
       },
       {
-        "title": "The arc has angle ,",
+        "title": "Use trigonometry",
         "body": "The arc \\(BD\\) has angle \\(130^\\circ\\), so\n\n\\[\n\\text{arc }BD\n=\\frac{130}{360}\\times 2\\pi(21.7591\\ldots)\n\\]\n\n\\[\n=49.3697\\ldots\n\\]"
       }
     ],
@@ -17035,7 +17035,7 @@ window.SOLUTION_DATA = {
         "body": "Total water after pouring:\n\\[\n8820+10367.255\\ldots=19187.255\\ldots\n\\]"
       },
       {
-        "title": "Since",
+        "title": "Calculate area",
         "body": "Since\n\\[\n19187.255\\ldots<19600\n\\]"
       },
       {
@@ -17056,7 +17056,7 @@ window.SOLUTION_DATA = {
         "body": "The volume of vase \\(S\\) is \\(72.8\\%\\) more than vase \\(R\\), so\n\n\\(\\dfrac{V_S}{V_R}=1.728\\)"
       },
       {
-        "title": "For similar solids, volume scale",
+        "title": "Calculate area",
         "body": "For similar solids, volume scale factor is the cube of the linear scale factor:\n\n\\(\\text{linear scale factor from }R\\text{ to }S=\\sqrt[3]{1.728}=1.2\\)"
       },
       {
@@ -17064,7 +17064,7 @@ window.SOLUTION_DATA = {
         "body": "The height of vase \\(T\\) is \\(6h\\), so the linear scale factor from \\(R\\) to \\(T\\) is \\(6\\)."
       },
       {
-        "title": "Therefore the linear scale factor",
+        "title": "Calculate area",
         "body": "Therefore the linear scale factor from \\(S\\) to \\(T\\) is\n\n\\(\\dfrac{6}{1.2}=5\\)"
       },
       {
@@ -17081,7 +17081,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Right-Angled Triangles - Pythagoras & Trigonometry.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use trigonometry",
         "body": "\\[\n\\tan 24^\\circ=\\frac{6.5}{QR}\n\\]\n\n\\[\nQR=\\frac{6.5}{\\tan 24^\\circ}=14.599\\ldots\n\\]"
       }
     ],
@@ -17094,11 +17094,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "In the rectangle , use",
+        "title": "Use trigonometry",
         "body": "In the rectangle \\(ABCF\\), use Pythagoras with the diagonal \\(FC\\):\n\n\\[\nAC^2=FC^2-AF^2\n\\]\n\n\\[\nAC^2=18^2-7^2=324-49=275\n\\]"
       },
       {
-        "title": "Now use Pythagoras in triangle",
+        "title": "Use trigonometry",
         "body": "Now use Pythagoras in triangle \\(ABC\\):\n\n\\[\nBC^2=AC^2-AB^2\n\\]\n\n\\[\nBC^2=275-9^2=275-81=194\n\\]\n\n\\[\nBC=\\sqrt{194}=13.928\\ldots\n\\]"
       }
     ],
@@ -17118,8 +17118,8 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(8\\)."
   },
   "all::Jun2025_P1HR__Q12__p12-13__m06__Cumulative-Frequency-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
     "steps": [
@@ -17132,19 +17132,19 @@ window.SOLUTION_DATA = {
         "body": "Plot\n\n\\[\n(10,0),(20,12),(30,27),(40,47),(50,65),(60,74),(70,80)\n\\]"
       },
       {
-        "title": "At years,",
+        "title": "Use cumulative frequency",
         "body": "At \\(46\\) years,\n\n\\[\nF(46)\\approx 47+\\frac{6}{10}(65-47)=57.8\n\\]"
       },
       {
-        "title": "So the number older than",
+        "title": "Convert standard form",
         "body": "So the number older than \\(46\\) is\n\n\\[\n80-57.8=22.2\n\\]\n\n\\[\n\\frac{22.2}{80}\\times 100\\approx 27.75\\%\n\\]"
       }
     ],
     "finalAnswer": "about \\(28\\%\\)."
   },
   "all::Jun2025_P1HR__Q04__p05-05__m05__Probability-Toolkit": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
@@ -17153,7 +17153,7 @@ window.SOLUTION_DATA = {
         "body": "Let the yellow probability be \\(x\\). Then the red probability is \\(4x\\).\n\n\\[\n0.12+0.20+0.30+4x+x=1\n\\]\n\n\\[\n5x=0.38\n\\]\n\n\\[\nx=0.076\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate probability",
         "body": "So\n\n\\[\nP(\\text{red})=4x=0.304\n\\]\n\n\\[\nP(\\text{blue, green or purple})=0.12+0.20+0.30=0.62\n\\]"
       },
       {
@@ -17164,8 +17164,8 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(0.62\\), and about \\(106\\)."
   },
   "all::Jun2025_P1HR__Q19__p19-19__m03__Probability-Toolkit": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
@@ -17182,7 +17182,7 @@ window.SOLUTION_DATA = {
         "body": "ways to choose two counters."
       },
       {
-        "title": "For a sum less than",
+        "title": "Calculate probability",
         "body": "For a sum less than \\(5\\), the pairs are:\n\n\\[\n(1,1),\\quad (1,2),\\quad (1,3)\n\\]"
       },
       {
@@ -17190,7 +17190,7 @@ window.SOLUTION_DATA = {
         "body": "Counting the repeated counters gives\n\n\\[\n1+2+6=9\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate probability",
         "body": "So\n\n\\[\nP(\\text{sum}<5)=\\frac{9}{36}=\\frac14\n\\]"
       }
     ],
@@ -17203,11 +17203,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nx^2+y^2=41\n\\]\n\n\\[\n2x+y=3\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\ny=3-2x\n\\]"
       },
       {
@@ -17215,7 +17215,7 @@ window.SOLUTION_DATA = {
         "body": "Substitute:\n\n\\[\nx^2+(3-2x)^2=41\n\\]\n\n\\[\nx^2+9-12x+4x^2=41\n\\]\n\n\\[\n5x^2-12x-32=0\n\\]\n\n\\[\n(5x+8)(x-4)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\nx=-\\frac85 \\quad \\text{or} \\quad x=4\n\\]"
       },
       {
@@ -17240,7 +17240,7 @@ window.SOLUTION_DATA = {
         "body": "Equal differences give\n\n\\[\n(3y-4)-(2x+5)=(4x-2)-(3y-4)\n\\]\n\n\\[\n6y-6x=11\n\\]"
       },
       {
-        "title": "For an arithmetic series,",
+        "title": "Use series formula",
         "body": "For an arithmetic series,\n\n\\[\nS_9=9(a+4d)\n\\]"
       },
       {
@@ -17252,7 +17252,7 @@ window.SOLUTION_DATA = {
         "body": "Given \\(S_9=216\\):\n\n\\[\n9[(2x+5)+4(3y-2x-9)]=216\n\\]\n\n\\[\n12y-6x=55\n\\]"
       },
       {
-        "title": "Now solve",
+        "title": "Solve",
         "body": "Now solve\n\n\\[\n6y-6x=11\n\\]\n\n\\[\n12y-6x=55\n\\]"
       },
       {
@@ -17260,7 +17260,7 @@ window.SOLUTION_DATA = {
         "body": "Subtracting gives\n\n\\[\n6y=44\n\\]\n\n\\[\ny=\\frac{22}{3}\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Evaluate fraction",
         "body": "Then\n\n\\[\n6\\left(\\frac{22}{3}\\right)-6x=11\n\\]\n\n\\[\nx=\\frac{11}{2}\n\\]"
       }
     ],
@@ -17277,7 +17277,7 @@ window.SOLUTION_DATA = {
         "body": "The turning point of \\(y=f(x)\\) is \\((-6,9)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(3x)\n\\]"
       },
       {
@@ -17285,15 +17285,15 @@ window.SOLUTION_DATA = {
         "body": "the \\(x\\)-coordinate is divided by 3:\n\n\\[\n(-6,9)\\to(-2,9)\n\\]"
       },
       {
-        "title": "For part (b), a point",
+        "title": "Calculate value",
         "body": "For part (b), a point \\((4,-5)\\) on \\(y=g(x)\\) maps to \\((1,-16)\\) on\n\n\\[\ny=g(x+a)+b\n\\]"
       },
       {
-        "title": "For the coordinate",
+        "title": "Calculate value",
         "body": "For the \\(x\\)-coordinate:\n\n\\[\n1+a=4\n\\]\n\n\\[\na=3\n\\]"
       },
       {
-        "title": "For the coordinate",
+        "title": "Calculate value",
         "body": "For the \\(y\\)-coordinate:\n\n\\[\n-5+b=-16\n\\]\n\n\\[\nb=-11\n\\]"
       }
     ],
@@ -17306,7 +17306,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "For two intersecting chords in",
+        "title": "Use chord theorem",
         "body": "For two intersecting chords in a circle,\n\n\\[\nPT\\times TR=QT\\times TS\n\\]"
       },
       {
@@ -17347,15 +17347,15 @@ window.SOLUTION_DATA = {
         "body": "Its area is\n\n\\[\n\\text{sector area}-\\text{triangle area}\n\\]\n\n\\[\n28=\\frac{40}{360}\\pi R^2-\\frac{1}{2}R^2\\sin 40^\\circ\n\\]\n\n\\[\n28=R^2\\left(\\frac{\\pi}{9}-\\frac{1}{2}\\sin 40^\\circ\\right)\n\\]\n\n\\[\nR=31.8096\\ldots\n\\]"
       },
       {
-        "title": "Now find the chord",
+        "title": "Use trigonometry",
         "body": "Now find the chord \\(BC\\):\n\n\\[\nBC=2R\\sin 20^\\circ\n\\]\n\n\\[\nBC=2(31.8096\\ldots)\\sin 20^\\circ\n=21.7591\\ldots\n\\]"
       },
       {
-        "title": "In sector , the centre",
+        "title": "Calculate value",
         "body": "In sector \\(BCD\\), the centre is \\(C\\), so the radius is\n\n\\[\nCB=CD=21.7591\\ldots\n\\]"
       },
       {
-        "title": "The arc has angle ,",
+        "title": "Use trigonometry",
         "body": "The arc \\(BD\\) has angle \\(130^\\circ\\), so\n\n\\[\n\\text{arc }BD\n=\\frac{130}{360}\\times 2\\pi(21.7591\\ldots)\n\\]\n\n\\[\n=49.3697\\ldots\n\\]"
       }
     ],
@@ -17372,7 +17372,7 @@ window.SOLUTION_DATA = {
         "body": "The volume of vase \\(S\\) is \\(72.8\\%\\) more than vase \\(R\\), so\n\n\\(\\dfrac{V_S}{V_R}=1.728\\)"
       },
       {
-        "title": "For similar solids, volume scale",
+        "title": "Calculate area",
         "body": "For similar solids, volume scale factor is the cube of the linear scale factor:\n\n\\(\\text{linear scale factor from }R\\text{ to }S=\\sqrt[3]{1.728}=1.2\\)"
       },
       {
@@ -17380,7 +17380,7 @@ window.SOLUTION_DATA = {
         "body": "The height of vase \\(T\\) is \\(6h\\), so the linear scale factor from \\(R\\) to \\(T\\) is \\(6\\)."
       },
       {
-        "title": "Therefore the linear scale factor",
+        "title": "Calculate area",
         "body": "Therefore the linear scale factor from \\(S\\) to \\(T\\) is\n\n\\(\\dfrac{6}{1.2}=5\\)"
       },
       {
@@ -17397,11 +17397,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "In the rectangle , use",
+        "title": "Use trigonometry",
         "body": "In the rectangle \\(ABCF\\), use Pythagoras with the diagonal \\(FC\\):\n\n\\[\nAC^2=FC^2-AF^2\n\\]\n\n\\[\nAC^2=18^2-7^2=324-49=275\n\\]"
       },
       {
-        "title": "Now use Pythagoras in triangle",
+        "title": "Use trigonometry",
         "body": "Now use Pythagoras in triangle \\(ABC\\):\n\n\\[\nBC^2=AC^2-AB^2\n\\]\n\n\\[\nBC^2=275-9^2=275-81=194\n\\]\n\n\\[\nBC=\\sqrt{194}=13.928\\ldots\n\\]"
       }
     ],
@@ -17418,7 +17418,7 @@ window.SOLUTION_DATA = {
         "body": "The multiplier for a \\(7\\%\\) increase is\n\n\\[\n1.07\n\\]"
       },
       {
-        "title": "After 3 years,",
+        "title": "Use compound interest",
         "body": "After 3 years,\n\n\\[\n4000(1.07)^3=4900.172\n\\]"
       },
       {
@@ -17451,11 +17451,11 @@ window.SOLUTION_DATA = {
         "body": "Upper bound:\n\n\\[\n11.75(9.25)-4.05^2=92.285\n\\]"
       },
       {
-        "title": "So",
+        "title": "Estimate the value",
         "body": "So\n\n\\[\n85.715<X<92.285\n\\]"
       },
       {
-        "title": "Both bounds round to to",
+        "title": "Estimate the value",
         "body": "Both bounds round to \\(90\\) to the nearest \\(10\\)."
       }
     ],
@@ -17480,7 +17480,7 @@ window.SOLUTION_DATA = {
         "body": "Each part is\n\n\\[\n240 \\div 12=20\n\\]"
       },
       {
-        "title": "So the original amounts are",
+        "title": "Split the ratio",
         "body": "So the original amounts are\n\n\\[\n60,\\ 80,\\ 100\n\\]"
       },
       {
@@ -17501,11 +17501,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic Roots and Indices. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use index laws",
         "body": "\\[\n\\left(\\frac{2a^3}{10a^7c^2}\\right)^{-3}\n\\]"
       },
       {
-        "title": "First simplify inside the bracket",
+        "title": "Use index laws",
         "body": "First simplify inside the bracket:\n\n\\[\n\\frac{2a^3}{10a^7c^2}=\\frac{1}{5a^4c^2}\n\\]"
       },
       {
@@ -17522,7 +17522,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Expanding brackets. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Expand brackets",
         "body": "\\[\n3x(2x+5)(7x-4)=3x(14x^2+27x-20)\n\\]\n\n\\[\n=42x^3+81x^2-60x\n\\]"
       }
     ],
@@ -17551,11 +17551,11 @@ window.SOLUTION_DATA = {
         "body": "The turning point is\n\n\\[\n(2,52)\n\\]"
       },
       {
-        "title": "The point of intersection with",
+        "title": "Calculate value",
         "body": "The point of intersection with the \\(y\\)-axis is found by putting \\(x=0\\):\n\n\\[\ny=28\n\\]"
       },
       {
-        "title": "So the intercept is",
+        "title": "Find intercepts",
         "body": "So the \\(y\\)-intercept is\n\n\\[\n(0,28)\n\\]"
       }
     ],
@@ -17568,7 +17568,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Ratio Toolkit to Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Split the ratio",
         "body": "\\[\n\\frac{4x^2-4x-120}{5x^2-180}\\div \\frac{x^2+5x}{10x^2+60x}\n\\]"
       },
       {
@@ -17576,7 +17576,7 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\n\\[\n4x^2-4x-120=4(x-6)(x+5)\n\\]\n\n\\[\n5x^2-180=5(x-6)(x+6)\n\\]\n\n\\[\nx^2+5x=x(x+5)\n\\]\n\n\\[\n10x^2+60x=10x(x+6)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Split the ratio",
         "body": "So\n\n\\[\n\\frac{4(x-6)(x+5)}{5(x-6)(x+6)}\n\\div\n\\frac{x(x+5)}{10x(x+6)}\n\\]\n\n\\[\n=\\frac{4(x+5)}{5(x+6)}\\times \\frac{10(x+6)}{x+5}=8\n\\]"
       }
     ],
@@ -17589,7 +17589,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Rearranging formulas. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Rearrange formula",
         "body": "\\[\nc=\\frac{t^2+3}{7-8t^2}\n\\]\n\n\\[\nc(7-8t^2)=t^2+3\n\\]\n\n\\[\n7c-3=t^2(8c+1)\n\\]\n\n\\[\nt^2=\\frac{7c-3}{8c+1}\n\\]"
       }
     ],
@@ -17602,7 +17602,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic proof. The tag is acceptable because the question asks to show the exact result.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\n7\\frac13=\\frac{22}{3},\\qquad 5\\frac47=\\frac{39}{7}\n\\]\n\n\\[\n7\\frac13-5\\frac47=\\frac{22}{3}-\\frac{39}{7}\n\\]\n\n\\[\n=\\frac{154}{21}-\\frac{117}{21}=\\frac{37}{21}\n\\]\n\n\\[\n\\frac{37}{21}=1\\frac{16}{21}\n\\]"
       }
     ],
@@ -17619,7 +17619,7 @@ window.SOLUTION_DATA = {
         "body": "Let\n\\[\nx=0.\\dot7\\dot0\\dot2\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\\[\n1000x=702.\\dot7\\dot0\\dot2\n\\]"
       },
       {
@@ -17636,7 +17636,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Solving inequalities. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve inequality",
         "body": "\\[\n4x^2+4x-15<0\n\\]"
       },
       {
@@ -17661,11 +17661,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Simultaneous equations. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve simultaneous equations",
         "body": "\\[\n3x+5y=8\n\\]\n\n\\[\n4x+y=-3.5\n\\]"
       },
       {
-        "title": "From the second equation,",
+        "title": "Solve simultaneous equations",
         "body": "From the second equation,\n\\[\ny=-3.5-4x\n\\]"
       },
       {
@@ -17673,7 +17673,7 @@ window.SOLUTION_DATA = {
         "body": "Substitute into the first equation:\n\\[\n3x+5(-3.5-4x)=8\n\\]\n\n\\[\n3x-17.5-20x=8\n\\]\n\n\\[\n-17x=25.5\n\\]\n\n\\[\nx=-1.5\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Solve simultaneous equations",
         "body": "Then\n\\[\ny=-3.5-4(-1.5)=2.5\n\\]"
       }
     ],
@@ -17719,11 +17719,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This combines solving and identifying inequalities.",
     "steps": [
       {
-        "title": "For part (a),",
+        "title": "Evaluate fraction",
         "body": "For part (a),\n\\[\n7-3x<2x+15\n\\]\n\n\\[\n-8<5x\n\\]\n\n\\[\nx>-\\frac85\n\\]"
       },
       {
-        "title": "For part (b), the boundaries",
+        "title": "Calculate value",
         "body": "For part (b), the boundaries are \\(x=2\\), \\(y=3\\), and \\(x+y=9\\)."
       },
       {
@@ -17740,19 +17740,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to differentiation. The question asks for a derivative and turning points.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Differentiate",
         "body": "\\[\ny=4x^3+5x^2+2x\n\\]\n\n\\[\n\\frac{dy}{dx}=12x^2+10x+2\n\\]"
       },
       {
-        "title": "At a turning point,",
+        "title": "Differentiate",
         "body": "At a turning point,\n\\[\n12x^2+10x+2=0\n\\]\n\n\\[\n2(6x^2+5x+1)=0\n\\]\n\n\\[\n(3x+1)(2x+1)=0\n\\]\n\n\\[\nx=-\\frac13 \\quad \\text{or} \\quad x=-\\frac12\n\\]"
       },
       {
-        "title": "When ,",
+        "title": "Differentiate",
         "body": "When \\(x=-\\frac13\\),\n\\[\ny=-\\frac7{27}\n\\]"
       },
       {
-        "title": "When ,",
+        "title": "Differentiate",
         "body": "When \\(x=-\\frac12\\),\n\\[\ny=-\\frac14\n\\]"
       }
     ],
@@ -17782,7 +17782,7 @@ window.SOLUTION_DATA = {
         "body": "The cuboid has dimensions\n\n\\[\n3x,\\qquad 2x,\\qquad y\n\\]"
       },
       {
-        "title": "Its volume is , so",
+        "title": "Calculate volume",
         "body": "Its volume is \\(1014\\text{ cm}^3\\), so\n\n\\[\n(3x)(2x)(y)=1014\n\\]\n\n\\[\n6x^2y=1014\n\\]\n\n\\[\ny=\\frac{1014}{6x^2}\n\\]\n\n\\[\ny=\\frac{169}{x^2}\n\\]"
       },
       {
@@ -17803,15 +17803,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Congruence, Similarity & Geometrical Proof. The tag is correct.",
     "steps": [
       {
-        "title": "The scale factor from to",
+        "title": "Evaluate fraction",
         "body": "The scale factor from \\(ABCD\\) to \\(EFGH\\) is\n\\[\n\\frac{FG}{BC}=\\frac{10}{4}=2.5\n\\]"
       },
       {
-        "title": "Since corresponds to ,",
+        "title": "Calculate value",
         "body": "Since \\(AB\\) corresponds to \\(EF\\),\n\\[\nx=EF=5\\times 2.5=12.5\n\\]"
       },
       {
-        "title": "Since corresponds to ,",
+        "title": "Calculate value",
         "body": "Since \\(CD\\) corresponds to \\(GH\\),\n\\[\n2.5y=24\n\\]\n\n\\[\ny=9.6\n\\]"
       }
     ],
@@ -17828,7 +17828,7 @@ window.SOLUTION_DATA = {
         "body": "The heights of solids A and B are \\(31\\) cm and \\(18.6\\) cm.\n\n\\[\n31:18.6=5:3\n\\]"
       },
       {
-        "title": "So the volumes are in",
+        "title": "Split the ratio",
         "body": "So the volumes are in the ratio\n\n\\[\n5^3:3^3=125:27\n\\]"
       },
       {
@@ -17840,7 +17840,7 @@ window.SOLUTION_DATA = {
         "body": "parts."
       },
       {
-        "title": "This difference is , so",
+        "title": "Evaluate fraction",
         "body": "This difference is \\(735\\text{ cm}^3\\), so one part is\n\n\\[\n\\frac{735}{98}=7.5\n\\]"
       },
       {
@@ -17857,19 +17857,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Right-Angled Triangles - Pythagoras & Trigonometry.",
     "steps": [
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(ABC\\),\n\\[\nAC^2=16^2+12^2=400\n\\]\n\n\\[\nAC=20\n\\]"
       },
       {
-        "title": "Given ,",
+        "title": "Use trigonometry",
         "body": "Given \\(AD=1.5AC\\),\n\\[\nAD=30\n\\]"
       },
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(ABD\\),\n\\[\nBD^2=30^2-16^2=644\n\\]\n\n\\[\nBD=25.377\\ldots\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\\[\nCD=BD-BC=25.377\\ldots-12=13.377\\ldots\n\\]"
       }
     ],
@@ -17886,15 +17886,15 @@ window.SOLUTION_DATA = {
         "body": "Let\n\n\\[\nAB=s\n\\]"
       },
       {
-        "title": "Since is the centre of",
+        "title": "Find the midpoint",
         "body": "Since \\(M\\) is the centre of the square base and \\(Q\\) is the midpoint of \\(AB\\),\n\n\\[\nQM=\\frac{s}{2}\n\\]"
       },
       {
-        "title": "Since , the point is",
+        "title": "Use trigonometry",
         "body": "Since \\(EA=EB=EC=ED\\), the point \\(E\\) is vertically above \\(M\\)."
       },
       {
-        "title": "In right triangle ,",
+        "title": "Use trigonometry",
         "body": "In right triangle \\(EQM\\),\n\n\\[\n\\tan80^\\circ=\\frac{EM}{QM}\n\\]\n\n\\[\nEM=\\frac{s}{2}\\tan80^\\circ\n\\]"
       },
       {
@@ -17902,11 +17902,11 @@ window.SOLUTION_DATA = {
         "body": "The distance from the centre of a square to a vertex is half the diagonal:\n\n\\[\nAM=\\frac{s\\sqrt2}{2}\n\\]"
       },
       {
-        "title": "In right triangle ,",
+        "title": "Use trigonometry",
         "body": "In right triangle \\(EMA\\),\n\n\\[\nEA^2=EM^2+AM^2\n\\]\n\n\\[\nEA^2=\\left(\\frac{s}{2}\\tan80^\\circ\\right)^2+\\left(\\frac{s\\sqrt2}{2}\\right)^2\n\\]\n\n\\[\nEA=s\\sqrt{\\frac{\\tan^2 80^\\circ}{4}+\\frac12}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\n\\frac{EA}{AB}=\\sqrt{\\frac{\\tan^2 80^\\circ}{4}+\\frac12}\n\\]\n\n\\[\nn=2.92\n\\]"
       }
     ],
@@ -17919,7 +17919,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Transformations. The tag is correct.",
     "steps": [
       {
-        "title": "(a) Enlarge from centre with",
+        "title": "Use Transformations correct",
         "body": "(a) Enlarge from centre \\((0,1)\\) with scale factor \\(3\\)."
       },
       {
@@ -17927,7 +17927,7 @@ window.SOLUTION_DATA = {
         "body": "The vertices become\n\n\\[\n(3,1),\\ (9,1),\\ (9,10),\\ (6,10),\\ (6,4),\\ (3,4)\n\\]"
       },
       {
-        "title": "(b) Triangle is mapped to",
+        "title": "Use trigonometry",
         "body": "(b) Triangle \\(P\\) is mapped to triangle \\(Q\\) by a \\(180^\\circ\\) rotation about \\((5,5)\\)."
       }
     ],
@@ -17940,27 +17940,27 @@ window.SOLUTION_DATA = {
     "topicNote": "Statistics Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "The range is , and",
+        "title": "Calculate statistic",
         "body": "The range is \\(10\\), and the greatest card is \\(14\\):\n\n\\[\n14-\\text{smallest}=10\n\\]"
       },
       {
-        "title": "So the smallest card is",
+        "title": "Use Statistics Toolkit tag correct",
         "body": "So the smallest card is \\(4\\)."
       },
       {
-        "title": "The median is . For",
+        "title": "Calculate statistic",
         "body": "The median is \\(7.5\\). For 6 cards, the median is the mean of the 3rd and 4th cards:\n\n\\[\n\\frac{6+x}{2}=7.5\n\\]\n\n\\[\nx=9\n\\]"
       },
       {
-        "title": "The mode is , so",
+        "title": "Calculate statistic",
         "body": "The mode is \\(6\\), so the other missing card must be \\(6\\)."
       }
     ],
     "finalAnswer": "\\(4,\\ 6,\\ 9\\)."
   },
   "all::Jun2025_P2H__Q13__p12-13__m06__Cumulative-Frequency-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
     "steps": [
@@ -17977,19 +17977,19 @@ window.SOLUTION_DATA = {
         "body": "The median is the \\(30\\)th value.\n\n\\[\n20+\\frac{30-21}{33-21}\\times 10=27.5\n\\]"
       },
       {
-        "title": "At minutes,",
+        "title": "Use cumulative frequency",
         "body": "At \\(45\\) minutes,\n\n\\[\nF(45)\\approx 50+\\frac{5}{10}(57-50)=53.5\n\\]"
       },
       {
-        "title": "So the number taking more",
+        "title": "Use cumulative frequency",
         "body": "So the number taking more than \\(45\\) minutes is\n\n\\[\n60-53.5=6.5\n\\]"
       }
     ],
     "finalAnswer": "median about \\(27.5\\) minutes, and about \\(7\\) people."
   },
   "all::Jun2025_P2H__Q11__p11-11__m03__Probability-Toolkit": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
@@ -17998,11 +17998,11 @@ window.SOLUTION_DATA = {
         "body": "There are \\(17+28=45\\) counters that are not orange.\n\n\\[\nP(\\text{orange})=\\frac49\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate probability",
         "body": "So\n\n\\[\nP(\\text{not orange})=\\frac59\n\\]"
       },
       {
-        "title": "Let the total number of",
+        "title": "Calculate probability",
         "body": "Let the total number of counters be \\(T\\).\n\n\\[\n\\frac{45}{T}=\\frac59\n\\]\n\n\\[\nT=81\n\\]"
       },
       {
@@ -18019,7 +18019,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "There are 120 gardeners in",
+        "title": "Calculate value",
         "body": "There are 120 gardeners in total and 29 are outside all three sets, so\n\n\\[\nn(C\\cup P\\cup T)=120-29=91\n\\]"
       },
       {
@@ -18027,11 +18027,11 @@ window.SOLUTION_DATA = {
         "body": "The triple intersection is\n\n\\[\nn(C\\cap P\\cap T)=12\n\\]"
       },
       {
-        "title": "So the pair only regions",
+        "title": "Calculate value",
         "body": "So the pair-only regions are:\n\n\\[\nC\\cap P\\text{ only}=18-12=6\n\\]\n\n\\[\nC\\cap T\\text{ only}=27-12=15\n\\]\n\n\\[\nP\\cap T\\text{ only}=32-12=20\n\\]"
       },
       {
-        "title": "Since 43 grow carrots,",
+        "title": "Calculate value",
         "body": "Since 43 grow carrots,\n\n\\[\nC\\text{ only}=43-6-15-12=10\n\\]"
       },
       {
@@ -18039,19 +18039,19 @@ window.SOLUTION_DATA = {
         "body": "Let the number who grow only potatoes be \\(y\\). The number who grow only tomatoes is also \\(y\\)."
       },
       {
-        "title": "Now add the regions in",
+        "title": "Add the regions union",
         "body": "Now add the regions in the union:\n\n\\[\n10+y+y+6+15+20+12=91\n\\]\n\n\\[\n63+2y=91\n\\]\n\n\\[\n2y=28\n\\]\n\n\\[\ny=14\n\\]"
       },
       {
-        "title": "So the Venn regions are",
+        "title": "Calculate value",
         "body": "So the Venn regions are:\n\n\\[\nC\\text{ only}=10,\\quad P\\text{ only}=14,\\quad T\\text{ only}=14\n\\]\n\n\\[\nC\\cap P\\text{ only}=6,\\quad C\\cap T\\text{ only}=15,\\quad P\\cap T\\text{ only}=20\n\\]\n\n\\[\nC\\cap P\\cap T=12,\\quad \\text{outside}=29\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Calculate value",
         "body": "For part (b),\n\n\\[\nn(T'\\cap C)=C\\text{ only}+C\\cap P\\text{ only}\n\\]\n\n\\[\n=10+6=16\n\\]"
       },
       {
-        "title": "For part (c), one gardener",
+        "title": "Evaluate fraction",
         "body": "For part (c), one gardener who grows carrots is chosen.\n\n\\[\nP(\\text{also grows potatoes})=\\frac{n(C\\cap P)}{n(C)}\n\\]\n\n\\[\n=\\frac{18}{43}\n\\]"
       }
     ],
@@ -18072,15 +18072,15 @@ window.SOLUTION_DATA = {
         "body": "Bounds:\n\n\\(11.25 \\leq AB < 11.75\\)\n\n\\(9.15 \\leq BC < 9.25\\)\n\n\\(4.05 \\leq \\text{side of square} < 4.15\\)"
       },
       {
-        "title": "Lower bound for",
+        "title": "Find lower bound",
         "body": "Lower bound for \\(X\\):\n\n\\(11.25(9.15)-4.15^2=85.715\\)"
       },
       {
-        "title": "Upper bound for",
+        "title": "Find upper bound",
         "body": "Upper bound for \\(X\\):\n\n\\(11.75(9.25)-4.05^2=92.285\\)"
       },
       {
-        "title": "So . Both bounds round",
+        "title": "Estimate the value",
         "body": "So \\(85.715 \\leq X < 92.285\\). Both bounds round to \\(90\\) to the nearest 10."
       }
     ],
@@ -18109,11 +18109,11 @@ window.SOLUTION_DATA = {
         "body": "The turning point is\n\n\\[\n(2,52)\n\\]"
       },
       {
-        "title": "The point of intersection with",
+        "title": "Calculate value",
         "body": "The point of intersection with the \\(y\\)-axis is found by putting \\(x=0\\):\n\n\\[\ny=28\n\\]"
       },
       {
-        "title": "So the intercept is",
+        "title": "Find intercepts",
         "body": "So the \\(y\\)-intercept is\n\n\\[\n(0,28)\n\\]"
       }
     ],
@@ -18126,7 +18126,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Ratio Toolkit to Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Split the ratio",
         "body": "\\[\n\\frac{4x^2-4x-120}{5x^2-180}\\div \\frac{x^2+5x}{10x^2+60x}\n\\]"
       },
       {
@@ -18134,7 +18134,7 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\n\\[\n4x^2-4x-120=4(x-6)(x+5)\n\\]\n\n\\[\n5x^2-180=5(x-6)(x+6)\n\\]\n\n\\[\nx^2+5x=x(x+5)\n\\]\n\n\\[\n10x^2+60x=10x(x+6)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Split the ratio",
         "body": "So\n\n\\[\n\\frac{4(x-6)(x+5)}{5(x-6)(x+6)}\n\\div\n\\frac{x(x+5)}{10x(x+6)}\n\\]\n\n\\[\n=\\frac{4(x+5)}{5(x+6)}\\times \\frac{10(x+6)}{x+5}=8\n\\]"
       }
     ],
@@ -18151,7 +18151,7 @@ window.SOLUTION_DATA = {
         "body": "The cuboid has dimensions\n\n\\[\n3x,\\qquad 2x,\\qquad y\n\\]"
       },
       {
-        "title": "Its volume is , so",
+        "title": "Calculate volume",
         "body": "Its volume is \\(1014\\text{ cm}^3\\), so\n\n\\[\n(3x)(2x)(y)=1014\n\\]\n\n\\[\n6x^2y=1014\n\\]\n\n\\[\ny=\\frac{1014}{6x^2}\n\\]\n\n\\[\ny=\\frac{169}{x^2}\n\\]"
       },
       {
@@ -18176,7 +18176,7 @@ window.SOLUTION_DATA = {
         "body": "The heights of solids A and B are \\(31\\) cm and \\(18.6\\) cm.\n\n\\[\n31:18.6=5:3\n\\]"
       },
       {
-        "title": "So the volumes are in",
+        "title": "Split the ratio",
         "body": "So the volumes are in the ratio\n\n\\[\n5^3:3^3=125:27\n\\]"
       },
       {
@@ -18188,7 +18188,7 @@ window.SOLUTION_DATA = {
         "body": "parts."
       },
       {
-        "title": "This difference is , so",
+        "title": "Evaluate fraction",
         "body": "This difference is \\(735\\text{ cm}^3\\), so one part is\n\n\\[\n\\frac{735}{98}=7.5\n\\]"
       },
       {
@@ -18209,15 +18209,15 @@ window.SOLUTION_DATA = {
         "body": "Let\n\n\\[\nAB=s\n\\]"
       },
       {
-        "title": "Since is the centre of",
+        "title": "Find the midpoint",
         "body": "Since \\(M\\) is the centre of the square base and \\(Q\\) is the midpoint of \\(AB\\),\n\n\\[\nQM=\\frac{s}{2}\n\\]"
       },
       {
-        "title": "Since , the point is",
+        "title": "Use trigonometry",
         "body": "Since \\(EA=EB=EC=ED\\), the point \\(E\\) is vertically above \\(M\\)."
       },
       {
-        "title": "In right triangle ,",
+        "title": "Use trigonometry",
         "body": "In right triangle \\(EQM\\),\n\n\\[\n\\tan80^\\circ=\\frac{EM}{QM}\n\\]\n\n\\[\nEM=\\frac{s}{2}\\tan80^\\circ\n\\]"
       },
       {
@@ -18225,11 +18225,11 @@ window.SOLUTION_DATA = {
         "body": "The distance from the centre of a square to a vertex is half the diagonal:\n\n\\[\nAM=\\frac{s\\sqrt2}{2}\n\\]"
       },
       {
-        "title": "In right triangle ,",
+        "title": "Use trigonometry",
         "body": "In right triangle \\(EMA\\),\n\n\\[\nEA^2=EM^2+AM^2\n\\]\n\n\\[\nEA^2=\\left(\\frac{s}{2}\\tan80^\\circ\\right)^2+\\left(\\frac{s\\sqrt2}{2}\\right)^2\n\\]\n\n\\[\nEA=s\\sqrt{\\frac{\\tan^2 80^\\circ}{4}+\\frac12}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\n\\frac{EA}{AB}=\\sqrt{\\frac{\\tan^2 80^\\circ}{4}+\\frac12}\n\\]\n\n\\[\nn=2.92\n\\]"
       }
     ],
@@ -18242,7 +18242,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "There are 120 gardeners in",
+        "title": "Calculate value",
         "body": "There are 120 gardeners in total and 29 are outside all three sets, so\n\n\\[\nn(C\\cup P\\cup T)=120-29=91\n\\]"
       },
       {
@@ -18250,11 +18250,11 @@ window.SOLUTION_DATA = {
         "body": "The triple intersection is\n\n\\[\nn(C\\cap P\\cap T)=12\n\\]"
       },
       {
-        "title": "So the pair only regions",
+        "title": "Calculate value",
         "body": "So the pair-only regions are:\n\n\\[\nC\\cap P\\text{ only}=18-12=6\n\\]\n\n\\[\nC\\cap T\\text{ only}=27-12=15\n\\]\n\n\\[\nP\\cap T\\text{ only}=32-12=20\n\\]"
       },
       {
-        "title": "Since 43 grow carrots,",
+        "title": "Calculate value",
         "body": "Since 43 grow carrots,\n\n\\[\nC\\text{ only}=43-6-15-12=10\n\\]"
       },
       {
@@ -18262,19 +18262,19 @@ window.SOLUTION_DATA = {
         "body": "Let the number who grow only potatoes be \\(y\\). The number who grow only tomatoes is also \\(y\\)."
       },
       {
-        "title": "Now add the regions in",
+        "title": "Add the regions union",
         "body": "Now add the regions in the union:\n\n\\[\n10+y+y+6+15+20+12=91\n\\]\n\n\\[\n63+2y=91\n\\]\n\n\\[\n2y=28\n\\]\n\n\\[\ny=14\n\\]"
       },
       {
-        "title": "So the Venn regions are",
+        "title": "Calculate value",
         "body": "So the Venn regions are:\n\n\\[\nC\\text{ only}=10,\\quad P\\text{ only}=14,\\quad T\\text{ only}=14\n\\]\n\n\\[\nC\\cap P\\text{ only}=6,\\quad C\\cap T\\text{ only}=15,\\quad P\\cap T\\text{ only}=20\n\\]\n\n\\[\nC\\cap P\\cap T=12,\\quad \\text{outside}=29\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Calculate value",
         "body": "For part (b),\n\n\\[\nn(T'\\cap C)=C\\text{ only}+C\\cap P\\text{ only}\n\\]\n\n\\[\n=10+6=16\n\\]"
       },
       {
-        "title": "For part (c), one gardener",
+        "title": "Evaluate fraction",
         "body": "For part (c), one gardener who grows carrots is chosen.\n\n\\[\nP(\\text{also grows potatoes})=\\frac{n(C\\cap P)}{n(C)}\n\\]\n\n\\[\n=\\frac{18}{43}\n\\]"
       }
     ],
@@ -18287,7 +18287,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find the LCM",
         "body": "\\[\n1400=14\\times 100\n\\]\n\n\\[\n1400=(2\\times 7)(2^2\\times 5^2)\n\\]\n\n\\[\n1400=2^3\\times 5^2\\times 7\n\\]"
       }
     ],
@@ -18346,11 +18346,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Compound Interest and Depreciation. The tag is correct.",
     "steps": [
       {
-        "title": "After the first 2 years,",
+        "title": "Use compound interest",
         "body": "After the first 2 years,\n\n\\[\n16000(0.88)^2=12390.40\n\\]"
       },
       {
-        "title": "In the third year, the",
+        "title": "Use compound interest",
         "body": "In the third year, the value becomes \\(11461.12\\), so\n\n\\[\n12390.40\\left(1-\\frac{x}{100}\\right)=11461.12\n\\]\n\n\\[\n1-\\frac{x}{100}=\\frac{11461.12}{12390.40}=0.925\n\\]\n\n\\[\nx=7.5\n\\]"
       }
     ],
@@ -18363,19 +18363,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Algebraic Roots and Indices. This question uses index laws, not proportion.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use index laws",
         "body": "\\[\n5^0=1\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Use index laws",
         "body": "For part (b),\n\n\\[\n\\frac{5^9\\times 5^{-3}}{5^{-2}}=5^{9+(-3)-(-2)}=5^8\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use index laws",
         "body": "So\n\n\\[\nk=8\n\\]"
       },
       {
-        "title": "For part (c),",
+        "title": "Use index laws",
         "body": "For part (c),\n\n\\[\n(2d^4e^5)^3=2^3d^{4\\times 3}e^{5\\times 3}\n\\]\n\n\\[\n=8d^{12}e^{15}\n\\]"
       }
     ],
@@ -18396,15 +18396,15 @@ window.SOLUTION_DATA = {
         "body": "(b)\n\\[\n4x(x+3)(2x-5)\n\\]"
       },
       {
-        "title": "First,",
+        "title": "Factorise expression",
         "body": "First,\n\\[\n(x+3)(2x-5)=2x^2+x-15\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Factorise expression",
         "body": "Then\n\\[\n4x(2x^2+x-15)=8x^3+4x^2-60x\n\\]"
       },
       {
-        "title": "So , , and",
+        "title": "Factorise expression",
         "body": "So \\(a=8\\), \\(b=4\\), and \\(c=-60\\)."
       }
     ],
@@ -18417,7 +18417,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Rearranging formulas. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Rearrange formula",
         "body": "\\[\np=\\frac{8k^2+5}{7-3k^2}\n\\]\n\n\\[\np(7-3k^2)=8k^2+5\n\\]\n\n\\[\n7p-5=k^2(3p+8)\n\\]\n\n\\[\nk^2=\\frac{7p-5}{3p+8}\n\\]"
       }
     ],
@@ -18430,11 +18430,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic proof. The tag is acceptable because the question asks for exact-form proof.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\n\\frac{4}{3\\sqrt5+7}\\times\\frac{7-3\\sqrt5}{7-3\\sqrt5}\n=\\frac{4(7-3\\sqrt5)}{49-45}\n\\]\n\n\\[\n=7-3\\sqrt5\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Simplify surd",
         "body": "Since \\(3\\sqrt5=\\sqrt{45}\\),\n\\[\n7-3\\sqrt5=7-\\sqrt{45}\n\\]"
       }
     ],
@@ -18464,7 +18464,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve inequality",
         "body": "\\[\n2x^2-7x-15>0\n\\]"
       },
       {
@@ -18489,15 +18489,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Simultaneous equations. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve simultaneous equations",
         "body": "\\[\n3x+2y=10\n\\]\n\n\\[\n3x-4y=16\n\\]"
       },
       {
-        "title": "Subtract the second equation from",
+        "title": "Solve simultaneous equations",
         "body": "Subtract the second equation from the first:\n\\[\n6y=-6\n\\]\n\n\\[\ny=-1\n\\]"
       },
       {
-        "title": "Substitute into",
+        "title": "Solve simultaneous equations",
         "body": "Substitute into \\(3x+2y=10\\):\n\\[\n3x+2(-1)=10\n\\]\n\n\\[\n3x=12\n\\]\n\n\\[\nx=4\n\\]"
       }
     ],
@@ -18510,7 +18510,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Functions. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\nf(x)=3x-4,\\qquad g(x)=\\frac{x}{2x+1}\n\\]"
       },
       {
@@ -18531,11 +18531,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved to Coordinate Geometry.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nP=(-5,a), \\qquad Q=(7,3a)\n\\]"
       },
       {
-        "title": "The length of is ,",
+        "title": "Simplify surd",
         "body": "The length of \\(PQ\\) is \\(4\\sqrt{10}\\), so\n\n\\[\n\\sqrt{(7-(-5))^2+(3a-a)^2}=4\\sqrt{10}\n\\]\n\n\\[\n\\sqrt{12^2+(2a)^2}=4\\sqrt{10}\n\\]"
       },
       {
@@ -18543,11 +18543,11 @@ window.SOLUTION_DATA = {
         "body": "Square both sides:\n\n\\[\n144+4a^2=160\n\\]\n\n\\[\n4a^2=16\n\\]\n\n\\[\na^2=4\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Solve inequality",
         "body": "Since \\(a>0\\),\n\n\\[\na=2\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\nP=(-5,2), \\qquad Q=(7,6)\n\\]"
       },
       {
@@ -18559,11 +18559,11 @@ window.SOLUTION_DATA = {
         "body": "The gradient of \\(PQ\\) is\n\n\\[\n\\frac{6-2}{7-(-5)}=\\frac{4}{12}=\\frac{1}{3}\n\\]"
       },
       {
-        "title": "So the gradient of the",
+        "title": "Find the gradient",
         "body": "So the gradient of the perpendicular bisector is\n\n\\[\n-3\n\\]"
       },
       {
-        "title": "Using point",
+        "title": "Calculate value",
         "body": "Using point \\((1,4)\\):\n\n\\[\ny-4=-3(x-1)\n\\]\n\n\\[\ny=-3x+7\n\\]"
       }
     ],
@@ -18584,7 +18584,7 @@ window.SOLUTION_DATA = {
         "body": "A parallel line has the same gradient, so line L has form\n\\[\ny=-5x+c\n\\]"
       },
       {
-        "title": "Line L passes through ,",
+        "title": "Find the gradient",
         "body": "Line L passes through \\((0,6)\\), so\n\\[\n6=c\n\\]"
       }
     ],
@@ -18597,7 +18597,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "From the graph,",
+        "title": "Read the graph",
         "body": "From the graph,\n\n\\[\n\\text{maximum}=4\n\\]\n\n\\[\n\\text{minimum}=-2\n\\]"
       },
       {
@@ -18609,7 +18609,7 @@ window.SOLUTION_DATA = {
         "body": "The centre line is\n\n\\[\nc=\\frac{4+(-2)}{2}=1\n\\]"
       },
       {
-        "title": "The maximum is about .",
+        "title": "Use trigonometry",
         "body": "The maximum is about \\(45^\\circ\\). For a sine graph, a maximum happens when the angle inside the sine is \\(90^\\circ\\), so\n\n\\[\n45+b=90\n\\]\n\n\\[\nb=45\n\\]"
       }
     ],
@@ -18626,7 +18626,7 @@ window.SOLUTION_DATA = {
         "body": "The cuboid has dimensions\n\n\\[\nx,\\quad x,\\quad 15-4x\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\nV=x^2(15-4x)\n\\]\n\n\\[\nV=15x^2-4x^3\n\\]"
       },
       {
@@ -18634,7 +18634,7 @@ window.SOLUTION_DATA = {
         "body": "Differentiate:\n\n\\[\n\\frac{dV}{dx}=30x-12x^2\n\\]"
       },
       {
-        "title": "At a maximum,",
+        "title": "Calculate value",
         "body": "At a maximum,\n\n\\[\n30x-12x^2=0\n\\]\n\n\\[\n6x(5-2x)=0\n\\]"
       },
       {
@@ -18642,7 +18642,7 @@ window.SOLUTION_DATA = {
         "body": "The useful value is\n\n\\[\nx=2.5\n\\]"
       },
       {
-        "title": "Now substitute into the volume",
+        "title": "Calculate volume",
         "body": "Now substitute into the volume:\n\n\\[\nV=(2.5)^2(15-4(2.5))\n\\]\n\n\\[\nV=6.25\\times 5\n\\]\n\n\\[\nV=31.25\n\\]"
       }
     ],
@@ -18659,7 +18659,7 @@ window.SOLUTION_DATA = {
         "body": "Use\n\\[\n\\text{density}=\\frac{\\text{mass}}{\\text{volume}}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate volume",
         "body": "So\n\\[\n\\text{volume}=\\frac{\\text{mass}}{\\text{density}}\n=\\frac{48.3}{10.5}=4.6\n\\]"
       }
     ],
@@ -18672,27 +18672,27 @@ window.SOLUTION_DATA = {
     "topicNote": "Circle Theorems. The tag is correct.",
     "steps": [
       {
-        "title": "Since , triangle is isosceles",
+        "title": "Use trigonometry",
         "body": "Since \\(OA=OB\\), triangle \\(AOB\\) is isosceles:\n\\[\n\\angle ABO=36^\\circ\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\\[\n\\angle AOB=180^\\circ-36^\\circ-36^\\circ=108^\\circ\n\\]"
       },
       {
-        "title": "Since , triangle is isosceles",
+        "title": "Use trigonometry",
         "body": "Since \\(OB=OC\\), triangle \\(BOC\\) is isosceles:\n\\[\n\\angle OBC=21^\\circ\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\\[\n\\angle BOC=180^\\circ-21^\\circ-21^\\circ=138^\\circ\n\\]"
       },
       {
-        "title": "Angles around add to",
+        "title": "Use circle theorem",
         "body": "Angles around \\(O\\) add to \\(360^\\circ\\):\n\\[\n\\angle AOC=360^\\circ-108^\\circ-138^\\circ=114^\\circ\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Use trigonometry",
         "body": "Since \\(OA=OC\\),\n\\[\n\\angle ACO=\\frac{180^\\circ-114^\\circ}{2}=33^\\circ\n\\]"
       }
     ],
@@ -18709,7 +18709,7 @@ window.SOLUTION_DATA = {
         "body": "The volume of a hemisphere is\n\n\\[\n\\frac{2}{3}\\pi r^3\n\\]"
       },
       {
-        "title": "For the original hemisphere ,",
+        "title": "Evaluate fraction",
         "body": "For the original hemisphere \\(H\\),\n\n\\[\n\\frac{2}{3}\\pi x^3=6174\\pi\n\\]"
       },
       {
@@ -18721,7 +18721,7 @@ window.SOLUTION_DATA = {
         "body": "The outer radius of the bowl is \\(21\\) cm."
       },
       {
-        "title": "The thickness is cm, so",
+        "title": "Calculate value",
         "body": "The thickness is \\(2\\) cm, so the inner radius is\n\n\\[\n21-2=19\n\\]"
       },
       {
@@ -18758,15 +18758,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to right-angled triangles. The solution uses Pythagoras twice.",
     "steps": [
       {
-        "title": "In right angled triangle ,",
+        "title": "Use trigonometry",
         "body": "In right-angled triangle \\(AFD\\),\n\\[\nAD^2=28^2+45^2\n\\]\n\n\\[\nAD^2=2809\n\\]\n\n\\[\nAD=53\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Use trigonometry",
         "body": "Since \\(AB=21\\),\n\\[\nBD=53-21=32\n\\]"
       },
       {
-        "title": "In right angled triangle ,",
+        "title": "Use trigonometry",
         "body": "In right-angled triangle \\(CBD\\),\n\\[\nCB^2=35^2-32^2\n\\]\n\n\\[\nCB^2=201\n\\]\n\n\\[\nCB=\\sqrt{201}\n\\]"
       },
       {
@@ -18783,7 +18783,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Coordinate Geometry to 3D Pythagoras & Trigonometry.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use trigonometry",
         "body": "\\[\nAC=40\n\\]"
       },
       {
@@ -18791,11 +18791,11 @@ window.SOLUTION_DATA = {
         "body": "The point \\(E\\) is vertically above \\(C\\), so triangle \\(ACE\\) is right-angled at \\(C\\).\n\n\\[\n\\angle CAE=35^\\circ\n\\]\n\n\\[\n\\tan35^\\circ=\\frac{CE}{AC}\n\\]\n\n\\[\nCE=40\\tan35^\\circ\n\\]"
       },
       {
-        "title": "Since is the midpoint of",
+        "title": "Find the midpoint",
         "body": "Since \\(M\\) is the midpoint of \\(AC\\),\n\n\\[\nCM=20\n\\]"
       },
       {
-        "title": "In right triangle ,",
+        "title": "Use trigonometry",
         "body": "In right triangle \\(CME\\),\n\n\\[\n\\tan \\angle CME=\\frac{CE}{CM}\n\\]\n\n\\[\n\\tan \\angle CME=\\frac{40\\tan35^\\circ}{20}\n\\]\n\n\\[\n\\tan \\angle CME=2\\tan35^\\circ\n\\]\n\n\\[\n\\angle CME=54.5^\\circ\n\\]"
       }
     ],
@@ -18808,11 +18808,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Vectors.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use vectors",
         "body": "\\[\n\\overrightarrow{AB}=\\overrightarrow{OB}-\\overrightarrow{OA}=4\\mathbf b-4\\mathbf a\n\\]"
       },
       {
-        "title": "Since , point is one",
+        "title": "Use vectors",
         "body": "Since \\(AP:PB=1:3\\), point \\(P\\) is one quarter of the way from \\(A\\) to \\(B\\).\n\n\\[\n\\overrightarrow{AP}=\\frac14\\overrightarrow{AB}\n=\\frac14(4\\mathbf b-4\\mathbf a)\n=\\mathbf b-\\mathbf a\n\\]\n\n\\[\n\\overrightarrow{OP}=\\overrightarrow{OA}+\\overrightarrow{AP}\n=4\\mathbf a+\\mathbf b-\\mathbf a\n=3\\mathbf a+\\mathbf b\n\\]"
       }
     ],
@@ -18875,15 +18875,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "For a histogram,",
+        "title": "Use histogram",
         "body": "For a histogram,\n\n\\[\n\\text{frequency}=\\text{class width}\\times \\text{frequency density}\n\\]"
       },
       {
-        "title": "For books weighing less than",
+        "title": "Use frequency table",
         "body": "For books weighing less than 100 g, the frequency is 75 and the class width is 100, so\n\n\\[\n\\text{frequency density}=\\frac{75}{100}=0.75\n\\]"
       },
       {
-        "title": "Using this scale from the",
+        "title": "Use histogram",
         "body": "Using this scale from the histogram, the frequency densities are:\n\n\\[\n0.75,\\ 2.25,\\ 1.0,\\ 2.5,\\ 0.25\n\\]"
       },
       {
@@ -18891,28 +18891,28 @@ window.SOLUTION_DATA = {
         "body": "The total number of books is\n\n\\[\n(100)(0.75)+(100)(2.25)+(250)(1.0)+(50)(2.5)+(200)(0.25)\n\\]\n\n\\[\n=75+225+250+125+50=725\n\\]"
       },
       {
-        "title": "For weights between 400 g",
+        "title": "Calculate value",
         "body": "For weights between 400 g and 600 g:\n\n\\[\n(50)(1.0)+(50)(2.5)+(100)(0.25)\n\\]\n\n\\[\n=50+125+25=200\n\\]"
       },
       {
-        "title": "So the probability is",
+        "title": "Calculate probability",
         "body": "So the probability is\n\n\\[\n\\frac{200}{725}=\\frac{8}{29}\n\\]"
       }
     ],
     "finalAnswer": "\\(\\frac{8}{29}\\) or \\(0.276\\) to 3 significant figures"
   },
   "all::Jun2025_P2HR__Q14__p14-15__m07__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Bag A has red and",
+        "title": "Calculate probability",
         "body": "Bag A has \\(5\\) red and \\(4\\) green beads:\n\n\\[\nP(A_R)=\\frac59,\\qquad P(A_G)=\\frac49\n\\]"
       },
       {
-        "title": "Bag B has red and",
+        "title": "Calculate probability",
         "body": "Bag B has \\(7\\) red and \\(3\\) green beads:\n\n\\[\nP(B_R)=\\frac7{10},\\qquad P(B_G)=\\frac3{10}\n\\]"
       },
       {
@@ -18920,7 +18920,7 @@ window.SOLUTION_DATA = {
         "body": "Two red beads:\n\n\\[\n\\frac59\\times\\frac7{10}=\\frac7{18}\n\\]"
       },
       {
-        "title": "For part (c), the box",
+        "title": "Calculate probability",
         "body": "For part (c), the box has\n\n\\[\nP(\\text{green})=\\frac2{11},\\qquad P(\\text{red})=\\frac9{11}\n\\]"
       },
       {
@@ -18937,7 +18937,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve inequality",
         "body": "\\[\n2x^2-7x-15>0\n\\]"
       },
       {
@@ -18962,11 +18962,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved to Coordinate Geometry.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nP=(-5,a), \\qquad Q=(7,3a)\n\\]"
       },
       {
-        "title": "The length of is ,",
+        "title": "Simplify surd",
         "body": "The length of \\(PQ\\) is \\(4\\sqrt{10}\\), so\n\n\\[\n\\sqrt{(7-(-5))^2+(3a-a)^2}=4\\sqrt{10}\n\\]\n\n\\[\n\\sqrt{12^2+(2a)^2}=4\\sqrt{10}\n\\]"
       },
       {
@@ -18974,11 +18974,11 @@ window.SOLUTION_DATA = {
         "body": "Square both sides:\n\n\\[\n144+4a^2=160\n\\]\n\n\\[\n4a^2=16\n\\]\n\n\\[\na^2=4\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Solve inequality",
         "body": "Since \\(a>0\\),\n\n\\[\na=2\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\nP=(-5,2), \\qquad Q=(7,6)\n\\]"
       },
       {
@@ -18990,11 +18990,11 @@ window.SOLUTION_DATA = {
         "body": "The gradient of \\(PQ\\) is\n\n\\[\n\\frac{6-2}{7-(-5)}=\\frac{4}{12}=\\frac{1}{3}\n\\]"
       },
       {
-        "title": "So the gradient of the",
+        "title": "Find the gradient",
         "body": "So the gradient of the perpendicular bisector is\n\n\\[\n-3\n\\]"
       },
       {
-        "title": "Using point",
+        "title": "Calculate value",
         "body": "Using point \\((1,4)\\):\n\n\\[\ny-4=-3(x-1)\n\\]\n\n\\[\ny=-3x+7\n\\]"
       }
     ],
@@ -19007,7 +19007,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "From the graph,",
+        "title": "Read the graph",
         "body": "From the graph,\n\n\\[\n\\text{maximum}=4\n\\]\n\n\\[\n\\text{minimum}=-2\n\\]"
       },
       {
@@ -19019,7 +19019,7 @@ window.SOLUTION_DATA = {
         "body": "The centre line is\n\n\\[\nc=\\frac{4+(-2)}{2}=1\n\\]"
       },
       {
-        "title": "The maximum is about .",
+        "title": "Use trigonometry",
         "body": "The maximum is about \\(45^\\circ\\). For a sine graph, a maximum happens when the angle inside the sine is \\(90^\\circ\\), so\n\n\\[\n45+b=90\n\\]\n\n\\[\nb=45\n\\]"
       }
     ],
@@ -19036,7 +19036,7 @@ window.SOLUTION_DATA = {
         "body": "The cuboid has dimensions\n\n\\[\nx,\\quad x,\\quad 15-4x\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\nV=x^2(15-4x)\n\\]\n\n\\[\nV=15x^2-4x^3\n\\]"
       },
       {
@@ -19044,7 +19044,7 @@ window.SOLUTION_DATA = {
         "body": "Differentiate:\n\n\\[\n\\frac{dV}{dx}=30x-12x^2\n\\]"
       },
       {
-        "title": "At a maximum,",
+        "title": "Calculate value",
         "body": "At a maximum,\n\n\\[\n30x-12x^2=0\n\\]\n\n\\[\n6x(5-2x)=0\n\\]"
       },
       {
@@ -19052,7 +19052,7 @@ window.SOLUTION_DATA = {
         "body": "The useful value is\n\n\\[\nx=2.5\n\\]"
       },
       {
-        "title": "Now substitute into the volume",
+        "title": "Calculate volume",
         "body": "Now substitute into the volume:\n\n\\[\nV=(2.5)^2(15-4(2.5))\n\\]\n\n\\[\nV=6.25\\times 5\n\\]\n\n\\[\nV=31.25\n\\]"
       }
     ],
@@ -19069,7 +19069,7 @@ window.SOLUTION_DATA = {
         "body": "The volume of a hemisphere is\n\n\\[\n\\frac{2}{3}\\pi r^3\n\\]"
       },
       {
-        "title": "For the original hemisphere ,",
+        "title": "Evaluate fraction",
         "body": "For the original hemisphere \\(H\\),\n\n\\[\n\\frac{2}{3}\\pi x^3=6174\\pi\n\\]"
       },
       {
@@ -19081,7 +19081,7 @@ window.SOLUTION_DATA = {
         "body": "The outer radius of the bowl is \\(21\\) cm."
       },
       {
-        "title": "The thickness is cm, so",
+        "title": "Calculate value",
         "body": "The thickness is \\(2\\) cm, so the inner radius is\n\n\\[\n21-2=19\n\\]"
       },
       {
@@ -19118,7 +19118,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Coordinate Geometry to 3D Pythagoras & Trigonometry.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use trigonometry",
         "body": "\\[\nAC=40\n\\]"
       },
       {
@@ -19126,11 +19126,11 @@ window.SOLUTION_DATA = {
         "body": "The point \\(E\\) is vertically above \\(C\\), so triangle \\(ACE\\) is right-angled at \\(C\\).\n\n\\[\n\\angle CAE=35^\\circ\n\\]\n\n\\[\n\\tan35^\\circ=\\frac{CE}{AC}\n\\]\n\n\\[\nCE=40\\tan35^\\circ\n\\]"
       },
       {
-        "title": "Since is the midpoint of",
+        "title": "Find the midpoint",
         "body": "Since \\(M\\) is the midpoint of \\(AC\\),\n\n\\[\nCM=20\n\\]"
       },
       {
-        "title": "In right triangle ,",
+        "title": "Use trigonometry",
         "body": "In right triangle \\(CME\\),\n\n\\[\n\\tan \\angle CME=\\frac{CE}{CM}\n\\]\n\n\\[\n\\tan \\angle CME=\\frac{40\\tan35^\\circ}{20}\n\\]\n\n\\[\n\\tan \\angle CME=2\\tan35^\\circ\n\\]\n\n\\[\n\\angle CME=54.5^\\circ\n\\]"
       }
     ],
@@ -19143,15 +19143,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "For a histogram,",
+        "title": "Use histogram",
         "body": "For a histogram,\n\n\\[\n\\text{frequency}=\\text{class width}\\times \\text{frequency density}\n\\]"
       },
       {
-        "title": "For books weighing less than",
+        "title": "Use frequency table",
         "body": "For books weighing less than 100 g, the frequency is 75 and the class width is 100, so\n\n\\[\n\\text{frequency density}=\\frac{75}{100}=0.75\n\\]"
       },
       {
-        "title": "Using this scale from the",
+        "title": "Use histogram",
         "body": "Using this scale from the histogram, the frequency densities are:\n\n\\[\n0.75,\\ 2.25,\\ 1.0,\\ 2.5,\\ 0.25\n\\]"
       },
       {
@@ -19159,11 +19159,11 @@ window.SOLUTION_DATA = {
         "body": "The total number of books is\n\n\\[\n(100)(0.75)+(100)(2.25)+(250)(1.0)+(50)(2.5)+(200)(0.25)\n\\]\n\n\\[\n=75+225+250+125+50=725\n\\]"
       },
       {
-        "title": "For weights between 400 g",
+        "title": "Calculate value",
         "body": "For weights between 400 g and 600 g:\n\n\\[\n(50)(1.0)+(50)(2.5)+(100)(0.25)\n\\]\n\n\\[\n=50+125+25=200\n\\]"
       },
       {
-        "title": "So the probability is",
+        "title": "Calculate probability",
         "body": "So the probability is\n\n\\[\n\\frac{200}{725}=\\frac{8}{29}\n\\]"
       }
     ],
@@ -19184,15 +19184,15 @@ window.SOLUTION_DATA = {
         "body": "- \\(A\\) only is \\(12\\)\n- \\(A\\cap B\\) only is \\(5\\)\n- \\(B\\) only is \\(9\\)\n- \\(A\\cap C\\) only is \\(10\\)\n- all three is \\(6\\)\n- \\(B\\cap C\\) only is \\(3\\)\n- \\(C\\) only is \\(4\\)\n- outside is \\(8\\)"
       },
       {
-        "title": "For , add every region",
+        "title": "Add every region inside",
         "body": "For \\(A\\cup B\\), add every region inside \\(A\\) or \\(B\\):\n\n\\[\n12+5+9+10+6+3=45\n\\]"
       },
       {
-        "title": "For , add the regions",
+        "title": "Add the regions outside both",
         "body": "For \\(A'\\cap B'\\), add the regions outside both \\(A\\) and \\(B\\):\n\n\\[\n4+8=12\n\\]"
       },
       {
-        "title": "For , add and all",
+        "title": "Add and all",
         "body": "For \\((A\\cap B)\\cup C\\), add \\(A\\cap B\\) and all of \\(C\\):\n\n\\[\n5+6+10+3+4=28\n\\]"
       }
     ],
@@ -19205,7 +19205,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Powers, roots and standard form. The tag is correct.",
     "steps": [
       {
-        "title": "For part (a),",
+        "title": "Convert standard form",
         "body": "For part (a),\n\n\\[\n1.4\\times 10^9=1400000000\n\\]\n\n\\[\n8.2\\times 10^7=82000000\n\\]"
       },
       {
@@ -19213,15 +19213,15 @@ window.SOLUTION_DATA = {
         "body": "Difference:\n\n\\[\n1400000000-82000000=1318000000\n\\]\n\n\\[\n1318000000=1.318\\times 10^9\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Convert standard form",
         "body": "For part (b),\n\n\\[\n\\text{population of Fiji}=\\frac{1}{k}\\times \\text{population of Sweden}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Convert standard form",
         "body": "So\n\n\\[\nk=\\frac{\\text{population of Sweden}}{\\text{population of Fiji}}\n\\]\n\n\\[\nk=\\frac{9.9\\times 10^6}{9.1\\times 10^5}=10.879\\ldots\n\\]"
       },
       {
-        "title": "To the nearest whole number,",
+        "title": "Convert standard form",
         "body": "To the nearest whole number,\n\n\\[\nk=11\n\\]"
       }
     ],
@@ -19234,11 +19234,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Estimate the value",
         "body": "\\[\nP=\\frac{t-w}{y}\n\\]"
       },
       {
-        "title": "For the upper bound, make",
+        "title": "Find upper bound",
         "body": "For the upper bound, make the numerator large and the denominator small.\n\n\\[\nt<9.75,\\quad w\\ge 5.85,\\quad y\\ge 2.5\n\\]\n\n\\[\nP_{\\text{upper}}=\\frac{9.75-5.85}{2.5}=1.56\n\\]"
       }
     ],
@@ -19255,7 +19255,7 @@ window.SOLUTION_DATA = {
         "body": "Ducks : pigs \\(=5:9\\)."
       },
       {
-        "title": "There are pigs, so",
+        "title": "Split the ratio",
         "body": "There are \\(36\\) pigs, so\n\n\\[\n9\\text{ parts}=36\n\\]\n\n\\[\n1\\text{ part}=4\n\\]\n\n\\[\n\\text{ducks}=5\\times 4=20\n\\]"
       },
       {
@@ -19272,7 +19272,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic Roots and Indices. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\n\\sqrt2\\times 16=2^x\n\\]"
       },
       {
@@ -19280,19 +19280,19 @@ window.SOLUTION_DATA = {
         "body": "Write both factors as powers of 2:\n\n\\[\n\\sqrt2=2^{1/2}, \\quad 16=2^4\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use index laws",
         "body": "So\n\n\\[\n2^{1/2}\\times 2^4=2^{9/2}\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Use index laws",
         "body": "Therefore\n\n\\[\nx=\\frac92\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Use index laws",
         "body": "For part (b),\n\n\\[\n\\frac{(11^{-6})^5}{11^4}=\\frac{11^{-30}}{11^4}=11^{-30-4}=11^{-34}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use index laws",
         "body": "So\n\n\\[\nn=-34\n\\]"
       }
     ],
@@ -19305,7 +19305,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Expanding brackets. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Expand brackets",
         "body": "\\[\n4x(3x+1)(2x-3)=4x(6x^2-7x-3)\n\\]\n\n\\[\n=24x^3-28x^2-12x\n\\]"
       }
     ],
@@ -19339,11 +19339,11 @@ window.SOLUTION_DATA = {
         "body": "Given\n\n\\[\nx=\\frac5{9y+5}\n\\]"
       },
       {
-        "title": "and",
+        "title": "Use trigonometry",
         "body": "and\n\n\\[\ny=\\frac5{5a-2}\n\\]"
       },
       {
-        "title": "Substitute into the expression for",
+        "title": "Use cosine rule",
         "body": "Substitute \\(y=\\frac5{5a-2}\\) into the expression for \\(x\\):\n\n\\[\nx=\\frac5{9\\left(\\frac5{5a-2}\\right)+5}\n\\]\n\n\\[\nx=\\frac5{\\frac{45}{5a-2}+5}\n\\]"
       },
       {
@@ -19351,7 +19351,7 @@ window.SOLUTION_DATA = {
         "body": "Write the denominator as a single fraction:\n\n\\[\n\\frac{45}{5a-2}+5\n=\\frac{45+5(5a-2)}{5a-2}\n\\]\n\n\\[\n=\\frac{45+25a-10}{5a-2}\n\\]\n\n\\[\n=\\frac{25a+35}{5a-2}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\nx=5\\div\\frac{25a+35}{5a-2}\n\\]\n\n\\[\nx=5\\times\\frac{5a-2}{25a+35}\n\\]\n\n\\[\nx=\\frac{5(5a-2)}{5(5a+7)}\n\\]\n\n\\[\nx=\\frac{5a-2}{5a+7}\n\\]"
       }
     ],
@@ -19376,7 +19376,7 @@ window.SOLUTION_DATA = {
         "body": "(c)\n\\[\n\\frac{w^5\\times w^n}{w^3}=w^{n+2}=w^{10}\n\\]"
       },
       {
-        "title": "So , hence",
+        "title": "Rearrange formula",
         "body": "So \\(n+2=10\\), hence \\(n=8\\)."
       }
     ],
@@ -19393,11 +19393,11 @@ window.SOLUTION_DATA = {
         "body": "Let\n\\[\nx=0.28131313\\ldots\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\\[\n100x=28.131313\\ldots\n\\]"
       },
       {
-        "title": "and",
+        "title": "Calculate value",
         "body": "and\n\\[\n10000x=2813.131313\\ldots\n\\]"
       },
       {
@@ -19426,7 +19426,7 @@ window.SOLUTION_DATA = {
         "body": "The difference between the square of the largest and the square of the smallest is\n\\[\n(2n+2)^2-(2n-2)^2\n\\]\n\n\\[\n=(4n^2+8n+4)-(4n^2-8n+4)\n\\]\n\n\\[\n=16n\n\\]"
       },
       {
-        "title": "Since , the result is",
+        "title": "Calculate value",
         "body": "Since \\(8\\times\\text{middle number}=8(2n)=16n\\), the result is 8 times the middle number."
       }
     ],
@@ -19447,7 +19447,7 @@ window.SOLUTION_DATA = {
         "body": "Divide by 2:\n\\[\n-2\\le y<3\n\\]"
       },
       {
-        "title": "Since is an integer,",
+        "title": "Calculate value",
         "body": "Since \\(y\\) is an integer,\n\\[\ny=-2,-1,0,1,2\n\\]"
       },
       {
@@ -19518,7 +19518,7 @@ window.SOLUTION_DATA = {
         "body": "Let\n\n\\[\ny=5(x-1)^2+2\n\\]\n\n\\[\n(x-1)^2=\\frac{y-2}{5}\n\\]"
       },
       {
-        "title": "Since the domain is ,",
+        "title": "Find inverse function",
         "body": "Since the domain is \\(x\\ge 1\\), take the positive square root:\n\n\\[\nx=1+\\sqrt{\\frac{y-2}{5}}\n\\]"
       }
     ],
@@ -19531,7 +19531,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Standard & Compound Units.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\n8\\text{ h }12\\text{ min}=8+\\frac{12}{60}=8.2\\text{ hours}\n\\]\n\n\\[\n\\text{average speed}=\\frac{5658}{8.2}=690\n\\]"
       }
     ],
@@ -19544,19 +19544,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Circle Theorems. The tag is correct.",
     "steps": [
       {
-        "title": "The reflex angle is ,",
+        "title": "Use trigonometry",
         "body": "The reflex angle \\(POR\\) is \\(238^\\circ\\), so the smaller angle is\n\\[\n360^\\circ-238^\\circ=122^\\circ\n\\]"
       },
       {
-        "title": "Since , triangle is isosceles",
+        "title": "Use trigonometry",
         "body": "Since \\(OP=OR\\), triangle \\(OPR\\) is isosceles:\n\\[\n\\angle OPR=\\frac{180^\\circ-122^\\circ}{2}=29^\\circ\n\\]"
       },
       {
-        "title": "By the alternate segment theorem,",
+        "title": "Use trigonometry",
         "body": "By the alternate segment theorem,\n\\[\n\\angle QPR=60^\\circ\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Use trigonometry",
         "body": "Therefore\n\\[\n\\angle QPO=60^\\circ-29^\\circ=31^\\circ\n\\]"
       }
     ],
@@ -19577,7 +19577,7 @@ window.SOLUTION_DATA = {
         "body": "Rectangle area:\n\\[\n14x\n\\]"
       },
       {
-        "title": "The triangle has base and",
+        "title": "Use trigonometry",
         "body": "The triangle has base \\(13-x\\) and height \\(6\\), so its area is\n\\[\n\\frac12(13-x)(6)=39-3x\n\\]"
       },
       {
@@ -19594,7 +19594,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Circles, Arcs & Sectors. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\n\\text{arc length}=\\frac{50}{360}\\times 2\\pi(7)\n\\]\n\n\\[\n=6.108\\ldots\n\\]"
       }
     ],
@@ -19607,7 +19607,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved to Circles, Arcs & Sectors.",
     "steps": [
       {
-        "title": "For the circle with centre",
+        "title": "Use trigonometry",
         "body": "For the circle with centre \\(O\\):\n\n\\[\n\\angle AOB=50^\\circ,\\qquad OA=OB=5\n\\]"
       },
       {
@@ -19615,11 +19615,11 @@ window.SOLUTION_DATA = {
         "body": "The half chord length is\n\n\\[\n\\frac{AB}{2}=5\\sin 25^\\circ\n\\]"
       },
       {
-        "title": "For the circle with centre",
+        "title": "Use trigonometry",
         "body": "For the circle with centre \\(P\\), let\n\n\\[\n\\angle APB=\\theta\n\\]"
       },
       {
-        "title": "The radius is , so",
+        "title": "Use trigonometry",
         "body": "The radius is \\(4\\), so\n\n\\[\n4\\sin\\left(\\frac{\\theta}{2}\\right)=5\\sin 25^\\circ\n\\]\n\n\\[\n\\sin\\left(\\frac{\\theta}{2}\\right)=\\frac{5\\sin 25^\\circ}{4}\n\\]\n\n\\[\n\\theta=63.7777\\ldots^\\circ\n\\]"
       },
       {
@@ -19627,11 +19627,11 @@ window.SOLUTION_DATA = {
         "body": "The common region is made from two minor segments."
       },
       {
-        "title": "For the circle with centre",
+        "title": "Use trigonometry",
         "body": "For the circle with centre \\(O\\):\n\n\\[\n\\text{segment area}\n=\\frac{50}{360}\\pi(5)^2-\\frac{1}{2}(5)^2\\sin 50^\\circ\n=1.3328\\ldots\n\\]"
       },
       {
-        "title": "For the circle with centre",
+        "title": "Use trigonometry",
         "body": "For the circle with centre \\(P\\):\n\n\\[\n\\text{segment area}\n=\\frac{\\theta}{360}\\pi(4)^2-\\frac{1}{2}(4)^2\\sin \\theta\n\\]\n\n\\[\n=1.7284\\ldots\n\\]"
       },
       {
@@ -19648,7 +19648,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "The triangular end is isosceles,",
+        "title": "Calculate value",
         "body": "The triangular end is isosceles, with\n\n\\[\nAC=BC=12,\\qquad AB=10\n\\]"
       },
       {
@@ -19660,7 +19660,7 @@ window.SOLUTION_DATA = {
         "body": "The projection of \\(AD\\) on the horizontal base goes from \\(A\\) to the midpoint of \\(FE\\). Its length is\n\n\\[\n\\sqrt{15^2+5^2}=\\sqrt{250}\n\\]"
       },
       {
-        "title": "So, for the angle between",
+        "title": "Use trigonometry",
         "body": "So, for the angle \\(\\theta\\) between \\(AD\\) and the base,\n\n\\[\n\\tan \\theta=\\frac{\\sqrt{119}}{\\sqrt{250}}\n\\]\n\n\\[\n\\theta=\\tan^{-1}\\left(\\frac{\\sqrt{119}}{\\sqrt{250}}\\right)=34.602\\ldots\n\\]"
       }
     ],
@@ -19673,31 +19673,31 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved to Vectors.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use vectors",
         "body": "\\[\n\\overrightarrow{OA}=2\\mathbf a,\\qquad\n\\overrightarrow{OB}=5\\mathbf b,\\qquad\n\\overrightarrow{AC}=3\\mathbf b\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use vectors",
         "body": "So\n\n\\[\n\\overrightarrow{OC}\n=\\overrightarrow{OA}+\\overrightarrow{AC}\n=2\\mathbf a+3\\mathbf b\n\\]"
       },
       {
-        "title": "Since lies on , let",
+        "title": "Use vectors",
         "body": "Since \\(P\\) lies on \\(OC\\), let\n\n\\[\n\\overrightarrow{OP}=t(2\\mathbf a+3\\mathbf b)\n\\]"
       },
       {
-        "title": "Since also lies on ,",
+        "title": "Use vectors",
         "body": "Since \\(P\\) also lies on \\(AB\\), let\n\n\\[\n\\overrightarrow{OP}\n=\\overrightarrow{OA}+s\\overrightarrow{AB}\n\\]"
       },
       {
-        "title": "Now",
+        "title": "Use vectors",
         "body": "Now\n\n\\[\n\\overrightarrow{AB}\n=\\overrightarrow{OB}-\\overrightarrow{OA}\n=5\\mathbf b-2\\mathbf a\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use vectors",
         "body": "So\n\n\\[\n\\overrightarrow{OP}\n=2\\mathbf a+s(5\\mathbf b-2\\mathbf a)\n\\]\n\n\\[\n\\overrightarrow{OP}\n=(2-2s)\\mathbf a+5s\\mathbf b\n\\]"
       },
       {
-        "title": "Compare this with",
+        "title": "Use vectors",
         "body": "Compare this with\n\n\\[\nt(2\\mathbf a+3\\mathbf b)=2t\\mathbf a+3t\\mathbf b\n\\]"
       },
       {
@@ -19705,15 +19705,15 @@ window.SOLUTION_DATA = {
         "body": "Equating coefficients:\n\n\\[\n2t=2-2s\n\\]\n\n\\[\n3t=5s\n\\]"
       },
       {
-        "title": "From ,",
+        "title": "Use vectors",
         "body": "From \\(t=1-s\\),\n\n\\[\n3(1-s)=5s\n\\]\n\n\\[\n3=8s\n\\]\n\n\\[\ns=\\frac{3}{8}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use vectors",
         "body": "So\n\n\\[\nt=1-\\frac{3}{8}=\\frac{5}{8}\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Use vectors",
         "body": "Therefore\n\n\\[\n\\overrightarrow{OP}\n=\\frac{5}{8}(2\\mathbf a+3\\mathbf b)\n\\]\n\n\\[\n\\overrightarrow{OP}\n=\\frac{5}{4}\\mathbf a+\\frac{15}{8}\\mathbf b\n\\]"
       }
     ],
@@ -19730,11 +19730,11 @@ window.SOLUTION_DATA = {
         "body": "The total for the first 5 tests is\n\n\\[\n5 \\times 74=370\n\\]"
       },
       {
-        "title": "For an average of at",
+        "title": "Calculate value",
         "body": "For an average of at least \\(77\\) after 6 tests, the total must be at least\n\n\\[\n6 \\times 77=462\n\\]"
       },
       {
-        "title": "So the last test score",
+        "title": "Calculate value",
         "body": "So the last test score must be at least\n\n\\[\n462-370=92\n\\]"
       }
     ],
@@ -19760,11 +19760,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Histograms. The tag is correct.",
     "steps": [
       {
-        "title": "The class has frequency ,",
+        "title": "Use histogram",
         "body": "The \\(0\\le d<10\\) class has frequency \\(40\\), so its density is\n\n\\[\n\\frac{40}{10}=4\n\\]"
       },
       {
-        "title": "From the histogram, the missing",
+        "title": "Use histogram",
         "body": "From the histogram, the missing frequencies are\n\n\\[\n10\\le d<15:\\ 35,\\qquad 15\\le d<20:\\ 40,\\qquad 20\\le d<30:\\ 60\n\\]"
       },
       {
@@ -19772,15 +19772,15 @@ window.SOLUTION_DATA = {
         "body": "Together with the table:\n\n\\[\n40+35+40+60+30=205\n\\]"
       },
       {
-        "title": "For",
+        "title": "Use histogram",
         "body": "For \\(d>25\\):\n\n\\[\n5(6)+30=60\n\\]\n\n\\[\nP(d>25)=\\frac{60}{205}=\\frac{12}{41}\n\\]"
       }
     ],
     "finalAnswer": "completed frequencies \\(35,40,60\\), missing histogram density \\(1\\), and probability \\(\\frac{12}{41}\\)."
   },
   "all::May2021_P1H__Q06__p07-07__m05__Probability-Toolkit": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
@@ -19789,7 +19789,7 @@ window.SOLUTION_DATA = {
         "body": "Let the probability of pink be \\(x\\). Then the probability of orange is \\(3x\\).\n\n\\[\n0.20+0.12+0.08+x+3x=1\n\\]\n\n\\[\n4x=0.60\n\\]\n\n\\[\nx=0.15\n\\]"
       },
       {
-        "title": "So the probability of orange",
+        "title": "Calculate probability",
         "body": "So the probability of orange is\n\n\\[\n3x=0.45\n\\]"
       },
       {
@@ -19806,11 +19806,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Rounding, Estimation & Bounds is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Estimate the value",
         "body": "\\[\nP=\\frac{t-w}{y}\n\\]"
       },
       {
-        "title": "For the upper bound of",
+        "title": "Find upper bound",
         "body": "For the upper bound of \\(P\\), make the numerator as large as possible and the denominator as small as possible.\n\n\\(t=9.75,\\quad w=5.85,\\quad y=2.5\\)\n\n\\[\nP=\\frac{9.75-5.85}{2.5}\n\\]\n\n\\[\nP=\\frac{3.90}{2.5}=1.56\n\\]"
       }
     ],
@@ -19827,11 +19827,11 @@ window.SOLUTION_DATA = {
         "body": "Given\n\n\\[\nx=\\frac5{9y+5}\n\\]"
       },
       {
-        "title": "and",
+        "title": "Use trigonometry",
         "body": "and\n\n\\[\ny=\\frac5{5a-2}\n\\]"
       },
       {
-        "title": "Substitute into the expression for",
+        "title": "Use cosine rule",
         "body": "Substitute \\(y=\\frac5{5a-2}\\) into the expression for \\(x\\):\n\n\\[\nx=\\frac5{9\\left(\\frac5{5a-2}\\right)+5}\n\\]\n\n\\[\nx=\\frac5{\\frac{45}{5a-2}+5}\n\\]"
       },
       {
@@ -19839,7 +19839,7 @@ window.SOLUTION_DATA = {
         "body": "Write the denominator as a single fraction:\n\n\\[\n\\frac{45}{5a-2}+5\n=\\frac{45+5(5a-2)}{5a-2}\n\\]\n\n\\[\n=\\frac{45+25a-10}{5a-2}\n\\]\n\n\\[\n=\\frac{25a+35}{5a-2}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\nx=5\\div\\frac{25a+35}{5a-2}\n\\]\n\n\\[\nx=5\\times\\frac{5a-2}{25a+35}\n\\]\n\n\\[\nx=\\frac{5(5a-2)}{5(5a+7)}\n\\]\n\n\\[\nx=\\frac{5a-2}{5a+7}\n\\]"
       }
     ],
@@ -19889,7 +19889,7 @@ window.SOLUTION_DATA = {
         "body": "Let\n\n\\[\ny=5(x-1)^2+2\n\\]\n\n\\[\n(x-1)^2=\\frac{y-2}{5}\n\\]"
       },
       {
-        "title": "Since the domain is ,",
+        "title": "Find inverse function",
         "body": "Since the domain is \\(x\\ge 1\\), take the positive square root:\n\n\\[\nx=1+\\sqrt{\\frac{y-2}{5}}\n\\]"
       }
     ],
@@ -19902,7 +19902,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved to Circles, Arcs & Sectors.",
     "steps": [
       {
-        "title": "For the circle with centre",
+        "title": "Use trigonometry",
         "body": "For the circle with centre \\(O\\):\n\n\\[\n\\angle AOB=50^\\circ,\\qquad OA=OB=5\n\\]"
       },
       {
@@ -19910,11 +19910,11 @@ window.SOLUTION_DATA = {
         "body": "The half chord length is\n\n\\[\n\\frac{AB}{2}=5\\sin 25^\\circ\n\\]"
       },
       {
-        "title": "For the circle with centre",
+        "title": "Use trigonometry",
         "body": "For the circle with centre \\(P\\), let\n\n\\[\n\\angle APB=\\theta\n\\]"
       },
       {
-        "title": "The radius is , so",
+        "title": "Use trigonometry",
         "body": "The radius is \\(4\\), so\n\n\\[\n4\\sin\\left(\\frac{\\theta}{2}\\right)=5\\sin 25^\\circ\n\\]\n\n\\[\n\\sin\\left(\\frac{\\theta}{2}\\right)=\\frac{5\\sin 25^\\circ}{4}\n\\]\n\n\\[\n\\theta=63.7777\\ldots^\\circ\n\\]"
       },
       {
@@ -19922,11 +19922,11 @@ window.SOLUTION_DATA = {
         "body": "The common region is made from two minor segments."
       },
       {
-        "title": "For the circle with centre",
+        "title": "Use trigonometry",
         "body": "For the circle with centre \\(O\\):\n\n\\[\n\\text{segment area}\n=\\frac{50}{360}\\pi(5)^2-\\frac{1}{2}(5)^2\\sin 50^\\circ\n=1.3328\\ldots\n\\]"
       },
       {
-        "title": "For the circle with centre",
+        "title": "Use trigonometry",
         "body": "For the circle with centre \\(P\\):\n\n\\[\n\\text{segment area}\n=\\frac{\\theta}{360}\\pi(4)^2-\\frac{1}{2}(4)^2\\sin \\theta\n\\]\n\n\\[\n=1.7284\\ldots\n\\]"
       },
       {
@@ -19943,7 +19943,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "The triangular end is isosceles,",
+        "title": "Calculate value",
         "body": "The triangular end is isosceles, with\n\n\\[\nAC=BC=12,\\qquad AB=10\n\\]"
       },
       {
@@ -19955,7 +19955,7 @@ window.SOLUTION_DATA = {
         "body": "The projection of \\(AD\\) on the horizontal base goes from \\(A\\) to the midpoint of \\(FE\\). Its length is\n\n\\[\n\\sqrt{15^2+5^2}=\\sqrt{250}\n\\]"
       },
       {
-        "title": "So, for the angle between",
+        "title": "Use trigonometry",
         "body": "So, for the angle \\(\\theta\\) between \\(AD\\) and the base,\n\n\\[\n\\tan \\theta=\\frac{\\sqrt{119}}{\\sqrt{250}}\n\\]\n\n\\[\n\\theta=\\tan^{-1}\\left(\\frac{\\sqrt{119}}{\\sqrt{250}}\\right)=34.602\\ldots\n\\]"
       }
     ],
@@ -19968,31 +19968,31 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved to Vectors.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use vectors",
         "body": "\\[\n\\overrightarrow{OA}=2\\mathbf a,\\qquad\n\\overrightarrow{OB}=5\\mathbf b,\\qquad\n\\overrightarrow{AC}=3\\mathbf b\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use vectors",
         "body": "So\n\n\\[\n\\overrightarrow{OC}\n=\\overrightarrow{OA}+\\overrightarrow{AC}\n=2\\mathbf a+3\\mathbf b\n\\]"
       },
       {
-        "title": "Since lies on , let",
+        "title": "Use vectors",
         "body": "Since \\(P\\) lies on \\(OC\\), let\n\n\\[\n\\overrightarrow{OP}=t(2\\mathbf a+3\\mathbf b)\n\\]"
       },
       {
-        "title": "Since also lies on ,",
+        "title": "Use vectors",
         "body": "Since \\(P\\) also lies on \\(AB\\), let\n\n\\[\n\\overrightarrow{OP}\n=\\overrightarrow{OA}+s\\overrightarrow{AB}\n\\]"
       },
       {
-        "title": "Now",
+        "title": "Use vectors",
         "body": "Now\n\n\\[\n\\overrightarrow{AB}\n=\\overrightarrow{OB}-\\overrightarrow{OA}\n=5\\mathbf b-2\\mathbf a\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use vectors",
         "body": "So\n\n\\[\n\\overrightarrow{OP}\n=2\\mathbf a+s(5\\mathbf b-2\\mathbf a)\n\\]\n\n\\[\n\\overrightarrow{OP}\n=(2-2s)\\mathbf a+5s\\mathbf b\n\\]"
       },
       {
-        "title": "Compare this with",
+        "title": "Use vectors",
         "body": "Compare this with\n\n\\[\nt(2\\mathbf a+3\\mathbf b)=2t\\mathbf a+3t\\mathbf b\n\\]"
       },
       {
@@ -20000,15 +20000,15 @@ window.SOLUTION_DATA = {
         "body": "Equating coefficients:\n\n\\[\n2t=2-2s\n\\]\n\n\\[\n3t=5s\n\\]"
       },
       {
-        "title": "From ,",
+        "title": "Use vectors",
         "body": "From \\(t=1-s\\),\n\n\\[\n3(1-s)=5s\n\\]\n\n\\[\n3=8s\n\\]\n\n\\[\ns=\\frac{3}{8}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use vectors",
         "body": "So\n\n\\[\nt=1-\\frac{3}{8}=\\frac{5}{8}\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Use vectors",
         "body": "Therefore\n\n\\[\n\\overrightarrow{OP}\n=\\frac{5}{8}(2\\mathbf a+3\\mathbf b)\n\\]\n\n\\[\n\\overrightarrow{OP}\n=\\frac{5}{4}\\mathbf a+\\frac{15}{8}\\mathbf b\n\\]"
       }
     ],
@@ -20021,7 +20021,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Set notation and Venn diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nB=\\{b,r,a,z,i,l\\}\n\\]\n\n\\[\nI=\\{i,r,e,l,a,n,d\\}\n\\]"
       },
       {
@@ -20029,11 +20029,11 @@ window.SOLUTION_DATA = {
         "body": "The union contains every letter that is in \\(B\\) or \\(I\\):\n\n\\[\nB\\cup I=\\{a,b,d,e,i,l,n,r,z\\}\n\\]"
       },
       {
-        "title": "means letters in , but",
+        "title": "Calculate statistic",
         "body": "\\(B\\cap I'\\) means letters in \\(B\\), but not in \\(I\\):\n\n\\[\nB\\cap I'=\\{b,z\\}\n\\]"
       },
       {
-        "title": "For , Cody is not",
+        "title": "Calculate value",
         "body": "For \\(K=\\{k,e,n,y,a\\}\\), Cody is not correct because the letter \\(a\\) is in both \\(B\\) and \\(K\\).\n\n\\[\nB\\cap K=\\{a\\}\n\\]"
       }
     ],
@@ -20046,7 +20046,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find the LCM",
         "body": "\\[\n600=6\\times 100\n\\]\n\n\\[\n600=(2\\times 3)(2^2\\times 5^2)\n\\]\n\n\\[\n600=2^3\\times 3\\times 5^2\n\\]"
       }
     ],
@@ -20059,7 +20059,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Fractions. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify fraction",
         "body": "\\[\n2\\frac47=\\frac{18}{7}\n\\]\n\n\\[\n1\\frac18=\\frac98\n\\]"
       },
       {
@@ -20076,7 +20076,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Percentages. The tag is correct, with ratio used to find the new seed weight.",
     "steps": [
       {
-        "title": "In each new bag, the",
+        "title": "Split the ratio",
         "body": "In each new bag, the ratio\n\n\\[\n\\text{nuts}:\\text{seeds}=4:5\n\\]"
       },
       {
@@ -20105,7 +20105,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Compound Interest and Depreciation. The repeated yearly percentage increase is the key skill.",
     "steps": [
       {
-        "title": "For Chengbo s house, yuan",
+        "title": "Use compound interest",
         "body": "For Chengbo's house, \\(180000\\) yuan is \\(124\\%\\) of the price paid.\n\n\\[\n\\text{price paid}=180000\\div 1.24=145161.29\\ldots\n\\]"
       },
       {
@@ -20113,7 +20113,7 @@ window.SOLUTION_DATA = {
         "body": "To 3 significant figures:\n\n\\[\n145000\n\\]"
       },
       {
-        "title": "For Zhi s house, the",
+        "title": "Use compound interest",
         "body": "For Zhi's house, the value increases by \\(1.8\\%\\) each year for 3 years.\n\n\\[\n120000\\times 1.018^3=126598.2\\ldots\n\\]"
       },
       {
@@ -20130,7 +20130,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Direct and Inverse Proportion. The tag is correct.",
     "steps": [
       {
-        "title": "is inversely proportional to ,",
+        "title": "Find inverse function",
         "body": "\\(A\\) is inversely proportional to \\(r^2\\), so\n\n\\[\nA=\\frac{k}{r^2}\n\\]"
       },
       {
@@ -20138,11 +20138,11 @@ window.SOLUTION_DATA = {
         "body": "Use \\(A=5\\) when \\(r=0.3\\):\n\n\\[\n5=\\frac{k}{0.3^2}\n\\]\n\n\\[\nk=5\\times 0.09=0.45\n\\]"
       },
       {
-        "title": "So",
+        "title": "Find inverse function",
         "body": "So\n\n\\[\nA=\\frac{0.45}{r^2}\n\\]"
       },
       {
-        "title": "For part (b), . Substitute",
+        "title": "Rearrange formula",
         "body": "For part (b), \\(r=7.5A\\). Substitute into the formula:\n\n\\[\nA=\\frac{0.45}{(7.5A)^2}\n\\]\n\n\\[\nA=\\frac{0.45}{56.25A^2}\n\\]\n\n\\[\n56.25A^3=0.45\n\\]\n\n\\[\nA^3=0.008\n\\]\n\n\\[\nA=0.2\n\\]"
       }
     ],
@@ -20155,7 +20155,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic Roots and Indices. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use index laws",
         "body": "\\[\n\\left(\\frac{9x^4}{16y^{10}}\\right)^{-1/2}\n\\]"
       },
       {
@@ -20163,7 +20163,7 @@ window.SOLUTION_DATA = {
         "body": "A negative power takes the reciprocal:\n\n\\[\n\\left(\\frac{16y^{10}}{9x^4}\\right)^{1/2}\n\\]"
       },
       {
-        "title": "Now take the square root",
+        "title": "Simplify surd",
         "body": "Now take the square root of each factor:\n\n\\[\n\\frac{\\sqrt{16y^{10}}}{\\sqrt{9x^4}}=\\frac{4y^5}{3x^2}\n\\]"
       }
     ],
@@ -20176,11 +20176,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Factorising. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Factorise expression",
         "body": "\\[\nx^2+2x-24=(x+6)(x-4)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Factorise expression",
         "body": "So\n\\[\n(x+6)(x-4)=0\n\\]"
       }
     ],
@@ -20193,11 +20193,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve inequality",
         "body": "\\[\ng(x)=2x^2-12x+13\n\\]\n\n\\[\n=2(x^2-6x)+13\n\\]\n\n\\[\n=2\\left((x-3)^2-9\\right)+13\n\\]\n\n\\[\n=2(x-3)^2-18+13\n\\]\n\n\\[\n=2(x-3)^2-5\n\\]"
       },
       {
-        "title": "Starting with",
+        "title": "Calculate value",
         "body": "Starting with \\(S: y=x^2\\):"
       },
       {
@@ -20214,7 +20214,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Simultaneous equations. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve simultaneous equations",
         "body": "\\[\n5a+2c=10\n\\]\n\n\\[\n2a-4c=7\n\\]"
       },
       {
@@ -20226,7 +20226,7 @@ window.SOLUTION_DATA = {
         "body": "Add this to the second equation:\n\\[\n12a=27\n\\]\n\n\\[\na=\\frac94\n\\]"
       },
       {
-        "title": "Substitute into",
+        "title": "Solve simultaneous equations",
         "body": "Substitute into \\(5a+2c=10\\):\n\\[\n5\\left(\\frac94\\right)+2c=10\n\\]\n\n\\[\n\\frac{45}{4}+2c=\\frac{40}{4}\n\\]\n\n\\[\n2c=-\\frac54\n\\]\n\n\\[\nc=-\\frac58\n\\]"
       }
     ],
@@ -20239,7 +20239,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Simultaneous equations. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve simultaneous equations",
         "body": "\\[\ny=3-2x\n\\]\n\n\\[\nx^2+y^2=18\n\\]"
       },
       {
@@ -20251,15 +20251,15 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\\[\n(5x+3)(x-3)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Solve simultaneous equations",
         "body": "So\n\\[\nx=-\\frac35 \\quad \\text{or} \\quad x=3\n\\]"
       },
       {
-        "title": "If , then",
+        "title": "Solve simultaneous equations",
         "body": "If \\(x=-\\frac35\\), then\n\\[\ny=3-2\\left(-\\frac35\\right)=\\frac{21}{5}\n\\]"
       },
       {
-        "title": "If , then",
+        "title": "Solve simultaneous equations",
         "body": "If \\(x=3\\), then\n\\[\ny=3-6=-3\n\\]"
       }
     ],
@@ -20272,7 +20272,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Coordinate geometry. The tag is correct.",
     "steps": [
       {
-        "title": "Line passes through and",
+        "title": "Use Coordinate geometry tag correct",
         "body": "Line \\(L\\) passes through \\((4,-1)\\) and \\((6,4)\\)."
       },
       {
@@ -20280,7 +20280,7 @@ window.SOLUTION_DATA = {
         "body": "Its gradient is\n\\[\n\\frac{4-(-1)}{6-4}=\\frac52\n\\]"
       },
       {
-        "title": "Line is perpendicular to ,",
+        "title": "Find the gradient",
         "body": "Line \\(M\\) is perpendicular to \\(L\\), so its gradient is\n\\[\n-\\frac25\n\\]"
       },
       {
@@ -20288,7 +20288,7 @@ window.SOLUTION_DATA = {
         "body": "Line \\(M\\) intersects the y-axis at \\((0,8)\\), so\n\\[\ny=-\\frac25x+8\n\\]"
       },
       {
-        "title": "At the x axis,",
+        "title": "Evaluate fraction",
         "body": "At the x-axis, \\(y=0\\):\n\\[\n0=-\\frac25x+8\n\\]\n\n\\[\n\\frac25x=8\n\\]\n\n\\[\nx=20\n\\]"
       }
     ],
@@ -20301,7 +20301,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This is a table-and-graph question for \\(x+\\frac4x\\).",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Read the graph",
         "body": "\\[\ny=\\frac1x(x^2+4)=x+\\frac4x\n\\]"
       },
       {
@@ -20322,7 +20322,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\ny=kx^2+\\frac{16}{x}\n\\]"
       },
       {
@@ -20330,11 +20330,11 @@ window.SOLUTION_DATA = {
         "body": "Differentiate:\n\n\\[\n\\frac{dy}{dx}=2kx-\\frac{16}{x^2}\n\\]"
       },
       {
-        "title": "At the stationary point, ,",
+        "title": "Find the gradient",
         "body": "At the stationary point, \\(x=\\frac23\\), so the gradient is 0:\n\n\\[\n2k\\left(\\frac23\\right)-\\frac{16}{\\left(\\frac23\\right)^2}=0\n\\]\n\n\\[\n\\frac{4k}{3}-\\frac{16}{\\frac49}=0\n\\]\n\n\\[\n\\frac{4k}{3}-36=0\n\\]\n\n\\[\n\\frac{4k}{3}=36\n\\]\n\n\\[\nk=27\n\\]"
       },
       {
-        "title": "Now find , the coordinate",
+        "title": "Find the -coordinate",
         "body": "Now find \\(a\\), the \\(y\\)-coordinate when \\(x=\\frac23\\):\n\n\\[\na=27\\left(\\frac23\\right)^2+\\frac{16}{\\frac23}\n\\]\n\n\\[\na=27\\cdot\\frac49+24\n\\]\n\n\\[\na=12+24=36\n\\]"
       }
     ],
@@ -20351,7 +20351,7 @@ window.SOLUTION_DATA = {
         "body": "Triangle \\(EBC\\) is isosceles because\n\\[\nBE=CE\n\\]"
       },
       {
-        "title": "So the base angles are",
+        "title": "Find the gradient",
         "body": "So the base angles are equal.\n\n\\[\n\\angle EBC=\\angle ECB=\\frac{180^\\circ-44^\\circ}{2}=68^\\circ\n\\]"
       },
       {
@@ -20372,7 +20372,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Bearings, Scale Drawing & Constructions. The tag is correct.",
     "steps": [
       {
-        "title": "The bearing of Paris from",
+        "title": "Use bearings",
         "body": "The bearing of Paris from London is the reverse bearing of London from Paris."
       },
       {
@@ -20389,7 +20389,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Circle Theorems. The cyclic quadrilateral theorem is needed.",
     "steps": [
       {
-        "title": "In triangle , use the",
+        "title": "Use trigonometry",
         "body": "In triangle \\(ABC\\), use the cosine rule:\n\\[\nAC^2=8^2+7.5^2-2(8)(7.5)\\cos 98^\\circ\n\\]\n\n\\[\nAC=11.702\\ldots\n\\]"
       },
       {
@@ -20397,7 +20397,7 @@ window.SOLUTION_DATA = {
         "body": "Opposite angles in a cyclic quadrilateral add to \\(180^\\circ\\), so\n\\[\n\\angle ADC=180^\\circ-98^\\circ=82^\\circ\n\\]"
       },
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(ACD\\),\n\\[\n\\angle CAD=180^\\circ-82^\\circ-35^\\circ=63^\\circ\n\\]"
       },
       {
@@ -20439,15 +20439,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "The surface area ratio of",
+        "title": "Split the ratio",
         "body": "The surface area ratio of the small block to the large block is\n\n\\[\n25:36\n\\]"
       },
       {
-        "title": "So the linear ratio is",
+        "title": "Split the ratio",
         "body": "So the linear ratio is\n\n\\[\n\\sqrt{25}:\\sqrt{36}=5:6\n\\]"
       },
       {
-        "title": "Therefore the volume ratio is",
+        "title": "Split the ratio",
         "body": "Therefore the volume ratio is\n\n\\[\n5^3:6^3=125:216\n\\]"
       },
       {
@@ -20475,13 +20475,13 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(x=9.7\\text{ cm}\\)."
   },
   "all::May2021_P2H__Q12__p12-13__m07__Cumulative-Frequency-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "For Office A, the cumulative",
+        "title": "Use cumulative frequency",
         "body": "For Office A, the cumulative frequencies are\n\n\\[\n17,\\ 32,\\ 57,\\ 70,\\ 76,\\ 80\n\\]"
       },
       {
@@ -20510,19 +20510,19 @@ window.SOLUTION_DATA = {
         "body": "Let the number of red pens be \\(r\\)."
       },
       {
-        "title": "Then the number of black",
+        "title": "List probability cases",
         "body": "Then the number of black pens is\n\n\\[\nr+3\n\\]"
       },
       {
-        "title": "and",
+        "title": "Calculate value",
         "body": "and\n\n\\[\nN=2r+3\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\nr=\\frac{N-3}{2}\n\\]"
       },
       {
-        "title": "and",
+        "title": "Evaluate fraction",
         "body": "and\n\n\\[\nr+3=\\frac{N+3}{2}\n\\]"
       },
       {
@@ -20533,13 +20533,13 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(N=15\\) or \\(N=21\\)"
   },
   "all::May2021_P2H__Q13__p14-15__m08__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "For the two races",
+        "title": "Calculate probability",
         "body": "For the two races:\n\n\\[\nP(W_1)=0.7,\\quad P(L_1)=0.3\n\\]\n\n\\[\nP(W_2)=0.4,\\quad P(L_2)=0.6\n\\]"
       },
       {
@@ -20547,11 +20547,11 @@ window.SOLUTION_DATA = {
         "body": "Exactly one win:\n\n\\[\n0.7\\times 0.6+0.3\\times 0.4\n\\]\n\n\\[\n=0.42+0.12=0.54\n\\]"
       },
       {
-        "title": "For exactly two wins in",
+        "title": "Calculate probability",
         "body": "For exactly two wins in three races:"
       },
       {
-        "title": "First two wins, then lose",
+        "title": "Calculate probability",
         "body": "First two wins, then lose the third:\n\n\\[\n0.7\\times 0.4\\times 0.4=0.112\n\\]"
       },
       {
@@ -20568,11 +20568,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve inequality",
         "body": "\\[\ng(x)=2x^2-12x+13\n\\]\n\n\\[\n=2(x^2-6x)+13\n\\]\n\n\\[\n=2\\left((x-3)^2-9\\right)+13\n\\]\n\n\\[\n=2(x-3)^2-18+13\n\\]\n\n\\[\n=2(x-3)^2-5\n\\]"
       },
       {
-        "title": "Starting with",
+        "title": "Calculate value",
         "body": "Starting with \\(S: y=x^2\\):"
       },
       {
@@ -20589,7 +20589,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\ny=kx^2+\\frac{16}{x}\n\\]"
       },
       {
@@ -20597,11 +20597,11 @@ window.SOLUTION_DATA = {
         "body": "Differentiate:\n\n\\[\n\\frac{dy}{dx}=2kx-\\frac{16}{x^2}\n\\]"
       },
       {
-        "title": "At the stationary point, ,",
+        "title": "Find the gradient",
         "body": "At the stationary point, \\(x=\\frac23\\), so the gradient is 0:\n\n\\[\n2k\\left(\\frac23\\right)-\\frac{16}{\\left(\\frac23\\right)^2}=0\n\\]\n\n\\[\n\\frac{4k}{3}-\\frac{16}{\\frac49}=0\n\\]\n\n\\[\n\\frac{4k}{3}-36=0\n\\]\n\n\\[\n\\frac{4k}{3}=36\n\\]\n\n\\[\nk=27\n\\]"
       },
       {
-        "title": "Now find , the coordinate",
+        "title": "Find the -coordinate",
         "body": "Now find \\(a\\), the \\(y\\)-coordinate when \\(x=\\frac23\\):\n\n\\[\na=27\\left(\\frac23\\right)^2+\\frac{16}{\\frac23}\n\\]\n\n\\[\na=27\\cdot\\frac49+24\n\\]\n\n\\[\na=12+24=36\n\\]"
       }
     ],
@@ -20614,15 +20614,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "The surface area ratio of",
+        "title": "Split the ratio",
         "body": "The surface area ratio of the small block to the large block is\n\n\\[\n25:36\n\\]"
       },
       {
-        "title": "So the linear ratio is",
+        "title": "Split the ratio",
         "body": "So the linear ratio is\n\n\\[\n\\sqrt{25}:\\sqrt{36}=5:6\n\\]"
       },
       {
-        "title": "Therefore the volume ratio is",
+        "title": "Split the ratio",
         "body": "Therefore the volume ratio is\n\n\\[\n5^3:6^3=125:216\n\\]"
       },
       {
@@ -20647,19 +20647,19 @@ window.SOLUTION_DATA = {
         "body": "Let the number of red pens be \\(r\\)."
       },
       {
-        "title": "Then the number of black",
+        "title": "List probability cases",
         "body": "Then the number of black pens is\n\n\\[\nr+3\n\\]"
       },
       {
-        "title": "and",
+        "title": "Calculate value",
         "body": "and\n\n\\[\nN=2r+3\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\nr=\\frac{N-3}{2}\n\\]"
       },
       {
-        "title": "and",
+        "title": "Evaluate fraction",
         "body": "and\n\n\\[\nr+3=\\frac{N+3}{2}\n\\]"
       },
       {
@@ -20684,15 +20684,15 @@ window.SOLUTION_DATA = {
         "body": "We are told that\n\n\\[\nn(A\\cup B)=42\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\n36+x=42\n\\]\n\n\\[\nx=6\n\\]"
       },
       {
-        "title": "For , add every region",
+        "title": "Add every region not inside",
         "body": "For \\(A'\\), add every region not inside \\(A\\):\n\n\\[\n12+7+10+7=36\n\\]"
       },
       {
-        "title": "For , add the regions",
+        "title": "Add the regions",
         "body": "For \\(B'\\cap C\\), add the regions that are in \\(C\\) but not in \\(B\\):\n\n\\[\n5+10=15\n\\]"
       }
     ],
@@ -20705,27 +20705,27 @@ window.SOLUTION_DATA = {
     "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
     "steps": [
       {
-        "title": "First write as a product",
+        "title": "Find the LCM",
         "body": "First write \\(300\\) as a product of prime factors:\n\n\\[\n300=3\\times 100=3\\times 2^2\\times 5^2\n\\]\n\n\\[\n300=2^2\\times 3\\times 5^2\n\\]"
       },
       {
-        "title": "Now",
+        "title": "Find the LCM",
         "body": "Now\n\n\\[\nA=2^3\\times 3^2\\times 5\n\\]"
       },
       {
-        "title": "and",
+        "title": "Find the LCM",
         "body": "and\n\n\\[\nB=2^2\\times 3^3\\times 5\n\\]"
       },
       {
-        "title": "So",
+        "title": "Find the LCM",
         "body": "So\n\n\\[\n5A=2^3\\times 3^2\\times 5^2\n\\]"
       },
       {
-        "title": "and",
+        "title": "Find the LCM",
         "body": "and\n\n\\[\n7B=2^2\\times 3^3\\times 5\\times 7\n\\]"
       },
       {
-        "title": "For the LCM of and",
+        "title": "Find the LCM",
         "body": "For the LCM of \\(5A\\) and \\(7B\\), take the highest power of every prime:\n\n\\[\n\\text{LCM}=2^3\\times 3^3\\times 5^2\\times 7\n\\]"
       }
     ],
@@ -20738,23 +20738,23 @@ window.SOLUTION_DATA = {
     "topicNote": "Powers, roots and standard form. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Convert standard form",
         "body": "\\[\n\\sqrt{2}=2^{\\frac12}\n\\]\n\n\\[\n8^3=(2^3)^3=2^9\n\\]\n\n\\[\n16^{\\frac32}=(2^4)^{\\frac32}=2^6\n\\]"
       },
       {
-        "title": "So",
+        "title": "Convert standard form",
         "body": "So\n\n\\[\n\\frac{8^3}{16^{\\frac32}}=\\frac{2^9}{2^6}=2^3\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Convert standard form",
         "body": "Therefore\n\n\\[\n\\sqrt{2}\\div \\frac{8^3}{16^{\\frac32}}\n=2^{\\frac12}\\div 2^3\n\\]\n\n\\[\n=2^{\\frac12-3}=2^{-\\frac52}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Convert standard form",
         "body": "So\n\n\\[\nn=-\\frac52\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Convert standard form",
         "body": "For part (b),\n\n\\[\n4\\%=0.04=4\\times 10^{-2}\n\\]\n\n\\[\n0.04(4.5\\times 10^{157})=18\\times 10^{155}\n\\]\n\n\\[\n=1.8\\times 10^{156}\n\\]"
       }
     ],
@@ -20821,7 +20821,7 @@ window.SOLUTION_DATA = {
         "body": "(a)\n\\[\n(2c^4d^7)^3=8c^{12}d^{21}\n\\]"
       },
       {
-        "title": "(b) , since",
+        "title": "Factorise expression",
         "body": "(b) \\(5y^0=5\\), since \\(y^0=1\\)."
       },
       {
@@ -20833,7 +20833,7 @@ window.SOLUTION_DATA = {
         "body": "(d)(i)\n\\[\nx^2+9x-22=(x+11)(x-2)\n\\]"
       },
       {
-        "title": "(d)(ii) or",
+        "title": "Factorise expression",
         "body": "(d)(ii) \\(x=-11\\) or \\(x=2\\)."
       }
     ],
@@ -20846,7 +20846,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Factorising. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Factorise expression",
         "body": "\\[\n50g^2-18=2(25g^2-9)\n\\]\n\n\\[\n=2(5g-3)(5g+3)\n\\]"
       }
     ],
@@ -20859,7 +20859,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Simultaneous equations. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve simultaneous equations",
         "body": "\\[\n2x+9y=14.5\n\\]\n\n\\[\n7x+3y=8\n\\]"
       },
       {
@@ -20871,7 +20871,7 @@ window.SOLUTION_DATA = {
         "body": "Subtract the first equation:\n\\[\n19x=9.5\n\\]\n\n\\[\nx=0.5\n\\]"
       },
       {
-        "title": "Substitute into",
+        "title": "Solve simultaneous equations",
         "body": "Substitute into \\(7x+3y=8\\):\n\\[\n7(0.5)+3y=8\n\\]\n\n\\[\n3.5+3y=8\n\\]\n\n\\[\ny=1.5\n\\]"
       }
     ],
@@ -20884,7 +20884,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\nS_{80}=470\n\\]\n\n\\[\n40(2a+79d)=470\n\\]\n\n\\[\n2a+79d=\\frac{47}{4}\n\\]"
       },
       {
@@ -20900,7 +20900,7 @@ window.SOLUTION_DATA = {
         "body": "Subtract:\n\n\\[\n69d=29-\\frac{47}{4}=\\frac{69}{4}\n\\]\n\n\\[\nd=\\frac14\n\\]\n\n\\[\na+74\\left(\\frac14\\right)=\\frac{29}{2}\n\\]\n\n\\[\na=-4\n\\]"
       },
       {
-        "title": "Now",
+        "title": "Evaluate fraction",
         "body": "Now\n\n\\[\nS_X=171\n\\]\n\n\\[\n171=\\frac X2\\left(2(-4)+(X-1)\\frac14\\right)\n\\]\n\n\\[\n171=\\frac{X(X-33)}{8}\n\\]\n\n\\[\nX^2-33X-1368=0\n\\]\n\n\\[\nX=\\frac{33+81}{2}=57\n\\]"
       }
     ],
@@ -20913,7 +20913,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Functions. The question tests domain and composite functions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find inverse function",
         "body": "\\[\ng(x)=\\frac{11}{2x-5},\\qquad h(x)=x^2+4,\\quad x\\ge0\n\\]"
       },
       {
@@ -20921,7 +20921,7 @@ window.SOLUTION_DATA = {
         "body": "(a) The denominator of \\(g(x)\\) cannot be zero.\n\n\\[\n2x-5=0\n\\]\n\n\\[\nx=\\frac52\n\\]"
       },
       {
-        "title": "So must be excluded",
+        "title": "Find inverse function",
         "body": "So \\(x=\\frac52\\) must be excluded."
       },
       {
@@ -20933,7 +20933,7 @@ window.SOLUTION_DATA = {
         "body": "Solve\n\\[\n\\frac{11}{2x^2+3}=1\n\\]\n\n\\[\n2x^2+3=11\n\\]\n\n\\[\n2x^2=8\n\\]\n\n\\[\nx^2=4\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Solve inequality",
         "body": "Since \\(x\\ge0\\),\n\\[\nx=2\n\\]"
       }
     ],
@@ -20946,7 +20946,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Coordinate geometry. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nA=(-5,12),\\qquad B=(19,-48)\n\\]"
       },
       {
@@ -20954,7 +20954,7 @@ window.SOLUTION_DATA = {
         "body": "The gradient is\n\\[\n\\frac{-48-12}{19-(-5)}=\\frac{-60}{24}=-\\frac52\n\\]"
       },
       {
-        "title": "Using point",
+        "title": "Evaluate fraction",
         "body": "Using point \\((-5,12)\\):\n\\[\ny-12=-\\frac52(x+5)\n\\]"
       },
       {
@@ -20979,7 +20979,7 @@ window.SOLUTION_DATA = {
         "body": "The horizontal boundary is\n\\[\ny=-2\n\\]\nso\n\\[\ny\\geq-2\n\\]"
       },
       {
-        "title": "The sloping line passes through",
+        "title": "Find the gradient",
         "body": "The sloping line passes through \\((0,4)\\) and has gradient \\(2\\), so\n\\[\ny=2x+4\n\\]"
       },
       {
@@ -21000,7 +21000,7 @@ window.SOLUTION_DATA = {
         "body": "The turning point of \\(y=f(x)\\) is \\((6,5)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x-4)\n\\]"
       },
       {
@@ -21008,7 +21008,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 4 units right:\n\n\\[\n(6,5)\\to(10,5)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(3x)\n\\]"
       },
       {
@@ -21025,7 +21025,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to differentiation. The question is about derivatives and gradients of a curve.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find the gradient",
         "body": "\\[\ny=4x^3+x^2-20x\n\\]"
       },
       {
@@ -21033,7 +21033,7 @@ window.SOLUTION_DATA = {
         "body": "(a)\n\\[\n\\frac{dy}{dx}=12x^2+2x-20\n\\]"
       },
       {
-        "title": "(b) The gradient is ,",
+        "title": "Find the gradient",
         "body": "(b) The gradient is \\(4\\), so\n\\[\n12x^2+2x-20=4\n\\]\n\n\\[\n12x^2+2x-24=0\n\\]\n\n\\[\n6x^2+x-12=0\n\\]"
       },
       {
@@ -21041,7 +21041,7 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\\[\n(3x-4)(2x+3)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Find the gradient",
         "body": "So\n\\[\nx=\\frac43 \\quad \\text{or} \\quad x=-\\frac32\n\\]"
       }
     ],
@@ -21058,11 +21058,11 @@ window.SOLUTION_DATA = {
         "body": "The regular pentagon has side length \\(8\\) cm."
       },
       {
-        "title": "For a regular pentagon,",
+        "title": "Use trigonometry",
         "body": "For a regular pentagon,\n\n\\[\nR=\\frac{s}{2\\sin 36^\\circ}\n\\]"
       },
       {
-        "title": "where is the radius of",
+        "title": "Use trigonometry",
         "body": "where \\(R\\) is the radius of the larger circle.\n\n\\[\nR=\\frac{8}{2\\sin 36^\\circ}=6.8052\\ldots\n\\]"
       },
       {
@@ -21086,7 +21086,7 @@ window.SOLUTION_DATA = {
         "body": "The unshaded area is:\n\n\\[\n\\text{pentagon area}-\\pi r^2\n\\]"
       },
       {
-        "title": "These are equal, so",
+        "title": "Simplify surd",
         "body": "These are equal, so\n\n\\[\n145.4898-110.1106+\\pi r^2=110.1106-\\pi r^2\n\\]\n\n\\[\n2\\pi r^2=2(110.1106)-145.4898\n\\]\n\n\\[\n\\pi r^2=37.3657\\ldots\n\\]\n\n\\[\nr=\\sqrt{\\frac{37.3657\\ldots}{\\pi}}=3.4487\\ldots\n\\]"
       }
     ],
@@ -21107,7 +21107,7 @@ window.SOLUTION_DATA = {
         "body": "Their heights are\n\n\\[\n15:45=1:3\n\\]"
       },
       {
-        "title": "So the side length of",
+        "title": "Square of the frustum",
         "body": "So the side length of the top square of the frustum is\n\n\\[\n\\frac{39}{3}=13\\text{ cm}\n\\]"
       },
       {
@@ -21115,11 +21115,11 @@ window.SOLUTION_DATA = {
         "body": "The vertical height of the frustum is\n\n\\[\n45-15=30\\text{ cm}\n\\]"
       },
       {
-        "title": "For one trapezium face, the",
+        "title": "Evaluate fraction",
         "body": "For one trapezium face, the difference between the half-side lengths is\n\n\\[\n\\frac{39-13}{2}=13\\text{ cm}\n\\]"
       },
       {
-        "title": "So the slant height of",
+        "title": "Simplify surd",
         "body": "So the slant height of the trapezium face is\n\n\\[\n\\sqrt{30^2+13^2}=\\sqrt{1069}\n\\]"
       },
       {
@@ -21156,7 +21156,7 @@ window.SOLUTION_DATA = {
         "body": "Triangle \\(AEB\\) is right-angled:\n\n\\[\nAB^2=7.2^2+5.4^2=81\n\\]\n\n\\[\nAB=9\n\\]"
       },
       {
-        "title": "For rectangle ,",
+        "title": "Use trigonometry",
         "body": "For rectangle \\(ABCD\\),\n\n\\[\nDC=9,\\qquad AD=BC=6\n\\]"
       },
       {
@@ -21173,15 +21173,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Vectors. The ratio is found using a vector method.",
     "steps": [
       {
-        "title": "Since is the midpoint of",
+        "title": "Split the ratio",
         "body": "Since \\(M\\) is the midpoint of \\(OA\\),\n\n\\[\n\\overrightarrow{OA}=2a\n\\]"
       },
       {
-        "title": "Also,",
+        "title": "Split the ratio",
         "body": "Also,\n\n\\[\n\\overrightarrow{ON}=b\n\\]"
       },
       {
-        "title": "So",
+        "title": "Split the ratio",
         "body": "So\n\n\\[\n\\overrightarrow{AN}=\\overrightarrow{ON}-\\overrightarrow{OA}=b-2a\n\\]"
       },
       {
@@ -21189,15 +21189,15 @@ window.SOLUTION_DATA = {
         "body": "Let\n\n\\[\n\\overrightarrow{AP}=\\lambda\\overrightarrow{AN}\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Split the ratio",
         "body": "Then\n\n\\[\n\\overrightarrow{OP}=2a+\\lambda(b-2a)=(2-2\\lambda)a+\\lambda b\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Split the ratio",
         "body": "Since \\(ON:NB=1:5\\),\n\n\\[\n\\overrightarrow{OB}=6b\n\\]"
       },
       {
-        "title": "Point is also on ,",
+        "title": "Split the ratio",
         "body": "Point \\(P\\) is also on \\(MB\\), so\n\n\\[\n\\overrightarrow{OP}=a+\\mu(6b-a)=(1-\\mu)a+6\\mu b\n\\]"
       },
       {
@@ -21205,11 +21205,11 @@ window.SOLUTION_DATA = {
         "body": "Compare coefficients:\n\n\\[\n2-2\\lambda=1-\\mu\n\\]\n\n\\[\n\\lambda=6\\mu\n\\]"
       },
       {
-        "title": "From ,",
+        "title": "Split the ratio",
         "body": "From \\(\\mu=2\\lambda-1\\),\n\n\\[\n\\lambda=6(2\\lambda-1)\n\\]\n\n\\[\n11\\lambda=6\n\\]\n\n\\[\n\\lambda=\\frac6{11}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Split the ratio",
         "body": "So\n\n\\[\nAP:PN=\\frac6{11}:\\frac5{11}=6:5\n\\]"
       }
     ],
@@ -21222,19 +21222,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Transformations. The tag is correct.",
     "steps": [
       {
-        "title": "(a) The translation from to",
+        "title": "Use matrices",
         "body": "(a) The translation from \\((-7,2)\\) to \\((6,12)\\) is\n\n\\[\n\\begin{pmatrix}13\\\\10\\end{pmatrix}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use Transformations tag correct",
         "body": "So\n\n\\[\n(-11,-5)\\mapsto(2,5)\n\\]"
       },
       {
-        "title": "and",
+        "title": "Use Transformations tag correct",
         "body": "and\n\n\\[\n(f,-3)\\mapsto(9,7)\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Apply transformation",
         "body": "Therefore\n\n\\[\nd=5,\\qquad e=7,\\qquad f=-4\n\\]"
       },
       {
@@ -21242,7 +21242,7 @@ window.SOLUTION_DATA = {
         "body": "(b) Shape \\(P\\) maps to \\(Q\\) by an enlargement with scale factor \\(3\\) and centre \\((0,2)\\)."
       },
       {
-        "title": "(c) Rotate clockwise about .",
+        "title": "(c) Rotate clockwise about",
         "body": "(c) Rotate \\(P\\) \\(90^\\circ\\) clockwise about \\((3,5)\\). The image has vertices\n\n\\[\n(3,6),\\ (1,6),\\ (0,5),\\ (1,5)\n\\]"
       }
     ],
@@ -21289,11 +21289,11 @@ window.SOLUTION_DATA = {
         "body": "The known frequencies are\n\n\\[\n23+18+14=55\n\\]"
       },
       {
-        "title": "So the two missing frequencies",
+        "title": "Use histogram",
         "body": "So the two missing frequencies have total\n\n\\[\n140-55=85\n\\]"
       },
       {
-        "title": "From the histogram, the missing",
+        "title": "Use histogram",
         "body": "From the histogram, the missing frequencies are\n\n\\[\n5<t\\le 15:\\ 25,\\qquad 15<t\\le 30:\\ 60\n\\]"
       },
       {
@@ -21304,25 +21304,25 @@ window.SOLUTION_DATA = {
     "finalAnswer": "missing frequencies \\(25,60\\), and missing densities \\(4.6,1.8,0.7\\)."
   },
   "all::May2023_P1H__Q12__p14-14__m04__Cumulative-Frequency-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "There are plants, so the",
+        "title": "Use cumulative frequency",
         "body": "There are \\(50\\) plants, so the median is the \\(25\\)th value."
       },
       {
-        "title": "From the cumulative frequency graph,",
+        "title": "Use cumulative frequency",
         "body": "From the cumulative frequency graph,\n\n\\[\n\\text{median}\\approx 27\\text{ cm}\n\\]"
       },
       {
-        "title": "For the interval ,",
+        "title": "Use cumulative frequency",
         "body": "For the interval \\(30<h\\leq 40\\),\n\n\\[\nF(40)-F(30)\\approx 44-31=13\n\\]"
       },
       {
-        "title": "For plants taller than cm,",
+        "title": "Use cumulative frequency",
         "body": "For plants taller than \\(35\\) cm,\n\n\\[\n50-F(35)\\approx 50-37=13\n\\]"
       }
     ],
@@ -21335,7 +21335,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\nS_{80}=470\n\\]\n\n\\[\n40(2a+79d)=470\n\\]\n\n\\[\n2a+79d=\\frac{47}{4}\n\\]"
       },
       {
@@ -21351,7 +21351,7 @@ window.SOLUTION_DATA = {
         "body": "Subtract:\n\n\\[\n69d=29-\\frac{47}{4}=\\frac{69}{4}\n\\]\n\n\\[\nd=\\frac14\n\\]\n\n\\[\na+74\\left(\\frac14\\right)=\\frac{29}{2}\n\\]\n\n\\[\na=-4\n\\]"
       },
       {
-        "title": "Now",
+        "title": "Evaluate fraction",
         "body": "Now\n\n\\[\nS_X=171\n\\]\n\n\\[\n171=\\frac X2\\left(2(-4)+(X-1)\\frac14\\right)\n\\]\n\n\\[\n171=\\frac{X(X-33)}{8}\n\\]\n\n\\[\nX^2-33X-1368=0\n\\]\n\n\\[\nX=\\frac{33+81}{2}=57\n\\]"
       }
     ],
@@ -21368,7 +21368,7 @@ window.SOLUTION_DATA = {
         "body": "The turning point of \\(y=f(x)\\) is \\((6,5)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x-4)\n\\]"
       },
       {
@@ -21376,7 +21376,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 4 units right:\n\n\\[\n(6,5)\\to(10,5)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(3x)\n\\]"
       },
       {
@@ -21397,11 +21397,11 @@ window.SOLUTION_DATA = {
         "body": "The regular pentagon has side length \\(8\\) cm."
       },
       {
-        "title": "For a regular pentagon,",
+        "title": "Use trigonometry",
         "body": "For a regular pentagon,\n\n\\[\nR=\\frac{s}{2\\sin 36^\\circ}\n\\]"
       },
       {
-        "title": "where is the radius of",
+        "title": "Use trigonometry",
         "body": "where \\(R\\) is the radius of the larger circle.\n\n\\[\nR=\\frac{8}{2\\sin 36^\\circ}=6.8052\\ldots\n\\]"
       },
       {
@@ -21425,7 +21425,7 @@ window.SOLUTION_DATA = {
         "body": "The unshaded area is:\n\n\\[\n\\text{pentagon area}-\\pi r^2\n\\]"
       },
       {
-        "title": "These are equal, so",
+        "title": "Simplify surd",
         "body": "These are equal, so\n\n\\[\n145.4898-110.1106+\\pi r^2=110.1106-\\pi r^2\n\\]\n\n\\[\n2\\pi r^2=2(110.1106)-145.4898\n\\]\n\n\\[\n\\pi r^2=37.3657\\ldots\n\\]\n\n\\[\nr=\\sqrt{\\frac{37.3657\\ldots}{\\pi}}=3.4487\\ldots\n\\]"
       }
     ],
@@ -21446,7 +21446,7 @@ window.SOLUTION_DATA = {
         "body": "Their heights are\n\n\\[\n15:45=1:3\n\\]"
       },
       {
-        "title": "So the side length of",
+        "title": "Square of the frustum",
         "body": "So the side length of the top square of the frustum is\n\n\\[\n\\frac{39}{3}=13\\text{ cm}\n\\]"
       },
       {
@@ -21454,11 +21454,11 @@ window.SOLUTION_DATA = {
         "body": "The vertical height of the frustum is\n\n\\[\n45-15=30\\text{ cm}\n\\]"
       },
       {
-        "title": "For one trapezium face, the",
+        "title": "Evaluate fraction",
         "body": "For one trapezium face, the difference between the half-side lengths is\n\n\\[\n\\frac{39-13}{2}=13\\text{ cm}\n\\]"
       },
       {
-        "title": "So the slant height of",
+        "title": "Simplify surd",
         "body": "So the slant height of the trapezium face is\n\n\\[\n\\sqrt{30^2+13^2}=\\sqrt{1069}\n\\]"
       },
       {
@@ -21495,7 +21495,7 @@ window.SOLUTION_DATA = {
         "body": "The numbers inside \\(A\\) are the numbers in the \\(A\\)-only region and the overlap with \\(B\\):\n\n\\[\nA=\\{5,7,11,13\\}\n\\]"
       },
       {
-        "title": "means every number inside or",
+        "title": "Calculate statistic",
         "body": "\\(B\\cup C\\) means every number inside \\(B\\) or \\(C\\):\n\n\\[\nB\\cup C=\\{5,6,8,10,12,14,15\\}\n\\]"
       },
       {
@@ -21512,11 +21512,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find the LCM",
         "body": "\\[\n2250=225\\times 10\n\\]\n\n\\[\n225=3^2\\times 5^2,\\qquad 10=2\\times 5\n\\]"
       },
       {
-        "title": "So",
+        "title": "Find the LCM",
         "body": "So\n\n\\[\n2250=3^2\\times 5^2\\times 2\\times 5\n\\]\n\n\\[\n2250=2\\times 3^2\\times 5^3\n\\]"
       }
     ],
@@ -21529,15 +21529,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Powers, roots and standard form. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Convert standard form",
         "body": "\\[\n5.6\\times 10^{-3}=0.0056\n\\]"
       },
       {
-        "title": "For part (b), simplify the",
+        "title": "Convert standard form",
         "body": "For part (b), simplify the denominator:\n\n\\[\n2.1\\times 10^{-4}+9\\times 10^{-5}\n=0.00021+0.00009\n\\]\n\n\\[\n=0.00030=3\\times 10^{-4}\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Convert standard form",
         "body": "Then\n\n\\[\n\\frac{6\\times 10^3}{3\\times 10^{-4}}\n=2\\times 10^{3-(-4)}\n\\]\n\n\\[\n=2\\times 10^7\n\\]"
       }
     ],
@@ -21554,11 +21554,11 @@ window.SOLUTION_DATA = {
         "body": "A depreciation of \\(12\\%\\) gives multiplier\n\n\\[\n0.88\n\\]"
       },
       {
-        "title": "After 3 years,",
+        "title": "Use compound interest",
         "body": "After 3 years,\n\n\\[\n700000(0.88)^3=477030.4\n\\]"
       },
       {
-        "title": "Correct to the nearest taka,",
+        "title": "Use compound interest",
         "body": "Correct to the nearest taka,\n\n\\[\n477030.4\\approx 477030\n\\]"
       }
     ],
@@ -21604,7 +21604,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Direct and Inverse Proportion. The tag is correct.",
     "steps": [
       {
-        "title": "is inversely proportional to ,",
+        "title": "Find inverse function",
         "body": "\\(F\\) is inversely proportional to \\(r^2\\), so\n\n\\[\nF=\\frac{k}{r^2}\n\\]"
       },
       {
@@ -21612,11 +21612,11 @@ window.SOLUTION_DATA = {
         "body": "Use \\(F=36\\) when \\(r=4\\):\n\n\\[\n36=\\frac{k}{4^2}\n\\]\n\n\\[\nk=36\\times 16=576\n\\]"
       },
       {
-        "title": "So",
+        "title": "Find inverse function",
         "body": "So\n\n\\[\nF=\\frac{576}{r^2}\n\\]"
       },
       {
-        "title": "When ,",
+        "title": "Find inverse function",
         "body": "When \\(r=48\\),\n\n\\[\nF=\\frac{576}{48^2}=\\frac{576}{2304}=0.25\n\\]"
       }
     ],
@@ -21633,7 +21633,7 @@ window.SOLUTION_DATA = {
         "body": "(a) \\(m^{10}\\div m^3=m^{10-3}=m^7\\)."
       },
       {
-        "title": "(b) , so and",
+        "title": "Use index laws",
         "body": "(b) \\(k^n\\times k^4=k^{n+4}=k^{12}\\), so \\(n+4=12\\) and \\(n=8\\)."
       },
       {
@@ -21650,11 +21650,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic roots and indices. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use index laws",
         "body": "\\[\n16^x=2^{4x}, \\qquad 8=2^3\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use index laws",
         "body": "So\n\\[\n2^n=2^{x^2}\\times2^{4x}\\times2^3=2^{x^2+4x+3}\n\\]"
       },
       {
@@ -21662,11 +21662,11 @@ window.SOLUTION_DATA = {
         "body": "Hence\n\\[\nn=x^2+4x+3=(x+2)^2-1\n\\]\n\n\\[\n(x+2)^2=n+1\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Simplify surd",
         "body": "Since \\(x>0\\),\n\\[\nx+2=\\sqrt{n+1}\n\\]\n\n\\[\nx=-2+\\sqrt{n+1}\n\\]"
       },
       {
-        "title": "For , , so",
+        "title": "Simplify surd",
         "body": "For \\(x>0\\), \\(\\sqrt{n+1}>2\\), so \\(n>3\\)."
       }
     ],
@@ -21696,7 +21696,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Surds to Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\n(x^2-4)\\div \\left(\\frac{4x^2-7x-2}{x}\\right)-2x\n\\]"
       },
       {
@@ -21708,7 +21708,7 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\n\\[\nx^2-4=(x-2)(x+2)\n\\]\n\n\\[\n4x^2-7x-2=(4x+1)(x-2)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify surd",
         "body": "So\n\n\\[\n\\frac{x(x-2)(x+2)}{(4x+1)(x-2)}-2x\n=\\frac{x(x+2)}{4x+1}-2x\n\\]\n\n\\[\n\\frac{x(x+2)-2x(4x+1)}{4x+1}\n=\\frac{x^2+2x-8x^2-2x}{4x+1}\n=\\frac{-7x^2}{4x+1}\n\\]"
       }
     ],
@@ -21725,11 +21725,11 @@ window.SOLUTION_DATA = {
         "body": "Let\n\\[\nx=0.1767676\\ldots\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\\[\n10x=1.767676\\ldots\n\\]"
       },
       {
-        "title": "and",
+        "title": "Calculate value",
         "body": "and\n\\[\n1000x=176.767676\\ldots\n\\]"
       },
       {
@@ -21750,7 +21750,7 @@ window.SOLUTION_DATA = {
         "body": "The maximum point of \\(y=f(x)\\) is \\((3,5)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=2f(x)\n\\]"
       },
       {
@@ -21758,7 +21758,7 @@ window.SOLUTION_DATA = {
         "body": "the \\(y\\)-coordinate is multiplied by 2:\n\n\\[\n(3,5)\\to(3,10)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x)-7\n\\]"
       },
       {
@@ -21766,7 +21766,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 7 units down:\n\n\\[\n(3,5)\\to(3,-2)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(-x)\n\\]"
       },
       {
@@ -21774,7 +21774,7 @@ window.SOLUTION_DATA = {
         "body": "the graph reflects in the \\(y\\)-axis:\n\n\\[\n(3,5)\\to(-3,5)\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Calculate value",
         "body": "For part (b),\n\n\\[\ny=x^2+7x+20\n\\]"
       },
       {
@@ -21782,7 +21782,7 @@ window.SOLUTION_DATA = {
         "body": "The translation vector is\n\n\\[\n\\begin{pmatrix}2\\\\0\\end{pmatrix}\n\\]"
       },
       {
-        "title": "So the graph moves 2",
+        "title": "Read the graph",
         "body": "So the graph moves 2 units right."
       },
       {
@@ -21811,11 +21811,11 @@ window.SOLUTION_DATA = {
         "body": "Solve\n\n\\[\n3x^2-4x-9=0\n\\]\n\n\\[\nx=\\frac{4\\pm\\sqrt{16+108}}{6}\n\\]\n\n\\[\nx=\\frac{2\\pm\\sqrt{31}}{3}\n\\]"
       },
       {
-        "title": "To 3 significant figures, the",
+        "title": "Differentiate",
         "body": "To 3 significant figures, the roots are\n\n\\[\nx=-1.19,\\quad x=2.52\n\\]"
       },
       {
-        "title": "Since the quadratic opens upwards,",
+        "title": "Solve quadratic equation",
         "body": "Since the quadratic opens upwards, it is positive outside the roots."
       }
     ],
@@ -21828,11 +21828,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Standard & Compound Units.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate volume",
         "body": "\\[\n\\text{density}=\\frac{\\text{mass}}{\\text{volume}}\n\\]\n\n\\[\n7.8=\\frac{1950}{\\text{volume}}\n\\]\n\n\\[\n\\text{volume}=\\frac{1950}{7.8}=250\\text{ cm}^3\n\\]"
       },
       {
-        "title": "For the cuboid,",
+        "title": "Calculate value",
         "body": "For the cuboid,\n\n\\[\nw\\times 5\\times 4=250\n\\]\n\n\\[\n20w=250\n\\]\n\n\\[\nw=12.5\n\\]"
       }
     ],
@@ -21849,11 +21849,11 @@ window.SOLUTION_DATA = {
         "body": "The sum of the interior angles of a hexagon is\n\\[\n(6-2)\\times 180=720^\\circ\n\\]"
       },
       {
-        "title": "The reflex angle at in",
+        "title": "Find the gradient",
         "body": "The reflex angle at \\(C\\) in the hexagon is\n\\[\n720^\\circ-(90^\\circ+95^\\circ+149^\\circ+104^\\circ+57^\\circ)=225^\\circ\n\\]"
       },
       {
-        "title": "So the smaller angle is",
+        "title": "Find the gradient",
         "body": "So the smaller angle \\(BCD\\) is\n\\[\n360^\\circ-225^\\circ=135^\\circ\n\\]"
       },
       {
@@ -21861,7 +21861,7 @@ window.SOLUTION_DATA = {
         "body": "This is the interior angle of the regular \\(n\\)-sided polygon."
       },
       {
-        "title": "So the exterior angle is",
+        "title": "Find the gradient",
         "body": "So the exterior angle is\n\\[\n180^\\circ-135^\\circ=45^\\circ\n\\]\n\n\\[\nn=\\frac{360}{45}=8\n\\]"
       }
     ],
@@ -21874,7 +21874,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Circles, Arcs & Sectors.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\nAB=\\sqrt{6^2+6^2}=\\sqrt{72}=8.485\\ldots\n\\]"
       },
       {
@@ -21891,15 +21891,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Congruence, Similarity & Geometrical Proof. The tag is correct.",
     "steps": [
       {
-        "title": "The scale factor from to",
+        "title": "Evaluate fraction",
         "body": "The scale factor from \\(EFGH\\) to \\(ABCD\\) is\n\\[\n\\frac{9.6}{6}=1.6\n\\]"
       },
       {
-        "title": "Since corresponds to ,",
+        "title": "Evaluate fraction",
         "body": "Since \\(GH\\) corresponds to \\(CD\\),\n\\[\nGH=\\frac{4}{1.6}=2.5\n\\]"
       },
       {
-        "title": "Since corresponds to ,",
+        "title": "Calculate value",
         "body": "Since \\(FG\\) corresponds to \\(BC\\),\n\\[\nBC=5.7\\times 1.6=9.12\n\\]"
       }
     ],
@@ -21916,27 +21916,27 @@ window.SOLUTION_DATA = {
         "body": "The two sides around the \\(30^\\circ\\) angle are\n\n\\[\n2x-1 \\quad \\text{and} \\quad 2x+1\n\\]"
       },
       {
-        "title": "Using the area formula,",
+        "title": "Use trigonometry",
         "body": "Using the area formula,\n\n\\[\n\\text{area}=\\frac{1}{2}ab\\sin C\n\\]\n\n\\[\nx^2+x-3.75\n=\\frac{1}{2}(2x-1)(2x+1)\\sin 30^\\circ\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Use trigonometry",
         "body": "Since \\(\\sin 30^\\circ=\\frac{1}{2}\\),\n\n\\[\nx^2+x-3.75=\\frac{1}{4}(2x-1)(2x+1)\n\\]\n\n\\[\nx^2+x-3.75=\\frac{1}{4}(4x^2-1)\n\\]\n\n\\[\nx^2+x-3.75=x^2-0.25\n\\]\n\n\\[\nx=3.5\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\nAB=2x-1=6,\\qquad AC=2x+1=8\n\\]"
       },
       {
-        "title": "Use the cosine rule to",
+        "title": "Use cosine rule",
         "body": "Use the cosine rule to find \\(BC\\):\n\n\\[\nBC^2=6^2+8^2-2(6)(8)\\cos 30^\\circ\n\\]\n\n\\[\nBC=4.1063\\ldots\n\\]"
       },
       {
-        "title": "The largest side is ,",
+        "title": "Use trigonometry",
         "body": "The largest side is \\(AC=8\\), so the largest angle is \\(\\angle B\\)."
       },
       {
-        "title": "Using the cosine rule again",
+        "title": "Use trigonometry",
         "body": "Using the cosine rule again:\n\n\\[\n\\cos B=\\frac{6^2+BC^2-8^2}{2(6)(BC)}\n\\]\n\n\\[\nB=103.0643\\ldots^\\circ\n\\]"
       }
     ],
@@ -21953,7 +21953,7 @@ window.SOLUTION_DATA = {
         "body": "Pru travels\n\\[\n|AB|+|BC|=\\sqrt{7^2+(-2)^2}+\\sqrt{(-3)^2+5^2}\n\\]\n\n\\[\n=\\sqrt{53}+\\sqrt{34}=13.111\\ldots\n\\]"
       },
       {
-        "title": "Yang travels from to",
+        "title": "Simplify surd",
         "body": "Yang travels from \\(A\\) to \\(C\\).\n\n\\[\n\\overrightarrow{AC}=\\overrightarrow{AB}+\\overrightarrow{BC}\n=\\begin{pmatrix}7\\\\-2\\end{pmatrix}+\\begin{pmatrix}-3\\\\5\\end{pmatrix}\n=\\begin{pmatrix}4\\\\3\\end{pmatrix}\n\\]\n\n\\[\n|AC|=\\sqrt{4^2+3^2}=5\n\\]"
       },
       {
@@ -21995,23 +21995,23 @@ window.SOLUTION_DATA = {
         "body": "The scale of the frequency density axis is not needed because the percentage is found from areas."
       },
       {
-        "title": "Using the bar heights from",
+        "title": "Calculate area",
         "body": "Using the bar heights from the histogram, the relative areas are:\n\n\\[\n(5)(277)+(5)(866)+(10)(571)+(10)(329)+(25)(155)\n\\]\n\n\\[\n=1385+4330+5710+3290+3875\n\\]\n\n\\[\n=18590\n\\]"
       },
       {
-        "title": "For ages more than 55,",
+        "title": "Calculate value",
         "body": "For ages more than 55, use the part of the last bar from 55 to 75:\n\n\\[\n(20)(155)=3100\n\\]"
       },
       {
-        "title": "So the estimated percentage is",
+        "title": "Calculate percentage",
         "body": "So the estimated percentage is\n\n\\[\n\\frac{3100}{18590}\\times100=16.675\\ldots\n\\]"
       }
     ],
     "finalAnswer": "\\(16.7\\%\\)"
   },
   "all::May2023_P1HR__Q14__p14-15__m06__Cumulative-Frequency-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
     "steps": [
@@ -22020,20 +22020,20 @@ window.SOLUTION_DATA = {
         "body": "The cumulative frequencies are\n\n\\[\n15,\\ 31,\\ 52,\\ 66,\\ 74,\\ 80\n\\]"
       },
       {
-        "title": "For runners,",
+        "title": "Convert standard form",
         "body": "For \\(80\\) runners,\n\n\\[\n\\text{median}=40,\\qquad Q_1=20,\\qquad Q_3=60\n\\]\n\n\\[\n\\text{median}=70+\\frac{40-31}{52-31}\\times 10\\approx 74.3\n\\]\n\n\\[\nQ_1=60+\\frac{20-15}{31-15}\\times 10\\approx 63.1\n\\]\n\n\\[\nQ_3=80+\\frac{60-52}{66-52}\\times 10\\approx 85.7\n\\]\n\n\\[\n\\text{IQR}\\approx 85.7-63.1=22.6\n\\]"
       }
     ],
     "finalAnswer": "median about \\(74.3\\) min, IQR about \\(22.6\\) min."
   },
   "all::May2023_P1HR__Q05__p07-07__m02__Probability-Toolkit": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate probability",
         "body": "\\[\nP(\\text{lose})=1-0.74=0.26\n\\]"
       },
       {
@@ -22044,8 +22044,8 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(78\\)."
   },
   "all::May2023_P1HR__Q13__p13-13__m03__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
@@ -22054,20 +22054,20 @@ window.SOLUTION_DATA = {
         "body": "The missing branch probabilities are\n\n\\[\n0.1,\\quad 0.6\n\\]"
       },
       {
-        "title": "Novak wins both games with",
+        "title": "Calculate probability",
         "body": "Novak wins both games with probability\n\n\\[\n0.7\\times 0.9=0.63\n\\]"
       }
     ],
     "finalAnswer": "\\(0.63\\)."
   },
   "all::May2023_P1HR__Q12__p12-12__m05__Combined-and-Conditional-Probability": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Combined & Conditional Probability. The tag is correct.",
     "steps": [
       {
-        "title": "The probabilities add to",
+        "title": "Calculate probability",
         "body": "The probabilities add to \\(1\\):\n\n\\[\nx+0.15+0.50+y+0.13+0.03=1\n\\]\n\n\\[\nx+y=0.19\n\\]"
       },
       {
@@ -22088,11 +22088,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\n2^n=2^{x^2}\\times 16^x\\times 8\n\\]\n\n\\[\n16^x=(2^4)^x=2^{4x}\n\\]\n\n\\[\n8=2^3\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\n2^n=2^{x^2+4x+3}\n\\]\n\n\\[\nn=x^2+4x+3\n\\]"
       },
       {
@@ -22100,11 +22100,11 @@ window.SOLUTION_DATA = {
         "body": "Complete the square:\n\n\\[\nn=(x+2)^2-1\n\\]\n\n\\[\n(x+2)^2=n+1\n\\]"
       },
       {
-        "title": "Since , take the positive",
+        "title": "Simplify surd",
         "body": "Since \\(x>0\\), take the positive root:\n\n\\[\nx+2=\\sqrt{n+1}\n\\]\n\n\\[\nx=\\sqrt{n+1}-2\n\\]"
       },
       {
-        "title": "For ,",
+        "title": "Simplify surd",
         "body": "For \\(x>0\\),\n\n\\[\n\\sqrt{n+1}>2\n\\]\n\n\\[\nn>3\n\\]"
       }
     ],
@@ -22117,7 +22117,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Surds to Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\n(x^2-4)\\div \\left(\\frac{4x^2-7x-2}{x}\\right)-2x\n\\]"
       },
       {
@@ -22129,7 +22129,7 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\n\\[\nx^2-4=(x-2)(x+2)\n\\]\n\n\\[\n4x^2-7x-2=(4x+1)(x-2)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify surd",
         "body": "So\n\n\\[\n\\frac{x(x-2)(x+2)}{(4x+1)(x-2)}-2x\n=\\frac{x(x+2)}{4x+1}-2x\n\\]\n\n\\[\n\\frac{x(x+2)-2x(4x+1)}{4x+1}\n=\\frac{x^2+2x-8x^2-2x}{4x+1}\n=\\frac{-7x^2}{4x+1}\n\\]"
       }
     ],
@@ -22146,7 +22146,7 @@ window.SOLUTION_DATA = {
         "body": "The maximum point of \\(y=f(x)\\) is \\((3,5)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=2f(x)\n\\]"
       },
       {
@@ -22154,7 +22154,7 @@ window.SOLUTION_DATA = {
         "body": "the \\(y\\)-coordinate is multiplied by 2:\n\n\\[\n(3,5)\\to(3,10)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x)-7\n\\]"
       },
       {
@@ -22162,7 +22162,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 7 units down:\n\n\\[\n(3,5)\\to(3,-2)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(-x)\n\\]"
       },
       {
@@ -22170,7 +22170,7 @@ window.SOLUTION_DATA = {
         "body": "the graph reflects in the \\(y\\)-axis:\n\n\\[\n(3,5)\\to(-3,5)\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Calculate value",
         "body": "For part (b),\n\n\\[\ny=x^2+7x+20\n\\]"
       },
       {
@@ -22178,7 +22178,7 @@ window.SOLUTION_DATA = {
         "body": "The translation vector is\n\n\\[\n\\begin{pmatrix}2\\\\0\\end{pmatrix}\n\\]"
       },
       {
-        "title": "So the graph moves 2",
+        "title": "Read the graph",
         "body": "So the graph moves 2 units right."
       },
       {
@@ -22207,11 +22207,11 @@ window.SOLUTION_DATA = {
         "body": "Solve\n\n\\[\n3x^2-4x-9=0\n\\]\n\n\\[\nx=\\frac{4\\pm\\sqrt{16+108}}{6}\n\\]\n\n\\[\nx=\\frac{2\\pm\\sqrt{31}}{3}\n\\]"
       },
       {
-        "title": "To 3 significant figures, the",
+        "title": "Differentiate",
         "body": "To 3 significant figures, the roots are\n\n\\[\nx=-1.19,\\quad x=2.52\n\\]"
       },
       {
-        "title": "Since the quadratic opens upwards,",
+        "title": "Solve quadratic equation",
         "body": "Since the quadratic opens upwards, it is positive outside the roots."
       }
     ],
@@ -22228,27 +22228,27 @@ window.SOLUTION_DATA = {
         "body": "The two sides around the \\(30^\\circ\\) angle are\n\n\\[\n2x-1 \\quad \\text{and} \\quad 2x+1\n\\]"
       },
       {
-        "title": "Using the area formula,",
+        "title": "Use trigonometry",
         "body": "Using the area formula,\n\n\\[\n\\text{area}=\\frac{1}{2}ab\\sin C\n\\]\n\n\\[\nx^2+x-3.75\n=\\frac{1}{2}(2x-1)(2x+1)\\sin 30^\\circ\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Use trigonometry",
         "body": "Since \\(\\sin 30^\\circ=\\frac{1}{2}\\),\n\n\\[\nx^2+x-3.75=\\frac{1}{4}(2x-1)(2x+1)\n\\]\n\n\\[\nx^2+x-3.75=\\frac{1}{4}(4x^2-1)\n\\]\n\n\\[\nx^2+x-3.75=x^2-0.25\n\\]\n\n\\[\nx=3.5\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\nAB=2x-1=6,\\qquad AC=2x+1=8\n\\]"
       },
       {
-        "title": "Use the cosine rule to",
+        "title": "Use cosine rule",
         "body": "Use the cosine rule to find \\(BC\\):\n\n\\[\nBC^2=6^2+8^2-2(6)(8)\\cos 30^\\circ\n\\]\n\n\\[\nBC=4.1063\\ldots\n\\]"
       },
       {
-        "title": "The largest side is ,",
+        "title": "Use trigonometry",
         "body": "The largest side is \\(AC=8\\), so the largest angle is \\(\\angle B\\)."
       },
       {
-        "title": "Using the cosine rule again",
+        "title": "Use trigonometry",
         "body": "Using the cosine rule again:\n\n\\[\n\\cos B=\\frac{6^2+BC^2-8^2}{2(6)(BC)}\n\\]\n\n\\[\nB=103.0643\\ldots^\\circ\n\\]"
       }
     ],
@@ -22265,15 +22265,15 @@ window.SOLUTION_DATA = {
         "body": "The scale of the frequency density axis is not needed because the percentage is found from areas."
       },
       {
-        "title": "Using the bar heights from",
+        "title": "Calculate area",
         "body": "Using the bar heights from the histogram, the relative areas are:\n\n\\[\n(5)(277)+(5)(866)+(10)(571)+(10)(329)+(25)(155)\n\\]\n\n\\[\n=1385+4330+5710+3290+3875\n\\]\n\n\\[\n=18590\n\\]"
       },
       {
-        "title": "For ages more than 55,",
+        "title": "Calculate value",
         "body": "For ages more than 55, use the part of the last bar from 55 to 75:\n\n\\[\n(20)(155)=3100\n\\]"
       },
       {
-        "title": "So the estimated percentage is",
+        "title": "Calculate percentage",
         "body": "So the estimated percentage is\n\n\\[\n\\frac{3100}{18590}\\times100=16.675\\ldots\n\\]"
       }
     ],
@@ -22286,15 +22286,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Set notation and Venn diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\n\\mathcal{E}=\\{23,24,25,26,27,28,29,30,31,32,33,34\\}\n\\]\n\n\\[\nA=\\{24,26,28,30,32,34\\}\n\\]\n\n\\[\nB=\\{23,29,31\\}\n\\]\n\n\\[\nC=\\{24,27,30,33\\}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\nB\\cup C=\\{23,24,27,29,30,31,33\\}\n\\]"
       },
       {
-        "title": "Also is the set of",
+        "title": "Set of odd numbers",
         "body": "Also \\(A'\\) is the set of odd numbers in \\(\\mathcal{E}\\), so\n\n\\[\nA'\\cap C=\\{27,33\\}\n\\]"
       },
       {
@@ -22302,7 +22302,7 @@ window.SOLUTION_DATA = {
         "body": "The statement \\(B\\cap C=\\emptyset\\) is true because none of \\(23,29,31\\) is a multiple of \\(3\\)."
       },
       {
-        "title": "For , we need .",
+        "title": "Calculate value",
         "body": "For \\(D\\), we need \\(D\\cap(A\\cup C)=\\emptyset\\). So \\(D\\) must contain the four numbers outside \\(A\\cup C\\):\n\n\\[\nD=\\{23,25,29,31\\}\n\\]"
       }
     ],
@@ -22315,11 +22315,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find the LCM",
         "body": "\\[\n72=2^3\\times 3^2\n\\]\n\n\\[\n108=2^2\\times 3^3\n\\]"
       },
       {
-        "title": "For the HCF, take the",
+        "title": "Find the LCM",
         "body": "For the HCF, take the smaller power of each common prime:\n\n\\[\n\\text{HCF}=2^2\\times 3^2\n\\]\n\n\\[\n2^2\\times 3^2=4\\times 9=36\n\\]"
       }
     ],
@@ -22332,7 +22332,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Powers, roots and standard form. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Convert standard form",
         "body": "\\[\n3.5\\times 10^7=35000000\n\\]"
       },
       {
@@ -22348,7 +22348,7 @@ window.SOLUTION_DATA = {
         "body": "Japan produced \\(6780000\\) more tonnes than Argentina, so\n\n\\[\n820000+6780000=7600000\n\\]"
       },
       {
-        "title": "In standard form,",
+        "title": "Convert standard form",
         "body": "In standard form,\n\n\\[\n7600000=7.6\\times 10^6\n\\]"
       }
     ],
@@ -22361,7 +22361,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Percentages. The tag is correct.",
     "steps": [
       {
-        "title": "April is more than March,",
+        "title": "Calculate percentage",
         "body": "April is \\(15\\%\\) more than March, so April is \\(115\\%\\) of March.\n\n\\[\n1.15\\times \\text{March}=943\n\\]\n\n\\[\n\\text{March}=\\frac{943}{1.15}=820\n\\]"
       }
     ],
@@ -22378,7 +22378,7 @@ window.SOLUTION_DATA = {
         "body": "Let Abel's savings be \\(A\\)."
       },
       {
-        "title": "Bahira has more than Abel,",
+        "title": "Calculate percentage",
         "body": "Bahira has \\(45\\%\\) more than Abel, so\n\n\\[\nB=1.45A\n\\]"
       },
       {
@@ -22386,7 +22386,7 @@ window.SOLUTION_DATA = {
         "body": "Their combined savings are\n\n\\[\nA+1.45A=15435\n\\]\n\n\\[\n2.45A=15435\n\\]\n\n\\[\nA=6300\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate percentage",
         "body": "So\n\n\\[\nB=1.45\\times 6300=9135\n\\]"
       },
       {
@@ -22407,7 +22407,7 @@ window.SOLUTION_DATA = {
         "body": "(a) \\((2p)^0=1\\)."
       },
       {
-        "title": "(b) , so",
+        "title": "Use index laws",
         "body": "(b) \\(y^9\\times y^{-3}=y^{9-3}=y^6\\), so \\(n=6\\)."
       },
       {
@@ -22424,7 +22424,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve inequality",
         "body": "\\[\nf(x)=17-3x^2+12x\n\\]\n\n\\[\n=-3x^2+12x+17\n\\]\n\n\\[\n=-3(x^2-4x)+17\n\\]\n\n\\[\n=-3\\left((x-2)^2-4\\right)+17\n\\]\n\n\\[\n=-3(x-2)^2+12+17\n\\]\n\n\\[\n=29-3(x-2)^2\n\\]"
       }
     ],
@@ -22458,7 +22458,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic proof. The tag is acceptable because the question asks for exact-form proof.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\n\\frac{1+\\sqrt5}{3-\\sqrt5}\\times\\frac{3+\\sqrt5}{3+\\sqrt5}\n=\\frac{(1+\\sqrt5)(3+\\sqrt5)}{9-5}\n\\]\n\n\\[\n=\\frac{3+\\sqrt5+3\\sqrt5+5}{4}\n\\]\n\n\\[\n=\\frac{8+4\\sqrt5}{4}=2+\\sqrt5\n\\]"
       }
     ],
@@ -22496,7 +22496,7 @@ window.SOLUTION_DATA = {
         "body": "The common difference is \\(3\\).\n\n\\[\n\\text{nth term}=1+3(n-1)=3n-2\n\\]"
       },
       {
-        "title": "For the other sequence,",
+        "title": "Find the nth term",
         "body": "For the other sequence,\n\\[\n5n+17\n\\]"
       },
       {
@@ -22517,7 +22517,7 @@ window.SOLUTION_DATA = {
         "body": "The interior angles form an arithmetic sequence with first term \\(84\\) and common difference \\(4\\)."
       },
       {
-        "title": "So the sum of the",
+        "title": "Use trigonometry",
         "body": "So the sum of the angles is\n\n\\[\n\\frac n2(2(84)+(n-1)4)\n\\]\n\n\\[\n=\\frac n2(168+4n-4)\n\\]\n\n\\[\n=2n^2+82n\n\\]"
       },
       {
@@ -22525,15 +22525,15 @@ window.SOLUTION_DATA = {
         "body": "The sum of the interior angles of an \\(n\\)-sided polygon is\n\n\\[\n180(n-2)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\n2n^2+82n=180(n-2)\n\\]\n\n\\[\n2n^2-98n+360=0\n\\]\n\n\\[\nn^2-49n+180=0\n\\]\n\n\\[\n(n-45)(n-4)=0\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Solve inequality",
         "body": "Since \\(n>5\\),\n\n\\[\nn=45\n\\]"
       },
       {
-        "title": "Therefore the sum of the",
+        "title": "Use trigonometry",
         "body": "Therefore the sum of the interior angles is\n\n\\[\n180(45-2)=7740\n\\]"
       }
     ],
@@ -22546,7 +22546,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Functions. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\nf(x)=\\frac{3x+1}{x-2}\n\\]"
       },
       {
@@ -22558,7 +22558,7 @@ window.SOLUTION_DATA = {
         "body": "(b) Let\n\\[\ny=\\frac{3x+1}{x-2}\n\\]\n\n\\[\ny(x-2)=3x+1\n\\]\n\n\\[\nyx-2y=3x+1\n\\]\n\n\\[\nx(y-3)=2y+1\n\\]\n\n\\[\nx=\\frac{2y+1}{y-3}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\\[\nf^{-1}(x)=\\frac{2x+1}{x-3}\n\\]"
       }
     ],
@@ -22575,7 +22575,7 @@ window.SOLUTION_DATA = {
         "body": "The minimum point of \\(y=f(x)\\) is \\((5,-4)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x+7)\n\\]"
       },
       {
@@ -22583,7 +22583,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 7 units left:\n\n\\[\n(5,-4)\\to(-2,-4)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x)-6\n\\]"
       },
       {
@@ -22600,19 +22600,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to differentiation. The question asks for points where the derivative has a given value.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Differentiate",
         "body": "\\[\ny=x^3-40x+1\n\\]\n\n\\[\n\\frac{dy}{dx}=3x^2-40\n\\]"
       },
       {
-        "title": "The gradient is , so",
+        "title": "Find the gradient",
         "body": "The gradient is \\(8\\), so\n\\[\n3x^2-40=8\n\\]\n\n\\[\n3x^2=48\n\\]\n\n\\[\nx^2=16\n\\]\n\n\\[\nx=4 \\quad \\text{or} \\quad x=-4\n\\]"
       },
       {
-        "title": "When",
+        "title": "Differentiate",
         "body": "When \\(x=4\\):\n\\[\ny=4^3-40(4)+1=-95\n\\]"
       },
       {
-        "title": "When",
+        "title": "Differentiate",
         "body": "When \\(x=-4\\):\n\\[\ny=(-4)^3-40(-4)+1=97\n\\]"
       }
     ],
@@ -22629,7 +22629,7 @@ window.SOLUTION_DATA = {
         "body": "The volume of a cylinder is\n\\[\n\\text{volume}=\\text{area of base}\\times \\text{height}\n\\]"
       },
       {
-        "title": "So the area in contact",
+        "title": "Calculate area",
         "body": "So the area in contact with the table is\n\\[\n1575\\div 21=75\\text{ cm}^2\n\\]"
       },
       {
@@ -22650,7 +22650,7 @@ window.SOLUTION_DATA = {
         "body": "The interior angle of a regular pentagon is\n\\[\n\\frac{(5-2)\\times 180}{5}=108^\\circ\n\\]"
       },
       {
-        "title": "At , angles around a",
+        "title": "Find the gradient",
         "body": "At \\(E\\), angles around a point add to \\(360^\\circ\\).\n\n\\[\n\\angle FED=360^\\circ-96^\\circ-108^\\circ=156^\\circ\n\\]"
       }
     ],
@@ -22671,7 +22671,7 @@ window.SOLUTION_DATA = {
         "body": "The shaded segment is\n\n\\[\n\\text{sector area}-\\text{triangle area}\n\\]"
       },
       {
-        "title": "The angle is , so",
+        "title": "Use trigonometry",
         "body": "The angle is \\(60^\\circ\\), so\n\n\\[\n38=\\frac{60}{360}\\pi r^2-\\frac{1}{2}r^2\\sin 60^\\circ\n\\]\n\n\\[\n38=r^2\\left(\\frac{\\pi}{6}-\\frac{\\sqrt3}{4}\\right)\n\\]\n\n\\[\nr=20.4815\\ldots\n\\]"
       },
       {
@@ -22687,7 +22687,7 @@ window.SOLUTION_DATA = {
         "body": "Chord length:\n\n\\[\n2r\\sin 30^\\circ=r\n\\]"
       },
       {
-        "title": "So the perimeter is",
+        "title": "Evaluate fraction",
         "body": "So the perimeter is\n\n\\[\n\\frac{\\pi r}{3}+r\n\\]\n\n\\[\n=\\frac{\\pi(20.4815\\ldots)}{3}+20.4815\\ldots\n\\]\n\n\\[\n=41.9296\\ldots\n\\]"
       }
     ],
@@ -22700,7 +22700,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "The cone has radius and",
+        "title": "Define cone dimensions",
         "body": "The cone has radius \\(5x\\) and height \\(6x\\)."
       },
       {
@@ -22732,7 +22732,7 @@ window.SOLUTION_DATA = {
         "body": "Total surface area of a solid hemisphere is\n\n\\[\n3\\pi r^2\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\n3\\pi(2x)^2=12\\pi x^2\n\\]\n\n\\[\n12\\pi(5.3781\\ldots)^2=1090.3903\\ldots\n\\]"
       }
     ],
@@ -22745,11 +22745,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Right-Angled Triangles - Pythagoras and Trigonometry. The missing support length is found using Pythagoras.",
     "steps": [
       {
-        "title": "Since , the perpendicular support",
+        "title": "Find the gradient",
         "body": "Since \\(AC=BC\\), the perpendicular support from \\(C\\) meets \\(AB\\) at its midpoint.\n\n\\[\nAM=\\frac{12}{2}=6\n\\]"
       },
       {
-        "title": "In right angled triangle ,",
+        "title": "Use trigonometry",
         "body": "In right-angled triangle \\(AMC\\),\n\n\\[\nAC^2=AM^2+MC^2\n\\]\n\n\\[\n9^2=6^2+MC^2\n\\]\n\n\\[\nMC^2=81-36=45\n\\]\n\n\\[\nMC=\\sqrt{45}=6.708\\ldots\n\\]"
       },
       {
@@ -22774,15 +22774,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Sine, Cosine Rule & Area of Triangles. The tag is correct.",
     "steps": [
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(BCD\\),\n\n\\[\n\\angle DBC=180^\\circ-40^\\circ-62^\\circ=78^\\circ\n\\]"
       },
       {
-        "title": "By the sine rule,",
+        "title": "Use trigonometry",
         "body": "By the sine rule,\n\n\\[\n\\frac{DB}{\\sin62^\\circ}=\\frac{12.8}{\\sin40^\\circ}\n\\]\n\n\\[\nDB=17.582\\ldots\n\\]"
       },
       {
-        "title": "Now use cosine rule in",
+        "title": "Use trigonometry",
         "body": "Now use cosine rule in triangle \\(ABD\\):\n\n\\[\n\\cos x=\\frac{15.2^2+13.4^2-17.582\\ldots^2}{2(15.2)(13.4)}\n\\]\n\n\\[\nx=75.577\\ldots^\\circ\n\\]"
       }
     ],
@@ -22795,23 +22795,23 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "For a histogram,",
+        "title": "Use histogram",
         "body": "For a histogram,\n\n\\[\n\\text{frequency}=\\text{class width}\\times \\text{frequency density}\n\\]"
       },
       {
-        "title": "For , the frequency is",
+        "title": "Use frequency table",
         "body": "For \\(15\\leq d<20\\), the frequency is 14 and the class width is 5, so\n\n\\[\n\\text{frequency density}=\\frac{14}{5}=2.8\n\\]"
       },
       {
-        "title": "Using this scale from the",
+        "title": "Use histogram",
         "body": "Using this scale from the histogram:\n\n\\[\n20\\leq d<35 \\quad \\text{has frequency density } 3.4\n\\]\n\n\\[\n35\\leq d\\leq55 \\quad \\text{has frequency density } 0.4\n\\]"
       },
       {
-        "title": "So the known frequencies are",
+        "title": "Calculate value",
         "body": "So the known frequencies are\n\n\\[\n14+(15)(3.4)+(20)(0.4)\n\\]\n\n\\[\n=14+51+8=73\n\\]"
       },
       {
-        "title": "There are 100 adults in",
+        "title": "Use frequency table",
         "body": "There are 100 adults in total, so the missing frequency from 5 km to 15 km is\n\n\\[\n100-73=27\n\\]"
       },
       {
@@ -22822,8 +22822,8 @@ window.SOLUTION_DATA = {
     "finalAnswer": "draw the missing bar from \\(5\\) to \\(15\\) with frequency density \\(2.7\\)"
   },
   "all::May2024_P1H__Q02__p04-04__m04__Probability-Toolkit": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
@@ -22832,7 +22832,7 @@ window.SOLUTION_DATA = {
         "body": "Let the probability of travelling by bus be \\(x\\).\nThen the probability of travelling by car is \\(2x\\).\n\n\\[\n0.20+x+2x+0.26=1\n\\]\n\n\\[\n3x=0.54\n\\]\n\n\\[\nx=0.18\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate probability",
         "body": "So\n\n\\[\nP(\\text{car})=2x=0.36\n\\]"
       },
       {
@@ -22843,13 +22843,13 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(162\\)."
   },
   "all::May2024_P1H__Q13__p14-14__m05__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Bag A has white and",
+        "title": "Calculate probability",
         "body": "Bag A has \\(3\\) white and \\(7\\) black counters.\nBag B has \\(5\\) white and \\(4\\) black counters."
       },
       {
@@ -22860,13 +22860,13 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(\\frac{43}{90}\\)."
   },
   "all::May2024_P1H__Q16__p17-17__m04__Combined-and-Conditional-Probability": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Combined & Conditional Probability. The tag is correct.",
     "steps": [
       {
-        "title": "At least one sweet of",
+        "title": "Calculate probability",
         "body": "At least one sweet of each colour is the complement of all red or all yellow.\n\n\\[\nP(\\text{all red})=\\frac{15}{20}\\times\\frac{14}{19}\\times\\frac{13}{18}\n\\]\n\n\\[\nP(\\text{all yellow})=\\frac{5}{20}\\times\\frac{4}{19}\\times\\frac{3}{18}\n\\]\n\n\\[\nP(\\text{at least one of each})\n=1-P(\\text{all red})-P(\\text{all yellow})\n\\]\n\n\\[\n=1-\\frac{2730}{6840}-\\frac{60}{6840}\n\\]\n\n\\[\n=\\frac{45}{76}\n\\]"
       }
     ],
@@ -22879,7 +22879,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve inequality",
         "body": "\\[\nf(x)=17-3x^2+12x\n\\]\n\n\\[\n=-3x^2+12x+17\n\\]\n\n\\[\n=-3(x^2-4x)+17\n\\]\n\n\\[\n=-3\\left((x-2)^2-4\\right)+17\n\\]\n\n\\[\n=-3(x-2)^2+12+17\n\\]\n\n\\[\n=29-3(x-2)^2\n\\]"
       }
     ],
@@ -22896,7 +22896,7 @@ window.SOLUTION_DATA = {
         "body": "The interior angles form an arithmetic sequence with first term \\(84\\) and common difference \\(4\\)."
       },
       {
-        "title": "So the sum of the",
+        "title": "Use trigonometry",
         "body": "So the sum of the angles is\n\n\\[\n\\frac n2(2(84)+(n-1)4)\n\\]\n\n\\[\n=\\frac n2(168+4n-4)\n\\]\n\n\\[\n=2n^2+82n\n\\]"
       },
       {
@@ -22904,15 +22904,15 @@ window.SOLUTION_DATA = {
         "body": "The sum of the interior angles of an \\(n\\)-sided polygon is\n\n\\[\n180(n-2)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\n2n^2+82n=180(n-2)\n\\]\n\n\\[\n2n^2-98n+360=0\n\\]\n\n\\[\nn^2-49n+180=0\n\\]\n\n\\[\n(n-45)(n-4)=0\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Solve inequality",
         "body": "Since \\(n>5\\),\n\n\\[\nn=45\n\\]"
       },
       {
-        "title": "Therefore the sum of the",
+        "title": "Use trigonometry",
         "body": "Therefore the sum of the interior angles is\n\n\\[\n180(45-2)=7740\n\\]"
       }
     ],
@@ -22929,7 +22929,7 @@ window.SOLUTION_DATA = {
         "body": "The minimum point of \\(y=f(x)\\) is \\((5,-4)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x+7)\n\\]"
       },
       {
@@ -22937,7 +22937,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 7 units left:\n\n\\[\n(5,-4)\\to(-2,-4)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x)-6\n\\]"
       },
       {
@@ -22962,7 +22962,7 @@ window.SOLUTION_DATA = {
         "body": "The shaded segment is\n\n\\[\n\\text{sector area}-\\text{triangle area}\n\\]"
       },
       {
-        "title": "The angle is , so",
+        "title": "Use trigonometry",
         "body": "The angle is \\(60^\\circ\\), so\n\n\\[\n38=\\frac{60}{360}\\pi r^2-\\frac{1}{2}r^2\\sin 60^\\circ\n\\]\n\n\\[\n38=r^2\\left(\\frac{\\pi}{6}-\\frac{\\sqrt3}{4}\\right)\n\\]\n\n\\[\nr=20.4815\\ldots\n\\]"
       },
       {
@@ -22978,7 +22978,7 @@ window.SOLUTION_DATA = {
         "body": "Chord length:\n\n\\[\n2r\\sin 30^\\circ=r\n\\]"
       },
       {
-        "title": "So the perimeter is",
+        "title": "Evaluate fraction",
         "body": "So the perimeter is\n\n\\[\n\\frac{\\pi r}{3}+r\n\\]\n\n\\[\n=\\frac{\\pi(20.4815\\ldots)}{3}+20.4815\\ldots\n\\]\n\n\\[\n=41.9296\\ldots\n\\]"
       }
     ],
@@ -22991,7 +22991,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "The cone has radius and",
+        "title": "Define cone dimensions",
         "body": "The cone has radius \\(5x\\) and height \\(6x\\)."
       },
       {
@@ -23023,7 +23023,7 @@ window.SOLUTION_DATA = {
         "body": "Total surface area of a solid hemisphere is\n\n\\[\n3\\pi r^2\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\n3\\pi(2x)^2=12\\pi x^2\n\\]\n\n\\[\n12\\pi(5.3781\\ldots)^2=1090.3903\\ldots\n\\]"
       }
     ],
@@ -23036,23 +23036,23 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "For a histogram,",
+        "title": "Use histogram",
         "body": "For a histogram,\n\n\\[\n\\text{frequency}=\\text{class width}\\times \\text{frequency density}\n\\]"
       },
       {
-        "title": "For , the frequency is",
+        "title": "Use frequency table",
         "body": "For \\(15\\leq d<20\\), the frequency is 14 and the class width is 5, so\n\n\\[\n\\text{frequency density}=\\frac{14}{5}=2.8\n\\]"
       },
       {
-        "title": "Using this scale from the",
+        "title": "Use histogram",
         "body": "Using this scale from the histogram:\n\n\\[\n20\\leq d<35 \\quad \\text{has frequency density } 3.4\n\\]\n\n\\[\n35\\leq d\\leq55 \\quad \\text{has frequency density } 0.4\n\\]"
       },
       {
-        "title": "So the known frequencies are",
+        "title": "Calculate value",
         "body": "So the known frequencies are\n\n\\[\n14+(15)(3.4)+(20)(0.4)\n\\]\n\n\\[\n=14+51+8=73\n\\]"
       },
       {
-        "title": "There are 100 adults in",
+        "title": "Use frequency table",
         "body": "There are 100 adults in total, so the missing frequency from 5 km to 15 km is\n\n\\[\n100-73=27\n\\]"
       },
       {
@@ -23069,11 +23069,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find the LCM",
         "body": "\\[\nA=2^5\\times 5\\times 7^2\n\\]\n\n\\[\nB=2^3\\times 5^3\\times 7^4\n\\]"
       },
       {
-        "title": "For part (a),",
+        "title": "Find the LCM",
         "body": "For part (a),\n\n\\[\n5A=2^5\\times 5^2\\times 7^2\n\\]\n\n\\[\n2B=2^4\\times 5^3\\times 7^4\n\\]"
       },
       {
@@ -23081,11 +23081,11 @@ window.SOLUTION_DATA = {
         "body": "The HCF takes the smaller powers:\n\n\\[\n\\text{HCF}=2^4\\times 5^2\\times 7^2\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Find the LCM",
         "body": "For part (b),\n\n\\[\nAB=2^{5+3}\\times 5^{1+3}\\times 7^{2+4}\n\\]\n\n\\[\nAB=2^8\\times 5^4\\times 7^6\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Find the LCM",
         "body": "Therefore\n\n\\[\n(AB)^2=2^{16}\\times 5^8\\times 7^{12}\n\\]"
       }
     ],
@@ -23135,11 +23135,11 @@ window.SOLUTION_DATA = {
         "body": "The multiplier for \\(2.5\\%\\) compound interest is\n\n\\[\n1.025\n\\]"
       },
       {
-        "title": "After 4 years,",
+        "title": "Use compound interest",
         "body": "After 4 years,\n\n\\[\n5200(1.025)^4=5739.827\\ldots\n\\]"
       },
       {
-        "title": "Correct to the nearest euro,",
+        "title": "Use compound interest",
         "body": "Correct to the nearest euro,\n\n\\[\n5739.827\\ldots\\approx 5740\n\\]"
       }
     ],
@@ -23198,7 +23198,7 @@ window.SOLUTION_DATA = {
         "body": "(c)(i)\n\\[\nx^2-2x-63=(x-9)(x+7)\n\\]"
       },
       {
-        "title": "(c)(ii) or",
+        "title": "Solve quadratic equation",
         "body": "(c)(ii) \\(x=9\\) or \\(x=-7\\)."
       },
       {
@@ -23215,7 +23215,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Coordinate Geometry to Completing the Square.",
     "steps": [
       {
-        "title": "For part (a),",
+        "title": "Use Moved Coordinate Geometry Completing",
         "body": "For part (a),\n\n\\[\n2x^2-11x+9\n\\]"
       },
       {
@@ -23227,11 +23227,11 @@ window.SOLUTION_DATA = {
         "body": "Complete the square:\n\n\\[\n2\\left[\\left(x-\\frac{11}{4}\\right)^2-\\frac{121}{16}\\right]+9\n\\]\n\n\\[\n2\\left(x-\\frac{11}{4}\\right)^2-\\frac{121}{8}+9\n\\]\n\n\\[\n2\\left(x-\\frac{11}{4}\\right)^2-\\frac{121}{8}+\\frac{72}{8}\n\\]\n\n\\[\n2\\left(x-\\frac{11}{4}\\right)^2-\\frac{49}{8}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\n2x^2-11x+9=2\\left(x-\\frac{11}{4}\\right)^2-\\frac{49}{8}\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Calculate value",
         "body": "For part (b),\n\n\\[\ny=2(x-3)^2-11(x-3)+9\n\\]"
       },
       {
@@ -23239,11 +23239,11 @@ window.SOLUTION_DATA = {
         "body": "Let\n\n\\[\nu=x-3\n\\]"
       },
       {
-        "title": "From part (a), the minimum",
+        "title": "Evaluate fraction",
         "body": "From part (a), the minimum occurs when\n\n\\[\nu=\\frac{11}{4}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\nx-3=\\frac{11}{4}\n\\]\n\n\\[\nx=\\frac{23}{4}\n\\]"
       },
       {
@@ -23260,7 +23260,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic proof. The tag is acceptable because the question asks to show the exact result.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\n2\\frac13=\\frac73,\\qquad 5\\frac14=\\frac{21}{4}\n\\]\n\n\\[\n2\\frac13\\div5\\frac14=\\frac73\\div\\frac{21}{4}\n\\]\n\n\\[\n=\\frac73\\times\\frac4{21}=\\frac{28}{63}=\\frac49\n\\]"
       }
     ],
@@ -23273,7 +23273,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Simultaneous equations. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve simultaneous equations",
         "body": "\\[\n4x+3y=9.6\n\\]\n\n\\[\n6x+5y=16.8\n\\]"
       },
       {
@@ -23289,7 +23289,7 @@ window.SOLUTION_DATA = {
         "body": "Subtract:\n\\[\n2x=-2.4\n\\]\n\n\\[\nx=-1.2\n\\]"
       },
       {
-        "title": "Substitute into",
+        "title": "Solve simultaneous equations",
         "body": "Substitute into \\(4x+3y=9.6\\):\n\\[\n4(-1.2)+3y=9.6\n\\]\n\n\\[\n3y=14.4\n\\]\n\n\\[\ny=4.8\n\\]"
       }
     ],
@@ -23310,7 +23310,7 @@ window.SOLUTION_DATA = {
         "body": "Equal differences give\n\n\\[\n(x+2)-(4x-14)=(7x-9)-(x+2)\n\\]\n\n\\[\n-3x+16=6x-11\n\\]\n\n\\[\n9x=27\n\\]\n\n\\[\nx=3\n\\]"
       },
       {
-        "title": "So the sequence is",
+        "title": "Find the nth term",
         "body": "So the sequence is\n\n\\[\n-2,\\ 5,\\ 12,\\ldots\n\\]"
       },
       {
@@ -23327,7 +23327,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to linear graphs. The question asks for an equation of a drawn line.",
     "steps": [
       {
-        "title": "From the graph, the line",
+        "title": "Solve equation",
         "body": "From the graph, the line crosses the y-axis at \\(1\\), so\n\\[\nc=1\n\\]"
       },
       {
@@ -23335,7 +23335,7 @@ window.SOLUTION_DATA = {
         "body": "It also crosses the x-axis at \\(2\\), so using \\((0,1)\\) and \\((2,0)\\),\n\\[\nm=\\frac{0-1}{2-0}=-\\frac12\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Solve equation",
         "body": "Therefore\n\\[\ny=-\\frac12x+1\n\\]"
       }
     ],
@@ -23348,7 +23348,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This is finding stationary points using differentiation.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Differentiate",
         "body": "\\[\ny=x^3-8x^2-12x+5\n\\]\n\n\\[\n\\frac{dy}{dx}=3x^2-16x-12\n\\]"
       },
       {
@@ -23356,7 +23356,7 @@ window.SOLUTION_DATA = {
         "body": "Stationary points have\n\\[\n3x^2-16x-12=0\n\\]\n\n\\[\nx=\\frac{16\\pm\\sqrt{(-16)^2-4(3)(-12)}}{6}\n\\]\n\n\\[\nx=\\frac{16\\pm20}{6}\n\\]\n\n\\[\nx=6 \\quad \\text{or} \\quad x=-\\frac23\n\\]"
       },
       {
-        "title": "Point has the greater coordinate,",
+        "title": "Differentiate",
         "body": "Point \\(A\\) has the greater \\(x\\)-coordinate, so \\(x=6\\).\n\n\\[\ny=6^3-8(6^2)-12(6)+5\n\\]\n\n\\[\ny=216-288-72+5=-139\n\\]"
       }
     ],
@@ -23369,15 +23369,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Standard & Compound Units. The tag is correct.",
     "steps": [
       {
-        "title": "For the cylinder,",
+        "title": "Evaluate fraction",
         "body": "For the cylinder,\n\\[\nV=\\pi r^2h\n\\]\n\n\\[\n1208=\\pi(8)^2h\n\\]\n\n\\[\nh=\\frac{1208}{64\\pi}=6.006\\ldots\n\\]"
       },
       {
-        "title": "So, to the nearest whole",
+        "title": "Calculate value",
         "body": "So, to the nearest whole number,\n\\[\nh=6\n\\]"
       },
       {
-        "title": "For the mass, use the",
+        "title": "Calculate volume",
         "body": "For the mass, use the given volume:\n\\[\n\\text{mass}=\\text{density}\\times \\text{volume}\n\\]\n\n\\[\n1.25\\times 1208=1510\\text{ g}\n\\]\n\n\\[\n1510\\text{ g}=1.51\\text{ kg}\n\\]"
       }
     ],
@@ -23398,7 +23398,7 @@ window.SOLUTION_DATA = {
         "body": "The angle at the centre is twice the angle at the circumference standing on the same arc \\(BD\\):\n\\[\n\\angle BOD=2\\times 52^\\circ=104^\\circ\n\\]"
       },
       {
-        "title": "Since , triangle is isosceles",
+        "title": "Use trigonometry",
         "body": "Since \\(OB=OD\\), triangle \\(OBD\\) is isosceles:\n\\[\n\\angle OBD=\\frac{180^\\circ-104^\\circ}{2}=38^\\circ\n\\]"
       }
     ],
@@ -23415,11 +23415,11 @@ window.SOLUTION_DATA = {
         "body": "Use the trapezium area formula:\n\\[\n360=\\frac12(AB+14)(15)\n\\]\n\n\\[\nAB+14=48\n\\]\n\n\\[\nAB=34\n\\]"
       },
       {
-        "title": "Triangle is right angled with",
+        "title": "Use trigonometry",
         "body": "Triangle \\(ABC\\) is right-angled with horizontal length\n\\[\n34-14=20\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate area",
         "body": "So\n\\[\nBC=\\sqrt{20^2+15^2}=25\n\\]"
       },
       {
@@ -23436,19 +23436,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Area & Volume of Similar Shapes. The tag is correct.",
     "steps": [
       {
-        "title": "The linear scale factor from",
+        "title": "Calculate area",
         "body": "The linear scale factor from vase \\(B\\) to vase \\(A\\) is\n\\[\n\\frac{30}{12}=2.5\n\\]"
       },
       {
-        "title": "So the surface area scale",
+        "title": "Calculate area",
         "body": "So the surface area scale factor is\n\\[\n2.5^2=6.25\n\\]"
       },
       {
-        "title": "Let the surface area of",
+        "title": "Calculate surface area",
         "body": "Let the surface area of vase \\(B\\) be \\(S\\).\n\n\\[\n6.25S-S=178.5\n\\]\n\n\\[\n5.25S=178.5\n\\]\n\n\\[\nS=34\n\\]"
       },
       {
-        "title": "Therefore the surface area of",
+        "title": "Calculate area",
         "body": "Therefore the surface area of vase \\(A\\) is\n\\[\n6.25\\times 34=212.5\n\\]"
       }
     ],
@@ -23478,11 +23478,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Coordinate Geometry to 3D Pythagoras & Trigonometry.",
     "steps": [
       {
-        "title": "Use coordinates with",
+        "title": "Use trigonometry",
         "body": "Use coordinates with\n\n\\[\nA=(0,0,0)\n\\]"
       },
       {
-        "title": "Since",
+        "title": "Use trigonometry",
         "body": "Since\n\n\\[\nAD=12,\\qquad DE=20,\\qquad AB=8\n\\]"
       },
       {
@@ -23494,11 +23494,11 @@ window.SOLUTION_DATA = {
         "body": "The centre of the rectangular base \\(ADEH\\) is\n\n\\[\nM=(6,10,0)\n\\]"
       },
       {
-        "title": "Point is the midpoint of",
+        "title": "Find the midpoint",
         "body": "Point \\(P\\) is the midpoint of \\(CF\\).\n\n\\[\nC=(12,0,8),\\qquad F=(12,20,8)\n\\]\n\n\\[\nP=(12,10,8)\n\\]"
       },
       {
-        "title": "Now",
+        "title": "Use trigonometry",
         "body": "Now\n\n\\[\n\\vec{MB}=B-M=(-6,-10,8)\n\\]\n\n\\[\n\\vec{MP}=P-M=(6,0,8)\n\\]"
       },
       {
@@ -23545,7 +23545,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Histograms. The tag is correct.",
     "steps": [
       {
-        "title": "For a histogram,",
+        "title": "Use histogram",
         "body": "For a histogram,\n\n\\[\n\\text{frequency density}=\\frac{\\text{frequency}}{\\text{class width}}\n\\]"
       },
       {
@@ -23556,8 +23556,8 @@ window.SOLUTION_DATA = {
     "finalAnswer": "draw bars with heights \\(2.5,4,3.6,1.4,0.6\\)."
   },
   "all::May2024_P1HR__Q02__p04-04__m04__Probability-Toolkit": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
@@ -23599,15 +23599,15 @@ window.SOLUTION_DATA = {
         "body": "The probability of taking one orange and one pink in either order is\n\n\\[\n\\frac{x}{25}\\cdot\\frac{19-x}{24}\n+\\frac{19-x}{25}\\cdot\\frac{x}{24}\n\\]\n\n\\[\n=\\frac{2x(19-x)}{25\\cdot24}\n\\]"
       },
       {
-        "title": "This is equal to ,",
+        "title": "Evaluate fraction",
         "body": "This is equal to \\(\\frac{22}{75}\\), so\n\n\\[\n\\frac{2x(19-x)}{600}=\\frac{22}{75}\n\\]\n\n\\[\n\\frac{x(19-x)}{300}=\\frac{22}{75}\n\\]\n\n\\[\nx(19-x)=88\n\\]\n\n\\[\n19x-x^2=88\n\\]\n\n\\[\nx^2-19x+88=0\n\\]\n\n\\[\n(x-8)(x-11)=0\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Solve inequality",
         "body": "Since \\(x>9\\),\n\n\\[\nx=11\n\\]"
       },
       {
-        "title": "So the number of pink",
+        "title": "Calculate value",
         "body": "So the number of pink counters is\n\n\\[\n19-11=8\n\\]"
       },
       {
@@ -23624,7 +23624,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Coordinate Geometry to Completing the Square.",
     "steps": [
       {
-        "title": "For part (a),",
+        "title": "Use Moved Coordinate Geometry Completing",
         "body": "For part (a),\n\n\\[\n2x^2-11x+9\n\\]"
       },
       {
@@ -23636,11 +23636,11 @@ window.SOLUTION_DATA = {
         "body": "Complete the square:\n\n\\[\n2\\left[\\left(x-\\frac{11}{4}\\right)^2-\\frac{121}{16}\\right]+9\n\\]\n\n\\[\n2\\left(x-\\frac{11}{4}\\right)^2-\\frac{121}{8}+9\n\\]\n\n\\[\n2\\left(x-\\frac{11}{4}\\right)^2-\\frac{121}{8}+\\frac{72}{8}\n\\]\n\n\\[\n2\\left(x-\\frac{11}{4}\\right)^2-\\frac{49}{8}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\n2x^2-11x+9=2\\left(x-\\frac{11}{4}\\right)^2-\\frac{49}{8}\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Calculate value",
         "body": "For part (b),\n\n\\[\ny=2(x-3)^2-11(x-3)+9\n\\]"
       },
       {
@@ -23648,11 +23648,11 @@ window.SOLUTION_DATA = {
         "body": "Let\n\n\\[\nu=x-3\n\\]"
       },
       {
-        "title": "From part (a), the minimum",
+        "title": "Evaluate fraction",
         "body": "From part (a), the minimum occurs when\n\n\\[\nu=\\frac{11}{4}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\nx-3=\\frac{11}{4}\n\\]\n\n\\[\nx=\\frac{23}{4}\n\\]"
       },
       {
@@ -23677,7 +23677,7 @@ window.SOLUTION_DATA = {
         "body": "Equal differences give\n\n\\[\n(x+2)-(4x-14)=(7x-9)-(x+2)\n\\]\n\n\\[\n-3x+16=6x-11\n\\]\n\n\\[\n9x=27\n\\]\n\n\\[\nx=3\n\\]"
       },
       {
-        "title": "So the sequence is",
+        "title": "Find the nth term",
         "body": "So the sequence is\n\n\\[\n-2,\\ 5,\\ 12,\\ldots\n\\]"
       },
       {
@@ -23694,11 +23694,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Coordinate Geometry to 3D Pythagoras & Trigonometry.",
     "steps": [
       {
-        "title": "Use coordinates with",
+        "title": "Use trigonometry",
         "body": "Use coordinates with\n\n\\[\nA=(0,0,0)\n\\]"
       },
       {
-        "title": "Since",
+        "title": "Use trigonometry",
         "body": "Since\n\n\\[\nAD=12,\\qquad DE=20,\\qquad AB=8\n\\]"
       },
       {
@@ -23710,11 +23710,11 @@ window.SOLUTION_DATA = {
         "body": "The centre of the rectangular base \\(ADEH\\) is\n\n\\[\nM=(6,10,0)\n\\]"
       },
       {
-        "title": "Point is the midpoint of",
+        "title": "Find the midpoint",
         "body": "Point \\(P\\) is the midpoint of \\(CF\\).\n\n\\[\nC=(12,0,8),\\qquad F=(12,20,8)\n\\]\n\n\\[\nP=(12,10,8)\n\\]"
       },
       {
-        "title": "Now",
+        "title": "Use trigonometry",
         "body": "Now\n\n\\[\n\\vec{MB}=B-M=(-6,-10,8)\n\\]\n\n\\[\n\\vec{MP}=P-M=(6,0,8)\n\\]"
       },
       {
@@ -23751,15 +23751,15 @@ window.SOLUTION_DATA = {
         "body": "The probability of taking one orange and one pink in either order is\n\n\\[\n\\frac{x}{25}\\cdot\\frac{19-x}{24}\n+\\frac{19-x}{25}\\cdot\\frac{x}{24}\n\\]\n\n\\[\n=\\frac{2x(19-x)}{25\\cdot24}\n\\]"
       },
       {
-        "title": "This is equal to ,",
+        "title": "Evaluate fraction",
         "body": "This is equal to \\(\\frac{22}{75}\\), so\n\n\\[\n\\frac{2x(19-x)}{600}=\\frac{22}{75}\n\\]\n\n\\[\n\\frac{x(19-x)}{300}=\\frac{22}{75}\n\\]\n\n\\[\nx(19-x)=88\n\\]\n\n\\[\n19x-x^2=88\n\\]\n\n\\[\nx^2-19x+88=0\n\\]\n\n\\[\n(x-8)(x-11)=0\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Solve inequality",
         "body": "Since \\(x>9\\),\n\n\\[\nx=11\n\\]"
       },
       {
-        "title": "So the number of pink",
+        "title": "Calculate value",
         "body": "So the number of pink counters is\n\n\\[\n19-11=8\n\\]"
       },
       {
@@ -23776,11 +23776,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Was tagged Algebra Toolkit; actually Fractions.",
     "steps": [
       {
-        "title": "Convert the mixed numbers to",
+        "title": "Simplify fraction",
         "body": "Convert the mixed numbers to improper fractions.\n\n\\[\n3\\frac{2}{3}=\\frac{11}{3},\\qquad 2\\frac{4}{7}=\\frac{18}{7}\n\\]"
       },
       {
-        "title": "Then multiply",
+        "title": "Simplify fraction",
         "body": "Then multiply.\n\n\\[\n\\frac{11}{3}\\times\\frac{18}{7}=\\frac{198}{21}=\\frac{66}{7}\n\\]"
       },
       {
@@ -23797,15 +23797,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Rounding, estimation and bounds. The tag is correct.",
     "steps": [
       {
-        "title": "For correct to 1 decimal",
+        "title": "Find lower bound",
         "body": "For \\(17.8\\) correct to 1 decimal place, the lower bound is\n\n\\[\n17.8-0.05=17.75\n\\]"
       },
       {
-        "title": "For correct to the nearest",
+        "title": "Find upper bound",
         "body": "For \\(145\\) correct to the nearest \\(5\\) grams, the upper bound is\n\n\\[\n145+2.5=147.5\n\\]"
       },
       {
-        "title": "For the estimate,",
+        "title": "Estimate the value",
         "body": "For the estimate,\n\n\\[\nA=\\frac{4.766\\times815}{0.399}\n\\]"
       },
       {
@@ -23822,7 +23822,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "The probabilities add to",
+        "title": "Calculate probability",
         "body": "The probabilities add to \\(1\\).\n\n\\[\n0.14+0.23+2x+0.18+7x=1\n\\]\n\n\\[\n0.55+9x=1\n\\]\n\n\\[\nx=0.05\n\\]"
       },
       {
@@ -23847,11 +23847,11 @@ window.SOLUTION_DATA = {
         "body": "The shaded area is the triangle area minus the semicircle area.\n\n\\[\n\\text{triangle area}=\\frac12\\times15\\times20=150\n\\]"
       },
       {
-        "title": "The semicircle has diameter ,",
+        "title": "Calculate area",
         "body": "The semicircle has diameter \\(8\\), so radius \\(4\\).\n\n\\[\n\\text{semicircle area}=\\frac12\\pi(4)^2=8\\pi\n\\]\n\n\\[\n\\text{shaded area}=150-8\\pi=124.867\\ldots\n\\]"
       },
       {
-        "title": "To 3 significant figures,",
+        "title": "Calculate area",
         "body": "To 3 significant figures,\n\n\\[\n125\n\\]"
       }
     ],
@@ -23864,15 +23864,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Was tagged Algebra Toolkit; actually Algebraic Roots & Indices.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use index laws",
         "body": "\\[\nx^5\\times x^7=x^{5+7}=x^{12}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use index laws",
         "body": "So \\(m=12\\).\n\n\\[\ny^8\\div y^3=y^{8-3}=y^5\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use index laws",
         "body": "So \\(n=5\\).\n\n\\[\n(5a^4r^2)^3=5^3(a^4)^3(r^2)^3=125a^{12}r^6\n\\]"
       }
     ],
@@ -23885,11 +23885,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Standard and compound units. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate area",
         "body": "\\[\n\\text{pressure}=\\frac{\\text{force}}{\\text{area}}\n\\]\n\n\\[\n65=\\frac{702}{\\text{area}}\n\\]\n\n\\[\n\\text{area}=\\frac{702}{65}=10.8\n\\]"
       },
       {
-        "title": "The base area is ,",
+        "title": "Calculate area",
         "body": "The base area is \\(6x\\), so\n\n\\[\n6x=10.8\n\\]\n\n\\[\nx=1.8\n\\]"
       }
     ],
@@ -23902,7 +23902,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Factorising. The tag is correct.",
     "steps": [
       {
-        "title": "For part (a),",
+        "title": "Factorise expression",
         "body": "For part (a),\n\n\\[\nx-4=\\frac{3+2x}{6}\n\\]"
       },
       {
@@ -23910,11 +23910,11 @@ window.SOLUTION_DATA = {
         "body": "Multiply by \\(6\\).\n\n\\[\n6x-24=3+2x\n\\]\n\n\\[\n4x=27\n\\]\n\n\\[\nx=\\frac{27}{4}=6.75\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Factorise expression",
         "body": "For part (b),\n\n\\[\ny^2-11y+30=(y-5)(y-6)\n\\]"
       },
       {
-        "title": "Hence,",
+        "title": "Factorise expression",
         "body": "Hence,\n\n\\[\n(y-5)(y-6)=0\n\\]\n\n\\[\ny=5\\quad\\text{or}\\quad y=6\n\\]"
       }
     ],
@@ -23927,11 +23927,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Was tagged Algebra Toolkit; actually Set Notation & Venn Diagrams.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nA=\\{18,20,22,24,26,28,30\\}\n\\]\n\n\\[\nB=\\{18,21,24,27,30\\}\n\\]\n\n\\[\nA\\cup B=\\{18,20,21,22,24,26,27,28,30\\}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\n(A\\cup B)'=\\{19,23,25,29\\}\n\\]"
       },
       {
@@ -23939,7 +23939,7 @@ window.SOLUTION_DATA = {
         "body": "Sophie is wrong because \\(30\\) is both a multiple of \\(3\\) and a multiple of \\(5\\), so \\(30\\in B\\cap C\\)."
       },
       {
-        "title": "For , include and ,",
+        "title": "Set is",
         "body": "For \\(D\\), include \\(18\\) and \\(26\\), but no other even numbers. One possible set is\n\n\\[\nD=\\{18,19,23,25,26\\}\n\\]"
       }
     ],
@@ -23952,19 +23952,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Was tagged Algebra Toolkit; actually Algebraic Roots & Indices.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use index laws",
         "body": "\\[\n7^x=1\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Use index laws",
         "body": "Since \\(7^0=1\\),\n\n\\[\nx=0\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Use index laws",
         "body": "For part (b),\n\n\\[\n\\frac{8^{-4}\\times8^{11}}{8^{12}}=8^n\n\\]\n\n\\[\n8^{-4}\\times8^{11}=8^7\n\\]\n\n\\[\n\\frac{8^7}{8^{12}}=8^{7-12}=8^{-5}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use index laws",
         "body": "So \\(n=-5\\)."
       }
     ],
@@ -23981,7 +23981,7 @@ window.SOLUTION_DATA = {
         "body": "The trapezium is symmetrical. The horizontal shift from each sloping side is\n\n\\[\n12\\cos60^\\circ=6\n\\]"
       },
       {
-        "title": "So the top parallel side",
+        "title": "Find the gradient",
         "body": "So the top parallel side is\n\n\\[\n47-6-6=35\n\\]"
       },
       {
@@ -23993,7 +23993,7 @@ window.SOLUTION_DATA = {
         "body": "Area of the trapezium:\n\n\\[\n\\frac12(47+35)(12\\sin60^\\circ)=426.084\\ldots\n\\]"
       },
       {
-        "title": "To 3 significant figures,",
+        "title": "Calculate area",
         "body": "To 3 significant figures,\n\n\\[\n426\n\\]"
       }
     ],
@@ -24006,19 +24006,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Expanding brackets. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Expand brackets",
         "body": "\\[\n5x(5x+4)(2x-3)\n\\]"
       },
       {
-        "title": "First,",
+        "title": "Expand brackets",
         "body": "First,\n\n\\[\n(5x+4)(2x-3)=10x^2-15x+8x-12=10x^2-7x-12\n\\]"
       },
       {
-        "title": "Then multiply by",
+        "title": "Expand brackets",
         "body": "Then multiply by \\(5x\\).\n\n\\[\n5x(10x^2-7x-12)=50x^3-35x^2-60x\n\\]"
       },
       {
-        "title": "For part (b), use denominator",
+        "title": "Expand brackets",
         "body": "For part (b), use denominator \\(20y\\).\n\n\\[\n\\frac94+\\frac{y-7}{5y}=\\frac{45y}{20y}+\\frac{4(y-7)}{20y}\n\\]\n\n\\[\n=\\frac{49y-28}{20y}\n\\]"
       }
     ],
@@ -24031,11 +24031,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Probability tree diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "For badminton,",
+        "title": "Calculate probability",
         "body": "For badminton,\n\n\\[\nP(\\text{win})=0.7,\\qquad P(\\text{lose})=0.3\n\\]"
       },
       {
-        "title": "For tennis,",
+        "title": "Calculate probability",
         "body": "For tennis,\n\n\\[\nP(\\text{win})=0.4,\\qquad P(\\text{lose})=0.6\n\\]"
       },
       {
@@ -24056,15 +24056,15 @@ window.SOLUTION_DATA = {
         "body": "Use \\(y=x^3+2x+3\\)."
       },
       {
-        "title": "For ,",
+        "title": "Read the graph",
         "body": "For \\(x=-3\\),\n\n\\[\ny=(-3)^3+2(-3)+3=-30\n\\]"
       },
       {
-        "title": "For ,",
+        "title": "Read the graph",
         "body": "For \\(x=2\\),\n\n\\[\ny=2^3+2(2)+3=15\n\\]"
       },
       {
-        "title": "So the table is",
+        "title": "Read the graph",
         "body": "So the table is\n\n\\[\n\\begin{array}{c|rrrrrrr}\nx&-3&-2&-1&0&1&2&3\\\\\n\\hline\ny&-30&-9&0&3&6&15&36\n\\end{array}\n\\]"
       },
       {
@@ -24085,7 +24085,7 @@ window.SOLUTION_DATA = {
         "body": "Sector area:\n\n\\[\n\\frac{40}{360}\\pi(12)^2=16\\pi=50.265\\ldots\n\\]"
       },
       {
-        "title": "To 3 significant figures,",
+        "title": "To 3 significant figures",
         "body": "To 3 significant figures,\n\n\\[\n50.3\\text{ cm}^2\n\\]"
       },
       {
@@ -24093,7 +24093,7 @@ window.SOLUTION_DATA = {
         "body": "Triangle area:\n\n\\[\n\\frac12(7)(9)\\sin115^\\circ=28.548\\ldots\n\\]"
       },
       {
-        "title": "To 3 significant figures,",
+        "title": "To 3 significant figures",
         "body": "To 3 significant figures,\n\n\\[\n28.5\\text{ cm}^2\n\\]"
       }
     ],
@@ -24106,15 +24106,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Was tagged Solving Linear Equations; actually Quadratic Formula.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve quadratic equation",
         "body": "\\[\n5x^2+9x-17=0\n\\]"
       },
       {
-        "title": "Use the quadratic formula with",
+        "title": "Use quadratic formula",
         "body": "Use the quadratic formula with \\(a=5\\), \\(b=9\\), \\(c=-17\\).\n\n\\[\nx=\\frac{-9\\pm\\sqrt{9^2-4(5)(-17)}}{2(5)}\n\\]\n\n\\[\nx=\\frac{-9\\pm\\sqrt{421}}{10}\n\\]\n\n\\[\nx=1.152\\ldots\\quad\\text{or}\\quad x=-2.952\\ldots\n\\]"
       },
       {
-        "title": "To 3 significant figures,",
+        "title": "Solve quadratic equation",
         "body": "To 3 significant figures,\n\n\\[\nx=1.15\\quad\\text{or}\\quad x=-2.95\n\\]"
       }
     ],
@@ -24127,15 +24127,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Was tagged Solving Linear Equations; actually Algebraic Roots & Indices.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve equation",
         "body": "\\[\n8^{3y+4}\\times4^{3y}=2^{5y}\n\\]"
       },
       {
-        "title": "Write and as powers of",
+        "title": "Solve equation",
         "body": "Write \\(8\\) and \\(4\\) as powers of \\(2\\).\n\n\\[\n(2^3)^{3y+4}(2^2)^{3y}=2^{5y}\n\\]\n\n\\[\n2^{9y+12}\\times2^{6y}=2^{5y}\n\\]\n\n\\[\n2^{15y+12}=2^{5y}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Solve equation",
         "body": "So\n\n\\[\n15y+12=5y\n\\]\n\n\\[\ny=-\\frac65\n\\]"
       }
     ],
@@ -24148,19 +24148,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Was tagged Algebra Toolkit; actually Surds.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\n(\\sqrt3)^5=(\\sqrt3)^4\\sqrt3=3^2\\sqrt3=9\\sqrt3\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify surd",
         "body": "So \\(k=9\\)."
       },
       {
-        "title": "For part (b), rationalise the",
+        "title": "Split the ratio",
         "body": "For part (b), rationalise the denominator.\n\n\\[\n\\frac{21}{3-\\sqrt2}\\times\\frac{3+\\sqrt2}{3+\\sqrt2}\n=\\frac{21(3+\\sqrt2)}{9-2}\n\\]\n\n\\[\n=3(3+\\sqrt2)=9+3\\sqrt2\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Simplify surd",
         "body": "Since \\(3\\sqrt2=\\sqrt{18}\\),\n\n\\[\n9+3\\sqrt2=9+\\sqrt{18}\n\\]"
       }
     ],
@@ -24185,7 +24185,7 @@ window.SOLUTION_DATA = {
         "body": "More than \\(40\\) minutes is the part from \\(40\\) to \\(50\\), plus \\(50\\) to \\(60\\).\n\n\\[\n10\\times0.5+17=22\n\\]"
       },
       {
-        "title": "So the proportion is",
+        "title": "Use histogram",
         "body": "So the proportion is\n\n\\[\n\\frac{22}{126}=\\frac{11}{63}\n\\]"
       }
     ],
@@ -24198,7 +24198,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Was tagged Algebra Toolkit; actually Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify fraction",
         "body": "\\[\n\\frac{3x^2-3y^2}{5x+5y}\\div\\frac{xy^2-x^2y}{10xy}\n\\]"
       },
       {
@@ -24206,7 +24206,7 @@ window.SOLUTION_DATA = {
         "body": "Factorise.\n\n\\[\n=\\frac{3(x-y)(x+y)}{5(x+y)}\\div\\frac{xy(y-x)}{10xy}\n\\]\n\n\\[\n=\\frac{3(x-y)}5\\div\\frac{y-x}{10}\n\\]\n\n\\[\n=\\frac{3(x-y)}5\\times\\frac{10}{y-x}\n\\]"
       },
       {
-        "title": "Since , the expression is",
+        "title": "Simplify fraction",
         "body": "Since \\(y-x=-(x-y)\\), the expression is\n\n\\[\n-6\n\\]"
       }
     ],
@@ -24219,23 +24219,23 @@ window.SOLUTION_DATA = {
     "topicNote": "Was tagged Algebra Toolkit; actually Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify fraction",
         "body": "\\[\nk=m+n,\\qquad m=\\frac{3}{4n}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify fraction",
         "body": "So\n\n\\[\nk=\\frac{3}{4n}+n=\\frac{3+4n^2}{4n}\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Simplify fraction",
         "body": "Then\n\n\\[\n7k=\\frac{21+28n^2}{4n}\n\\]"
       },
       {
-        "title": "and",
+        "title": "Simplify fraction",
         "body": "and\n\n\\[\n5-m=5-\\frac{3}{4n}=\\frac{20n-3}{4n}\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Simplify fraction",
         "body": "Therefore\n\n\\[\n\\frac{7k}{5-m}=\\frac{\\frac{21+28n^2}{4n}}{\\frac{20n-3}{4n}}\n\\]\n\n\\[\n=\\frac{21+28n^2}{20n-3}\n\\]"
       }
     ],
@@ -24248,15 +24248,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Was tagged Algebra Toolkit; actually Sine & Cosine Rules.",
     "steps": [
       {
-        "title": "First find in triangle using",
+        "title": "Use trigonometry",
         "body": "First find \\(BD\\) in triangle \\(ABD\\) using the cosine rule.\n\n\\[\nBD^2=9.4^2+12.8^2-2(9.4)(12.8)\\cos72^\\circ\n\\]\n\n\\[\nBD=13.3356\\ldots\n\\]"
       },
       {
-        "title": "In triangle , use the",
+        "title": "Use trigonometry",
         "body": "In triangle \\(BCD\\), use the sine rule.\n\n\\[\n\\frac{BC}{\\sin39^\\circ}=\\frac{BD}{\\sin54^\\circ}\n\\]\n\n\\[\nBC=13.3356\\ldots\\times\\frac{\\sin39^\\circ}{\\sin54^\\circ}\n\\]\n\n\\[\nBC=10.3735\\ldots\n\\]"
       },
       {
-        "title": "To 3 significant figures,",
+        "title": "Use trigonometry",
         "body": "To 3 significant figures,\n\n\\[\nBC=10.4\n\\]"
       }
     ],
@@ -24302,27 +24302,27 @@ window.SOLUTION_DATA = {
         "body": "Point \\(P\\) is \\(3\\) cm from \\(C\\) along \\(CF\\). The horizontal distance from \\(A\\) to the point directly below \\(P\\) is\n\n\\[\n\\sqrt{12^2+3^2}=\\sqrt{153}\n\\]"
       },
       {
-        "title": "Using the angle of elevation,",
+        "title": "Use trigonometry",
         "body": "Using the angle of elevation,\n\n\\[\nh=\\sqrt{153}\\tan24^\\circ=5.507\\ldots\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\nAP=\\frac{\\sqrt{153}}{\\cos24^\\circ}=13.5399\\ldots\n\\]"
       },
       {
-        "title": "On the top face,",
+        "title": "Use trigonometry",
         "body": "On the top face,\n\n\\[\nPG=\\sqrt{12^2+7^2}=\\sqrt{193}=13.8924\\ldots\n\\]"
       },
       {
-        "title": "Also,",
+        "title": "Use trigonometry",
         "body": "Also,\n\n\\[\nAG=\\sqrt{12^2+10^2+h^2}=16.561\\ldots\n\\]"
       },
       {
-        "title": "Use the cosine rule in",
+        "title": "Use cosine rule",
         "body": "Use the cosine rule in triangle \\(APG\\).\n\n\\[\n\\cos\\angle APG=\\frac{AP^2+PG^2-AG^2}{2(AP)(PG)}\n\\]\n\n\\[\n\\angle APG=49.163\\ldots^\\circ\n\\]"
       },
       {
-        "title": "To the nearest degree,",
+        "title": "Use trigonometry",
         "body": "To the nearest degree,\n\n\\[\n49^\\circ\n\\]"
       }
     ],
@@ -24339,15 +24339,15 @@ window.SOLUTION_DATA = {
         "body": "The diagonals of a square bisect each other and are perpendicular."
       },
       {
-        "title": "Midpoint of and",
+        "title": "Find the midpoint",
         "body": "Midpoint of \\(P(4,7)\\) and \\(R(8,-5)\\):\n\n\\[\n\\left(\\frac{4+8}{2},\\frac{7-5}{2}\\right)=(6,1)\n\\]"
       },
       {
-        "title": "Gradient of",
+        "title": "Find the gradient",
         "body": "Gradient of \\(PR\\):\n\n\\[\n\\frac{-5-7}{8-4}=-3\n\\]"
       },
       {
-        "title": "So the perpendicular gradient is",
+        "title": "Find the gradient",
         "body": "So the perpendicular gradient is \\(\\frac13\\)."
       },
       {
@@ -24364,7 +24364,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Was tagged Surds; actually Completing the Square.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\n8x^2-12x-4=8\\left(x^2-\\frac32x\\right)-4\n\\]"
       },
       {
@@ -24372,11 +24372,11 @@ window.SOLUTION_DATA = {
         "body": "Complete the square.\n\n\\[\nx^2-\\frac32x=\\left(x-\\frac34\\right)^2-\\frac{9}{16}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify surd",
         "body": "So\n\n\\[\n8x^2-12x-4=8\\left(x-\\frac34\\right)^2-\\frac{17}{2}\n\\]"
       },
       {
-        "title": "Now solve",
+        "title": "Simplify surd",
         "body": "Now solve\n\n\\[\n8x^2-12x-4=0\n\\]\n\n\\[\n8\\left(x-\\frac34\\right)^2-\\frac{17}{2}=0\n\\]\n\n\\[\n\\left(x-\\frac34\\right)^2=\\frac{17}{16}\n\\]\n\n\\[\nx-\\frac34=\\pm\\frac{\\sqrt{17}}4\n\\]\n\n\\[\nx=\\frac{3\\pm\\sqrt{17}}4\n\\]"
       }
     ],
@@ -24389,23 +24389,23 @@ window.SOLUTION_DATA = {
     "topicNote": "Was tagged Algebra Toolkit; actually Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify fraction",
         "body": "\\[\nk=m+n,\\qquad m=\\frac{3}{4n}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify fraction",
         "body": "So\n\n\\[\nk=\\frac{3}{4n}+n=\\frac{3+4n^2}{4n}\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Simplify fraction",
         "body": "Then\n\n\\[\n7k=\\frac{21+28n^2}{4n}\n\\]"
       },
       {
-        "title": "and",
+        "title": "Simplify fraction",
         "body": "and\n\n\\[\n5-m=5-\\frac{3}{4n}=\\frac{20n-3}{4n}\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Simplify fraction",
         "body": "Therefore\n\n\\[\n\\frac{7k}{5-m}=\\frac{\\frac{21+28n^2}{4n}}{\\frac{20n-3}{4n}}\n\\]\n\n\\[\n=\\frac{21+28n^2}{20n-3}\n\\]"
       }
     ],
@@ -24418,15 +24418,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Was tagged Algebra Toolkit; actually Sine & Cosine Rules.",
     "steps": [
       {
-        "title": "First find in triangle using",
+        "title": "Use trigonometry",
         "body": "First find \\(BD\\) in triangle \\(ABD\\) using the cosine rule.\n\n\\[\nBD^2=9.4^2+12.8^2-2(9.4)(12.8)\\cos72^\\circ\n\\]\n\n\\[\nBD=13.3356\\ldots\n\\]"
       },
       {
-        "title": "In triangle , use the",
+        "title": "Use trigonometry",
         "body": "In triangle \\(BCD\\), use the sine rule.\n\n\\[\n\\frac{BC}{\\sin39^\\circ}=\\frac{BD}{\\sin54^\\circ}\n\\]\n\n\\[\nBC=13.3356\\ldots\\times\\frac{\\sin39^\\circ}{\\sin54^\\circ}\n\\]\n\n\\[\nBC=10.3735\\ldots\n\\]"
       },
       {
-        "title": "To 3 significant figures,",
+        "title": "Use trigonometry",
         "body": "To 3 significant figures,\n\n\\[\nBC=10.4\n\\]"
       }
     ],
@@ -24472,27 +24472,27 @@ window.SOLUTION_DATA = {
         "body": "Point \\(P\\) is \\(3\\) cm from \\(C\\) along \\(CF\\). The horizontal distance from \\(A\\) to the point directly below \\(P\\) is\n\n\\[\n\\sqrt{12^2+3^2}=\\sqrt{153}\n\\]"
       },
       {
-        "title": "Using the angle of elevation,",
+        "title": "Use trigonometry",
         "body": "Using the angle of elevation,\n\n\\[\nh=\\sqrt{153}\\tan24^\\circ=5.507\\ldots\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\nAP=\\frac{\\sqrt{153}}{\\cos24^\\circ}=13.5399\\ldots\n\\]"
       },
       {
-        "title": "On the top face,",
+        "title": "Use trigonometry",
         "body": "On the top face,\n\n\\[\nPG=\\sqrt{12^2+7^2}=\\sqrt{193}=13.8924\\ldots\n\\]"
       },
       {
-        "title": "Also,",
+        "title": "Use trigonometry",
         "body": "Also,\n\n\\[\nAG=\\sqrt{12^2+10^2+h^2}=16.561\\ldots\n\\]"
       },
       {
-        "title": "Use the cosine rule in",
+        "title": "Use cosine rule",
         "body": "Use the cosine rule in triangle \\(APG\\).\n\n\\[\n\\cos\\angle APG=\\frac{AP^2+PG^2-AG^2}{2(AP)(PG)}\n\\]\n\n\\[\n\\angle APG=49.163\\ldots^\\circ\n\\]"
       },
       {
-        "title": "To the nearest degree,",
+        "title": "Use trigonometry",
         "body": "To the nearest degree,\n\n\\[\n49^\\circ\n\\]"
       }
     ],
@@ -24509,15 +24509,15 @@ window.SOLUTION_DATA = {
         "body": "The diagonals of a square bisect each other and are perpendicular."
       },
       {
-        "title": "Midpoint of and",
+        "title": "Find the midpoint",
         "body": "Midpoint of \\(P(4,7)\\) and \\(R(8,-5)\\):\n\n\\[\n\\left(\\frac{4+8}{2},\\frac{7-5}{2}\\right)=(6,1)\n\\]"
       },
       {
-        "title": "Gradient of",
+        "title": "Find the gradient",
         "body": "Gradient of \\(PR\\):\n\n\\[\n\\frac{-5-7}{8-4}=-3\n\\]"
       },
       {
-        "title": "So the perpendicular gradient is",
+        "title": "Find the gradient",
         "body": "So the perpendicular gradient is \\(\\frac13\\)."
       },
       {
@@ -24534,7 +24534,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Was tagged Surds; actually Completing the Square.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\n8x^2-12x-4=8\\left(x^2-\\frac32x\\right)-4\n\\]"
       },
       {
@@ -24542,11 +24542,11 @@ window.SOLUTION_DATA = {
         "body": "Complete the square.\n\n\\[\nx^2-\\frac32x=\\left(x-\\frac34\\right)^2-\\frac{9}{16}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify surd",
         "body": "So\n\n\\[\n8x^2-12x-4=8\\left(x-\\frac34\\right)^2-\\frac{17}{2}\n\\]"
       },
       {
-        "title": "Now solve",
+        "title": "Simplify surd",
         "body": "Now solve\n\n\\[\n8x^2-12x-4=0\n\\]\n\n\\[\n8\\left(x-\\frac34\\right)^2-\\frac{17}{2}=0\n\\]\n\n\\[\n\\left(x-\\frac34\\right)^2=\\frac{17}{16}\n\\]\n\n\\[\nx-\\frac34=\\pm\\frac{\\sqrt{17}}4\n\\]\n\n\\[\nx=\\frac{3\\pm\\sqrt{17}}4\n\\]"
       }
     ],
@@ -24559,7 +24559,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic proof. The tag is acceptable because the question asks to show the exact result.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\n2\\frac14=\\frac94,\\qquad 1\\frac57=\\frac{12}{7}\n\\]\n\n\\[\n2\\frac14\\times1\\frac57=\\frac94\\times\\frac{12}{7}\n\\]\n\n\\[\n=\\frac{108}{28}=\\frac{27}{7}=3\\frac67\n\\]"
       }
     ],
@@ -24576,7 +24576,7 @@ window.SOLUTION_DATA = {
         "body": "Let the yellow probability be \\(x\\). Then the red probability is \\(4x\\).\n\n\\[\n0.12+0.20+0.30+4x+x=1\n\\]\n\n\\[\n5x=0.38\n\\]\n\n\\[\nx=0.076\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate probability",
         "body": "So\n\n\\[\nP(\\text{red})=4x=0.304\n\\]\n\n\\[\nP(\\text{blue, green or purple})=0.12+0.20+0.30=0.62\n\\]"
       },
       {
@@ -24593,15 +24593,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Set notation and Venn diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\n\\mathcal{E}=\\{1,2,3,4,5,6,7,8,9,10,11,12\\}\n\\]\n\n\\[\nA=\\{2,4,6,8,10,12\\}\n\\]\n\n\\[\nB=\\{3,6,9,12\\}\n\\]\n\n\\[\nC=\\{1,3,5,7,9,11\\}\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Calculate value",
         "body": "Therefore\n\n\\[\nA\\cup B=\\{2,3,4,6,8,9,10,12\\}\n\\]"
       },
       {
-        "title": "and",
+        "title": "Calculate value",
         "body": "and\n\n\\[\nB'=\\{1,2,4,5,7,8,10,11\\}\n\\]"
       },
       {
@@ -24609,7 +24609,7 @@ window.SOLUTION_DATA = {
         "body": "No number is both even and odd, so\n\n\\[\nA\\cap C=\\emptyset\n\\]"
       },
       {
-        "title": "Also because is not in",
+        "title": "Set",
         "body": "Also \\(13\\notin \\mathcal{E}\\) because \\(13\\) is not in the universal set."
       }
     ],
@@ -24622,7 +24622,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Solving Linear Equations. The equation is the main part of the question; the index form is secondary.",
     "steps": [
       {
-        "title": "For part (a),",
+        "title": "Solve equation",
         "body": "For part (a),\n\n\\[\n\\frac{5a+8}{3}-\\frac{2a+5}{4}=23\n\\]"
       },
       {
@@ -24630,7 +24630,7 @@ window.SOLUTION_DATA = {
         "body": "Multiply by \\(12\\):\n\n\\[\n4(5a+8)-3(2a+5)=276\n\\]\n\n\\[\n20a+32-6a-15=276\n\\]\n\n\\[\n14a+17=276\n\\]\n\n\\[\n14a=259\n\\]\n\n\\[\na=\\frac{259}{14}=\\frac{37}{2}\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Solve equation",
         "body": "For part (b),\n\n\\[\n\\left(\\frac{\\sqrt y}{3}\\right)^{-1}=\\frac{3}{\\sqrt y}\n\\]\n\n\\[\n=3y^{-1/2}\n\\]"
       }
     ],
@@ -24647,11 +24647,11 @@ window.SOLUTION_DATA = {
         "body": "Let\n\\[\nx=0.6121212\\ldots\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\\[\n10x=6.121212\\ldots\n\\]"
       },
       {
-        "title": "and",
+        "title": "Calculate value",
         "body": "and\n\\[\n1000x=612.121212\\ldots\n\\]"
       },
       {
@@ -24680,7 +24680,7 @@ window.SOLUTION_DATA = {
         "body": "ways to choose two counters."
       },
       {
-        "title": "For a sum less than",
+        "title": "Calculate probability",
         "body": "For a sum less than \\(5\\), the pairs are:\n\n\\[\n(1,1),\\quad (1,2),\\quad (1,3)\n\\]"
       },
       {
@@ -24688,7 +24688,7 @@ window.SOLUTION_DATA = {
         "body": "Counting the repeated counters gives\n\n\\[\n1+2+6=9\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate probability",
         "body": "So\n\n\\[\nP(\\text{sum}<5)=\\frac{9}{36}=\\frac14\n\\]"
       }
     ],
@@ -24701,11 +24701,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "In the rectangle , use",
+        "title": "Use trigonometry",
         "body": "In the rectangle \\(ABCF\\), use Pythagoras with the diagonal \\(FC\\):\n\n\\[\nAC^2=FC^2-AF^2\n\\]\n\n\\[\nAC^2=18^2-7^2=324-49=275\n\\]"
       },
       {
-        "title": "Now use Pythagoras in triangle",
+        "title": "Use trigonometry",
         "body": "Now use Pythagoras in triangle \\(ABC\\):\n\n\\[\nBC^2=AC^2-AB^2\n\\]\n\n\\[\nBC^2=275-9^2=275-81=194\n\\]\n\n\\[\nBC=\\sqrt{194}=13.928\\ldots\n\\]"
       }
     ],
@@ -24718,11 +24718,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "In the rectangle , use",
+        "title": "Use trigonometry",
         "body": "In the rectangle \\(ABCF\\), use Pythagoras with the diagonal \\(FC\\):\n\n\\[\nAC^2=FC^2-AF^2\n\\]\n\n\\[\nAC^2=18^2-7^2=324-49=275\n\\]"
       },
       {
-        "title": "Now use Pythagoras in triangle",
+        "title": "Use trigonometry",
         "body": "Now use Pythagoras in triangle \\(ABC\\):\n\n\\[\nBC^2=AC^2-AB^2\n\\]\n\n\\[\nBC^2=275-9^2=275-81=194\n\\]\n\n\\[\nBC=\\sqrt{194}=13.928\\ldots\n\\]"
       }
     ],
@@ -24747,15 +24747,15 @@ window.SOLUTION_DATA = {
         "body": "Its area is\n\n\\[\n\\text{sector area}-\\text{triangle area}\n\\]\n\n\\[\n28=\\frac{40}{360}\\pi R^2-\\frac{1}{2}R^2\\sin 40^\\circ\n\\]\n\n\\[\n28=R^2\\left(\\frac{\\pi}{9}-\\frac{1}{2}\\sin 40^\\circ\\right)\n\\]\n\n\\[\nR=31.8096\\ldots\n\\]"
       },
       {
-        "title": "Now find the chord",
+        "title": "Use trigonometry",
         "body": "Now find the chord \\(BC\\):\n\n\\[\nBC=2R\\sin 20^\\circ\n\\]\n\n\\[\nBC=2(31.8096\\ldots)\\sin 20^\\circ\n=21.7591\\ldots\n\\]"
       },
       {
-        "title": "In sector , the centre",
+        "title": "Calculate value",
         "body": "In sector \\(BCD\\), the centre is \\(C\\), so the radius is\n\n\\[\nCB=CD=21.7591\\ldots\n\\]"
       },
       {
-        "title": "The arc has angle ,",
+        "title": "Use trigonometry",
         "body": "The arc \\(BD\\) has angle \\(130^\\circ\\), so\n\n\\[\n\\text{arc }BD\n=\\frac{130}{360}\\times 2\\pi(21.7591\\ldots)\n\\]\n\n\\[\n=49.3697\\ldots\n\\]"
       }
     ],
@@ -24780,15 +24780,15 @@ window.SOLUTION_DATA = {
         "body": "Its area is\n\n\\[\n\\text{sector area}-\\text{triangle area}\n\\]\n\n\\[\n28=\\frac{40}{360}\\pi R^2-\\frac{1}{2}R^2\\sin 40^\\circ\n\\]\n\n\\[\n28=R^2\\left(\\frac{\\pi}{9}-\\frac{1}{2}\\sin 40^\\circ\\right)\n\\]\n\n\\[\nR=31.8096\\ldots\n\\]"
       },
       {
-        "title": "Now find the chord",
+        "title": "Use trigonometry",
         "body": "Now find the chord \\(BC\\):\n\n\\[\nBC=2R\\sin 20^\\circ\n\\]\n\n\\[\nBC=2(31.8096\\ldots)\\sin 20^\\circ\n=21.7591\\ldots\n\\]"
       },
       {
-        "title": "In sector , the centre",
+        "title": "Calculate value",
         "body": "In sector \\(BCD\\), the centre is \\(C\\), so the radius is\n\n\\[\nCB=CD=21.7591\\ldots\n\\]"
       },
       {
-        "title": "The arc has angle ,",
+        "title": "Use trigonometry",
         "body": "The arc \\(BD\\) has angle \\(130^\\circ\\), so\n\n\\[\n\\text{arc }BD\n=\\frac{130}{360}\\times 2\\pi(21.7591\\ldots)\n\\]\n\n\\[\n=49.3697\\ldots\n\\]"
       }
     ],
@@ -24801,7 +24801,7 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "The value is correct to",
+        "title": "Calculate value",
         "body": "The value is correct to 1 decimal place, so the half-unit is \\(0.05\\).\n\n\\[\n142.8-0.05=142.75, \\qquad 142.8+0.05=142.85\n\\]"
       }
     ],
@@ -24814,7 +24814,7 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\n3^8\\times 3^4 = 3^{8+4}=3^{12}\n\\]\n\n\\[\n\\frac{4^{12}}{4^7}=4^{12-7}=4^5\n\\]\n\n\\[\n(6^2)^{10}=6^{20}\n\\]\n\n\\[\n5^0=1\n\\]"
       }
     ],
@@ -24827,7 +24827,7 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "The base angles are equal,",
+        "title": "Use trigonometry",
         "body": "The base angles are equal, so the opposite sides are equal.\n\n\\[\n4x+6=30-x\n\\]\n\n\\[\n5x=24\n\\]\n\n\\[\nx=4.8\n\\]"
       }
     ],
@@ -24840,7 +24840,7 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\n40\\text{ m/s}=40\\times \\frac{3600}{1000}\\text{ km/h}\n\\]\n\n\\[\n=144\\text{ km/h}\n\\]"
       }
     ],
@@ -24853,11 +24853,11 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "In right triangle ,",
+        "title": "Use trigonometry",
         "body": "In right triangle \\(BCD\\),\n\n\\[\n\\tan 32^\\circ=\\frac{17}{BD}\n\\]\n\n\\[\nBD=\\frac{17}{\\tan 32^\\circ}\n\\]"
       },
       {
-        "title": "In right triangle ,",
+        "title": "Use trigonometry",
         "body": "In right triangle \\(ABD\\),\n\n\\[\n\\sin 65^\\circ=\\frac{AD}{BD}\n\\]\n\n\\[\nAD=\\frac{17}{\\tan 32^\\circ}\\sin 65^\\circ \\approx 24.6567\n\\]"
       }
     ],
@@ -24882,7 +24882,7 @@ window.SOLUTION_DATA = {
         "body": "(c)\n\\[\nx^2-13x+42=(x-6)(x-7)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\\[\nx=6 \\quad \\text{or} \\quad x=7\n\\]"
       }
     ],
@@ -24912,7 +24912,7 @@ window.SOLUTION_DATA = {
         "body": "The missing branch probabilities are complements.\n\n\\[\nP(\\text{not snow on Saturday})=0.8\n\\]\n\n\\[\nP(\\text{not snow on Sunday} \\mid \\text{snow Saturday})=0.65\n\\]\n\n\\[\nP(\\text{not snow on Sunday} \\mid \\text{not snow Saturday})=0.6\n\\]"
       },
       {
-        "title": "For snow on both days,",
+        "title": "Calculate value",
         "body": "For snow on both days,\n\n\\[\n0.2\\times 0.35=0.07\n\\]"
       }
     ],
@@ -24929,15 +24929,15 @@ window.SOLUTION_DATA = {
         "body": "The height of the building is\n\n\\[\nCD=25\\tan 42^\\circ\n\\]"
       },
       {
-        "title": "The extra height from to",
+        "title": "Use trigonometry",
         "body": "The extra height from \\(C\\) to \\(A\\) is\n\n\\[\n25\\tan 30^\\circ\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\nAB=25\\tan 42^\\circ+25\\tan 30^\\circ \\approx 36.9439\n\\]"
       },
       {
-        "title": "For the angle of elevation",
+        "title": "Use trigonometry",
         "body": "For the angle of elevation \\(\\theta\\) from \\(D\\),\n\n\\[\n\\tan \\theta=\\frac{AB}{25}\n\\]\n\n\\[\n\\theta \\approx 55.9137^\\circ\n\\]"
       }
     ],
@@ -24950,7 +24950,7 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "(a) For ,",
+        "title": "Simplify surd",
         "body": "(a) For \\(3x^2+4x-18=0\\),\n\n\\[\nx=\\frac{-4\\pm\\sqrt{4^2-4(3)(-18)}}{2(3)}\n\\]\n\n\\[\nx\\approx 1.87 \\quad \\text{or} \\quad x\\approx -3.21\n\\]"
       },
       {
@@ -24971,7 +24971,7 @@ window.SOLUTION_DATA = {
         "body": "(a)\n\\[\n\\sqrt{96}=4\\sqrt 6=2\\sqrt{24}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So \\(k=24\\)."
       },
       {
@@ -24988,7 +24988,7 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\n2x^2-12x+23=2(x^2-6x)+23\n\\]\n\n\\[\n=2\\big((x-3)^2-9\\big)+23\n\\]\n\n\\[\n=2(x-3)^2+5\n\\]"
       },
       {
@@ -25013,11 +25013,11 @@ window.SOLUTION_DATA = {
         "body": "Triangle area:\n\n\\[\n\\frac12(2x+3)(2x)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\n(2x+3)^2+\\frac12(2x+3)(2x)=84\n\\]\n\n\\[\n6x^2+15x-75=0\n\\]\n\n\\[\n2x^2+5x-25=0\n\\]\n\n\\[\n(2x-5)(x+5)=0\n\\]"
       },
       {
-        "title": "The positive solution is ,",
+        "title": "Calculate value",
         "body": "The positive solution is \\(x=2.5\\), so\n\n\\[\n(2x+3)^2=8^2=64\n\\]"
       }
     ],
@@ -25034,7 +25034,7 @@ window.SOLUTION_DATA = {
         "body": "The interval \\(10\\) to \\(25\\) has width \\(15\\) and frequency \\(60\\), so its frequency density is\n\n\\[\n\\frac{60}{15}=4\n\\]"
       },
       {
-        "title": "Using that scale from the",
+        "title": "Use histogram",
         "body": "Using that scale from the histogram:\n\n\\[\n35\\text{ to }40: 5\\times 1=5\n\\]\n\n\\[\n40\\text{ to }70: 30\\times 0.75=22.5\n\\]\n\n\\[\n5+22.5=27.5\n\\]"
       }
     ],
@@ -25051,15 +25051,15 @@ window.SOLUTION_DATA = {
         "body": "The tangent point lies on the tangent line, so\n\n\\[\np+3=-\\frac54p+\\frac{21}{4}\n\\]\n\n\\[\np=1\n\\]"
       },
       {
-        "title": "The tangent gradient is ,",
+        "title": "Find the gradient",
         "body": "The tangent gradient is \\(-\\frac54\\), so the radius gradient is \\(\\frac45\\)."
       },
       {
-        "title": "Using centre and tangent point",
+        "title": "Use trigonometry",
         "body": "Using centre \\((3q,4q)\\) and tangent point \\((1,4)\\),\n\n\\[\n\\frac{4-4q}{1-3q}=\\frac45\n\\]\n\n\\[\nq=2\n\\]"
       },
       {
-        "title": "So the centre is .",
+        "title": "Simplify surd",
         "body": "So the centre is \\((6,8)\\). Therefore\n\n\\[\nr=\\sqrt{(6-1)^2+(8-4)^2}=\\sqrt{41}\n\\]"
       }
     ],
@@ -25076,7 +25076,7 @@ window.SOLUTION_DATA = {
         "body": "Factor the fractional part first:\n\n\\[\n\\frac{2x^2-5x-12}{x^2-16}\\times\\frac{x^2+4x}{6x^2+11x+3}\n\\]\n\n\\[\n=\\frac{(2x+3)(x-4)}{(x-4)(x+4)}\\times\\frac{x(x+4)}{(3x+1)(2x+3)}\n\\]\n\n\\[\n=\\frac{x}{3x+1}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\n(2x-1)+\\frac{x}{3x+1}\n=\\frac{(2x-1)(3x+1)+x}{3x+1}\n\\]\n\n\\[\n=\\frac{6x^2-1}{3x+1}\n\\]"
       }
     ],
@@ -25093,7 +25093,7 @@ window.SOLUTION_DATA = {
         "body": "The interval \\(10\\) to \\(25\\) has width \\(15\\) and frequency \\(60\\), so its frequency density is\n\n\\[\n\\frac{60}{15}=4\n\\]"
       },
       {
-        "title": "Using that scale from the",
+        "title": "Use histogram",
         "body": "Using that scale from the histogram:\n\n\\[\n35\\text{ to }40: 5\\times 1=5\n\\]\n\n\\[\n40\\text{ to }70: 30\\times 0.75=22.5\n\\]\n\n\\[\n5+22.5=27.5\n\\]"
       }
     ],
@@ -25110,15 +25110,15 @@ window.SOLUTION_DATA = {
         "body": "The tangent point lies on the tangent line, so\n\n\\[\np+3=-\\frac54p+\\frac{21}{4}\n\\]\n\n\\[\np=1\n\\]"
       },
       {
-        "title": "The tangent gradient is ,",
+        "title": "Find the gradient",
         "body": "The tangent gradient is \\(-\\frac54\\), so the radius gradient is \\(\\frac45\\)."
       },
       {
-        "title": "Using centre and tangent point",
+        "title": "Use trigonometry",
         "body": "Using centre \\((3q,4q)\\) and tangent point \\((1,4)\\),\n\n\\[\n\\frac{4-4q}{1-3q}=\\frac45\n\\]\n\n\\[\nq=2\n\\]"
       },
       {
-        "title": "So the centre is .",
+        "title": "Simplify surd",
         "body": "So the centre is \\((6,8)\\). Therefore\n\n\\[\nr=\\sqrt{(6-1)^2+(8-4)^2}=\\sqrt{41}\n\\]"
       }
     ],
@@ -25135,7 +25135,7 @@ window.SOLUTION_DATA = {
         "body": "Factor the fractional part first:\n\n\\[\n\\frac{2x^2-5x-12}{x^2-16}\\times\\frac{x^2+4x}{6x^2+11x+3}\n\\]\n\n\\[\n=\\frac{(2x+3)(x-4)}{(x-4)(x+4)}\\times\\frac{x(x+4)}{(3x+1)(2x+3)}\n\\]\n\n\\[\n=\\frac{x}{3x+1}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\n(2x-1)+\\frac{x}{3x+1}\n=\\frac{(2x-1)(3x+1)+x}{3x+1}\n\\]\n\n\\[\n=\\frac{6x^2-1}{3x+1}\n\\]"
       }
     ],
@@ -25160,7 +25160,7 @@ window.SOLUTION_DATA = {
         "body": "Each part is\n\n\\[\n240 \\div 12=20\n\\]"
       },
       {
-        "title": "So the original amounts are",
+        "title": "Split the ratio",
         "body": "So the original amounts are\n\n\\[\n60,\\ 80,\\ 100\n\\]"
       },
       {
@@ -25185,7 +25185,7 @@ window.SOLUTION_DATA = {
         "body": "The multiplier for a \\(7\\%\\) increase is\n\n\\[\n1.07\n\\]"
       },
       {
-        "title": "After 3 years,",
+        "title": "Use compound interest",
         "body": "After 3 years,\n\n\\[\n4000(1.07)^3=4900.172\n\\]"
       },
       {
@@ -25202,15 +25202,15 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "The range is , so",
+        "title": "Calculate statistic",
         "body": "The range is \\(10\\), so the first number is\n\n\\[\n14-10=4\n\\]"
       },
       {
-        "title": "For six numbers, the median",
+        "title": "Calculate statistic",
         "body": "For six numbers, the median is the mean of the third and fourth values.\n\n\\[\n\\frac{6+\\text{fourth value}}{2}=7.5\n\\]"
       },
       {
-        "title": "So the fourth value is",
+        "title": "Calculate statistic",
         "body": "So the fourth value is \\(9\\). To make \\(6\\) the mode, the second value must also be \\(6\\)."
       }
     ],
@@ -25248,7 +25248,7 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Convert standard form",
         "body": "\\[\n\\text{loss}=8000-5600=2400\n\\]\n\n\\[\n\\text{percentage loss}=\\frac{2400}{8000}\\times 100=30\\%\n\\]"
       }
     ],
@@ -25274,15 +25274,15 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "The sequence increases by ,",
+        "title": "Find the nth term",
         "body": "The sequence increases by \\(4\\), so\n\n\\[\nu_n=4n+7\n\\]"
       },
       {
-        "title": "For the sequence , take",
+        "title": "Find the nth term",
         "body": "For the sequence \\(5n+4\\), take \\(n=3\\):\n\n\\[\n5(3)+4=19\n\\]"
       },
       {
-        "title": "and is prime",
+        "title": "Check prime condition",
         "body": "and \\(19\\) is prime."
       }
     ],
@@ -25295,15 +25295,15 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "The scale factor from to",
+        "title": "Evaluate fraction",
         "body": "The scale factor from \\(ABCD\\) to \\(EFGH\\) is\n\n\\[\n\\frac{FG}{BC}=\\frac{10}{4}=2.5\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\nx=EF=5\\times 2.5=12.5\n\\]"
       },
       {
-        "title": "and",
+        "title": "Evaluate fraction",
         "body": "and\n\n\\[\ny=CD=\\frac{24}{2.5}=9.6\n\\]"
       }
     ],
@@ -25329,15 +25329,15 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "From",
+        "title": "Calculate value",
         "body": "From\n\n\\[\n4x+y=-3.5\n\\]\n\n\\[\ny=-3.5-4x\n\\]"
       },
       {
-        "title": "Substitute into",
+        "title": "Substitute into equation",
         "body": "Substitute into \\(3x+5y=8\\):\n\n\\[\n3x+5(-3.5-4x)=8\n\\]\n\n\\[\n-17x=25.5\n\\]\n\n\\[\nx=-1.5\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\n\\[\ny=-3.5-4(-1.5)=2.5\n\\]"
       }
     ],
@@ -25384,15 +25384,15 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "By the alternate segment theorem,",
+        "title": "Use trigonometry",
         "body": "By the alternate segment theorem,\n\n\\[\n\\angle EAB=\\angle ADB=56^\\circ\n\\]"
       },
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(ABD\\),\n\n\\[\n\\angle BAD=180^\\circ-42^\\circ-56^\\circ=82^\\circ\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\n\\angle BAC=82^\\circ-60^\\circ=22^\\circ\n\\]"
       },
       {
@@ -25421,7 +25421,7 @@ window.SOLUTION_DATA = {
         "body": "The median is the \\(30\\)th value. Interpolating in the \\(20\\) to \\(30\\) interval gives about \\(27.5\\) minutes."
       },
       {
-        "title": "For more than minutes, the",
+        "title": "Estimate the value",
         "body": "For more than \\(45\\) minutes, the estimate is about \\(7\\) people."
       }
     ],
@@ -25438,7 +25438,7 @@ window.SOLUTION_DATA = {
         "body": "Use multipliers:\n\n\\[\n1.12\\times 0.85=0.952\n\\]"
       },
       {
-        "title": "So the final value is",
+        "title": "Calculate percentage",
         "body": "So the final value is \\(95.2\\%\\) of the original.\n\n\\[\n100-95.2=4.8\n\\]"
       }
     ],
@@ -25455,11 +25455,11 @@ window.SOLUTION_DATA = {
         "body": "There are \\(11\\) values. Excluding the median \\(14\\):"
       },
       {
-        "title": "Lower half , so",
+        "title": "Calculate value",
         "body": "Lower half: \\(7,8,10,11,13\\), so \\(Q_1=10\\)."
       },
       {
-        "title": "Upper half , so",
+        "title": "Calculate value",
         "body": "Upper half: \\(16,17,19,21,24\\), so \\(Q_3=19\\).\n\n\\[\n\\text{IQR}=19-10=9\n\\]"
       }
     ],
@@ -25489,11 +25489,11 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Since is inversely proportional to",
+        "title": "Find inverse function",
         "body": "Since \\(W\\) is inversely proportional to \\(y^2\\),\n\n\\[\nW=\\frac{k}{y^2}\n\\]"
       },
       {
-        "title": "Using when",
+        "title": "Evaluate fraction",
         "body": "Using \\(W=50\\) when \\(y=4\\):\n\n\\[\n50=\\frac{k}{16}\n\\]\n\n\\[\nk=800\n\\]"
       }
     ],
@@ -25506,7 +25506,7 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\nc=\\frac{t^2+3}{7-8t^2}\n\\]\n\n\\[\nc(7-8t^2)=t^2+3\n\\]\n\n\\[\n7c-3=t^2(8c+1)\n\\]\n\n\\[\nt^2=\\frac{7c-3}{8c+1}\n\\]"
       }
     ],
@@ -25523,11 +25523,11 @@ window.SOLUTION_DATA = {
         "body": "Let\n\n\\[\na=2n, \\qquad b=2n+2, \\qquad c=2n+4\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\n\\[\nac+4=(2n)(2n+4)+4\n\\]\n\n\\[\n=4n^2+8n+4\n\\]\n\n\\[\n=(2n+2)^2=b^2\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So \\(b^2=ac+4\\)."
       }
     ],
@@ -25540,11 +25540,11 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "(a) If , then",
+        "title": "Evaluate fraction",
         "body": "(a) If \\(g(g(x))=6\\), then\n\n\\[\n\\frac{7g(x)+20}{2g(x)}=6\n\\]\n\n\\[\n7g(x)+20=12g(x)\n\\]\n\n\\[\ng(x)=4\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\n\\frac{7x+20}{2x}=4\n\\]\n\n\\[\n7x+20=8x\n\\]\n\n\\[\nx=20\n\\]"
       },
       {
@@ -25552,7 +25552,7 @@ window.SOLUTION_DATA = {
         "body": "(b)\n\\[\nh(x)=5x^2+30x-7=5(x+3)^2-52\n\\]"
       },
       {
-        "title": "Let . Since , use",
+        "title": "Simplify surd",
         "body": "Let \\(y=5(x+3)^2-52\\). Since \\(x\\ge -3\\), use the positive square root:\n\n\\[\nx+3=\\sqrt{\\frac{y+52}{5}}\n\\]\n\n\\[\nh^{-1}(x)=\\sqrt{\\frac{x+52}{5}}-3\n\\]"
       }
     ],
@@ -25565,11 +25565,11 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\n\\frac{dy}{dx}=3x^2+2x-10\n\\]"
       },
       {
-        "title": "For a positive gradient,",
+        "title": "Find the gradient",
         "body": "For a positive gradient,\n\n\\[\n3x^2+2x-10>0\n\\]"
       },
       {
@@ -25577,7 +25577,7 @@ window.SOLUTION_DATA = {
         "body": "The roots are\n\n\\[\nx=\\frac{-1\\pm\\sqrt{31}}{3}\n\\]"
       },
       {
-        "title": "Since the quadratic opens upwards,",
+        "title": "Solve quadratic equation",
         "body": "Since the quadratic opens upwards,\n\n\\[\nx<\\frac{-1-\\sqrt{31}}{3}\n\\quad \\text{or} \\quad\nx>\\frac{-1+\\sqrt{31}}{3}\n\\]"
       }
     ],
@@ -25590,7 +25590,7 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\n3x\\times 2x\\times y=1014\n\\]\n\n\\[\n6x^2y=1014\n\\]\n\n\\[\ny=\\frac{169}{x^2}\n\\]"
       },
       {
@@ -25607,11 +25607,11 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "For an arithmetic series,",
+        "title": "Use series formula",
         "body": "For an arithmetic series,\n\n\\[\na+20d=109\n\\]"
       },
       {
-        "title": "and",
+        "title": "Evaluate fraction",
         "body": "and\n\n\\[\n\\frac{52}{2}(2a+51d)=4381\n\\]\n\n\\[\n26(2a+51d)=4381\n\\]"
       },
       {
@@ -25636,7 +25636,7 @@ window.SOLUTION_DATA = {
         "body": "Linear scale factor from solid \\(A\\) to solid \\(B\\):\n\n\\[\n\\frac{18.6}{31}=0.6\n\\]"
       },
       {
-        "title": "So the volume scale factor",
+        "title": "Calculate volume",
         "body": "So the volume scale factor is\n\n\\[\n0.6^3=0.216\n\\]"
       },
       {
@@ -25661,11 +25661,11 @@ window.SOLUTION_DATA = {
         "body": "(b) Let \\(X\\) divide \\(QR\\) so that\n\n\\[\n\\overrightarrow{QX}=\\lambda\\overrightarrow{QR}\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\n\\[\n\\overrightarrow{OX}=3a+3c+\\lambda(3c-3a)\n\\]"
       },
       {
-        "title": "Also lies on , where",
+        "title": "Calculate value",
         "body": "Also \\(X\\) lies on \\(PT\\), where \\(\\overrightarrow{OT}=14c\\), so\n\n\\[\n\\overrightarrow{OX}=2a+\\mu(14c-2a)\n\\]"
       },
       {
@@ -25686,15 +25686,15 @@ window.SOLUTION_DATA = {
         "body": "(a)"
       },
       {
-        "title": "For , move the graph",
+        "title": "Read the graph",
         "body": "For \\(y=f(x-4)\\), move the graph \\(4\\) units right:\n\n\\[\n(6,-5)\\to(10,-5)\n\\]"
       },
       {
-        "title": "For , divide the coordinate",
+        "title": "Divide the -coordinate",
         "body": "For \\(y=f(3x)\\), divide the \\(x\\)-coordinate by \\(3\\):\n\n\\[\n(6,-5)\\to(2,-5)\n\\]"
       },
       {
-        "title": "(b) For , halve each",
+        "title": "Subtract from each -coordinate",
         "body": "(b) For \\(y=g(2x)-3\\), halve each \\(x\\)-coordinate and subtract \\(3\\) from each \\(y\\)-coordinate."
       },
       {
@@ -25719,11 +25719,11 @@ window.SOLUTION_DATA = {
         "body": "Let\n\n\\[\na=2n, \\qquad b=2n+2, \\qquad c=2n+4\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\n\\[\nac+4=(2n)(2n+4)+4\n\\]\n\n\\[\n=4n^2+8n+4\n\\]\n\n\\[\n=(2n+2)^2=b^2\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So \\(b^2=ac+4\\)."
       }
     ],
@@ -25736,11 +25736,11 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "(a) If , then",
+        "title": "Evaluate fraction",
         "body": "(a) If \\(g(g(x))=6\\), then\n\n\\[\n\\frac{7g(x)+20}{2g(x)}=6\n\\]\n\n\\[\n7g(x)+20=12g(x)\n\\]\n\n\\[\ng(x)=4\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\n\\frac{7x+20}{2x}=4\n\\]\n\n\\[\n7x+20=8x\n\\]\n\n\\[\nx=20\n\\]"
       },
       {
@@ -25748,7 +25748,7 @@ window.SOLUTION_DATA = {
         "body": "(b)\n\\[\nh(x)=5x^2+30x-7=5(x+3)^2-52\n\\]"
       },
       {
-        "title": "Let . Since , use",
+        "title": "Simplify surd",
         "body": "Let \\(y=5(x+3)^2-52\\). Since \\(x\\ge -3\\), use the positive square root:\n\n\\[\nx+3=\\sqrt{\\frac{y+52}{5}}\n\\]\n\n\\[\nh^{-1}(x)=\\sqrt{\\frac{x+52}{5}}-3\n\\]"
       }
     ],
@@ -25761,11 +25761,11 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\n\\frac{dy}{dx}=3x^2+2x-10\n\\]"
       },
       {
-        "title": "For a positive gradient,",
+        "title": "Find the gradient",
         "body": "For a positive gradient,\n\n\\[\n3x^2+2x-10>0\n\\]"
       },
       {
@@ -25773,7 +25773,7 @@ window.SOLUTION_DATA = {
         "body": "The roots are\n\n\\[\nx=\\frac{-1\\pm\\sqrt{31}}{3}\n\\]"
       },
       {
-        "title": "Since the quadratic opens upwards,",
+        "title": "Solve quadratic equation",
         "body": "Since the quadratic opens upwards,\n\n\\[\nx<\\frac{-1-\\sqrt{31}}{3}\n\\quad \\text{or} \\quad\nx>\\frac{-1+\\sqrt{31}}{3}\n\\]"
       }
     ],
@@ -25786,7 +25786,7 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\n3x\\times 2x\\times y=1014\n\\]\n\n\\[\n6x^2y=1014\n\\]\n\n\\[\ny=\\frac{169}{x^2}\n\\]"
       },
       {
@@ -25803,11 +25803,11 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "For an arithmetic series,",
+        "title": "Use series formula",
         "body": "For an arithmetic series,\n\n\\[\na+20d=109\n\\]"
       },
       {
-        "title": "and",
+        "title": "Evaluate fraction",
         "body": "and\n\n\\[\n\\frac{52}{2}(2a+51d)=4381\n\\]\n\n\\[\n26(2a+51d)=4381\n\\]"
       },
       {
@@ -25832,7 +25832,7 @@ window.SOLUTION_DATA = {
         "body": "Linear scale factor from solid \\(A\\) to solid \\(B\\):\n\n\\[\n\\frac{18.6}{31}=0.6\n\\]"
       },
       {
-        "title": "So the volume scale factor",
+        "title": "Calculate volume",
         "body": "So the volume scale factor is\n\n\\[\n0.6^3=0.216\n\\]"
       },
       {
@@ -25857,11 +25857,11 @@ window.SOLUTION_DATA = {
         "body": "(b) Let \\(X\\) divide \\(QR\\) so that\n\n\\[\n\\overrightarrow{QX}=\\lambda\\overrightarrow{QR}\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\n\\[\n\\overrightarrow{OX}=3a+3c+\\lambda(3c-3a)\n\\]"
       },
       {
-        "title": "Also lies on , where",
+        "title": "Calculate value",
         "body": "Also \\(X\\) lies on \\(PT\\), where \\(\\overrightarrow{OT}=14c\\), so\n\n\\[\n\\overrightarrow{OX}=2a+\\mu(14c-2a)\n\\]"
       },
       {
@@ -25882,15 +25882,15 @@ window.SOLUTION_DATA = {
         "body": "(a)"
       },
       {
-        "title": "For , move the graph",
+        "title": "Read the graph",
         "body": "For \\(y=f(x-4)\\), move the graph \\(4\\) units right:\n\n\\[\n(6,-5)\\to(10,-5)\n\\]"
       },
       {
-        "title": "For , divide the coordinate",
+        "title": "Divide the -coordinate",
         "body": "For \\(y=f(3x)\\), divide the \\(x\\)-coordinate by \\(3\\):\n\n\\[\n(6,-5)\\to(2,-5)\n\\]"
       },
       {
-        "title": "(b) For , halve each",
+        "title": "Subtract from each -coordinate",
         "body": "(b) For \\(y=g(2x)-3\\), halve each \\(x\\)-coordinate and subtract \\(3\\) from each \\(y\\)-coordinate."
       },
       {
@@ -25919,7 +25919,7 @@ window.SOLUTION_DATA = {
         "body": "Label the equations:\n$$\\\\begin{aligned}\n            3x + 2y &= 10 \\\\tag{1}\\\\\\\\\n            3x - 4y &= 16 \\\\tag{2}\n        \\\\end{aligned}$$"
       },
       {
-        "title": "Subtract (2) from (1) to",
+        "title": "Subtract (2) from (1) eliminate",
         "body": "Subtract <span class=\"upright\">(2)</span> from <span class=\"upright\">(1)</span> to eliminate *x*:\n$$(1)-(2): \\\\quad 6y = -6 \\\\implies \\\\boxed{y = -1}$$"
       },
       {
@@ -25973,7 +25973,7 @@ window.SOLUTION_DATA = {
         "body": "Value after 2 years at 12% depreciation:\n*V*<sub>2</sub> = 16000 × (0.88)<sup>2</sup> = 16000 × 0.7744 = $12 390.40"
       },
       {
-        "title": "Apply year 3 depreciation and",
+        "title": "Use compound interest",
         "body": "Apply year-3 depreciation and set equal to final value:\n$$12390.40\\\\times\\\\!\\\\left(1 - \\\\frac{x}{100}\\\\right) = 11461.12$$"
       },
       {
@@ -26060,11 +26060,11 @@ window.SOLUTION_DATA = {
         "body": "Factorise the quadratic:\n2*x*<sup>2</sup> − 7*x* − 15 = (2*x*+3)(*x*−5)\n*Check:* (2*x*+3)(*x*−5) = 2*x*<sup>2</sup> − 10*x* + 3*x* − 15 = 2*x*<sup>2</sup> − 7*x* − 15"
       },
       {
-        "title": "Roots set each factor to",
+        "title": "Set each factor zero",
         "body": "Roots: set each factor to zero:\n$$2x+3=0 \\\\implies x=-\\\\tfrac{3}{2};\\\\qquad x-5=0 \\\\implies x=5$$"
       },
       {
-        "title": "Since the coefficient of x",
+        "title": "Solve inequality",
         "body": "Since the coefficient of *x*<sup>2</sup> is  + 2 \\> 0, the parabola opens **upward**. The expression is  \\> 0 *outside* the roots:"
       }
     ],
@@ -26085,11 +26085,11 @@ window.SOLUTION_DATA = {
         "body": "Factorise the quadratic:\n2*x*<sup>2</sup> − 7*x* − 15 = (2*x*+3)(*x*−5)\n*Check:* (2*x*+3)(*x*−5) = 2*x*<sup>2</sup> − 10*x* + 3*x* − 15 = 2*x*<sup>2</sup> − 7*x* − 15"
       },
       {
-        "title": "Roots set each factor to",
+        "title": "Set each factor zero",
         "body": "Roots: set each factor to zero:\n$$2x+3=0 \\\\implies x=-\\\\tfrac{3}{2};\\\\qquad x-5=0 \\\\implies x=5$$"
       },
       {
-        "title": "Since the coefficient of x",
+        "title": "Solve inequality",
         "body": "Since the coefficient of *x*<sup>2</sup> is  + 2 \\> 0, the parabola opens **upward**. The expression is  \\> 0 *outside* the roots:"
       }
     ],
@@ -26106,7 +26106,7 @@ window.SOLUTION_DATA = {
         "body": "Hemisphere H has radius *x* cm and volume 6174*π* cm<sup>3</sup>. A bowl is made by removing an inner hemisphere, leaving 2 cm thickness. Find total surface area in terms of *π*."
       },
       {
-        "title": "Find outer radius x .",
+        "title": "Calculate volume",
         "body": "Find outer radius *x*. Volume of hemisphere $= \\\\dfrac{2}{3}\\\\pi r^3$:\n$$\\\\frac{2}{3}\\\\pi x^3 = 6174\\\\pi\n        \\\\implies x^3 = \\\\frac{6174\\\\times3}{2} = 9261\n        \\\\implies x = \\\\sqrt\\[3\\]{9261} = 21\\\\text{ cm}$$"
       },
       {
@@ -26114,7 +26114,7 @@ window.SOLUTION_DATA = {
         "body": "Find inner radius:\n*r*<sub>inner</sub> = 21 − 2 = 19 cm"
       },
       {
-        "title": "Three surfaces to add 1.",
+        "title": "Add 1",
         "body": "Three surfaces to add:\n\n**1. Outer curved surface** (half-sphere, radius 21):\n*A*<sub>1</sub> = 2*π*(21)<sup>2</sup> = 2*π* × 441 = 882*π*\n\n**2. Inner curved surface** (half-sphere, radius 19):\n*A*<sub>2</sub> = 2*π*(19)<sup>2</sup> = 2*π* × 361 = 722*π*\n\n**3. Flat annular ring** at the top rim:\n*A*<sub>3</sub> = *π*(21)<sup>2</sup> − *π*(19)<sup>2</sup> = *π*(441−361) = 80*π*"
       },
       {
@@ -26139,7 +26139,7 @@ window.SOLUTION_DATA = {
         "body": "Hemisphere H has radius *x* cm and volume 6174*π* cm<sup>3</sup>. A bowl is made by removing an inner hemisphere, leaving 2 cm thickness. Find total surface area in terms of *π*."
       },
       {
-        "title": "Find outer radius x .",
+        "title": "Calculate volume",
         "body": "Find outer radius *x*. Volume of hemisphere $= \\\\dfrac{2}{3}\\\\pi r^3$:\n$$\\\\frac{2}{3}\\\\pi x^3 = 6174\\\\pi\n        \\\\implies x^3 = \\\\frac{6174\\\\times3}{2} = 9261\n        \\\\implies x = \\\\sqrt\\[3\\]{9261} = 21\\\\text{ cm}$$"
       },
       {
@@ -26147,7 +26147,7 @@ window.SOLUTION_DATA = {
         "body": "Find inner radius:\n*r*<sub>inner</sub> = 21 − 2 = 19 cm"
       },
       {
-        "title": "Three surfaces to add 1.",
+        "title": "Add 1",
         "body": "Three surfaces to add:\n\n**1. Outer curved surface** (half-sphere, radius 21):\n*A*<sub>1</sub> = 2*π*(21)<sup>2</sup> = 2*π* × 441 = 882*π*\n\n**2. Inner curved surface** (half-sphere, radius 19):\n*A*<sub>2</sub> = 2*π*(19)<sup>2</sup> = 2*π* × 361 = 722*π*\n\n**3. Flat annular ring** at the top rim:\n*A*<sub>3</sub> = *π*(21)<sup>2</sup> − *π*(19)<sup>2</sup> = *π*(441−361) = 80*π*"
       },
       {
@@ -26350,7 +26350,7 @@ window.SOLUTION_DATA = {
         "body": "\\(a\\) Solve 3*x* − 22 \\> 8*x* − 40 algebraically. (b) Write the three inequalities defining region R."
       },
       {
-        "title": "Move all x terms to",
+        "title": "Find the nth term",
         "body": "Move all *x* terms to the right and constants to the left:\n3*x* − 22 \\> 8*x* − 40 ⟹  − 22 + 40 \\> 8*x* − 3*x* ⟹ 18 \\> 5*x*"
       },
       {
@@ -26383,7 +26383,7 @@ window.SOLUTION_DATA = {
         "body": "Interior angle of a regular 10-sided polygon:\n$$\\\\text{Interior angle} = \\\\frac{(10-2)\\\\times180°}{10} = \\\\frac{1440°}{10} = 144°$$"
       },
       {
-        "title": "Find the interior angle of",
+        "title": "Use trigonometry",
         "body": "Find the interior angle of the hexagon at vertex *A*. At point *A*: decagon angle + 113° + hexagon angle at *A* = 360°:\n∠*x* = 360° − 144° − 110° = 106°"
       }
     ],
@@ -26408,7 +26408,7 @@ window.SOLUTION_DATA = {
         "body": "Median  ≈ 62 km"
       },
       {
-        "title": "Q 1 at cf 15,",
+        "title": "Read the graph",
         "body": "*Q*<sub>1</sub> at cf  = 15, *Q*<sub>3</sub> at cf  = 45. Read from graph:\n*Q*<sub>1</sub> ≈ 56 km,   *Q*<sub>3</sub> ≈ 74 km\nIQR = *Q*<sub>3</sub> − *Q*<sub>1</sub> = 69 − 55 = 14 km"
       },
       {
@@ -26420,7 +26420,7 @@ window.SOLUTION_DATA = {
         "body": "Graph-reading answers are accepted within  ± 2 km of the model answer."
       },
       {
-        "title": "From the graph, read the",
+        "title": "Use cumulative frequency",
         "body": "From the graph, read the cumulative frequency at *d* = 75 km:\ncf at 75 km ≈ 52"
       },
       {
@@ -26449,7 +26449,7 @@ window.SOLUTION_DATA = {
         "body": "Distance to Andromeda: 1.6 × 10<sup>11</sup> AU. Convert to light years (2 s.f., standard form)."
       },
       {
-        "title": "Convert AU km 1.6 10",
+        "title": "Convert AU km 1 6",
         "body": "Convert AU → km:\n1.6 × 10<sup>11</sup> × 1.5 × 10<sup>8</sup> = (1.6×1.5) × 10<sup>19</sup> = 2.4 × 10<sup>19</sup> km"
       },
       {
@@ -26457,7 +26457,7 @@ window.SOLUTION_DATA = {
         "body": "Convert km → light years:\n$$\\\\frac{2.4\\\\times10^{19}}{9.5\\\\times10^{12}}\n        = \\\\frac{2.4}{9.5}\\\\times10^{7}\n        = 0.2526\\\\ldots\\\\times10^{7}$$"
       },
       {
-        "title": "Write in standard form to",
+        "title": "Convert standard form",
         "body": "Write in standard form to 2 s.f.:\n = 2.526… × 10<sup>6</sup> ≈ 2.5 × 10<sup>6</sup>"
       }
     ],
@@ -26701,11 +26701,11 @@ window.SOLUTION_DATA = {
         "body": "Form equation from 25th term of Q  = 186:\n*T*<sub>25</sub>(*Q*) = 2*a* + 24(3*d*) = 2*a* + 72*d* = 186"
       },
       {
-        "title": "Solve simultaneously subtract (1) from",
+        "title": "Solve simultaneous equations",
         "body": "Solve simultaneously — subtract (1) from (2):\n33*d* = 82.5 ⟹ *d* = 2.5"
       },
       {
-        "title": "Substitute d 2.5 into (1)",
+        "title": "Substitute d 2 5 (1)",
         "body": "Substitute *d* = 2.5 into (1):\n2*a* + 39(2.5) = 103.5 ⟹ 2*a* = 6 ⟹ *a* = 3"
       },
       {
@@ -26829,11 +26829,11 @@ window.SOLUTION_DATA = {
         "body": "Form equation from 25th term of Q  = 186:\n*T*<sub>25</sub>(*Q*) = 2*a* + 24(3*d*) = 2*a* + 72*d* = 186"
       },
       {
-        "title": "Solve simultaneously subtract (1) from",
+        "title": "Solve simultaneous equations",
         "body": "Solve simultaneously — subtract (1) from (2):\n33*d* = 82.5 ⟹ *d* = 2.5"
       },
       {
-        "title": "Substitute d 2.5 into (1)",
+        "title": "Substitute d 2 5 (1)",
         "body": "Substitute *d* = 2.5 into (1):\n2*a* + 39(2.5) = 103.5 ⟹ 2*a* = 6 ⟹ *a* = 3"
       },
       {
@@ -26850,15 +26850,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find the LCM",
         "body": "\\[\nA=2\\times 3^{43}\n\\]\n\n\\[\nB=16\\times 3^{37}=2^4\\times 3^{37}\n\\]"
       },
       {
-        "title": "For the HCF, take the",
+        "title": "Find the LCM",
         "body": "For the HCF, take the smaller powers:\n\n\\[\n\\text{HCF}=2\\times 3^{37}\n\\]"
       },
       {
-        "title": "For ,",
+        "title": "Find the LCM",
         "body": "For \\(A\\times B\\),\n\n\\[\nA\\times B=(2\\times 3^{43})(2^4\\times 3^{37})\n\\]\n\n\\[\nA\\times B=2^5\\times 3^{80}\n\\]"
       }
     ],
@@ -26871,15 +26871,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Powers, roots and standard form. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Convert standard form",
         "body": "\\[\n5.7\\times 10^{-3}=0.0057\n\\]\n\n\\[\n800000=8\\times 10^5\n\\]"
       },
       {
-        "title": "For part (c), first simplify",
+        "title": "Convert standard form",
         "body": "For part (c), first simplify the numerator:\n\n\\[\n3\\times 10^5-2.7\\times 10^4=300000-27000=273000\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Convert standard form",
         "body": "Then\n\n\\[\n\\frac{273000}{6\\times 10^{-2}}=\\frac{273000}{0.06}=4550000\n\\]\n\n\\[\n4550000=4.55\\times 10^6\n\\]"
       }
     ],
@@ -26909,7 +26909,7 @@ window.SOLUTION_DATA = {
         "body": "Let the compound interest rate be \\(x\\%\\).\n\n\\[\n8000\\left(1+\\frac{x}{100}\\right)^6=8877.62\n\\]\n\n\\[\n1+\\frac{x}{100}=\\sqrt[6]{\\frac{8877.62}{8000}}=1.017500\\ldots\n\\]\n\n\\[\nx=1.7500\\ldots\n\\]"
       },
       {
-        "title": "Correct to 2 decimal places,",
+        "title": "Use compound interest",
         "body": "Correct to 2 decimal places,\n\n\\[\nx=1.75\n\\]"
       }
     ],
@@ -26934,11 +26934,11 @@ window.SOLUTION_DATA = {
         "body": "The mass is \\(5\\) kg correct to the nearest \\(50\\) g.\n\n\\[\n50\\text{ g}=0.05\\text{ kg}\n\\]"
       },
       {
-        "title": "Half of this is kg,",
+        "title": "Find upper bound",
         "body": "Half of this is \\(0.025\\) kg, so\n\n\\[\n\\text{upper bound for mass}=5+0.025=5.025\n\\]"
       },
       {
-        "title": "The volume is m ,",
+        "title": "Find upper bound",
         "body": "The volume is \\(1.84\\times 10^{-3}=0.00184\\) m\\(^3\\), correct to 3 significant figures."
       },
       {
@@ -26946,11 +26946,11 @@ window.SOLUTION_DATA = {
         "body": "The lower bound is\n\n\\[\n0.00184-0.000005=0.001835\n\\]"
       },
       {
-        "title": "So the upper bound for",
+        "title": "Find upper bound",
         "body": "So the upper bound for the density is\n\n\\[\n\\frac{5.025}{0.001835}=2738.419\\ldots\n\\]"
       },
       {
-        "title": "Correct to 1 decimal place,",
+        "title": "Find upper bound",
         "body": "Correct to 1 decimal place,\n\n\\[\n2738.4\n\\]"
       }
     ],
@@ -26963,7 +26963,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Surds. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\n\\frac{6}{3-\\sqrt7}\n\\]"
       },
       {
@@ -26980,7 +26980,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Direct and Inverse Proportion. The tag is correct.",
     "steps": [
       {
-        "title": "is inversely proportional to ,",
+        "title": "Find inverse function",
         "body": "\\(F\\) is inversely proportional to \\(v^2\\), so\n\n\\[\nF=\\frac{k}{v^2}\n\\]"
       },
       {
@@ -26988,7 +26988,7 @@ window.SOLUTION_DATA = {
         "body": "Use \\(F=6.5\\) when \\(v=4\\):\n\n\\[\n6.5=\\frac{k}{4^2}\n\\]\n\n\\[\nk=6.5\\times 16=104\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Find inverse function",
         "body": "Therefore\n\n\\[\nF=\\frac{104}{v^2}\n\\]"
       }
     ],
@@ -27013,7 +27013,7 @@ window.SOLUTION_DATA = {
         "body": "(c)(i)\n\\[\ny^2-2y-48=(y-8)(y+6)\n\\]"
       },
       {
-        "title": "(c)(ii) or",
+        "title": "Factorise expression",
         "body": "(c)(ii) \\(y=8\\) or \\(y=-6\\)."
       }
     ],
@@ -27026,7 +27026,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Sine/Cosine Rule to Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use trigonometry",
         "body": "\\[\n\\frac1{3x-2}\\times\\frac{9x^2-4}{3x^2-13x-10}\n-\\frac7{x-1}\n\\]"
       },
       {
@@ -27034,7 +27034,7 @@ window.SOLUTION_DATA = {
         "body": "Factor:\n\n\\[\n9x^2-4=(3x-2)(3x+2)\n\\]\n\n\\[\n3x^2-13x-10=(3x+2)(x-5)\n\\]"
       },
       {
-        "title": "So the first product becomes",
+        "title": "Use trigonometry",
         "body": "So the first product becomes\n\n\\[\n\\frac1{3x-2}\\times\n\\frac{(3x-2)(3x+2)}{(3x+2)(x-5)}\n\\]"
       },
       {
@@ -27042,7 +27042,7 @@ window.SOLUTION_DATA = {
         "body": "Cancel common factors:\n\n\\[\n\\frac1{x-5}\n\\]"
       },
       {
-        "title": "Now subtract",
+        "title": "Use trigonometry",
         "body": "Now subtract:\n\n\\[\n\\frac1{x-5}-\\frac7{x-1}\n\\]"
       },
       {
@@ -27059,7 +27059,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Simultaneous equations. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve simultaneous equations",
         "body": "\\[\n7x-2y=34\n\\]\n\n\\[\n3x+5y=-3\n\\]"
       },
       {
@@ -27075,7 +27075,7 @@ window.SOLUTION_DATA = {
         "body": "Add:\n\\[\n41x=164\n\\]\n\n\\[\nx=4\n\\]"
       },
       {
-        "title": "Substitute into",
+        "title": "Solve simultaneous equations",
         "body": "Substitute into \\(3x+5y=-3\\):\n\\[\n12+5y=-3\n\\]\n\n\\[\ny=-3\n\\]"
       }
     ],
@@ -27092,7 +27092,7 @@ window.SOLUTION_DATA = {
         "body": "The arithmetic sequence is\n\n\\[\n8,\\ 15,\\ 22,\\ 29,\\ 36,\\ldots\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\na=8,\\quad d=7\n\\]"
       },
       {
@@ -27104,7 +27104,7 @@ window.SOLUTION_DATA = {
         "body": "There are\n\n\\[\n100-50+1=51\n\\]"
       },
       {
-        "title": "terms from the 50th to",
+        "title": "Find the nth term",
         "body": "terms from the 50th to the 100th inclusive.\n\n\\[\n\\text{sum}=\\frac{51}{2}(351+701)\n\\]\n\n\\[\n=26826\n\\]"
       }
     ],
@@ -27117,7 +27117,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "In a rhombus, the diagonals",
+        "title": "Find the gradient",
         "body": "In a rhombus, the diagonals are perpendicular and bisect each other."
       },
       {
@@ -27125,19 +27125,19 @@ window.SOLUTION_DATA = {
         "body": "The diagonal \\(AC\\) lies on\n\n\\[\n2y+7x=20\n\\]\n\n\\[\n2y=-7x+20\n\\]\n\n\\[\ny=-\\frac72x+10\n\\]"
       },
       {
-        "title": "So the gradient of is",
+        "title": "Find the gradient",
         "body": "So the gradient of \\(AC\\) is\n\n\\[\n-\\frac72\n\\]"
       },
       {
-        "title": "Therefore the gradient of is",
+        "title": "Find the gradient",
         "body": "Therefore the gradient of \\(BD\\) is\n\n\\[\n\\frac27\n\\]"
       },
       {
-        "title": "The line passes through",
+        "title": "Calculate value",
         "body": "The line \\(BD\\) passes through\n\n\\[\nM=(6,-11)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\ny+11=\\frac27(x-6)\n\\]"
       },
       {
@@ -27154,7 +27154,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to linear graphs. The function is a straight line.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Read the graph",
         "body": "\\[\ny=7-4x\n\\]"
       },
       {
@@ -27175,7 +27175,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "For part (a),",
+        "title": "Apply transformation",
         "body": "For part (a),\n\n\\[\ny=g(x)\\to y=-g(x)\n\\]"
       },
       {
@@ -27183,15 +27183,15 @@ window.SOLUTION_DATA = {
         "body": "The \\(x\\)-coordinates stay the same and the \\(y\\)-coordinates change sign."
       },
       {
-        "title": "So the transformation is a",
+        "title": "Apply transformation",
         "body": "So the transformation is a reflection in the \\(x\\)-axis."
       },
       {
-        "title": "For part (b),",
+        "title": "Calculate value",
         "body": "For part (b),\n\n\\[\ny=2f(x-1)\n\\]"
       },
       {
-        "title": "First, moves the graph 1",
+        "title": "Read the graph",
         "body": "First, \\(x-1\\) moves the graph 1 unit right. Then the factor 2 stretches the graph vertically by scale factor 2."
       },
       {
@@ -27199,7 +27199,7 @@ window.SOLUTION_DATA = {
         "body": "Use points from the original graph:\n\n\\[\n(1,3)\\to(2,6)\n\\]\n\n\\[\n(2,0)\\to(3,0)\n\\]\n\n\\[\n(4,-3)\\to(5,-6)\n\\]\n\n\\[\n(6,0)\\to(7,0)\n\\]\n\n\\[\n(7,3)\\to(8,6)\n\\]"
       },
       {
-        "title": "Draw the transformed parabola through",
+        "title": "Apply transformation",
         "body": "Draw the transformed parabola through these points."
       }
     ],
@@ -27212,7 +27212,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Functions to Differentiation.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Differentiate",
         "body": "\\[\ny=px^3-mx\n\\]"
       },
       {
@@ -27224,7 +27224,7 @@ window.SOLUTION_DATA = {
         "body": "The gradient is negative when\n\n\\[\n3px^2-m<0\n\\]\n\n\\[\n3px^2<m\n\\]\n\n\\[\nx^2<\\frac{m}{3p}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify surd",
         "body": "So\n\n\\[\n-\\sqrt{\\frac{m}{3p}}<x<\\sqrt{\\frac{m}{3p}}\n\\]"
       }
     ],
@@ -27245,7 +27245,7 @@ window.SOLUTION_DATA = {
         "body": "Convert hours to seconds:\n\\[\n\\frac{100}{28440}\\times 3600=12.658\\ldots\n\\]"
       },
       {
-        "title": "To the nearest second,",
+        "title": "To the nearest second",
         "body": "To the nearest second,\n\\[\n12.658\\ldots \\approx 13\n\\]"
       }
     ],
@@ -27266,7 +27266,7 @@ window.SOLUTION_DATA = {
         "body": "The sum of the 9 given interior angles is\n\\[\n150+168+134+125+125+134+168+150+148=1302^\\circ\n\\]"
       },
       {
-        "title": "So the missing interior angle",
+        "title": "Find the gradient",
         "body": "So the missing interior angle is\n\\[\n1440^\\circ-1302^\\circ=138^\\circ\n\\]"
       },
       {
@@ -27308,7 +27308,7 @@ window.SOLUTION_DATA = {
         "body": "The average of the parallel sides is\n\\[\n\\frac{8.4+17.6}{2}=13\n\\]"
       },
       {
-        "title": "So the perpendicular height is",
+        "title": "Find the gradient",
         "body": "So the perpendicular height is\n\\[\n179.4\\div 13=13.8\n\\]"
       },
       {
@@ -27316,11 +27316,11 @@ window.SOLUTION_DATA = {
         "body": "The horizontal offset on each side is\n\\[\n\\frac{17.6-8.4}{2}=4.6\n\\]"
       },
       {
-        "title": "The acute angle between and",
+        "title": "Use trigonometry",
         "body": "The acute angle between \\(AB\\) and the horizontal is\n\\[\n\\tan^{-1}\\left(\\frac{13.8}{4.6}\\right)=71.565\\ldots^\\circ\n\\]"
       },
       {
-        "title": "So the interior angle is",
+        "title": "Use trigonometry",
         "body": "So the interior angle \\(ABC\\) is\n\\[\n180^\\circ-71.565\\ldots^\\circ=108.434\\ldots^\\circ\n\\]"
       }
     ],
@@ -27345,11 +27345,11 @@ window.SOLUTION_DATA = {
         "body": "Surface area ratio S:R:\n\n\\[\n300:108=25:9\n\\]"
       },
       {
-        "title": "So the linear ratio S",
+        "title": "Split the ratio",
         "body": "So the linear ratio S:R is\n\n\\[\n5:3\n\\]"
       },
       {
-        "title": "Therefore the volume ratio S",
+        "title": "Split the ratio",
         "body": "Therefore the volume ratio S:R is\n\n\\[\n5^3:3^3=125:27\n\\]"
       },
       {
@@ -27370,7 +27370,7 @@ window.SOLUTION_DATA = {
         "body": "The median is \\(9\\):\n\n\\[\n\\frac{x+10}{2}=9\n\\]\n\n\\[\nx=8\n\\]"
       },
       {
-        "title": "The mean is , so",
+        "title": "Calculate statistic",
         "body": "The mean is \\(11\\), so the total is\n\n\\[\n6 \\times 11=66\n\\]\n\n\\[\n4+7+8+10+y+y=66\n\\]\n\n\\[\n29+2y=66\n\\]\n\n\\[\n2y=37\n\\]\n\n\\[\ny=18.5\n\\]"
       }
     ],
@@ -27387,32 +27387,32 @@ window.SOLUTION_DATA = {
         "body": "The histogram densities are\n\n\\[\n\\frac{35}{10}=3.5,\\quad\n\\frac{45}{15}=3,\\quad\n\\frac{75}{15}=5,\\quad\n\\frac{40}{20}=2,\\quad\n\\frac{8}{10}=0.8\n\\]"
       },
       {
-        "title": "For plants taller than",
+        "title": "Use histogram",
         "body": "For plants taller than \\(40\\text{ cm}\\):"
       },
       {
-        "title": "From",
+        "title": "Use histogram",
         "body": "From \\(40<h\\le 50\\):\n\n\\[\n10(5)=50\n\\]"
       },
       {
-        "title": "From",
+        "title": "Use histogram",
         "body": "From \\(50<h\\le 70\\):\n\n\\[\n40\n\\]"
       },
       {
-        "title": "From",
+        "title": "Use histogram",
         "body": "From \\(70<h\\le 80\\):\n\n\\[\n8\n\\]\n\n\\[\n50+40+8=98\n\\]"
       }
     ],
     "finalAnswer": "draw bars with densities \\(3.5,3,5,2,0.8\\), and \\(98\\) plants."
   },
   "all::MayNov2020_P1H__Q02__p04-04__m04__Probability-Toolkit": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate probability",
         "body": "\\[\n15\\text{ hours}=15\\times 60\\times 60=54000\\text{ seconds}\n\\]"
       },
       {
@@ -27431,13 +27431,13 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(45\\)."
   },
   "all::MayNov2020_P1H__Q01__p03-03__m04__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "From the Venn diagram,",
+        "title": "Calculate probability",
         "body": "From the Venn diagram,\n\n\\[\nA\\cap B=\\{2,4,6,12\\}\n\\]"
       },
       {
@@ -27449,15 +27449,15 @@ window.SOLUTION_DATA = {
         "body": "The values in \\(A\\) but not in \\(B\\) are\n\n\\[\n\\{8,10,14\\}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate probability",
         "body": "So\n\n\\[\nP(A\\cap B')=\\frac{3}{14}\n\\]"
       }
     ],
     "finalAnswer": "\\(\\{2,4,6,12\\}\\), \\(\\{5,7,8,9,10,11,13,14\\}\\), \\(\\frac{3}{14}\\)."
   },
   "all::MayNov2020_P1H__Q15__p16-17__m05__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
@@ -27483,7 +27483,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Sine/Cosine Rule to Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use trigonometry",
         "body": "\\[\n\\frac1{3x-2}\\times\\frac{9x^2-4}{3x^2-13x-10}\n-\\frac7{x-1}\n\\]"
       },
       {
@@ -27491,7 +27491,7 @@ window.SOLUTION_DATA = {
         "body": "Factor:\n\n\\[\n9x^2-4=(3x-2)(3x+2)\n\\]\n\n\\[\n3x^2-13x-10=(3x+2)(x-5)\n\\]"
       },
       {
-        "title": "So the first product becomes",
+        "title": "Use trigonometry",
         "body": "So the first product becomes\n\n\\[\n\\frac1{3x-2}\\times\n\\frac{(3x-2)(3x+2)}{(3x+2)(x-5)}\n\\]"
       },
       {
@@ -27499,7 +27499,7 @@ window.SOLUTION_DATA = {
         "body": "Cancel common factors:\n\n\\[\n\\frac1{x-5}\n\\]"
       },
       {
-        "title": "Now subtract",
+        "title": "Use trigonometry",
         "body": "Now subtract:\n\n\\[\n\\frac1{x-5}-\\frac7{x-1}\n\\]"
       },
       {
@@ -27520,7 +27520,7 @@ window.SOLUTION_DATA = {
         "body": "The arithmetic sequence is\n\n\\[\n8,\\ 15,\\ 22,\\ 29,\\ 36,\\ldots\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\na=8,\\quad d=7\n\\]"
       },
       {
@@ -27532,7 +27532,7 @@ window.SOLUTION_DATA = {
         "body": "There are\n\n\\[\n100-50+1=51\n\\]"
       },
       {
-        "title": "terms from the 50th to",
+        "title": "Find the nth term",
         "body": "terms from the 50th to the 100th inclusive.\n\n\\[\n\\text{sum}=\\frac{51}{2}(351+701)\n\\]\n\n\\[\n=26826\n\\]"
       }
     ],
@@ -27545,7 +27545,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "In a rhombus, the diagonals",
+        "title": "Find the gradient",
         "body": "In a rhombus, the diagonals are perpendicular and bisect each other."
       },
       {
@@ -27553,19 +27553,19 @@ window.SOLUTION_DATA = {
         "body": "The diagonal \\(AC\\) lies on\n\n\\[\n2y+7x=20\n\\]\n\n\\[\n2y=-7x+20\n\\]\n\n\\[\ny=-\\frac72x+10\n\\]"
       },
       {
-        "title": "So the gradient of is",
+        "title": "Find the gradient",
         "body": "So the gradient of \\(AC\\) is\n\n\\[\n-\\frac72\n\\]"
       },
       {
-        "title": "Therefore the gradient of is",
+        "title": "Find the gradient",
         "body": "Therefore the gradient of \\(BD\\) is\n\n\\[\n\\frac27\n\\]"
       },
       {
-        "title": "The line passes through",
+        "title": "Calculate value",
         "body": "The line \\(BD\\) passes through\n\n\\[\nM=(6,-11)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\ny+11=\\frac27(x-6)\n\\]"
       },
       {
@@ -27582,7 +27582,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "For part (a),",
+        "title": "Apply transformation",
         "body": "For part (a),\n\n\\[\ny=g(x)\\to y=-g(x)\n\\]"
       },
       {
@@ -27590,15 +27590,15 @@ window.SOLUTION_DATA = {
         "body": "The \\(x\\)-coordinates stay the same and the \\(y\\)-coordinates change sign."
       },
       {
-        "title": "So the transformation is a",
+        "title": "Apply transformation",
         "body": "So the transformation is a reflection in the \\(x\\)-axis."
       },
       {
-        "title": "For part (b),",
+        "title": "Calculate value",
         "body": "For part (b),\n\n\\[\ny=2f(x-1)\n\\]"
       },
       {
-        "title": "First, moves the graph 1",
+        "title": "Read the graph",
         "body": "First, \\(x-1\\) moves the graph 1 unit right. Then the factor 2 stretches the graph vertically by scale factor 2."
       },
       {
@@ -27606,7 +27606,7 @@ window.SOLUTION_DATA = {
         "body": "Use points from the original graph:\n\n\\[\n(1,3)\\to(2,6)\n\\]\n\n\\[\n(2,0)\\to(3,0)\n\\]\n\n\\[\n(4,-3)\\to(5,-6)\n\\]\n\n\\[\n(6,0)\\to(7,0)\n\\]\n\n\\[\n(7,3)\\to(8,6)\n\\]"
       },
       {
-        "title": "Draw the transformed parabola through",
+        "title": "Apply transformation",
         "body": "Draw the transformed parabola through these points."
       }
     ],
@@ -27619,7 +27619,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Functions to Differentiation.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Differentiate",
         "body": "\\[\ny=px^3-mx\n\\]"
       },
       {
@@ -27631,7 +27631,7 @@ window.SOLUTION_DATA = {
         "body": "The gradient is negative when\n\n\\[\n3px^2-m<0\n\\]\n\n\\[\n3px^2<m\n\\]\n\n\\[\nx^2<\\frac{m}{3p}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify surd",
         "body": "So\n\n\\[\n-\\sqrt{\\frac{m}{3p}}<x<\\sqrt{\\frac{m}{3p}}\n\\]"
       }
     ],
@@ -27656,11 +27656,11 @@ window.SOLUTION_DATA = {
         "body": "Surface area ratio S:R:\n\n\\[\n300:108=25:9\n\\]"
       },
       {
-        "title": "So the linear ratio S",
+        "title": "Split the ratio",
         "body": "So the linear ratio S:R is\n\n\\[\n5:3\n\\]"
       },
       {
-        "title": "Therefore the volume ratio S",
+        "title": "Split the ratio",
         "body": "Therefore the volume ratio S:R is\n\n\\[\n5^3:3^3=125:27\n\\]"
       },
       {
@@ -27677,15 +27677,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Fractions. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify fraction",
         "body": "\\[\n3\\frac34=\\frac{15}{4}\n\\]"
       },
       {
-        "title": "Now multiply",
+        "title": "Simplify fraction",
         "body": "Now multiply:\n\n\\[\n\\frac{15}{4}\\times \\frac79\n\\]"
       },
       {
-        "title": "Cancel and",
+        "title": "Simplify fraction",
         "body": "Cancel \\(15\\) and \\(9\\):\n\n\\[\n\\frac{5}{4}\\times \\frac73=\\frac{35}{12}\n\\]\n\n\\[\n\\frac{35}{12}=2\\frac{11}{12}\n\\]"
       }
     ],
@@ -27752,7 +27752,7 @@ window.SOLUTION_DATA = {
         "body": "Value after 3 years:\n\n\\[\n1200(1.08)^3=1511.6544\n\\]"
       },
       {
-        "title": "Correct to the nearest pound,",
+        "title": "Use compound interest",
         "body": "Correct to the nearest pound,\n\n\\[\n1511.6544\\approx 1512\n\\]"
       }
     ],
@@ -27765,7 +27765,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
     "steps": [
       {
-        "title": "For the upper bound of",
+        "title": "Find upper bound",
         "body": "For the upper bound of the shaded area, use the upper bound of the outer rectangle and subtract the lower bound of the cut-out rectangle."
       },
       {
@@ -27786,11 +27786,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic roots and indices. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use index laws",
         "body": "\\[\n18^{4n}=(2\\times3^2)^{4n}=2^{4n}3^{8n}\n\\]\n\n\\[\n12^2=(2^2\\times3)^2=2^4 3^2\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use index laws",
         "body": "So\n\\[\nM=\\frac{2^{4n}3^{8n}\\times2^{3(n^2-6n)}\\times3^{2(1-4n)}}{2^4 3^2}\n\\]"
       },
       {
@@ -27802,11 +27802,11 @@ window.SOLUTION_DATA = {
         "body": "Combine powers of 3:\n\\[\n3^{8n+2-8n-2}=3^0=1\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use index laws",
         "body": "So\n\\[\nM=2^{3n^2-14n-4}\n\\]"
       },
       {
-        "title": "Given ,",
+        "title": "Use index laws",
         "body": "Given \\(M=2\\),\n\\[\n3n^2-14n-4=1\n\\]\n\n\\[\n3n^2-14n-5=0\n\\]\n\n\\[\n(3n+1)(n-5)=0\n\\]"
       }
     ],
@@ -27819,7 +27819,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Expanding brackets. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Expand brackets",
         "body": "\\[\n(4x+1)(x-3)(5x+6)\n\\]\n\n\\[\n(x-3)(5x+6)=5x^2-9x-18\n\\]\n\n\\[\n(4x+1)(5x^2-9x-18)=20x^3-31x^2-81x-18\n\\]"
       }
     ],
@@ -27840,7 +27840,7 @@ window.SOLUTION_DATA = {
         "body": "(b)\n\\[\nG=c^2-4c\n\\]"
       },
       {
-        "title": "When",
+        "title": "Solve quadratic equation",
         "body": "When \\(c=-5\\):\n\\[\nG=(-5)^2-4(-5)=25+20=45\n\\]"
       },
       {
@@ -27861,7 +27861,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Simultaneous equations. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve simultaneous equations",
         "body": "\\[\n7x+2y=5.5\n\\]\n\n\\[\n3x-5y=17\n\\]"
       },
       {
@@ -27877,7 +27877,7 @@ window.SOLUTION_DATA = {
         "body": "Add:\n\\[\n41x=61.5\n\\]\n\n\\[\nx=1.5\n\\]"
       },
       {
-        "title": "Substitute into",
+        "title": "Solve simultaneous equations",
         "body": "Substitute into \\(7x+2y=5.5\\):\n\\[\n10.5+2y=5.5\n\\]\n\n\\[\ny=-2.5\n\\]"
       }
     ],
@@ -27898,7 +27898,7 @@ window.SOLUTION_DATA = {
         "body": "The 6th term is 39:\n\\[\na+5d=39\n\\]"
       },
       {
-        "title": "The 19th term is 7.8",
+        "title": "Find the nth term",
         "body": "The 19th term is 7.8:\n\\[\na+18d=7.8\n\\]"
       },
       {
@@ -27906,7 +27906,7 @@ window.SOLUTION_DATA = {
         "body": "Subtract:\n\\[\n13d=-31.2\n\\]\n\n\\[\nd=-2.4\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Find the nth term",
         "body": "Then\n\\[\na+5(-2.4)=39\n\\]\n\n\\[\na=51\n\\]"
       },
       {
@@ -27923,7 +27923,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Functions. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\nf(x)=5x-7,\\qquad g(x)=\\frac{5x}{x+4}\n\\]"
       },
       {
@@ -27943,7 +27943,7 @@ window.SOLUTION_DATA = {
         "body": "(d) Let\n\\[\ny=\\frac{5x}{x+4}\n\\]\n\n\\[\ny(x+4)=5x\n\\]\n\n\\[\nyx+4y=5x\n\\]\n\n\\[\nx(y-5)=-4y\n\\]\n\n\\[\nx=\\frac{4y}{5-y}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\\[\ng^{-1}(x)=\\frac{4x}{5-x}\n\\]"
       }
     ],
@@ -27956,7 +27956,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Coordinate geometry. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nA=(3,11),\\qquad B=(47,b)\n\\]"
       },
       {
@@ -27964,11 +27964,11 @@ window.SOLUTION_DATA = {
         "body": "The midpoint is \\((a,19)\\)."
       },
       {
-        "title": "For the x coordinate",
+        "title": "Evaluate fraction",
         "body": "For the x-coordinate:\n\\[\na=\\frac{3+47}{2}=25\n\\]"
       },
       {
-        "title": "For the y coordinate",
+        "title": "Evaluate fraction",
         "body": "For the y-coordinate:\n\\[\n19=\\frac{11+b}{2}\n\\]\n\n\\[\n38=11+b\n\\]\n\n\\[\nb=27\n\\]"
       }
     ],
@@ -27985,7 +27985,7 @@ window.SOLUTION_DATA = {
         "body": "The maximum point of \\(y=f(x)\\) is \\((-3,4)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x)-6\n\\]"
       },
       {
@@ -27993,7 +27993,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 6 units down:\n\n\\[\n(-3,4)\\to(-3,-2)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(2x)\n\\]"
       },
       {
@@ -28010,11 +28010,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This is finding where the gradient has a given value.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find the gradient",
         "body": "\\[\ny=5x^3-x^2-6x+4\n\\]\n\n\\[\n\\frac{dy}{dx}=15x^2-2x-6\n\\]"
       },
       {
-        "title": "The gradient is 2, so",
+        "title": "Find the gradient",
         "body": "The gradient is 2, so\n\\[\n15x^2-2x-6=2\n\\]\n\n\\[\n15x^2-2x-8=0\n\\]\n\n\\[\nx=\\frac{2\\pm\\sqrt{(-2)^2-4(15)(-8)}}{30}\n\\]\n\n\\[\nx=\\frac{2\\pm22}{30}\n\\]\n\n\\[\nx=\\frac45 \\quad \\text{or} \\quad x=-\\frac23\n\\]"
       }
     ],
@@ -28035,7 +28035,7 @@ window.SOLUTION_DATA = {
         "body": "Distance from Toulouse to Montpellier:\n\\[\n90\\times 2.7=243\\text{ km}\n\\]"
       },
       {
-        "title": "Janine took 3 hours, so",
+        "title": "Calculate value",
         "body": "Janine took 3 hours, so her average speed was\n\\[\n243\\div 3=81\n\\]"
       }
     ],
@@ -28056,7 +28056,7 @@ window.SOLUTION_DATA = {
         "body": "Use\n\\[\n\\text{pressure}=\\frac{\\text{force}}{\\text{area}}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate area",
         "body": "So\n\\[\n\\text{force}=\\text{pressure}\\times \\text{area}\n\\]\n\n\\[\n34.8\\times 2.25=78.3\n\\]"
       }
     ],
@@ -28099,11 +28099,11 @@ window.SOLUTION_DATA = {
         "body": "Each side of the regular octagon is \\(10\\) cm."
       },
       {
-        "title": "For a regular octagon with",
+        "title": "Calculate area",
         "body": "For a regular octagon with side length \\(s\\),\n\n\\[\n\\text{area}=2(1+\\sqrt2)s^2\n\\]"
       },
       {
-        "title": "So the area of the",
+        "title": "Calculate area",
         "body": "So the area of the whole octagon is\n\n\\[\n2(1+\\sqrt2)(10)^2\n=200+200\\sqrt2\n\\]"
       },
       {
@@ -28111,19 +28111,19 @@ window.SOLUTION_DATA = {
         "body": "The unshaded triangle \\(ABC\\) has\n\n\\[\nAB=10,\\qquad BC=10,\\qquad \\angle ABC=135^\\circ\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\n\\text{area of triangle }ABC\n=\\frac{1}{2}(10)(10)\\sin 135^\\circ\n=25\\sqrt2\n\\]"
       },
       {
-        "title": "At the bottom, the unshaded",
+        "title": "Find the gradient",
         "body": "At the bottom, the unshaded trapezium \\(HEFG\\) has parallel sides\n\n\\[\nHE=10+10\\sqrt2,\\qquad GF=10\n\\]"
       },
       {
-        "title": "and height",
+        "title": "Simplify surd",
         "body": "and height\n\n\\[\n5\\sqrt2\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate area",
         "body": "So\n\n\\[\n\\text{area of trapezium }HEFG\n=\\frac{1}{2}(10+10+10\\sqrt2)(5\\sqrt2)\n\\]\n\n\\[\n=50+50\\sqrt2\n\\]"
       },
       {
@@ -28140,7 +28140,7 @@ window.SOLUTION_DATA = {
     "topicNote": "3D Pythagoras & Trigonometry. The tag is correct.",
     "steps": [
       {
-        "title": "(a) is vertically above ,",
+        "title": "Use trigonometry",
         "body": "(a) \\(C\\) is vertically above \\(H\\), so the vertical height from \\(F\\) to \\(C\\) is \\(10\\text{ cm}\\)."
       },
       {
@@ -28156,7 +28156,7 @@ window.SOLUTION_DATA = {
         "body": "(b) In the trapezium cross-section, \\(AD=15\\) and the horizontal distance is \\(12\\), so the difference in vertical heights is\n\n\\[\n\\sqrt{15^2-12^2}=9\n\\]"
       },
       {
-        "title": "Since , the height",
+        "title": "Use trigonometry",
         "body": "Since \\(DE=10\\), the height \\(BG=19\\text{ cm}\\)."
       },
       {
@@ -28184,8 +28184,8 @@ window.SOLUTION_DATA = {
     "finalAnswer": "modal class \\(30<t\\le 40\\), estimated mean \\(28.2\\) minutes."
   },
   "all::MayNov2020_P1HR__Q11__p10-11__m05__Cumulative-Frequency-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
     "steps": [
@@ -28215,15 +28215,15 @@ window.SOLUTION_DATA = {
         "body": "The probability of choosing two beads of the same colour is\n\n\\[\n\\frac{\\binom{3}{2}+\\binom{4}{2}+\\binom{x}{2}}{\\binom{x+7}{2}}\n\\]"
       },
       {
-        "title": "This is equal to ,",
+        "title": "Evaluate fraction",
         "body": "This is equal to \\(\\frac38\\), so\n\n\\[\n\\frac{3+6+\\frac{x(x-1)}{2}}{\\frac{(x+7)(x+6)}{2}}=\\frac38\n\\]\n\n\\[\n\\frac{x^2-x+18}{(x+7)(x+6)}=\\frac38\n\\]\n\n\\[\n8(x^2-x+18)=3(x+7)(x+6)\n\\]\n\n\\[\n8x^2-8x+144=3x^2+39x+126\n\\]\n\n\\[\n5x^2-47x+18=0\n\\]\n\n\\[\n(x-9)(5x-2)=0\n\\]"
       },
       {
-        "title": "Since must be a whole",
+        "title": "Calculate value",
         "body": "Since \\(x\\) must be a whole number,\n\n\\[\nx=9\n\\]"
       },
       {
-        "title": "So the total number of",
+        "title": "Calculate value",
         "body": "So the total number of beads is\n\n\\[\n9+7=16\n\\]"
       }
     ],
@@ -28236,19 +28236,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\nM=\\frac{18^{4n}\\times 2^{3(n^2-6n)}\\times 3^{2(1-4n)}}{12^2}\n\\]"
       },
       {
-        "title": "Write everything in powers of",
+        "title": "Use index laws",
         "body": "Write everything in powers of 2 and 3:\n\n\\[\n18^{4n}=(2\\cdot 3^2)^{4n}=2^{4n}3^{8n}\n\\]\n\n\\[\n2^{3(n^2-6n)}=2^{3n^2-18n}\n\\]\n\n\\[\n3^{2(1-4n)}=3^{2-8n}\n\\]\n\n\\[\n12^2=(2^2\\cdot 3)^2=2^4 3^2\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\nM=2^{4n+3n^2-18n-4}\\times 3^{8n+2-8n-2}\n\\]\n\n\\[\nM=2^{3n^2-14n-4}\n\\]"
       },
       {
-        "title": "Given ,",
+        "title": "Calculate value",
         "body": "Given \\(M=2\\),\n\n\\[\n2^{3n^2-14n-4}=2^1\n\\]\n\n\\[\n3n^2-14n-4=1\n\\]\n\n\\[\n3n^2-14n-5=0\n\\]\n\n\\[\n(3n+1)(n-5)=0\n\\]"
       }
     ],
@@ -28265,7 +28265,7 @@ window.SOLUTION_DATA = {
         "body": "The maximum point of \\(y=f(x)\\) is \\((-3,4)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x)-6\n\\]"
       },
       {
@@ -28273,7 +28273,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 6 units down:\n\n\\[\n(-3,4)\\to(-3,-2)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(2x)\n\\]"
       },
       {
@@ -28294,11 +28294,11 @@ window.SOLUTION_DATA = {
         "body": "Each side of the regular octagon is \\(10\\) cm."
       },
       {
-        "title": "For a regular octagon with",
+        "title": "Calculate area",
         "body": "For a regular octagon with side length \\(s\\),\n\n\\[\n\\text{area}=2(1+\\sqrt2)s^2\n\\]"
       },
       {
-        "title": "So the area of the",
+        "title": "Calculate area",
         "body": "So the area of the whole octagon is\n\n\\[\n2(1+\\sqrt2)(10)^2\n=200+200\\sqrt2\n\\]"
       },
       {
@@ -28306,19 +28306,19 @@ window.SOLUTION_DATA = {
         "body": "The unshaded triangle \\(ABC\\) has\n\n\\[\nAB=10,\\qquad BC=10,\\qquad \\angle ABC=135^\\circ\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\n\\text{area of triangle }ABC\n=\\frac{1}{2}(10)(10)\\sin 135^\\circ\n=25\\sqrt2\n\\]"
       },
       {
-        "title": "At the bottom, the unshaded",
+        "title": "Find the gradient",
         "body": "At the bottom, the unshaded trapezium \\(HEFG\\) has parallel sides\n\n\\[\nHE=10+10\\sqrt2,\\qquad GF=10\n\\]"
       },
       {
-        "title": "and height",
+        "title": "Simplify surd",
         "body": "and height\n\n\\[\n5\\sqrt2\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate area",
         "body": "So\n\n\\[\n\\text{area of trapezium }HEFG\n=\\frac{1}{2}(10+10+10\\sqrt2)(5\\sqrt2)\n\\]\n\n\\[\n=50+50\\sqrt2\n\\]"
       },
       {
@@ -28343,15 +28343,15 @@ window.SOLUTION_DATA = {
         "body": "The probability of choosing two beads of the same colour is\n\n\\[\n\\frac{\\binom{3}{2}+\\binom{4}{2}+\\binom{x}{2}}{\\binom{x+7}{2}}\n\\]"
       },
       {
-        "title": "This is equal to ,",
+        "title": "Evaluate fraction",
         "body": "This is equal to \\(\\frac38\\), so\n\n\\[\n\\frac{3+6+\\frac{x(x-1)}{2}}{\\frac{(x+7)(x+6)}{2}}=\\frac38\n\\]\n\n\\[\n\\frac{x^2-x+18}{(x+7)(x+6)}=\\frac38\n\\]\n\n\\[\n8(x^2-x+18)=3(x+7)(x+6)\n\\]\n\n\\[\n8x^2-8x+144=3x^2+39x+126\n\\]\n\n\\[\n5x^2-47x+18=0\n\\]\n\n\\[\n(x-9)(5x-2)=0\n\\]"
       },
       {
-        "title": "Since must be a whole",
+        "title": "Calculate value",
         "body": "Since \\(x\\) must be a whole number,\n\n\\[\nx=9\n\\]"
       },
       {
-        "title": "So the total number of",
+        "title": "Calculate value",
         "body": "So the total number of beads is\n\n\\[\n9+7=16\n\\]"
       }
     ],
@@ -28364,11 +28364,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find the LCM",
         "body": "\\[\n3.6\\times 10^3=3600\n\\]\n\n\\[\n3600=36\\times 100\n\\]\n\n\\[\n36=2^2\\times 3^2,\\qquad 100=2^2\\times 5^2\n\\]"
       },
       {
-        "title": "So",
+        "title": "Find the LCM",
         "body": "So\n\n\\[\n3600=2^4\\times 3^2\\times 5^2\n\\]"
       }
     ],
@@ -28381,11 +28381,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Percentages. The tag is correct.",
     "steps": [
       {
-        "title": "Sydney s population was of",
+        "title": "Calculate percentage",
         "body": "Sydney's population was \\(22\\%\\) of Australia's total population.\n\n\\[\n0.22\\times \\text{total}=5.48\n\\]\n\n\\[\n\\text{total}=\\frac{5.48}{0.22}=24.909\\ldots\n\\]"
       },
       {
-        "title": "Correct to 3 significant figures,",
+        "title": "Calculate percentage",
         "body": "Correct to 3 significant figures,\n\n\\[\n24.909\\ldots\\approx 24.9\n\\]"
       }
     ],
@@ -28402,11 +28402,11 @@ window.SOLUTION_DATA = {
         "body": "Let\n\n\\[\ny=0.4\\dot{x}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify fraction",
         "body": "So\n\n\\[\ny=0.4xxx\\ldots\n\\]"
       },
       {
-        "title": "Multiply by and",
+        "title": "Simplify fraction",
         "body": "Multiply by \\(10\\) and \\(100\\):\n\n\\[\n10y=4.xxx\\ldots\n\\]\n\n\\[\n100y=4x.xxx\\ldots\n\\]"
       },
       {
@@ -28414,7 +28414,7 @@ window.SOLUTION_DATA = {
         "body": "Subtract:\n\n\\[\n100y-10y=(4x.xxx\\ldots)-(4.xxx\\ldots)\n\\]\n\n\\[\n90y=x+36\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Simplify fraction",
         "body": "Therefore\n\n\\[\ny=\\frac{x+36}{90}\n\\]"
       }
     ],
@@ -28427,15 +28427,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Rounding, Estimation and Bounds. The tag is correct; sine rule is used inside the bounds calculation.",
     "steps": [
       {
-        "title": "Using the sine rule,",
+        "title": "Use trigonometry",
         "body": "Using the sine rule,\n\n\\[\n\\frac{YZ}{\\sin X}=\\frac{XZ}{\\sin Y}\n\\]"
       },
       {
-        "title": "For the upper bound of",
+        "title": "Find upper bound",
         "body": "For the upper bound of \\(YZ\\):\n\n\\[\nXZ<16.5,\\quad X<25.5^\\circ,\\quad Y<135^\\circ\n\\]\n\n\\[\nYZ_{\\text{upper}}=\\frac{16.5\\sin 25.5^\\circ}{\\sin 135^\\circ}=10.0457\\ldots\n\\]"
       },
       {
-        "title": "Correct to one decimal place,",
+        "title": "Use trigonometry",
         "body": "Correct to one decimal place,\n\n\\[\n10.0457\\ldots\\approx 10.0\n\\]"
       }
     ],
@@ -28486,11 +28486,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic proof. The tag is acceptable because the question asks to prove the formula before using it.",
     "steps": [
       {
-        "title": "The perimeter is made from",
+        "title": "Rearrange formula",
         "body": "The perimeter is made from three sides of length \\(x\\) and two sides of length \\(y\\):\n\\[\n3x+2y=100\n\\]"
       },
       {
-        "title": "So",
+        "title": "Rearrange formula",
         "body": "So\n\\[\ny=\\frac{100-3x}{2}\n\\]"
       },
       {
@@ -28502,7 +28502,7 @@ window.SOLUTION_DATA = {
         "body": "Substitute \\(y=\\dfrac{100-3x}{2}\\):\n\\[\nR=x\\left(\\frac{100-3x}{2}\\right)+\\frac{\\sqrt3}{4}x^2\n\\]\n\n\\[\nR=50x-\\frac32x^2+\\frac{\\sqrt3}{4}x^2\n\\]\n\n\\[\nR=\\frac{x}{4}\\left(200-(6-\\sqrt3)x\\right)\n\\]"
       },
       {
-        "title": "For the maximum, write",
+        "title": "Rearrange formula",
         "body": "For the maximum, write\n\\[\nR=-\\frac{6-\\sqrt3}{4}x^2+50x\n\\]"
       },
       {
@@ -28510,7 +28510,7 @@ window.SOLUTION_DATA = {
         "body": "The maximum occurs at\n\\[\nx=\\frac{-b}{2a}=\\frac{-50}{2\\left(-\\frac{6-\\sqrt3}{4}\\right)}\n\\]\n\n\\[\nx=\\frac{100}{6-\\sqrt3}\n\\]"
       },
       {
-        "title": "The coefficient of is negative,",
+        "title": "Solve quadratic equation",
         "body": "The coefficient of \\(x^2\\) is negative, so the quadratic graph opens downwards and this vertex gives a maximum."
       }
     ],
@@ -28523,7 +28523,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Solving inequalities. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve inequality",
         "body": "\\[\n-7\\le2x-3<5\n\\]"
       },
       {
@@ -28535,7 +28535,7 @@ window.SOLUTION_DATA = {
         "body": "Divide by 2:\n\\[\n-2\\le x<4\n\\]"
       },
       {
-        "title": "On the number line, use",
+        "title": "Use a closed circle",
         "body": "On the number line, use a closed circle at \\(-2\\), an open circle at \\(4\\), and shade between them."
       }
     ],
@@ -28548,7 +28548,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Simultaneous Equations.",
     "steps": [
       {
-        "title": "Let be the cost of",
+        "title": "Solve simultaneous equations",
         "body": "Let \\(a\\) be the cost of one apple and \\(p\\) be the cost of one pear.\n\n\\[\n5a+3p=1.96\n\\]\n\n\\[\n3a+2p=1.22\n\\]"
       },
       {
@@ -28564,11 +28564,11 @@ window.SOLUTION_DATA = {
         "body": "Subtract:\n\n\\[\na=0.26\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Solve simultaneous equations",
         "body": "Then\n\n\\[\n3(0.26)+2p=1.22\n\\]\n\n\\[\n2p=0.44\n\\]\n\n\\[\np=0.22\n\\]"
       },
       {
-        "title": "Michael buys 10 apples and",
+        "title": "Solve simultaneous equations",
         "body": "Michael buys 10 apples and 10 pears:\n\n\\[\n10(0.26)+10(0.22)=4.80\n\\]"
       }
     ],
@@ -28585,7 +28585,7 @@ window.SOLUTION_DATA = {
         "body": "The top row has 5 tile widths and the bottom row has 4 tile lengths, so\n\n\\[\n5W=4L\n\\]\n\n\\[\nL=\\frac54W\n\\]"
       },
       {
-        "title": "The rectangle has width and",
+        "title": "Use trigonometry",
         "body": "The rectangle has width \\(5W\\) and height \\(L+W\\):\n\n\\[\n5W(L+W)=1620\n\\]"
       },
       {
@@ -28602,7 +28602,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nA=(-6,2),\\qquad B=(5,3)\n\\]"
       },
       {
@@ -28614,23 +28614,23 @@ window.SOLUTION_DATA = {
         "body": "The gradient of \\(AB\\) is\n\n\\[\n\\frac{3-2}{5-(-6)}=\\frac1{11}\n\\]"
       },
       {
-        "title": "So the perpendicular gradient is",
+        "title": "Find the gradient",
         "body": "So the perpendicular gradient is\n\n\\[\n-11\n\\]"
       },
       {
-        "title": "Line passes through , so",
+        "title": "Evaluate fraction",
         "body": "Line \\(M\\) passes through \\(\\left(-\\frac12,\\frac52\\right)\\), so\n\n\\[\ny-\\frac52=-11\\left(x+\\frac12\\right)\n\\]"
       },
       {
-        "title": "At point ,",
+        "title": "Evaluate fraction",
         "body": "At point \\(C\\), \\(x=-1\\):\n\n\\[\ny-\\frac52=-11\\left(-\\frac12\\right)\n\\]\n\n\\[\ny-\\frac52=\\frac{11}{2}\n\\]\n\n\\[\ny=8\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\nC=(-1,8)\n\\]"
       },
       {
-        "title": "Now use vectors from",
+        "title": "Use vectors",
         "body": "Now use vectors from \\(A\\):\n\n\\[\n\\vec{AB}=(11,1),\\qquad \\vec{AC}=(5,6)\n\\]"
       },
       {
@@ -28647,11 +28647,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Standard & Compound Units. The tag is correct.",
     "steps": [
       {
-        "title": "The mass is , and",
+        "title": "Calculate volume",
         "body": "The mass is \\(5.4\\text{ kg}\\), and the density is \\(0.0027\\text{ kg/cm}^3\\).\n\n\\[\n\\text{volume}=\\frac{\\text{mass}}{\\text{density}}\n=\\frac{5.4}{0.0027}=2000\\text{ cm}^3\n\\]"
       },
       {
-        "title": "For the cylinder,",
+        "title": "Evaluate fraction",
         "body": "For the cylinder,\n\\[\nV=\\pi r^2h\n\\]\n\n\\[\n2000=\\pi(10)^2h\n\\]\n\n\\[\nh=\\frac{2000}{100\\pi}=6.366\\ldots\n\\]"
       }
     ],
@@ -28680,11 +28680,11 @@ window.SOLUTION_DATA = {
         "body": "Shaded area for one coat:\n\\[\n1.5-0.098174\\ldots=1.401825\\ldots\\text{ m}^2\n\\]"
       },
       {
-        "title": "For 2 coats",
+        "title": "Calculate area",
         "body": "For 2 coats:\n\\[\n2\\times 1.401825\\ldots=2.80365\\ldots\\text{ m}^2\n\\]"
       },
       {
-        "title": "Since 250 ml covers ,",
+        "title": "Calculate area",
         "body": "Since 250 ml covers \\(4\\text{ m}^2\\), varnish needed is\n\\[\n\\frac{2.80365\\ldots}{4}\\times 250=175.22\\ldots\n\\]"
       }
     ],
@@ -28697,7 +28697,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Right-Angled Triangles - Pythagoras & Trigonometry. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use trigonometry",
         "body": "\\[\nh^2+30^2=52^2\n\\]\n\n\\[\nh^2=52^2-30^2=1804\n\\]\n\n\\[\nh=\\sqrt{1804}=42.473\\ldots\n\\]"
       }
     ],
@@ -28714,7 +28714,7 @@ window.SOLUTION_DATA = {
         "body": "(a)\n\\[\n\\tan20^\\circ=\\frac{100}{d}\n\\]\n\n\\[\nd=\\frac{100}{\\tan20^\\circ}=274.747\\ldots\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\nd=275\\text{ m}\n\\]"
       },
       {
@@ -28731,7 +28731,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Vectors.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use vectors",
         "body": "\\[\n\\overrightarrow{OA}=\\mathbf a,\\qquad \\overrightarrow{OB}=\\mathbf b\n\\]"
       },
       {
@@ -28739,7 +28739,7 @@ window.SOLUTION_DATA = {
         "body": "(a)(i)\n\n\\[\n\\overrightarrow{AB}=\\overrightarrow{OB}-\\overrightarrow{OA}\n=\\mathbf b-\\mathbf a\n\\]"
       },
       {
-        "title": "For a regular hexagon,",
+        "title": "Use vectors",
         "body": "For a regular hexagon,\n\n\\[\n\\overrightarrow{OC}=\\mathbf b-\\mathbf a,\\quad\n\\overrightarrow{OD}=-\\mathbf a,\\quad\n\\overrightarrow{OE}=-\\mathbf b,\\quad\n\\overrightarrow{OF}=\\mathbf a-\\mathbf b\n\\]"
       },
       {
@@ -28766,8 +28766,8 @@ window.SOLUTION_DATA = {
     "finalAnswer": "(i) \\(\\mathbf b-\\mathbf a\\), (ii) \\(4\\mathbf b-2\\mathbf a\\), (iii) \\(2\\mathbf b-3\\mathbf a\\), (b) \\(90\\text{ cm}^2\\)."
   },
   "all::Nov2021_P1H__Q11__p10-11__m05__Cumulative-Frequency-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
     "steps": [
@@ -28776,7 +28776,7 @@ window.SOLUTION_DATA = {
         "body": "The cumulative frequencies are\n\n\\[\n12,\\ 36,\\ 64,\\ 76,\\ 86,\\ 90\n\\]"
       },
       {
-        "title": "For ,",
+        "title": "Use cumulative frequency",
         "body": "For \\(42<T\\leq 52\\),\n\n\\[\nF(52)\\approx 36+\\frac{7}{10}(64-36)=55.6\n\\]\n\n\\[\nF(42)\\approx 12+\\frac{7}{10}(36-12)=28.8\n\\]\n\n\\[\n55.6-28.8=26.8\n\\]"
       }
     ],
@@ -28789,7 +28789,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Probability Toolkit.",
     "steps": [
       {
-        "title": "(a) Let the number of",
+        "title": "Calculate probability",
         "body": "(a) Let the number of white fish be \\(w\\).\n\n\\[\n\\frac{w}{54}=\\frac49\n\\]\n\n\\[\nw=54\\times\\frac49=24\n\\]"
       },
       {
@@ -28804,33 +28804,33 @@ window.SOLUTION_DATA = {
     "finalAnswer": "(a) \\(24\\) white fish, (b) \\(3\\) white fish."
   },
   "all::Nov2021_P1H__Q15__p16-17__m08__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "For each chess game",
+        "title": "Calculate probability",
         "body": "For each chess game:\n\n\\[\nP(M\\text{ wins})=\\frac29,\\quad P(\\text{draw})=\\frac49,\\quad P(M\\text{ loses})=\\frac13\n\\]"
       },
       {
-        "title": "After two games, equal points",
+        "title": "Calculate probability",
         "body": "After two games, equal points happens if both games are drawn or Magnus wins one and loses one.\n\n\\[\n\\left(\\frac49\\right)^2+2\\left(\\frac29\\right)\\left(\\frac13\\right)\n\\]\n\n\\[\n=\\frac{16}{81}+\\frac{12}{81}=\\frac{28}{81}\n\\]"
       },
       {
-        "title": "After three games, equal points",
+        "title": "Calculate probability",
         "body": "After three games, equal points means Magnus scores \\(3\\) points in total."
       },
       {
-        "title": "This happens with three draws,",
+        "title": "Calculate probability",
         "body": "This happens with three draws, or with one win, one draw and one loss.\n\n\\[\n\\left(\\frac49\\right)^3+6\\left(\\frac29\\right)\\left(\\frac49\\right)\\left(\\frac13\\right)\n\\]\n\n\\[\n=\\frac{64}{729}+\\frac{144}{729}=\\frac{208}{729}\n\\]"
       }
     ],
     "finalAnswer": "\\(\\frac{28}{81}\\), \\(\\frac{208}{729}\\)."
   },
   "all::Nov2021_P1H__Q16__p18-19__m05__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
@@ -28843,11 +28843,11 @@ window.SOLUTION_DATA = {
         "body": "The total in \\(M\\) is \\(25\\):\n\n\\[\n3+(18-x)+(11-x)+x=25\n\\]\n\n\\[\n32-x=25\n\\]\n\n\\[\nx=7\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate probability",
         "body": "So:\n\n\\[\nM\\cap E\\text{ only}=11,\\quad M\\cap F\\text{ only}=4,\\quad E\\cap F\\text{ only}=2\n\\]\n\n\\[\nE\\text{ only}=20-11-2-7=0\n\\]\n\n\\[\nF\\text{ only}=14-4-2-7=1\n\\]"
       },
       {
-        "title": "For a student who passed",
+        "title": "Calculate probability",
         "body": "For a student who passed Maths, failed French means \\(M\\) but not \\(F\\):\n\n\\[\n\\frac{3+11}{25}=\\frac{14}{25}\n\\]"
       }
     ],
@@ -28860,7 +28860,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nA=(-6,2),\\qquad B=(5,3)\n\\]"
       },
       {
@@ -28872,23 +28872,23 @@ window.SOLUTION_DATA = {
         "body": "The gradient of \\(AB\\) is\n\n\\[\n\\frac{3-2}{5-(-6)}=\\frac1{11}\n\\]"
       },
       {
-        "title": "So the perpendicular gradient is",
+        "title": "Find the gradient",
         "body": "So the perpendicular gradient is\n\n\\[\n-11\n\\]"
       },
       {
-        "title": "Line passes through , so",
+        "title": "Evaluate fraction",
         "body": "Line \\(M\\) passes through \\(\\left(-\\frac12,\\frac52\\right)\\), so\n\n\\[\ny-\\frac52=-11\\left(x+\\frac12\\right)\n\\]"
       },
       {
-        "title": "At point ,",
+        "title": "Evaluate fraction",
         "body": "At point \\(C\\), \\(x=-1\\):\n\n\\[\ny-\\frac52=-11\\left(-\\frac12\\right)\n\\]\n\n\\[\ny-\\frac52=\\frac{11}{2}\n\\]\n\n\\[\ny=8\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\nC=(-1,8)\n\\]"
       },
       {
-        "title": "Now use vectors from",
+        "title": "Use vectors",
         "body": "Now use vectors from \\(A\\):\n\n\\[\n\\vec{AB}=(11,1),\\qquad \\vec{AC}=(5,6)\n\\]"
       },
       {
@@ -28905,7 +28905,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Powers, roots and standard form. The tag is correct.",
     "steps": [
       {
-        "title": "For part (a), divide the",
+        "title": "Convert standard form",
         "body": "For part (a), divide the number of bacteria by the number of raindrops:\n\n\\[\n\\frac{1.75\\times 10^6}{2.4\\times 10^7}\n=\\frac{1.75}{2.4}\\times 10^{-1}\n\\]\n\n\\[\n=0.072916\\ldots\n\\]"
       },
       {
@@ -28913,15 +28913,15 @@ window.SOLUTION_DATA = {
         "body": "Correct to 2 significant figures:\n\n\\[\n7.3\\times 10^{-2}\n\\]"
       },
       {
-        "title": "For part (b), one drop",
+        "title": "Convert standard form",
         "body": "For part (b), one drop contains \\(5.01\\times 10^{21}\\) atoms."
       },
       {
-        "title": "The number of molecules in",
+        "title": "Convert standard form",
         "body": "The number of molecules in one drop is\n\n\\[\n\\frac{5.01\\times 10^{21}}{3}=1.67\\times 10^{21}\n\\]"
       },
       {
-        "title": "There are drops, so the",
+        "title": "Convert standard form",
         "body": "There are \\(2.4\\times 10^7\\) drops, so the number of molecules in the tank is\n\n\\[\n(1.67\\times 10^{21})(2.4\\times 10^7)\n=4.008\\times 10^{28}\n\\]"
       },
       {
@@ -28971,7 +28971,7 @@ window.SOLUTION_DATA = {
         "body": "Difference:\n\n\\[\n3529.153\\ldots-3450=79.153\\ldots\n\\]"
       },
       {
-        "title": "Correct to the nearest dollar,",
+        "title": "Use compound interest",
         "body": "Correct to the nearest dollar,\n\n\\[\n79.153\\ldots\\approx 79\n\\]"
       }
     ],
@@ -28984,7 +28984,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Surds. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\n\\frac{8}{\\sqrt5-1}\n\\]"
       },
       {
@@ -28992,7 +28992,7 @@ window.SOLUTION_DATA = {
         "body": "Rationalise the denominator:\n\n\\[\n\\frac{8}{\\sqrt5-1}\\times \\frac{\\sqrt5+1}{\\sqrt5+1}\n=\\frac{8(\\sqrt5+1)}{5-1}\n\\]\n\n\\[\n=2(\\sqrt5+1)=2\\sqrt5+2\n\\]"
       },
       {
-        "title": "In the form ,",
+        "title": "Simplify surd",
         "body": "In the form \\(\\sqrt a+b\\),\n\n\\[\n2\\sqrt5+2=\\sqrt{20}+2\n\\]"
       }
     ],
@@ -29005,11 +29005,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic roots and indices. The tag is correct.",
     "steps": [
       {
-        "title": "(a) , so",
+        "title": "Use index laws",
         "body": "(a) \\(3^4\\times3^5=3^9\\), so \\(m=9\\)."
       },
       {
-        "title": "(b) , so",
+        "title": "Use index laws",
         "body": "(b) \\((5^3)^7=5^{21}\\), so \\(n=21\\)."
       },
       {
@@ -29017,7 +29017,7 @@ window.SOLUTION_DATA = {
         "body": "(c)\n\\[\n\\frac{7^8\\times7^2}{7^p}=7^{10-p}=7^6\n\\]"
       },
       {
-        "title": "So , hence",
+        "title": "Use index laws",
         "body": "So \\(10-p=6\\), hence \\(p=4\\)."
       }
     ],
@@ -29059,7 +29059,7 @@ window.SOLUTION_DATA = {
         "body": "(b)(i)\n\\[\nx^2-5x-36=(x-9)(x+4)\n\\]"
       },
       {
-        "title": "(b)(ii) or",
+        "title": "Factorise expression",
         "body": "(b)(ii) \\(x=9\\) or \\(x=-4\\)."
       }
     ],
@@ -29109,7 +29109,7 @@ window.SOLUTION_DATA = {
         "body": "Given\n\n\\[\n-\\frac{5k}{2}=90+2k\n\\]\n\n\\[\n-5k=180+4k\n\\]\n\n\\[\nk=-20\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\na=-20,\\quad d=5\n\\]\n\n\\[\nS_{30}=\\frac{30}{2}(2(-20)+29(5))\n\\]\n\n\\[\nS_{30}=15(105)=1575\n\\]"
       }
     ],
@@ -29122,7 +29122,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Functions. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\nf(x)=2x-3,\\qquad g(x)=\\frac{x}{3x+1}\n\\]"
       },
       {
@@ -29138,7 +29138,7 @@ window.SOLUTION_DATA = {
         "body": "(c) Let\n\\[\ny=\\frac{x}{3x+1}\n\\]\n\n\\[\ny(3x+1)=x\n\\]\n\n\\[\n3xy+y=x\n\\]\n\n\\[\nx(3y-1)=-y\n\\]\n\n\\[\nx=\\frac{y}{1-3y}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\\[\ng^{-1}(x)=\\frac{x}{1-3x}\n\\]"
       }
     ],
@@ -29155,7 +29155,7 @@ window.SOLUTION_DATA = {
         "body": "Line \\(L\\) is\n\\[\nx-y=3\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\\[\ny=x-3\n\\]"
       },
       {
@@ -29167,11 +29167,11 @@ window.SOLUTION_DATA = {
         "body": "Substitute \\(y=x-3\\):\n\\[\n3x-(x-3)+(x-3)^2=9\n\\]\n\n\\[\n2x+3+x^2-6x+9=9\n\\]\n\n\\[\nx^2-4x+3=0\n\\]\n\n\\[\n(x-1)(x-3)=0\n\\]"
       },
       {
-        "title": "So or",
+        "title": "Calculate value",
         "body": "So \\(x=1\\) or \\(x=3\\)."
       },
       {
-        "title": "If , then . If",
+        "title": "Calculate value",
         "body": "If \\(x=1\\), then \\(y=-2\\). If \\(x=3\\), then \\(y=0\\)."
       },
       {
@@ -29196,7 +29196,7 @@ window.SOLUTION_DATA = {
         "body": "The rising boundary is\n\\[\ny=2x+2\n\\]\nso the region has\n\\[\ny\\leq2x+2\n\\]"
       },
       {
-        "title": "The falling boundary goes through",
+        "title": "Calculate value",
         "body": "The falling boundary goes through \\((0,1)\\) and \\((1,0)\\), so\n\\[\nx+y=1\n\\]"
       },
       {
@@ -29213,7 +29213,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nf(x)=9-3(x+2)^2\n\\]"
       },
       {
@@ -29221,7 +29221,7 @@ window.SOLUTION_DATA = {
         "body": "This is in completed square form, so the maximum point is\n\n\\[\n(-2,9)\n\\]"
       },
       {
-        "title": "For the translation",
+        "title": "Use matrices",
         "body": "For the translation\n\n\\[\n\\begin{pmatrix}4\\\\0\\end{pmatrix}\n\\]"
       },
       {
@@ -29237,19 +29237,19 @@ window.SOLUTION_DATA = {
         "body": "This is\n\n\\[\ny=-\\left(9-3(x+2)^2\\right)\n\\]"
       },
       {
-        "title": "So is reflected in the",
+        "title": "Apply transformation",
         "body": "So \\(C\\) is reflected in the \\(x\\)-axis."
       },
       {
-        "title": "For the cosine graph, the",
+        "title": "Use trigonometry",
         "body": "For the cosine graph, the maximum is 5 and the minimum is \\(-1\\).\n\n\\[\na=\\frac{5-(-1)}{2}=3\n\\]\n\n\\[\nc=\\frac{5+(-1)}{2}=2\n\\]"
       },
       {
-        "title": "For",
+        "title": "Use trigonometry",
         "body": "For\n\n\\[\ny=a\\cos(x-b)^\\circ+c\n\\]"
       },
       {
-        "title": "a maximum occurs when .",
+        "title": "Read the graph",
         "body": "a maximum occurs when \\(x-b=0\\). The graph has a maximum at \\(x=270^\\circ\\), so\n\n\\[\nb=270\n\\]"
       }
     ],
@@ -29262,7 +29262,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Angles in Polygons & Parallel Lines. The tag is correct.",
     "steps": [
       {
-        "title": "For pentagon , the interior",
+        "title": "Find the gradient",
         "body": "For pentagon \\(DEFGH\\), the interior angle sum is\n\\[\n(5-2)\\times 180=540^\\circ\n\\]"
       },
       {
@@ -29270,7 +29270,7 @@ window.SOLUTION_DATA = {
         "body": "Let\n\\[\n\\angle GHD=\\angle FGH=a\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Find the gradient",
         "body": "Then\n\\[\n112+102+96+a+a=540\n\\]\n\n\\[\n2a=230\n\\]\n\n\\[\na=115^\\circ\n\\]"
       },
       {
@@ -29278,7 +29278,7 @@ window.SOLUTION_DATA = {
         "body": "A regular octagon has interior angle\n\\[\n\\frac{(8-2)\\times 180}{8}=135^\\circ\n\\]"
       },
       {
-        "title": "At , angles around a",
+        "title": "Find the gradient",
         "body": "At \\(H\\), angles around a point add to \\(360^\\circ\\):\n\\[\nx=360^\\circ-135^\\circ-115^\\circ=110^\\circ\n\\]"
       }
     ],
@@ -29295,15 +29295,15 @@ window.SOLUTION_DATA = {
         "body": "The tangent at \\(B\\) is perpendicular to the radius \\(OB\\), so\n\\[\n\\angle OBC=90^\\circ\n\\]"
       },
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(OBC\\),\n\\[\n\\angle BOC=180^\\circ-90^\\circ-48^\\circ=42^\\circ\n\\]"
       },
       {
-        "title": "Since are on a straight",
+        "title": "Use trigonometry",
         "body": "Since \\(O,D,C\\) are on a straight line,\n\\[\n\\angle BOD=42^\\circ\n\\]"
       },
       {
-        "title": "is a diameter, so is",
+        "title": "Use trigonometry",
         "body": "\\(BOK\\) is a diameter, so \\(BOE\\) is a straight line and\n\\[\n\\angle DOE=180^\\circ-42^\\circ=138^\\circ\n\\]"
       },
       {
@@ -29320,15 +29320,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Area & Perimeter. The tag is correct.",
     "steps": [
       {
-        "title": "In right angled triangle ,",
+        "title": "Use trigonometry",
         "body": "In right-angled triangle \\(ABN\\),\n\\[\n\\cos 38^\\circ=\\frac{9.3}{AB}\n\\]\n\n\\[\nAB=\\frac{9.3}{\\cos 38^\\circ}=11.802\\ldots\n\\]"
       },
       {
-        "title": "Since is isosceles,",
+        "title": "Calculate area",
         "body": "Since \\(ABC\\) is isosceles,\n\\[\nBC=AB\n\\]"
       },
       {
-        "title": "Also,",
+        "title": "Calculate area",
         "body": "Also,\n\\[\nAC=2\\times 9.3=18.6\n\\]"
       },
       {
@@ -29345,7 +29345,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Right-Angled Triangles to Volume & Surface Area.",
     "steps": [
       {
-        "title": "The sphere has diameter ,",
+        "title": "Use trigonometry",
         "body": "The sphere has diameter \\(x\\), so its radius is\n\n\\[\n\\frac x2\n\\]"
       },
       {
@@ -29357,7 +29357,7 @@ window.SOLUTION_DATA = {
         "body": "The rectangular base of the pyramid has dimensions \\(x\\) and \\(2x\\), so its area is\n\n\\[\nx(2x)=2x^2\n\\]"
       },
       {
-        "title": "For the two faces with",
+        "title": "Use trigonometry",
         "body": "For the two faces with base \\(x\\), the slant height is\n\n\\[\n\\sqrt{(5x)^2+x^2}=x\\sqrt{26}\n\\]"
       },
       {
@@ -29365,7 +29365,7 @@ window.SOLUTION_DATA = {
         "body": "Their total area is\n\n\\[\n2\\left(\\frac12 x\\cdot x\\sqrt{26}\\right)=x^2\\sqrt{26}\n\\]"
       },
       {
-        "title": "For the two faces with",
+        "title": "Use trigonometry",
         "body": "For the two faces with base \\(2x\\), the slant height is\n\n\\[\n\\sqrt{(5x)^2+\\left(\\frac x2\\right)^2}\n=\\frac{x\\sqrt{101}}2\n\\]"
       },
       {
@@ -29398,7 +29398,7 @@ window.SOLUTION_DATA = {
         "body": "The scale factor from triangle \\(DEF\\) to triangle \\(ABC\\) is\n\\[\n\\frac{AC}{DF}=\\frac{45}{20}=2.25\n\\]\n\n\\[\nAB=DE\\times 2.25=36\\times 2.25=81\n\\]"
       },
       {
-        "title": "Given ,",
+        "title": "Evaluate fraction",
         "body": "Given \\(BC=54\\),\n\\[\nEF=\\frac{54}{2.25}=24\n\\]"
       }
     ],
@@ -29461,28 +29461,28 @@ window.SOLUTION_DATA = {
         "body": "The histogram densities are\n\n\\[\n0<L\\le 10:\\frac{8}{10}=0.8\n\\]\n\n\\[\n10<L\\le 15:\\frac{13}{5}=2.6\n\\]\n\n\\[\n15<L\\le 25:\\frac{19}{10}=1.9\n\\]\n\n\\[\n25<L\\le 40:\\frac{24}{15}=1.6\n\\]\n\n\\[\n40<L\\le 60:\\frac{6}{20}=0.3\n\\]"
       },
       {
-        "title": "Given , the total frequency",
+        "title": "Use histogram",
         "body": "Given \\(L\\le 25\\), the total frequency is\n\n\\[\n8+13+19=40\n\\]"
       },
       {
-        "title": "For , estimate half of",
+        "title": "Use histogram",
         "body": "For \\(L\\le 5\\), estimate half of the first class:\n\n\\[\n5(0.8)=4\n\\]\n\n\\[\nP(L\\le 5\\mid L\\le 25)=\\frac{4}{40}=\\frac{1}{10}\n\\]"
       }
     ],
     "finalAnswer": "histogram densities \\(0.8,2.6,1.9,1.6,0.3\\), and probability \\(\\frac{1}{10}\\)."
   },
   "all::Nov2021_P2H__Q16__p19-19__m03__Combined-and-Conditional-Probability": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Combined & Conditional Probability. The tag is correct.",
     "steps": [
       {
-        "title": "There are red, green and",
+        "title": "Calculate probability",
         "body": "There are \\(4\\) red, \\(5\\) green and \\(6\\) yellow counters."
       },
       {
-        "title": "The first counter is replaced,",
+        "title": "Calculate probability",
         "body": "The first counter is replaced, so the probabilities are the same for Niklas and Sasha.\n\n\\[\nP(\\text{same colour})=\n\\left(\\frac4{15}\\right)^2+\n\\left(\\frac5{15}\\right)^2+\n\\left(\\frac6{15}\\right)^2\n\\]\n\n\\[\n=\\frac{16+25+36}{225}\n\\]\n\n\\[\n=\\frac{77}{225}\n\\]"
       }
     ],
@@ -29511,7 +29511,7 @@ window.SOLUTION_DATA = {
         "body": "Given\n\n\\[\n-\\frac{5k}{2}=90+2k\n\\]\n\n\\[\n-5k=180+4k\n\\]\n\n\\[\nk=-20\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\na=-20,\\quad d=5\n\\]\n\n\\[\nS_{30}=\\frac{30}{2}(2(-20)+29(5))\n\\]\n\n\\[\nS_{30}=15(105)=1575\n\\]"
       }
     ],
@@ -29524,7 +29524,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nf(x)=9-3(x+2)^2\n\\]"
       },
       {
@@ -29532,7 +29532,7 @@ window.SOLUTION_DATA = {
         "body": "This is in completed square form, so the maximum point is\n\n\\[\n(-2,9)\n\\]"
       },
       {
-        "title": "For the translation",
+        "title": "Use matrices",
         "body": "For the translation\n\n\\[\n\\begin{pmatrix}4\\\\0\\end{pmatrix}\n\\]"
       },
       {
@@ -29548,19 +29548,19 @@ window.SOLUTION_DATA = {
         "body": "This is\n\n\\[\ny=-\\left(9-3(x+2)^2\\right)\n\\]"
       },
       {
-        "title": "So is reflected in the",
+        "title": "Apply transformation",
         "body": "So \\(C\\) is reflected in the \\(x\\)-axis."
       },
       {
-        "title": "For the cosine graph, the",
+        "title": "Use trigonometry",
         "body": "For the cosine graph, the maximum is 5 and the minimum is \\(-1\\).\n\n\\[\na=\\frac{5-(-1)}{2}=3\n\\]\n\n\\[\nc=\\frac{5+(-1)}{2}=2\n\\]"
       },
       {
-        "title": "For",
+        "title": "Use trigonometry",
         "body": "For\n\n\\[\ny=a\\cos(x-b)^\\circ+c\n\\]"
       },
       {
-        "title": "a maximum occurs when .",
+        "title": "Read the graph",
         "body": "a maximum occurs when \\(x-b=0\\). The graph has a maximum at \\(x=270^\\circ\\), so\n\n\\[\nb=270\n\\]"
       }
     ],
@@ -29573,7 +29573,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Right-Angled Triangles to Volume & Surface Area.",
     "steps": [
       {
-        "title": "The sphere has diameter ,",
+        "title": "Use trigonometry",
         "body": "The sphere has diameter \\(x\\), so its radius is\n\n\\[\n\\frac x2\n\\]"
       },
       {
@@ -29585,7 +29585,7 @@ window.SOLUTION_DATA = {
         "body": "The rectangular base of the pyramid has dimensions \\(x\\) and \\(2x\\), so its area is\n\n\\[\nx(2x)=2x^2\n\\]"
       },
       {
-        "title": "For the two faces with",
+        "title": "Use trigonometry",
         "body": "For the two faces with base \\(x\\), the slant height is\n\n\\[\n\\sqrt{(5x)^2+x^2}=x\\sqrt{26}\n\\]"
       },
       {
@@ -29593,7 +29593,7 @@ window.SOLUTION_DATA = {
         "body": "Their total area is\n\n\\[\n2\\left(\\frac12 x\\cdot x\\sqrt{26}\\right)=x^2\\sqrt{26}\n\\]"
       },
       {
-        "title": "For the two faces with",
+        "title": "Use trigonometry",
         "body": "For the two faces with base \\(2x\\), the slant height is\n\n\\[\n\\sqrt{(5x)^2+\\left(\\frac x2\\right)^2}\n=\\frac{x\\sqrt{101}}2\n\\]"
       },
       {
@@ -29643,7 +29643,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find the LCM",
         "body": "\\[\nA=5^3\\times 7^3\\times 11^6\n\\]\n\n\\[\nB=5^6\\times 7^2\\times 11^4\n\\]"
       },
       {
@@ -29660,15 +29660,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Powers, roots and standard form. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Convert standard form",
         "body": "\\[\n5.87\\times 10^{-4}=0.000587\n\\]\n\n\\[\n84000000=8.4\\times 10^7\n\\]"
       },
       {
-        "title": "For part (c),",
+        "title": "Convert standard form",
         "body": "For part (c),\n\n\\[\nK=\\frac{8.5\\times 10^{10}}{1.47\\times 10^9}\n\\]\n\n\\[\nK=\\frac{8.5}{1.47}\\times 10\n\\]\n\n\\[\nK=57.823\\ldots\n\\]"
       },
       {
-        "title": "Correct to one decimal place,",
+        "title": "Convert standard form",
         "body": "Correct to one decimal place,\n\n\\[\nK=57.8\n\\]"
       }
     ],
@@ -29702,11 +29702,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Percentages. This is a reverse percentage discount comparison.",
     "steps": [
       {
-        "title": "Ticket A is sold for",
+        "title": "Calculate percentage",
         "body": "Ticket A is sold for \\(\\frac{5}{6}\\) of its normal price.\n\n\\[\n\\text{normal price of A}=140\\times \\frac{6}{5}=168\n\\]"
       },
       {
-        "title": "Ticket B has a discount,",
+        "title": "Calculate percentage",
         "body": "Ticket B has a \\(20\\%\\) discount, so its sale price is \\(80\\%\\) of the normal price.\n\n\\[\n\\text{normal price of B}=136\\div 0.80=170\n\\]"
       },
       {
@@ -29723,7 +29723,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify fraction",
         "body": "\\[\n\\frac34+\\frac{5-x}{6x}\n\\]"
       },
       {
@@ -29740,7 +29740,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Rearranging formulas. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Rearrange formula",
         "body": "\\[\nx=\\frac{3p+n}{3n-4}\n\\]\n\n\\[\nx(3n-4)=3p+n\n\\]\n\n\\[\n3xn-4x=3p+n\n\\]\n\n\\[\nn(3x-1)=3p+4x\n\\]"
       }
     ],
@@ -29757,7 +29757,7 @@ window.SOLUTION_DATA = {
         "body": "(a)\n\\[\n12pq-18p=6p(2q-3)\n\\]"
       },
       {
-        "title": "(b) The total number of",
+        "title": "Solve equation",
         "body": "(b) The total number of bars is 56, so\n\\[\ny+(3y+7)+(2y-5)=56\n\\]\n\n\\[\n6y+2=56\n\\]\n\n\\[\ny=9\n\\]"
       },
       {
@@ -29778,11 +29778,11 @@ window.SOLUTION_DATA = {
         "body": "The sequence is\n\\[\n3,\\ 7,\\ 11,\\ 15\n\\]"
       },
       {
-        "title": "The common difference is ,",
+        "title": "Find the nth term",
         "body": "The common difference is \\(4\\), so the nth term is\n\\[\n4n-1\n\\]"
       },
       {
-        "title": "The last term is ,",
+        "title": "Find the nth term",
         "body": "The last term is \\(x\\), so\n\\[\nx=4n-1\n\\]\n\n\\[\nn=\\frac{x+1}{4}\n\\]"
       },
       {
@@ -29798,7 +29798,7 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\\[\n(x-239)(x+243)=0\n\\]"
       },
       {
-        "title": "The last term is positive,",
+        "title": "Find the nth term",
         "body": "The last term is positive, so\n\\[\nx=239\n\\]"
       }
     ],
@@ -29819,7 +29819,7 @@ window.SOLUTION_DATA = {
         "body": "The gradient of \\(OP\\) is\n\n\\[\n\\frac{-10}{8}=-\\frac54\n\\]"
       },
       {
-        "title": "So the gradient of the",
+        "title": "Find the gradient",
         "body": "So the gradient of the tangent is\n\n\\[\n\\frac45\n\\]"
       },
       {
@@ -29827,19 +29827,19 @@ window.SOLUTION_DATA = {
         "body": "The tangent through \\(P\\) is\n\n\\[\ny+10=\\frac45(x-8)\n\\]\n\n\\[\ny=\\frac45x-\\frac{82}{5}\n\\]"
       },
       {
-        "title": "At the axis,",
+        "title": "Evaluate fraction",
         "body": "At the \\(x\\)-axis, \\(y=0\\):\n\n\\[\n0=\\frac45x-\\frac{82}{5}\n\\]\n\n\\[\nx=\\frac{41}{2}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\nQ=\\left(\\frac{41}{2},0\\right)\n\\]"
       },
       {
-        "title": "At the axis,",
+        "title": "Evaluate fraction",
         "body": "At the \\(y\\)-axis, \\(x=0\\):\n\n\\[\nR=\\left(0,-\\frac{82}{5}\\right)\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Simplify surd",
         "body": "Therefore\n\n\\[\nRQ=\\sqrt{\\left(\\frac{41}{2}\\right)^2+\\left(\\frac{82}{5}\\right)^2}\n\\]\n\n\\[\nRQ=26.252...\n\\]"
       }
     ],
@@ -29852,7 +29852,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This is a table-and-graph question for a cubic function.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Read the graph",
         "body": "\\[\ny=x^3-3x+1\n\\]"
       },
       {
@@ -29873,11 +29873,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This combines solving and identifying inequalities.",
     "steps": [
       {
-        "title": "For part (a),",
+        "title": "Evaluate fraction",
         "body": "For part (a),\n\\[\n8x-4\\geq3x-10\n\\]\n\n\\[\n5x\\geq-6\n\\]\n\n\\[\nx\\geq-\\frac65\n\\]"
       },
       {
-        "title": "For part (b), the region",
+        "title": "Solve inequality",
         "body": "For part (b), the region is above \\(y=2\\), left of \\(x=7\\), and below \\(y=x\\):\n\\[\ny\\geq2\n\\]\n\n\\[\nx\\leq7\n\\]\n\n\\[\ny\\leq x\n\\]"
       }
     ],
@@ -29890,19 +29890,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Functions to Transformations of Graphs.",
     "steps": [
       {
-        "title": "For part (a),",
+        "title": "Read the graph",
         "body": "For part (a),\n\n\\[\nf(x)=5x^2+9x+2\n\\]\n\n\\[\ng(x)=5(x+4)^2+9(x+4)+8\n\\]"
       },
       {
-        "title": "Since",
+        "title": "Read the graph",
         "body": "Since\n\n\\[\nf(x+4)=5(x+4)^2+9(x+4)+2\n\\]\n\n\\[\ng(x)=f(x+4)+6\n\\]"
       },
       {
-        "title": "So the graph has moved",
+        "title": "Read the graph",
         "body": "So the graph has moved 4 units left and 6 units up.\n\n\\[\n\\begin{pmatrix}a\\\\b\\end{pmatrix}\n=\n\\begin{pmatrix}-4\\\\6\\end{pmatrix}\n\\]"
       },
       {
-        "title": "For part (b), the graph",
+        "title": "Read the graph",
         "body": "For part (b), the graph has maximum value \\(3\\) and minimum value \\(-3\\), so\n\n\\[\np=3\n\\]"
       },
       {
@@ -29910,7 +29910,7 @@ window.SOLUTION_DATA = {
         "body": "The minimum occurs when\n\n\\[\nx+q=180\n\\]"
       },
       {
-        "title": "From the graph, the minimum",
+        "title": "Read the graph",
         "body": "From the graph, the minimum is at \\(x=135\\), so\n\n\\[\n135+q=180\n\\]\n\n\\[\nq=45\n\\]"
       }
     ],
@@ -29923,11 +29923,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to differentiation. The question asks where a curve has a given gradient.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find the gradient",
         "body": "\\[\ny=4x^3-8x+5\n\\]\n\n\\[\n\\frac{dy}{dx}=12x^2-8\n\\]"
       },
       {
-        "title": "The gradient is , so",
+        "title": "Find the gradient",
         "body": "The gradient is \\(\\frac13\\), so\n\\[\n12x^2-8=\\frac13\n\\]\n\n\\[\n12x^2=\\frac{25}{3}\n\\]\n\n\\[\nx^2=\\frac{25}{36}\n\\]\n\n\\[\nx=\\frac56 \\quad \\text{or} \\quad x=-\\frac56\n\\]"
       }
     ],
@@ -29948,11 +29948,11 @@ window.SOLUTION_DATA = {
         "body": "The bearing of \\(C\\) from \\(B\\) is \\(132^\\circ\\)."
       },
       {
-        "title": "So",
+        "title": "Use bearings",
         "body": "So\n\\[\n\\angle ABC=234^\\circ-132^\\circ=102^\\circ\n\\]"
       },
       {
-        "title": "Use the cosine rule to",
+        "title": "Use cosine rule",
         "body": "Use the cosine rule to find \\(AC\\):\n\\[\nAC^2=3.6^2+8.4^2-2(3.6)(8.4)\\cos 102^\\circ\n\\]\n\n\\[\nAC=9.8028\\ldots\\text{ km}\n\\]"
       },
       {
@@ -29960,7 +29960,7 @@ window.SOLUTION_DATA = {
         "body": "Total distance walked:\n\\[\n3.6+8.4+9.8028\\ldots=21.8028\\ldots\\text{ km}\n\\]"
       },
       {
-        "title": "At , time is",
+        "title": "Use bearings",
         "body": "At \\(6\\text{ km/h}\\), time is\n\\[\n21.8028\\ldots\\div 6=3.6338\\ldots\\text{ hours}\n\\]\n\n\\[\n0.6338\\ldots\\times 60=38.0\\ldots\\text{ minutes}\n\\]"
       }
     ],
@@ -29973,11 +29973,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Circle Theorems. The tag is correct.",
     "steps": [
       {
-        "title": "Since , triangle is isosceles",
+        "title": "Use trigonometry",
         "body": "Since \\(OA=OC\\), triangle \\(AOC\\) is isosceles.\n\n\\[\n\\angle ACO=\\angle OAC=52^\\circ\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\\[\n\\angle AOC=180^\\circ-52^\\circ-52^\\circ=76^\\circ\n\\]"
       },
       {
@@ -29994,7 +29994,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to circles, arcs and sectors.",
     "steps": [
       {
-        "title": "Each semicircle has diameter ,",
+        "title": "Each semicircle has diameter",
         "body": "Each semicircle has diameter \\(20\\text{ cm}\\), so each has radius \\(10\\text{ cm}\\)."
       },
       {
@@ -30006,7 +30006,7 @@ window.SOLUTION_DATA = {
         "body": "The two exposed straight parts are\n\\[\nAB=10,\n\\qquad\nDE=10\n\\]"
       },
       {
-        "title": "So the perimeter is",
+        "title": "Calculate value",
         "body": "So the perimeter is\n\\[\n30\\pi+20=114.2\\ldots\n\\]"
       }
     ],
@@ -30027,15 +30027,15 @@ window.SOLUTION_DATA = {
         "body": "It is right-angled at \\(E\\), with\n\n\\[\nDF=28\n\\]"
       },
       {
-        "title": "and",
+        "title": "Use trigonometry",
         "body": "and\n\n\\[\n\\angle FDE=30^\\circ\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\nFE=28\\sin 30^\\circ=14\n\\]"
       },
       {
-        "title": "and",
+        "title": "Use trigonometry",
         "body": "and\n\n\\[\nDE=28\\cos 30^\\circ=14\\sqrt3\n\\]"
       },
       {
@@ -30064,23 +30064,23 @@ window.SOLUTION_DATA = {
         "body": "The area ratio of solid A to solid B is\n\n\\[\n7776:486=16:1\n\\]"
       },
       {
-        "title": "So the linear ratio A",
+        "title": "Split the ratio",
         "body": "So the linear ratio A:B is\n\n\\[\n\\sqrt{16}:1=4:1\n\\]"
       },
       {
-        "title": "Therefore the volume ratio A",
+        "title": "Split the ratio",
         "body": "Therefore the volume ratio A:B is\n\n\\[\n4^3:1^3=64:1\n\\]"
       },
       {
-        "title": "The volumes are and ,",
+        "title": "Calculate volume",
         "body": "The volumes are \\(8^x\\) and \\(2^{x+4}\\), so\n\n\\[\n\\frac{8^x}{2^{x+4}}=64\n\\]"
       },
       {
-        "title": "Write as a power of",
+        "title": "Use index laws",
         "body": "Write \\(8^x\\) as a power of 2:\n\n\\[\n8^x=(2^3)^x=2^{3x}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\n\\frac{2^{3x}}{2^{x+4}}=2^6\n\\]\n\n\\[\n2^{3x-(x+4)}=2^6\n\\]\n\n\\[\n2x-4=6\n\\]\n\n\\[\nx=5\n\\]"
       },
       {
@@ -30088,7 +30088,7 @@ window.SOLUTION_DATA = {
         "body": "The height of solid A is\n\n\\[\n3^x=3^5=243\n\\]"
       },
       {
-        "title": "Since the linear ratio A",
+        "title": "Split the ratio",
         "body": "Since the linear ratio A:B is \\(4:1\\), the height of solid B is\n\n\\[\n\\frac{243}{4}=60.75\n\\]"
       }
     ],
@@ -30105,7 +30105,7 @@ window.SOLUTION_DATA = {
         "body": "Let the perpendicular from \\(C\\) meet \\(AB\\) at \\(F\\).\n\n\\[\nAF=\\frac{8}{\\tan 40^\\circ}=9.534\\ldots\n\\]\n\n\\[\nFB=22-9.534\\ldots=12.465\\ldots\n\\]"
       },
       {
-        "title": "In right angled triangle ,",
+        "title": "Use trigonometry",
         "body": "In right-angled triangle \\(CFB\\),\n\\[\n\\tan x=\\frac{8}{12.465\\ldots}\n\\]\n\n\\[\nx=32.7^\\circ\n\\]"
       }
     ],
@@ -30122,7 +30122,7 @@ window.SOLUTION_DATA = {
         "body": "The \\(0\\) to \\(20\\) gram class has frequency \\(24\\), so its density is\n\n\\[\n\\frac{24}{20}=1.2\n\\]"
       },
       {
-        "title": "From the histogram scale, the",
+        "title": "Use histogram",
         "body": "From the histogram scale, the density for \\(30<w\\le 50\\) is about \\(2.2\\), and the density for \\(50<w\\le 65\\) is about \\(1.8\\)."
       },
       {
@@ -30133,29 +30133,29 @@ window.SOLUTION_DATA = {
     "finalAnswer": "about \\(42\\) medium oranges."
   },
   "all::Nov2023_P1H__Q13__p16-16__m04__Cumulative-Frequency-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "There are adults, so the",
+        "title": "Use cumulative frequency",
         "body": "There are \\(80\\) adults, so the median is the \\(40\\)th value."
       },
       {
-        "title": "From the graph,",
+        "title": "Use cumulative frequency",
         "body": "From the graph,\n\n\\[\n\\text{median}\\approx 25\\text{ seconds}\n\\]"
       },
       {
-        "title": "At seconds, the cumulative frequency",
+        "title": "Convert standard form",
         "body": "At \\(50\\) seconds, the cumulative frequency is about \\(75\\).\n\n\\[\n80-75=5\n\\]\n\n\\[\n\\frac{5}{80}\\times 100=6.25\\%\n\\]"
       }
     ],
     "finalAnswer": "median about \\(25\\) seconds, and about \\(6\\%\\)."
   },
   "all::Nov2023_P1H__Q04__p06-06__m04__Probability-Toolkit": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
@@ -30185,7 +30185,7 @@ window.SOLUTION_DATA = {
         "body": "The mean is 10 cents only when both coins are 10 cent coins.\n\n\\[\np^2=\\frac{49}{121}\n\\]\n\n\\[\np=\\frac{7}{11}\n\\]"
       },
       {
-        "title": "So the probability of taking",
+        "title": "Calculate probability",
         "body": "So the probability of taking a 20 cent coin is\n\n\\[\n1-\\frac{7}{11}=\\frac{4}{11}\n\\]"
       },
       {
@@ -30214,7 +30214,7 @@ window.SOLUTION_DATA = {
         "body": "The gradient of \\(OP\\) is\n\n\\[\n\\frac{-10}{8}=-\\frac54\n\\]"
       },
       {
-        "title": "So the gradient of the",
+        "title": "Find the gradient",
         "body": "So the gradient of the tangent is\n\n\\[\n\\frac45\n\\]"
       },
       {
@@ -30222,19 +30222,19 @@ window.SOLUTION_DATA = {
         "body": "The tangent through \\(P\\) is\n\n\\[\ny+10=\\frac45(x-8)\n\\]\n\n\\[\ny=\\frac45x-\\frac{82}{5}\n\\]"
       },
       {
-        "title": "At the axis,",
+        "title": "Evaluate fraction",
         "body": "At the \\(x\\)-axis, \\(y=0\\):\n\n\\[\n0=\\frac45x-\\frac{82}{5}\n\\]\n\n\\[\nx=\\frac{41}{2}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\nQ=\\left(\\frac{41}{2},0\\right)\n\\]"
       },
       {
-        "title": "At the axis,",
+        "title": "Evaluate fraction",
         "body": "At the \\(y\\)-axis, \\(x=0\\):\n\n\\[\nR=\\left(0,-\\frac{82}{5}\\right)\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Simplify surd",
         "body": "Therefore\n\n\\[\nRQ=\\sqrt{\\left(\\frac{41}{2}\\right)^2+\\left(\\frac{82}{5}\\right)^2}\n\\]\n\n\\[\nRQ=26.252...\n\\]"
       }
     ],
@@ -30247,19 +30247,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Functions to Transformations of Graphs.",
     "steps": [
       {
-        "title": "For part (a),",
+        "title": "Read the graph",
         "body": "For part (a),\n\n\\[\nf(x)=5x^2+9x+2\n\\]\n\n\\[\ng(x)=5(x+4)^2+9(x+4)+8\n\\]"
       },
       {
-        "title": "Since",
+        "title": "Read the graph",
         "body": "Since\n\n\\[\nf(x+4)=5(x+4)^2+9(x+4)+2\n\\]\n\n\\[\ng(x)=f(x+4)+6\n\\]"
       },
       {
-        "title": "So the graph has moved",
+        "title": "Read the graph",
         "body": "So the graph has moved 4 units left and 6 units up.\n\n\\[\n\\begin{pmatrix}a\\\\b\\end{pmatrix}\n=\n\\begin{pmatrix}-4\\\\6\\end{pmatrix}\n\\]"
       },
       {
-        "title": "For part (b), the graph",
+        "title": "Read the graph",
         "body": "For part (b), the graph has maximum value \\(3\\) and minimum value \\(-3\\), so\n\n\\[\np=3\n\\]"
       },
       {
@@ -30267,7 +30267,7 @@ window.SOLUTION_DATA = {
         "body": "The minimum occurs when\n\n\\[\nx+q=180\n\\]"
       },
       {
-        "title": "From the graph, the minimum",
+        "title": "Read the graph",
         "body": "From the graph, the minimum is at \\(x=135\\), so\n\n\\[\n135+q=180\n\\]\n\n\\[\nq=45\n\\]"
       }
     ],
@@ -30288,15 +30288,15 @@ window.SOLUTION_DATA = {
         "body": "It is right-angled at \\(E\\), with\n\n\\[\nDF=28\n\\]"
       },
       {
-        "title": "and",
+        "title": "Use trigonometry",
         "body": "and\n\n\\[\n\\angle FDE=30^\\circ\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\n\\[\nFE=28\\sin 30^\\circ=14\n\\]"
       },
       {
-        "title": "and",
+        "title": "Use trigonometry",
         "body": "and\n\n\\[\nDE=28\\cos 30^\\circ=14\\sqrt3\n\\]"
       },
       {
@@ -30325,23 +30325,23 @@ window.SOLUTION_DATA = {
         "body": "The area ratio of solid A to solid B is\n\n\\[\n7776:486=16:1\n\\]"
       },
       {
-        "title": "So the linear ratio A",
+        "title": "Split the ratio",
         "body": "So the linear ratio A:B is\n\n\\[\n\\sqrt{16}:1=4:1\n\\]"
       },
       {
-        "title": "Therefore the volume ratio A",
+        "title": "Split the ratio",
         "body": "Therefore the volume ratio A:B is\n\n\\[\n4^3:1^3=64:1\n\\]"
       },
       {
-        "title": "The volumes are and ,",
+        "title": "Calculate volume",
         "body": "The volumes are \\(8^x\\) and \\(2^{x+4}\\), so\n\n\\[\n\\frac{8^x}{2^{x+4}}=64\n\\]"
       },
       {
-        "title": "Write as a power of",
+        "title": "Use index laws",
         "body": "Write \\(8^x\\) as a power of 2:\n\n\\[\n8^x=(2^3)^x=2^{3x}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\n\\frac{2^{3x}}{2^{x+4}}=2^6\n\\]\n\n\\[\n2^{3x-(x+4)}=2^6\n\\]\n\n\\[\n2x-4=6\n\\]\n\n\\[\nx=5\n\\]"
       },
       {
@@ -30349,7 +30349,7 @@ window.SOLUTION_DATA = {
         "body": "The height of solid A is\n\n\\[\n3^x=3^5=243\n\\]"
       },
       {
-        "title": "Since the linear ratio A",
+        "title": "Split the ratio",
         "body": "Since the linear ratio A:B is \\(4:1\\), the height of solid B is\n\n\\[\n\\frac{243}{4}=60.75\n\\]"
       }
     ],
@@ -30370,7 +30370,7 @@ window.SOLUTION_DATA = {
         "body": "The mean is 10 cents only when both coins are 10 cent coins.\n\n\\[\np^2=\\frac{49}{121}\n\\]\n\n\\[\np=\\frac{7}{11}\n\\]"
       },
       {
-        "title": "So the probability of taking",
+        "title": "Calculate probability",
         "body": "So the probability of taking a 20 cent coin is\n\n\\[\n1-\\frac{7}{11}=\\frac{4}{11}\n\\]"
       },
       {
@@ -30395,11 +30395,11 @@ window.SOLUTION_DATA = {
         "body": "A depreciation of \\(8\\%\\) gives multiplier\n\n\\[\n0.92\n\\]"
       },
       {
-        "title": "After 3 years,",
+        "title": "Use compound interest",
         "body": "After 3 years,\n\n\\[\n26800(0.92)^3=20868.8384\n\\]"
       },
       {
-        "title": "Correct to the nearest dollar,",
+        "title": "Use compound interest",
         "body": "Correct to the nearest dollar,\n\n\\[\n20868.8384\\approx 20869\n\\]"
       }
     ],
@@ -30412,11 +30412,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Estimate the value",
         "body": "\\[\nP=a(c+y)\n\\]"
       },
       {
-        "title": "For the upper bound, use",
+        "title": "Find upper bound",
         "body": "For the upper bound, use the upper bounds of all three values.\n\n\\[\na<8.35,\\quad c<2.5,\\quad y<17.5\n\\]\n\n\\[\nP_{\\text{upper}}=8.35(2.5+17.5)=167\n\\]"
       }
     ],
@@ -30433,7 +30433,7 @@ window.SOLUTION_DATA = {
         "body": "Butter : sugar \\(=3:2\\)."
       },
       {
-        "title": "Sugar is g, so",
+        "title": "Split the ratio",
         "body": "Sugar is \\(120\\) g, so\n\n\\[\n2\\text{ parts}=120\n\\]\n\n\\[\n1\\text{ part}=60\n\\]\n\n\\[\n\\text{butter}=3\\times 60=180\n\\]"
       },
       {
@@ -30466,7 +30466,7 @@ window.SOLUTION_DATA = {
         "body": "(d)\n\\[\n\\frac{y^5\\times y^n}{y^7}=y^{5+n-7}=y^{n-2}\n\\]"
       },
       {
-        "title": "Given that this equals ,",
+        "title": "Use index laws",
         "body": "Given that this equals \\(y^{12}\\),\n\\[\nn-2=12\n\\]\n\n\\[\nn=14\n\\]"
       }
     ],
@@ -30483,11 +30483,11 @@ window.SOLUTION_DATA = {
         "body": "(a)\n\\[\n2^7\\times4^5=2^7\\times(2^2)^5=2^{17}\n\\]"
       },
       {
-        "title": "Also",
+        "title": "Use index laws",
         "body": "Also\n\\[\n4^x=(2^2)^x=2^{2x}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use index laws",
         "body": "So\n\\[\n2x=17\n\\]\n\n\\[\nx=\\frac{17}{2}\n\\]"
       },
       {
@@ -30504,7 +30504,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Expanding brackets. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Expand brackets",
         "body": "\\[\n(x-5)(x+4)=x^2-x-20\n\\]\n\n\\[\n(2x+3)(x^2-x-20)=2x^3+x^2-43x-60\n\\]"
       }
     ],
@@ -30517,7 +30517,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Solving Quadratic Equations to Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve quadratic equation",
         "body": "\\[\n\\frac{45x^3-80x}{3x^2+x-4}\n\\left(\\frac{1}{3x-4}+\\frac{1}{x}\\right)\n=\\frac{4(x+2)}{5x-8}\n\\]"
       },
       {
@@ -30525,15 +30525,15 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\n\\[\n45x^3-80x=5x(3x-4)(3x+4)\n\\]\n\n\\[\n3x^2+x-4=(3x+4)(x-1)\n\\]"
       },
       {
-        "title": "Also,",
+        "title": "Solve quadratic equation",
         "body": "Also,\n\n\\[\n\\frac{1}{3x-4}+\\frac{1}{x}\n=\\frac{x+3x-4}{x(3x-4)}\n=\\frac{4(x-1)}{x(3x-4)}\n\\]"
       },
       {
-        "title": "So the left side becomes",
+        "title": "Solve quadratic equation",
         "body": "So the left side becomes\n\n\\[\n\\frac{5x(3x-4)(3x+4)}{(3x+4)(x-1)}\n\\times\n\\frac{4(x-1)}{x(3x-4)}\n=20\n\\]"
       },
       {
-        "title": "Therefore,",
+        "title": "Solve quadratic equation",
         "body": "Therefore,\n\n\\[\n20=\\frac{4(x+2)}{5x-8}\n\\]\n\n\\[\n20(5x-8)=4(x+2)\n\\]\n\n\\[\n100x-160=4x+8\n\\]\n\n\\[\n96x=168\n\\]\n\n\\[\nx=\\frac74\n\\]"
       }
     ],
@@ -30546,7 +30546,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic proof. The tag is acceptable because the question asks to show the exact result.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\n3\\frac37=\\frac{24}{7},\\qquad 2\\frac23=\\frac83\n\\]\n\n\\[\n3\\frac37\\div2\\frac23=\\frac{24}{7}\\div\\frac83\n\\]\n\n\\[\n=\\frac{24}{7}\\times\\frac38=\\frac97=1\\frac27\n\\]"
       }
     ],
@@ -30563,11 +30563,11 @@ window.SOLUTION_DATA = {
         "body": "(a) Let\n\\[\nx=0.3727272\\ldots\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\\[\n10x=3.727272\\ldots\n\\]"
       },
       {
-        "title": "and",
+        "title": "Calculate value",
         "body": "and\n\\[\n1000x=372.727272\\ldots\n\\]"
       },
       {
@@ -30596,7 +30596,7 @@ window.SOLUTION_DATA = {
         "body": "The equations are\n\\[\ny-x-2=0\n\\]\n\n\\[\n2y+x=1\n\\]"
       },
       {
-        "title": "From the first equation,",
+        "title": "Solve simultaneous equations",
         "body": "From the first equation,\n\\[\ny=x+2\n\\]"
       },
       {
@@ -30604,7 +30604,7 @@ window.SOLUTION_DATA = {
         "body": "Substitute into the second equation:\n\\[\n2(x+2)+x=1\n\\]\n\n\\[\n3x+4=1\n\\]\n\n\\[\n3x=-3\n\\]\n\n\\[\nx=-1\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Solve simultaneous equations",
         "body": "Then\n\\[\ny=-1+2=1\n\\]"
       }
     ],
@@ -30617,7 +30617,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Functions. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\nf(x)=5x+7,\\qquad g(x)=\\frac{5}{2x-9}\n\\]"
       },
       {
@@ -30641,11 +30641,11 @@ window.SOLUTION_DATA = {
         "body": "Let\n\\[\ny=3(x-2)^2-4\n\\]\n\n\\[\ny+4=3(x-2)^2\n\\]\n\n\\[\nx-2=\\sqrt{\\frac{y+4}{3}}\n\\]"
       },
       {
-        "title": "Since , take the positive",
+        "title": "Simplify surd",
         "body": "Since \\(x>2\\), take the positive root:\n\\[\nx=2+\\sqrt{\\frac{y+4}{3}}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify surd",
         "body": "So\n\\[\nh^{-1}(x)=2+\\sqrt{\\frac{x+4}{3}}\n\\]"
       }
     ],
@@ -30662,11 +30662,11 @@ window.SOLUTION_DATA = {
         "body": "The line is\n\n\\[\nx+2y=5\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\nx=5-2y\n\\]"
       },
       {
-        "title": "Substitute into",
+        "title": "Calculate value",
         "body": "Substitute into\n\n\\[\nx^2+3y^2=13\n\\]\n\n\\[\n(5-2y)^2+3y^2=13\n\\]\n\n\\[\n25-20y+4y^2+3y^2=13\n\\]\n\n\\[\n7y^2-20y+12=0\n\\]"
       },
       {
@@ -30674,11 +30674,11 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\n\\[\n(7y-6)(y-2)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\ny=\\frac67 \\quad \\text{or} \\quad y=2\n\\]"
       },
       {
-        "title": "Using",
+        "title": "Evaluate fraction",
         "body": "Using \\(x=5-2y\\):\n\n\\[\ny=\\frac67 \\Rightarrow x=\\frac{23}{7}\n\\]\n\n\\[\ny=2 \\Rightarrow x=1\n\\]"
       }
     ],
@@ -30691,7 +30691,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to linear graphs. The question asks for an equation of a straight line through two points.",
     "steps": [
       {
-        "title": "The line passes through and",
+        "title": "Solve equation",
         "body": "The line passes through \\((0,-3)\\) and \\((2,0)\\)."
       },
       {
@@ -30699,7 +30699,7 @@ window.SOLUTION_DATA = {
         "body": "The gradient is\n\\[\n\\frac{0-(-3)}{2-0}=\\frac32\n\\]"
       },
       {
-        "title": "The y intercept is ,",
+        "title": "Solve equation",
         "body": "The y-intercept is \\(-3\\), so\n\\[\ny=\\frac32x-3\n\\]"
       }
     ],
@@ -30712,7 +30712,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Differentiation. Acceleration is found from the second derivative of displacement.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Split the ratio",
         "body": "\\[\ns=2t^3-5t^2+6t-5\n\\]"
       },
       {
@@ -30724,7 +30724,7 @@ window.SOLUTION_DATA = {
         "body": "Acceleration is\n\n\\[\n\\frac{d^2s}{dt^2}=12t-10\n\\]"
       },
       {
-        "title": "The acceleration is , so",
+        "title": "Split the ratio",
         "body": "The acceleration is \\(5\\), so\n\n\\[\n12t-10=5\n\\]\n\n\\[\n12t=15\n\\]\n\n\\[\nt=\\frac{15}{12}=\\frac54\n\\]"
       }
     ],
@@ -30741,11 +30741,11 @@ window.SOLUTION_DATA = {
         "body": "The area of the hexagon can be found from coordinates or by splitting the shape."
       },
       {
-        "title": "It simplifies to",
+        "title": "Calculate area",
         "body": "It simplifies to\n\\[\n\\text{area}=25x+98\n\\]"
       },
       {
-        "title": "Given the area is ,",
+        "title": "Calculate area",
         "body": "Given the area is \\(258\\text{ cm}^2\\),\n\\[\n25x+98=258\n\\]\n\n\\[\n25x=160\n\\]\n\n\\[\nx=6.4\n\\]"
       }
     ],
@@ -30758,7 +30758,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved to Circles, Arcs & Sectors.",
     "steps": [
       {
-        "title": "The triangle is equilateral with",
+        "title": "Use trigonometry",
         "body": "The triangle is equilateral with side length \\(10\\) cm."
       },
       {
@@ -30766,11 +30766,11 @@ window.SOLUTION_DATA = {
         "body": "Area of the triangle:\n\n\\[\n\\frac{\\sqrt{3}}{4}(10)^2=25\\sqrt{3}\n\\]"
       },
       {
-        "title": "For an equilateral triangle, the",
+        "title": "Use trigonometry",
         "body": "For an equilateral triangle, the inradius is\n\n\\[\nr=\\frac{s\\sqrt{3}}{6}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify surd",
         "body": "So\n\n\\[\nr=\\frac{10\\sqrt{3}}{6}=\\frac{5\\sqrt{3}}{3}\n\\]"
       },
       {
@@ -30799,7 +30799,7 @@ window.SOLUTION_DATA = {
         "body": "The small cone has radius \\(x\\). Since the cones are similar,\n\n\\[\n\\frac{\\text{radius}}{\\text{height}}=\\frac6{15}=\\frac25\n\\]"
       },
       {
-        "title": "So for the small cone,",
+        "title": "Evaluate fraction",
         "body": "So for the small cone,\n\n\\[\n\\frac{x}{h}=\\frac25\n\\]\n\n\\[\nh=\\frac52x\n\\]"
       },
       {
@@ -30815,7 +30815,7 @@ window.SOLUTION_DATA = {
         "body": "The frustum volume is\n\n\\[\n\\frac{4212}{25}\\pi\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\n180\\pi-\\frac56\\pi x^3=\\frac{4212}{25}\\pi\n\\]"
       },
       {
@@ -30832,15 +30832,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to right-angled triangles.",
     "steps": [
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(ABC\\),\n\\[\nBC^2=10^2-8^2\n\\]\n\n\\[\nBC^2=36\n\\]\n\n\\[\nBC=6\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\\[\nEC=EB+BC=5+6=11\n\\]"
       },
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(ECD\\),\n\\[\nw^2=11^2+14^2\n\\]\n\n\\[\nw^2=317\n\\]\n\n\\[\nw=17.804\\ldots\n\\]"
       }
     ],
@@ -30853,7 +30853,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Ratio Toolkit to Vectors.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Split the ratio",
         "body": "\\[\n\\overrightarrow{OA}=3a,\\quad \\overrightarrow{OB}=4b,\\quad \\overrightarrow{BC}=2a-2b\n\\]"
       },
       {
@@ -30861,15 +30861,15 @@ window.SOLUTION_DATA = {
         "body": "Part (a):\n\n\\[\n\\overrightarrow{OC}=\\overrightarrow{OB}+\\overrightarrow{BC}\n=4b+(2a-2b)=2a+2b\n\\]\n\n\\[\n\\overrightarrow{AB}=\\overrightarrow{OB}-\\overrightarrow{OA}\n=4b-3a\n\\]"
       },
       {
-        "title": "For part (b), let divide",
+        "title": "Split the ratio",
         "body": "For part (b), let \\(P\\) divide \\(AB\\) so that\n\n\\[\n\\overrightarrow{AP}=\\mu\\overrightarrow{AB}\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Split the ratio",
         "body": "Then\n\n\\[\n\\overrightarrow{OP}=3a+\\mu(4b-3a)=(3-3\\mu)a+4\\mu b\n\\]"
       },
       {
-        "title": "Since lies on , also",
+        "title": "Split the ratio",
         "body": "Since \\(P\\) lies on \\(OC\\), also let\n\n\\[\n\\overrightarrow{OP}=\\lambda(2a+2b)\n\\]"
       },
       {
@@ -30877,11 +30877,11 @@ window.SOLUTION_DATA = {
         "body": "Equating coefficients:\n\n\\[\n3-3\\mu=2\\lambda,\\quad 4\\mu=2\\lambda\n\\]"
       },
       {
-        "title": "From ,",
+        "title": "Split the ratio",
         "body": "From \\(4\\mu=2\\lambda\\), \\(\\lambda=2\\mu\\).\n\n\\[\n3-3\\mu=4\\mu\n\\]\n\n\\[\n\\mu=\\frac37\n\\]"
       },
       {
-        "title": "So",
+        "title": "Split the ratio",
         "body": "So \\(AP:PB=\\frac37:\\frac47\\)."
       }
     ],
@@ -30902,7 +30902,7 @@ window.SOLUTION_DATA = {
         "body": "The reflected T-shape has vertices\n\n\\[\n(6,1),(6,4),(5,4),(5,3),(4,3),(4,2),(5,2),(5,1)\n\\]"
       },
       {
-        "title": "(b) Triangle is mapped to",
+        "title": "Use trigonometry",
         "body": "(b) Triangle \\(A\\) is mapped to \\(B\\) by an enlargement with scale factor \\(3\\) and centre \\((7,2)\\)."
       }
     ],
@@ -30940,7 +30940,7 @@ window.SOLUTION_DATA = {
         "body": "The total for all 10 matches is\n\n\\[\n10 \\times 7=70\n\\]"
       },
       {
-        "title": "So the last two matches",
+        "title": "Compare density",
         "body": "So the last two matches have total\n\n\\[\n70-48=22\n\\]"
       },
       {
@@ -30968,13 +30968,13 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(9\\)."
   },
   "all::Nov2023_P2H__Q11__p11-11__m05__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Box X has red and",
+        "title": "Calculate probability",
         "body": "Box X has \\(5\\) red and \\(11\\) not red crayons.\nBox Y has \\(7\\) red and \\(13\\) not red crayons."
       },
       {
@@ -30991,7 +30991,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Solving Quadratic Equations to Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve quadratic equation",
         "body": "\\[\n\\frac{45x^3-80x}{3x^2+x-4}\n\\left(\\frac{1}{3x-4}+\\frac{1}{x}\\right)\n=\\frac{4(x+2)}{5x-8}\n\\]"
       },
       {
@@ -30999,15 +30999,15 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\n\\[\n45x^3-80x=5x(3x-4)(3x+4)\n\\]\n\n\\[\n3x^2+x-4=(3x+4)(x-1)\n\\]"
       },
       {
-        "title": "Also,",
+        "title": "Solve quadratic equation",
         "body": "Also,\n\n\\[\n\\frac{1}{3x-4}+\\frac{1}{x}\n=\\frac{x+3x-4}{x(3x-4)}\n=\\frac{4(x-1)}{x(3x-4)}\n\\]"
       },
       {
-        "title": "So the left side becomes",
+        "title": "Solve quadratic equation",
         "body": "So the left side becomes\n\n\\[\n\\frac{5x(3x-4)(3x+4)}{(3x+4)(x-1)}\n\\times\n\\frac{4(x-1)}{x(3x-4)}\n=20\n\\]"
       },
       {
-        "title": "Therefore,",
+        "title": "Solve quadratic equation",
         "body": "Therefore,\n\n\\[\n20=\\frac{4(x+2)}{5x-8}\n\\]\n\n\\[\n20(5x-8)=4(x+2)\n\\]\n\n\\[\n100x-160=4x+8\n\\]\n\n\\[\n96x=168\n\\]\n\n\\[\nx=\\frac74\n\\]"
       }
     ],
@@ -31024,11 +31024,11 @@ window.SOLUTION_DATA = {
         "body": "The line is\n\n\\[\nx+2y=5\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\nx=5-2y\n\\]"
       },
       {
-        "title": "Substitute into",
+        "title": "Calculate value",
         "body": "Substitute into\n\n\\[\nx^2+3y^2=13\n\\]\n\n\\[\n(5-2y)^2+3y^2=13\n\\]\n\n\\[\n25-20y+4y^2+3y^2=13\n\\]\n\n\\[\n7y^2-20y+12=0\n\\]"
       },
       {
@@ -31036,11 +31036,11 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\n\\[\n(7y-6)(y-2)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\ny=\\frac67 \\quad \\text{or} \\quad y=2\n\\]"
       },
       {
-        "title": "Using",
+        "title": "Evaluate fraction",
         "body": "Using \\(x=5-2y\\):\n\n\\[\ny=\\frac67 \\Rightarrow x=\\frac{23}{7}\n\\]\n\n\\[\ny=2 \\Rightarrow x=1\n\\]"
       }
     ],
@@ -31053,7 +31053,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved to Circles, Arcs & Sectors.",
     "steps": [
       {
-        "title": "The triangle is equilateral with",
+        "title": "Use trigonometry",
         "body": "The triangle is equilateral with side length \\(10\\) cm."
       },
       {
@@ -31061,11 +31061,11 @@ window.SOLUTION_DATA = {
         "body": "Area of the triangle:\n\n\\[\n\\frac{\\sqrt{3}}{4}(10)^2=25\\sqrt{3}\n\\]"
       },
       {
-        "title": "For an equilateral triangle, the",
+        "title": "Use trigonometry",
         "body": "For an equilateral triangle, the inradius is\n\n\\[\nr=\\frac{s\\sqrt{3}}{6}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify surd",
         "body": "So\n\n\\[\nr=\\frac{10\\sqrt{3}}{6}=\\frac{5\\sqrt{3}}{3}\n\\]"
       },
       {
@@ -31094,7 +31094,7 @@ window.SOLUTION_DATA = {
         "body": "The small cone has radius \\(x\\). Since the cones are similar,\n\n\\[\n\\frac{\\text{radius}}{\\text{height}}=\\frac6{15}=\\frac25\n\\]"
       },
       {
-        "title": "So for the small cone,",
+        "title": "Evaluate fraction",
         "body": "So for the small cone,\n\n\\[\n\\frac{x}{h}=\\frac25\n\\]\n\n\\[\nh=\\frac52x\n\\]"
       },
       {
@@ -31110,7 +31110,7 @@ window.SOLUTION_DATA = {
         "body": "The frustum volume is\n\n\\[\n\\frac{4212}{25}\\pi\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\n180\\pi-\\frac56\\pi x^3=\\frac{4212}{25}\\pi\n\\]"
       },
       {
@@ -31127,7 +31127,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Ratio Toolkit to Vectors.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Split the ratio",
         "body": "\\[\n\\overrightarrow{OA}=3a,\\quad \\overrightarrow{OB}=4b,\\quad \\overrightarrow{BC}=2a-2b\n\\]"
       },
       {
@@ -31135,15 +31135,15 @@ window.SOLUTION_DATA = {
         "body": "Part (a):\n\n\\[\n\\overrightarrow{OC}=\\overrightarrow{OB}+\\overrightarrow{BC}\n=4b+(2a-2b)=2a+2b\n\\]\n\n\\[\n\\overrightarrow{AB}=\\overrightarrow{OB}-\\overrightarrow{OA}\n=4b-3a\n\\]"
       },
       {
-        "title": "For part (b), let divide",
+        "title": "Split the ratio",
         "body": "For part (b), let \\(P\\) divide \\(AB\\) so that\n\n\\[\n\\overrightarrow{AP}=\\mu\\overrightarrow{AB}\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Split the ratio",
         "body": "Then\n\n\\[\n\\overrightarrow{OP}=3a+\\mu(4b-3a)=(3-3\\mu)a+4\\mu b\n\\]"
       },
       {
-        "title": "Since lies on , also",
+        "title": "Split the ratio",
         "body": "Since \\(P\\) lies on \\(OC\\), also let\n\n\\[\n\\overrightarrow{OP}=\\lambda(2a+2b)\n\\]"
       },
       {
@@ -31151,11 +31151,11 @@ window.SOLUTION_DATA = {
         "body": "Equating coefficients:\n\n\\[\n3-3\\mu=2\\lambda,\\quad 4\\mu=2\\lambda\n\\]"
       },
       {
-        "title": "From ,",
+        "title": "Split the ratio",
         "body": "From \\(4\\mu=2\\lambda\\), \\(\\lambda=2\\mu\\).\n\n\\[\n3-3\\mu=4\\mu\n\\]\n\n\\[\n\\mu=\\frac37\n\\]"
       },
       {
-        "title": "So",
+        "title": "Split the ratio",
         "body": "So \\(AP:PB=\\frac37:\\frac47\\)."
       }
     ],
@@ -31176,7 +31176,7 @@ window.SOLUTION_DATA = {
         "body": "The members of \\(A\\cap B\\) are the numbers in both circles:\n\n\\[\nA\\cap B=\\{3,7\\}\n\\]"
       },
       {
-        "title": "means all the numbers in",
+        "title": "Calculate statistic",
         "body": "\\(A'\\) means all the numbers in the universal set that are not in \\(A\\):\n\n\\[\nA'=\\{2,4,5,6,8\\}\n\\]"
       }
     ],
@@ -31189,15 +31189,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find the LCM",
         "body": "\\[\nA=2^3\\times 5^4\\times 7\\times 11\n\\]\n\n\\[\nB=2^2\\times 5^2\\times 7^2\n\\]\n\n\\[\nC=2^2\\times 5^3\\times 7^4\n\\]"
       },
       {
-        "title": "The HCF of , ,",
+        "title": "Find the LCM",
         "body": "The HCF of \\(A\\), \\(B\\), and \\(C\\) uses the smallest power of each prime common to all three.\n\n\\[\n2^2,\\quad 5^2,\\quad 7\n\\]"
       },
       {
-        "title": "The prime is not in",
+        "title": "Find the LCM",
         "body": "The prime \\(11\\) is not in all three numbers, so it is not included.\n\n\\[\n\\text{HCF}=2^2\\times 5^2\\times 7\n\\]"
       }
     ],
@@ -31210,11 +31210,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Powers, roots and standard form. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Convert standard form",
         "body": "\\[\n8.4\\times 10^{-5}=0.000084\n\\]"
       },
       {
-        "title": "For part (b),",
+        "title": "Convert standard form",
         "body": "For part (b),\n\n\\[\n(6.5\\times 10^{-40})(8\\times 10^{185})\n=52\\times 10^{145}\n\\]"
       },
       {
@@ -31235,7 +31235,7 @@ window.SOLUTION_DATA = {
         "body": "Shop A discount:\n\n\\[\n16\\% \\text{ of } 475=0.16\\times 475=76\n\\]"
       },
       {
-        "title": "Shop B euros is of",
+        "title": "Calculate percentage",
         "body": "Shop B: \\(408\\) euros is \\(85\\%\\) of the normal price.\n\n\\[\n\\text{normal price}=408\\div 0.85=480\n\\]"
       },
       {
@@ -31243,7 +31243,7 @@ window.SOLUTION_DATA = {
         "body": "Shop B discount:\n\n\\[\n480-408=72\n\\]"
       },
       {
-        "title": "Since",
+        "title": "Calculate percentage",
         "body": "Since\n\n\\[\n76>72\n\\]"
       },
       {
@@ -31260,15 +31260,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Estimate the value",
         "body": "\\[\nT=\\frac{x^2+y^2}{w}\n\\]"
       },
       {
-        "title": "For the upper bound, use",
+        "title": "Find upper bound",
         "body": "For the upper bound, use the upper bounds of \\(x\\) and \\(y\\), and the lower bound of \\(w\\).\n\n\\[\nx<28.45,\\quad y<17.5,\\quad w\\ge 87.5\n\\]\n\n\\[\nT_{\\text{upper}}=\\frac{28.45^2+17.5^2}{87.5}=12.7503\\ldots\n\\]"
       },
       {
-        "title": "Correct to 3 significant figures,",
+        "title": "Estimate the value",
         "body": "Correct to 3 significant figures,\n\n\\[\n12.7503\\ldots\\approx 12.8\n\\]"
       }
     ],
@@ -31281,7 +31281,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Direct and Inverse Proportion. The tag is correct.",
     "steps": [
       {
-        "title": "is inversely proportional to ,",
+        "title": "Find inverse function",
         "body": "\\(B\\) is inversely proportional to \\(d^2\\), so\n\n\\[\nB=\\frac{k}{d^2}\n\\]"
       },
       {
@@ -31289,7 +31289,7 @@ window.SOLUTION_DATA = {
         "body": "Use \\(B=0.25\\) when \\(d=12\\):\n\n\\[\n0.25=\\frac{k}{12^2}\n\\]\n\n\\[\nk=0.25\\times 144=36\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Find inverse function",
         "body": "Therefore\n\n\\[\nB=\\frac{36}{d^2}\n\\]"
       }
     ],
@@ -31302,15 +31302,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Expanding Brackets. This is an expansion question, not a surds question.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Expand brackets",
         "body": "\\[\n3x(2x-1)(5x+4)\n\\]"
       },
       {
-        "title": "First expand the two brackets",
+        "title": "Expand brackets",
         "body": "First expand the two brackets:\n\n\\[\n(2x-1)(5x+4)=10x^2+8x-5x-4\n\\]\n\n\\[\n=10x^2+3x-4\n\\]"
       },
       {
-        "title": "Now multiply by",
+        "title": "Expand brackets",
         "body": "Now multiply by \\(3x\\):\n\n\\[\n3x(10x^2+3x-4)=30x^3+9x^2-12x\n\\]"
       }
     ],
@@ -31327,7 +31327,7 @@ window.SOLUTION_DATA = {
         "body": "(a)(i)\n\\[\nx^2+5x-24=(x+8)(x-3)\n\\]"
       },
       {
-        "title": "(a)(ii) or",
+        "title": "Solve quadratic equation",
         "body": "(a)(ii) \\(x=-8\\) or \\(x=3\\)."
       },
       {
@@ -31348,7 +31348,7 @@ window.SOLUTION_DATA = {
         "body": "(a)\n\\[\n\\sqrt{675}=\\sqrt{25\\times27}=5\\sqrt{27}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So \\(n=5\\)."
       },
       {
@@ -31398,11 +31398,11 @@ window.SOLUTION_DATA = {
         "body": "Subtract the equations:\n\\[\n3d=9\n\\]\n\n\\[\nd=3\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Find the nth term",
         "body": "Then\n\\[\n2a+26(3)=284\n\\]\n\n\\[\n2a=206\n\\]\n\n\\[\na=103\n\\]"
       },
       {
-        "title": "Now find",
+        "title": "Find the nth term",
         "body": "Now find \\(S_{45}\\):\n\\[\nS_{45}=\\frac{45}{2}(2a+44d)\n\\]\n\n\\[\nS_{45}=\\frac{45}{2}(206+132)=7605\n\\]"
       }
     ],
@@ -31415,7 +31415,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nf(x)=2x^2-24x+7\n\\]"
       },
       {
@@ -31427,7 +31427,7 @@ window.SOLUTION_DATA = {
         "body": "Let \\(y=f(x)\\).\n\n\\[\ny=2(x-6)^2-65\n\\]\n\n\\[\ny+65=2(x-6)^2\n\\]\n\n\\[\n\\frac{y+65}{2}=(x-6)^2\n\\]"
       },
       {
-        "title": "Since , take the positive",
+        "title": "Simplify surd",
         "body": "Since \\(x\\ge 6\\), take the positive square root:\n\n\\[\nx-6=\\sqrt{\\frac{y+65}{2}}\n\\]\n\n\\[\nx=6+\\sqrt{\\frac{y+65}{2}}\n\\]"
       },
       {
@@ -31444,7 +31444,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This is a reciprocal-curve table and graph question.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Read the graph",
         "body": "\\[\ny=2\\left(x+\\frac1x\\right)\n\\]"
       },
       {
@@ -31473,15 +31473,15 @@ window.SOLUTION_DATA = {
         "body": "The line is\n\n\\[\ny=k\n\\]"
       },
       {
-        "title": "At the intersection points,",
+        "title": "Read the graph",
         "body": "At the intersection points,\n\n\\[\nx^2-8x-9=k\n\\]\n\n\\[\nx^2-8x-(9+k)=0\n\\]"
       },
       {
-        "title": "The two roots are and",
+        "title": "Read the graph",
         "body": "The two roots are \\(p\\) and \\(q\\)."
       },
       {
-        "title": "For this quadratic,",
+        "title": "Solve quadratic equation",
         "body": "For this quadratic,\n\n\\[\np+q=8\n\\]"
       },
       {
@@ -31493,7 +31493,7 @@ window.SOLUTION_DATA = {
         "body": "Solve the two equations:\n\n\\[\n2p=22\n\\]\n\n\\[\np=11\n\\]\n\n\\[\nq=-3\n\\]"
       },
       {
-        "title": "Use one root in",
+        "title": "Read the graph",
         "body": "Use one root in \\(y=x^2-8x-9\\):\n\n\\[\nk=11^2-8(11)-9\n\\]\n\n\\[\nk=121-88-9\n\\]\n\n\\[\nk=24\n\\]"
       }
     ],
@@ -31506,7 +31506,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Estimating Gradients to Differentiation.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find the gradient",
         "body": "\\[\ny=2x^4-64x\n\\]"
       },
       {
@@ -31514,7 +31514,7 @@ window.SOLUTION_DATA = {
         "body": "Differentiate:\n\n\\[\n\\frac{dy}{dx}=8x^3-64\n\\]"
       },
       {
-        "title": "At the minimum point, the",
+        "title": "Find the gradient",
         "body": "At the minimum point, the gradient is 0.\n\n\\[\n8x^3-64=0\n\\]\n\n\\[\n8x^3=64\n\\]\n\n\\[\nx^3=8\n\\]\n\n\\[\nx=2\n\\]"
       },
       {
@@ -31548,7 +31548,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Circles, Arcs & Sectors.",
     "steps": [
       {
-        "title": "For triangle ,",
+        "title": "Use trigonometry",
         "body": "For triangle \\(OAB\\),\n\n\\[\n120=\\frac12r^2\\sin50^\\circ\n\\]\n\n\\[\nr^2=\\frac{240}{\\sin50^\\circ}\n\\]"
       },
       {
@@ -31565,11 +31565,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Volume & Surface Area. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate area",
         "body": "\\[\nV=\\pi r^2h=\\pi(70)^2(18)\n\\]\n\n\\[\nV=277088.472\\ldots\\text{ cm}^3\n\\]"
       },
       {
-        "title": "Since litre,",
+        "title": "Calculate area",
         "body": "Since \\(1000\\text{ cm}^3=1\\) litre,\n\\[\n277088.472\\ldots\\text{ cm}^3=277.088\\ldots\\text{ litres}\n\\]"
       }
     ],
@@ -31594,7 +31594,7 @@ window.SOLUTION_DATA = {
         "body": "Volume of a hemisphere:\n\n\\[\n\\frac{2}{3}\\pi r^3\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate volume",
         "body": "So\n\n\\[\n\\text{metal volume}\n=\\frac{2}{3}\\pi(12)^3-\\frac{2}{3}\\pi(9)^3\n\\]\n\n\\[\n=\\frac{2}{3}\\pi(12^3-9^3)\n\\]\n\n\\[\n=\\frac{2}{3}\\pi(1728-729)\n\\]\n\n\\[\n=666\\pi\n\\]\n\n\\[\n=2092.3007\\ldots\n\\]"
       }
     ],
@@ -31607,7 +31607,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Congruence, Similarity & Geometrical Proof. The tag is correct.",
     "steps": [
       {
-        "title": "In the larger triangle,",
+        "title": "Use trigonometry",
         "body": "In the larger triangle,\n\\[\nDE^2=51^2-24^2\n\\]\n\n\\[\nDE=45\n\\]"
       },
       {
@@ -31615,7 +31615,7 @@ window.SOLUTION_DATA = {
         "body": "The scale factor from the large triangle to the small triangle is\n\\[\n\\frac{7.5}{45}=\\frac16\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\\[\nx=24\\times \\frac16=4\n\\]"
       }
     ],
@@ -31628,11 +31628,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Right-Angled Triangles - Pythagoras & Trigonometry. The tag is correct.",
     "steps": [
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(ABD\\),\n\n\\[\n\\tan47^\\circ=\\frac{BD}{4250}\n\\]\n\n\\[\nBD=4250\\tan47^\\circ=4557.567\\ldots\n\\]"
       },
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(ABC\\),\n\n\\[\n\\tan24^\\circ=\\frac{4250}{BC}\n\\]\n\n\\[\nBC=\\frac{4250}{\\tan24^\\circ}=9545.656\\ldots\n\\]\n\n\\[\nDC=BC-BD=4988.089\\ldots\n\\]"
       }
     ],
@@ -31645,39 +31645,39 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Linear Graphs to Vectors.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Read the graph",
         "body": "\\[\n\\vec{OA}=10\\mathbf a,\\qquad \\vec{OB}=10\\mathbf b\n\\]"
       },
       {
-        "title": "Also,",
+        "title": "Read the graph",
         "body": "Also,\n\n\\[\n\\vec{AP}=\\frac14\\vec{AB}\n\\]"
       },
       {
-        "title": "and",
+        "title": "Read the graph",
         "body": "and\n\n\\[\n\\vec{OQ}=\\frac15\\vec{OB}\n\\]"
       },
       {
-        "title": "For part (i),",
+        "title": "Read the graph",
         "body": "For part (i),\n\n\\[\n\\vec{OQ}=2\\mathbf b\n\\]\n\n\\[\n\\vec{AQ}=\\vec{OQ}-\\vec{OA}\n\\]\n\n\\[\n\\vec{AQ}=2\\mathbf b-10\\mathbf a\n\\]"
       },
       {
-        "title": "For part (ii),",
+        "title": "Read the graph",
         "body": "For part (ii),\n\n\\[\n\\vec{AB}=10\\mathbf b-10\\mathbf a\n\\]\n\n\\[\n\\vec{AP}=\\frac14(10\\mathbf b-10\\mathbf a)\n\\]\n\n\\[\n\\vec{AP}=\\frac52\\mathbf b-\\frac52\\mathbf a\n\\]\n\n\\[\n\\vec{OP}=\\vec{OA}+\\vec{AP}\n\\]\n\n\\[\n\\vec{OP}=10\\mathbf a-\\frac52\\mathbf a+\\frac52\\mathbf b\n\\]\n\n\\[\n\\vec{OP}=\\frac{15}{2}\\mathbf a+\\frac52\\mathbf b\n\\]"
       },
       {
-        "title": "For part (iii), lies on",
+        "title": "Read the graph",
         "body": "For part (iii), \\(R\\) lies on \\(OP\\), so\n\n\\[\n\\vec{OR}=t\\vec{OP}\n\\]"
       },
       {
-        "title": "It also lies on ,",
+        "title": "Read the graph",
         "body": "It also lies on \\(AQ\\), so\n\n\\[\n\\vec{OR}=\\vec{OA}+s\\vec{AQ}\n\\]\n\n\\[\n\\vec{OR}=10\\mathbf a+s(2\\mathbf b-10\\mathbf a)\n\\]\n\n\\[\n\\vec{OR}=(10-10s)\\mathbf a+2s\\mathbf b\n\\]"
       },
       {
-        "title": "Equate with",
+        "title": "Read the graph",
         "body": "Equate with\n\n\\[\nt\\left(\\frac{15}{2}\\mathbf a+\\frac52\\mathbf b\\right)\n\\]\n\n\\[\n\\frac{15}{2}t=10-10s\n\\]\n\n\\[\n\\frac52t=2s\n\\]"
       },
       {
-        "title": "From the second equation,",
+        "title": "Solve equation",
         "body": "From the second equation,\n\n\\[\ns=\\frac54t\n\\]"
       },
       {
@@ -31685,7 +31685,7 @@ window.SOLUTION_DATA = {
         "body": "Substitute:\n\n\\[\n\\frac{15}{2}t=10-\\frac{25}{2}t\n\\]\n\n\\[\n20t=10\n\\]\n\n\\[\nt=\\frac12\n\\]"
       },
       {
-        "title": "So",
+        "title": "Read the graph",
         "body": "So\n\n\\[\n\\vec{OR}=\\frac12\\vec{OP}\n\\]\n\n\\[\n\\vec{OR}=\\frac{15}{4}\\mathbf a+\\frac54\\mathbf b\n\\]"
       }
     ],
@@ -31730,13 +31730,13 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(\\frac{99}{145}\\)."
   },
   "all::Nov2024_P1H__Q13__p15-15__m04__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate probability",
         "body": "\\[\nP(\\text{not early on Saturday})=1-0.7=0.3\n\\]\n\n\\[\nP(\\text{early on both days})=0.7\\times 0.9=0.63\n\\]"
       }
     ],
@@ -31749,11 +31749,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Rounding, Estimation & Bounds is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Estimate the value",
         "body": "\\[\nT=\\frac{x^2+y^2}{w}\n\\]"
       },
       {
-        "title": "For the upper bound of",
+        "title": "Find upper bound",
         "body": "For the upper bound of \\(T\\), use the upper bounds of \\(x\\) and \\(y\\), and the lower bound of \\(w\\).\n\n\\(x=28.45,\\quad y=17.5,\\quad w=87.5\\)\n\n\\[\nT=\\frac{28.45^2+17.5^2}{87.5}\n\\]\n\n\\[\nT=12.7503...\n\\]"
       }
     ],
@@ -31766,7 +31766,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nf(x)=2x^2-24x+7\n\\]"
       },
       {
@@ -31778,7 +31778,7 @@ window.SOLUTION_DATA = {
         "body": "Let \\(y=f(x)\\).\n\n\\[\ny=2(x-6)^2-65\n\\]\n\n\\[\ny+65=2(x-6)^2\n\\]\n\n\\[\n\\frac{y+65}{2}=(x-6)^2\n\\]"
       },
       {
-        "title": "Since , take the positive",
+        "title": "Simplify surd",
         "body": "Since \\(x\\ge 6\\), take the positive square root:\n\n\\[\nx-6=\\sqrt{\\frac{y+65}{2}}\n\\]\n\n\\[\nx=6+\\sqrt{\\frac{y+65}{2}}\n\\]"
       },
       {
@@ -31803,15 +31803,15 @@ window.SOLUTION_DATA = {
         "body": "The line is\n\n\\[\ny=k\n\\]"
       },
       {
-        "title": "At the intersection points,",
+        "title": "Read the graph",
         "body": "At the intersection points,\n\n\\[\nx^2-8x-9=k\n\\]\n\n\\[\nx^2-8x-(9+k)=0\n\\]"
       },
       {
-        "title": "The two roots are and",
+        "title": "Read the graph",
         "body": "The two roots are \\(p\\) and \\(q\\)."
       },
       {
-        "title": "For this quadratic,",
+        "title": "Solve quadratic equation",
         "body": "For this quadratic,\n\n\\[\np+q=8\n\\]"
       },
       {
@@ -31823,7 +31823,7 @@ window.SOLUTION_DATA = {
         "body": "Solve the two equations:\n\n\\[\n2p=22\n\\]\n\n\\[\np=11\n\\]\n\n\\[\nq=-3\n\\]"
       },
       {
-        "title": "Use one root in",
+        "title": "Read the graph",
         "body": "Use one root in \\(y=x^2-8x-9\\):\n\n\\[\nk=11^2-8(11)-9\n\\]\n\n\\[\nk=121-88-9\n\\]\n\n\\[\nk=24\n\\]"
       }
     ],
@@ -31836,7 +31836,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Estimating Gradients to Differentiation.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find the gradient",
         "body": "\\[\ny=2x^4-64x\n\\]"
       },
       {
@@ -31844,7 +31844,7 @@ window.SOLUTION_DATA = {
         "body": "Differentiate:\n\n\\[\n\\frac{dy}{dx}=8x^3-64\n\\]"
       },
       {
-        "title": "At the minimum point, the",
+        "title": "Find the gradient",
         "body": "At the minimum point, the gradient is 0.\n\n\\[\n8x^3-64=0\n\\]\n\n\\[\n8x^3=64\n\\]\n\n\\[\nx^3=8\n\\]\n\n\\[\nx=2\n\\]"
       },
       {
@@ -31877,7 +31877,7 @@ window.SOLUTION_DATA = {
         "body": "Volume of a hemisphere:\n\n\\[\n\\frac{2}{3}\\pi r^3\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate volume",
         "body": "So\n\n\\[\n\\text{metal volume}\n=\\frac{2}{3}\\pi(12)^3-\\frac{2}{3}\\pi(9)^3\n\\]\n\n\\[\n=\\frac{2}{3}\\pi(12^3-9^3)\n\\]\n\n\\[\n=\\frac{2}{3}\\pi(1728-729)\n\\]\n\n\\[\n=666\\pi\n\\]\n\n\\[\n=2092.3007\\ldots\n\\]"
       }
     ],
@@ -31890,39 +31890,39 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Linear Graphs to Vectors.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Read the graph",
         "body": "\\[\n\\vec{OA}=10\\mathbf a,\\qquad \\vec{OB}=10\\mathbf b\n\\]"
       },
       {
-        "title": "Also,",
+        "title": "Read the graph",
         "body": "Also,\n\n\\[\n\\vec{AP}=\\frac14\\vec{AB}\n\\]"
       },
       {
-        "title": "and",
+        "title": "Read the graph",
         "body": "and\n\n\\[\n\\vec{OQ}=\\frac15\\vec{OB}\n\\]"
       },
       {
-        "title": "For part (i),",
+        "title": "Read the graph",
         "body": "For part (i),\n\n\\[\n\\vec{OQ}=2\\mathbf b\n\\]\n\n\\[\n\\vec{AQ}=\\vec{OQ}-\\vec{OA}\n\\]\n\n\\[\n\\vec{AQ}=2\\mathbf b-10\\mathbf a\n\\]"
       },
       {
-        "title": "For part (ii),",
+        "title": "Read the graph",
         "body": "For part (ii),\n\n\\[\n\\vec{AB}=10\\mathbf b-10\\mathbf a\n\\]\n\n\\[\n\\vec{AP}=\\frac14(10\\mathbf b-10\\mathbf a)\n\\]\n\n\\[\n\\vec{AP}=\\frac52\\mathbf b-\\frac52\\mathbf a\n\\]\n\n\\[\n\\vec{OP}=\\vec{OA}+\\vec{AP}\n\\]\n\n\\[\n\\vec{OP}=10\\mathbf a-\\frac52\\mathbf a+\\frac52\\mathbf b\n\\]\n\n\\[\n\\vec{OP}=\\frac{15}{2}\\mathbf a+\\frac52\\mathbf b\n\\]"
       },
       {
-        "title": "For part (iii), lies on",
+        "title": "Read the graph",
         "body": "For part (iii), \\(R\\) lies on \\(OP\\), so\n\n\\[\n\\vec{OR}=t\\vec{OP}\n\\]"
       },
       {
-        "title": "It also lies on ,",
+        "title": "Read the graph",
         "body": "It also lies on \\(AQ\\), so\n\n\\[\n\\vec{OR}=\\vec{OA}+s\\vec{AQ}\n\\]\n\n\\[\n\\vec{OR}=10\\mathbf a+s(2\\mathbf b-10\\mathbf a)\n\\]\n\n\\[\n\\vec{OR}=(10-10s)\\mathbf a+2s\\mathbf b\n\\]"
       },
       {
-        "title": "Equate with",
+        "title": "Read the graph",
         "body": "Equate with\n\n\\[\nt\\left(\\frac{15}{2}\\mathbf a+\\frac52\\mathbf b\\right)\n\\]\n\n\\[\n\\frac{15}{2}t=10-10s\n\\]\n\n\\[\n\\frac52t=2s\n\\]"
       },
       {
-        "title": "From the second equation,",
+        "title": "Solve equation",
         "body": "From the second equation,\n\n\\[\ns=\\frac54t\n\\]"
       },
       {
@@ -31930,7 +31930,7 @@ window.SOLUTION_DATA = {
         "body": "Substitute:\n\n\\[\n\\frac{15}{2}t=10-\\frac{25}{2}t\n\\]\n\n\\[\n20t=10\n\\]\n\n\\[\nt=\\frac12\n\\]"
       },
       {
-        "title": "So",
+        "title": "Read the graph",
         "body": "So\n\n\\[\n\\vec{OR}=\\frac12\\vec{OP}\n\\]\n\n\\[\n\\vec{OR}=\\frac{15}{4}\\mathbf a+\\frac54\\mathbf b\n\\]"
       }
     ],
@@ -31947,15 +31947,15 @@ window.SOLUTION_DATA = {
         "body": "The complement of \\(A \\cup B\\) contains the regions outside both \\(A\\) and \\(B\\). These are \\(5x\\) and \\(3x+2\\)."
       },
       {
-        "title": "So , hence and",
+        "title": "Calculate value",
         "body": "So \\(5x+(3x+2)=26\\), hence \\(8x+2=26\\) and \\(x=3\\)."
       },
       {
-        "title": "Now means inside , but",
+        "title": "Calculate statistic",
         "body": "Now \\(A' \\cap C\\) means inside \\(C\\), but not inside \\(A\\). These are the regions \\(5x\\) and \\(2x\\)."
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So \\(n(A' \\cap C)=5x+2x=7x=7(3)=21\\)."
       }
     ],
@@ -31968,11 +31968,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Percentages. The tag is correct.",
     "steps": [
       {
-        "title": "For part (a),",
+        "title": "Calculate percentage",
         "body": "For part (a),\n\n\\[\n17\\%\\text{ of }N=357\n\\]\n\n\\[\n0.17N=357\n\\]\n\n\\[\nN=\\frac{357}{0.17}=2100\n\\]"
       },
       {
-        "title": "For part (b), the increase",
+        "title": "Calculate percentage",
         "body": "For part (b), the increase in population is\n\n\\[\n806-650=156\n\\]"
       },
       {
@@ -31993,11 +31993,11 @@ window.SOLUTION_DATA = {
         "body": "The multiplier for \\(3.5\\%\\) compound interest is\n\n\\[\n1.035\n\\]"
       },
       {
-        "title": "After 3 years,",
+        "title": "Use compound interest",
         "body": "After 3 years,\n\n\\[\n20000(1.035)^3=22174.3575\n\\]"
       },
       {
-        "title": "Correct to the nearest euro,",
+        "title": "Use compound interest",
         "body": "Correct to the nearest euro,\n\n\\[\n22174.3575\\approx 22174\n\\]"
       }
     ],
@@ -32027,11 +32027,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic roots and indices. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use index laws",
         "body": "\\[\n\\frac{3^{2n+3}}{3^4}=3^{2n-1}\n\\]\n\n\\[\n3^3\\times3^{1-2n}=3^{4-2n}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use index laws",
         "body": "So\n\\[\n2n-1=4-2n\n\\]\n\n\\[\n4n=5\n\\]"
       }
     ],
@@ -32065,7 +32065,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic proof. The tag is acceptable because the question asks to show the exact result.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\n1\\frac57=\\frac{12}{7},\\qquad 2\\frac3{16}=\\frac{35}{16}\n\\]\n\n\\[\n1\\frac57\\times2\\frac3{16}=\\frac{12}{7}\\times\\frac{35}{16}\n\\]\n\n\\[\n=\\frac{420}{112}=\\frac{15}{4}=3\\frac34\n\\]"
       }
     ],
@@ -32082,11 +32082,11 @@ window.SOLUTION_DATA = {
         "body": "Let\n\\[\nx=0.7636363\\ldots\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\\[\n10x=7.636363\\ldots\n\\]"
       },
       {
-        "title": "and",
+        "title": "Calculate value",
         "body": "and\n\\[\n1000x=763.636363\\ldots\n\\]"
       },
       {
@@ -32103,7 +32103,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\n\\frac{16x^2-36}{x-7}\\div \\frac{2x^2+7x+6}{x^2-5x-14}-(7+8x)\n\\]"
       },
       {
@@ -32111,11 +32111,11 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\n\\[\n16x^2-36=4(2x-3)(2x+3)\n\\]\n\n\\[\n2x^2+7x+6=(2x+3)(x+2)\n\\]\n\n\\[\nx^2-5x-14=(x-7)(x+2)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\n\\frac{4(2x-3)(2x+3)}{x-7}\n\\div\n\\frac{(2x+3)(x+2)}{(x-7)(x+2)}\n-(7+8x)\n\\]\n\n\\[\n=\\frac{4(2x-3)(2x+3)}{x-7}\n\\times\n\\frac{(x-7)(x+2)}{(2x+3)(x+2)}\n-(7+8x)\n\\]\n\n\\[\n=4(2x-3)-(7+8x)\n\\]\n\n\\[\n=8x-12-7-8x\n\\]\n\n\\[\n=-19\n\\]"
       },
       {
-        "title": "So , which is an",
+        "title": "Calculate value",
         "body": "So \\(n=-19\\), which is an integer."
       }
     ],
@@ -32128,7 +32128,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve inequality",
         "body": "\\[\n10x^2+11x-21<0\n\\]"
       },
       {
@@ -32153,7 +32153,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nx^2+y^2+y=3\n\\]\n\n\\[\ny=x+2\n\\]"
       },
       {
@@ -32161,7 +32161,7 @@ window.SOLUTION_DATA = {
         "body": "Substitute:\n\n\\[\nx^2+(x+2)^2+(x+2)=3\n\\]\n\n\\[\nx^2+x^2+4x+4+x+2=3\n\\]\n\n\\[\n2x^2+5x+3=0\n\\]\n\n\\[\n(2x+3)(x+1)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\nx=-\\frac32 \\quad \\text{or} \\quad x=-1\n\\]"
       },
       {
@@ -32182,11 +32182,11 @@ window.SOLUTION_DATA = {
         "body": "The given line is\n\\[\n2x+y=9\n\\]\n\n\\[\ny=-2x+9\n\\]"
       },
       {
-        "title": "Its gradient is , so",
+        "title": "Find the gradient",
         "body": "Its gradient is \\(-2\\), so a perpendicular line has gradient \\(\\frac12\\)."
       },
       {
-        "title": "Line passes through",
+        "title": "Find the gradient",
         "body": "Line \\(L\\) passes through \\((8,11)\\):\n\\[\ny-11=\\frac12(x-8)\n\\]\n\n\\[\ny=\\frac12x+7\n\\]"
       }
     ],
@@ -32220,7 +32220,7 @@ window.SOLUTION_DATA = {
         "body": "The minimum point of \\(y=f(x)\\) is\n\\[\n(5,4)\n\\]"
       },
       {
-        "title": "(i) For",
+        "title": "Read the graph",
         "body": "(i) For\n\\[\ny=f(x+5)\n\\]"
       },
       {
@@ -32228,7 +32228,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 5 units left, so the minimum point becomes\n\\[\n(0,4)\n\\]"
       },
       {
-        "title": "(ii) For",
+        "title": "Read the graph",
         "body": "(ii) For\n\\[\ny=3f(x)\n\\]"
       },
       {
@@ -32236,7 +32236,7 @@ window.SOLUTION_DATA = {
         "body": "the y-coordinate is multiplied by 3, so the minimum point becomes\n\\[\n(5,12)\n\\]"
       },
       {
-        "title": "(iii) For",
+        "title": "Read the graph",
         "body": "(iii) For\n\\[\ny=f(x)-7\n\\]"
       },
       {
@@ -32261,15 +32261,15 @@ window.SOLUTION_DATA = {
         "body": "A regular hexagon has interior angle\n\\[\n120^\\circ\n\\]"
       },
       {
-        "title": "At , the angle inside",
+        "title": "Use trigonometry",
         "body": "At \\(E\\), the angle inside triangle \\(AEF\\) is\n\\[\n360^\\circ-108^\\circ-120^\\circ=132^\\circ\n\\]"
       },
       {
-        "title": "Also and , so",
+        "title": "Use trigonometry",
         "body": "Also \\(AE=ED\\) and \\(ED=EF\\), so\n\\[\nAE=EF\n\\]"
       },
       {
-        "title": "Triangle is isosceles, so the",
+        "title": "Use trigonometry",
         "body": "Triangle \\(AEF\\) is isosceles, so the base angles are equal:\n\\[\n\\angle EAF=\\frac{180^\\circ-132^\\circ}{2}=24^\\circ\n\\]"
       }
     ],
@@ -32286,27 +32286,27 @@ window.SOLUTION_DATA = {
         "body": "Resolve each journey into east and north components."
       },
       {
-        "title": "From to",
+        "title": "Use trigonometry",
         "body": "From \\(A\\) to \\(B\\):\n\n\\[\n\\text{east}=8.4\\sin 67^\\circ=7.7322\\ldots\n\\]\n\n\\[\n\\text{north}=8.4\\cos 67^\\circ=3.2821\\ldots\n\\]"
       },
       {
-        "title": "From to",
+        "title": "Use trigonometry",
         "body": "From \\(B\\) to \\(C\\):\n\n\\[\n\\text{east}=9.2\\sin 129^\\circ=7.1497\\ldots\n\\]\n\n\\[\n\\text{north}=9.2\\cos 129^\\circ=-5.7897\\ldots\n\\]"
       },
       {
-        "title": "So from to",
+        "title": "Calculate value",
         "body": "So from \\(A\\) to \\(C\\):\n\n\\[\n\\text{east}=14.8820\\ldots\n\\]\n\n\\[\n\\text{north}=-2.5076\\ldots\n\\]"
       },
       {
-        "title": "Therefore from to",
+        "title": "Calculate value",
         "body": "Therefore from \\(C\\) to \\(A\\):\n\n\\[\n\\text{east}=-14.8820\\ldots,\\qquad \\text{north}=2.5076\\ldots\n\\]"
       },
       {
-        "title": "This direction is west of",
+        "title": "Use trigonometry",
         "body": "This direction is west of north.\n\n\\[\n\\theta=\\tan^{-1}\\left(\\frac{14.8820\\ldots}{2.5076\\ldots}\\right)\n=80.4355\\ldots^\\circ\n\\]"
       },
       {
-        "title": "Bearing of from",
+        "title": "Use bearings",
         "body": "Bearing of \\(A\\) from \\(C\\):\n\n\\[\n360^\\circ-80.4355\\ldots^\\circ=279.5644\\ldots^\\circ\n\\]"
       }
     ],
@@ -32323,19 +32323,19 @@ window.SOLUTION_DATA = {
         "body": "(a) The angle at the centre is twice the angle at the circumference standing on the same arc \\(AD\\):\n\\[\n\\angle AOD=2\\times 54^\\circ=108^\\circ\n\\]"
       },
       {
-        "title": "(b) Since , triangle is",
+        "title": "Use trigonometry",
         "body": "(b) Since \\(OC=OD\\), triangle \\(COD\\) is isosceles:\n\\[\n\\angle OCD=\\angle CDO=28^\\circ\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use trigonometry",
         "body": "So\n\\[\n\\angle COD=180^\\circ-28^\\circ-28^\\circ=124^\\circ\n\\]"
       },
       {
-        "title": "Angles around add to",
+        "title": "Use circle theorem",
         "body": "Angles around \\(O\\) add to \\(360^\\circ\\):\n\\[\n\\angle AOC=360^\\circ-108^\\circ-124^\\circ=128^\\circ\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Use trigonometry",
         "body": "Since \\(OA=OC\\),\n\\[\n\\angle CAO=\\frac{180^\\circ-128^\\circ}{2}=26^\\circ\n\\]"
       },
       {
@@ -32352,15 +32352,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved to Circles, Arcs & Sectors.",
     "steps": [
       {
-        "title": "The circle has radius ,",
+        "title": "Use trigonometry",
         "body": "The circle has radius \\(x\\), so the inradius of the equilateral triangle is \\(x\\)."
       },
       {
-        "title": "For an equilateral triangle with",
+        "title": "Use trigonometry",
         "body": "For an equilateral triangle with side length \\(a\\),\n\n\\[\n\\text{inradius}=\\frac{a\\sqrt{3}}{6}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify surd",
         "body": "So\n\n\\[\nx=\\frac{a\\sqrt{3}}{6}\n\\]\n\n\\[\na=\\frac{6x}{\\sqrt{3}}=2\\sqrt{3}x\n\\]"
       },
       {
@@ -32376,7 +32376,7 @@ window.SOLUTION_DATA = {
         "body": "The shaded area is\n\n\\[\n3\\sqrt{3}x^2-\\pi x^2\n\\]\n\n\\[\n=(3\\sqrt{3}-\\pi)x^2\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Simplify surd",
         "body": "Therefore\n\n\\[\nn=3\\sqrt{3}-\\pi\n\\]"
       }
     ],
@@ -32414,7 +32414,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Right-Angled Triangles - Pythagoras & Trigonometry.",
     "steps": [
       {
-        "title": "In the right angled triangle,",
+        "title": "Use trigonometry",
         "body": "In the right-angled triangle, \\(x\\) is adjacent to the \\(43^\\circ\\) angle.\n\n\\[\n\\cos 43^\\circ=\\frac{x}{8.6}\n\\]\n\n\\[\nx=8.6\\cos 43^\\circ=6.289\\ldots\n\\]"
       }
     ],
@@ -32427,7 +32427,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Vectors. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use vectors",
         "body": "\\[\n\\overrightarrow{GF}=-\\overrightarrow{FG}\n=\\begin{pmatrix}5\\\\-2\\end{pmatrix}\n\\]\n\n\\[\n\\overrightarrow{HF}\n=\\overrightarrow{HG}+\\overrightarrow{GF}\n=\\begin{pmatrix}4\\\\14\\end{pmatrix}\n+\\begin{pmatrix}5\\\\-2\\end{pmatrix}\n=\\begin{pmatrix}9\\\\12\\end{pmatrix}\n\\]"
       },
       {
@@ -32465,11 +32465,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Statistics Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "For year 10, Biology is",
+        "title": "Evaluate fraction",
         "body": "For year 10, Biology is \\(126^\\circ\\) out of \\(360^\\circ\\).\n\n\\[\n\\frac{126}{360}\\times 300=105\n\\]"
       },
       {
-        "title": "For year 11",
+        "title": "Calculate value",
         "body": "For year 11:\n\n\\[\n(3x+6)+(5x+8)+(7x-9)=320\n\\]\n\n\\[\n15x+5=320\n\\]\n\n\\[\nx=21\n\\]"
       },
       {
@@ -32484,8 +32484,8 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(36\\) more students."
   },
   "all::Nov2024_P2H__Q13__p14-15__m06__Cumulative-Frequency-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
     "steps": [
@@ -32498,32 +32498,32 @@ window.SOLUTION_DATA = {
         "body": "The median is the \\(30\\)th value.\n\n\\[\n2+\\frac{30-19}{39-19}\\times 1=2.55\n\\]"
       },
       {
-        "title": "At kg,",
+        "title": "Use cumulative frequency",
         "body": "At \\(3.7\\) kg,\n\n\\[\nF(3.7)\\approx 39+\\frac{0.7}{1}(50-39)=46.7\n\\]"
       },
       {
-        "title": "So the number heavier than",
+        "title": "Use cumulative frequency",
         "body": "So the number heavier than \\(3.7\\) kg is\n\n\\[\n60-46.7=13.3\n\\]"
       }
     ],
     "finalAnswer": "median about \\(2.55\\) kg, and about \\(13\\) parcels."
   },
   "all::Nov2024_P2H__Q05__p06-06__m04__Probability-Toolkit": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "The known probabilities add to",
+        "title": "Calculate probability",
         "body": "The known probabilities add to\n\n\\[\n0.18+0.17+0.23=0.58\n\\]"
       },
       {
-        "title": "So the probabilities for and",
+        "title": "Calculate probability",
         "body": "So the probabilities for \\(1\\) and \\(4\\) add to\n\n\\[\n1-0.58=0.42\n\\]"
       },
       {
-        "title": "They are equal, so",
+        "title": "Calculate probability",
         "body": "They are equal, so\n\n\\[\nP(4)=0.42\\div 2=0.21\n\\]"
       },
       {
@@ -32544,15 +32544,15 @@ window.SOLUTION_DATA = {
         "body": "The complement of \\(A \\cup B\\) contains the regions outside both \\(A\\) and \\(B\\). These are \\(5x\\) and \\(3x+2\\)."
       },
       {
-        "title": "So , hence and",
+        "title": "Calculate value",
         "body": "So \\(5x+(3x+2)=26\\), hence \\(8x+2=26\\) and \\(x=3\\)."
       },
       {
-        "title": "Now means inside , but",
+        "title": "Calculate statistic",
         "body": "Now \\(A' \\cap C\\) means inside \\(C\\), but not inside \\(A\\). These are the regions \\(5x\\) and \\(2x\\)."
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So \\(n(A' \\cap C)=5x+2x=7x=7(3)=21\\)."
       }
     ],
@@ -32565,7 +32565,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\n\\frac{16x^2-36}{x-7}\\div \\frac{2x^2+7x+6}{x^2-5x-14}-(7+8x)\n\\]"
       },
       {
@@ -32573,11 +32573,11 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\n\\[\n16x^2-36=4(2x-3)(2x+3)\n\\]\n\n\\[\n2x^2+7x+6=(2x+3)(x+2)\n\\]\n\n\\[\nx^2-5x-14=(x-7)(x+2)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\n\\frac{4(2x-3)(2x+3)}{x-7}\n\\div\n\\frac{(2x+3)(x+2)}{(x-7)(x+2)}\n-(7+8x)\n\\]\n\n\\[\n=\\frac{4(2x-3)(2x+3)}{x-7}\n\\times\n\\frac{(x-7)(x+2)}{(2x+3)(x+2)}\n-(7+8x)\n\\]\n\n\\[\n=4(2x-3)-(7+8x)\n\\]\n\n\\[\n=8x-12-7-8x\n\\]\n\n\\[\n=-19\n\\]"
       },
       {
-        "title": "So , which is an",
+        "title": "Calculate value",
         "body": "So \\(n=-19\\), which is an integer."
       }
     ],
@@ -32590,7 +32590,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve inequality",
         "body": "\\[\n10x^2+11x-21<0\n\\]"
       },
       {
@@ -32615,7 +32615,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nx^2+y^2+y=3\n\\]\n\n\\[\ny=x+2\n\\]"
       },
       {
@@ -32623,7 +32623,7 @@ window.SOLUTION_DATA = {
         "body": "Substitute:\n\n\\[\nx^2+(x+2)^2+(x+2)=3\n\\]\n\n\\[\nx^2+x^2+4x+4+x+2=3\n\\]\n\n\\[\n2x^2+5x+3=0\n\\]\n\n\\[\n(2x+3)(x+1)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\nx=-\\frac32 \\quad \\text{or} \\quad x=-1\n\\]"
       },
       {
@@ -32644,27 +32644,27 @@ window.SOLUTION_DATA = {
         "body": "Resolve each journey into east and north components."
       },
       {
-        "title": "From to",
+        "title": "Use trigonometry",
         "body": "From \\(A\\) to \\(B\\):\n\n\\[\n\\text{east}=8.4\\sin 67^\\circ=7.7322\\ldots\n\\]\n\n\\[\n\\text{north}=8.4\\cos 67^\\circ=3.2821\\ldots\n\\]"
       },
       {
-        "title": "From to",
+        "title": "Use trigonometry",
         "body": "From \\(B\\) to \\(C\\):\n\n\\[\n\\text{east}=9.2\\sin 129^\\circ=7.1497\\ldots\n\\]\n\n\\[\n\\text{north}=9.2\\cos 129^\\circ=-5.7897\\ldots\n\\]"
       },
       {
-        "title": "So from to",
+        "title": "Calculate value",
         "body": "So from \\(A\\) to \\(C\\):\n\n\\[\n\\text{east}=14.8820\\ldots\n\\]\n\n\\[\n\\text{north}=-2.5076\\ldots\n\\]"
       },
       {
-        "title": "Therefore from to",
+        "title": "Calculate value",
         "body": "Therefore from \\(C\\) to \\(A\\):\n\n\\[\n\\text{east}=-14.8820\\ldots,\\qquad \\text{north}=2.5076\\ldots\n\\]"
       },
       {
-        "title": "This direction is west of",
+        "title": "Use trigonometry",
         "body": "This direction is west of north.\n\n\\[\n\\theta=\\tan^{-1}\\left(\\frac{14.8820\\ldots}{2.5076\\ldots}\\right)\n=80.4355\\ldots^\\circ\n\\]"
       },
       {
-        "title": "Bearing of from",
+        "title": "Use bearings",
         "body": "Bearing of \\(A\\) from \\(C\\):\n\n\\[\n360^\\circ-80.4355\\ldots^\\circ=279.5644\\ldots^\\circ\n\\]"
       }
     ],
@@ -32677,15 +32677,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved to Circles, Arcs & Sectors.",
     "steps": [
       {
-        "title": "The circle has radius ,",
+        "title": "Use trigonometry",
         "body": "The circle has radius \\(x\\), so the inradius of the equilateral triangle is \\(x\\)."
       },
       {
-        "title": "For an equilateral triangle with",
+        "title": "Use trigonometry",
         "body": "For an equilateral triangle with side length \\(a\\),\n\n\\[\n\\text{inradius}=\\frac{a\\sqrt{3}}{6}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify surd",
         "body": "So\n\n\\[\nx=\\frac{a\\sqrt{3}}{6}\n\\]\n\n\\[\na=\\frac{6x}{\\sqrt{3}}=2\\sqrt{3}x\n\\]"
       },
       {
@@ -32701,7 +32701,7 @@ window.SOLUTION_DATA = {
         "body": "The shaded area is\n\n\\[\n3\\sqrt{3}x^2-\\pi x^2\n\\]\n\n\\[\n=(3\\sqrt{3}-\\pi)x^2\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Simplify surd",
         "body": "Therefore\n\n\\[\nn=3\\sqrt{3}-\\pi\n\\]"
       }
     ],
@@ -32727,7 +32727,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic proof. The tag is acceptable because the question asks to show the exact result.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\n\\frac37+\\frac13\n\\]"
       },
       {
@@ -32744,11 +32744,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
     "steps": [
       {
-        "title": "The weight g correct to",
+        "title": "Find lower bound",
         "body": "The weight \\(475\\) g correct to the nearest g has lower bound\n\n\\[\n475-0.5=474.5\n\\]"
       },
       {
-        "title": "The height cm correct to",
+        "title": "Find upper bound",
         "body": "The height \\(120\\) cm correct to the nearest \\(10\\) cm has upper bound\n\n\\[\n120+5=125\n\\]"
       }
     ],
@@ -32761,7 +32761,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic roots and indices. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use index laws",
         "body": "\\[\n\\frac{8^{-2}\\times8^9}{8^{10}}=8^{-2+9-10}=8^{-3}\n\\]"
       }
     ],
@@ -32774,7 +32774,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Right-Angled Triangles - Pythagoras & Trigonometry. The tag is correct.",
     "steps": [
       {
-        "title": "First find",
+        "title": "Use trigonometry",
         "body": "First find \\(AB\\):\n\n\\[\nAB^2=21^2-15^2=216\n\\]\n\n\\[\nAB=14.696\\ldots\n\\]\n\n\\[\nAD=AB-DB=14.696\\ldots-9=5.696\\ldots\n\\]"
       },
       {
@@ -32816,7 +32816,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Sine, Cosine Rule & Area of Triangles.",
     "steps": [
       {
-        "title": "Use the cosine rule for",
+        "title": "Use cosine rule",
         "body": "Use the cosine rule for angle \\(BAC\\):\n\\[\n\\cos A=\\frac{8^2+9^2-10^2}{2(8)(9)}\n\\]\n\n\\[\n\\cos A=\\frac{45}{144}\n\\]\n\n\\[\nA=71.790\\ldots^\\circ\n\\]"
       }
     ],
@@ -32837,7 +32837,7 @@ window.SOLUTION_DATA = {
         "body": "At least one pink button is still in the box unless both pink buttons are taken."
       },
       {
-        "title": "So use the complement",
+        "title": "Use the complement",
         "body": "So use the complement."
       },
       {
@@ -32845,7 +32845,7 @@ window.SOLUTION_DATA = {
         "body": "The probability that both pink buttons are taken is\n\n\\[\n\\frac{\\binom{2}{2}\\binom{13}{1}}{\\binom{15}{3}}\n\\]\n\n\\[\n=\\frac{13}{455}\n\\]\n\n\\[\n=\\frac{1}{35}\n\\]"
       },
       {
-        "title": "Therefore,",
+        "title": "Evaluate fraction",
         "body": "Therefore,\n\n\\[\nP(\\text{at least one pink is still in the box})\n=1-\\frac{1}{35}\n\\]\n\n\\[\n=\\frac{34}{35}\n\\]"
       }
     ],
@@ -32866,7 +32866,7 @@ window.SOLUTION_DATA = {
         "body": "At least one pink button is still in the box unless both pink buttons are taken."
       },
       {
-        "title": "So use the complement",
+        "title": "Use the complement",
         "body": "So use the complement."
       },
       {
@@ -32874,7 +32874,7 @@ window.SOLUTION_DATA = {
         "body": "The probability that both pink buttons are taken is\n\n\\[\n\\frac{\\binom{2}{2}\\binom{13}{1}}{\\binom{15}{3}}\n\\]\n\n\\[\n=\\frac{13}{455}\n\\]\n\n\\[\n=\\frac{1}{35}\n\\]"
       },
       {
-        "title": "Therefore,",
+        "title": "Evaluate fraction",
         "body": "Therefore,\n\n\\[\nP(\\text{at least one pink is still in the box})\n=1-\\frac{1}{35}\n\\]\n\n\\[\n=\\frac{34}{35}\n\\]"
       }
     ],
@@ -32887,11 +32887,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Ratio Toolkit to Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Split the ratio",
         "body": "\\[\na=\\frac{2x+5}{1-x},\\quad x=\\frac{5-2y}{3y}\n\\]"
       },
       {
-        "title": "Substitute for",
+        "title": "Split the ratio",
         "body": "Substitute for \\(x\\)."
       },
       {
@@ -32903,7 +32903,7 @@ window.SOLUTION_DATA = {
         "body": "Denominator:\n\n\\[\n1-x=1-\\frac{5-2y}{3y}\n\\]\n\n\\[\n=\\frac{3y-5+2y}{3y}\n=\\frac{5y-5}{3y}\n=\\frac{5(y-1)}{3y}\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Split the ratio",
         "body": "Therefore\n\n\\[\na=\\frac{\\frac{10+11y}{3y}}{\\frac{5(y-1)}{3y}}\n=\\frac{10+11y}{5(y-1)}\n\\]"
       }
     ],
@@ -32916,11 +32916,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Ratio Toolkit to Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Split the ratio",
         "body": "\\[\na=\\frac{2x+5}{1-x},\\quad x=\\frac{5-2y}{3y}\n\\]"
       },
       {
-        "title": "Substitute for",
+        "title": "Split the ratio",
         "body": "Substitute for \\(x\\)."
       },
       {
@@ -32932,7 +32932,7 @@ window.SOLUTION_DATA = {
         "body": "Denominator:\n\n\\[\n1-x=1-\\frac{5-2y}{3y}\n\\]\n\n\\[\n=\\frac{3y-5+2y}{3y}\n=\\frac{5y-5}{3y}\n=\\frac{5(y-1)}{3y}\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Split the ratio",
         "body": "Therefore\n\n\\[\na=\\frac{\\frac{10+11y}{3y}}{\\frac{5(y-1)}{3y}}\n=\\frac{10+11y}{5(y-1)}\n\\]"
       }
     ],
@@ -32958,15 +32958,15 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nA=\\{9,11,13,15,17\\},\\quad B=\\{9,12,15,18\\},\\quad C=\\{11,13,17\\}\n\\]\n\n\\[\nA\\cup C=\\{9,11,13,15,17\\}\n\\]\n\n\\[\nA\\cap B'=\\{11,13,17\\}\n\\]"
       },
       {
-        "title": "because is not prime",
+        "title": "Check prime condition",
         "body": "\\(15\\notin B\\cap C\\) because \\(15\\) is not prime."
       },
       {
-        "title": "Since and has two members,",
+        "title": "Calculate value",
         "body": "Since \\(D\\cup C=A\\) and \\(D\\) has two members,\n\n\\[\nD=\\{9,15\\}\n\\]"
       }
     ],
@@ -32979,15 +32979,15 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nP(\\text{tennis or cricket})=0.2+0.35=0.55\n\\]"
       },
       {
-        "title": "Also,",
+        "title": "Calculate value",
         "body": "Also,\n\n\\[\n2x+0.2+x+0.35=1\n\\]\n\n\\[\n3x=0.45\n\\]\n\n\\[\nx=0.15\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\nP(\\text{football})=2x=0.30\n\\]\n\n\\[\n700\\times 0.30=210\n\\]"
       }
     ],
@@ -33016,7 +33016,7 @@ window.SOLUTION_DATA = {
         "body": "(d)\n\\[\nx^2-10x+24=(x-4)(x-6)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\\[\nx=4 \\quad \\text{or} \\quad x=6\n\\]"
       }
     ],
@@ -33029,11 +33029,11 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\nAB=\\sqrt{(10-2)^2+(15-0)^2}\n\\]\n\n\\[\n=\\sqrt{64+225}=17\n\\]"
       },
       {
-        "title": "Since is on the positive",
+        "title": "Calculate value",
         "body": "Since \\(D\\) is on the positive \\(x\\)-axis and \\(AD=17\\),\n\n\\[\nD=(2+17,0)=(19,0)\n\\]"
       }
     ],
@@ -33076,7 +33076,7 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate area",
         "body": "\\[\n\\text{area}=\\frac{75}{360}\\pi(12)^2\n\\]\n\n\\[\n=30\\pi \\approx 94.2478\n\\]"
       }
     ],
@@ -33089,7 +33089,7 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\n\\frac{16^{x-3}\\times 8^{x+1}}{32^x}\n=\\frac{2^{4x-12}\\times 2^{3x+3}}{2^{5x}}\n\\]\n\n\\[\n=2^{4x-12+3x+3-5x}=2^{2x-9}\n\\]"
       }
     ],
@@ -33102,7 +33102,7 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\n\\frac{2\\sqrt7+2}{\\sqrt7-3}\\times\\frac{\\sqrt7+3}{\\sqrt7+3}\n\\]\n\n\\[\n=\\frac{(2\\sqrt7+2)(\\sqrt7+3)}{7-9}\n\\]\n\n\\[\n=\\frac{20+8\\sqrt7}{-2}\n\\]\n\n\\[\n=-10-4\\sqrt7=-10-\\sqrt{112}\n\\]"
       }
     ],
@@ -33119,11 +33119,11 @@ window.SOLUTION_DATA = {
         "body": "Let\n\\[\nx=0.95454545\\ldots\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\\[\n10x=9.5454545\\ldots\n\\]"
       },
       {
-        "title": "and",
+        "title": "Calculate value",
         "body": "and\n\\[\n1000x=954.5454545\\ldots\n\\]"
       },
       {
@@ -33140,11 +33140,11 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\n(8x+2)(3x-2)=500\n\\]\n\n\\[\n24x^2-10x-4=500\n\\]\n\n\\[\n12x^2-5x-252=0\n\\]"
       },
       {
-        "title": "Using the quadratic formula,",
+        "title": "Solve quadratic equation",
         "body": "Using the quadratic formula,\n\n\\[\nx=\\frac{5\\pm\\sqrt{(-5)^2-4(12)(-252)}}{24}\n\\]"
       },
       {
@@ -33182,7 +33182,7 @@ window.SOLUTION_DATA = {
         "body": "Circle area:\n\n\\[\n\\pi r^2\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify surd",
         "body": "So\n\n\\[\n\\left(\\frac{25\\sqrt3}{4}-\\pi\\right)r^2=610\\pi\n\\]\n\n\\[\nr\\approx 15.7926\n\\]"
       }
     ],
@@ -33195,7 +33195,7 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\n9x^2-12x+q=(3x-2)^2\n\\]\n\n\\[\n(3x-2)^2=9x^2-12x+4\n\\]"
       }
     ],
@@ -33208,7 +33208,7 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\n5x^2-20x+23=5(x^2-4x)+23\n\\]\n\n\\[\n=5\\big((x-2)^2-4\\big)+23\n\\]\n\n\\[\n=5(x-2)^2+3\n\\]"
       }
     ],
@@ -33221,19 +33221,19 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "From triangle ,",
+        "title": "Use trigonometry",
         "body": "From triangle \\(GMF\\),\n\n\\[\n\\tan 60^\\circ=\\frac{FG}{FM}=\\frac{18}{FM}\n\\]\n\n\\[\nFM=\\frac{18}{\\tan 60^\\circ}=6\\sqrt3\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Simplify surd",
         "body": "Since \\(FM=\\frac35FE\\),\n\n\\[\nFE=10\\sqrt3\n\\]"
       },
       {
-        "title": "The horizontal distance from to",
+        "title": "Simplify surd",
         "body": "The horizontal distance from \\(D\\) to the point below \\(G\\) is\n\n\\[\n\\sqrt{20^2+(10\\sqrt3)^2}=10\\sqrt7\n\\]"
       },
       {
-        "title": "If is the angle of",
+        "title": "Use trigonometry",
         "body": "If \\(\\theta\\) is the angle of elevation,\n\n\\[\n\\tan\\theta=\\frac{18}{10\\sqrt7}\n\\]\n\n\\[\n\\theta\\approx 34.2289^\\circ\n\\]"
       }
     ],
@@ -33250,15 +33250,15 @@ window.SOLUTION_DATA = {
         "body": "Diagonals of a rhombus bisect each other at right angles."
       },
       {
-        "title": "Midpoint of",
+        "title": "Find the midpoint",
         "body": "Midpoint of \\(AC\\):\n\n\\[\n\\left(\\frac{16+24}{2},\\frac{-9+15}{2}\\right)=(20,3)\n\\]"
       },
       {
-        "title": "Gradient of",
+        "title": "Find the gradient",
         "body": "Gradient of \\(AC\\):\n\n\\[\n\\frac{15-(-9)}{24-16}=3\n\\]"
       },
       {
-        "title": "So gradient of is",
+        "title": "Find the gradient",
         "body": "So gradient of \\(BD\\) is \\(-\\frac13\\).\n\n\\[\ny-3=-\\frac13(x-20)\n\\]\n\n\\[\nx+3y-29=0\n\\]"
       }
     ],
@@ -33309,7 +33309,7 @@ window.SOLUTION_DATA = {
         "body": "Circle area:\n\n\\[\n\\pi r^2\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify surd",
         "body": "So\n\n\\[\n\\left(\\frac{25\\sqrt3}{4}-\\pi\\right)r^2=610\\pi\n\\]\n\n\\[\nr\\approx 15.7926\n\\]"
       }
     ],
@@ -33322,7 +33322,7 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\n9x^2-12x+q=(3x-2)^2\n\\]\n\n\\[\n(3x-2)^2=9x^2-12x+4\n\\]"
       }
     ],
@@ -33335,7 +33335,7 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\n5x^2-20x+23=5(x^2-4x)+23\n\\]\n\n\\[\n=5\\big((x-2)^2-4\\big)+23\n\\]\n\n\\[\n=5(x-2)^2+3\n\\]"
       }
     ],
@@ -33348,19 +33348,19 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "From triangle ,",
+        "title": "Use trigonometry",
         "body": "From triangle \\(GMF\\),\n\n\\[\n\\tan 60^\\circ=\\frac{FG}{FM}=\\frac{18}{FM}\n\\]\n\n\\[\nFM=\\frac{18}{\\tan 60^\\circ}=6\\sqrt3\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Simplify surd",
         "body": "Since \\(FM=\\frac35FE\\),\n\n\\[\nFE=10\\sqrt3\n\\]"
       },
       {
-        "title": "The horizontal distance from to",
+        "title": "Simplify surd",
         "body": "The horizontal distance from \\(D\\) to the point below \\(G\\) is\n\n\\[\n\\sqrt{20^2+(10\\sqrt3)^2}=10\\sqrt7\n\\]"
       },
       {
-        "title": "If is the angle of",
+        "title": "Use trigonometry",
         "body": "If \\(\\theta\\) is the angle of elevation,\n\n\\[\n\\tan\\theta=\\frac{18}{10\\sqrt7}\n\\]\n\n\\[\n\\theta\\approx 34.2289^\\circ\n\\]"
       }
     ],
@@ -33377,15 +33377,15 @@ window.SOLUTION_DATA = {
         "body": "Diagonals of a rhombus bisect each other at right angles."
       },
       {
-        "title": "Midpoint of",
+        "title": "Find the midpoint",
         "body": "Midpoint of \\(AC\\):\n\n\\[\n\\left(\\frac{16+24}{2},\\frac{-9+15}{2}\\right)=(20,3)\n\\]"
       },
       {
-        "title": "Gradient of",
+        "title": "Find the gradient",
         "body": "Gradient of \\(AC\\):\n\n\\[\n\\frac{15-(-9)}{24-16}=3\n\\]"
       },
       {
-        "title": "So gradient of is",
+        "title": "Find the gradient",
         "body": "So gradient of \\(BD\\) is \\(-\\frac13\\).\n\n\\[\ny-3=-\\frac13(x-20)\n\\]\n\n\\[\nx+3y-29=0\n\\]"
       }
     ],
@@ -33415,11 +33415,11 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1: Calculate the absolute increase.",
+        "title": "Calculate value",
         "body": "Increase = 87 − 75 = 12"
       },
       {
-        "title": "Step 2: Calculate percentage increase.",
+        "title": "Convert standard form",
         "body": "$$\\\\text{\\\\% Increase} = \\\\frac{\\\\text{Increase}}{\\\\text{Original}} \\\\times 100 = \\\\frac{12}{75} \\\\times 100 = 16\\\\%$$"
       },
       {
@@ -33427,7 +33427,7 @@ window.SOLUTION_DATA = {
         "body": "16%\n\n**Step 1: Determine the depreciation multiplier.** A 20% decrease means the multiplier is 1 − 0.20 = 0.80."
       },
       {
-        "title": "Step 2: Apply the multiplier for 3 years.",
+        "title": "Solve inequality",
         "body": "Final Value = 960 × (0.80)<sup>3</sup>\nFinal Value = 960 × 0.512 = 491.52"
       }
     ],
@@ -33448,11 +33448,11 @@ window.SOLUTION_DATA = {
         "body": "57600"
       },
       {
-        "title": "Step 1: Expand the numerator.",
+        "title": "Expand brackets",
         "body": "3 × 10<sup>5</sup> = 300, 000\n8 × 10<sup>3</sup> = 8, 000\nNumerator = 300, 000 + 8, 000 = 308, 000 = 3.08 × 10<sup>5</sup>"
       },
       {
-        "title": "Step 2: Perform the division.",
+        "title": "Convert standard form",
         "body": "$$\\\\frac{3.08 \\\\times 10^5}{4 \\\\times 10^{-2}} = \\\\left(\\\\frac{3.08}{4}\\\\right) \\\\times 10^{5 - (-2)}$$\n = 0.77 × 10<sup>7</sup>\n\n**Step 3: Convert to strict standard form (1 ≤ *A* \\< 10).**\n0.77 × 10<sup>7</sup> = 7.7 × 10<sup>6</sup>"
       }
     ],
@@ -33465,11 +33465,11 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1: Set up the proportionality equation.",
+        "title": "Solve equation",
         "body": "$$T = \\\\frac{k}{\\\\sqrt{m}}$$\n\n**Step 2: Substitute the given values to find constant *k*.**\n$$15 = \\\\frac{k}{\\\\sqrt{36}}$$\n$$15 = \\\\frac{k}{6}$$\n*k* = 15 × 6 = 90"
       },
       {
-        "title": "Step 3: Write the final formula.",
+        "title": "Rearrange formula",
         "body": "$$T = \\\\frac{90}{\\\\sqrt{m}}$$"
       }
     ],
@@ -33482,19 +33482,19 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1: Find the Area Scale Factor (ASF).",
+        "title": "Calculate area",
         "body": "$$\\\\text{ASF} = \\\\frac{\\\\text{Area of Q}}{\\\\text{Area of P}} = \\\\frac{450}{200} = \\\\frac{9}{4} = 2.25$$"
       },
       {
-        "title": "Step 2: Find the Length Scale Factor (LSF).",
+        "title": "Simplify surd",
         "body": "$$\\\\text{LSF} = \\\\sqrt{\\\\text{ASF}} = \\\\sqrt{\\\\frac{9}{4}} = \\\\frac{3}{2} = 1.5$$"
       },
       {
-        "title": "Step 3: Find the Volume Scale Factor (VSF).",
+        "title": "Calculate volume",
         "body": "$$\\\\text{VSF} = (\\\\text{LSF})^3 = \\\\left(\\\\frac{3}{2}\\\\right)^3 = \\\\frac{27}{8} = 3.375$$"
       },
       {
-        "title": "Step 4: Calculate the volume of Shape Q.",
+        "title": "Calculate volume",
         "body": "$$\\\\text{Volume of Q} = \\\\text{Volume of P} \\\\times \\\\text{VSF} = 672 \\\\times \\\\frac{27}{8}$$\n = 84 × 27 = 2268"
       }
     ],
@@ -33507,19 +33507,19 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1: Find the Area Scale Factor (ASF).",
+        "title": "Calculate area",
         "body": "$$\\\\text{ASF} = \\\\frac{\\\\text{Area of Q}}{\\\\text{Area of P}} = \\\\frac{450}{200} = \\\\frac{9}{4} = 2.25$$"
       },
       {
-        "title": "Step 2: Find the Length Scale Factor (LSF).",
+        "title": "Simplify surd",
         "body": "$$\\\\text{LSF} = \\\\sqrt{\\\\text{ASF}} = \\\\sqrt{\\\\frac{9}{4}} = \\\\frac{3}{2} = 1.5$$"
       },
       {
-        "title": "Step 3: Find the Volume Scale Factor (VSF).",
+        "title": "Calculate volume",
         "body": "$$\\\\text{VSF} = (\\\\text{LSF})^3 = \\\\left(\\\\frac{3}{2}\\\\right)^3 = \\\\frac{27}{8} = 3.375$$"
       },
       {
-        "title": "Step 4: Calculate the volume of Shape Q.",
+        "title": "Calculate volume",
         "body": "$$\\\\text{Volume of Q} = \\\\text{Volume of P} \\\\times \\\\text{VSF} = 672 \\\\times \\\\frac{27}{8}$$\n = 84 × 27 = 2268"
       }
     ],
@@ -33532,15 +33532,15 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1 Find the common",
+        "title": "Find common difference",
         "body": "**Step 1: Find the common difference *d*.** The *n*<sup>th</sup> term is given by *u*<sub>*n*</sub> = *a* + (*n*−1)*d*.\n*u*<sub>20</sub> = 10 + 19*d* = 86\n19*d* = 76\n$$d = \\\\frac{76}{19} = 4$$"
       },
       {
-        "title": "Step 2 Use the sum",
+        "title": "Use sum formula",
         "body": "**Step 2: Use the sum formula to form an equation in terms of *N*.**\n$$S_N = \\\\frac{N}{2} \\\\left\\[2a + (N - 1)d \\\\right\\]$$\nSubstitute the known values *S*<sub>*N*</sub> = 5194, *a* = 10, and *d* = 4:\n$$5194 = \\\\frac{N}{2} \\\\left\\[2(10) + (N - 1)(4) \\\\right\\]$$"
       },
       {
-        "title": "Step 3 Simplify and solve",
+        "title": "Solve quadratic equation",
         "body": "**Step 3: Simplify and solve the quadratic equation.** Multiply by 2 to clear the fraction:\n10388 = *N*\\[20+4*N*−4\\]\n10388 = *N*(4*N*+16)\n4*N*<sup>2</sup> + 16*N* − 10388 = 0"
       },
       {
@@ -33548,11 +33548,11 @@ window.SOLUTION_DATA = {
         "body": "Divide the entire equation by 4 to make it simpler:\n*N*<sup>2</sup> + 4*N* − 2597 = 0"
       },
       {
-        "title": "Step 4 Use the quadratic",
+        "title": "Use quadratic formula",
         "body": "**Step 4: Use the quadratic formula to find *N*.**\n$$N = \\\\frac{-b \\\\pm \\\\sqrt{b^2 - 4ac}}{2a}$$\n$$N = \\\\frac{-4 \\\\pm \\\\sqrt{16 - 4(1)(-2597)}}{2}$$\n$$N = \\\\frac{-4 \\\\pm \\\\sqrt{16 + 10388}}{2}$$\n$$N = \\\\frac{-4 \\\\pm \\\\sqrt{10404}}{2}$$\n$$N = \\\\frac{-4 \\\\pm 102}{2}$$"
       },
       {
-        "title": "Since N must be a",
+        "title": "Evaluate fraction",
         "body": "Since *N* must be a positive integer, we discard the negative root:\n$$N = \\\\frac{-4 + 102}{2} = \\\\frac{98}{2} = 49$$"
       }
     ],
@@ -33565,15 +33565,15 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1 Find the common",
+        "title": "Find common difference",
         "body": "**Step 1: Find the common difference *d*.** The *n*<sup>th</sup> term is given by *u*<sub>*n*</sub> = *a* + (*n*−1)*d*.\n*u*<sub>20</sub> = 10 + 19*d* = 86\n19*d* = 76\n$$d = \\\\frac{76}{19} = 4$$"
       },
       {
-        "title": "Step 2 Use the sum",
+        "title": "Use sum formula",
         "body": "**Step 2: Use the sum formula to form an equation in terms of *N*.**\n$$S_N = \\\\frac{N}{2} \\\\left\\[2a + (N - 1)d \\\\right\\]$$\nSubstitute the known values *S*<sub>*N*</sub> = 5194, *a* = 10, and *d* = 4:\n$$5194 = \\\\frac{N}{2} \\\\left\\[2(10) + (N - 1)(4) \\\\right\\]$$"
       },
       {
-        "title": "Step 3 Simplify and solve",
+        "title": "Solve quadratic equation",
         "body": "**Step 3: Simplify and solve the quadratic equation.** Multiply by 2 to clear the fraction:\n10388 = *N*\\[20+4*N*−4\\]\n10388 = *N*(4*N*+16)\n4*N*<sup>2</sup> + 16*N* − 10388 = 0"
       },
       {
@@ -33581,11 +33581,11 @@ window.SOLUTION_DATA = {
         "body": "Divide the entire equation by 4 to make it simpler:\n*N*<sup>2</sup> + 4*N* − 2597 = 0"
       },
       {
-        "title": "Step 4 Use the quadratic",
+        "title": "Use quadratic formula",
         "body": "**Step 4: Use the quadratic formula to find *N*.**\n$$N = \\\\frac{-b \\\\pm \\\\sqrt{b^2 - 4ac}}{2a}$$\n$$N = \\\\frac{-4 \\\\pm \\\\sqrt{16 - 4(1)(-2597)}}{2}$$\n$$N = \\\\frac{-4 \\\\pm \\\\sqrt{16 + 10388}}{2}$$\n$$N = \\\\frac{-4 \\\\pm \\\\sqrt{10404}}{2}$$\n$$N = \\\\frac{-4 \\\\pm 102}{2}$$"
       },
       {
-        "title": "Since N must be a",
+        "title": "Evaluate fraction",
         "body": "Since *N* must be a positive integer, we discard the negative root:\n$$N = \\\\frac{-4 + 102}{2} = \\\\frac{98}{2} = 49$$"
       }
     ],
@@ -33598,7 +33598,7 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1 Place the point",
+        "title": "Construct angle bisector",
         "body": "**Step 1:** Place the point of the compass at the vertex *Q*. Draw an arc that intersects both arms *Q**P* and *Q**R*. Let’s call these intersection points *A* and *B*.\n**Step 2:** Without changing the compass width, place the compass point on *A* and draw an arc inside the angle.\n**Step 3:** Place the compass point on *B* and draw another arc to intersect the previous arc. Let this intersection be point *C*.\n**Step 4:** Draw a straight line from *Q* through *C*. This is the angle bisector."
       }
     ],
@@ -33611,7 +33611,7 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1 Find the midpoints",
+        "title": "Find class midpoints",
         "body": "**Step 1: Find the midpoints (*x*) for each class interval.**"
       },
       {
@@ -33635,11 +33635,11 @@ window.SOLUTION_DATA = {
         "body": "40 \\< *h* ≤ 50 ⟹ *x* = 45"
       },
       {
-        "title": "Step 2 Multiply frequency (",
+        "title": "Find the midpoint",
         "body": "**Step 2: Multiply frequency (*f*) by midpoint (*x*) to find *f**x*.**"
       },
       {
-        "title": "Step 3: Calculate the mean.",
+        "title": "Calculate statistic",
         "body": "$$\\\\text{Mean} = \\\\frac{\\\\sum fx}{\\\\sum f} = \\\\frac{1290}{60} = 21.5$$"
       }
     ],
@@ -33656,11 +33656,11 @@ window.SOLUTION_DATA = {
         "body": "Label the equations:\n$$\\\\begin{aligned}\n            5x + y &= 11 \\\\quad \\\\text{--- (1)} \\\\\\\\\n            3x - y &= 9  \\\\quad \\\\text{--- (2)}\n        \\\\end{aligned}$$"
       },
       {
-        "title": "Step 1 Add (1) and",
+        "title": "Add (1) and (2) eliminate",
         "body": "**Step 1: Add (1) and (2) to eliminate *y*.**\n$$\\\\begin{aligned}\n            (5x + y) + (3x - y) &= 11 + 9 \\\\\\\\\n            8x &= 20 \\\\\\\\\n            x &= \\\\frac{20}{8} = 2.5\n        \\\\end{aligned}$$"
       },
       {
-        "title": "Step 2 Substitute x 2.5",
+        "title": "Solve equation",
         "body": "**Step 2: Substitute *x* = 2.5 into equation (1) to find *y*.**\n$$\\\\begin{aligned}\n            5(2.5) + y &= 11 \\\\\\\\\n            12.5 + y &= 11 \\\\\\\\\n            y &= 11 - 12.5 = -1.5\n        \\\\end{aligned}$$"
       }
     ],
@@ -33673,19 +33673,19 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1: Find the total number of ratio parts.",
+        "title": "Split the ratio",
         "body": "Total parts = 6 + 7 + 3 = 16 parts"
       },
       {
-        "title": "Step 2: Find the value of one part.",
+        "title": "Evaluate fraction",
         "body": "$$1 \\\\text{ part} = \\\\frac{960}{16} = 60 \\\\text{ trees}$$"
       },
       {
-        "title": "Step 3: Calculate the total number of cherry trees.",
+        "title": "Calculate value",
         "body": "Cherry trees = 7 parts × 60 = 420 trees"
       },
       {
-        "title": "Step 4: Calculate 65% of the cherry trees to find morellos.",
+        "title": "Calculate percentage",
         "body": "Morello trees = 0.65 × 420 = 273"
       }
     ],
@@ -33698,7 +33698,7 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1 Identify corresponding sides",
+        "title": "Identify matching sides",
         "body": "**Step 1: Identify corresponding sides from the similar shapes.** Looking at the given angles/orientations:"
       },
       {
@@ -33718,7 +33718,7 @@ window.SOLUTION_DATA = {
         "body": "We are given *C**D* = 60 (wait, diagram check: *B**C* is the top side labeled 60, *A**B* = 28. On middle shape *E**F* = 7, *G**H* = 18. On right shape *K**L* = 6, *J**K* is unknown). Let’s use the explicit lengths:\n$$\\\\begin{aligned}\n            AB = 28 \\\\quad &\\\\text{corresponds to} \\\\quad EF = 7 \\\\\\\\\n            BC = 60 \\\\quad &\\\\text{corresponds to} \\\\quad FG \\\\\\\\\n            CD \\\\quad &\\\\text{corresponds to} \\\\quad GH = 18 \\\\quad \\\\text{and} \\\\quad KL = 6\n        \\\\end{aligned}$$"
       },
       {
-        "title": "Step 2 Find scale factors.",
+        "title": "Find scale factors",
         "body": "**Step 2: Find scale factors.** Scale factor from *A**B**C**D* to *E**F**G**H* using the left sides:\n$$\\\\text{SF}\\_1 = \\\\frac{EF}{AB} = \\\\frac{7}{28} = \\\\frac{1}{4}$$\nSo, $FG = BC \\\\times \\\\frac{1}{4} = 60 \\\\times \\\\frac{1}{4} = 15 \\\\text{ cm}$."
       },
       {
@@ -33726,7 +33726,7 @@ window.SOLUTION_DATA = {
         "body": "Scale factor from *E**F**G**H* to *I**J**K**L* using the right sides (*G**H* and *K**L*):\n$$\\\\text{SF}\\_2 = \\\\frac{KL}{GH} = \\\\frac{6}{18} = \\\\frac{1}{3}$$"
       },
       {
-        "title": "Step 3 Calculate J K",
+        "title": "Calculate J K",
         "body": "**Step 3: Calculate *J**K*.** Side *J**K* corresponds to *F**G*.\n$$JK = FG \\\\times \\\\text{SF}\\_2 = 15 \\\\times \\\\frac{1}{3} = 5 \\\\text{ cm}$$"
       }
     ],
@@ -33739,7 +33739,7 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1: Interior angle of the regular pentagon.",
+        "title": "Use trigonometry",
         "body": "$$\\\\text{Interior Angle} = \\\\frac{(5-2) \\\\times 180^\\\\circ}{5} = \\\\frac{540^\\\\circ}{5} = 108^\\\\circ$$\nSo, ∠*A**E**D* = 108<sup>∘</sup>.\n\n**Step 2: Find angles within the corner triangle △*D**E**Q*.** Since *A**P**Q**E* is a rectangle, the angle ∠*A**E**Q* = 90<sup>∘</sup>. Therefore, the angle ∠*D**E**Q* is:\n∠*D**E**Q* = ∠*A**E**D* − ∠*A**E**Q* = 108<sup>∘</sup> − 90<sup>∘</sup> = 18<sup>∘</sup>\n\n**Step 3: Analyze △*D**E**Q*.** The problem states *D**Q**C* is a straight line, meaning *Q* lies on the side *D**C*. Therefore, △*D**E**Q* is formed by *D*, *E*, *Q*. In △*D**E**Q*, the angle at vertex *D* is the pentagon’s interior angle ∠*C**D**E* = 108<sup>∘</sup>.\n\nUsing angles in a triangle summing to 180<sup>∘</sup>:\n∠*E**Q**D* = 180<sup>∘</sup> − (∠*D**E**Q*+∠*E**D**Q*) = 180<sup>∘</sup> − (18<sup>∘</sup>+108<sup>∘</sup>) = 180<sup>∘</sup> − 126<sup>∘</sup> = 54<sup>∘</sup>"
       }
     ],
@@ -33752,15 +33752,15 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1 Calculate Normal Price",
+        "title": "Calculate normal price",
         "body": "**Step 1: Calculate Normal Price for Shop A.** A 25% discount means the sale price is 75% of the normal price.\n0.75 × Normal<sub>*A*</sub> = 240\n$$\\\\text{Normal}\\_A = \\\\frac{240}{0.75} = 320 \\\\text{ euros}$$"
       },
       {
-        "title": "Step 2 Calculate Normal Price",
+        "title": "Calculate normal price",
         "body": "**Step 2: Calculate Normal Price for Shop B.** A discount of $\\\\frac{2}{9}$ means the sale price is $1 - \\\\frac{2}{9} = \\\\frac{7}{9}$ of the normal price.\n$$\\\\frac{7}{9} \\\\times \\\\text{Normal}\\_B = 245$$\n$$\\\\text{Normal}\\_B = 245 \\\\times \\\\frac{9}{7} = 35 \\\\times 9 = 315 \\\\text{ euros}$$"
       },
       {
-        "title": "Step 3: Find the difference.",
+        "title": "Calculate value",
         "body": "Difference = 320 − 315 = 5 euros"
       }
     ],
@@ -33773,15 +33773,15 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1: Calculate the total weight of the initial 5 potatoes.",
+        "title": "Calculate statistic",
         "body": "Total<sub>5</sub> = Mean × Number = 217 × 5 = 1085 grams"
       },
       {
-        "title": "Step 2: Calculate the new total weight.",
+        "title": "Solve inequality",
         "body": "Total<sub>6</sub> = 1085 + 175 = 1260 grams"
       },
       {
-        "title": "Step 3: Calculate the new mean.",
+        "title": "Calculate statistic",
         "body": "$$\\\\text{New Mean} = \\\\frac{1260}{6} = 210 \\\\text{ grams}$$"
       }
     ],
@@ -33798,15 +33798,15 @@ window.SOLUTION_DATA = {
         "body": "Draw an open circle at 1 and an arrow pointing to the left."
       },
       {
-        "title": "Step 1 Identify the vertical",
+        "title": "Identify vertical boundary",
         "body": "**Step 1: Identify the vertical boundary.** The region is to the right of the vertical line at *x* =  − 3. Inequality 1: *x* ≥  − 3"
       },
       {
-        "title": "Step 2 Identify the horizontal",
+        "title": "Solve inequality",
         "body": "**Step 2: Identify the horizontal boundary.** The region is below the horizontal line at *y* = 4. Inequality 2: *y* ≤ 4"
       },
       {
-        "title": "Step 3 Identify the diagonal",
+        "title": "Calculate statistic",
         "body": "**Step 3: Identify the diagonal boundary.** The line passes through (0,0), (1,1), (−1,−1), etc., meaning its equation is *y* = *x*. The shaded region is above this line. Inequality 3: *y* ≥ *x*"
       }
     ],
@@ -33819,15 +33819,15 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1: Write down the multiplier for each year.",
+        "title": "Calculate percentage",
         "body": "Decrease by 5% ⟹ Multiplier = 1 − 0.05 = 0.95\n\nIncrease by 20% ⟹ Multiplier = 1 + 0.20 = 1.20\n\nIncrease by 6.5% ⟹ Multiplier = 1 + 0.065 = 1.065"
       },
       {
-        "title": "Step 2: Calculate the combined overall multiplier.",
+        "title": "Calculate value",
         "body": "Overall Multiplier = 0.95 × 1.20 × 1.065 = 1.2141"
       },
       {
-        "title": "Step 3: Convert the overall multiplier back to a percentage increase.",
+        "title": "Calculate percentage",
         "body": "1.2141 − 1 = 0.2141 = 21.41%"
       }
     ],
@@ -33840,15 +33840,15 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1: Apply the power of 3 to both parts.",
+        "title": "Use index laws",
         "body": "(9×10<sup>80</sup>)<sup>3</sup> = 9<sup>3</sup> × (10<sup>80</sup>)<sup>3</sup>"
       },
       {
-        "title": "Step 2: Evaluate both components.",
+        "title": "Solve inequality",
         "body": "9<sup>3</sup> = 729\n(10<sup>80</sup>)<sup>3</sup> = 10<sup>80 × 3</sup> = 10<sup>240</sup>"
       },
       {
-        "title": "Step 3: Combine and adjust to standard form.",
+        "title": "Convert standard form",
         "body": "729 × 10<sup>240</sup> = 7.29 × 10<sup>2</sup> × 10<sup>240</sup> = 7.29 × 10<sup>242</sup>"
       }
     ],
@@ -33903,19 +33903,19 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Data (sorted) 14, 15, 16,",
+        "title": "Calculate value",
         "body": "**Data (sorted):** 14, 15, 16, 18, 19, 20, 22, 25, 28, 40, 50.\nNumber of data points *n* = 11."
       },
       {
-        "title": "Step 1 Find the Median",
+        "title": "Find median",
         "body": "**Step 1: Find the Median (Q2).** The median is the $\\\\left(\\\\frac{11+1}{2}\\\\right) = 6^{\\\\text{th}}$ value.\nMedian = 20"
       },
       {
-        "title": "Step 2 Find Lower Quartile",
+        "title": "Find median",
         "body": "**Step 2: Find Lower Quartile (Q1) and Upper Quartile (Q3).** Q1 is the median of the lower 5 values (14, 15, **16**, 18, 19).\n*Q*1 = 16\nQ3 is the median of the upper 5 values (22, 25, **28**, 40, 50).\n*Q*3 = 28"
       },
       {
-        "title": "Step 3: Calculate the Interquartile Range (IQR).",
+        "title": "Calculate statistic",
         "body": "IQR = *Q*3 − *Q*1 = 28 − 16 = 12"
       }
     ],
@@ -33928,11 +33928,11 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1: Square both sides to remove the square root.",
+        "title": "Multiply both sides denominator",
         "body": "$$p^2 = \\\\frac{7w + y}{cw + k}$$\n\n**Step 2: Multiply both sides by the denominator (*c**w*+*k*).**\n*p*<sup>2</sup>(*c**w*+*k*) = 7*w* + *y*"
       },
       {
-        "title": "Step 3: Expand the bracket.",
+        "title": "Expand brackets",
         "body": "*p*<sup>2</sup>*c**w* + *p*<sup>2</sup>*k* = 7*w* + *y*\n\n**Step 4: Collect all terms involving *w* on one side.**\n*p*<sup>2</sup>*c**w* − 7*w* = *y* − *p*<sup>2</sup>*k*\n\n**Step 5: Factor out *w*.**\n*w*(*p*<sup>2</sup>*c*−7) = *y* − *p*<sup>2</sup>*k*\n\n**Step 6: Divide to isolate *w*.**\n$$w = \\\\frac{y - p^2k}{p^2c - 7}$$"
       }
     ],
@@ -33945,11 +33945,11 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1: Find the radius.",
+        "title": "Evaluate fraction",
         "body": "$$r = \\\\frac{24}{2} = 12 \\\\text{ cm}$$"
       },
       {
-        "title": "Step 2: Apply the surface area formula.",
+        "title": "Calculate area",
         "body": "Surface Area = 4*π**r*<sup>2</sup>\n = 4 × *π* × 12<sup>2</sup>\n = 4 × *π* × 144\n = 576*π* ≈ 1809.557... cm<sup>2</sup>\n\n**Step 3: Round to 3 significant figures.** 1809.557 → 1810 (the 1, 8, and 1 are the first three sig figs)."
       }
     ],
@@ -33962,19 +33962,19 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1 Substitute y (",
+        "title": "Substitute into equation",
         "body": "**Step 1: Substitute *y* = (*x*+2) into the quadratic equation.**\n*x*<sup>2</sup> + (*x*+2)<sup>2</sup> = 3*x*(*x*+2) − 11"
       },
       {
-        "title": "Step 2: Expand all brackets.",
+        "title": "Expand brackets",
         "body": "*x*<sup>2</sup> + (*x*<sup>2</sup>+4*x*+4) = 3*x*<sup>2</sup> + 6*x* − 11\n2*x*<sup>2</sup> + 4*x* + 4 = 3*x*<sup>2</sup> + 6*x* − 11"
       },
       {
-        "title": "Step 3: Move all terms to one side to set the equation to zero.",
+        "title": "Solve equation",
         "body": "0 = 3*x*<sup>2</sup> − 2*x*<sup>2</sup> + 6*x* − 4*x* − 11 − 4\n*x*<sup>2</sup> + 2*x* − 15 = 0"
       },
       {
-        "title": "Step 4: Factorise the quadratic equation.",
+        "title": "Solve quadratic equation",
         "body": "(*x*+5)(*x*−3) = 0\nSo, *x* =  − 5 or *x* = 3.\n\n**Step 5: Find corresponding *y* values using *y* = *x* + 2.**\n\nIf *x* =  − 5 ⟹ *y* =  − 5 + 2 =  − 3\n\nIf *x* = 3 ⟹ *y* = 3 + 2 = 5"
       }
     ],
@@ -34008,23 +34008,23 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1: Differentiate the curve to find the gradient expression.",
+        "title": "Find the gradient",
         "body": "$$\\\\frac{dy}{dx} = 3x^2 - 16$$"
       },
       {
-        "title": "Step 2: Set the gradient to 11 to find the x-coordinates.",
+        "title": "Find the gradient",
         "body": "3*x*<sup>2</sup> − 16 = 11\n3*x*<sup>2</sup> = 27\n*x*<sup>2</sup> = 9 ⟹ *x* = 3 or *x* =  − 3"
       },
       {
-        "title": "Step 3: Find the corresponding y-coordinates on the curve.",
+        "title": "Solve inequality",
         "body": "For *x* = 3: *y* = (3)<sup>3</sup> − 16(3) + 7 = 27 − 48 + 7 =  − 14"
       },
       {
-        "title": "Point 1: (3,−14)",
+        "title": "Solve inequality",
         "body": "For *x* =  − 3: *y* = (−3)<sup>3</sup> − 16(−3) + 7 =  − 27 + 48 + 7 = 28"
       },
       {
-        "title": "Point 2: (−3,28)",
+        "title": "Use trigonometry",
         "body": "**Step 4: Find the y-intercept (*b*) for each tangent (*y* = 11*x* + *b*).**\n\nUsing (3,−14):\n − 14 = 11(3) + *b* ⟹  − 14 = 33 + *b* ⟹ *b* =  − 47\n\nUsing (−3,28):\n28 = 11(−3) + *b* ⟹ 28 =  − 33 + *b* ⟹ *b* = 61"
       }
     ],
@@ -34053,7 +34053,7 @@ window.SOLUTION_DATA = {
         "body": "\\(b\\) 7**a** + 4**b**\n\n**Step 1: Set up vector equations for $\\\\overrightarrow{OP}$.** Since *O**P**B* is a straight line, $\\\\overrightarrow{OP}$ is a scalar multiple of $\\\\overrightarrow{OB}$. Let this be *λ*.\n$$\\\\overrightarrow{OP} = \\\\lambda(7\\\\mathbf{a} + 4\\\\mathbf{b}) = 7\\\\lambda\\\\mathbf{a} + 4\\\\lambda\\\\mathbf{b}$$\n\nSince *P* lies on the straight line *A**C*, $\\\\overrightarrow{AP} = \\\\mu\\\\overrightarrow{AC}$ for some scalar *μ*.\n$$\\\\overrightarrow{OP} = \\\\overrightarrow{OA} + \\\\overrightarrow{AP} = 5\\\\mathbf{a} + \\\\mu(-5\\\\mathbf{a} + 10\\\\mathbf{b})$$\n$$\\\\overrightarrow{OP} = (5 - 5\\\\mu)\\\\mathbf{a} + 10\\\\mu\\\\mathbf{b}$$\n\n**Step 2: Equate the coefficients of **a** and **b**.**\n7*λ* = 5 − 5*μ*  — (1)\n$$4\\\\lambda = 10\\\\mu \\\\implies \\\\mu = \\\\frac{4}{10}\\\\lambda = 0.4\\\\lambda \\\\quad \\\\text{--- (2)}$$\n\n**Step 3: Solve for *λ*.** Substitute (2) into (1):\n7*λ* = 5 − 5(0.4*λ*)\n7*λ* = 5 − 2*λ*\n$$9\\\\lambda = 5 \\\\implies \\\\lambda = \\\\frac{5}{9}$$"
       },
       {
-        "title": "Step 4: Find $\\\\overrightarrow{OP}$.",
+        "title": "Evaluate fraction",
         "body": "$$\\\\overrightarrow{OP} = \\\\frac{5}{9}(7\\\\mathbf{a} + 4\\\\mathbf{b}) = \\\\frac{35}{9}\\\\mathbf{a} + \\\\frac{20}{9}\\\\mathbf{b}$$"
       }
     ],
@@ -34083,19 +34083,19 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1 Substitute y (",
+        "title": "Substitute into equation",
         "body": "**Step 1: Substitute *y* = (*x*+2) into the quadratic equation.**\n*x*<sup>2</sup> + (*x*+2)<sup>2</sup> = 3*x*(*x*+2) − 11"
       },
       {
-        "title": "Step 2: Expand all brackets.",
+        "title": "Expand brackets",
         "body": "*x*<sup>2</sup> + (*x*<sup>2</sup>+4*x*+4) = 3*x*<sup>2</sup> + 6*x* − 11\n2*x*<sup>2</sup> + 4*x* + 4 = 3*x*<sup>2</sup> + 6*x* − 11"
       },
       {
-        "title": "Step 3: Move all terms to one side to set the equation to zero.",
+        "title": "Solve equation",
         "body": "0 = 3*x*<sup>2</sup> − 2*x*<sup>2</sup> + 6*x* − 4*x* − 11 − 4\n*x*<sup>2</sup> + 2*x* − 15 = 0"
       },
       {
-        "title": "Step 4: Factorise the quadratic equation.",
+        "title": "Solve quadratic equation",
         "body": "(*x*+5)(*x*−3) = 0\nSo, *x* =  − 5 or *x* = 3.\n\n**Step 5: Find corresponding *y* values using *y* = *x* + 2.**\n\nIf *x* =  − 5 ⟹ *y* =  − 5 + 2 =  − 3\n\nIf *x* = 3 ⟹ *y* = 3 + 2 = 5"
       }
     ],
@@ -34129,23 +34129,23 @@ window.SOLUTION_DATA = {
     "topicNote": "",
     "steps": [
       {
-        "title": "Step 1: Differentiate the curve to find the gradient expression.",
+        "title": "Find the gradient",
         "body": "$$\\\\frac{dy}{dx} = 3x^2 - 16$$"
       },
       {
-        "title": "Step 2: Set the gradient to 11 to find the x-coordinates.",
+        "title": "Find the gradient",
         "body": "3*x*<sup>2</sup> − 16 = 11\n3*x*<sup>2</sup> = 27\n*x*<sup>2</sup> = 9 ⟹ *x* = 3 or *x* =  − 3"
       },
       {
-        "title": "Step 3: Find the corresponding y-coordinates on the curve.",
+        "title": "Solve inequality",
         "body": "For *x* = 3: *y* = (3)<sup>3</sup> − 16(3) + 7 = 27 − 48 + 7 =  − 14"
       },
       {
-        "title": "Point 1: (3,−14)",
+        "title": "Solve inequality",
         "body": "For *x* =  − 3: *y* = (−3)<sup>3</sup> − 16(−3) + 7 =  − 27 + 48 + 7 = 28"
       },
       {
-        "title": "Point 2: (−3,28)",
+        "title": "Use trigonometry",
         "body": "**Step 4: Find the y-intercept (*b*) for each tangent (*y* = 11*x* + *b*).**\n\nUsing (3,−14):\n − 14 = 11(3) + *b* ⟹  − 14 = 33 + *b* ⟹ *b* =  − 47\n\nUsing (−3,28):\n28 = 11(−3) + *b* ⟹ 28 =  − 33 + *b* ⟹ *b* = 61"
       }
     ],
@@ -34174,7 +34174,7 @@ window.SOLUTION_DATA = {
         "body": "\\(b\\) 7**a** + 4**b**\n\n**Step 1: Set up vector equations for $\\\\overrightarrow{OP}$.** Since *O**P**B* is a straight line, $\\\\overrightarrow{OP}$ is a scalar multiple of $\\\\overrightarrow{OB}$. Let this be *λ*.\n$$\\\\overrightarrow{OP} = \\\\lambda(7\\\\mathbf{a} + 4\\\\mathbf{b}) = 7\\\\lambda\\\\mathbf{a} + 4\\\\lambda\\\\mathbf{b}$$\n\nSince *P* lies on the straight line *A**C*, $\\\\overrightarrow{AP} = \\\\mu\\\\overrightarrow{AC}$ for some scalar *μ*.\n$$\\\\overrightarrow{OP} = \\\\overrightarrow{OA} + \\\\overrightarrow{AP} = 5\\\\mathbf{a} + \\\\mu(-5\\\\mathbf{a} + 10\\\\mathbf{b})$$\n$$\\\\overrightarrow{OP} = (5 - 5\\\\mu)\\\\mathbf{a} + 10\\\\mu\\\\mathbf{b}$$\n\n**Step 2: Equate the coefficients of **a** and **b**.**\n7*λ* = 5 − 5*μ*  — (1)\n$$4\\\\lambda = 10\\\\mu \\\\implies \\\\mu = \\\\frac{4}{10}\\\\lambda = 0.4\\\\lambda \\\\quad \\\\text{--- (2)}$$\n\n**Step 3: Solve for *λ*.** Substitute (2) into (1):\n7*λ* = 5 − 5(0.4*λ*)\n7*λ* = 5 − 2*λ*\n$$9\\\\lambda = 5 \\\\implies \\\\lambda = \\\\frac{5}{9}$$"
       },
       {
-        "title": "Step 4: Find $\\\\overrightarrow{OP}$.",
+        "title": "Evaluate fraction",
         "body": "$$\\\\overrightarrow{OP} = \\\\frac{5}{9}(7\\\\mathbf{a} + 4\\\\mathbf{b}) = \\\\frac{35}{9}\\\\mathbf{a} + \\\\frac{20}{9}\\\\mathbf{b}$$"
       }
     ],
@@ -34230,11 +34230,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
     "steps": [
       {
-        "title": "The weight g correct to",
+        "title": "Find lower bound",
         "body": "The weight \\(475\\) g correct to the nearest g has lower bound\n\n\\[\n475-0.5=474.5\n\\]"
       },
       {
-        "title": "The height cm correct to",
+        "title": "Find upper bound",
         "body": "The height \\(120\\) cm correct to the nearest \\(10\\) cm has upper bound\n\n\\[\n120+5=125\n\\]"
       }
     ],
@@ -34251,7 +34251,7 @@ window.SOLUTION_DATA = {
         "body": "The ratio is\n\n\\[\n\\text{Eli} : \\text{Peta} = 2:3\n\\]"
       },
       {
-        "title": "There are 5 parts, so",
+        "title": "Split the ratio",
         "body": "There are 5 parts, so one part is\n\n\\[\n275 \\div 5=55\n\\]"
       },
       {
@@ -34284,7 +34284,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic roots and indices. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use index laws",
         "body": "\\[\n\\frac{8^{-2}\\times8^9}{8^{10}}=8^{-2+9-10}=8^{-3}\n\\]"
       }
     ],
@@ -34339,7 +34339,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve inequality",
         "body": "\\[\n5x^2-20x+23=5(x^2-4x)+23\n\\]\n\n\\[\n=5\\left((x-2)^2-4\\right)+23\n\\]\n\n\\[\n=5(x-2)^2-20+23\n\\]\n\n\\[\n=5(x-2)^2+3\n\\]"
       }
     ],
@@ -34352,11 +34352,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Ratio Toolkit to Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Split the ratio",
         "body": "\\[\na=\\frac{2x+5}{1-x},\\quad x=\\frac{5-2y}{3y}\n\\]"
       },
       {
-        "title": "Substitute for",
+        "title": "Split the ratio",
         "body": "Substitute for \\(x\\)."
       },
       {
@@ -34368,7 +34368,7 @@ window.SOLUTION_DATA = {
         "body": "Denominator:\n\n\\[\n1-x=1-\\frac{5-2y}{3y}\n\\]\n\n\\[\n=\\frac{3y-5+2y}{3y}\n=\\frac{5y-5}{3y}\n=\\frac{5(y-1)}{3y}\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Split the ratio",
         "body": "Therefore\n\n\\[\na=\\frac{\\frac{10+11y}{3y}}{\\frac{5(y-1)}{3y}}\n=\\frac{10+11y}{5(y-1)}\n\\]"
       }
     ],
@@ -34381,7 +34381,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Rearranging formulas. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Rearrange formula",
         "body": "\\[\np=\\sqrt{\\frac{y+w}{3y-t}}\n\\]\n\n\\[\np^2=\\frac{y+w}{3y-t}\n\\]\n\n\\[\np^2(3y-t)=y+w\n\\]\n\n\\[\n3p^2y-p^2t=y+w\n\\]\n\n\\[\ny(3p^2-1)=w+p^2t\n\\]"
       }
     ],
@@ -34394,7 +34394,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic proof. The tag is acceptable because the question asks to show the exact result.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\n\\frac37+\\frac13\n\\]"
       },
       {
@@ -34411,11 +34411,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic proof. The tag is acceptable because the question asks for exact-form proof.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify surd",
         "body": "\\[\n\\frac{2\\sqrt7+2}{\\sqrt7-3}\\times\\frac{\\sqrt7+3}{\\sqrt7+3}\n=\\frac{(2\\sqrt7+2)(\\sqrt7+3)}{7-9}\n\\]\n\n\\[\n=\\frac{14+6\\sqrt7+2\\sqrt7+6}{-2}\n\\]\n\n\\[\n=\\frac{20+8\\sqrt7}{-2}=-10-4\\sqrt7\n\\]"
       },
       {
-        "title": "Since ,",
+        "title": "Simplify surd",
         "body": "Since \\(4\\sqrt7=\\sqrt{112}\\),\n\\[\n-10-4\\sqrt7=-10-\\sqrt{112}\n\\]"
       }
     ],
@@ -34428,7 +34428,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve inequality",
         "body": "\\[\n2x^2+x-28>0\n\\]"
       },
       {
@@ -34457,15 +34457,15 @@ window.SOLUTION_DATA = {
         "body": "Line \\(L\\) has equation\n\n\\[\ny=4x+7\n\\]"
       },
       {
-        "title": "So its gradient is",
+        "title": "Find the gradient",
         "body": "So its gradient is\n\n\\[\n4\n\\]"
       },
       {
-        "title": "Line is perpendicular to ,",
+        "title": "Find the gradient",
         "body": "Line \\(M\\) is perpendicular to \\(L\\), so its gradient is\n\n\\[\n-\\frac14\n\\]"
       },
       {
-        "title": "Line passes through",
+        "title": "Evaluate fraction",
         "body": "Line \\(M\\) passes through \\((8,1)\\).\n\n\\[\ny-1=-\\frac14(x-8)\n\\]\n\n\\[\ny-1=-\\frac14x+2\n\\]\n\n\\[\ny=-\\frac14x+3\n\\]"
       }
     ],
@@ -34486,7 +34486,7 @@ window.SOLUTION_DATA = {
         "body": "Point \\(A=(0.2,2.6)\\) lies on the line.\n\n\\[\n2.6=3(0.2)+e\n\\]\n\n\\[\n2.6=0.6+e\n\\]\n\n\\[\ne=2\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\ny=3x+2\n\\]"
       },
       {
@@ -34498,7 +34498,7 @@ window.SOLUTION_DATA = {
         "body": "Use point \\(A=(0.2,2.6)\\):\n\n\\[\n0.2^2+2.6^2=d-11(0.2)\n\\]\n\n\\[\n0.04+6.76=d-2.2\n\\]\n\n\\[\nd=9\n\\]"
       },
       {
-        "title": "Now substitute into the curve",
+        "title": "Substitute into the curve",
         "body": "Now substitute \\(y=3x+2\\) into the curve:\n\n\\[\nx^2+(3x+2)^2=9-11x\n\\]\n\n\\[\nx^2+9x^2+12x+4=9-11x\n\\]\n\n\\[\n10x^2+23x-5=0\n\\]"
       },
       {
@@ -34510,11 +34510,11 @@ window.SOLUTION_DATA = {
         "body": "The product of the roots is\n\n\\[\n\\frac{-5}{10}=-\\frac12\n\\]"
       },
       {
-        "title": "So the other root is",
+        "title": "Evaluate fraction",
         "body": "So the other root is\n\n\\[\n\\frac{-\\frac12}{\\frac15}=-\\frac52\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Evaluate fraction",
         "body": "Then\n\n\\[\ny=3\\left(-\\frac52\\right)+2\n\\]\n\n\\[\ny=-\\frac{11}{2}\n\\]"
       }
     ],
@@ -34531,7 +34531,7 @@ window.SOLUTION_DATA = {
         "body": "The turning point of \\(y=f(x)\\) is \\((4,3)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x+5)\n\\]"
       },
       {
@@ -34539,7 +34539,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 5 units left:\n\n\\[\n(4,3)\\to(-1,3)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x)+7\n\\]"
       },
       {
@@ -34547,7 +34547,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 7 units up:\n\n\\[\n(4,3)\\to(4,10)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(2x)\n\\]"
       },
       {
@@ -34572,7 +34572,7 @@ window.SOLUTION_DATA = {
         "body": "The exterior angle is\n\\[\n2x-23=2(16)-23=9^\\circ\n\\]"
       },
       {
-        "title": "For a regular polygon,",
+        "title": "Find the gradient",
         "body": "For a regular polygon,\n\\[\nn=\\frac{360}{9}=40\n\\]"
       }
     ],
@@ -34598,7 +34598,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Circles, Arcs & Sectors. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate area",
         "body": "\\[\n\\text{area}=\\frac{75}{360}\\times \\pi(12)^2\n\\]\n\n\\[\n=94.247\\ldots\n\\]"
       }
     ],
@@ -34611,7 +34611,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Right-Angled Triangles - Pythagoras & Trigonometry. The tag is correct.",
     "steps": [
       {
-        "title": "First find",
+        "title": "Use trigonometry",
         "body": "First find \\(AB\\):\n\n\\[\nAB^2=21^2-15^2=216\n\\]\n\n\\[\nAB=14.696\\ldots\n\\]\n\n\\[\nAD=AB-DB=14.696\\ldots-9=5.696\\ldots\n\\]"
       },
       {
@@ -34632,7 +34632,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected to Sine, Cosine Rule & Area of Triangles.",
     "steps": [
       {
-        "title": "Use the cosine rule for",
+        "title": "Use cosine rule",
         "body": "Use the cosine rule for angle \\(BAC\\):\n\\[\n\\cos A=\\frac{8^2+9^2-10^2}{2(8)(9)}\n\\]\n\n\\[\n\\cos A=\\frac{45}{144}\n\\]\n\n\\[\nA=71.790\\ldots^\\circ\n\\]"
       }
     ],
@@ -34649,15 +34649,15 @@ window.SOLUTION_DATA = {
         "body": "The horizontal base \\(ABGF\\) is a rectangle.\n\n\\[\nAB=10,\\qquad BG=14\n\\]"
       },
       {
-        "title": "So the horizontal distance from",
+        "title": "Use trigonometry",
         "body": "So the horizontal distance from \\(B\\) to \\(F\\) is\n\n\\[\nBF=\\sqrt{10^2+14^2}=\\sqrt{296}\n\\]"
       },
       {
-        "title": "The angle of elevation of",
+        "title": "Use trigonometry",
         "body": "The angle of elevation of \\(E\\) from \\(B\\) is \\(50^\\circ\\)."
       },
       {
-        "title": "Since is vertically above ,",
+        "title": "Use trigonometry",
         "body": "Since \\(E\\) is vertically above \\(F\\),\n\n\\[\n\\tan 50^\\circ=\\frac{FE}{BF}\n\\]\n\n\\[\nFE=\\sqrt{296}\\tan50^\\circ\n\\]"
       },
       {
@@ -34665,7 +34665,7 @@ window.SOLUTION_DATA = {
         "body": "The prism has the same cross section throughout, so\n\n\\[\nAD=FE=\\sqrt{296}\\tan50^\\circ\n\\]"
       },
       {
-        "title": "Also",
+        "title": "Use trigonometry",
         "body": "Also\n\n\\[\nBC=\\frac15AD\n\\]"
       },
       {
@@ -34690,35 +34690,35 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Linear Graphs to Vectors.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Read the graph",
         "body": "\\[\n\\vec{OA}=2\\mathbf a,\\qquad \\vec{AB}=4\\mathbf b-\\mathbf a,\\qquad \\vec{OC}=5\\mathbf b-3\\mathbf a\n\\]"
       },
       {
-        "title": "First find",
+        "title": "Read the graph",
         "body": "First find \\(\\vec{OB}\\):\n\n\\[\n\\vec{OB}=\\vec{OA}+\\vec{AB}\n\\]\n\n\\[\n\\vec{OB}=2\\mathbf a+4\\mathbf b-\\mathbf a\n\\]\n\n\\[\n\\vec{OB}=\\mathbf a+4\\mathbf b\n\\]"
       },
       {
-        "title": "For part (a),",
+        "title": "Read the graph",
         "body": "For part (a),\n\n\\[\n\\vec{BC}=\\vec{OC}-\\vec{OB}\n\\]\n\n\\[\n\\vec{BC}=(5\\mathbf b-3\\mathbf a)-(\\mathbf a+4\\mathbf b)\n\\]\n\n\\[\n\\vec{BC}=\\mathbf b-4\\mathbf a\n\\]"
       },
       {
-        "title": "For part (b), , so",
+        "title": "Read the graph",
         "body": "For part (b), \\(BD:DC=1:3\\), so\n\n\\[\n\\vec{OD}=\\vec{OB}+\\frac14\\vec{BC}\n\\]\n\n\\[\n\\vec{OD}=\\mathbf a+4\\mathbf b+\\frac14(\\mathbf b-4\\mathbf a)\n\\]\n\n\\[\n\\vec{OD}=\\frac{17}{4}\\mathbf b\n\\]"
       },
       {
-        "title": "Since are collinear, let",
+        "title": "Read the graph",
         "body": "Since \\(A,B,P\\) are collinear, let\n\n\\[\n\\vec{OP}=\\vec{OA}+s\\vec{AB}\n\\]\n\n\\[\n\\vec{OP}=2\\mathbf a+s(4\\mathbf b-\\mathbf a)\n\\]\n\n\\[\n\\vec{OP}=(2-s)\\mathbf a+4s\\mathbf b\n\\]"
       },
       {
-        "title": "But are collinear, and has",
+        "title": "Read the graph",
         "body": "But \\(O,D,P\\) are collinear, and \\(\\vec{OD}\\) has only a \\(\\mathbf b\\) component."
       },
       {
-        "title": "So",
+        "title": "Read the graph",
         "body": "So\n\n\\[\n2-s=0\n\\]\n\n\\[\ns=2\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Read the graph",
         "body": "Then\n\n\\[\n\\vec{OP}=8\\mathbf b\n\\]"
       },
       {
@@ -34752,7 +34752,7 @@ window.SOLUTION_DATA = {
         "body": "The range is \\(15\\):\n\n\\[\n17-e=15\n\\]\n\n\\[\ne=2\n\\]"
       },
       {
-        "title": "The mean is , so",
+        "title": "Calculate statistic",
         "body": "The mean is \\(9\\), so the total is\n\n\\[\n6 \\times 9=54\n\\]\n\n\\[\n2+f+7+g+12+17=54\n\\]\n\n\\[\nf+g=16\n\\]"
       },
       {
@@ -34769,7 +34769,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Statistics Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "The data are already in",
+        "title": "Use Statistics Toolkit correct",
         "body": "The data are already in order:\n\n\\[\n1,\\ 1,\\ 3,\\ 4,\\ 6,\\ 7,\\ 8,\\ 9,\\ 10,\\ 12,\\ 15,\\ 25,\\ 30,\\ 37,\\ 50\n\\]"
       },
       {
@@ -34780,8 +34780,8 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(21\\)."
   },
   "all::Nov2025_P1H__Q13__p11-11__m05__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
@@ -34815,7 +34815,7 @@ window.SOLUTION_DATA = {
         "body": "At least one pink button is still in the box unless both pink buttons are taken."
       },
       {
-        "title": "So use the complement",
+        "title": "Use the complement",
         "body": "So use the complement."
       },
       {
@@ -34823,7 +34823,7 @@ window.SOLUTION_DATA = {
         "body": "The probability that both pink buttons are taken is\n\n\\[\n\\frac{\\binom{2}{2}\\binom{13}{1}}{\\binom{15}{3}}\n\\]\n\n\\[\n=\\frac{13}{455}\n\\]\n\n\\[\n=\\frac{1}{35}\n\\]"
       },
       {
-        "title": "Therefore,",
+        "title": "Evaluate fraction",
         "body": "Therefore,\n\n\\[\nP(\\text{at least one pink is still in the box})\n=1-\\frac{1}{35}\n\\]\n\n\\[\n=\\frac{34}{35}\n\\]"
       }
     ],
@@ -34836,7 +34836,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve inequality",
         "body": "\\[\n5x^2-20x+23=5(x^2-4x)+23\n\\]\n\n\\[\n=5\\left((x-2)^2-4\\right)+23\n\\]\n\n\\[\n=5(x-2)^2-20+23\n\\]\n\n\\[\n=5(x-2)^2+3\n\\]"
       }
     ],
@@ -34849,11 +34849,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Corrected from Ratio Toolkit to Algebraic Fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Split the ratio",
         "body": "\\[\na=\\frac{2x+5}{1-x},\\quad x=\\frac{5-2y}{3y}\n\\]"
       },
       {
-        "title": "Substitute for",
+        "title": "Split the ratio",
         "body": "Substitute for \\(x\\)."
       },
       {
@@ -34865,7 +34865,7 @@ window.SOLUTION_DATA = {
         "body": "Denominator:\n\n\\[\n1-x=1-\\frac{5-2y}{3y}\n\\]\n\n\\[\n=\\frac{3y-5+2y}{3y}\n=\\frac{5y-5}{3y}\n=\\frac{5(y-1)}{3y}\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Split the ratio",
         "body": "Therefore\n\n\\[\na=\\frac{\\frac{10+11y}{3y}}{\\frac{5(y-1)}{3y}}\n=\\frac{10+11y}{5(y-1)}\n\\]"
       }
     ],
@@ -34878,7 +34878,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve inequality",
         "body": "\\[\n2x^2+x-28>0\n\\]"
       },
       {
@@ -34907,15 +34907,15 @@ window.SOLUTION_DATA = {
         "body": "Line \\(L\\) has equation\n\n\\[\ny=4x+7\n\\]"
       },
       {
-        "title": "So its gradient is",
+        "title": "Find the gradient",
         "body": "So its gradient is\n\n\\[\n4\n\\]"
       },
       {
-        "title": "Line is perpendicular to ,",
+        "title": "Find the gradient",
         "body": "Line \\(M\\) is perpendicular to \\(L\\), so its gradient is\n\n\\[\n-\\frac14\n\\]"
       },
       {
-        "title": "Line passes through",
+        "title": "Evaluate fraction",
         "body": "Line \\(M\\) passes through \\((8,1)\\).\n\n\\[\ny-1=-\\frac14(x-8)\n\\]\n\n\\[\ny-1=-\\frac14x+2\n\\]\n\n\\[\ny=-\\frac14x+3\n\\]"
       }
     ],
@@ -34936,7 +34936,7 @@ window.SOLUTION_DATA = {
         "body": "Point \\(A=(0.2,2.6)\\) lies on the line.\n\n\\[\n2.6=3(0.2)+e\n\\]\n\n\\[\n2.6=0.6+e\n\\]\n\n\\[\ne=2\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate value",
         "body": "So\n\n\\[\ny=3x+2\n\\]"
       },
       {
@@ -34948,7 +34948,7 @@ window.SOLUTION_DATA = {
         "body": "Use point \\(A=(0.2,2.6)\\):\n\n\\[\n0.2^2+2.6^2=d-11(0.2)\n\\]\n\n\\[\n0.04+6.76=d-2.2\n\\]\n\n\\[\nd=9\n\\]"
       },
       {
-        "title": "Now substitute into the curve",
+        "title": "Substitute into the curve",
         "body": "Now substitute \\(y=3x+2\\) into the curve:\n\n\\[\nx^2+(3x+2)^2=9-11x\n\\]\n\n\\[\nx^2+9x^2+12x+4=9-11x\n\\]\n\n\\[\n10x^2+23x-5=0\n\\]"
       },
       {
@@ -34960,11 +34960,11 @@ window.SOLUTION_DATA = {
         "body": "The product of the roots is\n\n\\[\n\\frac{-5}{10}=-\\frac12\n\\]"
       },
       {
-        "title": "So the other root is",
+        "title": "Evaluate fraction",
         "body": "So the other root is\n\n\\[\n\\frac{-\\frac12}{\\frac15}=-\\frac52\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Evaluate fraction",
         "body": "Then\n\n\\[\ny=3\\left(-\\frac52\\right)+2\n\\]\n\n\\[\ny=-\\frac{11}{2}\n\\]"
       }
     ],
@@ -34981,7 +34981,7 @@ window.SOLUTION_DATA = {
         "body": "The turning point of \\(y=f(x)\\) is \\((4,3)\\)."
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x+5)\n\\]"
       },
       {
@@ -34989,7 +34989,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 5 units left:\n\n\\[\n(4,3)\\to(-1,3)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(x)+7\n\\]"
       },
       {
@@ -34997,7 +34997,7 @@ window.SOLUTION_DATA = {
         "body": "the graph moves 7 units up:\n\n\\[\n(4,3)\\to(4,10)\n\\]"
       },
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\ny=f(2x)\n\\]"
       },
       {
@@ -35018,15 +35018,15 @@ window.SOLUTION_DATA = {
         "body": "The horizontal base \\(ABGF\\) is a rectangle.\n\n\\[\nAB=10,\\qquad BG=14\n\\]"
       },
       {
-        "title": "So the horizontal distance from",
+        "title": "Use trigonometry",
         "body": "So the horizontal distance from \\(B\\) to \\(F\\) is\n\n\\[\nBF=\\sqrt{10^2+14^2}=\\sqrt{296}\n\\]"
       },
       {
-        "title": "The angle of elevation of",
+        "title": "Use trigonometry",
         "body": "The angle of elevation of \\(E\\) from \\(B\\) is \\(50^\\circ\\)."
       },
       {
-        "title": "Since is vertically above ,",
+        "title": "Use trigonometry",
         "body": "Since \\(E\\) is vertically above \\(F\\),\n\n\\[\n\\tan 50^\\circ=\\frac{FE}{BF}\n\\]\n\n\\[\nFE=\\sqrt{296}\\tan50^\\circ\n\\]"
       },
       {
@@ -35034,7 +35034,7 @@ window.SOLUTION_DATA = {
         "body": "The prism has the same cross section throughout, so\n\n\\[\nAD=FE=\\sqrt{296}\\tan50^\\circ\n\\]"
       },
       {
-        "title": "Also",
+        "title": "Use trigonometry",
         "body": "Also\n\n\\[\nBC=\\frac15AD\n\\]"
       },
       {
@@ -35059,35 +35059,35 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved from Linear Graphs to Vectors.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Read the graph",
         "body": "\\[\n\\vec{OA}=2\\mathbf a,\\qquad \\vec{AB}=4\\mathbf b-\\mathbf a,\\qquad \\vec{OC}=5\\mathbf b-3\\mathbf a\n\\]"
       },
       {
-        "title": "First find",
+        "title": "Read the graph",
         "body": "First find \\(\\vec{OB}\\):\n\n\\[\n\\vec{OB}=\\vec{OA}+\\vec{AB}\n\\]\n\n\\[\n\\vec{OB}=2\\mathbf a+4\\mathbf b-\\mathbf a\n\\]\n\n\\[\n\\vec{OB}=\\mathbf a+4\\mathbf b\n\\]"
       },
       {
-        "title": "For part (a),",
+        "title": "Read the graph",
         "body": "For part (a),\n\n\\[\n\\vec{BC}=\\vec{OC}-\\vec{OB}\n\\]\n\n\\[\n\\vec{BC}=(5\\mathbf b-3\\mathbf a)-(\\mathbf a+4\\mathbf b)\n\\]\n\n\\[\n\\vec{BC}=\\mathbf b-4\\mathbf a\n\\]"
       },
       {
-        "title": "For part (b), , so",
+        "title": "Read the graph",
         "body": "For part (b), \\(BD:DC=1:3\\), so\n\n\\[\n\\vec{OD}=\\vec{OB}+\\frac14\\vec{BC}\n\\]\n\n\\[\n\\vec{OD}=\\mathbf a+4\\mathbf b+\\frac14(\\mathbf b-4\\mathbf a)\n\\]\n\n\\[\n\\vec{OD}=\\frac{17}{4}\\mathbf b\n\\]"
       },
       {
-        "title": "Since are collinear, let",
+        "title": "Read the graph",
         "body": "Since \\(A,B,P\\) are collinear, let\n\n\\[\n\\vec{OP}=\\vec{OA}+s\\vec{AB}\n\\]\n\n\\[\n\\vec{OP}=2\\mathbf a+s(4\\mathbf b-\\mathbf a)\n\\]\n\n\\[\n\\vec{OP}=(2-s)\\mathbf a+4s\\mathbf b\n\\]"
       },
       {
-        "title": "But are collinear, and has",
+        "title": "Read the graph",
         "body": "But \\(O,D,P\\) are collinear, and \\(\\vec{OD}\\) has only a \\(\\mathbf b\\) component."
       },
       {
-        "title": "So",
+        "title": "Read the graph",
         "body": "So\n\n\\[\n2-s=0\n\\]\n\n\\[\ns=2\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Read the graph",
         "body": "Then\n\n\\[\n\\vec{OP}=8\\mathbf b\n\\]"
       },
       {
@@ -35112,7 +35112,7 @@ window.SOLUTION_DATA = {
         "body": "At least one pink button is still in the box unless both pink buttons are taken."
       },
       {
-        "title": "So use the complement",
+        "title": "Use the complement",
         "body": "So use the complement."
       },
       {
@@ -35120,7 +35120,7 @@ window.SOLUTION_DATA = {
         "body": "The probability that both pink buttons are taken is\n\n\\[\n\\frac{\\binom{2}{2}\\binom{13}{1}}{\\binom{15}{3}}\n\\]\n\n\\[\n=\\frac{13}{455}\n\\]\n\n\\[\n=\\frac{1}{35}\n\\]"
       },
       {
-        "title": "Therefore,",
+        "title": "Evaluate fraction",
         "body": "Therefore,\n\n\\[\nP(\\text{at least one pink is still in the box})\n=1-\\frac{1}{35}\n\\]\n\n\\[\n=\\frac{34}{35}\n\\]"
       }
     ],
@@ -35133,15 +35133,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Powers, roots and standard form. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Convert standard form",
         "body": "\\[\n5.76\\times 10^4=57600\n\\]"
       },
       {
-        "title": "For part (b), simplify the",
+        "title": "Convert standard form",
         "body": "For part (b), simplify the numerator:\n\n\\[\n3\\times 10^5+8\\times 10^3=300000+8000=308000\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Convert standard form",
         "body": "Then\n\n\\[\n\\frac{308000}{4\\times 10^{-2}}=\\frac{308000}{0.04}=7700000\n\\]"
       },
       {
@@ -35162,15 +35162,15 @@ window.SOLUTION_DATA = {
         "body": "There are \\(9+43=52\\) red and blue bricks."
       },
       {
-        "title": "Let the total number of",
+        "title": "Simplify fraction",
         "body": "Let the total number of bricks be \\(T\\)."
       },
       {
-        "title": "Since of the bricks are",
+        "title": "Simplify fraction",
         "body": "Since \\(\\frac7{20}\\) of the bricks are yellow, the remaining fraction is\n\n\\[\n1-\\frac7{20}=\\frac{13}{20}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify fraction",
         "body": "So\n\n\\[\n\\frac{13}{20}T=52\n\\]\n\n\\[\nT=52\\times \\frac{20}{13}=80\n\\]"
       },
       {
@@ -35178,7 +35178,7 @@ window.SOLUTION_DATA = {
         "body": "Yellow bricks:\n\n\\[\n\\frac7{20}\\times 80=28\n\\]"
       },
       {
-        "title": "Each brick weighs grams, so",
+        "title": "Simplify fraction",
         "body": "Each brick weighs \\(35\\) grams, so total yellow-brick weight is\n\n\\[\n28\\times 35=980\n\\]"
       }
     ],
@@ -35191,7 +35191,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Compound Interest and Depreciation. The tag is correct because part (b) is depreciation.",
     "steps": [
       {
-        "title": "For part (a), the increase",
+        "title": "Use compound interest",
         "body": "For part (a), the increase is\n\n\\[\n87-75=12\n\\]"
       },
       {
@@ -35199,11 +35199,11 @@ window.SOLUTION_DATA = {
         "body": "Percentage increase:\n\n\\[\n\\frac{12}{75}\\times 100=16\n\\]"
       },
       {
-        "title": "For part (b), a depreciation",
+        "title": "Use compound interest",
         "body": "For part (b), a depreciation of \\(20\\%\\) gives multiplier\n\n\\[\n0.80\n\\]"
       },
       {
-        "title": "After 3 years,",
+        "title": "Use compound interest",
         "body": "After 3 years,\n\n\\[\n960(0.80)^3=491.52\n\\]"
       }
     ],
@@ -35216,7 +35216,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Estimate the value",
         "body": "\\[\nD=\\frac{n}{p-q}\n\\]"
       },
       {
@@ -35232,11 +35232,11 @@ window.SOLUTION_DATA = {
         "body": "Upper bound:\n\n\\[\nD_{\\text{upper}}=\\frac{10.35}{7.235-4.395}=3.6443\\ldots\n\\]"
       },
       {
-        "title": "So",
+        "title": "Estimate the value",
         "body": "So\n\n\\[\n3.5839\\ldots < D < 3.6443\\ldots\n\\]"
       },
       {
-        "title": "Both bounds round to to",
+        "title": "Estimate the value",
         "body": "Both bounds round to \\(3.6\\) to 1 decimal place."
       }
     ],
@@ -35249,7 +35249,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Direct and Inverse Proportion. The tag is correct.",
     "steps": [
       {
-        "title": "is inversely proportional to ,",
+        "title": "Find inverse function",
         "body": "\\(T\\) is inversely proportional to \\(m\\), so\n\n\\[\nT=\\frac{k}{m}\n\\]"
       },
       {
@@ -35257,7 +35257,7 @@ window.SOLUTION_DATA = {
         "body": "Use \\(T=15\\) when \\(m=36\\):\n\n\\[\n15=\\frac{k}{36}\n\\]\n\n\\[\nk=540\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Find inverse function",
         "body": "Therefore\n\n\\[\nT=\\frac{540}{m}\n\\]"
       }
     ],
@@ -35287,11 +35287,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Factorising. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Factorise expression",
         "body": "\\[\nx^2+2x-48=(x+8)(x-6)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Factorise expression",
         "body": "So\n\\[\n(x+8)(x-6)=0\n\\]"
       }
     ],
@@ -35308,11 +35308,11 @@ window.SOLUTION_DATA = {
         "body": "Let\n\\[\nx=0.3787878\\ldots\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Calculate value",
         "body": "Then\n\\[\n10x=3.787878\\ldots\n\\]"
       },
       {
-        "title": "and",
+        "title": "Calculate value",
         "body": "and\n\\[\n1000x=378.787878\\ldots\n\\]"
       },
       {
@@ -35329,7 +35329,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Simultaneous equations. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Solve simultaneous equations",
         "body": "\\[\n5x+y=11\n\\]\n\n\\[\n3x-y=9\n\\]"
       },
       {
@@ -35337,7 +35337,7 @@ window.SOLUTION_DATA = {
         "body": "Add the equations:\n\\[\n8x=20\n\\]\n\n\\[\nx=2.5\n\\]"
       },
       {
-        "title": "Substitute into",
+        "title": "Solve simultaneous equations",
         "body": "Substitute into \\(5x+y=11\\):\n\\[\n5(2.5)+y=11\n\\]\n\n\\[\ny=-1.5\n\\]"
       }
     ],
@@ -35350,7 +35350,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\nax^2+4x+c=0\n\\]"
       },
       {
@@ -35387,7 +35387,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\na=10\n\\]\n\n\\[\nu_{20}=86\n\\]\n\n\\[\n10+19d=86\n\\]\n\n\\[\nd=4\n\\]"
       },
       {
@@ -35404,7 +35404,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Functions. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\nf(x)=3x-2,\\qquad g(x)=\\frac{x}{x-1}\n\\]"
       },
       {
@@ -35425,7 +35425,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Coordinate geometry. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\nP=(-3,0),\\qquad Q=(9,16)\n\\]"
       },
       {
@@ -35442,7 +35442,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This is a reciprocal-curve graph and estimate question.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Read the graph",
         "body": "\\[\ny=\\frac12\\left(x+\\frac4x\\right)\n\\]"
       },
       {
@@ -35450,11 +35450,11 @@ window.SOLUTION_DATA = {
         "body": "The completed table is:\n\n\\[\n\\begin{array}{c|rrrrrrr}\nx&0.5&1&2&3&4&5&6\\\\\n\\hline\ny&4.25&2.5&2&2.17&2.5&2.9&3.33\n\\end{array}\n\\]"
       },
       {
-        "title": "For we need",
+        "title": "Read the graph",
         "body": "For\n\\[\nx+\\frac4x=6\n\\]\nwe need\n\\[\n\\frac12\\left(x+\\frac4x\\right)=3\n\\]"
       },
       {
-        "title": "So draw the horizontal line",
+        "title": "Read the graph",
         "body": "So draw the horizontal line \\(y=3\\) on the graph."
       },
       {
@@ -35471,11 +35471,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct. This combines a number line and graph inequalities.",
     "steps": [
       {
-        "title": "For part (a), is shown",
+        "title": "Read the graph",
         "body": "For part (a), \\(w<1\\) is shown with an open circle at 1 and an arrow to the left."
       },
       {
-        "title": "For part (b), the region",
+        "title": "Read the graph",
         "body": "For part (b), the region is right of \\(x=-3\\), below \\(y=4\\), and above \\(y=x\\):\n\\[\nx\\geq-3\n\\]\n\n\\[\ny\\leq4\n\\]\n\n\\[\ny\\geq x\n\\]"
       }
     ],
@@ -35488,7 +35488,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved to Differentiation.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Differentiate",
         "body": "\\[\ny=x^3-16x+7\n\\]"
       },
       {
@@ -35500,15 +35500,15 @@ window.SOLUTION_DATA = {
         "body": "The gradient of the tangent is \\(11\\), so\n\n\\[\n3x^2-16=11\n\\]\n\n\\[\n3x^2=27\n\\]\n\n\\[\nx^2=9\n\\]\n\n\\[\nx=3 \\quad \\text{or} \\quad x=-3\n\\]"
       },
       {
-        "title": "When",
+        "title": "Differentiate",
         "body": "When \\(x=3\\):\n\n\\[\ny=3^3-16(3)+7=27-48+7=-14\n\\]"
       },
       {
-        "title": "The tangent has equation ,",
+        "title": "Use trigonometry",
         "body": "The tangent has equation \\(y=11x+b\\), so\n\n\\[\n-14=11(3)+b\n\\]\n\n\\[\nb=-47\n\\]"
       },
       {
-        "title": "When",
+        "title": "Differentiate",
         "body": "When \\(x=-3\\):\n\n\\[\ny=(-3)^3-16(-3)+7=-27+48+7=28\n\\]\n\n\\[\n28=11(-3)+b\n\\]\n\n\\[\nb=61\n\\]"
       }
     ],
@@ -35604,7 +35604,7 @@ window.SOLUTION_DATA = {
         "body": "The scale factor from the largest quadrilateral to the middle quadrilateral is\n\\[\n\\frac{7}{28}=\\frac14\n\\]"
       },
       {
-        "title": "So the side corresponding to",
+        "title": "Evaluate fraction",
         "body": "So the side corresponding to \\(60\\text{ cm}\\) in the middle shape is\n\\[\n60\\times \\frac14=15\n\\]"
       },
       {
@@ -35625,11 +35625,11 @@ window.SOLUTION_DATA = {
         "body": "Surface area ratio Q:P:\n\n\\[\n450:200=9:4\n\\]"
       },
       {
-        "title": "So the linear ratio Q",
+        "title": "Split the ratio",
         "body": "So the linear ratio Q:P is\n\n\\[\n3:2\n\\]"
       },
       {
-        "title": "Therefore the volume ratio Q",
+        "title": "Split the ratio",
         "body": "Therefore the volume ratio Q:P is\n\n\\[\n3^3:2^3=27:8\n\\]"
       },
       {
@@ -35654,7 +35654,7 @@ window.SOLUTION_DATA = {
         "body": "Use the area to find \\(AC\\):\n\n\\[\n\\frac12\\times 30\\times AC=240\n\\]\n\n\\[\n15AC=240\n\\]\n\n\\[\nAC=16\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Use trigonometry",
         "body": "Then\n\n\\[\nBC^2=30^2+16^2=1156\n\\]\n\n\\[\nBC=34\n\\]"
       },
       {
@@ -35671,27 +35671,27 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "For a histogram,",
+        "title": "Use histogram",
         "body": "For a histogram,\n\n\\[\n\\text{frequency}=\\text{class width}\\times \\text{frequency density}\n\\]"
       },
       {
-        "title": "For , the frequency is",
+        "title": "Use frequency table",
         "body": "For \\(10<t\\leq15\\), the frequency is 20 and the class width is 5, so\n\n\\[\n\\text{frequency density}=\\frac{20}{5}=4\n\\]"
       },
       {
-        "title": "Using this scale from the",
+        "title": "Use histogram",
         "body": "Using this scale from the histogram:\n\n\\[\n15<t\\leq30 \\quad \\text{has frequency density } 3\n\\]\n\n\\[\n30<t\\leq40 \\quad \\text{has frequency density } 1\n\\]\n\n\\[\n40<t\\leq60 \\quad \\text{has frequency density } 0.7\n\\]"
       },
       {
-        "title": "For trains at least 25",
+        "title": "Calculate value",
         "body": "For trains at least 25 minutes late:\n\n\\[\n(5)(3)+(10)(1)+(20)(0.7)\n\\]\n\n\\[\n=15+10+14\n\\]\n\n\\[\n=39\n\\]"
       }
     ],
     "finalAnswer": "\\(39\\) trains"
   },
   "all::Nov2025_P2H__Q14__p14-15__m05__Cumulative-Frequency-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
     "steps": [
@@ -35700,19 +35700,19 @@ window.SOLUTION_DATA = {
         "body": "There are \\(40\\) plants."
       },
       {
-        "title": "From the graph,",
+        "title": "Use cumulative frequency",
         "body": "From the graph,\n\n\\[\n\\text{median}\\approx 26\\text{ cm}\n\\]\n\n\\[\nQ_1\\approx 19\\text{ cm},\\qquad Q_3\\approx 35\\text{ cm}\n\\]\n\n\\[\n\\text{IQR}\\approx 35-19=16\\text{ cm}\n\\]"
       },
       {
-        "title": "For premium plants, use height",
+        "title": "Use cumulative frequency",
         "body": "For premium plants, use height \\(>40\\) cm.\n\n\\[\nF(40)\\approx 34\n\\]\n\n\\[\n40-34=6\n\\]\n\n\\[\n6\\times 30=180\n\\]"
       }
     ],
     "finalAnswer": "median about \\(26\\) cm, IQR about \\(16\\) cm, and \\(180\\) euros."
   },
   "all::Nov2025_P2H__Q09__p09-09__m03__Probability-Toolkit": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
@@ -35733,7 +35733,7 @@ window.SOLUTION_DATA = {
         "body": "red counters."
       },
       {
-        "title": "After combining the bags, the",
+        "title": "Calculate probability",
         "body": "After combining the bags, the total number of red counters is\n\n\\[\n54+24=78\n\\]"
       },
       {
@@ -35744,8 +35744,8 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(0.39\\)."
   },
   "all::Nov2025_P2H__Q18__p18-18__m03__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "missing",
-    "checkedBy": "",
+    "status": "needs-review",
+    "checkedBy": "Pending review",
     "updated": "2026-05-06T18:49:24",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
@@ -35754,11 +35754,11 @@ window.SOLUTION_DATA = {
         "body": "The total is \\(40\\)."
       },
       {
-        "title": "The regions shown add to",
+        "title": "Calculate probability",
         "body": "The regions shown add to\n\n\\[\n5+x+7+2x+4x+14\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate probability",
         "body": "So\n\n\\[\n26+7x=40\n\\]\n\n\\[\n7x=14\n\\]\n\n\\[\nx=2\n\\]"
       },
       {
@@ -35775,7 +35775,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Rounding, Estimation & Bounds is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Estimate the value",
         "body": "\\[\nD=\\frac{n}{p-q}\n\\]"
       },
       {
@@ -35791,7 +35791,7 @@ window.SOLUTION_DATA = {
         "body": "Upper bound:\n\n\\[\n\\frac{10.35}{7.235-4.395}=3.6443...\n\\]"
       },
       {
-        "title": "So . Both bounds round",
+        "title": "Estimate the value",
         "body": "So \\(3.5839... \\leq D < 3.6443...\\). Both bounds round to \\(3.6\\) to 1 decimal place."
       }
     ],
@@ -35804,7 +35804,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "For",
+        "title": "Calculate value",
         "body": "For\n\n\\[\nax^2+4x+c=0\n\\]"
       },
       {
@@ -35841,7 +35841,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate value",
         "body": "\\[\na=10\n\\]\n\n\\[\nu_{20}=86\n\\]\n\n\\[\n10+19d=86\n\\]\n\n\\[\nd=4\n\\]"
       },
       {
@@ -35858,7 +35858,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Moved to Differentiation.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Differentiate",
         "body": "\\[\ny=x^3-16x+7\n\\]"
       },
       {
@@ -35870,15 +35870,15 @@ window.SOLUTION_DATA = {
         "body": "The gradient of the tangent is \\(11\\), so\n\n\\[\n3x^2-16=11\n\\]\n\n\\[\n3x^2=27\n\\]\n\n\\[\nx^2=9\n\\]\n\n\\[\nx=3 \\quad \\text{or} \\quad x=-3\n\\]"
       },
       {
-        "title": "When",
+        "title": "Differentiate",
         "body": "When \\(x=3\\):\n\n\\[\ny=3^3-16(3)+7=27-48+7=-14\n\\]"
       },
       {
-        "title": "The tangent has equation ,",
+        "title": "Use trigonometry",
         "body": "The tangent has equation \\(y=11x+b\\), so\n\n\\[\n-14=11(3)+b\n\\]\n\n\\[\nb=-47\n\\]"
       },
       {
-        "title": "When",
+        "title": "Differentiate",
         "body": "When \\(x=-3\\):\n\n\\[\ny=(-3)^3-16(-3)+7=-27+48+7=28\n\\]\n\n\\[\n28=11(-3)+b\n\\]\n\n\\[\nb=61\n\\]"
       }
     ],
@@ -35936,11 +35936,11 @@ window.SOLUTION_DATA = {
         "body": "Surface area ratio Q:P:\n\n\\[\n450:200=9:4\n\\]"
       },
       {
-        "title": "So the linear ratio Q",
+        "title": "Split the ratio",
         "body": "So the linear ratio Q:P is\n\n\\[\n3:2\n\\]"
       },
       {
-        "title": "Therefore the volume ratio Q",
+        "title": "Split the ratio",
         "body": "Therefore the volume ratio Q:P is\n\n\\[\n3^3:2^3=27:8\n\\]"
       },
       {
@@ -35961,19 +35961,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Correct.",
     "steps": [
       {
-        "title": "For a histogram,",
+        "title": "Use histogram",
         "body": "For a histogram,\n\n\\[\n\\text{frequency}=\\text{class width}\\times \\text{frequency density}\n\\]"
       },
       {
-        "title": "For , the frequency is",
+        "title": "Use frequency table",
         "body": "For \\(10<t\\leq15\\), the frequency is 20 and the class width is 5, so\n\n\\[\n\\text{frequency density}=\\frac{20}{5}=4\n\\]"
       },
       {
-        "title": "Using this scale from the",
+        "title": "Use histogram",
         "body": "Using this scale from the histogram:\n\n\\[\n15<t\\leq30 \\quad \\text{has frequency density } 3\n\\]\n\n\\[\n30<t\\leq40 \\quad \\text{has frequency density } 1\n\\]\n\n\\[\n40<t\\leq60 \\quad \\text{has frequency density } 0.7\n\\]"
       },
       {
-        "title": "For trains at least 25",
+        "title": "Calculate value",
         "body": "For trains at least 25 minutes late:\n\n\\[\n(5)(3)+(10)(1)+(20)(0.7)\n\\]\n\n\\[\n=15+10+14\n\\]\n\n\\[\n=39\n\\]"
       }
     ],
@@ -35986,15 +35986,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Statistics Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "The mean is , so",
+        "title": "Calculate statistic",
         "body": "The mean is \\(12\\), so the total of the five numbers is\n\n\\[\n5 \\times 12 = 60\n\\]"
       },
       {
-        "title": "The known numbers add to",
+        "title": "Calculate value",
         "body": "The known numbers add to\n\n\\[\n15+7-2+23=43\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Calculate value",
         "body": "Therefore\n\n\\[\n43+x=60\n\\]\n\n\\[\nx=17\n\\]"
       }
     ],
@@ -36007,7 +36007,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Prime Factors, HCF & LCM. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Find the LCM",
         "body": "\\[\n56=2^3\\times 7,\\qquad 84=2^2\\times 3\\times 7\n\\]"
       },
       {
@@ -36015,11 +36015,11 @@ window.SOLUTION_DATA = {
         "body": "The common prime factors are \\(2^2\\) and \\(7\\), so\n\n\\[\n\\text{HCF}=2^2\\times 7=28\n\\]"
       },
       {
-        "title": "Also",
+        "title": "Find the LCM",
         "body": "Also\n\n\\[\n60=2^2\\times 3\\times 5,\\qquad 72=2^3\\times 3^2\n\\]"
       },
       {
-        "title": "Use the highest powers of",
+        "title": "Find the LCM",
         "body": "Use the highest powers of each prime:\n\n\\[\n\\text{LCM}=2^3\\times 3^2\\times 5=360\n\\]"
       }
     ],
@@ -36032,15 +36032,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic Roots & Indices. The tag is correct because the question uses index laws with letters.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use index laws",
         "body": "\\[\n4^n=(2^2)^n=2^{2n}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use index laws",
         "body": "So\n\n\\[\n\\frac{2^k}{4^n}=\\frac{2^k}{2^{2n}}=2^{k-2n}\n\\]"
       },
       {
-        "title": "Since this equals ,",
+        "title": "Use index laws",
         "body": "Since this equals \\(2^x\\),\n\n\\[\nx=k-2n\n\\]"
       }
     ],
@@ -36061,7 +36061,7 @@ window.SOLUTION_DATA = {
         "body": "The interior angle of polygon \\(B\\) is\n\n\\[\n7x=7(20)=140^\\circ\n\\]"
       },
       {
-        "title": "For a regular sided polygon,",
+        "title": "Find the gradient",
         "body": "For a regular \\(n\\)-sided polygon,\n\n\\[\n\\frac{180(n-2)}{n}=140\n\\]\n\n\\[\n180n-360=140n\n\\]\n\n\\[\n40n=360\n\\]\n\n\\[\nn=9\n\\]"
       }
     ],
@@ -36078,7 +36078,7 @@ window.SOLUTION_DATA = {
         "body": "Draw the three boundary lines:\n\n\\[\ny=1,\\qquad x=2,\\qquad x+y=7\n\\]"
       },
       {
-        "title": "For , use points such",
+        "title": "Read the graph",
         "body": "For \\(x+y=7\\), use points such as \\((0,7)\\) and \\((7,0)\\)."
       },
       {
@@ -36086,7 +36086,7 @@ window.SOLUTION_DATA = {
         "body": "The required region is:\n\n\\[\ny\\ge 1,\\qquad x\\ge 2,\\qquad x+y\\le 7\n\\]"
       },
       {
-        "title": "So shade the triangular region",
+        "title": "Read the graph",
         "body": "So shade the triangular region above \\(y=1\\), to the right of \\(x=2\\), and below the line \\(x+y=7\\). Its vertices are\n\n\\[\n(2,1),\\quad (2,5),\\quad (6,1)\n\\]"
       }
     ],
@@ -36099,19 +36099,19 @@ window.SOLUTION_DATA = {
     "topicNote": "Statistics Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "The mode is , and",
+        "title": "Calculate statistic",
         "body": "The mode is \\(9\\), and \\(d\\) appears three times, so\n\n\\[\nd=9\n\\]"
       },
       {
-        "title": "The range is , so",
+        "title": "Calculate statistic",
         "body": "The range is \\(4\\), so\n\n\\[\nd-a=4\n\\]\n\n\\[\n9-a=4\n\\]\n\n\\[\na=5\n\\]"
       },
       {
-        "title": "There are six values, so",
+        "title": "Calculate statistic",
         "body": "There are six values, so the median is the mean of the 3rd and 4th values:\n\n\\[\n\\frac{c+d}{2}=8\n\\]\n\n\\[\n\\frac{c+9}{2}=8\n\\]\n\n\\[\nc=7\n\\]"
       },
       {
-        "title": "Since , the remaining integer",
+        "title": "Solve inequality",
         "body": "Since \\(a<b<c<d\\), the remaining integer is \\(b=6\\)."
       }
     ],
@@ -36124,11 +36124,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Standard & Compound Units. The pressure formula is the key signal, with volume used at the end.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate area",
         "body": "\\[\n\\text{pressure}=\\frac{\\text{force}}{\\text{area}}\n\\]"
       },
       {
-        "title": "So the area of the",
+        "title": "Calculate area",
         "body": "So the area of the base is\n\n\\[\n\\text{area}=\\frac{72}{1.4}=51.428571\\ldots\n\\]"
       },
       {
@@ -36136,7 +36136,7 @@ window.SOLUTION_DATA = {
         "body": "The volume is\n\n\\[\n51.428571\\ldots \\times 18=925.714285\\ldots\n\\]"
       },
       {
-        "title": "Correct to 3 significant figures,",
+        "title": "Calculate volume",
         "body": "Correct to 3 significant figures,\n\n\\[\n925.714\\ldots \\approx 926\n\\]"
       }
     ],
@@ -36149,15 +36149,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Compound Interest & Depreciation. The tag is correct.",
     "steps": [
       {
-        "title": "For part (a), the 2021",
+        "title": "Use compound interest",
         "body": "For part (a), the 2021 value is \\(104\\%\\) of the 2020 value.\n\n\\[\n\\text{2020 value}=\\frac{634400}{1.04}=610000\n\\]"
       },
       {
-        "title": "For part (b), after one",
+        "title": "Use compound interest",
         "body": "For part (b), after one year the multiplier is \\(0.85\\). After two years:\n\n\\[\n0.85^2=0.7225\n\\]"
       },
       {
-        "title": "So of the value remains,",
+        "title": "Use compound interest",
         "body": "So \\(72.25\\%\\) of the value remains, and the total depreciation is\n\n\\[\n100\\%-72.25\\%=27.75\\%\n\\]"
       }
     ],
@@ -36170,11 +36170,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Powers, Roots & Standard Form. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Convert standard form",
         "body": "\\[\n0.000089=8.9\\times 10^{-5}\n\\]"
       },
       {
-        "title": "Also",
+        "title": "Convert standard form",
         "body": "Also\n\n\\[\n8.34\\times 10^4=83400\n\\]"
       }
     ],
@@ -36195,7 +36195,7 @@ window.SOLUTION_DATA = {
         "body": "Each part is\n\n\\[\n300\\div 15=20\n\\]"
       },
       {
-        "title": "So the numbers of cards",
+        "title": "Split the ratio",
         "body": "So the numbers of cards are:\n\n\\[\n140,\\quad 100,\\quad 60\n\\]"
       },
       {
@@ -36207,7 +36207,7 @@ window.SOLUTION_DATA = {
         "body": "The anniversary cards with numbers are\n\n\\[\n36\\%\\times 100=36\n\\]"
       },
       {
-        "title": "So the total with numbers",
+        "title": "Split the ratio",
         "body": "So the total with numbers is\n\n\\[\n56+36=92\n\\]"
       },
       {
@@ -36224,15 +36224,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Simultaneous Equations. The tag is correct.",
     "steps": [
       {
-        "title": "From",
+        "title": "Solve simultaneous equations",
         "body": "From\n\n\\[\n3x-y=7\n\\]\n\n\\[\ny=3x-7\n\\]"
       },
       {
-        "title": "Substitute into",
+        "title": "Solve simultaneous equations",
         "body": "Substitute into \\(7x+3y=3\\):\n\n\\[\n7x+3(3x-7)=3\n\\]\n\n\\[\n16x-21=3\n\\]\n\n\\[\n16x=24\n\\]\n\n\\[\nx=1.5\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Solve simultaneous equations",
         "body": "Then\n\n\\[\ny=3(1.5)-7=-2.5\n\\]"
       }
     ],
@@ -36245,11 +36245,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Percentages. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Calculate percentage",
         "body": "\\[\n\\frac25=40\\%\n\\]"
       },
       {
-        "title": "So Payments 1 and 2",
+        "title": "Calculate percentage",
         "body": "So Payments 1 and 2 together are\n\n\\[\n40\\%+45\\%=85\\%\n\\]"
       },
       {
@@ -36257,7 +36257,7 @@ window.SOLUTION_DATA = {
         "body": "This means Payment 3 is\n\n\\[\n100\\%-85\\%=15\\%\n\\]"
       },
       {
-        "title": "So",
+        "title": "Calculate percentage",
         "body": "So\n\n\\[\n15\\%=405\n\\]\n\n\\[\n1\\%=27\n\\]"
       },
       {
@@ -36274,15 +36274,15 @@ window.SOLUTION_DATA = {
     "topicNote": "Functions. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Evaluate fraction",
         "body": "\\[\nf(10)=\\frac{2(10)}{10-6}=\\frac{20}{4}=5\n\\]"
       },
       {
-        "title": "For the inverse, let",
+        "title": "Let",
         "body": "For the inverse, let\n\n\\[\ny=\\frac{2x}{x-6}\n\\]\n\n\\[\ny(x-6)=2x\n\\]\n\n\\[\nxy-6y=2x\n\\]\n\n\\[\nx(y-2)=6y\n\\]\n\n\\[\nx=\\frac{6y}{y-2}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Evaluate fraction",
         "body": "So\n\n\\[\nf^{-1}:x\\mapsto \\frac{6x}{x-2}\n\\]"
       }
     ],
@@ -36295,7 +36295,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Circle Theorems. The tag is correct.",
     "steps": [
       {
-        "title": "In cyclic quadrilateral , opposite",
+        "title": "Use trigonometry",
         "body": "In cyclic quadrilateral \\(A D C B\\), opposite angles add to \\(180^\\circ\\).\n\n\\[\n\\angle DCB=180^\\circ-40^\\circ=140^\\circ\n\\]"
       },
       {
@@ -36303,11 +36303,11 @@ window.SOLUTION_DATA = {
         "body": "Reason: opposite angles in a cyclic quadrilateral add to \\(180^\\circ\\)."
       },
       {
-        "title": "By the alternate segment theorem,",
+        "title": "Use trigonometry",
         "body": "By the alternate segment theorem,\n\n\\[\n\\angle ADB=66^\\circ\n\\]"
       },
       {
-        "title": "In triangle ,",
+        "title": "Use trigonometry",
         "body": "In triangle \\(ADB\\),\n\n\\[\n\\angle ABD=180^\\circ-40^\\circ-66^\\circ=74^\\circ\n\\]"
       },
       {
@@ -36315,7 +36315,7 @@ window.SOLUTION_DATA = {
         "body": "The angle at the centre is twice the angle at the circumference standing on the same chord \\(AD\\):\n\n\\[\n\\angle AOD=2(74^\\circ)=148^\\circ\n\\]"
       },
       {
-        "title": "Since , triangle is isosceles",
+        "title": "Use trigonometry",
         "body": "Since \\(OA=OD\\), triangle \\(AOD\\) is isosceles:\n\n\\[\n\\angle ADO=\\frac{180^\\circ-148^\\circ}{2}=16^\\circ\n\\]"
       }
     ],
@@ -36332,27 +36332,27 @@ window.SOLUTION_DATA = {
         "body": "Plot the cumulative frequency points and join with a smooth increasing curve:\n\n\\[\n(10,0),\\ (20,13),\\ (30,36),\\ (40,42),\\ (50,47),\\ (60,52),\\ (70,56),\\ (80,60)\n\\]"
       },
       {
-        "title": "There are people, so the",
+        "title": "Use cumulative frequency",
         "body": "There are \\(60\\) people, so the median is read at cumulative frequency \\(30\\)."
       },
       {
-        "title": "Using linear interpolation between and",
+        "title": "Convert standard form",
         "body": "Using linear interpolation between \\((20,13)\\) and \\((30,36)\\):\n\n\\[\n20+\\frac{30-13}{36-13}\\times 10 \\approx 27.4\n\\]"
       },
       {
-        "title": "So the median is about",
+        "title": "Use cumulative frequency",
         "body": "So the median is about \\(27\\) years."
       },
       {
-        "title": "For the interquartile range, read",
+        "title": "Use cumulative frequency",
         "body": "For the interquartile range, read \\(Q_1\\) at cumulative frequency \\(15\\) and \\(Q_3\\) at cumulative frequency \\(45\\):\n\n\\[\nQ_1 \\approx 20.9,\\qquad Q_3 \\approx 46\n\\]\n\n\\[\n\\text{IQR}\\approx 46-20.9=25.1\n\\]"
       },
       {
-        "title": "So the IQR is about",
+        "title": "Use cumulative frequency",
         "body": "So the IQR is about \\(25\\) years."
       },
       {
-        "title": "At age , the cumulative",
+        "title": "Use cumulative frequency",
         "body": "At age \\(55\\), the cumulative frequency is about \\(49.5\\), so the number older than \\(55\\) is\n\n\\[\n60-49.5\\approx 10.5\n\\]"
       },
       {
@@ -36369,7 +36369,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Direct & Inverse Proportion. The tag is correct.",
     "steps": [
       {
-        "title": "Since is directly proportional to",
+        "title": "Find inverse function",
         "body": "Since \\(M\\) is directly proportional to \\(h^3\\),\n\n\\[\nM=kh^3\n\\]"
       },
       {
@@ -36377,7 +36377,7 @@ window.SOLUTION_DATA = {
         "body": "Use \\(M=4\\) when \\(h=0.5\\):\n\n\\[\n4=k(0.5)^3\n\\]\n\n\\[\n4=0.125k\n\\]\n\n\\[\nk=32\n\\]"
       },
       {
-        "title": "Now use",
+        "title": "Use",
         "body": "Now use \\(M=500\\):\n\n\\[\n500=32h^3\n\\]\n\n\\[\nh^3=15.625\n\\]\n\n\\[\nh=2.5\n\\]"
       }
     ],
@@ -36390,7 +36390,7 @@ window.SOLUTION_DATA = {
     "topicNote": "Differentiation. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Differentiate",
         "body": "\\[\ns=4t^2+\\frac{125}{t}\n\\]"
       },
       {
@@ -36402,7 +36402,7 @@ window.SOLUTION_DATA = {
         "body": "Set \\(v=0\\):\n\n\\[\n8t-\\frac{125}{t^2}=0\n\\]\n\n\\[\n8t^3=125\n\\]\n\n\\[\nt^3=\\frac{125}{8}\n\\]\n\n\\[\nt=2.5\n\\]"
       },
       {
-        "title": "Now find",
+        "title": "Differentiate",
         "body": "Now find \\(s\\):\n\n\\[\ns=4(2.5)^2+\\frac{125}{2.5}\n\\]\n\n\\[\ns=25+50=75\n\\]"
       }
     ],
@@ -36419,7 +36419,7 @@ window.SOLUTION_DATA = {
         "body": "Factorise:\n\n\\[\n2y^2-7y-30=(2y+5)(y-6)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Solve inequality",
         "body": "So\n\n\\[\n(2y+5)(y-6)\\le 0\n\\]"
       },
       {
@@ -36427,7 +36427,7 @@ window.SOLUTION_DATA = {
         "body": "The roots are\n\n\\[\ny=-\\frac52,\\qquad y=6\n\\]"
       },
       {
-        "title": "The quadratic opens upwards, so",
+        "title": "Solve quadratic equation",
         "body": "The quadratic opens upwards, so it is less than or equal to zero between the roots."
       }
     ],
@@ -36444,7 +36444,7 @@ window.SOLUTION_DATA = {
         "body": "The volume of statue \\(B\\) is \\(80\\%\\) of the volume of statue \\(A\\), so the volume scale factor is\n\n\\[\n0.8\n\\]"
       },
       {
-        "title": "For similar solids",
+        "title": "Calculate area",
         "body": "For similar solids:\n\n\\[\n\\text{linear scale factor}=\\sqrt[3]{0.8}\n\\]"
       },
       {
@@ -36452,11 +36452,11 @@ window.SOLUTION_DATA = {
         "body": "The surface area scale factor is therefore\n\n\\[\n\\left(\\sqrt[3]{0.8}\\right)^2=0.8^{2/3}\n\\]\n\n\\[\n0.8^{2/3}=0.861773\\ldots\n\\]"
       },
       {
-        "title": "So the percentage decrease in",
+        "title": "Convert standard form",
         "body": "So the percentage decrease in surface area is\n\n\\[\n(1-0.861773\\ldots)\\times 100=13.8226\\ldots\n\\]"
       },
       {
-        "title": "Correct to 3 significant figures,",
+        "title": "Calculate area",
         "body": "Correct to 3 significant figures,\n\n\\[\nk=13.8\n\\]"
       }
     ],
@@ -36469,23 +36469,23 @@ window.SOLUTION_DATA = {
     "topicNote": "Simultaneous Equations. The tag is correct; this is a linear and quadratic simultaneous equation.",
     "steps": [
       {
-        "title": "From",
+        "title": "Solve simultaneous equations",
         "body": "From\n\n\\[\nx-2y=3\n\\]\n\n\\[\nx=2y+3\n\\]"
       },
       {
-        "title": "Substitute into",
+        "title": "Solve simultaneous equations",
         "body": "Substitute into \\(x^2-y^2+2x=10\\):\n\n\\[\n(2y+3)^2-y^2+2(2y+3)=10\n\\]\n\n\\[\n4y^2+12y+9-y^2+4y+6=10\n\\]\n\n\\[\n3y^2+16y+5=0\n\\]\n\n\\[\n(3y+1)(y+5)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Solve simultaneous equations",
         "body": "So\n\n\\[\ny=-\\frac13\\quad\\text{or}\\quad y=-5\n\\]"
       },
       {
-        "title": "If ,",
+        "title": "Solve simultaneous equations",
         "body": "If \\(y=-\\frac13\\),\n\n\\[\nx=2\\left(-\\frac13\\right)+3=\\frac73\n\\]"
       },
       {
-        "title": "If ,",
+        "title": "Solve simultaneous equations",
         "body": "If \\(y=-5\\),\n\n\\[\nx=2(-5)+3=-7\n\\]"
       }
     ],
@@ -36498,11 +36498,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic Fractions. The tag is correct because the task is substitution and simplification of algebraic fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify fraction",
         "body": "\\[\na=\\frac{14}{3x-7},\\qquad x=\\frac{7}{4y-3}\n\\]"
       },
       {
-        "title": "Substitute for",
+        "title": "Simplify fraction",
         "body": "Substitute for \\(x\\):\n\n\\[\na=\\frac{14}{3\\left(\\frac{7}{4y-3}\\right)-7}\n\\]"
       },
       {
@@ -36510,7 +36510,7 @@ window.SOLUTION_DATA = {
         "body": "Simplify the denominator:\n\n\\[\n3\\left(\\frac{7}{4y-3}\\right)-7\n=\\frac{21}{4y-3}-7\n\\]\n\n\\[\n=\\frac{21-7(4y-3)}{4y-3}\n=\\frac{42-28y}{4y-3}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify fraction",
         "body": "So\n\n\\[\na=\\frac{14}{\\frac{42-28y}{4y-3}}\n=\\frac{14(4y-3)}{42-28y}\n\\]\n\n\\[\na=\\frac{4y-3}{3-2y}\n\\]"
       }
     ],
@@ -36523,11 +36523,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Volume & Surface Area. The tag is correct.",
     "steps": [
       {
-        "title": "The curved surface area of",
+        "title": "Calculate surface area",
         "body": "The curved surface area of a cone is\n\n\\[\n\\pi r l\n\\]"
       },
       {
-        "title": "Here and , so",
+        "title": "Calculate area",
         "body": "Here \\(r=20\\) and \\(\\pi r l=580\\pi\\), so\n\n\\[\n20l=580\n\\]\n\n\\[\nl=29\n\\]"
       },
       {
@@ -36547,7 +36547,7 @@ window.SOLUTION_DATA = {
         "body": "Total volume:\n\n\\[\n2800\\pi+\\frac{16000}{3}\\pi\n=\\frac{24400}{3}\\pi\n\\]"
       },
       {
-        "title": "Since the volume is ,",
+        "title": "Calculate area",
         "body": "Since the volume is \\(k\\pi\\),\n\n\\[\nk=\\frac{24400}{3}\n\\]"
       }
     ],
@@ -36560,35 +36560,35 @@ window.SOLUTION_DATA = {
     "topicNote": "Vectors. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use vectors",
         "body": "\\[\n\\overrightarrow{OA}=4a,\\qquad \\overrightarrow{OB}=6b,\\qquad \\overrightarrow{AP}=2a+8b\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use vectors",
         "body": "So\n\n\\[\n\\overrightarrow{OP}=\\overrightarrow{OA}+\\overrightarrow{AP}\n\\]\n\n\\[\n\\overrightarrow{OP}=4a+(2a+8b)=6a+8b\n\\]"
       },
       {
-        "title": "Since are collinear, let",
+        "title": "Use vectors",
         "body": "Since \\(O,Q,P\\) are collinear, let\n\n\\[\n\\overrightarrow{OQ}=\\lambda(6a+8b)\n\\]"
       },
       {
-        "title": "Also lies on . Let",
+        "title": "Use vectors",
         "body": "Also \\(Q\\) lies on \\(AB\\). Let\n\n\\[\n\\overrightarrow{AQ}=\\mu\\overrightarrow{AB}\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Use vectors",
         "body": "Then\n\n\\[\n\\overrightarrow{AB}=6b-4a\n\\]\n\n\\[\n\\overrightarrow{OQ}=4a+\\mu(6b-4a)\n\\]\n\n\\[\n\\overrightarrow{OQ}=(4-4\\mu)a+6\\mu b\n\\]"
       },
       {
-        "title": "Compare coefficients with",
+        "title": "Use vectors",
         "body": "Compare coefficients with\n\n\\[\n\\lambda(6a+8b)=6\\lambda a+8\\lambda b\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use vectors",
         "body": "So\n\n\\[\n4-4\\mu=6\\lambda,\\qquad 6\\mu=8\\lambda\n\\]"
       },
       {
-        "title": "From ,",
+        "title": "Use vectors",
         "body": "From \\(6\\mu=8\\lambda\\),\n\n\\[\n\\lambda=\\frac34\\mu\n\\]"
       },
       {
@@ -36596,7 +36596,7 @@ window.SOLUTION_DATA = {
         "body": "Substitute:\n\n\\[\n4-4\\mu=6\\left(\\frac34\\mu\\right)\n\\]\n\n\\[\n4-4\\mu=\\frac92\\mu\n\\]\n\n\\[\n8=17\\mu\n\\]\n\n\\[\n\\mu=\\frac8{17}\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Use vectors",
         "body": "Therefore\n\n\\[\nAQ:QB=\\frac8{17}:\\frac9{17}=8:9\n\\]"
       }
     ],
@@ -36613,11 +36613,11 @@ window.SOLUTION_DATA = {
         "body": "Let the first term be \\(a\\) and the common difference be \\(d\\).\n\n\\[\nS_n=\\frac n2(2a+(n-1)d)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Find the nth term",
         "body": "So\n\n\\[\nS_{10}=5(2a+9d)\n\\]"
       },
       {
-        "title": "and",
+        "title": "Find the nth term",
         "body": "and\n\n\\[\nS_5=\\frac52(2a+4d)\n\\]"
       },
       {
@@ -36642,23 +36642,23 @@ window.SOLUTION_DATA = {
     "topicNote": "Simultaneous Equations. The tag is correct; this is a linear and quadratic simultaneous equation.",
     "steps": [
       {
-        "title": "From",
+        "title": "Solve simultaneous equations",
         "body": "From\n\n\\[\nx-2y=3\n\\]\n\n\\[\nx=2y+3\n\\]"
       },
       {
-        "title": "Substitute into",
+        "title": "Solve simultaneous equations",
         "body": "Substitute into \\(x^2-y^2+2x=10\\):\n\n\\[\n(2y+3)^2-y^2+2(2y+3)=10\n\\]\n\n\\[\n4y^2+12y+9-y^2+4y+6=10\n\\]\n\n\\[\n3y^2+16y+5=0\n\\]\n\n\\[\n(3y+1)(y+5)=0\n\\]"
       },
       {
-        "title": "So",
+        "title": "Solve simultaneous equations",
         "body": "So\n\n\\[\ny=-\\frac13\\quad\\text{or}\\quad y=-5\n\\]"
       },
       {
-        "title": "If ,",
+        "title": "Solve simultaneous equations",
         "body": "If \\(y=-\\frac13\\),\n\n\\[\nx=2\\left(-\\frac13\\right)+3=\\frac73\n\\]"
       },
       {
-        "title": "If ,",
+        "title": "Solve simultaneous equations",
         "body": "If \\(y=-5\\),\n\n\\[\nx=2(-5)+3=-7\n\\]"
       }
     ],
@@ -36671,11 +36671,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Algebraic Fractions. The tag is correct because the task is substitution and simplification of algebraic fractions.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Simplify fraction",
         "body": "\\[\na=\\frac{14}{3x-7},\\qquad x=\\frac{7}{4y-3}\n\\]"
       },
       {
-        "title": "Substitute for",
+        "title": "Simplify fraction",
         "body": "Substitute for \\(x\\):\n\n\\[\na=\\frac{14}{3\\left(\\frac{7}{4y-3}\\right)-7}\n\\]"
       },
       {
@@ -36683,7 +36683,7 @@ window.SOLUTION_DATA = {
         "body": "Simplify the denominator:\n\n\\[\n3\\left(\\frac{7}{4y-3}\\right)-7\n=\\frac{21}{4y-3}-7\n\\]\n\n\\[\n=\\frac{21-7(4y-3)}{4y-3}\n=\\frac{42-28y}{4y-3}\n\\]"
       },
       {
-        "title": "So",
+        "title": "Simplify fraction",
         "body": "So\n\n\\[\na=\\frac{14}{\\frac{42-28y}{4y-3}}\n=\\frac{14(4y-3)}{42-28y}\n\\]\n\n\\[\na=\\frac{4y-3}{3-2y}\n\\]"
       }
     ],
@@ -36696,11 +36696,11 @@ window.SOLUTION_DATA = {
     "topicNote": "Volume & Surface Area. The tag is correct.",
     "steps": [
       {
-        "title": "The curved surface area of",
+        "title": "Calculate surface area",
         "body": "The curved surface area of a cone is\n\n\\[\n\\pi r l\n\\]"
       },
       {
-        "title": "Here and , so",
+        "title": "Calculate area",
         "body": "Here \\(r=20\\) and \\(\\pi r l=580\\pi\\), so\n\n\\[\n20l=580\n\\]\n\n\\[\nl=29\n\\]"
       },
       {
@@ -36720,7 +36720,7 @@ window.SOLUTION_DATA = {
         "body": "Total volume:\n\n\\[\n2800\\pi+\\frac{16000}{3}\\pi\n=\\frac{24400}{3}\\pi\n\\]"
       },
       {
-        "title": "Since the volume is ,",
+        "title": "Calculate area",
         "body": "Since the volume is \\(k\\pi\\),\n\n\\[\nk=\\frac{24400}{3}\n\\]"
       }
     ],
@@ -36733,35 +36733,35 @@ window.SOLUTION_DATA = {
     "topicNote": "Vectors. The tag is correct.",
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Use vectors",
         "body": "\\[\n\\overrightarrow{OA}=4a,\\qquad \\overrightarrow{OB}=6b,\\qquad \\overrightarrow{AP}=2a+8b\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use vectors",
         "body": "So\n\n\\[\n\\overrightarrow{OP}=\\overrightarrow{OA}+\\overrightarrow{AP}\n\\]\n\n\\[\n\\overrightarrow{OP}=4a+(2a+8b)=6a+8b\n\\]"
       },
       {
-        "title": "Since are collinear, let",
+        "title": "Use vectors",
         "body": "Since \\(O,Q,P\\) are collinear, let\n\n\\[\n\\overrightarrow{OQ}=\\lambda(6a+8b)\n\\]"
       },
       {
-        "title": "Also lies on . Let",
+        "title": "Use vectors",
         "body": "Also \\(Q\\) lies on \\(AB\\). Let\n\n\\[\n\\overrightarrow{AQ}=\\mu\\overrightarrow{AB}\n\\]"
       },
       {
-        "title": "Then",
+        "title": "Use vectors",
         "body": "Then\n\n\\[\n\\overrightarrow{AB}=6b-4a\n\\]\n\n\\[\n\\overrightarrow{OQ}=4a+\\mu(6b-4a)\n\\]\n\n\\[\n\\overrightarrow{OQ}=(4-4\\mu)a+6\\mu b\n\\]"
       },
       {
-        "title": "Compare coefficients with",
+        "title": "Use vectors",
         "body": "Compare coefficients with\n\n\\[\n\\lambda(6a+8b)=6\\lambda a+8\\lambda b\n\\]"
       },
       {
-        "title": "So",
+        "title": "Use vectors",
         "body": "So\n\n\\[\n4-4\\mu=6\\lambda,\\qquad 6\\mu=8\\lambda\n\\]"
       },
       {
-        "title": "From ,",
+        "title": "Use vectors",
         "body": "From \\(6\\mu=8\\lambda\\),\n\n\\[\n\\lambda=\\frac34\\mu\n\\]"
       },
       {
@@ -36769,7 +36769,7 @@ window.SOLUTION_DATA = {
         "body": "Substitute:\n\n\\[\n4-4\\mu=6\\left(\\frac34\\mu\\right)\n\\]\n\n\\[\n4-4\\mu=\\frac92\\mu\n\\]\n\n\\[\n8=17\\mu\n\\]\n\n\\[\n\\mu=\\frac8{17}\n\\]"
       },
       {
-        "title": "Therefore",
+        "title": "Use vectors",
         "body": "Therefore\n\n\\[\nAQ:QB=\\frac8{17}:\\frac9{17}=8:9\n\\]"
       }
     ],
@@ -36786,11 +36786,11 @@ window.SOLUTION_DATA = {
         "body": "Let the first term be \\(a\\) and the common difference be \\(d\\).\n\n\\[\nS_n=\\frac n2(2a+(n-1)d)\n\\]"
       },
       {
-        "title": "So",
+        "title": "Find the nth term",
         "body": "So\n\n\\[\nS_{10}=5(2a+9d)\n\\]"
       },
       {
-        "title": "and",
+        "title": "Find the nth term",
         "body": "and\n\n\\[\nS_5=\\frac52(2a+4d)\n\\]"
       },
       {

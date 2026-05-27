@@ -8,11 +8,11 @@
       "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Find the LCM",
           "body": "\\[\n3.6\\times 10^3=3600\n\\]\n\n\\[\n3600=36\\times 100\n\\]\n\n\\[\n36=2^2\\times 3^2,\\qquad 100=2^2\\times 5^2\n\\]"
         },
         {
-          "title": "So",
+          "title": "Find the LCM",
           "body": "So\n\n\\[\n3600=2^4\\times 3^2\\times 5^2\n\\]"
         }
       ],
@@ -25,11 +25,11 @@
       "topicNote": "Percentages. The tag is correct.",
       "steps": [
         {
-          "title": "Sydney s population was of",
+          "title": "Calculate percentage",
           "body": "Sydney's population was \\(22\\%\\) of Australia's total population.\n\n\\[\n0.22\\times \\text{total}=5.48\n\\]\n\n\\[\n\\text{total}=\\frac{5.48}{0.22}=24.909\\ldots\n\\]"
         },
         {
-          "title": "Correct to 3 significant figures,",
+          "title": "Calculate percentage",
           "body": "Correct to 3 significant figures,\n\n\\[\n24.909\\ldots\\approx 24.9\n\\]"
         }
       ],
@@ -46,11 +46,11 @@
           "body": "Let\n\n\\[\ny=0.4\\dot{x}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Simplify fraction",
           "body": "So\n\n\\[\ny=0.4xxx\\ldots\n\\]"
         },
         {
-          "title": "Multiply by and",
+          "title": "Simplify fraction",
           "body": "Multiply by \\(10\\) and \\(100\\):\n\n\\[\n10y=4.xxx\\ldots\n\\]\n\n\\[\n100y=4x.xxx\\ldots\n\\]"
         },
         {
@@ -58,7 +58,7 @@
           "body": "Subtract:\n\n\\[\n100y-10y=(4x.xxx\\ldots)-(4.xxx\\ldots)\n\\]\n\n\\[\n90y=x+36\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Simplify fraction",
           "body": "Therefore\n\n\\[\ny=\\frac{x+36}{90}\n\\]"
         }
       ],
@@ -71,15 +71,15 @@
       "topicNote": "Rounding, Estimation and Bounds. The tag is correct; sine rule is used inside the bounds calculation.",
       "steps": [
         {
-          "title": "Using the sine rule,",
+          "title": "Use trigonometry",
           "body": "Using the sine rule,\n\n\\[\n\\frac{YZ}{\\sin X}=\\frac{XZ}{\\sin Y}\n\\]"
         },
         {
-          "title": "For the upper bound of",
+          "title": "Find upper bound",
           "body": "For the upper bound of \\(YZ\\):\n\n\\[\nXZ<16.5,\\quad X<25.5^\\circ,\\quad Y<135^\\circ\n\\]\n\n\\[\nYZ_{\\text{upper}}=\\frac{16.5\\sin 25.5^\\circ}{\\sin 135^\\circ}=10.0457\\ldots\n\\]"
         },
         {
-          "title": "Correct to one decimal place,",
+          "title": "Use trigonometry",
           "body": "Correct to one decimal place,\n\n\\[\n10.0457\\ldots\\approx 10.0\n\\]"
         }
       ],
@@ -130,11 +130,11 @@
       "topicNote": "Algebraic proof. The tag is acceptable because the question asks to prove the formula before using it.",
       "steps": [
         {
-          "title": "The perimeter is made from",
+          "title": "Rearrange formula",
           "body": "The perimeter is made from three sides of length \\(x\\) and two sides of length \\(y\\):\n\\[\n3x+2y=100\n\\]"
         },
         {
-          "title": "So",
+          "title": "Rearrange formula",
           "body": "So\n\\[\ny=\\frac{100-3x}{2}\n\\]"
         },
         {
@@ -146,7 +146,7 @@
           "body": "Substitute \\(y=\\dfrac{100-3x}{2}\\):\n\\[\nR=x\\left(\\frac{100-3x}{2}\\right)+\\frac{\\sqrt3}{4}x^2\n\\]\n\n\\[\nR=50x-\\frac32x^2+\\frac{\\sqrt3}{4}x^2\n\\]\n\n\\[\nR=\\frac{x}{4}\\left(200-(6-\\sqrt3)x\\right)\n\\]"
         },
         {
-          "title": "For the maximum, write",
+          "title": "Rearrange formula",
           "body": "For the maximum, write\n\\[\nR=-\\frac{6-\\sqrt3}{4}x^2+50x\n\\]"
         },
         {
@@ -154,7 +154,7 @@
           "body": "The maximum occurs at\n\\[\nx=\\frac{-b}{2a}=\\frac{-50}{2\\left(-\\frac{6-\\sqrt3}{4}\\right)}\n\\]\n\n\\[\nx=\\frac{100}{6-\\sqrt3}\n\\]"
         },
         {
-          "title": "The coefficient of is negative,",
+          "title": "Solve quadratic equation",
           "body": "The coefficient of \\(x^2\\) is negative, so the quadratic graph opens downwards and this vertex gives a maximum."
         }
       ],
@@ -167,7 +167,7 @@
       "topicNote": "Solving inequalities. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve inequality",
           "body": "\\[\n-7\\le2x-3<5\n\\]"
         },
         {
@@ -179,7 +179,7 @@
           "body": "Divide by 2:\n\\[\n-2\\le x<4\n\\]"
         },
         {
-          "title": "On the number line, use",
+          "title": "Use a closed circle",
           "body": "On the number line, use a closed circle at \\(-2\\), an open circle at \\(4\\), and shade between them."
         }
       ],
@@ -192,7 +192,7 @@
       "topicNote": "Corrected to Simultaneous Equations.",
       "steps": [
         {
-          "title": "Let be the cost of",
+          "title": "Solve simultaneous equations",
           "body": "Let \\(a\\) be the cost of one apple and \\(p\\) be the cost of one pear.\n\n\\[\n5a+3p=1.96\n\\]\n\n\\[\n3a+2p=1.22\n\\]"
         },
         {
@@ -208,11 +208,11 @@
           "body": "Subtract:\n\n\\[\na=0.26\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Solve simultaneous equations",
           "body": "Then\n\n\\[\n3(0.26)+2p=1.22\n\\]\n\n\\[\n2p=0.44\n\\]\n\n\\[\np=0.22\n\\]"
         },
         {
-          "title": "Michael buys 10 apples and",
+          "title": "Solve simultaneous equations",
           "body": "Michael buys 10 apples and 10 pears:\n\n\\[\n10(0.26)+10(0.22)=4.80\n\\]"
         }
       ],
@@ -229,7 +229,7 @@
           "body": "The top row has 5 tile widths and the bottom row has 4 tile lengths, so\n\n\\[\n5W=4L\n\\]\n\n\\[\nL=\\frac54W\n\\]"
         },
         {
-          "title": "The rectangle has width and",
+          "title": "Use trigonometry",
           "body": "The rectangle has width \\(5W\\) and height \\(L+W\\):\n\n\\[\n5W(L+W)=1620\n\\]"
         },
         {
@@ -246,7 +246,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nA=(-6,2),\\qquad B=(5,3)\n\\]"
         },
         {
@@ -258,23 +258,23 @@
           "body": "The gradient of \\(AB\\) is\n\n\\[\n\\frac{3-2}{5-(-6)}=\\frac1{11}\n\\]"
         },
         {
-          "title": "So the perpendicular gradient is",
+          "title": "Find the gradient",
           "body": "So the perpendicular gradient is\n\n\\[\n-11\n\\]"
         },
         {
-          "title": "Line passes through , so",
+          "title": "Evaluate fraction",
           "body": "Line \\(M\\) passes through \\(\\left(-\\frac12,\\frac52\\right)\\), so\n\n\\[\ny-\\frac52=-11\\left(x+\\frac12\\right)\n\\]"
         },
         {
-          "title": "At point ,",
+          "title": "Evaluate fraction",
           "body": "At point \\(C\\), \\(x=-1\\):\n\n\\[\ny-\\frac52=-11\\left(-\\frac12\\right)\n\\]\n\n\\[\ny-\\frac52=\\frac{11}{2}\n\\]\n\n\\[\ny=8\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\nC=(-1,8)\n\\]"
         },
         {
-          "title": "Now use vectors from",
+          "title": "Use vectors",
           "body": "Now use vectors from \\(A\\):\n\n\\[\n\\vec{AB}=(11,1),\\qquad \\vec{AC}=(5,6)\n\\]"
         },
         {
@@ -291,11 +291,11 @@
       "topicNote": "Standard & Compound Units. The tag is correct.",
       "steps": [
         {
-          "title": "The mass is , and",
+          "title": "Calculate volume",
           "body": "The mass is \\(5.4\\text{ kg}\\), and the density is \\(0.0027\\text{ kg/cm}^3\\).\n\n\\[\n\\text{volume}=\\frac{\\text{mass}}{\\text{density}}\n=\\frac{5.4}{0.0027}=2000\\text{ cm}^3\n\\]"
         },
         {
-          "title": "For the cylinder,",
+          "title": "Evaluate fraction",
           "body": "For the cylinder,\n\\[\nV=\\pi r^2h\n\\]\n\n\\[\n2000=\\pi(10)^2h\n\\]\n\n\\[\nh=\\frac{2000}{100\\pi}=6.366\\ldots\n\\]"
         }
       ],
@@ -324,11 +324,11 @@
           "body": "Shaded area for one coat:\n\\[\n1.5-0.098174\\ldots=1.401825\\ldots\\text{ m}^2\n\\]"
         },
         {
-          "title": "For 2 coats",
+          "title": "Calculate area",
           "body": "For 2 coats:\n\\[\n2\\times 1.401825\\ldots=2.80365\\ldots\\text{ m}^2\n\\]"
         },
         {
-          "title": "Since 250 ml covers ,",
+          "title": "Calculate area",
           "body": "Since 250 ml covers \\(4\\text{ m}^2\\), varnish needed is\n\\[\n\\frac{2.80365\\ldots}{4}\\times 250=175.22\\ldots\n\\]"
         }
       ],
@@ -341,7 +341,7 @@
       "topicNote": "Right-Angled Triangles - Pythagoras & Trigonometry. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use trigonometry",
           "body": "\\[\nh^2+30^2=52^2\n\\]\n\n\\[\nh^2=52^2-30^2=1804\n\\]\n\n\\[\nh=\\sqrt{1804}=42.473\\ldots\n\\]"
         }
       ],
@@ -358,7 +358,7 @@
           "body": "(a)\n\\[\n\\tan20^\\circ=\\frac{100}{d}\n\\]\n\n\\[\nd=\\frac{100}{\\tan20^\\circ}=274.747\\ldots\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\nd=275\\text{ m}\n\\]"
         },
         {
@@ -375,7 +375,7 @@
       "topicNote": "Corrected to Vectors.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use vectors",
           "body": "\\[\n\\overrightarrow{OA}=\\mathbf a,\\qquad \\overrightarrow{OB}=\\mathbf b\n\\]"
         },
         {
@@ -383,7 +383,7 @@
           "body": "(a)(i)\n\n\\[\n\\overrightarrow{AB}=\\overrightarrow{OB}-\\overrightarrow{OA}\n=\\mathbf b-\\mathbf a\n\\]"
         },
         {
-          "title": "For a regular hexagon,",
+          "title": "Use vectors",
           "body": "For a regular hexagon,\n\n\\[\n\\overrightarrow{OC}=\\mathbf b-\\mathbf a,\\quad\n\\overrightarrow{OD}=-\\mathbf a,\\quad\n\\overrightarrow{OE}=-\\mathbf b,\\quad\n\\overrightarrow{OF}=\\mathbf a-\\mathbf b\n\\]"
         },
         {
@@ -420,7 +420,7 @@
           "body": "The cumulative frequencies are\n\n\\[\n12,\\ 36,\\ 64,\\ 76,\\ 86,\\ 90\n\\]"
         },
         {
-          "title": "For ,",
+          "title": "Use cumulative frequency",
           "body": "For \\(42<T\\leq 52\\),\n\n\\[\nF(52)\\approx 36+\\frac{7}{10}(64-36)=55.6\n\\]\n\n\\[\nF(42)\\approx 12+\\frac{7}{10}(36-12)=28.8\n\\]\n\n\\[\n55.6-28.8=26.8\n\\]"
         }
       ],
@@ -433,7 +433,7 @@
       "topicNote": "Corrected to Probability Toolkit.",
       "steps": [
         {
-          "title": "(a) Let the number of",
+          "title": "Calculate probability",
           "body": "(a) Let the number of white fish be \\(w\\).\n\n\\[\n\\frac{w}{54}=\\frac49\n\\]\n\n\\[\nw=54\\times\\frac49=24\n\\]"
         },
         {
@@ -454,19 +454,19 @@
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "For each chess game",
+          "title": "Calculate probability",
           "body": "For each chess game:\n\n\\[\nP(M\\text{ wins})=\\frac29,\\quad P(\\text{draw})=\\frac49,\\quad P(M\\text{ loses})=\\frac13\n\\]"
         },
         {
-          "title": "After two games, equal points",
+          "title": "Calculate probability",
           "body": "After two games, equal points happens if both games are drawn or Magnus wins one and loses one.\n\n\\[\n\\left(\\frac49\\right)^2+2\\left(\\frac29\\right)\\left(\\frac13\\right)\n\\]\n\n\\[\n=\\frac{16}{81}+\\frac{12}{81}=\\frac{28}{81}\n\\]"
         },
         {
-          "title": "After three games, equal points",
+          "title": "Calculate probability",
           "body": "After three games, equal points means Magnus scores \\(3\\) points in total."
         },
         {
-          "title": "This happens with three draws,",
+          "title": "Calculate probability",
           "body": "This happens with three draws, or with one win, one draw and one loss.\n\n\\[\n\\left(\\frac49\\right)^3+6\\left(\\frac29\\right)\\left(\\frac49\\right)\\left(\\frac13\\right)\n\\]\n\n\\[\n=\\frac{64}{729}+\\frac{144}{729}=\\frac{208}{729}\n\\]"
         }
       ],
@@ -487,11 +487,11 @@
           "body": "The total in \\(M\\) is \\(25\\):\n\n\\[\n3+(18-x)+(11-x)+x=25\n\\]\n\n\\[\n32-x=25\n\\]\n\n\\[\nx=7\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate probability",
           "body": "So:\n\n\\[\nM\\cap E\\text{ only}=11,\\quad M\\cap F\\text{ only}=4,\\quad E\\cap F\\text{ only}=2\n\\]\n\n\\[\nE\\text{ only}=20-11-2-7=0\n\\]\n\n\\[\nF\\text{ only}=14-4-2-7=1\n\\]"
         },
         {
-          "title": "For a student who passed",
+          "title": "Calculate probability",
           "body": "For a student who passed Maths, failed French means \\(M\\) but not \\(F\\):\n\n\\[\n\\frac{3+11}{25}=\\frac{14}{25}\n\\]"
         }
       ],
@@ -504,7 +504,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nA=(-6,2),\\qquad B=(5,3)\n\\]"
         },
         {
@@ -516,23 +516,23 @@
           "body": "The gradient of \\(AB\\) is\n\n\\[\n\\frac{3-2}{5-(-6)}=\\frac1{11}\n\\]"
         },
         {
-          "title": "So the perpendicular gradient is",
+          "title": "Find the gradient",
           "body": "So the perpendicular gradient is\n\n\\[\n-11\n\\]"
         },
         {
-          "title": "Line passes through , so",
+          "title": "Evaluate fraction",
           "body": "Line \\(M\\) passes through \\(\\left(-\\frac12,\\frac52\\right)\\), so\n\n\\[\ny-\\frac52=-11\\left(x+\\frac12\\right)\n\\]"
         },
         {
-          "title": "At point ,",
+          "title": "Evaluate fraction",
           "body": "At point \\(C\\), \\(x=-1\\):\n\n\\[\ny-\\frac52=-11\\left(-\\frac12\\right)\n\\]\n\n\\[\ny-\\frac52=\\frac{11}{2}\n\\]\n\n\\[\ny=8\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\nC=(-1,8)\n\\]"
         },
         {
-          "title": "Now use vectors from",
+          "title": "Use vectors",
           "body": "Now use vectors from \\(A\\):\n\n\\[\n\\vec{AB}=(11,1),\\qquad \\vec{AC}=(5,6)\n\\]"
         },
         {

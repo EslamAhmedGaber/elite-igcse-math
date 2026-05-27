@@ -8,15 +8,15 @@
       "topicNote": "Set notation and Venn diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\n\\mathcal{E}=\\{1,2,3,4,5,6,7,8,9,10,11,12\\}\n\\]\n\n\\[\nA=\\{2,4,6,8,10,12\\}\n\\]\n\n\\[\nB=\\{3,6,9,12\\}\n\\]\n\n\\[\nC=\\{1,3,5,7,9,11\\}\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Calculate value",
           "body": "Therefore\n\n\\[\nA\\cup B=\\{2,3,4,6,8,9,10,12\\}\n\\]"
         },
         {
-          "title": "and",
+          "title": "Calculate value",
           "body": "and\n\n\\[\nB'=\\{1,2,4,5,7,8,10,11\\}\n\\]"
         },
         {
@@ -24,7 +24,7 @@
           "body": "No number is both even and odd, so\n\n\\[\nA\\cap C=\\emptyset\n\\]"
         },
         {
-          "title": "Also because is not in",
+          "title": "Set",
           "body": "Also \\(13\\notin \\mathcal{E}\\) because \\(13\\) is not in the universal set."
         }
       ],
@@ -37,11 +37,11 @@
       "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Find the LCM",
           "body": "\\[\n45=3^2\\times 5\n\\]\n\n\\[\n70=2\\times 5\\times 7\n\\]"
         },
         {
-          "title": "For the LCM, take the",
+          "title": "Find the LCM",
           "body": "For the LCM, take the highest power of each prime:\n\n\\[\n\\text{LCM}=2\\times 3^2\\times 5\\times 7=630\n\\]"
         }
       ],
@@ -54,7 +54,7 @@
       "topicNote": "Powers, roots and standard form. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Convert standard form",
           "body": "\\[\n6.7\\times 10^{135}+3\\times 10^{134}\n\\]"
         },
         {
@@ -62,7 +62,7 @@
           "body": "Write both terms using \\(10^{135}\\):\n\n\\[\n3\\times 10^{134}=0.3\\times 10^{135}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Convert standard form",
           "body": "So\n\n\\[\n6.7\\times 10^{135}+0.3\\times 10^{135}=7.0\\times 10^{135}\n\\]\n\n\\[\n=7\\times 10^{135}\n\\]"
         }
       ],
@@ -75,15 +75,15 @@
       "topicNote": "Compound Interest and Depreciation. The tag is correct, with a ratio used for Bank A.",
       "steps": [
         {
-          "title": "For Bank A,",
+          "title": "Use compound interest",
           "body": "For Bank A,\n\n\\[\n\\text{amount invested}:\\text{interest}=20:3\n\\]"
         },
         {
-          "title": "So the interest from Bank",
+          "title": "Use compound interest",
           "body": "So the interest from Bank A is\n\n\\[\n2500\\times \\frac{3}{20}=375\n\\]"
         },
         {
-          "title": "For Bank B, the compound",
+          "title": "Use compound interest",
           "body": "For Bank B, the compound interest after 2 years is\n\n\\[\n3000(1.04)^2-3000\n\\]\n\n\\[\n=3000(1.0816)-3000=244.80\n\\]"
         },
         {
@@ -117,7 +117,7 @@
       "topicNote": "Direct and Inverse Proportion. The tag is correct.",
       "steps": [
         {
-          "title": "is inversely proportional to ,",
+          "title": "Find inverse function",
           "body": "\\(F\\) is inversely proportional to \\(r^3\\), so\n\n\\[\nF=\\frac{k}{r^3}\n\\]"
         },
         {
@@ -125,11 +125,11 @@
           "body": "Use \\(F=6\\) when \\(r=2\\):\n\n\\[\n6=\\frac{k}{2^3}\n\\]\n\n\\[\nk=48\n\\]"
         },
         {
-          "title": "So",
+          "title": "Find inverse function",
           "body": "So\n\n\\[\nF=\\frac{48}{r^3}\n\\]"
         },
         {
-          "title": "When ,",
+          "title": "Find inverse function",
           "body": "When \\(F=3072\\),\n\n\\[\n3072=\\frac{48}{r^3}\n\\]\n\n\\[\nr^3=\\frac{48}{3072}=\\frac{1}{64}\n\\]\n\n\\[\nr=\\frac14\n\\]"
         }
       ],
@@ -167,7 +167,7 @@
       "topicNote": "Algebraic proof. The tag is acceptable because the question asks to show the exact result.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\n2\\frac14=\\frac94,\\qquad 1\\frac57=\\frac{12}{7}\n\\]\n\n\\[\n2\\frac14\\times1\\frac57=\\frac94\\times\\frac{12}{7}\n\\]\n\n\\[\n=\\frac{108}{28}=\\frac{27}{7}=3\\frac67\n\\]"
         }
       ],
@@ -184,11 +184,11 @@
           "body": "Let\n\\[\nx=0.6121212\\ldots\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate value",
           "body": "Then\n\\[\n10x=6.121212\\ldots\n\\]"
         },
         {
-          "title": "and",
+          "title": "Calculate value",
           "body": "and\n\\[\n1000x=612.121212\\ldots\n\\]"
         },
         {
@@ -226,7 +226,7 @@
       "topicNote": "Corrected to Solving Linear Equations. The equation is the main part of the question; the index form is secondary.",
       "steps": [
         {
-          "title": "For part (a),",
+          "title": "Solve equation",
           "body": "For part (a),\n\n\\[\n\\frac{5a+8}{3}-\\frac{2a+5}{4}=23\n\\]"
         },
         {
@@ -234,7 +234,7 @@
           "body": "Multiply by \\(12\\):\n\n\\[\n4(5a+8)-3(2a+5)=276\n\\]\n\n\\[\n20a+32-6a-15=276\n\\]\n\n\\[\n14a+17=276\n\\]\n\n\\[\n14a=259\n\\]\n\n\\[\na=\\frac{259}{14}=\\frac{37}{2}\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Solve equation",
           "body": "For part (b),\n\n\\[\n\\left(\\frac{\\sqrt y}{3}\\right)^{-1}=\\frac{3}{\\sqrt y}\n\\]\n\n\\[\n=3y^{-1/2}\n\\]"
         }
       ],
@@ -264,11 +264,11 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nx^2+y^2=41\n\\]\n\n\\[\n2x+y=3\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\ny=3-2x\n\\]"
         },
         {
@@ -276,7 +276,7 @@
           "body": "Substitute:\n\n\\[\nx^2+(3-2x)^2=41\n\\]\n\n\\[\nx^2+9-12x+4x^2=41\n\\]\n\n\\[\n5x^2-12x-32=0\n\\]\n\n\\[\n(5x+8)(x-4)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\nx=-\\frac85 \\quad \\text{or} \\quad x=4\n\\]"
         },
         {
@@ -301,7 +301,7 @@
           "body": "Equal differences give\n\n\\[\n(3y-4)-(2x+5)=(4x-2)-(3y-4)\n\\]\n\n\\[\n6y-6x=11\n\\]"
         },
         {
-          "title": "For an arithmetic series,",
+          "title": "Use series formula",
           "body": "For an arithmetic series,\n\n\\[\nS_9=9(a+4d)\n\\]"
         },
         {
@@ -313,7 +313,7 @@
           "body": "Given \\(S_9=216\\):\n\n\\[\n9[(2x+5)+4(3y-2x-9)]=216\n\\]\n\n\\[\n12y-6x=55\n\\]"
         },
         {
-          "title": "Now solve",
+          "title": "Solve",
           "body": "Now solve\n\n\\[\n6y-6x=11\n\\]\n\n\\[\n12y-6x=55\n\\]"
         },
         {
@@ -321,7 +321,7 @@
           "body": "Subtracting gives\n\n\\[\n6y=44\n\\]\n\n\\[\ny=\\frac{22}{3}\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Evaluate fraction",
           "body": "Then\n\n\\[\n6\\left(\\frac{22}{3}\\right)-6x=11\n\\]\n\n\\[\nx=\\frac{11}{2}\n\\]"
         }
       ],
@@ -338,7 +338,7 @@
           "body": "The turning point of \\(y=f(x)\\) is \\((-6,9)\\)."
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(3x)\n\\]"
         },
         {
@@ -346,15 +346,15 @@
           "body": "the \\(x\\)-coordinate is divided by 3:\n\n\\[\n(-6,9)\\to(-2,9)\n\\]"
         },
         {
-          "title": "For part (b), a point",
+          "title": "Calculate value",
           "body": "For part (b), a point \\((4,-5)\\) on \\(y=g(x)\\) maps to \\((1,-16)\\) on\n\n\\[\ny=g(x+a)+b\n\\]"
         },
         {
-          "title": "For the coordinate",
+          "title": "Calculate value",
           "body": "For the \\(x\\)-coordinate:\n\n\\[\n1+a=4\n\\]\n\n\\[\na=3\n\\]"
         },
         {
-          "title": "For the coordinate",
+          "title": "Calculate value",
           "body": "For the \\(y\\)-coordinate:\n\n\\[\n-5+b=-16\n\\]\n\n\\[\nb=-11\n\\]"
         }
       ],
@@ -367,7 +367,7 @@
       "topicNote": "Correct. This is converting metres per second to kilometres per hour algebraically.",
       "steps": [
         {
-          "title": "To convert m/s to km/h,",
+          "title": "Convert m/s to km/h multiply",
           "body": "To convert m/s to km/h, multiply by \\(3.6\\).\n\n\\[\n50x\\times3.6=180x\n\\]"
         }
       ],
@@ -380,7 +380,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "For two intersecting chords in",
+          "title": "Use chord theorem",
           "body": "For two intersecting chords in a circle,\n\n\\[\nPT\\times TR=QT\\times TS\n\\]"
         },
         {
@@ -421,15 +421,15 @@
           "body": "Its area is\n\n\\[\n\\text{sector area}-\\text{triangle area}\n\\]\n\n\\[\n28=\\frac{40}{360}\\pi R^2-\\frac{1}{2}R^2\\sin 40^\\circ\n\\]\n\n\\[\n28=R^2\\left(\\frac{\\pi}{9}-\\frac{1}{2}\\sin 40^\\circ\\right)\n\\]\n\n\\[\nR=31.8096\\ldots\n\\]"
         },
         {
-          "title": "Now find the chord",
+          "title": "Use trigonometry",
           "body": "Now find the chord \\(BC\\):\n\n\\[\nBC=2R\\sin 20^\\circ\n\\]\n\n\\[\nBC=2(31.8096\\ldots)\\sin 20^\\circ\n=21.7591\\ldots\n\\]"
         },
         {
-          "title": "In sector , the centre",
+          "title": "Calculate value",
           "body": "In sector \\(BCD\\), the centre is \\(C\\), so the radius is\n\n\\[\nCB=CD=21.7591\\ldots\n\\]"
         },
         {
-          "title": "The arc has angle ,",
+          "title": "Use trigonometry",
           "body": "The arc \\(BD\\) has angle \\(130^\\circ\\), so\n\n\\[\n\\text{arc }BD\n=\\frac{130}{360}\\times 2\\pi(21.7591\\ldots)\n\\]\n\n\\[\n=49.3697\\ldots\n\\]"
         }
       ],
@@ -458,7 +458,7 @@
           "body": "Total water after pouring:\n\\[\n8820+10367.255\\ldots=19187.255\\ldots\n\\]"
         },
         {
-          "title": "Since",
+          "title": "Calculate area",
           "body": "Since\n\\[\n19187.255\\ldots<19600\n\\]"
         },
         {
@@ -479,7 +479,7 @@
           "body": "The volume of vase \\(S\\) is \\(72.8\\%\\) more than vase \\(R\\), so\n\n\\(\\dfrac{V_S}{V_R}=1.728\\)"
         },
         {
-          "title": "For similar solids, volume scale",
+          "title": "Calculate area",
           "body": "For similar solids, volume scale factor is the cube of the linear scale factor:\n\n\\(\\text{linear scale factor from }R\\text{ to }S=\\sqrt[3]{1.728}=1.2\\)"
         },
         {
@@ -487,7 +487,7 @@
           "body": "The height of vase \\(T\\) is \\(6h\\), so the linear scale factor from \\(R\\) to \\(T\\) is \\(6\\)."
         },
         {
-          "title": "Therefore the linear scale factor",
+          "title": "Calculate area",
           "body": "Therefore the linear scale factor from \\(S\\) to \\(T\\) is\n\n\\(\\dfrac{6}{1.2}=5\\)"
         },
         {
@@ -504,7 +504,7 @@
       "topicNote": "Corrected to Right-Angled Triangles - Pythagoras & Trigonometry.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use trigonometry",
           "body": "\\[\n\\tan 24^\\circ=\\frac{6.5}{QR}\n\\]\n\n\\[\nQR=\\frac{6.5}{\\tan 24^\\circ}=14.599\\ldots\n\\]"
         }
       ],
@@ -517,11 +517,11 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "In the rectangle , use",
+          "title": "Use trigonometry",
           "body": "In the rectangle \\(ABCF\\), use Pythagoras with the diagonal \\(FC\\):\n\n\\[\nAC^2=FC^2-AF^2\n\\]\n\n\\[\nAC^2=18^2-7^2=324-49=275\n\\]"
         },
         {
-          "title": "Now use Pythagoras in triangle",
+          "title": "Use trigonometry",
           "body": "Now use Pythagoras in triangle \\(ABC\\):\n\n\\[\nBC^2=AC^2-AB^2\n\\]\n\n\\[\nBC^2=275-9^2=275-81=194\n\\]\n\n\\[\nBC=\\sqrt{194}=13.928\\ldots\n\\]"
         }
       ],
@@ -555,11 +555,11 @@
           "body": "Plot\n\n\\[\n(10,0),(20,12),(30,27),(40,47),(50,65),(60,74),(70,80)\n\\]"
         },
         {
-          "title": "At years,",
+          "title": "Use cumulative frequency",
           "body": "At \\(46\\) years,\n\n\\[\nF(46)\\approx 47+\\frac{6}{10}(65-47)=57.8\n\\]"
         },
         {
-          "title": "So the number older than",
+          "title": "Convert standard form",
           "body": "So the number older than \\(46\\) is\n\n\\[\n80-57.8=22.2\n\\]\n\n\\[\n\\frac{22.2}{80}\\times 100\\approx 27.75\\%\n\\]"
         }
       ],
@@ -576,7 +576,7 @@
           "body": "Let the yellow probability be \\(x\\). Then the red probability is \\(4x\\).\n\n\\[\n0.12+0.20+0.30+4x+x=1\n\\]\n\n\\[\n5x=0.38\n\\]\n\n\\[\nx=0.076\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate probability",
           "body": "So\n\n\\[\nP(\\text{red})=4x=0.304\n\\]\n\n\\[\nP(\\text{blue, green or purple})=0.12+0.20+0.30=0.62\n\\]"
         },
         {
@@ -605,7 +605,7 @@
           "body": "ways to choose two counters."
         },
         {
-          "title": "For a sum less than",
+          "title": "Calculate probability",
           "body": "For a sum less than \\(5\\), the pairs are:\n\n\\[\n(1,1),\\quad (1,2),\\quad (1,3)\n\\]"
         },
         {
@@ -613,7 +613,7 @@
           "body": "Counting the repeated counters gives\n\n\\[\n1+2+6=9\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate probability",
           "body": "So\n\n\\[\nP(\\text{sum}<5)=\\frac{9}{36}=\\frac14\n\\]"
         }
       ],
@@ -626,11 +626,11 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nx^2+y^2=41\n\\]\n\n\\[\n2x+y=3\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\ny=3-2x\n\\]"
         },
         {
@@ -638,7 +638,7 @@
           "body": "Substitute:\n\n\\[\nx^2+(3-2x)^2=41\n\\]\n\n\\[\nx^2+9-12x+4x^2=41\n\\]\n\n\\[\n5x^2-12x-32=0\n\\]\n\n\\[\n(5x+8)(x-4)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\nx=-\\frac85 \\quad \\text{or} \\quad x=4\n\\]"
         },
         {
@@ -663,7 +663,7 @@
           "body": "Equal differences give\n\n\\[\n(3y-4)-(2x+5)=(4x-2)-(3y-4)\n\\]\n\n\\[\n6y-6x=11\n\\]"
         },
         {
-          "title": "For an arithmetic series,",
+          "title": "Use series formula",
           "body": "For an arithmetic series,\n\n\\[\nS_9=9(a+4d)\n\\]"
         },
         {
@@ -675,7 +675,7 @@
           "body": "Given \\(S_9=216\\):\n\n\\[\n9[(2x+5)+4(3y-2x-9)]=216\n\\]\n\n\\[\n12y-6x=55\n\\]"
         },
         {
-          "title": "Now solve",
+          "title": "Solve",
           "body": "Now solve\n\n\\[\n6y-6x=11\n\\]\n\n\\[\n12y-6x=55\n\\]"
         },
         {
@@ -683,7 +683,7 @@
           "body": "Subtracting gives\n\n\\[\n6y=44\n\\]\n\n\\[\ny=\\frac{22}{3}\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Evaluate fraction",
           "body": "Then\n\n\\[\n6\\left(\\frac{22}{3}\\right)-6x=11\n\\]\n\n\\[\nx=\\frac{11}{2}\n\\]"
         }
       ],
@@ -700,7 +700,7 @@
           "body": "The turning point of \\(y=f(x)\\) is \\((-6,9)\\)."
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(3x)\n\\]"
         },
         {
@@ -708,15 +708,15 @@
           "body": "the \\(x\\)-coordinate is divided by 3:\n\n\\[\n(-6,9)\\to(-2,9)\n\\]"
         },
         {
-          "title": "For part (b), a point",
+          "title": "Calculate value",
           "body": "For part (b), a point \\((4,-5)\\) on \\(y=g(x)\\) maps to \\((1,-16)\\) on\n\n\\[\ny=g(x+a)+b\n\\]"
         },
         {
-          "title": "For the coordinate",
+          "title": "Calculate value",
           "body": "For the \\(x\\)-coordinate:\n\n\\[\n1+a=4\n\\]\n\n\\[\na=3\n\\]"
         },
         {
-          "title": "For the coordinate",
+          "title": "Calculate value",
           "body": "For the \\(y\\)-coordinate:\n\n\\[\n-5+b=-16\n\\]\n\n\\[\nb=-11\n\\]"
         }
       ],
@@ -729,7 +729,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "For two intersecting chords in",
+          "title": "Use chord theorem",
           "body": "For two intersecting chords in a circle,\n\n\\[\nPT\\times TR=QT\\times TS\n\\]"
         },
         {
@@ -770,15 +770,15 @@
           "body": "Its area is\n\n\\[\n\\text{sector area}-\\text{triangle area}\n\\]\n\n\\[\n28=\\frac{40}{360}\\pi R^2-\\frac{1}{2}R^2\\sin 40^\\circ\n\\]\n\n\\[\n28=R^2\\left(\\frac{\\pi}{9}-\\frac{1}{2}\\sin 40^\\circ\\right)\n\\]\n\n\\[\nR=31.8096\\ldots\n\\]"
         },
         {
-          "title": "Now find the chord",
+          "title": "Use trigonometry",
           "body": "Now find the chord \\(BC\\):\n\n\\[\nBC=2R\\sin 20^\\circ\n\\]\n\n\\[\nBC=2(31.8096\\ldots)\\sin 20^\\circ\n=21.7591\\ldots\n\\]"
         },
         {
-          "title": "In sector , the centre",
+          "title": "Calculate value",
           "body": "In sector \\(BCD\\), the centre is \\(C\\), so the radius is\n\n\\[\nCB=CD=21.7591\\ldots\n\\]"
         },
         {
-          "title": "The arc has angle ,",
+          "title": "Use trigonometry",
           "body": "The arc \\(BD\\) has angle \\(130^\\circ\\), so\n\n\\[\n\\text{arc }BD\n=\\frac{130}{360}\\times 2\\pi(21.7591\\ldots)\n\\]\n\n\\[\n=49.3697\\ldots\n\\]"
         }
       ],
@@ -795,7 +795,7 @@
           "body": "The volume of vase \\(S\\) is \\(72.8\\%\\) more than vase \\(R\\), so\n\n\\(\\dfrac{V_S}{V_R}=1.728\\)"
         },
         {
-          "title": "For similar solids, volume scale",
+          "title": "Calculate area",
           "body": "For similar solids, volume scale factor is the cube of the linear scale factor:\n\n\\(\\text{linear scale factor from }R\\text{ to }S=\\sqrt[3]{1.728}=1.2\\)"
         },
         {
@@ -803,7 +803,7 @@
           "body": "The height of vase \\(T\\) is \\(6h\\), so the linear scale factor from \\(R\\) to \\(T\\) is \\(6\\)."
         },
         {
-          "title": "Therefore the linear scale factor",
+          "title": "Calculate area",
           "body": "Therefore the linear scale factor from \\(S\\) to \\(T\\) is\n\n\\(\\dfrac{6}{1.2}=5\\)"
         },
         {
@@ -820,11 +820,11 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "In the rectangle , use",
+          "title": "Use trigonometry",
           "body": "In the rectangle \\(ABCF\\), use Pythagoras with the diagonal \\(FC\\):\n\n\\[\nAC^2=FC^2-AF^2\n\\]\n\n\\[\nAC^2=18^2-7^2=324-49=275\n\\]"
         },
         {
-          "title": "Now use Pythagoras in triangle",
+          "title": "Use trigonometry",
           "body": "Now use Pythagoras in triangle \\(ABC\\):\n\n\\[\nBC^2=AC^2-AB^2\n\\]\n\n\\[\nBC^2=275-9^2=275-81=194\n\\]\n\n\\[\nBC=\\sqrt{194}=13.928\\ldots\n\\]"
         }
       ],

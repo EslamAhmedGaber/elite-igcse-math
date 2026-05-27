@@ -12,15 +12,15 @@
           "body": "From the Venn diagram:\n\n\\[\nA\\text{ only}=6,\\quad A\\cap B=3,\\quad B\\text{ only}=8,\\quad B\\cap C=2,\\quad C\\text{ only}=5,\\quad \\text{outside}=4\n\\]"
         },
         {
-          "title": "There is no region in",
+          "title": "Calculate value",
           "body": "There is no region in both \\(A\\) and \\(C\\), and there is no triple intersection.\n\n\\[\nn(A\\cup B)=6+3+8+2=19\n\\]\n\n\\[\nn(A\\cap C)=0\n\\]\n\n\\[\nn(B\\cap C')=3+8=11\n\\]"
         },
         {
-          "title": "For , use",
+          "title": "Use",
           "body": "For \\(A'\\cup B'\\cup C'\\), use\n\n\\[\nA'\\cup B'\\cup C'=(A\\cap B\\cap C)'\n\\]"
         },
         {
-          "title": "Since is empty, this includes",
+          "title": "Set",
           "body": "Since \\(A\\cap B\\cap C\\) is empty, this includes everyone in the universal set.\n\n\\[\n6+3+8+2+5+4=28\n\\]"
         }
       ],
@@ -33,27 +33,27 @@
       "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Find the LCM",
           "body": "\\[\n36=2^2\\times 3^2\n\\]\n\n\\[\n120=2^3\\times 3\\times 5\n\\]"
         },
         {
-          "title": "For the LCM, take the",
+          "title": "Find the LCM",
           "body": "For the LCM, take the highest power of each prime:\n\n\\[\n\\text{LCM}=2^3\\times 3^2\\times 5=360\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Find the LCM",
           "body": "For part (b),\n\n\\[\nA=5^2\\times 7^4\\times 11^p\n\\]\n\n\\[\nB=5^m\\times 7^{n-5}\\times 11\n\\]"
         },
         {
-          "title": "Since , the smaller power",
+          "title": "Find the LCM",
           "body": "Since \\(m>2\\), the smaller power of \\(5\\) is \\(5^2\\)."
         },
         {
-          "title": "Since , , so the",
+          "title": "Find the LCM",
           "body": "Since \\(n>10\\), \\(n-5>5\\), so the smaller power of \\(7\\) is \\(7^4\\)."
         },
         {
-          "title": "Since , the smaller power",
+          "title": "Find the LCM",
           "body": "Since \\(p>1\\), the smaller power of \\(11\\) is \\(11^1\\).\n\n\\[\n\\text{HCF}=5^2\\times 7^4\\times 11\n\\]"
         }
       ],
@@ -66,11 +66,11 @@
       "topicNote": "Powers, roots and standard form. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Convert standard form",
           "body": "\\[\n5\\times 10^4=50000\n\\]\n\n\\[\n0.00006=6\\times 10^{-5}\n\\]"
         },
         {
-          "title": "For part (c),",
+          "title": "Convert standard form",
           "body": "For part (c),\n\n\\[\n\\frac{4\\times 10^{512}}{1.6\\times 10^{700}}\n=\\frac{4}{1.6}\\times 10^{512-700}\n\\]\n\n\\[\n=2.5\\times 10^{-188}\n\\]"
         }
       ],
@@ -83,19 +83,19 @@
       "topicNote": "Rounding, Estimation & Bounds is correct. The question also uses the sine rule, but the main demand is choosing the correct bounds.",
       "steps": [
         {
-          "title": "For an upper bound for",
+          "title": "Find upper bound",
           "body": "For an upper bound for \\(b\\), use the upper bound of \\(c\\):\n\n\\(c=11.55\\)"
         },
         {
-          "title": "Use the lower bounds of",
+          "title": "Use sine rule",
           "body": "Use the lower bounds of \\(x\\) and \\(y\\), because this makes angle \\(B\\) as large as possible and makes \\(\\sin y\\) as small as possible.\n\n\\(x=79.5^\\circ,\\quad y=74.5^\\circ\\)"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\(\\angle B=180^\\circ-79.5^\\circ-74.5^\\circ=26^\\circ\\)"
         },
         {
-          "title": "Using the sine rule,",
+          "title": "Use trigonometry",
           "body": "Using the sine rule,\n\n\\(\\dfrac{b}{\\sin 26^\\circ}=\\dfrac{11.55}{\\sin 74.5^\\circ}\\)\n\n\\(b=\\dfrac{11.55\\sin 26^\\circ}{\\sin 74.5^\\circ}=5.254...\\)"
         }
       ],
@@ -133,7 +133,7 @@
           "body": "(a)\n\\[\n\\sqrt[3]{\\frac1x}=x^{-1/3}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So \\(m=-\\frac13\\)."
         },
         {
@@ -183,7 +183,7 @@
           "body": "Twice the square of the middle number is\n\\[\n2(n+1)^2=2(n^2+2n+1)=2n^2+4n+2\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\\[\n2n^2+4n+4=(2n^2+4n+2)+2\n\\]"
         }
       ],
@@ -200,11 +200,11 @@
           "body": "(a)\n\\[\n-2\\le n<3\n\\]"
         },
         {
-          "title": "Since is an integer,",
+          "title": "Calculate value",
           "body": "Since \\(n\\) is an integer,\n\\[\nn=-2,-1,0,1,2\n\\]"
         },
         {
-          "title": "(b) For",
+          "title": "Solve inequality",
           "body": "(b) For\n\\[\ny\\le1\n\\]"
         },
         {
@@ -221,7 +221,7 @@
       "topicNote": "Sequences. The tag is correct.",
       "steps": [
         {
-          "title": "The first term is and",
+          "title": "Find the nth term",
           "body": "The first term is \\(1\\) and the common difference is \\(4\\)."
         },
         {
@@ -237,7 +237,7 @@
           "body": "There are\n\\[\n100-41+1=60\n\\]"
         },
         {
-          "title": "terms from the 41st to",
+          "title": "Find the nth term",
           "body": "terms from the 41st to the 100th inclusive.\n\n\\[\nS=\\frac{60}{2}(161+397)\n\\]\n\n\\[\nS=30\\times558=16740\n\\]"
         }
       ],
@@ -250,7 +250,7 @@
       "topicNote": "Correct. This is a table-and-graph question for a quadratic function.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve quadratic equation",
           "body": "\\[\ny=x^2-4x+3\n\\]"
         },
         {
@@ -275,7 +275,7 @@
           "body": "The turning point of \\(y=f(x)\\) is \\((-6,-4)\\)."
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(x)+5\n\\]"
         },
         {
@@ -283,7 +283,7 @@
           "body": "the graph moves 5 units up:\n\n\\[\n(-6,-4)\\to(-6,1)\n\\]"
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(3x)\n\\]"
         },
         {
@@ -291,7 +291,7 @@
           "body": "the \\(x\\)-coordinate is divided by 3:\n\n\\[\n(-6,-4)\\to(-2,-4)\n\\]"
         },
         {
-          "title": "For the sketch of ,",
+          "title": "Read the graph",
           "body": "For the sketch of \\(y=2g(x)\\), keep every \\(x\\)-coordinate the same and double every \\(y\\)-coordinate."
         },
         {
@@ -299,15 +299,15 @@
           "body": "Useful points are\n\n\\[\n(-1,3)\\to(-1,6)\n\\]\n\n\\[\n(2,0)\\to(2,0)\n\\]\n\n\\[\n(3,-1)\\to(3,-2)\n\\]\n\n\\[\n(4,0)\\to(4,0)\n\\]\n\n\\[\n(7,3)\\to(7,6)\n\\]"
         },
         {
-          "title": "Draw straight line segments through",
+          "title": "Solve inequality",
           "body": "Draw straight line segments through these points for \\(-1\\le x\\le 7\\)."
         },
         {
-          "title": "For part (c), has roots",
+          "title": "Calculate value",
           "body": "For part (c), \\(h(x)\\) has roots at \\(x=-1\\) and \\(x=6\\)."
         },
         {
-          "title": "For to pass through ,",
+          "title": "Calculate value",
           "body": "For \\(h(x+a)\\) to pass through \\((2,0)\\),\n\n\\[\n2+a=-1\n\\quad \\text{or} \\quad\n2+a=6\n\\]\n\n\\[\na=-3\n\\quad \\text{or} \\quad\na=4\n\\]"
         }
       ],
@@ -328,7 +328,7 @@
           "body": "Particle \\(Q\\):\n\n\\[\nx=t^2-4t+4\n\\]\n\n\\[\n\\frac{dx}{dt}=2t-4=2(t-2)\n\\]"
         },
         {
-          "title": "For",
+          "title": "Differentiate",
           "body": "For \\(t>1\\):"
         },
         {
@@ -336,7 +336,7 @@
           "body": "- \\(P\\) moves in the negative direction when \\(1<t<\\frac53\\).\n- \\(P\\) moves in the positive direction when \\(t>\\frac53\\).\n- \\(Q\\) moves in the negative direction when \\(1<t<2\\).\n- \\(Q\\) moves in the positive direction when \\(t>2\\)."
         },
         {
-          "title": "So both particles move in",
+          "title": "Differentiate",
           "body": "So both particles move in the same direction when both velocities have the same sign."
         }
       ],
@@ -349,7 +349,7 @@
       "topicNote": "Correct. This is average speed over a whole journey.",
       "steps": [
         {
-          "title": "First part",
+          "title": "Calculate value",
           "body": "First part:\n\\[\n\\text{distance}=245\\text{ km},\n\\qquad\n\\text{time}=2.5\\text{ h}\n\\]"
         },
         {
@@ -382,11 +382,11 @@
       "topicNote": "Circle Theorems. The tag is correct.",
       "steps": [
         {
-          "title": "Since is a diameter,",
+          "title": "Use trigonometry",
           "body": "Since \\(AC\\) is a diameter,\n\\[\n\\angle ABC=90^\\circ\n\\]"
         },
         {
-          "title": "In triangle ,",
+          "title": "Use trigonometry",
           "body": "In triangle \\(ABC\\),\n\\[\n\\angle ACB=180^\\circ-90^\\circ-55^\\circ=35^\\circ\n\\]"
         },
         {
@@ -403,7 +403,7 @@
       "topicNote": "Circles, Arcs & Sectors. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate area",
           "body": "\\[\n\\text{area}=\\frac{110}{360}\\times \\pi(7.1)^2\n\\]\n\n\\[\n=48.390\\ldots\n\\]"
         }
       ],
@@ -436,7 +436,7 @@
           "body": "Total area:\n\n\\[\n30+72+15=117\\text{ m}^2\n\\]"
         },
         {
-          "title": "Each tin covers , so",
+          "title": "Calculate area",
           "body": "Each tin covers \\(15\\text{ m}^2\\), so the number of tins needed is\n\n\\[\n\\frac{117}{15}=7.8\n\\]"
         },
         {
@@ -444,15 +444,15 @@
           "body": "He must buy \\(8\\) tins."
         },
         {
-          "title": "After the increase, each tin",
+          "title": "Calculate area",
           "body": "After the \\(10\\%\\) increase, each tin costs \\(\\pounds 26.95\\). Before the increase:\n\n\\[\n\\frac{26.95}{1.10}=24.50\n\\]"
         },
         {
-          "title": "Before the increase, tins would",
+          "title": "Calculate area",
           "body": "Before the increase, \\(8\\) tins would cost\n\n\\[\n8\\times 24.50=196\n\\]"
         },
         {
-          "title": "Since , Jonty is correct",
+          "title": "Calculate area",
           "body": "Since \\(\\pounds 196<\\pounds 200\\), Jonty is correct."
         }
       ],
@@ -465,15 +465,15 @@
       "topicNote": "Corrected to Area and Volume of Similar Shapes. The key idea is converting area and volume ratios into length ratios.",
       "steps": [
         {
-          "title": "Surface area ratio , so",
+          "title": "Split the ratio",
           "body": "Surface area ratio \\(A:B=4:9\\), so the length ratio is\n\n\\[\n\\sqrt4:\\sqrt9=2:3\n\\]"
         },
         {
-          "title": "Volume ratio , so the",
+          "title": "Split the ratio",
           "body": "Volume ratio \\(B:C=125:343\\), so the length ratio is\n\n\\[\n\\sqrt[3]{125}:\\sqrt[3]{343}=5:7\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Split the ratio",
           "body": "Therefore\n\n\\[\n\\frac{A}{C}=\\frac{2}{3}\\times \\frac{5}{7}=\\frac{10}{21}\n\\]"
         }
       ],
@@ -486,7 +486,7 @@
       "topicNote": "Right-Angled Triangles - Pythagoras & Trigonometry. The tag is correct.",
       "steps": [
         {
-          "title": "Each triangle has hypotenuse and",
+          "title": "Use trigonometry",
           "body": "Each triangle has hypotenuse \\(16\\text{ cm}\\) and one side \\(12.8\\text{ cm}\\)."
         },
         {
@@ -515,27 +515,27 @@
           "body": "Take \\(O\\) as the origin.\n\n\\[\n\\vec{OX}=\\mathbf a,\\qquad \\vec{XY}=\\mathbf b,\\qquad \\vec{OZ}=3\\mathbf b\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use vectors",
           "body": "So\n\n\\[\n\\vec{OY}=\\mathbf a+\\mathbf b\n\\]"
         },
         {
-          "title": "Since is the midpoint of",
+          "title": "Find the midpoint",
           "body": "Since \\(M\\) is the midpoint of \\(OX\\),\n\n\\[\n\\vec{OM}=\\frac12\\mathbf a\n\\]"
         },
         {
-          "title": "Given ,",
+          "title": "Use vectors",
           "body": "Given \\(ON:OY=\\lambda:1\\),\n\n\\[\n\\vec{ON}=\\lambda(\\mathbf a+\\mathbf b)\n\\]"
         },
         {
-          "title": "Point also lies on ,",
+          "title": "Use vectors",
           "body": "Point \\(N\\) also lies on \\(MZ\\), so\n\n\\[\n\\vec{ON}=\\frac12\\mathbf a+t\\left(3\\mathbf b-\\frac12\\mathbf a\\right)\n\\]\n\n\\[\n\\vec{ON}=\\left(\\frac12-\\frac{t}{2}\\right)\\mathbf a+3t\\mathbf b\n\\]"
         },
         {
-          "title": "Equate coefficients with",
+          "title": "Use vectors",
           "body": "Equate coefficients with \\(\\lambda\\mathbf a+\\lambda\\mathbf b\\):\n\n\\[\n\\lambda=\\frac12-\\frac{t}{2}\n\\]\n\n\\[\n\\lambda=3t\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use vectors",
           "body": "So\n\n\\[\nt=\\frac{\\lambda}{3}\n\\]"
         },
         {
@@ -556,19 +556,19 @@
           "body": "The range is \\(16\\). Since the greatest known mark is \\(80\\),\n\n\\[\n80-16=64\n\\]"
         },
         {
-          "title": "So one missing mark is",
+          "title": "Use Statistics Toolkit tag correct",
           "body": "So one missing mark is \\(64\\)."
         },
         {
-          "title": "The mode is , so",
+          "title": "Calculate statistic",
           "body": "The mode is \\(80\\), so another missing mark is \\(80\\)."
         },
         {
-          "title": "Now the marks in order",
+          "title": "Use Statistics Toolkit tag correct",
           "body": "Now the marks in order are\n\n\\[\n64,\\ 68,\\ 72,\\ x,\\ 75,\\ 77,\\ 80,\\ 80\n\\]"
         },
         {
-          "title": "The median is , so",
+          "title": "Calculate statistic",
           "body": "The median is \\(74\\), so\n\n\\[\n\\frac{x+75}{2}=74\n\\]\n\n\\[\nx=73\n\\]"
         }
       ],
@@ -581,15 +581,15 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "For a histogram,",
+          "title": "Use histogram",
           "body": "For a histogram,\n\n\\[\n\\text{frequency}=\\text{class width}\\times \\text{frequency density}\n\\]"
         },
         {
-          "title": "For , the frequency is",
+          "title": "Use frequency table",
           "body": "For \\(8\\leq w<8.5\\), the frequency is 16 and the class width is \\(0.5\\), so\n\n\\[\n\\text{frequency density}=\\frac{16}{0.5}=32\n\\]"
         },
         {
-          "title": "Using this scale from the",
+          "title": "Use histogram",
           "body": "Using this scale from the histogram, the frequency densities are:\n\n\\[\n15,\\ 32,\\ 23,\\ 30,\\ 12\n\\]"
         },
         {
@@ -606,7 +606,7 @@
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate probability",
           "body": "\\[\n0.65\\times 300=195\n\\]"
         }
       ],
@@ -623,7 +623,7 @@
           "body": "Hector's probability of taking one green and one red is\n\n\\[\n2\\times\\frac{7}{12}\\times\\frac{5}{12}=\\frac{35}{72}\n\\]"
         },
         {
-          "title": "For all three counters to",
+          "title": "Calculate probability",
           "body": "For all three counters to be different, Meghan must take a blue counter."
         },
         {
@@ -640,19 +640,19 @@
       "topicNote": "Rounding, Estimation & Bounds is correct. The question also uses the sine rule, but the main demand is choosing the correct bounds.",
       "steps": [
         {
-          "title": "For an upper bound for",
+          "title": "Find upper bound",
           "body": "For an upper bound for \\(b\\), use the upper bound of \\(c\\):\n\n\\(c=11.55\\)"
         },
         {
-          "title": "Use the lower bounds of",
+          "title": "Use sine rule",
           "body": "Use the lower bounds of \\(x\\) and \\(y\\), because this makes angle \\(B\\) as large as possible and makes \\(\\sin y\\) as small as possible.\n\n\\(x=79.5^\\circ,\\quad y=74.5^\\circ\\)"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\(\\angle B=180^\\circ-79.5^\\circ-74.5^\\circ=26^\\circ\\)"
         },
         {
-          "title": "Using the sine rule,",
+          "title": "Use trigonometry",
           "body": "Using the sine rule,\n\n\\(\\dfrac{b}{\\sin 26^\\circ}=\\dfrac{11.55}{\\sin 74.5^\\circ}\\)\n\n\\(b=\\dfrac{11.55\\sin 26^\\circ}{\\sin 74.5^\\circ}=5.254...\\)"
         }
       ],
@@ -669,7 +669,7 @@
           "body": "The turning point of \\(y=f(x)\\) is \\((-6,-4)\\)."
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(x)+5\n\\]"
         },
         {
@@ -677,7 +677,7 @@
           "body": "the graph moves 5 units up:\n\n\\[\n(-6,-4)\\to(-6,1)\n\\]"
         },
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\ny=f(3x)\n\\]"
         },
         {
@@ -685,7 +685,7 @@
           "body": "the \\(x\\)-coordinate is divided by 3:\n\n\\[\n(-6,-4)\\to(-2,-4)\n\\]"
         },
         {
-          "title": "For the sketch of ,",
+          "title": "Read the graph",
           "body": "For the sketch of \\(y=2g(x)\\), keep every \\(x\\)-coordinate the same and double every \\(y\\)-coordinate."
         },
         {
@@ -693,15 +693,15 @@
           "body": "Useful points are\n\n\\[\n(-1,3)\\to(-1,6)\n\\]\n\n\\[\n(2,0)\\to(2,0)\n\\]\n\n\\[\n(3,-1)\\to(3,-2)\n\\]\n\n\\[\n(4,0)\\to(4,0)\n\\]\n\n\\[\n(7,3)\\to(7,6)\n\\]"
         },
         {
-          "title": "Draw straight line segments through",
+          "title": "Solve inequality",
           "body": "Draw straight line segments through these points for \\(-1\\le x\\le 7\\)."
         },
         {
-          "title": "For part (c), has roots",
+          "title": "Calculate value",
           "body": "For part (c), \\(h(x)\\) has roots at \\(x=-1\\) and \\(x=6\\)."
         },
         {
-          "title": "For to pass through ,",
+          "title": "Calculate value",
           "body": "For \\(h(x+a)\\) to pass through \\((2,0)\\),\n\n\\[\n2+a=-1\n\\quad \\text{or} \\quad\n2+a=6\n\\]\n\n\\[\na=-3\n\\quad \\text{or} \\quad\na=4\n\\]"
         }
       ],
@@ -722,7 +722,7 @@
           "body": "Particle \\(Q\\):\n\n\\[\nx=t^2-4t+4\n\\]\n\n\\[\n\\frac{dx}{dt}=2t-4=2(t-2)\n\\]"
         },
         {
-          "title": "For",
+          "title": "Differentiate",
           "body": "For \\(t>1\\):"
         },
         {
@@ -730,7 +730,7 @@
           "body": "- \\(P\\) moves in the negative direction when \\(1<t<\\frac53\\).\n- \\(P\\) moves in the positive direction when \\(t>\\frac53\\).\n- \\(Q\\) moves in the negative direction when \\(1<t<2\\).\n- \\(Q\\) moves in the positive direction when \\(t>2\\)."
         },
         {
-          "title": "So both particles move in",
+          "title": "Differentiate",
           "body": "So both particles move in the same direction when both velocities have the same sign."
         }
       ],
@@ -747,27 +747,27 @@
           "body": "Take \\(O\\) as the origin.\n\n\\[\n\\vec{OX}=\\mathbf a,\\qquad \\vec{XY}=\\mathbf b,\\qquad \\vec{OZ}=3\\mathbf b\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use vectors",
           "body": "So\n\n\\[\n\\vec{OY}=\\mathbf a+\\mathbf b\n\\]"
         },
         {
-          "title": "Since is the midpoint of",
+          "title": "Find the midpoint",
           "body": "Since \\(M\\) is the midpoint of \\(OX\\),\n\n\\[\n\\vec{OM}=\\frac12\\mathbf a\n\\]"
         },
         {
-          "title": "Given ,",
+          "title": "Use vectors",
           "body": "Given \\(ON:OY=\\lambda:1\\),\n\n\\[\n\\vec{ON}=\\lambda(\\mathbf a+\\mathbf b)\n\\]"
         },
         {
-          "title": "Point also lies on ,",
+          "title": "Use vectors",
           "body": "Point \\(N\\) also lies on \\(MZ\\), so\n\n\\[\n\\vec{ON}=\\frac12\\mathbf a+t\\left(3\\mathbf b-\\frac12\\mathbf a\\right)\n\\]\n\n\\[\n\\vec{ON}=\\left(\\frac12-\\frac{t}{2}\\right)\\mathbf a+3t\\mathbf b\n\\]"
         },
         {
-          "title": "Equate coefficients with",
+          "title": "Use vectors",
           "body": "Equate coefficients with \\(\\lambda\\mathbf a+\\lambda\\mathbf b\\):\n\n\\[\n\\lambda=\\frac12-\\frac{t}{2}\n\\]\n\n\\[\n\\lambda=3t\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use vectors",
           "body": "So\n\n\\[\nt=\\frac{\\lambda}{3}\n\\]"
         },
         {
@@ -784,15 +784,15 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "For a histogram,",
+          "title": "Use histogram",
           "body": "For a histogram,\n\n\\[\n\\text{frequency}=\\text{class width}\\times \\text{frequency density}\n\\]"
         },
         {
-          "title": "For , the frequency is",
+          "title": "Use frequency table",
           "body": "For \\(8\\leq w<8.5\\), the frequency is 16 and the class width is \\(0.5\\), so\n\n\\[\n\\text{frequency density}=\\frac{16}{0.5}=32\n\\]"
         },
         {
-          "title": "Using this scale from the",
+          "title": "Use histogram",
           "body": "Using this scale from the histogram, the frequency densities are:\n\n\\[\n15,\\ 32,\\ 23,\\ 30,\\ 12\n\\]"
         },
         {

@@ -8,7 +8,7 @@
       "topicNote": "Set notation and Venn diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Let the sets be for",
+          "title": "Let the sets dogs",
           "body": "Let the sets be \\(D\\) for dogs, \\(C\\) for cats, and \\(R\\) for rabbits."
         },
         {
@@ -16,7 +16,7 @@
           "body": "The number in all three sets is \\(6\\).\n\n\\[\nD\\cap R \\text{ only}=9-6=3\n\\]\n\n\\[\nC\\cap R \\text{ only}=8-6=2\n\\]\n\n\\[\nD\\cap C \\text{ only}=x-6\n\\]"
         },
         {
-          "title": "So the remaining one set",
+          "title": "Calculate value",
           "body": "So the remaining one-set regions are\n\n\\[\nD \\text{ only}=25-x,\\quad C \\text{ only}=16-x,\\quad R \\text{ only}=9\n\\]"
         },
         {
@@ -24,7 +24,7 @@
           "body": "There are \\(5\\) students outside all three sets. The total number of students is \\(50\\), so\n\n\\[\n(25-x)+(16-x)+9+(x-6)+3+2+6+5=50\n\\]\n\n\\[\n60-x=50\n\\]\n\n\\[\nx=10\n\\]"
         },
         {
-          "title": "For , we need students",
+          "title": "Calculate value",
           "body": "For \\(C' \\cap D'\\), we need students who are not in \\(C\\) and not in \\(D\\). These are the rabbit-only students and the students outside all three sets.\n\n\\[\n9+5=14\n\\]"
         }
       ],
@@ -41,7 +41,7 @@
           "body": "Use the index law \\(a^m\\times a^n=a^{m+n}\\):\n\n\\[\n5^{17}\\times 5^2=5^{19}\n\\]"
         },
         {
-          "title": "Now write as a product",
+          "title": "Find the LCM",
           "body": "Now write \\(800\\) as a product of prime factors:\n\n\\[\n800=8\\times 100\n\\]\n\n\\[\n800=2^3\\times 2^2\\times 5^2\n\\]\n\n\\[\n800=2^5\\times 5^2\n\\]"
         }
       ],
@@ -66,11 +66,11 @@
           "body": "Difference:\n\n\\[\n106000000-68600000=37400000\n\\]\n\n\\[\n37400000=3.74\\times 10^7\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Convert standard form",
           "body": "For part (b),\n\n\\[\nk=\\frac{1.56\\times 10^8}{1.41\\times 10^7}\n\\]\n\n\\[\nk=11.063\\ldots\n\\]"
         },
         {
-          "title": "To the nearest whole number,",
+          "title": "Convert standard form",
           "body": "To the nearest whole number,\n\n\\[\nk=11\n\\]"
         }
       ],
@@ -87,11 +87,11 @@
           "body": "A depreciation of \\(19\\%\\) gives a multiplier of\n\n\\[\n1-0.19=0.81\n\\]"
         },
         {
-          "title": "After 3 years,",
+          "title": "Use compound interest",
           "body": "After 3 years,\n\n\\[\n20000(0.81)^3=10628.82\n\\]"
         },
         {
-          "title": "Correct to the nearest dollar,",
+          "title": "Use compound interest",
           "body": "Correct to the nearest dollar,\n\n\\[\n10628.82\\approx 10629\n\\]"
         }
       ],
@@ -104,19 +104,19 @@
       "topicNote": "Algebraic Roots and Indices. The tag is acceptable because the index-law part carries the larger share of marks.",
       "steps": [
         {
-          "title": "For part (a), factorise the",
+          "title": "Factorise expression",
           "body": "For part (a), factorise the numerator and denominator:\n\n\\[\n10x^2+23x+12=(5x+4)(2x+3)\n\\]\n\n\\[\n4x^2-9=(2x-3)(2x+3)\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use index laws",
           "body": "So\n\n\\[\n\\frac{10x^2+23x+12}{4x^2-9}=\\frac{(5x+4)(2x+3)}{(2x-3)(2x+3)}\n\\]\n\n\\[\n=\\frac{5x+4}{2x-3}\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Use index laws",
           "body": "For part (b),\n\n\\[\n2^{2y}\\times 2^{3y+2}=2^{5y+2}\n\\]"
         },
         {
-          "title": "Also,",
+          "title": "Use index laws",
           "body": "Also,\n\n\\[\n\\frac{8^{5y}}{4^n}=\\frac{(2^3)^{5y}}{(2^2)^n}=2^{15y-2n}\n\\]"
         },
         {
@@ -133,7 +133,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve inequality",
           "body": "\\[\n7-12x-2x^2=-2x^2-12x+7\n\\]\n\n\\[\n=-2(x^2+6x)+7\n\\]\n\n\\[\n=-2\\left((x+3)^2-9\\right)+7\n\\]\n\n\\[\n=-2(x+3)^2+18+7\n\\]\n\n\\[\n=25-2(x+3)^2\n\\]"
         }
       ],
@@ -146,7 +146,7 @@
       "topicNote": "Corrected from Right-Angled Triangles to Algebraic Proof.",
       "steps": [
         {
-          "title": "Since is a multiple of",
+          "title": "Use trigonometry",
           "body": "Since \\(N\\) is a multiple of 5, let\n\n\\[\nN=5k\n\\]"
         },
         {
@@ -158,7 +158,7 @@
           "body": "Given\n\n\\[\nA=N+1,\\qquad B=N-1\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\nA^2-B^2=(N+1)^2-(N-1)^2\n\\]"
         },
         {
@@ -166,7 +166,7 @@
           "body": "Expand:\n\n\\[\n(N+1)^2=N^2+2N+1\n\\]\n\n\\[\n(N-1)^2=N^2-2N+1\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Use trigonometry",
           "body": "Therefore\n\n\\[\nA^2-B^2=(N^2+2N+1)-(N^2-2N+1)\n\\]\n\n\\[\n=4N\n\\]"
         },
         {
@@ -174,7 +174,7 @@
           "body": "Substitute \\(N=5k\\):\n\n\\[\n4N=4(5k)=20k\n\\]"
         },
         {
-          "title": "Since is an integer, is",
+          "title": "Use trigonometry",
           "body": "Since \\(k\\) is an integer, \\(20k\\) is a multiple of 20."
         }
       ],
@@ -203,7 +203,7 @@
           "body": "Factorise:\n\\[\n(5y+8)(y-5)\\le0\n\\]"
         },
         {
-          "title": "The roots are and .",
+          "title": "Solve quadratic equation",
           "body": "The roots are \\(-\\frac85\\) and \\(5\\). The quadratic is \\(\\le0\\) between the roots."
         }
       ],
@@ -216,7 +216,7 @@
       "topicNote": "Simultaneous equations. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve simultaneous equations",
           "body": "\\[\n3x+5y=6\n\\]\n\n\\[\n7x-5y=-11\n\\]"
         },
         {
@@ -224,7 +224,7 @@
           "body": "Add the equations:\n\\[\n10x=-5\n\\]\n\n\\[\nx=-\\frac12\n\\]"
         },
         {
-          "title": "Substitute into",
+          "title": "Solve simultaneous equations",
           "body": "Substitute into \\(3x+5y=6\\):\n\\[\n3\\left(-\\frac12\\right)+5y=6\n\\]\n\n\\[\n-\\frac32+5y=6\n\\]\n\n\\[\n5y=\\frac{15}{2}\n\\]\n\n\\[\ny=\\frac32\n\\]"
         }
       ],
@@ -245,7 +245,7 @@
           "body": "Let the number of buttons in tin A be \\(x\\)."
         },
         {
-          "title": "Then tin B has buttons",
+          "title": "Solve equation",
           "body": "Then tin B has \\(4x\\) buttons and tin C has \\(x-7\\) buttons.\n\n\\[\nx+4x+(x-7)=137\n\\]\n\n\\[\n6x-7=137\n\\]\n\n\\[\n6x=144\n\\]\n\n\\[\nx=24\n\\]"
         },
         {
@@ -262,7 +262,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "First term",
+          "title": "Find the nth term",
           "body": "First term:\n\n\\[\na=-6\n\\]\n\n\\[\nS_{30}=2865\n\\]"
         },
         {
@@ -283,35 +283,35 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "For ,",
+          "title": "Evaluate fraction",
           "body": "For \\(L_1\\),\n\n\\[\n5x+10y=8\n\\]\n\n\\[\n10y=-5x+8\n\\]\n\n\\[\ny=-\\frac12x+\\frac45\n\\]"
         },
         {
-          "title": "So the gradient of is",
+          "title": "Find the gradient",
           "body": "So the gradient of \\(L_1\\) is \\(-\\frac12\\)."
         },
         {
-          "title": "Since is perpendicular to ,",
+          "title": "Find the gradient",
           "body": "Since \\(L_2\\) is perpendicular to \\(L_1\\), the gradient of \\(L_2\\) is \\(2\\)."
         },
         {
-          "title": "Using the point",
+          "title": "Calculate value",
           "body": "Using the point \\((8,6)\\):\n\n\\[\ny-6=2(x-8)\n\\]\n\n\\[\ny=2x-10\n\\]"
         },
         {
-          "title": "At , the line crosses",
+          "title": "Calculate value",
           "body": "At \\(A\\), the line crosses the \\(x\\)-axis, so \\(y=0\\):\n\n\\[\n0=2x-10\n\\]\n\n\\[\nx=5\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So \\(A=(5,0)\\)."
         },
         {
-          "title": "At ,",
+          "title": "Calculate value",
           "body": "At \\(B\\), \\(x=-3\\):\n\n\\[\ny=2(-3)-10=-16\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So \\(B=(-3,-16)\\)."
         },
         {
@@ -328,7 +328,7 @@
       "topicNote": "Correct. This is a table-and-graph question for a quadratic function.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve quadratic equation",
           "body": "\\[\ny=x^2-\\frac{x}{2}-3\n\\]"
         },
         {
@@ -349,7 +349,7 @@
       "topicNote": "Correct. This combines integer inequalities and a shaded region.",
       "steps": [
         {
-          "title": "For part (a),",
+          "title": "Solve inequality",
           "body": "For part (a),\n\\[\n2<x\\leq4\n\\]"
         },
         {
@@ -357,7 +357,7 @@
           "body": "The integer values are\n\\[\n3,4\n\\]"
         },
         {
-          "title": "For the region , the",
+          "title": "Calculate value",
           "body": "For the region \\(R\\), the boundaries are\n\\[\ny=x-3,\n\\qquad\nx+y=5,\n\\qquad\ny=6\n\\]"
         },
         {
@@ -391,7 +391,7 @@
       "topicNote": "Corrected to Standard & Compound Units.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate area",
           "body": "\\[\n\\text{pressure}=\\frac{\\text{force}}{\\text{area}}\n\\]\n\n\\[\n30=\\frac{27}{\\text{area}}\n\\]\n\n\\[\n\\text{area}=\\frac{27}{30}=0.9\\text{ m}^2\n\\]"
         },
         {
@@ -459,7 +459,7 @@
           "body": "Each congruent isosceles triangle has two angles of \\(66^\\circ\\)."
         },
         {
-          "title": "So the angle at the",
+          "title": "Use trigonometry",
           "body": "So the angle at the point between the two polygons is\n\\[\n180^\\circ-66^\\circ-66^\\circ=48^\\circ\n\\]"
         },
         {
@@ -488,7 +488,7 @@
           "body": "Their heights are in the ratio\n\n\\[\n9:13\n\\]"
         },
         {
-          "title": "So their surface areas are",
+          "title": "Split the ratio",
           "body": "So their surface areas are in the ratio\n\n\\[\n9^2:13^2=81:169\n\\]"
         },
         {
@@ -513,7 +513,7 @@
       "topicNote": "Corrected to Right-Angled Triangles - Pythagoras & Trigonometry.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use trigonometry",
           "body": "\\[\nd^2=8.5^2+5.6^2\n\\]\n\n\\[\nd=\\sqrt{103.61}=10.178\\ldots\n\\]"
         }
       ],
@@ -526,19 +526,19 @@
       "topicNote": "Moved from Linear Graphs to Vectors.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Read the graph",
           "body": "\\[\n\\vec{OA}=3\\mathbf a,\\qquad \\vec{OB}=6\\mathbf b,\\qquad \\vec{AC}=4\\mathbf b\n\\]"
         },
         {
-          "title": "So",
+          "title": "Read the graph",
           "body": "So\n\n\\[\n\\vec{OC}=3\\mathbf a+4\\mathbf b\n\\]"
         },
         {
-          "title": "Point lies on , so",
+          "title": "Read the graph",
           "body": "Point \\(N\\) lies on \\(OC\\), so\n\n\\[\n\\vec{ON}=t(3\\mathbf a+4\\mathbf b)\n\\]"
         },
         {
-          "title": "Point also lies on ,",
+          "title": "Read the graph",
           "body": "Point \\(N\\) also lies on \\(AB\\), so\n\n\\[\n\\vec{ON}=3\\mathbf a+s(6\\mathbf b-3\\mathbf a)\n\\]\n\n\\[\n\\vec{ON}=(3-3s)\\mathbf a+6s\\mathbf b\n\\]"
         },
         {
@@ -546,19 +546,19 @@
           "body": "Equate coefficients:\n\n\\[\n3t=3-3s\n\\]\n\n\\[\n4t=6s\n\\]"
         },
         {
-          "title": "So",
+          "title": "Read the graph",
           "body": "So\n\n\\[\nt=1-s\n\\]"
         },
         {
-          "title": "and",
+          "title": "Read the graph",
           "body": "and\n\n\\[\nt=\\frac32s\n\\]\n\n\\[\n\\frac32s=1-s\n\\]\n\n\\[\n5s=2\n\\]\n\n\\[\ns=\\frac25\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Read the graph",
           "body": "Then\n\n\\[\nt=\\frac35\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Read the graph",
           "body": "Therefore\n\n\\[\n\\vec{ON}=\\frac35(3\\mathbf a+4\\mathbf b)\n\\]\n\n\\[\n\\vec{ON}=\\frac95\\mathbf a+\\frac{12}{5}\\mathbf b\n\\]"
         }
       ],
@@ -597,11 +597,11 @@
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "For Cody",
+          "title": "Calculate probability",
           "body": "For Cody:\n\n\\[\nP(A\\text{ odd})=\\frac{7}{10},\\qquad P(A\\text{ even})=\\frac{3}{10}\n\\]\n\n\\[\nP(B\\text{ odd})=\\frac{7}{12},\\qquad P(B\\text{ even})=\\frac{5}{12}\n\\]"
         },
         {
-          "title": "An odd total comes from",
+          "title": "Calculate probability",
           "body": "An odd total comes from odd + even or even + odd:\n\n\\[\n\\frac{7}{10}\\times\\frac{5}{12}+\\frac{3}{10}\\times\\frac{7}{12}\n=\\frac{7}{15}\n\\]"
         },
         {
@@ -613,7 +613,7 @@
           "body": "Given Cody and Harriet both take two even counters:\n\n\\[\n\\frac18\\times P(H\\text{ even})=\\frac{3}{100}\n\\]\n\n\\[\nP(H\\text{ even})=\\frac{6}{25}\n\\]"
         },
         {
-          "title": "So Harriet s bag must",
+          "title": "Calculate probability",
           "body": "So Harriet's bag must have at least \\(25\\) counters."
         }
       ],
@@ -634,7 +634,7 @@
           "body": "(b)\n\n\\[\n2^{2y}\\times 2^{3y+2}=2^{5y+2}\n\\]"
         },
         {
-          "title": "Also,",
+          "title": "Evaluate fraction",
           "body": "Also,\n\n\\[\n\\frac{8^{5y}}{4^n}\n=\\frac{(2^3)^{5y}}{(2^2)^n}\n=2^{15y-2n}\n\\]"
         },
         {
@@ -651,7 +651,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve inequality",
           "body": "\\[\n7-12x-2x^2=-2x^2-12x+7\n\\]\n\n\\[\n=-2(x^2+6x)+7\n\\]\n\n\\[\n=-2\\left((x+3)^2-9\\right)+7\n\\]\n\n\\[\n=-2(x+3)^2+18+7\n\\]\n\n\\[\n=25-2(x+3)^2\n\\]"
         }
       ],
@@ -664,7 +664,7 @@
       "topicNote": "Corrected from Right-Angled Triangles to Algebraic Proof.",
       "steps": [
         {
-          "title": "Since is a multiple of",
+          "title": "Use trigonometry",
           "body": "Since \\(N\\) is a multiple of 5, let\n\n\\[\nN=5k\n\\]"
         },
         {
@@ -676,7 +676,7 @@
           "body": "Given\n\n\\[\nA=N+1,\\qquad B=N-1\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\nA^2-B^2=(N+1)^2-(N-1)^2\n\\]"
         },
         {
@@ -684,7 +684,7 @@
           "body": "Expand:\n\n\\[\n(N+1)^2=N^2+2N+1\n\\]\n\n\\[\n(N-1)^2=N^2-2N+1\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Use trigonometry",
           "body": "Therefore\n\n\\[\nA^2-B^2=(N^2+2N+1)-(N^2-2N+1)\n\\]\n\n\\[\n=4N\n\\]"
         },
         {
@@ -692,7 +692,7 @@
           "body": "Substitute \\(N=5k\\):\n\n\\[\n4N=4(5k)=20k\n\\]"
         },
         {
-          "title": "Since is an integer, is",
+          "title": "Use trigonometry",
           "body": "Since \\(k\\) is an integer, \\(20k\\) is a multiple of 20."
         }
       ],
@@ -705,7 +705,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "First term",
+          "title": "Find the nth term",
           "body": "First term:\n\n\\[\na=-6\n\\]\n\n\\[\nS_{30}=2865\n\\]"
         },
         {
@@ -726,35 +726,35 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "For ,",
+          "title": "Evaluate fraction",
           "body": "For \\(L_1\\),\n\n\\[\n5x+10y=8\n\\]\n\n\\[\n10y=-5x+8\n\\]\n\n\\[\ny=-\\frac12x+\\frac45\n\\]"
         },
         {
-          "title": "So the gradient of is",
+          "title": "Find the gradient",
           "body": "So the gradient of \\(L_1\\) is \\(-\\frac12\\)."
         },
         {
-          "title": "Since is perpendicular to ,",
+          "title": "Find the gradient",
           "body": "Since \\(L_2\\) is perpendicular to \\(L_1\\), the gradient of \\(L_2\\) is \\(2\\)."
         },
         {
-          "title": "Using the point",
+          "title": "Calculate value",
           "body": "Using the point \\((8,6)\\):\n\n\\[\ny-6=2(x-8)\n\\]\n\n\\[\ny=2x-10\n\\]"
         },
         {
-          "title": "At , the line crosses",
+          "title": "Calculate value",
           "body": "At \\(A\\), the line crosses the \\(x\\)-axis, so \\(y=0\\):\n\n\\[\n0=2x-10\n\\]\n\n\\[\nx=5\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So \\(A=(5,0)\\)."
         },
         {
-          "title": "At ,",
+          "title": "Calculate value",
           "body": "At \\(B\\), \\(x=-3\\):\n\n\\[\ny=2(-3)-10=-16\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So \\(B=(-3,-16)\\)."
         },
         {
@@ -779,7 +779,7 @@
           "body": "Their heights are in the ratio\n\n\\[\n9:13\n\\]"
         },
         {
-          "title": "So their surface areas are",
+          "title": "Split the ratio",
           "body": "So their surface areas are in the ratio\n\n\\[\n9^2:13^2=81:169\n\\]"
         },
         {
@@ -804,19 +804,19 @@
       "topicNote": "Moved from Linear Graphs to Vectors.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Read the graph",
           "body": "\\[\n\\vec{OA}=3\\mathbf a,\\qquad \\vec{OB}=6\\mathbf b,\\qquad \\vec{AC}=4\\mathbf b\n\\]"
         },
         {
-          "title": "So",
+          "title": "Read the graph",
           "body": "So\n\n\\[\n\\vec{OC}=3\\mathbf a+4\\mathbf b\n\\]"
         },
         {
-          "title": "Point lies on , so",
+          "title": "Read the graph",
           "body": "Point \\(N\\) lies on \\(OC\\), so\n\n\\[\n\\vec{ON}=t(3\\mathbf a+4\\mathbf b)\n\\]"
         },
         {
-          "title": "Point also lies on ,",
+          "title": "Read the graph",
           "body": "Point \\(N\\) also lies on \\(AB\\), so\n\n\\[\n\\vec{ON}=3\\mathbf a+s(6\\mathbf b-3\\mathbf a)\n\\]\n\n\\[\n\\vec{ON}=(3-3s)\\mathbf a+6s\\mathbf b\n\\]"
         },
         {
@@ -824,19 +824,19 @@
           "body": "Equate coefficients:\n\n\\[\n3t=3-3s\n\\]\n\n\\[\n4t=6s\n\\]"
         },
         {
-          "title": "So",
+          "title": "Read the graph",
           "body": "So\n\n\\[\nt=1-s\n\\]"
         },
         {
-          "title": "and",
+          "title": "Read the graph",
           "body": "and\n\n\\[\nt=\\frac32s\n\\]\n\n\\[\n\\frac32s=1-s\n\\]\n\n\\[\n5s=2\n\\]\n\n\\[\ns=\\frac25\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Read the graph",
           "body": "Then\n\n\\[\nt=\\frac35\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Read the graph",
           "body": "Therefore\n\n\\[\n\\vec{ON}=\\frac35(3\\mathbf a+4\\mathbf b)\n\\]\n\n\\[\n\\vec{ON}=\\frac95\\mathbf a+\\frac{12}{5}\\mathbf b\n\\]"
         }
       ],

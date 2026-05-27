@@ -8,19 +8,19 @@
       "topicNote": "Corrected to Prime Factors, HCF & LCM.",
       "steps": [
         {
-          "title": "Pens come in packs of",
+          "title": "Find the LCM",
           "body": "Pens come in packs of 9 and pencils come in boxes of 12."
         },
         {
-          "title": "The smallest equal number of",
+          "title": "Find the LCM",
           "body": "The smallest equal number of pens and pencils is\n\n\\[\n\\operatorname{LCM}(9,12)=36\n\\]"
         },
         {
-          "title": "So Sandeep buys",
+          "title": "Find the LCM",
           "body": "So Sandeep buys\n\n\\[\n4\\text{ packs of pens}\n\\]"
         },
         {
-          "title": "and",
+          "title": "Find the LCM",
           "body": "and\n\n\\[\n3\\text{ boxes of pencils}\n\\]"
         },
         {
@@ -83,15 +83,15 @@
       "topicNote": "Algebraic Roots and Indices. The tag is correct.",
       "steps": [
         {
-          "title": "Any non zero expression to",
+          "title": "Use index laws",
           "body": "Any non-zero expression to the power 0 is 1:\n\n\\[\n(4^{-2})^0=1\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Use index laws",
           "body": "For part (b),\n\n\\[\n3^{-14}\\times 3^8=3^{-14+8}=3^{-6}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use index laws",
           "body": "So\n\n\\[\nm=-6\n\\]"
         }
       ],
@@ -104,15 +104,15 @@
       "topicNote": "Corrected to Algebraic Roots & Indices. This is an algebraic fractional-index question, not a standard form question.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Convert standard form",
           "body": "\\[\n\\left(\\frac{m^6k^{10}}{25}\\right)^{\\frac32}\n=\\frac{(m^6)^{\\frac32}(k^{10})^{\\frac32}}{25^{\\frac32}}\n\\]\n\n\\[\n(m^6)^{\\frac32}=m^9\n\\]\n\n\\[\n(k^{10})^{\\frac32}=k^{15}\n\\]"
         },
         {
-          "title": "Also,",
+          "title": "Convert standard form",
           "body": "Also,\n\n\\[\n25^{\\frac32}=(\\sqrt{25})^3=5^3=125\n\\]"
         },
         {
-          "title": "So",
+          "title": "Convert standard form",
           "body": "So\n\n\\[\n\\left(\\frac{m^6k^{10}}{25}\\right)^{\\frac32}\n=\\frac{m^9k^{15}}{125}\n\\]"
         }
       ],
@@ -125,7 +125,7 @@
       "topicNote": "Expanding brackets. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Expand brackets",
           "body": "\\[\nP=m^2-4c=(-5)^2-4(3)=25-12=13\n\\]\n\n\\[\n(x+5)(x-7)=x^2-7x+5x-35=x^2-2x-35\n\\]"
         }
       ],
@@ -138,7 +138,7 @@
       "topicNote": "Rearranging formulas. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Rearrange formula",
           "body": "\\[\ny=\\sqrt[3]{\\frac{6+5x}{x+4}}\n\\]\n\n\\[\ny^3=\\frac{6+5x}{x+4}\n\\]\n\n\\[\ny^3(x+4)=6+5x\n\\]\n\n\\[\nx(y^3-5)=6-4y^3\n\\]"
         }
       ],
@@ -151,7 +151,7 @@
       "topicNote": "Algebraic proof. The tag is acceptable because the question asks for exact-form proof.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify surd",
           "body": "\\[\n\\frac{2\\sqrt3}{\\sqrt3-1}\\times\\frac{\\sqrt3+1}{\\sqrt3+1}\n=\\frac{2\\sqrt3(\\sqrt3+1)}{3-1}\n\\]\n\n\\[\n=\\frac{6+2\\sqrt3}{2}=3+\\sqrt3\n\\]"
         },
         {
@@ -189,15 +189,15 @@
           "body": "The first three terms are\n\n\\[\n8p,\\quad 7p-3,\\quad 4p+2\n\\]"
         },
         {
-          "title": "For an arithmetic sequence, consecutive",
+          "title": "Find the nth term",
           "body": "For an arithmetic sequence, consecutive differences are equal:\n\n\\[\n(7p-3)-8p=(4p+2)-(7p-3)\n\\]\n\n\\[\n-p-3=-3p+5\n\\]\n\n\\[\n2p=8\n\\]\n\n\\[\np=4\n\\]"
         },
         {
-          "title": "So the first term is",
+          "title": "Find the nth term",
           "body": "So the first term is\n\n\\[\n8p=32\n\\]"
         },
         {
-          "title": "and the common difference is",
+          "title": "Find common difference",
           "body": "and the common difference is\n\n\\[\n(7p-3)-8p=25-32=-7\n\\]"
         },
         {
@@ -222,11 +222,11 @@
           "body": "The line is\n\n\\[\ny-2x=1\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\ny=2x+1\n\\]"
         },
         {
-          "title": "Substitute into",
+          "title": "Calculate value",
           "body": "Substitute into\n\n\\[\ny^2+xy=7\n\\]\n\n\\[\n(2x+1)^2+x(2x+1)=7\n\\]\n\n\\[\n4x^2+4x+1+2x^2+x=7\n\\]\n\n\\[\n6x^2+5x-6=0\n\\]"
         },
         {
@@ -234,11 +234,11 @@
           "body": "Factorise:\n\n\\[\n(3x-2)(2x+3)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\nx=\\frac23 \\quad \\text{or} \\quad x=-\\frac32\n\\]"
         },
         {
-          "title": "Using",
+          "title": "Evaluate fraction",
           "body": "Using \\(y=2x+1\\):\n\n\\[\nx=\\frac23 \\Rightarrow y=\\frac73\n\\]\n\n\\[\nx=-\\frac32 \\Rightarrow y=-2\n\\]"
         }
       ],
@@ -255,7 +255,7 @@
           "body": "The perpendicular bisector is\n\n\\[\ny-2x=7\n\\]"
         },
         {
-          "title": "so",
+          "title": "Calculate value",
           "body": "so\n\n\\[\ny=2x+7\n\\]"
         },
         {
@@ -263,7 +263,7 @@
           "body": "The gradient of the perpendicular bisector is \\(2\\), so the gradient of \\(AB\\) is\n\n\\[\n-\\frac{1}{2}\n\\]"
         },
         {
-          "title": "Since and ,",
+          "title": "Evaluate fraction",
           "body": "Since \\(A=(j,7)\\) and \\(B=(6,k)\\),\n\n\\[\n\\frac{k-7}{6-j}=-\\frac{1}{2}\n\\]\n\n\\[\n2(k-7)=-(6-j)\n\\]\n\n\\[\nj=2k-8\n\\]"
         },
         {
@@ -275,15 +275,15 @@
           "body": "Substitute \\(j=2k-8\\):\n\n\\[\n\\left(k-1,\\frac{k+7}{2}\\right)\n\\]"
         },
         {
-          "title": "The midpoint lies on ,",
+          "title": "Find the midpoint",
           "body": "The midpoint lies on \\(y=2x+7\\), so\n\n\\[\n\\frac{k+7}{2}=2(k-1)+7\n\\]\n\n\\[\nk+7=4k+10\n\\]\n\n\\[\nk=-1\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate value",
           "body": "Then\n\n\\[\nj=2(-1)-8=-10\n\\]"
         },
         {
-          "title": "Therefore the midpoint is",
+          "title": "Find the midpoint",
           "body": "Therefore the midpoint is\n\n\\[\n\\left(\\frac{-10+6}{2},\\frac{7+(-1)}{2}\\right)=(-2,3)\n\\]"
         }
       ],
@@ -296,7 +296,7 @@
       "topicNote": "Corrected to graphs of functions. This is matching equations to graph shapes.",
       "steps": [
         {
-          "title": "For the graph is positive",
+          "title": "Solve equation",
           "body": "For\n\\[\ny=\\frac{10}{x^2}\n\\]\nthe graph is positive on both sides and symmetrical in the \\(y\\)-axis."
         },
         {
@@ -304,7 +304,7 @@
           "body": "This is Graph D."
         },
         {
-          "title": "For the leading term is",
+          "title": "Solve equation",
           "body": "For\n\\[\ny=x-3+3x^2-x^3\n\\]\nthe leading term is \\(-x^3\\), so it is a cubic falling to the right with two turning points."
         },
         {
@@ -312,7 +312,7 @@
           "body": "This is Graph C."
         },
         {
-          "title": "For the graph is a",
+          "title": "Solve equation",
           "body": "For\n\\[\ny=-\\frac3x\n\\]\nthe graph is a negative reciprocal graph in quadrants 2 and 4."
         },
         {
@@ -333,11 +333,11 @@
           "body": "The curve is\n\n\\[\ny=a\\cos bx^\\circ+c\n\\]"
         },
         {
-          "title": "From the graph, the maximum",
+          "title": "Use trigonometry",
           "body": "From the graph, the maximum value is\n\n\\[\n3\n\\]"
         },
         {
-          "title": "and the minimum value is",
+          "title": "Use trigonometry",
           "body": "and the minimum value is\n\n\\[\n-1\n\\]"
         },
         {
@@ -353,11 +353,11 @@
           "body": "The distance between consecutive maxima is \\(120^\\circ\\), so the period is\n\n\\[\n120^\\circ\n\\]"
         },
         {
-          "title": "For , the period is",
+          "title": "Use trigonometry",
           "body": "For \\(y=a\\cos bx^\\circ+c\\), the period is\n\n\\[\n\\frac{360^\\circ}{b}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\n\\frac{360}{b}=120\n\\]\n\n\\[\nb=3\n\\]"
         }
       ],
@@ -370,11 +370,11 @@
       "topicNote": "Correct. This combines solving and graphing inequalities.",
       "steps": [
         {
-          "title": "For part (a),",
+          "title": "Read the graph",
           "body": "For part (a),\n\\[\n9-4x>17\n\\]\n\n\\[\n-4x>8\n\\]\n\n\\[\nx<-2\n\\]"
         },
         {
-          "title": "For part (b), the region",
+          "title": "Read the graph",
           "body": "For part (b), the region is above \\(y=2\\), left of \\(x=6\\), and below \\(y=x\\):\n\\[\ny\\geq2\n\\]\n\n\\[\nx\\leq6\n\\]\n\n\\[\ny\\leq x\n\\]"
         }
       ],
@@ -400,19 +400,19 @@
       "topicNote": "Corrected to circle theorems. The question uses the intersecting secants theorem.",
       "steps": [
         {
-          "title": "From the external point ,",
+          "title": "Use circle theorem",
           "body": "From the external point \\(P\\), two secants meet the circle."
         },
         {
-          "title": "For the upper secant,",
+          "title": "Use circle theorem",
           "body": "For the upper secant,\n\\[\nPB=14,\\qquad PA=14+16=30\n\\]"
         },
         {
-          "title": "For the lower secant,",
+          "title": "Use circle theorem",
           "body": "For the lower secant,\n\\[\nPC=12,\\qquad PD=12+DC\n\\]"
         },
         {
-          "title": "Using the secant theorem",
+          "title": "Use circle theorem",
           "body": "Using the secant theorem:\n\\[\nPB\\times PA=PC\\times PD\n\\]\n\n\\[\n14\\times30=12(12+DC)\n\\]\n\n\\[\n420=144+12DC\n\\]\n\n\\[\n276=12DC\n\\]\n\n\\[\nDC=23\n\\]"
         }
       ],
@@ -429,19 +429,19 @@
           "body": "The angle between the tangent \\(CN\\) and the chord \\(CB\\) is \\(78^\\circ\\)."
         },
         {
-          "title": "By the alternate segment theorem,",
+          "title": "Use trigonometry",
           "body": "By the alternate segment theorem,\n\n\\[\n\\angle BAC=78^\\circ\n\\]"
         },
         {
-          "title": "Also,",
+          "title": "Calculate value",
           "body": "Also,\n\n\\[\nAB=CB\n\\]"
         },
         {
-          "title": "so triangle is isosceles and",
+          "title": "Use trigonometry",
           "body": "so triangle \\(ABC\\) is isosceles and the base angles are equal:\n\n\\[\n\\angle BAC=\\angle ACB=78^\\circ\n\\]"
         },
         {
-          "title": "Using the angle sum of",
+          "title": "Use trigonometry",
           "body": "Using the angle sum of a triangle:\n\n\\[\n\\angle ABC=180^\\circ-78^\\circ-78^\\circ\n\\]\n\n\\[\n\\angle ABC=24^\\circ\n\\]"
         }
       ],
@@ -454,7 +454,7 @@
       "topicNote": "Area & Perimeter. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate area",
           "body": "\\[\n\\text{area}=\\frac12(170+330)\\times 240=60000\\text{ m}^2\n\\]\n\n\\[\n60000\\text{ m}^2=6\\text{ hectares}\n\\]\n\n\\[\n\\text{price per hectare}=49650\\div 6=8275\n\\]"
         }
       ],
@@ -467,7 +467,7 @@
       "topicNote": "Corrected to Volume & Surface Area.",
       "steps": [
         {
-          "title": "In triangle ,",
+          "title": "Use trigonometry",
           "body": "In triangle \\(DBC\\),\n\n\\[\nDC=50\\cos32^\\circ=42.402\\ldots,\\qquad BC=50\\sin32^\\circ=26.496\\ldots\n\\]"
         },
         {
@@ -521,11 +521,11 @@
       "topicNote": "Moved from Coordinate Geometry to 3D Pythagoras & Trigonometry.",
       "steps": [
         {
-          "title": "For part (a), is the",
+          "title": "Find the gradient",
           "body": "For part (a), \\(BE\\) is the space diagonal using the three perpendicular lengths:\n\n\\[\nAB=15,\\qquad BC=4,\\qquad CF=9\n\\]\n\n\\[\nBE^2=15^2+4^2+9^2\n\\]\n\n\\[\nBE^2=225+16+81=322\n\\]\n\n\\[\nBE=\\sqrt{322}=17.9\\text{ cm}\n\\]"
         },
         {
-          "title": "For part (b), the projection",
+          "title": "Use trigonometry",
           "body": "For part (b), the projection of \\(PU\\) onto the plane \\(PQRS\\) is \\(PR\\).\n\n\\[\nPR=42\n\\]"
         },
         {
@@ -533,11 +533,11 @@
           "body": "The angle between \\(PU\\) and the plane is \\(30^\\circ\\), so\n\n\\[\n\\tan 30^\\circ=\\frac{RU}{PR}\n\\]\n\n\\[\nRU=42\\tan30^\\circ\n\\]"
         },
         {
-          "title": "Since is the midpoint of",
+          "title": "Find the midpoint",
           "body": "Since \\(M\\) is the midpoint of \\(PR\\),\n\n\\[\nMR=21\n\\]"
         },
         {
-          "title": "In right triangle ,",
+          "title": "Use trigonometry",
           "body": "In right triangle \\(MRU\\),\n\n\\[\n\\tan \\angle UMR=\\frac{RU}{MR}\n\\]\n\n\\[\n\\tan \\angle UMR=\\frac{42\\tan30^\\circ}{21}\n\\]\n\n\\[\n\\tan \\angle UMR=2\\tan30^\\circ\n\\]\n\n\\[\n\\angle UMR=49.1^\\circ\n\\]"
         }
       ],
@@ -558,11 +558,11 @@
           "body": "Total for Monday to Sunday:\n\n\\[\n7 \\times 127=889\n\\]"
         },
         {
-          "title": "So the total for Saturday",
+          "title": "Calculate value",
           "body": "So the total for Saturday and Sunday is\n\n\\[\n889-520=369\n\\]"
         },
         {
-          "title": "Saturday was , so",
+          "title": "Calculate value",
           "body": "Saturday was \\(132\\text{ km}\\), so\n\n\\[\n369-132=237\n\\]"
         }
       ],
@@ -596,15 +596,15 @@
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate probability",
           "body": "\\[\nP(\\text{three heads})=\\frac{27}{64}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate probability",
           "body": "So\n\n\\[\nP(H)^3=\\frac{27}{64}\n\\]\n\n\\[\nP(H)=\\frac{3}{4}\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Calculate probability",
           "body": "Therefore\n\n\\[\nP(T)=\\frac{1}{4}\n\\]\n\n\\[\nP(\\text{three tails})=\\left(\\frac14\\right)^3=\\frac{1}{64}\n\\]"
         }
       ],
@@ -621,7 +621,7 @@
           "body": "There are \\(30\\) adults.\n\n\\[\nn(B)=19,\\quad n(D)=15,\\quad n(\\text{neither})=4\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate probability",
           "body": "So\n\n\\[\nn(B\\cup D)=30-4=26\n\\]\n\n\\[\nn(B\\cap D)=19+15-26=8\n\\]"
         },
         {
@@ -642,15 +642,15 @@
           "body": "The first three terms are\n\n\\[\n8p,\\quad 7p-3,\\quad 4p+2\n\\]"
         },
         {
-          "title": "For an arithmetic sequence, consecutive",
+          "title": "Find the nth term",
           "body": "For an arithmetic sequence, consecutive differences are equal:\n\n\\[\n(7p-3)-8p=(4p+2)-(7p-3)\n\\]\n\n\\[\n-p-3=-3p+5\n\\]\n\n\\[\n2p=8\n\\]\n\n\\[\np=4\n\\]"
         },
         {
-          "title": "So the first term is",
+          "title": "Find the nth term",
           "body": "So the first term is\n\n\\[\n8p=32\n\\]"
         },
         {
-          "title": "and the common difference is",
+          "title": "Find common difference",
           "body": "and the common difference is\n\n\\[\n(7p-3)-8p=25-32=-7\n\\]"
         },
         {
@@ -675,11 +675,11 @@
           "body": "The line is\n\n\\[\ny-2x=1\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\ny=2x+1\n\\]"
         },
         {
-          "title": "Substitute into",
+          "title": "Calculate value",
           "body": "Substitute into\n\n\\[\ny^2+xy=7\n\\]\n\n\\[\n(2x+1)^2+x(2x+1)=7\n\\]\n\n\\[\n4x^2+4x+1+2x^2+x=7\n\\]\n\n\\[\n6x^2+5x-6=0\n\\]"
         },
         {
@@ -687,11 +687,11 @@
           "body": "Factorise:\n\n\\[\n(3x-2)(2x+3)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\nx=\\frac23 \\quad \\text{or} \\quad x=-\\frac32\n\\]"
         },
         {
-          "title": "Using",
+          "title": "Evaluate fraction",
           "body": "Using \\(y=2x+1\\):\n\n\\[\nx=\\frac23 \\Rightarrow y=\\frac73\n\\]\n\n\\[\nx=-\\frac32 \\Rightarrow y=-2\n\\]"
         }
       ],
@@ -708,7 +708,7 @@
           "body": "The perpendicular bisector is\n\n\\[\ny-2x=7\n\\]"
         },
         {
-          "title": "so",
+          "title": "Calculate value",
           "body": "so\n\n\\[\ny=2x+7\n\\]"
         },
         {
@@ -716,7 +716,7 @@
           "body": "The gradient of the perpendicular bisector is \\(2\\), so the gradient of \\(AB\\) is\n\n\\[\n-\\frac{1}{2}\n\\]"
         },
         {
-          "title": "Since and ,",
+          "title": "Evaluate fraction",
           "body": "Since \\(A=(j,7)\\) and \\(B=(6,k)\\),\n\n\\[\n\\frac{k-7}{6-j}=-\\frac{1}{2}\n\\]\n\n\\[\n2(k-7)=-(6-j)\n\\]\n\n\\[\nj=2k-8\n\\]"
         },
         {
@@ -728,15 +728,15 @@
           "body": "Substitute \\(j=2k-8\\):\n\n\\[\n\\left(k-1,\\frac{k+7}{2}\\right)\n\\]"
         },
         {
-          "title": "The midpoint lies on ,",
+          "title": "Find the midpoint",
           "body": "The midpoint lies on \\(y=2x+7\\), so\n\n\\[\n\\frac{k+7}{2}=2(k-1)+7\n\\]\n\n\\[\nk+7=4k+10\n\\]\n\n\\[\nk=-1\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate value",
           "body": "Then\n\n\\[\nj=2(-1)-8=-10\n\\]"
         },
         {
-          "title": "Therefore the midpoint is",
+          "title": "Find the midpoint",
           "body": "Therefore the midpoint is\n\n\\[\n\\left(\\frac{-10+6}{2},\\frac{7+(-1)}{2}\\right)=(-2,3)\n\\]"
         }
       ],
@@ -753,11 +753,11 @@
           "body": "The curve is\n\n\\[\ny=a\\cos bx^\\circ+c\n\\]"
         },
         {
-          "title": "From the graph, the maximum",
+          "title": "Use trigonometry",
           "body": "From the graph, the maximum value is\n\n\\[\n3\n\\]"
         },
         {
-          "title": "and the minimum value is",
+          "title": "Use trigonometry",
           "body": "and the minimum value is\n\n\\[\n-1\n\\]"
         },
         {
@@ -773,11 +773,11 @@
           "body": "The distance between consecutive maxima is \\(120^\\circ\\), so the period is\n\n\\[\n120^\\circ\n\\]"
         },
         {
-          "title": "For , the period is",
+          "title": "Use trigonometry",
           "body": "For \\(y=a\\cos bx^\\circ+c\\), the period is\n\n\\[\n\\frac{360^\\circ}{b}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\n\\frac{360}{b}=120\n\\]\n\n\\[\nb=3\n\\]"
         }
       ],
@@ -794,19 +794,19 @@
           "body": "The angle between the tangent \\(CN\\) and the chord \\(CB\\) is \\(78^\\circ\\)."
         },
         {
-          "title": "By the alternate segment theorem,",
+          "title": "Use trigonometry",
           "body": "By the alternate segment theorem,\n\n\\[\n\\angle BAC=78^\\circ\n\\]"
         },
         {
-          "title": "Also,",
+          "title": "Calculate value",
           "body": "Also,\n\n\\[\nAB=CB\n\\]"
         },
         {
-          "title": "so triangle is isosceles and",
+          "title": "Use trigonometry",
           "body": "so triangle \\(ABC\\) is isosceles and the base angles are equal:\n\n\\[\n\\angle BAC=\\angle ACB=78^\\circ\n\\]"
         },
         {
-          "title": "Using the angle sum of",
+          "title": "Use trigonometry",
           "body": "Using the angle sum of a triangle:\n\n\\[\n\\angle ABC=180^\\circ-78^\\circ-78^\\circ\n\\]\n\n\\[\n\\angle ABC=24^\\circ\n\\]"
         }
       ],
@@ -852,11 +852,11 @@
       "topicNote": "Moved from Coordinate Geometry to 3D Pythagoras & Trigonometry.",
       "steps": [
         {
-          "title": "For part (a), is the",
+          "title": "Find the gradient",
           "body": "For part (a), \\(BE\\) is the space diagonal using the three perpendicular lengths:\n\n\\[\nAB=15,\\qquad BC=4,\\qquad CF=9\n\\]\n\n\\[\nBE^2=15^2+4^2+9^2\n\\]\n\n\\[\nBE^2=225+16+81=322\n\\]\n\n\\[\nBE=\\sqrt{322}=17.9\\text{ cm}\n\\]"
         },
         {
-          "title": "For part (b), the projection",
+          "title": "Use trigonometry",
           "body": "For part (b), the projection of \\(PU\\) onto the plane \\(PQRS\\) is \\(PR\\).\n\n\\[\nPR=42\n\\]"
         },
         {
@@ -864,11 +864,11 @@
           "body": "The angle between \\(PU\\) and the plane is \\(30^\\circ\\), so\n\n\\[\n\\tan 30^\\circ=\\frac{RU}{PR}\n\\]\n\n\\[\nRU=42\\tan30^\\circ\n\\]"
         },
         {
-          "title": "Since is the midpoint of",
+          "title": "Find the midpoint",
           "body": "Since \\(M\\) is the midpoint of \\(PR\\),\n\n\\[\nMR=21\n\\]"
         },
         {
-          "title": "In right triangle ,",
+          "title": "Use trigonometry",
           "body": "In right triangle \\(MRU\\),\n\n\\[\n\\tan \\angle UMR=\\frac{RU}{MR}\n\\]\n\n\\[\n\\tan \\angle UMR=\\frac{42\\tan30^\\circ}{21}\n\\]\n\n\\[\n\\tan \\angle UMR=2\\tan30^\\circ\n\\]\n\n\\[\n\\angle UMR=49.1^\\circ\n\\]"
         }
       ],

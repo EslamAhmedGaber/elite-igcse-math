@@ -12,7 +12,7 @@
           "body": "The number studying all three languages is \\(4\\)."
         },
         {
-          "title": "So the two language only",
+          "title": "Calculate value",
           "body": "So the two-language-only regions are\n\n\\[\nR\\cap F \\text{ only}=10-4=6\n\\]\n\n\\[\nF\\cap G \\text{ only}=13-4=9\n\\]\n\n\\[\nR\\cap G \\text{ only}=6-4=2\n\\]"
         },
         {
@@ -24,7 +24,7 @@
           "body": "The French-only region is \\(x\\) and the Russian-only region is \\(2x\\). There are \\(11\\) students outside all three sets."
         },
         {
-          "title": "Using the total ,",
+          "title": "Calculate value",
           "body": "Using the total \\(80\\),\n\n\\[\n2x+x+9+6+9+2+4+11=80\n\\]\n\n\\[\n3x+41=80\n\\]\n\n\\[\nx=13\n\\]"
         },
         {
@@ -41,11 +41,11 @@
       "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Find the LCM",
           "body": "\\[\nA=2^3\\times 3^2\\times 5^2\\times 11\n\\]\n\n\\[\nB=2^4\\times 3\\times 5^4\\times 13\n\\]"
         },
         {
-          "title": "For the LCM, take the",
+          "title": "Find the LCM",
           "body": "For the LCM, take the highest power of every prime that appears:\n\n\\[\n\\text{LCM}=2^4\\times 3^2\\times 5^4\\times 11\\times 13\n\\]"
         }
       ],
@@ -58,15 +58,15 @@
       "topicNote": "Powers, roots and standard form. The tag is correct.",
       "steps": [
         {
-          "title": "Any non zero value to",
+          "title": "Convert standard form",
           "body": "Any non-zero value to the power \\(0\\) is \\(1\\), so\n\n\\[\ny^0=1\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Convert standard form",
           "body": "For part (b),\n\n\\[\n9.6\\times 10^{141}+6.4\\times 10^{140}\n=9.6\\times 10^{141}+0.64\\times 10^{141}\n\\]\n\n\\[\n=10.24\\times 10^{141}=1.024\\times 10^{142}\n\\]"
         },
         {
-          "title": "Now divide",
+          "title": "Convert standard form",
           "body": "Now divide:\n\n\\[\n\\frac{1.024\\times 10^{142}}{3.2\\times 10^{16}}\n=0.32\\times 10^{126}\n\\]\n\n\\[\n=3.2\\times 10^{125}\n\\]"
         }
       ],
@@ -91,7 +91,7 @@
           "body": "Correct to 3 significant figures:\n\n\\[\n11.8\\%\n\\]"
         },
         {
-          "title": "For the sale price, a",
+          "title": "Calculate statistic",
           "body": "For the sale price, a \\(12\\%\\) decrease means \\(88\\%\\) of the original price:\n\n\\[\n550\\times 0.88=484\n\\]"
         }
       ],
@@ -128,7 +128,7 @@
           "body": "Total parts:\n\n\\[\n3+4=7\n\\]"
         },
         {
-          "title": "So the fraction who work",
+          "title": "Simplify fraction",
           "body": "So the fraction who work full time is\n\n\\[\n\\frac{\\frac{84}{25}}{7}=\\frac{84}{175}=\\frac{12}{25}\n\\]"
         }
       ],
@@ -141,7 +141,7 @@
       "topicNote": "Corrected to Algebraic Roots & Indices.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use index laws",
           "body": "\\[\n\\left(\\frac{9t^4w^9}{18t^6w^{10}}\\right)^{-2}\n\\]"
         },
         {
@@ -149,7 +149,7 @@
           "body": "Simplify inside the brackets:\n\n\\[\n\\frac{9t^4w^9}{18t^6w^{10}}\n=\\frac{1}{2}t^{-2}w^{-1}\n=\\frac{1}{2t^2w}\n\\]"
         },
         {
-          "title": "Now apply the power",
+          "title": "Use index laws",
           "body": "Now apply the power \\(-2\\):\n\n\\[\n\\left(\\frac{1}{2t^2w}\\right)^{-2}\n=(2t^2w)^2\n\\]\n\n\\[\n=4t^4w^2\n\\]"
         }
       ],
@@ -162,7 +162,7 @@
       "topicNote": "Corrected from Sine/Cosine Rule to Algebraic Fractions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use trigonometry",
           "body": "\\[\n\\frac{25x^2-64}{5x^2-13x-6}\n\\times\n\\frac{x^2-8x+15}{5x+8}\n-(x-7)\n\\]"
         },
         {
@@ -170,7 +170,7 @@
           "body": "Factor:\n\n\\[\n25x^2-64=(5x-8)(5x+8)\n\\]\n\n\\[\n5x^2-13x-6=(5x+2)(x-3)\n\\]\n\n\\[\nx^2-8x+15=(x-3)(x-5)\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\n\\frac{(5x-8)(5x+8)}{(5x+2)(x-3)}\n\\times\n\\frac{(x-3)(x-5)}{5x+8}\n-(x-7)\n\\]"
         },
         {
@@ -186,7 +186,7 @@
           "body": "Expand:\n\n\\[\n(5x-8)(x-5)=5x^2-33x+40\n\\]\n\n\\[\n(x-7)(5x+2)=5x^2-33x-14\n\\]"
         },
         {
-          "title": "So the numerator is",
+          "title": "Use trigonometry",
           "body": "So the numerator is\n\n\\[\n5x^2-33x+40-(5x^2-33x-14)=54\n\\]"
         }
       ],
@@ -224,7 +224,7 @@
           "body": "(a)\n\\[\n4x(2x+5)-3x(2x-3)=8x^2+20x-6x^2+9x=2x^2+29x\n\\]"
         },
         {
-          "title": "(b) so , hence",
+          "title": "Expand brackets",
           "body": "(b)\n\\[\n\\frac{y^5\\times y^n}{y^6}=y^{n-1}=y^{13}\n\\]\nso \\(n-1=13\\), hence \\(n=14\\)."
         },
         {
@@ -232,7 +232,7 @@
           "body": "(c)\n\\[\n7t-8<2t+7\n\\]\n\n\\[\n5t<15\n\\]\n\n\\[\nt<3\n\\]"
         },
         {
-          "title": "On the number line, use",
+          "title": "Expand brackets",
           "body": "On the number line, use an open circle at 3 and shade to the left."
         }
       ],
@@ -245,7 +245,7 @@
       "topicNote": "Coordinate geometry. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nA=(-4,-2),\\quad B=(1,10),\\quad C=(19,a),\\quad D=(b,c)\n\\]"
         },
         {
@@ -261,11 +261,11 @@
           "body": "Adjacent sides of a rectangle are perpendicular, so their dot product is zero:\n\\[\n5(18)+12(a-10)=0\n\\]\n\n\\[\n90+12a-120=0\n\\]\n\n\\[\na=\\frac52\n\\]"
         },
         {
-          "title": "Now",
+          "title": "Calculate value",
           "body": "Now\n\\[\nBC=(18,-7.5)\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\\[\nD=A+BC=(-4,-2)+(18,-7.5)=(14,-9.5)\n\\]\n\n\\[\nb=14,\\qquad c=-9.5\n\\]"
         },
         {
@@ -303,7 +303,7 @@
       "topicNote": "Corrected to differentiation. Instantaneously at rest means the velocity is zero.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate statistic",
           "body": "\\[\ns=t^3+5t^2-8t+10\n\\]"
         },
         {
@@ -311,7 +311,7 @@
           "body": "Velocity is\n\\[\n\\frac{ds}{dt}=3t^2+10t-8\n\\]"
         },
         {
-          "title": "At rest,",
+          "title": "Calculate statistic",
           "body": "At rest,\n\\[\n3t^2+10t-8=0\n\\]"
         },
         {
@@ -319,15 +319,15 @@
           "body": "Factorise:\n\\[\n(3t-2)(t+4)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate statistic",
           "body": "So\n\\[\nt=\\frac23 \\quad \\text{or} \\quad t=-4\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Calculate statistic",
           "body": "Since \\(t\\ge0\\),\n\\[\nt=\\frac23\n\\]"
         },
         {
-          "title": "Now find",
+          "title": "Calculate statistic",
           "body": "Now find \\(s\\):\n\\[\ns=\\left(\\frac23\\right)^3+5\\left(\\frac23\\right)^2-8\\left(\\frac23\\right)+10\n\\]\n\n\\[\ns=\\frac{8}{27}+\\frac{20}{9}-\\frac{16}{3}+10\n\\]\n\n\\[\ns=\\frac{194}{27}\n\\]"
         }
       ],
@@ -357,19 +357,19 @@
       "topicNote": "Corrected to Circle Theorems. The original tag was simultaneous equations, but this is a circle geometry question.",
       "steps": [
         {
-          "title": "The central angle is .",
+          "title": "Use trigonometry",
           "body": "The central angle \\(\\angle POS\\) is \\(124^\\circ\\). The angle at the circumference standing on the same chord \\(PS\\) is half this angle.\n\n\\[\nm=\\frac{124}{2}=62\n\\]"
         },
         {
-          "title": "Angles opposite each other in",
+          "title": "Use circle theorem",
           "body": "Angles opposite each other in a cyclic quadrilateral add to \\(180^\\circ\\), so\n\\[\nn=180-62=118\n\\]"
         },
         {
-          "title": "Since is a diameter,",
+          "title": "Use trigonometry",
           "body": "Since \\(QOS\\) is a diameter,\n\\[\n\\angle QOP=180^\\circ-124^\\circ=56^\\circ\n\\]"
         },
         {
-          "title": "Triangle is isosceles because .",
+          "title": "Use trigonometry",
           "body": "Triangle \\(QOP\\) is isosceles because \\(OQ=OP\\). Therefore\n\\[\n\\angle QPO=\\frac{180-56}{2}=62^\\circ\n\\]"
         }
       ],
@@ -386,7 +386,7 @@
           "body": "Triangle \\(ABC\\) is right-angled:\n\\[\nAC^2=8^2+15^2=64+225=289\n\\]\n\n\\[\nAC=17\\text{ cm}\n\\]"
         },
         {
-          "title": "Since is a diameter, the",
+          "title": "Calculate area",
           "body": "Since \\(AOC\\) is a diameter, the radius of the circle is\n\\[\n17\\div 2=8.5\\text{ cm}\n\\]"
         },
         {
@@ -419,7 +419,7 @@
           "body": "Given\n\n\\[\nAB=1.5PQ\n\\]"
         },
         {
-          "title": "so the side length of",
+          "title": "Find the gradient",
           "body": "so the side length of the regular hexagon is\n\n\\[\n1.5p=\\frac32p\n\\]"
         },
         {
@@ -427,11 +427,11 @@
           "body": "Area of a regular hexagon with side length \\(s\\) is\n\n\\[\n\\frac{3\\sqrt3}{2}s^2\n\\]"
         },
         {
-          "title": "So the area of the",
+          "title": "Find the gradient",
           "body": "So the area of the hexagon is\n\n\\[\n\\frac{3\\sqrt3}{2}\\left(\\frac32p\\right)^2\n\\]\n\n\\[\n=\\frac{27\\sqrt3}{8}p^2\n\\]"
         },
         {
-          "title": "The removed triangle is equilateral,",
+          "title": "Find the gradient",
           "body": "The removed triangle \\(PQR\\) is equilateral, so its area is\n\n\\[\n\\frac{\\sqrt3}{4}p^2\n\\]"
         },
         {
@@ -439,7 +439,7 @@
           "body": "The shaded area is\n\n\\[\n\\frac{27\\sqrt3}{8}p^2-\\frac{\\sqrt3}{4}p^2\n\\]\n\n\\[\n=\\frac{25\\sqrt3}{8}p^2\n\\]"
         },
         {
-          "title": "This is , so",
+          "title": "Find the gradient",
           "body": "This is \\(72\\sqrt3\\), so\n\n\\[\n\\frac{25\\sqrt3}{8}p^2=72\\sqrt3\n\\]\n\n\\[\n\\frac{25}{8}p^2=72\n\\]\n\n\\[\np^2=\\frac{576}{25}\n\\]\n\n\\[\np=4.8\n\\]"
         }
       ],
@@ -456,19 +456,19 @@
           "body": "The radius of sector \\(OBC\\) is\n\n\\[\n6+x\n\\]"
         },
         {
-          "title": "The angle is , so",
+          "title": "Use trigonometry",
           "body": "The angle is \\(50^\\circ\\), so the arc length of sector \\(OBC\\) is\n\n\\[\n\\frac{50}{360}\\times 2\\pi(6+x)\n\\]"
         },
         {
-          "title": "Therefore the perimeter of sector",
+          "title": "Evaluate fraction",
           "body": "Therefore the perimeter of sector \\(OBC\\) is\n\n\\[\n2(6+x)+\\frac{50}{360}\\times 2\\pi(6+x)\n\\]\n\n\\[\n=(6+x)\\left(2+\\frac{5\\pi}{18}\\right)\n\\]"
         },
         {
-          "title": "In triangle ,",
+          "title": "Use trigonometry",
           "body": "In triangle \\(OAD\\),\n\n\\[\nOA=OD=6,\\qquad \\angle AOD=50^\\circ\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\nAD=2(6)\\sin 25^\\circ=12\\sin 25^\\circ\n\\]"
         },
         {
@@ -493,11 +493,11 @@
           "body": "The cross-section is a trapezium with parallel sides \\(37\\) cm and \\(28\\) cm, and perpendicular height \\(20\\) cm.\n\n\\[\n\\text{Area of cross-section}=\\frac12(37+28)(20)=650\n\\]"
         },
         {
-          "title": "Since the trapezium is isosceles,",
+          "title": "Calculate area",
           "body": "Since the trapezium is isosceles, the horizontal difference on each side is\n\\[\n\\frac{37-28}{2}=4.5\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate area",
           "body": "So\n\\[\nAB=CD=\\sqrt{20^2+4.5^2}=20.5\n\\]"
         },
         {
@@ -509,11 +509,11 @@
           "body": "The length of the prism is \\(24\\) cm, so the total surface area is\n\\[\n2(650)+106(24)=3844\n\\]"
         },
         {
-          "title": "For the angle between and",
+          "title": "Use trigonometry",
           "body": "For the angle between \\(AF\\) and the horizontal plane, the horizontal projection has length\n\\[\n\\sqrt{24^2+4.5^2}\n\\]"
         },
         {
-          "title": "The vertical height is ,",
+          "title": "Use trigonometry",
           "body": "The vertical height is \\(20\\), so\n\\[\n\\tan\\theta=\\frac{20}{\\sqrt{24^2+4.5^2}}\n\\]\n\n\\[\n\\theta=39.3^\\circ\n\\]"
         }
       ],
@@ -526,15 +526,15 @@
       "topicNote": "Statistics Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "The median is , so",
+          "title": "Calculate statistic",
           "body": "The median is \\(7\\), so the middle number is \\(7\\)."
         },
         {
-          "title": "The mode is , so",
+          "title": "Calculate statistic",
           "body": "The mode is \\(8\\), so use two 8s."
         },
         {
-          "title": "The range is , so",
+          "title": "Calculate statistic",
           "body": "The range is \\(5\\), so choose the smallest and largest numbers to differ by \\(5\\).\nOne possible set is\n\n\\[\n3,\\ 6,\\ 7,\\ 8,\\ 8\n\\]"
         },
         {
@@ -580,11 +580,11 @@
       "topicNote": "Statistics Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "The data is already in",
+          "title": "Use Statistics Toolkit correct",
           "body": "The data is already in order:\n\n\\[\n2,3,3,4,5,6,6,8,9,10,11,13,14,15,18\n\\]"
         },
         {
-          "title": "For 15 values,",
+          "title": "Calculate value",
           "body": "For 15 values,\n\n\\[\nQ_1=4,\\qquad Q_3=13\n\\]\n\n\\[\n\\text{IQR}=13-4=9\n\\]"
         }
       ],
@@ -597,19 +597,19 @@
       "topicNote": "Histograms. The tag is correct.",
       "steps": [
         {
-          "title": "For , the frequency is",
+          "title": "Use histogram",
           "body": "For \\(0.5<w\\le 2\\), the frequency is \\(63\\), so the density is\n\n\\[\n\\frac{63}{1.5}=42\n\\]"
         },
         {
-          "title": "Using the histogram heights, the",
+          "title": "Use histogram",
           "body": "Using the histogram heights, the class frequencies are\n\n\\[\n9,\\ 63,\\ 24,\\ 30,\\ 16\n\\]"
         },
         {
-          "title": "So the total number of",
+          "title": "Use histogram",
           "body": "So the total number of parcels is\n\n\\[\n9+63+24+30+16=142\n\\]"
         },
         {
-          "title": "For weight greater than",
+          "title": "Use histogram",
           "body": "For weight greater than \\(2.25\\text{ kg}\\):\n\n\\[\n0.75(24)+30+16=64\n\\]"
         },
         {
@@ -626,7 +626,7 @@
       "topicNote": "Corrected from Sine/Cosine Rule to Algebraic Fractions.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use trigonometry",
           "body": "\\[\n\\frac{25x^2-64}{5x^2-13x-6}\n\\times\n\\frac{x^2-8x+15}{5x+8}\n-(x-7)\n\\]"
         },
         {
@@ -634,7 +634,7 @@
           "body": "Factor:\n\n\\[\n25x^2-64=(5x-8)(5x+8)\n\\]\n\n\\[\n5x^2-13x-6=(5x+2)(x-3)\n\\]\n\n\\[\nx^2-8x+15=(x-3)(x-5)\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\n\\frac{(5x-8)(5x+8)}{(5x+2)(x-3)}\n\\times\n\\frac{(x-3)(x-5)}{5x+8}\n-(x-7)\n\\]"
         },
         {
@@ -650,7 +650,7 @@
           "body": "Expand:\n\n\\[\n(5x-8)(x-5)=5x^2-33x+40\n\\]\n\n\\[\n(x-7)(5x+2)=5x^2-33x-14\n\\]"
         },
         {
-          "title": "So the numerator is",
+          "title": "Use trigonometry",
           "body": "So the numerator is\n\n\\[\n5x^2-33x+40-(5x^2-33x-14)=54\n\\]"
         }
       ],
@@ -671,7 +671,7 @@
           "body": "Given\n\n\\[\nAB=1.5PQ\n\\]"
         },
         {
-          "title": "so the side length of",
+          "title": "Find the gradient",
           "body": "so the side length of the regular hexagon is\n\n\\[\n1.5p=\\frac32p\n\\]"
         },
         {
@@ -679,11 +679,11 @@
           "body": "Area of a regular hexagon with side length \\(s\\) is\n\n\\[\n\\frac{3\\sqrt3}{2}s^2\n\\]"
         },
         {
-          "title": "So the area of the",
+          "title": "Find the gradient",
           "body": "So the area of the hexagon is\n\n\\[\n\\frac{3\\sqrt3}{2}\\left(\\frac32p\\right)^2\n\\]\n\n\\[\n=\\frac{27\\sqrt3}{8}p^2\n\\]"
         },
         {
-          "title": "The removed triangle is equilateral,",
+          "title": "Find the gradient",
           "body": "The removed triangle \\(PQR\\) is equilateral, so its area is\n\n\\[\n\\frac{\\sqrt3}{4}p^2\n\\]"
         },
         {
@@ -691,7 +691,7 @@
           "body": "The shaded area is\n\n\\[\n\\frac{27\\sqrt3}{8}p^2-\\frac{\\sqrt3}{4}p^2\n\\]\n\n\\[\n=\\frac{25\\sqrt3}{8}p^2\n\\]"
         },
         {
-          "title": "This is , so",
+          "title": "Find the gradient",
           "body": "This is \\(72\\sqrt3\\), so\n\n\\[\n\\frac{25\\sqrt3}{8}p^2=72\\sqrt3\n\\]\n\n\\[\n\\frac{25}{8}p^2=72\n\\]\n\n\\[\np^2=\\frac{576}{25}\n\\]\n\n\\[\np=4.8\n\\]"
         }
       ],
@@ -708,19 +708,19 @@
           "body": "The radius of sector \\(OBC\\) is\n\n\\[\n6+x\n\\]"
         },
         {
-          "title": "The angle is , so",
+          "title": "Use trigonometry",
           "body": "The angle is \\(50^\\circ\\), so the arc length of sector \\(OBC\\) is\n\n\\[\n\\frac{50}{360}\\times 2\\pi(6+x)\n\\]"
         },
         {
-          "title": "Therefore the perimeter of sector",
+          "title": "Evaluate fraction",
           "body": "Therefore the perimeter of sector \\(OBC\\) is\n\n\\[\n2(6+x)+\\frac{50}{360}\\times 2\\pi(6+x)\n\\]\n\n\\[\n=(6+x)\\left(2+\\frac{5\\pi}{18}\\right)\n\\]"
         },
         {
-          "title": "In triangle ,",
+          "title": "Use trigonometry",
           "body": "In triangle \\(OAD\\),\n\n\\[\nOA=OD=6,\\qquad \\angle AOD=50^\\circ\n\\]"
         },
         {
-          "title": "So",
+          "title": "Use trigonometry",
           "body": "So\n\n\\[\nAD=2(6)\\sin 25^\\circ=12\\sin 25^\\circ\n\\]"
         },
         {

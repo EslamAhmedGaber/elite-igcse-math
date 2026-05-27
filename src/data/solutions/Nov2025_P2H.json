@@ -8,15 +8,15 @@
       "topicNote": "Powers, roots and standard form. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Convert standard form",
           "body": "\\[\n5.76\\times 10^4=57600\n\\]"
         },
         {
-          "title": "For part (b), simplify the",
+          "title": "Convert standard form",
           "body": "For part (b), simplify the numerator:\n\n\\[\n3\\times 10^5+8\\times 10^3=300000+8000=308000\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Convert standard form",
           "body": "Then\n\n\\[\n\\frac{308000}{4\\times 10^{-2}}=\\frac{308000}{0.04}=7700000\n\\]"
         },
         {
@@ -37,15 +37,15 @@
           "body": "There are \\(9+43=52\\) red and blue bricks."
         },
         {
-          "title": "Let the total number of",
+          "title": "Simplify fraction",
           "body": "Let the total number of bricks be \\(T\\)."
         },
         {
-          "title": "Since of the bricks are",
+          "title": "Simplify fraction",
           "body": "Since \\(\\frac7{20}\\) of the bricks are yellow, the remaining fraction is\n\n\\[\n1-\\frac7{20}=\\frac{13}{20}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Simplify fraction",
           "body": "So\n\n\\[\n\\frac{13}{20}T=52\n\\]\n\n\\[\nT=52\\times \\frac{20}{13}=80\n\\]"
         },
         {
@@ -53,7 +53,7 @@
           "body": "Yellow bricks:\n\n\\[\n\\frac7{20}\\times 80=28\n\\]"
         },
         {
-          "title": "Each brick weighs grams, so",
+          "title": "Simplify fraction",
           "body": "Each brick weighs \\(35\\) grams, so total yellow-brick weight is\n\n\\[\n28\\times 35=980\n\\]"
         }
       ],
@@ -66,7 +66,7 @@
       "topicNote": "Compound Interest and Depreciation. The tag is correct because part (b) is depreciation.",
       "steps": [
         {
-          "title": "For part (a), the increase",
+          "title": "Use compound interest",
           "body": "For part (a), the increase is\n\n\\[\n87-75=12\n\\]"
         },
         {
@@ -74,11 +74,11 @@
           "body": "Percentage increase:\n\n\\[\n\\frac{12}{75}\\times 100=16\n\\]"
         },
         {
-          "title": "For part (b), a depreciation",
+          "title": "Use compound interest",
           "body": "For part (b), a depreciation of \\(20\\%\\) gives multiplier\n\n\\[\n0.80\n\\]"
         },
         {
-          "title": "After 3 years,",
+          "title": "Use compound interest",
           "body": "After 3 years,\n\n\\[\n960(0.80)^3=491.52\n\\]"
         }
       ],
@@ -91,7 +91,7 @@
       "topicNote": "Rounding, Estimation and Bounds. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Estimate the value",
           "body": "\\[\nD=\\frac{n}{p-q}\n\\]"
         },
         {
@@ -107,11 +107,11 @@
           "body": "Upper bound:\n\n\\[\nD_{\\text{upper}}=\\frac{10.35}{7.235-4.395}=3.6443\\ldots\n\\]"
         },
         {
-          "title": "So",
+          "title": "Estimate the value",
           "body": "So\n\n\\[\n3.5839\\ldots < D < 3.6443\\ldots\n\\]"
         },
         {
-          "title": "Both bounds round to to",
+          "title": "Estimate the value",
           "body": "Both bounds round to \\(3.6\\) to 1 decimal place."
         }
       ],
@@ -124,7 +124,7 @@
       "topicNote": "Direct and Inverse Proportion. The tag is correct.",
       "steps": [
         {
-          "title": "is inversely proportional to ,",
+          "title": "Find inverse function",
           "body": "\\(T\\) is inversely proportional to \\(m\\), so\n\n\\[\nT=\\frac{k}{m}\n\\]"
         },
         {
@@ -132,7 +132,7 @@
           "body": "Use \\(T=15\\) when \\(m=36\\):\n\n\\[\n15=\\frac{k}{36}\n\\]\n\n\\[\nk=540\n\\]"
         },
         {
-          "title": "Therefore",
+          "title": "Find inverse function",
           "body": "Therefore\n\n\\[\nT=\\frac{540}{m}\n\\]"
         }
       ],
@@ -162,11 +162,11 @@
       "topicNote": "Factorising. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Factorise expression",
           "body": "\\[\nx^2+2x-48=(x+8)(x-6)\n\\]"
         },
         {
-          "title": "So",
+          "title": "Factorise expression",
           "body": "So\n\\[\n(x+8)(x-6)=0\n\\]"
         }
       ],
@@ -183,11 +183,11 @@
           "body": "Let\n\\[\nx=0.3787878\\ldots\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Calculate value",
           "body": "Then\n\\[\n10x=3.787878\\ldots\n\\]"
         },
         {
-          "title": "and",
+          "title": "Calculate value",
           "body": "and\n\\[\n1000x=378.787878\\ldots\n\\]"
         },
         {
@@ -204,7 +204,7 @@
       "topicNote": "Simultaneous equations. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve simultaneous equations",
           "body": "\\[\n5x+y=11\n\\]\n\n\\[\n3x-y=9\n\\]"
         },
         {
@@ -212,7 +212,7 @@
           "body": "Add the equations:\n\\[\n8x=20\n\\]\n\n\\[\nx=2.5\n\\]"
         },
         {
-          "title": "Substitute into",
+          "title": "Solve simultaneous equations",
           "body": "Substitute into \\(5x+y=11\\):\n\\[\n5(2.5)+y=11\n\\]\n\n\\[\ny=-1.5\n\\]"
         }
       ],
@@ -225,7 +225,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\nax^2+4x+c=0\n\\]"
         },
         {
@@ -262,7 +262,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\na=10\n\\]\n\n\\[\nu_{20}=86\n\\]\n\n\\[\n10+19d=86\n\\]\n\n\\[\nd=4\n\\]"
         },
         {
@@ -279,7 +279,7 @@
       "topicNote": "Functions. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\nf(x)=3x-2,\\qquad g(x)=\\frac{x}{x-1}\n\\]"
         },
         {
@@ -300,7 +300,7 @@
       "topicNote": "Coordinate geometry. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nP=(-3,0),\\qquad Q=(9,16)\n\\]"
         },
         {
@@ -317,7 +317,7 @@
       "topicNote": "Correct. This is a reciprocal-curve graph and estimate question.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Read the graph",
           "body": "\\[\ny=\\frac12\\left(x+\\frac4x\\right)\n\\]"
         },
         {
@@ -325,11 +325,11 @@
           "body": "The completed table is:\n\n\\[\n\\begin{array}{c|rrrrrrr}\nx&0.5&1&2&3&4&5&6\\\\\n\\hline\ny&4.25&2.5&2&2.17&2.5&2.9&3.33\n\\end{array}\n\\]"
         },
         {
-          "title": "For we need",
+          "title": "Read the graph",
           "body": "For\n\\[\nx+\\frac4x=6\n\\]\nwe need\n\\[\n\\frac12\\left(x+\\frac4x\\right)=3\n\\]"
         },
         {
-          "title": "So draw the horizontal line",
+          "title": "Read the graph",
           "body": "So draw the horizontal line \\(y=3\\) on the graph."
         },
         {
@@ -346,11 +346,11 @@
       "topicNote": "Correct. This combines a number line and graph inequalities.",
       "steps": [
         {
-          "title": "For part (a), is shown",
+          "title": "Read the graph",
           "body": "For part (a), \\(w<1\\) is shown with an open circle at 1 and an arrow to the left."
         },
         {
-          "title": "For part (b), the region",
+          "title": "Read the graph",
           "body": "For part (b), the region is right of \\(x=-3\\), below \\(y=4\\), and above \\(y=x\\):\n\\[\nx\\geq-3\n\\]\n\n\\[\ny\\leq4\n\\]\n\n\\[\ny\\geq x\n\\]"
         }
       ],
@@ -363,7 +363,7 @@
       "topicNote": "Moved to Differentiation.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Differentiate",
           "body": "\\[\ny=x^3-16x+7\n\\]"
         },
         {
@@ -375,15 +375,15 @@
           "body": "The gradient of the tangent is \\(11\\), so\n\n\\[\n3x^2-16=11\n\\]\n\n\\[\n3x^2=27\n\\]\n\n\\[\nx^2=9\n\\]\n\n\\[\nx=3 \\quad \\text{or} \\quad x=-3\n\\]"
         },
         {
-          "title": "When",
+          "title": "Differentiate",
           "body": "When \\(x=3\\):\n\n\\[\ny=3^3-16(3)+7=27-48+7=-14\n\\]"
         },
         {
-          "title": "The tangent has equation ,",
+          "title": "Use trigonometry",
           "body": "The tangent has equation \\(y=11x+b\\), so\n\n\\[\n-14=11(3)+b\n\\]\n\n\\[\nb=-47\n\\]"
         },
         {
-          "title": "When",
+          "title": "Differentiate",
           "body": "When \\(x=-3\\):\n\n\\[\ny=(-3)^3-16(-3)+7=-27+48+7=28\n\\]\n\n\\[\n28=11(-3)+b\n\\]\n\n\\[\nb=61\n\\]"
         }
       ],
@@ -479,7 +479,7 @@
           "body": "The scale factor from the largest quadrilateral to the middle quadrilateral is\n\\[\n\\frac{7}{28}=\\frac14\n\\]"
         },
         {
-          "title": "So the side corresponding to",
+          "title": "Evaluate fraction",
           "body": "So the side corresponding to \\(60\\text{ cm}\\) in the middle shape is\n\\[\n60\\times \\frac14=15\n\\]"
         },
         {
@@ -500,11 +500,11 @@
           "body": "Surface area ratio Q:P:\n\n\\[\n450:200=9:4\n\\]"
         },
         {
-          "title": "So the linear ratio Q",
+          "title": "Split the ratio",
           "body": "So the linear ratio Q:P is\n\n\\[\n3:2\n\\]"
         },
         {
-          "title": "Therefore the volume ratio Q",
+          "title": "Split the ratio",
           "body": "Therefore the volume ratio Q:P is\n\n\\[\n3^3:2^3=27:8\n\\]"
         },
         {
@@ -529,7 +529,7 @@
           "body": "Use the area to find \\(AC\\):\n\n\\[\n\\frac12\\times 30\\times AC=240\n\\]\n\n\\[\n15AC=240\n\\]\n\n\\[\nAC=16\n\\]"
         },
         {
-          "title": "Then",
+          "title": "Use trigonometry",
           "body": "Then\n\n\\[\nBC^2=30^2+16^2=1156\n\\]\n\n\\[\nBC=34\n\\]"
         },
         {
@@ -546,19 +546,19 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "For a histogram,",
+          "title": "Use histogram",
           "body": "For a histogram,\n\n\\[\n\\text{frequency}=\\text{class width}\\times \\text{frequency density}\n\\]"
         },
         {
-          "title": "For , the frequency is",
+          "title": "Use frequency table",
           "body": "For \\(10<t\\leq15\\), the frequency is 20 and the class width is 5, so\n\n\\[\n\\text{frequency density}=\\frac{20}{5}=4\n\\]"
         },
         {
-          "title": "Using this scale from the",
+          "title": "Use histogram",
           "body": "Using this scale from the histogram:\n\n\\[\n15<t\\leq30 \\quad \\text{has frequency density } 3\n\\]\n\n\\[\n30<t\\leq40 \\quad \\text{has frequency density } 1\n\\]\n\n\\[\n40<t\\leq60 \\quad \\text{has frequency density } 0.7\n\\]"
         },
         {
-          "title": "For trains at least 25",
+          "title": "Calculate value",
           "body": "For trains at least 25 minutes late:\n\n\\[\n(5)(3)+(10)(1)+(20)(0.7)\n\\]\n\n\\[\n=15+10+14\n\\]\n\n\\[\n=39\n\\]"
         }
       ],
@@ -575,11 +575,11 @@
           "body": "There are \\(40\\) plants."
         },
         {
-          "title": "From the graph,",
+          "title": "Use cumulative frequency",
           "body": "From the graph,\n\n\\[\n\\text{median}\\approx 26\\text{ cm}\n\\]\n\n\\[\nQ_1\\approx 19\\text{ cm},\\qquad Q_3\\approx 35\\text{ cm}\n\\]\n\n\\[\n\\text{IQR}\\approx 35-19=16\\text{ cm}\n\\]"
         },
         {
-          "title": "For premium plants, use height",
+          "title": "Use cumulative frequency",
           "body": "For premium plants, use height \\(>40\\) cm.\n\n\\[\nF(40)\\approx 34\n\\]\n\n\\[\n40-34=6\n\\]\n\n\\[\n6\\times 30=180\n\\]"
         }
       ],
@@ -608,7 +608,7 @@
           "body": "red counters."
         },
         {
-          "title": "After combining the bags, the",
+          "title": "Calculate probability",
           "body": "After combining the bags, the total number of red counters is\n\n\\[\n54+24=78\n\\]"
         },
         {
@@ -629,11 +629,11 @@
           "body": "The total is \\(40\\)."
         },
         {
-          "title": "The regions shown add to",
+          "title": "Calculate probability",
           "body": "The regions shown add to\n\n\\[\n5+x+7+2x+4x+14\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate probability",
           "body": "So\n\n\\[\n26+7x=40\n\\]\n\n\\[\n7x=14\n\\]\n\n\\[\nx=2\n\\]"
         },
         {
@@ -650,7 +650,7 @@
       "topicNote": "Rounding, Estimation & Bounds is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Estimate the value",
           "body": "\\[\nD=\\frac{n}{p-q}\n\\]"
         },
         {
@@ -666,7 +666,7 @@
           "body": "Upper bound:\n\n\\[\n\\frac{10.35}{7.235-4.395}=3.6443...\n\\]"
         },
         {
-          "title": "So . Both bounds round",
+          "title": "Estimate the value",
           "body": "So \\(3.5839... \\leq D < 3.6443...\\). Both bounds round to \\(3.6\\) to 1 decimal place."
         }
       ],
@@ -679,7 +679,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "For",
+          "title": "Calculate value",
           "body": "For\n\n\\[\nax^2+4x+c=0\n\\]"
         },
         {
@@ -716,7 +716,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\na=10\n\\]\n\n\\[\nu_{20}=86\n\\]\n\n\\[\n10+19d=86\n\\]\n\n\\[\nd=4\n\\]"
         },
         {
@@ -733,7 +733,7 @@
       "topicNote": "Moved to Differentiation.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Differentiate",
           "body": "\\[\ny=x^3-16x+7\n\\]"
         },
         {
@@ -745,15 +745,15 @@
           "body": "The gradient of the tangent is \\(11\\), so\n\n\\[\n3x^2-16=11\n\\]\n\n\\[\n3x^2=27\n\\]\n\n\\[\nx^2=9\n\\]\n\n\\[\nx=3 \\quad \\text{or} \\quad x=-3\n\\]"
         },
         {
-          "title": "When",
+          "title": "Differentiate",
           "body": "When \\(x=3\\):\n\n\\[\ny=3^3-16(3)+7=27-48+7=-14\n\\]"
         },
         {
-          "title": "The tangent has equation ,",
+          "title": "Use trigonometry",
           "body": "The tangent has equation \\(y=11x+b\\), so\n\n\\[\n-14=11(3)+b\n\\]\n\n\\[\nb=-47\n\\]"
         },
         {
-          "title": "When",
+          "title": "Differentiate",
           "body": "When \\(x=-3\\):\n\n\\[\ny=(-3)^3-16(-3)+7=-27+48+7=28\n\\]\n\n\\[\n28=11(-3)+b\n\\]\n\n\\[\nb=61\n\\]"
         }
       ],
@@ -811,11 +811,11 @@
           "body": "Surface area ratio Q:P:\n\n\\[\n450:200=9:4\n\\]"
         },
         {
-          "title": "So the linear ratio Q",
+          "title": "Split the ratio",
           "body": "So the linear ratio Q:P is\n\n\\[\n3:2\n\\]"
         },
         {
-          "title": "Therefore the volume ratio Q",
+          "title": "Split the ratio",
           "body": "Therefore the volume ratio Q:P is\n\n\\[\n3^3:2^3=27:8\n\\]"
         },
         {
@@ -836,19 +836,19 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "For a histogram,",
+          "title": "Use histogram",
           "body": "For a histogram,\n\n\\[\n\\text{frequency}=\\text{class width}\\times \\text{frequency density}\n\\]"
         },
         {
-          "title": "For , the frequency is",
+          "title": "Use frequency table",
           "body": "For \\(10<t\\leq15\\), the frequency is 20 and the class width is 5, so\n\n\\[\n\\text{frequency density}=\\frac{20}{5}=4\n\\]"
         },
         {
-          "title": "Using this scale from the",
+          "title": "Use histogram",
           "body": "Using this scale from the histogram:\n\n\\[\n15<t\\leq30 \\quad \\text{has frequency density } 3\n\\]\n\n\\[\n30<t\\leq40 \\quad \\text{has frequency density } 1\n\\]\n\n\\[\n40<t\\leq60 \\quad \\text{has frequency density } 0.7\n\\]"
         },
         {
-          "title": "For trains at least 25",
+          "title": "Calculate value",
           "body": "For trains at least 25 minutes late:\n\n\\[\n(5)(3)+(10)(1)+(20)(0.7)\n\\]\n\n\\[\n=15+10+14\n\\]\n\n\\[\n=39\n\\]"
         }
       ],

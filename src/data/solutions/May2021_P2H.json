@@ -8,7 +8,7 @@
       "topicNote": "Set notation and Venn diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nB=\\{b,r,a,z,i,l\\}\n\\]\n\n\\[\nI=\\{i,r,e,l,a,n,d\\}\n\\]"
         },
         {
@@ -16,11 +16,11 @@
           "body": "The union contains every letter that is in \\(B\\) or \\(I\\):\n\n\\[\nB\\cup I=\\{a,b,d,e,i,l,n,r,z\\}\n\\]"
         },
         {
-          "title": "means letters in , but",
+          "title": "Calculate statistic",
           "body": "\\(B\\cap I'\\) means letters in \\(B\\), but not in \\(I\\):\n\n\\[\nB\\cap I'=\\{b,z\\}\n\\]"
         },
         {
-          "title": "For , Cody is not",
+          "title": "Calculate value",
           "body": "For \\(K=\\{k,e,n,y,a\\}\\), Cody is not correct because the letter \\(a\\) is in both \\(B\\) and \\(K\\).\n\n\\[\nB\\cap K=\\{a\\}\n\\]"
         }
       ],
@@ -33,7 +33,7 @@
       "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Find the LCM",
           "body": "\\[\n600=6\\times 100\n\\]\n\n\\[\n600=(2\\times 3)(2^2\\times 5^2)\n\\]\n\n\\[\n600=2^3\\times 3\\times 5^2\n\\]"
         }
       ],
@@ -46,7 +46,7 @@
       "topicNote": "Fractions. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify fraction",
           "body": "\\[\n2\\frac47=\\frac{18}{7}\n\\]\n\n\\[\n1\\frac18=\\frac98\n\\]"
         },
         {
@@ -63,7 +63,7 @@
       "topicNote": "Percentages. The tag is correct, with ratio used to find the new seed weight.",
       "steps": [
         {
-          "title": "In each new bag, the",
+          "title": "Split the ratio",
           "body": "In each new bag, the ratio\n\n\\[\n\\text{nuts}:\\text{seeds}=4:5\n\\]"
         },
         {
@@ -92,7 +92,7 @@
       "topicNote": "Corrected to Compound Interest and Depreciation. The repeated yearly percentage increase is the key skill.",
       "steps": [
         {
-          "title": "For Chengbo s house, yuan",
+          "title": "Use compound interest",
           "body": "For Chengbo's house, \\(180000\\) yuan is \\(124\\%\\) of the price paid.\n\n\\[\n\\text{price paid}=180000\\div 1.24=145161.29\\ldots\n\\]"
         },
         {
@@ -100,7 +100,7 @@
           "body": "To 3 significant figures:\n\n\\[\n145000\n\\]"
         },
         {
-          "title": "For Zhi s house, the",
+          "title": "Use compound interest",
           "body": "For Zhi's house, the value increases by \\(1.8\\%\\) each year for 3 years.\n\n\\[\n120000\\times 1.018^3=126598.2\\ldots\n\\]"
         },
         {
@@ -117,7 +117,7 @@
       "topicNote": "Direct and Inverse Proportion. The tag is correct.",
       "steps": [
         {
-          "title": "is inversely proportional to ,",
+          "title": "Find inverse function",
           "body": "\\(A\\) is inversely proportional to \\(r^2\\), so\n\n\\[\nA=\\frac{k}{r^2}\n\\]"
         },
         {
@@ -125,11 +125,11 @@
           "body": "Use \\(A=5\\) when \\(r=0.3\\):\n\n\\[\n5=\\frac{k}{0.3^2}\n\\]\n\n\\[\nk=5\\times 0.09=0.45\n\\]"
         },
         {
-          "title": "So",
+          "title": "Find inverse function",
           "body": "So\n\n\\[\nA=\\frac{0.45}{r^2}\n\\]"
         },
         {
-          "title": "For part (b), . Substitute",
+          "title": "Rearrange formula",
           "body": "For part (b), \\(r=7.5A\\). Substitute into the formula:\n\n\\[\nA=\\frac{0.45}{(7.5A)^2}\n\\]\n\n\\[\nA=\\frac{0.45}{56.25A^2}\n\\]\n\n\\[\n56.25A^3=0.45\n\\]\n\n\\[\nA^3=0.008\n\\]\n\n\\[\nA=0.2\n\\]"
         }
       ],
@@ -142,7 +142,7 @@
       "topicNote": "Algebraic Roots and Indices. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Use index laws",
           "body": "\\[\n\\left(\\frac{9x^4}{16y^{10}}\\right)^{-1/2}\n\\]"
         },
         {
@@ -150,7 +150,7 @@
           "body": "A negative power takes the reciprocal:\n\n\\[\n\\left(\\frac{16y^{10}}{9x^4}\\right)^{1/2}\n\\]"
         },
         {
-          "title": "Now take the square root",
+          "title": "Simplify surd",
           "body": "Now take the square root of each factor:\n\n\\[\n\\frac{\\sqrt{16y^{10}}}{\\sqrt{9x^4}}=\\frac{4y^5}{3x^2}\n\\]"
         }
       ],
@@ -163,11 +163,11 @@
       "topicNote": "Factorising. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Factorise expression",
           "body": "\\[\nx^2+2x-24=(x+6)(x-4)\n\\]"
         },
         {
-          "title": "So",
+          "title": "Factorise expression",
           "body": "So\n\\[\n(x+6)(x-4)=0\n\\]"
         }
       ],
@@ -180,11 +180,11 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve inequality",
           "body": "\\[\ng(x)=2x^2-12x+13\n\\]\n\n\\[\n=2(x^2-6x)+13\n\\]\n\n\\[\n=2\\left((x-3)^2-9\\right)+13\n\\]\n\n\\[\n=2(x-3)^2-18+13\n\\]\n\n\\[\n=2(x-3)^2-5\n\\]"
         },
         {
-          "title": "Starting with",
+          "title": "Calculate value",
           "body": "Starting with \\(S: y=x^2\\):"
         },
         {
@@ -201,7 +201,7 @@
       "topicNote": "Simultaneous equations. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve simultaneous equations",
           "body": "\\[\n5a+2c=10\n\\]\n\n\\[\n2a-4c=7\n\\]"
         },
         {
@@ -213,7 +213,7 @@
           "body": "Add this to the second equation:\n\\[\n12a=27\n\\]\n\n\\[\na=\\frac94\n\\]"
         },
         {
-          "title": "Substitute into",
+          "title": "Solve simultaneous equations",
           "body": "Substitute into \\(5a+2c=10\\):\n\\[\n5\\left(\\frac94\\right)+2c=10\n\\]\n\n\\[\n\\frac{45}{4}+2c=\\frac{40}{4}\n\\]\n\n\\[\n2c=-\\frac54\n\\]\n\n\\[\nc=-\\frac58\n\\]"
         }
       ],
@@ -226,7 +226,7 @@
       "topicNote": "Simultaneous equations. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve simultaneous equations",
           "body": "\\[\ny=3-2x\n\\]\n\n\\[\nx^2+y^2=18\n\\]"
         },
         {
@@ -238,15 +238,15 @@
           "body": "Factorise:\n\\[\n(5x+3)(x-3)=0\n\\]"
         },
         {
-          "title": "So",
+          "title": "Solve simultaneous equations",
           "body": "So\n\\[\nx=-\\frac35 \\quad \\text{or} \\quad x=3\n\\]"
         },
         {
-          "title": "If , then",
+          "title": "Solve simultaneous equations",
           "body": "If \\(x=-\\frac35\\), then\n\\[\ny=3-2\\left(-\\frac35\\right)=\\frac{21}{5}\n\\]"
         },
         {
-          "title": "If , then",
+          "title": "Solve simultaneous equations",
           "body": "If \\(x=3\\), then\n\\[\ny=3-6=-3\n\\]"
         }
       ],
@@ -259,7 +259,7 @@
       "topicNote": "Coordinate geometry. The tag is correct.",
       "steps": [
         {
-          "title": "Line passes through and",
+          "title": "Use Coordinate geometry tag correct",
           "body": "Line \\(L\\) passes through \\((4,-1)\\) and \\((6,4)\\)."
         },
         {
@@ -267,7 +267,7 @@
           "body": "Its gradient is\n\\[\n\\frac{4-(-1)}{6-4}=\\frac52\n\\]"
         },
         {
-          "title": "Line is perpendicular to ,",
+          "title": "Find the gradient",
           "body": "Line \\(M\\) is perpendicular to \\(L\\), so its gradient is\n\\[\n-\\frac25\n\\]"
         },
         {
@@ -275,7 +275,7 @@
           "body": "Line \\(M\\) intersects the y-axis at \\((0,8)\\), so\n\\[\ny=-\\frac25x+8\n\\]"
         },
         {
-          "title": "At the x axis,",
+          "title": "Evaluate fraction",
           "body": "At the x-axis, \\(y=0\\):\n\\[\n0=-\\frac25x+8\n\\]\n\n\\[\n\\frac25x=8\n\\]\n\n\\[\nx=20\n\\]"
         }
       ],
@@ -288,7 +288,7 @@
       "topicNote": "Correct. This is a table-and-graph question for \\(x+\\frac4x\\).",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Read the graph",
           "body": "\\[\ny=\\frac1x(x^2+4)=x+\\frac4x\n\\]"
         },
         {
@@ -309,7 +309,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\ny=kx^2+\\frac{16}{x}\n\\]"
         },
         {
@@ -317,11 +317,11 @@
           "body": "Differentiate:\n\n\\[\n\\frac{dy}{dx}=2kx-\\frac{16}{x^2}\n\\]"
         },
         {
-          "title": "At the stationary point, ,",
+          "title": "Find the gradient",
           "body": "At the stationary point, \\(x=\\frac23\\), so the gradient is 0:\n\n\\[\n2k\\left(\\frac23\\right)-\\frac{16}{\\left(\\frac23\\right)^2}=0\n\\]\n\n\\[\n\\frac{4k}{3}-\\frac{16}{\\frac49}=0\n\\]\n\n\\[\n\\frac{4k}{3}-36=0\n\\]\n\n\\[\n\\frac{4k}{3}=36\n\\]\n\n\\[\nk=27\n\\]"
         },
         {
-          "title": "Now find , the coordinate",
+          "title": "Find the -coordinate",
           "body": "Now find \\(a\\), the \\(y\\)-coordinate when \\(x=\\frac23\\):\n\n\\[\na=27\\left(\\frac23\\right)^2+\\frac{16}{\\frac23}\n\\]\n\n\\[\na=27\\cdot\\frac49+24\n\\]\n\n\\[\na=12+24=36\n\\]"
         }
       ],
@@ -338,7 +338,7 @@
           "body": "Triangle \\(EBC\\) is isosceles because\n\\[\nBE=CE\n\\]"
         },
         {
-          "title": "So the base angles are",
+          "title": "Find the gradient",
           "body": "So the base angles are equal.\n\n\\[\n\\angle EBC=\\angle ECB=\\frac{180^\\circ-44^\\circ}{2}=68^\\circ\n\\]"
         },
         {
@@ -359,7 +359,7 @@
       "topicNote": "Bearings, Scale Drawing & Constructions. The tag is correct.",
       "steps": [
         {
-          "title": "The bearing of Paris from",
+          "title": "Use bearings",
           "body": "The bearing of Paris from London is the reverse bearing of London from Paris."
         },
         {
@@ -376,7 +376,7 @@
       "topicNote": "Corrected to Circle Theorems. The cyclic quadrilateral theorem is needed.",
       "steps": [
         {
-          "title": "In triangle , use the",
+          "title": "Use trigonometry",
           "body": "In triangle \\(ABC\\), use the cosine rule:\n\\[\nAC^2=8^2+7.5^2-2(8)(7.5)\\cos 98^\\circ\n\\]\n\n\\[\nAC=11.702\\ldots\n\\]"
         },
         {
@@ -384,7 +384,7 @@
           "body": "Opposite angles in a cyclic quadrilateral add to \\(180^\\circ\\), so\n\\[\n\\angle ADC=180^\\circ-98^\\circ=82^\\circ\n\\]"
         },
         {
-          "title": "In triangle ,",
+          "title": "Use trigonometry",
           "body": "In triangle \\(ACD\\),\n\\[\n\\angle CAD=180^\\circ-82^\\circ-35^\\circ=63^\\circ\n\\]"
         },
         {
@@ -426,15 +426,15 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "The surface area ratio of",
+          "title": "Split the ratio",
           "body": "The surface area ratio of the small block to the large block is\n\n\\[\n25:36\n\\]"
         },
         {
-          "title": "So the linear ratio is",
+          "title": "Split the ratio",
           "body": "So the linear ratio is\n\n\\[\n\\sqrt{25}:\\sqrt{36}=5:6\n\\]"
         },
         {
-          "title": "Therefore the volume ratio is",
+          "title": "Split the ratio",
           "body": "Therefore the volume ratio is\n\n\\[\n5^3:6^3=125:216\n\\]"
         },
         {
@@ -468,7 +468,7 @@
       "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "For Office A, the cumulative",
+          "title": "Use cumulative frequency",
           "body": "For Office A, the cumulative frequencies are\n\n\\[\n17,\\ 32,\\ 57,\\ 70,\\ 76,\\ 80\n\\]"
         },
         {
@@ -497,19 +497,19 @@
           "body": "Let the number of red pens be \\(r\\)."
         },
         {
-          "title": "Then the number of black",
+          "title": "List probability cases",
           "body": "Then the number of black pens is\n\n\\[\nr+3\n\\]"
         },
         {
-          "title": "and",
+          "title": "Calculate value",
           "body": "and\n\n\\[\nN=2r+3\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\nr=\\frac{N-3}{2}\n\\]"
         },
         {
-          "title": "and",
+          "title": "Evaluate fraction",
           "body": "and\n\n\\[\nr+3=\\frac{N+3}{2}\n\\]"
         },
         {
@@ -526,7 +526,7 @@
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "For the two races",
+          "title": "Calculate probability",
           "body": "For the two races:\n\n\\[\nP(W_1)=0.7,\\quad P(L_1)=0.3\n\\]\n\n\\[\nP(W_2)=0.4,\\quad P(L_2)=0.6\n\\]"
         },
         {
@@ -534,11 +534,11 @@
           "body": "Exactly one win:\n\n\\[\n0.7\\times 0.6+0.3\\times 0.4\n\\]\n\n\\[\n=0.42+0.12=0.54\n\\]"
         },
         {
-          "title": "For exactly two wins in",
+          "title": "Calculate probability",
           "body": "For exactly two wins in three races:"
         },
         {
-          "title": "First two wins, then lose",
+          "title": "Calculate probability",
           "body": "First two wins, then lose the third:\n\n\\[\n0.7\\times 0.4\\times 0.4=0.112\n\\]"
         },
         {
@@ -555,11 +555,11 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve inequality",
           "body": "\\[\ng(x)=2x^2-12x+13\n\\]\n\n\\[\n=2(x^2-6x)+13\n\\]\n\n\\[\n=2\\left((x-3)^2-9\\right)+13\n\\]\n\n\\[\n=2(x-3)^2-18+13\n\\]\n\n\\[\n=2(x-3)^2-5\n\\]"
         },
         {
-          "title": "Starting with",
+          "title": "Calculate value",
           "body": "Starting with \\(S: y=x^2\\):"
         },
         {
@@ -576,7 +576,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Evaluate fraction",
           "body": "\\[\ny=kx^2+\\frac{16}{x}\n\\]"
         },
         {
@@ -584,11 +584,11 @@
           "body": "Differentiate:\n\n\\[\n\\frac{dy}{dx}=2kx-\\frac{16}{x^2}\n\\]"
         },
         {
-          "title": "At the stationary point, ,",
+          "title": "Find the gradient",
           "body": "At the stationary point, \\(x=\\frac23\\), so the gradient is 0:\n\n\\[\n2k\\left(\\frac23\\right)-\\frac{16}{\\left(\\frac23\\right)^2}=0\n\\]\n\n\\[\n\\frac{4k}{3}-\\frac{16}{\\frac49}=0\n\\]\n\n\\[\n\\frac{4k}{3}-36=0\n\\]\n\n\\[\n\\frac{4k}{3}=36\n\\]\n\n\\[\nk=27\n\\]"
         },
         {
-          "title": "Now find , the coordinate",
+          "title": "Find the -coordinate",
           "body": "Now find \\(a\\), the \\(y\\)-coordinate when \\(x=\\frac23\\):\n\n\\[\na=27\\left(\\frac23\\right)^2+\\frac{16}{\\frac23}\n\\]\n\n\\[\na=27\\cdot\\frac49+24\n\\]\n\n\\[\na=12+24=36\n\\]"
         }
       ],
@@ -601,15 +601,15 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "The surface area ratio of",
+          "title": "Split the ratio",
           "body": "The surface area ratio of the small block to the large block is\n\n\\[\n25:36\n\\]"
         },
         {
-          "title": "So the linear ratio is",
+          "title": "Split the ratio",
           "body": "So the linear ratio is\n\n\\[\n\\sqrt{25}:\\sqrt{36}=5:6\n\\]"
         },
         {
-          "title": "Therefore the volume ratio is",
+          "title": "Split the ratio",
           "body": "Therefore the volume ratio is\n\n\\[\n5^3:6^3=125:216\n\\]"
         },
         {
@@ -634,19 +634,19 @@
           "body": "Let the number of red pens be \\(r\\)."
         },
         {
-          "title": "Then the number of black",
+          "title": "List probability cases",
           "body": "Then the number of black pens is\n\n\\[\nr+3\n\\]"
         },
         {
-          "title": "and",
+          "title": "Calculate value",
           "body": "and\n\n\\[\nN=2r+3\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\nr=\\frac{N-3}{2}\n\\]"
         },
         {
-          "title": "and",
+          "title": "Evaluate fraction",
           "body": "and\n\n\\[\nr+3=\\frac{N+3}{2}\n\\]"
         },
         {

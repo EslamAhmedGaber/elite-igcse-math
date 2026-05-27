@@ -8,19 +8,19 @@
       "topicNote": "Prime factors, HCF and LCM. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Find the LCM",
           "body": "\\[\nP=3^3\\times 5^2\\times 7\n\\]\n\n\\[\nQ=3^2\\times 5\\times 7^2\n\\]"
         },
         {
-          "title": "For the HCF, take the",
+          "title": "Find the LCM",
           "body": "For the HCF, take the smaller power of each common prime:\n\n\\[\n\\text{HCF}=3^2\\times 5\\times 7\n\\]"
         },
         {
-          "title": "For",
+          "title": "Find the LCM",
           "body": "For \\(P^3\\times Q\\):\n\n\\[\nP^3=(3^3\\times 5^2\\times 7)^3=3^9\\times 5^6\\times 7^3\n\\]"
         },
         {
-          "title": "Now multiply by",
+          "title": "Find the LCM",
           "body": "Now multiply by \\(Q\\):\n\n\\[\nP^3\\times Q=(3^9\\times 5^6\\times 7^3)(3^2\\times 5\\times 7^2)\n\\]\n\n\\[\nP^3\\times Q=3^{11}\\times 5^7\\times 7^5\n\\]"
         }
       ],
@@ -33,7 +33,7 @@
       "topicNote": "Fractions. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify fraction",
           "body": "\\[\n2\\frac23=\\frac83\n\\]\n\n\\[\n3\\frac34=\\frac{15}{4}\n\\]"
         },
         {
@@ -70,7 +70,7 @@
           "body": "Italian or Spanish:\n\n\\[\n180-96=84\n\\]"
         },
         {
-          "title": "Write as a percentage of",
+          "title": "Convert standard form",
           "body": "Write \\(84\\) as a percentage of \\(96\\):\n\n\\[\n\\frac{84}{96}\\times 100=87.5\n\\]"
         }
       ],
@@ -87,11 +87,11 @@
           "body": "A depreciation of \\(15\\%\\) gives multiplier\n\n\\[\n0.85\n\\]"
         },
         {
-          "title": "After 4 years,",
+          "title": "Use compound interest",
           "body": "After 4 years,\n\n\\[\n18000(0.85)^4=9396.1125\n\\]"
         },
         {
-          "title": "Correct to the nearest dollar,",
+          "title": "Use compound interest",
           "body": "Correct to the nearest dollar,\n\n\\[\n9396.1125\\approx 9396\n\\]"
         }
       ],
@@ -104,19 +104,19 @@
       "topicNote": "Surds. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify surd",
           "body": "\\[\n\\frac{3+\\sqrt8}{(\\sqrt2-1)^2}\n\\]"
         },
         {
-          "title": "Since ,",
+          "title": "Simplify surd",
           "body": "Since \\(\\sqrt8=2\\sqrt2\\),\n\n\\[\n\\frac{3+2\\sqrt2}{(\\sqrt2-1)^2}\n\\]"
         },
         {
-          "title": "Also",
+          "title": "Simplify surd",
           "body": "Also\n\n\\[\n(\\sqrt2-1)^2=3-2\\sqrt2\n\\]"
         },
         {
-          "title": "So",
+          "title": "Simplify surd",
           "body": "So\n\n\\[\n\\frac{3+2\\sqrt2}{3-2\\sqrt2}\\times \\frac{3+2\\sqrt2}{3+2\\sqrt2}\n=\\frac{(3+2\\sqrt2)^2}{9-8}\n\\]\n\n\\[\n=(3+2\\sqrt2)^2=9+12\\sqrt2+8\n\\]\n\n\\[\n=17+12\\sqrt2=17+\\sqrt{288}\n\\]"
         }
       ],
@@ -175,11 +175,11 @@
           "body": "(b)\n\n\\[\ny=2(x+4)^2-12(x+4)+3\n\\]"
         },
         {
-          "title": "Let . From part (a),",
+          "title": "Let",
           "body": "Let \\(u=x+4\\). From part (a),\n\n\\[\n2u^2-12u+3=2(u-3)^2-15\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\ny=2((x+4)-3)^2-15\n\\]\n\n\\[\ny=2(x+1)^2-15\n\\]"
         },
         {
@@ -196,11 +196,11 @@
       "topicNote": "Solving inequalities. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve inequality",
           "body": "\\[\n3-4x\\le11\n\\]\n\n\\[\n-4x\\le8\n\\]"
         },
         {
-          "title": "Divide by , reversing the",
+          "title": "Solve inequality",
           "body": "Divide by \\(-4\\), reversing the inequality:\n\\[\nx\\ge-2\n\\]"
         }
       ],
@@ -213,7 +213,7 @@
       "topicNote": "Simultaneous equations. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Solve simultaneous equations",
           "body": "\\[\n3x-5y=25\n\\]\n\n\\[\n4x+3y=14\n\\]"
         },
         {
@@ -229,7 +229,7 @@
           "body": "Add:\n\\[\n29x=145\n\\]\n\n\\[\nx=5\n\\]"
         },
         {
-          "title": "Substitute into",
+          "title": "Solve simultaneous equations",
           "body": "Substitute into \\(3x-5y=25\\):\n\\[\n15-5y=25\n\\]\n\n\\[\n-5y=10\n\\]\n\n\\[\ny=-2\n\\]"
         }
       ],
@@ -242,11 +242,11 @@
       "topicNote": "Sequences. The tag is correct.",
       "steps": [
         {
-          "title": "For a shelving unit with",
+          "title": "Find the nth term",
           "body": "For a shelving unit with 6 type R shelves, there are 5 type S shelves.\n\n\\[\n6(2.4)+5(3.5)=14.4+17.5=31.9\n\\]"
         },
         {
-          "title": "For type R shelves, there",
+          "title": "Find the nth term",
           "body": "For \\(n\\) type R shelves, there are \\(n-1\\) type S shelves.\n\n\\[\nW=2.4n+3.5(n-1)\n\\]\n\n\\[\nW=2.4n+3.5n-3.5=5.9n-3.5\n\\]"
         }
       ],
@@ -259,7 +259,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nS_{10}=4S_5\n\\]"
         },
         {
@@ -267,7 +267,7 @@
           "body": "Use\n\n\\[\nS_n=\\frac n2(2a+(n-1)d)\n\\]\n\n\\[\nS_{10}=5(2a+9d)\n\\]\n\n\\[\nS_5=\\frac52(2a+4d)=5(a+2d)\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\n5(2a+9d)=4\\cdot 5(a+2d)\n\\]\n\n\\[\n2a+9d=4a+8d\n\\]\n\n\\[\nd=2a\n\\]"
         },
         {
@@ -284,15 +284,15 @@
       "topicNote": "Corrected to linear graphs. The question asks for an equation of a line from its graph.",
       "steps": [
         {
-          "title": "From the graph, the line",
+          "title": "Solve equation",
           "body": "From the graph, the line crosses the y-axis at \\(-1\\), so\n\\[\nc=-1\n\\]"
         },
         {
-          "title": "Using two points on the",
+          "title": "Find the gradient",
           "body": "Using two points on the line, for example \\((0,-1)\\) and \\((2,2)\\), the gradient is\n\\[\n\\frac{2-(-1)}{2-0}=\\frac32\n\\]"
         },
         {
-          "title": "So the equation is",
+          "title": "Solve equation",
           "body": "So the equation is\n\\[\ny=\\frac32x-1\n\\]"
         }
       ],
@@ -305,23 +305,23 @@
       "topicNote": "Moved from Estimating Gradients to Differentiation.",
       "steps": [
         {
-          "title": "For part (a),",
+          "title": "Find the gradient",
           "body": "For part (a),\n\n\\[\ny=x^2-\\frac{p}{x}\n\\]\n\n\\[\n\\frac{dy}{dx}=2x+\\frac{p}{x^2}\n\\]"
         },
         {
-          "title": "At the minimum point, and",
+          "title": "Find the gradient",
           "body": "At the minimum point, \\(x=-3\\) and the gradient is 0.\n\n\\[\n2(-3)+\\frac{p}{(-3)^2}=0\n\\]\n\n\\[\n-6+\\frac{p}{9}=0\n\\]\n\n\\[\np=54\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Find the gradient",
           "body": "For part (b),\n\n\\[\ny=x^2-\\frac{16}{x}\n\\]\n\n\\[\n\\frac{dy}{dx}=2x+\\frac{16}{x^2}\n\\]"
         },
         {
-          "title": "At a horizontal tangent,",
+          "title": "Find the gradient",
           "body": "At a horizontal tangent,\n\n\\[\n2x+\\frac{16}{x^2}=0\n\\]\n\n\\[\n2x^3+16=0\n\\]\n\n\\[\nx^3=-8\n\\]\n\n\\[\nx=-2\n\\]"
         },
         {
-          "title": "Now substitute into the curve",
+          "title": "Find the gradient",
           "body": "Now substitute \\(x=-2\\) into the curve:\n\n\\[\nk=(-2)^2-\\frac{16}{-2}\n\\]\n\n\\[\nk=4+8=12\n\\]"
         }
       ],
@@ -363,11 +363,11 @@
           "body": "Opposite angles in a cyclic quadrilateral add to \\(180^\\circ\\):\n\\[\n\\angle PSR=180^\\circ-136^\\circ=44^\\circ\n\\]"
         },
         {
-          "title": "Since is a diameter,",
+          "title": "Use trigonometry",
           "body": "Since \\(PS\\) is a diameter,\n\\[\n\\angle PRS=90^\\circ\n\\]"
         },
         {
-          "title": "In triangle ,",
+          "title": "Use trigonometry",
           "body": "In triangle \\(PRS\\),\n\\[\n\\angle RPS=180^\\circ-90^\\circ-44^\\circ=46^\\circ\n\\]"
         }
       ],
@@ -380,7 +380,7 @@
       "topicNote": "Area & Perimeter. The tag is correct.",
       "steps": [
         {
-          "title": "In right angled triangle ,",
+          "title": "Use trigonometry",
           "body": "In right-angled triangle \\(ABC\\),\n\\[\nAB^2+BC^2=AC^2\n\\]\n\n\\[\nAB^2+6^2=7.5^2\n\\]\n\n\\[\nAB^2=56.25-36=20.25\n\\]\n\n\\[\nAB=4.5\\text{ cm}\n\\]"
         },
         {
@@ -392,7 +392,7 @@
           "body": "Area of triangle \\(ADC\\):\n\\[\n31.5-13.5=18\\text{ cm}^2\n\\]"
         },
         {
-          "title": "Triangle is right angled, so",
+          "title": "Use trigonometry",
           "body": "Triangle \\(ADC\\) is right-angled, so\n\\[\n\\frac12\\times AD\\times 7.5=18\n\\]\n\n\\[\nAD=\\frac{36}{7.5}=4.8\n\\]"
         }
       ],
@@ -409,7 +409,7 @@
           "body": "The volume of statue \\(B\\) is \\(20\\%\\) less than statue \\(A\\), so the volume scale factor is \\(0.8\\)."
         },
         {
-          "title": "For similar solids, the linear",
+          "title": "Calculate area",
           "body": "For similar solids, the linear scale factor is the cube root of the volume scale factor:\n\n\\(\\text{linear scale factor}=\\sqrt[3]{0.8}\\)"
         },
         {
@@ -417,7 +417,7 @@
           "body": "Surface area scale factor is the square of the linear scale factor:\n\n\\(\\text{surface area scale factor}=(\\sqrt[3]{0.8})^2=0.8^{2/3}=0.861773...\\)"
         },
         {
-          "title": "So statue has of the",
+          "title": "Calculate area",
           "body": "So statue \\(B\\) has \\(86.1773...\\%\\) of the surface area of statue \\(A\\).\n\n\\(k=100-86.1773...=13.8226...\\)"
         }
       ],
@@ -434,11 +434,11 @@
           "body": "Height of the parallelogram:\n\n\\[\nh=\\frac{18}{6.1}=2.9508\\ldots\n\\]"
         },
         {
-          "title": "The horizontal offset from to",
+          "title": "Use cosine rule",
           "body": "The horizontal offset from \\(P\\) to \\(S\\) is\n\n\\[\n\\sqrt{3.8^2-h^2}\n=\\sqrt{3.8^2-2.9508\\ldots^2}\n=2.394\\ldots\n\\]"
         },
         {
-          "title": "So the horizontal distance from",
+          "title": "Use trigonometry",
           "body": "So the horizontal distance from \\(S\\) to \\(Q\\) is\n\n\\[\n6.1-2.394\\ldots=3.705\\ldots\n\\]\n\n\\[\nQS=\\sqrt{3.705\\ldots^2+2.9508\\ldots^2}\n=4.737\\ldots\n\\]"
         }
       ],
@@ -455,7 +455,7 @@
           "body": "The cube has side length \\(6\\) cm."
         },
         {
-          "title": "Let be the midpoint of",
+          "title": "Find the midpoint",
           "body": "Let \\(T\\) be the midpoint of \\(AB\\) and \\(V\\) be the midpoint of \\(CH\\)."
         },
         {
@@ -463,7 +463,7 @@
           "body": "The changes in the three perpendicular directions from \\(T\\) to \\(V\\) are\n\\[\n3,\\quad 3,\\quad 6\n\\]"
         },
         {
-          "title": "So by 3D Pythagoras,",
+          "title": "Use trigonometry",
           "body": "So by 3D Pythagoras,\n\\[\nTV=\\sqrt{3^2+3^2+6^2}\n\\]\n\n\\[\nTV=\\sqrt{9+9+36}=\\sqrt{54}\n\\]"
         }
       ],
@@ -493,11 +493,11 @@
       "topicNote": "Statistics Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "The runs are already in",
+          "title": "Use Statistics Toolkit correct",
           "body": "The runs are already in order:\n\n\\[\n0,\\ 1,\\ 1,\\ 3,\\ 5,\\ 6,\\ 7,\\ 7,\\ 8,\\ 9,\\ 9,\\ 12,\\ 12,\\ 15,\\ 16\n\\]"
         },
         {
-          "title": "There are 15 values, so",
+          "title": "Calculate statistic",
           "body": "There are 15 values, so ignore the median when finding the quartiles.\n\n\\[\nQ_1=3,\\qquad Q_3=12\n\\]\n\n\\[\n\\text{IQR}=12-3=9\n\\]"
         }
       ],
@@ -514,11 +514,11 @@
           "body": "Use relative densities from the histogram:\n\n\\[\n10,\\ 8,\\ 6,\\ 15,\\ 5,\\ 1\n\\]"
         },
         {
-          "title": "The number of trees with",
+          "title": "Use histogram",
           "body": "The number of trees with \\(300<h\\le 400\\) is\n\n\\[\n100(6s)=600s\n\\]"
         },
         {
-          "title": "The number of trees with",
+          "title": "Use histogram",
           "body": "The number of trees with \\(400<h\\le 500\\) is\n\n\\[\n50(15s)+50(5s)=1000s\n\\]"
         },
         {
@@ -526,7 +526,7 @@
           "body": "The difference is \\(8\\):\n\n\\[\n1000s-600s=8\n\\]\n\n\\[\n400s=8\n\\]\n\n\\[\ns=0.02\n\\]"
         },
         {
-          "title": "For height greater than",
+          "title": "Use histogram",
           "body": "For height greater than \\(500\\):\n\n\\[\n100(5s)+200(1s)=700s\n\\]\n\n\\[\n700(0.02)=14\n\\]"
         }
       ],
@@ -539,7 +539,7 @@
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate probability",
           "body": "\\[\nP(\\text{red or yellow})=0.25+0.20=0.45\n\\]"
         },
         {
@@ -564,7 +564,7 @@
           "body": "There are \\(x\\) counters. Initially 5 show red, so \\(x-5\\) show green."
         },
         {
-          "title": "After two turns, there are",
+          "title": "List probability cases",
           "body": "After two turns, there are still 5 red faces if:"
         },
         {
@@ -580,11 +580,11 @@
           "body": "The probability of picking one red and one green in either order is\n\n\\[\n\\frac{5}{x}\\cdot\\frac{x-5}{x}+\\frac{x-5}{x}\\cdot\\frac{5}{x}\n\\]\n\n\\[\n=\\frac{10(x-5)}{x^2}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\n\\frac{1}{x}+\\frac{10(x-5)}{x^2}=\\frac{19}{32}\n\\]\n\n\\[\n\\frac{11x-50}{x^2}=\\frac{19}{32}\n\\]\n\n\\[\n32(11x-50)=19x^2\n\\]\n\n\\[\n19x^2-352x+1600=0\n\\]\n\n\\[\n(x-8)(19x-200)=0\n\\]"
         },
         {
-          "title": "Since must be a whole",
+          "title": "Calculate value",
           "body": "Since \\(x\\) must be a whole number,\n\n\\[\nx=8\n\\]"
         }
       ],
@@ -597,19 +597,19 @@
       "topicNote": "Surds is correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Simplify surd",
           "body": "\\[\n\\frac{3+\\sqrt{8}}{(\\sqrt{2}-1)^2}\n\\]"
         },
         {
-          "title": "First simplify",
+          "title": "Simplify surd",
           "body": "First simplify:\n\n\\[\n\\sqrt{8}=2\\sqrt{2}\n\\]"
         },
         {
-          "title": "and",
+          "title": "Simplify surd",
           "body": "and\n\n\\[\n(\\sqrt{2}-1)^2=2-2\\sqrt{2}+1=3-2\\sqrt{2}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Simplify surd",
           "body": "So\n\n\\[\n\\frac{3+2\\sqrt{2}}{3-2\\sqrt{2}}\n\\]"
         },
         {
@@ -634,11 +634,11 @@
           "body": "(b)\n\n\\[\ny=2(x+4)^2-12(x+4)+3\n\\]"
         },
         {
-          "title": "Let . From part (a),",
+          "title": "Let",
           "body": "Let \\(u=x+4\\). From part (a),\n\n\\[\n2u^2-12u+3=2(u-3)^2-15\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\ny=2((x+4)-3)^2-15\n\\]\n\n\\[\ny=2(x+1)^2-15\n\\]"
         },
         {
@@ -655,7 +655,7 @@
       "topicNote": "Correct.",
       "steps": [
         {
-          "title": "Step 1",
+          "title": "Calculate value",
           "body": "\\[\nS_{10}=4S_5\n\\]"
         },
         {
@@ -663,7 +663,7 @@
           "body": "Use\n\n\\[\nS_n=\\frac n2(2a+(n-1)d)\n\\]\n\n\\[\nS_{10}=5(2a+9d)\n\\]\n\n\\[\nS_5=\\frac52(2a+4d)=5(a+2d)\n\\]"
         },
         {
-          "title": "So",
+          "title": "Calculate value",
           "body": "So\n\n\\[\n5(2a+9d)=4\\cdot 5(a+2d)\n\\]\n\n\\[\n2a+9d=4a+8d\n\\]\n\n\\[\nd=2a\n\\]"
         },
         {
@@ -680,23 +680,23 @@
       "topicNote": "Moved from Estimating Gradients to Differentiation.",
       "steps": [
         {
-          "title": "For part (a),",
+          "title": "Find the gradient",
           "body": "For part (a),\n\n\\[\ny=x^2-\\frac{p}{x}\n\\]\n\n\\[\n\\frac{dy}{dx}=2x+\\frac{p}{x^2}\n\\]"
         },
         {
-          "title": "At the minimum point, and",
+          "title": "Find the gradient",
           "body": "At the minimum point, \\(x=-3\\) and the gradient is 0.\n\n\\[\n2(-3)+\\frac{p}{(-3)^2}=0\n\\]\n\n\\[\n-6+\\frac{p}{9}=0\n\\]\n\n\\[\np=54\n\\]"
         },
         {
-          "title": "For part (b),",
+          "title": "Find the gradient",
           "body": "For part (b),\n\n\\[\ny=x^2-\\frac{16}{x}\n\\]\n\n\\[\n\\frac{dy}{dx}=2x+\\frac{16}{x^2}\n\\]"
         },
         {
-          "title": "At a horizontal tangent,",
+          "title": "Find the gradient",
           "body": "At a horizontal tangent,\n\n\\[\n2x+\\frac{16}{x^2}=0\n\\]\n\n\\[\n2x^3+16=0\n\\]\n\n\\[\nx^3=-8\n\\]\n\n\\[\nx=-2\n\\]"
         },
         {
-          "title": "Now substitute into the curve",
+          "title": "Find the gradient",
           "body": "Now substitute \\(x=-2\\) into the curve:\n\n\\[\nk=(-2)^2-\\frac{16}{-2}\n\\]\n\n\\[\nk=4+8=12\n\\]"
         }
       ],
@@ -713,7 +713,7 @@
           "body": "The volume of statue \\(B\\) is \\(20\\%\\) less than statue \\(A\\), so the volume scale factor is \\(0.8\\)."
         },
         {
-          "title": "For similar solids, the linear",
+          "title": "Calculate area",
           "body": "For similar solids, the linear scale factor is the cube root of the volume scale factor:\n\n\\(\\text{linear scale factor}=\\sqrt[3]{0.8}\\)"
         },
         {
@@ -721,7 +721,7 @@
           "body": "Surface area scale factor is the square of the linear scale factor:\n\n\\(\\text{surface area scale factor}=(\\sqrt[3]{0.8})^2=0.8^{2/3}=0.861773...\\)"
         },
         {
-          "title": "So statue has of the",
+          "title": "Calculate area",
           "body": "So statue \\(B\\) has \\(86.1773...\\%\\) of the surface area of statue \\(A\\).\n\n\\(k=100-86.1773...=13.8226...\\)"
         }
       ],
@@ -738,7 +738,7 @@
           "body": "There are \\(x\\) counters. Initially 5 show red, so \\(x-5\\) show green."
         },
         {
-          "title": "After two turns, there are",
+          "title": "List probability cases",
           "body": "After two turns, there are still 5 red faces if:"
         },
         {
@@ -754,11 +754,11 @@
           "body": "The probability of picking one red and one green in either order is\n\n\\[\n\\frac{5}{x}\\cdot\\frac{x-5}{x}+\\frac{x-5}{x}\\cdot\\frac{5}{x}\n\\]\n\n\\[\n=\\frac{10(x-5)}{x^2}\n\\]"
         },
         {
-          "title": "So",
+          "title": "Evaluate fraction",
           "body": "So\n\n\\[\n\\frac{1}{x}+\\frac{10(x-5)}{x^2}=\\frac{19}{32}\n\\]\n\n\\[\n\\frac{11x-50}{x^2}=\\frac{19}{32}\n\\]\n\n\\[\n32(11x-50)=19x^2\n\\]\n\n\\[\n19x^2-352x+1600=0\n\\]\n\n\\[\n(x-8)(19x-200)=0\n\\]"
         },
         {
-          "title": "Since must be a whole",
+          "title": "Calculate value",
           "body": "Since \\(x\\) must be a whole number,\n\n\\[\nx=8\n\\]"
         }
       ],
