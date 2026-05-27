@@ -575,6 +575,54 @@
     return crumbs;
   }
 
+  function initShrinkingHeader() {
+    if (document.body?.dataset?.shrinkingHeader === "ready") return;
+    document.body.dataset.shrinkingHeader = "ready";
+    let raf = 0;
+    const evaluate = () => {
+      raf = 0;
+      const scrolled = window.scrollY > 24;
+      document.body.classList.toggle("is-scrolled", scrolled);
+    };
+    const onScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(evaluate);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    evaluate();
+  }
+
+  function rewriteIalTopNavFromTree() {
+    const group = document.querySelector(".nav-group-pure[data-nav-group='pure']");
+    if (!group) return;
+    const tree = (window.ELITE_COURSE_MODULES || {}).siteTree;
+    if (!tree || !Array.isArray(tree.children)) return;
+    const ial = tree.children.find((node) => node.id === "ial");
+    if (!ial) return;
+    const tabMain = group.querySelector(".nav-tab-main");
+    if (tabMain) {
+      tabMain.setAttribute("href", "ial/index.html");
+      const spanLabel = tabMain.querySelector("span");
+      const smallLabel = tabMain.querySelector("small");
+      if (spanLabel) spanLabel.textContent = "IAL";
+      if (smallLabel) smallLabel.textContent = "International A-Level";
+    }
+    const panel = group.querySelector(".nav-panel");
+    if (!panel) return;
+    const subjects = Array.isArray(ial.children) ? ial.children : [];
+    if (!subjects.length) return;
+    const itemsHtml = subjects.map((subject) => {
+      const isLive = subject.status === "live";
+      const href = isLive ? subject.href : "#";
+      const cssClasses = isLive ? "" : 'class="is-coming" aria-disabled="true"';
+      const label = isLive ? subject.label : `${subject.label} (coming)`;
+      const detail = subject.code || "";
+      return `<a href="${escapeHtml(href)}" ${cssClasses}><strong>${escapeHtml(label)}</strong><span>${escapeHtml(detail)}</span></a>`;
+    }).join("");
+    panel.innerHTML = itemsHtml;
+    panel.setAttribute("aria-label", "IAL Mathematics units");
+  }
+
   function renderIalSubjectHub() {
     const grid = document.querySelector("[data-ial-subject-grid]");
     if (!grid) return;
@@ -871,12 +919,14 @@
   function bootstrap() {
     applyPathwayContext();
     init();
+    rewriteIalTopNavFromTree();
     initNavToggle();
     initStructuredNav();
     renderEliteBreadcrumb();
     renderIalSubjectHub();
     initPathwayToolStrip();
     ensureIconsOnTiles();
+    initShrinkingHeader();
     initPwa();
   }
 

@@ -69,6 +69,27 @@
   --t-base: 220ms var(--ease-out);
 }
 
+/* === IAL nav panel sub-items: coming soon state === */
+.nav-panel a.is-coming {
+  opacity: 0.52;
+  cursor: not-allowed;
+  pointer-events: none;
+  filter: saturate(0.55);
+}
+.nav-panel a.is-coming::after {
+  content: "Soon";
+  align-self: flex-start;
+  margin-top: 4px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: var(--letter-eyebrow);
+  text-transform: uppercase;
+  color: var(--brand-ochre);
+  padding: 2px 7px;
+  border-radius: var(--r-pill);
+  background: rgba(192, 138, 62, 0.14);
+}
+
 /* === IAL Subject Hub (lists Pure 1, Pure 2, Stats, Mech) === */
 .ial-subject-hub {
   display: grid;
@@ -2458,7 +2479,32 @@ body.practice-focus-mode .mobile-tools-toggle {
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: saturate(160%) blur(8px);
   -webkit-backdrop-filter: saturate(160%) blur(8px);
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 0 transparent;
+  transition: padding var(--t-base), background var(--t-base),
+              border-color var(--t-base), box-shadow var(--t-base);
+}
+body.is-scrolled .site-header {
+  padding: 8px 28px;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom-color: rgba(207, 201, 190, 0.55);
+  box-shadow: 0 10px 30px rgba(14, 18, 32, 0.06);
+}
+body.is-scrolled .site-brand .brand-title {
+  font-size: 14px;
+}
+body.is-scrolled .nav-tab-main {
+  min-height: 38px;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+body.is-scrolled .nav-tab-main small {
+  display: none;
+}
+body.is-scrolled .site-cta .button {
+  min-height: 34px;
+  padding: 6px 12px;
+  font-size: 13px;
 }
 .site-brand {
   display: flex;
