@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -8,7 +8,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Practice Bank - Elite IGCSE Mathematics">
   <meta property="og:description" content="Filter, zoom, solve, and print every classified Edexcel 4MA1 question. By Dr Eslam Ahmed.">
-  <meta property="og:image" content="assets/og-image.png">
+  <meta property="og:image" content="https://eliteigcse.com/assets/og-image.png?v=20260527b">
   <meta name="theme-color" content="#161b2e">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="pathway-bootstrap.js?v=20260527a"></script>
-  <link rel="stylesheet" href="styles.css?v=20260527d">
+  <link rel="stylesheet" href="styles.css?v=20260527e">
   <script defer src="pathway-mode.js?v=20260527a"></script>
   <script>
     window.MathJax = {
@@ -34,7 +34,7 @@
   <script defer src="cloud-progress.js"></script>
   <script defer src="solutions-data.js?v=20260527a"></script>
   <script defer src="print-utils.js?v=20260527a"></script>
-  <script defer src="app.js?v=20260527b"></script>
+  <script defer src="app.js?v=20260527c"></script>
   <script defer src="course-modules.js?v=20260527f"></script>
   <script defer src="lead.js?v=20260527c"></script>
 </head>
@@ -120,24 +120,24 @@
   <button id="mobileToolsBackdrop" class="mobile-tools-backdrop" type="button" aria-label="Close practice tools" hidden></button>
 
   <main class="shell">
-    <section class="content">
-      <section class="practice-hero" aria-labelledby="practiceTitle">
-        <div>
+    <div class="content">
+      <!-- Kept for app.js compatibility; the visible practice surface now uses the compact toolbar below. -->
+      <div class="practice-state-anchor" hidden>
+        <div class="practice-hero" aria-hidden="true">
           <span class="eyebrow">Practice Bank</span>
           <h1 id="practiceTitle">All your IGCSE 4MA1 practice in one place.</h1>
-          <p>Filter by <span data-pathway-label="unitLower">chapter</span>, topic, paper, marks, or status. Mark questions solved, save difficult ones in the Mistake Box, and print your own worksheet. Everything saves automatically.</p>
+          <div class="practice-progress" aria-label="Progress snapshot">
+            <div><strong id="progressSolved">0</strong><span>Solved</span></div>
+            <div><strong id="progressUnsolved">0</strong><span>Unsolved</span></div>
+            <div><strong id="progressSelected">0</strong><span>Selected</span></div>
+            <div><strong id="progressPercent">0%</strong><span>Complete</span></div>
+          </div>
+          <div class="overall-progress" aria-label="Overall solved progress">
+            <span id="progressLabel">0% complete</span>
+            <div><i id="progressBar"></i></div>
+          </div>
         </div>
-        <div class="practice-progress" aria-label="Progress snapshot">
-          <div><strong id="progressSolved">0</strong><span>Solved</span></div>
-          <div><strong id="progressUnsolved">0</strong><span>Unsolved</span></div>
-          <div><strong id="progressSelected">0</strong><span>Selected</span></div>
-          <div><strong id="progressPercent">0%</strong><span>Complete</span></div>
-        </div>
-        <div class="overall-progress" aria-label="Overall solved progress">
-          <span id="progressLabel">0% complete</span>
-          <div><i id="progressBar"></i></div>
-        </div>
-      </section>
+      </div>
 
       <!-- These elements are referenced by app.js but are not visually shown on the practice page;
            kept hidden so the script remains compatible without changes. -->
@@ -146,14 +146,14 @@
         <div id="heroPreview"></div>
       </div>
 
-      <section class="practice-toolbar" aria-label="Practice controls">
-        <section class="quick-stats" aria-label="Practice snapshot">
+      <div class="practice-toolbar" aria-label="Practice controls">
+        <div class="quick-stats practice-status-strip" aria-label="Practice snapshot">
           <div><strong id="totalQuestions">214</strong><span>questions</span></div>
           <div><strong id="selectedCount">0</strong><span>selected</span></div>
           <div><strong id="solvedCount">0</strong><span>solved</span></div>
           <div><strong id="visibleCount">0</strong><span>visible</span></div>
-        </section>
-        <section class="bank-panel practice-bank-bar" aria-label="Question bank mode">
+        </div>
+        <div class="bank-panel practice-bank-bar" aria-label="Question bank mode">
           <div>
             <span class="eyebrow">Question Bank Mode</span>
             <h2 id="bankTitle">All Classified Questions</h2>
@@ -169,8 +169,8 @@
               <span id="expertiseBankCount">214 questions</span>
             </button>
           </div>
-        </section>
-      </section>
+        </div>
+      </div>
 
       <div class="practice-workspace">
         <dialog id="practiceToolsPalette" class="practice-tools-dialog" aria-labelledby="practiceToolsTitle">
@@ -188,8 +188,8 @@
               <button type="button" role="tab" aria-selected="false" data-tools-tab="solutions">Solutions</button>
             </div>
 
-            <section class="practice-tools-panel-section active" data-tools-panel="filter">
-              <section class="filters">
+            <div class="practice-tools-panel-section active" data-tools-panel="filter">
+              <div class="filters">
                 <div class="filter-topline">
                   <h2 class="panel-title">Find Your Question</h2>
                   <button id="advancedFiltersToggle" type="button" aria-expanded="false" aria-controls="advancedFilters">More filters</button>
@@ -226,8 +226,8 @@
                     <button id="clearSelectedBtn" type="button">Clear Selected</button>
                   </div>
                 </div>
-              </section>
-              <section id="focusFilterBar" class="focus-filter-bar" aria-label="Quick focus filters">
+              </div>
+              <div id="focusFilterBar" class="focus-filter-bar" aria-label="Quick focus filters">
                 <div class="focus-filter-head">
                   <div>
                     <span>Quick filters</span>
@@ -247,8 +247,8 @@
                     <option value="selected">Selected only</option>
                   </select></label>
                 </div>
-              </section>
-              <section class="practice-panel">
+              </div>
+              <div class="practice-panel">
                 <button class="active" type="button" data-practice="all">
                   <span>01</span>
                   <strong>Question Bank</strong>
@@ -289,18 +289,18 @@
                   <strong>Enroll</strong>
                   <small>Book the free first class.</small>
                 </a>
-              </section>
-              <section class="student-helper" aria-label="Student helper">
+              </div>
+              <div class="student-helper" aria-label="Student helper">
                 <div>
                   <strong id="helperTitle">Start simple.</strong>
                   <p id="helperText">Pick a topic, solve 5 questions, then mark each one solved so the site can show your progress.</p>
                 </div>
                 <a class="button light" href="topics.html">Open roadmap</a>
-              </section>
-            </section>
+              </div>
+            </div>
 
-            <section class="practice-tools-panel-section" data-tools-panel="print" hidden>
-              <section class="selection-toolbar" aria-label="Selection and print tools">
+            <div class="practice-tools-panel-section" data-tools-panel="print" hidden>
+              <div class="selection-toolbar" aria-label="Selection and print tools">
                 <div>
                   <strong id="selectionSummary">0 selected</strong>
                   <span id="visibleSummary">0 visible</span>
@@ -311,8 +311,8 @@
                   <button id="printVisibleBtn" type="button">Print current view</button>
                   <button id="printSelectedInlineBtn" class="primary" type="button">Print selected</button>
                 </div>
-              </section>
-              <section class="worksheet-card">
+              </div>
+              <div class="worksheet-card">
                 <h2 class="panel-title">Worksheet Builder</h2>
                 <p>Choose a topic or use the current filters, then build a printable worksheet.</p>
                 <label>Topic<select id="worksheetTopic"></select></label>
@@ -328,11 +328,11 @@
                   <button id="buildWorksheetBtn" type="button">Build</button>
                   <button id="printWorksheetBtn" type="button">Print</button>
                 </div>
-              </section>
-            </section>
+              </div>
+            </div>
 
-            <section class="practice-tools-panel-section" data-tools-panel="solutions" hidden>
-              <section class="study-card">
+            <div class="practice-tools-panel-section" data-tools-panel="solutions" hidden>
+              <div class="study-card">
             <h2 class="panel-title">Study Timer</h2>
             <div class="timer-face">
               <svg viewBox="0 0 120 120" aria-hidden="true">
@@ -350,8 +350,8 @@
               <button type="button" data-minutes="15">15 min</button>
               <button type="button" data-minutes="5">5 min</button>
             </div>
-          </section>
-          <section class="review-card">
+          </div>
+          <div class="review-card">
             <h2 class="panel-title">Mistake Box</h2>
             <p>Questions you find difficult come back later until they become safe.</p>
             <div class="review-stats">
@@ -363,8 +363,8 @@
               <button id="dueReviewBtn" type="button">Due Today</button>
               <button id="allReviewBtn" type="button">All Mistakes</button>
             </div>
-          </section>
-            </section>
+          </div>
+            </div>
           </div>
         </dialog>
 
@@ -399,7 +399,7 @@
         <p>Want a teacher to walk you through the hardest topics?</p>
         <a class="button gold" data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Book free first class</a>
       </div>
-    </section>
+    </div>
   </main>
 
   <dialog id="viewerDialog" class="viewer-dialog">
@@ -438,7 +438,7 @@
     </div>
   </dialog>
 
-  <section id="printArea" class="print-area"></section>
+  <div id="printArea" class="print-area"></div>
 
   <!-- printSelectedBtnHero is referenced by app.js but isn't shown on the practice page;
        hidden duplicate keeps the script's listener happy. -->

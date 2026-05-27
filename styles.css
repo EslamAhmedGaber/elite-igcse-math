@@ -9889,6 +9889,10 @@ body[data-page="practice"][data-course-palette] {
   background: #fff;
 }
 
+body[data-page="practice"] .practice-state-anchor {
+  display: none !important;
+}
+
 body[data-page="practice"] .practice-hero {
   display: grid;
   gap: 8px;
@@ -9923,8 +9927,9 @@ body[data-page="practice"] .overall-progress {
 }
 
 body[data-page="practice"] .practice-toolbar {
-  grid-template-columns: minmax(260px, 0.42fr) minmax(0, 1fr);
-  margin-bottom: 14px;
+  grid-template-columns: minmax(240px, 0.32fr) minmax(0, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 body[data-page="practice"] .quick-stats,
@@ -9936,10 +9941,48 @@ body[data-page="practice"] .content-head {
 
 body[data-page="practice"] .quick-stats {
   border-left: 5px solid var(--course-signature);
+  min-height: 68px;
 }
 
 body[data-page="practice"] .quick-stats strong {
   color: var(--course-deep);
+  font-size: 20px;
+}
+
+body[data-page="practice"] .quick-stats div {
+  padding: 8px 6px;
+}
+
+body[data-page="practice"] .quick-stats span {
+  font-size: 11px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+body[data-page="practice"] .practice-bank-bar {
+  grid-template-columns: minmax(190px, 0.46fr) minmax(0, 1fr);
+  min-height: 68px;
+  padding: 10px 12px;
+  border-left: 5px solid var(--course-signature);
+  box-shadow: 0 8px 22px rgba(14, 18, 32, 0.05);
+}
+
+body[data-page="practice"] .practice-bank-bar h2 {
+  font-size: 17px;
+}
+
+body[data-page="practice"] .practice-bank-bar p {
+  margin-top: 2px;
+  font-size: 12px;
+}
+
+body[data-page="practice"] .practice-bank-bar .bank-buttons button {
+  min-height: 44px;
+  padding: 8px 10px;
+}
+
+body[data-page="practice"] .practice-bank-bar .bank-buttons strong {
+  font-size: 13px;
 }
 
 body[data-page="practice"] .practice-workspace {

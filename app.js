@@ -369,13 +369,21 @@ function applyInitialParams() {
   const topic = params.get("topic");
   const unit = params.get("unit");
   const mode = params.get("mode");
-  if (unit && [...els.unitFilter.options].some((option) => option.value === unit)) els.unitFilter.value = unit;
+  let unitChangedAfterConfigure = false;
+  if (unit && [...els.unitFilter.options].some((option) => option.value === unit)) {
+    unitChangedAfterConfigure = els.unitFilter.value !== unit;
+    els.unitFilter.value = unit;
+    if (window.ELITE_PATHWAY?.isModular) localStorage.setItem("modularUnit", unit);
+  }
   if (window.ELITE_PATHWAY?.isModular) {
+    const unitBeforeSync = els.unitFilter.value;
     const storedUnit = localStorage.getItem("modularUnit");
     if (!unit && storedUnit && [...els.unitFilter.options].some((option) => option.value === storedUnit)) {
       els.unitFilter.value = storedUnit;
     }
     syncModularUnitSelection();
+    unitChangedAfterConfigure = unitChangedAfterConfigure || unitBeforeSync !== els.unitFilter.value;
+    if (unitChangedAfterConfigure) configureBank();
   }
   if (topic && [...els.topicFilter.options].some((option) => option.value === topic)) {
     els.topicFilter.value = topic;
