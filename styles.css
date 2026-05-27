@@ -321,15 +321,26 @@ body.is-scrolled .elite-breadcrumb {
   display: none !important;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
 body {
   margin: 0;
   min-height: 100vh;
   color: var(--ink);
   background:
-    linear-gradient(90deg, rgba(22, 27, 46, 0.035) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(22, 27, 46, 0.035) 1px, transparent 1px),
+    radial-gradient(800px 480px at 10% -5%, rgba(192, 138, 62, 0.05), transparent 60%),
+    radial-gradient(800px 600px at 95% 12%, var(--course-soft, rgba(22, 27, 46, 0.05)), transparent 60%),
+    linear-gradient(90deg, rgba(22, 27, 46, 0.03) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(22, 27, 46, 0.03) 1px, transparent 1px),
     linear-gradient(135deg, #fbfaf7 0%, #f2f3f5 52%, #fff7ea 100%);
-  background-size: 44px 44px, 44px 44px, auto;
+  background-size: auto, auto, 44px 44px, 44px 44px, auto;
+  background-attachment: fixed, fixed, fixed, fixed, fixed;
   font-family: "Sora", Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 }
