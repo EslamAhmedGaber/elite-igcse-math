@@ -128,9 +128,15 @@ button, input, select { font: inherit; }
 .ghost { background: transparent; }
 .light { background: rgba(255, 255, 255, 0.86); color: var(--navy); }
 
-button:focus-visible, .button:focus-visible, input:focus-visible, select:focus-visible {
-  outline: 3px solid var(--focus);
-  outline-offset: 1px;
+button:focus-visible, .button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: var(--r-sm);
+}
+a:focus-visible {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 
 .topbar {
@@ -2513,7 +2519,7 @@ body.practice-focus-mode .mobile-tools-toggle {
 }
 .pathway-tool-strip-links {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
   gap: 10px;
   align-content: center;
 }
@@ -2525,18 +2531,48 @@ body.practice-focus-mode .mobile-tools-toggle {
   overflow: hidden;
   min-height: 84px;
   display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
   align-content: center;
-  gap: 4px;
+  align-items: center;
+  gap: 12px;
   padding: 14px 16px;
   border: 1px solid rgba(207, 201, 190, 0.95);
   border-left: 6px solid var(--module-accent);
-  border-radius: 12px;
+  border-radius: var(--r-md);
   color: var(--module-ink);
   text-decoration: none;
   background:
     linear-gradient(135deg, var(--module-bg), rgba(255, 255, 255, 0.94) 58%),
     #fff;
-  box-shadow: 0 8px 18px rgba(14, 18, 32, 0.07);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--t-base), box-shadow var(--t-base), border-color var(--t-fast), background var(--t-fast);
+}
+.pathway-tool-strip-links a:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+.pathway-tool-strip-links a .module-icon {
+  width: 26px;
+  height: 26px;
+  color: var(--module-accent);
+  flex-shrink: 0;
+  transition: color var(--t-fast), transform var(--t-base);
+}
+.pathway-tool-strip-links a:hover .module-icon,
+.pathway-tool-strip-links a:focus-visible .module-icon,
+.pathway-tool-strip-links a[aria-current="page"] .module-icon {
+  color: currentColor;
+  transform: scale(1.08);
+}
+.pathway-tool-strip-links a:focus-visible {
+  outline: 2px solid var(--module-accent);
+  outline-offset: 3px;
+  text-decoration: none;
+}
+.pathway-tool-strip-links .module-text {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
 }
 .pathway-tool-strip-links a::before {
   content: "";
