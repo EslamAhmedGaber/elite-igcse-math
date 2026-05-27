@@ -912,3 +912,81 @@ body.print-ial-mock .ial-print-question {
     grid-column: 2;
   }
 }
+
+/* Polish Pass 2: WMA11 defaults to Classified View; other modules open by route/hash. */
+body[data-page="ial-wma11"] {
+  background: #fff;
+}
+
+body[data-page="ial-wma11"] .ial-hero {
+  border-left: 7px solid var(--ial-accent);
+  background: #fff;
+}
+
+body[data-page="ial-wma11"] #ialProgressModule,
+body[data-page="ial-wma11"] #ialMockBuilder,
+body[data-page="ial-wma11"] #ialPastPapers {
+  display: none;
+}
+
+body[data-page="ial-wma11"][data-ial-active-module="progress"] #ialProgressModule,
+body[data-page="ial-wma11"][data-ial-active-module="builder"] #ialMockBuilder,
+body[data-page="ial-wma11"][data-ial-active-module="papers"] #ialPastPapers {
+  display: grid;
+}
+
+body[data-page="ial-wma11"][data-ial-active-module]:not([data-ial-active-module="classified"]) #ialStats,
+body[data-page="ial-wma11"][data-ial-active-module]:not([data-ial-active-module="classified"]) .ial-workbench {
+  display: none;
+}
+
+.ial-mock-controls,
+.ial-mock-output {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid rgba(54, 48, 74, 0.18);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.ial-mock-controls {
+  grid-template-columns: minmax(220px, 1fr) minmax(110px, 0.35fr) minmax(190px, 0.55fr) minmax(260px, 1fr);
+  align-items: end;
+}
+
+.ial-mock-controls label {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.ial-mock-controls input,
+.ial-mock-controls select {
+  min-height: 40px;
+  border: 1px solid var(--ial-line);
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: #fff;
+  color: var(--ial-ink);
+}
+
+.ial-mock-control-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.ial-mock-list {
+  display: grid;
+  gap: 8px;
+}
+
+@media (max-width: 900px) {
+  .ial-mock-controls,
+  .ial-mock-control-actions {
+    grid-template-columns: 1fr;
+  }
+}

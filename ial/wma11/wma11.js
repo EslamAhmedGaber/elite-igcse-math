@@ -48,6 +48,14 @@
     mockList: document.getElementById("ialMockList")
   };
 
+  const MODULE_HASHES = {
+    ialFilters: "classified",
+    ialQuestionStage: "classified",
+    ialProgressModule: "progress",
+    ialMockBuilder: "builder",
+    ialPastPapers: "papers"
+  };
+
   function readJSON(key, fallback) {
     try {
       return JSON.parse(localStorage.getItem(key) || "null") ?? fallback;
@@ -58,6 +66,38 @@
 
   function writeJSON(key, value) {
     localStorage.setItem(key, JSON.stringify(value));
+  }
+
+  function activeModuleFromLocation() {
+    const hash = window.location.hash.replace(/^#/, "");
+    return MODULE_HASHES[hash] || "classified";
+  }
+
+  function setActiveModule(module = "classified") {
+    const active = ["classified", "progress", "builder", "papers"].includes(module) ? module : "classified";
+    document.body.dataset.ialActiveModule = active;
+    document.querySelectorAll("[href*='#ial']").forEach((link) => {
+      const hash = (() => {
+        try {
+          return new URL(link.getAttribute("href"), window.location.href).hash.replace(/^#/, "");
+        } catch (err) {
+          return "";
+        }
+      })();
+      const linkModule = MODULE_HASHES[hash] || "";
+      if (!linkModule) return;
+      if (linkModule === active) link.setAttribute("aria-current", "page");
+      else link.removeAttribute("aria-current");
+    });
+  }
+
+  function handleModuleRoute({ scroll = false } = {}) {
+    const module = activeModuleFromLocation();
+    setActiveModule(module);
+    if (!scroll) return;
+    const hash = window.location.hash.replace(/^#/, "");
+    const target = hash ? document.getElementById(hash) : null;
+    target?.scrollIntoView({ block: "start", behavior: "smooth" });
   }
 
   function escapeHtml(value) {
@@ -558,15 +598,21 @@
       const button = event.target.closest("[data-ial-topic-filter]");
       if (!button || !els.topic) return;
       els.topic.value = button.dataset.ialTopicFilter || "";
+      setActiveModule("classified");
+      if (window.location.hash !== "#ialFilters") {
+        history.replaceState(null, "", "#ialFilters");
+      }
       applyFilters(false);
       els.filters?.scrollIntoView({ block: "start", behavior: "smooth" });
     });
+    window.addEventListener("hashchange", () => handleModuleRoute({ scroll: true }));
   }
 
   function init() {
     setupFilters();
     applyUrlFilters();
     bindEvents();
+    handleModuleRoute();
     applyFilters(false);
   }
 

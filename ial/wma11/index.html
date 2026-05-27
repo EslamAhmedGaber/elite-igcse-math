@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="pathway-bootstrap.js?v=20260527a"></script>
   <link rel="stylesheet" href="styles.css?v=20260527d">
-  <link rel="stylesheet" href="ial/wma11/wma11.css?v=20260526f">
+  <link rel="stylesheet" href="ial/wma11/wma11.css?v=20260527a">
   <script>
     window.MathJax = { tex: { inlineMath: [["$", "$"], ["\\(", "\\)"]] }, svg: { fontCache: "global" } };
   </script>
@@ -24,7 +24,7 @@
   <script defer src="course-modules.js?v=20260527e"></script>
   <script defer src="lead.js?v=20260527c"></script>
   <script defer src="ial/wma11/wma11-data.js?v=20260527c"></script>
-  <script defer src="ial/wma11/wma11.js?v=20260526d"></script>
+  <script defer src="ial/wma11/wma11.js?v=20260527a"></script>
 </head>
 <body data-page="ial-wma11">
 
@@ -179,6 +179,20 @@
         <a data-module="smart-revision" href="exam.html?pathway=pure&amp;course=wma11&amp;mode=smart"><strong>Smart Revision</strong><span>Use mistakes, weak topics, and unsolved questions.</span></a>
         <a data-module="mistake-box" href="ial/wma11/index.html?mode=mistakes#ialFilters"><strong>Mistake Box</strong><span>Reopen saved Pure 1 revision questions.</span></a>
         <a data-module="saved-tests" href="exam.html?pathway=pure&amp;course=wma11&amp;mode=saved"><strong>Saved Tests</strong><span>Reuse and print saved Pure 1 tests.</span></a>
+      </div>
+      <div class="ial-mock-controls" aria-label="Build a WMA11 mock">
+        <label>Topic<select id="ialMockTopic"></select></label>
+        <label>Questions<input id="ialMockCount" type="number" min="1" max="24" value="8"></label>
+        <label class="ial-toggle"><input id="ialMockExpertise" type="checkbox"><span>Expertise Q6+ only</span></label>
+        <div class="ial-mock-control-actions">
+          <button id="ialGenerateMock" class="button primary" type="button">Generate</button>
+          <button id="ialPrintMock" class="button light" type="button">Print questions</button>
+          <button id="ialPrintMockSolutions" class="button solution" type="button">Print with solutions</button>
+        </div>
+      </div>
+      <div class="ial-mock-output" aria-live="polite">
+        <strong id="ialMockSummary">No mock generated yet.</strong>
+        <div id="ialMockList" class="ial-mock-list"></div>
       </div>
     </section>
 
