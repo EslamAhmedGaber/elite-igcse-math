@@ -7,10 +7,10 @@ This is the release handoff for the restored static Elite IGCSE Mathematics site
 - Domain: https://eliteigcse.com
 - Live repository root: `C:\Users\Eslam\Documents\Elite IGCSE v2\website`
 - Project log: `C:\Users\Eslam\Documents\Elite IGCSE v2\PROJECT_LOG.md`
-- Current branch/head: `main` at `bd1f14e`
+- Current branch/head: `main` at the latest polish-pass acceptance commit; baseline production content before Phase 7 was `c89fc91`.
 - Registry version: `2026-05-27-course-registry-v6`
-- Service worker cache: `elite-igcse-kill-v84`
-- Classified answer PDF version: `style-h-20260527`
+- Service worker cache: `elite-igcse-kill-v91`
+- Classified answer PDF version: `title-polish-20260527`
 - WMA11 PDF version: `wma11-indigo-20260527`
 
 ## Canonical Course Signatures
@@ -48,7 +48,7 @@ Linear exposes its tools directly. Modular first shows Unit 1 / Unit 2, then exp
 - Pure 1 past papers: https://eliteigcse.com/pastpapers.html?pathway=pure&cb=bd1f14e#pure-wma11
 - Downloads: https://eliteigcse.com/downloads.html?pathway=pure&cb=bd1f14e
 - WMA11 classified with answers: https://eliteigcse.com/downloads/IAL/WMA11/WMA11_Classified_With_Answers.pdf?v=wma11-indigo-20260527
-- Unit 1 classified answers: https://eliteigcse.com/downloads/ClassifiedSolutions/Classified_4WM1_Answers.pdf?v=style-h-20260527
+- Unit 1 classified answers: https://eliteigcse.com/downloads/ClassifiedSolutions/Classified_4WM1_Answers.pdf?v=title-polish-20260527
 - WMA11 Jan 2026 solution: https://eliteigcse.com/downloads/IAL/WMA11/Papers/WMA11_2026_Jan_Solutions.pdf?v=wma11-indigo-20260527
 
 ## Phase Commits
@@ -64,6 +64,22 @@ Linear exposes its tools directly. Modular first shows Unit 1 / Unit 2, then exp
 | Phase 7 | `d4e409f` | Registry-driven past papers and downloads |
 | Phase 7.5 | `7e2a9f3` | Expansion tests A and B |
 | Phase 8 | `bd1f14e` | Final PDF rebuild and Test C |
+
+## Polish Pass Addendum
+
+The polish pass closed the independent audit gaps that remained after `bd1f14e`.
+
+| Polish Phase | Commit | Notes |
+|---|---|---|
+| Phase 1 | `1e8f954` | WMA11 audit metadata and validator guardrails |
+| Phase 2 | `1a72d04` | Pure 1 Progress moved onto shared `progress.html` |
+| Phase 3 | `b1d9407` | Printable mocks/tests inherit curriculum palette |
+| Phase 4 | `2413254` | Linear/Modular solution step titles polished |
+| Phase 5 | `14e9875` | Practice layout changed to compact toolbar + practice rail |
+| Phase 6 | `c89fc91` | Linear/Modular classified solution PDFs rebuilt with polished titles |
+| Phase 7 | latest acceptance commit | Final audit, WMA11 web-title polish, release handoff update |
+
+Phase 7 found and fixed one extra consistency issue: WMA11 web solution step titles still had 26 generic or overlong labels such as `Part (a)`. `tools\polish_wma11_titles.py` now keeps that audit repeatable. Only WMA11 `steps[].title` values changed; solution bodies, final answers, metadata, storage keys, and Pure 1 PDFs were untouched.
 
 ## Expansion Proofs
 
@@ -131,7 +147,9 @@ Renaming storage keys can make students lose local progress.
 The final acceptance audit passed:
 
 - `python tools\verify_pipeline.py`
-- JS syntax checks for `course-modules.js`, `course-renderers.js`, `lead.js`, `exam.js`, `app.js`, `print-utils.js`, `ial\wma11\wma11.js`, and `service-worker.js`
+- JS syntax checks for `course-modules.js`, `course-renderers.js`, `lead.js`, `exam.js`, `app.js`, `print-utils.js`, `ial\wma11\wma11.js`, `ial\wma11\wma11-data.js`, and `service-worker.js`
+- Title audits: Linear/Modular `0 / 6023` awkward titles; WMA11 web titles `0` awkward titles after the Phase 7 polish.
+- Live browser/CDP checks for Pure 1 Progress parity, Linear/Modular practice layout, and Linear/Modular/Pure print palette variables.
 - `git diff --check -- . ':(exclude)*.pdf'`
 - Live browser checks for Linear, Modular chooser, Modular Unit 1, Pure 1, Downloads, and Pure 1 Past Papers
 - Live URL checks for key HTML and PDF files

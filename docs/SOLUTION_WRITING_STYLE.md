@@ -20,6 +20,7 @@ All website solution data uses one schema:
 - `steps[]` is the worked method shown on the site and later used by the PDF builders.
 - `finalAnswer` is the answer plate shown after the method.
 - Step titles should be short, scan-friendly phrases.
+- Avoid generic labels such as `Part (a)` or `Step 1`; use a short action label instead, such as `Simplify part (a)` or `Find the gradient`.
 - Step bodies may contain Markdown and TeX math.
 
 ## Internal Fields
