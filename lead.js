@@ -575,6 +575,54 @@
     return crumbs;
   }
 
+  function initAnimatedCounters() {
+    if (!("IntersectionObserver" in window)) return;
+    const candidates = document.querySelectorAll(
+      ".stats-band strong, .hero-stat-strip strong, .home-hero strong[data-count], .review-summary strong, .pathway-stats strong"
+    );
+    if (!candidates.length) return;
+    const parseTarget = (el) => {
+      const raw = (el.textContent || "").trim();
+      const num = raw.match(/^\d[\d,.]*\d|^\d+/);
+      if (!num) return null;
+      const value = parseInt(num[0].replace(/[,.\s]/g, ""), 10);
+      if (!Number.isFinite(value)) return null;
+      const suffix = raw.slice(num[0].length);
+      return { value, suffix, original: raw };
+    };
+    const animateTo = (el, target, suffix) => {
+      const duration = 1100;
+      const start = performance.now();
+      const startValue = 0;
+      const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+      const tick = (now) => {
+        const elapsed = now - start;
+        const progress = Math.min(1, elapsed / duration);
+        const eased = easeOut(progress);
+        const current = Math.round(startValue + (target - startValue) * eased);
+        el.textContent = current.toLocaleString() + suffix;
+        if (progress < 1) requestAnimationFrame(tick);
+        else el.textContent = target.toLocaleString() + suffix;
+      };
+      requestAnimationFrame(tick);
+    };
+    const observed = new WeakSet();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        if (observed.has(el)) return;
+        observed.add(el);
+        const parsed = parseTarget(el);
+        if (!parsed || parsed.value < 5) return;
+        el.dataset.original = parsed.original;
+        animateTo(el, parsed.value, parsed.suffix);
+        observer.unobserve(el);
+      });
+    }, { threshold: 0.4 });
+    candidates.forEach((el) => observer.observe(el));
+  }
+
   function initShrinkingHeader() {
     if (document.body?.dataset?.shrinkingHeader === "ready") return;
     document.body.dataset.shrinkingHeader = "ready";
@@ -927,6 +975,7 @@
     initPathwayToolStrip();
     ensureIconsOnTiles();
     initShrinkingHeader();
+    initAnimatedCounters();
     initPwa();
   }
 
