@@ -124,6 +124,10 @@ const els = {
   mobileToolsToggle: document.getElementById("mobileToolsToggle"),
   mobileToolsBackdrop: document.getElementById("mobileToolsBackdrop"),
   practiceSidebar: document.getElementById("practiceSidebar"),
+  practiceToolsPalette: document.getElementById("practiceToolsPalette"),
+  practiceToolsCloseBtn: document.getElementById("practiceToolsCloseBtn"),
+  practiceToolsTabs: document.querySelectorAll("[data-tools-tab]"),
+  practiceToolsPanels: document.querySelectorAll("[data-tools-panel]"),
 };
 
 function uniqueSorted(values) {
@@ -737,12 +741,34 @@ function toggleSelect(id) {
   redraw();
 }
 
-function setMobileToolsOpen(open) {
-  if (!els.practiceSidebar || !els.mobileToolsToggle || !els.mobileToolsBackdrop) return;
+function activateToolsTab(tab = "filter") {
+  const nextTab = [...els.practiceToolsTabs].some((button) => button.dataset.toolsTab === tab) ? tab : "filter";
+  els.practiceToolsTabs.forEach((button) => {
+    const active = button.dataset.toolsTab === nextTab;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-selected", active ? "true" : "false");
+  });
+  els.practiceToolsPanels.forEach((panel) => {
+    const active = panel.dataset.toolsPanel === nextTab;
+    panel.classList.toggle("active", active);
+    panel.hidden = !active;
+  });
+}
+
+function setMobileToolsOpen(open, tab = "") {
+  if (!els.practiceSidebar || !els.mobileToolsToggle) return;
+  if (tab) activateToolsTab(tab);
   els.practiceSidebar.classList.toggle("open", open);
   els.mobileToolsToggle.setAttribute("aria-expanded", String(open));
-  els.mobileToolsBackdrop.hidden = !open;
+  if (els.mobileToolsBackdrop) els.mobileToolsBackdrop.hidden = !open;
   document.body.classList.toggle("practice-tools-open", open);
+  if (!els.practiceToolsPalette) return;
+  if (open && !els.practiceToolsPalette.open) {
+    if (typeof els.practiceToolsPalette.showModal === "function") els.practiceToolsPalette.showModal();
+    else els.practiceToolsPalette.setAttribute("open", "");
+  } else if (!open && els.practiceToolsPalette.open) {
+    els.practiceToolsPalette.close();
+  }
 }
 
 function setAdvancedFiltersOpen(open) {
@@ -1165,17 +1191,23 @@ els.closeSolutionBtn.addEventListener("click", () => els.solutionDialog.close())
 els.closeFixTopicBtn.addEventListener("click", () => els.fixTopicDialog.close());
 els.saveFixTopicBtn.addEventListener("click", saveFixTopic);
 document.addEventListener("click", (event) => {
+  const toolsTab = event.target.closest("[data-tools-tab]");
+  if (toolsTab) activateToolsTab(toolsTab.dataset.toolsTab);
   if (event.target.closest("#advancedFiltersToggle")) {
     setAdvancedFiltersOpen(els.advancedFilters?.hidden !== false);
   }
   if (event.target.closest("#mobileToolsToggle")) {
-    setMobileToolsOpen(!els.practiceSidebar.classList.contains("open"));
+    setMobileToolsOpen(!els.practiceToolsPalette?.open, "filter");
   }
   if (event.target.closest("#mobileToolsBackdrop")) {
     setMobileToolsOpen(false);
   }
 });
 document.addEventListener("keydown", (event) => {
+  if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
+    event.preventDefault();
+    setMobileToolsOpen(true, "filter");
+  }
   if (event.key === "Escape") setMobileToolsOpen(false);
   if (currentLayout === "focus" && !["INPUT", "SELECT", "TEXTAREA"].includes(document.activeElement?.tagName || "")) {
     if (els.viewerDialog.open || els.solutionDialog.open || els.fixTopicDialog.open) return;
@@ -1187,9 +1219,20 @@ els.gridLayoutBtn.addEventListener("click", () => setLayout("grid"));
 els.listLayoutBtn.addEventListener("click", () => setLayout("list"));
 els.focusLayoutBtn.addEventListener("click", () => setLayout("focus"));
 els.focusMoreFiltersBtn?.addEventListener("click", () => {
+  setMobileToolsOpen(true, "filter");
   setAdvancedFiltersOpen(true);
   els.searchBox?.scrollIntoView({ block: "center", behavior: "smooth" });
   els.searchBox?.focus();
+});
+els.practiceToolsCloseBtn?.addEventListener("click", () => setMobileToolsOpen(false));
+els.practiceToolsPalette?.addEventListener("click", (event) => {
+  if (event.target === els.practiceToolsPalette) setMobileToolsOpen(false);
+});
+els.practiceToolsPalette?.addEventListener("close", () => {
+  els.practiceSidebar?.classList.remove("open");
+  els.mobileToolsToggle?.setAttribute("aria-expanded", "false");
+  if (els.mobileToolsBackdrop) els.mobileToolsBackdrop.hidden = true;
+  document.body.classList.remove("practice-tools-open");
 });
 els.timerToggleBtn.addEventListener("click", toggleTimer);
 els.timerResetBtn.addEventListener("click", resetTimer);
