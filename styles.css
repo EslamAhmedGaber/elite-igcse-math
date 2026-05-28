@@ -4012,30 +4012,78 @@ body.pathway-unset .site-header .site-cta {
 .hero-bullets li strong { color: #dcb877; margin-right: 6px; }
 
 .home-hero-card {
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 18px;
-  padding: 28px 24px;
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.04));
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--r-lg);
+  padding: 32px 26px 28px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 12px;
+  gap: 14px;
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    0 14px 36px rgba(0, 0, 0, 0.22);
+}
+.home-hero-portrait {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-hero-portrait::before {
+  content: "";
+  position: absolute;
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    var(--brand-ochre) 0deg,
+    var(--brand-ochre-soft) 80deg,
+    rgba(220, 184, 119, 0.22) 180deg,
+    var(--brand-ochre-soft) 280deg,
+    var(--brand-ochre) 360deg
+  );
+  opacity: 0.6;
+  filter: blur(2px);
+  z-index: 0;
 }
 .home-hero-portrait img {
+  position: relative;
+  z-index: 1;
   width: 130px;
   height: 130px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #dcb877;
-  box-shadow: 0 14px 32px rgba(0,0,0,0.3);
+  border: 3px solid #fff;
+  box-shadow:
+    0 0 0 1px rgba(220, 184, 119, 0.45),
+    0 16px 36px rgba(0, 0, 0, 0.32),
+    0 2px 10px rgba(220, 184, 119, 0.22);
 }
-.home-hero-card strong { font-size: 18px; color: #fff; }
-.home-hero-card span { font-size: 13px; color: rgba(255, 255, 255, 0.78); }
+.home-hero-card strong {
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: var(--letter-display);
+  font-weight: 800;
+  line-height: 1.2;
+}
+.home-hero-card span {
+  font-size: 11px;
+  color: var(--brand-ochre-soft);
+  font-weight: 800;
+  letter-spacing: var(--letter-eyebrow);
+  text-transform: uppercase;
+}
 .home-hero-card ul {
   list-style: none;
   padding: 0;
-  margin: 8px 0 12px;
+  margin: 10px 0 14px;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -4043,18 +4091,26 @@ body.pathway-unset .site-header .site-cta {
 }
 .home-hero-card ul li {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.85);
-  padding: 6px 12px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.86);
+  padding: 9px 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--r-sm);
 }
 .button.gold {
-  background: #dcb877;
-  color: #161b2e;
+  background: var(--brand-ochre);
+  color: #fff;
   border: none;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  transition: background var(--t-fast), transform var(--t-fast), box-shadow var(--t-fast);
 }
-.button.gold:hover { background: #fff; }
+.button.gold:hover {
+  background: var(--brand-ochre-soft);
+  color: var(--brand-ink-deep);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(192, 138, 62, 0.32);
+}
 
 @media (max-width: 900px) {
   .home-hero { grid-template-columns: 1fr; padding: 32px 24px; }
@@ -5728,23 +5784,32 @@ body.pathway-unset .site-header .site-cta {
 .exam-mode-tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
 }
 
 .exam-mode-tabs button {
-  min-height: 40px;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 8px 14px;
+  min-height: 42px;
+  border: 1px solid rgba(207, 201, 190, 0.85);
+  border-radius: var(--r-md);
+  padding: 9px 16px;
   background: #fff;
-  color: var(--navy);
-  font-weight: 800;
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  font-size: 13.5px;
+  transition: background var(--t-fast), border-color var(--t-fast), color var(--t-fast), transform var(--t-fast), box-shadow var(--t-fast);
+}
+.exam-mode-tabs button:hover {
+  border-color: var(--course-signature);
+  color: var(--course-signature);
+  transform: translateY(-1px);
 }
 
 .exam-mode-tabs button.active {
-  border-color: var(--navy);
-  background: var(--navy);
+  border-color: var(--course-signature);
+  background: var(--course-signature);
   color: #fff;
+  box-shadow: 0 6px 14px var(--course-soft);
 }
 
 .exam-mode-panel {
@@ -7089,31 +7154,36 @@ body.pathway-unset .site-header .site-cta {
 }
 
 .roadmap-card-head span {
-  color: var(--accent);
-  font-size: 11px;
+  color: var(--brand-ochre);
+  font-size: 10px;
   font-weight: 800;
-  letter-spacing: 0.05em;
+  letter-spacing: var(--letter-eyebrow);
   text-transform: uppercase;
 }
 
 .roadmap-card-head strong {
-  color: var(--navy);
+  color: var(--course-signature);
   font-size: 17px;
   line-height: 1.25;
+  letter-spacing: var(--letter-display);
+  font-weight: 800;
 }
 
 .roadmap-meter {
   height: 8px;
   overflow: hidden;
-  border-radius: 999px;
-  background: #f7f4ee;
+  border-radius: var(--r-pill);
+  background: rgba(207, 201, 190, 0.42);
+  box-shadow: inset 0 1px 2px rgba(14, 18, 32, 0.06);
 }
 
 .roadmap-meter i {
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, var(--accent), var(--gold));
+  background: linear-gradient(90deg, var(--course-signature), var(--brand-ochre));
+  transition: width 800ms var(--ease-out);
+  box-shadow: 0 0 6px var(--course-soft);
 }
 
 .roadmap-numbers {
