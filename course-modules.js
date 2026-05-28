@@ -652,6 +652,21 @@
           "heading": "Unit 1 | 4WM1H",
           "sessions": [
               {
+                  "label": "Specimen",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/PastPapers/Modular/unit-1/specimen-4wm1h-unit-1-question-paper.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Solution",
+                          "href": "downloads/PastPaperSolutions/Specimen_4WM1H_Solutions.pdf?v=paper-solutions-unit1-20260528"
+                      }
+                  ]
+              },
+              {
                   "label": "Nov 2025",
                   "papers": [
                       {

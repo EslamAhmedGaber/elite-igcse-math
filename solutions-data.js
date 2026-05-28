@@ -35979,6 +35979,629 @@ window.SOLUTION_DATA = {
     ],
     "finalAnswer": "\\(39\\) trains"
   },
+  "all::Specimen_4WM1H__Q01__p03-03__m01__Rounding-Estimation-Bounds": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Bounds question using rounding to 2 decimal places.",
+    "steps": [
+      {
+        "title": "Find half the rounding interval",
+        "body": "Correct to \\(2\\) decimal places means the nearest \\(0.01\\) kg.\n\n\\[\n\\frac{0.01}{2}=0.005\n\\]"
+      },
+      {
+        "title": "Subtract from the rounded value",
+        "body": "\\[\n2.75-0.005=2.745\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(2.745\\text{ kg}\\)."
+  },
+  "all::Specimen_4WM1H__Q02__p03-03__m03__Fractions": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Mixed-number subtraction with a common denominator.",
+    "steps": [
+      {
+        "title": "Convert to improper fractions",
+        "body": "\\[\n5\\frac13=\\frac{16}{3},\\qquad 2\\frac67=\\frac{20}{7}\n\\]"
+      },
+      {
+        "title": "Use a common denominator",
+        "body": "\\[\n\\frac{16}{3}-\\frac{20}{7}\n=\\frac{112}{21}-\\frac{60}{21}\n=\\frac{52}{21}\n\\]"
+      },
+      {
+        "title": "Convert back to a mixed number",
+        "body": "\\[\n\\frac{52}{21}=2\\frac{10}{21}\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(2\\frac{10}{21}\\)."
+  },
+  "all::Specimen_4WM1H__Q03__p04-04__m04__Probability-Toolkit": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Probability total and expected frequency.",
+    "steps": [
+      {
+        "title": "Find the remaining probability",
+        "body": "\\[\n1-0.26-0.18=0.56\n\\]"
+      },
+      {
+        "title": "Split the equal probabilities",
+        "body": "The probabilities for \\(2\\) and \\(4\\) are equal, so\n\n\\[\nP(2)=P(4)=\\frac{0.56}{2}=0.28\n\\]"
+      },
+      {
+        "title": "Find the probability of 1 or 2",
+        "body": "\\[\nP(1\\text{ or }2)=0.26+0.28=0.54\n\\]"
+      },
+      {
+        "title": "Calculate the estimate",
+        "body": "\\[\n0.54\\times 250=135\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(135\\)."
+  },
+  "all::Specimen_4WM1H__Q04__p05-05__m05__Solving-Linear-Equations": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Expanding brackets followed by a linear equation.",
+    "steps": [
+      {
+        "title": "Expand the brackets",
+        "body": "\\[\n(n-6)(n+4)=n^2+4n-6n-24\n\\]\n\n\\[\n=n^2-2n-24\n\\]"
+      },
+      {
+        "title": "Clear the denominator",
+        "body": "\\[\n2x-3=\\frac{3x-5}{4}\n\\]\n\n\\[\n4(2x-3)=3x-5\n\\]"
+      },
+      {
+        "title": "Solve the equation",
+        "body": "\\[\n8x-12=3x-5\n\\]\n\n\\[\n5x=7\n\\]\n\n\\[\nx=\\frac75\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(n^2-2n-24\\), and \\(x=\\frac75\\)."
+  },
+  "all::Specimen_4WM1H__Q05__p06-06__m03__Standard-Compound-Units": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Speed calculation with time conversion.",
+    "steps": [
+      {
+        "title": "Convert the time",
+        "body": "\\[\n24\\text{ minutes}=\\frac{24}{60}=0.4\\text{ hours}\n\\]\n\n\\[\n5\\text{ hours }24\\text{ minutes}=5.4\\text{ hours}\n\\]"
+      },
+      {
+        "title": "Calculate the speed",
+        "body": "\\[\n\\text{speed}=\\frac{3980}{5.4}=737.037\\ldots\n\\]"
+      },
+      {
+        "title": "Round the answer",
+        "body": "\\[\n737.037\\ldots \\approx 737\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(737\\text{ kilometres per hour}\\)."
+  },
+  "all::Specimen_4WM1H__Q06__p07-07__m04__Area-Perimeter": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Compound area split into a rectangle and trapezium.",
+    "steps": [
+      {
+        "title": "Find the rectangular part",
+        "body": "The rectangle at the bottom has width \\(28\\) cm and height \\(12\\) cm.\n\n\\[\n28\\times 12=336\n\\]"
+      },
+      {
+        "title": "Find the top area",
+        "body": "\\[\n434-336=98\n\\]"
+      },
+      {
+        "title": "Set up the trapezium",
+        "body": "The top trapezium has height\n\n\\[\n20-12=8\n\\]\n\nIts lower parallel side is\n\n\\[\n28-5-5=18\n\\]"
+      },
+      {
+        "title": "Solve for the missing length",
+        "body": "Let \\(CD=x\\).\n\n\\[\n\\frac12(x+18)\\times 8=98\n\\]\n\n\\[\n4(x+18)=98\n\\]\n\n\\[\nx=6.5\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(CD=6.5\\text{ cm}\\)."
+  },
+  "all::Specimen_4WM1H__Q07__p08-08__m04__Algebraic-Roots-Indices": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Index laws, including zero and negative powers.",
+    "steps": [
+      {
+        "title": "Use the zero power",
+        "body": "\\[\n(4t)^0=1\n\\]\n\n\\[\n8(4t)^0=8\n\\]"
+      },
+      {
+        "title": "Subtract the indices",
+        "body": "\\[\nx^6\\div x^{-5}=x^{6-(-5)}=x^{11}\n\\]\n\nSo \\(p=11\\)."
+      },
+      {
+        "title": "Raise each factor to the power",
+        "body": "\\[\n(2k^2m^4)^3=2^3k^{2\\times 3}m^{4\\times 3}\n\\]\n\n\\[\n=8k^6m^{12}\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(8\\), \\(p=11\\), and \\(8k^6m^{12}\\)."
+  },
+  "all::Specimen_4WM1H__Q08__p08-08__m03__Standard-Compound-Units": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Compound unit conversion from km/h to m/s.",
+    "steps": [
+      {
+        "title": "Convert kilometres to metres",
+        "body": "\\[\n81\\text{ km}=81000\\text{ m}\n\\]"
+      },
+      {
+        "title": "Convert hours to seconds",
+        "body": "\\[\n1\\text{ hour}=3600\\text{ seconds}\n\\]"
+      },
+      {
+        "title": "Divide to find metres per second",
+        "body": "\\[\n\\frac{81000}{3600}=22.5\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(22.5\\text{ metres per second}\\)."
+  },
+  "all::Specimen_4WM1H__Q09__p09-09__m07__Linear-Graphs-y-mx-c": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Mixed algebra and straight-line graph question; classified under the graph equation part.",
+    "steps": [
+      {
+        "title": "Simplify the product",
+        "body": "\\[\n3a^4b^5\\times 4a^7b^2=12a^{11}b^7\n\\]"
+      },
+      {
+        "title": "Factorise fully",
+        "body": "\\[\n14x^2y^4+21x^3y^2=7x^2y^2(2y^2+3x)\n\\]"
+      },
+      {
+        "title": "Find the gradient",
+        "body": "The line passes through \\((0,4)\\) and \\((2,0)\\).\n\n\\[\nm=\\frac{0-4}{2-0}=-2\n\\]"
+      },
+      {
+        "title": "Write the equation",
+        "body": "The \\(y\\)-intercept is \\(4\\), so\n\n\\[\ny=-2x+4\n\\]"
+      },
+      {
+        "title": "Read the y-axis crossing",
+        "body": "For \\(y=3x-5\\), put \\(x=0\\):\n\n\\[\ny=-5\n\\]\n\nSo the crossing point is \\((0,-5)\\)."
+      }
+    ],
+    "finalAnswer": "\\(12a^{11}b^7\\), \\(7x^2y^2(2y^2+3x)\\), \\(y=-2x+4\\), and \\((0,-5)\\)."
+  },
+  "all::Specimen_4WM1H__Q10__p10-11__m06__Right-Angled-Triangles-Pythagoras-Trigonometry": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Pythagoras and area of right-angled triangles.",
+    "steps": [
+      {
+        "title": "Use Pythagoras for AB",
+        "body": "In triangle \\(ABC\\),\n\n\\[\nAB^2+6^2=7.5^2\n\\]\n\n\\[\nAB^2=56.25-36=20.25\n\\]\n\n\\[\nAB=4.5\n\\]"
+      },
+      {
+        "title": "Find the area of triangle ABC",
+        "body": "\\[\n\\frac12\\times 6\\times 4.5=13.5\n\\]"
+      },
+      {
+        "title": "Find the area of triangle DAC",
+        "body": "\\[\n31.5-13.5=18\n\\]"
+      },
+      {
+        "title": "Use the triangle area formula",
+        "body": "In triangle \\(DAC\\), \\(AD\\) and \\(AC\\) are perpendicular.\n\n\\[\n\\frac12\\times AD\\times 7.5=18\n\\]\n\n\\[\nAD=\\frac{36}{7.5}=4.8\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(AB=4.5\\text{ cm}\\), \\(AD=4.8\\text{ cm}\\)."
+  },
+  "all::Specimen_4WM1H__Q11__p12-13__m06__Probability-Diagrams-Venn-Tree-Diagrams": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Tree diagram probability without replacement.",
+    "steps": [
+      {
+        "title": "Complete the blue-first branch",
+        "body": "After a blue bead is taken first, there are \\(4\\) red and \\(6\\) blue beads left out of \\(10\\).\n\n\\[\nP(\\text{red second after blue})=\\frac4{10},\\qquad\nP(\\text{blue second after blue})=\\frac6{10}\n\\]"
+      },
+      {
+        "title": "Find both red",
+        "body": "\\[\nP(RR)=\\frac4{11}\\times\\frac3{10}\n=\\frac{12}{110}\n=\\frac6{55}\n\\]"
+      },
+      {
+        "title": "Find different colours",
+        "body": "\\[\nP(RB)=\\frac4{11}\\times\\frac7{10}\n\\]\n\n\\[\nP(BR)=\\frac7{11}\\times\\frac4{10}\n\\]\n\n\\[\nP(\\text{different})=\\frac{28}{110}+\\frac{28}{110}\n=\\frac{28}{55}\n\\]"
+      }
+    ],
+    "finalAnswer": "Missing probabilities \\(\\frac4{10}\\) and \\(\\frac6{10}\\); \\(P(RR)=\\frac6{55}\\); \\(P(\\text{different})=\\frac{28}{55}\\)."
+  },
+  "all::Specimen_4WM1H__Q12__p14-14__m05__Algebraic-Fractions": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Difference of two squares and simplifying an algebraic fraction.",
+    "steps": [
+      {
+        "title": "Use difference of two squares",
+        "body": "\\[\n9x^2-4y^2=(3x)^2-(2y)^2\n\\]\n\n\\[\n=(3x-2y)(3x+2y)\n\\]"
+      },
+      {
+        "title": "Use a common denominator",
+        "body": "\\[\n\\frac78-\\frac{x+3}{4x}\n=\\frac{7x}{8x}-\\frac{2(x+3)}{8x}\n\\]"
+      },
+      {
+        "title": "Simplify the numerator",
+        "body": "\\[\n\\frac{7x-2x-6}{8x}\n=\\frac{5x-6}{8x}\n\\]"
+      }
+    ],
+    "finalAnswer": "\\((3x-2y)(3x+2y)\\), and \\(\\frac{5x-6}{8x}\\)."
+  },
+  "all::Specimen_4WM1H__Q13__p15-15__m06__Algebraic-Roots-Indices": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Bracket expansion and negative-index simplification.",
+    "steps": [
+      {
+        "title": "Multiply the conjugate factors",
+        "body": "\\[\n(3x-1)(3x+1)=9x^2-1\n\\]"
+      },
+      {
+        "title": "Expand the remaining bracket",
+        "body": "\\[\n(9x^2-1)(x+2)=9x^3+18x^2-x-2\n\\]"
+      },
+      {
+        "title": "Simplify inside the bracket",
+        "body": "\\[\n\\frac{2x^5}{8xy^2}=\\frac{x^4}{4y^2}\n\\]"
+      },
+      {
+        "title": "Apply the negative power",
+        "body": "\\[\n\\left(\\frac{x^4}{4y^2}\\right)^{-2}\n=\\left(\\frac{4y^2}{x^4}\\right)^2\n=\\frac{16y^4}{x^8}\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(9x^3+18x^2-x-2\\), and \\(\\frac{16y^4}{x^8}\\)."
+  },
+  "all::Specimen_4WM1H__Q14__p16-17__m08__Set-Notation-Venn-Diagrams": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Three-set Venn diagram with conditional probability.",
+    "steps": [
+      {
+        "title": "Place the centre value",
+        "body": "The number with goats, sheep and chickens is \\(6\\)."
+      },
+      {
+        "title": "Fill the pair-only regions",
+        "body": "\\[\nG\\cap S\\text{ only}=11-6=5\n\\]\n\n\\[\nS\\cap C\\text{ only}=17-6=11\n\\]\n\n\\[\nG\\cap C\\text{ only}=18-6=12\n\\]"
+      },
+      {
+        "title": "Fill the single-set regions",
+        "body": "\\[\nS\\text{ only}=31-5-11-6=9\n\\]\n\n\\[\nC\\text{ only}=53-11-12-6=24\n\\]\n\nSince \\(20\\) have none, the total inside the circles is \\(80\\).\n\n\\[\nG\\text{ only}=80-(5+11+12+6+9+24)=13\n\\]"
+      },
+      {
+        "title": "Read the set values",
+        "body": "\\[\nn(G)=13+5+12+6=36\n\\]\n\n\\[\nn((G\\cup S)')=24+20=44\n\\]\n\n\\[\nn(G'\\cap C)=24+11=35\n\\]"
+      },
+      {
+        "title": "Find the conditional probability",
+        "body": "Out of the \\(53\\) farmers with chickens, \\(18\\) also have goats.\n\n\\[\nP(G\\mid C)=\\frac{18}{53}\n\\]"
+      }
+    ],
+    "finalAnswer": "Venn regions: \\(G\\) only \\(13\\), \\(S\\) only \\(9\\), \\(C\\) only \\(24\\), \\(G\\cap S\\) only \\(5\\), \\(S\\cap C\\) only \\(11\\), \\(G\\cap C\\) only \\(12\\), all three \\(6\\), none \\(20\\). Also \\(36\\), \\(44\\), \\(35\\), and \\(\\frac{18}{53}\\)."
+  },
+  "all::Specimen_4WM1H__Q15__p18-18__m04__Rounding-Estimation-Bounds": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Bounds comparison for speed.",
+    "steps": [
+      {
+        "title": "Use Martin's greatest possible speed",
+        "body": "Martin's greatest possible distance is \\(82.5\\) km and his least possible time is \\(2.65\\) hours.\n\n\\[\n\\frac{82.5}{2.65}=31.132\\ldots\n\\]"
+      },
+      {
+        "title": "Use Lucia's least possible speed",
+        "body": "Lucia's least possible distance is \\(32.5\\) km and her greatest possible time is \\(1.05\\) hours.\n\n\\[\n\\frac{32.5}{1.05}=30.952\\ldots\n\\]"
+      },
+      {
+        "title": "Compare the possible speeds",
+        "body": "\\[\n31.132\\ldots > 30.952\\ldots\n\\]\n\nSo Martin's speed could have been greater than Lucia's speed."
+      }
+    ],
+    "finalAnswer": "Martin could have been faster because \\(31.132\\ldots>30.952\\ldots\\text{ km/h}\\)."
+  },
+  "all::Specimen_4WM1H__Q16__p19-19__m03__Histograms": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Histogram frequency-density scale and partial bar areas.",
+    "steps": [
+      {
+        "title": "Set the frequency-density scale",
+        "body": "For \\(0<m\\le 20\\), the frequency is \\(10\\), so\n\n\\[\n\\text{frequency density}=\\frac{10}{20}=0.5\n\\]"
+      },
+      {
+        "title": "Read the needed bar heights",
+        "body": "Using the same scale from the histogram:\n\n\\[\n50<m\\le 60:\\ 10\\times 2.9=29\n\\]\n\n\\[\n60<m\\le 75:\\ 15\\times 3.2=48\n\\]\n\n\\[\n75<m\\le 80:\\ 5\\times 2=10\n\\]"
+      },
+      {
+        "title": "Add the estimates",
+        "body": "\\[\n19+36+32=87\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(87\\)."
+  },
+  "all::Specimen_4WM1H__Q17__p20-20__m04__Surds": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Surd simplification by rationalising.",
+    "steps": [
+      {
+        "title": "Simplify the surds",
+        "body": "\\[\n\\sqrt8=2\\sqrt2\n\\]\n\n\\[\n(\\sqrt2-1)^2=2-2\\sqrt2+1=3-2\\sqrt2\n\\]"
+      },
+      {
+        "title": "Use the conjugate",
+        "body": "\\[\n\\frac{3+2\\sqrt2}{3-2\\sqrt2}\\times\\frac{3+2\\sqrt2}{3+2\\sqrt2}\n\\]\n\nThe denominator is\n\n\\[\n9-(2\\sqrt2)^2=9-8=1\n\\]"
+      },
+      {
+        "title": "Expand the numerator",
+        "body": "\\[\n(3+2\\sqrt2)^2=9+12\\sqrt2+8=17+12\\sqrt2\n\\]"
+      },
+      {
+        "title": "Write in the requested form",
+        "body": "\\[\n12\\sqrt2=\\sqrt{144\\times 2}=\\sqrt{288}\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(17+\\sqrt{288}\\)."
+  },
+  "all::Specimen_4WM1H__Q18__p21-21__m04__Circles-Arcs-Sectors": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Circle area subtracted from rectangle area.",
+    "steps": [
+      {
+        "title": "Write the shaded area",
+        "body": "Rectangle area:\n\n\\[\n4x\\times 2x=8x^2\n\\]\n\nArea of the two circles:\n\n\\[\n2\\pi x^2\n\\]\n\nSo\n\n\\[\n8x^2-2\\pi x^2=20\n\\]"
+      },
+      {
+        "title": "Solve for x",
+        "body": "\\[\nx^2(8-2\\pi)=20\n\\]\n\n\\[\nx=\\sqrt{\\frac{20}{8-2\\pi}}=3.413\\ldots\n\\]"
+      },
+      {
+        "title": "Find the perimeter",
+        "body": "\\[\nP=2(4x+2x)=12x\n\\]\n\n\\[\n12(3.413\\ldots)=40.96\\ldots\n\\]"
+      },
+      {
+        "title": "Round to 3 significant figures",
+        "body": "\\[\n40.96\\ldots \\approx 41.0\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(41.0\\text{ cm}\\)."
+  },
+  "all::Specimen_4WM1H__Q19__p22-22__m04__3D-Pythagoras-Trigonometry": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Angle between a line and a plane using a right triangle and the projection.",
+    "steps": [
+      {
+        "title": "Find AD",
+        "body": "In triangle \\(ADE\\),\n\n\\[\n\\tan 18^\\circ=\\frac{DE}{AD}\n\\]\n\n\\[\nAD=\\frac{2.2}{\\tan 18^\\circ}=6.77\\ldots\n\\]"
+      },
+      {
+        "title": "Find DB in the base",
+        "body": "The base \\(ABCD\\) is a rectangle, so\n\n\\[\nDB=\\sqrt{6^2+6.77\\ldots^2}=9.04\\ldots\n\\]"
+      },
+      {
+        "title": "Use the projection triangle",
+        "body": "The projection of \\(BE\\) on the plane is \\(BD\\). Let the required angle be \\(\\theta\\).\n\n\\[\n\\tan\\theta=\\frac{DE}{DB}\n=\\frac{2.2}{9.04\\ldots}\n\\]"
+      },
+      {
+        "title": "Calculate the angle",
+        "body": "\\[\n\\theta=13.7^\\circ\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(13.7^\\circ\\)."
+  },
+  "all::Specimen_4WM1H__Q20__p23-23__m04__Completing-the-Square": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Completing the square into vertex form.",
+    "steps": [
+      {
+        "title": "Factor out -2 from the quadratic terms",
+        "body": "\\[\n7+12x-2x^2=-2(x^2-6x)+7\n\\]"
+      },
+      {
+        "title": "Complete the square",
+        "body": "\\[\nx^2-6x=(x-3)^2-9\n\\]"
+      },
+      {
+        "title": "Simplify the expression",
+        "body": "\\[\n-2((x-3)^2-9)+7\n=-2(x-3)^2+18+7\n\\]\n\n\\[\n=25-2(x-3)^2\n\\]"
+      },
+      {
+        "title": "Read the values",
+        "body": "\\[\na=25,\\qquad b=2,\\qquad c=3\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(a=25,\\ b=2,\\ c=3\\)."
+  },
+  "expertise::Specimen_4WM1H__Q20__p23-23__m04__Completing-the-Square": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Completing the square into vertex form.",
+    "steps": [
+      {
+        "title": "Factor out -2 from the quadratic terms",
+        "body": "\\[\n7+12x-2x^2=-2(x^2-6x)+7\n\\]"
+      },
+      {
+        "title": "Complete the square",
+        "body": "\\[\nx^2-6x=(x-3)^2-9\n\\]"
+      },
+      {
+        "title": "Simplify the expression",
+        "body": "\\[\n-2((x-3)^2-9)+7\n=-2(x-3)^2+18+7\n\\]\n\n\\[\n=25-2(x-3)^2\n\\]"
+      },
+      {
+        "title": "Read the values",
+        "body": "\\[\na=25,\\qquad b=2,\\qquad c=3\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(a=25,\\ b=2,\\ c=3\\)."
+  },
+  "all::Specimen_4WM1H__Q21__p24-24__m03__Algebraic-Fractions": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Algebraic fraction simplification with factor cancellation.",
+    "steps": [
+      {
+        "title": "Factorise the denominator",
+        "body": "\\[\nx^2-36=(x-6)(x+6)\n\\]"
+      },
+      {
+        "title": "Simplify the bracket",
+        "body": "\\[\n\\frac{20}{(x-6)(x+6)}-\\frac{2}{x-6}\n=\\frac{20-2(x+6)}{(x-6)(x+6)}\n\\]\n\n\\[\n=\\frac{8-2x}{(x-6)(x+6)}\n=\\frac{-2(x-4)}{(x-6)(x+6)}\n\\]"
+      },
+      {
+        "title": "Cancel the common factor",
+        "body": "Since \\(4-x=-(x-4)\\),\n\n\\[\n\\frac{-2(x-4)}{(x-6)(x+6)}\\times\\frac{1}{4-x}\n=\\frac{2}{(x-6)(x+6)}\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(\\frac{2}{x^2-36}\\)."
+  },
+  "expertise::Specimen_4WM1H__Q21__p24-24__m03__Algebraic-Fractions": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Algebraic fraction simplification with factor cancellation.",
+    "steps": [
+      {
+        "title": "Factorise the denominator",
+        "body": "\\[\nx^2-36=(x-6)(x+6)\n\\]"
+      },
+      {
+        "title": "Simplify the bracket",
+        "body": "\\[\n\\frac{20}{(x-6)(x+6)}-\\frac{2}{x-6}\n=\\frac{20-2(x+6)}{(x-6)(x+6)}\n\\]\n\n\\[\n=\\frac{8-2x}{(x-6)(x+6)}\n=\\frac{-2(x-4)}{(x-6)(x+6)}\n\\]"
+      },
+      {
+        "title": "Cancel the common factor",
+        "body": "Since \\(4-x=-(x-4)\\),\n\n\\[\n\\frac{-2(x-4)}{(x-6)(x+6)}\\times\\frac{1}{4-x}\n=\\frac{2}{(x-6)(x+6)}\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(\\frac{2}{x^2-36}\\)."
+  },
+  "all::Specimen_4WM1H__Q22__p25-25__m03__Algebraic-Roots-Indices": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Index laws with powers of 3.",
+    "steps": [
+      {
+        "title": "Write everything as powers of 3",
+        "body": "\\[\n\\sqrt{27}=3^{3/2},\\qquad 9=3^2,\\qquad \\frac{18}{6}=3\n\\]"
+      },
+      {
+        "title": "Simplify the powers",
+        "body": "\\[\n\\frac{18(\\sqrt{27})^{4n+6}}{6(9)^{2n+8}}\n=3\\times \\frac{\\left(3^{3/2}\\right)^{4n+6}}{(3^2)^{2n+8}}\n\\]\n\n\\[\n=3^1\\times \\frac{3^{6n+9}}{3^{4n+16}}\n\\]"
+      },
+      {
+        "title": "Subtract the indices",
+        "body": "\\[\n3^{1+6n+9-(4n+16)}=3^{2n-6}\n\\]\n\nSo\n\n\\[\nx=2n-6\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(x=2n-6\\)."
+  },
+  "expertise::Specimen_4WM1H__Q22__p25-25__m03__Algebraic-Roots-Indices": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Index laws with powers of 3.",
+    "steps": [
+      {
+        "title": "Write everything as powers of 3",
+        "body": "\\[\n\\sqrt{27}=3^{3/2},\\qquad 9=3^2,\\qquad \\frac{18}{6}=3\n\\]"
+      },
+      {
+        "title": "Simplify the powers",
+        "body": "\\[\n\\frac{18(\\sqrt{27})^{4n+6}}{6(9)^{2n+8}}\n=3\\times \\frac{\\left(3^{3/2}\\right)^{4n+6}}{(3^2)^{2n+8}}\n\\]\n\n\\[\n=3^1\\times \\frac{3^{6n+9}}{3^{4n+16}}\n\\]"
+      },
+      {
+        "title": "Subtract the indices",
+        "body": "\\[\n3^{1+6n+9-(4n+16)}=3^{2n-6}\n\\]\n\nSo\n\n\\[\nx=2n-6\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(x=2n-6\\)."
+  },
+  "all::Specimen_4WM1H__Q23__p26-26__m06__Coordinate-Geometry": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Coordinate geometry using gradient, perpendicular lines and kite symmetry.",
+    "steps": [
+      {
+        "title": "Find k from the gradient",
+        "body": "The gradient of \\(BD\\) is\n\n\\[\n\\frac{7-1}{8-k}=\\frac35\n\\]\n\n\\[\n\\frac{6}{8-k}=\\frac35\n\\]\n\n\\[\n30=24-3k\n\\]\n\n\\[\nk=-2\n\\]"
+      },
+      {
+        "title": "Find the midpoint of BD",
+        "body": "So \\(B=(-2,1)\\) and \\(D=(8,7)\\).\n\n\\[\n\\text{midpoint of }BD=\\left(\\frac{-2+8}{2},\\frac{1+7}{2}\\right)=(3,4)\n\\]"
+      },
+      {
+        "title": "Use the perpendicular gradient",
+        "body": "In this kite, \\(AC\\) is the perpendicular bisector of \\(BD\\).\n\nThe gradient of \\(BD\\) is \\(\\frac35\\), so the gradient of \\(AC\\) is\n\n\\[\n-\\frac53\n\\]"
+      },
+      {
+        "title": "Form the equation",
+        "body": "Using point \\((3,4)\\):\n\n\\[\ny-4=-\\frac53(x-3)\n\\]\n\n\\[\n3y-12=-5x+15\n\\]\n\n\\[\n5x+3y=27\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(5x+3y=27\\)."
+  },
+  "expertise::Specimen_4WM1H__Q23__p26-26__m06__Coordinate-Geometry": {
+    "status": "checked",
+    "checkedBy": "Dr Eslam Ahmed + Codex",
+    "updated": "2026-05-28T20:51:28",
+    "topicNote": "Coordinate geometry using gradient, perpendicular lines and kite symmetry.",
+    "steps": [
+      {
+        "title": "Find k from the gradient",
+        "body": "The gradient of \\(BD\\) is\n\n\\[\n\\frac{7-1}{8-k}=\\frac35\n\\]\n\n\\[\n\\frac{6}{8-k}=\\frac35\n\\]\n\n\\[\n30=24-3k\n\\]\n\n\\[\nk=-2\n\\]"
+      },
+      {
+        "title": "Find the midpoint of BD",
+        "body": "So \\(B=(-2,1)\\) and \\(D=(8,7)\\).\n\n\\[\n\\text{midpoint of }BD=\\left(\\frac{-2+8}{2},\\frac{1+7}{2}\\right)=(3,4)\n\\]"
+      },
+      {
+        "title": "Use the perpendicular gradient",
+        "body": "In this kite, \\(AC\\) is the perpendicular bisector of \\(BD\\).\n\nThe gradient of \\(BD\\) is \\(\\frac35\\), so the gradient of \\(AC\\) is\n\n\\[\n-\\frac53\n\\]"
+      },
+      {
+        "title": "Form the equation",
+        "body": "Using point \\((3,4)\\):\n\n\\[\ny-4=-\\frac53(x-3)\n\\]\n\n\\[\n3y-12=-5x+15\n\\]\n\n\\[\n5x+3y=27\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(5x+3y=27\\)."
+  },
   "all::Specimen_4WM2H__Q01__p03-03__m03__Statistics-Toolkit": {
     "status": "checked",
     "checkedBy": "Dr Eslam Ahmed + Codex",

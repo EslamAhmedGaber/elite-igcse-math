@@ -506,6 +506,17 @@
     "pdf": "downloads/PastPaperSolutions/Nov2025_P2H_Solutions.pdf"
   },
   {
+    "paperSlug": "Specimen_4WM1H",
+    "paper": "Specimen 4WM1H",
+    "session": "Specimen",
+    "code": "4WM1H",
+    "isModular": true,
+    "modularUnit": "Unit 1",
+    "questionCount": 27,
+    "pageCount": 55,
+    "pdf": "downloads/PastPaperSolutions/Specimen_4WM1H_Solutions.pdf"
+  },
+  {
     "paperSlug": "Specimen_4WM2H",
     "paper": "Specimen 4WM2H",
     "session": "Specimen",

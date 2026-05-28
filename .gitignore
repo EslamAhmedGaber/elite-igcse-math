@@ -9,3 +9,8 @@ answer_book.pdf
 *_with_answers.pdf
 private_output/*
 !private_output/.gitkeep
+tools/inbox/
+tools/_*_review/
+tools/__pycache__/
+tools/_book_build/
+tools/_paper_solution_build/

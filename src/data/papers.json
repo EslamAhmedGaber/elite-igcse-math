@@ -440,6 +440,16 @@
     "hasSolutions": true
   },
   {
+    "paperSlug": "Specimen_4WM1H",
+    "paper": "Specimen 4WM1H",
+    "session": "Specimen",
+    "code": "4WM1H",
+    "isModular": true,
+    "modularUnit": "Unit 1",
+    "questionCount": 27,
+    "hasSolutions": true
+  },
+  {
     "paperSlug": "Specimen_4WM2H",
     "paper": "Specimen 4WM2H",
     "session": "Specimen",
