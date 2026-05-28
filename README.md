@@ -1,10 +1,10 @@
 ﻿# Elite IGCSE Mathematics - Operator Handbook
 
-The live student website for **Edexcel IGCSE 4MA1 Higher Mathematics** by Dr Eslam Ahmed.
+The live student website for Dr Eslam Ahmed's Elite Mathematics platform: Edexcel IGCSE Linear 4MA1, Edexcel IGCSE Modular 4WM, and IAL Pure 1 WMA11.
 
-This document is the single source of truth for running and updating the site. Read the **Common Tasks** and **Private answer workflow** sections first - those cover 95% of what you'll do.
+This document is the repo handbook. For current work state, read `C:\Users\Eslam\Documents\Elite IGCSE v2\PROJECT_LOG.md` first, then this file and the course pipeline docs.
 
-> Last updated: 2026-05-15 | Section index: §1 Live URLs | §2 Stack | §3 Directory tree | §4 Common tasks | **§5 Private answer workflow** | §6 Local testing | §7 Deploy | §8 Settings cheat-sheet | §9 Gotchas | §10 Troubleshooting | §11 Credits
+> Last updated: 2026-05-28 | Active source: `C:\Users\Eslam\Documents\Elite IGCSE v2\website` | Section index: §1 Live URLs | §2 Stack | §3 Directory tree | §4 Common tasks | §5 Answer workflow | §6 Local testing | §7 Deploy | §8 Settings cheat-sheet | §9 Gotchas | §10 Troubleshooting | §11 Credits
 
 ## Quick start (the 4 things you'll do most)
 
@@ -16,6 +16,7 @@ This document is the single source of truth for running and updating the site. R
 | **Replace your photo** | §4.5 | Drop new image at `assets/Mine.png` (overwrite), commit, push |
 | **Check saved student progress** | `/progress.html` | Name, target, topic sheet, backup export/import, WhatsApp summary |
 | **Add a new paper** | `tools/README.md` | Drop PDF, ingest, generate runtime data, build books, verify |
+| **Add a new curriculum** | `docs/COURSE_MODULE_PIPELINE.md` | Add the course object, data adapter, progress keys, books, and verification |
 | **Activate free Google progress login** | `docs/firebase-free-setup.md` | Firebase Spark plan, Google login, Firestore rules, paste config |
 | **Fast Firebase checklist** | `docs/firebase-activation-short.md` | Short click-by-click activation checklist |
 
@@ -83,9 +84,9 @@ website/
 ├── cloud-progress.js       # Optional free Firebase Google login + cloud progress sync
 ├── firebase-config.js      # Public Firebase config; disabled until you paste free project keys
 ├── lead.js                 # Lead-capture dialog + mobile nav (loaded on every page)
-├── service-worker.js       # PWA install/offline shell + runtime cache for opened assets
+├── service-worker.js       # Temporary cache-kill worker; offline cache is intentionally disabled
 ├── manifest.webmanifest    # Installable app metadata
-├── questions-data.js       # 1,188 questions metadata (~1 MB) - generated, do not hand-edit
+├── questions-data.js       # 1,413 questions metadata - generated, do not hand-edit
 ├── solutions-data.js       # Public website solution payload - generated, do not hand-edit
 ├── private_output/         # Private answer material kept out of the public site
 ├── offline.html            # Offline fallback page
@@ -103,7 +104,7 @@ website/
 │   ├── og-image.png        # 1200x630 social-share card (Facebook/WhatsApp/Twitter)
 │   ├── og-image.svg        # Vector source for the OG card
 │   ├── build_og.py         # Pillow script that regenerates og-image.png from scratch
-│   └── questions/          # 1,188 descriptive question PNGs used by the active site
+│   └── questions/          # Descriptive question PNGs used by the active site
 │
 ├── src/data/
 │   ├── papers.json         # Active paper catalogue

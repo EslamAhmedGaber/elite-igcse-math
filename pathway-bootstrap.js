@@ -33,8 +33,10 @@
     const url = new URL(window.location.href);
     const requested = normalizePathway(url.searchParams.get("pathway"));
     const pathname = window.location.pathname.toLowerCase();
-    const course = url.searchParams.get("course") || (pathname.includes("/ial/wma11/") ? "wma11" : "");
-    const pathway = requested || (pathname.includes("/ial/wma11/") ? "pure" : "") || storedPathway() || "linear";
+    const pathIsWma11 = pathname.includes("/ial/wma11/");
+    const pathIsIal = pathIsWma11 || pathname === "/ial/" || pathname.endsWith("/ial/index.html");
+    const course = url.searchParams.get("course") || (pathIsWma11 ? "wma11" : "");
+    const pathway = requested || (pathIsIal ? "pure" : "") || storedPathway() || "linear";
     return {
       pathway,
       course,

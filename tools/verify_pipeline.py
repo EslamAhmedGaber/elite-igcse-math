@@ -247,6 +247,8 @@ def verify_pathway_palette_activation(report: Report) -> None:
     bootstrap_text = (ROOT / "pathway-bootstrap.js").read_text(encoding="utf-8")
     if "ELITE_PATHWAY_BOOTSTRAP" not in bootstrap_text or "dataset.pathway" not in bootstrap_text:
         report.error("pathway-bootstrap.js must set ELITE_PATHWAY_BOOTSTRAP and data-pathway.")
+    if 'pathname.endsWith("/ial/index.html")' not in bootstrap_text:
+        report.error("pathway-bootstrap.js must resolve the /ial/ hub as the IAL/Pure pathway before CSS loads.")
 
     lead_text = (ROOT / "lead.js").read_text(encoding="utf-8")
     if "applyPathwayContext" not in lead_text or "ELITE_PATHWAY_BOOTSTRAP" not in lead_text:
@@ -268,6 +270,7 @@ def verify_pathway_palette_activation(report: Report) -> None:
         "checkup.html",
         "about.html",
         "admin.html",
+        "ial/index.html",
         "ial/wma11/index.html",
     ]
     for page in required_pages:
@@ -279,7 +282,9 @@ def verify_pathway_palette_activation(report: Report) -> None:
             report.error(f"{page} must load pathway-bootstrap.js before site CSS.")
         elif styles_pos != -1 and bootstrap_pos > styles_pos:
             report.error(f"{page} loads pathway-bootstrap.js after styles.css; palette may flash incorrectly.")
-        if "lead.js?v=" in text and "lead.js?v=20260528d" not in text:
+        if "pathway-bootstrap.js?v=" in text and "pathway-bootstrap.js?v=20260528a" not in text:
+            report.error(f"{page} must reference the current pathway-bootstrap.js cache-buster.")
+        if "lead.js?v=" in text and "lead.js?v=20260528e" not in text:
             report.error(f"{page} must reference the current lead.js cache-buster.")
 
 

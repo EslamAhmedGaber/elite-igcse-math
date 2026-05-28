@@ -165,3 +165,9 @@ Dr Eslam asked for an "elite" feel across the whole site. Started with a token/C
 14. Past Paper Solution rows are real cards with PDF / SOL chips.
 15. Body background: pathway-tinted radial glow top-right + ochre top-left + grid pattern + fixed attachment.
 16. Smooth scroll site-wide with scroll-padding-top.
+
+## Post-Sprint Polish Commits
+
+- `67d8301`: Downloads cards, solution dialog, topic bars, review stats, and About hero polish. CSS moved to `20260528k`; service worker moved to `v116`.
+- `4d858dc`: Plan weeks, topic chips, and progress summary card were unified around course colours. CSS moved to `20260528l`; service worker moved to `v117`.
+- `63a7219`: Home hero portrait halo, exam mode tabs, and roadmap meter polish. CSS moved to `20260528m`; service worker moved to `v118`.

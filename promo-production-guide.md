@@ -60,7 +60,7 @@ The HTML is silent. You add audio in CapCut (free, mobile + desktop):
 
 Read at a natural pace. Practise once before recording.
 
-> **(0:00)** Edexcel IGCSE Maths 4MA1 has 1,188 past-paper questions -
+> **(0:00)** Edexcel IGCSE Maths has 1,413 past-paper questions -
 > **(0:04)** every single one solved, with full worked solutions. All free.
 > **(0:08)** Generate timed mock exams on demand -
 > **(0:12)** read every step of every solution, with proper math notation -
@@ -89,7 +89,7 @@ Read at a natural pace. Practise once before recording.
 ## Caption & hashtags (paste into TikTok)
 
 ```
-1,188 IGCSE Maths past-paper questions.
+1,413 IGCSE Maths past-paper questions.
 Every one with a full worked solution.
 Mock exams. Visual notes. All free.
 

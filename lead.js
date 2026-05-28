@@ -214,9 +214,11 @@
     const params = new URLSearchParams(window.location.search);
     const requested = normalizePathway(params.get("pathway"));
     const boot = window.ELITE_PATHWAY_BOOTSTRAP || {};
-    const pathIsPure = window.location.pathname.toLowerCase().includes("/ial/wma11/");
-    const pathway = requested || normalizePathway(boot.pathway) || (pathIsPure ? "pure" : "") || readStoredPathway() || "linear";
-    const course = params.get("course") || boot.course || (pathIsPure ? "wma11" : "");
+    const pathname = window.location.pathname.toLowerCase();
+    const pathIsWma11 = pathname.includes("/ial/wma11/");
+    const pathIsIal = pathIsWma11 || pathname === "/ial/" || pathname.endsWith("/ial/index.html");
+    const pathway = requested || normalizePathway(boot.pathway) || (pathIsIal ? "pure" : "") || readStoredPathway() || "linear";
+    const course = params.get("course") || boot.course || (pathIsWma11 ? "wma11" : "");
     const unit = normalizeUnit(params.get("unit") || boot.unit || "");
     return { pathway, course, unit };
   }
@@ -489,6 +491,7 @@
       return "Classified View";
     }
     if (page === "practice" || path.endsWith("/practice.html")) {
+      if (params.get("pathway") === "modular" && params.get("choose") === "unit" && !params.get("unit")) return "Choose Unit";
       const mode = params.get("mode");
       if (mode === "review") return "Mistake Box";
       if (params.get("bank") === "expertise" || mode === "q20") return "Expertise View";
@@ -745,7 +748,8 @@
     if (!toolData) return;
     document.body?.classList.add("has-pathway-hub");
     document.body?.classList.toggle("pathway-unit-chooser", toolData.kind === "unit-choice");
-    header.insertAdjacentHTML("afterend", `
+    const anchor = document.querySelector(".elite-breadcrumb") || header;
+    anchor.insertAdjacentHTML("afterend", `
       <nav class="pathway-tool-strip ${toolData.kind === "unit-choice" ? "is-unit-choice" : ""}" aria-label="${toolData.title} tools">
         <div class="pathway-tool-strip-title">
           <span>Course modules</span>

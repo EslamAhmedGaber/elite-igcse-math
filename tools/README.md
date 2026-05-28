@@ -1,7 +1,7 @@
 # Pipeline Tools
 
-These tools keep the restored static site repeatable without bringing back the
-old folder sprawl.
+These tools keep the live static site repeatable without bringing back the old
+folder sprawl. The active repo is `C:\Users\Eslam\Documents\Elite IGCSE v2\website`.
 
 ## Main Commands
 
@@ -76,6 +76,10 @@ Mistags should be fixed first through the website admin `Fix topic` flow. Stable
 
 Public classified question books can be published from `downloads/`.
 
-Generated answer books and private solution exports must stay in `private_output/`.
+Generated answer books use `private_output/` as their build source.
 
-Never put answer books, mark schemes, or private worked-solution books into `downloads/`.
+Approved student-facing answer books are mirrored into the allowed public folders:
+`downloads/ClassifiedSolutions/`, `downloads/PastPaperSolutions/`, and
+`downloads/IAL/WMA11/`.
+
+Never put unapproved answer drafts, mark schemes, or internal checking exports into `downloads/`.

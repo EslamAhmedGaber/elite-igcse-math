@@ -7,9 +7,10 @@ This is the release handoff for the restored static Elite IGCSE Mathematics site
 - Domain: https://eliteigcse.com
 - Live repository root: `C:\Users\Eslam\Documents\Elite IGCSE v2\website`
 - Project log: `C:\Users\Eslam\Documents\Elite IGCSE v2\PROJECT_LOG.md`
-- Current branch/head: `main` at the latest polish-pass-2 acceptance/PDF commit; baseline production content before Phase 7 was `c89fc91`.
-- Registry version: `2026-05-27-course-registry-v6`
-- Service worker cache: `elite-igcse-kill-v96`
+- Current branch/head after the 2026-05-28 UI refinement sprint: `main` at `63a7219` before the expansion-readiness cleanup.
+- Registry version: `2026-05-28-course-registry-v7-tree`
+- Service worker cache before the expansion-readiness cleanup: `elite-igcse-kill-v118`
+- Current public CSS/JS before the expansion-readiness cleanup: `styles.css?v=20260528m`, `pathway-bootstrap.js?v=20260527a`, `lead.js?v=20260528d`
 - Classified answer PDF version: `title-polish-20260527`
 - Linear/Modular past-paper solution PDF version: `paper-solutions-fixed-20260527`
 - WMA11 PDF version: `wma11-polish2-20260527`
@@ -92,6 +93,8 @@ Details are in `docs\EXTENSION_SCENARIO_REPORT.md` and `PROJECT_LOG.md`.
 
 ## Source Of Truth Files
 
+- Active repo: `C:\Users\Eslam\Documents\Elite IGCSE v2\website`
+- Reference/archive only: `C:\Users\Eslam\Documents\Elite IGCSE v2\website-old-clean`
 - Course/module registry: `course-modules.js`
 - Registry renderers: `course-renderers.js`
 - Navigation and pathway hub: `lead.js`
