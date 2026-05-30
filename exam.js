@@ -33,6 +33,8 @@
       topics: topicNames,
       topic_slug: primarySlug,
       topic_slugs: item.topics || [primarySlug],
+      year: item.year,
+      session: item.session,
       paper: item.paper,
       code: item.paperCode,
       paper_code: item.paperCode,
@@ -71,9 +73,9 @@
     ? {
         id: "wma11",
         mode: "pure",
-        title: "IAL Pure 1 Test Builder",
+        title: "IAL Pure 1 Revision Book & Test Builder",
         heroTitle: "Build a full Pure 1 test.",
-        heroCopy: "Use the same builder engine for WMA11: random mocks, hand-built tests, smart revision, saved tests, timed attempts, marking, and printable worked solutions.",
+        heroCopy: "Use the same builder engine for WMA11: random mocks, hand-built tests, 50-question revision books, saved tests, marking, and printable worked solutions.",
         unitLabel: "Course",
         unitAllLabel: "All Pure 1",
         units: ["WMA11"],
@@ -87,9 +89,9 @@
     : {
         id: "igcse",
         mode: "igcse",
-        title: "Mocks & Test Builder",
+        title: "Mocks, Test Builder & Revision Book",
         heroTitle: "Build the exact paper you need.",
-        heroCopy: "Generate random mocks, hand-pick topic tests, or let the site build smart revision from mistakes and weak topics. Finish, mark, and keep the loop moving.",
+        heroCopy: "Generate random mocks, hand-pick topic tests, or build a 50-question revision book from past-paper patterns, gaps, mistakes, and weak topics.",
         questions: window.QUESTION_DATA || [],
         solutions: window.SOLUTION_DATA || {},
         reviewKey: "eliteMistakeBoxV1",
@@ -164,12 +166,15 @@
     draftSummary: document.getElementById("draftSummary"),
     smartBank: document.getElementById("smartBank"),
     smartUnit: document.getElementById("smartUnit"),
+    smartProfile: document.getElementById("smartProfile"),
     smartCount: document.getElementById("smartCount"),
     smartDuration: document.getElementById("smartDuration"),
     smartMistakes: document.getElementById("smartMistakes"),
     smartWeakTopics: document.getElementById("smartWeakTopics"),
     smartUnsolved: document.getElementById("smartUnsolved"),
     generateSmart: document.getElementById("generateSmartBtn"),
+    smartAnalysisSummary: document.getElementById("smartAnalysisSummary"),
+    smartTopicPlan: document.getElementById("smartTopicPlan"),
     savedTests: document.getElementById("savedTestsList"),
     savedSummary: document.getElementById("savedTestsSummary")
   };
@@ -181,6 +186,7 @@
   let draftIds = readJson(DRAFT_KEY, []);
   let tickHandle = null;
   let filteredBuilderQuestions = [];
+  let lastRevisionBook = null;
 
   function escapeHtml(value) {
     return String(value ?? "").replace(/[&<>"']/g, (char) => ({
@@ -307,12 +313,14 @@
     const unit = params.get("unit");
     const bank = params.get("bank");
     const mode = params.get("mode");
+    const profile = params.get("profile");
     setSelectIfPresent(els.unit, unit);
     setSelectIfPresent(els.customUnit, unit);
     setSelectIfPresent(els.smartUnit, unit);
     setSelectIfPresent(els.bank, bank);
     setSelectIfPresent(els.customBank, bank);
     setSelectIfPresent(els.smartBank, bank);
+    setSelectIfPresent(els.smartProfile, profile);
     if (mode && els.modeTabs.some((button) => button.dataset.examMode === mode)) {
       activeMode = mode;
     }
@@ -555,7 +563,8 @@
       startedAt: options.startNow ? Date.now() : null,
       finishedAt: null,
       ids: [...ids],
-      scores: {}
+      scores: {},
+      revisionMeta: options.revisionMeta || null
     };
     saveState();
     render();
@@ -750,7 +759,7 @@
     if (state.status === "idle" && !state.ids.length) {
       const last = readJson(HISTORY_KEY, [])[0];
       els.result.innerHTML = last
-        ? `<strong>Last test: ${last.score}/${last.total} (${last.percent}%).</strong><p>Build a fresh mock, custom test, or smart revision set when you are ready.</p>`
+        ? `<strong>Last test: ${last.score}/${last.total} (${last.percent}%).</strong><p>Build a fresh mock, custom test, or revision book when you are ready.</p>`
         : `<strong>No active paper yet.</strong><p>Build a paper above, then start it or print it.</p>`;
       els.weakness.innerHTML = "";
       return;
@@ -760,14 +769,17 @@
     const percent = total ? Math.round((score / total) * 100) : 0;
     const ready = state.status === "idle";
     const label = ready
-      ? "Paper ready"
+      ? state.kind === "revision-book" ? "Revision book ready" : "Paper ready"
       : state.status === "running"
         ? "Exam in progress"
         : state.status === "marking"
           ? "Self-marking mode"
           : "Result saved";
+    const revisionMeta = state.revisionMeta || null;
     const copy = ready
-      ? `${state.ids.length} questions, ${total} marks, about ${estimatedMinutes(state.ids.map(questionById).filter(Boolean))} minutes.`
+      ? state.kind === "revision-book" && revisionMeta
+        ? `${state.ids.length} questions, ${total} marks, ${revisionMeta.topicCount || 0} priority topics, mix code ${escapeHtml(revisionMeta.seed || "")}.`
+        : `${state.ids.length} questions, ${total} marks, about ${estimatedMinutes(state.ids.map(questionById).filter(Boolean))} minutes.`
       : state.status === "running"
         ? "Answers stay private until you finish."
         : "Enter your marks, then save to update the Mistake Box.";
@@ -786,6 +798,12 @@
 
   function showBuildMessage(message) {
     els.result.innerHTML = `<strong>Paper not built yet.</strong><p>${escapeHtml(message)}</p>`;
+  }
+
+  function paperKindLabel() {
+    if (state.kind === "custom") return "Custom Test";
+    if (state.kind === "revision-book" || state.kind === "smart") return "Revision Book";
+    return "Generated Mock";
   }
 
   function renderPaper() {
@@ -807,7 +825,7 @@
             <span class="print-brand-mark">EA</span>
             <div>
               <strong>${course.mode === "pure" ? "Elite IAL Mathematics" : "Elite IGCSE Academy"}</strong>
-              <small>${state.kind === "custom" ? "Custom Test" : state.kind === "smart" ? "Smart Revision" : "Generated Mock"} - Dr Eslam Ahmed</small>
+              <small>${paperKindLabel()} - Dr Eslam Ahmed</small>
             </div>
           </div>
           <span class="print-brand-contact">Cairo University Faculty of Engineering<br>WhatsApp 01120009622 | eliteigcse.com</span>
@@ -1038,31 +1056,110 @@
     return uniqueBySource(eligiblePool({ bank, unit, unsolvedOnly: true }));
   }
 
+  function smartProgressContext(bank, unit) {
+    const solved = solvedSet();
+    return {
+      solvedIds: solved.ids,
+      solvedSources: solved.sources,
+      dueSources: new Set(mistakePool(bank, unit).map(sourceKey)),
+      weakTopics: new Set(weakTopicPool(bank, unit).map((question) => question.topic))
+    };
+  }
+
+  function revisionEngine() {
+    return window.EliteRevisionEngine || null;
+  }
+
+  function buildRevisionBook(bank, unit, count, seed = "") {
+    const engine = revisionEngine();
+    const pool = uniqueBySource(eligiblePool({ bank, unit }));
+    if (!engine || !pool.length) {
+      return { questions: [], analysis: { topics: [], selectedTopics: [], count: pool.length }, availableCount: pool.length };
+    }
+    return engine.buildRevisionBook(pool, {
+      count,
+      minimumCount: 50,
+      profile: els.smartProfile?.value || "prediction",
+      pathway: activePathway(),
+      course: course.id,
+      seed,
+      includeMistakes: Boolean(els.smartMistakes?.checked),
+      includeWeakTopics: Boolean(els.smartWeakTopics?.checked),
+      includeUnsolved: Boolean(els.smartUnsolved?.checked),
+      progress: smartProgressContext(bank, unit)
+    });
+  }
+
+  function renderSmartAnalysis(book = null) {
+    if (!els.smartAnalysisSummary || !els.smartTopicPlan) return;
+    const bank = els.smartBank?.value || "all";
+    const unit = els.smartUnit?.value || "";
+    const count = Number(els.smartCount?.value || 50);
+    const engine = revisionEngine();
+    const pool = uniqueBySource(eligiblePool({ bank, unit }));
+    const analysis = book?.analysis || (engine
+      ? engine.analyseTopics(pool, {
+          profile: els.smartProfile?.value || "prediction",
+          pathway: activePathway(),
+          course: course.id,
+          progress: smartProgressContext(bank, unit)
+        })
+      : { topics: [], latestYear: 0, count: pool.length, totalMarks: 0 });
+    const selected = book?.questions || [];
+    const totalMarks = selected.length ? totalMarksForQuestions(selected) : analysis.totalMarks || 0;
+    const topicRows = analysis.topics || [];
+    const latestLabel = analysis.latestYear ? String(analysis.latestYear) : "Current";
+    const countLabel = selected.length ? selected.length : Math.min(Math.max(50, count), pool.length || count);
+    els.smartAnalysisSummary.innerHTML = `
+      <article><strong>${pool.length}</strong><span>eligible questions</span></article>
+      <article><strong>${countLabel}</strong><span>booklet target</span></article>
+      <article><strong>${topicRows.length}</strong><span>topics analysed</span></article>
+      <article><strong>${latestLabel}</strong><span>latest paper year</span></article>
+      <article><strong>${totalMarks}</strong><span>${selected.length ? "selected marks" : "available marks"}</span></article>
+    `;
+    els.smartTopicPlan.innerHTML = topicRows.slice(0, 10).map((row) => {
+      const selectedRow = (analysis.selectedTopics || []).find((item) => item.topic === row.topic);
+      const selectedCopy = selectedRow ? `${selectedRow.count} chosen` : `${row.count} past`;
+      const gapCopy = row.gapYears ? `${row.gapYears}y gap` : "recent";
+      return `<article>
+        <div><strong>${escapeHtml(row.topic)}</strong><span>${selectedCopy} | ${gapCopy}</span></div>
+        <em>${row.probability}%</em>
+      </article>`;
+    }).join("") || `<div class="empty-roadmap">Choose a bank to see the revision topic plan.</div>`;
+  }
+
   function buildSmartRevision() {
     const bank = els.smartBank.value || "all";
     const unit = els.smartUnit.value || "";
-    const count = Number(els.smartCount.value || 12);
-    const target = [];
-    if (els.smartMistakes.checked) takeUnique(target, mistakePool(bank, unit), count);
-    if (els.smartWeakTopics.checked) takeUnique(target, weakTopicPool(bank, unit), count);
-    if (els.smartUnsolved.checked) takeUnique(target, unsolvedPool(bank, unit), count);
-    takeUnique(target, uniqueBySource(eligiblePool({ bank, unit })), count);
+    const count = Math.max(50, Number(els.smartCount.value || 50));
+    const seed = `${course.id}:${activePathway()}:${bank}:${unit}:${Date.now()}:${Math.random().toString(16).slice(2)}`;
+    const book = buildRevisionBook(bank, unit, count, seed);
+    const target = book.questions || [];
+    lastRevisionBook = book;
+    renderSmartAnalysis(book);
     if (!target.length) {
-      showBuildMessage("There are no matching questions for this smart revision setup yet.");
+      showBuildMessage("There are no matching questions for this revision book setup yet.");
       return;
     }
-    createPaper(target.slice(0, count).map((question) => question.id), {
-      kind: "smart",
+    const durationChoice = Number(els.smartDuration.value || 0);
+    createPaper(target.map((question) => question.id), {
+      kind: "revision-book",
       bank,
       unit,
-      durationMinutes: Number(els.smartDuration.value || estimatedMinutes(target)),
-      title: "Smart revision"
+      durationMinutes: durationChoice > 0 ? durationChoice : estimatedMinutes(target),
+      title: "Revision book",
+      revisionMeta: {
+        seed: String(book.seed || "").slice(-8),
+        profile: els.smartProfile?.value || "prediction",
+        topicCount: book.analysis?.selectedTopics?.length || 0,
+        availableCount: book.availableCount || target.length
+      }
     });
   }
 
   function saveCurrentTest() {
     if (!state.ids.length) return;
-    const fallback = state.title || `${state.kind || "Custom"} test`;
+    const fallback = state.title || paperKindLabel();
     const name = window.prompt("Name this saved test", fallback);
     if (!name) return;
     const items = savedTests();
@@ -1074,6 +1171,7 @@
       kind: state.kind || "custom",
       durationSeconds: state.durationSeconds || 0,
       ids: state.ids,
+      revisionMeta: state.revisionMeta || null,
       createdAt: Date.now()
     });
     saveSavedTests(items.slice(0, 24));
@@ -1116,7 +1214,8 @@
       startedAt: null,
       finishedAt: null,
       ids: test.ids,
-      scores: {}
+      scores: {},
+      revisionMeta: test.revisionMeta || null
     };
     saveState();
     render();
@@ -1172,6 +1271,16 @@
   els.printSolution?.addEventListener("click", () => printCurrentSolutions(els.printSolution));
   els.randomPreset?.addEventListener("change", () => applyPreset(els.randomPreset.value));
   els.unit?.addEventListener("change", refreshTopicOptions);
+  [els.smartBank, els.smartUnit, els.smartProfile, els.smartCount, els.smartDuration, els.smartMistakes, els.smartWeakTopics, els.smartUnsolved]
+    .filter(Boolean)
+    .forEach((input) => {
+      const updateSmartAnalysis = () => {
+        lastRevisionBook = null;
+        renderSmartAnalysis();
+      };
+      input.addEventListener("input", updateSmartAnalysis);
+      input.addEventListener("change", updateSmartAnalysis);
+    });
   els.customUnit?.addEventListener("change", () => {
     refreshBuilderTopicOptions();
     refreshBuilderPaperOptions();
@@ -1233,6 +1342,7 @@
   populatePathwayFilters();
   applyUrlDefaults();
   refreshBuilderPaperOptions();
+  renderSmartAnalysis(lastRevisionBook);
   render();
   startTicker();
   switchMode(activeMode);

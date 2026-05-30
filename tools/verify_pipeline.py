@@ -221,6 +221,40 @@ def verify_runtime_js(report: Report) -> None:
             report.error(f"{filename} is not valid JavaScript: {summary}")
 
 
+def verify_revision_engine(report: Report) -> None:
+    """Guard the shared 50-question revision-book engine used by all pathways."""
+    path = ROOT / "revision-engine.js"
+    if not path.exists():
+        report.error("revision-engine.js is missing; revision books cannot be generated.")
+        return
+    exam_text = (ROOT / "exam.html").read_text(encoding="utf-8")
+    engine_pos = exam_text.find("revision-engine.js")
+    exam_pos = exam_text.find("exam.js")
+    if engine_pos == -1:
+        report.error("exam.html must load revision-engine.js before exam.js.")
+    elif exam_pos != -1 and engine_pos > exam_pos:
+        report.error("exam.html loads revision-engine.js after exam.js; revision books will not initialise.")
+    try:
+        subprocess.run(
+            ["node", "--check", str(path)],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        subprocess.run(
+            ["node", str(ROOT / "tools" / "test_revision_engine.js")],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+    except FileNotFoundError:
+        report.warn("Node.js is unavailable; skipped revision engine checks.")
+    except subprocess.CalledProcessError as exc:
+        detail = (exc.stderr or exc.stdout or "").strip().splitlines()
+        summary = detail[0] if detail else "revision engine check failed"
+        report.error(f"revision-engine.js failed verification: {summary}")
+
+
 def verify_pathway_palette_activation(report: Report) -> None:
     """Guard the early pathway palette activation hook used by all public pages."""
     js_files = ("pathway-bootstrap.js", "lead.js", "pathway-mode.js", "service-worker.js")
@@ -554,6 +588,7 @@ def main() -> int:
     report = Report()
     verify_guardrails(report)
     verify_runtime_js(report)
+    verify_revision_engine(report)
     verify_pathway_palette_activation(report)
     question_by_id, paper_slugs, _used_topics = verify_questions(report)
     verify_catalogue(report, paper_slugs)

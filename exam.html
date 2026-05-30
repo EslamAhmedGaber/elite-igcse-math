@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mocks & Test Builder - Elite IGCSE Mathematics</title>
-  <meta name="description" content="Generate timed mocks, build custom topic tests, create smart revision sets, and save reusable worksheets from the Elite IGCSE Mathematics question bank.">
+  <title>Mocks, Test Builder & Revision Book - Elite IGCSE Mathematics</title>
+  <meta name="description" content="Generate timed mocks, build custom topic tests, create 50-question prediction revision books, and save reusable worksheets from the Elite IGCSE Mathematics question bank.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Mocks & Test Builder - Elite IGCSE Mathematics">
-  <meta property="og:description" content="Timed mocks, custom tests, smart revision sets, and saved worksheets from Dr Eslam Ahmed's classified IGCSE Mathematics bank.">
+  <meta property="og:title" content="Mocks, Test Builder & Revision Book - Elite IGCSE Mathematics">
+  <meta property="og:description" content="Timed mocks, custom tests, prediction revision books, and saved worksheets from Dr Eslam Ahmed's classified IGCSE Mathematics bank.">
   <meta property="og:image" content="https://eliteigcse.com/assets/og-image.png?v=20260527b">
   <meta name="theme-color" content="#161b2e">
   <link rel="manifest" href="manifest.webmanifest">
@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="pathway-bootstrap.js?v=20260528a"></script>
-  <link rel="stylesheet" href="styles.css?v=20260528m">
+  <link rel="stylesheet" href="styles.css?v=20260530a">
   <script defer src="pathway-mode.js?v=20260527a"></script>
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js"></script>
@@ -35,8 +35,9 @@
   <script defer src="solutions-data.js?v=20260528a"></script>
   <script defer src="ial/wma11/wma11-data.js?v=20260527c"></script>
   <script defer src="print-utils.js?v=20260527a"></script>
-  <script defer src="exam.js?v=20260527a"></script>
-  <script defer src="course-modules.js?v=20260528b"></script>
+  <script defer src="revision-engine.js?v=20260530a"></script>
+  <script defer src="exam.js?v=20260530a"></script>
+  <script defer src="course-modules.js?v=20260530a"></script>
   <script defer src="lead.js?v=20260528e"></script>
 </head>
 <body data-page="exam">
@@ -117,7 +118,7 @@
       <div>
         <span class="eyebrow">Mocks &amp; Test Builder</span>
         <h1 id="examTitle">Build the exact paper you need.</h1>
-        <p>Generate random mocks, hand-pick topic tests, or let the site build smart revision from mistakes and weak topics. Finish, mark, and keep the loop moving.</p>
+        <p>Generate random mocks, hand-pick topic tests, or build a 50-question revision book from past-paper patterns, gaps, mistakes, and weak topics.</p>
         <div class="planner-hero-actions">
           <a class="button primary" href="#examBuilder">Build paper</a>
           <a class="button light" href="practice.html?bank=expertise">Train Q20+</a>
@@ -139,7 +140,7 @@
         <div class="exam-mode-tabs" role="tablist" aria-label="Test builder modes">
           <button class="active" type="button" data-exam-mode="random">Random Mock</button>
           <button type="button" data-exam-mode="custom">Build Test</button>
-          <button type="button" data-exam-mode="smart">Smart Revision</button>
+          <button type="button" data-exam-mode="smart">Revision Book</button>
           <button type="button" data-exam-mode="saved">Saved Tests</button>
         </div>
       </div>
@@ -298,17 +299,28 @@
           <label><span data-pathway-label="unit">Chapter</span>
             <select id="smartUnit"></select>
           </label>
+          <label>Revision profile
+            <select id="smartProfile">
+              <option value="prediction">Next-paper prediction mix</option>
+              <option value="balanced">Balanced final revision</option>
+              <option value="weakness">Weakness repair</option>
+              <option value="expertise">Harder-question push</option>
+            </select>
+          </label>
           <label>Question count
             <select id="smartCount">
-              <option value="12">12 questions</option>
-              <option value="15">15 questions</option>
-              <option value="20">20 questions</option>
+              <option value="50">50-question booklet</option>
+              <option value="60">60-question booklet</option>
+              <option value="75">75-question booklet</option>
+              <option value="100">100-question booklet</option>
             </select>
           </label>
           <label>Time limit
             <select id="smartDuration">
-              <option value="45">45 minutes</option>
-              <option value="60">60 minutes</option>
+              <option value="0">Auto study time</option>
+              <option value="180">180 minutes</option>
+              <option value="240">240 minutes</option>
+              <option value="120">120 minutes</option>
               <option value="90">90 minutes</option>
             </select>
           </label>
@@ -319,8 +331,15 @@
           <label><input id="smartUnsolved" type="checkbox" checked> Unsolved questions</label>
         </div>
         <div class="planner-actions compact">
-          <button id="generateSmartBtn" class="primary" type="button">Build smart revision</button>
+          <button id="generateSmartBtn" class="primary" type="button">Build revision book</button>
         </div>
+        <section class="smart-analysis-panel" aria-live="polite">
+          <div id="smartAnalysisSummary" class="smart-analysis-summary"></div>
+          <div>
+            <strong>Topic plan</strong>
+            <div id="smartTopicPlan" class="smart-topic-plan"></div>
+          </div>
+        </section>
       </section>
 
       <section class="exam-mode-panel" data-mode-panel="saved" hidden>

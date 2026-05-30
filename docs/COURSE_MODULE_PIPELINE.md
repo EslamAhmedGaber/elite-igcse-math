@@ -23,7 +23,8 @@ Use these names consistently in navigation and styling:
 - `classified`: topic practice / classified view.
 - `expertise`: harder-question route.
 - `build-test`: random mock and hand-built test engine.
-- `smart-revision`: mistake, weak-topic, and unsolved-question revision.
+- `revision-book`: 50+ question prediction booklet generated from topic frequency, recency, gaps, marks, harder-question signals, and student progress.
+- `smart-revision`: legacy route name kept for mistake, weak-topic, and unsolved-question revision links.
 - `progress`: a real course dashboard for solved state, mistake-box state, topic mastery, and weak-topic entry points.
 - `books`: public question books.
 - `answers`: worked-solution books.
@@ -57,7 +58,7 @@ Use these names consistently in navigation and styling:
 2. Copy `tools/templates/course-stub.js` and fill `id`, `code`, `label`, `palette`, `paperSection`, `links`, `pastPapers[]`, `books[]`, and `storageKeys`.
 3. Append the new course object into `course-modules.js`. The top navigation and pathway hub should appear from the registry.
 4. Create the data file (`<code>-data.js` or equivalent) following the WMA11 shape: topics, questions, solutions, and paper metadata.
-5. Add an adapter to `exam.js` so random mocks, hand-built tests, smart revision, marking, printing, and saved tests use the shared builder.
+5. Add an adapter to `exam.js` so random mocks, hand-built tests, revision books, marking, printing, and saved tests use the shared builder.
 6. Add a real progress module. Reuse existing keys only for the same course; otherwise create namespaced keys such as `eliteWMA12SolvedV1`.
 7. Copy `tools/templates/book-builder-stub.py` to `tools/<code>/build_<code>_books.py` and connect it to the course data/palette.
 8. Create `downloads/IAL/<code>/` with `Papers/` and the approved public PDFs.
@@ -72,7 +73,7 @@ Use `docs/COURSE_UPDATE_PIPELINE.md`. Short version: update the structured sourc
 
 - Linear 4MA1: full classified route, expertise, builder, books, past-paper solutions, progress.
 - Modular 4WM: Unit 1 and Unit 2 each expose the same module set.
-- IAL Pure 1 WMA11: classified route, full builder, smart revision, real topic progress/mistake dashboard, classified/expertise books, and paper rows with matching worked solutions.
+- IAL Pure 1 WMA11: classified route, full builder, revision book, real topic progress/mistake dashboard, classified/expertise books, and paper rows with matching worked solutions.
 
 ## Publish Checklist
 
