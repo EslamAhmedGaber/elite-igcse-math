@@ -23,7 +23,7 @@ Use these names consistently in navigation and styling:
 - `classified`: topic practice / classified view.
 - `expertise`: harder-question route.
 - `build-test`: random mock and hand-built test engine.
-- `revision-book`: 50+ question prediction booklet generated from topic frequency, recency, gaps, marks, harder-question signals, and student progress.
+- `revision-book`: 50+ question prediction booklet generated from topic frequency, recency, gaps, marks, harder-question signals, and student progress. It must be blueprint-first: cover as many topics as the target allows before repeating any topic, then repeat in interleaved rounds when a course has fewer topics than the booklet length.
 - `smart-revision`: legacy route name kept for mistake, weak-topic, and unsolved-question revision links.
 - `progress`: a real course dashboard for solved state, mistake-box state, topic mastery, and weak-topic entry points.
 - `books`: public question books.

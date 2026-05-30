@@ -39,8 +39,21 @@ function assertRevisionBook(engine, label, pool, options = {}) {
   });
   assert.equal(book.questions.length, expectedCount, `${label}: revision book should select the expected 50-question target`);
   assert.ok(book.analysis.topics.length > 0, `${label}: topic analysis should not be empty`);
-  const selectedTopicCount = new Set(book.questions.map(engine.primaryTopic)).size;
-  assert.ok(selectedTopicCount >= Math.min(4, book.analysis.topics.length), `${label}: selected book should cover multiple topics`);
+  const eligibleTopicCount = new Set(pool.map(engine.primaryTopic)).size;
+  const selectedTopics = book.questions.map(engine.primaryTopic);
+  const selectedTopicCount = new Set(selectedTopics).size;
+  const topicCounts = selectedTopics.reduce((rows, topic) => rows.set(topic, (rows.get(topic) || 0) + 1), new Map());
+  const maxTopicRepeats = Math.max(0, ...topicCounts.values());
+  const expectedCoverage = Math.min(expectedCount, eligibleTopicCount);
+  const expectedCap = Math.max(1, Math.ceil(expectedCount / Math.max(1, eligibleTopicCount)));
+  assert.equal(selectedTopicCount, expectedCoverage, `${label}: revision book should cover as many topics as the target allows`);
+  assert.ok(maxTopicRepeats <= expectedCap + 1, `${label}: no topic should dominate the booklet`);
+  if (eligibleTopicCount >= expectedCount) {
+    assert.equal(maxTopicRepeats, 1, `${label}: topics should not repeat when enough topics are available`);
+  }
+  for (let index = 1; index < selectedTopics.length; index += 1) {
+    assert.notEqual(selectedTopics[index], selectedTopics[index - 1], `${label}: adjacent questions should be interleaved by topic`);
+  }
   assert.ok(book.analysis.topics[0].probability >= 0, `${label}: top topic should expose a probability score`);
 }
 

@@ -1108,12 +1108,13 @@
     const selected = book?.questions || [];
     const totalMarks = selected.length ? totalMarksForQuestions(selected) : analysis.totalMarks || 0;
     const topicRows = analysis.topics || [];
+    const selectedTopicCount = analysis.selectedTopics?.length || 0;
     const latestLabel = analysis.latestYear ? String(analysis.latestYear) : "Current";
     const countLabel = selected.length ? selected.length : Math.min(Math.max(50, count), pool.length || count);
     els.smartAnalysisSummary.innerHTML = `
       <article><strong>${pool.length}</strong><span>eligible questions</span></article>
       <article><strong>${countLabel}</strong><span>booklet target</span></article>
-      <article><strong>${topicRows.length}</strong><span>topics analysed</span></article>
+      <article><strong>${selected.length ? selectedTopicCount : topicRows.length}</strong><span>${selected.length ? "topics selected" : "topics analysed"}</span></article>
       <article><strong>${latestLabel}</strong><span>latest paper year</span></article>
       <article><strong>${totalMarks}</strong><span>${selected.length ? "selected marks" : "available marks"}</span></article>
     `;

@@ -245,12 +245,13 @@
   }
 
   function selectBalanced(scored, targetCount, topics, seed) {
-    const random = seededRandom(`${seed || "elite"}:balance`);
+    const random = seededRandom(`${seed || "elite"}:blueprint`);
     const selected = [];
     const selectedSources = new Set();
     const topicCounts = new Map();
     const count = Math.min(targetCount, scored.length);
     const byTopic = new Map();
+    const topicMeta = new Map(topics.map((row) => [row.topic, row]));
 
     scored.forEach((item) => {
       const list = byTopic.get(item.topic) || [];
@@ -259,7 +260,10 @@
     });
 
     byTopic.forEach((list) => {
-      list.sort((a, b) => b.score - a.score || random() - 0.5);
+      list.forEach((item) => {
+        item.blueprintScore = item.score + random() * 0.01;
+      });
+      list.sort((a, b) => b.blueprintScore - a.blueprintScore);
     });
 
     function addItem(item) {
@@ -270,36 +274,60 @@
       return true;
     }
 
-    const coverageTopics = topics
-      .slice(0, Math.min(topics.length, Math.max(8, Math.round(count / 4))))
-      .map((row) => row.topic);
-    coverageTopics.forEach((topic) => {
-      if (selected.length >= count) return;
-      addItem((byTopic.get(topic) || [])[0]);
+    function nextFromTopic(topic) {
+      const list = byTopic.get(topic) || [];
+      while (list.length && selectedSources.has(list[0].source)) {
+        list.shift();
+      }
+      return list.shift() || null;
+    }
+
+    const topicOrder = topics
+      .map((row) => row.topic)
+      .filter((topic) => byTopic.has(topic));
+    byTopic.forEach((_list, topic) => {
+      if (!topicMeta.has(topic)) topicOrder.push(topic);
     });
 
-    const softCap = Math.max(3, Math.ceil(count / Math.min(Math.max(topics.length, 1), 10)));
-    const hardCap = Math.max(softCap + 1, Math.ceil(count * 0.18));
+    const orderedTopics = [...new Set(topicOrder)]
+      .map((topic) => ({
+        topic,
+        score: (topicMeta.get(topic)?.score || 0) + random() * 0.015
+      }))
+      .sort((a, b) => b.score - a.score || a.topic.localeCompare(b.topic))
+      .map((row) => row.topic);
 
-    while (selected.length < count) {
-      const next = scored
-        .filter((item) => !selectedSources.has(item.source))
-        .map((item) => {
-          const topicCount = topicCounts.get(item.topic) || 0;
-          if (topicCount >= hardCap) return null;
-          const penalty = topicCount >= softCap ? 0.72 : 1;
-          return { item, adjustedScore: item.score * penalty + random() * 0.035 };
-        })
-        .filter(Boolean)
-        .sort((a, b) => b.adjustedScore - a.adjustedScore)[0];
-      if (!next) break;
-      addItem(next.item);
+    if (!orderedTopics.length) return [];
+
+    const strictCap = Math.max(1, Math.ceil(count / orderedTopics.length));
+    for (let pass = 0; pass < strictCap && selected.length < count; pass += 1) {
+      orderedTopics.forEach((topic) => {
+        if (selected.length >= count) return;
+        if ((topicCounts.get(topic) || 0) !== pass) return;
+        addItem(nextFromTopic(topic));
+      });
     }
 
     if (selected.length < count) {
-      scored.forEach((item) => {
-        if (selected.length < count) addItem(item);
-      });
+      const relaxedCap = Math.max(strictCap + 1, Math.ceil(count * 0.12));
+      while (selected.length < count) {
+        const nextTopic = orderedTopics
+          .filter((topic) => (topicCounts.get(topic) || 0) < relaxedCap)
+          .map((topic) => {
+            const next = (byTopic.get(topic) || []).find((item) => !selectedSources.has(item.source));
+            if (!next) return null;
+            const repeats = topicCounts.get(topic) || 0;
+            return {
+              topic,
+              next,
+              score: next.score - repeats * 0.22 + random() * 0.02
+            };
+          })
+          .filter(Boolean)
+          .sort((a, b) => b.score - a.score)[0];
+        if (!nextTopic) break;
+        addItem(nextFromTopic(nextTopic.topic));
+      }
     }
 
     return selected.map((item) => item.question);
