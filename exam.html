@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mocks, Test Builder & Revision Book - Elite IGCSE Mathematics</title>
-  <meta name="description" content="Generate timed mocks, build custom topic tests, create 50-question prediction revision books, and save reusable worksheets from the Elite IGCSE Mathematics question bank.">
+  <meta name="description" content="Generate timed mocks, build custom topic tests, create quick revision quizzes or full prediction booklets, and save reusable worksheets from the Elite IGCSE Mathematics question bank.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Mocks, Test Builder & Revision Book - Elite IGCSE Mathematics">
   <meta property="og:description" content="Timed mocks, custom tests, prediction revision books, and saved worksheets from Dr Eslam Ahmed's classified IGCSE Mathematics bank.">
@@ -36,8 +36,8 @@
   <script defer src="ial/wma11/wma11-data.js?v=20260527c"></script>
   <script defer src="print-utils.js?v=20260527a"></script>
   <script defer src="revision-engine.js?v=20260530b"></script>
-  <script defer src="exam.js?v=20260531a"></script>
-  <script defer src="course-modules.js?v=20260530a"></script>
+  <script defer src="exam.js?v=20260531b"></script>
+  <script defer src="course-modules.js?v=20260531b"></script>
   <script defer src="lead.js?v=20260528e"></script>
 </head>
 <body data-page="exam">
@@ -118,7 +118,7 @@
       <div>
         <span class="eyebrow">Mocks &amp; Test Builder</span>
         <h1 id="examTitle">Build the exact paper you need.</h1>
-        <p>Generate random mocks, hand-pick topic tests, or build a 50-question revision book from past-paper patterns, gaps, mistakes, and weak topics.</p>
+        <p>Generate random mocks, hand-pick topic tests, or build quick revision quizzes and full prediction booklets from past-paper patterns, gaps, mistakes, and weak topics.</p>
         <div class="planner-hero-actions">
           <a class="button primary" href="#examBuilder">Build paper</a>
           <a class="button light" href="practice.html?bank=expertise">Train Q20+</a>
@@ -150,10 +150,10 @@
           <label>Preset
             <select id="randomPreset">
               <option value="">Choose preset</option>
-              <option value="quiz">10-minute style quiz</option>
-              <option value="topic">20-mark topic test</option>
-              <option value="full">Full mock</option>
-              <option value="hard">Q20+ challenge</option>
+              <option value="quiz">10-question quick quiz</option>
+              <option value="topic">15-question topic test</option>
+              <option value="full">25-question full mock</option>
+              <option value="hard">20-question Q20+ challenge</option>
             </select>
           </label>
           <label>Question bank
@@ -175,7 +175,18 @@
             </select>
           </label>
           <label>Question count
-            <input id="examCount" type="number" min="1" max="100" step="1" value="25">
+            <select id="examCount">
+              <option value="10">10 questions</option>
+              <option value="15">15 questions</option>
+              <option value="20">20 questions</option>
+              <option value="25" selected>25 questions</option>
+              <option value="30">30 questions</option>
+              <option value="40">40 questions</option>
+              <option value="50">50 questions</option>
+              <option value="60">60 questions</option>
+              <option value="75">75 questions</option>
+              <option value="100">100 questions</option>
+            </select>
           </label>
           <label>Target marks
             <input id="examTargetMarks" type="number" min="0" step="1" value="0">
@@ -307,6 +318,12 @@
           </label>
           <label>Question count
             <select id="smartCount">
+              <option value="10">10-question quick quiz</option>
+              <option value="15">15-question quick quiz</option>
+              <option value="20">20-question topic mix</option>
+              <option value="25">25-question mock set</option>
+              <option value="30">30-question review set</option>
+              <option value="40">40-question review set</option>
               <option value="50">50-question booklet</option>
               <option value="60">60-question booklet</option>
               <option value="75">75-question booklet</option>

@@ -222,7 +222,7 @@ def verify_runtime_js(report: Report) -> None:
 
 
 def verify_revision_engine(report: Report) -> None:
-    """Guard the shared 50-question revision-book engine used by all pathways."""
+    """Guard the shared flexible-count revision-book engine used by all pathways."""
     path = ROOT / "revision-engine.js"
     if not path.exists():
         report.error("revision-engine.js is missing; revision books cannot be generated.")

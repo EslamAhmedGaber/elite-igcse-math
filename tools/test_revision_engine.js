@@ -30,14 +30,17 @@ function loadRuntime() {
 
 function assertRevisionBook(engine, label, pool, options = {}) {
   const uniqueCount = new Set(pool.map(engine.sourceKey)).size;
-  const expectedCount = Math.min(50, uniqueCount);
+  const requestedCount = Number(options.count || 50);
+  const minimumCount = Number(options.minimumCount || requestedCount);
+  const targetCount = Math.max(requestedCount, minimumCount);
+  const expectedCount = Math.min(targetCount, uniqueCount);
   const book = engine.buildRevisionBook(pool, {
-    count: 50,
-    minimumCount: 50,
+    count: requestedCount,
+    minimumCount,
     seed: `test-${label}`,
     ...options
   });
-  assert.equal(book.questions.length, expectedCount, `${label}: revision book should select the expected 50-question target`);
+  assert.equal(book.questions.length, expectedCount, `${label}: revision book should select the requested unique-question target`);
   assert.equal(new Set(book.questions.map(engine.sourceKey)).size, book.questions.length, `${label}: revision book should not repeat source questions`);
   assert.ok(book.analysis.topics.length > 0, `${label}: topic analysis should not be empty`);
   const eligibleTopicCount = new Set(pool.map(engine.primaryTopic)).size;
@@ -70,5 +73,12 @@ const pureWma11 = runtime.WMA11_QUESTIONS;
 assertRevisionBook(engine, "linear", igcseAll, { pathway: "linear", course: "igcse", profile: "prediction" });
 assertRevisionBook(engine, "modular-unit-1", modularUnit1, { pathway: "modular", course: "igcse", profile: "prediction" });
 assertRevisionBook(engine, "pure-wma11", pureWma11, { pathway: "pure", course: "wma11", profile: "prediction" });
+assertRevisionBook(engine, "linear-quick-quiz", igcseAll, {
+  pathway: "linear",
+  course: "igcse",
+  profile: "prediction",
+  count: 10,
+  minimumCount: 10
+});
 
 console.log("revision engine smoke checks passed");

@@ -23,7 +23,7 @@
     "revision-book": {
       title: "Revision Book",
       role: "student",
-      description: "A printable 50+ question booklet chosen from topic frequency, recency, gaps, marks, and student progress.",
+      description: "A printable 10-100 question revision set chosen from topic frequency, recency, gaps, marks, and student progress.",
     },
     progress: {
       title: "Progress",
@@ -124,7 +124,7 @@
     { module: "classified", title: "Classified View", detail: "Chapter bank", href: "/practice.html?pathway=linear&bank=all", pathway: "linear" },
     { module: "expertise", title: "Expertise", detail: "Q20+ finishers", href: "/practice.html?pathway=linear&bank=expertise&mode=q20", pathway: "linear" },
     { module: "build-test", title: "Build Test", detail: "Mocks and worksheets", href: "/exam.html?pathway=linear&mode=custom", pathway: "linear" },
-    { module: "revision-book", title: "Revision Book", detail: "50-question prediction mix", href: "/exam.html?pathway=linear&mode=smart&book=revision", pathway: "linear" },
+    { module: "revision-book", title: "Revision Book", detail: "10-100 question mix", href: "/exam.html?pathway=linear&mode=smart&book=revision", pathway: "linear" },
     { module: "progress", title: "Progress", detail: "Track mastery", href: "/progress.html?pathway=linear", pathway: "linear" },
     { module: "mistake-box", title: "Mistake Box", detail: "Due revision set", href: "/practice.html?pathway=linear&bank=all&mode=review", pathway: "linear" },
     { module: "saved-tests", title: "Saved Tests", detail: "Reuse builder tests", href: "/exam.html?pathway=linear&mode=saved", pathway: "linear" },
@@ -138,7 +138,7 @@
       { module: "classified", title: "Classified View", detail: `${unitCode} topics`, href: `/practice.html?pathway=modular&unit=${unitParam}&bank=all`, pathway: "modular" },
       { module: "expertise", title: "Expertise", detail: `${unitCode} harder set`, href: `/practice.html?pathway=modular&unit=${unitParam}&bank=expertise&mode=q20`, pathway: "modular" },
       { module: "build-test", title: "Build Test", detail: `${unitCode} mocks`, href: `/exam.html?pathway=modular&unit=${unitParam}&mode=custom`, pathway: "modular" },
-      { module: "revision-book", title: "Revision Book", detail: `${unitCode} 50-question mix`, href: `/exam.html?pathway=modular&unit=${unitParam}&mode=smart&book=revision`, pathway: "modular" },
+      { module: "revision-book", title: "Revision Book", detail: `${unitCode} 10-100 mix`, href: `/exam.html?pathway=modular&unit=${unitParam}&mode=smart&book=revision`, pathway: "modular" },
       { module: "progress", title: "Progress", detail: `${unitCode} mastery`, href: `/progress.html?pathway=modular&unit=${unitParam}`, pathway: "modular" },
       { module: "mistake-box", title: "Mistake Box", detail: `${unitCode} saved revision`, href: `/practice.html?pathway=modular&unit=${unitParam}&bank=all&mode=review`, pathway: "modular" },
       { module: "saved-tests", title: "Saved Tests", detail: `${unitCode} reusable tests`, href: `/exam.html?pathway=modular&unit=${unitParam}&mode=saved`, pathway: "modular" },
@@ -1397,7 +1397,7 @@
         { module: "classified", title: "Classified View", detail: "Topic practice", href: "/ial/wma11/index.html" },
         { module: "expertise", title: "Expertise View", detail: "Q6+ filtered bank", href: "/ial/wma11/index.html?expertise=1#ialFilters" },
         { module: "build-test", title: "Build Test", detail: "Full mock builder", href: "/exam.html?pathway=pure&course=wma11&mode=custom" },
-        { module: "revision-book", title: "Revision Book", detail: "50-question prediction mix", href: "/exam.html?pathway=pure&course=wma11&mode=smart&book=revision" },
+        { module: "revision-book", title: "Revision Book", detail: "10-100 question mix", href: "/exam.html?pathway=pure&course=wma11&mode=smart&book=revision" },
         { module: "progress", title: "Progress", detail: "Topic mastery", href: "/progress.html?pathway=pure&course=wma11" },
         { module: "mistake-box", title: "Mistake Box", detail: "Saved revision", href: "/ial/wma11/index.html?mode=mistakes#ialFilters" },
         { module: "saved-tests", title: "Saved Tests", detail: "Reuse builder tests", href: "/exam.html?pathway=pure&course=wma11&mode=saved" },
@@ -1513,7 +1513,7 @@
   };
 
   window.ELITE_COURSE_MODULES = {
-    version: "2026-05-30-course-registry-v8-revision-book",
+    version: "2026-05-31-course-registry-v9-flexible-revision-counts",
     moduleCatalog,
     moduleAliases,
     palettes,

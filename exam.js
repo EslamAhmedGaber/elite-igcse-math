@@ -75,7 +75,7 @@
         mode: "pure",
         title: "IAL Pure 1 Revision Book & Test Builder",
         heroTitle: "Build a full Pure 1 test.",
-        heroCopy: "Use the same builder engine for WMA11: random mocks, hand-built tests, 50-question revision books, saved tests, marking, and printable worked solutions.",
+        heroCopy: "Use the same builder engine for WMA11: random mocks, hand-built tests, quick revision quizzes, full prediction booklets, saved tests, marking, and printable worked solutions.",
         unitLabel: "Course",
         unitAllLabel: "All Pure 1",
         units: ["WMA11"],
@@ -91,7 +91,7 @@
         mode: "igcse",
         title: "Mocks, Test Builder & Revision Book",
         heroTitle: "Build the exact paper you need.",
-        heroCopy: "Generate random mocks, hand-pick topic tests, or build a 50-question revision book from past-paper patterns, gaps, mistakes, and weak topics.",
+        heroCopy: "Generate random mocks, hand-pick topic tests, or build quick revision quizzes and full prediction booklets from past-paper patterns, gaps, mistakes, and weak topics.",
         questions: window.QUESTION_DATA || [],
         solutions: window.SOLUTION_DATA || {},
         reviewKey: "eliteMistakeBoxV1",
@@ -118,6 +118,7 @@
   const SOLVED_KEY = course.solvedKey;
   const SELECTED_KEY = course.selectedKey;
   const SAVED_TESTS_KEY = `eliteSavedTestsV1${keySuffix}`;
+  const MIN_REVISION_COUNT = 10;
   const DRAFT_KEY = `eliteTestBuilderDraftV1${keySuffix}`;
   const MAX_FILTER_RESULTS = 80;
 
@@ -1151,7 +1152,7 @@
     }
     return engine.buildRevisionBook(pool, {
       count,
-      minimumCount: 50,
+      minimumCount: count,
       profile: els.smartProfile?.value || "prediction",
       pathway: activePathway(),
       course: course.id,
@@ -1184,7 +1185,7 @@
     const topicRows = analysis.topics || [];
     const selectedTopicCount = analysis.selectedTopics?.length || 0;
     const latestLabel = analysis.latestYear ? String(analysis.latestYear) : "Current";
-    const countLabel = selected.length ? selected.length : Math.min(Math.max(50, count), pool.length || count);
+    const countLabel = selected.length ? selected.length : Math.min(Math.max(MIN_REVISION_COUNT, count), pool.length || count);
     els.smartAnalysisSummary.innerHTML = `
       <article><strong>${pool.length}</strong><span>eligible questions</span></article>
       <article><strong>${countLabel}</strong><span>booklet target</span></article>
@@ -1206,7 +1207,7 @@
   function buildSmartRevision() {
     const bank = els.smartBank.value || "all";
     const unit = els.smartUnit.value || "";
-    const count = Math.max(50, Number(els.smartCount.value || 50));
+    const count = Math.max(MIN_REVISION_COUNT, Number(els.smartCount.value || 50));
     const topics = selectedTopicMix(els.smartTopicMix);
     const seed = `${course.id}:${activePathway()}:${bank}:${unit}:${topics.join("|")}:${Date.now()}:${Math.random().toString(16).slice(2)}`;
     const book = buildRevisionBook(bank, unit, count, seed);
@@ -1311,13 +1312,13 @@
   function applyPreset(value) {
     if (value === "quiz") {
       els.bank.value = "all";
-      els.count.value = "8";
-      els.targetMarks.value = "20";
+      els.count.value = "10";
+      els.targetMarks.value = "0";
       els.duration.value = "30";
     } else if (value === "topic") {
       els.bank.value = "all";
-      els.count.value = "12";
-      els.targetMarks.value = "25";
+      els.count.value = "15";
+      els.targetMarks.value = "0";
       els.duration.value = "45";
     } else if (value === "full") {
       els.bank.value = "all";
@@ -1326,7 +1327,7 @@
       els.duration.value = "90";
     } else if (value === "hard") {
       els.bank.value = "expertise";
-      els.count.value = "12";
+      els.count.value = "20";
       els.targetMarks.value = "0";
       els.duration.value = "60";
     }
