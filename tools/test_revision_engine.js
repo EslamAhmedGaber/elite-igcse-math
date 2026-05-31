@@ -38,6 +38,7 @@ function assertRevisionBook(engine, label, pool, options = {}) {
     ...options
   });
   assert.equal(book.questions.length, expectedCount, `${label}: revision book should select the expected 50-question target`);
+  assert.equal(new Set(book.questions.map(engine.sourceKey)).size, book.questions.length, `${label}: revision book should not repeat source questions`);
   assert.ok(book.analysis.topics.length > 0, `${label}: topic analysis should not be empty`);
   const eligibleTopicCount = new Set(pool.map(engine.primaryTopic)).size;
   const selectedTopics = book.questions.map(engine.primaryTopic);

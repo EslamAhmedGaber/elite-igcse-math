@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="pathway-bootstrap.js?v=20260528a"></script>
-  <link rel="stylesheet" href="styles.css?v=20260530a">
+  <link rel="stylesheet" href="styles.css?v=20260531a">
   <script defer src="pathway-mode.js?v=20260527a"></script>
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js"></script>
@@ -36,7 +36,7 @@
   <script defer src="ial/wma11/wma11-data.js?v=20260527c"></script>
   <script defer src="print-utils.js?v=20260527a"></script>
   <script defer src="revision-engine.js?v=20260530b"></script>
-  <script defer src="exam.js?v=20260530b"></script>
+  <script defer src="exam.js?v=20260531a"></script>
   <script defer src="course-modules.js?v=20260530a"></script>
   <script defer src="lead.js?v=20260528e"></script>
 </head>
@@ -165,9 +165,6 @@
           <label><span data-pathway-label="unit">Chapter</span>
             <select id="examUnit"></select>
           </label>
-          <label>Topic
-            <select id="examTopic"></select>
-          </label>
           <label>Time limit
             <select id="examDuration">
               <option value="90">90 minutes</option>
@@ -178,18 +175,19 @@
             </select>
           </label>
           <label>Question count
-            <select id="examCount">
-              <option value="25">25 questions</option>
-              <option value="20">20 questions</option>
-              <option value="15">15 questions</option>
-              <option value="12">12 questions</option>
-              <option value="8">8 questions</option>
-            </select>
+            <input id="examCount" type="number" min="1" max="100" step="1" value="25">
           </label>
           <label>Target marks
             <input id="examTargetMarks" type="number" min="0" step="1" value="0">
           </label>
         </div>
+        <section class="topic-mix-panel" aria-labelledby="examTopicMixTitle">
+          <div class="topic-mix-head">
+            <strong id="examTopicMixTitle">Topic mix</strong>
+            <span id="examTopicMixSummary">All topics</span>
+          </div>
+          <div id="examTopicMix" class="topic-mix-grid"></div>
+        </section>
         <div class="exam-check-row">
           <label><input id="examUnsolvedOnly" type="checkbox"> Use unsolved only</label>
           <label><input id="examAvoidRepeats" type="checkbox"> Avoid recent mock repeats</label>
@@ -325,6 +323,13 @@
             </select>
           </label>
         </div>
+        <section class="topic-mix-panel" aria-labelledby="smartTopicMixTitle">
+          <div class="topic-mix-head">
+            <strong id="smartTopicMixTitle">Topic mix</strong>
+            <span id="smartTopicMixSummary">All topics</span>
+          </div>
+          <div id="smartTopicMix" class="topic-mix-grid"></div>
+        </section>
         <div class="smart-source-grid">
           <label><input id="smartMistakes" type="checkbox" checked> Due Mistake Box questions</label>
           <label><input id="smartWeakTopics" type="checkbox" checked> Weakest topics</label>

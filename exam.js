@@ -130,6 +130,8 @@
     duration: document.getElementById("examDuration"),
     count: document.getElementById("examCount"),
     targetMarks: document.getElementById("examTargetMarks"),
+    topicMix: document.getElementById("examTopicMix"),
+    topicMixSummary: document.getElementById("examTopicMixSummary"),
     unsolvedOnly: document.getElementById("examUnsolvedOnly"),
     avoidRepeats: document.getElementById("examAvoidRepeats"),
     randomPreset: document.getElementById("randomPreset"),
@@ -175,6 +177,8 @@
     generateSmart: document.getElementById("generateSmartBtn"),
     smartAnalysisSummary: document.getElementById("smartAnalysisSummary"),
     smartTopicPlan: document.getElementById("smartTopicPlan"),
+    smartTopicMix: document.getElementById("smartTopicMix"),
+    smartTopicMixSummary: document.getElementById("smartTopicMixSummary"),
     savedTests: document.getElementById("savedTestsList"),
     savedSummary: document.getElementById("savedTestsSummary")
   };
@@ -291,6 +295,44 @@
     if (values.includes(current)) select.value = current;
   }
 
+  function selectedTopicMix(container) {
+    if (!container) return [];
+    return [...container.querySelectorAll("input[type='checkbox']:checked")].map((input) => input.value);
+  }
+
+  function setTopicMix(container, topics = []) {
+    if (!container) return;
+    const wanted = new Set(topics.filter(Boolean));
+    container.querySelectorAll("input[type='checkbox']").forEach((input) => {
+      input.checked = wanted.has(input.value);
+    });
+  }
+
+  function topicPoolCount(topic, bank, unit) {
+    return questions
+      .filter((question) => questionMatchesBank(question, bank))
+      .filter((question) => questionMatchesUnit(question, unit))
+      .filter((question) => questionMatchesTopic(question, topic)).length;
+  }
+
+  function renderTopicMix(container, summary, unit = "", bank = "all") {
+    if (!container) return;
+    const previous = new Set(selectedTopicMix(container));
+    const topics = topicsForUnit(unit);
+    container.innerHTML = topics.map((topic) => {
+      const count = topicPoolCount(topic, bank, unit);
+      const checked = previous.has(topic) ? " checked" : "";
+      return `<label><input type="checkbox" value="${escapeHtml(topic)}"${checked}> <span>${escapeHtml(topic)}</span><em>${count}</em></label>`;
+    }).join("") || `<div class="empty-roadmap">No topics match this chapter yet.</div>`;
+    updateTopicMixSummary(container, summary);
+  }
+
+  function updateTopicMixSummary(container, summary) {
+    if (!container || !summary) return;
+    const selected = selectedTopicMix(container);
+    summary.textContent = selected.length ? `${selected.length} selected` : "All topics";
+  }
+
   function populatePathwayFilters() {
     const units = unitsForPathway();
     const allLabel = course.unitAllLabel || (activePathway() === "modular" ? "Both units" : "All chapters");
@@ -299,6 +341,7 @@
     fillSelect(els.smartUnit, units, allLabel);
     refreshTopicOptions();
     refreshBuilderTopicOptions();
+    refreshSmartTopicOptions();
   }
 
   function setSelectIfPresent(select, value) {
@@ -314,6 +357,10 @@
     const bank = params.get("bank");
     const mode = params.get("mode");
     const profile = params.get("profile");
+    const topicsParam = params.get("topics") || "";
+    const urlTopics = topicsParam
+      ? topicsParam.split("|").map((item) => item.trim()).filter(Boolean)
+      : params.getAll("topic").map((item) => item.trim()).filter(Boolean);
     setSelectIfPresent(els.unit, unit);
     setSelectIfPresent(els.customUnit, unit);
     setSelectIfPresent(els.smartUnit, unit);
@@ -326,6 +373,11 @@
     }
     refreshTopicOptions();
     refreshBuilderTopicOptions();
+    refreshSmartTopicOptions();
+    setTopicMix(els.topicMix, urlTopics);
+    setTopicMix(els.smartTopicMix, urlTopics);
+    updateTopicMixSummary(els.topicMix, els.topicMixSummary);
+    updateTopicMixSummary(els.smartTopicMix, els.smartTopicMixSummary);
   }
 
   function setOptionText(select, value, text) {
@@ -357,10 +409,15 @@
 
   function refreshTopicOptions() {
     fillSelect(els.topic, topicsForUnit(els.unit?.value || ""), "All topics");
+    renderTopicMix(els.topicMix, els.topicMixSummary, els.unit?.value || "", els.bank?.value || "all");
   }
 
   function refreshBuilderTopicOptions() {
     fillSelect(els.customTopic, topicsForUnit(els.customUnit?.value || ""), "All topics");
+  }
+
+  function refreshSmartTopicOptions() {
+    renderTopicMix(els.smartTopicMix, els.smartTopicMixSummary, els.smartUnit?.value || "", els.smartBank?.value || "all");
   }
 
   function uniqueSorted(values) {
@@ -417,10 +474,16 @@
     return !topic || question.topic === topic || (question.topics || []).includes(topic);
   }
 
+  function questionMatchesAnyTopic(question, topics = []) {
+    const list = Array.isArray(topics) ? topics.filter(Boolean) : [];
+    return !list.length || list.some((topic) => questionMatchesTopic(question, topic));
+  }
+
   function eligiblePool({
     bank = "all",
     unit = "",
     topic = "",
+    topics = [],
     difficulty = "",
     unsolvedOnly = false,
     avoidSources = new Set(),
@@ -435,6 +498,7 @@
       .filter((question) => questionMatchesBank(question, bank))
       .filter((question) => questionMatchesUnit(question, unit))
       .filter((question) => questionMatchesTopic(question, topic))
+      .filter((question) => questionMatchesAnyTopic(question, topics))
       .filter((question) => !paper || question.paper === paper)
       .filter((question) => difficultyMatch(question, difficulty))
       .filter((question) => !unsolvedOnly || !isSolved(question))
@@ -572,17 +636,25 @@
 
   function startRandomExam() {
     const avoidSources = els.avoidRepeats?.checked ? recentMockSources() : new Set();
+    const topics = selectedTopicMix(els.topicMix);
+    const count = Math.max(1, Number(els.count.value || 25));
+    const targetMarks = Number(els.targetMarks.value || 0);
     const picked = buildBalancedPaper({
       bank: els.bank.value,
       unit: els.unit?.value || "",
       topic: els.topic?.value || "",
-      count: Number(els.count.value || 25),
-      targetMarks: Number(els.targetMarks.value || 0),
+      topics,
+      count,
+      targetMarks,
       unsolvedOnly: Boolean(els.unsolvedOnly?.checked),
       avoidSources
     });
     if (!picked.length) {
       showBuildMessage("No questions match those mock filters yet. Widen the filters and try again.");
+      return;
+    }
+    if (!targetMarks && picked.length < count) {
+      showBuildMessage(`This filter has ${picked.length} unique questions. Add more topics or lower the question count to avoid repeating questions.`);
       return;
     }
     createPaper(
@@ -593,7 +665,7 @@
         bank: els.bank.value,
         unit: els.unit?.value || "",
         durationMinutes: Number(els.duration.value || 90),
-        title: "Random mock"
+        title: topics.length ? "Mixed topic mock" : "Random mock"
       }
     );
   }
@@ -1026,8 +1098,8 @@
     await printCurrentSolutions(els.printDraftSolution);
   }
 
-  function weakTopicPool(bank, unit) {
-    const pool = uniqueBySource(eligiblePool({ bank, unit }));
+  function weakTopicPool(bank, unit, topics = []) {
+    const pool = uniqueBySource(eligiblePool({ bank, unit, topics }));
     const rows = new Map();
     pool.forEach((question) => {
       const row = rows.get(question.topic) || { topic: question.topic, total: 0, solved: 0 };
@@ -1043,26 +1115,26 @@
     return pool.filter((question) => weakest.includes(question.topic) && !isSolved(question));
   }
 
-  function mistakePool(bank, unit) {
+  function mistakePool(bank, unit, topics = []) {
     const review = readJson(REVIEW_KEY, {});
     const dueIds = Object.values(review)
       .filter((item) => Number(item.dueAt || 0) <= Date.now())
       .map((item) => item.id);
     const dueSources = sourceSet(dueIds);
-    return uniqueBySource(eligiblePool({ bank, unit })).filter((question) => dueSources.has(sourceKey(question)));
+    return uniqueBySource(eligiblePool({ bank, unit, topics })).filter((question) => dueSources.has(sourceKey(question)));
   }
 
-  function unsolvedPool(bank, unit) {
-    return uniqueBySource(eligiblePool({ bank, unit, unsolvedOnly: true }));
+  function unsolvedPool(bank, unit, topics = []) {
+    return uniqueBySource(eligiblePool({ bank, unit, topics, unsolvedOnly: true }));
   }
 
-  function smartProgressContext(bank, unit) {
+  function smartProgressContext(bank, unit, topics = []) {
     const solved = solvedSet();
     return {
       solvedIds: solved.ids,
       solvedSources: solved.sources,
-      dueSources: new Set(mistakePool(bank, unit).map(sourceKey)),
-      weakTopics: new Set(weakTopicPool(bank, unit).map((question) => question.topic))
+      dueSources: new Set(mistakePool(bank, unit, topics).map(sourceKey)),
+      weakTopics: new Set(weakTopicPool(bank, unit, topics).map((question) => question.topic))
     };
   }
 
@@ -1072,7 +1144,8 @@
 
   function buildRevisionBook(bank, unit, count, seed = "") {
     const engine = revisionEngine();
-    const pool = uniqueBySource(eligiblePool({ bank, unit }));
+    const topics = selectedTopicMix(els.smartTopicMix);
+    const pool = uniqueBySource(eligiblePool({ bank, unit, topics }));
     if (!engine || !pool.length) {
       return { questions: [], analysis: { topics: [], selectedTopics: [], count: pool.length }, availableCount: pool.length };
     }
@@ -1086,7 +1159,7 @@
       includeMistakes: Boolean(els.smartMistakes?.checked),
       includeWeakTopics: Boolean(els.smartWeakTopics?.checked),
       includeUnsolved: Boolean(els.smartUnsolved?.checked),
-      progress: smartProgressContext(bank, unit)
+      progress: smartProgressContext(bank, unit, topics)
     });
   }
 
@@ -1095,14 +1168,15 @@
     const bank = els.smartBank?.value || "all";
     const unit = els.smartUnit?.value || "";
     const count = Number(els.smartCount?.value || 50);
+    const topics = selectedTopicMix(els.smartTopicMix);
     const engine = revisionEngine();
-    const pool = uniqueBySource(eligiblePool({ bank, unit }));
+    const pool = uniqueBySource(eligiblePool({ bank, unit, topics }));
     const analysis = book?.analysis || (engine
       ? engine.analyseTopics(pool, {
           profile: els.smartProfile?.value || "prediction",
           pathway: activePathway(),
           course: course.id,
-          progress: smartProgressContext(bank, unit)
+          progress: smartProgressContext(bank, unit, topics)
         })
       : { topics: [], latestYear: 0, count: pool.length, totalMarks: 0 });
     const selected = book?.questions || [];
@@ -1133,13 +1207,18 @@
     const bank = els.smartBank.value || "all";
     const unit = els.smartUnit.value || "";
     const count = Math.max(50, Number(els.smartCount.value || 50));
-    const seed = `${course.id}:${activePathway()}:${bank}:${unit}:${Date.now()}:${Math.random().toString(16).slice(2)}`;
+    const topics = selectedTopicMix(els.smartTopicMix);
+    const seed = `${course.id}:${activePathway()}:${bank}:${unit}:${topics.join("|")}:${Date.now()}:${Math.random().toString(16).slice(2)}`;
     const book = buildRevisionBook(bank, unit, count, seed);
     const target = book.questions || [];
     lastRevisionBook = book;
     renderSmartAnalysis(book);
     if (!target.length) {
       showBuildMessage("There are no matching questions for this revision book setup yet.");
+      return;
+    }
+    if (target.length < count) {
+      showBuildMessage(`This filter has ${target.length} unique questions. Add more topics or widen the bank to build a ${count}-question revision book without repeating questions.`);
       return;
     }
     const durationChoice = Number(els.smartDuration.value || 0);
@@ -1152,6 +1231,7 @@
       revisionMeta: {
         seed: String(book.seed || "").slice(-8),
         profile: els.smartProfile?.value || "prediction",
+        topicFilterCount: topics.length,
         topicCount: book.analysis?.selectedTopics?.length || 0,
         availableCount: book.availableCount || target.length
       }
@@ -1270,18 +1350,29 @@
   els.reset.addEventListener("click", resetExam);
   els.print.addEventListener("click", () => window.ElitePrint.printWhenReady(els.paper, els.print));
   els.printSolution?.addEventListener("click", () => printCurrentSolutions(els.printSolution));
-  els.randomPreset?.addEventListener("change", () => applyPreset(els.randomPreset.value));
+  els.randomPreset?.addEventListener("change", () => {
+    applyPreset(els.randomPreset.value);
+    refreshTopicOptions();
+  });
+  els.bank?.addEventListener("change", refreshTopicOptions);
   els.unit?.addEventListener("change", refreshTopicOptions);
+  els.topicMix?.addEventListener("change", () => updateTopicMixSummary(els.topicMix, els.topicMixSummary));
   [els.smartBank, els.smartUnit, els.smartProfile, els.smartCount, els.smartDuration, els.smartMistakes, els.smartWeakTopics, els.smartUnsolved]
     .filter(Boolean)
     .forEach((input) => {
       const updateSmartAnalysis = () => {
+        if (input === els.smartBank || input === els.smartUnit) refreshSmartTopicOptions();
         lastRevisionBook = null;
         renderSmartAnalysis();
       };
       input.addEventListener("input", updateSmartAnalysis);
       input.addEventListener("change", updateSmartAnalysis);
     });
+  els.smartTopicMix?.addEventListener("change", () => {
+    lastRevisionBook = null;
+    updateTopicMixSummary(els.smartTopicMix, els.smartTopicMixSummary);
+    renderSmartAnalysis();
+  });
   els.customUnit?.addEventListener("change", () => {
     refreshBuilderTopicOptions();
     refreshBuilderPaperOptions();

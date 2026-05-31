@@ -5873,6 +5873,75 @@ body.pathway-unset .site-header .site-cta {
   width: auto;
 }
 
+.topic-mix-panel {
+  display: grid;
+  gap: 12px;
+  border: 1px solid rgba(207, 201, 190, 0.78);
+  border-radius: 14px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.topic-mix-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--navy);
+}
+
+.topic-mix-head span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.topic-mix-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 8px;
+  max-height: 210px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.topic-mix-grid label {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: center;
+  min-height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 8px 10px;
+  background: #fff;
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.topic-mix-grid input {
+  width: auto;
+}
+
+.topic-mix-grid span {
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.topic-mix-grid em {
+  min-width: 28px;
+  border-radius: 999px;
+  padding: 4px 6px;
+  background: var(--course-soft);
+  color: var(--course-signature);
+  text-align: center;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 900;
+}
+
 .builder-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
