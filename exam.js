@@ -227,6 +227,18 @@
     writeJson(DRAFT_KEY, draftIds);
   }
 
+  function buildConfigKey(config) {
+    return JSON.stringify(config || null);
+  }
+
+  function currentPaperMatches(kind, config) {
+    return Boolean(
+      state.ids?.length &&
+      state.kind === kind &&
+      buildConfigKey(state.buildConfig) === buildConfigKey(config)
+    );
+  }
+
   function savedTests() {
     return readJson(SAVED_TESTS_KEY, []);
   }
@@ -629,46 +641,67 @@
       finishedAt: null,
       ids: [...ids],
       scores: {},
-      revisionMeta: options.revisionMeta || null
+      revisionMeta: options.revisionMeta || null,
+      buildConfig: options.buildConfig || null
     };
     saveState();
     render();
   }
 
-  function startRandomExam() {
-    const avoidSources = els.avoidRepeats?.checked ? recentMockSources() : new Set();
-    const topics = selectedTopicMix(els.topicMix);
-    const count = Math.max(1, Number(els.count.value || 25));
-    const targetMarks = Number(els.targetMarks.value || 0);
-    const picked = buildBalancedPaper({
-      bank: els.bank.value,
+  function randomBuildConfig() {
+    return {
+      mode: "random",
+      course: course.id,
+      pathway: activePathway(),
+      bank: els.bank?.value || "all",
       unit: els.unit?.value || "",
-      topic: els.topic?.value || "",
-      topics,
-      count,
-      targetMarks,
+      topics: selectedTopicMix(els.topicMix),
+      count: Math.max(1, Number(els.count?.value || 25)),
+      targetMarks: Number(els.targetMarks?.value || 0),
       unsolvedOnly: Boolean(els.unsolvedOnly?.checked),
+      avoidRepeats: Boolean(els.avoidRepeats?.checked),
+      durationMinutes: Number(els.duration?.value || 90)
+    };
+  }
+
+  function buildRandomPaper({ startNow = false } = {}) {
+    const config = randomBuildConfig();
+    const avoidSources = config.avoidRepeats ? recentMockSources() : new Set();
+    const picked = buildBalancedPaper({
+      bank: config.bank,
+      unit: config.unit,
+      topic: els.topic?.value || "",
+      topics: config.topics,
+      count: config.count,
+      targetMarks: config.targetMarks,
+      unsolvedOnly: config.unsolvedOnly,
       avoidSources
     });
     if (!picked.length) {
       showBuildMessage("No questions match those mock filters yet. Widen the filters and try again.");
-      return;
+      return false;
     }
-    if (!targetMarks && picked.length < count) {
+    if (!config.targetMarks && picked.length < config.count) {
       showBuildMessage(`This filter has ${picked.length} unique questions. Add more topics or lower the question count to avoid repeating questions.`);
-      return;
+      return false;
     }
     createPaper(
       picked.map((question) => question.id),
       {
-        startNow: true,
+        startNow,
         kind: "random",
-        bank: els.bank.value,
-        unit: els.unit?.value || "",
-        durationMinutes: Number(els.duration.value || 90),
-        title: topics.length ? "Mixed topic mock" : "Random mock"
+        bank: config.bank,
+        unit: config.unit,
+        durationMinutes: config.durationMinutes,
+        title: config.topics.length ? "Mixed topic mock" : "Random mock",
+        buildConfig: config
       }
     );
+    return true;
+  }
+
+  function startRandomExam() {
+    return buildRandomPaper({ startNow: true });
   }
 
   function finishExam() {
@@ -929,10 +962,11 @@
   }
 
   function renderButtons() {
+    const canPrint = canPrintCurrentMode();
     els.finish.disabled = state.status !== "running";
     els.save.disabled = state.status !== "marking" && state.status !== "complete";
-    els.print.disabled = !state.ids.length;
-    if (els.printSolution) els.printSolution.disabled = !state.ids.length;
+    els.print.disabled = !canPrint;
+    if (els.printSolution) els.printSolution.disabled = !canPrint;
     els.saveTest.disabled = !state.ids.length;
     els.start.disabled = state.status === "running";
     els.start.textContent = state.ids.length && state.status === "idle" ? "Start current paper" : "Generate and start";
@@ -944,10 +978,12 @@
     els.modePanels.forEach((panel) => {
       panel.hidden = panel.dataset.modePanel !== mode;
     });
+    renderButtons();
   }
 
   function buildOrStartRandom() {
-    if (state.ids.length && state.status === "idle") {
+    const config = randomBuildConfig();
+    if (state.ids.length && state.status === "idle" && currentPaperMatches("random", config)) {
       state.status = "running";
       state.startedAt = Date.now();
       state.finishedAt = null;
@@ -989,6 +1025,17 @@
 
   function draftQuestions() {
     return draftIds.map(questionById).filter(Boolean);
+  }
+
+  function draftBuildConfig() {
+    return {
+      mode: "custom",
+      course: course.id,
+      pathway: activePathway(),
+      bank: els.customBank?.value || "all",
+      unit: els.customUnit?.value || "",
+      ids: [...draftIds]
+    };
   }
 
   function renderDraft() {
@@ -1048,32 +1095,32 @@
     renderDraft();
   }
 
-  function useDraftAsPaper() {
+  function createDraftPaperFromCurrentDraft() {
     const items = draftQuestions();
-    if (!items.length) return;
+    if (!items.length) return false;
+    const config = draftBuildConfig();
     createPaper([...draftIds], {
       kind: "custom",
-      bank: els.customBank.value || "all",
-      unit: els.customUnit.value || "",
+      bank: config.bank,
+      unit: config.unit,
       durationMinutes: estimatedMinutes(items),
-      title: "Custom test"
+      title: "Custom test",
+      buildConfig: config
     });
+    return true;
+  }
+
+  function useDraftAsPaper() {
+    createDraftPaperFromCurrentDraft();
   }
 
   async function printDraftAsPaper() {
-    const items = draftQuestions();
-    if (!items.length) return;
-    createPaper([...draftIds], {
-      kind: "custom",
-      bank: els.customBank.value || "all",
-      unit: els.customUnit.value || "",
-      durationMinutes: estimatedMinutes(items),
-      title: "Custom test"
-    });
+    if (!createDraftPaperFromCurrentDraft()) return;
     await window.ElitePrint.printWhenReady(els.paper, els.printDraft);
   }
 
   async function printCurrentSolutions(trigger = els.printSolution) {
+    if (!ensurePaperForCurrentMode()) return;
     if (!state.ids.length) return;
     if (window.MathJax?.typesetPromise) {
       await window.MathJax.typesetPromise([els.paper]).catch(() => {});
@@ -1087,15 +1134,7 @@
   }
 
   async function printDraftSolutionsAsPaper() {
-    const items = draftQuestions();
-    if (!items.length) return;
-    createPaper([...draftIds], {
-      kind: "custom",
-      bank: els.customBank.value || "all",
-      unit: els.customUnit.value || "",
-      durationMinutes: estimatedMinutes(items),
-      title: "Custom test"
-    });
+    if (!createDraftPaperFromCurrentDraft()) return;
     await printCurrentSolutions(els.printDraftSolution);
   }
 
@@ -1145,7 +1184,8 @@
 
   function buildRevisionBook(bank, unit, count, seed = "") {
     const engine = revisionEngine();
-    const topics = selectedTopicMix(els.smartTopicMix);
+    const config = smartBuildConfig();
+    const topics = config.topics;
     const pool = uniqueBySource(eligiblePool({ bank, unit, topics }));
     if (!engine || !pool.length) {
       return { questions: [], analysis: { topics: [], selectedTopics: [], count: pool.length }, availableCount: pool.length };
@@ -1153,13 +1193,13 @@
     return engine.buildRevisionBook(pool, {
       count,
       minimumCount: count,
-      profile: els.smartProfile?.value || "prediction",
-      pathway: activePathway(),
+      profile: config.profile,
+      pathway: config.pathway,
       course: course.id,
       seed,
-      includeMistakes: Boolean(els.smartMistakes?.checked),
-      includeWeakTopics: Boolean(els.smartWeakTopics?.checked),
-      includeUnsolved: Boolean(els.smartUnsolved?.checked),
+      includeMistakes: config.includeMistakes,
+      includeWeakTopics: config.includeWeakTopics,
+      includeUnsolved: config.includeUnsolved,
       progress: smartProgressContext(bank, unit, topics)
     });
   }
@@ -1204,11 +1244,29 @@
     }).join("") || `<div class="empty-roadmap">Choose a bank to see the revision topic plan.</div>`;
   }
 
+  function smartBuildConfig() {
+    return {
+      mode: "revision-book",
+      course: course.id,
+      pathway: activePathway(),
+      bank: els.smartBank?.value || "all",
+      unit: els.smartUnit?.value || "",
+      profile: els.smartProfile?.value || "prediction",
+      count: Math.max(MIN_REVISION_COUNT, Number(els.smartCount?.value || 50)),
+      durationMinutes: Number(els.smartDuration?.value || 0),
+      topics: selectedTopicMix(els.smartTopicMix),
+      includeMistakes: Boolean(els.smartMistakes?.checked),
+      includeWeakTopics: Boolean(els.smartWeakTopics?.checked),
+      includeUnsolved: Boolean(els.smartUnsolved?.checked)
+    };
+  }
+
   function buildSmartRevision() {
-    const bank = els.smartBank.value || "all";
-    const unit = els.smartUnit.value || "";
-    const count = Math.max(MIN_REVISION_COUNT, Number(els.smartCount.value || 50));
-    const topics = selectedTopicMix(els.smartTopicMix);
+    const config = smartBuildConfig();
+    const bank = config.bank;
+    const unit = config.unit;
+    const count = config.count;
+    const topics = config.topics;
     const seed = `${course.id}:${activePathway()}:${bank}:${unit}:${topics.join("|")}:${Date.now()}:${Math.random().toString(16).slice(2)}`;
     const book = buildRevisionBook(bank, unit, count, seed);
     const target = book.questions || [];
@@ -1216,27 +1274,66 @@
     renderSmartAnalysis(book);
     if (!target.length) {
       showBuildMessage("There are no matching questions for this revision book setup yet.");
-      return;
+      return false;
     }
     if (target.length < count) {
       showBuildMessage(`This filter has ${target.length} unique questions. Add more topics or widen the bank to build a ${count}-question revision book without repeating questions.`);
-      return;
+      return false;
     }
-    const durationChoice = Number(els.smartDuration.value || 0);
+    const durationChoice = config.durationMinutes;
     createPaper(target.map((question) => question.id), {
       kind: "revision-book",
       bank,
       unit,
       durationMinutes: durationChoice > 0 ? durationChoice : estimatedMinutes(target),
       title: "Revision book",
+      buildConfig: config,
       revisionMeta: {
         seed: String(book.seed || "").slice(-8),
-        profile: els.smartProfile?.value || "prediction",
+        profile: config.profile,
         topicFilterCount: topics.length,
         topicCount: book.analysis?.selectedTopics?.length || 0,
         availableCount: book.availableCount || target.length
       }
     });
+    return true;
+  }
+
+  function canPrintCurrentMode() {
+    if (activeMode === "random" || activeMode === "smart") return true;
+    if (activeMode === "custom") {
+      return Boolean(draftIds.length || (state.kind === "custom" && state.ids?.length));
+    }
+    return Boolean(state.ids?.length);
+  }
+
+  function ensurePaperForCurrentMode() {
+    if (activeMode === "random") {
+      const config = randomBuildConfig();
+      if (currentPaperMatches("random", config)) return true;
+      return buildRandomPaper({ startNow: false });
+    }
+    if (activeMode === "smart") {
+      const config = smartBuildConfig();
+      if (currentPaperMatches("revision-book", config)) return true;
+      return buildSmartRevision();
+    }
+    if (activeMode === "custom") {
+      if (draftIds.length) {
+        const config = draftBuildConfig();
+        if (currentPaperMatches("custom", config)) return true;
+        return createDraftPaperFromCurrentDraft();
+      }
+      if (state.kind === "custom" && state.ids?.length) return true;
+      showBuildMessage("Add questions to the current test before printing.");
+      return false;
+    }
+    return Boolean(state.ids?.length);
+  }
+
+  async function printCurrentPaper(trigger = els.print) {
+    if (!ensurePaperForCurrentMode()) return;
+    await window.ElitePrint.printWhenReady(els.paper, trigger);
   }
 
   function saveCurrentTest() {
@@ -1349,7 +1446,7 @@
   els.save.addEventListener("click", saveMarks);
   els.saveTest.addEventListener("click", saveCurrentTest);
   els.reset.addEventListener("click", resetExam);
-  els.print.addEventListener("click", () => window.ElitePrint.printWhenReady(els.paper, els.print));
+  els.print.addEventListener("click", () => printCurrentPaper(els.print));
   els.printSolution?.addEventListener("click", () => printCurrentSolutions(els.printSolution));
   els.randomPreset?.addEventListener("change", () => {
     applyPreset(els.randomPreset.value);
