@@ -561,6 +561,118 @@
     });
   }
 
+  function normaliseTopicList(topics = []) {
+    return [...new Set((Array.isArray(topics) ? topics : []).map(String).filter(Boolean))];
+  }
+
+  function buildTopicQuotas(topics, count, availableByTopic) {
+    const quotas = new Map(topics.map((topic) => [topic, 0]));
+    const eligibleTopics = topics.filter((topic) => Number(availableByTopic.get(topic) || 0) > 0);
+    if (!eligibleTopics.length || count <= 0) return quotas;
+
+    const base = Math.floor(count / eligibleTopics.length);
+    const extraCount = count % eligibleTopics.length;
+    const extraTopics = new Set(shuffle(eligibleTopics).slice(0, extraCount));
+
+    eligibleTopics.forEach((topic) => {
+      quotas.set(topic, base + (extraTopics.has(topic) ? 1 : 0));
+    });
+
+    let deficit = 0;
+    eligibleTopics.forEach((topic) => {
+      const available = Number(availableByTopic.get(topic) || 0);
+      const quota = Number(quotas.get(topic) || 0);
+      if (quota > available) {
+        deficit += quota - available;
+        quotas.set(topic, available);
+      }
+    });
+
+    while (deficit > 0) {
+      const candidates = shuffle(eligibleTopics)
+        .filter((topic) => Number(quotas.get(topic) || 0) < Number(availableByTopic.get(topic) || 0))
+        .sort((a, b) =>
+          Number(quotas.get(a) || 0) - Number(quotas.get(b) || 0) ||
+          Number(availableByTopic.get(b) || 0) - Number(availableByTopic.get(a) || 0)
+        );
+      if (!candidates.length) break;
+      const topic = candidates[0];
+      quotas.set(topic, Number(quotas.get(topic) || 0) + 1);
+      deficit -= 1;
+    }
+
+    return quotas;
+  }
+
+  function nextUnusedFromTopic(list, usedSources) {
+    while (list.length && usedSources.has(sourceKey(list[0]))) {
+      list.shift();
+    }
+    return list.shift() || null;
+  }
+
+  function hasUnusedTopicQuestion(list, usedSources) {
+    return (list || []).some((question) => !usedSources.has(sourceKey(question)));
+  }
+
+  function buildTopicBalancedPaper(pool, options = {}) {
+    const topics = normaliseTopicList(options.topics);
+    if (topics.length <= 1) return null;
+
+    const count = Math.max(1, Number(options.count || 25));
+    const targetMarks = Number(options.targetMarks || 0);
+    const byTopic = new Map();
+    const availableByTopic = new Map();
+    const picked = [];
+    const usedSources = new Set();
+    const topicCounts = new Map(topics.map((topic) => [topic, 0]));
+
+    topics.forEach((topic) => {
+      const topicPool = shuffle(pool.filter((question) => questionMatchesTopic(question, topic)));
+      byTopic.set(topic, topicPool);
+      availableByTopic.set(topic, topicPool.length);
+    });
+
+    const quotas = buildTopicQuotas(topics, count, availableByTopic);
+    const targetReached = () =>
+      picked.length >= count ||
+      (targetMarks && picked.length && totalMarksForQuestions(picked) >= targetMarks);
+
+    function addFromTopic(topic) {
+      if (targetReached()) return false;
+      const next = nextUnusedFromTopic(byTopic.get(topic) || [], usedSources);
+      if (!next) return false;
+      picked.push(next);
+      usedSources.add(sourceKey(next));
+      topicCounts.set(topic, Number(topicCounts.get(topic) || 0) + 1);
+      return true;
+    }
+
+    let added = true;
+    while (!targetReached() && added) {
+      added = false;
+      const orderedTopics = shuffle(topics).sort((a, b) => {
+        const aRemaining = Number(quotas.get(a) || 0) - Number(topicCounts.get(a) || 0);
+        const bRemaining = Number(quotas.get(b) || 0) - Number(topicCounts.get(b) || 0);
+        return bRemaining - aRemaining;
+      });
+      orderedTopics.forEach((topic) => {
+        if (targetReached()) return;
+        if (Number(topicCounts.get(topic) || 0) >= Number(quotas.get(topic) || 0)) return;
+        added = addFromTopic(topic) || added;
+      });
+    }
+
+    while (!targetReached()) {
+      const candidates = shuffle(topics)
+        .filter((topic) => hasUnusedTopicQuestion(byTopic.get(topic), usedSources))
+        .sort((a, b) => Number(topicCounts.get(a) || 0) - Number(topicCounts.get(b) || 0));
+      if (!candidates.length || !addFromTopic(candidates[0])) break;
+    }
+
+    return picked.slice(0, count);
+  }
+
   function totalMarksForQuestions(items) {
     return items.reduce((sum, question) => sum + Number(question.marks || 0), 0);
   }
@@ -578,6 +690,8 @@
     const pool = uniqueBySource(eligiblePool(options));
     const count = Number(options.count || 25);
     const targetMarks = Number(options.targetMarks || 0);
+    const topicBalanced = buildTopicBalancedPaper(pool, { ...options, count, targetMarks });
+    if (topicBalanced) return topicBalanced;
     const quickTarget = Math.max(2, Math.round(count * 0.28));
     const standardTarget = Math.max(3, Math.round(count * 0.4));
     const picked = [];
