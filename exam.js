@@ -121,6 +121,7 @@
   const MIN_REVISION_COUNT = 10;
   const DRAFT_KEY = `eliteTestBuilderDraftV1${keySuffix}`;
   const MAX_FILTER_RESULTS = 80;
+  const RANDOM_BUILD_VERSION = "random-topic-split-v2";
 
   const els = {
     modeTabs: [...document.querySelectorAll("[data-exam-mode]")],
@@ -765,6 +766,7 @@
   function randomBuildConfig() {
     return {
       mode: "random",
+      buildVersion: RANDOM_BUILD_VERSION,
       course: course.id,
       pathway: activePathway(),
       bank: els.bank?.value || "all",
