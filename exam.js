@@ -122,6 +122,8 @@
   const DRAFT_KEY = `eliteTestBuilderDraftV1${keySuffix}`;
   const MAX_FILTER_RESULTS = 80;
   const RANDOM_BUILD_VERSION = "random-topic-split-v2";
+  const REVISION_BUILD_VERSION = "revision-book-v2";
+  const CUSTOM_BUILD_VERSION = "custom-test-v2";
 
   const els = {
     modeTabs: [...document.querySelectorAll("[data-exam-mode]")],
@@ -312,6 +314,14 @@
   function selectedTopicMix(container) {
     if (!container) return [];
     return [...container.querySelectorAll("input[type='checkbox']:checked")].map((input) => input.value);
+  }
+
+  function combinedTopicSelection(singleTopic, container) {
+    return normaliseTopicList([singleTopic || "", ...selectedTopicMix(container)]);
+  }
+
+  function randomTopicSelection() {
+    return combinedTopicSelection(els.topic?.value || "", els.topicMix);
   }
 
   function setTopicMix(container, topics = []) {
@@ -771,7 +781,7 @@
       pathway: activePathway(),
       bank: els.bank?.value || "all",
       unit: els.unit?.value || "",
-      topics: selectedTopicMix(els.topicMix),
+      topics: randomTopicSelection(),
       count: Math.max(1, Number(els.count?.value || 25)),
       targetMarks: Number(els.targetMarks?.value || 0),
       unsolvedOnly: Boolean(els.unsolvedOnly?.checked),
@@ -786,7 +796,7 @@
     const picked = buildBalancedPaper({
       bank: config.bank,
       unit: config.unit,
-      topic: els.topic?.value || "",
+      topic: "",
       topics: config.topics,
       count: config.count,
       targetMarks: config.targetMarks,
@@ -1079,13 +1089,14 @@
 
   function renderButtons() {
     const canPrint = canPrintCurrentMode();
+    const primary = primaryActionState();
     els.finish.disabled = state.status !== "running";
     els.save.disabled = state.status !== "marking" && state.status !== "complete";
     els.print.disabled = !canPrint;
     if (els.printSolution) els.printSolution.disabled = !canPrint;
     els.saveTest.disabled = !state.ids.length;
-    els.start.disabled = state.status === "running";
-    els.start.textContent = state.ids.length && state.status === "idle" ? "Start current paper" : "Generate and start";
+    els.start.disabled = primary.disabled || state.status === "running";
+    els.start.textContent = primary.label;
   }
 
   function switchMode(mode) {
@@ -1100,18 +1111,45 @@
   function buildOrStartRandom() {
     const config = randomBuildConfig();
     if (state.ids.length && state.status === "idle" && currentPaperMatches("random", config)) {
-      state.status = "running";
-      state.startedAt = Date.now();
-      state.finishedAt = null;
-      saveState();
-      render();
+      startCurrentPaper();
       return;
     }
     startRandomExam();
   }
 
+  function startCurrentPaper() {
+    if (!state.ids?.length || state.status !== "idle") return false;
+    state.status = "running";
+    state.startedAt = Date.now();
+    state.finishedAt = null;
+    saveState();
+    render();
+    return true;
+  }
+
   function renderBuilderResults() {
-    filteredBuilderQuestions = uniqueBySource(eligiblePool({
+    filteredBuilderQuestions = uniqueBySource(eligiblePool(builderFilterConfig()));
+    const shown = filteredBuilderQuestions.slice(0, MAX_FILTER_RESULTS);
+    els.customSummary.textContent = `${filteredBuilderQuestions.length} matching question${filteredBuilderQuestions.length === 1 ? "" : "s"}${filteredBuilderQuestions.length > MAX_FILTER_RESULTS ? `, showing first ${MAX_FILTER_RESULTS}` : ""}`;
+    els.customResults.innerHTML = shown.map((question) => {
+      const exactDraft = draftIds.includes(question.id);
+      const sourceInDraft = draftSourceSet().has(sourceKey(question));
+      const inDraft = exactDraft || sourceInDraft;
+      return `<article class="builder-result ${inDraft ? "selected" : ""}">
+        <div class="builder-result-copy">
+          <strong>${escapeHtml(question.topic)}</strong>
+          <span>${escapeHtml(question.paper)} Q${question.question} | ${escapeHtml(displayUnit(question) || "")}</span>
+        </div>
+        <div class="builder-result-actions">
+          <em>${question.marks} marks</em>
+          <button type="button" data-builder-toggle="${escapeHtml(question.id)}" ${!exactDraft && sourceInDraft ? "disabled" : ""}>${exactDraft ? "Remove" : sourceInDraft ? "Added" : "Add"}</button>
+        </div>
+      </article>`;
+    }).join("") || `<div class="empty-roadmap">No questions match these filters.</div>`;
+  }
+
+  function builderFilterConfig(overrides = {}) {
+    return {
       bank: els.customBank.value,
       unit: els.customUnit.value,
       topic: els.customTopic.value,
@@ -1120,23 +1158,9 @@
       status: els.customStatus.value,
       minMarks: els.customMinMarks.value,
       maxMarks: els.customMaxMarks.value,
-      search: els.customSearch.value
-    }));
-    const shown = filteredBuilderQuestions.slice(0, MAX_FILTER_RESULTS);
-    els.customSummary.textContent = `${filteredBuilderQuestions.length} matching question${filteredBuilderQuestions.length === 1 ? "" : "s"}${filteredBuilderQuestions.length > MAX_FILTER_RESULTS ? `, showing first ${MAX_FILTER_RESULTS}` : ""}`;
-    els.customResults.innerHTML = shown.map((question) => {
-      const inDraft = draftIds.includes(question.id);
-      return `<article class="builder-result ${inDraft ? "selected" : ""}">
-        <div class="builder-result-copy">
-          <strong>${escapeHtml(question.topic)}</strong>
-          <span>${escapeHtml(question.paper)} Q${question.question} | ${escapeHtml(displayUnit(question) || "")}</span>
-        </div>
-        <div class="builder-result-actions">
-          <em>${question.marks} marks</em>
-          <button type="button" data-builder-toggle="${escapeHtml(question.id)}">${inDraft ? "Remove" : "Add"}</button>
-        </div>
-      </article>`;
-    }).join("") || `<div class="empty-roadmap">No questions match these filters.</div>`;
+      search: els.customSearch.value,
+      ...overrides
+    };
   }
 
   function draftQuestions() {
@@ -1146,6 +1170,7 @@
   function draftBuildConfig() {
     return {
       mode: "custom",
+      buildVersion: CUSTOM_BUILD_VERSION,
       course: course.id,
       pathway: activePathway(),
       bank: els.customBank?.value || "all",
@@ -1172,11 +1197,30 @@
         <button type="button" data-draft-remove="${escapeHtml(question.id)}">Remove</button>
       </div>
     </article>`).join("") || `<div class="empty-roadmap">Your selected questions will appear here.</div>`;
+    renderButtons();
+  }
+
+  function draftSourceSet(excludeId = "") {
+    return new Set(
+      draftIds
+        .filter((id) => id !== excludeId)
+        .map(questionById)
+        .filter(Boolean)
+        .map(sourceKey)
+    );
+  }
+
+  function addQuestionToDraft(id) {
+    const question = questionById(id);
+    if (!question || draftIds.includes(id)) return false;
+    if (draftSourceSet().has(sourceKey(question))) return false;
+    draftIds.push(id);
+    return true;
   }
 
   function toggleDraft(id) {
     if (draftIds.includes(id)) draftIds = draftIds.filter((item) => item !== id);
-    else draftIds.push(id);
+    else addQuestionToDraft(id);
     saveDraft();
     renderBuilderResults();
     renderDraft();
@@ -1184,17 +1228,15 @@
 
   function addVisibleToDraft() {
     const ids = filteredBuilderQuestions.slice(0, MAX_FILTER_RESULTS).map((question) => question.id);
-    ids.forEach((id) => {
-      if (!draftIds.includes(id)) draftIds.push(id);
-    });
+    ids.forEach(addQuestionToDraft);
     saveDraft();
     renderBuilderResults();
     renderDraft();
   }
 
   function addPracticeSelectedToDraft() {
-    uniqueBySource(eligiblePool({ bank: els.customBank.value || "all", status: "selected" })).forEach((question) => {
-      if (!draftIds.includes(question.id)) draftIds.push(question.id);
+    uniqueBySource(eligiblePool(builderFilterConfig({ status: "selected" }))).forEach((question) => {
+      addQuestionToDraft(question.id);
     });
     saveDraft();
     renderBuilderResults();
@@ -1211,11 +1253,12 @@
     renderDraft();
   }
 
-  function createDraftPaperFromCurrentDraft() {
+  function createDraftPaperFromCurrentDraft({ startNow = false } = {}) {
     const items = draftQuestions();
     if (!items.length) return false;
     const config = draftBuildConfig();
     createPaper([...draftIds], {
+      startNow,
       kind: "custom",
       bank: config.bank,
       unit: config.unit,
@@ -1363,6 +1406,7 @@
   function smartBuildConfig() {
     return {
       mode: "revision-book",
+      buildVersion: REVISION_BUILD_VERSION,
       course: course.id,
       pathway: activePathway(),
       bank: els.smartBank?.value || "all",
@@ -1377,7 +1421,7 @@
     };
   }
 
-  function buildSmartRevision() {
+  function buildSmartRevision({ startNow = false } = {}) {
     const config = smartBuildConfig();
     const bank = config.bank;
     const unit = config.unit;
@@ -1398,6 +1442,7 @@
     }
     const durationChoice = config.durationMinutes;
     createPaper(target.map((question) => question.id), {
+      startNow,
       kind: "revision-book",
       bank,
       unit,
@@ -1413,6 +1458,61 @@
       }
     });
     return true;
+  }
+
+  function primaryActionState() {
+    if (activeMode === "random") {
+      const canStartCurrent = state.status === "idle" && currentPaperMatches("random", randomBuildConfig());
+      return { disabled: false, label: canStartCurrent ? "Start current paper" : "Generate and start" };
+    }
+    if (activeMode === "smart") {
+      const canStartCurrent = state.status === "idle" && currentPaperMatches("revision-book", smartBuildConfig());
+      return { disabled: state.status === "running", label: canStartCurrent ? "Start revision book" : "Build revision book" };
+    }
+    if (activeMode === "custom") {
+      const canStartCurrent = state.status === "idle" && (
+        (draftIds.length && currentPaperMatches("custom", draftBuildConfig())) ||
+        (!draftIds.length && state.kind === "custom" && state.ids?.length)
+      );
+      if (canStartCurrent) return { disabled: false, label: "Start current test" };
+      return { disabled: !draftIds.length || state.status === "running", label: draftIds.length ? "Use current test" : "Add questions first" };
+    }
+    if (activeMode === "saved") {
+      return { disabled: true, label: "Choose saved test" };
+    }
+    return { disabled: true, label: "Generate and start" };
+  }
+
+  function handlePrimaryAction() {
+    if (activeMode === "random") {
+      buildOrStartRandom();
+      return;
+    }
+    if (activeMode === "smart") {
+      const config = smartBuildConfig();
+      if (currentPaperMatches("revision-book", config) && state.status === "idle") {
+        startCurrentPaper();
+        return;
+      }
+      buildSmartRevision();
+      return;
+    }
+    if (activeMode === "custom") {
+      if (draftIds.length) {
+        const config = draftBuildConfig();
+        if (currentPaperMatches("custom", config) && state.status === "idle") {
+          startCurrentPaper();
+          return;
+        }
+        createDraftPaperFromCurrentDraft();
+        return;
+      }
+      if (state.kind === "custom" && state.ids?.length && state.status === "idle") {
+        startCurrentPaper();
+        return;
+      }
+      showBuildMessage("Add questions to the current test first.");
+    }
   }
 
   function canPrintCurrentMode() {
@@ -1461,21 +1561,44 @@
     items.unshift({
       id: `test-${Date.now()}`,
       name: name.trim(),
+      course: course.id,
+      pathway: activePathway(),
       bank: state.bank || "all",
       unit: state.unit || "",
       kind: state.kind || "custom",
       durationSeconds: state.durationSeconds || 0,
-      ids: state.ids,
+      ids: [...state.ids],
       revisionMeta: state.revisionMeta || null,
+      buildConfig: state.buildConfig || null,
       createdAt: Date.now()
     });
     saveSavedTests(items.slice(0, 24));
     renderSavedTests();
   }
 
+  function savedUnitContext() {
+    return els.unit?.value || els.customUnit?.value || els.smartUnit?.value || "";
+  }
+
+  function savedTestCompatible(item) {
+    if (!item || (item.course && item.course !== course.id)) return false;
+    if (item.pathway && item.pathway !== activePathway()) return false;
+    const ids = Array.isArray(item.ids) ? item.ids : [];
+    const qs = ids.map(questionById).filter(Boolean);
+    if (!ids.length || qs.length !== ids.length) return false;
+    const unit = savedUnitContext();
+    return !unit || qs.every((question) => displayUnit(question) === unit);
+  }
+
+  function visibleSavedTests() {
+    return savedTests().filter(savedTestCompatible);
+  }
+
   function renderSavedTests() {
-    const items = savedTests();
-    els.savedSummary.textContent = `${items.length} saved test${items.length === 1 ? "" : "s"}`;
+    const allItems = savedTests();
+    const items = visibleSavedTests();
+    const hiddenCount = Math.max(0, allItems.length - items.length);
+    els.savedSummary.textContent = `${items.length} saved test${items.length === 1 ? "" : "s"} for this tab${hiddenCount ? ` | ${hiddenCount} hidden by course/unit` : ""}`;
     els.savedTests.innerHTML = items.map((item) => {
       const qs = item.ids.map(questionById).filter(Boolean);
       return `<article class="saved-test">
@@ -1493,12 +1616,15 @@
   }
 
   function savedTestById(id) {
-    return savedTests().find((item) => item.id === id);
+    return visibleSavedTests().find((item) => item.id === id);
   }
 
   async function loadSavedTest(id, printAfter = false, trigger) {
     const test = savedTestById(id);
-    if (!test) return;
+    if (!test) {
+      showBuildMessage("This saved test belongs to another course or unit.");
+      return;
+    }
     state = {
       status: "idle",
       kind: test.kind || "custom",
@@ -1510,7 +1636,8 @@
       finishedAt: null,
       ids: test.ids,
       scores: {},
-      revisionMeta: test.revisionMeta || null
+      revisionMeta: test.revisionMeta || null,
+      buildConfig: test.buildConfig || null
     };
     saveState();
     render();
@@ -1557,7 +1684,7 @@
   }
 
   els.modeTabs.forEach((button) => button.addEventListener("click", () => switchMode(button.dataset.examMode)));
-  els.start.addEventListener("click", buildOrStartRandom);
+  els.start.addEventListener("click", handlePrimaryAction);
   els.finish.addEventListener("click", finishExam);
   els.save.addEventListener("click", saveMarks);
   els.saveTest.addEventListener("click", saveCurrentTest);
@@ -1609,7 +1736,7 @@
   els.useDraft?.addEventListener("click", useDraftAsPaper);
   els.printDraft?.addEventListener("click", printDraftAsPaper);
   els.printDraftSolution?.addEventListener("click", printDraftSolutionsAsPaper);
-  els.generateSmart?.addEventListener("click", buildSmartRevision);
+  els.generateSmart?.addEventListener("click", () => buildSmartRevision());
   els.customResults?.addEventListener("click", (event) => {
     const button = event.target.closest("[data-builder-toggle]");
     if (button) toggleDraft(button.dataset.builderToggle);
