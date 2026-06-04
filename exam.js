@@ -332,6 +332,16 @@
     });
   }
 
+  function setTopicMixByMode(container, mode = "clear") {
+    if (!container) return;
+    container.querySelectorAll("input[type='checkbox']").forEach((input) => {
+      const row = input.closest("label");
+      const available = Number(row?.querySelector("em")?.textContent || 0) > 0;
+      input.checked = mode === "all" || (mode === "available" && available);
+    });
+    container.dispatchEvent(new Event("change", { bubbles: true }));
+  }
+
   function topicPoolCount(topic, bank, unit) {
     return questions
       .filter((question) => questionMatchesBank(question, bank))
@@ -1698,6 +1708,12 @@
   els.bank?.addEventListener("change", refreshTopicOptions);
   els.unit?.addEventListener("change", refreshTopicOptions);
   els.topicMix?.addEventListener("change", () => updateTopicMixSummary(els.topicMix, els.topicMixSummary));
+  document.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-topic-mix-action][data-topic-mix-target]");
+    if (!button) return;
+    const container = document.getElementById(button.dataset.topicMixTarget);
+    setTopicMixByMode(container, button.dataset.topicMixAction);
+  });
   [els.smartBank, els.smartUnit, els.smartProfile, els.smartCount, els.smartDuration, els.smartMistakes, els.smartWeakTopics, els.smartUnsolved]
     .filter(Boolean)
     .forEach((input) => {

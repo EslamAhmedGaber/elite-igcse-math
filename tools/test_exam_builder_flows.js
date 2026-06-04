@@ -263,6 +263,14 @@ function pageScript(body) {
       const state = () => readJson(examKey(), {});
       const printCalls = () => window.__eliteTest.printCalls;
       const selectedTopics = (selector) => [...document.querySelectorAll(selector + " input[type='checkbox']:checked")].map((input) => input.value);
+      const clickTopicMixAction = async (selector, action) => {
+        const id = selector.replace(/^#/, "");
+        const button = document.querySelector("[data-topic-mix-target='" + id + "'][data-topic-mix-action='" + action + "']");
+        if (!button) throw new Error("Missing topic mix " + action + " button for " + selector);
+        button.click();
+        await frame();
+        return selectedTopics(selector);
+      };
       const selectTopics = async (selector, count, targetCount = 10) => {
         const minimum = Math.max(1, Math.floor(targetCount / Math.max(1, count)));
         const boxes = [...document.querySelectorAll(selector + " input[type='checkbox']")]
@@ -348,6 +356,10 @@ async function runRoute(page, route) {
 
   const random = await evaluate(page, pageScript(`
     await setValue("#examCount", 10);
+    const availableTopics = await clickTopicMixAction("#examTopicMix", "available");
+    if (!availableTopics.length) throw new Error("Available topic action selected no topics");
+    const clearedTopics = await clickTopicMixAction("#examTopicMix", "clear");
+    if (clearedTopics.length) throw new Error("Clear topic action did not clear topics");
     const topics = await selectTopics("#examTopicMix", 3, 10);
     await click("#printExamBtn");
     await waitForPrint(1);
@@ -392,6 +404,10 @@ async function runRoute(page, route) {
   const revision = await evaluate(page, pageScript(`
     await click("[data-exam-mode='smart']");
     await setValue("#smartCount", 10);
+    const availableTopics = await clickTopicMixAction("#smartTopicMix", "available");
+    if (!availableTopics.length) throw new Error("Revision available topic action selected no topics");
+    const clearedTopics = await clickTopicMixAction("#smartTopicMix", "clear");
+    if (clearedTopics.length) throw new Error("Revision clear topic action did not clear topics");
     const topics = await selectTopics("#smartTopicMix", 3, 10);
     await click("#printSolutionBtn");
     await waitForPrint(2);

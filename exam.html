@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="pathway-bootstrap.js?v=20260528a"></script>
-  <link rel="stylesheet" href="styles.css?v=20260531a">
+  <link rel="stylesheet" href="styles.css?v=20260604a">
   <script defer src="pathway-mode.js?v=20260527a"></script>
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js"></script>
@@ -36,7 +36,7 @@
   <script defer src="ial/wma11/wma11-data.js?v=20260527c"></script>
   <script defer src="print-utils.js?v=20260527a"></script>
   <script defer src="revision-engine.js?v=20260530b"></script>
-  <script defer src="exam.js?v=20260601b"></script>
+  <script defer src="exam.js?v=20260604a"></script>
   <script defer src="course-modules.js?v=20260531b"></script>
   <script defer src="lead.js?v=20260528e"></script>
 </head>
@@ -195,7 +195,14 @@
         <section class="topic-mix-panel" aria-labelledby="examTopicMixTitle">
           <div class="topic-mix-head">
             <strong id="examTopicMixTitle">Topic mix</strong>
-            <span id="examTopicMixSummary">All topics</span>
+            <div class="topic-mix-head-right">
+              <span id="examTopicMixSummary">All topics</span>
+              <div class="topic-mix-actions" aria-label="Random topic mix quick actions">
+                <button type="button" data-topic-mix-action="available" data-topic-mix-target="examTopicMix">Available</button>
+                <button type="button" data-topic-mix-action="all" data-topic-mix-target="examTopicMix">All</button>
+                <button type="button" data-topic-mix-action="clear" data-topic-mix-target="examTopicMix">Clear</button>
+              </div>
+            </div>
           </div>
           <div id="examTopicMix" class="topic-mix-grid"></div>
         </section>
@@ -343,7 +350,14 @@
         <section class="topic-mix-panel" aria-labelledby="smartTopicMixTitle">
           <div class="topic-mix-head">
             <strong id="smartTopicMixTitle">Topic mix</strong>
-            <span id="smartTopicMixSummary">All topics</span>
+            <div class="topic-mix-head-right">
+              <span id="smartTopicMixSummary">All topics</span>
+              <div class="topic-mix-actions" aria-label="Revision topic mix quick actions">
+                <button type="button" data-topic-mix-action="available" data-topic-mix-target="smartTopicMix">Available</button>
+                <button type="button" data-topic-mix-action="all" data-topic-mix-target="smartTopicMix">All</button>
+                <button type="button" data-topic-mix-action="clear" data-topic-mix-target="smartTopicMix">Clear</button>
+              </div>
+            </div>
           </div>
           <div id="smartTopicMix" class="topic-mix-grid"></div>
         </section>
