@@ -25,7 +25,12 @@ ASSET_ROOT = ROOT
 DOWNLOADS_DIR = ROOT / "downloads"
 PRIVATE_OUTPUT = ROOT / "private_output"
 GITIGNORE = ROOT / ".gitignore"
-WMA11_DATA_PATH = ROOT / "ial" / "wma11" / "wma11-data.js"
+CURRENT_PATHWAY_BOOTSTRAP_VERSION = "20260611a"
+CURRENT_LEAD_VERSION = "20260611a"
+IAL_DATA_FILES = {
+    "wma11": (ROOT / "ial" / "wma11" / "wma11-data.js", "WMA11_QUESTIONS"),
+    "wma12": (ROOT / "ial" / "wma12" / "wma12-data.js", "WMA12_QUESTIONS"),
+}
 
 LINEAR_UNITS = {
     "Numbers & the Number System",
@@ -128,6 +133,7 @@ ALLOWED_PUBLIC_SOLUTION_DIRS = {
     "downloads/ClassifiedSolutions",
     "downloads/PastPaperSolutions",
     "downloads/IAL/WMA11/Papers",
+    "downloads/IAL/WMA12/Papers",
 }
 
 ALLOWED_PUBLIC_SOLUTION_FILES = {
@@ -306,6 +312,7 @@ def verify_pathway_palette_activation(report: Report) -> None:
         "admin.html",
         "ial/index.html",
         "ial/wma11/index.html",
+        "ial/wma12/index.html",
     ]
     for page in required_pages:
         path = ROOT / page
@@ -316,9 +323,9 @@ def verify_pathway_palette_activation(report: Report) -> None:
             report.error(f"{page} must load pathway-bootstrap.js before site CSS.")
         elif styles_pos != -1 and bootstrap_pos > styles_pos:
             report.error(f"{page} loads pathway-bootstrap.js after styles.css; palette may flash incorrectly.")
-        if "pathway-bootstrap.js?v=" in text and "pathway-bootstrap.js?v=20260528a" not in text:
+        if "pathway-bootstrap.js?v=" in text and f"pathway-bootstrap.js?v={CURRENT_PATHWAY_BOOTSTRAP_VERSION}" not in text:
             report.error(f"{page} must reference the current pathway-bootstrap.js cache-buster.")
-        if "lead.js?v=" in text and "lead.js?v=20260528e" not in text:
+        if "lead.js?v=" in text and f"lead.js?v={CURRENT_LEAD_VERSION}" not in text:
             report.error(f"{page} must reference the current lead.js cache-buster.")
 
 
@@ -494,19 +501,20 @@ def extract_js_assignment_array(text: str, name: str) -> list[Any] | None:
     return json.loads(match.group(1))
 
 
-def verify_wma11_solutions(report: Report) -> None:
-    if not WMA11_DATA_PATH.exists():
-        report.error("ial/wma11/wma11-data.js is missing.")
+def verify_ial_course_solutions(report: Report, course_id: str, data_path: Path, assignment_name: str) -> None:
+    data_label = data_path.name
+    if not data_path.exists():
+        report.error(f"{rel(data_path)} is missing.")
         return
     try:
-        text = WMA11_DATA_PATH.read_text(encoding="utf-8")
-        questions = extract_js_assignment_array(text, "WMA11_QUESTIONS")
+        text = data_path.read_text(encoding="utf-8")
+        questions = extract_js_assignment_array(text, assignment_name)
     except Exception as exc:  # noqa: BLE001 - verifier should show exact data failure
-        report.error(f"ial/wma11/wma11-data.js could not be parsed: {exc}")
+        report.error(f"{rel(data_path)} could not be parsed: {exc}")
         return
 
     if not isinstance(questions, list):
-        report.error("ial/wma11/wma11-data.js has no WMA11_QUESTIONS array.")
+        report.error(f"{rel(data_path)} has no {assignment_name} array.")
         return
 
     private_text_pattern = re.compile(
@@ -515,33 +523,39 @@ def verify_wma11_solutions(report: Report) -> None:
     )
     structured_count = 0
     checked_count = 0
+    asset_prefix = f"ial/{course_id}/questions/"
     for index, item in enumerate(questions, start=1):
         if not isinstance(item, dict):
-            report.error(f"wma11-data.js question #{index} is not an object.")
+            report.error(f"{data_label} question #{index} is not an object.")
             continue
         qid = str(item.get("id") or f"#{index}")
+        image = str(item.get("image") or "").strip()
+        if not image.startswith(asset_prefix):
+            report.error(f"{data_label} question {qid} image must be under {asset_prefix}: {image}")
+        elif not (ROOT / image).is_file():
+            report.error(f"{data_label} question {qid} image is missing: {image}")
         steps = item.get("steps")
         if not isinstance(steps, list) or not steps:
-            report.error(f"wma11-data.js solution for {qid} has no structured steps.")
+            report.error(f"{data_label} solution for {qid} has no structured steps.")
         else:
             structured_count += 1
             for step_index, step in enumerate(steps, start=1):
                 if not isinstance(step, dict):
-                    report.error(f"wma11-data.js solution for {qid} step {step_index} is not an object.")
+                    report.error(f"{data_label} solution for {qid} step {step_index} is not an object.")
                     continue
                 if not str(step.get("title") or "").strip():
-                    report.error(f"wma11-data.js solution for {qid} step {step_index} has empty title.")
+                    report.error(f"{data_label} solution for {qid} step {step_index} has empty title.")
                 if not str(step.get("body") or "").strip():
-                    report.error(f"wma11-data.js solution for {qid} step {step_index} has empty body.")
+                    report.error(f"{data_label} solution for {qid} step {step_index} has empty body.")
         final_answer = str(item.get("finalAnswer") or "").strip()
         if not final_answer:
-            report.error(f"wma11-data.js solution for {qid} has empty finalAnswer.")
+            report.error(f"{data_label} solution for {qid} has empty finalAnswer.")
         status = str(item.get("status") or "").strip()
         checked_by = str(item.get("checkedBy") or "").strip()
         if not status:
-            report.error(f"wma11-data.js solution for {qid} is missing status metadata.")
+            report.error(f"{data_label} solution for {qid} is missing status metadata.")
         if not checked_by:
-            report.error(f"wma11-data.js solution for {qid} is missing checkedBy metadata.")
+            report.error(f"{data_label} solution for {qid} is missing checkedBy metadata.")
         if status == "checked":
             checked_count += 1
         public_text = "\n".join(
@@ -551,11 +565,16 @@ def verify_wma11_solutions(report: Report) -> None:
             ]
         )
         if private_text_pattern.search(public_text):
-            report.error(f"wma11-data.js solution for {qid} exposes private checking text in public fields.")
+            report.error(f"{data_label} solution for {qid} exposes private checking text in public fields.")
 
-    report.set("wma11_solutions", len(questions))
-    report.set("wma11_structured_solutions", structured_count)
-    report.set("wma11_checked_solutions", checked_count)
+    report.set(f"{course_id}_solutions", len(questions))
+    report.set(f"{course_id}_structured_solutions", structured_count)
+    report.set(f"{course_id}_checked_solutions", checked_count)
+
+
+def verify_ial_solutions(report: Report) -> None:
+    for course_id, (data_path, assignment_name) in IAL_DATA_FILES.items():
+        verify_ial_course_solutions(report, course_id, data_path, assignment_name)
 
 
 def print_report(report: Report) -> int:
@@ -593,7 +612,7 @@ def main() -> int:
     question_by_id, paper_slugs, _used_topics = verify_questions(report)
     verify_catalogue(report, paper_slugs)
     verify_solutions(report, question_by_id)
-    verify_wma11_solutions(report)
+    verify_ial_solutions(report)
     return print_report(report)
 
 

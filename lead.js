@@ -216,9 +216,10 @@
     const boot = window.ELITE_PATHWAY_BOOTSTRAP || {};
     const pathname = window.location.pathname.toLowerCase();
     const pathIsWma11 = pathname.includes("/ial/wma11/");
-    const pathIsIal = pathIsWma11 || pathname === "/ial/" || pathname.endsWith("/ial/index.html");
+    const pathIsWma12 = pathname.includes("/ial/wma12/");
+    const pathIsIal = pathIsWma11 || pathIsWma12 || pathname === "/ial/" || pathname.endsWith("/ial/index.html");
     const pathway = requested || normalizePathway(boot.pathway) || (pathIsIal ? "pure" : "") || readStoredPathway() || "linear";
-    const course = params.get("course") || boot.course || (pathIsWma11 ? "wma11" : "");
+    const course = params.get("course") || boot.course || (pathIsWma12 ? "wma12" : pathIsWma11 ? "wma11" : "");
     const unit = normalizeUnit(params.get("unit") || boot.unit || "");
     return { pathway, course, unit };
   }
@@ -306,10 +307,13 @@
     const page = document.body?.dataset.page || "";
     const params = new URLSearchParams(window.location.search);
     const context = resolvePathwayContext();
+    const requestedCourse = (params.get("course") || context.course || "").toLowerCase();
+    if (requestedCourse === "wma12" || page === "ial-wma12" || window.location.pathname.includes("/ial/wma12/")) return "pure2";
+    if (requestedCourse === "wma11" || page === "ial-wma11" || window.location.pathname.includes("/ial/wma11/")) return "pure";
     const requestedPathway = params.get("pathway") || context.pathway;
     const requestedGroup = findGroupByPathway(requestedPathway);
     if (requestedGroup) return requestedGroup.id;
-    if (page === "ial-wma11" || window.location.pathname.includes("/ial/wma11/") || requestedPathway === "pure") return "pure";
+    if (requestedPathway === "pure") return "pure";
     if (page === "about") return "about";
     if (requestedPathway === "modular" || window.ELITE_PATHWAY?.mode === "modular") return "modular";
     return "linear";
@@ -485,7 +489,7 @@
     const page = document.body?.dataset?.page || "";
     const params = new URLSearchParams(window.location.search);
     const path = window.location.pathname;
-    if (path.includes("/ial/wma11/")) {
+    if (path.includes("/ial/wma11/") || path.includes("/ial/wma12/")) {
       if (params.get("mode") === "mistakes") return "Mistake Box";
       if (params.get("expertise") === "1") return "Expertise View";
       return "Classified View";
@@ -514,6 +518,7 @@
 
   function activePathwayId() {
     const id = activeNavGroup();
+    if (id === "pure2") return "pure";
     return (id === "linear" || id === "modular" || id === "pure") ? id : "";
   }
 
@@ -532,10 +537,16 @@
       else if (moduleLabel) crumbs.push({ label: moduleLabel, current: true });
       return crumbs;
     }
-    // For Pure 1 (and future IAL subjects), insert "IAL" as a parent crumb
+    // For IAL subjects, insert "IAL" as a parent crumb and keep the course identity explicit.
     if (pathwayId === "pure") {
       crumbs.push({ label: "IAL", sub: "Edexcel", href: "/ial/index.html" });
-      crumbs.push({ label: "Pure 1", sub: "WMA11", href: "/ial/wma11/index.html" });
+      const params = new URLSearchParams(window.location.search);
+      const pathname = window.location.pathname.toLowerCase();
+      const course = (params.get("course") || document.body?.dataset?.course || "").toLowerCase();
+      const isWma12 = pathname.includes("/ial/wma12/") || course === "wma12";
+      crumbs.push(isWma12
+        ? { label: "Pure 2", sub: "WMA12", href: "/ial/wma12/index.html" }
+        : { label: "Pure 1", sub: "WMA11", href: "/ial/wma11/index.html" });
     } else {
       const meta = PATHWAY_BREADCRUMB_LABELS[pathwayId];
       if (meta) {
@@ -563,14 +574,14 @@
     }
     const moduleLabel = currentModuleLabel();
     if (moduleLabel) {
-      // For Pure 1 page itself with no specific module, the last crumb (Pure 1) is already the page; don't add another.
+      // For Pure course landings with no specific module, the last course crumb is already the page.
       const path = window.location.pathname;
-      const isPureLanding = pathwayId === "pure" && path.endsWith("/ial/wma11/index.html")
+      const isPureLanding = pathwayId === "pure" && (path.endsWith("/ial/wma11/index.html") || path.endsWith("/ial/wma12/index.html"))
         && !window.location.search && !window.location.hash;
       if (!isPureLanding) {
         crumbs.push({ label: moduleLabel, current: true });
       } else {
-        // mark the Pure 1 crumb as current
+        // mark the Pure course crumb as current
         const last = crumbs[crumbs.length - 1];
         if (last) { delete last.href; last.current = true; }
       }
@@ -743,7 +754,7 @@
     const groupId = activeNavGroup();
     const group = NAV_GROUPS.find((item) => item.id === groupId);
     applyCoursePalette(group);
-    document.body?.classList.toggle("pathway-pure", groupId === "pure");
+    document.body?.classList.toggle("pathway-pure", groupId === "pure" || groupId === "pure2");
     const toolData = activeToolLinks(groupId);
     if (!toolData) return;
     document.body?.classList.add("has-pathway-hub");
@@ -890,10 +901,13 @@
     const page = document.body?.dataset.page || "";
     const params = new URLSearchParams(window.location.search);
     const context = resolvePathwayContext();
+    const requestedCourse = (params.get("course") || context.course || "").toLowerCase();
     const requestedPathway = params.get("pathway") || context.pathway;
     let active = findGroupByPathway(requestedPathway)?.id || "linear";
 
-    if (page === "ial-wma11" || window.location.pathname.includes("/ial/wma11/")) {
+    if (requestedCourse === "wma12" || page === "ial-wma12" || window.location.pathname.includes("/ial/wma12/")) {
+      active = "pure2";
+    } else if (requestedCourse === "wma11" || page === "ial-wma11" || window.location.pathname.includes("/ial/wma11/")) {
       active = "pure";
     } else if (page === "about") {
       active = "about";

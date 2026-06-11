@@ -34,8 +34,9 @@
     const requested = normalizePathway(url.searchParams.get("pathway"));
     const pathname = window.location.pathname.toLowerCase();
     const pathIsWma11 = pathname.includes("/ial/wma11/");
-    const pathIsIal = pathIsWma11 || pathname === "/ial/" || pathname.endsWith("/ial/index.html");
-    const course = url.searchParams.get("course") || (pathIsWma11 ? "wma11" : "");
+    const pathIsWma12 = pathname.includes("/ial/wma12/");
+    const pathIsIal = pathIsWma11 || pathIsWma12 || pathname === "/ial/" || pathname.endsWith("/ial/index.html");
+    const course = url.searchParams.get("course") || (pathIsWma12 ? "wma12" : pathIsWma11 ? "wma11" : "");
     const pathway = requested || (pathIsIal ? "pure" : "") || storedPathway() || "linear";
     return {
       pathway,

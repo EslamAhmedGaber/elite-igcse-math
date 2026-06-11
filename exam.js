@@ -1,8 +1,42 @@
 (function () {
   const params = new URLSearchParams(window.location.search);
   const requestedPathway = params.get("pathway");
-  const requestedCourse = params.get("course");
-  const isWma11Course = requestedPathway === "pure" || requestedCourse === "wma11";
+  const requestedCourse = (params.get("course") || "").toLowerCase();
+  const pathname = window.location.pathname.toLowerCase();
+  const IAL_COURSES = {
+    wma11: {
+      id: "wma11",
+      code: "WMA11",
+      unitName: "Pure 1",
+      label: "IAL Pure 1",
+      title: "IAL Pure 1 Revision Book & Test Builder",
+      heroTitle: "Build a full Pure 1 test.",
+      heroCopy: "Use the same builder engine for WMA11: random mocks, hand-built tests, quick revision quizzes, full prediction booklets, saved tests, marking, and printable worked solutions.",
+      unitAllLabel: "All Pure 1",
+      pageHref: "ial/wma11/index.html",
+      topics: () => window.WMA11_TOPICS || [],
+      questions: () => window.WMA11_QUESTIONS || [],
+      storagePrefix: "eliteWMA11"
+    },
+    wma12: {
+      id: "wma12",
+      code: "WMA12",
+      unitName: "Pure 2",
+      label: "IAL Pure 2",
+      title: "IAL Pure 2 Revision Book & Test Builder",
+      heroTitle: "Build a full Pure 2 test.",
+      heroCopy: "Use the same builder engine for WMA12: random mocks, hand-built tests, revision books, saved tests, marking, and printable worked solutions.",
+      unitAllLabel: "All Pure 2",
+      pageHref: "ial/wma12/index.html",
+      topics: () => window.WMA12_TOPICS || [],
+      questions: () => window.WMA12_QUESTIONS || [],
+      storagePrefix: "eliteWMA12"
+    }
+  };
+  const requestedIalCourse = requestedCourse || (pathname.includes("/ial/wma12/") ? "wma12" : pathname.includes("/ial/wma11/") ? "wma11" : "");
+  const ialCourse = requestedPathway === "pure" || requestedIalCourse
+    ? IAL_COURSES[requestedIalCourse] || IAL_COURSES.wma11
+    : null;
 
   function normalizeMathDelimiters(value) {
     return String(value || "")
@@ -10,25 +44,25 @@
       .replace(/\$([^$\n]+?)\$/g, "\\($1\\)");
   }
 
-  function wma11TopicName(slug, fallback = "") {
-    return (window.WMA11_TOPICS || []).find((topic) => topic.slug === slug)?.name || fallback || slug;
+  function ialTopicName(def, slug, fallback = "") {
+    return (def.topics() || []).find((topic) => topic.slug === slug)?.name || fallback || slug;
   }
 
-  function normalizeWma11Question(item) {
+  function normalizeIalQuestion(def, item) {
     const primarySlug = item.primaryTopic || item.topic;
-    const primaryName = item.primaryTopicName || item.topicName || wma11TopicName(primarySlug);
+    const primaryName = item.primaryTopicName || item.topicName || ialTopicName(def, primarySlug);
     const topicNames = item.topicNames?.length
       ? item.topicNames
-      : (item.topics || [primarySlug]).map((slug) => wma11TopicName(slug, primaryName));
+      : (item.topics || [primarySlug]).map((slug) => ialTopicName(def, slug, primaryName));
     return {
       id: item.id,
       source_id: item.id,
       bank: "all",
-      course: "wma11",
+      course: def.id,
       is_expertise: Number(item.qNo || 0) >= 6,
-      unit: "WMA11",
-      linear_unit: "WMA11",
-      modular_unit: "WMA11",
+      unit: def.code,
+      linear_unit: def.code,
+      modular_unit: def.code,
       topic: primaryName,
       topics: topicNames,
       topic_slug: primarySlug,
@@ -55,12 +89,12 @@
     };
   }
 
-  function wma11Solution(item) {
+  function ialSolution(def, item) {
     return {
       status: "checked",
       checkedBy: "Dr Eslam Ahmed + Codex",
       updated: item.updated || "",
-      topicNote: item.topicName || wma11TopicName(item.topic),
+      topicNote: item.topicName || ialTopicName(def, item.topic),
       steps: (item.steps || []).map((step) => ({
         title: step.title || "Step",
         body: normalizeMathDelimiters(step.body || "")
@@ -69,22 +103,24 @@
     };
   }
 
-  const course = isWma11Course
+  const course = ialCourse
     ? {
-        id: "wma11",
+        id: ialCourse.id,
         mode: "pure",
-        title: "IAL Pure 1 Revision Book & Test Builder",
-        heroTitle: "Build a full Pure 1 test.",
-        heroCopy: "Use the same builder engine for WMA11: random mocks, hand-built tests, quick revision quizzes, full prediction booklets, saved tests, marking, and printable worked solutions.",
+        title: ialCourse.title,
+        heroTitle: ialCourse.heroTitle,
+        heroCopy: ialCourse.heroCopy,
         unitLabel: "Course",
-        unitAllLabel: "All Pure 1",
-        units: ["WMA11"],
-        topics: (window.WMA11_TOPICS || []).map((topic) => ({ topic: topic.name, unit: "WMA11" })),
-        questions: (window.WMA11_QUESTIONS || []).map(normalizeWma11Question),
-        solutions: Object.fromEntries((window.WMA11_QUESTIONS || []).map((item) => [item.id, wma11Solution(item)])),
-        reviewKey: "eliteWMA11MistakeBoxV1",
-        solvedKey: "eliteWMA11SolvedV1",
-        selectedKey: "eliteWMA11SelectedV1"
+        unitAllLabel: ialCourse.unitAllLabel,
+        units: [ialCourse.code],
+        courseCode: ialCourse.code,
+        coursePageHref: ialCourse.pageHref,
+        topics: ialCourse.topics().map((topic) => ({ topic: topic.name, unit: ialCourse.code })),
+        questions: ialCourse.questions().map((item) => normalizeIalQuestion(ialCourse, item)),
+        solutions: Object.fromEntries(ialCourse.questions().map((item) => [item.id, ialSolution(ialCourse, item)])),
+        reviewKey: `${ialCourse.storagePrefix}MistakeBoxV1`,
+        solvedKey: `${ialCourse.storagePrefix}SolvedV1`,
+        selectedKey: `${ialCourse.storagePrefix}SelectedV1`
       }
     : {
         id: "igcse",
@@ -286,12 +322,12 @@
   }
 
   function displayUnit(question) {
-    if (activePathway() === "pure") return question.unit || "WMA11";
+    if (activePathway() === "pure") return question.unit || course.courseCode || "WMA11";
     return activePathway() === "modular" ? question.modular_unit : question.linear_unit;
   }
 
   function unitsForPathway() {
-    if (activePathway() === "pure") return course.units || ["WMA11"];
+    if (activePathway() === "pure") return course.units || [course.courseCode || "WMA11"];
     const catalog = activePathway() === "modular" ? window.MODULAR_TOPIC_CATALOG || [] : window.LINEAR_TOPIC_CATALOG || [];
     return [...new Set(catalog.map((entry) => entry.unit))];
   }
@@ -432,7 +468,7 @@
       node.textContent = course.unitLabel;
     });
     [els.bank, els.customBank, els.smartBank].forEach((select) => {
-      setOptionText(select, "all", "Full WMA11 bank");
+      setOptionText(select, "all", `Full ${course.courseCode || "IAL"} bank`);
       setOptionText(select, "expertise", "Q6+ expertise only");
     });
     const difficulty = [...(els.customDifficulty?.options || [])].find((option) => option.value === "q20");
@@ -941,7 +977,7 @@
   function topicLink(row) {
     if (activePathway() === "pure") {
       const topic = questions.find((question) => question.topic === row.topic)?.topic_slug || row.topic;
-      return `ial/wma11/index.html?topic=${encodeURIComponent(topic)}`;
+      return `${course.coursePageHref || "ial/wma11/index.html"}?topic=${encodeURIComponent(topic)}`;
     }
     const params = new URLSearchParams({ bank: state.bank || "all", unit: row.unit, topic: row.topic, mode: "weak" });
     return `practice.html?${params.toString()}`;

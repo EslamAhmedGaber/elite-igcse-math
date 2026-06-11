@@ -6,8 +6,8 @@
     {
       tag: "Whole papers",
       title: "Past Papers Library",
-      description: "Linear, Modular, and IAL Pure 1 papers are separated clearly, grouped by session, with worked solutions beside the matching paper.",
-      meta: ["Linear 4MA1", "Modular 4WM", "IAL WMA11"],
+      description: "Linear, Modular, IAL Pure 1, and IAL Pure 2 papers are separated clearly, grouped by session, with worked solutions beside the matching paper.",
+      meta: ["Linear 4MA1", "Modular 4WM", "IAL WMA11/WMA12"],
       actions: [{ label: "Open Past Papers", href: "pastpapers.html", variant: "primary" }],
     },
     {

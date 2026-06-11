@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
   const moduleCatalog = {
     classified: {
       title: "Classified View",
@@ -117,6 +117,12 @@
       accent: "#36304a",
       accentDeep: "#241f33",
       soft: "rgba(54, 48, 74, 0.1)",
+    },
+    mulberry: {
+      label: "IAL Pure 2",
+      accent: "#6b2f5f",
+      accentDeep: "#48203f",
+      soft: "rgba(107, 47, 95, 0.1)",
     },
   };
 
@@ -1091,6 +1097,29 @@
       }
   ];
 
+  const pureWma12PastPapers = [
+      {
+          "heading": "2026",
+          "sessions": [
+              {
+                  "label": "Jan 2026",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2026_Jan_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Solved bank",
+                          "href": "ial/wma12/index.html#ialFilters"
+                      }
+                  ]
+              }
+          ]
+      }
+  ];
+
   const linearBooks = [
       {
           "className": "linear-book",
@@ -1312,6 +1341,43 @@
       }
   ];
 
+  const pureWma12Books = [
+      {
+          "className": "pure-book",
+          "tag": "IAL Pure 2",
+          "tagTone": "pure",
+          "title": "WMA12 Pilot Bank",
+          "description": "Pure 2 is now open with the January 2026 paper cropped, solved, and classified across the 12-topic WMA12 map.",
+          "meta": [
+              "10 solved questions",
+              "12 Pure 2 topics",
+              "Pipeline ready"
+          ],
+          "actions": [
+              {
+                  "label": "Open WMA12 bank",
+                  "href": "ial/wma12/index.html",
+                  "variant": "primary"
+              },
+              {
+                  "label": "Build Test",
+                  "href": "exam.html?pathway=pure&course=wma12&mode=custom",
+                  "variant": "solution"
+              },
+              {
+                  "label": "Revision Book",
+                  "href": "exam.html?pathway=pure&course=wma12&mode=smart&book=revision",
+                  "variant": "gold"
+              },
+              {
+                  "label": "Past paper row",
+                  "href": "pastpapers.html?pathway=pure#pure-wma12",
+                  "variant": "light"
+              }
+          ]
+      }
+  ];
+
   const navGroups = [
     {
       id: "linear",
@@ -1407,6 +1473,41 @@
       ],
     },
     {
+      id: "pure2",
+      label: "IAL Pure 2",
+      detail: "WMA12",
+      href: "/ial/wma12/index.html",
+      pathway: "pure",
+      course: "wma12",
+      palette: "mulberry",
+      panelLabel: "WMA12 modules",
+      intro: "Pure 2 uses the same reusable module model as WMA11, with its own WMA12 data, progress keys, builder state, solved bank, and paper rows.",
+      paperSection: {
+        id: "pure-wma12",
+        className: "pp-section-pure",
+        tag: "IAL Pure 2 | WMA12",
+        tagTone: "pure",
+        title: "Pure 2 paper list",
+        heading: "WMA12 papers",
+        eyebrow: "IAL Pure 2 | Edexcel WMA12",
+        intro: "Newest first. Published rows link to the original paper and the solved classified bank.",
+        explainer: "Standalone IAL WMA12 papers are being added through the Pure 2 pipeline. January 2026 is the first solved pilot paper.",
+      },
+      pastPapers: pureWma12PastPapers,
+      books: pureWma12Books,
+      links: [
+        { module: "classified", title: "Classified View", detail: "Topic practice", href: "/ial/wma12/index.html" },
+        { module: "expertise", title: "Expertise View", detail: "Q6+ filtered bank", href: "/ial/wma12/index.html?expertise=1#ialFilters" },
+        { module: "build-test", title: "Build Test", detail: "Full mock builder", href: "/exam.html?pathway=pure&course=wma12&mode=custom" },
+        { module: "revision-book", title: "Revision Book", detail: "10-100 question mix", href: "/exam.html?pathway=pure&course=wma12&mode=smart&book=revision" },
+        { module: "progress", title: "Progress", detail: "Topic mastery", href: "/progress.html?pathway=pure&course=wma12" },
+        { module: "mistake-box", title: "Mistake Box", detail: "Saved revision", href: "/ial/wma12/index.html?mode=mistakes#ialFilters" },
+        { module: "saved-tests", title: "Saved Tests", detail: "Reuse builder tests", href: "/exam.html?pathway=pure&course=wma12&mode=saved" },
+        { module: "books", title: "Books", detail: "Course tools", href: "/downloads.html?pathway=pure#downloads" },
+        { module: "past-solutions", title: "Past Papers", detail: "Paper + solved bank", href: "/pastpapers.html?pathway=pure#pure-wma12" },
+      ],
+    },
+    {
       id: "about",
       label: "About",
       detail: "Dr Eslam",
@@ -1489,7 +1590,7 @@
             code: "WMA12",
             palette: "mulberry",
             href: "/ial/wma12/index.html",
-            status: "planned",
+            status: "live",
           },
           {
             id: "stats1",
@@ -1513,7 +1614,7 @@
   };
 
   window.ELITE_COURSE_MODULES = {
-    version: "2026-05-31-course-registry-v9-flexible-revision-counts",
+    version: "2026-06-11-course-registry-v10-wma12-pilot",
     moduleCatalog,
     moduleAliases,
     palettes,

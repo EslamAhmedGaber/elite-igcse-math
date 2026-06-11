@@ -24,6 +24,7 @@ function loadRuntime() {
   runBrowserScript(sandbox, "questions-data.js");
   runBrowserScript(sandbox, "topic-normalizer.js");
   runBrowserScript(sandbox, "ial/wma11/wma11-data.js");
+  runBrowserScript(sandbox, "ial/wma12/wma12-data.js");
   runBrowserScript(sandbox, "revision-engine.js");
   return sandbox;
 }
@@ -69,10 +70,12 @@ assert.ok(engine, "EliteRevisionEngine should be exported");
 const igcseAll = runtime.QUESTION_DATA.filter((question) => question.bank === "all");
 const modularUnit1 = igcseAll.filter((question) => question.modular_unit === "Unit 1");
 const pureWma11 = runtime.WMA11_QUESTIONS;
+const pureWma12 = runtime.WMA12_QUESTIONS;
 
 assertRevisionBook(engine, "linear", igcseAll, { pathway: "linear", course: "igcse", profile: "prediction" });
 assertRevisionBook(engine, "modular-unit-1", modularUnit1, { pathway: "modular", course: "igcse", profile: "prediction" });
 assertRevisionBook(engine, "pure-wma11", pureWma11, { pathway: "pure", course: "wma11", profile: "prediction" });
+assertRevisionBook(engine, "pure-wma12", pureWma12, { pathway: "pure", course: "wma12", profile: "prediction" });
 assertRevisionBook(engine, "linear-quick-quiz", igcseAll, {
   pathway: "linear",
   course: "igcse",

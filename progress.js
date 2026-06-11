@@ -6,6 +6,7 @@
     "Unit 1",
     "Unit 2",
     "WMA11",
+    "WMA12",
     "4WM1H",
     "4WM1HR",
     "4WM2H",
@@ -23,11 +24,34 @@
   function resolveProgressCoursePack() {
     const pathway = (params.get("pathway") || window.ELITE_PATHWAY?.mode || "linear").toLowerCase();
     const course = (params.get("course") || "").toLowerCase();
-    if (pathway === "pure" && (!course || course === "wma11")) {
-      const topics = window.WMA11_TOPICS || [];
+    const ialDefinitions = {
+      wma11: {
+        id: "wma11",
+        code: "WMA11",
+        unitName: "Pure 1",
+        label: "IAL Pure 1",
+        pageHref: "ial/wma11/index.html",
+        topics: window.WMA11_TOPICS || [],
+        questions: window.WMA11_QUESTIONS || [],
+        storagePrefix: "eliteWMA11"
+      },
+      wma12: {
+        id: "wma12",
+        code: "WMA12",
+        unitName: "Pure 2",
+        label: "IAL Pure 2",
+        pageHref: "ial/wma12/index.html",
+        topics: window.WMA12_TOPICS || [],
+        questions: window.WMA12_QUESTIONS || [],
+        storagePrefix: "eliteWMA12"
+      }
+    };
+    const ialCourse = pathway === "pure" ? (ialDefinitions[course] || ialDefinitions.wma11) : null;
+    if (ialCourse) {
+      const topics = ialCourse.topics;
       const topicOrder = new Map(topics.map((topic, index) => [topic.slug, index + 1]));
       const topicNames = new Map(topics.map((topic) => [topic.slug, topic.name]));
-      const rawQuestions = window.WMA11_QUESTIONS || [];
+      const rawQuestions = ialCourse.questions;
       const questions = rawQuestions.map((item) => {
         const topicSlug = item.primaryTopic || item.topic;
         const topicName = item.primaryTopicName || item.topicName || topicNames.get(topicSlug) || topicSlug;
@@ -36,59 +60,59 @@
           id: item.id,
           source_id: item.id,
           bank: "all",
-          unit: "Pure 1",
-          modular_force_unit: "Pure 1",
+          unit: ialCourse.unitName,
+          modular_force_unit: ialCourse.unitName,
           topic: topicName,
           topic_slug: topicSlug,
           topic_order: topicOrder.get(topicSlug) || 999,
           question: item.qNo,
-          paper: `${sessionLabel(item.session)} ${item.year} WMA11`,
-          paperCode: item.paperCode || "WMA11",
-          paper_code: item.paperCode || "WMA11",
+          paper: `${sessionLabel(item.session)} ${item.year} ${ialCourse.code}`,
+          paperCode: item.paperCode || ialCourse.code,
+          paper_code: item.paperCode || ialCourse.code,
           image: item.image,
           marks: item.marks
         };
       });
       return {
         pathway: "pure",
-        course: "wma11",
-        label: "IAL Pure 1",
+        course: ialCourse.id,
+        label: ialCourse.label,
         unitLowerPlural: "courses",
         questions,
-        solvedKey: "eliteWMA11SolvedV1",
-        selectedKey: "eliteWMA11SelectedV1",
-        reviewKey: "eliteWMA11MistakeBoxV1",
-        readinessKey: "eliteWMA11ReadinessCheck",
-        activityKey: "eliteWMA11StudyActivityV1",
-        paperAttemptsKey: "eliteWMA11PaperAttemptsV1",
-        studyTasksKey: "eliteWMA11StudyTasksV1",
-        mockHistoryKey: "eliteWMA11MockExamHistoryV1",
-        examKey: "eliteWMA11MockExamV1",
-        planKey: "eliteWMA11StudyPlanV1",
-        profileKey: "eliteWMA11StudentProfileV1",
-        assignmentsKey: "eliteWMA11TrackerAssignmentsV1",
-        quizzesKey: "eliteWMA11TrackerQuizzesV1",
+        solvedKey: `${ialCourse.storagePrefix}SolvedV1`,
+        selectedKey: `${ialCourse.storagePrefix}SelectedV1`,
+        reviewKey: `${ialCourse.storagePrefix}MistakeBoxV1`,
+        readinessKey: `${ialCourse.storagePrefix}ReadinessCheck`,
+        activityKey: `${ialCourse.storagePrefix}StudyActivityV1`,
+        paperAttemptsKey: `${ialCourse.storagePrefix}PaperAttemptsV1`,
+        studyTasksKey: `${ialCourse.storagePrefix}StudyTasksV1`,
+        mockHistoryKey: `${ialCourse.storagePrefix}MockExamHistoryV1`,
+        examKey: `${ialCourse.storagePrefix}MockExamV1`,
+        planKey: `${ialCourse.storagePrefix}StudyPlanV1`,
+        profileKey: `${ialCourse.storagePrefix}StudentProfileV1`,
+        assignmentsKey: `${ialCourse.storagePrefix}TrackerAssignmentsV1`,
+        quizzesKey: `${ialCourse.storagePrefix}TrackerQuizzesV1`,
         trackerExtraYears: DEFAULT_TRACKER_EXTRA_YEARS,
-        trackerExtraPaperCodes: ["WMA11"],
+        trackerExtraPaperCodes: [ialCourse.code],
         expertiseLabel: "Q6+",
         expertiseName: "Expertise",
         expertiseFilter: (question) => Number(question.qNo || question.question || 0) >= 6,
         practiceLink(row, bank = "all") {
           const linkParams = new URLSearchParams();
-          linkParams.set("course", "wma11");
+          linkParams.set("course", ialCourse.id);
           if (row?.topicSlug || row?.topic_slug) linkParams.set("topic", row.topicSlug || row.topic_slug);
           if (bank === "expertise") linkParams.set("expertise", "1");
-          return `ial/wma11/index.html?${linkParams.toString()}#ialFilters`;
+          return `${ialCourse.pageHref}?${linkParams.toString()}#ialFilters`;
         },
         paperOptions() {
           const groups = new Map();
           rawQuestions.forEach((item) => {
-            const key = `${item.year}|${item.session}|WMA11`;
+            const key = `${item.year}|${item.session}|${ialCourse.code}`;
             if (!groups.has(key)) {
               groups.set(key, {
                 year: String(item.year),
                 session: item.session,
-                paperCode: "WMA11"
+                paperCode: ialCourse.code
               });
             }
           });

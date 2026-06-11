@@ -3,7 +3,7 @@ const fs = require("node:fs");
 const net = require("node:net");
 const os = require("node:os");
 const path = require("node:path");
-const { spawn } = require("node:child_process");
+const { spawn, spawnSync } = require("node:child_process");
 const { pathToFileURL } = require("node:url");
 
 const ROOT = path.resolve(__dirname, "..");
@@ -137,9 +137,24 @@ async function launchChrome() {
     pageErrors,
     async close() {
       client.close();
-      browser.kill();
-      await delay(100);
-      fs.rmSync(userDataDir, { recursive: true, force: true });
+      if (browser.exitCode === null) {
+        const exited = new Promise((resolve) => browser.once("exit", resolve));
+        if (process.platform === "win32" && browser.pid) {
+          spawnSync("taskkill", ["/PID", String(browser.pid), "/T", "/F"], { stdio: "ignore" });
+        } else {
+          browser.kill();
+        }
+        await Promise.race([exited, delay(3000)]);
+      }
+      for (let attempt = 0; attempt < 30; attempt += 1) {
+        await delay(250);
+        try {
+          fs.rmSync(userDataDir, { recursive: true, force: true });
+          break;
+        } catch (err) {
+          if (attempt === 29) break;
+        }
+      }
     }
   };
 }
@@ -226,10 +241,12 @@ function pageScript(body) {
         await frame();
       };
       const mode = () => document.body.dataset.pathway || "linear";
-      const isPure = () => mode() === "pure" || new URLSearchParams(location.search).get("course") === "wma11";
-      const examKey = () => isPure() ? "eliteMockExamV1:wma11" : "eliteMockExamV1";
-      const draftKey = () => isPure() ? "eliteTestBuilderDraftV1:wma11" : "eliteTestBuilderDraftV1";
-      const savedKey = () => isPure() ? "eliteSavedTestsV1:wma11" : "eliteSavedTestsV1";
+      const courseParam = () => (new URLSearchParams(location.search).get("course") || "").toLowerCase();
+      const pureCourse = () => courseParam() === "wma12" ? "wma12" : "wma11";
+      const isPure = () => mode() === "pure" || ["wma11", "wma12"].includes(courseParam());
+      const examKey = () => isPure() ? "eliteMockExamV1:" + pureCourse() : "eliteMockExamV1";
+      const draftKey = () => isPure() ? "eliteTestBuilderDraftV1:" + pureCourse() : "eliteTestBuilderDraftV1";
+      const savedKey = () => isPure() ? "eliteSavedTestsV1:" + pureCourse() : "eliteSavedTestsV1";
       const readJson = (key, fallback) => {
         try { return JSON.parse(localStorage.getItem(key) || JSON.stringify(fallback)); }
         catch (err) { return fallback; }
@@ -237,11 +254,14 @@ function pageScript(body) {
       const writeJson = (key, value) => localStorage.setItem(key, JSON.stringify(value));
       const rawQuestions = () => {
         if (isPure()) {
-          return (window.WMA11_QUESTIONS || []).map((question) => ({
+          const course = pureCourse();
+          const bank = course === "wma12" ? (window.WMA12_QUESTIONS || []) : (window.WMA11_QUESTIONS || []);
+          const unit = course.toUpperCase();
+          return bank.map((question) => ({
             id: question.id,
             source: question.id,
             bank: "all",
-            unit: "WMA11",
+            unit,
             topic: question.topicName,
             topics: question.topicNames?.length ? question.topicNames : [question.topicName],
             marks: Number(question.marks || 0)
@@ -353,24 +373,27 @@ function pageScript(body) {
 
 async function runRoute(page, route) {
   await navigate(page, examUrl(route.query));
+  const expectedCount = route.count || 10;
+  const topicPick = route.topicPick || 3;
+  const assertTopicBalance = route.assertTopicBalance !== false;
 
   const random = await evaluate(page, pageScript(`
-    await setValue("#examCount", 10);
+    await setValue("#examCount", ${expectedCount});
     const availableTopics = await clickTopicMixAction("#examTopicMix", "available");
     if (!availableTopics.length) throw new Error("Available topic action selected no topics");
     const clearedTopics = await clickTopicMixAction("#examTopicMix", "clear");
     if (clearedTopics.length) throw new Error("Clear topic action did not clear topics");
-    const topics = await selectTopics("#examTopicMix", 3, 10);
+    const topics = await selectTopics("#examTopicMix", ${topicPick}, ${expectedCount});
     await click("#printExamBtn");
     await waitForPrint(1);
     const data = summary();
     assertAllMatchTopics(data.ids, topics);
-    assertBalanced(data.ids, topics);
+    if (${assertTopicBalance}) assertBalanced(data.ids, topics);
     return { topics, data };
   `));
   assert.equal(random.data.state.kind, "random", `${route.label}: Random print should build a random paper`);
-  assert.equal(random.data.ids.length, 10, `${route.label}: Random print should use the selected question count`);
-  assert.equal(random.data.sourceCount, 10, `${route.label}: Random print should not repeat source questions`);
+  assert.equal(random.data.ids.length, expectedCount, `${route.label}: Random print should use the selected question count`);
+  assert.equal(random.data.sourceCount, expectedCount, `${route.label}: Random print should not repeat source questions`);
   assert.equal(random.data.state.buildConfig.buildVersion, "random-topic-split-v2", `${route.label}: Random build version should be saved`);
   assert.deepEqual([...random.data.state.buildConfig.topics].sort(), [...random.topics].sort(), `${route.label}: Random build config should capture selected topics`);
 
@@ -391,24 +414,24 @@ async function runRoute(page, route) {
   `));
   await reloadKeepingStorage(page);
   const stale = await evaluate(page, pageScript(`
-    await setValue("#examCount", 10);
+    await setValue("#examCount", ${expectedCount});
     await selectNamedTopics("#examTopicMix", ${JSON.stringify(random.topics)});
     await click("#printExamBtn");
     await waitForPrint(1);
     return summary();
   `));
-  assert.equal(stale.ids.length, 10, `${route.label}: stale Random cache should rebuild to the current count`);
+  assert.equal(stale.ids.length, expectedCount, `${route.label}: stale Random cache should rebuild to the current count`);
   assert.equal(stale.state.buildConfig.buildVersion, "random-topic-split-v2", `${route.label}: stale Random cache should be replaced`);
   assert.equal(stale.missingIds.length, 0, `${route.label}: stale Random cache should not leave fake IDs`);
 
   const revision = await evaluate(page, pageScript(`
     await click("[data-exam-mode='smart']");
-    await setValue("#smartCount", 10);
+    await setValue("#smartCount", ${expectedCount});
     const availableTopics = await clickTopicMixAction("#smartTopicMix", "available");
     if (!availableTopics.length) throw new Error("Revision available topic action selected no topics");
     const clearedTopics = await clickTopicMixAction("#smartTopicMix", "clear");
     if (clearedTopics.length) throw new Error("Revision clear topic action did not clear topics");
-    const topics = await selectTopics("#smartTopicMix", 3, 10);
+    const topics = await selectTopics("#smartTopicMix", ${topicPick}, ${expectedCount});
     await click("#printSolutionBtn");
     await waitForPrint(2);
     const data = summary();
@@ -416,8 +439,8 @@ async function runRoute(page, route) {
     return { topics, data, lastPrint: printCalls().at(-1) };
   `));
   assert.equal(revision.data.state.kind, "revision-book", `${route.label}: Revision Book should build its own paper`);
-  assert.equal(revision.data.ids.length, 10, `${route.label}: Revision Book should use the selected count`);
-  assert.equal(revision.data.sourceCount, 10, `${route.label}: Revision Book should not repeat source questions`);
+  assert.equal(revision.data.ids.length, expectedCount, `${route.label}: Revision Book should use the selected count`);
+  assert.equal(revision.data.sourceCount, expectedCount, `${route.label}: Revision Book should not repeat source questions`);
   assert.equal(revision.data.state.buildConfig.buildVersion, "revision-book-v2", `${route.label}: Revision build version should be saved`);
   assert.equal(revision.lastPrint.solutions, true, `${route.label}: Revision print with solutions should mark solution printing`);
 
@@ -463,7 +486,8 @@ async function main() {
     { label: "Linear", query: "?pathway=linear", course: "igcse", pathway: "linear" },
     { label: "Modular Unit 1", query: "?pathway=modular&unit=Unit+1", course: "igcse", pathway: "modular" },
     { label: "Modular Unit 2", query: "?pathway=modular&unit=Unit+2", course: "igcse", pathway: "modular" },
-    { label: "Pure WMA11", query: "?pathway=pure&course=wma11", course: "wma11", pathway: "pure" }
+    { label: "Pure WMA11", query: "?pathway=pure&course=wma11", course: "wma11", pathway: "pure" },
+    { label: "Pure WMA12", query: "?pathway=pure&course=wma12", course: "wma12", pathway: "pure", topicPick: 11, assertTopicBalance: false }
   ];
 
   try {
