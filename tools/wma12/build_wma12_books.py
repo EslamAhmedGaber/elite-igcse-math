@@ -89,11 +89,32 @@ def steps_html(item: dict) -> str:
     return "\n".join(parts)
 
 
-def final_answer_html(answer: str) -> str:
+def final_answer_lines(answer: str) -> list[str]:
     answer = re.sub(r"\s+", " ", str(answer)).strip()
-    answer = re.sub(r"(?<=\.)\s+(?=\$\([a-d]\))", '</div><div class="answer-line">', answer)
-    answer = re.sub(r"\\q?quad\s+(\([b-d]\))", r'$</div><div class="answer-line">$\1', answer)
-    return f'<div class="answer-lines"><div class="answer-line">{escape_math(answer)}</div></div>'
+    answer = re.sub(
+        r"\s*\$\\q?quad\s*((?:\([^)]+\))+)(\$?)\s*",
+        lambda match: f"\n${match.group(1)}{'$' if match.group(2) else ''} ",
+        answer,
+    )
+    answer = re.sub(r"(?<=\.)\s+(?=\$\([a-d]\))", "\n", answer)
+    lines = []
+    for line in answer.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        line = re.sub(
+            r"^\$((?:\([^)]+\))+)\$\s*(?=\\)",
+            lambda match: f"${match.group(1)}",
+            line,
+        )
+        lines.append(line)
+    return lines
+
+
+def final_answer_html(answer: str) -> str:
+    lines = final_answer_lines(answer)
+    rendered = "".join(f'<div class="answer-line">{escape_math(line)}</div>' for line in lines)
+    return f'<div class="answer-lines">{rendered}</div>'
 
 
 def question_page(item: dict, answer_mode: bool) -> str:

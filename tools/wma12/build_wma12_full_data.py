@@ -16,6 +16,8 @@ DATA_PATH = ROOT / "ial" / "wma12" / "wma12-data.js"
 DOWNLOAD_PAPERS = ROOT / "downloads" / "IAL" / "WMA12" / "Papers"
 PRIVATE_BANK = ROOT / "private_output" / "wma12_full_bank.json"
 MANUAL_SOLUTIONS = ROOT / "tools" / "wma12" / "wma12_manual_solutions.json"
+MANUAL_GAPS_REPORT = ROOT / "private_output" / "wma12_manual_solution_gaps.json"
+MIN_MANUAL_STEPS = 3
 
 TOPICS = [
     {"slug": "01_Proof", "name": "Proof"},
@@ -45,6 +47,7 @@ BAD_PUBLIC_RE = re.compile(
     r"[\uf000-\uf8ff\ufffd□]|(?:Correct|Attempts?|Uses?|Applies?|Allow|Accept|Awrt|Cao|Ft)\b",
     re.IGNORECASE,
 )
+CORRUPT_TEXT_RE = re.compile(r"[\uf000-\uf8ff\ufffd□]")
 
 TOPIC_METHODS = {
     "01_Proof": (
@@ -130,6 +133,54 @@ def load_manual_solutions() -> dict[str, dict]:
     except json.JSONDecodeError:
         return {}
     return {str(key): value for key, value in data.items() if isinstance(value, dict)}
+
+
+def validate_manual_solution(qid: str, row: dict) -> list[str]:
+    issues: list[str] = []
+    steps = row.get("steps")
+    final_answer = str(row.get("finalAnswer") or "").strip()
+    if not final_answer:
+        issues.append("missing finalAnswer")
+    if not isinstance(steps, list) or len(steps) < MIN_MANUAL_STEPS:
+        issues.append(f"needs at least {MIN_MANUAL_STEPS} worked steps")
+        return issues
+    for index, step in enumerate(steps, 1):
+        title = str(step.get("title") or "").strip() if isinstance(step, dict) else ""
+        body = str(step.get("body") or "").strip() if isinstance(step, dict) else ""
+        if not title or not body:
+            issues.append(f"step {index} is missing a title or body")
+        if PRIVATE_RE.search(title) or PRIVATE_RE.search(body):
+            issues.append(f"step {index} contains private mark-scheme language")
+        if CORRUPT_TEXT_RE.search(title) or CORRUPT_TEXT_RE.search(body):
+            issues.append(f"step {index} contains unreadable extracted text")
+    if PRIVATE_RE.search(final_answer) or CORRUPT_TEXT_RE.search(final_answer):
+        issues.append("finalAnswer contains private or unreadable text")
+    if "topic" in row and row.get("topic") not in TOPIC_NAMES:
+        issues.append("invalid primary topic")
+    for topic in row.get("secondaryTopics") or []:
+        if topic not in TOPIC_NAMES:
+            issues.append(f"invalid secondary topic {topic}")
+    if issues:
+        issues.insert(0, qid)
+    return issues
+
+
+def manual_solution_gaps(manifests: list[dict], manual_solutions: dict[str, dict]) -> list[dict]:
+    gaps: list[dict] = []
+    for manifest in sorted(manifests, key=lambda item: parse_slug(item["slug"])):
+        slug = manifest["slug"]
+        year, session = parse_slug(slug)
+        for question in manifest["questions"]:
+            q_no = int(question["q"])
+            qid = f"WMA12-01_{year}_{session}_Q{q_no:02d}"
+            manual_row = manual_solutions.get(qid)
+            if not manual_row:
+                gaps.append({"id": qid, "reason": "missing manual solution", "preview": question.get("textPreview", "")[:220]})
+                continue
+            issues = validate_manual_solution(qid, manual_row)
+            if issues:
+                gaps.append({"id": qid, "reason": "; ".join(issues[1:]), "preview": question.get("textPreview", "")[:220]})
+    return gaps
 
 
 def paper_slug(path: Path) -> str:
@@ -391,7 +442,14 @@ def build() -> None:
     manual_solutions = load_manual_solutions()
     manifests = load_manifests()
     qps = qp_paths()
-    schemes = {slug: extract_ms_sections(path) for slug, path in ms_paths().items()}
+    gaps = manual_solution_gaps(manifests, manual_solutions)
+    if gaps:
+        MANUAL_GAPS_REPORT.parent.mkdir(parents=True, exist_ok=True)
+        MANUAL_GAPS_REPORT.write_text(json.dumps(gaps, ensure_ascii=False, indent=2), encoding="utf-8")
+        raise RuntimeError(
+            f"WMA12 needs {len(gaps)} detailed manual solutions before publishing. "
+            f"See {MANUAL_GAPS_REPORT}."
+        )
 
     clear_generated_question_images()
     DOWNLOAD_PAPERS.mkdir(parents=True, exist_ok=True)
@@ -413,14 +471,10 @@ def build() -> None:
             qid = f"WMA12-01_{year}_{session}_Q{q_no:02d}"
             manual_row = manual_solutions.get(qid)
             primary, secondary = classify_question(question.get("text", ""))
-            if manual_row and manual_row.get("steps") and manual_row.get("finalAnswer"):
-                primary = manual_row.get("topic") or primary
-                secondary = list(manual_row.get("secondaryTopics") or secondary)
-                steps = manual_row["steps"]
-                final_answer = manual_row["finalAnswer"]
-            else:
-                scheme = schemes.get(slug, {}).get(q_no, "")
-                steps, final_answer = split_solution_steps(scheme, question.get("text", ""))
+            primary = manual_row.get("topic") or primary
+            secondary = list(manual_row.get("secondaryTopics") or secondary)
+            steps = manual_row["steps"]
+            final_answer = manual_row["finalAnswer"]
 
             all_topics = [primary, *[topic for topic in secondary if topic != primary]]
             counts[primary]["primary"] += 1

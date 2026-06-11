@@ -225,10 +225,16 @@
   }
 
   function splitFinalAnswer(answer) {
-    let html = String(answer || "").trim();
-    html = html.replace(/(?<=\.)\s+(?=\$\([a-d]\))/g, '</div><div class="ial-answer-line">');
-    html = html.replace(/\\q?quad\s+(\([b-d]\))/g, (_match, label) => '$</div><div class="ial-answer-line">$' + label);
-    return `<div class="ial-answer-line">${html}</div>`;
+    let text = String(answer || "").trim().replace(/\s+/g, " ");
+    text = text.replace(/\s*\$\\q?quad\s*((?:\([^)]+\))+)(\$?)\s*/g, (_match, label, close) => `\n$${label}${close ? "$" : ""} `);
+    text = text.replace(/(?<=\.)\s+(?=\$\([a-d]\))/g, "\n");
+    return text
+      .split(/\n+/)
+      .map((line) => line.trim())
+      .filter(Boolean)
+      .map((line) => line.replace(/^\$((?:\([^)]+\))+)\$\s*(?=\\)/, (_match, label) => `$${label}`))
+      .map((line) => `<div class="ial-answer-line">${line}</div>`)
+      .join("");
   }
 
   function renderNumbers() {

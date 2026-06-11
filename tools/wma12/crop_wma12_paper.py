@@ -15,14 +15,18 @@ ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_OUT = ROOT / "private_output" / "wma12_crop_review"
 QUESTION_TOTAL_RE = re.compile(r"Total for Question\s+(\d+)\s+is\s+(\d+)\s+marks?", re.IGNORECASE)
 LEGACY_TOTAL_RE = re.compile(r"\(?\s*Total\s+(\d+)\s+marks?\s*\)?", re.IGNORECASE)
-QUESTION_START_RE = re.compile(r"^\s*(?:Leave\s+blank\s+)?(\d+)\.?\s*(?:\S|$)", re.IGNORECASE | re.DOTALL)
+QUESTION_START_RE = re.compile(r"^\s*(?:Leave\s+blank\s+)?(\d{1,2})[\.:]\s*(?:\S|$)", re.IGNORECASE | re.DOTALL)
 
 RENDER_ZOOM = 2.0
-CONTENT_X0 = 34.0
-CONTENT_X1_PAD = 34.0
-CONTINUATION_BOTTOM_PAD = 42.0
+CONTENT_X0 = 38.0
+CONTENT_X1_PAD = 78.0
+CONTINUATION_BOTTOM_PAD = 34.0
 MULTI_PAGE_GAP = 20
-IMAGE_BORDER = 24
+IMAGE_BORDER = 34
+QUESTION_TOP_PAD = 28.0
+TEXT_TOP_PAD = 18.0
+TEXT_BOTTOM_PAD = 24.0
+DRAWING_PAD = 12.0
 
 
 @dataclass
@@ -131,7 +135,7 @@ def locate_blocks(doc: fitz.Document) -> list[Block]:
         anchor = starts.get(q)
         if anchor is not None:
             start_page, start_y = anchor
-            start_y = max(0.0, start_y - 4)
+            start_y = max(0.0, start_y - QUESTION_TOP_PAD)
         elif index == 0:
             start_page = min(2, len(doc) - 1)
             start_y = 0.0
@@ -150,7 +154,7 @@ def locate_blocks(doc: fitz.Document) -> list[Block]:
 
 def trim_whitespace(image: Image.Image) -> Image.Image:
     background = Image.new(image.mode, image.size, "white")
-    diff = ImageChops.add(ImageChops.difference(image, background), ImageChops.difference(image, background), 2.0, -100)
+    diff = ImageChops.difference(image, background)
     bbox = diff.getbbox()
     if not bbox:
         return image
@@ -203,17 +207,23 @@ def is_noise_text(text: str, q: int) -> bool:
     if re.fullmatch(r"_+", clean.replace(" ", "")):
         return True
     lowered = clean.lower()
+    if re.fullmatch(r"\(\s*\d+\s*\)", clean):
+        return False
+    if QUESTION_TOTAL_RE.search(clean) or LEGACY_TOTAL_RE.search(clean):
+        without_total = QUESTION_TOTAL_RE.sub(" ", LEGACY_TOTAL_RE.sub(" ", clean)).strip()
+        if not without_total or re.fullmatch(r"[_\s\W]*", without_total):
+            return True
     if "do not write in this area" in lowered:
         return True
     if "turn over" in lowered:
         return True
-    if "leave blank" in lowered and len(lowered) < 80:
+    if lowered in {"leave", "leave blank", "blank"}:
         return True
     if lowered in {"answer all questions"}:
         return True
     if re.search(rf"\bquestion\s+{q}\s+continued\b", lowered):
         return True
-    if re.fullmatch(r"\*?p\d+a\d+\*?", lowered):
+    if re.fullmatch(r"\*?p\d+[a-z]*\d+\*?", lowered):
         return True
     if re.fullmatch(r"[\d\s\uf0a2]+", clean):
         return True
@@ -224,14 +234,19 @@ def is_noise_text(text: str, q: int) -> bool:
     scrubbed = scrubbed.replace("do not write in this area", " ")
     scrubbed = QUESTION_TOTAL_RE.sub(" ", scrubbed)
     scrubbed = LEGACY_TOTAL_RE.sub(" ", scrubbed)
-    scrubbed = re.sub(r"\*?p\d+[a-z]\d+\*?", " ", scrubbed)
+    scrubbed = re.sub(r"\*?p\d+[a-z]*\d+\*?", " ", scrubbed)
     scrubbed = re.sub(r"[_\s\d\W]+", " ", scrubbed).strip()
-    if not scrubbed and clean.count("_") > 20:
+    if not scrubbed:
         return True
     alpha_count = len(re.findall(r"[A-Za-z]", scrubbed))
     if clean.count("_") > 60 and alpha_count < 12:
         return True
     return False
+
+
+def is_answer_line_text(text: str) -> bool:
+    clean = re.sub(r"\s+", "", text)
+    return len(clean) > 24 and set(clean) <= {"_"}
 
 
 def merge_ranges(ranges: list[tuple[float, float]], gap: float = 22.0) -> list[tuple[float, float]]:
@@ -248,12 +263,30 @@ def merge_ranges(ranges: list[tuple[float, float]], gap: float = 22.0) -> list[t
     return merged
 
 
+def is_useful_drawing(rect: fitz.Rect, base: fitz.Rect) -> bool:
+    overlap_width = min(rect.x1, base.x1) - max(rect.x0, base.x0)
+    if overlap_width < 6:
+        return False
+    if rect.width > base.width * 0.85 and rect.height > base.height * 0.75:
+        return False
+    if rect.height > base.height * 0.70 and rect.width < 24:
+        return False
+    if rect.y0 > base.y1 - 90 and rect.width < 55 and rect.height < 55:
+        return False
+    if rect.width > 40 and rect.height < 5 and (rect.y0 < 45 or rect.y0 > base.y1 - 20):
+        return False
+    return True
+
+
 def content_clips_for_page(page: fitz.Page, page_num: int, block: Block) -> list[fitz.Rect]:
     base = full_page_clip(page, page_num, block)
+    page_lines = text_lines(page)
     content_ranges: list[tuple[float, float]] = []
     footer_ranges: list[tuple[float, float]] = []
+    first_answer_line_y: float | None = None
+    has_table_region = False
 
-    for _x0, y0, _x1, y1, text in text_lines(page):
+    for _x0, y0, _x1, y1, text in page_lines:
         if y1 < base.y0 or y0 > base.y1:
             continue
         if QUESTION_TOTAL_RE.search(text) or LEGACY_TOTAL_RE.search(text):
@@ -265,22 +298,78 @@ def content_clips_for_page(page: fitz.Page, page_num: int, block: Block) -> list
             continue
         if x1 < base.x0 or x0 > base.x1:
             continue
+        lowered_text = re.sub(r"\s+", " ", str(text)).lower()
+        if "table below" in lowered_text or "the table above" in lowered_text:
+            has_table_region = True
+        if is_answer_line_text(str(text)):
+            if first_answer_line_y is None or y0 < first_answer_line_y:
+                first_answer_line_y = y0
+            continue
+        if "leave blank" in lowered_text:
+            raw_rect = fitz.Rect(x0, y0, x1, y1)
+            added_clean_line = False
+            for line_x0, line_y0, line_x1, line_y1, line_text in page_lines:
+                line_rect = fitz.Rect(line_x0, line_y0, line_x1, line_y1)
+                if not line_rect.intersects(raw_rect) or not line_rect.intersects(base):
+                    continue
+                if is_answer_line_text(line_text) or is_noise_text(line_text, block.q):
+                    continue
+                content_ranges.append(
+                    (max(base.y0, line_y0 - TEXT_TOP_PAD), min(base.y1, line_y1 + TEXT_BOTTOM_PAD))
+                )
+                added_clean_line = True
+            if added_clean_line:
+                continue
         if QUESTION_TOTAL_RE.search(text) or LEGACY_TOTAL_RE.search(text):
             text_without_total = QUESTION_TOTAL_RE.sub("", LEGACY_TOTAL_RE.sub("", text))
             if is_noise_text(text_without_total, block.q):
                 continue
         if is_noise_text(text, block.q):
             continue
-        content_ranges.append((max(base.y0, y0 - 14), min(base.y1, y1 + 18)))
+        content_ranges.append((max(base.y0, y0 - TEXT_TOP_PAD), min(base.y1, y1 + TEXT_BOTTOM_PAD)))
+
+    for raw_block in page.get_text("dict").get("blocks", []):
+        if raw_block.get("type") != 1:
+            continue
+        x0, y0, x1, y1 = (float(value) for value in raw_block.get("bbox", (0, 0, 0, 0)))
+        if y1 < base.y0 or y0 > base.y1:
+            continue
+        if x1 < base.x0 or x0 > base.x1:
+            continue
+        rect = fitz.Rect(x0, y0, x1, y1)
+        if not is_useful_drawing(rect, base):
+            continue
+        content_ranges.append((max(base.y0, y0 - DRAWING_PAD), min(base.y1, y1 + DRAWING_PAD)))
+
+    for drawing in page.get_drawings():
+        rect = drawing.get("rect")
+        if rect is None or rect.is_empty:
+            continue
+        if rect.y1 < base.y0 or rect.y0 > base.y1:
+            continue
+        if rect.x1 < base.x0 or rect.x0 > base.x1:
+            continue
+        if not is_useful_drawing(rect, base):
+            continue
+        content_ranges.append((max(base.y0, rect.y0 - DRAWING_PAD), min(base.y1, rect.y1 + DRAWING_PAD)))
+
+    if has_table_region and first_answer_line_y is not None and content_ranges:
+        start, end = content_ranges[-1]
+        table_end = max(end, min(base.y1, first_answer_line_y - 8))
+        content_ranges[-1] = (start, table_end)
+
+    if first_answer_line_y is not None:
+        adjusted_ranges: list[tuple[float, float]] = []
+        for start, end in content_ranges:
+            if start < first_answer_line_y < end:
+                end = min(end, first_answer_line_y - 4)
+            if end - start >= 6:
+                adjusted_ranges.append((start, end))
+        content_ranges = adjusted_ranges
 
     clips: list[fitz.Rect] = []
     for start, end in merge_ranges(content_ranges):
         clips.append(fitz.Rect(base.x0, max(base.y0, start), base.x1, min(base.y1, end)))
-
-    for start, end in footer_ranges:
-        footer_clip = fitz.Rect(base.x0, max(base.y0, start), base.x1, min(base.y1, end))
-        if not any(abs(footer_clip.y0 - clip.y0) < 3 and abs(footer_clip.y1 - clip.y1) < 3 for clip in clips):
-            clips.append(footer_clip)
 
     if not clips:
         return []
@@ -291,16 +380,35 @@ def block_text(doc: fitz.Document, block: Block) -> str:
     chunks: list[str] = []
     for page_num in range(block.start_page, block.end_page + 1):
         page = doc.load_page(page_num)
-        page_bottom = page.rect.height - CONTINUATION_BOTTOM_PAD
-        if page_num == block.start_page and page_num == block.end_page:
-            clip = fitz.Rect(CONTENT_X0, block.start_y, page.rect.width - CONTENT_X1_PAD, block.end_y)
-        elif page_num == block.start_page:
-            clip = fitz.Rect(CONTENT_X0, block.start_y, page.rect.width - CONTENT_X1_PAD, page_bottom)
-        elif page_num == block.end_page:
-            clip = fitz.Rect(CONTENT_X0, 0, page.rect.width - CONTENT_X1_PAD, block.end_y)
-        else:
-            clip = fitz.Rect(CONTENT_X0, 0, page.rect.width - CONTENT_X1_PAD, page_bottom)
-        chunks.append(page.get_text(clip=clip))
+        base = full_page_clip(page, page_num, block)
+        page_lines = text_lines(page)
+        for raw_block in page.get_text("blocks"):
+            x0, y0, x1, y1, text = (
+                float(raw_block[0]),
+                float(raw_block[1]),
+                float(raw_block[2]),
+                float(raw_block[3]),
+                str(raw_block[4]),
+            )
+            raw_rect = fitz.Rect(x0, y0, x1, y1)
+            if not raw_rect.intersects(base):
+                continue
+            lowered_text = re.sub(r"\s+", " ", text).lower()
+            if "leave blank" in lowered_text:
+                clean_lines: list[str] = []
+                for line_x0, line_y0, line_x1, line_y1, line_text in page_lines:
+                    line_rect = fitz.Rect(line_x0, line_y0, line_x1, line_y1)
+                    if not line_rect.intersects(raw_rect) or not line_rect.intersects(base):
+                        continue
+                    if is_answer_line_text(line_text) or is_noise_text(line_text, block.q):
+                        continue
+                    clean_lines.append(line_text.strip())
+                if clean_lines:
+                    chunks.append(" ".join(clean_lines))
+                continue
+            if is_answer_line_text(text) or is_noise_text(text, block.q):
+                continue
+            chunks.append(text.strip())
     return re.sub(r"\s+", " ", " ".join(chunks)).strip()
 
 
