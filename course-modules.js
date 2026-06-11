@@ -1111,8 +1111,313 @@
                       },
                       {
                           "kind": "solution",
-                          "title": "Solved bank",
-                          "href": "ial/wma12/index.html#ialFilters"
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2026_Jan_Solutions.pdf?v=wma12-full-20260611"
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "heading": "2025",
+          "sessions": [
+              {
+                  "label": "Oct 2025",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2025_Oct_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2025_Oct_Solutions.pdf?v=wma12-full-20260611"
+                      }
+                  ]
+              },
+              {
+                  "label": "May/June 2025",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2025_MayJune_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2025_MayJune_Solutions.pdf?v=wma12-full-20260611"
+                      }
+                  ]
+              },
+              {
+                  "label": "Jan 2025",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2025_Jan_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2025_Jan_Solutions.pdf?v=wma12-full-20260611"
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "heading": "2024",
+          "sessions": [
+              {
+                  "label": "Oct 2024",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2024_Oct_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2024_Oct_Solutions.pdf?v=wma12-full-20260611"
+                      }
+                  ]
+              },
+              {
+                  "label": "May/June R 2024",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2024_MayJuneR_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2024_MayJuneR_Solutions.pdf?v=wma12-full-20260611"
+                      }
+                  ]
+              },
+              {
+                  "label": "May/June 2024",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2024_MayJune_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2024_MayJune_Solutions.pdf?v=wma12-full-20260611"
+                      }
+                  ]
+              },
+              {
+                  "label": "Jan 2024",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2024_Jan_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2024_Jan_Solutions.pdf?v=wma12-full-20260611"
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "heading": "2023",
+          "sessions": [
+              {
+                  "label": "Oct 2023",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2023_Oct_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2023_Oct_Solutions.pdf?v=wma12-full-20260611"
+                      }
+                  ]
+              },
+              {
+                  "label": "May/June 2023",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2023_MayJune_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2023_MayJune_Solutions.pdf?v=wma12-full-20260611"
+                      }
+                  ]
+              },
+              {
+                  "label": "Jan 2023",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2023_Jan_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2023_Jan_Solutions.pdf?v=wma12-full-20260611"
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "heading": "2022",
+          "sessions": [
+              {
+                  "label": "Oct 2022",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2022_Oct_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2022_Oct_Solutions.pdf?v=wma12-full-20260611"
+                      }
+                  ]
+              },
+              {
+                  "label": "May/June 2022",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2022_MayJune_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2022_MayJune_Solutions.pdf?v=wma12-full-20260611"
+                      }
+                  ]
+              },
+              {
+                  "label": "Jan 2022",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2022_Jan_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2022_Jan_Solutions.pdf?v=wma12-full-20260611"
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "heading": "2021",
+          "sessions": [
+              {
+                  "label": "Oct 2021",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2021_Oct_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2021_Oct_Solutions.pdf?v=wma12-full-20260611"
+                      }
+                  ]
+              },
+              {
+                  "label": "May/June 2021",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2021_MayJune_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2021_MayJune_Solutions.pdf?v=wma12-full-20260611"
+                      }
+                  ]
+              },
+              {
+                  "label": "Jan 2021",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2021_Jan_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2021_Jan_Solutions.pdf?v=wma12-full-20260611"
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "heading": "2020",
+          "sessions": [
+              {
+                  "label": "Jan 2020",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2020_Jan_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2020_Jan_Solutions.pdf?v=wma12-full-20260611"
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "heading": "2019",
+          "sessions": [
+              {
+                  "label": "Oct 2019",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2019_Oct_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA12/Papers/WMA12_2019_Oct_Solutions.pdf?v=wma12-full-20260611"
                       }
                   ]
               }
@@ -1346,12 +1651,12 @@
           "className": "pure-book",
           "tag": "IAL Pure 2",
           "tagTone": "pure",
-          "title": "WMA12 Pilot Bank",
-          "description": "Pure 2 is now open with the January 2026 paper cropped, solved, and classified across the 12-topic WMA12 map.",
+          "title": "WMA12 Classified Books",
+          "description": "Standalone Edexcel IAL Pure 2 bank from October 2019 to January 2026 with topic practice, expertise books, and worked-solution archives.",
           "meta": [
-              "10 solved questions",
+              "190 questions",
               "12 Pure 2 topics",
-              "Pipeline ready"
+              "Questions + worked answers"
           ],
           "actions": [
               {
@@ -1360,19 +1665,39 @@
                   "variant": "primary"
               },
               {
-                  "label": "Build Test",
-                  "href": "exam.html?pathway=pure&course=wma12&mode=custom",
-                  "variant": "solution"
+                  "label": "Questions PDF",
+                  "href": "downloads/IAL/WMA12/WMA12_Classified_Questions.pdf?v=wma12-full-20260611",
+                  "variant": "primary",
+                  "target": "_blank"
               },
               {
-                  "label": "Revision Book",
-                  "href": "exam.html?pathway=pure&course=wma12&mode=smart&book=revision",
-                  "variant": "gold"
+                  "label": "Answers PDF",
+                  "href": "downloads/IAL/WMA12/WMA12_Classified_With_Answers.pdf?v=wma12-full-20260611",
+                  "variant": "solution",
+                  "target": "_blank"
               },
               {
-                  "label": "Past paper row",
+                  "label": "Expertise PDF",
+                  "href": "downloads/IAL/WMA12/WMA12_Expertise_Questions.pdf?v=wma12-full-20260611",
+                  "variant": "gold",
+                  "target": "_blank"
+              },
+              {
+                  "label": "Expertise + Answers",
+                  "href": "downloads/IAL/WMA12/WMA12_Expertise_With_Answers.pdf?v=wma12-full-20260611",
+                  "variant": "solution",
+                  "target": "_blank"
+              },
+              {
+                  "label": "Paper rows + solutions",
                   "href": "pastpapers.html?pathway=pure#pure-wma12",
                   "variant": "light"
+              },
+              {
+                  "label": "Solution archive PDF",
+                  "href": "downloads/IAL/WMA12/WMA12_Past_Paper_Solutions.pdf?v=wma12-full-20260611",
+                  "variant": "light",
+                  "target": "_blank"
               }
           ]
       }
@@ -1481,7 +1806,7 @@
       course: "wma12",
       palette: "mulberry",
       panelLabel: "WMA12 modules",
-      intro: "Pure 2 uses the same reusable module model as WMA11, with its own WMA12 data, progress keys, builder state, solved bank, and paper rows.",
+      intro: "Pure 2 now uses the full WMA12 bank from October 2019 to January 2026, with its own data, progress keys, builder state, solved bank, books, and paper rows.",
       paperSection: {
         id: "pure-wma12",
         className: "pp-section-pure",
@@ -1490,8 +1815,8 @@
         title: "Pure 2 paper list",
         heading: "WMA12 papers",
         eyebrow: "IAL Pure 2 | Edexcel WMA12",
-        intro: "Newest first. Published rows link to the original paper and the solved classified bank.",
-        explainer: "Standalone IAL WMA12 papers are being added through the Pure 2 pipeline. January 2026 is the first solved pilot paper.",
+        intro: "Newest first. Question paper and matching worked solution stay beside each other.",
+        explainer: "Standalone IAL WMA12 papers from October 2019 to January 2026. Each row puts the original question paper directly beside the worked solution.",
       },
       pastPapers: pureWma12PastPapers,
       books: pureWma12Books,
@@ -1503,8 +1828,9 @@
         { module: "progress", title: "Progress", detail: "Topic mastery", href: "/progress.html?pathway=pure&course=wma12" },
         { module: "mistake-box", title: "Mistake Box", detail: "Saved revision", href: "/ial/wma12/index.html?mode=mistakes#ialFilters" },
         { module: "saved-tests", title: "Saved Tests", detail: "Reuse builder tests", href: "/exam.html?pathway=pure&course=wma12&mode=saved" },
-        { module: "books", title: "Books", detail: "Course tools", href: "/downloads.html?pathway=pure#downloads" },
-        { module: "past-solutions", title: "Past Papers", detail: "Paper + solved bank", href: "/pastpapers.html?pathway=pure#pure-wma12" },
+        { module: "books", title: "Books", detail: "Question and answer PDFs", href: "/downloads.html?pathway=pure#downloads" },
+        { module: "answers", title: "Answer Books", detail: "Worked solution PDFs", href: "/downloads.html?pathway=pure#downloads" },
+        { module: "past-solutions", title: "Past Papers", detail: "Paper + solution rows", href: "/pastpapers.html?pathway=pure#pure-wma12" },
       ],
     },
     {
@@ -1614,7 +1940,7 @@
   };
 
   window.ELITE_COURSE_MODULES = {
-    version: "2026-06-11-course-registry-v10-wma12-pilot",
+    version: "2026-06-11-course-registry-v11-wma12-full",
     moduleCatalog,
     moduleAliases,
     palettes,

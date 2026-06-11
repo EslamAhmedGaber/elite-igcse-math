@@ -14,7 +14,8 @@ from PIL import Image, ImageChops, ImageDraw, ImageOps
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_OUT = ROOT / "private_output" / "wma12_crop_review"
 QUESTION_TOTAL_RE = re.compile(r"Total for Question\s+(\d+)\s+is\s+(\d+)\s+marks?", re.IGNORECASE)
-QUESTION_START_RE = re.compile(r"^\s*(\d+)\.?\s*(?:\S|$)", re.DOTALL)
+LEGACY_TOTAL_RE = re.compile(r"\(?\s*Total\s+(\d+)\s+marks?\s*\)?", re.IGNORECASE)
+QUESTION_START_RE = re.compile(r"^\s*(?:Leave\s+blank\s+)?(\d+)\.?\s*(?:\S|$)", re.IGNORECASE | re.DOTALL)
 
 RENDER_ZOOM = 2.0
 CONTENT_X0 = 34.0
@@ -36,6 +37,21 @@ class Block:
     filename: str = ""
 
 
+def text_lines(page: fitz.Page) -> list[tuple[float, float, float, float, str]]:
+    rows: list[tuple[float, float, float, float, str]] = []
+    page_dict = page.get_text("dict")
+    for block in page_dict.get("blocks", []):
+        if block.get("type") != 0:
+            continue
+        for line in block.get("lines", []):
+            text = "".join(span.get("text", "") for span in line.get("spans", []))
+            if not text.strip():
+                continue
+            x0, y0, x1, y1 = (float(value) for value in line["bbox"])
+            rows.append((x0, y0, x1, y1, text))
+    return rows
+
+
 def paper_slug_from_filename(path: Path) -> str:
     match = re.match(r"IAL_MATHS_(\d{4})_([A-Za-z]+)_P2(R?)_QP\.pdf$", path.name)
     if match:
@@ -51,7 +67,7 @@ def locate_question_starts(doc: fitz.Document) -> dict[int, tuple[int, float]]:
         for block in page.get_text("blocks"):
             text = re.sub(r"\s+", " ", block[4]).strip()
             x0, y0 = float(block[0]), float(block[1])
-            if x0 >= 110 or y0 >= 760:
+            if x0 >= 85 or y0 >= 760:
                 continue
             match = QUESTION_START_RE.match(text)
             if not match and text.isdigit():
@@ -68,10 +84,18 @@ def locate_question_starts(doc: fitz.Document) -> dict[int, tuple[int, float]]:
 
 def locate_blocks(doc: fitz.Document) -> list[Block]:
     footers: list[tuple[int, int, int, float, float]] = []
+    legacy_footers: list[tuple[int, int, int, float, float]] = []
     for page_num in range(len(doc)):
         page = doc.load_page(page_num)
+        for _x0, y0, _x1, y1, text in text_lines(page):
+            for match in QUESTION_TOTAL_RE.finditer(text):
+                footers.append((int(match.group(1)), int(match.group(2)), page_num, y0, y1))
+            for match in LEGACY_TOTAL_RE.finditer(text):
+                legacy_footers.append((0, int(match.group(1)), page_num, y0, y1))
         for block in page.get_text("blocks"):
             for match in QUESTION_TOTAL_RE.finditer(block[4]):
+                if any(existing[2] == page_num and abs(existing[3] - float(block[1])) < 1 for existing in footers):
+                    continue
                 footers.append(
                     (
                         int(match.group(1)),
@@ -81,8 +105,23 @@ def locate_blocks(doc: fitz.Document) -> list[Block]:
                         float(block[3]),
                     )
                 )
+            for match in LEGACY_TOTAL_RE.finditer(block[4]):
+                if any(existing[2] == page_num for existing in legacy_footers):
+                    continue
+                legacy_footers.append(
+                    (
+                        0,
+                        int(match.group(1)),
+                        page_num,
+                        float(block[1]),
+                        float(block[3]),
+                    )
+                )
 
     footers.sort(key=lambda row: row[0])
+    if not footers and legacy_footers:
+        legacy_footers.sort(key=lambda row: (row[2], row[3]))
+        footers = [(index + 1, row[1], row[2], row[3], row[4]) for index, row in enumerate(legacy_footers)]
     if not footers:
         raise RuntimeError("No Pearson question footers were found.")
 
@@ -166,13 +205,31 @@ def is_noise_text(text: str, q: int) -> bool:
     lowered = clean.lower()
     if "do not write in this area" in lowered:
         return True
-    if lowered in {"turn over", "answer all questions"}:
+    if "turn over" in lowered:
         return True
-    if lowered == f"question {q} continued":
+    if "leave blank" in lowered and len(lowered) < 80:
+        return True
+    if lowered in {"answer all questions"}:
+        return True
+    if re.search(rf"\bquestion\s+{q}\s+continued\b", lowered):
         return True
     if re.fullmatch(r"\*?p\d+a\d+\*?", lowered):
         return True
     if re.fullmatch(r"[\d\s\uf0a2]+", clean):
+        return True
+    scrubbed = lowered
+    scrubbed = re.sub(rf"\bquestion\s+{q}\s+continued\b", " ", scrubbed)
+    scrubbed = scrubbed.replace("leave blank", " ")
+    scrubbed = scrubbed.replace("turn over", " ")
+    scrubbed = scrubbed.replace("do not write in this area", " ")
+    scrubbed = QUESTION_TOTAL_RE.sub(" ", scrubbed)
+    scrubbed = LEGACY_TOTAL_RE.sub(" ", scrubbed)
+    scrubbed = re.sub(r"\*?p\d+[a-z]\d+\*?", " ", scrubbed)
+    scrubbed = re.sub(r"[_\s\d\W]+", " ", scrubbed).strip()
+    if not scrubbed and clean.count("_") > 20:
+        return True
+    alpha_count = len(re.findall(r"[A-Za-z]", scrubbed))
+    if clean.count("_") > 60 and alpha_count < 12:
         return True
     return False
 
@@ -196,15 +253,22 @@ def content_clips_for_page(page: fitz.Page, page_num: int, block: Block) -> list
     content_ranges: list[tuple[float, float]] = []
     footer_ranges: list[tuple[float, float]] = []
 
+    for _x0, y0, _x1, y1, text in text_lines(page):
+        if y1 < base.y0 or y0 > base.y1:
+            continue
+        if QUESTION_TOTAL_RE.search(text) or LEGACY_TOTAL_RE.search(text):
+            footer_ranges.append((max(base.y0, y0 - 8), min(base.y1, y1 + 8)))
+
     for raw_block in page.get_text("blocks"):
         x0, y0, x1, y1, text = float(raw_block[0]), float(raw_block[1]), float(raw_block[2]), float(raw_block[3]), raw_block[4]
         if y1 < base.y0 or y0 > base.y1:
             continue
         if x1 < base.x0 or x0 > base.x1:
             continue
-        if QUESTION_TOTAL_RE.search(text):
-            footer_ranges.append((max(base.y0, y0 - 8), min(base.y1, y1 + 8)))
-            continue
+        if QUESTION_TOTAL_RE.search(text) or LEGACY_TOTAL_RE.search(text):
+            text_without_total = QUESTION_TOTAL_RE.sub("", LEGACY_TOTAL_RE.sub("", text))
+            if is_noise_text(text_without_total, block.q):
+                continue
         if is_noise_text(text, block.q):
             continue
         content_ranges.append((max(base.y0, y0 - 14), min(base.y1, y1 + 18)))

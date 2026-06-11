@@ -140,6 +140,9 @@ ALLOWED_PUBLIC_SOLUTION_FILES = {
     "downloads/IAL/WMA11/WMA11_Classified_With_Answers.pdf",
     "downloads/IAL/WMA11/WMA11_Expertise_With_Answers.pdf",
     "downloads/IAL/WMA11/WMA11_Past_Paper_Solutions.pdf",
+    "downloads/IAL/WMA12/WMA12_Classified_With_Answers.pdf",
+    "downloads/IAL/WMA12/WMA12_Expertise_With_Answers.pdf",
+    "downloads/IAL/WMA12/WMA12_Past_Paper_Solutions.pdf",
 }
 
 
