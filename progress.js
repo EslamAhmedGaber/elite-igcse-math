@@ -7,6 +7,7 @@
     "Unit 2",
     "WMA11",
     "WMA12",
+    "WME01",
     "4WM1H",
     "4WM1HR",
     "4WM2H",
@@ -44,6 +45,16 @@
         topics: window.WMA12_TOPICS || [],
         questions: window.WMA12_QUESTIONS || [],
         storagePrefix: "eliteWMA12"
+      },
+      wme01: {
+        id: "wme01",
+        code: "WME01",
+        unitName: "Mechanics 1",
+        label: "IAL Mechanics 1",
+        pageHref: "ial/wme01/index.html",
+        topics: window.WME01_TOPICS || [],
+        questions: window.WME01_QUESTIONS || [],
+        storagePrefix: "eliteWME01"
       }
     };
     const ialCourse = pathway === "pure" ? (ialDefinitions[course] || ialDefinitions.wma11) : null;

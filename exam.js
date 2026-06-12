@@ -31,9 +31,24 @@
       topics: () => window.WMA12_TOPICS || [],
       questions: () => window.WMA12_QUESTIONS || [],
       storagePrefix: "eliteWMA12"
+    },
+    wme01: {
+      id: "wme01",
+      code: "WME01",
+      unitName: "Mechanics 1",
+      label: "IAL Mechanics 1",
+      title: "IAL Mechanics 1 Revision Book & Test Builder",
+      heroTitle: "Build a full Mechanics 1 test.",
+      heroCopy: "Use the same builder engine for WME01: random mocks, hand-built tests, revision books, saved tests, marking, and printable worked solutions.",
+      unitAllLabel: "All Mechanics 1",
+      pageHref: "ial/wme01/index.html",
+      topics: () => window.WME01_TOPICS || [],
+      questions: () => window.WME01_QUESTIONS || [],
+      storagePrefix: "eliteWME01"
     }
   };
-  const requestedIalCourse = requestedCourse || (pathname.includes("/ial/wma12/") ? "wma12" : pathname.includes("/ial/wma11/") ? "wma11" : "");
+  const requestedIalCourse = requestedCourse
+    || (pathname.includes("/ial/wme01/") ? "wme01" : pathname.includes("/ial/wma12/") ? "wma12" : pathname.includes("/ial/wma11/") ? "wma11" : "");
   const ialCourse = requestedPathway === "pure" || requestedIalCourse
     ? IAL_COURSES[requestedIalCourse] || IAL_COURSES.wma11
     : null;

@@ -25,11 +25,12 @@ ASSET_ROOT = ROOT
 DOWNLOADS_DIR = ROOT / "downloads"
 PRIVATE_OUTPUT = ROOT / "private_output"
 GITIGNORE = ROOT / ".gitignore"
-CURRENT_PATHWAY_BOOTSTRAP_VERSION = "20260611a"
-CURRENT_LEAD_VERSION = "20260611a"
+CURRENT_PATHWAY_BOOTSTRAP_VERSION = "20260613a"
+CURRENT_LEAD_VERSION = "20260613a"
 IAL_DATA_FILES = {
     "wma11": (ROOT / "ial" / "wma11" / "wma11-data.js", "WMA11_QUESTIONS"),
     "wma12": (ROOT / "ial" / "wma12" / "wma12-data.js", "WMA12_QUESTIONS"),
+    "wme01": (ROOT / "ial" / "wme01" / "wme01-data.js", "WME01_QUESTIONS"),
 }
 
 LINEAR_UNITS = {
@@ -134,6 +135,7 @@ ALLOWED_PUBLIC_SOLUTION_DIRS = {
     "downloads/PastPaperSolutions",
     "downloads/IAL/WMA11/Papers",
     "downloads/IAL/WMA12/Papers",
+    "downloads/IAL/WME01/Papers",
 }
 
 ALLOWED_PUBLIC_SOLUTION_FILES = {
@@ -143,6 +145,9 @@ ALLOWED_PUBLIC_SOLUTION_FILES = {
     "downloads/IAL/WMA12/WMA12_Classified_With_Answers.pdf",
     "downloads/IAL/WMA12/WMA12_Expertise_With_Answers.pdf",
     "downloads/IAL/WMA12/WMA12_Past_Paper_Solutions.pdf",
+    "downloads/IAL/WME01/WME01_Classified_With_Answers.pdf",
+    "downloads/IAL/WME01/WME01_Expertise_With_Answers.pdf",
+    "downloads/IAL/WME01/WME01_Past_Paper_Solutions.pdf",
 }
 
 
@@ -316,6 +321,7 @@ def verify_pathway_palette_activation(report: Report) -> None:
         "ial/index.html",
         "ial/wma11/index.html",
         "ial/wma12/index.html",
+        "ial/wme01/index.html",
     ]
     for page in required_pages:
         path = ROOT / page

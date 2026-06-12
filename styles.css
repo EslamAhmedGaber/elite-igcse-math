@@ -9731,6 +9731,15 @@ body[data-pathway="pure"] {
   --course-rail: rgba(54, 48, 74, 0.26);
 }
 
+html[data-course-palette="teal"],
+body[data-course-palette="teal"] {
+  --course-signature: #31534e;
+  --course-deep: #203936;
+  --course-soft: rgba(49, 83, 78, 0.1);
+  --course-vellum: rgba(235, 223, 196, 0.52);
+  --course-rail: rgba(49, 83, 78, 0.26);
+}
+
 body[data-course-palette] {
   --accent: var(--course-signature);
   --accent-dark: var(--course-deep);

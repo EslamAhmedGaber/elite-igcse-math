@@ -124,6 +124,12 @@
       accentDeep: "#48203f",
       soft: "rgba(107, 47, 95, 0.1)",
     },
+    teal: {
+      label: "IAL Mechanics 1",
+      accent: "#31534e",
+      accentDeep: "#203936",
+      soft: "rgba(49, 83, 78, 0.1)",
+    },
   };
 
   const linearLinks = [
@@ -1425,6 +1431,36 @@
       }
   ];
 
+  const wme01SessionGroups = [
+    ["2026", [["Jan 2026", "2026_Jan"]]],
+    ["2025", [["Oct 2025", "2025_Oct"], ["May/June 2025", "2025_MayJune"], ["Jan 2025", "2025_Jan"]]],
+    ["2024", [["Oct 2024", "2024_Oct"], ["May/June 2024", "2024_MayJune"], ["Jan 2024", "2024_Jan"]]],
+    ["2023", [["Oct 2023", "2023_Oct"], ["May/June 2023", "2023_MayJune"], ["Jan 2023", "2023_Jan"]]],
+    ["2022", [["Oct 2022", "2022_Oct"], ["May/June 2022", "2022_MayJune"], ["Jan 2022", "2022_Jan"]]],
+    ["2021", [["Oct 2021", "2021_Oct"], ["May/June 2021", "2021_MayJune"], ["Jan 2021", "2021_Jan"]]],
+    ["2020", [["Jan 2020", "2020_Jan"]]],
+    ["2019", [["Oct 2019", "2019_Oct"]]],
+  ];
+
+  const pureWme01PastPapers = wme01SessionGroups.map(([heading, sessions]) => ({
+    heading,
+    sessions: sessions.map(([label, slug]) => ({
+      label,
+      papers: [
+        {
+          kind: "paper",
+          title: "Question paper",
+          href: `downloads/IAL/WME01/Papers/WME01_${slug}_QP.pdf`,
+        },
+        {
+          kind: "solution",
+          title: "Worked solution",
+          href: `downloads/IAL/WME01/Papers/WME01_${slug}_Solutions.pdf?v=wme01-full-20260612`,
+        },
+      ],
+    })),
+  }));
+
   const linearBooks = [
       {
           "className": "linear-book",
@@ -1703,6 +1739,63 @@
       }
   ];
 
+  const pureWme01Books = [
+      {
+          "className": "pure-book",
+          "tag": "IAL Mechanics 1",
+          "tagTone": "pure",
+          "title": "WME01 Classified Books",
+          "description": "Standalone Edexcel IAL Mechanics 1 bank from October 2019 to January 2026 with topic practice, expertise books, and worked-solution archives.",
+          "meta": [
+              "138 questions",
+              "10 Mechanics topics",
+              "Questions + worked answers"
+          ],
+          "actions": [
+              {
+                  "label": "Open WME01 bank",
+                  "href": "ial/wme01/index.html",
+                  "variant": "primary"
+              },
+              {
+                  "label": "Questions PDF",
+                  "href": "downloads/IAL/WME01/WME01_Classified_Questions.pdf?v=wme01-full-20260612",
+                  "variant": "primary",
+                  "target": "_blank"
+              },
+              {
+                  "label": "Answers PDF",
+                  "href": "downloads/IAL/WME01/WME01_Classified_With_Answers.pdf?v=wme01-full-20260612",
+                  "variant": "solution",
+                  "target": "_blank"
+              },
+              {
+                  "label": "Expertise PDF",
+                  "href": "downloads/IAL/WME01/WME01_Expertise_Questions.pdf?v=wme01-full-20260612",
+                  "variant": "gold",
+                  "target": "_blank"
+              },
+              {
+                  "label": "Expertise + Answers",
+                  "href": "downloads/IAL/WME01/WME01_Expertise_With_Answers.pdf?v=wme01-full-20260612",
+                  "variant": "solution",
+                  "target": "_blank"
+              },
+              {
+                  "label": "Paper rows + solutions",
+                  "href": "pastpapers.html?pathway=pure#pure-wme01",
+                  "variant": "light"
+              },
+              {
+                  "label": "Solution archive PDF",
+                  "href": "downloads/IAL/WME01/WME01_Past_Paper_Solutions.pdf?v=wme01-full-20260612",
+                  "variant": "light",
+                  "target": "_blank"
+              }
+          ]
+      }
+  ];
+
   const navGroups = [
     {
       id: "linear",
@@ -1834,6 +1927,42 @@
       ],
     },
     {
+      id: "mechanics1",
+      label: "IAL Mechanics 1",
+      detail: "WME01",
+      href: "/ial/wme01/index.html",
+      pathway: "pure",
+      course: "wme01",
+      palette: "teal",
+      panelLabel: "WME01 modules",
+      intro: "Mechanics 1 uses the full WME01 bank from October 2019 to January 2026, with its own data, progress keys, builder state, solved bank, books, and paper rows.",
+      paperSection: {
+        id: "pure-wme01",
+        className: "pp-section-pure",
+        tag: "IAL Mechanics 1 | WME01",
+        tagTone: "pure",
+        title: "Mechanics 1 paper list",
+        heading: "WME01 papers",
+        eyebrow: "IAL Mechanics 1 | Edexcel WME01",
+        intro: "Newest first. Question paper and matching worked solution stay beside each other.",
+        explainer: "Standalone IAL WME01 papers from October 2019 to January 2026. Each row puts the original question paper directly beside the worked solution.",
+      },
+      pastPapers: pureWme01PastPapers,
+      books: pureWme01Books,
+      links: [
+        { module: "classified", title: "Classified View", detail: "Topic practice", href: "/ial/wme01/index.html" },
+        { module: "expertise", title: "Expertise View", detail: "Q6+ filtered bank", href: "/ial/wme01/index.html?expertise=1#ialFilters" },
+        { module: "build-test", title: "Build Test", detail: "Full mock builder", href: "/exam.html?pathway=pure&course=wme01&mode=custom" },
+        { module: "revision-book", title: "Revision Book", detail: "10-100 question mix", href: "/exam.html?pathway=pure&course=wme01&mode=smart&book=revision" },
+        { module: "progress", title: "Progress", detail: "Topic mastery", href: "/progress.html?pathway=pure&course=wme01" },
+        { module: "mistake-box", title: "Mistake Box", detail: "Saved revision", href: "/ial/wme01/index.html?mode=mistakes#ialFilters" },
+        { module: "saved-tests", title: "Saved Tests", detail: "Reuse builder tests", href: "/exam.html?pathway=pure&course=wme01&mode=saved" },
+        { module: "books", title: "Books", detail: "Question and answer PDFs", href: "/downloads.html?pathway=pure&course=wme01#downloads" },
+        { module: "answers", title: "Answer Books", detail: "Worked solution PDFs", href: "/downloads.html?pathway=pure&course=wme01#downloads" },
+        { module: "past-solutions", title: "Past Papers", detail: "Paper + solution rows", href: "/pastpapers.html?pathway=pure&course=wme01#pure-wme01" },
+      ],
+    },
+    {
       id: "about",
       label: "About",
       detail: "Dr Eslam",
@@ -1919,19 +2048,19 @@
             status: "live",
           },
           {
-            id: "stats1",
-            label: "Statistics 1",
-            code: "WST01",
-            palette: "amber",
-            href: "/ial/wst01/index.html",
-            status: "planned",
-          },
-          {
             id: "mech1",
             label: "Mechanics 1",
             code: "WME01",
             palette: "teal",
             href: "/ial/wme01/index.html",
+            status: "live",
+          },
+          {
+            id: "stats1",
+            label: "Statistics 1",
+            code: "WST01",
+            palette: "amber",
+            href: "/ial/wst01/index.html",
             status: "planned",
           },
         ],
@@ -1940,7 +2069,7 @@
   };
 
   window.ELITE_COURSE_MODULES = {
-    version: "2026-06-11-course-registry-v11-wma12-full",
+    version: "2026-06-13-course-registry-v13-wme01-full",
     moduleCatalog,
     moduleAliases,
     palettes,

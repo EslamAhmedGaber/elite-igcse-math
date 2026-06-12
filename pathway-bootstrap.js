@@ -29,14 +29,22 @@
     return "";
   }
 
+  function coursePalette(course, pathway) {
+    if (course === "wma12") return "mulberry";
+    if (course === "wme01") return "teal";
+    if (course === "wma11") return "pure";
+    return pathway;
+  }
+
   function resolveContext() {
     const url = new URL(window.location.href);
     const requested = normalizePathway(url.searchParams.get("pathway"));
     const pathname = window.location.pathname.toLowerCase();
     const pathIsWma11 = pathname.includes("/ial/wma11/");
     const pathIsWma12 = pathname.includes("/ial/wma12/");
-    const pathIsIal = pathIsWma11 || pathIsWma12 || pathname === "/ial/" || pathname.endsWith("/ial/index.html");
-    const course = url.searchParams.get("course") || (pathIsWma12 ? "wma12" : pathIsWma11 ? "wma11" : "");
+    const pathIsWme01 = pathname.includes("/ial/wme01/");
+    const pathIsIal = pathIsWma11 || pathIsWma12 || pathIsWme01 || pathname === "/ial/" || pathname.endsWith("/ial/index.html");
+    const course = url.searchParams.get("course") || (pathIsWme01 ? "wme01" : pathIsWma12 ? "wma12" : pathIsWma11 ? "wma11" : "");
     const pathway = requested || (pathIsIal ? "pure" : "") || storedPathway() || "linear";
     return {
       pathway,
@@ -48,7 +56,7 @@
   function applyContext(target, context) {
     if (!target) return;
     target.dataset.pathway = context.pathway;
-    target.dataset.coursePalette = context.pathway;
+    target.dataset.coursePalette = coursePalette(context.course, context.pathway);
     if (context.course) target.dataset.course = context.course;
     else delete target.dataset.course;
     if (context.unit) target.dataset.unit = context.unit;

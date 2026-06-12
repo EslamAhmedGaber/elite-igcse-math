@@ -242,8 +242,8 @@ function pageScript(body) {
       };
       const mode = () => document.body.dataset.pathway || "linear";
       const courseParam = () => (new URLSearchParams(location.search).get("course") || "").toLowerCase();
-      const pureCourse = () => courseParam() === "wma12" ? "wma12" : "wma11";
-      const isPure = () => mode() === "pure" || ["wma11", "wma12"].includes(courseParam());
+      const pureCourse = () => ["wma11", "wma12", "wme01"].includes(courseParam()) ? courseParam() : "wma11";
+      const isPure = () => mode() === "pure" || ["wma11", "wma12", "wme01"].includes(courseParam());
       const examKey = () => isPure() ? "eliteMockExamV1:" + pureCourse() : "eliteMockExamV1";
       const draftKey = () => isPure() ? "eliteTestBuilderDraftV1:" + pureCourse() : "eliteTestBuilderDraftV1";
       const savedKey = () => isPure() ? "eliteSavedTestsV1:" + pureCourse() : "eliteSavedTestsV1";
@@ -255,7 +255,11 @@ function pageScript(body) {
       const rawQuestions = () => {
         if (isPure()) {
           const course = pureCourse();
-          const bank = course === "wma12" ? (window.WMA12_QUESTIONS || []) : (window.WMA11_QUESTIONS || []);
+          const bank = course === "wme01"
+            ? (window.WME01_QUESTIONS || [])
+            : course === "wma12"
+              ? (window.WMA12_QUESTIONS || [])
+              : (window.WMA11_QUESTIONS || []);
           const unit = course.toUpperCase();
           return bank.map((question) => ({
             id: question.id,
@@ -487,7 +491,8 @@ async function main() {
     { label: "Modular Unit 1", query: "?pathway=modular&unit=Unit+1", course: "igcse", pathway: "modular" },
     { label: "Modular Unit 2", query: "?pathway=modular&unit=Unit+2", course: "igcse", pathway: "modular" },
     { label: "Pure WMA11", query: "?pathway=pure&course=wma11", course: "wma11", pathway: "pure" },
-    { label: "Pure WMA12", query: "?pathway=pure&course=wma12", course: "wma12", pathway: "pure", topicPick: 11, assertTopicBalance: false }
+    { label: "Pure WMA12", query: "?pathway=pure&course=wma12", course: "wma12", pathway: "pure", topicPick: 11, assertTopicBalance: false },
+    { label: "Mechanics WME01", query: "?pathway=pure&course=wme01", course: "wme01", pathway: "pure", topicPick: 10, assertTopicBalance: false }
   ];
 
   try {
