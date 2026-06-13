@@ -152,13 +152,14 @@
 
   const questions = course.questions;
   const solutions = course.solutions;
+  const ialPrintPalettes = { wma11: "pure", wma12: "mulberry", wme01: "teal" };
   const activePrintPalette = course.mode === "pure"
-    ? "pure"
+    ? ialPrintPalettes[course.id] || "pure"
     : requestedPathway === "modular" || window.ELITE_PATHWAY?.mode === "modular"
       ? "modular"
       : "linear";
   if (document.body) {
-    document.body.dataset.pathway = activePrintPalette;
+    document.body.dataset.pathway = course.mode === "pure" ? "pure" : activePrintPalette;
     document.body.dataset.coursePalette = activePrintPalette;
     window.ElitePrint?.applyPrintPalette?.();
   }
@@ -1004,8 +1005,12 @@
       .replace(/`([^`]+)`/g, "<code>$1</code>");
   }
 
+  function normalizeSolutionNotation(text) {
+    return String(text || "").replace(/\\pounds?\b/g, "£");
+  }
+
   function formatSolutionText(text) {
-    const escaped = escapeHtml(text).trim();
+    const escaped = escapeHtml(normalizeSolutionNotation(text)).trim();
     if (!escaped) return `<p class="solution-empty">Solution has not been written yet.</p>`;
     return escaped
       .split(/\n{2,}/)
@@ -1136,15 +1141,23 @@
           ${canMark ? `<label>Score <input data-score-id="${escapeHtml(id)}" type="number" min="0" max="${question.marks}" value="${savedScore}"> / ${question.marks}</label>` : `<span>${state.status === "running" ? "Answers stay private during the exam" : "Ready to start or print"}</span>`}
         </footer>
         ${canMark && hasSolution ? `<details class="exam-solution"><summary>Show worked solution</summary>${solutionHtml}</details>` : ""}
+        <div class="print-paper-footer">Downloaded from eliteigcse.com | Dr Eslam Ahmed | 01120009622</div>
         <section class="exam-print-solution" aria-label="Printable worked solution">
+          <div class="print-solution-heading">
+            <div>
+              <span>Solution ${index + 1}</span>
+              <strong>${escapeHtml(question.paper)} Q${question.question}</strong>
+            </div>
+            <em>${question.marks} marks</em>
+          </div>
           <h3>Worked Solution</h3>
           ${solutionHtml}
+          <div class="print-paper-footer print-solution-footer">Downloaded from eliteigcse.com | Dr Eslam Ahmed | 01120009622</div>
         </section>
-        <div class="print-paper-footer">Downloaded from eliteigcse.com | Dr Eslam Ahmed | 01120009622</div>
       </article>`;
     }).join("");
-    if (window.MathJax?.typesetPromise && canMark) {
-      window.MathJax.typesetPromise([els.paper]).catch(() => {});
+    if (canMark) {
+      typesetPaperMath();
     }
   }
 
@@ -1339,14 +1352,37 @@
     await window.ElitePrint.printWhenReady(els.paper, els.printDraft);
   }
 
+  function waitFor(ms) {
+    return new Promise((resolve) => window.setTimeout(resolve, ms));
+  }
+
+  async function waitForMathJaxReady(timeoutMs = 7000) {
+    const started = Date.now();
+    while (!window.MathJax?.typesetPromise && Date.now() - started < timeoutMs) {
+      await waitFor(80);
+    }
+    const mathJax = window.MathJax;
+    if (!mathJax?.typesetPromise) return false;
+    if (mathJax.startup?.promise) {
+      await Promise.race([
+        mathJax.startup.promise,
+        waitFor(timeoutMs)
+      ]).catch(() => {});
+    }
+    return true;
+  }
+
+  async function typesetPaperMath() {
+    if (!(await waitForMathJaxReady())) return;
+    await window.MathJax.typesetPromise([els.paper]).catch(() => {});
+  }
+
   async function printCurrentSolutions(trigger = els.printSolution) {
     if (!ensurePaperForCurrentMode()) return;
     if (!state.ids.length) return;
-    if (window.MathJax?.typesetPromise) {
-      await window.MathJax.typesetPromise([els.paper]).catch(() => {});
-    }
     document.body.classList.add("print-solutions");
     try {
+      await typesetPaperMath();
       await window.ElitePrint.printWhenReady(els.paper, trigger);
     } finally {
       document.body.classList.remove("print-solutions");

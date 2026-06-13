@@ -24,6 +24,20 @@
       accentDeep: "#241f33",
       soft: "rgba(54, 48, 74, 0.1)",
       highlight: "#dcb877"
+    },
+    mulberry: {
+      label: "IAL Pure 2",
+      accent: "#6b2f5f",
+      accentDeep: "#48203f",
+      soft: "rgba(107, 47, 95, 0.1)",
+      highlight: "#dcb877"
+    },
+    teal: {
+      label: "IAL Mechanics 1",
+      accent: "#31534e",
+      accentDeep: "#203936",
+      soft: "rgba(49, 83, 78, 0.1)",
+      highlight: "#dcb877"
     }
   };
 
@@ -65,9 +79,18 @@
   function inferPrintPaletteKey() {
     const params = new URLSearchParams(window.location.search);
     const requested = params.get("pathway");
-    if (requested === "pure" || params.get("course") === "wma11") return "pure";
+    const requestedCourse = params.get("course");
+    if (requestedCourse === "wme01") return "teal";
+    if (requestedCourse === "wma12") return "mulberry";
+    if (requestedCourse === "wma11") return "pure";
     if (requested === "modular") return "modular";
     if (requested === "linear") return "linear";
+    if (requested === "pure") {
+      const bodyCourse = document.body?.dataset.course;
+      if (bodyCourse === "wme01") return "teal";
+      if (bodyCourse === "wma12") return "mulberry";
+      return "pure";
+    }
     const bodyPalette = document.body?.dataset.coursePalette || document.body?.dataset.pathway;
     if (FALLBACK_PALETTES[bodyPalette]) return bodyPalette;
     if (window.ELITE_PATHWAY?.mode === "modular") return "modular";
@@ -146,7 +169,11 @@
     if (!body) return;
     const palette = resolvePrintPalette();
     body.dataset.coursePalette = palette.key;
-    body.dataset.pathway = palette.key;
+    if (["linear", "modular", "pure"].includes(palette.key)) {
+      body.dataset.pathway = palette.key;
+    } else if (!body.dataset.pathway) {
+      body.dataset.pathway = "pure";
+    }
     body.dataset.printPalette = palette.key;
     body.dataset.printPaletteLabel = palette.label;
     setPaletteVariables(targetDocument.documentElement, palette);
