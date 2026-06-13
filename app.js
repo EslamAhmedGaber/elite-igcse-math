@@ -567,17 +567,19 @@ function renderCards() {
     const hasSolution = hasSolutionContent(solutionData[question.id]);
     const review = reviewState(question.id);
     const reviewText = reviewLabel(question.id);
+    const difficulty = question.marks >= 7 ? "Long" : question.marks >= 4 ? "Standard" : "Quick";
+    const difficultyClass = difficulty.toLowerCase();
     return `<article class="question-card ${isSelected ? "selected" : ""} ${isSolved ? "solved" : ""}" data-id="${question.id}">
       <div>
-        <div class="card-title"><span>${escapeHtml(question.paper)} Q${question.question}</span><span>${question.marks}m</span></div>
+        <div class="card-title"><span class="question-ref">${escapeHtml(question.paper)} Q${question.question}</span><span class="marks-badge">${question.marks} marks</span></div>
         <div class="topic-name">${escapeHtml(question.topic)}</div>
         <div class="meta-line">${escapeHtml(question.unit)}</div>
         <div class="question-tags">
-          <span>Q${question.question}</span>
-          <span>${question.marks >= 7 ? "Long" : question.marks >= 4 ? "Standard" : "Quick"}</span>
-          ${question.question >= 20 ? "<span>Q20+</span>" : ""}
-          ${hasSolution ? "<span>Solution</span>" : ""}
-          ${reviewText ? `<span>${escapeHtml(reviewText)}</span>` : ""}
+          <span class="tag-question">Q${question.question}</span>
+          <span class="tag-difficulty ${difficultyClass}">${difficulty}</span>
+          ${question.question >= 20 ? `<span class="tag-q20">Q20+</span>` : ""}
+          ${hasSolution ? `<span class="tag-solution">Solution</span>` : ""}
+          ${reviewText ? `<span class="tag-review">${escapeHtml(reviewText)}</span>` : ""}
         </div>
         <div class="status-line">
           ${isSelected ? `<span class="pill">Selected</span>` : ""}
