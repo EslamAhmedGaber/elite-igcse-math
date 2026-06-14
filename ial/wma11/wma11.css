@@ -1092,6 +1092,153 @@ body[data-page="ial-wma11"][data-ial-active-module]:not([data-ial-active-module=
   border-radius: 8px;
 }
 
+.ial-practice-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
+  gap: 16px;
+  align-items: stretch;
+}
+
+.ial-practice-layout .ial-question-image-wrap {
+  min-height: 540px;
+}
+
+.ial-practice-layout .ial-question-image {
+  height: 100%;
+  max-height: 760px;
+}
+
+.ial-answer-trainer {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid rgba(54, 48, 74, 0.16);
+  border-left: 4px solid var(--ial-accent);
+  border-radius: 14px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(250, 248, 244, 0.92)),
+    #fff;
+  box-shadow: 0 12px 28px rgba(14, 18, 32, 0.07);
+}
+
+.ial-answer-trainer-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.ial-answer-trainer-head span,
+.ial-answer-trainer label {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.ial-answer-trainer-head strong {
+  color: var(--ial-accent-dark);
+  font-size: 13px;
+}
+
+.ial-answer-trainer textarea {
+  width: 100%;
+  min-height: 92px;
+  resize: vertical;
+  border: 1px solid rgba(54, 48, 74, 0.18);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--navy);
+  padding: 10px 11px;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.45;
+  transition: border-color 180ms var(--ease-out), box-shadow 180ms var(--ease-out);
+}
+
+.ial-answer-trainer textarea:focus {
+  outline: none;
+  border-color: var(--ial-accent);
+  box-shadow: 0 0 0 3px rgba(192, 138, 62, 0.16);
+}
+
+.ial-answer-trainer-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.ial-answer-trainer-actions button {
+  min-height: 34px;
+  border: 1px solid rgba(54, 48, 74, 0.16);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--ial-accent-dark);
+  font-size: 12px;
+  font-weight: 850;
+  transition: transform 180ms var(--ease-out), border-color 180ms var(--ease-out), background 180ms var(--ease-out), color 180ms var(--ease-out);
+}
+
+.ial-answer-trainer-actions button:hover {
+  transform: translateY(-1px);
+  border-color: var(--ial-accent);
+  background: var(--ial-paper);
+}
+
+.ial-answer-trainer-actions button:nth-child(3) {
+  color: #fff;
+  border-color: var(--ial-accent);
+  background: var(--ial-accent);
+}
+
+.ial-answer-trainer p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+
+.ial-answer-trainer.is-correct {
+  border-color: rgba(47, 122, 95, 0.28);
+  border-left-color: #2f7a5f;
+  background: linear-gradient(180deg, #fff, rgba(236, 249, 243, 0.92));
+}
+
+.ial-answer-trainer.is-correct p {
+  color: #23624d;
+  font-weight: 800;
+}
+
+.ial-answer-trainer.is-review {
+  border-color: rgba(168, 69, 60, 0.34);
+  border-left-color: #a8453c;
+  background: linear-gradient(180deg, #fff, rgba(255, 241, 238, 0.9));
+}
+
+.ial-answer-trainer.is-review p {
+  color: #a8453c;
+  font-weight: 800;
+}
+
+.ial-answer-trainer-final {
+  display: grid;
+  gap: 7px;
+  padding: 10px;
+  border-left: 4px solid var(--ial-accent);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.ial-answer-trainer-final > strong {
+  color: var(--navy);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .ial-actions .button {
   border-radius: 10px;
   font-weight: 800;
@@ -1304,6 +1451,14 @@ body[data-page="ial-wma11"][data-ial-active-module]:not([data-ial-active-module=
   .ial-dashboard {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .ial-practice-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .ial-practice-layout .ial-question-image-wrap {
+    min-height: 460px;
+  }
 }
 
 @media screen and (max-width: 640px) {
@@ -1326,5 +1481,13 @@ body[data-page="ial-wma11"][data-ial-active-module]:not([data-ial-active-module=
 
   .ial-hero h1 {
     font-size: 30px;
+  }
+
+  .ial-practice-layout .ial-question-image-wrap {
+    min-height: 52vh;
+  }
+
+  .ial-answer-trainer-actions {
+    grid-template-columns: 1fr;
   }
 }

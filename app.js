@@ -11,9 +11,11 @@ const selected = new Set(JSON.parse(localStorage.getItem("selectedExpertiseQuest
 const solved = new Set(JSON.parse(localStorage.getItem("solvedExpertiseQuestions") || "[]"));
 const REVIEW_KEY = "eliteMistakeBoxV1";
 const ACTIVITY_KEY = "eliteStudyActivityV1";
+const ANSWER_TRAINER_KEY = "eliteFinalAnswerTrainerV1";
 const REVIEW_INTERVALS = [1, 3, 7, 14];
 const FOCUS_DEFAULT_KEY = "eliteFocusDefaultV1";
 let reviewItems = readReviewItems();
+let answerTrainer = readAnswerTrainer();
 let activeBank = localStorage.getItem("activeQuestionBank") || "all";
 if (localStorage.getItem(FOCUS_DEFAULT_KEY) !== "done") {
   localStorage.setItem("questionLayout", "focus");
@@ -204,6 +206,18 @@ function readReviewItems() {
 
 function saveReviewItems() {
   localStorage.setItem(REVIEW_KEY, JSON.stringify(reviewItems));
+}
+
+function readAnswerTrainer() {
+  try {
+    return JSON.parse(localStorage.getItem(ANSWER_TRAINER_KEY) || "{}");
+  } catch (err) {
+    return {};
+  }
+}
+
+function saveAnswerTrainer() {
+  localStorage.setItem(ANSWER_TRAINER_KEY, JSON.stringify(answerTrainer));
 }
 
 function recordStudyActivity(amount = 1) {
@@ -588,6 +602,7 @@ function renderCards() {
         </div>
       </div>
       <button class="thumb" type="button" data-action="zoom"><img loading="lazy" src="${question.image}" alt="${escapeHtml(question.paper)} Q${question.question}"></button>
+      ${renderAnswerTrainer(question, { compact: true })}
       <div class="card-actions">
         <button type="button" data-action="select">${isSelected ? "Remove" : "Select"}</button>
         <button type="button" data-action="solve">${isSolved ? "Unsolve" : "Solved"}</button>
@@ -598,6 +613,7 @@ function renderCards() {
       </div>
     </article>`;
   }).join("");
+  typesetAnswerTrainers();
 }
 
 function renderQuestionActions(question, { compact = false } = {}) {
@@ -680,9 +696,12 @@ function renderFocusQuestion() {
         ${isSolved ? `<span class="pill done">Solved</span>` : ""}
         ${reviewText ? `<span class="pill review">${escapeHtml(reviewText)}</span>` : ""}
       </div>
-      <button class="thumb focus-thumb" type="button" data-action="zoom">
-        <img loading="eager" src="${question.image}" alt="${escapeHtml(question.paper)} Q${question.question}">
-      </button>
+      <div class="focus-practice-layout">
+        <button class="thumb focus-thumb" type="button" data-action="zoom">
+          <img loading="eager" src="${question.image}" alt="${escapeHtml(question.paper)} Q${question.question}">
+        </button>
+        ${renderAnswerTrainer(question)}
+      </div>
       ${renderQuestionActions(question)}
     </article>
   </section>`;
@@ -691,6 +710,7 @@ function renderFocusQuestion() {
     const strip = activeNumber.parentElement;
     strip.scrollLeft = activeNumber.offsetLeft - (strip.clientWidth - activeNumber.clientWidth) / 2;
   }
+  typesetAnswerTrainers();
 }
 
 function updateProgressSnapshot(selectedActive, solvedActive) {
@@ -845,6 +865,149 @@ function formatSolutionText(text) {
       return `<p>${formatInlineMarkdown(block).replace(/\n/g, "<br>")}</p>`;
     })
     .join("");
+}
+
+function finalAnswerForQuestion(question) {
+  const solution = solutionData[question?.id];
+  if (!solution) return "";
+  if (Array.isArray(solution.finalAnswer)) return solution.finalAnswer.join(" ");
+  return String(solution.finalAnswer || "").trim();
+}
+
+function normaliseAnswerText(value) {
+  return String(value ?? "")
+    .replace(/<[^>]*>/g, " ")
+    .replace(/\\\(|\\\)|\\\[|\\\]/g, "")
+    .replace(/\$/g, "")
+    .replace(/\\(?:dfrac|frac)\s*\{([^{}]+)\}\s*\{([^{}]+)\}/g, "$1/$2")
+    .replace(/\\sqrt\s*\{([^{}]+)\}/g, "sqrt($1)")
+    .replace(/\\(?:left|right|displaystyle|mathrm|text|quad|qquad|,|;|:|!)/g, "")
+    .replace(/[{}]/g, "")
+    .replace(/[\u2212\u2013]/g, "-")
+    .replace(/\u00d7/g, "x")
+    .replace(/\s+/g, "")
+    .replace(/[.;,]+$/g, "")
+    .toLowerCase();
+}
+
+function answerLooksMultipart(expected) {
+  const raw = String(expected || "");
+  return /(\([a-zivx]+\)|\\quad|,|;|\bor\b|\band\b|proven|counterexample|show|draw)/i.test(raw) || raw.length > 44;
+}
+
+function numericCandidate(value) {
+  let text = normaliseAnswerText(value)
+    .replace(/^[a-z][a-z0-9_]*=/, "")
+    .replace(/^(?:answer|finalanswer|therefore|so)/, "")
+    .replace(/(?:cm|mm|m|km|kg|g|n|s|h|hours?|years?|degrees?|degree|rad|%)$/i, "");
+  if (/^[-+]?\d+(?:\.\d+)?\/[-+]?\d+(?:\.\d+)?$/.test(text)) {
+    const [top, bottom] = text.split("/").map(Number);
+    return bottom ? top / bottom : NaN;
+  }
+  if (/^[-+]?(?:\d+(?:\.\d+)?|\.\d+)$/.test(text)) return Number(text);
+  return NaN;
+}
+
+function compareFinalAnswer(studentAnswer, expectedAnswer) {
+  const typed = String(studentAnswer || "").trim();
+  const expected = String(expectedAnswer || "").trim();
+  if (!typed) {
+    return { status: "idle", message: "Type your final answer first, then check or compare." };
+  }
+  if (!expected) {
+    return { status: "compare", message: "No official final answer is stored for this one yet. Use self-marking after you open the solution." };
+  }
+  if (normaliseAnswerText(typed) === normaliseAnswerText(expected)) {
+    return { status: "correct", message: "Looks right. Mark it as solved when you are happy with the working." };
+  }
+  if (!answerLooksMultipart(expected)) {
+    const typedNumber = numericCandidate(typed);
+    const expectedNumber = numericCandidate(expected);
+    if (Number.isFinite(typedNumber) && Number.isFinite(expectedNumber) && Math.abs(typedNumber - expectedNumber) <= 1e-9) {
+      return { status: "correct", message: "Looks right numerically. Check units/rounding before you mark it solved." };
+    }
+  }
+  return { status: "compare", message: "Compare with the official final answer, then self-mark. Equivalent algebraic forms may still be correct." };
+}
+
+function trainerMessage(entry, hasExpected) {
+  if (!entry?.message) {
+    return hasExpected ? "Try the final answer before opening the worked solution." : "Try it first, then use the solution to self-mark.";
+  }
+  return entry.message;
+}
+
+function renderAnswerTrainer(question, { compact = false } = {}) {
+  const expected = finalAnswerForQuestion(question);
+  const entry = answerTrainer[question.id] || {};
+  const status = ["correct", "review", "compare"].includes(entry.status) ? entry.status : "";
+  const inputId = `answer-trainer-${question.id.replace(/[^a-z0-9_-]/gi, "-")}`;
+  const showExpected = Boolean(expected && entry.showExpected);
+  return `<section class="answer-trainer ${compact ? "compact" : ""} ${status ? `is-${status}` : ""}" data-trainer-id="${escapeHtml(question.id)}">
+    <div class="answer-trainer-head">
+      <span>Final answer trainer</span>
+      <strong>${entry.status === "correct" ? "Solved check" : "Try first"}</strong>
+    </div>
+    <label for="${escapeHtml(inputId)}">Your final answer</label>
+    <textarea id="${escapeHtml(inputId)}" data-trainer-input="${escapeHtml(question.id)}" rows="${compact ? 2 : 3}" placeholder="Type the final answer only">${escapeHtml(entry.answer || "")}</textarea>
+    <div class="answer-trainer-actions">
+      <button type="button" data-action="trainerCheck">Check</button>
+      <button type="button" data-action="trainerCompare">Compare</button>
+      <button type="button" data-action="trainerCorrect">I got it</button>
+      <button type="button" data-action="trainerReview">Review</button>
+    </div>
+    <p class="answer-trainer-result">${escapeHtml(trainerMessage(entry, Boolean(expected)))}</p>
+    ${showExpected ? `<div class="answer-trainer-final"><strong>Official final answer</strong><div class="answer-trainer-math">${formatSolutionText(expected)}</div></div>` : ""}
+  </section>`;
+}
+
+function typesetAnswerTrainers() {
+  if (window.MathJax?.typesetPromise) {
+    window.MathJax.typesetPromise([...els.questionGrid.querySelectorAll(".answer-trainer-math")]).catch(() => {});
+  }
+}
+
+function handleAnswerTrainerAction(id, action, container) {
+  const question = questionById(id);
+  if (!question) return;
+  const input = container?.querySelector("[data-trainer-input]");
+  const answer = input ? input.value : answerTrainer[id]?.answer || "";
+  const expected = finalAnswerForQuestion(question);
+  const previous = answerTrainer[id] || {};
+  const next = {
+    ...previous,
+    answer,
+    attempts: action === "trainerCheck" ? Number(previous.attempts || 0) + 1 : Number(previous.attempts || 0),
+    updatedAt: Date.now()
+  };
+  if (action === "trainerCheck") {
+    const result = compareFinalAnswer(answer, expected);
+    answerTrainer[id] = { ...next, status: result.status, message: result.message, showExpected: result.status !== "correct" };
+    saveAnswerTrainer();
+    renderCards();
+    return;
+  }
+  if (action === "trainerCompare") {
+    answerTrainer[id] = { ...next, status: "compare", message: expected ? "Compare carefully, then choose I got it or Review." : "Open the worked solution and self-mark this answer.", showExpected: Boolean(expected) };
+    saveAnswerTrainer();
+    renderCards();
+    return;
+  }
+  if (action === "trainerCorrect") {
+    answerTrainer[id] = { ...next, status: "correct", message: "Nice. Saved as solved.", showExpected: false };
+    solved.add(id);
+    recordStudyActivity();
+    advanceReview(id);
+    saveAnswerTrainer();
+    redraw();
+    return;
+  }
+  if (action === "trainerReview") {
+    answerTrainer[id] = { ...next, status: "review", message: "Saved to the Mistake Box for another attempt.", showExpected: Boolean(expected) };
+    addToReview(id, "final-answer");
+    saveAnswerTrainer();
+    redraw();
+  }
 }
 
 function hasSolutionContent(solution) {
@@ -1121,6 +1284,10 @@ els.questionGrid.addEventListener("click", (event) => {
   }
   const card = event.target.closest(".question-card");
   if (!card || !action) return;
+  if (action.startsWith("trainer")) {
+    handleAnswerTrainerAction(card.dataset.id, action, event.target.closest(".answer-trainer"));
+    return;
+  }
   if (action === "select") toggleSelect(card.dataset.id);
   if (action === "solve") toggleSolved(card.dataset.id);
   if (action === "reviewAdd") {
@@ -1135,6 +1302,18 @@ els.questionGrid.addEventListener("click", (event) => {
   if (action === "zoom") zoom(card.dataset.id);
   if (action === "solution") showSolution(card.dataset.id);
   if (action === "fixTopic") openFixTopic(card.dataset.id);
+});
+
+els.questionGrid.addEventListener("input", (event) => {
+  const input = event.target.closest("[data-trainer-input]");
+  if (!input) return;
+  const id = input.dataset.trainerInput;
+  answerTrainer[id] = {
+    ...(answerTrainer[id] || {}),
+    answer: input.value,
+    updatedAt: Date.now()
+  };
+  saveAnswerTrainer();
 });
 
 els.topicStrip.addEventListener("click", (event) => {

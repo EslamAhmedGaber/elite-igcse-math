@@ -3,13 +3,15 @@
   const TOPICS = window.WME01_TOPICS || [];
   const SOLVED_KEY = "eliteWME01SolvedV1";
   const MISTAKE_KEY = "eliteWME01MistakeBoxV1";
+  const TRAINER_KEY = "eliteWME01FinalTrainerV1";
   const state = {
     filtered: [],
     activeIndex: 0,
     showSolution: false,
     mock: [],
     solved: readJSON(SOLVED_KEY, []),
-    mistakes: readJSON(MISTAKE_KEY, {})
+    mistakes: readJSON(MISTAKE_KEY, {}),
+    trainer: readJSON(TRAINER_KEY, {})
   };
 
   const els = {
@@ -237,6 +239,88 @@
       .join("");
   }
 
+  function saveTrainer() {
+    writeJSON(TRAINER_KEY, state.trainer);
+  }
+
+  function normaliseAnswerText(value) {
+    return String(value ?? "")
+      .replace(/<[^>]*>/g, " ")
+      .replace(/\\\(|\\\)|\\\[|\\\]/g, "")
+      .replace(/\$/g, "")
+      .replace(/\\(?:dfrac|frac)\s*\{([^{}]+)\}\s*\{([^{}]+)\}/g, "$1/$2")
+      .replace(/\\sqrt\s*\{([^{}]+)\}/g, "sqrt($1)")
+      .replace(/\\(?:left|right|displaystyle|mathrm|text|quad|qquad|,|;|:|!)/g, "")
+      .replace(/[{}]/g, "")
+      .replace(/[\u2212\u2013]/g, "-")
+      .replace(/\u00d7/g, "x")
+      .replace(/\s+/g, "")
+      .replace(/[.;,]+$/g, "")
+      .toLowerCase();
+  }
+
+  function answerLooksMultipart(expected) {
+    const raw = String(expected || "");
+    return /(\([a-zivx]+\)|\\quad|,|;|\bor\b|\band\b|proven|counterexample|show|draw)/i.test(raw) || raw.length > 44;
+  }
+
+  function numericCandidate(value) {
+    let text = normaliseAnswerText(value)
+      .replace(/^[a-z][a-z0-9_]*=/, "")
+      .replace(/^(?:answer|finalanswer|therefore|so)/, "")
+      .replace(/(?:cm|mm|m|km|kg|g|n|s|h|hours?|years?|degrees?|degree|rad|%)$/i, "");
+    if (/^[-+]?\d+(?:\.\d+)?\/[-+]?\d+(?:\.\d+)?$/.test(text)) {
+      const [top, bottom] = text.split("/").map(Number);
+      return bottom ? top / bottom : NaN;
+    }
+    if (/^[-+]?(?:\d+(?:\.\d+)?|\.\d+)$/.test(text)) return Number(text);
+    return NaN;
+  }
+
+  function compareFinalAnswer(studentAnswer, expectedAnswer) {
+    const typed = String(studentAnswer || "").trim();
+    const expected = String(expectedAnswer || "").trim();
+    if (!typed) return { status: "idle", message: "Type your final answer first, then check or compare." };
+    if (normaliseAnswerText(typed) === normaliseAnswerText(expected)) {
+      return { status: "correct", message: "Looks right. Mark it as solved when you are happy with the working." };
+    }
+    if (!answerLooksMultipart(expected)) {
+      const typedNumber = numericCandidate(typed);
+      const expectedNumber = numericCandidate(expected);
+      if (Number.isFinite(typedNumber) && Number.isFinite(expectedNumber) && Math.abs(typedNumber - expectedNumber) <= 1e-9) {
+        return { status: "correct", message: "Looks right numerically. Check units/rounding before you mark it solved." };
+      }
+    }
+    return { status: "compare", message: "Compare with the official final answer, then self-mark. Equivalent algebraic forms may still be correct." };
+  }
+
+  function trainerMessage(entry) {
+    return entry?.message || "Try the final answer before opening the worked solution.";
+  }
+
+  function renderAnswerTrainer(item) {
+    const entry = state.trainer[item.id] || {};
+    const status = ["correct", "review", "compare"].includes(entry.status) ? entry.status : "";
+    const inputId = `ial-answer-trainer-${item.id.replace(/[^a-z0-9_-]/gi, "-")}`;
+    const showExpected = Boolean(item.finalAnswer && entry.showExpected);
+    return `<section class="ial-answer-trainer ${status ? `is-${status}` : ""}" data-trainer-id="${escapeHtml(item.id)}">
+      <div class="ial-answer-trainer-head">
+        <span>Final answer trainer</span>
+        <strong>${entry.status === "correct" ? "Solved check" : "Try first"}</strong>
+      </div>
+      <label for="${escapeHtml(inputId)}">Your final answer</label>
+      <textarea id="${escapeHtml(inputId)}" data-trainer-input="${escapeHtml(item.id)}" rows="4" placeholder="Type the final answer only">${escapeHtml(entry.answer || "")}</textarea>
+      <div class="ial-answer-trainer-actions">
+        <button type="button" data-action="trainerCheck">Check</button>
+        <button type="button" data-action="trainerCompare">Compare</button>
+        <button type="button" data-action="trainerCorrect">I got it</button>
+        <button type="button" data-action="trainerReview">Review</button>
+      </div>
+      <p>${escapeHtml(trainerMessage(entry))}</p>
+      ${showExpected ? `<div class="ial-answer-trainer-final"><strong>Official final answer</strong><div class="ial-math">${splitFinalAnswer(item.finalAnswer)}</div></div>` : ""}
+    </section>`;
+  }
+
   function renderNumbers() {
     els.numbers.innerHTML = state.filtered.map((item, index) => (
       `<button type="button" class="${index === state.activeIndex ? "is-active" : ""}" data-index="${index}" aria-label="Open ${escapeHtml(item.paper)} question ${item.qNo} (item ${index + 1} of ${state.filtered.length})">${index + 1}</button>`
@@ -280,8 +364,11 @@
             <span class="ial-pill">${sessionLabel(item.session)} ${item.year}</span>
           </div>
         </header>
-        <div class="ial-question-image-wrap">
-          <img class="ial-question-image" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.id)}" loading="eager">
+        <div class="ial-practice-layout">
+          <div class="ial-question-image-wrap">
+            <img class="ial-question-image" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.id)}" loading="eager">
+          </div>
+          ${renderAnswerTrainer(item)}
         </div>
         <div class="ial-actions">
           <button class="button light ${solvedOn ? "is-on" : ""}" type="button" data-action="solved" aria-pressed="${solvedOn}">${solvedOn ? "Solved" : "Mark solved"}</button>
@@ -556,6 +643,65 @@
     writeJSON(MISTAKE_KEY, state.mistakes);
   }
 
+  function markSolved(item) {
+    const set = new Set(Array.isArray(state.solved) ? state.solved : []);
+    set.add(item.id);
+    state.solved = [...set];
+    writeJSON(SOLVED_KEY, state.solved);
+  }
+
+  function addMistake(item) {
+    const mistakes = { ...state.mistakes };
+    mistakes[item.id] = {
+      id: item.id,
+      paper: item.paper,
+      qNo: item.qNo,
+      topic: item.topicName,
+      marks: item.marks,
+      addedAt: new Date().toISOString()
+    };
+    state.mistakes = mistakes;
+    writeJSON(MISTAKE_KEY, state.mistakes);
+  }
+
+  function handleTrainerAction(item, action, container) {
+    const input = container?.querySelector("[data-trainer-input]");
+    const answer = input ? input.value : state.trainer[item.id]?.answer || "";
+    const previous = state.trainer[item.id] || {};
+    const next = {
+      ...previous,
+      answer,
+      attempts: action === "trainerCheck" ? Number(previous.attempts || 0) + 1 : Number(previous.attempts || 0),
+      updatedAt: new Date().toISOString()
+    };
+    if (action === "trainerCheck") {
+      const result = compareFinalAnswer(answer, item.finalAnswer);
+      state.trainer[item.id] = { ...next, status: result.status, message: result.message, showExpected: result.status !== "correct" };
+      saveTrainer();
+      render();
+      return;
+    }
+    if (action === "trainerCompare") {
+      state.trainer[item.id] = { ...next, status: "compare", message: "Compare carefully, then choose I got it or Review.", showExpected: true };
+      saveTrainer();
+      render();
+      return;
+    }
+    if (action === "trainerCorrect") {
+      state.trainer[item.id] = { ...next, status: "correct", message: "Nice. Saved as solved.", showExpected: false };
+      markSolved(item);
+      saveTrainer();
+      render();
+      return;
+    }
+    if (action === "trainerReview") {
+      state.trainer[item.id] = { ...next, status: "review", message: "Saved to the Mistake Box for another attempt.", showExpected: true };
+      addMistake(item);
+      saveTrainer();
+      render();
+    }
+  }
+
   function bindEvents() {
     els.filters.addEventListener("input", () => applyFilters(true));
     els.filters.addEventListener("change", () => applyFilters(true));
@@ -577,6 +723,10 @@
       if (!button) return;
       const item = state.filtered[state.activeIndex];
       if (!item) return;
+      if (button.dataset.action.startsWith("trainer")) {
+        handleTrainerAction(item, button.dataset.action, button.closest(".ial-answer-trainer"));
+        return;
+      }
       if (button.dataset.action === "solution") state.showSolution = !state.showSolution;
       if (button.dataset.action === "solved") toggleSolved(item);
       if (button.dataset.action === "mistake") {
@@ -587,6 +737,17 @@
         }
       }
       render();
+    });
+    els.stage.addEventListener("input", (event) => {
+      const input = event.target.closest("[data-trainer-input]");
+      if (!input) return;
+      const id = input.dataset.trainerInput;
+      state.trainer[id] = {
+        ...(state.trainer[id] || {}),
+        answer: input.value,
+        updatedAt: new Date().toISOString()
+      };
+      saveTrainer();
     });
     els.mockGenerate?.addEventListener("click", generateMock);
     els.mockPrint?.addEventListener("click", () => printMock(false));
