@@ -19,13 +19,7 @@ if (localStorage.getItem(FOCUS_DEFAULT_KEY) !== "done") {
   localStorage.setItem("questionLayout", "focus");
   localStorage.setItem(FOCUS_DEFAULT_KEY, "done");
 }
-if (localStorage.getItem("eliteDashboardGridDefaultV1") !== "1") {
-  if (!localStorage.getItem("questionLayout") || localStorage.getItem("questionLayout") === "focus") {
-    localStorage.setItem("questionLayout", "grid");
-  }
-  localStorage.setItem("eliteDashboardGridDefaultV1", "1");
-}
-let currentLayout = localStorage.getItem("questionLayout") || "grid";
+let currentLayout = localStorage.getItem("questionLayout") || "focus";
 let questions = [];
 let visible = [];
 let reviewMode = "";
@@ -40,14 +34,12 @@ const els = {
   solvedCount: document.getElementById("solvedCount"),
   visibleCount: document.getElementById("visibleCount"),
   searchBox: document.getElementById("searchBox"),
-  courseFilter: document.getElementById("courseFilter"),
   unitFilter: document.getElementById("unitFilter"),
   topicFilter: document.getElementById("topicFilter"),
   paperFilter: document.getElementById("paperFilter"),
   viewFilter: document.getElementById("viewFilter"),
   focusFilterBar: document.getElementById("focusFilterBar"),
   focusSearchBox: document.getElementById("focusSearchBox"),
-  focusCourseFilter: document.getElementById("focusCourseFilter"),
   focusUnitFilter: document.getElementById("focusUnitFilter"),
   focusTopicFilter: document.getElementById("focusTopicFilter"),
   focusPaperFilter: document.getElementById("focusPaperFilter"),
@@ -146,28 +138,6 @@ function fillSelect(select, values, label) {
   select.innerHTML = "";
   select.append(new Option(label, ""));
   values.forEach((value) => select.append(new Option(value, value)));
-}
-
-function difficultyInfo(questionOrMarks) {
-  const marks = Number(typeof questionOrMarks === "object" ? questionOrMarks.marks : questionOrMarks) || 0;
-  if (marks < 3) return { key: "easy", label: "Easy" };
-  if (marks <= 4) return { key: "medium", label: "Medium" };
-  return { key: "hard", label: "Hard" };
-}
-
-function normalizeDifficultyMode(mode) {
-  return ({
-    quick: "easy",
-    standard: "medium",
-    long: "hard",
-  })[mode] || mode || "";
-}
-
-function matchesDifficulty(question, mode) {
-  const normalized = normalizeDifficultyMode(mode);
-  if (!normalized) return true;
-  if (normalized === "q20") return question.question >= 20;
-  return difficultyInfo(question).key === normalized;
 }
 
 function copySelectOptions(source, target) {
@@ -303,7 +273,6 @@ function init() {
   if (!meta.banks?.[activeBank]) activeBank = "all";
   configureBank();
   applyInitialParams();
-  setAdvancedFiltersOpen(true);
   setPracticeTab(reviewMode ? "review" : "all");
   setLayout(currentLayout);
   updateTimerDisplay();
@@ -400,8 +369,6 @@ function applyInitialParams() {
   const topic = params.get("topic");
   const unit = params.get("unit");
   const mode = params.get("mode");
-  const requestedSearch = params.get("search") || params.get("q");
-  const requestedDifficulty = normalizeDifficultyMode(params.get("difficulty") || mode);
   let unitChangedAfterConfigure = false;
   if (unit && [...els.unitFilter.options].some((option) => option.value === unit)) {
     unitChangedAfterConfigure = els.unitFilter.value !== unit;
@@ -423,8 +390,8 @@ function applyInitialParams() {
     els.worksheetTopic.value = topic;
     setTopicChip(topic);
   }
-  if (requestedSearch) els.searchBox.value = requestedSearch;
-  if (["easy", "medium", "hard", "q20"].includes(requestedDifficulty)) els.difficultyFilter.value = requestedDifficulty;
+  if (mode === "q20") els.difficultyFilter.value = "q20";
+  if (mode === "long") els.difficultyFilter.value = "long";
   if (mode === "review") reviewMode = "due";
 }
 
@@ -503,7 +470,10 @@ function applyFilters() {
     if (maxMarks && question.marks > maxMarks) return false;
     if (minQuestion && question.question < minQuestion) return false;
     if (maxQuestion && question.question > maxQuestion) return false;
-    if (!matchesDifficulty(question, difficulty)) return false;
+    if (difficulty === "quick" && question.marks > 3) return false;
+    if (difficulty === "standard" && (question.marks < 4 || question.marks > 6)) return false;
+    if (difficulty === "long" && question.marks < 7) return false;
+    if (difficulty === "q20" && question.question < 20) return false;
     if (search) {
       const text = `${question.paper} ${question.topic} ${question.unit} ${question.question_text}`.toLowerCase();
       if (!text.includes(search)) return false;
@@ -597,8 +567,8 @@ function renderCards() {
     const hasSolution = hasSolutionContent(solutionData[question.id]);
     const review = reviewState(question.id);
     const reviewText = reviewLabel(question.id);
-    const difficulty = difficultyInfo(question);
-    const difficultyClass = difficulty.key;
+    const difficulty = question.marks >= 7 ? "Long" : question.marks >= 4 ? "Standard" : "Quick";
+    const difficultyClass = difficulty.toLowerCase();
     return `<article class="question-card ${isSelected ? "selected" : ""} ${isSolved ? "solved" : ""}" data-id="${question.id}">
       <div>
         <div class="card-title"><span class="question-ref">${escapeHtml(question.paper)} Q${question.question}</span><span class="marks-badge">${question.marks} marks</span></div>
@@ -606,7 +576,7 @@ function renderCards() {
         <div class="meta-line">${escapeHtml(question.unit)}</div>
         <div class="question-tags">
           <span class="tag-question">Q${question.question}</span>
-          <span class="tag-difficulty ${difficultyClass}">${difficulty.label}</span>
+          <span class="tag-difficulty ${difficultyClass}">${difficulty}</span>
           ${question.question >= 20 ? `<span class="tag-q20">Q20+</span>` : ""}
           ${hasSolution ? `<span class="tag-solution">Solution</span>` : ""}
           ${reviewText ? `<span class="tag-review">${escapeHtml(reviewText)}</span>` : ""}
@@ -666,7 +636,6 @@ function moveFocusQuestion(direction) {
 function renderFocusQuestion() {
   const index = focusIndex();
   const question = visible[index];
-  const difficulty = difficultyInfo(question);
   focusQuestionId = question.id;
   localStorage.setItem("focusQuestionId", question.id);
   const isSelected = selected.has(question.id);
@@ -705,7 +674,7 @@ function renderFocusQuestion() {
       </header>
       <div class="focus-status-row">
         <span>Q${question.question}</span>
-        <span class="tag-difficulty ${difficulty.key}">${difficulty.label}</span>
+        <span>${question.marks >= 7 ? "Long" : question.marks >= 4 ? "Standard" : "Quick"}</span>
         ${question.question >= 20 ? "<span>Q20+</span>" : ""}
         ${isSelected ? `<span class="pill">Selected</span>` : ""}
         ${isSolved ? `<span class="pill done">Solved</span>` : ""}
@@ -955,7 +924,10 @@ function randomTen() {
 }
 
 function matchesWorksheetMode(question, mode) {
-  if (["easy", "medium", "hard", "quick", "standard", "long", "q20"].includes(mode)) return matchesDifficulty(question, mode);
+  if (mode === "quick") return question.marks <= 3;
+  if (mode === "standard") return question.marks >= 4 && question.marks <= 6;
+  if (mode === "long") return question.marks >= 7;
+  if (mode === "q20") return question.question >= 20;
   return true;
 }
 

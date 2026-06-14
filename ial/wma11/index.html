@@ -13,8 +13,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="pathway-bootstrap.js?v=20260613a"></script>
-  <link rel="stylesheet" href="styles.css?v=20260614k">
-  <link rel="stylesheet" href="ial/wma11/wma11.css?v=20260614k">
+  <link rel="stylesheet" href="styles.css?v=20260614e">
+  <link rel="stylesheet" href="ial/wma11/wma11.css?v=20260614e">
   <script>
     window.MathJax = { tex: { inlineMath: [["$", "$"], ["\\(", "\\)"]] }, svg: { fontCache: "global" } };
   </script>
@@ -22,9 +22,9 @@
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js"></script>
   <script defer src="course-modules.js?v=20260613a"></script>
-  <script defer src="lead.js?v=20260614k"></script>
+  <script defer src="lead.js?v=20260613a"></script>
   <script defer src="ial/wma11/wma11-data.js?v=20260527c"></script>
-  <script defer src="ial/wma11/wma11.js?v=20260614k"></script>
+  <script defer src="ial/wma11/wma11.js?v=20260527b"></script>
 </head>
 <body data-page="ial-wma11">
 
@@ -211,10 +211,6 @@
     <section class="ial-workbench">
       <form class="ial-filters" id="ialFilters" aria-label="Filter WMA11 questions">
         <label>
-          <span>Course</span>
-          <select id="ialCourse" data-course-router></select>
-        </label>
-        <label>
           <span>Search</span>
           <input id="ialSearch" type="search" placeholder="topic, paper, question id">
         </label>
@@ -233,15 +229,6 @@
         <label>
           <span>Marks</span>
           <select id="ialMarks"></select>
-        </label>
-        <label>
-          <span>Difficulty</span>
-          <select id="ialDifficulty">
-            <option value="">All difficulties</option>
-            <option value="easy">Easy (&lt;3 marks)</option>
-            <option value="medium">Medium (3-4 marks)</option>
-            <option value="hard">Hard (&gt;4 marks)</option>
-          </select>
         </label>
         <label class="ial-toggle">
           <input id="ialExpertiseOnly" type="checkbox">
