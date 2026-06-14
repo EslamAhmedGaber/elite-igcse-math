@@ -13744,3 +13744,741 @@ body[data-page="home"] .cloud-floating-widget {
     width: 100%;
   }
 }
+
+/* ============================================================
+   2026-06-14: full-site dashboard consistency pass
+   Brand-led navy / royal / sky app shell, shared controls, and
+   upgraded question-bank filter rail.
+   ============================================================ */
+
+:root {
+  --elite-navy-950: #07152f;
+  --elite-navy-900: #0b2147;
+  --elite-navy-800: #12366e;
+  --elite-royal-700: #1d4ed8;
+  --elite-royal-600: #2563eb;
+  --elite-royal-500: #3b82f6;
+  --elite-sky-500: #0ea5e9;
+  --elite-sky-200: #bae6fd;
+  --elite-sky-100: #e0f2fe;
+  --elite-sky-050: #f2f9ff;
+  --elite-gold-500: #d7a94b;
+  --elite-emerald-500: #22a06b;
+  --elite-amber-500: #f0a422;
+  --elite-red-500: #d94c4c;
+  --elite-page-bg: #f4f8fd;
+  --elite-panel: rgba(255, 255, 255, 0.96);
+  --elite-panel-solid: #ffffff;
+  --elite-border: rgba(148, 163, 184, 0.28);
+  --elite-border-strong: rgba(37, 99, 235, 0.26);
+  --elite-text: #102033;
+  --elite-muted: #617087;
+  --elite-shadow-soft: 0 18px 46px rgba(15, 35, 72, 0.09);
+  --elite-shadow-pop: 0 22px 60px rgba(7, 19, 41, 0.16);
+  --course-signature: var(--elite-royal-600);
+  --course-deep: var(--elite-navy-900);
+  --course-soft: rgba(37, 99, 235, 0.09);
+  --course-rail: rgba(37, 99, 235, 0.22);
+  --course-highlight: var(--elite-sky-500);
+}
+
+body:not([data-page="admin"]) {
+  color: var(--elite-text);
+  background:
+    linear-gradient(90deg, rgba(37, 99, 235, 0.05) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(37, 99, 235, 0.045) 1px, transparent 1px),
+    linear-gradient(180deg, #f8fbff 0%, var(--elite-page-bg) 520px, #ffffff 100%);
+  background-size: 44px 44px, 44px 44px, auto;
+}
+
+body:not([data-page="admin"]) .pathway-tool-strip {
+  display: none !important;
+}
+
+.dashboard-course-tabs {
+  width: min(1540px, calc(100% - 48px));
+  min-height: 70px;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0;
+  margin: 20px auto 0;
+  overflow: visible;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 18px 44px rgba(15, 35, 72, 0.1);
+}
+
+.dashboard-course-tabs a {
+  position: relative;
+  min-width: 0;
+  min-height: 70px;
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  grid-template-rows: 1fr auto;
+  column-gap: 10px;
+  align-items: center;
+  padding: 12px 18px;
+  color: var(--elite-royal-700);
+  border-right: 1px solid rgba(148, 163, 184, 0.24);
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.dashboard-course-tabs a:last-child {
+  border-right: 0;
+}
+
+.dashboard-course-tabs a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 3px;
+  background: transparent;
+}
+
+.dashboard-course-tabs a:hover,
+.dashboard-course-tabs a:focus-visible {
+  color: var(--elite-navy-950);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(14, 165, 233, 0.09));
+}
+
+.dashboard-course-tabs a.is-active {
+  color: #fff;
+  background:
+    linear-gradient(135deg, rgba(14, 165, 233, 0.22), transparent),
+    linear-gradient(135deg, var(--elite-navy-900), var(--elite-royal-700));
+  box-shadow: inset 0 -3px 0 var(--elite-sky-500);
+}
+
+.dashboard-course-tabs a.is-active::after {
+  background: var(--elite-sky-500);
+}
+
+.dashboard-course-tabs a.is-active::before {
+  content: "";
+  position: absolute;
+  right: calc(50% - 7px);
+  bottom: -10px;
+  width: 14px;
+  height: 14px;
+  background: inherit;
+  transform: rotate(45deg);
+  box-shadow: 3px 3px 0 var(--elite-sky-500);
+}
+
+.course-tab-icon {
+  grid-row: 1 / span 2;
+  width: 26px;
+  height: 26px;
+  display: inline-grid;
+  place-items: center;
+}
+
+.course-tab-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.dashboard-course-tabs span:not(.course-tab-icon) {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dashboard-course-tabs small {
+  grid-column: 2;
+  color: currentColor;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+
+body:not([data-page="admin"]) :is(button, .button, a, input, select) {
+  transition:
+    color var(--t-smooth),
+    background var(--t-smooth),
+    border-color var(--t-smooth),
+    box-shadow var(--t-smooth),
+    transform var(--t-smooth);
+}
+
+body:not([data-page="admin"]) :is(.page, .ial-page) {
+  width: min(1540px, calc(100% - 48px));
+}
+
+body:not([data-page="admin"]) .elite-breadcrumb {
+  border: 1px solid var(--elite-border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 10px 24px rgba(15, 35, 72, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+body:not([data-page="admin"]) :is(
+  .practice-toolbar,
+  .practice-bank-bar,
+  .quick-stats,
+  .content-head,
+  .filters,
+  .selection-toolbar,
+  .student-helper,
+  .study-card,
+  .review-card,
+  .worksheet-card,
+  .exam-panel,
+  .exam-builder,
+  .notes-panel,
+  .downloads-card,
+  .topics-panel,
+  .progress-panel,
+  .tracker-panel,
+  .sheet-panel,
+  .about-panel,
+  .checkup-panel
+) {
+  border-color: var(--elite-border);
+  background: var(--elite-panel);
+  box-shadow: var(--elite-shadow-soft);
+}
+
+.site-app-nav,
+.site-header-search {
+  display: none;
+}
+
+@media screen and (min-width: 981px) {
+  body:not([data-page="admin"]) .site-header {
+    gap: 20px;
+    min-height: 72px;
+    padding: 10px 30px;
+    background:
+      linear-gradient(90deg, rgba(215, 169, 75, 0.13), transparent 24%),
+      linear-gradient(100deg, var(--elite-navy-950) 0%, var(--elite-navy-900) 55%, #07313a 118%);
+  }
+
+  body:not([data-page="admin"]) .site-brand {
+    flex: 0 0 auto;
+  }
+
+  body:not([data-page="admin"]) .site-brand .brand-title,
+  body[data-page="home"] .site-brand .brand-title {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+
+  body:not([data-page="admin"]) .site-nav.pathway-tabs {
+    display: none;
+  }
+
+  body:not([data-page="admin"]) :is(.site-app-nav, .home-app-nav) {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  body:not([data-page="admin"]) :is(.site-app-nav, .home-app-nav) a {
+    position: relative;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.82);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 900;
+    white-space: nowrap;
+  }
+
+  body:not([data-page="admin"]) :is(.site-app-nav, .home-app-nav) a::after {
+    content: "";
+    position: absolute;
+    right: 14px;
+    bottom: -2px;
+    left: 14px;
+    height: 2px;
+    border-radius: 999px;
+    background: transparent;
+  }
+
+  body:not([data-page="admin"]) :is(.site-app-nav, .home-app-nav) a:hover,
+  body:not([data-page="admin"]) :is(.site-app-nav, .home-app-nav) a:focus-visible {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-1px);
+  }
+
+  body:not([data-page="admin"]) :is(.site-app-nav, .home-app-nav) a.is-active {
+    color: #f0d28f;
+  }
+
+  body:not([data-page="admin"]) :is(.site-app-nav, .home-app-nav) a.is-active::after {
+    background: #f0d28f;
+  }
+
+  body:not([data-page="admin"]) :is(.home-nav-icon, .site-nav-icon) {
+    width: 18px;
+    height: 18px;
+    display: inline-grid;
+    place-items: center;
+    color: currentColor;
+    opacity: 0.92;
+  }
+
+  body:not([data-page="admin"]) :is(.home-nav-icon, .site-nav-icon) svg {
+    width: 19px;
+    height: 19px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  body:not([data-page="admin"]) :is(.site-header-search, .home-header-search) {
+    flex: 0 1 330px;
+    min-width: 230px;
+    min-height: 42px;
+    display: grid;
+    grid-template-columns: 0 minmax(0, 1fr);
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.07);
+  }
+
+  body:not([data-page="admin"]) :is(.site-header-search, .home-header-search) span {
+    width: 0;
+    overflow: hidden;
+  }
+
+  body:not([data-page="admin"]) :is(.site-header-search, .home-header-search) input {
+    width: 100%;
+    min-height: 40px;
+    padding: 0 14px;
+    border: 0;
+    color: #fff;
+    background: transparent;
+    font: inherit;
+    outline: none;
+  }
+
+  body:not([data-page="admin"]) :is(.site-header-search, .home-header-search):focus-within {
+    border-color: rgba(56, 189, 248, 0.72);
+    background: rgba(255, 255, 255, 0.11);
+    box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.12);
+  }
+
+  body:not([data-page="admin"]) :is(.site-header-search, .home-header-search) input::placeholder {
+    color: rgba(255, 255, 255, 0.58);
+  }
+
+  body:not([data-page="admin"]) .site-cta .cloud-auth-button {
+    display: none;
+  }
+
+  body:not([data-page="admin"]) .site-cta .button.primary {
+    color: var(--elite-navy-950);
+    border-color: #e2b45a;
+    background: linear-gradient(135deg, #f3d27f, #d7a94b);
+  }
+}
+
+@media screen and (max-width: 1180px) and (min-width: 981px) {
+  body:not([data-page="admin"]) .site-header {
+    gap: 12px;
+    padding-inline: 18px;
+  }
+
+  body:not([data-page="admin"]) .site-brand .brand-title {
+    font-size: 21px;
+  }
+
+  body:not([data-page="admin"]) :is(.site-app-nav, .home-app-nav) a {
+    padding-inline: 9px;
+    font-size: 13px;
+  }
+
+  body:not([data-page="admin"]) :is(.site-header-search, .home-header-search) {
+    flex-basis: 250px;
+    min-width: 190px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  body:not([data-page="admin"]) :is(.site-app-nav, .home-app-nav, .site-header-search, .home-header-search) {
+    display: none;
+  }
+
+  body:not([data-page="admin"]) :is(.page, .ial-page) {
+    width: min(100% - 24px, 1540px);
+  }
+
+  .dashboard-course-tabs {
+    width: calc(100% - 24px);
+    min-height: 64px;
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(154px, 48vw);
+    margin-top: 14px;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-snap-type: x proximity;
+  }
+
+  .dashboard-course-tabs a {
+    min-height: 64px;
+    padding: 10px 12px;
+    scroll-snap-align: start;
+  }
+
+  .dashboard-course-tabs a.is-active::before {
+    display: none;
+  }
+
+  .dashboard-course-tabs::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+body[data-page="practice"] .practice-tools-dialog {
+  border-color: var(--elite-border);
+  border-top-color: var(--elite-royal-600);
+}
+
+body[data-page="practice"] .elite-breadcrumb,
+body[data-page="practice"] .pathway-tool-strip,
+body[data-page="practice"] .pathway-resume {
+  display: none !important;
+}
+
+body[data-page="practice"] .quick-stats.practice-status-strip div::before {
+  display: none;
+}
+
+body[data-page="practice"] :is(.filter-primary-grid, .filter-advanced-grid, .focus-filter-grid) label {
+  color: var(--elite-muted);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+}
+
+body[data-page="practice"] :is(.filters input, .filters select, .focus-filter-bar input, .focus-filter-bar select, .worksheet-card input, .worksheet-card select) {
+  min-height: 42px;
+  border-color: rgba(148, 163, 184, 0.38);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--elite-text);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+body[data-page="practice"] :is(.filters input, .filters select, .focus-filter-bar input, .focus-filter-bar select, .worksheet-card input, .worksheet-card select):focus {
+  border-color: rgba(37, 99, 235, 0.68);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+  outline: none;
+}
+
+body[data-page="practice"] .practice-tools-tabs {
+  border-color: rgba(37, 99, 235, 0.14);
+  background: var(--elite-sky-050);
+}
+
+body[data-page="practice"] .practice-tools-tabs button.active {
+  color: #fff;
+  background: linear-gradient(135deg, var(--elite-royal-700), var(--elite-royal-600));
+}
+
+body[data-page="practice"] .practice-panel button.active {
+  border-color: rgba(37, 99, 235, 0.3);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(56, 189, 248, 0.09));
+}
+
+body[data-page="practice"] .question-card {
+  border-color: var(--elite-border);
+  background: var(--elite-panel-solid);
+  box-shadow: 0 18px 42px rgba(15, 35, 72, 0.08);
+}
+
+body[data-page="practice"] .question-card:hover {
+  border-color: var(--elite-border-strong);
+  box-shadow: 0 22px 52px rgba(15, 35, 72, 0.13);
+}
+
+body[data-page="practice"] .thumb img,
+body[data-page="practice"] .focus-thumb img {
+  background: #fff;
+}
+
+.question-tags .tag-difficulty.easy,
+.focus-status-row .tag-difficulty.easy {
+  color: #116149;
+  border-color: rgba(34, 160, 107, 0.22);
+  background: rgba(34, 160, 107, 0.11);
+}
+
+.question-tags .tag-difficulty.medium,
+.focus-status-row .tag-difficulty.medium {
+  color: #8a5900;
+  border-color: rgba(240, 164, 34, 0.25);
+  background: rgba(240, 164, 34, 0.13);
+}
+
+.question-tags .tag-difficulty.hard,
+.focus-status-row .tag-difficulty.hard {
+  color: #a53636;
+  border-color: rgba(217, 76, 76, 0.24);
+  background: rgba(217, 76, 76, 0.12);
+}
+
+@media screen and (min-width: 981px) {
+  body[data-page="practice"] .shell {
+    width: 100%;
+    padding-top: 18px;
+  }
+
+  body[data-page="practice"] .content {
+    width: min(1540px, calc(100% - 48px));
+    display: grid;
+    grid-template-columns: minmax(292px, 322px) minmax(0, 1fr);
+    gap: 18px;
+    align-items: start;
+    margin: 0 auto;
+  }
+
+  body[data-page="practice"] .practice-toolbar {
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 0.72fr) minmax(340px, 0.56fr);
+    gap: 14px;
+    align-items: stretch;
+    margin: 0;
+  }
+
+  body[data-page="practice"] .question-grid:not(.focus-view) {
+    grid-template-columns: repeat(3, minmax(260px, 1fr));
+  }
+
+  body[data-page="practice"] .question-grid:not(.focus-view) .question-card {
+    min-height: 0;
+    align-content: start;
+  }
+
+  body[data-page="practice"] .question-grid:not(.focus-view) .thumb img {
+    max-height: 210px;
+    object-fit: contain;
+  }
+
+  body[data-page="practice"] .quick-stats.practice-status-strip {
+    min-height: 84px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding: 8px 10px;
+  }
+
+  body[data-page="practice"] .quick-stats.practice-status-strip div {
+    min-height: 64px;
+    padding: 10px 12px;
+  }
+
+  body[data-page="practice"] .quick-stats.practice-status-strip strong {
+    font-size: 22px;
+  }
+
+  body[data-page="practice"] .practice-bank-bar {
+    min-height: 84px;
+    grid-template-columns: minmax(0, 0.8fr) minmax(240px, 1fr);
+    padding: 12px;
+  }
+
+  body[data-page="practice"] .practice-bank-bar p {
+    display: none;
+  }
+
+  body[data-page="practice"] .practice-bank-bar .bank-buttons {
+    gap: 8px;
+  }
+
+  body[data-page="practice"] .practice-bank-bar .bank-buttons button {
+    min-height: 52px;
+  }
+
+  body[data-page="practice"] .practice-workspace {
+    display: contents;
+  }
+
+  body[data-page="practice"] .practice-tools-dialog,
+  body[data-page="practice"] .practice-tools-dialog:not([open]) {
+    position: sticky;
+    top: 88px;
+    z-index: 5;
+    grid-column: 1;
+    grid-row: 1 / span 4;
+    width: auto;
+    max-width: none;
+    max-height: calc(100vh - 108px);
+    display: block !important;
+    margin: 0;
+    border-radius: 16px;
+    animation: none;
+    box-shadow: var(--elite-shadow-soft);
+  }
+
+  body[data-page="practice"] .practice-tools-dialog::backdrop {
+    display: none;
+    background: transparent;
+  }
+
+  body[data-page="practice"] .practice-tools-panel {
+    max-height: calc(100vh - 108px);
+    padding: 14px;
+  }
+
+  body[data-page="practice"] .practice-main {
+    grid-column: 2;
+    grid-row: 2;
+    min-width: 0;
+  }
+
+  body[data-page="practice"] .practice-cta {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  body[data-page="practice"] .practice-tools-head button,
+  body[data-page="practice"] .mobile-tools-toggle,
+  body.practice-focus-mode[data-page="practice"] .mobile-tools-toggle {
+    display: none !important;
+  }
+
+  body[data-page="practice"] .practice-tools-head strong {
+    font-size: 17px;
+  }
+
+  body[data-page="practice"] .practice-tools-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  body[data-page="practice"] .practice-tools-tabs button {
+    min-width: 0;
+    padding-inline: 6px;
+    font-size: 12px;
+  }
+
+  body[data-page="practice"] .practice-tools-dialog .filter-primary-grid,
+  body[data-page="practice"] .practice-tools-dialog .filter-advanced-grid,
+  body[data-page="practice"] .practice-tools-dialog .focus-filter-grid,
+  body[data-page="practice"] .practice-tools-dialog .practice-panel,
+  body[data-page="practice"] .practice-tools-dialog .selection-actions {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-page="practice"] .filter-topline {
+    align-items: center;
+  }
+
+  body[data-page="practice"] #advancedFiltersToggle {
+    min-height: 34px;
+    padding: 0 10px;
+    border-radius: 9px;
+    color: var(--elite-royal-700);
+    border-color: rgba(37, 99, 235, 0.2);
+    background: rgba(37, 99, 235, 0.07);
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  body[data-page="practice"] .practice-tools-dialog .filters,
+  body[data-page="practice"] .practice-tools-dialog .focus-filter-bar,
+  body[data-page="practice"] .practice-tools-dialog .selection-toolbar,
+  body[data-page="practice"] .practice-tools-dialog .worksheet-card,
+  body[data-page="practice"] .practice-tools-dialog .study-card,
+  body[data-page="practice"] .practice-tools-dialog .review-card,
+  body[data-page="practice"] .practice-tools-dialog .student-helper {
+    padding: 14px;
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    border-radius: 12px;
+    background: #fff;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  body[data-page="practice"] .practice-tools-dialog {
+    border-radius: 18px 18px 0 0;
+  }
+
+  body[data-page="practice"] .practice-toolbar {
+    gap: 12px;
+    margin-top: 14px;
+  }
+
+  body[data-page="practice"] .quick-stats.practice-status-strip div {
+    min-height: 76px;
+  }
+
+  body[data-page="practice"] .practice-bank-bar {
+    min-height: 0;
+    padding: 16px;
+  }
+
+  body[data-page="practice"] .content-head {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    padding: 18px;
+    overflow: hidden;
+  }
+
+  body[data-page="practice"] .content-head > div:first-child {
+    min-width: 0;
+  }
+
+  body[data-page="practice"] .content-head p {
+    display: none;
+  }
+
+  body[data-page="practice"] .head-tools {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  body[data-page="practice"] .sort-label,
+  body[data-page="practice"] .sort-label select,
+  body[data-page="practice"] .layout-toggle {
+    width: 100%;
+    min-width: 0;
+  }
+
+  body[data-page="practice"] .layout-toggle {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  body[data-page="practice"] .layout-toggle button {
+    min-width: 0;
+    padding-inline: 8px;
+  }
+}

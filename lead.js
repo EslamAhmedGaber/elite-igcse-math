@@ -474,6 +474,207 @@
       .replace(/'/g, "&#39;");
   }
 
+  const APP_NAV_ITEMS = [
+    {
+      id: "dashboard",
+      label: "Dashboard",
+      href: "index.html",
+      icon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h13v-9.5"/><path d="M9 20v-6h6v6"/></svg>'
+    },
+    {
+      id: "question-bank",
+      label: "Question Bank",
+      href: "practice.html?pathway=linear&bank=all",
+      icon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 5.5h6A3.5 3.5 0 0 1 14 9v10a3.5 3.5 0 0 0-3.5-3.5h-6z"/><path d="M19.5 5.5h-6A3.5 3.5 0 0 0 10 9v10a3.5 3.5 0 0 1 3.5-3.5h6z"/></svg>'
+    },
+    {
+      id: "past-papers",
+      label: "Past Papers",
+      href: "pastpapers.html",
+      icon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h7l3 3V20.5H7z"/><path d="M14 3.5v4h4"/><path d="M9.5 11h5"/><path d="M9.5 15h5"/></svg>'
+    },
+    {
+      id: "revision",
+      label: "Revision",
+      href: "exam.html?mode=smart",
+      icon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8"/><path d="M9 4.5h6v15H9z"/><path d="m10.5 9 1 1 2.5-2.5"/><path d="M10.5 14.5h3"/></svg>'
+    },
+    {
+      id: "notes",
+      label: "Notes",
+      href: "notes.html",
+      icon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 4.5h11v15h-11z"/><path d="M9.5 8h5"/><path d="M9.5 12h5"/><path d="M9.5 16H13"/></svg>'
+    }
+  ];
+
+  const COURSE_ROUTE_OPTIONS = [
+    { id: "linear", label: "Linear", detail: "4MA1 route", href: "practice.html?pathway=linear&bank=all" },
+    { id: "modular-unit-1", label: "Modular Unit 1", detail: "4WM1 topics", href: "practice.html?pathway=modular&unit=Unit+1&bank=all" },
+    { id: "modular-unit-2", label: "Modular Unit 2", detail: "4WM2 topics", href: "practice.html?pathway=modular&unit=Unit+2&bank=all" },
+    { id: "pure-1", label: "Pure 1", detail: "WMA11", href: "ial/wma11/index.html" },
+    { id: "pure-2", label: "Pure 2", detail: "WMA12", href: "ial/wma12/index.html" },
+    { id: "mechanics-1", label: "Mechanics 1", detail: "WME01", href: "ial/wme01/index.html" }
+  ];
+
+  function normalizeBrandLockup() {
+    if (document.body?.dataset?.page === "admin") return;
+    const brandTitle = document.querySelector(".site-brand .brand-title");
+    if (brandTitle) brandTitle.textContent = "eliteigcse.com";
+  }
+
+  function siteHref(href) {
+    try {
+      return new URL(href, document.baseURI || window.location.href).href;
+    } catch (err) {
+      return href;
+    }
+  }
+
+  function activeAppNavId() {
+    const page = document.body?.dataset?.page || "";
+    const path = window.location.pathname.toLowerCase();
+    if (page === "practice" || path.includes("/ial/wma11/") || path.includes("/ial/wma12/") || path.includes("/ial/wme01/")) return "question-bank";
+    if (page === "home" || /(^|\/)index\.html$/.test(path) || path === "/" || path.endsWith("/website/")) return "dashboard";
+    if (page === "pastpapers" || path.endsWith("/pastpapers.html")) return "past-papers";
+    if (page === "exam" || page === "checkup" || page === "progress" || path.endsWith("/exam.html") || path.endsWith("/checkup.html") || path.endsWith("/progress.html")) return "revision";
+    if (page === "notes" || page === "downloads" || page === "topics" || path.endsWith("/notes.html") || path.endsWith("/downloads.html") || path.endsWith("/topics.html")) return "notes";
+    return "";
+  }
+
+  function renderAppNavLink(item, activeId) {
+    const active = item.id === activeId ? ' class="is-active" aria-current="page"' : "";
+    return `<a${active} href="${escapeHtml(item.href)}"><span class="home-nav-icon site-nav-icon" aria-hidden="true">${item.icon}</span>${escapeHtml(item.label)}</a>`;
+  }
+
+  function ensureGlobalAppNav() {
+    const header = document.querySelector(".site-header");
+    if (!header || header.querySelector(".site-app-nav, .home-app-nav")) return;
+    const nav = document.createElement("nav");
+    nav.className = "site-app-nav";
+    nav.setAttribute("aria-label", "Site sections");
+    nav.innerHTML = APP_NAV_ITEMS.map((item) => renderAppNavLink(item, activeAppNavId())).join("");
+    const cta = header.querySelector(".site-cta");
+    if (cta) header.insertBefore(nav, cta);
+    else header.appendChild(nav);
+  }
+
+  function syncAppNavActiveStates() {
+    const activeId = activeAppNavId();
+    const map = new Map(APP_NAV_ITEMS.map((item) => [normalizePath(item.href), item.id]));
+    document.querySelectorAll(".site-app-nav a, .home-app-nav a").forEach((link) => {
+      const id = map.get(normalizePath(link.getAttribute("href") || link.href)) || "";
+      const isActive = Boolean(activeId && id === activeId);
+      link.classList.toggle("is-active", isActive);
+      if (isActive) link.setAttribute("aria-current", "page");
+      else link.removeAttribute("aria-current");
+    });
+  }
+
+  function searchDestination(query) {
+    const trimmed = query.trim();
+    if (!trimmed) return "";
+    const currentPath = window.location.pathname.toLowerCase();
+    const params = new URLSearchParams();
+    params.set("search", trimmed);
+
+    if (currentPath.includes("/ial/wma11/") || currentPath.includes("/ial/wma12/") || currentPath.includes("/ial/wme01/")) {
+      const samePage = window.location.pathname.split("/").pop() || "index.html";
+      return siteHref(`${samePage}?${params.toString()}#ialFilters`);
+    }
+
+    const context = resolvePathwayContext();
+    if (context.pathway === "modular" || window.ELITE_PATHWAY?.isModular) {
+      params.set("pathway", "modular");
+      params.set("unit", localStorage.getItem("modularUnit") || "Unit 1");
+    } else {
+      params.set("pathway", "linear");
+    }
+    params.set("bank", "all");
+    return siteHref(`practice.html?${params.toString()}`);
+  }
+
+  function ensureHeaderSearch() {
+    const header = document.querySelector(".site-header");
+    if (!header || header.querySelector(".site-header-search, .home-header-search")) return;
+    const label = document.createElement("label");
+    label.className = "site-header-search";
+    label.innerHTML = '<span>Search</span><input type="search" placeholder="Search questions..." aria-label="Search questions">';
+    const cta = header.querySelector(".site-cta");
+    if (cta) header.insertBefore(label, cta);
+    else header.appendChild(label);
+  }
+
+  function initHeaderSearch() {
+    document.querySelectorAll(".site-header-search input, .home-header-search input, .home-dashboard-search input").forEach((input) => {
+      if (input.dataset.searchReady === "1") return;
+      input.dataset.searchReady = "1";
+      input.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter") return;
+        const target = searchDestination(input.value);
+        if (!target) return;
+        event.preventDefault();
+        window.location.assign(target);
+      });
+    });
+  }
+
+  function currentCourseRouteId() {
+    const path = window.location.pathname.toLowerCase();
+    const params = new URLSearchParams(window.location.search);
+    if (path.includes("/ial/wme01/") || params.get("course") === "wme01") return "mechanics-1";
+    if (path.includes("/ial/wma12/") || params.get("course") === "wma12") return "pure-2";
+    if (path.includes("/ial/wma11/") || params.get("course") === "wma11") return "pure-1";
+    if ((params.get("pathway") || window.ELITE_PATHWAY?.mode) === "modular") {
+      return (params.get("unit") || localStorage.getItem("modularUnit") || "Unit 1") === "Unit 2" ? "modular-unit-2" : "modular-unit-1";
+    }
+    return "linear";
+  }
+
+  function initCourseRouters() {
+    document.querySelectorAll("[data-course-router]").forEach((select) => {
+      const activeId = currentCourseRouteId();
+      select.innerHTML = COURSE_ROUTE_OPTIONS.map((option) => (
+        `<option value="${escapeHtml(option.id)}">${escapeHtml(option.label)} - ${escapeHtml(option.detail)}</option>`
+      )).join("");
+      select.value = activeId;
+      if (select.dataset.courseRouterReady === "1") return;
+      select.dataset.courseRouterReady = "1";
+      select.addEventListener("change", () => {
+        const option = COURSE_ROUTE_OPTIONS.find((entry) => entry.id === select.value);
+        if (!option) return;
+        window.location.assign(siteHref(option.href));
+      });
+    });
+  }
+
+  function courseTabIcon(id) {
+    const icons = {
+      linear: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 18 19 6"/><circle cx="7" cy="16" r="2"/><circle cx="17" cy="8" r="2"/></svg>',
+      "modular-unit-1": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12 4 7.5"/><path d="M12 12v9"/><path d="m12 12 8-4.5"/></svg>',
+      "modular-unit-2": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12 4 7.5"/><path d="M12 12v9"/><path d="m12 12 8-4.5"/></svg>',
+      "pure-1": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18c3-9 5-12 8-12s5 3 8 12"/><path d="M8 13h8"/></svg>',
+      "pure-2": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 5H7l6 7-6 7h10"/></svg>',
+      "mechanics-1": '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="16" r="3"/><circle cx="16" cy="8" r="3"/><path d="m10.5 13.5 3-3"/><path d="M5 6h5"/><path d="M14 18h5"/></svg>'
+    };
+    return icons[id] || icons.linear;
+  }
+
+  function ensureDashboardCourseTabs() {
+    const page = document.body?.dataset?.page || "";
+    if (page === "admin" || page === "home" || document.querySelector(".dashboard-course-tabs")) return;
+    const header = document.querySelector(".site-header");
+    if (!header) return;
+    const activeId = currentCourseRouteId();
+    const nav = document.createElement("nav");
+    nav.className = "dashboard-course-tabs";
+    nav.setAttribute("aria-label", "Course dashboard tabs");
+    nav.innerHTML = COURSE_ROUTE_OPTIONS.map((option) => {
+      const active = option.id === activeId ? ' class="is-active" aria-current="page"' : "";
+      return `<a${active} href="${escapeHtml(siteHref(option.href))}" data-course-tab="${escapeHtml(option.id)}"><span class="course-tab-icon">${courseTabIcon(option.id)}</span><span>${escapeHtml(option.label)}</span><small>${escapeHtml(option.detail)}</small></a>`;
+    }).join("");
+    header.insertAdjacentElement("afterend", nav);
+  }
+
   const PATHWAY_BREADCRUMB_LABELS = {
     linear: { label: "Linear", code: "4MA1" },
     modular: { label: "Modular", code: "4WM" },
@@ -1000,7 +1201,14 @@
     applyPathwayContext();
     init();
     rewriteIalTopNavFromTree();
+    normalizeBrandLockup();
     initNavToggle();
+    ensureGlobalAppNav();
+    syncAppNavActiveStates();
+    ensureHeaderSearch();
+    ensureDashboardCourseTabs();
+    initHeaderSearch();
+    initCourseRouters();
     initStructuredNav();
     renderEliteBreadcrumb();
     renderIalSubjectHub();

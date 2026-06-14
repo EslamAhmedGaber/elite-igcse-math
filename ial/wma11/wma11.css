@@ -1328,3 +1328,171 @@ body[data-page="ial-wma11"][data-ial-active-module]:not([data-ial-active-module=
     font-size: 30px;
   }
 }
+
+/* 2026-06-14: dashboard consistency override */
+body[data-page="ial-wma11"] {
+  --ial-ink: #071329;
+  --ial-accent: #2563eb;
+  --ial-accent-dark: #174ea6;
+  --ial-paper: #f5fbff;
+  --ial-surface: #e8f5ff;
+  --ial-line: rgba(37, 99, 235, 0.24);
+}
+
+body[data-page="ial-wma11"] .ial-page {
+  width: min(1540px, calc(100% - 48px));
+  padding-top: 20px;
+}
+
+body[data-page="ial-wma11"] .elite-breadcrumb,
+body[data-page="ial-wma11"] .pathway-tool-strip {
+  display: none !important;
+}
+
+body[data-page="ial-wma11"] .ial-hero {
+  min-height: 0;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+  padding: 18px 24px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 44px rgba(15, 35, 72, 0.08);
+}
+
+body[data-page="ial-wma11"] .ial-hero h1 {
+  font-size: 34px;
+  letter-spacing: 0;
+}
+
+body[data-page="ial-wma11"] .ial-hero p {
+  display: block;
+  max-width: 720px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+body[data-page="ial-wma11"] .ial-dashboard {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  min-height: 86px;
+  margin: 14px 0;
+  padding: 10px 12px;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+body[data-page="ial-wma11"] .ial-dashboard article {
+  min-height: 86px;
+  padding: 16px 18px;
+  border: 1px solid rgba(186, 230, 253, 0.9);
+  border-top: 4px solid var(--ial-accent);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 16px 36px rgba(15, 35, 72, 0.07);
+}
+
+body[data-page="ial-wma11"] .ial-workbench {
+  display: grid;
+  grid-template-columns: minmax(292px, 322px) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+body[data-page="ial-wma11"] .ial-filters {
+  position: sticky;
+  top: 88px;
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-top: 4px solid var(--ial-accent);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 46px rgba(15, 35, 72, 0.09);
+}
+
+body[data-page="ial-wma11"] .ial-strip-head,
+body[data-page="ial-wma11"] .ial-number-strip,
+body[data-page="ial-wma11"] .ial-question-stage {
+  grid-column: 2;
+}
+
+body[data-page="ial-wma11"] .ial-strip-head {
+  grid-row: 1;
+}
+
+body[data-page="ial-wma11"] .ial-number-strip {
+  grid-row: 2;
+}
+
+body[data-page="ial-wma11"] .ial-question-stage {
+  grid-row: 3;
+}
+
+body[data-page="ial-wma11"] .ial-question-card,
+body[data-page="ial-wma11"] .ial-strip-head,
+body[data-page="ial-wma11"] .ial-number-strip {
+  border-color: rgba(148, 163, 184, 0.28);
+  background: #fff;
+  box-shadow: 0 18px 42px rgba(15, 35, 72, 0.08);
+}
+
+body[data-page="ial-wma11"] .ial-filters input,
+body[data-page="ial-wma11"] .ial-filters select {
+  min-height: 42px;
+  border-color: rgba(148, 163, 184, 0.38);
+  border-radius: 10px;
+  background: #fff;
+}
+
+body[data-page="ial-wma11"] .ial-filters input:focus,
+body[data-page="ial-wma11"] .ial-filters select:focus {
+  border-color: rgba(37, 99, 235, 0.68);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+  outline: none;
+}
+
+body[data-page="ial-wma11"] .ial-pill-difficulty.easy {
+  color: #116149;
+  border-color: rgba(34, 160, 107, 0.22);
+  background: rgba(34, 160, 107, 0.11);
+}
+
+body[data-page="ial-wma11"] .ial-pill-difficulty.medium {
+  color: #8a5900;
+  border-color: rgba(240, 164, 34, 0.25);
+  background: rgba(240, 164, 34, 0.13);
+}
+
+body[data-page="ial-wma11"] .ial-pill-difficulty.hard {
+  color: #a53636;
+  border-color: rgba(217, 76, 76, 0.24);
+  background: rgba(217, 76, 76, 0.12);
+}
+
+@media screen and (max-width: 980px) {
+  body[data-page="ial-wma11"] .ial-page {
+    width: min(100% - 24px, 1540px);
+  }
+
+  body[data-page="ial-wma11"] .ial-workbench {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-page="ial-wma11"] .ial-filters {
+    position: static;
+  }
+
+  body[data-page="ial-wma11"] .ial-strip-head,
+  body[data-page="ial-wma11"] .ial-number-strip,
+  body[data-page="ial-wma11"] .ial-question-stage {
+    grid-column: auto;
+  }
+}

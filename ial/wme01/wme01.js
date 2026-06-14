@@ -19,6 +19,7 @@
     year: document.getElementById("ialYear"),
     session: document.getElementById("ialSession"),
     marks: document.getElementById("ialMarks"),
+    difficulty: document.getElementById("ialDifficulty"),
     expertise: document.getElementById("ialExpertiseOnly"),
     mistakeOnly: document.getElementById("ialMistakeOnly"),
     reset: document.getElementById("ialReset"),
@@ -126,6 +127,18 @@
     return `WME01_${item.year}_${item.session}`;
   }
 
+  function difficultyInfo(itemOrMarks) {
+    const marks = Number(typeof itemOrMarks === "object" ? itemOrMarks.marks : itemOrMarks) || 0;
+    if (marks < 3) return { key: "easy", label: "Easy" };
+    if (marks <= 4) return { key: "medium", label: "Medium" };
+    return { key: "hard", label: "Hard" };
+  }
+
+  function matchesDifficulty(item, mode) {
+    if (!mode) return true;
+    return difficultyInfo(item).key === mode;
+  }
+
   function courseQuestionIds() {
     return new Set(QUESTIONS.map((item) => item.id));
   }
@@ -164,6 +177,12 @@
     const params = new URLSearchParams(window.location.search);
     const requestedTopic = params.get("topic");
     const requestedMode = params.get("mode");
+    const requestedSearch = params.get("search") || params.get("q");
+    const requestedDifficulty = params.get("difficulty");
+    if (requestedSearch && els.search) els.search.value = requestedSearch;
+    if (requestedDifficulty && els.difficulty && [...els.difficulty.options].some((option) => option.value === requestedDifficulty)) {
+      els.difficulty.value = requestedDifficulty;
+    }
     if (els.expertise && (params.get("expertise") === "1" || params.get("bank") === "expertise" || requestedMode === "expertise")) {
       els.expertise.checked = true;
     }
@@ -186,6 +205,7 @@
       year: els.year.value,
       session: els.session.value,
       marks: els.marks.value,
+      difficulty: els.difficulty?.value || "",
       expertise: els.expertise.checked,
       mistakeOnly: Boolean(els.mistakeOnly?.checked)
     };
@@ -197,6 +217,7 @@
     if (filters.year && String(item.year) !== filters.year) return false;
     if (filters.session && item.session !== filters.session) return false;
     if (filters.marks && String(item.marks) !== filters.marks) return false;
+    if (!matchesDifficulty(item, filters.difficulty)) return false;
     if (filters.expertise && item.qNo < 6) return false;
     if (filters.mistakeOnly && !state.mistakes[item.id]) return false;
     if (!filters.search) return true;
@@ -256,6 +277,7 @@
     const activeTopicName = topicName(activeTopic, item.topicName);
     const isCrossView = activeTopic !== (item.primaryTopic || item.topic);
     const secondaryNames = item.secondaryTopicNames || [];
+    const difficulty = difficultyInfo(item);
     const topicBadges = `
       <span class="ial-pill">${escapeHtml(activeTopicName)}</span>
       ${isCrossView ? `<span class="ial-pill">Primary: ${escapeHtml(item.primaryTopicName || item.topicName)}</span>` : ""}
@@ -276,6 +298,7 @@
           </div>
           <div class="ial-meta">
             <span class="ial-pill">${item.marks} marks</span>
+            <span class="ial-pill ial-pill-difficulty ${difficulty.key}">${difficulty.label}</span>
             ${topicBadges}
             <span class="ial-pill">${sessionLabel(item.session)} ${item.year}</span>
           </div>
@@ -560,7 +583,9 @@
     els.filters.addEventListener("input", () => applyFilters(true));
     els.filters.addEventListener("change", () => applyFilters(true));
     els.reset.addEventListener("click", () => {
+      const currentCourse = document.getElementById("ialCourse")?.value || "";
       els.filters.reset();
+      if (currentCourse && document.getElementById("ialCourse")) document.getElementById("ialCourse").value = currentCourse;
       applyFilters(false);
     });
     els.prev.addEventListener("click", () => move(-1));
