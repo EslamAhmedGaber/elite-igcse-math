@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="pathway-bootstrap.js?v=20260613a"></script>
-  <link rel="stylesheet" href="styles.css?v=20260614d">
+  <link rel="stylesheet" href="styles.css?v=20260614e">
   <script defer src="pathway-mode.js?v=20260527a"></script>
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js"></script>
@@ -37,12 +37,23 @@
   <header class="site-header">
     <a class="site-brand" href="index.html" aria-label="Elite IGCSE Mathematics home">
       <span class="brand-mark">IGCSE</span>
-      <span class="brand-title">Elite IGCSE Mathematics</span>
+      <span class="brand-title">eliteigcse.com</span>
     </a>
     <button id="navToggle" class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <nav class="site-nav pathway-tabs" aria-label="Main"></nav>
+    <nav class="home-app-nav" aria-label="Homepage sections">
+      <a href="index.html"><span class="home-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h13v-9.5"/><path d="M9 20v-6h6v6"/></svg></span>Dashboard</a>
+      <a class="is-active" href="practice.html?pathway=linear&amp;bank=all"><span class="home-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4.5 5.5h6A3.5 3.5 0 0 1 14 9v10a3.5 3.5 0 0 0-3.5-3.5h-6z"/><path d="M19.5 5.5h-6A3.5 3.5 0 0 0 10 9v10a3.5 3.5 0 0 1 3.5-3.5h6z"/></svg></span>Question Bank</a>
+      <a href="pastpapers.html"><span class="home-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3.5h7l3 3V20.5H7z"/><path d="M14 3.5v4h4"/><path d="M9.5 11h5"/><path d="M9.5 15h5"/></svg></span>Past Papers</a>
+      <a href="exam.html?mode=smart"><span class="home-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 4h8"/><path d="M9 4.5h6v15H9z"/><path d="m10.5 9 1 1 2.5-2.5"/><path d="M10.5 14.5h3"/></svg></span>Revision</a>
+      <a href="notes.html"><span class="home-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.5 4.5h11v15h-11z"/><path d="M9.5 8h5"/><path d="M9.5 12h5"/><path d="M9.5 16H13"/></svg></span>Notes</a>
+    </nav>
+    <label class="home-header-search">
+      <span>Search</span>
+      <input type="search" placeholder="Search questions..." aria-label="Search questions">
+    </label>
     <div class="site-cta">
       <button class="button cloud-auth-button" type="button" data-cloud-login>Continue with Google</button>
       <a class="button cloud-account-button" href="progress.html" data-cloud-account hidden>My Progress</a>
@@ -51,43 +62,163 @@
   </header>
 
   <main class="page page-home home-rebuild">
-    <section class="home-hero home-entry" aria-labelledby="heroTitle">
-      <div class="home-entry-copy">
-        <span class="eyebrow">Dr Eslam Ahmed | Online Mathematics</span>
-        <h1 id="heroTitle">Elite IGCSE Mathematics</h1>
-        <p>Choose your curriculum, then open the exact tools inside it: classified questions, build test, smart revision, progress, books, and paper solutions.</p>
-        <div class="home-pathway-picker" aria-label="Choose curriculum">
-          <a class="home-pathway-choice is-linear" href="practice.html?pathway=linear&amp;bank=all" data-pathway-choice="linear" data-pathway-target="practice.html?pathway=linear&amp;bank=all">
-            <span>Linear</span>
-            <strong>4MA1 route</strong>
-            <small>Chapters 1-6 bank</small>
+    <section class="home-dashboard-entry" aria-labelledby="heroTitle">
+      <aside class="home-dashboard-filter" aria-label="Question filters preview">
+        <div class="home-panel-title">
+          <span class="home-panel-icon">=</span>
+          <strong>Filter questions</strong>
+        </div>
+        <label class="home-filter-field">
+          <span>Curriculum</span>
+          <select aria-label="Curriculum preview">
+            <option>Edexcel IGCSE (4MA1)</option>
+          </select>
+        </label>
+        <label class="home-filter-field">
+          <span>Topic</span>
+          <input type="search" value="" placeholder="Search topics..." aria-label="Search topics preview">
+        </label>
+        <div class="home-topic-tree" aria-label="Topic preview">
+          <a class="is-active" href="practice.html?pathway=linear&amp;bank=all">
+            <span>1. Numbers &amp; System</span><strong>248</strong>
           </a>
-          <a class="home-pathway-choice is-modular" href="practice.html?pathway=modular&amp;choose=unit" data-pathway-choice="modular" data-pathway-target="practice.html?pathway=modular&amp;choose=unit">
-            <span>Modular</span>
-            <strong>4WM route</strong>
-            <small>Choose Unit 1 or 2</small>
+          <a href="practice.html?pathway=linear&amp;chapter=Chapter%202">
+            <span>2. Equations &amp; Formulae</span><strong>316</strong>
           </a>
-          <a class="home-pathway-choice is-pure" href="ial/wma11/index.html">
-            <span>IAL Pure 1</span>
-            <strong>WMA11</strong>
-            <small>Standalone Pure 1 module hub</small>
+          <a href="practice.html?pathway=linear&amp;chapter=Chapter%203">
+            <span>3. Graphs &amp; Sequences</span><strong>280</strong>
           </a>
-          <a class="home-pathway-choice is-pure2" href="ial/wma12/index.html">
-            <span>IAL Pure 2</span>
-            <strong>WMA12</strong>
-            <small>Pure 2 solved bank</small>
+          <a href="practice.html?pathway=linear&amp;chapter=Chapter%204">
+            <span>4. Geometry &amp; Trig</span><strong>344</strong>
           </a>
-          <a class="home-pathway-choice is-mechanics" href="ial/wme01/index.html">
-            <span>IAL Mechanics 1</span>
-            <strong>WME01</strong>
-            <small>Mechanics solved bank</small>
+          <a href="practice.html?pathway=linear&amp;chapter=Chapter%205">
+            <span>5. Statistics &amp; Probability</span><strong>201</strong>
+          </a>
+          <a href="practice.html?pathway=linear&amp;chapter=Chapter%206">
+            <span>6. Vectors &amp; Transformations</span><strong>51</strong>
           </a>
         </div>
-        <div class="hero-stat-strip" aria-label="Website stats">
-          <span><strong>1,176</strong> IGCSE classified</span>
-          <span><strong>264</strong> Q20+ expertise</span>
-          <span><strong>507</strong> IAL worked questions</span>
-          <span><strong>48</strong> IGCSE paper sets</span>
+        <div class="home-filter-pills" aria-label="Difficulty preview">
+          <span class="is-active">All</span>
+          <span>Easy</span>
+          <span>Medium</span>
+          <span>Hard</span>
+        </div>
+        <a class="home-clear-link" href="practice.html?pathway=linear&amp;bank=all">Clear filters</a>
+      </aside>
+
+      <div class="home-dashboard-main">
+        <div class="home-dashboard-titlebar">
+          <div>
+            <span class="eyebrow">Question Bank</span>
+            <h1 id="heroTitle">Elite IGCSE Mathematics</h1>
+          </div>
+          <label class="home-dashboard-search">
+            <span>Search</span>
+            <input type="search" placeholder="Search questions..." aria-label="Search questions preview">
+          </label>
+        </div>
+
+        <nav class="home-course-tabs" aria-label="Choose curriculum">
+          <a class="is-active is-linear" href="practice.html?pathway=linear&amp;bank=all" data-pathway-choice="linear" data-pathway-target="practice.html?pathway=linear&amp;bank=all"><span>Linear</span></a>
+          <a class="is-modular" href="practice.html?pathway=modular&amp;choose=unit" data-pathway-choice="modular" data-pathway-target="practice.html?pathway=modular&amp;choose=unit"><span>Modular</span></a>
+          <a class="is-pure" href="ial/wma11/index.html"><span>Pure 1</span></a>
+          <a class="is-pure2" href="ial/wma12/index.html"><span>Pure 2</span></a>
+          <a class="is-mechanics" href="ial/wme01/index.html"><span>Mechanics 1</span></a>
+        </nav>
+
+        <div class="home-dashboard-top">
+          <div class="home-topic-mega" aria-label="Topic group preview">
+            <div>
+              <strong>Numbers &amp; System</strong>
+              <ol>
+                <li>Rational Numbers</li>
+                <li>Powers &amp; Roots</li>
+                <li>Standard Form</li>
+                <li>Percentages</li>
+                <li>Ratio &amp; Proportion</li>
+              </ol>
+              <a href="practice.html?pathway=linear&amp;bank=all">Open number topics</a>
+            </div>
+            <div>
+              <strong>Equations &amp; Formulae</strong>
+              <ol>
+                <li>Expressions &amp; Formulae</li>
+                <li>Equations</li>
+                <li>Inequalities</li>
+                <li>Algebraic Fractions</li>
+                <li>Algebraic Proof</li>
+              </ol>
+              <a href="practice.html?pathway=linear&amp;chapter=Chapter%202">Open algebra topics</a>
+            </div>
+            <div>
+              <strong>Graphs &amp; Sequences</strong>
+              <ol>
+                <li>Sequences</li>
+                <li>Straight Lines</li>
+                <li>Graphs</li>
+                <li>Functions</li>
+                <li>Coordinate Geometry</li>
+              </ol>
+              <a href="practice.html?pathway=linear&amp;chapter=Chapter%203">Open graph topics</a>
+            </div>
+            <div>
+              <strong>Geometry &amp; Trigonometry</strong>
+              <ol>
+                <li>Angles &amp; Bearings</li>
+                <li>Circles</li>
+                <li>Trigonometry</li>
+                <li>Area &amp; Perimeter</li>
+                <li>Similarity &amp; Congruence</li>
+              </ol>
+              <a href="practice.html?pathway=linear&amp;chapter=Chapter%204">Open geometry topics</a>
+            </div>
+          </div>
+
+          <div class="home-live-stats" aria-label="Website stats">
+            <div><span>Questions</span><strong>1,440</strong></div>
+            <div><span>Q20+</span><strong>528</strong></div>
+            <div><span>IAL solved</span><strong>507</strong></div>
+            <div><span>Paper sets</span><strong>48</strong></div>
+          </div>
+        </div>
+
+        <div class="home-dashboard-actions">
+          <p>Showing 1-6 of 1,440 questions</p>
+          <a class="button primary" href="practice.html?pathway=linear&amp;bank=all" data-pathway-choice="linear" data-pathway-target="practice.html?pathway=linear&amp;bank=all">Select questions (0)</a>
+        </div>
+
+        <div class="home-question-grid" aria-label="Question preview">
+          <article class="home-question-card">
+            <header><strong>Q. 0001</strong><span>1.3 Coordinate Geometry</span><em>4 marks</em></header>
+            <img src="assets/questions/Jan2020_P1H__Q01__p03-03__m04__Coordinate-Geometry.png" alt="Coordinate Geometry question preview" loading="eager">
+            <footer><label><input type="checkbox"> Select</label><a href="practice.html?pathway=linear&amp;bank=all">Show solution</a></footer>
+          </article>
+          <article class="home-question-card">
+            <header><strong>Q. 0002</strong><span>1.1 Number</span><em>2 marks</em></header>
+            <img src="assets/questions/Jan2020_P1H__Q02__p04-04__m02__Prime-Factors-HCF-and-LCM.png" alt="Number question preview" loading="eager">
+            <footer><label><input type="checkbox"> Select</label><a href="practice.html?pathway=linear&amp;bank=all">Show solution</a></footer>
+          </article>
+          <article class="home-question-card">
+            <header><strong>Q. 0003</strong><span>1.4 Area</span><em>4 marks</em></header>
+            <img src="assets/questions/Jan2020_P1H__Q03__p05-05__m04__Area-and-Perimeter.png" alt="Area and perimeter question preview" loading="eager">
+            <footer><label><input type="checkbox"> Select</label><a href="practice.html?pathway=linear&amp;bank=all">Show solution</a></footer>
+          </article>
+          <article class="home-question-card">
+            <header><strong>Q. 0004</strong><span>5.1 Statistics</span><em>7 marks</em></header>
+            <img src="assets/questions/Jan2020_P1H__Q04__p06-06__m07__Statistics-Toolkit.png" alt="Statistics question preview" loading="eager">
+            <footer><label><input type="checkbox"> Select</label><a href="practice.html?pathway=linear&amp;bank=all">Show solution</a></footer>
+          </article>
+          <article class="home-question-card">
+            <header><strong>Q. 0005</strong><span>1.2 Ratio</span><em>6 marks</em></header>
+            <img src="assets/questions/Jan2020_P1H__Q05__p07-07__m06__Ratio-Toolkit.png" alt="Ratio question preview" loading="eager">
+            <footer><label><input type="checkbox"> Select</label><a href="practice.html?pathway=linear&amp;bank=all">Show solution</a></footer>
+          </article>
+          <article class="home-question-card">
+            <header><strong>Q. 0006</strong><span>1.2 Standard Form</span><em>3 marks</em></header>
+            <img src="assets/questions/Jan2020_P1H__Q06__p08-08__m03__Powers-Roots-and-Standard-Form.png" alt="Standard form question preview" loading="eager">
+            <footer><label><input type="checkbox"> Select</label><a href="practice.html?pathway=linear&amp;bank=all">Show solution</a></footer>
+          </article>
         </div>
       </div>
     </section>
@@ -199,7 +330,7 @@
       </div>
       <div class="review-summary">
         <div><strong>5.0</strong><span>student rating</span></div>
-        <div><strong>1,176</strong><span>IGCSE classified</span></div>
+        <div><strong>1,440</strong><span>IGCSE classified</span></div>
         <div><strong>507</strong><span>IAL worked questions</span></div>
       </div>
       <div class="reviews-grid home-reviews-compact">
