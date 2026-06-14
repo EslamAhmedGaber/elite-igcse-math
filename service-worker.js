@@ -1,4 +1,4 @@
-const CACHE_VERSION = "elite-igcse-kill-v138";
+const CACHE_VERSION = "elite-igcse-kill-v139";
 
 self.addEventListener("install", (event) => {
   event.waitUntil(self.skipWaiting());

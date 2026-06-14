@@ -79,7 +79,7 @@
   --shadow-lg: 0 22px 56px rgba(14, 18, 32, 0.14);
   --shadow-card: 0 18px 44px rgba(23, 32, 51, 0.08);
   /* Display type spacing */
-  --letter-display: -0.01em;
+  --letter-display: 0;
   --letter-body: 0;
   --letter-eyebrow: 0.08em;
   /* Motion */
@@ -1891,7 +1891,7 @@ body.practice-focus-mode .mobile-tools-toggle {
   color: var(--ui-text);
   font-weight: 850;
   font-size: 14px;
-  letter-spacing: -0.005em;
+  letter-spacing: 0;
   line-height: 1.25;
 }
 
@@ -2436,7 +2436,7 @@ body.practice-focus-mode .mobile-tools-toggle {
     font-family: Georgia, "Times New Roman", serif;
     font-size: 16pt;
     line-height: 1;
-    letter-spacing: -0.8pt;
+    letter-spacing: 0;
   }
   .print-paper-brand strong {
     display: block;
@@ -3791,7 +3791,7 @@ body[data-course-palette] .pp-year-block h3::before {
   margin: 6px 0 8px;
   font-size: clamp(30px, 4vw, 46px);
   line-height: 1.05;
-  letter-spacing: -0.6px;
+  letter-spacing: 0;
 }
 .pathway-gate-person p {
   margin: 0;
@@ -4153,7 +4153,7 @@ body.pathway-unset .site-header .site-cta {
   font-weight: 800;
   line-height: 1.1;
   margin: 0 0 16px;
-  letter-spacing: -0.5px;
+  letter-spacing: 0;
 }
 .home-hero-copy p {
   font-size: 17px;
@@ -4339,7 +4339,7 @@ body.pathway-unset .site-header .site-cta {
   font-size: 32px;
   font-weight: 800;
   color: var(--accent);
-  letter-spacing: -1px;
+  letter-spacing: 0;
 }
 .stats-band span {
   font-size: 13px;
@@ -12088,5 +12088,432 @@ body[data-page="practice"] .cloud-floating-widget a {
     margin: 14px 12px;
     border-radius: 14px;
     opacity: 1;
+  }
+}
+
+/* ============================================================
+   2026-06-14: premium UI/UX second pass
+   Roomier learning surfaces for the remaining compact shells.
+   ============================================================ */
+
+@media screen {
+  body[data-course-palette] {
+    --elite-panel-bg: rgba(255, 255, 255, 0.94);
+    --elite-panel-border: rgba(216, 224, 234, 0.92);
+    --elite-panel-shadow: 0 18px 44px rgba(23, 32, 51, 0.08);
+  }
+
+  body[data-page="practice"][data-course-palette],
+  body[data-page="exam"][data-course-palette] {
+    background:
+      radial-gradient(circle at 0 0, var(--course-soft), transparent 440px),
+      linear-gradient(180deg, #f7f9fc 0, #fff 460px);
+  }
+
+  .pathway-tool-strip {
+    width: min(1480px, calc(100% - 32px));
+    grid-template-columns: minmax(210px, 0.22fr) minmax(0, 1fr);
+    gap: 16px;
+    margin: 18px auto 22px;
+    padding: 14px;
+    border: 1px solid var(--elite-panel-border);
+    border-radius: 24px;
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.96), var(--pathway-soft)),
+      #fff;
+    box-shadow: var(--elite-panel-shadow);
+  }
+
+  body[data-page="exam"] .pathway-tool-strip,
+  body[data-page="practice"] .pathway-tool-strip {
+    width: min(1480px, calc(100% - 32px));
+    grid-template-columns: minmax(210px, 0.22fr) minmax(0, 1fr);
+    gap: 16px;
+    margin-top: 18px;
+    margin-bottom: 22px;
+  }
+
+  .pathway-tool-strip-title,
+  body[data-page="exam"] .pathway-tool-strip-title,
+  body[data-page="practice"] .pathway-tool-strip-title {
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.78);
+    border-left: 0;
+    border-radius: 18px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.82)),
+      #fff;
+    box-shadow: inset 0 0 0 1px rgba(216, 224, 234, 0.7);
+  }
+
+  .pathway-tool-strip-title strong,
+  body[data-page="exam"] .pathway-tool-strip-title strong,
+  body[data-page="practice"] .pathway-tool-strip-title strong {
+    color: var(--pathway-active-deep);
+    font-size: clamp(18px, 1.4vw, 22px);
+    line-height: 1.1;
+  }
+
+  body[data-page="exam"] .pathway-tool-strip-title small,
+  body[data-page="practice"] .pathway-tool-strip-title small {
+    display: block;
+  }
+
+  .pathway-tool-strip-links,
+  body[data-page="exam"] .pathway-tool-strip-links,
+  body[data-page="practice"] .pathway-tool-strip-links {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+  }
+
+  .pathway-tool-strip-links a,
+  body[data-page="exam"] .pathway-tool-strip-links a,
+  body[data-page="practice"] .pathway-tool-strip-links a {
+    min-height: 96px;
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 12px;
+    padding: 16px 18px;
+    border: 1px solid rgba(216, 224, 234, 0.95);
+    border-left: 0;
+    border-radius: 18px;
+    background:
+      linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(247, 249, 252, 0.96)),
+      #fff;
+    box-shadow: 0 12px 30px rgba(23, 32, 51, 0.07);
+  }
+
+  .pathway-tool-strip-links a::before,
+  body[data-page="exam"] .pathway-tool-strip-links a::before,
+  body[data-page="practice"] .pathway-tool-strip-links a::before {
+    inset: 0 auto 0 0;
+    width: 5px;
+    height: auto;
+    border-radius: 18px 0 0 18px;
+  }
+
+  .pathway-tool-strip-links a .module-icon,
+  body[data-page="exam"] .pathway-tool-strip-links a .module-icon,
+  body[data-page="practice"] .pathway-tool-strip-links a .module-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .pathway-tool-strip-links strong,
+  body[data-page="exam"] .pathway-tool-strip-links strong,
+  body[data-page="practice"] .pathway-tool-strip-links strong {
+    font-size: 15px;
+    line-height: 1.15;
+  }
+
+  .pathway-tool-strip-links span,
+  body[data-page="exam"] .pathway-tool-strip-links span,
+  body[data-page="practice"] .pathway-tool-strip-links span {
+    display: block;
+    color: inherit;
+    opacity: 0.68;
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .pathway-tool-strip-links a:hover,
+  .pathway-tool-strip-links a:focus-visible,
+  .pathway-tool-strip-links a[aria-current="page"],
+  body[data-page="exam"] .pathway-tool-strip-links a:hover,
+  body[data-page="exam"] .pathway-tool-strip-links a:focus-visible,
+  body[data-page="exam"] .pathway-tool-strip-links a[aria-current="page"],
+  body[data-page="practice"] .pathway-tool-strip-links a:hover,
+  body[data-page="practice"] .pathway-tool-strip-links a:focus-visible,
+  body[data-page="practice"] .pathway-tool-strip-links a[aria-current="page"] {
+    color: #fff;
+    border-color: var(--module-accent);
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0)),
+      var(--module-accent);
+    box-shadow: 0 18px 38px rgba(23, 32, 51, 0.14);
+  }
+
+  body[data-page="practice"] .practice-toolbar {
+    width: min(1480px, 100%);
+    grid-template-columns: minmax(290px, 0.34fr) minmax(0, 1fr);
+    gap: 18px;
+    margin: 18px auto;
+  }
+
+  body[data-page="practice"] .quick-stats,
+  body[data-page="practice"] .bank-panel,
+  body[data-page="practice"] .content-head,
+  body[data-page="practice"] .selection-toolbar,
+  body[data-page="practice"] .filters,
+  body[data-page="practice"] .practice-panel,
+  body[data-page="exam"] .exam-builder,
+  body[data-page="exam"] .exam-summary,
+  body[data-page="exam"] .exam-paper {
+    border: 1px solid var(--elite-panel-border);
+    border-radius: 20px;
+    background: var(--elite-panel-bg);
+    box-shadow: var(--elite-panel-shadow);
+  }
+
+  body[data-page="practice"] .quick-stats {
+    min-height: 118px;
+    border-left: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    background:
+      linear-gradient(135deg, var(--course-soft), rgba(255, 255, 255, 0.94) 60%),
+      #fff;
+  }
+
+  body[data-page="practice"] .quick-stats div {
+    padding: 18px 20px;
+    border-right: 1px solid rgba(216, 224, 234, 0.74);
+  }
+
+  body[data-page="practice"] .quick-stats div:nth-child(2n) {
+    border-right: 0;
+  }
+
+  body[data-page="practice"] .quick-stats div:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(216, 224, 234, 0.74);
+  }
+
+  body[data-page="practice"] .quick-stats div::before {
+    top: 16px;
+    left: 20px;
+    width: 30px;
+    height: 3px;
+    border-radius: 999px;
+  }
+
+  body[data-page="practice"] .quick-stats strong {
+    margin-top: 12px;
+    color: var(--course-signature);
+    font-size: clamp(24px, 2vw, 32px);
+    line-height: 1;
+  }
+
+  body[data-page="practice"] .quick-stats span {
+    color: var(--ui-muted);
+    font-size: 11px;
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+
+  body[data-page="practice"] .practice-bank-bar {
+    min-height: 118px;
+    grid-template-columns: minmax(220px, 0.42fr) minmax(0, 1fr);
+    gap: 16px;
+    padding: 18px;
+    border-left: 0;
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.97), var(--course-soft) 115%),
+      #fff;
+  }
+
+  body[data-page="practice"] .practice-bank-bar h2 {
+    color: var(--course-deep);
+    font-size: clamp(20px, 1.7vw, 26px);
+    line-height: 1.12;
+  }
+
+  body[data-page="practice"] .practice-bank-bar p {
+    color: var(--ui-muted);
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  body[data-page="practice"] .practice-bank-bar .bank-buttons button {
+    min-height: 72px;
+    padding: 14px 16px;
+    border-color: rgba(216, 224, 234, 0.95);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 8px 20px rgba(23, 32, 51, 0.055);
+    transition: transform var(--t-base), box-shadow var(--t-base), border-color var(--t-fast), background var(--t-fast);
+  }
+
+  body[data-page="practice"] .practice-bank-bar .bank-buttons button:hover {
+    transform: translateY(-2px);
+    border-color: var(--course-signature);
+    box-shadow: 0 16px 32px rgba(23, 32, 51, 0.1);
+  }
+
+  body[data-page="practice"] .practice-bank-bar .bank-buttons button.active {
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0)),
+      var(--course-signature);
+  }
+
+  body[data-page="practice"] .practice-bank-bar .bank-buttons strong {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  body[data-page="practice"] .content-head,
+  body[data-page="practice"] .selection-toolbar {
+    padding: 18px 20px;
+  }
+
+  body[data-page="practice"] .filters {
+    padding: 18px;
+    gap: 14px;
+  }
+
+  body[data-page="practice"] .filter-primary-grid,
+  body[data-page="practice"] .filter-advanced-grid {
+    gap: 12px;
+  }
+
+  body[data-page="practice"] .filters label,
+  body[data-page="practice"] .sort-label {
+    gap: 7px;
+    color: var(--ui-muted);
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  body[data-page="practice"] .filters input,
+  body[data-page="practice"] .filters select,
+  body[data-page="practice"] .sort-label select,
+  body[data-page="exam"] .exam-controls input,
+  body[data-page="exam"] .exam-controls select,
+  body[data-page="exam"] .exam-question input {
+    min-height: 46px;
+    border-color: rgba(216, 224, 234, 0.96);
+    border-radius: 12px;
+    background-color: #fff;
+  }
+
+  body[data-page="practice"] .layout-toggle {
+    gap: 6px;
+    padding: 5px;
+    border-color: rgba(216, 224, 234, 0.95);
+    border-radius: 15px;
+    background: #eef3f8;
+  }
+
+  body[data-page="practice"] .layout-toggle button {
+    min-height: 40px;
+    min-width: 70px;
+    border-radius: 11px;
+  }
+
+  body[data-page="practice"] .topic-strip {
+    gap: 10px;
+    padding: 8px 2px 16px;
+    scrollbar-width: thin;
+  }
+
+  body[data-page="practice"] .topic-chip {
+    min-height: 40px;
+    padding: 9px 14px;
+    border-color: rgba(216, 224, 234, 0.98);
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--course-deep);
+    box-shadow: 0 8px 18px rgba(23, 32, 51, 0.055);
+  }
+
+  body[data-page="practice"] .topic-chip:hover {
+    background: var(--course-soft);
+    box-shadow: 0 12px 24px rgba(23, 32, 51, 0.08);
+  }
+
+  body[data-page="practice"] .topic-chip.active {
+    background: var(--course-signature);
+    color: #fff;
+    box-shadow: 0 12px 28px var(--course-soft);
+  }
+
+  body[data-page="exam"] .exam-builder {
+    padding: 28px;
+  }
+
+  body[data-page="exam"] .exam-mode-tabs button,
+  body[data-page="exam"] .topic-mix-grid label,
+  body[data-page="exam"] .exam-check-row label,
+  body[data-page="exam"] .smart-source-grid label {
+    border-radius: 12px;
+  }
+
+  body[data-page="home"] .feature-tabs,
+  body[data-page="home"] .home-module-card,
+  body[data-page="home"] .stats-band,
+  body[data-page="home"] .trust-panel,
+  body[data-page="home"] .pricing-panel {
+    border-color: var(--elite-panel-border);
+    border-radius: 20px;
+    box-shadow: var(--elite-panel-shadow);
+  }
+
+  body[data-page="home"] .home-module-card {
+    background:
+      linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(247, 249, 252, 0.96)),
+      #fff;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .pathway-tool-strip,
+  body[data-page="exam"] .pathway-tool-strip,
+  body[data-page="practice"] .pathway-tool-strip,
+  body[data-page="practice"] .practice-toolbar,
+  body[data-page="practice"] .practice-bank-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .pathway-tool-strip-links,
+  body[data-page="exam"] .pathway-tool-strip-links,
+  body[data-page="practice"] .pathway-tool-strip-links {
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .pathway-tool-strip,
+  body[data-page="exam"] .pathway-tool-strip,
+  body[data-page="practice"] .pathway-tool-strip {
+    width: calc(100% - 24px);
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  .pathway-tool-strip-links,
+  body[data-page="exam"] .pathway-tool-strip-links,
+  body[data-page="practice"] .pathway-tool-strip-links {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(220px, 78vw);
+    overflow-x: auto;
+    padding: 2px 2px 8px;
+    scroll-snap-type: x proximity;
+  }
+
+  .pathway-tool-strip-links a,
+  body[data-page="exam"] .pathway-tool-strip-links a,
+  body[data-page="practice"] .pathway-tool-strip-links a {
+    min-height: 92px;
+    padding: 15px 16px;
+    scroll-snap-align: start;
+  }
+
+  body[data-page="practice"] .content-head,
+  body[data-page="practice"] .selection-toolbar {
+    align-items: stretch;
+  }
+
+  .mobile-bottom-nav {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    padding: 7px;
+    border-color: rgba(216, 224, 234, 0.94);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.94);
+  }
+
+  .mobile-bottom-nav a {
+    min-height: 46px;
+    border-radius: 15px;
+    font-size: 10.5px;
+    font-weight: 800;
   }
 }
