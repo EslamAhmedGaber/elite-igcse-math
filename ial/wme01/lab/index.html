@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Elite IGCSE Academy | Mechanics 1 Lab</title>
+<link rel="stylesheet" href="assets/mechanics-lab.css" />
+</head>
+<body>
+  <div class="lab-shell">
+    <header class="topbar">
+      <a class="brand-mark" href="../index.html#ialSimulator" aria-label="Back to WME01 Mechanics page">EI</a>
+      <div class="brand-copy">
+        <h1>WME01 Mechanics 1 Lab</h1>
+        <p>Interactive topic-by-topic simulations for Edexcel IAL Mechanics 1</p>
+      </div>
+      <div class="topbar-actions">
+        <a class="icon-btn" href="../index.html#ialQuestionVisualizer">Visualizer</a>
+        <button class="icon-btn" id="stepBack" type="button" title="Step back" aria-label="Step back">
+          <span aria-hidden="true">-</span>
+        </button>
+        <button class="icon-btn primary" id="playPause" type="button" title="Play or pause" aria-label="Play or pause">
+          <span aria-hidden="true" id="playIcon">Play</span>
+        </button>
+        <button class="icon-btn" id="reset" type="button" title="Reset" aria-label="Reset">
+          <span aria-hidden="true">Reset</span>
+        </button>
+      </div>
+    </header>
+
+    <nav class="topic-rail" id="topicRail" aria-label="Mechanics topics"></nav>
+
+    <main class="lab-main">
+      <section class="stage-panel" aria-label="Simulation stage">
+        <div class="stage-head">
+          <div>
+            <h2 id="topicTitle">Loading...</h2>
+            <p id="topicSubtitle"></p>
+          </div>
+          <div class="case-chip" id="caseChip">Case</div>
+        </div>
+        <div class="canvas-wrap">
+          <canvas id="labCanvas" width="1200" height="720"></canvas>
+          <div class="hud" id="hud"></div>
+        </div>
+        <div class="timeline">
+          <label for="timeSlider">Time</label>
+          <input id="timeSlider" type="range" min="0" max="1000" value="0" />
+          <output id="timeOut">0.00 s</output>
+          <select id="speed">
+            <option value="0.5">0.5x</option>
+            <option value="1" selected>1x</option>
+            <option value="2">2x</option>
+            <option value="4">4x</option>
+          </select>
+        </div>
+      </section>
+
+      <aside class="inspector" aria-label="Controls and formula trail">
+        <section class="panel-block">
+          <div class="panel-title">Case</div>
+          <select id="caseSelect"></select>
+          <p class="case-purpose" id="casePurpose"></p>
+          <div class="case-tags" id="caseTags"></div>
+        </section>
+
+        <section class="panel-block">
+          <div class="panel-title">Controls</div>
+          <div class="control-stack" id="controlStack"></div>
+        </section>
+
+        <section class="panel-block">
+          <div class="panel-title">Live Values</div>
+          <div class="readout-grid" id="readouts"></div>
+        </section>
+
+        <section class="panel-block">
+          <div class="panel-title">Formula Trail</div>
+          <div class="formula-trail" id="formulaTrail"></div>
+        </section>
+
+        <section class="panel-block compact">
+          <div class="panel-title">Exam Moves</div>
+          <ol class="exam-moves" id="examMoves"></ol>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+<script src="assets/mechanics-lab.js"></script>
+</body>
+</html>

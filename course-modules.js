@@ -55,6 +55,16 @@
       role: "student",
       description: "Reusable tests created by the shared builder.",
     },
+    "interactive-lab": {
+      title: "Interactive Lab",
+      role: "student",
+      description: "Topic-by-topic Mechanics simulations and visual cases.",
+    },
+    "question-visualizer": {
+      title: "Question Visualizer",
+      role: "student",
+      description: "Real paper question images connected to topic visual models and worked solutions.",
+    },
     "book-builder": {
       title: "Book Builder",
       role: "pipeline",
@@ -97,6 +107,10 @@
     "past paper solutions": "past-solutions",
     "progress": "progress",
     "mistake box": "mistake-box",
+    "interactive lab": "interactive-lab",
+    "mechanics lab": "interactive-lab",
+    "question visualizer": "question-visualizer",
+    "paper question visualizer": "question-visualizer",
   };
 
   const palettes = {
@@ -1952,6 +1966,8 @@
       links: [
         { module: "classified", title: "Classified View", detail: "Topic practice", href: "/ial/wme01/index.html" },
         { module: "expertise", title: "Expertise View", detail: "Q6+ filtered bank", href: "/ial/wme01/index.html?expertise=1#ialFilters" },
+        { module: "interactive-lab", title: "Interactive Lab", detail: "98 visual cases", href: "/ial/wme01/lab/index.html" },
+        { module: "question-visualizer", title: "Question Visualizer", detail: "Paper images + simulations", href: "/ial/wme01/index.html#ialQuestionVisualizer" },
         { module: "build-test", title: "Build Test", detail: "Full mock builder", href: "/exam.html?pathway=pure&course=wme01&mode=custom" },
         { module: "revision-book", title: "Revision Book", detail: "10-100 question mix", href: "/exam.html?pathway=pure&course=wme01&mode=smart&book=revision" },
         { module: "progress", title: "Progress", detail: "Topic mastery", href: "/progress.html?pathway=pure&course=wme01" },
@@ -2069,7 +2085,7 @@
   };
 
   window.ELITE_COURSE_MODULES = {
-    version: "2026-06-13-course-registry-v13-wme01-full",
+    version: "2026-06-16-course-registry-v14-wme01-lab-visualizer",
     moduleCatalog,
     moduleAliases,
     palettes,

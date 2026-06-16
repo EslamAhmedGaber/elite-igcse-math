@@ -159,6 +159,10 @@
     "past paper solutions": "past-solutions",
     "progress": "progress",
     "mistake box": "mistake-box",
+    "interactive lab": "interactive-lab",
+    "mechanics lab": "interactive-lab",
+    "question visualizer": "question-visualizer",
+    "paper question visualizer": "question-visualizer",
   };
   const MODULE_ALIASES = COURSE_SYSTEM.moduleAliases || DEFAULT_MODULE_ALIASES;
 
@@ -403,6 +407,8 @@
     "books":          '<svg class="module-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h11a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3z"/><path d="M4 17a3 3 0 0 1 3-3h11"/></svg>',
     "answers":        '<svg class="module-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l9 4v6c0 5-3.8 9.4-9 10-5.2-.6-9-5-9-10V6z"/><path d="M9 12l2.2 2.2L15 10.4"/></svg>',
     "past-solutions": '<svg class="module-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h8l4 4v14H7z"/><path d="M15 3v4h4"/><path d="M10 13h6M10 17h6"/></svg>',
+    "interactive-lab": '<svg class="module-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17h16"/><path d="M7 17l4-10 4 10"/><path d="M6 7h12"/><circle cx="17" cy="7" r="2"/></svg>',
+    "question-visualizer": '<svg class="module-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 8h5M7 12h3"/><path d="M14 13l2-2 3 4"/></svg>',
     "unit-choice":    '<svg class="module-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h7v7H4zM13 5h7v7h-7zM4 14h7v7H4zM13 14h7v7h-7z"/></svg>',
     "general":        '<svg class="module-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>',
   };
@@ -491,6 +497,8 @@
     books: "Books",
     answers: "Answer Books",
     "past-solutions": "Past Papers",
+    "interactive-lab": "Interactive Lab",
+    "question-visualizer": "Question Visualizer",
     "unit-choice": "Choose Unit",
   };
 
@@ -498,7 +506,16 @@
     const page = document.body?.dataset?.page || "";
     const params = new URLSearchParams(window.location.search);
     const path = window.location.pathname;
+    const hash = window.location.hash;
+    if (path.includes("/ial/wme01/lab/")) return "Interactive Lab";
     if (path.includes("/ial/wma11/") || path.includes("/ial/wma12/") || path.includes("/ial/wme01/")) {
+      if (path.includes("/ial/wme01/")) {
+        if (hash === "#ialQuestionVisualizer") return "Question Visualizer";
+        if (hash === "#ialSimulator") return "Interactive Lab";
+        if (hash === "#ialPastPapers") return "Past Papers";
+        if (hash === "#ialProgressModule") return "Progress";
+        if (hash === "#ialMockBuilder") return "Build Test";
+      }
       if (params.get("mode") === "mistakes") return "Mistake Box";
       if (params.get("expertise") === "1") return "Expertise View";
       return "Classified View";

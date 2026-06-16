@@ -14,17 +14,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="pathway-bootstrap.js?v=20260613a"></script>
   <link rel="stylesheet" href="styles.css?v=20260615a">
-  <link rel="stylesheet" href="ial/wme01/wme01.css?v=20260615a">
+  <link rel="stylesheet" href="ial/wme01/wme01.css?v=20260616a">
   <script>
     window.MathJax = { tex: { inlineMath: [["$", "$"], ["\\(", "\\)"]] }, svg: { fontCache: "global" } };
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js?v=20260611a"></script>
-  <script defer src="course-modules.js?v=20260613a"></script>
-  <script defer src="lead.js?v=20260613a"></script>
+  <script defer src="course-modules.js?v=20260616a"></script>
+  <script defer src="lead.js?v=20260616a"></script>
   <script defer src="ial/wme01/wme01-data.js?v=20260613a"></script>
-  <script defer src="ial/wme01/wme01.js?v=20260615a"></script>
+  <script defer src="ial/wme01/wme01.js?v=20260616a"></script>
 </head>
 <body data-page="ial-wme01">
 
@@ -75,6 +75,8 @@
           <a href="ial/wme01/index.html?expertise=1#ialFilters"><strong>Expertise Bank</strong><span>Q6+ route</span></a>
           <a href="exam.html?pathway=pure&amp;course=wme01&amp;mode=custom"><strong>Build Test</strong><span>Mechanics 1 builder</span></a>
           <a href="exam.html?pathway=pure&amp;course=wme01&amp;mode=smart&amp;book=revision"><strong>Revision Book</strong><span>Topic mix</span></a>
+          <a href="ial/wme01/lab/index.html"><strong>Interactive Lab</strong><span>Topic simulations</span></a>
+          <a href="ial/wme01/index.html#ialQuestionVisualizer"><strong>Question Visualizer</strong><span>Paper image + model</span></a>
           <a href="ial/wme01/index.html#ialPastPapers"><strong>Past Papers</strong><span>Paper rows</span></a>
         </div>
       </div>
@@ -111,6 +113,8 @@
         <a class="button solution" href="downloads/IAL/WME01/WME01_Classified_With_Answers.pdf?v=wme01-full-20260612" target="_blank" rel="noreferrer">Answers PDF</a>
         <a class="button gold" href="ial/wme01/index.html?expertise=1#ialFilters">Expertise Q6+</a>
         <a class="button solution light-solution" href="exam.html?pathway=pure&amp;course=wme01&amp;mode=custom">Build Test</a>
+        <a class="button primary" href="ial/wme01/lab/index.html">Interactive Lab</a>
+        <a class="button light" href="ial/wme01/index.html#ialQuestionVisualizer">Visualizer</a>
         <a class="button light" href="ial/wme01/index.html#ialPastPapers">Papers + Solutions</a>
       </div>
     </section>
@@ -206,6 +210,87 @@
         <a class="button light" href="downloads/IAL/WME01/WME01_Past_Paper_Solutions.pdf?v=wme01-full-20260612" target="_blank" rel="noreferrer">Solution archive PDF</a>
       </div>
       <div class="ial-paper-list" data-ial-paper-list aria-label="WME01 paper downloads"></div>
+    </section>
+
+    <section id="ialSimulator" class="ial-simulator-module" aria-labelledby="ialSimulatorTitle">
+      <div class="ial-module-head">
+        <div>
+          <span class="eyebrow">Interactive Mechanics Lab</span>
+          <h2 id="ialSimulatorTitle">Mechanics 1 simulations for every topic</h2>
+          <p>The live lab covers modelling, vectors, graphs, SUVAT, projectiles, forces, Newton's second law, inclined planes, momentum, and moments.</p>
+        </div>
+        <div class="ial-progress-actions">
+          <a class="button primary" href="ial/wme01/lab/index.html">Open full lab</a>
+          <a class="button light" href="ial/wme01/index.html#ialQuestionVisualizer">Paper visualizer</a>
+        </div>
+      </div>
+      <div class="ial-lab-link-grid" aria-label="Mechanics lab topics">
+        <a href="ial/wme01/lab/index.html?topic=modelling"><strong>Modelling</strong><span>units, assumptions, smooth/rough, rods and strings</span></a>
+        <a href="ial/wme01/lab/index.html?topic=vectors"><strong>Vectors</strong><span>components, bearings, resultant and relative motion</span></a>
+        <a href="ial/wme01/lab/index.html?topic=graphs"><strong>Graphs</strong><span>distance, displacement, velocity-time area and gradients</span></a>
+        <a href="ial/wme01/lab/index.html?topic=suvat1d"><strong>1D SUVAT</strong><span>linear motion, vertical motion and stopping distance</span></a>
+        <a href="ial/wme01/lab/index.html?topic=suvat2d"><strong>2D SUVAT</strong><span>projectiles and vector position models</span></a>
+        <a href="ial/wme01/lab/index.html?topic=forces"><strong>Forces</strong><span>equilibrium, resultants and connected particles</span></a>
+        <a href="ial/wme01/lab/index.html?topic=newton"><strong>Newton's Law</strong><span>F = ma, pulleys, lifts and resistance</span></a>
+        <a href="ial/wme01/lab/index.html?topic=inclines"><strong>Inclined Planes</strong><span>resolving, friction and limiting equilibrium</span></a>
+        <a href="ial/wme01/lab/index.html?topic=momentum"><strong>Momentum</strong><span>impulse, collisions and coefficient of restitution</span></a>
+        <a href="ial/wme01/lab/index.html?topic=moments"><strong>Moments</strong><span>beams, pivots, reactions and tipping</span></a>
+      </div>
+    </section>
+
+    <section id="ialQuestionVisualizer" class="ial-question-visualizer" aria-labelledby="ialVisualizerTitle">
+      <div class="ial-module-head">
+        <div>
+          <span class="eyebrow">Paper Question Visualizer</span>
+          <h2 id="ialVisualizerTitle">Real WME01 question image, solution, and model</h2>
+          <p>Select a real paper question from the WME01 bank. The visual model changes with the selected topic and links to the matching full lab topic.</p>
+        </div>
+        <div class="ial-progress-actions">
+          <a class="button primary" href="ial/wme01/lab/index.html" id="ialVisualizerOpenLab">Open matching lab</a>
+          <a class="button light" href="ial/wme01/index.html#ialFilters">Classified bank</a>
+        </div>
+      </div>
+      <div class="ial-visualizer-controls" aria-label="Paper question selector">
+        <label>
+          <span>Topic</span>
+          <select id="ialVisualizerTopic"></select>
+        </label>
+        <label>
+          <span>Question</span>
+          <select id="ialVisualizerQuestion"></select>
+        </label>
+        <button class="button light" type="button" id="ialVisualizerOpenBank">Open in bank</button>
+      </div>
+      <div class="ial-visualizer-grid">
+        <article class="ial-visualizer-panel ial-visualizer-paper">
+          <div class="ial-visualizer-head">
+            <span class="eyebrow">Real paper crop</span>
+            <strong id="ialVisualizerMeta">Loading question...</strong>
+          </div>
+          <div class="ial-visualizer-image-wrap">
+            <img id="ialVisualizerImage" src="" alt="" loading="eager">
+          </div>
+        </article>
+        <article class="ial-visualizer-panel ial-visualizer-sim">
+          <div class="ial-visualizer-head">
+            <span class="eyebrow">Visual model</span>
+            <strong id="ialVisualizerSimTitle">Mechanics model</strong>
+          </div>
+          <canvas id="ialVisualizerCanvas" width="960" height="560" aria-label="Mechanics visual model"></canvas>
+          <div class="ial-visualizer-readouts" id="ialVisualizerReadouts"></div>
+        </article>
+        <article class="ial-visualizer-panel ial-visualizer-solution">
+          <div class="ial-visualizer-head">
+            <span class="eyebrow">Worked path</span>
+            <strong>Solution steps</strong>
+          </div>
+          <div id="ialVisualizerSteps" class="ial-visualizer-steps"></div>
+          <div class="ial-final">
+            <strong>Final answer</strong>
+            <div class="ial-math" id="ialVisualizerFinal"></div>
+          </div>
+        </article>
+      </div>
     </section>
 
     <section class="ial-workbench">

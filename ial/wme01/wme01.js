@@ -47,7 +47,18 @@
     mockPrint: document.getElementById("ialPrintMock"),
     mockPrintSolutions: document.getElementById("ialPrintMockSolutions"),
     mockSummary: document.getElementById("ialMockSummary"),
-    mockList: document.getElementById("ialMockList")
+    mockList: document.getElementById("ialMockList"),
+    visualTopic: document.getElementById("ialVisualizerTopic"),
+    visualQuestion: document.getElementById("ialVisualizerQuestion"),
+    visualOpenBank: document.getElementById("ialVisualizerOpenBank"),
+    visualOpenLab: document.getElementById("ialVisualizerOpenLab"),
+    visualImage: document.getElementById("ialVisualizerImage"),
+    visualMeta: document.getElementById("ialVisualizerMeta"),
+    visualSimTitle: document.getElementById("ialVisualizerSimTitle"),
+    visualCanvas: document.getElementById("ialVisualizerCanvas"),
+    visualReadouts: document.getElementById("ialVisualizerReadouts"),
+    visualSteps: document.getElementById("ialVisualizerSteps"),
+    visualFinal: document.getElementById("ialVisualizerFinal")
   };
 
   const MODULE_HASHES = {
@@ -55,7 +66,35 @@
     ialQuestionStage: "classified",
     ialProgressModule: "progress",
     ialMockBuilder: "builder",
-    ialPastPapers: "papers"
+    ialPastPapers: "papers",
+    ialSimulator: "lab",
+    ialQuestionVisualizer: "visualizer"
+  };
+
+  const LAB_TOPIC_IDS = {
+    "01_QuantitiesUnitsModelling": "modelling",
+    "02_WorkingWithVectors": "vectors",
+    "03_KinematicsGraphs": "graphs",
+    "04_ConstantAcceleration1D": "suvat1d",
+    "05_ConstantAcceleration2D": "suvat2d",
+    "06_Forces": "forces",
+    "07_NewtonsSecondLaw": "newton",
+    "08_ResolvingForcesInclinedPlanes": "inclines",
+    "09_MomentumImpulseCollisions": "momentum",
+    "10_Moments": "moments"
+  };
+
+  const VISUALIZER_MODELS = {
+    "01_QuantitiesUnitsModelling": { title: "Model assumptions map", focus: "quantity type, idealisation, units" },
+    "02_WorkingWithVectors": { title: "Vector component model", focus: "i-j components, bearings, resultants" },
+    "03_KinematicsGraphs": { title: "Motion graph model", focus: "gradient, area, displacement" },
+    "04_ConstantAcceleration1D": { title: "1D constant-acceleration model", focus: "s, u, v, a, t on one line" },
+    "05_ConstantAcceleration2D": { title: "2D projectile/vector-motion model", focus: "horizontal and vertical components" },
+    "06_Forces": { title: "Free-body force model", focus: "resultant force and equilibrium" },
+    "07_NewtonsSecondLaw": { title: "F = ma dynamics model", focus: "resultant force, mass, acceleration" },
+    "08_ResolvingForcesInclinedPlanes": { title: "Inclined-plane resolving model", focus: "parallel and normal components" },
+    "09_MomentumImpulseCollisions": { title: "Momentum and impulse model", focus: "before/after velocity and impulse" },
+    "10_Moments": { title: "Beam and pivot model", focus: "force x perpendicular distance" }
   };
 
   function readJSON(key, fallback) {
@@ -76,7 +115,7 @@
   }
 
   function setActiveModule(module = "classified") {
-    const active = ["classified", "progress", "builder", "papers"].includes(module) ? module : "classified";
+    const active = ["classified", "progress", "builder", "papers", "lab", "visualizer"].includes(module) ? module : "classified";
     document.body.dataset.ialActiveModule = active;
     document.querySelectorAll("[href*='#ial']").forEach((link) => {
       const hash = (() => {
@@ -497,6 +536,414 @@
     return TOPICS.find((topic) => topic.slug === slug)?.name || fallback || slug;
   }
 
+  function visualQuestionItems(topicSlug = "") {
+    return QUESTIONS
+      .filter((item) => !topicSlug || (item.topics || [item.topic]).includes(topicSlug))
+      .sort((a, b) => (
+        Number(b.year || 0) - Number(a.year || 0) ||
+        sessionOrder(b.session) - sessionOrder(a.session) ||
+        Number(a.qNo || 0) - Number(b.qNo || 0)
+      ));
+  }
+
+  function visualQuestionLabel(item) {
+    return `${sessionLabel(item.session)} ${item.year} | Q${item.qNo} | ${topicName(item.primaryTopic || item.topic, item.topicName)} | ${item.marks}m`;
+  }
+
+  function setupVisualizer() {
+    if (!els.visualTopic || !els.visualQuestion) return;
+    const params = new URLSearchParams(window.location.search);
+    populateSelect(els.visualTopic, "All mechanics topics", TOPICS.map((topic) => topic.slug), (slug) => {
+      const topic = TOPICS.find((entry) => entry.slug === slug);
+      return topic ? `${topic.name} (${topic.count})` : slug;
+    });
+    const requestedTopic = params.get("topic");
+    if (requestedTopic) {
+      const match = TOPICS.find((topic) => topic.slug === requestedTopic || topic.name === requestedTopic);
+      if (match) els.visualTopic.value = match.slug;
+    }
+    syncVisualizerQuestions(params.get("question") || "");
+  }
+
+  function syncVisualizerQuestions(preferredId = "") {
+    if (!els.visualQuestion) return;
+    const items = visualQuestionItems(els.visualTopic?.value || "");
+    els.visualQuestion.innerHTML = items.map((item) => (
+      `<option value="${escapeHtml(item.id)}">${escapeHtml(visualQuestionLabel(item))}</option>`
+    )).join("");
+    els.visualQuestion.disabled = !items.length;
+    const nextId = preferredId || els.visualQuestion.value;
+    if (items.some((item) => item.id === nextId)) {
+      els.visualQuestion.value = nextId;
+    } else if (items.length) {
+      els.visualQuestion.value = items[0].id;
+    }
+    renderVisualizer();
+  }
+
+  function activeVisualizerItem() {
+    const id = els.visualQuestion?.value || "";
+    return QUESTIONS.find((item) => item.id === id) || visualQuestionItems(els.visualTopic?.value || "")[0] || null;
+  }
+
+  function selectedVisualizerTopic(item) {
+    const requested = els.visualTopic?.value || "";
+    const itemTopics = item ? (item.topics || [item.topic]) : [];
+    if (requested && itemTopics.includes(requested)) return requested;
+    return item?.primaryTopic || item?.topic || requested || TOPICS[0]?.slug || "";
+  }
+
+  function visualizerLabHref(topicSlug) {
+    const labTopic = LAB_TOPIC_IDS[topicSlug] || "modelling";
+    return `ial/wme01/lab/index.html?topic=${encodeURIComponent(labTopic)}`;
+  }
+
+  function visualSeed(item) {
+    return String(item?.id || "").split("").reduce((sum, char) => sum + char.charCodeAt(0), 0) + Number(item?.marks || 0) * 13;
+  }
+
+  function questionText(item) {
+    return [
+      item?.topicName,
+      item?.primaryTopicName,
+      ...(item?.secondaryTopicNames || []),
+      item?.finalAnswer,
+      ...((item?.steps || []).flatMap((step) => [step.title, step.body]))
+    ].join(" ").toLowerCase();
+  }
+
+  function drawVisualizerCanvas(item, topicSlug) {
+    const canvas = els.visualCanvas;
+    if (!canvas) return;
+    const rect = canvas.getBoundingClientRect();
+    const width = Math.max(480, Math.floor(rect.width || canvas.clientWidth || 960));
+    const height = Math.max(300, Math.floor(rect.height || width * 7 / 12 || 560));
+    const dpr = Math.max(1, window.devicePixelRatio || 1);
+    canvas.width = Math.round(width * dpr);
+    canvas.height = Math.round(height * dpr);
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, width, height);
+
+    const seed = visualSeed(item);
+    const text = questionText(item);
+    const model = VISUALIZER_MODELS[topicSlug] || VISUALIZER_MODELS["01_QuantitiesUnitsModelling"];
+    const colors = {
+      bg: "#0d182c",
+      grid: "rgba(255,255,255,0.07)",
+      ink: "#eef7f5",
+      muted: "#a9b7cc",
+      teal: "#2dd4bf",
+      gold: "#dcb877",
+      blue: "#7aa7ff",
+      red: "#fb7185",
+      green: "#6ee7b7"
+    };
+
+    const label = (content, x, y, color = colors.ink, font = "700 13px Sora, Segoe UI, sans-serif", align = "left") => {
+      ctx.fillStyle = color;
+      ctx.font = font;
+      ctx.textAlign = align;
+      ctx.fillText(content, x, y);
+    };
+    const line = (x1, y1, x2, y2, color = colors.ink, widthLine = 2) => {
+      ctx.strokeStyle = color;
+      ctx.lineWidth = widthLine;
+      ctx.lineCap = "round";
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x2, y2);
+      ctx.stroke();
+    };
+    const arrow = (x1, y1, x2, y2, color = colors.teal, caption = "", widthLine = 3) => {
+      const angle = Math.atan2(y2 - y1, x2 - x1);
+      const head = 13;
+      line(x1, y1, x2, y2, color, widthLine);
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.moveTo(x2, y2);
+      ctx.lineTo(x2 - head * Math.cos(angle - 0.48), y2 - head * Math.sin(angle - 0.48));
+      ctx.lineTo(x2 - head * Math.cos(angle + 0.48), y2 - head * Math.sin(angle + 0.48));
+      ctx.closePath();
+      ctx.fill();
+      if (caption) label(caption, (x1 + x2) / 2 + 8, (y1 + y2) / 2 - 8, color, "800 12px Sora, Segoe UI, sans-serif");
+    };
+    const box = (x, y, w, h, fill, stroke = "rgba(255,255,255,0.24)") => {
+      ctx.fillStyle = fill;
+      ctx.strokeStyle = stroke;
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.roundRect(x, y, w, h, 10);
+      ctx.fill();
+      ctx.stroke();
+    };
+    const circle = (x, y, r, fill) => {
+      ctx.fillStyle = fill;
+      ctx.beginPath();
+      ctx.arc(x, y, r, 0, Math.PI * 2);
+      ctx.fill();
+    };
+
+    ctx.fillStyle = colors.bg;
+    ctx.fillRect(0, 0, width, height);
+    for (let x = 24; x < width; x += 36) line(x, 0, x, height, colors.grid, 1);
+    for (let y = 24; y < height; y += 36) line(0, y, width, y, colors.grid, 1);
+    label(model.title, 22, 30, colors.ink, "900 16px Sora, Segoe UI, sans-serif");
+    label(`${item.paper} | Q${item.qNo}`, 22, 52, colors.muted, "700 12px Sora, Segoe UI, sans-serif");
+
+    const cx = width * 0.5;
+    const cy = height * 0.56;
+    const floorY = height - 62;
+    const offset = (seed % 7) * 4;
+
+    if (topicSlug === "02_WorkingWithVectors") {
+      line(72, floorY - 12, width - 58, floorY - 12, "rgba(255,255,255,0.4)", 2);
+      line(88, height - 48, 88, 92, "rgba(255,255,255,0.4)", 2);
+      arrow(88, floorY - 12, 210 + offset, 150, colors.teal, "a");
+      arrow(88, floorY - 12, 320 + offset, 250, colors.gold, "b");
+      arrow(88, floorY - 12, 420 + offset, 122, colors.green, "resultant");
+      if (/bearing/.test(text)) {
+        ctx.beginPath();
+        ctx.arc(88, floorY - 12, 70, -Math.PI / 2, -0.25);
+        ctx.strokeStyle = colors.blue;
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        label("bearing", 132, floorY - 86, colors.blue);
+      }
+      label("resolve into i and j first", width - 240, height - 32, colors.muted);
+      return;
+    }
+
+    if (topicSlug === "03_KinematicsGraphs") {
+      line(70, floorY, width - 54, floorY, colors.muted, 2);
+      line(70, floorY, 70, 82, colors.muted, 2);
+      label("t", width - 66, floorY + 24, colors.muted);
+      label(/displacement|distance/.test(text) ? "s" : "v", 45, 90, colors.muted);
+      ctx.fillStyle = "rgba(45,212,191,0.22)";
+      ctx.beginPath();
+      ctx.moveTo(92, floorY);
+      ctx.lineTo(150, 170);
+      ctx.lineTo(330, 170 + (seed % 3) * 20);
+      ctx.lineTo(490, 285);
+      ctx.lineTo(570, floorY);
+      ctx.closePath();
+      ctx.fill();
+      line(92, floorY, 150, 170, colors.teal, 4);
+      line(150, 170, 330, 170 + (seed % 3) * 20, colors.gold, 4);
+      line(330, 170 + (seed % 3) * 20, 570, floorY, colors.teal, 4);
+      label("area = displacement", 180, floorY - 48, colors.gold);
+      label("gradient = acceleration", 230, 122, colors.teal);
+      return;
+    }
+
+    if (topicSlug === "04_ConstantAcceleration1D") {
+      line(58, cy, width - 56, cy, colors.muted, 3);
+      for (let i = 0; i < 5; i += 1) {
+        const x = 100 + i * ((width - 210) / 4);
+        circle(x, cy, 6, i === 0 ? colors.gold : colors.teal);
+        label(i === 0 ? "start" : `${i}s`, x - 16, cy + 28, colors.muted);
+      }
+      const start = 118 + offset;
+      arrow(start, cy - 42, start + 130, cy - 42, colors.teal, "u");
+      arrow(start + 230, cy - 72, start + 410, cy - 72, colors.green, "v");
+      arrow(start + 190, cy + 48, start + 310, cy + 48, colors.gold, "a");
+      label(/vertical|height|upward|downward/.test(text) ? "choose up/down signs before SUVAT" : "choose one positive direction before SUVAT", 88, 86, colors.ink);
+      return;
+    }
+
+    if (topicSlug === "05_ConstantAcceleration2D") {
+      line(62, floorY, width - 56, floorY, colors.muted, 2);
+      line(82, floorY, 82, 78, colors.muted, 2);
+      ctx.strokeStyle = colors.teal;
+      ctx.lineWidth = 4;
+      ctx.beginPath();
+      ctx.moveTo(82, floorY - 4);
+      for (let t = 0; t <= 1; t += 0.04) {
+        const x = 82 + t * (width - 180);
+        const y = floorY - 4 - Math.sin(t * Math.PI) * (160 + (seed % 5) * 14);
+        ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+      arrow(82, floorY - 4, 176, floorY - 92, colors.gold, "u");
+      arrow(190, floorY - 20, 320, floorY - 20, colors.blue, "u cos theta");
+      arrow(190, floorY - 22, 190, floorY - 136, colors.green, "u sin theta");
+      arrow(width - 140, 115, width - 140, 205, colors.red, "g");
+      label("horizontal and vertical equations run together", 98, 82, colors.ink);
+      return;
+    }
+
+    if (topicSlug === "06_Forces") {
+      circle(cx, cy, 26, "rgba(45,212,191,0.95)");
+      arrow(cx, cy, cx, cy - 132, colors.gold, "R");
+      arrow(cx, cy, cx, cy + 132, colors.red, "mg");
+      arrow(cx, cy, cx + 150, cy, colors.teal, /tension|string/.test(text) ? "T" : "F");
+      arrow(cx, cy, cx - 120, cy + 22, colors.blue, /friction|rough/.test(text) ? "friction" : "P");
+      label(/equilibrium/.test(text) ? "equilibrium: resultant = 0" : "resultant force sets the motion", 86, 88, colors.ink);
+      return;
+    }
+
+    if (topicSlug === "07_NewtonsSecondLaw") {
+      const pulley = /pulley|string|connected/.test(text);
+      if (pulley) {
+        line(94, 120, width - 96, 120, colors.muted, 3);
+        circle(cx, 120, 34, "rgba(122,167,255,0.9)");
+        line(cx, 120, cx, cy + 40, colors.gold, 4);
+        box(cx - 44, cy + 40, 88, 56, "rgba(45,212,191,0.72)");
+        arrow(cx + 70, cy + 70, cx + 160, cy + 70, colors.teal, "a");
+        arrow(cx - 110, cy + 90, cx - 110, cy + 178, colors.red, "mg");
+        label("same string: same acceleration magnitude", 84, height - 34, colors.muted);
+      } else {
+        line(70, floorY, width - 70, floorY, colors.muted, 3);
+        box(cx - 70, floorY - 72, 140, 70, "rgba(45,212,191,0.72)");
+        circle(cx - 40, floorY + 2, 12, colors.muted);
+        circle(cx + 40, floorY + 2, 12, colors.muted);
+        arrow(cx - 84, floorY - 38, cx - 190, floorY - 38, colors.blue, "resistance");
+        arrow(cx + 78, floorY - 38, cx + 210, floorY - 38, colors.gold, "F");
+        arrow(cx + 20, floorY - 104, cx + 138, floorY - 104, colors.teal, "a");
+        label("resultant force = mass x acceleration", 92, 88, colors.ink);
+      }
+      return;
+    }
+
+    if (topicSlug === "08_ResolvingForcesInclinedPlanes") {
+      const left = width * 0.22;
+      const right = width * 0.82;
+      const base = floorY;
+      const top = floorY - 190;
+      line(left, base, right, top, colors.muted, 4);
+      line(left, base, right, base, "rgba(255,255,255,0.22)", 2);
+      ctx.save();
+      ctx.translate(cx, floorY - 104);
+      ctx.rotate(-0.35);
+      box(-48, -28, 96, 56, "rgba(45,212,191,0.78)");
+      ctx.restore();
+      arrow(cx, floorY - 104, cx, floorY + 44, colors.red, "mg");
+      arrow(cx, floorY - 104, cx - 72, floorY - 232, colors.gold, "R");
+      arrow(cx, floorY - 104, cx + 126, floorY - 150, colors.teal, /friction|rough/.test(text) ? "friction" : "component");
+      label("resolve parallel and perpendicular to the plane", 78, 82, colors.ink);
+      return;
+    }
+
+    if (topicSlug === "09_MomentumImpulseCollisions") {
+      line(62, floorY, width - 54, floorY, colors.muted, 3);
+      box(105, floorY - 58, 96, 54, "rgba(122,167,255,0.8)");
+      box(width - 220, floorY - 58, 104, 54, "rgba(45,212,191,0.78)");
+      arrow(218, floorY - 32, 330, floorY - 32, colors.gold, "u1");
+      arrow(width - 232, floorY - 32, width - 340, floorY - 32, colors.red, "u2");
+      arrow(cx - 28, floorY - 128, cx + 94, floorY - 128, colors.teal, "impulse");
+      label(/restitution|coefficient/.test(text) ? "use separation speed = e x approach speed" : "total momentum before = total momentum after", 84, 90, colors.ink);
+      label("before", 116, floorY + 30, colors.muted);
+      label("after", width - 202, floorY + 30, colors.muted);
+      return;
+    }
+
+    if (topicSlug === "10_Moments") {
+      line(74, cy, width - 74, cy, colors.gold, 8);
+      const pivotX = /tilt|tilting|point of/.test(text) ? width * 0.68 : cx;
+      ctx.fillStyle = colors.blue;
+      ctx.beginPath();
+      ctx.moveTo(pivotX, cy + 8);
+      ctx.lineTo(pivotX - 34, cy + 76);
+      ctx.lineTo(pivotX + 34, cy + 76);
+      ctx.closePath();
+      ctx.fill();
+      arrow(width * 0.28, cy - 78, width * 0.28, cy - 8, colors.red, "weight");
+      arrow(width * 0.48, cy - 78, width * 0.48, cy - 8, colors.red, "load");
+      arrow(width * 0.78, cy + 70, width * 0.78, cy + 8, colors.teal, "reaction");
+      ctx.beginPath();
+      ctx.arc(pivotX, cy, 72, 0.35, 1.85);
+      ctx.strokeStyle = colors.green;
+      ctx.lineWidth = 3;
+      ctx.stroke();
+      label("moment = force x perpendicular distance", 86, 86, colors.ink);
+      label("pivot", pivotX - 18, cy + 98, colors.muted);
+      return;
+    }
+
+    const cards = [
+      ["Real situation", /smooth|rough|resistance|particle|rod|string/.test(text) ? "pick the model words" : "read the physical story"],
+      ["Simplified model", model.focus],
+      ["Equation choice", "units, signs, forces and motion"]
+    ];
+    cards.forEach(([title, body], index) => {
+      const x = 70 + index * ((width - 160) / 3);
+      const w = (width - 210) / 3;
+      box(x, cy - 86, w, 128, index === 1 ? "rgba(45,212,191,0.24)" : "rgba(255,255,255,0.08)");
+      label(title, x + 18, cy - 44, index === 1 ? colors.teal : colors.gold, "900 13px Sora, Segoe UI, sans-serif");
+      label(body, x + 18, cy - 14, colors.ink, "700 12px Sora, Segoe UI, sans-serif");
+      if (index < 2) arrow(x + w + 6, cy - 20, x + w + 42, cy - 20, colors.muted, "");
+    });
+  }
+
+  function renderVisualizer() {
+    if (!els.visualQuestion || !els.visualImage || !els.visualCanvas) return;
+    const item = activeVisualizerItem();
+    if (!item) {
+      if (els.visualMeta) els.visualMeta.textContent = "No WME01 question selected";
+      if (els.visualSteps) els.visualSteps.innerHTML = "";
+      if (els.visualFinal) els.visualFinal.innerHTML = "";
+      return;
+    }
+    const topicSlug = selectedVisualizerTopic(item);
+    const topicLabel = topicName(topicSlug, item.topicName);
+    const model = VISUALIZER_MODELS[topicSlug] || VISUALIZER_MODELS["01_QuantitiesUnitsModelling"];
+    const secondary = (item.secondaryTopicNames || []).length ? item.secondaryTopicNames.join(", ") : "single-topic question";
+    const labHref = visualizerLabHref(topicSlug);
+    if (els.visualOpenLab) els.visualOpenLab.href = labHref;
+    if (els.visualMeta) els.visualMeta.textContent = `${item.paper} | Q${item.qNo} | ${item.marks} marks`;
+    if (els.visualSimTitle) els.visualSimTitle.textContent = model.title;
+    els.visualImage.src = item.image;
+    els.visualImage.alt = `${item.paper} question ${item.qNo}`;
+    if (els.visualReadouts) {
+      const readouts = [
+        ["Selected topic", topicLabel],
+        ["Paper", `${sessionLabel(item.session)} ${item.year}`],
+        ["Marks", `${item.marks} marks`],
+        ["Model focus", model.focus],
+        ["Also touches", secondary],
+        ["Full lab", LAB_TOPIC_IDS[topicSlug] || "modelling"]
+      ];
+      els.visualReadouts.innerHTML = readouts.map(([label, value]) => (
+        `<span><strong>${escapeHtml(label)}</strong>${escapeHtml(value)}</span>`
+      )).join("");
+    }
+    if (els.visualSteps) {
+      els.visualSteps.innerHTML = (item.steps || []).map((step, index) => `
+        <section class="ial-step">
+          <strong>${index + 1}. ${escapeHtml(step.title)}</strong>
+          <div class="ial-math">${step.body || ""}</div>
+        </section>
+      `).join("");
+    }
+    if (els.visualFinal) els.visualFinal.innerHTML = splitFinalAnswer(item.finalAnswer);
+    drawVisualizerCanvas(item, topicSlug);
+    if (window.MathJax?.typesetPromise) {
+      window.MathJax.typesetPromise([els.visualSteps, els.visualFinal].filter(Boolean)).catch(() => {});
+    }
+  }
+
+  function openVisualizerQuestionInBank() {
+    const item = activeVisualizerItem();
+    if (!item) return;
+    const topicSlug = selectedVisualizerTopic(item);
+    if (els.search) els.search.value = "";
+    if (els.topic) els.topic.value = topicSlug;
+    if (els.year) els.year.value = "";
+    if (els.session) els.session.value = "";
+    if (els.marks) els.marks.value = "";
+    if (els.expertise) els.expertise.checked = false;
+    if (els.mistakeOnly) els.mistakeOnly.checked = false;
+    state.filtered = QUESTIONS.filter((question) => matches(question, currentFilters()));
+    const index = state.filtered.findIndex((question) => question.id === item.id);
+    state.activeIndex = Math.max(0, index);
+    state.showSolution = false;
+    setActiveModule("classified");
+    if (window.location.hash !== "#ialQuestionStage") history.replaceState(null, "", "#ialQuestionStage");
+    render();
+    els.stage?.scrollIntoView({ block: "start", behavior: "smooth" });
+  }
+
   function render() {
     renderStats();
     renderProgress();
@@ -504,6 +951,7 @@
     renderNumbers();
     renderQuestion();
     renderMock();
+    renderVisualizer();
   }
 
   function shuffle(items) {
@@ -772,11 +1220,19 @@
       applyFilters(false);
       els.filters?.scrollIntoView({ block: "start", behavior: "smooth" });
     });
-    window.addEventListener("hashchange", () => handleModuleRoute({ scroll: true }));
+    els.visualTopic?.addEventListener("change", () => syncVisualizerQuestions());
+    els.visualQuestion?.addEventListener("change", renderVisualizer);
+    els.visualOpenBank?.addEventListener("click", openVisualizerQuestionInBank);
+    window.addEventListener("resize", () => renderVisualizer());
+    window.addEventListener("hashchange", () => {
+      handleModuleRoute({ scroll: true });
+      requestAnimationFrame(renderVisualizer);
+    });
   }
 
   function init() {
     setupFilters();
+    setupVisualizer();
     applyUrlFilters();
     bindEvents();
     handleModuleRoute();
