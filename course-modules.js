@@ -1986,6 +1986,7 @@
       panelLabel: "Support",
       links: [
         { title: "About Dr Eslam", detail: "Teacher profile", href: "/about.html" },
+        { title: "Teacher Studio", detail: "Planner and certificates", href: "/admin.html" },
         { module: "books", title: "Download Centre", detail: "All public books", href: "/downloads.html" },
         { title: "Topic Roadmap", detail: "Course map", href: "/topics.html" },
         { title: "Readiness Check", detail: "Quick diagnosis", href: "/checkup.html" },

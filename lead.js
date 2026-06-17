@@ -130,6 +130,7 @@
       panelLabel: "Support",
       links: [
         { title: "About Dr Eslam", detail: "Teacher profile", href: "/about.html" },
+        { title: "Teacher Studio", detail: "Planner and certificates", href: "/admin.html" },
         { title: "Download Centre", detail: "All public books", href: "/downloads.html" },
         { title: "Topic Roadmap", detail: "Course map", href: "/topics.html" },
         { title: "Readiness Check", detail: "Quick diagnosis", href: "/checkup.html" },
@@ -538,6 +539,7 @@
     if (page === "downloads" || path.endsWith("/downloads.html")) return "Books";
     if (page === "topics" || path.endsWith("/topics.html")) return "Topic Roadmap";
     if (page === "checkup" || path.endsWith("/checkup.html")) return "Readiness Check";
+    if (page === "admin" || path.endsWith("/admin.html")) return "Teacher Studio";
     if (page === "about" || path.endsWith("/about.html")) return "About";
     return "";
   }

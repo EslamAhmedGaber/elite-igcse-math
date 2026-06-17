@@ -10333,6 +10333,204 @@ body[data-page="admin"] .cloud-floating-widget {
 
 .admin-workspace {
   display: grid;
+  gap: 18px;
+  align-items: start;
+  min-width: 0;
+}
+
+.teacher-planner-panel {
+  display: grid;
+  gap: 16px;
+  border: 1px solid var(--cert-rule);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 250, 240, 0.98), rgba(245, 237, 219, 0.88)),
+    #fffaf0;
+  padding: 18px;
+  box-shadow: 0 14px 42px rgba(14, 18, 32, 0.08);
+}
+
+.teacher-planner-head {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 18px;
+  border-bottom: 1px solid rgba(26, 24, 21, 0.12);
+  padding-bottom: 14px;
+}
+
+.teacher-planner-head span,
+.teacher-student-form label,
+.teacher-email-panel .form-head span,
+.teacher-planner-list-panel .form-head span {
+  color: var(--cert-vermilion);
+  font-family: "Inter Tight", Sora, system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.teacher-planner-head h2 {
+  margin: 4px 0 0;
+  color: var(--cert-inkwell);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.teacher-planner-head p {
+  max-width: 720px;
+  margin: 8px 0 0;
+  color: var(--cert-soft);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.teacher-student-form {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 11px;
+}
+
+.teacher-student-form label {
+  display: grid;
+  gap: 5px;
+  color: var(--cert-soft);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.teacher-student-form label:nth-of-type(7),
+.teacher-student-form label:nth-of-type(8),
+.teacher-student-form label:nth-of-type(11) {
+  grid-column: span 2;
+}
+
+.teacher-student-form input,
+.teacher-student-form select,
+.teacher-student-form textarea,
+.certificate-form input,
+.certificate-form select {
+  width: 100%;
+  border: 1px solid rgba(26, 24, 21, 0.24);
+  border-radius: 6px;
+  background: var(--cert-paper);
+  color: var(--cert-ink);
+  padding: 10px 11px;
+  font: 600 14px "Inter Tight", Sora, system-ui, sans-serif;
+}
+
+.teacher-student-form textarea,
+.teacher-email-panel textarea {
+  min-height: 88px;
+  resize: vertical;
+  line-height: 1.45;
+}
+
+.teacher-form-actions,
+.teacher-email-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.teacher-form-actions {
+  grid-column: 1 / -1;
+}
+
+.teacher-form-actions button,
+.teacher-email-actions button,
+.certificate-actions button,
+.certificate-toolbar button {
+  min-height: 38px;
+  border-radius: 6px;
+  border: 1px solid var(--cert-rule);
+  background: var(--cert-paper);
+  color: var(--cert-inkwell);
+  font: 800 12px "Inter Tight", Sora, system-ui, sans-serif;
+  letter-spacing: 0;
+  cursor: pointer;
+}
+
+.teacher-form-actions .primary {
+  border-color: var(--cert-vermilion);
+  background: var(--cert-vermilion);
+  color: #fffaf0;
+}
+
+.teacher-planner-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(320px, 1.2fr);
+  gap: 14px;
+}
+
+.teacher-planner-list-panel,
+.teacher-email-panel {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  border: 1px solid rgba(26, 24, 21, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.54);
+  padding: 14px;
+}
+
+.teacher-email-panel .form-head strong,
+.teacher-planner-list-panel .form-head strong {
+  display: block;
+  color: var(--cert-inkwell);
+  font-size: 18px;
+}
+
+.teacher-student-list {
+  display: grid;
+  gap: 8px;
+}
+
+.teacher-student-card {
+  display: grid;
+  gap: 4px;
+  width: 100%;
+  border: 1px solid rgba(26, 24, 21, 0.14);
+  border-radius: 8px;
+  background: #fffaf0;
+  padding: 12px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.teacher-student-card.is-active {
+  border-color: rgba(192, 57, 43, 0.52);
+  box-shadow: inset 4px 0 0 var(--cert-vermilion);
+}
+
+.teacher-student-card strong {
+  color: var(--cert-inkwell);
+  font-size: 15px;
+}
+
+.teacher-student-card span,
+.teacher-student-card small,
+.teacher-empty-state {
+  color: var(--cert-soft);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.teacher-email-panel textarea {
+  width: 100%;
+  border: 1px solid rgba(26, 24, 21, 0.18);
+  border-radius: 8px;
+  background: #fffef9;
+  color: var(--cert-ink);
+  padding: 12px;
+  font: 500 13px "JetBrains Mono", ui-monospace, monospace;
+}
+
+.certificate-builder-grid {
+  display: grid;
   grid-template-columns: 360px minmax(0, 1fr);
   gap: 18px;
   align-items: start;
@@ -10375,34 +10573,11 @@ body[data-page="admin"] .cloud-floating-widget {
   font-weight: 700;
 }
 
-.certificate-form input,
-.certificate-form select {
-  width: 100%;
-  border: 1px solid rgba(26, 24, 21, 0.24);
-  border-radius: 6px;
-  background: var(--cert-paper);
-  color: var(--cert-ink);
-  padding: 10px 11px;
-  font: 600 14px "Inter Tight", Sora, system-ui, sans-serif;
-}
-
 .certificate-actions {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
   margin-top: 3px;
-}
-
-.certificate-actions button,
-.certificate-toolbar button {
-  min-height: 38px;
-  border-radius: 6px;
-  border: 1px solid var(--cert-rule);
-  background: var(--cert-paper);
-  color: var(--cert-inkwell);
-  font: 800 12px "Inter Tight", Sora, system-ui, sans-serif;
-  letter-spacing: 0;
-  cursor: pointer;
 }
 
 .certificate-actions .primary {
@@ -11545,8 +11720,12 @@ body[data-page="admin"] .cloud-floating-widget {
 }
 
 @media (max-width: 1180px) {
-  .admin-workspace {
+  .certificate-builder-grid,
+  .teacher-planner-grid {
     grid-template-columns: 1fr;
+  }
+  .teacher-student-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .certificate-form {
     position: static;
@@ -11586,9 +11765,29 @@ body[data-page="admin"] .cloud-floating-widget {
     grid-template-columns: 1fr;
     max-width: calc(100vw - 32px);
   }
+  .teacher-planner-panel {
+    max-width: calc(100vw - 32px);
+    padding: 14px;
+  }
+  .teacher-planner-head {
+    display: grid;
+  }
+  .teacher-planner-head h2 {
+    font-size: 28px;
+  }
+  .teacher-student-form {
+    grid-template-columns: 1fr;
+  }
+  .teacher-student-form label:nth-of-type(7),
+  .teacher-student-form label:nth-of-type(8),
+  .teacher-student-form label:nth-of-type(11) {
+    grid-column: auto;
+  }
   .certificate-actions {
     flex-direction: column;
   }
+  .teacher-form-actions button,
+  .teacher-email-actions button,
   .certificate-actions button {
     width: 100%;
   }
@@ -11867,6 +12066,7 @@ body.practice-focus-mode[data-page="practice"] .mobile-tools-toggle {
   body[data-page="admin"] .site-header,
   body[data-page="admin"] .admin-hero,
   body[data-page="admin"] .admin-pipeline,
+  body[data-page="admin"] .teacher-planner-panel,
   body[data-page="admin"] .certificate-form,
   body[data-page="admin"] .certificate-toolbar,
   body[data-page="admin"] .cloud-floating-widget {
@@ -11875,6 +12075,7 @@ body.practice-focus-mode[data-page="practice"] .mobile-tools-toggle {
   body[data-page="admin"] .page,
   body[data-page="admin"] .page-admin,
   body[data-page="admin"] .admin-workspace,
+  body[data-page="admin"] .certificate-builder-grid,
   body[data-page="admin"] .certificate-stage {
     display: block !important;
     width: 297mm !important;
@@ -11895,6 +12096,7 @@ body.practice-focus-mode[data-page="practice"] .mobile-tools-toggle {
   body[data-page="admin"].is-story-print .page,
   body[data-page="admin"].is-story-print .page-admin,
   body[data-page="admin"].is-story-print .admin-workspace,
+  body[data-page="admin"].is-story-print .certificate-builder-grid,
   body[data-page="admin"].is-story-print .certificate-stage {
     width: 108mm !important;
     height: 192mm !important;

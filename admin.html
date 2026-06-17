@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin Dashboard - Elite IGCSE Mathematics</title>
-  <meta name="description" content="Private teacher dashboard for issuing Elite IGCSE achievement certificates.">
+  <meta name="description" content="Private teacher dashboard for Elite IGCSE student planning and achievement certificates.">
   <meta name="theme-color" content="#161b2e">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
@@ -12,13 +12,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Pinyon+Script&family=Italianno&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="pathway-bootstrap.js?v=20260613a"></script>
-  <link rel="stylesheet" href="styles.css?v=20260615a">
+  <link rel="stylesheet" href="styles.css?v=20260617a">
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
-  <script defer src="admin.js"></script>
-  <script defer src="course-modules.js?v=20260616a"></script>
-  <script defer src="lead.js?v=20260616a"></script>
+  <script defer src="admin.js?v=20260617a"></script>
+  <script defer src="course-modules.js?v=20260617a"></script>
+  <script defer src="lead.js?v=20260617a"></script>
 </head>
 <body data-page="admin">
 
@@ -79,6 +79,7 @@
         </a>
         <div class="nav-panel" aria-label="About and support links">
           <a href="about.html"><strong>About Dr Eslam</strong><span>Teacher profile</span></a>
+          <a href="admin.html"><strong>Teacher Studio</strong><span>Planner and certificates</span></a>
           <a href="downloads.html"><strong>Download Centre</strong><span>All public books</span></a>
           <a href="topics.html"><strong>Topic Roadmap</strong><span>Course map</span></a>
           <a href="checkup.html"><strong>Readiness Check</strong><span>Quick diagnosis</span></a>
@@ -97,36 +98,148 @@
     <section class="admin-hero" aria-labelledby="adminTitle">
       <div>
         <p class="admin-kicker">Private Teacher Dashboard</p>
-        <h1 id="adminTitle">Certificate Studio</h1>
-        <p>Issue a polished achievement certificate only when a student deserves it. This first step generates a print-ready PDF draft; the next step links certificates to Firebase verification records.</p>
+        <h1 id="adminTitle">Teacher Studio</h1>
+        <p>Plan each student privately, prepare your weekly reminder email, and issue polished achievement certificates without showing paper counts, averages, or anything that can embarrass a student.</p>
       </div>
       <aside class="admin-status-card" id="adminStatusCard">
         <span>Access</span>
         <strong id="adminAccessTitle">Checking Google sign-in</strong>
-        <p id="adminAccessText">Use your teacher Google account before preparing certificates.</p>
+        <p id="adminAccessText">Use your teacher Google account before opening the private studio.</p>
         <button class="button primary" type="button" data-cloud-login id="adminLoginBtn">Continue with Google</button>
       </aside>
     </section>
 
-    <section class="admin-pipeline" aria-label="Certificate pipeline">
+    <section class="admin-pipeline" aria-label="Teacher studio pipeline">
       <article class="is-active">
         <span>01</span>
-        <strong>Draft certificate</strong>
-        <p>Enter the student name, award type, evidence, and preview the certificate.</p>
+        <strong>Plan the week</strong>
+        <p>Save each student's next quiz, mock, homework, and lesson reminder in one private panel.</p>
       </article>
       <article>
         <span>02</span>
-        <strong>Connect student record</strong>
-        <p>Open the student's Firebase progress sheet and confirm eligibility.</p>
+        <strong>Email Dr Eslam</strong>
+        <p>Generate one weekly reminder draft addressed to your admin email.</p>
       </article>
       <article>
         <span>03</span>
-        <strong>Issue and verify</strong>
-        <p>Save an official certificate record with a unique verification code.</p>
+        <strong>Issue certificate</strong>
+        <p>Celebrate progress with a clean certificate that keeps sensitive performance details private.</p>
       </article>
     </section>
 
-    <section class="admin-workspace" id="certificateStudio" aria-label="Certificate studio" hidden>
+    <section class="admin-workspace" id="certificateStudio" aria-label="Teacher admin studio" hidden>
+      <section class="teacher-planner-panel" id="teacherPlanner" aria-labelledby="teacherPlannerTitle">
+        <div class="teacher-planner-head">
+          <div>
+            <span>Weekly student plan</span>
+            <h2 id="teacherPlannerTitle">Mock, quiz, and homework reminders</h2>
+            <p>Saved locally for the teacher account on this computer. The generated weekly email is addressed to Dr Eslam only.</p>
+          </div>
+          <a class="button light" id="teacherEmailDraftLink" href="mailto:eslamahmedgaberali@gmail.com" target="_blank" rel="noreferrer">Open email draft</a>
+        </div>
+
+        <form class="teacher-student-form" id="teacherStudentForm">
+          <input id="teacherStudentId" type="hidden">
+
+          <label>Student name
+            <input id="teacherStudentName" type="text" placeholder="Student full name" autocomplete="off" required>
+          </label>
+
+          <label>Course
+            <select id="teacherStudentCourse">
+              <option>Edexcel IGCSE 4MA1 Linear</option>
+              <option>Edexcel IGCSE 4WM1 Modular Unit 1</option>
+              <option>Edexcel IGCSE 4WM2 Modular Unit 2</option>
+              <option>IAL Pure 1 WMA11</option>
+              <option>IAL Pure 2 WMA12</option>
+              <option>IAL Mechanics 1 WME01</option>
+            </select>
+          </label>
+
+          <label>Lesson day
+            <select id="teacherLessonDay">
+              <option>Saturday</option>
+              <option>Sunday</option>
+              <option>Monday</option>
+              <option>Tuesday</option>
+              <option>Wednesday</option>
+              <option>Thursday</option>
+              <option>Friday</option>
+            </select>
+          </label>
+
+          <label>Reminder day
+            <select id="teacherReminderDay">
+              <option>Thursday</option>
+              <option>Friday</option>
+              <option>Saturday</option>
+              <option>Sunday</option>
+              <option>Monday</option>
+              <option>Tuesday</option>
+              <option>Wednesday</option>
+            </select>
+          </label>
+
+          <label>Next quiz date
+            <input id="teacherQuizDate" type="date">
+          </label>
+
+          <label>Next mock date
+            <input id="teacherMockDate" type="date">
+          </label>
+
+          <label>Quiz / mock focus
+            <input id="teacherFocus" type="text" placeholder="e.g. Algebraic fractions, vectors, mechanics moments">
+          </label>
+
+          <label>Homework target
+            <textarea id="teacherHomework" rows="3" placeholder="Pages, classified set, paper rows, or custom task"></textarea>
+          </label>
+
+          <label>Student email
+            <input id="teacherStudentEmail" type="email" placeholder="Optional">
+          </label>
+
+          <label>Parent email
+            <input id="teacherParentEmail" type="email" placeholder="Optional">
+          </label>
+
+          <label>Private notes
+            <textarea id="teacherNotes" rows="3" placeholder="Teacher-only reminders"></textarea>
+          </label>
+
+          <div class="teacher-form-actions">
+            <button class="primary" type="submit">Save plan</button>
+            <button type="button" id="teacherPlanNewBtn">New plan</button>
+            <button type="button" id="teacherPlanDeleteBtn">Delete selected</button>
+          </div>
+        </form>
+
+        <div class="teacher-planner-grid">
+          <section class="teacher-planner-list-panel" aria-labelledby="teacherSavedStudentsTitle">
+            <div class="form-head">
+              <span>Saved students</span>
+              <strong id="teacherSavedStudentsTitle">This week</strong>
+            </div>
+            <div class="teacher-student-list" id="teacherStudentList" aria-live="polite"></div>
+          </section>
+
+          <section class="teacher-email-panel" aria-labelledby="teacherEmailPreviewTitle">
+            <div class="form-head">
+              <span>Weekly reminder</span>
+              <strong id="teacherEmailPreviewTitle">Email draft to Dr Eslam</strong>
+            </div>
+            <textarea id="teacherEmailPreview" rows="14" readonly></textarea>
+            <div class="teacher-email-actions">
+              <button type="button" id="teacherCopyEmailBtn">Copy email</button>
+              <button type="button" id="teacherExportCsvBtn">Export CSV</button>
+            </div>
+            <p class="admin-note" id="teacherPlannerStatus">Add a student plan, then copy or open the weekly email draft.</p>
+          </section>
+        </div>
+      </section>
+
+      <div class="certificate-builder-grid">
       <form class="certificate-form" id="certificateForm">
         <div class="form-head">
           <span>Certificate fields</span>
@@ -218,14 +331,6 @@
           </select>
         </label>
 
-        <label>Papers completed
-          <input id="certPapers" type="number" min="0" step="1" value="12">
-        </label>
-
-        <label>Average score
-          <input id="certAverage" type="number" min="0" max="100" step="1" value="84">
-        </label>
-
         <div class="certificate-actions">
           <button class="primary" type="submit">Update preview</button>
           <button type="button" id="printCertificateBtn">Save as PDF</button>
@@ -275,8 +380,8 @@
             </p>
 
             <div class="cert-evidence">
-              <div><span>Papers</span><strong data-cert-papers>12</strong></div>
-              <div><span>Average</span><strong data-cert-average>84%</strong></div>
+              <div><span>Recognition</span><strong>Achievement</strong></div>
+              <div><span>Character</span><strong>Consistency</strong></div>
               <div><span>Awarded by</span><strong>Dr Eslam Ahmed</strong></div>
             </div>
 
@@ -301,6 +406,7 @@
           </div>
         </article>
       </section>
+      </div>
     </section>
   </main>
 

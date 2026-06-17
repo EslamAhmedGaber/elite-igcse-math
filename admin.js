@@ -1,6 +1,11 @@
 (function () {
+  const DEFAULT_ADMIN_EMAIL = "eslamahmedgaberali@gmail.com";
   const ADMIN_EMAILS = (window.ELITE_FIREBASE?.adminEmails || []).map((email) => String(email).toLowerCase());
+  const TEACHER_EMAIL = ADMIN_EMAILS[0] || DEFAULT_ADMIN_EMAIL;
   const LOCAL_PREVIEW = ["localhost", "127.0.0.1"].includes(window.location.hostname) || window.location.protocol === "file:";
+  const CERTIFICATE_SEQUENCE_KEY = "eliteCertificateNextNumberV1";
+  const TEACHER_PLANS_KEY = "eliteTeacherStudentPlansV1";
+
   const els = {
     statusCard: document.getElementById("adminStatusCard"),
     accessTitle: document.getElementById("adminAccessTitle"),
@@ -27,9 +32,32 @@
       paper: document.getElementById("certPaper"),
       frameColor: document.getElementById("certFrameColor"),
       nameColor: document.getElementById("certNameColor"),
-      papers: document.getElementById("certPapers"),
-      average: document.getElementById("certAverage")
-    }
+    },
+    planner: {
+      form: document.getElementById("teacherStudentForm"),
+      list: document.getElementById("teacherStudentList"),
+      emailPreview: document.getElementById("teacherEmailPreview"),
+      emailLink: document.getElementById("teacherEmailDraftLink"),
+      copyBtn: document.getElementById("teacherCopyEmailBtn"),
+      exportBtn: document.getElementById("teacherExportCsvBtn"),
+      newBtn: document.getElementById("teacherPlanNewBtn"),
+      deleteBtn: document.getElementById("teacherPlanDeleteBtn"),
+      status: document.getElementById("teacherPlannerStatus"),
+      fields: {
+        id: document.getElementById("teacherStudentId"),
+        name: document.getElementById("teacherStudentName"),
+        course: document.getElementById("teacherStudentCourse"),
+        lessonDay: document.getElementById("teacherLessonDay"),
+        reminderDay: document.getElementById("teacherReminderDay"),
+        quizDate: document.getElementById("teacherQuizDate"),
+        mockDate: document.getElementById("teacherMockDate"),
+        focus: document.getElementById("teacherFocus"),
+        homework: document.getElementById("teacherHomework"),
+        studentEmail: document.getElementById("teacherStudentEmail"),
+        parentEmail: document.getElementById("teacherParentEmail"),
+        notes: document.getElementById("teacherNotes"),
+      },
+    },
   };
 
   const samples = {
@@ -44,8 +72,6 @@
     paper: "auto",
     frameColor: "auto",
     nameColor: "auto",
-    papers: "12",
-    average: "84"
   };
 
   const DESIGN_PRESETS = {
@@ -56,7 +82,7 @@
       frame: "vermilion",
       nameColor: "vermilion",
       evidence: "for beautiful effort, brave practice, and a learning journey worth celebrating",
-      exportName: "Story-Spark"
+      exportName: "Story-Spark",
     },
     diploma: {
       layout: "diploma",
@@ -65,7 +91,7 @@
       frame: "vermilion",
       nameColor: "vermilion",
       exportName: "Diploma-Inkwell",
-      evidence: "for exceptional consistency, elegant exam technique, and outstanding mathematical discipline"
+      evidence: "for exceptional consistency, elegant exam technique, and outstanding mathematical discipline",
     },
     banner: {
       layout: "banner",
@@ -74,7 +100,7 @@
       frame: "vermilion",
       nameColor: "inkwell",
       exportName: "Banner-Vermilion",
-      evidence: "for strong performance, careful revision habits, and reliable progress under exam conditions"
+      evidence: "for strong performance, careful revision habits, and reliable progress under exam conditions",
     },
     elite: {
       layout: "honours",
@@ -83,7 +109,7 @@
       frame: "inkwell",
       nameColor: "inkwell",
       exportName: "Elite-Signature",
-      evidence: "for exceptional consistency, elegant exam technique, and outstanding mathematical discipline"
+      evidence: "for exceptional consistency, elegant exam technique, and outstanding mathematical discipline",
     },
     academy: {
       layout: "classic",
@@ -92,7 +118,7 @@
       frame: "verdigris",
       nameColor: "inkwell",
       exportName: "Academy-Frame",
-      evidence: "for strong performance, careful revision habits, and reliable progress under exam conditions"
+      evidence: "for strong performance, careful revision habits, and reliable progress under exam conditions",
     },
     merit: {
       layout: "split",
@@ -101,11 +127,9 @@
       frame: "inkwell",
       nameColor: "inkwell",
       exportName: "Merit-Editorial",
-      evidence: "for determined practice, steady improvement, and a committed Elite IGCSE learning routine"
-    }
+      evidence: "for determined practice, steady improvement, and a committed Elite IGCSE learning routine",
+    },
   };
-
-  const CERTIFICATE_SEQUENCE_KEY = "eliteCertificateNextNumberV1";
 
   function todayValue() {
     return new Date().toISOString().slice(0, 10);
@@ -115,6 +139,10 @@
     const date = value ? new Date(`${value}T00:00:00`) : new Date();
     if (Number.isNaN(date.getTime())) return "23 May 2026";
     return date.toLocaleDateString("en-GB", { day: "2-digit", month: "long", year: "numeric" });
+  }
+
+  function compactDate(value) {
+    return value ? prettyDate(value) : "Not set";
   }
 
   function text(selector, value) {
@@ -192,8 +220,6 @@
     const date = prettyDate(els.fields.date.value);
     const number = els.fields.number.value.trim() || samples.number;
     const phone = els.fields.phone.value.trim() || samples.phone;
-    const papers = Math.max(0, Number(els.fields.papers.value || 0));
-    const average = Math.max(0, Math.min(100, Number(els.fields.average.value || 0)));
     const accent = els.fields.accent.value === "auto" ? preset.accent : (els.fields.accent.value || preset.accent);
     const paper = selectedOrDefault(els.fields.paper, preset.paper);
     const frame = selectedOrDefault(els.fields.frameColor, preset.frame);
@@ -213,8 +239,6 @@
     text("[data-cert-date-foot]", date);
     document.querySelectorAll("[data-cert-number]").forEach((node) => { node.textContent = number; });
     textAll("[data-cert-phone]", phone);
-    text("[data-cert-papers]", String(papers));
-    text("[data-cert-average]", `${Math.round(average)}%`);
     text("[data-cert-verify]", `CERTIFICATE NO. ${number} - ELITEIGCSE.COM/VERIFY`);
     const previewMode = preset.layout === "story" ? "Story portrait preview" : "A4 landscape preview";
     text("#certificateModeLabel", `${previewMode} - ${els.fields.design.options[els.fields.design.selectedIndex]?.text || "certificate"}`);
@@ -234,8 +258,6 @@
     els.fields.paper.value = samples.paper;
     els.fields.frameColor.value = samples.frameColor;
     els.fields.nameColor.value = samples.nameColor;
-    els.fields.papers.value = samples.papers;
-    els.fields.average.value = samples.average;
     updatePreview();
   }
 
@@ -272,8 +294,8 @@
         backgroundColor: getComputedStyle(els.certificate).backgroundColor,
         style: {
           transform: "none",
-          transformOrigin: "top left"
-        }
+          transformOrigin: "top left",
+        },
       });
       const link = document.createElement("a");
       link.href = dataUrl;
@@ -302,6 +324,236 @@
       : "@page { size: A4 landscape; margin: 0; }";
   }
 
+  function readTeacherPlans() {
+    try {
+      const parsed = JSON.parse(localStorage.getItem(TEACHER_PLANS_KEY) || "[]");
+      return Array.isArray(parsed) ? parsed.filter((plan) => plan && typeof plan === "object") : [];
+    } catch {
+      return [];
+    }
+  }
+
+  function writeTeacherPlans(plans) {
+    try {
+      localStorage.setItem(TEACHER_PLANS_KEY, JSON.stringify(plans));
+    } catch {}
+  }
+
+  function setPlannerStatus(message) {
+    if (els.planner.status) els.planner.status.textContent = message;
+  }
+
+  function formTeacherPlan() {
+    const fields = els.planner.fields;
+    return {
+      id: fields.id.value || `plan-${Date.now()}`,
+      name: fields.name.value.trim(),
+      course: fields.course.value,
+      lessonDay: fields.lessonDay.value,
+      reminderDay: fields.reminderDay.value,
+      quizDate: fields.quizDate.value,
+      mockDate: fields.mockDate.value,
+      focus: fields.focus.value.trim(),
+      homework: fields.homework.value.trim(),
+      studentEmail: fields.studentEmail.value.trim(),
+      parentEmail: fields.parentEmail.value.trim(),
+      notes: fields.notes.value.trim(),
+      updatedAt: new Date().toISOString(),
+    };
+  }
+
+  function populateTeacherPlan(plan) {
+    const fields = els.planner.fields;
+    fields.id.value = plan.id || "";
+    fields.name.value = plan.name || "";
+    fields.course.value = plan.course || fields.course.options[0]?.value || "";
+    fields.lessonDay.value = plan.lessonDay || "Saturday";
+    fields.reminderDay.value = plan.reminderDay || "Thursday";
+    fields.quizDate.value = plan.quizDate || "";
+    fields.mockDate.value = plan.mockDate || "";
+    fields.focus.value = plan.focus || "";
+    fields.homework.value = plan.homework || "";
+    fields.studentEmail.value = plan.studentEmail || "";
+    fields.parentEmail.value = plan.parentEmail || "";
+    fields.notes.value = plan.notes || "";
+  }
+
+  function clearTeacherPlanForm() {
+    els.planner.form.reset();
+    els.planner.fields.id.value = "";
+    els.planner.fields.lessonDay.value = "Saturday";
+    els.planner.fields.reminderDay.value = "Thursday";
+    setPlannerStatus("Ready for a new student plan.");
+    renderTeacherPlans();
+    updateTeacherEmailDraft();
+  }
+
+  function renderTeacherPlans() {
+    const plans = readTeacherPlans();
+    const activeId = els.planner.fields.id.value;
+    els.planner.list.innerHTML = "";
+
+    if (!plans.length) {
+      const empty = document.createElement("p");
+      empty.className = "teacher-empty-state";
+      empty.textContent = "No student plans saved yet.";
+      els.planner.list.appendChild(empty);
+      return;
+    }
+
+    plans
+      .slice()
+      .sort((a, b) => String(a.name || "").localeCompare(String(b.name || "")))
+      .forEach((plan) => {
+        const card = document.createElement("button");
+        card.type = "button";
+        card.className = `teacher-student-card${plan.id === activeId ? " is-active" : ""}`;
+        card.dataset.planId = plan.id;
+        card.innerHTML = `
+          <strong>${escapeHtml(plan.name || "Unnamed student")}</strong>
+          <span>${escapeHtml(plan.course || "Course not set")}</span>
+          <small>Reminder: ${escapeHtml(plan.reminderDay || "Not set")} | Quiz: ${escapeHtml(compactDate(plan.quizDate))}</small>
+        `;
+        els.planner.list.appendChild(card);
+      });
+  }
+
+  function saveTeacherPlan(event) {
+    event.preventDefault();
+    const plan = formTeacherPlan();
+    if (!plan.name) {
+      setPlannerStatus("Student name is required before saving.");
+      els.planner.fields.name.focus();
+      return;
+    }
+
+    const plans = readTeacherPlans();
+    const existingIndex = plans.findIndex((item) => item.id === plan.id);
+    if (existingIndex >= 0) plans[existingIndex] = plan;
+    else plans.push(plan);
+    writeTeacherPlans(plans);
+    populateTeacherPlan(plan);
+    renderTeacherPlans();
+    updateTeacherEmailDraft();
+    setPlannerStatus(`${plan.name} was saved in the weekly planner.`);
+  }
+
+  function deleteSelectedTeacherPlan() {
+    const id = els.planner.fields.id.value;
+    if (!id) {
+      setPlannerStatus("Select a student plan first.");
+      return;
+    }
+    const plan = readTeacherPlans().find((item) => item.id === id);
+    const plans = readTeacherPlans().filter((item) => item.id !== id);
+    writeTeacherPlans(plans);
+    clearTeacherPlanForm();
+    setPlannerStatus(`${plan?.name || "Selected plan"} was deleted.`);
+  }
+
+  function selectTeacherPlan(id) {
+    const plan = readTeacherPlans().find((item) => item.id === id);
+    if (!plan) return;
+    populateTeacherPlan(plan);
+    renderTeacherPlans();
+    updateTeacherEmailDraft();
+    setPlannerStatus(`${plan.name || "Student"} is open for editing.`);
+  }
+
+  function buildTeacherEmail(plans) {
+    const lines = [
+      "Elite weekly student plan",
+      `Prepared: ${prettyDate(todayValue())}`,
+      `Reminder recipient: Dr Eslam Ahmed <${TEACHER_EMAIL}>`,
+      "",
+    ];
+
+    if (!plans.length) {
+      lines.push("No student plans are saved yet.");
+      return lines.join("\n");
+    }
+
+    plans
+      .slice()
+      .sort((a, b) => String(a.reminderDay || "").localeCompare(String(b.reminderDay || "")) || String(a.name || "").localeCompare(String(b.name || "")))
+      .forEach((plan, index) => {
+        lines.push(`${index + 1}. ${plan.name || "Unnamed student"} - ${plan.course || "Course not set"}`);
+        lines.push(`   Lesson day: ${plan.lessonDay || "Not set"} | Reminder day: ${plan.reminderDay || "Not set"}`);
+        lines.push(`   Next quiz: ${compactDate(plan.quizDate)} | Next mock: ${compactDate(plan.mockDate)}`);
+        if (plan.focus) lines.push(`   Focus: ${plan.focus}`);
+        if (plan.homework) lines.push(`   Homework: ${plan.homework}`);
+        if (plan.studentEmail || plan.parentEmail) {
+          lines.push(`   Contacts: student ${plan.studentEmail || "not set"} | parent ${plan.parentEmail || "not set"}`);
+        }
+        if (plan.notes) lines.push(`   Private notes: ${plan.notes}`);
+        lines.push("");
+      });
+
+    return lines.join("\n").trim();
+  }
+
+  function updateTeacherEmailDraft() {
+    const plans = readTeacherPlans();
+    const body = buildTeacherEmail(plans);
+    const subject = `Elite weekly student plan - ${prettyDate(todayValue())}`;
+    els.planner.emailPreview.value = body;
+    els.planner.emailLink.href = `mailto:${TEACHER_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
+
+  async function copyTeacherEmail() {
+    updateTeacherEmailDraft();
+    const body = els.planner.emailPreview.value;
+    try {
+      await navigator.clipboard.writeText(body);
+      setPlannerStatus("Weekly email copied.");
+    } catch {
+      els.planner.emailPreview.focus();
+      els.planner.emailPreview.select();
+      document.execCommand("copy");
+      setPlannerStatus("Weekly email selected and copied.");
+    }
+  }
+
+  function escapeCsv(value) {
+    return `"${String(value || "").replace(/"/g, '""')}"`;
+  }
+
+  function exportTeacherCsv() {
+    const plans = readTeacherPlans();
+    const headers = ["Student", "Course", "Lesson day", "Reminder day", "Quiz date", "Mock date", "Focus", "Homework", "Student email", "Parent email", "Private notes"];
+    const rows = plans.map((plan) => [
+      plan.name,
+      plan.course,
+      plan.lessonDay,
+      plan.reminderDay,
+      plan.quizDate,
+      plan.mockDate,
+      plan.focus,
+      plan.homework,
+      plan.studentEmail,
+      plan.parentEmail,
+      plan.notes,
+    ].map(escapeCsv).join(","));
+    const csv = [headers.map(escapeCsv).join(","), ...rows].join("\n");
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `elite-weekly-student-plan-${todayValue()}.csv`;
+    link.click();
+    URL.revokeObjectURL(url);
+    setPlannerStatus("Student plan CSV exported.");
+  }
+
+  function escapeHtml(value) {
+    return String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
   function setAccess(state) {
     const configured = Boolean(state?.configured);
     const user = state?.user || null;
@@ -315,11 +567,11 @@
     els.studio.hidden = !allowed;
 
     if (LOCAL_PREVIEW) {
-      els.accessTitle.textContent = "Local certificate preview";
-      els.accessText.textContent = "Preview mode is open on this computer. The live site still needs an admin email allowlist.";
+      els.accessTitle.textContent = "Local teacher preview";
+      els.accessText.textContent = "Preview mode is open on this computer. The live site still needs your approved Google email.";
     } else if (!configured) {
       els.accessTitle.textContent = "Firebase is not configured";
-      els.accessText.textContent = "The certificate studio needs the existing Google login config.";
+      els.accessText.textContent = "The private studio needs the existing Google login config.";
     } else if (!user) {
       els.accessTitle.textContent = "Teacher sign-in required";
       els.accessText.textContent = "Sign in first. The studio stays hidden until a Google account is active.";
@@ -330,8 +582,8 @@
       els.accessTitle.textContent = "Signed in, not on admin list";
       els.accessText.textContent = `${user.email || "This account"} is not in the admin allowlist yet.`;
     } else {
-      els.accessTitle.textContent = "Certificate studio unlocked";
-      els.accessText.textContent = `${user.email || "Teacher account"} is approved for certificate drafting.`;
+      els.accessTitle.textContent = "Teacher studio unlocked";
+      els.accessText.textContent = `${user.email || "Teacher account"} is approved for planner and certificate tools.`;
     }
   }
 
@@ -345,6 +597,11 @@
   Object.values(els.fields).forEach((field) => {
     field.addEventListener("input", updatePreview);
     field.addEventListener("change", updatePreview);
+  });
+
+  Object.values(els.planner.fields).forEach((field) => {
+    field.addEventListener("input", updateTeacherEmailDraft);
+    field.addEventListener("change", updateTeacherEmailDraft);
   });
 
   els.fields.design.addEventListener("change", applyDesignDefaults);
@@ -361,8 +618,21 @@
   els.resetBtn.addEventListener("click", resetSample);
   els.fitNameBtn.addEventListener("click", () => fitStudentName(els.fields.studentName.value.trim()));
 
+  els.planner.form.addEventListener("submit", saveTeacherPlan);
+  els.planner.newBtn.addEventListener("click", clearTeacherPlanForm);
+  els.planner.deleteBtn.addEventListener("click", deleteSelectedTeacherPlan);
+  els.planner.copyBtn.addEventListener("click", copyTeacherEmail);
+  els.planner.exportBtn.addEventListener("click", exportTeacherCsv);
+  els.planner.list.addEventListener("click", (event) => {
+    const card = event.target.closest("[data-plan-id]");
+    if (card) selectTeacherPlan(card.dataset.planId);
+  });
+
   document.addEventListener("DOMContentLoaded", () => {
     resetSample();
+    clearTeacherPlanForm();
+    renderTeacherPlans();
+    updateTeacherEmailDraft();
     const cloud = window.EliteCloud?.state ? window.EliteCloud.state() : null;
     if (cloud) setAccess(cloud);
   });
