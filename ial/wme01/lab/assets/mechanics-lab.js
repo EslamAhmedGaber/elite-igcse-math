@@ -731,6 +731,12 @@
     }
   }
 
+  function startPlayback() {
+    app.playing = true;
+    app.last = performance.now();
+    el.playIcon.textContent = "Pause";
+  }
+
   function resize() {
     const rect = el.canvas.getBoundingClientRect();
     const dpr = window.devicePixelRatio || 1;
@@ -853,11 +859,13 @@
       <button class="quick-lab" type="button" data-topic-id="${escapeHtml(item.topicId)}" data-case-id="${escapeHtml(item.caseId)}">
         <strong>${escapeHtml(item.title)}</strong>
         <span>${escapeHtml(item.detail)}</span>
+        <span class="case-play-label">Play</span>
       </button>
     `).join("");
     el.quickLabGrid.querySelectorAll("button").forEach((button) => {
       button.addEventListener("click", () => {
         selectByIds(button.dataset.topicId, button.dataset.caseId);
+        startPlayback();
         scrollStageIntoView();
       });
     });
@@ -899,6 +907,7 @@
     el.experimentCards.querySelectorAll("button").forEach((button) => {
       button.addEventListener("click", () => {
         selectByIndexes(Number(button.dataset.topicIndex), Number(button.dataset.caseIndex));
+        startPlayback();
         scrollStageIntoView();
       });
     });
@@ -918,6 +927,7 @@
         <div class="symbol-tags">
           ${symbols.map((item) => `<span class="symbol-chip">${item.mark}</span>`).join("")}
         </div>
+        <span class="case-play-label">Play case</span>
       </button>
     `;
   }

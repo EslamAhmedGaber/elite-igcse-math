@@ -368,6 +368,9 @@ select:focus-visible {
 .quick-lab {
   min-height: 92px;
   padding: 12px;
+  display: grid;
+  align-content: start;
+  gap: 7px;
 }
 
 .experiment-card {
@@ -398,6 +401,30 @@ select:focus-visible {
   color: var(--muted);
   font-size: 12px;
   line-height: 1.45;
+}
+
+.quick-lab .case-play-label,
+.experiment-card .case-play-label {
+  width: fit-content;
+  margin-top: 4px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 8px;
+  color: #fff;
+  background: var(--navy);
+  font-size: 11px;
+  font-weight: 880;
+  line-height: 1;
+}
+
+.quick-lab:hover .case-play-label,
+.experiment-card:hover .case-play-label,
+.quick-lab.is-active .case-play-label,
+.experiment-card.is-active .case-play-label {
+  color: var(--navy);
+  background: var(--gold);
 }
 
 .experiment-meta,
