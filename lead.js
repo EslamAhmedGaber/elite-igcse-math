@@ -49,10 +49,11 @@
       id: "linear",
       label: "Linear",
       detail: "4MA1 route",
-      href: "/practice.html?pathway=linear&bank=all",
+      href: "/notes.html?pathway=linear#linearNotes",
       pathway: "linear",
       panelLabel: "Linear tools",
       links: [
+        { title: "Strategy Notes", detail: "Booklet + topic notes", href: "/notes.html?pathway=linear#linearNotes", pathway: "linear" },
         { title: "Classified View", detail: "Chapter bank", href: "/practice.html?pathway=linear&bank=all", pathway: "linear" },
         { title: "Expertise", detail: "Q20+ finishers", href: "/practice.html?pathway=linear&bank=expertise&mode=q20", pathway: "linear" },
         { title: "Build Test", detail: "Build tests", href: "/exam.html?pathway=linear&mode=custom", pathway: "linear" },
@@ -515,6 +516,7 @@
     const path = window.location.pathname;
     const hash = window.location.hash;
     if (path.includes("/ial/wme01/lab/")) return "Interactive Lab";
+    if (page === "notes" || path.endsWith("/notes.html")) return "Strategy Notes";
     if (path.includes("/ial/wma11/") || path.includes("/ial/wma12/") || path.includes("/ial/wme01/")) {
       if (hash === "#ialNotes") return "Strategy Notes";
       if (!hash && !["topic", "mode", "expertise", "bank"].some((key) => params.has(key))) return "Strategy Notes";
@@ -591,7 +593,7 @@
       if (meta) {
         const pathwayHref = pathwayId === "modular"
           ? "/practice.html?pathway=modular&choose=unit"
-          : "/practice.html?pathway=linear&bank=all";
+          : "/notes.html?pathway=linear#linearNotes";
         crumbs.push({ label: meta.label, sub: meta.code, href: pathwayHref });
       }
     }

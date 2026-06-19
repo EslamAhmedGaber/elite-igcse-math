@@ -155,6 +155,7 @@
   };
 
   const linearLinks = [
+    { module: "notes", title: "Strategy Notes", detail: "Booklet + topic notes", href: "/notes.html?pathway=linear#linearNotes", pathway: "linear" },
     { module: "classified", title: "Classified View", detail: "Chapter bank", href: "/practice.html?pathway=linear&bank=all", pathway: "linear" },
     { module: "expertise", title: "Expertise", detail: "Q20+ finishers", href: "/practice.html?pathway=linear&bank=expertise&mode=q20", pathway: "linear" },
     { module: "build-test", title: "Build Test", detail: "Mocks and worksheets", href: "/exam.html?pathway=linear&mode=custom", pathway: "linear" },
@@ -1485,6 +1486,31 @@
 
   const linearBooks = [
       {
+          "className": "linear-book download-note",
+          "tag": "Strategy notes",
+          "tagTone": "gold",
+          "title": "Linear 4MA1 Strategy Notes",
+          "description": "58 topic strategy notes, six chapter booklets, and one complete Linear booklet connected to classified practice.",
+          "meta": [
+              "58 topic notes",
+              "6 chapter booklets",
+              "Notes-first route"
+          ],
+          "actions": [
+              {
+                  "label": "Open notes view",
+                  "href": "notes.html?pathway=linear#linearNotes",
+                  "variant": "primary"
+              },
+              {
+                  "label": "Complete booklet",
+                  "href": "downloads/Linear/StrategyNotes/Linear_4MA1_Strategy_Notes_Booklet.pdf?v=20260619b",
+                  "variant": "solution",
+                  "target": "_blank"
+              }
+          ]
+      },
+      {
           "className": "linear-book",
           "tag": "Full bank",
           "title": "Classified Problems",
@@ -1898,11 +1924,11 @@
       id: "linear",
       label: "Linear",
       detail: "4MA1 route",
-      href: "/practice.html?pathway=linear&bank=all",
+      href: "/notes.html?pathway=linear#linearNotes",
       pathway: "linear",
       palette: "linear",
       panelLabel: "Linear modules",
-      intro: "Everything for Linear lives as reusable modules: classified practice, expertise, builder, revision, progress, books, and paper solutions.",
+      intro: "Everything for Linear starts from strategy notes, then branches into classified practice, expertise, builder, revision, progress, books, and paper solutions.",
       paperSection: {
         id: "linear",
         tag: "Linear | 4MA1",
@@ -2096,8 +2122,8 @@
         label: "Linear",
         code: "4MA1",
         palette: "linear",
-        href: "/practice.html?pathway=linear&bank=all",
-        intro: "Edexcel IGCSE Linear — Chapters 1 to 6 in one continuous bank.",
+        href: "/notes.html?pathway=linear#linearNotes",
+        intro: "Edexcel IGCSE Linear - Chapters 1 to 6 with notes first, then classified practice.",
         status: "live",
       },
       {

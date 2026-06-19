@@ -26,7 +26,7 @@ DOWNLOADS_DIR = ROOT / "downloads"
 PRIVATE_OUTPUT = ROOT / "private_output"
 GITIGNORE = ROOT / ".gitignore"
 CURRENT_PATHWAY_BOOTSTRAP_VERSION = "20260613a"
-CURRENT_LEAD_VERSION = "20260619a"
+CURRENT_LEAD_VERSION = "20260619b"
 IAL_DATA_FILES = {
     "wma11": (ROOT / "ial" / "wma11" / "wma11-data.js", "WMA11_QUESTIONS"),
     "wma12": (ROOT / "ial" / "wma12" / "wma12-data.js", "WMA12_QUESTIONS"),

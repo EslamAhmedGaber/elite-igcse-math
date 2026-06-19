@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Strategy Notes - Elite IGCSE Mathematics</title>
-  <meta name="description" content="Elite IGCSE Mathematics strategy notes and complete booklets for IAL Pure 1, Pure 2, and Mechanics 1.">
+  <meta name="description" content="Elite IGCSE Mathematics strategy notes and complete booklets for Linear 4MA1, IAL Pure 1, Pure 2, and Mechanics 1.">
   <meta name="theme-color" content="#161b2e">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
@@ -12,13 +12,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="pathway-bootstrap.js?v=20260613a"></script>
-  <link rel="stylesheet" href="styles.css?v=20260619a">
+  <link rel="stylesheet" href="styles.css?v=20260619b">
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js"></script>
-  <script defer src="course-modules.js?v=20260619a"></script>
-  <script defer src="lead.js?v=20260619a"></script>
+  <script defer src="course-modules.js?v=20260619b"></script>
+  <script defer src="linear-notes-data.js?v=20260619b"></script>
+  <script defer src="notes.js?v=20260619b"></script>
+  <script defer src="lead.js?v=20260619b"></script>
 </head>
-<body data-page="notes" data-course-palette="pure">
+<body data-page="notes" data-course-palette="linear" data-pathway="linear">
 
   <header class="site-header">
     <a class="site-brand" href="index.html" aria-label="Elite IGCSE Mathematics home">
@@ -41,8 +43,9 @@
       <div>
         <span class="eyebrow">Strategy notes</span>
         <h1 id="notesTitle">Learn the method first, then practise the exact topic.</h1>
-        <p>The IAL course pages now open on notes by default: a complete printable booklet first, then individual topic strategy notes with direct classified-practice links.</p>
+        <p>Start with the booklet, open the exact topic strategy, then jump straight into matching classified practice. Linear is now notes-first, and the IAL notes stay one click away.</p>
         <div class="notes-hero-actions">
+          <a class="button primary" href="notes.html?pathway=linear#linearNotes">Linear notes</a>
           <a class="button primary" href="ial/wma11/index.html#ialNotes">Pure 1 notes</a>
           <a class="button solution" href="ial/wma12/index.html#ialNotes">Pure 2 notes</a>
           <a class="button light" href="ial/wme01/index.html#ialNotes">Mechanics 1 notes</a>
@@ -59,10 +62,22 @@
       </div>
     </section>
 
+    <section class="notes-library notes-course-library" id="linearNotes" aria-labelledby="linearNotesTitle" data-linear-notes-root>
+      <span class="eyebrow">Linear 4MA1</span>
+      <h2 id="linearNotesTitle">Linear strategy notes</h2>
+      <p>Loading Linear topic notes and booklets...</p>
+    </section>
+
     <section class="notes-library" aria-labelledby="notesLibraryTitle">
       <span class="eyebrow">Available now</span>
       <h2 id="notesLibraryTitle">IAL strategy booklet library</h2>
       <div class="notes-grid">
+        <article class="note-card">
+          <strong>IGCSE Linear (4MA1)</strong>
+          <p>58 topic strategy notes, six chapter booklets, and one complete Linear booklet.</p>
+          <p><a class="button primary" href="notes.html?pathway=linear#linearNotes">Open notes view</a></p>
+          <p><a class="button light" href="downloads/Linear/StrategyNotes/Linear_4MA1_Strategy_Notes_Booklet.pdf?v=20260619b" target="_blank" rel="noreferrer">Download booklet</a></p>
+        </article>
         <article class="note-card">
           <strong>IAL Pure 1 (WMA11)</strong>
           <p>13 topic strategy notes and one complete Pure 1 booklet.</p>
@@ -94,6 +109,7 @@
       </div>
       <div>
         <strong>Notes</strong>
+        <p><a href="notes.html?pathway=linear#linearNotes">Linear notes</a></p>
         <p><a href="ial/wma11/index.html#ialNotes">Pure 1 notes</a></p>
         <p><a href="ial/wma12/index.html#ialNotes">Pure 2 notes</a></p>
         <p><a href="ial/wme01/index.html#ialNotes">Mechanics 1 notes</a></p>
