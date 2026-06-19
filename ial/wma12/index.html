@@ -13,20 +13,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="pathway-bootstrap.js?v=20260613a"></script>
-  <link rel="stylesheet" href="styles.css?v=20260617a">
-  <link rel="stylesheet" href="ial/wma12/wma12.css?v=20260615a">
+  <link rel="stylesheet" href="styles.css?v=20260619a">
+  <link rel="stylesheet" href="ial/wma12/wma12.css?v=20260619a">
   <script>
     window.MathJax = { tex: { inlineMath: [["$", "$"], ["\\(", "\\)"]] }, svg: { fontCache: "global" } };
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js?v=20260611a"></script>
-  <script defer src="course-modules.js?v=20260617a"></script>
-  <script defer src="lead.js?v=20260617a"></script>
+  <script defer src="course-modules.js?v=20260619a"></script>
+  <script defer src="lead.js?v=20260619a"></script>
+  <script defer src="ial/ial-notes-data.js?v=20260619a"></script>
   <script defer src="ial/wma12/wma12-data.js?v=20260611b"></script>
-  <script defer src="ial/wma12/wma12.js?v=20260615a"></script>
+  <script defer src="ial/wma12/wma12.js?v=20260619a"></script>
 </head>
-<body data-page="ial-wma12">
+<body data-page="ial-wma12" data-ial-active-module="notes">
 
   <header class="site-header">
     <a class="site-brand" href="index.html" aria-label="Elite IGCSE Mathematics home">
@@ -71,7 +72,8 @@
           <small>WMA12</small>
         </a>
         <div class="nav-panel" aria-label="IAL Pure 2 links">
-          <a href="ial/wma12/index.html"><strong>Classified Bank</strong><span>Topic practice</span></a>
+          <a href="ial/wma12/index.html#ialNotes"><strong>Strategy Notes</strong><span>Booklet + topic notes</span></a>
+          <a href="ial/wma12/index.html#ialFilters"><strong>Classified Bank</strong><span>Topic practice</span></a>
           <a href="ial/wma12/index.html?expertise=1#ialFilters"><strong>Expertise Bank</strong><span>Q6+ route</span></a>
           <a href="exam.html?pathway=pure&amp;course=wma12&amp;mode=custom"><strong>Build Test</strong><span>Pure 2 builder</span></a>
           <a href="exam.html?pathway=pure&amp;course=wma12&amp;mode=smart&amp;book=revision"><strong>Revision Book</strong><span>Topic mix</span></a>
@@ -107,6 +109,8 @@
         <p><strong>Past-paper bank by topic.</strong> The Pure 2 route now contains the full WMA12 set from October 2019 to January 2026, cropped, solved, and classified across the 12-topic map.</p>
       </div>
       <div class="ial-book-actions" aria-label="WMA12 books">
+        <a class="button primary" href="downloads/IAL/WMA12/StrategyNotes/WMA12_Strategy_Notes_Booklet.pdf?v=20260619a" target="_blank" rel="noreferrer">Strategy Booklet</a>
+        <a class="button light" href="ial/wma12/index.html#ialNotes">Topic Notes</a>
         <a class="button primary" href="downloads/IAL/WMA12/WMA12_Classified_Questions.pdf?v=wma12-full-20260611" target="_blank" rel="noreferrer">Questions PDF</a>
         <a class="button solution" href="downloads/IAL/WMA12/WMA12_Classified_With_Answers.pdf?v=wma12-full-20260611" target="_blank" rel="noreferrer">Answers PDF</a>
         <a class="button gold" href="ial/wma12/index.html?expertise=1#ialFilters">Expertise Q6+</a>
@@ -120,6 +124,22 @@
       <article><span>Filtered now</span><strong data-ial-filtered>0</strong><small>matching questions</small></article>
       <article><span>Solved here</span><strong data-ial-solved>0</strong><small>saved to your account</small></article>
       <article><span>Mistake box</span><strong data-ial-mistakes>0</strong><small>for revision</small></article>
+    </section>
+
+    <section id="ialNotes" class="ial-notes-module" aria-labelledby="ialNotesTitle">
+      <div class="ial-module-head">
+        <div>
+          <span class="eyebrow">Notes first</span>
+          <h2 id="ialNotesTitle">Study the Pure 2 strategy, then practise the exact topic</h2>
+          <p>Each note is mined from the WMA12 classified questions and worked solutions, with harder variants written into the strategy instead of left as exceptions.</p>
+        </div>
+        <div class="ial-progress-actions">
+          <a class="button primary" href="downloads/IAL/WMA12/StrategyNotes/WMA12_Strategy_Notes_Booklet.pdf?v=20260619a" target="_blank" rel="noreferrer">Complete booklet</a>
+          <a class="button light" href="ial/wma12/index.html#ialFilters">Classified bank</a>
+        </div>
+      </div>
+      <article class="ial-note-feature" data-ial-notes-booklet></article>
+      <div class="ial-notes-grid" data-ial-notes-grid aria-label="Pure 2 strategy notes"></div>
     </section>
 
     <section id="ialProgressModule" class="ial-progress-module" aria-labelledby="ialProgressTitle">

@@ -5,6 +5,11 @@
       role: "student",
       description: "Topic practice and classified question browsing.",
     },
+    notes: {
+      title: "Strategy Notes",
+      role: "student",
+      description: "Topic strategy notes and complete printable booklets.",
+    },
     expertise: {
       title: "Expertise",
       role: "student",
@@ -90,6 +95,9 @@
   const moduleAliases = {
     "classified view": "classified",
     "classified bank": "classified",
+    "strategy notes": "notes",
+    "notes": "notes",
+    "booklet notes": "notes",
     "expertise": "expertise",
     "mock builder": "build-test",
     "build test": "build-test",
@@ -1642,6 +1650,31 @@
 
   const pureWma11Books = [
       {
+          "className": "pure-book download-note",
+          "tag": "IAL Pure 1",
+          "tagTone": "pure",
+          "title": "WMA11 Strategy Notes",
+          "description": "Pure 1 topic strategy notes plus the complete booklet, built from the classified questions and worked solutions.",
+          "meta": [
+              "13 topic notes",
+              "Complete booklet",
+              "Notes-first course view"
+          ],
+          "actions": [
+              {
+                  "label": "Open notes view",
+                  "href": "ial/wma11/index.html#ialNotes",
+                  "variant": "primary"
+              },
+              {
+                  "label": "Complete booklet",
+                  "href": "downloads/IAL/WMA11/StrategyNotes/WMA11_Strategy_Notes_Booklet.pdf?v=20260619a",
+                  "variant": "solution",
+                  "target": "_blank"
+              }
+          ]
+      },
+      {
           "className": "pure-book",
           "tag": "IAL Pure 1",
           "title": "WMA11 Classified Books",
@@ -1697,6 +1730,31 @@
   ];
 
   const pureWma12Books = [
+      {
+          "className": "pure-book download-note",
+          "tag": "IAL Pure 2",
+          "tagTone": "pure",
+          "title": "WMA12 Strategy Notes",
+          "description": "Pure 2 topic strategy notes plus the complete booklet, connected directly to filtered classified practice.",
+          "meta": [
+              "12 topic notes",
+              "Complete booklet",
+              "Notes-first course view"
+          ],
+          "actions": [
+              {
+                  "label": "Open notes view",
+                  "href": "ial/wma12/index.html#ialNotes",
+                  "variant": "primary"
+              },
+              {
+                  "label": "Complete booklet",
+                  "href": "downloads/IAL/WMA12/StrategyNotes/WMA12_Strategy_Notes_Booklet.pdf?v=20260619a",
+                  "variant": "solution",
+                  "target": "_blank"
+              }
+          ]
+      },
       {
           "className": "pure-book",
           "tag": "IAL Pure 2",
@@ -1754,6 +1812,31 @@
   ];
 
   const pureWme01Books = [
+      {
+          "className": "pure-book download-note",
+          "tag": "IAL Mechanics 1",
+          "tagTone": "pure",
+          "title": "WME01 Strategy Notes",
+          "description": "Mechanics 1 topic strategy notes plus the complete booklet, with links into practice and the Mechanics lab.",
+          "meta": [
+              "10 topic notes",
+              "Complete booklet",
+              "Notes + lab route"
+          ],
+          "actions": [
+              {
+                  "label": "Open notes view",
+                  "href": "ial/wme01/index.html#ialNotes",
+                  "variant": "primary"
+              },
+              {
+                  "label": "Complete booklet",
+                  "href": "downloads/IAL/WME01/StrategyNotes/WME01_Strategy_Notes_Booklet.pdf?v=20260619a",
+                  "variant": "solution",
+                  "target": "_blank"
+              }
+          ]
+      },
       {
           "className": "pure-book",
           "tag": "IAL Mechanics 1",
@@ -1892,7 +1975,8 @@
       pastPapers: pureWma11PastPapers,
       books: pureWma11Books,
       links: [
-        { module: "classified", title: "Classified View", detail: "Topic practice", href: "/ial/wma11/index.html" },
+        { module: "notes", title: "Strategy Notes", detail: "Booklet + topic notes", href: "/ial/wma11/index.html#ialNotes" },
+        { module: "classified", title: "Classified View", detail: "Topic practice", href: "/ial/wma11/index.html#ialFilters" },
         { module: "expertise", title: "Expertise View", detail: "Q6+ filtered bank", href: "/ial/wma11/index.html?expertise=1#ialFilters" },
         { module: "build-test", title: "Build Test", detail: "Full mock builder", href: "/exam.html?pathway=pure&course=wma11&mode=custom" },
         { module: "revision-book", title: "Revision Book", detail: "10-100 question mix", href: "/exam.html?pathway=pure&course=wma11&mode=smart&book=revision" },
@@ -1928,7 +2012,8 @@
       pastPapers: pureWma12PastPapers,
       books: pureWma12Books,
       links: [
-        { module: "classified", title: "Classified View", detail: "Topic practice", href: "/ial/wma12/index.html" },
+        { module: "notes", title: "Strategy Notes", detail: "Booklet + topic notes", href: "/ial/wma12/index.html#ialNotes" },
+        { module: "classified", title: "Classified View", detail: "Topic practice", href: "/ial/wma12/index.html#ialFilters" },
         { module: "expertise", title: "Expertise View", detail: "Q6+ filtered bank", href: "/ial/wma12/index.html?expertise=1#ialFilters" },
         { module: "build-test", title: "Build Test", detail: "Full mock builder", href: "/exam.html?pathway=pure&course=wma12&mode=custom" },
         { module: "revision-book", title: "Revision Book", detail: "10-100 question mix", href: "/exam.html?pathway=pure&course=wma12&mode=smart&book=revision" },
@@ -1964,7 +2049,8 @@
       pastPapers: pureWme01PastPapers,
       books: pureWme01Books,
       links: [
-        { module: "classified", title: "Classified View", detail: "Topic practice", href: "/ial/wme01/index.html" },
+        { module: "notes", title: "Strategy Notes", detail: "Booklet + topic notes", href: "/ial/wme01/index.html#ialNotes" },
+        { module: "classified", title: "Classified View", detail: "Topic practice", href: "/ial/wme01/index.html#ialFilters" },
         { module: "expertise", title: "Expertise View", detail: "Q6+ filtered bank", href: "/ial/wme01/index.html?expertise=1#ialFilters" },
         { module: "interactive-lab", title: "Interactive Lab", detail: "98 visual cases", href: "/ial/wme01/lab/index.html" },
         { module: "question-visualizer", title: "Question Visualizer", detail: "Paper images + simulations", href: "/ial/wme01/index.html#ialQuestionVisualizer" },

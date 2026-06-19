@@ -3,14 +3,114 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=practice.html">
-  <title>Redirecting to Practice - Elite IGCSE Mathematics</title>
-  <link rel="canonical" href="practice.html">
-  <script>
-    location.replace("practice.html" + location.search + location.hash);
-  </script>
+  <title>Strategy Notes - Elite IGCSE Mathematics</title>
+  <meta name="description" content="Elite IGCSE Mathematics strategy notes and complete booklets for IAL Pure 1, Pure 2, and Mechanics 1.">
+  <meta name="theme-color" content="#161b2e">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="pathway-bootstrap.js?v=20260613a"></script>
+  <link rel="stylesheet" href="styles.css?v=20260619a">
+  <script defer src="firebase-config.js"></script>
+  <script defer src="cloud-progress.js"></script>
+  <script defer src="course-modules.js?v=20260619a"></script>
+  <script defer src="lead.js?v=20260619a"></script>
 </head>
-<body>
-  <p>Redirecting to <a href="practice.html">the Practice Bank</a>.</p>
+<body data-page="notes" data-course-palette="pure">
+
+  <header class="site-header">
+    <a class="site-brand" href="index.html" aria-label="Elite IGCSE Mathematics home">
+      <span class="brand-mark">NOTES</span>
+      <span class="brand-title">Elite IGCSE Mathematics</span>
+    </a>
+    <button id="navToggle" class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav pathway-tabs" aria-label="Main"></nav>
+    <div class="site-cta">
+      <button class="button cloud-auth-button" type="button" data-cloud-login>Continue with Google</button>
+      <a class="button cloud-account-button" href="progress.html" data-cloud-account hidden>My Progress</a>
+      <a class="button primary" data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Book Free First Class</a>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="notes-hero" aria-labelledby="notesTitle">
+      <div>
+        <span class="eyebrow">Strategy notes</span>
+        <h1 id="notesTitle">Learn the method first, then practise the exact topic.</h1>
+        <p>The IAL course pages now open on notes by default: a complete printable booklet first, then individual topic strategy notes with direct classified-practice links.</p>
+        <div class="notes-hero-actions">
+          <a class="button primary" href="ial/wma11/index.html#ialNotes">Pure 1 notes</a>
+          <a class="button solution" href="ial/wma12/index.html#ialNotes">Pure 2 notes</a>
+          <a class="button light" href="ial/wme01/index.html#ialNotes">Mechanics 1 notes</a>
+        </div>
+      </div>
+      <div class="notes-loop-card" aria-label="Notes workflow">
+        <strong>Student loop</strong>
+        <ol>
+          <li>Open the booklet for the whole course.</li>
+          <li>Read the topic note before practice.</li>
+          <li>Jump into the filtered classified bank.</li>
+          <li>Use mistakes and tests for revision.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="notes-library" aria-labelledby="notesLibraryTitle">
+      <span class="eyebrow">Available now</span>
+      <h2 id="notesLibraryTitle">IAL strategy booklet library</h2>
+      <div class="notes-grid">
+        <article class="note-card">
+          <strong>IAL Pure 1 (WMA11)</strong>
+          <p>13 topic strategy notes and one complete Pure 1 booklet.</p>
+          <p><a class="button primary" href="ial/wma11/index.html#ialNotes">Open notes view</a></p>
+          <p><a class="button light" href="downloads/IAL/WMA11/StrategyNotes/WMA11_Strategy_Notes_Booklet.pdf?v=20260619a" target="_blank" rel="noreferrer">Download booklet</a></p>
+        </article>
+        <article class="note-card">
+          <strong>IAL Pure 2 (WMA12)</strong>
+          <p>12 topic strategy notes and one complete Pure 2 booklet.</p>
+          <p><a class="button primary" href="ial/wma12/index.html#ialNotes">Open notes view</a></p>
+          <p><a class="button light" href="downloads/IAL/WMA12/StrategyNotes/WMA12_Strategy_Notes_Booklet.pdf?v=20260619a" target="_blank" rel="noreferrer">Download booklet</a></p>
+        </article>
+        <article class="note-card">
+          <strong>IAL Mechanics 1 (WME01)</strong>
+          <p>10 topic strategy notes, one complete Mechanics booklet, and lab links.</p>
+          <p><a class="button primary" href="ial/wme01/index.html#ialNotes">Open notes view</a></p>
+          <p><a class="button light" href="downloads/IAL/WME01/StrategyNotes/WME01_Strategy_Notes_Booklet.pdf?v=20260619a" target="_blank" rel="noreferrer">Download booklet</a></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <span class="footer-brand-line">Elite IGCSE Academy</span>
+        <p class="footer-brand-tagline">Past-paper mastery, classified by topic.</p>
+        <p class="footer-brand-blurb">Strategy notes, classified banks, test builders, and worked solutions prepared by Dr Eslam Ahmed.</p>
+      </div>
+      <div>
+        <strong>Notes</strong>
+        <p><a href="ial/wma11/index.html#ialNotes">Pure 1 notes</a></p>
+        <p><a href="ial/wma12/index.html#ialNotes">Pure 2 notes</a></p>
+        <p><a href="ial/wme01/index.html#ialNotes">Mechanics 1 notes</a></p>
+      </div>
+      <div>
+        <strong>Practice</strong>
+        <p><a href="practice.html?pathway=linear&amp;bank=all">Linear classified</a></p>
+        <p><a href="practice.html?pathway=modular&amp;choose=unit">Modular classified</a></p>
+        <p><a href="exam.html">Build tests</a></p>
+      </div>
+      <div>
+        <strong>Connect</strong>
+        <p><a href="https://wa.me/201120009622" data-lead-trigger="whatsapp">WhatsApp &middot; +20&nbsp;112&nbsp;000&nbsp;9622</a></p>
+        <p><a href="about.html">About Dr Eslam</a></p>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>

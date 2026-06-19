@@ -815,6 +815,7 @@ body.print-ial-mock .site-header,
 body.print-ial-mock .pathway-tool-strip,
 body.print-ial-mock .ial-hero,
 body.print-ial-mock .ial-dashboard,
+body.print-ial-mock .ial-notes-module,
 body.print-ial-mock .ial-workbench,
 body.print-ial-mock .site-footer,
 body.print-ial-mock .mobile-bottom-nav,
@@ -969,18 +970,23 @@ body[data-page="ial-wma12"] .ial-hero {
 
 body[data-page="ial-wma12"] #ialProgressModule,
 body[data-page="ial-wma12"] #ialMockBuilder,
-body[data-page="ial-wma12"] #ialPastPapers {
+body[data-page="ial-wma12"] #ialPastPapers,
+body[data-page="ial-wma12"] #ialNotes {
   display: none;
 }
 
+body[data-page="ial-wma12"][data-ial-active-module="notes"] #ialNotes,
 body[data-page="ial-wma12"][data-ial-active-module="progress"] #ialProgressModule,
 body[data-page="ial-wma12"][data-ial-active-module="builder"] #ialMockBuilder,
 body[data-page="ial-wma12"][data-ial-active-module="papers"] #ialPastPapers {
   display: grid;
 }
 
-body[data-page="ial-wma12"][data-ial-active-module]:not([data-ial-active-module="classified"]) #ialStats,
 body[data-page="ial-wma12"][data-ial-active-module]:not([data-ial-active-module="classified"]) .ial-workbench {
+  display: none;
+}
+
+body[data-page="ial-wma12"][data-ial-active-module]:not([data-ial-active-module="classified"]):not([data-ial-active-module="notes"]) #ialStats {
   display: none;
 }
 
@@ -1256,7 +1262,7 @@ body[data-page="ial-wma12"][data-ial-active-module]:not([data-ial-active-module=
   }
 
   .ial-hero {
-    grid-template-columns: minmax(0, 1fr) minmax(280px, auto);
+    grid-template-columns: minmax(360px, 0.58fr) minmax(0, 1fr);
     gap: 22px;
     padding: 26px;
     border: 1px solid var(--ial-line);
@@ -1291,6 +1297,7 @@ body[data-page="ial-wma12"][data-ial-active-module]:not([data-ial-active-module=
 
   .ial-book-actions {
     gap: 10px;
+    justify-content: flex-start;
   }
 
   .ial-book-actions .button {

@@ -1,6 +1,7 @@
 ﻿(function () {
   const QUESTIONS = window.WMA12_QUESTIONS || [];
   const TOPICS = window.WMA12_TOPICS || [];
+  const NOTES = (window.ELITE_IAL_NOTES || {}).wma12 || { topics: [] };
   const SOLVED_KEY = "eliteWMA12SolvedV1";
   const MISTAKE_KEY = "eliteWMA12MistakeBoxV1";
   const TRAINER_KEY = "eliteWMA12FinalTrainerV1";
@@ -39,6 +40,8 @@
     progressWeak: document.querySelector("[data-ial-progress-weak]"),
     progressMistakes: document.querySelector("[data-ial-progress-mistakes]"),
     progressTopics: document.querySelector("[data-ial-progress-topics]"),
+    notesBooklet: document.querySelector("[data-ial-notes-booklet]"),
+    notesGrid: document.querySelector("[data-ial-notes-grid]"),
     paperList: document.querySelector("[data-ial-paper-list]"),
     mockTopic: document.getElementById("ialMockTopic"),
     mockCount: document.getElementById("ialMockCount"),
@@ -51,6 +54,7 @@
   };
 
   const MODULE_HASHES = {
+    ialNotes: "notes",
     ialFilters: "classified",
     ialQuestionStage: "classified",
     ialProgressModule: "progress",
@@ -72,11 +76,14 @@
 
   function activeModuleFromLocation() {
     const hash = window.location.hash.replace(/^#/, "");
-    return MODULE_HASHES[hash] || "classified";
+    if (MODULE_HASHES[hash]) return MODULE_HASHES[hash];
+    const params = new URLSearchParams(window.location.search);
+    const shouldOpenClassified = ["topic", "mode", "expertise", "bank"].some((key) => params.has(key));
+    return shouldOpenClassified ? "classified" : "notes";
   }
 
-  function setActiveModule(module = "classified") {
-    const active = ["classified", "progress", "builder", "papers"].includes(module) ? module : "classified";
+  function setActiveModule(module = "notes") {
+    const active = ["notes", "classified", "progress", "builder", "papers"].includes(module) ? module : "notes";
     document.body.dataset.ialActiveModule = active;
     document.querySelectorAll("[href*='#ial']").forEach((link) => {
       const hash = (() => {
@@ -122,6 +129,49 @@
 
   function sessionOrder(session) {
     return ({ Jan: 1, MayJune: 2, Oct: 3 })[session] || 9;
+  }
+
+  function notePracticeHref(slug) {
+    return `ial/wma12/index.html?topic=${encodeURIComponent(slug)}#ialFilters`;
+  }
+
+  function renderNotes() {
+    if (els.notesBooklet && NOTES.booklet) {
+      els.notesBooklet.innerHTML = `
+        <div>
+          <span class="eyebrow">${escapeHtml(NOTES.code || "WMA12")} strategy route</span>
+          <h2>${escapeHtml(NOTES.booklet.title)}</h2>
+          <p>${escapeHtml(NOTES.booklet.detail || NOTES.intro || "")}</p>
+        </div>
+        <div class="ial-note-feature-actions">
+          <a class="button primary" href="${escapeHtml(NOTES.booklet.href)}" target="_blank" rel="noreferrer">Open booklet</a>
+          <a class="button light" href="ial/wma12/index.html#ialFilters">Open classified</a>
+        </div>
+      `;
+    }
+    if (!els.notesGrid) return;
+    els.notesGrid.innerHTML = (NOTES.topics || []).map((note, index) => {
+      const topic = TOPICS.find((entry) => entry.slug === note.slug) || {};
+      const count = topic.count || topic.primaryCount || 0;
+      const number = String(index + 1).padStart(2, "0");
+      return `
+        <article class="ial-note-card">
+          <div class="ial-note-card-head">
+            <span>${number}</span>
+            <strong>${escapeHtml(note.title)}</strong>
+          </div>
+          <p>${escapeHtml(note.focus || "Strategy note and matching practice.")}</p>
+          <div class="ial-note-meta">
+            <span>${count ? `${count} classified questions` : "Topic strategy"}</span>
+            <span>PDF note</span>
+          </div>
+          <div class="ial-note-actions">
+            <a class="button primary" href="${escapeHtml(note.href)}" target="_blank" rel="noreferrer">Open notes</a>
+            <a class="button light" href="${escapeHtml(notePracticeHref(note.slug))}">Practice</a>
+          </div>
+        </article>
+      `;
+    }).join("");
   }
 
   function paperSlug(item) {
@@ -777,6 +827,7 @@
 
   function init() {
     setupFilters();
+    renderNotes();
     applyUrlFilters();
     bindEvents();
     handleModuleRoute();

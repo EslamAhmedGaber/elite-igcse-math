@@ -110,7 +110,8 @@
       href: "/ial/wma11/index.html",
       panelLabel: "WMA11 tools",
       links: [
-        { title: "Classified View", detail: "Topic practice", href: "/ial/wma11/index.html" },
+        { title: "Strategy Notes", detail: "Booklet + topic notes", href: "/ial/wma11/index.html#ialNotes" },
+        { title: "Classified View", detail: "Topic practice", href: "/ial/wma11/index.html#ialFilters" },
         { title: "Expertise View", detail: "Q6+ filtered bank", href: "/ial/wma11/index.html?expertise=1#ialFilters" },
         { title: "Build Test", detail: "Full mock builder", href: "/exam.html?pathway=pure&course=wma11&mode=custom" },
         { title: "Smart Revision", detail: "Mistakes and weak topics", href: "/exam.html?pathway=pure&course=wma11&mode=smart" },
@@ -146,6 +147,9 @@
   const DEFAULT_MODULE_ALIASES = {
     "classified view": "classified",
     "classified bank": "classified",
+    "strategy notes": "notes",
+    "notes": "notes",
+    "booklet notes": "notes",
     "expertise": "expertise",
     "mock builder": "build-test",
     "build test": "build-test",
@@ -398,6 +402,7 @@
   }
 
   const MODULE_ICONS = {
+    "notes":          '<svg class="module-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h10a4 4 0 0 1 4 4v12H8a3 3 0 0 1-3-3z"/><path d="M8 4v13a3 3 0 0 0 3 3"/><path d="M9 8h6M9 12h5"/></svg>',
     "classified":     '<svg class="module-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14M5 12h14M5 17h9"/><circle cx="3.2" cy="7" r="0.6" fill="currentColor"/><circle cx="3.2" cy="12" r="0.6" fill="currentColor"/><circle cx="3.2" cy="17" r="0.6" fill="currentColor"/></svg>',
     "expertise":      '<svg class="module-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.4 5.9.8-4.3 4.2 1 5.8L12 16.6 6.8 19.2l1-5.8L3.5 9.2l5.9-.8z"/></svg>',
     "build-test":     '<svg class="module-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 3L4 14h6l-1 7 9-11h-6z"/></svg>',
@@ -488,6 +493,7 @@
   };
 
   const MODULE_BREADCRUMB_LABELS = {
+    notes: "Strategy Notes",
     classified: "Classified View",
     expertise: "Expertise View",
     "build-test": "Build Test",
@@ -510,6 +516,8 @@
     const hash = window.location.hash;
     if (path.includes("/ial/wme01/lab/")) return "Interactive Lab";
     if (path.includes("/ial/wma11/") || path.includes("/ial/wma12/") || path.includes("/ial/wme01/")) {
+      if (hash === "#ialNotes") return "Strategy Notes";
+      if (!hash && !["topic", "mode", "expertise", "bank"].some((key) => params.has(key))) return "Strategy Notes";
       if (path.includes("/ial/wme01/")) {
         if (hash === "#ialQuestionVisualizer") return "Question Visualizer";
         if (hash === "#ialSimulator") return "Interactive Lab";
@@ -607,7 +615,7 @@
     if (moduleLabel) {
       // For Pure course landings with no specific module, the last course crumb is already the page.
       const path = window.location.pathname;
-      const isPureLanding = pathwayId === "pure" && (path.endsWith("/ial/wma11/index.html") || path.endsWith("/ial/wma12/index.html") || path.endsWith("/ial/wme01/index.html"))
+      const isPureLanding = moduleLabel !== "Strategy Notes" && pathwayId === "pure" && (path.endsWith("/ial/wma11/index.html") || path.endsWith("/ial/wma12/index.html") || path.endsWith("/ial/wme01/index.html"))
         && !window.location.search && !window.location.hash;
       if (!isPureLanding) {
         crumbs.push({ label: moduleLabel, current: true });

@@ -13,20 +13,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="pathway-bootstrap.js?v=20260613a"></script>
-  <link rel="stylesheet" href="styles.css?v=20260617a">
-  <link rel="stylesheet" href="ial/wme01/wme01.css?v=20260616a">
+  <link rel="stylesheet" href="styles.css?v=20260619a">
+  <link rel="stylesheet" href="ial/wme01/wme01.css?v=20260619a">
   <script>
     window.MathJax = { tex: { inlineMath: [["$", "$"], ["\\(", "\\)"]] }, svg: { fontCache: "global" } };
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js?v=20260611a"></script>
-  <script defer src="course-modules.js?v=20260617a"></script>
-  <script defer src="lead.js?v=20260617a"></script>
+  <script defer src="course-modules.js?v=20260619a"></script>
+  <script defer src="lead.js?v=20260619a"></script>
+  <script defer src="ial/ial-notes-data.js?v=20260619a"></script>
   <script defer src="ial/wme01/wme01-data.js?v=20260613a"></script>
-  <script defer src="ial/wme01/wme01.js?v=20260616a"></script>
+  <script defer src="ial/wme01/wme01.js?v=20260619a"></script>
 </head>
-<body data-page="ial-wme01">
+<body data-page="ial-wme01" data-ial-active-module="notes">
 
   <header class="site-header">
     <a class="site-brand" href="index.html" aria-label="Elite IGCSE Mathematics home">
@@ -71,7 +72,8 @@
           <small>WME01</small>
         </a>
         <div class="nav-panel" aria-label="IAL Mechanics 1 links">
-          <a href="ial/wme01/index.html"><strong>Classified Bank</strong><span>Topic practice</span></a>
+          <a href="ial/wme01/index.html#ialNotes"><strong>Strategy Notes</strong><span>Booklet + topic notes</span></a>
+          <a href="ial/wme01/index.html#ialFilters"><strong>Classified Bank</strong><span>Topic practice</span></a>
           <a href="ial/wme01/index.html?expertise=1#ialFilters"><strong>Expertise Bank</strong><span>Q6+ route</span></a>
           <a href="exam.html?pathway=pure&amp;course=wme01&amp;mode=custom"><strong>Build Test</strong><span>Mechanics 1 builder</span></a>
           <a href="exam.html?pathway=pure&amp;course=wme01&amp;mode=smart&amp;book=revision"><strong>Revision Book</strong><span>Topic mix</span></a>
@@ -109,6 +111,8 @@
         <p><strong>Past-paper bank by topic.</strong> The Mechanics 1 route contains the full WME01 set from October 2019 to January 2026, cropped, solved, and classified across the 10-topic Mechanics map.</p>
       </div>
       <div class="ial-book-actions" aria-label="WME01 books">
+        <a class="button primary" href="downloads/IAL/WME01/StrategyNotes/WME01_Strategy_Notes_Booklet.pdf?v=20260619a" target="_blank" rel="noreferrer">Strategy Booklet</a>
+        <a class="button light" href="ial/wme01/index.html#ialNotes">Topic Notes</a>
         <a class="button primary" href="downloads/IAL/WME01/WME01_Classified_Questions.pdf?v=wme01-full-20260612" target="_blank" rel="noreferrer">Questions PDF</a>
         <a class="button solution" href="downloads/IAL/WME01/WME01_Classified_With_Answers.pdf?v=wme01-full-20260612" target="_blank" rel="noreferrer">Answers PDF</a>
         <a class="button gold" href="ial/wme01/index.html?expertise=1#ialFilters">Expertise Q6+</a>
@@ -124,6 +128,23 @@
       <article><span>Filtered now</span><strong data-ial-filtered>0</strong><small>matching questions</small></article>
       <article><span>Solved here</span><strong data-ial-solved>0</strong><small>saved to your account</small></article>
       <article><span>Mistake box</span><strong data-ial-mistakes>0</strong><small>for revision</small></article>
+    </section>
+
+    <section id="ialNotes" class="ial-notes-module" aria-labelledby="ialNotesTitle">
+      <div class="ial-module-head">
+        <div>
+          <span class="eyebrow">Notes first</span>
+          <h2 id="ialNotesTitle">Study the Mechanics strategy, then practise or simulate the exact topic</h2>
+          <p>Each note is built from the WME01 question bank and worked solutions, then connected to classified practice and the Mechanics lab where useful.</p>
+        </div>
+        <div class="ial-progress-actions">
+          <a class="button primary" href="downloads/IAL/WME01/StrategyNotes/WME01_Strategy_Notes_Booklet.pdf?v=20260619a" target="_blank" rel="noreferrer">Complete booklet</a>
+          <a class="button light" href="ial/wme01/index.html#ialFilters">Classified bank</a>
+          <a class="button solution" href="ial/wme01/lab/index.html">Mechanics lab</a>
+        </div>
+      </div>
+      <article class="ial-note-feature" data-ial-notes-booklet></article>
+      <div class="ial-notes-grid" data-ial-notes-grid aria-label="Mechanics 1 strategy notes"></div>
     </section>
 
     <section id="ialProgressModule" class="ial-progress-module" aria-labelledby="ialProgressTitle">
