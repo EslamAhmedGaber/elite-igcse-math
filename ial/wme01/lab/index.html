@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Elite IGCSE Academy | Mechanics 1 Lab</title>
-<link rel="stylesheet" href="assets/mechanics-lab.css" />
+<link rel="stylesheet" href="assets/mechanics-lab.css?v=20260619c" />
 </head>
 <body>
   <div class="lab-shell">
@@ -28,7 +28,37 @@
       </div>
     </header>
 
-    <nav class="topic-rail" id="topicRail" aria-label="Mechanics topics"></nav>
+    <section class="lab-hero" aria-labelledby="labHeroTitle">
+      <div class="lab-hero-copy">
+        <p class="eyebrow">Mechanics 1 experiment centre</p>
+        <h2 id="labHeroTitle">Search, test, compare, then solve.</h2>
+        <p>
+          A WME01 lab for vectors, graphs, SUVAT, forces, pulleys, inclines, momentum and moments.
+          Pick a case, change the symbols, play the simulation, then read the exam move.
+        </p>
+      </div>
+      <div class="lab-search-card">
+        <label for="labSearch">Search experiments, symbols, or exam words</label>
+        <div class="lab-search-row">
+          <input id="labSearch" type="search" placeholder="Try: projectile, friction, impulse, &mu;, moment..." autocomplete="off" />
+          <button id="clearSearch" type="button">Clear</button>
+        </div>
+        <div class="lab-stat-grid" id="labStats" aria-label="Lab totals"></div>
+      </div>
+    </section>
+
+    <section class="lab-browser" aria-label="Experiment browser">
+      <div class="browser-head">
+        <div>
+          <p class="eyebrow">Choose the topic</p>
+          <h2>Experiment library</h2>
+        </div>
+        <div class="match-count" id="matchCount">Loading cases...</div>
+      </div>
+      <nav class="topic-rail" id="topicRail" aria-label="Mechanics topics"></nav>
+      <div class="quick-lab-grid" id="quickLabGrid" aria-label="Quick start experiments"></div>
+      <div class="experiment-grid" id="experimentCards" aria-live="polite"></div>
+    </section>
 
     <main class="lab-main">
       <section class="stage-panel" aria-label="Simulation stage">
@@ -65,13 +95,35 @@
         </section>
 
         <section class="panel-block">
+          <div class="panel-title">Case Sequence</div>
+          <div class="case-sequence" id="caseSequence"></div>
+          <div class="case-actions">
+            <button class="mini-btn" id="prevCase" type="button">Previous</button>
+            <button class="mini-btn" id="nextCase" type="button">Next case</button>
+          </div>
+        </section>
+
+        <section class="panel-block">
           <div class="panel-title">Controls</div>
           <div class="control-stack" id="controlStack"></div>
         </section>
 
         <section class="panel-block">
+          <div class="panel-title">Symbols</div>
+          <div class="symbol-grid" id="symbolGrid"></div>
+        </section>
+
+        <section class="panel-block">
           <div class="panel-title">Live Values</div>
           <div class="readout-grid" id="readouts"></div>
+        </section>
+
+        <section class="panel-block">
+          <div class="panel-title">Data Snapshot</div>
+          <div class="data-table-wrap">
+            <table class="data-table" id="dataTable"></table>
+          </div>
+          <button class="mini-btn wide" id="copySnapshot" type="button">Copy snapshot</button>
         </section>
 
         <section class="panel-block">
@@ -87,6 +139,6 @@
     </main>
   </div>
 
-<script src="assets/mechanics-lab.js"></script>
+<script src="assets/mechanics-lab.js?v=20260619c"></script>
 </body>
 </html>

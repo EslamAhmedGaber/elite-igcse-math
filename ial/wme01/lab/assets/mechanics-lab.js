@@ -480,11 +480,56 @@
     moments: [c("beam", "beam", 4, 12, 0.5), c("pivot", "pivot", 0.5, 11.5, 0.5), c("f1", "F1", 0, 80, 1), c("x1", "x1", 0, 12, 0.5), c("f2", "F2", 0, 80, 1), c("x2", "x2", 0, 12, 0.5), c("angle", "angle", 0, 90, 1), c("weight", "weight", 0, 100, 1)]
   };
 
+  const LAB_SYMBOLS = [
+    sym("s", "displacement", "m", ["suvat1d", "suvat2d", "graphs"], ["distance", "position"]),
+    sym("u", "initial velocity", "m s<sup>-1</sup>", ["suvat1d", "suvat2d", "projectile"], ["launch", "start"]),
+    sym("v", "final velocity", "m s<sup>-1</sup>", ["suvat1d", "suvat2d", "projectile"], ["speed", "tangent"]),
+    sym("a", "acceleration", "m s<sup>-2</sup>", ["suvat1d", "suvat2d", "graphs", "dynamics"], ["gradient", "resultant"]),
+    sym("t", "time", "s", ["projectile", "graphs", "suvat1d", "suvat2d", "momentum"], ["duration"]),
+    sym("g", "acceleration due to gravity", "9.8 m s<sup>-2</sup>", ["projectile", "suvat1d", "suvat2d", "incline", "dynamics"], ["weight"]),
+    sym("F", "force", "N", ["forces", "dynamics", "incline", "moments"], ["push", "pull"]),
+    sym("R", "normal reaction or resultant", "N", ["forces", "dynamics", "incline"], ["reaction", "resultant"]),
+    sym("T", "tension", "N", ["dynamics", "forces"], ["string", "pulley"]),
+    sym("m", "mass", "kg", ["dynamics", "incline", "momentum"], ["particle", "body"]),
+    sym("&mu;", "coefficient of friction", "no unit", ["incline", "dynamics"], ["rough", "friction"]),
+    sym("&theta;", "angle", "degrees", ["projectile", "vectors", "incline", "moments"], ["bearing", "slope"]),
+    sym("p", "momentum", "kg m s<sup>-1</sup>", ["momentum"], ["collision"]),
+    sym("J", "impulse", "N s", ["momentum"], ["force time"]),
+    sym("e", "coefficient of restitution", "no unit", ["momentum"], ["bounce", "impact"]),
+    sym("M", "moment", "N m", ["moments"], ["pivot", "turning"]),
+    sym("&Sigma;F", "sum of forces", "N", ["forces", "dynamics", "incline"], ["equilibrium"]),
+    sym("&Sigma;M", "sum of moments", "N m", ["moments"], ["clockwise", "anticlockwise"]),
+    sym("i, j", "unit vectors", "unitless", ["vectors", "suvat2d"], ["components"]),
+    sym("|a|", "vector magnitude", "same as vector", ["vectors", "suvat2d"], ["length"])
+  ];
+
+  const QUICK_STARTS = [
+    quick("projectile-level", "Projectile flight", "Split horizontal and vertical motion.", "suvat2d", "projectile-level"),
+    quick("rough-incline", "Rough incline", "Resolve weight and friction on a slope.", "inclines", "rough-down"),
+    quick("atwood", "Pulley system", "Use one acceleration and shared tension.", "dynamics", "atwood"),
+    quick("collision", "Collision lab", "Compare before and after momentum.", "momentum", "same-direction"),
+    quick("beam", "Moment balance", "Turn about a pivot and test tipping.", "moments", "rigid-equilibrium")
+  ];
+
+  function sym(mark, name, unit, stages, keywords) {
+    return { mark, name, unit, stages, keywords };
+  }
+
+  function quick(id, title, detail, topicId, caseId) {
+    return { id, title, detail, topicId, caseId };
+  }
+
   function c(key, label, min, max, step) {
     return { key, label, min, max, step };
   }
 
   const el = {
+    labSearch: document.getElementById("labSearch"),
+    clearSearch: document.getElementById("clearSearch"),
+    labStats: document.getElementById("labStats"),
+    matchCount: document.getElementById("matchCount"),
+    quickLabGrid: document.getElementById("quickLabGrid"),
+    experimentCards: document.getElementById("experimentCards"),
     topicRail: document.getElementById("topicRail"),
     topicTitle: document.getElementById("topicTitle"),
     topicSubtitle: document.getElementById("topicSubtitle"),
@@ -492,8 +537,14 @@
     caseSelect: document.getElementById("caseSelect"),
     casePurpose: document.getElementById("casePurpose"),
     caseTags: document.getElementById("caseTags"),
+    caseSequence: document.getElementById("caseSequence"),
+    prevCase: document.getElementById("prevCase"),
+    nextCase: document.getElementById("nextCase"),
     controlStack: document.getElementById("controlStack"),
+    symbolGrid: document.getElementById("symbolGrid"),
     readouts: document.getElementById("readouts"),
+    dataTable: document.getElementById("dataTable"),
+    copySnapshot: document.getElementById("copySnapshot"),
     formulaTrail: document.getElementById("formulaTrail"),
     examMoves: document.getElementById("examMoves"),
     canvas: document.getElementById("labCanvas"),
@@ -516,11 +567,16 @@
     playing: false,
     last: 0,
     speed: 1,
+    query: "",
+    lastReadouts: [],
     raf: null
   };
 
   function init() {
     buildTopicRail();
+    buildLabStats();
+    buildQuickLabs();
+    bindLabSearch();
     const params = new URLSearchParams(location.search);
     const requested = params.get("topic");
     const idx = TOPICS.findIndex((topic) => topic.id === requested);
@@ -554,6 +610,7 @@
       `<option value="${i}">${String(i + 1).padStart(2, "0")} | ${escapeHtml(item.title)}</option>`
     )).join("");
     el.caseSelect.onchange = () => selectCase(Number(el.caseSelect.value));
+    renderExperimentCards();
     selectCase(0);
   }
 
@@ -570,6 +627,9 @@
     el.caseTags.innerHTML = (item.tags || []).map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("");
     buildControls(item);
     buildFormula(item);
+    updateCaseSequence();
+    updateSymbolPanel();
+    syncBrowserActive();
     render();
   }
 
@@ -660,6 +720,15 @@
     el.speed.addEventListener("change", () => {
       app.speed = Number(el.speed.value);
     });
+    if (el.prevCase) {
+      el.prevCase.addEventListener("click", () => shiftCase(-1));
+    }
+    if (el.nextCase) {
+      el.nextCase.addEventListener("click", () => shiftCase(1));
+    }
+    if (el.copySnapshot) {
+      el.copySnapshot.addEventListener("click", copySnapshot);
+    }
   }
 
   function resize() {
@@ -753,8 +822,277 @@
         readouts = [];
     }
     paintReadouts(readouts);
+    app.lastReadouts = readouts;
     paintHud(hud);
+    paintDataSnapshot(readouts);
     updateTimeUi();
+  }
+
+  function buildLabStats() {
+    if (!el.labStats) return;
+    const totalCases = allCaseEntries().length;
+    const totalTags = new Set(allCaseEntries().flatMap((entry) => entry.item.tags || [])).size;
+    el.labStats.innerHTML = [
+      ["10", "mechanics topics"],
+      [String(totalCases), "working cases"],
+      [String(LAB_SYMBOLS.length), "symbol cards"],
+      [String(totalTags), "exam tags"],
+      ["5", "quick starts"],
+      ["live", "canvas lab"]
+    ].map(([value, label]) => `
+      <div class="lab-stat">
+        <strong>${escapeHtml(value)}</strong>
+        <span>${escapeHtml(label)}</span>
+      </div>
+    `).join("");
+  }
+
+  function buildQuickLabs() {
+    if (!el.quickLabGrid) return;
+    el.quickLabGrid.innerHTML = QUICK_STARTS.map((item) => `
+      <button class="quick-lab" type="button" data-topic-id="${escapeHtml(item.topicId)}" data-case-id="${escapeHtml(item.caseId)}">
+        <strong>${escapeHtml(item.title)}</strong>
+        <span>${escapeHtml(item.detail)}</span>
+      </button>
+    `).join("");
+    el.quickLabGrid.querySelectorAll("button").forEach((button) => {
+      button.addEventListener("click", () => {
+        selectByIds(button.dataset.topicId, button.dataset.caseId);
+        scrollStageIntoView();
+      });
+    });
+  }
+
+  function bindLabSearch() {
+    if (!el.labSearch) return;
+    el.labSearch.addEventListener("input", () => {
+      app.query = normalise(el.labSearch.value);
+      renderExperimentCards();
+    });
+    if (el.clearSearch) {
+      el.clearSearch.addEventListener("click", () => {
+        el.labSearch.value = "";
+        app.query = "";
+        renderExperimentCards();
+        el.labSearch.focus();
+      });
+    }
+  }
+
+  function renderExperimentCards() {
+    if (!el.experimentCards) return;
+    const current = currentTopic();
+    const query = app.query;
+    const entries = allCaseEntries().filter((entry) => {
+      if (!query) return entry.topic.id === current.id;
+      return searchableText(entry).includes(query);
+    });
+    if (el.matchCount) {
+      const scope = query ? "matching cases" : current.label + " cases";
+      el.matchCount.textContent = entries.length + " " + scope;
+    }
+    if (!entries.length) {
+      el.experimentCards.innerHTML = `<div class="no-results">No experiment matched this search. Try a symbol like mu, theta, F, impulse, projectile, or moments.</div>`;
+      return;
+    }
+    el.experimentCards.innerHTML = entries.map((entry) => experimentCard(entry)).join("");
+    el.experimentCards.querySelectorAll("button").forEach((button) => {
+      button.addEventListener("click", () => {
+        selectByIndexes(Number(button.dataset.topicIndex), Number(button.dataset.caseIndex));
+        scrollStageIntoView();
+      });
+    });
+    syncBrowserActive();
+  }
+
+  function experimentCard(entry) {
+    const symbols = symbolsForCase(entry.item).slice(0, 4);
+    return `
+      <button class="experiment-card" type="button" data-topic-index="${entry.topicIndex}" data-case-index="${entry.caseIndex}">
+        <div class="experiment-meta">
+          <span class="experiment-symbol experiment-topic">${escapeHtml(entry.topic.label)}</span>
+          <span class="experiment-symbol">${escapeHtml(entry.item.stage)}</span>
+        </div>
+        <strong>${escapeHtml(entry.item.title)}</strong>
+        <p>${escapeHtml(entry.item.purpose)}</p>
+        <div class="symbol-tags">
+          ${symbols.map((item) => `<span class="symbol-chip">${item.mark}</span>`).join("")}
+        </div>
+      </button>
+    `;
+  }
+
+  function updateCaseSequence() {
+    if (!el.caseSequence) return;
+    const topic = currentTopic();
+    const rows = [
+      { label: "Previous", index: app.caseIndex - 1 },
+      { label: "Now running", index: app.caseIndex },
+      { label: "Next variation", index: app.caseIndex + 1 },
+      { label: "After that", index: app.caseIndex + 2 }
+    ].filter((row) => row.index >= 0 && row.index < topic.cases.length);
+    el.caseSequence.innerHTML = rows.map((row) => {
+      const item = topic.cases[row.index];
+      const active = row.index === app.caseIndex ? " is-active" : "";
+      return `
+        <div class="case-step${active}">
+          <div class="step-k">${escapeHtml(row.label)}</div>
+          <div class="step-v">${String(row.index + 1).padStart(2, "0")} | ${escapeHtml(item.title)}</div>
+        </div>
+      `;
+    }).join("");
+    if (el.prevCase) el.prevCase.disabled = app.caseIndex === 0;
+    if (el.nextCase) el.nextCase.disabled = app.caseIndex >= topic.cases.length - 1;
+  }
+
+  function updateSymbolPanel() {
+    if (!el.symbolGrid) return;
+    const symbols = symbolsForCase(currentCase()).slice(0, 8);
+    el.symbolGrid.innerHTML = symbols.map((item) => `
+      <div class="symbol-card">
+        <strong>${item.mark}</strong>
+        <span>${escapeHtml(item.name)}</span>
+        <span>${item.unit}</span>
+      </div>
+    `).join("");
+  }
+
+  function paintDataSnapshot(readouts) {
+    if (!el.dataTable) return;
+    const item = currentCase();
+    const rows = [
+      ["case", item.title],
+      ["time", fmt(app.t) + " s"],
+      ...readouts.slice(0, 6).map((row) => [row.key, row.value])
+    ];
+    el.dataTable.innerHTML = `
+      <thead><tr><th>Quantity</th><th>Value</th></tr></thead>
+      <tbody>
+        ${rows.map(([key, value]) => `<tr><td>${escapeHtml(key)}</td><td>${escapeHtml(value)}</td></tr>`).join("")}
+      </tbody>
+    `;
+  }
+
+  function copySnapshot() {
+    const item = currentCase();
+    const lines = [
+      "WME01 Mechanics Lab",
+      currentTopic().title + " - " + item.title,
+      "t = " + fmt(app.t) + " s"
+    ].concat(app.lastReadouts.map((row) => row.key + ": " + row.value));
+    const text = lines.join("\n");
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => flashCopyButton("Copied")).catch(() => fallbackCopy(text));
+    } else {
+      fallbackCopy(text);
+    }
+  }
+
+  function fallbackCopy(text) {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "fixed";
+    ta.style.left = "-9999px";
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand("copy");
+    document.body.removeChild(ta);
+    flashCopyButton("Copied");
+  }
+
+  function flashCopyButton(label) {
+    if (!el.copySnapshot) return;
+    const old = el.copySnapshot.textContent;
+    el.copySnapshot.textContent = label;
+    window.setTimeout(() => {
+      el.copySnapshot.textContent = old;
+    }, 1100);
+  }
+
+  function shiftCase(step) {
+    const next = clamp(app.caseIndex + step, 0, currentTopic().cases.length - 1);
+    if (next !== app.caseIndex) selectCase(next);
+  }
+
+  function selectByIds(topicId, caseId) {
+    const topicIndex = TOPICS.findIndex((topic) => topic.id === topicId);
+    if (topicIndex < 0) return;
+    const caseIndex = TOPICS[topicIndex].cases.findIndex((item) => item.id === caseId);
+    selectByIndexes(topicIndex, caseIndex >= 0 ? caseIndex : 0);
+  }
+
+  function selectByIndexes(topicIndex, caseIndex) {
+    if (topicIndex < 0 || topicIndex >= TOPICS.length) return;
+    selectTopic(topicIndex);
+    selectCase(clamp(caseIndex, 0, currentTopic().cases.length - 1));
+  }
+
+  function syncBrowserActive() {
+    if (el.experimentCards) {
+      el.experimentCards.querySelectorAll(".experiment-card").forEach((card) => {
+        card.classList.toggle("is-active", Number(card.dataset.topicIndex) === app.topicIndex && Number(card.dataset.caseIndex) === app.caseIndex);
+      });
+    }
+    if (el.quickLabGrid) {
+      el.quickLabGrid.querySelectorAll(".quick-lab").forEach((button) => {
+        const topic = TOPICS.find((item) => item.id === button.dataset.topicId);
+        const caseItem = topic ? topic.cases.find((item) => item.id === button.dataset.caseId) : null;
+        button.classList.toggle("is-active", topic === currentTopic() && caseItem === currentCase());
+      });
+    }
+  }
+
+  function scrollStageIntoView() {
+    const target = document.querySelector(".stage-panel");
+    if (target && window.matchMedia("(min-width: 721px)").matches) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+
+  function allCaseEntries() {
+    const rows = [];
+    TOPICS.forEach((topic, topicIndex) => {
+      topic.cases.forEach((item, caseIndex) => {
+        rows.push({ topic, item, topicIndex, caseIndex });
+      });
+    });
+    return rows;
+  }
+
+  function searchableText(entry) {
+    const symbols = symbolsForCase(entry.item).map((item) => [item.mark, item.name, item.unit, ...(item.keywords || [])].join(" ")).join(" ");
+    return normalise([
+      entry.topic.label,
+      entry.topic.title,
+      entry.topic.subtitle,
+      entry.item.title,
+      entry.item.purpose,
+      entry.item.stage,
+      (entry.item.tags || []).join(" "),
+      symbols
+    ].join(" "));
+  }
+
+  function symbolsForCase(item) {
+    const tagText = normalise([item.stage, item.title, item.purpose, (item.tags || []).join(" ")].join(" "));
+    const direct = LAB_SYMBOLS.filter((symbol) => (
+      symbol.stages.includes(item.stage) ||
+      symbol.keywords.some((keyword) => tagText.includes(normalise(keyword))) ||
+      tagText.includes(normalise(symbol.name))
+    ));
+    return direct.length ? direct : LAB_SYMBOLS.slice(0, 6);
+  }
+
+  function normalise(value) {
+    return String(value || "")
+      .replace(/&mu;/g, "mu")
+      .replace(/&theta;/g, "theta")
+      .replace(/&Sigma;/g, "sigma")
+      .replace(/<[^>]+>/g, " ")
+      .toLowerCase()
+      .replace(/\s+/g, " ")
+      .trim();
   }
 
   function drawBackdrop(W, H) {
