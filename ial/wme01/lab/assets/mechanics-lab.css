@@ -366,15 +366,15 @@ select:focus-visible {
 }
 
 .quick-lab {
-  min-height: 92px;
+  min-height: 112px;
   padding: 12px;
   display: grid;
   align-content: start;
-  gap: 7px;
+  gap: 9px;
 }
 
 .experiment-card {
-  min-height: 168px;
+  min-height: 178px;
   padding: 14px;
   display: grid;
   align-content: start;
@@ -403,28 +403,59 @@ select:focus-visible {
   line-height: 1.45;
 }
 
-.quick-lab .case-play-label,
-.experiment-card .case-play-label {
-  width: fit-content;
-  margin-top: 4px;
+.quick-lab p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.card-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.card-title-row strong {
+  min-width: 0;
+}
+
+.case-card-actions {
   display: inline-flex;
   align-items: center;
+  flex: 0 0 auto;
+  gap: 6px;
+}
+
+.case-action-btn {
   min-height: 28px;
-  padding: 0 10px;
-  border-radius: 8px;
-  color: #fff;
-  background: var(--navy);
+  border: 1px solid rgba(8, 20, 47, 0.12);
+  border-radius: 7px;
+  padding: 0 9px;
+  cursor: pointer;
   font-size: 11px;
   font-weight: 880;
   line-height: 1;
 }
 
-.quick-lab:hover .case-play-label,
-.experiment-card:hover .case-play-label,
-.quick-lab.is-active .case-play-label,
-.experiment-card.is-active .case-play-label {
+.case-action-btn.play {
+  color: #fff;
+  background: var(--navy);
+}
+
+.case-action-btn.reset {
+  color: var(--navy);
+  background: #f7f9fe;
+}
+
+.case-action-btn:hover,
+.case-action-btn:focus-visible,
+.quick-lab.is-active .case-action-btn.play,
+.experiment-card.is-active .case-action-btn.play {
   color: var(--navy);
   background: var(--gold);
+  border-color: rgba(212, 175, 55, 0.7);
 }
 
 .experiment-meta,
@@ -493,6 +524,30 @@ select:focus-visible {
   gap: 16px;
   padding: 18px 22px;
   border-bottom: 1px solid var(--line);
+}
+
+.stage-title-line {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.stage-title-actions {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.stage-title-actions .mini-btn {
+  min-height: 32px;
+}
+
+.stage-title-actions .title-play {
+  color: var(--navy);
+  background: var(--gold);
+  border-color: rgba(212, 175, 55, 0.7);
 }
 
 .stage-head h2 {
@@ -988,6 +1043,22 @@ select {
   .stage-head {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .stage-title-line,
+  .card-title-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .case-card-actions,
+  .stage-title-actions {
+    width: 100%;
+  }
+
+  .case-action-btn,
+  .stage-title-actions .mini-btn {
+    flex: 1;
   }
 
   .case-chip {

@@ -554,6 +554,8 @@
     speed: document.getElementById("speed"),
     playPause: document.getElementById("playPause"),
     playIcon: document.getElementById("playIcon"),
+    stagePlay: document.getElementById("stagePlay"),
+    stageReset: document.getElementById("stageReset"),
     reset: document.getElementById("reset"),
     stepBack: document.getElementById("stepBack")
   };
@@ -617,8 +619,7 @@
   function selectCase(index) {
     app.caseIndex = index;
     app.t = 0;
-    app.playing = false;
-    el.playIcon.textContent = "Play";
+    setPlaying(false);
     el.caseSelect.value = String(index);
     const item = currentCase();
     app.values = Object.assign({}, item.defaults || {});
@@ -655,8 +656,7 @@
         el.controlStack.querySelectorAll(`[data-key="${key}"]`).forEach((peer) => {
           if (peer !== event.target) peer.value = event.target.value;
         });
-        app.playing = false;
-        el.playIcon.textContent = "Play";
+        setPlaying(false);
         render();
       });
     });
@@ -667,8 +667,7 @@
         el.controlStack.querySelectorAll(`[data-key="${key}"]`).forEach((peer) => {
           peer.classList.toggle("is-active", peer === button);
         });
-        app.playing = false;
-        el.playIcon.textContent = "Play";
+        setPlaying(false);
         render();
       });
     });
@@ -695,31 +694,32 @@
 
   function bindTransport() {
     el.playPause.addEventListener("click", () => {
-      app.playing = !app.playing;
-      app.last = performance.now();
-      el.playIcon.textContent = app.playing ? "Pause" : "Play";
+      setPlaying(!app.playing);
     });
     el.reset.addEventListener("click", () => {
-      app.t = 0;
-      app.playing = false;
-      el.playIcon.textContent = "Play";
-      render();
+      resetSimulation();
     });
     el.stepBack.addEventListener("click", () => {
       app.t = Math.max(0, app.t - 0.25);
-      app.playing = false;
-      el.playIcon.textContent = "Play";
+      setPlaying(false);
       render();
     });
     el.timeSlider.addEventListener("input", () => {
       app.t = duration() * Number(el.timeSlider.value) / 1000;
-      app.playing = false;
-      el.playIcon.textContent = "Play";
+      setPlaying(false);
       render();
     });
     el.speed.addEventListener("change", () => {
       app.speed = Number(el.speed.value);
     });
+    if (el.stagePlay) {
+      el.stagePlay.addEventListener("click", () => {
+        setPlaying(!app.playing);
+      });
+    }
+    if (el.stageReset) {
+      el.stageReset.addEventListener("click", resetSimulation);
+    }
     if (el.prevCase) {
       el.prevCase.addEventListener("click", () => shiftCase(-1));
     }
@@ -732,9 +732,25 @@
   }
 
   function startPlayback() {
-    app.playing = true;
-    app.last = performance.now();
-    el.playIcon.textContent = "Pause";
+    setPlaying(true);
+  }
+
+  function resetSimulation() {
+    app.t = 0;
+    setPlaying(false);
+    render();
+  }
+
+  function setPlaying(value) {
+    app.playing = Boolean(value);
+    if (app.playing) app.last = performance.now();
+    updatePlayButtons();
+  }
+
+  function updatePlayButtons() {
+    const label = app.playing ? "Pause" : "Play";
+    if (el.playIcon) el.playIcon.textContent = label;
+    if (el.stagePlay) el.stagePlay.textContent = label;
   }
 
   function resize() {
@@ -752,8 +768,7 @@
       app.t += dt;
       if (app.t >= duration()) {
         app.t = duration();
-        app.playing = false;
-        el.playIcon.textContent = "Play";
+        setPlaying(false);
       }
       render();
     }
@@ -856,19 +871,18 @@
   function buildQuickLabs() {
     if (!el.quickLabGrid) return;
     el.quickLabGrid.innerHTML = QUICK_STARTS.map((item) => `
-      <button class="quick-lab" type="button" data-topic-id="${escapeHtml(item.topicId)}" data-case-id="${escapeHtml(item.caseId)}">
-        <strong>${escapeHtml(item.title)}</strong>
-        <span>${escapeHtml(item.detail)}</span>
-        <span class="case-play-label">Play</span>
-      </button>
+      <article class="quick-lab" data-topic-id="${escapeHtml(item.topicId)}" data-case-id="${escapeHtml(item.caseId)}">
+        <div class="card-title-row">
+          <strong>${escapeHtml(item.title)}</strong>
+          <div class="case-card-actions" aria-label="${escapeHtml(item.title)} controls">
+            <button class="case-action-btn play" type="button" data-action="play">Play</button>
+            <button class="case-action-btn reset" type="button" data-action="reset">Reset</button>
+          </div>
+        </div>
+        <p>${escapeHtml(item.detail)}</p>
+      </article>
     `).join("");
-    el.quickLabGrid.querySelectorAll("button").forEach((button) => {
-      button.addEventListener("click", () => {
-        selectByIds(button.dataset.topicId, button.dataset.caseId);
-        startPlayback();
-        scrollStageIntoView();
-      });
-    });
+    bindCardControls(el.quickLabGrid);
   }
 
   function bindLabSearch() {
@@ -904,32 +918,61 @@
       return;
     }
     el.experimentCards.innerHTML = entries.map((entry) => experimentCard(entry)).join("");
-    el.experimentCards.querySelectorAll("button").forEach((button) => {
-      button.addEventListener("click", () => {
-        selectByIndexes(Number(button.dataset.topicIndex), Number(button.dataset.caseIndex));
-        startPlayback();
-        scrollStageIntoView();
-      });
-    });
+    bindCardControls(el.experimentCards);
     syncBrowserActive();
   }
 
   function experimentCard(entry) {
     const symbols = symbolsForCase(entry.item).slice(0, 4);
     return `
-      <button class="experiment-card" type="button" data-topic-index="${entry.topicIndex}" data-case-index="${entry.caseIndex}">
+      <article class="experiment-card" data-topic-index="${entry.topicIndex}" data-case-index="${entry.caseIndex}">
         <div class="experiment-meta">
           <span class="experiment-symbol experiment-topic">${escapeHtml(entry.topic.label)}</span>
           <span class="experiment-symbol">${escapeHtml(entry.item.stage)}</span>
         </div>
-        <strong>${escapeHtml(entry.item.title)}</strong>
+        <div class="card-title-row">
+          <strong>${escapeHtml(entry.item.title)}</strong>
+          <div class="case-card-actions" aria-label="${escapeHtml(entry.item.title)} controls">
+            <button class="case-action-btn play" type="button" data-action="play">Play</button>
+            <button class="case-action-btn reset" type="button" data-action="reset">Reset</button>
+          </div>
+        </div>
         <p>${escapeHtml(entry.item.purpose)}</p>
         <div class="symbol-tags">
           ${symbols.map((item) => `<span class="symbol-chip">${item.mark}</span>`).join("")}
         </div>
-        <span class="case-play-label">Play case</span>
-      </button>
+      </article>
     `;
+  }
+
+  function bindCardControls(root) {
+    root.querySelectorAll(".case-action-btn").forEach((button) => {
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
+        runCardAction(button.closest(".quick-lab, .experiment-card"), button.dataset.action);
+      });
+    });
+    root.querySelectorAll(".quick-lab, .experiment-card").forEach((card) => {
+      card.addEventListener("click", (event) => {
+        if (event.target.closest("button")) return;
+        runCardAction(card, "reset");
+      });
+    });
+  }
+
+  function runCardAction(card, action) {
+    if (!card) return;
+    if (card.classList.contains("quick-lab")) {
+      selectByIds(card.dataset.topicId, card.dataset.caseId);
+    } else {
+      selectByIndexes(Number(card.dataset.topicIndex), Number(card.dataset.caseIndex));
+    }
+    if (action === "play") {
+      startPlayback();
+    } else {
+      resetSimulation();
+    }
+    scrollStageIntoView();
   }
 
   function updateCaseSequence() {

@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Elite IGCSE Academy | Mechanics 1 Lab</title>
-<link rel="stylesheet" href="assets/mechanics-lab.css?v=20260620a" />
+<link rel="stylesheet" href="assets/mechanics-lab.css?v=20260620b" />
 </head>
 <body>
   <div class="lab-shell">
@@ -64,7 +64,13 @@
       <section class="stage-panel" aria-label="Simulation stage">
         <div class="stage-head">
           <div>
-            <h2 id="topicTitle">Loading...</h2>
+            <div class="stage-title-line">
+              <h2 id="topicTitle">Loading...</h2>
+              <div class="stage-title-actions" aria-label="Active experiment controls">
+                <button class="mini-btn title-play" id="stagePlay" type="button">Play</button>
+                <button class="mini-btn" id="stageReset" type="button">Reset</button>
+              </div>
+            </div>
             <p id="topicSubtitle"></p>
           </div>
           <div class="case-chip" id="caseChip">Case</div>
@@ -141,6 +147,6 @@
     </main>
   </div>
 
-<script src="assets/mechanics-lab.js?v=20260620a"></script>
+<script src="assets/mechanics-lab.js?v=20260620b"></script>
 </body>
 </html>
