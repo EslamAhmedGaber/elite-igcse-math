@@ -303,6 +303,39 @@ def verify_pathway_palette_activation(report: Report) -> None:
             summary = detail[0] if detail else "syntax check failed"
             report.error(f"{filename} is not valid JavaScript: {summary}")
 
+
+def verify_mechanics_lab(report: Report) -> None:
+    """Guard the experiment-first WME01 visual laboratory and its full case catalogue."""
+    lab_js = ROOT / "ial" / "wme01" / "lab" / "assets" / "mechanics-lab.js"
+    lab_test = ROOT / "tools" / "test_mechanics_lab.js"
+    if not lab_js.exists():
+        report.error("WME01 Mechanics laboratory JavaScript is missing.")
+        return
+    if not lab_test.exists():
+        report.error("Mechanics laboratory release test is missing.")
+        return
+    try:
+        subprocess.run(
+            ["node", "--check", str(lab_js)],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        subprocess.run(
+            ["node", str(lab_test)],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        report.set("wme01_lab_topics", 10)
+        report.set("wme01_lab_cases", 98)
+    except FileNotFoundError:
+        report.warn("Node.js is unavailable; skipped Mechanics laboratory checks.")
+    except subprocess.CalledProcessError as exc:
+        detail = (exc.stderr or exc.stdout or "").strip().splitlines()
+        summary = detail[0] if detail else "Mechanics laboratory check failed"
+        report.error(f"WME01 Mechanics laboratory failed verification: {summary}")
+
     study_test = ROOT / "tools" / "test_study_search_index.js"
     if study_test.exists():
         try:
@@ -655,6 +688,7 @@ def main() -> int:
     report = Report()
     verify_guardrails(report)
     verify_runtime_js(report)
+    verify_mechanics_lab(report)
     verify_revision_engine(report)
     verify_pathway_palette_activation(report)
     question_by_id, paper_slugs, _used_topics = verify_questions(report)

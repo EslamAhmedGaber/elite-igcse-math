@@ -16,6 +16,7 @@ This document is the repo handbook. For current work state, read `C:\Users\Eslam
 | **Replace your photo** | §4.5 | Drop new image at `assets/Mine.png` (overwrite), commit, push |
 | **Check saved student progress** | `/progress.html` | Name, target, topic sheet, backup export/import, WhatsApp summary |
 | **Rebuild universal Study search** | `tools/build_study_search_index.js` | Generate the shared course, topic, note, and resource index, then run its test |
+| **Check the Mechanics laboratory** | `tools/test_mechanics_lab.js` | Verify all 10 topics, 98 cases, visual modes, controls, and responsive release contract |
 | **Add a new paper** | `tools/README.md` | Drop PDF, ingest, generate runtime data, build books, verify |
 | **Add a new curriculum** | `docs/COURSE_MODULE_PIPELINE.md` | Add the course object, data adapter, progress keys, books, and verification |
 | **Activate free Google progress login** | `docs/firebase-free-setup.md` | Firebase Spark plan, Google login, Firestore rules, paste config |
@@ -45,7 +46,7 @@ Pages served:
 - `/ial/wma11/index.html` - Pure 1 WMA11 course hub, notes, questions, solutions, books, and progress
 - `/ial/wma12/index.html` - Pure 2 WMA12 course hub, notes, questions, solutions, books, and progress
 - `/ial/wme01/index.html` - Mechanics 1 WME01 course hub, notes, questions, solutions, books, progress, and lab
-- `/ial/wme01/lab/index.html` - Mechanics simulation and visual experiment centre
+- `/ial/wme01/lab/index.html` - Experiment-first Mechanics workbench with 98 cases, synchronized graphs, live measurements, symbols, image capture, and six playback speeds
 - `/checkup.html` - Exam readiness check and next-action recommender
 - `/topics.html` - Topic roadmap
 - `/planner.html` - Backward-compatible redirect to the merged Progress study plan
@@ -129,6 +130,7 @@ website/
 │   ├── build_books.py          # Public classified books + private answer books
 │   ├── build_study_search_index.js # Regenerate study-search-data.js from canonical sources
 │   ├── test_study_search_index.js  # Search-index route and coverage guardrails
+│   ├── test_mechanics_lab.js       # 10-topic / 98-case Mechanics laboratory release guard
 │   └── verify_pipeline.py      # Guardrails before publish
 │
 ├── ial/                     # WMA11, WMA12, WME01 hubs, data, notes, and Mechanics lab

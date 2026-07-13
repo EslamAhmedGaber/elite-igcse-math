@@ -15,6 +15,46 @@
     dim: "#9fb2d8"
   };
 
+  const TOPIC_VISUALS = {
+    modelling: { icon: "boxes", accent: "#e1b84f", short: "Modelling" },
+    vectors: { icon: "move-up-right", accent: "#46b5f7", short: "Vectors" },
+    graphs: { icon: "chart-spline", accent: "#7767d8", short: "Graphs" },
+    suvat1d: { icon: "timer", accent: "#0f9f8f", short: "SUVAT 1D" },
+    suvat2d: { icon: "orbit", accent: "#155eef", short: "SUVAT 2D" },
+    forces: { icon: "move-3d", accent: "#e96852", short: "Forces" },
+    newton: { icon: "equal", accent: "#209f6f", short: "F = ma" },
+    inclines: { icon: "triangle-right", accent: "#dc7c31", short: "Inclines" },
+    momentum: { icon: "arrow-left-right", accent: "#2c8cbf", short: "Momentum" },
+    moments: { icon: "scale", accent: "#9a5dba", short: "Moments" }
+  };
+
+  const STAGE_VISUALS = {
+    projectile: { icon: "send", label: "Trajectory" },
+    modelling: { icon: "boxes", label: "Model" },
+    units: { icon: "ruler", label: "Units" },
+    vectors: { icon: "move-up-right", label: "Vectors" },
+    graphs: { icon: "chart-spline", label: "Graph" },
+    suvat1d: { icon: "timer", label: "Motion" },
+    suvat2d: { icon: "orbit", label: "2D motion" },
+    forces: { icon: "move-3d", label: "Force system" },
+    dynamics: { icon: "gauge", label: "Dynamics" },
+    incline: { icon: "triangle-right", label: "Inclined plane" },
+    momentum: { icon: "arrow-left-right", label: "Momentum" },
+    moments: { icon: "scale", label: "Moments" }
+  };
+
+  const analysisColors = {
+    cyan: "#46b5f7",
+    teal: "#2dd4bf",
+    gold: "#f0cf68",
+    coral: "#fb7185",
+    violet: "#a78bfa",
+    green: "#34d399",
+    white: "#eaf2ff",
+    grid: "rgba(185, 207, 231, 0.13)",
+    muted: "#9fb2c9"
+  };
+
   const commonMoves = {
     suvat: [
       "List s, u, v, a, t before choosing an equation.",
@@ -548,19 +588,32 @@
     formulaTrail: document.getElementById("formulaTrail"),
     examMoves: document.getElementById("examMoves"),
     canvas: document.getElementById("labCanvas"),
+    analysisCanvas: document.getElementById("analysisCanvas"),
+    analysisTitle: document.getElementById("analysisTitle"),
+    analysisLegend: document.getElementById("analysisLegend"),
+    analysisSummary: document.getElementById("analysisSummary"),
+    visualStage: document.getElementById("visualStage"),
+    viewModes: document.getElementById("viewModes"),
+    sceneState: document.getElementById("sceneState"),
     hud: document.getElementById("hud"),
     timeSlider: document.getElementById("timeSlider"),
     timeOut: document.getElementById("timeOut"),
     speed: document.getElementById("speed"),
+    speedButtons: document.getElementById("speedButtons"),
     playPause: document.getElementById("playPause"),
     playIcon: document.getElementById("playIcon"),
     stagePlay: document.getElementById("stagePlay"),
     stageReset: document.getElementById("stageReset"),
+    stageStepBack: document.getElementById("stageStepBack"),
+    stageCapture: document.getElementById("stageCapture"),
+    stageFullscreen: document.getElementById("stageFullscreen"),
     reset: document.getElementById("reset"),
-    stepBack: document.getElementById("stepBack")
+    stepBack: document.getElementById("stepBack"),
+    inspectorTabs: document.querySelector(".inspector-tabs")
   };
 
   const ctx = el.canvas.getContext("2d");
+  const analysisCtx = el.analysisCanvas.getContext("2d");
   const app = {
     topicIndex: 0,
     caseIndex: 0,
@@ -570,6 +623,8 @@
     last: 0,
     speed: 1,
     query: "",
+    viewMode: window.matchMedia("(max-width: 720px)").matches ? "scene" : "split",
+    inspectorTab: "overview",
     lastReadouts: [],
     raf: null
   };
@@ -579,24 +634,35 @@
     buildLabStats();
     buildQuickLabs();
     bindLabSearch();
+    bindStudioControls();
     const params = new URLSearchParams(location.search);
     const requested = params.get("topic");
     const idx = TOPICS.findIndex((topic) => topic.id === requested);
     if (idx >= 0) app.topicIndex = idx;
     selectTopic(app.topicIndex);
     bindTransport();
-    resize();
+    applyViewMode(app.viewMode);
+    refreshIcons();
+    requestAnimationFrame(resize);
     window.addEventListener("resize", resize);
     requestAnimationFrame(loop);
   }
 
   function buildTopicRail() {
-    el.topicRail.innerHTML = TOPICS.map((topic, index) => (
-      `<button class="topic-tab" type="button" data-index="${index}">${topic.label}</button>`
-    )).join("");
+    el.topicRail.innerHTML = TOPICS.map((topic, index) => {
+      const visual = topicVisual(topic.id);
+      const number = String(index + 1).padStart(2, "0");
+      return `
+        <button class="topic-tab" type="button" data-index="${index}" aria-label="${escapeHtml(topic.title)}" style="--topic-accent:${visual.accent}">
+          <span class="topic-icon"><i data-lucide="${visual.icon}" aria-hidden="true"></i></span>
+          <span class="topic-number">${number}</span>
+          <span class="topic-name">${escapeHtml(visual.short)}</span>
+        </button>`;
+    }).join("");
     el.topicRail.querySelectorAll("button").forEach((button) => {
       button.addEventListener("click", () => selectTopic(Number(button.dataset.index)));
     });
+    refreshIcons();
   }
 
   function selectTopic(index) {
@@ -604,8 +670,11 @@
     app.caseIndex = 0;
     el.topicRail.querySelectorAll("button").forEach((button, i) => {
       button.classList.toggle("is-active", i === index);
+      button.setAttribute("aria-current", i === index ? "true" : "false");
     });
     const topic = currentTopic();
+    const visual = topicVisual(topic.id);
+    document.documentElement.style.setProperty("--active-topic", visual.accent);
     el.topicTitle.textContent = topic.title;
     el.topicSubtitle.textContent = topic.subtitle;
     el.caseSelect.innerHTML = topic.cases.map((item, i) => (
@@ -614,6 +683,7 @@
     el.caseSelect.onchange = () => selectCase(Number(el.caseSelect.value));
     renderExperimentCards();
     selectCase(0);
+    refreshIcons();
   }
 
   function selectCase(index) {
@@ -625,6 +695,10 @@
     app.values = Object.assign({}, item.defaults || {});
     el.caseChip.textContent = item.title;
     el.casePurpose.textContent = item.purpose;
+    if (el.analysisTitle) {
+      el.analysisTitle.textContent = (STAGE_VISUALS[item.stage] || { label: "Live" }).label + " analysis";
+    }
+    if (el.sceneState) el.sceneState.textContent = "Ready";
     el.caseTags.innerHTML = (item.tags || []).map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("");
     buildControls(item);
     buildFormula(item);
@@ -632,6 +706,7 @@
     updateSymbolPanel();
     syncBrowserActive();
     render();
+    refreshIcons();
   }
 
   function buildControls(item) {
@@ -692,7 +767,82 @@
     el.examMoves.innerHTML = (item.moves || []).map((line) => `<li>${line}</li>`).join("");
   }
 
+  function bindStudioControls() {
+    if (el.viewModes) {
+      el.viewModes.querySelectorAll("[data-view-mode]").forEach((button) => {
+        button.addEventListener("click", () => applyViewMode(button.dataset.viewMode));
+      });
+    }
+    if (el.inspectorTabs) {
+      const tabs = Array.from(el.inspectorTabs.querySelectorAll("[data-inspector-tab]"));
+      tabs.forEach((button, index) => {
+        button.addEventListener("click", () => selectInspectorTab(button.dataset.inspectorTab, false));
+        button.addEventListener("keydown", (event) => {
+          if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+          event.preventDefault();
+          let next = index;
+          if (event.key === "ArrowLeft") next = (index - 1 + tabs.length) % tabs.length;
+          if (event.key === "ArrowRight") next = (index + 1) % tabs.length;
+          if (event.key === "Home") next = 0;
+          if (event.key === "End") next = tabs.length - 1;
+          selectInspectorTab(tabs[next].dataset.inspectorTab, true);
+        });
+      });
+    }
+    selectInspectorTab(app.inspectorTab, false);
+  }
+
+  function selectInspectorTab(name, focus) {
+    const valid = ["overview", "variables", "method"];
+    app.inspectorTab = valid.includes(name) ? name : "overview";
+    document.querySelectorAll("[data-inspector-tab]").forEach((button) => {
+      const active = button.dataset.inspectorTab === app.inspectorTab;
+      button.setAttribute("aria-selected", active ? "true" : "false");
+      button.tabIndex = active ? 0 : -1;
+      if (active && focus) button.focus();
+    });
+    document.querySelectorAll("[data-inspector-panel]").forEach((panel) => {
+      const active = panel.dataset.inspectorPanel === app.inspectorTab;
+      panel.hidden = !active;
+      panel.classList.toggle("is-active", active);
+    });
+  }
+
+  function applyViewMode(mode) {
+    const valid = ["scene", "split", "graph"];
+    app.viewMode = valid.includes(mode) ? mode : "split";
+    if (el.visualStage) el.visualStage.dataset.view = app.viewMode;
+    if (el.viewModes) {
+      el.viewModes.querySelectorAll("[data-view-mode]").forEach((button) => {
+        button.setAttribute("aria-pressed", button.dataset.viewMode === app.viewMode ? "true" : "false");
+      });
+    }
+    requestAnimationFrame(resize);
+  }
+
+  function topicVisual(id) {
+    return TOPIC_VISUALS[id] || { icon: "activity", accent: "#155eef", short: id };
+  }
+
+  function stageVisual(stage) {
+    return STAGE_VISUALS[stage] || { icon: "activity", label: "Experiment" };
+  }
+
+  function refreshIcons() {
+    if (!window.lucide || typeof window.lucide.createIcons !== "function") return;
+    try {
+      window.lucide.createIcons({ attrs: { "aria-hidden": "true" } });
+    } catch (error) {
+      // Text labels remain usable when an icon name is unavailable.
+    }
+  }
+
   function bindTransport() {
+    const stepBack = () => {
+      app.t = Math.max(0, app.t - 0.25);
+      setPlaying(false);
+      render();
+    };
     el.playPause.addEventListener("click", () => {
       setPlaying(!app.playing);
     });
@@ -700,9 +850,7 @@
       resetSimulation();
     });
     el.stepBack.addEventListener("click", () => {
-      app.t = Math.max(0, app.t - 0.25);
-      setPlaying(false);
-      render();
+      stepBack();
     });
     el.timeSlider.addEventListener("input", () => {
       app.t = duration() * Number(el.timeSlider.value) / 1000;
@@ -711,7 +859,18 @@
     });
     el.speed.addEventListener("change", () => {
       app.speed = Number(el.speed.value);
+      syncSpeedButtons();
     });
+    if (el.speedButtons) {
+      el.speedButtons.querySelectorAll("[data-speed]").forEach((button) => {
+        button.addEventListener("click", () => {
+          app.speed = Number(button.dataset.speed);
+          el.speed.value = String(app.speed);
+          syncSpeedButtons();
+        });
+      });
+      syncSpeedButtons();
+    }
     if (el.stagePlay) {
       el.stagePlay.addEventListener("click", () => {
         setPlaying(!app.playing);
@@ -719,6 +878,16 @@
     }
     if (el.stageReset) {
       el.stageReset.addEventListener("click", resetSimulation);
+    }
+    if (el.stageStepBack) {
+      el.stageStepBack.addEventListener("click", stepBack);
+    }
+    if (el.stageCapture) {
+      el.stageCapture.addEventListener("click", captureLabImage);
+    }
+    if (el.stageFullscreen) {
+      el.stageFullscreen.addEventListener("click", toggleStageFullscreen);
+      document.addEventListener("fullscreenchange", updateFullscreenButton);
     }
     if (el.prevCase) {
       el.prevCase.addEventListener("click", () => shiftCase(-1));
@@ -738,6 +907,7 @@
   function resetSimulation() {
     app.t = 0;
     setPlaying(false);
+    if (el.sceneState) el.sceneState.textContent = "Ready";
     render();
   }
 
@@ -750,16 +920,128 @@
   function updatePlayButtons() {
     const label = app.playing ? "Pause" : "Play";
     if (el.playIcon) el.playIcon.textContent = label;
-    if (el.stagePlay) el.stagePlay.textContent = label;
+    if (el.stagePlay) {
+      const text = el.stagePlay.querySelector("span");
+      if (text) text.textContent = label;
+    }
+    updateControlIcon(el.playPause, app.playing ? "pause" : "play");
+    updateControlIcon(el.stagePlay, app.playing ? "pause" : "play");
+    if (el.sceneState) el.sceneState.textContent = app.playing ? "Running" : (app.t > 0 ? "Paused" : "Ready");
+    refreshIcons();
+  }
+
+  function syncSpeedButtons() {
+    if (!el.speedButtons) return;
+    el.speedButtons.querySelectorAll("[data-speed]").forEach((button) => {
+      const active = Number(button.dataset.speed) === Number(app.speed);
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+  }
+
+  function updateControlIcon(button, name) {
+    if (!button) return;
+    const current = button.querySelector("svg, [data-lucide]");
+    if (!current || current.getAttribute("data-lucide") === name) return;
+    const icon = document.createElement("i");
+    icon.setAttribute("data-lucide", name);
+    icon.setAttribute("aria-hidden", "true");
+    if (current.id) icon.id = current.id;
+    current.replaceWith(icon);
+  }
+
+  function toggleStageFullscreen() {
+    const stage = document.querySelector(".stage-panel");
+    if (!stage) return;
+    if (stage.classList.contains("is-theatre")) {
+      setTheatreMode(false);
+      return;
+    }
+    if (document.fullscreenElement) {
+      if (document.exitFullscreen) {
+        const exit = document.exitFullscreen();
+        if (exit && typeof exit.catch === "function") exit.catch(() => setTheatreMode(false));
+      }
+    } else if (stage.requestFullscreen) {
+      const request = stage.requestFullscreen();
+      if (request && typeof request.catch === "function") request.catch(() => setTheatreMode(true));
+    } else {
+      setTheatreMode(true);
+    }
+  }
+
+  function updateFullscreenButton() {
+    const stage = document.querySelector(".stage-panel");
+    const active = Boolean(document.fullscreenElement) || Boolean(stage && stage.classList.contains("is-theatre"));
+    updateControlIcon(el.stageFullscreen, active ? "minimize-2" : "maximize-2");
+    if (el.stageFullscreen) {
+      el.stageFullscreen.setAttribute("aria-label", active ? "Exit experiment fullscreen" : "Open experiment fullscreen");
+      el.stageFullscreen.title = active ? "Exit experiment fullscreen" : "Open experiment fullscreen";
+    }
+    refreshIcons();
+    requestAnimationFrame(resize);
+  }
+
+  function setTheatreMode(active) {
+    const stage = document.querySelector(".stage-panel");
+    const studio = document.querySelector(".lab-studio");
+    if (!stage || !studio) return;
+    stage.classList.toggle("is-theatre", Boolean(active));
+    studio.classList.toggle("is-theatre-mode", Boolean(active));
+    updateFullscreenButton();
+  }
+
+  function captureLabImage() {
+    const output = document.createElement("canvas");
+    output.width = 1600;
+    output.height = 900;
+    const outputCtx = output.getContext("2d");
+    outputCtx.fillStyle = "#061526";
+    outputCtx.fillRect(0, 0, output.width, output.height);
+    outputCtx.fillStyle = "#e1b84f";
+    outputCtx.font = "700 18px Inter, sans-serif";
+    outputCtx.fillText("ELITE MECHANICS 1 LAB", 40, 42);
+    outputCtx.fillStyle = "#ffffff";
+    outputCtx.font = "700 30px Inter, sans-serif";
+    outputCtx.fillText(currentTopic().title, 40, 82);
+    outputCtx.fillStyle = "#aebed1";
+    outputCtx.font = "18px Inter, sans-serif";
+    outputCtx.fillText(currentCase().title + " | t = " + fmt(app.t) + " s", 40, 112);
+    outputCtx.drawImage(el.canvas, 40, 140, 930, 680);
+    outputCtx.drawImage(el.analysisCanvas, 990, 140, 570, 680);
+    outputCtx.fillStyle = "#aebed1";
+    outputCtx.font = "15px Inter, sans-serif";
+    outputCtx.fillText("Edexcel IAL WME01 | Dr Eslam Ahmed", 40, 862);
+    const save = (url) => {
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "elite-wme01-" + currentCase().id.replace(/[^a-z0-9-]+/gi, "-").toLowerCase() + ".png";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+    };
+    save(output.toDataURL("image/png"));
+    updateControlIcon(el.stageCapture, "check");
+    refreshIcons();
+    window.setTimeout(() => {
+      updateControlIcon(el.stageCapture, "camera");
+      refreshIcons();
+    }, 900);
   }
 
   function resize() {
-    const rect = el.canvas.getBoundingClientRect();
-    const dpr = window.devicePixelRatio || 1;
-    el.canvas.width = Math.max(1, Math.round(rect.width * dpr));
-    el.canvas.height = Math.max(1, Math.round(rect.height * dpr));
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    resizeCanvas(el.canvas, ctx);
+    resizeCanvas(el.analysisCanvas, analysisCtx);
     render();
+  }
+
+  function resizeCanvas(canvas, context) {
+    if (!canvas || !context) return;
+    const rect = canvas.getBoundingClientRect();
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = Math.max(1, Math.round(rect.width * dpr));
+    canvas.height = Math.max(1, Math.round(rect.height * dpr));
+    context.setTransform(dpr, 0, 0, dpr, 0, 0);
   }
 
   function loop(now) {
@@ -783,8 +1065,8 @@
   function render() {
     const item = currentCase();
     const rect = el.canvas.getBoundingClientRect();
-    const W = rect.width;
-    const H = rect.height;
+    const W = Math.max(360, rect.width);
+    const H = Math.max(320, rect.height);
     ctx.clearRect(0, 0, W, H);
     drawBackdrop(W, H);
     const t = Math.min(app.t, duration());
@@ -842,6 +1124,8 @@
       default:
         readouts = [];
     }
+    const analysisRect = el.analysisCanvas.getBoundingClientRect();
+    drawAnalysis(Math.max(280, analysisRect.width), Math.max(280, analysisRect.height), t, readouts);
     paintReadouts(readouts);
     app.lastReadouts = readouts;
     paintHud(hud);
@@ -853,15 +1137,17 @@
     if (!el.labStats) return;
     const totalCases = allCaseEntries().length;
     const totalTags = new Set(allCaseEntries().flatMap((entry) => entry.item.tags || [])).size;
-    el.labStats.innerHTML = [
+    const stats = [
       ["10", "mechanics topics"],
       [String(totalCases), "working cases"],
       [String(LAB_SYMBOLS.length), "symbol cards"],
       [String(totalTags), "exam tags"],
       ["5", "quick starts"],
       ["live", "canvas lab"]
-    ].map(([value, label]) => `
-      <div class="lab-stat">
+    ];
+    const accents = ["#155eef", "#0f9f8f", "#7767d8", "#e96852", "#e1b84f", "#209f6f"];
+    el.labStats.innerHTML = stats.map(([value, label], index) => `
+      <div class="lab-stat" style="--stat-accent:${accents[index]}">
         <strong>${escapeHtml(value)}</strong>
         <span>${escapeHtml(label)}</span>
       </div>
@@ -870,19 +1156,24 @@
 
   function buildQuickLabs() {
     if (!el.quickLabGrid) return;
-    el.quickLabGrid.innerHTML = QUICK_STARTS.map((item) => `
-      <article class="quick-lab" data-topic-id="${escapeHtml(item.topicId)}" data-case-id="${escapeHtml(item.caseId)}">
-        <div class="card-title-row">
+    el.quickLabGrid.innerHTML = QUICK_STARTS.map((item) => {
+      const topic = TOPICS.find((entry) => entry.id === item.topicId);
+      const experiment = topic ? topic.cases.find((entry) => entry.id === item.caseId) : null;
+      const visual = topicVisual(item.topicId);
+      const stage = stageVisual(experiment ? experiment.stage : "");
+      return `
+        <article class="quick-lab" data-topic-id="${escapeHtml(item.topicId)}" data-case-id="${escapeHtml(item.caseId)}" style="--card-accent:${visual.accent}">
+          <span class="quick-icon"><i data-lucide="${stage.icon}" aria-hidden="true"></i></span>
           <strong>${escapeHtml(item.title)}</strong>
+          <p>${escapeHtml(item.detail)}</p>
           <div class="case-card-actions" aria-label="${escapeHtml(item.title)} controls">
-            <button class="case-action-btn play" type="button" data-action="play">Play</button>
-            <button class="case-action-btn reset" type="button" data-action="reset">Reset</button>
+            <button class="case-action-btn play" type="button" data-action="play"><i data-lucide="play" aria-hidden="true"></i><span>Play</span></button>
+            <button class="case-action-btn reset" type="button" data-action="reset"><i data-lucide="rotate-ccw" aria-hidden="true"></i><span>Reset</span></button>
           </div>
-        </div>
-        <p>${escapeHtml(item.detail)}</p>
-      </article>
-    `).join("");
+        </article>`;
+    }).join("");
     bindCardControls(el.quickLabGrid);
+    refreshIcons();
   }
 
   function bindLabSearch() {
@@ -920,21 +1211,25 @@
     el.experimentCards.innerHTML = entries.map((entry) => experimentCard(entry)).join("");
     bindCardControls(el.experimentCards);
     syncBrowserActive();
+    refreshIcons();
   }
 
   function experimentCard(entry) {
     const symbols = symbolsForCase(entry.item).slice(0, 4);
+    const visual = topicVisual(entry.topic.id);
+    const stage = stageVisual(entry.item.stage);
     return `
-      <article class="experiment-card" data-topic-index="${entry.topicIndex}" data-case-index="${entry.caseIndex}">
+      <article class="experiment-card" data-topic-index="${entry.topicIndex}" data-case-index="${entry.caseIndex}" style="--card-accent:${visual.accent}">
         <div class="experiment-meta">
           <span class="experiment-symbol experiment-topic">${escapeHtml(entry.topic.label)}</span>
-          <span class="experiment-symbol">${escapeHtml(entry.item.stage)}</span>
+          <span class="experiment-symbol">${escapeHtml(stage.label)}</span>
         </div>
+        <span class="experiment-icon"><i data-lucide="${stage.icon}" aria-hidden="true"></i></span>
         <div class="card-title-row">
           <strong>${escapeHtml(entry.item.title)}</strong>
           <div class="case-card-actions" aria-label="${escapeHtml(entry.item.title)} controls">
-            <button class="case-action-btn play" type="button" data-action="play">Play</button>
-            <button class="case-action-btn reset" type="button" data-action="reset">Reset</button>
+            <button class="case-action-btn play" type="button" data-action="play"><i data-lucide="play" aria-hidden="true"></i><span>Play</span></button>
+            <button class="case-action-btn reset" type="button" data-action="reset"><i data-lucide="rotate-ccw" aria-hidden="true"></i><span>Reset</span></button>
           </div>
         </div>
         <p>${escapeHtml(entry.item.purpose)}</p>
@@ -1243,30 +1538,34 @@
 
   function drawUnits(W, H) {
     const cards = [
-      ["Velocity", "m s^-1", "vector if direction is included"],
-      ["Acceleration", "m s^-2", "rate of change of velocity"],
-      ["Force", "kg m s^-2", "newton, N"],
-      ["Momentum", "kg m s^-1", "mass x velocity"],
+      ["Velocity", "m s\u207b\u00b9", "vector if direction is included"],
+      ["Acceleration", "m s\u207b\u00b2", "rate of change of velocity"],
+      ["Force", "kg m s\u207b\u00b2", "newton, N"],
+      ["Momentum", "kg m s\u207b\u00b9", "mass \u00d7 velocity"],
       ["Impulse", "N s", "same units as momentum"],
-      ["Moment", "N m", "force x distance"]
+      ["Moment", "N m", "force \u00d7 distance"]
     ];
     const active = Math.max(0, Math.min(cards.length - 1, Math.round((app.values.quantity || 1) - 1)));
-    const cw = Math.min(230, W / 3.6);
-    const gap = 16;
-    const startX = W / 2 - (cw * 3 + gap * 2) / 2;
-    const startY = H / 2 - 140;
+    const narrow = W < 520;
+    const columns = narrow ? 2 : 3;
+    const gap = narrow ? 10 : 16;
+    const cardHeight = narrow ? 94 : 104;
+    const cw = Math.min(230, (W - 44 - gap * (columns - 1)) / columns);
+    const rows = Math.ceil(cards.length / columns);
+    const startX = W / 2 - (cw * columns + gap * (columns - 1)) / 2;
+    const startY = H / 2 - (cardHeight * rows + gap * (rows - 1)) / 2;
     cards.forEach((card, i) => {
-      const col = i % 3;
-      const row = Math.floor(i / 3);
+      const col = i % columns;
+      const row = Math.floor(i / columns);
       const x = startX + col * (cw + gap);
-      const y = startY + row * 132;
+      const y = startY + row * (cardHeight + gap);
       ctx.fillStyle = i === active ? "rgba(212,175,55,.18)" : "rgba(255,255,255,.08)";
       ctx.strokeStyle = i === active ? colors.gold : "rgba(255,255,255,.12)";
       ctx.lineWidth = 2;
-      rounded(x, y, cw, 104, 12, true, true);
-      label(x + 16, y + 28, card[0], colors.white, "bold 15px Inter");
-      label(x + 16, y + 56, card[1], colors.goldSoft, "bold 18px Inter");
-      label(x + 16, y + 82, card[2], colors.dim, "12px Inter");
+      rounded(x, y, cw, cardHeight, 12, true, true);
+      label(x + 12, y + 24, card[0], colors.white, narrow ? "bold 12px Inter" : "bold 15px Inter");
+      label(x + 12, y + 49, card[1], colors.goldSoft, narrow ? "bold 15px Inter" : "bold 18px Inter");
+      drawCanvasWrappedText(card[2], x + 12, y + 68, cw - 24, narrow ? 10 : 12, narrow ? 2 : 1, colors.dim);
     });
     return [
       ro("selected", cards[active][0]),
@@ -1964,6 +2263,412 @@
     ];
   }
 
+  function drawAnalysis(W, H, t, readouts) {
+    analysisCtx.clearRect(0, 0, W, H);
+    drawAnalysisBackdrop(W, H);
+    const stage = currentCase().stage;
+    if (stage === "projectile" || stage === "suvat2d") {
+      drawTrajectoryAnalysis(W, H, t);
+      return;
+    }
+    if (stage === "graphs") {
+      drawGraphAnalysis(W, H, t);
+      return;
+    }
+    if (stage === "suvat1d") {
+      drawKinematicsAnalysis(W, H, t);
+      return;
+    }
+    if (stage === "momentum") {
+      drawMomentumAnalysis(W, H, t);
+      return;
+    }
+    if (["vectors", "forces", "dynamics", "incline", "moments"].includes(stage)) {
+      drawMetricAnalysis(W, H, readouts, stage);
+      return;
+    }
+    drawConceptAnalysis(W, H);
+  }
+
+  function drawAnalysisBackdrop(W, H) {
+    analysisCtx.fillStyle = "#081c31";
+    analysisCtx.fillRect(0, 0, W, H);
+    analysisCtx.save();
+    analysisCtx.strokeStyle = analysisColors.grid;
+    analysisCtx.lineWidth = 1;
+    const spacing = W < 360 ? 32 : 40;
+    for (let x = 0; x <= W; x += spacing) analysisLine(x, 0, x, H);
+    for (let y = 0; y <= H; y += spacing) analysisLine(0, y, W, y);
+    analysisCtx.restore();
+  }
+
+  function drawTrajectoryAnalysis(W, H, t) {
+    const values = app.values;
+    const T = duration();
+    const active = projectilePath(values, T);
+    const reference = projectilePath(Object.assign({}, values, { drag: 0 }), T);
+    const all = active.concat(reference);
+    const bounds = boundsFor(all, 1.5);
+    bounds.minY = Math.min(bounds.minY, 0);
+    const pad = { l: 44, r: 18, t: 28, b: 42 };
+    const mx = (x) => map1(x, bounds.minX, bounds.maxX, pad.l, W - pad.r);
+    const my = (y) => map1(y, bounds.minY, bounds.maxY, H - pad.b, pad.t);
+    drawAnalysisAxes(W, H, pad, "x / m", "y / m", bounds, mx, my);
+    analysisCtx.save();
+    analysisCtx.setLineDash([6, 5]);
+    drawAnalysisPath(reference.map((p) => ({ x: mx(p.x), y: my(p.y) })), "rgba(234,242,255,.42)", 2);
+    analysisCtx.restore();
+    drawAnalysisPath(active.map((p) => ({ x: mx(p.x), y: my(p.y) })), analysisColors.teal, 3);
+    const point = pointAtPath(active, t / T);
+    const px = mx(point.x);
+    const py = my(point.y);
+    analysisCtx.save();
+    analysisCtx.setLineDash([3, 4]);
+    analysisLine(px, py, px, H - pad.b, "rgba(240,207,104,.5)", 1);
+    analysisLine(pad.l, py, px, py, "rgba(240,207,104,.5)", 1);
+    analysisCtx.restore();
+    analysisDot(px, py, 6, analysisColors.gold);
+    analysisText("t = " + fmt(t) + " s", Math.min(W - 14, px + 10), Math.max(18, py - 10), analysisColors.gold, "11px Inter", "right");
+    setAnalysisMeta(
+      "Position trace",
+      "The synchronized x-y trace shows the full path and the current particle position at " + fmt(t) + " seconds.",
+      [
+        [analysisColors.teal, "active path"],
+        ["rgba(234,242,255,.65)", "ideal reference"],
+        [analysisColors.gold, "current position"]
+      ]
+    );
+  }
+
+  function drawGraphAnalysis(W, H, t) {
+    const shape = app.values.shape || "acb";
+    const meta = graphMeta(shape);
+    const T = duration();
+    const values = graphPoints(shape, T).map((point) => ({ x: point.t, y: point.v }));
+    drawSingleSeriesPlot(W, H, values, t, analysisColors.teal, meta.axisLabel || "value");
+    const now = valueOnGraph(graphPoints(shape, T), t);
+    setAnalysisMeta(
+      "Gradient and area",
+      "The marker follows the active graph at t = " + fmt(t) + " seconds, where the graph value is " + fmt(now) + ".",
+      [[analysisColors.teal, meta.axisLabel || "motion graph"], [analysisColors.gold, "current time"]]
+    );
+  }
+
+  function drawKinematicsAnalysis(W, H, t) {
+    const values = app.values;
+    const T = duration();
+    const rows = [];
+    for (let i = 0; i <= 80; i++) {
+      const time = T * i / 80;
+      rows.push({
+        x: time,
+        s: Number(values.height || 0) + Number(values.u || 0) * time + 0.5 * Number(values.a || 0) * time * time,
+        v: Number(values.u || 0) + Number(values.a || 0) * time,
+        a: Number(values.a || 0)
+      });
+    }
+    const top = 24;
+    const bottom = 26;
+    const gap = 10;
+    const laneH = (H - top - bottom - gap * 2) / 3;
+    drawSeriesLane(W, top, laneH, rows.map((row) => ({ x: row.x, y: row.s })), t, "s / m", analysisColors.cyan);
+    drawSeriesLane(W, top + laneH + gap, laneH, rows.map((row) => ({ x: row.x, y: row.v })), t, "v / m s^-1", analysisColors.teal);
+    drawSeriesLane(W, top + (laneH + gap) * 2, laneH, rows.map((row) => ({ x: row.x, y: row.a })), t, "a / m s^-2", analysisColors.coral);
+    analysisText("time / s", W - 12, H - 8, analysisColors.muted, "10px Inter", "right");
+    setAnalysisMeta(
+      "s-v-a dashboard",
+      "Displacement, velocity, and acceleration are aligned on one time axis so their links remain visible.",
+      [[analysisColors.cyan, "displacement"], [analysisColors.teal, "velocity"], [analysisColors.coral, "acceleration"]]
+    );
+  }
+
+  function drawMomentumAnalysis(W, H, t) {
+    const values = app.values;
+    const mode = values.mode;
+    let rows;
+    if (mode === "explosion") {
+      const splitMomentum = Math.max(1, Math.abs(Number(values.m1 || 4) * Number(values.u1 || 6)));
+      rows = [ro("before total", "0"), ro("fragment A", fmt(-splitMomentum)), ro("fragment B", fmt(splitMomentum)), ro("after total", "0")];
+    } else if (mode === "wall") {
+      const before = Number(values.m1 || 4) * Math.abs(Number(values.u1 || 6));
+      const after = -Number(values.e || 0.6) * before;
+      rows = [ro("before p", fmt(before)), ro("after p", fmt(after)), ro("impulse", fmt(after - before)), ro("external", fmt(-(after - before)))];
+    } else if (["impulse", "change", "forceTime"].includes(mode)) {
+      const before = Number(values.m1 || 4) * Number(values.u1 || 0);
+      const impulse = Number(values.force || 0) * Math.min(t, 2);
+      rows = [ro("before p", fmt(before)), ro("impulse", fmt(impulse)), ro("after p", fmt(before + impulse)), ro("change", fmt(impulse))];
+    } else {
+      const result = collision(values);
+      const beforeA = Number(values.m1 || 0) * Number(values.u1 || 0);
+      const beforeB = Number(values.m2 || 0) * Number(values.u2 || 0);
+      const afterA = Number(values.m1 || 0) * result.v1;
+      const afterB = Number(values.m2 || 0) * result.v2;
+      rows = [ro("A before", fmt(beforeA)), ro("B before", fmt(beforeB)), ro("A after", fmt(afterA)), ro("B after", fmt(afterB))];
+    }
+    drawMetricAnalysis(W, H, rows, "momentum");
+    if (el.analysisSummary) {
+      el.analysisSummary.textContent = "Signed bars compare momentum before and after the active event; direction is retained by the sign.";
+    }
+  }
+
+  function drawMetricAnalysis(W, H, readouts, stage) {
+    const metrics = readouts.map((item) => ({
+      key: item.key,
+      value: Number.parseFloat(String(item.value).replace(/[^0-9+\-.]/g, "")),
+      display: item.value
+    })).filter((item) => Number.isFinite(item.value)).slice(0, 5);
+    if (!metrics.length) {
+      drawConceptAnalysis(W, H);
+      return;
+    }
+    const palette = [analysisColors.cyan, analysisColors.teal, analysisColors.gold, analysisColors.coral, analysisColors.violet];
+    const maxAbs = Math.max(1, ...metrics.map((item) => Math.abs(item.value)));
+    const left = Math.min(98, W * 0.3);
+    const right = 54;
+    const zero = left + (W - left - right) * 0.5;
+    const half = Math.max(30, (W - left - right) * 0.47);
+    const rowH = (H - 54) / metrics.length;
+    analysisLine(zero, 20, zero, H - 24, "rgba(234,242,255,.28)", 1);
+    metrics.forEach((metric, index) => {
+      const y = 34 + rowH * index + rowH * 0.36;
+      const width = metric.value / maxAbs * half;
+      analysisText(metric.key, left - 8, y + 4, analysisColors.muted, "10px Inter", "right");
+      analysisCtx.fillStyle = "rgba(255,255,255,.07)";
+      analysisCtx.fillRect(zero - half, y - 6, half * 2, 12);
+      analysisCtx.fillStyle = palette[index];
+      analysisCtx.fillRect(Math.min(zero, zero + width), y - 6, Math.abs(width), 12);
+      analysisDot(zero + width, y, 4, palette[index]);
+      analysisText(metric.display, W - 10, y + 4, analysisColors.white, "10px Inter", "right");
+    });
+    analysisText("negative", zero - half, H - 9, analysisColors.muted, "9px Inter", "left");
+    analysisText("positive", zero + half, H - 9, analysisColors.muted, "9px Inter", "right");
+    const labels = {
+      vectors: "Component balance",
+      forces: "Resultant components",
+      dynamics: "System quantities",
+      incline: "Resolved forces",
+      momentum: "Signed momentum",
+      moments: "Signed turning effects"
+    };
+    setAnalysisMeta(
+      labels[stage] || "Live quantities",
+      "Signed bars preserve direction while their lengths compare the current magnitudes.",
+      metrics.map((metric, index) => [palette[index], metric.key])
+    );
+  }
+
+  function drawConceptAnalysis(W, H) {
+    const item = currentCase();
+    const formula = (item.formula || []).slice(0, 2).map(plainFormula).join(" ");
+    const rows = [
+      { label: "OBSERVE", value: item.title, color: analysisColors.cyan },
+      { label: "MODEL", value: formula || item.purpose, color: analysisColors.teal },
+      { label: "DECIDE", value: (item.moves || ["Choose the matching exam rule."])[0], color: analysisColors.gold }
+    ];
+    const margin = 18;
+    const gap = 12;
+    const rowH = (H - margin * 2 - gap * 2) / 3;
+    rows.forEach((row, index) => {
+      const y = margin + index * (rowH + gap);
+      analysisRoundedRect(margin, y, W - margin * 2, rowH, 7, "rgba(255,255,255,.055)", "rgba(255,255,255,.12)");
+      analysisCtx.fillStyle = row.color;
+      analysisCtx.fillRect(margin, y, 4, rowH);
+      analysisText(row.label, margin + 16, y + 20, row.color, "bold 10px Inter", "left");
+      analysisWrapText(row.value, margin + 16, y + 39, W - margin * 2 - 28, 14, 3);
+      if (index < rows.length - 1) {
+        analysisLine(W / 2, y + rowH, W / 2, y + rowH + gap, "rgba(234,242,255,.32)", 1);
+      }
+    });
+    setAnalysisMeta(
+      "Model decision map",
+      "The active case is organized as observation, mathematical model, and exam decision.",
+      [[analysisColors.cyan, "observe"], [analysisColors.teal, "model"], [analysisColors.gold, "decide"]]
+    );
+  }
+
+  function drawSingleSeriesPlot(W, H, points, currentX, color, yLabel) {
+    const pad = { l: 42, r: 16, t: 24, b: 38 };
+    const minX = Math.min(...points.map((point) => point.x));
+    const maxX = Math.max(...points.map((point) => point.x));
+    let minY = Math.min(0, ...points.map((point) => point.y));
+    let maxY = Math.max(0, ...points.map((point) => point.y));
+    if (Math.abs(maxY - minY) < 0.001) {
+      minY -= 1;
+      maxY += 1;
+    }
+    const mx = (x) => map1(x, minX, maxX, pad.l, W - pad.r);
+    const my = (y) => map1(y, minY, maxY, H - pad.b, pad.t);
+    drawAnalysisAxes(W, H, pad, "time / s", yLabel, { minX, maxX, minY, maxY }, mx, my);
+    drawAnalysisPath(points.map((point) => ({ x: mx(point.x), y: my(point.y) })), color, 3);
+    const cx = clamp(currentX, minX, maxX);
+    const current = interpolateSeries(points, cx);
+    const px = mx(cx);
+    const py = my(current);
+    analysisLine(px, pad.t, px, H - pad.b, "rgba(240,207,104,.55)", 1);
+    analysisDot(px, py, 6, analysisColors.gold);
+  }
+
+  function drawSeriesLane(W, top, height, points, currentX, labelText, color) {
+    const left = 58;
+    const right = 12;
+    const minX = Math.min(...points.map((point) => point.x));
+    const maxX = Math.max(...points.map((point) => point.x));
+    let minY = Math.min(...points.map((point) => point.y));
+    let maxY = Math.max(...points.map((point) => point.y));
+    if (Math.abs(maxY - minY) < 0.001) {
+      minY -= 1;
+      maxY += 1;
+    }
+    const mx = (x) => map1(x, minX, maxX, left, W - right);
+    const my = (y) => map1(y, minY, maxY, top + height - 10, top + 10);
+    analysisCtx.fillStyle = "rgba(255,255,255,.035)";
+    analysisCtx.fillRect(left, top, W - left - right, height);
+    const zeroY = clamp(my(0), top, top + height);
+    analysisLine(left, zeroY, W - right, zeroY, "rgba(234,242,255,.16)", 1);
+    drawAnalysisPath(points.map((point) => ({ x: mx(point.x), y: my(point.y) })), color, 2.5);
+    const cx = clamp(currentX, minX, maxX);
+    const cy = interpolateSeries(points, cx);
+    analysisLine(mx(cx), top, mx(cx), top + height, "rgba(240,207,104,.4)", 1);
+    analysisDot(mx(cx), my(cy), 4, analysisColors.gold);
+    analysisText(labelText, 8, top + 18, color, "bold 10px Inter", "left");
+    analysisText(fmt(cy), 8, top + 34, analysisColors.white, "10px Inter", "left");
+  }
+
+  function drawAnalysisAxes(W, H, pad, xLabel, yLabel, bounds, mx, my) {
+    const zeroX = clamp(mx(0), pad.l, W - pad.r);
+    const zeroY = clamp(my(0), pad.t, H - pad.b);
+    analysisLine(pad.l, zeroY, W - pad.r, zeroY, "rgba(234,242,255,.3)", 1.2);
+    analysisLine(zeroX, pad.t, zeroX, H - pad.b, "rgba(234,242,255,.3)", 1.2);
+    analysisText(xLabel, W - pad.r, H - 12, analysisColors.muted, "10px Inter", "right");
+    analysisText(yLabel, pad.l, 14, analysisColors.muted, "10px Inter", "left");
+    analysisText(fmt(bounds.minX), pad.l, H - pad.b + 16, analysisColors.muted, "9px Inter", "left");
+    analysisText(fmt(bounds.maxX), W - pad.r, H - pad.b + 16, analysisColors.muted, "9px Inter", "right");
+  }
+
+  function drawAnalysisPath(points, color, width) {
+    if (!points.length) return;
+    analysisCtx.beginPath();
+    points.forEach((point, index) => {
+      if (index) analysisCtx.lineTo(point.x, point.y);
+      else analysisCtx.moveTo(point.x, point.y);
+    });
+    analysisCtx.strokeStyle = color;
+    analysisCtx.lineWidth = width;
+    analysisCtx.lineJoin = "round";
+    analysisCtx.lineCap = "round";
+    analysisCtx.stroke();
+  }
+
+  function analysisLine(x1, y1, x2, y2, color, width) {
+    analysisCtx.beginPath();
+    analysisCtx.moveTo(x1, y1);
+    analysisCtx.lineTo(x2, y2);
+    if (color) analysisCtx.strokeStyle = color;
+    if (width) analysisCtx.lineWidth = width;
+    analysisCtx.stroke();
+  }
+
+  function analysisDot(x, y, radius, color) {
+    analysisCtx.beginPath();
+    analysisCtx.arc(x, y, radius, 0, Math.PI * 2);
+    analysisCtx.fillStyle = color;
+    analysisCtx.fill();
+    analysisCtx.strokeStyle = "rgba(6,21,38,.85)";
+    analysisCtx.lineWidth = 2;
+    analysisCtx.stroke();
+  }
+
+  function analysisText(text, x, y, color, font, align) {
+    analysisCtx.fillStyle = color || analysisColors.white;
+    analysisCtx.font = font || "10px Inter";
+    analysisCtx.textAlign = align || "left";
+    analysisCtx.textBaseline = "alphabetic";
+    analysisCtx.fillText(String(text), x, y);
+  }
+
+  function analysisWrapText(text, x, y, maxWidth, lineHeight, maxLines) {
+    const words = String(text || "").split(/\s+/);
+    const lines = [];
+    let current = "";
+    analysisCtx.font = "11px Inter";
+    words.forEach((word) => {
+      const test = current ? current + " " + word : word;
+      if (analysisCtx.measureText(test).width > maxWidth && current) {
+        lines.push(current);
+        current = word;
+      } else {
+        current = test;
+      }
+    });
+    if (current) lines.push(current);
+    const visible = lines.slice(0, maxLines);
+    if (lines.length > maxLines && visible.length) {
+      visible[visible.length - 1] = visible[visible.length - 1].replace(/[.,;:]?$/, "...");
+    }
+    visible.forEach((lineText, index) => analysisText(lineText, x, y + index * lineHeight, analysisColors.white, "11px Inter", "left"));
+  }
+
+  function analysisRoundedRect(x, y, width, height, radius, fill, stroke) {
+    const r = Math.min(radius, width / 2, height / 2);
+    analysisCtx.beginPath();
+    analysisCtx.moveTo(x + r, y);
+    analysisCtx.lineTo(x + width - r, y);
+    analysisCtx.quadraticCurveTo(x + width, y, x + width, y + r);
+    analysisCtx.lineTo(x + width, y + height - r);
+    analysisCtx.quadraticCurveTo(x + width, y + height, x + width - r, y + height);
+    analysisCtx.lineTo(x + r, y + height);
+    analysisCtx.quadraticCurveTo(x, y + height, x, y + height - r);
+    analysisCtx.lineTo(x, y + r);
+    analysisCtx.quadraticCurveTo(x, y, x + r, y);
+    analysisCtx.closePath();
+    if (fill) {
+      analysisCtx.fillStyle = fill;
+      analysisCtx.fill();
+    }
+    if (stroke) {
+      analysisCtx.strokeStyle = stroke;
+      analysisCtx.lineWidth = 1;
+      analysisCtx.stroke();
+    }
+  }
+
+  function interpolateSeries(points, x) {
+    if (!points.length) return 0;
+    if (x <= points[0].x) return points[0].y;
+    for (let i = 1; i < points.length; i++) {
+      if (x <= points[i].x) {
+        const a = points[i - 1];
+        const b = points[i];
+        const ratio = (x - a.x) / Math.max(0.000001, b.x - a.x);
+        return a.y + (b.y - a.y) * ratio;
+      }
+    }
+    return points[points.length - 1].y;
+  }
+
+  function plainFormula(value) {
+    return String(value || "")
+      .replace(/<sup>(.*?)<\/sup>/g, "^$1")
+      .replace(/<[^>]+>/g, "")
+      .replace(/&times;/g, " x ")
+      .replace(/&mu;/g, "mu")
+      .replace(/&theta;/g, "theta")
+      .replace(/&Sigma;/g, "sum")
+      .replace(/&frac12;/g, "1/2")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function setAnalysisMeta(title, summary, legend) {
+    if (el.analysisTitle) el.analysisTitle.textContent = title;
+    if (el.analysisSummary) el.analysisSummary.textContent = summary;
+    if (el.analysisLegend) {
+      el.analysisLegend.innerHTML = (legend || []).slice(0, 5).map(([color, labelText]) => `
+        <span class="legend-item"><span class="legend-swatch" style="--legend-color:${color}"></span>${escapeHtml(labelText)}</span>
+      `).join("");
+    }
+  }
+
   function currentTopic() {
     return TOPICS[app.topicIndex];
   }
@@ -2429,6 +3134,29 @@
     ctx.fillStyle = color || colors.white;
     ctx.font = font || "12px Inter, sans-serif";
     ctx.fillText(text, x, y);
+  }
+
+  function drawCanvasWrappedText(text, x, y, maxWidth, fontSize, maxLines, color) {
+    const words = String(text || "").split(/\s+/);
+    const lines = [];
+    let current = "";
+    ctx.save();
+    ctx.fillStyle = color || colors.dim;
+    ctx.font = fontSize + "px Inter, sans-serif";
+    words.forEach((word) => {
+      const test = current ? current + " " + word : word;
+      if (ctx.measureText(test).width > maxWidth && current) {
+        lines.push(current);
+        current = word;
+      } else {
+        current = test;
+      }
+    });
+    if (current) lines.push(current);
+    const visible = lines.slice(0, maxLines);
+    if (lines.length > maxLines && visible.length) visible[visible.length - 1] += "...";
+    visible.forEach((lineText, index) => ctx.fillText(lineText, x, y + index * (fontSize + 2)));
+    ctx.restore();
   }
 
   function map1(v, a, b, c, d) {

@@ -193,6 +193,15 @@ Release:
 - Commit and push `main` only after checks pass.
 - Verify cache-busted live URLs and representative interactions.
 
+### Phase G: Mechanics Laboratory V2
+
+- Keep the verified 10-topic, 98-case WME01 catalogue.
+- Put the active experiment in the first viewport.
+- Pair every physical scene with a synchronized graph, signed comparison, or model decision map.
+- Add Scene, Split, and Graph views; live values; proper unit symbols; image capture; fullscreen/theatre mode; and direct Play/Reset controls.
+- Keep the complete searchable library below the workbench.
+- Freeze the laboratory contract in `docs/MECHANICS_LAB_V2.md` and `tools/test_mechanics_lab.js`.
+
 ## Success Criteria
 
 - A student can reach any primary course tool in two actions or fewer.
@@ -215,4 +224,3 @@ The following are intentionally outside this release because they need separate 
 - Statistics 1 before its course pipeline is complete.
 - Public certificate verification database.
 - PDF redesigns.
-

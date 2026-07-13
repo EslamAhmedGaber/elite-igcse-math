@@ -3,150 +3,261 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Elite IGCSE Academy | Mechanics 1 Lab</title>
-<link rel="stylesheet" href="assets/mechanics-lab.css?v=20260620b" />
+<meta name="theme-color" content="#08142f" />
+<meta name="description" content="An interactive Edexcel IAL Mechanics 1 laboratory with live models, graphs, measurements, symbols, and exam methods." />
+<title>WME01 Mechanics 1 Laboratory | Elite IGCSE Mathematics</title>
+<link rel="stylesheet" href="assets/mechanics-lab.css?v=20260713d" />
 </head>
 <body>
   <div class="lab-shell">
     <header class="topbar">
-      <a class="brand-mark" href="../index.html#ialSimulator" aria-label="Back to WME01 Mechanics page">EI</a>
+      <a class="brand-mark" href="../index.html#ialSimulator" aria-label="Back to WME01 Mechanics page">
+        <span>EI</span>
+      </a>
       <div class="brand-copy">
-        <h1>WME01 Mechanics 1 Lab</h1>
-        <p>Interactive topic-by-topic simulations for Edexcel IAL Mechanics 1</p>
+        <span class="brand-kicker">Elite Interactive Laboratory</span>
+        <h1>Mechanics 1 Lab</h1>
+        <p>Edexcel IAL WME01</p>
       </div>
-      <div class="topbar-actions">
-        <a class="icon-btn" href="../index.html#ialQuestionVisualizer">Visualizer</a>
-        <button class="icon-btn" id="stepBack" type="button" title="Step back" aria-label="Step back">
-          <span aria-hidden="true">-</span>
+      <div class="topbar-actions" aria-label="Laboratory actions">
+        <a class="icon-btn" href="../index.html#ialSimulator">
+          <i data-lucide="arrow-left" aria-hidden="true"></i>
+          <span>WME01</span>
+        </a>
+        <a class="icon-btn desktop-action" href="../index.html#ialQuestionVisualizer">
+          <i data-lucide="scan-line" aria-hidden="true"></i>
+          <span>Question visualizer</span>
+        </a>
+        <button class="icon-btn" id="stepBack" type="button" title="Step back by 0.25 seconds" aria-label="Step back by 0.25 seconds">
+          <i data-lucide="step-back" aria-hidden="true"></i>
+          <span class="desktop-label">Step</span>
         </button>
-        <button class="icon-btn primary" id="playPause" type="button" title="Play or pause" aria-label="Play or pause">
-          <span aria-hidden="true" id="playIcon">Play</span>
+        <button class="icon-btn primary" id="playPause" type="button" aria-label="Play or pause simulation">
+          <i id="playGlyph" data-lucide="play" aria-hidden="true"></i>
+          <span id="playIcon">Play</span>
         </button>
-        <button class="icon-btn" id="reset" type="button" title="Reset" aria-label="Reset">
-          <span aria-hidden="true">Reset</span>
+        <button class="icon-btn" id="reset" type="button" aria-label="Reset simulation">
+          <i data-lucide="rotate-ccw" aria-hidden="true"></i>
+          <span class="desktop-label">Reset</span>
         </button>
       </div>
     </header>
 
-    <section class="lab-hero" aria-labelledby="labHeroTitle">
-      <div class="lab-hero-copy">
-        <p class="eyebrow">Mechanics 1 experiment centre</p>
-        <h2 id="labHeroTitle">Search, test, compare, then solve.</h2>
-        <p>
-          A WME01 lab for vectors, graphs, SUVAT, forces, pulleys, inclines, momentum and moments.
-          Pick a case, change the symbols, play the simulation, then read the exam move.
-        </p>
-      </div>
-      <div class="lab-search-card">
-        <label for="labSearch">Search experiments, symbols, or exam words</label>
-        <div class="lab-search-row">
-          <input id="labSearch" type="search" placeholder="Try: projectile, friction, impulse, &mu;, moment..." autocomplete="off" />
-          <button id="clearSearch" type="button">Clear</button>
-        </div>
-        <div class="lab-stat-grid" id="labStats" aria-label="Lab totals"></div>
-      </div>
-    </section>
-
-    <section class="lab-browser" aria-label="Experiment browser">
-      <div class="browser-head">
-        <div>
-          <p class="eyebrow">Choose the topic</p>
-          <h2>Experiment library</h2>
-        </div>
-        <div class="match-count" id="matchCount">Loading cases...</div>
-      </div>
-      <nav class="topic-rail" id="topicRail" aria-label="Mechanics topics"></nav>
-      <div class="quick-lab-grid" id="quickLabGrid" aria-label="Quick start experiments"></div>
-      <div class="experiment-grid" id="experimentCards" aria-live="polite"></div>
-    </section>
-
-    <main class="lab-main">
-      <section class="stage-panel" aria-label="Simulation stage">
-        <div class="stage-head">
-          <div>
-            <div class="stage-title-line">
-              <h2 id="topicTitle">Loading...</h2>
-              <div class="stage-title-actions" aria-label="Active experiment controls">
-                <button class="mini-btn title-play" id="stagePlay" type="button">Play</button>
-                <button class="mini-btn" id="stageReset" type="button">Reset</button>
-              </div>
-            </div>
+    <main class="lab-app">
+      <section class="lab-workbench" aria-labelledby="topicTitle">
+        <div class="workbench-head">
+          <div class="topic-context">
+            <div class="live-label"><span aria-hidden="true"></span> Live experiment</div>
+            <h2 id="topicTitle">Loading Mechanics laboratory...</h2>
             <p id="topicSubtitle"></p>
           </div>
-          <div class="case-chip" id="caseChip">Case</div>
+          <div class="experiment-picker">
+            <label for="caseSelect">Current experiment</label>
+            <select id="caseSelect"></select>
+            <div class="case-chip" id="caseChip">Case</div>
+          </div>
         </div>
-        <div class="canvas-wrap">
-          <canvas id="labCanvas" width="1200" height="720"></canvas>
-          <div class="hud" id="hud"></div>
-        </div>
-        <div class="timeline">
-          <label for="timeSlider">Time</label>
-          <input id="timeSlider" type="range" min="0" max="1000" value="0" />
-          <output id="timeOut">0.00 s</output>
-          <select id="speed">
-            <option value="0.1">0.1x</option>
-            <option value="0.25">0.25x</option>
-            <option value="0.5">0.5x</option>
-            <option value="1" selected>1x</option>
-            <option value="2">2x</option>
-            <option value="4">4x</option>
-          </select>
+
+        <div class="lab-studio">
+          <nav class="topic-dock" id="topicRail" aria-label="Mechanics topics"></nav>
+
+          <section class="stage-panel" aria-label="Interactive simulation stage">
+            <div class="stage-toolbar">
+              <div class="stage-mode" id="viewModes" role="group" aria-label="Simulation view">
+                <button type="button" data-view-mode="scene" aria-pressed="false">
+                  <i data-lucide="box" aria-hidden="true"></i><span>Scene</span>
+                </button>
+                <button type="button" data-view-mode="split" aria-pressed="true">
+                  <i data-lucide="panels-top-left" aria-hidden="true"></i><span>Split</span>
+                </button>
+                <button type="button" data-view-mode="graph" aria-pressed="false">
+                  <i data-lucide="chart-no-axes-combined" aria-hidden="true"></i><span>Graph</span>
+                </button>
+              </div>
+              <div class="stage-title-actions" aria-label="Active experiment controls">
+                <button class="mini-btn subtle icon-only" id="stageCapture" type="button" aria-label="Save experiment image" title="Save experiment image">
+                  <i data-lucide="camera" aria-hidden="true"></i>
+                </button>
+                <button class="mini-btn subtle icon-only" id="stageFullscreen" type="button" aria-label="Open experiment fullscreen" title="Open experiment fullscreen">
+                  <i data-lucide="maximize-2" aria-hidden="true"></i>
+                </button>
+                <button class="mini-btn subtle" id="stageStepBack" type="button" aria-label="Step back by 0.25 seconds">
+                  <i data-lucide="step-back" aria-hidden="true"></i><span>Step</span>
+                </button>
+                <button class="mini-btn title-play" id="stagePlay" type="button">
+                  <i data-lucide="play" aria-hidden="true"></i><span>Play</span>
+                </button>
+                <button class="mini-btn subtle" id="stageReset" type="button">
+                  <i data-lucide="rotate-ccw" aria-hidden="true"></i><span>Reset</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="visual-stage" id="visualStage" data-view="split">
+              <div class="visual-pane scene-pane">
+                <div class="pane-head">
+                  <span><i data-lucide="orbit" aria-hidden="true"></i> Physical model</span>
+                  <span class="pane-state" id="sceneState">Live</span>
+                </div>
+                <div class="canvas-wrap">
+                  <canvas id="labCanvas" width="1200" height="720" role="img" aria-label="Animated Mechanics experiment"></canvas>
+                  <div class="hud" id="hud"></div>
+                </div>
+              </div>
+
+              <div class="visual-pane analysis-pane">
+                <div class="pane-head">
+                  <span><i data-lucide="activity" aria-hidden="true"></i> <span id="analysisTitle">Live analysis</span></span>
+                  <span class="pane-state graph-state">Synchronized</span>
+                </div>
+                <div class="analysis-wrap">
+                  <canvas id="analysisCanvas" width="720" height="720" role="img" aria-label="Synchronized Mechanics graph"></canvas>
+                  <p class="sr-only" id="analysisSummary">The graph updates with the active experiment.</p>
+                </div>
+                <div class="analysis-legend" id="analysisLegend" aria-label="Graph legend"></div>
+              </div>
+            </div>
+
+            <div class="readout-grid live-readout-strip" id="readouts" aria-live="polite"></div>
+
+            <div class="transport-dock">
+              <div class="timeline">
+                <label for="timeSlider">Timeline</label>
+                <input id="timeSlider" type="range" min="0" max="1000" value="0" />
+                <output id="timeOut" for="timeSlider">0.00 s</output>
+              </div>
+              <div class="speed-control">
+                <span>Speed</span>
+                <select class="sr-only" id="speed" aria-label="Playback speed">
+                  <option value="0.1">0.1x</option>
+                  <option value="0.25">0.25x</option>
+                  <option value="0.5">0.5x</option>
+                  <option value="1" selected>1x</option>
+                  <option value="2">2x</option>
+                  <option value="4">4x</option>
+                </select>
+                <div class="speed-switch" id="speedButtons" role="group" aria-label="Playback speed">
+                  <button type="button" data-speed="0.1">0.1x</button>
+                  <button type="button" data-speed="0.25">0.25x</button>
+                  <button type="button" data-speed="0.5">0.5x</button>
+                  <button class="is-active" type="button" data-speed="1">1x</button>
+                  <button type="button" data-speed="2">2x</button>
+                  <button type="button" data-speed="4">4x</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <aside class="inspector" aria-label="Experiment controls and method">
+            <div class="inspector-tabs" role="tablist" aria-label="Experiment information">
+              <button id="tab-overview" type="button" role="tab" aria-selected="true" aria-controls="panel-overview" data-inspector-tab="overview">
+                <i data-lucide="route" aria-hidden="true"></i><span>Overview</span>
+              </button>
+              <button id="tab-variables" type="button" role="tab" aria-selected="false" aria-controls="panel-variables" data-inspector-tab="variables" tabindex="-1">
+                <i data-lucide="sliders-horizontal" aria-hidden="true"></i><span>Variables</span>
+              </button>
+              <button id="tab-method" type="button" role="tab" aria-selected="false" aria-controls="panel-method" data-inspector-tab="method" tabindex="-1">
+                <i data-lucide="sigma" aria-hidden="true"></i><span>Method</span>
+              </button>
+            </div>
+
+            <div class="inspector-panel is-active" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview" data-inspector-panel="overview">
+              <section class="panel-block purpose-block">
+                <div class="panel-title"><i data-lucide="telescope" aria-hidden="true"></i> What to observe</div>
+                <p class="case-purpose" id="casePurpose"></p>
+                <div class="case-tags" id="caseTags"></div>
+              </section>
+              <section class="panel-block">
+                <div class="panel-title"><i data-lucide="list-ordered" aria-hidden="true"></i> Case sequence</div>
+                <div class="case-sequence" id="caseSequence"></div>
+                <div class="case-actions">
+                  <button class="mini-btn subtle" id="prevCase" type="button"><i data-lucide="chevron-left" aria-hidden="true"></i><span>Previous</span></button>
+                  <button class="mini-btn" id="nextCase" type="button"><span>Next case</span><i data-lucide="chevron-right" aria-hidden="true"></i></button>
+                </div>
+              </section>
+            </div>
+
+            <div class="inspector-panel" id="panel-variables" role="tabpanel" aria-labelledby="tab-variables" data-inspector-panel="variables" hidden>
+              <section class="panel-block">
+                <div class="panel-title"><i data-lucide="sliders-horizontal" aria-hidden="true"></i> Variables</div>
+                <div class="control-stack" id="controlStack"></div>
+              </section>
+              <section class="panel-block">
+                <div class="panel-title"><i data-lucide="braces" aria-hidden="true"></i> Symbols</div>
+                <div class="symbol-grid" id="symbolGrid"></div>
+              </section>
+              <section class="panel-block">
+                <div class="panel-title"><i data-lucide="table-properties" aria-hidden="true"></i> Data snapshot</div>
+                <div class="data-table-wrap">
+                  <table class="data-table" id="dataTable"></table>
+                </div>
+                <button class="mini-btn wide subtle" id="copySnapshot" type="button"><i data-lucide="copy" aria-hidden="true"></i><span>Copy snapshot</span></button>
+              </section>
+            </div>
+
+            <div class="inspector-panel" id="panel-method" role="tabpanel" aria-labelledby="tab-method" data-inspector-panel="method" hidden>
+              <section class="panel-block">
+                <div class="panel-title"><i data-lucide="sigma" aria-hidden="true"></i> Formula trail</div>
+                <div class="formula-trail" id="formulaTrail"></div>
+              </section>
+              <section class="panel-block compact">
+                <div class="panel-title"><i data-lucide="target" aria-hidden="true"></i> Exam moves</div>
+                <ol class="exam-moves" id="examMoves"></ol>
+              </section>
+            </div>
+          </aside>
         </div>
       </section>
 
-      <aside class="inspector" aria-label="Controls and formula trail">
-        <section class="panel-block">
-          <div class="panel-title">Case</div>
-          <select id="caseSelect"></select>
-          <p class="case-purpose" id="casePurpose"></p>
-          <div class="case-tags" id="caseTags"></div>
-        </section>
-
-        <section class="panel-block">
-          <div class="panel-title">Case Sequence</div>
-          <div class="case-sequence" id="caseSequence"></div>
-          <div class="case-actions">
-            <button class="mini-btn" id="prevCase" type="button">Previous</button>
-            <button class="mini-btn" id="nextCase" type="button">Next case</button>
+      <section class="lab-browser" aria-labelledby="libraryTitle">
+        <div class="browser-head">
+          <div>
+            <p class="eyebrow">Complete WME01 coverage</p>
+            <h2 id="libraryTitle">Experiment library</h2>
+            <p>Search every case by topic, symbol, equation word, or exam situation.</p>
           </div>
-        </section>
+          <div class="match-count" id="matchCount">Loading cases...</div>
+        </div>
 
-        <section class="panel-block">
-          <div class="panel-title">Controls</div>
-          <div class="control-stack" id="controlStack"></div>
-        </section>
-
-        <section class="panel-block">
-          <div class="panel-title">Symbols</div>
-          <div class="symbol-grid" id="symbolGrid"></div>
-        </section>
-
-        <section class="panel-block">
-          <div class="panel-title">Live Values</div>
-          <div class="readout-grid" id="readouts"></div>
-        </section>
-
-        <section class="panel-block">
-          <div class="panel-title">Data Snapshot</div>
-          <div class="data-table-wrap">
-            <table class="data-table" id="dataTable"></table>
+        <div class="library-tools">
+          <div class="lab-search-card">
+            <label for="labSearch">Search experiments</label>
+            <div class="lab-search-row">
+              <i data-lucide="search" aria-hidden="true"></i>
+              <input id="labSearch" type="search" placeholder="Projectile, friction, impulse, mu, moment..." autocomplete="off" />
+              <button id="clearSearch" type="button">Clear</button>
+            </div>
           </div>
-          <button class="mini-btn wide" id="copySnapshot" type="button">Copy snapshot</button>
-        </section>
+          <div class="lab-stat-grid" id="labStats" aria-label="Lab totals"></div>
+        </div>
 
-        <section class="panel-block">
-          <div class="panel-title">Formula Trail</div>
-          <div class="formula-trail" id="formulaTrail"></div>
-        </section>
+        <div class="library-subhead">
+          <div>
+            <p class="eyebrow">Start immediately</p>
+            <h3>Signature experiments</h3>
+          </div>
+        </div>
+        <div class="quick-lab-grid" id="quickLabGrid" aria-label="Quick start experiments"></div>
 
-        <section class="panel-block compact">
-          <div class="panel-title">Exam Moves</div>
-          <ol class="exam-moves" id="examMoves"></ol>
-        </section>
-      </aside>
+        <div class="library-subhead case-library-head">
+          <div>
+            <p class="eyebrow">Active topic</p>
+            <h3>Cases and variants</h3>
+          </div>
+        </div>
+        <div class="experiment-grid" id="experimentCards" aria-live="polite"></div>
+      </section>
     </main>
+
+    <footer class="lab-footer">
+      <p><strong>Elite IGCSE Mathematics</strong> · Mechanics made visible, measurable, and exam-ready.</p>
+      <a href="../index.html#ialNotes">Strategy notes</a>
+      <a href="../index.html#ialFilters">Classified questions</a>
+      <a href="../index.html#ialPastPapers">Past papers</a>
+    </footer>
   </div>
 
-<script src="assets/mechanics-lab.js?v=20260620b"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+<script defer src="assets/mechanics-lab.js?v=20260713d"></script>
 </body>
 </html>
