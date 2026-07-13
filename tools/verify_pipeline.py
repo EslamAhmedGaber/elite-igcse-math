@@ -26,7 +26,10 @@ DOWNLOADS_DIR = ROOT / "downloads"
 PRIVATE_OUTPUT = ROOT / "private_output"
 GITIGNORE = ROOT / ".gitignore"
 CURRENT_PATHWAY_BOOTSTRAP_VERSION = "20260613a"
-CURRENT_LEAD_VERSION = "20260619b"
+CURRENT_LEAD_VERSION = "20260713b"
+CURRENT_STYLE_VERSION = "20260713b"
+CURRENT_COURSE_MODULES_VERSION = "20260713a"
+CURRENT_STUDY_VERSION = "20260713b"
 IAL_DATA_FILES = {
     "wma11": (ROOT / "ial" / "wma11" / "wma11-data.js", "WMA11_QUESTIONS"),
     "wma12": (ROOT / "ial" / "wma12" / "wma12-data.js", "WMA12_QUESTIONS"),
@@ -271,7 +274,15 @@ def verify_revision_engine(report: Report) -> None:
 
 def verify_pathway_palette_activation(report: Report) -> None:
     """Guard the early pathway palette activation hook used by all public pages."""
-    js_files = ("pathway-bootstrap.js", "lead.js", "pathway-mode.js", "service-worker.js")
+    js_files = (
+        "pathway-bootstrap.js",
+        "lead.js",
+        "pathway-mode.js",
+        "course-modules.js",
+        "study-search-data.js",
+        "study-compass.js",
+        "service-worker.js",
+    )
     for filename in js_files:
         path = ROOT / filename
         if not path.exists():
@@ -292,6 +303,22 @@ def verify_pathway_palette_activation(report: Report) -> None:
             summary = detail[0] if detail else "syntax check failed"
             report.error(f"{filename} is not valid JavaScript: {summary}")
 
+    study_test = ROOT / "tools" / "test_study_search_index.js"
+    if study_test.exists():
+        try:
+            subprocess.run(
+                ["node", str(study_test)],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+        except FileNotFoundError:
+            report.warn("Node.js is unavailable; skipped study search checks.")
+        except subprocess.CalledProcessError as exc:
+            detail = (exc.stderr or exc.stdout or "").strip().splitlines()
+            summary = detail[0] if detail else "study search check failed"
+            report.error(f"study search index failed verification: {summary}")
+
     bootstrap_text = (ROOT / "pathway-bootstrap.js").read_text(encoding="utf-8")
     if "ELITE_PATHWAY_BOOTSTRAP" not in bootstrap_text or "dataset.pathway" not in bootstrap_text:
         report.error("pathway-bootstrap.js must set ELITE_PATHWAY_BOOTSTRAP and data-pathway.")
@@ -301,6 +328,14 @@ def verify_pathway_palette_activation(report: Report) -> None:
     lead_text = (ROOT / "lead.js").read_text(encoding="utf-8")
     if "applyPathwayContext" not in lead_text or "ELITE_PATHWAY_BOOTSTRAP" not in lead_text:
         report.error("lead.js must re-apply the bootstrap pathway context to body/html.")
+    if f"study-search-data.js?v={CURRENT_STUDY_VERSION}" not in lead_text:
+        report.error("lead.js must load the current generated study search index.")
+    if f"study-compass.js?v={CURRENT_STUDY_VERSION}" not in lead_text:
+        report.error("lead.js must load the current study navigator.")
+
+    for shared_file in ("study-search-data.js", "study-compass.js"):
+        if not (ROOT / shared_file).exists():
+            report.error(f"Missing shared Visual Learning OS asset: {shared_file}")
 
     css_text = (ROOT / "styles.css").read_text(encoding="utf-8")
     for pathway in ("linear", "modular", "pure"):
@@ -336,6 +371,10 @@ def verify_pathway_palette_activation(report: Report) -> None:
             report.error(f"{page} must reference the current pathway-bootstrap.js cache-buster.")
         if "lead.js?v=" in text and f"lead.js?v={CURRENT_LEAD_VERSION}" not in text:
             report.error(f"{page} must reference the current lead.js cache-buster.")
+        if "styles.css?v=" in text and f"styles.css?v={CURRENT_STYLE_VERSION}" not in text:
+            report.error(f"{page} must reference the current styles.css cache-buster.")
+        if "course-modules.js?v=" in text and f"course-modules.js?v={CURRENT_COURSE_MODULES_VERSION}" not in text:
+            report.error(f"{page} must reference the current course-modules.js cache-buster.")
 
 
 def verify_questions(report: Report) -> tuple[dict[str, dict[str, Any]], set[str], set[str]]:

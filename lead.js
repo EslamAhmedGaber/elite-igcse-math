@@ -76,6 +76,7 @@
           title: "Unit 1",
           detail: "4WM1",
           links: [
+            { title: "Strategy Notes", detail: "Shared core notes", href: "/notes.html?pathway=modular&unit=Unit+1#linearNotes", pathway: "modular" },
             { title: "Classified View", detail: "Unit 1 topics", href: "/practice.html?pathway=modular&unit=Unit+1&bank=all", pathway: "modular" },
             { title: "Expertise", detail: "Unit 1 harder set", href: "/practice.html?pathway=modular&unit=Unit+1&bank=expertise&mode=q20", pathway: "modular" },
             { title: "Build Test", detail: "Unit 1 tests", href: "/exam.html?pathway=modular&unit=Unit+1&mode=custom", pathway: "modular" },
@@ -91,6 +92,7 @@
           title: "Unit 2",
           detail: "4WM2",
           links: [
+            { title: "Strategy Notes", detail: "Shared core notes", href: "/notes.html?pathway=modular&unit=Unit+2#linearNotes", pathway: "modular" },
             { title: "Classified View", detail: "Unit 2 topics", href: "/practice.html?pathway=modular&unit=Unit+2&bank=all", pathway: "modular" },
             { title: "Expertise", detail: "Unit 2 harder set", href: "/practice.html?pathway=modular&unit=Unit+2&bank=expertise&mode=q20", pathway: "modular" },
             { title: "Build Test", detail: "Unit 2 tests", href: "/exam.html?pathway=modular&unit=Unit+2&mode=custom", pathway: "modular" },
@@ -1025,6 +1027,39 @@
     });
   }
 
+  function loadStudyExperience() {
+    if (window.ELITE_STUDY || document.querySelector('script[data-elite-study="compass"]')) return;
+    const leadScript = document.querySelector('script[src*="lead.js"]');
+    const baseUrl = leadScript?.src || document.baseURI;
+    const dataUrl = new URL("study-search-data.js?v=20260713b", baseUrl).href;
+    const compassUrl = new URL("study-compass.js?v=20260713b", baseUrl).href;
+
+    function appendScript(src, marker) {
+      return new Promise((resolve, reject) => {
+        const existing = document.querySelector(`script[data-elite-study="${marker}"]`);
+        if (existing) {
+          if (marker === "data" && window.ELITE_STUDY_SEARCH) resolve();
+          else if (marker === "compass" && window.ELITE_STUDY) resolve();
+          else existing.addEventListener("load", resolve, { once: true });
+          return;
+        }
+        const script = document.createElement("script");
+        script.src = src;
+        script.dataset.eliteStudy = marker;
+        script.addEventListener("load", resolve, { once: true });
+        script.addEventListener("error", reject, { once: true });
+        document.head.appendChild(script);
+      });
+    }
+
+    const dataReady = window.ELITE_STUDY_SEARCH
+      ? Promise.resolve()
+      : appendScript(dataUrl, "data");
+    dataReady
+      .then(() => appendScript(compassUrl, "compass"))
+      .catch(() => {});
+  }
+
   function bootstrap() {
     applyPathwayContext();
     init();
@@ -1037,6 +1072,7 @@
     ensureIconsOnTiles();
     initShrinkingHeader();
     initAnimatedCounters();
+    loadStudyExperience();
     initPwa();
   }
 

@@ -1175,9 +1175,22 @@
 
   function switchMode(mode) {
     activeMode = mode;
-    els.modeTabs.forEach((button) => button.classList.toggle("active", button.dataset.examMode === mode));
+    els.modeTabs.forEach((button) => {
+      const selected = button.dataset.examMode === mode;
+      const panelId = `examModePanel-${button.dataset.examMode}`;
+      if (!button.id) button.id = `examModeTab-${button.dataset.examMode}`;
+      button.classList.toggle("active", selected);
+      button.setAttribute("role", "tab");
+      button.setAttribute("aria-selected", String(selected));
+      button.setAttribute("aria-controls", panelId);
+      button.tabIndex = selected ? 0 : -1;
+    });
     els.modePanels.forEach((panel) => {
-      panel.hidden = panel.dataset.modePanel !== mode;
+      const selected = panel.dataset.modePanel === mode;
+      panel.id = `examModePanel-${panel.dataset.modePanel}`;
+      panel.setAttribute("role", "tabpanel");
+      panel.setAttribute("aria-labelledby", `examModeTab-${panel.dataset.modePanel}`);
+      panel.hidden = !selected;
     });
     renderButtons();
   }
@@ -1780,7 +1793,21 @@
     updateTimer();
   }
 
-  els.modeTabs.forEach((button) => button.addEventListener("click", () => switchMode(button.dataset.examMode)));
+  els.modeTabs.forEach((button, index) => {
+    button.addEventListener("click", () => switchMode(button.dataset.examMode));
+    button.addEventListener("keydown", (event) => {
+      if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+      event.preventDefault();
+      let nextIndex = index;
+      if (event.key === "Home") nextIndex = 0;
+      else if (event.key === "End") nextIndex = els.modeTabs.length - 1;
+      else if (event.key === "ArrowRight") nextIndex = (index + 1) % els.modeTabs.length;
+      else nextIndex = (index - 1 + els.modeTabs.length) % els.modeTabs.length;
+      const next = els.modeTabs[nextIndex];
+      switchMode(next.dataset.examMode);
+      next.focus();
+    });
+  });
   els.start.addEventListener("click", handlePrimaryAction);
   els.finish.addEventListener("click", finishExam);
   els.save.addEventListener("click", saveMarks);

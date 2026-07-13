@@ -1,10 +1,10 @@
 ﻿# Elite IGCSE Mathematics - Operator Handbook
 
-The live student website for Dr Eslam Ahmed's Elite Mathematics platform: Edexcel IGCSE Linear 4MA1, Edexcel IGCSE Modular 4WM, and IAL Pure 1 WMA11.
+The live student website for Dr Eslam Ahmed's Elite Mathematics platform: Edexcel IGCSE Linear 4MA1, Modular 4WM Units 1 and 2, and IAL Pure 1 WMA11, Pure 2 WMA12, and Mechanics 1 WME01.
 
 This document is the repo handbook. For current work state, read `C:\Users\Eslam\Documents\Elite IGCSE v2\PROJECT_LOG.md` first, then this file and the course pipeline docs.
 
-> Last updated: 2026-05-28 | Active source: `C:\Users\Eslam\Documents\Elite IGCSE v2\website` | Section index: §1 Live URLs | §2 Stack | §3 Directory tree | §4 Common tasks | §5 Answer workflow | §6 Local testing | §7 Deploy | §8 Settings cheat-sheet | §9 Gotchas | §10 Troubleshooting | §11 Credits
+> Last updated: 2026-07-13 | Active source: `C:\Users\Eslam\Documents\Elite IGCSE v2\website` | Section index: §1 Live URLs | §2 Stack | §3 Directory tree | §4 Common tasks | §5 Answer workflow | §6 Local testing | §7 Deploy | §8 Settings cheat-sheet | §9 Gotchas | §10 Troubleshooting | §11 Credits
 
 ## Quick start (the 4 things you'll do most)
 
@@ -15,6 +15,7 @@ This document is the repo handbook. For current work state, read `C:\Users\Eslam
 | **Update a testimonial** | §4.2 | Edit `<article class="testimonial light">` blocks in `about.html` |
 | **Replace your photo** | §4.5 | Drop new image at `assets/Mine.png` (overwrite), commit, push |
 | **Check saved student progress** | `/progress.html` | Name, target, topic sheet, backup export/import, WhatsApp summary |
+| **Rebuild universal Study search** | `tools/build_study_search_index.js` | Generate the shared course, topic, note, and resource index, then run its test |
 | **Add a new paper** | `tools/README.md` | Drop PDF, ingest, generate runtime data, build books, verify |
 | **Add a new curriculum** | `docs/COURSE_MODULE_PIPELINE.md` | Add the course object, data adapter, progress keys, books, and verification |
 | **Activate free Google progress login** | `docs/firebase-free-setup.md` | Firebase Spark plan, Google login, Firestore rules, paste config |
@@ -37,9 +38,14 @@ This document is the repo handbook. For current work state, read `C:\Users\Eslam
 Pages served:
 
 - `/` - Home (sales/landing)
-- `/practice.html` - Question bank tool (the daily-use page)
-- `/exam.html` - Free mock exam mode with timer, self-marking, and Mistake Box integration
+- `/notes.html` - Notes-first strategy library for all six course contexts, with search, filters, views, and studied progress
+- `/practice.html` - Classified and Expertise question bank with course-aware filters
+- `/exam.html` - Random Mock, Build Test, Smart Revision, saved tests, A4 print, and solution print
 - `/progress.html` - Personal progress sheet, study plan, topic tracker, backup import/export
+- `/ial/wma11/index.html` - Pure 1 WMA11 course hub, notes, questions, solutions, books, and progress
+- `/ial/wma12/index.html` - Pure 2 WMA12 course hub, notes, questions, solutions, books, and progress
+- `/ial/wme01/index.html` - Mechanics 1 WME01 course hub, notes, questions, solutions, books, progress, and lab
+- `/ial/wme01/lab/index.html` - Mechanics simulation and visual experiment centre
 - `/checkup.html` - Exam readiness check and next-action recommender
 - `/topics.html` - Topic roadmap
 - `/planner.html` - Backward-compatible redirect to the merged Progress study plan
@@ -72,7 +78,7 @@ website/
 ├── progress.html           # Personal student progress sheet and study plan
 ├── checkup.html            # Exam readiness check
 ├── topics.html             # Topic roadmap
-├── notes.html              # Redirects old notes links to the practice bank
+├── notes.html              # Notes-first library for Linear and Modular routes
 ├── planner.html            # Redirect to the merged Progress study plan
 ├── about.html              # About Dr Eslam
 ├── downloads.html          # PDF library
@@ -83,10 +89,15 @@ website/
 ├── progress.js             # Saved profile, topic sheet, progress backup import/export
 ├── cloud-progress.js       # Optional free Firebase Google login + cloud progress sync
 ├── firebase-config.js      # Public Firebase config; disabled until you paste free project keys
-├── lead.js                 # Lead-capture dialog + mobile nav (loaded on every page)
+├── course-modules.js       # Canonical curriculum, module, route, and palette registry
+├── study-compass.js        # Universal Study Navigator, learning path, preferences, and notes progress
+├── study-search-data.js    # Generated 360-item search index; do not hand-edit
+├── linear-notes-data.js    # Linear/Modular strategy-note catalogue
+├── notes.js                # Notes library rendering
+├── lead.js                 # Shared header behavior and Study layer loader
 ├── service-worker.js       # Temporary cache-kill worker; offline cache is intentionally disabled
 ├── manifest.webmanifest    # Installable app metadata
-├── questions-data.js       # 1,413 questions metadata - generated, do not hand-edit
+├── questions-data.js       # IGCSE question metadata - generated, do not hand-edit
 ├── solutions-data.js       # Public website solution payload - generated, do not hand-edit
 ├── private_output/         # Private answer material kept out of the public site
 ├── offline.html            # Offline fallback page
@@ -116,7 +127,13 @@ website/
 │   ├── ingest_paper.py         # Split/crop/classify new papers
 │   ├── build_runtime_data.py   # Regenerate questions-data.js + solutions-data.js
 │   ├── build_books.py          # Public classified books + private answer books
+│   ├── build_study_search_index.js # Regenerate study-search-data.js from canonical sources
+│   ├── test_study_search_index.js  # Search-index route and coverage guardrails
 │   └── verify_pipeline.py      # Guardrails before publish
+│
+├── ial/                     # WMA11, WMA12, WME01 hubs, data, notes, and Mechanics lab
+├── docs/
+│   └── ELITE_VISUAL_LEARNING_OS_PLAN.md # Current UX architecture and success criteria
 │
 └── downloads/
     ├── classified_problems.pdf                            # Public full classified question book
@@ -125,8 +142,7 @@ website/
     └── Classified_4WM2.pdf                                # Public Unit 2 question book
 ```
 
-Private teacher PDFs with answers are generated into `private_output/`.
-Do **not** copy answer PDFs into `downloads/`; public students should use `Show Solution` on the website.
+Private review artifacts remain in `private_output/`. Only pipeline-approved public question/answer books belong in `downloads/`; never publish raw marking notes or private checking material.
 
 ---
 
@@ -254,6 +270,15 @@ python -m http.server 8000
 
 Open http://localhost:8000 - every page works, links between pages work, MathJax renders.
 
+Run the automated release checks:
+
+```powershell
+python tools\verify_pipeline.py
+node tools\test_study_search_index.js
+node tools\test_revision_engine.js
+node tools\test_exam_builder_flows.js
+```
+
 **Before every push, click through:**
 - Home -> click Practice link -> grid of questions loads
 - On Practice -> click a question -> image opens in dialog
@@ -334,4 +359,3 @@ After push, you can verify the build:
 WhatsApp / phone: +20 112 000 9622 | [`https://wa.me/201120009622`](https://wa.me/201120009622)
 
 Site built with Claude Code as collaborator. All teaching content, classification, and student outcomes belong to Dr Eslam.
-

@@ -170,6 +170,7 @@
   function modularLinks(unitTitle, unitCode) {
     const unitParam = encodeURIComponent(unitTitle).replace(/%20/g, "+");
     return [
+      { module: "notes", title: "Strategy Notes", detail: `${unitCode} shared core notes`, href: `/notes.html?pathway=modular&unit=${unitParam}#linearNotes`, pathway: "modular" },
       { module: "classified", title: "Classified View", detail: `${unitCode} topics`, href: `/practice.html?pathway=modular&unit=${unitParam}&bank=all`, pathway: "modular" },
       { module: "expertise", title: "Expertise", detail: `${unitCode} harder set`, href: `/practice.html?pathway=modular&unit=${unitParam}&bank=expertise&mode=q20`, pathway: "modular" },
       { module: "build-test", title: "Build Test", detail: `${unitCode} mocks`, href: `/exam.html?pathway=modular&unit=${unitParam}&mode=custom`, pathway: "modular" },
@@ -2198,7 +2199,7 @@
   };
 
   window.ELITE_COURSE_MODULES = {
-    version: "2026-06-16-course-registry-v14-wme01-lab-visualizer",
+    version: "2026-07-13-visual-learning-os-v1",
     moduleCatalog,
     moduleAliases,
     palettes,
