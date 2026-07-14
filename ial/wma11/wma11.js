@@ -277,10 +277,30 @@
   }
 
   function splitFinalAnswer(answer) {
+    if (window.EliteSolutionView?.formatText) return window.EliteSolutionView.formatText(answer);
     let html = String(answer || "").trim();
     html = html.replace(/(?<=\.)\s+(?=\$\([a-d]\))/g, '</div><div class="ial-answer-line">');
     html = html.replace(/\\q?quad\s+(\([b-d]\))/g, (_match, label) => '$</div><div class="ial-answer-line">$' + label);
     return `<div class="ial-answer-line">${html}</div>`;
+  }
+
+  function renderWorkedSolution(item, options = {}) {
+    const solution = { steps: item.steps || [], finalAnswer: item.finalAnswer || "" };
+    if (window.EliteSolutionView?.render) {
+      return window.EliteSolutionView.render(solution, {
+        key: item.id,
+        topic: item.topicName,
+        marks: item.marks,
+        ...options
+      });
+    }
+    const steps = (item.steps || []).map((step, index) => `
+      <section class="ial-step">
+        <strong>${index + 1}. ${escapeHtml(step.title)}</strong>
+        <div class="ial-math">${step.body || ""}</div>
+      </section>
+    `).join("");
+    return `${steps}<div class="ial-final"><strong>Final answer</strong><div class="ial-math">${splitFinalAnswer(item.finalAnswer)}</div></div>`;
   }
 
   function saveTrainer() {
@@ -389,12 +409,6 @@
       ${isCrossView ? `<span class="ial-pill">Primary: ${escapeHtml(item.primaryTopicName || item.topicName)}</span>` : ""}
       ${!isCrossView && secondaryNames.length ? `<span class="ial-pill">Also: ${escapeHtml(secondaryNames.join(", "))}</span>` : ""}
     `;
-    const steps = (item.steps || []).map((step, index) => `
-      <section class="ial-step">
-        <strong>${index + 1}. ${escapeHtml(step.title)}</strong>
-        <div class="ial-math">${step.body || ""}</div>
-      </section>
-    `).join("");
     els.stage.innerHTML = `
       <div class="ial-question-card ${state.showSolution ? "solution-open" : ""}">
         <header class="ial-question-head">
@@ -417,22 +431,16 @@
         <div class="ial-actions">
           <button class="button light ${solvedOn ? "is-on" : ""}" type="button" data-action="solved" aria-pressed="${solvedOn}">${solvedOn ? "Solved" : "Mark solved"}</button>
           <button class="button light ${mistakeOn ? "is-on" : ""}" type="button" data-action="mistake" aria-pressed="${mistakeOn}">${mistakeOn ? "In Mistake box" : "Mistake box"}</button>
-          <button class="button primary" type="button" data-action="solution">${state.showSolution ? "Hide solution" : "Show solution"}</button>
+          <button class="button primary" type="button" data-action="solution" aria-expanded="${state.showSolution}" aria-controls="ialWorkedSolution">${state.showSolution ? "Hide solution" : "Show solution"}</button>
           <a class="button light" href="${escapeHtml(item.image)}" download="${escapeHtml(item.downloadName)}">Download PNG</a>
         </div>
-        <section class="ial-solution" aria-label="Worked solution">
-          <h3>Worked solution</h3>
-          ${steps}
-          <div class="ial-final">
-            <strong>Final answer</strong>
-            <div class="ial-math">${splitFinalAnswer(item.finalAnswer)}</div>
-          </div>
+        <section id="ialWorkedSolution" class="ial-solution" aria-label="Worked solution">
+          ${renderWorkedSolution(item)}
         </section>
       </div>
     `;
-    if (window.MathJax?.typesetPromise) {
-      window.MathJax.typesetPromise([els.stage]).catch(() => {});
-    }
+    if (window.EliteSolutionView?.typeset) window.EliteSolutionView.typeset(els.stage);
+    else if (window.MathJax?.typesetPromise) window.MathJax.typesetPromise([els.stage]).catch(() => {});
   }
 
   function renderStats() {
@@ -595,20 +603,9 @@
   }
 
   function solutionHtml(item) {
-    const steps = (item.steps || []).map((step, index) => `
-      <section class="ial-step">
-        <strong>${index + 1}. ${escapeHtml(step.title)}</strong>
-        <div class="ial-math">${step.body || ""}</div>
-      </section>
-    `).join("");
     return `
       <section class="ial-solution" style="display:block">
-        <h3>Worked solution</h3>
-        ${steps}
-        <div class="ial-final">
-          <strong>Final answer</strong>
-          <div class="ial-math">${splitFinalAnswer(item.finalAnswer)}</div>
-        </div>
+        ${renderWorkedSolution(item, { variant: "print" })}
       </section>
     `;
   }

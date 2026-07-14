@@ -608,7 +608,7 @@ function renderCards() {
         <button type="button" data-action="solve">${isSolved ? "Unsolve" : "Solved"}</button>
         <button type="button" data-action="${review ? "reviewDone" : "reviewAdd"}">${review ? "Review Done" : "Mistake Box"}</button>
         ${review ? `<button type="button" data-action="reviewRemove">Remove Review</button>` : ""}
-        ${hasSolution ? `<button type="button" data-action="solution">Show Solution</button>` : ""}
+        ${hasSolution ? `<button type="button" data-action="solution" aria-haspopup="dialog" aria-controls="solutionDialog">Show Solution</button>` : ""}
         ${window.CLOUD_SYNC?.state?.user?.email?.toLowerCase().includes('eslam') ? `<button type="button" data-action="fixTopic">Fix Topic</button>` : ""}
       </div>
     </article>`;
@@ -626,7 +626,7 @@ function renderQuestionActions(question, { compact = false } = {}) {
     <button type="button" data-action="solve">${isSolved ? "Unsolve" : "Solved"}</button>
     <button type="button" data-action="${review ? "reviewDone" : "reviewAdd"}">${review ? "Review Done" : "Mistake Box"}</button>
     ${review ? `<button type="button" data-action="reviewRemove">Remove Review</button>` : ""}
-    ${hasSolution ? `<button type="button" data-action="solution">Show Solution</button>` : ""}
+    ${hasSolution ? `<button type="button" data-action="solution" aria-haspopup="dialog" aria-controls="solutionDialog">Show Solution</button>` : ""}
     ${window.CLOUD_SYNC?.state?.user?.email?.toLowerCase().includes("eslam") ? `<button type="button" data-action="fixTopic">Fix Topic</button>` : ""}
   </div>`;
 }
@@ -853,6 +853,7 @@ function formatInlineMarkdown(text) {
 }
 
 function formatSolutionText(text) {
+  if (window.EliteSolutionView?.formatText) return window.EliteSolutionView.formatText(text);
   const escaped = escapeHtml(text).trim();
   if (!escaped) return `<p class="solution-empty">Solution has not been written yet.</p>`;
   return escaped
@@ -962,9 +963,10 @@ function renderAnswerTrainer(question, { compact = false } = {}) {
 }
 
 function typesetAnswerTrainers() {
-  if (window.MathJax?.typesetPromise) {
-    window.MathJax.typesetPromise([...els.questionGrid.querySelectorAll(".answer-trainer-math")]).catch(() => {});
-  }
+  const targets = [...els.questionGrid.querySelectorAll(".answer-trainer-math")];
+  if (!targets.length) return;
+  if (window.EliteSolutionView?.typeset) window.EliteSolutionView.typeset(targets);
+  else if (window.MathJax?.typesetPromise) window.MathJax.typesetPromise(targets).catch(() => {});
 }
 
 function handleAnswerTrainerAction(id, action, container) {
@@ -1011,13 +1013,15 @@ function handleAnswerTrainerAction(id, action, container) {
 }
 
 function hasSolutionContent(solution) {
+  if (window.EliteSolutionView?.hasContent) return window.EliteSolutionView.hasContent(solution);
   if (!solution) return false;
   if (solution.source) return true;
   if (Array.isArray(solution.steps) && solution.steps.some((step) => step?.body || step?.title)) return true;
   return Boolean(solution.finalAnswer);
 }
 
-function formatStructuredSolution(solution) {
+function formatStructuredSolution(solution, options = {}) {
+  if (window.EliteSolutionView?.render) return window.EliteSolutionView.render(solution, options);
   if (!solution || !hasSolutionContent(solution)) {
     return `<p class="solution-empty">Solution has not been written yet.</p>`;
   }
@@ -1043,13 +1047,16 @@ function showSolution(id) {
   const question = questionById(id);
   const solution = solutionData[id];
   if (!question || !solution) return;
-  els.solutionTitle.textContent = `${question.paper} Q${question.question} | Solution`;
+  els.solutionTitle.textContent = `${question.paper} Q${question.question}`;
   els.solutionMeta.textContent = `${question.topic} | ${question.marks} marks`;
-  els.solutionBody.innerHTML = formatStructuredSolution(solution);
+  els.solutionBody.innerHTML = formatStructuredSolution(solution, {
+    key: question.id,
+    topic: question.topic,
+    marks: question.marks
+  });
   els.solutionDialog.showModal();
-  if (window.MathJax?.typesetPromise) {
-    window.MathJax.typesetPromise([els.solutionBody]).catch(() => {});
-  }
+  if (window.EliteSolutionView?.typeset) window.EliteSolutionView.typeset(els.solutionBody);
+  else if (window.MathJax?.typesetPromise) window.MathJax.typesetPromise([els.solutionBody]).catch(() => {});
 }
 
 let activeFixId = null;

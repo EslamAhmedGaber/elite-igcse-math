@@ -27,9 +27,10 @@ PRIVATE_OUTPUT = ROOT / "private_output"
 GITIGNORE = ROOT / ".gitignore"
 CURRENT_PATHWAY_BOOTSTRAP_VERSION = "20260613a"
 CURRENT_LEAD_VERSION = "20260713b"
-CURRENT_STYLE_VERSION = "20260713b"
+CURRENT_STYLE_VERSION = "20260714a"
 CURRENT_COURSE_MODULES_VERSION = "20260713a"
 CURRENT_STUDY_VERSION = "20260713b"
+CURRENT_SOLUTION_VERSION = "20260714a"
 IAL_DATA_FILES = {
     "wma11": (ROOT / "ial" / "wma11" / "wma11-data.js", "WMA11_QUESTIONS"),
     "wma12": (ROOT / "ial" / "wma12" / "wma12-data.js", "WMA12_QUESTIONS"),
@@ -272,6 +273,60 @@ def verify_revision_engine(report: Report) -> None:
         report.error(f"revision-engine.js failed verification: {summary}")
 
 
+def verify_worked_solution_view(report: Report) -> None:
+    """Guard the shared safe solution renderer used by practice, IAL, and print flows."""
+    renderer = ROOT / "worked-solution.js"
+    renderer_test = ROOT / "tools" / "test_worked_solution.js"
+    if not renderer.exists():
+        report.error("worked-solution.js is missing; course solutions will diverge again.")
+        return
+    if not renderer_test.exists():
+        report.error("The shared worked-solution release test is missing.")
+        return
+    try:
+        subprocess.run(
+            ["node", "--check", str(renderer)],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        subprocess.run(
+            ["node", str(renderer_test)],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+    except FileNotFoundError:
+        report.warn("Node.js is unavailable; skipped shared worked-solution checks.")
+    except subprocess.CalledProcessError as exc:
+        detail = (exc.stderr or exc.stdout or "").strip().splitlines()
+        summary = detail[0] if detail else "worked-solution check failed"
+        report.error(f"worked-solution.js failed verification: {summary}")
+
+    page_scripts = {
+        "practice.html": "app.js",
+        "exam.html": "exam.js",
+        "ial/wma11/index.html": "ial/wma11/wma11.js",
+        "ial/wma12/index.html": "ial/wma12/wma12.js",
+        "ial/wme01/index.html": "ial/wme01/wme01.js",
+    }
+    for page, consumer in page_scripts.items():
+        text = (ROOT / page).read_text(encoding="utf-8")
+        renderer_ref = f"worked-solution.js?v={CURRENT_SOLUTION_VERSION}"
+        renderer_pos = text.find(renderer_ref)
+        consumer_pos = text.find(consumer)
+        if renderer_pos == -1:
+            report.error(f"{page} must load the current shared worked-solution renderer.")
+        elif consumer_pos != -1 and renderer_pos > consumer_pos:
+            report.error(f"{page} loads worked-solution.js after {consumer}.")
+
+    css_text = (ROOT / "styles.css").read_text(encoding="utf-8")
+    for selector in (".worked-solution-step", ".worked-solution-final", ".worked-solution-equation"):
+        if selector not in css_text:
+            report.error(f"Shared solution styling is missing {selector}.")
+    report.set("shared_solution_pages", len(page_scripts))
+
+
 def verify_pathway_palette_activation(report: Report) -> None:
     """Guard the early pathway palette activation hook used by all public pages."""
     js_files = (
@@ -281,6 +336,7 @@ def verify_pathway_palette_activation(report: Report) -> None:
         "course-modules.js",
         "study-search-data.js",
         "study-compass.js",
+        "worked-solution.js",
         "service-worker.js",
     )
     for filename in js_files:
@@ -690,6 +746,7 @@ def main() -> int:
     verify_runtime_js(report)
     verify_mechanics_lab(report)
     verify_revision_engine(report)
+    verify_worked_solution_view(report)
     verify_pathway_palette_activation(report)
     question_by_id, paper_slugs, _used_topics = verify_questions(report)
     verify_catalogue(report, paper_slugs)

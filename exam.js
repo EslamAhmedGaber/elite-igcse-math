@@ -1010,6 +1010,7 @@
   }
 
   function formatSolutionText(text) {
+    if (window.EliteSolutionView?.formatText) return window.EliteSolutionView.formatText(text);
     const escaped = escapeHtml(normalizeSolutionNotation(text)).trim();
     if (!escaped) return `<p class="solution-empty">Solution has not been written yet.</p>`;
     return escaped
@@ -1025,13 +1026,15 @@
   }
 
   function hasSolutionContent(solution) {
+    if (window.EliteSolutionView?.hasContent) return window.EliteSolutionView.hasContent(solution);
     if (!solution) return false;
     if (solution.source) return true;
     if (Array.isArray(solution.steps) && solution.steps.some((step) => step?.body || step?.title)) return true;
     return Boolean(solution.finalAnswer);
   }
 
-  function formatStructuredSolution(solution) {
+  function formatStructuredSolution(solution, options = {}) {
+    if (window.EliteSolutionView?.render) return window.EliteSolutionView.render(solution, options);
     if (!solution || !hasSolutionContent(solution)) {
       return `<p class="solution-empty">Solution has not been written yet.</p>`;
     }
@@ -1115,7 +1118,9 @@
       if (!question) return "";
       const solution = solutions[id] || null;
       const hasSolution = hasSolutionContent(solution);
-      const solutionHtml = formatStructuredSolution(solution);
+      const solutionOptions = { key: id, topic: question.topic, marks: question.marks };
+      const solutionHtml = formatStructuredSolution(solution, solutionOptions);
+      const printSolutionHtml = formatStructuredSolution(solution, { ...solutionOptions, variant: "print" });
       const savedScore = state.scores?.[id] ?? "";
       return `<article class="exam-question" data-id="${escapeHtml(id)}">
         <div class="print-paper-brand">
@@ -1151,7 +1156,7 @@
             <em>${question.marks} marks</em>
           </div>
           <h3>Worked Solution</h3>
-          ${solutionHtml}
+          ${printSolutionHtml}
           <div class="print-paper-footer print-solution-footer">Downloaded from eliteigcse.com | Dr Eslam Ahmed | 01120009622</div>
         </section>
       </article>`;
@@ -1387,7 +1392,8 @@
 
   async function typesetPaperMath() {
     if (!(await waitForMathJaxReady())) return;
-    await window.MathJax.typesetPromise([els.paper]).catch(() => {});
+    if (window.EliteSolutionView?.typeset) await window.EliteSolutionView.typeset(els.paper);
+    else await window.MathJax.typesetPromise([els.paper]).catch(() => {});
   }
 
   async function printCurrentSolutions(trigger = els.printSolution) {

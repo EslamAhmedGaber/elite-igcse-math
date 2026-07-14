@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="pathway-bootstrap.js?v=20260613a"></script>
-  <link rel="stylesheet" href="styles.css?v=20260713b">
+  <link rel="stylesheet" href="styles.css?v=20260714a">
   <script defer src="pathway-mode.js?v=20260527a"></script>
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js"></script>
@@ -107,8 +107,8 @@
         <p>Every card shows how many full-bank and Q20+ questions are available. Choose a topic and the Practice page opens already filtered for you.</p>
       </div>
       <div class="topics-hero-stats" aria-label="Roadmap stats">
-        <div><strong id="roadmapTotal">1188</strong><span>Total questions</span></div>
-        <div><strong id="roadmapTopics">56</strong><span>Topics</span></div>
+        <div><strong id="roadmapTotal">1440</strong><span>Total questions</span></div>
+        <div><strong id="roadmapTopics">59</strong><span>Topics</span></div>
         <div><strong id="roadmapSolved">0</strong><span>Solved here</span></div>
       </div>
     </section>
@@ -128,7 +128,9 @@
       </select></label>
     </section>
 
-    <section class="roadmap-guide" aria-label="How to use the roadmap">
+    <section id="roadmapGrid" class="roadmap-grid" aria-live="polite"></section>
+
+    <section class="roadmap-guide" aria-label="Roadmap study sequence">
       <article>
         <strong>1. Choose a topic</strong>
         <p>Start with a weak topic or follow the course order shown for your selected pathway.</p>
@@ -142,8 +144,6 @@
         <p>Use the worksheet builder on Practice to print a custom set for revision.</p>
       </article>
     </section>
-
-    <section id="roadmapGrid" class="roadmap-grid" aria-live="polite"></section>
 
     <section class="final-cta" aria-label="Enrollment">
       <div>
