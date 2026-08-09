@@ -26,8 +26,8 @@ DOWNLOADS_DIR = ROOT / "downloads"
 PRIVATE_OUTPUT = ROOT / "private_output"
 GITIGNORE = ROOT / ".gitignore"
 CURRENT_PATHWAY_BOOTSTRAP_VERSION = "20260613a"
-CURRENT_LEAD_VERSION = "20260713b"
-CURRENT_STYLE_VERSION = "20260714a"
+CURRENT_LEAD_VERSION = "20260809a"
+CURRENT_STYLE_VERSION = "20260809a"
 CURRENT_COURSE_MODULES_VERSION = "20260713a"
 CURRENT_STUDY_VERSION = "20260713b"
 CURRENT_SOLUTION_VERSION = "20260714a"
@@ -358,6 +358,44 @@ def verify_pathway_palette_activation(report: Report) -> None:
             detail = (exc.stderr or exc.stdout or "").strip().splitlines()
             summary = detail[0] if detail else "syntax check failed"
             report.error(f"{filename} is not valid JavaScript: {summary}")
+
+    lead_text = (ROOT / "lead.js").read_text(encoding="utf-8")
+    required_core_tools = (
+        '"classified"',
+        '"books"',
+        '"past-solutions"',
+        '"notes"',
+        '"build-test"',
+    )
+    if "CORE_TOOL_ORDER" not in lead_text:
+        report.error("lead.js must define the ordered five-resource study workspace.")
+    for tool_key in required_core_tools:
+        if tool_key not in lead_text:
+            report.error(f"lead.js core study workspace is missing {tool_key}.")
+    for initializer in ("initHomeCoreWorkspace", "initCoreMobileNav"):
+        if initializer not in lead_text:
+            report.error(f"lead.js must initialize {initializer}.")
+
+    home_text = (ROOT / "index.html").read_text(encoding="utf-8")
+    required_home_courses = (
+        "linear",
+        "modular-unit-1",
+        "modular-unit-2",
+        "pure",
+        "pure2",
+        "mechanics1",
+    )
+    for course_id in required_home_courses:
+        if f'data-home-course="{course_id}"' not in home_text:
+            report.error(f"Homepage core workspace is missing course selector {course_id}.")
+
+    css_text = (ROOT / "styles.css").read_text(encoding="utf-8")
+    for selector in (".home-command", ".is-core-workspace", ".pathway-more-tools"):
+        if selector not in css_text:
+            report.error(f"Core study workspace styling is missing {selector}.")
+
+    report.set("core_workspace_courses", len(required_home_courses))
+    report.set("core_workspace_tools", len(required_core_tools))
 
 
 def verify_mechanics_lab(report: Report) -> None:

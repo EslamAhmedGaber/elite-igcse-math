@@ -150,11 +150,14 @@
   const DEFAULT_MODULE_ALIASES = {
     "classified view": "classified",
     "classified bank": "classified",
+    "classified practice": "classified",
+    "classified books": "books",
     "strategy notes": "notes",
     "notes": "notes",
     "booklet notes": "notes",
     "expertise": "expertise",
     "mock builder": "build-test",
+    "mock generator": "build-test",
     "build test": "build-test",
     "random mock": "build-test",
     "smart revision": "smart-revision",
@@ -165,6 +168,7 @@
     "expertise book": "expertise",
     "expertise answers": "answers",
     "past paper solutions": "past-solutions",
+    "past papers": "past-solutions",
     "progress": "progress",
     "mistake box": "mistake-box",
     "interactive lab": "interactive-lab",
@@ -180,19 +184,95 @@
     return title.replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "general";
   }
 
-  function navLink(item) {
+  const CORE_TOOL_ORDER = ["classified", "books", "past-solutions", "notes", "build-test"];
+  const CORE_TOOL_COPY = {
+    classified: {
+      title: "Classified Practice",
+      detail: "Filter by topic and solve online",
+      short: "Classified",
+    },
+    books: {
+      title: "Classified Books",
+      detail: "Question books + worked solutions",
+      short: "Books",
+    },
+    "past-solutions": {
+      title: "Past Papers",
+      detail: "Exam papers + matching solutions",
+      short: "Papers",
+    },
+    notes: {
+      title: "Strategy Notes",
+      detail: "Topic notes + complete booklet",
+      short: "Notes",
+    },
+    "build-test": {
+      title: "Mock Generator",
+      detail: "Random or custom printable tests",
+      short: "Mock",
+    },
+  };
+
+  function preferredCoreHref(key, link, context = {}) {
+    const courseMap = {
+      pure: "wma11",
+      pure2: "wma12",
+      mechanics1: "wme01",
+    };
+    const course = courseMap[context.groupId || ""];
+    if (!course) return link.href;
+    if (key === "books") return `/downloads.html?pathway=pure&course=${course}#downloads`;
+    if (key === "past-solutions") return `/pastpapers.html?pathway=pure&course=${course}#pure-${course}`;
+    return link.href;
+  }
+
+  function workspaceTools(links, context = {}) {
+    const list = Array.isArray(links) ? links : [];
+    const byModule = new Map();
+    list.forEach((link) => {
+      const key = moduleKey(link);
+      if (!byModule.has(key)) byModule.set(key, link);
+    });
+    const primary = CORE_TOOL_ORDER.map((key) => {
+      const link = byModule.get(key);
+      if (!link) return null;
+      const copy = CORE_TOOL_COPY[key];
+      return {
+        ...link,
+        module: key,
+        title: copy.title,
+        detail: copy.detail,
+        short: copy.short,
+        href: preferredCoreHref(key, link, context),
+      };
+    }).filter(Boolean);
+    const primaryKeys = new Set(primary.map((link) => moduleKey(link)));
+    const secondary = list.filter((link) => {
+      const key = moduleKey(link);
+      return !primaryKeys.has(key) && key !== "answers";
+    });
+    return { primary, secondary };
+  }
+
+  function navLink(item, className = "") {
+    const key = moduleKey(item);
     const attrs = [
       `href="${item.href}"`,
-      `data-module="${moduleKey(item)}"`,
+      `data-module="${key}"`,
+      className ? `class="${className}"` : "",
       item.target ? `target="${item.target}" rel="noreferrer"` : "",
       item.pathway ? `data-pathway-choice="${item.pathway}" data-pathway-target="${item.href}"` : "",
       item.lead ? `data-lead-trigger="${item.lead}"` : "",
     ].filter(Boolean).join(" ");
-    return `<a ${attrs}><strong>${item.title}</strong><span>${item.detail}</span></a>`;
+    return `<a ${attrs}>${getModuleIcon(key)}<span class="module-text"><strong>${item.title}</strong><span>${item.detail}</span></span></a>`;
   }
 
-  function navTools(links) {
-    return `<div class="nav-tool-grid">${links.map(navLink).join("")}</div>`;
+  function navTools(links, context = {}) {
+    const tools = workspaceTools(links, context);
+    const more = tools.secondary.length
+      ? `<details class="nav-more-tools"><summary>More tools <span>${tools.secondary.length}</span></summary><div class="nav-secondary-grid">${tools.secondary.map((link) => navLink(link, "is-secondary")).join("")}</div></details>`
+      : "";
+    return `<div class="nav-tool-grid">${tools.primary.map((link) => navLink(link, "is-primary")).join("")}</div>${more}`;
   }
 
   function groupPalette(group) {
@@ -307,14 +387,14 @@
               ${group.units.map((unit) => `
                 <section class="nav-unit-card">
                   <div class="nav-unit-head"><strong>${unit.title}</strong><span>${unit.detail}</span></div>
-                  ${navTools(unit.links)}
+                  ${navTools(unit.links, { groupId: group.id, unit: unit.title })}
                 </section>
               `).join("")}
             </div>
           </div>`
         : `<div class="nav-panel nav-panel-${group.id}" aria-label="${group.label} pathway links">
             <div class="nav-panel-label">${group.panelLabel}</div>
-            ${navTools(group.links)}
+            ${navTools(group.links, { groupId: group.id })}
           </div>`;
     return `<div class="nav-group nav-group-${group.id}" data-nav-group="${group.id}"${navGroupStyle(group)}>
         <a ${tabAttrs}><span>${group.label}</span><small>${group.detail}</small></a>
@@ -346,7 +426,7 @@
     const page = document.body?.dataset.page || "";
     if (page === "home") return null;
     const params = new URLSearchParams(window.location.search);
-    if (!group.units) return { title: group.label, detail: group.detail, intro: group.intro, links: group.links };
+    if (!group.units) return { title: group.label, detail: group.detail, intro: group.intro, links: group.links, groupId };
     if (params.get("choose") === "unit" || (!params.get("unit") && page === "practice" && params.get("pathway") === "modular")) {
       return {
         kind: "unit-choice",
@@ -369,6 +449,8 @@
       detail: unit.detail,
       intro: unit.intro || "Everything for this unit lives here, so students can move between practice, tests, books, solutions, and progress without hunting.",
       links: unit.links,
+      groupId,
+      unit: unit.title,
     };
   }
 
@@ -402,6 +484,20 @@
     if (linkEntries.some(([key, value]) => (params.get(key) || "") !== value)) return false;
     if (!linkUrl.hash && !linkEntries.length) return !window.location.search && !window.location.hash;
     return true;
+  }
+
+  function isCoreToolActive(link) {
+    if (isToolActive(link)) return true;
+    if (window.location.hash) return false;
+    const pageModule = {
+      practice: "classified",
+      downloads: "books",
+      pastpapers: "past-solutions",
+      notes: "notes",
+      exam: "build-test",
+    }[document.body?.dataset?.page || ""];
+    const defaultModule = document.body?.dataset?.ialActiveModule || pageModule || "";
+    return moduleKey(link) === defaultModule;
   }
 
   const MODULE_ICONS = {
@@ -474,10 +570,21 @@
       link.target ? `target="${link.target}" rel="noreferrer"` : "",
       link.pathway ? `data-pathway-choice="${link.pathway}" data-pathway-target="${link.href}"` : "",
       link.lead ? `data-lead-trigger="${link.lead}"` : "",
-      isToolActive(link) ? `aria-current="page"` : "",
+      isCoreToolActive(link) ? `aria-current="page"` : "",
     ].filter(Boolean).join(" ");
     const icon = getModuleIcon(moduleKey(link));
     return `<a ${attrs}>${icon}<div class="module-text"><strong>${link.title}</strong><span>${link.detail}</span></div></a>`;
+  }
+
+  function renderCompactToolLink(link) {
+    const attrs = [
+      `href="${link.href}"`,
+      `data-module="${moduleKey(link)}"`,
+      link.target ? `target="${link.target}" rel="noreferrer"` : "",
+      link.pathway ? `data-pathway-choice="${link.pathway}" data-pathway-target="${link.href}"` : "",
+      link.lead ? `data-lead-trigger="${link.lead}"` : "",
+    ].filter(Boolean).join(" ");
+    return `<a ${attrs}>${getModuleIcon(moduleKey(link))}<span>${link.title}</span></a>`;
   }
 
   function escapeHtml(value) {
@@ -803,19 +910,202 @@
     document.body?.classList.add("has-pathway-hub");
     document.body?.classList.toggle("pathway-unit-chooser", toolData.kind === "unit-choice");
     const anchor = document.querySelector(".elite-breadcrumb") || header;
+    if (toolData.kind === "unit-choice") {
+      anchor.insertAdjacentHTML("afterend", `
+        <nav class="pathway-tool-strip is-unit-choice" aria-label="${toolData.title} tools">
+          <div class="pathway-tool-strip-title">
+            <span>Choose course</span>
+            <strong>${toolData.title}</strong>
+            <small>${toolData.detail}</small>
+            ${toolData.intro ? `<p>${toolData.intro}</p>` : ""}
+          </div>
+          <div class="pathway-tool-strip-links">
+            ${toolData.links.map(renderToolStripLink).join("")}
+          </div>
+        </nav>
+      `);
+      return;
+    }
+    const tools = workspaceTools(toolData.links, { groupId: toolData.groupId || groupId, unit: toolData.unit });
+    const moreTools = tools.secondary.length
+      ? `<details class="pathway-more-tools"><summary>More tools <span>${tools.secondary.length}</span></summary><div class="pathway-more-grid">${tools.secondary.map(renderCompactToolLink).join("")}</div></details>`
+      : "";
     anchor.insertAdjacentHTML("afterend", `
-      <nav class="pathway-tool-strip ${toolData.kind === "unit-choice" ? "is-unit-choice" : ""}" aria-label="${toolData.title} tools">
+      <nav class="pathway-tool-strip is-core-workspace" aria-label="${toolData.title} study workspace">
         <div class="pathway-tool-strip-title">
-          <span>Course modules</span>
+          <span>Active course</span>
           <strong>${toolData.title}</strong>
           <small>${toolData.detail}</small>
           ${toolData.intro ? `<p>${toolData.intro}</p>` : ""}
         </div>
-        <div class="pathway-tool-strip-links">
-          ${toolData.links.map(renderToolStripLink).join("")}
+        <div class="pathway-core-tools">
+          <div class="pathway-core-heading">
+            <strong>Study workspace</strong>
+            <span>Everything students use most, in one place.</span>
+          </div>
+          <div class="pathway-tool-strip-links">
+            ${tools.primary.map(renderToolStripLink).join("")}
+          </div>
+          ${moreTools}
         </div>
       </nav>
     `);
+  }
+
+  function homeCourseOption(courseId) {
+    if (courseId === "modular-unit-1" || courseId === "modular-unit-2") {
+      const group = NAV_GROUPS.find((item) => item.id === "modular");
+      const unitTitle = courseId.endsWith("2") ? "Unit 2" : "Unit 1";
+      const unit = group?.units?.find((item) => item.title === unitTitle);
+      if (!group || !unit) return null;
+      return {
+        id: courseId,
+        groupId: group.id,
+        label: `${group.label} ${unit.title}`,
+        detail: unit.detail,
+        intro: unit.intro,
+        links: unit.links,
+        palette: groupPalette(group),
+        unit: unit.title,
+      };
+    }
+    const group = NAV_GROUPS.find((item) => item.id === courseId);
+    if (!group || group.id === "about" || group.units) return null;
+    return {
+      id: courseId,
+      groupId: group.id,
+      label: group.label,
+      detail: group.detail,
+      intro: group.intro,
+      links: group.links,
+      palette: groupPalette(group),
+    };
+  }
+
+  function renderHomeCoreLink(link, index) {
+    const key = moduleKey(link);
+    const attrs = [
+      `class="home-core-action"`,
+      `href="${link.href}"`,
+      `data-module="${key}"`,
+      link.target ? `target="${link.target}" rel="noreferrer"` : "",
+      link.pathway ? `data-pathway-choice="${link.pathway}" data-pathway-target="${link.href}"` : "",
+    ].filter(Boolean).join(" ");
+    return `<a ${attrs}>
+      <span class="home-core-action-index">0${index + 1}</span>
+      ${getModuleIcon(key)}
+      <span class="home-core-action-copy"><strong>${link.title}</strong><span>${link.detail}</span></span>
+      <span class="home-core-action-open">Open</span>
+    </a>`;
+  }
+
+  function renderMobileCoreNav(links, context = {}) {
+    const nav = document.querySelector(".mobile-bottom-nav");
+    if (!nav) return;
+    const tools = workspaceTools(links, context);
+    if (!tools.primary.length) return;
+    nav.innerHTML = tools.primary.map((link) => {
+      const key = moduleKey(link);
+      const attrs = [
+        `href="${link.href}"`,
+        `data-module="${key}"`,
+        link.pathway ? `data-pathway-choice="${link.pathway}" data-pathway-target="${link.href}"` : "",
+        isCoreToolActive(link) ? `aria-current="page"` : "",
+      ].filter(Boolean).join(" ");
+      return `<a ${attrs}>${getModuleIcon(key)}<span>${link.short || CORE_TOOL_COPY[key]?.short || link.title}</span></a>`;
+    }).join("");
+  }
+
+  function syncCoreMobileNav() {
+    const workspace = document.querySelector("[data-home-workspace]");
+    if (workspace) {
+      const option = homeCourseOption(workspace.dataset.homeCourse || "linear");
+      if (option) {
+        renderMobileCoreNav(option.links, { groupId: option.groupId, unit: option.unit });
+      }
+      return;
+    }
+    initCoreMobileNav();
+  }
+
+  function initHomeCoreWorkspace() {
+    const workspace = document.querySelector("[data-home-workspace]");
+    if (!workspace) return;
+    const tabs = [...workspace.querySelectorAll("[data-home-course]")];
+    const grid = workspace.querySelector("[data-home-core-tools]");
+    const moreGrid = workspace.querySelector("[data-home-more-tools]");
+    const moreShell = workspace.querySelector("[data-home-more-shell]");
+    const label = workspace.querySelector("[data-home-course-label]");
+    const code = workspace.querySelector("[data-home-course-code]");
+    const intro = workspace.querySelector("[data-home-course-intro]");
+    const tabStrip = workspace.querySelector(".home-course-tabs");
+    if (!tabs.length || !grid) return;
+
+    const render = (courseId) => {
+      const option = homeCourseOption(courseId) || homeCourseOption("linear");
+      if (!option) return;
+      const tools = workspaceTools(option.links, { groupId: option.groupId, unit: option.unit });
+      workspace.dataset.homeCourse = option.id;
+      if (option.palette?.accent) {
+        workspace.style.setProperty("--home-course-accent", option.palette.accent);
+        workspace.style.setProperty("--home-course-deep", option.palette.accentDeep || option.palette.accent);
+        workspace.style.setProperty("--home-course-soft", option.palette.soft || "rgba(29, 78, 216, 0.1)");
+      }
+      tabs.forEach((tab) => {
+        const selected = tab.dataset.homeCourse === option.id;
+        tab.classList.toggle("is-active", selected);
+        tab.setAttribute("aria-selected", String(selected));
+        tab.tabIndex = selected ? 0 : -1;
+      });
+      const selectedTab = tabs.find((tab) => tab.dataset.homeCourse === option.id);
+      if (selectedTab && tabStrip) {
+        requestAnimationFrame(() => {
+          const maxScroll = Math.max(0, tabStrip.scrollWidth - tabStrip.clientWidth);
+          const centred = selectedTab.offsetLeft - (tabStrip.clientWidth - selectedTab.offsetWidth) / 2;
+          tabStrip.scrollLeft = Math.min(maxScroll, Math.max(0, centred));
+        });
+      }
+      if (label) label.textContent = option.label;
+      if (code) code.textContent = option.detail;
+      if (intro) intro.textContent = option.intro || "Choose a resource and start studying.";
+      grid.innerHTML = tools.primary.map(renderHomeCoreLink).join("");
+      if (moreGrid) moreGrid.innerHTML = tools.secondary.map(renderCompactToolLink).join("");
+      if (moreShell) moreShell.hidden = !tools.secondary.length;
+      renderMobileCoreNav(option.links, { groupId: option.groupId, unit: option.unit });
+      try {
+        localStorage.setItem("eliteHomeCourse", option.id);
+      } catch (err) {
+        // The launcher still works when browser storage is unavailable.
+      }
+    };
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => render(tab.dataset.homeCourse));
+      tab.addEventListener("keydown", (event) => {
+        if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+        event.preventDefault();
+        const offset = event.key === "ArrowRight" ? 1 : -1;
+        const next = tabs[(index + offset + tabs.length) % tabs.length];
+        next.focus();
+        render(next.dataset.homeCourse);
+      });
+    });
+
+    let saved = "";
+    try {
+      saved = localStorage.getItem("eliteHomeCourse") || "";
+    } catch (err) {
+      saved = "";
+    }
+    render(tabs.some((tab) => tab.dataset.homeCourse === saved) ? saved : "linear");
+  }
+
+  function initCoreMobileNav() {
+    if (document.body?.dataset?.page === "home") return;
+    const groupId = activeNavGroup();
+    const toolData = activeToolLinks(groupId);
+    if (!toolData || toolData.kind === "unit-choice") return;
+    renderMobileCoreNav(toolData.links, { groupId: toolData.groupId || groupId, unit: toolData.unit });
   }
 
   function ensureDialog() {
@@ -1057,6 +1347,7 @@
       : appendScript(dataUrl, "data");
     dataReady
       .then(() => appendScript(compassUrl, "compass"))
+      .then(() => syncCoreMobileNav())
       .catch(() => {});
   }
 
@@ -1068,7 +1359,9 @@
     initStructuredNav();
     renderEliteBreadcrumb();
     renderIalSubjectHub();
+    initHomeCoreWorkspace();
     initPathwayToolStrip();
+    syncCoreMobileNav();
     ensureIconsOnTiles();
     initShrinkingHeader();
     initAnimatedCounters();
