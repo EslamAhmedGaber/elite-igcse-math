@@ -690,6 +690,13 @@
     readouts: document.getElementById("readouts"),
     dataTable: document.getElementById("dataTable"),
     copySnapshot: document.getElementById("copySnapshot"),
+    eventJumps: document.getElementById("eventJumps"),
+    pinMeasurementA: document.getElementById("pinMeasurementA"),
+    pinMeasurementB: document.getElementById("pinMeasurementB"),
+    clearMeasurements: document.getElementById("clearMeasurements"),
+    exportMeasurements: document.getElementById("exportMeasurements"),
+    comparisonTable: document.getElementById("comparisonTable"),
+    measurementStatus: document.getElementById("measurementStatus"),
     formulaTrail: document.getElementById("formulaTrail"),
     examMoves: document.getElementById("examMoves"),
     canvas: document.getElementById("labCanvas"),
@@ -735,15 +742,17 @@
     viewMode: window.matchMedia("(max-width: 720px)").matches ? "scene" : "split",
     inspectorTab: "overview",
     lastReadouts: [],
+    measurements: { a: null, b: null },
     raf: null
   };
 
   function init() {
-    document.documentElement.dataset.labRelease = "20260809g";
+    document.documentElement.dataset.labRelease = "20260809h";
     document.documentElement.dataset.labTopics = String(TOPICS.length);
     document.documentElement.dataset.labCases = String(TOPICS.reduce((sum, topic) => sum + topic.cases.length, 0));
     document.documentElement.dataset.labProfiles = String(CASE_VISUAL_PROFILES.length);
     document.documentElement.dataset.labUniqueProfiles = String(new Set(CASE_VISUAL_PROFILES.map((profile) => profile.signature)).size);
+    document.documentElement.dataset.labMeasurementSlots = "2";
     buildTopicRail();
     buildLabStats();
     buildQuickLabs();
@@ -808,6 +817,7 @@
     const item = currentCase();
     const profile = currentProfile();
     app.values = Object.assign({}, item.defaults || {});
+    clearMeasurementData(false);
     el.caseChip.textContent = "Lab " + String(profile.ordinal).padStart(2, "0") + " / " + CASE_VISUAL_PROFILES.length;
     document.documentElement.style.setProperty("--case-accent", profile.accent);
     document.documentElement.style.setProperty("--case-secondary", profile.secondary);
@@ -851,6 +861,7 @@
           if (peer !== event.target) peer.value = event.target.value;
         });
         setPlaying(false);
+        clearMeasurementData(false);
         render();
       });
     });
@@ -862,6 +873,7 @@
           peer.classList.toggle("is-active", peer === button);
         });
         setPlaying(false);
+        clearMeasurementData(false);
         render();
       });
     });
@@ -953,9 +965,8 @@
     return CASE_VISUAL_PROFILE_MAP.get(topic.id + ":" + item.id) || CASE_VISUAL_PROFILES[0];
   }
 
-  function simulationPhase(t) {
+  function phaseBoundaries() {
     const profile = currentProfile();
-    const progress = clamp(t / Math.max(0.001, duration()), 0, 1);
     const contactRatio = Math.max(0.2, Math.min(0.48, duration() * 0.065)) / duration();
     let boundaries = [0.08, 0.48, 0.76];
     if (currentCase().stage === "momentum") {
@@ -971,6 +982,13 @@
         boundaries = [0.08, profile.impactRatio, Math.min(0.9, profile.impactRatio + contactRatio)];
       }
     }
+    return boundaries;
+  }
+
+  function simulationPhase(t) {
+    const profile = currentProfile();
+    const progress = clamp(t / Math.max(0.001, duration()), 0, 1);
+    const boundaries = phaseBoundaries();
     let index = 0;
     if (progress >= boundaries[0]) index = 1;
     if (progress >= boundaries[1]) index = 2;
@@ -1062,6 +1080,27 @@
     }
     if (el.copySnapshot) {
       el.copySnapshot.addEventListener("click", copySnapshot);
+    }
+    if (el.pinMeasurementA) {
+      el.pinMeasurementA.addEventListener("click", () => captureMeasurement("a"));
+    }
+    if (el.pinMeasurementB) {
+      el.pinMeasurementB.addEventListener("click", () => captureMeasurement("b"));
+    }
+    if (el.clearMeasurements) {
+      el.clearMeasurements.addEventListener("click", () => clearMeasurementData(true));
+    }
+    if (el.exportMeasurements) {
+      el.exportMeasurements.addEventListener("click", exportMeasurementCsv);
+    }
+    if (el.eventJumps) {
+      el.eventJumps.addEventListener("click", (event) => {
+        const button = event.target.closest("[data-event-time]");
+        if (!button) return;
+        app.t = clamp(Number(button.dataset.eventTime || 0), 0, duration());
+        setPlaying(false);
+        render();
+      });
     }
   }
 
@@ -1298,6 +1337,7 @@
     paintDataSnapshot(readouts);
     updateTimeUi();
     paintPhaseRail(t);
+    paintMeasurementBench(readouts, t);
   }
 
   function buildLabStats() {
@@ -1486,6 +1526,155 @@
         ${rows.map(([key, value]) => `<tr><td>${escapeHtml(key)}</td><td>${escapeHtml(value)}</td></tr>`).join("")}
       </tbody>
     `;
+  }
+
+  function measurementEvents() {
+    const profile = currentProfile();
+    const starts = [0, ...phaseBoundaries()].slice(0, profile.phases.length);
+    return profile.phases.map((label, index) => ({
+      label,
+      time: starts[index] * duration()
+    }));
+  }
+
+  function paintEventJumps(t) {
+    if (!el.eventJumps) return;
+    const events = measurementEvents();
+    const key = currentProfile().signature + ":" + fmt(duration());
+    if (el.eventJumps.dataset.eventKey !== key) {
+      el.eventJumps.dataset.eventKey = key;
+      el.eventJumps.innerHTML = events.map((event, index) => `
+        <button type="button" data-event-time="${event.time}" data-event-index="${index}">
+          <span>${String(index + 1).padStart(2, "0")}</span>
+          <strong>${escapeHtml(event.label)}</strong>
+          <em>${fmt(event.time)} s</em>
+        </button>
+      `).join("");
+    }
+    const active = simulationPhase(t).index;
+    el.eventJumps.querySelectorAll("[data-event-index]").forEach((button) => {
+      const isActive = Number(button.dataset.eventIndex) === active;
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-current", isActive ? "step" : "false");
+    });
+  }
+
+  function captureMeasurement(slot) {
+    const key = slot === "b" ? "b" : "a";
+    app.measurements[key] = {
+      caseId: currentCase().id,
+      signature: currentProfile().signature,
+      topic: currentTopic().title,
+      title: currentCase().title,
+      time: app.t,
+      readouts: Object.fromEntries(app.lastReadouts.map((row) => [row.key, row.value]))
+    };
+    paintMeasurementBench(app.lastReadouts, app.t);
+  }
+
+  function clearMeasurementData(announce) {
+    app.measurements = { a: null, b: null };
+    updateMeasurementButtons();
+    if (el.measurementStatus) {
+      el.measurementStatus.textContent = announce ? "Pinned measurements cleared" : "No measurements pinned";
+    }
+    document.documentElement.dataset.labMeasurements = "0";
+  }
+
+  function updateMeasurementButtons() {
+    const a = Boolean(app.measurements.a);
+    const b = Boolean(app.measurements.b);
+    if (el.pinMeasurementA) {
+      el.pinMeasurementA.classList.toggle("is-pinned", a);
+      el.pinMeasurementA.setAttribute("aria-pressed", String(a));
+    }
+    if (el.pinMeasurementB) {
+      el.pinMeasurementB.classList.toggle("is-pinned", b);
+      el.pinMeasurementB.setAttribute("aria-pressed", String(b));
+    }
+    if (el.clearMeasurements) el.clearMeasurements.disabled = !a && !b;
+    if (el.exportMeasurements) el.exportMeasurements.disabled = !a && !b;
+  }
+
+  function parsedMeasurement(value) {
+    const text = String(value || "").trim();
+    const match = text.match(/^([-+]?(?:\d+(?:\.\d+)?|\.\d+))(.*)$/);
+    if (!match) return null;
+    return { number: Number(match[1]), unit: match[2].trim() };
+  }
+
+  function measurementDelta(aValue, bValue) {
+    if (aValue == null || bValue == null) return "-";
+    const a = parsedMeasurement(aValue);
+    const b = parsedMeasurement(bValue);
+    if (!a || !b || a.unit !== b.unit) return aValue === bValue ? "0" : "changed";
+    const delta = b.number - a.number;
+    const sign = delta > 0 ? "+" : "";
+    return `${sign}${fmt(delta)}${a.unit ? " " + a.unit : ""}`;
+  }
+
+  function paintMeasurementBench(readouts, t) {
+    paintEventJumps(t);
+    if (!el.comparisonTable) return;
+    const live = Object.fromEntries((readouts || []).map((row) => [row.key, row.value]));
+    const a = app.measurements.a?.readouts || {};
+    const b = app.measurements.b?.readouts || {};
+    const keys = [...new Set([...Object.keys(live), ...Object.keys(a), ...Object.keys(b)])].slice(0, 8);
+    const body = keys.length ? keys.map((key) => `
+      <tr>
+        <th scope="row">${escapeHtml(key)}</th>
+        <td>${escapeHtml(live[key] ?? "-")}</td>
+        <td>${escapeHtml(a[key] ?? "-")}</td>
+        <td>${escapeHtml(b[key] ?? "-")}</td>
+        <td>${escapeHtml(measurementDelta(a[key], b[key]))}</td>
+      </tr>
+    `).join("") : `<tr><td colspan="5">No numerical readouts for this frame.</td></tr>`;
+    el.comparisonTable.innerHTML = `
+      <thead><tr><th>Quantity</th><th>Live</th><th>A</th><th>B</th><th>&Delta; B-A</th></tr></thead>
+      <tbody>${body}</tbody>
+    `;
+
+    const labels = [];
+    if (app.measurements.a) labels.push(`A ${fmt(app.measurements.a.time)} s`);
+    if (app.measurements.b) labels.push(`B ${fmt(app.measurements.b.time)} s`);
+    if (el.measurementStatus) {
+      el.measurementStatus.textContent = labels.length ? labels.join(" | ") : `Live ${fmt(t)} s | No measurements pinned`;
+    }
+    document.documentElement.dataset.labMeasurements = String(labels.length);
+    updateMeasurementButtons();
+  }
+
+  function csvCell(value) {
+    return `"${String(value ?? "").replace(/"/g, '""')}"`;
+  }
+
+  function exportMeasurementCsv() {
+    const a = app.measurements.a;
+    const b = app.measurements.b;
+    if (!a && !b) return;
+    const aRows = a?.readouts || {};
+    const bRows = b?.readouts || {};
+    const keys = [...new Set([...Object.keys(aRows), ...Object.keys(bRows)])];
+    const rows = [
+      ["Elite WME01 Mechanics Lab"],
+      ["Topic", currentTopic().title],
+      ["Experiment", currentCase().title],
+      ["Signature", currentProfile().signature],
+      ["A time (s)", a ? fmt(a.time) : ""],
+      ["B time (s)", b ? fmt(b.time) : ""],
+      [],
+      ["Quantity", "A", "B", "Delta B-A"],
+      ...keys.map((key) => [key, aRows[key] || "", bRows[key] || "", measurementDelta(aRows[key], bRows[key])])
+    ];
+    const csv = rows.map((row) => row.map(csvCell).join(",")).join("\r\n");
+    const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `elite-wme01-${currentCase().id}-measurements.csv`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
   }
 
   function copySnapshot() {
@@ -3879,11 +4068,12 @@
   }
 
   window.__ELITE_LAB_AUDIT__ = Object.freeze({
-    release: "20260809g",
+    release: "20260809h",
     topicCount: TOPICS.length,
     caseCount: TOPICS.reduce((sum, topic) => sum + topic.cases.length, 0),
     profileCount: CASE_VISUAL_PROFILES.length,
     uniqueProfileCount: new Set(CASE_VISUAL_PROFILES.map((profile) => profile.signature)).size,
+    measurementSlots: 2,
     activeState: function () {
       const phase = simulationPhase(app.t);
       return {
@@ -3892,7 +4082,9 @@
         phase: phase.label,
         time: app.t,
         playing: app.playing,
-        readouts: app.lastReadouts.slice()
+        readouts: app.lastReadouts.slice(),
+        pinnedMeasurements: Number(Boolean(app.measurements.a)) + Number(Boolean(app.measurements.b)),
+        eventCount: measurementEvents().length
       };
     }
   });

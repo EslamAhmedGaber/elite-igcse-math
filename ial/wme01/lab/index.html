@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/mechanics-lab.css?v=20260809g" />
+<link rel="stylesheet" href="assets/mechanics-lab.css?v=20260809h" />
 </head>
 <body>
   <div class="lab-shell">
@@ -157,6 +157,29 @@
                 </div>
               </div>
             </div>
+
+            <section class="measurement-bench" aria-labelledby="measurementTitle">
+              <header class="measurement-head">
+                <div>
+                  <span class="measurement-kicker"><i data-lucide="ruler" aria-hidden="true"></i> Live measurements</span>
+                  <h3 id="measurementTitle">Measurement bench</h3>
+                </div>
+                <div class="measurement-actions" aria-label="Measurement controls">
+                  <button class="mini-btn measurement-pin pin-a" id="pinMeasurementA" type="button"><i data-lucide="map-pin" aria-hidden="true"></i><span>Pin A</span></button>
+                  <button class="mini-btn measurement-pin pin-b" id="pinMeasurementB" type="button"><i data-lucide="map-pin" aria-hidden="true"></i><span>Pin B</span></button>
+                  <button class="mini-btn subtle icon-only" id="clearMeasurements" type="button" aria-label="Clear pinned measurements" title="Clear pinned measurements"><i data-lucide="eraser" aria-hidden="true"></i></button>
+                  <button class="mini-btn subtle" id="exportMeasurements" type="button"><i data-lucide="download" aria-hidden="true"></i><span>CSV</span></button>
+                </div>
+              </header>
+              <div class="event-jumps" id="eventJumps" aria-label="Experiment event timeline"></div>
+              <div class="measurement-table-wrap">
+                <table class="measurement-table" id="comparisonTable">
+                  <thead><tr><th>Quantity</th><th>Live</th><th>A</th><th>B</th><th>&Delta; B-A</th></tr></thead>
+                  <tbody><tr><td colspan="5">Waiting for experiment data.</td></tr></tbody>
+                </table>
+              </div>
+              <p class="measurement-status" id="measurementStatus" aria-live="polite">No measurements pinned</p>
+            </section>
           </section>
 
           <aside class="inspector" aria-label="Experiment controls and method">
@@ -269,6 +292,6 @@
   </div>
 
 <script defer src="https://cdn.jsdelivr.net/npm/lucide@0.468.0/dist/umd/lucide.min.js"></script>
-<script defer src="assets/mechanics-lab.js?v=20260809g"></script>
+<script defer src="assets/mechanics-lab.js?v=20260809h"></script>
 </body>
 </html>

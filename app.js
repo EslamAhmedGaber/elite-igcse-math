@@ -6,7 +6,9 @@ if (!document.getElementById("questionGrid")) {
 
 const allQuestions = window.QUESTION_DATA || [];
 const meta = window.SITE_META || {};
-const solutionData = window.SOLUTION_DATA || {};
+let solutionData = window.SOLUTION_DATA || window.ELITE_ANSWER_INDEX || {};
+let fullSolutionsPromise = null;
+const FULL_SOLUTIONS_URL = "solutions-data.js?v=20260528a";
 const selected = new Set(JSON.parse(localStorage.getItem("selectedExpertiseQuestions") || "[]"));
 const solved = new Set(JSON.parse(localStorage.getItem("solvedExpertiseQuestions") || "[]"));
 const REVIEW_KEY = "eliteMistakeBoxV1";
@@ -34,6 +36,40 @@ if (!PRACTICE_PAGE_SIZES.includes(pageSize)) pageSize = 24;
 let timerDuration = 25 * 60;
 let timerRemaining = timerDuration;
 let timerInterval = null;
+
+function hasFullSolutionBundle(bundle = solutionData) {
+  return Object.values(bundle || {}).some((solution) => Boolean(
+    solution?.source || (Array.isArray(solution?.steps) && solution.steps.length)
+  ));
+}
+
+function setRuntimeBusy(control, busy) {
+  if (!control) return;
+  control.setAttribute("aria-busy", String(busy));
+  control.disabled = busy;
+}
+
+async function ensureFullSolutions(control) {
+  if (hasFullSolutionBundle()) return solutionData;
+  if (fullSolutionsPromise) return fullSolutionsPromise;
+  if (!window.EliteRuntime?.loadScript) throw new Error("Solution loader is unavailable");
+
+  setRuntimeBusy(control, true);
+  fullSolutionsPromise = window.EliteRuntime.loadScript(FULL_SOLUTIONS_URL, {
+    id: "eliteFullSolutions",
+    test: () => hasFullSolutionBundle(window.SOLUTION_DATA)
+  }).then(() => {
+    if (!hasFullSolutionBundle(window.SOLUTION_DATA)) {
+      throw new Error("The worked-solution bundle is incomplete");
+    }
+    solutionData = window.SOLUTION_DATA;
+    return solutionData;
+  }).catch((error) => {
+    fullSolutionsPromise = null;
+    throw error;
+  }).finally(() => setRuntimeBusy(control, false));
+  return fullSolutionsPromise;
+}
 
 const els = {
   totalQuestions: document.getElementById("totalQuestions"),
@@ -1148,11 +1184,16 @@ function renderAnswerTrainer(question, { compact = false } = {}) {
   </section>`;
 }
 
-function typesetAnswerTrainers() {
+async function typesetAnswerTrainers() {
   const targets = [...els.questionGrid.querySelectorAll(".answer-trainer-math")];
   if (!targets.length) return;
-  if (window.EliteSolutionView?.typeset) window.EliteSolutionView.typeset(targets);
-  else if (window.MathJax?.typesetPromise) window.MathJax.typesetPromise(targets).catch(() => {});
+  try {
+    await window.EliteRuntime?.ensureMathJax?.();
+    if (window.EliteSolutionView?.typeset) await window.EliteSolutionView.typeset(targets);
+    else if (window.MathJax?.typesetPromise) await window.MathJax.typesetPromise(targets);
+  } catch (error) {
+    console.warn("[answer-trainer] Math rendering unavailable", error);
+  }
 }
 
 function handleAnswerTrainerAction(id, action, container) {
@@ -1229,20 +1270,33 @@ function formatStructuredSolution(solution, options = {}) {
   return `${steps}${answer}` || `<p class="solution-empty">Solution has not been written yet.</p>`;
 }
 
-function showSolution(id) {
+async function showSolution(id, control) {
   const question = questionById(id);
-  const solution = solutionData[id];
-  if (!question || !solution) return;
+  if (!question) return;
   els.solutionTitle.textContent = `${question.paper} Q${question.question}`;
   els.solutionMeta.textContent = `${question.topic} | ${question.marks} marks`;
-  els.solutionBody.innerHTML = formatStructuredSolution(solution, {
-    key: question.id,
-    topic: question.topic,
-    marks: question.marks
-  });
-  els.solutionDialog.showModal();
-  if (window.EliteSolutionView?.typeset) window.EliteSolutionView.typeset(els.solutionBody);
-  else if (window.MathJax?.typesetPromise) window.MathJax.typesetPromise([els.solutionBody]).catch(() => {});
+  try {
+    await Promise.all([
+      ensureFullSolutions(control),
+      window.EliteRuntime?.ensureMathJax?.()
+    ]);
+    const solution = solutionData[id];
+    if (!solution) throw new Error("Worked solution not found");
+    els.solutionBody.innerHTML = formatStructuredSolution(solution, {
+      key: question.id,
+      topic: question.topic,
+      marks: question.marks
+    });
+    if (!els.solutionDialog.open) els.solutionDialog.showModal();
+    if (window.EliteSolutionView?.typeset) await window.EliteSolutionView.typeset(els.solutionBody);
+    else if (window.MathJax?.typesetPromise) await window.MathJax.typesetPromise([els.solutionBody]);
+  } catch (error) {
+    console.error("[worked-solution]", error);
+    els.solutionBody.innerHTML = `<p class="solution-empty">The worked solution could not load. Check the connection, then try again.</p>`;
+    if (!els.solutionDialog.open) els.solutionDialog.showModal();
+  } finally {
+    setRuntimeBusy(control, false);
+  }
 }
 
 let activeFixId = null;
@@ -1493,7 +1547,7 @@ els.questionGrid.addEventListener("click", (event) => {
     redraw();
   }
   if (action === "zoom") zoom(card.dataset.id);
-  if (action === "solution") showSolution(card.dataset.id);
+  if (action === "solution") showSolution(card.dataset.id, event.target.closest("[data-action]"));
   if (action === "fixTopic") openFixTopic(card.dataset.id);
 });
 

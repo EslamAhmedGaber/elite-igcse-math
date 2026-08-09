@@ -177,7 +177,7 @@ async function evaluate(page, expression) {
 }
 
 async function waitFor(page, expression, label) {
-  for (let attempt = 0; attempt < 120; attempt += 1) {
+  for (let attempt = 0; attempt < 300; attempt += 1) {
     const value = await evaluate(page, expression);
     if (value) return;
     await delay(100);
@@ -188,14 +188,14 @@ async function waitFor(page, expression, label) {
 async function navigate(page, url) {
   page.pageErrors.length = 0;
   await page.client.send("Page.navigate", { url }, page.sessionId);
-  await waitFor(page, "document.readyState === 'complete' && Boolean(window.ElitePrint) && Boolean(document.querySelector('#examPaper'))", url);
+  await waitFor(page, "document.readyState === 'complete' && Boolean(window.ElitePrint) && Boolean(document.querySelector('#examPaper')) && document.querySelector('#eliteExamApp')?.dataset.eliteLoaded === 'true' && document.body.getAttribute('aria-busy') === 'false'", url);
   await installHarness(page, true);
 }
 
 async function reloadKeepingStorage(page) {
   page.pageErrors.length = 0;
   await page.client.send("Page.reload", { ignoreCache: true }, page.sessionId);
-  await waitFor(page, "document.readyState === 'complete' && Boolean(window.ElitePrint) && Boolean(document.querySelector('#examPaper'))", "page reload");
+  await waitFor(page, "document.readyState === 'complete' && Boolean(window.ElitePrint) && Boolean(document.querySelector('#examPaper')) && document.querySelector('#eliteExamApp')?.dataset.eliteLoaded === 'true' && document.body.getAttribute('aria-busy') === 'false'", "page reload");
   await installHarness(page, false);
 }
 
@@ -328,7 +328,7 @@ function pageScript(body) {
         return options[index].value;
       };
       const waitForPrint = async (length) => {
-        for (let index = 0; index < 80; index += 1) {
+        for (let index = 0; index < 300; index += 1) {
           if (printCalls().length >= length) return;
           await sleep(100);
         }

@@ -477,3 +477,37 @@ body.has-pathway-hub[data-page="ial-wme01"] .ial-hero {
     transition-duration: 0.01ms !important;
   }
 }
+/* Runtime loading feedback for on-demand question banks, solutions and maths. */
+.runtime-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-height: 8rem;
+  color: var(--elite-text-soft, #52627a);
+}
+
+.runtime-status::before {
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 2px solid color-mix(in srgb, var(--elite-accent, #155eef) 22%, transparent);
+  border-top-color: var(--elite-accent, #155eef);
+  border-radius: 50%;
+  content: "";
+  animation: elite-runtime-spin 0.75s linear infinite;
+}
+
+button[aria-busy="true"],
+.button[aria-busy="true"],
+.is-loading {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+@keyframes elite-runtime-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .runtime-status::before { animation-duration: 1.8s; }
+}

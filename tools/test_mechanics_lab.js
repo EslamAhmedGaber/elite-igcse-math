@@ -39,15 +39,22 @@ assert(
   "caseOrdinal",
   "caseSignature",
   "phaseRail",
+  "eventJumps",
+  "pinMeasurementA",
+  "pinMeasurementB",
+  "clearMeasurements",
+  "exportMeasurements",
+  "comparisonTable",
+  "measurementStatus",
   "labSearch",
   "experimentCards"
 ].forEach((id) => assert(html.includes(`id="${id}"`), `Missing lab control #${id}`));
 
 assert((html.match(/data-speed="/g) || []).length === 6, "The six playback speed controls are required");
 assert((html.match(/data-inspector-tab="/g) || []).length === 3, "Overview, Variables, and Method tabs are required");
-assert(html.includes("mechanics-lab.css?v=20260809g"), "Lab CSS release version is stale");
+assert(html.includes("mechanics-lab.css?v=20260809h"), "Lab CSS release version is stale");
 assert(html.includes("family=Sora"), "Lab typography is not aligned with the Elite brand system");
-assert(html.includes("mechanics-lab.js?v=20260809g"), "Lab JavaScript release version is stale");
+assert(html.includes("mechanics-lab.js?v=20260809h"), "Lab JavaScript release version is stale");
 
 [
   "function drawAnalysis(",
@@ -63,17 +70,24 @@ assert(html.includes("mechanics-lab.js?v=20260809g"), "Lab JavaScript release ve
   "function drawBall(",
   "function drawMetricAnalysis(",
   "function captureLabImage(",
-  "function toggleStageFullscreen("
+  "function toggleStageFullscreen(",
+  "function measurementEvents(",
+  "function captureMeasurement(",
+  "function paintMeasurementBench(",
+  "function exportMeasurementCsv("
 ].forEach((signature) => assert(js.includes(signature), `Missing visual engine: ${signature}`));
 
 assert(css.includes('.visual-stage[data-view="scene"]'), "Scene view styling is missing");
 assert(css.includes('.visual-stage[data-view="graph"]'), "Graph view styling is missing");
 assert(css.includes(".experiment-phase"), "Per-case event phase rail is missing");
+assert(css.includes(".measurement-bench"), "Measurement bench styling is missing");
+assert(css.includes(".event-jumps"), "Clickable event timeline styling is missing");
 assert(css.includes("@media (max-width: 720px)"), "Mobile laboratory layout is missing");
 assert(css.includes(".stage-panel:fullscreen"), "Fullscreen laboratory layout is missing");
 assert(js.includes("const CASE_VISUAL_PROFILES = Object.freeze(buildCaseVisualProfiles())"), "The 98-case visual profile registry is missing");
 assert(js.includes("uniqueProfileCount"), "Runtime case-profile audit is missing");
-assert(js.includes('release: "20260809g"'), "Runtime lab audit release is stale");
+assert(js.includes('release: "20260809h"'), "Runtime lab audit release is stale");
+assert(js.includes("measurementSlots: 2"), "Runtime measurement audit is missing");
 assert(js.includes("dataset.labUniqueProfiles"), "DOM-visible runtime profile audit is missing");
 
 console.log("Mechanics lab checks passed");
@@ -81,3 +95,4 @@ console.log(`- ${topicIds.length} topics`);
 console.log(`- ${caseFactories.length} working cases`);
 console.log("- 98 individualized visual profiles and staged collision physics verified");
 console.log("- Scene, Split, Graph, capture, fullscreen, search, and six speeds verified");
+console.log("- Clickable event timeline, A/B measurement bench, deltas, and CSV export verified");

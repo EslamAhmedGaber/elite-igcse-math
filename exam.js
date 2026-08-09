@@ -151,7 +151,8 @@
       };
 
   const questions = course.questions;
-  const solutions = course.solutions;
+  let solutions = course.solutions;
+  let fullSolutionsPromise = null;
   const ialPrintPalettes = { wma11: "pure", wma12: "mulberry", wme01: "teal" };
   const activePrintPalette = course.mode === "pure"
     ? ialPrintPalettes[course.id] || "pure"
@@ -176,6 +177,43 @@
   const RANDOM_BUILD_VERSION = "random-topic-split-v2";
   const REVISION_BUILD_VERSION = "revision-book-v2";
   const CUSTOM_BUILD_VERSION = "custom-test-v2";
+
+  function hasFullSolutionBundle(bundle = solutions) {
+    return Object.values(bundle || {}).some((solution) => Boolean(
+      solution?.source || (Array.isArray(solution?.steps) && solution.steps.length)
+    ));
+  }
+
+  function setRuntimeBusy(control, busy) {
+    if (!control) return;
+    control.setAttribute("aria-busy", String(busy));
+    control.classList.toggle("is-loading", busy);
+    control.disabled = busy;
+    if (!busy) renderButtons();
+  }
+
+  async function ensureExamSolutions(control) {
+    if (course.mode === "pure" || hasFullSolutionBundle()) return solutions;
+    if (fullSolutionsPromise) return fullSolutionsPromise;
+    if (!window.EliteRuntime?.loadScript) throw new Error("Solution loader is unavailable");
+
+    setRuntimeBusy(control, true);
+    fullSolutionsPromise = window.EliteRuntime.loadScript("solutions-data.js?v=20260528a", {
+      id: "eliteExamSolutions",
+      test: () => hasFullSolutionBundle(window.SOLUTION_DATA)
+    }).then(() => {
+      if (!hasFullSolutionBundle(window.SOLUTION_DATA)) {
+        throw new Error("The worked-solution bundle is incomplete");
+      }
+      solutions = window.SOLUTION_DATA;
+      course.solutions = solutions;
+      return solutions;
+    }).catch((error) => {
+      fullSolutionsPromise = null;
+      throw error;
+    }).finally(() => setRuntimeBusy(control, false));
+    return fullSolutionsPromise;
+  }
 
   const els = {
     modeTabs: [...document.querySelectorAll("[data-exam-mode]")],
@@ -892,12 +930,19 @@
     return buildRandomPaper({ startNow: true });
   }
 
-  function finishExam() {
+  async function finishExam() {
     if (state.status !== "running") return;
     state.status = "marking";
     state.finishedAt = Date.now();
     saveState();
     render();
+    try {
+      await ensureExamSolutions(els.finish);
+      renderPaper();
+    } catch (error) {
+      console.error("[exam-solutions]", error);
+      els.result.innerHTML = `<strong>Marking mode is ready.</strong><p>The worked solutions need a connection. Try Print with solutions again when the connection returns.</p>`;
+    }
   }
 
   function totalMarks() {
@@ -1142,6 +1187,9 @@
       return;
     }
     const canMark = state.status !== "running" && state.status !== "idle";
+    if (canMark && course.id === "igcse" && !hasFullSolutionBundle() && !fullSolutionsPromise) {
+      ensureExamSolutions().then(renderPaper).catch((error) => console.warn("[exam-solutions]", error));
+    }
     els.paper.innerHTML = state.ids.map((id, index) => {
       const question = questionById(id);
       if (!question) return "";
@@ -1409,6 +1457,14 @@
   }
 
   async function waitForMathJaxReady(timeoutMs = 7000) {
+    if (window.EliteRuntime?.ensureMathJax) {
+      try {
+        await window.EliteRuntime.ensureMathJax();
+      } catch (error) {
+        console.warn("[exam-math]", error);
+        return false;
+      }
+    }
     const started = Date.now();
     while (!window.MathJax?.typesetPromise && Date.now() - started < timeoutMs) {
       await waitFor(80);
@@ -1433,6 +1489,14 @@
   async function printCurrentSolutions(trigger = els.printSolution) {
     if (!ensurePaperForCurrentMode()) return;
     if (!state.ids.length) return;
+    try {
+      await ensureExamSolutions(trigger);
+      renderPaper();
+    } catch (error) {
+      console.error("[exam-solutions]", error);
+      els.result.innerHTML = `<strong>Solutions could not load.</strong><p>Check the connection, then press Print with solutions again.</p>`;
+      return;
+    }
     document.body.classList.add("print-solutions");
     try {
       await typesetPaperMath();
