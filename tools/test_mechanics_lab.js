@@ -3,9 +3,10 @@ const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
 const labRoot = path.join(ROOT, "ial", "wme01", "lab");
-const html = fs.readFileSync(path.join(labRoot, "index.html"), "utf8");
-const css = fs.readFileSync(path.join(labRoot, "assets", "mechanics-lab.css"), "utf8");
-const js = fs.readFileSync(path.join(labRoot, "assets", "mechanics-lab.js"), "utf8");
+const normalizeLines = (value) => value.replace(/\r\n/g, "\n");
+const html = normalizeLines(fs.readFileSync(path.join(labRoot, "index.html"), "utf8"));
+const css = normalizeLines(fs.readFileSync(path.join(labRoot, "assets", "mechanics-lab.css"), "utf8"));
+const js = normalizeLines(fs.readFileSync(path.join(labRoot, "assets", "mechanics-lab.js"), "utf8"));
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
@@ -34,20 +35,32 @@ assert(
   "stageReset",
   "stageCapture",
   "stageFullscreen",
+  "experimentPhase",
+  "caseOrdinal",
+  "caseSignature",
+  "phaseRail",
   "labSearch",
   "experimentCards"
 ].forEach((id) => assert(html.includes(`id="${id}"`), `Missing lab control #${id}`));
 
 assert((html.match(/data-speed="/g) || []).length === 6, "The six playback speed controls are required");
 assert((html.match(/data-inspector-tab="/g) || []).length === 3, "Overview, Variables, and Method tabs are required");
-assert(html.includes("mechanics-lab.css?v=20260713d"), "Lab CSS release version is stale");
-assert(html.includes("mechanics-lab.js?v=20260713d"), "Lab JavaScript release version is stale");
+assert(html.includes("mechanics-lab.css?v=20260809g"), "Lab CSS release version is stale");
+assert(html.includes("family=Sora"), "Lab typography is not aligned with the Elite brand system");
+assert(html.includes("mechanics-lab.js?v=20260809g"), "Lab JavaScript release version is stale");
 
 [
   "function drawAnalysis(",
   "function drawTrajectoryAnalysis(",
   "function drawKinematicsAnalysis(",
   "function drawMomentumAnalysis(",
+  "function drawMomentumComparison(",
+  "function buildCaseVisualProfiles(",
+  "function casePhaseLabels(",
+  "function collisionTimeline(",
+  "function collisionMetrics(",
+  "function drawImpactPulse(",
+  "function drawBall(",
   "function drawMetricAnalysis(",
   "function captureLabImage(",
   "function toggleStageFullscreen("
@@ -55,10 +68,16 @@ assert(html.includes("mechanics-lab.js?v=20260713d"), "Lab JavaScript release ve
 
 assert(css.includes('.visual-stage[data-view="scene"]'), "Scene view styling is missing");
 assert(css.includes('.visual-stage[data-view="graph"]'), "Graph view styling is missing");
+assert(css.includes(".experiment-phase"), "Per-case event phase rail is missing");
 assert(css.includes("@media (max-width: 720px)"), "Mobile laboratory layout is missing");
 assert(css.includes(".stage-panel:fullscreen"), "Fullscreen laboratory layout is missing");
+assert(js.includes("const CASE_VISUAL_PROFILES = Object.freeze(buildCaseVisualProfiles())"), "The 98-case visual profile registry is missing");
+assert(js.includes("uniqueProfileCount"), "Runtime case-profile audit is missing");
+assert(js.includes('release: "20260809g"'), "Runtime lab audit release is stale");
+assert(js.includes("dataset.labUniqueProfiles"), "DOM-visible runtime profile audit is missing");
 
 console.log("Mechanics lab checks passed");
 console.log(`- ${topicIds.length} topics`);
 console.log(`- ${caseFactories.length} working cases`);
+console.log("- 98 individualized visual profiles and staged collision physics verified");
 console.log("- Scene, Split, Graph, capture, fullscreen, search, and six speeds verified");

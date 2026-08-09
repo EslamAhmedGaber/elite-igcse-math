@@ -909,13 +909,24 @@
     if (!toolData) return;
     document.body?.classList.add("has-pathway-hub");
     document.body?.classList.toggle("pathway-unit-chooser", toolData.kind === "unit-choice");
+    const visibleHeading = [...document.querySelectorAll("h1")].some((heading) => {
+      const style = window.getComputedStyle(heading);
+      const rect = heading.getBoundingClientRect();
+      return style.display !== "none"
+        && style.visibility !== "hidden"
+        && rect.width > 0
+        && rect.height > 0;
+    });
+    const titleMarkup = visibleHeading
+      ? `<strong>${escapeHtml(toolData.title)}</strong>`
+      : `<h1>${escapeHtml(toolData.title)}</h1>`;
     const anchor = document.querySelector(".elite-breadcrumb") || header;
     if (toolData.kind === "unit-choice") {
       anchor.insertAdjacentHTML("afterend", `
         <nav class="pathway-tool-strip is-unit-choice" aria-label="${toolData.title} tools">
           <div class="pathway-tool-strip-title">
             <span>Choose course</span>
-            <strong>${toolData.title}</strong>
+            ${titleMarkup}
             <small>${toolData.detail}</small>
             ${toolData.intro ? `<p>${toolData.intro}</p>` : ""}
           </div>
@@ -934,7 +945,7 @@
       <nav class="pathway-tool-strip is-core-workspace" aria-label="${toolData.title} study workspace">
         <div class="pathway-tool-strip-title">
           <span>Active course</span>
-          <strong>${toolData.title}</strong>
+          ${titleMarkup}
           <small>${toolData.detail}</small>
           ${toolData.intro ? `<p>${toolData.intro}</p>` : ""}
         </div>
@@ -1258,6 +1269,43 @@
         if (isActive) main.setAttribute("aria-current", "page");
         else main.removeAttribute("aria-current");
       }
+    });
+
+    const hoverTimers = new WeakMap();
+    const desktopHover = window.matchMedia("(min-width: 1081px) and (hover: hover)");
+    const setGroupOpen = (group, open) => {
+      group.classList.toggle("is-open", open);
+      group.querySelector(".nav-tab-main")?.setAttribute("aria-expanded", String(open));
+    };
+    const cancelScheduledClose = (group) => {
+      const timer = hoverTimers.get(group);
+      if (timer) window.clearTimeout(timer);
+      hoverTimers.delete(group);
+    };
+
+    groups.forEach((group) => {
+      group.addEventListener("pointerenter", () => {
+        if (!desktopHover.matches) return;
+        cancelScheduledClose(group);
+        groups.forEach((other) => {
+          if (other !== group) setGroupOpen(other, false);
+        });
+        setGroupOpen(group, true);
+      });
+      group.addEventListener("pointerleave", () => {
+        if (!desktopHover.matches) return;
+        cancelScheduledClose(group);
+        hoverTimers.set(group, window.setTimeout(() => {
+          setGroupOpen(group, false);
+          hoverTimers.delete(group);
+        }, 320));
+      });
+      group.addEventListener("focusin", () => setGroupOpen(group, true));
+      group.addEventListener("focusout", () => {
+        window.setTimeout(() => {
+          if (!group.contains(document.activeElement)) setGroupOpen(group, false);
+        }, 0);
+      });
     });
 
     nav.addEventListener("click", (event) => {

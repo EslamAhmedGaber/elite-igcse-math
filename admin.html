@@ -13,12 +13,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Pinyon+Script&family=Italianno&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="pathway-bootstrap.js?v=20260613a"></script>
   <link rel="stylesheet" href="styles.css?v=20260809a">
+  <link rel="stylesheet" href="elite-system.css?v=20260809c">
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
   <script defer src="admin.js?v=20260617a"></script>
   <script defer src="course-modules.js?v=20260713a"></script>
-  <script defer src="lead.js?v=20260809a"></script>
+  <script defer src="lead.js?v=20260809b"></script>
 </head>
 <body data-page="admin">
 
@@ -229,7 +230,7 @@
               <span>Weekly reminder</span>
               <strong id="teacherEmailPreviewTitle">Email draft to Dr Eslam</strong>
             </div>
-            <textarea id="teacherEmailPreview" rows="14" readonly></textarea>
+            <textarea id="teacherEmailPreview" rows="14" readonly aria-labelledby="teacherEmailPreviewTitle"></textarea>
             <div class="teacher-email-actions">
               <button type="button" id="teacherCopyEmailBtn">Copy email</button>
               <button type="button" id="teacherExportCsvBtn">Export CSV</button>

@@ -19,8 +19,10 @@
   --shadow: 0 14px 34px rgba(14, 34, 60, 0.12);
   --soft-shadow: 0 7px 20px rgba(14, 34, 60, 0.08);
   --focus-ring: 0 0 0 3px rgba(21, 94, 239, 0.22);
+  --case-accent: #46b5f7;
+  --case-secondary: #e1b84f;
   --radius: 8px;
-  --font: Inter, "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font: "Sora", Inter, "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 * {
@@ -104,7 +106,7 @@ svg {
   padding: 11px max(18px, calc((100vw - 1540px) / 2));
   color: #fff;
   background: var(--navy);
-  border-bottom: 3px solid var(--gold);
+  border-bottom: 3px solid var(--royal);
   box-shadow: 0 8px 24px rgba(7, 27, 51, 0.22);
   position: relative;
   z-index: 20;
@@ -400,10 +402,11 @@ select {
 .stage-panel {
   min-width: 0;
   overflow: hidden;
-  border: 1px solid #173653;
+  border: 1px solid color-mix(in srgb, var(--case-accent) 42%, #173653);
+  border-top: 3px solid var(--case-accent);
   border-radius: var(--radius);
   background: var(--stage);
-  box-shadow: 0 12px 30px rgba(6, 21, 38, 0.2);
+  box-shadow: 0 16px 34px rgba(6, 21, 38, 0.24);
 }
 
 .stage-panel:fullscreen {
@@ -612,6 +615,15 @@ select {
   overflow: hidden;
 }
 
+.canvas-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 -30px 60px rgba(2, 10, 20, 0.2);
+  pointer-events: none;
+}
+
 #labCanvas,
 #analysisCanvas {
   width: 100%;
@@ -621,12 +633,117 @@ select {
 
 .hud {
   position: absolute;
-  top: 11px;
+  bottom: 11px;
   left: 11px;
   max-width: min(430px, calc(100% - 22px));
   display: grid;
   gap: 5px;
   pointer-events: none;
+}
+
+.experiment-phase {
+  --phase-progress: 0%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  left: 10px;
+  z-index: 2;
+  min-height: 42px;
+  display: grid;
+  grid-template-columns: auto minmax(180px, 1fr);
+  align-items: center;
+  gap: 14px;
+  padding: 7px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 6px;
+  background: rgba(3, 15, 28, 0.82);
+  box-shadow: 0 8px 20px rgba(1, 8, 18, 0.22);
+  backdrop-filter: blur(7px);
+  pointer-events: none;
+}
+
+.phase-identity {
+  display: grid;
+  gap: 1px;
+  font-variant-numeric: tabular-nums;
+}
+
+.phase-identity span {
+  color: var(--case-secondary);
+  font-size: 8px;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.phase-identity strong {
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 0;
+}
+
+.phase-rail {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 5px;
+}
+
+.phase-rail::before,
+.phase-rail::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 5%;
+  left: 5%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.phase-rail::after {
+  right: auto;
+  width: calc(var(--phase-progress) * 0.9);
+  max-width: 90%;
+  background: linear-gradient(90deg, var(--case-accent), var(--case-secondary));
+}
+
+.phase-step {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  color: #89a0b9;
+  font-size: 8px;
+  font-weight: 780;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.phase-step::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 2px solid #6c8198;
+  border-radius: 50%;
+  background: #071b33;
+}
+
+.phase-step.is-complete,
+.phase-step.is-active {
+  color: #fff;
+}
+
+.phase-step.is-complete::before {
+  border-color: var(--case-accent);
+  background: var(--case-accent);
+}
+
+.phase-step.is-active::before {
+  border-color: var(--case-secondary);
+  background: var(--navy);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--case-secondary) 22%, transparent);
 }
 
 .hud-line {
@@ -1307,6 +1424,16 @@ input[type="range"] {
   padding: 12px;
 }
 
+.experiment-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--card-accent, var(--royal)), var(--card-secondary, var(--gold)));
+}
+
 .quick-lab:hover,
 .experiment-card:hover {
   border-color: var(--card-accent, var(--royal));
@@ -1649,6 +1776,34 @@ input[type="range"] {
     height: 390px;
   }
 
+  .experiment-phase {
+    top: 7px;
+    right: 7px;
+    left: 7px;
+    grid-template-columns: 82px minmax(0, 1fr);
+    gap: 7px;
+    padding-inline: 7px;
+  }
+
+  .phase-step {
+    font-size: 7px;
+  }
+
+  .phase-identity strong {
+    font-size: 9px;
+  }
+
+  .hud {
+    right: 7px;
+    bottom: 7px;
+    left: 7px;
+    max-width: none;
+  }
+
+  .hud-line:nth-child(n + 3) {
+    display: none;
+  }
+
   .visual-stage[data-view="split"] .analysis-wrap {
     height: 300px;
   }
@@ -1754,6 +1909,17 @@ input[type="range"] {
 
   .symbol-grid {
     grid-template-columns: 1fr;
+  }
+
+  .experiment-phase {
+    grid-template-columns: 70px minmax(0, 1fr);
+  }
+
+  .phase-step span {
+    max-width: 48px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
 

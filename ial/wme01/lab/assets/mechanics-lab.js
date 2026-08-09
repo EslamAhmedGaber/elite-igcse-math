@@ -340,6 +340,100 @@
     }
   ];
 
+  const CASE_PALETTES = [
+    { accent: "#46b5f7", secondary: "#e1b84f", deep: "#06172b", surface: "#10345a", material: "#d7e8f7" },
+    { accent: "#2dd4bf", secondary: "#f0cf68", deep: "#061b29", surface: "#0c3b49", material: "#d5f3ed" },
+    { accent: "#6ea8ff", secondary: "#fb9b82", deep: "#09182f", surface: "#173865", material: "#d9e7ff" },
+    { accent: "#a78bfa", secondary: "#46b5f7", deep: "#10162d", surface: "#302a60", material: "#ebe4ff" },
+    { accent: "#34d399", secondary: "#f0cf68", deep: "#071c26", surface: "#17473e", material: "#d8f7e9" },
+    { accent: "#fb8f72", secondary: "#46b5f7", deep: "#11182c", surface: "#493047", material: "#ffe1d8" }
+  ];
+
+  const PHASE_LABELS = {
+    projectile: ["Launch", "Flight", "Apex", "Landing"],
+    modelling: ["Assume", "Apply", "Compare", "Decide"],
+    units: ["Identify", "Convert", "Check", "Verify"],
+    vectors: ["Resolve", "Combine", "Resultant", "Read"],
+    graphs: ["Read", "Trace", "Measure", "Conclude"],
+    suvat1d: ["Set signs", "Move", "Key event", "Result"],
+    suvat2d: ["Resolve", "Flight", "Condition", "Result"],
+    forces: ["Isolate", "Resolve", "Balance", "Result"],
+    dynamics: ["Free body", "Accelerate", "Link", "Result"],
+    incline: ["Resolve", "Friction", "Motion", "Result"],
+    momentum: ["Before", "Approach", "Impact", "After"],
+    moments: ["Choose pivot", "Load", "Turn", "Balance"]
+  };
+
+  const STAGE_ENVIRONMENTS = {
+    projectile: "range",
+    modelling: "apparatus",
+    units: "metrology",
+    vectors: "vector-grid",
+    graphs: "data-lab",
+    suvat1d: "track",
+    suvat2d: "range",
+    forces: "force-table",
+    dynamics: "workshop",
+    incline: "incline-rig",
+    momentum: "impact-lane",
+    moments: "structures"
+  };
+
+  const CASE_VISUAL_PROFILES = Object.freeze(buildCaseVisualProfiles());
+  const CASE_VISUAL_PROFILE_MAP = new Map(CASE_VISUAL_PROFILES.map((profile) => [profile.key, profile]));
+
+  function buildCaseVisualProfiles() {
+    const profiles = [];
+    let ordinal = 0;
+    TOPICS.forEach((topic, topicIndex) => {
+      topic.cases.forEach((item, caseIndex) => {
+        ordinal += 1;
+        const key = topic.id + ":" + item.id;
+        const seed = visualHash(key);
+        const palette = CASE_PALETTES[(seed + ordinal + topicIndex) % CASE_PALETTES.length];
+        profiles.push(Object.freeze({
+          key,
+          ordinal,
+          signature: "EL-WME01-" + String(ordinal).padStart(3, "0"),
+          accent: palette.accent,
+          secondary: palette.secondary,
+          deep: palette.deep,
+          surface: palette.surface,
+          material: palette.material,
+          environment: STAGE_ENVIRONMENTS[item.stage] || "apparatus",
+          phases: casePhaseLabels(item),
+          grid: 32 + (seed % 3) * 8,
+          cameraShift: ((seed % 9) - 4) * 0.008,
+          objectScale: 0.94 + (seed % 7) * 0.018,
+          impactRatio: 0.48 + (seed % 7) * 0.012,
+          topicIndex,
+          caseIndex
+        }));
+      });
+    });
+    return profiles;
+  }
+
+  function visualHash(value) {
+    let hash = 2166136261;
+    for (let i = 0; i < value.length; i += 1) {
+      hash ^= value.charCodeAt(i);
+      hash = Math.imul(hash, 16777619);
+    }
+    return Math.abs(hash >>> 0);
+  }
+
+  function casePhaseLabels(item) {
+    if (item.stage === "momentum") {
+      const mode = item.defaults && item.defaults.mode;
+      if (mode === "basic") return ["Ready", "Motion", "Measure", "Result"];
+      if (["impulse", "change", "forceTime"].includes(mode)) return ["Initial", "Force acts", "Impulse set", "Coast"];
+      if (mode === "explosion") return ["Together", "Stored", "Separation", "Apart"];
+      if (mode === "wall") return ["Ready", "Approach", "Contact", "Rebound"];
+    }
+    return (PHASE_LABELS[item.stage] || ["Set up", "Run", "Observe", "Result"]).slice();
+  }
+
   function caseDef(id, title, stage, purpose, tags, defaults, formula, moves) {
     return { id, title, stage, purpose, tags, defaults, formula, moves };
   }
@@ -476,9 +570,20 @@
   }
 
   function momCase(id, title, purpose, mode, tags) {
-    return caseDef(id, title, "momentum", purpose, tags, {
-      mode, m1: 4, u1: 6, m2: 3, u2: -2, e: 0.6, force: 18, duration: 5
-    }, [
+    const presets = {
+      basic: { m1: 5, u1: 7, m2: 3, u2: 0, e: 0.6, force: 18, duration: 5 },
+      impulse: { m1: 4, u1: 2, m2: 3, u2: 0, e: 0.6, force: 16, duration: 5 },
+      change: { m1: 6, u1: -2, m2: 3, u2: 0, e: 0.6, force: 24, duration: 5 },
+      same: { m1: 4, u1: 8, m2: 3, u2: 3, e: 0.65, force: 18, duration: 6 },
+      opposite: { m1: 5, u1: 7, m2: 3, u2: -5, e: 0.72, force: 18, duration: 6 },
+      stick: { m1: 4, u1: 7, m2: 5, u2: -2, e: 0, force: 18, duration: 6 },
+      explosion: { m1: 3, u1: -5, m2: 5, u2: 3, e: 0, force: 28, duration: 5 },
+      wall: { m1: 2, u1: 8, m2: 3, u2: 0, e: 0.7, force: 18, duration: 5 },
+      forceTime: { m1: 5, u1: 1, m2: 3, u2: 0, e: 0.6, force: 20, duration: 6 },
+      follow: { m1: 4, u1: 9, m2: 6, u2: 2, e: 0.45, force: 14, duration: 7 },
+      ambiguous: { m1: 3, u1: 6, m2: 4, u2: -3, e: 0.8, force: 18, duration: 6 }
+    };
+    return caseDef(id, title, "momentum", purpose, tags, Object.assign({ mode }, presets[mode]), [
       "Momentum: <b>p = mv</b>.",
       "Impulse: <b>J = Ft = mv - mu</b>.",
       "Direct impact with restitution: <b>v<sub>2</sub> - v<sub>1</sub> = e(u<sub>1</sub> - u<sub>2</sub>)</b>."
@@ -595,6 +700,10 @@
     visualStage: document.getElementById("visualStage"),
     viewModes: document.getElementById("viewModes"),
     sceneState: document.getElementById("sceneState"),
+    experimentPhase: document.getElementById("experimentPhase"),
+    caseOrdinal: document.getElementById("caseOrdinal"),
+    caseSignature: document.getElementById("caseSignature"),
+    phaseRail: document.getElementById("phaseRail"),
     hud: document.getElementById("hud"),
     timeSlider: document.getElementById("timeSlider"),
     timeOut: document.getElementById("timeOut"),
@@ -630,6 +739,11 @@
   };
 
   function init() {
+    document.documentElement.dataset.labRelease = "20260809g";
+    document.documentElement.dataset.labTopics = String(TOPICS.length);
+    document.documentElement.dataset.labCases = String(TOPICS.reduce((sum, topic) => sum + topic.cases.length, 0));
+    document.documentElement.dataset.labProfiles = String(CASE_VISUAL_PROFILES.length);
+    document.documentElement.dataset.labUniqueProfiles = String(new Set(CASE_VISUAL_PROFILES.map((profile) => profile.signature)).size);
     buildTopicRail();
     buildLabStats();
     buildQuickLabs();
@@ -692,8 +806,13 @@
     setPlaying(false);
     el.caseSelect.value = String(index);
     const item = currentCase();
+    const profile = currentProfile();
     app.values = Object.assign({}, item.defaults || {});
-    el.caseChip.textContent = item.title;
+    el.caseChip.textContent = "Lab " + String(profile.ordinal).padStart(2, "0") + " / " + CASE_VISUAL_PROFILES.length;
+    document.documentElement.style.setProperty("--case-accent", profile.accent);
+    document.documentElement.style.setProperty("--case-secondary", profile.secondary);
+    if (el.caseOrdinal) el.caseOrdinal.textContent = String(profile.ordinal).padStart(2, "0") + " / " + CASE_VISUAL_PROFILES.length;
+    if (el.caseSignature) el.caseSignature.textContent = profile.signature;
     el.casePurpose.textContent = item.purpose;
     if (el.analysisTitle) {
       el.analysisTitle.textContent = (STAGE_VISUALS[item.stage] || { label: "Live" }).label + " analysis";
@@ -826,6 +945,52 @@
 
   function stageVisual(stage) {
     return STAGE_VISUALS[stage] || { icon: "activity", label: "Experiment" };
+  }
+
+  function currentProfile() {
+    const topic = currentTopic();
+    const item = currentCase();
+    return CASE_VISUAL_PROFILE_MAP.get(topic.id + ":" + item.id) || CASE_VISUAL_PROFILES[0];
+  }
+
+  function simulationPhase(t) {
+    const profile = currentProfile();
+    const progress = clamp(t / Math.max(0.001, duration()), 0, 1);
+    const contactRatio = Math.max(0.2, Math.min(0.48, duration() * 0.065)) / duration();
+    let boundaries = [0.08, 0.48, 0.76];
+    if (currentCase().stage === "momentum") {
+      const mode = app.values.mode;
+      if (mode === "explosion") {
+        boundaries = [0.06, 0.25, 0.32];
+      } else if (["impulse", "change", "forceTime"].includes(mode)) {
+        const pulseRatio = Math.min(2, duration() * 0.4) / duration();
+        boundaries = [0.02, pulseRatio, Math.min(0.9, pulseRatio + 0.08)];
+      } else if (mode === "basic") {
+        boundaries = [0.06, 0.52, 0.84];
+      } else {
+        boundaries = [0.08, profile.impactRatio, Math.min(0.9, profile.impactRatio + contactRatio)];
+      }
+    }
+    let index = 0;
+    if (progress >= boundaries[0]) index = 1;
+    if (progress >= boundaries[1]) index = 2;
+    if (progress >= boundaries[2]) index = 3;
+    return { index, progress, label: profile.phases[index] };
+  }
+
+  function paintPhaseRail(t) {
+    if (!el.phaseRail) return;
+    const profile = currentProfile();
+    const phase = simulationPhase(t);
+    el.phaseRail.style.setProperty("--phase-progress", Math.round(phase.progress * 100) + "%");
+    el.phaseRail.innerHTML = profile.phases.map((name, index) => {
+      const state = index < phase.index ? " is-complete" : (index === phase.index ? " is-active" : "");
+      return `<span class="phase-step${state}"><span>${escapeHtml(name)}</span></span>`;
+    }).join("");
+    document.documentElement.dataset.labPhase = phase.label;
+    document.documentElement.dataset.labSignature = profile.signature;
+    document.documentElement.dataset.labCase = currentCase().id;
+    if (el.sceneState) el.sceneState.textContent = app.playing ? phase.label : (t > 0 ? phase.label : "Ready");
   }
 
   function refreshIcons() {
@@ -999,18 +1164,18 @@
     outputCtx.fillStyle = "#061526";
     outputCtx.fillRect(0, 0, output.width, output.height);
     outputCtx.fillStyle = "#e1b84f";
-    outputCtx.font = "700 18px Inter, sans-serif";
+    outputCtx.font = "700 18px Sora, sans-serif";
     outputCtx.fillText("ELITE MECHANICS 1 LAB", 40, 42);
     outputCtx.fillStyle = "#ffffff";
-    outputCtx.font = "700 30px Inter, sans-serif";
+    outputCtx.font = "700 30px Sora, sans-serif";
     outputCtx.fillText(currentTopic().title, 40, 82);
     outputCtx.fillStyle = "#aebed1";
-    outputCtx.font = "18px Inter, sans-serif";
-    outputCtx.fillText(currentCase().title + " | t = " + fmt(app.t) + " s", 40, 112);
+    outputCtx.font = "18px Sora, sans-serif";
+    outputCtx.fillText(currentProfile().signature + " | " + currentCase().title + " | t = " + fmt(app.t) + " s", 40, 112);
     outputCtx.drawImage(el.canvas, 40, 140, 930, 680);
     outputCtx.drawImage(el.analysisCanvas, 990, 140, 570, 680);
     outputCtx.fillStyle = "#aebed1";
-    outputCtx.font = "15px Inter, sans-serif";
+    outputCtx.font = "15px Sora, sans-serif";
     outputCtx.fillText("Edexcel IAL WME01 | Dr Eslam Ahmed", 40, 862);
     const save = (url) => {
       const link = document.createElement("a");
@@ -1115,7 +1280,7 @@
         break;
       case "momentum":
         readouts = drawMomentum(W, H, t);
-        hud = ["Momentum is signed.", "The brief flash is the impulse interval."];
+        hud = ["Momentum is signed, so direction stays visible.", "The contact interval transfers impulse; the energy gauge shows what is retained."];
         break;
       case "moments":
         readouts = drawMoments(W, H);
@@ -1124,6 +1289,7 @@
       default:
         readouts = [];
     }
+    drawCaseStamp(W, H);
     const analysisRect = el.analysisCanvas.getBoundingClientRect();
     drawAnalysis(Math.max(280, analysisRect.width), Math.max(280, analysisRect.height), t, readouts);
     paintReadouts(readouts);
@@ -1131,6 +1297,7 @@
     paintHud(hud);
     paintDataSnapshot(readouts);
     updateTimeUi();
+    paintPhaseRail(t);
   }
 
   function buildLabStats() {
@@ -1216,13 +1383,13 @@
 
   function experimentCard(entry) {
     const symbols = symbolsForCase(entry.item).slice(0, 4);
-    const visual = topicVisual(entry.topic.id);
+    const profile = CASE_VISUAL_PROFILE_MAP.get(entry.topic.id + ":" + entry.item.id);
     const stage = stageVisual(entry.item.stage);
     return `
-      <article class="experiment-card" data-topic-index="${entry.topicIndex}" data-case-index="${entry.caseIndex}" style="--card-accent:${visual.accent}">
+      <article class="experiment-card" data-topic-index="${entry.topicIndex}" data-case-index="${entry.caseIndex}" style="--card-accent:${profile.accent};--card-secondary:${profile.secondary}">
         <div class="experiment-meta">
           <span class="experiment-symbol experiment-topic">${escapeHtml(entry.topic.label)}</span>
-          <span class="experiment-symbol">${escapeHtml(stage.label)}</span>
+          <span class="experiment-symbol">${escapeHtml(profile.signature)}</span>
         </div>
         <span class="experiment-icon"><i data-lucide="${stage.icon}" aria-hidden="true"></i></span>
         <div class="card-title-row">
@@ -1444,18 +1611,96 @@
   }
 
   function drawBackdrop(W, H) {
-    const g = ctx.createLinearGradient(0, 0, W, H);
-    g.addColorStop(0, "#10275d");
-    g.addColorStop(0.58, "#08142f");
-    g.addColorStop(1, "#050b1d");
-    ctx.fillStyle = g;
+    const profile = currentProfile();
+    const horizon = H * (0.67 + profile.cameraShift);
+    const light = ctx.createLinearGradient(0, 0, 0, H);
+    light.addColorStop(0, profile.surface);
+    light.addColorStop(0.58, profile.deep);
+    light.addColorStop(1, "#030b16");
+    ctx.fillStyle = light;
     ctx.fillRect(0, 0, W, H);
+
+    drawEnvironment(profile.environment, W, H, horizon, profile);
+
     ctx.save();
-    ctx.globalAlpha = 0.42;
-    ctx.strokeStyle = "rgba(255,255,255,.075)";
+    ctx.globalAlpha = 0.36;
+    ctx.strokeStyle = "rgba(220,236,252,.075)";
     ctx.lineWidth = 1;
-    for (let x = 0; x < W; x += 40) line(x, 0, x, H);
-    for (let y = 0; y < H; y += 40) line(0, y, W, y);
+    for (let x = 0; x < W; x += profile.grid) line(x, 0, x, H);
+    for (let y = 0; y < H; y += profile.grid) line(0, y, W, y);
+    ctx.restore();
+
+    const shade = ctx.createLinearGradient(0, 0, W, 0);
+    shade.addColorStop(0, "rgba(1,8,18,.34)");
+    shade.addColorStop(0.18, "rgba(1,8,18,0)");
+    shade.addColorStop(0.82, "rgba(1,8,18,0)");
+    shade.addColorStop(1, "rgba(1,8,18,.34)");
+    ctx.fillStyle = shade;
+    ctx.fillRect(0, 0, W, H);
+  }
+
+  function drawEnvironment(environment, W, H, horizon, profile) {
+    ctx.save();
+    if (environment === "range") {
+      const ground = ctx.createLinearGradient(0, horizon, 0, H);
+      ground.addColorStop(0, "rgba(30,72,86,.74)");
+      ground.addColorStop(1, "rgba(5,24,35,.94)");
+      ctx.fillStyle = ground;
+      ctx.fillRect(0, horizon, W, H - horizon);
+      ctx.strokeStyle = "rgba(202,231,243,.22)";
+      ctx.lineWidth = 2;
+      line(0, horizon, W, horizon);
+      for (let x = 0; x < W; x += Math.max(48, profile.grid * 2)) {
+        line(x, horizon, W * 0.5 + (x - W * 0.5) * 1.8, H, "rgba(170,214,226,.08)", 1);
+      }
+    } else if (["track", "impact-lane", "workshop"].includes(environment)) {
+      ctx.fillStyle = "rgba(6,23,38,.82)";
+      ctx.fillRect(0, horizon, W, H - horizon);
+      ctx.strokeStyle = "rgba(198,220,239,.13)";
+      ctx.lineWidth = 1;
+      for (let y = horizon; y < H; y += 28) line(0, y, W, y);
+      for (let x = 0; x <= W; x += 90) line(W * 0.5, horizon, x, H, "rgba(198,220,239,.08)", 1);
+      ctx.fillStyle = "rgba(255,255,255,.035)";
+      for (let x = 22; x < W; x += 92) rounded(x, 72, 64, 26, 4, true);
+    } else if (environment === "incline-rig") {
+      ctx.fillStyle = "rgba(6,24,40,.78)";
+      ctx.fillRect(0, horizon, W, H - horizon);
+      ctx.strokeStyle = "rgba(213,230,246,.12)";
+      line(0, horizon, W, horizon);
+      for (let x = 40; x < W; x += 88) {
+        line(x, horizon, x + 40, H, "rgba(213,230,246,.07)", 1);
+      }
+    } else if (environment === "structures") {
+      ctx.strokeStyle = "rgba(195,218,239,.12)";
+      ctx.lineWidth = 6;
+      line(W * 0.08, horizon, W * 0.08, H);
+      line(W * 0.92, horizon, W * 0.92, H);
+      line(W * 0.08, horizon, W * 0.92, horizon);
+      ctx.lineWidth = 1;
+      for (let x = W * 0.16; x < W * 0.92; x += W * 0.12) line(x, horizon, x - W * 0.08, H);
+    } else {
+      ctx.fillStyle = "rgba(4,18,33,.46)";
+      ctx.fillRect(W * 0.045, H * 0.13, W * 0.91, H * 0.7);
+      ctx.strokeStyle = "rgba(205,226,244,.11)";
+      ctx.lineWidth = 2;
+      rounded(W * 0.045, H * 0.13, W * 0.91, H * 0.7, 7, false, true);
+      ctx.fillStyle = "rgba(255,255,255,.04)";
+      ctx.fillRect(0, horizon, W, H - horizon);
+    }
+    ctx.fillStyle = profile.accent;
+    ctx.globalAlpha = 0.7;
+    ctx.fillRect(0, 0, 4, H);
+    ctx.restore();
+  }
+
+  function drawCaseStamp(W, H) {
+    const profile = currentProfile();
+    const item = currentCase();
+    ctx.save();
+    ctx.textAlign = "right";
+    ctx.fillStyle = "rgba(220,235,248,.5)";
+    ctx.font = "700 9px Sora, sans-serif";
+    ctx.fillText(profile.signature + " | " + item.title, W - 12, H - 13);
     ctx.restore();
   }
 
@@ -2145,80 +2390,187 @@
     if (mode === "wall") return drawWallBounce(W, H, t);
     if (mode === "explosion") return drawExplosion(W, H, t);
     if (mode === "impulse" || mode === "change" || mode === "forceTime") return drawImpulse(W, H, t);
-    const data = collision(v);
+    if (mode === "basic") return drawBasicMomentum(W, H, t);
+
+    const motion = collisionTimeline(v, W, t);
+    const metrics = collisionMetrics(v);
+    const profile = currentProfile();
     const y = H * 0.58;
-    drawTrack(y, W);
-    const before = t < duration() * 0.5;
-    const local = before ? t : t - duration() * 0.5;
-    const scale = 24;
-    const x1 = W * 0.38 + (before ? v.u1 : data.v1) * local * scale;
-    const x2 = W * 0.62 + (before ? v.u2 : data.v2) * local * scale;
-    if (Math.abs(t - duration() * 0.5) < 0.15) {
-      ctx.fillStyle = "rgba(245,158,11,.2)";
-      circle(W * 0.5, y - 25, 64);
+    drawTrack(y, W, profile);
+    drawImpactZone(motion.contactX, y, motion.phase);
+
+    drawCart(motion.x1, y, profile.accent, "A", {
+      mass: v.m1,
+      velocity: motion.velocity1,
+      compressed: motion.compression,
+      scale: profile.objectScale
+    });
+    drawCart(motion.x2, y, profile.secondary, "B", {
+      mass: v.m2,
+      velocity: motion.velocity2,
+      compressed: motion.compression,
+      scale: profile.objectScale
+    });
+
+    if (motion.phase === "impact") {
+      drawImpactPulse(motion.contactX, y - 24, motion.eventProgress, profile);
     }
-    drawCart(x1, y, colors.sky, "A");
-    drawCart(x2, y, colors.goldSoft, "B");
-    arrow(x1, y - 72, x1 + (before ? v.u1 : data.v1) * 9, y - 72, colors.sky, 3);
-    arrow(x2, y - 112, x2 + (before ? v.u2 : data.v2) * 9, y - 112, colors.goldSoft, 3);
+    if (mode === "stick" && motion.phase === "after") {
+      drawCoupler((motion.x1 + motion.x2) * 0.5, y - 18, profile.secondary);
+    }
+
+    drawVelocityIndicator(motion.x1, y - 78, motion.velocity1, profile.accent, motion.phase === "before" ? "u1" : "v1");
+    drawVelocityIndicator(motion.x2, y - 116, motion.velocity2, profile.secondary, motion.phase === "before" ? "u2" : "v2");
+
+    if (mode === "ambiguous" && motion.phase === "after") {
+      ctx.save();
+      ctx.setLineDash([6, 5]);
+      drawVelocityIndicator(motion.x2, y - 150, -motion.velocity2, colors.violet, "alternate sign");
+      ctx.restore();
+    }
+
     return [
-      ro("momentum before", fmt(v.m1 * v.u1 + v.m2 * v.u2)),
-      ro("v1 after", fmt(data.v1) + " m/s"),
-      ro("v2 after", fmt(data.v2) + " m/s"),
-      ro("e", fmt(v.e)),
-      ro("mode", mode)
+      ro("event", motion.phase),
+      ro("p before", fmt(metrics.pBefore) + " kg m/s"),
+      ro("p after", fmt(metrics.pAfter) + " kg m/s"),
+      ro("momentum error", fmt(metrics.residual)),
+      ro("KE retained", fmt(metrics.energyRetained) + "%")
+    ];
+  }
+
+  function drawBasicMomentum(W, H, t) {
+    const v = app.values;
+    const profile = currentProfile();
+    const y = H * 0.58;
+    drawTrack(y, W, profile);
+    const scale = Math.max(5, Math.min(14, (W - 160) / Math.max(1, Math.abs(v.u1) * duration())));
+    const x = 82 + v.u1 * t * scale;
+    const momentum = v.m1 * v.u1;
+    drawCart(x, y, profile.accent, "A", { mass: v.m1, velocity: v.u1, scale: profile.objectScale });
+    drawVelocityIndicator(x, y - 86, v.u1, profile.accent, "velocity");
+    drawSceneMetric(W - 150, H * 0.2, "p = mv", fmt(momentum) + " kg m/s", profile.secondary);
+    return [
+      ro("mass", fmt(v.m1) + " kg"),
+      ro("velocity", fmt(v.u1) + " m/s"),
+      ro("momentum", fmt(momentum) + " kg m/s"),
+      ro("direction", momentum >= 0 ? "positive" : "negative")
     ];
   }
 
   function drawImpulse(W, H, t) {
     const v = app.values;
+    const profile = currentProfile();
     const y = H * 0.58;
-    drawTrack(y, W);
-    const impulse = v.force * Math.min(t, 2);
-    const dv = impulse / Math.max(0.1, v.m1);
-    const x = W * 0.28 + (v.u1 * t + 0.5 * dv * t) * 16;
-    drawCart(x, y, colors.sky, "A");
-    arrow(x - 70, y - 78, x + 70, y - 78, colors.orange, 5);
-    label(x + 78, y - 76, "force over time", colors.orange);
+    drawTrack(y, W, profile);
+    const pulseTime = Math.min(2, duration() * 0.4);
+    const activeTime = Math.min(t, pulseTime);
+    const acceleration = v.force / Math.max(0.1, v.m1);
+    const distanceDuringPulse = v.u1 * activeTime + 0.5 * acceleration * activeTime * activeTime;
+    const velocityAtPulseEnd = v.u1 + acceleration * pulseTime;
+    const coastTime = Math.max(0, t - pulseTime);
+    const distance = distanceDuringPulse + (t > pulseTime ? velocityAtPulseEnd * coastTime : 0);
+    const velocity = t <= pulseTime ? v.u1 + acceleration * t : velocityAtPulseEnd;
+    const scale = Math.max(3.5, Math.min(10, (W - 190) / Math.max(1, Math.abs(v.u1 * duration()) + Math.abs(acceleration * pulseTime * duration()))));
+    const x = 88 + distance * scale;
+    const impulse = v.force * activeTime;
+    drawCart(x, y, profile.accent, "A", { mass: v.m1, velocity, scale: profile.objectScale });
+    if (t <= pulseTime) {
+      arrow(x - 86, y - 82, x + 54, y - 82, profile.secondary, 5);
+      label(x - 82, y - 94, "F = " + fmt(v.force) + " N", profile.secondary, "700 11px Sora");
+    } else {
+      ctx.save();
+      ctx.setLineDash([5, 5]);
+      line(x - 82, y - 82, x + 50, y - 82, "rgba(240,207,104,.42)", 2);
+      ctx.restore();
+      label(x - 82, y - 94, "force interval complete", colors.dim, "700 10px Sora");
+    }
+    drawVelocityIndicator(x, y - 118, velocity, profile.accent, "v");
+    drawImpulseMeter(W - 154, H * 0.2, impulse, v.force * pulseTime, profile);
     return [
       ro("impulse", fmt(impulse) + " N s"),
-      ro("change in v", fmt(dv) + " m/s"),
+      ro("change in v", fmt(impulse / Math.max(0.1, v.m1)) + " m/s"),
+      ro("velocity", fmt(velocity) + " m/s"),
       ro("momentum change", fmt(impulse)),
-      ro("time", fmt(t) + " s")
+      ro("force state", t <= pulseTime ? "acting" : "complete")
     ];
   }
 
   function drawExplosion(W, H, t) {
+    const v = app.values;
+    const profile = currentProfile();
     const y = H * 0.58;
-    drawTrack(y, W);
-    const split = Math.max(0, t - 0.8);
-    const x1 = W * 0.5 - split * 90;
-    const x2 = W * 0.5 + split * 120;
-    drawCart(x1, y, colors.sky, "A");
-    drawCart(x2, y, colors.goldSoft, "B");
-    if (t < 0.8) label(W * 0.45, y - 95, "before: one system", colors.goldSoft);
+    drawTrack(y, W, profile);
+    const eventTime = duration() * 0.25;
+    const local = Math.max(0, t - eventTime);
+    const scale = Math.max(6, Math.min(14, (W - 190) / Math.max(1, (Math.abs(v.u1) + Math.abs(v.u2)) * duration())));
+    const centre = W * 0.5;
+    const x1 = centre + v.u1 * local * scale;
+    const x2 = centre + v.u2 * local * scale;
+    if (t < eventTime) {
+      drawCart(centre, y, profile.secondary, "A+B", { mass: v.m1 + v.m2, velocity: 0, scale: 1.08 });
+      drawSceneMetric(W - 154, H * 0.2, "system momentum", "0 kg m/s", profile.secondary);
+    } else {
+      drawCart(x1, y, profile.accent, "A", { mass: v.m1, velocity: v.u1, scale: 0.88 });
+      drawCart(x2, y, profile.secondary, "B", { mass: v.m2, velocity: v.u2, scale: 0.96 });
+      drawVelocityIndicator(x1, y - 82, v.u1, profile.accent, "vA");
+      drawVelocityIndicator(x2, y - 118, v.u2, profile.secondary, "vB");
+      if (local < 0.35) drawImpactPulse(centre, y - 22, clamp(local / 0.35, 0, 1), profile);
+    }
+    const p1 = v.m1 * v.u1;
+    const p2 = v.m2 * v.u2;
     return [
-      ro("total momentum", "0"),
-      ro("A momentum", "left"),
-      ro("B momentum", "right"),
-      ro("principle", "equal/opposite")
+      ro("event", t < eventTime ? "stored" : "separated"),
+      ro("A momentum", fmt(p1)),
+      ro("B momentum", fmt(p2)),
+      ro("total momentum", fmt(p1 + p2)),
+      ro("principle", "internal impulse")
     ];
   }
 
   function drawWallBounce(W, H, t) {
     const v = app.values;
+    const profile = currentProfile();
     const y = H * 0.58;
-    drawTrack(y, W);
-    ctx.fillStyle = "rgba(255,255,255,.2)";
-    rounded(W * 0.74, y - 130, 22, 130, 4, true);
-    const before = t < duration() * 0.5;
-    const x = before ? W * 0.25 + t * 95 : W * 0.74 - (t - duration() * 0.5) * 80;
-    drawCart(x, y, colors.sky, "ball");
+    drawTrack(y, W, profile);
+    const wallX = W * 0.79;
+    drawImpactWall(wallX, y, profile);
+    const impactTime = currentProfile().impactRatio * duration();
+    const contactTime = Math.max(0.18, duration() * 0.055);
+    const contactX = wallX - 25;
+    const speedIn = Math.max(0.5, Math.abs(v.u1));
+    const speedOut = -Math.max(0, Math.min(1, v.e)) * speedIn;
+    const scale = Math.max(5, Math.min(16, (contactX - 54) / Math.max(1, speedIn * impactTime)));
+    const startX = contactX - speedIn * impactTime * scale;
+    let x;
+    let velocity;
+    let compression = 0;
+    let state;
+    if (t < impactTime) {
+      x = startX + speedIn * t * scale;
+      velocity = speedIn;
+      state = "approach";
+    } else if (t < impactTime + contactTime) {
+      const q = clamp((t - impactTime) / contactTime, 0, 1);
+      compression = Math.sin(Math.PI * q);
+      x = contactX + compression * 5;
+      velocity = speedIn + (speedOut - speedIn) * smoothStep(q);
+      state = "contact";
+      drawImpactPulse(wallX - 8, y - 24, q, profile);
+    } else {
+      const local = t - impactTime - contactTime;
+      x = contactX + speedOut * local * scale;
+      velocity = speedOut;
+      state = "rebound";
+    }
+    drawBall(x, y - 24, 22, profile.accent, { compression, label: "m = " + fmt(v.m1) + " kg" });
+    drawVelocityIndicator(x, y - 92, velocity, velocity >= 0 ? profile.accent : profile.secondary, state === "approach" ? "u" : "v");
+    const impulse = v.m1 * (speedOut - speedIn);
     return [
-      ro("before", fmt(v.m1 * Math.abs(v.u1))),
-      ro("after", "opposite sign"),
-      ro("impulse", "change in p"),
-      ro("wall", "external")
+      ro("event", state),
+      ro("p before", fmt(v.m1 * speedIn)),
+      ro("p after", fmt(v.m1 * speedOut)),
+      ro("impulse", fmt(impulse) + " N s"),
+      ro("KE retained", fmt(v.e * v.e * 100) + "%")
     ];
   }
 
@@ -2395,20 +2747,81 @@
       rows = [ro("before p", fmt(before)), ro("after p", fmt(after)), ro("impulse", fmt(after - before)), ro("external", fmt(-(after - before)))];
     } else if (["impulse", "change", "forceTime"].includes(mode)) {
       const before = Number(values.m1 || 4) * Number(values.u1 || 0);
-      const impulse = Number(values.force || 0) * Math.min(t, 2);
+      const pulseTime = Math.min(2, duration() * 0.4);
+      const impulse = Number(values.force || 0) * Math.min(t, pulseTime);
       rows = [ro("before p", fmt(before)), ro("impulse", fmt(impulse)), ro("after p", fmt(before + impulse)), ro("change", fmt(impulse))];
+    } else if (mode === "basic") {
+      const momentum = Number(values.m1 || 0) * Number(values.u1 || 0);
+      rows = [ro("mass", fmt(values.m1)), ro("velocity", fmt(values.u1)), ro("momentum", fmt(momentum)), ro("direction", momentum >= 0 ? 1 : -1)];
     } else {
-      const result = collision(values);
-      const beforeA = Number(values.m1 || 0) * Number(values.u1 || 0);
-      const beforeB = Number(values.m2 || 0) * Number(values.u2 || 0);
-      const afterA = Number(values.m1 || 0) * result.v1;
-      const afterB = Number(values.m2 || 0) * result.v2;
-      rows = [ro("A before", fmt(beforeA)), ro("B before", fmt(beforeB)), ro("A after", fmt(afterA)), ro("B after", fmt(afterB))];
+      drawMomentumComparison(W, H, values, t);
+      return;
     }
     drawMetricAnalysis(W, H, rows, "momentum");
     if (el.analysisSummary) {
       el.analysisSummary.textContent = "Signed bars compare momentum before and after the active event; direction is retained by the sign.";
     }
+  }
+
+  function drawMomentumComparison(W, H, values, t) {
+    const metrics = collisionMetrics(values);
+    const before = [
+      { label: "A", value: Number(values.m1) * Number(values.u1), color: analysisColors.cyan },
+      { label: "B", value: Number(values.m2) * Number(values.u2), color: analysisColors.gold },
+      { label: "TOTAL", value: metrics.pBefore, color: analysisColors.teal }
+    ];
+    const after = [
+      { label: "A", value: Number(values.m1) * metrics.result.v1, color: analysisColors.cyan },
+      { label: "B", value: Number(values.m2) * metrics.result.v2, color: analysisColors.gold },
+      { label: "TOTAL", value: metrics.pAfter, color: analysisColors.teal }
+    ];
+    const maxAbs = Math.max(1, ...before.concat(after).map((item) => Math.abs(item.value)));
+    const margin = 12;
+    const gap = 10;
+    const panelWidth = (W - margin * 2 - gap) / 2;
+    const panelHeight = H - 66;
+    drawMomentumPanel(margin, 12, panelWidth, panelHeight, "BEFORE", before, maxAbs);
+    drawMomentumPanel(margin + panelWidth + gap, 12, panelWidth, panelHeight, "AFTER", after, maxAbs);
+
+    const gaugeX = margin;
+    const gaugeY = H - 39;
+    const gaugeW = W - margin * 2;
+    const retained = clamp(metrics.energyRetained / 100, 0, 1);
+    analysisCtx.fillStyle = "rgba(255,255,255,.08)";
+    analysisRoundedRect(gaugeX, gaugeY, gaugeW, 12, 4, "rgba(255,255,255,.08)");
+    const energyFill = analysisCtx.createLinearGradient(gaugeX, 0, gaugeX + gaugeW, 0);
+    energyFill.addColorStop(0, analysisColors.coral);
+    energyFill.addColorStop(1, analysisColors.green);
+    analysisRoundedRect(gaugeX, gaugeY, Math.max(3, gaugeW * retained), 12, 4, energyFill);
+    analysisText("KINETIC ENERGY RETAINED " + fmt(metrics.energyRetained) + "%", gaugeX, H - 8, analysisColors.muted, "bold 9px Sora", "left");
+    analysisText("momentum residual " + fmt(metrics.residual), W - margin, H - 8, Math.abs(metrics.residual) < 0.001 ? analysisColors.green : analysisColors.coral, "bold 9px Sora", "right");
+
+    const phase = simulationPhase(t);
+    setAnalysisMeta(
+      "Impact balance | " + phase.label,
+      "The two panels retain signs and verify momentum conservation. The lower gauge shows kinetic energy retained after impact.",
+      [[analysisColors.cyan, "particle A"], [analysisColors.gold, "particle B"], [analysisColors.teal, "system total"]]
+    );
+  }
+
+  function drawMomentumPanel(x, y, width, height, title, items, maxAbs) {
+    analysisRoundedRect(x, y, width, height, 6, "rgba(255,255,255,.045)", "rgba(255,255,255,.11)");
+    analysisText(title, x + 9, y + 17, analysisColors.white, "bold 9px Sora", "left");
+    const zero = x + width * 0.5;
+    const half = width * 0.37;
+    const rowHeight = (height - 30) / items.length;
+    analysisLine(zero, y + 24, zero, y + height - 8, "rgba(234,242,255,.22)", 1);
+    items.forEach((item, index) => {
+      const rowY = y + 34 + index * rowHeight + rowHeight * 0.36;
+      const bar = item.value / maxAbs * half;
+      analysisText(item.label, x + 8, rowY + 3, analysisColors.muted, "bold 8px Sora", "left");
+      analysisCtx.fillStyle = "rgba(255,255,255,.065)";
+      analysisCtx.fillRect(zero - half, rowY - 5, half * 2, 10);
+      analysisCtx.fillStyle = item.color;
+      analysisCtx.fillRect(Math.min(zero, zero + bar), rowY - 5, Math.abs(bar), 10);
+      analysisDot(zero + bar, rowY, 3.5, item.color);
+      analysisText(fmt(item.value), x + width - 7, rowY + 3, analysisColors.white, "bold 8px Sora", "right");
+    });
   }
 
   function drawMetricAnalysis(W, H, readouts, stage) {
@@ -3001,32 +3414,305 @@
   }
 
   function collision(v) {
-    const denom = v.m1 + v.m2;
-    const v1 = ((v.m1 - v.e * v.m2) * v.u1 + (1 + v.e) * v.m2 * v.u2) / denom;
-    const v2 = ((v.m2 - v.e * v.m1) * v.u2 + (1 + v.e) * v.m1 * v.u1) / denom;
+    const m1 = Math.max(0.001, Number(v.m1));
+    const m2 = Math.max(0.001, Number(v.m2));
+    const u1 = Number(v.u1);
+    const u2 = Number(v.u2);
+    const e = clamp(Number(v.e), 0, 1);
+    const denom = m1 + m2;
+    const v1 = ((m1 - e * m2) * u1 + (1 + e) * m2 * u2) / denom;
+    const v2 = ((m2 - e * m1) * u2 + (1 + e) * m1 * u1) / denom;
     if (v.mode === "stick" || v.mode === "coalescing" || currentCase().id === "coalescing") {
-      const common = (v.m1 * v.u1 + v.m2 * v.u2) / denom;
+      const common = (m1 * u1 + m2 * u2) / denom;
       return { v1: common, v2: common };
     }
     return { v1, v2 };
   }
 
-  function drawTrack(y, W) {
-    ctx.strokeStyle = "rgba(255,255,255,.24)";
-    ctx.lineWidth = 4;
-    line(64, y, W - 64, y);
-    ctx.strokeStyle = "rgba(255,255,255,.09)";
-    ctx.lineWidth = 1;
-    for (let x = 80; x < W - 64; x += 52) line(x, y - 8, x, y + 8);
+  function collisionMetrics(v) {
+    const result = collision(v);
+    const m1 = Number(v.m1);
+    const m2 = Number(v.m2);
+    const u1 = Number(v.u1);
+    const u2 = Number(v.u2);
+    const pBefore = m1 * u1 + m2 * u2;
+    const pAfter = m1 * result.v1 + m2 * result.v2;
+    const keBefore = 0.5 * m1 * u1 * u1 + 0.5 * m2 * u2 * u2;
+    const keAfter = 0.5 * m1 * result.v1 * result.v1 + 0.5 * m2 * result.v2 * result.v2;
+    return {
+      result,
+      pBefore,
+      pAfter,
+      residual: pAfter - pBefore,
+      keBefore,
+      keAfter,
+      energyRetained: keBefore > 1e-8 ? 100 * keAfter / keBefore : 100
+    };
   }
 
-  function drawCart(x, y, color, name) {
+  function collisionTimeline(v, W, t) {
+    const profile = currentProfile();
+    const T = duration();
+    const impactTime = profile.impactRatio * T;
+    const contactDuration = Math.max(0.2, Math.min(0.48, T * 0.065));
+    const result = collision(v);
+    const u1 = Number(v.u1);
+    const u2 = Number(v.u2);
+    const halfGap = 43 * profile.objectScale;
+    const contactX = W * (0.5 + profile.cameraShift);
+    const hitX1 = contactX - halfGap;
+    const hitX2 = contactX + halfGap;
+    const maxSpeed = Math.max(1, Math.abs(u1), Math.abs(u2), Math.abs(result.v1), Math.abs(result.v2));
+    const scale = clamp((W * 0.28) / Math.max(1, maxSpeed * impactTime), 3.8, 16);
+    const startX1 = hitX1 - u1 * impactTime * scale;
+    const startX2 = hitX2 - u2 * impactTime * scale;
+    let phase = "before";
+    let eventProgress = 0;
+    let compression = 0;
+    let x1;
+    let x2;
+    let velocity1;
+    let velocity2;
+
+    if (t < impactTime) {
+      x1 = startX1 + u1 * t * scale;
+      x2 = startX2 + u2 * t * scale;
+      velocity1 = u1;
+      velocity2 = u2;
+    } else if (t < impactTime + contactDuration) {
+      phase = "impact";
+      eventProgress = clamp((t - impactTime) / contactDuration, 0, 1);
+      compression = Math.sin(Math.PI * eventProgress);
+      x1 = hitX1 + compression * 7;
+      x2 = hitX2 - compression * 7;
+      const blend = smoothStep(eventProgress);
+      velocity1 = u1 + (result.v1 - u1) * blend;
+      velocity2 = u2 + (result.v2 - u2) * blend;
+    } else {
+      phase = "after";
+      const afterTime = t - impactTime - contactDuration;
+      velocity1 = result.v1;
+      velocity2 = result.v2;
+      x1 = hitX1 + result.v1 * afterTime * scale;
+      x2 = hitX2 + result.v2 * afterTime * scale;
+      if (v.mode === "follow") {
+        const deceleration = Math.abs(Number(v.force || 0)) / Math.max(0.1, Number(v.m2));
+        const stopTime = Math.abs(result.v2) / Math.max(0.001, deceleration);
+        const active = Math.min(afterTime, stopTime);
+        const signedA = -Math.sign(result.v2 || 1) * deceleration;
+        x2 = hitX2 + (result.v2 * active + 0.5 * signedA * active * active) * scale;
+        velocity2 = result.v2 + signedA * active;
+      }
+    }
+
+    return { phase, eventProgress, compression, x1, x2, velocity1, velocity2, contactX, impactTime, contactDuration, scale };
+  }
+
+  function drawTrack(y, W, profile) {
+    const activeProfile = profile || currentProfile();
+    const floor = ctx.createLinearGradient(0, y - 6, 0, y + 34);
+    floor.addColorStop(0, "rgba(175,204,225,.18)");
+    floor.addColorStop(1, "rgba(4,15,27,.42)");
+    ctx.fillStyle = floor;
+    ctx.fillRect(42, y - 4, W - 84, 34);
+    for (let x = 58; x < W - 48; x += 42) {
+      ctx.fillStyle = "rgba(155,181,202,.18)";
+      rounded(x, y + 8, 28, 7, 2, true);
+    }
+    const rail = ctx.createLinearGradient(0, y - 3, 0, y + 5);
+    rail.addColorStop(0, "#e4edf5");
+    rail.addColorStop(0.45, "#8ca2b7");
+    rail.addColorStop(1, "#344a5e");
+    ctx.strokeStyle = rail;
+    ctx.lineWidth = 5;
+    line(44, y, W - 44, y);
+    ctx.strokeStyle = activeProfile.accent;
+    ctx.globalAlpha = 0.42;
+    ctx.lineWidth = 1;
+    line(44, y - 7, W - 44, y - 7);
+    ctx.globalAlpha = 1;
+  }
+
+  function drawCart(x, y, color, name, options) {
+    const opts = options || {};
+    const scale = Number(opts.scale || 1);
+    const compression = clamp(Number(opts.compressed || 0), 0, 1);
+    const width = 82 * scale * (1 - compression * 0.08);
+    const height = 39 * scale * (1 + compression * 0.035);
+    const wheel = 8 * scale;
+    ctx.save();
+    ctx.globalAlpha = 0.3;
+    ctx.fillStyle = "#010713";
+    ctx.beginPath();
+    ctx.ellipse(x, y + 12, width * 0.58, 10, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+
+    const body = ctx.createLinearGradient(x - width / 2, y - height, x + width / 2, y);
+    body.addColorStop(0, "#f6fbff");
+    body.addColorStop(0.14, color);
+    body.addColorStop(0.72, color);
+    body.addColorStop(1, "#18324a");
+    ctx.fillStyle = body;
+    rounded(x - width / 2, y - height, width, height, 7, true);
+    ctx.strokeStyle = "rgba(255,255,255,.52)";
+    ctx.lineWidth = 1.2;
+    rounded(x - width / 2, y - height, width, height, 7, false, true);
+
+    ctx.fillStyle = "#071525";
+    rounded(x - width * 0.2, y - height * 0.72, width * 0.4, height * 0.42, 4, true);
+    ctx.fillStyle = "#dbe7f1";
+    ctx.font = "800 " + Math.max(9, 11 * scale) + "px Sora, sans-serif";
+    ctx.textAlign = "center";
+    ctx.fillText(name, x, y - height * 0.42);
+
+    [x - width * 0.29, x + width * 0.29].forEach((wheelX) => {
+      ctx.fillStyle = "#030a13";
+      circle(wheelX, y + wheel * 0.36, wheel);
+      ctx.fillStyle = "#6f879c";
+      circle(wheelX, y + wheel * 0.36, wheel * 0.47);
+      ctx.fillStyle = "#dce7ef";
+      circle(wheelX, y + wheel * 0.36, wheel * 0.16);
+    });
+
     ctx.fillStyle = color;
-    rounded(x - 38, y - 36, 76, 36, 8, true);
-    ctx.fillStyle = "#071127";
-    circle(x - 22, y + 4, 7);
-    circle(x + 22, y + 4, 7);
-    label(x - 16, y - 13, name, "#071127", "bold 12px Inter");
+    rounded(x - width / 2 - 4, y - height * 0.52, 6, height * 0.22, 2, true);
+    rounded(x + width / 2 - 2, y - height * 0.52, 6, height * 0.22, 2, true);
+    if (Number.isFinite(Number(opts.mass))) {
+      ctx.textAlign = "center";
+      label(x, y - height - 8, fmt(opts.mass) + " kg", "rgba(235,244,252,.82)", "700 9px Sora");
+    }
+    ctx.textAlign = "left";
+  }
+
+  function drawVelocityIndicator(x, y, velocity, color, name) {
+    const value = Number(velocity || 0);
+    const direction = value === 0 ? 1 : Math.sign(value);
+    const length = value === 0 ? 14 : clamp(Math.abs(value) * 8, 24, 88);
+    arrow(x, y, x + direction * length, y, color, 3);
+    const tx = direction > 0 ? x + length + 7 : x - length - 7;
+    ctx.save();
+    ctx.textAlign = direction > 0 ? "left" : "right";
+    label(tx, y - 6, name + " = " + fmt(value) + " m/s", color, "700 10px Sora");
+    ctx.restore();
+  }
+
+  function drawImpactZone(x, y, phase) {
+    ctx.save();
+    ctx.setLineDash([5, 7]);
+    line(x, y - 164, x, y + 27, phase === "impact" ? colors.goldSoft : "rgba(210,228,242,.2)", phase === "impact" ? 2 : 1);
+    ctx.restore();
+    ctx.save();
+    ctx.textAlign = "center";
+    label(x, y + 48, phase === "impact" ? "contact interval" : "impact plane", phase === "impact" ? colors.goldSoft : colors.dim, "700 9px Sora");
+    ctx.restore();
+  }
+
+  function drawImpactPulse(x, y, progress, profile) {
+    const q = clamp(progress, 0, 1);
+    ctx.save();
+    ctx.strokeStyle = profile.secondary;
+    ctx.lineWidth = 3;
+    ctx.globalAlpha = 0.9 - q * 0.45;
+    for (let i = 0; i < 3; i += 1) {
+      ctx.beginPath();
+      ctx.arc(x, y, 14 + i * 13 + q * 12, -0.72, 0.72);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.arc(x, y, 14 + i * 13 + q * 12, Math.PI - 0.72, Math.PI + 0.72);
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  function drawCoupler(x, y, color) {
+    ctx.fillStyle = color;
+    rounded(x - 12, y - 5, 24, 10, 3, true);
+    ctx.strokeStyle = "rgba(255,255,255,.58)";
+    ctx.lineWidth = 1;
+    rounded(x - 12, y - 5, 24, 10, 3, false, true);
+  }
+
+  function drawSceneMetric(x, y, key, value, accent) {
+    ctx.fillStyle = "rgba(3,15,28,.82)";
+    rounded(x, y, 138, 55, 6, true);
+    ctx.strokeStyle = "rgba(255,255,255,.15)";
+    rounded(x, y, 138, 55, 6, false, true);
+    ctx.fillStyle = accent;
+    ctx.fillRect(x, y, 4, 55);
+    label(x + 13, y + 20, key, colors.dim, "700 9px Sora");
+    label(x + 13, y + 41, value, "#fff", "800 12px Sora");
+  }
+
+  function drawImpulseMeter(x, y, value, maximum, profile) {
+    const ratio = clamp(Math.abs(value) / Math.max(0.001, Math.abs(maximum)), 0, 1);
+    ctx.fillStyle = "rgba(3,15,28,.82)";
+    rounded(x, y, 142, 62, 6, true);
+    ctx.strokeStyle = "rgba(255,255,255,.15)";
+    rounded(x, y, 142, 62, 6, false, true);
+    label(x + 12, y + 20, "IMPULSE TRANSFER", colors.dim, "700 8px Sora");
+    ctx.fillStyle = "rgba(255,255,255,.11)";
+    rounded(x + 12, y + 31, 118, 10, 3, true);
+    const fill = ctx.createLinearGradient(x + 12, 0, x + 130, 0);
+    fill.addColorStop(0, profile.accent);
+    fill.addColorStop(1, profile.secondary);
+    ctx.fillStyle = fill;
+    rounded(x + 12, y + 31, Math.max(3, 118 * ratio), 10, 3, true);
+    label(x + 12, y + 55, fmt(value) + " N s", "#fff", "800 10px Sora");
+  }
+
+  function drawImpactWall(x, y, profile) {
+    const wall = ctx.createLinearGradient(x, 0, x + 30, 0);
+    wall.addColorStop(0, profile.material);
+    wall.addColorStop(0.35, "#7d93a7");
+    wall.addColorStop(1, "#24394d");
+    ctx.fillStyle = wall;
+    rounded(x, y - 154, 28, 154, 3, true);
+    ctx.strokeStyle = "rgba(4,18,31,.44)";
+    ctx.lineWidth = 1;
+    for (let yy = y - 136; yy < y; yy += 22) {
+      line(x, yy, x + 28, yy);
+      const offset = ((yy - (y - 136)) / 22) % 2 ? 8 : 18;
+      line(x + offset, yy - 22, x + offset, yy);
+    }
+    label(x - 3, y - 166, "fixed wall", profile.secondary, "700 9px Sora");
+  }
+
+  function drawBall(x, y, radius, color, options) {
+    const opts = options || {};
+    const compression = clamp(Number(opts.compression || 0), 0, 1);
+    ctx.save();
+    ctx.globalAlpha = 0.3;
+    ctx.fillStyle = "#010713";
+    ctx.beginPath();
+    ctx.ellipse(x, y + radius + 5, radius * 1.15, 7, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.scale(1 - compression * 0.18, 1 + compression * 0.12);
+    const ball = ctx.createLinearGradient(-radius, -radius, radius, radius);
+    ball.addColorStop(0, "#ffffff");
+    ball.addColorStop(0.2, color);
+    ball.addColorStop(0.72, color);
+    ball.addColorStop(1, "#18324a");
+    ctx.fillStyle = ball;
+    circle(0, 0, radius);
+    ctx.strokeStyle = "rgba(255,255,255,.52)";
+    ctx.lineWidth = 1.5;
+    circle(0, 0, radius, false, "rgba(255,255,255,.52)");
+    ctx.restore();
+    if (opts.label) {
+      ctx.save();
+      ctx.textAlign = "center";
+      label(x, y - radius - 10, opts.label, "rgba(235,244,252,.82)", "700 9px Sora");
+      ctx.restore();
+    }
+  }
+
+  function smoothStep(value) {
+    const x = clamp(value, 0, 1);
+    return x * x * (3 - 2 * x);
   }
 
   function drawBlockOnSlope(x, y, theta) {
@@ -3191,6 +3877,25 @@
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
   }
+
+  window.__ELITE_LAB_AUDIT__ = Object.freeze({
+    release: "20260809g",
+    topicCount: TOPICS.length,
+    caseCount: TOPICS.reduce((sum, topic) => sum + topic.cases.length, 0),
+    profileCount: CASE_VISUAL_PROFILES.length,
+    uniqueProfileCount: new Set(CASE_VISUAL_PROFILES.map((profile) => profile.signature)).size,
+    activeState: function () {
+      const phase = simulationPhase(app.t);
+      return {
+        caseId: currentCase().id,
+        signature: currentProfile().signature,
+        phase: phase.label,
+        time: app.t,
+        playing: app.playing,
+        readouts: app.lastReadouts.slice()
+      };
+    }
+  });
 
   init();
 }());

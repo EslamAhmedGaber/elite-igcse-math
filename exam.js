@@ -1033,7 +1033,36 @@
     return Boolean(solution.finalAnswer);
   }
 
+  function formatPrintableSolution(solution) {
+    if (!solution || !hasSolutionContent(solution)) {
+      return `<p class="solution-empty">Solution has not been written yet.</p>`;
+    }
+    const steps = Array.isArray(solution.steps)
+      ? solution.steps.filter((step) => step && (step.body || step.title))
+      : solution.source ? [{ title: "Working", body: solution.source }] : [];
+    const stepsHtml = steps.map((step, index) => `
+      <section class="print-worked-step">
+        <span class="print-worked-index" aria-hidden="true">${String(index + 1).padStart(2, "0")}</span>
+        <div class="print-worked-step-content">
+          <h4>${escapeHtml(step.title || `Step ${index + 1}`)}</h4>
+          <div class="print-worked-copy">${formatSolutionText(step.body || "")}</div>
+        </div>
+      </section>
+    `).join("");
+    const finalHtml = solution.finalAnswer ? `
+      <section class="print-worked-final" aria-label="Final answer">
+        <strong>Final answer</strong>
+        <div>${formatSolutionText(solution.finalAnswer)}</div>
+      </section>
+    ` : "";
+    return `<article class="print-worked-solution" aria-label="Worked solution">
+      <div class="print-worked-steps">${stepsHtml}</div>
+      ${finalHtml}
+    </article>`;
+  }
+
   function formatStructuredSolution(solution, options = {}) {
+    if (options.variant === "print") return formatPrintableSolution(solution);
     if (window.EliteSolutionView?.render) return window.EliteSolutionView.render(solution, options);
     if (!solution || !hasSolutionContent(solution)) {
       return `<p class="solution-empty">Solution has not been written yet.</p>`;
@@ -1121,17 +1150,21 @@
       const solutionOptions = { key: id, topic: question.topic, marks: question.marks };
       const solutionHtml = formatStructuredSolution(solution, solutionOptions);
       const printSolutionHtml = formatStructuredSolution(solution, { ...solutionOptions, variant: "print" });
+      const printStepCount = Array.isArray(solution?.steps)
+        ? solution.steps.filter((step) => step && (step.title || step.body)).length
+        : solution?.source ? 1 : 0;
+      const printDensityClass = printStepCount >= 6 ? " is-dense" : "";
       const savedScore = state.scores?.[id] ?? "";
       return `<article class="exam-question" data-id="${escapeHtml(id)}">
         <div class="print-paper-brand">
           <div class="print-brand-lockup">
-            <span class="print-brand-mark">EA</span>
+            <span class="print-brand-mark">E</span>
             <div>
-              <strong>${course.mode === "pure" ? "Elite IAL Mathematics" : "Elite IGCSE Academy"}</strong>
-              <small>${paperKindLabel()} - Dr Eslam Ahmed</small>
+              <strong>eliteigcse.com</strong>
+              <small>${course.label} | ${paperKindLabel()}</small>
             </div>
           </div>
-          <span class="print-brand-contact">Cairo University Faculty of Engineering<br>WhatsApp 01120009622 | eliteigcse.com</span>
+          <span class="print-brand-contact">Dr Eslam Ahmed | Mathematics Department<br>Faculty of Engineering, Cairo University</span>
         </div>
         <header>
           <div>
@@ -1146,8 +1179,9 @@
           ${canMark ? `<label>Score <input data-score-id="${escapeHtml(id)}" type="number" min="0" max="${question.marks}" value="${savedScore}"> / ${question.marks}</label>` : `<span>${state.status === "running" ? "Answers stay private during the exam" : "Ready to start or print"}</span>`}
         </footer>
         ${canMark && hasSolution ? `<details class="exam-solution"><summary>Show worked solution</summary>${solutionHtml}</details>` : ""}
-        <div class="print-paper-footer">Downloaded from eliteigcse.com | Dr Eslam Ahmed | 01120009622</div>
-        <section class="exam-print-solution" aria-label="Printable worked solution">
+        <div class="print-paper-footer">Question ${index + 1} | eliteigcse.com | Dr Eslam Ahmed | +20 112 000 9622</div>
+      </article>
+        <section class="exam-print-solution${printDensityClass}" data-solution-for="${escapeHtml(id)}" data-print-step-count="${printStepCount}" aria-label="Printable worked solution for question ${index + 1}">
           <div class="print-solution-heading">
             <div>
               <span>Solution ${index + 1}</span>
@@ -1157,9 +1191,9 @@
           </div>
           <h3>Worked Solution</h3>
           ${printSolutionHtml}
-          <div class="print-paper-footer print-solution-footer">Downloaded from eliteigcse.com | Dr Eslam Ahmed | 01120009622</div>
+          <div class="print-paper-footer print-solution-footer">Solution ${index + 1} | eliteigcse.com | Dr Eslam Ahmed | +20 112 000 9622</div>
         </section>
-      </article>`;
+      `;
     }).join("");
     if (canMark) {
       typesetPaperMath();

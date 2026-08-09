@@ -6,7 +6,11 @@
 <meta name="theme-color" content="#08142f" />
 <meta name="description" content="An interactive Edexcel IAL Mechanics 1 laboratory with live models, graphs, measurements, symbols, and exam methods." />
 <title>WME01 Mechanics 1 Laboratory | Elite IGCSE Mathematics</title>
-<link rel="stylesheet" href="assets/mechanics-lab.css?v=20260713d" />
+<link rel="icon" href="/assets/icon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/mechanics-lab.css?v=20260809g" />
 </head>
 <body>
   <div class="lab-shell">
@@ -101,6 +105,13 @@
                 </div>
                 <div class="canvas-wrap">
                   <canvas id="labCanvas" width="1200" height="720" role="img" aria-label="Animated Mechanics experiment"></canvas>
+                  <div class="experiment-phase" id="experimentPhase" aria-live="polite">
+                    <div class="phase-identity">
+                      <span id="caseOrdinal">01 / 98</span>
+                      <strong id="caseSignature">EL-WME01-001</strong>
+                    </div>
+                    <div class="phase-rail" id="phaseRail" aria-label="Simulation event phases"></div>
+                  </div>
                   <div class="hud" id="hud"></div>
                 </div>
               </div>
@@ -250,7 +261,7 @@
     </main>
 
     <footer class="lab-footer">
-      <p><strong>Elite IGCSE Mathematics</strong> · Mechanics made visible, measurable, and exam-ready.</p>
+      <p><strong>Elite IGCSE Mathematics</strong> | Mechanics made visible, measurable, and exam-ready.</p>
       <a href="../index.html#ialNotes">Strategy notes</a>
       <a href="../index.html#ialFilters">Classified questions</a>
       <a href="../index.html#ialPastPapers">Past papers</a>
@@ -258,6 +269,6 @@
   </div>
 
 <script defer src="https://cdn.jsdelivr.net/npm/lucide@0.468.0/dist/umd/lucide.min.js"></script>
-<script defer src="assets/mechanics-lab.js?v=20260713d"></script>
+<script defer src="assets/mechanics-lab.js?v=20260809g"></script>
 </body>
 </html>

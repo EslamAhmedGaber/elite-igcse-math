@@ -26,11 +26,14 @@ DOWNLOADS_DIR = ROOT / "downloads"
 PRIVATE_OUTPUT = ROOT / "private_output"
 GITIGNORE = ROOT / ".gitignore"
 CURRENT_PATHWAY_BOOTSTRAP_VERSION = "20260613a"
-CURRENT_LEAD_VERSION = "20260809a"
+CURRENT_LEAD_VERSION = "20260809b"
 CURRENT_STYLE_VERSION = "20260809a"
 CURRENT_COURSE_MODULES_VERSION = "20260713a"
 CURRENT_STUDY_VERSION = "20260713b"
 CURRENT_SOLUTION_VERSION = "20260714a"
+CURRENT_ELITE_SYSTEM_VERSION = "20260809c"
+CURRENT_RESOURCE_HUB_VERSION = "20260809b"
+CURRENT_PRINT_VERSION = "20260809c"
 IAL_DATA_FILES = {
     "wma11": (ROOT / "ial" / "wma11" / "wma11-data.js", "WMA11_QUESTIONS"),
     "wma12": (ROOT / "ial" / "wma12" / "wma12-data.js", "WMA12_QUESTIONS"),
@@ -358,6 +361,79 @@ def verify_pathway_palette_activation(report: Report) -> None:
             detail = (exc.stderr or exc.stdout or "").strip().splitlines()
             summary = detail[0] if detail else "syntax check failed"
             report.error(f"{filename} is not valid JavaScript: {summary}")
+
+
+def verify_resource_command_center(report: Report) -> None:
+    """Guard the shared resource discovery, visual system, and A4 print contracts."""
+    required_assets = [
+        "elite-system.css",
+        "resource-hub.css",
+        "app.js",
+        "course-renderers.js",
+        "print-utils.js",
+        "exam.js",
+        "tools/test_resource_command_center.js",
+    ]
+    for relative_path in required_assets:
+        if not (ROOT / relative_path).is_file():
+            report.error(f"Missing Elite resource-system asset: {relative_path}")
+
+    system_pages = [
+        "404.html",
+        "about.html",
+        "admin.html",
+        "checkup.html",
+        "downloads.html",
+        "exam.html",
+        "index.html",
+        "notes.html",
+        "offline.html",
+        "pastpapers.html",
+        "planner.html",
+        "practice.html",
+        "progress.html",
+        "topics.html",
+        "ial/index.html",
+        "ial/wma11/index.html",
+        "ial/wma12/index.html",
+        "ial/wme01/index.html",
+    ]
+    system_ref = f"elite-system.css?v={CURRENT_ELITE_SYSTEM_VERSION}"
+    for page in system_pages:
+        path = ROOT / page
+        if not path.is_file():
+            report.error(f"Missing primary Elite page: {page}")
+            continue
+        if system_ref not in path.read_text(encoding="utf-8"):
+            report.error(f"{page} must load the current Elite System stylesheet.")
+
+    for page in ("practice.html", "downloads.html", "pastpapers.html"):
+        text = (ROOT / page).read_text(encoding="utf-8")
+        if f"resource-hub.css?v={CURRENT_RESOURCE_HUB_VERSION}" not in text:
+            report.error(f"{page} must load the current resource command stylesheet.")
+
+    for page in ("practice.html", "exam.html", "progress.html"):
+        text = (ROOT / page).read_text(encoding="utf-8")
+        if f"print-utils.js?v={CURRENT_PRINT_VERSION}" not in text:
+            report.error(f"{page} must load the current A4 print engine.")
+
+    report.set("elite_system_pages", len(system_pages))
+    resource_test = ROOT / "tools" / "test_resource_command_center.js"
+    if not resource_test.exists():
+        return
+    try:
+        subprocess.run(
+            ["node", str(resource_test)],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+    except FileNotFoundError:
+        report.warn("Node.js is unavailable; skipped Elite resource-system checks.")
+    except subprocess.CalledProcessError as exc:
+        detail = (exc.stderr or exc.stdout or "").strip().splitlines()
+        summary = detail[0] if detail else "resource-system check failed"
+        report.error(f"Elite resource command center failed verification: {summary}")
 
     lead_text = (ROOT / "lead.js").read_text(encoding="utf-8")
     required_core_tools = (
@@ -782,6 +858,7 @@ def main() -> int:
     report = Report()
     verify_guardrails(report)
     verify_runtime_js(report)
+    verify_resource_command_center(report)
     verify_mechanics_lab(report)
     verify_revision_engine(report)
     verify_worked_solution_view(report)

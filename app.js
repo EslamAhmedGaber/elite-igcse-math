@@ -13,19 +13,24 @@ const REVIEW_KEY = "eliteMistakeBoxV1";
 const ACTIVITY_KEY = "eliteStudyActivityV1";
 const ANSWER_TRAINER_KEY = "eliteFinalAnswerTrainerV1";
 const REVIEW_INTERVALS = [1, 3, 7, 14];
-const FOCUS_DEFAULT_KEY = "eliteFocusDefaultV1";
+const GRID_DEFAULT_KEY = "eliteGridDefaultV1";
+const PRACTICE_PAGE_SIZE_KEY = "elitePracticePageSizeV1";
+const PRACTICE_PAGE_SIZES = [12, 24, 36, 48];
 let reviewItems = readReviewItems();
 let answerTrainer = readAnswerTrainer();
 let activeBank = localStorage.getItem("activeQuestionBank") || "all";
-if (localStorage.getItem(FOCUS_DEFAULT_KEY) !== "done") {
-  localStorage.setItem("questionLayout", "focus");
-  localStorage.setItem(FOCUS_DEFAULT_KEY, "done");
+if (localStorage.getItem(GRID_DEFAULT_KEY) !== "done") {
+  localStorage.setItem("questionLayout", "grid");
+  localStorage.setItem(GRID_DEFAULT_KEY, "done");
 }
-let currentLayout = localStorage.getItem("questionLayout") || "focus";
+let currentLayout = localStorage.getItem("questionLayout") || "grid";
 let questions = [];
 let visible = [];
 let reviewMode = "";
 let focusQuestionId = localStorage.getItem("focusQuestionId") || "";
+let currentPage = 1;
+let pageSize = Number(localStorage.getItem(PRACTICE_PAGE_SIZE_KEY) || 24);
+if (!PRACTICE_PAGE_SIZES.includes(pageSize)) pageSize = 24;
 let timerDuration = 25 * 60;
 let timerRemaining = timerDuration;
 let timerInterval = null;
@@ -99,8 +104,29 @@ const els = {
   listLayoutBtn: document.getElementById("listLayoutBtn"),
   focusLayoutBtn: document.getElementById("focusLayoutBtn"),
   sortMode: document.getElementById("sortMode"),
+  commandSearchBox: document.getElementById("commandSearchBox"),
+  commandTopicFilter: document.getElementById("commandTopicFilter"),
+  commandDifficultyFilter: document.getElementById("commandDifficultyFilter"),
+  commandViewFilter: document.getElementById("commandViewFilter"),
+  commandMoreFiltersBtn: document.getElementById("commandMoreFiltersBtn"),
+  commandVisibleCount: document.getElementById("commandVisibleCount"),
+  commandFilterChips: document.getElementById("commandFilterChips"),
+  commandResetBtn: document.getElementById("commandResetBtn"),
   topicStrip: document.getElementById("topicStrip"),
   questionGrid: document.getElementById("questionGrid"),
+  questionPagination: document.getElementById("questionPagination"),
+  questionPagePrev: document.getElementById("questionPagePrev"),
+  questionPageNext: document.getElementById("questionPageNext"),
+  questionPageNumbers: document.getElementById("questionPageNumbers"),
+  questionPageStatus: document.getElementById("questionPageStatus"),
+  questionPageSize: document.getElementById("questionPageSize"),
+  selectionDock: document.getElementById("selectionDock"),
+  selectionDockCount: document.getElementById("selectionDockCount"),
+  selectionDockMarks: document.getElementById("selectionDockMarks"),
+  selectionDockMinutes: document.getElementById("selectionDockMinutes"),
+  selectionDockBuild: document.getElementById("selectionDockBuild"),
+  selectionDockPrint: document.getElementById("selectionDockPrint"),
+  selectionDockClear: document.getElementById("selectionDockClear"),
   viewerDialog: document.getElementById("viewerDialog"),
   viewerTitle: document.getElementById("viewerTitle"),
   viewerMeta: document.getElementById("viewerMeta"),
@@ -170,6 +196,82 @@ function syncFocusFiltersFromSidebar() {
   syncFocusSelectValue(els.focusViewFilter, els.viewFilter.value);
 }
 
+function syncCommandFilterOptions() {
+  copySelectOptions(els.topicFilter, els.commandTopicFilter);
+  syncCommandFiltersFromSidebar();
+}
+
+function syncCommandFiltersFromSidebar() {
+  if (els.commandSearchBox) els.commandSearchBox.value = els.searchBox.value;
+  syncFocusSelectValue(els.commandTopicFilter, els.topicFilter.value);
+  syncFocusSelectValue(els.commandDifficultyFilter, els.difficultyFilter.value);
+  syncFocusSelectValue(els.commandViewFilter, els.viewFilter.value);
+}
+
+function resetQuestionPage() {
+  currentPage = 1;
+}
+
+function redrawFromFilter() {
+  resetQuestionPage();
+  redraw();
+}
+
+function commandFilterTokens() {
+  const tokens = [];
+  const search = els.searchBox.value.trim();
+  if (search) tokens.push({ key: "search", label: `Search: ${search}` });
+  if (els.unitFilter.value) tokens.push({ key: "unit", label: els.unitFilter.value });
+  if (els.topicFilter.value) tokens.push({ key: "topic", label: els.topicFilter.value });
+  if (els.paperFilter.value) tokens.push({ key: "paper", label: els.paperFilter.value });
+  if (els.difficultyFilter.value) {
+    const label = els.difficultyFilter.selectedOptions[0]?.textContent || els.difficultyFilter.value;
+    tokens.push({ key: "difficulty", label });
+  }
+  if (els.viewFilter.value) {
+    const label = els.viewFilter.selectedOptions[0]?.textContent || els.viewFilter.value;
+    tokens.push({ key: "view", label });
+  }
+  if (els.minMarks.value || els.maxMarks.value) {
+    tokens.push({ key: "marks", label: `Marks ${els.minMarks.value || 0}-${els.maxMarks.value || "any"}` });
+  }
+  if (els.minQuestion.value || els.maxQuestion.value) {
+    tokens.push({ key: "question", label: `Question ${els.minQuestion.value || 1}-${els.maxQuestion.value || "any"}` });
+  }
+  if (reviewMode) tokens.push({ key: "review", label: reviewMode === "due" ? "Due today" : "Mistake Box" });
+  return tokens;
+}
+
+function renderCommandFilterChips() {
+  if (!els.commandFilterChips) return;
+  const tokens = commandFilterTokens();
+  els.commandFilterChips.innerHTML = tokens.length
+    ? tokens.map((token) => `<button type="button" data-clear-filter="${token.key}" aria-label="Remove ${escapeHtml(token.label)} filter">${escapeHtml(token.label)}<span aria-hidden="true">x</span></button>`).join("")
+    : `<span class="command-filter-empty">No filters applied</span>`;
+}
+
+function clearCommandFilter(key) {
+  if (key === "search") els.searchBox.value = "";
+  if (key === "unit") els.unitFilter.value = "";
+  if (key === "topic") {
+    els.topicFilter.value = "";
+    setTopicChip("");
+  }
+  if (key === "paper") els.paperFilter.value = "";
+  if (key === "difficulty") els.difficultyFilter.value = "";
+  if (key === "view") els.viewFilter.value = "";
+  if (key === "marks") {
+    els.minMarks.value = "";
+    els.maxMarks.value = "";
+  }
+  if (key === "question") {
+    els.minQuestion.value = "";
+    els.maxQuestion.value = "";
+  }
+  if (key === "review") reviewMode = "";
+  redrawFromFilter();
+}
+
 function applyFocusQuickFilter(source, target) {
   if (!source || !target) return;
   reviewMode = "";
@@ -183,7 +285,7 @@ function applyFocusQuickFilter(source, target) {
     setTopicChip(target.value);
     if (!els.worksheetTopic.value) els.worksheetTopic.value = target.value;
   }
-  redraw();
+  redrawFromFilter();
 }
 
 function escapeHtml(value) {
@@ -288,6 +390,7 @@ function init() {
   configureBank();
   applyInitialParams();
   setPracticeTab(reviewMode ? "review" : "all");
+  if (els.questionPageSize) els.questionPageSize.value = String(pageSize);
   setLayout(currentLayout);
   updateTimerDisplay();
   redraw();
@@ -344,6 +447,7 @@ function configureBank() {
   renderHeroPreview(window.ELITE_PATHWAY?.mode === "modular" ? getScopedQuestions(questions) : questions);
   renderTopicStrip(window.ELITE_PATHWAY?.mode === "modular" ? getScopedQuestions(questions) : questions);
   syncFocusFilterOptions();
+  syncCommandFilterOptions();
 }
 
 function syncModularUnitSelection() {
@@ -405,7 +509,7 @@ function applyInitialParams() {
     setTopicChip(topic);
   }
   if (mode === "q20") els.difficultyFilter.value = "q20";
-  if (mode === "long") els.difficultyFilter.value = "long";
+  if (mode === "long" || mode === "hard") els.difficultyFilter.value = "hard";
   if (mode === "review") reviewMode = "due";
 }
 
@@ -484,9 +588,9 @@ function applyFilters() {
     if (maxMarks && question.marks > maxMarks) return false;
     if (minQuestion && question.question < minQuestion) return false;
     if (maxQuestion && question.question > maxQuestion) return false;
-    if (difficulty === "quick" && question.marks > 3) return false;
-    if (difficulty === "standard" && (question.marks < 4 || question.marks > 6)) return false;
-    if (difficulty === "long" && question.marks < 7) return false;
+    if (difficulty === "easy" && question.marks >= 3) return false;
+    if (difficulty === "medium" && (question.marks < 3 || question.marks > 4)) return false;
+    if (difficulty === "hard" && question.marks <= 4) return false;
     if (difficulty === "q20" && question.question < 20) return false;
     if (search) {
       const text = `${question.paper} ${question.topic} ${question.unit} ${question.question_text}`.toLowerCase();
@@ -507,6 +611,7 @@ function applyFilters() {
 function redraw() {
   applyFilters();
   els.visibleCount.textContent = visible.length;
+  if (els.commandVisibleCount) els.commandVisibleCount.textContent = visible.length.toLocaleString();
   const activeIds = new Set(getScopedQuestions().map((question) => question.id));
   const selectedActive = [...selected].filter((id) => activeIds.has(id)).length;
   const solvedActive = [...solved].filter((id) => activeIds.has(id)).length;
@@ -522,7 +627,31 @@ function redraw() {
   updateReviewSnapshot(activeIds);
   updateHelper(selectedActive, solvedActive);
   syncFocusFiltersFromSidebar();
+  syncCommandFiltersFromSidebar();
+  renderCommandFilterChips();
+  updateSelectionDock(activeIds);
   renderCards();
+}
+
+function updateSelectionDock(activeIds) {
+  if (!els.selectionDock) return;
+  const picked = getScopedQuestions().filter((question) => activeIds.has(question.id) && selected.has(question.id));
+  const count = picked.length;
+  const marks = picked.reduce((total, question) => total + Number(question.marks || 0), 0);
+  const minutes = Math.max(0, Math.ceil(marks * 1.2));
+  els.selectionDock.hidden = count === 0;
+  document.body.classList.toggle("has-selection-dock", count > 0);
+  if (els.selectionDockCount) els.selectionDockCount.textContent = `${count} question${count === 1 ? "" : "s"} selected`;
+  if (els.selectionDockMarks) els.selectionDockMarks.textContent = `${marks} marks`;
+  if (els.selectionDockMinutes) els.selectionDockMinutes.textContent = `${minutes} min`;
+  if (els.selectionDockBuild) {
+    const params = new URLSearchParams({
+      pathway: window.ELITE_PATHWAY?.mode || "linear",
+      mode: "custom",
+    });
+    if (window.ELITE_PATHWAY?.isModular && els.unitFilter.value) params.set("unit", els.unitFilter.value);
+    els.selectionDockBuild.href = `exam.html?${params.toString()}`;
+  }
 }
 
 function updateReviewSnapshot(activeIds) {
@@ -566,22 +695,78 @@ function updateHelper(selectedActive, solvedActive) {
     : "Pick a topic, solve 5 questions, then check the answers only after you try.";
 }
 
+function questionPageCount() {
+  return Math.max(1, Math.ceil(visible.length / pageSize));
+}
+
+function questionPageItems() {
+  const totalPages = questionPageCount();
+  currentPage = Math.min(totalPages, Math.max(1, currentPage));
+  const start = (currentPage - 1) * pageSize;
+  return visible.slice(start, start + pageSize);
+}
+
+function paginationSequence(totalPages) {
+  if (totalPages <= 7) return Array.from({ length: totalPages }, (_, index) => index + 1);
+  const candidates = new Set([1, totalPages, currentPage - 1, currentPage, currentPage + 1]);
+  const pages = [...candidates].filter((page) => page >= 1 && page <= totalPages).sort((a, b) => a - b);
+  const sequence = [];
+  pages.forEach((page, index) => {
+    if (index && page - pages[index - 1] > 1) sequence.push("ellipsis");
+    sequence.push(page);
+  });
+  return sequence;
+}
+
+function renderQuestionPagination() {
+  if (!els.questionPagination) return;
+  if (!visible.length || currentLayout === "focus") {
+    els.questionPagination.hidden = true;
+    return;
+  }
+  const totalPages = questionPageCount();
+  const start = (currentPage - 1) * pageSize + 1;
+  const end = Math.min(visible.length, currentPage * pageSize);
+  els.questionPagination.hidden = false;
+  els.questionPagePrev.disabled = currentPage <= 1;
+  els.questionPageNext.disabled = currentPage >= totalPages;
+  els.questionPageStatus.textContent = `${start}-${end} of ${visible.length.toLocaleString()}`;
+  els.questionPageNumbers.innerHTML = paginationSequence(totalPages).map((item) => {
+    if (item === "ellipsis") return `<span aria-hidden="true">...</span>`;
+    const current = item === currentPage;
+    return `<button type="button" data-question-page="${item}" ${current ? 'aria-current="page"' : ""}>${item}</button>`;
+  }).join("");
+  els.questionPageSize.value = String(pageSize);
+}
+
+function setQuestionPage(page, { scroll = true } = {}) {
+  currentPage = Math.min(questionPageCount(), Math.max(1, Number(page || 1)));
+  renderCards();
+  if (scroll) {
+    const reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+    els.questionGrid.scrollIntoView({ block: "start", behavior: reducedMotion ? "auto" : "smooth" });
+  }
+}
+
 function renderCards() {
   if (!visible.length) {
     els.questionGrid.innerHTML = `<p>No questions match.</p>`;
+    renderQuestionPagination();
     return;
   }
   if (currentLayout === "focus") {
+    renderQuestionPagination();
     renderFocusQuestion();
     return;
   }
-  els.questionGrid.innerHTML = visible.map((question) => {
+  const pageQuestions = questionPageItems();
+  els.questionGrid.innerHTML = pageQuestions.map((question) => {
     const isSelected = selected.has(question.id);
     const isSolved = solved.has(question.id);
     const hasSolution = hasSolutionContent(solutionData[question.id]);
     const review = reviewState(question.id);
     const reviewText = reviewLabel(question.id);
-    const difficulty = question.marks >= 7 ? "Long" : question.marks >= 4 ? "Standard" : "Quick";
+    const difficulty = question.marks > 4 ? "Hard" : question.marks >= 3 ? "Medium" : "Easy";
     const difficultyClass = difficulty.toLowerCase();
     return `<article class="question-card ${isSelected ? "selected" : ""} ${isSolved ? "solved" : ""}" data-id="${question.id}">
       <div>
@@ -601,7 +786,7 @@ function renderCards() {
           ${reviewText ? `<span class="pill review">${escapeHtml(reviewText)}</span>` : ""}
         </div>
       </div>
-      <button class="thumb" type="button" data-action="zoom"><img loading="lazy" src="${question.image}" alt="${escapeHtml(question.paper)} Q${question.question}"></button>
+      <button class="thumb" type="button" data-action="zoom" aria-label="Open full-size image for ${escapeHtml(question.paper)} question ${question.question}"><img loading="lazy" src="${question.image}" alt="${escapeHtml(question.paper)} Q${question.question}"></button>
       ${renderAnswerTrainer(question, { compact: true })}
       <div class="card-actions">
         <button type="button" data-action="select">${isSelected ? "Remove" : "Select"}</button>
@@ -613,6 +798,7 @@ function renderCards() {
       </div>
     </article>`;
   }).join("");
+  renderQuestionPagination();
   typesetAnswerTrainers();
 }
 
@@ -697,7 +883,7 @@ function renderFocusQuestion() {
         ${reviewText ? `<span class="pill review">${escapeHtml(reviewText)}</span>` : ""}
       </div>
       <div class="focus-practice-layout">
-        <button class="thumb focus-thumb" type="button" data-action="zoom">
+        <button class="thumb focus-thumb" type="button" data-action="zoom" aria-label="Open full-size image for ${escapeHtml(question.paper)} question ${question.question}">
           <img loading="eager" src="${question.image}" alt="${escapeHtml(question.paper)} Q${question.question}">
         </button>
         ${renderAnswerTrainer(question)}
@@ -1094,9 +1280,9 @@ function randomTen() {
 }
 
 function matchesWorksheetMode(question, mode) {
-  if (mode === "quick") return question.marks <= 3;
-  if (mode === "standard") return question.marks >= 4 && question.marks <= 6;
-  if (mode === "long") return question.marks >= 7;
+  if (mode === "easy") return question.marks < 3;
+  if (mode === "medium") return question.marks >= 3 && question.marks <= 4;
+  if (mode === "hard") return question.marks > 4;
   if (mode === "q20") return question.question >= 20;
   return true;
 }
@@ -1199,17 +1385,17 @@ function renderPrintArea(items) {
   els.printArea.innerHTML = printable.map((question, index) => `<section class="print-question">
     <div class="print-paper-brand">
       <div class="print-brand-lockup">
-        <span class="print-brand-mark">EA</span>
+        <span class="print-brand-mark">E</span>
       <div>
-        <strong>Elite IGCSE Academy</strong>
-        <small>Student Download - Dr Eslam Ahmed</small>
+        <strong>eliteigcse.com</strong>
+        <small>Elite Mathematics | Student Practice</small>
       </div>
     </div>
-      <span class="print-brand-contact">Cairo University Faculty of Engineering<br>WhatsApp 01120009622 | eliteigcse.com</span>
+      <span class="print-brand-contact">Dr Eslam Ahmed | Mathematics Department<br>Faculty of Engineering, Cairo University</span>
     </div>
     <h2>${index + 1}. ${escapeHtml(question.paper)} Q${question.question} | ${escapeHtml(question.topic)} | ${question.marks} marks</h2>
     <img src="${question.image}" alt="${escapeHtml(question.paper)} Q${question.question}">
-    <div class="print-paper-footer">Downloaded from eliteigcse.com | Dr Eslam Ahmed | 01120009622</div>
+    <div class="print-paper-footer">Question ${index + 1} | eliteigcse.com | Dr Eslam Ahmed | +20 112 000 9622</div>
   </section>`).join("");
 }
 
@@ -1328,7 +1514,7 @@ els.topicStrip.addEventListener("click", (event) => {
   if (!button) return;
   els.topicFilter.value = button.dataset.topic;
   setTopicChip(button.dataset.topic);
-  redraw();
+  redrawFromFilter();
 });
 
 [els.searchBox, els.unitFilter, els.topicFilter, els.paperFilter, els.viewFilter, els.difficultyFilter, els.minMarks, els.maxMarks, els.minQuestion, els.maxQuestion, els.sortMode].forEach((control) => {
@@ -1339,7 +1525,7 @@ els.topicStrip.addEventListener("click", (event) => {
       configureBank();
       showPathwayResumeBanner();
     }
-    redraw();
+    redrawFromFilter();
   });
 });
 els.topicFilter.addEventListener("input", () => {
@@ -1357,18 +1543,62 @@ els.topicFilter.addEventListener("input", () => {
   source?.addEventListener("input", () => applyFocusQuickFilter(source, target));
 });
 
+[
+  [els.commandSearchBox, els.searchBox],
+  [els.commandTopicFilter, els.topicFilter],
+  [els.commandDifficultyFilter, els.difficultyFilter],
+  [els.commandViewFilter, els.viewFilter],
+].forEach(([source, target]) => {
+  source?.addEventListener("input", () => {
+    reviewMode = "";
+    target.value = source.value;
+    if (target === els.topicFilter) {
+      setTopicChip(target.value);
+      if (!els.worksheetTopic.value) els.worksheetTopic.value = target.value;
+    }
+    redrawFromFilter();
+  });
+});
+
+els.commandMoreFiltersBtn?.addEventListener("click", () => {
+  setMobileToolsOpen(true, "filter");
+  setAdvancedFiltersOpen(true);
+});
+els.commandResetBtn?.addEventListener("click", () => {
+  resetFilters();
+  redrawFromFilter();
+});
+els.commandFilterChips?.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-clear-filter]");
+  if (button) clearCommandFilter(button.dataset.clearFilter);
+});
+
+els.questionPagePrev?.addEventListener("click", () => setQuestionPage(currentPage - 1));
+els.questionPageNext?.addEventListener("click", () => setQuestionPage(currentPage + 1));
+els.questionPageNumbers?.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-question-page]");
+  if (button) setQuestionPage(button.dataset.questionPage);
+});
+els.questionPageSize?.addEventListener("change", () => {
+  const nextSize = Number(els.questionPageSize.value);
+  pageSize = PRACTICE_PAGE_SIZES.includes(nextSize) ? nextSize : 24;
+  localStorage.setItem(PRACTICE_PAGE_SIZE_KEY, String(pageSize));
+  resetQuestionPage();
+  renderCards();
+});
+
 els.resetBtn.addEventListener("click", () => {
   resetFilters();
-  redraw();
+  redrawFromFilter();
 });
 els.randomBtn.addEventListener("click", randomTen);
 els.dueReviewBtn?.addEventListener("click", () => {
   reviewMode = "due";
-  redraw();
+  redrawFromFilter();
 });
 els.allReviewBtn?.addEventListener("click", () => {
   reviewMode = "box";
-  redraw();
+  redrawFromFilter();
 });
 els.buildWorksheetBtn.addEventListener("click", () => buildWorksheet());
 els.printWorksheetBtn.addEventListener("click", () => buildWorksheet({ printAfter: true }));
@@ -1382,6 +1612,11 @@ els.printVisibleBtn.addEventListener("click", () => printVisible(els.printVisibl
 els.printSelectedInlineBtn.addEventListener("click", printSelected);
 els.printSelectedBtn.addEventListener("click", () => printSelected(els.printSelectedBtn));
 els.printSelectedBtnHero.addEventListener("click", () => printSelected(els.printSelectedBtnHero));
+els.selectionDockPrint?.addEventListener("click", () => printSelected(els.selectionDockPrint));
+els.selectionDockClear?.addEventListener("click", () => {
+  getScopedQuestions().forEach((question) => selected.delete(question.id));
+  redraw();
+});
 els.closeViewerBtn.addEventListener("click", () => els.viewerDialog.close());
 els.closeSolutionBtn.addEventListener("click", () => els.solutionDialog.close());
 els.closeFixTopicBtn.addEventListener("click", () => els.fixTopicDialog.close());
@@ -1441,7 +1676,7 @@ els.bankButtons.forEach((button) => {
     localStorage.setItem("activeQuestionBank", activeBank);
     resetFilters();
     configureBank();
-    redraw();
+    redrawFromFilter();
   });
 });
 els.practicePanel.addEventListener("click", (event) => {
