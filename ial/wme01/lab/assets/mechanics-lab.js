@@ -132,7 +132,7 @@
           "Check if limiting friction is large enough to hold."
         ]),
         caseDef("light-string", "Light inextensible string", "dynamics", "The string transmits the same tension and both connected bodies share the same acceleration magnitude.", ["tension", "pulley"], {
-          m1: 5, m2: 3, mu: 0.15, force: 0
+          mode: "table", m1: 5, m2: 3, mu: 0.15, force: 0, resistance: 0, duration: 6
         }, [
           "Light string: no mass, so tension is the same throughout.",
           "Inextensible string: connected particles share acceleration magnitude.",
@@ -534,9 +534,16 @@
   }
 
   function forceCase(id, title, purpose, mode, tags) {
-    return caseDef(id, title, "forces", purpose, tags, {
+    const presets = {
+      vertical: { f1: 12, f2: 12, f3: 0, angle1: 90, angle2: 270, angle3: 0 },
+      horizontal: { f1: 12, f2: 12, f3: 0, angle1: 0, angle2: 180, angle3: 0 },
+      multi: { f1: 12, f2: 12, f3: 12, angle1: 0, angle2: 120, angle3: 240 },
+      expressions: { f1: 12, f2: 12, f3: 12, angle1: 0, angle2: 120, angle3: 240 },
+      relationships: { f1: 12, f2: 12, f3: 12, angle1: 0, angle2: 120, angle3: 240 }
+    };
+    return caseDef(id, title, "forces", purpose, tags, Object.assign({
       mode, f1: 12, f2: 9, f3: 7, angle1: 0, angle2: 120, angle3: 240
-    }, [
+    }, presets[mode] || {}), [
       "Resolve each force into components.",
       "Equilibrium means <b>&Sigma;F<sub>x</sub> = 0</b> and <b>&Sigma;F<sub>y</sub> = 0</b>.",
       "Resultant force is the vector sum of all forces."
@@ -595,9 +602,20 @@
   }
 
   function momentCase(id, title, purpose, mode, tags) {
-    return caseDef(id, title, "moments", purpose, tags, {
+    const presets = {
+      single: { f2: 0, x1: 7 },
+      angle: { f2: 0, x1: 7 },
+      supports: { f1: 30, x1: 2, f2: 30, x2: 6, weight: 0 },
+      rod: { f1: 24, x1: 7, f2: 0, weight: 40, pivot: 2 },
+      nonuniform: { f1: 24, x1: 1, f2: 0, x2: 5.5, weight: 40 },
+      tilt: { f1: 70, x1: 8, f2: 0, weight: 30 },
+      seesaw: { f1: 30, x1: 2, f2: 30, x2: 6, weight: 0 },
+      lamina: { f1: 30, x1: 2, f2: 18, x2: 6, weight: 34 },
+      twoCase: { f1: 35, x1: 1, f2: 22, x2: 7, weight: 42 }
+    };
+    return caseDef(id, title, "moments", purpose, tags, Object.assign({
       mode, beam: 8, pivot: 4, f1: 30, x1: 2, f2: 20, x2: 7, angle: 55, weight: 40
-    }, [
+    }, presets[mode] || {}), [
       "Moment = force &times; perpendicular distance.",
       "Equilibrium: clockwise moments = anticlockwise moments.",
       "At the point of tilting, the reaction at the other support is zero."
@@ -747,7 +765,7 @@
   };
 
   function init() {
-    document.documentElement.dataset.labRelease = "20260809h";
+    document.documentElement.dataset.labRelease = "20260809i";
     document.documentElement.dataset.labTopics = String(TOPICS.length);
     document.documentElement.dataset.labCases = String(TOPICS.reduce((sum, topic) => sum + topic.cases.length, 0));
     document.documentElement.dataset.labProfiles = String(CASE_VISUAL_PROFILES.length);
@@ -1130,7 +1148,10 @@
     }
     updateControlIcon(el.playPause, app.playing ? "pause" : "play");
     updateControlIcon(el.stagePlay, app.playing ? "pause" : "play");
-    if (el.sceneState) el.sceneState.textContent = app.playing ? "Running" : (app.t > 0 ? "Paused" : "Ready");
+    if (el.sceneState) {
+      el.sceneState.textContent = app.playing ? "Running" : (app.t > 0 ? "Paused" : "Ready");
+      el.sceneState.classList.toggle("is-running", app.playing);
+    }
     refreshIcons();
   }
 
@@ -1282,11 +1303,11 @@
         hud = ["Ideal path is pale. Active model is bright.", "Velocity arrow is tangent to the path; acceleration points downward."];
         break;
       case "modelling":
-        readouts = drawModelling(W, H);
+        readouts = drawModelling(W, H, t);
         hud = ["Particle model ignores the place where the force is applied.", "Rigid body model keeps the turning effect."];
         break;
       case "units":
-        readouts = drawUnits(W, H);
+        readouts = drawUnits(W, H, t);
         hud = ["A unit check is often the fastest way to catch impossible formulae."];
         break;
       case "vectors":
@@ -1306,7 +1327,7 @@
         hud = ["Each component obeys its own 1D SUVAT equation.", "Position vector is measured from the origin."];
         break;
       case "forces":
-        readouts = drawForces(W, H);
+        readouts = drawForces(W, H, t);
         hud = ["Close the vector polygon for equilibrium.", "The red arrow is the current resultant."];
         break;
       case "dynamics":
@@ -1322,12 +1343,13 @@
         hud = ["Momentum is signed, so direction stays visible.", "The contact interval transfers impulse; the energy gauge shows what is retained."];
         break;
       case "moments":
-        readouts = drawMoments(W, H);
+        readouts = drawMoments(W, H, t);
         hud = ["Clockwise and anticlockwise moments compete about the pivot.", "At tipping, one support reaction is zero."];
         break;
       default:
         readouts = [];
     }
+    drawMotionTelemetry(W, H, t);
     drawCaseStamp(W, H);
     const analysisRect = el.analysisCanvas.getBoundingClientRect();
     drawAnalysis(Math.max(280, analysisRect.width), Math.max(280, analysisRect.height), t, readouts);
@@ -1893,6 +1915,80 @@
     ctx.restore();
   }
 
+  function motionProgress(t) {
+    return clamp(Number(t || 0) / duration(), 0, 1);
+  }
+
+  function revealProgress(t, fraction) {
+    const windowSize = Math.max(0.45, duration() * (fraction || 0.35));
+    return smoothStep(clamp(Number(t || 0) / windowSize, 0, 1));
+  }
+
+  function drawMotionTelemetry(W, H, t) {
+    const progress = motionProgress(t);
+    const profile = currentProfile();
+    const x = Math.max(12, W - 154);
+    const y = Math.max(64, H - 58);
+    const pulse = app.playing ? 0.72 + 0.28 * Math.sin(Number(t || 0) * 8) : 0.62;
+    ctx.save();
+    ctx.fillStyle = "rgba(2,12,24,.78)";
+    rounded(x, y, 140, 34, 6, true);
+    ctx.strokeStyle = app.playing ? profile.accent : "rgba(215,231,246,.18)";
+    ctx.lineWidth = 1;
+    rounded(x, y, 140, 34, 6, false, true);
+    ctx.globalAlpha = pulse;
+    ctx.fillStyle = app.playing ? profile.secondary : colors.dim;
+    circle(x + 13, y + 12, 4);
+    ctx.globalAlpha = 1;
+    label(x + 23, y + 15, app.playing ? "RUNNING" : (t > 0 ? "PAUSED" : "READY"), app.playing ? "#fff" : colors.dim, "800 8px Sora");
+    ctx.fillStyle = "rgba(255,255,255,.12)";
+    rounded(x + 10, y + 23, 120, 4, 2, true);
+    if (progress > 0) {
+      const fill = ctx.createLinearGradient(x + 10, 0, x + 130, 0);
+      fill.addColorStop(0, profile.accent);
+      fill.addColorStop(1, profile.secondary);
+      ctx.fillStyle = fill;
+      rounded(x + 10, y + 23, Math.max(3, 120 * progress), 4, 2, true);
+    }
+    ctx.textAlign = "right";
+    label(x + 130, y + 15, fmt(t) + " s", colors.goldSoft, "800 8px Sora");
+    ctx.restore();
+  }
+
+  function drawMotionTrace(x1, y1, x2, y2, color, progress) {
+    const q = clamp(progress, 0, 1);
+    ctx.save();
+    ctx.setLineDash([5, 7]);
+    line(x1, y1, x2, y2, color, 1.5);
+    ctx.setLineDash([]);
+    for (let i = 1; i <= 4; i += 1) {
+      const lag = clamp(q - i * 0.08, 0, 1);
+      ctx.globalAlpha = Math.max(0.12, 0.5 - i * 0.08);
+      ctx.fillStyle = color;
+      circle(x1 + (x2 - x1) * lag, y1 + (y2 - y1) * lag, Math.max(2, 5 - i * 0.6));
+    }
+    ctx.restore();
+  }
+
+  function drawAnimatedVectorArrow(map, start, end, color, text, progress) {
+    const q = clamp(progress, 0, 1);
+    const liveEnd = {
+      x: start.x + (end.x - start.x) * q,
+      y: start.y + (end.y - start.y) * q
+    };
+    const a = map(start.x, start.y);
+    const b = map(end.x, end.y);
+    const live = map(liveEnd.x, liveEnd.y);
+    ctx.save();
+    ctx.setLineDash([5, 6]);
+    line(a.x, a.y, b.x, b.y, "rgba(220,235,248,.2)", 1.5);
+    ctx.restore();
+    arrow(a.x, a.y, live.x, live.y, color, 4);
+    if (q > 0.12) label(live.x + 8, live.y - 8, text, color, "bold 13px Inter");
+    ctx.fillStyle = color;
+    circle(live.x, live.y, 4);
+  }
+
   function drawProjectile(W, H, t) {
     const v = app.values;
     const ideal = projectilePath(Object.assign({}, v, { drag: 0 }), duration());
@@ -1902,8 +1998,9 @@
     const map = mapper(W, H, bounds);
     drawAxes(map, bounds, "x", "y");
     drawGround(map, bounds);
-    drawPath(map, ideal, "rgba(255,255,255,.35)", 2);
-    drawPath(map, active, colors.teal, 4);
+    drawPath(map, ideal, "rgba(255,255,255,.3)", 2);
+    drawPath(map, active, "rgba(45,212,191,.2)", 2);
+    drawPathProgress(map, active, t / duration(), colors.teal, 4);
     const p = pointAtPath(active, t / duration());
     const sp = map(p.x, p.y);
     ctx.fillStyle = colors.goldSoft;
@@ -1933,44 +2030,83 @@
     ];
   }
 
-  function drawModelling(W, H) {
+  function drawModelling(W, H, t) {
     const v = app.values;
-    const cx = W * 0.48;
-    const cy = H * 0.56;
-    ctx.fillStyle = "rgba(255,255,255,.08)";
-    rounded(cx - 165, cy - 70, 330, 140, 14, true);
-    ctx.fillStyle = "#172f68";
-    rounded(cx - 110, cy - 30, 220, 60, 10, true);
-    ctx.fillStyle = colors.goldSoft;
-    circle(cx - 70, cy + 38, 18);
-    circle(cx + 70, cy + 38, 18);
+    const q = revealProgress(t, 0.42);
+    const a = rad(v.angle);
+    const signedMoment = v.force * v.offset;
+    const moment = Math.abs(signedMoment);
+    const startX = W * 0.47;
+    const startY = H * 0.57;
+    const travel = clamp(v.force / 60, 0, 1) * 42 * q;
+    const cx = startX + Math.cos(a) * travel;
+    const cy = startY - Math.sin(a) * travel;
+    const rotation = Math.sign(signedMoment || 1) * clamp(moment / 90, 0, 1) * 0.24 * q;
+    const isRod = currentCase().id === "rod-beam";
+
+    ctx.save();
+    ctx.setLineDash([7, 7]);
+    ctx.strokeStyle = "rgba(220,235,248,.2)";
+    ctx.lineWidth = 2;
+    if (isRod) rounded(startX - 150, startY - 14, 300, 28, 5, false, true);
+    else rounded(startX - 110, startY - 30, 220, 60, 10, false, true);
+    ctx.restore();
+    drawMotionTrace(startX, startY, cx, cy, colors.teal, q);
+
+    ctx.save();
+    ctx.translate(cx, cy);
+    ctx.rotate(rotation);
+    ctx.fillStyle = "rgba(255,255,255,.075)";
+    rounded(-170, -70, 340, 140, 14, true);
+    const body = ctx.createLinearGradient(-150, -30, 150, 30);
+    body.addColorStop(0, "#4ea6da");
+    body.addColorStop(0.55, "#173d75");
+    body.addColorStop(1, "#0a233f");
+    ctx.fillStyle = body;
+    if (isRod) {
+      rounded(-150, -14, 300, 28, 5, true);
+      ctx.fillStyle = "rgba(255,255,255,.42)";
+      for (let x = -135; x <= 135; x += 30) rounded(x, -8, 14, 16, 2, true);
+    } else {
+      rounded(-110, -30, 220, 60, 10, true);
+      ctx.fillStyle = colors.goldSoft;
+      circle(-70, 38, 18);
+      circle(70, 38, 18);
+      ctx.fillStyle = "#071525";
+      circle(-70, 38, 8);
+      circle(70, 38, 8);
+    }
     ctx.strokeStyle = "rgba(255,255,255,.35)";
     ctx.lineWidth = 2;
-    line(cx, cy - 85, cx, cy + 88);
-    line(cx - 180, cy, cx + 180, cy);
-    const x = cx;
-    const y = cy - v.offset * 45;
-    const len = v.force * 3;
-    const a = rad(v.angle);
-    arrow(x - Math.cos(a) * len * 0.4, y + Math.sin(a) * len * 0.4, x + Math.cos(a) * len * 0.6, y - Math.sin(a) * len * 0.6, colors.teal, 4);
-    label(x + 70, y - 12, "force applied away from centre", colors.teal);
-    const moment = v.force * Math.abs(v.offset);
+    line(0, -85, 0, 88);
+    line(-180, 0, 180, 0);
+    ctx.fillStyle = colors.goldSoft;
+    circle(0, 0, 7);
+    label(10, -8, "centre of mass", colors.goldSoft, "700 10px Sora");
+
+    const forceY = -v.offset * 45;
+    const forceLength = v.force * 3 * (0.12 + 0.88 * q);
+    arrow(-Math.cos(a) * forceLength * 0.4, forceY + Math.sin(a) * forceLength * 0.4, Math.cos(a) * forceLength * 0.6, forceY - Math.sin(a) * forceLength * 0.6, colors.teal, 4);
+    label(Math.min(72, Math.cos(a) * forceLength * 0.62 + 8), forceY - Math.sin(a) * forceLength * 0.62 - 8, "applied force", colors.teal, "700 10px Sora");
+    ctx.restore();
+
     ctx.strokeStyle = colors.orange;
     ctx.lineWidth = 4;
     ctx.beginPath();
-    ctx.arc(cx, cy, 72, -0.6, 1.2);
+    const arcSweep = 1.8 * (0.12 + 0.88 * q);
+    ctx.arc(startX, startY, 76, -0.75, -0.75 + Math.sign(signedMoment || 1) * arcSweep, signedMoment < 0);
     ctx.stroke();
-    label(cx + 82, cy + 38, "turning effect", colors.orange);
+    label(startX + 84, startY + 42, "rotation from F x d", colors.orange, "700 10px Sora");
     return [
       ro("force", fmt(v.force) + " N"),
       ro("offset", fmt(v.offset) + " m"),
       ro("moment", fmt(moment) + " Nm"),
-      ro("particle model", "moment ignored"),
-      ro("rigid model", "moment kept")
+      ro("rotation", fmt(deg(rotation)) + " deg"),
+      ro("model", isRod ? "rigid rod" : "particle vs rigid")
     ];
   }
 
-  function drawUnits(W, H) {
+  function drawUnits(W, H, t) {
     const cards = [
       ["Velocity", "m s\u207b\u00b9", "vector if direction is included"],
       ["Acceleration", "m s\u207b\u00b2", "rate of change of velocity"],
@@ -1988,28 +2124,58 @@
     const rows = Math.ceil(cards.length / columns);
     const startX = W / 2 - (cw * columns + gap * (columns - 1)) / 2;
     const startY = H / 2 - (cardHeight * rows + gap * (rows - 1)) / 2;
+    const progress = motionProgress(t);
+    const scan = 0.5 - 0.5 * Math.cos(progress * Math.PI * 3);
+    const pulse = 0.5 + 0.5 * Math.sin(progress * Math.PI * 8);
     cards.forEach((card, i) => {
       const col = i % columns;
       const row = Math.floor(i / columns);
       const x = startX + col * (cw + gap);
       const y = startY + row * (cardHeight + gap);
-      ctx.fillStyle = i === active ? "rgba(212,175,55,.18)" : "rgba(255,255,255,.08)";
+      ctx.fillStyle = i === active ? "rgba(212,175,55," + (0.13 + pulse * 0.1) + ")" : "rgba(255,255,255,.08)";
       ctx.strokeStyle = i === active ? colors.gold : "rgba(255,255,255,.12)";
       ctx.lineWidth = 2;
       rounded(x, y, cw, cardHeight, 12, true, true);
       label(x + 12, y + 24, card[0], colors.white, narrow ? "bold 12px Inter" : "bold 15px Inter");
       label(x + 12, y + 49, card[1], colors.goldSoft, narrow ? "bold 15px Inter" : "bold 18px Inter");
       drawCanvasWrappedText(card[2], x + 12, y + 68, cw - 24, narrow ? 10 : 12, narrow ? 2 : 1, colors.dim);
+      if (i === active) {
+        const scanX = x + 9 + (cw - 18) * scan;
+        const beam = ctx.createLinearGradient(scanX - 12, 0, scanX + 12, 0);
+        beam.addColorStop(0, "rgba(45,212,191,0)");
+        beam.addColorStop(0.5, "rgba(45,212,191,.72)");
+        beam.addColorStop(1, "rgba(45,212,191,0)");
+        ctx.fillStyle = beam;
+        ctx.fillRect(scanX - 12, y + 5, 24, cardHeight - 10);
+        ctx.fillStyle = colors.teal;
+        circle(scanX, y + cardHeight - 9, 4);
+      }
     });
+    const pipelineY = Math.min(H - 24, startY + rows * cardHeight + (rows - 1) * gap + 25);
+    const pipelineX0 = Math.max(28, startX);
+    const pipelineX1 = Math.min(W - 28, startX + columns * cw + (columns - 1) * gap);
+    ctx.save();
+    ctx.setLineDash([5, 7]);
+    line(pipelineX0, pipelineY, pipelineX1, pipelineY, "rgba(220,235,248,.24)", 2);
+    ctx.restore();
+    const packetX = pipelineX0 + (pipelineX1 - pipelineX0) * progress;
+    ctx.fillStyle = colors.teal;
+    circle(packetX, pipelineY, 6);
+    label(pipelineX0, pipelineY - 10, "identify", colors.dim, "700 9px Sora");
+    ctx.save();
+    ctx.textAlign = "right";
+    label(pipelineX1, pipelineY - 10, "units verified", colors.green, "700 9px Sora");
+    ctx.restore();
     return [
       ro("selected", cards[active][0]),
       ro("unit", cards[active][1]),
       ro("scale", fmt(app.values.scale || 1)),
-      ro("rule", "same units both sides")
+      ro("rule", "same units both sides"),
+      ro("check", progress > 0.72 ? "dimensionally consistent" : "scanning")
     ];
   }
 
-  function drawVectors(W, H) {
+  function drawVectors(W, H, t) {
     const v = app.values;
     const a = { x: v.ax, y: v.ay };
     const b = { x: v.bx, y: v.by };
@@ -2028,24 +2194,34 @@
     const map = mapper(W, H, bounds);
     drawAxes(map, bounds, "i", "j");
     const origin = map(0, 0);
+    const reveal = 0.06 + 0.94 * revealProgress(t, 0.4);
     if (v.mode === "relative") {
-      const A = map(a.x, a.y);
-      const B = map(b.x, b.y);
+      const AFinal = map(a.x, a.y);
+      const BFinal = map(b.x, b.y);
+      const A = map(a.x * reveal, a.y * reveal);
+      const B = map(b.x * reveal, b.y * reveal);
+      ctx.save();
+      ctx.setLineDash([5, 6]);
+      line(origin.x, origin.y, AFinal.x, AFinal.y, "rgba(240,207,104,.24)", 1.5);
+      line(origin.x, origin.y, BFinal.x, BFinal.y, "rgba(56,189,248,.24)", 1.5);
+      ctx.restore();
+      drawMotionTrace(origin.x, origin.y, AFinal.x, AFinal.y, colors.goldSoft, reveal);
+      drawMotionTrace(origin.x, origin.y, BFinal.x, BFinal.y, colors.sky, reveal);
       dot(A.x, A.y, colors.goldSoft, "A");
       dot(B.x, B.y, colors.sky, "B");
       arrow(A.x, A.y, B.x, B.y, colors.teal, 4);
       label((A.x + B.x) / 2 + 10, (A.y + B.y) / 2 - 8, "AB = b - a", colors.teal);
     } else if (v.mode === "equilibrium") {
-      drawVectorArrow(map, { x: 0, y: 0 }, a, colors.sky, "F1");
-      drawVectorArrow(map, a, { x: a.x + b.x, y: a.y + b.y }, colors.violet, "F2");
-      drawVectorArrow(map, { x: a.x + b.x, y: a.y + b.y }, { x: 0, y: 0 }, colors.green, "F3");
+      drawAnimatedVectorArrow(map, { x: 0, y: 0 }, a, colors.sky, "F1", clamp(reveal * 3, 0, 1));
+      drawAnimatedVectorArrow(map, a, { x: a.x + b.x, y: a.y + b.y }, colors.violet, "F2", clamp(reveal * 3 - 1, 0, 1));
+      drawAnimatedVectorArrow(map, { x: a.x + b.x, y: a.y + b.y }, { x: 0, y: 0 }, colors.green, "F3", clamp(reveal * 3 - 2, 0, 1));
       label(origin.x + 12, origin.y - 14, "closed polygon", colors.green);
     } else {
-      drawVectorArrow(map, { x: 0, y: 0 }, a, colors.sky, "a");
-      drawVectorArrow(map, { x: 0, y: 0 }, b, colors.violet, "b");
-      drawVectorArrow(map, { x: 0, y: 0 }, r, colors.teal, v.mode === "bearing" ? "resolved" : "resultant");
+      drawAnimatedVectorArrow(map, { x: 0, y: 0 }, a, colors.sky, "a", reveal);
+      drawAnimatedVectorArrow(map, { x: 0, y: 0 }, b, colors.violet, "b", reveal);
+      drawAnimatedVectorArrow(map, { x: 0, y: 0 }, r, colors.teal, v.mode === "bearing" ? "resolved" : "resultant", reveal);
       if (v.mode === "parallel") {
-        drawVectorArrow(map, { x: 0, y: 0 }, { x: b.x * 2, y: b.y * 2 }, colors.green, "2b");
+        drawAnimatedVectorArrow(map, { x: 0, y: 0 }, { x: b.x * 2, y: b.y * 2 }, colors.green, "2b", reveal);
       }
     }
     return [
@@ -2241,12 +2417,31 @@
     ctx.lineWidth = 4;
     ctx.stroke();
     const py = sy(yValue);
+    drawMotionTrace(x, sy(h0), x, py, colors.goldSoft, motionProgress(t));
     ctx.fillStyle = colors.goldSoft;
     circle(x, py, 13);
     arrow(x + 34, py, x + 34, py - vel * 2.8, colors.teal, 4);
     arrow(x + 64, py - 10, x + 64, py + 72, colors.orange, 4);
     label(x + 44, py - vel * 2.8 - 8, "v", colors.teal);
     label(x + 74, py + 66, "g", colors.orange);
+    const velocitySamples = samples.map((_, index) => v.u + v.a * (T * index / Math.max(1, samples.length - 1)));
+    const minVelocity = Math.min(...velocitySamples, v.u) - 1;
+    const maxVelocity = Math.max(...velocitySamples, v.u) + 1;
+    const gaugeX = W * 0.78;
+    const gaugeTop = H * 0.24;
+    const gaugeBottom = H * 0.73;
+    const velocityY = map1(vel, minVelocity, maxVelocity, gaugeBottom, gaugeTop);
+    const initialVelocityY = map1(v.u, minVelocity, maxVelocity, gaugeBottom, gaugeTop);
+    line(gaugeX, gaugeTop, gaugeX, gaugeBottom, "rgba(220,235,248,.3)", 3);
+    ctx.save();
+    ctx.setLineDash([5, 5]);
+    line(gaugeX - 26, initialVelocityY, gaugeX + 26, initialVelocityY, "rgba(240,207,104,.34)", 2);
+    ctx.restore();
+    line(gaugeX - 34, velocityY, gaugeX + 34, velocityY, vel >= 0 ? colors.green : colors.rose, 5);
+    ctx.fillStyle = vel >= 0 ? colors.green : colors.rose;
+    circle(gaugeX, velocityY, 7);
+    label(gaugeX - 38, gaugeTop - 12, "velocity gauge", colors.dim, "700 9px Sora");
+    label(gaugeX + 42, velocityY + 4, fmt(vel) + " m/s", vel >= 0 ? colors.green : colors.rose, "700 9px Sora");
     if (id === "from-height") {
       ctx.fillStyle = "rgba(56,189,248,.18)";
       rounded(W * 0.28, sy(h0), W * 0.18, sy(0) - sy(h0), 10, true);
@@ -2325,7 +2520,8 @@
     const map = mapper(W, H, bounds);
     drawAxes(map, bounds, "i", "j");
     drawGround(map, bounds);
-    drawPath(map, pts, colors.teal, 4);
+    drawPath(map, pts, "rgba(45,212,191,.22)", 2);
+    drawPathProgress(map, pts, t / duration(), colors.teal, 4);
     const p = {
       x: v.ux * t + 0.5 * v.ax * t * t,
       y: v.height + v.uy * t + 0.5 * v.ay * t * t
@@ -2354,37 +2550,77 @@
     ];
   }
 
-  function drawForces(W, H) {
+  function drawForces(W, H, t) {
     const v = app.values;
-    const origin = { x: W * 0.48, y: H * 0.52 };
-    ctx.fillStyle = "rgba(255,255,255,.08)";
-    rounded(origin.x - 54, origin.y - 38, 108, 76, 12, true);
-    label(origin.x - 28, origin.y + 5, "particle", colors.white, "bold 13px Inter");
     const forces = forceList(v);
     let sum = { x: 0, y: 0 };
-    forces.forEach((f, index) => {
+    forces.forEach((f) => {
       sum.x += f.x;
       sum.y += f.y;
-      arrow(origin.x, origin.y, origin.x + f.x * 8, origin.y - f.y * 8, f.color, 4);
-      label(origin.x + f.x * 8 + 8, origin.y - f.y * 8, "F" + (index + 1), f.color);
     });
-    arrow(origin.x, origin.y, origin.x + sum.x * 8, origin.y - sum.y * 8, colors.rose, 5);
-    label(origin.x + sum.x * 8 + 8, origin.y - sum.y * 8 - 8, "R", colors.rose);
-    drawMiniPolygon(W, H, forces);
+    const magnitude = Math.hypot(sum.x, sum.y);
+    const q = revealProgress(t, 0.42);
+    const moveQ = smoothStep(motionProgress(t));
+    const start = { x: W * 0.46, y: H * 0.52 };
+    const travel = magnitude < 0.5 ? 0 : clamp(magnitude * 1.25, 20, 58) * moveQ;
+    const origin = {
+      x: start.x + (magnitude ? sum.x / magnitude * travel : 0),
+      y: start.y - (magnitude ? sum.y / magnitude * travel : 0)
+    };
+
+    ctx.save();
+    ctx.setLineDash([6, 7]);
+    ctx.strokeStyle = "rgba(220,235,248,.2)";
+    ctx.lineWidth = 2;
+    rounded(start.x - 54, start.y - 38, 108, 76, 12, false, true);
+    ctx.restore();
+    if (travel > 0) drawMotionTrace(start.x, start.y, origin.x, origin.y, colors.rose, moveQ);
+    const particleFill = ctx.createLinearGradient(origin.x - 54, origin.y - 38, origin.x + 54, origin.y + 38);
+    particleFill.addColorStop(0, "#edf8ff");
+    particleFill.addColorStop(0.12, currentProfile().accent);
+    particleFill.addColorStop(1, "#12314e");
+    ctx.fillStyle = particleFill;
+    rounded(origin.x - 54, origin.y - 38, 108, 76, 12, true);
+    ctx.strokeStyle = "rgba(255,255,255,.38)";
+    rounded(origin.x - 54, origin.y - 38, 108, 76, 12, false, true);
+    label(origin.x - 28, origin.y + 5, magnitude < 0.5 ? "balanced" : "particle", colors.white, "bold 13px Inter");
+
+    forces.forEach((f, index) => {
+      const forceQ = clamp(q * forces.length - index * 0.42, 0.08, 1);
+      const fx = origin.x + f.x * 8 * forceQ;
+      const fy = origin.y - f.y * 8 * forceQ;
+      arrow(origin.x, origin.y, fx, fy, f.color, 4);
+      label(fx + 8, fy, "F" + (index + 1), f.color);
+    });
+    const resultantQ = clamp(q * 1.7 - 0.45, 0, 1);
+    if (magnitude >= 0.05 && resultantQ > 0) {
+      const rx = origin.x + sum.x * 8 * resultantQ;
+      const ry = origin.y - sum.y * 8 * resultantQ;
+      arrow(origin.x, origin.y, rx, ry, colors.rose, 5);
+      label(rx + 8, ry - 8, "R", colors.rose);
+    } else if (magnitude < 0.5) {
+      ctx.strokeStyle = colors.green;
+      ctx.lineWidth = 3;
+      ctx.globalAlpha = 0.55 + 0.35 * Math.sin(t * 6);
+      circle(origin.x, origin.y, 50 + 5 * Math.sin(t * 4), false, colors.green);
+      ctx.globalAlpha = 1;
+    }
+    drawMiniPolygon(W, H, forces, q);
     return [
       ro("Rx", fmt(sum.x) + " N"),
       ro("Ry", fmt(sum.y) + " N"),
       ro("|R|", fmt(Math.hypot(sum.x, sum.y)) + " N"),
       ro("angle", fmt(deg(Math.atan2(sum.y, sum.x))) + " deg"),
-      ro("state", Math.hypot(sum.x, sum.y) < 0.5 ? "equilibrium" : "unbalanced")
+      ro("state", magnitude < 0.5 ? "equilibrium" : "unbalanced"),
+      ro("motion", magnitude < 0.5 ? "no translation" : "along resultant")
     ];
   }
 
   function drawDynamics(W, H, t) {
     const v = app.values;
     const mode = v.mode;
-    if (mode === "lift") return drawLift(W, H);
-    if (mode === "vector") return drawVectorFma(W, H);
+    if (mode === "lift") return drawLift(W, H, t);
+    if (mode === "vector") return drawVectorFma(W, H, t);
     if (mode === "atwood") return drawAtwood(W, H, t, false);
     if (mode === "table") return drawAtwood(W, H, t, true);
     if (mode === "towbar") return drawTowbar(W, H, t);
@@ -2473,42 +2709,82 @@
     ];
   }
 
-  function drawLift(W, H) {
+  function drawLift(W, H, t) {
     const v = app.values;
     const R = v.m1 * (G + v.liftA);
     const cx = W * 0.5;
-    const cy = H * 0.54;
+    const baseY = H * 0.56;
+    const displacement = 0.5 * v.liftA * t * t;
+    const travel = clamp(displacement * 18, -72, 72);
+    const cy = baseY - travel;
     ctx.fillStyle = "rgba(255,255,255,.08)";
-    rounded(cx - 120, cy - 170, 240, 300, 12, true);
+    rounded(cx - 120, H * 0.12, 240, H * 0.73, 12, true);
     ctx.strokeStyle = "rgba(255,255,255,.35)";
     ctx.lineWidth = 3;
-    line(cx - 120, cy - 125, cx + 120, cy - 125);
-    ctx.fillStyle = colors.sky;
-    rounded(cx - 38, cy - 12, 76, 84, 12, true);
-    arrow(cx, cy + 72, cx, cy - 80, colors.green, 5);
-    arrow(cx, cy - 2, cx, cy + 120, colors.rose, 5);
+    line(cx - 120, H * 0.2, cx + 120, H * 0.2);
+    line(cx - 70, H * 0.2, cx - 70, cy - 12, "rgba(215,231,246,.3)", 2);
+    line(cx + 70, H * 0.2, cx + 70, cy - 12, "rgba(215,231,246,.3)", 2);
+    ctx.save();
+    ctx.setLineDash([6, 7]);
+    rounded(cx - 48, baseY - 20, 96, 104, 12, false, true);
+    ctx.restore();
+    drawMotionTrace(cx, baseY + 28, cx, cy + 28, colors.sky, revealProgress(t, 0.42));
+    const cabin = ctx.createLinearGradient(cx - 48, cy - 20, cx + 48, cy + 84);
+    cabin.addColorStop(0, "#dff5ff");
+    cabin.addColorStop(0.16, colors.sky);
+    cabin.addColorStop(1, "#17344d");
+    ctx.fillStyle = cabin;
+    rounded(cx - 48, cy - 20, 96, 104, 12, true);
+    ctx.fillStyle = "#071525";
+    rounded(cx - 28, cy - 3, 56, 50, 7, true);
+    ctx.fillStyle = colors.goldSoft;
+    circle(cx, cy + 61, 8);
+    const arrowQ = 0.12 + 0.88 * revealProgress(t, 0.35);
+    arrow(cx, cy + 72, cx, cy + 72 - 152 * arrowQ, colors.green, 5);
+    arrow(cx, cy - 2, cx, cy - 2 + 122 * arrowQ, colors.rose, 5);
     label(cx + 16, cy - 68, "R", colors.green);
     label(cx + 18, cy + 112, "mg", colors.rose);
     return [
       ro("mass", fmt(v.m1) + " kg"),
       ro("lift a", fmt(v.liftA) + " m/s^2"),
       ro("reaction", fmt(R) + " N"),
-      ro("weight", fmt(v.m1 * G) + " N")
+      ro("weight", fmt(v.m1 * G) + " N"),
+      ro("displacement", fmt(displacement) + " m")
     ];
   }
 
-  function drawVectorFma(W, H) {
+  function drawVectorFma(W, H, t) {
     const v = app.values;
-    const a = { x: v.force / Math.max(1, v.m1), y: (v.m2 - 5) / Math.max(1, v.m1) };
-    const map = mapper(W, H, { minX: -4, maxX: 16, minY: -8, maxY: 8 });
-    drawAxes(map, { minX: -4, maxX: 16, minY: -8, maxY: 8 }, "i", "j");
-    drawVectorArrow(map, { x: 0, y: 0 }, { x: v.force / 10, y: v.m2 - 5 }, colors.teal, "R");
-    drawVectorArrow(map, { x: 0, y: 0 }, a, colors.orange, "a = R/m");
+    const resultant = { x: v.force, y: (v.m2 - 5) * 10 };
+    const a = { x: resultant.x / Math.max(1, v.m1), y: resultant.y / Math.max(1, v.m1) };
+    const bounds = { minX: -4, maxX: 18, minY: -10, maxY: 10 };
+    const map = mapper(W, H, bounds);
+    drawAxes(map, bounds, "i", "j");
+    const reveal = 0.08 + 0.92 * revealProgress(t, 0.38);
+    drawAnimatedVectorArrow(map, { x: 0, y: 0 }, { x: resultant.x / 10, y: resultant.y / 10 }, colors.teal, "R", reveal);
+    drawAnimatedVectorArrow(map, { x: 0, y: -2.3 }, { x: a.x / 2, y: a.y / 2 - 2.3 }, colors.orange, "a = R/m", reveal);
+    const sampleTime = Math.min(t, 2.4);
+    const world = {
+      x: clamp(0.5 * a.x * sampleTime * sampleTime / 2, bounds.minX + 0.5, bounds.maxX - 0.5),
+      y: clamp(0.5 * a.y * sampleTime * sampleTime / 2, bounds.minY + 0.5, bounds.maxY - 0.5)
+    };
+    const motionLaneY = -5.2;
+    const start = map(0, motionLaneY);
+    const particle = map(world.x, clamp(motionLaneY + world.y, bounds.minY + 0.5, bounds.maxY - 0.5));
+    drawMotionTrace(start.x, start.y, particle.x, particle.y, colors.goldSoft, reveal);
+    label(start.x - 4, start.y - 13, "motion trace (scaled)", colors.dim, "700 9px Sora");
+    ctx.fillStyle = colors.goldSoft;
+    circle(particle.x, particle.y, 11);
+    ctx.strokeStyle = "rgba(255,255,255,.52)";
+    ctx.lineWidth = 2;
+    circle(particle.x, particle.y, 11, false, "rgba(255,255,255,.52)");
+    label(particle.x + 15, particle.y + 20, "particle", colors.goldSoft, "700 10px Sora");
     return [
       ro("Rx", fmt(v.force) + " N"),
-      ro("Ry", fmt((v.m2 - 5) * 10) + " N"),
+      ro("Ry", fmt(resultant.y) + " N"),
       ro("ax", fmt(a.x) + " m/s^2"),
-      ro("ay", fmt(a.y) + " m/s^2")
+      ro("ay", fmt(a.y) + " m/s^2"),
+      ro("r", "(" + fmt(world.x) + ", " + fmt(world.y) + ")")
     ];
   }
 
@@ -2535,6 +2811,9 @@
     const slide = clamp(0.5 * a * t * t * 26, -110, 120);
     const px = x1 + Math.cos(theta) * (len * 0.45 + slide);
     const py = y1 - Math.sin(theta) * (len * 0.45 + slide);
+    const startPx = x1 + Math.cos(theta) * len * 0.45;
+    const startPy = y1 - Math.sin(theta) * len * 0.45;
+    drawMotionTrace(startPx, startPy, px, py, colors.goldSoft, motionProgress(t));
     drawBlockOnSlope(px, py, theta);
     const nx = -Math.sin(theta);
     const ny = -Math.cos(theta);
@@ -2588,6 +2867,9 @@
     drawTrack(y, W, profile);
     drawImpactZone(motion.contactX, y, motion.phase);
 
+    drawVelocityTrail(motion.x1, y - 18, motion.velocity1, profile.accent, motion.phase === "impact" ? 0.35 : 1);
+    drawVelocityTrail(motion.x2, y - 18, motion.velocity2, profile.secondary, motion.phase === "impact" ? 0.35 : 1);
+
     drawCart(motion.x1, y, profile.accent, "A", {
       mass: v.m1,
       velocity: motion.velocity1,
@@ -2635,6 +2917,7 @@
     const scale = Math.max(5, Math.min(14, (W - 160) / Math.max(1, Math.abs(v.u1) * duration())));
     const x = 82 + v.u1 * t * scale;
     const momentum = v.m1 * v.u1;
+    drawVelocityTrail(x, y - 18, v.u1, profile.accent, 1);
     drawCart(x, y, profile.accent, "A", { mass: v.m1, velocity: v.u1, scale: profile.objectScale });
     drawVelocityIndicator(x, y - 86, v.u1, profile.accent, "velocity");
     drawSceneMetric(W - 150, H * 0.2, "p = mv", fmt(momentum) + " kg m/s", profile.secondary);
@@ -2662,6 +2945,7 @@
     const scale = Math.max(3.5, Math.min(10, (W - 190) / Math.max(1, Math.abs(v.u1 * duration()) + Math.abs(acceleration * pulseTime * duration()))));
     const x = 88 + distance * scale;
     const impulse = v.force * activeTime;
+    drawVelocityTrail(x, y - 18, velocity, profile.accent, 1);
     drawCart(x, y, profile.accent, "A", { mass: v.m1, velocity, scale: profile.objectScale });
     if (t <= pulseTime) {
       arrow(x - 86, y - 82, x + 54, y - 82, profile.secondary, 5);
@@ -2696,8 +2980,15 @@
     const x1 = centre + v.u1 * local * scale;
     const x2 = centre + v.u2 * local * scale;
     if (t < eventTime) {
-      drawCart(centre, y, profile.secondary, "A+B", { mass: v.m1 + v.m2, velocity: 0, scale: 1.08 });
+      const charge = clamp(t / Math.max(0.001, eventTime), 0, 1);
+      const compression = 0.12 * Math.sin(charge * Math.PI * 3) * charge;
+      drawCart(centre, y, profile.secondary, "A+B", { mass: v.m1 + v.m2, velocity: 0, scale: 1.08, compressed: Math.abs(compression) });
+      ctx.save();
+      ctx.globalAlpha = 0.28 + charge * 0.5;
+      drawImpactPulse(centre, y - 22, 1 - charge * 0.75, profile);
+      ctx.restore();
       drawSceneMetric(W - 154, H * 0.2, "system momentum", "0 kg m/s", profile.secondary);
+      drawSceneMetric(W - 154, H * 0.2 + 66, "stored energy", fmt(charge * 100) + "%", profile.secondary);
     } else {
       drawCart(x1, y, profile.accent, "A", { mass: v.m1, velocity: v.u1, scale: 0.88 });
       drawCart(x2, y, profile.secondary, "B", { mass: v.m2, velocity: v.u2, scale: 0.96 });
@@ -2751,6 +3042,7 @@
       velocity = speedOut;
       state = "rebound";
     }
+    drawVelocityTrail(x, y - 24, velocity, profile.accent, state === "contact" ? 0.25 : 1);
     drawBall(x, y - 24, 22, profile.accent, { compression, label: "m = " + fmt(v.m1) + " kg" });
     drawVelocityIndicator(x, y - 92, velocity, velocity >= 0 ? profile.accent : profile.secondary, state === "approach" ? "u" : "v");
     const impulse = v.m1 * (speedOut - speedIn);
@@ -2763,44 +3055,191 @@
     ];
   }
 
-  function drawMoments(W, H) {
+  function drawMoments(W, H, t) {
     const v = app.values;
+    if (v.mode === "lamina") return drawLaminaMoment(W, H, t);
     const beam = Math.max(1, v.beam);
-    const x0 = W * 0.16;
-    const x1 = W * 0.84;
-    const y = H * 0.55;
+    const x0 = W * 0.15;
+    const x1 = W * 0.85;
+    const y = H * 0.56;
     const sx = (x) => map1(x, 0, beam, x0, x1);
-    ctx.strokeStyle = "rgba(255,255,255,.55)";
-    ctx.lineWidth = 9;
-    line(x0, y, x1, y);
-    const pivot = Math.min(beam, Math.max(0, v.pivot));
+    let pivot = Math.min(beam, Math.max(0, v.pivot));
+    if (v.mode === "seesaw") pivot = beam * 0.5;
+    if (v.mode === "tilt") pivot = v.x1 >= beam * 0.5 ? beam * 0.85 : beam * 0.15;
     const px = sx(pivot);
+    const loads = momentLoads(v, beam);
+    const moments = loads.map((load) => load.force * (load.x - pivot));
+    const resultant = moments.reduce((sum, value) => sum + value, 0);
+    const q = revealProgress(t, 0.46);
+    const turnLimit = v.mode === "tilt" ? 0.24 : 0.15;
+    const rotation = Math.sign(resultant || 1) * turnLimit * clamp(Math.abs(resultant) / 210, 0, 1) * smoothStep(motionProgress(t));
+    const point = (distance) => {
+      const dx = sx(distance) - px;
+      return {
+        x: px + dx * Math.cos(rotation),
+        y: y + dx * Math.sin(rotation)
+      };
+    };
+
+    ctx.save();
+    ctx.setLineDash([7, 7]);
+    line(x0, y, x1, y, "rgba(220,235,248,.2)", 3);
+    ctx.restore();
+    const left = point(0);
+    const right = point(beam);
+    ctx.strokeStyle = "rgba(255,255,255,.62)";
+    ctx.lineWidth = 10;
+    line(left.x, left.y, right.x, right.y);
+    ctx.strokeStyle = currentProfile().accent;
+    ctx.lineWidth = 2;
+    line(left.x, left.y - 4, right.x, right.y - 4);
     drawPivot(px, y + 8);
-    drawLoad(sx(v.x1), y, v.f1, colors.sky, "F1");
-    drawLoad(sx(v.x2), y, v.f2, colors.goldSoft, "F2");
+
+    const supportModes = ["supports", "rod", "nonuniform", "tilt", "twoCase"];
+    if (supportModes.includes(v.mode)) {
+      const supportA = sx(beam * 0.15);
+      const supportB = sx(beam * 0.85);
+      if (v.mode === "tilt") {
+        const activeRight = pivot > beam * 0.5;
+        ctx.save();
+        ctx.globalAlpha = activeRight ? 0.24 : 1;
+        drawSupport(supportA, y + 10, "A");
+        ctx.restore();
+        ctx.save();
+        ctx.globalAlpha = activeRight ? 1 : 0.24;
+        drawSupport(supportB, y + 10, "B");
+        ctx.restore();
+        label(activeRight ? supportA - 30 : supportB - 30, y + 82, "reaction = 0", colors.rose, "700 9px Sora");
+      } else {
+        drawSupport(supportA, y + 10, "A");
+        drawSupport(supportB, y + 10, "B");
+      }
+    }
+
+    loads.forEach((load, index) => {
+      const anchor = point(load.x);
+      const loadQ = clamp(q * loads.length - index * 0.36, 0.08, 1);
+      drawAnimatedLoad(anchor.x, anchor.y, load.force, load.color, load.name, loadQ);
+    });
+
     if (v.mode === "angle") {
-      const fx = sx(v.x1);
-      const a = rad(v.angle);
-      arrow(fx, y - 65, fx + Math.cos(a) * 78, y - 65 + Math.sin(a) * 78, colors.teal, 4);
-      label(fx + 75, y - 36, "angled force", colors.teal);
+      const anchor = point(v.x1);
+      const angle = rad(v.angle);
+      const length = 86 * (0.12 + 0.88 * q);
+      arrow(anchor.x - Math.cos(angle) * length, anchor.y - Math.sin(angle) * length, anchor.x, anchor.y, colors.teal, 4);
+      label(anchor.x - 96, anchor.y - 70, "F sin(theta) turns the beam", colors.teal, "700 10px Sora");
     }
-    if (["supports", "rod", "nonuniform", "tilt", "twoCase"].includes(v.mode)) {
-      drawSupport(sx(beam * 0.15), y + 10, "A");
-      drawSupport(sx(beam * 0.85), y + 10, "B");
+
+    if (Math.abs(resultant) < 1) {
+      ctx.save();
+      ctx.globalAlpha = 0.55 + 0.35 * Math.sin(t * 5);
+      ctx.strokeStyle = colors.green;
+      ctx.lineWidth = 3;
+      circle(px, y - 6, 56 + 4 * Math.sin(t * 4), false, colors.green);
+      ctx.restore();
+      label(px + 64, y - 20, v.mode === "tilt" ? "limiting balance" : "moments balanced", colors.green, "700 10px Sora");
+    } else {
+      const direction = Math.sign(resultant);
+      const sweep = 2.35 * (0.1 + 0.9 * q);
+      ctx.strokeStyle = direction > 0 ? colors.orange : colors.violet;
+      ctx.lineWidth = 5;
+      ctx.beginPath();
+      ctx.arc(px, y - 8, 58, direction > 0 ? -1.55 : 1.55, direction > 0 ? -1.55 + sweep : 1.55 - sweep, direction < 0);
+      ctx.stroke();
+      label(px + (direction > 0 ? 66 : -132), y - 56, direction > 0 ? "clockwise" : "anticlockwise", direction > 0 ? colors.orange : colors.violet, "700 10px Sora");
     }
-    const m1 = v.f1 * (v.x1 - pivot);
-    const m2 = v.f2 * (v.x2 - pivot);
-    const resultant = m1 + m2;
-    ctx.strokeStyle = resultant >= 0 ? colors.orange : colors.violet;
-    ctx.lineWidth = 5;
-    ctx.beginPath();
-    ctx.arc(px, y - 8, 58, resultant >= 0 ? -1.5 : 1.5, resultant >= 0 ? 1.2 : -1.2, resultant < 0);
-    ctx.stroke();
+
+    if (v.mode === "twoCase") {
+      label(W * 0.12, H * 0.22, motionProgress(t) < 0.5 ? "Case A: test the left pivot" : "Case B: test the right pivot", colors.goldSoft, "800 12px Sora");
+    }
     return [
-      ro("F1 moment", fmt(m1) + " Nm"),
-      ro("F2 moment", fmt(m2) + " Nm"),
+      ro("moment 1", fmt(moments[0] || 0) + " Nm"),
+      ro("other moments", fmt(moments.slice(1).reduce((sum, value) => sum + value, 0)) + " Nm"),
       ro("resultant", fmt(resultant) + " Nm"),
-      ro("state", Math.abs(resultant) < 1 ? "balanced" : "turning")
+      ro("pivot", fmt(pivot) + " m"),
+      ro("state", Math.abs(resultant) < 1 ? (v.mode === "tilt" ? "limiting balance" : "balanced") : (v.mode === "tilt" ? "tipping" : "turning"))
+    ];
+  }
+
+  function momentLoads(v, beam) {
+    if (v.mode === "single") return [{ force: v.f1, x: v.x1, color: colors.sky, name: "F" }];
+    if (v.mode === "angle") return [{ force: v.f1 * Math.sin(rad(v.angle)), x: v.x1, color: colors.teal, name: "F perpendicular" }];
+    if (v.mode === "rod") {
+      return [
+        { force: v.f1, x: v.x1, color: colors.sky, name: "load" },
+        { force: v.weight, x: beam * 0.5, color: colors.rose, name: "rod weight" }
+      ];
+    }
+    if (v.mode === "nonuniform") {
+      return [
+        { force: v.f1, x: v.x1, color: colors.sky, name: "load" },
+        { force: v.weight, x: v.x2, color: colors.rose, name: "weight at COM" }
+      ];
+    }
+    if (v.mode === "tilt") {
+      return [
+        { force: v.f1, x: v.x1, color: colors.sky, name: "edge load" },
+        { force: v.weight, x: beam * 0.5, color: colors.rose, name: "rod weight" }
+      ];
+    }
+    if (v.mode === "twoCase") {
+      return [
+        { force: v.f1, x: v.x1, color: colors.sky, name: "left load" },
+        { force: v.f2, x: v.x2, color: colors.goldSoft, name: "right load" },
+        { force: v.weight, x: beam * 0.5, color: colors.rose, name: "rod weight" }
+      ];
+    }
+    return [
+      { force: v.f1, x: v.x1, color: colors.sky, name: "F1" },
+      { force: v.f2, x: v.x2, color: colors.goldSoft, name: "F2" }
+    ];
+  }
+
+  function drawAnimatedLoad(x, y, force, color, name, progress) {
+    const q = clamp(progress, 0, 1);
+    const height = clamp(Math.abs(force) * 1.5, 48, 90) * q;
+    arrow(x, y - height - 8, x, y - 8, color, 4);
+    if (q > 0.12) label(x + 8, y - height - 10, name + " = " + fmt(force) + " N", color, "700 9px Sora");
+  }
+
+  function drawLaminaMoment(W, H, t) {
+    const v = app.values;
+    const q = revealProgress(t, 0.45);
+    const pivot = { x: W * 0.5, y: H * 0.67 };
+    const leftMoment = -v.f1 * 1.8;
+    const rightMoment = v.f2 * 1.8;
+    const weightMoment = v.weight * 0.45;
+    const resultant = leftMoment + rightMoment + weightMoment;
+    const rotation = Math.sign(resultant || 1) * 0.14 * clamp(Math.abs(resultant) / 100, 0, 1) * smoothStep(motionProgress(t));
+    ctx.save();
+    ctx.translate(pivot.x, pivot.y);
+    ctx.rotate(rotation);
+    ctx.setLineDash([7, 7]);
+    ctx.strokeStyle = "rgba(220,235,248,.22)";
+    rounded(-150, -150, 300, 150, 8, false, true);
+    ctx.setLineDash([]);
+    const fill = ctx.createLinearGradient(-150, -150, 150, 0);
+    fill.addColorStop(0, "rgba(56,189,248,.5)");
+    fill.addColorStop(0.58, "rgba(19,61,105,.88)");
+    fill.addColorStop(1, "rgba(240,207,104,.45)");
+    ctx.fillStyle = fill;
+    rounded(-150, -150, 300, 150, 8, true);
+    ctx.strokeStyle = "rgba(255,255,255,.42)";
+    rounded(-150, -150, 300, 150, 8, false, true);
+    ctx.fillStyle = colors.rose;
+    circle(36, -72, 8);
+    label(48, -78, "combined COM", colors.rose, "700 10px Sora");
+    ctx.restore();
+    drawPivot(pivot.x, pivot.y + 8);
+    drawAnimatedLoad(pivot.x - 110, pivot.y - 105, v.f1, colors.sky, "part A", q);
+    drawAnimatedLoad(pivot.x + 105, pivot.y - 95, v.f2, colors.goldSoft, "part B", q);
+    drawMotionTrace(pivot.x, pivot.y - 70, pivot.x + 36, pivot.y - 72, colors.rose, q);
+    return [
+      ro("left moment", fmt(leftMoment) + " Nm"),
+      ro("right moment", fmt(rightMoment) + " Nm"),
+      ro("COM moment", fmt(weightMoment) + " Nm"),
+      ro("resultant", fmt(resultant) + " Nm"),
+      ro("state", Math.abs(resultant) < 1 ? "balanced" : "rotating")
     ];
   }
 
@@ -3420,6 +3859,31 @@
     ctx.stroke();
   }
 
+  function drawPathProgress(map, points, progress, color, width) {
+    if (!points.length) return;
+    const q = clamp(progress, 0, 1);
+    const exact = q * (points.length - 1);
+    const last = Math.floor(exact);
+    const fraction = exact - last;
+    ctx.beginPath();
+    points.forEach((point, index) => {
+      if (index > last) return;
+      const mapped = map(point.x, point.y);
+      if (index) ctx.lineTo(mapped.x, mapped.y);
+      else ctx.moveTo(mapped.x, mapped.y);
+    });
+    if (last < points.length - 1 && fraction > 0) {
+      const a = points[last];
+      const b = points[last + 1];
+      const mapped = map(a.x + (b.x - a.x) * fraction, a.y + (b.y - a.y) * fraction);
+      ctx.lineTo(mapped.x, mapped.y);
+    }
+    ctx.strokeStyle = color;
+    ctx.lineWidth = width;
+    ctx.lineCap = "round";
+    ctx.stroke();
+  }
+
   function drawVectorArrow(map, start, end, color, text) {
     const a = map(start.x, start.y);
     const b = map(end.x, end.y);
@@ -3592,12 +4056,18 @@
     return arr;
   }
 
-  function drawMiniPolygon(W, H, forces) {
+  function drawMiniPolygon(W, H, forces, progress) {
     let p = { x: W * 0.74, y: H * 0.72 };
     label(p.x - 20, p.y - 42, "tip-to-tail", colors.dim);
-    forces.forEach((f) => {
+    forces.forEach((f, index) => {
       const n = { x: p.x + f.x * 5, y: p.y - f.y * 5 };
-      arrow(p.x, p.y, n.x, n.y, f.color, 2.5);
+      const q = clamp(Number(progress == null ? 1 : progress) * forces.length - index, 0, 1);
+      const live = { x: p.x + (n.x - p.x) * q, y: p.y + (n.y - p.y) * q };
+      ctx.save();
+      ctx.setLineDash([4, 5]);
+      line(p.x, p.y, n.x, n.y, "rgba(220,235,248,.17)", 1);
+      ctx.restore();
+      if (q > 0.02) arrow(p.x, p.y, live.x, live.y, f.color, 2.5);
       p = n;
     });
   }
@@ -3772,6 +4242,22 @@
       label(x, y - height - 8, fmt(opts.mass) + " kg", "rgba(235,244,252,.82)", "700 9px Sora");
     }
     ctx.textAlign = "left";
+  }
+
+  function drawVelocityTrail(x, y, velocity, color, intensity) {
+    const value = Number(velocity || 0);
+    if (Math.abs(value) < 0.08) return;
+    const direction = Math.sign(value);
+    const strength = clamp(Number(intensity == null ? 1 : intensity), 0, 1);
+    const length = clamp(Math.abs(value) * 6, 24, 82);
+    ctx.save();
+    ctx.lineCap = "round";
+    for (let i = 1; i <= 4; i += 1) {
+      const offset = i * 8;
+      ctx.globalAlpha = strength * (0.24 - i * 0.035);
+      line(x - direction * offset, y + (i - 2.5) * 5, x - direction * (length + offset), y + (i - 2.5) * 5, color, Math.max(1, 5 - i));
+    }
+    ctx.restore();
   }
 
   function drawVelocityIndicator(x, y, velocity, color, name) {
@@ -4068,12 +4554,28 @@
   }
 
   window.__ELITE_LAB_AUDIT__ = Object.freeze({
-    release: "20260809h",
+    release: "20260809i",
     topicCount: TOPICS.length,
     caseCount: TOPICS.reduce((sum, topic) => sum + topic.cases.length, 0),
     profileCount: CASE_VISUAL_PROFILES.length,
     uniqueProfileCount: new Set(CASE_VISUAL_PROFILES.map((profile) => profile.signature)).size,
     measurementSlots: 2,
+    motionContract: "time-driven-98",
+    caseIds: Object.freeze(TOPICS.flatMap((topic) => topic.cases.map((item) => item.id))),
+    activateCase: function (caseId) {
+      const topicIndex = TOPICS.findIndex((topic) => topic.cases.some((item) => item.id === caseId));
+      if (topicIndex < 0) return false;
+      const caseIndex = TOPICS[topicIndex].cases.findIndex((item) => item.id === caseId);
+      selectTopic(topicIndex);
+      selectCase(caseIndex);
+      return true;
+    },
+    seek: function (time) {
+      app.t = clamp(Number(time || 0), 0, duration());
+      setPlaying(false);
+      render();
+      return app.t;
+    },
     activeState: function () {
       const phase = simulationPhase(app.t);
       return {

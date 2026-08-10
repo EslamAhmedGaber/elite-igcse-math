@@ -52,9 +52,9 @@ assert(
 
 assert((html.match(/data-speed="/g) || []).length === 6, "The six playback speed controls are required");
 assert((html.match(/data-inspector-tab="/g) || []).length === 3, "Overview, Variables, and Method tabs are required");
-assert(html.includes("mechanics-lab.css?v=20260809h"), "Lab CSS release version is stale");
+assert(html.includes("mechanics-lab.css?v=20260809i"), "Lab CSS release version is stale");
 assert(html.includes("family=Sora"), "Lab typography is not aligned with the Elite brand system");
-assert(html.includes("mechanics-lab.js?v=20260809h"), "Lab JavaScript release version is stale");
+assert(html.includes("mechanics-lab.js?v=20260809i"), "Lab JavaScript release version is stale");
 
 [
   "function drawAnalysis(",
@@ -67,6 +67,12 @@ assert(html.includes("mechanics-lab.js?v=20260809h"), "Lab JavaScript release ve
   "function collisionTimeline(",
   "function collisionMetrics(",
   "function drawImpactPulse(",
+  "function drawMotionTelemetry(",
+  "function drawMotionTrace(",
+  "function drawAnimatedVectorArrow(",
+  "function drawPathProgress(",
+  "function drawAnimatedLoad(",
+  "function drawLaminaMoment(",
   "function drawBall(",
   "function drawMetricAnalysis(",
   "function captureLabImage(",
@@ -86,9 +92,16 @@ assert(css.includes("@media (max-width: 720px)"), "Mobile laboratory layout is m
 assert(css.includes(".stage-panel:fullscreen"), "Fullscreen laboratory layout is missing");
 assert(js.includes("const CASE_VISUAL_PROFILES = Object.freeze(buildCaseVisualProfiles())"), "The 98-case visual profile registry is missing");
 assert(js.includes("uniqueProfileCount"), "Runtime case-profile audit is missing");
-assert(js.includes('release: "20260809h"'), "Runtime lab audit release is stale");
+assert(js.includes('release: "20260809i"'), "Runtime lab audit release is stale");
 assert(js.includes("measurementSlots: 2"), "Runtime measurement audit is missing");
 assert(js.includes("dataset.labUniqueProfiles"), "DOM-visible runtime profile audit is missing");
+assert(js.includes("readouts = drawModelling(W, H, t)"), "Modelling cases are not connected to playback time");
+assert(js.includes("readouts = drawUnits(W, H, t)"), "Units cases are not connected to playback time");
+assert(js.includes("readouts = drawForces(W, H, t)"), "Force cases are not connected to playback time");
+assert(js.includes("readouts = drawMoments(W, H, t)"), "Moment cases are not connected to playback time");
+assert(js.includes("return drawLift(W, H, t)"), "Lift motion is not connected to playback time");
+assert(js.includes("return drawVectorFma(W, H, t)"), "Vector F=ma motion is not connected to playback time");
+assert(css.includes(".pane-state.is-running::before"), "Visible running-state pulse is missing");
 
 console.log("Mechanics lab checks passed");
 console.log(`- ${topicIds.length} topics`);

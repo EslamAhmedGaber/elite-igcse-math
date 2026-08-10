@@ -600,8 +600,31 @@ select {
 }
 
 .pane-state {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   color: var(--teal);
   font-size: 9px;
+}
+
+.pane-state::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.1);
+}
+
+.pane-state.is-running::before {
+  animation: lab-status-pulse 0.9s ease-in-out infinite;
+}
+
+@keyframes lab-status-pulse {
+  50% {
+    opacity: 0.42;
+    box-shadow: 0 0 0 6px rgba(45, 212, 191, 0.04);
+  }
 }
 
 .graph-state {
