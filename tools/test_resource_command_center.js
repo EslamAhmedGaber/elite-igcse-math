@@ -20,6 +20,8 @@ const resourceCss = read("resource-hub.css");
 const systemCss = read("elite-system.css");
 const exam = read("exam.js");
 const printUtils = read("print-utils.js");
+const lead = read("lead.js");
+const home = read("index.html");
 
 [
   "commandSearchBox",
@@ -40,6 +42,10 @@ assert(app.includes('difficulty === "easy" && question.marks >= 3'), "Easy must 
 assert(app.includes('difficulty === "medium" && (question.marks < 3 || question.marks > 4)'), "Medium must mean 3 to 4 marks");
 assert(app.includes('difficulty === "hard" && question.marks <= 4'), "Hard must mean more than 4 marks");
 assert(app.includes("function updateSelectionDock("), "Selected-question dock logic is missing");
+assert(app.includes("Q${question.question} question ${question.question}"), "Search must index exact question references");
+assert(app.includes("searchTerms.every"), "Search must support terms in any order");
+assert(app.includes("if (/^q\\d+$/.test(term)) return term === questionRef"), "Q2 must not match Q20-Q29");
+assert(app.includes("/^p[12]hr?$/.test(term)"), "P1H must not match P1HR");
 
 assert(downloads.includes("data-book-finder"), "Book Finder mount is missing");
 assert(pastPapers.includes("data-paper-finder"), "Paper Finder mount is missing");
@@ -87,8 +93,17 @@ const systemPages = [
   "ial/wme01/index.html"
 ];
 systemPages.forEach((relativePath) => {
-  assert(read(relativePath).includes("elite-system.css?v=20260809c"), `${relativePath} is not linked to Elite System`);
+  assert(read(relativePath).includes("elite-system.css?v=20260810a"), `${relativePath} is not linked to Elite System`);
 });
+
+assert(lead.includes("COMPACT_WORKSPACE_PAGES"), "Task pages must opt into the compact study workspace");
+assert(lead.includes("secondaryToolsSummary"), "Secondary study tools need a descriptive summary");
+assert(lead.includes("pathway-course-switch"), "Every task workspace needs a course switch command");
+assert(home.includes('id="courseLauncher"'), "Homepage course launcher anchor is missing");
+assert(practice.includes('href="index.html#courseLauncher"'), "Practice pathway switch points to a stale anchor");
+assert(systemCss.includes("body.is-task-workspace"), "Compact workspace styles are missing");
+assert(systemCss.includes('body:not([data-page="progress"]) .cloud-floating-widget'), "Global sync prompt is not compacted");
+assert(resourceCss.includes('.practice-command-controls label:not(.command-search)'), "Mobile Classified filters are not condensed");
 
 assert(printUtils.includes("@page elite-practice-page"), "Practice A4 page rule is missing");
 assert(printUtils.includes("@page elite-exam-page"), "Exam A4 page rule is missing");

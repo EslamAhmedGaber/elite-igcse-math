@@ -600,6 +600,7 @@ function setTopicChip(topic) {
 function applyFilters() {
   const pool = getScopedQuestions();
   const search = els.searchBox.value.trim().toLowerCase();
+  const searchTerms = search.split(/\s+/).filter(Boolean);
   const unit = els.unitFilter.value;
   const topic = els.topicFilter.value;
   const paper = els.paperFilter.value;
@@ -628,9 +629,15 @@ function applyFilters() {
     if (difficulty === "medium" && (question.marks < 3 || question.marks > 4)) return false;
     if (difficulty === "hard" && question.marks <= 4) return false;
     if (difficulty === "q20" && question.question < 20) return false;
-    if (search) {
-      const text = `${question.paper} ${question.topic} ${question.unit} ${question.question_text}`.toLowerCase();
-      if (!text.includes(search)) return false;
+    if (searchTerms.length) {
+      const text = `${question.paper} Q${question.question} question ${question.question} ${question.topic} ${question.unit} ${question.question_text}`.toLowerCase();
+      const questionRef = `q${question.question}`.toLowerCase();
+      const paperTokens = String(question.paper || "").toLowerCase().split(/\s+/);
+      if (!searchTerms.every((term) => {
+        if (/^q\d+$/.test(term)) return term === questionRef;
+        if (/^p[12]hr?$/.test(term)) return paperTokens.includes(term);
+        return text.includes(term);
+      })) return false;
     }
     return true;
   });

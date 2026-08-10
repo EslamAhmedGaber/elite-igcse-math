@@ -43,7 +43,7 @@ assert(js.includes("vertical: { f1: 12, f2: 12"), "Vertical equilibrium does not
 assert(js.includes("horizontal: { f1: 12, f2: 12"), "Horizontal equilibrium does not start balanced");
 assert(js.includes("multi: { f1: 12, f2: 12, f3: 12"), "2D equilibrium does not start with a closed force polygon");
 assert(css.includes("@keyframes lab-status-pulse"), "The visible running indicator animation is missing");
-assert(sw.includes('elite-igcse-kill-v160'), "Service-worker cache version was not advanced");
+assert(sw.includes('elite-igcse-kill-v161'), "Service-worker cache version was not advanced");
 
 console.log("Mechanics lab motion contract passed");
 console.log("- all render families consume playback time");

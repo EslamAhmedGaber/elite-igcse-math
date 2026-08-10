@@ -185,6 +185,16 @@
   }
 
   const CORE_TOOL_ORDER = ["classified", "books", "past-solutions", "notes", "build-test"];
+  const COMPACT_WORKSPACE_PAGES = new Set([
+    "practice",
+    "downloads",
+    "pastpapers",
+    "notes",
+    "exam",
+    "progress",
+    "checkup",
+    "topics",
+  ]);
   const CORE_TOOL_COPY = {
     classified: {
       title: "Classified Practice",
@@ -252,6 +262,19 @@
       return !primaryKeys.has(key) && key !== "answers";
     });
     return { primary, secondary };
+  }
+
+  function secondaryToolsSummary(links) {
+    const items = Array.isArray(links) ? links : [];
+    const compactNames = {
+      "revision book": "Revision",
+      "smart revision": "Revision",
+      "mistake box": "Mistakes",
+      "saved tests": "Saved",
+    };
+    const labels = items.slice(0, 3).map((link) => compactNames[String(link.title || "").toLowerCase()] || link.title);
+    const remaining = Math.max(0, items.length - labels.length);
+    return { label: labels.join(" · "), remaining };
   }
 
   function navLink(item, className = "") {
@@ -908,6 +931,7 @@
     const toolData = activeToolLinks(groupId);
     if (!toolData) return;
     document.body?.classList.add("has-pathway-hub");
+    document.body?.classList.toggle("is-task-workspace", COMPACT_WORKSPACE_PAGES.has(document.body?.dataset?.page || ""));
     document.body?.classList.toggle("pathway-unit-chooser", toolData.kind === "unit-choice");
     const visibleHeading = [...document.querySelectorAll("h1")].some((heading) => {
       const style = window.getComputedStyle(heading);
@@ -938,8 +962,9 @@
       return;
     }
     const tools = workspaceTools(toolData.links, { groupId: toolData.groupId || groupId, unit: toolData.unit });
+    const secondarySummary = secondaryToolsSummary(tools.secondary);
     const moreTools = tools.secondary.length
-      ? `<details class="pathway-more-tools"><summary>More tools <span>${tools.secondary.length}</span></summary><div class="pathway-more-grid">${tools.secondary.map(renderCompactToolLink).join("")}</div></details>`
+      ? `<details class="pathway-more-tools"><summary><span class="pathway-more-summary-label">${escapeHtml(secondarySummary.label)}</span>${secondarySummary.remaining ? `<span class="pathway-more-summary-count">+${secondarySummary.remaining}</span>` : ""}</summary><div class="pathway-more-grid">${tools.secondary.map(renderCompactToolLink).join("")}</div></details>`
       : "";
     anchor.insertAdjacentHTML("afterend", `
       <nav class="pathway-tool-strip is-core-workspace" aria-label="${toolData.title} study workspace">
@@ -947,6 +972,7 @@
           <span>Active course</span>
           ${titleMarkup}
           <small>${toolData.detail}</small>
+          <a class="pathway-course-switch" href="/index.html#courseLauncher">Switch course</a>
           ${toolData.intro ? `<p>${toolData.intro}</p>` : ""}
         </div>
         <div class="pathway-core-tools">

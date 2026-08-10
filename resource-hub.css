@@ -854,3 +854,201 @@
     display: none !important;
   }
 }
+
+/* 2026-08-10: mobile Classified keeps the question closer to the first view. */
+@media screen and (min-width: 861px) {
+  body[data-page="practice"] .practice-toolbar {
+    gap: 12px;
+    margin: 12px auto;
+  }
+
+  body[data-page="practice"] .quick-stats {
+    min-height: 98px;
+    border-radius: 8px;
+  }
+
+  body[data-page="practice"] .quick-stats div {
+    padding: 9px 14px;
+  }
+
+  body[data-page="practice"] .quick-stats div::before {
+    top: 9px;
+    left: 14px;
+  }
+
+  body[data-page="practice"] .quick-stats strong {
+    margin-top: 5px;
+    font-size: clamp(21px, 1.65vw, 25px);
+  }
+
+  body[data-page="practice"] .practice-bank-bar {
+    min-height: 98px;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  body[data-page="practice"] .practice-bank-bar h2 {
+    font-size: clamp(19px, 1.45vw, 22px);
+  }
+
+  body[data-page="practice"] .practice-bank-bar p {
+    font-size: 11px;
+  }
+
+  body[data-page="practice"] .practice-bank-bar .bank-buttons button {
+    min-height: 56px;
+    padding: 10px 12px;
+    border-radius: 10px;
+  }
+
+  body[data-page="practice"] .content-head {
+    min-height: 88px;
+    align-items: center;
+    padding: 12px 16px;
+    border-radius: 8px;
+  }
+
+  body[data-page="practice"] .head-tools {
+    flex-wrap: nowrap;
+  }
+
+  body[data-page="practice"] .practice-command-center {
+    gap: 8px 12px;
+    padding: 10px 12px;
+  }
+
+  body[data-page="practice"] .practice-command-controls input,
+  body[data-page="practice"] .practice-command-controls select,
+  body[data-page="practice"] .command-more-button {
+    min-height: 38px;
+  }
+
+  body[data-page="practice"] .practice-command-status {
+    padding-top: 6px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  body[data-page="practice"] .practice-toolbar {
+    margin-top: 6px;
+  }
+
+  body[data-page="practice"] .quick-stats.practice-status-strip {
+    min-height: 0;
+    padding: 4px;
+  }
+
+  body[data-page="practice"] .quick-stats.practice-status-strip > div {
+    padding: 2px 3px;
+  }
+
+  body[data-page="practice"] .quick-stats.practice-status-strip strong {
+    margin-top: 0;
+    font-size: 16px;
+  }
+
+  body[data-page="practice"] .quick-stats.practice-status-strip div::before {
+    display: none;
+  }
+
+  body[data-page="practice"] .practice-bank-bar > div:first-child {
+    display: none;
+  }
+
+  body[data-page="practice"] .practice-bank-bar {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 8px;
+  }
+
+  body[data-page="practice"] .practice-bank-bar .bank-buttons button {
+    min-height: 46px;
+  }
+
+  body[data-page="practice"] .content-head {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding: 9px 10px;
+  }
+
+  body[data-page="practice"] .content-head > div:first-child {
+    min-width: 0;
+  }
+
+  body[data-page="practice"] .head-tools {
+    display: block;
+  }
+
+  body[data-page="practice"] .head-tools .sort-label,
+  body[data-page="practice"] .head-tools .layout-toggle {
+    display: none;
+  }
+
+  body[data-page="practice"] .mobile-tools-toggle {
+    min-height: 36px;
+    padding: 0 13px;
+  }
+
+  body[data-page="practice"] .practice-command-center {
+    gap: 7px;
+    padding: 9px;
+  }
+
+  body[data-page="practice"] .practice-command-heading {
+    display: none;
+  }
+
+  body[data-page="practice"] .practice-command-controls {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 7px;
+  }
+
+  body[data-page="practice"] .practice-command-controls label:not(.command-search) {
+    display: none;
+  }
+
+  body[data-page="practice"] .practice-command-controls .command-search,
+  body[data-page="practice"] .command-more-button {
+    grid-column: auto;
+  }
+
+  body[data-page="practice"] .command-more-button {
+    min-width: 86px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  body[data-page="practice"] .practice-command-status {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 7px;
+    padding-top: 7px;
+  }
+
+  body[data-page="practice"] .practice-command-status > div:first-child {
+    grid-column: auto;
+  }
+
+  body[data-page="practice"] .practice-command-status > div:first-child strong {
+    font-size: 17px;
+  }
+
+  body[data-page="practice"] .practice-command-status > div:first-child span,
+  body[data-page="practice"] .command-filter-empty {
+    display: none;
+  }
+
+  body[data-page="practice"] .command-reset-button {
+    width: auto;
+    min-height: 30px;
+    padding: 5px 8px;
+    font-size: 10px;
+  }
+
+  body[data-page="practice"] .practice-command-status:not(:has(.command-filter-chips button)) .command-reset-button {
+    display: none;
+  }
+
+  body[data-page="practice"] .topic-strip {
+    padding-bottom: 5px;
+  }
+}
