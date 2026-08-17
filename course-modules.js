@@ -1705,9 +1705,9 @@
           "className": "pure-book",
           "tag": "IAL Pure 1",
           "title": "WMA11 Classified Books",
-          "description": "Standalone Edexcel IAL Pure 1 bank from 2019 October to 2026 January with topic practice and worked-solution books.",
+          "description": "Standalone Edexcel IAL Pure 1 bank from October 2019 through May/June 2026 with topic practice and worked-solution books.",
           "meta": [
-              "179 questions",
+              "189 questions",
               "13 Pure 1 topics",
               "Questions + worked answers"
           ],
@@ -1719,25 +1719,25 @@
               },
               {
                   "label": "Questions PDF",
-                  "href": "downloads/IAL/WMA11/WMA11_Classified_Questions.pdf?v=wma11-polish2-20260527",
+                  "href": "downloads/IAL/WMA11/WMA11_Classified_Questions.pdf?v=wma11-mayjune2026",
                   "variant": "primary",
                   "target": "_blank"
               },
               {
                   "label": "Answers PDF",
-                  "href": "downloads/IAL/WMA11/WMA11_Classified_With_Answers.pdf?v=wma11-polish2-20260527",
+                  "href": "downloads/IAL/WMA11/WMA11_Classified_With_Answers.pdf?v=wma11-mayjune2026",
                   "variant": "solution",
                   "target": "_blank"
               },
               {
                   "label": "Expertise PDF",
-                  "href": "downloads/IAL/WMA11/WMA11_Expertise_Questions.pdf?v=wma11-polish2-20260527",
+                  "href": "downloads/IAL/WMA11/WMA11_Expertise_Questions.pdf?v=wma11-mayjune2026",
                   "variant": "gold",
                   "target": "_blank"
               },
               {
                   "label": "Expertise + Answers",
-                  "href": "downloads/IAL/WMA11/WMA11_Expertise_With_Answers.pdf?v=wma11-polish2-20260527",
+                  "href": "downloads/IAL/WMA11/WMA11_Expertise_With_Answers.pdf?v=wma11-mayjune2026",
                   "variant": "solution",
                   "target": "_blank"
               },
@@ -1997,7 +1997,7 @@
         heading: "WMA11 papers",
         eyebrow: "IAL Pure 1 | Edexcel WMA11",
         intro: "Newest first. Question paper and matching worked solution stay beside each other.",
-        explainer: "Standalone IAL WMA11 papers from October 2019 to January 2026. Each row puts the original question paper directly beside the worked solution.",
+        explainer: "Standalone WMA11 paper files run through January 2026; the classified bank already includes May/June 2026. Each available paper stays beside its worked solution.",
       },
       pastPapers: pureWma11PastPapers,
       books: pureWma11Books,

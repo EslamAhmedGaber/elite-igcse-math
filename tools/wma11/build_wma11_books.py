@@ -399,13 +399,13 @@ def main() -> None:
     PAPER_OUT.mkdir(parents=True, exist_ok=True)
     write_css()
     items = load_items()
-    if len(items) != 179:
-        raise SystemExit(f"Expected 179 solved items, found {len(items)}")
+    if len(items) != 189:
+        raise SystemExit(f"Expected 189 solved items, found {len(items)}")
     expertise = [item for item in items if int(item["q_no"]) >= 6]
     classified_placements = topic_placements(items)
     expertise_placements = topic_placements(expertise)
     outputs = [
-        build_html("WMA11_Classified_Questions.html", "WMA11 Pure 1 Classified Questions", "179 unique questions grouped by primary topic, with cross-topic placements where a question also belongs in another chapter.", classified_placements, False),
+        build_html("WMA11_Classified_Questions.html", "WMA11 Pure 1 Classified Questions", "189 unique questions grouped by primary topic, with cross-topic placements where a question also belongs in another chapter.", classified_placements, False),
         build_html("WMA11_Expertise_Questions.html", "WMA11 Pure 1 Expertise Questions", "Questions 6 and above, including cross-topic placements where useful.", expertise_placements, False),
         build_html("WMA11_Classified_With_Answers.html", "WMA11 Pure 1 Classified With Answers", "Each placement has the question followed by a worked-solution page with bordered steps.", classified_placements, True),
         build_html("WMA11_Expertise_With_Answers.html", "WMA11 Pure 1 Expertise With Answers", "Questions 6 and above with worked-solution pages and cross-topic placements.", expertise_placements, True),

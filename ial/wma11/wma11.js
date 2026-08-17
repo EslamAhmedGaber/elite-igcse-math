@@ -229,6 +229,15 @@
         els.topic.value = value;
       }
     }
+    [
+      [els.year, params.get("year")],
+      [els.session, params.get("session")]
+    ].forEach(([select, value]) => {
+      if (!select || !value) return;
+      if ([...select.options].some((option) => option.value === value)) {
+        select.value = value;
+      }
+    });
   }
 
   function currentFilters() {
@@ -513,12 +522,18 @@
           paper: item.paper,
           questions: 0,
           marks: 0,
+          paperFilesAvailable: item.paperFilesAvailable !== false,
+          paperAvailabilityNote: item.paperAvailabilityNote || "",
           first: item
         });
       }
       const group = groups.get(key);
       group.questions += 1;
       group.marks += Number(item.marks || 0);
+      group.paperFilesAvailable = group.paperFilesAvailable && item.paperFilesAvailable !== false;
+      if (!group.paperAvailabilityNote && item.paperAvailabilityNote) {
+        group.paperAvailabilityNote = item.paperAvailabilityNote;
+      }
     });
     return [...groups.values()].sort((a, b) => (
       b.year - a.year || sessionOrder(b.session) - sessionOrder(a.session)
@@ -529,6 +544,16 @@
     if (!els.paperList) return;
     els.paperList.innerHTML = paperRows().map((row) => {
       const slug = paperSlug(row.first);
+      const practiceHref = `ial/wma11/index.html?year=${encodeURIComponent(row.year)}&session=${encodeURIComponent(row.session)}#ialFilters`;
+      const actions = row.paperFilesAvailable
+        ? `
+            <a class="button primary" href="downloads/IAL/WMA11/Papers/${slug}_QP.pdf" target="_blank" rel="noreferrer">Question Paper</a>
+            <a class="button solution" href="downloads/IAL/WMA11/Papers/${slug}_Solutions.pdf" target="_blank" rel="noreferrer">Worked Solution</a>
+          `
+        : `
+            <a class="button primary" href="${practiceHref}">Practice this session</a>
+            <small class="ial-paper-pending">${escapeHtml(row.paperAvailabilityNote || "Paper files are not published yet; classified practice is live.")}</small>
+          `;
       return `
         <article class="ial-paper-row">
           <div>
@@ -537,8 +562,7 @@
             <small>${row.questions} questions | ${row.marks} marks</small>
           </div>
           <div class="ial-paper-actions">
-            <a class="button primary" href="downloads/IAL/WMA11/Papers/${slug}_QP.pdf" target="_blank" rel="noreferrer">Question Paper</a>
-            <a class="button solution" href="downloads/IAL/WMA11/Papers/${slug}_Solutions.pdf" target="_blank" rel="noreferrer">Worked Solution</a>
+            ${actions}
           </div>
         </article>
       `;
