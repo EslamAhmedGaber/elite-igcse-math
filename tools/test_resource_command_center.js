@@ -93,13 +93,18 @@ const systemPages = [
   "ial/wme01/index.html"
 ];
 systemPages.forEach((relativePath) => {
-  assert(read(relativePath).includes("elite-system.css?v=20260810a"), `${relativePath} is not linked to Elite System`);
+  assert(read(relativePath).includes("elite-system.css?v=20260817a"), `${relativePath} is not linked to Elite System`);
 });
 
 assert(lead.includes("COMPACT_WORKSPACE_PAGES"), "Task pages must opt into the compact study workspace");
 assert(lead.includes("secondaryToolsSummary"), "Secondary study tools need a descriptive summary");
 assert(lead.includes("pathway-course-switch"), "Every task workspace needs a course switch command");
 assert(home.includes('id="courseLauncher"'), "Homepage course launcher anchor is missing");
+assert(home.includes('data-home-study-trail'), "Homepage local study trail mount is missing");
+assert(lead.includes('eliteStudyTrailV1'), "Shared local study trail storage key is missing");
+assert(lead.includes("function initStudyTrail()"), "Shared local study trail controller is missing");
+assert(lead.includes("studyTrailCourseMeta"), "Study trail course context mapping is missing");
+assert(systemCss.includes(".home-study-trail"), "Shared local study trail styles are missing");
 assert(practice.includes('href="index.html#courseLauncher"'), "Practice pathway switch points to a stale anchor");
 assert(systemCss.includes("body.is-task-workspace"), "Compact workspace styles are missing");
 assert(systemCss.includes('body:not([data-page="progress"]) .cloud-floating-widget'), "Global sync prompt is not compacted");

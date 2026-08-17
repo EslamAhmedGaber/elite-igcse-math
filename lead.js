@@ -1,6 +1,8 @@
 (function () {
   const LEAD_PHONE = "201120009622";
   const LEAD_KEY = "leadInfoV1";
+  const STUDY_TRAIL_KEY = "eliteStudyTrailV1";
+  const STUDY_TRAIL_LIMIT = 6;
 
   const DIALOG_HTML = `
     <dialog id="leadDialog" class="lead-dialog" aria-labelledby="leadDialogTitle">
@@ -642,6 +644,204 @@
     "unit-choice": "Choose Unit",
   };
 
+  const STUDY_TRAIL_LABEL_KEYS = {
+    "Strategy Notes": "notes",
+    "Classified View": "classified",
+    "Expertise View": "expertise",
+    "Build Test": "build-test",
+    "Smart Revision": "smart-revision",
+    Progress: "progress",
+    "Past Papers": "past-solutions",
+    Books: "books",
+    "Interactive Lab": "interactive-lab",
+    "Question Visualizer": "question-visualizer",
+    "Mistake Box": "mistake-box",
+    "Saved Tests": "saved-tests",
+  };
+
+  function readStudyTrail() {
+    try {
+      const saved = JSON.parse(localStorage.getItem(STUDY_TRAIL_KEY) || "[]");
+      if (!Array.isArray(saved)) return [];
+      return saved
+        .filter((item) => item && typeof item.href === "string" && typeof item.title === "string")
+        .slice(0, STUDY_TRAIL_LIMIT);
+    } catch (err) {
+      return [];
+    }
+  }
+
+  function studyTrailCourseMeta(rawHref, fallback = {}) {
+    let url;
+    try {
+      url = new URL(rawHref, document.baseURI);
+    } catch (err) {
+      return { id: "linear", label: "Linear", code: "4MA1", unit: "" };
+    }
+    const params = url.searchParams;
+    const path = url.pathname.toLowerCase();
+    const requestedCourse = (params.get("course") || fallback.course || "").toLowerCase();
+    if (requestedCourse === "wma12" || path.includes("/ial/wma12/")) {
+      return { id: "pure2", label: "Pure 2", code: "WMA12", unit: "" };
+    }
+    if (requestedCourse === "wme01" || path.includes("/ial/wme01/")) {
+      return { id: "mechanics1", label: "Mechanics 1", code: "WME01", unit: "" };
+    }
+    if (requestedCourse === "wma11" || path.includes("/ial/wma11/")) {
+      return { id: "pure", label: "Pure 1", code: "WMA11", unit: "" };
+    }
+    const pathway = (params.get("pathway") || fallback.pathway || "linear").toLowerCase();
+    if (pathway === "modular") {
+      const unit = params.get("unit") || fallback.unit || "";
+      const isUnit2 = /2/.test(unit);
+      return {
+        id: isUnit2 ? "modular-unit-2" : "modular-unit-1",
+        label: `Modular ${isUnit2 ? "Unit 2" : "Unit 1"}`,
+        code: isUnit2 ? "4WM2H" : "4WM1H",
+        unit: isUnit2 ? "Unit 2" : "Unit 1",
+      };
+    }
+    return { id: "linear", label: "Linear", code: "4MA1", unit: "" };
+  }
+
+  function localStudyHref(rawHref) {
+    try {
+      const url = new URL(rawHref, document.baseURI);
+      if (url.origin !== window.location.origin) return "";
+      return `${url.pathname}${url.search}${url.hash}`;
+    } catch (err) {
+      return "";
+    }
+  }
+
+  function studyTrailModuleKeyFromLabel(label) {
+    return STUDY_TRAIL_LABEL_KEYS[label] || "";
+  }
+
+  function studyTrailCourseId(record) {
+    if (record?.courseId) return record.courseId;
+    return ({
+      Linear: "linear",
+      "Modular Unit 1": "modular-unit-1",
+      "Modular Unit 2": "modular-unit-2",
+      "Pure 1": "pure",
+      "Pure 2": "pure2",
+      "Mechanics 1": "mechanics1",
+    })[record?.course] || "";
+  }
+
+  function studyTrailLinkRecord(link) {
+    if (!link) return null;
+    const href = localStudyHref(link.getAttribute("href") || "");
+    if (!href || href === window.location.pathname + window.location.search + window.location.hash) return null;
+    const module = link.dataset.module || deriveModuleKeyFromTile(link);
+    if (!module || module === "general" || module === "unit-choice") return null;
+    const titleNode = link.querySelector("strong, .home-core-action-copy");
+    const title = (titleNode?.textContent || link.textContent || "Study").replace(/\s+/g, " ").trim();
+    const detailNode = link.querySelector(".module-text > span, .home-core-action-copy > span");
+    const detail = (detailNode?.textContent || "").replace(/\s+/g, " ").trim();
+    const meta = studyTrailCourseMeta(href, resolvePathwayContext());
+    return {
+      href,
+      module,
+      title,
+      detail,
+      course: meta.label,
+      courseId: meta.id,
+      code: meta.code,
+      unit: meta.unit,
+      timestamp: Date.now(),
+    };
+  }
+
+  function currentStudyTrailRecord() {
+    if (document.body?.dataset?.page === "home") return null;
+    const label = currentModuleLabel();
+    const module = studyTrailModuleKeyFromLabel(label);
+    if (!module) return null;
+    const href = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+    const meta = studyTrailCourseMeta(window.location.href, resolvePathwayContext());
+    return {
+      href,
+      module,
+      title: MODULE_BREADCRUMB_LABELS[module] || label,
+      detail: "Last opened study area",
+      course: meta.label,
+      courseId: meta.id,
+      code: meta.code,
+      unit: meta.unit,
+      timestamp: Date.now(),
+    };
+  }
+
+  function writeStudyTrail(record) {
+    if (!record) return;
+    const signature = `${record.href}|${record.module}`;
+    const next = [record, ...readStudyTrail().filter((item) => `${item.href}|${item.module}` !== signature)]
+      .slice(0, STUDY_TRAIL_LIMIT);
+    try {
+      localStorage.setItem(STUDY_TRAIL_KEY, JSON.stringify(next));
+    } catch (err) {
+      return;
+    }
+    window.dispatchEvent(new CustomEvent("elite:study-trail-updated", { detail: record }));
+  }
+
+  function formatStudyTrailTime(timestamp) {
+    const date = new Date(Number(timestamp));
+    if (!Number.isFinite(date.getTime())) return "Saved on this device";
+    const days = Math.floor((Date.now() - date.getTime()) / 86400000);
+    if (days <= 0) return "Opened today · saved on this device";
+    if (days === 1) return "Opened yesterday · saved on this device";
+    return `Opened ${date.toLocaleDateString(undefined, { day: "numeric", month: "short" })} · saved on this device`;
+  }
+
+  function renderHomeStudyTrail() {
+    const shell = document.querySelector("[data-home-study-trail]");
+    if (!shell) return;
+    const record = readStudyTrail()[0];
+    if (!record) {
+      shell.hidden = true;
+      return;
+    }
+    shell.hidden = false;
+    const icon = shell.querySelector("[data-home-trail-icon]");
+    const title = shell.querySelector("[data-home-trail-title]");
+    const meta = shell.querySelector("[data-home-trail-meta]");
+    const link = shell.querySelector("[data-home-trail-link]");
+    if (icon) icon.innerHTML = getModuleIcon(record.module);
+    if (title) title.textContent = record.title;
+    if (meta) meta.textContent = `${record.course} · ${record.code}${record.unit ? ` · ${record.unit}` : ""} · ${formatStudyTrailTime(record.timestamp)}`;
+    if (link) {
+      link.href = record.href;
+      link.dataset.module = record.module;
+      link.setAttribute("aria-label", `Continue ${record.title} in ${record.course}`);
+    }
+    shell.dataset.course = studyTrailCourseId(record);
+  }
+
+  function initStudyTrail() {
+    if (document.documentElement.dataset.studyTrailReady === "true") return;
+    document.documentElement.dataset.studyTrailReady = "true";
+    document.addEventListener("click", (event) => {
+      const link = event.target.closest("a[data-module]");
+      if (!link || link.dataset.studyTrailIgnore === "true") return;
+      writeStudyTrail(studyTrailLinkRecord(link));
+    }, true);
+    const current = currentStudyTrailRecord();
+    if (current) writeStudyTrail(current);
+    const shell = document.querySelector("[data-home-study-trail]");
+    const clear = shell?.querySelector("[data-home-trail-clear]");
+    if (clear) {
+      clear.addEventListener("click", () => {
+        try { localStorage.removeItem(STUDY_TRAIL_KEY); } catch (err) { /* best effort */ }
+        renderHomeStudyTrail();
+      });
+    }
+    window.addEventListener("elite:study-trail-updated", renderHomeStudyTrail);
+    renderHomeStudyTrail();
+  }
+
   function currentModuleLabel() {
     const page = document.body?.dataset?.page || "";
     const params = new URLSearchParams(window.location.search);
@@ -1134,7 +1334,11 @@
     } catch (err) {
       saved = "";
     }
-    render(tabs.some((tab) => tab.dataset.homeCourse === saved) ? saved : "linear");
+    const trailCourse = studyTrailCourseId(readStudyTrail()[0]);
+    const preferred = tabs.some((tab) => tab.dataset.homeCourse === trailCourse)
+      ? trailCourse
+      : saved;
+    render(tabs.some((tab) => tab.dataset.homeCourse === preferred) ? preferred : "linear");
   }
 
   function initCoreMobileNav() {
@@ -1434,6 +1638,7 @@
     renderEliteBreadcrumb();
     renderIalSubjectHub();
     initHomeCoreWorkspace();
+    initStudyTrail();
     initPathwayToolStrip();
     syncCoreMobileNav();
     ensureIconsOnTiles();

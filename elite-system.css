@@ -23,6 +23,165 @@
   --elite-focus-ring: 0 0 0 3px rgba(47, 115, 255, 0.28);
 }
 
+/* Local study trail: one quiet resume point shared by every course route. */
+@media screen {
+  .home-study-trail {
+    --trail-accent: var(--elite-royal-600, #1f5eff);
+    position: relative;
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr) auto 32px;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+    padding: 11px 12px;
+    border: 1px solid var(--elite-border, #d8e3ef);
+    border-left: 4px solid var(--trail-accent);
+    border-radius: var(--elite-radius, 8px);
+    background: linear-gradient(90deg, var(--elite-sky-50, #f4f9ff), #fff 70%);
+    box-shadow: var(--elite-shadow-sm, 0 4px 14px rgba(6, 22, 44, 0.06));
+  }
+
+  .home-study-trail[hidden] {
+    display: none;
+  }
+
+  .home-study-trail-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 7px;
+    color: var(--trail-accent);
+    background: #fff;
+    box-shadow: inset 0 0 0 1px var(--elite-border, #d8e3ef);
+  }
+
+  .home-study-trail-icon .module-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .home-study-trail-copy {
+    min-width: 0;
+    display: grid;
+    gap: 2px;
+  }
+
+  .home-study-trail-copy .eyebrow {
+    color: var(--trail-accent);
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .home-study-trail-copy strong,
+  .home-study-trail-copy > span:last-child {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .home-study-trail-copy strong {
+    color: var(--elite-navy-900, #0a2342);
+    font-size: 13px;
+    line-height: 1.25;
+  }
+
+  .home-study-trail-copy > span:last-child {
+    color: var(--elite-muted, #5f6f84);
+    font-size: 10px;
+    line-height: 1.35;
+  }
+
+  .home-study-trail-link {
+    min-height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 12px;
+    border: 1px solid var(--trail-accent);
+    border-radius: var(--elite-radius, 8px);
+    color: #fff;
+    background: var(--trail-accent);
+    font-size: 11px;
+    font-weight: 900;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .home-study-trail-link::after {
+    content: "\2192";
+    margin-left: 6px;
+  }
+
+  .home-study-trail-link:hover,
+  .home-study-trail-link:focus-visible {
+    border-color: var(--elite-navy-950, #06162c);
+    background: var(--elite-navy-950, #06162c);
+    transform: translateY(-1px);
+  }
+
+  .home-study-trail-clear {
+    width: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    color: var(--elite-muted, #5f6f84);
+    background: transparent;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .home-study-trail-clear:hover,
+  .home-study-trail-clear:focus-visible {
+    border-color: var(--elite-border, #d8e3ef);
+    color: var(--elite-danger, #b43b45);
+    background: #fff;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .home-study-trail {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 9px 10px;
+    padding: 10px;
+  }
+
+  .home-study-trail-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .home-study-trail-copy {
+    padding-right: 28px;
+  }
+
+  .home-study-trail-link {
+    grid-column: 2;
+    justify-self: start;
+    min-height: 36px;
+  }
+
+  .home-study-trail-clear {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+}
+
+@media print {
+  .home-study-trail {
+    display: none !important;
+  }
+}
+
 @media screen {
   html {
     scroll-padding-top: 96px;
