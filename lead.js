@@ -186,7 +186,7 @@
     return title.replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "general";
   }
 
-  const CORE_TOOL_ORDER = ["classified", "books", "past-solutions", "notes", "build-test"];
+  const CORE_TOOL_ORDER = ["notes", "classified", "past-solutions", "books", "build-test", "progress"];
   const COMPACT_WORKSPACE_PAGES = new Set([
     "practice",
     "downloads",
@@ -222,6 +222,11 @@
       title: "Mock Generator",
       detail: "Random or custom printable tests",
       short: "Mock",
+    },
+    progress: {
+      title: "Progress Tracker",
+      detail: "See mastery and the next weak topic",
+      short: "Progress",
     },
   };
 
@@ -1178,7 +1183,7 @@
         <div class="pathway-core-tools">
           <div class="pathway-core-heading">
             <strong>Study workspace</strong>
-            <span>Everything students use most, in one place.</span>
+            <span>Learn, practise, test, then track the next step.</span>
           </div>
           <div class="pathway-tool-strip-links">
             ${tools.primary.map(renderToolStripLink).join("")}
@@ -1221,8 +1226,9 @@
 
   function renderHomeCoreLink(link, index) {
     const key = moduleKey(link);
+    const featured = key === "notes";
     const attrs = [
-      `class="home-core-action"`,
+      `class="home-core-action${featured ? " is-featured" : ""}"`,
       `href="${link.href}"`,
       `data-module="${key}"`,
       link.target ? `target="${link.target}" rel="noreferrer"` : "",
@@ -1231,7 +1237,7 @@
     return `<a ${attrs}>
       <span class="home-core-action-index">0${index + 1}</span>
       ${getModuleIcon(key)}
-      <span class="home-core-action-copy"><strong>${link.title}</strong><span>${link.detail}</span></span>
+      <span class="home-core-action-copy">${featured ? '<span class="home-core-action-kicker">Recommended first</span>' : ""}<strong>${link.title}</strong><span>${link.detail}</span></span>
       <span class="home-core-action-open">Open</span>
     </a>`;
   }

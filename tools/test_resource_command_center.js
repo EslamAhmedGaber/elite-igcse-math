@@ -93,7 +93,7 @@ const systemPages = [
   "ial/wme01/index.html"
 ];
 systemPages.forEach((relativePath) => {
-  assert(read(relativePath).includes("elite-system.css?v=20260817a"), `${relativePath} is not linked to Elite System`);
+  assert(read(relativePath).includes("elite-system.css?v=20260822a"), `${relativePath} is not linked to Elite System`);
 });
 
 assert(lead.includes("COMPACT_WORKSPACE_PAGES"), "Task pages must opt into the compact study workspace");

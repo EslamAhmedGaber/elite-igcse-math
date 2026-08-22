@@ -26,12 +26,12 @@ DOWNLOADS_DIR = ROOT / "downloads"
 PRIVATE_OUTPUT = ROOT / "private_output"
 GITIGNORE = ROOT / ".gitignore"
 CURRENT_PATHWAY_BOOTSTRAP_VERSION = "20260613a"
-CURRENT_LEAD_VERSION = "20260817a"
+CURRENT_LEAD_VERSION = "20260822a"
 CURRENT_STYLE_VERSION = "20260809a"
 CURRENT_COURSE_MODULES_VERSION = "20260818a"
 CURRENT_STUDY_VERSION = "20260713b"
 CURRENT_SOLUTION_VERSION = "20260714a"
-CURRENT_ELITE_SYSTEM_VERSION = "20260817a"
+CURRENT_ELITE_SYSTEM_VERSION = "20260822a"
 CURRENT_RESOURCE_HUB_VERSION = "20260810a"
 CURRENT_PRINT_VERSION = "20260809c"
 IAL_DATA_FILES = {
@@ -437,6 +437,7 @@ def verify_resource_command_center(report: Report) -> None:
 
     lead_text = (ROOT / "lead.js").read_text(encoding="utf-8")
     required_core_tools = (
+        '"progress"',
         '"classified"',
         '"books"',
         '"past-solutions"',
@@ -444,7 +445,7 @@ def verify_resource_command_center(report: Report) -> None:
         '"build-test"',
     )
     if "CORE_TOOL_ORDER" not in lead_text:
-        report.error("lead.js must define the ordered five-resource study workspace.")
+        report.error("lead.js must define the ordered six-resource study workspace.")
     for tool_key in required_core_tools:
         if tool_key not in lead_text:
             report.error(f"lead.js core study workspace is missing {tool_key}.")
