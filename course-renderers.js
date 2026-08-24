@@ -81,12 +81,14 @@
     const classes = ["pp-paper"];
     if (paper.kind === "solution") classes.push("solution");
     if (paper.kind === "mark-scheme") classes.push("ms");
+    if (paper.converted) classes.push("converted");
     return classes.join(" ");
   }
 
   function renderPaperLink(paper) {
     const kind = paper.kind || "question";
-    return `<a class="${paperButtonClass(paper)}" data-paper-kind="${escapeHtml(kind)}" data-paper-search="${escapeHtml(normalizedText(`${paper.title} ${kind}`))}" href="${escapeHtml(paper.href)}" target="_blank" rel="noreferrer"><span>${escapeHtml(paper.title)}</span></a>`;
+    const badge = paper.badge ? `<b class="pp-paper-badge" title="Converted from Linear to Modular practice">${escapeHtml(paper.badge)}</b>` : "";
+    return `<a class="${paperButtonClass(paper)}" data-paper-kind="${escapeHtml(kind)}" data-paper-search="${escapeHtml(normalizedText(`${paper.title} ${paper.badge || ""} ${kind}`))}" href="${escapeHtml(paper.href)}" target="_blank" rel="noreferrer"><span class="pp-paper-label">${escapeHtml(paper.title)}</span>${badge}</a>`;
   }
 
   function renderPaperSection(group) {
@@ -103,7 +105,7 @@
             ${(paperGroup.sessions || []).map((session) => {
               const sessionSearch = normalizedText(`${group.label} ${group.detail} ${paperGroup.heading} ${session.label} ${(session.papers || []).map((paper) => paper.title).join(" ")}`);
               return `
-                <div class="pp-session" data-paper-session="${escapeHtml(session.label)}" data-paper-search="${escapeHtml(sessionSearch)}"><strong>${escapeHtml(session.label)}</strong>
+                <div class="pp-session${session.converted ? " pp-session-converted" : ""}" data-paper-session="${escapeHtml(session.label)}" data-paper-search="${escapeHtml(sessionSearch)}"><strong>${escapeHtml(session.label)}</strong>${session.note ? `<span class="pp-session-origin">${escapeHtml(session.note)}</span>` : ""}
                   ${(session.papers || []).map(renderPaperLink).join("")}
                 </div>
               `;

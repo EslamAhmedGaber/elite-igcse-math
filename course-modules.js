@@ -814,6 +814,166 @@
       }
   ];
 
+  // These Elite practice books are converted from Linear Higher source papers.
+  // Keep them beside the official Modular rows, but label the distinction at link level.
+  const modularReconstructedSessions = [
+      {
+          "label": "June 2025 · L→M",
+          "unit": "Unit 1",
+          "status": "reviewed",
+          "student": "downloads/Modular/20260824/PastPapers/June-2025/June_2025_Modular_Unit_1_Reconstructed_Student.pdf",
+          "solutions": "downloads/Modular/20260824/PastPapers/June-2025/June_2025_Modular_Unit_1_Reconstructed_Solutions.pdf"
+      },
+      {
+          "label": "June 2025 · L→M",
+          "unit": "Unit 2",
+          "status": "reviewed",
+          "student": "downloads/Modular/20260824/PastPapers/June-2025/June_2025_Modular_Unit_2_Reconstructed_Student.pdf",
+          "solutions": "downloads/Modular/20260824/PastPapers/June-2025/June_2025_Modular_Unit_2_Reconstructed_Solutions.pdf"
+      },
+      {
+          "label": "June 2024 · L→M",
+          "unit": "Unit 1",
+          "status": "reviewed",
+          "student": "downloads/Modular/20260824/PastPapers/June-2024/June_2024_Modular_Unit_1_Student.pdf",
+          "solutions": "downloads/Modular/20260824/PastPapers/June-2024/June_2024_Modular_Unit_1_Solutions.pdf"
+      },
+      {
+          "label": "June 2024 · L→M",
+          "unit": "Unit 2",
+          "status": "reviewed",
+          "student": "downloads/Modular/20260824/PastPapers/June-2024/June_2024_Modular_Unit_2_Student.pdf",
+          "solutions": "downloads/Modular/20260824/PastPapers/June-2024/June_2024_Modular_Unit_2_Solutions.pdf"
+      },
+      {
+          "label": "November 2024 · L→M",
+          "unit": "Unit 1",
+          "status": "reviewed",
+          "student": "downloads/Modular/20260824/PastPapers/November-2024/November_2024_Modular_Unit_1_Student.pdf",
+          "solutions": "downloads/Modular/20260824/PastPapers/November-2024/November_2024_Modular_Unit_1_Solutions.pdf"
+      },
+      {
+          "label": "November 2024 · L→M",
+          "unit": "Unit 2",
+          "status": "reviewed",
+          "student": "downloads/Modular/20260824/PastPapers/November-2024/November_2024_Modular_Unit_2_Student.pdf",
+          "solutions": "downloads/Modular/20260824/PastPapers/November-2024/November_2024_Modular_Unit_2_Solutions.pdf"
+      },
+      {
+          "label": "November 2023 · L→M",
+          "unit": "Unit 1",
+          "status": "reviewed",
+          "student": "downloads/Modular/20260824/PastPapers/November-2023/November_2023_Modular_Unit_1_Student.pdf",
+          "solutions": "downloads/Modular/20260824/PastPapers/November-2023/November_2023_Modular_Unit_1_Solutions.pdf"
+      },
+      {
+          "label": "November 2023 · L→M",
+          "unit": "Unit 2",
+          "status": "reviewed",
+          "student": "downloads/Modular/20260824/PastPapers/November-2023/November_2023_Modular_Unit_2_Student.pdf",
+          "solutions": "downloads/Modular/20260824/PastPapers/November-2023/November_2023_Modular_Unit_2_Solutions.pdf"
+      },
+      {
+          "label": "June 2023 · L→M",
+          "unit": "Unit 1",
+          "status": "reviewed-corrected",
+          "student": "downloads/Modular/20260824/PastPapers/June-2023/June_2023_Modular_Unit_1_Student.pdf",
+          "solutions": "downloads/Modular/20260824/PastPapers/June-2023/June_2023_Modular_Unit_1_Solutions.pdf"
+      },
+      {
+          "label": "June 2023 · L→M",
+          "unit": "Unit 2",
+          "status": "reviewed-corrected",
+          "student": "downloads/Modular/20260824/PastPapers/June-2023/June_2023_Modular_Unit_2_Student.pdf",
+          "solutions": "downloads/Modular/20260824/PastPapers/June-2023/June_2023_Modular_Unit_2_Solutions.pdf"
+      },
+      {
+          "label": "June 2022 · L→M",
+          "unit": "Unit 1",
+          "status": "reviewed",
+          "student": "downloads/Modular/20260824/PastPapers/June-2022/June_2022_Modular_Unit_1_Student.pdf",
+          "solutions": "downloads/Modular/20260824/PastPapers/June-2022/June_2022_Modular_Unit_1_Solutions.pdf"
+      },
+      {
+          "label": "June 2022 · L→M",
+          "unit": "Unit 2",
+          "status": "reviewed",
+          "student": "downloads/Modular/20260824/PastPapers/June-2022/June_2022_Modular_Unit_2_Student.pdf",
+          "solutions": "downloads/Modular/20260824/PastPapers/June-2022/June_2022_Modular_Unit_2_Solutions.pdf"
+      },
+      {
+          "label": "January 2022 · L→M",
+          "unit": "Unit 1",
+          "status": "reviewed",
+          "student": "downloads/Modular/20260824/PastPapers/January-2022/January_2022_Modular_Unit_1_Student.pdf",
+          "solutions": "downloads/Modular/20260824/PastPapers/January-2022/January_2022_Modular_Unit_1_Solutions.pdf"
+      },
+      {
+          "label": "January 2022 · L→M",
+          "unit": "Unit 2",
+          "status": "reviewed",
+          "student": "downloads/Modular/20260824/PastPapers/January-2022/January_2022_Modular_Unit_2_Student.pdf",
+          "solutions": "downloads/Modular/20260824/PastPapers/January-2022/January_2022_Modular_Unit_2_Solutions.pdf"
+      },
+      {
+          "label": "May-November 2020 · L→M",
+          "unit": "Unit 1",
+          "status": "reviewed",
+          "student": "downloads/Modular/20260824/PastPapers/May-November-2020/12_May-Nov_2020_v7_Modular_Unit_1_Student.pdf",
+          "solutions": "downloads/Modular/20260824/PastPapers/May-November-2020/12_May-Nov_2020_v7_Modular_Unit_1_Solutions.pdf"
+      },
+      {
+          "label": "May-November 2020 · L→M",
+          "unit": "Unit 2",
+          "status": "reviewed",
+          "student": "downloads/Modular/20260824/PastPapers/May-November-2020/12_May-Nov_2020_v7_Modular_Unit_2_Student.pdf",
+          "solutions": "downloads/Modular/20260824/PastPapers/May-November-2020/12_May-Nov_2020_v7_Modular_Unit_2_Solutions.pdf"
+      },
+      {
+          "label": "January 2023 · L→M",
+          "unit": "Unit 1",
+          "status": "reviewed",
+          "student": "downloads/Modular/20260824/PastPapers/January-2023/13_January_2023_v7_Modular_Unit_1_Student.pdf",
+          "solutions": "downloads/Modular/20260824/PastPapers/January-2023/13_January_2023_v7_Modular_Unit_1_Solutions.pdf"
+      },
+      {
+          "label": "January 2023 · L→M",
+          "unit": "Unit 2",
+          "status": "reviewed",
+          "student": "downloads/Modular/20260824/PastPapers/January-2023/13_January_2023_v7_Modular_Unit_2_Student.pdf",
+          "solutions": "downloads/Modular/20260824/PastPapers/January-2023/13_January_2023_v7_Modular_Unit_2_Solutions.pdf"
+      },
+      {
+          "label": "November 2025 · L→M",
+          "unit": "Unit 1",
+          "status": "reviewed-provisional",
+          "student": "downloads/Modular/20260824/PastPapers/November-2025-Reviewed-Provisional/14_November_2025_provisional_v7_Modular_Unit_1_Student.pdf",
+          "solutions": "downloads/Modular/20260824/PastPapers/November-2025-Reviewed-Provisional/14_November_2025_provisional_v7_Modular_Unit_1_Solutions.pdf"
+      },
+      {
+          "label": "November 2025 · L→M",
+          "unit": "Unit 2",
+          "status": "reviewed-provisional",
+          "student": "downloads/Modular/20260824/PastPapers/November-2025-Reviewed-Provisional/14_November_2025_provisional_v7_Modular_Unit_2_Student.pdf",
+          "solutions": "downloads/Modular/20260824/PastPapers/November-2025-Reviewed-Provisional/14_November_2025_provisional_v7_Modular_Unit_2_Solutions.pdf"
+      }
+  ];
+
+  modularReconstructedSessions.forEach((item) => {
+      const group = modularPastPapers.find((candidate) => candidate.heading.startsWith(item.unit));
+      if (!group) return;
+      const version = item.status === "reviewed-provisional" ? "modular-20260824-nov2025" : "modular-20260824-converted";
+      group.sessions.push({
+          label: item.label,
+          converted: true,
+          note: item.status === "reviewed-provisional" ? "Reviewed provisional conversion" : "Converted from Linear Higher",
+          papers: [
+              { kind: "paper", title: "Student book", badge: "L→M", converted: true, href: `${item.student}?v=${version}` },
+              { kind: "solution", title: "Solutions book", badge: "L→M", converted: true, href: `${item.solutions}?v=${version}` }
+          ]
+      });
+  });
+
   const pureWma11PastPapers = [
       {
           "heading": "2026",
@@ -1575,22 +1735,23 @@
           "className": "modular-book",
           "tag": "Modular 4WM1",
           "title": "Unit 1 Classified Book",
-          "description": "All Modular Unit 1 practice grouped by topic for 4WM1 students. Use it after choosing Modular Pathway -> Unit 1 on the website.",
+          "description": "Updated cross-session Unit 1 bank, grouped by topic for 4WM1 students.",
           "meta": [
               "4WM1",
-              "Unit 1 topics",
-              "530 questions"
+              "417 questions",
+              "29 chapters",
+              "Updated 24 Aug 2026"
           ],
           "actions": [
               {
                   "label": "Questions PDF",
-                  "href": "downloads/Classified_4WM1.pdf?v=style-h-20260527",
+                  "href": "downloads/Classified_4WM1.pdf?v=modular-20260824b",
                   "variant": "primary",
                   "target": "_blank"
               },
               {
                   "label": "Solutions PDF",
-                  "href": "downloads/ClassifiedSolutions/Classified_4WM1_Answers.pdf?v=title-polish-20260527",
+                  "href": "downloads/ClassifiedSolutions/Classified_4WM1_Answers.pdf?v=modular-20260824b",
                   "variant": "solution",
                   "target": "_blank"
               }
@@ -1600,22 +1761,23 @@
           "className": "modular-book",
           "tag": "Modular 4WM2",
           "title": "Unit 2 Classified Book",
-          "description": "All Modular Unit 2 practice grouped by topic for 4WM2 students. Use it after choosing Modular Pathway -> Unit 2 on the website.",
+          "description": "Updated cross-session Unit 2 bank, grouped by topic for 4WM2 students.",
           "meta": [
               "4WM2",
-              "Unit 2 topics",
-              "623 questions"
+              "441 questions",
+              "32 chapters",
+              "Updated 24 Aug 2026"
           ],
           "actions": [
               {
                   "label": "Questions PDF",
-                  "href": "downloads/Classified_4WM2.pdf?v=style-h-20260527",
+                  "href": "downloads/Classified_4WM2.pdf?v=modular-20260824b",
                   "variant": "primary",
                   "target": "_blank"
               },
               {
                   "label": "Solutions PDF",
-                  "href": "downloads/ClassifiedSolutions/Classified_4WM2_Answers.pdf?v=title-polish-20260527",
+                  "href": "downloads/ClassifiedSolutions/Classified_4WM2_Answers.pdf?v=modular-20260824b",
                   "variant": "solution",
                   "target": "_blank"
               }
@@ -1623,25 +1785,26 @@
       },
       {
           "className": "modular-book",
-          "tag": "Unit 1 Q20+",
+          "tag": "Unit 1 Q16+",
           "tagTone": "gold",
           "title": "Unit 1 Expertise Book",
-          "description": "The harder Unit 1 questions only, grouped by topic for focused 4WM1 revision.",
+          "description": "The harder Unit 1 questions, selected from the updated cross-session bank for focused 4WM1 revision.",
           "meta": [
               "4WM1",
-              "127 questions",
-              "Q20+ only"
+              "68 questions",
+              "19 chapters",
+              "Q16+ route"
           ],
           "actions": [
               {
                   "label": "Questions PDF",
-                  "href": "downloads/Classified_4WM1_Expertise.pdf?v=style-h-20260527",
+                  "href": "downloads/Classified_4WM1_Expertise.pdf?v=modular-20260824b",
                   "variant": "gold",
                   "target": "_blank"
               },
               {
                   "label": "Solutions PDF",
-                  "href": "downloads/ClassifiedSolutions/Classified_4WM1_Expertise_Answers.pdf?v=title-polish-20260527",
+                  "href": "downloads/ClassifiedSolutions/Classified_4WM1_Expertise_Answers.pdf?v=modular-20260824b",
                   "variant": "solution",
                   "target": "_blank"
               }
@@ -1649,27 +1812,101 @@
       },
       {
           "className": "modular-book",
-          "tag": "Unit 2 Q20+",
+          "tag": "Unit 2 Q16+",
           "tagTone": "gold",
           "title": "Unit 2 Expertise Book",
-          "description": "The harder Unit 2 questions only, grouped by topic for focused 4WM2 revision.",
+          "description": "The harder Unit 2 questions, selected from the updated cross-session bank for focused 4WM2 revision.",
           "meta": [
               "4WM2",
-              "133 questions",
-              "Q20+ only"
+              "81 questions",
+              "18 chapters",
+              "Q16+ route"
           ],
           "actions": [
               {
                   "label": "Questions PDF",
-                  "href": "downloads/Classified_4WM2_Expertise.pdf?v=style-h-20260527",
+                  "href": "downloads/Classified_4WM2_Expertise.pdf?v=modular-20260824b",
                   "variant": "gold",
                   "target": "_blank"
               },
               {
                   "label": "Solutions PDF",
-                  "href": "downloads/ClassifiedSolutions/Classified_4WM2_Expertise_Answers.pdf?v=title-polish-20260527",
+                  "href": "downloads/ClassifiedSolutions/Classified_4WM2_Expertise_Answers.pdf?v=modular-20260824b",
                   "variant": "solution",
                   "target": "_blank"
+              }
+          ]
+      },
+      {
+          "className": "modular-book download-note",
+          "tag": "4WM1 Topic Library",
+          "title": "Unit 1 Classified per Topic",
+          "description": "Open every Unit 1 topic book with its matching student and solution PDF.",
+          "meta": [
+              "29 topic pairs",
+              "Student + solutions",
+              "Updated 24 Aug 2026"
+          ],
+          "actions": [
+              {
+                  "label": "Open topic library",
+                  "href": "modular-books.html?unit=Unit+1#topic-books",
+                  "variant": "primary"
+              }
+          ]
+      },
+      {
+          "className": "modular-book download-note",
+          "tag": "4WM2 Topic Library",
+          "title": "Unit 2 Classified per Topic",
+          "description": "Open every Unit 2 topic book with its matching student and solution PDF.",
+          "meta": [
+              "32 topic pairs",
+              "Student + solutions",
+              "Updated 24 Aug 2026"
+          ],
+          "actions": [
+              {
+                  "label": "Open topic library",
+                  "href": "modular-books.html?unit=Unit+2#topic-books",
+                  "variant": "primary"
+              }
+          ]
+      },
+      {
+          "className": "modular-book download-note",
+          "tag": "Reviewed paper books",
+          "title": "Modular Reconstructed Past-Paper Books",
+          "description": "Student workbooks and matching solution books for the reviewed Modular sessions, arranged by unit.",
+          "meta": [
+              "10 sessions",
+              "40 PDFs",
+              "Unit 1 + Unit 2"
+          ],
+          "actions": [
+              {
+                  "label": "Open paper-book library",
+                  "href": "modular-books.html#paper-books",
+                  "variant": "solution"
+              }
+          ]
+      },
+      {
+          "className": "modular-book modular-release-highlight",
+          "tag": "November 2025",
+          "tagTone": "gold",
+          "title": "Reviewed Provisional Books",
+          "description": "The November 2025 Unit 1 and Unit 2 student and solution books, reviewed by Dr Eslam Ahmed.",
+          "meta": [
+              "Unit 1 + Unit 2",
+              "Student + solutions",
+              "Reviewed Provisional"
+          ],
+          "actions": [
+              {
+                  "label": "Open November 2025",
+                  "href": "modular-books.html#november-2025",
+                  "variant": "gold"
               }
           ]
       }
@@ -1959,8 +2196,8 @@
         title: "Modular (split into units)",
         heading: "Modular papers",
         eyebrow: "Modular | Edexcel 4WM Higher",
-        intro: "Two units, taken separately. Each paper has its matching worked solution beside it.",
-        explainer: "Two units assessed separately - <strong>4WM1H (Unit 1)</strong> and <strong>4WM2H (Unit 2)</strong>. Students can sit each unit in different sessions and combine the results. <strong>R</strong> variants are alternate papers.",
+        intro: "Official papers stay beside their matching solutions. Elite L→M rows add converted Linear Higher practice for each unit.",
+        explainer: "Two units assessed separately - <strong>4WM1H (Unit 1)</strong> and <strong>4WM2H (Unit 2)</strong>. <strong>L→M</strong> means Converted from Linear Higher: it is an Elite Modular practice edition, not an original Modular examination paper. <strong>R</strong> variants are alternate official papers.",
       },
       pastPapers: modularPastPapers,
       books: modularBooks,
