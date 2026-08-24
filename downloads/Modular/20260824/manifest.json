@@ -1,0 +1,2459 @@
+{
+  "schema_version": "1.0",
+  "release_id": "modular-20260824-v1",
+  "course": "Edexcel IGCSE Modular 4WM",
+  "generated_at": "2026-08-24",
+  "authorization": "direct_user_attestation_20260824",
+  "status": "public_with_reviewed_provisional",
+  "counts": {
+    "total_classified_books": 4,
+    "expertise_books": 4,
+    "classified_topic_books": 122,
+    "expertise_topic_books": 74,
+    "past_paper_books": 40,
+    "pdfs": 244
+  },
+  "artifacts": [
+    {
+      "path": "downloads/Classified_4WM1.pdf",
+      "sha256": "be3fe847c5bc7118518678e667b1d8accbf80285811f6c6ee771aba1f7d63cb3",
+      "bytes": 29985826,
+      "kind": "classified_exam_book",
+      "unit": "Unit 1",
+      "title": "Unit 1 Total Classified - Student",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/ClassifiedSolutions/Classified_4WM1_Answers.pdf",
+      "sha256": "3fa9ff45d0ff4371bce56806231df0185dbc40ff5b9888b4ea534a24c889a69b",
+      "bytes": 36579192,
+      "kind": "classified_exam_book",
+      "unit": "Unit 1",
+      "title": "Unit 1 Total Classified - Solutions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Classified_4WM2.pdf",
+      "sha256": "820609c91a7a6577dc672c3deb4290dbb3265f499e0390470229e73ee796fc71",
+      "bytes": 34922898,
+      "kind": "classified_exam_book",
+      "unit": "Unit 2",
+      "title": "Unit 2 Total Classified - Student",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/ClassifiedSolutions/Classified_4WM2_Answers.pdf",
+      "sha256": "3e94786283846a9177e878d7b152926491087b937b171606ee675807589d2f07",
+      "bytes": 42024579,
+      "kind": "classified_exam_book",
+      "unit": "Unit 2",
+      "title": "Unit 2 Total Classified - Solutions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Classified_4WM1_Expertise.pdf",
+      "sha256": "a5601aea0310970e00747d066688dfff5c3b4fc959de7d4936bcd943d269536d",
+      "bytes": 6540608,
+      "kind": "classified_exam_book",
+      "unit": "Unit 1",
+      "title": "Unit 1 Expertise Q16+ - Student",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/ClassifiedSolutions/Classified_4WM1_Expertise_Answers.pdf",
+      "sha256": "7633ed24b9054adeb14cd90e0514ff62c1df71dad2645b27b6184886768e46b6",
+      "bytes": 8902616,
+      "kind": "classified_exam_book",
+      "unit": "Unit 1",
+      "title": "Unit 1 Expertise Q16+ - Solutions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Classified_4WM2_Expertise.pdf",
+      "sha256": "f75d7ed033abf379b33566f15df8500718697e319823df6e4205873fd5d78abe",
+      "bytes": 6617050,
+      "kind": "classified_exam_book",
+      "unit": "Unit 2",
+      "title": "Unit 2 Expertise Q16+ - Student",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/ClassifiedSolutions/Classified_4WM2_Expertise_Answers.pdf",
+      "sha256": "f9f3c6881c489d310c857be27ee89babd322fd150de8ac56859e908fd3cbcda9",
+      "bytes": 9102765,
+      "kind": "classified_exam_book",
+      "unit": "Unit 2",
+      "title": "Unit 2 Expertise Q16+ - Solutions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/01_OL-T02_Set-Notation-Venn-Diagrams_Student.pdf",
+      "sha256": "3b45ef4f0f0d3db0a4b381655379f9915a8af578e1e4382d60dd1a137d5eca51",
+      "bytes": 1656609,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "01_OL-T02_Set-Notation-Venn-Diagrams",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/01_OL-T02_Set-Notation-Venn-Diagrams_Solutions.pdf",
+      "sha256": "a906f1b6825b4de3f50e59bfe8c19586f2ea333237e36648000b121b45eb142b",
+      "bytes": 2172793,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "01_OL-T02_Set-Notation-Venn-Diagrams",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/02_OL-T04_Powers-Roots-Standard-Form_Student.pdf",
+      "sha256": "596ba9c38869095ceffb01b2eca9db90c71516c5890efa2280c23ef4a77bf3a7",
+      "bytes": 157496,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "02_OL-T04_Powers-Roots-Standard-Form",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/02_OL-T04_Powers-Roots-Standard-Form_Solutions.pdf",
+      "sha256": "3d6f2e390683e6f9cfbf6e067306e3f869435b32be8a9dbfe86da9dcd27798a7",
+      "bytes": 213956,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "02_OL-T04_Powers-Roots-Standard-Form",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/03_OL-T05_Fractions_Student.pdf",
+      "sha256": "76ab3d21963df007020fb0db69f4bb9992430d98a8db12ec6f30d726967b7c74",
+      "bytes": 311562,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "03_OL-T05_Fractions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/03_OL-T05_Fractions_Solutions.pdf",
+      "sha256": "df549fd179d66140841fdff2ac3a66ba01887ec678f6ac8e44494d76aae9636f",
+      "bytes": 661839,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "03_OL-T05_Fractions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/04_OL-T08_Fractions-Decimals-Percentages_Student.pdf",
+      "sha256": "423dbd280e2a33f5e0c1b1340206ef69d87557974a2d85d9e679409cedbf3761",
+      "bytes": 261275,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "04_OL-T08_Fractions-Decimals-Percentages",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/04_OL-T08_Fractions-Decimals-Percentages_Solutions.pdf",
+      "sha256": "d3c3125551b169d307e744f54ec51bbebd0adf39a21b5e31c5c8557047b4675d",
+      "bytes": 605564,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "04_OL-T08_Fractions-Decimals-Percentages",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/05_OL-T09_Rounding-Estimation-Bounds_Student.pdf",
+      "sha256": "3d413fb010e65078ca83d5d12d5b74049689334ee32391fe39003df798994a33",
+      "bytes": 1624707,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "05_OL-T09_Rounding-Estimation-Bounds",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/05_OL-T09_Rounding-Estimation-Bounds_Solutions.pdf",
+      "sha256": "b64ac8b3307127cf933f7ef16c6b0fbc445c3c30bf7f7f5dea8890fd8cb102a4",
+      "bytes": 2165339,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "05_OL-T09_Rounding-Estimation-Bounds",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/06_OL-T10_Surds_Student.pdf",
+      "sha256": "ebc4ccd45e64d6031218935475628f0db787fb1a9b4dec714507388bf661b3bc",
+      "bytes": 714385,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "06_OL-T10_Surds",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/06_OL-T10_Surds_Solutions.pdf",
+      "sha256": "b5ea0ed2f210497dfb7b5339c7d9c6fdd1769c637975515439298034e0fd1145",
+      "bytes": 1009123,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "06_OL-T10_Surds",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/07_OL-T14_Exchange-Rates-Best-Buys_Student.pdf",
+      "sha256": "1caf0943e7239973695989cddebcd2d741e9f82bb7a9280b8e7189ffb1c085d8",
+      "bytes": 128702,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "07_OL-T14_Exchange-Rates-Best-Buys",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/07_OL-T14_Exchange-Rates-Best-Buys_Solutions.pdf",
+      "sha256": "12e763e61eed58933c5223eaddbf28198b43734459d3e479d11c66abf1f97d5c",
+      "bytes": 129849,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "07_OL-T14_Exchange-Rates-Best-Buys",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/08_OL-T17_Algebraic-Roots-Indices_Student.pdf",
+      "sha256": "292b46b01419be40cc0fa1fd0aeda8e7ce1c0497b96061fc3b9533cfc7110160",
+      "bytes": 1108507,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "08_OL-T17_Algebraic-Roots-Indices",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/08_OL-T17_Algebraic-Roots-Indices_Solutions.pdf",
+      "sha256": "643669d46f33c327025f8bf86429fb5677d006398ec74f9d2da1dead5f462b5f",
+      "bytes": 1634246,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "08_OL-T17_Algebraic-Roots-Indices",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/09_OL-T18_Expanding-Brackets_Student.pdf",
+      "sha256": "01a049462a2fd5b82dc3499da92502481169cbbbdc0b888a5664a2e41392c88f",
+      "bytes": 616867,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "09_OL-T18_Expanding-Brackets",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/09_OL-T18_Expanding-Brackets_Solutions.pdf",
+      "sha256": "2cddef9fbf93e33e894b6186bd1a93adfce7cb49e40c7f58a67674cdd4baa282",
+      "bytes": 1036498,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "09_OL-T18_Expanding-Brackets",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/10_OL-T19_Factorising_Student.pdf",
+      "sha256": "84257038bc63965916a0575ae729531d5a354c22a622112b2682b879105e464d",
+      "bytes": 540906,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "10_OL-T19_Factorising",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/10_OL-T19_Factorising_Solutions.pdf",
+      "sha256": "959c06a68009f8a2339d654520dbfa4cfccee37f4a203b1a9091e67795857e29",
+      "bytes": 836546,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "10_OL-T19_Factorising",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/11_OL-T20_Completing-the-Square_Student.pdf",
+      "sha256": "bc535a9f05341cb5102513b9d65750704ff7c3555c5d8456b599e7ab5ca65dc1",
+      "bytes": 302413,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "11_OL-T20_Completing-the-Square",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/11_OL-T20_Completing-the-Square_Solutions.pdf",
+      "sha256": "2fffc3d0532ba29f0a7012dca2b0e6bf1796506ad785cfa788e2dee6b6271940",
+      "bytes": 433346,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "11_OL-T20_Completing-the-Square",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/12_OL-T21_Algebraic-Fractions_Student.pdf",
+      "sha256": "8954e8a7e42e7b09d5ccf9574fbec7ced01c77bbdc0789fe91a6d202ded34102",
+      "bytes": 709612,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "12_OL-T21_Algebraic-Fractions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/12_OL-T21_Algebraic-Fractions_Solutions.pdf",
+      "sha256": "83f01f881315172aa3e6e9c49d02a5cc926875a2bd3f76a0e7a068cbff1b0951",
+      "bytes": 1202125,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "12_OL-T21_Algebraic-Fractions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/13_OL-T24_Solving-Linear-Equations_Student.pdf",
+      "sha256": "996debe17a29b81623fb41a104a73800ca52d4c6304d31ed30c8b4dbf4fb63ec",
+      "bytes": 469770,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "13_OL-T24_Solving-Linear-Equations",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/13_OL-T24_Solving-Linear-Equations_Solutions.pdf",
+      "sha256": "a1ba0b397f983f9f24f47a471b899fbc16aa3e32f5baa8177dfe7d42a1204ecc",
+      "bytes": 704638,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "13_OL-T24_Solving-Linear-Equations",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/14_OL-T25_Solving-Quadratic-Equations_Student.pdf",
+      "sha256": "817e9ab63021630f8d5b6ddf7b3a864ca1a7d6e9c48faa8fb84ba155afef3cce",
+      "bytes": 296045,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "14_OL-T25_Solving-Quadratic-Equations",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/14_OL-T25_Solving-Quadratic-Equations_Solutions.pdf",
+      "sha256": "1dc062490062fd97c021ca040561411e17056a99957b570cf2a0dd89dc546a1b",
+      "bytes": 478351,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "14_OL-T25_Solving-Quadratic-Equations",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/15_OL-T28_Forming-Solving-Equations_Student.pdf",
+      "sha256": "6b3b967f5ea954d558dc9825d001f3624fba7266a5e07a40f1fc7b9d13985c15",
+      "bytes": 204140,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "15_OL-T28_Forming-Solving-Equations",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/15_OL-T28_Forming-Solving-Equations_Solutions.pdf",
+      "sha256": "650e60ae17e162ee11637768ac2721390f159a92037524716c3aa063f9609738",
+      "bytes": 206867,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "15_OL-T28_Forming-Solving-Equations",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/16_OL-T31_Coordinate-Geometry_Student.pdf",
+      "sha256": "f3c1e4e41aa0c5312c9ed715428bea3da737894ac8b47f7d91ca3cd3a2fd656d",
+      "bytes": 807485,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "16_OL-T31_Coordinate-Geometry",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/16_OL-T31_Coordinate-Geometry_Solutions.pdf",
+      "sha256": "8a556de68ceba6597552de4a7266f2e19ef5ad476fde29c340ff60f7121efb19",
+      "bytes": 1133939,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "16_OL-T31_Coordinate-Geometry",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/17_OL-T32_Linear-Graphs-y-mx-c_Student.pdf",
+      "sha256": "d93a3e8862471f0d297522b2d813ce328e0e1cae177d96befd563868085ae93a",
+      "bytes": 1001943,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "17_OL-T32_Linear-Graphs-y-mx-c",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/17_OL-T32_Linear-Graphs-y-mx-c_Solutions.pdf",
+      "sha256": "56b74c1691b9b704651c2ff7bdfd5de07c940745dba541d29d2f68800259b092",
+      "bytes": 1470322,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "17_OL-T32_Linear-Graphs-y-mx-c",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/18_OL-T33_Graphs-of-Functions_Student.pdf",
+      "sha256": "c355263233912cf4d7622000b6ea5c50bbb5bb2491eca70e7fda4b1fb2453c39",
+      "bytes": 1799368,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "18_OL-T33_Graphs-of-Functions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/18_OL-T33_Graphs-of-Functions_Solutions.pdf",
+      "sha256": "2f283e2fd03a1e37abb613507acdb305d7e9d385b3fefa2d907138912c1f4b4d",
+      "bytes": 2172381,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "18_OL-T33_Graphs-of-Functions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/19_OL-T39_Standard-Compound-Units_Student.pdf",
+      "sha256": "741036df87b09d0e004e65df35e94f24dcb1024b3488782e32d7845bc104b757",
+      "bytes": 610605,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "19_OL-T39_Standard-Compound-Units",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/19_OL-T39_Standard-Compound-Units_Solutions.pdf",
+      "sha256": "03e1fcf0f8d55541148ce7fe82618cec40299273d2adf009b3eacb1698652794",
+      "bytes": 840030,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "19_OL-T39_Standard-Compound-Units",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/20_OL-T40_Angles-in-Polygons-Parallel-Lines_Student.pdf",
+      "sha256": "a65721fa49fe0a0f08c2330d7938c27f0b678fdffd456b7b83f826a599c4e21e",
+      "bytes": 394046,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "20_OL-T40_Angles-in-Polygons-Parallel-Lines",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/20_OL-T40_Angles-in-Polygons-Parallel-Lines_Solutions.pdf",
+      "sha256": "ff4ee83673af3dbf44d42e3741b5afd89b0e5fa848cd6cd6d0494a1067f35a36",
+      "bytes": 570744,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "20_OL-T40_Angles-in-Polygons-Parallel-Lines",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/21_OL-T43_Area-Perimeter_Student.pdf",
+      "sha256": "1aefa2f59939ac7e7883c5e4f2762f97dd23d4f425f2eb7580797f6f8f799376",
+      "bytes": 1531114,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "21_OL-T43_Area-Perimeter",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/21_OL-T43_Area-Perimeter_Solutions.pdf",
+      "sha256": "e69946dbd2a94dd9ef1986426ac02c97b5d70b08f24d3adb3816f2010585184e",
+      "bytes": 2018064,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "21_OL-T43_Area-Perimeter",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/22_OL-T44_Circles-Arcs-Sectors_Student.pdf",
+      "sha256": "025ba4d3f1b51a5b64c67e688381f166cc84aac82b5d497f057648347d367638",
+      "bytes": 2623047,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "22_OL-T44_Circles-Arcs-Sectors",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/22_OL-T44_Circles-Arcs-Sectors_Solutions.pdf",
+      "sha256": "99198eccab22a670c6ea32913d375b2fc8aadeeb80c6b5f38bc5a1d1b41b67f6",
+      "bytes": 3142288,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "22_OL-T44_Circles-Arcs-Sectors",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/23_OL-T48_Right-Angled-Triangles-Pythagoras-Trigonometry_Student.pdf",
+      "sha256": "6de2be6a3a5f7b64e53a0044194c306e0b58df3820c2cfeb9755ec1589715aef",
+      "bytes": 2067041,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "23_OL-T48_Right-Angled-Triangles-Pythagoras-Trigonometry",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/23_OL-T48_Right-Angled-Triangles-Pythagoras-Trigonometry_Solutions.pdf",
+      "sha256": "30fac29c88da00a898e5b84d60c53acccd49e09c9a7182d0f4cc8b5f58ad2401",
+      "bytes": 2612765,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "23_OL-T48_Right-Angled-Triangles-Pythagoras-Trigonometry",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/24_OL-T49_Sine-Cosine-Rule-Area-of-Triangles_Student.pdf",
+      "sha256": "e935efa931d112c696637fb9e723892f0c4026a9909f07fec3af08a60e966414",
+      "bytes": 1344491,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "24_OL-T49_Sine-Cosine-Rule-Area-of-Triangles",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/24_OL-T49_Sine-Cosine-Rule-Area-of-Triangles_Solutions.pdf",
+      "sha256": "f2a2af0459de96fcc117807401d61d700dc5a98eb7f84bcbe6877908ded6383e",
+      "bytes": 1619795,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "24_OL-T49_Sine-Cosine-Rule-Area-of-Triangles",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/25_OL-T50_3D-Pythagoras-Trigonometry_Student.pdf",
+      "sha256": "adb2d8bfa63c482100cf8d28134c6cac321a7b60e17e4dbffd11c64307a73003",
+      "bytes": 1036542,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "25_OL-T50_3D-Pythagoras-Trigonometry",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/25_OL-T50_3D-Pythagoras-Trigonometry_Solutions.pdf",
+      "sha256": "8d629df2c912789a1e095c39309e2279c549019bf7dc73a949429107a1a67f68",
+      "bytes": 1401856,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "25_OL-T50_3D-Pythagoras-Trigonometry",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/26_OL-T54_Histograms_Student.pdf",
+      "sha256": "e487fdb2bd98cbf21bb0809a65b5b616f960850fb5e9a1578ae8ddfbfa0b21d7",
+      "bytes": 2518612,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "26_OL-T54_Histograms",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/26_OL-T54_Histograms_Solutions.pdf",
+      "sha256": "f803ae21bae21805f203937e5d537285f750f14fc9c69cbe279efc653610572d",
+      "bytes": 3110744,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "26_OL-T54_Histograms",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/27_OL-T56_Probability-Toolkit_Student.pdf",
+      "sha256": "984d369310fd9174e3b45b0899aecc263bcc71dae255f18eaebe5e27e117575f",
+      "bytes": 1722056,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "27_OL-T56_Probability-Toolkit",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/27_OL-T56_Probability-Toolkit_Solutions.pdf",
+      "sha256": "f63b7625f594db2ff52592bf72d1b15f6a2a441adbb790050be2c175d4d0586b",
+      "bytes": 2158372,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "27_OL-T56_Probability-Toolkit",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/28_OL-T57_Probability-Diagrams-Venn-Tree-Diagrams_Student.pdf",
+      "sha256": "4980a4f3e686b3b579563d5e950c857cb14a64a12e023514dd73cdb278cedb26",
+      "bytes": 2641044,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "28_OL-T57_Probability-Diagrams-Venn-Tree-Diagrams",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/28_OL-T57_Probability-Diagrams-Venn-Tree-Diagrams_Solutions.pdf",
+      "sha256": "c4c0f971a61e3e93b4ccedba4f118ca48375deda735836bb340e480a1e9458d0",
+      "bytes": 3234717,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "28_OL-T57_Probability-Diagrams-Venn-Tree-Diagrams",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/29_OL-T58_Combined-Conditional-Probability_Student.pdf",
+      "sha256": "5d2facb82bc388cb1381409c0016ec2d0024fd6d873e325fd576b6f2acb76c7b",
+      "bytes": 3591663,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "29_OL-T58_Combined-Conditional-Probability",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/Topics/29_OL-T58_Combined-Conditional-Probability_Solutions.pdf",
+      "sha256": "40f7e99f80f15965424815a81840e551bc7aa66ffa76eda772d6990e69c7b4e0",
+      "bytes": 4205444,
+      "kind": "classified_topic_book",
+      "unit": "Unit 1",
+      "title": "29_OL-T58_Combined-Conditional-Probability",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/01_OL-T02_Set-Notation-Venn-Diagrams_Student.pdf",
+      "sha256": "9249ca0ebbd1af1275f42560246354b8a96f97f528a77b8bbad8bad0f2eda93b",
+      "bytes": 282648,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "01_OL-T02_Set-Notation-Venn-Diagrams",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/01_OL-T02_Set-Notation-Venn-Diagrams_Solutions.pdf",
+      "sha256": "1cead1da0df5393051998a2d4d543a431195b8204db0684993293426815912ca",
+      "bytes": 285965,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "01_OL-T02_Set-Notation-Venn-Diagrams",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/02_OL-T08_Fractions-Decimals-Percentages_Student.pdf",
+      "sha256": "effeb93d65b90b6b443f23a0611cafb1e70a25839003c5e505475895c8709af0",
+      "bytes": 140885,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "02_OL-T08_Fractions-Decimals-Percentages",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/02_OL-T08_Fractions-Decimals-Percentages_Solutions.pdf",
+      "sha256": "2f4bc0c94b983dab9ae64646fe13329e99249e267a271a93f2727f89d7cc4b40",
+      "bytes": 327473,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "02_OL-T08_Fractions-Decimals-Percentages",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/03_OL-T09_Rounding-Estimation-Bounds_Student.pdf",
+      "sha256": "5c6909f80e7ce9eed3e153e36d25befadf7499806be4ab3ff67e38a69d716aba",
+      "bytes": 404947,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "03_OL-T09_Rounding-Estimation-Bounds",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/03_OL-T09_Rounding-Estimation-Bounds_Solutions.pdf",
+      "sha256": "98791e21b7615799ebe3efe8cfd9c0b3fd648430b534f48d88989465cbb397a0",
+      "bytes": 723135,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "03_OL-T09_Rounding-Estimation-Bounds",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/04_OL-T10_Surds_Student.pdf",
+      "sha256": "249a9430b227b616cb0302930ccfa7a09a76f5fdaab61090856e43bc4f2bda76",
+      "bytes": 319510,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "04_OL-T10_Surds",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/04_OL-T10_Surds_Solutions.pdf",
+      "sha256": "a4cbf6718ea0da3615427eadf805f5c1aa702c658c4231585e8993f60c106718",
+      "bytes": 532714,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "04_OL-T10_Surds",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/05_OL-T17_Algebraic-Roots-Indices_Student.pdf",
+      "sha256": "7e305767d4bd45b331b2bec5c539b94009d6f550807bff22e923cc29b1f2d917",
+      "bytes": 175937,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "05_OL-T17_Algebraic-Roots-Indices",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/05_OL-T17_Algebraic-Roots-Indices_Solutions.pdf",
+      "sha256": "6936090fd4f0c7ede8d923231bca545c921d5f025746b69bc71020ce8357b24f",
+      "bytes": 411891,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "05_OL-T17_Algebraic-Roots-Indices",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/06_OL-T18_Expanding-Brackets_Student.pdf",
+      "sha256": "65fd6245481a5d0f3b0417bdaafe0646c5dcd352c56012e66786be20f645bf79",
+      "bytes": 34820,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "06_OL-T18_Expanding-Brackets",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/06_OL-T18_Expanding-Brackets_Solutions.pdf",
+      "sha256": "6084af0796d0b34d1833415d3f93511451cd8e46994d72e749b5a41f92f63202",
+      "bytes": 81608,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "06_OL-T18_Expanding-Brackets",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/07_OL-T19_Factorising_Student.pdf",
+      "sha256": "b3c0e9173f2f50a1e5283063ddfc3e2de62cc610957f7dff2e620667ef8c8d13",
+      "bytes": 18561,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "07_OL-T19_Factorising",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/07_OL-T19_Factorising_Solutions.pdf",
+      "sha256": "63b7aea1e10b022a7320f0203a3514e3223930c5a8693599f138deb99fdad447",
+      "bytes": 19711,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "07_OL-T19_Factorising",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/08_OL-T20_Completing-the-Square_Student.pdf",
+      "sha256": "ef19cd8c24dbbe430059491fd599e07bba3364012c47ba599d9392f9cceb557c",
+      "bytes": 112904,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "08_OL-T20_Completing-the-Square",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/08_OL-T20_Completing-the-Square_Solutions.pdf",
+      "sha256": "129fd93e22cc276932f3664fd9656a879cad1205f54e1cc84666adaf7991546b",
+      "bytes": 189969,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "08_OL-T20_Completing-the-Square",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/09_OL-T21_Algebraic-Fractions_Student.pdf",
+      "sha256": "88b97b9ce3f258c1ad9ae1b0e1c751e215e094bededdf386d051e51550236714",
+      "bytes": 199529,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "09_OL-T21_Algebraic-Fractions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/09_OL-T21_Algebraic-Fractions_Solutions.pdf",
+      "sha256": "6b55296f989f79d6d649b17e5d6ce1cfb140dd9a026a3ec3406d053634f97db2",
+      "bytes": 506165,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "09_OL-T21_Algebraic-Fractions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/10_OL-T31_Coordinate-Geometry_Student.pdf",
+      "sha256": "5b24b8a7a5012f3a2a8d526823ac44c1bdf99daf84a6520b1d2ae947df9d0caa",
+      "bytes": 426874,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "10_OL-T31_Coordinate-Geometry",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/10_OL-T31_Coordinate-Geometry_Solutions.pdf",
+      "sha256": "22b35e917ea0d7ddb9679c6d1d0391f5fd0feca187261a5a9b9dd8f1b109245a",
+      "bytes": 587649,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "10_OL-T31_Coordinate-Geometry",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/11_OL-T32_Linear-Graphs-y-mx-c_Student.pdf",
+      "sha256": "8aa5ea9b6ee94e64eefac88accd655efa70e85c6d03b66a812e9d755a1a60167",
+      "bytes": 131018,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "11_OL-T32_Linear-Graphs-y-mx-c",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/11_OL-T32_Linear-Graphs-y-mx-c_Solutions.pdf",
+      "sha256": "606e6ce3388077153f7cf736cfcde3dd997af7cbb25fa7787a11b463e7e4d0dd",
+      "bytes": 163676,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "11_OL-T32_Linear-Graphs-y-mx-c",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/12_OL-T33_Graphs-of-Functions_Student.pdf",
+      "sha256": "5c38ae49c2c899ce154730b26de003b78a9c49bcf877ebed3b66ec8f96960d60",
+      "bytes": 240872,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "12_OL-T33_Graphs-of-Functions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/12_OL-T33_Graphs-of-Functions_Solutions.pdf",
+      "sha256": "0583ddcc10f0a2c7df8bd0be0e2e3adf1e3526dbd769103c311e338bf716d62d",
+      "bytes": 364024,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "12_OL-T33_Graphs-of-Functions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/13_OL-T43_Area-Perimeter_Student.pdf",
+      "sha256": "05c84d4bb535521befe7f0112a9e7ea838fc93e39f09f5763ae0f41acbb12dca",
+      "bytes": 220587,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "13_OL-T43_Area-Perimeter",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/13_OL-T43_Area-Perimeter_Solutions.pdf",
+      "sha256": "d506f75fa1629cd3a320060ec229fd370023609911841a5562d6564eba2ddd66",
+      "bytes": 222748,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "13_OL-T43_Area-Perimeter",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/14_OL-T44_Circles-Arcs-Sectors_Student.pdf",
+      "sha256": "39c2d0833aebe544ba9ac532ddc6f3d27d50977dde7c18a4203b38b67a3d3d83",
+      "bytes": 851002,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "14_OL-T44_Circles-Arcs-Sectors",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/14_OL-T44_Circles-Arcs-Sectors_Solutions.pdf",
+      "sha256": "f0db97a6a6f064c60c3bf882c15f7154719da1c2f9627a65a68c3f0568ce1742",
+      "bytes": 1204401,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "14_OL-T44_Circles-Arcs-Sectors",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/15_OL-T49_Sine-Cosine-Rule-Area-of-Triangles_Student.pdf",
+      "sha256": "54f86317d0698d75ad81ae72fe10a2a719de527a7054d8242b262755dace0ca7",
+      "bytes": 644705,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "15_OL-T49_Sine-Cosine-Rule-Area-of-Triangles",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/15_OL-T49_Sine-Cosine-Rule-Area-of-Triangles_Solutions.pdf",
+      "sha256": "2a2802d0e4a02cc552bef5f71ed99fbcb226874cebf148921812fe091f9d448c",
+      "bytes": 905202,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "15_OL-T49_Sine-Cosine-Rule-Area-of-Triangles",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/16_OL-T50_3D-Pythagoras-Trigonometry_Student.pdf",
+      "sha256": "f78619aed1fc4ed01c866e216204f88f122eef195b80d1a228a17e1b0733c3fd",
+      "bytes": 575279,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "16_OL-T50_3D-Pythagoras-Trigonometry",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/16_OL-T50_3D-Pythagoras-Trigonometry_Solutions.pdf",
+      "sha256": "e193728123ff102a7106eeb612d7ad1ce8f0240041ea297b9ea139f625daeca1",
+      "bytes": 922090,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "16_OL-T50_3D-Pythagoras-Trigonometry",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/17_OL-T54_Histograms_Student.pdf",
+      "sha256": "7e35e8acc5714354874cc0ba6b2cd3f69caf0606c5ac299c54613c33758f557a",
+      "bytes": 442874,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "17_OL-T54_Histograms",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/17_OL-T54_Histograms_Solutions.pdf",
+      "sha256": "d02f87d63af9415f7277ccd7221cf690d95e16d1a4c92890254ac7c5a51f217a",
+      "bytes": 570422,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "17_OL-T54_Histograms",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/18_OL-T57_Probability-Diagrams-Venn-Tree-Diagrams_Student.pdf",
+      "sha256": "4225513cf2c8f131ae3b0a6ce8cbd36709095dbef7162b36b0faad5a6aae8b41",
+      "bytes": 621695,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "18_OL-T57_Probability-Diagrams-Venn-Tree-Diagrams",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/18_OL-T57_Probability-Diagrams-Venn-Tree-Diagrams_Solutions.pdf",
+      "sha256": "ba2a2f90b3a3f2f6b282d064d611f464b8b963ef58079120e27574612fe88a5a",
+      "bytes": 667161,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "18_OL-T57_Probability-Diagrams-Venn-Tree-Diagrams",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/19_OL-T58_Combined-Conditional-Probability_Student.pdf",
+      "sha256": "9608b3f2ff85227d3b62f2fb474b1b653bac8ed9115aa748a7540f748153ad48",
+      "bytes": 1464922,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "19_OL-T58_Combined-Conditional-Probability",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit1/ExpertiseTopics/19_OL-T58_Combined-Conditional-Probability_Solutions.pdf",
+      "sha256": "81572ed812455f1d8e2be61f6d4ad76d39d8e6a043a2f85bb09cdbcd9317a616",
+      "bytes": 1945152,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 1 Expertise",
+      "title": "19_OL-T58_Combined-Conditional-Probability",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/01_OL-T03_Prime-Factors-HCF-LCM_Student.pdf",
+      "sha256": "4cb7afe94ec1b64ca095a88f311877927fa7f682a56126936d3da5d55f1bf48b",
+      "bytes": 527683,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "01_OL-T03_Prime-Factors-HCF-LCM",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/01_OL-T03_Prime-Factors-HCF-LCM_Solutions.pdf",
+      "sha256": "5f510a98e3c0adbb330a282a8b6a204b01c5a8808795d74c2666a6fc407cdb13",
+      "bytes": 784794,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "01_OL-T03_Prime-Factors-HCF-LCM",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/02_OL-T04_Powers-Roots-Standard-Form_Student.pdf",
+      "sha256": "b4a0270132a982e340396e47eaed477a24e6f4654f3d8ad54f5881878e6a5ab3",
+      "bytes": 1108136,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "02_OL-T04_Powers-Roots-Standard-Form",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/02_OL-T04_Powers-Roots-Standard-Form_Solutions.pdf",
+      "sha256": "6d8a930a07aa449bcbb22be1778ea9b339ac8a1b99fac6b033b08f421960cb07",
+      "bytes": 1466598,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "02_OL-T04_Powers-Roots-Standard-Form",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/03_OL-T06_Percentages_Student.pdf",
+      "sha256": "6556e90e53db1dee26131a3935730028367113f601840704bd945e28e6dcb663",
+      "bytes": 2415521,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "03_OL-T06_Percentages",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/03_OL-T06_Percentages_Solutions.pdf",
+      "sha256": "aff7cf07f783362ce0f02e71cb8aa2deb345571daf4006e8276403a220ec2932",
+      "bytes": 2856573,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "03_OL-T06_Percentages",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/04_OL-T07_Compound-Interest-Depreciation_Student.pdf",
+      "sha256": "972ce5184abbaf763cbeee16836b3cff934ebf04b35cfd608a6c72003311d6e4",
+      "bytes": 1249632,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "04_OL-T07_Compound-Interest-Depreciation",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/04_OL-T07_Compound-Interest-Depreciation_Solutions.pdf",
+      "sha256": "3b44616c3a2f86ffd1a5371662a8847d35d979c609d2419d8a64565ecb75901a",
+      "bytes": 1784112,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "04_OL-T07_Compound-Interest-Depreciation",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/05_OL-T12_Ratio-Toolkit_Student.pdf",
+      "sha256": "8274b01bff2e33f5b461a02f27a2f43e8353f43d39c4918ff476131830e13d6c",
+      "bytes": 169886,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "05_OL-T12_Ratio-Toolkit",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/05_OL-T12_Ratio-Toolkit_Solutions.pdf",
+      "sha256": "92784256097ee34c316dc0d503f60c2eb5ec1aaa05edded805bd72e4079ddb1f",
+      "bytes": 226544,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "05_OL-T12_Ratio-Toolkit",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/06_OL-T13_Ratio-Problem-Solving_Student.pdf",
+      "sha256": "c5182cc1c6494cafa0b211192e8c0fbad701ff48788e41c6409f10892703056d",
+      "bytes": 946357,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "06_OL-T13_Ratio-Problem-Solving",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/06_OL-T13_Ratio-Problem-Solving_Solutions.pdf",
+      "sha256": "27835208b87c6e1de0e7ecdddb0c796652158042f969df303bab4f5460b41b8b",
+      "bytes": 1184323,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "06_OL-T13_Ratio-Problem-Solving",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/07_OL-T15_Direct-Inverse-Proportion_Student.pdf",
+      "sha256": "0562e0a8acc39495c3943a667b0f09861dcd6e629042b6de8b8c4d66d5e9fa8c",
+      "bytes": 584730,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "07_OL-T15_Direct-Inverse-Proportion",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/07_OL-T15_Direct-Inverse-Proportion_Solutions.pdf",
+      "sha256": "5e0aa66a6ff31897fddea2f653c25791e38c439f1e716612d768939fd2878848",
+      "bytes": 955773,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "07_OL-T15_Direct-Inverse-Proportion",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/08_OL-T16_Algebra-Toolkit_Student.pdf",
+      "sha256": "260938d27b83ae0adac12824cbe8c48832789fe755779c16ef08608965f10ab6",
+      "bytes": 199138,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "08_OL-T16_Algebra-Toolkit",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/08_OL-T16_Algebra-Toolkit_Solutions.pdf",
+      "sha256": "288c0c44a4d46a96ec7035f843b54ab1cf45d321b026778a31593d1c1141736c",
+      "bytes": 366645,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "08_OL-T16_Algebra-Toolkit",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/09_OL-T20_Completing-the-Square_Student.pdf",
+      "sha256": "86c7d95c8a5da65ed8c0bc5711422deefa813dd199422f58b6d559bec11ec010",
+      "bytes": 182275,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "09_OL-T20_Completing-the-Square",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/09_OL-T20_Completing-the-Square_Solutions.pdf",
+      "sha256": "e30fd0f7efe1ad2e547f50cede5d7138e96bc6a89602735ae83219831bfa7d71",
+      "bytes": 185796,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "09_OL-T20_Completing-the-Square",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/10_OL-T22_Rearranging-Formulas_Student.pdf",
+      "sha256": "e820fe8c1f440f76902cab62fa5700f30138807699ae1b64898a2bc55b6ff3ec",
+      "bytes": 229818,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "10_OL-T22_Rearranging-Formulas",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/10_OL-T22_Rearranging-Formulas_Solutions.pdf",
+      "sha256": "e44894f6d1ad6b15102439c2aeff13dba9ff7e5e61a0a9efa50e5c644bc71964",
+      "bytes": 370692,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "10_OL-T22_Rearranging-Formulas",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/11_OL-T23_Algebraic-Proof_Student.pdf",
+      "sha256": "e7278653342dba13c5ae417ada7ff77a2913e4704129929e44b1af522f2f7909",
+      "bytes": 554485,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "11_OL-T23_Algebraic-Proof",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/11_OL-T23_Algebraic-Proof_Solutions.pdf",
+      "sha256": "227a9e532fc329dc309cf61070f6e208c466ab28e253a003b472ab4c73c5fefc",
+      "bytes": 717331,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "11_OL-T23_Algebraic-Proof",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/12_OL-T26_Solving-Inequalities_Student.pdf",
+      "sha256": "0694e84f6d8f7c301922efa3be0b4446bfbbffd5eb81ebd219df699b1db90d66",
+      "bytes": 876306,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "12_OL-T26_Solving-Inequalities",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/12_OL-T26_Solving-Inequalities_Solutions.pdf",
+      "sha256": "d75f9fee350aea1d8f8ccd3012dd8f1eb4c03fff22d9ecf9efe2d2d1e00b73a6",
+      "bytes": 1781947,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "12_OL-T26_Solving-Inequalities",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/13_OL-T27_Simultaneous-Equations_Student.pdf",
+      "sha256": "ed77b10a677ad9b6ac92651a7f41f1b966e0ef8c5db138d86bf8a09a6c4a7d96",
+      "bytes": 1231625,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "13_OL-T27_Simultaneous-Equations",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/13_OL-T27_Simultaneous-Equations_Solutions.pdf",
+      "sha256": "52d0aa6f2032e62115970b3a9a68b96885b8572423ede56d9f587e89c76c3ea3",
+      "bytes": 2252775,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "13_OL-T27_Simultaneous-Equations",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/14_OL-T28_Forming-Solving-Equations_Student.pdf",
+      "sha256": "dffe4fec6b99a8e6ec66fbc96399393c739a23fb62e680f29e7646413a0c2684",
+      "bytes": 72547,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "14_OL-T28_Forming-Solving-Equations",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/14_OL-T28_Forming-Solving-Equations_Solutions.pdf",
+      "sha256": "0b82d2d78c740b3fd9719e7da4139afa20bbbd3b46309352ce0b8618f8a13b82",
+      "bytes": 73930,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "14_OL-T28_Forming-Solving-Equations",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/15_OL-T29_Sequences_Student.pdf",
+      "sha256": "9168d8f5521fb723726867d15c4d76e7f84d1952d80eca12bac5f9da83e8ede6",
+      "bytes": 1128449,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "15_OL-T29_Sequences",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/15_OL-T29_Sequences_Solutions.pdf",
+      "sha256": "7ae325f5d04fe2edbb5bb42e617b45f4a991688c2ab76a4f8b26d00b488f58ea",
+      "bytes": 1563517,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "15_OL-T29_Sequences",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/16_OL-T30_Functions_Student.pdf",
+      "sha256": "5e1258c101bf485926d13e8119316ee626bc1b544f26ef7bb75e7791ecff08a8",
+      "bytes": 1068341,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "16_OL-T30_Functions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/16_OL-T30_Functions_Solutions.pdf",
+      "sha256": "96641e7bd82c340e43098a9d27864631006b47d4e41519873cade8f03963d803",
+      "bytes": 1713025,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "16_OL-T30_Functions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/17_OL-T33_Graphs-of-Functions_Student.pdf",
+      "sha256": "5d77e5e7d7c29aa7c01f48d4d26df037f6660cb0b771c66e49b4e0efb835b191",
+      "bytes": 595327,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "17_OL-T33_Graphs-of-Functions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/17_OL-T33_Graphs-of-Functions_Solutions.pdf",
+      "sha256": "cbd39a0a63f641549c457d53818d465b4be3bc98d9cf9aecb99fd674461527b7",
+      "bytes": 802828,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "17_OL-T33_Graphs-of-Functions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/18_OL-T36_Graphing-Inequalities_Student.pdf",
+      "sha256": "21aa89891670c123e11be47bf1a7de15e9157aae0e996d073d1cdce2c3953759",
+      "bytes": 1297158,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "18_OL-T36_Graphing-Inequalities",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/18_OL-T36_Graphing-Inequalities_Solutions.pdf",
+      "sha256": "1e250b75f02f99fe1f125114412ffd1ee33207142aa17e26319a99f6e4662c18",
+      "bytes": 1679906,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "18_OL-T36_Graphing-Inequalities",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/19_OL-T37_Transformations-of-Graphs_Student.pdf",
+      "sha256": "018e75e2e34f3211c882028d48dc2798126c1c43724a713d25cc89c84b31fc67",
+      "bytes": 2023603,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "19_OL-T37_Transformations-of-Graphs",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/19_OL-T37_Transformations-of-Graphs_Solutions.pdf",
+      "sha256": "bb0dc441e4cf4a693d101b114123208d73117634958bbde761d53d4265e91939",
+      "bytes": 2373557,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "19_OL-T37_Transformations-of-Graphs",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/20_OL-T38_Differentiation_Student.pdf",
+      "sha256": "278d70291a91f5d43160e44f27463e37963639ffb5b28c69398215ee54959c1e",
+      "bytes": 1265643,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "20_OL-T38_Differentiation",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/20_OL-T38_Differentiation_Solutions.pdf",
+      "sha256": "29525971ba1e70ee702752c9a0172dd5c2a8da0b874fe832756bc8970af4181e",
+      "bytes": 1721218,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "20_OL-T38_Differentiation",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/21_OL-T39_Standard-Compound-Units_Student.pdf",
+      "sha256": "180024bc3217eb055cd930278b4c8bf04d3d416854d7ead0ab1e69a2848c5ae1",
+      "bytes": 179107,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "21_OL-T39_Standard-Compound-Units",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/21_OL-T39_Standard-Compound-Units_Solutions.pdf",
+      "sha256": "d75e175e75562a3d379b45c061fd47ca247dee8ea86aa8e67b17a89044aa1763",
+      "bytes": 181365,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "21_OL-T39_Standard-Compound-Units",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/22_OL-T40_Angles-in-Polygons-Parallel-Lines_Student.pdf",
+      "sha256": "6d72662236aba3be758f143cc08b0161dc77a9091ec49d40b18de38cbbd1aad4",
+      "bytes": 1102056,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "22_OL-T40_Angles-in-Polygons-Parallel-Lines",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/22_OL-T40_Angles-in-Polygons-Parallel-Lines_Solutions.pdf",
+      "sha256": "fd0f164dce760b68ffbdc0df9efaee4ee8c10d9f1a60da1431641a38ad1f9927",
+      "bytes": 1500196,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "22_OL-T40_Angles-in-Polygons-Parallel-Lines",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/23_OL-T41_Bearings-Scale-Drawing-Constructions_Student.pdf",
+      "sha256": "392e91824156dc8b93a5f608ecbc9841ffaab05edd33e3eeb070a85af9c04aba",
+      "bytes": 836187,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "23_OL-T41_Bearings-Scale-Drawing-Constructions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/23_OL-T41_Bearings-Scale-Drawing-Constructions_Solutions.pdf",
+      "sha256": "20b8631e34151a43b672f9baf95a40ba3c7c99134e815739087f01a54939f5c0",
+      "bytes": 1142900,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "23_OL-T41_Bearings-Scale-Drawing-Constructions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/24_OL-T42_Circle-Theorems_Student.pdf",
+      "sha256": "2dd76b29655df480c2337ff1e40efef43fe01491c492070b0c4fc23064e74319",
+      "bytes": 2073034,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "24_OL-T42_Circle-Theorems",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/24_OL-T42_Circle-Theorems_Solutions.pdf",
+      "sha256": "4334e7fb63f32d54b6473ef7a7cff502eec71324f8df3fe12a30572e7909771b",
+      "bytes": 2480770,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "24_OL-T42_Circle-Theorems",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/25_OL-T44_Circles-Arcs-Sectors_Student.pdf",
+      "sha256": "e542334d36da01a382e48451ab40a9e916efde161346553a2b9dd0844f12e76b",
+      "bytes": 123109,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "25_OL-T44_Circles-Arcs-Sectors",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/25_OL-T44_Circles-Arcs-Sectors_Solutions.pdf",
+      "sha256": "17007ba6d017df8f2dff433d54ad372f34890830b04e90cb13945a1721bb9232",
+      "bytes": 153662,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "25_OL-T44_Circles-Arcs-Sectors",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/26_OL-T45_Volume-Surface-Area_Student.pdf",
+      "sha256": "1e7c2ec87c976dcffaecde028fc2a2d7d4767521a1d210e536373e7192a6353a",
+      "bytes": 2376443,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "26_OL-T45_Volume-Surface-Area",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/26_OL-T45_Volume-Surface-Area_Solutions.pdf",
+      "sha256": "fe8fd7692d229f412474ab265427b6e3cbff9f61f22b68b0fb0e589a753a786d",
+      "bytes": 2759443,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "26_OL-T45_Volume-Surface-Area",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/27_OL-T46_Congruence-Similarity-Geometrical-Proof_Student.pdf",
+      "sha256": "a599647149a905b06cbf8617b847c7901368870be6c2477fab4354024f43b8bd",
+      "bytes": 731302,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "27_OL-T46_Congruence-Similarity-Geometrical-Proof",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/27_OL-T46_Congruence-Similarity-Geometrical-Proof_Solutions.pdf",
+      "sha256": "1fd4471d1460c021bb69a2958411b7913d5eaee1a8788ab06ca86108aede3aa7",
+      "bytes": 853926,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "27_OL-T46_Congruence-Similarity-Geometrical-Proof",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/28_OL-T47_Area-Volume-of-Similar-Shapes_Student.pdf",
+      "sha256": "371325d26a5102f1377ff9886a1ca431cb4d9b13a9c06c57f221186f901f8b91",
+      "bytes": 1333803,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "28_OL-T47_Area-Volume-of-Similar-Shapes",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/28_OL-T47_Area-Volume-of-Similar-Shapes_Solutions.pdf",
+      "sha256": "07bdc68222a57aa209e10aad869deceeb18221b2dc5adced6e0d67971d3bd52a",
+      "bytes": 1739800,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "28_OL-T47_Area-Volume-of-Similar-Shapes",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/29_OL-T51_Vectors_Student.pdf",
+      "sha256": "829a9127a471dce0138fb35f18340c846a0e7eab6fe3dbdd5fae143ad9085f91",
+      "bytes": 2223107,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "29_OL-T51_Vectors",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/29_OL-T51_Vectors_Solutions.pdf",
+      "sha256": "baf2d2962b291d698fa31d5b75c0d1fea70a1830c27237927ad73c88d4e3b0c5",
+      "bytes": 2810939,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "29_OL-T51_Vectors",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/30_OL-T52_Transformations_Student.pdf",
+      "sha256": "6a9146dd49184f6bb27390e89ee8551daed8b3f6a08bbeec69e4c2ff6ae4951f",
+      "bytes": 583870,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "30_OL-T52_Transformations",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/30_OL-T52_Transformations_Solutions.pdf",
+      "sha256": "59e7361b0952d1b1d245ff2ffdeb1ca212aed0627fb57b4cf57f0f7443984dd7",
+      "bytes": 720518,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "30_OL-T52_Transformations",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/31_OL-T53_Statistics-Toolkit_Student.pdf",
+      "sha256": "42ef0b799b08386546907b323f165312afe9e2957c80812ea282743c44050f3d",
+      "bytes": 3180306,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "31_OL-T53_Statistics-Toolkit",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/31_OL-T53_Statistics-Toolkit_Solutions.pdf",
+      "sha256": "c87dc2b8f39f4c76b4a696ee220cbe1a963b40258b8b36eedc6eaf28901e5315",
+      "bytes": 3871123,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "31_OL-T53_Statistics-Toolkit",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/32_OL-T55_Cumulative-Frequency-Diagrams_Student.pdf",
+      "sha256": "b673d5f1a4dace6c1f6c161a8c0abd9c9a0c528c851229e98cce055b270bce4a",
+      "bytes": 4369227,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "32_OL-T55_Cumulative-Frequency-Diagrams",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/Topics/32_OL-T55_Cumulative-Frequency-Diagrams_Solutions.pdf",
+      "sha256": "d446be08d48716544384849e9e5c3f35d9648e0b5171f0e8275cf5229b1525f9",
+      "bytes": 5345577,
+      "kind": "classified_topic_book",
+      "unit": "Unit 2",
+      "title": "32_OL-T55_Cumulative-Frequency-Diagrams",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/01_OL-T15_Direct-Inverse-Proportion_Student.pdf",
+      "sha256": "5403d6fa8976ab550b921c13863f98748625933bca1fc9413989cc62f9ad3494",
+      "bytes": 313892,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "01_OL-T15_Direct-Inverse-Proportion",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/01_OL-T15_Direct-Inverse-Proportion_Solutions.pdf",
+      "sha256": "c674a654a1ab6254d864341424ab45b6474005ef2a44a4b7758a1595ee996e4f",
+      "bytes": 432509,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "01_OL-T15_Direct-Inverse-Proportion",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/02_OL-T16_Algebra-Toolkit_Student.pdf",
+      "sha256": "203ec91b6c9f1708c457fc71cb098430e6630d64f5efb35d5e0d9e661d044fb0",
+      "bytes": 82759,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "02_OL-T16_Algebra-Toolkit",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/02_OL-T16_Algebra-Toolkit_Solutions.pdf",
+      "sha256": "2860065ca2177c8c057e3577f0ef9a8492c72b97c094d908c04a0382572ea86b",
+      "bytes": 145962,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "02_OL-T16_Algebra-Toolkit",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/03_OL-T20_Completing-the-Square_Student.pdf",
+      "sha256": "1f8c9bd32877a403708824ae24c05fcb2ff03bdf67085c025b90c1185e0b7dad",
+      "bytes": 182319,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "03_OL-T20_Completing-the-Square",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/03_OL-T20_Completing-the-Square_Solutions.pdf",
+      "sha256": "11e7ce8f5bdd295398e14192c673afc2ab22d7d982d61a36afab331f072a54e3",
+      "bytes": 185840,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "03_OL-T20_Completing-the-Square",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/04_OL-T22_Rearranging-Formulas_Student.pdf",
+      "sha256": "3bb9260ea9b320474e4a8846ea5aa8a45a76cb2907668e1d2f7695c9dfe60365",
+      "bytes": 65942,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "04_OL-T22_Rearranging-Formulas",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/04_OL-T22_Rearranging-Formulas_Solutions.pdf",
+      "sha256": "f47cba8c6b4bbde7b5780d3fb20c403f40e41b958a8d0a3c6e4d1a932678da38",
+      "bytes": 97961,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "04_OL-T22_Rearranging-Formulas",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/05_OL-T23_Algebraic-Proof_Student.pdf",
+      "sha256": "c2d00d2cb0f9f4b37a991dadad2c38c567c285eb28f9e8a4f19391a5a349e83f",
+      "bytes": 393672,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "05_OL-T23_Algebraic-Proof",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/05_OL-T23_Algebraic-Proof_Solutions.pdf",
+      "sha256": "b093e5e5a0c6941a5c52d904ae66db0ce671a6f35b9bca87b4ec2a08c5c83e51",
+      "bytes": 547971,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "05_OL-T23_Algebraic-Proof",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/06_OL-T26_Solving-Inequalities_Student.pdf",
+      "sha256": "a0448a7d8792dcf346a8f98fc0858c70917b12e99fee2d0cef85c510cdeaa4ff",
+      "bytes": 253263,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "06_OL-T26_Solving-Inequalities",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/06_OL-T26_Solving-Inequalities_Solutions.pdf",
+      "sha256": "b07c539ed611647b729570e6c15710b491d4222e41d94362a6ba9949f7fb6208",
+      "bytes": 619252,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "06_OL-T26_Solving-Inequalities",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/07_OL-T27_Simultaneous-Equations_Student.pdf",
+      "sha256": "b45b2ec19c181c42334b7bafd52b6f2f46a714fa77e74fc6e2ae91f641e6bd39",
+      "bytes": 281663,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "07_OL-T27_Simultaneous-Equations",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/07_OL-T27_Simultaneous-Equations_Solutions.pdf",
+      "sha256": "ce5b962bd85abcc2e1310b74358ad82b0d1ccb7029cf3a81d4555d21f8070c2a",
+      "bytes": 827272,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "07_OL-T27_Simultaneous-Equations",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/08_OL-T29_Sequences_Student.pdf",
+      "sha256": "a72a26ac2b71045a9054f886106c0263575dd563ab6135624bd66dbcff3effa4",
+      "bytes": 358791,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "08_OL-T29_Sequences",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/08_OL-T29_Sequences_Solutions.pdf",
+      "sha256": "72f88fa7eebe0002450adc564c7881759e2f897cafa45b59cc3f455b18db9c42",
+      "bytes": 632967,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "08_OL-T29_Sequences",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/09_OL-T30_Functions_Student.pdf",
+      "sha256": "ac5c0aaee9e9aa8f337bf2fa1c0efed8590f78f309522205e657003a9a50a92e",
+      "bytes": 340540,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "09_OL-T30_Functions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/09_OL-T30_Functions_Solutions.pdf",
+      "sha256": "311dc37e667b3f6b9ab133f2d765e6deaf5afc95c08f94b072a933a610672a27",
+      "bytes": 526414,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "09_OL-T30_Functions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/10_OL-T33_Graphs-of-Functions_Student.pdf",
+      "sha256": "a765d9adeb82e86f55f24ba9501fab8ae7d7972f7a96fa152f60e687b50f7c27",
+      "bytes": 306060,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "10_OL-T33_Graphs-of-Functions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/10_OL-T33_Graphs-of-Functions_Solutions.pdf",
+      "sha256": "a82bfde414bb1f90538fdc2613f6fb3f6236e4932fad608ae4d2ae70e6f02a4e",
+      "bytes": 524418,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "10_OL-T33_Graphs-of-Functions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/11_OL-T37_Transformations-of-Graphs_Student.pdf",
+      "sha256": "eff8e1f469f12aa05e156f52ea68d3d3a05ff2aa84bd66f02a6165947daa488c",
+      "bytes": 555819,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "11_OL-T37_Transformations-of-Graphs",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/11_OL-T37_Transformations-of-Graphs_Solutions.pdf",
+      "sha256": "cfc0059b8190da59433976a314f9dcacee48fc646596068491fe8775642999e0",
+      "bytes": 672278,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "11_OL-T37_Transformations-of-Graphs",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/12_OL-T38_Differentiation_Student.pdf",
+      "sha256": "1b01ea333a8cbd68c8e888d4dc9c75a7b4e4ef4706caf32193f62c0ca0606629",
+      "bytes": 544713,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "12_OL-T38_Differentiation",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/12_OL-T38_Differentiation_Solutions.pdf",
+      "sha256": "da654aa226fe574242558b74dcca40bfde96364b9b345698e751d22f242c6b1a",
+      "bytes": 962919,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "12_OL-T38_Differentiation",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/13_OL-T40_Angles-in-Polygons-Parallel-Lines_Student.pdf",
+      "sha256": "a127cdedfd61d1852a6d2b6ee49551753571bcb3aa8f5f06c66b2a3084cf16d1",
+      "bytes": 107185,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "13_OL-T40_Angles-in-Polygons-Parallel-Lines",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/13_OL-T40_Angles-in-Polygons-Parallel-Lines_Solutions.pdf",
+      "sha256": "95ceafd81439c87438f5c00a685d1c6d3021e833040da25b951fb0659d7b3faa",
+      "bytes": 153025,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "13_OL-T40_Angles-in-Polygons-Parallel-Lines",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/14_OL-T41_Bearings-Scale-Drawing-Constructions_Student.pdf",
+      "sha256": "67e85e57eaaff129ed3502ee2387d4d80f0b79b3c9abd8ab7b74b455dbcf347e",
+      "bytes": 398348,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "14_OL-T41_Bearings-Scale-Drawing-Constructions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/14_OL-T41_Bearings-Scale-Drawing-Constructions_Solutions.pdf",
+      "sha256": "15b5a71a86ad4bb1fc9ee80d88c47f2db713a357a64f760d256028d5a2e028a3",
+      "bytes": 545765,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "14_OL-T41_Bearings-Scale-Drawing-Constructions",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/15_OL-T42_Circle-Theorems_Student.pdf",
+      "sha256": "4ee23666fbeb80ee0d4fa2a6261add59a2cb6ba10dd349e612108a4a687509b4",
+      "bytes": 412230,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "15_OL-T42_Circle-Theorems",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/15_OL-T42_Circle-Theorems_Solutions.pdf",
+      "sha256": "3f198f96afe3b622c24cb80c00f542dd16f85e044de622ca5b46ca58d86b7f2c",
+      "bytes": 592199,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "15_OL-T42_Circle-Theorems",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/16_OL-T45_Volume-Surface-Area_Student.pdf",
+      "sha256": "46afd83bba0454de4311559dc7421c7be6aa7a40b2afc2dfc8a4330ef757f144",
+      "bytes": 868309,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "16_OL-T45_Volume-Surface-Area",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/16_OL-T45_Volume-Surface-Area_Solutions.pdf",
+      "sha256": "6048d2d02d3734951198bb4136b4856482569d29ad33c492a71ab6acd79a6b47",
+      "bytes": 1057238,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "16_OL-T45_Volume-Surface-Area",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/17_OL-T47_Area-Volume-of-Similar-Shapes_Student.pdf",
+      "sha256": "3bd781300bba7948a4cbc34ecc62d34e197c05fb838dc769c3dae8ad746f6256",
+      "bytes": 563148,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "17_OL-T47_Area-Volume-of-Similar-Shapes",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/17_OL-T47_Area-Volume-of-Similar-Shapes_Solutions.pdf",
+      "sha256": "153240abc49fac8afd1ed41e771a54b99fe47c988c9fa2f47ca794d04470ffd5",
+      "bytes": 912137,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "17_OL-T47_Area-Volume-of-Similar-Shapes",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/18_OL-T51_Vectors_Student.pdf",
+      "sha256": "52a555cc752b95dcd1f897799f03bd5c35549eb2f9af7c98bdb355fdbeee5f36",
+      "bytes": 1240997,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "18_OL-T51_Vectors",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/Unit2/ExpertiseTopics/18_OL-T51_Vectors_Solutions.pdf",
+      "sha256": "dda11afbec7bb30b3a8688733fd7a4cab26f50426ca42f4965d509e5f13e1d72",
+      "bytes": 1830204,
+      "kind": "expertise_topic_book",
+      "unit": "Unit 2 Expertise",
+      "title": "18_OL-T51_Vectors",
+      "session": "",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/June-2025/June_2025_Modular_Unit_1_Reconstructed_Solutions.pdf",
+      "sha256": "28d0babec906418133a8cc5faa232f2c384121d5b3c38cc3990ceaaf8b1526fb",
+      "bytes": 2645876,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 1",
+      "title": "June 2025 Unit 1 Solutions",
+      "session": "June 2025",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/June-2025/June_2025_Modular_Unit_1_Reconstructed_Student.pdf",
+      "sha256": "c713b4015315159a33f2b62bbfc17ade485da0488be14f91102b3f0a434b2085",
+      "bytes": 2404889,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 1",
+      "title": "June 2025 Unit 1 Student",
+      "session": "June 2025",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/June-2025/June_2025_Modular_Unit_2_Reconstructed_Solutions.pdf",
+      "sha256": "a0f6bcb76d4b902aa512d2544f843df9ba3633212f0d0ee7d6b592bfd58cd3e1",
+      "bytes": 2858363,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 2",
+      "title": "June 2025 Unit 2 Solutions",
+      "session": "June 2025",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/June-2025/June_2025_Modular_Unit_2_Reconstructed_Student.pdf",
+      "sha256": "e43bd57d1bc7bf4cdf67bf67d89265386b50fb60d8af0834f09b0fb6067b12d0",
+      "bytes": 2657725,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 2",
+      "title": "June 2025 Unit 2 Student",
+      "session": "June 2025",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/June-2024/June_2024_Modular_Unit_1_Solutions.pdf",
+      "sha256": "93e11425d9aa9d7f3025fcf058bf828e1784bb6cf687eb2fd43e83b097f7de3e",
+      "bytes": 2175201,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 1",
+      "title": "June 2024 Unit 1 Solutions",
+      "session": "June 2024",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/June-2024/June_2024_Modular_Unit_1_Student.pdf",
+      "sha256": "6be14dd1522b659b2ee345f6da45c839ebaa40525a2264d85e0e7e8c19b8963d",
+      "bytes": 2092248,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 1",
+      "title": "June 2024 Unit 1 Student",
+      "session": "June 2024",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/June-2024/June_2024_Modular_Unit_2_Solutions.pdf",
+      "sha256": "c4d13ea554f7208b9253c2c06c6665570876c69baf349512199183ba1d07ee1f",
+      "bytes": 2372899,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 2",
+      "title": "June 2024 Unit 2 Solutions",
+      "session": "June 2024",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/June-2024/June_2024_Modular_Unit_2_Student.pdf",
+      "sha256": "0e963842ea0c623ef216a5bbd82eb839bbb055c71c5445e155e93d708387dabe",
+      "bytes": 2289873,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 2",
+      "title": "June 2024 Unit 2 Student",
+      "session": "June 2024",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/November-2023/November_2023_Modular_Unit_1_Solutions.pdf",
+      "sha256": "d03506e9480e8d84ea73d0b87de0f7683a6b280e45acdadf6952a4e917ee8055",
+      "bytes": 2215099,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 1",
+      "title": "November 2023 Unit 1 Solutions",
+      "session": "November 2023",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/November-2023/November_2023_Modular_Unit_1_Student.pdf",
+      "sha256": "b5a1a813683febd7af0dcaeb611cfc84e36bfce32253b85bf7881d71d9f73e39",
+      "bytes": 2126173,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 1",
+      "title": "November 2023 Unit 1 Student",
+      "session": "November 2023",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/November-2023/November_2023_Modular_Unit_2_Solutions.pdf",
+      "sha256": "5855033b8e99d448da481e03198a466410b2c57cb6a36b78a36f945c155eaead",
+      "bytes": 2892672,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 2",
+      "title": "November 2023 Unit 2 Solutions",
+      "session": "November 2023",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/November-2023/November_2023_Modular_Unit_2_Student.pdf",
+      "sha256": "2089e02c3aa54be8044b08b430d0768e991dcf1bff4f89b779ee6fd3a351e689",
+      "bytes": 2784949,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 2",
+      "title": "November 2023 Unit 2 Student",
+      "session": "November 2023",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/June-2023/June_2023_Modular_Unit_1_Solutions.pdf",
+      "sha256": "0c1035798c9f3ccbb5ee7663bc61633b81cdc566e0bdff60b51c3192e5949a45",
+      "bytes": 2228867,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 1",
+      "title": "June 2023 Unit 1 Solutions",
+      "session": "June 2023",
+      "status": "reviewed-corrected"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/June-2023/June_2023_Modular_Unit_1_Student.pdf",
+      "sha256": "7b44421b65ed836b360bd807388248a62fd86c86bb26ee186600537e4b0f5f14",
+      "bytes": 2134013,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 1",
+      "title": "June 2023 Unit 1 Student",
+      "session": "June 2023",
+      "status": "reviewed-corrected"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/June-2023/June_2023_Modular_Unit_2_Solutions.pdf",
+      "sha256": "188d44dd8a8a53baf140c45ac623ccdeec69f276bc2913239ec7cff010e3b52b",
+      "bytes": 2473391,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 2",
+      "title": "June 2023 Unit 2 Solutions",
+      "session": "June 2023",
+      "status": "reviewed-corrected"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/June-2023/June_2023_Modular_Unit_2_Student.pdf",
+      "sha256": "35a0bdd76c93d13e1992117e07710cd28dc7644e8caae380f79b13bcdd57c8f2",
+      "bytes": 2391917,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 2",
+      "title": "June 2023 Unit 2 Student",
+      "session": "June 2023",
+      "status": "reviewed-corrected"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/November-2024/November_2024_Modular_Unit_1_Solutions.pdf",
+      "sha256": "d65f73cb6cfd10020e9fc1fa183462a21cfbe75284e47be8ca6d621d36e69ace",
+      "bytes": 1974152,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 1",
+      "title": "November 2024 Unit 1 Solutions",
+      "session": "November 2024",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/November-2024/November_2024_Modular_Unit_1_Student.pdf",
+      "sha256": "832919dfdb5cd83efa53fd496f6afb33a1e630aa5f28f9a87859eb74a41140b1",
+      "bytes": 1827043,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 1",
+      "title": "November 2024 Unit 1 Student",
+      "session": "November 2024",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/November-2024/November_2024_Modular_Unit_2_Solutions.pdf",
+      "sha256": "b88d60b646020bd1cb3530258c9dfc4cb4bd8aba98de436fa03962c05887f622",
+      "bytes": 2922730,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 2",
+      "title": "November 2024 Unit 2 Solutions",
+      "session": "November 2024",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/November-2024/November_2024_Modular_Unit_2_Student.pdf",
+      "sha256": "99688519dfceb12d04488fb5039571019784d5218d7de9e00ea49cac5df36524",
+      "bytes": 2731491,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 2",
+      "title": "November 2024 Unit 2 Student",
+      "session": "November 2024",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/June-2022/June_2022_Modular_Unit_1_Solutions.pdf",
+      "sha256": "e5f84e7d14781042276eed5c42c5405720fb1693b8f7ce12752780f2c04ce3d7",
+      "bytes": 2503566,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 1",
+      "title": "June 2022 Unit 1 Solutions",
+      "session": "June 2022",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/June-2022/June_2022_Modular_Unit_1_Student.pdf",
+      "sha256": "c27c93d2a3ab113be99a5f1b89cbb264c3116b60b8f1ac1465c61e8fce29a808",
+      "bytes": 2111150,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 1",
+      "title": "June 2022 Unit 1 Student",
+      "session": "June 2022",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/June-2022/June_2022_Modular_Unit_2_Solutions.pdf",
+      "sha256": "daf818985f32fa3cc3cc4b918f53b77b6e86baf16f92e26bec3bece70783d36b",
+      "bytes": 2774914,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 2",
+      "title": "June 2022 Unit 2 Solutions",
+      "session": "June 2022",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/June-2022/June_2022_Modular_Unit_2_Student.pdf",
+      "sha256": "b5f132a2cf7233538ead6da9237d733d3b7d9fa1592e48b444c2ed654ab65673",
+      "bytes": 2529014,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 2",
+      "title": "June 2022 Unit 2 Student",
+      "session": "June 2022",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/January-2022/January_2022_Modular_Unit_1_Solutions.pdf",
+      "sha256": "c014d677426da363c8616e2dbf8cbc7efc06a0460e3b5165c845cfbff7cc3767",
+      "bytes": 2057234,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 1",
+      "title": "January 2022 Unit 1 Solutions",
+      "session": "January 2022",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/January-2022/January_2022_Modular_Unit_1_Student.pdf",
+      "sha256": "627575a3eff421b8c797a4e74aa41b82fe7f4219a6958302d1591ade8e76384e",
+      "bytes": 1805681,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 1",
+      "title": "January 2022 Unit 1 Student",
+      "session": "January 2022",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/January-2022/January_2022_Modular_Unit_2_Solutions.pdf",
+      "sha256": "49502a2c1a7c557b16ecf8756d1b5408603d8287ae9a59c35787a35f1779f03c",
+      "bytes": 3287777,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 2",
+      "title": "January 2022 Unit 2 Solutions",
+      "session": "January 2022",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/January-2022/January_2022_Modular_Unit_2_Student.pdf",
+      "sha256": "4e22f7f6ab546dc03babfe2188b06f5a45a7b2cd4bae81aaf1a9518c2d692e46",
+      "bytes": 2948544,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 2",
+      "title": "January 2022 Unit 2 Student",
+      "session": "January 2022",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/May-November-2020/12_May-Nov_2020_v7_Modular_Unit_1_Solutions.pdf",
+      "sha256": "08c968af810c28883e6c83cf334e9ab8535613beced10c414dd8ef58bbdae186",
+      "bytes": 2731077,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 1",
+      "title": "May-November 2020 Unit 1 Solutions",
+      "session": "May-November 2020",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/May-November-2020/12_May-Nov_2020_v7_Modular_Unit_1_Student.pdf",
+      "sha256": "518d7b2216e9adace98e7510896d8033987058383cb7f84499eeed307c85fd8e",
+      "bytes": 1900547,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 1",
+      "title": "May-November 2020 Unit 1 Student",
+      "session": "May-November 2020",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/May-November-2020/12_May-Nov_2020_v7_Modular_Unit_2_Solutions.pdf",
+      "sha256": "84ec51fe2b07537e7c4a4e9558761161d8826e08980682510828c58e89f7e253",
+      "bytes": 3591131,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 2",
+      "title": "May-November 2020 Unit 2 Solutions",
+      "session": "May-November 2020",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/May-November-2020/12_May-Nov_2020_v7_Modular_Unit_2_Student.pdf",
+      "sha256": "8897e9d6d0ba28b4e79580799c64be1a972e0a847475795d709d06857069e888",
+      "bytes": 2150131,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 2",
+      "title": "May-November 2020 Unit 2 Student",
+      "session": "May-November 2020",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/January-2023/13_January_2023_v7_Modular_Unit_1_Solutions.pdf",
+      "sha256": "f4ed208f2a30e1e3ff95dfb64801fc7c0cfe8a26c26176d27619b1cbfaa28892",
+      "bytes": 5496078,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 1",
+      "title": "January 2023 Unit 1 Solutions",
+      "session": "January 2023",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/January-2023/13_January_2023_v7_Modular_Unit_1_Student.pdf",
+      "sha256": "da047e9ac9f76a7c6f844a6cf833ea965fe0279adb300eba1c08ac2102fa01b8",
+      "bytes": 2457683,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 1",
+      "title": "January 2023 Unit 1 Student",
+      "session": "January 2023",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/January-2023/13_January_2023_v7_Modular_Unit_2_Solutions.pdf",
+      "sha256": "c9c2cec8a72e9f3d9cf78593e4df08026ed51b1612e546cec814401abd201ae8",
+      "bytes": 5577181,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 2",
+      "title": "January 2023 Unit 2 Solutions",
+      "session": "January 2023",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/January-2023/13_January_2023_v7_Modular_Unit_2_Student.pdf",
+      "sha256": "4ab13930df8dd79ac8407efe355a1d4927ef85cedc1ebf10e5e0026475a0d250",
+      "bytes": 2447521,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 2",
+      "title": "January 2023 Unit 2 Student",
+      "session": "January 2023",
+      "status": "reviewed"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/November-2025-Reviewed-Provisional/14_November_2025_provisional_v7_Modular_Unit_1_Solutions.pdf",
+      "sha256": "e72fa7bc97007945067a01a5a27de1a0c00421b033dc66f2f7d9e2cfd50fed08",
+      "bytes": 2123677,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 1",
+      "title": "November 2025 Unit 1 Solutions",
+      "session": "November 2025",
+      "status": "reviewed-provisional"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/November-2025-Reviewed-Provisional/14_November_2025_provisional_v7_Modular_Unit_1_Student.pdf",
+      "sha256": "7a410875d564f621445bf7c14e8516e1b02448cc4ef9fe7bb09782e9abe78295",
+      "bytes": 2089598,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 1",
+      "title": "November 2025 Unit 1 Student",
+      "session": "November 2025",
+      "status": "reviewed-provisional"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/November-2025-Reviewed-Provisional/14_November_2025_provisional_v7_Modular_Unit_2_Solutions.pdf",
+      "sha256": "be852c70adb55cfcf86e839c75dcb3b9a95b4b3eaffb2ac32fd620d73fa84f34",
+      "bytes": 2671904,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 2",
+      "title": "November 2025 Unit 2 Solutions",
+      "session": "November 2025",
+      "status": "reviewed-provisional"
+    },
+    {
+      "path": "downloads/Modular/20260824/PastPapers/November-2025-Reviewed-Provisional/14_November_2025_provisional_v7_Modular_Unit_2_Student.pdf",
+      "sha256": "e2ef4063631745d2eac77fb31d1fa429c9ba312a17d6aa24680fdac1cbf9ecf5",
+      "bytes": 2628740,
+      "kind": "reconstructed_past_paper_book",
+      "unit": "Unit 2",
+      "title": "November 2025 Unit 2 Student",
+      "session": "November 2025",
+      "status": "reviewed-provisional"
+    }
+  ],
+  "public_disclosure": "November 2025 entries are reviewed provisional teaching editions; no official Pearson mark scheme is represented."
+}

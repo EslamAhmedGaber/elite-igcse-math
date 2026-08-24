@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modular 4WM Books | Elite IGCSE Mathematics</title>
+  <meta name="description" content="Updated Elite IGCSE Modular 4WM1 and 4WM2 classified, expertise, per-topic, and reviewed past-paper books.">
+  <meta name="theme-color" content="#06162c">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="pathway-bootstrap.js?v=20260613a"></script>
+  <link rel="stylesheet" href="styles.css?v=20260809a">
+  <link rel="stylesheet" href="elite-system.css?v=20260822a">
+  <link rel="stylesheet" href="modular-release.css?v=20260824b">
+  <script defer src="pathway-mode.js?v=20260527a"></script>
+  <script defer src="course-modules.js?v=20260824b"></script>
+  <script defer src="lead.js?v=20260822a"></script>
+  <script defer src="modular-books.js?v=20260824b"></script>
+</head>
+<body data-page="modular-books">
+  <header class="site-header">
+    <a class="site-brand" href="index.html" aria-label="Elite IGCSE Mathematics home">
+      <span class="brand-mark">IGCSE</span>
+      <span class="brand-title">Elite IGCSE Mathematics</span>
+    </a>
+    <button id="navToggle" class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav pathway-tabs" aria-label="Main">
+      <div class="nav-group nav-group-linear"><a class="nav-tab-main" href="practice.html?pathway=linear"><span>Linear</span><small>4MA1 route</small></a></div>
+      <div class="nav-group nav-group-modular"><a class="nav-tab-main" href="practice.html?pathway=modular&unit=Unit+1"><span>Modular</span><small>4WM route</small></a></div>
+      <div class="nav-group nav-group-pure"><a class="nav-tab-main" href="ial/wma11/index.html"><span>IAL Pure 1</span><small>WMA11</small></a></div>
+      <div class="nav-group nav-group-about"><a class="nav-tab-main" href="about.html"><span>About</span><small>Dr Eslam</small></a></div>
+    </nav>
+    <div class="site-cta">
+      <a class="button light" href="downloads.html?pathway=modular">Download Centre</a>
+      <a class="button primary" data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Book Free First Class</a>
+    </div>
+  </header>
+
+  <main class="page modular-release-page">
+    <section class="modular-release-hero">
+      <span class="eyebrow">Modular 4WM | Release 24 August 2026</span>
+      <h1>Modular books, arranged for the way you revise.</h1>
+      <p>Updated Unit 1 and Unit 2 Classified banks, topic-by-topic books, Q16+ Expertise, and reviewed reconstructed past-paper books in one clear library.</p>
+      <div class="modular-release-stats" aria-label="Release summary">
+        <div class="modular-release-stat"><strong>417</strong><span>Unit 1 Classified questions</span></div>
+        <div class="modular-release-stat"><strong>441</strong><span>Unit 2 Classified questions</span></div>
+        <div class="modular-release-stat"><strong>149</strong><span>Expertise questions</span></div>
+        <div class="modular-release-stat"><strong>10</strong><span>Reviewed paper sessions</span></div>
+      </div>
+    </section>
+
+    <section class="modular-release-controls" aria-label="Filter Modular books">
+      <label>Search books or topics<input type="search" data-release-search placeholder="e.g. vectors, Unit 1, November 2025" autocomplete="off"></label>
+      <label>Unit<select data-release-unit><option value="">All units</option><option value="Unit 1">Unit 1 / 4WM1</option><option value="Unit 2">Unit 2 / 4WM2</option></select></label>
+      <label>Resource<select data-release-kind><option value="">All resources</option><option value="classified">Classified</option><option value="expertise">Expertise</option><option value="papers">Past-paper books</option></select></label>
+      <button class="button light" type="button" data-release-reset>Reset</button>
+    </section>
+    <p class="modular-release-result" data-release-result aria-live="polite">Loading the updated library...</p>
+
+    <section class="modular-release-section" id="core-books" aria-labelledby="coreBooksTitle">
+      <div class="modular-release-section-head"><div><span class="eyebrow">Start here</span><h2 id="coreBooksTitle">Complete Classified and Expertise books</h2><p>Each question book is paired with its matching worked-solution book.</p></div></div>
+      <div class="modular-release-grid" data-release-core></div>
+    </section>
+
+    <section class="modular-release-section" id="topic-books" aria-labelledby="topicBooksTitle">
+      <div class="modular-release-section-head"><div><span class="eyebrow">Topic library</span><h2 id="topicBooksTitle">Classified per Topic</h2><p>Open a focused topic book when you want one skill family at a time.</p></div></div>
+      <div data-release-topics></div>
+    </section>
+
+    <section class="modular-release-section" id="expertise-topic-books" aria-labelledby="expertiseTopicBooksTitle">
+      <div class="modular-release-section-head"><div><span class="eyebrow">Challenge route</span><h2 id="expertiseTopicBooksTitle">Expertise per Topic</h2><p>Harder Q16+ topic books for deliberate exam finishing practice.</p></div></div>
+      <div data-release-expertise-topics></div>
+    </section>
+
+    <section class="modular-release-section" id="paper-books" aria-labelledby="paperBooksTitle">
+      <div class="modular-release-section-head"><div><span class="eyebrow">Past-paper books</span><h2 id="paperBooksTitle">Reviewed reconstructed sessions</h2><p>Student workbooks and matching solution books, separated by unit and session. Every row marked <strong>L→M</strong> is converted from Linear Higher papers for Modular practice, not an original Modular examination paper.</p></div></div>
+      <div data-release-papers></div>
+      <p class="modular-release-disclosure" id="november-2025"><strong>November 2025:</strong> this Unit 1 and Unit 2 release is labelled <strong>Reviewed Provisional · L→M</strong>. It was reviewed by Dr Eslam Ahmed, converted from Linear Higher papers, and is a teaching edition, not an official Pearson paper or mark scheme.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div><span class="footer-brand-line">Elite IGCSE Academy</span><p class="footer-brand-tagline">Past-paper mastery, classified by topic.</p><p class="footer-brand-blurb">Edexcel IGCSE Mathematics and live online tutoring prepared by Dr Eslam Ahmed, Cairo University Faculty of Engineering.</p></div>
+      <div><strong>Pathways</strong><p><a href="practice.html?pathway=linear&bank=all">Linear · 4MA1</a></p><p><a href="practice.html?pathway=modular&choose=unit">Modular · 4WM</a></p><p><a href="ial/wma11/index.html">IAL Pure 1 · WMA11</a></p></div>
+      <div><strong>Modules</strong><p><a href="practice.html?pathway=modular&unit=Unit+1&bank=all">Classified</a></p><p><a href="exam.html?pathway=modular">Build Test</a></p><p><a href="progress.html?pathway=modular">Progress</a></p><p><a href="pastpapers.html?pathway=modular">Past Papers</a></p></div>
+      <div><strong>Connect</strong><p><a href="https://wa.me/201120009622" data-lead-trigger="whatsapp">WhatsApp · +20 112 000 9622</a></p><p><a href="about.html">About Dr Eslam</a></p></div>
+    </div>
+    <p class="footer-fineprint">© Dr Eslam Ahmed · Cairo University Faculty of Engineering · Elite Modular 4WM books.</p>
+  </footer>
+  <nav class="mobile-bottom-nav" aria-label="Student shortcuts"><a href="practice.html?pathway=modular&unit=Unit+1&bank=all">Classified</a><a href="pastpapers.html?pathway=modular">Papers</a><a href="exam.html?pathway=modular">Mocks</a><a data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Enroll</a></nav>
+</body>
+</html>

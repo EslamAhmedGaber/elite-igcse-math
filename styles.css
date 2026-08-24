@@ -8723,6 +8723,23 @@ body.pathway-unset .site-header .site-cta {
   min-width: 130px;
   font-weight: 800;
 }
+.pp-session-origin {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 4px 8px;
+  border: 1px solid rgba(17, 126, 132, 0.24);
+  border-radius: 999px;
+  color: #117e84;
+  background: rgba(17, 126, 132, 0.08);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.pp-session-converted {
+  border-left-color: #117e84;
+  background: rgba(17, 126, 132, 0.035);
+}
 
 .pp-paper {
   display: inline-flex;
@@ -8747,6 +8764,38 @@ body.pathway-unset .site-header .site-cta {
   padding: 2px 6px;
   border-radius: 4px;
   letter-spacing: 0.08em;
+}
+.pp-paper.converted {
+  border-style: dashed;
+  border-color: rgba(17, 126, 132, 0.46);
+  background: rgba(17, 126, 132, 0.06);
+}
+.pp-paper.converted::before {
+  content: 'L→M';
+  color: #117e84;
+  background: rgba(17, 126, 132, 0.13);
+}
+.pp-paper.converted.solution {
+  border-color: rgba(174, 111, 12, 0.58);
+  background: rgba(174, 111, 12, 0.1);
+}
+.pp-paper.converted.solution::before {
+  color: #a56a0d;
+  background: rgba(174, 111, 12, 0.16);
+}
+.pp-paper-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 5px;
+  border-radius: 4px;
+  color: #117e84;
+  background: rgba(17, 126, 132, 0.11);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+}
+.pp-paper.converted.solution .pp-paper-badge {
+  color: #a56a0d;
+  background: rgba(174, 111, 12, 0.15);
 }
 .pp-paper:hover {
   transform: translateY(-1px);
