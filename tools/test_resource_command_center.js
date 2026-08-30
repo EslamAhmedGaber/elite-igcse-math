@@ -51,7 +51,11 @@ assert(downloads.includes("data-book-finder"), "Book Finder mount is missing");
 assert(pastPapers.includes("data-paper-finder"), "Paper Finder mount is missing");
 assert(renderers.includes("function initBookFinder("), "Book Finder controller is missing");
 assert(renderers.includes("function initPastPaperFinder("), "Paper Finder controller is missing");
-assert(renderers.includes('selectedCourse = groups[0]?.id || ""'), "Resource finders must open on a focused course");
+assert(renderers.includes('if (selectedCourse && !groups.some((group) => group.id === selectedCourse)) selectedCourse = ""'), "Paper Finder must keep an unknown course on All courses");
+assert((renderers.match(/if \(selectedCourse && !groups\.some\(\(group\) => group\.id === selectedCourse\)\) selectedCourse = ""/g) || []).length >= 2, "Book and Paper finders must keep an unknown course on All courses");
+assert(renderers.includes('wma12: "pure2"'), "Pure 2 paper filter must map to the pure2 registry group");
+assert(renderers.includes('wme01: "mechanics1"'), "Mechanics 1 paper filter must map to the mechanics1 registry group");
+assert(renderers.includes('wma11: "pure"'), "Pure 1 paper filter must map to the pure registry group");
 assert(renderers.includes("data-paper-kind"), "Paper file-type filtering metadata is missing");
 assert(renderers.includes("data-book-type"), "Book resource-type filtering metadata is missing");
 

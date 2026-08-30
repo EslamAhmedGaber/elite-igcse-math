@@ -6,8 +6,8 @@
     {
       tag: "Whole papers",
       title: "Past Papers Library",
-      description: "Linear, Modular, IAL Pure 1, and IAL Pure 2 papers are separated clearly, grouped by session, with worked solutions beside the matching paper.",
-      meta: ["Linear 4MA1", "Modular 4WM", "IAL WMA11/WMA12"],
+      description: "Linear, Modular, IAL Pure 1, Pure 2, and Mechanics 1 papers are separated clearly, grouped by session, with worked solutions beside the matching paper.",
+      meta: ["Linear 4MA1", "Modular 4WM", "IAL WMA11/WMA12/WME01"],
       actions: [{ label: "Open Past Papers", href: "pastpapers.html", variant: "primary" }],
     },
     {
@@ -51,9 +51,20 @@
     const course = normalizedText(params.get("course"));
     if (pathway === "linear") return "linear";
     if (pathway === "modular") return "modular";
-    if (course === "wma11" || window.location.hash.includes("wma11")) return "pure-wma11";
-    if (course === "wma12" || window.location.hash.includes("wma12")) return "pure-wma12";
-    if (course === "wme01" || window.location.hash.includes("wme01")) return "pure-wme01";
+    const courseIds = {
+      wma11: "pure",
+      pure1: "pure",
+      pure: "pure",
+      wma12: "pure2",
+      pure2: "pure2",
+      wme01: "mechanics1",
+      mechanics1: "mechanics1",
+    };
+    if (courseIds[course]) return courseIds[course];
+    const hash = normalizedText(window.location.hash);
+    if (hash.includes("wma11")) return "pure";
+    if (hash.includes("wma12")) return "pure2";
+    if (hash.includes("wme01")) return "mechanics1";
     return "";
   }
 
@@ -168,7 +179,7 @@
     const years = [...new Set(groups.flatMap((group) => (group.pastPapers || []).map((item) => item.heading)))];
     years.sort((a, b) => Number(b) - Number(a) || String(b).localeCompare(String(a)));
     let selectedCourse = currentCourseFilter();
-    if (!groups.some((group) => group.id === selectedCourse)) selectedCourse = groups[0]?.id || "";
+    if (selectedCourse && !groups.some((group) => group.id === selectedCourse)) selectedCourse = "";
     finder.innerHTML = `
       <div class="resource-finder-head">
         <div>
@@ -305,7 +316,7 @@
     const grid = document.querySelector("[data-course-downloads]");
     if (!finder || !grid) return;
     let selectedCourse = currentCourseFilter();
-    if (!groups.some((group) => group.id === selectedCourse)) selectedCourse = groups[0]?.id || "";
+    if (selectedCourse && !groups.some((group) => group.id === selectedCourse)) selectedCourse = "";
     finder.innerHTML = `
       <div class="resource-finder-head">
         <div>
