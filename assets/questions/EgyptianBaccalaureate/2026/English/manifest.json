@@ -1,0 +1,54 @@
+{
+  "schema_version": "egyptian-baccalaureate-visual-assets-1.0",
+  "public": true,
+  "assets": [
+    {
+      "asset_id": "C03-K02-p131-challenge-alpha-beta-parabola",
+      "path": "assets/questions/EgyptianBaccalaureate/2026/English/C03-K02-p131-challenge-alpha-beta-parabola.png",
+      "sha256": "b16a7ccfd4b4bc4e7bb043858e8f80d2724289dd979769783c0f97bf5a9a168a",
+      "source_question_id": "C03-K02-G-MCQ-120"
+    },
+    {
+      "asset_id": "C05-K01-5-1-WU1",
+      "path": "assets/questions/EgyptianBaccalaureate/2026/English/C05-K01-5-1-WU1.png",
+      "sha256": "0ab9ab848f24e245c778464a3ca08e4a83b205759647518ad1535a2cd6b44024",
+      "source_question_id": "C05-K01-5-1-WU1"
+    },
+    {
+      "asset_id": "C05-K01-5-1-TR1",
+      "path": "assets/questions/EgyptianBaccalaureate/2026/English/C05-K01-5-1-TR1.png",
+      "sha256": "549aa13dc84f67fef6636946b6c8d3d45e46921579fb8085195f38a41d9c0819",
+      "source_question_id": "C05-K01-5-1-TR1"
+    },
+    {
+      "asset_id": "C05-K01-5-1-EX1",
+      "path": "assets/questions/EgyptianBaccalaureate/2026/English/C05-K01-5-1-EX1.png",
+      "sha256": "534deb0a2c7741b04602d70749e83529823b88539f4929637cf9c5c38525b43d",
+      "source_question_id": "C05-K01-5-1-EX1"
+    },
+    {
+      "asset_id": "C05-K03-5-9-WU2",
+      "path": "assets/questions/EgyptianBaccalaureate/2026/English/C05-K03-5-9-WU2.png",
+      "sha256": "99e5984e77570cf662a1eefea576e29af65463eafcb1f6387dcb9da8631cb222",
+      "source_question_id": "C05-K03-5-9-WU2"
+    },
+    {
+      "asset_id": "C05-K03-5-9-TRY",
+      "path": "assets/questions/EgyptianBaccalaureate/2026/English/C05-K03-5-9-TRY.png",
+      "sha256": "3eab80e129d60f4cbf14013cbdd06ffbd5b47f6b7b42c2e7434ca0744d838a7b",
+      "source_question_id": "C05-K03-5-9-TRY"
+    },
+    {
+      "asset_id": "C05-K03-5-9-EX",
+      "path": "assets/questions/EgyptianBaccalaureate/2026/English/C05-K03-5-9-EX.png",
+      "sha256": "fce6f25cc9e7c3c68e2a785e5a46c7d8d63ec05ae6f769397217d182ca82bb06",
+      "source_question_id": "C05-K03-5-9-EX"
+    },
+    {
+      "asset_id": "C05-K03-5-9-CH",
+      "path": "assets/questions/EgyptianBaccalaureate/2026/English/C05-K03-5-9-CH.png",
+      "sha256": "271e0cecc35dc77573761ddb64adf7bdf9ebbce0f063aad7e3c361d325559d4d",
+      "source_question_id": "C05-K03-5-9-CH"
+    }
+  ]
+}

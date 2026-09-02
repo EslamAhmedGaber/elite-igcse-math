@@ -15,18 +15,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="pathway-bootstrap.js?v=20260613a"></script>
+  <script src="pathway-bootstrap.js?v=baccalaureate-20260902b"></script>
   <link rel="stylesheet" href="styles.css?v=20260809a">
   <link rel="stylesheet" href="elite-system.css?v=20260822a">
-  <script defer src="pathway-mode.js?v=20260527a"></script>
+  <script defer src="pathway-mode.js?v=20260902c"></script>
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js?v=20260611a"></script>
   <script defer src="worked-solution.js?v=20260714a"></script>
   <script defer src="runtime-loader.js?v=20260809a"></script>
-  <script defer src="print-utils.js?v=20260809c"></script>
+  <script defer src="print-utils.js?v=baccalaureate-20260902a"></script>
   <script defer src="revision-engine.js?v=20260530b"></script>
-  <script defer src="exam-bootstrap.js?v=20260809a"></script>
-  <script defer src="course-modules.js?v=modular-20260824b"></script>
+  <script defer src="exam-bootstrap.js?v=baccalaureate-20260902b"></script>
+  <script defer src="course-modules.js?v=baccalaureate-20260902b"></script>
   <script defer src="lead.js?v=20260822a"></script>
 </head>
 <body data-page="exam">
@@ -151,6 +151,13 @@
               <option value="expertise">Q20+ expertise only</option>
             </select>
           </label>
+          <label id="examPartLabel" hidden>Part
+            <select id="examPart">
+              <option value="">Part 1 + Part 2</option>
+              <option value="part-1">Part 1 · Chapters 1–4</option>
+              <option value="part-2">Part 2 · Chapters 5–8</option>
+            </select>
+          </label>
           <label><span data-pathway-label="unit">Chapter</span>
             <select id="examUnit"></select>
           </label>
@@ -217,6 +224,13 @@
                   <select id="builderBank">
                     <option value="all">Full bank</option>
                     <option value="expertise">Q20+ only</option>
+                  </select>
+                </label>
+                <label id="builderPartLabel" hidden>Part
+                  <select id="builderPart">
+                    <option value="">Part 1 + Part 2</option>
+                    <option value="part-1">Part 1 · Chapters 1–4</option>
+                    <option value="part-2">Part 2 · Chapters 5–8</option>
                   </select>
                 </label>
                 <label><span data-pathway-label="unit">Chapter</span>
@@ -303,6 +317,13 @@
           </label>
           <label><span data-pathway-label="unit">Chapter</span>
             <select id="smartUnit"></select>
+          </label>
+          <label id="smartPartLabel" hidden>Part
+            <select id="smartPart">
+              <option value="">Part 1 + Part 2</option>
+              <option value="part-1">Part 1 · Chapters 1–4</option>
+              <option value="part-2">Part 2 · Chapters 5–8</option>
+            </select>
           </label>
           <label>Revision profile
             <select id="smartProfile">

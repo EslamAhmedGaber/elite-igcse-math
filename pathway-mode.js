@@ -2,7 +2,7 @@
   const STORAGE_KEY = "elitePathwayMode";
   const params = new URLSearchParams(window.location.search);
   const requested = params.get("pathway");
-  const validModes = new Set(["linear", "modular"]);
+  const validModes = new Set(["linear", "modular", "baccalaureate"]);
 
   if (validModes.has(requested)) {
     localStorage.setItem(STORAGE_KEY, requested);
@@ -41,6 +41,7 @@
     mode,
     hasChosen,
     isModular: mode === "modular",
+    isBaccalaureate: mode === "baccalaureate",
     setMode,
     label,
   };
@@ -125,6 +126,7 @@
     if (!body) return;
     body.classList.toggle("pathway-modular", mode === "modular");
     body.classList.toggle("pathway-linear", mode === "linear");
+    body.classList.toggle("pathway-baccalaureate", mode === "baccalaureate");
     body.classList.toggle("pathway-unset", body.dataset.page === "home" && !hasChosen);
 
     document.querySelectorAll("[data-pathway-label]").forEach((node) => {
@@ -140,7 +142,7 @@
       });
     });
     document.querySelectorAll("[data-pathway-current]").forEach((node) => {
-      node.textContent = mode === "modular" ? "Modular pathway" : "Linear pathway";
+      node.textContent = mode === "modular" ? "Modular pathway" : mode === "baccalaureate" ? "Egyptian Baccalaureate" : "Linear pathway";
     });
     setupPathwayGateFlow();
   }

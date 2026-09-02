@@ -1,0 +1,1502 @@
+{
+  "schema_version": "elite-egyptian-baccalaureate-public-release-1.0",
+  "release_id": "egyptian-baccalaureate-2026-english-public-20260902",
+  "public": true,
+  "course": "Egyptian Baccalaureate Mathematics 2026",
+  "language": "English",
+  "student_design": "A4 Landscape — Open Workbook / Guided Practice",
+  "teacher_design": "B5 Landscape — Classroom Working Edition Version 2",
+  "files": [
+    {
+      "edition": "student",
+      "scope": "chapter",
+      "id": "C01-CLASSIFIED",
+      "title": "C01 — Algebraic Proofs — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/chapters/c01/classified.pdf",
+      "bytes": 1032149,
+      "sha256": "33e79fc6f23df9801490c3cbe2ae2f04e13bf02da79ec48b546ce6fe66e300f6",
+      "pages": 456,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "chapter",
+      "id": "C01-SOLUTIONS",
+      "title": "C01 — Algebraic Proofs — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/chapters/c01/solutions.pdf",
+      "bytes": 1053445,
+      "sha256": "0740276ad77e17e07d651919d7a6fedcf929834d59f3bb5695d8839b52050e2c",
+      "pages": 307,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "chapter",
+      "id": "C02-CLASSIFIED",
+      "title": "C02 — Sequences — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/chapters/c02/classified.pdf",
+      "bytes": 2036494,
+      "sha256": "dc44fb60b1384a9717db063ecc3423a3faaeba3e7b8e0829387090e3b97e6812",
+      "pages": 1004,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "chapter",
+      "id": "C02-SOLUTIONS",
+      "title": "C02 — Sequences — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/chapters/c02/solutions.pdf",
+      "bytes": 1874652,
+      "sha256": "68999fba4dae6b8c642ce735b3fa9d1e6680aa04626cf7a3ea487cfe2918e670",
+      "pages": 616,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "chapter",
+      "id": "C03-CLASSIFIED",
+      "title": "C03 — Complex Numbers and Equations — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/chapters/c03/classified.pdf",
+      "bytes": 1488749,
+      "sha256": "9f9bf84530964436df231b0383ed8f97fb055870a056ed7e6801d803dd9465f0",
+      "pages": 715,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "chapter",
+      "id": "C03-SOLUTIONS",
+      "title": "C03 — Complex Numbers and Equations — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/chapters/c03/solutions.pdf",
+      "bytes": 1261589,
+      "sha256": "7c3462bd65bf11fd37c42d3402d20c1cdede99b8e9480de3f5ef27bbef4c56d9",
+      "pages": 410,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "chapter",
+      "id": "C04-CLASSIFIED",
+      "title": "C04 — Geometry and Equations — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/chapters/c04/classified.pdf",
+      "bytes": 1454656,
+      "sha256": "76f96f308d3436e2af38f562db0183bcd2541871d885f7bfe4328d3c14b6f217",
+      "pages": 745,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "chapter",
+      "id": "C04-SOLUTIONS",
+      "title": "C04 — Geometry and Equations — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/chapters/c04/solutions.pdf",
+      "bytes": 1304258,
+      "sha256": "966776b367f4c72b8f2d666e27bd682a1822df22fcbc847cf60b749dd48ee5f1",
+      "pages": 478,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "chapter",
+      "id": "C05-CLASSIFIED",
+      "title": "C05 — Trigonometric Functions — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/chapters/c05/classified.pdf",
+      "bytes": 1755454,
+      "sha256": "d181d1605e2cf6e9a366051e0631696f56d714cd6567e3c35b3a38670212491d",
+      "pages": 347,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "chapter",
+      "id": "C05-SOLUTIONS",
+      "title": "C05 — Trigonometric Functions — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/chapters/c05/solutions.pdf",
+      "bytes": 1680595,
+      "sha256": "bdfd1505b25b9a15513588fb9e4a31b2c058a1d6e2a123796792934065401507",
+      "pages": 198,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "chapter",
+      "id": "C06-CLASSIFIED",
+      "title": "C06 — Exponents and Logarithms — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/chapters/c06/classified.pdf",
+      "bytes": 809967,
+      "sha256": "99df9cad90b98db9561f1597b53dd0b675a039801daeb4d496572ec2510df2e9",
+      "pages": 247,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "chapter",
+      "id": "C06-SOLUTIONS",
+      "title": "C06 — Exponents and Logarithms — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/chapters/c06/solutions.pdf",
+      "bytes": 731988,
+      "sha256": "9abc120abb030fb31d3771f3ddf1f2a227b69f4ce9afe4f1f4cd54b18fe33137",
+      "pages": 133,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "chapter",
+      "id": "C07-CLASSIFIED",
+      "title": "C07 — Differentiation and Integration — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/chapters/c07/classified.pdf",
+      "bytes": 878808,
+      "sha256": "a43908fc6687a30d64c6c2a6ad053401a8215639d06b826cc78a0ff263381666",
+      "pages": 273,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "chapter",
+      "id": "C07-SOLUTIONS",
+      "title": "C07 — Differentiation and Integration — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/chapters/c07/solutions.pdf",
+      "bytes": 787687,
+      "sha256": "20433b1a9284fa0169b37db60602b2cbb38824ee3962a0c82a12d9c6eb1a85e4",
+      "pages": 144,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "chapter",
+      "id": "C08-CLASSIFIED",
+      "title": "C08 — Statistical Inference — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/chapters/c08/classified.pdf",
+      "bytes": 271358,
+      "sha256": "118feb033caf9281c4b9f61b72233e84acffc621f953e59495b0170598253475",
+      "pages": 112,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "chapter",
+      "id": "C08-SOLUTIONS",
+      "title": "C08 — Statistical Inference — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/chapters/c08/solutions.pdf",
+      "bytes": 227327,
+      "sha256": "c684c2f671b8dbecb5eeb802b5bd77d332db93b234779dc5d4dcd1914313f966",
+      "pages": 58,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "complete",
+      "id": "ALL-CLASSIFIED",
+      "title": "Complete Student Classified Book",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/complete/classified.pdf",
+      "bytes": 9772486,
+      "sha256": "54b81ad583d8ff98a0c1da111823b1655a27b80182ff8b24f5b601130d63eb40",
+      "pages": 3900,
+      "media_box_pt": [
+        841.8898,
+        595.2756
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "complete",
+      "id": "ALL-SOLUTIONS",
+      "title": "Complete Student Solutions Book",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/complete/solutions.pdf",
+      "bytes": 8950223,
+      "sha256": "e49b2946baa5037017746d353f6da128d7e507a61d95318f14b8eccdf9bfab1f",
+      "pages": 2345,
+      "media_box_pt": [
+        841.8898,
+        595.2756
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C01-K01-CLASSIFIED",
+      "title": "C01-K01 — Binomial and Multinomial Theorems — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c01-k01/classified.pdf",
+      "bytes": 144251,
+      "sha256": "f26fc462222d819bcf1fa5d5e878f039cb5970c1cb5d335de66c4e5b6337aa69",
+      "pages": 72,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C01-K01-SOLUTIONS",
+      "title": "C01-K01 — Binomial and Multinomial Theorems — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c01-k01/solutions.pdf",
+      "bytes": 134586,
+      "sha256": "23d0e5cde38a54def2f7452e605c4b5281158c6f3e4caef8cf50168c54f5906f",
+      "pages": 40,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C01-K02-CLASSIFIED",
+      "title": "C01-K02 — Polynomial Division — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c01-k02/classified.pdf",
+      "bytes": 133024,
+      "sha256": "b752da4de65d26a360c15bd93a68a4621642e165893c4448c209354b0bbce14c",
+      "pages": 62,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C01-K02-SOLUTIONS",
+      "title": "C01-K02 — Polynomial Division — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c01-k02/solutions.pdf",
+      "bytes": 140292,
+      "sha256": "0a9b03874e253d5854cc08312a71baa174c8ca6a7980e95cce6156ef29c188cf",
+      "pages": 40,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C01-K03-CLASSIFIED",
+      "title": "C01-K03 — Rational Expressions — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c01-k03/classified.pdf",
+      "bytes": 216116,
+      "sha256": "630c7850c64d0c5ed2368e65bcb1224e27b6d2f677c04bd631751eec9d9251bb",
+      "pages": 113,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C01-K03-SOLUTIONS",
+      "title": "C01-K03 — Rational Expressions — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c01-k03/solutions.pdf",
+      "bytes": 261858,
+      "sha256": "7cf760a4f8f3c747677a137c13285ba4381bd08e67a788402d15d213d3346651",
+      "pages": 94,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C01-K04-CLASSIFIED",
+      "title": "C01-K04 — Identities and Proofs — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c01-k04/classified.pdf",
+      "bytes": 203142,
+      "sha256": "e17095debe99a1910ea12248cf144878530e575f4510ff344ffb0fe2f082d463",
+      "pages": 109,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C01-K04-SOLUTIONS",
+      "title": "C01-K04 — Identities and Proofs — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c01-k04/solutions.pdf",
+      "bytes": 200046,
+      "sha256": "856ae9cadacc3ebfaebf29ae340cba000489b06f3bec79919f69fd67b458a0ad",
+      "pages": 62,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C01-K05-CLASSIFIED",
+      "title": "C01-K05 — Inequalities — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c01-k05/classified.pdf",
+      "bytes": 194464,
+      "sha256": "7177e4bcc146fdce064c1e1f3984d134ce3b5c82a2c1ab154d4398278cf47fb5",
+      "pages": 100,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C01-K05-SOLUTIONS",
+      "title": "C01-K05 — Inequalities — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c01-k05/solutions.pdf",
+      "bytes": 218010,
+      "sha256": "bf7e2dc2a396b0ebca68ba505026cd949720e06484b997c5f646170539701750",
+      "pages": 71,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C02-K01-CLASSIFIED",
+      "title": "C02-K01 — Arithmetic Sequences — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c02-k01/classified.pdf",
+      "bytes": 477657,
+      "sha256": "615bca3d6940b86c91786d1c3979598b25f9f9fef2d73acbcfbe0f1594b2cbf3",
+      "pages": 292,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C02-K01-SOLUTIONS",
+      "title": "C02-K01 — Arithmetic Sequences — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c02-k01/solutions.pdf",
+      "bytes": 409987,
+      "sha256": "f094b3def62af63771ba460e824b943501f460a7c332e33c07fac4bd225a3e50",
+      "pages": 153,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C02-K02-CLASSIFIED",
+      "title": "C02-K02 — Geometric Sequences — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c02-k02/classified.pdf",
+      "bytes": 342036,
+      "sha256": "a68011048b0fe545de6ecb34bf57aba295e0825a3aeeacf94fab9dc67e2af8ea",
+      "pages": 197,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C02-K02-SOLUTIONS",
+      "title": "C02-K02 — Geometric Sequences — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c02-k02/solutions.pdf",
+      "bytes": 316372,
+      "sha256": "fccdf69614ede065d5e1c5955f7ec05e6d39b99b8cd1fd630bfb33f571ecfd90",
+      "pages": 114,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C02-K03-CLASSIFIED",
+      "title": "C02-K03 — Summation — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c02-k03/classified.pdf",
+      "bytes": 469855,
+      "sha256": "dfbcda9d243ab32a9fe19c4631e75e6ba21bc97ff74eda28063a12b6ced8afa6",
+      "pages": 286,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C02-K03-SOLUTIONS",
+      "title": "C02-K03 — Summation — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c02-k03/solutions.pdf",
+      "bytes": 437166,
+      "sha256": "d4bf641fa867f3c0c9de5f89c130f64fb2b247bcaf9528b65f5360906e335c0c",
+      "pages": 171,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C02-K04-CLASSIFIED",
+      "title": "C02-K04 — Advanced Sequences — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c02-k04/classified.pdf",
+      "bytes": 117708,
+      "sha256": "1c4401cd9142fdd0812ff56e8ebad216eb76af237f705377e7be203f14907c2c",
+      "pages": 56,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C02-K04-SOLUTIONS",
+      "title": "C02-K04 — Advanced Sequences — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c02-k04/solutions.pdf",
+      "bytes": 130377,
+      "sha256": "4c3e1fa93fbaa97aa72b25f5fea458b656648402f529035d6517da0e6b4e8ae0",
+      "pages": 39,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C02-K05-CLASSIFIED",
+      "title": "C02-K05 — Recurrence and Induction — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c02-k05/classified.pdf",
+      "bytes": 307514,
+      "sha256": "fff5eff94f04e22000b8b2d571984e0a05b0b0725bafb1c7a8da5ad18010778f",
+      "pages": 173,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C02-K05-SOLUTIONS",
+      "title": "C02-K05 — Recurrence and Induction — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c02-k05/solutions.pdf",
+      "bytes": 376234,
+      "sha256": "45091711fb95d091ae5c9b1b28fcf61b1b82fe71a22ec9d39ed789d5e2922481",
+      "pages": 139,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C03-K01-CLASSIFIED",
+      "title": "C03-K01 — Complex Numbers — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c03-k01/classified.pdf",
+      "bytes": 352439,
+      "sha256": "c77e102eb1a81654766c5aecf987a35479a11d48fd768dd8138f5a48cd20b8c0",
+      "pages": 213,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C03-K01-SOLUTIONS",
+      "title": "C03-K01 — Complex Numbers — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c03-k01/solutions.pdf",
+      "bytes": 297518,
+      "sha256": "5e6f27566b7b79a7ec8226a916bdf32ad3a1be718c5e0cbc23eb7149c333e3d9",
+      "pages": 108,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C03-K02-CLASSIFIED",
+      "title": "C03-K02 — Quadratic Equations — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c03-k02/classified.pdf",
+      "bytes": 451364,
+      "sha256": "f0739e493824b150b2116c752be6b2cb6ccdb04b6c8d5e6f3c0747d5a9b1c498",
+      "pages": 252,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C03-K02-SOLUTIONS",
+      "title": "C03-K02 — Quadratic Equations — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c03-k02/solutions.pdf",
+      "bytes": 426545,
+      "sha256": "625afc8c614e65f38d805619e74e7046b311929656bdbb6a2cab004b5231681e",
+      "pages": 159,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C03-K03-CLASSIFIED",
+      "title": "C03-K03 — Polynomial Theorems — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c03-k03/classified.pdf",
+      "bytes": 234138,
+      "sha256": "c7f22dd6ae2ca0324001fcd48ca0154ead52e1eae001349b6ff1f08c5b7f60a9",
+      "pages": 129,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C03-K03-SOLUTIONS",
+      "title": "C03-K03 — Polynomial Theorems — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c03-k03/solutions.pdf",
+      "bytes": 201100,
+      "sha256": "a0a499420797fbf2d3b8b8c5f819aef2c301b2b2bf7481f75fe1e724fecbb69c",
+      "pages": 72,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C03-K04-CLASSIFIED",
+      "title": "C03-K04 — Higher Degree Equations — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c03-k04/classified.pdf",
+      "bytes": 221115,
+      "sha256": "285ee5a9d4067627a5830939a3fe45c28fbb498ab55597a0a27e8466b92d49f8",
+      "pages": 121,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C03-K04-SOLUTIONS",
+      "title": "C03-K04 — Higher Degree Equations — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c03-k04/solutions.pdf",
+      "bytes": 201316,
+      "sha256": "8829ef14bc3171d436ca52f0b769911f6c1bc1fb0faaf70525930d6ebac4e5db",
+      "pages": 71,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C04-K01-CLASSIFIED",
+      "title": "C04-K01 — Coordinate Geometry Basics — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c04-k01/classified.pdf",
+      "bytes": 369708,
+      "sha256": "9491c4453aa9dc91e5aaa973d797ed0c2103f5667c643184dfe7f7b96deb91ab",
+      "pages": 227,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C04-K01-SOLUTIONS",
+      "title": "C04-K01 — Coordinate Geometry Basics — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c04-k01/solutions.pdf",
+      "bytes": 346407,
+      "sha256": "3c81ffe460c979f574d57bed4bf4162a8fe435573a3f2614ed25553a2754008c",
+      "pages": 146,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C04-K02-CLASSIFIED",
+      "title": "C04-K02 — Triangles and Lines — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c04-k02/classified.pdf",
+      "bytes": 422613,
+      "sha256": "17d6ddd8150cdb4be6d4d55443c143b0c4f704d8443776a6b7fdfc7f2abd2f35",
+      "pages": 264,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C04-K02-SOLUTIONS",
+      "title": "C04-K02 — Triangles and Lines — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c04-k02/solutions.pdf",
+      "bytes": 362341,
+      "sha256": "14a372ad3b263d929d3c6c48308323e57fc76ed40a371ba65c39676517568733",
+      "pages": 145,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C04-K03-CLASSIFIED",
+      "title": "C04-K03 — Circles — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c04-k03/classified.pdf",
+      "bytes": 424110,
+      "sha256": "1dfc82ced9695ad6b83e375e48fe57f251497dc2cefd30b12c49dde97e9b6f72",
+      "pages": 254,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C04-K03-SOLUTIONS",
+      "title": "C04-K03 — Circles — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c04-k03/solutions.pdf",
+      "bytes": 437618,
+      "sha256": "1fd3cccb961e19928c1739a028d7dd8446e90eb41b0fbc1c4f22e3799bbe9a92",
+      "pages": 187,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C05-K01-CLASSIFIED",
+      "title": "C05-K01 — Defining Angles and Basic Trigonometric Functions — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c05-k01/classified.pdf",
+      "bytes": 438128,
+      "sha256": "141b3fc179cee28fc995d516f9672bbcc47817e3917812f66d0ef3c6aec9b7a7",
+      "pages": 84,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C05-K01-SOLUTIONS",
+      "title": "C05-K01 — Defining Angles and Basic Trigonometric Functions — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c05-k01/solutions.pdf",
+      "bytes": 425870,
+      "sha256": "491c97f59e8752b9a3da62dc05ff419eaf167bd8c1ca28c398e8408215ad3240",
+      "pages": 46,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C05-K02-CLASSIFIED",
+      "title": "C05-K02 — Trigonometric Identities and Expression Evaluation — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c05-k02/classified.pdf",
+      "bytes": 141465,
+      "sha256": "361f3387ee16e287254da4bdd886eb7c01b4bfb47a7c1db00bb0d5271e9fa4d6",
+      "pages": 64,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C05-K02-SOLUTIONS",
+      "title": "C05-K02 — Trigonometric Identities and Expression Evaluation — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c05-k02/solutions.pdf",
+      "bytes": 134528,
+      "sha256": "e89a25931740a8ecca5e5042991b8e06ff6a5172cbef36c96ccd35218b8cfa37",
+      "pages": 36,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C05-K03-CLASSIFIED",
+      "title": "C05-K03 — Properties and Graphs of Trigonometric Functions — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c05-k03/classified.pdf",
+      "bytes": 814384,
+      "sha256": "21f23f764dfdca05b88eb05f8d10162b91b27bb589ba29e2819fdd4629307a80",
+      "pages": 91,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C05-K03-SOLUTIONS",
+      "title": "C05-K03 — Properties and Graphs of Trigonometric Functions — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c05-k03/solutions.pdf",
+      "bytes": 804192,
+      "sha256": "553fea70b190bc37ecc2e6363502fb458d650e8ae6f035da87b60a4c6ec0b003",
+      "pages": 53,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C05-K04-CLASSIFIED",
+      "title": "C05-K04 — Solving Equations and Inequalities Involving Trigonometric Functions — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c05-k04/classified.pdf",
+      "bytes": 110705,
+      "sha256": "ef0ff999cf3f47f5fe59552cf2267618234a5452fc3d5cf55232a0c10287939e",
+      "pages": 44,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C05-K04-SOLUTIONS",
+      "title": "C05-K04 — Solving Equations and Inequalities Involving Trigonometric Functions — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c05-k04/solutions.pdf",
+      "bytes": 117528,
+      "sha256": "02e59126ffcbde15684ade35f1582f6ac452464f4a5da1700a2095feeab2c59a",
+      "pages": 28,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C05-K05-CLASSIFIED",
+      "title": "C05-K05 — Advanced Theorems and Applications — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c05-k05/classified.pdf",
+      "bytes": 140834,
+      "sha256": "92e614880cad597164b7630a038c60a8f511d35ebf3bbd09db540cf53dc65dda",
+      "pages": 64,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C05-K05-SOLUTIONS",
+      "title": "C05-K05 — Advanced Theorems and Applications — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c05-k05/solutions.pdf",
+      "bytes": 135766,
+      "sha256": "b62ecb235b8aa7e47d0326acd93f1d94e0d31b433850326cfc7c961d89a885a4",
+      "pages": 35,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C06-K01-CLASSIFIED",
+      "title": "C06-K01 — Laws of Exponents and Roots — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c06-k01/classified.pdf",
+      "bytes": 142555,
+      "sha256": "8e180d2fd47596c972600cdde6103474177a2fad2116e9adf5f953869a310201",
+      "pages": 68,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C06-K01-SOLUTIONS",
+      "title": "C06-K01 — Laws of Exponents and Roots — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c06-k01/solutions.pdf",
+      "bytes": 134322,
+      "sha256": "11a8b1e2301e4180b67681ebb73293af93da7cb4e8e2f07536249e3b34d67c1e",
+      "pages": 39,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C06-K02-CLASSIFIED",
+      "title": "C06-K02 — Exponential Functions and Their Applications — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c06-k02/classified.pdf",
+      "bytes": 324708,
+      "sha256": "2fc8bc5d18bb8ea6d01536507afa0408745e14470da8b824dafc8405fb6c12e3",
+      "pages": 52,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C06-K02-SOLUTIONS",
+      "title": "C06-K02 — Exponential Functions and Their Applications — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c06-k02/solutions.pdf",
+      "bytes": 317548,
+      "sha256": "93da4cef358053b5cada3ff67fcbdc5080f5aec5ad573c3acf493f6a90288835",
+      "pages": 28,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C06-K03-CLASSIFIED",
+      "title": "C06-K03 — Introduction to Logarithms and Their Properties — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c06-k03/classified.pdf",
+      "bytes": 155589,
+      "sha256": "742586c03454b2b7a669ecf233417b4f0726bea497a5781fe967a0fff13dc57d",
+      "pages": 77,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C06-K03-SOLUTIONS",
+      "title": "C06-K03 — Introduction to Logarithms and Their Properties — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c06-k03/solutions.pdf",
+      "bytes": 138677,
+      "sha256": "8ca484475586efac6e650e4237c474a24ed92202db3d84254b6e12f369653091",
+      "pages": 40,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C06-K04-CLASSIFIED",
+      "title": "C06-K04 — Applications of Logarithms — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c06-k04/classified.pdf",
+      "bytes": 111194,
+      "sha256": "f791c6ebe3f19b897c6fa87d2267a716df42d778d7e3b9747dfe37dd2c096ab8",
+      "pages": 50,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C06-K04-SOLUTIONS",
+      "title": "C06-K04 — Applications of Logarithms — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c06-k04/solutions.pdf",
+      "bytes": 100643,
+      "sha256": "bf41d77fb555179bb57d76e7483e4a851bfd66ef2abd652d4f98425e8d633b4a",
+      "pages": 26,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C07-K01-CLASSIFIED",
+      "title": "C07-K01 — Fundamentals of Calculus Limits and Derivatives — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c07-k01/classified.pdf",
+      "bytes": 103848,
+      "sha256": "2992680d1b0c646e0749ee0f13dfdd6172190317102d55d6d2de539e20f672a2",
+      "pages": 44,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C07-K01-SOLUTIONS",
+      "title": "C07-K01 — Fundamentals of Calculus Limits and Derivatives — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c07-k01/solutions.pdf",
+      "bytes": 94129,
+      "sha256": "7e3a7c32297b04e92827917450b3e8c84fa79f295ad25d6c558985c9fe19f1cf",
+      "pages": 23,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C07-K02-CLASSIFIED",
+      "title": "C07-K02 — Differentiation and Tangent Lines — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c07-k02/classified.pdf",
+      "bytes": 298708,
+      "sha256": "60788312f4d9c3017abd1615b4c0f42b54f4c1fe6d10ab76fe0c89cf92796659",
+      "pages": 42,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C07-K02-SOLUTIONS",
+      "title": "C07-K02 — Differentiation and Tangent Lines — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c07-k02/solutions.pdf",
+      "bytes": 295793,
+      "sha256": "a2bd0f15a6175b8740926cf500e52ef1fe0c76fd2b547f7ed1758e64ee89fc52",
+      "pages": 24,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C07-K03-CLASSIFIED",
+      "title": "C07-K03 — Applications of Differentiation Polynomial Functions — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c07-k03/classified.pdf",
+      "bytes": 158449,
+      "sha256": "0683a710154af00a5038ff0b040f5f4391e998e7bd62ce5f5059725319327b9a",
+      "pages": 79,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C07-K03-SOLUTIONS",
+      "title": "C07-K03 — Applications of Differentiation Polynomial Functions — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c07-k03/solutions.pdf",
+      "bytes": 143534,
+      "sha256": "4dd57929e0e59189e09bf24ebb2407b39effffcd9b0fca5e77d30a8d15602e0c",
+      "pages": 41,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C07-K04-CLASSIFIED",
+      "title": "C07-K04 — Integration Definite Integrals and Applications — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c07-k04/classified.pdf",
+      "bytes": 129446,
+      "sha256": "feafc4422120b463cb058c82a8d5953c3d993f7cbfce165036c622f2a6fc5716",
+      "pages": 60,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C07-K04-SOLUTIONS",
+      "title": "C07-K04 — Integration Definite Integrals and Applications — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c07-k04/solutions.pdf",
+      "bytes": 115813,
+      "sha256": "3e6e553815f0f18125b93689471b2516097ba220a4ae66c4dd3a3778bb713ddb",
+      "pages": 31,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C07-K05-CLASSIFIED",
+      "title": "C07-K05 — Applications of Integration to Geometry — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c07-k05/classified.pdf",
+      "bytes": 106021,
+      "sha256": "ac7a8f33d8fa250158c185f0d7f81aaeb4f285beb01ca9f1481776858c465077",
+      "pages": 48,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C07-K05-SOLUTIONS",
+      "title": "C07-K05 — Applications of Integration to Geometry — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c07-k05/solutions.pdf",
+      "bytes": 94724,
+      "sha256": "57d3403624984235b70309bfe3993a4b42b089d19911465126c97c94aa27fd09",
+      "pages": 25,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C08-K01-CLASSIFIED",
+      "title": "C08-K01 — Fundamentals of Random Variables — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c08-k01/classified.pdf",
+      "bytes": 112821,
+      "sha256": "f0c5ecb81bd1eee1877feaa8afa5639220a34ae5a1cdbc6946dd02417c561f31",
+      "pages": 52,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C08-K01-SOLUTIONS",
+      "title": "C08-K01 — Fundamentals of Random Variables — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c08-k01/solutions.pdf",
+      "bytes": 100908,
+      "sha256": "11bc998fc14c9ea795e2c3caa661b2a483436c9365a15eab9c39f92d73694bde",
+      "pages": 27,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C08-K02-CLASSIFIED",
+      "title": "C08-K02 — Expected Value and Variance of Multiple Variables — Student Classified",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c08-k02/classified.pdf",
+      "bytes": 124983,
+      "sha256": "db78c3237f9b3fadc83b40854fcb5151ab5613de08a3829ff1b908e3c328c6ef",
+      "pages": 60,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "concept",
+      "id": "C08-K02-SOLUTIONS",
+      "title": "C08-K02 — Expected Value and Variance of Multiple Variables — Student Solutions",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/concepts/c08-k02/solutions.pdf",
+      "bytes": 109106,
+      "sha256": "3598b4f727f92ffe2ace6b514eaecb2b42fa9386cc8526efa4d3f79126bde6bc",
+      "pages": 31,
+      "media_box_pt": [
+        841.89,
+        595.28
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "cover",
+      "id": "ALL",
+      "title": "All Chapters — Student Edition",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/covers/all-chapters.pdf",
+      "bytes": 2087,
+      "sha256": "0a5679fb3f9c329fdea1664c567985dd0c40fd5951f509b7f66af854c9614cf2",
+      "pages": 1,
+      "media_box_pt": [
+        841.8898,
+        595.2756
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "cover",
+      "id": "PART1",
+      "title": "Part 1 — Student Edition",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/covers/part-1.pdf",
+      "bytes": 2079,
+      "sha256": "c347ceb6a53be003f01f1cdbc74577a3d66d716c4fe40715ecce8a336a7b7e91",
+      "pages": 1,
+      "media_box_pt": [
+        841.8898,
+        595.2756
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "cover",
+      "id": "PART2",
+      "title": "Part 2 — Student Edition",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/covers/part-2.pdf",
+      "bytes": 2079,
+      "sha256": "2d3b8a0f9941efa2c27a9c628a9b7281bc17a2905efc02f25b71ddf8e3547ced",
+      "pages": 1,
+      "media_box_pt": [
+        841.8898,
+        595.2756
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "part",
+      "id": "PART1-CLASSIFIED",
+      "title": "Part 1 — Student Classified Book",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/parts/part-1/classified.pdf",
+      "bytes": 6033195,
+      "sha256": "6bab66551eb7c5da69cec191a5ca988a58feeaac79bc09a9ba7d6c920aaaa0d0",
+      "pages": 2921,
+      "media_box_pt": [
+        841.8898,
+        595.2756
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "part",
+      "id": "PART1-SOLUTIONS",
+      "title": "Part 1 — Student Solutions Book",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/parts/part-1/solutions.pdf",
+      "bytes": 5513739,
+      "sha256": "ba6e36aaad926e3a46e4095ee68358d2301cfdd11db9e6412a2a73a94641837c",
+      "pages": 1812,
+      "media_box_pt": [
+        841.8898,
+        595.2756
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "part",
+      "id": "PART2-CLASSIFIED",
+      "title": "Part 2 — Student Classified Book",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/parts/part-2/classified.pdf",
+      "bytes": 3726315,
+      "sha256": "de2dd80e78ded20643557ab624867e0259cb7cb277a48f4538d49347b6d7cc69",
+      "pages": 980,
+      "media_box_pt": [
+        841.8898,
+        595.2756
+      ],
+      "public": true
+    },
+    {
+      "edition": "student",
+      "scope": "part",
+      "id": "PART2-SOLUTIONS",
+      "title": "Part 2 — Student Solutions Book",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Student/parts/part-2/solutions.pdf",
+      "bytes": 3433896,
+      "sha256": "16818d3d6110e406df8d60b7892f89c0d5020ccfa9235b3155950abfa47c3a88",
+      "pages": 534,
+      "media_box_pt": [
+        841.8898,
+        595.2756
+      ],
+      "public": true
+    },
+    {
+      "edition": "teacher",
+      "scope": "chapter",
+      "id": "C05-TEACHER",
+      "title": "C05 — Trigonometric Functions — Teacher Classroom Working Edition",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Teacher/chapters/c05/teacher-b5-landscape.pdf",
+      "bytes": 2862191,
+      "sha256": "c79d15355a98b357f51c927f3653462f1a8d1a57b1dcd66a53ef97c366e93260",
+      "pages": 351,
+      "media_box_pt": [
+        728.5,
+        515.91
+      ],
+      "public": true
+    },
+    {
+      "edition": "teacher",
+      "scope": "chapter",
+      "id": "C06-TEACHER",
+      "title": "C06 — Exponents and Logarithms — Teacher Classroom Working Edition",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Teacher/chapters/c06/teacher-b5-landscape.pdf",
+      "bytes": 1609502,
+      "sha256": "dab631c3be7d6de97ffde1a0a5ea9749e1a444e7dcb1a0a94fd0ec867df4facf",
+      "pages": 250,
+      "media_box_pt": [
+        728.5,
+        515.91
+      ],
+      "public": true
+    },
+    {
+      "edition": "teacher",
+      "scope": "chapter",
+      "id": "C07-TEACHER",
+      "title": "C07 — Differentiation and Integration — Teacher Classroom Working Edition",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Teacher/chapters/c07/teacher-b5-landscape.pdf",
+      "bytes": 1772233,
+      "sha256": "f3e7b2e76d9d841ebf776c7f53e0eb02f9d026384d31879fa48aa06944706def",
+      "pages": 277,
+      "media_box_pt": [
+        728.5,
+        515.91
+      ],
+      "public": true
+    },
+    {
+      "edition": "teacher",
+      "scope": "chapter",
+      "id": "C08-TEACHER",
+      "title": "C08 — Statistical Inference — Teacher Classroom Working Edition",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Teacher/chapters/c08/teacher-b5-landscape.pdf",
+      "bytes": 618490,
+      "sha256": "53b84fc764cfda23d20090cd3cbc1724a3f2fd3e18d5b9078c34fb7d84925b5a",
+      "pages": 114,
+      "media_box_pt": [
+        728.5,
+        515.91
+      ],
+      "public": true
+    },
+    {
+      "edition": "teacher",
+      "scope": "complete",
+      "id": "ALL-TEACHER",
+      "title": "Complete Teacher Classroom Working Edition",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Teacher/complete/teacher-b5-landscape.pdf",
+      "bytes": 21583941,
+      "sha256": "f444c9f8021f4b7653965401f4ba741e565673d2bd1c08a8d403216465bed453",
+      "pages": 3885,
+      "media_box_pt": [
+        728.5,
+        515.91
+      ],
+      "public": true
+    },
+    {
+      "edition": "teacher",
+      "scope": "part",
+      "id": "PART1-TEACHER",
+      "title": "Part 1 — Teacher Classroom Working Edition",
+      "path": "downloads/EgyptianBaccalaureate/2026/English/Teacher/parts/part-1/teacher-b5-landscape.pdf",
+      "bytes": 14706161,
+      "sha256": "d96f3b2a0302c4422a0d272c11bbf4120b76faaccb524dcba48cffcc86748c27",
+      "pages": 2893,
+      "media_box_pt": [
+        728.5,
+        515.91
+      ],
+      "public": true
+    }
+  ],
+  "question_bank": {
+    "path": "data/EgyptianBaccalaureate/2026/English/questions.json",
+    "solutions_path": "data/EgyptianBaccalaureate/2026/English/solutions.json",
+    "runtime_path": "data/EgyptianBaccalaureate/2026/English/baccalaureate-data.js",
+    "record_count": 3812,
+    "solution_count": 3812,
+    "format_counts": {
+      "mcq": 1906,
+      "written": 1906
+    },
+    "sha256": "2676d30bd72230e2ecc3f1cb6552751afdfc31972b39b535545b04dc049732d7",
+    "solutions_sha256": "074e108b13dea7b71a823a609ff56c5c5e294733909789256141d938350c2434",
+    "runtime_sha256": "bbdac158544f009cb296b1f1b283f8c9615470648d17a8c31bf808b19dc7bb5a",
+    "public": true
+  },
+  "visual_assets": {
+    "policy": "selected diagrams only; no page-by-page render duplication",
+    "count": 8,
+    "manifest": "assets/questions/EgyptianBaccalaureate/2026/English/manifest.json",
+    "sha256": "b0f47942c2e3113657912db7976052c4cb6192c083821d086a878b172de22453",
+    "public": true
+  },
+  "counts": {
+    "pdfs": 97,
+    "student_pdfs": 91,
+    "teacher_pdfs": 6
+  },
+  "question_cards": {
+    "root": "assets/questions/EgyptianBaccalaureate/2026/English/cards",
+    "manifest": "assets/questions/EgyptianBaccalaureate/2026/English/cards/manifest.json",
+    "count": 3812,
+    "total_bytes": 135211477,
+    "tree_sha256": "9911e671d71f84d8a042e7e6a0e0e71412727cbba8fd916955039ea9b70df150",
+    "dpi": 144,
+    "public": true
+  }
+}

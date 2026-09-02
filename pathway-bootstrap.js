@@ -1,5 +1,5 @@
 (function () {
-  const VALID_PATHWAYS = new Set(["linear", "modular", "pure"]);
+  const VALID_PATHWAYS = new Set(["linear", "modular", "pure", "baccalaureate"]);
   const CHOICE_KEYS = ["elitePathwayChoice", "elitePathwayMode"];
 
   function safeLocalStorageGet(key) {
@@ -30,6 +30,7 @@
   }
 
   function coursePalette(course, pathway) {
+    if (pathway === "baccalaureate") return "baccalaureate";
     if (course === "wma12") return "mulberry";
     if (course === "wme01") return "teal";
     if (course === "wma11") return "pure";

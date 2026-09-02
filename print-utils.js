@@ -39,6 +39,13 @@
       accentDeep: "#203936",
       soft: "rgba(49, 83, 78, 0.1)",
       highlight: "#dcb877"
+    },
+    baccalaureate: {
+      label: "Egyptian Baccalaureate Mathematics 2026",
+      accent: "#0b6670",
+      accentDeep: "#06434a",
+      soft: "rgba(11, 102, 112, 0.1)",
+      highlight: "#dcb877"
     }
   };
 
@@ -101,6 +108,7 @@
     if (requestedCourse === "wma11") return "pure";
     if (requested === "modular") return "modular";
     if (requested === "linear") return "linear";
+    if (requested === "baccalaureate") return "baccalaureate";
     if (requested === "pure") {
       const bodyCourse = document.body?.dataset.course;
       if (bodyCourse === "wme01") return "teal";

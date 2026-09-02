@@ -53,6 +53,63 @@
     ? IAL_COURSES[requestedIalCourse] || IAL_COURSES.wma11
     : null;
 
+  const baccalaureateCourse = requestedPathway === "baccalaureate" || requestedCourse === "baccalaureate" || requestedCourse === "egyptian-baccalaureate"
+    ? {
+        id: "egyptian-baccalaureate",
+        mode: "baccalaureate",
+        label: "Egyptian Baccalaureate Mathematics 2026",
+        title: "Egyptian Baccalaureate Test Builder",
+        heroTitle: "Build a Baccalaureate test.",
+        heroCopy: "Choose a chapter or concept, build a random test, print it, and open the matching worked solutions.",
+        unitLabel: "Chapter",
+        unitAllLabel: "All chapters",
+        units: [...new Set((window.EGYPTIAN_BACCALAUREATE_QUESTIONS || []).map((item) => item.chapter_id).filter(Boolean))],
+        courseCode: "EB-MATH-2026",
+        questions: (window.EGYPTIAN_BACCALAUREATE_QUESTIONS || []).map((item) => ({
+          id: item.id,
+          source_id: item.source_id || item.id,
+          bank: "all",
+          course: "egyptian-baccalaureate",
+          is_expertise: item.level === "L3" || item.level === "L4" || Boolean(item.combined),
+          unit: item.chapter_id,
+          part: ["C01", "C02", "C03", "C04"].includes(item.chapter_id) ? "part-1" : "part-2",
+          linear_unit: item.chapter_id,
+          modular_unit: item.chapter_id,
+          topic: item.concept_title || item.concept_id || item.topic_id,
+          topics: [item.concept_title || item.concept_id || item.topic_id].filter(Boolean),
+          topic_slug: item.concept_id || item.topic_id,
+          topic_slugs: [item.concept_id || item.topic_id].filter(Boolean),
+          paper: item.chapter_id,
+          code: item.family_id,
+          question: item.id,
+          marks: item.marks || (item.format === "mcq" ? 1 : 2),
+          image: item.image,
+          question_text: item.stem || item.prompt || item.id,
+          finalAnswer: item.final_answer,
+          steps: item.solution || [],
+          question_format: item.format,
+          options: item.options || [],
+          correct_option: item.correct_option,
+          family_id: item.family_id,
+          variant_id: item.variant_id,
+          concept_id: item.concept_id,
+          concept_number: item.concept_number,
+          visual_asset: item.visual_asset || null
+        })),
+        topics: [...new Set((window.EGYPTIAN_BACCALAUREATE_QUESTIONS || []).map((item) => JSON.stringify({ topic: item.concept_title || item.concept_id || item.topic_id, unit: item.chapter_id })))].map((item) => JSON.parse(item)),
+        solutions: Object.fromEntries((window.EGYPTIAN_BACCALAUREATE_QUESTIONS || []).map((item) => [item.id, {
+          status: "checked",
+          checkedBy: "Dr Eslam Ahmed",
+          steps: (item.solution || []).map((body, index) => ({ title: `Step ${index + 1}`, body: normalizeMathDelimiters(body) })),
+          finalAnswer: normalizeMathDelimiters(item.final_answer || ""),
+          correctOption: item.correct_option
+        }])),
+        reviewKey: "eliteEgyptianBaccalaureateMistakeBoxV1",
+        solvedKey: "eliteEgyptianBaccalaureateSolvedV1",
+        selectedKey: "eliteEgyptianBaccalaureateSelectedV1"
+      }
+    : null;
+
   function normalizeMathDelimiters(value) {
     return String(value || "")
       .replace(/\$\$([\s\S]+?)\$\$/g, "\\[$1\\]")
@@ -107,7 +164,7 @@
   function ialSolution(def, item) {
     return {
       status: "checked",
-      checkedBy: "Dr Eslam Ahmed + Codex",
+      checkedBy: "Dr Eslam Ahmed",
       updated: item.updated || "",
       topicNote: item.topicName || ialTopicName(def, item.topic),
       steps: (item.steps || []).map((step) => ({
@@ -137,6 +194,8 @@
         solvedKey: `${ialCourse.storagePrefix}SolvedV1`,
         selectedKey: `${ialCourse.storagePrefix}SelectedV1`
       }
+    : baccalaureateCourse
+    ? baccalaureateCourse
     : {
         id: "igcse",
         mode: "igcse",
@@ -154,7 +213,9 @@
   let solutions = course.solutions;
   let fullSolutionsPromise = null;
   const ialPrintPalettes = { wma11: "pure", wma12: "mulberry", wme01: "teal" };
-  const activePrintPalette = course.mode === "pure"
+  const activePrintPalette = course.mode === "baccalaureate"
+    ? "baccalaureate"
+    : course.mode === "pure"
     ? ialPrintPalettes[course.id] || "pure"
     : requestedPathway === "modular" || window.ELITE_PATHWAY?.mode === "modular"
       ? "modular"
@@ -219,6 +280,8 @@
     modeTabs: [...document.querySelectorAll("[data-exam-mode]")],
     modePanels: [...document.querySelectorAll("[data-mode-panel]")],
     bank: document.getElementById("examBank"),
+    part: document.getElementById("examPart"),
+    partLabel: document.getElementById("examPartLabel"),
     unit: document.getElementById("examUnit"),
     topic: document.getElementById("examTopic"),
     duration: document.getElementById("examDuration"),
@@ -243,6 +306,8 @@
     paper: document.getElementById("examPaper"),
     customSearch: document.getElementById("builderSearch"),
     customBank: document.getElementById("builderBank"),
+    customPart: document.getElementById("builderPart"),
+    customPartLabel: document.getElementById("builderPartLabel"),
     customUnit: document.getElementById("builderUnit"),
     customTopic: document.getElementById("builderTopic"),
     customPaper: document.getElementById("builderPaper"),
@@ -262,6 +327,8 @@
     draftSummary: document.getElementById("draftSummary"),
     smartBank: document.getElementById("smartBank"),
     smartUnit: document.getElementById("smartUnit"),
+    smartPart: document.getElementById("smartPart"),
+    smartPartLabel: document.getElementById("smartPartLabel"),
     smartProfile: document.getElementById("smartProfile"),
     smartCount: document.getElementById("smartCount"),
     smartDuration: document.getElementById("smartDuration"),
@@ -371,23 +438,28 @@
   }
 
   function activePathway() {
+    if (course.mode === "baccalaureate") return "baccalaureate";
     if (course.mode === "pure") return "pure";
     return window.ELITE_PATHWAY?.mode === "modular" ? "modular" : "linear";
   }
 
   function displayUnit(question) {
-    if (activePathway() === "pure") return question.unit || course.courseCode || "WMA11";
+    if (activePathway() === "pure" || activePathway() === "baccalaureate") return question.unit || course.courseCode || "";
     return activePathway() === "modular" ? question.modular_unit : question.linear_unit;
   }
 
   function unitsForPathway() {
-    if (activePathway() === "pure") return course.units || [course.courseCode || "WMA11"];
+    if (activePathway() === "pure" || activePathway() === "baccalaureate") return course.units || [course.courseCode || ""];
     const catalog = activePathway() === "modular" ? window.MODULAR_TOPIC_CATALOG || [] : window.LINEAR_TOPIC_CATALOG || [];
     return [...new Set(catalog.map((entry) => entry.unit))];
   }
 
-  function topicsForUnit(unit) {
-    if (activePathway() === "pure") {
+  function topicsForUnit(unit, part = "") {
+    if (activePathway() === "pure" || activePathway() === "baccalaureate") {
+      if (activePathway() === "baccalaureate" && part) {
+        const allowed = new Set(questions.filter((question) => questionMatchesPart(question, part)).map((question) => question.topic));
+        return (course.topics || []).filter((entry) => (!unit || entry.unit === unit) && allowed.has(entry.topic)).map((entry) => entry.topic);
+      }
       return (course.topics || []).filter((entry) => !unit || entry.unit === unit).map((entry) => entry.topic);
     }
     const catalog = activePathway() === "modular" ? window.MODULAR_TOPIC_CATALOG || [] : window.LINEAR_TOPIC_CATALOG || [];
@@ -432,19 +504,20 @@
     container.dispatchEvent(new Event("change", { bubbles: true }));
   }
 
-  function topicPoolCount(topic, bank, unit) {
+  function topicPoolCount(topic, bank, unit, part = "") {
     return questions
       .filter((question) => questionMatchesBank(question, bank))
+      .filter((question) => questionMatchesPart(question, part))
       .filter((question) => questionMatchesUnit(question, unit))
       .filter((question) => questionMatchesTopic(question, topic)).length;
   }
 
-  function renderTopicMix(container, summary, unit = "", bank = "all") {
+  function renderTopicMix(container, summary, unit = "", bank = "all", part = "") {
     if (!container) return;
     const previous = new Set(selectedTopicMix(container));
-    const topics = topicsForUnit(unit);
+    const topics = topicsForUnit(unit, part);
     container.innerHTML = topics.map((topic) => {
-      const count = topicPoolCount(topic, bank, unit);
+      const count = topicPoolCount(topic, bank, unit, part);
       const checked = previous.has(topic) ? " checked" : "";
       return `<label><input type="checkbox" value="${escapeHtml(topic)}"${checked}> <span>${escapeHtml(topic)}</span><em>${count}</em></label>`;
     }).join("") || `<div class="empty-roadmap">No topics match this chapter yet.</div>`;
@@ -479,6 +552,7 @@
     const params = new URLSearchParams(window.location.search);
     const unit = params.get("unit");
     const bank = params.get("bank");
+    const part = params.get("part");
     const mode = params.get("mode");
     const profile = params.get("profile");
     const topicsParam = params.get("topics") || "";
@@ -489,8 +563,11 @@
     setSelectIfPresent(els.customUnit, unit);
     setSelectIfPresent(els.smartUnit, unit);
     setSelectIfPresent(els.bank, bank);
+    setSelectIfPresent(els.part, part);
     setSelectIfPresent(els.customBank, bank);
+    setSelectIfPresent(els.customPart, part);
     setSelectIfPresent(els.smartBank, bank);
+    setSelectIfPresent(els.smartPart, part);
     setSelectIfPresent(els.smartProfile, profile);
     if (mode && els.modeTabs.some((button) => button.dataset.examMode === mode)) {
       activeMode = mode;
@@ -498,10 +575,34 @@
     refreshTopicOptions();
     refreshBuilderTopicOptions();
     refreshSmartTopicOptions();
+    const singleTopic = urlTopics.length === 1 ? urlTopics[0] : "";
+    setSelectIfPresent(els.topic, singleTopic);
+    setSelectIfPresent(els.customTopic, singleTopic);
     setTopicMix(els.topicMix, urlTopics);
     setTopicMix(els.smartTopicMix, urlTopics);
     updateTopicMixSummary(els.topicMix, els.topicMixSummary);
     updateTopicMixSummary(els.smartTopicMix, els.smartTopicMixSummary);
+    resetStaleStateForUrl({ unit, part, topics: urlTopics, mode });
+  }
+
+  function resetStaleStateForUrl({ unit = "", part = "", topics = [], mode = "" } = {}) {
+    if (!state.ids?.length) return;
+    const kindForMode = { random: "random", custom: "custom", smart: "revision-book" };
+    const expectedKind = kindForMode[activeMode];
+    const explicitKindMismatch = Boolean(mode && expectedKind && state.kind !== expectedKind);
+    const selectedTopics = Array.isArray(topics) ? topics.filter(Boolean) : [];
+    const selectionMismatch = state.ids.some((id) => {
+      const question = questionById(id);
+      if (!question) return true;
+      if (part && !questionMatchesPart(question, part)) return true;
+      if (unit && !questionMatchesUnit(question, unit)) return true;
+      return selectedTopics.length > 0 && !questionMatchesAnyTopic(question, selectedTopics);
+    });
+    if (!explicitKindMismatch && !selectionMismatch) return;
+    state = { status: "idle", ids: [], scores: {}, kind: activeMode === "smart" ? "revision-book" : activeMode };
+    draftIds = [];
+    saveState();
+    saveDraft();
   }
 
   function setOptionText(select, value, text) {
@@ -510,9 +611,12 @@
   }
 
   function applyCourseDom() {
-    if (course.mode !== "pure") return;
-    document.body?.classList.remove("pathway-linear", "pathway-modular");
-    document.body?.classList.add("pathway-pure", "exam-course-pure");
+    if (course.mode !== "pure" && course.mode !== "baccalaureate") return;
+    document.body?.classList.remove("pathway-linear", "pathway-modular", "pathway-pure");
+    document.body?.classList.add(course.mode === "baccalaureate" ? "pathway-baccalaureate" : "pathway-pure", "exam-course-pure");
+    if (course.mode === "baccalaureate") {
+      [els.partLabel, els.customPartLabel, els.smartPartLabel].forEach((node) => { if (node) node.hidden = false; });
+    }
     document.title = `${course.title} - Elite IGCSE Mathematics`;
     const title = document.getElementById("examTitle");
     if (title) title.textContent = course.heroTitle;
@@ -522,26 +626,26 @@
       node.textContent = course.unitLabel;
     });
     [els.bank, els.customBank, els.smartBank].forEach((select) => {
-      setOptionText(select, "all", `Full ${course.courseCode || "IAL"} bank`);
-      setOptionText(select, "expertise", "Q6+ expertise only");
+      setOptionText(select, "all", course.mode === "baccalaureate" ? "Full Baccalaureate bank" : `Full ${course.courseCode || "IAL"} bank`);
+      setOptionText(select, "expertise", course.mode === "baccalaureate" ? "Challenge questions" : "Q6+ expertise only");
     });
     const difficulty = [...(els.customDifficulty?.options || [])].find((option) => option.value === "q20");
-    if (difficulty) difficulty.textContent = "Q6+ expertise";
+    if (difficulty) difficulty.textContent = course.mode === "baccalaureate" ? "Challenge questions" : "Q6+ expertise";
     const preset = [...(els.randomPreset?.options || [])].find((option) => option.value === "hard");
-    if (preset) preset.textContent = "Q6+ challenge";
+    if (preset) preset.textContent = course.mode === "baccalaureate" ? "Challenge questions" : "Q6+ challenge";
   }
 
   function refreshTopicOptions() {
-    fillSelect(els.topic, topicsForUnit(els.unit?.value || ""), "All topics");
-    renderTopicMix(els.topicMix, els.topicMixSummary, els.unit?.value || "", els.bank?.value || "all");
+    fillSelect(els.topic, topicsForUnit(els.unit?.value || "", els.part?.value || ""), "All topics");
+    renderTopicMix(els.topicMix, els.topicMixSummary, els.unit?.value || "", els.bank?.value || "all", els.part?.value || "");
   }
 
   function refreshBuilderTopicOptions() {
-    fillSelect(els.customTopic, topicsForUnit(els.customUnit?.value || ""), "All topics");
+    fillSelect(els.customTopic, topicsForUnit(els.customUnit?.value || "", els.customPart?.value || ""), "All topics");
   }
 
   function refreshSmartTopicOptions() {
-    renderTopicMix(els.smartTopicMix, els.smartTopicMixSummary, els.smartUnit?.value || "", els.smartBank?.value || "all");
+    renderTopicMix(els.smartTopicMix, els.smartTopicMixSummary, els.smartUnit?.value || "", els.smartBank?.value || "all", els.smartPart?.value || "");
   }
 
   function uniqueSorted(values) {
@@ -550,10 +654,12 @@
 
   function refreshBuilderPaperOptions() {
     const bank = els.customBank?.value || "all";
+    const part = els.customPart?.value || "";
     const unit = els.customUnit?.value || "";
     const topic = els.customTopic?.value || "";
     const papers = questions
       .filter((question) => questionMatchesBank(question, bank))
+      .filter((question) => questionMatchesPart(question, part))
       .filter((question) => questionMatchesUnit(question, unit))
       .filter((question) => questionMatchesTopic(question, topic))
       .map((question) => question.paper);
@@ -578,12 +684,12 @@
     if (difficulty === "quick") return Number(question.marks || 0) <= 3;
     if (difficulty === "standard") return Number(question.marks || 0) >= 4 && Number(question.marks || 0) <= 6;
     if (difficulty === "long") return Number(question.marks || 0) >= 7;
-    if (difficulty === "q20") return activePathway() === "pure" ? Number(question.question || 0) >= 6 : Number(question.question || 0) >= 20;
+    if (difficulty === "q20") return activePathway() === "pure" ? Number(question.question || 0) >= 6 : activePathway() === "baccalaureate" ? Boolean(question.is_expertise) : Number(question.question || 0) >= 20;
     return true;
   }
 
   function questionMatchesBank(question, bank = "all") {
-    if (activePathway() === "pure") {
+    if (activePathway() === "pure" || activePathway() === "baccalaureate") {
       if (bank === "expertise") return Boolean(question.is_expertise);
       return true;
     }
@@ -592,6 +698,10 @@
 
   function questionMatchesUnit(question, unit = "") {
     return !unit || displayUnit(question) === unit;
+  }
+
+  function questionMatchesPart(question, part = "") {
+    return !part || question.part === part;
   }
 
   function questionMatchesTopic(question, topic = "") {
@@ -605,6 +715,7 @@
 
   function eligiblePool({
     bank = "all",
+    part = "",
     unit = "",
     topic = "",
     topics = [],
@@ -620,6 +731,7 @@
     const needle = search.trim().toLowerCase();
     return questions
       .filter((question) => questionMatchesBank(question, bank))
+      .filter((question) => questionMatchesPart(question, part))
       .filter((question) => questionMatchesUnit(question, unit))
       .filter((question) => questionMatchesTopic(question, topic))
       .filter((question) => questionMatchesAnyTopic(question, topics))
@@ -880,6 +992,7 @@
       course: course.id,
       pathway: activePathway(),
       bank: els.bank?.value || "all",
+      part: els.part?.value || "",
       unit: els.unit?.value || "",
       topics: randomTopicSelection(),
       count: Math.max(1, Number(els.count?.value || 25)),
@@ -895,6 +1008,7 @@
     const avoidSources = config.avoidRepeats ? recentMockSources() : new Set();
     const picked = buildBalancedPaper({
       bank: config.bank,
+      part: config.part,
       unit: config.unit,
       topic: "",
       topics: config.topics,
@@ -1036,6 +1150,10 @@
   }
 
   function topicLink(row) {
+    if (activePathway() === "baccalaureate") {
+      const params = new URLSearchParams({ pathway: "baccalaureate", bank: state.bank || "all", unit: row.unit || "", topic: row.topic || "", mode: "custom" });
+      return `exam.html?${params.toString()}`;
+    }
     if (activePathway() === "pure") {
       const topic = questions.find((question) => question.topic === row.topic)?.topic_slug || row.topic;
       return `${course.coursePageHref || "ial/wma11/index.html"}?topic=${encodeURIComponent(topic)}`;
@@ -1325,6 +1443,7 @@
   function builderFilterConfig(overrides = {}) {
     return {
       bank: els.customBank.value,
+      part: els.customPart?.value || "",
       unit: els.customUnit.value,
       topic: els.customTopic.value,
       paper: els.customPaper.value,
@@ -1511,8 +1630,8 @@
     await printCurrentSolutions(els.printDraftSolution);
   }
 
-  function weakTopicPool(bank, unit, topics = []) {
-    const pool = uniqueBySource(eligiblePool({ bank, unit, topics }));
+  function weakTopicPool(bank, unit, topics = [], part = "") {
+    const pool = uniqueBySource(eligiblePool({ bank, unit, part, topics }));
     const rows = new Map();
     pool.forEach((question) => {
       const row = rows.get(question.topic) || { topic: question.topic, total: 0, solved: 0 };
@@ -1528,26 +1647,26 @@
     return pool.filter((question) => weakest.includes(question.topic) && !isSolved(question));
   }
 
-  function mistakePool(bank, unit, topics = []) {
+  function mistakePool(bank, unit, topics = [], part = "") {
     const review = readJson(REVIEW_KEY, {});
     const dueIds = Object.values(review)
       .filter((item) => Number(item.dueAt || 0) <= Date.now())
       .map((item) => item.id);
     const dueSources = sourceSet(dueIds);
-    return uniqueBySource(eligiblePool({ bank, unit, topics })).filter((question) => dueSources.has(sourceKey(question)));
+    return uniqueBySource(eligiblePool({ bank, unit, part, topics })).filter((question) => dueSources.has(sourceKey(question)));
   }
 
-  function unsolvedPool(bank, unit, topics = []) {
-    return uniqueBySource(eligiblePool({ bank, unit, topics, unsolvedOnly: true }));
+  function unsolvedPool(bank, unit, topics = [], part = "") {
+    return uniqueBySource(eligiblePool({ bank, unit, part, topics, unsolvedOnly: true }));
   }
 
-  function smartProgressContext(bank, unit, topics = []) {
+  function smartProgressContext(bank, unit, topics = [], part = "") {
     const solved = solvedSet();
     return {
       solvedIds: solved.ids,
       solvedSources: solved.sources,
-      dueSources: new Set(mistakePool(bank, unit, topics).map(sourceKey)),
-      weakTopics: new Set(weakTopicPool(bank, unit, topics).map((question) => question.topic))
+      dueSources: new Set(mistakePool(bank, unit, topics, part).map(sourceKey)),
+      weakTopics: new Set(weakTopicPool(bank, unit, topics, part).map((question) => question.topic))
     };
   }
 
@@ -1559,7 +1678,7 @@
     const engine = revisionEngine();
     const config = smartBuildConfig();
     const topics = config.topics;
-    const pool = uniqueBySource(eligiblePool({ bank, unit, topics }));
+    const pool = uniqueBySource(eligiblePool({ bank, unit, part: config.part, topics }));
     if (!engine || !pool.length) {
       return { questions: [], analysis: { topics: [], selectedTopics: [], count: pool.length }, availableCount: pool.length };
     }
@@ -1573,7 +1692,7 @@
       includeMistakes: config.includeMistakes,
       includeWeakTopics: config.includeWeakTopics,
       includeUnsolved: config.includeUnsolved,
-      progress: smartProgressContext(bank, unit, topics)
+      progress: smartProgressContext(bank, unit, topics, config.part)
     });
   }
 
@@ -1584,13 +1703,14 @@
     const count = Number(els.smartCount?.value || 50);
     const topics = selectedTopicMix(els.smartTopicMix);
     const engine = revisionEngine();
-    const pool = uniqueBySource(eligiblePool({ bank, unit, topics }));
+    const part = els.smartPart?.value || "";
+    const pool = uniqueBySource(eligiblePool({ bank, unit, part, topics }));
     const analysis = book?.analysis || (engine
       ? engine.analyseTopics(pool, {
           profile: els.smartProfile?.value || "prediction",
           pathway: activePathway(),
           course: course.id,
-          progress: smartProgressContext(bank, unit, topics)
+          progress: smartProgressContext(bank, unit, topics, part)
         })
       : { topics: [], latestYear: 0, count: pool.length, totalMarks: 0 });
     const selected = book?.questions || [];
@@ -1624,6 +1744,7 @@
       course: course.id,
       pathway: activePathway(),
       bank: els.smartBank?.value || "all",
+      part: els.smartPart?.value || "",
       unit: els.smartUnit?.value || "",
       profile: els.smartProfile?.value || "prediction",
       count: Math.max(MIN_REVISION_COUNT, Number(els.smartCount?.value || 50)),
@@ -1924,6 +2045,7 @@
     refreshTopicOptions();
   });
   els.bank?.addEventListener("change", refreshTopicOptions);
+  els.part?.addEventListener("change", refreshTopicOptions);
   els.unit?.addEventListener("change", refreshTopicOptions);
   els.topicMix?.addEventListener("change", () => updateTopicMixSummary(els.topicMix, els.topicMixSummary));
   document.addEventListener("click", (event) => {
@@ -1932,11 +2054,11 @@
     const container = document.getElementById(button.dataset.topicMixTarget);
     setTopicMixByMode(container, button.dataset.topicMixAction);
   });
-  [els.smartBank, els.smartUnit, els.smartProfile, els.smartCount, els.smartDuration, els.smartMistakes, els.smartWeakTopics, els.smartUnsolved]
+  [els.smartBank, els.smartPart, els.smartUnit, els.smartProfile, els.smartCount, els.smartDuration, els.smartMistakes, els.smartWeakTopics, els.smartUnsolved]
     .filter(Boolean)
     .forEach((input) => {
       const updateSmartAnalysis = () => {
-        if (input === els.smartBank || input === els.smartUnit) refreshSmartTopicOptions();
+        if (input === els.smartBank || input === els.smartPart || input === els.smartUnit) refreshSmartTopicOptions();
         lastRevisionBook = null;
         renderSmartAnalysis();
       };
@@ -1953,10 +2075,15 @@
     refreshBuilderPaperOptions();
     renderBuilderResults();
   });
-  [els.customSearch, els.customBank, els.customTopic, els.customPaper, els.customDifficulty, els.customStatus, els.customMinMarks, els.customMaxMarks]
+  els.customPart?.addEventListener("change", () => {
+    refreshBuilderTopicOptions();
+    refreshBuilderPaperOptions();
+    renderBuilderResults();
+  });
+  [els.customSearch, els.customBank, els.customPart, els.customTopic, els.customPaper, els.customDifficulty, els.customStatus, els.customMinMarks, els.customMaxMarks]
     .filter(Boolean)
     .forEach((input) => input.addEventListener("input", () => {
-      if (input === els.customBank || input === els.customTopic) refreshBuilderPaperOptions();
+      if (input === els.customBank || input === els.customPart || input === els.customTopic) refreshBuilderPaperOptions();
       renderBuilderResults();
     }));
   els.addVisible?.addEventListener("click", addVisibleToDraft);

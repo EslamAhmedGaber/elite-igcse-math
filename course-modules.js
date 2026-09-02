@@ -152,6 +152,12 @@
       accentDeep: "#203936",
       soft: "rgba(49, 83, 78, 0.1)",
     },
+    baccalaureate: {
+      label: "Egyptian Baccalaureate",
+      accent: "#0b6670",
+      accentDeep: "#06434a",
+      soft: "rgba(11, 102, 112, 0.1)",
+    },
   };
 
   const linearLinks = [
@@ -2157,6 +2163,48 @@
       }
   ];
 
+  const baccalaureateBooks = [
+    {
+      className: "highlight linear-book",
+      tag: "Egyptian Baccalaureate | 2026",
+      tagTone: "teal",
+      title: "Egyptian Baccalaureate Mathematics",
+      description: "Free English Student and Teacher editions, organised by concept, chapter, part, and complete book. Open the full download map or start a test from the public question bank.",
+      meta: ["8 chapters", "Student + Teacher PDFs", "Random tests"],
+      actions: [
+        {
+          label: "Open download map",
+          href: "egyptian-baccalaureate.html",
+          variant: "primary",
+        },
+        {
+          label: "Build a test",
+          href: "exam.html?pathway=baccalaureate&mode=custom",
+          variant: "solution",
+        },
+        {
+          label: "Complete Student PDF",
+          href: "downloads/EgyptianBaccalaureate/2026/English/Student/complete/classified.pdf?v=egyptian-bacc-20260902",
+          variant: "light",
+          target: "_blank",
+        },
+        {
+          label: "Teacher PDF",
+          href: "downloads/EgyptianBaccalaureate/2026/English/Teacher/complete/teacher-b5-landscape.pdf?v=egyptian-bacc-20260902",
+          variant: "light",
+          target: "_blank",
+        },
+      ],
+    },
+  ];
+
+  const baccalaureateLinks = [
+    { module: "books", title: "Download Map", detail: "Concept, chapter, part, complete", href: "/egyptian-baccalaureate.html" },
+    { module: "build-test", title: "Build Test", detail: "Random, concept, chapter, part", href: "/exam.html?pathway=baccalaureate&mode=custom" },
+    { module: "progress", title: "Progress", detail: "Track Baccalaureate practice", href: "/progress.html?pathway=baccalaureate" },
+    { module: "saved-tests", title: "Saved Tests", detail: "Reuse generated tests", href: "/exam.html?pathway=baccalaureate&mode=saved" },
+  ];
+
   const navGroups = [
     {
       id: "linear",
@@ -2329,6 +2377,18 @@
       ],
     },
     {
+      id: "baccalaureate",
+      label: "Egyptian Baccalaureate",
+      detail: "Mathematics 2026",
+      href: "/egyptian-baccalaureate.html",
+      pathway: "baccalaureate",
+      palette: "baccalaureate",
+      panelLabel: "Baccalaureate modules",
+      intro: "Egyptian Baccalaureate Mathematics 2026 — public English Student and Teacher PDFs, with concept, chapter, part, and complete downloads plus a metadata-powered test builder.",
+      books: baccalaureateBooks,
+      links: baccalaureateLinks,
+    },
+    {
       id: "about",
       label: "About",
       detail: "Dr Eslam",
@@ -2429,6 +2489,31 @@
             palette: "amber",
             href: "/ial/wst01/index.html",
             status: "planned",
+          },
+        ],
+      },
+      {
+        id: "baccalaureate",
+        label: "Egyptian Baccalaureate",
+        code: "Mathematics 2026",
+        palette: "baccalaureate",
+        href: "/egyptian-baccalaureate.html",
+        intro: "Free English Student and Teacher editions for the Egyptian Baccalaureate Mathematics 2026 curriculum, organised from concept to complete book.",
+        status: "live",
+        children: [
+          {
+            id: "baccalaureate-tests",
+            label: "Test Builder",
+            code: "Random / Concept / Chapter / Part",
+            href: "/exam.html?pathway=baccalaureate&mode=custom",
+            status: "live",
+          },
+          {
+            id: "baccalaureate-downloads",
+            label: "Public Books",
+            code: "Student + Teacher",
+            href: "/egyptian-baccalaureate.html",
+            status: "live",
           },
         ],
       },

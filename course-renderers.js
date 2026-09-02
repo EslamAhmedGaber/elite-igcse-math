@@ -51,7 +51,10 @@
     const course = normalizedText(params.get("course"));
     if (pathway === "linear") return "linear";
     if (pathway === "modular") return "modular";
+    if (pathway === "baccalaureate") return "baccalaureate";
     const courseIds = {
+      baccalaureate: "baccalaureate",
+      "egyptian-baccalaureate": "baccalaureate",
       wma11: "pure",
       pure1: "pure",
       pure: "pure",

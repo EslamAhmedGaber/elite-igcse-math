@@ -57,6 +57,93 @@
         storagePrefix: "eliteWME01"
       }
     };
+    if (pathway === "baccalaureate" || course === "baccalaureate" || course === "egyptian-baccalaureate") {
+      const rawQuestions = Array.isArray(window.EGYPTIAN_BACCALAUREATE_QUESTIONS)
+        ? window.EGYPTIAN_BACCALAUREATE_QUESTIONS
+        : [];
+      const chapterMap = new Map();
+      rawQuestions.forEach((item) => {
+        if (!item?.chapter_id) return;
+        if (!chapterMap.has(item.chapter_id)) chapterMap.set(item.chapter_id, {
+          id: item.chapter_id,
+          title: item.chapter_title || item.chapter_id
+        });
+      });
+      const chapters = [...chapterMap.values()].sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }));
+      const chapterOrder = new Map(chapters.map((chapter, index) => [chapter.id, index + 1]));
+      const topicMap = new Map();
+      rawQuestions.forEach((item) => {
+        if (!item?.topic_id) return;
+        if (!topicMap.has(item.topic_id)) topicMap.set(item.topic_id, {
+          id: item.topic_id,
+          title: item.concept_title || item.topic_id,
+          chapterId: item.chapter_id || ""
+        });
+      });
+      const topics = [...topicMap.values()].sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }));
+      const topicOrder = new Map(topics.map((topic, index) => [topic.id, index + 1]));
+      const chapterById = new Map(chapters.map((chapter) => [chapter.id, chapter]));
+      const questions = rawQuestions.map((item) => ({
+        ...item,
+        id: item.id,
+        source_id: item.source_id || item.id,
+        bank: "all",
+        unit: item.chapter_id ? `${item.chapter_id} — ${item.chapter_title || item.chapter_id}` : "Mixed",
+        unit_id: item.chapter_id || "",
+        modular_force_unit: item.chapter_id || "",
+        topic: item.topic_id ? `${item.topic_id} — ${item.concept_title || item.topic_id}` : "Mixed",
+        topic_slug: item.topic_id || item.concept_id || item.id,
+        topic_order: topicOrder.get(item.topic_id) || 999,
+        question: item.id,
+        marks: item.marks || (item.format === "mcq" ? 1 : 2),
+        is_expertise: item.level === "L3" || item.level === "L4" || Boolean(item.combined)
+      }));
+      return {
+        pathway: "baccalaureate",
+        course: "egyptian-baccalaureate",
+        label: "Egyptian Baccalaureate Mathematics 2026",
+        unitLowerPlural: "chapters",
+        questions,
+        solvedKey: "eliteEgyptianBaccalaureateSolvedV1",
+        selectedKey: "eliteEgyptianBaccalaureateSelectedV1",
+        reviewKey: "eliteEgyptianBaccalaureateMistakeBoxV1",
+        readinessKey: "eliteEgyptianBaccalaureateReadinessCheck",
+        activityKey: "eliteEgyptianBaccalaureateStudyActivityV1",
+        paperAttemptsKey: "eliteEgyptianBaccalaureateTestAttemptsV1",
+        studyTasksKey: "eliteEgyptianBaccalaureateStudyTasksV1",
+        mockHistoryKey: "eliteEgyptianBaccalaureateMockExamHistoryV1",
+        examKey: "eliteEgyptianBaccalaureateMockExamV1",
+        planKey: "eliteEgyptianBaccalaureateStudyPlanV1",
+        profileKey: "eliteEgyptianBaccalaureateStudentProfileV1",
+        assignmentsKey: "eliteEgyptianBaccalaureateTrackerAssignmentsV1",
+        quizzesKey: "eliteEgyptianBaccalaureateTrackerQuizzesV1",
+        trackerExtraYears: ["2026"],
+        trackerExtraPaperCodes: [],
+        expertiseLabel: "Challenge",
+        expertiseName: "Challenge",
+        expertiseFilter: (question) => Boolean(question.is_expertise),
+        practiceLink(row, bank = "all") {
+          const linkParams = new URLSearchParams({ pathway: "baccalaureate", mode: "custom" });
+          if (row?.unit_id) linkParams.set("unit", row.unit_id);
+          const topicLabel = String(row?.topic || "").replace(/^[A-Z]\d{2}-T\d{2}\s+—\s+/, "").trim();
+          if (topicLabel) linkParams.set("topics", topicLabel);
+          if (bank === "expertise") linkParams.set("bank", "expertise");
+          return `exam.html?${linkParams.toString()}`;
+        },
+        paperOptions() {
+          return chapters.map((chapter) => ({
+            year: "2026",
+            session: "Chapter",
+            paperCode: chapter.id,
+            chapterTitle: chapter.title
+          }));
+        },
+        paperLabel(item) {
+          const chapter = chapterById.get(item?.paperCode);
+          return chapter ? `${chapter.id} — ${chapter.title}` : `${item?.session || "Test"} ${item?.year || ""} ${item?.paperCode || ""}`.trim();
+        }
+      };
+    }
     const ialCourse = pathway === "pure" ? (ialDefinitions[course] || ialDefinitions.wma11) : null;
     if (ialCourse) {
       const topics = ialCourse.topics;
@@ -362,6 +449,7 @@
       const key = `${question.unit}|||${question.topic_slug || question.topic}`;
       const row = rows.get(key) || {
         unit: question.unit || "Mixed",
+        unit_id: question.unit_id || "",
         topic: question.topic || "Mixed",
         topicSlug: question.topic_slug || question.topic,
         topicOrder: Number(question.topic_order || 999),
@@ -449,6 +537,7 @@
   }
 
   function paperLabel(item) {
+    if (typeof coursePack.paperLabel === "function") return coursePack.paperLabel(item);
     return `${item.session || ""} ${item.year || ""} ${item.paperCode || ""}`.trim();
   }
 
@@ -638,6 +727,20 @@
     document.querySelectorAll("[data-progress-expertise-label]").forEach((node) => {
       node.textContent = coursePack.expertiseLabel || "Q20+";
     });
+    if (coursePack.pathway === "baccalaureate") {
+      const paperTab = document.querySelector("[data-tab-target='papers']");
+      if (paperTab) paperTab.textContent = "Test Attempts";
+      const paperMetric = document.getElementById("paperDoneCount")?.closest("article")?.querySelector("span");
+      if (paperMetric) paperMetric.textContent = "Tests attempted";
+      const recentTrendMeta = document.querySelector("#recentTrendCard .rt-head span");
+      if (recentTrendMeta) recentTrendMeta.textContent = "last 8 tests";
+      const paperTitle = document.getElementById("paperTrackerTitle");
+      if (paperTitle) paperTitle.textContent = "Log each chapter or mock attempt.";
+      const allPapersTitle = document.getElementById("allPapersTitle");
+      if (allPapersTitle) allPapersTitle.textContent = "Chapter and test completion status.";
+      const paperSearch = document.getElementById("paperSearch");
+      if (paperSearch) paperSearch.placeholder = "Chapter 1, C01, Algebraic Proofs";
+    }
   }
 
   function applyUrlDefaults() {

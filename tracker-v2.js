@@ -628,6 +628,10 @@
 
   // ---------- Dashboard ----------
   function paperBankCount() {
+    if (COURSE_PACK.pathway === "baccalaureate") {
+      const chapters = QUESTION_DATA.map((question) => question.unit_id || question.unit).filter(Boolean);
+      return new Set(chapters).size;
+    }
     if (window.SITE_META?.paperCount) return Number(window.SITE_META.paperCount) || 0;
     const keys = QUESTION_DATA.map((q) => [q.session, q.year, q.paper_code || q.paperCode || q.paper].filter(Boolean).join("::"));
     return uniqueSorted(keys).length;
@@ -755,9 +759,10 @@
     const paperEvidence = hasData ? Math.min(100, Math.round((paperList.length / 8) * 100)) : 0;
     const deadlineSafety = hasData ? Math.max(0, 100 - Math.min(100, overdue.length * 28)) : 0;
     const topicControl = weak.length ? weak[0].avg : (items.length ? scoreValue : 0);
+    const paperAxisLabel = COURSE_PACK.pathway === "baccalaureate" ? "Tests" : "Papers";
     const axes = [
       { label: "Scores", value: scoreValue, angle: -90 },
-      { label: "Papers", value: paperEvidence, angle: 0 },
+      { label: paperAxisLabel, value: paperEvidence, angle: 0 },
       { label: "Deadlines", value: deadlineSafety, angle: 90 },
       { label: "Topics", value: topicControl, angle: 180 }
     ];
@@ -813,9 +818,11 @@
     const button = document.getElementById("dashboardActionButton");
     if (!title || !text || !button) return;
     let target = "papers";
-    let cta = "Add paper attempt";
-    let actionTitle = "Add first paper score";
-    let actionText = "A paper attempt is the strongest signal for exam readiness. Save one score to unlock better trend analysis.";
+    let cta = COURSE_PACK.pathway === "baccalaureate" ? "Add test attempt" : "Add paper attempt";
+    let actionTitle = COURSE_PACK.pathway === "baccalaureate" ? "Add first test score" : "Add first paper score";
+    let actionText = COURSE_PACK.pathway === "baccalaureate"
+      ? "A chapter or mock score gives the tracker its first readiness signal. Save one result to unlock better trend analysis."
+      : "A paper attempt is the strongest signal for exam readiness. Save one score to unlock better trend analysis.";
     if (overdue.length) {
       target = "assignments";
       cta = "Open assignments";
@@ -823,9 +830,11 @@
       actionText = `${overdue.length} assignment${overdue.length === 1 ? " needs" : "s need"} action before the tracker can call the week safe.`;
     } else if (!paperList.length && (assignments.length || quizzes.length)) {
       target = "papers";
-      cta = "Add paper score";
+      cta = COURSE_PACK.pathway === "baccalaureate" ? "Add test score" : "Add paper score";
       actionTitle = "Add exam evidence";
-      actionText = "Assignments and quizzes are saved. Add one timed paper so the dashboard can compare class work to exam performance.";
+      actionText = COURSE_PACK.pathway === "baccalaureate"
+        ? "Assignments and quizzes are saved. Add a chapter or mock score so the dashboard can compare your work over time."
+        : "Assignments and quizzes are saved. Add one timed paper so the dashboard can compare class work to exam performance.";
     } else if (weak.length) {
       target = "revision";
       cta = "Open revision";
@@ -876,7 +885,8 @@
       if (el) el.textContent = value;
     };
     setText("paperDoneCount", String(paperList.length));
-    setText("dashPaperMeta", bankCount ? `of ${bankCount} papers in the bank` : "saved attempts");
+    const bankLabel = COURSE_PACK.pathway === "baccalaureate" ? "chapter test slots" : "papers in the bank";
+    setText("dashPaperMeta", bankCount ? `of ${bankCount} ${bankLabel}` : "saved attempts");
     setText("paperAverage", avgScore === null ? "0%" : `${avgScore}%`);
     setText("gradeForecast", avgScore === null ? "no score yet" : `${gradeFromPercent(avgScore)} pace`);
     setText("dashBestScore", bestScore === null ? "-" : `${bestScore}%`);

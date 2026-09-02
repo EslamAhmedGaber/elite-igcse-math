@@ -4,18 +4,20 @@
   const params = new URLSearchParams(root.location.search);
   const pathway = (params.get("pathway") || "").toLowerCase();
   const requested = (params.get("course") || "").toLowerCase();
+  const baccalaureate = pathway === "baccalaureate" || requested === "egyptian-baccalaureate" || requested === "baccalaureate";
   const ialCourse = ["wma11", "wma12", "wme01"].includes(requested)
     ? requested
     : pathway === "pure" ? "wma11" : "";
   const dataFiles = {
+    baccalaureate: "data/EgyptianBaccalaureate/2026/English/baccalaureate-data.js?v=20260902a",
     wma11: "ial/wma11/wma11-data.js?v=20260527c",
     wma12: "ial/wma12/wma12-data.js?v=20260611a",
     wme01: "ial/wme01/wme01-data.js?v=20260613a"
   };
-  const selectedData = ialCourse ? dataFiles[ialCourse] : "questions-data.js?v=20260528a";
+  const selectedData = baccalaureate ? dataFiles.baccalaureate : ialCourse ? dataFiles[ialCourse] : "questions-data.js?v=20260528a";
 
   root.ELITE_EXAM_BOOTSTRAP = Object.freeze({
-    course: ialCourse || "igcse",
+    course: baccalaureate ? "baccalaureate" : ialCourse || "igcse",
     initialData: selectedData
   });
 
@@ -32,10 +34,10 @@
     if (!root.EliteRuntime) throw new Error("Elite runtime loader is unavailable");
     setLoading(true);
     await root.EliteRuntime.loadScript(selectedData, { id: "eliteExamCourseData" });
-    if (!ialCourse) {
+    if (!ialCourse && !baccalaureate) {
       await root.EliteRuntime.loadScript("topic-normalizer.js", { id: "eliteExamTopicNormalizer" });
     }
-    await root.EliteRuntime.loadScript("exam.js?v=20260809d", { id: "eliteExamApp" });
+    await root.EliteRuntime.loadScript("exam.js?v=baccalaureate-20260902b", { id: "eliteExamApp" });
     setLoading(false);
   }
 
