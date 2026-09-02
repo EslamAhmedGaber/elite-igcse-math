@@ -27,6 +27,12 @@
       "source_question_id": "C05-K01-5-1-EX1"
     },
     {
+      "asset_id": "C05-K01-5-3-EX-exercise",
+      "path": "assets/questions/EgyptianBaccalaureate/2026/English/C05-K01-5-3-EX-exercise.png",
+      "sha256": "fec3cd411f7307fcbaf1771c87885f85dd30e1126a277f0944898a7ae7845de9",
+      "source_question_id": "C05-K01-5-3-EX"
+    },
+    {
       "asset_id": "C05-K03-5-9-WU2",
       "path": "assets/questions/EgyptianBaccalaureate/2026/English/C05-K03-5-9-WU2.png",
       "sha256": "99e5984e77570cf662a1eefea576e29af65463eafcb1f6387dcb9da8631cb222",

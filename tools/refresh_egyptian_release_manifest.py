@@ -49,6 +49,26 @@ def main() -> None:
     # release plan, not in the student-facing website payload.
     manifest.pop("diagram_guide_uploaded", None)
     manifest.pop("excluded_artifacts", None)
+    # PDF text cleanup and targeted figure repairs happen after the initial
+    # staging copy.  Recompute every public file fingerprint here so the
+    # promoted manifest always describes the exact downloadable bytes.
+    from pypdf import PdfReader  # type: ignore
+
+    for item in manifest.get("files", []):
+        pdf_path = stage / item["path"]
+        if not pdf_path.exists():
+            raise FileNotFoundError(pdf_path)
+        reader = PdfReader(str(pdf_path), strict=False)
+        first_page = reader.pages[0] if reader.pages else None
+        item["bytes"] = pdf_path.stat().st_size
+        item["sha256"] = sha256(pdf_path)
+        item["pages"] = len(reader.pages)
+        item["media_box_pt"] = (
+            [round(float(first_page.mediabox.width), 2), round(float(first_page.mediabox.height), 2)]
+            if first_page is not None
+            else None
+        )
+        item["public"] = True
     data_root = stage / DATA_REL
     question_path = data_root / "questions.json"
     solution_path = data_root / "solutions.json"

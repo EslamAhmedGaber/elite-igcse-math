@@ -104,7 +104,10 @@ def card_tex(stage: Path, record: dict, page_number: int) -> str:
     figure_path = visual_asset_path(stage, record)
     if figure_path:
         figure_tex_path = figure_path.as_posix().replace("\\", "/")
-        figure_lines = rf"\vspace{{2mm}}\begin{{center}}\includegraphics[width=0.56\linewidth,height=42mm,keepaspectratio]{{\detokenize{{{figure_tex_path}}}}}\end{{center}}"
+        if str(record.get("id")) == "C05-K01-5-3-EX":
+            figure_lines = rf"\vspace{{2mm}}\begin{{center}}\includegraphics[width=0.78\linewidth,height=64mm,keepaspectratio]{{\detokenize{{{figure_tex_path}}}}}\end{{center}}"
+        else:
+            figure_lines = rf"\vspace{{2mm}}\begin{{center}}\includegraphics[width=0.56\linewidth,height=42mm,keepaspectratio]{{\detokenize{{{figure_tex_path}}}}}\end{{center}}"
     return rf"""
 \newpage
 \thispagestyle{{empty}}

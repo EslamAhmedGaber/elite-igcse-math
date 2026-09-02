@@ -9,7 +9,7 @@
     ? requested
     : pathway === "pure" ? "wma11" : "";
   const dataFiles = {
-    baccalaureate: "data/EgyptianBaccalaureate/2026/English/baccalaureate-data.js?v=20260902a",
+    baccalaureate: "data/EgyptianBaccalaureate/2026/English/baccalaureate-data.js?v=20260902c",
     wma11: "ial/wma11/wma11-data.js?v=20260527c",
     wma12: "ial/wma12/wma12-data.js?v=20260611a",
     wme01: "ial/wme01/wme01-data.js?v=20260613a"
@@ -37,7 +37,7 @@
     if (!ialCourse && !baccalaureate) {
       await root.EliteRuntime.loadScript("topic-normalizer.js", { id: "eliteExamTopicNormalizer" });
     }
-    await root.EliteRuntime.loadScript("exam.js?v=baccalaureate-20260902b", { id: "eliteExamApp" });
+    await root.EliteRuntime.loadScript("exam.js?v=baccalaureate-20260902c", { id: "eliteExamApp" });
     setLoading(false);
   }
 

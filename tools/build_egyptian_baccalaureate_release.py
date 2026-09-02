@@ -46,6 +46,36 @@ CHAPTER_TITLES = {
     "C08": "Statistical Inference",
 }
 
+CONCEPT_TITLES = {
+    "C05-K01": "Defining Angles and Basic Trigonometric Functions",
+    "C05-K02": "Trigonometric Identities and Expression Evaluation",
+    "C05-K03": "Properties and Graphs of Trigonometric Functions",
+    "C05-K04": "Solving Equations and Inequalities Involving Trigonometric Functions",
+    "C05-K05": "Advanced Theorems and Applications",
+    "C06-K01": "Laws of Exponents and Roots",
+    "C06-K02": "Exponential Functions and Their Applications",
+    "C06-K03": "Introduction to Logarithms and Their Properties",
+    "C06-K04": "Applications of Logarithms",
+    "C07-K01": "Fundamentals of Calculus: Limits and Derivatives",
+    "C07-K02": "Differentiation and Tangent Lines",
+    "C07-K03": "Applications of Differentiation: Polynomial Functions",
+    "C07-K04": "Integration, Definite Integrals and Applications",
+    "C07-K05": "Applications of Integration to Geometry",
+    "C08-K01": "Fundamentals of Random Variables",
+    "C08-K02": "Expected Value and Variance of Multiple Variables",
+}
+
+SPECIAL_VISUAL_ASSETS = {
+    "C05-K01-5-3-EX": {
+        "asset_id": "C05-K01-5-3-EX-exercise",
+        "method": "exact_crop",
+        "file": "C05-K01-5-3-EX-exercise.png",
+        "source": Path(
+            r"D:\Tyro4_Latex\البكالوريا المصرية 2026_STUDIO_DESIGN\part2_production\visual_assets\C05-K01\C05-K01-5-3-EX-source-exercise.png"
+        ),
+    },
+}
+
 
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
@@ -171,7 +201,8 @@ def compact_question(record: dict[str, Any]) -> dict[str, Any]:
             # Source/provenance labels are useful in the private ledger but
             # are not student-facing instructions.  Remove the prefix while
             # preserving the actual mathematical noun (graph, demand, set…).
-            return re.sub(r"\bsource\s+", "", value, flags=re.IGNORECASE)
+            value = re.sub(r"\bsource-faithfully\b", "carefully", value, flags=re.IGNORECASE)
+            return re.sub(r"\bsource\s+", "given ", value, flags=re.IGNORECASE)
         if isinstance(value, list):
             return [public_text(item) for item in value]
         return value
@@ -187,16 +218,25 @@ def compact_question(record: dict[str, Any]) -> dict[str, Any]:
     if isinstance(visual, dict):
         # Keep only the fields the browser needs to resolve a public figure.
         # Source-page lineage and hashes stay in the private production ledger.
-        visual_asset = {k: visual.get(k) for k in ("asset_id", "method", "file") if visual.get(k) is not None}
+        asset_id = visual.get("asset_id")
+        method = str(visual.get("method") or "exact_crop").replace("exact source crop", "exact_crop").replace("source_crop", "exact_crop")
+        visual_asset = {"asset_id": asset_id, "method": method} if asset_id else None
     elif isinstance(visual, str):
         visual_asset = {"file": visual}
+    special_visual = SPECIAL_VISUAL_ASSETS.get(str(record.get("id")))
+    if special_visual:
+        visual_asset = {key: special_visual[key] for key in ("asset_id", "method")}
+    concept_id = record.get("concept_id")
+    concept_match = re.search(r"-K0*(\d+)$", str(concept_id or ""), flags=re.IGNORECASE)
+    concept_number = record.get("concept_number") or (int(concept_match.group(1)) if concept_match else None)
+    concept_title = record.get("concept_title_en") or CONCEPT_TITLES.get(concept_id)
     return {
         "id": record.get("id"),
         "chapter_id": record.get("chapter_id"),
         "chapter_title": CHAPTER_TITLES.get(record.get("chapter_id"), record.get("chapter_id")),
-        "concept_id": record.get("concept_id"),
-        "concept_number": record.get("concept_number"),
-        "concept_title": record.get("concept_title_en"),
+        "concept_id": concept_id,
+        "concept_number": concept_number,
+        "concept_title": concept_title,
         "topic_id": record.get("topic_id"),
         "family_id": record.get("family_id"),
         "variant_id": record.get("variant_id"),
@@ -269,6 +309,17 @@ def stage_visual_assets() -> list[dict[str, Any]]:
                 continue
             data = json.loads(records_file.read_text(encoding="utf-8"))
             for record in data.get("records", []):
+                special_visual = SPECIAL_VISUAL_ASSETS.get(str(record.get("id")))
+                if special_visual:
+                    source = Path(special_visual["source"])
+                    if not source.exists():
+                        raise FileNotFoundError(source)
+                    asset_id = str(special_visual["asset_id"])
+                    target = QUESTION_ASSET_ROOT / f"{asset_id}{source.suffix.lower()}"
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(source, target)
+                    copied.append({"asset_id": asset_id, "path": target.relative_to(OUTPUT_ROOT).as_posix(), "sha256": sha256(target), "source_question_id": record["id"]})
+                    continue
                 visual = record.get("visual_asset")
                 if not visual:
                     continue

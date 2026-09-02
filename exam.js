@@ -53,6 +53,64 @@
     ? IAL_COURSES[requestedIalCourse] || IAL_COURSES.wma11
     : null;
 
+  const BACCALAUREATE_CONCEPT_TITLES = Object.freeze({
+    "C01-K01": "Binomial & Multinomial",
+    "C01-K02": "Polynomial Division",
+    "C01-K03": "Rational Expressions",
+    "C01-K04": "Identities & Proofs",
+    "C01-K05": "Inequalities",
+    "C02-K01": "Arithmetic Sequences",
+    "C02-K02": "Geometric Sequences",
+    "C02-K03": "Summation",
+    "C02-K04": "Advanced Sequences",
+    "C02-K05": "Recurrence & Induction",
+    "C03-K01": "Complex Numbers",
+    "C03-K02": "Quadratic Equations",
+    "C03-K03": "Polynomial Theorems",
+    "C03-K04": "Higher-Degree Equations",
+    "C04-K01": "Coordinate Geometry",
+    "C04-K02": "Triangles & Lines",
+    "C04-K03": "Circles",
+    "C05-K01": "Angles & Basic Trigonometry",
+    "C05-K02": "Trig Identities & Evaluation",
+    "C05-K03": "Trigonometric Graphs",
+    "C05-K04": "Trig Equations & Inequalities",
+    "C05-K05": "Advanced Theorems & Applications",
+    "C06-K01": "Exponents & Roots",
+    "C06-K02": "Exponential Functions & Applications",
+    "C06-K03": "Logarithms & Properties",
+    "C06-K04": "Applications of Logarithms",
+    "C07-K01": "Limits & Derivatives",
+    "C07-K02": "Differentiation & Tangents",
+    "C07-K03": "Polynomial Differentiation Applications",
+    "C07-K04": "Definite Integrals & Applications",
+    "C07-K05": "Geometric Integration Applications",
+    "C08-K01": "Random Variables",
+    "C08-K02": "Expected Value & Variance"
+  });
+
+  function baccalaureateTopicParts(item = {}) {
+    const chapterMatch = String(item.chapter_id || "").match(/C0*(\d+)/i);
+    const conceptMatch = String(item.concept_id || item.topic_id || "").match(/K0*(\d+)/i);
+    const chapterNumber = chapterMatch ? Number(chapterMatch[1]) : null;
+    const explicitConcept = Number(item.concept_number);
+    const conceptNumber = Number.isFinite(explicitConcept) && explicitConcept > 0
+      ? explicitConcept
+      : conceptMatch ? Number(conceptMatch[1]) : null;
+    const title = BACCALAUREATE_CONCEPT_TITLES[item.concept_id]
+      || item.concept_title
+      || item.concept_id
+      || item.topic_id
+      || "Concept";
+    return { chapterNumber, conceptNumber, title };
+  }
+
+  function baccalaureateTopicLabel(item = {}) {
+    const { chapterNumber, conceptNumber, title } = baccalaureateTopicParts(item);
+    const codes = [chapterNumber ? `CH${chapterNumber}` : "", conceptNumber ? `C${conceptNumber}` : ""].filter(Boolean).join(" · ");
+    return codes ? `${codes} — ${title}` : title;
+  }
+
   const baccalaureateCourse = requestedPathway === "baccalaureate" || requestedCourse === "baccalaureate" || requestedCourse === "egyptian-baccalaureate"
     ? {
         id: "egyptian-baccalaureate",
@@ -76,6 +134,7 @@
           linear_unit: item.chapter_id,
           modular_unit: item.chapter_id,
           topic: item.concept_title || item.concept_id || item.topic_id,
+          topic_label: baccalaureateTopicLabel(item),
           topics: [item.concept_title || item.concept_id || item.topic_id].filter(Boolean),
           topic_slug: item.concept_id || item.topic_id,
           topic_slugs: [item.concept_id || item.topic_id].filter(Boolean),
@@ -96,7 +155,11 @@
           concept_number: item.concept_number,
           visual_asset: item.visual_asset || null
         })),
-        topics: [...new Set((window.EGYPTIAN_BACCALAUREATE_QUESTIONS || []).map((item) => JSON.stringify({ topic: item.concept_title || item.concept_id || item.topic_id, unit: item.chapter_id })))].map((item) => JSON.parse(item)),
+        topics: [...new Set((window.EGYPTIAN_BACCALAUREATE_QUESTIONS || []).map((item) => JSON.stringify({
+          topic: item.concept_title || item.concept_id || item.topic_id,
+          label: baccalaureateTopicLabel(item),
+          unit: item.chapter_id
+        })))].map((item) => JSON.parse(item)),
         solutions: Object.fromEntries((window.EGYPTIAN_BACCALAUREATE_QUESTIONS || []).map((item) => [item.id, {
           status: "checked",
           checkedBy: "Dr Eslam Ahmed",
@@ -466,10 +529,19 @@
     return catalog.filter((entry) => !unit || entry.unit === unit).map((entry) => entry.topic);
   }
 
-  function fillSelect(select, values, firstLabel, preserve = "") {
+  function topicDisplayLabel(topic, unit = "") {
+    if (course.mode !== "baccalaureate") return topic;
+    return (course.topics || []).find((entry) => entry.topic === topic && (!unit || entry.unit === unit))?.label || topic;
+  }
+
+  function questionTopicLabel(question) {
+    return question?.topic_label || topicDisplayLabel(question?.topic || "", question?.unit || "");
+  }
+
+  function fillSelect(select, values, firstLabel, preserve = "", labelForValue = (value) => value) {
     if (!select) return;
     const current = preserve || select.value;
-    select.innerHTML = `<option value="">${escapeHtml(firstLabel)}</option>${values.map((value) => `<option value="${escapeHtml(value)}">${escapeHtml(value)}</option>`).join("")}`;
+    select.innerHTML = `<option value="">${escapeHtml(firstLabel)}</option>${values.map((value) => `<option value="${escapeHtml(value)}">${escapeHtml(labelForValue(value))}</option>`).join("")}`;
     if (values.includes(current)) select.value = current;
   }
 
@@ -519,7 +591,7 @@
     container.innerHTML = topics.map((topic) => {
       const count = topicPoolCount(topic, bank, unit, part);
       const checked = previous.has(topic) ? " checked" : "";
-      return `<label><input type="checkbox" value="${escapeHtml(topic)}"${checked}> <span>${escapeHtml(topic)}</span><em>${count}</em></label>`;
+      return `<label><input type="checkbox" value="${escapeHtml(topic)}"${checked}> <span>${escapeHtml(topicDisplayLabel(topic, unit))}</span><em>${count}</em></label>`;
     }).join("") || `<div class="empty-roadmap">No topics match this chapter yet.</div>`;
     updateTopicMixSummary(container, summary);
   }
@@ -636,12 +708,12 @@
   }
 
   function refreshTopicOptions() {
-    fillSelect(els.topic, topicsForUnit(els.unit?.value || "", els.part?.value || ""), "All topics");
+    fillSelect(els.topic, topicsForUnit(els.unit?.value || "", els.part?.value || ""), "All topics", "", (topic) => topicDisplayLabel(topic, els.unit?.value || ""));
     renderTopicMix(els.topicMix, els.topicMixSummary, els.unit?.value || "", els.bank?.value || "all", els.part?.value || "");
   }
 
   function refreshBuilderTopicOptions() {
-    fillSelect(els.customTopic, topicsForUnit(els.customUnit?.value || "", els.customPart?.value || ""), "All topics");
+    fillSelect(els.customTopic, topicsForUnit(els.customUnit?.value || "", els.customPart?.value || ""), "All topics", "", (topic) => topicDisplayLabel(topic, els.customUnit?.value || ""));
   }
 
   function refreshSmartTopicOptions() {
@@ -1140,7 +1212,7 @@
     const map = new Map();
     state.ids.map(questionById).filter(Boolean).forEach((question) => {
       const score = Math.max(0, Number(state.scores?.[question.id] || 0));
-      const row = map.get(question.topic) || { topic: question.topic, unit: displayUnit(question), score: 0, total: 0, lost: 0 };
+      const row = map.get(question.topic) || { topic: question.topic, label: questionTopicLabel(question), unit: displayUnit(question), score: 0, total: 0, lost: 0 };
       row.score += score;
       row.total += Number(question.marks || 0);
       row.lost += Math.max(0, Number(question.marks || 0) - score);
@@ -1283,7 +1355,7 @@
       return;
     }
     els.weakness.innerHTML = topicBreakdown().slice(0, 4).map((row) => `<article>
-      <strong>${escapeHtml(row.topic)}</strong>
+      <strong>${escapeHtml(row.label || row.topic)}</strong>
       <p>${row.score}/${row.total} marks. Lost ${row.lost} mark${row.lost === 1 ? "" : "s"}.</p>
       <a class="button primary" href="${topicLink(row)}">Revise topic</a>
     </article>`).join("");
@@ -1313,7 +1385,7 @@
       if (!question) return "";
       const solution = solutions[id] || null;
       const hasSolution = hasSolutionContent(solution);
-      const solutionOptions = { key: id, topic: question.topic, marks: question.marks };
+      const solutionOptions = { key: id, topic: questionTopicLabel(question), marks: question.marks };
       const solutionHtml = formatStructuredSolution(solution, solutionOptions);
       const printSolutionHtml = formatStructuredSolution(solution, { ...solutionOptions, variant: "print" });
       const printStepCount = Array.isArray(solution?.steps)
@@ -1341,7 +1413,7 @@
         </header>
         <img src="${question.image}" alt="${escapeHtml(question.paper)} Q${question.question}" loading="lazy">
         <footer>
-          <span>${escapeHtml(question.topic)}</span>
+          <span>${escapeHtml(questionTopicLabel(question))}</span>
           ${canMark ? `<label>Score <input data-score-id="${escapeHtml(id)}" type="number" min="0" max="${question.marks}" value="${savedScore}"> / ${question.marks}</label>` : `<span>${state.status === "running" ? "Answers stay private during the exam" : "Ready to start or print"}</span>`}
         </footer>
         ${canMark && hasSolution ? `<details class="exam-solution"><summary>Show worked solution</summary>${solutionHtml}</details>` : ""}
@@ -1429,7 +1501,7 @@
       const inDraft = exactDraft || sourceInDraft;
       return `<article class="builder-result ${inDraft ? "selected" : ""}">
         <div class="builder-result-copy">
-          <strong>${escapeHtml(question.topic)}</strong>
+          <strong>${escapeHtml(questionTopicLabel(question))}</strong>
           <span>${escapeHtml(question.paper)} Q${question.question} | ${escapeHtml(displayUnit(question) || "")}</span>
         </div>
         <div class="builder-result-actions">
@@ -1481,7 +1553,7 @@
     if (els.printDraftSolution) els.printDraftSolution.disabled = !items.length;
     els.draftList.innerHTML = items.map((question, index) => `<article class="draft-item">
       <div>
-        <strong>${index + 1}. ${escapeHtml(question.topic)}</strong>
+        <strong>${index + 1}. ${escapeHtml(questionTopicLabel(question))}</strong>
         <span>${escapeHtml(question.paper)} Q${question.question} | ${question.marks} marks</span>
       </div>
       <div class="draft-actions">
