@@ -2447,3 +2447,306 @@ body[data-course-palette] .layout-toggle button.is-active {
 }
 
 } /* end @media screen */
+
+/* ==========================================================================
+   PHASE A (2026-09-27) - COURSE BAR
+   One compact bar replaces the tall "Study workspace" panel on every course
+   page. Built by lead.js as `.course-bar`, a class no older stylesheet
+   targets, so nothing here needs !important. On phones the six tools live
+   in the fixed bottom bar, so the course bar shrinks to name + switch.
+   ========================================================================== */
+@media screen {
+  .course-bar {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1240px;
+    margin: 10px auto 6px;
+    padding: 0 28px;
+  }
+
+  .course-bar-inner {
+    display: flex;
+    align-items: center;
+    gap: var(--ux-gap-3);
+    min-height: 56px;
+    padding: 7px 8px 7px 16px;
+    border-left: 4px solid var(--course-signature, var(--ux-gold));
+    border-radius: var(--ux-r-md);
+    background: linear-gradient(100deg, var(--ux-navy-panel) 0%, var(--ux-navy-panel-2) 100%);
+    box-shadow: var(--ux-sh-md);
+    color: #fff;
+  }
+
+  .course-bar-id {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: baseline;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .course-bar-kicker {
+    color: rgba(255, 255, 255, .55);
+    font-size: var(--ux-fs-micro);
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .course-bar .course-bar-name {
+    margin: 0;
+    color: #fff;
+    font-size: var(--ux-fs-md);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+
+  .course-bar-code {
+    color: var(--ux-gold);
+    font-size: var(--ux-fs-micro);
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .course-bar-switch {
+    align-self: center;
+    margin-left: 4px;
+    padding: 4px 10px;
+    border: 1px solid rgba(255, 255, 255, .22);
+    border-radius: var(--ux-r-pill);
+    color: rgba(255, 255, 255, .82);
+    font-size: var(--ux-fs-xs);
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .course-bar-switch:hover {
+    border-color: var(--ux-gold);
+    color: #fff;
+  }
+
+  .course-bar-tools {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    gap: 2px;
+    min-width: 0;
+  }
+
+  .course-bar-tools a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 40px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, .8);
+    font-size: var(--ux-fs-sm);
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color .15s ease, color .15s ease;
+  }
+
+  .course-bar-tools a .module-icon,
+  .course-bar-menu a .module-icon {
+    flex: 0 0 auto;
+    width: 17px;
+    height: 17px;
+  }
+
+  .course-bar-tools a:hover {
+    background: rgba(255, 255, 255, .09);
+    color: #fff;
+  }
+
+  .course-bar-tools a[aria-current="page"] {
+    background: #fff;
+    color: var(--ux-navy-panel);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+  }
+
+  .course-bar-tools a[aria-current="page"] .module-icon {
+    color: var(--course-signature, var(--ux-royal));
+  }
+
+  .course-bar-tools a:focus-visible,
+  .course-bar-switch:focus-visible,
+  .course-bar-more summary:focus-visible {
+    outline: 3px solid var(--ux-gold);
+    outline-offset: 2px;
+  }
+
+  .course-bar-more {
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+  .course-bar-more summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    min-height: 40px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, .8);
+    font-size: var(--ux-fs-sm);
+    font-weight: 700;
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .course-bar-more summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .course-bar-more summary svg {
+    width: 14px;
+    height: 14px;
+    transition: transform .15s ease;
+  }
+
+  .course-bar-more[open] summary {
+    background: rgba(255, 255, 255, .12);
+    color: #fff;
+  }
+
+  .course-bar-more[open] summary svg {
+    transform: rotate(180deg);
+  }
+
+  .course-bar-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 60;
+    display: grid;
+    min-width: 230px;
+    padding: 6px;
+    border: 1px solid var(--ux-line);
+    border-radius: var(--ux-r-md);
+    background: var(--ux-surface);
+    box-shadow: var(--ux-sh-lg);
+  }
+
+  .course-bar-menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 10px;
+    border-radius: var(--ux-r-sm);
+    color: var(--ux-ink-2);
+    font-size: var(--ux-fs-sm);
+    font-weight: 650;
+    text-decoration: none;
+  }
+
+  .course-bar-menu a:hover {
+    background: var(--ux-royal-soft);
+    color: var(--ux-royal-ink);
+  }
+
+  @media (max-width: 1180px) {
+    .course-bar-kicker {
+      display: none;
+    }
+
+    .course-bar-tools a {
+      padding-inline: 9px;
+    }
+  }
+
+  @media (max-width: 1020px) {
+    .course-bar-inner {
+      flex-wrap: wrap;
+      row-gap: 4px;
+    }
+
+    .course-bar-tools {
+      order: 3;
+      flex-basis: 100%;
+      justify-content: space-between;
+    }
+
+    .course-bar-more {
+      margin-left: auto;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .course-bar {
+      margin: 8px auto 2px;
+      padding: 0 12px;
+    }
+
+    .course-bar-inner {
+      min-height: 48px;
+      flex-wrap: nowrap;
+      padding: 6px 6px 6px 12px;
+    }
+
+    .course-bar-id {
+      flex: 1 1 auto;
+    }
+
+    .course-bar .course-bar-name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* The fixed bottom bar already carries the six core tools on phones. */
+    .course-bar-tools {
+      display: none;
+    }
+
+    .course-bar-more summary {
+      padding-inline: 10px;
+    }
+  }
+}
+
+@media print {
+  .course-bar {
+    display: none !important;
+  }
+}
+
+/* PHASE A fixes: breadcrumb code spacing, readable solution badge on dark
+   paper buttons, and a 2 x 2 practice snapshot on phones. */
+@media screen {
+  .elite-breadcrumb-sub {
+    margin-left: .4em;
+  }
+
+  .pp-paper.solution::before {
+    background: rgba(226, 184, 79, .22) !important; /* beats resource-hub.css badge tint */
+    color: var(--ux-gold) !important;
+  }
+
+  @media (max-width: 760px) {
+    .course-bar-code {
+      display: none;
+    }
+
+    .practice-status-strip {
+      display: grid !important; /* overrides the single-row flex strip */
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important; /* resource-hub.css forces four columns */
+      gap: 6px;
+    }
+
+    .practice-status-strip > div {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      min-width: 0;
+      padding: 8px 10px;
+      border-radius: var(--ux-r-sm);
+      background: var(--ux-subtle);
+    }
+  }
+}

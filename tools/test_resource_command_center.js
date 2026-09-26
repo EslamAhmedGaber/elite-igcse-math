@@ -106,7 +106,8 @@ systemPages.forEach((relativePath) => {
 
 assert(lead.includes("COMPACT_WORKSPACE_PAGES"), "Task pages must opt into the compact study workspace");
 assert(lead.includes("secondaryToolsSummary"), "Secondary study tools need a descriptive summary");
-assert(lead.includes("pathway-course-switch"), "Every task workspace needs a course switch command");
+assert(lead.includes("course-bar-switch"), "Every course bar needs a course switch command");
+assert(lead.includes('class="course-bar"') && lead.includes("renderCourseBarLink"), "Course pages must render the compact course bar");
 assert(home.includes('id="courseLauncher"'), "Homepage course launcher anchor is missing");
 assert(home.includes('data-home-study-trail'), "Homepage local study trail mount is missing");
 assert(lead.includes('eliteStudyTrailV1'), "Shared local study trail storage key is missing");

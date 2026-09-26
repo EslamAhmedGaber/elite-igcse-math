@@ -1167,31 +1167,45 @@
       return;
     }
     const tools = workspaceTools(toolData.links, { groupId: toolData.groupId || groupId, unit: toolData.unit });
-    const secondarySummary = secondaryToolsSummary(tools.secondary);
+    const courseName = visibleHeading
+      ? `<strong class="course-bar-name">${escapeHtml(toolData.title)}</strong>`
+      : `<h1 class="course-bar-name">${escapeHtml(toolData.title)}</h1>`;
     const moreTools = tools.secondary.length
-      ? `<details class="pathway-more-tools"><summary><span class="pathway-more-summary-label">${escapeHtml(secondarySummary.label)}</span>${secondarySummary.remaining ? `<span class="pathway-more-summary-count">+${secondarySummary.remaining}</span>` : ""}</summary><div class="pathway-more-grid">${tools.secondary.map(renderCompactToolLink).join("")}</div></details>`
+      ? `<details class="course-bar-more"><summary><span>More</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="course-bar-menu">${tools.secondary.map(renderCompactToolLink).join("")}</div></details>`
       : "";
     anchor.insertAdjacentHTML("afterend", `
-      <nav class="pathway-tool-strip is-core-workspace" aria-label="${toolData.title} study workspace">
-        <div class="pathway-tool-strip-title">
-          <span>Active course</span>
-          ${titleMarkup}
-          <small>${toolData.detail}</small>
-          <a class="pathway-course-switch" href="/index.html#courseLauncher">Switch course</a>
-          ${toolData.intro ? `<p>${toolData.intro}</p>` : ""}
-        </div>
-        <div class="pathway-core-tools">
-          <div class="pathway-core-heading">
-            <strong>Study workspace</strong>
-            <span>Learn, practise, test, then track the next step.</span>
+      <nav class="course-bar" data-course-group="${escapeHtml(groupId)}" aria-label="${escapeHtml(toolData.title)} study tools">
+        <div class="course-bar-inner">
+          <div class="course-bar-id">
+            <span class="course-bar-kicker">Course</span>
+            ${courseName}
+            <small class="course-bar-code">${escapeHtml(toolData.detail)}</small>
+            <a class="course-bar-switch" href="/index.html#courseLauncher">Switch</a>
           </div>
-          <div class="pathway-tool-strip-links">
-            ${tools.primary.map(renderToolStripLink).join("")}
+          <div class="course-bar-tools">
+            ${tools.primary.map(renderCourseBarLink).join("")}
           </div>
           ${moreTools}
         </div>
       </nav>
     `);
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".course-bar-more[open]").forEach((menu) => {
+        if (!menu.contains(event.target)) menu.removeAttribute("open");
+      });
+    });
+  }
+
+  function renderCourseBarLink(link) {
+    const attrs = [
+      `href="${link.href}"`,
+      `data-module="${moduleKey(link)}"`,
+      `title="${escapeHtml(link.title)}: ${escapeHtml(link.detail || "")}"`,
+      link.target ? `target="${link.target}" rel="noreferrer"` : "",
+      link.pathway ? `data-pathway-choice="${link.pathway}" data-pathway-target="${link.href}"` : "",
+      isCoreToolActive(link) ? `aria-current="page"` : "",
+    ].filter(Boolean).join(" ");
+    return `<a ${attrs}>${getModuleIcon(moduleKey(link))}<span>${escapeHtml(link.short || link.title)}</span></a>`;
   }
 
   function homeCourseOption(courseId) {
