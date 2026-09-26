@@ -27,7 +27,7 @@
   <script src="pathway-bootstrap.js?v=baccalaureate-20260902b"></script>
   <link rel="stylesheet" href="styles.css?v=20260809a">
   <link rel="stylesheet" href="elite-system.css?v=20260906b">
-  <link rel="stylesheet" href="elite-ux.css?v=20260927a">
+  <link rel="stylesheet" href="elite-ux.css?v=20260927b">
   <script defer src="pathway-mode.js?v=baccalaureate-20260902c"></script>
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js"></script>
@@ -53,16 +53,36 @@
   </header>
 
   <main class="page page-home home-rebuild">
-    <section class="home-command" id="courseLauncher" data-home-workspace aria-labelledby="heroTitle">
+    <section class="home-hero" aria-labelledby="heroTitle">
+      <div class="home-hero-copy">
+        <span class="home-hero-kicker">Dr Eslam Ahmed &middot; Faculty of Engineering, Cairo University</span>
+        <h1 id="heroTitle">Elite <span>Mathematics</span></h1>
+        <p class="home-hero-lead">Edexcel IGCSE and International A Level Mathematics, taught the way exams are marked. Learn the method, practise every real past-paper question by topic, and build printable mocks with worked solutions.</p>
+        <div class="home-hero-actions">
+          <a class="home-hero-cta is-primary" href="#courseLauncher">Choose your course</a>
+          <a class="home-hero-cta is-gold" data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Book a free first class</a>
+        </div>
+        <ul class="home-hero-proof" aria-label="Website coverage">
+          <li><strong>1,176</strong><span>IGCSE classified questions</span></li>
+          <li><strong>507</strong><span>IAL worked questions</span></li>
+          <li><strong>48</strong><span>IGCSE paper sets</span></li>
+          <li><strong>6</strong><span>complete course routes</span></li>
+        </ul>
+      </div>
+      <figure class="home-hero-portrait">
+        <img src="assets/Eslam4.jpg" alt="Dr Eslam Ahmed" width="320" height="320">
+        <figcaption>
+          <strong>Dr Eslam Ahmed</strong>
+          <span>Every question classified, solved and checked personally.</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="home-command" id="courseLauncher" data-home-workspace aria-labelledby="courseLauncherTitle">
       <header class="home-command-head">
         <div>
-          <span class="eyebrow">Dr Eslam Ahmed | Mathematics Workspace</span>
-          <h1 id="heroTitle">Elite IGCSE Mathematics</h1>
-          <p>Choose your course, start with the method, practise real questions, build a mock, and see exactly what to do next.</p>
-        </div>
-        <div class="home-command-teacher" aria-label="Prepared by Dr Eslam Ahmed">
-          <img src="assets/Eslam4.jpg" alt="Dr Eslam Ahmed">
-          <span><strong>Teacher-built resources</strong><small>Notes, questions, solutions and progress in one clear route.</small></span>
+          <span class="eyebrow">Your study workspace</span>
+          <h2 id="courseLauncherTitle">Pick a course. Everything else is one click away.</h2>
         </div>
       </header>
 
@@ -113,12 +133,6 @@
         <div class="home-more-grid" data-home-more-tools></div>
       </details>
 
-      <div class="home-command-stats" aria-label="Website coverage">
-        <span><strong>1,176</strong> IGCSE classified</span>
-        <span><strong>507</strong> IAL worked questions</span>
-        <span><strong>48</strong> IGCSE paper sets</span>
-        <span><strong>6</strong> complete course routes</span>
-      </div>
     </section>
 
     <section class="trust-panel trust-compact home-trust-about" aria-labelledby="trustTitle">

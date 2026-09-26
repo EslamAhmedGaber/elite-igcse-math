@@ -2750,3 +2750,487 @@ body[data-course-palette] .layout-toggle button.is-active {
     }
   }
 }
+
+/* ==========================================================================
+   PHASE B (2026-09-27) - HOME
+   Premium navy hero with a quiet graph-paper and curve motif, teacher
+   portrait, proof numbers; course workspace below with per-tool accents.
+   ========================================================================== */
+@media screen {
+  .home-rebuild .home-hero {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    align-items: center;
+    gap: 48px;
+    margin: 18px 0 26px;
+    padding: 56px 56px 48px;
+    overflow: hidden;
+    border-radius: 22px;
+    background:
+      radial-gradient(900px 420px at 88% -10%, rgba(59, 111, 232, .38), transparent 60%),
+      radial-gradient(600px 380px at -5% 110%, rgba(226, 184, 79, .12), transparent 60%),
+      linear-gradient(135deg, #0b1a33 0%, #102a52 55%, #0d2146 100%);
+    box-shadow: 0 24px 60px rgba(11, 26, 51, .22);
+    color: #fff;
+  }
+
+  /* graph paper + curves, drawn once as an SVG so it stays crisp and light */
+  .home-rebuild .home-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: .55;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%221240%22 height=%22520%22 viewBox=%220 0 1240 520%22%3E%3Cpath d=%22M0 420 C 200 420 260 120 420 120 S 640 360 800 300 S 1080 60 1240 90%22 fill=%22none%22 stroke=%22%23e2b84f%22 stroke-opacity=%22.35%22 stroke-width=%222%22/%3E%3Cpath d=%22M0 470 C 260 470 420 260 620 260 S 1000 420 1240 380%22 fill=%22none%22 stroke=%22%239fc0ff%22 stroke-opacity=%22.28%22 stroke-width=%221.6%22 stroke-dasharray=%226 8%22/%3E%3C/svg%3E"),
+      linear-gradient(rgba(255, 255, 255, .045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, .045) 1px, transparent 1px);
+    background-size: 100% 100%, 32px 32px, 32px 32px;
+    background-position: center, -1px -1px, -1px -1px;
+    pointer-events: none;
+  }
+
+  .home-hero-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--ux-gold);
+    font-size: var(--ux-fs-xs);
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
+  .home-hero-kicker::before {
+    content: "";
+    width: 28px;
+    height: 2px;
+    background: var(--ux-gold);
+  }
+
+  .home-rebuild .home-hero h1 {
+    margin: 14px 0 16px;
+    color: #fff;
+    font-size: clamp(40px, 4.6vw, 62px);
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -.02em;
+  }
+
+  .home-rebuild .home-hero h1 span {
+    background: linear-gradient(90deg, #f3d27a, #e2b84f 60%, #c9962c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .home-hero-lead {
+    max-width: 58ch;
+    margin: 0;
+    color: rgba(235, 242, 255, .86);
+    font-size: var(--ux-fs-md);
+    line-height: 1.6;
+  }
+
+  .home-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .home-hero-cta {
+    display: inline-flex;
+    align-items: center;
+    min-height: 48px;
+    padding: 12px 22px;
+    border-radius: 12px;
+    font-size: var(--ux-fs-base);
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease;
+  }
+
+  .home-hero-cta.is-primary {
+    background: #fff;
+    color: #0b1a33;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, .25);
+  }
+
+  .home-hero-cta.is-gold {
+    border: 1px solid rgba(226, 184, 79, .7);
+    color: #f3d27a;
+  }
+
+  .home-hero-cta:hover {
+    transform: translateY(-1px);
+  }
+
+  .home-hero-cta.is-gold:hover {
+    background: rgba(226, 184, 79, .12);
+  }
+
+  .home-hero-cta:focus-visible {
+    outline: 3px solid var(--ux-gold);
+    outline-offset: 3px;
+  }
+
+  .home-hero-proof {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+    margin: 36px 0 0;
+    padding: 18px 0 0;
+    border-top: 1px solid rgba(255, 255, 255, .14);
+    list-style: none;
+  }
+
+  .home-hero-proof li {
+    padding: 0 18px;
+    border-left: 1px solid rgba(255, 255, 255, .12);
+  }
+
+  .home-hero-proof li:first-child {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .home-hero-proof strong {
+    display: block;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .home-hero-proof span {
+    display: block;
+    margin-top: 4px;
+    color: rgba(220, 230, 250, .7);
+    font-size: var(--ux-fs-xs);
+    font-weight: 600;
+  }
+
+  .home-hero-portrait {
+    margin: 0;
+    padding: 14px 14px 18px;
+    border: 1px solid rgba(255, 255, 255, .14);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, .06);
+    backdrop-filter: blur(6px);
+    text-align: center;
+  }
+
+  .home-hero-portrait img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 0 0 2px rgba(226, 184, 79, .55);
+  }
+
+  .home-hero-portrait figcaption {
+    margin-top: 14px;
+  }
+
+  .home-hero-portrait strong {
+    display: block;
+    color: #fff;
+    font-size: var(--ux-fs-md);
+  }
+
+  .home-hero-portrait span {
+    display: block;
+    margin-top: 4px;
+    color: rgba(220, 230, 250, .72);
+    font-size: var(--ux-fs-xs);
+    line-height: 1.45;
+  }
+
+  /* workspace card below the hero */
+  .home-rebuild .home-command-head h2 {
+    margin: 6px 0 0;
+    color: var(--ux-ink);
+    font-size: var(--ux-fs-xl);
+    line-height: 1.2;
+  }
+
+  .home-rebuild .home-core-action {
+    --module-accent: var(--ux-royal);
+    --module-bg: var(--ux-royal-soft);
+    position: relative;
+    border: 1px solid var(--ux-line);
+    border-top: 3px solid var(--module-accent);
+    transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+
+  .home-rebuild .home-core-action[data-module="notes"] { --module-accent: #2a8fd8; --module-bg: #e8f4fd; }
+  .home-rebuild .home-core-action[data-module="classified"] { --module-accent: #1b4fd8; --module-bg: #ebf1ff; }
+  .home-rebuild .home-core-action[data-module="papers"] { --module-accent: #c9962c; --module-bg: #fbf3df; }
+  .home-rebuild .home-core-action[data-module="books"] { --module-accent: #16305a; --module-bg: #e9eef6; }
+  .home-rebuild .home-core-action[data-module="builder"],
+  .home-rebuild .home-core-action[data-module="mock"] { --module-accent: #13837a; --module-bg: #e3f4f2; }
+  .home-rebuild .home-core-action[data-module="progress"] { --module-accent: #6a58cc; --module-bg: #f0edff; }
+
+  .home-rebuild .home-core-action .module-icon {
+    box-sizing: content-box;
+    width: 20px;
+    height: 20px;
+    padding: 9px;
+    border-radius: 10px;
+    background: var(--module-bg);
+    color: var(--module-accent);
+  }
+
+  .home-rebuild .home-core-action:hover {
+    transform: translateY(-2px);
+    border-color: var(--module-accent);
+    box-shadow: 0 14px 30px rgba(14, 27, 46, .10);
+  }
+
+  .home-rebuild .home-core-action-open {
+    color: var(--module-accent);
+  }
+
+  @media (max-width: 1080px) {
+    .home-rebuild .home-hero {
+      grid-template-columns: 1fr;
+      padding: 40px 32px;
+    }
+
+    .home-hero-portrait {
+      display: none;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .home-rebuild .home-hero {
+      margin-top: 10px;
+      padding: 30px 20px;
+      border-radius: 16px;
+    }
+
+    .home-hero-proof {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      row-gap: 16px;
+    }
+
+    .home-hero-proof li:nth-child(3) {
+      padding-left: 0;
+      border-left: 0;
+    }
+  }
+}
+
+/* PHASE B home fixes: portrait stacks, continue band reads as a card,
+   one teacher photo per page, accents for the papers and mock tools. */
+@media screen {
+  .home-rebuild .home-hero-portrait {
+    display: block;
+  }
+
+  .home-rebuild .elite-study-home-band {
+    margin: 0 0 22px;
+    border: 1px solid var(--ux-line);
+    border-left: 4px solid var(--ux-royal);
+    border-radius: 16px;
+    background: var(--ux-surface);
+    box-shadow: var(--ux-sh-sm);
+  }
+
+  .home-rebuild .home-trust-about .trust-portrait {
+    display: none;
+  }
+
+  .home-rebuild .home-trust-about .trust-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .home-rebuild .home-core-action[data-module="past-solutions"] { --module-accent: #c9962c; --module-bg: #fbf3df; }
+  .home-rebuild .home-core-action[data-module="build-test"] { --module-accent: #13837a; --module-bg: #e3f4f2; }
+}
+
+/* ==========================================================================
+   PHASE B - ONE HERO FAMILY
+   Notes, Readiness Check, Modular Books and the About credentials panel
+   share the homepage navy with a quieter graph-paper motif, so every page
+   feels like the same product. Text colours in these blocks were already
+   light, so only the surface changes (plus the About heading fix).
+   ========================================================================== */
+@media screen {
+  main .notes-hero,
+  main .checkup-hero,
+  main .modular-release-hero,
+  body[data-page="about"] main .trust-panel {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    border: 0;
+    border-radius: 20px;
+    background:
+      radial-gradient(760px 360px at 92% -20%, rgba(59, 111, 232, .34), transparent 62%),
+      radial-gradient(520px 300px at -8% 120%, rgba(226, 184, 79, .10), transparent 60%),
+      linear-gradient(135deg, #0b1a33 0%, #102a52 58%, #0d2146 100%);
+    box-shadow: 0 20px 48px rgba(11, 26, 51, .18);
+  }
+
+  main .notes-hero::before,
+  main .checkup-hero::before,
+  main .modular-release-hero::before,
+  body[data-page="about"] main .trust-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
+    background-size: 32px 32px;
+    pointer-events: none;
+  }
+
+  main .notes-hero .eyebrow,
+  main .checkup-hero .eyebrow,
+  main .modular-release-hero .eyebrow {
+    color: var(--ux-gold);
+  }
+
+  /* panels inside those heroes: glass instead of a second blue */
+  main .notes-hero aside,
+  main .checkup-hero aside,
+  main .notes-hero [class*="loop"],
+  main .checkup-hero [class*="output"] {
+    border: 1px solid rgba(255, 255, 255, .14);
+    background: rgba(255, 255, 255, .06);
+  }
+
+  body[data-page="about"] main .trust-panel .section-title,
+  body[data-page="about"] main .trust-panel h2 {
+    color: #fff;
+  }
+}
+
+/* hero headings on navy: always white (was ink, low contrast even on the old royal gradient) */
+@media screen {
+  main .notes-hero h1,
+  main .checkup-hero h1,
+  main .modular-release-hero h1 {
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+  }
+}
+
+/* one button language inside navy heroes: white primary, glass secondary */
+@media screen {
+  main .notes-hero .button,
+  main .checkup-hero .button.light {
+    border: 1px solid rgba(255, 255, 255, .28);
+    background: rgba(255, 255, 255, .08);
+    color: #fff;
+    box-shadow: none;
+  }
+  main .notes-hero .button:hover,
+  main .checkup-hero .button.light:hover {
+    border-color: var(--ux-gold);
+    background: rgba(255, 255, 255, .14);
+    color: #fff;
+  }
+  main .notes-hero .button:first-of-type,
+  main .checkup-hero .button.primary {
+    border-color: #fff;
+    background: #fff;
+    color: #0b1a33;
+  }
+}
+
+/* ==========================================================================
+   PHASE B - CLASSIFIED PRACTICE
+   Readable question images (two columns on laptops) and a compact final
+   answer trainer: one input line + one row of actions.
+   ========================================================================== */
+@media screen and (min-width: 1100px) {
+  body[data-page="practice"] .question-grid:not(.list-view):not(.focus-view) {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important; /* resource-hub.css fixes three columns */
+    gap: 20px;
+  }
+}
+
+@media screen {
+  body[data-page="practice"] .question-card {
+    border-top-width: 3px;
+    transition: box-shadow .15s ease, border-color .15s ease;
+  }
+
+  body[data-page="practice"] .question-card:hover {
+    box-shadow: 0 14px 32px rgba(14, 27, 46, .10);
+  }
+
+  body[data-page="practice"] .question-card img {
+    image-rendering: auto;
+  }
+
+  body[data-page="practice"] .answer-trainer.compact {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px 10px;
+    padding: 12px;
+  }
+
+  body[data-page="practice"] .answer-trainer.compact .answer-trainer-head,
+  body[data-page="practice"] .answer-trainer.compact .answer-trainer-result {
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+
+  body[data-page="practice"] .answer-trainer.compact label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  body[data-page="practice"] .answer-trainer.compact textarea {
+    min-height: 40px;
+    height: 40px;
+    padding: 9px 12px;
+    resize: vertical;
+  }
+
+  body[data-page="practice"] .answer-trainer.compact .answer-trainer-actions {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 6px;
+  }
+
+  body[data-page="practice"] .answer-trainer.compact .answer-trainer-actions button {
+    flex: 0 0 auto;
+    min-height: 40px;
+    padding: 8px 12px;
+    white-space: nowrap;
+  }
+
+  body[data-page="practice"] .answer-trainer.compact .answer-trainer-actions button[data-action="trainerCheck"] {
+    border-color: var(--ux-royal);
+    background: var(--ux-royal);
+    color: #fff;
+  }
+
+  body[data-page="practice"] .answer-trainer.compact .answer-trainer-result {
+    color: var(--ux-muted);
+    font-size: var(--ux-fs-xs);
+  }
+
+  @media (max-width: 1280px) {
+    body[data-page="practice"] .answer-trainer.compact {
+      grid-template-columns: 1fr;
+    }
+  }
+}
