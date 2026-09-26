@@ -121,42 +121,46 @@
     "paper question visualizer": "question-visualizer",
   };
 
+  // 2026-09 UX pass: every course shares one interactive accent (royal).
+  // Course identity is carried by the nav tab, breadcrumb and "Active course"
+  // label, not by five different button colours. The PRINT palette lives in
+  // print-utils.js and is deliberately left unchanged.
   const palettes = {
     linear: {
       label: "Linear",
-      accent: "#161b2e",
-      accentDeep: "#0e1220",
-      soft: "rgba(22, 27, 46, 0.08)",
+      accent: "#1b4fd8",
+      accentDeep: "#143da8",
+      soft: "rgba(27, 79, 216, 0.08)",
     },
     modular: {
       label: "Modular",
-      accent: "#5a8074",
-      accentDeep: "#41645b",
-      soft: "rgba(90, 128, 116, 0.1)",
+      accent: "#1b4fd8",
+      accentDeep: "#143da8",
+      soft: "rgba(27, 79, 216, 0.08)",
     },
     pure: {
       label: "IAL Pure 1",
-      accent: "#36304a",
-      accentDeep: "#241f33",
-      soft: "rgba(54, 48, 74, 0.1)",
+      accent: "#1b4fd8",
+      accentDeep: "#143da8",
+      soft: "rgba(27, 79, 216, 0.08)",
     },
     mulberry: {
       label: "IAL Pure 2",
-      accent: "#6b2f5f",
-      accentDeep: "#48203f",
-      soft: "rgba(107, 47, 95, 0.1)",
+      accent: "#1b4fd8",
+      accentDeep: "#143da8",
+      soft: "rgba(27, 79, 216, 0.08)",
     },
     teal: {
       label: "IAL Mechanics 1",
-      accent: "#31534e",
-      accentDeep: "#203936",
-      soft: "rgba(49, 83, 78, 0.1)",
+      accent: "#1b4fd8",
+      accentDeep: "#143da8",
+      soft: "rgba(27, 79, 216, 0.08)",
     },
     baccalaureate: {
       label: "Egyptian Baccalaureate",
-      accent: "#0b6670",
-      accentDeep: "#06434a",
-      soft: "rgba(11, 102, 112, 0.1)",
+      accent: "#1b4fd8",
+      accentDeep: "#143da8",
+      soft: "rgba(27, 79, 216, 0.08)",
     },
   };
 

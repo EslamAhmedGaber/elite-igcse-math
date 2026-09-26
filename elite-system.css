@@ -176,6 +176,12 @@
   }
 }
 
+/* 2026-09: the 'visual clarity pass' that used to sit here has moved to
+   elite-ux.css. It was landing BEFORE the 2026-08-22 block below, so its
+   rules lost every specificity tie to the older layer - which is why the
+   mobile course-tab grid and the page width never applied. There is now one
+   final presentation layer, loaded last on every page. */
+
 /* 2026-08-22: unified Elite study workspace polish. Keep this final layer
    small and intentional so older page-specific rules remain compatible. */
 :root {

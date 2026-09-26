@@ -1,0 +1,2449 @@
+/* ==========================================================================
+   elite-ux.css  -  Elite IGCSE Mathematics
+   2026-09 front-end system pass, Dr Eslam Ahmed.
+
+   WHY THIS FILE EXISTS
+   The site grew through many additive "phase" layers inside styles.css
+   (17k lines) and elite-system.css. New rules kept landing *before* older
+   ones, so they lost ties in the cascade. This file is the single, final
+   presentation layer: it is linked LAST on every page, after styles.css,
+   elite-system.css, resource-hub.css and modular-release.css.
+
+   RULES FOR EDITING THIS FILE
+   1. Everything lives inside `@media screen`. Print output must stay byte
+      identical to the old design, so no rule here may reach @media print.
+   2. Structure only, never data. No rule here hides a question, a solution,
+      a book link or a progress value.
+   3. `!important` only where an existing `!important` has to be beaten.
+      Each one carries a comment saying which rule it overrides.
+   4. Tokens first. If a colour is not in the token block, it should not be
+      used below it.
+   ========================================================================== */
+
+@media screen {
+
+/* --------------------------------------------------------------------------
+   1. TOKENS
+   One palette with one job per colour:
+     navy   = ink and structure
+     royal  = every interactive thing (links, controls, selection)
+     gold   = premium and commercial CTAs only
+     status = solved / due / wrong only
+   -------------------------------------------------------------------------- */
+:root {
+  /* ink + structure */
+  --ux-ink:          #0e1b2e;
+  --ux-ink-2:        #1b2c44;
+  --ux-ink-3:        #3d5068;
+  --ux-muted:        #5a6b80;
+  --ux-faint:        #5f7085;   /* 4.5:1 on white and on --ux-subtle */
+
+  /* surfaces */
+  --ux-surface:      #ffffff;
+  --ux-canvas:       #f4f7fb;
+  --ux-subtle:       #eef3f9;
+  --ux-navy-panel:   #0f2140;
+  --ux-navy-panel-2: #16304f;
+
+  /* lines */
+  --ux-line:         #dce5ef;
+  --ux-line-strong:  #c2d1e2;
+  --ux-line-navy:    rgba(255, 255, 255, .16);
+
+  /* the one interactive accent */
+  --ux-royal:        #1b4fd8;
+  --ux-royal-hover:  #1740b4;
+  --ux-royal-ink:    #143da8;
+  --ux-royal-soft:   #ebf1ff;
+  --ux-royal-line:   #b9cdf7;
+
+  /* premium / commercial only */
+  --ux-gold:         #e2b84f;
+  --ux-gold-ink:     #8a6410;
+  --ux-gold-soft:    #fbf3d8;
+  --ux-gold-line:    #ecd9a4;
+
+  /* status, nothing else */
+  --ux-ok:           #14664f;
+  --ux-ok-soft:      #e4f4ee;
+  --ux-ok-line:      #a9d9c8;
+  --ux-warn:         #8a5a06;
+  --ux-warn-soft:    #fdf1dc;
+  --ux-warn-line:    #eecfa0;
+  --ux-danger:       #a8323c;
+  --ux-danger-soft:  #fdecee;
+  --ux-danger-line:  #f0bcc1;
+
+  /* shape */
+  --ux-r-sm: 8px;
+  --ux-r-md: 12px;
+  --ux-r-lg: 16px;
+  --ux-r-pill: 999px;
+
+  /* elevation, all navy tinted so shadows never look grey */
+  --ux-sh-sm: 0 1px 2px rgba(14, 27, 46, .06);
+  --ux-sh-md: 0 4px 14px rgba(14, 27, 46, .08);
+  --ux-sh-lg: 0 18px 40px rgba(14, 27, 46, .12);
+  --ux-sh-focus: 0 0 0 3px rgba(27, 79, 216, .28);
+
+  /* rhythm */
+  --ux-gap-1: 4px;
+  --ux-gap-2: 8px;
+  --ux-gap-3: 12px;
+  --ux-gap-4: 16px;
+  --ux-gap-5: 24px;
+  --ux-gap-6: 32px;
+  --ux-gap-7: 48px;
+
+  /* type scale */
+  --ux-fs-micro: 11px;
+  --ux-fs-xs:    12px;
+  --ux-fs-sm:    13px;
+  --ux-fs-base:  15px;
+  --ux-fs-md:    17px;
+  --ux-fs-lg:    20px;
+  --ux-fs-xl:    26px;
+  --ux-fs-2xl:   34px;
+  --ux-fs-3xl:   42px;
+
+  --ux-shell: 1280px;
+}
+
+/* --------------------------------------------------------------------------
+   1b. LEGACY TOKEN REMAP  -  the highest-leverage part of this file
+   The site is already themed through variables, in three generations:
+     styles.css        --brand-* / --ui-* / --course-*
+     styles.css:16053  --workspace-*
+     elite-system.css  --elite-*
+   The "random" colours were never random: --course-signature is per course
+   (near-black for Linear, verdigris for Modular, indigo for Pure, mulberry,
+   teal) and --accent was vermilion #c0392b, which is where the maroon CTA and
+   the red review numerals came from. Re-pointing these variables retunes
+   every active chip, tab, panel and button on every page from one place -
+   which is why the rest of this file can stay small.
+   Specificity note: the course rules are written as
+   `html[data-course-palette="linear"], body[data-pathway="linear"], ...`
+   (0,1,1). The block below matches that weight and lands later, so it wins
+   without a single !important.
+   -------------------------------------------------------------------------- */
+:root {
+  /* first generation */
+  --paper:              var(--ux-surface);
+  --surface:            var(--ux-canvas);
+  --navy:               var(--ux-ink);
+  --ink:                var(--ux-ink-2);
+  --accent:             var(--ux-royal);       /* was vermilion #c0392b */
+  --accent-dark:        var(--ux-royal-ink);
+  --gold:               var(--ux-gold);
+  --rose:               var(--ux-royal-ink);
+  --soft:               var(--ux-royal-soft);  /* was cream #fbf6e6 */
+  --focus:              var(--ux-royal);
+  --shadow:             var(--ux-sh-lg);
+
+  --brand-ink:          var(--ux-ink);
+  --brand-ink-deep:     #0a1524;
+  --brand-vermilion:      var(--ux-royal);
+  --brand-vermilion-deep: var(--ux-royal-ink);
+  --brand-ochre:        var(--ux-gold);
+  --brand-ochre-soft:   #eccf8f;
+  --brand-paper:        var(--ux-surface);
+  --brand-vellum:       var(--ux-subtle);
+
+  /* ui-* generation */
+  --ui-bg:              var(--ux-canvas);
+  --ui-surface:         var(--ux-surface);
+  --ui-surface-raised:  var(--ux-surface);
+  --ui-border:          var(--ux-line);
+  --ui-border-strong:   var(--ux-line-strong);
+  --ui-text:            var(--ux-ink-2);
+  --ui-muted:           var(--ux-muted);
+  --ui-subtle:          var(--ux-subtle);
+  --ui-success:         var(--ux-ok);
+  --ui-warning:         var(--ux-warn);
+  --ui-danger:          var(--ux-danger);
+
+  /* workspace-* generation */
+  --workspace-navy:       var(--ux-ink);
+  --workspace-navy-deep:  #0a1524;
+  --workspace-royal:      var(--ux-royal);
+  --workspace-royal-deep: var(--ux-royal-ink);
+  --workspace-sky:        var(--ux-royal);
+  --workspace-teal:       var(--ux-royal);
+  --workspace-gold:       var(--ux-gold-ink);
+  --workspace-line:       var(--ux-line);
+  --workspace-canvas:     var(--ux-canvas);
+
+  /* elite-* generation */
+  --elite-navy-950:   var(--ux-ink);
+  --elite-navy-900:   var(--ux-navy-panel);
+  --elite-navy-800:   var(--ux-navy-panel-2);
+  --elite-royal-700:  var(--ux-royal-ink);
+  --elite-royal-600:  var(--ux-royal);
+  --elite-royal-500:  var(--ux-royal);
+  --elite-sky-100:    var(--ux-royal-soft);
+  --elite-sky-50:     #f4f8ff;
+  --elite-gold-500:   var(--ux-gold);
+  --elite-gold-100:   var(--ux-gold-soft);
+  --elite-ink:        var(--ux-ink-2);
+  --elite-muted:      var(--ux-muted);
+  --elite-border:     var(--ux-line);
+  --elite-surface:    var(--ux-surface);
+  --elite-canvas:     var(--ux-canvas);
+  --elite-success:    var(--ux-ok);
+  --elite-warning:    var(--ux-warn);
+  --elite-danger:     var(--ux-danger);
+  --elite-ui-navy:    var(--ux-ink);
+  --elite-ui-navy-2:  var(--ux-navy-panel);
+  --elite-ui-royal:   var(--ux-royal);
+  --elite-ui-blue:    var(--ux-royal);
+
+  /* radii + elevation used by the older layers */
+  --r-sm: var(--ux-r-sm);
+  --r-md: var(--ux-r-md);
+  --r-lg: var(--ux-r-lg);
+  --r-xl: 20px;
+  --r-pill: var(--ux-r-pill);
+  --shadow-sm: var(--ux-sh-sm);
+  --shadow-md: var(--ux-sh-md);
+  --shadow-lg: var(--ux-sh-lg);
+  --shadow-card: var(--ux-sh-md);
+}
+
+/* One interactive accent for every course. Which course you are in is told
+   by the active nav tab, the breadcrumb and the "Active course" label -
+   it does not need five different button colours to say it again. */
+:root,
+html[data-course-palette],
+html[data-pathway],
+body[data-course-palette],
+body[data-pathway] {
+  --course-signature: var(--ux-royal);
+  --course-deep:      var(--ux-royal-ink);
+  --course-soft:      var(--ux-royal-soft);
+  --course-highlight: var(--ux-gold);
+  --course-vellum:    #f7fafd;
+  --course-rail:      rgba(14, 27, 46, .045);
+}
+
+/* The squared-paper background is part of the identity, so it stays - but
+   at a weight that sits behind the content instead of competing with it. */
+body[data-course-palette] {
+  background:
+    linear-gradient(90deg, var(--course-rail) 1px, transparent 1px),
+    linear-gradient(180deg, var(--course-rail) 1px, transparent 1px),
+    linear-gradient(180deg, #fbfdff 0%, var(--ux-canvas) 100%);
+  background-size: 38px 38px, 38px 38px, auto;
+}
+
+/* --------------------------------------------------------------------------
+   2. BASE + TYPOGRAPHY
+   -------------------------------------------------------------------------- */
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  background: var(--ux-canvas);
+  color: var(--ux-ink-2);
+  font-size: var(--ux-fs-base);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  color: var(--ux-ink);
+  letter-spacing: -.015em;
+  text-wrap: balance;
+}
+h1 { font-size: clamp(28px, 4.2vw, var(--ux-fs-3xl)); line-height: 1.1; font-weight: 800; }
+h2 { font-size: clamp(21px, 2.6vw, var(--ux-fs-xl)); line-height: 1.2;  font-weight: 700; }
+h3 { font-size: var(--ux-fs-lg); line-height: 1.28; font-weight: 700; }
+
+p { text-wrap: pretty; }
+
+.eyebrow,
+.command-kicker,
+.p-tag,
+.nav-panel-label {
+  font-size: var(--ux-fs-micro);
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ux-faint);
+}
+
+small, .muted { color: var(--ux-muted); }
+
+a { color: var(--ux-royal-ink); }
+a:hover { color: var(--ux-royal-hover); }
+
+/* One focus treatment everywhere. Replaces four different ones. */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--ux-royal);
+  outline-offset: 2px;
+  border-radius: var(--ux-r-sm);
+  box-shadow: var(--ux-sh-focus);
+}
+
+/* Skip target for keyboard users landing on a long page. */
+.ux-skip-link {
+  position: absolute;
+  left: var(--ux-gap-3);
+  top: var(--ux-gap-3);
+  z-index: 200;
+  padding: 10px 16px;
+  border-radius: var(--ux-r-sm);
+  background: var(--ux-ink);
+  color: #fff;
+  font-weight: 700;
+  font-size: var(--ux-fs-sm);
+  transform: translateY(-160%);
+  transition: transform .16s ease;
+}
+.ux-skip-link:focus-visible { transform: translateY(0); color: #fff; }
+
+.page,
+.shell > .content {
+  width: min(var(--ux-shell), calc(100% - 40px));
+}
+
+/* --------------------------------------------------------------------------
+   3. HEADER + NAVIGATION
+   The bug: `.nav-group { min-width: 108px }` plus equal flex shrink forced
+   every top-level item to exactly 115px, so "Egyptian Baccalaureate" spilled
+   out of its box and collided with "About". Items now size to their content
+   and the row scrolls only if it genuinely runs out of room.
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  gap: var(--ux-gap-3);
+  border-bottom: 1px solid var(--ux-line);
+  background: rgba(255, 255, 255, .92);
+  backdrop-filter: saturate(150%) blur(12px);
+  box-shadow: 0 1px 0 rgba(14, 27, 46, .04), 0 6px 20px rgba(14, 27, 46, .05);
+}
+
+.site-brand { gap: 10px; min-width: 0; }
+
+.brand-mark {
+  border-radius: var(--ux-r-sm);
+  background: var(--ux-ink);
+  color: var(--ux-gold);
+  font-weight: 800;
+  letter-spacing: .06em;
+}
+
+.brand-title {
+  color: var(--ux-ink);
+  font-weight: 700;
+  font-size: var(--ux-fs-base);
+  letter-spacing: -.01em;
+  white-space: nowrap;
+}
+
+.site-nav {
+  flex: 1 1 auto;
+  max-width: none;
+  gap: 2px;
+  padding: 3px;
+  border-radius: var(--ux-r-md);
+  background: var(--ux-subtle);
+  overflow-x: auto;
+  overflow-y: visible;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+/* Size to content. This single pair of declarations removes the overlap. */
+.site-nav .nav-group {
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+.site-nav .nav-tab-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1px;
+  min-height: 44px;
+  padding: 6px 11px;
+  border-radius: var(--ux-r-sm);
+  color: var(--ux-ink-3);
+  font-size: var(--ux-fs-sm);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.site-nav .nav-tab-main small {
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--ux-faint);
+  white-space: nowrap;
+}
+
+.site-nav .nav-tab-main:hover {
+  background: rgba(255, 255, 255, .8);
+  color: var(--ux-ink);
+}
+
+/* Current course and current page are now two distinct, readable states. */
+.site-nav .nav-group.is-active > .nav-tab-main,
+.site-nav .nav-tab-main[aria-current="page"] {
+  background: var(--ux-surface);
+  color: var(--ux-royal-ink);
+  box-shadow: inset 0 -2.5px 0 var(--ux-royal), var(--ux-sh-sm);
+}
+.site-nav .nav-group.is-active > .nav-tab-main small,
+.site-nav .nav-tab-main[aria-current="page"] small { color: var(--ux-royal); opacity: 1; }
+
+.nav-panel {
+  border: 1px solid var(--ux-line);
+  border-top: 3px solid var(--ux-royal);
+  border-radius: var(--ux-r-md);
+  box-shadow: var(--ux-sh-lg);
+}
+.nav-panel-label { margin-bottom: var(--ux-gap-2); }
+
+.nav-tool-grid > a {
+  gap: 10px;
+  padding: 10px;
+  border-radius: var(--ux-r-sm);
+  border: 1px solid transparent;
+  color: var(--ux-ink-2);
+  transition: background .14s ease, border-color .14s ease;
+}
+.nav-tool-grid > a:hover {
+  border-color: var(--ux-royal-line);
+  background: var(--ux-royal-soft);
+  color: var(--ux-royal-ink);
+}
+.nav-tool-grid .module-icon { color: var(--ux-royal); flex: 0 0 auto; }
+.nav-tool-grid .module-text strong { color: inherit; font-size: var(--ux-fs-sm); }
+.nav-tool-grid .module-text span { color: var(--ux-muted); font-size: var(--ux-fs-xs); }
+
+/* Header actions. "Continue with Google" is repeated by a floating widget in
+   the corner of every page; the header copy is the one that stays. */
+.site-cta { gap: var(--ux-gap-2); flex: 0 0 auto; }
+.site-cta .button { min-height: 38px; padding: 0 14px; font-size: var(--ux-fs-sm); }
+
+aside.cloud-floating-widget { display: none; }
+
+/* --------------------------------------------------------------------------
+   4. BUTTONS
+   Four levels, and only four: primary action, commercial action,
+   secondary, quiet.
+   -------------------------------------------------------------------------- */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ux-gap-2);
+  min-height: 42px;
+  padding: 0 18px;
+  border: 1px solid transparent;
+  border-radius: var(--ux-r-sm);
+  font-weight: 650;
+  font-size: var(--ux-fs-sm);
+  letter-spacing: 0;
+  line-height: 1.15;
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease, color .15s ease, box-shadow .15s ease, transform .12s ease;
+}
+.button:active { transform: translateY(1px); }
+
+.button.primary {
+  background: var(--ux-royal);
+  border-color: var(--ux-royal);
+  color: #fff;
+  box-shadow: var(--ux-sh-sm);
+}
+.button.primary:hover { background: var(--ux-royal-hover); border-color: var(--ux-royal-hover); color: #fff; }
+
+.button.gold {
+  background: var(--ux-gold);
+  border-color: #d5a938;
+  color: #2b1f04;
+  box-shadow: var(--ux-sh-sm);
+}
+.button.gold:hover { background: #d9ad3c; color: #2b1f04; }
+
+.button.light,
+.button.ghost,
+.button.cloud-auth-button,
+.button.cloud-account-button,
+.button.elite-study-trigger {
+  background: var(--ux-surface);
+  border-color: var(--ux-line-strong);
+  color: var(--ux-ink-2);
+}
+.button.light:hover,
+.button.ghost:hover,
+.button.cloud-auth-button:hover,
+.button.cloud-account-button:hover,
+.button.elite-study-trigger:hover {
+  border-color: var(--ux-royal-line);
+  background: var(--ux-royal-soft);
+  color: var(--ux-royal-ink);
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 650;
+  color: var(--ux-royal-ink);
+}
+.link-arrow:hover { color: var(--ux-royal-hover); }
+
+/* --------------------------------------------------------------------------
+   5. SURFACES
+   One card recipe. Sections stop inventing their own background tint.
+   -------------------------------------------------------------------------- */
+.home-command,
+.pathway-shell,
+.module-shell,
+.resource-panel,
+.trust-panel,
+.home-proof-pricing,
+.final-cta,
+.practice-toolbar,
+.practice-command-center,
+.review-card,
+.pricing-card,
+.book-card,
+.resource-card {
+  border-radius: var(--ux-r-lg);
+}
+
+.home-command,
+.practice-toolbar,
+.practice-command-center {
+  border: 1px solid var(--ux-line);
+  background: var(--ux-surface);
+  box-shadow: var(--ux-sh-md);
+}
+
+.section-head { margin-bottom: var(--ux-gap-4); }
+.section-head h2 { margin: 4px 0 6px; }
+.section-head p { color: var(--ux-muted); max-width: 62ch; }
+
+/* --------------------------------------------------------------------------
+   6. BADGES + PILLS
+   Metadata badges used to look identical whatever they meant. Now the shape
+   tells you the kind: question ref, difficulty, availability, status.
+   -------------------------------------------------------------------------- */
+.question-tags { gap: 6px; flex-wrap: wrap; }
+
+.question-tags > span,
+.status-line .pill,
+.marks-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border: 1px solid var(--ux-line);
+  border-radius: var(--ux-r-pill);
+  background: var(--ux-subtle);
+  color: var(--ux-ink-3);
+  font-size: var(--ux-fs-xs);
+  font-weight: 650;
+  letter-spacing: .01em;
+  line-height: 1.5;
+}
+
+.marks-badge {
+  border-color: var(--ux-line-strong);
+  background: var(--ux-surface);
+  color: var(--ux-ink-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.tag-question {
+  border-color: var(--ux-line-strong);
+  background: var(--ux-surface);
+  color: var(--ux-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.tag-difficulty.easy   { border-color: var(--ux-ok-line);     background: var(--ux-ok-soft);     color: var(--ux-ok); }
+.tag-difficulty.medium { border-color: var(--ux-warn-line);   background: var(--ux-warn-soft);   color: var(--ux-warn); }
+.tag-difficulty.hard   { border-color: var(--ux-danger-line); background: var(--ux-danger-soft); color: var(--ux-danger); }
+
+.tag-q20 {
+  border-color: var(--ux-gold-line);
+  background: var(--ux-gold-soft);
+  color: var(--ux-gold-ink);
+}
+
+/* "Solution" is an availability fact, not a status: keep it quiet. */
+.tag-solution {
+  border-color: var(--ux-royal-line);
+  background: var(--ux-royal-soft);
+  color: var(--ux-royal-ink);
+}
+
+.tag-review,
+.status-line .pill.review {
+  border-color: var(--ux-warn-line);
+  background: var(--ux-warn-soft);
+  color: var(--ux-warn);
+}
+.status-line .pill.done {
+  border-color: var(--ux-ok-line);
+  background: var(--ux-ok-soft);
+  color: var(--ux-ok);
+}
+
+/* The review label was printed twice per card, once in .question-tags and
+   once in .status-line. Keep the one that sits with the other metadata. */
+.question-card .status-line .pill.review { display: none; }
+
+/* --------------------------------------------------------------------------
+   7. FORM CONTROLS
+   -------------------------------------------------------------------------- */
+input[type="search"],
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  min-height: 42px;
+  padding: 8px 12px;
+  border: 1px solid var(--ux-line-strong);
+  border-radius: var(--ux-r-sm);
+  background: var(--ux-surface);
+  color: var(--ux-ink);
+  font: inherit;
+  font-size: var(--ux-fs-sm);
+  transition: border-color .14s ease, box-shadow .14s ease;
+}
+input:hover, select:hover, textarea:hover { border-color: var(--ux-faint); }
+input:focus, select:focus, textarea:focus { border-color: var(--ux-royal); outline: none; box-shadow: var(--ux-sh-focus); }
+::placeholder { color: var(--ux-faint); }
+
+select {
+  appearance: none;
+  padding-right: 34px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%235a6b80' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 11px center;
+}
+
+/* --------------------------------------------------------------------------
+   8. HOME - "choose a course, then choose what to do"
+   The first screen now answers exactly two questions and nothing else.
+   -------------------------------------------------------------------------- */
+.page-home { padding-top: var(--ux-gap-5); padding-bottom: var(--ux-gap-7); }
+
+.home-command { padding: clamp(20px, 3vw, 34px); }
+
+.home-command-head { gap: var(--ux-gap-5); align-items: start; margin-bottom: var(--ux-gap-5); }
+.home-command-head h1 { margin: 6px 0 10px; }
+.home-command-head > div > p { color: var(--ux-muted); font-size: var(--ux-fs-md); max-width: 56ch; margin: 0; }
+
+.home-command-teacher {
+  gap: var(--ux-gap-3);
+  padding: var(--ux-gap-3) var(--ux-gap-4);
+  border: 1px solid var(--ux-line);
+  border-left: 3px solid var(--ux-gold);
+  border-radius: var(--ux-r-md);
+  background: var(--ux-surface);
+}
+.home-command-teacher img { width: 48px; height: 48px; border-radius: var(--ux-r-pill); object-fit: cover; }
+.home-command-teacher strong { color: var(--ux-ink); font-size: var(--ux-fs-sm); }
+.home-command-teacher small { color: var(--ux-muted); font-size: var(--ux-fs-xs); }
+
+/* Step 1 - the course picker reads as a real segmented control. */
+.home-course-tabs {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 6px;
+  padding: 6px;
+  margin-bottom: var(--ux-gap-3);
+  border: 1px solid var(--ux-line);
+  border-radius: var(--ux-r-md);
+  background: var(--ux-subtle);
+  overflow: visible;
+}
+.home-course-tabs button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-height: 54px;
+  padding: 8px 6px;
+  border: 1px solid transparent;
+  border-radius: var(--ux-r-sm);
+  background: transparent;
+  color: var(--ux-ink-3);
+  font-weight: 650;
+  font-size: var(--ux-fs-sm);
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.home-course-tabs button small {
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--ux-faint);
+}
+.home-course-tabs button:hover { background: rgba(255, 255, 255, .75); color: var(--ux-ink); }
+.home-course-tabs button[aria-selected="true"] {
+  border-color: var(--ux-royal-line);
+  background: var(--ux-surface);
+  color: var(--ux-royal-ink);
+  box-shadow: inset 0 -2.5px 0 var(--ux-royal), var(--ux-sh-sm);
+}
+.home-course-tabs button[aria-selected="true"] small { color: var(--ux-royal); }
+
+/* The active-course confirmation and the study route were two tall bands
+   saying almost the same thing. They now read as one quiet caption row. */
+.home-active-course {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--ux-gap-2) var(--ux-gap-3);
+  padding: 10px var(--ux-gap-4);
+  margin-bottom: var(--ux-gap-4);
+  border: 1px solid var(--ux-royal-line);
+  border-radius: var(--ux-r-md);
+  background: var(--ux-royal-soft);
+}
+.home-active-course > span:first-child {
+  font-size: var(--ux-fs-micro);
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ux-royal);
+}
+.home-active-course strong { color: var(--ux-ink); font-size: var(--ux-fs-md); }
+.home-active-course small {
+  padding: 2px 8px;
+  border-radius: var(--ux-r-pill);
+  background: rgba(255, 255, 255, .8);
+  color: var(--ux-royal-ink);
+  font-size: var(--ux-fs-xs);
+  font-weight: 650;
+}
+.home-active-course p {
+  flex: 1 1 100%;
+  margin: 0;
+  color: var(--ux-ink-3);
+  font-size: var(--ux-fs-sm);
+}
+
+.home-route-guide {
+  display: flex;
+  align-items: center;
+  gap: var(--ux-gap-4);
+  padding: var(--ux-gap-3) var(--ux-gap-4);
+  margin-bottom: var(--ux-gap-4);
+  border: 1px solid var(--ux-line);
+  border-radius: var(--ux-r-md);
+  background: var(--ux-surface);
+}
+.home-route-guide-intro strong { display: block; color: var(--ux-ink); font-size: var(--ux-fs-sm); }
+.home-route-steps { display: flex; flex: 1 1 auto; gap: var(--ux-gap-2); margin: 0; padding: 0; list-style: none; }
+.home-route-steps li {
+  flex: 1 1 0;
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  padding: 7px 10px;
+  border-radius: var(--ux-r-sm);
+  background: var(--ux-subtle);
+  min-width: 0;
+}
+.home-route-steps li span {
+  color: var(--ux-royal);
+  font-size: var(--ux-fs-xs);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+.home-route-steps li strong { color: var(--ux-ink); font-size: var(--ux-fs-sm); }
+.home-route-steps li small { color: var(--ux-muted); font-size: var(--ux-fs-xs); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Step 2 - the six tools. One card recipe, one accent, no invented colours. */
+.home-core-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--ux-gap-3);
+  align-items: stretch;
+}
+.home-core-action {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  grid-template-areas: "icon copy" "icon open";
+  align-content: start;
+  gap: 2px var(--ux-gap-3);
+  min-height: 0;
+  padding: var(--ux-gap-4);
+  border: 1px solid var(--ux-line);
+  border-radius: var(--ux-r-md);
+  background: var(--ux-surface);
+  box-shadow: var(--ux-sh-sm);
+  color: var(--ux-ink-2);
+  transition: border-color .16s ease, box-shadow .16s ease, transform .16s ease;
+}
+.home-core-action:hover {
+  border-color: var(--ux-royal-line);
+  box-shadow: var(--ux-sh-md);
+  transform: translateY(-2px);
+  color: var(--ux-ink-2);
+}
+.home-core-action .module-icon {
+  grid-area: icon;
+  width: 34px;
+  height: 34px;
+  padding: 7px;
+  border-radius: var(--ux-r-sm);
+  background: var(--ux-royal-soft);
+  color: var(--ux-royal);
+}
+.home-core-action-copy { grid-area: copy; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.home-core-action-copy strong { color: var(--ux-ink); font-size: var(--ux-fs-md); line-height: 1.25; }
+.home-core-action-copy > span:last-child { color: var(--ux-muted); font-size: var(--ux-fs-sm); }
+.home-core-action-kicker {
+  align-self: start;
+  padding: 2px 8px;
+  margin-bottom: 3px;
+  border-radius: var(--ux-r-pill);
+  background: var(--ux-gold-soft);
+  color: var(--ux-gold-ink);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.home-core-action-open {
+  grid-area: open;
+  margin-top: 10px;
+  color: var(--ux-royal-ink);
+  font-size: var(--ux-fs-sm);
+  font-weight: 650;
+}
+.home-core-action-open::after { content: " \2192"; }
+.home-core-action:hover .home-core-action-open { color: var(--ux-royal-hover); }
+
+/* The 01..06 numerals implied a required order that does not exist. */
+.home-core-action-index { display: none; }
+
+.home-core-action.is-featured {
+  border-color: var(--ux-royal-line);
+  background: linear-gradient(180deg, var(--ux-royal-soft), var(--ux-surface) 58%);
+}
+
+.home-more-tools {
+  margin-top: var(--ux-gap-4);
+  border: 1px solid var(--ux-line);
+  border-radius: var(--ux-r-md);
+  background: var(--ux-surface);
+}
+.home-more-tools > summary {
+  display: flex;
+  align-items: center;
+  gap: var(--ux-gap-2);
+  padding: 12px var(--ux-gap-4);
+  color: var(--ux-ink);
+  font-size: var(--ux-fs-sm);
+  font-weight: 650;
+  cursor: pointer;
+  list-style: none;
+}
+.home-more-tools > summary::-webkit-details-marker { display: none; }
+.home-more-tools > summary::after { content: "+"; margin-left: auto; color: var(--ux-royal); font-size: var(--ux-fs-md); font-weight: 700; }
+.home-more-tools[open] > summary::after { content: "\2212"; }
+.home-more-tools > summary span { color: var(--ux-muted); font-weight: 500; }
+.home-more-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--ux-gap-2);
+  padding: 0 var(--ux-gap-4) var(--ux-gap-4);
+}
+.home-more-grid > a {
+  display: flex;
+  align-items: center;
+  gap: var(--ux-gap-2);
+  min-height: 0;
+  padding: 11px 13px;
+  border: 1px solid var(--ux-line);
+  border-radius: var(--ux-r-sm);
+  background: var(--ux-canvas);
+  color: var(--ux-ink-2);
+  font-size: var(--ux-fs-sm);
+  font-weight: 600;
+  transition: border-color .14s ease, background .14s ease, color .14s ease;
+}
+.home-more-grid > a:hover { border-color: var(--ux-royal-line); background: var(--ux-royal-soft); color: var(--ux-royal-ink); transform: none; }
+.home-more-grid .module-icon { width: 18px; height: 18px; color: var(--ux-royal); flex: 0 0 auto; }
+
+.home-study-trail {
+  gap: var(--ux-gap-3);
+  padding: var(--ux-gap-3) var(--ux-gap-4);
+  margin-top: var(--ux-gap-4);
+  border: 1px solid var(--ux-ok-line);
+  border-radius: var(--ux-r-md);
+  background: var(--ux-ok-soft);
+}
+.home-study-trail .eyebrow { color: var(--ux-ok); }
+.home-study-trail-link {
+  padding: 8px 14px;
+  border-radius: var(--ux-r-sm);
+  background: var(--ux-ok);
+  color: #fff;
+  font-size: var(--ux-fs-sm);
+  font-weight: 650;
+}
+
+.home-command-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--ux-gap-3);
+  padding-top: var(--ux-gap-4);
+  margin-top: var(--ux-gap-5);
+  border-top: 1px solid var(--ux-line);
+}
+.home-command-stats span { display: flex; flex-direction: column; gap: 1px; color: var(--ux-muted); font-size: var(--ux-fs-xs); }
+.home-command-stats strong { color: var(--ux-ink); font-size: var(--ux-fs-lg); font-variant-numeric: tabular-nums; }
+
+/* Teacher strip + commercial band: present, compact, clearly secondary. */
+.home-trust-about {
+  padding: clamp(20px, 3vw, 30px);
+  border: 1px solid transparent;
+  border-radius: var(--ux-r-lg);
+  background: linear-gradient(120deg, var(--ux-navy-panel), var(--ux-navy-panel-2));
+  color: rgba(255, 255, 255, .82);
+}
+.home-trust-about .trust-intro { gap: var(--ux-gap-5); align-items: center; }
+.home-trust-about h2 { color: #fff; font-size: clamp(19px, 2.2vw, 25px); }
+.home-trust-about p { color: rgba(255, 255, 255, .78); font-size: var(--ux-fs-sm); }
+.home-trust-about .eyebrow { color: var(--ux-gold); }
+.home-trust-about .link-arrow { color: var(--ux-gold); }
+.home-trust-about .trust-portrait img { border-color: var(--ux-gold); }
+.home-trust-about figcaption { color: rgba(255, 255, 255, .7); }
+
+.home-proof-pricing {
+  padding: clamp(20px, 3vw, 30px);
+  border: 1px solid var(--ux-line);
+  background: var(--ux-surface);
+}
+.review-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--ux-gap-3); }
+.review-summary > div {
+  padding: var(--ux-gap-3) var(--ux-gap-4);
+  border: 1px solid var(--ux-line);
+  border-radius: var(--ux-r-md);
+  background: var(--ux-canvas);
+}
+.review-summary strong { display: block; color: var(--ux-ink); font-size: var(--ux-fs-xl); font-variant-numeric: tabular-nums; }
+.review-summary span { color: var(--ux-muted); font-size: var(--ux-fs-xs); }
+
+.reviews-grid { gap: var(--ux-gap-3); }
+.review-card {
+  padding: var(--ux-gap-4);
+  border: 1px solid var(--ux-line);
+  background: var(--ux-canvas);
+  box-shadow: none;
+}
+.review-card blockquote { color: var(--ux-ink-2); font-size: var(--ux-fs-sm); line-height: 1.6; }
+.review-card cite { color: var(--ux-muted); font-size: var(--ux-fs-xs); font-style: normal; }
+.review-stars { color: var(--ux-gold); letter-spacing: .12em; }
+
+.pricing-grid { gap: var(--ux-gap-3); }
+.pricing-card {
+  padding: var(--ux-gap-4);
+  border: 1px solid var(--ux-line);
+  background: var(--ux-surface);
+}
+.pricing-card .p-tag { color: var(--ux-royal); }
+.pricing-card header strong { display: block; color: var(--ux-ink); font-size: var(--ux-fs-md); margin: 4px 0 2px; }
+.pricing-card .p-egp { color: var(--ux-muted); font-size: var(--ux-fs-sm); }
+.pricing-card ul { color: var(--ux-ink-3); font-size: var(--ux-fs-sm); }
+.pricing-card .enroll-trigger {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid var(--ux-line-strong);
+  border-radius: var(--ux-r-sm);
+  background: var(--ux-surface);
+  color: var(--ux-ink);
+  font-weight: 650;
+  font-size: var(--ux-fs-sm);
+  cursor: pointer;
+}
+.pricing-card .enroll-trigger:hover { border-color: var(--ux-royal-line); background: var(--ux-royal-soft); color: var(--ux-royal-ink); }
+.pricing-card.highlight { border-color: var(--ux-gold-line); background: var(--ux-gold-soft); }
+.pricing-card.highlight .p-tag { color: var(--ux-gold-ink); }
+.pricing-card.highlight .enroll-trigger { background: var(--ux-gold); border-color: #d5a938; color: #2b1f04; }
+
+/* The maroon gradient was the only maroon on the site. */
+.final-cta {
+  padding: clamp(20px, 3vw, 30px);
+  border: 1px solid transparent;
+  background: linear-gradient(120deg, var(--ux-navy-panel), var(--ux-navy-panel-2));
+  color: rgba(255, 255, 255, .82);
+}
+.final-cta h2 { color: #fff; }
+.final-cta p { color: rgba(255, 255, 255, .78); }
+
+/* Highlight card previously inverted to white-on-navy; on the gold surface
+   every text colour has to be restated or it inherits white on gold. */
+.pricing-card.highlight header strong,
+.pricing-card.highlight h3 { color: #2b1f04; }
+.pricing-card.highlight .p-egp { color: #6b5312; }
+.pricing-card.highlight ul,
+.pricing-card.highlight li { color: #4a3a10; }
+.pricing-card.highlight .enroll-trigger:hover { background: #d9ad3c; color: #2b1f04; }
+
+/* Route steps: let the label breathe instead of clipping it. */
+.home-route-steps li { flex-wrap: wrap; }
+.home-route-steps li small { flex: 1 1 100%; white-space: normal; }
+
+.site-footer { background: var(--ux-ink); border-top: 3px solid var(--ux-gold); }
+
+/* --------------------------------------------------------------------------
+   9. PRACTICE - two tiers instead of six
+   Before: course panel, stats strip, bank-mode panel, page title + tools,
+   command bar, chip rail - six stacked bands before the first question.
+   After:  tier 1 = context (which bank, how many, how many solved)
+           tier 2 = one filter row, then removable filter chips, then topics.
+   -------------------------------------------------------------------------- */
+
+/* Tier 1 --------------------------------------------------------------- */
+.practice-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--ux-gap-3) var(--ux-gap-5);
+  padding: var(--ux-gap-3) var(--ux-gap-4);
+  margin-bottom: var(--ux-gap-3);
+}
+
+.practice-bank-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--ux-gap-3);
+  flex: 1 1 420px;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+.practice-bank-bar > div:first-child { display: flex; align-items: baseline; gap: var(--ux-gap-2); min-width: 0; }
+.practice-bank-bar .eyebrow { display: none; }
+.practice-bank-bar h2 { margin: 0; font-size: var(--ux-fs-md); white-space: nowrap; }
+
+/* The long prose description repeats what the segmented control already
+   says. It stays in the DOM for app.js, but stops taking a whole row. */
+.practice-bank-bar #bankDescription {
+  margin: 0;
+  color: var(--ux-muted);
+  font-size: var(--ux-fs-xs);
+  max-width: 46ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bank-buttons {
+  display: inline-flex;
+  gap: 3px;
+  padding: 3px;
+  border: 1px solid var(--ux-line);
+  border-radius: var(--ux-r-md);
+  background: var(--ux-subtle);
+}
+.bank-buttons button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  min-height: 40px;
+  padding: 5px 13px;
+  border: 1px solid transparent;
+  border-radius: var(--ux-r-sm);
+  background: transparent;
+  color: var(--ux-ink-3);
+  cursor: pointer;
+  transition: background .14s ease, color .14s ease, box-shadow .14s ease;
+}
+.bank-buttons button strong { font-size: var(--ux-fs-sm); font-weight: 650; }
+.bank-buttons button span { color: var(--ux-faint); font-size: 10.5px; font-variant-numeric: tabular-nums; }
+.bank-buttons button:hover { background: rgba(255, 255, 255, .8); color: var(--ux-ink); }
+.bank-buttons button.active {
+  border-color: var(--ux-royal-line);
+  background: var(--ux-surface);
+  color: var(--ux-royal-ink);
+  box-shadow: var(--ux-sh-sm);
+}
+.bank-buttons button.active span { color: var(--ux-royal); }
+
+.practice-status-strip {
+  display: flex;
+  gap: var(--ux-gap-4);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+.practice-status-strip > div {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+.practice-status-strip strong { color: var(--ux-ink); font-size: var(--ux-fs-md); font-variant-numeric: tabular-nums; }
+.practice-status-strip span { color: var(--ux-muted); font-size: var(--ux-fs-xs); text-transform: none; letter-spacing: 0; }
+
+/* The page title band is now redundant with tier 1. #bankSubtitle stays in
+   the DOM because app.js writes to it on every bank change. */
+.content-head.is-ux-quiet { display: none; }
+
+/* Tier 2 --------------------------------------------------------------- */
+.practice-command-center { padding: var(--ux-gap-3) var(--ux-gap-4); margin-bottom: var(--ux-gap-3); }
+
+.practice-command-heading { display: none; }
+
+.practice-command-controls {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: var(--ux-gap-2);
+}
+.practice-command-controls > label {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.practice-command-controls > label > span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ux-faint);
+}
+.practice-command-controls .command-search { flex: 1 1 200px; min-width: 170px; }
+.practice-command-controls .command-search input { width: 100%; }
+.practice-command-controls > label:not(.command-search) { flex: 0 1 132px; min-width: 118px; }
+.practice-command-controls > label:not(.command-search) select { width: 100%; }
+
+.command-more-button {
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid var(--ux-line-strong);
+  border-radius: var(--ux-r-sm);
+  background: var(--ux-surface);
+  color: var(--ux-ink-2);
+  font-size: var(--ux-fs-sm);
+  font-weight: 650;
+  cursor: pointer;
+}
+.command-more-button:hover { border-color: var(--ux-royal-line); background: var(--ux-royal-soft); color: var(--ux-royal-ink); }
+
+/* Sort + layout toggle moved here from the deleted title band. */
+.practice-command-controls .head-tools {
+  display: flex;
+  align-items: center;
+  gap: var(--ux-gap-2);
+  margin-left: auto;
+}
+.practice-command-controls .sort-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ux-faint);
+}
+.practice-command-controls .sort-label select { min-width: 132px; }
+.practice-command-controls .head-tools .mobile-tools-toggle { min-height: 42px; padding: 0 12px; }
+.layout-toggle button { padding: 0 10px; }
+
+.layout-toggle {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--ux-line);
+  border-radius: var(--ux-r-sm);
+  background: var(--ux-subtle);
+}
+.layout-toggle button {
+  min-height: 34px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ux-ink-3);
+  font-size: var(--ux-fs-xs);
+  font-weight: 650;
+  cursor: pointer;
+}
+.layout-toggle button:hover { background: rgba(255, 255, 255, .85); color: var(--ux-ink); }
+.layout-toggle button.active { background: var(--ux-surface); color: var(--ux-royal-ink); box-shadow: var(--ux-sh-sm); }
+
+/* Active filters, and how to remove them. */
+.practice-command-status {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--ux-gap-2) var(--ux-gap-3);
+  padding-top: var(--ux-gap-3);
+  margin-top: var(--ux-gap-3);
+  border-top: 1px solid var(--ux-line);
+}
+.practice-command-status > div:first-child { display: flex; align-items: baseline; gap: 5px; }
+.practice-command-status strong { color: var(--ux-ink); font-size: var(--ux-fs-md); font-variant-numeric: tabular-nums; }
+.practice-command-status > div:first-child span { color: var(--ux-muted); font-size: var(--ux-fs-xs); }
+
+.command-filter-chips { display: flex; flex-wrap: wrap; gap: 6px; flex: 1 1 auto; }
+.command-filter-chips :is(button, span) {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 30px;
+  padding: 3px 10px;
+  border: 1px solid var(--ux-royal-line);
+  border-radius: var(--ux-r-pill);
+  background: var(--ux-royal-soft);
+  color: var(--ux-royal-ink);
+  font-size: var(--ux-fs-xs);
+  font-weight: 650;
+  cursor: pointer;
+}
+.command-filter-chips button::after { content: "\00d7"; font-size: 14px; line-height: 1; opacity: .75; }
+.command-filter-chips button:hover { border-color: var(--ux-royal); background: #dfe9ff; }
+.command-filter-chips button:hover::after { opacity: 1; }
+
+/* When nothing is filtered the chip area shows a plain hint, not a chip. */
+.command-filter-chips > span:only-child {
+  border-color: var(--ux-line);
+  background: transparent;
+  color: var(--ux-faint);
+  font-weight: 500;
+}
+
+.command-reset-button {
+  min-height: 32px;
+  padding: 0 12px;
+  border: 1px solid var(--ux-line-strong);
+  border-radius: var(--ux-r-sm);
+  background: var(--ux-surface);
+  color: var(--ux-ink-3);
+  font-size: var(--ux-fs-xs);
+  font-weight: 650;
+  cursor: pointer;
+}
+.command-reset-button:hover { border-color: var(--ux-danger-line); background: var(--ux-danger-soft); color: var(--ux-danger); }
+
+/* Topic rail: 70+ chips used to sit in a 14,000px scroller with no edge,
+   no scrollbar and no hint that anything was off-screen. */
+.topic-strip {
+  position: relative;
+  display: flex;
+  gap: 6px;
+  padding: 2px 0 10px;
+  margin-bottom: var(--ux-gap-3);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  scrollbar-color: var(--ux-line-strong) transparent;
+  -webkit-mask-image: linear-gradient(90deg, #000 0, #000 calc(100% - 36px), transparent 100%);
+          mask-image: linear-gradient(90deg, #000 0, #000 calc(100% - 36px), transparent 100%);
+}
+.topic-strip::-webkit-scrollbar { height: 7px; }
+.topic-strip::-webkit-scrollbar-track { background: var(--ux-subtle); border-radius: var(--ux-r-pill); }
+.topic-strip::-webkit-scrollbar-thumb { background: var(--ux-line-strong); border-radius: var(--ux-r-pill); }
+.topic-strip::-webkit-scrollbar-thumb:hover { background: var(--ux-faint); }
+
+.topic-chip {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  min-height: 34px;
+  padding: 0 13px;
+  border: 1px solid var(--ux-line);
+  border-radius: var(--ux-r-pill);
+  background: var(--ux-surface);
+  color: var(--ux-ink-3);
+  font-size: var(--ux-fs-xs);
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: border-color .14s ease, background .14s ease, color .14s ease;
+}
+.topic-chip:hover { border-color: var(--ux-royal-line); background: var(--ux-royal-soft); color: var(--ux-royal-ink); }
+.topic-chip.active {
+  border-color: var(--ux-royal);
+  background: var(--ux-royal);
+  color: #fff;
+  box-shadow: var(--ux-sh-sm);
+}
+
+/* Question cards ------------------------------------------------------- */
+.question-grid { gap: var(--ux-gap-3); }
+
+.question-card {
+  gap: var(--ux-gap-3);
+  padding: var(--ux-gap-4);
+  border: 1px solid var(--ux-line);
+  border-radius: var(--ux-r-md);
+  background: var(--ux-surface);
+  box-shadow: var(--ux-sh-sm);
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.question-card:hover { border-color: var(--ux-line-strong); box-shadow: var(--ux-sh-md); }
+.question-card.selected { border-color: var(--ux-royal); box-shadow: 0 0 0 1px var(--ux-royal), var(--ux-sh-md); }
+.question-card.solved { border-color: var(--ux-ok-line); }
+.question-card.solved::before {
+  content: "Solved";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3px 10px;
+  border-bottom-left-radius: var(--ux-r-sm);
+  background: var(--ux-ok);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+.question-card { position: relative; }
+
+.question-card .card-title { display: flex; align-items: center; justify-content: space-between; gap: var(--ux-gap-2); }
+.question-card .question-ref { color: var(--ux-muted); font-size: var(--ux-fs-xs); font-weight: 650; letter-spacing: .04em; text-transform: uppercase; }
+.question-card .topic-name { color: var(--ux-ink); font-size: var(--ux-fs-md); font-weight: 700; line-height: 1.3; margin-top: 4px; }
+.question-card .meta-line { color: var(--ux-muted); font-size: var(--ux-fs-xs); margin-bottom: 8px; }
+
+/* The question image is the content. Make it big, high contrast, and make
+   it obvious that clicking enlarges it. */
+.question-card .thumb {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: var(--ux-gap-3);
+  border: 1px solid var(--ux-line);
+  border-radius: var(--ux-r-sm);
+  background: var(--ux-surface);
+  cursor: zoom-in;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.question-card .thumb img { width: 100%; height: auto; display: block; filter: contrast(1.06); }
+.question-card .thumb::after {
+  content: "\2315 Zoom";
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  padding: 4px 9px;
+  border-radius: var(--ux-r-pill);
+  background: rgba(14, 27, 46, .82);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 650;
+  opacity: 0;
+  transition: opacity .15s ease;
+}
+.question-card .thumb:hover,
+.question-card .thumb:focus-visible { border-color: var(--ux-royal); box-shadow: var(--ux-sh-md); }
+.question-card .thumb:hover::after,
+.question-card .thumb:focus-visible::after { opacity: 1; }
+
+.answer-trainer {
+  padding: var(--ux-gap-3);
+  border: 1px solid var(--ux-line);
+  border-radius: var(--ux-r-sm);
+  background: var(--ux-canvas);
+}
+.answer-trainer-head { display: flex; align-items: center; justify-content: space-between; gap: var(--ux-gap-2); }
+.answer-trainer-head strong,
+.answer-trainer-head > :first-child { color: var(--ux-ink-3); font-size: 10px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+.answer-trainer input { width: 100%; }
+.answer-trainer-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 8px; }
+.answer-trainer-actions button {
+  min-height: 38px;
+  border: 1px solid var(--ux-line-strong);
+  border-radius: var(--ux-r-sm);
+  background: var(--ux-surface);
+  color: var(--ux-ink-2);
+  font-size: var(--ux-fs-xs);
+  font-weight: 650;
+  cursor: pointer;
+}
+.answer-trainer-actions button:hover { border-color: var(--ux-royal-line); background: var(--ux-royal-soft); color: var(--ux-royal-ink); }
+.answer-trainer-result { color: var(--ux-muted); font-size: var(--ux-fs-xs); margin: 8px 0 0; }
+
+/* Eight equal-weight buttons per card is a menu, not a decision. One
+   primary (see the solution), then quiet supporting actions. */
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-top: var(--ux-gap-3);
+  margin-top: auto;
+  border-top: 1px solid var(--ux-line);
+}
+.card-actions button {
+  flex: 1 1 auto;
+  min-height: 38px;
+  padding: 0 12px;
+  border: 1px solid var(--ux-line-strong);
+  border-radius: var(--ux-r-sm);
+  background: var(--ux-surface);
+  color: var(--ux-ink-3);
+  font-size: var(--ux-fs-xs);
+  font-weight: 650;
+  cursor: pointer;
+  transition: border-color .14s ease, background .14s ease, color .14s ease;
+}
+.card-actions button:hover { border-color: var(--ux-royal-line); background: var(--ux-royal-soft); color: var(--ux-royal-ink); }
+
+.card-actions button[data-action="solution"] {
+  flex: 1 1 100%;
+  order: -1;
+  min-height: 42px;
+  border-color: var(--ux-royal);
+  background: var(--ux-royal);
+  color: #fff;
+  font-size: var(--ux-fs-sm);
+}
+.card-actions button[data-action="solution"]:hover { background: var(--ux-royal-hover); border-color: var(--ux-royal-hover); color: #fff; }
+
+.card-actions button[data-action="select"] { border-color: var(--ux-line-strong); }
+.question-card.selected .card-actions button[data-action="select"] {
+  border-color: var(--ux-royal-line);
+  background: var(--ux-royal-soft);
+  color: var(--ux-royal-ink);
+}
+.question-card.solved .card-actions button[data-action="solve"] {
+  border-color: var(--ux-ok-line);
+  background: var(--ux-ok-soft);
+  color: var(--ux-ok);
+}
+.card-actions button[data-action="reviewAdd"]:hover,
+.card-actions button[data-action="reviewDone"]:hover,
+.card-actions button[data-action="reviewRemove"]:hover {
+  border-color: var(--ux-warn-line);
+  background: var(--ux-warn-soft);
+  color: var(--ux-warn);
+}
+.card-actions button[data-action="fixTopic"] { flex: 0 0 auto; color: var(--ux-faint); }
+
+/* Selection tray */
+.selection-dock {
+  border: 1px solid var(--ux-line);
+  border-radius: var(--ux-r-md);
+  background: var(--ux-surface);
+  box-shadow: var(--ux-sh-lg);
+}
+.selection-dock-actions a,
+.selection-dock-actions button {
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--ux-line-strong);
+  border-radius: var(--ux-r-sm);
+  background: var(--ux-surface);
+  color: var(--ux-ink-2);
+  font-size: var(--ux-fs-sm);
+  font-weight: 650;
+}
+.selection-dock-actions #selectionDockBuild {
+  border-color: var(--ux-royal);
+  background: var(--ux-royal);
+  color: #fff;
+}
+
+.question-pagination {
+  gap: var(--ux-gap-2);
+  padding: var(--ux-gap-3);
+  border: 1px solid var(--ux-line);
+  border-radius: var(--ux-r-md);
+  background: var(--ux-surface);
+}
+.question-pagination button {
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid var(--ux-line-strong);
+  border-radius: var(--ux-r-sm);
+  background: var(--ux-surface);
+  color: var(--ux-ink-2);
+  font-size: var(--ux-fs-sm);
+  font-weight: 650;
+  cursor: pointer;
+}
+.question-pagination button:hover:not(:disabled) { border-color: var(--ux-royal-line); background: var(--ux-royal-soft); color: var(--ux-royal-ink); }
+.question-pagination button:disabled { opacity: .45; cursor: default; }
+.question-page-numbers button.active { border-color: var(--ux-royal); background: var(--ux-royal); color: #fff; }
+
+/* Breadcrumb: shows where you are without shouting. */
+.elite-breadcrumb, .breadcrumb {
+  color: var(--ux-muted);
+  font-size: var(--ux-fs-xs);
+  letter-spacing: .04em;
+}
+.elite-breadcrumb [aria-current="page"], .breadcrumb [aria-current="page"] { color: var(--ux-ink); font-weight: 700; }
+
+/* --------------------------------------------------------------------------
+   10. BOOKS / DOWNLOADS
+   The books page has its own variable set (--book-accent / --book-ink /
+   --book-tag-*) assigned per course: near-black for Linear, verdigris for
+   Modular, indigo for Pure. That is why "Questions PDF" was green on one
+   card, navy on the next and gold on a third. Same treatment as the course
+   palette: re-point the variables, then let the existing rules do the work.
+   Gold keeps one job on this page - it marks the Q20+ / Expertise editions,
+   the same meaning it has on the .tag-q20 badge in the question bank.
+   -------------------------------------------------------------------------- */
+.download-card,
+.download-card.linear-book,
+.download-card.modular-book,
+.download-card.pure-book,
+.download-card.download-note {
+  --book-ink:          var(--ux-ink);
+  --book-accent:       var(--ux-royal);
+  --book-accent-dark:  var(--ux-royal-ink);
+  --book-highlight:    var(--ux-gold);
+  --book-tint:         var(--ux-royal-soft);
+  --book-tag-bg:       var(--ux-subtle);
+  --book-tag-color:    var(--ux-ink-3);
+  border-color: var(--ux-line);
+  background: var(--ux-surface);
+}
+
+.downloads-grid { gap: var(--ux-gap-3); }
+
+.download-card {
+  padding: var(--ux-gap-4);
+  border-radius: var(--ux-r-md);
+  border-top: 3px solid var(--ux-line-strong);
+  box-shadow: var(--ux-sh-sm);
+  transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease;
+}
+.download-card:hover { box-shadow: var(--ux-sh-md); transform: translateY(-2px); }
+.download-card h3 { font-size: var(--ux-fs-md); margin: 6px 0 4px; }
+.download-card p  { color: var(--ux-muted); font-size: var(--ux-fs-sm); }
+
+/* The kind of book is a label. It does not need to also be a surface tint. */
+.d-tag {
+  padding: 3px 9px;
+  border: 1px solid var(--ux-line);
+  border-radius: var(--ux-r-pill);
+  background: var(--ux-subtle);
+  color: var(--ux-ink-3);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.d-tag.gold {
+  border-color: var(--ux-gold-line);
+  background: var(--ux-gold-soft);
+  color: var(--ux-gold-ink);
+}
+.d-meta span,
+.d-meta > * {
+  padding: 2px 8px;
+  border: 1px solid var(--ux-line);
+  border-radius: var(--ux-r-pill);
+  background: var(--ux-surface);
+  color: var(--ux-muted);
+  font-size: var(--ux-fs-xs);
+}
+
+/* Questions and solutions are the two halves of every book, so they get two
+   clearly different weights rather than two different hues. */
+.download-pair-actions,
+.download-card .download-pair-actions { display: grid; gap: 8px; margin-top: auto; }
+
+.download-card .button {
+  width: 100%;
+  min-height: 44px;
+  border-radius: var(--ux-r-sm);
+  font-size: var(--ux-fs-sm);
+}
+.download-card .button.primary {
+  background: var(--ux-royal);
+  border-color: var(--ux-royal);
+  color: #fff;
+}
+.download-card .button.primary:hover { background: var(--ux-royal-hover); border-color: var(--ux-royal-hover); color: #fff; }
+
+.download-card .button.solution,
+.download-card .button.light-solution,
+.download-card .button.light,
+.download-card .button.teal,
+.download-card .button.pure {
+  background: var(--ux-surface);
+  border-color: var(--ux-line-strong);
+  color: var(--ux-ink);
+}
+.download-card .button.solution:hover,
+.download-card .button.light-solution:hover,
+.download-card .button.light:hover,
+.download-card .button.teal:hover,
+.download-card .button.pure:hover {
+  border-color: var(--ux-royal-line);
+  background: var(--ux-royal-soft);
+  color: var(--ux-royal-ink);
+}
+
+/* Gold on this page means one thing: the harder Q20+ / Expertise edition. */
+.download-card .button.highlight,
+.download-card .button.gold {
+  background: var(--ux-gold);
+  border-color: #d5a938;
+  color: #2b1f04;
+}
+
+/* Every book card is light. The harder Q20+ / Expertise editions are marked
+   by the gold badge and the gold "Questions PDF" button, not by inverting
+   whole cards - the previous mix of one dark card, one pink card and four
+   white ones made the page look like three different pages. */
+.download-card.modular-release-highlight {
+  border-top-color: var(--ux-gold);
+  background: linear-gradient(180deg, var(--ux-gold-soft), var(--ux-surface) 55%);
+}
+.download-card.download-note {
+  border-top-color: var(--ux-royal);
+  background: linear-gradient(180deg, var(--ux-royal-soft), var(--ux-surface) 55%);
+}
+.download-card h3,
+.download-card.download-note h3,
+.download-card.modular-release-highlight h3 { color: var(--ux-ink); }
+.download-card p,
+.download-card.download-note p,
+.download-card.modular-release-highlight p { color: var(--ux-muted); }
+.download-card.download-note .d-tag {
+  border-color: var(--ux-royal-line);
+  background: var(--ux-royal-soft);
+  color: var(--ux-royal-ink);
+}
+
+/* `.download-card.highlight` was the one inverted (navy) card, so its text,
+   badges and meta chips were all set to white. It is a light gold card now,
+   so every one of those has to be restated or the card renders blank. */
+.download-card.highlight {
+  border-color: var(--ux-gold-line);
+  border-top-color: var(--ux-gold);
+  background: linear-gradient(180deg, var(--ux-gold-soft), var(--ux-surface) 58%);
+  color: var(--ux-ink-2);
+}
+.download-card.highlight h3,
+.download-card.highlight strong { color: var(--ux-ink); }
+.download-card.highlight p { color: var(--ux-ink-3); }
+.download-card.highlight .d-tag {
+  border-color: var(--ux-gold-line);
+  background: #fff;
+  color: var(--ux-gold-ink);
+}
+.download-card.highlight .d-meta > * {
+  border-color: var(--ux-gold-line);
+  background: rgba(255, 255, 255, .75);
+  color: var(--ux-gold-ink);
+}
+.download-card.highlight .button.solution,
+.download-card.highlight .button.light-solution {
+  border-color: var(--ux-line-strong);
+  background: #fff;
+  color: var(--ux-ink);
+}
+
+/* Book finder */
+.resource-finder {
+  padding: var(--ux-gap-4) var(--ux-gap-5);
+  border: 1px solid var(--ux-line);
+  border-radius: var(--ux-r-lg);
+  background: var(--ux-surface);
+  box-shadow: var(--ux-sh-md);
+}
+.resource-finder-kicker { color: var(--ux-faint); }
+.resource-finder h2 { font-size: var(--ux-fs-xl); margin: 2px 0 4px; }
+.resource-finder-result {
+  padding: 6px 12px;
+  border: 1px solid var(--ux-royal-line);
+  border-radius: var(--ux-r-pill);
+  background: var(--ux-royal-soft);
+  color: var(--ux-royal-ink);
+  font-size: var(--ux-fs-sm);
+  font-weight: 650;
+}
+.resource-course-tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+.resource-course-tabs button {
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--ux-line);
+  border-radius: var(--ux-r-pill);
+  background: var(--ux-surface);
+  color: var(--ux-ink-3);
+  font-size: var(--ux-fs-sm);
+  font-weight: 650;
+  cursor: pointer;
+}
+.resource-course-tabs button:hover { border-color: var(--ux-royal-line); background: var(--ux-royal-soft); color: var(--ux-royal-ink); }
+.resource-course-tabs button.active,
+.resource-course-tabs button[aria-pressed="true"] { border-color: var(--ux-royal); background: var(--ux-royal); color: #fff; }
+.resource-reset {
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid var(--ux-line-strong);
+  border-radius: var(--ux-r-sm);
+  background: var(--ux-surface);
+  color: var(--ux-ink-3);
+  font-weight: 650;
+  cursor: pointer;
+}
+.resource-reset:hover { border-color: var(--ux-danger-line); background: var(--ux-danger-soft); color: var(--ux-danger); }
+.resource-finder-empty {
+  padding: var(--ux-gap-6);
+  border: 1px dashed var(--ux-line-strong);
+  border-radius: var(--ux-r-md);
+  color: var(--ux-muted);
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   11. STATES - loading, empty, error
+   -------------------------------------------------------------------------- */
+.ux-state,
+.empty-state,
+.loading-state,
+.error-state,
+.no-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--ux-gap-2);
+  padding: var(--ux-gap-7) var(--ux-gap-4);
+  border: 1px dashed var(--ux-line-strong);
+  border-radius: var(--ux-r-md);
+  background: var(--ux-surface);
+  text-align: center;
+  color: var(--ux-muted);
+}
+.empty-state strong,
+.no-results strong,
+.error-state strong { color: var(--ux-ink); font-size: var(--ux-fs-md); }
+.error-state { border-style: solid; border-color: var(--ux-danger-line); background: var(--ux-danger-soft); color: var(--ux-danger); }
+
+/* Skeleton rows for anything that renders after data loads. */
+.is-loading .question-card,
+.ux-skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--ux-subtle);
+  border-color: var(--ux-line);
+}
+.ux-skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .7), transparent);
+  animation: ux-shimmer 1.3s infinite;
+}
+@keyframes ux-shimmer { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
+
+/* --------------------------------------------------------------------------
+   12. RESPONSIVE
+   -------------------------------------------------------------------------- */
+@media (max-width: 1180px) {
+  .home-core-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .site-nav .nav-tab-main small { display: none; }
+  .site-nav .nav-tab-main { min-height: 40px; }
+}
+
+@media (max-width: 980px) {
+  .home-course-tabs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .home-route-guide { flex-direction: column; align-items: stretch; gap: var(--ux-gap-2); }
+  .home-route-steps { flex-wrap: wrap; }
+  .home-route-steps li { flex: 1 1 42%; }
+  .practice-command-controls .head-tools { margin-left: 0; width: 100%; }
+}
+
+@media (max-width: 760px) {
+  .page, .shell > .content { width: min(100% - 24px, 680px); }
+
+  .brand-title { white-space: normal; font-size: var(--ux-fs-sm); line-height: 1.15; }
+
+  .home-command { padding: var(--ux-gap-4); }
+  .home-command-head { flex-direction: column; gap: var(--ux-gap-3); }
+  .home-command-teacher { width: 100%; }
+
+  .home-course-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .home-course-tabs button { min-height: 52px; }
+
+  .home-core-grid { grid-template-columns: 1fr; gap: var(--ux-gap-2); }
+  .home-core-action { padding: var(--ux-gap-3) var(--ux-gap-4); grid-template-columns: 34px 1fr; }
+  .home-core-action .module-icon { width: 30px; height: 30px; }
+  .home-core-action-open { margin-top: 6px; }
+
+  .home-route-steps li { flex: 1 1 100%; }
+  .home-command-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--ux-gap-2); }
+
+  .review-summary { grid-template-columns: 1fr; }
+  .home-trust-about .trust-intro { flex-direction: column; text-align: left; }
+
+  .practice-toolbar { gap: var(--ux-gap-3); }
+  .practice-bank-bar { flex: 1 1 100%; }
+  .bank-buttons { width: 100%; }
+  .bank-buttons button { flex: 1 1 0; align-items: center; }
+  .practice-bank-bar #bankDescription { display: none; }
+  .practice-status-strip { width: 100%; justify-content: space-between; gap: var(--ux-gap-2); }
+
+  .practice-command-controls > label:not(.command-search) { flex: 1 1 calc(50% - 4px); }
+  .practice-command-controls .command-search { flex: 1 1 100%; }
+  .command-more-button { flex: 1 1 100%; }
+  .practice-command-controls .head-tools { flex-wrap: wrap; }
+  .practice-command-controls .sort-label { flex: 1 1 100%; }
+  .practice-command-controls .sort-label select { width: 100%; }
+  .layout-toggle { width: 100%; }
+  .layout-toggle button { flex: 1 1 0; }
+
+  .question-grid { grid-template-columns: 1fr; }
+  .card-actions button { flex: 1 1 calc(50% - 3px); }
+
+  /* The shortcut bar is fixed to the bottom on phones, so every page needs
+     room under its last element or the bar sits on top of the content. */
+  body { padding-bottom: 0; }
+  .mobile-bottom-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 70;
+    display: flex;
+    gap: 2px;
+    padding: 6px max(8px, env(safe-area-inset-left)) calc(6px + env(safe-area-inset-bottom));
+    border-top: 1px solid var(--ux-line);
+    background: rgba(255, 255, 255, .96);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 -4px 18px rgba(14, 27, 46, .08);
+  }
+  .mobile-bottom-nav a {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    min-height: 48px;
+    padding: 4px 2px;
+    border-radius: var(--ux-r-sm);
+    color: var(--ux-ink-3);
+    font-size: 10px;
+    font-weight: 650;
+    text-align: center;
+  }
+  .mobile-bottom-nav a .module-icon { width: 18px; height: 18px; }
+  .mobile-bottom-nav a[aria-current="page"],
+  .mobile-bottom-nav a.is-active { background: var(--ux-royal-soft); color: var(--ux-royal-ink); }
+
+  .site-footer { padding-bottom: 84px; }
+  .selection-dock { bottom: 78px; }
+}
+
+/* --------------------------------------------------------------------------
+   13. MOTION
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;   /* beats keyframe shorthands set earlier */
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   14. SPECIFICITY MATCHES
+   Every rule here exists to beat an earlier rule that is more specific than
+   a single class. Nothing here is decorative: each one names its target.
+   -------------------------------------------------------------------------- */
+@media (max-width: 760px) {
+  /* styles.css:17084 turns the course picker into a horizontal scroller with
+     `grid-auto-flow: column`, which pushed items 3-6 off screen behind an
+     invisible scrollbar. Reset the flow, not just the template. */
+  .home-rebuild .home-course-tabs,
+  .home-command .home-course-tabs {
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    overflow-x: visible;
+    scroll-snap-type: none;
+    padding-bottom: 6px;
+  }
+  .home-rebuild .home-course-tabs button,
+  .home-command .home-course-tabs button { scroll-snap-align: none; }
+
+  /* styles.css:15210 lays the shortcut bar out as `repeat(5, 1fr)`. Six
+     shortcuts therefore wrapped onto a second row, making the bar 116px tall
+     while `body.has-elite-study-nav` only reserved 70px underneath it - so
+     the bar sat on top of the last section of every page. Keep one row and
+     reserve the height the bar actually has. */
+  .mobile-bottom-nav.elite-study-mobile-nav {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    min-height: 62px;
+  }
+  .mobile-bottom-nav.elite-study-mobile-nav a,
+  .mobile-bottom-nav.elite-study-mobile-nav button {
+    grid-template-rows: 22px auto;
+    min-height: 50px;
+    color: var(--ux-ink-3);
+  }
+  .mobile-bottom-nav.elite-study-mobile-nav a[aria-current="page"] {
+    background: var(--ux-royal-soft);
+    color: var(--ux-royal-ink);
+  }
+  body.has-elite-study-nav {
+    padding-bottom: calc(66px + env(safe-area-inset-bottom));
+  }
+  body.has-elite-study-nav .site-footer { padding-bottom: var(--ux-gap-5); }
+
+  /* styles.css:16958 capped the wordmark at 154px, so it rendered as
+     "Elite IGCSE Mathema...". With .site-cta hidden below 760px there is
+     plenty of room; the cap simply has to go. */
+  body:not([data-page="admin"]) .site-brand .brand-title {
+    max-width: none;
+    overflow: visible;
+    text-overflow: clip;
+    font-size: var(--ux-fs-sm);
+    line-height: 1.2;
+  }
+}
+
+/* The header was navy at every width (elite-system.css:363). It is white in
+   this system, so every colour the navy header assumed has to be restated -
+   otherwise the wordmark is white text on a white bar, which is what
+   happened on phones. */
+body .site-header .site-brand,
+body .site-header .site-brand .brand-title { color: var(--ux-ink); }
+
+body .site-header .nav-tab-main { color: var(--ux-ink-3); }
+body .site-header .nav-tab-main small { color: var(--ux-faint); }
+body .site-header .nav-group:hover .nav-tab-main,
+body .site-header .nav-group.is-active .nav-tab-main { color: var(--ux-royal-ink); }
+body .site-header .site-nav { border-color: transparent; background: var(--ux-subtle); }
+body .site-header .site-brand .brand-mark {
+  border-color: transparent;
+  background: var(--ux-ink);
+  color: var(--ux-gold);
+}
+
+.nav-toggle {
+  border: 1px solid var(--ux-line-strong);
+  border-radius: var(--ux-r-sm);
+  background: var(--ux-surface);
+}
+.nav-toggle span { background: var(--ux-ink); }
+.nav-toggle[aria-expanded="true"] { border-color: var(--ux-royal); background: var(--ux-royal-soft); }
+.nav-toggle[aria-expanded="true"] span { background: var(--ux-royal-ink); }
+
+/* The open mobile drawer inherited the navy panel treatment too. */
+.site-header.nav-open .site-nav {
+  border: 1px solid var(--ux-line);
+  border-radius: var(--ux-r-md);
+  background: var(--ux-surface);
+  box-shadow: var(--ux-sh-lg);
+}
+
+/* --------------------------------------------------------------------------
+   15. SPECIFICITY MATCHES, PART 2
+   Same rule as section 14: each block names the rule it has to beat.
+   -------------------------------------------------------------------------- */
+
+/* styles.css:13320ish paints the header with a navy gradient above 981px and
+   sets `color: #fff` on it. The header is white in this system. */
+body:not([data-page="admin"]) .site-header {
+  background: rgba(255, 255, 255, .92);
+  color: var(--ux-ink-2);
+  border-bottom: 1px solid var(--ux-line);
+  box-shadow: 0 1px 0 rgba(14, 27, 46, .04), 0 6px 20px rgba(14, 27, 46, .05);
+}
+body:not([data-page="admin"]) .site-nav {
+  min-width: 0;
+  max-width: none;
+  padding: 3px;
+  border-radius: var(--ux-r-md);
+  background: var(--ux-subtle);
+}
+body:not([data-page="admin"]) .nav-group { min-width: 0; }
+
+/* styles.css:16319 gives every resource its own tint - sky for notes, gold
+   for papers, teal for the test builder, and so on. The icon and the label
+   already say which resource it is; five surface colours per panel do not. */
+.nav-panel a[data-module],
+.pathway-tool-strip-links a[data-module],
+.home-core-action[data-module] {
+  --module-accent: var(--ux-royal);
+  --module-bg: var(--ux-royal-soft);
+  --module-ink: var(--ux-royal-ink);
+}
+
+/* The course workspace strip is the navy panel at the top of every study
+   page. On navy, tiles read best as translucent white. */
+.pathway-tool-strip.is-core-workspace {
+  border-radius: var(--ux-r-lg);
+  background: linear-gradient(125deg, var(--ux-navy-panel), var(--ux-navy-panel-2));
+}
+.pathway-tool-strip.is-core-workspace .pathway-tool-strip-links a {
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-left: 3px solid var(--ux-royal);
+  border-radius: var(--ux-r-sm);
+  background: rgba(255, 255, 255, .06);
+  color: #eaf0f8;
+  transition: background .15s ease, border-color .15s ease;
+}
+.pathway-tool-strip.is-core-workspace .pathway-tool-strip-links a:hover {
+  border-color: rgba(255, 255, 255, .3);
+  border-left-color: var(--ux-gold);
+  background: rgba(255, 255, 255, .12);
+  color: #fff;
+}
+.pathway-tool-strip.is-core-workspace .pathway-tool-strip-links a .module-icon { color: #9fc0ff; }
+.pathway-tool-strip.is-core-workspace .pathway-course-title,
+.pathway-tool-strip.is-core-workspace strong { color: #fff; }
+.pathway-tool-strip.is-core-workspace .eyebrow { color: rgba(255, 255, 255, .6); }
+.pathway-tool-strip.is-core-workspace .pathway-course-switch,
+.pathway-tool-strip.is-core-workspace button {
+  border: 1px solid rgba(255, 255, 255, .28);
+  border-radius: var(--ux-r-sm);
+  background: rgba(255, 255, 255, .08);
+  color: #fff;
+}
+
+/* One filled button per question card. styles.css paints `select` and
+   `solution` identically with --course-signature; only the solution - the
+   thing the student is actually here for - stays filled. */
+.card-actions button[data-action="select"],
+.card-actions button[data-action="solve"],
+.card-actions button[data-action="reviewAdd"],
+.card-actions button[data-action="reviewDone"] {
+  border-color: var(--ux-line-strong);
+  background: var(--ux-surface);
+  color: var(--ux-ink-3);
+}
+.question-card.selected .card-actions button[data-action="select"] {
+  border-color: var(--ux-royal);
+  background: var(--ux-royal-soft);
+  color: var(--ux-royal-ink);
+}
+.question-card.solved .card-actions button[data-action="solve"] {
+  border-color: var(--ux-ok-line);
+  background: var(--ux-ok-soft);
+  color: var(--ux-ok);
+}
+
+/* Same idea inside the answer trainer: "I got it" was a second filled
+   button competing with "Show Solution". */
+.answer-trainer-actions button[data-action],
+.answer-trainer button[data-action="gotIt"],
+.answer-trainer button[data-action="check"] {
+  border: 1px solid var(--ux-line-strong);
+  background: var(--ux-surface);
+  color: var(--ux-ink-2);
+}
+.answer-trainer-actions button[data-action]:hover {
+  border-color: var(--ux-royal-line);
+  background: var(--ux-royal-soft);
+  color: var(--ux-royal-ink);
+}
+
+/* body[data-page="practice"] .mobile-tools-toggle fills the Tools button. */
+body[data-page="practice"] .mobile-tools-toggle {
+  border: 1px solid var(--ux-line-strong);
+  background: var(--ux-surface);
+  color: var(--ux-ink-2);
+}
+body[data-page="practice"] .mobile-tools-toggle:hover {
+  border-color: var(--ux-royal-line);
+  background: var(--ux-royal-soft);
+  color: var(--ux-royal-ink);
+}
+
+/* body[data-page="practice"] .practice-bank-bar .bank-buttons button.active
+   paints a gradient over --course-signature; the count inside then sits at
+   ~2:1 contrast. Flatten it and restate the child colour. */
+body[data-page="practice"] .practice-bank-bar .bank-buttons button {
+  border: 1px solid transparent;
+  background: transparent;
+}
+body[data-page="practice"] .practice-bank-bar .bank-buttons button.active {
+  border-color: var(--ux-royal);
+  background: var(--ux-royal);
+  color: #fff;
+}
+body[data-page="practice"] .practice-bank-bar .bank-buttons button.active strong,
+body[data-page="practice"] .practice-bank-bar .bank-buttons button.active span { color: #fff; }
+body[data-page="practice"] .practice-bank-bar .bank-buttons button.active span { opacity: .85; }
+
+/* body[data-page="practice"] .topic-chip(.active) */
+body[data-page="practice"] .topic-chip {
+  border-color: var(--ux-line);
+  background: var(--ux-surface);
+  color: var(--ux-ink-3);
+}
+body[data-page="practice"] .topic-chip:hover { border-color: var(--ux-royal-line); background: var(--ux-royal-soft); color: var(--ux-royal-ink); }
+body[data-page="practice"] .topic-chip.active { border-color: var(--ux-royal); background: var(--ux-royal); color: #fff; }
+
+/* Quiet segmented control - it switches a view, it is not a call to action. */
+.layout-toggle button.active,
+.layout-toggle button.is-active {
+  background: var(--ux-surface);
+  color: var(--ux-royal-ink);
+  box-shadow: var(--ux-sh-sm);
+}
+
+/* The stat strip drew a rule above every number. */
+.practice-status-strip > div::before,
+.practice-status-strip > div::after { display: none; }
+
+/* styles.css gives header buttons `color:#fff; background: rgba(255,255,255,.08)`
+   above 981px, which was correct on the navy header and invisible on a white
+   one. This is the whole header action cluster restated for a light bar. */
+body:not([data-page="admin"]) .site-cta .button,
+.site-cta .button.primary,
+.site-cta .button.cloud-auth-button,
+.site-cta .button.cloud-account-button,
+.elite-study-trigger {
+  border-color: var(--ux-line-strong);
+  background: var(--ux-surface);
+  color: var(--ux-ink-2);
+}
+body:not([data-page="admin"]) .site-cta .button:hover,
+.elite-study-trigger:hover {
+  border-color: var(--ux-royal-line);
+  background: var(--ux-royal-soft);
+  color: var(--ux-royal-ink);
+}
+body:not([data-page="admin"]) .site-cta .button.primary,
+.site-cta .button.primary {
+  border-color: var(--ux-royal);
+  background: var(--ux-royal);
+  color: #fff;
+}
+body:not([data-page="admin"]) .site-cta .button.primary:hover {
+  border-color: var(--ux-royal-hover);
+  background: var(--ux-royal-hover);
+  color: #fff;
+}
+body:not([data-page="admin"]) .site-cta .button.gold,
+.site-cta .button.gold { border-color: #d5a938; background: var(--ux-gold); color: #2b1f04; }
+.elite-study-trigger .elite-study-icon svg { color: var(--ux-royal); }
+
+/* body[data-course-palette] .bank-buttons button.active, ... .layout-toggle
+   button.active share one filled treatment. A view switcher is not a call to
+   action, so it stays quiet while the bank switcher stays filled. */
+body[data-course-palette] .layout-toggle button.active,
+body[data-course-palette] .layout-toggle button.is-active {
+  border-color: var(--ux-line);
+  background: var(--ux-surface);
+  color: var(--ux-royal-ink);
+  box-shadow: var(--ux-sh-sm);
+}
+
+/* --------------------------------------------------------------------------
+   16. CONTRAST FIXES
+   Found by an automated sweep over every text node on every reviewed page at
+   both widths (target: WCAG AA, 4.5:1 for body text, 3:1 for large text).
+   -------------------------------------------------------------------------- */
+
+/* Gold is a fill colour, not a text colour. Anywhere gold has to carry text
+   it becomes --ux-gold-ink, which clears 4.5:1 on white and on gold-soft. */
+.review-card .review-stars,
+.reviews-grid .review-stars,
+.review-stars { color: var(--ux-gold-ink); }
+
+.pricing-card.highlight .p-tag {
+  background: transparent;
+  color: var(--ux-gold-ink);
+}
+.pricing-card.highlight ul li,
+.pricing-card.highlight ul li * { color: #4a3a10; }
+.pricing-card.highlight header .p-egp { color: #6b5312; }
+
+.home-core-grid .home-core-action .home-core-action-kicker,
+.home-core-action .home-core-action-kicker { color: var(--ux-gold-ink); }
+
+.site-nav .nav-tab-main small,
+.home-course-tabs button small,
+.bank-buttons button span,
+.command-filter-empty,
+.eyebrow,
+.command-kicker,
+.resource-finder-kicker,
+.nav-panel-label { color: var(--ux-faint); }
+
+/* --------------------------------------------------------------------------
+   17. CONTRAST FIXES ON THE REMAINING PAGES
+   Same sweep, run across every page that shares this stylesheet.
+   -------------------------------------------------------------------------- */
+
+/* pastpapers: paper chips were white/gold on verdigris (4.4:1 and 1.0:1). */
+.pp-paper-label,
+.pp-paper-row .pp-paper-label {
+  border: 1px solid var(--ux-line);
+  background: var(--ux-subtle);
+  color: var(--ux-ink-2);
+}
+.pp-paper-badge,
+.pp-paper-row .pp-paper-badge {
+  border: 1px solid var(--ux-gold-line);
+  background: var(--ux-gold-soft);
+  color: var(--ux-gold-ink);
+}
+
+/* topics: `.roadmap-card-head span` was gold on white (1.9:1). */
+.roadmap-card-head span { color: var(--ux-gold-ink); }
+
+/* about: `.pricing-card.highlight .p-now/.p-unit` were tuned for the old
+   navy highlight card and sat white/gold on cream. */
+.pricing-card .p-now,
+.pricing-card.highlight .p-now { color: var(--ux-gold-ink); }
+.pricing-card .p-unit,
+.pricing-card.highlight .p-unit { color: var(--ux-ink-3); }
+
+/* `.pp-paper.converted.solution .pp-paper-badge` is more specific than the
+   base badge rule, so the converted-paper badge needs its own restatement. */
+.pp-paper.converted .pp-paper-badge,
+.pp-paper.converted.solution .pp-paper-badge {
+  border-color: var(--ux-gold-line);
+  background: var(--ux-gold-soft);
+  color: var(--ux-gold-ink);
+}
+
+/* --------------------------------------------------------------------------
+   18. MOBILE HOME LENGTH
+   The phone home page was 6,591px tall: a student had to scroll past three
+   full-width review cards and three full-width pricing cards to reach the
+   footer. Nothing is removed - the review and pricing bands become snap
+   rails, the route guide pairs up, and the footer goes two-up.
+   -------------------------------------------------------------------------- */
+@media (max-width: 760px) {
+  .page-home { padding-top: var(--ux-gap-3); padding-bottom: var(--ux-gap-5); }
+
+  .home-command-head h1 { font-size: 28px; }
+  .home-command-head > div > p { font-size: var(--ux-fs-base); }
+  .home-command-teacher { padding: 10px 12px; }
+  .home-command-teacher img { width: 40px; height: 40px; }
+
+  .home-active-course { padding: 10px 12px; gap: 6px 10px; }
+  .home-active-course p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .home-route-guide { padding: 10px 12px; }
+  .home-route-steps { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .home-route-steps li { flex-wrap: nowrap; padding: 6px 8px; }
+  .home-route-steps li small { display: none; }
+
+  .home-command-stats { margin-top: var(--ux-gap-4); padding-top: var(--ux-gap-3); }
+
+  /* Reviews and pricing: same three cards, one screen instead of six. */
+  .reviews-grid,
+  .pricing-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 84%;
+    gap: var(--ux-gap-2);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+  }
+  .reviews-grid > *,
+  .pricing-grid > * { scroll-snap-align: start; }
+  .review-card { padding: var(--ux-gap-3); }
+  .review-card blockquote { font-size: var(--ux-fs-sm); margin: 6px 0; }
+  .pricing-card { padding: var(--ux-gap-3); }
+  .pricing-card ul { margin: 8px 0; }
+
+  .review-summary { grid-auto-flow: column; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+  .review-summary > div { padding: 8px 10px; text-align: center; }
+  .review-summary strong { font-size: var(--ux-fs-lg); }
+
+  .home-proof-pricing { padding: var(--ux-gap-4) var(--ux-gap-3); }
+  .home-trust-about { padding: var(--ux-gap-4); }
+  .home-trust-about .trust-portrait img { width: 76px; height: 76px; }
+
+  .final-cta { padding: var(--ux-gap-4); }
+  .final-cta-actions { display: grid; gap: 8px; }
+  .final-cta-actions .button { width: 100%; }
+
+  /* On a phone the six tools read better as rows than as cards: the same
+     icon, name and one-line description, at 64px instead of 138px each. */
+  .home-core-grid { gap: 6px; }
+  .home-core-action {
+    grid-template-columns: 34px 1fr auto;
+    grid-template-areas: "icon copy open";
+    align-items: center;
+    gap: 0 12px;
+    padding: 10px 12px;
+    min-height: 64px;
+  }
+  .home-core-action .module-icon { width: 30px; height: 30px; padding: 6px; }
+  .home-core-action-copy strong { font-size: var(--ux-fs-base); }
+  .home-core-action-copy > span:last-child {
+    font-size: var(--ux-fs-xs);
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .home-core-action-kicker {
+    order: -1;
+    margin: 0 0 2px;
+    font-size: 9px;
+  }
+  .home-core-action-open {
+    grid-area: open;
+    margin: 0;
+    font-size: 0;                 /* keep the label for assistive tech only */
+  }
+  .home-core-action-open::after {
+    content: "\2192";
+    font-size: 18px;
+    color: var(--ux-royal);
+  }
+
+  /* Four coverage numbers fit on one line at this size. */
+  .home-command-stats { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+  .home-more-tools > summary { flex-wrap: wrap; row-gap: 2px; padding: 12px; }
+  .home-more-tools > summary span { flex: 1 1 100%; font-size: var(--ux-fs-xs); }
+  .home-more-tools > summary::after { position: absolute; right: 14px; }
+  .home-more-tools { position: relative; }
+  .home-command-stats span { align-items: center; text-align: center; font-size: 10px; line-height: 1.2; }
+  .home-command-stats strong { font-size: var(--ux-fs-md); }
+
+  /* The footer was four full-width stacked columns. */
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--ux-gap-4) var(--ux-gap-3);
+  }
+  .footer-grid > div:first-child { grid-column: 1 / -1; }
+  .footer-grid p { margin: 3px 0; font-size: var(--ux-fs-sm); }
+  .footer-brand-blurb { font-size: var(--ux-fs-xs); }
+}
+
+/* progress: the only remaining off-palette warm fill (#fff8dc cornsilk). */
+.priority-chip.needs {
+  border: 1px solid var(--ux-warn-line);
+  background: var(--ux-warn-soft);
+  color: var(--ux-warn);
+}
+
+/* --------------------------------------------------------------------------
+   19. PRACTICE ON A PHONE
+   Measured against the old layout, the two control bands were TALLER on a
+   390px screen than the six they replaced (445px vs 329px), because the
+   fields that sit side by side on a desktop each took a full row. Every
+   control stays on the page and keeps working; they are just packed the way
+   a phone wants them.
+   -------------------------------------------------------------------------- */
+@media (max-width: 760px) {
+  /* resource-hub.css:  body[data-page="practice"] .content-head { display: grid }
+     is more specific than .content-head.is-ux-quiet, so the dead title band
+     survived on phones. */
+  body[data-page="practice"] .content-head.is-ux-quiet { display: none; }
+
+  /* Tier 1: the bank switch, then one line of counts. */
+  .practice-toolbar { gap: 8px; padding: 10px 12px; }
+  .practice-bank-bar > div:first-child { display: none; }   /* title + prose repeat the switch */
+  .bank-buttons { width: 100%; padding: 3px; }
+  .bank-buttons button { flex: 1 1 0; min-height: 42px; align-items: center; text-align: center; }
+  .bank-buttons button strong { font-size: var(--ux-fs-xs); }
+  .bank-buttons button span { font-size: 10px; }
+
+  /* The counts sit on one line. min-width:0 on the flex children is what
+     stops "1176" from being clipped to "1..." at this width. */
+  .practice-status-strip { width: 100%; gap: 4px; justify-content: space-between; flex-wrap: nowrap; }
+  .practice-status-strip > div { flex: 0 1 auto; min-width: 0; flex-direction: row; align-items: baseline; gap: 3px; }
+  .practice-status-strip strong { font-size: var(--ux-fs-sm); flex: 0 0 auto; }
+  .practice-status-strip span { font-size: 10px; white-space: nowrap; }
+  /* "visible" repeats the "N matching questions" line directly below it. */
+  .practice-status-strip > div:last-child { display: none; }
+
+  /* Tier 2 on a phone, two rows:
+       row 1  search
+       row 2  all filters | tools | grid-list-focus
+     resource-hub.css hides the three inline selects and the sort control at
+     this width; all of them live inside the "All filters" palette. The view
+     switcher was hidden too, which meant Focus mode - the single most useful
+     mode on a phone - could not be reached from a phone at all. It is small,
+     so it comes back. */
+  .practice-command-center { padding: 10px 12px; }
+
+  /* An explicit two-row grid. `display: contents` lets the three controls
+     that live inside .head-tools take part in it, so search gets its own
+     row and filters / tools / view share the next one. */
+  body[data-page="practice"] .practice-command-controls {
+    display: grid;
+    grid-template-columns: auto auto minmax(0, 1fr);
+    grid-template-areas:
+      "search  search search"
+      "filters tools  view";
+    align-items: center;
+    gap: 6px;
+  }
+  body[data-page="practice"] .practice-command-controls > label > span { display: none; }
+  body[data-page="practice"] .practice-command-controls .command-search { grid-area: search; width: 100%; }
+  body[data-page="practice"] .practice-command-controls .command-search input { width: 100%; }
+  body[data-page="practice"] .practice-command-controls .command-more-button {
+    grid-area: filters;
+    min-height: 40px;
+    padding: 0 12px;
+    white-space: nowrap;
+  }
+  body[data-page="practice"] .practice-command-controls .head-tools {
+    display: contents;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+  }
+  body[data-page="practice"] .practice-command-controls .mobile-tools-toggle {
+    grid-area: tools;
+    min-height: 40px;
+    padding: 0 12px;
+    white-space: nowrap;
+  }
+  /* Focus mode is the most useful view on a phone and used to be
+     unreachable there, so the view switcher comes back at this width. */
+  body[data-page="practice"] .practice-command-controls .layout-toggle {
+    grid-area: view;
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  body[data-page="practice"] .practice-command-controls .layout-toggle button {
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 34px;
+    padding: 0 2px;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .practice-command-status { padding-top: 10px; margin-top: 10px; gap: 6px 10px; }
+  .practice-command-status strong { font-size: var(--ux-fs-sm); }
+}
+
+} /* end @media screen */

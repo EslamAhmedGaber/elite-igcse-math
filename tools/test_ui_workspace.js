@@ -2,7 +2,11 @@ const fs = require("fs");
 const path = require("path");
 
 const root = path.resolve(__dirname, "..");
-const CURRENT_ASSET_VERSION = "20260822a";
+// The exact cache-buster changes on every release, so pin the invariant that
+// actually matters instead of one literal: every primary page links the shared
+// stylesheets, they are cache-busted, and they all agree on the same version.
+const SYSTEM_LINK = /elite-system\.css\?v=([A-Za-z0-9._-]+)/;
+const UX_LINK = /elite-ux\.css\?v=([A-Za-z0-9._-]+)/;
 const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
 const lead = read("lead.js");
 const home = read("index.html");
@@ -53,7 +57,22 @@ const stale = htmlFiles.filter((file) => {
 });
 if (stale.length) throw new Error(`Stale shared asset versions remain in: ${stale.join(", ")}`);
 
-const currentSystemLinks = htmlFiles.filter((file) => fs.readFileSync(file, "utf8").includes(`elite-system.css?v=${CURRENT_ASSET_VERSION}`));
-if (currentSystemLinks.length < 18) throw new Error("The shared Elite System stylesheet is not cache-busted across the primary pages.");
+const systemVersions = new Map();
+const missingUx = [];
+for (const file of htmlFiles) {
+  const text = fs.readFileSync(file, "utf8");
+  const sys = text.match(SYSTEM_LINK);
+  if (!sys) continue;
+  systemVersions.set(path.relative(root, file), sys[1]);
+  const ux = text.match(UX_LINK);
+  if (!ux) { missingUx.push(path.relative(root, file)); continue; }
+  if (text.indexOf(ux[0]) < text.lastIndexOf("rel=\"stylesheet\"")) {
+    missingUx.push(path.relative(root, file) + " (elite-ux.css is not the last stylesheet)");
+  }
+}
+if (systemVersions.size < 18) throw new Error(`The shared Elite System stylesheet is not cache-busted across the primary pages (found ${systemVersions.size}).`);
+const distinctVersions = new Set(systemVersions.values());
+if (distinctVersions.size !== 1) throw new Error(`Pages disagree on the Elite System cache-buster: ${[...distinctVersions].join(", ")}`);
+if (missingUx.length) throw new Error(`elite-ux.css must load last on every Elite System page. Problems in: ${missingUx.join(", ")}`);
 
 console.log(`UI workspace checks passed for ${htmlFiles.length} HTML files.`);
