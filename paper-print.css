@@ -1,0 +1,653 @@
+/* ==========================================================================
+   paper-print.css - Elite Mathematics A4 paper document
+   Loaded ONLY inside the isolated print frame created by paper-print.js.
+   No site stylesheet is present in that frame, so nothing here competes with
+   styles.css / elite-system.css / elite-ux.css.
+
+   Geometry contract (kept in sync with SHEET in paper-print.js):
+     sheet   210 x 297 mm, @page margin 0 (browser headers/footers get no room)
+     padding 12 mm top, 11 mm bottom, 14 mm left/right -> 182 mm content width
+   ========================================================================== */
+
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+:root {
+  --ink: #0f1d33;
+  --navy: #0b2a5b;
+  --royal: #1f4fd1;
+  --sky: #eaf1fd;
+  --gold: #b88a1e;
+  --gold-soft: #fbf5e4;
+  --line: #c3ccd8;
+  --line-soft: #dde3eb;
+  --muted: #56647a;
+  --answer: #8d2820;
+  --paper: #ffffff;
+}
+
+html.mono {
+  --navy: #000000;
+  --royal: #222222;
+  --sky: #ffffff;
+  --gold: #444444;
+  --gold-soft: #ffffff;
+  --muted: #333333;
+  --answer: #000000;
+  --line: #9a9a9a;
+  --line-soft: #c4c4c4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Sora", "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 9.6pt;
+  line-height: 1.38;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  text-rendering: geometricPrecision;
+}
+
+/* ---- sheets ------------------------------------------------------------- */
+
+.sheet {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 210mm;
+  height: 297mm;
+  padding: 12mm 14mm 11mm;
+  overflow: hidden;
+  background: var(--paper);
+  break-after: page;
+  page-break-after: always;
+}
+
+.sheet:last-child {
+  break-after: auto;
+  page-break-after: auto;
+}
+
+.sheet-body {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* The measuring stage has the exact content width of a sheet body. */
+.measure {
+  position: absolute;
+  left: -10000px;
+  top: 0;
+  width: 182mm;
+  visibility: hidden;
+}
+
+/* ---- masthead (first page) -------------------------------------------- */
+
+.masthead {
+  flex: 0 0 auto;
+  padding-bottom: 3.2mm;
+}
+
+.brand-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 6mm;
+  padding-bottom: 2.2mm;
+  border-bottom: 0.45mm solid var(--navy);
+}
+
+.wordmark {
+  display: block;
+  color: var(--navy);
+  font-size: 13.5pt;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  line-height: 1;
+}
+
+.wordmark::after {
+  content: "";
+  display: block;
+  width: 14mm;
+  height: 0.8mm;
+  margin-top: 1.4mm;
+  background: var(--gold);
+}
+
+.brand-by {
+  display: block;
+  margin-top: 1.4mm;
+  color: var(--muted);
+  font-size: 8pt;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.brand-side {
+  text-align: right;
+}
+
+.copy-badge {
+  display: inline-block;
+  padding: 0.9mm 2.6mm;
+  border: 0.3mm solid var(--navy);
+  border-radius: 0.8mm;
+  color: var(--navy);
+  font-size: 7.4pt;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.copy-badge.is-solutions {
+  border-color: var(--answer);
+  color: var(--answer);
+}
+
+.brand-url {
+  display: block;
+  margin-top: 1.3mm;
+  color: var(--navy);
+  font-size: 8.4pt;
+  font-weight: 700;
+}
+
+.paper-course {
+  margin: 3.2mm 0 0;
+  color: var(--muted);
+  font-size: 8.6pt;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.paper-title {
+  margin: 0.8mm 0 0;
+  color: var(--navy);
+  font-size: 17pt;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.paper-facts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 3mm;
+  border: 0.25mm solid var(--line);
+  border-radius: 1mm;
+}
+
+.paper-facts div {
+  padding: 1.6mm 2.6mm;
+  border-left: 0.25mm solid var(--line);
+}
+
+.paper-facts div:first-child {
+  border-left: 0;
+}
+
+.paper-facts span {
+  display: block;
+  color: var(--muted);
+  font-size: 6.8pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.paper-facts strong {
+  display: block;
+  margin-top: 0.4mm;
+  color: var(--ink);
+  font-size: 10.5pt;
+  font-weight: 800;
+}
+
+.student-row {
+  display: grid;
+  grid-template-columns: 1fr 42mm 42mm;
+  gap: 5mm;
+  margin-top: 3.4mm;
+  font-size: 8.6pt;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.student-row span {
+  display: flex;
+  align-items: flex-end;
+  gap: 2mm;
+  white-space: nowrap;
+}
+
+.student-row span::after {
+  content: "";
+  flex: 1 1 auto;
+  height: 4.5mm;
+  border-bottom: 0.25mm solid var(--ink);
+}
+
+.student-row .score-slot::after {
+  flex: 0 0 12mm;
+}
+
+.student-row .score-slot em {
+  order: 2;
+  font-style: normal;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.instructions {
+  margin: 3mm 0 0;
+  padding: 1.8mm 2.6mm;
+  border-left: 0.8mm solid var(--gold);
+  background: var(--gold-soft);
+  color: var(--ink);
+  font-size: 7.8pt;
+  line-height: 1.4;
+}
+
+/* ---- running header / footer ------------------------------------------ */
+
+.running-head {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 6mm;
+  margin-bottom: 3.4mm;
+  padding-bottom: 1.6mm;
+  border-bottom: 0.3mm solid var(--line);
+  color: var(--muted);
+  font-size: 7.4pt;
+  font-weight: 600;
+}
+
+.running-head strong {
+  color: var(--navy);
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.sheet-foot {
+  flex: 0 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 4mm;
+  margin-top: 2.6mm;
+  padding-top: 1.6mm;
+  border-top: 0.3mm solid var(--line);
+  color: var(--muted);
+  font-size: 7.2pt;
+  font-weight: 600;
+}
+
+.sheet-foot .foot-mid {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.sheet-foot .foot-page {
+  justify-self: end;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+/* ---- flow blocks ------------------------------------------------------- */
+
+.blk {
+  display: flow-root;
+}
+
+.q-head {
+  display: flex;
+  align-items: center;
+  gap: 2.8mm;
+  padding: 0 0 1.6mm;
+}
+
+.q-num {
+  flex: 0 0 auto;
+  display: inline-grid;
+  place-items: center;
+  min-width: 8.4mm;
+  height: 7mm;
+  padding: 0 1.4mm;
+  border: 0.35mm solid var(--navy);
+  border-radius: 1mm;
+  color: var(--navy);
+  font-size: 10pt;
+  font-weight: 800;
+}
+
+.q-meta {
+  flex: 1 1 auto;
+  min-width: 0;
+  color: var(--muted);
+  font-size: 7.6pt;
+  line-height: 1.25;
+}
+
+.q-meta strong {
+  display: block;
+  color: var(--ink);
+  font-size: 8.4pt;
+  font-weight: 700;
+}
+
+.q-marks {
+  flex: 0 0 auto;
+  color: var(--navy);
+  font-size: 9pt;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.q-head.is-continued .q-num {
+  border-style: dashed;
+}
+
+.q-seg {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.q-seg img {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+
+.q-seg-wrap {
+  padding-left: 2mm;
+  border-left: 0.5mm solid var(--line-soft);
+}
+
+.q-continues {
+  padding-top: 1mm;
+  color: var(--muted);
+  font-size: 7.2pt;
+  font-style: italic;
+  text-align: right;
+}
+
+.q-space-wrap {
+  padding-top: 1.6mm;
+}
+
+.q-text {
+  padding: 0 0 1mm 2.5mm;
+  border-left: 0.5mm solid var(--line-soft);
+  font-size: 10pt;
+  line-height: 1.45;
+}
+
+.q-text p {
+  margin: 0 0 1.4mm;
+}
+
+.q-text ol {
+  margin: 1mm 0 0;
+  padding-left: 6mm;
+}
+
+.q-space {
+  position: relative;
+  margin: 0;
+  border: 0.25mm solid var(--line-soft);
+  border-radius: 1mm;
+}
+
+.q-rule-line {
+  position: absolute;
+  left: 3mm;
+  right: 3mm;
+  height: 0;
+  border-top: 0.2mm solid var(--line-soft);
+}
+
+.q-space::before {
+  content: "Working";
+  position: absolute;
+  top: 1mm;
+  left: 2mm;
+  padding: 0 1mm;
+  background: var(--paper);
+  color: var(--muted);
+  font-size: 6.6pt;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.q-gap {
+  height: 5mm;
+}
+
+.q-gap.is-tight {
+  height: 3.4mm;
+}
+
+.q-rule {
+  height: 0;
+  margin: 0 0 4mm;
+  border-top: 0.25mm dashed var(--line);
+}
+
+/* ---- solutions --------------------------------------------------------- */
+
+.section-title {
+  margin: 0 0 3.2mm;
+  padding: 2mm 0 2mm 3mm;
+  border-left: 1.2mm solid var(--answer);
+  color: var(--navy);
+  font-size: 13pt;
+  font-weight: 800;
+}
+
+.section-title small {
+  display: block;
+  color: var(--muted);
+  font-size: 7.8pt;
+  font-weight: 600;
+}
+
+.s-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4mm;
+  margin-top: 1mm;
+  padding: 1.6mm 0 1.4mm 2.6mm;
+  border-left: 0.9mm solid var(--royal);
+  border-bottom: 0.25mm solid var(--line-soft);
+}
+
+.s-head strong {
+  color: var(--navy);
+  font-size: 10pt;
+  font-weight: 800;
+}
+
+.s-head span {
+  color: var(--muted);
+  font-size: 7.6pt;
+  font-weight: 600;
+}
+
+.s-step {
+  display: grid;
+  grid-template-columns: 7mm minmax(0, 1fr);
+  gap: 2.2mm;
+  padding: 1.8mm 0 1.6mm 1mm;
+  border-bottom: 0.2mm solid var(--line-soft);
+}
+
+.s-index {
+  display: grid;
+  place-items: center;
+  width: 5.8mm;
+  height: 5.8mm;
+  border: 0.3mm solid var(--line);
+  border-radius: 50%;
+  color: var(--navy);
+  font-size: 6.6pt;
+  font-weight: 800;
+}
+
+.s-body h4 {
+  margin: 0 0 0.6mm;
+  color: var(--navy);
+  font-size: 8.6pt;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.s-copy {
+  min-width: 0;
+  font-size: 9pt;
+  line-height: 1.36;
+  overflow-wrap: anywhere;
+}
+
+.s-copy p {
+  margin: 0 0 1mm;
+}
+
+.s-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.s-copy ul {
+  margin: 0.6mm 0 0;
+  padding-left: 5mm;
+}
+
+.s-copy .worked-solution-equation {
+  margin: 0.8mm 0;
+  padding: 0.6mm 0 0.6mm 2.4mm;
+  border-left: 0.5mm solid var(--line);
+}
+
+.s-copy mjx-container {
+  color: var(--ink);
+}
+
+.s-copy mjx-container[display="true"] {
+  margin: 0.3em 0 !important;
+}
+
+.s-copy mjx-container svg {
+  max-width: 100%;
+}
+
+/* MathJax draws glyphs with stroke-width 0; in a PDF a zero-width stroke is a
+   hairline, which thickens every symbol. Remove those strokes entirely. */
+mjx-container svg [stroke-width="0"] {
+  stroke: none;
+}
+
+.s-final {
+  display: grid;
+  grid-template-columns: 26mm minmax(0, 1fr);
+  gap: 2.6mm;
+  align-items: baseline;
+  margin: 1.4mm 0 0;
+  padding: 1.8mm 2.6mm;
+  border: 0.3mm solid var(--gold);
+  border-radius: 1mm;
+  background: var(--gold-soft);
+}
+
+.s-final > strong {
+  color: var(--answer);
+  font-size: 7.4pt;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.s-empty {
+  padding: 2mm 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.s-gap {
+  height: 4.2mm;
+}
+
+.solution-continued {
+  color: var(--muted);
+  font-size: 7.4pt;
+  font-style: italic;
+  padding: 0 0 1mm;
+}
+
+/* ---- screen preview inside the frame ----------------------------------- */
+
+@media screen {
+  html {
+    background: #5b6679;
+  }
+
+  body {
+    background: transparent;
+  }
+
+  .sheets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7mm;
+    padding: 7mm 0 12mm;
+  }
+
+  .sheet {
+    box-shadow: 0 1.5mm 6mm rgba(4, 12, 30, 0.35);
+  }
+}
+
+@media print {
+  html,
+  body {
+    width: 210mm;
+    background: #fff;
+  }
+
+  .sheets {
+    display: block;
+    margin: 0;
+    padding: 0;
+    zoom: 1 !important;
+  }
+
+  .sheet {
+    box-shadow: none;
+    margin: 0;
+  }
+
+  .measure {
+    display: none;
+  }
+}

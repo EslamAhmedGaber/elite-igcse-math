@@ -32,7 +32,7 @@ for (const item of mayJune) {
 const page = read("ial/wma11/index.html");
 assert(page.includes("wma11-data.js?v=20260817b"), "WMA11 data cache version is stale");
 assert(page.includes("wma11.css?v=20260818a"), "WMA11 stylesheet cache version is stale");
-assert(page.includes("wma11.js?v=20260818a"), "WMA11 runtime cache version is stale");
+assert(page.includes("wma11.js?v=20260926a"), "WMA11 runtime cache version is stale");
 assert(page.includes("May/June 2026"), "WMA11 page does not name the latest session");
 assert(page.includes("data-ial-total>189"), "WMA11 page fallback count is stale");
 

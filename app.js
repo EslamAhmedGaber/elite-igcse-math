@@ -1460,7 +1460,40 @@ function renderPrintArea(items) {
   </section>`).join("");
 }
 
+function practicePrintSpec(printable) {
+  const modular = window.ELITE_PATHWAY?.mode === "modular";
+  const unit = modular ? (els.unitFilter?.value || localStorage.getItem("modularUnit") || "") : "";
+  const marks = printable.reduce((sum, question) => sum + Number(question.marks || 0), 0);
+  return {
+    courseLabel: modular
+      ? `Edexcel IGCSE Mathematics · Modular 4WM${unit ? ` · ${unit}` : ""}`
+      : "Edexcel IGCSE Mathematics A · 4MA1 Linear",
+    courseCode: modular ? "4WM" : "4MA1",
+    title: "Classified Practice",
+    durationMinutes: Math.max(10, Math.round((marks * 1.2) / 5) * 5),
+    questions: printable.map((question, index) => ({
+      id: question.id,
+      number: index + 1,
+      marks: Number(question.marks || 0),
+      topic: question.topic || "",
+      sourceRef: `${question.paper} Q${question.question}`,
+      image: question.image,
+      solution: solutionData[question.id] || null
+    })),
+    resolveSolutions: () => ensureFullSolutions()
+  };
+}
+
 async function printQuestions(items, trigger) {
+  const printable = items.length ? items : visible;
+  if (printable.length > 60) {
+    const proceed = window.confirm(`This view contains ${printable.length} questions (roughly ${Math.round(printable.length * 0.6)} A4 pages). Press OK to prepare all of them, or Cancel to narrow the filters or select specific questions first.`);
+    if (!proceed) return;
+  }
+  if (window.ElitePaperPrint?.open && printable.length) {
+    window.ElitePaperPrint.open(practicePrintSpec(printable), { version: "student" });
+    return;
+  }
   renderPrintArea(items);
   await window.ElitePrint.printWhenReady(els.printArea, trigger);
 }

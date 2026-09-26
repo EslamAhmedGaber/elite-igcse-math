@@ -25,15 +25,16 @@ ASSET_ROOT = ROOT
 DOWNLOADS_DIR = ROOT / "downloads"
 PRIVATE_OUTPUT = ROOT / "private_output"
 GITIGNORE = ROOT / ".gitignore"
-CURRENT_PATHWAY_BOOTSTRAP_VERSION = "20260613a"
+CURRENT_PATHWAY_BOOTSTRAP_VERSION = "baccalaureate-20260902b"
 CURRENT_LEAD_VERSION = "20260822a"
 CURRENT_STYLE_VERSION = "20260809a"
-CURRENT_COURSE_MODULES_VERSION = "modular-20260824b"
+CURRENT_COURSE_MODULES_VERSION = "ux-20260906a"
 CURRENT_STUDY_VERSION = "20260713b"
 CURRENT_SOLUTION_VERSION = "20260714a"
-CURRENT_ELITE_SYSTEM_VERSION = "20260822a"
+CURRENT_ELITE_SYSTEM_VERSION = "20260906b"
 CURRENT_RESOURCE_HUB_VERSION = "20260810a"
 CURRENT_PRINT_VERSION = "20260809c"
+CURRENT_PAPER_PRINT_VERSION = "20260926a"
 IAL_DATA_FILES = {
     "wma11": (ROOT / "ial" / "wma11" / "wma11-data.js", "WMA11_QUESTIONS"),
     "wma12": (ROOT / "ial" / "wma12" / "wma12-data.js", "WMA12_QUESTIONS"),
@@ -410,13 +411,27 @@ def verify_resource_command_center(report: Report) -> None:
 
     for page in ("practice.html", "downloads.html", "pastpapers.html"):
         text = (ROOT / page).read_text(encoding="utf-8")
+        if "elite-ux.css?v=" not in text:
+            report.error(f"{page} must load the final elite-ux.css presentation layer.")
+        elif text.rindex("elite-ux.css?v=") < text.rindex('rel="stylesheet"'):
+            report.error(f"{page} must load elite-ux.css last, after every other stylesheet.")
         if f"resource-hub.css?v={CURRENT_RESOURCE_HUB_VERSION}" not in text:
             report.error(f"{page} must load the current resource command stylesheet.")
 
-    for page in ("practice.html", "exam.html", "progress.html"):
+    for page in ("practice.html", "progress.html"):
         text = (ROOT / page).read_text(encoding="utf-8")
         if f"print-utils.js?v={CURRENT_PRINT_VERSION}" not in text:
-            report.error(f"{page} must load the current A4 print engine.")
+            report.error(f"{page} must load the current A4 print utilities.")
+    for page in ("practice.html", "exam.html", "ial/wma11/index.html", "ial/wma12/index.html", "ial/wme01/index.html"):
+        text = (ROOT / page).read_text(encoding="utf-8")
+        if f"paper-print.js?v={CURRENT_PAPER_PRINT_VERSION}" not in text:
+            report.error(f"{page} must load the current A4 paper engine (paper-print.js).")
+    engine = (ROOT / "paper-print.js").read_text(encoding="utf-8")
+    sheet_css = (ROOT / "paper-print.css").read_text(encoding="utf-8")
+    if f'VERSION = "{CURRENT_PAPER_PRINT_VERSION}"' not in engine:
+        report.error("paper-print.js VERSION must match CURRENT_PAPER_PRINT_VERSION.")
+    if "size: A4 portrait" not in sheet_css or "height: 297mm" not in sheet_css:
+        report.error("paper-print.css must define fixed 210 x 297 mm A4 sheets.")
 
     report.set("elite_system_pages", len(system_pages))
     resource_test = ROOT / "tools" / "test_resource_command_center.js"

@@ -636,6 +636,25 @@
 
   function printMock(includeSolutions = false) {
     if (!state.mock.length) generateMock();
+    if (window.ElitePaperPrint?.open) {
+      const marks = state.mock.reduce((sum, item) => sum + Number(item.marks || 0), 0);
+      window.ElitePaperPrint.open({
+        courseLabel: "IAL Pure 1 · WMA11",
+        courseCode: "WMA11",
+        title: "Quick Mock",
+        durationMinutes: Math.max(10, Math.round((marks * 1.2) / 5) * 5),
+        questions: state.mock.map((item, index) => ({
+          id: item.id,
+          number: index + 1,
+          marks: Number(item.marks || 0),
+          topic: item.topicName || "",
+          sourceRef: `${item.paper} Q${item.qNo}`,
+          image: item.image,
+          solution: { steps: item.steps || [], finalAnswer: item.finalAnswer || "" }
+        }))
+      }, { version: includeSolutions ? "solutions" : "student" });
+      return;
+    }
     const printArea = document.createElement("section");
     printArea.className = "ial-print-area";
     printArea.innerHTML = state.mock.map((item, index) => `

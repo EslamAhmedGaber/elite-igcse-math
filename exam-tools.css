@@ -1,0 +1,211 @@
+/* ==========================================================================
+   exam-tools.css - screen styles for the Mock / Test Builder additions:
+   pre-build summary, level tags, question swap, test code and link.
+   Screen only. Printing is handled by paper-print.js + paper-print.css.
+   ========================================================================== */
+
+@media screen {
+  .control-note {
+    margin-left: 4px;
+    color: var(--ux-muted, #5a6b80);
+    font-size: var(--ux-fs-micro, 11px);
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  #examSeed {
+    font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  #examSeed::placeholder {
+    font-family: "Sora", system-ui, sans-serif;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  .exam-plan {
+    margin-top: var(--ux-gap-4, 16px);
+    padding: var(--ux-gap-4, 16px);
+    border: 1px solid var(--ux-line, #dce5ef);
+    border-left: 4px solid var(--ux-royal, #1b4fd8);
+    border-radius: var(--ux-r-md, 12px);
+    background: var(--ux-surface, #fff);
+  }
+
+  .exam-plan:empty {
+    display: none;
+  }
+
+  .exam-plan-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: var(--ux-gap-2, 8px);
+  }
+
+  .exam-plan-grid article {
+    min-width: 0;
+    padding: 10px 12px;
+    border-radius: var(--ux-r-sm, 8px);
+    background: var(--ux-subtle, #eef3f9);
+  }
+
+  .exam-plan-grid strong {
+    display: block;
+    color: var(--ux-ink, #0e1b2e);
+    font-size: var(--ux-fs-lg, 20px);
+    font-weight: 800;
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .exam-plan-grid span {
+    display: block;
+    margin-top: 2px;
+    color: var(--ux-muted, #5a6b80);
+    font-size: var(--ux-fs-xs, 12px);
+    font-weight: 600;
+  }
+
+  .exam-plan-levels {
+    margin: 12px 0 0;
+    color: var(--ux-ink-3, #3d5068);
+    font-size: var(--ux-fs-sm, 13px);
+  }
+
+  .exam-plan-levels > span:first-child {
+    color: var(--ux-muted, #5a6b80);
+    font-weight: 700;
+  }
+
+  .exam-plan-levels small {
+    color: var(--ux-muted, #5a6b80);
+  }
+
+  .exam-plan-ok,
+  .exam-plan-warning {
+    margin: 10px 0 0;
+    padding: 8px 12px;
+    border-radius: var(--ux-r-sm, 8px);
+    font-size: var(--ux-fs-sm, 13px);
+    font-weight: 600;
+    line-height: 1.45;
+  }
+
+  .exam-plan-ok {
+    border: 1px solid var(--ux-ok-line, #a9d9c8);
+    background: var(--ux-ok-soft, #e4f4ee);
+    color: var(--ux-ok, #14664f);
+  }
+
+  .exam-plan-warning {
+    border: 1px solid var(--ux-warn-line, #eecfa0);
+    background: var(--ux-warn-soft, #fdf1dc);
+    color: var(--ux-warn, #8a5a06);
+  }
+
+  .exam-paper-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 14px;
+    margin: 8px 0 0;
+    color: var(--ux-ink-3, #3d5068);
+    font-size: var(--ux-fs-sm, 13px);
+  }
+
+  .exam-paper-meta b {
+    color: var(--ux-ink, #0e1b2e);
+    font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+    letter-spacing: 0.04em;
+  }
+
+  .exam-paper-meta small {
+    color: var(--ux-muted, #5a6b80);
+  }
+
+  .exam-link-button,
+  .exam-swap-button {
+    min-height: 34px;
+    padding: 6px 12px;
+    border: 1px solid var(--ux-royal-line, #b9cdf7);
+    border-radius: var(--ux-r-pill, 999px);
+    background: var(--ux-royal-soft, #ebf1ff);
+    color: var(--ux-royal-ink, #143da8);
+    font: inherit;
+    font-size: var(--ux-fs-xs, 12px);
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .exam-link-button:hover,
+  .exam-swap-button:hover {
+    border-color: var(--ux-royal, #1b4fd8);
+    background: #fff;
+  }
+
+  .exam-link-button:focus-visible,
+  .exam-swap-button:focus-visible {
+    outline: none;
+    box-shadow: var(--ux-sh-focus, 0 0 0 3px rgba(27, 79, 216, .28));
+  }
+
+  .exam-notice {
+    margin: 10px 0 0;
+    padding: 8px 12px;
+    border-left: 3px solid var(--ux-gold, #e2b84f);
+    border-radius: 0 var(--ux-r-sm, 8px) var(--ux-r-sm, 8px) 0;
+    background: var(--ux-gold-soft, #fbf3d8);
+    color: var(--ux-ink-2, #1b2c44);
+    font-size: var(--ux-fs-sm, 13px);
+    line-height: 1.45;
+  }
+
+  .exam-level-tag {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 1px 8px;
+    border-radius: var(--ux-r-pill, 999px);
+    font-size: var(--ux-fs-micro, 11px);
+    font-style: normal;
+    font-weight: 700;
+    vertical-align: 1px;
+  }
+
+  .exam-level-tag.level-easy {
+    background: var(--ux-ok-soft, #e4f4ee);
+    color: var(--ux-ok, #14664f);
+  }
+
+  .exam-level-tag.level-medium {
+    background: var(--ux-royal-soft, #ebf1ff);
+    color: var(--ux-royal-ink, #143da8);
+  }
+
+  .exam-level-tag.level-hard {
+    background: var(--ux-gold-soft, #fbf3d8);
+    color: var(--ux-gold-ink, #8a6410);
+  }
+
+  @media (max-width: 900px) {
+    .exam-plan-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 520px) {
+    .exam-plan {
+      padding: 12px;
+    }
+
+    .exam-plan-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .exam-plan-grid strong {
+      font-size: var(--ux-fs-md, 17px);
+    }
+  }
+}

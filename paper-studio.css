@@ -1,0 +1,259 @@
+/* ==========================================================================
+   paper-studio.css - A4 print preview dialog (screen only)
+   Injected by paper-print.js on first use. The printed pages themselves are
+   styled by paper-print.css inside the isolated preview frame.
+   ========================================================================== */
+
+@media screen {
+  html.eps-open,
+  html.eps-open body {
+    overflow: hidden !important;
+  }
+
+  .eps-overlay {
+    --eps-navy: #0b2a5b;
+    --eps-ink: #0f1d33;
+    --eps-royal: #1b4fd8;
+    --eps-royal-hover: #1740b4;
+    --eps-line: #d3dce8;
+    --eps-muted: #56647a;
+    --eps-gold: #c9a13b;
+    position: fixed;
+    inset: 0;
+    z-index: 2147483000;
+    display: flex;
+    flex-direction: column;
+    background: #3f4a5c;
+    color: var(--eps-ink);
+    font-family: "Sora", "Segoe UI", Arial, sans-serif;
+  }
+
+  .eps-overlay[hidden] {
+    display: none !important;
+  }
+
+  .eps-bar {
+    display: grid;
+    grid-template-columns: minmax(170px, auto) minmax(0, 1fr) auto;
+    align-items: end;
+    gap: 12px 18px;
+    padding: 12px 18px 10px;
+    background: #fff;
+    border-bottom: 3px solid var(--eps-gold);
+  }
+
+  .eps-heading strong {
+    display: block;
+    color: var(--eps-navy);
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  .eps-info {
+    display: block;
+    margin-top: 3px;
+    color: var(--eps-muted);
+    font-size: 12.5px;
+    font-weight: 600;
+  }
+
+  .eps-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    gap: 8px 12px;
+  }
+
+  .eps-field {
+    display: grid;
+    gap: 3px;
+    color: var(--eps-muted);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .eps-field[hidden],
+  .eps-check[hidden] {
+    display: none !important;
+  }
+
+  .eps-field select {
+    min-height: 38px;
+    padding: 6px 30px 6px 10px;
+    border: 1px solid var(--eps-line);
+    border-radius: 8px;
+    background-color: #fff;
+    color: var(--eps-ink);
+    font: 600 13.5px/1.2 inherit;
+    font-family: inherit;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  .eps-check {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 38px;
+    color: var(--eps-ink);
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .eps-check input {
+    width: 17px;
+    height: 17px;
+    accent-color: var(--eps-royal);
+  }
+
+  .eps-actions {
+    display: flex;
+    gap: 8px;
+  }
+
+  .eps-actions button {
+    min-height: 40px;
+    padding: 8px 16px;
+    border: 1px solid var(--eps-line);
+    border-radius: 9px;
+    background: #fff;
+    color: var(--eps-navy);
+    font: 700 14px/1 inherit;
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  .eps-actions button:hover:not(:disabled) {
+    border-color: var(--eps-royal);
+    color: var(--eps-royal);
+  }
+
+  .eps-actions .eps-primary {
+    border-color: var(--eps-royal);
+    background: var(--eps-royal);
+    color: #fff;
+  }
+
+  .eps-actions .eps-primary:hover:not(:disabled) {
+    background: var(--eps-royal-hover);
+    color: #fff;
+  }
+
+  .eps-actions button:disabled {
+    cursor: progress;
+    opacity: 0.55;
+  }
+
+  .eps-overlay :focus-visible {
+    outline: 3px solid #f2c94c;
+    outline-offset: 2px;
+  }
+
+  .eps-hint {
+    margin: 0;
+    padding: 7px 18px;
+    background: #eef3fb;
+    color: var(--eps-muted);
+    font-size: 12.5px;
+    line-height: 1.4;
+  }
+
+  .eps-hint b {
+    color: var(--eps-navy);
+  }
+
+  .eps-stage {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
+  .eps-frame {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: #5b6679;
+  }
+
+  .eps-status {
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: min(560px, calc(100% - 32px));
+    padding: 12px 18px;
+    border-radius: 10px;
+    background: #fff;
+    color: var(--eps-navy);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .eps-status[hidden] {
+    display: none;
+  }
+
+  .eps-status.is-error {
+    color: #8d2820;
+  }
+
+  @media (max-width: 900px) {
+    .eps-bar {
+      grid-template-columns: 1fr auto;
+      padding: 10px 12px 8px;
+    }
+
+    .eps-controls {
+      grid-column: 1 / -1;
+      grid-row: 2;
+    }
+
+    .eps-actions {
+      grid-row: 1;
+      grid-column: 2;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .eps-bar {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    .eps-actions {
+      grid-column: 1;
+      grid-row: 3;
+    }
+
+    .eps-actions button {
+      flex: 1 1 0;
+      padding-inline: 8px;
+    }
+
+    .eps-controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .eps-field select {
+      width: 100%;
+    }
+
+    .eps-hint {
+      display: none;
+    }
+  }
+}
+
+@media print {
+  /* If the host page is printed while the dialog is open, print nothing of it. */
+  html.eps-open body > :not(.eps-overlay) {
+    display: none !important;
+  }
+}

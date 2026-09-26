@@ -298,7 +298,20 @@
   const MIN_REVISION_COUNT = 10;
   const DRAFT_KEY = `eliteTestBuilderDraftV1${keySuffix}`;
   const MAX_FILTER_RESULTS = 80;
-  const RANDOM_BUILD_VERSION = "random-topic-split-v2";
+  const RANDOM_BUILD_VERSION = "random-balanced-v3";
+  const RECENT_KEY = `eliteRecentPaperSourcesV1${keySuffix}`;
+  const RECENT_PAPER_LIMIT = 6;
+  const MINUTES_PER_MARK = 1.2;
+  const LEVELS = ["easy", "medium", "hard"];
+  const LEVEL_LABELS = { easy: "Easy", medium: "Medium", hard: "Hard" };
+  /* Target share of each marks-based level. "natural" follows the eligible pool. */
+  const LEVEL_MIXES = {
+    natural: null,
+    balanced: { easy: 0.3, medium: 0.4, hard: 0.3 },
+    foundation: { easy: 0.5, medium: 0.35, hard: 0.15 },
+    challenge: { easy: 0.1, medium: 0.35, hard: 0.55 }
+  };
+  const SEED_ALPHABET = "23456789ABCDEFGHJKLMNPQRSTUVWXYZ";
   const REVISION_BUILD_VERSION = "revision-book-v2";
   const CUSTOM_BUILD_VERSION = "custom-test-v2";
 
@@ -354,6 +367,11 @@
     topicMixSummary: document.getElementById("examTopicMixSummary"),
     unsolvedOnly: document.getElementById("examUnsolvedOnly"),
     avoidRepeats: document.getElementById("examAvoidRepeats"),
+    levelMix: document.getElementById("examLevelMix"),
+    order: document.getElementById("examOrder"),
+    seed: document.getElementById("examSeed"),
+    plan: document.getElementById("examPlanSummary"),
+    copyLink: document.getElementById("copyTestLinkBtn"),
     randomPreset: document.getElementById("randomPreset"),
     start: document.getElementById("startExamBtn"),
     finish: document.getElementById("finishExamBtn"),
@@ -415,6 +433,8 @@
   let tickHandle = null;
   let filteredBuilderQuestions = [];
   let lastRevisionBook = null;
+  let plannedMinutes = 90;
+  let notice = "";
 
   function escapeHtml(value) {
     return String(value ?? "").replace(/[&<>"']/g, (char) => ({
@@ -742,17 +762,105 @@
     return byId.get(id);
   }
 
+  /* ---- seeded randomness ------------------------------------------------
+     Every random mock is built from a short seed. The same seed, settings and
+     bank version always give the same questions in the same order. */
+  let random = Math.random;
+
+  function hashString(value) {
+    let h = 2166136261 >>> 0;
+    const text = String(value);
+    for (let i = 0; i < text.length; i += 1) {
+      h ^= text.charCodeAt(i);
+      h = Math.imul(h, 16777619) >>> 0;
+    }
+    return h >>> 0;
+  }
+
+  function seededRandom(seed) {
+    let a = hashString(seed) || 1;
+    return function mulberry32() {
+      a = (a + 0x6D2B79F5) >>> 0;
+      let t = a;
+      t = Math.imul(t ^ (t >>> 15), t | 1);
+      t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+
+  function withSeed(seed, fn) {
+    const previous = random;
+    random = seededRandom(seed);
+    try {
+      return fn();
+    } finally {
+      random = previous;
+    }
+  }
+
+  function makeSeed(length = 6) {
+    const bytes = new Uint8Array(length);
+    if (window.crypto?.getRandomValues) window.crypto.getRandomValues(bytes);
+    else bytes.forEach((_, index) => { bytes[index] = Math.floor(Math.random() * 256); });
+    return [...bytes].map((byte) => SEED_ALPHABET[byte % SEED_ALPHABET.length]).join("");
+  }
+
+  function coursePrefix() {
+    if (course.mode === "pure") return course.courseCode || "IAL";
+    if (course.mode === "baccalaureate") return "EB";
+    return activePathway() === "modular" ? "4WM" : "4MA1";
+  }
+
+  /* Accepts "7K3Q9A", "wme01-7k3q9a" or "WME01-7K3Q9A-S2". */
+  function normaliseSeed(value) {
+    const parts = String(value || "").trim().toUpperCase().split(/[\s-]+/).filter(Boolean);
+    if (!parts.length) return "";
+    const prefix = coursePrefix().toUpperCase();
+    const seedPart = parts[0] === prefix && parts.length > 1 ? parts[1] : parts[0];
+    return seedPart.replace(/[^0-9A-Z]/g, "").slice(0, 12);
+  }
+
+  function displayTestCode(paperState = state) {
+    if (!paperState?.seed) return "";
+    const swaps = Number(paperState.swaps || 0);
+    return `${coursePrefix()}-${paperState.seed}${swaps ? `-S${swaps}` : ""}`;
+  }
+
+  let cachedBankVersion = "";
+  function bankVersion() {
+    if (!cachedBankVersion) {
+      const signature = questions.map((question) => `${question.id}:${question.marks}`).sort().join("|");
+      cachedBankVersion = `${course.id}-${questions.length}-${hashString(signature).toString(36)}`;
+    }
+    return cachedBankVersion;
+  }
+
   function shuffle(items) {
     const pool = [...items];
     for (let i = pool.length - 1; i > 0; i -= 1) {
-      const j = Math.floor(Math.random() * (i + 1));
+      const j = Math.floor(random() * (i + 1));
       [pool[i], pool[j]] = [pool[j], pool[i]];
     }
     return pool;
   }
 
+  /* ---- marks-based level: under 3 Easy, 3-4 Medium, over 4 Hard ---------- */
+  function questionLevel(question) {
+    const marks = Number(question?.marks || 0);
+    if (marks < 3) return "easy";
+    if (marks <= 4) return "medium";
+    return "hard";
+  }
+
+  function levelCounts(items) {
+    const counts = { easy: 0, medium: 0, hard: 0 };
+    items.forEach((question) => { counts[questionLevel(question)] += 1; });
+    return counts;
+  }
+
   function difficultyMatch(question, difficulty) {
     if (!difficulty) return true;
+    if (difficulty === "easy" || difficulty === "medium" || difficulty === "hard") return questionLevel(question) === difficulty;
     if (difficulty === "quick") return Number(question.marks || 0) <= 3;
     if (difficulty === "standard") return Number(question.marks || 0) >= 4 && Number(question.marks || 0) <= 6;
     if (difficulty === "long") return Number(question.marks || 0) >= 7;
@@ -976,25 +1084,131 @@
     return Math.max(5, Math.ceil(totalMarksForQuestions(items) * 1.5));
   }
 
+  /* Sources used by the last few generated papers plus saved mock history. */
   function recentMockSources() {
     const history = readJson(HISTORY_KEY, []);
-    return new Set(history.flatMap((entry) => entry.ids || []).map((id) => sourceKey(questionById(id) || {})).filter(Boolean));
+    const recent = readJson(RECENT_KEY, []);
+    return new Set([
+      ...history.flatMap((entry) => entry.ids || []).map((id) => sourceKey(questionById(id) || {})),
+      ...recent.flatMap((entry) => entry.sources || [])
+    ].filter(Boolean));
+  }
+
+  function rememberRecentPaper(ids) {
+    const sources = [...sourceSet(ids)];
+    if (!sources.length) return;
+    const recent = readJson(RECENT_KEY, []).filter((entry) => Array.isArray(entry.sources));
+    const key = sources.slice().sort().join("|");
+    const next = [{ at: Date.now(), sources }, ...recent.filter((entry) => entry.sources.slice().sort().join("|") !== key)];
+    writeJson(RECENT_KEY, next.slice(0, RECENT_PAPER_LIMIT));
+  }
+
+  /* Largest-remainder rounding of shares to a whole count. */
+  function apportion(shares, total) {
+    const keys = Object.keys(shares);
+    const sum = keys.reduce((acc, key) => acc + Math.max(0, shares[key]), 0) || 1;
+    const raw = keys.map((key) => ({ key, value: (Math.max(0, shares[key]) / sum) * total }));
+    const result = Object.fromEntries(raw.map((item) => [item.key, Math.floor(item.value)]));
+    let left = total - Object.values(result).reduce((acc, value) => acc + value, 0);
+    raw.sort((a, b) => (b.value - Math.floor(b.value)) - (a.value - Math.floor(a.value)) || a.key.localeCompare(b.key))
+      .forEach((item) => {
+        if (left <= 0) return;
+        result[item.key] += 1;
+        left -= 1;
+      });
+    return result;
+  }
+
+  function levelQuotas(pool, count, mix) {
+    const available = levelCounts(pool);
+    const shares = LEVEL_MIXES[mix] || available;
+    return { quotas: apportion(shares, count), available };
+  }
+
+  /* Balanced selection over a topic x level grid, driven by the seeded random. */
+  function selectBalanced(pool, options = {}) {
+    const count = Math.max(1, Number(options.count || 25));
+    const targetMarks = Number(options.targetMarks || 0);
+    const mix = LEVEL_MIXES[options.levelMix] !== undefined ? options.levelMix : "natural";
+    const strict = mix !== "natural";
+    const selectedTopics = normaliseTopicList(options.topics);
+    const groups = new Map();
+    const orderedPool = shuffle(pool);
+    const groupFor = (question) => {
+      if (selectedTopics.length >= 2) {
+        return shuffle(selectedTopics).find((topic) => questionMatchesTopic(question, topic)) || selectedTopics[0];
+      }
+      return question.topic || "Mixed";
+    };
+    orderedPool.forEach((question) => {
+      const topic = groupFor(question);
+      const level = questionLevel(question);
+      if (!groups.has(topic)) groups.set(topic, { easy: [], medium: [], hard: [] });
+      groups.get(topic)[level].push(question);
+    });
+    const topics = [...groups.keys()];
+    const topicSizes = Object.fromEntries(topics.map((topic) => [topic, LEVELS.reduce((sum, level) => sum + groups.get(topic)[level].length, 0)]));
+    const topicQuota = selectedTopics.length >= 2
+      ? Object.fromEntries([...buildTopicQuotas(topics, count, new Map(Object.entries(topicSizes))).entries()])
+      : apportion(topicSizes, count);
+    const { quotas: levelQuota, available } = levelQuotas(pool, count, mix);
+
+    if (strict) {
+      const short = LEVELS.filter((level) => available[level] < levelQuota[level]);
+      if (short.length) {
+        return { picked: [], error: { type: "level", short, quotas: levelQuota, available } };
+      }
+    }
+
+    const pickedTopic = Object.fromEntries(topics.map((topic) => [topic, 0]));
+    const pickedLevel = { easy: 0, medium: 0, hard: 0 };
+    const picked = [];
+    const targetReached = () => picked.length >= count || (targetMarks && picked.length && totalMarksForQuestions(picked) >= targetMarks);
+    const tieBreak = new Map(topics.map((topic) => [topic, random()]));
+    while (!targetReached()) {
+      let best = null;
+      topics.forEach((topic) => {
+        LEVELS.forEach((level) => {
+          if (!groups.get(topic)[level].length) return;
+          const topicNeed = (topicQuota[topic] || 0) - pickedTopic[topic];
+          const levelNeed = (levelQuota[level] || 0) - pickedLevel[level];
+          if (strict && levelNeed <= 0 && LEVELS.some((other) => (levelQuota[other] || 0) - pickedLevel[other] > 0 && topics.some((t) => groups.get(t)[other].length))) return;
+          const score = strict
+            ? levelNeed * 100 + topicNeed * 10 + tieBreak.get(topic)
+            : topicNeed * 100 + levelNeed * 10 + tieBreak.get(topic);
+          if (!best || score > best.score) best = { topic, level, score };
+        });
+      });
+      if (!best) break;
+      const question = groups.get(best.topic)[best.level].shift();
+      picked.push(question);
+      pickedTopic[best.topic] += 1;
+      pickedLevel[best.level] += 1;
+      tieBreak.set(best.topic, random());
+    }
+    if (strict && !targetMarks && LEVELS.some((level) => pickedLevel[level] !== levelQuota[level])) {
+      return { picked: [], error: { type: "level", short: LEVELS.filter((level) => pickedLevel[level] < levelQuota[level]), quotas: levelQuota, available } };
+    }
+    return { picked, levelQuota, topicQuota, pickedLevel };
+  }
+
+  /* Exam-style order: easier first, then by original question number. */
+  function orderPaper(items, order = "exam") {
+    if (order === "shuffle") return shuffle(items);
+    const rank = { easy: 0, medium: 1, hard: 2 };
+    const jitter = new Map(items.map((question) => [question.id, random()]));
+    return [...items].sort((a, b) =>
+      rank[questionLevel(a)] - rank[questionLevel(b)] ||
+      Number(a.question || 0) - Number(b.question || 0) ||
+      jitter.get(a.id) - jitter.get(b.id)
+    );
   }
 
   function buildBalancedPaper(options) {
     const pool = uniqueBySource(eligiblePool(options));
-    const count = Number(options.count || 25);
-    const targetMarks = Number(options.targetMarks || 0);
-    const topicBalanced = buildTopicBalancedPaper(pool, { ...options, count, targetMarks });
-    if (topicBalanced) return topicBalanced;
-    const quickTarget = Math.max(2, Math.round(count * 0.28));
-    const standardTarget = Math.max(3, Math.round(count * 0.4));
-    const picked = [];
-    takeUnique(picked, pool.filter((question) => Number(question.marks || 0) <= 3), quickTarget, targetMarks);
-    takeUnique(picked, pool.filter((question) => Number(question.marks || 0) >= 4 && Number(question.marks || 0) <= 6), quickTarget + standardTarget, targetMarks);
-    takeUnique(picked, pool.filter((question) => Number(question.marks || 0) >= 7 || Number(question.question || 0) >= 20), count, targetMarks);
-    takeUnique(picked, pool, count, targetMarks);
-    return picked.slice(0, count);
+    const result = selectBalanced(pool, options);
+    if (result.error) return result;
+    return { ...result, picked: orderPaper(result.picked, options.order).slice(0, Number(options.count || 25)) };
   }
 
   function formatTime(totalSeconds) {
@@ -1026,7 +1240,8 @@
     } else if (state.status === "complete") {
       els.timerLabel.textContent = "Result saved";
     } else {
-      const duration = Number(state.durationSeconds || Number(els.duration?.value || 90) * 60);
+      const chosen = els.duration?.value === "auto" || !Number(els.duration?.value) ? plannedMinutes : Number(els.duration.value);
+      const duration = Number(state.durationSeconds || chosen * 60);
       els.timer.textContent = formatTime(duration);
       els.timerLabel.textContent = state.ids?.length ? "Paper ready" : "Ready to start";
     }
@@ -1050,11 +1265,27 @@
       finishedAt: null,
       ids: [...ids],
       scores: {},
+      seed: options.seed || makeSeed(),
+      swaps: 0,
+      bankVersion: bankVersion(),
+      createdAt: Date.now(),
       revisionMeta: options.revisionMeta || null,
       buildConfig: options.buildConfig || null
     };
+    if (options.kind === "random" || options.kind === "revision-book") rememberRecentPaper(state.ids);
     saveState();
     render();
+  }
+
+  /* "auto" follows exam pace: 1.2 minutes per mark, rounded to 5 minutes. */
+  function paceMinutes(marks) {
+    return Math.max(10, Math.round((Number(marks || 0) * MINUTES_PER_MARK) / 5) * 5);
+  }
+
+  function selectedDuration(select, marks) {
+    const value = select?.value || "auto";
+    if (value === "auto" || !Number(value)) return paceMinutes(marks);
+    return Number(value);
   }
 
   function randomBuildConfig() {
@@ -1069,16 +1300,17 @@
       topics: randomTopicSelection(),
       count: Math.max(1, Number(els.count?.value || 25)),
       targetMarks: Number(els.targetMarks?.value || 0),
+      levelMix: els.levelMix?.value || "natural",
+      order: els.order?.value || "exam",
+      seed: normaliseSeed(els.seed?.value || ""),
       unsolvedOnly: Boolean(els.unsolvedOnly?.checked),
       avoidRepeats: Boolean(els.avoidRepeats?.checked),
-      durationMinutes: Number(els.duration?.value || 90)
+      duration: els.duration?.value || "auto"
     };
   }
 
-  function buildRandomPaper({ startNow = false } = {}) {
-    const config = randomBuildConfig();
-    const avoidSources = config.avoidRepeats ? recentMockSources() : new Set();
-    const picked = buildBalancedPaper({
+  function randomSelectionOptions(config, avoidSources = new Set()) {
+    return {
       bank: config.bank,
       part: config.part,
       unit: config.unit,
@@ -1086,9 +1318,57 @@
       topics: config.topics,
       count: config.count,
       targetMarks: config.targetMarks,
+      levelMix: config.levelMix,
+      order: config.order,
       unsolvedOnly: config.unsolvedOnly,
       avoidSources
-    });
+    };
+  }
+
+  function levelShortMessage(error) {
+    const parts = error.short.map((level) => `${LEVEL_LABELS[level]} needs ${error.quotas[level]}, only ${error.available[level]} available`);
+    return `The ${els.levelMix?.selectedOptions?.[0]?.textContent || "chosen"} level mix cannot be met with these filters (${parts.join("; ")}). Choose "Natural mix", lower the question count, or add topics. Nothing was changed automatically.`;
+  }
+
+  /* Pure planning: what would this build use? Shared by the summary and the build. */
+  function planRandomPaper(config = randomBuildConfig()) {
+    const recent = config.avoidRepeats ? recentMockSources() : new Set();
+    const base = uniqueBySource(eligiblePool(randomSelectionOptions(config)));
+    const pool = config.avoidRepeats ? base.filter((question) => !recent.has(sourceKey(question))) : base;
+    return {
+      config,
+      base,
+      pool,
+      avoided: base.length - pool.length,
+      levels: levelCounts(pool),
+      topics: new Set(pool.map((question) => question.topic)).size
+    };
+  }
+
+  function buildRandomPaper({ startNow = false } = {}) {
+    const config = randomBuildConfig();
+    const plan = planRandomPaper(config);
+    if (!plan.base.length) {
+      showBuildMessage("No questions match those mock filters yet. Widen the filters and try again.");
+      return false;
+    }
+    if (!config.targetMarks && plan.pool.length < config.count) {
+      const avoidCopy = plan.avoided
+        ? ` Avoiding ${plan.avoided} recently used question${plan.avoided === 1 ? "" : "s"} leaves ${plan.pool.length}. Untick "Avoid recent repeats", lower the count to ${plan.pool.length}, or add topics.`
+        : ` Add more topics, choose another chapter, or lower the question count to ${plan.pool.length} to avoid repeating questions.`;
+      showBuildMessage(`This filter has ${plan.pool.length} unique questions but ${config.count} were requested.${avoidCopy}`);
+      return false;
+    }
+    const seed = config.seed || makeSeed();
+    const avoidSources = config.avoidRepeats ? recentMockSources() : new Set();
+    const result = withSeed(`${seed}|${bankVersion()}|${buildConfigKey({ ...config, seed: "" })}`, () =>
+      buildBalancedPaper(randomSelectionOptions(config, avoidSources))
+    );
+    if (result.error) {
+      showBuildMessage(levelShortMessage(result.error));
+      return false;
+    }
+    const picked = result.picked;
     if (!picked.length) {
       showBuildMessage("No questions match those mock filters yet. Widen the filters and try again.");
       return false;
@@ -1104,11 +1384,257 @@
         kind: "random",
         bank: config.bank,
         unit: config.unit,
-        durationMinutes: config.durationMinutes,
+        seed,
+        durationMinutes: selectedDuration(els.duration, totalMarksForQuestions(picked)),
         title: config.topics.length ? "Mixed topic mock" : "Random mock",
         buildConfig: config
       }
     );
+    return true;
+  }
+
+  /* Live summary under the Random Mock options, shown before anything is built. */
+  function renderPlanSummary() {
+    if (!els.plan) return;
+    const plan = planRandomPaper();
+    const { config, pool } = plan;
+    const averageMarks = pool.length ? totalMarksForQuestions(pool) / pool.length : 0;
+    const plannedCount = config.targetMarks
+      ? Math.min(pool.length, Math.ceil(config.targetMarks / (averageMarks || 1)))
+      : Math.min(config.count, pool.length);
+    const plannedMarks = config.targetMarks || Math.round(plannedCount * averageMarks);
+    plannedMinutes = paceMinutes(plannedMarks);
+    const minutes = els.duration?.value === "auto" || !Number(els.duration?.value) ? plannedMinutes : Number(els.duration.value);
+    const warnings = [];
+    if (!pool.length) {
+      warnings.push("No questions match these filters. Widen the chapter, bank or topics.");
+    } else if (!config.targetMarks && pool.length < config.count) {
+      warnings.push(`Only ${pool.length} unique questions match, but ${config.count} are requested. Lower the count or widen the filters${plan.avoided ? ", or untick Avoid recent repeats" : ""}.`);
+    }
+    if (config.levelMix !== "natural" && pool.length) {
+      const { quotas, available } = levelQuotas(pool, Math.min(config.count, pool.length), config.levelMix);
+      LEVELS.forEach((level) => {
+        if (available[level] < quotas[level]) warnings.push(`${LEVEL_LABELS[level]} needs ${quotas[level]} but only ${available[level]} are available.`);
+      });
+    }
+    const levels = plan.levels;
+    const levelNote = pool.length && levels.hard / pool.length > 0.8
+      ? `<p class="exam-plan-levels"><small>Most questions in this bank are full multi-part questions worth 5+ marks, so the marks-based level puts them in Hard. Use Natural mix here.</small></p>`
+      : "";
+    els.plan.innerHTML = `
+      <div class="exam-plan-grid">
+        <article><strong>${pool.length}</strong><span>eligible questions</span></article>
+        <article><strong>${plannedCount}</strong><span>questions planned</span></article>
+        <article><strong>${config.targetMarks ? "" : "≈ "}${plannedMarks}</strong><span>marks</span></article>
+        <article><strong>${minutes}</strong><span>minutes${els.duration?.value === "auto" ? " (auto)" : ""}</span></article>
+        <article><strong>${plan.topics}</strong><span>topics</span></article>
+      </div>
+      <p class="exam-plan-levels"><span>Levels by marks:</span> <b>Easy</b> ${levels.easy} <small>(under 3)</small> &middot; <b>Medium</b> ${levels.medium} <small>(3&ndash;4)</small> &middot; <b>Hard</b> ${levels.hard} <small>(5+)</small>${plan.avoided ? ` &middot; ${plan.avoided} recent question${plan.avoided === 1 ? "" : "s"} excluded` : ""}</p>
+      ${levelNote}
+      ${warnings.length
+        ? `<p class="exam-plan-warning" role="alert">${warnings.map(escapeHtml).join(" ")}</p>`
+        : `<p class="exam-plan-ok">No question repeats inside the paper. ${config.seed ? `Test code ${escapeHtml(config.seed)} will rebuild the same paper with these settings.` : "A new test code is created on each build."}</p>`}`;
+    if (state.status === "idle" && !state.ids.length) updateTimer();
+  }
+
+  function swapQuestion(id) {
+    if (state.status !== "idle") return;
+    const index = state.ids.indexOf(id);
+    const current = questionById(id);
+    if (index < 0 || !current) return;
+    const config = state.buildConfig || {};
+    const inPaper = sourceSet(state.ids);
+    const recent = recentMockSources();
+    const pool = uniqueBySource(eligiblePool({
+      bank: config.bank || state.bank || "all",
+      part: config.part || "",
+      unit: config.unit || state.unit || "",
+      topics: config.topics || []
+    })).filter((question) => !inPaper.has(sourceKey(question)));
+    const level = questionLevel(current);
+    const tiers = [
+      [(question) => question.topic === current.topic && questionLevel(question) === level, "same topic and level"],
+      [(question) => question.topic === current.topic, "same topic, different level"],
+      [(question) => questionLevel(question) === level, "same level, different topic"]
+    ];
+    for (const [test, label] of tiers) {
+      const candidates = pool.filter(test);
+      const fresh = candidates.filter((question) => !recent.has(sourceKey(question)));
+      const list = fresh.length ? fresh : candidates;
+      if (!list.length) continue;
+      const next = list[Math.floor(Math.random() * list.length)];
+      state.ids[index] = next.id;
+      state.swaps = Number(state.swaps || 0) + 1;
+      if (state.scores) delete state.scores[id];
+      saveState();
+      notice = `Question ${index + 1} swapped (${label}): ${current.paper} Q${current.question} → ${next.paper} Q${next.question}. The other questions are unchanged.`;
+      render();
+      return;
+    }
+    notice = `No unused question with the same topic or level is left for Question ${index + 1} under these filters. Widen the filters to swap it.`;
+    renderResult();
+  }
+
+  /* ---- shareable test link: exact question IDs + bank version ---------- */
+  function toBase64Url(text) {
+    const bytes = new TextEncoder().encode(text);
+    let binary = "";
+    bytes.forEach((byte) => { binary += String.fromCharCode(byte); });
+    return btoa(binary).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+  }
+
+  function fromBase64Url(value) {
+    const b64 = String(value || "").replace(/-/g, "+").replace(/_/g, "/");
+    const binary = atob(b64 + "===".slice((b64.length + 3) % 4));
+    return new TextDecoder().decode(Uint8Array.from(binary, (char) => char.charCodeAt(0)));
+  }
+
+  function paperLink() {
+    const payload = {
+      v: 1,
+      b: state.bankVersion || bankVersion(),
+      k: state.kind,
+      t: state.title,
+      d: Math.round(Number(state.durationSeconds || 0) / 60),
+      s: state.seed,
+      w: Number(state.swaps || 0),
+      u: state.unit || "",
+      i: state.ids
+    };
+    const url = new URL(window.location.href);
+    ["paper", "mode", "topic", "topics"].forEach((key) => url.searchParams.delete(key));
+    url.searchParams.set("paper", toBase64Url(JSON.stringify(payload)));
+    url.hash = "";
+    return url.toString();
+  }
+
+  async function copyPaperLink(button) {
+    if (!state.ids.length) return;
+    const link = paperLink();
+    let copied = false;
+    try {
+      await navigator.clipboard.writeText(link);
+      copied = true;
+    } catch (error) {
+      window.prompt("Copy this test link", link);
+    }
+    if (button && copied) {
+      const label = button.textContent;
+      button.textContent = "Link copied";
+      window.setTimeout(() => { button.textContent = label; }, 1800);
+    }
+  }
+
+  function loadPaperFromUrl() {
+    const raw = new URLSearchParams(window.location.search).get("paper");
+    if (!raw) return;
+    const url = new URL(window.location.href);
+    url.searchParams.delete("paper");
+    window.history.replaceState(null, "", url.toString());
+    let data = null;
+    try {
+      data = JSON.parse(fromBase64Url(raw));
+    } catch (error) {
+      data = null;
+    }
+    if (!data || !Array.isArray(data.i) || !data.i.length) {
+      notice = "This test link could not be read. Ask for a fresh link.";
+      return;
+    }
+    const missing = data.i.filter((id) => !byId.has(id));
+    if (missing.length) {
+      notice = `This test link uses ${missing.length} question${missing.length === 1 ? "" : "s"} that are not in the current ${coursePrefix()} bank, so it was not loaded. Open the link from the matching course page or ask for a fresh link.`;
+      return;
+    }
+    const items = data.i.map(questionById);
+    state = {
+      status: "idle",
+      kind: data.k || "custom",
+      title: data.t || "Shared test",
+      bank: "all",
+      unit: data.u || "",
+      durationSeconds: (Number(data.d) || paceMinutes(totalMarksForQuestions(items))) * 60,
+      startedAt: null,
+      finishedAt: null,
+      ids: [...data.i],
+      scores: {},
+      seed: normaliseSeed(data.s) || makeSeed(),
+      swaps: Number(data.w || 0),
+      bankVersion: bankVersion(),
+      createdAt: Date.now(),
+      revisionMeta: null,
+      buildConfig: { mode: "shared", ids: [...data.i] }
+    };
+    saveState();
+    notice = data.b && data.b !== bankVersion()
+      ? `Shared test ${displayTestCode()} loaded. It was made with an earlier bank version, but every question is still available, so the paper is identical.`
+      : `Shared test ${displayTestCode()} loaded exactly as it was sent.`;
+  }
+
+  function isSharedPaper() {
+    return state.buildConfig?.mode === "shared" && state.status === "idle" && state.ids?.length > 0;
+  }
+
+  /* ---- print: every entry point opens the same A4 engine ---------------- */
+  const PRINT_TITLES = {
+    "Random mock": "Random Mock",
+    "Mixed topic mock": "Mixed Topic Mock",
+    "Custom test": "Custom Test",
+    "Revision book": "Revision Book"
+  };
+
+  function courseLabelForPrint() {
+    if (course.mode === "pure") return `${ialCourse?.label || "IAL"} · ${course.courseCode}`;
+    if (course.mode === "baccalaureate") return course.label || "Egyptian Baccalaureate Mathematics";
+    const unit = state.unit ? ` · ${state.unit}` : "";
+    return activePathway() === "modular"
+      ? `Edexcel IGCSE Mathematics · Modular 4WM${unit}`
+      : `Edexcel IGCSE Mathematics A · 4MA1 Linear${unit}`;
+  }
+
+  function paperSpec() {
+    const items = state.ids.map(questionById).filter(Boolean);
+    return {
+      courseLabel: courseLabelForPrint(),
+      courseCode: coursePrefix(),
+      title: PRINT_TITLES[state.title] || state.title || paperKindLabel(),
+      durationMinutes: Number(state.durationSeconds || 0) / 60,
+      testCode: displayTestCode(),
+      bankVersion: state.bankVersion || bankVersion(),
+      questions: items.map((question, index) => ({
+        id: question.id,
+        number: index + 1,
+        marks: Number(question.marks || 0),
+        level: questionLevel(question),
+        topic: questionTopicLabel(question),
+        sourceRef: question.paper ? `${question.paper} Q${question.question}` : "",
+        image: question.image || "",
+        text: question.image ? "" : question.question_text || "",
+        options: question.image ? [] : question.options || [],
+        solution: solutions[question.id] || null
+      })),
+      resolveSolutions: async () => {
+        await ensureExamSolutions();
+        return solutions;
+      }
+    };
+  }
+
+  async function openPrintStudio(version = "student", trigger = null) {
+    if (!state.ids.length) return false;
+    if (!window.ElitePaperPrint?.open) {
+      if (version === "solutions") {
+        await ensureExamSolutions(trigger).catch(() => {});
+        document.body.classList.add("print-solutions");
+      }
+      try {
+        await window.ElitePrint?.printWhenReady(els.paper, trigger);
+      } finally {
+        document.body.classList.remove("print-solutions");
+      }
+      return true;
+    }
+    window.ElitePaperPrint.open(paperSpec(), { version });
     return true;
   }
 
@@ -1323,9 +1849,10 @@
   function renderResult() {
     if (state.status === "idle" && !state.ids.length) {
       const last = readJson(HISTORY_KEY, [])[0];
+      const noticeHtml = notice ? `<p class="exam-notice" role="status">${escapeHtml(notice)}</p>` : "";
       els.result.innerHTML = last
-        ? `<strong>Last test: ${last.score}/${last.total} (${last.percent}%).</strong><p>Build a fresh mock, custom test, or revision book when you are ready.</p>`
-        : `<strong>No active paper yet.</strong><p>Build a paper above, then start it or print it.</p>`;
+        ? `<strong>Last test: ${last.score}/${last.total} (${last.percent}%).</strong><p>Build a fresh mock, custom test, or revision book when you are ready.</p>${noticeHtml}`
+        : `<strong>No active paper yet.</strong><p>Build a paper above, then start it or print it.</p>${noticeHtml}`;
       els.weakness.innerHTML = "";
       return;
     }
@@ -1344,12 +1871,15 @@
     const copy = ready
       ? state.kind === "revision-book" && revisionMeta
         ? `${state.ids.length} questions, ${total} marks, ${revisionMeta.topicCount || 0} priority topics, mix code ${escapeHtml(revisionMeta.seed || "")}.`
-        : `${state.ids.length} questions, ${total} marks, about ${estimatedMinutes(state.ids.map(questionById).filter(Boolean))} minutes.`
+        : `${state.ids.length} questions, ${total} marks, ${Math.round(Number(state.durationSeconds || 0) / 60)} minutes.`
       : state.status === "running"
         ? "Answers stay private until you finish."
         : "Enter your marks, then save to update the Mistake Box.";
+    const code = displayTestCode();
+    const levelMix = levelCounts(state.ids.map(questionById).filter(Boolean));
+    const meta = `<p class="exam-paper-meta">${code ? `<span>Test code <b>${escapeHtml(code)}</b></span>` : ""}<span>Easy ${levelMix.easy} &middot; Medium ${levelMix.medium} &middot; Hard ${levelMix.hard} <small>(by marks)</small></span>${state.ids.length ? `<button type="button" class="exam-link-button" data-copy-link>Copy test link</button>` : ""}</p>`;
     els.result.innerHTML = `<div class="exam-score-ring" style="--score:${percent}%"><strong>${ready ? total : percent + "%"}</strong><span>${ready ? "marks" : `${score}/${total}`}</span></div>
-      <div><strong>${label}</strong><p>${copy}</p></div>`;
+      <div><strong>${label}</strong><p>${copy}</p>${meta}${notice ? `<p class="exam-notice" role="status">${escapeHtml(notice)}</p>` : ""}</div>`;
     if (state.status === "running" || ready) {
       els.weakness.innerHTML = "";
       return;
@@ -1387,12 +1917,8 @@
       const hasSolution = hasSolutionContent(solution);
       const solutionOptions = { key: id, topic: questionTopicLabel(question), marks: question.marks };
       const solutionHtml = formatStructuredSolution(solution, solutionOptions);
-      const printSolutionHtml = formatStructuredSolution(solution, { ...solutionOptions, variant: "print" });
-      const printStepCount = Array.isArray(solution?.steps)
-        ? solution.steps.filter((step) => step && (step.title || step.body)).length
-        : solution?.source ? 1 : 0;
-      const printDensityClass = printStepCount >= 6 ? " is-dense" : "";
       const savedScore = state.scores?.[id] ?? "";
+      const level = questionLevel(question);
       return `<article class="exam-question" data-id="${escapeHtml(id)}">
         <div class="print-paper-brand">
           <div class="print-brand-lockup">
@@ -1413,25 +1939,16 @@
         </header>
         <img src="${question.image}" alt="${escapeHtml(question.paper)} Q${question.question}" loading="lazy">
         <footer>
-          <span>${escapeHtml(questionTopicLabel(question))}</span>
-          ${canMark ? `<label>Score <input data-score-id="${escapeHtml(id)}" type="number" min="0" max="${question.marks}" value="${savedScore}"> / ${question.marks}</label>` : `<span>${state.status === "running" ? "Answers stay private during the exam" : "Ready to start or print"}</span>`}
+          <span>${escapeHtml(questionTopicLabel(question))} <em class="exam-level-tag level-${level}" title="Level estimated from marks">${LEVEL_LABELS[level]}</em></span>
+          ${canMark
+            ? `<label>Score <input data-score-id="${escapeHtml(id)}" type="number" min="0" max="${question.marks}" value="${savedScore}"> / ${question.marks}</label>`
+            : state.status === "running"
+              ? `<span>Answers stay private during the exam</span>`
+              : `<button type="button" class="exam-swap-button" data-swap-id="${escapeHtml(id)}" aria-label="Swap question ${index + 1} for another with the same topic and level">Swap question</button>`}
         </footer>
         ${canMark && hasSolution ? `<details class="exam-solution"><summary>Show worked solution</summary>${solutionHtml}</details>` : ""}
         <div class="print-paper-footer">Question ${index + 1} | eliteigcse.com | Dr Eslam Ahmed | +20 112 000 9622</div>
-      </article>
-        <section class="exam-print-solution${printDensityClass}" data-solution-for="${escapeHtml(id)}" data-print-step-count="${printStepCount}" aria-label="Printable worked solution for question ${index + 1}">
-          <div class="print-solution-heading">
-            <div>
-              <span>Solution ${index + 1}</span>
-              <strong>${escapeHtml(question.paper)} Q${question.question}</strong>
-            </div>
-            <em>${question.marks} marks</em>
-          </div>
-          <h3>Worked Solution</h3>
-          ${printSolutionHtml}
-          <div class="print-paper-footer print-solution-footer">Solution ${index + 1} | eliteigcse.com | Dr Eslam Ahmed | +20 112 000 9622</div>
-        </section>
-      `;
+      </article>`;
     }).join("");
     if (canMark) {
       typesetPaperMath();
@@ -1640,7 +2157,7 @@
 
   async function printDraftAsPaper() {
     if (!createDraftPaperFromCurrentDraft()) return;
-    await window.ElitePrint.printWhenReady(els.paper, els.printDraft);
+    await openPrintStudio("student", els.printDraft);
   }
 
   function waitFor(ms) {
@@ -1682,19 +2199,12 @@
     if (!state.ids.length) return;
     try {
       await ensureExamSolutions(trigger);
-      renderPaper();
     } catch (error) {
       console.error("[exam-solutions]", error);
       els.result.innerHTML = `<strong>Solutions could not load.</strong><p>Check the connection, then press Print with solutions again.</p>`;
       return;
     }
-    document.body.classList.add("print-solutions");
-    try {
-      await typesetPaperMath();
-      await window.ElitePrint.printWhenReady(els.paper, trigger);
-    } finally {
-      document.body.classList.remove("print-solutions");
-    }
+    await openPrintStudio("solutions", trigger);
   }
 
   async function printDraftSolutionsAsPaper() {
@@ -1868,6 +2378,7 @@
   }
 
   function primaryActionState() {
+    if (isSharedPaper()) return { disabled: false, label: "Start shared test" };
     if (activeMode === "random") {
       const canStartCurrent = state.status === "idle" && currentPaperMatches("random", randomBuildConfig());
       return { disabled: false, label: canStartCurrent ? "Start current paper" : "Generate and start" };
@@ -1891,6 +2402,11 @@
   }
 
   function handlePrimaryAction() {
+    notice = "";
+    if (isSharedPaper()) {
+      startCurrentPaper();
+      return;
+    }
     if (activeMode === "random") {
       buildOrStartRandom();
       return;
@@ -1923,6 +2439,7 @@
   }
 
   function canPrintCurrentMode() {
+    if (isSharedPaper()) return true;
     if (activeMode === "random" || activeMode === "smart") return true;
     if (activeMode === "custom") {
       return Boolean(draftIds.length || (state.kind === "custom" && state.ids?.length));
@@ -1931,6 +2448,7 @@
   }
 
   function ensurePaperForCurrentMode() {
+    if (isSharedPaper()) return true;
     if (activeMode === "random") {
       const config = randomBuildConfig();
       if (currentPaperMatches("random", config)) return true;
@@ -1956,7 +2474,7 @@
 
   async function printCurrentPaper(trigger = els.print) {
     if (!ensurePaperForCurrentMode()) return;
-    await window.ElitePrint.printWhenReady(els.paper, trigger);
+    await openPrintStudio("student", trigger);
   }
 
   function saveCurrentTest() {
@@ -1977,6 +2495,9 @@
       ids: [...state.ids],
       revisionMeta: state.revisionMeta || null,
       buildConfig: state.buildConfig || null,
+      seed: state.seed || "",
+      swaps: Number(state.swaps || 0),
+      bankVersion: state.bankVersion || bankVersion(),
       createdAt: Date.now()
     });
     saveSavedTests(items.slice(0, 24));
@@ -2043,12 +2564,16 @@
       finishedAt: null,
       ids: test.ids,
       scores: {},
+      seed: test.seed || makeSeed(),
+      swaps: Number(test.swaps || 0),
+      bankVersion: bankVersion(),
+      createdAt: Date.now(),
       revisionMeta: test.revisionMeta || null,
       buildConfig: test.buildConfig || null
     };
     saveState();
     render();
-    if (printAfter) await window.ElitePrint.printWhenReady(els.paper, trigger);
+    if (printAfter) await openPrintStudio("student", trigger);
   }
 
   function deleteSavedTest(id) {
@@ -2082,6 +2607,7 @@
 
   function render() {
     renderButtons();
+    renderPlanSummary();
     renderResult();
     renderPaper();
     renderBuilderResults();
@@ -2194,6 +2720,30 @@
     if (print) loadSavedTest(print.dataset.printTest, true, print);
     if (remove) deleteSavedTest(remove.dataset.deleteTest);
   });
+  els.paper.addEventListener("click", (event) => {
+    const swap = event.target.closest("[data-swap-id]");
+    if (swap) swapQuestion(swap.dataset.swapId);
+  });
+  els.result.addEventListener("click", (event) => {
+    const link = event.target.closest("[data-copy-link]");
+    if (link) copyPaperLink(link);
+  });
+  [els.bank, els.part, els.unit, els.count, els.targetMarks, els.levelMix, els.order, els.seed, els.unsolvedOnly, els.avoidRepeats, els.duration, els.randomPreset]
+    .filter(Boolean)
+    .forEach((input) => {
+      input.addEventListener("input", renderPlanSummary);
+      input.addEventListener("change", () => {
+        renderPlanSummary();
+        renderButtons();
+      });
+    });
+  els.topicMix?.addEventListener("change", renderPlanSummary);
+  document.addEventListener("keydown", (event) => {
+    if (!(event.ctrlKey || event.metaKey) || event.altKey || event.key.toLowerCase() !== "p") return;
+    if (!state.ids.length || !window.ElitePaperPrint?.open || window.ElitePaperPrint.isOpen()) return;
+    event.preventDefault();
+    openPrintStudio("student");
+  });
   els.paper.addEventListener("input", (event) => {
     if (!event.target.matches("[data-score-id]")) return;
     readScoreInputs();
@@ -2207,6 +2757,7 @@
   applyCourseDom();
   populatePathwayFilters();
   applyUrlDefaults();
+  loadPaperFromUrl();
   refreshBuilderPaperOptions();
   renderSmartAnalysis(lastRevisionBook);
   render();

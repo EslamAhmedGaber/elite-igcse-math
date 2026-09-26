@@ -216,6 +216,19 @@ async function installHarness(page, clearStorage) {
           palette: document.body.dataset.coursePalette || ""
         });
       };
+      if (window.ElitePaperPrint) {
+        window.ElitePaperPrint.open = (spec, options = {}) => {
+          window.__eliteTest.printCalls.push({
+            trigger: document.activeElement?.id || "",
+            solutions: options.version === "solutions",
+            ids: spec.questions.map((question) => question.id),
+            count: spec.questions.length,
+            testCode: spec.testCode || "",
+            palette: document.body.dataset.coursePalette || ""
+          });
+          return window.ElitePaperPrint;
+        };
+      }
       return true;
     })()
   `);
@@ -398,7 +411,7 @@ async function runRoute(page, route) {
   assert.equal(random.data.state.kind, "random", `${route.label}: Random print should build a random paper`);
   assert.equal(random.data.ids.length, expectedCount, `${route.label}: Random print should use the selected question count`);
   assert.equal(random.data.sourceCount, expectedCount, `${route.label}: Random print should not repeat source questions`);
-  assert.equal(random.data.state.buildConfig.buildVersion, "random-topic-split-v2", `${route.label}: Random build version should be saved`);
+  assert.equal(random.data.state.buildConfig.buildVersion, "random-balanced-v3", `${route.label}: Random build version should be saved`);
   assert.deepEqual([...random.data.state.buildConfig.topics].sort(), [...random.topics].sort(), `${route.label}: Random build config should capture selected topics`);
 
   await evaluate(page, pageScript(`
@@ -425,7 +438,7 @@ async function runRoute(page, route) {
     return summary();
   `));
   assert.equal(stale.ids.length, expectedCount, `${route.label}: stale Random cache should rebuild to the current count`);
-  assert.equal(stale.state.buildConfig.buildVersion, "random-topic-split-v2", `${route.label}: stale Random cache should be replaced`);
+  assert.equal(stale.state.buildConfig.buildVersion, "random-balanced-v3", `${route.label}: stale Random cache should be replaced`);
   assert.equal(stale.missingIds.length, 0, `${route.label}: stale Random cache should not leave fake IDs`);
 
   const revision = await evaluate(page, pageScript(`

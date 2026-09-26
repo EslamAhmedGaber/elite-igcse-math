@@ -97,7 +97,11 @@ const systemPages = [
   "ial/wme01/index.html"
 ];
 systemPages.forEach((relativePath) => {
-  assert(read(relativePath).includes("elite-system.css?v=20260822a"), `${relativePath} is not linked to Elite System`);
+  const markup = read(relativePath);
+  // Version-agnostic on purpose: the release cache-buster moves, the
+  // requirement that the page is linked and busted does not.
+  assert(/elite-system\.css\?v=[A-Za-z0-9._-]+/.test(markup), `${relativePath} is not linked to a cache-busted Elite System stylesheet`);
+  assert(/elite-ux\.css\?v=[A-Za-z0-9._-]+/.test(markup), `${relativePath} is not linked to the Elite UX layer`);
 });
 
 assert(lead.includes("COMPACT_WORKSPACE_PAGES"), "Task pages must opt into the compact study workspace");
@@ -120,12 +124,17 @@ assert(printUtils.includes("min-height: 277mm"), "Printable A4 content height is
 assert(printUtils.includes("break-after: page"), "One-item-per-page print break is missing");
 assert(printUtils.includes("waitForMathTypesetting"), "Dynamic solution maths must be typeset before printing");
 assert(printUtils.includes('.pathway-tool-strip'), "Dynamic course navigation must be hidden from exam printouts");
-assert(exam.includes('</article>\n        <section class="exam-print-solution${printDensityClass}"'), "Question and solution print pages must be siblings");
-assert(exam.includes('data-print-step-count="${printStepCount}"'), "Long printable solutions must expose their density signal");
-assert(exam.includes("Solution ${index + 1} | eliteigcse.com"), "Solution footer branding is missing");
+const paperPrint = read("paper-print.js");
+const paperCss = read("paper-print.css");
+assert(paperCss.includes("size: A4 portrait") && paperCss.includes("height: 297mm"), "A4 paper sheets must be fixed at 210 x 297 mm");
+assert(paperPrint.includes("function findCut("), "Tall questions must be split at a blank row");
+assert(paperPrint.includes("ensureFrameMath"), "Solution maths must be typeset inside the print frame before layout");
+assert(paperPrint.includes("eliteigcse.com") && paperPrint.includes("Dr Eslam Ahmed"), "Printed branding is missing");
+assert(exam.includes('openPrintStudio("solutions"'), "Exam solutions print must use the A4 paper engine");
+assert(exam.includes('openPrintStudio("student"'), "Exam student print must use the A4 paper engine");
 
 console.log("Elite resource command center checks passed");
 console.log("- Classified pagination, visible filters, selection dock, and difficulty bands verified");
 console.log("- Book and Paper finders verified");
 console.log(`- Elite System linked across ${systemPages.length} primary pages`);
-console.log("- A4 question and alternating solution print contracts verified");
+console.log("- A4 paper engine, tall-question splitting, and solution print contracts verified");

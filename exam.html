@@ -17,16 +17,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="pathway-bootstrap.js?v=baccalaureate-20260902b"></script>
   <link rel="stylesheet" href="styles.css?v=20260809a">
-  <link rel="stylesheet" href="elite-system.css?v=20260822a">
+  <link rel="stylesheet" href="elite-system.css?v=20260906b">
+  <link rel="stylesheet" href="exam-tools.css?v=20260926a">
+  <link rel="stylesheet" href="elite-ux.css?v=20260906ux1">
   <script defer src="pathway-mode.js?v=20260902c"></script>
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js?v=20260611a"></script>
   <script defer src="worked-solution.js?v=20260714a"></script>
   <script defer src="runtime-loader.js?v=20260809a"></script>
   <script defer src="print-utils.js?v=baccalaureate-20260902a"></script>
+  <script defer src="paper-print.js?v=20260926a"></script>
   <script defer src="revision-engine.js?v=20260530b"></script>
-  <script defer src="exam-bootstrap.js?v=baccalaureate-20260902c"></script>
-  <script defer src="course-modules.js?v=baccalaureate-20260902b"></script>
+  <script defer src="exam-bootstrap.js?v=20260926a"></script>
+  <script defer src="course-modules.js?v=ux-20260906a"></script>
   <script defer src="lead.js?v=20260822a"></script>
 </head>
 <body data-page="exam">
@@ -163,6 +166,7 @@
           </label>
           <label>Time limit
             <select id="examDuration">
+              <option value="auto" selected>Auto (exam pace)</option>
               <option value="90">90 minutes</option>
               <option value="120">120 minutes</option>
               <option value="60">60 minutes</option>
@@ -187,6 +191,23 @@
           <label>Target marks
             <input id="examTargetMarks" type="number" min="0" step="1" value="0">
           </label>
+          <label title="Level is estimated from marks: under 3 Easy, 3 to 4 Medium, 5 or more Hard">Level mix
+            <select id="examLevelMix">
+              <option value="natural" selected>Natural (as in bank)</option>
+              <option value="balanced">Balanced 30/40/30</option>
+              <option value="foundation">Easier 50/35/15</option>
+              <option value="challenge">Harder 10/35/55</option>
+            </select>
+          </label>
+          <label>Question order
+            <select id="examOrder">
+              <option value="exam" selected>Exam style (easier first)</option>
+              <option value="shuffle">Shuffled</option>
+            </select>
+          </label>
+          <label>Test code
+            <input id="examSeed" type="text" inputmode="text" autocomplete="off" spellcheck="false" maxlength="24" placeholder="New code each time">
+          </label>
         </div>
         <section class="topic-mix-panel" aria-labelledby="examTopicMixTitle">
           <div class="topic-mix-head">
@@ -204,8 +225,9 @@
         </section>
         <div class="exam-check-row">
           <label><input id="examUnsolvedOnly" type="checkbox"> Use unsolved only</label>
-          <label><input id="examAvoidRepeats" type="checkbox"> Avoid recent mock repeats</label>
+          <label><input id="examAvoidRepeats" type="checkbox"> Avoid recent repeats (last 6 papers)</label>
         </div>
+        <section id="examPlanSummary" class="exam-plan" aria-live="polite" aria-label="Paper summary before building"></section>
       </section>
 
       <section class="exam-mode-panel" data-mode-panel="custom" hidden>
@@ -253,10 +275,10 @@
               <div class="exam-controls builder-filters builder-filters-refine">
                 <label>Difficulty
                   <select id="builderDifficulty">
-                    <option value="">All</option>
-                    <option value="quick">Quick 1-3</option>
-                    <option value="standard">Standard 4-6</option>
-                    <option value="long">Long 7+</option>
+                    <option value="">All levels</option>
+                    <option value="easy">Easy (under 3 marks)</option>
+                    <option value="medium">Medium (3&ndash;4 marks)</option>
+                    <option value="hard">Hard (5+ marks)</option>
                     <option value="q20">Q20+</option>
                   </select>
                 </label>
