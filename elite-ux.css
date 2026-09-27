@@ -3234,3 +3234,174 @@ body[data-course-palette] .layout-toggle button.is-active {
     }
   }
 }
+
+/* ==========================================================================
+   PHASE B - PAST PAPERS
+   Paper and solution buttons as a calm pair: paper = neutral white,
+   solution = soft royal. The label never carries its own box.
+   ========================================================================== */
+@media screen {
+  main .pp-section[data-pathway] .pp-session .pp-paper {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 36px;
+    padding: 5px 12px 5px 6px;
+    border: 1px solid var(--ux-line-strong);
+    border-radius: 10px;
+    background: var(--ux-surface);
+    color: var(--ux-ink-2);
+    font-size: var(--ux-fs-sm);
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: none;
+    transition: border-color .15s ease, background-color .15s ease, transform .15s ease;
+  }
+
+  main .pp-section[data-pathway] .pp-session .pp-paper::before {
+    padding: 2px 6px;
+    border-radius: 6px;
+    background: var(--ux-subtle);
+    color: var(--ux-ink-3);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .06em;
+  }
+
+  main .pp-section[data-pathway] .pp-session .pp-paper.solution {
+    border-color: var(--ux-royal-line);
+    background: var(--ux-royal-soft);
+    color: var(--ux-royal-ink);
+  }
+
+  main .pp-section[data-pathway] .pp-session .pp-paper.solution::before {
+    background: #fff !important; /* beats the Phase A dark-button badge */
+    color: var(--ux-gold-ink) !important;
+  }
+
+  main .pp-section[data-pathway] .pp-session .pp-paper:hover {
+    border-color: var(--ux-royal);
+    transform: translateY(-1px);
+  }
+
+  main .pp-section[data-pathway] .pp-session .pp-paper .pp-paper-label {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+  }
+
+  main .pp-section[data-pathway] .pp-session {
+    border-radius: 12px;
+  }
+
+  main .pp-section[data-pathway] .pp-session > strong {
+    color: var(--ux-ink);
+    font-size: var(--ux-fs-base);
+  }
+}
+
+/* ==========================================================================
+   PHASE B - MOCK / TEST BUILDER
+   Only show actions that can be used now, and one empty state, not two.
+   ========================================================================== */
+@media screen {
+  body[data-page="exam"] #finishExamBtn:disabled,
+  body[data-page="exam"] #saveExamBtn:disabled,
+  body[data-page="exam"] #saveCurrentTestBtn:disabled {
+    display: none;
+  }
+
+  body[data-page="exam"] .exam-builder > .planner-actions {
+    align-items: center;
+    padding-top: var(--ux-gap-4);
+    border-top: 1px solid var(--ux-line);
+  }
+
+  body[data-page="exam"] #startExamBtn {
+    min-width: 190px;
+  }
+
+  body[data-page="exam"] #printExamBtn,
+  body[data-page="exam"] #printSolutionBtn {
+    border-color: var(--ux-royal-line);
+    color: var(--ux-royal-ink);
+  }
+
+  /* the paper area says nothing until a paper exists */
+  body[data-page="exam"] #examPaper:has(> .empty-roadmap:only-child) {
+    display: none;
+  }
+
+  body[data-page="exam"] .exam-result-card {
+    border-left: 4px solid var(--ux-royal);
+  }
+
+  body[data-page="exam"] .exam-question {
+    border-top: 3px solid var(--course-signature, var(--ux-royal));
+  }
+
+  body[data-page="exam"] .exam-question header strong {
+    color: var(--ux-ink);
+  }
+}
+
+@media screen {
+  body[data-page="exam"] .topic-mix-grid {
+    max-height: 272px;
+  }
+  body[data-page="exam"] .topic-mix-grid label.is-empty {
+    opacity: .5;
+  }
+  body[data-page="exam"] .topic-mix-grid label.is-empty em {
+    background: transparent;
+  }
+}
+
+/* Books: the gold card chip fix above lost to `.d-meta li` in styles.css */
+@media screen {
+  .download-card.highlight .d-meta li {
+    border: 1px solid var(--ux-gold-line);
+    background: rgba(255, 255, 255, .8);
+    color: var(--ux-gold-ink);
+  }
+}
+
+/* ==========================================================================
+   PHASE B - CONTRAST SWEEP 2 (automated, desktop, all pages)
+   Gold stays a fill/accent. When gold carries text on a light surface it
+   becomes the deeper --ux-gold-ink: same family, readable (about 5:1).
+   ========================================================================== */
+@media screen {
+  .elite-breadcrumb .elite-breadcrumb-sub,
+  .ial-subject-code,
+  .ial-subject-tag.is-coming,
+  body[data-page="about"] .about-hero .lede,
+  body[data-page="progress"] .eyebrow {
+    color: var(--ux-gold-ink);
+  }
+
+  .home-rebuild .home-core-action[data-module="past-solutions"] .home-core-action-open {
+    color: var(--ux-gold-ink);
+  }
+
+  .home-rebuild .home-core-action[data-module="notes"] .home-core-action-open {
+    color: #1d6aa8;
+  }
+
+  .pp-session-origin {
+    color: #0d666b;
+  }
+
+  .notes-card [class*="studied"],
+  .ial-note-card [class*="studied"] {
+    color: #475569;
+  }
+}
+
+@media screen {
+  body[data-page="progress"] .action-card .eyebrow { color: var(--ux-gold); }
+  .elite-breadcrumb .is-current .elite-breadcrumb-sub { color: var(--ux-gold-ink); }
+  .notes-study-ring span { color: #475569; }
+  body[data-page="baccalaureate"] .meta { color: #53696c; }
+}

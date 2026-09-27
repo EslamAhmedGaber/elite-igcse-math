@@ -37,7 +37,7 @@
     if (!ialCourse && !baccalaureate) {
       await root.EliteRuntime.loadScript("topic-normalizer.js", { id: "eliteExamTopicNormalizer" });
     }
-    await root.EliteRuntime.loadScript("exam.js?v=20260926a", { id: "eliteExamApp" });
+    await root.EliteRuntime.loadScript("exam.js?v=20260927a", { id: "eliteExamApp" });
     setLoading(false);
   }
 

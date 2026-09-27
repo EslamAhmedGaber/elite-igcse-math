@@ -611,7 +611,7 @@
     container.innerHTML = topics.map((topic) => {
       const count = topicPoolCount(topic, bank, unit, part);
       const checked = previous.has(topic) ? " checked" : "";
-      return `<label><input type="checkbox" value="${escapeHtml(topic)}"${checked}> <span>${escapeHtml(topicDisplayLabel(topic, unit))}</span><em>${count}</em></label>`;
+      return `<label${count ? "" : ' class="is-empty" title="No questions in this bank for this topic"'}><input type="checkbox" value="${escapeHtml(topic)}"${checked}> <span>${escapeHtml(topicDisplayLabel(topic, unit))}</span><em>${count}</em></label>`;
     }).join("") || `<div class="empty-roadmap">No topics match this chapter yet.</div>`;
     updateTopicMixSummary(container, summary);
   }
