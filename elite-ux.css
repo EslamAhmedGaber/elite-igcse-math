@@ -4119,3 +4119,217 @@ body[data-course-palette] .layout-toggle button.is-active {
     color: #fff !important;
   }
 }
+
+/* header: quiet separators group IGCSE | IAL | other */
+@media screen and (min-width: 1100px) {
+  .site-nav > .nav-group-pure,
+  .site-nav > .nav-group-baccalaureate {
+    position: relative;
+    margin-left: 14px;
+  }
+  .site-nav > .nav-group-pure::before,
+  .site-nav > .nav-group-baccalaureate::before {
+    content: "";
+    position: absolute;
+    top: 22%;
+    bottom: 22%;
+    left: -8px;
+    width: 1px;
+    background: var(--ux-line-strong);
+  }
+}
+
+/* ==========================================================================
+   COURSE HUB v2 (Dr Eslam's direction, 2026-09-27)
+   No navy panel behind the tools: six large white cards, 3 columns x 2 rows,
+   strong borders and type, each tool in its own accent colour. The current
+   page is outlined in its accent with a "You are here" tag.
+   ========================================================================== */
+@media screen {
+  .course-bar {
+    margin: 18px auto 28px;
+  }
+
+  .course-bar .course-bar-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 16px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+  }
+
+  .course-bar .course-bar-id {
+    align-items: center;
+    padding-left: 14px;
+    border-left: 5px solid var(--course-signature, var(--ux-royal));
+  }
+
+  .course-bar .course-bar-kicker {
+    color: var(--ux-gold-ink);
+  }
+
+  .course-bar .course-bar-name {
+    color: var(--ux-ink);
+    font-size: 28px;
+  }
+
+  .course-bar .course-bar-code {
+    border-color: var(--ux-gold-line);
+    background: var(--ux-gold-soft);
+    color: var(--ux-gold-ink);
+  }
+
+  .course-bar .course-bar-switch {
+    border-color: var(--ux-line-strong);
+    background: var(--ux-surface);
+    color: var(--ux-ink-2);
+  }
+
+  .course-bar .course-bar-switch:hover {
+    border-color: var(--ux-royal);
+    color: var(--ux-royal-ink);
+  }
+
+  .course-bar .course-bar-more summary {
+    border: 1px solid var(--ux-line-strong);
+    background: var(--ux-surface);
+    color: var(--ux-ink-2);
+  }
+
+  .course-bar .course-bar-more[open] summary {
+    border-color: var(--ux-royal);
+    background: var(--ux-royal-soft);
+    color: var(--ux-royal-ink);
+  }
+
+  .course-bar .course-bar-tools {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .course-bar .course-bar-tools a {
+    --tile: #1b4fd8;
+    --tile-soft: #ebf1ff;
+    position: relative;
+    display: grid;
+    grid-template-columns: 56px minmax(0, 1fr);
+    align-items: start;
+    gap: 16px;
+    min-height: 150px;
+    padding: 24px 24px 22px;
+    border: 1.5px solid #cfd9e6;
+    border-top: 5px solid var(--tile);
+    border-radius: 18px;
+    background: #fff;
+    color: var(--ux-ink);
+    box-shadow: 0 6px 18px rgba(14, 27, 46, .07);
+  }
+
+  .course-bar .course-bar-tools a[data-module="notes"] { --tile: #1f7fc4; --tile-soft: #e6f2fb; }
+  .course-bar .course-bar-tools a[data-module="classified"] { --tile: #1b4fd8; --tile-soft: #ebf1ff; }
+  .course-bar .course-bar-tools a[data-module="past-solutions"],
+  .course-bar .course-bar-tools a[data-module="papers"] { --tile: #b7831c; --tile-soft: #fbf3df; }
+  .course-bar .course-bar-tools a[data-module="books"] { --tile: #16305a; --tile-soft: #e7edf6; }
+  .course-bar .course-bar-tools a[data-module="build-test"],
+  .course-bar .course-bar-tools a[data-module="builder"] { --tile: #0f7d73; --tile-soft: #e1f3f1; }
+  .course-bar .course-bar-tools a[data-module="progress"] { --tile: #5b49c4; --tile-soft: #efecfd; }
+
+  .course-bar .course-tile-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: var(--tile-soft);
+    color: var(--tile);
+  }
+
+  .course-bar .course-bar-tools a .course-tile-icon .module-icon {
+    width: 27px;
+    height: 27px;
+  }
+
+  .course-bar .course-tile-text {
+    gap: 6px;
+    padding-top: 2px;
+  }
+
+  .course-bar .course-tile-text strong {
+    color: var(--ux-ink);
+    font-size: 21px;
+    line-height: 1.2;
+  }
+
+  .course-bar .course-tile-text small {
+    color: var(--ux-ink-3);
+    font-size: var(--ux-fs-base);
+    line-height: 1.5;
+  }
+
+  .course-bar .course-tile-text::after {
+    content: "Open \2192";
+    margin-top: 8px;
+    color: var(--tile);
+    font-size: var(--ux-fs-sm);
+    font-weight: 800;
+  }
+
+  .course-bar .course-bar-tools a:hover {
+    transform: translateY(-3px);
+    border-color: var(--tile);
+    background: #fff;
+    color: var(--ux-ink);
+    box-shadow: 0 18px 36px rgba(14, 27, 46, .12);
+  }
+
+  .course-bar .course-bar-tools a[aria-current="page"] {
+    border: 2px solid var(--tile);
+    border-top-width: 5px;
+    background: linear-gradient(180deg, var(--tile-soft) 0%, #fff 70%);
+    box-shadow: 0 12px 28px rgba(14, 27, 46, .10);
+  }
+
+  .course-bar .course-bar-tools a[aria-current="page"] .course-tile-text strong {
+    color: var(--ux-ink);
+  }
+
+  .course-bar .course-bar-tools a[aria-current="page"] .course-tile-text small {
+    color: var(--ux-ink-3);
+  }
+
+  .course-bar .course-bar-tools a[aria-current="page"] .course-tile-icon {
+    background: var(--tile);
+    color: #fff;
+  }
+
+  .course-bar .course-bar-tools a[aria-current="page"] .course-tile-text::after {
+    content: "You are here";
+  }
+
+  .course-bar .course-bar-tools a[aria-current="page"]::after {
+    content: "";
+  }
+
+  @media (max-width: 1100px) {
+    .course-bar .course-bar-tools {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 760px) {
+    .course-bar .course-bar-tools {
+      display: none;
+    }
+
+    .course-bar .course-bar-name {
+      font-size: var(--ux-fs-lg);
+    }
+  }
+}
+@media screen and (min-width: 761px) {
+  .course-bar .course-bar-tools a { min-height: 178px; padding: 28px 26px 24px; }
+  .course-bar .course-tile-text strong { font-size: 22px; }
+}
