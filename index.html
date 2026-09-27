@@ -27,12 +27,12 @@
   <script src="pathway-bootstrap.js?v=baccalaureate-20260902b"></script>
   <link rel="stylesheet" href="styles.css?v=20260809a">
   <link rel="stylesheet" href="elite-system.css?v=20260906b">
-  <link rel="stylesheet" href="elite-ux.css?v=20260927c">
+  <link rel="stylesheet" href="elite-ux.css?v=20260927d">
   <script defer src="pathway-mode.js?v=baccalaureate-20260902c"></script>
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js"></script>
   <script defer src="course-modules.js?v=ux-20260906a"></script>
-  <script defer src="lead.js?v=20260927a"></script>
+  <script defer src="lead.js?v=20260927b"></script>
 </head>
 <body data-page="home">
 
@@ -86,17 +86,58 @@
         </div>
       </header>
 
-      <div class="home-course-tabs" role="tablist" aria-label="Choose your course">
-        <button type="button" role="tab" data-home-course="linear" aria-selected="true" aria-controls="homeCoreTools">Linear <small>4MA1</small></button>
-        <button type="button" role="tab" data-home-course="modular-unit-1" aria-selected="false" aria-controls="homeCoreTools">Modular 1 <small>4WM1H</small></button>
-        <button type="button" role="tab" data-home-course="modular-unit-2" aria-selected="false" aria-controls="homeCoreTools">Modular 2 <small>4WM2H</small></button>
-        <button type="button" role="tab" data-home-course="pure" aria-selected="false" aria-controls="homeCoreTools">Pure 1 <small>WMA11</small></button>
-        <button type="button" role="tab" data-home-course="pure2" aria-selected="false" aria-controls="homeCoreTools">Pure 2 <small>WMA12</small></button>
-        <button type="button" role="tab" data-home-course="mechanics1" aria-selected="false" aria-controls="homeCoreTools">Mechanics 1 <small>WME01</small></button>
+      <div class="home-course-tabs home-course-picker" role="tablist" aria-label="Choose your course">
+        <div class="course-group">
+          <p class="course-group-label"><span>Edexcel IGCSE Mathematics</span><small>International GCSE &middot; Higher tier</small></p>
+          <div class="course-group-cards">
+            <button type="button" role="tab" class="course-card" data-tone="linear" data-home-course="linear" aria-selected="true" aria-controls="homeCoreTools">
+              <span class="course-card-code">4MA1</span>
+              <strong>Linear</strong>
+              <span class="course-card-desc">The full IGCSE Mathematics A course, both papers.</span>
+              <span class="course-card-meta">1,176 questions &middot; 48 paper sets</span>
+            </button>
+            <button type="button" role="tab" class="course-card" data-tone="modular" data-home-course="modular-unit-1" aria-selected="false" aria-controls="homeCoreTools">
+              <span class="course-card-code">4WM1H</span>
+              <strong>Modular Unit 1</strong>
+              <span class="course-card-desc">First modular unit: number, algebra, graphs and more.</span>
+              <span class="course-card-meta">417 classified questions</span>
+            </button>
+            <button type="button" role="tab" class="course-card" data-tone="modular" data-home-course="modular-unit-2" aria-selected="false" aria-controls="homeCoreTools">
+              <span class="course-card-code">4WM2H</span>
+              <strong>Modular Unit 2</strong>
+              <span class="course-card-desc">Second modular unit: geometry, vectors, statistics and more.</span>
+              <span class="course-card-meta">441 classified questions</span>
+            </button>
+          </div>
+        </div>
+        <div class="course-group">
+          <p class="course-group-label"><span>Edexcel International A Level</span><small>IAL Mathematics units</small></p>
+          <div class="course-group-cards">
+            <button type="button" role="tab" class="course-card" data-tone="pure" data-home-course="pure" aria-selected="false" aria-controls="homeCoreTools">
+              <span class="course-card-code">WMA11</span>
+              <strong>Pure 1</strong>
+              <span class="course-card-desc">Algebra, coordinate geometry, trigonometry, calculus.</span>
+              <span class="course-card-meta">189 worked questions</span>
+            </button>
+            <button type="button" role="tab" class="course-card" data-tone="pure2" data-home-course="pure2" aria-selected="false" aria-controls="homeCoreTools">
+              <span class="course-card-code">WMA12</span>
+              <strong>Pure 2</strong>
+              <span class="course-card-desc">Proof, sequences, exponentials, logs, trig and integration.</span>
+              <span class="course-card-meta">190 worked questions</span>
+            </button>
+            <button type="button" role="tab" class="course-card" data-tone="mechanics" data-home-course="mechanics1" aria-selected="false" aria-controls="homeCoreTools">
+              <span class="course-card-code">WME01</span>
+              <strong>Mechanics 1</strong>
+              <span class="course-card-desc">Kinematics, forces, momentum, moments.</span>
+              <span class="course-card-meta">138 worked questions &middot; Mechanics Lab</span>
+            </button>
+          </div>
+        </div>
       </div>
+      <a class="course-picker-extra" href="egyptian-baccalaureate.html">Also available: Egyptian Baccalaureate Mathematics 2026 &rarr;</a>
 
       <div class="home-active-course" aria-live="polite">
-        <span>Active course</span>
+        <span>Study tools for</span>
         <strong data-home-course-label>Linear</strong>
         <small data-home-course-code>4MA1 route</small>
         <p data-home-course-intro>Everything for Linear, arranged around the resources students use most.</p>

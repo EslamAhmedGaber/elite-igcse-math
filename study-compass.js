@@ -558,7 +558,10 @@
     const hero = document.querySelector(".home-hero");
     if (!hero) return;
     const metrics = courseMetrics(currentCourse);
-    const previous = historyBeforeLoad.find((item) => item.courseId === currentCourse.id) || continueRoute(currentCourse);
+    const visited = historyBeforeLoad.find((item) => item.courseId === currentCourse.id);
+    // First-time visitors see the course picker first; the band appears once there is something to continue.
+    if (!visited && !metrics.noteDone && !metrics.solved && !metrics.mistakes) return;
+    const previous = visited || continueRoute(currentCourse);
     const section = document.createElement("section");
     section.className = "elite-study-home-band";
     section.dataset.studyHomeBand = "";

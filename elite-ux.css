@@ -3405,3 +3405,245 @@ body[data-course-palette] .layout-toggle button.is-active {
   .notes-study-ring span { color: #475569; }
   body[data-page="baccalaureate"] .meta { color: #53696c; }
 }
+
+/* ==========================================================================
+   PHASE B - HOME COURSE PICKER
+   Six clear course cards in two named groups (IGCSE / IAL). The selected
+   card turns navy; the tools for that course appear directly below.
+   ========================================================================== */
+@media screen {
+  .home-rebuild .home-course-picker {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin: 6px 0 12px;
+    padding: 0;
+    overflow: visible;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .home-course-picker .course-group {
+    min-width: 0;
+  }
+
+  .home-course-picker .course-group-label {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 0 0 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--ux-line);
+  }
+
+  .home-course-picker .course-group-label span {
+    color: var(--ux-ink);
+    font-size: var(--ux-fs-base);
+    font-weight: 800;
+  }
+
+  .home-course-picker .course-group-label small {
+    color: var(--ux-muted);
+    font-size: var(--ux-fs-xs);
+    font-weight: 600;
+  }
+
+  .home-course-picker .course-group-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .home-rebuild .home-course-picker .course-card {
+    --tone: var(--ux-royal);
+    --tone-soft: var(--ux-royal-soft);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    min-width: 0;
+    min-height: 168px;
+    padding: 16px 14px 14px;
+    border: 1px solid var(--ux-line);
+    border-top: 4px solid var(--tone);
+    border-radius: 14px;
+    background: var(--ux-surface);
+    color: var(--ux-ink);
+    box-shadow: var(--ux-sh-sm);
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease;
+  }
+
+  .home-course-picker .course-card[data-tone="linear"] { --tone: #1b4fd8; --tone-soft: #ebf1ff; }
+  .home-course-picker .course-card[data-tone="modular"] { --tone: #2f7f73; --tone-soft: #e5f3f0; }
+  .home-course-picker .course-card[data-tone="pure"] { --tone: #4b3f8f; --tone-soft: #efedfa; }
+  .home-course-picker .course-card[data-tone="pure2"] { --tone: #8a3b78; --tone-soft: #f7ecf4; }
+  .home-course-picker .course-card[data-tone="mechanics"] { --tone: #13706a; --tone-soft: #e3f3f1; }
+
+  .home-course-picker .course-card-code {
+    padding: 2px 8px;
+    border-radius: var(--ux-r-pill);
+    background: var(--tone-soft);
+    color: var(--tone);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .06em;
+  }
+
+  .home-course-picker .course-card strong {
+    margin-top: 6px;
+    color: var(--ux-ink);
+    font-size: var(--ux-fs-md);
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  .home-course-picker .course-card-desc {
+    color: var(--ux-ink-3);
+    font-size: var(--ux-fs-xs);
+    line-height: 1.45;
+  }
+
+  .home-course-picker .course-card-meta {
+    margin-top: auto;
+    padding-top: 8px;
+    color: var(--tone);
+    font-size: 11.5px;
+    font-weight: 700;
+  }
+
+  .home-rebuild .home-course-picker .course-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(14, 27, 46, .10);
+  }
+
+  .home-rebuild .home-course-picker .course-card.is-active,
+  .home-rebuild .home-course-picker .course-card[aria-selected="true"] {
+    border-color: var(--tone);
+    background: linear-gradient(160deg, #0f2140 0%, #16304f 100%);
+    box-shadow: 0 16px 32px rgba(11, 26, 51, .22);
+  }
+
+  .home-course-picker .course-card.is-active strong,
+  .home-course-picker .course-card[aria-selected="true"] strong {
+    color: #fff;
+  }
+
+  .home-course-picker .course-card.is-active .course-card-desc,
+  .home-course-picker .course-card[aria-selected="true"] .course-card-desc {
+    color: rgba(226, 234, 248, .82);
+  }
+
+  .home-course-picker .course-card.is-active .course-card-code,
+  .home-course-picker .course-card[aria-selected="true"] .course-card-code {
+    background: rgba(255, 255, 255, .14);
+    color: #fff;
+  }
+
+  .home-course-picker .course-card.is-active .course-card-meta,
+  .home-course-picker .course-card[aria-selected="true"] .course-card-meta {
+    color: var(--ux-gold);
+  }
+
+  .home-course-picker .course-card.is-active::after,
+  .home-course-picker .course-card[aria-selected="true"]::after {
+    content: "Selected";
+    position: absolute;
+    top: 14px;
+    right: 12px;
+    color: var(--ux-gold);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .home-rebuild .home-course-picker .course-card:focus-visible {
+    outline: 3px solid var(--ux-gold);
+    outline-offset: 3px;
+  }
+
+  .home-rebuild .course-picker-extra {
+    display: inline-block;
+    margin: 0 0 18px;
+    color: var(--ux-royal-ink);
+    font-size: var(--ux-fs-sm);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .home-rebuild .course-picker-extra:hover {
+    text-decoration: underline;
+  }
+
+  /* the selected card already says which course is active */
+  .home-rebuild .home-active-course {
+    display: none;
+  }
+
+  @media (max-width: 1120px) {
+    .home-rebuild .home-course-picker {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .home-course-picker .course-group-cards {
+      grid-template-columns: 1fr;
+    }
+
+    .home-rebuild .home-course-picker .course-card {
+      min-height: 0;
+    }
+  }
+}
+
+/* course picker: one group per row, three wide cards, aligned to the card padding */
+@media screen {
+  .home-rebuild .home-course-picker {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-inline: 0;
+    width: auto;
+  }
+  .home-rebuild .home-course-picker .course-card {
+    min-height: 128px;
+    padding: 16px 18px 14px;
+  }
+  .home-course-picker .course-card-desc {
+    font-size: var(--ux-fs-sm);
+  }
+}
+@media screen {
+  .home-rebuild .home-course-picker { margin: 6px 20px 12px; }
+  .home-rebuild .course-picker-extra { margin-left: 20px; }
+  @media (max-width: 760px) {
+    .home-rebuild .home-course-picker { margin-inline: 0; }
+    .home-rebuild .course-picker-extra { margin-left: 0; }
+  }
+}
+
+/* compact line naming the course whose tools are shown below the picker */
+@media screen {
+  .home-rebuild .home-active-course {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin: 4px 20px 12px;
+    padding: 0 0 8px;
+    border: 0;
+    border-bottom: 2px solid var(--ux-line);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  .home-rebuild .home-active-course > span { color: var(--ux-muted); font-size: var(--ux-fs-xs); font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+  .home-rebuild .home-active-course strong { color: var(--ux-ink); font-size: var(--ux-fs-base); }
+  .home-rebuild .home-active-course small { padding: 1px 8px; border-radius: 999px; background: var(--ux-royal-soft); color: var(--ux-royal-ink); font-size: 11px; font-weight: 700; }
+  .home-rebuild .home-active-course p { display: none; }
+}

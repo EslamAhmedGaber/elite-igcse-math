@@ -1620,7 +1620,7 @@
     const leadScript = document.querySelector('script[src*="lead.js"]');
     const baseUrl = leadScript?.src || document.baseURI;
     const dataUrl = new URL("study-search-data.js?v=20260713b", baseUrl).href;
-    const compassUrl = new URL("study-compass.js?v=20260713b", baseUrl).href;
+    const compassUrl = new URL("study-compass.js?v=20260927a", baseUrl).href;
 
     function appendScript(src, marker) {
       return new Promise((resolve, reject) => {

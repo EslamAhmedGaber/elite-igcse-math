@@ -26,10 +26,11 @@ DOWNLOADS_DIR = ROOT / "downloads"
 PRIVATE_OUTPUT = ROOT / "private_output"
 GITIGNORE = ROOT / ".gitignore"
 CURRENT_PATHWAY_BOOTSTRAP_VERSION = "baccalaureate-20260902b"
-CURRENT_LEAD_VERSION = "20260927a"
+CURRENT_LEAD_VERSION = "20260927b"
 CURRENT_STYLE_VERSION = "20260809a"
 CURRENT_COURSE_MODULES_VERSION = "ux-20260906a"
 CURRENT_STUDY_VERSION = "20260713b"
+CURRENT_COMPASS_VERSION = "20260927a"
 CURRENT_SOLUTION_VERSION = "20260714a"
 CURRENT_ELITE_SYSTEM_VERSION = "20260906b"
 CURRENT_RESOURCE_HUB_VERSION = "20260810a"
@@ -550,7 +551,7 @@ def verify_mechanics_lab(report: Report) -> None:
         report.error("lead.js must re-apply the bootstrap pathway context to body/html.")
     if f"study-search-data.js?v={CURRENT_STUDY_VERSION}" not in lead_text:
         report.error("lead.js must load the current generated study search index.")
-    if f"study-compass.js?v={CURRENT_STUDY_VERSION}" not in lead_text:
+    if f"study-compass.js?v={CURRENT_COMPASS_VERSION}" not in lead_text:
         report.error("lead.js must load the current study navigator.")
 
     for shared_file in ("study-search-data.js", "study-compass.js"):
