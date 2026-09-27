@@ -84,7 +84,9 @@ async function launch() {
   const port = await freePort();
   const userDataDir = fs.mkdtempSync(path.join(os.tmpdir(), "elite-a4-"));
   const proc = spawn(browserExecutable(), [
-    "--headless=new", "--disable-gpu", "--no-first-run", "--disable-extensions", "--disable-default-apps",
+    // --no-sandbox only for this local test harness: some Windows setups block the
+    // sandboxed print utility process, which makes Page.printToPDF fail for any page.
+    "--headless=new", "--no-sandbox", "--disable-gpu", "--no-first-run", "--disable-extensions", "--disable-default-apps",
     `--remote-debugging-port=${port}`, `--user-data-dir=${userDataDir}`, "about:blank"
   ], { stdio: "ignore" });
   let version = null;
@@ -366,6 +368,34 @@ async function printChecks(tab, twin, base, course, { count, variants }) {
   if (numbering.student && numbering["solutions-end"]) {
     assert.deepEqual(numbering["solutions-end"], numbering.student, `${course.label}: student and solutions copies share numbering and marks`);
   }
+  // Print / Save as PDF open the finished paper as its own document in a new tab.
+  const handoff = await tab.eval(`(async () => {
+    let captured = null;
+    const realCreate = URL.createObjectURL;
+    const realOpen = window.open;
+    URL.createObjectURL = (blob) => { captured = blob; return "blob:elite-test"; };
+    window.open = () => ({ closed: false });
+    try {
+      document.querySelector(".eps-overlay [data-act=pdf]").click();
+      const html = captured ? await captured.text() : "";
+      return {
+        method: window.ElitePaperPrint.lastPrint.method,
+        sheets: (html.match(/<section class="sheet"/g) || []).length,
+        autoprint: html.includes("window.print()"),
+        siteScripts: /<script[^>]+src=/.test(html),
+        title: ((html.split("<title>")[1] || "").split("<" + "/title>")[0]) || ""
+      };
+    } finally {
+      URL.createObjectURL = realCreate;
+      window.open = realOpen;
+    }
+  })()`);
+  const lastReport = await tab.eval("ElitePaperPrint.lastReport.pages");
+  assert.equal(handoff.method, "tab", `${course.label}: Save as PDF should open the paper in its own tab`);
+  assert.equal(handoff.sheets, lastReport, `${course.label}: the printed tab carries every A4 sheet`);
+  assert.ok(handoff.autoprint && !handoff.siteScripts, `${course.label}: the printed tab is static and opens the print dialog`);
+  assert.match(handoff.title, /^Elite-/, `${course.label}: the PDF gets a meaningful file name`);
+
   // Closing the preview must leave the exam and its buttons untouched.
   const after = await tab.eval(uiScript(course.stateKey, `
     const before = state().ids.join("|");

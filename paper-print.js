@@ -19,7 +19,7 @@
 (function (root) {
   "use strict";
 
-  const VERSION = "20260926a";
+  const VERSION = "20260927a";
   const MM = 96 / 25.4;
   const SCRIPT_SRC = document.currentScript?.src || "";
   const assetUrl = (name) => new URL(`${name}?v=${VERSION}`, SCRIPT_SRC || document.baseURI).href;
@@ -950,21 +950,79 @@
     }
   }
 
-  function printFrame(kind) {
-    if (!studio.ready) return;
+  /* The finished paper as a standalone document: static HTML (maths already
+     typeset as SVG), no scripts from the site, sheets at 100% zoom. */
+  function standalonePaperHtml(title) {
+    const doc = studio.frame.contentDocument;
+    const clone = doc.documentElement.cloneNode(true);
+    clone.querySelectorAll("script, .measure").forEach((node) => node.remove());
+    clone.querySelector("#sheets")?.style.removeProperty("zoom");
+    const titleNode = clone.querySelector("title");
+    if (titleNode) titleNode.textContent = title;
+    const autoprint = `<script>
+      (function () {
+        var printed = false;
+        function go() {
+          if (printed) return;
+          printed = true;
+          window.focus();
+          window.print();
+        }
+        window.addEventListener("load", function () {
+          var fonts = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
+          Promise.race([fonts, new Promise(function (r) { setTimeout(r, 3000); })]).then(function () { setTimeout(go, 250); });
+        });
+      })();
+    <\/script>`;
+    return `<!doctype html>${clone.outerHTML.replace("</body>", `${autoprint}</body>`)}`;
+  }
+
+  function printInFrame(title) {
     const win = studio.frame.contentWindow;
     const originalTitle = document.title;
-    const fileName = studio.spec.fileName || "Elite-Mathematics-paper";
-    document.title = fileNameFor(fileName, studio.opts);
-    win.document.title = document.title;
-    root.ElitePaperPrint.lastPrint = { kind, at: Date.now(), options: { ...studio.opts } };
+    document.title = title;
+    win.document.title = title;
     try {
       win.focus();
       win.print();
     } finally {
       window.setTimeout(() => { document.title = originalTitle; }, 800);
-      studio.overlay.querySelector(`[data-act="${kind}"]`)?.focus();
     }
+  }
+
+  /* Print and Save as PDF open the paper in its own tab and call print there.
+     A top-level document is the one thing every browser prints and saves
+     reliably (printing an inner frame fails on phones and in some dialogs).
+     If the new tab is blocked, fall back to printing the preview frame. */
+  function printFrame(kind) {
+    if (!studio.ready) return;
+    const title = fileNameFor(studio.spec.fileName || "Elite-Mathematics-paper", studio.opts);
+    root.ElitePaperPrint.lastPrint = { kind, at: Date.now(), options: { ...studio.opts }, method: "tab" };
+    let win = null;
+    try {
+      const url = URL.createObjectURL(new Blob([standalonePaperHtml(title)], { type: "text/html" }));
+      win = window.open(url, "_blank");
+      window.setTimeout(() => URL.revokeObjectURL(url), 120000);
+    } catch (error) {
+      win = null;
+    }
+    if (!win) {
+      root.ElitePaperPrint.lastPrint.method = "frame";
+      printInFrame(title);
+      showHint("Your browser blocked a new tab, so the preview is printed directly. For a PDF choose Destination: Save as PDF.");
+    } else {
+      showHint(kind === "pdf"
+        ? "The paper opened in a new tab. In the print dialog choose Destination: Save as PDF, then Save."
+        : "The paper opened in a new tab with the print dialog. Close that tab when you are done to come back here.");
+    }
+    studio.overlay.querySelector(`[data-act="${kind}"]`)?.focus();
+  }
+
+  const DEFAULT_HINT = "A4 portrait, 210 × 297 mm. Print and Save as PDF open the paper in a new tab with the print dialog; keep Scale at Default (100%). For a PDF choose Destination: Save as PDF.";
+
+  function showHint(message) {
+    const hint = studio.overlay.querySelector("[data-hint]");
+    if (hint) hint.textContent = message;
   }
 
   function fileNameFor(base, opts) {
@@ -983,6 +1041,7 @@
     studio.onClose = options.onClose || spec.onClose || null;
     studio.lastFocus = document.activeElement;
     studio.overlay.hidden = false;
+    showHint(DEFAULT_HINT);
     document.documentElement.classList.add("eps-open");
     syncControls();
     studio.overlay.querySelector('[data-opt="version"]').focus();
