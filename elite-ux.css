@@ -4333,3 +4333,62 @@ body[data-course-palette] .layout-toggle button.is-active {
   .course-bar .course-bar-tools a { min-height: 178px; padding: 28px 26px 24px; }
   .course-bar .course-tile-text strong { font-size: 22px; }
 }
+
+/* ==========================================================================
+   NOTES LIBRARY - one colour family
+   Chapter badges navy/gold (were red), booklet feature in the navy hero
+   family (was bright royal), one consistent card accent, neutral tags,
+   soft secondary buttons so the page is calm.
+   ========================================================================== */
+@media screen {
+  body[data-page="notes"] .note-status {
+    background: #0f2140;
+    color: var(--ux-gold);
+    border-color: #0f2140;
+  }
+
+  body[data-page="notes"] .notes-section-head .eyebrow,
+  body[data-page="notes"] .notes-chapter-group .eyebrow {
+    color: var(--ux-gold-ink);
+  }
+
+  body[data-page="notes"] .linear-notes-feature {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    border: 0;
+    border-radius: 18px;
+    background:
+      radial-gradient(640px 280px at 95% -20%, rgba(59, 111, 232, .32), transparent 62%),
+      linear-gradient(135deg, #0b1a33 0%, #102a52 58%, #0d2146 100%);
+    box-shadow: 0 18px 40px rgba(11, 26, 51, .18);
+  }
+
+  body[data-page="notes"] .linear-notes-feature .eyebrow {
+    color: var(--ux-gold);
+  }
+
+  body[data-page="notes"] .note-card {
+    border: 1px solid #d3dce8;
+    border-left: 4px solid var(--course-signature, var(--ux-royal));
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 4px 14px rgba(14, 27, 46, .06);
+  }
+
+  body[data-page="notes"] .note-card:hover {
+    box-shadow: 0 14px 30px rgba(14, 27, 46, .10);
+  }
+
+  body[data-page="notes"] .note-card li {
+    border: 1px solid var(--ux-line);
+    background: var(--ux-subtle);
+    color: var(--ux-ink-3);
+  }
+
+  body[data-page="notes"] .note-card .button.light {
+    border-color: var(--ux-royal-line);
+    background: var(--ux-royal-soft);
+    color: var(--ux-royal-ink);
+  }
+}
