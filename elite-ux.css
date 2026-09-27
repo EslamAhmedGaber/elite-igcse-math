@@ -4392,3 +4392,10 @@ body[data-course-palette] .layout-toggle button.is-active {
     color: var(--ux-royal-ink);
   }
 }
+
+/* About: bio first, credentials 3x2, grade badges in brand colours */
+@media screen {
+  body[data-page="about"] .course-bar { display: none; }
+  body[data-page="about"] .credentials-list { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  body[data-page="about"] .t-grade { background: #0f2140; color: var(--ux-gold); border: 2px solid var(--ux-gold); }
+}
