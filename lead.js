@@ -1177,7 +1177,7 @@
       <nav class="course-bar" data-course-group="${escapeHtml(groupId)}" aria-label="${escapeHtml(toolData.title)} study tools">
         <div class="course-bar-inner">
           <div class="course-bar-id">
-            <span class="course-bar-kicker">Course</span>
+            <span class="course-bar-kicker">Your course</span>
             ${courseName}
             <small class="course-bar-code">${escapeHtml(toolData.detail)}</small>
             <a class="course-bar-switch" href="/index.html#courseLauncher">Switch</a>
@@ -1205,7 +1205,7 @@
       link.pathway ? `data-pathway-choice="${link.pathway}" data-pathway-target="${link.href}"` : "",
       isCoreToolActive(link) ? `aria-current="page"` : "",
     ].filter(Boolean).join(" ");
-    return `<a ${attrs}>${getModuleIcon(moduleKey(link))}<span>${escapeHtml(link.short || link.title)}</span></a>`;
+    return `<a ${attrs}><span class="course-tile-icon">${getModuleIcon(moduleKey(link))}</span><span class="course-tile-text"><strong>${escapeHtml(link.title)}</strong><small>${escapeHtml(link.detail || "")}</small></span></a>`;
   }
 
   function homeCourseOption(courseId) {

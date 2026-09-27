@@ -3647,3 +3647,360 @@ body[data-course-palette] .layout-toggle button.is-active {
   .home-rebuild .home-active-course small { padding: 1px 8px; border-radius: 999px; background: var(--ux-royal-soft); color: var(--ux-royal-ink); font-size: 11px; font-weight: 700; }
   .home-rebuild .home-active-course p { display: none; }
 }
+
+/* one page width everywhere: IAL course pages and Classified line up with the course bar */
+@media screen and (min-width: 1100px) {
+  main.ial-page,
+  body[data-page="practice"] main.shell {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}
+
+/* ==========================================================================
+   PHASE C - TOPIC ROADMAP
+   Chapters as sections with their own progress; compact topic cards with a
+   single facts line, a labelled meter and a status colour.
+   ========================================================================== */
+@media screen {
+  body[data-page="topics"] .roadmap-grid {
+    display: block !important; /* was a flat card grid */
+  }
+
+  .roadmap-chapter {
+    margin: 0 0 28px;
+  }
+
+  .roadmap-chapter-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 0 0 12px;
+    padding: 0 0 10px 14px;
+    border-bottom: 2px solid var(--ux-line);
+    border-left: 4px solid var(--course-signature, var(--ux-royal));
+  }
+
+  .roadmap-chapter-head h2 {
+    margin: 0;
+    color: var(--ux-ink);
+    font-size: var(--ux-fs-lg);
+    line-height: 1.25;
+  }
+
+  .roadmap-chapter-head span {
+    color: var(--ux-muted);
+    font-size: var(--ux-fs-sm);
+    white-space: nowrap;
+  }
+
+  .roadmap-chapter-head b {
+    color: var(--ux-royal-ink);
+  }
+
+  .roadmap-chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  body[data-page="topics"] .roadmap-card {
+    --state: #94a3b8;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 0;
+    padding: 14px;
+    border: 1px solid var(--ux-line);
+    border-top: 3px solid var(--state);
+    border-radius: 12px;
+    background: var(--ux-surface);
+    box-shadow: var(--ux-sh-sm);
+  }
+
+  body[data-page="topics"] .roadmap-card.is-started { --state: var(--ux-royal); }
+  body[data-page="topics"] .roadmap-card.is-complete { --state: #16835f; }
+
+  body[data-page="topics"] .roadmap-card-head {
+    display: grid;
+    gap: 3px;
+  }
+
+  body[data-page="topics"] .roadmap-card-head strong {
+    color: var(--ux-ink);
+    font-size: var(--ux-fs-base);
+    line-height: 1.25;
+  }
+
+  body[data-page="topics"] .roadmap-facts {
+    color: var(--ux-muted);
+    font-size: var(--ux-fs-xs);
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  body[data-page="topics"] .roadmap-meter {
+    height: 6px;
+    margin: 2px 0 0;
+    overflow: hidden;
+    border-radius: 999px;
+    background: var(--ux-subtle);
+  }
+
+  body[data-page="topics"] .roadmap-meter i {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--state);
+  }
+
+  .roadmap-status {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    color: var(--ux-ink-3);
+    font-size: var(--ux-fs-xs);
+    font-weight: 600;
+  }
+
+  .roadmap-status b {
+    color: var(--ux-ink);
+  }
+
+  body[data-page="topics"] .roadmap-actions {
+    display: flex;
+    gap: 6px;
+    margin-top: auto;
+  }
+
+  body[data-page="topics"] .roadmap-actions .button {
+    flex: 1 1 0;
+    min-height: 34px;
+    padding: 6px 10px;
+    font-size: var(--ux-fs-xs);
+  }
+
+  @media (max-width: 1180px) {
+    .roadmap-chapter-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 860px) {
+    .roadmap-chapter-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .roadmap-chapter-head {
+      flex-direction: column;
+      gap: 4px;
+    }
+  }
+}
+
+@media screen {
+  body[data-page="topics"] .roadmap-actions .button.primary {
+    border: 1px solid var(--ux-royal-line);
+    background: var(--ux-royal-soft);
+    color: var(--ux-royal-ink);
+    box-shadow: none;
+  }
+  body[data-page="topics"] .roadmap-actions .button.primary:hover {
+    border-color: var(--ux-royal);
+    background: var(--ux-royal);
+    color: #fff;
+  }
+  body[data-page="topics"] .roadmap-card.is-empty {
+    background: var(--ux-canvas);
+    box-shadow: none;
+  }
+  body[data-page="topics"] .roadmap-card.is-empty .roadmap-meter,
+  body[data-page="topics"] .roadmap-card.is-empty .roadmap-status { display: none; }
+  body[data-page="topics"] .roadmap-muted { color: var(--ux-muted); font-size: var(--ux-fs-xs); font-style: italic; }
+}
+
+/* ==========================================================================
+   COURSE HUB CARD (replaces the slim bar per Dr Eslam's direction)
+   The six core tools are the most important thing on every course page:
+   a large navy card, course name on top, six big tiles in one row, each
+   with its own calm accent, the current page shown as a white tile.
+   ========================================================================== */
+@media screen {
+  .course-bar {
+    margin: 14px auto 18px;
+  }
+
+  .course-bar-inner {
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 14px;
+    min-height: 0;
+    padding: 18px 20px 20px 22px;
+    border-radius: 18px;
+    background:
+      radial-gradient(700px 240px at 100% -30%, rgba(59, 111, 232, .28), transparent 65%),
+      linear-gradient(120deg, #0b1a33 0%, #102a52 60%, #0d2146 100%);
+    box-shadow: 0 18px 40px rgba(11, 26, 51, .18);
+  }
+
+  .course-bar-id {
+    flex: 1 1 auto;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .course-bar-kicker {
+    display: inline !important;
+    color: var(--ux-gold);
+  }
+
+  .course-bar .course-bar-name {
+    font-size: 24px;
+    letter-spacing: -.01em;
+  }
+
+  .course-bar-code {
+    padding: 2px 9px;
+    border: 1px solid rgba(226, 184, 79, .45);
+    border-radius: 999px;
+  }
+
+  .course-bar-tools {
+    order: 3;
+    display: grid;
+    flex: 1 1 100%;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .course-bar-tools a {
+    --tile: #8fb0ff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    min-height: 118px;
+    padding: 14px 14px 14px;
+    border: 1px solid rgba(255, 255, 255, .10);
+    border-top: 3px solid var(--tile);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, .055);
+    color: #fff;
+    white-space: normal;
+    transition: transform .15s ease, background-color .15s ease, border-color .15s ease;
+  }
+
+  .course-bar-tools a[data-module="notes"] { --tile: #6bb8f0; }
+  .course-bar-tools a[data-module="classified"] { --tile: #7da2ff; }
+  .course-bar-tools a[data-module="past-solutions"],
+  .course-bar-tools a[data-module="papers"] { --tile: #e2b84f; }
+  .course-bar-tools a[data-module="books"] { --tile: #b7c6de; }
+  .course-bar-tools a[data-module="build-test"],
+  .course-bar-tools a[data-module="builder"] { --tile: #4fc7b8; }
+  .course-bar-tools a[data-module="progress"] { --tile: #a99bf7; }
+
+  .course-tile-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+    background: color-mix(in srgb, var(--tile) 20%, transparent);
+    color: var(--tile);
+  }
+
+  .course-bar-tools a .course-tile-icon .module-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .course-tile-text {
+    display: grid;
+    gap: 3px;
+  }
+
+  .course-tile-text strong {
+    color: #fff;
+    font-size: var(--ux-fs-base);
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  .course-tile-text small {
+    color: rgba(220, 230, 250, .72);
+    font-size: var(--ux-fs-xs);
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  .course-bar-tools a:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, .22);
+    border-top-color: var(--tile);
+    background: rgba(255, 255, 255, .10);
+    color: #fff;
+  }
+
+  .course-bar-tools a[aria-current="page"] {
+    border-color: #fff;
+    border-top-color: var(--tile);
+    background: #fff;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .25);
+  }
+
+  .course-bar-tools a[aria-current="page"] .course-tile-text strong {
+    color: #0b1a33;
+  }
+
+  .course-bar-tools a[aria-current="page"] .course-tile-text small {
+    color: var(--ux-ink-3);
+  }
+
+  .course-bar-tools a[aria-current="page"] .course-tile-icon {
+    background: #0b1a33;
+    color: var(--tile);
+  }
+
+  .course-bar-tools a[aria-current="page"] .module-icon {
+    color: inherit;
+  }
+
+  @media (max-width: 1180px) {
+    .course-bar-tools {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .course-bar-tools a {
+      min-height: 0;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .course-bar-tools {
+      display: none;
+    }
+
+    .course-bar .course-bar-name {
+      font-size: var(--ux-fs-md);
+    }
+  }
+
+  /* numbers under the hub are secondary: hidden by default on course pages */
+  main.ial-page > #ialStats {
+    display: none;
+  }
+}
+
+@media screen {
+  /* Classified: keep the bank switch, drop the secondary counters */
+  body[data-page="practice"] .practice-status-strip { display: none !important; }
+}

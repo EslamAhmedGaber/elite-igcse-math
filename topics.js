@@ -131,31 +131,60 @@
       return;
     }
 
-    els.grid.innerHTML = rows.map((row) => {
+    const card = (row) => {
       const total = bank === "expertise" ? row.expertise : row.all;
       const solvedCount = bank === "expertise" ? row.solvedExpertise : row.solvedAll;
       const pct = total ? Math.min(100, Math.round((solvedCount / total) * 100)) : 0;
+      const state = progressState(row, total, bank);
       const practiceUrl = query(row.topic, bank);
       const expertiseUrl = query(row.topic, "expertise");
-      return `<article class="roadmap-card">
+      const facts = [
+        `${row.all} question${row.all === 1 ? "" : "s"}`,
+        `${row.papers.size} paper${row.papers.size === 1 ? "" : "s"}`,
+        row.expertise ? `${row.expertise} Q20+` : ""
+      ].filter(Boolean).join(" &middot; ");
+      const empty = !total;
+      return `<article class="roadmap-card is-${state}${empty ? " is-empty" : ""}">
         <div class="roadmap-card-head">
-          <span>${escapeHtml(row.unit)}</span>
           <strong>${escapeHtml(row.topic)}</strong>
+          <span class="roadmap-facts">${facts}</span>
         </div>
-        <div class="roadmap-meter" aria-label="${pct}% solved">
+        <div class="roadmap-meter" role="img" aria-label="${solvedCount} of ${total} solved">
           <i style="width:${pct}%"></i>
         </div>
-        <div class="roadmap-numbers">
-          <div><strong>${row.all}</strong><span>full bank</span></div>
-          <div><strong>${row.expertise}</strong><span>Q20+</span></div>
-          <div><strong>${solvedCount}</strong><span>solved</span></div>
-          <div><strong>${row.papers.size}</strong><span>papers</span></div>
-        </div>
+        <p class="roadmap-status">${solvedCount ? `${solvedCount} of ${total} solved` : "Not started"}<b>${pct}%</b></p>
         <div class="roadmap-actions">
-          <a class="button primary" href="${practiceUrl}">Practice topic</a>
-          ${row.expertise ? `<a class="button light" href="${expertiseUrl}">Q20+ only</a>` : `<span class="roadmap-muted">No Q20+ set yet</span>`}
+          ${empty
+            ? `<span class="roadmap-muted">No questions in this bank yet</span>`
+            : `<a class="button primary" href="${practiceUrl}">Practice</a>${row.expertise ? `<a class="button light" href="${expertiseUrl}">Q20+ only</a>` : ""}`}
         </div>
       </article>`;
+    };
+
+    const chapters = [];
+    rows.forEach((row) => {
+      let group = chapters.find((item) => item.unit === row.unit);
+      if (!group) {
+        group = { unit: row.unit, rows: [] };
+        chapters.push(group);
+      }
+      group.rows.push(row);
+    });
+
+    els.grid.innerHTML = chapters.map((group) => {
+      const totals = group.rows.reduce((acc, row) => {
+        acc.questions += bank === "expertise" ? row.expertise : row.all;
+        acc.solved += bank === "expertise" ? row.solvedExpertise : row.solvedAll;
+        return acc;
+      }, { questions: 0, solved: 0 });
+      const pct = totals.questions ? Math.round((totals.solved / totals.questions) * 100) : 0;
+      return `<section class="roadmap-chapter" aria-label="${escapeHtml(group.unit)}">
+        <header class="roadmap-chapter-head">
+          <h2>${escapeHtml(group.unit)}</h2>
+          <span>${group.rows.length} topic${group.rows.length === 1 ? "" : "s"} &middot; ${totals.questions} questions &middot; <b>${pct}% solved</b></span>
+        </header>
+        <div class="roadmap-chapter-grid">${group.rows.map(card).join("")}</div>
+      </section>`;
     }).join("");
   }
 
