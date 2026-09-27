@@ -4004,3 +4004,118 @@ body[data-course-palette] .layout-toggle button.is-active {
   /* Classified: keep the bank switch, drop the secondary counters */
   body[data-page="practice"] .practice-status-strip { display: none !important; }
 }
+
+/* ==========================================================================
+   PROGRESS - welcome state for a new student
+   One clear panel replaces empty charts and zero counters until real work
+   exists. The tables (with their Add buttons) stay visible.
+   ========================================================================== */
+@media screen {
+  .progress-welcome {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
+    gap: 20px 32px;
+    align-items: center;
+    margin: 0 0 22px;
+    padding: 28px 30px;
+    border: 1px solid var(--ux-line);
+    border-left: 5px solid var(--ux-royal);
+    border-radius: 18px;
+    background:
+      radial-gradient(500px 220px at 100% 0%, var(--ux-royal-soft), transparent 70%),
+      var(--ux-surface);
+    box-shadow: var(--ux-sh-md);
+  }
+
+  .progress-welcome h2 {
+    margin: 6px 0 8px;
+    color: var(--ux-ink);
+    font-size: var(--ux-fs-xl);
+    line-height: 1.2;
+  }
+
+  .progress-welcome-copy p {
+    margin: 0;
+    color: var(--ux-ink-3);
+    font-size: var(--ux-fs-sm);
+    line-height: 1.55;
+  }
+
+  .progress-welcome-steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: welcome;
+  }
+
+  .progress-welcome-steps li {
+    position: relative;
+    padding: 14px 14px 14px;
+    border: 1px solid var(--ux-line);
+    border-radius: 12px;
+    background: var(--ux-surface);
+    counter-increment: welcome;
+  }
+
+  .progress-welcome-steps li::before {
+    content: counter(welcome, decimal-leading-zero);
+    display: block;
+    margin-bottom: 6px;
+    color: var(--ux-gold-ink);
+    font-size: var(--ux-fs-xs);
+    font-weight: 800;
+    letter-spacing: .08em;
+  }
+
+  .progress-welcome-steps b {
+    display: block;
+    color: var(--ux-ink);
+    font-size: var(--ux-fs-base);
+  }
+
+  .progress-welcome-steps span {
+    display: block;
+    margin-top: 4px;
+    color: var(--ux-ink-3);
+    font-size: var(--ux-fs-xs);
+    line-height: 1.45;
+  }
+
+  .progress-welcome-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  body.progress-is-new .dashboard-analysis-strip,
+  body.progress-is-new .dashboard-detail-metrics,
+  body.progress-is-new .dashboard-trend-strip,
+  body.progress-is-new [aria-label="Detailed metrics"] {
+    display: none !important;
+  }
+
+  @media (max-width: 1000px) {
+    .progress-welcome {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .progress-welcome-steps {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media screen {
+  body.progress-is-new .tracker-dashboard-grid { display: none !important; }
+  .progress-welcome .button.primary {
+    border-color: var(--ux-royal) !important; /* progress page primary is maroon in styles.css */
+    background: var(--ux-royal) !important;
+    color: #fff !important;
+  }
+}

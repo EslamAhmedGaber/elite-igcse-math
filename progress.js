@@ -1201,7 +1201,49 @@
     els.sendBtn.href = `https://wa.me/201120009622?text=${encodeURIComponent(message)}`;
   }
 
+  /* A new student sees one clear starting panel instead of empty charts. */
+  function renderWelcomeState() {
+    const hasWork = paperAttempts.length > 0
+      || readJSON(ASSIGNMENTS_KEY, []).length > 0
+      || readJSON(QUIZZES_KEY, []).length > 0
+      || solved.size > 0;
+    document.body.classList.toggle("progress-is-new", !hasWork);
+    if (hasWork || document.querySelector("[data-progress-welcome]")) return;
+    const anchor = document.querySelector(".dashboard-analysis-strip");
+    if (!anchor) return;
+    const params = new URLSearchParams(window.location.search);
+    const route = new URLSearchParams();
+    ["pathway", "course", "unit"].forEach((key) => { if (params.get(key)) route.set(key, params.get(key)); });
+    const suffix = route.toString() ? `?${route.toString()}` : "";
+    const panel = document.createElement("section");
+    panel.className = "progress-welcome";
+    panel.dataset.progressWelcome = "";
+    panel.dataset.tab = "dashboard";
+    panel.setAttribute("aria-labelledby", "progressWelcomeTitle");
+    panel.innerHTML = `
+      <div class="progress-welcome-copy">
+        <span class="eyebrow">Start here</span>
+        <h2 id="progressWelcomeTitle">Your progress starts with one score.</h2>
+        <p>Everything on this page fills in from your own work, saved in this browser (or your Google account if you sign in).</p>
+      </div>
+      <ol class="progress-welcome-steps">
+        <li><b>Practise</b><span>Solve questions in Classified Practice and mark each one Solved.</span></li>
+        <li><b>Test</b><span>Sit a past paper or a mock, then add your score here.</span></li>
+        <li><b>Improve</b><span>Come back to see readiness, weak topics and your next move.</span></li>
+      </ol>
+      <div class="progress-welcome-actions">
+        <button type="button" class="button primary" data-welcome-add-paper>Add a paper score</button>
+        <a class="button light" href="practice.html${suffix}">Open Classified Practice</a>
+        <a class="button light" href="exam.html${suffix}">Build a mock</a>
+      </div>`;
+    anchor.insertAdjacentElement("beforebegin", panel);
+    panel.querySelector("[data-welcome-add-paper]").addEventListener("click", () => {
+      document.querySelector('.compact-action[data-tab-jump="papers"]')?.click();
+    });
+  }
+
   function render() {
+    renderWelcomeState();
     renderSummary();
     renderNextMoves();
     renderPriorityRows();
