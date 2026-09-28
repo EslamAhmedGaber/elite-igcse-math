@@ -1,9 +1,85 @@
 rules_version = '2';
 
+// Elite Mathematics - Firestore security rules
+// Publish in Firebase console -> Firestore Database -> Rules -> paste -> Publish.
+//
+// student_progress : each signed-in student reads/writes only their own progress.
+// groups           : the teacher (email below) manages groups, exams and marks.
+//                    A student joins a group with its code and can read ONLY:
+//                    the group name/topics, published exams (with average and
+//                    top three), and their own score. Never other students' marks.
+
 service cloud.firestore {
   match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function myEmail() {
+      return request.auth.token.email.lower();
+    }
+
+    function isTeacher() {
+      return signedIn()
+        && request.auth.token.email_verified == true
+        && myEmail() in ['eslamahmedgaberali@gmail.com'];
+    }
+
+    function isMember(code) {
+      return signedIn()
+        && exists(/databases/$(database)/documents/groups/$(code)/members/$(myEmail()));
+    }
+
     match /student_progress/{userId} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
+      allow read, write: if signedIn() && request.auth.uid == userId;
+    }
+
+    // Which groups a student has joined (lets results.html find them again).
+    match /student_groups/{userId} {
+      allow read, write: if signedIn() && request.auth.uid == userId;
+    }
+
+    match /groups/{code} {
+      // Any signed-in user may open a group by its exact code (to join it);
+      // only the teacher may list every group.
+      allow get: if signedIn();
+      allow list: if isTeacher();
+      allow create, update, delete: if isTeacher();
+
+      match /members/{email} {
+        allow get: if isTeacher() || (signedIn() && email == myEmail());
+        allow list: if isTeacher();
+        // A student may add only themselves, and only to a group that exists.
+        allow create: if isTeacher()
+          || (signedIn()
+              && request.auth.token.email_verified == true
+              && email == myEmail()
+              && request.resource.data.email == myEmail()
+              && request.resource.data.addedBy == 'self'
+              && request.resource.data.keys().hasOnly(['name', 'email', 'uid', 'addedBy', 'joinedAt'])
+              && exists(/databases/$(database)/documents/groups/$(code)));
+        // A student already on the roster may link their account and fix their name.
+        allow update: if isTeacher()
+          || (signedIn()
+              && email == myEmail()
+              && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['uid', 'joinedAt', 'name']));
+        allow delete: if isTeacher();
+      }
+
+      match /exams/{examId} {
+        // Members see only published exams (queries must filter published == true).
+        allow read: if isTeacher() || (isMember(code) && resource.data.published == true);
+        allow write: if isTeacher();
+
+        match /scores/{email} {
+          allow read: if isTeacher()
+            || (signedIn()
+                && email == myEmail()
+                && get(/databases/$(database)/documents/groups/$(code)/exams/$(examId)).data.published == true);
+          allow write: if isTeacher();
+        }
+      }
     }
   }
 }

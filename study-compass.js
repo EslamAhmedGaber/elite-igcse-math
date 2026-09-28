@@ -542,6 +542,8 @@
         </div>
         <div>
           <strong>Teachers &amp; Support</strong>
+          <p><a href="/results.html">My Results (students)</a></p>
+          <p><a href="/teacher-groups.html">Groups &amp; Results (teacher)</a></p>
           <p><a href="/admin.html">Teacher Studio &amp; Certificates</a></p>
           <p><a href="/downloads.html">Books &amp; Answers</a></p>
           <p><a href="/pastpapers.html">Past Papers &amp; Solutions</a></p>

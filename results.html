@@ -3,12 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Topic Roadmap - Elite IGCSE Mathematics</title>
-  <meta name="description" content="Explore the full Edexcel IGCSE 4MA1 classified topic roadmap. Choose a topic, see question counts, track progress, and jump straight into practice.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Topic Roadmap - Elite IGCSE Mathematics">
-  <meta property="og:description" content="A student-friendly roadmap for every classified Edexcel IGCSE 4MA1 topic, with direct practice links and progress tracking.">
-  <meta property="og:image" content="https://eliteigcse.com/assets/og-image.png?v=20260527b">
+  <title>My Results - Elite Mathematics</title>
+  <meta name="description" content="See your Elite Mathematics exam results, group average, top three and progress.">
+  <meta name="robots" content="noindex">
   <meta name="theme-color" content="#161b2e">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
@@ -18,17 +15,16 @@
   <script src="pathway-bootstrap.js?v=baccalaureate-20260902b"></script>
   <link rel="stylesheet" href="styles.css?v=20260809a">
   <link rel="stylesheet" href="elite-system.css?v=20260906b">
+  <link rel="stylesheet" href="classroom.css?v=20260928a">
   <link rel="stylesheet" href="elite-ux.css?v=20260927i">
   <script defer src="pathway-mode.js?v=baccalaureate-20260902c"></script>
   <script defer src="firebase-config.js"></script>
-  <script defer src="cloud-progress.js"></script>
-  <script defer src="questions-data.js?v=20260528a"></script>
-  <script defer src="topic-normalizer.js"></script>
-  <script defer src="topics.js?v=20260927a"></script>
+  <script defer src="class-cloud.js?v=20260928a"></script>
+  <script defer src="results.js?v=20260928a"></script>
   <script defer src="course-modules.js?v=ux-20260906a"></script>
   <script defer src="lead.js?v=20260928a"></script>
 </head>
-<body data-page="topics">
+<body data-page="results">
 
   <header class="site-header">
     <a class="site-brand" href="index.html" aria-label="Elite IGCSE Mathematics home">
@@ -95,68 +91,13 @@
       </div>
     </nav>
     <div class="site-cta">
-      <button class="button cloud-auth-button" type="button" data-cloud-login>Continue with Google</button>
-      <a class="button cloud-account-button" href="progress.html" data-cloud-account hidden>My Progress</a>
       <a class="button primary" data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Book Free First Class</a>
     </div>
   </header>
 
-  <main class="page page-topics">
-    <section class="topics-hero" aria-labelledby="topicsTitle">
-      <div>
-        <span class="eyebrow">Topic Roadmap</span>
-        <h1 id="topicsTitle">Pick the exact topic you want to master.</h1>
-        <p>Every card shows how many full-bank and Q20+ questions are available. Choose a topic and the Practice page opens already filtered for you.</p>
-      </div>
-      <div class="topics-hero-stats" aria-label="Roadmap stats">
-        <div><strong id="roadmapTotal">1440</strong><span>Total questions</span></div>
-        <div><strong id="roadmapTopics">59</strong><span>Topics</span></div>
-        <div><strong id="roadmapSolved">0</strong><span>Solved here</span></div>
-      </div>
-    </section>
-
-    <section class="roadmap-controls" aria-label="Roadmap filters">
-      <label>Search topic<input id="roadmapSearch" type="search" placeholder="e.g. Circle Theorems, Probability, Surds"></label>
-      <label><span data-pathway-label="unit">Chapter</span><select id="roadmapUnit"></select></label>
-      <label>Bank<select id="roadmapBank">
-        <option value="all">All classified</option>
-        <option value="expertise">Q20+ expertise</option>
-      </select></label>
-      <label>Progress<select id="roadmapProgress">
-        <option value="">All topics</option>
-        <option value="unsolved">Needs practice</option>
-        <option value="started">Started</option>
-        <option value="complete">Completed</option>
-      </select></label>
-    </section>
-
-    <section id="roadmapGrid" class="roadmap-grid" aria-live="polite"></section>
-
-    <section class="roadmap-guide" aria-label="Roadmap study sequence">
-      <article>
-        <strong>1. Choose a topic</strong>
-        <p>Start with a weak topic or follow the course order shown for your selected pathway.</p>
-      </article>
-      <article>
-        <strong>2. Solve before checking</strong>
-        <p>Try the question first, then mark it solved or save it in the Mistake Box.</p>
-      </article>
-      <article>
-        <strong>3. Build a worksheet</strong>
-        <p>Use the worksheet builder on Practice to print a custom set for revision.</p>
-      </article>
-    </section>
-
-    <section class="final-cta" aria-label="Enrollment">
-      <div>
-        <h2>Not sure which topic to start with?</h2>
-        <p>Message Dr Eslam with your exam date and weakest topic. He will tell you the fastest route to improve.</p>
-      </div>
-      <div class="final-cta-actions">
-        <a class="button primary" data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Ask on WhatsApp</a>
-        <a class="button light" href="practice.html">Open practice bank</a>
-      </div>
-    </section>
+  <main class="cls-page" id="studentResults">
+    <p class="cls-demo-flag" id="rsDemoFlag" hidden>Demo mode: results are stored in this browser only.</p>
+    <div id="rsMain"><p class="cls-muted rs-loading">Loading...</p></div>
   </main>
 
     <footer class="site-footer">
