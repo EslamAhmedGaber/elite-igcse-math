@@ -13,13 +13,13 @@
    3. Question images taller than the space left are cut at a blank row found
       by scanning the pixels, so a line of text, an equation or a diagram is
       never sliced. Leftover space on a sheet becomes extra working space.
-   4. Print and Save as PDF call the same iframe print, so both produce the
-      same pages. Closing or cancelling never touches the exam on the page.
+   4. Print uses the prepared frame. Download PDF renders those same sheets
+      one at a time, independently of the browser's print-preview service.
    ========================================================================== */
 (function (root) {
   "use strict";
 
-  const VERSION = "20260927a";
+  const VERSION = "20260928b";
   const MM = 96 / 25.4;
   const SCRIPT_SRC = document.currentScript?.src || "";
   const assetUrl = (name) => new URL(`${name}?v=${VERSION}`, SCRIPT_SRC || document.baseURI).href;
@@ -35,6 +35,7 @@
      the 182 mm content width), not blown up to fill the page. */
   const IMAGE_SCALE = 0.88;
   const RULE_PITCH_MM = 8;
+  const DEFAULT_HINT = "A4 portrait, 210 x 297 mm. Download PDF saves directly. For Print, use 100% scale and turn off browser headers and footers.";
 
   const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
 
@@ -193,6 +194,11 @@
     return `<div class="blk q-text">${formatText(item.text || "")}${options}</div>`;
   }
 
+  function formatSolutionText(text) {
+    // Successive equations in legacy solutions are separate working lines.
+    return formatText(text).replace(/\\\)\s+\\\(/g, "\\)<br>\\(");
+  }
+
   function solutionBlocksHtml(item) {
     const parts = solutionParts(item.solution);
     const head = `<div class="blk s-head" data-role="s-head"><strong>Solution ${item.number}</strong><span>${escapeHtml([item.sourceRef, plural(Number(item.marks || 0), "mark")].filter(Boolean).join(" · "))}</span></div>`;
@@ -201,7 +207,7 @@
     }
     const steps = parts.steps.map((step, index) => `<div class="blk s-step" data-role="s-unit">
         <span class="s-index">${String(index + 1).padStart(2, "0")}</span>
-        <div class="s-body">${step.title ? `<h4>${escapeHtml(step.title)}</h4>` : ""}<div class="s-copy">${formatText(step.body || "")}</div></div>
+        <div class="s-body">${step.title ? `<h4>${escapeHtml(step.title)}</h4>` : ""}<div class="s-copy">${formatSolutionText(step.body || "")}</div></div>
       </div>`).join("");
     const final = parts.finalAnswer
       ? `<div class="blk s-final" data-role="s-unit"><strong>Final answer</strong><div class="s-copy">${formatText(parts.finalAnswer)}</div></div>`
@@ -791,7 +797,8 @@
     ready: false,
     report: null,
     lastFocus: null,
-    onClose: null
+    onClose: null,
+    exportJob: null
   };
 
   function ensureStudioCss() {
@@ -829,8 +836,8 @@
           <label class="eps-check"><input type="checkbox" data-opt="lines" checked> <span>Ruled working space</span></label>
         </div>
         <div class="eps-actions">
-          <button type="button" class="eps-primary" data-act="print" disabled>Print</button>
-          <button type="button" data-act="pdf" disabled>Save as PDF</button>
+          <button type="button" class="eps-primary" data-act="download" disabled>Download PDF</button>
+          <button type="button" data-act="print" disabled>Print</button>
           <button type="button" class="eps-close" data-act="close" aria-label="Close print preview">Close</button>
         </div>
       </div>
@@ -843,6 +850,7 @@
     overlay.addEventListener("change", (event) => {
       const control = event.target.closest("[data-opt]");
       if (!control) return;
+      if (studio.exportJob) return;
       studio.opts[control.dataset.opt] = control.type === "checkbox" ? control.checked : control.value;
       syncControls();
       rerender();
@@ -851,6 +859,7 @@
       const button = event.target.closest("[data-act]");
       if (!button || button.disabled) return;
       if (button.dataset.act === "close") close();
+      else if (button.dataset.act === "download") downloadPdf();
       else printFrame(button.dataset.act);
     });
     overlay.addEventListener("keydown", (event) => {
@@ -899,7 +908,7 @@
     status.hidden = false;
     status.textContent = message;
     status.classList.remove("is-error");
-    studio.overlay.querySelectorAll('[data-act="print"], [data-act="pdf"]').forEach((button) => { button.disabled = true; });
+    studio.overlay.querySelectorAll('[data-act="print"], [data-act="download"]').forEach((button) => { button.disabled = true; });
     studio.overlay.querySelector("[data-info]").textContent = message;
   }
 
@@ -915,7 +924,7 @@
     studio.ready = true;
     studio.report = report;
     studio.overlay.querySelector("[data-status]").hidden = true;
-    studio.overlay.querySelectorAll('[data-act="print"], [data-act="pdf"]').forEach((button) => { button.disabled = false; });
+    studio.overlay.querySelectorAll('[data-act="print"], [data-act="download"]').forEach((button) => { button.disabled = false; });
     const size = report.sheetSizeMm ? `${Math.round(report.sheetSizeMm.width)} × ${Math.round(report.sheetSizeMm.height)} mm` : "A4";
     const splits = report.splitQuestions.length ? ` · ${plural(report.splitQuestions.length, "long question")} split at a blank line` : "";
     studio.overlay.querySelector("[data-info]").textContent = `${plural(report.pages, "A4 page")} · ${size}${splits}`;
@@ -950,33 +959,6 @@
     }
   }
 
-  /* The finished paper as a standalone document: static HTML (maths already
-     typeset as SVG), no scripts from the site, sheets at 100% zoom. */
-  function standalonePaperHtml(title) {
-    const doc = studio.frame.contentDocument;
-    const clone = doc.documentElement.cloneNode(true);
-    clone.querySelectorAll("script, .measure").forEach((node) => node.remove());
-    clone.querySelector("#sheets")?.style.removeProperty("zoom");
-    const titleNode = clone.querySelector("title");
-    if (titleNode) titleNode.textContent = title;
-    const autoprint = `<script>
-      (function () {
-        var printed = false;
-        function go() {
-          if (printed) return;
-          printed = true;
-          window.focus();
-          window.print();
-        }
-        window.addEventListener("load", function () {
-          var fonts = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
-          Promise.race([fonts, new Promise(function (r) { setTimeout(r, 3000); })]).then(function () { setTimeout(go, 250); });
-        });
-      })();
-    <\/script>`;
-    return `<!doctype html>${clone.outerHTML.replace("</body>", `${autoprint}</body>`)}`;
-  }
-
   function printInFrame(title) {
     const win = studio.frame.contentWindow;
     const originalTitle = document.title;
@@ -990,35 +972,186 @@
     }
   }
 
-  /* Print and Save as PDF open the paper in its own tab and call print there.
-     A top-level document is the one thing every browser prints and saves
-     reliably (printing an inner frame fails on phones and in some dialogs).
-     If the new tab is blocked, fall back to printing the preview frame. */
+  // Keep the prepared document alive while the native print dialog uses it.
   function printFrame(kind) {
-    if (!studio.ready) return;
+    if (!studio.ready || studio.exportJob) return;
     const title = fileNameFor(studio.spec.fileName || "Elite-Mathematics-paper", studio.opts);
-    root.ElitePaperPrint.lastPrint = { kind, at: Date.now(), options: { ...studio.opts }, method: "tab" };
-    let win = null;
-    try {
-      const url = URL.createObjectURL(new Blob([standalonePaperHtml(title)], { type: "text/html" }));
-      win = window.open(url, "_blank");
-      window.setTimeout(() => URL.revokeObjectURL(url), 120000);
-    } catch (error) {
-      win = null;
-    }
-    if (!win) {
-      root.ElitePaperPrint.lastPrint.method = "frame";
-      printInFrame(title);
-      showHint("Your browser blocked a new tab, so the preview is printed directly. For a PDF choose Destination: Save as PDF.");
-    } else {
-      showHint(kind === "pdf"
-        ? "The paper opened in a new tab. In the print dialog choose Destination: Save as PDF, then Save."
-        : "The paper opened in a new tab with the print dialog. Close that tab when you are done to come back here.");
-    }
+    root.ElitePaperPrint.lastPrint = { kind, at: Date.now(), options: { ...studio.opts }, method: "frame" };
+    printInFrame(title);
     studio.overlay.querySelector(`[data-act="${kind}"]`)?.focus();
   }
 
-  const DEFAULT_HINT = "A4 portrait, 210 × 297 mm. Print and Save as PDF open the paper in a new tab with the print dialog; keep Scale at Default (100%). For a PDF choose Destination: Save as PDF.";
+  /* ---- Download PDF: built in the page, no browser print dialog ---------
+     Each finished A4 sheet is rendered to a high-resolution image
+     (html2canvas) and placed full-bleed on an A4 page (jsPDF). This works
+     even where the browser's print preview fails on a computer. */
+  const PDF_LIBS = [
+    ["html2canvas", assetUrl("assets/vendor/html2canvas-1.4.1.min.js")],
+    ["jspdf", assetUrl("assets/vendor/jspdf-2.5.1.umd.min.js")]
+  ];
+  const PDF_RENDER_SCALE = 2.2; // about 210 dpi: sharp text, reasonable file size
+
+  function exportWait(promise, signal, message, ms = 30000) {
+    return new Promise((resolve, reject) => {
+      const abort = () => finish(reject, new DOMException("PDF export cancelled.", "AbortError"));
+      const timer = window.setTimeout(() => finish(reject, new Error(message)), ms);
+      function finish(callback, value) {
+        window.clearTimeout(timer);
+        signal.removeEventListener("abort", abort);
+        callback(value);
+      }
+      signal.addEventListener("abort", abort, { once: true });
+      if (signal.aborted) abort();
+      Promise.resolve(promise).then(value => finish(resolve, value), error => finish(reject, error));
+    });
+  }
+
+  function loadLibrary(win, key, src) {
+    const ready = key === "jspdf" ? () => win.jspdf?.jsPDF : () => win.html2canvas;
+    if (ready()) return Promise.resolve();
+    return new Promise((resolve, reject) => {
+      const script = win.document.createElement("script");
+      script.src = src;
+      script.onload = () => (ready() ? resolve() : reject(new Error("The PDF tools did not start.")));
+      script.onerror = () => reject(new Error("The PDF tools could not load. Check the internet connection."));
+      win.document.head.appendChild(script);
+    });
+  }
+
+  // MathJax SVGs contain local glyph definitions. Flatten each complete SVG
+  // once; cloning all SVGs in the whole exam for every page is quadratic work.
+  async function flattenMath(doc, signal) {
+    for (const svg of doc.querySelectorAll(".sheet svg")) {
+      const rect = svg.getBoundingClientRect();
+      if (!rect.width || !rect.height) continue;
+      const style = doc.defaultView.getComputedStyle(svg);
+      const copy = svg.cloneNode(true);
+      copy.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+      copy.setAttribute("width", String(rect.width));
+      copy.setAttribute("height", String(rect.height));
+      copy.style.color = style.color;
+      copy.querySelectorAll('[stroke-width="0"]').forEach(node => node.setAttribute("stroke", "none"));
+      const image = new doc.defaultView.Image();
+      image.src = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(new XMLSerializer().serializeToString(copy))}`;
+      await exportWait(image.decode(), signal, "A maths image could not be rendered.");
+      const canvas = doc.createElement("canvas");
+      canvas.width = Math.ceil(rect.width * PDF_RENDER_SCALE);
+      canvas.height = Math.ceil(rect.height * PDF_RENDER_SCALE);
+      canvas.getContext("2d").drawImage(image, 0, 0, canvas.width, canvas.height);
+      const flat = doc.createElement("img");
+      flat.src = canvas.toDataURL("image/png");
+      flat.alt = svg.closest("mjx-container")?.getAttribute("aria-label") || "Mathematics";
+      flat.style.cssText = `width:${rect.width}px;height:${rect.height}px;max-width:none;vertical-align:${style.verticalAlign};`;
+      svg.replaceWith(flat);
+      await exportWait(flat.decode(), signal, "A maths image could not be loaded.");
+      canvas.width = canvas.height = 0;
+    }
+  }
+
+  function exportControls(busy) {
+    studio.overlay.querySelectorAll('[data-opt], [data-act="print"], [data-act="download"]').forEach(control => {
+      control.disabled = busy || !studio.ready;
+    });
+  }
+
+  async function buildPdfBlob(onProgress = () => {}) {
+    if (!studio.ready || studio.overlay.hidden) throw new Error("Prepare the paper before downloading it.");
+    if (studio.exportJob) throw new Error("A PDF is already being prepared.");
+    const job = new AbortController();
+    studio.exportJob = job;
+    exportControls(true);
+    const source = studio.frame.contentDocument;
+    const sheets = [...source.querySelectorAll(".sheet")];
+    const spec = { ...studio.spec };
+    const opts = { ...studio.opts };
+    const frame = document.createElement("iframe");
+    frame.className = "eps-export-frame";
+    frame.setAttribute("aria-hidden", "true");
+    frame.tabIndex = -1;
+    frame.style.cssText = "position:fixed;left:-10000px;top:0;width:820px;height:1160px;border:0;pointer-events:none;";
+    try {
+      const loaded = new Promise(resolve => frame.addEventListener("load", resolve, { once: true }));
+      frame.srcdoc = documentHtml(spec, opts);
+      document.body.appendChild(frame);
+      await exportWait(loaded, job.signal, "The PDF document could not load.");
+      const win = frame.contentWindow;
+      const doc = frame.contentDocument;
+      source.querySelectorAll("head style").forEach(style => doc.head.appendChild(style.cloneNode(true)));
+      doc.getElementById("measure").remove();
+      const pageHolder = doc.getElementById("sheets");
+      pageHolder.style.cssText = "display:block;padding:0;margin:0;zoom:1;";
+      for (const [key, src] of PDF_LIBS) {
+        await exportWait(loadLibrary(win, key, src), job.signal, "The PDF tools could not load. Please try again.");
+      }
+      const pdf = new win.jspdf.jsPDF({ unit: "mm", format: "a4", orientation: "portrait", compress: true });
+      for (let index = 0; index < sheets.length; index += 1) {
+        onProgress(index + 1, sheets.length);
+        const sheet = sheets[index].cloneNode(true);
+        // MathJax's screen-reader MathML uses clipping unsupported by html2canvas.
+        // The visible SVG already contains the complete equation.
+        sheet.querySelectorAll("mjx-assistive-mml").forEach(node => node.remove());
+        sheet.style.boxShadow = "none";
+        pageHolder.replaceChildren(sheet);
+        await exportWait(doc.fonts.ready, job.signal, "The paper fonts could not load.");
+        await exportWait(Promise.all([...doc.images].map(img => img.decode())), job.signal, "A question image could not be loaded. Please try again.");
+        await flattenMath(doc, job.signal);
+        const canvas = await exportWait(win.html2canvas(sheet, {
+          scale: PDF_RENDER_SCALE,
+          backgroundColor: "#ffffff",
+          useCORS: true,
+          logging: false,
+          windowWidth: 820,
+          windowHeight: 1160,
+          scrollX: 0,
+          scrollY: 0
+        }), job.signal, "This PDF page took too long to render. Please try a shorter test.", 60000);
+        if (index > 0) pdf.addPage("a4", "portrait");
+        pdf.addImage(canvas.toDataURL("image/jpeg", 0.9), "JPEG", 0, 0, 210, 297, undefined, "FAST");
+        canvas.width = 0;
+        canvas.height = 0;
+        await exportWait(new Promise(resolve => window.setTimeout(resolve, 0)), job.signal, "PDF export paused.");
+      }
+      pdf.setProperties({ title: spec.title || "Elite Mathematics", author: "Dr Eslam Ahmed", creator: "eliteigcse.com" });
+      return pdf.output("blob");
+    } finally {
+      frame.remove();
+      if (studio.exportJob === job) {
+        studio.exportJob = null;
+        exportControls(false);
+      }
+    }
+  }
+
+  async function downloadPdf() {
+    if (!studio.ready || studio.exportJob) return;
+    const token = studio.token;
+    const button = studio.overlay.querySelector('[data-act="download"]');
+    const label = button.textContent;
+    const name = `${fileNameFor(studio.spec.fileName || "Elite-Mathematics-paper", studio.opts)}.pdf`;
+    button.disabled = true;
+    root.ElitePaperPrint.lastPrint = { kind: "download", at: Date.now(), options: { ...studio.opts }, method: "pdf" };
+    try {
+      const blob = await buildPdfBlob((page, total) => { button.textContent = `Creating PDF ${page}/${total}...`; });
+      if (token !== studio.token) return;
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = name;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      window.setTimeout(() => URL.revokeObjectURL(url), 60000);
+      root.ElitePaperPrint.lastPdf = { name, bytes: blob.size, pages: studio.report?.pages };
+      showHint(`Downloaded ${name} (${Math.max(1, Math.round(blob.size / 1024))} KB). Open it from your Downloads to print or share.`);
+    } catch (error) {
+      if (error.name === "AbortError" || token !== studio.token) return;
+      console.error("[paper-print pdf]", error);
+      showHint(`${error.message || "The PDF could not be created."} You can still use Print.`);
+    } finally {
+      button.textContent = label;
+      button.disabled = !studio.ready || Boolean(studio.exportJob);
+    }
+  }
 
   function showHint(message) {
     const hint = studio.overlay.querySelector("[data-hint]");
@@ -1031,6 +1164,7 @@
 
   function open(spec, options = {}) {
     if (!spec?.questions?.length) return null;
+    studio.exportJob?.abort();
     if (!studio.overlay) buildStudio();
     studio.spec = {
       ...spec,
@@ -1051,6 +1185,8 @@
 
   function close() {
     if (!studio.overlay || studio.overlay.hidden) return;
+    studio.exportJob?.abort();
+    studio.ready = false;
     studio.token += 1;
     studio.remembered = { layout: studio.opts.layout, ink: studio.opts.ink, lines: studio.opts.lines, placement: studio.opts.placement };
     studio.overlay.hidden = true;
@@ -1068,11 +1204,14 @@
     open,
     close,
     renderPaper,
+    buildPdfBlob: (onProgress) => buildPdfBlob(onProgress),
+    lastPdf: null,
     isOpen: () => Boolean(studio.overlay && !studio.overlay.hidden),
     isReady: () => studio.ready,
     frame: () => studio.frame,
     options: () => ({ ...studio.opts }),
     setOptions(next) {
+      if (studio.exportJob) return Promise.reject(new Error("Wait for the PDF download to finish before changing options."));
       Object.assign(studio.opts, next);
       syncControls();
       return rerender();

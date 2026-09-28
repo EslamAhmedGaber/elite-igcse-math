@@ -18,11 +18,14 @@ const os = require("node:os");
 const path = require("node:path");
 const { spawn, spawnSync } = require("node:child_process");
 
-const ROOT = path.resolve(__dirname, "..");
+const ROOT = path.resolve(process.env.ELITE_SITE_ROOT || path.resolve(__dirname, ".."));
+const STAGE = process.env.ELITE_PRINT_STAGE ? path.resolve(process.env.ELITE_PRINT_STAGE) : null;
 const args = process.argv.slice(2);
 const BROWSER = args.find((arg) => arg === "chrome" || arg === "edge") || "chrome";
 const PDF_DIR = args.includes("--pdf-dir") ? path.resolve(args[args.indexOf("--pdf-dir") + 1]) : null;
 const QUICK = args.includes("--quick");
+const SKIP_NATIVE = args.includes("--skip-native");
+const COURSE = args.includes("--course") ? args[args.indexOf("--course") + 1] : null;
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const MIME = {
@@ -58,6 +61,8 @@ async function startServer() {
       return;
     }
     if (fs.existsSync(file) && fs.statSync(file).isDirectory()) file = path.join(file, "index.html");
+    const staged = STAGE && path.join(STAGE, path.relative(ROOT, file));
+    if (staged && fs.existsSync(staged)) file = staged;
     fs.readFile(file, (error, data) => {
       if (error) {
         res.writeHead(404).end("not found");
@@ -84,9 +89,7 @@ async function launch() {
   const port = await freePort();
   const userDataDir = fs.mkdtempSync(path.join(os.tmpdir(), "elite-a4-"));
   const proc = spawn(browserExecutable(), [
-    // --no-sandbox only for this local test harness: some Windows setups block the
-    // sandboxed print utility process, which makes Page.printToPDF fail for any page.
-    "--headless=new", "--no-sandbox", "--disable-gpu", "--no-first-run", "--disable-extensions", "--disable-default-apps",
+    "--headless=new", "--disable-gpu", "--no-first-run", "--disable-extensions", "--disable-default-apps", "--disable-component-update",
     `--remote-debugging-port=${port}`, `--user-data-dir=${userDataDir}`, "about:blank"
   ], { stdio: "ignore" });
   let version = null;
@@ -121,7 +124,13 @@ async function launch() {
     const id = nextId;
     nextId += 1;
     socket.send(JSON.stringify({ id, method, params, sessionId }));
-    return new Promise((resolve, reject) => pending.set(id, { resolve, reject }));
+    return new Promise((resolve, reject) => {
+      const timer = setTimeout(() => { pending.delete(id); reject(new Error(`CDP timeout: ${method}`)); }, 180000);
+      pending.set(id, {
+        resolve: value => { clearTimeout(timer); resolve(value); },
+        reject: error => { clearTimeout(timer); reject(error); }
+      });
+    });
   };
   async function openTab() {
     const { targetId } = await send("Target.createTarget", { url: "about:blank" });
@@ -347,7 +356,8 @@ async function printChecks(tab, twin, base, course, { count, variants }) {
     }
     numbering[variant.name] = { numbers: details.numbers, marks: details.marks };
 
-    // Print exactly this document to PDF (same DOM + print CSS the dialog uses).
+    // Exercise the browser print service separately from the direct download.
+    if (!SKIP_NATIVE) {
     await twin.goto(`${base}/robots.txt`);
     await twin.eval(`document.open(); document.write(${JSON.stringify(details.html)}); document.close(); true`);
     await twin.waitFor("document.readyState === 'complete' && [...document.images].every((img) => img.complete) && document.fonts.status === 'loaded'", `${label} pdf twin`);
@@ -363,38 +373,61 @@ async function printChecks(tab, twin, base, course, { count, variants }) {
       fs.mkdirSync(PDF_DIR, { recursive: true });
       fs.writeFileSync(path.join(PDF_DIR, `${BROWSER}-${course.key}-${variant.name}.pdf`), buffer);
     }
+    }
+
+    // Save and inspect the actual Download PDF output, including solution maths.
+    const built = await tab.eval(String.raw`(async () => {
+      const started = performance.now();
+      const blob = await window.ElitePaperPrint.buildPdfBlob();
+      const data = await new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result.split(',')[1]);
+        reader.onerror = reject;
+        reader.readAsDataURL(blob);
+      });
+      return {data, bytes: blob.size, ms: Math.round(performance.now() - started),
+        downloadVisible: !document.querySelector('.eps-overlay [data-act=download]').hidden,
+        exportFrames: document.querySelectorAll('.eps-export-frame').length,
+        controlsEnabled: !document.querySelector('.eps-overlay [data-act=download]').disabled};
+    })()`);
+    const direct = Buffer.from(built.data, "base64");
+    const directPages = pdfPages(direct);
+    assert.equal(directPages.pageCount, report.pages, `${label}: downloaded PDF page count matches preview`);
+    assert.equal(directPages.boxes.length, report.pages, `${label}: every downloaded page declares a size`);
+    directPages.boxes.forEach(([w,h]) => assert.ok(Math.abs(w-595.28)<1.5 && Math.abs(h-841.89)<1.5, `${label}: direct download is A4`));
+    assert.ok(built.bytes > 50000 && built.downloadVisible && built.controlsEnabled, `${label}: complete downloadable content and enabled controls`);
+    assert.equal(built.exportFrames, 0, `${label}: export frames are cleaned up`);
+    if (PDF_DIR) {
+      fs.mkdirSync(PDF_DIR, {recursive:true});
+      fs.writeFileSync(path.join(PDF_DIR, `${BROWSER}-${course.key}-${variant.name}-download.pdf`), direct);
+    }
+    console.log(`[${BROWSER}] direct PDF: ${course.key} ${variant.name} ${report.pages}p ${built.bytes} bytes ${built.ms}ms`);
     rows.push({ variant: variant.name, pages: report.pages, split: report.splitQuestions.length, hardCuts: report.hardCuts.length });
   }
   if (numbering.student && numbering["solutions-end"]) {
     assert.deepEqual(numbering["solutions-end"], numbering.student, `${course.label}: student and solutions copies share numbering and marks`);
   }
-  // Print / Save as PDF open the finished paper as its own document in a new tab.
-  const handoff = await tab.eval(`(async () => {
-    let captured = null;
-    const realCreate = URL.createObjectURL;
+  // Print prints the preview frame itself (a blob: tab broke print preview in Edge/Chrome).
+  const printCall = await tab.eval(`(() => {
+    const frameWin = window.ElitePaperPrint.frame().contentWindow;
+    let calls = 0;
+    const realPrint = frameWin.print;
+    frameWin.print = () => { calls += 1; };
     const realOpen = window.open;
-    URL.createObjectURL = (blob) => { captured = blob; return "blob:elite-test"; };
-    window.open = () => ({ closed: false });
+    let opened = 0;
+    window.open = () => { opened += 1; return null; };
     try {
-      document.querySelector(".eps-overlay [data-act=pdf]").click();
-      const html = captured ? await captured.text() : "";
-      return {
-        method: window.ElitePaperPrint.lastPrint.method,
-        sheets: (html.match(/<section class="sheet"/g) || []).length,
-        autoprint: html.includes("window.print()"),
-        siteScripts: /<script[^>]+src=/.test(html),
-        title: ((html.split("<title>")[1] || "").split("<" + "/title>")[0]) || ""
-      };
+      document.querySelector(".eps-overlay [data-act=print]").click();
+      return { calls, opened, method: window.ElitePaperPrint.lastPrint.method, title: frameWin.document.title };
     } finally {
-      URL.createObjectURL = realCreate;
+      frameWin.print = realPrint;
       window.open = realOpen;
     }
   })()`);
-  const lastReport = await tab.eval("ElitePaperPrint.lastReport.pages");
-  assert.equal(handoff.method, "tab", `${course.label}: Save as PDF should open the paper in its own tab`);
-  assert.equal(handoff.sheets, lastReport, `${course.label}: the printed tab carries every A4 sheet`);
-  assert.ok(handoff.autoprint && !handoff.siteScripts, `${course.label}: the printed tab is static and opens the print dialog`);
-  assert.match(handoff.title, /^Elite-/, `${course.label}: the PDF gets a meaningful file name`);
+  assert.equal(printCall.calls, 1, `${course.label}: Print calls print on the preview frame once`);
+  assert.equal(printCall.opened, 0, `${course.label}: Print must not open a new tab`);
+  assert.equal(printCall.method, "frame", `${course.label}: Print uses the frame method`);
+  assert.match(printCall.title, /^Elite-/, `${course.label}: the PDF gets a meaningful file name`);
 
   // Closing the preview must leave the exam and its buttons untouched.
   const after = await tab.eval(uiScript(course.stateKey, `
@@ -417,6 +450,7 @@ const VARIANTS = [
 ];
 
 async function main() {
+  if (SKIP_NATIVE) console.log(`[${BROWSER}] Native print service checks explicitly skipped; direct PDF downloads are still tested.`);
   const server = await startServer();
   // Separate processes: a background tab gets no animation frames in headless mode.
   const browser = await launch();
@@ -424,7 +458,9 @@ async function main() {
   const tab = await browser.openTab();
   const twin = await twinBrowser.openTab();
   try {
-    for (const course of COURSES) {
+    const courses = COURSES.filter(course => !COURSE || course.key === COURSE);
+    assert.ok(courses.length, "Requested course exists");
+    for (const course of courses) {
       await selectionChecks(tab, server.base, course);
       console.log(`[${BROWSER}] selection ok: ${course.label}`);
     }
@@ -432,7 +468,7 @@ async function main() {
     console.log(`[${BROWSER}] level mix ok`);
     await swapAndLinkChecks(tab, server.base);
     console.log(`[${BROWSER}] swap + shared link ok`);
-    for (const course of COURSES) {
+    for (const course of courses) {
       const variants = QUICK ? VARIANTS.slice(0, 2) : VARIANTS;
       const rows = await printChecks(tab, twin, server.base, course, { count: 10, variants });
       console.log(`[${BROWSER}] A4 print ok: ${course.label} ${rows.map((row) => `${row.variant}=${row.pages}p`).join(" ")}`);
@@ -449,7 +485,8 @@ async function main() {
   }
 }
 
-main().catch((error) => {
+module.exports = { launch, startServer, pdfPages, COURSES, READY, openCourse, uiScript };
+if (require.main === module) main().catch((error) => {
   console.error(error);
   process.exitCode = 1;
 });
