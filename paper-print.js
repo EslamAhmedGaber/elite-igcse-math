@@ -19,7 +19,7 @@
 (function (root) {
   "use strict";
 
-  const VERSION = "20260928b";
+  const VERSION = "20260929a";
   const MM = 96 / 25.4;
   const SCRIPT_SRC = document.currentScript?.src || "";
   const assetUrl = (name) => new URL(`${name}?v=${VERSION}`, SCRIPT_SRC || document.baseURI).href;
@@ -217,22 +217,41 @@
 
   /* ------------------------------------------------------- image analysis */
 
-  function loadFrameImage(doc, src) {
+  function requireWithin(promise, ms, message) {
+    return new Promise((resolve, reject) => {
+      const timer = setTimeout(() => reject(new Error(message)), ms);
+      Promise.resolve(promise).then(resolve, reject).finally(() => clearTimeout(timer));
+    });
+  }
+
+  async function requireImage(img) {
+    await new Promise((resolve, reject) => {
+      const finish = (error) => {
+        clearTimeout(timer);
+        img.removeEventListener("load", loaded);
+        img.removeEventListener("error", failed);
+        if (error) reject(error); else resolve();
+      };
+      const loaded = () => finish(img.naturalWidth > 0 ? null : new Error("A question image is empty."));
+      const failed = () => finish(new Error("A question image could not load. Printing is paused to avoid an incomplete paper."));
+      const timer = setTimeout(() => finish(new Error("A question image is still loading. Printing is paused; please retry.")), IMAGE_TIMEOUT_MS);
+      img.addEventListener("load", loaded);
+      img.addEventListener("error", failed);
+      if (img.complete) loaded();
+    });
+    if (img.decode) {
+      await requireWithin(img.decode(), IMAGE_TIMEOUT_MS, "A question image could not finish rendering. Please retry.");
+    }
+  }
+
+  async function loadFrameImage(doc, src) {
     const img = doc.createElement("img");
     img.decoding = "sync";
     img.loading = "eager";
     img.alt = "";
-    const ready = new Promise((resolve) => {
-      const done = () => resolve(img);
-      img.addEventListener("load", done, { once: true });
-      img.addEventListener("error", done, { once: true });
-      setTimeout(done, IMAGE_TIMEOUT_MS);
-    });
     img.src = src;
-    return ready.then(async () => {
-      if (img.naturalWidth && img.decode) await img.decode().catch(() => {});
-      return img;
-    });
+    await requireImage(img);
+    return img;
   }
 
   /* Row-by-row ink count. Returns null when pixels cannot be read. */
@@ -682,7 +701,7 @@
     const win = frame.contentWindow;
     const doc = frame.contentDocument;
     const measureEl = doc.getElementById("measure");
-    await withTimeout(doc.fonts?.ready || Promise.resolve(), FONT_TIMEOUT_MS);
+    await requireWithin(doc.fonts?.ready || Promise.resolve(), FONT_TIMEOUT_MS, "The paper fonts are still loading. Please retry.");
 
     const withSolutions = opts.version === "solutions";
     let solutionMap = null;
@@ -772,6 +791,14 @@
     }
     paginator.finish();
     measureEl.innerHTML = "";
+    // Preloaded source images are not the same elements as the final page crops.
+    // Decode the actual printable elements before enabling either output button.
+    await Promise.all([...doc.querySelectorAll("#sheets img")].map(requireImage));
+    await requireWithin(doc.fonts?.ready || Promise.resolve(), FONT_TIMEOUT_MS, "The paper fonts are still loading. Please retry.");
+    await nextFrame(win);
+    await nextFrame(win);
+    if (!isCurrent()) return null;
+    report.assetsReady = true;
     report.problems.push(...rawMarkupProblems(doc.getElementById("sheets")));
     report.splitQuestions = [...report.splitQuestions];
     report.sheetSizeMm = (() => {
@@ -975,6 +1002,11 @@
   // Keep the prepared document alive while the native print dialog uses it.
   function printFrame(kind) {
     if (!studio.ready || studio.exportJob) return;
+    const images = [...studio.frame.contentDocument.querySelectorAll("#sheets img")];
+    if (images.some(img => !img.complete || !img.naturalWidth)) {
+      rerender();
+      return;
+    }
     const title = fileNameFor(studio.spec.fileName || "Elite-Mathematics-paper", studio.opts);
     root.ElitePaperPrint.lastPrint = { kind, at: Date.now(), options: { ...studio.opts }, method: "frame" };
     printInFrame(title);
