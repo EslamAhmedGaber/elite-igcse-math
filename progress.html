@@ -18,6 +18,7 @@
   <script src="pathway-bootstrap.js?v=baccalaureate-20260902b"></script>
   <link rel="stylesheet" href="styles.css?v=20260809a">
   <link rel="stylesheet" href="elite-system.css?v=20260906b">
+  <link rel="stylesheet" href="quick-progress.css?v=20260929a">
   <link rel="stylesheet" href="elite-ux.css?v=20260927i">
   <script defer src="pathway-mode.js?v=baccalaureate-20260902c"></script>
   <script defer src="questions-data.js?v=20260528a"></script>
@@ -29,9 +30,10 @@
   <script defer src="ial/wma12/wma12-data.js?v=20260611a"></script>
   <script defer src="ial/wme01/wme01-data.js?v=20260613a"></script>
   <script defer src="data/EgyptianBaccalaureate/2026/English/baccalaureate-data.js?v=20260902a"></script>
-  <script defer src="progress.js?v=20260927a"></script>
+  <script defer src="quick-progress.js?v=20260929a"></script>
+  <script defer src="progress.js?v=20260929a"></script>
   <script defer src="planner.js"></script>
-  <script defer src="tracker-v2.js?v=20260902c"></script>
+  <script defer src="tracker-v2.js?v=20260929a"></script>
   <script defer src="course-modules.js?v=ux-20260906a"></script>
   <script defer src="lead.js?v=20260928a"></script>
 </head>
@@ -112,8 +114,8 @@
     <section class="progress-hero tracker-hero-compact" aria-labelledby="progressTitle">
       <div>
         <span class="eyebrow">Student Tracker</span>
-        <h1 id="progressTitle">Dashboard for saved work.</h1>
-        <p>See saved paper attempts, assignment marks, quiz grades, dates, weak topics, and deadline warnings in one clean place.</p>
+        <h1 id="progressTitle">Your progress.</h1>
+        <p id="quickProgressCourse">Classified practice and questions to revisit.</p>
         <div class="planner-hero-actions">
           <button class="button primary" type="button" data-tab-jump="papers">Add paper attempt</button>
           <button class="button light" type="button" data-tab-jump="assignments">Add assignment</button>
@@ -129,8 +131,9 @@
     </section>
 
     <nav class="tracker-tabs" id="trackerTabs" aria-label="Tracker tabs" role="tablist">
-      <button type="button" class="tracker-tab" data-tab-target="dashboard" role="tab" aria-selected="true"><span class="tt-ic" aria-hidden="true">&#x25A4;</span>Dashboard</button>
-      <button type="button" class="tracker-tab" data-tab-target="topics" role="tab" aria-selected="false"><span class="tt-ic" aria-hidden="true">&#x25A4;</span>Topic Mastery</button>
+      <button type="button" class="tracker-tab" data-tab-target="dashboard" role="tab" aria-selected="true">Practice</button>
+      <button type="button" class="tracker-tab" data-tab-target="topics" role="tab" aria-selected="false">Topic progress</button>
+      <button type="button" class="tracker-tab" data-tab-target="scores" role="tab" aria-selected="false">Scores &amp; reports</button>
       <button type="button" class="tracker-tab" data-tab-target="plan" role="tab" aria-selected="false"><span class="tt-ic" aria-hidden="true">&#x25A4;</span>Study Plan</button>
       <button type="button" class="tracker-tab" data-tab-target="papers" role="tab" aria-selected="false"><span class="tt-ic" aria-hidden="true">&#x25A4;</span>Past Papers</button>
       <button type="button" class="tracker-tab" data-tab-target="assignments" role="tab" aria-selected="false"><span class="tt-ic" aria-hidden="true">&#x25A4;</span>Assignments</button>
@@ -138,6 +141,30 @@
       <button type="button" class="tracker-tab" data-tab-target="revision" role="tab" aria-selected="false"><span class="tt-ic" aria-hidden="true">&#x25A4;</span>Revision</button>
       <button type="button" class="tracker-tab" data-tab-target="backup" role="tab" aria-selected="false"><span class="tt-ic" aria-hidden="true">&#x25A4;</span>Backup</button>
     </nav>
+
+    <section class="qp-overview" data-tab="dashboard" aria-labelledby="quickProgressHeading">
+      <div class="qp-overview-head">
+        <h1 id="quickProgressHeading">Your practice</h1>
+        <label for="quickCourse">Course <select id="quickCourse">
+          <option value="linear">O Level Linear</option>
+          <option value="modular-u1">Modular Unit 1</option>
+          <option value="modular-u2">Modular Unit 2</option>
+          <option value="wma11">Pure 1</option>
+          <option value="wma12">Pure 2</option>
+          <option value="wme01">Mechanics 1</option>
+        </select></label>
+      </div>
+      <dl class="qp-metrics">
+        <div><dt>Marked solved</dt><dd id="quickSolved">0</dd><small id="quickTotal">Questions in this course</small></div>
+        <div><dt>Not yet solved</dt><dd id="quickRemaining">0</dd><small>Still to practise</small></div>
+        <div><dt>Needs review</dt><dd id="quickReviewCount">0</dd><small>Saved for another attempt</small></div>
+      </dl>
+      <div class="qp-overall"><progress id="quickMeter" max="100" value="0" aria-label="Questions marked solved"></progress><span id="quickPercent">0% marked solved</span></div>
+      <div class="qp-overview-actions"><a class="button primary" id="quickContinue" href="practice.html">Continue practice</a><a class="button light" id="quickReview" href="practice.html?mode=review">Review questions</a><button class="button light" type="button" data-tab-jump="topics">All topic details</button></div>
+      <div id="quickTopics" class="qp-topic-list"></div>
+    </section>
+
+
 
     <div class="progress-utility-actions" aria-label="Teacher tools">
       <a class="button light" href="admin.html">Teacher certificates</a>
@@ -154,7 +181,7 @@
       <span id="urgentTopicCount"></span>
     </div>
 
-    <section class="dashboard-analysis-strip" data-tab="dashboard" aria-label="Student analysis figures">
+    <section class="dashboard-analysis-strip" data-tab="scores" aria-label="Student analysis figures">
       <article class="analysis-card readiness-card">
         <div>
           <span class="eyebrow">Readiness</span>
@@ -193,7 +220,7 @@
       </article>
     </section>
 
-    <section class="tracker-dashboard-grid" data-tab="dashboard" aria-label="Dashboard insights">
+    <section class="tracker-dashboard-grid" data-tab="scores" aria-label="Dashboard insights">
       <article class="dashboard-insight-card recent-trend-card" id="recentTrendCard">
         <div class="rt-head">
           <strong>Recent score trend</strong>
@@ -217,7 +244,7 @@
       </article>
     </section>
 
-    <section class="tracker-dashboard-work" data-tab="dashboard" aria-label="Saved tracker rows">
+    <section class="tracker-dashboard-work" data-tab="scores" aria-label="Saved tracker rows">
       <article class="dashboard-table-card">
         <div class="dashboard-card-head">
           <div>
@@ -293,7 +320,7 @@
       </article>
     </section>
 
-    <section class="progress-dashboard tracker-stat-grid dashboard-detail-metrics" data-tab="dashboard" aria-label="Detailed metrics">
+    <section class="progress-dashboard tracker-stat-grid dashboard-detail-metrics" data-tab="scores" aria-label="Detailed metrics">
       <article>
         <span>Papers attempted</span>
         <strong id="paperDoneCount">0</strong>

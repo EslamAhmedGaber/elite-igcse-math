@@ -431,6 +431,7 @@
             <span class="ial-pill">${sessionLabel(item.session)} ${item.year}</span>
           </div>
         </header>
+        ${window.EliteQuickProgress.controls({id: item.id, solved: solvedOn, review: mistakeOn, solveAction: 'solved', reviewAction: 'mistake'})}
         <div class="ial-practice-layout">
           <div class="ial-question-image-wrap">
             <img class="ial-question-image" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.id)}" loading="eager">
@@ -438,8 +439,6 @@
           ${renderAnswerTrainer(item)}
         </div>
         <div class="ial-actions">
-          <button class="button light ${solvedOn ? "is-on" : ""}" type="button" data-action="solved" aria-pressed="${solvedOn}">${solvedOn ? "Solved" : "Mark solved"}</button>
-          <button class="button light ${mistakeOn ? "is-on" : ""}" type="button" data-action="mistake" aria-pressed="${mistakeOn}">${mistakeOn ? "In Mistake box" : "Mistake box"}</button>
           <button class="button primary" type="button" data-action="solution" aria-expanded="${state.showSolution}" aria-controls="ialWorkedSolution">${state.showSolution ? "Hide solution" : "Show solution"}</button>
           <a class="button light" href="${escapeHtml(item.image)}" download="${escapeHtml(item.downloadName)}">Download PNG</a>
         </div>
@@ -703,28 +702,16 @@
   }
 
   function toggleSolved(item) {
-    const set = new Set(Array.isArray(state.solved) ? state.solved : []);
-    if (set.has(item.id)) set.delete(item.id);
-    else set.add(item.id);
-    state.solved = [...set];
-    writeJSON(SOLVED_KEY, state.solved);
+    const next = new Set(readJSON(SOLVED_KEY, []));
+    if (next.has(item.id)) next.delete(item.id); else next.add(item.id);
+    window.EliteQuickProgress.change(SOLVED_KEY, [...next], value => { state.solved = value; render(); }, next.has(item.id) ? "Marked solved." : "Solved mark removed.");
   }
 
   function toggleMistake(item) {
-    const mistakes = { ...state.mistakes };
-    if (mistakes[item.id]) delete mistakes[item.id];
-    else {
-      mistakes[item.id] = {
-        id: item.id,
-        paper: item.paper,
-        qNo: item.qNo,
-        topic: item.topicName,
-        marks: item.marks,
-        addedAt: new Date().toISOString()
-      };
-    }
-    state.mistakes = mistakes;
-    writeJSON(MISTAKE_KEY, state.mistakes);
+    const next = { ...readJSON(MISTAKE_KEY, {}) };
+    if (next[item.id]) delete next[item.id];
+    else next[item.id] = { id: item.id, paper: item.paper, qNo: item.qNo, topic: item.topicName, marks: item.marks, addedAt: new Date().toISOString() };
+    window.EliteQuickProgress.change(MISTAKE_KEY, next, value => { state.mistakes = value; applyFilters(true); }, next[item.id] ? "Added to review." : "Removed from review.");
   }
 
   function markSolved(item) {
@@ -857,6 +844,12 @@
       els.filters?.scrollIntoView({ block: "start", behavior: "smooth" });
     });
     window.addEventListener("hashchange", () => handleModuleRoute({ scroll: true }));
+    window.addEventListener("storage", event => {
+      if (![SOLVED_KEY, MISTAKE_KEY, null].includes(event.key)) return;
+      state.solved = readJSON(SOLVED_KEY, []);
+      state.mistakes = readJSON(MISTAKE_KEY, {});
+      applyFilters(true);
+    });
   }
 
   function init() {

@@ -412,7 +412,7 @@
     return new Set([...ids].map((id) => byId.get(id)?.source_id).filter(Boolean));
   }
 
-  const solvedSources = sourceSet(solved);
+  let solvedSources = sourceSet(solved);
   const selectedSources = sourceSet(selected);
 
   function isSolved(question) {
@@ -720,7 +720,8 @@
   function applyCourseCopy() {
     document.body.dataset.progressPathway = coursePack.pathway;
     const title = document.getElementById("progressTitle");
-    if (title) title.textContent = `${coursePack.label} progress dashboard.`;
+    if (title) title.textContent = "Your progress";
+    document.getElementById("quickProgressCourse").textContent = coursePack.label;
     document.querySelectorAll("[data-pathway-label='unit']").forEach((node) => {
       node.textContent = coursePack.pathway === "pure" ? "Course" : (window.ELITE_PATHWAY?.label("unit") || "Unit");
     });
@@ -1242,8 +1243,59 @@
     });
   }
 
+  function renderQuickProgress() {
+    const unit = coursePack.pathway === "modular" ? (params.get("unit") || "Unit 1") : "";
+    const rows = topicRows().filter(row => !unit || row.unit === unit);
+    const pool = bankQuestions("all").filter(q => !unit || (q.modular_force_unit || q.unit) === unit);
+    const unique = [...new Map(pool.map(q => [q.source_id || q.id, q])).values()];
+    const count = unique.filter(isSolved).length;
+    const review = unique.filter(q => reviewItems[q.id] && !reviewItems[q.id].masteredAt).length;
+    const percentage = unique.length ? Math.round(count * 100 / unique.length) : 0;
+    const chosen = coursePack.pathway === "pure" ? coursePack.course : coursePack.pathway === "modular" ? (unit === "Unit 2" ? "modular-u2" : "modular-u1") : coursePack.pathway;
+    const select = document.getElementById("quickCourse");
+    if (![...select.options].some(option => option.value === chosen)) select.add(new Option(coursePack.label, chosen));
+    select.value = chosen;
+    const base = coursePack.pathway === "pure" ? `ial/${coursePack.course}/index.html` : coursePack.pathway === "baccalaureate" ? "exam.html?pathway=baccalaureate" : `practice.html?pathway=${coursePack.pathway}${unit ? `&unit=${encodeURIComponent(unit)}` : ""}`;
+    const next = rows.find(row => row.solved > 0 && row.solved < row.total) || rows.find(row => row.solved < row.total);
+    document.getElementById("quickContinue").href = next ? practiceLink(next) : base;
+    document.getElementById("quickContinue").textContent = count ? "Continue practice" : "Start practising";
+    const reviewUrl = new URL(base, document.baseURI);
+    reviewUrl.searchParams.set("mode", "review");
+    if (coursePack.pathway === "pure") reviewUrl.hash = "ialFilters";
+    document.getElementById("quickReview").href = reviewUrl.href;
+    document.getElementById("quickSolved").textContent = count;
+    document.getElementById("quickTotal").textContent = `of ${unique.length} questions`;
+    document.getElementById("quickRemaining").textContent = unique.length - count;
+    document.getElementById("quickReviewCount").textContent = review;
+    document.getElementById("quickMeter").value = percentage;
+    document.getElementById("quickPercent").textContent = `${percentage}% marked solved`;
+    document.getElementById("quickProgressHeading").textContent = unit ? `${unit} practice` : `${coursePack.label} practice`;
+    document.getElementById("quickTopics").innerHTML = rows.map(row => {
+      const percent = row.total ? Math.round(row.solved * 100 / row.total) : 0;
+      return `<a class="qp-topic" href="${escapeHtml(practiceLink(row))}"><span><strong>${escapeHtml(row.topic)}</strong><small>${row.solved ? (row.solved === row.total ? "All questions marked solved" : "In progress") : "Not yet practised"}</small></span><span>${row.solved}/${row.total}</span><progress max="100" value="${percent}" aria-label="${escapeHtml(row.topic)}: ${row.solved} of ${row.total} marked solved"></progress></a>`;
+    }).join("") || "<p>No questions are available in this course yet.</p>";
+  }
+
+  document.getElementById("quickCourse").addEventListener("change", event => {
+    const value = event.target.value;
+    const url = new URL("progress.html", document.baseURI);
+    if (value.startsWith("modular-")) { url.searchParams.set("pathway", "modular"); url.searchParams.set("unit", value.endsWith("u2") ? "Unit 2" : "Unit 1"); }
+    else if (["wma11", "wma12", "wme01"].includes(value)) { url.searchParams.set("pathway", "pure"); url.searchParams.set("course", value); }
+    else url.searchParams.set("pathway", value);
+    window.location.assign(url.href);
+  });
+
+  window.addEventListener("storage", event => {
+    if ([SOLVED_KEY, REVIEW_KEY].includes(event.key) || event.key === null) {
+      solved = new Set(readJSON(SOLVED_KEY, []));
+      solvedSources = sourceSet(solved);
+      reviewItems = readJSON(REVIEW_KEY, {});
+      render();
+    }
+  });
+
   function render() {
-    renderWelcomeState();
+    renderQuickProgress();
     renderSummary();
     renderNextMoves();
     renderPriorityRows();

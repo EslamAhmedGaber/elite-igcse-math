@@ -651,7 +651,7 @@ function applyFilters() {
   });
 }
 
-function redraw() {
+function redraw(persist = true) {
   applyFilters();
   els.visibleCount.textContent = visible.length;
   if (els.commandVisibleCount) els.commandVisibleCount.textContent = visible.length.toLocaleString();
@@ -662,9 +662,11 @@ function redraw() {
   if (els.selectionSummary) els.selectionSummary.textContent = `${selectedActive} selected`;
   if (els.visibleSummary) els.visibleSummary.textContent = `${visible.length} visible`;
   els.solvedCount.textContent = solvedActive;
-  localStorage.setItem("selectedExpertiseQuestions", JSON.stringify([...selected]));
-  localStorage.setItem("solvedExpertiseQuestions", JSON.stringify([...solved]));
-  saveReviewItems();
+  if (persist) {
+    localStorage.setItem("selectedExpertiseQuestions", JSON.stringify([...selected]));
+    localStorage.setItem("solvedExpertiseQuestions", JSON.stringify([...solved]));
+    saveReviewItems();
+  }
   if (window.EliteCloud?.queueSync) window.EliteCloud.queueSync();
   updateProgressSnapshot(selectedActive, solvedActive);
   updateReviewSnapshot(activeIds);
@@ -814,6 +816,7 @@ function renderCards() {
     return `<article class="question-card ${isSelected ? "selected" : ""} ${isSolved ? "solved" : ""}" data-id="${question.id}">
       <div>
         <div class="card-title"><span class="question-ref">${escapeHtml(question.paper)} Q${question.question}</span><span class="marks-badge">${question.marks} marks</span></div>
+        ${window.EliteQuickProgress.controls({id: question.id, solved: isSolved, review: Boolean(review && !review.masteredAt)})}
         <div class="topic-name">${escapeHtml(question.topic)}</div>
         <div class="meta-line">${escapeHtml(question.unit)}</div>
         <div class="question-tags">
@@ -833,9 +836,7 @@ function renderCards() {
       ${renderAnswerTrainer(question, { compact: true })}
       <div class="card-actions">
         <button type="button" data-action="select">${isSelected ? "Remove" : "Select"}</button>
-        <button type="button" data-action="solve">${isSolved ? "Unsolve" : "Solved"}</button>
-        <button type="button" data-action="${review ? "reviewDone" : "reviewAdd"}">${review ? "Review Done" : "Mistake Box"}</button>
-        ${review ? `<button type="button" data-action="reviewRemove">Remove Review</button>` : ""}
+        ${review ? `<button type="button" data-action="reviewDone">Reviewed again</button>` : ""}
         ${hasSolution ? `<button type="button" data-action="solution" aria-haspopup="dialog" aria-controls="solutionDialog">Show Solution</button>` : ""}
         ${window.CLOUD_SYNC?.state?.user?.email?.toLowerCase().includes('eslam') ? `<button type="button" data-action="fixTopic">Fix Topic</button>` : ""}
       </div>
@@ -850,11 +851,9 @@ function renderQuestionActions(question, { compact = false } = {}) {
   const isSolved = solved.has(question.id);
   const hasSolution = hasSolutionContent(solutionData[question.id]);
   const review = reviewState(question.id);
-  return `<div class="card-actions ${compact ? "compact" : ""}">
+  return `${window.EliteQuickProgress.controls({id: question.id, solved: isSolved, review: Boolean(review && !review.masteredAt)})}<div class="card-actions ${compact ? "compact" : ""}">
     <button type="button" data-action="select">${isSelected ? "Remove" : "Select"}</button>
-    <button type="button" data-action="solve">${isSolved ? "Unsolve" : "Solved"}</button>
-    <button type="button" data-action="${review ? "reviewDone" : "reviewAdd"}">${review ? "Review Done" : "Mistake Box"}</button>
-    ${review ? `<button type="button" data-action="reviewRemove">Remove Review</button>` : ""}
+    ${review ? `<button type="button" data-action="reviewDone">Reviewed again</button>` : ""}
     ${hasSolution ? `<button type="button" data-action="solution" aria-haspopup="dialog" aria-controls="solutionDialog">Show Solution</button>` : ""}
     ${window.CLOUD_SYNC?.state?.user?.email?.toLowerCase().includes("eslam") ? `<button type="button" data-action="fixTopic">Fix Topic</button>` : ""}
   </div>`;
@@ -1048,14 +1047,22 @@ function clearVisible() {
 }
 
 function toggleSolved(id) {
-  if (solved.has(id)) {
-    solved.delete(id);
-  } else {
-    solved.add(id);
-    recordStudyActivity();
-    advanceReview(id);
-  }
-  redraw();
+  let next;
+  try { next = new Set(JSON.parse(localStorage.getItem("solvedExpertiseQuestions") || "[]")); }
+  catch { renderCards(); window.EliteQuickProgress.notify("Could not read saved progress. No changes made."); return; }
+  if (next.has(id)) next.delete(id); else next.add(id);
+  window.EliteQuickProgress.change("solvedExpertiseQuestions", [...next], value => {
+    solved.clear(); value.forEach(item => solved.add(item)); redraw(false);
+  }, next.has(id) ? "Marked solved." : "Solved mark removed.");
+}
+
+function toggleQuickReview(id) {
+  const question = questionById(id);
+  if (!question) return;
+  const next = { ...readReviewItems() };
+  if (next[id] && !next[id].masteredAt) delete next[id];
+  else next[id] = { id, reason: "manual", level: 0, attempts: 1, addedAt: Date.now(), updatedAt: Date.now(), dueAt: Date.now() };
+  window.EliteQuickProgress.change(REVIEW_KEY, next, value => { reviewItems = value; redraw(false); }, next[id] ? "Added to review." : "Removed from review.");
 }
 
 function reviewDone(id) {
@@ -1577,6 +1584,7 @@ els.questionGrid.addEventListener("click", (event) => {
   }
   if (action === "select") toggleSelect(card.dataset.id);
   if (action === "solve") toggleSolved(card.dataset.id);
+  if (action === "quickReview") toggleQuickReview(card.dataset.id);
   if (action === "reviewAdd") {
     addToReview(card.dataset.id);
     redraw();
@@ -1776,6 +1784,19 @@ els.bankButtons.forEach((button) => {
 els.practicePanel.addEventListener("click", (event) => {
   const button = event.target.closest("[data-practice]");
   if (button) practiceMode(button.dataset.practice);
+});
+
+window.addEventListener("storage", event => {
+  if (!["solvedExpertiseQuestions", "selectedExpertiseQuestions", REVIEW_KEY, null].includes(event.key)) return;
+  try {
+    const latestSolved = JSON.parse(localStorage.getItem("solvedExpertiseQuestions") || "[]");
+    const latestSelected = JSON.parse(localStorage.getItem("selectedExpertiseQuestions") || "[]");
+    if (!Array.isArray(latestSolved) || !Array.isArray(latestSelected)) return;
+    solved.clear(); latestSolved.forEach(id => solved.add(id));
+    selected.clear(); latestSelected.forEach(id => selected.add(id));
+    reviewItems = readReviewItems();
+    redraw(false);
+  } catch { window.EliteQuickProgress.notify("Could not refresh saved progress. Reload to try again."); }
 });
 
 init();

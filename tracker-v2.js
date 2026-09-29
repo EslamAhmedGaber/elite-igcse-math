@@ -217,7 +217,7 @@
     const tabs = document.querySelectorAll(".tracker-tab");
     tabs.forEach((tab) => tab.addEventListener("click", () => activateTab(tab.dataset.tabTarget, { scroll: true })));
     const hash = (window.location.hash || "").replace("#", "");
-    const valid = ["dashboard", "topics", "plan", "papers", "assignments", "quizzes", "revision", "backup"];
+    const valid = ["dashboard", "scores", "topics", "plan", "papers", "assignments", "quizzes", "revision", "backup"];
     activateTab(valid.includes(hash) ? hash : "dashboard");
   }
   function setupTabJumps() {
@@ -1018,11 +1018,11 @@
   function renderDashboardTrend() {
     // Older builds injected this card; the current dashboard ships it in the HTML.
     if (document.getElementById("recentTrendSvg")) return; // already rendered by the dashboard markup
-    const dashboardKpi = document.querySelector('section.progress-dashboard[data-tab="dashboard"]');
+    const dashboardKpi = document.querySelector('section.progress-dashboard[data-tab="scores"]');
     if (!dashboardKpi) return;
     const card = document.createElement("section");
     card.id = "recentTrendCard";
-    card.dataset.tab = "dashboard";
+    card.dataset.tab = "scores";
     card.className = "recent-trend-card";
     card.innerHTML = `
       <div class="rt-head">
