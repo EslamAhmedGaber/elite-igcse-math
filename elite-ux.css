@@ -4625,3 +4625,39 @@ body[data-course-palette] .layout-toggle button.is-active {
 @media screen {
   .hub-page .home-study-trail { margin: 0 0 18px; }
 }
+
+/* home: teacher card with photo + direct WhatsApp (2026-10-01) */
+@media screen {
+  .hub-teacher {
+    display: grid; grid-template-columns: 220px minmax(0, 1fr); align-items: center; gap: 32px;
+    margin-top: 40px; padding: 28px; border-radius: 22px;
+    background: linear-gradient(135deg, #14254a 0%, #1b3466 100%); color: #fff;
+    box-shadow: 0 14px 34px rgba(20, 37, 74, .22); overflow: hidden;
+  }
+  .hub-teacher-photo {
+    width: 220px; height: 240px; object-fit: cover; object-position: 50% 18%;
+    border-radius: 18px; border: 3px solid rgba(255, 255, 255, .9); box-shadow: 0 10px 26px rgba(0, 0, 0, .3);
+  }
+  .hub-teacher h2 { margin: 4px 0 2px; font-size: clamp(26px, 3.4vw, 34px); color: #fff; }
+  .hub-teacher-role { margin: 0 0 10px; color: #9cc0ff; font-weight: 700; }
+  .hub-teacher p { margin: 0 0 6px; color: #d4e0f6; max-width: 560px; }
+  .hub-teacher-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: 16px; }
+  .hub-wa {
+    display: inline-flex; align-items: center; gap: 12px; min-height: 58px; padding: 8px 20px 8px 14px;
+    border-radius: 14px; background: #1f9d55; color: #fff; text-decoration: none;
+    box-shadow: 0 8px 20px rgba(31, 157, 85, .35); transition: transform .15s ease, background .15s ease;
+  }
+  .hub-wa:hover, .hub-wa:focus-visible { background: #198a4a; transform: translateY(-2px); }
+  .hub-wa svg { width: 32px; height: 32px; flex: none; }
+  .hub-wa span { display: flex; flex-direction: column; line-height: 1.2; }
+  .hub-wa strong { font-size: 17px; color: #fff; }
+  .hub-wa small { font-size: 14px; color: #dff5e8; letter-spacing: .02em; }
+  .hub-teacher-about { color: #fff; font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+}
+@media screen and (max-width: 640px) {
+  .hub-teacher { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 18px; padding: 24px 18px; }
+  .hub-teacher-photo { width: 150px; height: 150px; border-radius: 50%; object-position: 50% 22%; }
+  .hub-teacher p { margin-left: auto; margin-right: auto; }
+  .hub-teacher-actions { justify-content: center; flex-direction: column; }
+  .hub-wa { width: 100%; justify-content: center; }
+}
