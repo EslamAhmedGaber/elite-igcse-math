@@ -103,6 +103,7 @@
     <div class="hub-grid">${services.map((s) => card(s, links[s[0]])).join("")}</div>
     <h2 class="hub-section-title">Practise online</h2>
     <div class="hub-grid hub-grid-small">${PRACTICE.map((s) => card(s, links[s[0]], "small")).join("")}</div>
+    <section class="sr-section" data-student-results="course:${esc(course.id)}" aria-label="Student results" hidden></section>
   `;
   try { window.localStorage.setItem("eliteLastCourse", course.id); } catch (err) { /* private mode */ }
 })();

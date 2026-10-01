@@ -18,11 +18,13 @@
   <script src="pathway-bootstrap.js?v=baccalaureate-20260902b"></script>
   <link rel="stylesheet" href="styles.css?v=20260809a">
   <link rel="stylesheet" href="elite-system.css?v=20260906b">
-  <link rel="stylesheet" href="elite-ux.css?v=20261001g">
+  <link rel="stylesheet" href="elite-ux.css?v=20261001h">
   <script defer src="pathway-mode.js?v=baccalaureate-20260902c"></script>
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js?v=20261001a"></script>
   <script defer src="course-modules.js?v=hub-20261001b"></script>
+  <script defer src="student-results-data.js?v=20261001a"></script>
+  <script defer src="student-results.js?v=20261001b"></script>
   <script defer src="lead.js?v=20261001c"></script>
 </head>
 <body data-page="about">
@@ -128,30 +130,7 @@
       </ul>
     </section>
 
-    <section class="testimonials-panel" aria-labelledby="testTitle">
-      <div class="section-head">
-        <span class="eyebrow">Student Results</span>
-        <h2 id="testTitle">A* / 9 students from across the region.</h2>
-        <p>Every student below studied online with Dr Eslam and reached top grades on Edexcel IGCSE 4MA1 Higher Mathematics.</p>
-      </div>
-      <div class="testimonials">
-        <article class="testimonial light">
-          <span class="t-grade">9</span>
-          <blockquote>"Dr Eslam's classified bank made every topic feel familiar - by exam day there was nothing surprising on the paper. The Q20+ practice is what got me to a 9."</blockquote>
-          <cite>- Ward, international school student, Qatar</cite>
-        </article>
-        <article class="testimonial light">
-          <span class="t-grade">9</span>
-          <blockquote>"Studying online with Dr Eslam felt like one-to-one even in a group. The recorded sessions let me re-watch the hard problems until I really understood them."</blockquote>
-          <cite>- Fatima, international school student, Abu Dhabi, UAE</cite>
-        </article>
-        <article class="testimonial light">
-          <span class="t-grade">9</span>
-          <blockquote>"Algebra and coordinate geometry were my weakest topics. Two months with Dr Eslam and they became my fastest sections in the mock - and the real exam."</blockquote>
-          <cite>- Mariam, international school student, Saudi Arabia</cite>
-        </article>
-      </div>
-    </section>
+    <section class="sr-section sr-section-about" data-student-results="all" aria-label="Student results" hidden></section>
 
     <section class="pricing-panel" aria-labelledby="pricingTitle">
       <div class="pricing-head">
