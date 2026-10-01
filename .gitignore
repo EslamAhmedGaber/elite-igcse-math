@@ -7,6 +7,9 @@ node_modules/
 .idea/
 answer_book.pdf
 *_with_answers.pdf
+# published on purpose (2026-10-01): notes with answers + Adaptive Classified With Answers
+!downloads/**/Notes/*_With_Answers*.pdf
+!downloads/**/AdaptiveClassified/**/*.pdf
 private_output/*
 !private_output/.gitkeep
 tools/inbox/
