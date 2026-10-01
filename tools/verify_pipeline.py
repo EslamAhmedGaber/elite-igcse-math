@@ -26,11 +26,11 @@ DOWNLOADS_DIR = ROOT / "downloads"
 PRIVATE_OUTPUT = ROOT / "private_output"
 GITIGNORE = ROOT / ".gitignore"
 CURRENT_PATHWAY_BOOTSTRAP_VERSION = "baccalaureate-20260902b"
-CURRENT_LEAD_VERSION = "20261001a"
+CURRENT_LEAD_VERSION = "20261001c"
 CURRENT_STYLE_VERSION = "20260809a"
-CURRENT_COURSE_MODULES_VERSION = "library-20261001a"
+CURRENT_COURSE_MODULES_VERSION = "hub-20261001b"
 CURRENT_STUDY_VERSION = "20260713b"
-CURRENT_COMPASS_VERSION = "20261001a"
+CURRENT_COMPASS_VERSION = "20261001b"
 CURRENT_SOLUTION_VERSION = "20260714a"
 CURRENT_ELITE_SYSTEM_VERSION = "20260906b"
 CURRENT_RESOURCE_HUB_VERSION = "20260810a"
@@ -482,17 +482,11 @@ def verify_resource_command_center(report: Report) -> None:
             report.error(f"lead.js must initialize {initializer}.")
 
     home_text = (ROOT / "index.html").read_text(encoding="utf-8")
-    required_home_courses = (
-        "linear",
-        "modular-unit-1",
-        "modular-unit-2",
-        "pure",
-        "pure2",
-        "mechanics1",
-    )
+    # 2026-10-01 course-first home: one large card per course, each opening course.html
+    required_home_courses = ("linear", "unit1", "unit2", "wma11", "wma12", "wme01")
     for course_id in required_home_courses:
-        if f'data-home-course="{course_id}"' not in home_text:
-            report.error(f"Homepage core workspace is missing course selector {course_id}.")
+        if f'data-course="{course_id}"' not in home_text:
+            report.error(f"Homepage is missing the course card {course_id}.")
 
     css_text = (ROOT / "styles.css").read_text(encoding="utf-8")
     for selector in (".home-command", ".is-core-workspace", ".pathway-more-tools"):

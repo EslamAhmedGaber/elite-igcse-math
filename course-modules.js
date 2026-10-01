@@ -2662,8 +2662,43 @@
     ],
   };
 
+  // The six study courses in the order students choose them (home page, course page, course bar, library).
+  const COURSES = [
+    { id: "linear", name: "Linear", code: "4MA1", family: "IGCSE", group: "linear", query: "pathway=linear",
+      blurb: "Edexcel International GCSE Mathematics A, Higher" },
+    { id: "unit1", name: "Modular Unit 1", code: "4WM1", family: "IGCSE", group: "modular", unit: "Unit 1", query: "pathway=modular&unit=Unit+1",
+      blurb: "Edexcel International GCSE Modular, Unit 1" },
+    { id: "unit2", name: "Modular Unit 2", code: "4WM2", family: "IGCSE", group: "modular", unit: "Unit 2", query: "pathway=modular&unit=Unit+2",
+      blurb: "Edexcel International GCSE Modular, Unit 2" },
+    { id: "wma11", name: "Pure 1", code: "WMA11", family: "IAL", group: "pure", query: "pathway=pure&course=wma11",
+      blurb: "Edexcel International A Level, Pure Mathematics 1" },
+    { id: "wma12", name: "Pure 2", code: "WMA12", family: "IAL", group: "pure2", query: "pathway=pure&course=wma12",
+      blurb: "Edexcel International A Level, Pure Mathematics 2" },
+    { id: "wme01", name: "Mechanics 1", code: "WME01", family: "IAL", group: "mechanics1", query: "pathway=pure&course=wme01",
+      blurb: "Edexcel International A Level, Mechanics 1" },
+  ];
+
+  function courseFromContext(params, groupId) {
+    const course = String(params.get("course") || "").toLowerCase();
+    if (["wma11", "wma12", "wme01"].includes(course)) return course;
+    if (groupId === "pure") return "wma11";
+    if (groupId === "pure2") return "wma12";
+    if (groupId === "mechanics1") return "wme01";
+    const unit = String(params.get("unit") || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+    if (unit === "unit1" || unit === "4wm1") return "unit1";
+    if (unit === "unit2" || unit === "4wm2") return "unit2";
+    if (groupId === "modular") return "";
+    if (groupId === "baccalaureate" || groupId === "about") return "";
+    const pathway = String(params.get("pathway") || "").toLowerCase();
+    if (pathway === "pure") return "wma11";
+    if (pathway === "modular") return "";
+    return "linear";
+  }
+
   window.ELITE_COURSE_MODULES = {
     version: "2026-07-13-visual-learning-os-v1",
+    courses: COURSES,
+    courseFromContext,
     moduleCatalog,
     moduleAliases,
     palettes,

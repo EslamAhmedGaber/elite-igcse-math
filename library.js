@@ -3,15 +3,6 @@
   const data = window.ELITE_LIBRARY;
   if (!root || !data) return;
 
-  const ORDER = ["linear", "unit1", "unit2", "wma11", "wma12", "wme01"];
-  const LINKS = {
-    linear: "pathway=linear",
-    unit1: "pathway=modular&unit=Unit+1",
-    unit2: "pathway=modular&unit=Unit+2",
-    wma11: "pathway=pure&course=wma11",
-    wma12: "pathway=pure&course=wma12",
-    wme01: "pathway=pure&course=wme01",
-  };
   const CLASSIFIED = {
     linear: "downloads.html?pathway=linear",
     unit1: "downloads.html?pathway=modular&unit=Unit+1",
@@ -161,11 +152,6 @@
   const c = data.courses[id];
   document.title = `${c.name} Notes & Adaptive Classified - Elite IGCSE Mathematics`;
 
-  const switcher = ORDER.map((key) => {
-    const k = data.courses[key];
-    const active = key === id ? ' aria-current="page" class="is-active"' : "";
-    return `<a href="library.html?${LINKS[key]}${window.location.hash || ""}"${active}><strong>${esc(k.name)}</strong><small>${esc(k.code)}</small></a>`;
-  }).join("");
 
   root.innerHTML = `
     <section class="lib-hero">
@@ -179,7 +165,6 @@
         <a href="#adaptive">Adaptive Classified</a>
       </nav>
     </section>
-    <nav class="lib-courses" aria-label="Change course">${switcher}</nav>
     ${notesSection(c)}
     ${adaptiveSection(c)}
   `;

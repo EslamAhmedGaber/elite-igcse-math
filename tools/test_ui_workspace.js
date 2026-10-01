@@ -12,23 +12,27 @@ const lead = read("lead.js");
 const home = read("index.html");
 const system = read("elite-system.css");
 
-const expectedOrder = '["notes", "classified", "past-solutions", "books", "build-test", "progress"]';
+// 2026-10-01 course-first redesign: Notes, Adaptive Classified, Classified Books, Past Papers, Mock Generator, Progress
+const expectedOrder = '["notes", "adaptive", "books", "past-solutions", "build-test", "progress"]';
 if (!lead.includes(`const CORE_TOOL_ORDER = ${expectedOrder};`)) {
   throw new Error("The shared workspace does not expose the six primary tools in the approved order.");
 }
 
-for (const label of ["Notes", "Classified Practice", "Past Papers", "Classified Books", "Mock Generator", "Progress Tracker"]) {
+for (const label of ["Notes", "Adaptive Classified", "Past Papers", "Classified Books", "Mock Generator", "Progress"]) {
   if (!lead.includes(`title: "${label}"`)) throw new Error(`Missing primary tool copy: ${label}`);
 }
 
-for (const marker of [
-  'class="home-route-guide"',
-  "Simple study route",
-  "Learn it. Practise it. Test it. Improve it.",
-  'aria-label="Study tools"',
-  "Expertise, revision and saved work",
-]) {
+// the home page is only the course choice: six course cards + other courses, no tool grid or marketing blocks
+for (const marker of ['id="courseLauncher"', "Choose your course", "Other courses"]) {
   if (!home.includes(marker)) throw new Error(`Missing homepage clarity marker: ${marker}`);
+}
+for (const course of ["pathway=linear", "unit=Unit+1", "unit=Unit+2", "course=wma11", "course=wma12", "course=wme01"]) {
+  if (!home.includes(`course.html?${course.startsWith("unit") ? "pathway=modular&amp;" : course.startsWith("course") ? "pathway=pure&amp;" : ""}${course}`)) {
+    throw new Error(`Home page is missing the course card for ${course}`);
+  }
+}
+for (const removed of ["home-route-guide", "home-proof-pricing", "home-hero-proof"]) {
+  if (home.includes(removed)) throw new Error(`Home page still carries the old block: ${removed}`);
 }
 
 for (const selector of [

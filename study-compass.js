@@ -494,6 +494,7 @@
   }
 
   function renderMobileNav() {
+    if (document.body.dataset.page === "home") return;   // the home page is only the course choice
     let nav = document.querySelector(".mobile-bottom-nav");
     if (!nav) {
       nav = document.createElement("nav");

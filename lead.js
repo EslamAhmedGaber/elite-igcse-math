@@ -190,7 +190,7 @@
     return title.replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "general";
   }
 
-  const CORE_TOOL_ORDER = ["notes", "classified", "past-solutions", "books", "build-test", "progress"];
+  const CORE_TOOL_ORDER = ["notes", "adaptive", "books", "past-solutions", "build-test", "progress"];
   const COMPACT_WORKSPACE_PAGES = new Set([
     "practice",
     "downloads",
@@ -202,24 +202,24 @@
     "topics",
   ]);
   const CORE_TOOL_COPY = {
-    classified: {
-      title: "Classified Practice",
-      detail: "Filter by topic and solve online",
-      short: "Classified",
+    adaptive: {
+      title: "Adaptive Classified",
+      detail: "Questions + With Answers books",
+      short: "Adaptive",
     },
     books: {
       title: "Classified Books",
-      detail: "Question books + worked solutions",
+      detail: "Classified and Expertise PDFs",
       short: "Books",
     },
     "past-solutions": {
       title: "Past Papers",
-      detail: "Exam papers + matching solutions",
+      detail: "Each paper beside its solution",
       short: "Papers",
     },
     notes: {
       title: "Notes",
-      detail: "Notes with answers + Adaptive Classified",
+      detail: "Topic notes with answers",
       short: "Notes",
     },
     "build-test": {
@@ -228,7 +228,7 @@
       short: "Mock",
     },
     progress: {
-      title: "Progress Tracker",
+      title: "Progress",
       detail: "See mastery and the next weak topic",
       short: "Progress",
     },
@@ -407,6 +407,16 @@
   }
 
   function renderStructuredNav(nav) {
+    if (Array.isArray(COURSE_SYSTEM.courses) && COURSE_SYSTEM.courses.length) {
+      const params = new URLSearchParams(window.location.search);
+      const current = typeof COURSE_SYSTEM.courseFromContext === "function" && document.body?.dataset?.page !== "home"
+        ? COURSE_SYSTEM.courseFromContext(params, activeNavGroup()) : "";
+      const items = COURSE_SYSTEM.courses.map((course) => `<a class="nav-course" data-nav-course="${course.id}" href="/course.html?${course.query}"${course.id === current ? ' aria-current="page"' : ""}><span>${escapeHtml(course.name)}</span><small>${escapeHtml(course.code)}</small></a>`);
+      items.push(`<a class="nav-course nav-course-other" href="/egyptian-baccalaureate.html"><span>Baccalaureate</span><small>Egypt 2026</small></a>`);
+      nav.innerHTML = `<a class="nav-course nav-course-all" href="/index.html"><span>All courses</span></a>${items.join("")}`;
+      nav.classList.add("is-flat-course-nav");
+      return;
+    }
     nav.innerHTML = NAV_GROUPS.map((group) => {
       const tabAttrs = [
         `class="nav-tab-main"`,
@@ -540,6 +550,7 @@
     "expertise":      '<svg class="module-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.4 5.9.8-4.3 4.2 1 5.8L12 16.6 6.8 19.2l1-5.8L3.5 9.2l5.9-.8z"/></svg>',
     "build-test":     '<svg class="module-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 3L4 14h6l-1 7 9-11h-6z"/></svg>',
     "smart-revision": '<svg class="module-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.3M21 4v5h-5"/><path d="M21 12a9 9 0 0 1-15.5 6.3M3 20v-5h5"/></svg>',
+    "adaptive":       '<svg class="module-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19V9M10 19V5M15 19v-7M20 19v-4"/><path d="M3 19h19"/></svg>',
     "progress":       '<svg class="module-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>',
     "mistake-box":    '<svg class="module-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9.5 17H2.5z"/><path d="M12 10v4"/><circle cx="12" cy="17" r="0.8" fill="currentColor"/></svg>',
     "saved-tests":    '<svg class="module-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg>',
@@ -1171,7 +1182,10 @@
       `);
       return;
     }
+    if (document.body?.dataset?.page === "course") return;     // the course page shows its own big cards
     const tools = workspaceTools(toolData.links, { groupId: toolData.groupId || groupId, unit: toolData.unit });
+    const hubCourse = (COURSE_SYSTEM.courses || []).find((item) => item.group === (toolData.groupId || groupId) && (!item.unit || item.unit === toolData.unit));
+    const hubHref = hubCourse ? `/course.html?${hubCourse.query}` : "/index.html";
     const courseName = visibleHeading
       ? `<strong class="course-bar-name">${escapeHtml(toolData.title)}</strong>`
       : `<h1 class="course-bar-name">${escapeHtml(toolData.title)}</h1>`;
@@ -1182,10 +1196,10 @@
       <nav class="course-bar" data-course-group="${escapeHtml(groupId)}" aria-label="${escapeHtml(toolData.title)} study tools">
         <div class="course-bar-inner">
           <div class="course-bar-id">
-            <span class="course-bar-kicker">Your course</span>
+            <a class="course-bar-home" href="${hubHref}" title="Back to the course page">&larr; Course home</a>
             ${courseName}
             <small class="course-bar-code">${escapeHtml(toolData.detail)}</small>
-            <a class="course-bar-switch" href="/index.html#courseLauncher">Switch</a>
+            <a class="course-bar-switch" href="/index.html">Change course</a>
           </div>
           <div class="course-bar-tools">
             ${tools.primary.map(renderCourseBarLink).join("")}
@@ -1625,7 +1639,7 @@
     const leadScript = document.querySelector('script[src*="lead.js"]');
     const baseUrl = leadScript?.src || document.baseURI;
     const dataUrl = new URL("study-search-data.js?v=20260713b", baseUrl).href;
-    const compassUrl = new URL("study-compass.js?v=20261001a", baseUrl).href;
+    const compassUrl = new URL("study-compass.js?v=20261001b", baseUrl).href;
 
     function appendScript(src, marker) {
       return new Promise((resolve, reject) => {
@@ -1654,8 +1668,18 @@
       .catch(() => {});
   }
 
+  // one compact place for help and login: the header (no second WhatsApp or login button elsewhere)
+  function initHeaderCta() {
+    document.querySelectorAll(".site-cta [data-lead-trigger='whatsapp']").forEach((link) => {
+      link.innerHTML = '<span class="cta-long">WhatsApp Help</span><span class="cta-short">WhatsApp</span>';
+      link.classList.add("cta-whatsapp");
+    });
+    document.querySelectorAll(".mobile-bottom-nav [data-lead-trigger='whatsapp']").forEach((link) => link.remove());
+  }
+
   function bootstrap() {
     applyPathwayContext();
+    initHeaderCta();
     init();
     rewriteIalTopNavFromTree();
     initNavToggle();

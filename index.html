@@ -27,12 +27,12 @@
   <script src="pathway-bootstrap.js?v=baccalaureate-20260902b"></script>
   <link rel="stylesheet" href="styles.css?v=20260809a">
   <link rel="stylesheet" href="elite-system.css?v=20260906b">
-  <link rel="stylesheet" href="elite-ux.css?v=20260927i">
+  <link rel="stylesheet" href="elite-ux.css?v=20261001f">
   <script defer src="pathway-mode.js?v=baccalaureate-20260902c"></script>
   <script defer src="firebase-config.js"></script>
-  <script defer src="cloud-progress.js"></script>
-  <script defer src="course-modules.js?v=library-20261001a"></script>
-  <script defer src="lead.js?v=20261001a"></script>
+  <script defer src="cloud-progress.js?v=20261001a"></script>
+  <script defer src="course-modules.js?v=hub-20261001b"></script>
+  <script defer src="lead.js?v=20261001c"></script>
 </head>
 <body data-page="home">
 
@@ -46,276 +46,84 @@
     </button>
     <nav class="site-nav pathway-tabs" aria-label="Main"></nav>
     <div class="site-cta">
-      <button class="button cloud-auth-button" type="button" data-cloud-login>Continue with Google</button>
+      <button class="button cloud-auth-button" type="button" data-cloud-login>Student Login</button>
       <a class="button cloud-account-button" href="progress.html" data-cloud-account hidden>My Progress</a>
-      <a class="button primary" data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Book Free First Class</a>
+      <a class="button primary" data-lead-trigger="whatsapp" href="https://wa.me/201120009622">WhatsApp Help</a>
     </div>
   </header>
 
-  <main class="page page-home home-rebuild">
-    <section class="home-hero" aria-labelledby="heroTitle">
-      <div class="home-hero-copy">
-        <span class="home-hero-kicker">Dr Eslam Ahmed &middot; Faculty of Engineering, Cairo University</span>
-        <h1 id="heroTitle">Elite <span>Mathematics</span></h1>
-        <p class="home-hero-lead">Edexcel IGCSE and International A Level Mathematics, taught the way exams are marked. Learn the method, practise every real past-paper question by topic, and build printable mocks with worked solutions.</p>
-        <div class="home-hero-actions">
-          <a class="home-hero-cta is-primary" href="#courseLauncher">Choose your course</a>
-          <a class="home-hero-cta is-gold" data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Book a free first class</a>
-        </div>
-        <ul class="home-hero-proof" aria-label="Website coverage">
-          <li><strong>1,176</strong><span>IGCSE classified questions</span></li>
-          <li><strong>507</strong><span>IAL worked questions</span></li>
-          <li><strong>48</strong><span>IGCSE paper sets</span></li>
-          <li><strong>6</strong><span>complete course routes</span></li>
-        </ul>
-      </div>
-      <figure class="home-hero-portrait">
-        <img src="assets/Eslam4.jpg" alt="Dr Eslam Ahmed" width="320" height="320">
-        <figcaption>
-          <strong>Dr Eslam Ahmed</strong>
-          <span>Every question classified, solved and checked personally.</span>
-        </figcaption>
-      </figure>
+  <main class="page page-home hub-page">
+    <section class="hub-home-head" aria-labelledby="homeTitle">
+      <h1 id="homeTitle">Choose your course</h1>
+      <p>Elite Mathematics with Dr Eslam Ahmed</p>
     </section>
 
-    <section class="home-command" id="courseLauncher" data-home-workspace aria-labelledby="courseLauncherTitle">
-      <header class="home-command-head">
-        <div>
-          <span class="eyebrow">Your study workspace</span>
-          <h2 id="courseLauncherTitle">Pick a course. Everything else is one click away.</h2>
-        </div>
-      </header>
-
-      <div class="home-course-tabs home-course-picker" role="tablist" aria-label="Choose your course">
-        <div class="course-group">
-          <p class="course-group-label"><span>Edexcel IGCSE Mathematics</span><small>International GCSE &middot; Higher tier</small></p>
-          <div class="course-group-cards">
-            <button type="button" role="tab" class="course-card" data-tone="linear" data-home-course="linear" aria-selected="true" aria-controls="homeCoreTools">
-              <span class="course-card-code">4MA1</span>
-              <strong>Linear</strong>
-              <span class="course-card-desc">The full IGCSE Mathematics A course, both papers.</span>
-              <span class="course-card-meta">1,176 questions &middot; 48 paper sets</span>
-            </button>
-            <button type="button" role="tab" class="course-card" data-tone="modular" data-home-course="modular-unit-1" aria-selected="false" aria-controls="homeCoreTools">
-              <span class="course-card-code">4WM1H</span>
-              <strong>Modular Unit 1</strong>
-              <span class="course-card-desc">First modular unit: number, algebra, graphs and more.</span>
-              <span class="course-card-meta">417 classified questions</span>
-            </button>
-            <button type="button" role="tab" class="course-card" data-tone="modular" data-home-course="modular-unit-2" aria-selected="false" aria-controls="homeCoreTools">
-              <span class="course-card-code">4WM2H</span>
-              <strong>Modular Unit 2</strong>
-              <span class="course-card-desc">Second modular unit: geometry, vectors, statistics and more.</span>
-              <span class="course-card-meta">441 classified questions</span>
-            </button>
-          </div>
-        </div>
-        <div class="course-group">
-          <p class="course-group-label"><span>Edexcel International A Level</span><small>IAL Mathematics units</small></p>
-          <div class="course-group-cards">
-            <button type="button" role="tab" class="course-card" data-tone="pure" data-home-course="pure" aria-selected="false" aria-controls="homeCoreTools">
-              <span class="course-card-code">WMA11</span>
-              <strong>Pure 1</strong>
-              <span class="course-card-desc">Algebra, coordinate geometry, trigonometry, calculus.</span>
-              <span class="course-card-meta">189 worked questions</span>
-            </button>
-            <button type="button" role="tab" class="course-card" data-tone="pure2" data-home-course="pure2" aria-selected="false" aria-controls="homeCoreTools">
-              <span class="course-card-code">WMA12</span>
-              <strong>Pure 2</strong>
-              <span class="course-card-desc">Proof, sequences, exponentials, logs, trig and integration.</span>
-              <span class="course-card-meta">190 worked questions</span>
-            </button>
-            <button type="button" role="tab" class="course-card" data-tone="mechanics" data-home-course="mechanics1" aria-selected="false" aria-controls="homeCoreTools">
-              <span class="course-card-code">WME01</span>
-              <strong>Mechanics 1</strong>
-              <span class="course-card-desc">Kinematics, forces, momentum, moments.</span>
-              <span class="course-card-meta">138 worked questions &middot; Mechanics Lab</span>
-            </button>
-          </div>
-        </div>
+    <aside class="home-study-trail" data-home-study-trail hidden aria-labelledby="homeTrailTitle">
+      <span class="home-study-trail-icon" data-home-trail-icon aria-hidden="true"></span>
+      <div class="home-study-trail-copy">
+        <span class="eyebrow">Continue where you left off</span>
+        <strong id="homeTrailTitle" data-home-trail-title>Continue studying</strong>
+        <span data-home-trail-meta>Saved on this device</span>
       </div>
-      <a class="course-picker-extra" href="egyptian-baccalaureate.html">Also available: Egyptian Baccalaureate Mathematics 2026 &rarr;</a>
+      <a class="home-study-trail-link" data-home-trail-link href="index.html">Continue</a>
+      <button class="home-study-trail-clear" data-home-trail-clear type="button" aria-label="Clear saved study route" title="Clear saved study route">&times;</button>
+    </aside>
 
-      <div class="home-active-course" aria-live="polite">
-        <span>Study tools for</span>
-        <strong data-home-course-label>Linear</strong>
-        <small data-home-course-code>4MA1 route</small>
-        <p data-home-course-intro>Everything for Linear, arranged around the resources students use most.</p>
-      </div>
-
-      <div class="home-route-guide" aria-label="Recommended study route">
-        <div class="home-route-guide-intro">
-          <span class="eyebrow">Simple study route</span>
-          <strong>Learn it. Practise it. Test it. Improve it.</strong>
-        </div>
-        <ol class="home-route-steps">
-          <li><span>01</span><strong>Learn</strong><small>Strategy notes</small></li>
-          <li><span>02</span><strong>Practise</strong><small>Classified questions</small></li>
-          <li><span>03</span><strong>Test</strong><small>Past papers and mocks</small></li>
-          <li><span>04</span><strong>Improve</strong><small>Progress and weak topics</small></li>
-        </ol>
-      </div>
-
-      <aside class="home-study-trail" data-home-study-trail hidden aria-labelledby="homeTrailTitle">
-        <span class="home-study-trail-icon" data-home-trail-icon aria-hidden="true"></span>
-        <div class="home-study-trail-copy">
-          <span class="eyebrow">Continue your route</span>
-          <strong id="homeTrailTitle" data-home-trail-title>Continue studying</strong>
-          <span data-home-trail-meta>Saved on this device</span>
-        </div>
-        <a class="home-study-trail-link" data-home-trail-link href="index.html">Continue</a>
-        <button class="home-study-trail-clear" data-home-trail-clear type="button" aria-label="Clear saved study route" title="Clear saved study route">&times;</button>
-      </aside>
-
-      <div class="home-core-grid" id="homeCoreTools" role="tabpanel" data-home-core-tools aria-label="Study tools" aria-live="polite"></div>
-
-      <details class="home-more-tools" data-home-more-shell>
-        <summary>More tools <span>Expertise, revision and saved work</span></summary>
-        <div class="home-more-grid" data-home-more-tools></div>
-      </details>
-
+    <section class="hub-courses" id="courseLauncher" aria-label="Courses">
+      <a class="hub-course" data-course="linear" href="course.html?pathway=linear">
+        <span class="hub-course-code">IGCSE &middot; 4MA1</span>
+        <strong>Linear</strong>
+        <small>International GCSE Mathematics A</small>
+        <span class="hub-card-go" aria-hidden="true">&rarr;</span>
+      </a>
+      <a class="hub-course" data-course="unit1" href="course.html?pathway=modular&amp;unit=Unit+1">
+        <span class="hub-course-code">IGCSE &middot; 4WM1</span>
+        <strong>Modular Unit 1</strong>
+        <small>International GCSE Modular, Unit 1</small>
+        <span class="hub-card-go" aria-hidden="true">&rarr;</span>
+      </a>
+      <a class="hub-course" data-course="unit2" href="course.html?pathway=modular&amp;unit=Unit+2">
+        <span class="hub-course-code">IGCSE &middot; 4WM2</span>
+        <strong>Modular Unit 2</strong>
+        <small>International GCSE Modular, Unit 2</small>
+        <span class="hub-card-go" aria-hidden="true">&rarr;</span>
+      </a>
+      <a class="hub-course" data-course="wma11" href="course.html?pathway=pure&amp;course=wma11">
+        <span class="hub-course-code">IAL &middot; WMA11</span>
+        <strong>Pure 1</strong>
+        <small>International A Level Pure 1</small>
+        <span class="hub-card-go" aria-hidden="true">&rarr;</span>
+      </a>
+      <a class="hub-course" data-course="wma12" href="course.html?pathway=pure&amp;course=wma12">
+        <span class="hub-course-code">IAL &middot; WMA12</span>
+        <strong>Pure 2</strong>
+        <small>International A Level Pure 2</small>
+        <span class="hub-card-go" aria-hidden="true">&rarr;</span>
+      </a>
+      <a class="hub-course" data-course="wme01" href="course.html?pathway=pure&amp;course=wme01">
+        <span class="hub-course-code">IAL &middot; WME01</span>
+        <strong>Mechanics 1</strong>
+        <small>International A Level Mechanics 1</small>
+        <span class="hub-card-go" aria-hidden="true">&rarr;</span>
+      </a>
     </section>
 
-    <section class="trust-panel trust-compact home-trust-about" aria-labelledby="trustTitle">
-      <div class="trust-intro">
-        <figure class="trust-portrait">
-          <img src="assets/Eslam4.jpg" alt="Dr Eslam Ahmed" loading="lazy">
-          <figcaption>Dr Eslam Ahmed</figcaption>
-        </figure>
-        <div class="trust-head">
-          <span class="eyebrow">Teacher-led system</span>
-          <h2 id="trustTitle">A classified bank built around real exam practice.</h2>
-          <p>Dr Eslam Ahmed teaches online, records sessions for review, and keeps the website focused on the work students repeat most: solve, check, mark, revise, and rebuild confidence topic by topic.</p>
-          <p><a class="link-arrow" href="about.html">Read full bio and testimonials -></a></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="home-proof-pricing" aria-labelledby="homeProofTitle">
-      <div class="section-head">
-        <span class="eyebrow">Reviews + Course Options</span>
-        <h2 id="homeProofTitle">Focused practice, then the right level of teacher support.</h2>
-        <p>Start free on the site, then choose group, private, or intensive support when a student needs a teacher beside the practice.</p>
-      </div>
-      <div class="review-summary">
-        <div><strong>5.0</strong><span>student rating</span></div>
-        <div><strong>1,176</strong><span>IGCSE classified</span></div>
-        <div><strong>507</strong><span>IAL worked questions</span></div>
-      </div>
-      <div class="reviews-grid home-reviews-compact">
-        <article class="review-card">
-          <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>"The website made revision simple. I chose one topic, solved the questions, checked the solution, then moved to the next weak topic."</blockquote>
-          <cite>IGCSE student feedback</cite>
-        </article>
-        <article class="review-card">
-          <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>"Dr Eslam explains the method, not only the answer. The Q20+ bank helped me understand the hard end-of-paper questions."</blockquote>
-          <cite>Higher Mathematics student</cite>
-        </article>
-        <article class="review-card">
-          <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>"As a parent, I liked that my child could practise from real exam questions, not random worksheets."</blockquote>
-          <cite>Parent feedback</cite>
-        </article>
-      </div>
-      <div class="pricing-grid home-pricing-compact">
-        <article class="pricing-card">
-          <header>
-            <span class="p-tag">Small group</span>
-            <strong>Group Course</strong>
-            <span class="p-egp">Live Zoom, recorded, max 5 students.</span>
-          </header>
-          <ul>
-            <li>Two weekly sessions</li>
-            <li>Weekly classified work</li>
-            <li>Mock papers and review</li>
-          </ul>
-          <button type="button" class="enroll-trigger" data-package="group">Book Free First Class</button>
-        </article>
-        <article class="pricing-card highlight">
-          <header>
-            <span class="p-tag">Tailored</span>
-            <strong>Private 1-to-1</strong>
-            <span class="p-egp">For weak-topic recovery or flexible timing.</span>
-          </header>
-          <ul>
-            <li>Personal topic plan</li>
-            <li>Direct mistake review</li>
-            <li>WhatsApp support</li>
-          </ul>
-          <button type="button" class="enroll-trigger" data-package="private">Book Free First Class</button>
-        </article>
-        <article class="pricing-card">
-          <header>
-            <span class="p-tag">Pre-exam</span>
-            <strong>Intensive Sprint</strong>
-            <span class="p-egp">A short route for the final weeks.</span>
-          </header>
-          <ul>
-            <li>Q20+ focus</li>
-            <li>Timed papers</li>
-            <li>Weak-topic repair</li>
-          </ul>
-          <button type="button" class="enroll-trigger" data-package="intensive">Book Free First Class</button>
-        </article>
-      </div>
-    </section>
-
-    <section class="final-cta" aria-label="Get started">
-      <div>
-        <h2>Open a real study route now.</h2>
-        <p>Start with the strategy note, solve a few questions, and let the progress system show the next weak topic.</p>
-      </div>
-      <div class="final-cta-actions">
-        <a class="button primary" href="notes.html?pathway=linear#linearNotes" data-pathway-choice="linear" data-pathway-target="notes.html?pathway=linear#linearNotes">Open Linear notes</a>
-        <a class="button light" href="practice.html?pathway=modular&amp;choose=unit" data-pathway-choice="modular" data-pathway-target="practice.html?pathway=modular&amp;choose=unit">Choose Modular unit</a>
-        <a class="button gold" data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Book free first class</a>
+    <section class="hub-other" aria-labelledby="otherCoursesTitle">
+      <h2 id="otherCoursesTitle">Other courses</h2>
+      <div class="hub-courses hub-courses-other">
+        <a class="hub-course hub-course-other" href="egyptian-baccalaureate.html">
+          <span class="hub-course-code">Egypt &middot; 2026</span>
+          <strong>Egyptian Baccalaureate</strong>
+          <small>Mathematics 2026, Student and Teacher books</small>
+          <span class="hub-card-go" aria-hidden="true">&rarr;</span>
+        </a>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-grid">
-      <div>
-        <span class="footer-brand-line">Elite IGCSE Academy</span>
-        <p class="footer-brand-tagline">Past-paper mastery, classified by topic.</p>
-        <p class="footer-brand-blurb">Edexcel IGCSE Mathematics, IAL Pure 1, IAL Pure 2, IAL Mechanics 1, and live online tutoring &mdash; prepared and signed by Dr Eslam Ahmed, Cairo University Faculty of Engineering.</p>
-      </div>
-      <div>
-        <strong>Pathways</strong>
-        <p><a href="notes.html?pathway=linear#linearNotes">Linear &middot; 4MA1</a></p>
-        <p><a href="practice.html?pathway=modular&amp;choose=unit">Modular &middot; 4WM</a></p>
-        <p><a href="ial/wma11/index.html">IAL Pure 1 &middot; WMA11</a></p>
-        <p><a href="ial/wma12/index.html">IAL Pure 2 &middot; WMA12</a></p>
-        <p><a href="ial/wme01/index.html">IAL Mechanics 1 &middot; WME01</a></p>
-        <p class="muted">Statistics 1 &mdash; coming next</p>
-      </div>
-      <div>
-        <strong>Modules</strong>
-        <p><a href="practice.html">Classified View</a></p>
-        <p><a href="exam.html">Build Test</a></p>
-        <p><a href="progress.html">Progress</a></p>
-        <p><a href="downloads.html">Books</a></p>
-        <p><a href="pastpapers.html">Past Papers</a></p>
-      </div>
-      <div>
-        <strong>Connect</strong>
-        <p><a href="https://wa.me/201120009622" data-lead-trigger="whatsapp">WhatsApp &middot; +20&nbsp;112&nbsp;000&nbsp;9622</a></p>
-        <p><a href="tel:01120009622">Call &middot; 011 2000 9622</a></p>
-        <p><a href="about.html">About Dr Eslam</a></p>
-        <p><a href="checkup.html">Readiness check</a></p>
-      </div>
-    </div>
-    <p class="footer-fineprint">&copy; Dr Eslam Ahmed &middot; Cairo University Faculty of Engineering &middot; All worked solutions, classified banks, and Elite books prepared personally for Edexcel Mathematics students.</p>
+  <footer class="site-footer hub-footer">
+    <p><strong>Elite IGCSE Academy</strong> &middot; Dr Eslam Ahmed &middot; <a href="about.html">About</a> &middot; <a href="https://wa.me/201120009622">WhatsApp +20&nbsp;112&nbsp;000&nbsp;9622</a></p>
   </footer>
-
-  <nav class="mobile-bottom-nav" aria-label="Student shortcuts">
-    <a href="notes.html?pathway=linear#linearNotes">Linear</a>
-    <a href="practice.html?pathway=modular&amp;choose=unit">Modular</a>
-    <a href="ial/wma11/index.html">Pure 1</a>
-    <a data-lead-trigger="whatsapp" href="https://wa.me/201120009622">Enroll</a>
-  </nav>
 
 </body>
 </html>

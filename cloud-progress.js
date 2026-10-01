@@ -185,7 +185,7 @@
     all("[data-cloud-login]").forEach((button) => {
       button.hidden = signedIn;
       button.disabled = !state.configured;
-      button.textContent = state.configured ? "Continue with Google" : "Google Sync";
+      button.textContent = state.configured ? "Student Login" : "Student Login";
     });
 
     all("[data-cloud-account]").forEach((link) => {
