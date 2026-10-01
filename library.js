@@ -183,8 +183,11 @@
     ${notesSection(c)}
     ${adaptiveSection(c)}
   `;
-  if (window.location.hash) {
-    const target = document.querySelector(window.location.hash);
+  // the shared course bar is inserted above this page after load, so jump to #notes / #adaptive once it has settled
+  function jumpToHash() {
+    const target = window.location.hash && document.querySelector(window.location.hash);
     if (target) target.scrollIntoView();
   }
+  jumpToHash();
+  window.addEventListener("load", () => setTimeout(jumpToHash, 350), { once: true });
 })();
