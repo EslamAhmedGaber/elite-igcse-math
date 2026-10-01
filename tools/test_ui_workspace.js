@@ -17,7 +17,7 @@ if (!lead.includes(`const CORE_TOOL_ORDER = ${expectedOrder};`)) {
   throw new Error("The shared workspace does not expose the six primary tools in the approved order.");
 }
 
-for (const label of ["Strategy Notes", "Classified Practice", "Past Papers", "Classified Books", "Mock Generator", "Progress Tracker"]) {
+for (const label of ["Notes", "Classified Practice", "Past Papers", "Classified Books", "Mock Generator", "Progress Tracker"]) {
   if (!lead.includes(`title: "${label}"`)) throw new Error(`Missing primary tool copy: ${label}`);
 }
 

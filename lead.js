@@ -55,7 +55,8 @@
       pathway: "linear",
       panelLabel: "Linear tools",
       links: [
-        { title: "Strategy Notes", detail: "Booklet + topic notes", href: "/notes.html?pathway=linear#linearNotes", pathway: "linear" },
+        { title: "Notes", detail: "With answers", href: "/library.html?pathway=linear#notes", pathway: "linear" },
+        { title: "Adaptive Classified", detail: "Questions + answers", href: "/library.html?pathway=linear#adaptive", pathway: "linear" },
         { title: "Classified View", detail: "Chapter bank", href: "/practice.html?pathway=linear&bank=all", pathway: "linear" },
         { title: "Expertise", detail: "Q20+ finishers", href: "/practice.html?pathway=linear&bank=expertise&mode=q20", pathway: "linear" },
         { title: "Build Test", detail: "Build tests", href: "/exam.html?pathway=linear&mode=custom", pathway: "linear" },
@@ -78,7 +79,8 @@
           title: "Unit 1",
           detail: "4WM1",
           links: [
-            { title: "Strategy Notes", detail: "Shared core notes", href: "/notes.html?pathway=modular&unit=Unit+1#linearNotes", pathway: "modular" },
+            { title: "Notes", detail: "Unit 1 with answers", href: "/library.html?pathway=modular&unit=Unit+1#notes", pathway: "modular" },
+            { title: "Adaptive Classified", detail: "Unit 1 questions + answers", href: "/library.html?pathway=modular&unit=Unit+1#adaptive", pathway: "modular" },
             { title: "Classified View", detail: "Unit 1 topics", href: "/practice.html?pathway=modular&unit=Unit+1&bank=all", pathway: "modular" },
             { title: "Expertise", detail: "Unit 1 harder set", href: "/practice.html?pathway=modular&unit=Unit+1&bank=expertise&mode=q20", pathway: "modular" },
             { title: "Build Test", detail: "Unit 1 tests", href: "/exam.html?pathway=modular&unit=Unit+1&mode=custom", pathway: "modular" },
@@ -94,7 +96,8 @@
           title: "Unit 2",
           detail: "4WM2",
           links: [
-            { title: "Strategy Notes", detail: "Shared core notes", href: "/notes.html?pathway=modular&unit=Unit+2#linearNotes", pathway: "modular" },
+            { title: "Notes", detail: "Unit 2 with answers", href: "/library.html?pathway=modular&unit=Unit+2#notes", pathway: "modular" },
+            { title: "Adaptive Classified", detail: "Unit 2 questions + answers", href: "/library.html?pathway=modular&unit=Unit+2#adaptive", pathway: "modular" },
             { title: "Classified View", detail: "Unit 2 topics", href: "/practice.html?pathway=modular&unit=Unit+2&bank=all", pathway: "modular" },
             { title: "Expertise", detail: "Unit 2 harder set", href: "/practice.html?pathway=modular&unit=Unit+2&bank=expertise&mode=q20", pathway: "modular" },
             { title: "Build Test", detail: "Unit 2 tests", href: "/exam.html?pathway=modular&unit=Unit+2&mode=custom", pathway: "modular" },
@@ -115,7 +118,8 @@
       href: "/ial/wma11/index.html",
       panelLabel: "WMA11 tools",
       links: [
-        { title: "Strategy Notes", detail: "Booklet + topic notes", href: "/ial/wma11/index.html#ialNotes" },
+        { title: "Notes", detail: "With answers", href: "/library.html?pathway=pure&course=wma11#notes" },
+        { title: "Adaptive Classified", detail: "Questions + answers", href: "/library.html?pathway=pure&course=wma11#adaptive" },
         { title: "Classified View", detail: "Topic practice", href: "/ial/wma11/index.html#ialFilters" },
         { title: "Expertise View", detail: "Q6+ filtered bank", href: "/ial/wma11/index.html?expertise=1#ialFilters" },
         { title: "Build Test", detail: "Full mock builder", href: "/exam.html?pathway=pure&course=wma11&mode=custom" },
@@ -214,8 +218,8 @@
       short: "Papers",
     },
     notes: {
-      title: "Strategy Notes",
-      detail: "Topic notes + complete booklet",
+      title: "Notes",
+      detail: "Notes with answers + Adaptive Classified",
       short: "Notes",
     },
     "build-test": {
@@ -633,7 +637,7 @@
   };
 
   const MODULE_BREADCRUMB_LABELS = {
-    notes: "Strategy Notes",
+    notes: "Notes",
     classified: "Classified View",
     expertise: "Expertise View",
     "build-test": "Build Test",
@@ -651,6 +655,7 @@
 
   const STUDY_TRAIL_LABEL_KEYS = {
     "Strategy Notes": "notes",
+    Notes: "notes",
     "Classified View": "classified",
     "Expertise View": "expertise",
     "Build Test": "build-test",
@@ -853,10 +858,10 @@
     const path = window.location.pathname;
     const hash = window.location.hash;
     if (path.includes("/ial/wme01/lab/")) return "Interactive Lab";
-    if (page === "notes" || path.endsWith("/notes.html")) return "Strategy Notes";
+    if (page === "notes" || page === "library" || path.endsWith("/notes.html") || path.endsWith("/library.html")) return "Notes";
     if (path.includes("/ial/wma11/") || path.includes("/ial/wma12/") || path.includes("/ial/wme01/")) {
-      if (hash === "#ialNotes") return "Strategy Notes";
-      if (!hash && !["topic", "mode", "expertise", "bank"].some((key) => params.has(key))) return "Strategy Notes";
+      if (hash === "#ialNotes") return "Notes";
+      if (!hash && !["topic", "mode", "expertise", "bank"].some((key) => params.has(key))) return "Notes";
       if (path.includes("/ial/wme01/")) {
         if (hash === "#ialQuestionVisualizer") return "Question Visualizer";
         if (hash === "#ialSimulator") return "Interactive Lab";
@@ -954,7 +959,7 @@
     if (moduleLabel) {
       // For Pure course landings with no specific module, the last course crumb is already the page.
       const path = window.location.pathname;
-      const isPureLanding = moduleLabel !== "Strategy Notes" && pathwayId === "pure" && (path.endsWith("/ial/wma11/index.html") || path.endsWith("/ial/wma12/index.html") || path.endsWith("/ial/wme01/index.html"))
+      const isPureLanding = moduleLabel !== "Notes" && pathwayId === "pure" && (path.endsWith("/ial/wma11/index.html") || path.endsWith("/ial/wma12/index.html") || path.endsWith("/ial/wme01/index.html"))
         && !window.location.search && !window.location.hash;
       if (!isPureLanding) {
         crumbs.push({ label: moduleLabel, current: true });
@@ -1620,7 +1625,7 @@
     const leadScript = document.querySelector('script[src*="lead.js"]');
     const baseUrl = leadScript?.src || document.baseURI;
     const dataUrl = new URL("study-search-data.js?v=20260713b", baseUrl).href;
-    const compassUrl = new URL("study-compass.js?v=20260928a", baseUrl).href;
+    const compassUrl = new URL("study-compass.js?v=20261001a", baseUrl).href;
 
     function appendScript(src, marker) {
       return new Promise((resolve, reject) => {

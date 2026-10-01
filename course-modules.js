@@ -6,9 +6,14 @@
       description: "Topic practice and classified question browsing.",
     },
     notes: {
-      title: "Strategy Notes",
+      title: "Notes",
       role: "student",
-      description: "Topic strategy notes and complete printable booklets.",
+      description: "Elite topic notes with answers and complete printable books.",
+    },
+    adaptive: {
+      title: "Adaptive Classified",
+      role: "student",
+      description: "Adaptive Classified books: questions edition and with-answers edition.",
     },
     expertise: {
       title: "Expertise",
@@ -165,7 +170,8 @@
   };
 
   const linearLinks = [
-    { module: "notes", title: "Strategy Notes", detail: "Booklet + topic notes", href: "/notes.html?pathway=linear#linearNotes", pathway: "linear" },
+    { module: "notes", title: "Notes", detail: "With answers", href: "/library.html?pathway=linear#notes", pathway: "linear" },
+    { module: "adaptive", title: "Adaptive Classified", detail: "Questions + answers", href: "/library.html?pathway=linear#adaptive", pathway: "linear" },
     { module: "classified", title: "Classified View", detail: "Chapter bank", href: "/practice.html?pathway=linear&bank=all", pathway: "linear" },
     { module: "expertise", title: "Expertise", detail: "Q20+ finishers", href: "/practice.html?pathway=linear&bank=expertise&mode=q20", pathway: "linear" },
     { module: "build-test", title: "Build Test", detail: "Mocks and worksheets", href: "/exam.html?pathway=linear&mode=custom", pathway: "linear" },
@@ -180,7 +186,8 @@
   function modularLinks(unitTitle, unitCode) {
     const unitParam = encodeURIComponent(unitTitle).replace(/%20/g, "+");
     return [
-      { module: "notes", title: "Strategy Notes", detail: `${unitCode} shared core notes`, href: `/notes.html?pathway=modular&unit=${unitParam}#linearNotes`, pathway: "modular" },
+      { module: "notes", title: "Notes", detail: `${unitCode} with answers`, href: `/library.html?pathway=modular&unit=${unitParam}#notes`, pathway: "modular" },
+      { module: "adaptive", title: "Adaptive Classified", detail: `${unitCode} questions + answers`, href: `/library.html?pathway=modular&unit=${unitParam}#adaptive`, pathway: "modular" },
       { module: "classified", title: "Classified View", detail: `${unitCode} topics`, href: `/practice.html?pathway=modular&unit=${unitParam}&bank=all`, pathway: "modular" },
       { module: "expertise", title: "Expertise", detail: `${unitCode} harder set`, href: `/practice.html?pathway=modular&unit=${unitParam}&bank=expertise&mode=q20`, pathway: "modular" },
       { module: "build-test", title: "Build Test", detail: `${unitCode} mocks`, href: `/exam.html?pathway=modular&unit=${unitParam}&mode=custom`, pathway: "modular" },
@@ -1658,26 +1665,39 @@
   const linearBooks = [
       {
           "className": "linear-book download-note",
-          "tag": "Strategy notes",
+          "tag": "Linear 4MA1",
           "tagTone": "gold",
-          "title": "Linear 4MA1 Strategy Notes",
-          "description": "58 topic strategy notes, six chapter booklets, and one complete Linear booklet connected to classified practice.",
+          "title": "Linear Notes with Answers",
+          "description": "The 2026 Elite topic notes for Linear: notes, worked examples and practice, with the answers in every file.",
           "meta": [
-              "58 topic notes",
-              "6 chapter booklets",
-              "Notes-first route"
+              "Complete book",
+              "By topic",
+              "Answers included"
           ],
           "actions": [
               {
-                  "label": "Open notes view",
-                  "href": "notes.html?pathway=linear#linearNotes",
+                  "label": "Open notes",
+                  "href": "library.html?pathway=linear#notes",
                   "variant": "primary"
-              },
+              }
+          ]
+      },
+      {
+          "className": "linear-book download-adaptive",
+          "tag": "Linear 4MA1",
+          "tagTone": "gold",
+          "title": "Linear Adaptive Classified",
+          "description": "Past-paper questions grouped by idea, easier to harder. Questions edition and With Answers edition.",
+          "meta": [
+              "Complete book",
+              "By chapter / topic",
+              "Questions + answers"
+          ],
+          "actions": [
               {
-                  "label": "Complete booklet",
-                  "href": "downloads/Linear/StrategyNotes/Linear_4MA1_Strategy_Notes_Booklet.pdf?v=20260619b",
-                  "variant": "solution",
-                  "target": "_blank"
+                  "label": "Open Adaptive Classified",
+                  "href": "library.html?pathway=linear#adaptive",
+                  "variant": "solution"
               }
           ]
       },
@@ -1741,6 +1761,82 @@
   ];
 
   const modularBooks = [
+      {
+          "className": "modular-book download-note",
+          "tag": "Modular 4WM1",
+          "tagTone": "gold",
+          "title": "Modular Unit 1 Notes with Answers",
+          "description": "The 2026 Elite topic notes for Modular Unit 1: notes, worked examples and practice, with the answers in every file.",
+          "meta": [
+              "Complete book",
+              "By topic",
+              "Answers included"
+          ],
+          "actions": [
+              {
+                  "label": "Open notes",
+                  "href": "library.html?pathway=modular&unit=Unit+1#notes",
+                  "variant": "primary"
+              }
+          ]
+      },
+      {
+          "className": "modular-book download-adaptive",
+          "tag": "Modular 4WM1",
+          "tagTone": "gold",
+          "title": "Modular Unit 1 Adaptive Classified",
+          "description": "Past-paper questions grouped by idea, easier to harder. Questions edition and With Answers edition.",
+          "meta": [
+              "Complete book",
+              "By chapter / topic",
+              "Questions + answers"
+          ],
+          "actions": [
+              {
+                  "label": "Open Adaptive Classified",
+                  "href": "library.html?pathway=modular&unit=Unit+1#adaptive",
+                  "variant": "solution"
+              }
+          ]
+      },
+      {
+          "className": "modular-book download-note",
+          "tag": "Modular 4WM2",
+          "tagTone": "gold",
+          "title": "Modular Unit 2 Notes with Answers",
+          "description": "The 2026 Elite topic notes for Modular Unit 2: notes, worked examples and practice, with the answers in every file.",
+          "meta": [
+              "Complete book",
+              "By topic",
+              "Answers included"
+          ],
+          "actions": [
+              {
+                  "label": "Open notes",
+                  "href": "library.html?pathway=modular&unit=Unit+2#notes",
+                  "variant": "primary"
+              }
+          ]
+      },
+      {
+          "className": "modular-book download-adaptive",
+          "tag": "Modular 4WM2",
+          "tagTone": "gold",
+          "title": "Modular Unit 2 Adaptive Classified",
+          "description": "Past-paper questions grouped by idea, easier to harder. Questions edition and With Answers edition.",
+          "meta": [
+              "Complete book",
+              "By chapter / topic",
+              "Questions + answers"
+          ],
+          "actions": [
+              {
+                  "label": "Open Adaptive Classified",
+                  "href": "library.html?pathway=modular&unit=Unit+2#adaptive",
+                  "variant": "solution"
+              }
+          ]
+      },
       {
           "className": "modular-book",
           "tag": "Modular 4WM1",
@@ -1927,24 +2023,37 @@
           "className": "pure-book download-note",
           "tag": "IAL Pure 1",
           "tagTone": "pure",
-          "title": "WMA11 Strategy Notes",
-          "description": "Pure 1 topic strategy notes plus the complete booklet, built from the classified questions and worked solutions.",
+          "title": "Pure 1 Notes with Answers",
+          "description": "The 2026 Elite topic notes for Pure 1: notes, worked examples and practice, with the answers in every file.",
           "meta": [
-              "13 topic notes",
-              "Complete booklet",
-              "Notes-first course view"
+              "Complete book",
+              "By topic",
+              "Answers included"
           ],
           "actions": [
               {
-                  "label": "Open notes view",
-                  "href": "ial/wma11/index.html#ialNotes",
+                  "label": "Open notes",
+                  "href": "library.html?pathway=pure&course=wma11#notes",
                   "variant": "primary"
-              },
+              }
+          ]
+      },
+      {
+          "className": "pure-book download-adaptive",
+          "tag": "IAL Pure 1",
+          "tagTone": "pure",
+          "title": "Pure 1 Adaptive Classified",
+          "description": "Past-paper questions grouped by idea, easier to harder. Questions edition and With Answers edition.",
+          "meta": [
+              "Complete book",
+              "By chapter / topic",
+              "Questions + answers"
+          ],
+          "actions": [
               {
-                  "label": "Complete booklet",
-                  "href": "downloads/IAL/WMA11/StrategyNotes/WMA11_Strategy_Notes_Booklet.pdf?v=20260619a",
-                  "variant": "solution",
-                  "target": "_blank"
+                  "label": "Open Adaptive Classified",
+                  "href": "library.html?pathway=pure&course=wma11#adaptive",
+                  "variant": "solution"
               }
           ]
       },
@@ -2008,24 +2117,37 @@
           "className": "pure-book download-note",
           "tag": "IAL Pure 2",
           "tagTone": "pure",
-          "title": "WMA12 Strategy Notes",
-          "description": "Pure 2 topic strategy notes plus the complete booklet, connected directly to filtered classified practice.",
+          "title": "Pure 2 Notes with Answers",
+          "description": "The 2026 Elite topic notes for Pure 2: notes, worked examples and practice, with the answers in every file.",
           "meta": [
-              "12 topic notes",
-              "Complete booklet",
-              "Notes-first course view"
+              "Complete book",
+              "By topic",
+              "Answers included"
           ],
           "actions": [
               {
-                  "label": "Open notes view",
-                  "href": "ial/wma12/index.html#ialNotes",
+                  "label": "Open notes",
+                  "href": "library.html?pathway=pure&course=wma12#notes",
                   "variant": "primary"
-              },
+              }
+          ]
+      },
+      {
+          "className": "pure-book download-adaptive",
+          "tag": "IAL Pure 2",
+          "tagTone": "pure",
+          "title": "Pure 2 Adaptive Classified",
+          "description": "Past-paper questions grouped by idea, easier to harder. Questions edition and With Answers edition.",
+          "meta": [
+              "Complete book",
+              "By chapter / topic",
+              "Questions + answers"
+          ],
+          "actions": [
               {
-                  "label": "Complete booklet",
-                  "href": "downloads/IAL/WMA12/StrategyNotes/WMA12_Strategy_Notes_Booklet.pdf?v=20260619a",
-                  "variant": "solution",
-                  "target": "_blank"
+                  "label": "Open Adaptive Classified",
+                  "href": "library.html?pathway=pure&course=wma12#adaptive",
+                  "variant": "solution"
               }
           ]
       },
@@ -2090,24 +2212,37 @@
           "className": "pure-book download-note",
           "tag": "IAL Mechanics 1",
           "tagTone": "pure",
-          "title": "WME01 Strategy Notes",
-          "description": "Mechanics 1 topic strategy notes plus the complete booklet, with links into practice and the Mechanics lab.",
+          "title": "Mechanics 1 Notes with Answers",
+          "description": "The 2026 Elite topic notes for Mechanics 1: notes, worked examples and practice, with the answers in every file.",
           "meta": [
-              "10 topic notes",
-              "Complete booklet",
-              "Notes + lab route"
+              "Complete book",
+              "By topic",
+              "Answers included"
           ],
           "actions": [
               {
-                  "label": "Open notes view",
-                  "href": "ial/wme01/index.html#ialNotes",
+                  "label": "Open notes",
+                  "href": "library.html?pathway=pure&course=wme01#notes",
                   "variant": "primary"
-              },
+              }
+          ]
+      },
+      {
+          "className": "pure-book download-adaptive",
+          "tag": "IAL Mechanics 1",
+          "tagTone": "pure",
+          "title": "Mechanics 1 Adaptive Classified",
+          "description": "Past-paper questions grouped by idea, easier to harder. Questions edition and With Answers edition.",
+          "meta": [
+              "Complete book",
+              "By chapter / topic",
+              "Questions + answers"
+          ],
+          "actions": [
               {
-                  "label": "Complete booklet",
-                  "href": "downloads/IAL/WME01/StrategyNotes/WME01_Strategy_Notes_Booklet.pdf?v=20260619a",
-                  "variant": "solution",
-                  "target": "_blank"
+                  "label": "Open Adaptive Classified",
+                  "href": "library.html?pathway=pure&course=wme01#adaptive",
+                  "variant": "solution"
               }
           ]
       },
@@ -2291,7 +2426,8 @@
       pastPapers: pureWma11PastPapers,
       books: pureWma11Books,
       links: [
-        { module: "notes", title: "Strategy Notes", detail: "Booklet + topic notes", href: "/ial/wma11/index.html#ialNotes" },
+        { module: "notes", title: "Notes", detail: "With answers", href: "/library.html?pathway=pure&course=wma11#notes" },
+        { module: "adaptive", title: "Adaptive Classified", detail: "Questions + answers", href: "/library.html?pathway=pure&course=wma11#adaptive" },
         { module: "classified", title: "Classified View", detail: "Topic practice", href: "/ial/wma11/index.html#ialFilters" },
         { module: "expertise", title: "Expertise View", detail: "Q6+ filtered bank", href: "/ial/wma11/index.html?expertise=1#ialFilters" },
         { module: "build-test", title: "Build Test", detail: "Full mock builder", href: "/exam.html?pathway=pure&course=wma11&mode=custom" },
@@ -2328,7 +2464,8 @@
       pastPapers: pureWma12PastPapers,
       books: pureWma12Books,
       links: [
-        { module: "notes", title: "Strategy Notes", detail: "Booklet + topic notes", href: "/ial/wma12/index.html#ialNotes" },
+        { module: "notes", title: "Notes", detail: "With answers", href: "/library.html?pathway=pure&course=wma12#notes" },
+        { module: "adaptive", title: "Adaptive Classified", detail: "Questions + answers", href: "/library.html?pathway=pure&course=wma12#adaptive" },
         { module: "classified", title: "Classified View", detail: "Topic practice", href: "/ial/wma12/index.html#ialFilters" },
         { module: "expertise", title: "Expertise View", detail: "Q6+ filtered bank", href: "/ial/wma12/index.html?expertise=1#ialFilters" },
         { module: "build-test", title: "Build Test", detail: "Full mock builder", href: "/exam.html?pathway=pure&course=wma12&mode=custom" },
@@ -2365,7 +2502,8 @@
       pastPapers: pureWme01PastPapers,
       books: pureWme01Books,
       links: [
-        { module: "notes", title: "Strategy Notes", detail: "Booklet + topic notes", href: "/ial/wme01/index.html#ialNotes" },
+        { module: "notes", title: "Notes", detail: "With answers", href: "/library.html?pathway=pure&course=wme01#notes" },
+        { module: "adaptive", title: "Adaptive Classified", detail: "Questions + answers", href: "/library.html?pathway=pure&course=wme01#adaptive" },
         { module: "classified", title: "Classified View", detail: "Topic practice", href: "/ial/wme01/index.html#ialFilters" },
         { module: "expertise", title: "Expertise View", detail: "Q6+ filtered bank", href: "/ial/wme01/index.html?expertise=1#ialFilters" },
         { module: "interactive-lab", title: "Interactive Lab", detail: "98 visual cases", href: "/ial/wme01/lab/index.html" },

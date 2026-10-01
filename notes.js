@@ -51,7 +51,7 @@
           <li>${escapeHtml(chapter.pages)} pages</li>
         </ul>
         <div class="note-actions">
-          ${pdfButton(chapter.href, "Chapter booklet")}
+          ${pdfButton(chapter.href, "Chapter book")}
           <a class="button light" href="#${escapeHtml(chapter.id)}">Topic notes</a>
         </div>
       </article>
@@ -81,7 +81,7 @@
 
   root.innerHTML = `
     <div class="notes-section-head">
-      <span class="eyebrow">${escapeHtml(data.code)} strategy notes</span>
+      <span class="eyebrow">${escapeHtml(data.code)} notes with answers</span>
       <h2 id="linearNotesTitle">${escapeHtml(data.title)}</h2>
       <p>${escapeHtml(data.intro)}</p>
     </div>
@@ -90,15 +90,16 @@
       <div>
         <span class="eyebrow">Complete booklet</span>
         <h3>${escapeHtml(data.booklet.title)}</h3>
-        <p>${escapeHtml(data.booklet.detail)}. The full set is ${escapeHtml(data.booklet.pages)} pages, with chapter booklets below for smaller printing.</p>
+        <p>${escapeHtml(data.booklet.detail)}. The full set is ${escapeHtml(data.booklet.pages)} pages, with chapter books below for smaller printing.</p>
         <div class="linear-notes-stats" aria-label="Linear notes summary">
           <span><strong>${escapeHtml(totalTopics)}</strong> topic notes</span>
-          <span><strong>${escapeHtml(data.chapters.length)}</strong> chapter booklets</span>
+          <span><strong>${escapeHtml(data.chapters.length)}</strong> chapter books</span>
           <span><strong>${escapeHtml(totalChapterPages)}</strong> chapter pages</span>
         </div>
       </div>
       <div class="note-actions">
-        ${pdfButton(data.booklet.href, "Download full booklet")}
+        ${(data.booklet.parts || [{ href: data.booklet.href }]).map((part, index, all) => pdfButton(part.href, all.length > 1 ? `Complete book part ${index + 1}` : "Download full booklet")).join("")}
+        <a class="button solution" href="library.html?pathway=linear#adaptive">Adaptive Classified</a>
         ${practiceButton("practice.html?pathway=linear&bank=all", "Open classified bank")}
       </div>
     </article>

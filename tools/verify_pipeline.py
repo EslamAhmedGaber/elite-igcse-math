@@ -26,11 +26,11 @@ DOWNLOADS_DIR = ROOT / "downloads"
 PRIVATE_OUTPUT = ROOT / "private_output"
 GITIGNORE = ROOT / ".gitignore"
 CURRENT_PATHWAY_BOOTSTRAP_VERSION = "baccalaureate-20260902b"
-CURRENT_LEAD_VERSION = "20260928a"
+CURRENT_LEAD_VERSION = "20261001a"
 CURRENT_STYLE_VERSION = "20260809a"
-CURRENT_COURSE_MODULES_VERSION = "ux-20260906a"
+CURRENT_COURSE_MODULES_VERSION = "library-20261001a"
 CURRENT_STUDY_VERSION = "20260713b"
-CURRENT_COMPASS_VERSION = "20260928a"
+CURRENT_COMPASS_VERSION = "20261001a"
 CURRENT_SOLUTION_VERSION = "20260714a"
 CURRENT_ELITE_SYSTEM_VERSION = "20260906b"
 CURRENT_RESOURCE_HUB_VERSION = "20260810a"
@@ -146,6 +146,17 @@ ALLOWED_PUBLIC_SOLUTION_DIRS = {
     "downloads/IAL/WMA11/Papers",
     "downloads/IAL/WMA12/Papers",
     "downloads/IAL/WME01/Papers",
+    # 2026-10-01: Dr Eslam asked for the notes with answers and the Adaptive Classified With Answers books to be public
+    "downloads/Linear/Notes",
+    "downloads/Linear/AdaptiveClassified",
+    "downloads/Modular/Notes",
+    "downloads/Modular/AdaptiveClassified",
+    "downloads/IAL/WMA11/Notes",
+    "downloads/IAL/WMA11/AdaptiveClassified",
+    "downloads/IAL/WMA12/Notes",
+    "downloads/IAL/WMA12/AdaptiveClassified",
+    "downloads/IAL/WME01/Notes",
+    "downloads/IAL/WME01/AdaptiveClassified",
 }
 
 ALLOWED_PUBLIC_SOLUTION_FILES = {

@@ -527,7 +527,7 @@
         </div>
         <div>
           <strong>Learn</strong>
-          <p><a href="/notes.html?pathway=linear#linearNotes">Strategy Notes</a></p>
+          <p><a href="/library.html?pathway=linear#notes">Notes</a></p>
           <p><a href="/practice.html?pathway=linear&bank=all">Classified Practice</a></p>
           <p><a href="/exam.html?pathway=linear&mode=custom">Mocks &amp; Tests</a></p>
           <p><a href="/progress.html?pathway=linear">Progress</a></p>
