@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visual Lab - Elite Mathematics</title>
+<meta name="description" content="Interactive visual labs for the hardest IGCSE and IAL Mathematics topics: 3D trigonometry, circle theorems and Mechanics 1.">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#14254a; --royal:#2456c9; --sky:#dce8fb; --gold:#e2b84f; --ink:#1c2536; --muted:#56637a; --line:#d6e0f0; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Sora, system-ui, sans-serif; color: var(--ink); background: #f6f8fc; }
+  header { display: flex; align-items: center; gap: 12px; padding: 12px 20px; background: #fff; border-bottom: 1px solid var(--line); }
+  header .mark { background: var(--navy); color: var(--gold); font-weight: 800; padding: 6px 10px; border-radius: 9px; font-size: 13px; }
+  header a { margin-left: auto; color: var(--royal); font-weight: 700; text-decoration: none; font-size: 14px; }
+  main { max-width: 1100px; margin: 0 auto; padding: 28px 16px 56px; }
+  h1 { margin: 0; font-size: clamp(30px, 5vw, 42px); color: var(--navy); }
+  .lead { margin: 6px 0 22px; color: var(--muted); font-size: 17px; }
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+  .filters a { min-height: 40px; display: inline-flex; align-items: center; padding: 0 14px; border-radius: 10px; border: 1.5px solid var(--line); background: #fff; color: var(--navy); font-weight: 700; font-size: 14px; text-decoration: none; }
+  .filters a[aria-current="page"] { background: var(--royal); border-color: var(--royal); color: #fff; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+  .lab { position: relative; display: flex; flex-direction: column; gap: 8px; padding: 22px; border: 1.5px solid var(--line); border-top: 6px solid var(--royal); border-radius: 18px; background: #fff; color: inherit; text-decoration: none; box-shadow: 0 6px 18px rgba(20,37,74,.06); transition: transform .15s, border-color .15s; }
+  .lab:hover, .lab:focus-visible { transform: translateY(-2px); border-color: var(--royal); }
+  .lab .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .lab .tags span { padding: 3px 9px; border-radius: 999px; background: var(--sky); color: var(--navy); font-size: 12px; font-weight: 700; }
+  .lab strong { font-size: 23px; color: var(--navy); }
+  .lab p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.5; padding-right: 26px; }
+  .lab .go { position: absolute; right: 20px; bottom: 18px; font-size: 22px; color: var(--royal); font-weight: 700; }
+  .soon { margin-top: 26px; color: var(--muted); font-size: 15px; }
+</style>
+</head>
+<body>
+<header><span class="mark">ELITE</span><strong>Visual Lab</strong><a href="../index.html">&larr; All courses</a></header>
+<main>
+  <h1>Visual Lab</h1>
+  <p class="lead">The hardest topics, made visible. Move it, rotate it, then write the method.</p>
+  <nav class="filters" id="filters" aria-label="Course"></nav>
+  <div class="grid" id="grid"></div>
+  <p class="soon">More labs are on the way, starting with vectors, transformations of graphs and similar shapes.</p>
+</main>
+<script>
+(function () {
+  const LABS = [
+    { href: "3d-trig.html", title: "3D Pythagoras & Trigonometry", text: "Rotate a cuboid or a pyramid and find the hidden right-angled triangles: space diagonals and angles with a plane.", courses: ["linear", "unit1"] },
+    { href: "circle-theorems.html", title: "Circle Theorems", text: "Eight theorems you can drag: centre, same segment, semicircle, cyclic quadrilateral, tangents and the alternate segment.", courses: ["linear", "unit2"] },
+    { href: "../ial/wme01/lab/index.html", title: "Mechanics 1 Lab", text: "98 interactive cases: kinematics, forces, connected particles, momentum and moments.", courses: ["wme01"] },
+  ];
+  const COURSES = [["", "All"], ["linear", "Linear"], ["unit1", "Modular Unit 1"], ["unit2", "Modular Unit 2"], ["wme01", "Mechanics 1"]];
+  const NAMES = Object.fromEntries(COURSES);
+  const course = (new URLSearchParams(location.search).get("course") || "").toLowerCase();
+  document.getElementById("filters").innerHTML = COURSES.map(([id, n]) => `<a href="index.html${id ? "?course=" + id : ""}"${id === course ? ' aria-current="page"' : ""}>${n}</a>`).join("");
+  const list = LABS.filter((l) => !course || l.courses.includes(course));
+  document.getElementById("grid").innerHTML = list.map((l) => `<a class="lab" href="${l.href}">
+      <span class="tags">${l.courses.map((c) => `<span>${NAMES[c]}</span>`).join("")}</span>
+      <strong>${l.title}</strong><p>${l.text}</p><span class="go" aria-hidden="true">&rarr;</span></a>`).join("");
+})();
+</script>
+</body>
+</html>

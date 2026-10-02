@@ -29,6 +29,7 @@
     ["progress", "Progress", "Your mastery and next weak topic"],
   ];
   const LAB = ["interactive-lab", "Mechanics Lab", "Interactive simulations"];
+  const VISUAL = ["interactive-lab", "Visual Lab", "Hard topics you can move and rotate"];
   const PRACTICE = [
     ["classified", "Classified Practice", "Solve online by topic"],
     ["expertise", "Expertise", "The harder questions"],
@@ -90,6 +91,10 @@
   const links = linksFor(course);
   const services = SERVICES.slice();
   if (course.id === "wme01") services.push(LAB);
+  if (["linear", "unit1", "unit2"].includes(course.id)) {
+    services.push(VISUAL);
+    links["interactive-lab"] = `/lab/index.html?course=${course.id}`;
+  }
   document.title = `${course.name} (${course.code}) - Elite IGCSE Mathematics`;
   root.innerHTML = `
     <nav class="hub-trail" aria-label="Breadcrumb"><a href="index.html">&larr; All courses</a></nav>
