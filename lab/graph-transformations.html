@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transformations of Graphs Lab - Elite Mathematics</title>
+<meta name="description" content="Watch y = f(x) slide, flip and stretch: translations, reflections and stretches with every key point mapped.">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="lab.css?v=20261002a">
+</head>
+<body>
+<header>
+  <span class="mark">ELITE</span><strong>Visual Lab</strong>
+  <nav><a href="index.html">All labs</a><a href="../index.html">&larr; All courses</a></nav>
+</header>
+<main>
+  <span class="kicker">Linear OL-T37 · Modular Unit 2 · IAL Pure 1 Chapter 7 · Transformations of graphs</span>
+  <h1>Slide it, flip it, stretch it.</h1>
+  <p class="lead">The grey dashed curve is y = f(x). The blue curve is the new graph. Follow the red points: they show exactly where each key point goes.</p>
+  <div class="tabs" id="tabs" role="group" aria-label="Transformation"></div>
+  <div class="grid">
+    <div class="stage">
+      <canvas id="cv"></canvas>
+      <span class="hint">Change a with the slider · press Play to see the move</span>
+      <button type="button" class="play" id="play" aria-pressed="false">&#9654; Play</button>
+    </div>
+    <aside class="panel">
+      <div class="predict"><small>Predict first</small><p id="predictQ"></p><div class="opts" id="predictOpts"></div><p class="fb" id="predictFb" hidden></p></div>
+      <div class="rule"><h2 id="title"></h2><p id="statement"></p></div>
+      <div class="controls" id="controls"></div>
+      <div class="live" id="live"></div>
+      <div class="reason"><small>Describe it like this in the exam</small><p id="reason"></p></div>
+      <p class="trap" id="trap"></p>
+      <div class="quiz"><p id="quizQ"></p><button type="button" id="quizBtn">Show answer</button><div class="ans" id="quizA"></div></div>
+    </aside>
+  </div>
+</main>
+<script src="lab-core.js?v=20261002a"></script>
+<script>
+(function () {
+  const L = window.EliteLab, COL = L.colors;
+  const cv = document.getElementById("cv"), ctx = cv.getContext("2d");
+  let W = 0, H = 0, u = 30, ox = 0, oy = 0;
+  const S = (x, y) => [ox + x * u, oy - y * u];
+  const n2 = (v) => { const r = Math.round(v * 100) / 100; return Object.is(r, -0) ? "0" : String(r); };
+  const pt = (p) => `(${n2(p[0])}, ${n2(p[1])})`;
+
+  const FUNCS = {
+    quad: { name: "f(x) = (x − 1)² − 4", f: (x) => (x - 1) * (x - 1) - 4, keys: [[1, -4, "turning point"], [-1, 0, "root"], [3, 0, "root"], [0, -3, "y-intercept"]] },
+    cubic: { name: "f(x) = ½x(x − 2)(x + 2)", f: (x) => x * (x - 2) * (x + 2) / 2, keys: [[1, -1.5, "point"], [-2, 0, "root"], [0, 0, "root"], [2, 0, "root"]] },
+  };
+  // each transformation: new graph g(x) for parameter a, image of a point, the exam description
+  const TR = [
+    { id: "up", short: "f(x) + a", eq: (a) => `y = f(x) ${a < 0 ? "−" : "+"} ${Math.abs(a)}`, a: 3, range: [-5, 5, 1], id0: 0,
+      g: (f, x, a) => f(x) + a, map: (p, a) => [p[0], p[1] + a],
+      title: "Translation up or down", statement: "Adding a outside the bracket changes every y-coordinate by a. The x-coordinates stay the same.",
+      reason: (a) => `Translation by the vector (0, ${a}).`,
+      trap: "<b>Trap:</b> + a <b>outside</b> the bracket moves the graph <b>up</b>. Only the y-coordinates change.",
+      predict: () => ({ q: "y = f(x) + 3. Which way does the graph move?", o: ["Up 3", "Down 3", "Right 3"], a: 0, why: "Up 3: every y-coordinate gets 3 added." }) },
+    { id: "side", short: "f(x + a)", eq: (a) => `y = f(x ${a < 0 ? "−" : "+"} ${Math.abs(a)})`, a: 2, range: [-5, 5, 1], id0: 0,
+      g: (f, x, a) => f(x + a), map: (p, a) => [p[0] - a, p[1]],
+      title: "Translation left or right", statement: "Adding a inside the bracket changes every x-coordinate by −a. The y-coordinates stay the same.",
+      reason: (a) => `Translation by the vector (${-a}, 0).`,
+      trap: "<b>Trap:</b> + a <b>inside</b> the bracket moves the graph <b>left</b>, not right. f(x + 2) is a translation by (−2, 0).",
+      predict: () => ({ q: "y = f(x + 2). Which way does the graph move?", o: ["Right 2", "Left 2", "Up 2"], a: 1, why: "Left 2: the new graph reaches each height 2 units earlier." }) },
+    { id: "negf", short: "−f(x)", eq: () => "y = −f(x)", a: null, id0: 0,
+      g: (f, x, a) => a * f(x), map: (p) => [p[0], -p[1]],
+      title: "Reflection in the x-axis", statement: "Every y-coordinate changes sign. Points on the x-axis do not move.",
+      reason: () => "Reflection in the x-axis.",
+      trap: "<b>Trap:</b> the roots stay where they are. Only y changes sign: (x, y) → (x, −y).",
+      predict: (k) => ({ q: `y = −f(x). Where does the point (${n2(k[0])}, ${n2(k[1])}) go?`, o: [pt([k[0], -k[1]]), pt([-k[0], k[1]]), pt([-k[0], -k[1]])], a: 0, why: `${pt([k[0], -k[1]])}: x stays, y changes sign.` }) },
+    { id: "fneg", short: "f(−x)", eq: () => "y = f(−x)", a: null, id0: 0,
+      g: (f, x, a) => f(a * x), map: (p) => [-p[0], p[1]],
+      title: "Reflection in the y-axis", statement: "Every x-coordinate changes sign. Points on the y-axis do not move.",
+      reason: () => "Reflection in the y-axis.",
+      trap: "<b>Trap:</b> the y-intercept stays where it is. Only x changes sign: (x, y) → (−x, y).",
+      predict: (k) => ({ q: `y = f(−x). Where does the point (${n2(k[0])}, ${n2(k[1])}) go?`, o: [pt([k[0], -k[1]]), pt([-k[0], k[1]]), pt([k[0], k[1]])], a: 1, why: `${pt([-k[0], k[1]])}: y stays, x changes sign.` }) },
+    { id: "vstretch", short: "a f(x) · IAL", eq: (a) => `y = ${a}f(x)`, a: 2, range: [0.5, 3, 0.5], id0: 1,
+      g: (f, x, a) => a * f(x), map: (p, a) => [p[0], p[1] * a],
+      title: "Stretch parallel to the y-axis", statement: "Every y-coordinate is multiplied by a. The roots do not move.",
+      reason: (a) => `Stretch parallel to the y-axis, scale factor ${a}.`,
+      trap: "<b>Trap:</b> only the y-coordinates are multiplied. The roots (where y = 0) stay exactly where they are.",
+      predict: () => ({ q: "y = 2f(x). What happens to the roots of the graph?", o: ["They stay the same", "They double", "They halve"], a: 0, why: "They stay the same: 2 × 0 is still 0." }) },
+    { id: "hstretch", short: "f(ax) · IAL", eq: (a) => `y = f(${a}x)`, a: 2, range: [0.5, 3, 0.5], id0: 2,
+      g: (f, x, a) => f(a * x), map: (p, a) => [p[0] / a, p[1]],
+      title: "Stretch parallel to the x-axis", statement: "Every x-coordinate is divided by a. The y-intercept does not move.",
+      reason: (a) => `Stretch parallel to the x-axis, scale factor ${n2(1 / a)}.`,
+      trap: "<b>Trap:</b> f(2x) <b>halves</b> the x-coordinates: the scale factor is ½, not 2.",
+      predict: () => ({ q: "y = f(2x). A root at x = 3 moves to...", o: ["x = 6", "x = 1.5", "it stays at x = 3"], a: 1, why: "x = 1.5: the x-coordinates are divided by 2." }) },
+  ];
+  const state = { fn: "quad", a: TR.map((t) => t.a) };
+  let cur = 0, morph = 1;                                   // morph 0 = original graph, 1 = fully transformed
+
+  function effA(t, a, s) {                                  // the parameter part-way through the move
+    if (t.id === "up" || t.id === "side") return a * s;
+    if (t.id === "negf" || t.id === "fneg") return 1 - 2 * s;
+    return 1 + (a - 1) * s;
+  }
+  function imageOf(t, p, a, s) {
+    if (t.id === "negf") return [p[0], p[1] * (1 - 2 * s)];
+    if (t.id === "fneg") return [p[0] * (1 - 2 * s), p[1]];
+    if (t.id === "hstretch") return [p[0] / effA(t, a, s), p[1]];
+    return t.map(p, effA(t, a, s));
+  }
+
+  function axes() {
+    ctx.strokeStyle = "#e6edf8"; ctx.lineWidth = 1;
+    for (let x = ox % u; x < W; x += u) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke(); }
+    for (let y = oy % u; y < H; y += u) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke(); }
+    ctx.strokeStyle = COL.navy; ctx.lineWidth = 1.6;
+    ctx.beginPath(); ctx.moveTo(0, oy); ctx.lineTo(W, oy); ctx.moveTo(ox, 0); ctx.lineTo(ox, H); ctx.stroke();
+    ctx.font = "600 11px Sora, sans-serif"; ctx.fillStyle = "#56637a"; ctx.textAlign = "center"; ctx.textBaseline = "top";
+    const xr = Math.floor(W / 2 / u), yr = Math.floor(H / 2 / u);
+    for (let i = -xr; i <= xr; i++) if (i && i % 2 === 0) ctx.fillText(i, ox + i * u, oy + 4);
+    ctx.textAlign = "right"; ctx.textBaseline = "middle";
+    for (let j = -yr; j <= yr; j++) if (j && j % 2 === 0) ctx.fillText(j, ox - 5, oy - j * u);
+    ctx.font = "700 13px Sora, sans-serif"; ctx.fillStyle = COL.navy; ctx.fillText("x", W - 8, oy - 12); ctx.textAlign = "left"; ctx.fillText("y", ox + 8, 12);
+  }
+  function curve(g, color, w, dash = []) {
+    ctx.setLineDash(dash); ctx.strokeStyle = color; ctx.lineWidth = w; ctx.beginPath();
+    let pen = false;
+    for (let px = 0; px <= W; px += 2) {
+      const x = (px - ox) / u, y = g(x), sy = oy - y * u;
+      if (!isFinite(y) || sy < -H || sy > 2 * H) { pen = false; continue; }
+      if (pen) ctx.lineTo(px, sy); else { ctx.moveTo(px, sy); pen = true; }
+    }
+    ctx.stroke(); ctx.setLineDash([]);
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H); axes();
+    const t = TR[cur], F = FUNCS[state.fn], a = state.a[cur], s = morph, ae = effA(t, a, s);
+    curve(F.f, COL.grey, 2.5, [7, 6]);
+    curve((x) => t.g(F.f, x, ae), COL.royal, 3.5);
+    const rows = [["Original", F.name], ["New graph", t.eq(a)]];
+    F.keys.forEach((k) => {
+      const P = S(k[0], k[1]), img = imageOf(t, k, a, s), Q = S(img[0], img[1]);
+      ctx.strokeStyle = COL.gold; ctx.lineWidth = 2; ctx.setLineDash([4, 4]); ctx.beginPath(); ctx.moveTo(P[0], P[1]); ctx.lineTo(Q[0], Q[1]); ctx.stroke(); ctx.setLineDash([]);
+      L.dot(ctx, P, 5, COL.grey); L.dot(ctx, Q, 6.5, COL.red);
+      if (s >= 1) { L.tag(ctx, [Q[0], Q[1] - 18], pt(img), COL.red); rows.push([`${k[2]} ${pt(k)}`, `→ ${pt(img)}`]); }
+    });
+    ctx.font = "700 14px Sora, sans-serif"; ctx.textAlign = "left"; ctx.fillStyle = COL.royal; ctx.fillText(t.eq(a), 14, 22);
+    ctx.fillStyle = "#8a9bb8"; ctx.fillText(F.name.replace("f(x) =", "y = f(x) ="), 14, 42);
+    L.renderLive("live", rows);
+    document.getElementById("reason").textContent = t.reason(a);
+    const k = F.keys[t.id0] || F.keys[0], img = t.map(k, a === null ? 1 : a);
+    L.setQuiz([`The point ${pt(k)} lies on y = f(x). Write down the coordinates of its image on ${t.eq(a)}.`, `${pt(img)} — ${t.reason(a).replace(/\.$/, "")}.`]);
+  }
+
+  function controls() {
+    const t = TR[cur], el = document.getElementById("controls");
+    let html = `<label>Function<select id="fn">${Object.entries(FUNCS).map(([k, F]) => `<option value="${k}"${k === state.fn ? " selected" : ""}>${F.name}</option>`).join("")}</select><span></span></label>`;
+    if (t.a !== null) html += L.slider("a", "a", state.a[cur], t.range[0], t.range[1], t.range[2]);
+    el.innerHTML = html;
+    el.querySelector("#fn").addEventListener("change", (e) => { state.fn = e.target.value; select(cur); });
+    const inp = el.querySelector("input[type=range]");
+    if (inp) inp.addEventListener("input", () => {
+      let v = Number(inp.value); if (v === 0 && t.id !== "up" && t.id !== "side") v = t.range[2]; // a = 0 is not a stretch
+      state.a[cur] = v; inp.nextElementSibling.textContent = v; morph = 1; draw();
+    });
+  }
+
+  function select(i) {
+    cur = i; morph = 1; L.stopPlay(); L.selectTab("tabs", i);
+    const t = TR[i], F = FUNCS[state.fn];
+    document.getElementById("title").textContent = t.title;
+    document.getElementById("statement").textContent = t.statement;
+    document.getElementById("trap").innerHTML = t.trap;
+    L.predict(t.predict(F.keys[t.id0] || F.keys[0]), startPlay);
+    if (history.replaceState) history.replaceState(null, "", location.search + "#" + t.id);
+    controls(); draw();
+  }
+  function startPlay() { L.startPlay((sec) => { const c = sec % 3.6; morph = c < 0.4 ? 0 : c < 2.2 ? (1 - Math.cos(Math.PI * (c - 0.4) / 1.8)) / 2 : 1; draw(); }); }
+
+  L.tabs("tabs", TR.map((t) => t.short), select);
+  L.bindPlay("play", startPlay, () => { morph = 1; draw(); });
+  L.resize(cv, (w, h) => { W = w; H = h; u = Math.max(18, Math.min(w, h) / 19); ox = w / 2; oy = h / 2 + u; draw(); });
+  const start = Math.max(0, TR.findIndex((t) => "#" + t.id === location.hash));
+  select(start);
+  if (new URLSearchParams(location.search).get("play") === "1") startPlay();
+})();
+</script>
+</body>
+</html>

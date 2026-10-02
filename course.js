@@ -91,7 +91,7 @@
   const links = linksFor(course);
   const services = SERVICES.slice();
   if (course.id === "wme01") services.push(LAB);
-  if (["linear", "unit1", "unit2"].includes(course.id)) {
+  if (["linear", "unit1", "unit2", "wma11"].includes(course.id)) {
     services.push(VISUAL);
     links["interactive-lab"] = `/lab/index.html?course=${course.id}`;
   }

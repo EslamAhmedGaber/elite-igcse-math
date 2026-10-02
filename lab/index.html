@@ -38,16 +38,18 @@
   <p class="lead">The hardest topics, made visible. Move it, rotate it, then write the method.</p>
   <nav class="filters" id="filters" aria-label="Course"></nav>
   <div class="grid" id="grid"></div>
-  <p class="soon">More labs are on the way, starting with vectors, transformations of graphs and similar shapes.</p>
+  <p class="soon">More labs are on the way, starting with similar shapes and differentiation.</p>
 </main>
 <script>
 (function () {
   const LABS = [
     { href: "3d-trig.html", title: "3D Pythagoras & Trigonometry", text: "Rotate a cuboid or a pyramid and find the hidden right-angled triangles: space diagonals and angles with a plane.", courses: ["linear", "unit1"] },
     { href: "circle-theorems.html", title: "Circle Theorems", text: "Eight theorems you can drag: centre, same segment, semicircle, cyclic quadrilateral, tangents and the alternate segment.", courses: ["linear", "unit2"] },
+    { href: "vectors.html", title: "Vectors", text: "Drag vectors on a grid: add and scale them, divide a line in a ratio and prove lines are parallel.", courses: ["linear", "unit2"] },
+    { href: "graph-transformations.html", title: "Transformations of Graphs", text: "Watch y = f(x) slide, flip and stretch, with every key point mapped to its image.", courses: ["linear", "unit2", "wma11"] },
     { href: "../ial/wme01/lab/index.html", title: "Mechanics 1 Lab", text: "98 interactive cases: kinematics, forces, connected particles, momentum and moments.", courses: ["wme01"] },
   ];
-  const COURSES = [["", "All"], ["linear", "Linear"], ["unit1", "Modular Unit 1"], ["unit2", "Modular Unit 2"], ["wme01", "Mechanics 1"]];
+  const COURSES = [["", "All"], ["linear", "Linear"], ["unit1", "Modular Unit 1"], ["unit2", "Modular Unit 2"], ["wma11", "Pure 1"], ["wme01", "Mechanics 1"]];
   const NAMES = Object.fromEntries(COURSES);
   const course = (new URLSearchParams(location.search).get("course") || "").toLowerCase();
   document.getElementById("filters").innerHTML = COURSES.map(([id, n]) => `<a href="index.html${id ? "?course=" + id : ""}"${id === course ? ' aria-current="page"' : ""}>${n}</a>`).join("");
