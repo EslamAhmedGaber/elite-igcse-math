@@ -93,7 +93,7 @@
   if (course.id === "wme01") services.push(LAB);
   if (["linear", "unit1", "unit2", "wma11"].includes(course.id)) {
     services.push(VISUAL);
-    links["interactive-lab"] = `/lab/index.html?course=${course.id}`;
+    links["interactive-lab"] = `https://eliteiglab.com/lab/index.html?course=${course.id}`;
   }
   document.title = `${course.name} (${course.code}) - Elite IGCSE Mathematics`;
   root.innerHTML = `

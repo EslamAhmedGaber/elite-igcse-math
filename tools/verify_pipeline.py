@@ -498,36 +498,14 @@ def verify_resource_command_center(report: Report) -> None:
 
 
 def verify_mechanics_lab(report: Report) -> None:
-    """Guard the experiment-first WME01 visual laboratory and its full case catalogue."""
-    lab_js = ROOT / "ial" / "wme01" / "lab" / "assets" / "mechanics-lab.js"
-    lab_test = ROOT / "tools" / "test_mechanics_lab.js"
-    if not lab_js.exists():
-        report.error("WME01 Mechanics laboratory JavaScript is missing.")
-        return
-    if not lab_test.exists():
-        report.error("Mechanics laboratory release test is missing.")
-        return
-    try:
-        subprocess.run(
-            ["node", "--check", str(lab_js)],
-            check=True,
-            capture_output=True,
-            text=True,
-        )
-        subprocess.run(
-            ["node", str(lab_test)],
-            check=True,
-            capture_output=True,
-            text=True,
-        )
-        report.set("wme01_lab_topics", 10)
-        report.set("wme01_lab_cases", 98)
-    except FileNotFoundError:
-        report.warn("Node.js is unavailable; skipped Mechanics laboratory checks.")
-    except subprocess.CalledProcessError as exc:
-        detail = (exc.stderr or exc.stdout or "").strip().splitlines()
-        summary = detail[0] if detail else "Mechanics laboratory check failed"
-        report.error(f"WME01 Mechanics laboratory failed verification: {summary}")
+    """The labs live on eliteiglab.com; guard the redirects that keep old links working."""
+    # 2026-10-02: the labs moved to eliteiglab.com/lab (tests: npm run test:lab there).
+    # The old addresses must keep working as redirects.
+    for rel, target in (("ial/wme01/lab/index.html", "eliteiglab.com/lab/mechanics/"),
+                        ("lab/index.html", "eliteiglab.com/lab/index.html")):
+        page = ROOT / rel
+        if not page.exists() or target not in page.read_text(encoding="utf-8"):
+            report.error(f"{rel} must redirect to https://{target}")
 
     study_test = ROOT / "tools" / "test_study_search_index.js"
     if study_test.exists():

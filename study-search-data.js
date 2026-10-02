@@ -1,7 +1,7 @@
 (function () {
   window.ELITE_STUDY_SEARCH = {
   "version": "20260713b",
-  "generatedAt": "2026-10-01T11:47:44.517Z",
+  "generatedAt": "2026-10-02T08:26:12.042Z",
   "courses": [
     {
       "id": "linear",
@@ -498,7 +498,7 @@
         "progress": "/progress.html?pathway=pure&course=wme01",
         "books": "/downloads.html?pathway=pure&course=wme01#downloads",
         "papers": "/pastpapers.html?pathway=pure&course=wme01#pure-wme01",
-        "lab": "/ial/wme01/lab/index.html"
+        "lab": "https://eliteiglab.com/lab/mechanics/index.html"
       },
       "storage": {
         "solved": "eliteWME01SolvedV1",
@@ -533,7 +533,7 @@
           "module": "interactive-lab",
           "title": "Interactive Lab",
           "detail": "98 visual cases",
-          "href": "/ial/wme01/lab/index.html"
+          "href": "https://eliteiglab.com/lab/mechanics/index.html"
         },
         {
           "module": "question-visualizer",
@@ -1575,7 +1575,7 @@
       "type": "Module",
       "title": "Interactive Lab",
       "detail": "98 visual cases",
-      "href": "/ial/wme01/lab/index.html",
+      "href": "https://eliteiglab.com/lab/mechanics/index.html",
       "secondaryHref": "",
       "secondaryLabel": "",
       "keywords": [

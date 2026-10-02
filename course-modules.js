@@ -2506,7 +2506,7 @@
         { module: "adaptive", title: "Adaptive Classified", detail: "Questions + answers", href: "/library.html?pathway=pure&course=wme01#adaptive" },
         { module: "classified", title: "Classified View", detail: "Topic practice", href: "/ial/wme01/index.html#ialFilters" },
         { module: "expertise", title: "Expertise View", detail: "Q6+ filtered bank", href: "/ial/wme01/index.html?expertise=1#ialFilters" },
-        { module: "interactive-lab", title: "Interactive Lab", detail: "98 visual cases", href: "/ial/wme01/lab/index.html" },
+        { module: "interactive-lab", title: "Interactive Lab", detail: "98 visual cases", href: "https://eliteiglab.com/lab/mechanics/index.html" },
         { module: "question-visualizer", title: "Question Visualizer", detail: "Paper images + simulations", href: "/ial/wme01/index.html#ialQuestionVisualizer" },
         { module: "build-test", title: "Build Test", detail: "Full mock builder", href: "/exam.html?pathway=pure&course=wme01&mode=custom" },
         { module: "revision-book", title: "Revision Book", detail: "10-100 question mix", href: "/exam.html?pathway=pure&course=wme01&mode=smart&book=revision" },

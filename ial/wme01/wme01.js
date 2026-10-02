@@ -185,7 +185,7 @@
         <div class="ial-note-feature-actions">
           <a class="button primary" href="${escapeHtml(NOTES.booklet.href)}" target="_blank" rel="noreferrer">Open booklet</a>
           <a class="button light" href="ial/wme01/index.html#ialFilters">Open classified</a>
-          <a class="button solution" href="ial/wme01/lab/index.html">Open lab</a>
+          <a class="button solution" href="https://eliteiglab.com/lab/mechanics/index.html">Open lab</a>
         </div>
       `;
     }
@@ -194,7 +194,7 @@
       const topic = TOPICS.find((entry) => entry.slug === note.slug) || {};
       const count = topic.count || topic.primaryCount || 0;
       const number = String(index + 1).padStart(2, "0");
-      const labHref = `ial/wme01/lab/index.html?topic=${encodeURIComponent(LAB_TOPIC_IDS[note.slug] || "modelling")}`;
+      const labHref = `https://eliteiglab.com/lab/mechanics/index.html?topic=${encodeURIComponent(LAB_TOPIC_IDS[note.slug] || "modelling")}`;
       return `
         <article class="ial-note-card">
           <div class="ial-note-card-head">
@@ -655,7 +655,7 @@
 
   function visualizerLabHref(topicSlug) {
     const labTopic = LAB_TOPIC_IDS[topicSlug] || "modelling";
-    return `ial/wme01/lab/index.html?topic=${encodeURIComponent(labTopic)}`;
+    return `https://eliteiglab.com/lab/mechanics/index.html?topic=${encodeURIComponent(labTopic)}`;
   }
 
   function visualSeed(item) {
