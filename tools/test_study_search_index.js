@@ -14,7 +14,7 @@ vm.runInNewContext(
 
 const data = sandbox.window.ELITE_STUDY_SEARCH;
 if (!data) throw new Error("Study search index was not exposed");
-if (data.version !== "20261009b") throw new Error(`Unexpected Study search version ${data.version}`);
+if (data.version !== "20261009c") throw new Error(`Unexpected Study search version ${data.version}`);
 
 const expectedCourses = ["linear", "modular1", "modular2", "wma11", "wma12", "wme01"];
 const actualCourses = new Set(data.courses.map((course) => course.id));
@@ -45,9 +45,9 @@ if (!data.items.some((item) => item.courseId === "modular2" && item.type === "No
 }
 
 const linearNotes = data.items.filter((item) => item.type === "Note" && item.courseId === "linear");
-if (linearNotes.length !== 52) throw new Error(`Expected 52 current Linear notes, got ${linearNotes.length}`);
+if (linearNotes.length !== 58) throw new Error(`Expected 58 current Linear notes, got ${linearNotes.length}`);
 linearNotes.forEach((note) => {
-  if (!note.href.includes("/downloads/Linear/VisualNotes/") || !note.href.includes("v=20261009b")) {
+  if (!note.href.includes("/downloads/Linear/VisualNotes/") || !note.href.includes("v=20261009c")) {
     throw new Error(`Stale or unexpected Linear note search link: ${note.href}`);
   }
 });

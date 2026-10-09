@@ -14,9 +14,9 @@ vm.runInNewContext(
 );
 
 const library = sandbox.window.ELITE_LIBRARY;
-if (library.version !== "20261009b") throw new Error(`Unexpected library release ${library.version}`);
+if (library.version !== "20261009c") throw new Error(`Unexpected library release ${library.version}`);
 
-const expected = { linear: [52, 58], unit1: [25, 29], unit2: [30, 32] };
+const expected = { linear: [58, 58], unit1: [29, 29], unit2: [32, 32] };
 for (const [courseId, [available, total]] of Object.entries(expected)) {
   const notes = library.courses[courseId].notes;
   const topics = notes.chapters
@@ -30,7 +30,7 @@ for (const [courseId, [available, total]] of Object.entries(expected)) {
     throw new Error(`${courseId} still exposes a superseded O-Level notes booklet`);
   }
   linked.forEach((topic) => {
-    if (!topic.href.startsWith("downloads/Linear/VisualNotes/") || !topic.href.includes("v=20261009b")) {
+    if (!topic.href.startsWith("downloads/Linear/VisualNotes/") || !topic.href.includes("v=20261009c")) {
       throw new Error(`${courseId} has a stale note URL: ${topic.href}`);
     }
     const asset = path.resolve(root, topic.href.split("?", 1)[0]);
@@ -47,4 +47,4 @@ if (adaptiveHash !== "0b1658adbc56ddfccb0a1aa4d50aaa66e717745fd5112c82f79a9f7960
   throw new Error(`Adaptive Classified content changed unexpectedly: ${adaptiveHash}`);
 }
 
-console.log("Visual notes release OK: Linear 52/58, Unit 1 25/29, Unit 2 30/32; Adaptive Classified unchanged.");
+console.log("Visual notes release OK: Linear 58/58, Unit 1 29/29, Unit 2 32/32; Adaptive Classified unchanged.");

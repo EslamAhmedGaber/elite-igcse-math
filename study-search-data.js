@@ -1,7 +1,7 @@
 (function () {
   window.ELITE_STUDY_SEARCH = {
-  "version": "20261009b",
-  "generatedAt": "2026-10-09T05:56:47.942Z",
+  "version": "20261009c",
+  "generatedAt": "2026-10-09T10:54:58.132Z",
   "courses": [
     {
       "id": "linear",
@@ -3459,7 +3459,7 @@
       "type": "Note",
       "title": "Number Toolkit",
       "detail": "Chapter 1: Number | 16 pages",
-      "href": "/downloads/Linear/VisualNotes/C1_T01_Number_Toolkit/Number_Toolkit_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T01_Number_Toolkit/Number_Toolkit_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3475,7 +3475,7 @@
       "type": "Note",
       "title": "Number Toolkit",
       "detail": "Shared strategy note | Unit 1",
-      "href": "/downloads/Linear/VisualNotes/C1_T01_Number_Toolkit/Number_Toolkit_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T01_Number_Toolkit/Number_Toolkit_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Number+Toolkit",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3492,7 +3492,7 @@
       "type": "Note",
       "title": "Set Notation and Venn Diagrams",
       "detail": "Chapter 1: Number | 18 pages",
-      "href": "/downloads/Linear/VisualNotes/C1_T02_Sets_and_Venn_Diagrams/Sets_and_Venn_Diagrams_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T02_Sets_and_Venn_Diagrams/Sets_and_Venn_Diagrams_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Set%20Notation%20%26%20Venn%20Diagrams",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3508,7 +3508,7 @@
       "type": "Note",
       "title": "Set Notation and Venn Diagrams",
       "detail": "Shared strategy note | Unit 1",
-      "href": "/downloads/Linear/VisualNotes/C1_T02_Sets_and_Venn_Diagrams/Sets_and_Venn_Diagrams_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T02_Sets_and_Venn_Diagrams/Sets_and_Venn_Diagrams_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Set+Notation+%26+Venn+Diagrams",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3525,7 +3525,7 @@
       "type": "Note",
       "title": "Prime Factors, HCF and LCM",
       "detail": "Chapter 1: Number | 16 pages",
-      "href": "/downloads/Linear/VisualNotes/C1_T03_Prime_Factors_HCF_LCM/Prime_Factors_HCF_LCM_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T03_Prime_Factors_HCF_LCM/Prime_Factors_HCF_LCM_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Prime%20Factors%2C%20HCF%20%26%20LCM",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3541,7 +3541,7 @@
       "type": "Note",
       "title": "Prime Factors, HCF and LCM",
       "detail": "Shared strategy note | Unit 2",
-      "href": "/downloads/Linear/VisualNotes/C1_T03_Prime_Factors_HCF_LCM/Prime_Factors_HCF_LCM_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T03_Prime_Factors_HCF_LCM/Prime_Factors_HCF_LCM_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Prime+Factors%2C+HCF+%26+LCM",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3558,7 +3558,7 @@
       "type": "Note",
       "title": "Powers, Roots and Standard Form",
       "detail": "Chapter 1: Number | 18 pages",
-      "href": "/downloads/Linear/VisualNotes/C1_T04_Powers_Roots_Standard_Form/Powers_Roots_Standard_Form_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T04_Powers_Roots_Standard_Form/Powers_Roots_Standard_Form_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Powers%2C%20Roots%20%26%20Standard%20Form",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3574,7 +3574,7 @@
       "type": "Note",
       "title": "Powers, Roots and Standard Form",
       "detail": "Shared strategy note | Unit 2",
-      "href": "/downloads/Linear/VisualNotes/C1_T04_Powers_Roots_Standard_Form/Powers_Roots_Standard_Form_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T04_Powers_Roots_Standard_Form/Powers_Roots_Standard_Form_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Standard+Form",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3591,7 +3591,7 @@
       "type": "Note",
       "title": "Fractions",
       "detail": "Chapter 1: Number | 18 pages",
-      "href": "/downloads/Linear/VisualNotes/C1_T05_Fractions/Fractions_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T05_Fractions/Fractions_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Fractions",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3607,7 +3607,7 @@
       "type": "Note",
       "title": "Fractions",
       "detail": "Shared strategy note | Unit 1",
-      "href": "/downloads/Linear/VisualNotes/C1_T05_Fractions/Fractions_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T05_Fractions/Fractions_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Fractions",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3624,7 +3624,7 @@
       "type": "Note",
       "title": "Percentages",
       "detail": "Chapter 1: Number | 18 pages",
-      "href": "/downloads/Linear/VisualNotes/C1_T06_Percentages/Percentages_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T06_Percentages/Percentages_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Percentages",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3640,7 +3640,7 @@
       "type": "Note",
       "title": "Percentages",
       "detail": "Shared strategy note | Unit 2",
-      "href": "/downloads/Linear/VisualNotes/C1_T06_Percentages/Percentages_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T06_Percentages/Percentages_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Percentages",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3657,7 +3657,7 @@
       "type": "Note",
       "title": "Compound Interest and Depreciation",
       "detail": "Chapter 1: Number | 16 pages",
-      "href": "/downloads/Linear/VisualNotes/C1_T07_Compound_Interest/Compound_Interest_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T07_Compound_Interest/Compound_Interest_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Compound%20Interest%20%26%20Depreciation",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3673,7 +3673,7 @@
       "type": "Note",
       "title": "Compound Interest and Depreciation",
       "detail": "Shared strategy note | Unit 2",
-      "href": "/downloads/Linear/VisualNotes/C1_T07_Compound_Interest/Compound_Interest_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T07_Compound_Interest/Compound_Interest_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Compound+Interest+%26+Depreciation",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3690,7 +3690,7 @@
       "type": "Note",
       "title": "Fractions, Decimals and Percentages",
       "detail": "Chapter 1: Number | 16 pages",
-      "href": "/downloads/Linear/VisualNotes/C1_T08_Fractions_Decimals_Percentages/Fractions_Decimals_Percentages_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T08_Fractions_Decimals_Percentages/Fractions_Decimals_Percentages_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Fractions%2C%20Decimals%20%26%20Percentages",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3706,7 +3706,7 @@
       "type": "Note",
       "title": "Fractions, Decimals and Percentages",
       "detail": "Shared strategy note | Unit 1",
-      "href": "/downloads/Linear/VisualNotes/C1_T08_Fractions_Decimals_Percentages/Fractions_Decimals_Percentages_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T08_Fractions_Decimals_Percentages/Fractions_Decimals_Percentages_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Fractions",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3723,7 +3723,7 @@
       "type": "Note",
       "title": "Rounding, Estimation and Bounds",
       "detail": "Chapter 1: Number | 18 pages",
-      "href": "/downloads/Linear/VisualNotes/C1_T09_Rounding_Estimation_Bounds/Rounding_Estimation_Bounds_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T09_Rounding_Estimation_Bounds/Rounding_Estimation_Bounds_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Rounding%2C%20Estimation%20%26%20Bounds",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3739,7 +3739,7 @@
       "type": "Note",
       "title": "Rounding, Estimation and Bounds",
       "detail": "Shared strategy note | Unit 1",
-      "href": "/downloads/Linear/VisualNotes/C1_T09_Rounding_Estimation_Bounds/Rounding_Estimation_Bounds_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T09_Rounding_Estimation_Bounds/Rounding_Estimation_Bounds_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Rounding%2C+Estimation+%26+Bounds",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3756,7 +3756,7 @@
       "type": "Note",
       "title": "Surds",
       "detail": "Chapter 1: Number | 16 pages",
-      "href": "/downloads/Linear/VisualNotes/C1_T10_Surds/Surds_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T10_Surds/Surds_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Surds",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3772,7 +3772,7 @@
       "type": "Note",
       "title": "Surds",
       "detail": "Shared strategy note | Unit 1",
-      "href": "/downloads/Linear/VisualNotes/C1_T10_Surds/Surds_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T10_Surds/Surds_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Surds",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3789,7 +3789,7 @@
       "type": "Note",
       "title": "Using a Calculator",
       "detail": "Chapter 1: Number | 14 pages",
-      "href": "/downloads/Linear/VisualNotes/C1_T11_Using_a_Calculator/Using_a_Calculator_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T11_Using_a_Calculator/Using_a_Calculator_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3805,7 +3805,7 @@
       "type": "Note",
       "title": "Ratio Toolkit",
       "detail": "Chapter 1: Number | 16 pages",
-      "href": "/downloads/Linear/VisualNotes/C1_T12_Ratio_Toolkit/Ratio_Toolkit_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T12_Ratio_Toolkit/Ratio_Toolkit_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Ratio%20Toolkit",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3821,7 +3821,7 @@
       "type": "Note",
       "title": "Ratio Toolkit",
       "detail": "Shared strategy note | Unit 2",
-      "href": "/downloads/Linear/VisualNotes/C1_T12_Ratio_Toolkit/Ratio_Toolkit_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T12_Ratio_Toolkit/Ratio_Toolkit_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Ratio+Toolkit",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3838,7 +3838,7 @@
       "type": "Note",
       "title": "Ratio Problem Solving",
       "detail": "Chapter 1: Number | 16 pages",
-      "href": "/downloads/Linear/VisualNotes/C1_T13_Ratio_Problem_Solving/Ratio_Problem_Solving_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T13_Ratio_Problem_Solving/Ratio_Problem_Solving_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Ratio%20Problem%20Solving",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3854,7 +3854,7 @@
       "type": "Note",
       "title": "Exchange Rates and Best Buys",
       "detail": "Chapter 1: Number | 12 pages",
-      "href": "/downloads/Linear/VisualNotes/C1_T14_Exchange_Rates_Best_Buys/Exchange_Rates_Best_Buys_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T14_Exchange_Rates_Best_Buys/Exchange_Rates_Best_Buys_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Exchange%20Rates%20%26%20Best%20Buys",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3870,7 +3870,7 @@
       "type": "Note",
       "title": "Direct & Inverse Proportion",
       "detail": "Chapter 1: Number | 18 pages",
-      "href": "/downloads/Linear/VisualNotes/C1_T15_Direct_Inverse_Proportion/Direct_Inverse_Proportion_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T15_Direct_Inverse_Proportion/Direct_Inverse_Proportion_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Direct%20%26%20Inverse%20Proportion",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3886,7 +3886,7 @@
       "type": "Note",
       "title": "Direct & Inverse Proportion",
       "detail": "Shared strategy note | Unit 2",
-      "href": "/downloads/Linear/VisualNotes/C1_T15_Direct_Inverse_Proportion/Direct_Inverse_Proportion_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C1_T15_Direct_Inverse_Proportion/Direct_Inverse_Proportion_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Direct+%26+Inverse+Proportion",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3903,7 +3903,7 @@
       "type": "Note",
       "title": "Algebra Toolkit",
       "detail": "Chapter 2: Algebra | 18 pages",
-      "href": "/downloads/Linear/VisualNotes/C2_T01_Algebra_Toolkit/Algebra_Toolkit_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T01_Algebra_Toolkit/Algebra_Toolkit_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3919,7 +3919,7 @@
       "type": "Note",
       "title": "Algebraic Roots & Indices",
       "detail": "Chapter 2: Algebra | 20 pages",
-      "href": "/downloads/Linear/VisualNotes/C2_T02_Roots_and_Indices/Roots_and_Indices_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T02_Roots_and_Indices/Roots_and_Indices_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Algebraic%20Roots%20%26%20Indices",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3935,7 +3935,7 @@
       "type": "Note",
       "title": "Algebraic Roots & Indices",
       "detail": "Shared strategy note | Unit 1",
-      "href": "/downloads/Linear/VisualNotes/C2_T02_Roots_and_Indices/Roots_and_Indices_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T02_Roots_and_Indices/Roots_and_Indices_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Algebraic+Roots+%26+Indices",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3952,7 +3952,7 @@
       "type": "Note",
       "title": "Algebraic Roots & Indices",
       "detail": "Shared strategy note | Unit 2",
-      "href": "/downloads/Linear/VisualNotes/C2_T02_Roots_and_Indices/Roots_and_Indices_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T02_Roots_and_Indices/Roots_and_Indices_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Algebraic+Roots+%26+Indices",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3969,7 +3969,7 @@
       "type": "Note",
       "title": "Expanding Brackets",
       "detail": "Chapter 2: Algebra | 20 pages",
-      "href": "/downloads/Linear/VisualNotes/C2_T03_Expanding_Brackets/Expanding_Brackets_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T03_Expanding_Brackets/Expanding_Brackets_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Expanding%20Brackets",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -3985,7 +3985,7 @@
       "type": "Note",
       "title": "Expanding Brackets",
       "detail": "Shared strategy note | Unit 1",
-      "href": "/downloads/Linear/VisualNotes/C2_T03_Expanding_Brackets/Expanding_Brackets_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T03_Expanding_Brackets/Expanding_Brackets_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Expanding+Brackets",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4002,7 +4002,7 @@
       "type": "Note",
       "title": "Factorisation",
       "detail": "Chapter 2: Algebra | 18 pages",
-      "href": "/downloads/Linear/VisualNotes/C2_T04_Factorisation/Factorisation_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T04_Factorisation/Factorisation_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Factorising",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4018,7 +4018,7 @@
       "type": "Note",
       "title": "Completing the Square",
       "detail": "Chapter 2: Algebra | 18 pages",
-      "href": "/downloads/Linear/VisualNotes/C2_T05_Completing_the_Square/Completing_the_Square_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T05_Completing_the_Square/Completing_the_Square_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Completing%20the%20Square",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4034,7 +4034,7 @@
       "type": "Note",
       "title": "Completing the Square",
       "detail": "Shared strategy note | Unit 1",
-      "href": "/downloads/Linear/VisualNotes/C2_T05_Completing_the_Square/Completing_the_Square_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T05_Completing_the_Square/Completing_the_Square_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Completing+the+Square",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4051,7 +4051,7 @@
       "type": "Note",
       "title": "Algebraic Fractions",
       "detail": "Chapter 2: Algebra | 20 pages",
-      "href": "/downloads/Linear/VisualNotes/C2_T06_Algebraic_Fractions/Algebraic_Fractions_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T06_Algebraic_Fractions/Algebraic_Fractions_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Algebraic%20Fractions",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4067,7 +4067,7 @@
       "type": "Note",
       "title": "Algebraic Fractions",
       "detail": "Shared strategy note | Unit 1",
-      "href": "/downloads/Linear/VisualNotes/C2_T06_Algebraic_Fractions/Algebraic_Fractions_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T06_Algebraic_Fractions/Algebraic_Fractions_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Algebraic+Fractions",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4084,7 +4084,7 @@
       "type": "Note",
       "title": "Algebraic Fractions",
       "detail": "Shared strategy note | Unit 2",
-      "href": "/downloads/Linear/VisualNotes/C2_T06_Algebraic_Fractions/Algebraic_Fractions_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T06_Algebraic_Fractions/Algebraic_Fractions_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Algebraic+Fractions",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4101,7 +4101,7 @@
       "type": "Note",
       "title": "Rearranging Formulas",
       "detail": "Chapter 2: Algebra | 18 pages",
-      "href": "/downloads/Linear/VisualNotes/C2_T07_Rearranging_Formulas/Rearranging_Formulas_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T07_Rearranging_Formulas/Rearranging_Formulas_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Rearranging%20Formulas",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4117,7 +4117,7 @@
       "type": "Note",
       "title": "Rearranging Formulas",
       "detail": "Shared strategy note | Unit 2",
-      "href": "/downloads/Linear/VisualNotes/C2_T07_Rearranging_Formulas/Rearranging_Formulas_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T07_Rearranging_Formulas/Rearranging_Formulas_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Rearranging+Formulae",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4134,7 +4134,7 @@
       "type": "Note",
       "title": "Algebraic Proof",
       "detail": "Chapter 2: Algebra | 18 pages",
-      "href": "/downloads/Linear/VisualNotes/C2_T08_Algebraic_Proof/Algebraic_Proof_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T08_Algebraic_Proof/Algebraic_Proof_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Algebraic%20Proof",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4150,7 +4150,7 @@
       "type": "Note",
       "title": "Algebraic Proof",
       "detail": "Shared strategy note | Unit 1",
-      "href": "/downloads/Linear/VisualNotes/C2_T08_Algebraic_Proof/Algebraic_Proof_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T08_Algebraic_Proof/Algebraic_Proof_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Algebraic+Proof",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4167,7 +4167,7 @@
       "type": "Note",
       "title": "Algebraic Proof",
       "detail": "Shared strategy note | Unit 2",
-      "href": "/downloads/Linear/VisualNotes/C2_T08_Algebraic_Proof/Algebraic_Proof_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T08_Algebraic_Proof/Algebraic_Proof_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Algebraic+Proof",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4184,7 +4184,7 @@
       "type": "Note",
       "title": "Solving Linear Equations",
       "detail": "Chapter 2: Algebra | 22 pages",
-      "href": "/downloads/Linear/VisualNotes/C2_T09_Linear_Equations/Linear_Equations_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T09_Linear_Equations/Linear_Equations_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Solving%20Linear%20Equations",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4200,7 +4200,7 @@
       "type": "Note",
       "title": "Solving Linear Equations",
       "detail": "Shared strategy note | Unit 1",
-      "href": "/downloads/Linear/VisualNotes/C2_T09_Linear_Equations/Linear_Equations_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T09_Linear_Equations/Linear_Equations_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Linear+Equations",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4217,7 +4217,7 @@
       "type": "Note",
       "title": "Solving Quadratics",
       "detail": "Chapter 2: Algebra | 20 pages",
-      "href": "/downloads/Linear/VisualNotes/C2_T10_Solving_Quadratics/Solving_Quadratics_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T10_Solving_Quadratics/Solving_Quadratics_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Solving%20Quadratic%20Equations",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4233,7 +4233,7 @@
       "type": "Note",
       "title": "Solving Inequalities",
       "detail": "Chapter 2: Algebra | 18 pages",
-      "href": "/downloads/Linear/VisualNotes/C2_T11_Inequalities/Inequalities_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T11_Inequalities/Inequalities_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Solving%20Inequalities",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4249,7 +4249,7 @@
       "type": "Note",
       "title": "Simultaneous Equations",
       "detail": "Chapter 2: Algebra | 20 pages",
-      "href": "/downloads/Linear/VisualNotes/C2_T12_Simultaneous_Equations/Simultaneous_Equations_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T12_Simultaneous_Equations/Simultaneous_Equations_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Simultaneous%20Equations",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4265,7 +4265,7 @@
       "type": "Note",
       "title": "Simultaneous Equations",
       "detail": "Shared strategy note | Unit 2",
-      "href": "/downloads/Linear/VisualNotes/C2_T12_Simultaneous_Equations/Simultaneous_Equations_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T12_Simultaneous_Equations/Simultaneous_Equations_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Simultaneous+Equations",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4282,7 +4282,7 @@
       "type": "Note",
       "title": "Forming and Solving Equations",
       "detail": "Chapter 2: Algebra | 18 pages",
-      "href": "/downloads/Linear/VisualNotes/C2_T13_Forming_Equations/Forming_Equations_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T13_Forming_Equations/Forming_Equations_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Forming%20%26%20Solving%20Equations",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4298,7 +4298,7 @@
       "type": "Note",
       "title": "Forming and Solving Equations",
       "detail": "Shared strategy note | Unit 1",
-      "href": "/downloads/Linear/VisualNotes/C2_T13_Forming_Equations/Forming_Equations_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T13_Forming_Equations/Forming_Equations_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Forming+%26+Solving+Equations",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4315,7 +4315,7 @@
       "type": "Note",
       "title": "Forming and Solving Equations",
       "detail": "Shared strategy note | Unit 2",
-      "href": "/downloads/Linear/VisualNotes/C2_T13_Forming_Equations/Forming_Equations_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C2_T13_Forming_Equations/Forming_Equations_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Forming+%26+Solving+Equations",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4332,7 +4332,7 @@
       "type": "Note",
       "title": "Sequences",
       "detail": "Chapter 3: Graphs and Functions | 18 pages",
-      "href": "/downloads/Linear/VisualNotes/C3_T01_Sequences/Sequences_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C3_T01_Sequences/Sequences_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Sequences",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4348,7 +4348,7 @@
       "type": "Note",
       "title": "Sequences",
       "detail": "Shared strategy note | Unit 2",
-      "href": "/downloads/Linear/VisualNotes/C3_T01_Sequences/Sequences_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C3_T01_Sequences/Sequences_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Sequences",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4365,7 +4365,7 @@
       "type": "Note",
       "title": "Coordinate Geometry",
       "detail": "Chapter 3: Graphs and Functions | 16 pages",
-      "href": "/downloads/Linear/VisualNotes/C3_T02_Coordinate_Geometry/Coordinate_Geometry_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C3_T02_Coordinate_Geometry/Coordinate_Geometry_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Coordinate%20Geometry",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4381,7 +4381,7 @@
       "type": "Note",
       "title": "Functions",
       "detail": "Chapter 3: Graphs and Functions | 18 pages",
-      "href": "/downloads/Linear/VisualNotes/C3_T03_Functions/Functions_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C3_T03_Functions/Functions_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Functions",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4397,7 +4397,7 @@
       "type": "Note",
       "title": "Functions",
       "detail": "Shared strategy note | Unit 2",
-      "href": "/downloads/Linear/VisualNotes/C3_T03_Functions/Functions_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C3_T03_Functions/Functions_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Functions",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4414,7 +4414,7 @@
       "type": "Note",
       "title": "Linear Graphs y = mx + c",
       "detail": "Chapter 3: Graphs and Functions | 16 pages",
-      "href": "/downloads/Linear/VisualNotes/C3_T04_Linear_Graphs/Linear_Graphs_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C3_T04_Linear_Graphs/Linear_Graphs_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Linear%20Graphs%20%28y%20%3D%20mx%20%2B%20c%29",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4430,7 +4430,7 @@
       "type": "Note",
       "title": "Linear Graphs y = mx + c",
       "detail": "Shared strategy note | Unit 1",
-      "href": "/downloads/Linear/VisualNotes/C3_T04_Linear_Graphs/Linear_Graphs_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C3_T04_Linear_Graphs/Linear_Graphs_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Linear+Graphs",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4447,7 +4447,7 @@
       "type": "Note",
       "title": "Graphs of Functions",
       "detail": "Chapter 3: Graphs and Functions | 16 pages",
-      "href": "/downloads/Linear/VisualNotes/C3_T05_Graphs_of_Functions/Graphs_of_Functions_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C3_T05_Graphs_of_Functions/Graphs_of_Functions_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Graphs%20of%20Functions",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4463,7 +4463,7 @@
       "type": "Note",
       "title": "Graphs of Functions",
       "detail": "Shared strategy note | Unit 1",
-      "href": "/downloads/Linear/VisualNotes/C3_T05_Graphs_of_Functions/Graphs_of_Functions_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C3_T05_Graphs_of_Functions/Graphs_of_Functions_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Graphs+of+Functions",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4480,7 +4480,7 @@
       "type": "Note",
       "title": "Graphs of Functions",
       "detail": "Shared strategy note | Unit 2",
-      "href": "/downloads/Linear/VisualNotes/C3_T05_Graphs_of_Functions/Graphs_of_Functions_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C3_T05_Graphs_of_Functions/Graphs_of_Functions_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Graphs+of+Functions",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4497,7 +4497,7 @@
       "type": "Note",
       "title": "Estimating Gradients",
       "detail": "Chapter 3: Graphs and Functions | 14 pages",
-      "href": "/downloads/Linear/VisualNotes/C3_T06_Estimating_Gradients/Estimating_Gradients_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C3_T06_Estimating_Gradients/Estimating_Gradients_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Estimating%20Gradients",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4513,7 +4513,7 @@
       "type": "Note",
       "title": "Real-Life Graphs",
       "detail": "Chapter 3: Graphs and Functions | 14 pages",
-      "href": "/downloads/Linear/VisualNotes/C3_T07_Real_Life_Graphs/Real_Life_Graphs_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C3_T07_Real_Life_Graphs/Real_Life_Graphs_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4529,7 +4529,7 @@
       "type": "Note",
       "title": "Graphing Inequalities",
       "detail": "Chapter 3: Graphs and Functions | 12 pages",
-      "href": "/downloads/Linear/VisualNotes/C3_T08_Graphing_Inequalities/Graphing_Inequalities_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C3_T08_Graphing_Inequalities/Graphing_Inequalities_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Graphing%20Inequalities",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4545,7 +4545,7 @@
       "type": "Note",
       "title": "Transformations of Graphs",
       "detail": "Chapter 3: Graphs and Functions | 16 pages",
-      "href": "/downloads/Linear/VisualNotes/C3_T09_Transformations_of_Graphs/Transformations_of_Graphs_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C3_T09_Transformations_of_Graphs/Transformations_of_Graphs_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Transformations%20of%20Graphs",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4561,7 +4561,7 @@
       "type": "Note",
       "title": "Transformations of Graphs",
       "detail": "Shared strategy note | Unit 2",
-      "href": "/downloads/Linear/VisualNotes/C3_T09_Transformations_of_Graphs/Transformations_of_Graphs_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C3_T09_Transformations_of_Graphs/Transformations_of_Graphs_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Transformations+of+Graphs",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4578,7 +4578,7 @@
       "type": "Note",
       "title": "Differentiation",
       "detail": "Chapter 3: Graphs and Functions | 16 pages",
-      "href": "/downloads/Linear/VisualNotes/C3_T10_Differentiation/Differentiation_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C3_T10_Differentiation/Differentiation_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Differentiation",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4594,7 +4594,7 @@
       "type": "Note",
       "title": "Differentiation",
       "detail": "Shared strategy note | Unit 2",
-      "href": "/downloads/Linear/VisualNotes/C3_T10_Differentiation/Differentiation_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C3_T10_Differentiation/Differentiation_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Differentiation+%26+Turning+Points",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4611,7 +4611,7 @@
       "type": "Note",
       "title": "Standard and Compound Units",
       "detail": "Chapter 4: Geometry and Measures | 16 pages",
-      "href": "/downloads/Linear/VisualNotes/C4_T01_Standard_Compound_Units/Standard_Compound_Units_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C4_T01_Standard_Compound_Units/Standard_Compound_Units_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Standard%20%26%20Compound%20Units",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4627,7 +4627,7 @@
       "type": "Note",
       "title": "Standard and Compound Units",
       "detail": "Shared strategy note | Unit 1",
-      "href": "/downloads/Linear/VisualNotes/C4_T01_Standard_Compound_Units/Standard_Compound_Units_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C4_T01_Standard_Compound_Units/Standard_Compound_Units_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Standard+%26+Compound+Units",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4644,7 +4644,7 @@
       "type": "Note",
       "title": "Standard and Compound Units",
       "detail": "Shared strategy note | Unit 2",
-      "href": "/downloads/Linear/VisualNotes/C4_T01_Standard_Compound_Units/Standard_Compound_Units_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C4_T01_Standard_Compound_Units/Standard_Compound_Units_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Standard+%26+Compound+Units",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4661,7 +4661,7 @@
       "type": "Note",
       "title": "Angles in Polygons and Parallel Lines",
       "detail": "Chapter 4: Geometry and Measures | 14 pages",
-      "href": "/downloads/Linear/VisualNotes/C4_T02_Angles_Polygons_Parallel_Lines/Angles_Polygons_Parallel_Lines_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C4_T02_Angles_Polygons_Parallel_Lines/Angles_Polygons_Parallel_Lines_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Angles%20in%20Polygons%20%26%20Parallel%20Lines",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4677,7 +4677,7 @@
       "type": "Note",
       "title": "Angles in Polygons and Parallel Lines",
       "detail": "Shared strategy note | Unit 2",
-      "href": "/downloads/Linear/VisualNotes/C4_T02_Angles_Polygons_Parallel_Lines/Angles_Polygons_Parallel_Lines_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C4_T02_Angles_Polygons_Parallel_Lines/Angles_Polygons_Parallel_Lines_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Angles+in+Polygons+%26+Parallel+Lines",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4694,7 +4694,7 @@
       "type": "Note",
       "title": "Bearings, Scale Drawing and Constructions",
       "detail": "Chapter 4: Geometry and Measures | 16 pages",
-      "href": "/downloads/Linear/VisualNotes/C4_T03_Bearings_Scale_Constructions/Bearings_Scale_Constructions_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C4_T03_Bearings_Scale_Constructions/Bearings_Scale_Constructions_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Bearings%2C%20Scale%20Drawing%20%26%20Constructions",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4710,7 +4710,7 @@
       "type": "Note",
       "title": "Bearings, Scale Drawing and Constructions",
       "detail": "Shared strategy note | Unit 2",
-      "href": "/downloads/Linear/VisualNotes/C4_T03_Bearings_Scale_Constructions/Bearings_Scale_Constructions_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C4_T03_Bearings_Scale_Constructions/Bearings_Scale_Constructions_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Bearings",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4727,7 +4727,7 @@
       "type": "Note",
       "title": "Circle Theorems",
       "detail": "Chapter 4: Geometry and Measures | 16 pages",
-      "href": "/downloads/Linear/VisualNotes/C4_T04_Circle_Theorems/Circle_Theorems_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C4_T04_Circle_Theorems/Circle_Theorems_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Circle%20Theorems",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4743,7 +4743,7 @@
       "type": "Note",
       "title": "Circle Theorems",
       "detail": "Shared strategy note | Unit 2",
-      "href": "/downloads/Linear/VisualNotes/C4_T04_Circle_Theorems/Circle_Theorems_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C4_T04_Circle_Theorems/Circle_Theorems_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Circle+Theorems",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4760,7 +4760,7 @@
       "type": "Note",
       "title": "Area and Perimeter",
       "detail": "Chapter 4: Geometry and Measures | 14 pages",
-      "href": "/downloads/Linear/VisualNotes/C4_T05_Area_Perimeter/Area_Perimeter_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C4_T05_Area_Perimeter/Area_Perimeter_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Area%20%26%20Perimeter",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4776,7 +4776,7 @@
       "type": "Note",
       "title": "Circles, Arcs and Sectors",
       "detail": "Chapter 4: Geometry and Measures | 14 pages",
-      "href": "/downloads/Linear/VisualNotes/C4_T06_Circles_Arcs_Sectors/Circles_Arcs_Sectors_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C4_T06_Circles_Arcs_Sectors/Circles_Arcs_Sectors_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Circles%2C%20Arcs%20%26%20Sectors",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4792,7 +4792,7 @@
       "type": "Note",
       "title": "Circles, Arcs and Sectors",
       "detail": "Shared strategy note | Unit 1",
-      "href": "/downloads/Linear/VisualNotes/C4_T06_Circles_Arcs_Sectors/Circles_Arcs_Sectors_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C4_T06_Circles_Arcs_Sectors/Circles_Arcs_Sectors_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Circles%2C+Arcs+%26+Sectors",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4809,7 +4809,7 @@
       "type": "Note",
       "title": "Volume and Surface Area",
       "detail": "Chapter 4: Geometry and Measures | 14 pages",
-      "href": "/downloads/Linear/VisualNotes/C4_T07_Volume_Surface_Area/Volume_Surface_Area_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C4_T07_Volume_Surface_Area/Volume_Surface_Area_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Volume%20%26%20Surface%20Area",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4825,7 +4825,7 @@
       "type": "Note",
       "title": "Volume and Surface Area",
       "detail": "Shared strategy note | Unit 2",
-      "href": "/downloads/Linear/VisualNotes/C4_T07_Volume_Surface_Area/Volume_Surface_Area_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C4_T07_Volume_Surface_Area/Volume_Surface_Area_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Volume+%26+Surface+Area",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4842,7 +4842,7 @@
       "type": "Note",
       "title": "Congruence, Similarity and Geometrical Proof",
       "detail": "Chapter 4: Geometry and Measures | 12 pages",
-      "href": "/downloads/Linear/VisualNotes/C4_T08_Congruence_Similarity_Proof/Congruence_Similarity_Proof_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C4_T08_Congruence_Similarity_Proof/Congruence_Similarity_Proof_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Congruence%2C%20Similarity%20%26%20Geometrical%20Proof",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4858,7 +4858,7 @@
       "type": "Note",
       "title": "Area and Volume of Similar Shapes",
       "detail": "Chapter 4: Geometry and Measures | 14 pages",
-      "href": "/downloads/Linear/VisualNotes/C4_T09_Area_Volume_Similar_Shapes/Area_Volume_Similar_Shapes_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C4_T09_Area_Volume_Similar_Shapes/Area_Volume_Similar_Shapes_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Area%20%26%20Volume%20of%20Similar%20Shapes",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4874,7 +4874,7 @@
       "type": "Note",
       "title": "Area and Volume of Similar Shapes",
       "detail": "Shared strategy note | Unit 2",
-      "href": "/downloads/Linear/VisualNotes/C4_T09_Area_Volume_Similar_Shapes/Area_Volume_Similar_Shapes_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C4_T09_Area_Volume_Similar_Shapes/Area_Volume_Similar_Shapes_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Area+%26+Volume+of+Similar+Shapes",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4891,7 +4891,7 @@
       "type": "Note",
       "title": "Right-Angled Triangles: Pythagoras and Trigonometry",
       "detail": "Chapter 4: Geometry and Measures | 14 pages",
-      "href": "/downloads/Linear/VisualNotes/C4_T10_Pythagoras_Trigonometry/Pythagoras_Trigonometry_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C4_T10_Pythagoras_Trigonometry/Pythagoras_Trigonometry_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Right-Angled%20Triangles%20-%20Pythagoras%20%26%20Trigonometry",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4907,7 +4907,7 @@
       "type": "Note",
       "title": "Right-Angled Triangles: Pythagoras and Trigonometry",
       "detail": "Shared strategy note | Unit 1",
-      "href": "/downloads/Linear/VisualNotes/C4_T10_Pythagoras_Trigonometry/Pythagoras_Trigonometry_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C4_T10_Pythagoras_Trigonometry/Pythagoras_Trigonometry_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Right-Angled+Triangles+-+Pythagoras+%26+Trigonometry",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4924,7 +4924,7 @@
       "type": "Note",
       "title": "Sine Rule, Cosine Rule and Area of a Triangle",
       "detail": "Chapter 4: Geometry and Measures | 14 pages",
-      "href": "/downloads/Linear/VisualNotes/C4_T11_Sine_Cosine_Rule/Sine_Cosine_Rule_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C4_T11_Sine_Cosine_Rule/Sine_Cosine_Rule_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Sine%2C%20Cosine%20Rule%20%26%20Area%20of%20Triangles",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4940,7 +4940,7 @@
       "type": "Note",
       "title": "3D Pythagoras and Trigonometry",
       "detail": "Chapter 4: Geometry and Measures | 12 pages",
-      "href": "/downloads/Linear/VisualNotes/C4_T12_3D_Pythagoras_Trigonometry/3D_Pythagoras_Trigonometry_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C4_T12_3D_Pythagoras_Trigonometry/3D_Pythagoras_Trigonometry_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=3D%20Pythagoras%20%26%20Trigonometry",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4956,7 +4956,7 @@
       "type": "Note",
       "title": "3D Pythagoras and Trigonometry",
       "detail": "Shared strategy note | Unit 1",
-      "href": "/downloads/Linear/VisualNotes/C4_T12_3D_Pythagoras_Trigonometry/3D_Pythagoras_Trigonometry_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C4_T12_3D_Pythagoras_Trigonometry/3D_Pythagoras_Trigonometry_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=3D+Pythagoras+%26+Trigonometry",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4973,7 +4973,7 @@
       "type": "Note",
       "title": "Vectors",
       "detail": "Chapter 5: Vectors and Transformations | 16 pages",
-      "href": "/downloads/Linear/VisualNotes/C5_T01_Vectors/Vectors_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C5_T01_Vectors/Vectors_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Vectors",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -4989,7 +4989,7 @@
       "type": "Note",
       "title": "Vectors",
       "detail": "Shared strategy note | Unit 2",
-      "href": "/downloads/Linear/VisualNotes/C5_T01_Vectors/Vectors_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C5_T01_Vectors/Vectors_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Vectors",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -5006,7 +5006,7 @@
       "type": "Note",
       "title": "Transformations",
       "detail": "Chapter 5: Vectors and Transformations | 16 pages",
-      "href": "/downloads/Linear/VisualNotes/C5_T02_Transformations/Transformations_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C5_T02_Transformations/Transformations_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Transformations",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -5022,7 +5022,7 @@
       "type": "Note",
       "title": "Transformations",
       "detail": "Shared strategy note | Unit 2",
-      "href": "/downloads/Linear/VisualNotes/C5_T02_Transformations/Transformations_Visual_Notes.pdf?v=20261009b",
+      "href": "/downloads/Linear/VisualNotes/C5_T02_Transformations/Transformations_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Transformations",
       "secondaryLabel": "Practice",
       "keywords": [
@@ -5031,6 +5031,160 @@
         "Unit 2",
         "strategy",
         "shared notes"
+      ]
+    },
+    {
+      "id": "linear:note:statistics",
+      "courseId": "linear",
+      "type": "Note",
+      "title": "Statistics",
+      "detail": "Chapter 6: Statistics and Probability | 16 pages",
+      "href": "/downloads/Linear/VisualNotes/C6_T01_Statistics/Statistics_Visual_Notes.pdf?v=20261009c",
+      "secondaryHref": "/practice.html?pathway=linear&bank=all",
+      "secondaryLabel": "Practice",
+      "keywords": [
+        "Chapter 6: Statistics and Probability",
+        "strategy",
+        "booklet"
+      ]
+    },
+    {
+      "id": "modular2:note:statistics",
+      "courseId": "modular2",
+      "type": "Note",
+      "title": "Statistics",
+      "detail": "Shared strategy note | Unit 2",
+      "href": "/downloads/Linear/VisualNotes/C6_T01_Statistics/Statistics_Visual_Notes.pdf?v=20261009c",
+      "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Statistics+Toolkit",
+      "secondaryLabel": "Practice",
+      "keywords": [
+        "Chapter 6: Statistics and Probability",
+        "Unit 2",
+        "strategy",
+        "shared notes"
+      ]
+    },
+    {
+      "id": "linear:note:histograms",
+      "courseId": "linear",
+      "type": "Note",
+      "title": "Histograms",
+      "detail": "Chapter 6: Statistics and Probability | 12 pages",
+      "href": "/downloads/Linear/VisualNotes/C6_T02_Histograms/Histograms_Visual_Notes.pdf?v=20261009c",
+      "secondaryHref": "/practice.html?pathway=linear&bank=all",
+      "secondaryLabel": "Practice",
+      "keywords": [
+        "Chapter 6: Statistics and Probability",
+        "strategy",
+        "booklet"
+      ]
+    },
+    {
+      "id": "modular1:note:histograms",
+      "courseId": "modular1",
+      "type": "Note",
+      "title": "Histograms",
+      "detail": "Shared strategy note | Unit 1",
+      "href": "/downloads/Linear/VisualNotes/C6_T02_Histograms/Histograms_Visual_Notes.pdf?v=20261009c",
+      "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Histograms",
+      "secondaryLabel": "Practice",
+      "keywords": [
+        "Chapter 6: Statistics and Probability",
+        "Unit 1",
+        "strategy",
+        "shared notes"
+      ]
+    },
+    {
+      "id": "linear:note:cumulative-frequency",
+      "courseId": "linear",
+      "type": "Note",
+      "title": "Cumulative Frequency",
+      "detail": "Chapter 6: Statistics and Probability | 12 pages",
+      "href": "/downloads/Linear/VisualNotes/C6_T03_Cumulative_Frequency/Cumulative_Frequency_Visual_Notes.pdf?v=20261009c",
+      "secondaryHref": "/practice.html?pathway=linear&bank=all",
+      "secondaryLabel": "Practice",
+      "keywords": [
+        "Chapter 6: Statistics and Probability",
+        "strategy",
+        "booklet"
+      ]
+    },
+    {
+      "id": "modular2:note:cumulative-frequency",
+      "courseId": "modular2",
+      "type": "Note",
+      "title": "Cumulative Frequency",
+      "detail": "Shared strategy note | Unit 2",
+      "href": "/downloads/Linear/VisualNotes/C6_T03_Cumulative_Frequency/Cumulative_Frequency_Visual_Notes.pdf?v=20261009c",
+      "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Cumulative+Frequency+Diagrams",
+      "secondaryLabel": "Practice",
+      "keywords": [
+        "Chapter 6: Statistics and Probability",
+        "Unit 2",
+        "strategy",
+        "shared notes"
+      ]
+    },
+    {
+      "id": "linear:note:probability-toolkit",
+      "courseId": "linear",
+      "type": "Note",
+      "title": "Probability Toolkit",
+      "detail": "Chapter 6: Statistics and Probability | 14 pages",
+      "href": "/downloads/Linear/VisualNotes/C6_T04_Probability_Toolkit/Probability_Toolkit_Visual_Notes.pdf?v=20261009c",
+      "secondaryHref": "/practice.html?pathway=linear&bank=all",
+      "secondaryLabel": "Practice",
+      "keywords": [
+        "Chapter 6: Statistics and Probability",
+        "strategy",
+        "booklet"
+      ]
+    },
+    {
+      "id": "modular1:note:probability-toolkit",
+      "courseId": "modular1",
+      "type": "Note",
+      "title": "Probability Toolkit",
+      "detail": "Shared strategy note | Unit 1",
+      "href": "/downloads/Linear/VisualNotes/C6_T04_Probability_Toolkit/Probability_Toolkit_Visual_Notes.pdf?v=20261009c",
+      "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Probability+Toolkit",
+      "secondaryLabel": "Practice",
+      "keywords": [
+        "Chapter 6: Statistics and Probability",
+        "Unit 1",
+        "strategy",
+        "shared notes"
+      ]
+    },
+    {
+      "id": "linear:note:venn-and-tree-diagrams",
+      "courseId": "linear",
+      "type": "Note",
+      "title": "Venn and Tree Diagrams",
+      "detail": "Chapter 6: Statistics and Probability | 16 pages",
+      "href": "/downloads/Linear/VisualNotes/C6_T05_Venn_Tree_Diagrams/Venn_Tree_Diagrams_Visual_Notes.pdf?v=20261009c",
+      "secondaryHref": "/practice.html?pathway=linear&bank=all",
+      "secondaryLabel": "Practice",
+      "keywords": [
+        "Chapter 6: Statistics and Probability",
+        "strategy",
+        "booklet"
+      ]
+    },
+    {
+      "id": "linear:note:combined-and-conditional-probability",
+      "courseId": "linear",
+      "type": "Note",
+      "title": "Combined and Conditional Probability",
+      "detail": "Chapter 6: Statistics and Probability | 14 pages",
+      "href": "/downloads/Linear/VisualNotes/C6_T06_Combined_Conditional_Probability/Combined_Conditional_Probability_Visual_Notes.pdf?v=20261009c",
+      "secondaryHref": "/practice.html?pathway=linear&bank=all",
+      "secondaryLabel": "Practice",
+      "keywords": [
+        "Chapter 6: Statistics and Probability",
+        "strategy",
+        "booklet"
       ]
     },
     {
@@ -6224,7 +6378,7 @@
       ]
     },
     {
-      "id": "all:resource:teacher-studio-certificates:348",
+      "id": "all:resource:teacher-studio-certificates:358",
       "courseId": "all",
       "type": "Resource",
       "title": "Teacher Studio & Certificates",
@@ -6240,7 +6394,7 @@
       ]
     },
     {
-      "id": "all:resource:readiness-check:349",
+      "id": "all:resource:readiness-check:359",
       "courseId": "all",
       "type": "Resource",
       "title": "Readiness Check",
@@ -6255,7 +6409,7 @@
       ]
     },
     {
-      "id": "all:resource:download-centre:350",
+      "id": "all:resource:download-centre:360",
       "courseId": "all",
       "type": "Resource",
       "title": "Download Centre",
@@ -6270,7 +6424,7 @@
       ]
     },
     {
-      "id": "all:resource:past-papers:351",
+      "id": "all:resource:past-papers:361",
       "courseId": "all",
       "type": "Resource",
       "title": "Past Papers",
@@ -6285,7 +6439,7 @@
       ]
     },
     {
-      "id": "all:resource:topic-roadmap:352",
+      "id": "all:resource:topic-roadmap:362",
       "courseId": "all",
       "type": "Resource",
       "title": "Topic Roadmap",
@@ -6300,7 +6454,7 @@
       ]
     },
     {
-      "id": "all:resource:about-dr-eslam:353",
+      "id": "all:resource:about-dr-eslam:363",
       "courseId": "all",
       "type": "Resource",
       "title": "About Dr Eslam",
@@ -6319,7 +6473,7 @@
     "courses": 6,
     "modules": 71,
     "topics": 146,
-    "notes": 131,
+    "notes": 141,
     "resources": 6
   }
 };
