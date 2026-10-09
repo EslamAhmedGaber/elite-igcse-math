@@ -154,31 +154,35 @@
       </section>`;
   }
 
-  const id = currentCourse();
-  const c = data.courses[id];
-  document.title = `${c.name} Notes & Adaptive Classified - Elite IGCSE Mathematics`;
-
-
-  root.innerHTML = `
-    <section class="lib-hero">
-      <div>
-        <span class="lib-eyebrow">${esc(c.family)} · ${esc(c.code)}</span>
-        <h1>${esc(c.name)}</h1>
-        <p>Choose a topic note or study resource, then Preview or Download.</p>
-      </div>
-      <nav class="lib-jump" aria-label="Sections">
-        <a href="#notes">Notes</a>
-        <a href="#adaptive">Adaptive Classified</a>
-      </nav>
-    </section>
-    ${notesSection(c)}
-    ${adaptiveSection(c)}
-  `;
-  // the shared course bar is inserted above this page after load, so jump to #notes / #adaptive once it has settled
   function jumpToHash() {
     const target = window.location.hash && document.querySelector(window.location.hash);
     if (target) target.scrollIntoView();
   }
-  jumpToHash();
+
+  function renderLibrary() {
+    const c = data.courses[currentCourse()];
+    const adaptiveView = window.location.hash.toLowerCase() === "#adaptive";
+    document.title = adaptiveView
+      ? `${c.name} Adaptive Classified | Elite IGCSE Mathematics`
+      : `${c.name} Notes | Elite IGCSE Mathematics`;
+
+    root.innerHTML = `
+      <section class="lib-hero">
+        <div>
+          <span class="lib-eyebrow">${esc(c.family)} · ${esc(c.code)}</span>
+          <h1>${esc(c.name)} ${adaptiveView ? "Adaptive Classified" : "Notes"}</h1>
+          <p>${adaptiveView
+            ? "Past-paper questions grouped by topic, with questions and worked answers."
+            : "Topic-by-topic visual notes, worked examples and answers."}</p>
+        </div>
+        ${adaptiveView ? `<nav class="lib-jump" aria-label="Course resources"><a href="#notes">Notes</a></nav>` : ""}
+      </section>
+      ${adaptiveView ? adaptiveSection(c) : notesSection(c)}
+    `;
+    jumpToHash();
+  }
+
+  renderLibrary();
+  window.addEventListener("hashchange", renderLibrary);
   window.addEventListener("load", () => setTimeout(jumpToHash, 350), { once: true });
 })();
