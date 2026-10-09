@@ -56,25 +56,31 @@
 
   function notesSection(c) {
     const n = c.notes;
-    const complete = `
+    const complete = n.complete && n.complete.length ? `
       <article class="lib-block">
         <h3>Complete Book</h3>
         <p class="lib-note">All ${c.id === "linear" ? "58" : esc((n.topics || []).length)} topics: notes, worked examples and practice, with the answers at the end of each topic.${n.complete.length > 1 ? " Split into parts so each file opens quickly." : ""}</p>
         <ul class="lib-list">${partRows(n.complete, "With Answers")}</ul>
-      </article>`;
+      </article>`
+      : n.releaseStatus ? `
+      <article class="lib-block">
+        <h3>New Visual Notes</h3>
+        <p class="lib-note">${esc(n.releaseStatus.message)}</p>
+      </article>` : "";
     let chapters = "";
     let topics = "";
     if (n.chapters) {
-      chapters = `
+      const chaptersWithBooks = n.chapters.filter((ch) => ch.booklet);
+      chapters = chaptersWithBooks.length ? `
       <article class="lib-block">
         <h3>By Chapter</h3>
-        <ul class="lib-list">${n.chapters.map((ch) => `
+        <ul class="lib-list">${chaptersWithBooks.map((ch) => `
           <li class="lib-row">
             <span class="lib-row-title"><b class="lib-num">${esc(ch.number)}</b><strong>${esc(ch.title)}</strong>
             <small>${esc(ch.topics.length)} topics · ${size(ch.booklet)}</small></span>
             ${actions(ch.booklet, "With Answers")}
           </li>`).join("")}</ul>
-      </article>`;
+      </article>` : "";
       topics = n.chapters.map((ch) => topicList(`Chapter ${ch.number} · ${ch.title}`, ch.topics)).join("");
       topics = `<article class="lib-block"><h3>By Topic</h3>${topics}</article>`;
     } else {
@@ -96,8 +102,8 @@
       <ul class="lib-list">${list.map((t) => `
         <li class="lib-row">
           <span class="lib-row-title"><b class="lib-num">${esc(t.num)}</b><strong>${esc(t.title)}</strong>
-          <small>${size(t)}</small></span>
-          ${actions(t, "")}
+          <small>${t.status ? esc(t.status) : size(t)}</small></span>
+          ${t.href ? actions(t, "") : `<span class="lib-missing">${esc(t.status || "In preparation")}</span>`}
         </li>`).join("")}</ul>`;
   }
 
@@ -158,7 +164,7 @@
       <div>
         <span class="lib-eyebrow">${esc(c.family)} · ${esc(c.code)}</span>
         <h1>${esc(c.name)}</h1>
-        <p>Choose a book, then Preview or Download.</p>
+        <p>Choose a topic note or study resource, then Preview or Download.</p>
       </div>
       <nav class="lib-jump" aria-label="Sections">
         <a href="#notes">Notes</a>

@@ -1638,7 +1638,7 @@
     if (window.ELITE_STUDY || document.querySelector('script[data-elite-study="compass"]')) return;
     const leadScript = document.querySelector('script[src*="lead.js"]');
     const baseUrl = leadScript?.src || document.baseURI;
-    const dataUrl = new URL("study-search-data.js?v=20260713b", baseUrl).href;
+    const dataUrl = new URL("study-search-data.js?v=20261009b", baseUrl).href;
     const compassUrl = new URL("study-compass.js?v=20261001b", baseUrl).href;
 
     function appendScript(src, marker) {

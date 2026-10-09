@@ -67,7 +67,7 @@
             <h3 id="${escapeHtml(chapter.id)}Title">${escapeHtml(chapter.title)}</h3>
             <p>${escapeHtml(chapter.detail)}.</p>
           </div>
-          ${pdfButton(chapter.href, "Download chapter", "solution")}
+          ${chapter.href ? pdfButton(chapter.href, "Download chapter", "solution") : ""}
         </div>
         <div class="notes-grid notes-topic-grid">
           ${chapter.topics.map(topicCard).join("")}
@@ -78,14 +78,8 @@
 
   const totalTopics = data.chapters.reduce((sum, chapter) => sum + chapter.topics.length, 0);
   const totalChapterPages = data.chapters.reduce((sum, chapter) => sum + Number(chapter.pages || 0), 0);
-
-  root.innerHTML = `
-    <div class="notes-section-head">
-      <span class="eyebrow">${escapeHtml(data.code)} notes with answers</span>
-      <h2 id="linearNotesTitle">${escapeHtml(data.title)}</h2>
-      <p>${escapeHtml(data.intro)}</p>
-    </div>
-
+  const chapterBooks = data.chapters.filter((chapter) => chapter.href);
+  const feature = data.booklet ? `
     <article class="linear-notes-feature">
       <div>
         <span class="eyebrow">Complete booklet</span>
@@ -93,7 +87,7 @@
         <p>${escapeHtml(data.booklet.detail)}. The full set is ${escapeHtml(data.booklet.pages)} pages, with chapter books below for smaller printing.</p>
         <div class="linear-notes-stats" aria-label="Linear notes summary">
           <span><strong>${escapeHtml(totalTopics)}</strong> topic notes</span>
-          <span><strong>${escapeHtml(data.chapters.length)}</strong> chapter books</span>
+          <span><strong>${escapeHtml(chapterBooks.length)}</strong> chapter books</span>
           <span><strong>${escapeHtml(totalChapterPages)}</strong> chapter pages</span>
         </div>
       </div>
@@ -102,11 +96,30 @@
         <a class="button solution" href="library.html?pathway=linear#adaptive">Adaptive Classified</a>
         ${practiceButton("practice.html?pathway=linear&bank=all", "Open classified bank")}
       </div>
-    </article>
+    </article>` : `
+    <article class="linear-notes-feature">
+      <div>
+        <span class="eyebrow">Current release</span>
+        <h3>Topic-by-topic visual notes</h3>
+        <p>${escapeHtml(data.releaseStatus?.message || "New visual notes are being released by topic.")}</p>
+        <div class="linear-notes-stats" aria-label="Linear notes summary">
+          <span><strong>${escapeHtml(totalTopics)}</strong> topic notes</span>
+          <span><strong>${escapeHtml(chapterBooks.length)}</strong> chapter books</span>
+          <span><strong>${escapeHtml(totalChapterPages)}</strong> pages</span>
+        </div>
+      </div>
+    </article>`;
 
-    <div class="notes-grid notes-chapter-grid" aria-label="Linear chapter booklets">
-      ${data.chapters.map(chapterCard).join("")}
+  root.innerHTML = `
+    <div class="notes-section-head">
+      <span class="eyebrow">${escapeHtml(data.code)} notes with answers</span>
+      <h2 id="linearNotesTitle">${escapeHtml(data.title)}</h2>
+      <p>${escapeHtml(data.intro)}</p>
     </div>
+
+    ${feature}
+
+    ${chapterBooks.length ? `<div class="notes-grid notes-chapter-grid" aria-label="Linear chapter booklets">${chapterBooks.map(chapterCard).join("")}</div>` : ""}
 
     <div class="notes-chapter-groups">
       ${data.chapters.map(chapterGroup).join("")}

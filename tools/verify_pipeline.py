@@ -8,10 +8,12 @@ solutions, public classified books, and private answer-book safety.
 from __future__ import annotations
 
 import json
+import hashlib
 import re
 import subprocess
 import sys
 from pathlib import Path
+from pathlib import PurePosixPath
 from typing import Any
 
 
@@ -26,10 +28,10 @@ DOWNLOADS_DIR = ROOT / "downloads"
 PRIVATE_OUTPUT = ROOT / "private_output"
 GITIGNORE = ROOT / ".gitignore"
 CURRENT_PATHWAY_BOOTSTRAP_VERSION = "baccalaureate-20260902b"
-CURRENT_LEAD_VERSION = "20261001c"
+CURRENT_LEAD_VERSION = "20261009b"
 CURRENT_STYLE_VERSION = "20260809a"
 CURRENT_COURSE_MODULES_VERSION = "hub-20261001b"
-CURRENT_STUDY_VERSION = "20260713b"
+CURRENT_STUDY_VERSION = "20261009b"
 CURRENT_COMPASS_VERSION = "20261001b"
 CURRENT_SOLUTION_VERSION = "20260714a"
 CURRENT_ELITE_SYSTEM_VERSION = "20260906b"
@@ -146,10 +148,9 @@ ALLOWED_PUBLIC_SOLUTION_DIRS = {
     "downloads/IAL/WMA11/Papers",
     "downloads/IAL/WMA12/Papers",
     "downloads/IAL/WME01/Papers",
-    # 2026-10-01: Dr Eslam asked for the notes with answers and the Adaptive Classified With Answers books to be public
-    "downloads/Linear/Notes",
+    # Owner-authored topic notes with answers are an explicitly public product.
+    "downloads/Linear/VisualNotes",
     "downloads/Linear/AdaptiveClassified",
-    "downloads/Modular/Notes",
     "downloads/Modular/AdaptiveClassified",
     "downloads/IAL/WMA11/Notes",
     "downloads/IAL/WMA11/AdaptiveClassified",
@@ -203,10 +204,52 @@ def rel(path: Path) -> str:
         return str(path)
 
 
-def is_allowed_public_solution_file(path: Path) -> bool:
+def manifest_approved_public_files(root: Path = ROOT) -> tuple[set[str], list[str]]:
+    manifest_rel = "downloads/EgyptianBaccalaureate/2026/English/manifest.json"
+    manifest_path = root / Path(*PurePosixPath(manifest_rel).parts)
+    if not manifest_path.is_file():
+        return set(), []
+
+    try:
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    except Exception as exc:  # noqa: BLE001 - report malformed public manifest
+        return set(), [f"cannot parse {manifest_rel}: {exc}"]
+
+    release_prefix = "downloads/EgyptianBaccalaureate/2026/English/"
+    release_root = (root / Path(*PurePosixPath(release_prefix.rstrip("/")).parts)).resolve()
+    approved: set[str] = set()
+    errors: list[str] = []
+    if manifest.get("public") is not True:
+        return set(), [f"{manifest_rel} is not explicitly public"]
+
+    for item in manifest.get("files", []):
+        if not isinstance(item, dict) or item.get("public") is not True:
+            continue
+        path_rel = item.get("path")
+        if not isinstance(path_rel, str) or not path_rel.startswith(release_prefix):
+            errors.append(f"public manifest path is outside the approved release: {path_rel!r}")
+            continue
+        relative = PurePosixPath(path_rel)
+        if relative.is_absolute() or ".." in relative.parts:
+            errors.append(f"unsafe public manifest path: {path_rel}")
+            continue
+        candidate = (root / Path(*relative.parts)).resolve()
+        if not candidate.is_relative_to(release_root) or not candidate.is_file():
+            errors.append(f"public manifest file is missing or outside the release: {path_rel}")
+            continue
+        digest = hashlib.sha256(candidate.read_bytes()).hexdigest()
+        if candidate.stat().st_size != item.get("bytes") or digest != item.get("sha256"):
+            errors.append(f"public manifest checksum/size mismatch: {path_rel}")
+            continue
+        approved.add(path_rel)
+    return approved, errors
+
+
+def is_allowed_public_solution_file(path: Path, manifest_files: set[str] | None = None) -> bool:
     path_rel = rel(path)
     return (
         path_rel in ALLOWED_PUBLIC_SOLUTION_FILES
+        or path_rel in (manifest_files or set())
         or any(path_rel.startswith(f"{allowed}/") for allowed in ALLOWED_PUBLIC_SOLUTION_DIRS)
     )
 
@@ -220,11 +263,14 @@ def verify_guardrails(report: Report) -> None:
         report.error(".gitignore must keep generated private answer books out of git.")
 
     if DOWNLOADS_DIR.exists():
+        manifest_files, manifest_errors = manifest_approved_public_files(ROOT)
+        for message in manifest_errors:
+            report.error(f"Public release manifest validation failed: {message}")
         for file in DOWNLOADS_DIR.rglob("*"):
             if (
                 file.is_file()
                 and PUBLIC_LEAK_RE.search(file.name)
-                and not is_allowed_public_solution_file(file)
+                and not is_allowed_public_solution_file(file, manifest_files)
             ):
                 report.error(f"Potential private answer/solution file in public downloads: {rel(file)}")
         for filename in sorted(REQUIRED_PUBLIC_BOOKS):
