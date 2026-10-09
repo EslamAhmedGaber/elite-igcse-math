@@ -56,7 +56,6 @@
       panelLabel: "Linear tools",
       links: [
         { title: "Notes", detail: "With answers", href: "/library.html?pathway=linear#notes", pathway: "linear" },
-        { title: "Adaptive Classified", detail: "Questions + answers", href: "/library.html?pathway=linear#adaptive", pathway: "linear" },
         { title: "Classified View", detail: "Chapter bank", href: "/practice.html?pathway=linear&bank=all", pathway: "linear" },
         { title: "Expertise", detail: "Q20+ finishers", href: "/practice.html?pathway=linear&bank=expertise&mode=q20", pathway: "linear" },
         { title: "Build Test", detail: "Build tests", href: "/exam.html?pathway=linear&mode=custom", pathway: "linear" },
@@ -80,7 +79,6 @@
           detail: "4WM1",
           links: [
             { title: "Notes", detail: "Unit 1 with answers", href: "/library.html?pathway=modular&unit=Unit+1#notes", pathway: "modular" },
-            { title: "Adaptive Classified", detail: "Unit 1 questions + answers", href: "/library.html?pathway=modular&unit=Unit+1#adaptive", pathway: "modular" },
             { title: "Classified View", detail: "Unit 1 topics", href: "/practice.html?pathway=modular&unit=Unit+1&bank=all", pathway: "modular" },
             { title: "Expertise", detail: "Unit 1 harder set", href: "/practice.html?pathway=modular&unit=Unit+1&bank=expertise&mode=q20", pathway: "modular" },
             { title: "Build Test", detail: "Unit 1 tests", href: "/exam.html?pathway=modular&unit=Unit+1&mode=custom", pathway: "modular" },
@@ -97,7 +95,6 @@
           detail: "4WM2",
           links: [
             { title: "Notes", detail: "Unit 2 with answers", href: "/library.html?pathway=modular&unit=Unit+2#notes", pathway: "modular" },
-            { title: "Adaptive Classified", detail: "Unit 2 questions + answers", href: "/library.html?pathway=modular&unit=Unit+2#adaptive", pathway: "modular" },
             { title: "Classified View", detail: "Unit 2 topics", href: "/practice.html?pathway=modular&unit=Unit+2&bank=all", pathway: "modular" },
             { title: "Expertise", detail: "Unit 2 harder set", href: "/practice.html?pathway=modular&unit=Unit+2&bank=expertise&mode=q20", pathway: "modular" },
             { title: "Build Test", detail: "Unit 2 tests", href: "/exam.html?pathway=modular&unit=Unit+2&mode=custom", pathway: "modular" },
@@ -119,7 +116,6 @@
       panelLabel: "WMA11 tools",
       links: [
         { title: "Notes", detail: "With answers", href: "/library.html?pathway=pure&course=wma11#notes" },
-        { title: "Adaptive Classified", detail: "Questions + answers", href: "/library.html?pathway=pure&course=wma11#adaptive" },
         { title: "Classified View", detail: "Topic practice", href: "/ial/wma11/index.html#ialFilters" },
         { title: "Expertise View", detail: "Q6+ filtered bank", href: "/ial/wma11/index.html?expertise=1#ialFilters" },
         { title: "Build Test", detail: "Full mock builder", href: "/exam.html?pathway=pure&course=wma11&mode=custom" },
@@ -190,7 +186,7 @@
     return title.replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "general";
   }
 
-  const CORE_TOOL_ORDER = ["notes", "adaptive", "books", "past-solutions", "build-test", "progress"];
+  const CORE_TOOL_ORDER = ["notes", "books", "past-solutions", "build-test", "progress"];
   const COMPACT_WORKSPACE_PAGES = new Set([
     "practice",
     "downloads",
@@ -202,11 +198,6 @@
     "topics",
   ]);
   const CORE_TOOL_COPY = {
-    adaptive: {
-      title: "Adaptive Classified",
-      detail: "Questions + With Answers books",
-      short: "Adaptive",
-    },
     books: {
       title: "Classified Books",
       detail: "Classified and Expertise PDFs",
@@ -550,7 +541,6 @@
     "expertise":      '<svg class="module-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.4 5.9.8-4.3 4.2 1 5.8L12 16.6 6.8 19.2l1-5.8L3.5 9.2l5.9-.8z"/></svg>',
     "build-test":     '<svg class="module-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 3L4 14h6l-1 7 9-11h-6z"/></svg>',
     "smart-revision": '<svg class="module-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.3M21 4v5h-5"/><path d="M21 12a9 9 0 0 1-15.5 6.3M3 20v-5h5"/></svg>',
-    "adaptive":       '<svg class="module-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19V9M10 19V5M15 19v-7M20 19v-4"/><path d="M3 19h19"/></svg>',
     "progress":       '<svg class="module-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>',
     "mistake-box":    '<svg class="module-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9.5 17H2.5z"/><path d="M12 10v4"/><circle cx="12" cy="17" r="0.8" fill="currentColor"/></svg>',
     "saved-tests":    '<svg class="module-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg>',
@@ -1638,7 +1628,7 @@
     if (window.ELITE_STUDY || document.querySelector('script[data-elite-study="compass"]')) return;
     const leadScript = document.querySelector('script[src*="lead.js"]');
     const baseUrl = leadScript?.src || document.baseURI;
-    const dataUrl = new URL("study-search-data.js?v=20261009c", baseUrl).href;
+    const dataUrl = new URL("study-search-data.js?v=20261009f", baseUrl).href;
     const compassUrl = new URL("study-compass.js?v=20261001b", baseUrl).href;
 
     function appendScript(src, marker) {

@@ -12,14 +12,18 @@ const lead = read("lead.js");
 const home = read("index.html");
 const system = read("elite-system.css");
 
-// 2026-10-01 course-first redesign: Notes, Adaptive Classified, Classified Books, Past Papers, Mock Generator, Progress
-const expectedOrder = '["notes", "adaptive", "books", "past-solutions", "build-test", "progress"]';
+// 2026-10-09 library cleanup: Notes, Classified Books, Past Papers, Mock Generator, Progress
+const expectedOrder = '["notes", "books", "past-solutions", "build-test", "progress"]';
 if (!lead.includes(`const CORE_TOOL_ORDER = ${expectedOrder};`)) {
-  throw new Error("The shared workspace does not expose the six primary tools in the approved order.");
+  throw new Error("The shared workspace does not expose the five primary tools in the approved order.");
 }
 
-for (const label of ["Notes", "Adaptive Classified", "Past Papers", "Classified Books", "Mock Generator", "Progress"]) {
+for (const label of ["Notes", "Past Papers", "Classified Books", "Mock Generator", "Progress"]) {
   if (!lead.includes(`title: "${label}"`)) throw new Error(`Missing primary tool copy: ${label}`);
+}
+const resourceSources = [lead, read("course-modules.js"), read("course.js"), read("library.js"), read("library-data.js")].join("\n");
+if (/Adaptive Classified|AdaptiveClassified|#adaptive|download-adaptive/i.test(resourceSources)) {
+  throw new Error("A public course surface still exposes the removed Adaptive Classified.");
 }
 
 // the home page is only the course choice: six course cards + other courses, no tool grid or marketing blocks

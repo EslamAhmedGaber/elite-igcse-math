@@ -5,7 +5,6 @@
 
   const ICONS = {
     notes: '<path d="M7 4h9l3 3v13H7z"/><path d="M16 4v3h3"/><path d="M10 11h6M10 14h6M10 17h4"/>',
-    adaptive: '<path d="M5 19V9M10 19V5M15 19v-7M20 19v-4"/><path d="M3 19h19"/>',
     books: '<path d="M5 5a2 2 0 0 1 2-2h11v16H7a2 2 0 0 0-2 2z"/><path d="M5 19a2 2 0 0 1 2-2h11"/>',
     "past-solutions": '<path d="M8 3h8l4 4v14H8z"/><path d="M4 7v14h12"/><path d="M11 12h6M11 16h6"/>',
     "build-test": '<path d="M13 3 5 14h6l-1 7 8-11h-6z"/>',
@@ -22,7 +21,6 @@
   // what each big card says; the link itself comes from the shared course registry
   const SERVICES = [
     ["notes", "Notes", "Topic notes with answers"],
-    ["adaptive", "Adaptive Classified", "Questions + With Answers"],
     ["books", "Classified Books", "Classified and Expertise PDFs"],
     ["past-solutions", "Past Papers & Solutions", "Each paper beside its worked solution"],
     ["build-test", "Mock Generator", "Random or custom printable tests"],

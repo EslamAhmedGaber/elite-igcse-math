@@ -1,6 +1,5 @@
 "use strict";
 
-const crypto = require("node:crypto");
 const fs = require("node:fs");
 const path = require("node:path");
 const vm = require("node:vm");
@@ -14,7 +13,7 @@ vm.runInNewContext(
 );
 
 const library = sandbox.window.ELITE_LIBRARY;
-if (library.version !== "20261009d") throw new Error(`Unexpected library release ${library.version}`);
+if (library.version !== "20261009f") throw new Error(`Unexpected library release ${library.version}`);
 
 const expected = { linear: [58, 58], unit1: [29, 29], unit2: [32, 32] };
 const completeMessages = {
@@ -51,10 +50,10 @@ for (const [courseId, [available, total]] of Object.entries(expected)) {
   });
 }
 
-const adaptive = Object.fromEntries(["linear", "unit1", "unit2"].map((id) => [id, library.courses[id].adaptive]));
-const adaptiveHash = crypto.createHash("sha256").update(JSON.stringify(adaptive)).digest("hex");
-if (adaptiveHash !== "0b1658adbc56ddfccb0a1aa4d50aaa66e717745fd5112c82f79a9f7960f82890") {
-  throw new Error(`Adaptive Classified content changed unexpectedly: ${adaptiveHash}`);
+for (const [courseId, course] of Object.entries(library.courses)) {
+  if (Object.hasOwn(course, "adaptive")) {
+    throw new Error(`${courseId} still exposes removed Adaptive Classified data`);
+  }
 }
 
-console.log("Visual notes release OK: Linear 58/58, Unit 1 29/29, Unit 2 32/32; Adaptive Classified unchanged.");
+console.log("Visual notes release OK: Linear 58/58, Unit 1 29/29, Unit 2 32/32; old Adaptive data absent.");

@@ -93,7 +93,6 @@
       </div>
       <div class="note-actions">
         ${(data.booklet.parts || [{ href: data.booklet.href }]).map((part, index, all) => pdfButton(part.href, all.length > 1 ? `Complete book part ${index + 1}` : "Download full booklet")).join("")}
-        <a class="button solution" href="library.html?pathway=linear#adaptive">Adaptive Classified</a>
         ${practiceButton("practice.html?pathway=linear&bank=all", "Open classified bank")}
       </div>
     </article>` : `

@@ -4535,7 +4535,6 @@ body[data-course-palette] .layout-toggle button.is-active {
   .course-bar .course-bar-tools a::after { display: none !important; }
   .course-bar .course-bar-tools a[aria-current="page"] { border-color: var(--hub-royal); background: var(--hub-royal); }
   .course-bar .course-bar-tools a[aria-current="page"] .course-tile-text strong { color: #fff; }
-  .course-bar .course-bar-tools a[data-module="adaptive"] { --tile: #2456c9; --tile-soft: #dce8fb; }
 }
 
 @media screen and (min-width: 1081px) {

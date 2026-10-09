@@ -28,10 +28,10 @@ DOWNLOADS_DIR = ROOT / "downloads"
 PRIVATE_OUTPUT = ROOT / "private_output"
 GITIGNORE = ROOT / ".gitignore"
 CURRENT_PATHWAY_BOOTSTRAP_VERSION = "baccalaureate-20260902b"
-CURRENT_LEAD_VERSION = "20261009c"
+CURRENT_LEAD_VERSION = "20261009f"
 CURRENT_STYLE_VERSION = "20260809a"
-CURRENT_COURSE_MODULES_VERSION = "hub-20261001b"
-CURRENT_STUDY_VERSION = "20261009c"
+CURRENT_COURSE_MODULES_VERSION = "hub-20261009f"
+CURRENT_STUDY_VERSION = "20261009f"
 CURRENT_COMPASS_VERSION = "20261001b"
 CURRENT_SOLUTION_VERSION = "20260714a"
 CURRENT_ELITE_SYSTEM_VERSION = "20260906b"
@@ -150,14 +150,9 @@ ALLOWED_PUBLIC_SOLUTION_DIRS = {
     "downloads/IAL/WME01/Papers",
     # Owner-authored topic notes with answers are an explicitly public product.
     "downloads/Linear/VisualNotes",
-    "downloads/Linear/AdaptiveClassified",
-    "downloads/Modular/AdaptiveClassified",
     "downloads/IAL/WMA11/Notes",
-    "downloads/IAL/WMA11/AdaptiveClassified",
     "downloads/IAL/WMA12/Notes",
-    "downloads/IAL/WMA12/AdaptiveClassified",
     "downloads/IAL/WME01/Notes",
-    "downloads/IAL/WME01/AdaptiveClassified",
 }
 
 ALLOWED_PUBLIC_SOLUTION_FILES = {
@@ -171,6 +166,22 @@ ALLOWED_PUBLIC_SOLUTION_FILES = {
     "downloads/IAL/WME01/WME01_Expertise_With_Answers.pdf",
     "downloads/IAL/WME01/WME01_Past_Paper_Solutions.pdf",
 }
+
+LEGACY_ADAPTIVE_SURFACES = (
+    "course-modules.js",
+    "course.js",
+    "lead.js",
+    "library-data.js",
+    "library.js",
+    "notes.html",
+    "notes.js",
+    "course.html",
+    "study-search-data.js",
+    "ial/wma11/index.html",
+    "ial/wma12/index.html",
+    "ial/wme01/index.html",
+)
+LEGACY_ADAPTIVE_MARKERS = ("Adaptive Classified", "AdaptiveClassified", "#adaptive", "download-adaptive")
 
 
 class Report:
@@ -262,7 +273,20 @@ def verify_guardrails(report: Report) -> None:
     if "private_output/*" not in ignore_text:
         report.error(".gitignore must keep generated private answer books out of git.")
 
+    for relative in LEGACY_ADAPTIVE_SURFACES:
+        source = ROOT / relative
+        if not source.is_file():
+            report.error(f"Required public surface is missing: {relative}")
+            continue
+        text = source.read_text(encoding="utf-8")
+        for marker in LEGACY_ADAPTIVE_MARKERS:
+            if marker.casefold() in text.casefold():
+                report.error(f"Removed Adaptive Classified marker remains in {relative}: {marker}")
+
     if DOWNLOADS_DIR.exists():
+        legacy_adaptive_dirs = list(DOWNLOADS_DIR.rglob("AdaptiveClassified"))
+        if legacy_adaptive_dirs:
+            report.error("Legacy Adaptive Classified downloads must not be publicly present: " + ", ".join(rel(path) for path in legacy_adaptive_dirs))
         manifest_files, manifest_errors = manifest_approved_public_files(ROOT)
         for message in manifest_errors:
             report.error(f"Public release manifest validation failed: {message}")

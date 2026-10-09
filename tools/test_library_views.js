@@ -57,20 +57,20 @@ const routes = [
 for (const [course, query, title] of routes) {
   const page = createPage(`https://eliteigcse.com/library.html?${query}#notes`);
   assert.match(page.root.innerHTML, /id="notes"/, `${course}: notes section missing`);
-  assert.doesNotMatch(page.root.innerHTML, /Adaptive Classified|lib-adaptive/, `${course}: notes view includes Adaptive content`);
+  assert.doesNotMatch(page.root.innerHTML, /Adaptive Classified|lib-adaptive|#adaptive/, `${course}: notes view links to removed content`);
   assert.match(page.document.title, new RegExp(`^${title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")} \\|`));
 
   const adaptive = createPage(`https://eliteigcse.com/library.html?${query}#adaptive`);
-  assert.match(adaptive.root.innerHTML, /id="adaptive"/, `${course}: Adaptive view missing`);
-  assert.doesNotMatch(adaptive.root.innerHTML, /id="notes"|New Visual Notes/, `${course}: Adaptive view includes Notes content`);
-  assert.match(adaptive.document.title, /Adaptive Classified/);
+  assert.match(adaptive.root.innerHTML, /id="notes"/, `${course}: legacy hash no longer opens notes`);
+  assert.doesNotMatch(adaptive.root.innerHTML, /Adaptive Classified|lib-adaptive|id="adaptive"/, `${course}: legacy hash rendered removed content`);
+  assert.match(adaptive.document.title, new RegExp(`^${title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")} \\|`));
 }
 
 const switched = createPage("https://eliteigcse.com/library.html?pathway=linear#notes");
 switched.navigate("#adaptive");
-assert.match(switched.root.innerHTML, /lib-adaptive/, "hash navigation did not open Adaptive view");
+assert.match(switched.root.innerHTML, /id="notes"/, "legacy adaptive hash stopped showing notes");
+assert.doesNotMatch(switched.root.innerHTML, /Adaptive Classified|lib-adaptive|id="adaptive"/, "legacy hash rendered removed content");
 switched.navigate("#notes");
 assert.match(switched.root.innerHTML, /id="notes"/, "hash navigation did not return to Notes view");
-assert.doesNotMatch(switched.root.innerHTML, /Adaptive Classified|lib-adaptive/, "returning to Notes did not hide Adaptive content");
 
-console.log("Library views OK: notes-only and Adaptive-only routes work for all 6 courses.");
+console.log("Library views OK: all 6 routes stay notes-only, including legacy #adaptive URLs.");

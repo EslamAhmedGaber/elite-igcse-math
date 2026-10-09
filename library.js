@@ -3,15 +3,6 @@
   const data = window.ELITE_LIBRARY;
   if (!root || !data) return;
 
-  const CLASSIFIED = {
-    linear: "downloads.html?pathway=linear",
-    unit1: "downloads.html?pathway=modular&unit=Unit+1",
-    unit2: "downloads.html?pathway=modular&unit=Unit+2",
-    wma11: "ial/wma11/index.html",
-    wma12: "ial/wma12/index.html",
-    wme01: "ial/wme01/index.html",
-  };
-
   function esc(value) {
     return String(value == null ? "" : value)
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
@@ -107,53 +98,6 @@
         </li>`).join("")}</ul>`;
   }
 
-  function adaptiveSection(c) {
-    const a = c.adaptive;
-    const unitWord = c.unit === "Chapter" ? "Chapter" : "Topic";
-    const pair = (q, ans) => `<div class="lib-pair">${actions(q, "Questions")}${actions(ans, "With Answers")}</div>`;
-    const comp = a.complete;
-    const nParts = Math.max(comp.questions.length, comp.answers.length);
-    const compRows = [];
-    for (let i = 0; i < nParts; i += 1) {
-      const q = comp.questions[i];
-      const ans = comp.answers[i];
-      compRows.push(`<li class="lib-row lib-row-pair">
-        <span class="lib-row-title"><strong>${nParts > 1 ? `Part ${i + 1} of ${nParts}` : "Complete book"}</strong>
-        <small>${esc((q || ans || {}).range || `All ${a.items.length} ${unitWord.toLowerCase()}s`)}${q ? ` · questions ${esc(q.pages)} pages` : ""}${ans ? ` · answers ${esc(ans.pages)} pages` : ""}</small></span>
-        ${pair(q, ans)}
-      </li>`);
-    }
-    // the Questions and With Answers books may be split differently; list each side's parts if so
-    let compList = compRows.join("");
-    if (comp.questions.length !== comp.answers.length) {
-      compList = `<li class="lib-row"><span class="lib-row-title"><strong>Questions</strong></span></li>${partRows(comp.questions, "Questions")}
-        <li class="lib-row"><span class="lib-row-title"><strong>With Answers</strong></span></li>${partRows(comp.answers, "With Answers")}`;
-    }
-    return `
-      <section class="lib-section lib-adaptive" id="adaptive" aria-labelledby="adaptiveTitle">
-        <div class="lib-section-head">
-          <span class="lib-eyebrow">Adaptive Classified</span>
-          <h2 id="adaptiveTitle">${esc(c.name)} Adaptive Classified</h2>
-          <p>Past-paper questions grouped by idea, easier to harder. <strong>Questions</strong> = student book with writing space.
-          <strong>With Answers</strong> = every question with its full worked solution.${c.coverage ? ` <span class="lib-coverage">${esc(c.coverage)}.</span>` : ""}</p>
-        </div>
-        <article class="lib-block">
-          <h3>Complete Book</h3>
-          <ul class="lib-list">${compList}</ul>
-        </article>
-        <article class="lib-block">
-          <h3>By ${unitWord}</h3>
-          <ul class="lib-list">${a.items.map((it) => `
-            <li class="lib-row lib-row-pair">
-              <span class="lib-row-title"><b class="lib-num">${esc(it.num)}</b><strong>${esc(it.title)}</strong>
-              <small>${it.questions ? esc(it.questions.pages) + " pages" : ""}${it.answers ? " · answers " + esc(it.answers.pages) + " pages" : ""}</small></span>
-              ${pair(it.questions, it.answers)}
-            </li>`).join("")}</ul>
-        </article>
-        <p class="lib-foot">The regular Classified and Expertise books are still in <a href="${esc(CLASSIFIED[c.id])}">${esc(c.name)} Books</a>.</p>
-      </section>`;
-  }
-
   function jumpToHash() {
     const target = window.location.hash && document.querySelector(window.location.hash);
     if (target) target.scrollIntoView();
@@ -161,23 +105,17 @@
 
   function renderLibrary() {
     const c = data.courses[currentCourse()];
-    const adaptiveView = window.location.hash.toLowerCase() === "#adaptive";
-    document.title = adaptiveView
-      ? `${c.name} Adaptive Classified | Elite IGCSE Mathematics`
-      : `${c.name} Notes | Elite IGCSE Mathematics`;
+    document.title = `${c.name} Notes | Elite IGCSE Mathematics`;
 
     root.innerHTML = `
       <section class="lib-hero">
         <div>
           <span class="lib-eyebrow">${esc(c.family)} · ${esc(c.code)}</span>
-          <h1>${esc(c.name)} ${adaptiveView ? "Adaptive Classified" : "Notes"}</h1>
-          <p>${adaptiveView
-            ? "Past-paper questions grouped by topic, with questions and worked answers."
-            : "Topic-by-topic visual notes, worked examples and answers."}</p>
+          <h1>${esc(c.name)} Notes</h1>
+          <p>Topic-by-topic visual notes, worked examples and answers.</p>
         </div>
-        ${adaptiveView ? `<nav class="lib-jump" aria-label="Course resources"><a href="#notes">Notes</a></nav>` : ""}
       </section>
-      ${adaptiveView ? adaptiveSection(c) : notesSection(c)}
+      ${notesSection(c)}
     `;
     jumpToHash();
   }

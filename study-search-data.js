@@ -1,7 +1,7 @@
 (function () {
   window.ELITE_STUDY_SEARCH = {
-  "version": "20261009c",
-  "generatedAt": "2026-10-09T10:54:58.132Z",
+  "version": "20261009f",
+  "generatedAt": "2026-10-09T12:07:22.561Z",
   "courses": [
     {
       "id": "linear",
@@ -33,12 +33,6 @@
           "title": "Notes",
           "detail": "With answers",
           "href": "/library.html?pathway=linear#notes"
-        },
-        {
-          "module": "adaptive",
-          "title": "Adaptive Classified",
-          "detail": "Questions + answers",
-          "href": "/library.html?pathway=linear#adaptive"
         },
         {
           "module": "classified",
@@ -128,12 +122,6 @@
           "href": "/library.html?pathway=modular&unit=Unit+1#notes"
         },
         {
-          "module": "adaptive",
-          "title": "Adaptive Classified",
-          "detail": "4WM1 questions + answers",
-          "href": "/library.html?pathway=modular&unit=Unit+1#adaptive"
-        },
-        {
           "module": "classified",
           "title": "Classified View",
           "detail": "4WM1 topics",
@@ -221,12 +209,6 @@
           "href": "/library.html?pathway=modular&unit=Unit+2#notes"
         },
         {
-          "module": "adaptive",
-          "title": "Adaptive Classified",
-          "detail": "4WM2 questions + answers",
-          "href": "/library.html?pathway=modular&unit=Unit+2#adaptive"
-        },
-        {
           "module": "classified",
           "title": "Classified View",
           "detail": "4WM2 topics",
@@ -312,12 +294,6 @@
           "title": "Notes",
           "detail": "With answers",
           "href": "/library.html?pathway=pure&course=wma11#notes"
-        },
-        {
-          "module": "adaptive",
-          "title": "Adaptive Classified",
-          "detail": "Questions + answers",
-          "href": "/library.html?pathway=pure&course=wma11#adaptive"
         },
         {
           "module": "classified",
@@ -413,12 +389,6 @@
           "href": "/library.html?pathway=pure&course=wma12#notes"
         },
         {
-          "module": "adaptive",
-          "title": "Adaptive Classified",
-          "detail": "Questions + answers",
-          "href": "/library.html?pathway=pure&course=wma12#adaptive"
-        },
-        {
           "module": "classified",
           "title": "Classified View",
           "detail": "Topic practice",
@@ -512,12 +482,6 @@
           "href": "/library.html?pathway=pure&course=wme01#notes"
         },
         {
-          "module": "adaptive",
-          "title": "Adaptive Classified",
-          "detail": "Questions + answers",
-          "href": "/library.html?pathway=pure&course=wme01#adaptive"
-        },
-        {
           "module": "classified",
           "title": "Classified View",
           "detail": "Topic practice",
@@ -606,22 +570,6 @@
         "Linear",
         "4MA1 route",
         "notes",
-        "tool"
-      ]
-    },
-    {
-      "id": "linear:module:adaptive",
-      "courseId": "linear",
-      "type": "Module",
-      "title": "Adaptive Classified",
-      "detail": "Questions + answers",
-      "href": "/library.html?pathway=linear#adaptive",
-      "secondaryHref": "",
-      "secondaryLabel": "",
-      "keywords": [
-        "Linear",
-        "4MA1 route",
-        "adaptive",
         "tool"
       ]
     },
@@ -786,22 +734,6 @@
       ]
     },
     {
-      "id": "modular1:module:adaptive",
-      "courseId": "modular1",
-      "type": "Module",
-      "title": "Adaptive Classified",
-      "detail": "4WM1 questions + answers",
-      "href": "/library.html?pathway=modular&unit=Unit+1#adaptive",
-      "secondaryHref": "",
-      "secondaryLabel": "",
-      "keywords": [
-        "Modular Unit 1",
-        "4WM1",
-        "adaptive",
-        "tool"
-      ]
-    },
-    {
       "id": "modular1:module:classified",
       "courseId": "modular1",
       "type": "Module",
@@ -962,22 +894,6 @@
       ]
     },
     {
-      "id": "modular2:module:adaptive",
-      "courseId": "modular2",
-      "type": "Module",
-      "title": "Adaptive Classified",
-      "detail": "4WM2 questions + answers",
-      "href": "/library.html?pathway=modular&unit=Unit+2#adaptive",
-      "secondaryHref": "",
-      "secondaryLabel": "",
-      "keywords": [
-        "Modular Unit 2",
-        "4WM2",
-        "adaptive",
-        "tool"
-      ]
-    },
-    {
       "id": "modular2:module:classified",
       "courseId": "modular2",
       "type": "Module",
@@ -1134,22 +1050,6 @@
         "IAL Pure 1",
         "WMA11",
         "notes",
-        "tool"
-      ]
-    },
-    {
-      "id": "wma11:module:adaptive",
-      "courseId": "wma11",
-      "type": "Module",
-      "title": "Adaptive Classified",
-      "detail": "Questions + answers",
-      "href": "/library.html?pathway=pure&course=wma11#adaptive",
-      "secondaryHref": "",
-      "secondaryLabel": "",
-      "keywords": [
-        "IAL Pure 1",
-        "WMA11",
-        "adaptive",
         "tool"
       ]
     },
@@ -1330,22 +1230,6 @@
       ]
     },
     {
-      "id": "wma12:module:adaptive",
-      "courseId": "wma12",
-      "type": "Module",
-      "title": "Adaptive Classified",
-      "detail": "Questions + answers",
-      "href": "/library.html?pathway=pure&course=wma12#adaptive",
-      "secondaryHref": "",
-      "secondaryLabel": "",
-      "keywords": [
-        "IAL Pure 2",
-        "WMA12",
-        "adaptive",
-        "tool"
-      ]
-    },
-    {
       "id": "wma12:module:classified",
       "courseId": "wma12",
       "type": "Module",
@@ -1518,22 +1402,6 @@
         "IAL Mechanics 1",
         "WME01",
         "notes",
-        "tool"
-      ]
-    },
-    {
-      "id": "wme01:module:adaptive",
-      "courseId": "wme01",
-      "type": "Module",
-      "title": "Adaptive Classified",
-      "detail": "Questions + answers",
-      "href": "/library.html?pathway=pure&course=wme01#adaptive",
-      "secondaryHref": "",
-      "secondaryLabel": "",
-      "keywords": [
-        "IAL Mechanics 1",
-        "WME01",
-        "adaptive",
         "tool"
       ]
     },
@@ -6378,7 +6246,7 @@
       ]
     },
     {
-      "id": "all:resource:teacher-studio-certificates:358",
+      "id": "all:resource:teacher-studio-certificates:352",
       "courseId": "all",
       "type": "Resource",
       "title": "Teacher Studio & Certificates",
@@ -6394,7 +6262,7 @@
       ]
     },
     {
-      "id": "all:resource:readiness-check:359",
+      "id": "all:resource:readiness-check:353",
       "courseId": "all",
       "type": "Resource",
       "title": "Readiness Check",
@@ -6409,7 +6277,7 @@
       ]
     },
     {
-      "id": "all:resource:download-centre:360",
+      "id": "all:resource:download-centre:354",
       "courseId": "all",
       "type": "Resource",
       "title": "Download Centre",
@@ -6424,7 +6292,7 @@
       ]
     },
     {
-      "id": "all:resource:past-papers:361",
+      "id": "all:resource:past-papers:355",
       "courseId": "all",
       "type": "Resource",
       "title": "Past Papers",
@@ -6439,7 +6307,7 @@
       ]
     },
     {
-      "id": "all:resource:topic-roadmap:362",
+      "id": "all:resource:topic-roadmap:356",
       "courseId": "all",
       "type": "Resource",
       "title": "Topic Roadmap",
@@ -6454,7 +6322,7 @@
       ]
     },
     {
-      "id": "all:resource:about-dr-eslam:363",
+      "id": "all:resource:about-dr-eslam:357",
       "courseId": "all",
       "type": "Resource",
       "title": "About Dr Eslam",
@@ -6471,7 +6339,7 @@
   ],
   "stats": {
     "courses": 6,
-    "modules": 71,
+    "modules": 65,
     "topics": 146,
     "notes": 141,
     "resources": 6

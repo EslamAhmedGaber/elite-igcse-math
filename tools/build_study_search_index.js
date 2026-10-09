@@ -353,7 +353,7 @@ Object.entries(ialNotes).forEach(([courseId, notePack]) => {
 ].forEach((item) => addItem(items, seen, { ...item, courseId: "all", type: "Resource" }));
 
 const output = {
-  version: "20261009c",
+  version: "20261009f",
   generatedAt: new Date().toISOString(),
   courses,
   items,

@@ -1,12 +1,10 @@
-"""Publish the 2026 notes + Adaptive Classified books into downloads/ and write the site data files.
+"""Publish notes into downloads/ and write the library data files.
 
 Inputs (built and verified first):
   private_output/notes_2026_stage     (tools/build_topic_notes_2026.py)
-  private_output/adaptive_stage       (tools/build_adaptive_classified.py)
 Outputs:
   downloads/<Linear|Modular|IAL/..>/Notes/...           new notes (With Answers)
-  downloads/<..>/AdaptiveClassified/...                  Adaptive Classified (Questions / With Answers)
-  library-data.js        window.ELITE_LIBRARY  (library.html: Notes + Adaptive Classified per course)
+  library-data.js        window.ELITE_LIBRARY  (library.html: notes per course)
   linear-notes-data.js   window.ELITE_LINEAR_NOTES (notes.html, same shape as before, new files)
   ial/ial-notes-data.js  window.ELITE_IAL_NOTES    (IAL course pages, same shape as before, new files)
     python tools/build_library_data.py [--copy]
@@ -16,7 +14,6 @@ import json, os, re, shutil, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = os.path.dirname(HERE)
 NOTES = os.path.join(SITE, "private_output", "notes_2026_stage")
-ADAPT = os.path.join(SITE, "private_output", "adaptive_stage")
 VER = "20261001"
 CHAPTERS = {1: "Number", 2: "Algebra", 3: "Graphs and Functions", 4: "Geometry and Measures",
             5: "Vectors and Transformations", 6: "Statistics and Probability"}
@@ -69,30 +66,7 @@ def main(copy):
             tps = [t for t in topics if t["group"] == code]
             c["notes"] = {"complete": [f(b) for b in nm["booklets"] if b["group"] == code],
                           "topics": [{"num": f"{t['number']:02d}", "title": t["title"], **f(t)} for t in tps]}
-        # ---------- adaptive ----------
-        am = json.load(open(os.path.join(ADAPT, f"adaptive_{group}_manifest.json"), encoding="utf-8"))
-        comp = {"questions": [f(r) for r in am if r["scope"] == "Complete Book" and r["role"] == "Student"],
-                "answers": [f(r) for r in am if r["scope"] == "Complete Book" and r["role"] == "Solutions"]}
-        for side, role in (("questions", "Student"), ("answers", "Solutions")):
-            parts = [r for r in am if r["scope"] == "Complete Book" and r["role"] == role]
-            for item, r in zip(comp[side], parts):
-                item["part"] = (r.get("part") or "").split(" · ")[0]
-                item["range"] = (r.get("part") or "").split(" · ")[1] if r.get("part") else ""
-        items = {}
-        for r in am:
-            if r["scope"] == "Complete Book":
-                continue
-            m = re.match(r"(?:Chapter (\d+)|(OL-T\d+)) · (.*)", r["scope"])
-            key = m.group(1) or m.group(2)
-            it = items.setdefault(key, {"code": key, "title": m.group(3)})
-            it["questions" if r["role"] == "Student" else "answers"] = f(r)
-        its = list(items.values())
-        for i, it in enumerate(its, 1):
-            it["num"] = it["code"] if unit == "Chapter" else f"{i:02d}"
-        c["adaptive"] = {"complete": comp, "items": its}
         lib["courses"][cid] = c
-        for r in am:
-            copies.append((os.path.join(ADAPT, r["file"]), r["file"]))
 
     for t in topics:
         copies.append((os.path.join(NOTES, t["file"]), t["file"]))

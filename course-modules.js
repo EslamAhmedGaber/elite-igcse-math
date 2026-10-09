@@ -10,11 +10,6 @@
       role: "student",
       description: "Elite topic notes with answers and complete printable books.",
     },
-    adaptive: {
-      title: "Adaptive Classified",
-      role: "student",
-      description: "Adaptive Classified books: questions edition and with-answers edition.",
-    },
     expertise: {
       title: "Expertise",
       role: "student",
@@ -171,7 +166,6 @@
 
   const linearLinks = [
     { module: "notes", title: "Notes", detail: "With answers", href: "/library.html?pathway=linear#notes", pathway: "linear" },
-    { module: "adaptive", title: "Adaptive Classified", detail: "Questions + answers", href: "/library.html?pathway=linear#adaptive", pathway: "linear" },
     { module: "classified", title: "Classified View", detail: "Chapter bank", href: "/practice.html?pathway=linear&bank=all", pathway: "linear" },
     { module: "expertise", title: "Expertise", detail: "Q20+ finishers", href: "/practice.html?pathway=linear&bank=expertise&mode=q20", pathway: "linear" },
     { module: "build-test", title: "Build Test", detail: "Mocks and worksheets", href: "/exam.html?pathway=linear&mode=custom", pathway: "linear" },
@@ -187,7 +181,6 @@
     const unitParam = encodeURIComponent(unitTitle).replace(/%20/g, "+");
     return [
       { module: "notes", title: "Notes", detail: `${unitCode} with answers`, href: `/library.html?pathway=modular&unit=${unitParam}#notes`, pathway: "modular" },
-      { module: "adaptive", title: "Adaptive Classified", detail: `${unitCode} questions + answers`, href: `/library.html?pathway=modular&unit=${unitParam}#adaptive`, pathway: "modular" },
       { module: "classified", title: "Classified View", detail: `${unitCode} topics`, href: `/practice.html?pathway=modular&unit=${unitParam}&bank=all`, pathway: "modular" },
       { module: "expertise", title: "Expertise", detail: `${unitCode} harder set`, href: `/practice.html?pathway=modular&unit=${unitParam}&bank=expertise&mode=q20`, pathway: "modular" },
       { module: "build-test", title: "Build Test", detail: `${unitCode} mocks`, href: `/exam.html?pathway=modular&unit=${unitParam}&mode=custom`, pathway: "modular" },
@@ -1683,25 +1676,6 @@
           ]
       },
       {
-          "className": "linear-book download-adaptive",
-          "tag": "Linear 4MA1",
-          "tagTone": "gold",
-          "title": "Linear Adaptive Classified",
-          "description": "Past-paper questions grouped by idea, easier to harder. Questions edition and With Answers edition.",
-          "meta": [
-              "Complete book",
-              "By chapter / topic",
-              "Questions + answers"
-          ],
-          "actions": [
-              {
-                  "label": "Open Adaptive Classified",
-                  "href": "library.html?pathway=linear#adaptive",
-                  "variant": "solution"
-              }
-          ]
-      },
-      {
           "className": "linear-book",
           "tag": "Full bank",
           "title": "Classified Problems",
@@ -1781,25 +1755,6 @@
           ]
       },
       {
-          "className": "modular-book download-adaptive",
-          "tag": "Modular 4WM1",
-          "tagTone": "gold",
-          "title": "Modular Unit 1 Adaptive Classified",
-          "description": "Past-paper questions grouped by idea, easier to harder. Questions edition and With Answers edition.",
-          "meta": [
-              "Complete book",
-              "By chapter / topic",
-              "Questions + answers"
-          ],
-          "actions": [
-              {
-                  "label": "Open Adaptive Classified",
-                  "href": "library.html?pathway=modular&unit=Unit+1#adaptive",
-                  "variant": "solution"
-              }
-          ]
-      },
-      {
           "className": "modular-book download-note",
           "tag": "Modular 4WM2",
           "tagTone": "gold",
@@ -1815,25 +1770,6 @@
                   "label": "Open notes",
                   "href": "library.html?pathway=modular&unit=Unit+2#notes",
                   "variant": "primary"
-              }
-          ]
-      },
-      {
-          "className": "modular-book download-adaptive",
-          "tag": "Modular 4WM2",
-          "tagTone": "gold",
-          "title": "Modular Unit 2 Adaptive Classified",
-          "description": "Past-paper questions grouped by idea, easier to harder. Questions edition and With Answers edition.",
-          "meta": [
-              "Complete book",
-              "By chapter / topic",
-              "Questions + answers"
-          ],
-          "actions": [
-              {
-                  "label": "Open Adaptive Classified",
-                  "href": "library.html?pathway=modular&unit=Unit+2#adaptive",
-                  "variant": "solution"
               }
           ]
       },
@@ -2039,25 +1975,6 @@
           ]
       },
       {
-          "className": "pure-book download-adaptive",
-          "tag": "IAL Pure 1",
-          "tagTone": "pure",
-          "title": "Pure 1 Adaptive Classified",
-          "description": "Past-paper questions grouped by idea, easier to harder. Questions edition and With Answers edition.",
-          "meta": [
-              "Complete book",
-              "By chapter / topic",
-              "Questions + answers"
-          ],
-          "actions": [
-              {
-                  "label": "Open Adaptive Classified",
-                  "href": "library.html?pathway=pure&course=wma11#adaptive",
-                  "variant": "solution"
-              }
-          ]
-      },
-      {
           "className": "pure-book",
           "tag": "IAL Pure 1",
           "title": "WMA11 Classified Books",
@@ -2129,25 +2046,6 @@
                   "label": "Open notes",
                   "href": "library.html?pathway=pure&course=wma12#notes",
                   "variant": "primary"
-              }
-          ]
-      },
-      {
-          "className": "pure-book download-adaptive",
-          "tag": "IAL Pure 2",
-          "tagTone": "pure",
-          "title": "Pure 2 Adaptive Classified",
-          "description": "Past-paper questions grouped by idea, easier to harder. Questions edition and With Answers edition.",
-          "meta": [
-              "Complete book",
-              "By chapter / topic",
-              "Questions + answers"
-          ],
-          "actions": [
-              {
-                  "label": "Open Adaptive Classified",
-                  "href": "library.html?pathway=pure&course=wma12#adaptive",
-                  "variant": "solution"
               }
           ]
       },
@@ -2224,25 +2122,6 @@
                   "label": "Open notes",
                   "href": "library.html?pathway=pure&course=wme01#notes",
                   "variant": "primary"
-              }
-          ]
-      },
-      {
-          "className": "pure-book download-adaptive",
-          "tag": "IAL Mechanics 1",
-          "tagTone": "pure",
-          "title": "Mechanics 1 Adaptive Classified",
-          "description": "Past-paper questions grouped by idea, easier to harder. Questions edition and With Answers edition.",
-          "meta": [
-              "Complete book",
-              "By chapter / topic",
-              "Questions + answers"
-          ],
-          "actions": [
-              {
-                  "label": "Open Adaptive Classified",
-                  "href": "library.html?pathway=pure&course=wme01#adaptive",
-                  "variant": "solution"
               }
           ]
       },
@@ -2427,7 +2306,6 @@
       books: pureWma11Books,
       links: [
         { module: "notes", title: "Notes", detail: "With answers", href: "/library.html?pathway=pure&course=wma11#notes" },
-        { module: "adaptive", title: "Adaptive Classified", detail: "Questions + answers", href: "/library.html?pathway=pure&course=wma11#adaptive" },
         { module: "classified", title: "Classified View", detail: "Topic practice", href: "/ial/wma11/index.html#ialFilters" },
         { module: "expertise", title: "Expertise View", detail: "Q6+ filtered bank", href: "/ial/wma11/index.html?expertise=1#ialFilters" },
         { module: "build-test", title: "Build Test", detail: "Full mock builder", href: "/exam.html?pathway=pure&course=wma11&mode=custom" },
@@ -2465,7 +2343,6 @@
       books: pureWma12Books,
       links: [
         { module: "notes", title: "Notes", detail: "With answers", href: "/library.html?pathway=pure&course=wma12#notes" },
-        { module: "adaptive", title: "Adaptive Classified", detail: "Questions + answers", href: "/library.html?pathway=pure&course=wma12#adaptive" },
         { module: "classified", title: "Classified View", detail: "Topic practice", href: "/ial/wma12/index.html#ialFilters" },
         { module: "expertise", title: "Expertise View", detail: "Q6+ filtered bank", href: "/ial/wma12/index.html?expertise=1#ialFilters" },
         { module: "build-test", title: "Build Test", detail: "Full mock builder", href: "/exam.html?pathway=pure&course=wma12&mode=custom" },
@@ -2503,7 +2380,6 @@
       books: pureWme01Books,
       links: [
         { module: "notes", title: "Notes", detail: "With answers", href: "/library.html?pathway=pure&course=wme01#notes" },
-        { module: "adaptive", title: "Adaptive Classified", detail: "Questions + answers", href: "/library.html?pathway=pure&course=wme01#adaptive" },
         { module: "classified", title: "Classified View", detail: "Topic practice", href: "/ial/wme01/index.html#ialFilters" },
         { module: "expertise", title: "Expertise View", detail: "Q6+ filtered bank", href: "/ial/wme01/index.html?expertise=1#ialFilters" },
         { module: "interactive-lab", title: "Interactive Lab", detail: "98 visual cases", href: "https://eliteiglab.com/lab/mechanics/index.html" },

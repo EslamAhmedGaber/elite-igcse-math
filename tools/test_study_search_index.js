@@ -14,7 +14,7 @@ vm.runInNewContext(
 
 const data = sandbox.window.ELITE_STUDY_SEARCH;
 if (!data) throw new Error("Study search index was not exposed");
-if (data.version !== "20261009c") throw new Error(`Unexpected Study search version ${data.version}`);
+if (data.version !== "20261009f") throw new Error(`Unexpected Study search version ${data.version}`);
 
 const expectedCourses = ["linear", "modular1", "modular2", "wma11", "wma12", "wme01"];
 const actualCourses = new Set(data.courses.map((course) => course.id));
@@ -51,5 +51,9 @@ linearNotes.forEach((note) => {
     throw new Error(`Stale or unexpected Linear note search link: ${note.href}`);
   }
 });
+
+if (data.items.some((item) => item.module === "adaptive" || item.title === "Adaptive Classified" || item.href.includes("#adaptive"))) {
+  throw new Error("Study search still exposes the removed Adaptive Classified route");
+}
 
 console.log(`Study search index OK: ${data.items.length} items across ${data.stats.courses} courses.`);
