@@ -14,9 +14,19 @@ vm.runInNewContext(
 );
 
 const library = sandbox.window.ELITE_LIBRARY;
-if (library.version !== "20261009c") throw new Error(`Unexpected library release ${library.version}`);
+if (library.version !== "20261009d") throw new Error(`Unexpected library release ${library.version}`);
 
 const expected = { linear: [58, 58], unit1: [29, 29], unit2: [32, 32] };
+const completeMessages = {
+  unit1: "All 29 Unit 1 visual notes with answers are live.",
+  unit2: "All 32 Unit 2 visual notes with answers are live.",
+};
+for (const [courseId, message] of Object.entries(completeMessages)) {
+  if (library.courses[courseId].notes.releaseStatus.message !== message) {
+    throw new Error(`${courseId} has an inaccurate notes release message`);
+  }
+}
+
 for (const [courseId, [available, total]] of Object.entries(expected)) {
   const notes = library.courses[courseId].notes;
   const topics = notes.chapters

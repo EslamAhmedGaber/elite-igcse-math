@@ -1,6 +1,6 @@
 (function () {
   window.ELITE_LIBRARY = {
- "version": "20261009c",
+ "version": "20261009d",
  "courses": {
   "linear": {
    "id": "linear",
@@ -1548,7 +1548,7 @@
     "releaseStatus": {
      "availableTopics": 29,
      "totalTopics": 29,
-     "message": "New visual notes with answers are live for 29 of 29 Unit 1 topics. Remaining Chapter 6 topics are being prepared."
+     "message": "All 29 Unit 1 visual notes with answers are live."
     }
    },
    "adaptive": {
@@ -2281,7 +2281,7 @@
     "releaseStatus": {
      "availableTopics": 32,
      "totalTopics": 32,
-     "message": "New visual notes with answers are live for 32 of 32 Unit 2 topics. Remaining Chapter 6 topics are being prepared."
+     "message": "All 32 Unit 2 visual notes with answers are live."
     }
    },
    "adaptive": {

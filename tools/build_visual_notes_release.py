@@ -221,10 +221,16 @@ def main() -> None:
                 topic.pop("mb", None)
                 topic["status"] = "New visual notes in preparation"
         course_notes["complete"] = []
+        unit_number = 1 if course_id == "unit1" else 2
+        message = (
+            f"All {len(topics)} Unit {unit_number} visual notes with answers are live."
+            if available == len(topics)
+            else f"New visual notes with answers are live for {available} of {len(topics)} Unit {unit_number} topics. Remaining topics are being prepared."
+        )
         course_notes["releaseStatus"] = {
             "availableTopics": available,
             "totalTopics": len(topics),
-            "message": f"New visual notes with answers are live for {available} of {len(topics)} Unit {1 if course_id == 'unit1' else 2} topics. Remaining Chapter 6 topics are being prepared.",
+            "message": message,
         }
         unit_counts[course_id] = (available, len(topics))
 
