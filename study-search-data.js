@@ -1,7 +1,7 @@
 (function () {
   window.ELITE_STUDY_SEARCH = {
   "version": "20261009f",
-  "generatedAt": "2026-10-09T12:07:22.561Z",
+  "generatedAt": "2026-10-10T16:57:20.772Z",
   "courses": [
     {
       "id": "linear",

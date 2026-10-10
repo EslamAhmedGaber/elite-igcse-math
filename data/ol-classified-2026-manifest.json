@@ -1,0 +1,629 @@
+{
+  "version": "20261010a",
+  "assets": [
+    {
+      "asset": "OL-T01_Number_Toolkit_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T01_Number_Toolkit_OL_Classified_Student.pdf",
+      "pages": 21,
+      "mb": 2.68,
+      "bytes": 2805781,
+      "sha256": "30ba8fe0e4a763cffc0899fe0739111e54a6204ea4a79b3de5aedf0f24d4146d"
+    },
+    {
+      "asset": "OL-T02_Set_Notation_and_Venn_Diagrams_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T02_Set_Notation_and_Venn_Diagrams_OL_Classified_Student.pdf",
+      "pages": 51,
+      "mb": 4.31,
+      "bytes": 4518119,
+      "sha256": "087ee340896a34b9522ade3ff404100e7867910bd47d49c50d680f6f9cac7ead"
+    },
+    {
+      "asset": "OL-T03_Prime_Factors_HCF_and_LCM_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T03_Prime_Factors_HCF_and_LCM_OL_Classified_Student.pdf",
+      "pages": 41,
+      "mb": 3.56,
+      "bytes": 3732032,
+      "sha256": "f819f275cccbf5e037f7520a63afce3ea034607e338312f827ac029e60ac7d69"
+    },
+    {
+      "asset": "OL-T04_Powers_Roots_and_Standard_Form_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T04_Powers_Roots_and_Standard_Form_OL_Classified_Student.pdf",
+      "pages": 48,
+      "mb": 3.89,
+      "bytes": 4082738,
+      "sha256": "d9184144c0ef3921b956f122a02f190e78b5d0a8bf006f2fdd8dad0c21829edf"
+    },
+    {
+      "asset": "OL-T05_Fractions_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T05_Fractions_OL_Classified_Student.pdf",
+      "pages": 36,
+      "mb": 3.02,
+      "bytes": 3165438,
+      "sha256": "5da8828389c30a88b7ec3895281d3cdc252de0777a5cb00eead515b00bae1ea3"
+    },
+    {
+      "asset": "OL-T06_Percentages_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T06_Percentages_OL_Classified_Student.pdf",
+      "pages": 64,
+      "mb": 4.96,
+      "bytes": 5195801,
+      "sha256": "42f05d7aff7fd851327eb75929bb3878a30d675b5732d2cc8c8a79139b4f68af"
+    },
+    {
+      "asset": "OL-T07_Compound_Interest_and_Depreciation_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T07_Compound_Interest_and_Depreciation_OL_Classified_Student.pdf",
+      "pages": 40,
+      "mb": 4.02,
+      "bytes": 4213317,
+      "sha256": "e3ae6487456f67abb21467eb508060682a9f7283becb3ed8821670df9df94030"
+    },
+    {
+      "asset": "OL-T08_Fractions_Decimals_and_Percentages_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T08_Fractions_Decimals_and_Percentages_OL_Classified_Student.pdf",
+      "pages": 29,
+      "mb": 3.0,
+      "bytes": 3142057,
+      "sha256": "b964fb48b0a90a739690d29b5e0390c6f69673c69154793f2d23ac64a0b99259"
+    },
+    {
+      "asset": "OL-T09_Rounding_Estimation_and_Bounds_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T09_Rounding_Estimation_and_Bounds_OL_Classified_Student.pdf",
+      "pages": 58,
+      "mb": 4.42,
+      "bytes": 4637675,
+      "sha256": "26cb69aa724271bf40234b51e6e42db5422ae4ca219a1d7a9eaabf6a1e7a883c"
+    },
+    {
+      "asset": "OL-T10_Surds_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T10_Surds_OL_Classified_Student.pdf",
+      "pages": 29,
+      "mb": 2.92,
+      "bytes": 3061695,
+      "sha256": "29897ce143fc63555f5bb99904272658bdc4222d18a737c2580a343f831d721f"
+    },
+    {
+      "asset": "OL-T11_Using_a_Calculator_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T11_Using_a_Calculator_OL_Classified_Student.pdf",
+      "pages": 17,
+      "mb": 2.5,
+      "bytes": 2618256,
+      "sha256": "eb1dfdf87130c1567ccdd67fd16cb9655c12898b41d3a82c99e5900ab6c70f18"
+    },
+    {
+      "asset": "OL-T12_Ratio_Toolkit_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T12_Ratio_Toolkit_OL_Classified_Student.pdf",
+      "pages": 48,
+      "mb": 3.98,
+      "bytes": 4176895,
+      "sha256": "db6363774ef57a5e04df3661ef8196af24328548cc2e7709e05c7babd7eeb596"
+    },
+    {
+      "asset": "OL-T13_Ratio_Problem_Solving_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T13_Ratio_Problem_Solving_OL_Classified_Student.pdf",
+      "pages": 30,
+      "mb": 3.17,
+      "bytes": 3324048,
+      "sha256": "07f08f645dbf743f5d9a6cf0f5061c70772c7d500db8ce25da4636f3ccb8c444"
+    },
+    {
+      "asset": "OL-T14_Exchange_Rates_and_Best_Buys_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T14_Exchange_Rates_and_Best_Buys_OL_Classified_Student.pdf",
+      "pages": 28,
+      "mb": 3.39,
+      "bytes": 3557795,
+      "sha256": "61597d91bd64e220eb1693d220c401ef7f1acab6d0d2aa5f9d502b5b5d931d69"
+    },
+    {
+      "asset": "OL-T15_Direct_and_Inverse_Proportion_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T15_Direct_and_Inverse_Proportion_OL_Classified_Student.pdf",
+      "pages": 46,
+      "mb": 3.89,
+      "bytes": 4076266,
+      "sha256": "c42eedfa3c5bfe23f94ad3d1f85a096dca48217d3119447efa5a89da7226a172"
+    },
+    {
+      "asset": "OL-T16_Algebra_Toolkit_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T16_Algebra_Toolkit_OL_Classified_Student.pdf",
+      "pages": 23,
+      "mb": 2.55,
+      "bytes": 2671481,
+      "sha256": "a453e5e5a27110b9e1378e534cb86cb70c8ae307866f7b0dff2ffee7a11f6c29"
+    },
+    {
+      "asset": "OL-T17_Algebraic_Roots_and_Indices_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T17_Algebraic_Roots_and_Indices_OL_Classified_Student.pdf",
+      "pages": 47,
+      "mb": 3.29,
+      "bytes": 3445992,
+      "sha256": "38c2ada6f58361cba13e5f618acbc87a9cc8753ef54753ff13f7b371a2929492"
+    },
+    {
+      "asset": "OL-T18_Expanding_Brackets_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T18_Expanding_Brackets_OL_Classified_Student.pdf",
+      "pages": 32,
+      "mb": 2.87,
+      "bytes": 3007781,
+      "sha256": "edf4d8511b69f6c0a9d2636cf4afef36f306a8cd8f8f4e789a921e3d25fe795d"
+    },
+    {
+      "asset": "OL-T19_Factorisation_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T19_Factorisation_OL_Classified_Student.pdf",
+      "pages": 32,
+      "mb": 2.79,
+      "bytes": 2927138,
+      "sha256": "1bbafe71e450fc0739c80483fe97372c75abcd612d341498a30e11b1199a0a8c"
+    },
+    {
+      "asset": "OL-T20_Completing_the_Square_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T20_Completing_the_Square_OL_Classified_Student.pdf",
+      "pages": 25,
+      "mb": 2.76,
+      "bytes": 2890012,
+      "sha256": "a54bb0a645d69b8fbb58935caa02202e35ca41a0594f9177d5a5b1faec5e686b"
+    },
+    {
+      "asset": "OL-T21_Algebraic_Fractions_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T21_Algebraic_Fractions_OL_Classified_Student.pdf",
+      "pages": 36,
+      "mb": 2.95,
+      "bytes": 3096069,
+      "sha256": "fc2bbfce47978ba80b34ddff0f140fe5aae8d10b144b1b9c371b60b2a08fb440"
+    },
+    {
+      "asset": "OL-T22_Rearranging_Formulas_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T22_Rearranging_Formulas_OL_Classified_Student.pdf",
+      "pages": 29,
+      "mb": 2.67,
+      "bytes": 2799329,
+      "sha256": "b64ed07afaf14a54c30ea85a1766ce7f62f26713908ffbd8c11d02c3c60c8e7c"
+    },
+    {
+      "asset": "OL-T23_Algebraic_Proof_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T23_Algebraic_Proof_OL_Classified_Student.pdf",
+      "pages": 25,
+      "mb": 2.77,
+      "bytes": 2902857,
+      "sha256": "9ee10d6a427f026aeeb008eef5fbe9ed2489896ed6846dac57fea5e62fa5032d"
+    },
+    {
+      "asset": "OL-T24_Solving_Linear_Equations_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T24_Solving_Linear_Equations_OL_Classified_Student.pdf",
+      "pages": 28,
+      "mb": 2.62,
+      "bytes": 2747123,
+      "sha256": "30a931f040fb874eae65e9eada4300f2bc537d6dc0815076a39adabb51319cdd"
+    },
+    {
+      "asset": "OL-T25_Solving_Quadratics_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T25_Solving_Quadratics_OL_Classified_Student.pdf",
+      "pages": 29,
+      "mb": 2.82,
+      "bytes": 2959061,
+      "sha256": "51fd4a74fcfb21c1e4301af595df2705c1f5a03b73f9965c621e24ddc9bf5b54"
+    },
+    {
+      "asset": "OL-T26_Solving_Inequalities_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T26_Solving_Inequalities_OL_Classified_Student.pdf",
+      "pages": 34,
+      "mb": 3.25,
+      "bytes": 3406561,
+      "sha256": "fe8a852daffdf5035e9a6974c481ad09334836dd6269eadd2ba692b94705e4cd"
+    },
+    {
+      "asset": "OL-T27_Simultaneous_Equations_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T27_Simultaneous_Equations_OL_Classified_Student.pdf",
+      "pages": 50,
+      "mb": 3.98,
+      "bytes": 4172196,
+      "sha256": "c3af9de0a9f54cca4bd12b16397244ba8522f38b3e391eef7f274dc11a36dc60"
+    },
+    {
+      "asset": "OL-T28_Forming_and_Solving_Equations_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T28_Forming_and_Solving_Equations_OL_Classified_Student.pdf",
+      "pages": 55,
+      "mb": 4.53,
+      "bytes": 4753307,
+      "sha256": "314ab8f1ebbce5b573683824e36417c5e2f10c7a453936d9942a517925f23285"
+    },
+    {
+      "asset": "OL-T29_Sequences_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T29_Sequences_OL_Classified_Student.pdf",
+      "pages": 43,
+      "mb": 3.43,
+      "bytes": 3592122,
+      "sha256": "f83b9d91ed1bb43778a726d7aee8b18b7eadd0f5b02926b54f53d013ea22f2e8"
+    },
+    {
+      "asset": "OL-T30_Functions_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T30_Functions_OL_Classified_Student.pdf",
+      "pages": 56,
+      "mb": 4.58,
+      "bytes": 4802468,
+      "sha256": "c273f7b384f6e65de2455a9e67a2876a5b6915fd9b2ee5e08f3db80f0c4ec3ee"
+    },
+    {
+      "asset": "OL-T31_Coordinate_Geometry_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T31_Coordinate_Geometry_OL_Classified_Student.pdf",
+      "pages": 49,
+      "mb": 4.01,
+      "bytes": 4206110,
+      "sha256": "3746c41f592d17ee40e76afb15b11711bd29f1d05353a01c6e8440ec820d2f3f"
+    },
+    {
+      "asset": "OL-T32_Linear_Graphs_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T32_Linear_Graphs_OL_Classified_Student.pdf",
+      "pages": 55,
+      "mb": 4.7,
+      "bytes": 4927248,
+      "sha256": "c1f592fadcdfdd1d8b3a5c93d9b959bf6e194fdc35eb1d5450b9cc2cdbfedde8"
+    },
+    {
+      "asset": "OL-T33_Graphs_of_Functions_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T33_Graphs_of_Functions_OL_Classified_Student.pdf",
+      "pages": 64,
+      "mb": 9.47,
+      "bytes": 9927948,
+      "sha256": "afd9e4db11d3ce3a03b89210b217cd66337f65b684deac8f374143cd53b7e91e"
+    },
+    {
+      "asset": "OL-T34_Estimating_Gradients_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T34_Estimating_Gradients_OL_Classified_Student.pdf",
+      "pages": 28,
+      "mb": 8.4,
+      "bytes": 8806652,
+      "sha256": "a132e80cfa2427d9dd94f64f5eb252e7e4930ee442d576cf083be3c463f1de42"
+    },
+    {
+      "asset": "OL-T35_Real_Life_Graphs_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T35_Real_Life_Graphs_OL_Classified_Student.pdf",
+      "pages": 39,
+      "mb": 8.04,
+      "bytes": 8425533,
+      "sha256": "3f7e001a99c909d0cba3d24ddb70a23d306fdad8a1739caa63d3b8d0f4143d4e"
+    },
+    {
+      "asset": "OL-T36_Graphing_Inequalities_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T36_Graphing_Inequalities_OL_Classified_Student.pdf",
+      "pages": 40,
+      "mb": 4.97,
+      "bytes": 5211237,
+      "sha256": "9ad18b3e3b80cb8fa84d91f4ba954728faa875e2df692701a377f17faa2239c1"
+    },
+    {
+      "asset": "OL-T37_Transformations_of_Graphs_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T37_Transformations_of_Graphs_OL_Classified_Student.pdf",
+      "pages": 52,
+      "mb": 5.92,
+      "bytes": 6204150,
+      "sha256": "1bc6a64b0d32d2c0cd4c77d08ce66c9d4cb2b153a5ca350a9c8d7c81653daaec"
+    },
+    {
+      "asset": "OL-T38_OL_Differentiation_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T38_OL_Differentiation_OL_Classified_Student.pdf",
+      "pages": 44,
+      "mb": 3.65,
+      "bytes": 3828116,
+      "sha256": "b9b1e159dd4ff5673d4f36697fc0ea81591d02a92ace8f14907749d2065c9072"
+    },
+    {
+      "asset": "OL-T39_Standard_and_Compound_Units_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T39_Standard_and_Compound_Units_OL_Classified_Student.pdf",
+      "pages": 57,
+      "mb": 4.55,
+      "bytes": 4772654,
+      "sha256": "28ea4b433df7648cfd68463661b06a77540a79a835d0cee93dabec82eebce306"
+    },
+    {
+      "asset": "OL-T40_Angles_in_Polygons_and_Parallel_Lines_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T40_Angles_in_Polygons_and_Parallel_Lines_OL_Classified_Student.pdf",
+      "pages": 65,
+      "mb": 5.28,
+      "bytes": 5534809,
+      "sha256": "5b6577a8f473c391de42e2ee8809c5e5a8b9650e34d5bf76fc53974b5a327151"
+    },
+    {
+      "asset": "OL-T41_Bearings_Scale_Drawing_and_Constructions_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T41_Bearings_Scale_Drawing_and_Constructions_OL_Classified_Student.pdf",
+      "pages": 38,
+      "mb": 3.68,
+      "bytes": 3862894,
+      "sha256": "1f0e525fc62232658a125296d2bc5c407cdea2faf782dae17f0a2282cfafe34b"
+    },
+    {
+      "asset": "OL-T42_Circle_Theorems_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T42_Circle_Theorems_OL_Classified_Student.pdf",
+      "pages": 79,
+      "mb": 7.05,
+      "bytes": 7395690,
+      "sha256": "4152512be4f4e9c2d8d84b8247fa74e436202322c8eaab37f3d7d6293abb60b7"
+    },
+    {
+      "asset": "OL-T43_Area_and_Perimeter_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T43_Area_and_Perimeter_OL_Classified_Student.pdf",
+      "pages": 70,
+      "mb": 5.34,
+      "bytes": 5594635,
+      "sha256": "8abbc36ba7e4445f2d317a99c82397fa5b9e58161617c77b76ad1fab4d7895ee"
+    },
+    {
+      "asset": "OL-T44_Circles_Arcs_and_Sectors_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T44_Circles_Arcs_and_Sectors_OL_Classified_Student.pdf",
+      "pages": 78,
+      "mb": 6.12,
+      "bytes": 6419103,
+      "sha256": "3159c40d184b90e4b9ef76961bdd2557bbadee5120394ea4442c154126627531"
+    },
+    {
+      "asset": "OL-T45_Volume_and_Surface_Area_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T45_Volume_and_Surface_Area_OL_Classified_Student.pdf",
+      "pages": 85,
+      "mb": 7.17,
+      "bytes": 7516915,
+      "sha256": "6c8371786fc97ae07ef55cc530ce18b1bebeba1cb454313fa9762708098563e3"
+    },
+    {
+      "asset": "OL-T46_Congruence_Similarity_and_Geometrical_Proof_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T46_Congruence_Similarity_and_Geometrical_Proof_OL_Classified_Student.pdf",
+      "pages": 40,
+      "mb": 4.28,
+      "bytes": 4484238,
+      "sha256": "46b8de11fc53dfe799ac035ef480671ed51a9fec7a8dc0e13471658e3a3340dc"
+    },
+    {
+      "asset": "OL-T47_Area_and_Volume_of_Similar_Shapes_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T47_Area_and_Volume_of_Similar_Shapes_OL_Classified_Student.pdf",
+      "pages": 46,
+      "mb": 4.55,
+      "bytes": 4766727,
+      "sha256": "f0c4a50ccf094c47261f099871fe33e3eee1533eb3aa31dbbc22b612e174a258"
+    },
+    {
+      "asset": "OL-T48_Right_Angled_Triangles_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T48_Right_Angled_Triangles_OL_Classified_Student.pdf",
+      "pages": 73,
+      "mb": 5.49,
+      "bytes": 5761153,
+      "sha256": "8622ce198b2218ea45d101a607e43b017022f21a2129a04caef15b8befe22bd2"
+    },
+    {
+      "asset": "OL-T49_Sine_Cosine_Rule_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T49_Sine_Cosine_Rule_OL_Classified_Student.pdf",
+      "pages": 61,
+      "mb": 5.04,
+      "bytes": 5285164,
+      "sha256": "5ce697870d506260c68e51768b0692db80961aecd9b4f37a66484736128ab1ed"
+    },
+    {
+      "asset": "OL-T50_3D_Pythagoras_and_Trigonometry_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T50_3D_Pythagoras_and_Trigonometry_OL_Classified_Student.pdf",
+      "pages": 42,
+      "mb": 4.52,
+      "bytes": 4734459,
+      "sha256": "350e9639b6351a8821ce39de764d71dda52932193eb6c6a710c4c5ac82dac8cb"
+    },
+    {
+      "asset": "OL-T51_Vectors_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T51_Vectors_OL_Classified_Student.pdf",
+      "pages": 66,
+      "mb": 5.58,
+      "bytes": 5850258,
+      "sha256": "b641ff0f2dc0ad25a032f5ceb6d3e6d2cc9c20df2f001953ab03a6c6b66692cc"
+    },
+    {
+      "asset": "OL-T52_Transformations_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T52_Transformations_OL_Classified_Student.pdf",
+      "pages": 50,
+      "mb": 5.75,
+      "bytes": 6025780,
+      "sha256": "934949cbf71477dc4354f416912e0f060d1b642c7184bfb7b786aaf2ad92296a"
+    },
+    {
+      "asset": "OL-T53_Statistics_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T53_Statistics_OL_Classified_Student.pdf",
+      "pages": 83,
+      "mb": 6.04,
+      "bytes": 6337417,
+      "sha256": "42a10593d2ea8ec5877d7386f3d0a8f696f5c4eb7e80ab81a3b118b8b82d2a7f"
+    },
+    {
+      "asset": "OL-T54_Histograms_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T54_Histograms_OL_Classified_Student.pdf",
+      "pages": 69,
+      "mb": 11.25,
+      "bytes": 11796365,
+      "sha256": "c0c13f649d6bece26214d9dce7ac417ff4c007b3329ba7e79195930422ffcdab"
+    },
+    {
+      "asset": "OL-T55_Cumulative_Frequency_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T55_Cumulative_Frequency_OL_Classified_Student.pdf",
+      "pages": 53,
+      "mb": 11.14,
+      "bytes": 11685884,
+      "sha256": "2fda32ba87a829d8843d56f2bd181d53da59863da50f543632bd832c92d1b6cc"
+    },
+    {
+      "asset": "OL-T56_Probability_Toolkit_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T56_Probability_Toolkit_OL_Classified_Student.pdf",
+      "pages": 68,
+      "mb": 5.35,
+      "bytes": 5612101,
+      "sha256": "823cf36fb3e2474ea590f81379d59476d81aa1a1f19743da8f0a15ddacfb80ff"
+    },
+    {
+      "asset": "OL-T57_Venn_and_Tree_Diagrams_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T57_Venn_and_Tree_Diagrams_OL_Classified_Student.pdf",
+      "pages": 88,
+      "mb": 8.05,
+      "bytes": 8445688,
+      "sha256": "04a5843ed635cff8020dd5e716de4cb886b78515f00f6a80730dd211f7b6a3c5"
+    },
+    {
+      "asset": "OL-T58_Combined_and_Conditional_Probability_OL_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL-T58_Combined_and_Conditional_Probability_OL_Classified_Student.pdf",
+      "pages": 48,
+      "mb": 4.21,
+      "bytes": 4409779,
+      "sha256": "025c61d71232217f0196ae82b95e0bcfa4952b7fc194354b9ddf713edce5c5e4"
+    },
+    {
+      "asset": "OL_Chapter1_Number_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL_Chapter1_Number_Classified_Student.pdf",
+      "pages": 588,
+      "mb": 25.52,
+      "bytes": 26762461,
+      "sha256": "7395694e5c716f34da1532334cbfadad602b0f9c6b728bf87e087beb439b390f"
+    },
+    {
+      "asset": "OL_Chapter2_Algebra_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL_Chapter2_Algebra_Classified_Student.pdf",
+      "pages": 447,
+      "mb": 15.69,
+      "bytes": 16449537,
+      "sha256": "8d74409f0737670010cb25f763c26e8f359a84c35b6ada95c8bdfcb794d56ad7"
+    },
+    {
+      "asset": "OL_Chapter3_Sequences__Functions_and_Graphs_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL_Chapter3_Sequences__Functions_and_Graphs_Classified_Student.pdf",
+      "pages": 472,
+      "mb": 39.04,
+      "bytes": 40940877,
+      "sha256": "2e0cc6e320d39aa59c87ab225efafa0dc5c78d90babef6f135d72310e59421b5"
+    },
+    {
+      "asset": "OL_Chapter4_Geometry_and_Measures_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL_Chapter4_Geometry_and_Measures_Classified_Student.pdf",
+      "pages": 736,
+      "mb": 40.92,
+      "bytes": 42907687,
+      "sha256": "0297f0b4d7038b299476e057ff83f50eccb5f2cc36248080cb65299a21b989d6"
+    },
+    {
+      "asset": "OL_Chapter5_Vectors_and_Transformations_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL_Chapter5_Vectors_and_Transformations_Classified_Student.pdf",
+      "pages": 118,
+      "mb": 9.32,
+      "bytes": 9769595,
+      "sha256": "c939661cfa277b5047e1376f99c9699079904c5336b5ad8582c906063400509a"
+    },
+    {
+      "asset": "OL_Chapter6_Statistics_and_Probability_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL_Chapter6_Statistics_and_Probability_Classified_Student.pdf",
+      "pages": 411,
+      "mb": 35.99,
+      "bytes": 37737532,
+      "sha256": "375ff939ddc8a4c53bd50bdae8dd05ad8676485e7bb2283f6111b22a2814bf86"
+    },
+    {
+      "asset": "OL_Complete_Classified_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL_Complete_Classified_Student.pdf",
+      "pages": 2765,
+      "mb": 156.38,
+      "bytes": 163976046,
+      "sha256": "3d6f3be0ec4cc2f93f20c348c6be9531b49495e6cf1dfcd591656fb60416baf5"
+    },
+    {
+      "asset": "Modular_Unit1_Chapter1_2026_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/Modular_Unit1_Chapter1_2026_Student.pdf",
+      "pages": 281,
+      "mb": 12.95,
+      "bytes": 13580754,
+      "sha256": "20f64679b08d59211f08728777f037aedf39059952d1024774613fe8d5575e8f"
+    },
+    {
+      "asset": "Modular_Unit1_Chapter2_2026_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/Modular_Unit1_Chapter2_2026_Student.pdf",
+      "pages": 286,
+      "mb": 10.63,
+      "bytes": 11144327,
+      "sha256": "a8101258f0faa70abd240a58f3ebc4003934a8e85a4ec7af17ac387a529491b3"
+    },
+    {
+      "asset": "Modular_Unit1_Chapter3_2026_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/Modular_Unit1_Chapter3_2026_Student.pdf",
+      "pages": 170,
+      "mb": 14.17,
+      "bytes": 14859731,
+      "sha256": "674ab8dbee9309bf2f78ef1e728b6e18420e60886e85b698f3d1cc9162c2fd53"
+    },
+    {
+      "asset": "Modular_Unit1_Chapter4_2026_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/Modular_Unit1_Chapter4_2026_Student.pdf",
+      "pages": 448,
+      "mb": 24.32,
+      "bytes": 25503936,
+      "sha256": "6c51ccc9794821c45cc92d921c2416b592b202b3768b770df1b3b77566597d84"
+    },
+    {
+      "asset": "Modular_Unit1_Chapter6_2026_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/Modular_Unit1_Chapter6_2026_Student.pdf",
+      "pages": 275,
+      "mb": 22.84,
+      "bytes": 23953091,
+      "sha256": "6e349029176cabac53f868d8ae7ca543c3b2bcf217dcf09b607f7850655b225e"
+    },
+    {
+      "asset": "Modular_Unit1_Complete_2026_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/Modular_Unit1_Complete_2026_Student.pdf",
+      "pages": 1453,
+      "mb": 76.93,
+      "bytes": 80664820,
+      "sha256": "9688573f53a8d2b92e64ea1fd70afbcb592001e76a69a5845ac46ff89efd347e"
+    },
+    {
+      "asset": "Modular_Unit2_Chapter1_2026_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/Modular_Unit2_Chapter1_2026_Student.pdf",
+      "pages": 319,
+      "mb": 15.46,
+      "bytes": 16209841,
+      "sha256": "585fdefb9b47f820deb4623e845fa70e9b79120904339add5902d7d8d1a86955"
+    },
+    {
+      "asset": "Modular_Unit2_Chapter2_2026_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/Modular_Unit2_Chapter2_2026_Student.pdf",
+      "pages": 243,
+      "mb": 10.51,
+      "bytes": 11019228,
+      "sha256": "e65dc4c55e7ab1be03811e61c9906dfe44193fce37c2568801fe715a7c823992"
+    },
+    {
+      "asset": "Modular_Unit2_Chapter3_2026_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/Modular_Unit2_Chapter3_2026_Student.pdf",
+      "pages": 301,
+      "mb": 22.01,
+      "bytes": 23077928,
+      "sha256": "e18d17212b84177988ec3dad382852fde99eabf75d94e993b7b2bc5a7d44edc0"
+    },
+    {
+      "asset": "Modular_Unit2_Chapter4_2026_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/Modular_Unit2_Chapter4_2026_Student.pdf",
+      "pages": 490,
+      "mb": 28.58,
+      "bytes": 29969284,
+      "sha256": "ef139329108ba1d6119690adfa77c36b7dbcea814a9046b7d5c56e81888f6597"
+    },
+    {
+      "asset": "Modular_Unit2_Chapter5_2026_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/Modular_Unit2_Chapter5_2026_Student.pdf",
+      "pages": 118,
+      "mb": 9.32,
+      "bytes": 9773151,
+      "sha256": "b7b202101faaa71fe58e2effa5cf874229be2a1f3777f227a289ab70b7862ae9"
+    },
+    {
+      "asset": "Modular_Unit2_Chapter6_2026_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/Modular_Unit2_Chapter6_2026_Student.pdf",
+      "pages": 138,
+      "mb": 15.18,
+      "bytes": 15917920,
+      "sha256": "2b8eef0f0543db4fdefa7c3c5067c3822bc8270f87de2331b650f0ceeed20531"
+    },
+    {
+      "asset": "Modular_Unit2_Complete_2026_Student.pdf",
+      "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/Modular_Unit2_Complete_2026_Student.pdf",
+      "pages": 1600,
+      "mb": 91.05,
+      "bytes": 95477775,
+      "sha256": "36631b357c9a240f046767aeb3c813024db6283cc4b6e464bbe51aaaf298db73"
+    }
+  ]
+}

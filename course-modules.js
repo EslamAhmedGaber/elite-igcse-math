@@ -1657,6 +1657,15 @@
 
   const linearBooks = [
       {
+          className: "linear-book",
+          tag: "New edition 2026",
+          tagTone: "gold",
+          title: "2026 Classified + Practice",
+          description: "Student books for all 58 Linear topics, with chapter books and one complete course book.",
+          meta: ["58 topics", "6 chapters", "Student edition"],
+          actions: [{ label: "Open 2026 edition", href: "classified-books.html?pathway=linear", variant: "primary" }]
+      },
+      {
           "className": "linear-book download-note",
           "tag": "Linear 4MA1",
           "tagTone": "gold",
@@ -1735,6 +1744,15 @@
   ];
 
   const modularBooks = [
+      ...[1, 2].map((unit) => ({
+          className: "modular-book",
+          tag: `2026 edition - Unit ${unit}`,
+          tagTone: "gold",
+          title: `Unit ${unit} Classified + Practice`,
+          description: "Linear topic student books matched to this Modular unit, with chapter and complete books.",
+          meta: [`4WM${unit}`, `${unit === 1 ? 29 : 32} topics`, "Student edition"],
+          actions: [{ label: "Open 2026 edition", href: `classified-books.html?pathway=modular&unit=Unit+${unit}`, variant: "primary" }]
+      })),
       {
           "className": "modular-book download-note",
           "tag": "Modular 4WM1",
