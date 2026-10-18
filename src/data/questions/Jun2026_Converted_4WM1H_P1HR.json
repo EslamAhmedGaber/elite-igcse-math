@@ -1,0 +1,187 @@
+{
+  "code": "P1HR",
+  "isModular": true,
+  "modularUnit": "Unit 1",
+  "paper": "Jun 2026 P1HR | L-to-M Unit 1",
+  "paperSlug": "Jun2026_Converted_4WM1H_P1HR",
+  "questionCount": 11,
+  "questions": [
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q01-U1.png",
+      "id": "all::Jun2026_P1HR__Q01-U1",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q01-U1.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 1,
+      "text": "1 Show that  2 4\n5\n3 3\n7\n9 3\n5\n´\n=\n \n(Total for Question 1 is 3 marks)",
+      "topic": "Fractions",
+      "topicOrder": 4,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q03-U1.png",
+      "id": "all::Jun2026_P1HR__Q03-U1",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q03-U1.png",
+      "marks": 2,
+      "modularForceUnit": "Unit 1",
+      "q": 3,
+      "text": "3 (a) Simplify  e\n7 × e\n3\n...................................................... \n(1)\n \n(b) Simplify  g\n5 ÷ g\n2\n...................................................... \n(1)\n(Total for Question 3 is 2 marks)",
+      "topic": "Algebraic Roots & Indices",
+      "topicOrder": 16,
+      "unit": "Equations, Formulae & Identities"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q04-U1.png",
+      "id": "all::Jun2026_P1HR__Q04-U1",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q04-U1.png",
+      "marks": 2,
+      "modularForceUnit": "Unit 1",
+      "q": 4,
+      "text": "4 The weight of a giraffe is 1178 kg, correct to the nearest kg\n \n(i) Write down the lower bound of the weight of the giraffe.\n...................................................... kg\n(1)\n \n(ii) Write down the upper bound of the weight of the giraffe.\n...................................................... kg \n(1)\n(Total for Question 4 is 2 marks)",
+      "topic": "Rounding, Estimation & Bounds",
+      "topicOrder": 8,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q05-U1.png",
+      "id": "all::Jun2026_P1HR__Q05-U1",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q05-U1.png",
+      "marks": 4,
+      "modularForceUnit": "Unit 1",
+      "q": 5,
+      "text": "5 A bag contains only blue counters, green counters, red counters and yellow counters.\n \nDanny takes a counter at random from the bag. \n \nThe table gives information about the probabilities that he takes a blue counter or a \ngreen counter or a red counter or a yellow counter.\nColour\nblue\ngreen\nred\nyellow\nProbability\n0.45\n0.31\n5x\nx\n \nThere are 400 counters in the bag.\n \nWork out the number of red counters in the bag.\n......................................................\n(Total for Question 5 is 4 marks)",
+      "topic": "Probability Toolkit",
+      "topicOrder": 55,
+      "unit": "Statistics & Probability"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q08-U1.png",
+      "id": "all::Jun2026_P1HR__Q08-U1",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q08-U1.png",
+      "marks": 2,
+      "modularForceUnit": "Unit 1",
+      "q": 8,
+      "text": "8 Factorise  x\n2 – 12x + 32\n.................................................................................\n(Total for Question 8 is 2 marks)",
+      "topic": "Factorising",
+      "topicOrder": 18,
+      "unit": "Equations, Formulae & Identities"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q13-U1.png",
+      "id": "all::Jun2026_P1HR__Q13-U1",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q13-U1.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 13,
+      "text": "13 The straight line L has equation  4y – 10x – 5 = 0\n \n(a) Find the gradient of L\n.................................................................................\n(2)\n \n(b) Find the coordinates of the point where L crosses the y‑axis.\n(........................... , ...........................)\n(1)\n(Total for Question 13 is 3 marks)",
+      "topic": "Linear Graphs (y = mx + c)",
+      "topicOrder": 31,
+      "unit": "Sequences, Functions & Graphs"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q16-U1.png",
+      "id": "all::Jun2026_P1HR__Q16-U1",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q16-U1.png",
+      "marks": 6,
+      "modularForceUnit": "Unit 1",
+      "q": 16,
+      "text": "16 (a) Express  \n5\n8\n2\n4\n�\n�\nx\nx   as a single fraction in its simplest form.\n.................................................................................\n(3)\n \n(b) Expand and simplify  3x(2x – 1)(x + 4)\n.................................................................................\n(3)\n(Total for Question 16 is 6 marks)",
+      "topic": "Algebraic Fractions",
+      "topicOrder": 20,
+      "unit": "Equations, Formulae & Identities"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q18-U1.png",
+      "id": "all::Jun2026_P1HR__Q18-U1",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q18-U1.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 18,
+      "text": "18 Here are 8 cards.\n \nThere is a number on each card.\n1\n1\n2\n2\n2\n4\n5\n5\n \nGordon puts the 8 cards in a bag.\n \nHe takes at random a card from the bag and does not replace it.\n \nGordon then takes at random a second card from the bag.\n \nCalculate the probability that the number on the second card is 3 more than the number \non the first card.\n  ......................................................\n(Total for Question 18 is 3 marks)",
+      "topic": "Combined & Conditional Probability",
+      "topicOrder": 57,
+      "unit": "Statistics & Probability"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q21-U1.png",
+      "id": "all::Jun2026_P1HR__Q21-U1",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q21-U1.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 1",
+      "q": 21,
+      "text": "21 60 students were asked if they study French (F), German (G) or Italian (I)\n \nOf these students\n \n 32 students study French\n \n 24 students study German\n \n 27 students study Italian\n \n 16 students study French and German\n \n 15 students study German and Italian\n \nThe incomplete Venn diagram gives some more information about the languages the \n60 students study.\nF\nI\nE\nG\n4\n6\nx\n \n(a) Work out the value of x\nx =  ......................................................\n(3)\n \n(b) Work out how many of the 60 students study none of French or German or Italian.\n ......................................................\n(2)\n(Total for Question 21 is 5 marks)",
+      "topic": "Set Notation & Venn Diagrams",
+      "topicOrder": 1,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q22-U1.png",
+      "id": "all::Jun2026_P1HR__Q22-U1",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q22-U1.png",
+      "marks": 4,
+      "modularForceUnit": "Unit 1",
+      "q": 22,
+      "text": "22 The diagram shows triangle ABC\nA\nB\nC\n13 cm\n62�\n47�\nDiagram NOT \naccurately drawn\n \nCalculate the area of the triangle.\n \nGive your answer correct to 3 significant figures.\n ...................................................... cm2\n(Total for Question 22 is 4 marks)",
+      "topic": "Sine, Cosine Rule & Area of Triangles",
+      "topicOrder": 48,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q26-U1.png",
+      "id": "all::Jun2026_P1HR__Q26-U1",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q26-U1.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 26,
+      "text": "26 \n27\n3\n9\n6\n2\n6\n4\nx\nn\nn\nx\nx\n×\n�\n�\n�\n \nExpress x in terms of n\n \nShow your working clearly and simplify your expression.\nx = .................................................................................\n(Total for Question 26 is 3 marks)",
+      "topic": "Algebraic Roots & Indices",
+      "topicOrder": 16,
+      "unit": "Equations, Formulae & Identities"
+    }
+  ],
+  "session": "Jun 2026"
+}

@@ -1,0 +1,247 @@
+{
+  "paperSlug": "Jun2026_Converted_4WM1H_P2HR",
+  "solutions": {
+    "all::Jun2026_P2HR__Q01-U1": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(x=52\\), so the hypotenuse is \\(52\\text{ cm}\\).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[x^2=20^2+48^2=400+2304=2704.\\]\n\nUse Pythagoras because the 20 cm and 48 cm sides meet at the right angle.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[x=\\sqrt{2704}=52.\\]\n\nTake the positive square root because x is a length.",
+          "title": "Solution | Step 2"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q03-U1": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(A^{\\prime}=\\{5,7,8,9,10,11\\}\\).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\(A=\\{1,2,3,4,6,12\\}\\). Remove these factors from the integers 1 to 12.\n\nThe complement contains precisely the universal-set elements not in A.",
+          "title": "Solution | Step 1"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q04-U1": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "(a) \\(x=-\\frac58\\).\n\n(c) \\(1\\).\n\n(d) \\(64r^6t^3\\).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[3x+6=1-5x.\\]\n\nExpand the bracket.",
+          "title": "Part (a) | Step 1"
+        },
+        {
+          "body": "\\[8x=-5\\quad\\Rightarrow\\quad x=-\\frac58.\\]\n\nAdd 5x and subtract 6 on both sides, then divide by 8.",
+          "title": "Part (a) | Step 2"
+        },
+        {
+          "body": "\\(m^0=1\\) for \\(m\\ne0\\).\n\nAny nonzero base to the zero power equals 1.",
+          "title": "Part (c) | Step 1"
+        },
+        {
+          "body": "\\[(4r^2t)^3=4^3(r^2)^3t^3=64r^6t^3.\\]\n\nCube each factor and multiply the exponents in the power of a power.",
+          "title": "Part (d) | Step 1"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q09-U1": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(55\\text{ m/s}\\).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\(198\\text{ km}=198000\\text{ m}\\) and \\(1\\text{ hour}=3600\\text{ s}\\).\n\nConvert both the distance and the time in the rate.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[198\\text{ km/h}=\\frac{198000}{3600}=55\\text{ m/s}.\\]\n\nMetres per second means metres divided by seconds.",
+          "title": "Solution | Step 2"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q10-U1": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(332\\text{ g}\\) (3 significant figures).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[V=\\pi r^2h=\\pi(4)^2(11)=176\\pi\\text{ cm}^3.\\]\n\nUse the cylinder volume formula.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[m=\\rho V=0.6(176\\pi)=105.6\\pi=331.7521842\\ldots\\text{ g}.\\]\n\nMass equals density times volume; keep full precision until the end.",
+          "title": "Solution | Step 2"
+        },
+        {
+          "body": "\\[m=332\\text{ g}\\quad\\text{(3 significant figures)}.\\]\n\nRound the final mass as requested.",
+          "title": "Solution | Step 3"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q11-U1": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(8.4\\text{ cm}^2\\) (1 decimal place).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[DC=\\sqrt{36}=6\\text{ cm},\\qquad EG=6\\text{ cm}.\\]\n\nAll sides of the square have length equal to the square root of its area, and DC=EG.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[\\tan25^\\circ=\\frac{FG}{EG}\\quad\\Rightarrow\\quad FG=6\\tan25^\\circ=2.7978459\\ldots\\text{ cm}.\\]\n\nRelative to angle E, FG is opposite and EG is adjacent.",
+          "title": "Solution | Step 2"
+        },
+        {
+          "body": "\\[\\text{Area}=\\frac12(EG)(FG)=\\frac12(6)(6\\tan25^\\circ)=8.3935378\\ldots\\text{ cm}^2.\\]\n\nThe base EG and height FG are perpendicular.",
+          "title": "Solution | Step 3"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q13-U1": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "(a) Table entries, in order: \\(2.5,2,4.25,5.2\\).\n\n(b) The smooth curve \\(y=x+1/x\\) through the stated coordinates on \\([0.25,5]\\).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "Use \\(y=x+1/x\\): \\[y(0.5)=0.5+2=2.5,\\quad y(1)=1+1=2,\\quad y(4)=4+0.25=4.25,\\quad y(5)=5+0.2=5.2.\\]\n\nSubstitute each required x-value into the formula.",
+          "title": "Part (a) | Step 1"
+        },
+        {
+          "body": "Plot \\[(0.25,4.25),\\ (0.5,2.5),\\ (1,2),\\ (2,2.5),\\ (3,10/3),\\ (4,4.25),\\ (5,5.2).\\]\n\nUse x horizontally and y vertically on the supplied grid; 10/3 is approximately 3.33.",
+          "title": "Part (b) | Step 1"
+        },
+        {
+          "body": "Join the points with one smooth curve for \\(0.25\\le x\\le5\\), descending to its minimum \\((1,2)\\) and then ascending.\n\nThe graph is curved, not a set of straight segments, and includes both endpoints.",
+          "figures": [
+            {
+              "alt": "Question 13, part b: completed solution diagram",
+              "src": "/assets/solution-diagrams/Jun2026/P2R-Q13-b-Q13b-graph.png"
+            }
+          ],
+          "title": "Part (b) | Step 2"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q14-U1": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "(a) Branch labels from top to bottom: \\(4/7,3/7\\) for A; \\(5/6,1/6\\) for B after either A result.\n\n(b) \\(\\frac{10}{21}\\).\n\n(c) \\(\\frac3{10}\\).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "From the start, label the Bag A branches \\(P(G_A)=4/7\\) and \\(P(R_A)=3/7\\).\n\nBag A has 7 counters in total.",
+          "title": "Part (a) | Step 1"
+        },
+        {
+          "body": "From each Bag A outcome, label the Bag B green branch \\(5/6\\) and red branch \\(1/6\\).\n\nBag B has 6 counters and is unaffected by the result from bag A.",
+          "figures": [
+            {
+              "alt": "Question 14, part a: completed solution diagram",
+              "src": "/assets/solution-diagrams/Jun2026/P2R-Q14-a-Q14a-tree.png"
+            }
+          ],
+          "title": "Part (a) | Step 2"
+        },
+        {
+          "body": "\\[P(G_AG_B)=\\frac47\\times\\frac56=\\frac{20}{42}=\\frac{10}{21}.\\]\n\nBoth events must occur, so multiply along the green-green path.",
+          "title": "Part (b) | Step 1"
+        },
+        {
+          "body": "Let \\(r=P(R_C)\\). Then \\[\\frac37\\times\\frac16\\times r=\\frac3{70}\\quad\\Rightarrow\\quad r=\\frac35,\\qquad P(G_C)=\\frac25.\\]\n\nUse the given probability of three reds to find the bag C probabilities.",
+          "title": "Part (c) | Step 1"
+        },
+        {
+          "body": "Exactly one green means the disjoint outcomes \\(G_AR_BR_C\\), \\(R_AG_BR_C\\), or \\(R_AR_BG_C\\).\n\nThe single green counter can come from A, B or C.",
+          "title": "Part (c) | Step 2"
+        },
+        {
+          "body": "\\[P=\\frac47\\frac16\\frac35+\\frac37\\frac56\\frac35+\\frac37\\frac16\\frac25=\\frac2{35}+\\frac3{14}+\\frac1{35}=\\frac3{10}.\\]\n\nMultiply within each outcome and add the three mutually exclusive probabilities.",
+          "title": "Part (c) | Step 3"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q16-U1": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(n=-3\\).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[\\frac1{\\sqrt a}=a^{-1/2},\\qquad\\left(a^{-1/2}\\right)^6=a^{-3}.\\]\n\nA reciprocal changes the sign of the exponent and an outer power multiplies exponents.",
+          "title": "Solution | Step 1"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q17-U1": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(0.\\overline{814}=\\frac{22}{27}\\).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "Let \\(z=0.\\overline{814}=0.814814814\\ldots\\). Then \\(1000z=814.814814\\ldots\\).\n\nMultiplication by 1000 aligns the repeating three-digit tails.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[1000z-z=814\\quad\\Rightarrow\\quad999z=814\\quad\\Rightarrow\\quad z=\\frac{814}{999}=\\frac{22}{27}.\\]\n\nSubtract to cancel the recurring tails, then cancel the common factor 37.",
+          "title": "Solution | Step 2"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q19-U1": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "Bar intervals/heights: \\([0,20]:0.7;\\ [20,25]:2.4;\\ [25,35]:3.2;\\ [35,50]:2\\).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "Use \\(\\text{frequency density}=\\text{frequency}/\\text{class width}\\): \\[14/20=0.7,\\quad12/5=2.4,\\quad32/10=3.2,\\quad30/15=2.\\]\n\nHistogram areas, rather than heights alone, represent frequencies.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "Draw four adjoining rectangles on the supplied time and frequency-density axes: \\([0,20]\\) at height \\(0.7\\), \\([20,25]\\) at height \\(2.4\\), \\([25,35]\\) at height \\(3.2\\), and \\([35,50]\\) at height \\(2\\).\n\nEach rectangle starts at density 0 and has the stated class boundaries as its vertical edges; leave no gaps between classes.",
+          "figures": [
+            {
+              "alt": "Question 19, part main: completed solution diagram",
+              "src": "/assets/solution-diagrams/Jun2026/P2R-Q19-main-Q19-histogram.png"
+            }
+          ],
+          "title": "Solution | Step 2"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q21-U1": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "Lower bound \\(=7.79\\) (3 significant figures).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[6.55\\le d<6.65,\\quad2.75\\le e<2.85,\\quad0.465\\le f<0.475.\\]\n\nUse half of each rounding unit to obtain the bounds.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[p_{\\mathrm{lower}}=\\frac{6.55-2.85}{0.475}=\\frac{3.70}{0.475}=7.789473684\\ldots.\\]\n\nMinimize the positive numerator by using the lower bound of d and upper bound of e; maximize the positive denominator.",
+          "title": "Solution | Step 2"
+        },
+        {
+          "body": "\\[p_{\\mathrm{lower}}=7.79\\quad\\text{(3 significant figures)}.\\]\n\nRound the boundary value to the requested accuracy.",
+          "title": "Solution | Step 3"
+        }
+      ],
+      "updated": "2026-10-18"
+    }
+  }
+}

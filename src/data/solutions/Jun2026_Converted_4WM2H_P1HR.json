@@ -1,0 +1,381 @@
+{
+  "paperSlug": "Jun2026_Converted_4WM2H_P1HR",
+  "solutions": {
+    "all::Jun2026_P1HR__Q02-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(504=2^3\\times3^2\\times7\\)",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[504=2\\times252=2^2\\times126=2^3\\times63.\\]\n\nDivide repeatedly by the prime 2.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[63=3\\times21=3^2\\times7,\\qquad 504=2^3\\times3^2\\times7.\\]\n\nAll remaining factors are prime; group repeated factors as powers.",
+          "title": "Solution | Step 2"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P1HR__Q06-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(360\\text{ cm}^2\\)",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[k=\\frac{24}{8}=3.\\]\n\nThe marked corresponding bases give the linear scale factor from A to B.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[\\operatorname{area}(A)=8\\times5=40\\text{ cm}^2.\\]\n\nThe 5 cm measurement is the perpendicular height.",
+          "title": "Solution | Step 2"
+        },
+        {
+          "body": "\\[\\operatorname{area}(B)=k^2\\operatorname{area}(A)=3^2\\times40=360\\text{ cm}^2.\\]\n\nAreas scale by the square of the linear scale factor.",
+          "title": "Solution | Step 3"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P1HR__Q07-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "(a) Open circle at \\(1\\), ray to the left: \\((-\\infty,1)\\).\n\n(b) \\(y=-1,0,1,2,3\\)\n\n(c) \\(w<3.6\\)",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "Place an open circle at \\(1\\) and draw a horizontal ray from it to the left, with a left-pointing arrow. Do not fill the circle.\n\nThe strict inequality excludes \\(1\\) and includes every real number less than \\(1\\).",
+          "figures": [
+            {
+              "alt": "Question 7, part a: completed solution diagram",
+              "src": "/assets/solution-diagrams/Jun2026/P1R-Q07-a-Q07a-number-line.png"
+            }
+          ],
+          "title": "Part (a) | Step 1"
+        },
+        {
+          "body": "\\[2\\le y+3<7\\quad\\Longrightarrow\\quad-1\\le y<4.\\]\n\nSubtract 3 from all three expressions.",
+          "title": "Part (b) | Step 1"
+        },
+        {
+          "body": "The integer values in this interval are \\(-1,0,1,2,3\\).\n\nInclude the lower endpoint but exclude 4.",
+          "title": "Part (b) | Step 2"
+        },
+        {
+          "body": "\\[8-5w>-10\\quad\\Longrightarrow\\quad-5w>-18.\\]\n\nSubtract 8 from both sides.",
+          "title": "Part (c) | Step 1"
+        },
+        {
+          "body": "\\[w<\\frac{18}{5}=3.6.\\]\n\nDivision by a negative number reverses the inequality sign.",
+          "title": "Part (c) | Step 2"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P1HR__Q09-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(81.8\\text{ kg}\\)",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[W_{11}=11(77)=847\\text{ kg},\\qquad W_8=8(75.2)=601.6\\text{ kg}.\\]\n\nTotal weight equals number of sheep multiplied by their mean weight.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[W_3=847-601.6=245.4\\text{ kg},\\qquad \\overline w_3=\\frac{245.4}{3}=81.8\\text{ kg}.\\]\n\nSubtract the known subgroup total and divide the remaining total by 3.",
+          "title": "Solution | Step 2"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P1HR__Q10-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(208518\\text{ yen}\\)",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[\\text{annual multiplier}=1+\\frac{1.4}{100}=1.014.\\]\n\nAn increase of 1.4% retains the original amount and adds 1.4%.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[A=200000(1.014)^3=208518.1488\\text{ yen}.\\]\n\nApply the multiplier once for each of the 3 years.",
+          "title": "Solution | Step 2"
+        },
+        {
+          "body": "\\[A\\approx208518\\text{ yen}.\\]\n\nRound to the nearest whole yen.",
+          "title": "Solution | Step 3"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P1HR__Q11-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(290\\text{ cm}^2\\)",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[3\\times11\\times x=264,\\qquad x=\\frac{264}{33}=8\\text{ cm}.\\]\n\nThe volume is the product of the three perpendicular edge lengths.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[S=2(3\\times11)+2(3\\times8)+2(11\\times8).\\]\n\nThere are two faces of each of the three rectangular sizes.",
+          "title": "Solution | Step 2"
+        },
+        {
+          "body": "\\[S=66+48+176=290\\text{ cm}^2.\\]\n\nAdd all six face areas.",
+          "title": "Solution | Step 3"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P1HR__Q12-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(x=\\frac32,\\ y=-\\frac14\\)",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[4x+4y=5,\\qquad x+2y=1.\\]\n\nUse the two given equations.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[4(x+2y)=4\\quad\\Longrightarrow\\quad4x+8y=4.\\]\n\nMultiply the second equation by 4 to match the coefficients of x.",
+          "title": "Solution | Step 2"
+        },
+        {
+          "body": "\\[(4x+8y)-(4x+4y)=4-5\\quad\\Longrightarrow\\quad4y=-1,\\quad y=-\\frac14.\\]\n\nSubtract the first equation to eliminate x.",
+          "title": "Solution | Step 3"
+        },
+        {
+          "body": "\\[x+2\\left(-\\frac14\\right)=1\\quad\\Longrightarrow\\quad x=\\frac32.\\]\n\nSubstitute into the second original equation.",
+          "title": "Solution | Step 4"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P1HR__Q14-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "(a) Increasing cumulative-frequency graph through \\((0,0),(10,19),(20,37),(30,52),(40,63),(50,73),(60,80)\\).\n\n(b) Approximately \\(22\\) years.\n\n(c) Approximately \\(30\\) people.",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "Use age (years) on the horizontal axis from \\(0\\) to \\(60\\), and cumulative frequency on the vertical axis from \\(0\\) to \\(80\\). Plot \\((0,0),(10,19),(20,37),(30,52),(40,63),(50,73),(60,80)\\).\n\nEach cumulative total is plotted at its upper age boundary.",
+          "title": "Part (a) | Step 1"
+        },
+        {
+          "body": "Join the points in order with an increasing curve or straight line segments. Do not draw bars or a staircase.\n\nThis represents the accumulated number up to each age boundary.",
+          "figures": [
+            {
+              "alt": "Question 14, part a: completed solution diagram",
+              "src": "/assets/solution-diagrams/Jun2026/P1R-Q14-a-Q14-cumulative-frequency.png"
+            }
+          ],
+          "title": "Part (a) | Step 2"
+        },
+        {
+          "body": "\\[\\text{median position}=\\frac{80}{2}=40.\\]\n\nRead horizontally from cumulative frequency 40 to the graph, then vertically down to the age axis.",
+          "title": "Part (b) | Step 1"
+        },
+        {
+          "body": "Using straight segments, \\[20+\\frac{40-37}{52-37}\\times10=22\\text{ years}.\\]\n\nThe median is estimated between ages 20 and 30; a smooth graph gives a nearby estimate.",
+          "title": "Part (b) | Step 2"
+        },
+        {
+          "body": "Read vertically from age \\(16\\) to the graph, then horizontally to the cumulative-frequency axis.\n\nThe ordinate is the estimated number aged 16 and under.",
+          "title": "Part (c) | Step 1"
+        },
+        {
+          "body": "Using straight segments, \\[19+\\frac{16-10}{20-10}(37-19)=29.8\\approx30.\\]\n\nRound the estimated count to a whole number of people.",
+          "title": "Part (c) | Step 2"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P1HR__Q15-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(x=60^\\circ\\)",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[\\text{interior angle of a regular decagon}=\\frac{(10-2)180^\\circ}{10}=144^\\circ.\\]\n\nBC and CD are consecutive sides of the regular decagon.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[\\text{reflex interior angle at C}=360^\\circ-144^\\circ=216^\\circ.\\]\n\nThe pentagon BCDEF is concave at C, and its interior lies on the other side from the decagon interior angle.",
+          "title": "Solution | Step 2"
+        },
+        {
+          "body": "\\[75^\\circ+216^\\circ+x+109^\\circ+80^\\circ=(5-2)180^\\circ=540^\\circ,\\]\n\nThe interior-angle sum formula also applies to a simple concave pentagon.",
+          "title": "Solution | Step 3"
+        },
+        {
+          "body": "\\[x=540^\\circ-480^\\circ=60^\\circ.\\]\n\nSubtract the four known interior angles.",
+          "title": "Solution | Step 4"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P1HR__Q17-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "(a) \\(\\frac{\\mathrm dy}{\\mathrm dx}=3x^2+10x-8\\)\n\n(b) \\(P=(-4,48)\\)",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[\\frac{\\mathrm dy}{\\mathrm dx}=3x^2+10x-8.\\]\n\nApply the power rule to each term of y=x^3+5x^2-8x.",
+          "title": "Part (a) | Step 1"
+        },
+        {
+          "body": "\\[3x^2+10x-8=0\\quad\\Longrightarrow\\quad(3x-2)(x+4)=0.\\]\n\nAt a stationary point the derivative is zero.",
+          "title": "Part (b) | Step 1"
+        },
+        {
+          "body": "\\[x=\\frac23\\quad\\text{or}\\quad x=-4.\\]\n\nSet each factor equal to zero.",
+          "title": "Part (b) | Step 2"
+        },
+        {
+          "body": "P has the smaller x-coordinate, so \\(x_P=-4\\). Then \\[y_P=(-4)^3+5(-4)^2-8(-4)=-64+80+32=48.\\]\n\nChoose the left-hand stationary point and substitute into the original curve equation.",
+          "title": "Part (b) | Step 3"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P1HR__Q19-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(\\angle SPO=42^\\circ\\)",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[\\angle PQR=\\frac{170^\\circ}{2}=85^\\circ.\\]\n\nThe angle at the centre is twice the angle at the circumference subtended by the same arc PR containing S.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[\\angle PSR=180^\\circ-85^\\circ=95^\\circ.\\]\n\nOpposite angles of cyclic quadrilateral PQRS sum to 180 degrees.",
+          "title": "Solution | Step 2"
+        },
+        {
+          "body": "\\[\\angle SPO=360^\\circ-(170^\\circ+53^\\circ+95^\\circ)=42^\\circ.\\]\n\nThe interior angles of quadrilateral PSRO sum to 360 degrees; its other angles are POR, ORS and PSR.",
+          "title": "Solution | Step 3"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P1HR__Q20-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(y=810\\)",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[y=kt^2,\\qquad40=k(4^2)\\quad\\Longrightarrow\\quad k=\\frac52.\\]\n\nDirect proportionality to t squared means a constant times t squared.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[t=c\\sqrt[3]{x},\\qquad12=c\\sqrt[3]{8}=2c\\quad\\Longrightarrow\\quad c=6.\\]\n\nFind the second proportionality constant using the given pair of values.",
+          "title": "Solution | Step 2"
+        },
+        {
+          "body": "\\[x=27\\quad\\Longrightarrow\\quad t=6\\sqrt[3]{27}=18.\\]\n\nUse the cube-root relationship first.",
+          "title": "Solution | Step 3"
+        },
+        {
+          "body": "\\[y=\\frac52(18)^2=810.\\]\n\nSubstitute the new value of t into the square relationship.",
+          "title": "Solution | Step 4"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P1HR__Q23-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "(a) \\(x=0\\) must be excluded.\n\n(b) \\(gf(0.5)=15\\)\n\n(c) \\(g^{-1}(x)=1+\\frac{\\sqrt{x-11}}{2},\\quad x\\ge11\\)",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "For \\(f(x)=\\frac1x\\), the denominator is zero when \\(x=0\\).\n\nDivision by zero is undefined, so this input must be excluded.",
+          "title": "Part (a) | Step 1"
+        },
+        {
+          "body": "\\[f(0.5)=\\frac{1}{0.5}=2.\\]\n\nIn gf, apply f first.",
+          "title": "Part (b) | Step 1"
+        },
+        {
+          "body": "\\[gf(0.5)=g(2)=4(2)^2-8(2)+15=16-16+15=15.\\]\n\nThe input 2 lies in the stated domain x>=1 of g.",
+          "title": "Part (b) | Step 2"
+        },
+        {
+          "body": "\\[y=4x^2-8x+15=4(x-1)^2+11.\\]\n\nComplete the square to isolate the expression containing x.",
+          "title": "Part (c) | Step 1"
+        },
+        {
+          "body": "\\[(x-1)^2=\\frac{y-11}{4},\\qquad x-1=\\frac{\\sqrt{y-11}}{2}.\\]\n\nChoose the nonnegative root because the domain of g is x>=1.",
+          "title": "Part (c) | Step 2"
+        },
+        {
+          "body": "\\[x=1+\\frac{\\sqrt{y-11}}{2}.\\]\n\nRearrange to make the original input the subject.",
+          "title": "Part (c) | Step 3"
+        },
+        {
+          "body": "\\[g^{-1}(x)=1+\\frac{\\sqrt{x-11}}{2},\\qquad x\\ge11.\\]\n\nExchange the input and output labels; the range of g becomes the domain of the inverse.",
+          "title": "Part (c) | Step 4"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P1HR__Q24-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(4x+5y-58=0\\)",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[m_{CP}=\\frac{6-1}{7-3}=\\frac54.\\]\n\nFind the gradient of the radius from the centre C=(3,1) to P=(7,6).",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[m_L=-\\frac45.\\]\n\nThe tangent is perpendicular to the radius at P, so its gradient is the negative reciprocal.",
+          "title": "Solution | Step 2"
+        },
+        {
+          "body": "\\[y-6=-\\frac45(x-7).\\]\n\nUse the tangent gradient and the given point of contact.",
+          "title": "Solution | Step 3"
+        },
+        {
+          "body": "\\[5y-30=-4x+28\\quad\\Longrightarrow\\quad4x+5y-58=0.\\]\n\nMultiply by 5 and collect all terms on one side to obtain integer coefficients.",
+          "title": "Solution | Step 4"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P1HR__Q25-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "(a) \\(\\overrightarrow{OD}=8\\mathbf a+5\\mathbf b\\)\n\n(b) \\(OP:PD=20:21\\)",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[\\overrightarrow{CD}=\\frac32(2\\mathbf a+2\\mathbf b)=3\\mathbf a+3\\mathbf b.\\]\n\nUse the stated relationship between CD and AC.",
+          "title": "Part (a) | Step 1"
+        },
+        {
+          "body": "\\[\\overrightarrow{OD}=\\overrightarrow{OA}+\\overrightarrow{AC}+\\overrightarrow{CD}=3\\mathbf a+(2\\mathbf a+2\\mathbf b)+(3\\mathbf a+3\\mathbf b)=8\\mathbf a+5\\mathbf b.\\]\n\nAdd consecutive vectors along the route O-A-C-D.",
+          "title": "Part (a) | Step 2"
+        },
+        {
+          "body": "\\[\\overrightarrow{OC}=3\\mathbf a+(2\\mathbf a+2\\mathbf b)=5\\mathbf a+2\\mathbf b,\\qquad\\overrightarrow{BC}=5\\mathbf a-2\\mathbf b.\\]\n\nUse OC=OA+AC and BC=OC-OB.",
+          "title": "Part (b) | Step 1"
+        },
+        {
+          "body": "Write \\(\\overrightarrow{OP}=t\\overrightarrow{OD}=8t\\mathbf a+5t\\mathbf b\\). Also, because P lies on BC, \\[\\overrightarrow{OP}=\\overrightarrow{OB}+s\\overrightarrow{BC}=5s\\mathbf a+(4-2s)\\mathbf b.\\]\n\nUse one scalar parameter on each of the two intersecting lines.",
+          "title": "Part (b) | Step 2"
+        },
+        {
+          "body": "\\[8t=5s,\\qquad5t=4-2s,\\qquad s=\\frac85t.\\]\n\nEquate the coefficients of the two nonparallel base vectors.",
+          "title": "Part (b) | Step 3"
+        },
+        {
+          "body": "\\[5t=4-\\frac{16}{5}t\\quad\\Longrightarrow\\quad41t=20\\quad\\Longrightarrow\\quad t=\\frac{20}{41}.\\]\n\nSubstitute the first relation into the second and solve.",
+          "title": "Part (b) | Step 4"
+        },
+        {
+          "body": "\\[OP:PD=t:(1-t)=\\frac{20}{41}:\\frac{21}{41}=20:21.\\]\n\nOD is divided into the fractions t and 1-t at P.",
+          "title": "Part (b) | Step 5"
+        }
+      ],
+      "updated": "2026-10-18"
+    }
+  }
+}

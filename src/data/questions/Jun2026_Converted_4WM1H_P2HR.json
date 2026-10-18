@@ -1,0 +1,203 @@
+{
+  "code": "P2HR",
+  "isModular": true,
+  "modularUnit": "Unit 1",
+  "paper": "Jun 2026 P2HR | L-to-M Unit 1",
+  "paperSlug": "Jun2026_Converted_4WM1H_P2HR",
+  "questionCount": 12,
+  "questions": [
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q01-U1.png",
+      "id": "all::Jun2026_P2HR__Q01-U1",
+      "image": "/assets/questions/converted/Jun2026_P2HR__Q01-U1.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 1,
+      "text": "1 The diagram shows a right‑angled triangle.\n20 cm\n48 cm\nx cm\nDiagram NOT \naccurately drawn\n \nWork out the value of x\nx = ......................................................\n(Total for Question 1 is 3 marks)",
+      "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
+      "topicOrder": 47,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q03-U1.png",
+      "id": "all::Jun2026_P2HR__Q03-U1",
+      "image": "/assets/questions/converted/Jun2026_P2HR__Q03-U1.png",
+      "marks": 1,
+      "modularForceUnit": "Unit 1",
+      "q": 3,
+      "text": "3 E = {integers from 1 to 12}\n \nA = {factors of 12}\n \nList the members of the set  A′\n.................................................................................\n(Total for Question 3 is 1 mark)",
+      "topic": "Set Notation & Venn Diagrams",
+      "topicOrder": 1,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q04-U1.png",
+      "id": "all::Jun2026_P2HR__Q04-U1",
+      "image": "/assets/questions/converted/Jun2026_P2HR__Q04-U1.png",
+      "marks": 6,
+      "modularForceUnit": "Unit 1",
+      "q": 4,
+      "text": "4 (a) Solve  3(x + 2) = 1 – 5x\n \n Show clear algebraic working.\nx = ......................................................\n(3)  \n(c) Simplify  m\n0\n......................................................\n(1)  \n(d) Simplify  (4r\n2t)\n3\n......................................................\n(2)",
+      "topic": "Solving Linear Equations",
+      "topicOrder": 23,
+      "unit": "Equations, Formulae & Identities"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q09-U1.png",
+      "id": "all::Jun2026_P2HR__Q09-U1",
+      "image": "/assets/questions/converted/Jun2026_P2HR__Q09-U1.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 9,
+      "text": "9 Change a speed of 198 kilometres per hour to a speed in metres per second.\n \nShow your working clearly.\n..................................................... m/s\n(Total for Question 9 is 3 marks)",
+      "topic": "Standard & Compound Units",
+      "topicOrder": 38,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q10-U1.png",
+      "id": "all::Jun2026_P2HR__Q10-U1",
+      "image": "/assets/questions/converted/Jun2026_P2HR__Q10-U1.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 10,
+      "text": "10 The diagram shows a solid cylinder.\n4 cm\nDiagram NOT \naccurately drawn\n11 cm\n \nThe cylinder has radius 4 cm and height 11 cm\n \nThe cylinder is made from wood with a density of 0.6 g/cm\n3\n \nWork out the mass of the cylinder.\n \nGive your answer correct to 3 significant figures.\n..................................................... g\n(Total for Question 10 is 3 marks)",
+      "topic": "Standard & Compound Units",
+      "topicOrder": 38,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q11-U1.png",
+      "id": "all::Jun2026_P2HR__Q11-U1",
+      "image": "/assets/questions/converted/Jun2026_P2HR__Q11-U1.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 1",
+      "q": 11,
+      "text": "11 The diagram shows a square ABCD and a right‑angled triangle EFG\nA\nB\nC\nD\nE\nF\nG\n25�\nDiagram NOT \naccurately drawn\n \nThe area of square ABCD is 36 cm\n2\n \nDC = EG\n \nWork out the area of triangle EFG\n \nGive your answer correct to one decimal place.\n \nShow your working clearly.\n..................................................... cm\n2\n(Total for Question 11 is 5 marks)",
+      "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
+      "topicOrder": 47,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q13-U1.png",
+      "id": "all::Jun2026_P2HR__Q13-U1",
+      "image": "/assets/questions/converted/Jun2026_P2HR__Q13-U1.png",
+      "marks": 4,
+      "modularForceUnit": "Unit 1",
+      "q": 13,
+      "text": "13 (a) Complete the table of values for  y = x + \n1\nx\nx\n0.25\n0.5\n1\n2\n3\n4\n5\ny\n4.25\n2.5\n3.33\n(2)\n \n(b) On the grid, draw the graph of  y = x + \n1\nx   for  0.25  x  5\n1\n1\n2\n3\n4\n5\n2\n3\n4\n5\n6\nO\nx\ny\n(2)\n(Total for Question 13 is 4 marks)",
+      "topic": "Graphs of Functions",
+      "topicOrder": 32,
+      "unit": "Sequences, Functions & Graphs"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q14-U1.png",
+      "id": "all::Jun2026_P2HR__Q14-U1",
+      "image": "/assets/questions/converted/Jun2026_P2HR__Q14-U1.png",
+      "marks": 8,
+      "modularForceUnit": "Unit 1",
+      "q": 14,
+      "text": "14 Pras has 2 bags of counters, bag A and bag B\n \nIn bag A, there are 4 green counters and 3 red counters.\n \nIn bag B, there are 5 green counters and 1 red counter.\n \nPras is going to take at random a counter from bag A and a counter from bag B\n \n(a) Complete the probability tree diagram.\nRed\nGreen\nBag A\nBag B\nRed\nGreen\nRed\nGreen\n................\n................\n................\n................\n................\n................\n(2)\n \n(b) Work out the probability that Pras will take two green counters.\n....................................................\n(2)  \nPras also has a third bag of counters, bag C\n \nIn bag C, there are only green counters and red counters.\n \nAll the original counters are back in bag A and bag B\n \nPras is going to take at random a counter from bag A, a counter from bag B and \na counter from bag C\n \nThe probability that Pras will take three red counters is 3\n70\n \n(c) Work out the probability that Pras will take 1 green counter and 2 red counters.\n....................................................\n(4)\n(Total for Question 14 is 8 marks)",
+      "topic": "Probability Diagrams - Venn & Tree Diagrams",
+      "topicOrder": 56,
+      "unit": "Statistics & Probability"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q16-U1.png",
+      "id": "all::Jun2026_P2HR__Q16-U1",
+      "image": "/assets/questions/converted/Jun2026_P2HR__Q16-U1.png",
+      "marks": 2,
+      "modularForceUnit": "Unit 1",
+      "q": 16,
+      "text": "16 \n1\n6\na\nan\n�\n��\n�\n���\n \nWork out the value of n\nn = .................................................... \n(Total for Question 16 is 2 marks)",
+      "topic": "Algebraic Roots & Indices",
+      "topicOrder": 16,
+      "unit": "Equations, Formulae & Identities"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q17-U1.png",
+      "id": "all::Jun2026_P2HR__Q17-U1",
+      "image": "/assets/questions/converted/Jun2026_P2HR__Q17-U1.png",
+      "marks": 2,
+      "modularForceUnit": "Unit 1",
+      "q": 17,
+      "text": "17 Use algebra to show that  0.8.\n14.\n = 22\n27\n(Total for Question 17 is 2 marks)",
+      "topic": "Fractions",
+      "topicOrder": 4,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q19-U1.png",
+      "id": "all::Jun2026_P2HR__Q19-U1",
+      "image": "/assets/questions/converted/Jun2026_P2HR__Q19-U1.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 19,
+      "text": "19 The table gives information about the times, in minutes, some people spent waiting to \ngo on a rollercoaster.\nTime (t minutes)\nFrequency\n 0 < t  20\n14\n20 < t  25\n12\n25 < t  35\n32\n35 < t  50\n30\n \nOn the grid, draw a histogram for this information.\n0\n0\n1\n2\n3\n4\n10\n20\n30\n40\n50\nTime (minutes)\nFrequency \ndensity\n(Total for Question 19 is 3 marks)",
+      "topic": "Histograms",
+      "topicOrder": 53,
+      "unit": "Statistics & Probability"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q21-U1.png",
+      "id": "all::Jun2026_P2HR__Q21-U1",
+      "image": "/assets/questions/converted/Jun2026_P2HR__Q21-U1.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 21,
+      "text": "21 p\nd\ne\nf\n�\n�\n \nd = 6.6 correct to 1 decimal place\n \ne = 2.8 correct to 1 decimal place\n \nf = 0.47 correct to 2 decimal places\n \nCalculate the lower bound for the value of p\n \nGive your answer correct to 3 significant figures.\n \nShow your working clearly.\n................................................... \n(Total for Question 21 is 3 marks)",
+      "topic": "Rounding, Estimation & Bounds",
+      "topicOrder": 8,
+      "unit": "Numbers & the Number System"
+    }
+  ],
+  "session": "Jun 2026"
+}

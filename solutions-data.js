@@ -19169,6 +19169,4554 @@ window.SOLUTION_DATA = {
     ],
     "finalAnswer": "\\(\\frac{8}{29}\\) or \\(0.276\\) to 3 significant figures"
   },
+  "all::Jun2026_P1H__Q01-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(1\\frac{19}{35}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[4\\frac17=\\frac{29}{7},\\qquad 2\\frac35=\\frac{13}{5}.\\]\n\nConvert each mixed number to an improper fraction.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\frac{29}{7}-\\frac{13}{5}=\\frac{145-91}{35}=\\frac{54}{35}=1\\frac{19}{35}.\\]\n\nUse the common denominator 35, subtract, then convert back to a mixed number.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q02-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x=4.23\\text{ cm}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\cos65^\\circ=\\frac{x}{10}.\\]\n\nThe side of length 10 cm is the hypotenuse and x is adjacent to the given angle.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[x=10\\cos65^\\circ=4.22618\\ldots=4.23\\text{ cm}\\quad(3\\text{ s.f.}).\\]\n\nMultiply by 10 and round only the final value.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q03-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a(i)) \\(\\{1,2,4,5,10,15\\}\\)\n\n(a(ii)) \\(\\{1,2,4\\}\\)\n\n(b) \\(A\\cap C=\\{2,5\\}\\), not the empty set.",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\(A=\\{1,2,4,5,10\\}\\) and \\(B=\\{5,10,15\\}\\), so \\(A\\cup B=\\{1,2,4,5,10,15\\}\\).\n\nInclude every member of either set once; 20 lies outside the universal set.",
+        "title": "Part (a(i)) | Step 1"
+      },
+      {
+        "body": "\\(A\\cap B^{\\prime}=\\{1,2,4\\}\\).\n\nRetain the factors of 20 in the universal set which are not multiples of 5.",
+        "title": "Part (a(ii)) | Step 1"
+      },
+      {
+        "body": "Both 2 and 5 are prime factors of 20, so \\(A\\cap C=\\{2,5\\}\\ne\\varnothing\\).\n\nA shared member is enough to disprove the claim that the intersection is empty.",
+        "title": "Part (b) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q04-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(20\\text{ km/h}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Cycling time: \\(60\\div24=2.5\\) hours. Running time: \\(1+15/60=1.25\\) hours.\n\nTime equals distance divided by speed.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "Running distance: \\(12\\times1.25=15\\) km. Total distance: \\(60+15=75\\) km. Total time: \\(2.5+1.25=3.75\\) hours.\n\nCombine the actual distances and times.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[\\text{Average speed}=\\frac{75}{3.75}=20\\text{ km/h}.\\]\n\nAverage speed is total distance divided by total time, not the mean of the two speeds.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q05-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(8e^2-12e\\)\n\n(b) \\(f^2-3f-18\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[4e(2e-3)=8e^2-12e.\\]\n\nMultiply 4e by both terms in the bracket.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[(f+3)(f-6)=f^2-6f+3f-18=f^2-3f-18.\\]\n\nMultiply each term in the first bracket by each term in the second and collect like terms.",
+        "title": "Part (b) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q06-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(64x^{15}y^{18}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[(4x^5y^6)^3=4^3x^{5\\times3}y^{6\\times3}=64x^{15}y^{18}.\\]\n\nRaise each factor to the third power and multiply exponents for a power of a power.",
+        "title": "Solution | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q07-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(200\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[0.12+x+2x+0.16=1\\implies3x=0.72\\implies x=0.24.\\]\n\nThe four exhaustive outcome probabilities sum to 1.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[P(\\text{even})=P(2)+P(4)=0.24+0.16=0.40.\\]\n\nThe events 2 and 4 are mutually exclusive.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[\\text{Expected number}=500\\times0.40=200.\\]\n\nMultiply the number of spins by the probability of an even result.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q08-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(252\\text{ km/h}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[70\\text{ m/s}=70\\times3600=252000\\text{ m/h}.\\]\n\nThere are 3600 seconds in one hour.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[252000\\div1000=252\\text{ km/h}.\\]\n\nThere are 1000 metres in one kilometre.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q11-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(85.7\\text{ cm}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Let the radius be \\(r=OB=OD\\). Then \\(\\frac12\\pi r^2=227\\), so \\(r=\\sqrt{454/\\pi}=12.021343\\ldots\\) cm.\n\nThe given area belongs to the semicircle.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[AB=DE=\\sqrt{15^2-r^2}=8.971472\\ldots\\text{ cm}.\\]\n\nThe identical triangles have hypotenuse 15 cm and horizontal leg r.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[P=\\pi r+AB+DE+AO+EO=\\pi r+2\\sqrt{225-r^2}+30=85.709107\\ldots\\text{ cm}.\\]\n\nThe boundary contains the semicircular arc and the four outer triangle sides, but not the internal diameter.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "\\[P=85.7\\text{ cm}\\quad(1\\text{ d.p.}).\\]\n\nRetain unrounded intermediate values.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q12-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(x=-\\frac94\\)\n\n(b) \\(8t^3+28t^2-60t\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\frac{2^{x/3}}{8^x}=\\frac{2^{x/3}}{2^{3x}}=2^{x/3-3x}=2^{-8x/3}.\\]\n\nWrite 8 as a power of 2 and subtract exponents when dividing.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[2^{-8x/3}=64=2^6\\implies-\\frac{8x}{3}=6\\implies x=-\\frac94.\\]\n\nEqual powers of base 2 have equal exponents.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[(t+5)(2t-3)=2t^2-3t+10t-15=2t^2+7t-15.\\]\n\nExpand the two brackets and collect like terms.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "\\[4t(t+5)(2t-3)=4t(2t^2+7t-15)=8t^3+28t^2-60t.\\]\n\nMultiply every term by 4t.",
+        "title": "Part (b) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q13-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) Rain/not rain: \\(0.15,0.85\\); walk/bus after rain: \\(0.2,0.8\\); walk/bus after no rain: \\(0.75,0.25\\).\n\n(b) \\(0.03\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "First split: rain \\(0.15\\), not rain \\(0.85\\).\n\nComplementary branches sum to 1.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "After rain: walk \\(0.20\\), bus \\(0.80\\). After not rain: walk \\(0.75\\), bus \\(0.25\\).\n\nUse the stated conditional probabilities and their complements on the corresponding branches.",
+        "figures": [
+          {
+            "alt": "Question 13, part a: completed solution diagram",
+            "src": "/assets/solution-diagrams/Jun2026/P1-Q13-a-P1-Q13a.png"
+          }
+        ],
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[P(\\text{rain and walk})=P(\\text{rain})P(\\text{walk}\\mid\\text{rain})=0.15\\times0.2=0.03.\\]\n\nMultiply the probabilities along the rain-then-walk path; independence is not assumed.",
+        "title": "Part (b) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q15-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(-2\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[m=\\frac{-6-4}{2-(-3)}=\\frac{-10}{5}=-2.\\]\n\nUse change in y divided by the corresponding change in x.",
+        "title": "Solution | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q16-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(66.4\\text{ cm}\\)\n\n(b) \\(827\\text{ cm}^2\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[BC^2=25^2+73^2-2(25)(73)\\cos65^\\circ.\\]\n\nThe included angle is between the two given sides.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[BC^2=4411.443344\\ldots,\\quad BC=\\sqrt{4411.443344\\ldots}=66.418697\\ldots=66.4\\text{ cm}\\quad(3\\text{ s.f.}).\\]\n\nTake the positive square root for a length.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[\\text{Area}=\\frac12(25)(73)\\sin65^\\circ=827.005855\\ldots=827\\text{ cm}^2\\quad(3\\text{ s.f.}).\\]\n\nUse half the product of the two sides and the sine of their included angle.",
+        "title": "Part (b) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q17-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(40-\\sqrt{1620}\\), so \\(a=40,\\ b=1620\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\sqrt{20}=2\\sqrt5,\\qquad(4-\\sqrt{20})(5-2\\sqrt5)=(4-2\\sqrt5)(5-2\\sqrt5).\\]\n\nSimplify the surd first.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[20-8\\sqrt5-10\\sqrt5+20=40-18\\sqrt5.\\]\n\nExpand; the product of the two surd terms is positive 20.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[18\\sqrt5=\\sqrt{18^2\\times5}=\\sqrt{1620},\\quad(4-\\sqrt{20})(5-2\\sqrt5)=40-\\sqrt{1620}.\\]\n\nThus the required integer values are a=40 and b=1620.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q18-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(\\frac{2x-3}{x-4}\\), \\(x\\ne-\\frac32,4\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[4x^2-9=(2x-3)(2x+3),\\qquad2x^2-5x-12=(2x+3)(x-4).\\]\n\nUse difference of squares for the numerator and factorise the denominator.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\frac{4x^2-9}{2x^2-5x-12}=\\frac{(2x-3)(2x+3)}{(2x+3)(x-4)}=\\frac{2x-3}{x-4}.\\]\n\nCancel the common factor, not individual terms.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "The original fraction requires \\(x\\ne-\\frac32\\) and \\(x\\ne4\\).\n\nCancellation does not restore excluded values.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q20-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(120\\text{ m/s}\\) to 2 significant figures.",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[99.5\\le s<100.5,\\quad1.675\\le t<1.685,\\quad0.45\\le u<0.55.\\]\n\nUse half a rounding unit on each side of the stated value.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "For \\(v=2s/t-u\\), the lower limiting value is \\[v_L=\\frac{2(99.5)}{1.685}-0.55=117.550890\\ldots\\text{ m/s}.\\]\n\nDecrease the numerator, increase the positive denominator and subtract the largest u.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "The upper limiting value is \\[v_U=\\frac{2(100.5)}{1.675}-0.45=119.55\\text{ m/s}.\\]\n\nIncrease the numerator, decrease the denominator and subtract the smallest u.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "Both limiting values round to \\(120\\text{ m/s}\\) to 2 significant figures. They do not round to the same integer, so \\[v=120\\text{ m/s}\\quad(2\\text{ s.f.}).\\]\n\nThis is the greatest common significant-figure accuracy justified throughout the interval.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q22-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(76\\text{ apples}\\)\n\n(b) \\(15/52\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The first class has width 15 g and frequency 9, so its density is \\(9/15=0.6\\). Its height is 6 small grid squares, so each vertical square represents density \\(0.1\\).\n\nFrequency is class width multiplied by frequency density.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "The classes below 175 g have densities \\(0.6,2.9,4.2,3.4\\) and widths \\(15,10,5,5\\), respectively.\n\nRead the bar heights using the calibrated vertical scale.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[N=15(0.6)+10(2.9)+5(4.2)+5(3.4)=9+29+21+17=76.\\]\n\nAdd the frequencies, not the heights.",
+        "title": "Part (a) | Step 3"
+      },
+      {
+        "body": "Above 180 g, the frequency from 180 to 185 is \\(5(2.4)=12\\), from 185 to 190 is \\(5(5)=25\\), and from 190 to 200 is \\(10(1.5)=15\\).\n\nUse only half of the 175-185 bar and all of the two heavier classes.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "\\[P(W>190\\mid W>180)=\\frac{15}{12+25+15}=\\frac{15}{52}.\\]\n\nRestrict the denominator to the large apples.",
+        "title": "Part (b) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q23-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x=48\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[P(\\text{one pink, one yellow})=\\frac{12}{x}\\frac{x-12}{x-1}+\\frac{x-12}{x}\\frac{12}{x-1}=\\frac{24(x-12)}{x(x-1)}.\\]\n\nInclude pink-then-yellow and yellow-then-pink, without replacement.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\frac{24(x-12)}{x(x-1)}=\\frac{18}{47}\\implies1128(x-12)=18x(x-1).\\]\n\nEquate to the given probability and cross-multiply.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[18x^2-1146x+13536=0\\implies3x^2-191x+2256=0.\\]\n\nRearrange and divide by 6.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "\\[(x-48)(3x-47)=0\\implies x=48\\text{ or }x=\\frac{47}{3}.\\]\n\nFactorise the quadratic.",
+        "title": "Solution | Step 4"
+      },
+      {
+        "body": "The number of marbles must be an integer, so \\(x=48\\).\n\nReject the non-integer root.",
+        "title": "Solution | Step 5"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q25-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(24.6^\\circ\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[BF=\\frac{12}{\\sin30^\\circ}=24\\text{ cm},\\qquad AB=\\frac{12}{\\tan30^\\circ}=12\\sqrt3\\text{ cm}.\\]\n\nUse right triangle ABF.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[BT=\\frac23 BF=16\\text{ cm}.\\]\n\nApply the given BF:BT ratio.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[AT=\\sqrt{AB^2+BT^2}=\\sqrt{432+256}=\\sqrt{688}=4\\sqrt{43}\\text{ cm}.\\]\n\nAB is perpendicular to BC in the rectangular base, so triangle ABT is right-angled at B.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "The projection of FT onto plane ABCD is AT because F lies vertically above A. Therefore the required angle is \\(\\theta=\\angle FTA\\).\n\nA line-plane angle is the angle between the line and its perpendicular projection onto the plane.",
+        "title": "Solution | Step 4"
+      },
+      {
+        "body": "\\[\\tan\\theta=\\frac{AF}{AT}=\\frac{12}{4\\sqrt{43}}=\\frac{3}{\\sqrt{43}},\\quad\\theta=24.583891\\ldots^\\circ=24.6^\\circ.\\]\n\nUse right triangle FAT and round to one decimal place.",
+        "figures": [
+          {
+            "alt": "Question 25, part main: completed solution diagram",
+            "src": "/assets/solution-diagrams/Jun2026/P1-Q25-main-P1-Q25.png"
+          }
+        ],
+        "title": "Solution | Step 5"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q01-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(2\\frac45\\times3\\frac37=9\\frac35\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[2\\frac45=\\frac{14}{5},\\qquad 3\\frac37=\\frac{24}{7}.\\]\n\nConvert each mixed number into an improper fraction.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\frac{14}{5}\\times\\frac{24}{7}=\\frac{2\\times24}{5}=\\frac{48}{5}=9\\frac35.\\]\n\nCancel the common factor 7, multiply, then convert back to a mixed number.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q03-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(e^{10}\\)\n\n(b) \\(g^3\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[e^7\\times e^3=e^{7+3}=e^{10}.\\]\n\nFor equal bases, add the indices when multiplying.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[g^5\\div g^2=g^{5-2}=g^3\\quad(g\\ne0).\\]\n\nFor equal bases, subtract the indices when dividing.",
+        "title": "Part (b) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q04-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(i) \\(1177.5\\text{ kg}\\)\n\n(ii) \\(1178.5\\text{ kg}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[1178-0.5=1177.5\\text{ kg}.\\]\n\nRounding to the nearest kilogram allows half a kilogram below the stated value.",
+        "title": "Part (i) | Step 1"
+      },
+      {
+        "body": "\\[1178+0.5=1178.5\\text{ kg}.\\]\n\nThe rounding interval is \\(1177.5\\le w<1178.5\\); the upper endpoint is the upper bound, not an included weight.",
+        "title": "Part (ii) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q05-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(80\\) red counters",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[0.45+0.31+5x+x=1.\\]\n\nThe four colours are mutually exclusive and exhaust all counters, so their probabilities sum to 1.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[6x=1-0.76=0.24,\\qquad x=0.04.\\]\n\nCollect the unknown probabilities and solve the linear equation.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[P(\\text{red})=5(0.04)=0.20,\\qquad N_{\\text{red}}=400(0.20)=80.\\]\n\nMultiply the red proportion by the total number of counters.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q08-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\((x-4)(x-8)\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[(-4)(-8)=32,\\qquad -4+(-8)=-12.\\]\n\nChoose two numbers with product 32 and sum -12.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[x^2-12x+32=(x-4)(x-8).\\]\n\nThe chosen numbers give the two constant terms in the factors.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q13-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(\\frac52\\)\n\n(b) \\(\\left(0,\\frac54\\right)\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[4y-10x-5=0\\quad\\Longrightarrow\\quad4y=10x+5\\quad\\Longrightarrow\\quad y=\\frac52x+\\frac54.\\]\n\nRearrange into the form y=mx+c.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "The gradient is \\(\\frac52\\).\n\nThe coefficient of x is the gradient.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[x=0\\quad\\Longrightarrow\\quad4y-5=0\\quad\\Longrightarrow\\quad y=\\frac54.\\]\n\nEvery point on the y-axis has x-coordinate zero.",
+        "title": "Part (b) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q16-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(\\frac{3x-4}{8x}\\)\n\n(b) \\(6x^3+21x^2-12x\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\frac58-\\frac{x+2}{4x}=\\frac{5x}{8x}-\\frac{2(x+2)}{8x},\\qquad x\\ne0.\\]\n\nUse 8x as a common denominator.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[\\frac{5x-2(x+2)}{8x}=\\frac{5x-2x-4}{8x}=\\frac{3x-4}{8x}.\\]\n\nSubtract the entire numerator of the second fraction and collect like terms.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[(2x-1)(x+4)=2x^2+8x-x-4=2x^2+7x-4.\\]\n\nMultiply each term in the first bracket by each term in the second.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "\\[3x(2x^2+7x-4)=6x^3+21x^2-12x.\\]\n\nMultiply every term by 3x.",
+        "title": "Part (b) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q18-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(\\frac17\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The only possible ordered number pairs are \\((1,4)\\) and \\((2,5)\\).\n\nThe second number must be exactly 3 more than the first, not merely differ by 3.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[P(1\\text{ then }4)=\\frac28\\times\\frac17,\\qquad P(2\\text{ then }5)=\\frac38\\times\\frac27.\\]\n\nThere are 7 cards remaining for the second draw; there are two 1s, three 2s, one 4 and two 5s.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[P=\\frac{2}{56}+\\frac{6}{56}=\\frac{8}{56}=\\frac17.\\]\n\nThe two ordered events are mutually exclusive, so add their probabilities.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q21-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(x=13\\)\n\n(b) \\(12\\) students.",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The French-and-German-only region is \\(16-x\\), and the German-and-Italian-only region is \\(15-x\\).\n\nThe totals 16 and 15 each include the triple intersection x.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[6+(16-x)+(15-x)+x=24.\\]\n\nThe four disjoint regions in the German set must total 24.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[37-x=24\\quad\\Longrightarrow\\quad x=13.\\]\n\nSolve for the common triple-intersection count.",
+        "title": "Part (a) | Step 3"
+      },
+      {
+        "body": "\\[FG\\text{ only}=16-13=3,\\qquad GI\\text{ only}=15-13=2.\\]\n\nUse the triple-intersection value from part (a).",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "\\[F\\text{ only}=32-(3+4+13)=12,\\qquad I\\text{ only}=27-(4+2+13)=8.\\]\n\nThe French-and-Italian-only count is the given 4.",
+        "title": "Part (b) | Step 2"
+      },
+      {
+        "body": "\\[n(F\\cup G\\cup I)=12+6+8+3+4+2+13=48.\\]\n\nSum all seven mutually exclusive interior regions.",
+        "title": "Part (b) | Step 3"
+      },
+      {
+        "body": "\\[n(\\text{none})=60-48=12.\\]\n\nSubtract the union from the total number of students.",
+        "title": "Part (b) | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q22-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(66.2\\text{ cm}^2\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\angle ABC=180^\\circ-62^\\circ-47^\\circ=71^\\circ.\\]\n\nThe three triangle angles sum to 180 degrees.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\frac{AB}{\\sin47^\\circ}=\\frac{13}{\\sin62^\\circ}\\quad\\Longrightarrow\\quad AB=\\frac{13\\sin47^\\circ}{\\sin62^\\circ}=10.7680208859\\ldots\\text{ cm}.\\]\n\nMatch each side to its opposite angle in the sine rule.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[\\text{Area}=\\frac12(13)\\left(\\frac{13\\sin47^\\circ}{\\sin62^\\circ}\\right)\\sin71^\\circ=66.1788645053\\ldots\\text{ cm}^2.\\]\n\nUse half the product of two sides times the sine of their included angle; retain unrounded values.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "\\[\\text{Area}=66.2\\text{ cm}^2\\quad\\text{(3 significant figures)}.\\]\n\nRound only the final area.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q26-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x=1-\\frac{3n}{2}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[27=3^3,\\qquad9=3^2,\\qquad\\frac{6^x}{2^x}=\\left(\\frac62\\right)^x=3^x.\\]\n\nWrite both sides in a common base.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\frac{27^x\\times3^{n+6}}{9^{4-n}}=3^{3x+n+6-2(4-n)}=3^{3x+3n-2}.\\]\n\nMultiply powers by adding indices and divide powers by subtracting indices.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[3^{3x+3n-2}=3^x\\quad\\Longrightarrow\\quad3x+3n-2=x.\\]\n\nThe base-3 exponential is one-to-one, so equal powers have equal indices.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "\\[2x=2-3n\\quad\\Longrightarrow\\quad x=1-\\frac{3n}{2}.\\]\n\nCollect the x terms and divide by 2.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q09-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(7\\)\n\n(b) \\(8m^{15}p^{12}\\)\n\n(c) \\(6cw^2(3c^4+5w)\\)\n\n(d) \\((x+9)(x-3)\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Since \\(n>0\\), \\(n^0=1\\). Hence \\(7n^0=7(1)=7\\).\n\nA nonzero number raised to power zero equals 1; only n is raised to zero.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[(2m^5p^4)^3=2^3m^{5\\times3}p^{4\\times3}=8m^{15}p^{12}.\\]\n\nCube the coefficient and multiply each exponent by 3.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "The highest common factor of \\(18c^5w^2\\) and \\(30cw^3\\) is \\(6cw^2\\).\n\nTake the numerical HCF and the smallest power of each shared variable.",
+        "title": "Part (c) | Step 1"
+      },
+      {
+        "body": "\\[18c^5w^2+30cw^3=6cw^2(3c^4+5w).\\]\n\nDivide each original term by the common factor.",
+        "title": "Part (c) | Step 2"
+      },
+      {
+        "body": "Two numbers with product \\(-27\\) and sum \\(6\\) are \\(9\\) and \\(-3\\).\n\nFor a monic quadratic, find a factor pair with the required sum.",
+        "title": "Part (d) | Step 1"
+      },
+      {
+        "body": "\\[x^2+6x-27=(x+9)(x-3).\\]\n\nThe cross terms are -3x+9x=6x.",
+        "title": "Part (d) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q12-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(A\\cap B=\\{25,26\\}\\)\n\n(b) \\((A\\cup B)^{\\prime}=\\{31,32\\}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Within the universal set, \\(A=\\{20,21,22,23,24,25,26\\}\\) and \\(B=\\{25,26,27,28,29,30\\}\\). Their common members are \\(25\\) and \\(26\\).\n\nIntersection consists of elements in both sets.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\(A\\cup B=\\{20,21,\\ldots,30\\}\\). The members of \\(\\mathcal E=\\{20,21,\\ldots,32\\}\\) outside this union are \\(31\\) and \\(32\\).\n\nTake the complement relative to the stated universal set, not all integers.",
+        "title": "Part (b) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q15-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(40.8\\text{ cm}\\) (1 decimal place).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\frac{80}{360}\\pi r^2=32\\pi\\quad\\Rightarrow\\quad r^2=32\\frac{360}{80}=144\\quad\\Rightarrow\\quad r=12\\text{ cm}.\\]\n\nUse the fraction of the full circle and choose the positive radius.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\text{Arc length}=\\frac{80}{360}(2\\pi\\times12)=\\frac{16\\pi}{3}\\text{ cm}.\\]\n\nThe same central-angle fraction applies to the circumference.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[P=12+12+\\frac{16\\pi}{3}=40.7551608\\ldots\\text{ cm}.\\]\n\nThe sector perimeter contains both radii as well as the arc.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q17-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(0.5\\overline{39}=\\dfrac{89}{165}\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Let \\(x=0.5\\overline{39}=0.5393939\\ldots\\). Then \\(10x=5.393939\\ldots\\) and \\(1000x=539.393939\\ldots\\).\n\nShift past the non-recurring digit and then one complete two-digit recurring block.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "Subtract: \\[1000x-10x=539.393939\\ldots-5.393939\\ldots=534.\\]\n\\[990x=534\\quad\\Rightarrow\\quad x=\\frac{534}{990}=\\frac{89}{165}.\\]\n\nIdentical infinite decimal tails cancel exactly; reduce the resulting fraction by 6.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q20-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(\\dfrac{15}{32}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Let \\(g=P(G)\\). With replacement, the draws are independent. \\[P(GG)=1-P(\\text{at least one red})=1-\\frac{39}{64}=\\frac{25}{64}.\\]\n\nThe complementary event to at least one red is two greens.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[g^2=\\frac{25}{64}\\quad\\Rightarrow\\quad g=\\frac58,\\qquad P(R)=1-\\frac58=\\frac38.\\]\n\nMultiply identical independent green probabilities and take the nonnegative root.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[P(\\text{exactly one red})=P(RG)+P(GR)=\\frac38\\frac58+\\frac58\\frac38=\\frac{30}{64}=\\frac{15}{32}.\\]\n\nThe two possible orders are mutually exclusive and must both be included.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q01-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x=52\\), so the hypotenuse is \\(52\\text{ cm}\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[x^2=20^2+48^2=400+2304=2704.\\]\n\nUse Pythagoras because the 20 cm and 48 cm sides meet at the right angle.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[x=\\sqrt{2704}=52.\\]\n\nTake the positive square root because x is a length.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q03-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(A^{\\prime}=\\{5,7,8,9,10,11\\}\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\(A=\\{1,2,3,4,6,12\\}\\). Remove these factors from the integers 1 to 12.\n\nThe complement contains precisely the universal-set elements not in A.",
+        "title": "Solution | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q04-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(x=-\\frac58\\).\n\n(c) \\(1\\).\n\n(d) \\(64r^6t^3\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[3x+6=1-5x.\\]\n\nExpand the bracket.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[8x=-5\\quad\\Rightarrow\\quad x=-\\frac58.\\]\n\nAdd 5x and subtract 6 on both sides, then divide by 8.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\(m^0=1\\) for \\(m\\ne0\\).\n\nAny nonzero base to the zero power equals 1.",
+        "title": "Part (c) | Step 1"
+      },
+      {
+        "body": "\\[(4r^2t)^3=4^3(r^2)^3t^3=64r^6t^3.\\]\n\nCube each factor and multiply the exponents in the power of a power.",
+        "title": "Part (d) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q09-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(55\\text{ m/s}\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\(198\\text{ km}=198000\\text{ m}\\) and \\(1\\text{ hour}=3600\\text{ s}\\).\n\nConvert both the distance and the time in the rate.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[198\\text{ km/h}=\\frac{198000}{3600}=55\\text{ m/s}.\\]\n\nMetres per second means metres divided by seconds.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q10-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(332\\text{ g}\\) (3 significant figures).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[V=\\pi r^2h=\\pi(4)^2(11)=176\\pi\\text{ cm}^3.\\]\n\nUse the cylinder volume formula.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[m=\\rho V=0.6(176\\pi)=105.6\\pi=331.7521842\\ldots\\text{ g}.\\]\n\nMass equals density times volume; keep full precision until the end.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[m=332\\text{ g}\\quad\\text{(3 significant figures)}.\\]\n\nRound the final mass as requested.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q11-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(8.4\\text{ cm}^2\\) (1 decimal place).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[DC=\\sqrt{36}=6\\text{ cm},\\qquad EG=6\\text{ cm}.\\]\n\nAll sides of the square have length equal to the square root of its area, and DC=EG.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\tan25^\\circ=\\frac{FG}{EG}\\quad\\Rightarrow\\quad FG=6\\tan25^\\circ=2.7978459\\ldots\\text{ cm}.\\]\n\nRelative to angle E, FG is opposite and EG is adjacent.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[\\text{Area}=\\frac12(EG)(FG)=\\frac12(6)(6\\tan25^\\circ)=8.3935378\\ldots\\text{ cm}^2.\\]\n\nThe base EG and height FG are perpendicular.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q13-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) Table entries, in order: \\(2.5,2,4.25,5.2\\).\n\n(b) The smooth curve \\(y=x+1/x\\) through the stated coordinates on \\([0.25,5]\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Use \\(y=x+1/x\\): \\[y(0.5)=0.5+2=2.5,\\quad y(1)=1+1=2,\\quad y(4)=4+0.25=4.25,\\quad y(5)=5+0.2=5.2.\\]\n\nSubstitute each required x-value into the formula.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "Plot \\[(0.25,4.25),\\ (0.5,2.5),\\ (1,2),\\ (2,2.5),\\ (3,10/3),\\ (4,4.25),\\ (5,5.2).\\]\n\nUse x horizontally and y vertically on the supplied grid; 10/3 is approximately 3.33.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "Join the points with one smooth curve for \\(0.25\\le x\\le5\\), descending to its minimum \\((1,2)\\) and then ascending.\n\nThe graph is curved, not a set of straight segments, and includes both endpoints.",
+        "figures": [
+          {
+            "alt": "Question 13, part b: completed solution diagram",
+            "src": "/assets/solution-diagrams/Jun2026/P2R-Q13-b-Q13b-graph.png"
+          }
+        ],
+        "title": "Part (b) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q14-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) Branch labels from top to bottom: \\(4/7,3/7\\) for A; \\(5/6,1/6\\) for B after either A result.\n\n(b) \\(\\frac{10}{21}\\).\n\n(c) \\(\\frac3{10}\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "From the start, label the Bag A branches \\(P(G_A)=4/7\\) and \\(P(R_A)=3/7\\).\n\nBag A has 7 counters in total.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "From each Bag A outcome, label the Bag B green branch \\(5/6\\) and red branch \\(1/6\\).\n\nBag B has 6 counters and is unaffected by the result from bag A.",
+        "figures": [
+          {
+            "alt": "Question 14, part a: completed solution diagram",
+            "src": "/assets/solution-diagrams/Jun2026/P2R-Q14-a-Q14a-tree.png"
+          }
+        ],
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[P(G_AG_B)=\\frac47\\times\\frac56=\\frac{20}{42}=\\frac{10}{21}.\\]\n\nBoth events must occur, so multiply along the green-green path.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "Let \\(r=P(R_C)\\). Then \\[\\frac37\\times\\frac16\\times r=\\frac3{70}\\quad\\Rightarrow\\quad r=\\frac35,\\qquad P(G_C)=\\frac25.\\]\n\nUse the given probability of three reds to find the bag C probabilities.",
+        "title": "Part (c) | Step 1"
+      },
+      {
+        "body": "Exactly one green means the disjoint outcomes \\(G_AR_BR_C\\), \\(R_AG_BR_C\\), or \\(R_AR_BG_C\\).\n\nThe single green counter can come from A, B or C.",
+        "title": "Part (c) | Step 2"
+      },
+      {
+        "body": "\\[P=\\frac47\\frac16\\frac35+\\frac37\\frac56\\frac35+\\frac37\\frac16\\frac25=\\frac2{35}+\\frac3{14}+\\frac1{35}=\\frac3{10}.\\]\n\nMultiply within each outcome and add the three mutually exclusive probabilities.",
+        "title": "Part (c) | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q16-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(n=-3\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\frac1{\\sqrt a}=a^{-1/2},\\qquad\\left(a^{-1/2}\\right)^6=a^{-3}.\\]\n\nA reciprocal changes the sign of the exponent and an outer power multiplies exponents.",
+        "title": "Solution | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q17-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(0.\\overline{814}=\\frac{22}{27}\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Let \\(z=0.\\overline{814}=0.814814814\\ldots\\). Then \\(1000z=814.814814\\ldots\\).\n\nMultiplication by 1000 aligns the repeating three-digit tails.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[1000z-z=814\\quad\\Rightarrow\\quad999z=814\\quad\\Rightarrow\\quad z=\\frac{814}{999}=\\frac{22}{27}.\\]\n\nSubtract to cancel the recurring tails, then cancel the common factor 37.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q19-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "Bar intervals/heights: \\([0,20]:0.7;\\ [20,25]:2.4;\\ [25,35]:3.2;\\ [35,50]:2\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Use \\(\\text{frequency density}=\\text{frequency}/\\text{class width}\\): \\[14/20=0.7,\\quad12/5=2.4,\\quad32/10=3.2,\\quad30/15=2.\\]\n\nHistogram areas, rather than heights alone, represent frequencies.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "Draw four adjoining rectangles on the supplied time and frequency-density axes: \\([0,20]\\) at height \\(0.7\\), \\([20,25]\\) at height \\(2.4\\), \\([25,35]\\) at height \\(3.2\\), and \\([35,50]\\) at height \\(2\\).\n\nEach rectangle starts at density 0 and has the stated class boundaries as its vertical edges; leave no gaps between classes.",
+        "figures": [
+          {
+            "alt": "Question 19, part main: completed solution diagram",
+            "src": "/assets/solution-diagrams/Jun2026/P2R-Q19-main-Q19-histogram.png"
+          }
+        ],
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q21-U1": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "Lower bound \\(=7.79\\) (3 significant figures).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[6.55\\le d<6.65,\\quad2.75\\le e<2.85,\\quad0.465\\le f<0.475.\\]\n\nUse half of each rounding unit to obtain the bounds.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[p_{\\mathrm{lower}}=\\frac{6.55-2.85}{0.475}=\\frac{3.70}{0.475}=7.789473684\\ldots.\\]\n\nMinimize the positive numerator by using the lower bound of d and upper bound of e; maximize the positive denominator.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[p_{\\mathrm{lower}}=7.79\\quad\\text{(3 significant figures)}.\\]\n\nRound the boundary value to the requested accuracy.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q05-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(c) \\(x=(t+2n)/a\\)\n\n(d) \\((-1,3]\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "From \\(t=ax-2n\\), add \\(2n\\) to give \\(t+2n=ax\\).\n\nUse the same operation on both sides.",
+        "title": "Part (c) | Step 1"
+      },
+      {
+        "body": "\\[x=\\frac{t+2n}{a}\\quad(a\\ne0).\\]\n\nDivide by the coefficient of x.",
+        "title": "Part (c) | Step 2"
+      },
+      {
+        "body": "Draw an open circle at \\(y=-1\\), a filled circle at \\(y=3\\), and a straight segment joining them. The represented interval is \\((-1,3]\\).\n\nThe strict lower inequality excludes -1; the non-strict upper inequality includes 3.",
+        "figures": [
+          {
+            "alt": "Question 5, part d: completed solution diagram",
+            "src": "/assets/solution-diagrams/Jun2026/P1-Q05-d-P1-Q05d.png"
+          }
+        ],
+        "title": "Part (d) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q09-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(6.51\\times10^{-2}\\)\n\n(b) \\(3.2\\times10^{131}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[0.0651=6.51\\times10^{-2}.\\]\n\nThe coefficient must be at least 1 and less than 10.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[(4\\times10^{56})(8\\times10^{74})=32\\times10^{130}=3.2\\times10^{131}.\\]\n\nMultiply the coefficients, add the exponents, and adjust the coefficient to standard form.",
+        "title": "Part (b) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q10-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x=-\\frac32,\\ y=5\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[4x+3y=9,\\qquad2x-2y=-13.\\]\n\nUse both equations.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "Double the second equation: \\(4x-4y=-26\\). Subtract this from the first: \\(7y=35\\), so \\(y=5\\).\n\nEqual x coefficients allow elimination.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[2x-2(5)=-13\\implies2x=-3\\implies x=-\\frac32.\\]\n\nSubstitute back to find the other unknown.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q14-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x=25\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Let the original sales be 100 units. After September they are \\(100\\times1.20=120\\); after both months they are \\(100\\times0.90=90\\).\n\nBoth overall percentages refer to the original sales.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[x=\\frac{120-90}{120}\\times100=25.\\]\n\nThe October decrease is measured relative to the September sales of 120.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q19-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(M=2p^2/25\\)\n\n(b) \\(M=18\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[M=kp^2,\\qquad2=k(5^2)\\implies k=\\frac{2}{25}.\\]\n\nIntroduce a constant of proportionality and use the given pair.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[M=\\frac{2p^2}{25}.\\]\n\nSubstitute the constant into the general relationship.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[M=\\frac{2(15)^2}{25}=18.\\]\n\nUse the formula from (a).",
+        "title": "Part (b) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q21-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(273.375\\text{ cm}^3\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[V=(3x)(x)(13.5-2x)=40.5x^2-6x^3,\\qquad0<x<6.75.\\]\n\nMultiply the three dimensions and require them all to be positive.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\frac{dV}{dx}=81x-18x^2=9x(9-2x).\\]\n\nDifferentiate each power of x.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "At a stationary point, \\(9x(9-2x)=0\\), giving \\(x=0\\) or \\(x=4.5\\). Only \\(x=4.5\\) is inside the domain.\n\nA stationary volume has zero derivative.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "The derivative is positive for \\(0<x<4.5\\) and negative for \\(4.5<x<6.75\\). Hence \\(x=4.5\\) gives the maximum.\n\nThe volume increases then decreases; its limiting endpoint volumes are zero.",
+        "title": "Solution | Step 4"
+      },
+      {
+        "body": "\\[V_{\\max}=3(4.5)^2(13.5-9)=273.375\\text{ cm}^3.\\]\n\nSubstitute the maximising value into the original volume.",
+        "title": "Solution | Step 5"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q24-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(58-3(x+4)^2\\)\n\n(b) \\(P=(-3,58)\\)\n\n(c) \\(x=-3\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[10-24x-3x^2=10-3(x^2+8x).\\]\n\nFactor -3 from the terms involving x.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[x^2+8x=(x+4)^2-16.\\]\n\nHalf the coefficient of x is 4.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[10-3\\big((x+4)^2-16\\big)=58-3(x+4)^2.\\]\n\nThus a=58, b=3 and c=4.",
+        "title": "Part (a) | Step 3"
+      },
+      {
+        "body": "\\[y=58-3\\big((x-1)+4\\big)^2=58-3(x+3)^2.\\]\n\nUse (a) with x replaced throughout by x-1.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "Since \\((x+3)^2\\ge0\\), the greatest y is 58, attained at \\(x=-3\\). Thus \\(P=(-3,58)\\).\n\nThe negative square term is largest when its square is zero.",
+        "title": "Part (b) | Step 2"
+      },
+      {
+        "body": "The parabola is symmetric about its maximum, so its line of symmetry is \\(x=-3\\).\n\nIn 58-3(x+3)^2, equal positive and negative offsets from -3 give the same y.",
+        "title": "Part (c) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q02-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(504=2^3\\times3^2\\times7\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[504=2\\times252=2^2\\times126=2^3\\times63.\\]\n\nDivide repeatedly by the prime 2.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[63=3\\times21=3^2\\times7,\\qquad 504=2^3\\times3^2\\times7.\\]\n\nAll remaining factors are prime; group repeated factors as powers.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q06-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(360\\text{ cm}^2\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[k=\\frac{24}{8}=3.\\]\n\nThe marked corresponding bases give the linear scale factor from A to B.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\operatorname{area}(A)=8\\times5=40\\text{ cm}^2.\\]\n\nThe 5 cm measurement is the perpendicular height.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[\\operatorname{area}(B)=k^2\\operatorname{area}(A)=3^2\\times40=360\\text{ cm}^2.\\]\n\nAreas scale by the square of the linear scale factor.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q07-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) Open circle at \\(1\\), ray to the left: \\((-\\infty,1)\\).\n\n(b) \\(y=-1,0,1,2,3\\)\n\n(c) \\(w<3.6\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Place an open circle at \\(1\\) and draw a horizontal ray from it to the left, with a left-pointing arrow. Do not fill the circle.\n\nThe strict inequality excludes \\(1\\) and includes every real number less than \\(1\\).",
+        "figures": [
+          {
+            "alt": "Question 7, part a: completed solution diagram",
+            "src": "/assets/solution-diagrams/Jun2026/P1R-Q07-a-Q07a-number-line.png"
+          }
+        ],
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[2\\le y+3<7\\quad\\Longrightarrow\\quad-1\\le y<4.\\]\n\nSubtract 3 from all three expressions.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "The integer values in this interval are \\(-1,0,1,2,3\\).\n\nInclude the lower endpoint but exclude 4.",
+        "title": "Part (b) | Step 2"
+      },
+      {
+        "body": "\\[8-5w>-10\\quad\\Longrightarrow\\quad-5w>-18.\\]\n\nSubtract 8 from both sides.",
+        "title": "Part (c) | Step 1"
+      },
+      {
+        "body": "\\[w<\\frac{18}{5}=3.6.\\]\n\nDivision by a negative number reverses the inequality sign.",
+        "title": "Part (c) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q09-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(81.8\\text{ kg}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[W_{11}=11(77)=847\\text{ kg},\\qquad W_8=8(75.2)=601.6\\text{ kg}.\\]\n\nTotal weight equals number of sheep multiplied by their mean weight.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[W_3=847-601.6=245.4\\text{ kg},\\qquad \\overline w_3=\\frac{245.4}{3}=81.8\\text{ kg}.\\]\n\nSubtract the known subgroup total and divide the remaining total by 3.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q10-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(208518\\text{ yen}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\text{annual multiplier}=1+\\frac{1.4}{100}=1.014.\\]\n\nAn increase of 1.4% retains the original amount and adds 1.4%.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[A=200000(1.014)^3=208518.1488\\text{ yen}.\\]\n\nApply the multiplier once for each of the 3 years.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[A\\approx208518\\text{ yen}.\\]\n\nRound to the nearest whole yen.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q11-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(290\\text{ cm}^2\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[3\\times11\\times x=264,\\qquad x=\\frac{264}{33}=8\\text{ cm}.\\]\n\nThe volume is the product of the three perpendicular edge lengths.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[S=2(3\\times11)+2(3\\times8)+2(11\\times8).\\]\n\nThere are two faces of each of the three rectangular sizes.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[S=66+48+176=290\\text{ cm}^2.\\]\n\nAdd all six face areas.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q12-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x=\\frac32,\\ y=-\\frac14\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[4x+4y=5,\\qquad x+2y=1.\\]\n\nUse the two given equations.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[4(x+2y)=4\\quad\\Longrightarrow\\quad4x+8y=4.\\]\n\nMultiply the second equation by 4 to match the coefficients of x.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[(4x+8y)-(4x+4y)=4-5\\quad\\Longrightarrow\\quad4y=-1,\\quad y=-\\frac14.\\]\n\nSubtract the first equation to eliminate x.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "\\[x+2\\left(-\\frac14\\right)=1\\quad\\Longrightarrow\\quad x=\\frac32.\\]\n\nSubstitute into the second original equation.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q14-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) Increasing cumulative-frequency graph through \\((0,0),(10,19),(20,37),(30,52),(40,63),(50,73),(60,80)\\).\n\n(b) Approximately \\(22\\) years.\n\n(c) Approximately \\(30\\) people.",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Use age (years) on the horizontal axis from \\(0\\) to \\(60\\), and cumulative frequency on the vertical axis from \\(0\\) to \\(80\\). Plot \\((0,0),(10,19),(20,37),(30,52),(40,63),(50,73),(60,80)\\).\n\nEach cumulative total is plotted at its upper age boundary.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "Join the points in order with an increasing curve or straight line segments. Do not draw bars or a staircase.\n\nThis represents the accumulated number up to each age boundary.",
+        "figures": [
+          {
+            "alt": "Question 14, part a: completed solution diagram",
+            "src": "/assets/solution-diagrams/Jun2026/P1R-Q14-a-Q14-cumulative-frequency.png"
+          }
+        ],
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[\\text{median position}=\\frac{80}{2}=40.\\]\n\nRead horizontally from cumulative frequency 40 to the graph, then vertically down to the age axis.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "Using straight segments, \\[20+\\frac{40-37}{52-37}\\times10=22\\text{ years}.\\]\n\nThe median is estimated between ages 20 and 30; a smooth graph gives a nearby estimate.",
+        "title": "Part (b) | Step 2"
+      },
+      {
+        "body": "Read vertically from age \\(16\\) to the graph, then horizontally to the cumulative-frequency axis.\n\nThe ordinate is the estimated number aged 16 and under.",
+        "title": "Part (c) | Step 1"
+      },
+      {
+        "body": "Using straight segments, \\[19+\\frac{16-10}{20-10}(37-19)=29.8\\approx30.\\]\n\nRound the estimated count to a whole number of people.",
+        "title": "Part (c) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q15-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x=60^\\circ\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\text{interior angle of a regular decagon}=\\frac{(10-2)180^\\circ}{10}=144^\\circ.\\]\n\nBC and CD are consecutive sides of the regular decagon.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\text{reflex interior angle at C}=360^\\circ-144^\\circ=216^\\circ.\\]\n\nThe pentagon BCDEF is concave at C, and its interior lies on the other side from the decagon interior angle.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[75^\\circ+216^\\circ+x+109^\\circ+80^\\circ=(5-2)180^\\circ=540^\\circ,\\]\n\nThe interior-angle sum formula also applies to a simple concave pentagon.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "\\[x=540^\\circ-480^\\circ=60^\\circ.\\]\n\nSubtract the four known interior angles.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q17-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(\\frac{\\mathrm dy}{\\mathrm dx}=3x^2+10x-8\\)\n\n(b) \\(P=(-4,48)\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\frac{\\mathrm dy}{\\mathrm dx}=3x^2+10x-8.\\]\n\nApply the power rule to each term of y=x^3+5x^2-8x.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[3x^2+10x-8=0\\quad\\Longrightarrow\\quad(3x-2)(x+4)=0.\\]\n\nAt a stationary point the derivative is zero.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "\\[x=\\frac23\\quad\\text{or}\\quad x=-4.\\]\n\nSet each factor equal to zero.",
+        "title": "Part (b) | Step 2"
+      },
+      {
+        "body": "P has the smaller x-coordinate, so \\(x_P=-4\\). Then \\[y_P=(-4)^3+5(-4)^2-8(-4)=-64+80+32=48.\\]\n\nChoose the left-hand stationary point and substitute into the original curve equation.",
+        "title": "Part (b) | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q19-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(\\angle SPO=42^\\circ\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\angle PQR=\\frac{170^\\circ}{2}=85^\\circ.\\]\n\nThe angle at the centre is twice the angle at the circumference subtended by the same arc PR containing S.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\angle PSR=180^\\circ-85^\\circ=95^\\circ.\\]\n\nOpposite angles of cyclic quadrilateral PQRS sum to 180 degrees.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[\\angle SPO=360^\\circ-(170^\\circ+53^\\circ+95^\\circ)=42^\\circ.\\]\n\nThe interior angles of quadrilateral PSRO sum to 360 degrees; its other angles are POR, ORS and PSR.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q20-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(y=810\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[y=kt^2,\\qquad40=k(4^2)\\quad\\Longrightarrow\\quad k=\\frac52.\\]\n\nDirect proportionality to t squared means a constant times t squared.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[t=c\\sqrt[3]{x},\\qquad12=c\\sqrt[3]{8}=2c\\quad\\Longrightarrow\\quad c=6.\\]\n\nFind the second proportionality constant using the given pair of values.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[x=27\\quad\\Longrightarrow\\quad t=6\\sqrt[3]{27}=18.\\]\n\nUse the cube-root relationship first.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "\\[y=\\frac52(18)^2=810.\\]\n\nSubstitute the new value of t into the square relationship.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q23-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(x=0\\) must be excluded.\n\n(b) \\(gf(0.5)=15\\)\n\n(c) \\(g^{-1}(x)=1+\\frac{\\sqrt{x-11}}{2},\\quad x\\ge11\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "For \\(f(x)=\\frac1x\\), the denominator is zero when \\(x=0\\).\n\nDivision by zero is undefined, so this input must be excluded.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[f(0.5)=\\frac{1}{0.5}=2.\\]\n\nIn gf, apply f first.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "\\[gf(0.5)=g(2)=4(2)^2-8(2)+15=16-16+15=15.\\]\n\nThe input 2 lies in the stated domain x>=1 of g.",
+        "title": "Part (b) | Step 2"
+      },
+      {
+        "body": "\\[y=4x^2-8x+15=4(x-1)^2+11.\\]\n\nComplete the square to isolate the expression containing x.",
+        "title": "Part (c) | Step 1"
+      },
+      {
+        "body": "\\[(x-1)^2=\\frac{y-11}{4},\\qquad x-1=\\frac{\\sqrt{y-11}}{2}.\\]\n\nChoose the nonnegative root because the domain of g is x>=1.",
+        "title": "Part (c) | Step 2"
+      },
+      {
+        "body": "\\[x=1+\\frac{\\sqrt{y-11}}{2}.\\]\n\nRearrange to make the original input the subject.",
+        "title": "Part (c) | Step 3"
+      },
+      {
+        "body": "\\[g^{-1}(x)=1+\\frac{\\sqrt{x-11}}{2},\\qquad x\\ge11.\\]\n\nExchange the input and output labels; the range of g becomes the domain of the inverse.",
+        "title": "Part (c) | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q24-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(4x+5y-58=0\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[m_{CP}=\\frac{6-1}{7-3}=\\frac54.\\]\n\nFind the gradient of the radius from the centre C=(3,1) to P=(7,6).",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[m_L=-\\frac45.\\]\n\nThe tangent is perpendicular to the radius at P, so its gradient is the negative reciprocal.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[y-6=-\\frac45(x-7).\\]\n\nUse the tangent gradient and the given point of contact.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "\\[5y-30=-4x+28\\quad\\Longrightarrow\\quad4x+5y-58=0.\\]\n\nMultiply by 5 and collect all terms on one side to obtain integer coefficients.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q25-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(\\overrightarrow{OD}=8\\mathbf a+5\\mathbf b\\)\n\n(b) \\(OP:PD=20:21\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\overrightarrow{CD}=\\frac32(2\\mathbf a+2\\mathbf b)=3\\mathbf a+3\\mathbf b.\\]\n\nUse the stated relationship between CD and AC.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[\\overrightarrow{OD}=\\overrightarrow{OA}+\\overrightarrow{AC}+\\overrightarrow{CD}=3\\mathbf a+(2\\mathbf a+2\\mathbf b)+(3\\mathbf a+3\\mathbf b)=8\\mathbf a+5\\mathbf b.\\]\n\nAdd consecutive vectors along the route O-A-C-D.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[\\overrightarrow{OC}=3\\mathbf a+(2\\mathbf a+2\\mathbf b)=5\\mathbf a+2\\mathbf b,\\qquad\\overrightarrow{BC}=5\\mathbf a-2\\mathbf b.\\]\n\nUse OC=OA+AC and BC=OC-OB.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "Write \\(\\overrightarrow{OP}=t\\overrightarrow{OD}=8t\\mathbf a+5t\\mathbf b\\). Also, because P lies on BC, \\[\\overrightarrow{OP}=\\overrightarrow{OB}+s\\overrightarrow{BC}=5s\\mathbf a+(4-2s)\\mathbf b.\\]\n\nUse one scalar parameter on each of the two intersecting lines.",
+        "title": "Part (b) | Step 2"
+      },
+      {
+        "body": "\\[8t=5s,\\qquad5t=4-2s,\\qquad s=\\frac85t.\\]\n\nEquate the coefficients of the two nonparallel base vectors.",
+        "title": "Part (b) | Step 3"
+      },
+      {
+        "body": "\\[5t=4-\\frac{16}{5}t\\quad\\Longrightarrow\\quad41t=20\\quad\\Longrightarrow\\quad t=\\frac{20}{41}.\\]\n\nSubstitute the first relation into the second and solve.",
+        "title": "Part (b) | Step 4"
+      },
+      {
+        "body": "\\[OP:PD=t:(1-t)=\\frac{20}{41}:\\frac{21}{41}=20:21.\\]\n\nOD is divided into the fractions t and 1-t at P.",
+        "title": "Part (b) | Step 5"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q01-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(2^2\\times3^2\\times5^3\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[4500=45\\times100=(9\\times5)(4\\times25).\\]\n\nSplit into factors that are easy to prime-factorise.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[4500=(3^2\\times5)(2^2\\times5^2)=2^2\\times3^2\\times5^3.\\]\n\nExpress each factor as prime powers and combine powers of 5.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q02-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(63:95\\)\n\n(b) \\(5n-2\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[u_{40}=8(40)-5=315,\\qquad u_{60}=8(60)-5=475.\\]\n\nSubstitute the two term numbers into the given rule.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[315:475=(315\\div5):(475\\div5)=63:95.\\]\n\nDivide both entries by their highest common factor, 5.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "The common difference is \\(8-3=5\\), so the rule has the form \\(5n+c\\).\n\nA constant difference gives a linear nth term.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "At \\(n=1\\), \\(5+c=3\\), giving \\(c=-2\\). Thus \\(u_n=5n-2\\).\n\nUse the first term to find the constant.",
+        "title": "Part (b) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q03-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(27<h\\le31\\)\n\n(b) \\(26.8\\text{ hours}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The greatest frequency is \\(15\\), in the interval \\(27<h\\le31\\).\n\nThe modal class is the class with the highest frequency.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "The class midpoints are \\(17,21,25,29,33\\) hours.\n\nUse the midpoint of each class as a representative value.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "\\[\\sum fm=2(17)+5(21)+12(25)+15(29)+6(33)\\]\n\\[=34+105+300+435+198=1072.\\]\n\nMultiply each midpoint by its frequency and add.",
+        "title": "Part (b) | Step 2"
+      },
+      {
+        "body": "\\[\\text{Estimated mean}=\\frac{1072}{2+5+12+15+6}=\\frac{1072}{40}=26.8\\text{ hours}.\\]\n\nDivide the estimated total by the number of candles.",
+        "title": "Part (b) | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q04-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(36\\%\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\text{Increase}=612-450=162.\\]\n\nFind the change from the original number.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\text{Percentage increase}=\\frac{162}{450}\\times100=36\\%.\\]\n\nExpress the increase as a percentage of the July value, not the August value.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q05-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) Enlargement with scale factor \\(2\\) and centre \\((1,3)\\).\n\n(b) \\(C:(7,1),(8,1),(7,3)\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Triangle \\(A\\) has vertices \\((3,4),(4,4),(3,6)\\); the corresponding vertices of \\(B\\) are \\((5,5),(7,5),(5,9)\\). The lengths have doubled.\n\nRead corresponding vertices and compare side lengths.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "For enlargement factor \\(2\\), the centre \\(O\\) satisfies \\(B=O+2(A-O)\\), so \\(O=2A-B\\). Using \\((3,4)\\mapsto(5,5)\\) gives \\(O=(6,8)-(5,5)=(1,3)\\).\n\nFind the fixed centre from a corresponding pair; the other pairs give the same centre.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "Add \\((4,-3)\\) to every vertex: \\((3,4)\\mapsto(7,1)\\), \\((4,4)\\mapsto(8,1)\\), and \\((3,6)\\mapsto(7,3)\\). Plot these three points, join them with straight sides and label the triangle \\(C\\).\n\nA translation moves every point by the same vector.",
+        "figures": [
+          {
+            "alt": "Question 5, part b: completed solution diagram",
+            "src": "/assets/solution-diagrams/Jun2026/P2-Q05-b-P2-Q05b.png"
+          }
+        ],
+        "title": "Part (b) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q06-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x=130\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The sum of the interior angles of a pentagon is \\((5-2)180^\\circ=540^\\circ\\).\n\nUse the interior-angle sum formula.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[96+91+93+x+x=540\\quad\\Rightarrow\\quad 2x=260\\quad\\Rightarrow\\quad x=130.\\]\n\nSubtract the three known angles and divide the remainder equally.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q07-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(L=23.1\\text{ cm}\\) (3 significant figures).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[V_{\\text{cylinder}}=\\pi r^2h=\\pi(7)^2(18)=882\\pi\\text{ cm}^3.\\]\n\nUse the stated radius, not a diameter.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[V_{\\text{prism}}=120L,\\qquad120L=882\\pi\\quad\\Rightarrow\\quad L=\\frac{882\\pi}{120}=23.090706\\ldots.\\]\n\nPrism volume equals cross-sectional area times length; equate the two volumes.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q08-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(2800\\text{ zloty}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Let the original membership cost be \\(C\\) zloty. After a \\(17\\%\\) increase, \\(1.17C=3276\\).\n\nThe new value is 117% of the original.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[C=\\frac{3276}{1.17}=2800\\text{ zloty}.\\]\n\nDivide by the increase multiplier.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q10-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(476\\text{ euros per month}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The annual multiplier is \\(1-0.15=0.85\\). After 3 years the value is \\[32000(0.85)^3=19652\\text{ euros}.\\]\n\nApply the decrease to each successive year, giving a power of 3.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "Lena still needs \\(19652-2516=17136\\) euros. There are \\(3\\times12=36\\) months.\n\nSubtract her existing savings and convert years to months.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[\\text{Monthly saving}=\\frac{17136}{36}=476\\text{ euros}.\\]\n\nDivide the remaining target equally over the months.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q11-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(5\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[3.6\\times10^{24}=36\\times10^{23}=(2^2\\times3^2)(2\\times5)^{23}=2^{25}3^2 5^{23}.\\]\n\nRewrite with an integer coefficient, then decompose 36 and 10 into primes.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "The only prime factors are \\(2,3,5\\), so the highest is \\(5\\).\n\nA larger composite factor is not a prime factor.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q13-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(142.2\\text{ grams}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Tree A contributes \\(12\\times150=1800\\) grams.\n\nTotal weight equals count times mean weight.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "Tree C has \\(2610\\div145=18\\) apples.\n\nNumber of items equals total divided by mean.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "The total weight is \\(1800+2700+2610=7110\\) grams and the total number of apples is \\(12+20+18=50\\).\n\nAdd weights and counts separately; do not average the three group means.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "\\[\\text{Combined mean}=\\frac{7110}{50}=142.2\\text{ grams}.\\]\n\nDivide the total weight by the total count.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q14-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(117\\text{ kg}\\) approximately.\n\n(b) \\(16\\text{ kg}\\) approximately.",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The median is the \\(60/2=30\\)th value. Draw horizontally from cumulative frequency \\(30\\) to the curve, then vertically to the weight axis: about \\(117\\text{ kg}\\).\n\nThe median splits the 60 observations in half.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "Read the lower quartile at cumulative frequency \\(60/4=15\\), giving \\(Q_1\\approx112\\text{ kg}\\). Read the upper quartile at cumulative frequency \\(3(60)/4=45\\), giving \\(Q_3\\approx128\\text{ kg}\\).\n\nQuartiles occur at one-quarter and three-quarters of the total frequency.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "\\[\\text{IQR}=Q_3-Q_1\\approx128-112=16\\text{ kg}.\\]\n\nInterquartile range is upper quartile minus lower quartile.",
+        "title": "Part (b) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q16-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(50\\)\n\n(b) \\(3\\)\n\n(c) \\(gf(x)=3x^2+24x+50\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[g(4)=3(4)^2+2=48+2=50.\\]\n\nSubstitute 4 for the function input.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "If \\(y=4+x\\), then \\(x=y-4\\), so \\(f^{-1}(x)=x-4\\).\n\nReverse the input-output relationship.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "\\[f^{-1}(7)=7-4=3.\\]\n\nApply the inverse function to 7.",
+        "title": "Part (b) | Step 2"
+      },
+      {
+        "body": "\\[gf(x)=g(f(x))=g(x+4)=3(x+4)^2+2.\\]\n\nApply f first and use its whole output as the input of g.",
+        "title": "Part (c) | Step 1"
+      },
+      {
+        "body": "\\[3(x^2+8x+16)+2=3x^2+24x+50.\\]\n\nExpand and collect the constant terms.",
+        "title": "Part (c) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q18-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x=\\pm\\sqrt{\\dfrac{3w-6a}{a+1}}\\), for \\(a\\ne-1\\) and nonnegative radicand.",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[a=\\frac{3w-x^2}{x^2+6}\\quad\\Rightarrow\\quad a(x^2+6)=3w-x^2.\\]\n\nMultiply by x^2+6, which is positive for real x.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[ax^2+6a=3w-x^2\\quad\\Rightarrow\\quad ax^2+x^2=3w-6a.\\]\n\nCollect both terms involving x^2 on one side.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[(a+1)x^2=3w-6a\\quad\\Rightarrow\\quad x^2=\\frac{3w-6a}{a+1}.\\]\n\nFactor out x^2 and divide by a+1, assuming a is not -1.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "\\[x=\\pm\\sqrt{\\frac{3w-6a}{a+1}}\\quad(a\\ne-1).\\] For real solutions the radicand must be nonnegative. If \\(a=-1\\), the original equation instead requires \\(w=-2\\); then every real \\(x\\) satisfies it.\n\nTaking square roots gives both signs; handle separately the value excluded by division.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q19-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(64^\\circ\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\(\\angle BDE=\\angle ABE=52^\\circ\\), by the alternate segment theorem for tangent \\(AB\\) and chord \\(BE\\).\n\nThe angle between a tangent and chord equals the angle in the opposite segment.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "Since \\(ED=BD\\), the base angles \\(\\angle BED\\) and \\(\\angle EBD\\) are equal. Thus \\[\\angle BED=\\frac{180^\\circ-52^\\circ}{2}=64^\\circ.\\]\n\nEqual sides in triangle EBD subtend equal opposite angles, and its angles sum to 180 degrees.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q21-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) Gradient \\(\\approx-5\\).\n\n(b) \\(x\\approx2.0\\) or \\(x\\approx4.4\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "At \\(x=1\\), the point is approximately \\((1,4)\\). Draw a tangent there, extending at least \\(3\\text{ cm}\\). A suitable approximate tangent is \\(y=-5x+9\\), through \\((0.5,6.5)\\) and \\((2,-1)\\).\n\nThe gradient at a point is estimated by the gradient of its tangent; use two well-separated points on the line.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[\\text{Gradient}\\approx\\frac{-1-6.5}{2-0.5}=\\frac{-7.5}{1.5}=-5.\\]\n\nCalculate change in y divided by change in x using the axis values.",
+        "figures": [
+          {
+            "alt": "Question 21, part a: completed solution diagram",
+            "src": "/assets/solution-diagrams/Jun2026/P2-Q21-a-P2-Q21a.png"
+          }
+        ],
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[x=3+\\tfrac12 f(x)\\quad\\Rightarrow\\quad f(x)=2x-6.\\]\n\nRearrange so the given curve y=f(x) can be intersected by a straight line.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "Draw \\(y=2x-6\\) through \\((0,-6),(3,0),(4.5,3)\\) on the same grid. Read the x-coordinates of its two intersections with the curve: approximately \\(2.0\\) and \\(4.4\\).\n\nEach intersection has equal y-values on the line and curve and therefore solves the original equation.",
+        "figures": [
+          {
+            "alt": "Question 21, part b: completed solution diagram",
+            "src": "/assets/solution-diagrams/Jun2026/P2-Q21-b-P2-Q21b.png"
+          }
+        ],
+        "title": "Part (b) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q22-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "Anna walks \\(5.5\\text{ m}\\) further (1 decimal place).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\overrightarrow{AB}=\\binom{21}{14}-\\binom{2}{8}=\\binom{19}{6},\\quad \\overrightarrow{AC}=\\binom{12}{3}-\\binom{2}{8}=\\binom{10}{-5},\\]\n\\[\\overrightarrow{CB}=\\binom{21}{14}-\\binom{12}{3}=\\binom{9}{11}.\\]\n\nSubtract the starting position vector from the finishing position vector.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[AB=\\sqrt{19^2+6^2}=\\sqrt{397},\\quad AC=\\sqrt{10^2+(-5)^2}=\\sqrt{125},\\quad CB=\\sqrt{9^2+11^2}=\\sqrt{202}.\\]\n\nThe modulus of a two-dimensional vector is the square root of the sum of squares of its components.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[\\text{Extra distance}=AC+CB-AB=\\sqrt{125}+\\sqrt{202}-\\sqrt{397}=5.468151\\ldots\\text{ m}.\\]\n\nCompare Anna's two-stage route with Ria's direct route; do not round the intermediate lengths.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q23-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(\\left(-\\dfrac15,-\\dfrac{13}{5}\\right)\\) and \\((2,4)\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Substitute \\(y=3x-2\\) into \\(x^2+y^2-2y=12\\): \\[x^2+(3x-2)^2-2(3x-2)=12.\\]\n\nBoth equations must hold at an intersection.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[x^2+9x^2-12x+4-6x+4=12\\]\n\\[10x^2-18x-4=0\\quad\\Rightarrow\\quad5x^2-9x-2=0.\\]\n\nExpand carefully, collect like terms, and divide by 2.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[(5x+1)(x-2)=0\\quad\\Rightarrow\\quad x=-\\frac15\\text{ or }x=2.\\]\n\nUse factorisation and the zero-product property.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "When \\(x=-\\tfrac15\\), \\(y=3(-\\tfrac15)-2=-\\tfrac{13}{5}\\). When \\(x=2\\), \\(y=3(2)-2=4\\).\n\nSubstitute each root into the line, preserving the coordinate pairings.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q24-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(3.6\\text{ cm}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The straight generators shown through \\(A\\) give equal vertex angles, so the cones are similar. The area ratio \\(4:9\\) gives length ratio \\(\\sqrt4:\\sqrt9=2:3\\).\n\nFor similar solids, surface areas scale as the square of corresponding lengths.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "The heights total \\(30\\text{ cm}\\), so \\[h_1=\\frac25(30)=12\\text{ cm},\\qquad h_2=\\frac35(30)=18\\text{ cm}.\\]\n\nSplit the total in the common length ratio 2:3.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[\\frac13\\pi r_1^2(12)=23.04\\pi\\quad\\Rightarrow\\quad4r_1^2=23.04\\quad\\Rightarrow\\quad r_1=\\sqrt{5.76}=2.4\\text{ cm}.\\]\n\nUse the volume of the first cone and choose a positive radius.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "\\[r_2=\\frac32r_1=\\frac32(2.4)=3.6\\text{ cm}.\\]\n\nRadii scale by the same factor as the heights.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q25-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(U_{4k}=635\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "With first term \\(3\\) and difference \\(8\\), \\[S_n=\\frac n2[2(3)+(n-1)8]=\\frac n2(8n-2)=4n^2-n.\\]\n\nUse the arithmetic-series sum formula with the given first term and common difference.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[S_{5k}=100k^2-5k,\\qquad S_{3k}=36k^2-3k.\\]\n\\[(100k^2-5k)-(36k^2-3k)=25560\\quad\\Rightarrow\\quad64k^2-2k-25560=0.\\]\n\nSubstitute 5k and 3k as the term counts, then subtract the complete expressions.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[32k^2-k-12780=0\\quad\\Rightarrow\\quad(k-20)(32k+639)=0.\\]\nThe roots are \\(k=20\\) and \\(k=-639/32\\). Reject the negative root because the numbers of terms must be positive.\n\nFactor the quadratic and apply the contextual restriction.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "\\[U_n=3+(n-1)8=8n-5,\\qquad U_{4k}=U_{80}=8(80)-5=635.\\]\n\nUse the nth-term formula with 4k=80, not with k=20.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q26-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\((-5,12)\\)\n\n(b) Reflection in the y-axis.\n\n(c) \\(a=2,\\quad b=60,\\quad c=3\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "For \\(y=3f(x)\\), x-coordinates are unchanged and y-coordinates are multiplied by \\(3\\). Thus \\((-5,4)\\mapsto(-5,12)\\).\n\nThe vertical scale factor is positive, so a minimum remains a minimum.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "For \\(Q(x)=2-(x+3)^2\\), \\[Q(-x)=2-(-x+3)^2=2-(3-x)^2=R(x).\\] Replacing \\(x\\) by \\(-x\\) reflects the graph in the y-axis.\n\nThe point mapping is (x,y) to (-x,y).",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "The maximum is \\(5\\) and the minimum is \\(1\\), so \\[a=\\frac{5-1}{2}=2,\\qquad c=\\frac{5+1}{2}=3.\\]\n\nThe positive amplitude is half the range; the vertical shift is the midline.",
+        "title": "Part (c) | Step 1"
+      },
+      {
+        "body": "A maximum occurs at \\(x=-60^\\circ\\). For positive \\(a\\), cosine is maximal when \\(x+b=0^\\circ\\) modulo \\(360^\\circ\\), giving \\(b=60\\) in the stated interval. Hence \\(y=2\\cos(x+60)^\\circ+3\\).\n\nRead the phase from a maximum and apply 0<b<360.",
+        "title": "Part (c) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q02-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(u_n=20-6n\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The common difference is \\(8-14=-6\\).\n\nEach successive term decreases by 6.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[u_n=14+(n-1)(-6)=20-6n.\\]\n\nUse first term plus (n-1) common differences.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q04-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(b) \\(P=34\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[P=(-7)^2-5(3)=49-15=34.\\]\n\nThe square applies to the whole negative number, so (-7) squared is positive.",
+        "title": "Part (b) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q05-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(\\$10\\) more.",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\text{Sarah to B}=400\\times\\frac{3}{2+3}=240\\text{ dollars}.\\]\n\nCharity B receives 3 of the 5 equal shares.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "Dej gives to A and B in the ratio \\(1:2\\), so \\[\\text{Dej to B}=375\\times\\frac{2}{3}=250\\text{ dollars}.\\]\n\nTwice as much to B means that B receives 2 of the 3 shares.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[250-240=10\\text{ dollars}.\\]\n\nSubtract the two donations to charity B.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q06-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "Median \\(=5.5\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The largest card is 8, so the smallest is \\(8-7=1\\).\n\nRange is largest minus smallest.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "The fifth card must be 8, since 8 is the mode.\n\nOnly the fifth position can supply another 8 in the ordered cards.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "If the third card is \\(z\\), then \\[1+3+z+7+8+8=31\\quad\\Rightarrow\\quad z=4.\\]\n\nUse the total of all six cards.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "The ordered cards are \\(1,3,4,7,8,8\\), so \\[\\text{median}=\\frac{4+7}{2}=5.5.\\]\n\nWith six values, average the third and fourth.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q07-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(0.00004\\).\n\n(b) \\(1.2\\times10^{231}\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[4\\times10^{-5}=\\frac4{100000}=0.00004.\\]\n\nMove the decimal point five places left.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[(6\\times10^{158})(2\\times10^{72})=12\\times10^{230}=1.2\\times10^{231}.\\]\n\nMultiply the coefficients and add the exponents; normalize the coefficient into [1,10).",
+        "title": "Part (b) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q08-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(35000\\text{ euros}\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Let the old salary be \\(s\\) euros. Then \\[1.04s=36400.\\]\n\nThe increased salary is 104% of the original.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[s=\\frac{36400}{1.04}=35000.\\]\n\nDivide by the percentage multiplier.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q12-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x\\le0,\\quad y\\ge-x,\\quad 2x+5y\\le12\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\(x\\le0\\).\n\nR lies to the left of the y-axis.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\(y\\ge-x\\).\n\nR lies above the line y=-x.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\(2x+5y\\le12\\).\n\nR lies below the other line. All three boundaries are solid, so equality is included.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q15-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(10\\text{ minutes}\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The overall median is the sixth value, 9. The lower five values are \\(2,2,3,6,7\\), and the upper five are \\(9,12,13,17,20\\).\n\nExclude the overall median when forming the two halves.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[Q_1=3,\\quad Q_3=13,\\quad \\mathrm{IQR}=13-3=10\\text{ minutes}.\\]\n\nTake each half-median, then subtract the lower quartile from the upper.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q18-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(\\overrightarrow{AC}=\\begin{pmatrix}6\\\\-3\\end{pmatrix}\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\overrightarrow{AC}=\\overrightarrow{AB}+\\overrightarrow{BC}=\\overrightarrow{AB}-\\overrightarrow{CB}.\\]\n\nReverse CB to travel from B to C.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\overrightarrow{AC}=\\begin{pmatrix}4\\\\5\\end{pmatrix}-\\begin{pmatrix}-2\\\\8\\end{pmatrix}=\\begin{pmatrix}6\\\\-3\\end{pmatrix}.\\]\n\nSubtract corresponding components.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q20-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x=\\frac{4y-5}{2y+3}\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[y(4-2x)=3x+5\\quad\\Rightarrow\\quad4y-2xy=3x+5.\\]\n\nMultiply by the denominator, which is nonzero in the original expression.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[4y-5=3x+2xy=x(3+2y).\\]\n\nCollect both x-terms together and factor out x.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[x=\\frac{4y-5}{2y+3}.\\]\n\nDivide by 2y+3. The inverse formula requires y not equal to -3/2; the original requires x not equal to 2.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q22-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\((x,y)=(\\frac34,-\\frac{11}{4})\\) or \\((3,4)\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[(3x-5)^2=x^2+7\\quad\\Rightarrow\\quad9x^2-30x+25=x^2+7.\\]\n\nSubstitute the linear expression for y into the nonlinear equation.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[8x^2-30x+18=0\\quad\\Rightarrow\\quad4x^2-15x+9=0.\\]\n\nCollect all terms on one side and divide by 2.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[(4x-3)(x-3)=0\\quad\\Rightarrow\\quad x=\\frac34\\text{ or }x=3.\\]\n\nFactorize the quadratic and set each factor to zero.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "For \\(x=\\frac34\\), \\(y=3(\\frac34)-5=-\\frac{11}{4}\\). For \\(x=3\\), \\(y=9-5=4\\).\n\nFind the corresponding y-value for each x, preserving the pairs.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q23-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(y=25\\), so the height is \\(25\\%\\) greater.",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[h_K:h_L=\\sqrt[3]{125}:\\sqrt[3]{216}=5:6.\\]\n\nCorresponding lengths have the cube-root ratio of volumes.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[h_K:h_M=\\sqrt4:\\sqrt9=2:3.\\]\n\nCorresponding lengths have the square-root ratio of surface areas.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "Take \\(h_K=10\\) units. Then \\(h_L=12\\) and \\(h_M=15\\), so \\[y=\\frac{15-12}{12}\\times100=25.\\]\n\nAlign the shared K-length and compare the increase relative to L.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q24-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(5040^\\circ\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Let \\(\\theta=\\angle CBE\\). Then \\[\\frac{\\theta}{360}\\,2\\pi(4.5)=\\frac3{10}\\pi\\quad\\Rightarrow\\quad\\theta=12^\\circ.\\]\n\nThe arc is theta/360 of a full circumference.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\(\\angle ABC=180^\\circ-12^\\circ=168^\\circ\\), so the regular polygon has exterior angle \\(12^\\circ\\).\n\nA, B and E are collinear, so the sector angle is supplementary to the interior angle.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[n=\\frac{360}{12}=30,\\qquad\\text{sum}=(30-2)180^\\circ=5040^\\circ.\\]\n\nExterior angles sum to 360 degrees, and an n-gon has interior-angle sum (n-2) times 180 degrees.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q25-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(a=-3,\\qquad b=90\\).\n\n(b) \\(\\left(\\frac p2,q+5\\right)\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The graph has maximum 3 and minimum -3, so \\(|a|=3\\). Since \\(a<0\\), \\(a=-3\\).\n\nThe amplitude is half the vertical range.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "At \\(x=0\\), \\(y=-3\\), so \\(-3\\sin b^\\circ=-3\\) and \\(\\sin b^\\circ=1\\). Hence \\(b=90\\) for \\(0<b<360\\).\n\nThe minimum at x=0 fixes the phase when the amplitude is negative.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "To use the original input \\(p\\), set \\(2x=p\\), giving \\(x=p/2\\).\n\nThe replacement of x by 2x halves horizontal coordinates.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "The corresponding output is \\(f(p)+5=q+5\\).\n\nAdding 5 translates every output upwards by 5.",
+        "title": "Part (b) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q26-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "The 100th term is \\(298.5\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The first term is \\(a=k+2\\) and the common difference is \\(d=3\\).\n\nSuccessive listed terms differ by 3.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[S_n=\\frac n2\\{2(k+2)+3(n-1)\\}=\\frac n2(2k+1+3n).\\]\n\nApply the arithmetic-series sum formula.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[S_{2n}=n\\{2(k+2)+3(2n-1)\\}=n(2k+1+6n).\\]\n\nUse 2n in place of n throughout the sum formula.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "Using \\(S_{2n}=4S_n\\) and \\(n>0\\), \\[2k+1+6n=2(2k+1+3n)=4k+2+6n.\\]\n\nDivide the equation by n, then expand the right-hand side.",
+        "title": "Solution | Step 4"
+      },
+      {
+        "body": "\\[2k+1=4k+2\\quad\\Rightarrow\\quad k=-\\frac12.\\]\n\nThe n-terms cancel, leaving a linear equation for k.",
+        "title": "Solution | Step 5"
+      },
+      {
+        "body": "\\[u_{100}=k+2+99(3)=-\\frac12+2+297=298.5.\\]\n\nThe 100th term is the first term plus 99 common differences.",
+        "title": "Solution | Step 6"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q27-U2": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x=12\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\left(1+\\frac{x}{100}\\right)\\left(1+\\frac{2x}{100}\\right)=1.3888.\\]\n\nThe second increase acts on the already-increased house value.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[1+\\frac{3x}{100}+\\frac{2x^2}{10000}=1.3888\\quad\\Rightarrow\\quad x^2+150x-1944=0.\\]\n\nExpand, subtract 1, and multiply by 5000.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[(x-12)(x+162)=0\\quad\\Rightarrow\\quad x=12\\text{ or }x=-162.\\]\n\nFactorize the quadratic.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "Reject \\(x=-162\\), since both changes are increases, so \\(x>0\\).\n\nThe positive root gives multipliers 1.12 and 1.24, whose product is 1.3888.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q01": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(1\\frac{19}{35}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[4\\frac17=\\frac{29}{7},\\qquad 2\\frac35=\\frac{13}{5}.\\]\n\nConvert each mixed number to an improper fraction.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\frac{29}{7}-\\frac{13}{5}=\\frac{145-91}{35}=\\frac{54}{35}=1\\frac{19}{35}.\\]\n\nUse the common denominator 35, subtract, then convert back to a mixed number.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q02": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x=4.23\\text{ cm}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\cos65^\\circ=\\frac{x}{10}.\\]\n\nThe side of length 10 cm is the hypotenuse and x is adjacent to the given angle.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[x=10\\cos65^\\circ=4.22618\\ldots=4.23\\text{ cm}\\quad(3\\text{ s.f.}).\\]\n\nMultiply by 10 and round only the final value.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q03": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a(i)) \\(\\{1,2,4,5,10,15\\}\\)\n\n(a(ii)) \\(\\{1,2,4\\}\\)\n\n(b) \\(A\\cap C=\\{2,5\\}\\), not the empty set.",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\(A=\\{1,2,4,5,10\\}\\) and \\(B=\\{5,10,15\\}\\), so \\(A\\cup B=\\{1,2,4,5,10,15\\}\\).\n\nInclude every member of either set once; 20 lies outside the universal set.",
+        "title": "Part (a(i)) | Step 1"
+      },
+      {
+        "body": "\\(A\\cap B^{\\prime}=\\{1,2,4\\}\\).\n\nRetain the factors of 20 in the universal set which are not multiples of 5.",
+        "title": "Part (a(ii)) | Step 1"
+      },
+      {
+        "body": "Both 2 and 5 are prime factors of 20, so \\(A\\cap C=\\{2,5\\}\\ne\\varnothing\\).\n\nA shared member is enough to disprove the claim that the intersection is empty.",
+        "title": "Part (b) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q04": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(20\\text{ km/h}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Cycling time: \\(60\\div24=2.5\\) hours. Running time: \\(1+15/60=1.25\\) hours.\n\nTime equals distance divided by speed.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "Running distance: \\(12\\times1.25=15\\) km. Total distance: \\(60+15=75\\) km. Total time: \\(2.5+1.25=3.75\\) hours.\n\nCombine the actual distances and times.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[\\text{Average speed}=\\frac{75}{3.75}=20\\text{ km/h}.\\]\n\nAverage speed is total distance divided by total time, not the mean of the two speeds.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q05": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(8e^2-12e\\)\n\n(b) \\(f^2-3f-18\\)\n\n(c) \\(x=(t+2n)/a\\)\n\n(d) \\((-1,3]\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[4e(2e-3)=8e^2-12e.\\]\n\nMultiply 4e by both terms in the bracket.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[(f+3)(f-6)=f^2-6f+3f-18=f^2-3f-18.\\]\n\nMultiply each term in the first bracket by each term in the second and collect like terms.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "From \\(t=ax-2n\\), add \\(2n\\) to give \\(t+2n=ax\\).\n\nUse the same operation on both sides.",
+        "title": "Part (c) | Step 1"
+      },
+      {
+        "body": "\\[x=\\frac{t+2n}{a}\\quad(a\\ne0).\\]\n\nDivide by the coefficient of x.",
+        "title": "Part (c) | Step 2"
+      },
+      {
+        "body": "Draw an open circle at \\(y=-1\\), a filled circle at \\(y=3\\), and a straight segment joining them. The represented interval is \\((-1,3]\\).\n\nThe strict lower inequality excludes -1; the non-strict upper inequality includes 3.",
+        "figures": [
+          {
+            "alt": "Question 5, part d: completed solution diagram",
+            "src": "/assets/solution-diagrams/Jun2026/P1-Q05-d-P1-Q05d.png"
+          }
+        ],
+        "title": "Part (d) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q06": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(64x^{15}y^{18}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[(4x^5y^6)^3=4^3x^{5\\times3}y^{6\\times3}=64x^{15}y^{18}.\\]\n\nRaise each factor to the third power and multiply exponents for a power of a power.",
+        "title": "Solution | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q07": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(200\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[0.12+x+2x+0.16=1\\implies3x=0.72\\implies x=0.24.\\]\n\nThe four exhaustive outcome probabilities sum to 1.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[P(\\text{even})=P(2)+P(4)=0.24+0.16=0.40.\\]\n\nThe events 2 and 4 are mutually exclusive.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[\\text{Expected number}=500\\times0.40=200.\\]\n\nMultiply the number of spins by the probability of an even result.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q08": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(252\\text{ km/h}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[70\\text{ m/s}=70\\times3600=252000\\text{ m/h}.\\]\n\nThere are 3600 seconds in one hour.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[252000\\div1000=252\\text{ km/h}.\\]\n\nThere are 1000 metres in one kilometre.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q09": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(6.51\\times10^{-2}\\)\n\n(b) \\(3.2\\times10^{131}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[0.0651=6.51\\times10^{-2}.\\]\n\nThe coefficient must be at least 1 and less than 10.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[(4\\times10^{56})(8\\times10^{74})=32\\times10^{130}=3.2\\times10^{131}.\\]\n\nMultiply the coefficients, add the exponents, and adjust the coefficient to standard form.",
+        "title": "Part (b) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q10": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x=-\\frac32,\\ y=5\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[4x+3y=9,\\qquad2x-2y=-13.\\]\n\nUse both equations.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "Double the second equation: \\(4x-4y=-26\\). Subtract this from the first: \\(7y=35\\), so \\(y=5\\).\n\nEqual x coefficients allow elimination.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[2x-2(5)=-13\\implies2x=-3\\implies x=-\\frac32.\\]\n\nSubstitute back to find the other unknown.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q11": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(85.7\\text{ cm}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Let the radius be \\(r=OB=OD\\). Then \\(\\frac12\\pi r^2=227\\), so \\(r=\\sqrt{454/\\pi}=12.021343\\ldots\\) cm.\n\nThe given area belongs to the semicircle.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[AB=DE=\\sqrt{15^2-r^2}=8.971472\\ldots\\text{ cm}.\\]\n\nThe identical triangles have hypotenuse 15 cm and horizontal leg r.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[P=\\pi r+AB+DE+AO+EO=\\pi r+2\\sqrt{225-r^2}+30=85.709107\\ldots\\text{ cm}.\\]\n\nThe boundary contains the semicircular arc and the four outer triangle sides, but not the internal diameter.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "\\[P=85.7\\text{ cm}\\quad(1\\text{ d.p.}).\\]\n\nRetain unrounded intermediate values.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q12": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(x=-\\frac94\\)\n\n(b) \\(8t^3+28t^2-60t\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\frac{2^{x/3}}{8^x}=\\frac{2^{x/3}}{2^{3x}}=2^{x/3-3x}=2^{-8x/3}.\\]\n\nWrite 8 as a power of 2 and subtract exponents when dividing.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[2^{-8x/3}=64=2^6\\implies-\\frac{8x}{3}=6\\implies x=-\\frac94.\\]\n\nEqual powers of base 2 have equal exponents.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[(t+5)(2t-3)=2t^2-3t+10t-15=2t^2+7t-15.\\]\n\nExpand the two brackets and collect like terms.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "\\[4t(t+5)(2t-3)=4t(2t^2+7t-15)=8t^3+28t^2-60t.\\]\n\nMultiply every term by 4t.",
+        "title": "Part (b) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q13": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) Rain/not rain: \\(0.15,0.85\\); walk/bus after rain: \\(0.2,0.8\\); walk/bus after no rain: \\(0.75,0.25\\).\n\n(b) \\(0.03\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "First split: rain \\(0.15\\), not rain \\(0.85\\).\n\nComplementary branches sum to 1.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "After rain: walk \\(0.20\\), bus \\(0.80\\). After not rain: walk \\(0.75\\), bus \\(0.25\\).\n\nUse the stated conditional probabilities and their complements on the corresponding branches.",
+        "figures": [
+          {
+            "alt": "Question 13, part a: completed solution diagram",
+            "src": "/assets/solution-diagrams/Jun2026/P1-Q13-a-P1-Q13a.png"
+          }
+        ],
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[P(\\text{rain and walk})=P(\\text{rain})P(\\text{walk}\\mid\\text{rain})=0.15\\times0.2=0.03.\\]\n\nMultiply the probabilities along the rain-then-walk path; independence is not assumed.",
+        "title": "Part (b) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q14": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x=25\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Let the original sales be 100 units. After September they are \\(100\\times1.20=120\\); after both months they are \\(100\\times0.90=90\\).\n\nBoth overall percentages refer to the original sales.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[x=\\frac{120-90}{120}\\times100=25.\\]\n\nThe October decrease is measured relative to the September sales of 120.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q15": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(-2\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[m=\\frac{-6-4}{2-(-3)}=\\frac{-10}{5}=-2.\\]\n\nUse change in y divided by the corresponding change in x.",
+        "title": "Solution | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q16": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(66.4\\text{ cm}\\)\n\n(b) \\(827\\text{ cm}^2\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[BC^2=25^2+73^2-2(25)(73)\\cos65^\\circ.\\]\n\nThe included angle is between the two given sides.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[BC^2=4411.443344\\ldots,\\quad BC=\\sqrt{4411.443344\\ldots}=66.418697\\ldots=66.4\\text{ cm}\\quad(3\\text{ s.f.}).\\]\n\nTake the positive square root for a length.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[\\text{Area}=\\frac12(25)(73)\\sin65^\\circ=827.005855\\ldots=827\\text{ cm}^2\\quad(3\\text{ s.f.}).\\]\n\nUse half the product of the two sides and the sine of their included angle.",
+        "title": "Part (b) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q17": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(40-\\sqrt{1620}\\), so \\(a=40,\\ b=1620\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\sqrt{20}=2\\sqrt5,\\qquad(4-\\sqrt{20})(5-2\\sqrt5)=(4-2\\sqrt5)(5-2\\sqrt5).\\]\n\nSimplify the surd first.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[20-8\\sqrt5-10\\sqrt5+20=40-18\\sqrt5.\\]\n\nExpand; the product of the two surd terms is positive 20.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[18\\sqrt5=\\sqrt{18^2\\times5}=\\sqrt{1620},\\quad(4-\\sqrt{20})(5-2\\sqrt5)=40-\\sqrt{1620}.\\]\n\nThus the required integer values are a=40 and b=1620.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q18": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(\\frac{2x-3}{x-4}\\), \\(x\\ne-\\frac32,4\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[4x^2-9=(2x-3)(2x+3),\\qquad2x^2-5x-12=(2x+3)(x-4).\\]\n\nUse difference of squares for the numerator and factorise the denominator.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\frac{4x^2-9}{2x^2-5x-12}=\\frac{(2x-3)(2x+3)}{(2x+3)(x-4)}=\\frac{2x-3}{x-4}.\\]\n\nCancel the common factor, not individual terms.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "The original fraction requires \\(x\\ne-\\frac32\\) and \\(x\\ne4\\).\n\nCancellation does not restore excluded values.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q19": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(M=2p^2/25\\)\n\n(b) \\(M=18\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[M=kp^2,\\qquad2=k(5^2)\\implies k=\\frac{2}{25}.\\]\n\nIntroduce a constant of proportionality and use the given pair.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[M=\\frac{2p^2}{25}.\\]\n\nSubstitute the constant into the general relationship.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[M=\\frac{2(15)^2}{25}=18.\\]\n\nUse the formula from (a).",
+        "title": "Part (b) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q20": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(120\\text{ m/s}\\) to 2 significant figures.",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[99.5\\le s<100.5,\\quad1.675\\le t<1.685,\\quad0.45\\le u<0.55.\\]\n\nUse half a rounding unit on each side of the stated value.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "For \\(v=2s/t-u\\), the lower limiting value is \\[v_L=\\frac{2(99.5)}{1.685}-0.55=117.550890\\ldots\\text{ m/s}.\\]\n\nDecrease the numerator, increase the positive denominator and subtract the largest u.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "The upper limiting value is \\[v_U=\\frac{2(100.5)}{1.675}-0.45=119.55\\text{ m/s}.\\]\n\nIncrease the numerator, decrease the denominator and subtract the smallest u.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "Both limiting values round to \\(120\\text{ m/s}\\) to 2 significant figures. They do not round to the same integer, so \\[v=120\\text{ m/s}\\quad(2\\text{ s.f.}).\\]\n\nThis is the greatest common significant-figure accuracy justified throughout the interval.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q21": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(273.375\\text{ cm}^3\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[V=(3x)(x)(13.5-2x)=40.5x^2-6x^3,\\qquad0<x<6.75.\\]\n\nMultiply the three dimensions and require them all to be positive.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\frac{dV}{dx}=81x-18x^2=9x(9-2x).\\]\n\nDifferentiate each power of x.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "At a stationary point, \\(9x(9-2x)=0\\), giving \\(x=0\\) or \\(x=4.5\\). Only \\(x=4.5\\) is inside the domain.\n\nA stationary volume has zero derivative.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "The derivative is positive for \\(0<x<4.5\\) and negative for \\(4.5<x<6.75\\). Hence \\(x=4.5\\) gives the maximum.\n\nThe volume increases then decreases; its limiting endpoint volumes are zero.",
+        "title": "Solution | Step 4"
+      },
+      {
+        "body": "\\[V_{\\max}=3(4.5)^2(13.5-9)=273.375\\text{ cm}^3.\\]\n\nSubstitute the maximising value into the original volume.",
+        "title": "Solution | Step 5"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q22": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(76\\text{ apples}\\)\n\n(b) \\(15/52\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The first class has width 15 g and frequency 9, so its density is \\(9/15=0.6\\). Its height is 6 small grid squares, so each vertical square represents density \\(0.1\\).\n\nFrequency is class width multiplied by frequency density.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "The classes below 175 g have densities \\(0.6,2.9,4.2,3.4\\) and widths \\(15,10,5,5\\), respectively.\n\nRead the bar heights using the calibrated vertical scale.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[N=15(0.6)+10(2.9)+5(4.2)+5(3.4)=9+29+21+17=76.\\]\n\nAdd the frequencies, not the heights.",
+        "title": "Part (a) | Step 3"
+      },
+      {
+        "body": "Above 180 g, the frequency from 180 to 185 is \\(5(2.4)=12\\), from 185 to 190 is \\(5(5)=25\\), and from 190 to 200 is \\(10(1.5)=15\\).\n\nUse only half of the 175-185 bar and all of the two heavier classes.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "\\[P(W>190\\mid W>180)=\\frac{15}{12+25+15}=\\frac{15}{52}.\\]\n\nRestrict the denominator to the large apples.",
+        "title": "Part (b) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q23": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x=48\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[P(\\text{one pink, one yellow})=\\frac{12}{x}\\frac{x-12}{x-1}+\\frac{x-12}{x}\\frac{12}{x-1}=\\frac{24(x-12)}{x(x-1)}.\\]\n\nInclude pink-then-yellow and yellow-then-pink, without replacement.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\frac{24(x-12)}{x(x-1)}=\\frac{18}{47}\\implies1128(x-12)=18x(x-1).\\]\n\nEquate to the given probability and cross-multiply.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[18x^2-1146x+13536=0\\implies3x^2-191x+2256=0.\\]\n\nRearrange and divide by 6.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "\\[(x-48)(3x-47)=0\\implies x=48\\text{ or }x=\\frac{47}{3}.\\]\n\nFactorise the quadratic.",
+        "title": "Solution | Step 4"
+      },
+      {
+        "body": "The number of marbles must be an integer, so \\(x=48\\).\n\nReject the non-integer root.",
+        "title": "Solution | Step 5"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q24": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(58-3(x+4)^2\\)\n\n(b) \\(P=(-3,58)\\)\n\n(c) \\(x=-3\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[10-24x-3x^2=10-3(x^2+8x).\\]\n\nFactor -3 from the terms involving x.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[x^2+8x=(x+4)^2-16.\\]\n\nHalf the coefficient of x is 4.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[10-3\\big((x+4)^2-16\\big)=58-3(x+4)^2.\\]\n\nThus a=58, b=3 and c=4.",
+        "title": "Part (a) | Step 3"
+      },
+      {
+        "body": "\\[y=58-3\\big((x-1)+4\\big)^2=58-3(x+3)^2.\\]\n\nUse (a) with x replaced throughout by x-1.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "Since \\((x+3)^2\\ge0\\), the greatest y is 58, attained at \\(x=-3\\). Thus \\(P=(-3,58)\\).\n\nThe negative square term is largest when its square is zero.",
+        "title": "Part (b) | Step 2"
+      },
+      {
+        "body": "The parabola is symmetric about its maximum, so its line of symmetry is \\(x=-3\\).\n\nIn 58-3(x+3)^2, equal positive and negative offsets from -3 give the same y.",
+        "title": "Part (c) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1H__Q25": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(24.6^\\circ\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[BF=\\frac{12}{\\sin30^\\circ}=24\\text{ cm},\\qquad AB=\\frac{12}{\\tan30^\\circ}=12\\sqrt3\\text{ cm}.\\]\n\nUse right triangle ABF.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[BT=\\frac23 BF=16\\text{ cm}.\\]\n\nApply the given BF:BT ratio.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[AT=\\sqrt{AB^2+BT^2}=\\sqrt{432+256}=\\sqrt{688}=4\\sqrt{43}\\text{ cm}.\\]\n\nAB is perpendicular to BC in the rectangular base, so triangle ABT is right-angled at B.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "The projection of FT onto plane ABCD is AT because F lies vertically above A. Therefore the required angle is \\(\\theta=\\angle FTA\\).\n\nA line-plane angle is the angle between the line and its perpendicular projection onto the plane.",
+        "title": "Solution | Step 4"
+      },
+      {
+        "body": "\\[\\tan\\theta=\\frac{AF}{AT}=\\frac{12}{4\\sqrt{43}}=\\frac{3}{\\sqrt{43}},\\quad\\theta=24.583891\\ldots^\\circ=24.6^\\circ.\\]\n\nUse right triangle FAT and round to one decimal place.",
+        "figures": [
+          {
+            "alt": "Question 25, part main: completed solution diagram",
+            "src": "/assets/solution-diagrams/Jun2026/P1-Q25-main-P1-Q25.png"
+          }
+        ],
+        "title": "Solution | Step 5"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q01": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(2\\frac45\\times3\\frac37=9\\frac35\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[2\\frac45=\\frac{14}{5},\\qquad 3\\frac37=\\frac{24}{7}.\\]\n\nConvert each mixed number into an improper fraction.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\frac{14}{5}\\times\\frac{24}{7}=\\frac{2\\times24}{5}=\\frac{48}{5}=9\\frac35.\\]\n\nCancel the common factor 7, multiply, then convert back to a mixed number.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q02": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(504=2^3\\times3^2\\times7\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[504=2\\times252=2^2\\times126=2^3\\times63.\\]\n\nDivide repeatedly by the prime 2.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[63=3\\times21=3^2\\times7,\\qquad 504=2^3\\times3^2\\times7.\\]\n\nAll remaining factors are prime; group repeated factors as powers.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q03": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(e^{10}\\)\n\n(b) \\(g^3\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[e^7\\times e^3=e^{7+3}=e^{10}.\\]\n\nFor equal bases, add the indices when multiplying.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[g^5\\div g^2=g^{5-2}=g^3\\quad(g\\ne0).\\]\n\nFor equal bases, subtract the indices when dividing.",
+        "title": "Part (b) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q04": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(i) \\(1177.5\\text{ kg}\\)\n\n(ii) \\(1178.5\\text{ kg}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[1178-0.5=1177.5\\text{ kg}.\\]\n\nRounding to the nearest kilogram allows half a kilogram below the stated value.",
+        "title": "Part (i) | Step 1"
+      },
+      {
+        "body": "\\[1178+0.5=1178.5\\text{ kg}.\\]\n\nThe rounding interval is \\(1177.5\\le w<1178.5\\); the upper endpoint is the upper bound, not an included weight.",
+        "title": "Part (ii) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q05": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(80\\) red counters",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[0.45+0.31+5x+x=1.\\]\n\nThe four colours are mutually exclusive and exhaust all counters, so their probabilities sum to 1.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[6x=1-0.76=0.24,\\qquad x=0.04.\\]\n\nCollect the unknown probabilities and solve the linear equation.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[P(\\text{red})=5(0.04)=0.20,\\qquad N_{\\text{red}}=400(0.20)=80.\\]\n\nMultiply the red proportion by the total number of counters.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q06": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(360\\text{ cm}^2\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[k=\\frac{24}{8}=3.\\]\n\nThe marked corresponding bases give the linear scale factor from A to B.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\operatorname{area}(A)=8\\times5=40\\text{ cm}^2.\\]\n\nThe 5 cm measurement is the perpendicular height.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[\\operatorname{area}(B)=k^2\\operatorname{area}(A)=3^2\\times40=360\\text{ cm}^2.\\]\n\nAreas scale by the square of the linear scale factor.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q07": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) Open circle at \\(1\\), ray to the left: \\((-\\infty,1)\\).\n\n(b) \\(y=-1,0,1,2,3\\)\n\n(c) \\(w<3.6\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Place an open circle at \\(1\\) and draw a horizontal ray from it to the left, with a left-pointing arrow. Do not fill the circle.\n\nThe strict inequality excludes \\(1\\) and includes every real number less than \\(1\\).",
+        "figures": [
+          {
+            "alt": "Question 7, part a: completed solution diagram",
+            "src": "/assets/solution-diagrams/Jun2026/P1R-Q07-a-Q07a-number-line.png"
+          }
+        ],
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[2\\le y+3<7\\quad\\Longrightarrow\\quad-1\\le y<4.\\]\n\nSubtract 3 from all three expressions.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "The integer values in this interval are \\(-1,0,1,2,3\\).\n\nInclude the lower endpoint but exclude 4.",
+        "title": "Part (b) | Step 2"
+      },
+      {
+        "body": "\\[8-5w>-10\\quad\\Longrightarrow\\quad-5w>-18.\\]\n\nSubtract 8 from both sides.",
+        "title": "Part (c) | Step 1"
+      },
+      {
+        "body": "\\[w<\\frac{18}{5}=3.6.\\]\n\nDivision by a negative number reverses the inequality sign.",
+        "title": "Part (c) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q08": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\((x-4)(x-8)\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[(-4)(-8)=32,\\qquad -4+(-8)=-12.\\]\n\nChoose two numbers with product 32 and sum -12.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[x^2-12x+32=(x-4)(x-8).\\]\n\nThe chosen numbers give the two constant terms in the factors.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q09": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(81.8\\text{ kg}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[W_{11}=11(77)=847\\text{ kg},\\qquad W_8=8(75.2)=601.6\\text{ kg}.\\]\n\nTotal weight equals number of sheep multiplied by their mean weight.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[W_3=847-601.6=245.4\\text{ kg},\\qquad \\overline w_3=\\frac{245.4}{3}=81.8\\text{ kg}.\\]\n\nSubtract the known subgroup total and divide the remaining total by 3.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q10": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(208518\\text{ yen}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\text{annual multiplier}=1+\\frac{1.4}{100}=1.014.\\]\n\nAn increase of 1.4% retains the original amount and adds 1.4%.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[A=200000(1.014)^3=208518.1488\\text{ yen}.\\]\n\nApply the multiplier once for each of the 3 years.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[A\\approx208518\\text{ yen}.\\]\n\nRound to the nearest whole yen.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q11": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(290\\text{ cm}^2\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[3\\times11\\times x=264,\\qquad x=\\frac{264}{33}=8\\text{ cm}.\\]\n\nThe volume is the product of the three perpendicular edge lengths.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[S=2(3\\times11)+2(3\\times8)+2(11\\times8).\\]\n\nThere are two faces of each of the three rectangular sizes.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[S=66+48+176=290\\text{ cm}^2.\\]\n\nAdd all six face areas.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q12": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x=\\frac32,\\ y=-\\frac14\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[4x+4y=5,\\qquad x+2y=1.\\]\n\nUse the two given equations.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[4(x+2y)=4\\quad\\Longrightarrow\\quad4x+8y=4.\\]\n\nMultiply the second equation by 4 to match the coefficients of x.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[(4x+8y)-(4x+4y)=4-5\\quad\\Longrightarrow\\quad4y=-1,\\quad y=-\\frac14.\\]\n\nSubtract the first equation to eliminate x.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "\\[x+2\\left(-\\frac14\\right)=1\\quad\\Longrightarrow\\quad x=\\frac32.\\]\n\nSubstitute into the second original equation.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q13": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(\\frac52\\)\n\n(b) \\(\\left(0,\\frac54\\right)\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[4y-10x-5=0\\quad\\Longrightarrow\\quad4y=10x+5\\quad\\Longrightarrow\\quad y=\\frac52x+\\frac54.\\]\n\nRearrange into the form y=mx+c.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "The gradient is \\(\\frac52\\).\n\nThe coefficient of x is the gradient.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[x=0\\quad\\Longrightarrow\\quad4y-5=0\\quad\\Longrightarrow\\quad y=\\frac54.\\]\n\nEvery point on the y-axis has x-coordinate zero.",
+        "title": "Part (b) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q14": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) Increasing cumulative-frequency graph through \\((0,0),(10,19),(20,37),(30,52),(40,63),(50,73),(60,80)\\).\n\n(b) Approximately \\(22\\) years.\n\n(c) Approximately \\(30\\) people.",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Use age (years) on the horizontal axis from \\(0\\) to \\(60\\), and cumulative frequency on the vertical axis from \\(0\\) to \\(80\\). Plot \\((0,0),(10,19),(20,37),(30,52),(40,63),(50,73),(60,80)\\).\n\nEach cumulative total is plotted at its upper age boundary.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "Join the points in order with an increasing curve or straight line segments. Do not draw bars or a staircase.\n\nThis represents the accumulated number up to each age boundary.",
+        "figures": [
+          {
+            "alt": "Question 14, part a: completed solution diagram",
+            "src": "/assets/solution-diagrams/Jun2026/P1R-Q14-a-Q14-cumulative-frequency.png"
+          }
+        ],
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[\\text{median position}=\\frac{80}{2}=40.\\]\n\nRead horizontally from cumulative frequency 40 to the graph, then vertically down to the age axis.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "Using straight segments, \\[20+\\frac{40-37}{52-37}\\times10=22\\text{ years}.\\]\n\nThe median is estimated between ages 20 and 30; a smooth graph gives a nearby estimate.",
+        "title": "Part (b) | Step 2"
+      },
+      {
+        "body": "Read vertically from age \\(16\\) to the graph, then horizontally to the cumulative-frequency axis.\n\nThe ordinate is the estimated number aged 16 and under.",
+        "title": "Part (c) | Step 1"
+      },
+      {
+        "body": "Using straight segments, \\[19+\\frac{16-10}{20-10}(37-19)=29.8\\approx30.\\]\n\nRound the estimated count to a whole number of people.",
+        "title": "Part (c) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q15": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x=60^\\circ\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\text{interior angle of a regular decagon}=\\frac{(10-2)180^\\circ}{10}=144^\\circ.\\]\n\nBC and CD are consecutive sides of the regular decagon.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\text{reflex interior angle at C}=360^\\circ-144^\\circ=216^\\circ.\\]\n\nThe pentagon BCDEF is concave at C, and its interior lies on the other side from the decagon interior angle.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[75^\\circ+216^\\circ+x+109^\\circ+80^\\circ=(5-2)180^\\circ=540^\\circ,\\]\n\nThe interior-angle sum formula also applies to a simple concave pentagon.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "\\[x=540^\\circ-480^\\circ=60^\\circ.\\]\n\nSubtract the four known interior angles.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q16": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(\\frac{3x-4}{8x}\\)\n\n(b) \\(6x^3+21x^2-12x\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\frac58-\\frac{x+2}{4x}=\\frac{5x}{8x}-\\frac{2(x+2)}{8x},\\qquad x\\ne0.\\]\n\nUse 8x as a common denominator.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[\\frac{5x-2(x+2)}{8x}=\\frac{5x-2x-4}{8x}=\\frac{3x-4}{8x}.\\]\n\nSubtract the entire numerator of the second fraction and collect like terms.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[(2x-1)(x+4)=2x^2+8x-x-4=2x^2+7x-4.\\]\n\nMultiply each term in the first bracket by each term in the second.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "\\[3x(2x^2+7x-4)=6x^3+21x^2-12x.\\]\n\nMultiply every term by 3x.",
+        "title": "Part (b) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q17": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(\\frac{\\mathrm dy}{\\mathrm dx}=3x^2+10x-8\\)\n\n(b) \\(P=(-4,48)\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\frac{\\mathrm dy}{\\mathrm dx}=3x^2+10x-8.\\]\n\nApply the power rule to each term of y=x^3+5x^2-8x.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[3x^2+10x-8=0\\quad\\Longrightarrow\\quad(3x-2)(x+4)=0.\\]\n\nAt a stationary point the derivative is zero.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "\\[x=\\frac23\\quad\\text{or}\\quad x=-4.\\]\n\nSet each factor equal to zero.",
+        "title": "Part (b) | Step 2"
+      },
+      {
+        "body": "P has the smaller x-coordinate, so \\(x_P=-4\\). Then \\[y_P=(-4)^3+5(-4)^2-8(-4)=-64+80+32=48.\\]\n\nChoose the left-hand stationary point and substitute into the original curve equation.",
+        "title": "Part (b) | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q18": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(\\frac17\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The only possible ordered number pairs are \\((1,4)\\) and \\((2,5)\\).\n\nThe second number must be exactly 3 more than the first, not merely differ by 3.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[P(1\\text{ then }4)=\\frac28\\times\\frac17,\\qquad P(2\\text{ then }5)=\\frac38\\times\\frac27.\\]\n\nThere are 7 cards remaining for the second draw; there are two 1s, three 2s, one 4 and two 5s.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[P=\\frac{2}{56}+\\frac{6}{56}=\\frac{8}{56}=\\frac17.\\]\n\nThe two ordered events are mutually exclusive, so add their probabilities.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q19": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(\\angle SPO=42^\\circ\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\angle PQR=\\frac{170^\\circ}{2}=85^\\circ.\\]\n\nThe angle at the centre is twice the angle at the circumference subtended by the same arc PR containing S.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\angle PSR=180^\\circ-85^\\circ=95^\\circ.\\]\n\nOpposite angles of cyclic quadrilateral PQRS sum to 180 degrees.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[\\angle SPO=360^\\circ-(170^\\circ+53^\\circ+95^\\circ)=42^\\circ.\\]\n\nThe interior angles of quadrilateral PSRO sum to 360 degrees; its other angles are POR, ORS and PSR.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q20": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(y=810\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[y=kt^2,\\qquad40=k(4^2)\\quad\\Longrightarrow\\quad k=\\frac52.\\]\n\nDirect proportionality to t squared means a constant times t squared.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[t=c\\sqrt[3]{x},\\qquad12=c\\sqrt[3]{8}=2c\\quad\\Longrightarrow\\quad c=6.\\]\n\nFind the second proportionality constant using the given pair of values.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[x=27\\quad\\Longrightarrow\\quad t=6\\sqrt[3]{27}=18.\\]\n\nUse the cube-root relationship first.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "\\[y=\\frac52(18)^2=810.\\]\n\nSubstitute the new value of t into the square relationship.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q21": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(x=13\\)\n\n(b) \\(12\\) students.",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The French-and-German-only region is \\(16-x\\), and the German-and-Italian-only region is \\(15-x\\).\n\nThe totals 16 and 15 each include the triple intersection x.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[6+(16-x)+(15-x)+x=24.\\]\n\nThe four disjoint regions in the German set must total 24.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[37-x=24\\quad\\Longrightarrow\\quad x=13.\\]\n\nSolve for the common triple-intersection count.",
+        "title": "Part (a) | Step 3"
+      },
+      {
+        "body": "\\[FG\\text{ only}=16-13=3,\\qquad GI\\text{ only}=15-13=2.\\]\n\nUse the triple-intersection value from part (a).",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "\\[F\\text{ only}=32-(3+4+13)=12,\\qquad I\\text{ only}=27-(4+2+13)=8.\\]\n\nThe French-and-Italian-only count is the given 4.",
+        "title": "Part (b) | Step 2"
+      },
+      {
+        "body": "\\[n(F\\cup G\\cup I)=12+6+8+3+4+2+13=48.\\]\n\nSum all seven mutually exclusive interior regions.",
+        "title": "Part (b) | Step 3"
+      },
+      {
+        "body": "\\[n(\\text{none})=60-48=12.\\]\n\nSubtract the union from the total number of students.",
+        "title": "Part (b) | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q22": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(66.2\\text{ cm}^2\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\angle ABC=180^\\circ-62^\\circ-47^\\circ=71^\\circ.\\]\n\nThe three triangle angles sum to 180 degrees.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\frac{AB}{\\sin47^\\circ}=\\frac{13}{\\sin62^\\circ}\\quad\\Longrightarrow\\quad AB=\\frac{13\\sin47^\\circ}{\\sin62^\\circ}=10.7680208859\\ldots\\text{ cm}.\\]\n\nMatch each side to its opposite angle in the sine rule.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[\\text{Area}=\\frac12(13)\\left(\\frac{13\\sin47^\\circ}{\\sin62^\\circ}\\right)\\sin71^\\circ=66.1788645053\\ldots\\text{ cm}^2.\\]\n\nUse half the product of two sides times the sine of their included angle; retain unrounded values.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "\\[\\text{Area}=66.2\\text{ cm}^2\\quad\\text{(3 significant figures)}.\\]\n\nRound only the final area.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q23": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(x=0\\) must be excluded.\n\n(b) \\(gf(0.5)=15\\)\n\n(c) \\(g^{-1}(x)=1+\\frac{\\sqrt{x-11}}{2},\\quad x\\ge11\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "For \\(f(x)=\\frac1x\\), the denominator is zero when \\(x=0\\).\n\nDivision by zero is undefined, so this input must be excluded.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[f(0.5)=\\frac{1}{0.5}=2.\\]\n\nIn gf, apply f first.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "\\[gf(0.5)=g(2)=4(2)^2-8(2)+15=16-16+15=15.\\]\n\nThe input 2 lies in the stated domain x>=1 of g.",
+        "title": "Part (b) | Step 2"
+      },
+      {
+        "body": "\\[y=4x^2-8x+15=4(x-1)^2+11.\\]\n\nComplete the square to isolate the expression containing x.",
+        "title": "Part (c) | Step 1"
+      },
+      {
+        "body": "\\[(x-1)^2=\\frac{y-11}{4},\\qquad x-1=\\frac{\\sqrt{y-11}}{2}.\\]\n\nChoose the nonnegative root because the domain of g is x>=1.",
+        "title": "Part (c) | Step 2"
+      },
+      {
+        "body": "\\[x=1+\\frac{\\sqrt{y-11}}{2}.\\]\n\nRearrange to make the original input the subject.",
+        "title": "Part (c) | Step 3"
+      },
+      {
+        "body": "\\[g^{-1}(x)=1+\\frac{\\sqrt{x-11}}{2},\\qquad x\\ge11.\\]\n\nExchange the input and output labels; the range of g becomes the domain of the inverse.",
+        "title": "Part (c) | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q24": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(4x+5y-58=0\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[m_{CP}=\\frac{6-1}{7-3}=\\frac54.\\]\n\nFind the gradient of the radius from the centre C=(3,1) to P=(7,6).",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[m_L=-\\frac45.\\]\n\nThe tangent is perpendicular to the radius at P, so its gradient is the negative reciprocal.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[y-6=-\\frac45(x-7).\\]\n\nUse the tangent gradient and the given point of contact.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "\\[5y-30=-4x+28\\quad\\Longrightarrow\\quad4x+5y-58=0.\\]\n\nMultiply by 5 and collect all terms on one side to obtain integer coefficients.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q25": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(\\overrightarrow{OD}=8\\mathbf a+5\\mathbf b\\)\n\n(b) \\(OP:PD=20:21\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\overrightarrow{CD}=\\frac32(2\\mathbf a+2\\mathbf b)=3\\mathbf a+3\\mathbf b.\\]\n\nUse the stated relationship between CD and AC.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[\\overrightarrow{OD}=\\overrightarrow{OA}+\\overrightarrow{AC}+\\overrightarrow{CD}=3\\mathbf a+(2\\mathbf a+2\\mathbf b)+(3\\mathbf a+3\\mathbf b)=8\\mathbf a+5\\mathbf b.\\]\n\nAdd consecutive vectors along the route O-A-C-D.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[\\overrightarrow{OC}=3\\mathbf a+(2\\mathbf a+2\\mathbf b)=5\\mathbf a+2\\mathbf b,\\qquad\\overrightarrow{BC}=5\\mathbf a-2\\mathbf b.\\]\n\nUse OC=OA+AC and BC=OC-OB.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "Write \\(\\overrightarrow{OP}=t\\overrightarrow{OD}=8t\\mathbf a+5t\\mathbf b\\). Also, because P lies on BC, \\[\\overrightarrow{OP}=\\overrightarrow{OB}+s\\overrightarrow{BC}=5s\\mathbf a+(4-2s)\\mathbf b.\\]\n\nUse one scalar parameter on each of the two intersecting lines.",
+        "title": "Part (b) | Step 2"
+      },
+      {
+        "body": "\\[8t=5s,\\qquad5t=4-2s,\\qquad s=\\frac85t.\\]\n\nEquate the coefficients of the two nonparallel base vectors.",
+        "title": "Part (b) | Step 3"
+      },
+      {
+        "body": "\\[5t=4-\\frac{16}{5}t\\quad\\Longrightarrow\\quad41t=20\\quad\\Longrightarrow\\quad t=\\frac{20}{41}.\\]\n\nSubstitute the first relation into the second and solve.",
+        "title": "Part (b) | Step 4"
+      },
+      {
+        "body": "\\[OP:PD=t:(1-t)=\\frac{20}{41}:\\frac{21}{41}=20:21.\\]\n\nOD is divided into the fractions t and 1-t at P.",
+        "title": "Part (b) | Step 5"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P1HR__Q26": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x=1-\\frac{3n}{2}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[27=3^3,\\qquad9=3^2,\\qquad\\frac{6^x}{2^x}=\\left(\\frac62\\right)^x=3^x.\\]\n\nWrite both sides in a common base.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\frac{27^x\\times3^{n+6}}{9^{4-n}}=3^{3x+n+6-2(4-n)}=3^{3x+3n-2}.\\]\n\nMultiply powers by adding indices and divide powers by subtracting indices.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[3^{3x+3n-2}=3^x\\quad\\Longrightarrow\\quad3x+3n-2=x.\\]\n\nThe base-3 exponential is one-to-one, so equal powers have equal indices.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "\\[2x=2-3n\\quad\\Longrightarrow\\quad x=1-\\frac{3n}{2}.\\]\n\nCollect the x terms and divide by 2.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q01": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(2^2\\times3^2\\times5^3\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[4500=45\\times100=(9\\times5)(4\\times25).\\]\n\nSplit into factors that are easy to prime-factorise.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[4500=(3^2\\times5)(2^2\\times5^2)=2^2\\times3^2\\times5^3.\\]\n\nExpress each factor as prime powers and combine powers of 5.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q02": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(63:95\\)\n\n(b) \\(5n-2\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[u_{40}=8(40)-5=315,\\qquad u_{60}=8(60)-5=475.\\]\n\nSubstitute the two term numbers into the given rule.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[315:475=(315\\div5):(475\\div5)=63:95.\\]\n\nDivide both entries by their highest common factor, 5.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "The common difference is \\(8-3=5\\), so the rule has the form \\(5n+c\\).\n\nA constant difference gives a linear nth term.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "At \\(n=1\\), \\(5+c=3\\), giving \\(c=-2\\). Thus \\(u_n=5n-2\\).\n\nUse the first term to find the constant.",
+        "title": "Part (b) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q03": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(27<h\\le31\\)\n\n(b) \\(26.8\\text{ hours}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The greatest frequency is \\(15\\), in the interval \\(27<h\\le31\\).\n\nThe modal class is the class with the highest frequency.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "The class midpoints are \\(17,21,25,29,33\\) hours.\n\nUse the midpoint of each class as a representative value.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "\\[\\sum fm=2(17)+5(21)+12(25)+15(29)+6(33)\\]\n\\[=34+105+300+435+198=1072.\\]\n\nMultiply each midpoint by its frequency and add.",
+        "title": "Part (b) | Step 2"
+      },
+      {
+        "body": "\\[\\text{Estimated mean}=\\frac{1072}{2+5+12+15+6}=\\frac{1072}{40}=26.8\\text{ hours}.\\]\n\nDivide the estimated total by the number of candles.",
+        "title": "Part (b) | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q04": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(36\\%\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\text{Increase}=612-450=162.\\]\n\nFind the change from the original number.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\text{Percentage increase}=\\frac{162}{450}\\times100=36\\%.\\]\n\nExpress the increase as a percentage of the July value, not the August value.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q05": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) Enlargement with scale factor \\(2\\) and centre \\((1,3)\\).\n\n(b) \\(C:(7,1),(8,1),(7,3)\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Triangle \\(A\\) has vertices \\((3,4),(4,4),(3,6)\\); the corresponding vertices of \\(B\\) are \\((5,5),(7,5),(5,9)\\). The lengths have doubled.\n\nRead corresponding vertices and compare side lengths.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "For enlargement factor \\(2\\), the centre \\(O\\) satisfies \\(B=O+2(A-O)\\), so \\(O=2A-B\\). Using \\((3,4)\\mapsto(5,5)\\) gives \\(O=(6,8)-(5,5)=(1,3)\\).\n\nFind the fixed centre from a corresponding pair; the other pairs give the same centre.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "Add \\((4,-3)\\) to every vertex: \\((3,4)\\mapsto(7,1)\\), \\((4,4)\\mapsto(8,1)\\), and \\((3,6)\\mapsto(7,3)\\). Plot these three points, join them with straight sides and label the triangle \\(C\\).\n\nA translation moves every point by the same vector.",
+        "figures": [
+          {
+            "alt": "Question 5, part b: completed solution diagram",
+            "src": "/assets/solution-diagrams/Jun2026/P2-Q05-b-P2-Q05b.png"
+          }
+        ],
+        "title": "Part (b) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q06": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x=130\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The sum of the interior angles of a pentagon is \\((5-2)180^\\circ=540^\\circ\\).\n\nUse the interior-angle sum formula.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[96+91+93+x+x=540\\quad\\Rightarrow\\quad 2x=260\\quad\\Rightarrow\\quad x=130.\\]\n\nSubtract the three known angles and divide the remainder equally.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q07": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(L=23.1\\text{ cm}\\) (3 significant figures).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[V_{\\text{cylinder}}=\\pi r^2h=\\pi(7)^2(18)=882\\pi\\text{ cm}^3.\\]\n\nUse the stated radius, not a diameter.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[V_{\\text{prism}}=120L,\\qquad120L=882\\pi\\quad\\Rightarrow\\quad L=\\frac{882\\pi}{120}=23.090706\\ldots.\\]\n\nPrism volume equals cross-sectional area times length; equate the two volumes.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q08": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(2800\\text{ zloty}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Let the original membership cost be \\(C\\) zloty. After a \\(17\\%\\) increase, \\(1.17C=3276\\).\n\nThe new value is 117% of the original.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[C=\\frac{3276}{1.17}=2800\\text{ zloty}.\\]\n\nDivide by the increase multiplier.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q09": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(7\\)\n\n(b) \\(8m^{15}p^{12}\\)\n\n(c) \\(6cw^2(3c^4+5w)\\)\n\n(d) \\((x+9)(x-3)\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Since \\(n>0\\), \\(n^0=1\\). Hence \\(7n^0=7(1)=7\\).\n\nA nonzero number raised to power zero equals 1; only n is raised to zero.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[(2m^5p^4)^3=2^3m^{5\\times3}p^{4\\times3}=8m^{15}p^{12}.\\]\n\nCube the coefficient and multiply each exponent by 3.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "The highest common factor of \\(18c^5w^2\\) and \\(30cw^3\\) is \\(6cw^2\\).\n\nTake the numerical HCF and the smallest power of each shared variable.",
+        "title": "Part (c) | Step 1"
+      },
+      {
+        "body": "\\[18c^5w^2+30cw^3=6cw^2(3c^4+5w).\\]\n\nDivide each original term by the common factor.",
+        "title": "Part (c) | Step 2"
+      },
+      {
+        "body": "Two numbers with product \\(-27\\) and sum \\(6\\) are \\(9\\) and \\(-3\\).\n\nFor a monic quadratic, find a factor pair with the required sum.",
+        "title": "Part (d) | Step 1"
+      },
+      {
+        "body": "\\[x^2+6x-27=(x+9)(x-3).\\]\n\nThe cross terms are -3x+9x=6x.",
+        "title": "Part (d) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q10": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(476\\text{ euros per month}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The annual multiplier is \\(1-0.15=0.85\\). After 3 years the value is \\[32000(0.85)^3=19652\\text{ euros}.\\]\n\nApply the decrease to each successive year, giving a power of 3.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "Lena still needs \\(19652-2516=17136\\) euros. There are \\(3\\times12=36\\) months.\n\nSubtract her existing savings and convert years to months.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[\\text{Monthly saving}=\\frac{17136}{36}=476\\text{ euros}.\\]\n\nDivide the remaining target equally over the months.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q11": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(5\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[3.6\\times10^{24}=36\\times10^{23}=(2^2\\times3^2)(2\\times5)^{23}=2^{25}3^2 5^{23}.\\]\n\nRewrite with an integer coefficient, then decompose 36 and 10 into primes.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "The only prime factors are \\(2,3,5\\), so the highest is \\(5\\).\n\nA larger composite factor is not a prime factor.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q12": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(A\\cap B=\\{25,26\\}\\)\n\n(b) \\((A\\cup B)^{\\prime}=\\{31,32\\}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Within the universal set, \\(A=\\{20,21,22,23,24,25,26\\}\\) and \\(B=\\{25,26,27,28,29,30\\}\\). Their common members are \\(25\\) and \\(26\\).\n\nIntersection consists of elements in both sets.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\(A\\cup B=\\{20,21,\\ldots,30\\}\\). The members of \\(\\mathcal E=\\{20,21,\\ldots,32\\}\\) outside this union are \\(31\\) and \\(32\\).\n\nTake the complement relative to the stated universal set, not all integers.",
+        "title": "Part (b) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q13": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(142.2\\text{ grams}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Tree A contributes \\(12\\times150=1800\\) grams.\n\nTotal weight equals count times mean weight.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "Tree C has \\(2610\\div145=18\\) apples.\n\nNumber of items equals total divided by mean.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "The total weight is \\(1800+2700+2610=7110\\) grams and the total number of apples is \\(12+20+18=50\\).\n\nAdd weights and counts separately; do not average the three group means.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "\\[\\text{Combined mean}=\\frac{7110}{50}=142.2\\text{ grams}.\\]\n\nDivide the total weight by the total count.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q14": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(117\\text{ kg}\\) approximately.\n\n(b) \\(16\\text{ kg}\\) approximately.",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The median is the \\(60/2=30\\)th value. Draw horizontally from cumulative frequency \\(30\\) to the curve, then vertically to the weight axis: about \\(117\\text{ kg}\\).\n\nThe median splits the 60 observations in half.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "Read the lower quartile at cumulative frequency \\(60/4=15\\), giving \\(Q_1\\approx112\\text{ kg}\\). Read the upper quartile at cumulative frequency \\(3(60)/4=45\\), giving \\(Q_3\\approx128\\text{ kg}\\).\n\nQuartiles occur at one-quarter and three-quarters of the total frequency.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "\\[\\text{IQR}=Q_3-Q_1\\approx128-112=16\\text{ kg}.\\]\n\nInterquartile range is upper quartile minus lower quartile.",
+        "title": "Part (b) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q15": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(40.8\\text{ cm}\\) (1 decimal place).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\frac{80}{360}\\pi r^2=32\\pi\\quad\\Rightarrow\\quad r^2=32\\frac{360}{80}=144\\quad\\Rightarrow\\quad r=12\\text{ cm}.\\]\n\nUse the fraction of the full circle and choose the positive radius.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\text{Arc length}=\\frac{80}{360}(2\\pi\\times12)=\\frac{16\\pi}{3}\\text{ cm}.\\]\n\nThe same central-angle fraction applies to the circumference.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[P=12+12+\\frac{16\\pi}{3}=40.7551608\\ldots\\text{ cm}.\\]\n\nThe sector perimeter contains both radii as well as the arc.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q16": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(50\\)\n\n(b) \\(3\\)\n\n(c) \\(gf(x)=3x^2+24x+50\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[g(4)=3(4)^2+2=48+2=50.\\]\n\nSubstitute 4 for the function input.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "If \\(y=4+x\\), then \\(x=y-4\\), so \\(f^{-1}(x)=x-4\\).\n\nReverse the input-output relationship.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "\\[f^{-1}(7)=7-4=3.\\]\n\nApply the inverse function to 7.",
+        "title": "Part (b) | Step 2"
+      },
+      {
+        "body": "\\[gf(x)=g(f(x))=g(x+4)=3(x+4)^2+2.\\]\n\nApply f first and use its whole output as the input of g.",
+        "title": "Part (c) | Step 1"
+      },
+      {
+        "body": "\\[3(x^2+8x+16)+2=3x^2+24x+50.\\]\n\nExpand and collect the constant terms.",
+        "title": "Part (c) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q17": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(0.5\\overline{39}=\\dfrac{89}{165}\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Let \\(x=0.5\\overline{39}=0.5393939\\ldots\\). Then \\(10x=5.393939\\ldots\\) and \\(1000x=539.393939\\ldots\\).\n\nShift past the non-recurring digit and then one complete two-digit recurring block.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "Subtract: \\[1000x-10x=539.393939\\ldots-5.393939\\ldots=534.\\]\n\\[990x=534\\quad\\Rightarrow\\quad x=\\frac{534}{990}=\\frac{89}{165}.\\]\n\nIdentical infinite decimal tails cancel exactly; reduce the resulting fraction by 6.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q18": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x=\\pm\\sqrt{\\dfrac{3w-6a}{a+1}}\\), for \\(a\\ne-1\\) and nonnegative radicand.",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[a=\\frac{3w-x^2}{x^2+6}\\quad\\Rightarrow\\quad a(x^2+6)=3w-x^2.\\]\n\nMultiply by x^2+6, which is positive for real x.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[ax^2+6a=3w-x^2\\quad\\Rightarrow\\quad ax^2+x^2=3w-6a.\\]\n\nCollect both terms involving x^2 on one side.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[(a+1)x^2=3w-6a\\quad\\Rightarrow\\quad x^2=\\frac{3w-6a}{a+1}.\\]\n\nFactor out x^2 and divide by a+1, assuming a is not -1.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "\\[x=\\pm\\sqrt{\\frac{3w-6a}{a+1}}\\quad(a\\ne-1).\\] For real solutions the radicand must be nonnegative. If \\(a=-1\\), the original equation instead requires \\(w=-2\\); then every real \\(x\\) satisfies it.\n\nTaking square roots gives both signs; handle separately the value excluded by division.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q19": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(64^\\circ\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\(\\angle BDE=\\angle ABE=52^\\circ\\), by the alternate segment theorem for tangent \\(AB\\) and chord \\(BE\\).\n\nThe angle between a tangent and chord equals the angle in the opposite segment.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "Since \\(ED=BD\\), the base angles \\(\\angle BED\\) and \\(\\angle EBD\\) are equal. Thus \\[\\angle BED=\\frac{180^\\circ-52^\\circ}{2}=64^\\circ.\\]\n\nEqual sides in triangle EBD subtend equal opposite angles, and its angles sum to 180 degrees.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q20": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(\\dfrac{15}{32}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Let \\(g=P(G)\\). With replacement, the draws are independent. \\[P(GG)=1-P(\\text{at least one red})=1-\\frac{39}{64}=\\frac{25}{64}.\\]\n\nThe complementary event to at least one red is two greens.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[g^2=\\frac{25}{64}\\quad\\Rightarrow\\quad g=\\frac58,\\qquad P(R)=1-\\frac58=\\frac38.\\]\n\nMultiply identical independent green probabilities and take the nonnegative root.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[P(\\text{exactly one red})=P(RG)+P(GR)=\\frac38\\frac58+\\frac58\\frac38=\\frac{30}{64}=\\frac{15}{32}.\\]\n\nThe two possible orders are mutually exclusive and must both be included.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q21": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) Gradient \\(\\approx-5\\).\n\n(b) \\(x\\approx2.0\\) or \\(x\\approx4.4\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "At \\(x=1\\), the point is approximately \\((1,4)\\). Draw a tangent there, extending at least \\(3\\text{ cm}\\). A suitable approximate tangent is \\(y=-5x+9\\), through \\((0.5,6.5)\\) and \\((2,-1)\\).\n\nThe gradient at a point is estimated by the gradient of its tangent; use two well-separated points on the line.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[\\text{Gradient}\\approx\\frac{-1-6.5}{2-0.5}=\\frac{-7.5}{1.5}=-5.\\]\n\nCalculate change in y divided by change in x using the axis values.",
+        "figures": [
+          {
+            "alt": "Question 21, part a: completed solution diagram",
+            "src": "/assets/solution-diagrams/Jun2026/P2-Q21-a-P2-Q21a.png"
+          }
+        ],
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[x=3+\\tfrac12 f(x)\\quad\\Rightarrow\\quad f(x)=2x-6.\\]\n\nRearrange so the given curve y=f(x) can be intersected by a straight line.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "Draw \\(y=2x-6\\) through \\((0,-6),(3,0),(4.5,3)\\) on the same grid. Read the x-coordinates of its two intersections with the curve: approximately \\(2.0\\) and \\(4.4\\).\n\nEach intersection has equal y-values on the line and curve and therefore solves the original equation.",
+        "figures": [
+          {
+            "alt": "Question 21, part b: completed solution diagram",
+            "src": "/assets/solution-diagrams/Jun2026/P2-Q21-b-P2-Q21b.png"
+          }
+        ],
+        "title": "Part (b) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q22": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "Anna walks \\(5.5\\text{ m}\\) further (1 decimal place).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\overrightarrow{AB}=\\binom{21}{14}-\\binom{2}{8}=\\binom{19}{6},\\quad \\overrightarrow{AC}=\\binom{12}{3}-\\binom{2}{8}=\\binom{10}{-5},\\]\n\\[\\overrightarrow{CB}=\\binom{21}{14}-\\binom{12}{3}=\\binom{9}{11}.\\]\n\nSubtract the starting position vector from the finishing position vector.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[AB=\\sqrt{19^2+6^2}=\\sqrt{397},\\quad AC=\\sqrt{10^2+(-5)^2}=\\sqrt{125},\\quad CB=\\sqrt{9^2+11^2}=\\sqrt{202}.\\]\n\nThe modulus of a two-dimensional vector is the square root of the sum of squares of its components.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[\\text{Extra distance}=AC+CB-AB=\\sqrt{125}+\\sqrt{202}-\\sqrt{397}=5.468151\\ldots\\text{ m}.\\]\n\nCompare Anna's two-stage route with Ria's direct route; do not round the intermediate lengths.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q23": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(\\left(-\\dfrac15,-\\dfrac{13}{5}\\right)\\) and \\((2,4)\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Substitute \\(y=3x-2\\) into \\(x^2+y^2-2y=12\\): \\[x^2+(3x-2)^2-2(3x-2)=12.\\]\n\nBoth equations must hold at an intersection.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[x^2+9x^2-12x+4-6x+4=12\\]\n\\[10x^2-18x-4=0\\quad\\Rightarrow\\quad5x^2-9x-2=0.\\]\n\nExpand carefully, collect like terms, and divide by 2.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[(5x+1)(x-2)=0\\quad\\Rightarrow\\quad x=-\\frac15\\text{ or }x=2.\\]\n\nUse factorisation and the zero-product property.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "When \\(x=-\\tfrac15\\), \\(y=3(-\\tfrac15)-2=-\\tfrac{13}{5}\\). When \\(x=2\\), \\(y=3(2)-2=4\\).\n\nSubstitute each root into the line, preserving the coordinate pairings.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q24": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(3.6\\text{ cm}\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The straight generators shown through \\(A\\) give equal vertex angles, so the cones are similar. The area ratio \\(4:9\\) gives length ratio \\(\\sqrt4:\\sqrt9=2:3\\).\n\nFor similar solids, surface areas scale as the square of corresponding lengths.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "The heights total \\(30\\text{ cm}\\), so \\[h_1=\\frac25(30)=12\\text{ cm},\\qquad h_2=\\frac35(30)=18\\text{ cm}.\\]\n\nSplit the total in the common length ratio 2:3.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[\\frac13\\pi r_1^2(12)=23.04\\pi\\quad\\Rightarrow\\quad4r_1^2=23.04\\quad\\Rightarrow\\quad r_1=\\sqrt{5.76}=2.4\\text{ cm}.\\]\n\nUse the volume of the first cone and choose a positive radius.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "\\[r_2=\\frac32r_1=\\frac32(2.4)=3.6\\text{ cm}.\\]\n\nRadii scale by the same factor as the heights.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q25": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(U_{4k}=635\\)",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "With first term \\(3\\) and difference \\(8\\), \\[S_n=\\frac n2[2(3)+(n-1)8]=\\frac n2(8n-2)=4n^2-n.\\]\n\nUse the arithmetic-series sum formula with the given first term and common difference.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[S_{5k}=100k^2-5k,\\qquad S_{3k}=36k^2-3k.\\]\n\\[(100k^2-5k)-(36k^2-3k)=25560\\quad\\Rightarrow\\quad64k^2-2k-25560=0.\\]\n\nSubstitute 5k and 3k as the term counts, then subtract the complete expressions.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[32k^2-k-12780=0\\quad\\Rightarrow\\quad(k-20)(32k+639)=0.\\]\nThe roots are \\(k=20\\) and \\(k=-639/32\\). Reject the negative root because the numbers of terms must be positive.\n\nFactor the quadratic and apply the contextual restriction.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "\\[U_n=3+(n-1)8=8n-5,\\qquad U_{4k}=U_{80}=8(80)-5=635.\\]\n\nUse the nth-term formula with 4k=80, not with k=20.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2H__Q26": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\((-5,12)\\)\n\n(b) Reflection in the y-axis.\n\n(c) \\(a=2,\\quad b=60,\\quad c=3\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "For \\(y=3f(x)\\), x-coordinates are unchanged and y-coordinates are multiplied by \\(3\\). Thus \\((-5,4)\\mapsto(-5,12)\\).\n\nThe vertical scale factor is positive, so a minimum remains a minimum.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "For \\(Q(x)=2-(x+3)^2\\), \\[Q(-x)=2-(-x+3)^2=2-(3-x)^2=R(x).\\] Replacing \\(x\\) by \\(-x\\) reflects the graph in the y-axis.\n\nThe point mapping is (x,y) to (-x,y).",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "The maximum is \\(5\\) and the minimum is \\(1\\), so \\[a=\\frac{5-1}{2}=2,\\qquad c=\\frac{5+1}{2}=3.\\]\n\nThe positive amplitude is half the range; the vertical shift is the midline.",
+        "title": "Part (c) | Step 1"
+      },
+      {
+        "body": "A maximum occurs at \\(x=-60^\\circ\\). For positive \\(a\\), cosine is maximal when \\(x+b=0^\\circ\\) modulo \\(360^\\circ\\), giving \\(b=60\\) in the stated interval. Hence \\(y=2\\cos(x+60)^\\circ+3\\).\n\nRead the phase from a maximum and apply 0<b<360.",
+        "title": "Part (c) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q01": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x=52\\), so the hypotenuse is \\(52\\text{ cm}\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[x^2=20^2+48^2=400+2304=2704.\\]\n\nUse Pythagoras because the 20 cm and 48 cm sides meet at the right angle.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[x=\\sqrt{2704}=52.\\]\n\nTake the positive square root because x is a length.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q02": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(u_n=20-6n\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The common difference is \\(8-14=-6\\).\n\nEach successive term decreases by 6.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[u_n=14+(n-1)(-6)=20-6n.\\]\n\nUse first term plus (n-1) common differences.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q03": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(A^{\\prime}=\\{5,7,8,9,10,11\\}\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\(A=\\{1,2,3,4,6,12\\}\\). Remove these factors from the integers 1 to 12.\n\nThe complement contains precisely the universal-set elements not in A.",
+        "title": "Solution | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q04": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(x=-\\frac58\\).\n\n(b) \\(P=34\\).\n\n(c) \\(1\\).\n\n(d) \\(64r^6t^3\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[3x+6=1-5x.\\]\n\nExpand the bracket.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[8x=-5\\quad\\Rightarrow\\quad x=-\\frac58.\\]\n\nAdd 5x and subtract 6 on both sides, then divide by 8.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[P=(-7)^2-5(3)=49-15=34.\\]\n\nThe square applies to the whole negative number, so (-7) squared is positive.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "\\(m^0=1\\) for \\(m\\ne0\\).\n\nAny nonzero base to the zero power equals 1.",
+        "title": "Part (c) | Step 1"
+      },
+      {
+        "body": "\\[(4r^2t)^3=4^3(r^2)^3t^3=64r^6t^3.\\]\n\nCube each factor and multiply the exponents in the power of a power.",
+        "title": "Part (d) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q05": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(\\$10\\) more.",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\text{Sarah to B}=400\\times\\frac{3}{2+3}=240\\text{ dollars}.\\]\n\nCharity B receives 3 of the 5 equal shares.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "Dej gives to A and B in the ratio \\(1:2\\), so \\[\\text{Dej to B}=375\\times\\frac{2}{3}=250\\text{ dollars}.\\]\n\nTwice as much to B means that B receives 2 of the 3 shares.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[250-240=10\\text{ dollars}.\\]\n\nSubtract the two donations to charity B.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q06": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "Median \\(=5.5\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The largest card is 8, so the smallest is \\(8-7=1\\).\n\nRange is largest minus smallest.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "The fifth card must be 8, since 8 is the mode.\n\nOnly the fifth position can supply another 8 in the ordered cards.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "If the third card is \\(z\\), then \\[1+3+z+7+8+8=31\\quad\\Rightarrow\\quad z=4.\\]\n\nUse the total of all six cards.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "The ordered cards are \\(1,3,4,7,8,8\\), so \\[\\text{median}=\\frac{4+7}{2}=5.5.\\]\n\nWith six values, average the third and fourth.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q07": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(0.00004\\).\n\n(b) \\(1.2\\times10^{231}\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[4\\times10^{-5}=\\frac4{100000}=0.00004.\\]\n\nMove the decimal point five places left.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "\\[(6\\times10^{158})(2\\times10^{72})=12\\times10^{230}=1.2\\times10^{231}.\\]\n\nMultiply the coefficients and add the exponents; normalize the coefficient into [1,10).",
+        "title": "Part (b) | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q08": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(35000\\text{ euros}\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Let the old salary be \\(s\\) euros. Then \\[1.04s=36400.\\]\n\nThe increased salary is 104% of the original.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[s=\\frac{36400}{1.04}=35000.\\]\n\nDivide by the percentage multiplier.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q09": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(55\\text{ m/s}\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\(198\\text{ km}=198000\\text{ m}\\) and \\(1\\text{ hour}=3600\\text{ s}\\).\n\nConvert both the distance and the time in the rate.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[198\\text{ km/h}=\\frac{198000}{3600}=55\\text{ m/s}.\\]\n\nMetres per second means metres divided by seconds.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q10": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(332\\text{ g}\\) (3 significant figures).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[V=\\pi r^2h=\\pi(4)^2(11)=176\\pi\\text{ cm}^3.\\]\n\nUse the cylinder volume formula.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[m=\\rho V=0.6(176\\pi)=105.6\\pi=331.7521842\\ldots\\text{ g}.\\]\n\nMass equals density times volume; keep full precision until the end.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[m=332\\text{ g}\\quad\\text{(3 significant figures)}.\\]\n\nRound the final mass as requested.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q11": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(8.4\\text{ cm}^2\\) (1 decimal place).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[DC=\\sqrt{36}=6\\text{ cm},\\qquad EG=6\\text{ cm}.\\]\n\nAll sides of the square have length equal to the square root of its area, and DC=EG.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\tan25^\\circ=\\frac{FG}{EG}\\quad\\Rightarrow\\quad FG=6\\tan25^\\circ=2.7978459\\ldots\\text{ cm}.\\]\n\nRelative to angle E, FG is opposite and EG is adjacent.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[\\text{Area}=\\frac12(EG)(FG)=\\frac12(6)(6\\tan25^\\circ)=8.3935378\\ldots\\text{ cm}^2.\\]\n\nThe base EG and height FG are perpendicular.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q12": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x\\le0,\\quad y\\ge-x,\\quad 2x+5y\\le12\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\(x\\le0\\).\n\nR lies to the left of the y-axis.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\(y\\ge-x\\).\n\nR lies above the line y=-x.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\(2x+5y\\le12\\).\n\nR lies below the other line. All three boundaries are solid, so equality is included.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q13": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) Table entries, in order: \\(2.5,2,4.25,5.2\\).\n\n(b) The smooth curve \\(y=x+1/x\\) through the stated coordinates on \\([0.25,5]\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Use \\(y=x+1/x\\): \\[y(0.5)=0.5+2=2.5,\\quad y(1)=1+1=2,\\quad y(4)=4+0.25=4.25,\\quad y(5)=5+0.2=5.2.\\]\n\nSubstitute each required x-value into the formula.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "Plot \\[(0.25,4.25),\\ (0.5,2.5),\\ (1,2),\\ (2,2.5),\\ (3,10/3),\\ (4,4.25),\\ (5,5.2).\\]\n\nUse x horizontally and y vertically on the supplied grid; 10/3 is approximately 3.33.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "Join the points with one smooth curve for \\(0.25\\le x\\le5\\), descending to its minimum \\((1,2)\\) and then ascending.\n\nThe graph is curved, not a set of straight segments, and includes both endpoints.",
+        "figures": [
+          {
+            "alt": "Question 13, part b: completed solution diagram",
+            "src": "/assets/solution-diagrams/Jun2026/P2R-Q13-b-Q13b-graph.png"
+          }
+        ],
+        "title": "Part (b) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q14": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) Branch labels from top to bottom: \\(4/7,3/7\\) for A; \\(5/6,1/6\\) for B after either A result.\n\n(b) \\(\\frac{10}{21}\\).\n\n(c) \\(\\frac3{10}\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "From the start, label the Bag A branches \\(P(G_A)=4/7\\) and \\(P(R_A)=3/7\\).\n\nBag A has 7 counters in total.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "From each Bag A outcome, label the Bag B green branch \\(5/6\\) and red branch \\(1/6\\).\n\nBag B has 6 counters and is unaffected by the result from bag A.",
+        "figures": [
+          {
+            "alt": "Question 14, part a: completed solution diagram",
+            "src": "/assets/solution-diagrams/Jun2026/P2R-Q14-a-Q14a-tree.png"
+          }
+        ],
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "\\[P(G_AG_B)=\\frac47\\times\\frac56=\\frac{20}{42}=\\frac{10}{21}.\\]\n\nBoth events must occur, so multiply along the green-green path.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "Let \\(r=P(R_C)\\). Then \\[\\frac37\\times\\frac16\\times r=\\frac3{70}\\quad\\Rightarrow\\quad r=\\frac35,\\qquad P(G_C)=\\frac25.\\]\n\nUse the given probability of three reds to find the bag C probabilities.",
+        "title": "Part (c) | Step 1"
+      },
+      {
+        "body": "Exactly one green means the disjoint outcomes \\(G_AR_BR_C\\), \\(R_AG_BR_C\\), or \\(R_AR_BG_C\\).\n\nThe single green counter can come from A, B or C.",
+        "title": "Part (c) | Step 2"
+      },
+      {
+        "body": "\\[P=\\frac47\\frac16\\frac35+\\frac37\\frac56\\frac35+\\frac37\\frac16\\frac25=\\frac2{35}+\\frac3{14}+\\frac1{35}=\\frac3{10}.\\]\n\nMultiply within each outcome and add the three mutually exclusive probabilities.",
+        "title": "Part (c) | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q15": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(10\\text{ minutes}\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The overall median is the sixth value, 9. The lower five values are \\(2,2,3,6,7\\), and the upper five are \\(9,12,13,17,20\\).\n\nExclude the overall median when forming the two halves.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[Q_1=3,\\quad Q_3=13,\\quad \\mathrm{IQR}=13-3=10\\text{ minutes}.\\]\n\nTake each half-median, then subtract the lower quartile from the upper.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q16": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(n=-3\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\frac1{\\sqrt a}=a^{-1/2},\\qquad\\left(a^{-1/2}\\right)^6=a^{-3}.\\]\n\nA reciprocal changes the sign of the exponent and an outer power multiplies exponents.",
+        "title": "Solution | Step 1"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q17": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(0.\\overline{814}=\\frac{22}{27}\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Let \\(z=0.\\overline{814}=0.814814814\\ldots\\). Then \\(1000z=814.814814\\ldots\\).\n\nMultiplication by 1000 aligns the repeating three-digit tails.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[1000z-z=814\\quad\\Rightarrow\\quad999z=814\\quad\\Rightarrow\\quad z=\\frac{814}{999}=\\frac{22}{27}.\\]\n\nSubtract to cancel the recurring tails, then cancel the common factor 37.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q18": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(\\overrightarrow{AC}=\\begin{pmatrix}6\\\\-3\\end{pmatrix}\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\overrightarrow{AC}=\\overrightarrow{AB}+\\overrightarrow{BC}=\\overrightarrow{AB}-\\overrightarrow{CB}.\\]\n\nReverse CB to travel from B to C.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[\\overrightarrow{AC}=\\begin{pmatrix}4\\\\5\\end{pmatrix}-\\begin{pmatrix}-2\\\\8\\end{pmatrix}=\\begin{pmatrix}6\\\\-3\\end{pmatrix}.\\]\n\nSubtract corresponding components.",
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q19": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "Bar intervals/heights: \\([0,20]:0.7;\\ [20,25]:2.4;\\ [25,35]:3.2;\\ [35,50]:2\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Use \\(\\text{frequency density}=\\text{frequency}/\\text{class width}\\): \\[14/20=0.7,\\quad12/5=2.4,\\quad32/10=3.2,\\quad30/15=2.\\]\n\nHistogram areas, rather than heights alone, represent frequencies.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "Draw four adjoining rectangles on the supplied time and frequency-density axes: \\([0,20]\\) at height \\(0.7\\), \\([20,25]\\) at height \\(2.4\\), \\([25,35]\\) at height \\(3.2\\), and \\([35,50]\\) at height \\(2\\).\n\nEach rectangle starts at density 0 and has the stated class boundaries as its vertical edges; leave no gaps between classes.",
+        "figures": [
+          {
+            "alt": "Question 19, part main: completed solution diagram",
+            "src": "/assets/solution-diagrams/Jun2026/P2R-Q19-main-Q19-histogram.png"
+          }
+        ],
+        "title": "Solution | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q20": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x=\\frac{4y-5}{2y+3}\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[y(4-2x)=3x+5\\quad\\Rightarrow\\quad4y-2xy=3x+5.\\]\n\nMultiply by the denominator, which is nonzero in the original expression.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[4y-5=3x+2xy=x(3+2y).\\]\n\nCollect both x-terms together and factor out x.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[x=\\frac{4y-5}{2y+3}.\\]\n\nDivide by 2y+3. The inverse formula requires y not equal to -3/2; the original requires x not equal to 2.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q21": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "Lower bound \\(=7.79\\) (3 significant figures).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[6.55\\le d<6.65,\\quad2.75\\le e<2.85,\\quad0.465\\le f<0.475.\\]\n\nUse half of each rounding unit to obtain the bounds.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[p_{\\mathrm{lower}}=\\frac{6.55-2.85}{0.475}=\\frac{3.70}{0.475}=7.789473684\\ldots.\\]\n\nMinimize the positive numerator by using the lower bound of d and upper bound of e; maximize the positive denominator.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[p_{\\mathrm{lower}}=7.79\\quad\\text{(3 significant figures)}.\\]\n\nRound the boundary value to the requested accuracy.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q22": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\((x,y)=(\\frac34,-\\frac{11}{4})\\) or \\((3,4)\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[(3x-5)^2=x^2+7\\quad\\Rightarrow\\quad9x^2-30x+25=x^2+7.\\]\n\nSubstitute the linear expression for y into the nonlinear equation.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[8x^2-30x+18=0\\quad\\Rightarrow\\quad4x^2-15x+9=0.\\]\n\nCollect all terms on one side and divide by 2.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[(4x-3)(x-3)=0\\quad\\Rightarrow\\quad x=\\frac34\\text{ or }x=3.\\]\n\nFactorize the quadratic and set each factor to zero.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "For \\(x=\\frac34\\), \\(y=3(\\frac34)-5=-\\frac{11}{4}\\). For \\(x=3\\), \\(y=9-5=4\\).\n\nFind the corresponding y-value for each x, preserving the pairs.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q23": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(y=25\\), so the height is \\(25\\%\\) greater.",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[h_K:h_L=\\sqrt[3]{125}:\\sqrt[3]{216}=5:6.\\]\n\nCorresponding lengths have the cube-root ratio of volumes.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[h_K:h_M=\\sqrt4:\\sqrt9=2:3.\\]\n\nCorresponding lengths have the square-root ratio of surface areas.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "Take \\(h_K=10\\) units. Then \\(h_L=12\\) and \\(h_M=15\\), so \\[y=\\frac{15-12}{12}\\times100=25.\\]\n\nAlign the shared K-length and compare the increase relative to L.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q24": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(5040^\\circ\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "Let \\(\\theta=\\angle CBE\\). Then \\[\\frac{\\theta}{360}\\,2\\pi(4.5)=\\frac3{10}\\pi\\quad\\Rightarrow\\quad\\theta=12^\\circ.\\]\n\nThe arc is theta/360 of a full circumference.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\(\\angle ABC=180^\\circ-12^\\circ=168^\\circ\\), so the regular polygon has exterior angle \\(12^\\circ\\).\n\nA, B and E are collinear, so the sector angle is supplementary to the interior angle.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[n=\\frac{360}{12}=30,\\qquad\\text{sum}=(30-2)180^\\circ=5040^\\circ.\\]\n\nExterior angles sum to 360 degrees, and an n-gon has interior-angle sum (n-2) times 180 degrees.",
+        "title": "Solution | Step 3"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q25": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "(a) \\(a=-3,\\qquad b=90\\).\n\n(b) \\(\\left(\\frac p2,q+5\\right)\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The graph has maximum 3 and minimum -3, so \\(|a|=3\\). Since \\(a<0\\), \\(a=-3\\).\n\nThe amplitude is half the vertical range.",
+        "title": "Part (a) | Step 1"
+      },
+      {
+        "body": "At \\(x=0\\), \\(y=-3\\), so \\(-3\\sin b^\\circ=-3\\) and \\(\\sin b^\\circ=1\\). Hence \\(b=90\\) for \\(0<b<360\\).\n\nThe minimum at x=0 fixes the phase when the amplitude is negative.",
+        "title": "Part (a) | Step 2"
+      },
+      {
+        "body": "To use the original input \\(p\\), set \\(2x=p\\), giving \\(x=p/2\\).\n\nThe replacement of x by 2x halves horizontal coordinates.",
+        "title": "Part (b) | Step 1"
+      },
+      {
+        "body": "The corresponding output is \\(f(p)+5=q+5\\).\n\nAdding 5 translates every output upwards by 5.",
+        "title": "Part (b) | Step 2"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q26": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "The 100th term is \\(298.5\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "The first term is \\(a=k+2\\) and the common difference is \\(d=3\\).\n\nSuccessive listed terms differ by 3.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[S_n=\\frac n2\\{2(k+2)+3(n-1)\\}=\\frac n2(2k+1+3n).\\]\n\nApply the arithmetic-series sum formula.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[S_{2n}=n\\{2(k+2)+3(2n-1)\\}=n(2k+1+6n).\\]\n\nUse 2n in place of n throughout the sum formula.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "Using \\(S_{2n}=4S_n\\) and \\(n>0\\), \\[2k+1+6n=2(2k+1+3n)=4k+2+6n.\\]\n\nDivide the equation by n, then expand the right-hand side.",
+        "title": "Solution | Step 4"
+      },
+      {
+        "body": "\\[2k+1=4k+2\\quad\\Rightarrow\\quad k=-\\frac12.\\]\n\nThe n-terms cancel, leaving a linear equation for k.",
+        "title": "Solution | Step 5"
+      },
+      {
+        "body": "\\[u_{100}=k+2+99(3)=-\\frac12+2+297=298.5.\\]\n\nThe 100th term is the first term plus 99 common differences.",
+        "title": "Solution | Step 6"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
+  "all::Jun2026_P2HR__Q27": {
+    "checkedBy": "Elite independent solve and separate mathematical audit",
+    "finalAnswer": "\\(x=12\\).",
+    "status": "checked",
+    "steps": [
+      {
+        "body": "\\[\\left(1+\\frac{x}{100}\\right)\\left(1+\\frac{2x}{100}\\right)=1.3888.\\]\n\nThe second increase acts on the already-increased house value.",
+        "title": "Solution | Step 1"
+      },
+      {
+        "body": "\\[1+\\frac{3x}{100}+\\frac{2x^2}{10000}=1.3888\\quad\\Rightarrow\\quad x^2+150x-1944=0.\\]\n\nExpand, subtract 1, and multiply by 5000.",
+        "title": "Solution | Step 2"
+      },
+      {
+        "body": "\\[(x-12)(x+162)=0\\quad\\Rightarrow\\quad x=12\\text{ or }x=-162.\\]\n\nFactorize the quadratic.",
+        "title": "Solution | Step 3"
+      },
+      {
+        "body": "Reject \\(x=-162\\), since both changes are increases, so \\(x>0\\).\n\nThe positive root gives multipliers 1.12 and 1.24, whose product is 1.3888.",
+        "title": "Solution | Step 4"
+      }
+    ],
+    "updated": "2026-10-18"
+  },
   "all::May2021_P1H__Q19__p18-18__m03__Set-Notation-and-Venn-Diagrams": {
     "status": "checked",
     "checkedBy": "Dr Eslam Ahmed + Codex",

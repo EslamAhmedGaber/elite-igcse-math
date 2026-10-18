@@ -30,14 +30,14 @@ GITIGNORE = ROOT / ".gitignore"
 CURRENT_PATHWAY_BOOTSTRAP_VERSION = "baccalaureate-20260902b"
 CURRENT_LEAD_VERSION = "20261010a"
 CURRENT_STYLE_VERSION = "20260809a"
-CURRENT_COURSE_MODULES_VERSION = "hub-20261010a"
+CURRENT_COURSE_MODULES_VERSION = "hub-20261018a"
 CURRENT_STUDY_VERSION = "20261010a"
 CURRENT_COMPASS_VERSION = "20261001b"
-CURRENT_SOLUTION_VERSION = "20260714a"
+CURRENT_SOLUTION_VERSION = "20261018a"
 CURRENT_ELITE_SYSTEM_VERSION = "20260906b"
 CURRENT_RESOURCE_HUB_VERSION = "20260810a"
 CURRENT_PRINT_VERSION = "20260809c"
-CURRENT_PAPER_PRINT_VERSION = "20260929a"
+CURRENT_PAPER_PRINT_VERSION = "20261018a"
 IAL_DATA_FILES = {
     "wma11": (ROOT / "ial" / "wma11" / "wma11-data.js", "WMA11_QUESTIONS"),
     "wma12": (ROOT / "ial" / "wma12" / "wma12-data.js", "WMA12_QUESTIONS"),
@@ -156,6 +156,10 @@ ALLOWED_PUBLIC_SOLUTION_DIRS = {
 }
 
 ALLOWED_PUBLIC_SOLUTION_FILES = {
+    "downloads/Modular/20261018/PastPapers/June-2026/Jun2026_Converted_Unit1_Regional_Solutions.pdf",
+    "downloads/Modular/20261018/PastPapers/June-2026/Jun2026_Converted_Unit1_Standard_Solutions.pdf",
+    "downloads/Modular/20261018/PastPapers/June-2026/Jun2026_Converted_Unit2_Regional_Solutions.pdf",
+    "downloads/Modular/20261018/PastPapers/June-2026/Jun2026_Converted_Unit2_Standard_Solutions.pdf",
     "downloads/IAL/WMA11/WMA11_Classified_With_Answers.pdf",
     "downloads/IAL/WMA11/WMA11_Expertise_With_Answers.pdf",
     "downloads/IAL/WMA11/WMA11_Past_Paper_Solutions.pdf",

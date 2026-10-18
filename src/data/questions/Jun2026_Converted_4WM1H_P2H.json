@@ -1,0 +1,91 @@
+{
+  "code": "P2H",
+  "isModular": true,
+  "modularUnit": "Unit 1",
+  "paper": "Jun 2026 P2H | L-to-M Unit 1",
+  "paperSlug": "Jun2026_Converted_4WM1H_P2H",
+  "questionCount": 5,
+  "questions": [
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q09-U1.png",
+      "id": "all::Jun2026_P2H__Q09-U1",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q09-U1.png",
+      "marks": 7,
+      "modularForceUnit": "Unit 1",
+      "q": 9,
+      "text": "9 (a) Find the value of \n7\n0\nn  where n > 0\n..........................................................\n(1)\n \n(b) Simplify fully \n2\n5\n4\n3\nm p\n�\n�\n..........................................................\n(2)\n \n(c) Factorise fully 18\n30\n5\n2\n3\nc w\ncw\n+\n..........................................................\n(2)\n \n(d) Factorise \nx\nx\n2\n6\n27\n�\n�\n..........................................................\n(2)\n(Total for Question 9 is 7 marks)",
+      "topic": "Factorising",
+      "topicOrder": 18,
+      "unit": "Equations, Formulae & Identities"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q12-U1.png",
+      "id": "all::Jun2026_P2H__Q12-U1",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q12-U1.png",
+      "marks": 2,
+      "modularForceUnit": "Unit 1",
+      "q": 12,
+      "text": "12 E ��\n�\n��\n�\n�\nintegers  such that \nsuch that\nsuch \nx\nx\nA\nx\nx\nB\nx\n20\n32\n27\n\n\n<\nthat 25\n30\n\n\nx\n�\n�\n \n(a) List the members of the set A\nB\n∩\n.............................................................................................................\n(1)\n \n(b) List the members of the set A\nB\n�\n�\n�'\n............................................................................................................\n(1)\n(Total for Question 12 is 2 marks)",
+      "topic": "Set Notation & Venn Diagrams",
+      "topicOrder": 1,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q15-U1.png",
+      "id": "all::Jun2026_P2H__Q15-U1",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q15-U1.png",
+      "marks": 4,
+      "modularForceUnit": "Unit 1",
+      "q": 15,
+      "text": "15 The diagram shows a sector OABC of a circle, centre O\n80°\nDiagram NOT \naccurately drawn\nr cm\nr cm\nC\nA\nB\nO\n \nOA\nOC\nr\n=\n=\ncm    \nangle AOC = 80\n \nThe area of the sector OABC is 32\n2\nπ cm\n \nWork out the perimeter of the sector OABC\n \nGive your answer correct to one decimal place.\n...................................................... cm\n(Total for Question 15 is 4 marks)",
+      "topic": "Circles, Arcs & Sectors",
+      "topicOrder": 43,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q17-U1.png",
+      "id": "all::Jun2026_P2H__Q17-U1",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q17-U1.png",
+      "marks": 2,
+      "modularForceUnit": "Unit 1",
+      "q": 17,
+      "text": "17 Use algebra to show that \n0 539\n89\n165\n.\n. .\n=\n(Total for Question 17 is 2 marks)",
+      "topic": "Algebraic Proof",
+      "topicOrder": 22,
+      "unit": "Equations, Formulae & Identities"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q20-U1.png",
+      "id": "all::Jun2026_P2H__Q20-U1",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q20-U1.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 20,
+      "text": "20 A box only contains green counters and red counters.\nNuno chooses at random a counter from the box.\nHe puts the counter back into the box.\nNuno then chooses at random a second counter from the box.\nThe probability that Nuno chooses at least one red counter is 39\n64\nWork out the probability that Nuno chooses exactly one red counter.\n......................................................\n(Total for Question 20 is 3 marks)",
+      "topic": "Probability Toolkit",
+      "topicOrder": 55,
+      "unit": "Statistics & Probability"
+    }
+  ],
+  "session": "Jun 2026"
+}

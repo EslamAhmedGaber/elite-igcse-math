@@ -1,0 +1,237 @@
+{
+  "paperSlug": "Jun2026_Converted_4WM1H_P1HR",
+  "solutions": {
+    "all::Jun2026_P1HR__Q01-U1": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(2\\frac45\\times3\\frac37=9\\frac35\\)",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[2\\frac45=\\frac{14}{5},\\qquad 3\\frac37=\\frac{24}{7}.\\]\n\nConvert each mixed number into an improper fraction.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[\\frac{14}{5}\\times\\frac{24}{7}=\\frac{2\\times24}{5}=\\frac{48}{5}=9\\frac35.\\]\n\nCancel the common factor 7, multiply, then convert back to a mixed number.",
+          "title": "Solution | Step 2"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P1HR__Q03-U1": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "(a) \\(e^{10}\\)\n\n(b) \\(g^3\\)",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[e^7\\times e^3=e^{7+3}=e^{10}.\\]\n\nFor equal bases, add the indices when multiplying.",
+          "title": "Part (a) | Step 1"
+        },
+        {
+          "body": "\\[g^5\\div g^2=g^{5-2}=g^3\\quad(g\\ne0).\\]\n\nFor equal bases, subtract the indices when dividing.",
+          "title": "Part (b) | Step 1"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P1HR__Q04-U1": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "(i) \\(1177.5\\text{ kg}\\)\n\n(ii) \\(1178.5\\text{ kg}\\)",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[1178-0.5=1177.5\\text{ kg}.\\]\n\nRounding to the nearest kilogram allows half a kilogram below the stated value.",
+          "title": "Part (i) | Step 1"
+        },
+        {
+          "body": "\\[1178+0.5=1178.5\\text{ kg}.\\]\n\nThe rounding interval is \\(1177.5\\le w<1178.5\\); the upper endpoint is the upper bound, not an included weight.",
+          "title": "Part (ii) | Step 1"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P1HR__Q05-U1": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(80\\) red counters",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[0.45+0.31+5x+x=1.\\]\n\nThe four colours are mutually exclusive and exhaust all counters, so their probabilities sum to 1.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[6x=1-0.76=0.24,\\qquad x=0.04.\\]\n\nCollect the unknown probabilities and solve the linear equation.",
+          "title": "Solution | Step 2"
+        },
+        {
+          "body": "\\[P(\\text{red})=5(0.04)=0.20,\\qquad N_{\\text{red}}=400(0.20)=80.\\]\n\nMultiply the red proportion by the total number of counters.",
+          "title": "Solution | Step 3"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P1HR__Q08-U1": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\((x-4)(x-8)\\)",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[(-4)(-8)=32,\\qquad -4+(-8)=-12.\\]\n\nChoose two numbers with product 32 and sum -12.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[x^2-12x+32=(x-4)(x-8).\\]\n\nThe chosen numbers give the two constant terms in the factors.",
+          "title": "Solution | Step 2"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P1HR__Q13-U1": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "(a) \\(\\frac52\\)\n\n(b) \\(\\left(0,\\frac54\\right)\\)",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[4y-10x-5=0\\quad\\Longrightarrow\\quad4y=10x+5\\quad\\Longrightarrow\\quad y=\\frac52x+\\frac54.\\]\n\nRearrange into the form y=mx+c.",
+          "title": "Part (a) | Step 1"
+        },
+        {
+          "body": "The gradient is \\(\\frac52\\).\n\nThe coefficient of x is the gradient.",
+          "title": "Part (a) | Step 2"
+        },
+        {
+          "body": "\\[x=0\\quad\\Longrightarrow\\quad4y-5=0\\quad\\Longrightarrow\\quad y=\\frac54.\\]\n\nEvery point on the y-axis has x-coordinate zero.",
+          "title": "Part (b) | Step 1"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P1HR__Q16-U1": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "(a) \\(\\frac{3x-4}{8x}\\)\n\n(b) \\(6x^3+21x^2-12x\\)",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[\\frac58-\\frac{x+2}{4x}=\\frac{5x}{8x}-\\frac{2(x+2)}{8x},\\qquad x\\ne0.\\]\n\nUse 8x as a common denominator.",
+          "title": "Part (a) | Step 1"
+        },
+        {
+          "body": "\\[\\frac{5x-2(x+2)}{8x}=\\frac{5x-2x-4}{8x}=\\frac{3x-4}{8x}.\\]\n\nSubtract the entire numerator of the second fraction and collect like terms.",
+          "title": "Part (a) | Step 2"
+        },
+        {
+          "body": "\\[(2x-1)(x+4)=2x^2+8x-x-4=2x^2+7x-4.\\]\n\nMultiply each term in the first bracket by each term in the second.",
+          "title": "Part (b) | Step 1"
+        },
+        {
+          "body": "\\[3x(2x^2+7x-4)=6x^3+21x^2-12x.\\]\n\nMultiply every term by 3x.",
+          "title": "Part (b) | Step 2"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P1HR__Q18-U1": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(\\frac17\\)",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "The only possible ordered number pairs are \\((1,4)\\) and \\((2,5)\\).\n\nThe second number must be exactly 3 more than the first, not merely differ by 3.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[P(1\\text{ then }4)=\\frac28\\times\\frac17,\\qquad P(2\\text{ then }5)=\\frac38\\times\\frac27.\\]\n\nThere are 7 cards remaining for the second draw; there are two 1s, three 2s, one 4 and two 5s.",
+          "title": "Solution | Step 2"
+        },
+        {
+          "body": "\\[P=\\frac{2}{56}+\\frac{6}{56}=\\frac{8}{56}=\\frac17.\\]\n\nThe two ordered events are mutually exclusive, so add their probabilities.",
+          "title": "Solution | Step 3"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P1HR__Q21-U1": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "(a) \\(x=13\\)\n\n(b) \\(12\\) students.",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "The French-and-German-only region is \\(16-x\\), and the German-and-Italian-only region is \\(15-x\\).\n\nThe totals 16 and 15 each include the triple intersection x.",
+          "title": "Part (a) | Step 1"
+        },
+        {
+          "body": "\\[6+(16-x)+(15-x)+x=24.\\]\n\nThe four disjoint regions in the German set must total 24.",
+          "title": "Part (a) | Step 2"
+        },
+        {
+          "body": "\\[37-x=24\\quad\\Longrightarrow\\quad x=13.\\]\n\nSolve for the common triple-intersection count.",
+          "title": "Part (a) | Step 3"
+        },
+        {
+          "body": "\\[FG\\text{ only}=16-13=3,\\qquad GI\\text{ only}=15-13=2.\\]\n\nUse the triple-intersection value from part (a).",
+          "title": "Part (b) | Step 1"
+        },
+        {
+          "body": "\\[F\\text{ only}=32-(3+4+13)=12,\\qquad I\\text{ only}=27-(4+2+13)=8.\\]\n\nThe French-and-Italian-only count is the given 4.",
+          "title": "Part (b) | Step 2"
+        },
+        {
+          "body": "\\[n(F\\cup G\\cup I)=12+6+8+3+4+2+13=48.\\]\n\nSum all seven mutually exclusive interior regions.",
+          "title": "Part (b) | Step 3"
+        },
+        {
+          "body": "\\[n(\\text{none})=60-48=12.\\]\n\nSubtract the union from the total number of students.",
+          "title": "Part (b) | Step 4"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P1HR__Q22-U1": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(66.2\\text{ cm}^2\\)",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[\\angle ABC=180^\\circ-62^\\circ-47^\\circ=71^\\circ.\\]\n\nThe three triangle angles sum to 180 degrees.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[\\frac{AB}{\\sin47^\\circ}=\\frac{13}{\\sin62^\\circ}\\quad\\Longrightarrow\\quad AB=\\frac{13\\sin47^\\circ}{\\sin62^\\circ}=10.7680208859\\ldots\\text{ cm}.\\]\n\nMatch each side to its opposite angle in the sine rule.",
+          "title": "Solution | Step 2"
+        },
+        {
+          "body": "\\[\\text{Area}=\\frac12(13)\\left(\\frac{13\\sin47^\\circ}{\\sin62^\\circ}\\right)\\sin71^\\circ=66.1788645053\\ldots\\text{ cm}^2.\\]\n\nUse half the product of two sides times the sine of their included angle; retain unrounded values.",
+          "title": "Solution | Step 3"
+        },
+        {
+          "body": "\\[\\text{Area}=66.2\\text{ cm}^2\\quad\\text{(3 significant figures)}.\\]\n\nRound only the final area.",
+          "title": "Solution | Step 4"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P1HR__Q26-U1": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(x=1-\\frac{3n}{2}\\)",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[27=3^3,\\qquad9=3^2,\\qquad\\frac{6^x}{2^x}=\\left(\\frac62\\right)^x=3^x.\\]\n\nWrite both sides in a common base.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[\\frac{27^x\\times3^{n+6}}{9^{4-n}}=3^{3x+n+6-2(4-n)}=3^{3x+3n-2}.\\]\n\nMultiply powers by adding indices and divide powers by subtracting indices.",
+          "title": "Solution | Step 2"
+        },
+        {
+          "body": "\\[3^{3x+3n-2}=3^x\\quad\\Longrightarrow\\quad3x+3n-2=x.\\]\n\nThe base-3 exponential is one-to-one, so equal powers have equal indices.",
+          "title": "Solution | Step 3"
+        },
+        {
+          "body": "\\[2x=2-3n\\quad\\Longrightarrow\\quad x=1-\\frac{3n}{2}.\\]\n\nCollect the x terms and divide by 2.",
+          "title": "Solution | Step 4"
+        }
+      ],
+      "updated": "2026-10-18"
+    }
+  }
+}

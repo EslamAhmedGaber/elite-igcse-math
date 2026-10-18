@@ -335,7 +335,7 @@
     if (!window.EliteRuntime?.loadScript) throw new Error("Solution loader is unavailable");
 
     setRuntimeBusy(control, true);
-    fullSolutionsPromise = window.EliteRuntime.loadScript("solutions-data.js?v=20260528a", {
+    fullSolutionsPromise = window.EliteRuntime.loadScript("solutions-data.js?v=20261018a", {
       id: "eliteExamSolutions",
       test: () => hasFullSolutionBundle(window.SOLUTION_DATA)
     }).then(() => {
@@ -1806,7 +1806,7 @@
         <span class="print-worked-index" aria-hidden="true">${String(index + 1).padStart(2, "0")}</span>
         <div class="print-worked-step-content">
           <h4>${escapeHtml(step.title || `Step ${index + 1}`)}</h4>
-          <div class="print-worked-copy">${formatSolutionText(step.body || "")}</div>
+          <div class="print-worked-copy">${formatSolutionText(step.body || "")}${window.EliteSolutionView?.renderFigures?.(step) || ""}</div>
         </div>
       </section>
     `).join("");

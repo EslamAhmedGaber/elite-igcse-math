@@ -27,7 +27,12 @@ assert(exam.includes("runtime-loader.js"), "Exam must load the shared runtime lo
 const answerSandbox = { window: {} };
 vm.runInNewContext(read("answer-index.js"), answerSandbox, { filename: "answer-index.js" });
 const answerIndex = answerSandbox.window.ELITE_ANSWER_INDEX || {};
-assert.strictEqual(Object.keys(answerIndex).length, 1440, "Answer index count changed");
+const solutionSandbox = { window: {} };
+vm.runInNewContext(read("solutions-data.js"), solutionSandbox);
+const expectedIds = Object.keys(solutionSandbox.window.SOLUTION_DATA || {}).sort();
+assert(expectedIds.length > 0, "Canonical solution bundle must not be empty");
+assert.deepStrictEqual(Object.keys(answerIndex).sort(), expectedIds, "Compact index must cover every canonical solution exactly");
+expectedIds.forEach((id) => assert.strictEqual(answerIndex[id].finalAnswer, solutionSandbox.window.SOLUTION_DATA[id].finalAnswer, `Final answer index is stale: ${id}`));
 assert(Object.values(answerIndex).every((row) => row.hasSolution && typeof row.finalAnswer === "string"), "Answer index rows must remain complete");
 
 const loader = read("runtime-loader.js");

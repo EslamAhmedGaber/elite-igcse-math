@@ -1,0 +1,427 @@
+{
+  "code": "P1HR",
+  "isModular": false,
+  "modularUnit": null,
+  "paper": "Jun 2026 P1HR",
+  "paperSlug": "Jun2026_P1HR",
+  "questionCount": 26,
+  "questions": [
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q01.png",
+      "id": "all::Jun2026_P1HR__Q01",
+      "image": "/assets/questions/Jun2026_P1HR__Q01.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 1,
+      "text": "1 Show that  2 4\n5\n3 3\n7\n9 3\n5\n´\n=\n \n(Total for Question 1 is 3 marks)",
+      "topic": "Fractions",
+      "topicOrder": 4,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q02.png",
+      "id": "all::Jun2026_P1HR__Q02",
+      "image": "/assets/questions/Jun2026_P1HR__Q02.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 2",
+      "q": 2,
+      "text": "2 Write  504  as a product of powers of its prime factors.\n \nShow your working clearly.\n.................................................................................\n(Total for Question 2 is 3 marks)",
+      "topic": "Prime Factors, HCF & LCM",
+      "topicOrder": 2,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q03.png",
+      "id": "all::Jun2026_P1HR__Q03",
+      "image": "/assets/questions/Jun2026_P1HR__Q03.png",
+      "marks": 2,
+      "modularForceUnit": "Unit 1",
+      "q": 3,
+      "text": "3 (a) Simplify  e\n7 × e\n3\n...................................................... \n(1)\n \n(b) Simplify  g\n5 ÷ g\n2\n...................................................... \n(1)\n(Total for Question 3 is 2 marks)",
+      "topic": "Algebraic Roots & Indices",
+      "topicOrder": 16,
+      "unit": "Equations, Formulae & Identities"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q04.png",
+      "id": "all::Jun2026_P1HR__Q04",
+      "image": "/assets/questions/Jun2026_P1HR__Q04.png",
+      "marks": 2,
+      "modularForceUnit": "Unit 1",
+      "q": 4,
+      "text": "4 The weight of a giraffe is 1178 kg, correct to the nearest kg\n \n(i) Write down the lower bound of the weight of the giraffe.\n...................................................... kg\n(1)\n \n(ii) Write down the upper bound of the weight of the giraffe.\n...................................................... kg \n(1)\n(Total for Question 4 is 2 marks)",
+      "topic": "Rounding, Estimation & Bounds",
+      "topicOrder": 8,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q05.png",
+      "id": "all::Jun2026_P1HR__Q05",
+      "image": "/assets/questions/Jun2026_P1HR__Q05.png",
+      "marks": 4,
+      "modularForceUnit": "Unit 1",
+      "q": 5,
+      "text": "5 A bag contains only blue counters, green counters, red counters and yellow counters.\n \nDanny takes a counter at random from the bag. \n \nThe table gives information about the probabilities that he takes a blue counter or a \ngreen counter or a red counter or a yellow counter.\nColour\nblue\ngreen\nred\nyellow\nProbability\n0.45\n0.31\n5x\nx\n \nThere are 400 counters in the bag.\n \nWork out the number of red counters in the bag.\n......................................................\n(Total for Question 5 is 4 marks)",
+      "topic": "Probability Toolkit",
+      "topicOrder": 55,
+      "unit": "Statistics & Probability"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q06.png",
+      "id": "all::Jun2026_P1HR__Q06",
+      "image": "/assets/questions/Jun2026_P1HR__Q06.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 2",
+      "q": 6,
+      "text": "6 \n5 cm\n8 cm\n24 cm\nA\nB\nDiagram NOT \naccurately drawn\n \nA and B are similar parallelograms.\n \nWork out the area of B\n...................................................... cm\n2\n(Total for Question 6 is 3 marks)",
+      "topic": "Area & Volume of Similar Shapes",
+      "topicOrder": 46,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q07.png",
+      "id": "all::Jun2026_P1HR__Q07",
+      "image": "/assets/questions/Jun2026_P1HR__Q07.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 2",
+      "q": 7,
+      "text": "7 \nx\n–3\n–2\n–1\n0\n1\n2\n3\n \n(a) Represent the inequality  x < 1  on the number line above.\n(1)\n \n 2  y + 3 < 7\n \n y is an integer.\n \n(b) Write down all the possible values of y\n.................................................................................\n(2)\n \n(c) Solve the inequality  8 – 5w > –10\n.................................................................................\n(2)\n(Total for Question 7 is 5 marks)",
+      "topic": "Solving Inequalities",
+      "topicOrder": 25,
+      "unit": "Equations, Formulae & Identities"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q08.png",
+      "id": "all::Jun2026_P1HR__Q08",
+      "image": "/assets/questions/Jun2026_P1HR__Q08.png",
+      "marks": 2,
+      "modularForceUnit": "Unit 1",
+      "q": 8,
+      "text": "8 Factorise  x\n2 – 12x + 32\n.................................................................................\n(Total for Question 8 is 2 marks)",
+      "topic": "Factorising",
+      "topicOrder": 18,
+      "unit": "Equations, Formulae & Identities"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q09.png",
+      "id": "all::Jun2026_P1HR__Q09",
+      "image": "/assets/questions/Jun2026_P1HR__Q09.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 2",
+      "q": 9,
+      "text": "9 Caleb owns 11 sheep.\n \nThe mean weight of all 11 sheep is 77 kg \nThe mean weight of 8 of the sheep is 75.2 kg\n \nWork out the mean weight of the other 3 sheep.\n......................................................  kg\n(Total for Question 9 is 3 marks)",
+      "topic": "Statistics Toolkit",
+      "topicOrder": 52,
+      "unit": "Statistics & Probability"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q10.png",
+      "id": "all::Jun2026_P1HR__Q10",
+      "image": "/assets/questions/Jun2026_P1HR__Q10.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 2",
+      "q": 10,
+      "text": "10 Arwa invests 200 000 yen in a savings account for 3 years.\n \nShe gets 1.4% per year compound interest.\n \nWork out how much money Arwa will have in her savings account at the end of 3 years.\n \nGive your answer correct to the nearest yen.\n...................................................... yen\n(Total for Question 10 is 3 marks)",
+      "topic": "Compound Interest & Depreciation",
+      "topicOrder": 6,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q11.png",
+      "id": "all::Jun2026_P1HR__Q11",
+      "image": "/assets/questions/Jun2026_P1HR__Q11.png",
+      "marks": 4,
+      "modularForceUnit": "Unit 2",
+      "q": 11,
+      "text": "11 The diagram shows a solid cuboid.\n3 cm\n11 cm\nx cm\nDiagram NOT \naccurately drawn\n \nThe cuboid measures 3 cm by 11 cm by x cm\n \nThe volume of the cuboid is 264 cm3\n \nWork out the total surface area of the cuboid.\n...................................................... cm2\n(Total for Question 11 is 4 marks)",
+      "topic": "Volume & Surface Area",
+      "topicOrder": 44,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q12.png",
+      "id": "all::Jun2026_P1HR__Q12",
+      "image": "/assets/questions/Jun2026_P1HR__Q12.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 2",
+      "q": 12,
+      "text": "12 Solve the simultaneous equations\n4x + 4y = 5\n  x + 2y = 1\n \nShow clear algebraic working.\nx =  ......................................................\ny =  ......................................................\n(Total for Question 12 is 3 marks)",
+      "topic": "Simultaneous Equations",
+      "topicOrder": 26,
+      "unit": "Equations, Formulae & Identities"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q13.png",
+      "id": "all::Jun2026_P1HR__Q13",
+      "image": "/assets/questions/Jun2026_P1HR__Q13.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 13,
+      "text": "13 The straight line L has equation  4y – 10x – 5 = 0\n \n(a) Find the gradient of L\n.................................................................................\n(2)\n \n(b) Find the coordinates of the point where L crosses the y‑axis.\n(........................... , ...........................)\n(1)\n(Total for Question 13 is 3 marks)",
+      "topic": "Linear Graphs (y = mx + c)",
+      "topicOrder": 31,
+      "unit": "Sequences, Functions & Graphs"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q14.png",
+      "id": "all::Jun2026_P1HR__Q14",
+      "image": "/assets/questions/Jun2026_P1HR__Q14.png",
+      "marks": 4,
+      "modularForceUnit": "Unit 2",
+      "q": 14,
+      "text": "14 The cumulative frequency table gives information about the ages, in years, of 80 people \nwho went to a cinema on Saturday.\nAge (a years)\nCumulative frequency\n0 < a  10\n19\n0 < a  20\n37\n0 < a  30\n52\n0 < a  40\n63\n0 < a  50\n73\n0 < a  60\n80  \n(a) On the grid below, draw a cumulative frequency graph for this information.\n0\n0\n10\n20\n30\n40\n50\n60\n70\n80\n10\n20\n30\n40\n50\n60\nAge (years)\nCumulative \nfrequency\n(2)  \n(b) Use your graph to find an estimate for the median age of the 80 people.\n...................................................... years\n(1)\n \n(c) Use your graph to find an estimate for the number of the 80 people \naged 16 and under.\n......................................................\n(1)\n(Total for Question 14 is 4 marks)",
+      "topic": "Cumulative Frequency Diagrams",
+      "topicOrder": 54,
+      "unit": "Statistics & Probability"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q15.png",
+      "id": "all::Jun2026_P1HR__Q15",
+      "image": "/assets/questions/Jun2026_P1HR__Q15.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 2",
+      "q": 15,
+      "text": "15 \nA\nB\nF\nC\nE\nD\nx�\n109�\n75�\n80�\nDiagram NOT \naccurately drawn \n \nBCDEF is a pentagon.\n \nAB, BC and CD are three sides of a regular 10-sided polygon.\n \nFind the value of x\nx =  ......................................................\n(Total for Question 15 is 3 marks)",
+      "topic": "Angles in Polygons & Parallel Lines",
+      "topicOrder": 39,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q16.png",
+      "id": "all::Jun2026_P1HR__Q16",
+      "image": "/assets/questions/Jun2026_P1HR__Q16.png",
+      "marks": 6,
+      "modularForceUnit": "Unit 1",
+      "q": 16,
+      "text": "16 (a) Express  \n5\n8\n2\n4\n�\n�\nx\nx   as a single fraction in its simplest form.\n.................................................................................\n(3)\n \n(b) Expand and simplify  3x(2x – 1)(x + 4)\n.................................................................................\n(3)\n(Total for Question 16 is 6 marks)",
+      "topic": "Algebraic Fractions",
+      "topicOrder": 20,
+      "unit": "Equations, Formulae & Identities"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q17.png",
+      "id": "all::Jun2026_P1HR__Q17",
+      "image": "/assets/questions/Jun2026_P1HR__Q17.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 2",
+      "q": 17,
+      "text": "17 y = x3 + 5x2 – 8x\n \n(a) Find  d\nd\ny\nx\nd\nd\ny\nx  = ..........................................................................\n(2)\n \nThe curve with equation  y = x3 + 5x2 – 8x  has two stationary points, P and Q\n \nThe x‑coordinate of P is less than the x‑coordinate of Q\n \n(b) Work out the coordinates of P\n \n Show clear algebraic working.\n(........................... , ...........................)\n(3)\n(Total for Question 17 is 5 marks)",
+      "topic": "Differentiation",
+      "topicOrder": 37,
+      "unit": "Sequences, Functions & Graphs"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q18.png",
+      "id": "all::Jun2026_P1HR__Q18",
+      "image": "/assets/questions/Jun2026_P1HR__Q18.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 18,
+      "text": "18 Here are 8 cards.\n \nThere is a number on each card.\n1\n1\n2\n2\n2\n4\n5\n5\n \nGordon puts the 8 cards in a bag.\n \nHe takes at random a card from the bag and does not replace it.\n \nGordon then takes at random a second card from the bag.\n \nCalculate the probability that the number on the second card is 3 more than the number \non the first card.\n  ......................................................\n(Total for Question 18 is 3 marks)",
+      "topic": "Combined & Conditional Probability",
+      "topicOrder": 57,
+      "unit": "Statistics & Probability"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q19.png",
+      "id": "all::Jun2026_P1HR__Q19",
+      "image": "/assets/questions/Jun2026_P1HR__Q19.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 2",
+      "q": 19,
+      "text": "19 P, Q, R and S are points on a circle, centre O\nP\nS\nR\nQ\nO\n170�\n53�\nDiagram NOT \naccurately drawn\n \nAngle POR = 170° \nAngle ORS = 53°\n \nFind the size of angle SPO\n \nGive a reason for each stage of your working.\n  ......................................................°\n(Total for Question 19 is 5 marks)",
+      "topic": "Circle Theorems",
+      "topicOrder": 41,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q20.png",
+      "id": "all::Jun2026_P1HR__Q20",
+      "image": "/assets/questions/Jun2026_P1HR__Q20.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 2",
+      "q": 20,
+      "text": "20 y is directly proportional to t2\n \ny = 40 when t = 4\n \nt is directly proportional to the cube root of x\n \nt = 12 when x = 8\n \nWork out the value of y when x = 27\ny =  ......................................................\n(Total for Question 20 is 5 marks)",
+      "topic": "Direct & Inverse Proportion",
+      "topicOrder": 14,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q21.png",
+      "id": "all::Jun2026_P1HR__Q21",
+      "image": "/assets/questions/Jun2026_P1HR__Q21.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 1",
+      "q": 21,
+      "text": "21 60 students were asked if they study French (F), German (G) or Italian (I)\n \nOf these students\n \n 32 students study French\n \n 24 students study German\n \n 27 students study Italian\n \n 16 students study French and German\n \n 15 students study German and Italian\n \nThe incomplete Venn diagram gives some more information about the languages the \n60 students study.\nF\nI\nE\nG\n4\n6\nx\n \n(a) Work out the value of x\nx =  ......................................................\n(3)\n \n(b) Work out how many of the 60 students study none of French or German or Italian.\n ......................................................\n(2)\n(Total for Question 21 is 5 marks)",
+      "topic": "Set Notation & Venn Diagrams",
+      "topicOrder": 1,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q22.png",
+      "id": "all::Jun2026_P1HR__Q22",
+      "image": "/assets/questions/Jun2026_P1HR__Q22.png",
+      "marks": 4,
+      "modularForceUnit": "Unit 1",
+      "q": 22,
+      "text": "22 The diagram shows triangle ABC\nA\nB\nC\n13 cm\n62�\n47�\nDiagram NOT \naccurately drawn\n \nCalculate the area of the triangle.\n \nGive your answer correct to 3 significant figures.\n ...................................................... cm2\n(Total for Question 22 is 4 marks)",
+      "topic": "Sine, Cosine Rule & Area of Triangles",
+      "topicOrder": 48,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q23.png",
+      "id": "all::Jun2026_P1HR__Q23",
+      "image": "/assets/questions/Jun2026_P1HR__Q23.png",
+      "marks": 7,
+      "modularForceUnit": "Unit 2",
+      "q": 23,
+      "text": "23 The function f is such that  f(x) = 1\nx\n \n(a) Write down the value of x that cannot be included in any domain of f\n  ......................................................\n(1)\n \nThe function g is such that  g(x) = 4x\n2 – 8x + 15 \nThe domain of g is  x  1\n \n(b) Work out  gf(0.5)\n  ......................................................\n(2)\n \n(c) Express the inverse function  g–1  in the form  g–1(x) = ...\ng–1(x) = .................................................................................\n(4)\n(Total for Question 23 is 7 marks)",
+      "topic": "Functions",
+      "topicOrder": 29,
+      "unit": "Sequences, Functions & Graphs"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q24.png",
+      "id": "all::Jun2026_P1HR__Q24",
+      "image": "/assets/questions/Jun2026_P1HR__Q24.png",
+      "marks": 4,
+      "modularForceUnit": "Unit 2",
+      "q": 24,
+      "text": "24 The centre of a circle is the point with coordinates (3, 1)\n \nThe point P with coordinates (7, 6) lies on the circle.\n \nThe line L is the tangent to the circle at P\n \nFind an equation for L\n \nGive your answer in the form  ax + by + c = 0  where a, b and c are integers.\n.................................................................................\n(Total for Question 24 is 4 marks)",
+      "topic": "Circle Theorems",
+      "topicOrder": 41,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q25.png",
+      "id": "all::Jun2026_P1HR__Q25",
+      "image": "/assets/questions/Jun2026_P1HR__Q25.png",
+      "marks": 6,
+      "modularForceUnit": "Unit 2",
+      "q": 25,
+      "text": "25\nA\nC\nD\nP\nB\nO\n4b\n3a\n2a + 2b\nDiagram NOT \naccurately drawn \n \nOA\n→ = 3a   OB\n→ = 4b   AC\n→ = 2a + 2b   CD\n→ = 3\n2  × AC\n→\n \nP is the point on BC such that OPD is a straight line.\n \n(a) Find OD\n→ in terms of a and b\n \n Give your answer in its simplest form.\n ......................................................\n(2)\n \n(b) Find the ratio  OP : PD\n \n Show your working clearly. .................................................................................\n(4)\n(Total for Question 25 is 6 marks)",
+      "topic": "Vectors",
+      "topicOrder": 50,
+      "unit": "Vectors & Transformation Geometry"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q26.png",
+      "id": "all::Jun2026_P1HR__Q26",
+      "image": "/assets/questions/Jun2026_P1HR__Q26.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 26,
+      "text": "26 \n27\n3\n9\n6\n2\n6\n4\nx\nn\nn\nx\nx\n×\n�\n�\n�\n \nExpress x in terms of n\n \nShow your working clearly and simplify your expression.\nx = .................................................................................\n(Total for Question 26 is 3 marks)",
+      "topic": "Algebraic Roots & Indices",
+      "topicOrder": 16,
+      "unit": "Equations, Formulae & Identities"
+    }
+  ],
+  "session": "Jun 2026"
+}

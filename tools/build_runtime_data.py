@@ -9,7 +9,8 @@ solutions belong in `src/data/`, then this script refreshes the runtime files.
 from __future__ import annotations
 
 import json
-from datetime import datetime
+import os
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -57,6 +58,7 @@ def load_questions() -> list[dict[str, Any]]:
                     "question_text": question.get("text", ""),
                     "paper_code": paper.get("code", ""),
                     "modular_force_unit": question.get("modularForceUnit"),
+                    **({"available_pathways": question["availablePathways"]} if "availablePathways" in question else {}),
                 }
             )
     return rows
@@ -79,7 +81,10 @@ def build_site_meta(questions: list[dict[str, Any]]) -> dict[str, Any]:
         "expertise": [q for q in questions if q["bank"] == "expertise"],
     }
     return {
-        "generatedAt": datetime.now().isoformat(timespec="seconds"),
+        "generatedAt": (
+            datetime.fromtimestamp(int(os.environ["SOURCE_DATE_EPOCH"]), timezone.utc).replace(tzinfo=None)
+            if os.environ.get("SOURCE_DATE_EPOCH") else datetime.now()
+        ).isoformat(timespec="seconds"),
         "questionCount": len(questions),
         "paperCount": len(papers),
         "topics": topics,

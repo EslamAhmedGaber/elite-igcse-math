@@ -1,0 +1,251 @@
+{
+  "code": "P1HR",
+  "isModular": true,
+  "modularUnit": "Unit 2",
+  "paper": "Jun 2026 P1HR | L-to-M Unit 2",
+  "paperSlug": "Jun2026_Converted_4WM2H_P1HR",
+  "questionCount": 15,
+  "questions": [
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q02-U2.png",
+      "id": "all::Jun2026_P1HR__Q02-U2",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q02-U2.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 2",
+      "q": 2,
+      "text": "2 Write  504  as a product of powers of its prime factors.\n \nShow your working clearly.\n.................................................................................\n(Total for Question 2 is 3 marks)",
+      "topic": "Prime Factors, HCF & LCM",
+      "topicOrder": 2,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q06-U2.png",
+      "id": "all::Jun2026_P1HR__Q06-U2",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q06-U2.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 2",
+      "q": 6,
+      "text": "6 \n5 cm\n8 cm\n24 cm\nA\nB\nDiagram NOT \naccurately drawn\n \nA and B are similar parallelograms.\n \nWork out the area of B\n...................................................... cm\n2\n(Total for Question 6 is 3 marks)",
+      "topic": "Area & Volume of Similar Shapes",
+      "topicOrder": 46,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q07-U2.png",
+      "id": "all::Jun2026_P1HR__Q07-U2",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q07-U2.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 2",
+      "q": 7,
+      "text": "7 \nx\n–3\n–2\n–1\n0\n1\n2\n3\n \n(a) Represent the inequality  x < 1  on the number line above.\n(1)\n \n 2  y + 3 < 7\n \n y is an integer.\n \n(b) Write down all the possible values of y\n.................................................................................\n(2)\n \n(c) Solve the inequality  8 – 5w > –10\n.................................................................................\n(2)\n(Total for Question 7 is 5 marks)",
+      "topic": "Solving Inequalities",
+      "topicOrder": 25,
+      "unit": "Equations, Formulae & Identities"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q09-U2.png",
+      "id": "all::Jun2026_P1HR__Q09-U2",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q09-U2.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 2",
+      "q": 9,
+      "text": "9 Caleb owns 11 sheep.\n \nThe mean weight of all 11 sheep is 77 kg \nThe mean weight of 8 of the sheep is 75.2 kg\n \nWork out the mean weight of the other 3 sheep.\n......................................................  kg\n(Total for Question 9 is 3 marks)",
+      "topic": "Statistics Toolkit",
+      "topicOrder": 52,
+      "unit": "Statistics & Probability"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q10-U2.png",
+      "id": "all::Jun2026_P1HR__Q10-U2",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q10-U2.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 2",
+      "q": 10,
+      "text": "10 Arwa invests 200 000 yen in a savings account for 3 years.\n \nShe gets 1.4% per year compound interest.\n \nWork out how much money Arwa will have in her savings account at the end of 3 years.\n \nGive your answer correct to the nearest yen.\n...................................................... yen\n(Total for Question 10 is 3 marks)",
+      "topic": "Compound Interest & Depreciation",
+      "topicOrder": 6,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q11-U2.png",
+      "id": "all::Jun2026_P1HR__Q11-U2",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q11-U2.png",
+      "marks": 4,
+      "modularForceUnit": "Unit 2",
+      "q": 11,
+      "text": "11 The diagram shows a solid cuboid.\n3 cm\n11 cm\nx cm\nDiagram NOT \naccurately drawn\n \nThe cuboid measures 3 cm by 11 cm by x cm\n \nThe volume of the cuboid is 264 cm3\n \nWork out the total surface area of the cuboid.\n...................................................... cm2\n(Total for Question 11 is 4 marks)",
+      "topic": "Volume & Surface Area",
+      "topicOrder": 44,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q12-U2.png",
+      "id": "all::Jun2026_P1HR__Q12-U2",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q12-U2.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 2",
+      "q": 12,
+      "text": "12 Solve the simultaneous equations\n4x + 4y = 5\n  x + 2y = 1\n \nShow clear algebraic working.\nx =  ......................................................\ny =  ......................................................\n(Total for Question 12 is 3 marks)",
+      "topic": "Simultaneous Equations",
+      "topicOrder": 26,
+      "unit": "Equations, Formulae & Identities"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q14-U2.png",
+      "id": "all::Jun2026_P1HR__Q14-U2",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q14-U2.png",
+      "marks": 4,
+      "modularForceUnit": "Unit 2",
+      "q": 14,
+      "text": "14 The cumulative frequency table gives information about the ages, in years, of 80 people \nwho went to a cinema on Saturday.\nAge (a years)\nCumulative frequency\n0 < a  10\n19\n0 < a  20\n37\n0 < a  30\n52\n0 < a  40\n63\n0 < a  50\n73\n0 < a  60\n80  \n(a) On the grid below, draw a cumulative frequency graph for this information.\n0\n0\n10\n20\n30\n40\n50\n60\n70\n80\n10\n20\n30\n40\n50\n60\nAge (years)\nCumulative \nfrequency\n(2)  \n(b) Use your graph to find an estimate for the median age of the 80 people.\n...................................................... years\n(1)\n \n(c) Use your graph to find an estimate for the number of the 80 people \naged 16 and under.\n......................................................\n(1)\n(Total for Question 14 is 4 marks)",
+      "topic": "Cumulative Frequency Diagrams",
+      "topicOrder": 54,
+      "unit": "Statistics & Probability"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q15-U2.png",
+      "id": "all::Jun2026_P1HR__Q15-U2",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q15-U2.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 2",
+      "q": 15,
+      "text": "15 \nA\nB\nF\nC\nE\nD\nx�\n109�\n75�\n80�\nDiagram NOT \naccurately drawn \n \nBCDEF is a pentagon.\n \nAB, BC and CD are three sides of a regular 10-sided polygon.\n \nFind the value of x\nx =  ......................................................\n(Total for Question 15 is 3 marks)",
+      "topic": "Angles in Polygons & Parallel Lines",
+      "topicOrder": 39,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q17-U2.png",
+      "id": "all::Jun2026_P1HR__Q17-U2",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q17-U2.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 2",
+      "q": 17,
+      "text": "17 y = x3 + 5x2 – 8x\n \n(a) Find  d\nd\ny\nx\nd\nd\ny\nx  = ..........................................................................\n(2)\n \nThe curve with equation  y = x3 + 5x2 – 8x  has two stationary points, P and Q\n \nThe x‑coordinate of P is less than the x‑coordinate of Q\n \n(b) Work out the coordinates of P\n \n Show clear algebraic working.\n(........................... , ...........................)\n(3)\n(Total for Question 17 is 5 marks)",
+      "topic": "Differentiation",
+      "topicOrder": 37,
+      "unit": "Sequences, Functions & Graphs"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q19-U2.png",
+      "id": "all::Jun2026_P1HR__Q19-U2",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q19-U2.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 2",
+      "q": 19,
+      "text": "19 P, Q, R and S are points on a circle, centre O\nP\nS\nR\nQ\nO\n170�\n53�\nDiagram NOT \naccurately drawn\n \nAngle POR = 170° \nAngle ORS = 53°\n \nFind the size of angle SPO\n \nGive a reason for each stage of your working.\n  ......................................................°\n(Total for Question 19 is 5 marks)",
+      "topic": "Circle Theorems",
+      "topicOrder": 41,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q20-U2.png",
+      "id": "all::Jun2026_P1HR__Q20-U2",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q20-U2.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 2",
+      "q": 20,
+      "text": "20 y is directly proportional to t2\n \ny = 40 when t = 4\n \nt is directly proportional to the cube root of x\n \nt = 12 when x = 8\n \nWork out the value of y when x = 27\ny =  ......................................................\n(Total for Question 20 is 5 marks)",
+      "topic": "Direct & Inverse Proportion",
+      "topicOrder": 14,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q23-U2.png",
+      "id": "all::Jun2026_P1HR__Q23-U2",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q23-U2.png",
+      "marks": 7,
+      "modularForceUnit": "Unit 2",
+      "q": 23,
+      "text": "23 The function f is such that  f(x) = 1\nx\n \n(a) Write down the value of x that cannot be included in any domain of f\n  ......................................................\n(1)\n \nThe function g is such that  g(x) = 4x\n2 – 8x + 15 \nThe domain of g is  x  1\n \n(b) Work out  gf(0.5)\n  ......................................................\n(2)\n \n(c) Express the inverse function  g–1  in the form  g–1(x) = ...\ng–1(x) = .................................................................................\n(4)\n(Total for Question 23 is 7 marks)",
+      "topic": "Functions",
+      "topicOrder": 29,
+      "unit": "Sequences, Functions & Graphs"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q24-U2.png",
+      "id": "all::Jun2026_P1HR__Q24-U2",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q24-U2.png",
+      "marks": 4,
+      "modularForceUnit": "Unit 2",
+      "q": 24,
+      "text": "24 The centre of a circle is the point with coordinates (3, 1)\n \nThe point P with coordinates (7, 6) lies on the circle.\n \nThe line L is the tangent to the circle at P\n \nFind an equation for L\n \nGive your answer in the form  ax + by + c = 0  where a, b and c are integers.\n.................................................................................\n(Total for Question 24 is 4 marks)",
+      "topic": "Circle Theorems",
+      "topicOrder": 41,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1HR__Q25-U2.png",
+      "id": "all::Jun2026_P1HR__Q25-U2",
+      "image": "/assets/questions/converted/Jun2026_P1HR__Q25-U2.png",
+      "marks": 6,
+      "modularForceUnit": "Unit 2",
+      "q": 25,
+      "text": "25\nA\nC\nD\nP\nB\nO\n4b\n3a\n2a + 2b\nDiagram NOT \naccurately drawn \n \nOA\n→ = 3a   OB\n→ = 4b   AC\n→ = 2a + 2b   CD\n→ = 3\n2  × AC\n→\n \nP is the point on BC such that OPD is a straight line.\n \n(a) Find OD\n→ in terms of a and b\n \n Give your answer in its simplest form.\n ......................................................\n(2)\n \n(b) Find the ratio  OP : PD\n \n Show your working clearly. .................................................................................\n(4)\n(Total for Question 25 is 6 marks)",
+      "topic": "Vectors",
+      "topicOrder": 50,
+      "unit": "Vectors & Transformation Geometry"
+    }
+  ],
+  "session": "Jun 2026"
+}

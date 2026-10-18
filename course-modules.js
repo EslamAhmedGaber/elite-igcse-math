@@ -195,6 +195,22 @@
 
   const linearPastPapers = [
       {
+          heading: "2026",
+          sessions: [{
+              label: "Jun 2026",
+              papers: [
+                  { kind: "paper", title: "Paper 1H", href: "downloads/PastPapers/Linear/Jun 2026 P1H.pdf" },
+                  { kind: "solution", title: "Solution 1H", href: "downloads/PastPaperSolutions/Jun2026_P1H_Solutions.pdf?v=june2026-20261018" },
+                  { kind: "paper", title: "Paper 1HR", href: "downloads/PastPapers/Linear/Jun 2026 P1HR.pdf" },
+                  { kind: "solution", title: "Solution 1HR", href: "downloads/PastPaperSolutions/Jun2026_P1HR_Solutions.pdf?v=june2026-20261018" },
+                  { kind: "paper", title: "Paper 2H", href: "downloads/PastPapers/Linear/Jun 2026 P2H.pdf" },
+                  { kind: "solution", title: "Solution 2H", href: "downloads/PastPaperSolutions/Jun2026_P2H_Solutions.pdf?v=june2026-20261018" },
+                  { kind: "paper", title: "Paper 2HR", href: "downloads/PastPapers/Linear/Jun 2026 P2HR.pdf" },
+                  { kind: "solution", title: "Solution 2HR", href: "downloads/PastPaperSolutions/Jun2026_P2HR_Solutions.pdf?v=june2026-20261018" }
+              ]
+          }]
+      },
+      {
           "heading": "2025",
           "sessions": [
               {
@@ -828,6 +844,30 @@
   // Keep them beside the official Modular rows, but label the distinction at link level.
   const modularReconstructedSessions = [
       {
+          label: "June 2026 | Standard | 91 marks | L\u2192M",
+          unit: "Unit 1", status: "reviewed", version: "june2026-20261018",
+          student: "downloads/Modular/20261018/PastPapers/June-2026/Jun2026_Converted_Unit1_Standard_Student.pdf",
+          solutions: "downloads/Modular/20261018/PastPapers/June-2026/Jun2026_Converted_Unit1_Standard_Solutions.pdf"
+      },
+      {
+          label: "June 2026 | Regional (R) | 80 marks | L\u2192M",
+          unit: "Unit 1", status: "reviewed", version: "june2026-20261018",
+          student: "downloads/Modular/20261018/PastPapers/June-2026/Jun2026_Converted_Unit1_Regional_Student.pdf",
+          solutions: "downloads/Modular/20261018/PastPapers/June-2026/Jun2026_Converted_Unit1_Regional_Solutions.pdf"
+      },
+      {
+          label: "June 2026 | Standard | 109 marks | L\u2192M",
+          unit: "Unit 2", status: "reviewed", version: "june2026-20261018",
+          student: "downloads/Modular/20261018/PastPapers/June-2026/Jun2026_Converted_Unit2_Standard_Student.pdf",
+          solutions: "downloads/Modular/20261018/PastPapers/June-2026/Jun2026_Converted_Unit2_Standard_Solutions.pdf"
+      },
+      {
+          label: "June 2026 | Regional (R) | 120 marks | L\u2192M",
+          unit: "Unit 2", status: "reviewed", version: "june2026-20261018",
+          student: "downloads/Modular/20261018/PastPapers/June-2026/Jun2026_Converted_Unit2_Regional_Student.pdf",
+          solutions: "downloads/Modular/20261018/PastPapers/June-2026/Jun2026_Converted_Unit2_Regional_Solutions.pdf"
+      },
+      {
           "label": "June 2025 · L→M",
           "unit": "Unit 1",
           "status": "reviewed",
@@ -972,7 +1012,7 @@
   modularReconstructedSessions.forEach((item) => {
       const group = modularPastPapers.find((candidate) => candidate.heading.startsWith(item.unit));
       if (!group) return;
-      const version = item.status === "reviewed-provisional" ? "modular-20260824-nov2025" : "modular-20260824-converted";
+      const version = item.version || (item.status === "reviewed-provisional" ? "modular-20260824-nov2025" : "modular-20260824-converted");
       group.sessions.push({
           label: item.label,
           converted: true,

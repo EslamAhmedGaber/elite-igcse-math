@@ -1,0 +1,315 @@
+{
+  "code": "P1H",
+  "isModular": true,
+  "modularUnit": "Unit 1",
+  "paper": "Jun 2026 P1H | L-to-M Unit 1",
+  "paperSlug": "Jun2026_Converted_4WM1H_P1H",
+  "questionCount": 19,
+  "questions": [
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1H__Q01-U1.png",
+      "id": "all::Jun2026_P1H__Q01-U1",
+      "image": "/assets/questions/converted/Jun2026_P1H__Q01-U1.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 1,
+      "text": "1 Show that 4 1\n7\n2 3\n5\n119\n35\n�\n�\n(Total for Question 1 is 3 marks)",
+      "topic": "Fractions",
+      "topicOrder": 4,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1H__Q02-U1.png",
+      "id": "all::Jun2026_P1H__Q02-U1",
+      "image": "/assets/questions/converted/Jun2026_P1H__Q02-U1.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 2,
+      "text": "2 \nDiagram NOT \naccurately drawn\nx cm\n65°\n10 cm\n \nWork out the value of x\n \nGive your answer correct to 3 significant figures.\nx = .............................................................\n(Total for Question 2 is 3 marks)",
+      "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
+      "topicOrder": 47,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1H__Q03-U1.png",
+      "id": "all::Jun2026_P1H__Q03-U1",
+      "image": "/assets/questions/converted/Jun2026_P1H__Q03-U1.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 3,
+      "text": "3 E =  {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}\n \nA =  {factors of 20}\n \nB =  {multiples of 5}\n \n(a) List the members of the set\n \n \n(i) A\nB\n∪\n...........................................................................................\n(1)\n \n \n(ii) A\nB\n�\n�\n............................................................................................\n(1)\n \nC =  {prime numbers}\n \nAna writes down the statement A\nC\n�\n�� \nAna’s statement is wrong.\n \n(b) Explain why.\n..................................................................................................................................................................................................................................................\n..................................................................................................................................................................................................................................................\n(1)\n(Total for Question 3 is 3 marks)",
+      "topic": "Set Notation & Venn Diagrams",
+      "topicOrder": 1,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1H__Q04-U1.png",
+      "id": "all::Jun2026_P1H__Q04-U1",
+      "image": "/assets/questions/converted/Jun2026_P1H__Q04-U1.png",
+      "marks": 4,
+      "modularForceUnit": "Unit 1",
+      "q": 4,
+      "text": "4 Henri competes in a race.\n \nFor the first part of the race Henri cycles 60 km at an average speed of 24 km/h\n \nFor the remaining part of the race Henri runs for 1 hour and 15 minutes at  \nan average speed of 12 km/h\n \nWork out Henri’s average speed for the whole race.\n \nGive your answer in km/h\n \nShow your working clearly.\n.......................................................... km/h\n(Total for Question 4 is 4 marks)",
+      "topic": "Standard & Compound Units",
+      "topicOrder": 38,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1H__Q05-U1.png",
+      "id": "all::Jun2026_P1H__Q05-U1",
+      "image": "/assets/questions/converted/Jun2026_P1H__Q05-U1.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 5,
+      "text": "5 (a) Expand \n4\n2\n3\ne\ne �\n�\n�\n..........................................................\n(1)  \n(b) Expand and simplify \nf\nf\n�\n�\n�\n�\n�\n�\n3\n6\n........................................................\n(2)",
+      "topic": "Expanding Brackets",
+      "topicOrder": 17,
+      "unit": "Equations, Formulae & Identities"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1H__Q06-U1.png",
+      "id": "all::Jun2026_P1H__Q06-U1",
+      "image": "/assets/questions/converted/Jun2026_P1H__Q06-U1.png",
+      "marks": 2,
+      "modularForceUnit": "Unit 1",
+      "q": 6,
+      "text": "6 Simplify 4\n5\n6\n3\nx y\n�\n�\n..........................................................\n(Total for Question 6 is 2 marks)",
+      "topic": "Algebraic Roots & Indices",
+      "topicOrder": 16,
+      "unit": "Equations, Formulae & Identities"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1H__Q07-U1.png",
+      "id": "all::Jun2026_P1H__Q07-U1",
+      "image": "/assets/questions/converted/Jun2026_P1H__Q07-U1.png",
+      "marks": 4,
+      "modularForceUnit": "Unit 1",
+      "q": 7,
+      "text": "7 Here is a biased 4-sided spinner.\n1\n2\n3\n4\n \nThe table gives information about the probability that, when the spinner is spun once,  \nit will land on each number.\nNumber\n1\n2\n3\n4\nProbability\n0.12\nx\n2x\n0.16\n \nNevan spins the spinner 500 times.\n \nWork out the expected number of times that the spinner lands on an even number.\n.........................................................\n(Total for Question 7 is 4 marks)",
+      "topic": "Probability Toolkit",
+      "topicOrder": 55,
+      "unit": "Statistics & Probability"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1H__Q08-U1.png",
+      "id": "all::Jun2026_P1H__Q08-U1",
+      "image": "/assets/questions/converted/Jun2026_P1H__Q08-U1.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 8,
+      "text": "8 Change a speed of 70 metres per second to a speed in kilometres per hour. \nShow your working clearly.\n......................................................... km/h\n(Total for Question 8 is 3 marks)",
+      "topic": "Standard & Compound Units",
+      "topicOrder": 38,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1H__Q11-U1.png",
+      "id": "all::Jun2026_P1H__Q11-U1",
+      "image": "/assets/questions/converted/Jun2026_P1H__Q11-U1.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 1",
+      "q": 11,
+      "text": "11 The diagram shows a shaded shape ABCDEO made from a semicircle BCD and \ntwo identical right-angled triangles ABO and EDO\nDiagram NOT \naccurately drawn\nC\nD\n15 cm\n15 cm\nB\nA\nE\nO\n \nBD is the diameter of the semicircle.\n \nO is the midpoint of BD\n \nangle ABO\nEDO\nAO\nEO\n�\n�\n�\n�\n�\nangle\ncm\n90\n15\n \nThe area of semicircle BCD is 227\n2\ncm\n \nWork out the perimeter of the shaded shape.\n \nShow your working clearly.\n \nGive your answer correct to one decimal place. ......................................................... cm\n(Total for Question 11 is 5 marks)",
+      "topic": "Area & Perimeter",
+      "topicOrder": 42,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1H__Q12-U1.png",
+      "id": "all::Jun2026_P1H__Q12-U1",
+      "image": "/assets/questions/converted/Jun2026_P1H__Q12-U1.png",
+      "marks": 6,
+      "modularForceUnit": "Unit 1",
+      "q": 12,
+      "text": "12 2\n8\n64\n3\nx =\n \n(a) Find the value of x\n \n Show clear algebraic working.\nx = .......................................................\n(3)\n \n(b) Expand and simplify 4\n5 2\n3\nt t\nt\n(\n)(\n)\n�\n�\n.............................................................................................................\n(3)\n(Total for Question 12 is 6 marks)",
+      "topic": "Expanding Brackets",
+      "topicOrder": 17,
+      "unit": "Equations, Formulae & Identities"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1H__Q13-U1.png",
+      "id": "all::Jun2026_P1H__Q13-U1",
+      "image": "/assets/questions/converted/Jun2026_P1H__Q13-U1.png",
+      "marks": 4,
+      "modularForceUnit": "Unit 1",
+      "q": 13,
+      "text": "13 On any school day, Paulo either walks to school or travels by bus to school.\n \nThe probability that it rains on any school day is 0.15\n \nIf it rains on a school day, the probability that Paulo walks to school is 0.2\n \nIf it does not rain on a school day, the probability that Paulo walks to school is 0.75\n \n(a) Complete the probability tree diagram for this information.\nrain\nwalk\nbus\nwalk\nbus\nnot rain\n(2)\n \n(b) Work out the probability that on a school day, it rains and Paulo walks to school.\n......................................................\n(2)\n(Total for Question 13 is 4 marks)",
+      "topic": "Probability Diagrams - Venn & Tree Diagrams",
+      "topicOrder": 56,
+      "unit": "Statistics & Probability"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1H__Q15-U1.png",
+      "id": "all::Jun2026_P1H__Q15-U1",
+      "image": "/assets/questions/converted/Jun2026_P1H__Q15-U1.png",
+      "marks": 2,
+      "modularForceUnit": "Unit 1",
+      "q": 15,
+      "text": "15 Point A has coordinates �\n�\n�\n3 4\n,\n \nPoint B has coordinates 2\n6\n, �\n�\n�\n \nWork out the gradient of the line AB\n.....................................................\n(Total for Question 15 is 2 marks)",
+      "topic": "Linear Graphs (y = mx + c)",
+      "topicOrder": 31,
+      "unit": "Sequences, Functions & Graphs"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1H__Q16-U1.png",
+      "id": "all::Jun2026_P1H__Q16-U1",
+      "image": "/assets/questions/converted/Jun2026_P1H__Q16-U1.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 1",
+      "q": 16,
+      "text": "16 The diagram shows triangle ABC\nB\nA\nC\n73 cm\n25 cm\n65°\nDiagram NOT \naccurately drawn\nAB = 25 cm    \nAC = 73 cm   \nangle BAC �\n�\n65\n \n(a) Work out the length of BC\n \n Give your answer correct to 3 significant figures.\n.................................................... cm\n(3)\n \n(b) Work out the area of the triangle.\n \n Give your answer correct to 3 significant figures.\n.................................................... cm2\n(2)\n(Total for Question 16 is 5 marks)",
+      "topic": "Sine, Cosine Rule & Area of Triangles",
+      "topicOrder": 48,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1H__Q17-U1.png",
+      "id": "all::Jun2026_P1H__Q17-U1",
+      "image": "/assets/questions/converted/Jun2026_P1H__Q17-U1.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 17,
+      "text": "17 Show that 4\n20\n�\n�\n�5\n2 5\n�\n�\n� can be written in the form a\nb\n−\n \nwhere a and b are integers.\n(Total for Question 17 is 3 marks)",
+      "topic": "Surds",
+      "topicOrder": 9,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1H__Q18-U1.png",
+      "id": "all::Jun2026_P1H__Q18-U1",
+      "image": "/assets/questions/converted/Jun2026_P1H__Q18-U1.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 18,
+      "text": "18 Simplify fully \n4\n9\n2\n5\n12\n2\n2\nx\nx\nx\n−\n−\n−\n \nShow clear algebraic working.\n....................................................\n(Total for Question 18 is 3 marks)",
+      "topic": "Algebraic Fractions",
+      "topicOrder": 20,
+      "unit": "Equations, Formulae & Identities"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1H__Q20-U1.png",
+      "id": "all::Jun2026_P1H__Q20-U1",
+      "image": "/assets/questions/converted/Jun2026_P1H__Q20-U1.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 1",
+      "q": 20,
+      "text": "20 The final velocity, v m/s, of an object is given by\nv\ns\nt\nu\n�\n�\n��\n�\n���\n2\n \nwhere\n \n \ns\nt\n=\n=\n100 correct to the nearest integer\ncorrect to 2 deci\n1 68\n.\nmal places\ncorrect to 1 decimal place\nu = 0 5.\n \nBy considering bounds, work out the value of v to a suitable degree of accuracy.\n \nShow your working clearly.\n...................................................\n(Total for Question 20 is 5 marks)",
+      "topic": "Rounding, Estimation & Bounds",
+      "topicOrder": 8,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1H__Q22-U1.png",
+      "id": "all::Jun2026_P1H__Q22-U1",
+      "image": "/assets/questions/converted/Jun2026_P1H__Q22-U1.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 1",
+      "q": 22,
+      "text": "22 The histogram gives information about the weights, in grams, of all the apples in a shop.\n150\n140\n160\n170\nWeight (grams)\nFrequency\ndensity\n180\n190\n200\n \nThere are 9 apples with a weight between 140 grams and 155 grams.\n \n(a) Work out the number of apples with a weight less than 175 grams.\n..................................................\n(3)  \nAn apple is classified as a large apple if it has a weight of more than 180 grams.\n \nOne of the large apples is chosen at random.\n \n(b) Work out the probability that it has a weight of more than 190 grams.\n................................................\n(2)\n(Total for Question 22 is 5 marks)",
+      "topic": "Histograms",
+      "topicOrder": 53,
+      "unit": "Statistics & Probability"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1H__Q23-U1.png",
+      "id": "all::Jun2026_P1H__Q23-U1",
+      "image": "/assets/questions/converted/Jun2026_P1H__Q23-U1.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 1",
+      "q": 23,
+      "text": "23 A bag contains x  marbles.\n \n12 of the marbles are pink and the rest are yellow.\n \nGreta takes at random 2 marbles from the bag.\n \nThe probability that Greta takes a pink marble and a yellow marble is 18\n47\n \nWork out the value of x\n \nShow clear algebraic working.\nx = ..................................................\n(Total for Question 23 is 5 marks)",
+      "topic": "Combined & Conditional Probability",
+      "topicOrder": 57,
+      "unit": "Statistics & Probability"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P1H__Q25-U1.png",
+      "id": "all::Jun2026_P1H__Q25-U1",
+      "image": "/assets/questions/converted/Jun2026_P1H__Q25-U1.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 1",
+      "q": 25,
+      "text": "25 The diagram shows a triangular prism ABCDEF with horizontal rectangular base ABCD\n \nF is vertically above A\nD\nE\nC\nT\nB\nA\nF\nDiagram NOT \naccurately drawn\nAF = 12cm   \nangle ABF �\n�\n30    \nangle BAF �\n�\n90\n \nT is the point on the line BC such that BF BT\n:\n:\n= 3 2\n \nWork out the size of the angle between the line FT and the plane ABCD\n \nGive your answer correct to one decimal place.\n \nShow your working clearly. ................................................ °\n(Total for Question 25 is 5 marks)",
+      "topic": "3D Pythagoras & Trigonometry",
+      "topicOrder": 49,
+      "unit": "Geometry & Trigonometry"
+    }
+  ],
+  "session": "Jun 2026"
+}

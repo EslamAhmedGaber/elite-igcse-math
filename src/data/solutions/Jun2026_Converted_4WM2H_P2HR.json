@@ -1,0 +1,325 @@
+{
+  "paperSlug": "Jun2026_Converted_4WM2H_P2HR",
+  "solutions": {
+    "all::Jun2026_P2HR__Q02-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(u_n=20-6n\\).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "The common difference is \\(8-14=-6\\).\n\nEach successive term decreases by 6.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[u_n=14+(n-1)(-6)=20-6n.\\]\n\nUse first term plus (n-1) common differences.",
+          "title": "Solution | Step 2"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q04-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "(b) \\(P=34\\).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[P=(-7)^2-5(3)=49-15=34.\\]\n\nThe square applies to the whole negative number, so (-7) squared is positive.",
+          "title": "Part (b) | Step 1"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q05-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(\\$10\\) more.",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[\\text{Sarah to B}=400\\times\\frac{3}{2+3}=240\\text{ dollars}.\\]\n\nCharity B receives 3 of the 5 equal shares.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "Dej gives to A and B in the ratio \\(1:2\\), so \\[\\text{Dej to B}=375\\times\\frac{2}{3}=250\\text{ dollars}.\\]\n\nTwice as much to B means that B receives 2 of the 3 shares.",
+          "title": "Solution | Step 2"
+        },
+        {
+          "body": "\\[250-240=10\\text{ dollars}.\\]\n\nSubtract the two donations to charity B.",
+          "title": "Solution | Step 3"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q06-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "Median \\(=5.5\\).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "The largest card is 8, so the smallest is \\(8-7=1\\).\n\nRange is largest minus smallest.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "The fifth card must be 8, since 8 is the mode.\n\nOnly the fifth position can supply another 8 in the ordered cards.",
+          "title": "Solution | Step 2"
+        },
+        {
+          "body": "If the third card is \\(z\\), then \\[1+3+z+7+8+8=31\\quad\\Rightarrow\\quad z=4.\\]\n\nUse the total of all six cards.",
+          "title": "Solution | Step 3"
+        },
+        {
+          "body": "The ordered cards are \\(1,3,4,7,8,8\\), so \\[\\text{median}=\\frac{4+7}{2}=5.5.\\]\n\nWith six values, average the third and fourth.",
+          "title": "Solution | Step 4"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q07-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "(a) \\(0.00004\\).\n\n(b) \\(1.2\\times10^{231}\\).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[4\\times10^{-5}=\\frac4{100000}=0.00004.\\]\n\nMove the decimal point five places left.",
+          "title": "Part (a) | Step 1"
+        },
+        {
+          "body": "\\[(6\\times10^{158})(2\\times10^{72})=12\\times10^{230}=1.2\\times10^{231}.\\]\n\nMultiply the coefficients and add the exponents; normalize the coefficient into [1,10).",
+          "title": "Part (b) | Step 1"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q08-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(35000\\text{ euros}\\).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "Let the old salary be \\(s\\) euros. Then \\[1.04s=36400.\\]\n\nThe increased salary is 104% of the original.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[s=\\frac{36400}{1.04}=35000.\\]\n\nDivide by the percentage multiplier.",
+          "title": "Solution | Step 2"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q12-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(x\\le0,\\quad y\\ge-x,\\quad 2x+5y\\le12\\).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\(x\\le0\\).\n\nR lies to the left of the y-axis.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\(y\\ge-x\\).\n\nR lies above the line y=-x.",
+          "title": "Solution | Step 2"
+        },
+        {
+          "body": "\\(2x+5y\\le12\\).\n\nR lies below the other line. All three boundaries are solid, so equality is included.",
+          "title": "Solution | Step 3"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q15-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(10\\text{ minutes}\\).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "The overall median is the sixth value, 9. The lower five values are \\(2,2,3,6,7\\), and the upper five are \\(9,12,13,17,20\\).\n\nExclude the overall median when forming the two halves.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[Q_1=3,\\quad Q_3=13,\\quad \\mathrm{IQR}=13-3=10\\text{ minutes}.\\]\n\nTake each half-median, then subtract the lower quartile from the upper.",
+          "title": "Solution | Step 2"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q18-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(\\overrightarrow{AC}=\\begin{pmatrix}6\\\\-3\\end{pmatrix}\\).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[\\overrightarrow{AC}=\\overrightarrow{AB}+\\overrightarrow{BC}=\\overrightarrow{AB}-\\overrightarrow{CB}.\\]\n\nReverse CB to travel from B to C.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[\\overrightarrow{AC}=\\begin{pmatrix}4\\\\5\\end{pmatrix}-\\begin{pmatrix}-2\\\\8\\end{pmatrix}=\\begin{pmatrix}6\\\\-3\\end{pmatrix}.\\]\n\nSubtract corresponding components.",
+          "title": "Solution | Step 2"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q20-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(x=\\frac{4y-5}{2y+3}\\).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[y(4-2x)=3x+5\\quad\\Rightarrow\\quad4y-2xy=3x+5.\\]\n\nMultiply by the denominator, which is nonzero in the original expression.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[4y-5=3x+2xy=x(3+2y).\\]\n\nCollect both x-terms together and factor out x.",
+          "title": "Solution | Step 2"
+        },
+        {
+          "body": "\\[x=\\frac{4y-5}{2y+3}.\\]\n\nDivide by 2y+3. The inverse formula requires y not equal to -3/2; the original requires x not equal to 2.",
+          "title": "Solution | Step 3"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q22-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\((x,y)=(\\frac34,-\\frac{11}{4})\\) or \\((3,4)\\).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[(3x-5)^2=x^2+7\\quad\\Rightarrow\\quad9x^2-30x+25=x^2+7.\\]\n\nSubstitute the linear expression for y into the nonlinear equation.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[8x^2-30x+18=0\\quad\\Rightarrow\\quad4x^2-15x+9=0.\\]\n\nCollect all terms on one side and divide by 2.",
+          "title": "Solution | Step 2"
+        },
+        {
+          "body": "\\[(4x-3)(x-3)=0\\quad\\Rightarrow\\quad x=\\frac34\\text{ or }x=3.\\]\n\nFactorize the quadratic and set each factor to zero.",
+          "title": "Solution | Step 3"
+        },
+        {
+          "body": "For \\(x=\\frac34\\), \\(y=3(\\frac34)-5=-\\frac{11}{4}\\). For \\(x=3\\), \\(y=9-5=4\\).\n\nFind the corresponding y-value for each x, preserving the pairs.",
+          "title": "Solution | Step 4"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q23-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(y=25\\), so the height is \\(25\\%\\) greater.",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[h_K:h_L=\\sqrt[3]{125}:\\sqrt[3]{216}=5:6.\\]\n\nCorresponding lengths have the cube-root ratio of volumes.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[h_K:h_M=\\sqrt4:\\sqrt9=2:3.\\]\n\nCorresponding lengths have the square-root ratio of surface areas.",
+          "title": "Solution | Step 2"
+        },
+        {
+          "body": "Take \\(h_K=10\\) units. Then \\(h_L=12\\) and \\(h_M=15\\), so \\[y=\\frac{15-12}{12}\\times100=25.\\]\n\nAlign the shared K-length and compare the increase relative to L.",
+          "title": "Solution | Step 3"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q24-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(5040^\\circ\\).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "Let \\(\\theta=\\angle CBE\\). Then \\[\\frac{\\theta}{360}\\,2\\pi(4.5)=\\frac3{10}\\pi\\quad\\Rightarrow\\quad\\theta=12^\\circ.\\]\n\nThe arc is theta/360 of a full circumference.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\(\\angle ABC=180^\\circ-12^\\circ=168^\\circ\\), so the regular polygon has exterior angle \\(12^\\circ\\).\n\nA, B and E are collinear, so the sector angle is supplementary to the interior angle.",
+          "title": "Solution | Step 2"
+        },
+        {
+          "body": "\\[n=\\frac{360}{12}=30,\\qquad\\text{sum}=(30-2)180^\\circ=5040^\\circ.\\]\n\nExterior angles sum to 360 degrees, and an n-gon has interior-angle sum (n-2) times 180 degrees.",
+          "title": "Solution | Step 3"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q25-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "(a) \\(a=-3,\\qquad b=90\\).\n\n(b) \\(\\left(\\frac p2,q+5\\right)\\).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "The graph has maximum 3 and minimum -3, so \\(|a|=3\\). Since \\(a<0\\), \\(a=-3\\).\n\nThe amplitude is half the vertical range.",
+          "title": "Part (a) | Step 1"
+        },
+        {
+          "body": "At \\(x=0\\), \\(y=-3\\), so \\(-3\\sin b^\\circ=-3\\) and \\(\\sin b^\\circ=1\\). Hence \\(b=90\\) for \\(0<b<360\\).\n\nThe minimum at x=0 fixes the phase when the amplitude is negative.",
+          "title": "Part (a) | Step 2"
+        },
+        {
+          "body": "To use the original input \\(p\\), set \\(2x=p\\), giving \\(x=p/2\\).\n\nThe replacement of x by 2x halves horizontal coordinates.",
+          "title": "Part (b) | Step 1"
+        },
+        {
+          "body": "The corresponding output is \\(f(p)+5=q+5\\).\n\nAdding 5 translates every output upwards by 5.",
+          "title": "Part (b) | Step 2"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q26-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "The 100th term is \\(298.5\\).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "The first term is \\(a=k+2\\) and the common difference is \\(d=3\\).\n\nSuccessive listed terms differ by 3.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[S_n=\\frac n2\\{2(k+2)+3(n-1)\\}=\\frac n2(2k+1+3n).\\]\n\nApply the arithmetic-series sum formula.",
+          "title": "Solution | Step 2"
+        },
+        {
+          "body": "\\[S_{2n}=n\\{2(k+2)+3(2n-1)\\}=n(2k+1+6n).\\]\n\nUse 2n in place of n throughout the sum formula.",
+          "title": "Solution | Step 3"
+        },
+        {
+          "body": "Using \\(S_{2n}=4S_n\\) and \\(n>0\\), \\[2k+1+6n=2(2k+1+3n)=4k+2+6n.\\]\n\nDivide the equation by n, then expand the right-hand side.",
+          "title": "Solution | Step 4"
+        },
+        {
+          "body": "\\[2k+1=4k+2\\quad\\Rightarrow\\quad k=-\\frac12.\\]\n\nThe n-terms cancel, leaving a linear equation for k.",
+          "title": "Solution | Step 5"
+        },
+        {
+          "body": "\\[u_{100}=k+2+99(3)=-\\frac12+2+297=298.5.\\]\n\nThe 100th term is the first term plus 99 common differences.",
+          "title": "Solution | Step 6"
+        }
+      ],
+      "updated": "2026-10-18"
+    },
+    "all::Jun2026_P2HR__Q27-U2": {
+      "checkedBy": "Elite independent solve and separate mathematical audit",
+      "finalAnswer": "\\(x=12\\).",
+      "status": "checked",
+      "steps": [
+        {
+          "body": "\\[\\left(1+\\frac{x}{100}\\right)\\left(1+\\frac{2x}{100}\\right)=1.3888.\\]\n\nThe second increase acts on the already-increased house value.",
+          "title": "Solution | Step 1"
+        },
+        {
+          "body": "\\[1+\\frac{3x}{100}+\\frac{2x^2}{10000}=1.3888\\quad\\Rightarrow\\quad x^2+150x-1944=0.\\]\n\nExpand, subtract 1, and multiply by 5000.",
+          "title": "Solution | Step 2"
+        },
+        {
+          "body": "\\[(x-12)(x+162)=0\\quad\\Rightarrow\\quad x=12\\text{ or }x=-162.\\]\n\nFactorize the quadratic.",
+          "title": "Solution | Step 3"
+        },
+        {
+          "body": "Reject \\(x=-162\\), since both changes are increases, so \\(x>0\\).\n\nThe positive root gives multipliers 1.12 and 1.24, whose product is 1.3888.",
+          "title": "Solution | Step 4"
+        }
+      ],
+      "updated": "2026-10-18"
+    }
+  }
+}

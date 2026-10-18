@@ -434,6 +434,9 @@
   }
 
   if (Array.isArray(window.QUESTION_DATA)) {
+    window.QUESTION_DATA = window.QUESTION_DATA.filter((question) =>
+      !Array.isArray(question.available_pathways) || question.available_pathways.includes(activePathway())
+    );
     window.QUESTION_DATA.forEach(normalizeQuestion);
   }
   window.TOPIC_CATALOG = activeCatalog();

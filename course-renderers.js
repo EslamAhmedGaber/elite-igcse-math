@@ -100,7 +100,7 @@
   }
 
   function renderPaperLink(paper) {
-    const kind = paper.kind || "question";
+    const kind = !paper.kind || paper.kind === "paper" ? "question" : paper.kind;
     const badge = paper.badge ? `<b class="pp-paper-badge" title="Converted from Linear to Modular practice">${escapeHtml(paper.badge)}</b>` : "";
     return `<a class="${paperButtonClass(paper)}" data-paper-kind="${escapeHtml(kind)}" data-paper-search="${escapeHtml(normalizedText(`${paper.title} ${paper.badge || ""} ${kind}`))}" href="${escapeHtml(paper.href)}" target="_blank" rel="noreferrer"><span class="pp-paper-label">${escapeHtml(paper.title)}</span>${badge}</a>`;
   }

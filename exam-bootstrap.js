@@ -14,7 +14,7 @@
     wma12: "ial/wma12/wma12-data.js?v=20260611a",
     wme01: "ial/wme01/wme01-data.js?v=20260613a"
   };
-  const selectedData = baccalaureate ? dataFiles.baccalaureate : ialCourse ? dataFiles[ialCourse] : "questions-data.js?v=20260528a";
+  const selectedData = baccalaureate ? dataFiles.baccalaureate : ialCourse ? dataFiles[ialCourse] : "questions-data.js?v=20261018a";
 
   root.ELITE_EXAM_BOOTSTRAP = Object.freeze({
     course: baccalaureate ? "baccalaureate" : ialCourse || "igcse",
@@ -35,9 +35,9 @@
     setLoading(true);
     await root.EliteRuntime.loadScript(selectedData, { id: "eliteExamCourseData" });
     if (!ialCourse && !baccalaureate) {
-      await root.EliteRuntime.loadScript("topic-normalizer.js", { id: "eliteExamTopicNormalizer" });
+      await root.EliteRuntime.loadScript("topic-normalizer.js?v=20261018a", { id: "eliteExamTopicNormalizer" });
     }
-    await root.EliteRuntime.loadScript("exam.js?v=20260927a", { id: "eliteExamApp" });
+    await root.EliteRuntime.loadScript("exam.js?v=20261018a", { id: "eliteExamApp" });
     setLoading(false);
   }
 

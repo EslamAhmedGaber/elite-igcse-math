@@ -8,7 +8,7 @@ const allQuestions = window.QUESTION_DATA || [];
 const meta = window.SITE_META || {};
 let solutionData = window.SOLUTION_DATA || window.ELITE_ANSWER_INDEX || {};
 let fullSolutionsPromise = null;
-const FULL_SOLUTIONS_URL = "solutions-data.js?v=20260528a";
+const FULL_SOLUTIONS_URL = "solutions-data.js?v=20261018a";
 const selected = new Set(JSON.parse(localStorage.getItem("selectedExpertiseQuestions") || "[]"));
 const solved = new Set(JSON.parse(localStorage.getItem("solvedExpertiseQuestions") || "[]"));
 const REVIEW_KEY = "eliteMistakeBoxV1";

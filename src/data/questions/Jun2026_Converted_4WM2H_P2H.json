@@ -1,0 +1,347 @@
+{
+  "code": "P2H",
+  "isModular": true,
+  "modularUnit": "Unit 2",
+  "paper": "Jun 2026 P2H | L-to-M Unit 2",
+  "paperSlug": "Jun2026_Converted_4WM2H_P2H",
+  "questionCount": 21,
+  "questions": [
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q01-U2.png",
+      "id": "all::Jun2026_P2H__Q01-U2",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q01-U2.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 2",
+      "q": 1,
+      "text": "1 Write 4500 as a product of powers of its prime factors. \nShow your working clearly.\n..............................................................................\n(Total for Question 1 is 3 marks)",
+      "topic": "Prime Factors, HCF & LCM",
+      "topicOrder": 2,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q02-U2.png",
+      "id": "all::Jun2026_P2H__Q02-U2",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q02-U2.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 2",
+      "q": 2,
+      "text": "2 The nth term of an arithmetic sequence is given by 8\n5\nn −\n \n(a) Work out the ratio of the 40th term of the sequence to the 60th term of the sequence. \n Give your ratio in its simplest form.\n..............................................................\n(3)\n \nHere are the first five terms of a different arithmetic sequence.\n3  8  13  18  23\n \n(b) Find an expression for the nth term of this sequence.\n..............................................................\n(2)\n(Total for Question 2 is 5 marks)",
+      "topic": "Sequences",
+      "topicOrder": 28,
+      "unit": "Sequences, Functions & Graphs"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q03-U2.png",
+      "id": "all::Jun2026_P2H__Q03-U2",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q03-U2.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 2",
+      "q": 3,
+      "text": "3 The table shows information about the number of hours each of 40 candles burned.\nNumber of hours (h)\nFrequency\n15\n19\n< h \n2\n19\n23\n< h \n5\n23\n27\n< h \n12\n27\n31\n< h \n15\n31\n35\n< h \n6\n \n(a) Write down the modal class.\n.............................................................. \n(1)\n \n(b) Work out an estimate for the mean number of hours.\n.............................................................. hours\n(4)\n(Total for Question 3 is 5 marks)",
+      "topic": "Statistics Toolkit",
+      "topicOrder": 52,
+      "unit": "Statistics & Probability"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q04-U2.png",
+      "id": "all::Jun2026_P2H__Q04-U2",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q04-U2.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 2",
+      "q": 4,
+      "text": "4 Sara sells water bottles.\nIn July, she sold 450 water bottles.\nIn August, she sold 612 water bottles.\nWork out the percentage increase in the number of water bottles she sold from July \nto August.\n..............................................................%\n(Total for Question 4 is 3 marks)",
+      "topic": "Percentages",
+      "topicOrder": 5,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q05-U2.png",
+      "id": "all::Jun2026_P2H__Q05-U2",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q05-U2.png",
+      "marks": 4,
+      "modularForceUnit": "Unit 2",
+      "q": 5,
+      "text": "5 \ny\nx\nO\n−2\n−1\n4\n5\n3\n1\n2\nA\nB\n6\n7\n8\n9\n10\n−2\n−1\n2\n3\n1\n4\n6\n7\n5\n8\n9\n10\n(a) Describe fully the single transformation that maps triangle A onto triangle B\n..................................................................................................................................................................................................................................................\n..................................................................................................................................................................................................................................................\n(3)\n(b) On the grid, translate triangle A by the vector\n4\n3\n�\n�\n��\n�\n��\nLabel your triangle C\n(1)\n(Total for Question 5 is 4 marks)",
+      "topic": "Transformations",
+      "topicOrder": 51,
+      "unit": "Vectors & Transformation Geometry"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q06-U2.png",
+      "id": "all::Jun2026_P2H__Q06-U2",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q06-U2.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 2",
+      "q": 6,
+      "text": "6 ABCDE is a pentagon.\nA\nB\n96°\nx°\nx°\n91°\n93°\nC\nD\nE\nDiagram NOT\naccurately drawn\n \nangle EAB �\n�\n96   \nangle BCD �\n�\n91   \nangle CDE �\n�\n93  \nangle DEA = angle ABC\nx\n�\n�\n \nWork out the value of x\nx =  ..............................................................\n(Total for Question 6 is 3 marks)",
+      "topic": "Angles in Polygons & Parallel Lines",
+      "topicOrder": 39,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q07-U2.png",
+      "id": "all::Jun2026_P2H__Q07-U2",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q07-U2.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 2",
+      "q": 7,
+      "text": "7 The diagram shows a cylinder and a prism.\nDiagram NOT\naccurately drawn\n18 cm\n7 cm\nL cm\n120 cm2\n \nThe radius of the cylinder is 7 cm \nThe height of the cylinder is 18 cm\n \nThe area of the cross section of the prism, shown shaded in the diagram, is 120\n2\ncm  \nThe length of the prism is L cm\n \nThe volume of the cylinder is equal to the volume of the prism.\n \nWork out the value of L \nGive your answer correct to 3 significant figures.\nL =  ..............................................................\n(Total for Question 7 is 3 marks)",
+      "topic": "Volume & Surface Area",
+      "topicOrder": 44,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q08-U2.png",
+      "id": "all::Jun2026_P2H__Q08-U2",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q08-U2.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 2",
+      "q": 8,
+      "text": "8 A golf club increases the cost of membership by 17%\n \nAfter the increase, the cost of membership is 3276 zloty.\n \nWork out the cost of membership before the increase.\n............................................................ zloty\n(Total for Question 8 is 3 marks)",
+      "topic": "Percentages",
+      "topicOrder": 5,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q10-U2.png",
+      "id": "all::Jun2026_P2H__Q10-U2",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q10-U2.png",
+      "marks": 4,
+      "modularForceUnit": "Unit 2",
+      "q": 10,
+      "text": "10 Johan owns a car.\n \nThe current value of the car is 32 000 euros.\n \nThe value of the car will now depreciate by 15% per year.\n \nLena is going to save up and buy Johan’s car in 3 years’ time.\n \nShe has already saved 2516 euros.\n \nShe will save an equal amount of money each month for the next 3 years.\n \nWork out how much money Lena needs to save each month.\n........................................................... euros\n(Total for Question 10 is 4 marks)",
+      "topic": "Compound Interest & Depreciation",
+      "topicOrder": 6,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q11-U2.png",
+      "id": "all::Jun2026_P2H__Q11-U2",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q11-U2.png",
+      "marks": 2,
+      "modularForceUnit": "Unit 2",
+      "q": 11,
+      "text": "11 Find the highest prime number that is a factor of  3 6\n1024\n. ×\n..............................................................\n(Total for Question 11 is 2 marks)",
+      "topic": "Prime Factors, HCF & LCM",
+      "topicOrder": 2,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q13-U2.png",
+      "id": "all::Jun2026_P2H__Q13-U2",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q13-U2.png",
+      "marks": 4,
+      "modularForceUnit": "Unit 2",
+      "q": 13,
+      "text": "13 Leo collects apples from three trees. \nThe incomplete table gives some information about the apples he collects from \nthese trees.\nTree\nNumber of \napples\nMean weight of \napples (grams)\nTotal weight of \napples (grams)\nA\n12\n150\nB\n20\n2700\nC\n145\n2610\n \nWork out the mean weight of all the apples Leo collects from these three trees.\n.............................................................. grams\n(Total for Question 13 is 4 marks)",
+      "topic": "Statistics Toolkit",
+      "topicOrder": 52,
+      "unit": "Statistics & Probability"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q14-U2.png",
+      "id": "all::Jun2026_P2H__Q14-U2",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q14-U2.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 2",
+      "q": 14,
+      "text": "14 The cumulative frequency graph gives information about the weights, in kg, of  \n60 crates.\n100\n0\n10\n20\n30\n40\n50\n60\n110\n120\n130\nWeight (kg)\nCumulative\nfrequency\n140\n150\n \n(a) Use the graph to find an estimate for the median weight.\n...................................................... kg\n(1)\n \n(b) Use the graph to find an estimate for the interquartile range.\n...................................................... kg\n(2)\n(Total for Question 14 is 3 marks)",
+      "topic": "Cumulative Frequency Diagrams",
+      "topicOrder": 54,
+      "unit": "Statistics & Probability"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q16-U2.png",
+      "id": "all::Jun2026_P2H__Q16-U2",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q16-U2.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 2",
+      "q": 16,
+      "text": "16 The functions f and g are such that\nf( )\nx\nx\n�\n�\n4\n  \ng( )\nx\nx\n�\n�\n3\n2\n2\n \n(a) Find   g( )\n4\n..............................................................\n(1)\n \n(b) Find   f −1 7\n( )\n..............................................................\n(2)\n \n(c) Express  gf(x)   in the form  ax\nbx\nc\n2 +\n+\n  where a, b and c are integers.\ngf( )\nx =  ..............................................................\n(2)\n(Total for Question 16 is 5 marks)",
+      "topic": "Functions",
+      "topicOrder": 29,
+      "unit": "Sequences, Functions & Graphs"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q18-U2.png",
+      "id": "all::Jun2026_P2H__Q18-U2",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q18-U2.png",
+      "marks": 4,
+      "modularForceUnit": "Unit 2",
+      "q": 18,
+      "text": "18 Make x the subject of the formula \na\nw\nx\nx\n�\n�\n�\n3\n6\n2\n2\n......................................................\n(Total for Question 18 is 4 marks)",
+      "topic": "Rearranging Formulas",
+      "topicOrder": 21,
+      "unit": "Equations, Formulae & Identities"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q19-U2.png",
+      "id": "all::Jun2026_P2H__Q19-U2",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q19-U2.png",
+      "marks": 2,
+      "modularForceUnit": "Unit 2",
+      "q": 19,
+      "text": "19 B, D and E are points on a circle.\nB\nA\nC\nD\nE\n52°\nDiagram NOT \naccurately drawn\n \nABC is the tangent to the circle at B\n \nangle ABE �\n�\n52    \nED\nBD\n=\n \nWork out the size of angle BED\n.....................................................°\n(Total for Question 19 is 2 marks)",
+      "topic": "Circle Theorems",
+      "topicOrder": 41,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q21-U2.png",
+      "id": "all::Jun2026_P2H__Q21-U2",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q21-U2.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 2",
+      "q": 21,
+      "text": "21 The curve with equation  y\nx\n= f( )   is drawn on a grid.\n2\nO\n4\n6\n1\n3\n5\n−7\n−5\n−3\n−1\n−6\n−4\n−2\n1\n0.5\n1.5\n2.5\n3.5\n4.5\n2\n3\n4\n7\nx\ny\n \n(a) By drawing a suitable straight line (at least 3 cm long) on the grid, work out an \nestimate for the gradient of the curve at the point where x = 1 \nShow your working clearly.\n..............................................................\n(2) (b) By drawing a suitable straight line on the grid, find the solutions\nof the equation  x\nx\n�\n�\n3\n1\n2 f( )\nShow your working clearly.\n..............................................................\n(3)\n(Total for Question 21 is 5 marks)",
+      "topic": "Estimating Gradients",
+      "topicOrder": 33,
+      "unit": "Sequences, Functions & Graphs"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q22-U2.png",
+      "id": "all::Jun2026_P2H__Q22-U2",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q22-U2.png",
+      "marks": 4,
+      "modularForceUnit": "Unit 2",
+      "q": 22,
+      "text": "22 The diagram shows a quadrilateral OABC where O, A, B and C represent the positions \nof four houses.\nDiagram NOT \naccurately drawn\nC\nO\nA\nB\n��\n��\n�\n��\n2\n8\n��\n��\n�\n��\n21\n14\n��\n��\n�\n��\n12\n3\nRia walks directly from A to B\nAnna walks directly from A to C and then walks directly from C to B\n, \n and \n are given in metres.\nWork out how much further Anna walks than Ria walks.\nGive your answer correct to one decimal place. ............................................................ metres\n(Total for Question 22 is 4 marks)",
+      "topic": "Vectors",
+      "topicOrder": 50,
+      "unit": "Vectors & Transformation Geometry"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q23-U2.png",
+      "id": "all::Jun2026_P2H__Q23-U2",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q23-U2.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 2",
+      "q": 23,
+      "text": "23 The straight line L has equation \ny\nx\n�\n�\n3\n2\n \nThe curve C has equation \nx\ny\ny\n2\n2\n2\n12\n�\n�\n�\n \nFind the coordinates of the points where L and C intersect.\n \nShow clear algebraic working.\n(.............................. , ..............................) and (.............................. , ..............................)\n(Total for Question 23 is 5 marks)",
+      "topic": "Simultaneous Equations",
+      "topicOrder": 26,
+      "unit": "Equations, Formulae & Identities"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q24-U2.png",
+      "id": "all::Jun2026_P2H__Q24-U2",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q24-U2.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 2",
+      "q": 24,
+      "text": "24 The diagram shows two cones C1 and C2\nA\n30 cm\nC2\nC1\nDiagram NOT\naccurately drawn\n \nThe vertex of C1 coincides with the vertex of C2  at the point A \nC1 and C2  have the same axis of symmetry.\nheight of \nheight of \ncm\n1\n2\nC\nC\n�\n�30\n \ntotal surface area of \ntotal surface area of \nC\nC\n1\n2\n4 9\n:\n:\n=\n \nvolume of \ncm\nC1\n3\n23 04\n�\n.\n�\n \nWork out the radius of the base of C2  \nShow your working clearly.\n.............................................................. cm\n(Total for Question 24 is 5 marks)",
+      "topic": "Area & Volume of Similar Shapes",
+      "topicOrder": 46,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q25-U2.png",
+      "id": "all::Jun2026_P2H__Q25-U2",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q25-U2.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 2",
+      "q": 25,
+      "text": "25 An arithmetic series has first term 3 and common difference 8\n \nThe nth term of the series is U n\n \nThe sum of the first n terms of the series is Sn\n \nGiven that S\nS\nk\nk\n5\n3\n25 560\n�\n�\n \nfind the value of U k\n4\n \nShow clear algebraic working. .............................................................\n(Total for Question 25 is 5 marks)",
+      "topic": "Sequences",
+      "topicOrder": 28,
+      "unit": "Sequences, Functions & Graphs"
+    },
+    {
+      "availablePathways": [
+        "modular"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2H__Q26-U2.png",
+      "id": "all::Jun2026_P2H__Q26-U2",
+      "image": "/assets/questions/converted/Jun2026_P2H__Q26-U2.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 2",
+      "q": 26,
+      "text": "26 The curve P has equation y\nx\n���\nf\n \nThe coordinates of the minimum point on P are �\n�\n�\n5 4\n,\n \n(a) Write down the coordinates of the minimum point on the curve\n \n with equation y\nx\n�\n��\n3f\n(.............................. , ..............................)\n(1)\n \nThe curve Q has equation y\nx\n�\n�\n�\n�\n�\n2\n3\n2\n \nThe curve R has equation y\nx\n�\n�\n�\n�\n�\n2\n3\n2\n \n(b) Describe fully the single transformation that maps Q to R\n..................................................................................................................................................................................................................................................\n..................................................................................................................................................................................................................................................\n(1)\n \nThe graph of  y\na\nx\nb\nc\n�\n�\n�\n���\ncos\n  for −180\n360\n\n\nx\n is drawn on the grid.\ny\nx\nO\n−120 −60\n−180\n120\n60\n180\n240\n300\n360\n−1\n1\n2\n3\n4\n5\n6  \nGiven that a > 0 and 0 < b < 360\n \n(c) find the value of a, the value of b and the value of c\na =  .............................\nb = .............................\nc =  .............................\n(3)\n(Total for Question 26 is 5 marks)",
+      "topic": "Transformations of Graphs",
+      "topicOrder": 36,
+      "unit": "Sequences, Functions & Graphs"
+    }
+  ],
+  "session": "Jun 2026"
+}

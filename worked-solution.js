@@ -104,6 +104,15 @@
     return solutionSteps(solution).length > 0 || Boolean(solution?.finalAnswer);
   }
 
+  function renderFigures(step) {
+    return (Array.isArray(step?.figures) ? step.figures : []).map((figure) => {
+      const src = String(figure?.src || "");
+      if (!/^\/?assets\/solution-diagrams\/[A-Za-z0-9_./-]+\.png$/.test(src)
+          || src.split("/").includes("..")) return "";
+      return `<figure class="worked-solution-figure" style="margin:12px 0"><img src="${escapeHtml(src)}" alt="${escapeHtml(figure.alt || "Worked solution diagram")}" style="display:block;max-width:100%;height:auto" decoding="sync"></figure>`;
+    }).join("");
+  }
+
   function render(solution, options = {}) {
     if (!solution || !hasContent(solution)) {
       return `<div class="worked-solution-empty">${formatText("", { empty: options.empty || "Solution has not been written yet." })}</div>`;
@@ -120,7 +129,7 @@
         <span class="worked-solution-index" aria-hidden="true">${String(index + 1).padStart(2, "0")}</span>
         <div class="worked-solution-step-content">
           <h4 id="worked-step-${escapeHtml(options.key || "solution")}-${index + 1}">${escapeHtml(step.title || `Step ${index + 1}`)}</h4>
-          <div class="worked-solution-copy">${formatText(step.body || "")}</div>
+          <div class="worked-solution-copy">${formatText(step.body || "")}${renderFigures(step)}</div>
         </div>
       </section>
     `).join("");
@@ -175,6 +184,7 @@
     hasContent,
     normalizeNotation,
     render,
+    renderFigures,
     typeset
   };
 }(typeof window !== "undefined" ? window : globalThis));

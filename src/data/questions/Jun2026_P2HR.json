@@ -1,0 +1,443 @@
+{
+  "code": "P2HR",
+  "isModular": false,
+  "modularUnit": null,
+  "paper": "Jun 2026 P2HR",
+  "paperSlug": "Jun2026_P2HR",
+  "questionCount": 27,
+  "questions": [
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q01.png",
+      "id": "all::Jun2026_P2HR__Q01",
+      "image": "/assets/questions/Jun2026_P2HR__Q01.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 1,
+      "text": "1 The diagram shows a right‑angled triangle.\n20 cm\n48 cm\nx cm\nDiagram NOT \naccurately drawn\n \nWork out the value of x\nx = ......................................................\n(Total for Question 1 is 3 marks)",
+      "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
+      "topicOrder": 47,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q02.png",
+      "id": "all::Jun2026_P2HR__Q02",
+      "image": "/assets/questions/Jun2026_P2HR__Q02.png",
+      "marks": 2,
+      "modularForceUnit": "Unit 2",
+      "q": 2,
+      "text": "2 Here are the first five terms of an arithmetic sequence.\n14          8          2          –4          –10\n \nFind an expression, in terms of n, for the nth term of this sequence.\n.................................................................................\n(Total for Question 2 is 2 marks)",
+      "topic": "Sequences",
+      "topicOrder": 28,
+      "unit": "Sequences, Functions & Graphs"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q03.png",
+      "id": "all::Jun2026_P2HR__Q03",
+      "image": "/assets/questions/Jun2026_P2HR__Q03.png",
+      "marks": 1,
+      "modularForceUnit": "Unit 1",
+      "q": 3,
+      "text": "3 E = {integers from 1 to 12}\n \nA = {factors of 12}\n \nList the members of the set  A′\n.................................................................................\n(Total for Question 3 is 1 mark)",
+      "topic": "Set Notation & Venn Diagrams",
+      "topicOrder": 1,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q04.png",
+      "id": "all::Jun2026_P2HR__Q04",
+      "image": "/assets/questions/Jun2026_P2HR__Q04.png",
+      "marks": 8,
+      "modularForceUnit": null,
+      "q": 4,
+      "text": "4 (a) Solve  3(x + 2) = 1 – 5x\n \n Show clear algebraic working.\nx = ......................................................\n(3)\n \nP = c\n2 – 5d\n \n(b) Work out the value of P when  c = –7 and  d = 3\nP = ......................................................\n(2)\n \n(c) Simplify  m\n0\n......................................................\n(1)\n \n(d) Simplify  (4r\n2t)\n3\n......................................................\n(2)\n(Total for Question 4 is 8 marks)",
+      "topic": "Solving Linear Equations",
+      "topicOrder": 23,
+      "unit": "Equations, Formulae & Identities"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q05.png",
+      "id": "all::Jun2026_P2HR__Q05",
+      "image": "/assets/questions/Jun2026_P2HR__Q05.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 2",
+      "q": 5,
+      "text": "5 Sarah and Dej each give some money to charity A and to charity B\n \nSarah shares $400 between charity A and charity B in the ratio 2 : 3\n \nDej shares $375 between the two charities.\n \nHe gives twice as much money to charity B as he gives to charity A\n \nDej gives more money to charity B than Sarah gives to charity B\n \nHow much more?\n$......................................................\n(Total for Question 5 is 5 marks)",
+      "topic": "Ratio Problem Solving",
+      "topicOrder": 12,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q06.png",
+      "id": "all::Jun2026_P2HR__Q06",
+      "image": "/assets/questions/Jun2026_P2HR__Q06.png",
+      "marks": 4,
+      "modularForceUnit": "Unit 2",
+      "q": 6,
+      "text": "6 Mika has six cards.\n \nThere is a number on each card.\n \nThe cards are arranged with the numbers in order of size.\n \nThree of the numbers are hidden.\n3\n7\n8\n \nThe mode of the six numbers is 8\n \nThe range of the six numbers is 7\n \nThe sum of the six numbers is 31\n \nWork out the median of the six numbers.\n......................................................\n(Total for Question 6 is 4 marks)",
+      "topic": "Statistics Toolkit",
+      "topicOrder": 52,
+      "unit": "Statistics & Probability"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q07.png",
+      "id": "all::Jun2026_P2HR__Q07",
+      "image": "/assets/questions/Jun2026_P2HR__Q07.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 2",
+      "q": 7,
+      "text": "7 (a) Write  4 × 10\n–5  as an ordinary number.\n......................................................\n(1)\n \n(b) Work out  (6 × 10\n158) × (2 × 10\n72)\n \n Give your answer in standard form.\n......................................................\n(2)\n(Total for Question 7 is 3 marks)",
+      "topic": "Powers, Roots & Standard Form",
+      "topicOrder": 3,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q08.png",
+      "id": "all::Jun2026_P2HR__Q08",
+      "image": "/assets/questions/Jun2026_P2HR__Q08.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 2",
+      "q": 8,
+      "text": "8 Lauren’s salary increased by 4%\n \nAfter the increase, her salary was 36 400 euros.\n \nWork out Lauren’s salary before the increase.\n..................................................... euros\n(Total for Question 8 is 3 marks)",
+      "topic": "Percentages",
+      "topicOrder": 5,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q09.png",
+      "id": "all::Jun2026_P2HR__Q09",
+      "image": "/assets/questions/Jun2026_P2HR__Q09.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 9,
+      "text": "9 Change a speed of 198 kilometres per hour to a speed in metres per second.\n \nShow your working clearly.\n..................................................... m/s\n(Total for Question 9 is 3 marks)",
+      "topic": "Standard & Compound Units",
+      "topicOrder": 38,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q10.png",
+      "id": "all::Jun2026_P2HR__Q10",
+      "image": "/assets/questions/Jun2026_P2HR__Q10.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 10,
+      "text": "10 The diagram shows a solid cylinder.\n4 cm\nDiagram NOT \naccurately drawn\n11 cm\n \nThe cylinder has radius 4 cm and height 11 cm\n \nThe cylinder is made from wood with a density of 0.6 g/cm\n3\n \nWork out the mass of the cylinder.\n \nGive your answer correct to 3 significant figures.\n..................................................... g\n(Total for Question 10 is 3 marks)",
+      "topic": "Standard & Compound Units",
+      "topicOrder": 38,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q11.png",
+      "id": "all::Jun2026_P2HR__Q11",
+      "image": "/assets/questions/Jun2026_P2HR__Q11.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 1",
+      "q": 11,
+      "text": "11 The diagram shows a square ABCD and a right‑angled triangle EFG\nA\nB\nC\nD\nE\nF\nG\n25�\nDiagram NOT \naccurately drawn\n \nThe area of square ABCD is 36 cm\n2\n \nDC = EG\n \nWork out the area of triangle EFG\n \nGive your answer correct to one decimal place.\n \nShow your working clearly.\n..................................................... cm\n2\n(Total for Question 11 is 5 marks)",
+      "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
+      "topicOrder": 47,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q12.png",
+      "id": "all::Jun2026_P2HR__Q12",
+      "image": "/assets/questions/Jun2026_P2HR__Q12.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 2",
+      "q": 12,
+      "text": "12 \nx\ny\nO\nR\n–1\n–1\n–2\n–3\n–4\n4\n5\n6\n3\n2\n1\n1\n2\n3\n4\n–2\n–3\n–4\n–5\n–6\n–7\n–8\ny = –x\n2x + 5y = 12\n \nThe region R, shown shaded in the diagram, is bounded by the y-axis and the straight \nlines with equations \ny = –x\n2x + 5y = 12\n \nWrite down the three inequalities that define R\n..................................................................\n.................................................................. \n.................................................................. \n(Total for Question 12 is 3 marks)",
+      "topic": "Graphing Inequalities",
+      "topicOrder": 35,
+      "unit": "Sequences, Functions & Graphs"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q13.png",
+      "id": "all::Jun2026_P2HR__Q13",
+      "image": "/assets/questions/Jun2026_P2HR__Q13.png",
+      "marks": 4,
+      "modularForceUnit": "Unit 1",
+      "q": 13,
+      "text": "13 (a) Complete the table of values for  y = x + \n1\nx\nx\n0.25\n0.5\n1\n2\n3\n4\n5\ny\n4.25\n2.5\n3.33\n(2)\n \n(b) On the grid, draw the graph of  y = x + \n1\nx   for  0.25  x  5\n1\n1\n2\n3\n4\n5\n2\n3\n4\n5\n6\nO\nx\ny\n(2)\n(Total for Question 13 is 4 marks)",
+      "topic": "Graphs of Functions",
+      "topicOrder": 32,
+      "unit": "Sequences, Functions & Graphs"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q14.png",
+      "id": "all::Jun2026_P2HR__Q14",
+      "image": "/assets/questions/Jun2026_P2HR__Q14.png",
+      "marks": 8,
+      "modularForceUnit": "Unit 1",
+      "q": 14,
+      "text": "14 Pras has 2 bags of counters, bag A and bag B\n \nIn bag A, there are 4 green counters and 3 red counters.\n \nIn bag B, there are 5 green counters and 1 red counter.\n \nPras is going to take at random a counter from bag A and a counter from bag B\n \n(a) Complete the probability tree diagram.\nRed\nGreen\nBag A\nBag B\nRed\nGreen\nRed\nGreen\n................\n................\n................\n................\n................\n................\n(2)\n \n(b) Work out the probability that Pras will take two green counters.\n....................................................\n(2)  \nPras also has a third bag of counters, bag C\n \nIn bag C, there are only green counters and red counters.\n \nAll the original counters are back in bag A and bag B\n \nPras is going to take at random a counter from bag A, a counter from bag B and \na counter from bag C\n \nThe probability that Pras will take three red counters is 3\n70\n \n(c) Work out the probability that Pras will take 1 green counter and 2 red counters.\n....................................................\n(4)\n(Total for Question 14 is 8 marks)",
+      "topic": "Probability Diagrams - Venn & Tree Diagrams",
+      "topicOrder": 56,
+      "unit": "Statistics & Probability"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q15.png",
+      "id": "all::Jun2026_P2HR__Q15",
+      "image": "/assets/questions/Jun2026_P2HR__Q15.png",
+      "marks": 2,
+      "modularForceUnit": "Unit 2",
+      "q": 15,
+      "text": "15 Mina recorded the times taken, in minutes, by 11 people to complete a puzzle.\n \nHere are her results.\n2    2    3    6    7    9    9    12   13   17   20\n \nFind the interquartile range of these times.\n.................................................... minutes\n(Total for Question 15 is 2 marks)",
+      "topic": "Statistics Toolkit",
+      "topicOrder": 52,
+      "unit": "Statistics & Probability"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q16.png",
+      "id": "all::Jun2026_P2HR__Q16",
+      "image": "/assets/questions/Jun2026_P2HR__Q16.png",
+      "marks": 2,
+      "modularForceUnit": "Unit 1",
+      "q": 16,
+      "text": "16 \n1\n6\na\nan\n�\n��\n�\n���\n \nWork out the value of n\nn = .................................................... \n(Total for Question 16 is 2 marks)",
+      "topic": "Algebraic Roots & Indices",
+      "topicOrder": 16,
+      "unit": "Equations, Formulae & Identities"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q17.png",
+      "id": "all::Jun2026_P2HR__Q17",
+      "image": "/assets/questions/Jun2026_P2HR__Q17.png",
+      "marks": 2,
+      "modularForceUnit": "Unit 1",
+      "q": 17,
+      "text": "17 Use algebra to show that  0.8.\n14.\n = 22\n27\n(Total for Question 17 is 2 marks)",
+      "topic": "Fractions",
+      "topicOrder": 4,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q18.png",
+      "id": "all::Jun2026_P2HR__Q18",
+      "image": "/assets/questions/Jun2026_P2HR__Q18.png",
+      "marks": 2,
+      "modularForceUnit": "Unit 2",
+      "q": 18,
+      "text": "18 Here are two vectors.\n  AB\n→ = \n4\n5\n�\n��\n�\n��\n CB\n→ = \n�\n�\n��\n�\n��\n2\n8\n  \n \nFind  AC\n→ as a column vector.\nAC\n→ = \n............. \n.............\n(Total for Question 18 is 2 marks)",
+      "topic": "Vectors",
+      "topicOrder": 50,
+      "unit": "Vectors & Transformation Geometry"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q19.png",
+      "id": "all::Jun2026_P2HR__Q19",
+      "image": "/assets/questions/Jun2026_P2HR__Q19.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 19,
+      "text": "19 The table gives information about the times, in minutes, some people spent waiting to \ngo on a rollercoaster.\nTime (t minutes)\nFrequency\n 0 < t  20\n14\n20 < t  25\n12\n25 < t  35\n32\n35 < t  50\n30\n \nOn the grid, draw a histogram for this information.\n0\n0\n1\n2\n3\n4\n10\n20\n30\n40\n50\nTime (minutes)\nFrequency \ndensity\n(Total for Question 19 is 3 marks)",
+      "topic": "Histograms",
+      "topicOrder": 53,
+      "unit": "Statistics & Probability"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q20.png",
+      "id": "all::Jun2026_P2HR__Q20",
+      "image": "/assets/questions/Jun2026_P2HR__Q20.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 2",
+      "q": 20,
+      "text": "20 Make x the subject of  y\nx\nx\n�\n�\n�\n3\n5\n4\n2\n.............................................................................. \n(Total for Question 20 is 3 marks)",
+      "topic": "Rearranging Formulas",
+      "topicOrder": 21,
+      "unit": "Equations, Formulae & Identities"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q21.png",
+      "id": "all::Jun2026_P2HR__Q21",
+      "image": "/assets/questions/Jun2026_P2HR__Q21.png",
+      "marks": 3,
+      "modularForceUnit": "Unit 1",
+      "q": 21,
+      "text": "21 p\nd\ne\nf\n�\n�\n \nd = 6.6 correct to 1 decimal place\n \ne = 2.8 correct to 1 decimal place\n \nf = 0.47 correct to 2 decimal places\n \nCalculate the lower bound for the value of p\n \nGive your answer correct to 3 significant figures.\n \nShow your working clearly.\n................................................... \n(Total for Question 21 is 3 marks)",
+      "topic": "Rounding, Estimation & Bounds",
+      "topicOrder": 8,
+      "unit": "Numbers & the Number System"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q22.png",
+      "id": "all::Jun2026_P2HR__Q22",
+      "image": "/assets/questions/Jun2026_P2HR__Q22.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 2",
+      "q": 22,
+      "text": "22 Solve the simultaneous equations\ny\n2 = x\n2 + 7 \n  y = 3x – 5\n \nShow clear algebraic working.\n............................................................................................................................................................................................................ \n(Total for Question 22 is 5 marks)",
+      "topic": "Simultaneous Equations",
+      "topicOrder": 26,
+      "unit": "Equations, Formulae & Identities"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q23.png",
+      "id": "all::Jun2026_P2HR__Q23",
+      "image": "/assets/questions/Jun2026_P2HR__Q23.png",
+      "marks": 5,
+      "modularForceUnit": "Unit 2",
+      "q": 23,
+      "text": "23 K, L and M are three similar solids.\n \n \n volume of K : volume of L  =  125 : 216\n \n  \nsurface area of K : surface area of M  =  4 : 9\n \nThe height of M is y% greater than the height of L\n \nWork out the value of y\n \nShow your working clearly.\ny = ................................................... \n(Total for Question 23 is 5 marks)",
+      "topic": "Area & Volume of Similar Shapes",
+      "topicOrder": 46,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q24.png",
+      "id": "all::Jun2026_P2HR__Q24",
+      "image": "/assets/questions/Jun2026_P2HR__Q24.png",
+      "marks": 4,
+      "modularForceUnit": "Unit 2",
+      "q": 24,
+      "text": "24 \nA\nB\nC\nD\nE\nDiagram NOT \naccurately drawn\n \nAB, BC and CD are three sides of a regular polygon.\n \nABE is a straight line.\n \nBCE is a sector of a circle with centre B and radius 4.5 cm\n \nThe length of arc CE is 3\n10 π cm\n \nWork out the sum of the interior angles of the regular polygon.\n...................................................°\n(Total for Question 24 is 4 marks)",
+      "topic": "Angles in Polygons & Parallel Lines",
+      "topicOrder": 39,
+      "unit": "Geometry & Trigonometry"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q25.png",
+      "id": "all::Jun2026_P2HR__Q25",
+      "image": "/assets/questions/Jun2026_P2HR__Q25.png",
+      "marks": 4,
+      "modularForceUnit": "Unit 2",
+      "q": 25,
+      "text": "25 The graph of  y = a sin(x + b)°  for  0  x  360  is drawn on the grid below.\n–3\n–2\n–1\nO\n1\n2\n3\ny\nx\n180\n360\n \nGiven that  a < 0 and that  0 < b < 360\n \n(a) find the value of a and the value of b\na = ................................................... \nb = ................................................... \n(2)\n \nA curve has equation  y = f(x)\n \nThe point T with coordinates  (p, q)  lies on the curve.\n \n(b) Find the coordinates of the image of T on the curve with equation\ny = f(2x) + 5\n \n Give your coordinates in terms of p and q\n(............................ , ............................)\n(2)\n(Total for Question 25 is 4 marks)",
+      "topic": "Transformations of Graphs",
+      "topicOrder": 36,
+      "unit": "Sequences, Functions & Graphs"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q26.png",
+      "id": "all::Jun2026_P2HR__Q26",
+      "image": "/assets/questions/Jun2026_P2HR__Q26.png",
+      "marks": 6,
+      "modularForceUnit": "Unit 2",
+      "q": 26,
+      "text": "26 Here are the first four terms of an arithmetic series.\n(k + 2)         (k + 5)         (k + 8)         (k + 11)\n \nThe sum of the first 2n terms of the series is 4 times the sum of the first n terms of \nthe series.\n \nWork out the numerical value of the 100th term of the series.\n \nShow your working clearly.\n................................................... \n(Total for Question 26 is 6 marks)",
+      "topic": "Sequences",
+      "topicOrder": 28,
+      "unit": "Sequences, Functions & Graphs"
+    },
+    {
+      "availablePathways": [
+        "linear"
+      ],
+      "bank": "all",
+      "filename": "Jun2026_P2HR__Q27.png",
+      "id": "all::Jun2026_P2HR__Q27",
+      "image": "/assets/questions/Jun2026_P2HR__Q27.png",
+      "marks": 4,
+      "modularForceUnit": "Unit 2",
+      "q": 27,
+      "text": "27 Bryan owns a house.\n \nDuring 2024, the value of Bryan’s house increased by x%\n \nDuring 2025, the value of Bryan’s house increased by 2x%\n \nOverall, during 2024 and 2025, the value of Bryan’s house increased by 38.88%\n \nWork out the value of x\n \nShow clear algebraic working.\nx = ................................................... \n(Total for Question 27 is 4 marks)",
+      "topic": "Percentages",
+      "topicOrder": 5,
+      "unit": "Numbers & the Number System"
+    }
+  ],
+  "session": "Jun 2026"
+}

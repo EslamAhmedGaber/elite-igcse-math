@@ -1,7 +1,7 @@
 window.SITE_META = {
-  "generatedAt": "2026-05-28T20:54:19",
-  "questionCount": 1440,
-  "paperCount": 48,
+  "generatedAt": "2026-10-18T00:00:00",
+  "questionCount": 1650,
+  "paperCount": 60,
   "topics": [
     "Set Notation & Venn Diagrams",
     "Prime Factors, HCF & LCM",
@@ -63,7 +63,7 @@ window.SITE_META = {
       "title": "All Classified Questions",
       "description": "Every classified past-paper question in the active bank.",
       "subtitle": "Search, filter, zoom, select, solve, and print from the full classified bank.",
-      "count": 1176,
+      "count": 1386,
       "topics": [
         "Set Notation & Venn Diagrams",
         "Prime Factors, HCF & LCM",
@@ -11674,6 +11674,3996 @@ window.QUESTION_DATA = [
     "question_text": "26 The diagram shows a solid hemisphere, H Diagram NOT accurately drawn x cm The radius of H is x cm The volume of H is 6174π cm3 A bowl is made by removing a solid hemisphere from H such that the uniform thickness of the bowl is 2 cm 2 cm Diagram NOT accurately drawn Work out the total surface area of the bowl. Give your answer in terms of π ......................................................... cm2 (Total for Question 26 is 5 marks)",
     "paper_code": "P2HR",
     "modular_force_unit": null
+  },
+  {
+    "id": "all::Jun2026_P1H__Q01-U1",
+    "source_id": "Jun2026_P1H__Q01-U1",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Fractions",
+    "topic_order": 4,
+    "paper": "Jun 2026 P1H | L-to-M Unit 1",
+    "question": 1,
+    "marks": 3,
+    "filename": "Jun2026_P1H__Q01-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q01-U1.png",
+    "question_text": "1 Show that 4 1\n7\n2 3\n5\n119\n35\n�\n�\n(Total for Question 1 is 3 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q02-U1",
+    "source_id": "Jun2026_P1H__Q02-U1",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
+    "topic_order": 47,
+    "paper": "Jun 2026 P1H | L-to-M Unit 1",
+    "question": 2,
+    "marks": 3,
+    "filename": "Jun2026_P1H__Q02-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q02-U1.png",
+    "question_text": "2 \nDiagram NOT \naccurately drawn\nx cm\n65°\n10 cm\n \nWork out the value of x\n \nGive your answer correct to 3 significant figures.\nx = .............................................................\n(Total for Question 2 is 3 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q03-U1",
+    "source_id": "Jun2026_P1H__Q03-U1",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Set Notation & Venn Diagrams",
+    "topic_order": 1,
+    "paper": "Jun 2026 P1H | L-to-M Unit 1",
+    "question": 3,
+    "marks": 3,
+    "filename": "Jun2026_P1H__Q03-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q03-U1.png",
+    "question_text": "3 E =  {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}\n \nA =  {factors of 20}\n \nB =  {multiples of 5}\n \n(a) List the members of the set\n \n \n(i) A\nB\n∪\n...........................................................................................\n(1)\n \n \n(ii) A\nB\n�\n�\n............................................................................................\n(1)\n \nC =  {prime numbers}\n \nAna writes down the statement A\nC\n�\n�� \nAna’s statement is wrong.\n \n(b) Explain why.\n..................................................................................................................................................................................................................................................\n..................................................................................................................................................................................................................................................\n(1)\n(Total for Question 3 is 3 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q04-U1",
+    "source_id": "Jun2026_P1H__Q04-U1",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Standard & Compound Units",
+    "topic_order": 38,
+    "paper": "Jun 2026 P1H | L-to-M Unit 1",
+    "question": 4,
+    "marks": 4,
+    "filename": "Jun2026_P1H__Q04-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q04-U1.png",
+    "question_text": "4 Henri competes in a race.\n \nFor the first part of the race Henri cycles 60 km at an average speed of 24 km/h\n \nFor the remaining part of the race Henri runs for 1 hour and 15 minutes at  \nan average speed of 12 km/h\n \nWork out Henri’s average speed for the whole race.\n \nGive your answer in km/h\n \nShow your working clearly.\n.......................................................... km/h\n(Total for Question 4 is 4 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q05-U1",
+    "source_id": "Jun2026_P1H__Q05-U1",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Expanding Brackets",
+    "topic_order": 17,
+    "paper": "Jun 2026 P1H | L-to-M Unit 1",
+    "question": 5,
+    "marks": 3,
+    "filename": "Jun2026_P1H__Q05-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q05-U1.png",
+    "question_text": "5 (a) Expand \n4\n2\n3\ne\ne �\n�\n�\n..........................................................\n(1)  \n(b) Expand and simplify \nf\nf\n�\n�\n�\n�\n�\n�\n3\n6\n........................................................\n(2)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q06-U1",
+    "source_id": "Jun2026_P1H__Q06-U1",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Roots & Indices",
+    "topic_order": 16,
+    "paper": "Jun 2026 P1H | L-to-M Unit 1",
+    "question": 6,
+    "marks": 2,
+    "filename": "Jun2026_P1H__Q06-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q06-U1.png",
+    "question_text": "6 Simplify 4\n5\n6\n3\nx y\n�\n�\n..........................................................\n(Total for Question 6 is 2 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q07-U1",
+    "source_id": "Jun2026_P1H__Q07-U1",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Probability Toolkit",
+    "topic_order": 55,
+    "paper": "Jun 2026 P1H | L-to-M Unit 1",
+    "question": 7,
+    "marks": 4,
+    "filename": "Jun2026_P1H__Q07-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q07-U1.png",
+    "question_text": "7 Here is a biased 4-sided spinner.\n1\n2\n3\n4\n \nThe table gives information about the probability that, when the spinner is spun once,  \nit will land on each number.\nNumber\n1\n2\n3\n4\nProbability\n0.12\nx\n2x\n0.16\n \nNevan spins the spinner 500 times.\n \nWork out the expected number of times that the spinner lands on an even number.\n.........................................................\n(Total for Question 7 is 4 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q08-U1",
+    "source_id": "Jun2026_P1H__Q08-U1",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Standard & Compound Units",
+    "topic_order": 38,
+    "paper": "Jun 2026 P1H | L-to-M Unit 1",
+    "question": 8,
+    "marks": 3,
+    "filename": "Jun2026_P1H__Q08-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q08-U1.png",
+    "question_text": "8 Change a speed of 70 metres per second to a speed in kilometres per hour. \nShow your working clearly.\n......................................................... km/h\n(Total for Question 8 is 3 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q11-U1",
+    "source_id": "Jun2026_P1H__Q11-U1",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Area & Perimeter",
+    "topic_order": 42,
+    "paper": "Jun 2026 P1H | L-to-M Unit 1",
+    "question": 11,
+    "marks": 5,
+    "filename": "Jun2026_P1H__Q11-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q11-U1.png",
+    "question_text": "11 The diagram shows a shaded shape ABCDEO made from a semicircle BCD and \ntwo identical right-angled triangles ABO and EDO\nDiagram NOT \naccurately drawn\nC\nD\n15 cm\n15 cm\nB\nA\nE\nO\n \nBD is the diameter of the semicircle.\n \nO is the midpoint of BD\n \nangle ABO\nEDO\nAO\nEO\n�\n�\n�\n�\n�\nangle\ncm\n90\n15\n \nThe area of semicircle BCD is 227\n2\ncm\n \nWork out the perimeter of the shaded shape.\n \nShow your working clearly.\n \nGive your answer correct to one decimal place. ......................................................... cm\n(Total for Question 11 is 5 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q12-U1",
+    "source_id": "Jun2026_P1H__Q12-U1",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Expanding Brackets",
+    "topic_order": 17,
+    "paper": "Jun 2026 P1H | L-to-M Unit 1",
+    "question": 12,
+    "marks": 6,
+    "filename": "Jun2026_P1H__Q12-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q12-U1.png",
+    "question_text": "12 2\n8\n64\n3\nx =\n \n(a) Find the value of x\n \n Show clear algebraic working.\nx = .......................................................\n(3)\n \n(b) Expand and simplify 4\n5 2\n3\nt t\nt\n(\n)(\n)\n�\n�\n.............................................................................................................\n(3)\n(Total for Question 12 is 6 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q13-U1",
+    "source_id": "Jun2026_P1H__Q13-U1",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Probability Diagrams - Venn & Tree Diagrams",
+    "topic_order": 56,
+    "paper": "Jun 2026 P1H | L-to-M Unit 1",
+    "question": 13,
+    "marks": 4,
+    "filename": "Jun2026_P1H__Q13-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q13-U1.png",
+    "question_text": "13 On any school day, Paulo either walks to school or travels by bus to school.\n \nThe probability that it rains on any school day is 0.15\n \nIf it rains on a school day, the probability that Paulo walks to school is 0.2\n \nIf it does not rain on a school day, the probability that Paulo walks to school is 0.75\n \n(a) Complete the probability tree diagram for this information.\nrain\nwalk\nbus\nwalk\nbus\nnot rain\n(2)\n \n(b) Work out the probability that on a school day, it rains and Paulo walks to school.\n......................................................\n(2)\n(Total for Question 13 is 4 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q15-U1",
+    "source_id": "Jun2026_P1H__Q15-U1",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Linear Graphs (y = mx + c)",
+    "topic_order": 31,
+    "paper": "Jun 2026 P1H | L-to-M Unit 1",
+    "question": 15,
+    "marks": 2,
+    "filename": "Jun2026_P1H__Q15-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q15-U1.png",
+    "question_text": "15 Point A has coordinates �\n�\n�\n3 4\n,\n \nPoint B has coordinates 2\n6\n, �\n�\n�\n \nWork out the gradient of the line AB\n.....................................................\n(Total for Question 15 is 2 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q16-U1",
+    "source_id": "Jun2026_P1H__Q16-U1",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Sine, Cosine Rule & Area of Triangles",
+    "topic_order": 48,
+    "paper": "Jun 2026 P1H | L-to-M Unit 1",
+    "question": 16,
+    "marks": 5,
+    "filename": "Jun2026_P1H__Q16-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q16-U1.png",
+    "question_text": "16 The diagram shows triangle ABC\nB\nA\nC\n73 cm\n25 cm\n65°\nDiagram NOT \naccurately drawn\nAB = 25 cm    \nAC = 73 cm   \nangle BAC �\n�\n65\n \n(a) Work out the length of BC\n \n Give your answer correct to 3 significant figures.\n.................................................... cm\n(3)\n \n(b) Work out the area of the triangle.\n \n Give your answer correct to 3 significant figures.\n.................................................... cm2\n(2)\n(Total for Question 16 is 5 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q17-U1",
+    "source_id": "Jun2026_P1H__Q17-U1",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Surds",
+    "topic_order": 9,
+    "paper": "Jun 2026 P1H | L-to-M Unit 1",
+    "question": 17,
+    "marks": 3,
+    "filename": "Jun2026_P1H__Q17-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q17-U1.png",
+    "question_text": "17 Show that 4\n20\n�\n�\n�5\n2 5\n�\n�\n� can be written in the form a\nb\n−\n \nwhere a and b are integers.\n(Total for Question 17 is 3 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q18-U1",
+    "source_id": "Jun2026_P1H__Q18-U1",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Fractions",
+    "topic_order": 20,
+    "paper": "Jun 2026 P1H | L-to-M Unit 1",
+    "question": 18,
+    "marks": 3,
+    "filename": "Jun2026_P1H__Q18-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q18-U1.png",
+    "question_text": "18 Simplify fully \n4\n9\n2\n5\n12\n2\n2\nx\nx\nx\n−\n−\n−\n \nShow clear algebraic working.\n....................................................\n(Total for Question 18 is 3 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q20-U1",
+    "source_id": "Jun2026_P1H__Q20-U1",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Rounding, Estimation & Bounds",
+    "topic_order": 8,
+    "paper": "Jun 2026 P1H | L-to-M Unit 1",
+    "question": 20,
+    "marks": 5,
+    "filename": "Jun2026_P1H__Q20-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q20-U1.png",
+    "question_text": "20 The final velocity, v m/s, of an object is given by\nv\ns\nt\nu\n�\n�\n��\n�\n���\n2\n \nwhere\n \n \ns\nt\n=\n=\n100 correct to the nearest integer\ncorrect to 2 deci\n1 68\n.\nmal places\ncorrect to 1 decimal place\nu = 0 5.\n \nBy considering bounds, work out the value of v to a suitable degree of accuracy.\n \nShow your working clearly.\n...................................................\n(Total for Question 20 is 5 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q22-U1",
+    "source_id": "Jun2026_P1H__Q22-U1",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Histograms",
+    "topic_order": 53,
+    "paper": "Jun 2026 P1H | L-to-M Unit 1",
+    "question": 22,
+    "marks": 5,
+    "filename": "Jun2026_P1H__Q22-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q22-U1.png",
+    "question_text": "22 The histogram gives information about the weights, in grams, of all the apples in a shop.\n150\n140\n160\n170\nWeight (grams)\nFrequency\ndensity\n180\n190\n200\n \nThere are 9 apples with a weight between 140 grams and 155 grams.\n \n(a) Work out the number of apples with a weight less than 175 grams.\n..................................................\n(3)  \nAn apple is classified as a large apple if it has a weight of more than 180 grams.\n \nOne of the large apples is chosen at random.\n \n(b) Work out the probability that it has a weight of more than 190 grams.\n................................................\n(2)\n(Total for Question 22 is 5 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q23-U1",
+    "source_id": "Jun2026_P1H__Q23-U1",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Combined & Conditional Probability",
+    "topic_order": 57,
+    "paper": "Jun 2026 P1H | L-to-M Unit 1",
+    "question": 23,
+    "marks": 5,
+    "filename": "Jun2026_P1H__Q23-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q23-U1.png",
+    "question_text": "23 A bag contains x  marbles.\n \n12 of the marbles are pink and the rest are yellow.\n \nGreta takes at random 2 marbles from the bag.\n \nThe probability that Greta takes a pink marble and a yellow marble is 18\n47\n \nWork out the value of x\n \nShow clear algebraic working.\nx = ..................................................\n(Total for Question 23 is 5 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q25-U1",
+    "source_id": "Jun2026_P1H__Q25-U1",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "3D Pythagoras & Trigonometry",
+    "topic_order": 49,
+    "paper": "Jun 2026 P1H | L-to-M Unit 1",
+    "question": 25,
+    "marks": 5,
+    "filename": "Jun2026_P1H__Q25-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q25-U1.png",
+    "question_text": "25 The diagram shows a triangular prism ABCDEF with horizontal rectangular base ABCD\n \nF is vertically above A\nD\nE\nC\nT\nB\nA\nF\nDiagram NOT \naccurately drawn\nAF = 12cm   \nangle ABF �\n�\n30    \nangle BAF �\n�\n90\n \nT is the point on the line BC such that BF BT\n:\n:\n= 3 2\n \nWork out the size of the angle between the line FT and the plane ABCD\n \nGive your answer correct to one decimal place.\n \nShow your working clearly. ................................................ °\n(Total for Question 25 is 5 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q01-U1",
+    "source_id": "Jun2026_P1HR__Q01-U1",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Fractions",
+    "topic_order": 4,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 1",
+    "question": 1,
+    "marks": 3,
+    "filename": "Jun2026_P1HR__Q01-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q01-U1.png",
+    "question_text": "1 Show that  2 4\n5\n3 3\n7\n9 3\n5\n´\n=\n \n(Total for Question 1 is 3 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q03-U1",
+    "source_id": "Jun2026_P1HR__Q03-U1",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Roots & Indices",
+    "topic_order": 16,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 1",
+    "question": 3,
+    "marks": 2,
+    "filename": "Jun2026_P1HR__Q03-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q03-U1.png",
+    "question_text": "3 (a) Simplify  e\n7 × e\n3\n...................................................... \n(1)\n \n(b) Simplify  g\n5 ÷ g\n2\n...................................................... \n(1)\n(Total for Question 3 is 2 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q04-U1",
+    "source_id": "Jun2026_P1HR__Q04-U1",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Rounding, Estimation & Bounds",
+    "topic_order": 8,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 1",
+    "question": 4,
+    "marks": 2,
+    "filename": "Jun2026_P1HR__Q04-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q04-U1.png",
+    "question_text": "4 The weight of a giraffe is 1178 kg, correct to the nearest kg\n \n(i) Write down the lower bound of the weight of the giraffe.\n...................................................... kg\n(1)\n \n(ii) Write down the upper bound of the weight of the giraffe.\n...................................................... kg \n(1)\n(Total for Question 4 is 2 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q05-U1",
+    "source_id": "Jun2026_P1HR__Q05-U1",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Probability Toolkit",
+    "topic_order": 55,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 1",
+    "question": 5,
+    "marks": 4,
+    "filename": "Jun2026_P1HR__Q05-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q05-U1.png",
+    "question_text": "5 A bag contains only blue counters, green counters, red counters and yellow counters.\n \nDanny takes a counter at random from the bag. \n \nThe table gives information about the probabilities that he takes a blue counter or a \ngreen counter or a red counter or a yellow counter.\nColour\nblue\ngreen\nred\nyellow\nProbability\n0.45\n0.31\n5x\nx\n \nThere are 400 counters in the bag.\n \nWork out the number of red counters in the bag.\n......................................................\n(Total for Question 5 is 4 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q08-U1",
+    "source_id": "Jun2026_P1HR__Q08-U1",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Factorising",
+    "topic_order": 18,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 1",
+    "question": 8,
+    "marks": 2,
+    "filename": "Jun2026_P1HR__Q08-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q08-U1.png",
+    "question_text": "8 Factorise  x\n2 – 12x + 32\n.................................................................................\n(Total for Question 8 is 2 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q13-U1",
+    "source_id": "Jun2026_P1HR__Q13-U1",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Linear Graphs (y = mx + c)",
+    "topic_order": 31,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 1",
+    "question": 13,
+    "marks": 3,
+    "filename": "Jun2026_P1HR__Q13-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q13-U1.png",
+    "question_text": "13 The straight line L has equation  4y – 10x – 5 = 0\n \n(a) Find the gradient of L\n.................................................................................\n(2)\n \n(b) Find the coordinates of the point where L crosses the y‑axis.\n(........................... , ...........................)\n(1)\n(Total for Question 13 is 3 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q16-U1",
+    "source_id": "Jun2026_P1HR__Q16-U1",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Fractions",
+    "topic_order": 20,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 1",
+    "question": 16,
+    "marks": 6,
+    "filename": "Jun2026_P1HR__Q16-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q16-U1.png",
+    "question_text": "16 (a) Express  \n5\n8\n2\n4\n�\n�\nx\nx   as a single fraction in its simplest form.\n.................................................................................\n(3)\n \n(b) Expand and simplify  3x(2x – 1)(x + 4)\n.................................................................................\n(3)\n(Total for Question 16 is 6 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q18-U1",
+    "source_id": "Jun2026_P1HR__Q18-U1",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Combined & Conditional Probability",
+    "topic_order": 57,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 1",
+    "question": 18,
+    "marks": 3,
+    "filename": "Jun2026_P1HR__Q18-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q18-U1.png",
+    "question_text": "18 Here are 8 cards.\n \nThere is a number on each card.\n1\n1\n2\n2\n2\n4\n5\n5\n \nGordon puts the 8 cards in a bag.\n \nHe takes at random a card from the bag and does not replace it.\n \nGordon then takes at random a second card from the bag.\n \nCalculate the probability that the number on the second card is 3 more than the number \non the first card.\n  ......................................................\n(Total for Question 18 is 3 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q21-U1",
+    "source_id": "Jun2026_P1HR__Q21-U1",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Set Notation & Venn Diagrams",
+    "topic_order": 1,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 1",
+    "question": 21,
+    "marks": 5,
+    "filename": "Jun2026_P1HR__Q21-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q21-U1.png",
+    "question_text": "21 60 students were asked if they study French (F), German (G) or Italian (I)\n \nOf these students\n \n 32 students study French\n \n 24 students study German\n \n 27 students study Italian\n \n 16 students study French and German\n \n 15 students study German and Italian\n \nThe incomplete Venn diagram gives some more information about the languages the \n60 students study.\nF\nI\nE\nG\n4\n6\nx\n \n(a) Work out the value of x\nx =  ......................................................\n(3)\n \n(b) Work out how many of the 60 students study none of French or German or Italian.\n ......................................................\n(2)\n(Total for Question 21 is 5 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q22-U1",
+    "source_id": "Jun2026_P1HR__Q22-U1",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Sine, Cosine Rule & Area of Triangles",
+    "topic_order": 48,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 1",
+    "question": 22,
+    "marks": 4,
+    "filename": "Jun2026_P1HR__Q22-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q22-U1.png",
+    "question_text": "22 The diagram shows triangle ABC\nA\nB\nC\n13 cm\n62�\n47�\nDiagram NOT \naccurately drawn\n \nCalculate the area of the triangle.\n \nGive your answer correct to 3 significant figures.\n ...................................................... cm2\n(Total for Question 22 is 4 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q26-U1",
+    "source_id": "Jun2026_P1HR__Q26-U1",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Roots & Indices",
+    "topic_order": 16,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 1",
+    "question": 26,
+    "marks": 3,
+    "filename": "Jun2026_P1HR__Q26-U1.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q26-U1.png",
+    "question_text": "26 \n27\n3\n9\n6\n2\n6\n4\nx\nn\nn\nx\nx\n×\n�\n�\n�\n \nExpress x in terms of n\n \nShow your working clearly and simplify your expression.\nx = .................................................................................\n(Total for Question 26 is 3 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q09-U1",
+    "source_id": "Jun2026_P2H__Q09-U1",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Factorising",
+    "topic_order": 18,
+    "paper": "Jun 2026 P2H | L-to-M Unit 1",
+    "question": 9,
+    "marks": 7,
+    "filename": "Jun2026_P2H__Q09-U1.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q09-U1.png",
+    "question_text": "9 (a) Find the value of \n7\n0\nn  where n > 0\n..........................................................\n(1)\n \n(b) Simplify fully \n2\n5\n4\n3\nm p\n�\n�\n..........................................................\n(2)\n \n(c) Factorise fully 18\n30\n5\n2\n3\nc w\ncw\n+\n..........................................................\n(2)\n \n(d) Factorise \nx\nx\n2\n6\n27\n�\n�\n..........................................................\n(2)\n(Total for Question 9 is 7 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q12-U1",
+    "source_id": "Jun2026_P2H__Q12-U1",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Set Notation & Venn Diagrams",
+    "topic_order": 1,
+    "paper": "Jun 2026 P2H | L-to-M Unit 1",
+    "question": 12,
+    "marks": 2,
+    "filename": "Jun2026_P2H__Q12-U1.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q12-U1.png",
+    "question_text": "12 E ��\n�\n��\n�\n�\nintegers  such that \nsuch that\nsuch \nx\nx\nA\nx\nx\nB\nx\n20\n32\n27\n\n\n<\nthat 25\n30\n\n\nx\n�\n�\n \n(a) List the members of the set A\nB\n∩\n.............................................................................................................\n(1)\n \n(b) List the members of the set A\nB\n�\n�\n�'\n............................................................................................................\n(1)\n(Total for Question 12 is 2 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q15-U1",
+    "source_id": "Jun2026_P2H__Q15-U1",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Circles, Arcs & Sectors",
+    "topic_order": 43,
+    "paper": "Jun 2026 P2H | L-to-M Unit 1",
+    "question": 15,
+    "marks": 4,
+    "filename": "Jun2026_P2H__Q15-U1.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q15-U1.png",
+    "question_text": "15 The diagram shows a sector OABC of a circle, centre O\n80°\nDiagram NOT \naccurately drawn\nr cm\nr cm\nC\nA\nB\nO\n \nOA\nOC\nr\n=\n=\ncm    \nangle AOC = 80\n \nThe area of the sector OABC is 32\n2\nπ cm\n \nWork out the perimeter of the sector OABC\n \nGive your answer correct to one decimal place.\n...................................................... cm\n(Total for Question 15 is 4 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q17-U1",
+    "source_id": "Jun2026_P2H__Q17-U1",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Proof",
+    "topic_order": 22,
+    "paper": "Jun 2026 P2H | L-to-M Unit 1",
+    "question": 17,
+    "marks": 2,
+    "filename": "Jun2026_P2H__Q17-U1.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q17-U1.png",
+    "question_text": "17 Use algebra to show that \n0 539\n89\n165\n.\n. .\n=\n(Total for Question 17 is 2 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q20-U1",
+    "source_id": "Jun2026_P2H__Q20-U1",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Probability Toolkit",
+    "topic_order": 55,
+    "paper": "Jun 2026 P2H | L-to-M Unit 1",
+    "question": 20,
+    "marks": 3,
+    "filename": "Jun2026_P2H__Q20-U1.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q20-U1.png",
+    "question_text": "20 A box only contains green counters and red counters.\nNuno chooses at random a counter from the box.\nHe puts the counter back into the box.\nNuno then chooses at random a second counter from the box.\nThe probability that Nuno chooses at least one red counter is 39\n64\nWork out the probability that Nuno chooses exactly one red counter.\n......................................................\n(Total for Question 20 is 3 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q01-U1",
+    "source_id": "Jun2026_P2HR__Q01-U1",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
+    "topic_order": 47,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 1",
+    "question": 1,
+    "marks": 3,
+    "filename": "Jun2026_P2HR__Q01-U1.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q01-U1.png",
+    "question_text": "1 The diagram shows a right‑angled triangle.\n20 cm\n48 cm\nx cm\nDiagram NOT \naccurately drawn\n \nWork out the value of x\nx = ......................................................\n(Total for Question 1 is 3 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q03-U1",
+    "source_id": "Jun2026_P2HR__Q03-U1",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Set Notation & Venn Diagrams",
+    "topic_order": 1,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 1",
+    "question": 3,
+    "marks": 1,
+    "filename": "Jun2026_P2HR__Q03-U1.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q03-U1.png",
+    "question_text": "3 E = {integers from 1 to 12}\n \nA = {factors of 12}\n \nList the members of the set  A′\n.................................................................................\n(Total for Question 3 is 1 mark)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q04-U1",
+    "source_id": "Jun2026_P2HR__Q04-U1",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Solving Linear Equations",
+    "topic_order": 23,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 1",
+    "question": 4,
+    "marks": 6,
+    "filename": "Jun2026_P2HR__Q04-U1.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q04-U1.png",
+    "question_text": "4 (a) Solve  3(x + 2) = 1 – 5x\n \n Show clear algebraic working.\nx = ......................................................\n(3)  \n(c) Simplify  m\n0\n......................................................\n(1)  \n(d) Simplify  (4r\n2t)\n3\n......................................................\n(2)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q09-U1",
+    "source_id": "Jun2026_P2HR__Q09-U1",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Standard & Compound Units",
+    "topic_order": 38,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 1",
+    "question": 9,
+    "marks": 3,
+    "filename": "Jun2026_P2HR__Q09-U1.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q09-U1.png",
+    "question_text": "9 Change a speed of 198 kilometres per hour to a speed in metres per second.\n \nShow your working clearly.\n..................................................... m/s\n(Total for Question 9 is 3 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q10-U1",
+    "source_id": "Jun2026_P2HR__Q10-U1",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Standard & Compound Units",
+    "topic_order": 38,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 1",
+    "question": 10,
+    "marks": 3,
+    "filename": "Jun2026_P2HR__Q10-U1.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q10-U1.png",
+    "question_text": "10 The diagram shows a solid cylinder.\n4 cm\nDiagram NOT \naccurately drawn\n11 cm\n \nThe cylinder has radius 4 cm and height 11 cm\n \nThe cylinder is made from wood with a density of 0.6 g/cm\n3\n \nWork out the mass of the cylinder.\n \nGive your answer correct to 3 significant figures.\n..................................................... g\n(Total for Question 10 is 3 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q11-U1",
+    "source_id": "Jun2026_P2HR__Q11-U1",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
+    "topic_order": 47,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 1",
+    "question": 11,
+    "marks": 5,
+    "filename": "Jun2026_P2HR__Q11-U1.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q11-U1.png",
+    "question_text": "11 The diagram shows a square ABCD and a right‑angled triangle EFG\nA\nB\nC\nD\nE\nF\nG\n25�\nDiagram NOT \naccurately drawn\n \nThe area of square ABCD is 36 cm\n2\n \nDC = EG\n \nWork out the area of triangle EFG\n \nGive your answer correct to one decimal place.\n \nShow your working clearly.\n..................................................... cm\n2\n(Total for Question 11 is 5 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q13-U1",
+    "source_id": "Jun2026_P2HR__Q13-U1",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Graphs of Functions",
+    "topic_order": 32,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 1",
+    "question": 13,
+    "marks": 4,
+    "filename": "Jun2026_P2HR__Q13-U1.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q13-U1.png",
+    "question_text": "13 (a) Complete the table of values for  y = x + \n1\nx\nx\n0.25\n0.5\n1\n2\n3\n4\n5\ny\n4.25\n2.5\n3.33\n(2)\n \n(b) On the grid, draw the graph of  y = x + \n1\nx   for  0.25  x  5\n1\n1\n2\n3\n4\n5\n2\n3\n4\n5\n6\nO\nx\ny\n(2)\n(Total for Question 13 is 4 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q14-U1",
+    "source_id": "Jun2026_P2HR__Q14-U1",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Probability Diagrams - Venn & Tree Diagrams",
+    "topic_order": 56,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 1",
+    "question": 14,
+    "marks": 8,
+    "filename": "Jun2026_P2HR__Q14-U1.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q14-U1.png",
+    "question_text": "14 Pras has 2 bags of counters, bag A and bag B\n \nIn bag A, there are 4 green counters and 3 red counters.\n \nIn bag B, there are 5 green counters and 1 red counter.\n \nPras is going to take at random a counter from bag A and a counter from bag B\n \n(a) Complete the probability tree diagram.\nRed\nGreen\nBag A\nBag B\nRed\nGreen\nRed\nGreen\n................\n................\n................\n................\n................\n................\n(2)\n \n(b) Work out the probability that Pras will take two green counters.\n....................................................\n(2)  \nPras also has a third bag of counters, bag C\n \nIn bag C, there are only green counters and red counters.\n \nAll the original counters are back in bag A and bag B\n \nPras is going to take at random a counter from bag A, a counter from bag B and \na counter from bag C\n \nThe probability that Pras will take three red counters is 3\n70\n \n(c) Work out the probability that Pras will take 1 green counter and 2 red counters.\n....................................................\n(4)\n(Total for Question 14 is 8 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q16-U1",
+    "source_id": "Jun2026_P2HR__Q16-U1",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Roots & Indices",
+    "topic_order": 16,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 1",
+    "question": 16,
+    "marks": 2,
+    "filename": "Jun2026_P2HR__Q16-U1.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q16-U1.png",
+    "question_text": "16 \n1\n6\na\nan\n�\n��\n�\n���\n \nWork out the value of n\nn = .................................................... \n(Total for Question 16 is 2 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q17-U1",
+    "source_id": "Jun2026_P2HR__Q17-U1",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Fractions",
+    "topic_order": 4,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 1",
+    "question": 17,
+    "marks": 2,
+    "filename": "Jun2026_P2HR__Q17-U1.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q17-U1.png",
+    "question_text": "17 Use algebra to show that  0.8.\n14.\n = 22\n27\n(Total for Question 17 is 2 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q19-U1",
+    "source_id": "Jun2026_P2HR__Q19-U1",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Histograms",
+    "topic_order": 53,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 1",
+    "question": 19,
+    "marks": 3,
+    "filename": "Jun2026_P2HR__Q19-U1.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q19-U1.png",
+    "question_text": "19 The table gives information about the times, in minutes, some people spent waiting to \ngo on a rollercoaster.\nTime (t minutes)\nFrequency\n 0 < t  20\n14\n20 < t  25\n12\n25 < t  35\n32\n35 < t  50\n30\n \nOn the grid, draw a histogram for this information.\n0\n0\n1\n2\n3\n4\n10\n20\n30\n40\n50\nTime (minutes)\nFrequency \ndensity\n(Total for Question 19 is 3 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q21-U1",
+    "source_id": "Jun2026_P2HR__Q21-U1",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Rounding, Estimation & Bounds",
+    "topic_order": 8,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 1",
+    "question": 21,
+    "marks": 3,
+    "filename": "Jun2026_P2HR__Q21-U1.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q21-U1.png",
+    "question_text": "21 p\nd\ne\nf\n�\n�\n \nd = 6.6 correct to 1 decimal place\n \ne = 2.8 correct to 1 decimal place\n \nf = 0.47 correct to 2 decimal places\n \nCalculate the lower bound for the value of p\n \nGive your answer correct to 3 significant figures.\n \nShow your working clearly.\n................................................... \n(Total for Question 21 is 3 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q05-U2",
+    "source_id": "Jun2026_P1H__Q05-U2",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Rearranging Formulas",
+    "topic_order": 21,
+    "paper": "Jun 2026 P1H | L-to-M Unit 2",
+    "question": 5,
+    "marks": 4,
+    "filename": "Jun2026_P1H__Q05-U2.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q05-U2.png",
+    "question_text": " \n(c) Make x the subject of \nt\nax\nn\n�\n�2\n........................................................\n(2)  \n(d) On the number line, represent the inequality \n−1\n3\n< y \n5\ny\n4\n3\n2\n1\n0\n−1\n−2\n−3\n−4\n−5\n(2)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q09-U2",
+    "source_id": "Jun2026_P1H__Q09-U2",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Powers, Roots & Standard Form",
+    "topic_order": 3,
+    "paper": "Jun 2026 P1H | L-to-M Unit 2",
+    "question": 9,
+    "marks": 3,
+    "filename": "Jun2026_P1H__Q09-U2.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q09-U2.png",
+    "question_text": "9 (a) Write 0.0651 in standard form.\n.........................................................\n(1)\n \n(b) Work out \n4\n10\n8\n10\n56\n74\n�\n�\n��\n�\n�\n�\n \n Give your answer in standard form.\n........................................................\n(2)\n(Total for Question 9 is 3 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q10-U2",
+    "source_id": "Jun2026_P1H__Q10-U2",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Simultaneous Equations",
+    "topic_order": 26,
+    "paper": "Jun 2026 P1H | L-to-M Unit 2",
+    "question": 10,
+    "marks": 3,
+    "filename": "Jun2026_P1H__Q10-U2.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q10-U2.png",
+    "question_text": "10 Solve the simultaneous equations\n4\n3\n9\n2\n2\n13\nx\ny\nx\ny\n�\n�\n�\n��\n \nShow clear algebraic working.\nx =  ........................................................\ny =  ........................................................\n(Total for Question 10 is 3 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q14-U2",
+    "source_id": "Jun2026_P1H__Q14-U2",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Compound Interest & Depreciation",
+    "topic_order": 6,
+    "paper": "Jun 2026 P1H | L-to-M Unit 2",
+    "question": 14,
+    "marks": 3,
+    "filename": "Jun2026_P1H__Q14-U2.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q14-U2.png",
+    "question_text": "14 In September, the sales in a shop increased by 20%\n \nIn October, the sales in the same shop decreased by x%\n \nOver these two months, the sales in the shop decreased by 10%\n \nWork out the value of x\nx =  .....................................................\n(Total for Question 14 is 3 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q19-U2",
+    "source_id": "Jun2026_P1H__Q19-U2",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Direct & Inverse Proportion",
+    "topic_order": 14,
+    "paper": "Jun 2026 P1H | L-to-M Unit 2",
+    "question": 19,
+    "marks": 4,
+    "filename": "Jun2026_P1H__Q19-U2.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q19-U2.png",
+    "question_text": "19 M is directly proportional to p2\n \nM = 2  when p = 5\n \n(a) Find a formula for M in terms of p\n...................................................\n(3)\n \n(b) Work out the value of M when p = 15\nM =  ...................................................\n(1)\n(Total for Question 19 is 4 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q21-U2",
+    "source_id": "Jun2026_P1H__Q21-U2",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Differentiation",
+    "topic_order": 37,
+    "paper": "Jun 2026 P1H | L-to-M Unit 2",
+    "question": 21,
+    "marks": 5,
+    "filename": "Jun2026_P1H__Q21-U2.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q21-U2.png",
+    "question_text": "21 The diagram shows a solid cuboid.\nDiagram NOT \naccurately drawn\n(13.5 − 2x) cm\nx cm\n3x cm\n \nThe volume of the cuboid is V cm3\n \nFind the maximum value of V\n \nShow clear algebraic working.\nV = .................................................\n(Total for Question 21 is 5 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q24-U2",
+    "source_id": "Jun2026_P1H__Q24-U2",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Completing the Square",
+    "topic_order": 19,
+    "paper": "Jun 2026 P1H | L-to-M Unit 2",
+    "question": 24,
+    "marks": 5,
+    "filename": "Jun2026_P1H__Q24-U2.png",
+    "image": "assets/questions/converted/Jun2026_P1H__Q24-U2.png",
+    "question_text": "24  (a) Express 10\n24\n3\n2\n−\n−\nx\nx  in the form a\nb x\nc\n�\n�\n�\n�\n2  where a, b and c are integers.\n..................................................\n(3)\n \nT is the curve with equation y\nx\nx\n�\n�\n�\n�\n��\n�\n�\n�\n10\n24\n1\n3\n1\n2\n \nThe point P is the maximum point on T\n \n(b) Use your answer to part (a) to find the coordinates of P\n(...................... , ......................)\n(1)\n \n(c) Write down the equation for the line of symmetry of T\n..................................................\n(1)\n(Total for Question 24 is 5 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q02-U2",
+    "source_id": "Jun2026_P1HR__Q02-U2",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Prime Factors, HCF & LCM",
+    "topic_order": 2,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 2",
+    "question": 2,
+    "marks": 3,
+    "filename": "Jun2026_P1HR__Q02-U2.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q02-U2.png",
+    "question_text": "2 Write  504  as a product of powers of its prime factors.\n \nShow your working clearly.\n.................................................................................\n(Total for Question 2 is 3 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q06-U2",
+    "source_id": "Jun2026_P1HR__Q06-U2",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Area & Volume of Similar Shapes",
+    "topic_order": 46,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 2",
+    "question": 6,
+    "marks": 3,
+    "filename": "Jun2026_P1HR__Q06-U2.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q06-U2.png",
+    "question_text": "6 \n5 cm\n8 cm\n24 cm\nA\nB\nDiagram NOT \naccurately drawn\n \nA and B are similar parallelograms.\n \nWork out the area of B\n...................................................... cm\n2\n(Total for Question 6 is 3 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q07-U2",
+    "source_id": "Jun2026_P1HR__Q07-U2",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Solving Inequalities",
+    "topic_order": 25,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 2",
+    "question": 7,
+    "marks": 5,
+    "filename": "Jun2026_P1HR__Q07-U2.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q07-U2.png",
+    "question_text": "7 \nx\n–3\n–2\n–1\n0\n1\n2\n3\n \n(a) Represent the inequality  x < 1  on the number line above.\n(1)\n \n 2  y + 3 < 7\n \n y is an integer.\n \n(b) Write down all the possible values of y\n.................................................................................\n(2)\n \n(c) Solve the inequality  8 – 5w > –10\n.................................................................................\n(2)\n(Total for Question 7 is 5 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q09-U2",
+    "source_id": "Jun2026_P1HR__Q09-U2",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Statistics Toolkit",
+    "topic_order": 52,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 2",
+    "question": 9,
+    "marks": 3,
+    "filename": "Jun2026_P1HR__Q09-U2.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q09-U2.png",
+    "question_text": "9 Caleb owns 11 sheep.\n \nThe mean weight of all 11 sheep is 77 kg \nThe mean weight of 8 of the sheep is 75.2 kg\n \nWork out the mean weight of the other 3 sheep.\n......................................................  kg\n(Total for Question 9 is 3 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q10-U2",
+    "source_id": "Jun2026_P1HR__Q10-U2",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Compound Interest & Depreciation",
+    "topic_order": 6,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 2",
+    "question": 10,
+    "marks": 3,
+    "filename": "Jun2026_P1HR__Q10-U2.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q10-U2.png",
+    "question_text": "10 Arwa invests 200 000 yen in a savings account for 3 years.\n \nShe gets 1.4% per year compound interest.\n \nWork out how much money Arwa will have in her savings account at the end of 3 years.\n \nGive your answer correct to the nearest yen.\n...................................................... yen\n(Total for Question 10 is 3 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q11-U2",
+    "source_id": "Jun2026_P1HR__Q11-U2",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Volume & Surface Area",
+    "topic_order": 44,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 2",
+    "question": 11,
+    "marks": 4,
+    "filename": "Jun2026_P1HR__Q11-U2.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q11-U2.png",
+    "question_text": "11 The diagram shows a solid cuboid.\n3 cm\n11 cm\nx cm\nDiagram NOT \naccurately drawn\n \nThe cuboid measures 3 cm by 11 cm by x cm\n \nThe volume of the cuboid is 264 cm3\n \nWork out the total surface area of the cuboid.\n...................................................... cm2\n(Total for Question 11 is 4 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q12-U2",
+    "source_id": "Jun2026_P1HR__Q12-U2",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Simultaneous Equations",
+    "topic_order": 26,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 2",
+    "question": 12,
+    "marks": 3,
+    "filename": "Jun2026_P1HR__Q12-U2.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q12-U2.png",
+    "question_text": "12 Solve the simultaneous equations\n4x + 4y = 5\n  x + 2y = 1\n \nShow clear algebraic working.\nx =  ......................................................\ny =  ......................................................\n(Total for Question 12 is 3 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q14-U2",
+    "source_id": "Jun2026_P1HR__Q14-U2",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Cumulative Frequency Diagrams",
+    "topic_order": 54,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 2",
+    "question": 14,
+    "marks": 4,
+    "filename": "Jun2026_P1HR__Q14-U2.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q14-U2.png",
+    "question_text": "14 The cumulative frequency table gives information about the ages, in years, of 80 people \nwho went to a cinema on Saturday.\nAge (a years)\nCumulative frequency\n0 < a  10\n19\n0 < a  20\n37\n0 < a  30\n52\n0 < a  40\n63\n0 < a  50\n73\n0 < a  60\n80  \n(a) On the grid below, draw a cumulative frequency graph for this information.\n0\n0\n10\n20\n30\n40\n50\n60\n70\n80\n10\n20\n30\n40\n50\n60\nAge (years)\nCumulative \nfrequency\n(2)  \n(b) Use your graph to find an estimate for the median age of the 80 people.\n...................................................... years\n(1)\n \n(c) Use your graph to find an estimate for the number of the 80 people \naged 16 and under.\n......................................................\n(1)\n(Total for Question 14 is 4 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q15-U2",
+    "source_id": "Jun2026_P1HR__Q15-U2",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Angles in Polygons & Parallel Lines",
+    "topic_order": 39,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 2",
+    "question": 15,
+    "marks": 3,
+    "filename": "Jun2026_P1HR__Q15-U2.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q15-U2.png",
+    "question_text": "15 \nA\nB\nF\nC\nE\nD\nx�\n109�\n75�\n80�\nDiagram NOT \naccurately drawn \n \nBCDEF is a pentagon.\n \nAB, BC and CD are three sides of a regular 10-sided polygon.\n \nFind the value of x\nx =  ......................................................\n(Total for Question 15 is 3 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q17-U2",
+    "source_id": "Jun2026_P1HR__Q17-U2",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Differentiation",
+    "topic_order": 37,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 2",
+    "question": 17,
+    "marks": 5,
+    "filename": "Jun2026_P1HR__Q17-U2.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q17-U2.png",
+    "question_text": "17 y = x3 + 5x2 – 8x\n \n(a) Find  d\nd\ny\nx\nd\nd\ny\nx  = ..........................................................................\n(2)\n \nThe curve with equation  y = x3 + 5x2 – 8x  has two stationary points, P and Q\n \nThe x‑coordinate of P is less than the x‑coordinate of Q\n \n(b) Work out the coordinates of P\n \n Show clear algebraic working.\n(........................... , ...........................)\n(3)\n(Total for Question 17 is 5 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q19-U2",
+    "source_id": "Jun2026_P1HR__Q19-U2",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Circle Theorems",
+    "topic_order": 41,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 2",
+    "question": 19,
+    "marks": 5,
+    "filename": "Jun2026_P1HR__Q19-U2.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q19-U2.png",
+    "question_text": "19 P, Q, R and S are points on a circle, centre O\nP\nS\nR\nQ\nO\n170�\n53�\nDiagram NOT \naccurately drawn\n \nAngle POR = 170° \nAngle ORS = 53°\n \nFind the size of angle SPO\n \nGive a reason for each stage of your working.\n  ......................................................°\n(Total for Question 19 is 5 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q20-U2",
+    "source_id": "Jun2026_P1HR__Q20-U2",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Direct & Inverse Proportion",
+    "topic_order": 14,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 2",
+    "question": 20,
+    "marks": 5,
+    "filename": "Jun2026_P1HR__Q20-U2.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q20-U2.png",
+    "question_text": "20 y is directly proportional to t2\n \ny = 40 when t = 4\n \nt is directly proportional to the cube root of x\n \nt = 12 when x = 8\n \nWork out the value of y when x = 27\ny =  ......................................................\n(Total for Question 20 is 5 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q23-U2",
+    "source_id": "Jun2026_P1HR__Q23-U2",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Functions",
+    "topic_order": 29,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 2",
+    "question": 23,
+    "marks": 7,
+    "filename": "Jun2026_P1HR__Q23-U2.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q23-U2.png",
+    "question_text": "23 The function f is such that  f(x) = 1\nx\n \n(a) Write down the value of x that cannot be included in any domain of f\n  ......................................................\n(1)\n \nThe function g is such that  g(x) = 4x\n2 – 8x + 15 \nThe domain of g is  x  1\n \n(b) Work out  gf(0.5)\n  ......................................................\n(2)\n \n(c) Express the inverse function  g–1  in the form  g–1(x) = ...\ng–1(x) = .................................................................................\n(4)\n(Total for Question 23 is 7 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q24-U2",
+    "source_id": "Jun2026_P1HR__Q24-U2",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Circle Theorems",
+    "topic_order": 41,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 2",
+    "question": 24,
+    "marks": 4,
+    "filename": "Jun2026_P1HR__Q24-U2.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q24-U2.png",
+    "question_text": "24 The centre of a circle is the point with coordinates (3, 1)\n \nThe point P with coordinates (7, 6) lies on the circle.\n \nThe line L is the tangent to the circle at P\n \nFind an equation for L\n \nGive your answer in the form  ax + by + c = 0  where a, b and c are integers.\n.................................................................................\n(Total for Question 24 is 4 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q25-U2",
+    "source_id": "Jun2026_P1HR__Q25-U2",
+    "bank": "all",
+    "unit": "Vectors & Transformation Geometry",
+    "topic": "Vectors",
+    "topic_order": 50,
+    "paper": "Jun 2026 P1HR | L-to-M Unit 2",
+    "question": 25,
+    "marks": 6,
+    "filename": "Jun2026_P1HR__Q25-U2.png",
+    "image": "assets/questions/converted/Jun2026_P1HR__Q25-U2.png",
+    "question_text": "25\nA\nC\nD\nP\nB\nO\n4b\n3a\n2a + 2b\nDiagram NOT \naccurately drawn \n \nOA\n→ = 3a   OB\n→ = 4b   AC\n→ = 2a + 2b   CD\n→ = 3\n2  × AC\n→\n \nP is the point on BC such that OPD is a straight line.\n \n(a) Find OD\n→ in terms of a and b\n \n Give your answer in its simplest form.\n ......................................................\n(2)\n \n(b) Find the ratio  OP : PD\n \n Show your working clearly. .................................................................................\n(4)\n(Total for Question 25 is 6 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q01-U2",
+    "source_id": "Jun2026_P2H__Q01-U2",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Prime Factors, HCF & LCM",
+    "topic_order": 2,
+    "paper": "Jun 2026 P2H | L-to-M Unit 2",
+    "question": 1,
+    "marks": 3,
+    "filename": "Jun2026_P2H__Q01-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q01-U2.png",
+    "question_text": "1 Write 4500 as a product of powers of its prime factors. \nShow your working clearly.\n..............................................................................\n(Total for Question 1 is 3 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q02-U2",
+    "source_id": "Jun2026_P2H__Q02-U2",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Sequences",
+    "topic_order": 28,
+    "paper": "Jun 2026 P2H | L-to-M Unit 2",
+    "question": 2,
+    "marks": 5,
+    "filename": "Jun2026_P2H__Q02-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q02-U2.png",
+    "question_text": "2 The nth term of an arithmetic sequence is given by 8\n5\nn −\n \n(a) Work out the ratio of the 40th term of the sequence to the 60th term of the sequence. \n Give your ratio in its simplest form.\n..............................................................\n(3)\n \nHere are the first five terms of a different arithmetic sequence.\n3  8  13  18  23\n \n(b) Find an expression for the nth term of this sequence.\n..............................................................\n(2)\n(Total for Question 2 is 5 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q03-U2",
+    "source_id": "Jun2026_P2H__Q03-U2",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Statistics Toolkit",
+    "topic_order": 52,
+    "paper": "Jun 2026 P2H | L-to-M Unit 2",
+    "question": 3,
+    "marks": 5,
+    "filename": "Jun2026_P2H__Q03-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q03-U2.png",
+    "question_text": "3 The table shows information about the number of hours each of 40 candles burned.\nNumber of hours (h)\nFrequency\n15\n19\n< h \n2\n19\n23\n< h \n5\n23\n27\n< h \n12\n27\n31\n< h \n15\n31\n35\n< h \n6\n \n(a) Write down the modal class.\n.............................................................. \n(1)\n \n(b) Work out an estimate for the mean number of hours.\n.............................................................. hours\n(4)\n(Total for Question 3 is 5 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q04-U2",
+    "source_id": "Jun2026_P2H__Q04-U2",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Percentages",
+    "topic_order": 5,
+    "paper": "Jun 2026 P2H | L-to-M Unit 2",
+    "question": 4,
+    "marks": 3,
+    "filename": "Jun2026_P2H__Q04-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q04-U2.png",
+    "question_text": "4 Sara sells water bottles.\nIn July, she sold 450 water bottles.\nIn August, she sold 612 water bottles.\nWork out the percentage increase in the number of water bottles she sold from July \nto August.\n..............................................................%\n(Total for Question 4 is 3 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q05-U2",
+    "source_id": "Jun2026_P2H__Q05-U2",
+    "bank": "all",
+    "unit": "Vectors & Transformation Geometry",
+    "topic": "Transformations",
+    "topic_order": 51,
+    "paper": "Jun 2026 P2H | L-to-M Unit 2",
+    "question": 5,
+    "marks": 4,
+    "filename": "Jun2026_P2H__Q05-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q05-U2.png",
+    "question_text": "5 \ny\nx\nO\n−2\n−1\n4\n5\n3\n1\n2\nA\nB\n6\n7\n8\n9\n10\n−2\n−1\n2\n3\n1\n4\n6\n7\n5\n8\n9\n10\n(a) Describe fully the single transformation that maps triangle A onto triangle B\n..................................................................................................................................................................................................................................................\n..................................................................................................................................................................................................................................................\n(3)\n(b) On the grid, translate triangle A by the vector\n4\n3\n�\n�\n��\n�\n��\nLabel your triangle C\n(1)\n(Total for Question 5 is 4 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q06-U2",
+    "source_id": "Jun2026_P2H__Q06-U2",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Angles in Polygons & Parallel Lines",
+    "topic_order": 39,
+    "paper": "Jun 2026 P2H | L-to-M Unit 2",
+    "question": 6,
+    "marks": 3,
+    "filename": "Jun2026_P2H__Q06-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q06-U2.png",
+    "question_text": "6 ABCDE is a pentagon.\nA\nB\n96°\nx°\nx°\n91°\n93°\nC\nD\nE\nDiagram NOT\naccurately drawn\n \nangle EAB �\n�\n96   \nangle BCD �\n�\n91   \nangle CDE �\n�\n93  \nangle DEA = angle ABC\nx\n�\n�\n \nWork out the value of x\nx =  ..............................................................\n(Total for Question 6 is 3 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q07-U2",
+    "source_id": "Jun2026_P2H__Q07-U2",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Volume & Surface Area",
+    "topic_order": 44,
+    "paper": "Jun 2026 P2H | L-to-M Unit 2",
+    "question": 7,
+    "marks": 3,
+    "filename": "Jun2026_P2H__Q07-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q07-U2.png",
+    "question_text": "7 The diagram shows a cylinder and a prism.\nDiagram NOT\naccurately drawn\n18 cm\n7 cm\nL cm\n120 cm2\n \nThe radius of the cylinder is 7 cm \nThe height of the cylinder is 18 cm\n \nThe area of the cross section of the prism, shown shaded in the diagram, is 120\n2\ncm  \nThe length of the prism is L cm\n \nThe volume of the cylinder is equal to the volume of the prism.\n \nWork out the value of L \nGive your answer correct to 3 significant figures.\nL =  ..............................................................\n(Total for Question 7 is 3 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q08-U2",
+    "source_id": "Jun2026_P2H__Q08-U2",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Percentages",
+    "topic_order": 5,
+    "paper": "Jun 2026 P2H | L-to-M Unit 2",
+    "question": 8,
+    "marks": 3,
+    "filename": "Jun2026_P2H__Q08-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q08-U2.png",
+    "question_text": "8 A golf club increases the cost of membership by 17%\n \nAfter the increase, the cost of membership is 3276 zloty.\n \nWork out the cost of membership before the increase.\n............................................................ zloty\n(Total for Question 8 is 3 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q10-U2",
+    "source_id": "Jun2026_P2H__Q10-U2",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Compound Interest & Depreciation",
+    "topic_order": 6,
+    "paper": "Jun 2026 P2H | L-to-M Unit 2",
+    "question": 10,
+    "marks": 4,
+    "filename": "Jun2026_P2H__Q10-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q10-U2.png",
+    "question_text": "10 Johan owns a car.\n \nThe current value of the car is 32 000 euros.\n \nThe value of the car will now depreciate by 15% per year.\n \nLena is going to save up and buy Johan’s car in 3 years’ time.\n \nShe has already saved 2516 euros.\n \nShe will save an equal amount of money each month for the next 3 years.\n \nWork out how much money Lena needs to save each month.\n........................................................... euros\n(Total for Question 10 is 4 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q11-U2",
+    "source_id": "Jun2026_P2H__Q11-U2",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Prime Factors, HCF & LCM",
+    "topic_order": 2,
+    "paper": "Jun 2026 P2H | L-to-M Unit 2",
+    "question": 11,
+    "marks": 2,
+    "filename": "Jun2026_P2H__Q11-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q11-U2.png",
+    "question_text": "11 Find the highest prime number that is a factor of  3 6\n1024\n. ×\n..............................................................\n(Total for Question 11 is 2 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q13-U2",
+    "source_id": "Jun2026_P2H__Q13-U2",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Statistics Toolkit",
+    "topic_order": 52,
+    "paper": "Jun 2026 P2H | L-to-M Unit 2",
+    "question": 13,
+    "marks": 4,
+    "filename": "Jun2026_P2H__Q13-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q13-U2.png",
+    "question_text": "13 Leo collects apples from three trees. \nThe incomplete table gives some information about the apples he collects from \nthese trees.\nTree\nNumber of \napples\nMean weight of \napples (grams)\nTotal weight of \napples (grams)\nA\n12\n150\nB\n20\n2700\nC\n145\n2610\n \nWork out the mean weight of all the apples Leo collects from these three trees.\n.............................................................. grams\n(Total for Question 13 is 4 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q14-U2",
+    "source_id": "Jun2026_P2H__Q14-U2",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Cumulative Frequency Diagrams",
+    "topic_order": 54,
+    "paper": "Jun 2026 P2H | L-to-M Unit 2",
+    "question": 14,
+    "marks": 3,
+    "filename": "Jun2026_P2H__Q14-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q14-U2.png",
+    "question_text": "14 The cumulative frequency graph gives information about the weights, in kg, of  \n60 crates.\n100\n0\n10\n20\n30\n40\n50\n60\n110\n120\n130\nWeight (kg)\nCumulative\nfrequency\n140\n150\n \n(a) Use the graph to find an estimate for the median weight.\n...................................................... kg\n(1)\n \n(b) Use the graph to find an estimate for the interquartile range.\n...................................................... kg\n(2)\n(Total for Question 14 is 3 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q16-U2",
+    "source_id": "Jun2026_P2H__Q16-U2",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Functions",
+    "topic_order": 29,
+    "paper": "Jun 2026 P2H | L-to-M Unit 2",
+    "question": 16,
+    "marks": 5,
+    "filename": "Jun2026_P2H__Q16-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q16-U2.png",
+    "question_text": "16 The functions f and g are such that\nf( )\nx\nx\n�\n�\n4\n  \ng( )\nx\nx\n�\n�\n3\n2\n2\n \n(a) Find   g( )\n4\n..............................................................\n(1)\n \n(b) Find   f −1 7\n( )\n..............................................................\n(2)\n \n(c) Express  gf(x)   in the form  ax\nbx\nc\n2 +\n+\n  where a, b and c are integers.\ngf( )\nx =  ..............................................................\n(2)\n(Total for Question 16 is 5 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q18-U2",
+    "source_id": "Jun2026_P2H__Q18-U2",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Rearranging Formulas",
+    "topic_order": 21,
+    "paper": "Jun 2026 P2H | L-to-M Unit 2",
+    "question": 18,
+    "marks": 4,
+    "filename": "Jun2026_P2H__Q18-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q18-U2.png",
+    "question_text": "18 Make x the subject of the formula \na\nw\nx\nx\n�\n�\n�\n3\n6\n2\n2\n......................................................\n(Total for Question 18 is 4 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q19-U2",
+    "source_id": "Jun2026_P2H__Q19-U2",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Circle Theorems",
+    "topic_order": 41,
+    "paper": "Jun 2026 P2H | L-to-M Unit 2",
+    "question": 19,
+    "marks": 2,
+    "filename": "Jun2026_P2H__Q19-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q19-U2.png",
+    "question_text": "19 B, D and E are points on a circle.\nB\nA\nC\nD\nE\n52°\nDiagram NOT \naccurately drawn\n \nABC is the tangent to the circle at B\n \nangle ABE �\n�\n52    \nED\nBD\n=\n \nWork out the size of angle BED\n.....................................................°\n(Total for Question 19 is 2 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q21-U2",
+    "source_id": "Jun2026_P2H__Q21-U2",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Estimating Gradients",
+    "topic_order": 33,
+    "paper": "Jun 2026 P2H | L-to-M Unit 2",
+    "question": 21,
+    "marks": 5,
+    "filename": "Jun2026_P2H__Q21-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q21-U2.png",
+    "question_text": "21 The curve with equation  y\nx\n= f( )   is drawn on a grid.\n2\nO\n4\n6\n1\n3\n5\n−7\n−5\n−3\n−1\n−6\n−4\n−2\n1\n0.5\n1.5\n2.5\n3.5\n4.5\n2\n3\n4\n7\nx\ny\n \n(a) By drawing a suitable straight line (at least 3 cm long) on the grid, work out an \nestimate for the gradient of the curve at the point where x = 1 \nShow your working clearly.\n..............................................................\n(2) (b) By drawing a suitable straight line on the grid, find the solutions\nof the equation  x\nx\n�\n�\n3\n1\n2 f( )\nShow your working clearly.\n..............................................................\n(3)\n(Total for Question 21 is 5 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q22-U2",
+    "source_id": "Jun2026_P2H__Q22-U2",
+    "bank": "all",
+    "unit": "Vectors & Transformation Geometry",
+    "topic": "Vectors",
+    "topic_order": 50,
+    "paper": "Jun 2026 P2H | L-to-M Unit 2",
+    "question": 22,
+    "marks": 4,
+    "filename": "Jun2026_P2H__Q22-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q22-U2.png",
+    "question_text": "22 The diagram shows a quadrilateral OABC where O, A, B and C represent the positions \nof four houses.\nDiagram NOT \naccurately drawn\nC\nO\nA\nB\n��\n��\n�\n��\n2\n8\n��\n��\n�\n��\n21\n14\n��\n��\n�\n��\n12\n3\nRia walks directly from A to B\nAnna walks directly from A to C and then walks directly from C to B\n, \n and \n are given in metres.\nWork out how much further Anna walks than Ria walks.\nGive your answer correct to one decimal place. ............................................................ metres\n(Total for Question 22 is 4 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q23-U2",
+    "source_id": "Jun2026_P2H__Q23-U2",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Simultaneous Equations",
+    "topic_order": 26,
+    "paper": "Jun 2026 P2H | L-to-M Unit 2",
+    "question": 23,
+    "marks": 5,
+    "filename": "Jun2026_P2H__Q23-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q23-U2.png",
+    "question_text": "23 The straight line L has equation \ny\nx\n�\n�\n3\n2\n \nThe curve C has equation \nx\ny\ny\n2\n2\n2\n12\n�\n�\n�\n \nFind the coordinates of the points where L and C intersect.\n \nShow clear algebraic working.\n(.............................. , ..............................) and (.............................. , ..............................)\n(Total for Question 23 is 5 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q24-U2",
+    "source_id": "Jun2026_P2H__Q24-U2",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Area & Volume of Similar Shapes",
+    "topic_order": 46,
+    "paper": "Jun 2026 P2H | L-to-M Unit 2",
+    "question": 24,
+    "marks": 5,
+    "filename": "Jun2026_P2H__Q24-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q24-U2.png",
+    "question_text": "24 The diagram shows two cones C1 and C2\nA\n30 cm\nC2\nC1\nDiagram NOT\naccurately drawn\n \nThe vertex of C1 coincides with the vertex of C2  at the point A \nC1 and C2  have the same axis of symmetry.\nheight of \nheight of \ncm\n1\n2\nC\nC\n�\n�30\n \ntotal surface area of \ntotal surface area of \nC\nC\n1\n2\n4 9\n:\n:\n=\n \nvolume of \ncm\nC1\n3\n23 04\n�\n.\n�\n \nWork out the radius of the base of C2  \nShow your working clearly.\n.............................................................. cm\n(Total for Question 24 is 5 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q25-U2",
+    "source_id": "Jun2026_P2H__Q25-U2",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Sequences",
+    "topic_order": 28,
+    "paper": "Jun 2026 P2H | L-to-M Unit 2",
+    "question": 25,
+    "marks": 5,
+    "filename": "Jun2026_P2H__Q25-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q25-U2.png",
+    "question_text": "25 An arithmetic series has first term 3 and common difference 8\n \nThe nth term of the series is U n\n \nThe sum of the first n terms of the series is Sn\n \nGiven that S\nS\nk\nk\n5\n3\n25 560\n�\n�\n \nfind the value of U k\n4\n \nShow clear algebraic working. .............................................................\n(Total for Question 25 is 5 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q26-U2",
+    "source_id": "Jun2026_P2H__Q26-U2",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Transformations of Graphs",
+    "topic_order": 36,
+    "paper": "Jun 2026 P2H | L-to-M Unit 2",
+    "question": 26,
+    "marks": 5,
+    "filename": "Jun2026_P2H__Q26-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2H__Q26-U2.png",
+    "question_text": "26 The curve P has equation y\nx\n���\nf\n \nThe coordinates of the minimum point on P are �\n�\n�\n5 4\n,\n \n(a) Write down the coordinates of the minimum point on the curve\n \n with equation y\nx\n�\n��\n3f\n(.............................. , ..............................)\n(1)\n \nThe curve Q has equation y\nx\n�\n�\n�\n�\n�\n2\n3\n2\n \nThe curve R has equation y\nx\n�\n�\n�\n�\n�\n2\n3\n2\n \n(b) Describe fully the single transformation that maps Q to R\n..................................................................................................................................................................................................................................................\n..................................................................................................................................................................................................................................................\n(1)\n \nThe graph of  y\na\nx\nb\nc\n�\n�\n�\n���\ncos\n  for −180\n360\n\n\nx\n is drawn on the grid.\ny\nx\nO\n−120 −60\n−180\n120\n60\n180\n240\n300\n360\n−1\n1\n2\n3\n4\n5\n6  \nGiven that a > 0 and 0 < b < 360\n \n(c) find the value of a, the value of b and the value of c\na =  .............................\nb = .............................\nc =  .............................\n(3)\n(Total for Question 26 is 5 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q02-U2",
+    "source_id": "Jun2026_P2HR__Q02-U2",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Sequences",
+    "topic_order": 28,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 2",
+    "question": 2,
+    "marks": 2,
+    "filename": "Jun2026_P2HR__Q02-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q02-U2.png",
+    "question_text": "2 Here are the first five terms of an arithmetic sequence.\n14          8          2          –4          –10\n \nFind an expression, in terms of n, for the nth term of this sequence.\n.................................................................................\n(Total for Question 2 is 2 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q04-U2",
+    "source_id": "Jun2026_P2HR__Q04-U2",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Rearranging Formulas",
+    "topic_order": 21,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 2",
+    "question": 4,
+    "marks": 2,
+    "filename": "Jun2026_P2HR__Q04-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q04-U2.png",
+    "question_text": " \nP = c\n2 – 5d\n \n(b) Work out the value of P when  c = –7 and  d = 3\nP = ......................................................\n(2)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q05-U2",
+    "source_id": "Jun2026_P2HR__Q05-U2",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Ratio Problem Solving",
+    "topic_order": 12,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 2",
+    "question": 5,
+    "marks": 5,
+    "filename": "Jun2026_P2HR__Q05-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q05-U2.png",
+    "question_text": "5 Sarah and Dej each give some money to charity A and to charity B\n \nSarah shares $400 between charity A and charity B in the ratio 2 : 3\n \nDej shares $375 between the two charities.\n \nHe gives twice as much money to charity B as he gives to charity A\n \nDej gives more money to charity B than Sarah gives to charity B\n \nHow much more?\n$......................................................\n(Total for Question 5 is 5 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q06-U2",
+    "source_id": "Jun2026_P2HR__Q06-U2",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Statistics Toolkit",
+    "topic_order": 52,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 2",
+    "question": 6,
+    "marks": 4,
+    "filename": "Jun2026_P2HR__Q06-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q06-U2.png",
+    "question_text": "6 Mika has six cards.\n \nThere is a number on each card.\n \nThe cards are arranged with the numbers in order of size.\n \nThree of the numbers are hidden.\n3\n7\n8\n \nThe mode of the six numbers is 8\n \nThe range of the six numbers is 7\n \nThe sum of the six numbers is 31\n \nWork out the median of the six numbers.\n......................................................\n(Total for Question 6 is 4 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q07-U2",
+    "source_id": "Jun2026_P2HR__Q07-U2",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Powers, Roots & Standard Form",
+    "topic_order": 3,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 2",
+    "question": 7,
+    "marks": 3,
+    "filename": "Jun2026_P2HR__Q07-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q07-U2.png",
+    "question_text": "7 (a) Write  4 × 10\n–5  as an ordinary number.\n......................................................\n(1)\n \n(b) Work out  (6 × 10\n158) × (2 × 10\n72)\n \n Give your answer in standard form.\n......................................................\n(2)\n(Total for Question 7 is 3 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q08-U2",
+    "source_id": "Jun2026_P2HR__Q08-U2",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Percentages",
+    "topic_order": 5,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 2",
+    "question": 8,
+    "marks": 3,
+    "filename": "Jun2026_P2HR__Q08-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q08-U2.png",
+    "question_text": "8 Lauren’s salary increased by 4%\n \nAfter the increase, her salary was 36 400 euros.\n \nWork out Lauren’s salary before the increase.\n..................................................... euros\n(Total for Question 8 is 3 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q12-U2",
+    "source_id": "Jun2026_P2HR__Q12-U2",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Graphing Inequalities",
+    "topic_order": 35,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 2",
+    "question": 12,
+    "marks": 3,
+    "filename": "Jun2026_P2HR__Q12-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q12-U2.png",
+    "question_text": "12 \nx\ny\nO\nR\n–1\n–1\n–2\n–3\n–4\n4\n5\n6\n3\n2\n1\n1\n2\n3\n4\n–2\n–3\n–4\n–5\n–6\n–7\n–8\ny = –x\n2x + 5y = 12\n \nThe region R, shown shaded in the diagram, is bounded by the y-axis and the straight \nlines with equations \ny = –x\n2x + 5y = 12\n \nWrite down the three inequalities that define R\n..................................................................\n.................................................................. \n.................................................................. \n(Total for Question 12 is 3 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q15-U2",
+    "source_id": "Jun2026_P2HR__Q15-U2",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Statistics Toolkit",
+    "topic_order": 52,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 2",
+    "question": 15,
+    "marks": 2,
+    "filename": "Jun2026_P2HR__Q15-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q15-U2.png",
+    "question_text": "15 Mina recorded the times taken, in minutes, by 11 people to complete a puzzle.\n \nHere are her results.\n2    2    3    6    7    9    9    12   13   17   20\n \nFind the interquartile range of these times.\n.................................................... minutes\n(Total for Question 15 is 2 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q18-U2",
+    "source_id": "Jun2026_P2HR__Q18-U2",
+    "bank": "all",
+    "unit": "Vectors & Transformation Geometry",
+    "topic": "Vectors",
+    "topic_order": 50,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 2",
+    "question": 18,
+    "marks": 2,
+    "filename": "Jun2026_P2HR__Q18-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q18-U2.png",
+    "question_text": "18 Here are two vectors.\n  AB\n→ = \n4\n5\n�\n��\n�\n��\n CB\n→ = \n�\n�\n��\n�\n��\n2\n8\n  \n \nFind  AC\n→ as a column vector.\nAC\n→ = \n............. \n.............\n(Total for Question 18 is 2 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q20-U2",
+    "source_id": "Jun2026_P2HR__Q20-U2",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Rearranging Formulas",
+    "topic_order": 21,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 2",
+    "question": 20,
+    "marks": 3,
+    "filename": "Jun2026_P2HR__Q20-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q20-U2.png",
+    "question_text": "20 Make x the subject of  y\nx\nx\n�\n�\n�\n3\n5\n4\n2\n.............................................................................. \n(Total for Question 20 is 3 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q22-U2",
+    "source_id": "Jun2026_P2HR__Q22-U2",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Simultaneous Equations",
+    "topic_order": 26,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 2",
+    "question": 22,
+    "marks": 5,
+    "filename": "Jun2026_P2HR__Q22-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q22-U2.png",
+    "question_text": "22 Solve the simultaneous equations\ny\n2 = x\n2 + 7 \n  y = 3x – 5\n \nShow clear algebraic working.\n............................................................................................................................................................................................................ \n(Total for Question 22 is 5 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q23-U2",
+    "source_id": "Jun2026_P2HR__Q23-U2",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Area & Volume of Similar Shapes",
+    "topic_order": 46,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 2",
+    "question": 23,
+    "marks": 5,
+    "filename": "Jun2026_P2HR__Q23-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q23-U2.png",
+    "question_text": "23 K, L and M are three similar solids.\n \n \n volume of K : volume of L  =  125 : 216\n \n  \nsurface area of K : surface area of M  =  4 : 9\n \nThe height of M is y% greater than the height of L\n \nWork out the value of y\n \nShow your working clearly.\ny = ................................................... \n(Total for Question 23 is 5 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q24-U2",
+    "source_id": "Jun2026_P2HR__Q24-U2",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Angles in Polygons & Parallel Lines",
+    "topic_order": 39,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 2",
+    "question": 24,
+    "marks": 4,
+    "filename": "Jun2026_P2HR__Q24-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q24-U2.png",
+    "question_text": "24 \nA\nB\nC\nD\nE\nDiagram NOT \naccurately drawn\n \nAB, BC and CD are three sides of a regular polygon.\n \nABE is a straight line.\n \nBCE is a sector of a circle with centre B and radius 4.5 cm\n \nThe length of arc CE is 3\n10 π cm\n \nWork out the sum of the interior angles of the regular polygon.\n...................................................°\n(Total for Question 24 is 4 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q25-U2",
+    "source_id": "Jun2026_P2HR__Q25-U2",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Transformations of Graphs",
+    "topic_order": 36,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 2",
+    "question": 25,
+    "marks": 4,
+    "filename": "Jun2026_P2HR__Q25-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q25-U2.png",
+    "question_text": "25 The graph of  y = a sin(x + b)°  for  0  x  360  is drawn on the grid below.\n–3\n–2\n–1\nO\n1\n2\n3\ny\nx\n180\n360\n \nGiven that  a < 0 and that  0 < b < 360\n \n(a) find the value of a and the value of b\na = ................................................... \nb = ................................................... \n(2)\n \nA curve has equation  y = f(x)\n \nThe point T with coordinates  (p, q)  lies on the curve.\n \n(b) Find the coordinates of the image of T on the curve with equation\ny = f(2x) + 5\n \n Give your coordinates in terms of p and q\n(............................ , ............................)\n(2)\n(Total for Question 25 is 4 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q26-U2",
+    "source_id": "Jun2026_P2HR__Q26-U2",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Sequences",
+    "topic_order": 28,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 2",
+    "question": 26,
+    "marks": 6,
+    "filename": "Jun2026_P2HR__Q26-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q26-U2.png",
+    "question_text": "26 Here are the first four terms of an arithmetic series.\n(k + 2)         (k + 5)         (k + 8)         (k + 11)\n \nThe sum of the first 2n terms of the series is 4 times the sum of the first n terms of \nthe series.\n \nWork out the numerical value of the 100th term of the series.\n \nShow your working clearly.\n................................................... \n(Total for Question 26 is 6 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q27-U2",
+    "source_id": "Jun2026_P2HR__Q27-U2",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Percentages",
+    "topic_order": 5,
+    "paper": "Jun 2026 P2HR | L-to-M Unit 2",
+    "question": 27,
+    "marks": 4,
+    "filename": "Jun2026_P2HR__Q27-U2.png",
+    "image": "assets/questions/converted/Jun2026_P2HR__Q27-U2.png",
+    "question_text": "27 Bryan owns a house.\n \nDuring 2024, the value of Bryan’s house increased by x%\n \nDuring 2025, the value of Bryan’s house increased by 2x%\n \nOverall, during 2024 and 2025, the value of Bryan’s house increased by 38.88%\n \nWork out the value of x\n \nShow clear algebraic working.\nx = ................................................... \n(Total for Question 27 is 4 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "modular"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q01",
+    "source_id": "Jun2026_P1H__Q01",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Fractions",
+    "topic_order": 4,
+    "paper": "Jun 2026 P1H",
+    "question": 1,
+    "marks": 3,
+    "filename": "Jun2026_P1H__Q01.png",
+    "image": "assets/questions/Jun2026_P1H__Q01.png",
+    "question_text": "1 Show that 4 1\n7\n2 3\n5\n119\n35\n�\n�\n(Total for Question 1 is 3 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q02",
+    "source_id": "Jun2026_P1H__Q02",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
+    "topic_order": 47,
+    "paper": "Jun 2026 P1H",
+    "question": 2,
+    "marks": 3,
+    "filename": "Jun2026_P1H__Q02.png",
+    "image": "assets/questions/Jun2026_P1H__Q02.png",
+    "question_text": "2 \nDiagram NOT \naccurately drawn\nx cm\n65°\n10 cm\n \nWork out the value of x\n \nGive your answer correct to 3 significant figures.\nx = .............................................................\n(Total for Question 2 is 3 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q03",
+    "source_id": "Jun2026_P1H__Q03",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Set Notation & Venn Diagrams",
+    "topic_order": 1,
+    "paper": "Jun 2026 P1H",
+    "question": 3,
+    "marks": 3,
+    "filename": "Jun2026_P1H__Q03.png",
+    "image": "assets/questions/Jun2026_P1H__Q03.png",
+    "question_text": "3 E =  {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}\n \nA =  {factors of 20}\n \nB =  {multiples of 5}\n \n(a) List the members of the set\n \n \n(i) A\nB\n∪\n...........................................................................................\n(1)\n \n \n(ii) A\nB\n�\n�\n............................................................................................\n(1)\n \nC =  {prime numbers}\n \nAna writes down the statement A\nC\n�\n�� \nAna’s statement is wrong.\n \n(b) Explain why.\n..................................................................................................................................................................................................................................................\n..................................................................................................................................................................................................................................................\n(1)\n(Total for Question 3 is 3 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q04",
+    "source_id": "Jun2026_P1H__Q04",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Standard & Compound Units",
+    "topic_order": 38,
+    "paper": "Jun 2026 P1H",
+    "question": 4,
+    "marks": 4,
+    "filename": "Jun2026_P1H__Q04.png",
+    "image": "assets/questions/Jun2026_P1H__Q04.png",
+    "question_text": "4 Henri competes in a race.\n \nFor the first part of the race Henri cycles 60 km at an average speed of 24 km/h\n \nFor the remaining part of the race Henri runs for 1 hour and 15 minutes at  \nan average speed of 12 km/h\n \nWork out Henri’s average speed for the whole race.\n \nGive your answer in km/h\n \nShow your working clearly.\n.......................................................... km/h\n(Total for Question 4 is 4 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q05",
+    "source_id": "Jun2026_P1H__Q05",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Expanding Brackets",
+    "topic_order": 17,
+    "paper": "Jun 2026 P1H",
+    "question": 5,
+    "marks": 7,
+    "filename": "Jun2026_P1H__Q05.png",
+    "image": "assets/questions/Jun2026_P1H__Q05.png",
+    "question_text": "5 (a) Expand \n4\n2\n3\ne\ne �\n�\n�\n..........................................................\n(1)\n \n(b) Expand and simplify \nf\nf\n�\n�\n�\n�\n�\n�\n3\n6\n........................................................\n(2)\n \n(c) Make x the subject of \nt\nax\nn\n�\n�2\n........................................................\n(2)\n \n(d) On the number line, represent the inequality \n−1\n3\n< y \n5\ny\n4\n3\n2\n1\n0\n−1\n−2\n−3\n−4\n−5\n(2)\n(Total for Question 5 is 7 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": null,
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q06",
+    "source_id": "Jun2026_P1H__Q06",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Roots & Indices",
+    "topic_order": 16,
+    "paper": "Jun 2026 P1H",
+    "question": 6,
+    "marks": 2,
+    "filename": "Jun2026_P1H__Q06.png",
+    "image": "assets/questions/Jun2026_P1H__Q06.png",
+    "question_text": "6 Simplify 4\n5\n6\n3\nx y\n�\n�\n..........................................................\n(Total for Question 6 is 2 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q07",
+    "source_id": "Jun2026_P1H__Q07",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Probability Toolkit",
+    "topic_order": 55,
+    "paper": "Jun 2026 P1H",
+    "question": 7,
+    "marks": 4,
+    "filename": "Jun2026_P1H__Q07.png",
+    "image": "assets/questions/Jun2026_P1H__Q07.png",
+    "question_text": "7 Here is a biased 4-sided spinner.\n1\n2\n3\n4\n \nThe table gives information about the probability that, when the spinner is spun once,  \nit will land on each number.\nNumber\n1\n2\n3\n4\nProbability\n0.12\nx\n2x\n0.16\n \nNevan spins the spinner 500 times.\n \nWork out the expected number of times that the spinner lands on an even number.\n.........................................................\n(Total for Question 7 is 4 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q08",
+    "source_id": "Jun2026_P1H__Q08",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Standard & Compound Units",
+    "topic_order": 38,
+    "paper": "Jun 2026 P1H",
+    "question": 8,
+    "marks": 3,
+    "filename": "Jun2026_P1H__Q08.png",
+    "image": "assets/questions/Jun2026_P1H__Q08.png",
+    "question_text": "8 Change a speed of 70 metres per second to a speed in kilometres per hour. \nShow your working clearly.\n......................................................... km/h\n(Total for Question 8 is 3 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q09",
+    "source_id": "Jun2026_P1H__Q09",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Powers, Roots & Standard Form",
+    "topic_order": 3,
+    "paper": "Jun 2026 P1H",
+    "question": 9,
+    "marks": 3,
+    "filename": "Jun2026_P1H__Q09.png",
+    "image": "assets/questions/Jun2026_P1H__Q09.png",
+    "question_text": "9 (a) Write 0.0651 in standard form.\n.........................................................\n(1)\n \n(b) Work out \n4\n10\n8\n10\n56\n74\n�\n�\n��\n�\n�\n�\n \n Give your answer in standard form.\n........................................................\n(2)\n(Total for Question 9 is 3 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q10",
+    "source_id": "Jun2026_P1H__Q10",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Simultaneous Equations",
+    "topic_order": 26,
+    "paper": "Jun 2026 P1H",
+    "question": 10,
+    "marks": 3,
+    "filename": "Jun2026_P1H__Q10.png",
+    "image": "assets/questions/Jun2026_P1H__Q10.png",
+    "question_text": "10 Solve the simultaneous equations\n4\n3\n9\n2\n2\n13\nx\ny\nx\ny\n�\n�\n�\n��\n \nShow clear algebraic working.\nx =  ........................................................\ny =  ........................................................\n(Total for Question 10 is 3 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q11",
+    "source_id": "Jun2026_P1H__Q11",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Area & Perimeter",
+    "topic_order": 42,
+    "paper": "Jun 2026 P1H",
+    "question": 11,
+    "marks": 5,
+    "filename": "Jun2026_P1H__Q11.png",
+    "image": "assets/questions/Jun2026_P1H__Q11.png",
+    "question_text": "11 The diagram shows a shaded shape ABCDEO made from a semicircle BCD and \ntwo identical right-angled triangles ABO and EDO\nDiagram NOT \naccurately drawn\nC\nD\n15 cm\n15 cm\nB\nA\nE\nO\n \nBD is the diameter of the semicircle.\n \nO is the midpoint of BD\n \nangle ABO\nEDO\nAO\nEO\n�\n�\n�\n�\n�\nangle\ncm\n90\n15\n \nThe area of semicircle BCD is 227\n2\ncm\n \nWork out the perimeter of the shaded shape.\n \nShow your working clearly.\n \nGive your answer correct to one decimal place. ......................................................... cm\n(Total for Question 11 is 5 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q12",
+    "source_id": "Jun2026_P1H__Q12",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Expanding Brackets",
+    "topic_order": 17,
+    "paper": "Jun 2026 P1H",
+    "question": 12,
+    "marks": 6,
+    "filename": "Jun2026_P1H__Q12.png",
+    "image": "assets/questions/Jun2026_P1H__Q12.png",
+    "question_text": "12 2\n8\n64\n3\nx =\n \n(a) Find the value of x\n \n Show clear algebraic working.\nx = .......................................................\n(3)\n \n(b) Expand and simplify 4\n5 2\n3\nt t\nt\n(\n)(\n)\n�\n�\n.............................................................................................................\n(3)\n(Total for Question 12 is 6 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q13",
+    "source_id": "Jun2026_P1H__Q13",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Probability Diagrams - Venn & Tree Diagrams",
+    "topic_order": 56,
+    "paper": "Jun 2026 P1H",
+    "question": 13,
+    "marks": 4,
+    "filename": "Jun2026_P1H__Q13.png",
+    "image": "assets/questions/Jun2026_P1H__Q13.png",
+    "question_text": "13 On any school day, Paulo either walks to school or travels by bus to school.\n \nThe probability that it rains on any school day is 0.15\n \nIf it rains on a school day, the probability that Paulo walks to school is 0.2\n \nIf it does not rain on a school day, the probability that Paulo walks to school is 0.75\n \n(a) Complete the probability tree diagram for this information.\nrain\nwalk\nbus\nwalk\nbus\nnot rain\n(2)\n \n(b) Work out the probability that on a school day, it rains and Paulo walks to school.\n......................................................\n(2)\n(Total for Question 13 is 4 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q14",
+    "source_id": "Jun2026_P1H__Q14",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Compound Interest & Depreciation",
+    "topic_order": 6,
+    "paper": "Jun 2026 P1H",
+    "question": 14,
+    "marks": 3,
+    "filename": "Jun2026_P1H__Q14.png",
+    "image": "assets/questions/Jun2026_P1H__Q14.png",
+    "question_text": "14 In September, the sales in a shop increased by 20%\n \nIn October, the sales in the same shop decreased by x%\n \nOver these two months, the sales in the shop decreased by 10%\n \nWork out the value of x\nx =  .....................................................\n(Total for Question 14 is 3 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q15",
+    "source_id": "Jun2026_P1H__Q15",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Linear Graphs (y = mx + c)",
+    "topic_order": 31,
+    "paper": "Jun 2026 P1H",
+    "question": 15,
+    "marks": 2,
+    "filename": "Jun2026_P1H__Q15.png",
+    "image": "assets/questions/Jun2026_P1H__Q15.png",
+    "question_text": "15 Point A has coordinates �\n�\n�\n3 4\n,\n \nPoint B has coordinates 2\n6\n, �\n�\n�\n \nWork out the gradient of the line AB\n.....................................................\n(Total for Question 15 is 2 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q16",
+    "source_id": "Jun2026_P1H__Q16",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Sine, Cosine Rule & Area of Triangles",
+    "topic_order": 48,
+    "paper": "Jun 2026 P1H",
+    "question": 16,
+    "marks": 5,
+    "filename": "Jun2026_P1H__Q16.png",
+    "image": "assets/questions/Jun2026_P1H__Q16.png",
+    "question_text": "16 The diagram shows triangle ABC\nB\nA\nC\n73 cm\n25 cm\n65°\nDiagram NOT \naccurately drawn\nAB = 25 cm    \nAC = 73 cm   \nangle BAC �\n�\n65\n \n(a) Work out the length of BC\n \n Give your answer correct to 3 significant figures.\n.................................................... cm\n(3)\n \n(b) Work out the area of the triangle.\n \n Give your answer correct to 3 significant figures.\n.................................................... cm2\n(2)\n(Total for Question 16 is 5 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q17",
+    "source_id": "Jun2026_P1H__Q17",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Surds",
+    "topic_order": 9,
+    "paper": "Jun 2026 P1H",
+    "question": 17,
+    "marks": 3,
+    "filename": "Jun2026_P1H__Q17.png",
+    "image": "assets/questions/Jun2026_P1H__Q17.png",
+    "question_text": "17 Show that 4\n20\n�\n�\n�5\n2 5\n�\n�\n� can be written in the form a\nb\n−\n \nwhere a and b are integers.\n(Total for Question 17 is 3 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q18",
+    "source_id": "Jun2026_P1H__Q18",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Fractions",
+    "topic_order": 20,
+    "paper": "Jun 2026 P1H",
+    "question": 18,
+    "marks": 3,
+    "filename": "Jun2026_P1H__Q18.png",
+    "image": "assets/questions/Jun2026_P1H__Q18.png",
+    "question_text": "18 Simplify fully \n4\n9\n2\n5\n12\n2\n2\nx\nx\nx\n−\n−\n−\n \nShow clear algebraic working.\n....................................................\n(Total for Question 18 is 3 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q19",
+    "source_id": "Jun2026_P1H__Q19",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Direct & Inverse Proportion",
+    "topic_order": 14,
+    "paper": "Jun 2026 P1H",
+    "question": 19,
+    "marks": 4,
+    "filename": "Jun2026_P1H__Q19.png",
+    "image": "assets/questions/Jun2026_P1H__Q19.png",
+    "question_text": "19 M is directly proportional to p2\n \nM = 2  when p = 5\n \n(a) Find a formula for M in terms of p\n...................................................\n(3)\n \n(b) Work out the value of M when p = 15\nM =  ...................................................\n(1)\n(Total for Question 19 is 4 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q20",
+    "source_id": "Jun2026_P1H__Q20",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Rounding, Estimation & Bounds",
+    "topic_order": 8,
+    "paper": "Jun 2026 P1H",
+    "question": 20,
+    "marks": 5,
+    "filename": "Jun2026_P1H__Q20.png",
+    "image": "assets/questions/Jun2026_P1H__Q20.png",
+    "question_text": "20 The final velocity, v m/s, of an object is given by\nv\ns\nt\nu\n�\n�\n��\n�\n���\n2\n \nwhere\n \n \ns\nt\n=\n=\n100 correct to the nearest integer\ncorrect to 2 deci\n1 68\n.\nmal places\ncorrect to 1 decimal place\nu = 0 5.\n \nBy considering bounds, work out the value of v to a suitable degree of accuracy.\n \nShow your working clearly.\n...................................................\n(Total for Question 20 is 5 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q21",
+    "source_id": "Jun2026_P1H__Q21",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Differentiation",
+    "topic_order": 37,
+    "paper": "Jun 2026 P1H",
+    "question": 21,
+    "marks": 5,
+    "filename": "Jun2026_P1H__Q21.png",
+    "image": "assets/questions/Jun2026_P1H__Q21.png",
+    "question_text": "21 The diagram shows a solid cuboid.\nDiagram NOT \naccurately drawn\n(13.5 − 2x) cm\nx cm\n3x cm\n \nThe volume of the cuboid is V cm3\n \nFind the maximum value of V\n \nShow clear algebraic working.\nV = .................................................\n(Total for Question 21 is 5 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q22",
+    "source_id": "Jun2026_P1H__Q22",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Histograms",
+    "topic_order": 53,
+    "paper": "Jun 2026 P1H",
+    "question": 22,
+    "marks": 5,
+    "filename": "Jun2026_P1H__Q22.png",
+    "image": "assets/questions/Jun2026_P1H__Q22.png",
+    "question_text": "22 The histogram gives information about the weights, in grams, of all the apples in a shop.\n150\n140\n160\n170\nWeight (grams)\nFrequency\ndensity\n180\n190\n200\n \nThere are 9 apples with a weight between 140 grams and 155 grams.\n \n(a) Work out the number of apples with a weight less than 175 grams.\n..................................................\n(3)  \nAn apple is classified as a large apple if it has a weight of more than 180 grams.\n \nOne of the large apples is chosen at random.\n \n(b) Work out the probability that it has a weight of more than 190 grams.\n................................................\n(2)\n(Total for Question 22 is 5 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q23",
+    "source_id": "Jun2026_P1H__Q23",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Combined & Conditional Probability",
+    "topic_order": 57,
+    "paper": "Jun 2026 P1H",
+    "question": 23,
+    "marks": 5,
+    "filename": "Jun2026_P1H__Q23.png",
+    "image": "assets/questions/Jun2026_P1H__Q23.png",
+    "question_text": "23 A bag contains x  marbles.\n \n12 of the marbles are pink and the rest are yellow.\n \nGreta takes at random 2 marbles from the bag.\n \nThe probability that Greta takes a pink marble and a yellow marble is 18\n47\n \nWork out the value of x\n \nShow clear algebraic working.\nx = ..................................................\n(Total for Question 23 is 5 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q24",
+    "source_id": "Jun2026_P1H__Q24",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Completing the Square",
+    "topic_order": 19,
+    "paper": "Jun 2026 P1H",
+    "question": 24,
+    "marks": 5,
+    "filename": "Jun2026_P1H__Q24.png",
+    "image": "assets/questions/Jun2026_P1H__Q24.png",
+    "question_text": "24  (a) Express 10\n24\n3\n2\n−\n−\nx\nx  in the form a\nb x\nc\n�\n�\n�\n�\n2  where a, b and c are integers.\n..................................................\n(3)\n \nT is the curve with equation y\nx\nx\n�\n�\n�\n�\n��\n�\n�\n�\n10\n24\n1\n3\n1\n2\n \nThe point P is the maximum point on T\n \n(b) Use your answer to part (a) to find the coordinates of P\n(...................... , ......................)\n(1)\n \n(c) Write down the equation for the line of symmetry of T\n..................................................\n(1)\n(Total for Question 24 is 5 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1H__Q25",
+    "source_id": "Jun2026_P1H__Q25",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "3D Pythagoras & Trigonometry",
+    "topic_order": 49,
+    "paper": "Jun 2026 P1H",
+    "question": 25,
+    "marks": 5,
+    "filename": "Jun2026_P1H__Q25.png",
+    "image": "assets/questions/Jun2026_P1H__Q25.png",
+    "question_text": "25 The diagram shows a triangular prism ABCDEF with horizontal rectangular base ABCD\n \nF is vertically above A\nD\nE\nC\nT\nB\nA\nF\nDiagram NOT \naccurately drawn\nAF = 12cm   \nangle ABF �\n�\n30    \nangle BAF �\n�\n90\n \nT is the point on the line BC such that BF BT\n:\n:\n= 3 2\n \nWork out the size of the angle between the line FT and the plane ABCD\n \nGive your answer correct to one decimal place.\n \nShow your working clearly. ................................................ °\n(Total for Question 25 is 5 marks)",
+    "paper_code": "P1H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q01",
+    "source_id": "Jun2026_P1HR__Q01",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Fractions",
+    "topic_order": 4,
+    "paper": "Jun 2026 P1HR",
+    "question": 1,
+    "marks": 3,
+    "filename": "Jun2026_P1HR__Q01.png",
+    "image": "assets/questions/Jun2026_P1HR__Q01.png",
+    "question_text": "1 Show that  2 4\n5\n3 3\n7\n9 3\n5\n´\n=\n \n(Total for Question 1 is 3 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q02",
+    "source_id": "Jun2026_P1HR__Q02",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Prime Factors, HCF & LCM",
+    "topic_order": 2,
+    "paper": "Jun 2026 P1HR",
+    "question": 2,
+    "marks": 3,
+    "filename": "Jun2026_P1HR__Q02.png",
+    "image": "assets/questions/Jun2026_P1HR__Q02.png",
+    "question_text": "2 Write  504  as a product of powers of its prime factors.\n \nShow your working clearly.\n.................................................................................\n(Total for Question 2 is 3 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q03",
+    "source_id": "Jun2026_P1HR__Q03",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Roots & Indices",
+    "topic_order": 16,
+    "paper": "Jun 2026 P1HR",
+    "question": 3,
+    "marks": 2,
+    "filename": "Jun2026_P1HR__Q03.png",
+    "image": "assets/questions/Jun2026_P1HR__Q03.png",
+    "question_text": "3 (a) Simplify  e\n7 × e\n3\n...................................................... \n(1)\n \n(b) Simplify  g\n5 ÷ g\n2\n...................................................... \n(1)\n(Total for Question 3 is 2 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q04",
+    "source_id": "Jun2026_P1HR__Q04",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Rounding, Estimation & Bounds",
+    "topic_order": 8,
+    "paper": "Jun 2026 P1HR",
+    "question": 4,
+    "marks": 2,
+    "filename": "Jun2026_P1HR__Q04.png",
+    "image": "assets/questions/Jun2026_P1HR__Q04.png",
+    "question_text": "4 The weight of a giraffe is 1178 kg, correct to the nearest kg\n \n(i) Write down the lower bound of the weight of the giraffe.\n...................................................... kg\n(1)\n \n(ii) Write down the upper bound of the weight of the giraffe.\n...................................................... kg \n(1)\n(Total for Question 4 is 2 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q05",
+    "source_id": "Jun2026_P1HR__Q05",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Probability Toolkit",
+    "topic_order": 55,
+    "paper": "Jun 2026 P1HR",
+    "question": 5,
+    "marks": 4,
+    "filename": "Jun2026_P1HR__Q05.png",
+    "image": "assets/questions/Jun2026_P1HR__Q05.png",
+    "question_text": "5 A bag contains only blue counters, green counters, red counters and yellow counters.\n \nDanny takes a counter at random from the bag. \n \nThe table gives information about the probabilities that he takes a blue counter or a \ngreen counter or a red counter or a yellow counter.\nColour\nblue\ngreen\nred\nyellow\nProbability\n0.45\n0.31\n5x\nx\n \nThere are 400 counters in the bag.\n \nWork out the number of red counters in the bag.\n......................................................\n(Total for Question 5 is 4 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q06",
+    "source_id": "Jun2026_P1HR__Q06",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Area & Volume of Similar Shapes",
+    "topic_order": 46,
+    "paper": "Jun 2026 P1HR",
+    "question": 6,
+    "marks": 3,
+    "filename": "Jun2026_P1HR__Q06.png",
+    "image": "assets/questions/Jun2026_P1HR__Q06.png",
+    "question_text": "6 \n5 cm\n8 cm\n24 cm\nA\nB\nDiagram NOT \naccurately drawn\n \nA and B are similar parallelograms.\n \nWork out the area of B\n...................................................... cm\n2\n(Total for Question 6 is 3 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q07",
+    "source_id": "Jun2026_P1HR__Q07",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Solving Inequalities",
+    "topic_order": 25,
+    "paper": "Jun 2026 P1HR",
+    "question": 7,
+    "marks": 5,
+    "filename": "Jun2026_P1HR__Q07.png",
+    "image": "assets/questions/Jun2026_P1HR__Q07.png",
+    "question_text": "7 \nx\n–3\n–2\n–1\n0\n1\n2\n3\n \n(a) Represent the inequality  x < 1  on the number line above.\n(1)\n \n 2  y + 3 < 7\n \n y is an integer.\n \n(b) Write down all the possible values of y\n.................................................................................\n(2)\n \n(c) Solve the inequality  8 – 5w > –10\n.................................................................................\n(2)\n(Total for Question 7 is 5 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q08",
+    "source_id": "Jun2026_P1HR__Q08",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Factorising",
+    "topic_order": 18,
+    "paper": "Jun 2026 P1HR",
+    "question": 8,
+    "marks": 2,
+    "filename": "Jun2026_P1HR__Q08.png",
+    "image": "assets/questions/Jun2026_P1HR__Q08.png",
+    "question_text": "8 Factorise  x\n2 – 12x + 32\n.................................................................................\n(Total for Question 8 is 2 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q09",
+    "source_id": "Jun2026_P1HR__Q09",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Statistics Toolkit",
+    "topic_order": 52,
+    "paper": "Jun 2026 P1HR",
+    "question": 9,
+    "marks": 3,
+    "filename": "Jun2026_P1HR__Q09.png",
+    "image": "assets/questions/Jun2026_P1HR__Q09.png",
+    "question_text": "9 Caleb owns 11 sheep.\n \nThe mean weight of all 11 sheep is 77 kg \nThe mean weight of 8 of the sheep is 75.2 kg\n \nWork out the mean weight of the other 3 sheep.\n......................................................  kg\n(Total for Question 9 is 3 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q10",
+    "source_id": "Jun2026_P1HR__Q10",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Compound Interest & Depreciation",
+    "topic_order": 6,
+    "paper": "Jun 2026 P1HR",
+    "question": 10,
+    "marks": 3,
+    "filename": "Jun2026_P1HR__Q10.png",
+    "image": "assets/questions/Jun2026_P1HR__Q10.png",
+    "question_text": "10 Arwa invests 200 000 yen in a savings account for 3 years.\n \nShe gets 1.4% per year compound interest.\n \nWork out how much money Arwa will have in her savings account at the end of 3 years.\n \nGive your answer correct to the nearest yen.\n...................................................... yen\n(Total for Question 10 is 3 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q11",
+    "source_id": "Jun2026_P1HR__Q11",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Volume & Surface Area",
+    "topic_order": 44,
+    "paper": "Jun 2026 P1HR",
+    "question": 11,
+    "marks": 4,
+    "filename": "Jun2026_P1HR__Q11.png",
+    "image": "assets/questions/Jun2026_P1HR__Q11.png",
+    "question_text": "11 The diagram shows a solid cuboid.\n3 cm\n11 cm\nx cm\nDiagram NOT \naccurately drawn\n \nThe cuboid measures 3 cm by 11 cm by x cm\n \nThe volume of the cuboid is 264 cm3\n \nWork out the total surface area of the cuboid.\n...................................................... cm2\n(Total for Question 11 is 4 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q12",
+    "source_id": "Jun2026_P1HR__Q12",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Simultaneous Equations",
+    "topic_order": 26,
+    "paper": "Jun 2026 P1HR",
+    "question": 12,
+    "marks": 3,
+    "filename": "Jun2026_P1HR__Q12.png",
+    "image": "assets/questions/Jun2026_P1HR__Q12.png",
+    "question_text": "12 Solve the simultaneous equations\n4x + 4y = 5\n  x + 2y = 1\n \nShow clear algebraic working.\nx =  ......................................................\ny =  ......................................................\n(Total for Question 12 is 3 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q13",
+    "source_id": "Jun2026_P1HR__Q13",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Linear Graphs (y = mx + c)",
+    "topic_order": 31,
+    "paper": "Jun 2026 P1HR",
+    "question": 13,
+    "marks": 3,
+    "filename": "Jun2026_P1HR__Q13.png",
+    "image": "assets/questions/Jun2026_P1HR__Q13.png",
+    "question_text": "13 The straight line L has equation  4y – 10x – 5 = 0\n \n(a) Find the gradient of L\n.................................................................................\n(2)\n \n(b) Find the coordinates of the point where L crosses the y‑axis.\n(........................... , ...........................)\n(1)\n(Total for Question 13 is 3 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q14",
+    "source_id": "Jun2026_P1HR__Q14",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Cumulative Frequency Diagrams",
+    "topic_order": 54,
+    "paper": "Jun 2026 P1HR",
+    "question": 14,
+    "marks": 4,
+    "filename": "Jun2026_P1HR__Q14.png",
+    "image": "assets/questions/Jun2026_P1HR__Q14.png",
+    "question_text": "14 The cumulative frequency table gives information about the ages, in years, of 80 people \nwho went to a cinema on Saturday.\nAge (a years)\nCumulative frequency\n0 < a  10\n19\n0 < a  20\n37\n0 < a  30\n52\n0 < a  40\n63\n0 < a  50\n73\n0 < a  60\n80  \n(a) On the grid below, draw a cumulative frequency graph for this information.\n0\n0\n10\n20\n30\n40\n50\n60\n70\n80\n10\n20\n30\n40\n50\n60\nAge (years)\nCumulative \nfrequency\n(2)  \n(b) Use your graph to find an estimate for the median age of the 80 people.\n...................................................... years\n(1)\n \n(c) Use your graph to find an estimate for the number of the 80 people \naged 16 and under.\n......................................................\n(1)\n(Total for Question 14 is 4 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q15",
+    "source_id": "Jun2026_P1HR__Q15",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Angles in Polygons & Parallel Lines",
+    "topic_order": 39,
+    "paper": "Jun 2026 P1HR",
+    "question": 15,
+    "marks": 3,
+    "filename": "Jun2026_P1HR__Q15.png",
+    "image": "assets/questions/Jun2026_P1HR__Q15.png",
+    "question_text": "15 \nA\nB\nF\nC\nE\nD\nx�\n109�\n75�\n80�\nDiagram NOT \naccurately drawn \n \nBCDEF is a pentagon.\n \nAB, BC and CD are three sides of a regular 10-sided polygon.\n \nFind the value of x\nx =  ......................................................\n(Total for Question 15 is 3 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q16",
+    "source_id": "Jun2026_P1HR__Q16",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Fractions",
+    "topic_order": 20,
+    "paper": "Jun 2026 P1HR",
+    "question": 16,
+    "marks": 6,
+    "filename": "Jun2026_P1HR__Q16.png",
+    "image": "assets/questions/Jun2026_P1HR__Q16.png",
+    "question_text": "16 (a) Express  \n5\n8\n2\n4\n�\n�\nx\nx   as a single fraction in its simplest form.\n.................................................................................\n(3)\n \n(b) Expand and simplify  3x(2x – 1)(x + 4)\n.................................................................................\n(3)\n(Total for Question 16 is 6 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q17",
+    "source_id": "Jun2026_P1HR__Q17",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Differentiation",
+    "topic_order": 37,
+    "paper": "Jun 2026 P1HR",
+    "question": 17,
+    "marks": 5,
+    "filename": "Jun2026_P1HR__Q17.png",
+    "image": "assets/questions/Jun2026_P1HR__Q17.png",
+    "question_text": "17 y = x3 + 5x2 – 8x\n \n(a) Find  d\nd\ny\nx\nd\nd\ny\nx  = ..........................................................................\n(2)\n \nThe curve with equation  y = x3 + 5x2 – 8x  has two stationary points, P and Q\n \nThe x‑coordinate of P is less than the x‑coordinate of Q\n \n(b) Work out the coordinates of P\n \n Show clear algebraic working.\n(........................... , ...........................)\n(3)\n(Total for Question 17 is 5 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q18",
+    "source_id": "Jun2026_P1HR__Q18",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Combined & Conditional Probability",
+    "topic_order": 57,
+    "paper": "Jun 2026 P1HR",
+    "question": 18,
+    "marks": 3,
+    "filename": "Jun2026_P1HR__Q18.png",
+    "image": "assets/questions/Jun2026_P1HR__Q18.png",
+    "question_text": "18 Here are 8 cards.\n \nThere is a number on each card.\n1\n1\n2\n2\n2\n4\n5\n5\n \nGordon puts the 8 cards in a bag.\n \nHe takes at random a card from the bag and does not replace it.\n \nGordon then takes at random a second card from the bag.\n \nCalculate the probability that the number on the second card is 3 more than the number \non the first card.\n  ......................................................\n(Total for Question 18 is 3 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q19",
+    "source_id": "Jun2026_P1HR__Q19",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Circle Theorems",
+    "topic_order": 41,
+    "paper": "Jun 2026 P1HR",
+    "question": 19,
+    "marks": 5,
+    "filename": "Jun2026_P1HR__Q19.png",
+    "image": "assets/questions/Jun2026_P1HR__Q19.png",
+    "question_text": "19 P, Q, R and S are points on a circle, centre O\nP\nS\nR\nQ\nO\n170�\n53�\nDiagram NOT \naccurately drawn\n \nAngle POR = 170° \nAngle ORS = 53°\n \nFind the size of angle SPO\n \nGive a reason for each stage of your working.\n  ......................................................°\n(Total for Question 19 is 5 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q20",
+    "source_id": "Jun2026_P1HR__Q20",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Direct & Inverse Proportion",
+    "topic_order": 14,
+    "paper": "Jun 2026 P1HR",
+    "question": 20,
+    "marks": 5,
+    "filename": "Jun2026_P1HR__Q20.png",
+    "image": "assets/questions/Jun2026_P1HR__Q20.png",
+    "question_text": "20 y is directly proportional to t2\n \ny = 40 when t = 4\n \nt is directly proportional to the cube root of x\n \nt = 12 when x = 8\n \nWork out the value of y when x = 27\ny =  ......................................................\n(Total for Question 20 is 5 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q21",
+    "source_id": "Jun2026_P1HR__Q21",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Set Notation & Venn Diagrams",
+    "topic_order": 1,
+    "paper": "Jun 2026 P1HR",
+    "question": 21,
+    "marks": 5,
+    "filename": "Jun2026_P1HR__Q21.png",
+    "image": "assets/questions/Jun2026_P1HR__Q21.png",
+    "question_text": "21 60 students were asked if they study French (F), German (G) or Italian (I)\n \nOf these students\n \n 32 students study French\n \n 24 students study German\n \n 27 students study Italian\n \n 16 students study French and German\n \n 15 students study German and Italian\n \nThe incomplete Venn diagram gives some more information about the languages the \n60 students study.\nF\nI\nE\nG\n4\n6\nx\n \n(a) Work out the value of x\nx =  ......................................................\n(3)\n \n(b) Work out how many of the 60 students study none of French or German or Italian.\n ......................................................\n(2)\n(Total for Question 21 is 5 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q22",
+    "source_id": "Jun2026_P1HR__Q22",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Sine, Cosine Rule & Area of Triangles",
+    "topic_order": 48,
+    "paper": "Jun 2026 P1HR",
+    "question": 22,
+    "marks": 4,
+    "filename": "Jun2026_P1HR__Q22.png",
+    "image": "assets/questions/Jun2026_P1HR__Q22.png",
+    "question_text": "22 The diagram shows triangle ABC\nA\nB\nC\n13 cm\n62�\n47�\nDiagram NOT \naccurately drawn\n \nCalculate the area of the triangle.\n \nGive your answer correct to 3 significant figures.\n ...................................................... cm2\n(Total for Question 22 is 4 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q23",
+    "source_id": "Jun2026_P1HR__Q23",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Functions",
+    "topic_order": 29,
+    "paper": "Jun 2026 P1HR",
+    "question": 23,
+    "marks": 7,
+    "filename": "Jun2026_P1HR__Q23.png",
+    "image": "assets/questions/Jun2026_P1HR__Q23.png",
+    "question_text": "23 The function f is such that  f(x) = 1\nx\n \n(a) Write down the value of x that cannot be included in any domain of f\n  ......................................................\n(1)\n \nThe function g is such that  g(x) = 4x\n2 – 8x + 15 \nThe domain of g is  x  1\n \n(b) Work out  gf(0.5)\n  ......................................................\n(2)\n \n(c) Express the inverse function  g–1  in the form  g–1(x) = ...\ng–1(x) = .................................................................................\n(4)\n(Total for Question 23 is 7 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q24",
+    "source_id": "Jun2026_P1HR__Q24",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Circle Theorems",
+    "topic_order": 41,
+    "paper": "Jun 2026 P1HR",
+    "question": 24,
+    "marks": 4,
+    "filename": "Jun2026_P1HR__Q24.png",
+    "image": "assets/questions/Jun2026_P1HR__Q24.png",
+    "question_text": "24 The centre of a circle is the point with coordinates (3, 1)\n \nThe point P with coordinates (7, 6) lies on the circle.\n \nThe line L is the tangent to the circle at P\n \nFind an equation for L\n \nGive your answer in the form  ax + by + c = 0  where a, b and c are integers.\n.................................................................................\n(Total for Question 24 is 4 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q25",
+    "source_id": "Jun2026_P1HR__Q25",
+    "bank": "all",
+    "unit": "Vectors & Transformation Geometry",
+    "topic": "Vectors",
+    "topic_order": 50,
+    "paper": "Jun 2026 P1HR",
+    "question": 25,
+    "marks": 6,
+    "filename": "Jun2026_P1HR__Q25.png",
+    "image": "assets/questions/Jun2026_P1HR__Q25.png",
+    "question_text": "25\nA\nC\nD\nP\nB\nO\n4b\n3a\n2a + 2b\nDiagram NOT \naccurately drawn \n \nOA\n→ = 3a   OB\n→ = 4b   AC\n→ = 2a + 2b   CD\n→ = 3\n2  × AC\n→\n \nP is the point on BC such that OPD is a straight line.\n \n(a) Find OD\n→ in terms of a and b\n \n Give your answer in its simplest form.\n ......................................................\n(2)\n \n(b) Find the ratio  OP : PD\n \n Show your working clearly. .................................................................................\n(4)\n(Total for Question 25 is 6 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P1HR__Q26",
+    "source_id": "Jun2026_P1HR__Q26",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Roots & Indices",
+    "topic_order": 16,
+    "paper": "Jun 2026 P1HR",
+    "question": 26,
+    "marks": 3,
+    "filename": "Jun2026_P1HR__Q26.png",
+    "image": "assets/questions/Jun2026_P1HR__Q26.png",
+    "question_text": "26 \n27\n3\n9\n6\n2\n6\n4\nx\nn\nn\nx\nx\n×\n�\n�\n�\n \nExpress x in terms of n\n \nShow your working clearly and simplify your expression.\nx = .................................................................................\n(Total for Question 26 is 3 marks)",
+    "paper_code": "P1HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q01",
+    "source_id": "Jun2026_P2H__Q01",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Prime Factors, HCF & LCM",
+    "topic_order": 2,
+    "paper": "Jun 2026 P2H",
+    "question": 1,
+    "marks": 3,
+    "filename": "Jun2026_P2H__Q01.png",
+    "image": "assets/questions/Jun2026_P2H__Q01.png",
+    "question_text": "1 Write 4500 as a product of powers of its prime factors. \nShow your working clearly.\n..............................................................................\n(Total for Question 1 is 3 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q02",
+    "source_id": "Jun2026_P2H__Q02",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Sequences",
+    "topic_order": 28,
+    "paper": "Jun 2026 P2H",
+    "question": 2,
+    "marks": 5,
+    "filename": "Jun2026_P2H__Q02.png",
+    "image": "assets/questions/Jun2026_P2H__Q02.png",
+    "question_text": "2 The nth term of an arithmetic sequence is given by 8\n5\nn −\n \n(a) Work out the ratio of the 40th term of the sequence to the 60th term of the sequence. \n Give your ratio in its simplest form.\n..............................................................\n(3)\n \nHere are the first five terms of a different arithmetic sequence.\n3  8  13  18  23\n \n(b) Find an expression for the nth term of this sequence.\n..............................................................\n(2)\n(Total for Question 2 is 5 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q03",
+    "source_id": "Jun2026_P2H__Q03",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Statistics Toolkit",
+    "topic_order": 52,
+    "paper": "Jun 2026 P2H",
+    "question": 3,
+    "marks": 5,
+    "filename": "Jun2026_P2H__Q03.png",
+    "image": "assets/questions/Jun2026_P2H__Q03.png",
+    "question_text": "3 The table shows information about the number of hours each of 40 candles burned.\nNumber of hours (h)\nFrequency\n15\n19\n< h \n2\n19\n23\n< h \n5\n23\n27\n< h \n12\n27\n31\n< h \n15\n31\n35\n< h \n6\n \n(a) Write down the modal class.\n.............................................................. \n(1)\n \n(b) Work out an estimate for the mean number of hours.\n.............................................................. hours\n(4)\n(Total for Question 3 is 5 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q04",
+    "source_id": "Jun2026_P2H__Q04",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Percentages",
+    "topic_order": 5,
+    "paper": "Jun 2026 P2H",
+    "question": 4,
+    "marks": 3,
+    "filename": "Jun2026_P2H__Q04.png",
+    "image": "assets/questions/Jun2026_P2H__Q04.png",
+    "question_text": "4 Sara sells water bottles.\nIn July, she sold 450 water bottles.\nIn August, she sold 612 water bottles.\nWork out the percentage increase in the number of water bottles she sold from July \nto August.\n..............................................................%\n(Total for Question 4 is 3 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q05",
+    "source_id": "Jun2026_P2H__Q05",
+    "bank": "all",
+    "unit": "Vectors & Transformation Geometry",
+    "topic": "Transformations",
+    "topic_order": 51,
+    "paper": "Jun 2026 P2H",
+    "question": 5,
+    "marks": 4,
+    "filename": "Jun2026_P2H__Q05.png",
+    "image": "assets/questions/Jun2026_P2H__Q05.png",
+    "question_text": "5 \ny\nx\nO\n−2\n−1\n4\n5\n3\n1\n2\nA\nB\n6\n7\n8\n9\n10\n−2\n−1\n2\n3\n1\n4\n6\n7\n5\n8\n9\n10\n(a) Describe fully the single transformation that maps triangle A onto triangle B\n..................................................................................................................................................................................................................................................\n..................................................................................................................................................................................................................................................\n(3)\n(b) On the grid, translate triangle A by the vector\n4\n3\n�\n�\n��\n�\n��\nLabel your triangle C\n(1)\n(Total for Question 5 is 4 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q06",
+    "source_id": "Jun2026_P2H__Q06",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Angles in Polygons & Parallel Lines",
+    "topic_order": 39,
+    "paper": "Jun 2026 P2H",
+    "question": 6,
+    "marks": 3,
+    "filename": "Jun2026_P2H__Q06.png",
+    "image": "assets/questions/Jun2026_P2H__Q06.png",
+    "question_text": "6 ABCDE is a pentagon.\nA\nB\n96°\nx°\nx°\n91°\n93°\nC\nD\nE\nDiagram NOT\naccurately drawn\n \nangle EAB �\n�\n96   \nangle BCD �\n�\n91   \nangle CDE �\n�\n93  \nangle DEA = angle ABC\nx\n�\n�\n \nWork out the value of x\nx =  ..............................................................\n(Total for Question 6 is 3 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q07",
+    "source_id": "Jun2026_P2H__Q07",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Volume & Surface Area",
+    "topic_order": 44,
+    "paper": "Jun 2026 P2H",
+    "question": 7,
+    "marks": 3,
+    "filename": "Jun2026_P2H__Q07.png",
+    "image": "assets/questions/Jun2026_P2H__Q07.png",
+    "question_text": "7 The diagram shows a cylinder and a prism.\nDiagram NOT\naccurately drawn\n18 cm\n7 cm\nL cm\n120 cm2\n \nThe radius of the cylinder is 7 cm \nThe height of the cylinder is 18 cm\n \nThe area of the cross section of the prism, shown shaded in the diagram, is 120\n2\ncm  \nThe length of the prism is L cm\n \nThe volume of the cylinder is equal to the volume of the prism.\n \nWork out the value of L \nGive your answer correct to 3 significant figures.\nL =  ..............................................................\n(Total for Question 7 is 3 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q08",
+    "source_id": "Jun2026_P2H__Q08",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Percentages",
+    "topic_order": 5,
+    "paper": "Jun 2026 P2H",
+    "question": 8,
+    "marks": 3,
+    "filename": "Jun2026_P2H__Q08.png",
+    "image": "assets/questions/Jun2026_P2H__Q08.png",
+    "question_text": "8 A golf club increases the cost of membership by 17%\n \nAfter the increase, the cost of membership is 3276 zloty.\n \nWork out the cost of membership before the increase.\n............................................................ zloty\n(Total for Question 8 is 3 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q09",
+    "source_id": "Jun2026_P2H__Q09",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Factorising",
+    "topic_order": 18,
+    "paper": "Jun 2026 P2H",
+    "question": 9,
+    "marks": 7,
+    "filename": "Jun2026_P2H__Q09.png",
+    "image": "assets/questions/Jun2026_P2H__Q09.png",
+    "question_text": "9 (a) Find the value of \n7\n0\nn  where n > 0\n..........................................................\n(1)\n \n(b) Simplify fully \n2\n5\n4\n3\nm p\n�\n�\n..........................................................\n(2)\n \n(c) Factorise fully 18\n30\n5\n2\n3\nc w\ncw\n+\n..........................................................\n(2)\n \n(d) Factorise \nx\nx\n2\n6\n27\n�\n�\n..........................................................\n(2)\n(Total for Question 9 is 7 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q10",
+    "source_id": "Jun2026_P2H__Q10",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Compound Interest & Depreciation",
+    "topic_order": 6,
+    "paper": "Jun 2026 P2H",
+    "question": 10,
+    "marks": 4,
+    "filename": "Jun2026_P2H__Q10.png",
+    "image": "assets/questions/Jun2026_P2H__Q10.png",
+    "question_text": "10 Johan owns a car.\n \nThe current value of the car is 32 000 euros.\n \nThe value of the car will now depreciate by 15% per year.\n \nLena is going to save up and buy Johan’s car in 3 years’ time.\n \nShe has already saved 2516 euros.\n \nShe will save an equal amount of money each month for the next 3 years.\n \nWork out how much money Lena needs to save each month.\n........................................................... euros\n(Total for Question 10 is 4 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q11",
+    "source_id": "Jun2026_P2H__Q11",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Prime Factors, HCF & LCM",
+    "topic_order": 2,
+    "paper": "Jun 2026 P2H",
+    "question": 11,
+    "marks": 2,
+    "filename": "Jun2026_P2H__Q11.png",
+    "image": "assets/questions/Jun2026_P2H__Q11.png",
+    "question_text": "11 Find the highest prime number that is a factor of  3 6\n1024\n. ×\n..............................................................\n(Total for Question 11 is 2 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q12",
+    "source_id": "Jun2026_P2H__Q12",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Set Notation & Venn Diagrams",
+    "topic_order": 1,
+    "paper": "Jun 2026 P2H",
+    "question": 12,
+    "marks": 2,
+    "filename": "Jun2026_P2H__Q12.png",
+    "image": "assets/questions/Jun2026_P2H__Q12.png",
+    "question_text": "12 E ��\n�\n��\n�\n�\nintegers  such that \nsuch that\nsuch \nx\nx\nA\nx\nx\nB\nx\n20\n32\n27\n\n\n<\nthat 25\n30\n\n\nx\n�\n�\n \n(a) List the members of the set A\nB\n∩\n.............................................................................................................\n(1)\n \n(b) List the members of the set A\nB\n�\n�\n�'\n............................................................................................................\n(1)\n(Total for Question 12 is 2 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q13",
+    "source_id": "Jun2026_P2H__Q13",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Statistics Toolkit",
+    "topic_order": 52,
+    "paper": "Jun 2026 P2H",
+    "question": 13,
+    "marks": 4,
+    "filename": "Jun2026_P2H__Q13.png",
+    "image": "assets/questions/Jun2026_P2H__Q13.png",
+    "question_text": "13 Leo collects apples from three trees. \nThe incomplete table gives some information about the apples he collects from \nthese trees.\nTree\nNumber of \napples\nMean weight of \napples (grams)\nTotal weight of \napples (grams)\nA\n12\n150\nB\n20\n2700\nC\n145\n2610\n \nWork out the mean weight of all the apples Leo collects from these three trees.\n.............................................................. grams\n(Total for Question 13 is 4 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q14",
+    "source_id": "Jun2026_P2H__Q14",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Cumulative Frequency Diagrams",
+    "topic_order": 54,
+    "paper": "Jun 2026 P2H",
+    "question": 14,
+    "marks": 3,
+    "filename": "Jun2026_P2H__Q14.png",
+    "image": "assets/questions/Jun2026_P2H__Q14.png",
+    "question_text": "14 The cumulative frequency graph gives information about the weights, in kg, of  \n60 crates.\n100\n0\n10\n20\n30\n40\n50\n60\n110\n120\n130\nWeight (kg)\nCumulative\nfrequency\n140\n150\n \n(a) Use the graph to find an estimate for the median weight.\n...................................................... kg\n(1)\n \n(b) Use the graph to find an estimate for the interquartile range.\n...................................................... kg\n(2)\n(Total for Question 14 is 3 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q15",
+    "source_id": "Jun2026_P2H__Q15",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Circles, Arcs & Sectors",
+    "topic_order": 43,
+    "paper": "Jun 2026 P2H",
+    "question": 15,
+    "marks": 4,
+    "filename": "Jun2026_P2H__Q15.png",
+    "image": "assets/questions/Jun2026_P2H__Q15.png",
+    "question_text": "15 The diagram shows a sector OABC of a circle, centre O\n80°\nDiagram NOT \naccurately drawn\nr cm\nr cm\nC\nA\nB\nO\n \nOA\nOC\nr\n=\n=\ncm    \nangle AOC = 80\n \nThe area of the sector OABC is 32\n2\nπ cm\n \nWork out the perimeter of the sector OABC\n \nGive your answer correct to one decimal place.\n...................................................... cm\n(Total for Question 15 is 4 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q16",
+    "source_id": "Jun2026_P2H__Q16",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Functions",
+    "topic_order": 29,
+    "paper": "Jun 2026 P2H",
+    "question": 16,
+    "marks": 5,
+    "filename": "Jun2026_P2H__Q16.png",
+    "image": "assets/questions/Jun2026_P2H__Q16.png",
+    "question_text": "16 The functions f and g are such that\nf( )\nx\nx\n�\n�\n4\n  \ng( )\nx\nx\n�\n�\n3\n2\n2\n \n(a) Find   g( )\n4\n..............................................................\n(1)\n \n(b) Find   f −1 7\n( )\n..............................................................\n(2)\n \n(c) Express  gf(x)   in the form  ax\nbx\nc\n2 +\n+\n  where a, b and c are integers.\ngf( )\nx =  ..............................................................\n(2)\n(Total for Question 16 is 5 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q17",
+    "source_id": "Jun2026_P2H__Q17",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Proof",
+    "topic_order": 22,
+    "paper": "Jun 2026 P2H",
+    "question": 17,
+    "marks": 2,
+    "filename": "Jun2026_P2H__Q17.png",
+    "image": "assets/questions/Jun2026_P2H__Q17.png",
+    "question_text": "17 Use algebra to show that \n0 539\n89\n165\n.\n. .\n=\n(Total for Question 17 is 2 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q18",
+    "source_id": "Jun2026_P2H__Q18",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Rearranging Formulas",
+    "topic_order": 21,
+    "paper": "Jun 2026 P2H",
+    "question": 18,
+    "marks": 4,
+    "filename": "Jun2026_P2H__Q18.png",
+    "image": "assets/questions/Jun2026_P2H__Q18.png",
+    "question_text": "18 Make x the subject of the formula \na\nw\nx\nx\n�\n�\n�\n3\n6\n2\n2\n......................................................\n(Total for Question 18 is 4 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q19",
+    "source_id": "Jun2026_P2H__Q19",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Circle Theorems",
+    "topic_order": 41,
+    "paper": "Jun 2026 P2H",
+    "question": 19,
+    "marks": 2,
+    "filename": "Jun2026_P2H__Q19.png",
+    "image": "assets/questions/Jun2026_P2H__Q19.png",
+    "question_text": "19 B, D and E are points on a circle.\nB\nA\nC\nD\nE\n52°\nDiagram NOT \naccurately drawn\n \nABC is the tangent to the circle at B\n \nangle ABE �\n�\n52    \nED\nBD\n=\n \nWork out the size of angle BED\n.....................................................°\n(Total for Question 19 is 2 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q20",
+    "source_id": "Jun2026_P2H__Q20",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Probability Toolkit",
+    "topic_order": 55,
+    "paper": "Jun 2026 P2H",
+    "question": 20,
+    "marks": 3,
+    "filename": "Jun2026_P2H__Q20.png",
+    "image": "assets/questions/Jun2026_P2H__Q20.png",
+    "question_text": "20 A box only contains green counters and red counters.\nNuno chooses at random a counter from the box.\nHe puts the counter back into the box.\nNuno then chooses at random a second counter from the box.\nThe probability that Nuno chooses at least one red counter is 39\n64\nWork out the probability that Nuno chooses exactly one red counter.\n......................................................\n(Total for Question 20 is 3 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q21",
+    "source_id": "Jun2026_P2H__Q21",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Estimating Gradients",
+    "topic_order": 33,
+    "paper": "Jun 2026 P2H",
+    "question": 21,
+    "marks": 5,
+    "filename": "Jun2026_P2H__Q21.png",
+    "image": "assets/questions/Jun2026_P2H__Q21.png",
+    "question_text": "21 The curve with equation  y\nx\n= f( )   is drawn on a grid.\n2\nO\n4\n6\n1\n3\n5\n−7\n−5\n−3\n−1\n−6\n−4\n−2\n1\n0.5\n1.5\n2.5\n3.5\n4.5\n2\n3\n4\n7\nx\ny\n \n(a) By drawing a suitable straight line (at least 3 cm long) on the grid, work out an \nestimate for the gradient of the curve at the point where x = 1 \nShow your working clearly.\n..............................................................\n(2) (b) By drawing a suitable straight line on the grid, find the solutions\nof the equation  x\nx\n�\n�\n3\n1\n2 f( )\nShow your working clearly.\n..............................................................\n(3)\n(Total for Question 21 is 5 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q22",
+    "source_id": "Jun2026_P2H__Q22",
+    "bank": "all",
+    "unit": "Vectors & Transformation Geometry",
+    "topic": "Vectors",
+    "topic_order": 50,
+    "paper": "Jun 2026 P2H",
+    "question": 22,
+    "marks": 4,
+    "filename": "Jun2026_P2H__Q22.png",
+    "image": "assets/questions/Jun2026_P2H__Q22.png",
+    "question_text": "22 The diagram shows a quadrilateral OABC where O, A, B and C represent the positions \nof four houses.\nDiagram NOT \naccurately drawn\nC\nO\nA\nB\n��\n��\n�\n��\n2\n8\n��\n��\n�\n��\n21\n14\n��\n��\n�\n��\n12\n3\nRia walks directly from A to B\nAnna walks directly from A to C and then walks directly from C to B\n, \n and \n are given in metres.\nWork out how much further Anna walks than Ria walks.\nGive your answer correct to one decimal place. ............................................................ metres\n(Total for Question 22 is 4 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q23",
+    "source_id": "Jun2026_P2H__Q23",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Simultaneous Equations",
+    "topic_order": 26,
+    "paper": "Jun 2026 P2H",
+    "question": 23,
+    "marks": 5,
+    "filename": "Jun2026_P2H__Q23.png",
+    "image": "assets/questions/Jun2026_P2H__Q23.png",
+    "question_text": "23 The straight line L has equation \ny\nx\n�\n�\n3\n2\n \nThe curve C has equation \nx\ny\ny\n2\n2\n2\n12\n�\n�\n�\n \nFind the coordinates of the points where L and C intersect.\n \nShow clear algebraic working.\n(.............................. , ..............................) and (.............................. , ..............................)\n(Total for Question 23 is 5 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q24",
+    "source_id": "Jun2026_P2H__Q24",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Area & Volume of Similar Shapes",
+    "topic_order": 46,
+    "paper": "Jun 2026 P2H",
+    "question": 24,
+    "marks": 5,
+    "filename": "Jun2026_P2H__Q24.png",
+    "image": "assets/questions/Jun2026_P2H__Q24.png",
+    "question_text": "24 The diagram shows two cones C1 and C2\nA\n30 cm\nC2\nC1\nDiagram NOT\naccurately drawn\n \nThe vertex of C1 coincides with the vertex of C2  at the point A \nC1 and C2  have the same axis of symmetry.\nheight of \nheight of \ncm\n1\n2\nC\nC\n�\n�30\n \ntotal surface area of \ntotal surface area of \nC\nC\n1\n2\n4 9\n:\n:\n=\n \nvolume of \ncm\nC1\n3\n23 04\n�\n.\n�\n \nWork out the radius of the base of C2  \nShow your working clearly.\n.............................................................. cm\n(Total for Question 24 is 5 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q25",
+    "source_id": "Jun2026_P2H__Q25",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Sequences",
+    "topic_order": 28,
+    "paper": "Jun 2026 P2H",
+    "question": 25,
+    "marks": 5,
+    "filename": "Jun2026_P2H__Q25.png",
+    "image": "assets/questions/Jun2026_P2H__Q25.png",
+    "question_text": "25 An arithmetic series has first term 3 and common difference 8\n \nThe nth term of the series is U n\n \nThe sum of the first n terms of the series is Sn\n \nGiven that S\nS\nk\nk\n5\n3\n25 560\n�\n�\n \nfind the value of U k\n4\n \nShow clear algebraic working. .............................................................\n(Total for Question 25 is 5 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2H__Q26",
+    "source_id": "Jun2026_P2H__Q26",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Transformations of Graphs",
+    "topic_order": 36,
+    "paper": "Jun 2026 P2H",
+    "question": 26,
+    "marks": 5,
+    "filename": "Jun2026_P2H__Q26.png",
+    "image": "assets/questions/Jun2026_P2H__Q26.png",
+    "question_text": "26 The curve P has equation y\nx\n���\nf\n \nThe coordinates of the minimum point on P are �\n�\n�\n5 4\n,\n \n(a) Write down the coordinates of the minimum point on the curve\n \n with equation y\nx\n�\n��\n3f\n(.............................. , ..............................)\n(1)\n \nThe curve Q has equation y\nx\n�\n�\n�\n�\n�\n2\n3\n2\n \nThe curve R has equation y\nx\n�\n�\n�\n�\n�\n2\n3\n2\n \n(b) Describe fully the single transformation that maps Q to R\n..................................................................................................................................................................................................................................................\n..................................................................................................................................................................................................................................................\n(1)\n \nThe graph of  y\na\nx\nb\nc\n�\n�\n�\n���\ncos\n  for −180\n360\n\n\nx\n is drawn on the grid.\ny\nx\nO\n−120 −60\n−180\n120\n60\n180\n240\n300\n360\n−1\n1\n2\n3\n4\n5\n6  \nGiven that a > 0 and 0 < b < 360\n \n(c) find the value of a, the value of b and the value of c\na =  .............................\nb = .............................\nc =  .............................\n(3)\n(Total for Question 26 is 5 marks)",
+    "paper_code": "P2H",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q01",
+    "source_id": "Jun2026_P2HR__Q01",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
+    "topic_order": 47,
+    "paper": "Jun 2026 P2HR",
+    "question": 1,
+    "marks": 3,
+    "filename": "Jun2026_P2HR__Q01.png",
+    "image": "assets/questions/Jun2026_P2HR__Q01.png",
+    "question_text": "1 The diagram shows a right‑angled triangle.\n20 cm\n48 cm\nx cm\nDiagram NOT \naccurately drawn\n \nWork out the value of x\nx = ......................................................\n(Total for Question 1 is 3 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q02",
+    "source_id": "Jun2026_P2HR__Q02",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Sequences",
+    "topic_order": 28,
+    "paper": "Jun 2026 P2HR",
+    "question": 2,
+    "marks": 2,
+    "filename": "Jun2026_P2HR__Q02.png",
+    "image": "assets/questions/Jun2026_P2HR__Q02.png",
+    "question_text": "2 Here are the first five terms of an arithmetic sequence.\n14          8          2          –4          –10\n \nFind an expression, in terms of n, for the nth term of this sequence.\n.................................................................................\n(Total for Question 2 is 2 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q03",
+    "source_id": "Jun2026_P2HR__Q03",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Set Notation & Venn Diagrams",
+    "topic_order": 1,
+    "paper": "Jun 2026 P2HR",
+    "question": 3,
+    "marks": 1,
+    "filename": "Jun2026_P2HR__Q03.png",
+    "image": "assets/questions/Jun2026_P2HR__Q03.png",
+    "question_text": "3 E = {integers from 1 to 12}\n \nA = {factors of 12}\n \nList the members of the set  A′\n.................................................................................\n(Total for Question 3 is 1 mark)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q04",
+    "source_id": "Jun2026_P2HR__Q04",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Solving Linear Equations",
+    "topic_order": 23,
+    "paper": "Jun 2026 P2HR",
+    "question": 4,
+    "marks": 8,
+    "filename": "Jun2026_P2HR__Q04.png",
+    "image": "assets/questions/Jun2026_P2HR__Q04.png",
+    "question_text": "4 (a) Solve  3(x + 2) = 1 – 5x\n \n Show clear algebraic working.\nx = ......................................................\n(3)\n \nP = c\n2 – 5d\n \n(b) Work out the value of P when  c = –7 and  d = 3\nP = ......................................................\n(2)\n \n(c) Simplify  m\n0\n......................................................\n(1)\n \n(d) Simplify  (4r\n2t)\n3\n......................................................\n(2)\n(Total for Question 4 is 8 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": null,
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q05",
+    "source_id": "Jun2026_P2HR__Q05",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Ratio Problem Solving",
+    "topic_order": 12,
+    "paper": "Jun 2026 P2HR",
+    "question": 5,
+    "marks": 5,
+    "filename": "Jun2026_P2HR__Q05.png",
+    "image": "assets/questions/Jun2026_P2HR__Q05.png",
+    "question_text": "5 Sarah and Dej each give some money to charity A and to charity B\n \nSarah shares $400 between charity A and charity B in the ratio 2 : 3\n \nDej shares $375 between the two charities.\n \nHe gives twice as much money to charity B as he gives to charity A\n \nDej gives more money to charity B than Sarah gives to charity B\n \nHow much more?\n$......................................................\n(Total for Question 5 is 5 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q06",
+    "source_id": "Jun2026_P2HR__Q06",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Statistics Toolkit",
+    "topic_order": 52,
+    "paper": "Jun 2026 P2HR",
+    "question": 6,
+    "marks": 4,
+    "filename": "Jun2026_P2HR__Q06.png",
+    "image": "assets/questions/Jun2026_P2HR__Q06.png",
+    "question_text": "6 Mika has six cards.\n \nThere is a number on each card.\n \nThe cards are arranged with the numbers in order of size.\n \nThree of the numbers are hidden.\n3\n7\n8\n \nThe mode of the six numbers is 8\n \nThe range of the six numbers is 7\n \nThe sum of the six numbers is 31\n \nWork out the median of the six numbers.\n......................................................\n(Total for Question 6 is 4 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q07",
+    "source_id": "Jun2026_P2HR__Q07",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Powers, Roots & Standard Form",
+    "topic_order": 3,
+    "paper": "Jun 2026 P2HR",
+    "question": 7,
+    "marks": 3,
+    "filename": "Jun2026_P2HR__Q07.png",
+    "image": "assets/questions/Jun2026_P2HR__Q07.png",
+    "question_text": "7 (a) Write  4 × 10\n–5  as an ordinary number.\n......................................................\n(1)\n \n(b) Work out  (6 × 10\n158) × (2 × 10\n72)\n \n Give your answer in standard form.\n......................................................\n(2)\n(Total for Question 7 is 3 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q08",
+    "source_id": "Jun2026_P2HR__Q08",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Percentages",
+    "topic_order": 5,
+    "paper": "Jun 2026 P2HR",
+    "question": 8,
+    "marks": 3,
+    "filename": "Jun2026_P2HR__Q08.png",
+    "image": "assets/questions/Jun2026_P2HR__Q08.png",
+    "question_text": "8 Lauren’s salary increased by 4%\n \nAfter the increase, her salary was 36 400 euros.\n \nWork out Lauren’s salary before the increase.\n..................................................... euros\n(Total for Question 8 is 3 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q09",
+    "source_id": "Jun2026_P2HR__Q09",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Standard & Compound Units",
+    "topic_order": 38,
+    "paper": "Jun 2026 P2HR",
+    "question": 9,
+    "marks": 3,
+    "filename": "Jun2026_P2HR__Q09.png",
+    "image": "assets/questions/Jun2026_P2HR__Q09.png",
+    "question_text": "9 Change a speed of 198 kilometres per hour to a speed in metres per second.\n \nShow your working clearly.\n..................................................... m/s\n(Total for Question 9 is 3 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q10",
+    "source_id": "Jun2026_P2HR__Q10",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Standard & Compound Units",
+    "topic_order": 38,
+    "paper": "Jun 2026 P2HR",
+    "question": 10,
+    "marks": 3,
+    "filename": "Jun2026_P2HR__Q10.png",
+    "image": "assets/questions/Jun2026_P2HR__Q10.png",
+    "question_text": "10 The diagram shows a solid cylinder.\n4 cm\nDiagram NOT \naccurately drawn\n11 cm\n \nThe cylinder has radius 4 cm and height 11 cm\n \nThe cylinder is made from wood with a density of 0.6 g/cm\n3\n \nWork out the mass of the cylinder.\n \nGive your answer correct to 3 significant figures.\n..................................................... g\n(Total for Question 10 is 3 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q11",
+    "source_id": "Jun2026_P2HR__Q11",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Right-Angled Triangles - Pythagoras & Trigonometry",
+    "topic_order": 47,
+    "paper": "Jun 2026 P2HR",
+    "question": 11,
+    "marks": 5,
+    "filename": "Jun2026_P2HR__Q11.png",
+    "image": "assets/questions/Jun2026_P2HR__Q11.png",
+    "question_text": "11 The diagram shows a square ABCD and a right‑angled triangle EFG\nA\nB\nC\nD\nE\nF\nG\n25�\nDiagram NOT \naccurately drawn\n \nThe area of square ABCD is 36 cm\n2\n \nDC = EG\n \nWork out the area of triangle EFG\n \nGive your answer correct to one decimal place.\n \nShow your working clearly.\n..................................................... cm\n2\n(Total for Question 11 is 5 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q12",
+    "source_id": "Jun2026_P2HR__Q12",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Graphing Inequalities",
+    "topic_order": 35,
+    "paper": "Jun 2026 P2HR",
+    "question": 12,
+    "marks": 3,
+    "filename": "Jun2026_P2HR__Q12.png",
+    "image": "assets/questions/Jun2026_P2HR__Q12.png",
+    "question_text": "12 \nx\ny\nO\nR\n–1\n–1\n–2\n–3\n–4\n4\n5\n6\n3\n2\n1\n1\n2\n3\n4\n–2\n–3\n–4\n–5\n–6\n–7\n–8\ny = –x\n2x + 5y = 12\n \nThe region R, shown shaded in the diagram, is bounded by the y-axis and the straight \nlines with equations \ny = –x\n2x + 5y = 12\n \nWrite down the three inequalities that define R\n..................................................................\n.................................................................. \n.................................................................. \n(Total for Question 12 is 3 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q13",
+    "source_id": "Jun2026_P2HR__Q13",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Graphs of Functions",
+    "topic_order": 32,
+    "paper": "Jun 2026 P2HR",
+    "question": 13,
+    "marks": 4,
+    "filename": "Jun2026_P2HR__Q13.png",
+    "image": "assets/questions/Jun2026_P2HR__Q13.png",
+    "question_text": "13 (a) Complete the table of values for  y = x + \n1\nx\nx\n0.25\n0.5\n1\n2\n3\n4\n5\ny\n4.25\n2.5\n3.33\n(2)\n \n(b) On the grid, draw the graph of  y = x + \n1\nx   for  0.25  x  5\n1\n1\n2\n3\n4\n5\n2\n3\n4\n5\n6\nO\nx\ny\n(2)\n(Total for Question 13 is 4 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q14",
+    "source_id": "Jun2026_P2HR__Q14",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Probability Diagrams - Venn & Tree Diagrams",
+    "topic_order": 56,
+    "paper": "Jun 2026 P2HR",
+    "question": 14,
+    "marks": 8,
+    "filename": "Jun2026_P2HR__Q14.png",
+    "image": "assets/questions/Jun2026_P2HR__Q14.png",
+    "question_text": "14 Pras has 2 bags of counters, bag A and bag B\n \nIn bag A, there are 4 green counters and 3 red counters.\n \nIn bag B, there are 5 green counters and 1 red counter.\n \nPras is going to take at random a counter from bag A and a counter from bag B\n \n(a) Complete the probability tree diagram.\nRed\nGreen\nBag A\nBag B\nRed\nGreen\nRed\nGreen\n................\n................\n................\n................\n................\n................\n(2)\n \n(b) Work out the probability that Pras will take two green counters.\n....................................................\n(2)  \nPras also has a third bag of counters, bag C\n \nIn bag C, there are only green counters and red counters.\n \nAll the original counters are back in bag A and bag B\n \nPras is going to take at random a counter from bag A, a counter from bag B and \na counter from bag C\n \nThe probability that Pras will take three red counters is 3\n70\n \n(c) Work out the probability that Pras will take 1 green counter and 2 red counters.\n....................................................\n(4)\n(Total for Question 14 is 8 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q15",
+    "source_id": "Jun2026_P2HR__Q15",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Statistics Toolkit",
+    "topic_order": 52,
+    "paper": "Jun 2026 P2HR",
+    "question": 15,
+    "marks": 2,
+    "filename": "Jun2026_P2HR__Q15.png",
+    "image": "assets/questions/Jun2026_P2HR__Q15.png",
+    "question_text": "15 Mina recorded the times taken, in minutes, by 11 people to complete a puzzle.\n \nHere are her results.\n2    2    3    6    7    9    9    12   13   17   20\n \nFind the interquartile range of these times.\n.................................................... minutes\n(Total for Question 15 is 2 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q16",
+    "source_id": "Jun2026_P2HR__Q16",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Algebraic Roots & Indices",
+    "topic_order": 16,
+    "paper": "Jun 2026 P2HR",
+    "question": 16,
+    "marks": 2,
+    "filename": "Jun2026_P2HR__Q16.png",
+    "image": "assets/questions/Jun2026_P2HR__Q16.png",
+    "question_text": "16 \n1\n6\na\nan\n�\n��\n�\n���\n \nWork out the value of n\nn = .................................................... \n(Total for Question 16 is 2 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q17",
+    "source_id": "Jun2026_P2HR__Q17",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Fractions",
+    "topic_order": 4,
+    "paper": "Jun 2026 P2HR",
+    "question": 17,
+    "marks": 2,
+    "filename": "Jun2026_P2HR__Q17.png",
+    "image": "assets/questions/Jun2026_P2HR__Q17.png",
+    "question_text": "17 Use algebra to show that  0.8.\n14.\n = 22\n27\n(Total for Question 17 is 2 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q18",
+    "source_id": "Jun2026_P2HR__Q18",
+    "bank": "all",
+    "unit": "Vectors & Transformation Geometry",
+    "topic": "Vectors",
+    "topic_order": 50,
+    "paper": "Jun 2026 P2HR",
+    "question": 18,
+    "marks": 2,
+    "filename": "Jun2026_P2HR__Q18.png",
+    "image": "assets/questions/Jun2026_P2HR__Q18.png",
+    "question_text": "18 Here are two vectors.\n  AB\n→ = \n4\n5\n�\n��\n�\n��\n CB\n→ = \n�\n�\n��\n�\n��\n2\n8\n  \n \nFind  AC\n→ as a column vector.\nAC\n→ = \n............. \n.............\n(Total for Question 18 is 2 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q19",
+    "source_id": "Jun2026_P2HR__Q19",
+    "bank": "all",
+    "unit": "Statistics & Probability",
+    "topic": "Histograms",
+    "topic_order": 53,
+    "paper": "Jun 2026 P2HR",
+    "question": 19,
+    "marks": 3,
+    "filename": "Jun2026_P2HR__Q19.png",
+    "image": "assets/questions/Jun2026_P2HR__Q19.png",
+    "question_text": "19 The table gives information about the times, in minutes, some people spent waiting to \ngo on a rollercoaster.\nTime (t minutes)\nFrequency\n 0 < t  20\n14\n20 < t  25\n12\n25 < t  35\n32\n35 < t  50\n30\n \nOn the grid, draw a histogram for this information.\n0\n0\n1\n2\n3\n4\n10\n20\n30\n40\n50\nTime (minutes)\nFrequency \ndensity\n(Total for Question 19 is 3 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q20",
+    "source_id": "Jun2026_P2HR__Q20",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Rearranging Formulas",
+    "topic_order": 21,
+    "paper": "Jun 2026 P2HR",
+    "question": 20,
+    "marks": 3,
+    "filename": "Jun2026_P2HR__Q20.png",
+    "image": "assets/questions/Jun2026_P2HR__Q20.png",
+    "question_text": "20 Make x the subject of  y\nx\nx\n�\n�\n�\n3\n5\n4\n2\n.............................................................................. \n(Total for Question 20 is 3 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q21",
+    "source_id": "Jun2026_P2HR__Q21",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Rounding, Estimation & Bounds",
+    "topic_order": 8,
+    "paper": "Jun 2026 P2HR",
+    "question": 21,
+    "marks": 3,
+    "filename": "Jun2026_P2HR__Q21.png",
+    "image": "assets/questions/Jun2026_P2HR__Q21.png",
+    "question_text": "21 p\nd\ne\nf\n�\n�\n \nd = 6.6 correct to 1 decimal place\n \ne = 2.8 correct to 1 decimal place\n \nf = 0.47 correct to 2 decimal places\n \nCalculate the lower bound for the value of p\n \nGive your answer correct to 3 significant figures.\n \nShow your working clearly.\n................................................... \n(Total for Question 21 is 3 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 1",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q22",
+    "source_id": "Jun2026_P2HR__Q22",
+    "bank": "all",
+    "unit": "Equations, Formulae & Identities",
+    "topic": "Simultaneous Equations",
+    "topic_order": 26,
+    "paper": "Jun 2026 P2HR",
+    "question": 22,
+    "marks": 5,
+    "filename": "Jun2026_P2HR__Q22.png",
+    "image": "assets/questions/Jun2026_P2HR__Q22.png",
+    "question_text": "22 Solve the simultaneous equations\ny\n2 = x\n2 + 7 \n  y = 3x – 5\n \nShow clear algebraic working.\n............................................................................................................................................................................................................ \n(Total for Question 22 is 5 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q23",
+    "source_id": "Jun2026_P2HR__Q23",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Area & Volume of Similar Shapes",
+    "topic_order": 46,
+    "paper": "Jun 2026 P2HR",
+    "question": 23,
+    "marks": 5,
+    "filename": "Jun2026_P2HR__Q23.png",
+    "image": "assets/questions/Jun2026_P2HR__Q23.png",
+    "question_text": "23 K, L and M are three similar solids.\n \n \n volume of K : volume of L  =  125 : 216\n \n  \nsurface area of K : surface area of M  =  4 : 9\n \nThe height of M is y% greater than the height of L\n \nWork out the value of y\n \nShow your working clearly.\ny = ................................................... \n(Total for Question 23 is 5 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q24",
+    "source_id": "Jun2026_P2HR__Q24",
+    "bank": "all",
+    "unit": "Geometry & Trigonometry",
+    "topic": "Angles in Polygons & Parallel Lines",
+    "topic_order": 39,
+    "paper": "Jun 2026 P2HR",
+    "question": 24,
+    "marks": 4,
+    "filename": "Jun2026_P2HR__Q24.png",
+    "image": "assets/questions/Jun2026_P2HR__Q24.png",
+    "question_text": "24 \nA\nB\nC\nD\nE\nDiagram NOT \naccurately drawn\n \nAB, BC and CD are three sides of a regular polygon.\n \nABE is a straight line.\n \nBCE is a sector of a circle with centre B and radius 4.5 cm\n \nThe length of arc CE is 3\n10 π cm\n \nWork out the sum of the interior angles of the regular polygon.\n...................................................°\n(Total for Question 24 is 4 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q25",
+    "source_id": "Jun2026_P2HR__Q25",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Transformations of Graphs",
+    "topic_order": 36,
+    "paper": "Jun 2026 P2HR",
+    "question": 25,
+    "marks": 4,
+    "filename": "Jun2026_P2HR__Q25.png",
+    "image": "assets/questions/Jun2026_P2HR__Q25.png",
+    "question_text": "25 The graph of  y = a sin(x + b)°  for  0  x  360  is drawn on the grid below.\n–3\n–2\n–1\nO\n1\n2\n3\ny\nx\n180\n360\n \nGiven that  a < 0 and that  0 < b < 360\n \n(a) find the value of a and the value of b\na = ................................................... \nb = ................................................... \n(2)\n \nA curve has equation  y = f(x)\n \nThe point T with coordinates  (p, q)  lies on the curve.\n \n(b) Find the coordinates of the image of T on the curve with equation\ny = f(2x) + 5\n \n Give your coordinates in terms of p and q\n(............................ , ............................)\n(2)\n(Total for Question 25 is 4 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q26",
+    "source_id": "Jun2026_P2HR__Q26",
+    "bank": "all",
+    "unit": "Sequences, Functions & Graphs",
+    "topic": "Sequences",
+    "topic_order": 28,
+    "paper": "Jun 2026 P2HR",
+    "question": 26,
+    "marks": 6,
+    "filename": "Jun2026_P2HR__Q26.png",
+    "image": "assets/questions/Jun2026_P2HR__Q26.png",
+    "question_text": "26 Here are the first four terms of an arithmetic series.\n(k + 2)         (k + 5)         (k + 8)         (k + 11)\n \nThe sum of the first 2n terms of the series is 4 times the sum of the first n terms of \nthe series.\n \nWork out the numerical value of the 100th term of the series.\n \nShow your working clearly.\n................................................... \n(Total for Question 26 is 6 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
+  },
+  {
+    "id": "all::Jun2026_P2HR__Q27",
+    "source_id": "Jun2026_P2HR__Q27",
+    "bank": "all",
+    "unit": "Numbers & the Number System",
+    "topic": "Percentages",
+    "topic_order": 5,
+    "paper": "Jun 2026 P2HR",
+    "question": 27,
+    "marks": 4,
+    "filename": "Jun2026_P2HR__Q27.png",
+    "image": "assets/questions/Jun2026_P2HR__Q27.png",
+    "question_text": "27 Bryan owns a house.\n \nDuring 2024, the value of Bryan’s house increased by x%\n \nDuring 2025, the value of Bryan’s house increased by 2x%\n \nOverall, during 2024 and 2025, the value of Bryan’s house increased by 38.88%\n \nWork out the value of x\n \nShow clear algebraic working.\nx = ................................................... \n(Total for Question 27 is 4 marks)",
+    "paper_code": "P2HR",
+    "modular_force_unit": "Unit 2",
+    "available_pathways": [
+      "linear"
+    ]
   },
   {
     "id": "all::May2021_P1H__Q01__p03-03__m03__Standard-and-Compound-Units",

@@ -19,7 +19,7 @@
 (function (root) {
   "use strict";
 
-  const VERSION = "20260929a";
+  const VERSION = "20261018a";
   const MM = 96 / 25.4;
   const SCRIPT_SRC = document.currentScript?.src || "";
   const assetUrl = (name) => new URL(`${name}?v=${VERSION}`, SCRIPT_SRC || document.baseURI).href;
@@ -207,7 +207,7 @@
     }
     const steps = parts.steps.map((step, index) => `<div class="blk s-step" data-role="s-unit">
         <span class="s-index">${String(index + 1).padStart(2, "0")}</span>
-        <div class="s-body">${step.title ? `<h4>${escapeHtml(step.title)}</h4>` : ""}<div class="s-copy">${formatSolutionText(step.body || "")}</div></div>
+        <div class="s-body">${step.title ? `<h4>${escapeHtml(step.title)}</h4>` : ""}<div class="s-copy">${formatSolutionText(step.body || "")}${root.EliteSolutionView?.renderFigures?.(step) || ""}</div></div>
       </div>`).join("");
     const final = parts.finalAnswer
       ? `<div class="blk s-final" data-role="s-unit"><strong>Final answer</strong><div class="s-copy">${formatText(parts.finalAnswer)}</div></div>`
