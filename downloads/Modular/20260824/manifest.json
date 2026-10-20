@@ -16,8 +16,8 @@
   "artifacts": [
     {
       "path": "downloads/Classified_4WM1.pdf",
-      "sha256": "be3fe847c5bc7118518678e667b1d8accbf80285811f6c6ee771aba1f7d63cb3",
-      "bytes": 29985826,
+      "sha256": "0c39d4d5747de2b59e5e74efcfd0eba171845ac300b942eb1ba9049707fcb69c",
+      "bytes": 30181174,
       "kind": "classified_exam_book",
       "unit": "Unit 1",
       "title": "Unit 1 Total Classified - Student",
@@ -26,8 +26,8 @@
     },
     {
       "path": "downloads/ClassifiedSolutions/Classified_4WM1_Answers.pdf",
-      "sha256": "3fa9ff45d0ff4371bce56806231df0185dbc40ff5b9888b4ea534a24c889a69b",
-      "bytes": 36579192,
+      "sha256": "da2c0bf3c0e05f7137ebd63c5ddfccf85dd437699580576e530bb45dc908f06b",
+      "bytes": 50191805,
       "kind": "classified_exam_book",
       "unit": "Unit 1",
       "title": "Unit 1 Total Classified - Solutions",
@@ -36,8 +36,8 @@
     },
     {
       "path": "downloads/Classified_4WM2.pdf",
-      "sha256": "820609c91a7a6577dc672c3deb4290dbb3265f499e0390470229e73ee796fc71",
-      "bytes": 34922898,
+      "sha256": "0a304d504be38c1245e363093b5c54d81d3f076bbb4d273fc9dc685fc568e695",
+      "bytes": 34287038,
       "kind": "classified_exam_book",
       "unit": "Unit 2",
       "title": "Unit 2 Total Classified - Student",
@@ -46,8 +46,8 @@
     },
     {
       "path": "downloads/ClassifiedSolutions/Classified_4WM2_Answers.pdf",
-      "sha256": "3e94786283846a9177e878d7b152926491087b937b171606ee675807589d2f07",
-      "bytes": 42024579,
+      "sha256": "74217e7eb3d3d5ebb314bfa7a1d9ebaa8e992054f0a6befdaf7d9d104f085c31",
+      "bytes": 57554191,
       "kind": "classified_exam_book",
       "unit": "Unit 2",
       "title": "Unit 2 Total Classified - Solutions",
@@ -56,8 +56,8 @@
     },
     {
       "path": "downloads/Classified_4WM1_Expertise.pdf",
-      "sha256": "a5601aea0310970e00747d066688dfff5c3b4fc959de7d4936bcd943d269536d",
-      "bytes": 6540608,
+      "sha256": "fa50f06731cfc154ccb555ee5867d3b820ca966829b0689b4502dc47b64849ea",
+      "bytes": 6918566,
       "kind": "classified_exam_book",
       "unit": "Unit 1",
       "title": "Unit 1 Expertise Q16+ - Student",
@@ -66,8 +66,8 @@
     },
     {
       "path": "downloads/ClassifiedSolutions/Classified_4WM1_Expertise_Answers.pdf",
-      "sha256": "7633ed24b9054adeb14cd90e0514ff62c1df71dad2645b27b6184886768e46b6",
-      "bytes": 8902616,
+      "sha256": "40307cbbf3f9b3bd0e370610a949aa0f938ee29f28d0996d6754fd15ce9910e3",
+      "bytes": 12843519,
       "kind": "classified_exam_book",
       "unit": "Unit 1",
       "title": "Unit 1 Expertise Q16+ - Solutions",
@@ -76,8 +76,8 @@
     },
     {
       "path": "downloads/Classified_4WM2_Expertise.pdf",
-      "sha256": "f75d7ed033abf379b33566f15df8500718697e319823df6e4205873fd5d78abe",
-      "bytes": 6617050,
+      "sha256": "03da027f30eced1b267c6b449fc6baf1a57c2e403e65046e1d37a3ebd85bfed3",
+      "bytes": 6997818,
       "kind": "classified_exam_book",
       "unit": "Unit 2",
       "title": "Unit 2 Expertise Q16+ - Student",
@@ -86,8 +86,8 @@
     },
     {
       "path": "downloads/ClassifiedSolutions/Classified_4WM2_Expertise_Answers.pdf",
-      "sha256": "f9f3c6881c489d310c857be27ee89babd322fd150de8ac56859e908fd3cbcda9",
-      "bytes": 9102765,
+      "sha256": "5f45f85e750ec2eaa12c524213381ae786d60e76d27e2ff07f13b582e56eebd8",
+      "bytes": 13079580,
       "kind": "classified_exam_book",
       "unit": "Unit 2",
       "title": "Unit 2 Expertise Q16+ - Solutions",
