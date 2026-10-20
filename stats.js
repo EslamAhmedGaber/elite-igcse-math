@@ -5,7 +5,7 @@
 
   const TEACHERS = (window.ELITE_FIREBASE?.adminEmails || []).map((email) => String(email).toLowerCase());
   const LABELS = {
-    courses: [["c_linear", "Linear"], ["c_unit1", "Modular Unit 1"], ["c_unit2", "Modular Unit 2"], ["c_wma11", "Pure 1"], ["c_wma12", "Pure 2"], ["c_wme01", "Mechanics 1"]],
+    courses: [["c_linear", "Linear"], ["c_unit1", "Modular Unit 1"], ["c_unit2", "Modular Unit 2"], ["c_wma11", "Pure 1"], ["c_wma12", "Pure 2"], ["c_wma13", "Pure 3"], ["c_wme01", "Mechanics 1"]],
     tools: [["t_notes", "Notes"], ["t_classified", "Practise online"], ["t_books", "Classified books"], ["t_past_solutions", "Past papers & solutions"], ["t_build_test", "Mock generator"], ["t_expertise", "Expertise"], ["t_mistake_box", "Mistake Box"], ["t_revision_book", "Revision book"], ["t_saved_tests", "Saved tests"], ["t_progress", "Progress"], ["t_interactive_lab", "Visual / Mechanics Lab"], ["t_question_visualizer", "Question Visualizer"]],
     pages: [["pv_home", "Home"], ["pv_course", "Course pages"], ["pv_practice", "Practice (IGCSE)"], ["pv_ial", "Practice (IAL)"], ["pv_notes", "Notes & library"], ["pv_papers", "Past papers"], ["pv_books", "Books & downloads"], ["pv_exam", "Mock generator"], ["pv_progress", "Progress"], ["pv_about", "About"], ["pv_bacc", "Egyptian Baccalaureate"], ["pv_other", "Other pages"]],
     countries: [["g_eg", "Egypt"], ["g_qa", "Qatar"], ["g_ae", "UAE"], ["g_sa", "Saudi Arabia"], ["g_kw", "Kuwait"], ["g_om", "Oman"], ["g_bh", "Bahrain"], ["g_jo", "Jordan"], ["g_gb", "United Kingdom"], ["g_other", "Other"]],

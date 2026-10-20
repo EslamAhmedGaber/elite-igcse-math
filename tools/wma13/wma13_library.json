@@ -1,0 +1,110 @@
+{
+ "id": "wma13",
+ "name": "Pure 3",
+ "code": "WMA13",
+ "family": "IAL",
+ "unit": "Chapter",
+ "coverage": "Past papers up to June 2026",
+ "notes": {
+  "complete": [
+   {
+    "href": "downloads/IAL/WMA13/Notes/WMA13_Complete_Visual_Notes.pdf?v=20261020",
+    "pages": 195,
+    "mb": 3.7
+   }
+  ],
+  "topics": [
+   {
+    "num": "01",
+    "title": "Rational Algebra",
+    "href": "downloads/IAL/WMA13/Notes/WMA13_01_Rational_Algebra_Visual_Notes.pdf?v=20261020",
+    "pages": 13,
+    "mb": 0.2
+   },
+   {
+    "num": "02",
+    "title": "Functions",
+    "href": "downloads/IAL/WMA13/Notes/WMA13_02_Functions_Visual_Notes.pdf?v=20261020",
+    "pages": 17,
+    "mb": 0.3
+   },
+   {
+    "num": "03",
+    "title": "Graph Transformations",
+    "href": "downloads/IAL/WMA13/Notes/WMA13_03_Graph_Transformations_Visual_Notes.pdf?v=20261020",
+    "pages": 12,
+    "mb": 0.3
+   },
+   {
+    "num": "04",
+    "title": "Modulus",
+    "href": "downloads/IAL/WMA13/Notes/WMA13_04_Modulus_Visual_Notes.pdf?v=20261020",
+    "pages": 19,
+    "mb": 0.3
+   },
+   {
+    "num": "05",
+    "title": "Trigonometric Functions",
+    "href": "downloads/IAL/WMA13/Notes/WMA13_05_Trig_Functions_Visual_Notes.pdf?v=20261020",
+    "pages": 12,
+    "mb": 0.3
+   },
+   {
+    "num": "06",
+    "title": "Trig Identities",
+    "href": "downloads/IAL/WMA13/Notes/WMA13_06_Trig_Identities_Visual_Notes.pdf?v=20261020",
+    "pages": 18,
+    "mb": 0.3
+   },
+   {
+    "num": "07",
+    "title": "Trig Equations and R-Form",
+    "href": "downloads/IAL/WMA13/Notes/WMA13_07_Trig_Equations_R_Form_Visual_Notes.pdf?v=20261020",
+    "pages": 15,
+    "mb": 0.3
+   },
+   {
+    "num": "08",
+    "title": "Exponentials and Logarithms",
+    "href": "downloads/IAL/WMA13/Notes/WMA13_08_Exp_and_Ln_Visual_Notes.pdf?v=20261020",
+    "pages": 12,
+    "mb": 0.2
+   },
+   {
+    "num": "09",
+    "title": "Log Graphs and Models",
+    "href": "downloads/IAL/WMA13/Notes/WMA13_09_Log_Graphs_and_Models_Visual_Notes.pdf?v=20261020",
+    "pages": 14,
+    "mb": 0.3
+   },
+   {
+    "num": "10",
+    "title": "Differentiation",
+    "href": "downloads/IAL/WMA13/Notes/WMA13_10_Differentiation_Visual_Notes.pdf?v=20261020",
+    "pages": 17,
+    "mb": 0.3
+   },
+   {
+    "num": "11",
+    "title": "Applications of Differentiation",
+    "href": "downloads/IAL/WMA13/Notes/WMA13_11_Applications_of_Differentiation_Visual_Notes.pdf?v=20261020",
+    "pages": 16,
+    "mb": 0.3
+   },
+   {
+    "num": "12",
+    "title": "Integration",
+    "href": "downloads/IAL/WMA13/Notes/WMA13_12_Integration_Visual_Notes.pdf?v=20261020",
+    "pages": 17,
+    "mb": 0.3
+   },
+   {
+    "num": "13",
+    "title": "Numerical Methods",
+    "href": "downloads/IAL/WMA13/Notes/WMA13_13_Numerical_Methods_Visual_Notes.pdf?v=20261020",
+    "pages": 10,
+    "mb": 0.2
+   }
+  ]
+ }
+}

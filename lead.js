@@ -229,6 +229,7 @@
     const courseMap = {
       pure: "wma11",
       pure2: "wma12",
+      pure3: "wma13",
       mechanics1: "wme01",
     };
     const course = courseMap[context.groupId || ""];
@@ -334,16 +335,18 @@
     const pathname = window.location.pathname.toLowerCase();
     const pathIsWma11 = pathname.includes("/ial/wma11/");
     const pathIsWma12 = pathname.includes("/ial/wma12/");
+    const pathIsWma13 = pathname.includes("/ial/wma13/");
     const pathIsWme01 = pathname.includes("/ial/wme01/");
-    const pathIsIal = pathIsWma11 || pathIsWma12 || pathIsWme01 || pathname === "/ial/" || pathname.endsWith("/ial/index.html");
+    const pathIsIal = pathIsWma11 || pathIsWma12 || pathIsWma13 || pathIsWme01 || pathname === "/ial/" || pathname.endsWith("/ial/index.html");
     const pathway = requested || normalizePathway(boot.pathway) || (pathIsIal ? "pure" : "") || readStoredPathway() || "linear";
-    const course = params.get("course") || boot.course || (pathIsWme01 ? "wme01" : pathIsWma12 ? "wma12" : pathIsWma11 ? "wma11" : "");
+    const course = params.get("course") || boot.course || (pathIsWme01 ? "wme01" : pathIsWma13 ? "wma13" : pathIsWma12 ? "wma12" : pathIsWma11 ? "wma11" : "");
     const unit = normalizeUnit(params.get("unit") || boot.unit || "");
     return { pathway, course, unit };
   }
 
   function coursePalette(course, pathway) {
     if (course === "wma12") return "mulberry";
+    if (course === "wma13") return "amber";
     if (course === "wme01") return "teal";
     if (course === "wma11") return "pure";
     return pathway;
@@ -445,6 +448,7 @@
     const requestedCourse = (params.get("course") || context.course || "").toLowerCase();
     if (requestedCourse === "wme01" || page === "ial-wme01" || window.location.pathname.includes("/ial/wme01/")) return "mechanics1";
     if (requestedCourse === "wma12" || page === "ial-wma12" || window.location.pathname.includes("/ial/wma12/")) return "pure2";
+    if (requestedCourse === "wma13" || page === "ial-wma13" || window.location.pathname.includes("/ial/wma13/")) return "pure3";
     if (requestedCourse === "wma11" || page === "ial-wma11" || window.location.pathname.includes("/ial/wma11/")) return "pure";
     const requestedPathway = params.get("pathway") || context.pathway;
     const requestedGroup = findGroupByPathway(requestedPathway);
@@ -695,6 +699,9 @@
     if (requestedCourse === "wma12" || path.includes("/ial/wma12/")) {
       return { id: "pure2", label: "Pure 2", code: "WMA12", unit: "" };
     }
+    if (requestedCourse === "wma13" || path.includes("/ial/wma13/")) {
+      return { id: "pure3", label: "Pure 3", code: "WMA13", unit: "" };
+    }
     if (requestedCourse === "wme01" || path.includes("/ial/wme01/")) {
       return { id: "mechanics1", label: "Mechanics 1", code: "WME01", unit: "" };
     }
@@ -737,6 +744,7 @@
       "Modular Unit 2": "modular-unit-2",
       "Pure 1": "pure",
       "Pure 2": "pure2",
+      "Pure 3": "pure3",
       "Mechanics 1": "mechanics1",
     })[record?.course] || "";
   }
@@ -860,7 +868,7 @@
     const hash = window.location.hash;
     if (path.includes("/ial/wme01/lab/")) return "Interactive Lab";
     if (page === "notes" || page === "library" || path.endsWith("/notes.html") || path.endsWith("/library.html")) return "Notes";
-    if (path.includes("/ial/wma11/") || path.includes("/ial/wma12/") || path.includes("/ial/wme01/")) {
+    if (path.includes("/ial/wma11/") || path.includes("/ial/wma12/") || path.includes("/ial/wma13/") || path.includes("/ial/wme01/")) {
       if (hash === "#ialNotes") return "Notes";
       if (!hash && !["topic", "mode", "expertise", "bank"].some((key) => params.has(key))) return "Notes";
       if (path.includes("/ial/wme01/")) {
@@ -899,7 +907,7 @@
 
   function activePathwayId() {
     const id = activeNavGroup();
-    if (id === "pure2" || id === "mechanics1") return "pure";
+    if (id === "pure2" || id === "pure3" || id === "mechanics1") return "pure";
     return (id === "linear" || id === "modular" || id === "pure") ? id : "";
   }
 
@@ -926,8 +934,11 @@
       const course = (params.get("course") || document.body?.dataset?.course || "").toLowerCase();
       const isWme01 = pathname.includes("/ial/wme01/") || course === "wme01";
       const isWma12 = pathname.includes("/ial/wma12/") || course === "wma12";
+      const isWma13 = pathname.includes("/ial/wma13/") || course === "wma13";
       crumbs.push(isWme01
         ? { label: "Mechanics 1", sub: "WME01", href: "/ial/wme01/index.html" }
+        : isWma13
+        ? { label: "Pure 3", sub: "WMA13", href: "/ial/wma13/index.html" }
         : isWma12
         ? { label: "Pure 2", sub: "WMA12", href: "/ial/wma12/index.html" }
         : { label: "Pure 1", sub: "WMA11", href: "/ial/wma11/index.html" });
@@ -960,7 +971,7 @@
     if (moduleLabel) {
       // For Pure course landings with no specific module, the last course crumb is already the page.
       const path = window.location.pathname;
-      const isPureLanding = moduleLabel !== "Notes" && pathwayId === "pure" && (path.endsWith("/ial/wma11/index.html") || path.endsWith("/ial/wma12/index.html") || path.endsWith("/ial/wme01/index.html"))
+      const isPureLanding = moduleLabel !== "Notes" && pathwayId === "pure" && (path.endsWith("/ial/wma11/index.html") || path.endsWith("/ial/wma12/index.html") || path.endsWith("/ial/wma13/index.html") || path.endsWith("/ial/wme01/index.html"))
         && !window.location.search && !window.location.hash;
       if (!isPureLanding) {
         crumbs.push({ label: moduleLabel, current: true });
@@ -1138,7 +1149,7 @@
     const groupId = activeNavGroup();
     const group = NAV_GROUPS.find((item) => item.id === groupId);
     applyCoursePalette(group);
-    document.body?.classList.toggle("pathway-pure", groupId === "pure" || groupId === "pure2" || groupId === "mechanics1");
+    document.body?.classList.toggle("pathway-pure", groupId === "pure" || groupId === "pure2" || groupId === "pure3" || groupId === "mechanics1");
     const toolData = activeToolLinks(groupId);
     if (!toolData) return;
     document.body?.classList.add("has-pathway-hub");
@@ -1510,6 +1521,8 @@
 
     if (requestedCourse === "wme01" || page === "ial-wme01" || window.location.pathname.includes("/ial/wme01/")) {
       active = "mechanics1";
+    } else if (requestedCourse === "wma13" || page === "ial-wma13" || window.location.pathname.includes("/ial/wma13/")) {
+      active = "pure3";
     } else if (requestedCourse === "wma12" || page === "ial-wma12" || window.location.pathname.includes("/ial/wma12/")) {
       active = "pure2";
     } else if (requestedCourse === "wma11" || page === "ial-wma11" || window.location.pathname.includes("/ial/wma11/")) {
@@ -1628,8 +1641,8 @@
     if (window.ELITE_STUDY || document.querySelector('script[data-elite-study="compass"]')) return;
     const leadScript = document.querySelector('script[src*="lead.js"]');
     const baseUrl = leadScript?.src || document.baseURI;
-    const dataUrl = new URL("study-search-data.js?v=20261010a", baseUrl).href;
-    const compassUrl = new URL("study-compass.js?v=20261001b", baseUrl).href;
+    const dataUrl = new URL("study-search-data.js?v=20261020a", baseUrl).href;
+    const compassUrl = new URL("study-compass.js?v=20261020w13", baseUrl).href;
 
     function appendScript(src, marker) {
       return new Promise((resolve, reject) => {

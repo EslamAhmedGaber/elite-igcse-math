@@ -7,7 +7,7 @@
       tag: "Whole papers",
       title: "Past Papers Library",
       description: "Linear, Modular, IAL Pure 1, Pure 2, and Mechanics 1 papers are separated clearly, grouped by session, with worked solutions beside the matching paper.",
-      meta: ["Linear 4MA1", "Modular 4WM", "IAL WMA11/WMA12/WME01"],
+      meta: ["Linear 4MA1", "Modular 4WM", "IAL WMA11/WMA12/WMA13/WME01"],
       actions: [{ label: "Open Past Papers", href: "pastpapers.html", variant: "primary" }],
     },
     {
@@ -60,6 +60,8 @@
       pure: "pure",
       wma12: "pure2",
       pure2: "pure2",
+      wma13: "pure3",
+      pure3: "pure3",
       wme01: "mechanics1",
       mechanics1: "mechanics1",
     };
@@ -67,6 +69,7 @@
     const hash = normalizedText(window.location.hash);
     if (hash.includes("wma11")) return "pure";
     if (hash.includes("wma12")) return "pure2";
+    if (hash.includes("wma13")) return "pure3";
     if (hash.includes("wme01")) return "mechanics1";
     return "";
   }

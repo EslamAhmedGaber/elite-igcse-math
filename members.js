@@ -4,7 +4,7 @@
   if (!root) return;
 
   const TEACHERS = (window.ELITE_FIREBASE?.adminEmails || []).map((email) => String(email).toLowerCase());
-  const COURSE_NAMES = { linear: "Linear", unit1: "Modular Unit 1", unit2: "Modular Unit 2", wma11: "Pure 1", wma12: "Pure 2", wme01: "Mechanics 1" };
+  const COURSE_NAMES = { linear: "Linear", unit1: "Modular Unit 1", unit2: "Modular Unit 2", wma11: "Pure 1", wma12: "Pure 2", wma13: "Pure 3", wme01: "Mechanics 1" };
   const DAY = 86400000;
   const els = {
     status: root.querySelector("[data-members-status]"),

@@ -114,6 +114,7 @@
     const requestedCourse = String(params.get("course") || "").toLowerCase();
     if (path.includes("/ial/wme01/") || requestedCourse === "wme01") return "wme01";
     if (path.includes("/ial/wma12/") || requestedCourse === "wma12") return "wma12";
+    if (path.includes("/ial/wma13/") || requestedCourse === "wma13") return "wma13";
     if (path.includes("/ial/wma11/") || requestedCourse === "wma11") return "wma11";
     if (params.get("pathway") === "modular" || document.body.dataset.pathway === "modular") {
       const unit = params.get("unit") || readText("modularUnit", "Unit 1") || "Unit 1";
@@ -133,20 +134,20 @@
     if (page === "progress" || path.endsWith("/progress.html")) return "progress";
     if (page === "exam" || path.endsWith("/exam.html")) return "test";
     if (params.get("mode") === "review" || params.get("mode") === "mistakes") return "repair";
-    const ialLanding = /\/ial\/(wma11|wma12|wme01)\/(?:index\.html)?$/.test(path)
+    const ialLanding = /\/ial\/(wma11|wma12|wma13|wme01)\/(?:index\.html)?$/.test(path)
       && !["topic", "mode", "expertise", "bank"].some((key) => params.has(key))
       && (!hash || hash === "#ialNotes");
     if (ialLanding) return "learn";
     if (page === "notes" || path.endsWith("/notes.html") || hash === "#ialNotes") return "learn";
-    if (page === "practice" || path.endsWith("/practice.html") || /\/ial\/(wma11|wma12|wme01)\//.test(path)) return "practise";
+    if (page === "practice" || path.endsWith("/practice.html") || /\/ial\/(wma11|wma12|wma13|wme01)\//.test(path)) return "practise";
     return "";
   }
 
   function meaningfulRoute() {
     const path = window.location.pathname.toLowerCase();
     const page = document.body.dataset.page || "";
-    return ["notes", "practice", "exam", "progress", "ial-wma11", "ial-wma12", "ial-wme01"].includes(page)
-      || /\/ial\/(wma11|wma12|wme01)\//.test(path);
+    return ["notes", "practice", "exam", "progress", "ial-wma11", "ial-wma12", "ial-wma13", "ial-wme01"].includes(page)
+      || /\/ial\/(wma11|wma12|wma13|wme01)\//.test(path);
   }
 
   function currentRelativeUrl() {
@@ -539,6 +540,7 @@
           <p><a href="/practice.html?pathway=modular&choose=unit">Modular 4WM</a></p>
           <p><a href="/ial/wma11/index.html">Pure 1 WMA11</a></p>
           <p><a href="/ial/wma12/index.html">Pure 2 WMA12</a></p>
+          <p><a href="/ial/wma13/index.html">Pure 3 WMA13</a></p>
           <p><a href="/ial/wme01/index.html">Mechanics 1 WME01</a></p>
         </div>
         <div>

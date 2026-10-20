@@ -73,6 +73,97 @@
         { slug: "09_MomentumImpulseCollisions", title: "Momentum, Impulse & Collisions", href: "downloads/IAL/WME01/Notes/WME01_09_Momentum_Impulse_and_Collisions_Notes_With_Answers.pdf?v=20261001", focus: "before-after tables, impulse, restitution, conservation" },
         { slug: "10_Moments", title: "Moments", href: "downloads/IAL/WME01/Notes/WME01_10_Moments_Notes_With_Answers.pdf?v=20261001", focus: "pivot choice, reactions, equilibrium, tipping" }
       ]
+    },
+    wma13: {
+      "course": "IAL Pure 3",
+      "code": "WMA13",
+      "title": "Pure 3 Notes",
+      "intro": "Visual notes for every Pure 3 topic: key ideas, diagrams, exam tips and worked examples. Read the topic, then practise its classified questions.",
+      "booklet": {
+        "title": "Complete Pure 3 Visual Notes",
+        "href": "downloads/IAL/WMA13/Notes/WMA13_Complete_Visual_Notes.pdf?v=20261020",
+        "detail": "13 topics in one printable book"
+      },
+      "topics": [
+        {
+          "slug": "01_RationalAlgebra",
+          "title": "Rational Algebra",
+          "href": "downloads/IAL/WMA13/Notes/WMA13_01_Rational_Algebra_Visual_Notes.pdf?v=20261020",
+          "focus": "simplifying, partial fractions, rational equations"
+        },
+        {
+          "slug": "02_Functions",
+          "title": "Functions",
+          "href": "downloads/IAL/WMA13/Notes/WMA13_02_Functions_Visual_Notes.pdf?v=20261020",
+          "focus": "domain, range, composite and inverse functions"
+        },
+        {
+          "slug": "03_GraphTransformations",
+          "title": "Graph Transformations",
+          "href": "downloads/IAL/WMA13/Notes/WMA13_03_Graph_Transformations_Visual_Notes.pdf?v=20261020",
+          "focus": "translations, stretches, reflections, sketches"
+        },
+        {
+          "slug": "04_Modulus",
+          "title": "Modulus",
+          "href": "downloads/IAL/WMA13/Notes/WMA13_04_Modulus_Visual_Notes.pdf?v=20261020",
+          "focus": "modulus graphs, equations and inequalities"
+        },
+        {
+          "slug": "05_TrigFunctions",
+          "title": "Trigonometric Functions",
+          "href": "downloads/IAL/WMA13/Notes/WMA13_05_Trig_Functions_Visual_Notes.pdf?v=20261020",
+          "focus": "sec, cosec, cot and inverse trig graphs"
+        },
+        {
+          "slug": "06_TrigIdentities",
+          "title": "Trig Identities",
+          "href": "downloads/IAL/WMA13/Notes/WMA13_06_Trig_Identities_Visual_Notes.pdf?v=20261020",
+          "focus": "addition, double-angle formulae and exact values"
+        },
+        {
+          "slug": "07_TrigEquations",
+          "title": "Trig Equations & R-Form",
+          "href": "downloads/IAL/WMA13/Notes/WMA13_07_Trig_Equations_R_Form_Visual_Notes.pdf?v=20261020",
+          "focus": "harmonic form, max/min, solving in a range"
+        },
+        {
+          "slug": "08_ExponentialsLogs",
+          "title": "Exponentials & Logarithms",
+          "href": "downloads/IAL/WMA13/Notes/WMA13_08_Exp_and_Ln_Visual_Notes.pdf?v=20261020",
+          "focus": "e^x, ln x, solving and rearranging"
+        },
+        {
+          "slug": "09_LogGraphsModels",
+          "title": "Log Graphs & Models",
+          "href": "downloads/IAL/WMA13/Notes/WMA13_09_Log_Graphs_and_Models_Visual_Notes.pdf?v=20261020",
+          "focus": "straight-line log graphs, growth and decay models"
+        },
+        {
+          "slug": "10_DifferentiationTechniques",
+          "title": "Differentiation",
+          "href": "downloads/IAL/WMA13/Notes/WMA13_10_Differentiation_Visual_Notes.pdf?v=20261020",
+          "focus": "chain, product, quotient rules and trig/exp/ln"
+        },
+        {
+          "slug": "11_ApplicationsOfDifferentiation",
+          "title": "Applications of Differentiation",
+          "href": "downloads/IAL/WMA13/Notes/WMA13_11_Applications_of_Differentiation_Visual_Notes.pdf?v=20261020",
+          "focus": "tangents, stationary points, rates, dx/dy"
+        },
+        {
+          "slug": "12_Integration",
+          "title": "Integration",
+          "href": "downloads/IAL/WMA13/Notes/WMA13_12_Integration_Visual_Notes.pdf?v=20261020",
+          "focus": "standard integrals, reverse chain rule, areas"
+        },
+        {
+          "slug": "13_NumericalMethods",
+          "title": "Numerical Methods",
+          "href": "downloads/IAL/WMA13/Notes/WMA13_13_Numerical_Methods_Visual_Notes.pdf?v=20261020",
+          "focus": "change of sign, iteration, Newton-Raphson"
+        }
+      ]
     }
   };
 })();

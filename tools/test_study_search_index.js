@@ -14,9 +14,9 @@ vm.runInNewContext(
 
 const data = sandbox.window.ELITE_STUDY_SEARCH;
 if (!data) throw new Error("Study search index was not exposed");
-if (data.version !== "20261009f") throw new Error(`Unexpected Study search version ${data.version}`);
+if (data.version !== "20261020a") throw new Error(`Unexpected Study search version ${data.version}`);
 
-const expectedCourses = ["linear", "modular1", "modular2", "wma11", "wma12", "wme01"];
+const expectedCourses = ["linear", "modular1", "modular2", "wma11", "wma12", "wma13", "wme01"];
 const actualCourses = new Set(data.courses.map((course) => course.id));
 expectedCourses.forEach((courseId) => {
   if (!actualCourses.has(courseId)) throw new Error(`Missing course ${courseId}`);
@@ -28,7 +28,7 @@ data.courses.forEach((course) => {
   });
 });
 
-if (data.stats.courses !== 6) throw new Error(`Expected 6 courses, found ${data.stats.courses}`);
+if (data.stats.courses !== 7) throw new Error(`Expected 7 courses, found ${data.stats.courses}`);
 if (data.stats.notes < 90) throw new Error(`Expected at least 90 note entries, found ${data.stats.notes}`);
 if (data.stats.topics < 120) throw new Error(`Expected at least 120 topic entries, found ${data.stats.topics}`);
 if (!data.items.some((item) => item.title.includes("Certificates") && item.href === "/admin.html")) {

@@ -196,6 +196,13 @@ const courses = [
     code: "WMA12",
     storage: { solved: "eliteWMA12SolvedV1", mistakes: "eliteWMA12MistakeBoxV1" },
   }),
+  courseFromGroup("pure3", {
+    id: "wma13",
+    label: "IAL Pure 3",
+    shortLabel: "Pure 3",
+    code: "WMA13",
+    storage: { solved: "eliteWMA13SolvedV1", mistakes: "eliteWMA13MistakeBoxV1" },
+  }),
   courseFromGroup("mechanics1", {
     id: "wme01",
     label: "IAL Mechanics 1",
@@ -319,7 +326,7 @@ linearNotes.chapters.forEach((chapter) => {
 
 Object.entries(ialNotes).forEach(([courseId, notePack]) => {
   notePack.topics.forEach((note) => {
-    const topicHref = `/${courseId === "wme01" ? "ial/wme01" : courseId === "wma12" ? "ial/wma12" : "ial/wma11"}/index.html?topic=${encodeURIComponent(note.slug)}#ialFilters`;
+    const topicHref = `/ial/${courseId}/index.html?topic=${encodeURIComponent(note.slug)}#ialFilters`;
     addItem(items, seen, {
       id: `${courseId}:note:${slug(note.title)}`,
       courseId,
@@ -353,7 +360,7 @@ Object.entries(ialNotes).forEach(([courseId, notePack]) => {
 ].forEach((item) => addItem(items, seen, { ...item, courseId: "all", type: "Resource" }));
 
 const output = {
-  version: "20261009f",
+  version: "20261020a",
   generatedAt: new Date().toISOString(),
   courses,
   items,

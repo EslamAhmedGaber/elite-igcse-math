@@ -27,13 +27,13 @@ ASSET_ROOT = ROOT
 DOWNLOADS_DIR = ROOT / "downloads"
 PRIVATE_OUTPUT = ROOT / "private_output"
 GITIGNORE = ROOT / ".gitignore"
-CURRENT_PATHWAY_BOOTSTRAP_VERSION = "baccalaureate-20260902b"
-CURRENT_LEAD_VERSION = "20261020b"
+CURRENT_PATHWAY_BOOTSTRAP_VERSION = "20261020w13"
+CURRENT_LEAD_VERSION = "20261020w13"
 CURRENT_STYLE_VERSION = "20260809a"
-CURRENT_COURSE_MODULES_VERSION = "hub-20261018a"
-CURRENT_STUDY_VERSION = "20261010a"
-CURRENT_COMPASS_VERSION = "20261001b"
-CURRENT_SOLUTION_VERSION = "20261018a"
+CURRENT_COURSE_MODULES_VERSION = "20261020w13"
+CURRENT_STUDY_VERSION = "20261020a"
+CURRENT_COMPASS_VERSION = "20261020w13"
+CURRENT_SOLUTION_VERSION = "20261020w13"
 CURRENT_ELITE_SYSTEM_VERSION = "20260906b"
 CURRENT_RESOURCE_HUB_VERSION = "20260810a"
 CURRENT_PRINT_VERSION = "20260809c"
@@ -147,11 +147,13 @@ ALLOWED_PUBLIC_SOLUTION_DIRS = {
     "downloads/Modular/20260824",
     "downloads/IAL/WMA11/Papers",
     "downloads/IAL/WMA12/Papers",
+    "downloads/IAL/WMA13/Papers",
     "downloads/IAL/WME01/Papers",
     # Owner-authored topic notes with answers are an explicitly public product.
     "downloads/Linear/VisualNotes",
     "downloads/IAL/WMA11/Notes",
     "downloads/IAL/WMA12/Notes",
+    "downloads/IAL/WMA13/Notes",
     "downloads/IAL/WME01/Notes",
 }
 
@@ -166,6 +168,9 @@ ALLOWED_PUBLIC_SOLUTION_FILES = {
     "downloads/IAL/WMA12/WMA12_Classified_With_Answers.pdf",
     "downloads/IAL/WMA12/WMA12_Expertise_With_Answers.pdf",
     "downloads/IAL/WMA12/WMA12_Past_Paper_Solutions.pdf",
+    "downloads/IAL/WMA13/WMA13_Classified_With_Answers.pdf",
+    "downloads/IAL/WMA13/WMA13_Expertise_With_Answers.pdf",
+    "downloads/IAL/WMA13/WMA13_Past_Paper_Solutions.pdf",
     "downloads/IAL/WME01/WME01_Classified_With_Answers.pdf",
     "downloads/IAL/WME01/WME01_Expertise_With_Answers.pdf",
     "downloads/IAL/WME01/WME01_Past_Paper_Solutions.pdf",

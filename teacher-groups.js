@@ -16,6 +16,7 @@
     "modular-2": { label: "IGCSE Modular Unit 2", script: "topic-normalizer.js", topics: () => (window.MODULAR_TOPIC_CATALOG || []).filter((entry) => entry.unit === "Unit 2").map((entry) => ({ name: entry.topic, chapter: "Unit 2" })) },
     wma11: { label: "IAL Pure 1 WMA11", script: "ial/wma11/wma11-data.js?v=20260817b", topics: () => (window.WMA11_TOPICS || []).map((topic) => ({ name: topic.name, chapter: "Pure 1" })) },
     wma12: { label: "IAL Pure 2 WMA12", script: "ial/wma12/wma12-data.js?v=20260611a", topics: () => (window.WMA12_TOPICS || []).map((topic) => ({ name: topic.name, chapter: "Pure 2" })) },
+    wma13: { label: "IAL Pure 3 WMA13", script: "ial/wma13/wma13-data.js?v=wma13-20261020", topics: () => (window.WMA13_TOPICS || []).map((topic) => ({ name: topic.name, chapter: "Pure 3" })) },
     wme01: { label: "IAL Mechanics 1 WME01", script: "ial/wme01/wme01-data.js?v=20260613a", topics: () => (window.WME01_TOPICS || []).map((topic) => ({ name: topic.name, chapter: "Mechanics 1" })) },
     other: { label: "Other / mixed", script: "", topics: () => [] }
   };

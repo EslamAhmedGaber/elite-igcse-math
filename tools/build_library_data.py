@@ -67,6 +67,11 @@ def main(copy):
             c["notes"] = {"complete": [f(b) for b in nm["booklets"] if b["group"] == code],
                           "topics": [{"num": f"{t['number']:02d}", "title": t["title"], **f(t)} for t in tps]}
         lib["courses"][cid] = c
+        if cid == "wma12":
+            # Pure 3 visual notes are published separately (tools/wma13/write_wma13_library.py).
+            extra = os.path.join(HERE, "wma13", "wma13_library.json")
+            if os.path.exists(extra):
+                lib["courses"]["wma13"] = json.load(open(extra, encoding="utf-8"))
 
     for t in topics:
         copies.append((os.path.join(NOTES, t["file"]), t["file"]))

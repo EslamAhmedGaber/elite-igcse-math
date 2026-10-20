@@ -5,13 +5,14 @@
   const pathway = (params.get("pathway") || "").toLowerCase();
   const requested = (params.get("course") || "").toLowerCase();
   const baccalaureate = pathway === "baccalaureate" || requested === "egyptian-baccalaureate" || requested === "baccalaureate";
-  const ialCourse = ["wma11", "wma12", "wme01"].includes(requested)
+  const ialCourse = ["wma11", "wma12", "wma13", "wme01"].includes(requested)
     ? requested
     : pathway === "pure" ? "wma11" : "";
   const dataFiles = {
     baccalaureate: "data/EgyptianBaccalaureate/2026/English/baccalaureate-data.js?v=20260902c",
     wma11: "ial/wma11/wma11-data.js?v=20260527c",
     wma12: "ial/wma12/wma12-data.js?v=20260611a",
+    wma13: "ial/wma13/wma13-data.js?v=wma13-20261020",
     wme01: "ial/wme01/wme01-data.js?v=20260613a"
   };
   const selectedData = baccalaureate ? dataFiles.baccalaureate : ialCourse ? dataFiles[ialCourse] : "questions-data.js?v=20261018a";
@@ -37,7 +38,7 @@
     if (!ialCourse && !baccalaureate) {
       await root.EliteRuntime.loadScript("topic-normalizer.js?v=20261018a", { id: "eliteExamTopicNormalizer" });
     }
-    await root.EliteRuntime.loadScript("exam.js?v=20261018a", { id: "eliteExamApp" });
+    await root.EliteRuntime.loadScript("exam.js?v=20261020w13", { id: "eliteExamApp" });
     setLoading(false);
   }
 

@@ -150,6 +150,12 @@
       accentDeep: "#143da8",
       soft: "rgba(27, 79, 216, 0.08)",
     },
+    amber: {
+      label: "IAL Pure 3",
+      accent: "#1b4fd8",
+      accentDeep: "#143da8",
+      soft: "rgba(27, 79, 216, 0.08)",
+    },
     teal: {
       label: "IAL Mechanics 1",
       accent: "#1b4fd8",
@@ -1665,6 +1671,329 @@
       }
   ];
 
+  const pureWma13PastPapers = [
+      {
+          "heading": "2026",
+          "sessions": [
+              {
+                  "label": "May/June 2026",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2026_MayJune_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2026_MayJune_Solutions.pdf?v=wma13-20261020"
+                      }
+                  ]
+              },
+              {
+                  "label": "Jan 2026",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2026_Jan_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2026_Jan_Solutions.pdf?v=wma13-20261020"
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "heading": "2025",
+          "sessions": [
+              {
+                  "label": "Oct 2025",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2025_Oct_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2025_Oct_Solutions.pdf?v=wma13-20261020"
+                      }
+                  ]
+              },
+              {
+                  "label": "May/June 2025",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2025_MayJune_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2025_MayJune_Solutions.pdf?v=wma13-20261020"
+                      }
+                  ]
+              },
+              {
+                  "label": "Jan 2025",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2025_Jan_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2025_Jan_Solutions.pdf?v=wma13-20261020"
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "heading": "2024",
+          "sessions": [
+              {
+                  "label": "Oct 2024",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2024_Oct_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2024_Oct_Solutions.pdf?v=wma13-20261020"
+                      }
+                  ]
+              },
+              {
+                  "label": "May/June 2024",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2024_MayJune_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2024_MayJune_Solutions.pdf?v=wma13-20261020"
+                      }
+                  ]
+              },
+              {
+                  "label": "Jan 2024",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2024_Jan_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2024_Jan_Solutions.pdf?v=wma13-20261020"
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "heading": "2023",
+          "sessions": [
+              {
+                  "label": "Oct 2023",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2023_Oct_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2023_Oct_Solutions.pdf?v=wma13-20261020"
+                      }
+                  ]
+              },
+              {
+                  "label": "May/June 2023",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2023_MayJune_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2023_MayJune_Solutions.pdf?v=wma13-20261020"
+                      }
+                  ]
+              },
+              {
+                  "label": "Jan 2023",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2023_Jan_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2023_Jan_Solutions.pdf?v=wma13-20261020"
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "heading": "2022",
+          "sessions": [
+              {
+                  "label": "Oct 2022",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2022_Oct_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2022_Oct_Solutions.pdf?v=wma13-20261020"
+                      }
+                  ]
+              },
+              {
+                  "label": "May/June 2022",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2022_MayJune_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2022_MayJune_Solutions.pdf?v=wma13-20261020"
+                      }
+                  ]
+              },
+              {
+                  "label": "Jan 2022",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2022_Jan_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2022_Jan_Solutions.pdf?v=wma13-20261020"
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "heading": "2021",
+          "sessions": [
+              {
+                  "label": "Oct 2021",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2021_Oct_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2021_Oct_Solutions.pdf?v=wma13-20261020"
+                      }
+                  ]
+              },
+              {
+                  "label": "May/June 2021",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2021_MayJune_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2021_MayJune_Solutions.pdf?v=wma13-20261020"
+                      }
+                  ]
+              },
+              {
+                  "label": "Jan 2021",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2021_Jan_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2021_Jan_Solutions.pdf?v=wma13-20261020"
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "heading": "2020",
+          "sessions": [
+              {
+                  "label": "Oct 2020",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2020_Oct_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2020_Oct_Solutions.pdf?v=wma13-20261020"
+                      }
+                  ]
+              },
+              {
+                  "label": "Jan 2020",
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2020_Jan_QP.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Worked solution",
+                          "href": "downloads/IAL/WMA13/Papers/WMA13_2020_Jan_Solutions.pdf?v=wma13-20261020"
+                      }
+                  ]
+              }
+          ]
+      }
+  ];
+
   const wme01SessionGroups = [
     ["2026", [["Jan 2026", "2026_Jan"]]],
     ["2025", [["Oct 2025", "2025_Oct"], ["May/June 2025", "2025_MayJune"], ["Jan 2025", "2025_Jan"]]],
@@ -2163,6 +2492,82 @@
       }
   ];
 
+  const pureWma13Books = [
+      {
+          "className": "pure-book download-note",
+          "tag": "IAL Pure 3",
+          "tagTone": "pure",
+          "title": "Pure 3 Visual Notes",
+          "description": "Visual notes for all 13 Pure 3 topics: key ideas, diagrams, exam tips and worked examples.",
+          "meta": [
+              "Complete book",
+              "By topic",
+              "Exam tips included"
+          ],
+          "actions": [
+              {
+                  "label": "Open notes",
+                  "href": "library.html?pathway=pure&course=wma13#notes",
+                  "variant": "primary"
+              }
+          ]
+      },
+      {
+          "className": "pure-book",
+          "tag": "IAL Pure 3",
+          "tagTone": "pure",
+          "title": "WMA13 Classified Books",
+          "description": "Standalone Edexcel IAL Pure 3 bank from January 2020 to June 2026 with topic practice, expertise books, and worked-solution archives.",
+          "meta": [
+              "190 questions",
+              "13 Pure 3 topics",
+              "Questions + worked answers"
+          ],
+          "actions": [
+              {
+                  "label": "Open WMA13 bank",
+                  "href": "ial/wma13/index.html",
+                  "variant": "primary"
+              },
+              {
+                  "label": "Questions PDF",
+                  "href": "downloads/IAL/WMA13/WMA13_Classified_Questions.pdf?v=wma13-20261020",
+                  "variant": "primary",
+                  "target": "_blank"
+              },
+              {
+                  "label": "Answers PDF",
+                  "href": "downloads/IAL/WMA13/WMA13_Classified_With_Answers.pdf?v=wma13-20261020",
+                  "variant": "solution",
+                  "target": "_blank"
+              },
+              {
+                  "label": "Expertise PDF",
+                  "href": "downloads/IAL/WMA13/WMA13_Expertise_Questions.pdf?v=wma13-20261020",
+                  "variant": "gold",
+                  "target": "_blank"
+              },
+              {
+                  "label": "Expertise + Answers",
+                  "href": "downloads/IAL/WMA13/WMA13_Expertise_With_Answers.pdf?v=wma13-20261020",
+                  "variant": "solution",
+                  "target": "_blank"
+              },
+              {
+                  "label": "Paper rows + solutions",
+                  "href": "pastpapers.html?pathway=pure#pure-wma13",
+                  "variant": "light"
+              },
+              {
+                  "label": "Solution archive PDF",
+                  "href": "downloads/IAL/WMA13/WMA13_Past_Paper_Solutions.pdf?v=wma13-20261020",
+                  "variant": "light",
+                  "target": "_blank"
+              }
+          ]
+      }
+  ];
+
   const pureWme01Books = [
       {
           "className": "pure-book download-note",
@@ -2414,6 +2819,43 @@
       ],
     },
     {
+      id: "pure3",
+      label: "IAL Pure 3",
+      detail: "WMA13",
+      href: "/ial/wma13/index.html",
+      pathway: "pure",
+      course: "wma13",
+      palette: "amber",
+      panelLabel: "WMA13 modules",
+      intro: "Pure 3 uses the full WMA13 bank from January 2020 to June 2026: 180 questions with worked solutions, its own progress keys, builder, books and paper rows.",
+      paperSection: {
+        id: "pure-wma13",
+        className: "pp-section-pure",
+        tag: "IAL Pure 3 | WMA13",
+        tagTone: "pure",
+        title: "Pure 3 paper list",
+        heading: "WMA13 papers",
+        eyebrow: "IAL Pure 3 | Edexcel WMA13",
+        intro: "Newest first. Question paper and matching worked solution stay beside each other.",
+        explainer: "Standalone IAL WMA13 papers from January 2020 to June 2026. Each row puts the original question paper directly beside the worked solution.",
+      },
+      pastPapers: pureWma13PastPapers,
+      books: pureWma13Books,
+      links: [
+        { module: "notes", title: "Notes", detail: "Visual notes", href: "/library.html?pathway=pure&course=wma13#notes" },
+        { module: "classified", title: "Classified View", detail: "Topic practice", href: "/ial/wma13/index.html#ialFilters" },
+        { module: "expertise", title: "Expertise View", detail: "Q6+ filtered bank", href: "/ial/wma13/index.html?expertise=1#ialFilters" },
+        { module: "build-test", title: "Build Test", detail: "Full mock builder", href: "/exam.html?pathway=pure&course=wma13&mode=custom" },
+        { module: "revision-book", title: "Revision Book", detail: "10-100 question mix", href: "/exam.html?pathway=pure&course=wma13&mode=smart&book=revision" },
+        { module: "progress", title: "Progress", detail: "Topic mastery", href: "/progress.html?pathway=pure&course=wma13" },
+        { module: "mistake-box", title: "Mistake Box", detail: "Saved revision", href: "/ial/wma13/index.html?mode=mistakes#ialFilters" },
+        { module: "saved-tests", title: "Saved Tests", detail: "Reuse builder tests", href: "/exam.html?pathway=pure&course=wma13&mode=saved" },
+        { module: "books", title: "Books", detail: "Question and answer PDFs", href: "/downloads.html?pathway=pure#downloads" },
+        { module: "answers", title: "Answer Books", detail: "Worked solution PDFs", href: "/downloads.html?pathway=pure#downloads" },
+        { module: "past-solutions", title: "Past Papers", detail: "Paper + solution rows", href: "/pastpapers.html?pathway=pure#pure-wma13" },
+      ],
+    },
+    {
       id: "mechanics1",
       label: "IAL Mechanics 1",
       detail: "WME01",
@@ -2551,6 +2993,14 @@
             status: "live",
           },
           {
+            id: "pure3",
+            label: "Pure 3",
+            code: "WMA13",
+            palette: "amber",
+            href: "/ial/wma13/index.html",
+            status: "live",
+          },
+          {
             id: "mech1",
             label: "Mechanics 1",
             code: "WME01",
@@ -2608,15 +3058,18 @@
       blurb: "Edexcel International A Level, Pure Mathematics 1" },
     { id: "wma12", name: "Pure 2", code: "WMA12", family: "IAL", group: "pure2", query: "pathway=pure&course=wma12",
       blurb: "Edexcel International A Level, Pure Mathematics 2" },
+    { id: "wma13", name: "Pure 3", code: "WMA13", family: "IAL", group: "pure3", query: "pathway=pure&course=wma13",
+      blurb: "Edexcel International A Level, Pure Mathematics 3" },
     { id: "wme01", name: "Mechanics 1", code: "WME01", family: "IAL", group: "mechanics1", query: "pathway=pure&course=wme01",
       blurb: "Edexcel International A Level, Mechanics 1" },
   ];
 
   function courseFromContext(params, groupId) {
     const course = String(params.get("course") || "").toLowerCase();
-    if (["wma11", "wma12", "wme01"].includes(course)) return course;
+    if (["wma11", "wma12", "wma13", "wme01"].includes(course)) return course;
     if (groupId === "pure") return "wma11";
     if (groupId === "pure2") return "wma12";
+    if (groupId === "pure3") return "wma13";
     if (groupId === "mechanics1") return "wme01";
     const unit = String(params.get("unit") || "").toLowerCase().replace(/[^a-z0-9]/g, "");
     if (unit === "unit1" || unit === "4wm1") return "unit1";

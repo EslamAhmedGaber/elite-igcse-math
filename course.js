@@ -26,6 +26,7 @@
     unit2: { topics: 32, questions: 739, glyph: "x²" },
     wma11: { topics: 13, questions: 189, papers: 19, glyph: "∫" },
     wma12: { topics: 12, questions: 190, papers: 19, glyph: "Σ" },
+    wma13: { topics: 13, questions: 180, papers: 19, glyph: "eˣ" },
     wme01: { topics: 10, questions: 138, papers: 18, glyph: "F" },
   };
 
@@ -66,7 +67,7 @@
     const list = course.unit ? (group.units || []).find((u) => u.title === course.unit)?.links || [] : group.links || [];
     const byModule = {};
     list.forEach((link) => { if (link.module && !byModule[link.module]) byModule[link.module] = link.href; });
-    if (["wma11", "wma12", "wme01"].includes(course.id)) {
+    if (["wma11", "wma12", "wma13", "wme01"].includes(course.id)) {
       byModule.books = `/downloads.html?pathway=pure&course=${course.id}#downloads`;
       byModule["past-solutions"] = `/pastpapers.html?pathway=pure&course=${course.id}#pure-${course.id}`;
     }
@@ -133,6 +134,7 @@
     unit1: "unit1", "4wm1": "unit1", unit2: "unit2", "4wm2": "unit2",
     wma11: "wma11", pure1: "wma11", p1: "wma11",
     wma12: "wma12", pure2: "wma12", p2: "wma12",
+    wma13: "wma13", pure3: "wma13", p3: "wma13",
     wme01: "wme01", mechanics1: "wme01", mech1: "wme01", m1: "wme01"
   };
   const KNOWN_PATHWAYS = ["", "linear", "modular", "pure"];

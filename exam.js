@@ -32,6 +32,20 @@
       questions: () => window.WMA12_QUESTIONS || [],
       storagePrefix: "eliteWMA12"
     },
+    wma13: {
+      id: "wma13",
+      code: "WMA13",
+      unitName: "Pure 3",
+      label: "IAL Pure 3",
+      title: "IAL Pure 3 Revision Book & Test Builder",
+      heroTitle: "Build a full Pure 3 test.",
+      heroCopy: "Use the same builder engine for WMA13: random mocks, hand-built tests, revision books, saved tests, marking, and printable worked solutions.",
+      unitAllLabel: "All Pure 3",
+      pageHref: "ial/wma13/index.html",
+      topics: () => window.WMA13_TOPICS || [],
+      questions: () => window.WMA13_QUESTIONS || [],
+      storagePrefix: "eliteWMA13"
+    },
     wme01: {
       id: "wme01",
       code: "WME01",
@@ -48,7 +62,7 @@
     }
   };
   const requestedIalCourse = requestedCourse
-    || (pathname.includes("/ial/wme01/") ? "wme01" : pathname.includes("/ial/wma12/") ? "wma12" : pathname.includes("/ial/wma11/") ? "wma11" : "");
+    || (pathname.includes("/ial/wme01/") ? "wme01" : pathname.includes("/ial/wma13/") ? "wma13" : pathname.includes("/ial/wma12/") ? "wma12" : pathname.includes("/ial/wma11/") ? "wma11" : "");
   const ialCourse = requestedPathway === "pure" || requestedIalCourse
     ? IAL_COURSES[requestedIalCourse] || IAL_COURSES.wma11
     : null;
@@ -275,7 +289,7 @@
   const questions = course.questions;
   let solutions = course.solutions;
   let fullSolutionsPromise = null;
-  const ialPrintPalettes = { wma11: "pure", wma12: "mulberry", wme01: "teal" };
+  const ialPrintPalettes = { wma11: "pure", wma12: "mulberry", wma13: "pure", wme01: "teal" };
   const activePrintPalette = course.mode === "baccalaureate"
     ? "baccalaureate"
     : course.mode === "pure"

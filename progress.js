@@ -7,6 +7,7 @@
     "Unit 2",
     "WMA11",
     "WMA12",
+    "WMA13",
     "WME01",
     "4WM1H",
     "4WM1HR",
@@ -45,6 +46,16 @@
         topics: window.WMA12_TOPICS || [],
         questions: window.WMA12_QUESTIONS || [],
         storagePrefix: "eliteWMA12"
+      },
+      wma13: {
+        id: "wma13",
+        code: "WMA13",
+        unitName: "Pure 3",
+        label: "IAL Pure 3",
+        pageHref: "ial/wma13/index.html",
+        topics: window.WMA13_TOPICS || [],
+        questions: window.WMA13_QUESTIONS || [],
+        storagePrefix: "eliteWMA13"
       },
       wme01: {
         id: "wme01",
@@ -1280,7 +1291,7 @@
     const value = event.target.value;
     const url = new URL("progress.html", document.baseURI);
     if (value.startsWith("modular-")) { url.searchParams.set("pathway", "modular"); url.searchParams.set("unit", value.endsWith("u2") ? "Unit 2" : "Unit 1"); }
-    else if (["wma11", "wma12", "wme01"].includes(value)) { url.searchParams.set("pathway", "pure"); url.searchParams.set("course", value); }
+    else if (["wma11", "wma12", "wma13", "wme01"].includes(value)) { url.searchParams.set("pathway", "pure"); url.searchParams.set("course", value); }
     else url.searchParams.set("pathway", value);
     window.location.assign(url.href);
   });

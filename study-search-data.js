@@ -1,7 +1,7 @@
 (function () {
   window.ELITE_STUDY_SEARCH = {
-  "version": "20261009f",
-  "generatedAt": "2026-10-10T16:57:20.772Z",
+  "version": "20261020a",
+  "generatedAt": "2026-10-20T11:52:43.381Z",
   "courses": [
     {
       "id": "linear",
@@ -447,6 +447,99 @@
           "title": "Past Papers",
           "detail": "Paper + solution rows",
           "href": "/pastpapers.html?pathway=pure#pure-wma12"
+        }
+      ]
+    },
+    {
+      "id": "wma13",
+      "label": "IAL Pure 3",
+      "code": "WMA13",
+      "shortLabel": "Pure 3",
+      "pathway": "pure",
+      "unit": "",
+      "palette": "amber",
+      "links": {
+        "learn": "/library.html?pathway=pure&course=wma13#notes",
+        "practise": "/ial/wma13/index.html#ialFilters",
+        "expertise": "/ial/wma13/index.html?expertise=1#ialFilters",
+        "test": "/exam.html?pathway=pure&course=wma13&mode=custom",
+        "revise": "/exam.html?pathway=pure&course=wma13&mode=smart&book=revision",
+        "repair": "/ial/wma13/index.html?mode=mistakes#ialFilters",
+        "progress": "/progress.html?pathway=pure&course=wma13",
+        "books": "/downloads.html?pathway=pure#downloads",
+        "papers": "/pastpapers.html?pathway=pure#pure-wma13",
+        "lab": ""
+      },
+      "storage": {
+        "solved": "eliteWMA13SolvedV1",
+        "mistakes": "eliteWMA13MistakeBoxV1"
+      },
+      "modules": [
+        {
+          "module": "notes",
+          "title": "Notes",
+          "detail": "Visual notes",
+          "href": "/library.html?pathway=pure&course=wma13#notes"
+        },
+        {
+          "module": "classified",
+          "title": "Classified View",
+          "detail": "Topic practice",
+          "href": "/ial/wma13/index.html#ialFilters"
+        },
+        {
+          "module": "expertise",
+          "title": "Expertise View",
+          "detail": "Q6+ filtered bank",
+          "href": "/ial/wma13/index.html?expertise=1#ialFilters"
+        },
+        {
+          "module": "build-test",
+          "title": "Build Test",
+          "detail": "Full mock builder",
+          "href": "/exam.html?pathway=pure&course=wma13&mode=custom"
+        },
+        {
+          "module": "revision-book",
+          "title": "Revision Book",
+          "detail": "10-100 question mix",
+          "href": "/exam.html?pathway=pure&course=wma13&mode=smart&book=revision"
+        },
+        {
+          "module": "progress",
+          "title": "Progress",
+          "detail": "Topic mastery",
+          "href": "/progress.html?pathway=pure&course=wma13"
+        },
+        {
+          "module": "mistake-box",
+          "title": "Mistake Box",
+          "detail": "Saved revision",
+          "href": "/ial/wma13/index.html?mode=mistakes#ialFilters"
+        },
+        {
+          "module": "saved-tests",
+          "title": "Saved Tests",
+          "detail": "Reuse builder tests",
+          "href": "/exam.html?pathway=pure&course=wma13&mode=saved"
+        },
+        {
+          "module": "books",
+          "title": "Books",
+          "detail": "Question and answer PDFs",
+          "href": "/downloads.html?pathway=pure#downloads"
+        },
+        {
+          "module": "answers",
+          "title": "Answer Books",
+          "detail": "Worked solution PDFs",
+          "href": "/downloads.html?pathway=pure#downloads"
+        },
+        {
+          "module": "past-solutions",
+          "title": "Past Papers",
+          "detail": "Paper + solution rows",
+          "href": "/pastpapers.html?pathway=pure#pure-wma13"
         }
       ]
     },
@@ -1390,6 +1483,182 @@
       ]
     },
     {
+      "id": "wma13:module:notes",
+      "courseId": "wma13",
+      "type": "Module",
+      "title": "Notes",
+      "detail": "Visual notes",
+      "href": "/library.html?pathway=pure&course=wma13#notes",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "IAL Pure 3",
+        "WMA13",
+        "notes",
+        "tool"
+      ]
+    },
+    {
+      "id": "wma13:module:classified",
+      "courseId": "wma13",
+      "type": "Module",
+      "title": "Classified View",
+      "detail": "Topic practice",
+      "href": "/ial/wma13/index.html#ialFilters",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "IAL Pure 3",
+        "WMA13",
+        "classified",
+        "tool"
+      ]
+    },
+    {
+      "id": "wma13:module:expertise",
+      "courseId": "wma13",
+      "type": "Module",
+      "title": "Expertise View",
+      "detail": "Q6+ filtered bank",
+      "href": "/ial/wma13/index.html?expertise=1#ialFilters",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "IAL Pure 3",
+        "WMA13",
+        "expertise",
+        "tool"
+      ]
+    },
+    {
+      "id": "wma13:module:build-test",
+      "courseId": "wma13",
+      "type": "Module",
+      "title": "Build Test",
+      "detail": "Full mock builder",
+      "href": "/exam.html?pathway=pure&course=wma13&mode=custom",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "IAL Pure 3",
+        "WMA13",
+        "build-test",
+        "tool"
+      ]
+    },
+    {
+      "id": "wma13:module:revision-book",
+      "courseId": "wma13",
+      "type": "Module",
+      "title": "Revision Book",
+      "detail": "10-100 question mix",
+      "href": "/exam.html?pathway=pure&course=wma13&mode=smart&book=revision",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "IAL Pure 3",
+        "WMA13",
+        "revision-book",
+        "tool"
+      ]
+    },
+    {
+      "id": "wma13:module:progress",
+      "courseId": "wma13",
+      "type": "Module",
+      "title": "Progress",
+      "detail": "Topic mastery",
+      "href": "/progress.html?pathway=pure&course=wma13",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "IAL Pure 3",
+        "WMA13",
+        "progress",
+        "tool"
+      ]
+    },
+    {
+      "id": "wma13:module:mistake-box",
+      "courseId": "wma13",
+      "type": "Module",
+      "title": "Mistake Box",
+      "detail": "Saved revision",
+      "href": "/ial/wma13/index.html?mode=mistakes#ialFilters",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "IAL Pure 3",
+        "WMA13",
+        "mistake-box",
+        "tool"
+      ]
+    },
+    {
+      "id": "wma13:module:saved-tests",
+      "courseId": "wma13",
+      "type": "Module",
+      "title": "Saved Tests",
+      "detail": "Reuse builder tests",
+      "href": "/exam.html?pathway=pure&course=wma13&mode=saved",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "IAL Pure 3",
+        "WMA13",
+        "saved-tests",
+        "tool"
+      ]
+    },
+    {
+      "id": "wma13:module:books",
+      "courseId": "wma13",
+      "type": "Module",
+      "title": "Books",
+      "detail": "Question and answer PDFs",
+      "href": "/downloads.html?pathway=pure#downloads",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "IAL Pure 3",
+        "WMA13",
+        "books",
+        "tool"
+      ]
+    },
+    {
+      "id": "wma13:module:answers",
+      "courseId": "wma13",
+      "type": "Module",
+      "title": "Answer Books",
+      "detail": "Worked solution PDFs",
+      "href": "/downloads.html?pathway=pure#downloads",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "IAL Pure 3",
+        "WMA13",
+        "answers",
+        "tool"
+      ]
+    },
+    {
+      "id": "wma13:module:past-solutions",
+      "courseId": "wma13",
+      "type": "Module",
+      "title": "Past Papers",
+      "detail": "Paper + solution rows",
+      "href": "/pastpapers.html?pathway=pure#pure-wma13",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "IAL Pure 3",
+        "WMA13",
+        "past-solutions",
+        "tool"
+      ]
+    },
+    {
       "id": "wme01:module:notes",
       "courseId": "wme01",
       "type": "Module",
@@ -1602,7 +1871,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Linear Graphs",
-      "detail": "Sequences, Functions & Graphs | 40 questions",
+      "detail": "Sequences, Functions & Graphs | 42 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+3%3A+Sequences%2C+Functions+%26+Graphs&topic=Linear+Graphs",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -1633,7 +1902,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Prime Factors, HCF & LCM",
-      "detail": "Numbers & the Number System | 24 questions",
+      "detail": "Numbers & the Number System | 25 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+1%3A+Numbers+%26+the+Number+System&topic=Prime+Factors%2C+HCF+%26+LCM",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -1695,7 +1964,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Statistics Toolkit",
-      "detail": "Statistics & Probability | 52 questions",
+      "detail": "Statistics & Probability | 57 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+6%3A+Statistics+%26+Probability&topic=Statistics+Toolkit",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -1726,7 +1995,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Ratio Toolkit",
-      "detail": "Numbers & the Number System | 13 questions",
+      "detail": "Numbers & the Number System | 14 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+1%3A+Numbers+%26+the+Number+System&topic=Ratio+Toolkit",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -1757,7 +2026,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Standard Form",
-      "detail": "Numbers & the Number System | 29 questions",
+      "detail": "Numbers & the Number System | 31 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+1%3A+Numbers+%26+the+Number+System&topic=Standard+Form",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -1788,7 +2057,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Linear Equations",
-      "detail": "Equations, Formulae & Identities | 17 questions",
+      "detail": "Equations, Formulae & Identities | 18 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+2%3A+Equations%2C+Formulae+%26+Identities&topic=Linear+Equations",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -1819,7 +2088,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Inequalities (Solving & Graphing)",
-      "detail": "Equations, Formulae & Identities | 145 questions",
+      "detail": "Equations, Formulae & Identities | 156 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+2%3A+Equations%2C+Formulae+%26+Identities&topic=Inequalities+%28Solving+%26+Graphing%29",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -1866,7 +2135,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Right-Angled Triangles - Pythagoras & Trigonometry",
-      "detail": "Geometry & Trigonometry | 29 questions",
+      "detail": "Geometry & Trigonometry | 32 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+4%3A+Geometry+%26+Trigonometry&topic=Right-Angled+Triangles+-+Pythagoras+%26+Trigonometry",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -1897,7 +2166,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Compound Interest & Depreciation",
-      "detail": "Numbers & the Number System | 30 questions",
+      "detail": "Numbers & the Number System | 33 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+1%3A+Numbers+%26+the+Number+System&topic=Compound+Interest+%26+Depreciation",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -1928,7 +2197,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Cumulative Frequency Diagrams",
-      "detail": "Statistics & Probability | 12 questions",
+      "detail": "Statistics & Probability | 14 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+6%3A+Statistics+%26+Probability&topic=Cumulative+Frequency+Diagrams",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -1959,7 +2228,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Standard & Compound Units",
-      "detail": "Numbers & the Number System | 37 questions",
+      "detail": "Numbers & the Number System | 41 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+1%3A+Numbers+%26+the+Number+System&topic=Standard+%26+Compound+Units",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2006,7 +2275,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Sine & Cosine Rules",
-      "detail": "Geometry & Trigonometry | 18 questions",
+      "detail": "Geometry & Trigonometry | 20 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+4%3A+Geometry+%26+Trigonometry&topic=Sine+%26+Cosine+Rules",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2037,7 +2306,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Differentiation & Turning Points",
-      "detail": "Sequences, Functions & Graphs | 24 questions",
+      "detail": "Sequences, Functions & Graphs | 25 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+3%3A+Sequences%2C+Functions+%26+Graphs&topic=Differentiation+%26+Turning+Points",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2068,7 +2337,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Rounding, Estimation & Bounds",
-      "detail": "Numbers & the Number System | 27 questions",
+      "detail": "Numbers & the Number System | 30 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+1%3A+Numbers+%26+the+Number+System&topic=Rounding%2C+Estimation+%26+Bounds",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2099,7 +2368,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Algebraic Roots & Indices",
-      "detail": "Equations, Formulae & Identities | 40 questions",
+      "detail": "Equations, Formulae & Identities | 44 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+2%3A+Equations%2C+Formulae+%26+Identities&topic=Algebraic+Roots+%26+Indices",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2146,7 +2415,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Probability Toolkit",
-      "detail": "Statistics & Probability | 34 questions",
+      "detail": "Statistics & Probability | 36 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+6%3A+Statistics+%26+Probability&topic=Probability+Toolkit",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2177,7 +2446,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "3D Pythagoras & Trigonometry",
-      "detail": "Geometry & Trigonometry | 17 questions",
+      "detail": "Geometry & Trigonometry | 18 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+4%3A+Geometry+%26+Trigonometry&topic=3D+Pythagoras+%26+Trigonometry",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2208,7 +2477,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Graphs of Functions",
-      "detail": "Sequences, Functions & Graphs | 22 questions",
+      "detail": "Sequences, Functions & Graphs | 23 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+3%3A+Sequences%2C+Functions+%26+Graphs&topic=Graphs+of+Functions",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2255,7 +2524,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Functions",
-      "detail": "Sequences, Functions & Graphs | 19 questions",
+      "detail": "Sequences, Functions & Graphs | 21 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+3%3A+Sequences%2C+Functions+%26+Graphs&topic=Functions",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2286,7 +2555,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Fractions",
-      "detail": "Numbers & the Number System | 14 questions",
+      "detail": "Numbers & the Number System | 17 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+1%3A+Numbers+%26+the+Number+System&topic=Fractions",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2317,7 +2586,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Rearranging Formulae",
-      "detail": "Equations, Formulae & Identities | 19 questions",
+      "detail": "Equations, Formulae & Identities | 21 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+2%3A+Equations%2C+Formulae+%26+Identities&topic=Rearranging+Formulae",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2348,7 +2617,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Set Notation & Venn Diagrams",
-      "detail": "Statistics & Probability | 28 questions",
+      "detail": "Statistics & Probability | 32 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+6%3A+Statistics+%26+Probability&topic=Set+Notation+%26+Venn+Diagrams",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2410,7 +2679,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Reverse Percentages",
-      "detail": "Numbers & the Number System | 28 questions",
+      "detail": "Numbers & the Number System | 31 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+1%3A+Numbers+%26+the+Number+System&topic=Reverse+Percentages",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2441,7 +2710,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Algebraic Proof",
-      "detail": "Equations, Formulae & Identities | 39 questions",
+      "detail": "Equations, Formulae & Identities | 40 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+2%3A+Equations%2C+Formulae+%26+Identities&topic=Algebraic+Proof",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2488,7 +2757,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Circle Theorems",
-      "detail": "Geometry & Trigonometry | 29 questions",
+      "detail": "Geometry & Trigonometry | 32 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+4%3A+Geometry+%26+Trigonometry&topic=Circle+Theorems",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2519,7 +2788,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Tree Diagrams & Conditional Probability",
-      "detail": "Statistics & Probability | 23 questions",
+      "detail": "Statistics & Probability | 27 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+6%3A+Statistics+%26+Probability&topic=Tree+Diagrams+%26+Conditional+Probability",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2550,7 +2819,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Histograms",
-      "detail": "Statistics & Probability | 14 questions",
+      "detail": "Statistics & Probability | 15 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+6%3A+Statistics+%26+Probability&topic=Histograms",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2581,7 +2850,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Area & Volume of Similar Shapes",
-      "detail": "Geometry & Trigonometry | 17 questions",
+      "detail": "Geometry & Trigonometry | 19 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+4%3A+Geometry+%26+Trigonometry&topic=Area+%26+Volume+of+Similar+Shapes",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2612,7 +2881,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Angles in Polygons & Parallel Lines",
-      "detail": "Geometry & Trigonometry | 18 questions",
+      "detail": "Geometry & Trigonometry | 21 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+4%3A+Geometry+%26+Trigonometry&topic=Angles+in+Polygons+%26+Parallel+Lines",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2674,7 +2943,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Surds",
-      "detail": "Numbers & the Number System | 11 questions",
+      "detail": "Numbers & the Number System | 12 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+1%3A+Numbers+%26+the+Number+System&topic=Surds",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2705,7 +2974,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Transformations of Graphs",
-      "detail": "Sequences, Functions & Graphs | 15 questions",
+      "detail": "Sequences, Functions & Graphs | 17 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+3%3A+Sequences%2C+Functions+%26+Graphs&topic=Transformations+of+Graphs",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2736,7 +3005,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Vectors",
-      "detail": "Vectors & Transformation Geometry | 23 questions",
+      "detail": "Vectors & Transformation Geometry | 26 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+5%3A+Vectors+%26+Transformation+Geometry&topic=Vectors",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2767,7 +3036,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Algebraic Fractions",
-      "detail": "Equations, Formulae & Identities | 25 questions",
+      "detail": "Equations, Formulae & Identities | 27 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+2%3A+Equations%2C+Formulae+%26+Identities&topic=Algebraic+Fractions",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2814,7 +3083,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Sequences",
-      "detail": "Sequences, Functions & Graphs | 29 questions",
+      "detail": "Sequences, Functions & Graphs | 33 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+3%3A+Sequences%2C+Functions+%26+Graphs&topic=Sequences",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2845,7 +3114,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Volume & Surface Area",
-      "detail": "Geometry & Trigonometry | 23 questions",
+      "detail": "Geometry & Trigonometry | 24 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+4%3A+Geometry+%26+Trigonometry&topic=Volume+%26+Surface+Area",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2923,7 +3192,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Simultaneous Equations",
-      "detail": "Equations, Formulae & Identities | 33 questions",
+      "detail": "Equations, Formulae & Identities | 37 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+2%3A+Equations%2C+Formulae+%26+Identities&topic=Simultaneous+Equations",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -2985,7 +3254,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Completing the Square",
-      "detail": "Equations, Formulae & Identities | 16 questions",
+      "detail": "Equations, Formulae & Identities | 17 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+2%3A+Equations%2C+Formulae+%26+Identities&topic=Completing+the+Square",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -3012,11 +3281,27 @@
       ]
     },
     {
+      "id": "modular2:topic:completing-the-square",
+      "courseId": "modular2",
+      "type": "Topic",
+      "title": "Completing the Square",
+      "detail": "Unit 2 classified practice",
+      "href": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Completing+the+Square",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "Unit 2",
+        "4WM",
+        "classified",
+        "practice"
+      ]
+    },
+    {
       "id": "linear:topic:factorising",
       "courseId": "linear",
       "type": "Topic",
       "title": "Factorising",
-      "detail": "Equations, Formulae & Identities | 19 questions",
+      "detail": "Equations, Formulae & Identities | 20 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+2%3A+Equations%2C+Formulae+%26+Identities&topic=Factorising",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -3047,7 +3332,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Expanding Brackets",
-      "detail": "Equations, Formulae & Identities | 20 questions",
+      "detail": "Equations, Formulae & Identities | 21 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+2%3A+Equations%2C+Formulae+%26+Identities&topic=Expanding+Brackets",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -3109,7 +3394,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Percentages",
-      "detail": "Numbers & the Number System | 10 questions",
+      "detail": "Numbers & the Number System | 11 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+1%3A+Numbers+%26+the+Number+System&topic=Percentages",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -3140,7 +3425,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Circles, Arcs & Sectors",
-      "detail": "Geometry & Trigonometry | 16 questions",
+      "detail": "Geometry & Trigonometry | 17 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+4%3A+Geometry+%26+Trigonometry&topic=Circles%2C+Arcs+%26+Sectors",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -3171,7 +3456,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Transformations",
-      "detail": "Vectors & Transformation Geometry | 8 questions",
+      "detail": "Vectors & Transformation Geometry | 9 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+5%3A+Vectors+%26+Transformation+Geometry&topic=Transformations",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -3202,7 +3487,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Direct & Inverse Proportion",
-      "detail": "Sequences, Functions & Graphs | 14 questions",
+      "detail": "Sequences, Functions & Graphs | 16 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+3%3A+Sequences%2C+Functions+%26+Graphs&topic=Direct+%26+Inverse+Proportion",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -3295,7 +3580,7 @@
       "courseId": "linear",
       "type": "Topic",
       "title": "Number Toolkit",
-      "detail": "Numbers & the Number System | 1 questions",
+      "detail": "Numbers & the Number System | 3 questions",
       "href": "/practice.html?pathway=linear&bank=all&unit=Chapter+1%3A+Numbers+%26+the+Number+System&topic=Number+Toolkit",
       "secondaryHref": "",
       "secondaryLabel": "",
@@ -3316,6 +3601,22 @@
       "secondaryLabel": "",
       "keywords": [
         "Unit 1",
+        "4WM",
+        "classified",
+        "practice"
+      ]
+    },
+    {
+      "id": "modular2:topic:number-toolkit",
+      "courseId": "modular2",
+      "type": "Topic",
+      "title": "Number Toolkit",
+      "detail": "Unit 2 classified practice",
+      "href": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Number+Toolkit",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "Unit 2",
         "4WM",
         "classified",
         "practice"
@@ -3350,6 +3651,23 @@
         "Prime factor structure, Standard form conversion, Fractions and decimals",
         "Chapter 1: Number",
         "Unit 1",
+        "strategy",
+        "shared notes"
+      ]
+    },
+    {
+      "id": "modular2:note:number-toolkit",
+      "courseId": "modular2",
+      "type": "Note",
+      "title": "Number Toolkit",
+      "detail": "Shared strategy note | Unit 2",
+      "href": "/downloads/Linear/VisualNotes/C1_T01_Number_Toolkit/Number_Toolkit_Visual_Notes.pdf?v=20261009c",
+      "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Number+Toolkit",
+      "secondaryLabel": "Practice",
+      "keywords": [
+        "Prime factor structure, Standard form conversion, Fractions and decimals",
+        "Chapter 1: Number",
+        "Unit 2",
         "strategy",
         "shared notes"
       ]
@@ -3909,6 +4227,23 @@
         "Halve the coefficient of x, Add and subtract the square, Find turning point form",
         "Chapter 2: Algebra",
         "Unit 1",
+        "strategy",
+        "shared notes"
+      ]
+    },
+    {
+      "id": "modular2:note:completing-the-square",
+      "courseId": "modular2",
+      "type": "Note",
+      "title": "Completing the Square",
+      "detail": "Shared strategy note | Unit 2",
+      "href": "/downloads/Linear/VisualNotes/C2_T05_Completing_the_Square/Completing_the_Square_Visual_Notes.pdf?v=20261009c",
+      "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Completing+the+Square",
+      "secondaryLabel": "Practice",
+      "keywords": [
+        "Halve the coefficient of x, Add and subtract the square, Find turning point form",
+        "Chapter 2: Algebra",
+        "Unit 2",
         "strategy",
         "shared notes"
       ]
@@ -6246,7 +6581,449 @@
       ]
     },
     {
-      "id": "all:resource:teacher-studio-certificates:352",
+      "id": "wma13:note:rational-algebra",
+      "courseId": "wma13",
+      "type": "Note",
+      "title": "Rational Algebra",
+      "detail": "WMA13 strategy note",
+      "href": "/downloads/IAL/WMA13/Notes/WMA13_01_Rational_Algebra_Visual_Notes.pdf?v=20261020",
+      "secondaryHref": "/ial/wma13/index.html?topic=01_RationalAlgebra#ialFilters",
+      "secondaryLabel": "Practice",
+      "keywords": [
+        "simplifying, partial fractions, rational equations",
+        "IAL Pure 3",
+        "WMA13",
+        "strategy",
+        "booklet"
+      ]
+    },
+    {
+      "id": "wma13:topic:rational-algebra",
+      "courseId": "wma13",
+      "type": "Topic",
+      "title": "Rational Algebra",
+      "detail": "WMA13 classified practice",
+      "href": "/ial/wma13/index.html?topic=01_RationalAlgebra#ialFilters",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "simplifying, partial fractions, rational equations",
+        "IAL Pure 3",
+        "WMA13",
+        "classified",
+        "practice"
+      ]
+    },
+    {
+      "id": "wma13:note:functions",
+      "courseId": "wma13",
+      "type": "Note",
+      "title": "Functions",
+      "detail": "WMA13 strategy note",
+      "href": "/downloads/IAL/WMA13/Notes/WMA13_02_Functions_Visual_Notes.pdf?v=20261020",
+      "secondaryHref": "/ial/wma13/index.html?topic=02_Functions#ialFilters",
+      "secondaryLabel": "Practice",
+      "keywords": [
+        "domain, range, composite and inverse functions",
+        "IAL Pure 3",
+        "WMA13",
+        "strategy",
+        "booklet"
+      ]
+    },
+    {
+      "id": "wma13:topic:functions",
+      "courseId": "wma13",
+      "type": "Topic",
+      "title": "Functions",
+      "detail": "WMA13 classified practice",
+      "href": "/ial/wma13/index.html?topic=02_Functions#ialFilters",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "domain, range, composite and inverse functions",
+        "IAL Pure 3",
+        "WMA13",
+        "classified",
+        "practice"
+      ]
+    },
+    {
+      "id": "wma13:note:graph-transformations",
+      "courseId": "wma13",
+      "type": "Note",
+      "title": "Graph Transformations",
+      "detail": "WMA13 strategy note",
+      "href": "/downloads/IAL/WMA13/Notes/WMA13_03_Graph_Transformations_Visual_Notes.pdf?v=20261020",
+      "secondaryHref": "/ial/wma13/index.html?topic=03_GraphTransformations#ialFilters",
+      "secondaryLabel": "Practice",
+      "keywords": [
+        "translations, stretches, reflections, sketches",
+        "IAL Pure 3",
+        "WMA13",
+        "strategy",
+        "booklet"
+      ]
+    },
+    {
+      "id": "wma13:topic:graph-transformations",
+      "courseId": "wma13",
+      "type": "Topic",
+      "title": "Graph Transformations",
+      "detail": "WMA13 classified practice",
+      "href": "/ial/wma13/index.html?topic=03_GraphTransformations#ialFilters",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "translations, stretches, reflections, sketches",
+        "IAL Pure 3",
+        "WMA13",
+        "classified",
+        "practice"
+      ]
+    },
+    {
+      "id": "wma13:note:modulus",
+      "courseId": "wma13",
+      "type": "Note",
+      "title": "Modulus",
+      "detail": "WMA13 strategy note",
+      "href": "/downloads/IAL/WMA13/Notes/WMA13_04_Modulus_Visual_Notes.pdf?v=20261020",
+      "secondaryHref": "/ial/wma13/index.html?topic=04_Modulus#ialFilters",
+      "secondaryLabel": "Practice",
+      "keywords": [
+        "modulus graphs, equations and inequalities",
+        "IAL Pure 3",
+        "WMA13",
+        "strategy",
+        "booklet"
+      ]
+    },
+    {
+      "id": "wma13:topic:modulus",
+      "courseId": "wma13",
+      "type": "Topic",
+      "title": "Modulus",
+      "detail": "WMA13 classified practice",
+      "href": "/ial/wma13/index.html?topic=04_Modulus#ialFilters",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "modulus graphs, equations and inequalities",
+        "IAL Pure 3",
+        "WMA13",
+        "classified",
+        "practice"
+      ]
+    },
+    {
+      "id": "wma13:note:trigonometric-functions",
+      "courseId": "wma13",
+      "type": "Note",
+      "title": "Trigonometric Functions",
+      "detail": "WMA13 strategy note",
+      "href": "/downloads/IAL/WMA13/Notes/WMA13_05_Trig_Functions_Visual_Notes.pdf?v=20261020",
+      "secondaryHref": "/ial/wma13/index.html?topic=05_TrigFunctions#ialFilters",
+      "secondaryLabel": "Practice",
+      "keywords": [
+        "sec, cosec, cot and inverse trig graphs",
+        "IAL Pure 3",
+        "WMA13",
+        "strategy",
+        "booklet"
+      ]
+    },
+    {
+      "id": "wma13:topic:trigonometric-functions",
+      "courseId": "wma13",
+      "type": "Topic",
+      "title": "Trigonometric Functions",
+      "detail": "WMA13 classified practice",
+      "href": "/ial/wma13/index.html?topic=05_TrigFunctions#ialFilters",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "sec, cosec, cot and inverse trig graphs",
+        "IAL Pure 3",
+        "WMA13",
+        "classified",
+        "practice"
+      ]
+    },
+    {
+      "id": "wma13:note:trig-identities",
+      "courseId": "wma13",
+      "type": "Note",
+      "title": "Trig Identities",
+      "detail": "WMA13 strategy note",
+      "href": "/downloads/IAL/WMA13/Notes/WMA13_06_Trig_Identities_Visual_Notes.pdf?v=20261020",
+      "secondaryHref": "/ial/wma13/index.html?topic=06_TrigIdentities#ialFilters",
+      "secondaryLabel": "Practice",
+      "keywords": [
+        "addition, double-angle formulae and exact values",
+        "IAL Pure 3",
+        "WMA13",
+        "strategy",
+        "booklet"
+      ]
+    },
+    {
+      "id": "wma13:topic:trig-identities",
+      "courseId": "wma13",
+      "type": "Topic",
+      "title": "Trig Identities",
+      "detail": "WMA13 classified practice",
+      "href": "/ial/wma13/index.html?topic=06_TrigIdentities#ialFilters",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "addition, double-angle formulae and exact values",
+        "IAL Pure 3",
+        "WMA13",
+        "classified",
+        "practice"
+      ]
+    },
+    {
+      "id": "wma13:note:trig-equations-r-form",
+      "courseId": "wma13",
+      "type": "Note",
+      "title": "Trig Equations & R-Form",
+      "detail": "WMA13 strategy note",
+      "href": "/downloads/IAL/WMA13/Notes/WMA13_07_Trig_Equations_R_Form_Visual_Notes.pdf?v=20261020",
+      "secondaryHref": "/ial/wma13/index.html?topic=07_TrigEquations#ialFilters",
+      "secondaryLabel": "Practice",
+      "keywords": [
+        "harmonic form, max/min, solving in a range",
+        "IAL Pure 3",
+        "WMA13",
+        "strategy",
+        "booklet"
+      ]
+    },
+    {
+      "id": "wma13:topic:trig-equations-r-form",
+      "courseId": "wma13",
+      "type": "Topic",
+      "title": "Trig Equations & R-Form",
+      "detail": "WMA13 classified practice",
+      "href": "/ial/wma13/index.html?topic=07_TrigEquations#ialFilters",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "harmonic form, max/min, solving in a range",
+        "IAL Pure 3",
+        "WMA13",
+        "classified",
+        "practice"
+      ]
+    },
+    {
+      "id": "wma13:note:exponentials-logarithms",
+      "courseId": "wma13",
+      "type": "Note",
+      "title": "Exponentials & Logarithms",
+      "detail": "WMA13 strategy note",
+      "href": "/downloads/IAL/WMA13/Notes/WMA13_08_Exp_and_Ln_Visual_Notes.pdf?v=20261020",
+      "secondaryHref": "/ial/wma13/index.html?topic=08_ExponentialsLogs#ialFilters",
+      "secondaryLabel": "Practice",
+      "keywords": [
+        "e^x, ln x, solving and rearranging",
+        "IAL Pure 3",
+        "WMA13",
+        "strategy",
+        "booklet"
+      ]
+    },
+    {
+      "id": "wma13:topic:exponentials-logarithms",
+      "courseId": "wma13",
+      "type": "Topic",
+      "title": "Exponentials & Logarithms",
+      "detail": "WMA13 classified practice",
+      "href": "/ial/wma13/index.html?topic=08_ExponentialsLogs#ialFilters",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "e^x, ln x, solving and rearranging",
+        "IAL Pure 3",
+        "WMA13",
+        "classified",
+        "practice"
+      ]
+    },
+    {
+      "id": "wma13:note:log-graphs-models",
+      "courseId": "wma13",
+      "type": "Note",
+      "title": "Log Graphs & Models",
+      "detail": "WMA13 strategy note",
+      "href": "/downloads/IAL/WMA13/Notes/WMA13_09_Log_Graphs_and_Models_Visual_Notes.pdf?v=20261020",
+      "secondaryHref": "/ial/wma13/index.html?topic=09_LogGraphsModels#ialFilters",
+      "secondaryLabel": "Practice",
+      "keywords": [
+        "straight-line log graphs, growth and decay models",
+        "IAL Pure 3",
+        "WMA13",
+        "strategy",
+        "booklet"
+      ]
+    },
+    {
+      "id": "wma13:topic:log-graphs-models",
+      "courseId": "wma13",
+      "type": "Topic",
+      "title": "Log Graphs & Models",
+      "detail": "WMA13 classified practice",
+      "href": "/ial/wma13/index.html?topic=09_LogGraphsModels#ialFilters",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "straight-line log graphs, growth and decay models",
+        "IAL Pure 3",
+        "WMA13",
+        "classified",
+        "practice"
+      ]
+    },
+    {
+      "id": "wma13:note:differentiation",
+      "courseId": "wma13",
+      "type": "Note",
+      "title": "Differentiation",
+      "detail": "WMA13 strategy note",
+      "href": "/downloads/IAL/WMA13/Notes/WMA13_10_Differentiation_Visual_Notes.pdf?v=20261020",
+      "secondaryHref": "/ial/wma13/index.html?topic=10_DifferentiationTechniques#ialFilters",
+      "secondaryLabel": "Practice",
+      "keywords": [
+        "chain, product, quotient rules and trig/exp/ln",
+        "IAL Pure 3",
+        "WMA13",
+        "strategy",
+        "booklet"
+      ]
+    },
+    {
+      "id": "wma13:topic:differentiation",
+      "courseId": "wma13",
+      "type": "Topic",
+      "title": "Differentiation",
+      "detail": "WMA13 classified practice",
+      "href": "/ial/wma13/index.html?topic=10_DifferentiationTechniques#ialFilters",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "chain, product, quotient rules and trig/exp/ln",
+        "IAL Pure 3",
+        "WMA13",
+        "classified",
+        "practice"
+      ]
+    },
+    {
+      "id": "wma13:note:applications-of-differentiation",
+      "courseId": "wma13",
+      "type": "Note",
+      "title": "Applications of Differentiation",
+      "detail": "WMA13 strategy note",
+      "href": "/downloads/IAL/WMA13/Notes/WMA13_11_Applications_of_Differentiation_Visual_Notes.pdf?v=20261020",
+      "secondaryHref": "/ial/wma13/index.html?topic=11_ApplicationsOfDifferentiation#ialFilters",
+      "secondaryLabel": "Practice",
+      "keywords": [
+        "tangents, stationary points, rates, dx/dy",
+        "IAL Pure 3",
+        "WMA13",
+        "strategy",
+        "booklet"
+      ]
+    },
+    {
+      "id": "wma13:topic:applications-of-differentiation",
+      "courseId": "wma13",
+      "type": "Topic",
+      "title": "Applications of Differentiation",
+      "detail": "WMA13 classified practice",
+      "href": "/ial/wma13/index.html?topic=11_ApplicationsOfDifferentiation#ialFilters",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "tangents, stationary points, rates, dx/dy",
+        "IAL Pure 3",
+        "WMA13",
+        "classified",
+        "practice"
+      ]
+    },
+    {
+      "id": "wma13:note:integration",
+      "courseId": "wma13",
+      "type": "Note",
+      "title": "Integration",
+      "detail": "WMA13 strategy note",
+      "href": "/downloads/IAL/WMA13/Notes/WMA13_12_Integration_Visual_Notes.pdf?v=20261020",
+      "secondaryHref": "/ial/wma13/index.html?topic=12_Integration#ialFilters",
+      "secondaryLabel": "Practice",
+      "keywords": [
+        "standard integrals, reverse chain rule, areas",
+        "IAL Pure 3",
+        "WMA13",
+        "strategy",
+        "booklet"
+      ]
+    },
+    {
+      "id": "wma13:topic:integration",
+      "courseId": "wma13",
+      "type": "Topic",
+      "title": "Integration",
+      "detail": "WMA13 classified practice",
+      "href": "/ial/wma13/index.html?topic=12_Integration#ialFilters",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "standard integrals, reverse chain rule, areas",
+        "IAL Pure 3",
+        "WMA13",
+        "classified",
+        "practice"
+      ]
+    },
+    {
+      "id": "wma13:note:numerical-methods",
+      "courseId": "wma13",
+      "type": "Note",
+      "title": "Numerical Methods",
+      "detail": "WMA13 strategy note",
+      "href": "/downloads/IAL/WMA13/Notes/WMA13_13_Numerical_Methods_Visual_Notes.pdf?v=20261020",
+      "secondaryHref": "/ial/wma13/index.html?topic=13_NumericalMethods#ialFilters",
+      "secondaryLabel": "Practice",
+      "keywords": [
+        "change of sign, iteration, Newton-Raphson",
+        "IAL Pure 3",
+        "WMA13",
+        "strategy",
+        "booklet"
+      ]
+    },
+    {
+      "id": "wma13:topic:numerical-methods",
+      "courseId": "wma13",
+      "type": "Topic",
+      "title": "Numerical Methods",
+      "detail": "WMA13 classified practice",
+      "href": "/ial/wma13/index.html?topic=13_NumericalMethods#ialFilters",
+      "secondaryHref": "",
+      "secondaryLabel": "",
+      "keywords": [
+        "change of sign, iteration, Newton-Raphson",
+        "IAL Pure 3",
+        "WMA13",
+        "classified",
+        "practice"
+      ]
+    },
+    {
+      "id": "all:resource:teacher-studio-certificates:393",
       "courseId": "all",
       "type": "Resource",
       "title": "Teacher Studio & Certificates",
@@ -6262,7 +7039,7 @@
       ]
     },
     {
-      "id": "all:resource:readiness-check:353",
+      "id": "all:resource:readiness-check:394",
       "courseId": "all",
       "type": "Resource",
       "title": "Readiness Check",
@@ -6277,7 +7054,7 @@
       ]
     },
     {
-      "id": "all:resource:download-centre:354",
+      "id": "all:resource:download-centre:395",
       "courseId": "all",
       "type": "Resource",
       "title": "Download Centre",
@@ -6292,7 +7069,7 @@
       ]
     },
     {
-      "id": "all:resource:past-papers:355",
+      "id": "all:resource:past-papers:396",
       "courseId": "all",
       "type": "Resource",
       "title": "Past Papers",
@@ -6307,7 +7084,7 @@
       ]
     },
     {
-      "id": "all:resource:topic-roadmap:356",
+      "id": "all:resource:topic-roadmap:397",
       "courseId": "all",
       "type": "Resource",
       "title": "Topic Roadmap",
@@ -6322,7 +7099,7 @@
       ]
     },
     {
-      "id": "all:resource:about-dr-eslam:357",
+      "id": "all:resource:about-dr-eslam:398",
       "courseId": "all",
       "type": "Resource",
       "title": "About Dr Eslam",
@@ -6338,10 +7115,10 @@
     }
   ],
   "stats": {
-    "courses": 6,
-    "modules": 65,
-    "topics": 146,
-    "notes": 141,
+    "courses": 7,
+    "modules": 76,
+    "topics": 161,
+    "notes": 156,
     "resources": 6
   }
 };

@@ -44,10 +44,11 @@
       .replace(/<br\s*\/?\s*>/gi, "\n")
       .replace(/<\/(?:div|p|section|li)>\s*<(?:div|p|section|li)[^>]*>/gi, "\n\n")
       .replace(/<\/(?:div|p|section)>/gi, "\n\n")
-      .replace(/<(?:div|p|section)[^>]*>/gi, "")
-      .replace(/<li[^>]*>/gi, "- ")
+      .replace(/<(?:div|p|section)(?=[\s>])[^>]*>/gi, "")
+      .replace(/<li(?=[\s>])[^>]*>/gi, "- ")
       .replace(/<\/(?:li)>/gi, "\n")
-      .replace(/<(?!\/?(?:sup|sub|strong|em|code)\b)[^>]+>/gi, "")
+      // Only real tag shapes ("<name ...>", "</name>", "<name/>"): maths such as "$p<-\frac23$ or $p>4$" must survive.
+      .replace(/<(?=\/?[a-z][a-z0-9-]*(?:\s[^>]*)?\/?>)(?!\/?(?:sup|sub|strong|em|code)\b)[^>]+>/gi, "")
       .replace(/\n{3,}/g, "\n\n")
       .trim();
     return normalizeDollarMath(text);

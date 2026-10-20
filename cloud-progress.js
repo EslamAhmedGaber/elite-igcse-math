@@ -39,10 +39,11 @@
   // Add a new course or tool here and it syncs everywhere: no other change needed.
   const EXTRA_SYNC_KEYS = [
     "eliteWMA12SolvedV1", "eliteWMA12MistakeBoxV1",
+    "eliteWMA13SolvedV1", "eliteWMA13MistakeBoxV1",
     "eliteWME01SolvedV1", "eliteWME01MistakeBoxV1",
-    "eliteWMA11FinalTrainerV1", "eliteWMA12FinalTrainerV1", "eliteWME01FinalTrainerV1",
+    "eliteWMA11FinalTrainerV1", "eliteWMA12FinalTrainerV1", "eliteWMA13FinalTrainerV1", "eliteWME01FinalTrainerV1",
     "eliteFinalAnswerTrainerV1", "eliteNotesStudiedV1", "eliteSavedTestsV1",
-    "eliteMockExamV1:wma11", "eliteMockExamV1:wma12", "eliteMockExamV1:wme01"
+    "eliteMockExamV1:wma11", "eliteMockExamV1:wma12", "eliteMockExamV1:wma13", "eliteMockExamV1:wme01"
   ];
   // Firestore documents are limited to 1 MiB; leave room for the core payload.
   const EXTRA_BUDGET_BYTES = 600000;
@@ -202,7 +203,7 @@
   const STATS_KEYS = [
     "v", "u", "n", "dm", "dd",
     "pv_home", "pv_course", "pv_practice", "pv_notes", "pv_papers", "pv_books", "pv_exam", "pv_progress", "pv_ial", "pv_about", "pv_bacc", "pv_other",
-    "c_linear", "c_unit1", "c_unit2", "c_wma11", "c_wma12", "c_wme01",
+    "c_linear", "c_unit1", "c_unit2", "c_wma11", "c_wma12", "c_wma13", "c_wme01",
     "t_notes", "t_books", "t_past_solutions", "t_build_test", "t_progress", "t_classified", "t_expertise", "t_revision_book", "t_mistake_box", "t_saved_tests", "t_interactive_lab", "t_question_visualizer",
     "e_pdf", "e_print", "e_solved", "e_mistake", "e_saved", "e_signin", "e_invite", "e_invite_click", "e_whatsapp",
     "g_eg", "g_qa", "g_ae", "g_sa", "g_kw", "g_om", "g_bh", "g_jo", "g_gb", "g_other"
@@ -322,10 +323,10 @@
     const params = new URLSearchParams(window.location.search);
     const path = window.location.pathname.toLowerCase();
     const named = String(params.get("c") || params.get("course") || "").toLowerCase().replace(/[^a-z0-9]/g, "");
-    const aliases = { p1: "wma11", pure1: "wma11", p2: "wma12", pure2: "wma12", m1: "wme01", mech1: "wme01", mechanics1: "wme01", "4ma1": "linear", "4wm1": "unit1", "4wm2": "unit2" };
+    const aliases = { p1: "wma11", pure1: "wma11", p2: "wma12", pure2: "wma12", p3: "wma13", pure3: "wma13", m1: "wme01", mech1: "wme01", mechanics1: "wme01", "4ma1": "linear", "4wm1": "unit1", "4wm2": "unit2" };
     const fromName = aliases[named] || named;
-    if (["linear", "unit1", "unit2", "wma11", "wma12", "wme01"].includes(fromName)) return `c_${fromName}`;
-    const ial = path.match(/\/ial\/(wma11|wma12|wme01)\//);
+    if (["linear", "unit1", "unit2", "wma11", "wma12", "wma13", "wme01"].includes(fromName)) return `c_${fromName}`;
+    const ial = path.match(/\/ial\/(wma11|wma12|wma13|wme01)\//);
     if (ial) return `c_${ial[1]}`;
     const unit = String(params.get("unit") || "").toLowerCase().replace(/[^a-z0-9]/g, "");
     if (unit === "unit1" || unit === "unit2") return `c_${unit}`;
