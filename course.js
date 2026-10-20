@@ -18,23 +18,37 @@
     "question-visualizer": '<circle cx="12" cy="12" r="3"/><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/>',
   };
 
-  // what each big card says; the link itself comes from the shared course registry
-  const SERVICES = [
-    ["notes", "Notes", "Topic notes with answers"],
-    ["books", "Classified Books", "Classified and Expertise PDFs"],
-    ["past-solutions", "Past Papers & Solutions", "Each paper beside its worked solution"],
-    ["build-test", "Mock Generator", "Random or custom printable tests"],
-    ["progress", "Progress", "Your mastery and next weak topic"],
-  ];
-  const LAB = ["interactive-lab", "Mechanics Lab", "Interactive simulations"];
-  const VISUAL = ["interactive-lab", "Visual Lab", "Hard topics you can move and rotate"];
-  const PRACTICE = [
-    ["classified", "Classified Practice", "Solve online by topic"],
-    ["expertise", "Expertise", "The harder questions"],
-    ["revision-book", "Revision Book", "10-100 question mix"],
-    ["mistake-box", "Mistake Box", "Questions to redo"],
-    ["saved-tests", "Saved Tests", "Reuse your tests"],
-    ["question-visualizer", "Question Visualizer", "Paper images + simulations"],
+  // Real counts (checked 2026-10-20): questions = the course's classified bank as the
+  // practice page shows it; topics = topic notes; papers = classified past papers.
+  const FACTS = {
+    linear: { topics: 58, questions: 1280, papers: 60, glyph: "π" },
+    unit1: { topics: 29, questions: 543, glyph: "√" },
+    unit2: { topics: 32, questions: 739, glyph: "x²" },
+    wma11: { topics: 13, questions: 189, papers: 19, glyph: "∫" },
+    wma12: { topics: 12, questions: 190, papers: 19, glyph: "Σ" },
+    wme01: { topics: 10, questions: 138, papers: 18, glyph: "F" },
+  };
+
+  // Three stages, the same in every course. A tile appears only when the course has that resource.
+  const STAGES = [
+    { id: "learn", title: "1 · Learn", hint: "read first", tiles: [
+      ["notes", "Notes", "Topic notes with worked answers"],
+      ["interactive-lab", "Visual Lab", "Hard topics you can move and rotate"],
+      ["question-visualizer", "Question Visualizer", "Paper images beside simulations"],
+    ] },
+    { id: "practise", title: "2 · Practise", hint: "by topic", tiles: [
+      ["classified", "Practise online", "Solve by topic, mark and track"],
+      ["books", "Classified books", "Printable PDFs with answers"],
+      ["expertise", "Expertise", "The harder questions"],
+      ["mistake-box", "Mistake Box", "Your questions to redo"],
+    ] },
+    { id: "test", title: "3 · Test", hint: "exam conditions", tiles: [
+      ["past-solutions", "Past papers & solutions", "Each paper beside its worked solution"],
+      ["build-test", "Mock generator", "Printable A4 tests, random or by topic"],
+      ["revision-book", "Revision book", "A 10-100 question mix"],
+      ["saved-tests", "Saved tests", "Reuse your tests"],
+      ["progress", "Progress", "Mastery and your next weak topic"],
+    ] },
   ];
 
   function esc(value) {
@@ -59,13 +73,57 @@
     return byModule;
   }
 
-  function card([key, title, detail], href, size) {
+  function tile([key, title, detail], href) {
     if (!href) return "";
-    return `<a class="hub-card${size === "small" ? " hub-card-small" : ""}" data-module="${esc(key)}" href="${esc(href.replace(/^\//, ""))}">
-      <span class="hub-card-icon">${icon(key)}</span>
-      <span class="hub-card-text"><strong>${esc(title)}</strong><small>${esc(detail)}</small></span>
-      <span class="hub-card-go" aria-hidden="true">&rarr;</span>
+    return `<a class="e27-tile" data-module="${esc(key)}" href="${esc(href.replace(/^\//, ""))}">
+      <span class="i">${icon(key)}</span>
+      <span><strong>${esc(title)}</strong><small>${esc(detail)}</small></span>
+      <span class="arrow" aria-hidden="true">&rarr;</span>
     </a>`;
+  }
+
+  function courseCard(c) {
+    const facts = FACTS[c.id] || {};
+    return `<a class="e27-course" data-course="${esc(c.id)}" href="course.html?${esc(c.query)}">
+      <span class="e27-glyph" aria-hidden="true">${esc(facts.glyph || "")}</span>
+      <span class="e27-chip">${esc(c.code)}</span>
+      <strong>${esc(c.name)}</strong>
+      <small>${esc(c.blurb)}</small>
+      <span class="e27-meta"><span>${facts.topics ? `<b class="e27-num">${facts.topics}</b> topics` : esc(c.family)}</span><span class="e27-go" aria-hidden="true">&rarr;</span></span>
+    </a>`;
+  }
+
+  function chooser(title, text, list) {
+    root.classList.add("e27-course-page");
+    root.innerHTML = `<div class="e27-wrap e27-choose">
+      <nav class="e27-backlink" aria-label="Breadcrumb"><a href="index.html">&larr; All courses</a></nav>
+      <div class="e27-head"><div><h1>${esc(title)}</h1><p>${esc(text)}</p></div></div>
+      <div class="e27-courses">${list.map(courseCard).join("")}</div>
+    </div>`;
+  }
+
+  function topicRoadmap(course) {
+    const notes = window.ELITE_LIBRARY?.courses?.[course.id]?.notes;
+    if (!notes) return "";
+    const groups = Array.isArray(notes.chapters) && notes.chapters.length
+      ? notes.chapters.map((ch) => ({ title: `Chapter ${ch.number}: ${ch.title}`, topics: ch.topics || [] }))
+      : [{ title: "", topics: notes.topics || [] }];
+    const total = groups.reduce((sum, g) => sum + g.topics.length, 0);
+    if (!total) return "";
+    const body = groups.map((group) => `
+      ${group.title ? `<h3 class="e27-roadmap-chapter">${esc(group.title)}</h3>` : ""}
+      <div class="e27-roadmap">${group.topics.map((t) => t.href ? `
+        <a class="e27-topic" data-module="notes" href="${esc(t.href)}" target="_blank" rel="noopener">
+          <span class="n">${esc(t.num)}</span>
+          <span><strong>${esc(t.title)}</strong>${t.pages ? `<small>${esc(t.pages)} pages</small>` : ""}</span>
+          <span class="pdf">PDF</span>
+        </a>` : `
+        <div class="e27-topic"><span class="n">${esc(t.num)}</span><span><strong>${esc(t.title)}</strong><small>Coming soon</small></span><span></span></div>`).join("")}
+      </div>`).join("");
+    return `<section class="e27-block" aria-labelledby="roadmapTitle">
+      <div class="e27-head"><div><h2 id="roadmapTitle">Topic notes</h2><p>All ${total} topics in order. Open any topic's notes with answers.</p></div></div>
+      ${body}
+    </section>`;
   }
 
   const params = new URLSearchParams(window.location.search);
@@ -91,51 +149,65 @@
   if (!course && unknownLink) {
     // A mistyped or old link: never guess a course, let the student choose.
     document.title = "Choose your course - Elite IGCSE Mathematics";
-    root.innerHTML = `
-      <nav class="hub-trail" aria-label="Breadcrumb"><a href="index.html">&larr; All courses</a></nav>
-      <section class="hub-head"><h1>Choose your course</h1><p>We couldn't find the course in this link.</p></section>
-      <div class="hub-grid">${system.courses.map((c) => `<a class="hub-card" href="course.html?${esc(c.query)}">
-        <span class="hub-card-code">${esc(c.family)} &middot; ${esc(c.code)}</span>
-        <span class="hub-card-text"><strong>${esc(c.name)}</strong><small>${esc(c.blurb)}</small></span>
-        <span class="hub-card-go" aria-hidden="true">&rarr;</span></a>`).join("")}</div>`;
+    chooser("Choose your course", "We couldn't find the course in this link.", system.courses);
     return;
   }
 
   if (!course) {
     // Modular without a unit: choose the unit first
-    const units = system.courses.filter((item) => item.group === "modular");
     document.title = "Choose your Modular unit - Elite IGCSE Mathematics";
-    root.innerHTML = `
-      <nav class="hub-trail" aria-label="Breadcrumb"><a href="index.html">&larr; All courses</a></nav>
-      <section class="hub-head"><h1>Modular</h1><p>Choose your unit.</p></section>
-      <div class="hub-grid">${units.map((u) => `<a class="hub-card" href="course.html?${esc(u.query)}">
-        <span class="hub-card-code">${esc(u.code)}</span>
-        <span class="hub-card-text"><strong>${esc(u.name)}</strong><small>${esc(u.blurb)}</small></span>
-        <span class="hub-card-go" aria-hidden="true">&rarr;</span></a>`).join("")}</div>`;
+    chooser("Modular", "Choose your unit.", system.courses.filter((item) => item.group === "modular"));
     return;
   }
 
   const links = linksFor(course);
-  const services = SERVICES.slice();
-  if (course.id === "wme01") services.push(LAB);
+  const facts = FACTS[course.id] || {};
+  const stages = STAGES.map((stage) => ({ ...stage, tiles: stage.tiles.map((t) => t.slice()) }));
+  if (course.id === "wme01") stages[0].tiles[1] = ["interactive-lab", "Mechanics Lab", "Interactive simulations, topic by topic"];
   if (["linear", "unit1", "unit2", "wma11"].includes(course.id)) {
-    services.push(VISUAL);
     links["interactive-lab"] = `https://eliteiglab.com/lab/index.html?course=${course.id}`;
   }
+  const stats = [
+    [facts.topics, "topics"],
+    [facts.questions, "classified questions"],
+    [facts.papers, "past papers"],
+  ].filter(([value]) => value);
+
   document.title = `${course.name} (${course.code}) - Elite IGCSE Mathematics`;
+  root.classList.add("e27-course-page");
+  root.dataset.course = course.id;
   root.innerHTML = `
-    <nav class="hub-trail" aria-label="Breadcrumb"><a href="index.html">&larr; All courses</a></nav>
-    <section class="hub-head">
-      <span class="hub-kicker">${esc(course.family)} &middot; ${esc(course.code)}</span>
-      <h1>${esc(course.name)}</h1>
-      <p>${esc(course.blurb)}</p>
-      <a class="hub-change" href="index.html">Change course</a>
+    <section class="e27-chero" data-course="${esc(course.id)}">
+      <span class="e27-cglyph" aria-hidden="true">${esc(facts.glyph || "")}</span>
+      <div class="e27-wrap">
+        <nav class="e27-crumb" aria-label="Breadcrumb"><a href="index.html">All courses</a> &nbsp;/&nbsp; ${course.family === "IAL" ? "International A Level" : "International GCSE"} &nbsp;/&nbsp; ${esc(course.name)}</nav>
+        <div class="e27-ctop">
+          <div>
+            <span class="e27-chip">${esc(course.family)} &middot; ${esc(course.code)}</span>
+            <h1>${esc(course.name)}</h1>
+            <p>${esc(course.blurb)}</p>
+            <a class="e27-change" href="index.html#courseLauncher">Change course</a>
+          </div>
+          <div class="e27-cstats">${stats.map(([value, label]) => `<div><b class="e27-num">${Number(value).toLocaleString("en-GB")}</b><span>${esc(label)}</span></div>`).join("")}</div>
+        </div>
+        <div class="e27-mine" data-e27-account>
+          <span class="e27-mine-txt" data-e27-signed-out><small>Free student account &middot; optional</small><strong>Sign in with Google to save your progress on every device</strong></span>
+          <button class="e27-btn e27-btn-gold" type="button" data-cloud-login data-cloud-label="Sign in free with Google" data-e27-signed-out>Sign in free with Google</button>
+          <span class="e27-mine-txt" data-e27-signed-in><small>Signed in</small><strong>Your progress in ${esc(course.name)} saves automatically</strong></span>
+          <a class="e27-btn e27-btn-ghost" href="progress.html" data-e27-signed-in>My progress &rarr;</a>
+        </div>
+      </div>
     </section>
-    <h2 class="hub-section-title">Choose a resource</h2>
-    <div class="hub-grid">${services.map((s) => card(s, links[s[0]])).join("")}</div>
-    <h2 class="hub-section-title">Practise online</h2>
-    <div class="hub-grid hub-grid-small">${PRACTICE.map((s) => card(s, links[s[0]], "small")).join("")}</div>
-    <section class="sr-section" data-student-results="course:${esc(course.id)}" aria-label="Student results" hidden></section>
+    <div class="e27-wrap">
+      <div class="e27-stages">${stages.map((stage) => {
+        const tiles = stage.tiles.map((t) => tile(t, links[t[0]])).join("");
+        return tiles ? `<section class="e27-stage" aria-labelledby="stage-${stage.id}">
+          <header><h2 id="stage-${stage.id}">${esc(stage.title)}</h2><span>${esc(stage.hint)}</span></header>
+          ${tiles}
+        </section>` : "";
+      }).join("")}</div>
+      ${topicRoadmap(course)}
+    </div>
   `;
   try { window.localStorage.setItem("eliteLastCourse", course.id); } catch (err) { /* private mode */ }
 })();

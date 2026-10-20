@@ -26,7 +26,7 @@ if (/Adaptive Classified|AdaptiveClassified|#adaptive|download-adaptive/i.test(r
   throw new Error("A public course surface still exposes the removed Adaptive Classified.");
 }
 
-// the home page is only the course choice: six course cards + other courses, no tool grid or marketing blocks
+// 2026-10-20 approved 2027 home: hero + six course cards + free account + four steps + other courses (no old tool grid)
 for (const marker of ['id="courseLauncher"', "Choose your course", "Other courses"]) {
   if (!home.includes(marker)) throw new Error(`Missing homepage clarity marker: ${marker}`);
 }

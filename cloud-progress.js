@@ -223,8 +223,17 @@
     all("[data-cloud-login]").forEach((button) => {
       button.hidden = signedIn;
       button.disabled = !state.configured;
-      button.textContent = state.configured ? "Student Login" : "Student Login";
+      // Buttons with their own markup (icons) keep it; plain buttons get the shared label.
+      if (!button.children.length) button.textContent = button.dataset.cloudLabel || "Sign in free";
     });
+
+    all("[data-e27-account]").forEach((band) => {
+      band.dataset.signedIn = String(signedIn);
+      band.querySelectorAll("[data-e27-first-name]").forEach((node) => {
+        node.textContent = signedIn && state.user?.displayName ? `, ${firstName()}` : "";
+      });
+    });
+    if (signedIn) hideInvite();
 
     all("[data-cloud-account]").forEach((link) => {
       link.hidden = !signedIn;
@@ -245,6 +254,102 @@
       widget.classList.toggle("is-signed-in", signedIn);
       widget.classList.toggle("is-disabled", !state.configured);
     });
+  }
+
+  // ---------- Free sign-in invite: friendly, optional, never blocks the page ----------
+  const INVITE_DISMISS_KEY = "eliteSignInInviteDismissedAt";
+  const INVITE_SNOOZE_DAYS = 7;
+  const INVITE_DELAY_MS = 5000;
+  const INVITE_SKIP_PAGES = new Set(["admin", "members", "exam", "progress"]);
+  let inviteTimer = null;
+
+  function inviteSnoozed() {
+    try {
+      const at = Number(localStorage.getItem(INVITE_DISMISS_KEY) || 0);
+      return at > 0 && Date.now() - at < INVITE_SNOOZE_DAYS * 86400000;
+    } catch (err) {
+      return true; // storage blocked: do not nag on every page
+    }
+  }
+
+  function hideInvite(remember = false) {
+    clearTimeout(inviteTimer);
+    if (remember) {
+      try { localStorage.setItem(INVITE_DISMISS_KEY, String(Date.now())); } catch (err) { /* private mode */ }
+    }
+    const card = document.querySelector(".e27-invite");
+    if (!card) return;
+    card.classList.remove("is-visible");
+    setTimeout(() => card.remove(), 260);
+  }
+
+  function scheduleInvite() {
+    const page = document.body?.dataset.page || "";
+    if (!state.configured || state.user || INVITE_SKIP_PAGES.has(page) || inviteSnoozed()) return;
+    if (document.querySelector(".e27-invite") || window.matchMedia("print").matches) return;
+    clearTimeout(inviteTimer);
+    inviteTimer = setTimeout(() => {
+      if (state.user || document.querySelector(".e27-invite")) return;
+      const card = document.createElement("aside");
+      card.className = "e27-invite";
+      card.setAttribute("role", "dialog");
+      card.setAttribute("aria-labelledby", "e27InviteTitle");
+      card.innerHTML = `
+        <button class="e27-invite-close" type="button" aria-label="Close" data-e27-invite-later>&times;</button>
+        <span class="e27-kicker">Free student account</span>
+        <h2 id="e27InviteTitle">Sign in with Google, free forever</h2>
+        <p>Save your solved questions, Mistake Box and mocks on every device. No password, no payment. Optional: everything works without it.</p>
+        <div class="e27-invite-actions">
+          <button class="e27-btn e27-btn-gold" type="button" data-cloud-login data-cloud-label="Continue with Google">Continue with Google</button>
+          <button class="e27-btn e27-invite-later" type="button" data-e27-invite-later>Not now</button>
+        </div>
+        <small class="e27-invite-note">We keep your name, email and progress. Dr Eslam can see who has signed in.</small>`;
+      document.body.append(card);
+      card.querySelectorAll("[data-e27-invite-later]").forEach((button) => {
+        button.addEventListener("click", () => hideInvite(true));
+      });
+      card.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") hideInvite(true);
+      });
+      // Force a layout so the fade-in transition runs (rAF would stall in background tabs).
+      void card.offsetHeight;
+      card.classList.add("is-visible");
+    }, INVITE_DELAY_MS);
+  }
+
+  // ---------- Who uses the site: one small record per signed-in student ----------
+  // site_users/{uid}: name, email, first/last visit, visit count, last page and course.
+  // Written at most once per browser session, so it costs almost nothing.
+  const VISIT_SESSION_KEY = "eliteVisitRecordedV1";
+
+  async function recordVisit(user) {
+    if (!state.ready || !user) return;
+    try {
+      if (sessionStorage.getItem(VISIT_SESSION_KEY) === user.uid) return;
+      sessionStorage.setItem(VISIT_SESSION_KEY, user.uid);
+    } catch (err) {
+      // sessionStorage blocked: still record once for this page load.
+    }
+    const fs = state.modules.firestore;
+    const ref = fs.doc(state.db, "site_users", user.uid);
+    let lastCourse = "";
+    try { lastCourse = localStorage.getItem("eliteLastCourse") || ""; } catch (err) { /* private mode */ }
+    const record = {
+      uid: user.uid,
+      name: String(user.displayName || "").slice(0, 120),
+      email: String(user.email || "").toLowerCase().slice(0, 200),
+      lastSeen: fs.serverTimestamp(),
+      lastPage: String(window.location.pathname || "/").slice(0, 200),
+      lastCourse: lastCourse.slice(0, 20),
+      visits: fs.increment(1)
+    };
+    try {
+      const snap = await fs.getDoc(ref);
+      if (!snap.exists()) record.firstSeen = fs.serverTimestamp();
+      await fs.setDoc(ref, record, { merge: true });
+    } catch (err) {
+      // Rules not published yet or offline: never disturb the student.
+    }
   }
 
   function updateUi(message = "") {
@@ -320,7 +425,12 @@
         state.user = user;
         updateUi();
         emitState();
-        if (user) queueSync();
+        if (user) {
+          queueSync();
+          recordVisit(user);
+        } else {
+          scheduleInvite();
+        }
       });
     } catch (err) {
       state.error = err.message || "Firebase could not start.";
@@ -461,8 +571,30 @@
     }
   });
 
+  // Teacher view (members.html). Firestore rules allow the list only to the teacher email.
+  async function listSiteUsers(max = 5000) {
+    if (!state.ready || !state.user) throw new Error("Sign in first.");
+    const fs = state.modules.firestore;
+    const snap = await fs.getDocs(fs.query(fs.collection(state.db, "site_users"), fs.orderBy("lastSeen", "desc"), fs.limit(max)));
+    return snap.docs.map((doc) => {
+      const data = doc.data() || {};
+      const when = (value) => (value && typeof value.toDate === "function" ? value.toDate() : null);
+      return {
+        uid: doc.id,
+        name: data.name || "",
+        email: data.email || "",
+        firstSeen: when(data.firstSeen),
+        lastSeen: when(data.lastSeen),
+        visits: Number(data.visits || 0),
+        lastPage: data.lastPage || "",
+        lastCourse: data.lastCourse || ""
+      };
+    });
+  }
+
   window.EliteCloud = {
     init,
+    listSiteUsers,
     signIn,
     signOut,
     syncNow,

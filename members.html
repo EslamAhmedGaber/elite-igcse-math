@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Signed-in students - Elite Mathematics</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0f2140">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="pathway-bootstrap.js?v=baccalaureate-20260902b"></script>
+  <link rel="stylesheet" href="styles.css?v=20260809a">
+  <link rel="stylesheet" href="elite-system.css?v=20260906b">
+  <link rel="stylesheet" href="elite-ux.css?v=20261020b">
+  <script defer src="firebase-config.js"></script>
+  <script defer src="cloud-progress.js?v=20261020c"></script>
+  <script defer src="course-modules.js?v=hub-20261018a"></script>
+  <script defer src="lead.js?v=20261020a"></script>
+  <script defer src="members.js?v=20261020a"></script>
+</head>
+<body data-page="members">
+
+  <header class="site-header">
+    <a class="site-brand" href="index.html" aria-label="Elite IGCSE Mathematics home">
+      <span class="brand-mark">TEACHER</span>
+      <span class="brand-title">Elite IGCSE Mathematics</span>
+    </a>
+    <button id="navToggle" class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav pathway-tabs" aria-label="Main"></nav>
+    <div class="site-cta">
+      <button class="button cloud-auth-button" type="button" data-cloud-login>Sign in free</button>
+      <a class="button cloud-account-button" href="progress.html" data-cloud-account hidden>My Progress</a>
+    </div>
+  </header>
+
+  <main class="page e27-members" data-members-root>
+    <div class="e27-wrap">
+      <section class="e27-block">
+        <div class="e27-head">
+          <div>
+            <span class="e27-kicker" style="color:var(--e-gold-ink)">Teacher only</span>
+            <h2>Students who signed in</h2>
+            <p>Everyone who signed in with Google, newest visit first. Visits are counted once per browser session.</p>
+          </div>
+          <div class="e27-members-actions">
+            <a class="e27-btn e27-btn-line" href="admin.html">Teacher Studio</a>
+            <button class="e27-btn e27-btn-gold" type="button" data-members-csv disabled>Download CSV</button>
+          </div>
+        </div>
+        <p class="e27-members-status" data-members-status role="status">Checking your sign-in&hellip;</p>
+        <div class="e27-members-stats" data-members-stats hidden></div>
+        <div class="e27-members-tools" data-members-tools hidden>
+          <label class="e27-members-search">
+            <span>Search</span>
+            <input type="search" data-members-search placeholder="Name or email" autocomplete="off">
+          </label>
+          <label class="e27-members-search">
+            <span>Course</span>
+            <select data-members-course>
+              <option value="">All courses</option>
+              <option value="linear">Linear</option>
+              <option value="unit1">Modular Unit 1</option>
+              <option value="unit2">Modular Unit 2</option>
+              <option value="wma11">Pure 1</option>
+              <option value="wma12">Pure 2</option>
+              <option value="wme01">Mechanics 1</option>
+            </select>
+          </label>
+        </div>
+        <div class="e27-members-table" data-members-table hidden>
+          <table>
+            <thead>
+              <tr><th scope="col">Student</th><th scope="col">Last course</th><th scope="col">Visits</th><th scope="col">First visit</th><th scope="col">Last visit</th></tr>
+            </thead>
+            <tbody data-members-rows></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer hub-footer">
+    <p><strong>Elite IGCSE Academy</strong> &middot; Dr Eslam Ahmed &middot; <a href="about.html">About</a></p>
+  </footer>
+</body>
+</html>

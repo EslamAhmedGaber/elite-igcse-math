@@ -4,6 +4,7 @@ rules_version = '2';
 // Publish in Firebase console -> Firestore Database -> Rules -> paste -> Publish.
 //
 // student_progress : each signed-in student reads/writes only their own progress.
+// site_users       : who signed in (name, email, visits). Student writes own; teacher lists all.
 // groups           : the teacher (email below) manages groups, exams and marks.
 //                    A student joins a group with its code and can read ONLY:
 //                    the group name/topics, published exams (with average and
@@ -33,6 +34,24 @@ service cloud.firestore {
 
     match /student_progress/{userId} {
       allow read, write: if signedIn() && request.auth.uid == userId;
+    }
+
+    // Who uses the site: one record per signed-in student (name, email, visits).
+    // The student writes only their own record with these fields; only the
+    // teacher can list everyone (members.html).
+    match /site_users/{userId} {
+      allow get: if isTeacher() || (signedIn() && request.auth.uid == userId);
+      allow list: if isTeacher();
+      allow create, update: if signedIn()
+        && request.auth.uid == userId
+        && request.resource.data.uid == userId
+        && request.resource.data.email == myEmail()
+        && request.resource.data.keys().hasOnly(['uid', 'name', 'email', 'firstSeen', 'lastSeen', 'lastPage', 'lastCourse', 'visits'])
+        && request.resource.data.name is string && request.resource.data.name.size() <= 120
+        && request.resource.data.lastPage is string && request.resource.data.lastPage.size() <= 200
+        && request.resource.data.lastCourse is string && request.resource.data.lastCourse.size() <= 20
+        && request.resource.data.visits is int;
+      allow delete: if isTeacher();
     }
 
     // Which groups a student has joined (lets results.html find them again).
