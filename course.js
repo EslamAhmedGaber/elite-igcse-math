@@ -15,6 +15,7 @@
     "revision-book": '<path d="M4 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"/><path d="M20 4h-4a2 2 0 0 0-2 2"/><path d="M20 4v14h-6"/>',
     "mistake-box": '<path d="M4 7h16v13H4z"/><path d="M4 7l2-3h12l2 3"/><path d="M10 12h4"/>',
     "saved-tests": '<path d="M6 3h12v18l-6-4-6 4z"/>',
+    daily: '<rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><path d="m9 15 2 2 4-4"/>',
     "question-visualizer": '<circle cx="12" cy="12" r="3"/><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/>',
   };
 
@@ -38,6 +39,7 @@
       ["question-visualizer", "Question Visualizer", "Paper images beside simulations"],
     ] },
     { id: "practise", title: "2 · Practise", hint: "by topic", tiles: [
+      ["daily", "Daily Challenge", "5 questions picked for you today"],
       ["classified", "Practise online", "Solve by topic, mark and track"],
       ["books", "Classified books", "Printable PDFs with answers"],
       ["expertise", "Expertise", "The harder questions"],
@@ -71,6 +73,7 @@
       byModule.books = `/downloads.html?pathway=pure&course=${course.id}#downloads`;
       byModule["past-solutions"] = `/pastpapers.html?pathway=pure&course=${course.id}#pure-${course.id}`;
     }
+    byModule.daily = `/daily.html?course=${course.id}`;
     return byModule;
   }
 
@@ -201,6 +204,7 @@
       </div>
     </section>
     <div class="e27-wrap">
+      <div class="e27-today" data-e27-today="course" data-course="${esc(course.id)}" role="region" aria-label="Today"></div>
       <div class="e27-stages">${stages.map((stage) => {
         const tiles = stage.tiles.map((t) => tile(t, links[t[0]])).join("");
         return tiles ? `<section class="e27-stage" aria-labelledby="stage-${stage.id}">

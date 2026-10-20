@@ -43,7 +43,8 @@
     "eliteWME01SolvedV1", "eliteWME01MistakeBoxV1",
     "eliteWMA11FinalTrainerV1", "eliteWMA12FinalTrainerV1", "eliteWMA13FinalTrainerV1", "eliteWME01FinalTrainerV1",
     "eliteFinalAnswerTrainerV1", "eliteNotesStudiedV1", "eliteSavedTestsV1",
-    "eliteMockExamV1:wma11", "eliteMockExamV1:wma12", "eliteMockExamV1:wma13", "eliteMockExamV1:wme01"
+    "eliteMockExamV1:wma11", "eliteMockExamV1:wma12", "eliteMockExamV1:wma13", "eliteMockExamV1:wme01",
+    "eliteDailyV1", "eliteExamSessionV1"
   ];
   // Firestore documents are limited to 1 MiB; leave room for the core payload.
   const EXTRA_BUDGET_BYTES = 600000;
@@ -202,10 +203,10 @@
   // Every key must also be listed in docs/firestore.rules (tools/test_site_stats.js checks this).
   const STATS_KEYS = [
     "v", "u", "n", "dm", "dd",
-    "pv_home", "pv_course", "pv_practice", "pv_notes", "pv_papers", "pv_books", "pv_exam", "pv_progress", "pv_ial", "pv_about", "pv_bacc", "pv_other",
+    "pv_home", "pv_course", "pv_practice", "pv_notes", "pv_papers", "pv_books", "pv_exam", "pv_progress", "pv_ial", "pv_about", "pv_bacc", "pv_daily", "pv_other",
     "c_linear", "c_unit1", "c_unit2", "c_wma11", "c_wma12", "c_wma13", "c_wme01",
-    "t_notes", "t_books", "t_past_solutions", "t_build_test", "t_progress", "t_classified", "t_expertise", "t_revision_book", "t_mistake_box", "t_saved_tests", "t_interactive_lab", "t_question_visualizer",
-    "e_pdf", "e_print", "e_solved", "e_mistake", "e_saved", "e_signin", "e_invite", "e_invite_click", "e_whatsapp",
+    "t_notes", "t_books", "t_past_solutions", "t_build_test", "t_progress", "t_classified", "t_expertise", "t_revision_book", "t_mistake_box", "t_saved_tests", "t_interactive_lab", "t_question_visualizer", "t_daily",
+    "e_pdf", "e_print", "e_solved", "e_mistake", "e_saved", "e_signin", "e_invite", "e_invite_click", "e_whatsapp", "e_daily_done",
     "g_eg", "g_qa", "g_ae", "g_sa", "g_kw", "g_om", "g_bh", "g_jo", "g_gb", "g_other"
   ];
   const STATS_KEY_SET = new Set(STATS_KEYS);
@@ -315,7 +316,7 @@
     return {
       course: "pv_course", practice: "pv_practice", library: "pv_notes", notes: "pv_notes", topics: "pv_notes",
       pastpapers: "pv_papers", downloads: "pv_books", "classified-books": "pv_books", "modular-books": "pv_books",
-      exam: "pv_exam", progress: "pv_progress", about: "pv_about", "egyptian-baccalaureate": "pv_bacc"
+      exam: "pv_exam", progress: "pv_progress", about: "pv_about", "egyptian-baccalaureate": "pv_bacc", daily: "pv_daily"
     }[page] || "pv_other";
   }
 
@@ -371,6 +372,7 @@
       if (/\.pdf(\?|#|$)/i.test(href)) countStat("e_pdf");
       if (/wa\.me\//.test(href) || link.hasAttribute("data-lead-trigger")) countStat("e_whatsapp");
     }, true);
+    window.addEventListener("elite:daily-complete", () => countStat("e_daily_done"));
     window.addEventListener("beforeprint", () => {
       if (stats.printed) return;
       stats.printed = true;

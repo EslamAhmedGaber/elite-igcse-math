@@ -140,6 +140,7 @@
         <div class="worked-solution-final-copy">${formatText(solution.finalAnswer)}</div>
       </section>
     ` : "";
+    const askHtml = options.variant === "print" || options.ask === false ? "" : askDrEslam(options);
     return `<article${id} class="worked-solution${variant}" aria-label="Worked solution">
       <header class="worked-solution-head">
         <div>
@@ -150,7 +151,27 @@
       </header>
       <div class="worked-solution-steps">${stepsHtml}</div>
       ${finalHtml}
+      ${askHtml}
     </article>`;
+  }
+
+  // "Still stuck?" -> WhatsApp with the question already named, so Dr Eslam knows exactly which one.
+  function questionLabel(key) {
+    const raw = String(key || "").replace(/^[a-z]+::/i, "");
+    const head = raw.split("__p")[0].replace(/__/g, " ").replace(/_/g, " ").replace(/-01 /, " ");
+    return head.trim();
+  }
+
+  function askDrEslam(options) {
+    const label = questionLabel(options.key);
+    if (!label) return "";
+    const topic = String(options.topic || "").trim();
+    const text = `Hello Dr Eslam, I need help with this question: ${label}${topic ? ` (${topic})` : ""}.`;
+    const href = `https://wa.me/201120009622?text=${encodeURIComponent(text)}`;
+    return `<a class="worked-solution-ask" href="${escapeHtml(href)}" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+      <span><strong>Still stuck? Ask Dr Eslam</strong><small>Opens WhatsApp with ${escapeHtml(label)} already written</small></span>
+    </a>`;
   }
 
   function markWideEquations(target) {
