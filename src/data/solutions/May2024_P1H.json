@@ -538,7 +538,13 @@
         },
         {
           "title": "The missing class width is",
-          "body": "The missing class width is 10, so its frequency density is\n\n\\[\n\\frac{27}{10}=2.7\n\\]"
+          "body": "The missing class width is 10, so its frequency density is\n\n\\[\n\\frac{27}{10}=2.7\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/May2024_P1H__Q22__p23-23__m03__Histograms.png",
+              "alt": "Histogram"
+            }
+          ]
         }
       ],
       "finalAnswer": "draw the missing bar from \\(5\\) to \\(15\\) with frequency density \\(2.7\\)"
@@ -779,7 +785,13 @@
         },
         {
           "title": "The missing class width is",
-          "body": "The missing class width is 10, so its frequency density is\n\n\\[\n\\frac{27}{10}=2.7\n\\]"
+          "body": "The missing class width is 10, so its frequency density is\n\n\\[\n\\frac{27}{10}=2.7\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/May2024_P1H__Q22__p23-23__m03__Histograms.png",
+              "alt": "Histogram"
+            }
+          ]
         }
       ],
       "finalAnswer": "draw the missing bar from \\(5\\) to \\(15\\) with frequency density \\(2.7\\)"

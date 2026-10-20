@@ -479,7 +479,13 @@
         },
         {
           "title": "The image has vertices",
-          "body": "The image has vertices\n\n\\[\n(7,3),\\ (13,3),\\ (13,6),\\ (10,6)\n\\]"
+          "body": "The image has vertices\n\n\\[\n(7,3),\\ (13,3),\\ (13,6),\\ (10,6)\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jan2021_P2HR__Q05__p06-07__m06__Transformations.png",
+              "alt": "Shape and its image"
+            }
+          ]
         },
         {
           "title": "Use trigonometry",
@@ -582,7 +588,13 @@
         },
         {
           "title": "Calculate probability",
-          "body": "So the Venn diagram has:\n\n\\[\nA\\text{ only}=38,\\quad B\\text{ only}=6,\\quad A\\cap B=24,\\quad \\text{outside}=12\n\\]\n\n\\[\nP(A\\cap B)=\\frac{24}{80}=\\frac{3}{10}\n\\]\n\n\\[\nP(A\\cup B')=\\frac{74}{80}=\\frac{37}{40}\n\\]"
+          "body": "So the Venn diagram has:\n\n\\[\nA\\text{ only}=38,\\quad B\\text{ only}=6,\\quad A\\cap B=24,\\quad \\text{outside}=12\n\\]\n\n\\[\nP(A\\cap B)=\\frac{24}{80}=\\frac{3}{10}\n\\]\n\n\\[\nP(A\\cup B')=\\frac{74}{80}=\\frac{37}{40}\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jan2021_P2HR__Q16__p15-15__m05__Probability-Diagrams-Venn-and-Tree-Diagrams.png",
+              "alt": "Completed Venn diagram"
+            }
+          ]
         }
       ],
       "finalAnswer": "\\(\\frac{3}{10}\\), \\(\\frac{37}{40}\\)."

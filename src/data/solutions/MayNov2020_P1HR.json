@@ -401,7 +401,13 @@
       "steps": [
         {
           "title": "Construction answer",
-          "body": "To construct the bisector of angle \\(ABC\\):\n\n1. Put the compass point at \\(B\\) and draw an arc cutting \\(BA\\) and \\(BC\\).\n2. From those two cut points, draw equal arcs inside the angle.\n3. Draw a straight line from \\(B\\) through the point where the two arcs cross."
+          "body": "To construct the bisector of angle \\(ABC\\):\n\n1. Put the compass point at \\(B\\) and draw an arc cutting \\(BA\\) and \\(BC\\).\n2. From those two cut points, draw equal arcs inside the angle.\n3. Draw a straight line from \\(B\\) through the point where the two arcs cross.",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/MayNov2020_P1HR__Q02__p03-03__m02__Bearings-Scale-Drawing-and-Constructions.png",
+              "alt": "Construction of an angle bisector"
+            }
+          ]
         }
       ],
       "finalAnswer": "This line bisects angle \\(ABC\\)."
@@ -522,7 +528,13 @@
       "steps": [
         {
           "title": "The cumulative frequencies are",
-          "body": "The cumulative frequencies are\n\n\\[\n9,\\ 28,\\ 45,\\ 63,\\ 76,\\ 80\n\\]"
+          "body": "The cumulative frequencies are\n\n\\[\n9,\\ 28,\\ 45,\\ 63,\\ 76,\\ 80\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/MayNov2020_P1HR__Q11__p10-11__m05__Cumulative-Frequency-Diagrams.png",
+              "alt": "Cumulative frequency graph"
+            }
+          ]
         },
         {
           "title": "The median is the th",

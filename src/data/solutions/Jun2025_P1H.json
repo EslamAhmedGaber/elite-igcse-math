@@ -338,7 +338,13 @@
         },
         {
           "title": "Plot the points and join",
-          "body": "Plot the points and join them with a smooth cubic curve."
+          "body": "Plot the points and join them with a smooth cubic curve.",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jun2025_P1H__Q10__p11-11__m03__Graphs-of-Functions.png",
+              "alt": "Graph of y = x^3 + 2x + 3"
+            }
+          ]
         }
       ],
       "finalAnswer": "Missing values are \\(-30,15\\)."

@@ -330,7 +330,13 @@
         },
         {
           "title": "Read the graph",
-          "body": "So draw the horizontal line \\(y=3\\) on the graph."
+          "body": "So draw the horizontal line \\(y=3\\) on the graph.",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Nov2025_P2H__Q12__p12-13__m05__Graphs-of-Functions.png",
+              "alt": "Graph of y = (x + 4/x)/2 with the line y = 3"
+            }
+          ]
         },
         {
           "title": "The intersections give approximately",

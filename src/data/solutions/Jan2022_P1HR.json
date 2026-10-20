@@ -259,7 +259,13 @@
         },
         {
           "title": "Plot the points and join",
-          "body": "Plot the points and join them with a smooth U-shaped curve."
+          "body": "Plot the points and join them with a smooth U-shaped curve.",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jan2022_P1HR__Q04__p06-06__m04__Graphs-of-Functions.png",
+              "alt": "Graph of y = x^2 - 4x + 3"
+            }
+          ]
         }
       ],
       "finalAnswer": "Missing values are \\(15,0,-1,3\\)."
@@ -296,7 +302,13 @@
         },
         {
           "title": "Useful points are",
-          "body": "Useful points are\n\n\\[\n(-1,3)\\to(-1,6)\n\\]\n\n\\[\n(2,0)\\to(2,0)\n\\]\n\n\\[\n(3,-1)\\to(3,-2)\n\\]\n\n\\[\n(4,0)\\to(4,0)\n\\]\n\n\\[\n(7,3)\\to(7,6)\n\\]"
+          "body": "Useful points are\n\n\\[\n(-1,3)\\to(-1,6)\n\\]\n\n\\[\n(2,0)\\to(2,0)\n\\]\n\n\\[\n(3,-1)\\to(3,-2)\n\\]\n\n\\[\n(4,0)\\to(4,0)\n\\]\n\n\\[\n(7,3)\\to(7,6)\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jan2022_P1HR__Q20__p24-25__m06__Transformations-of-Graphs.png",
+              "alt": "Graph of y = 2g(x)"
+            }
+          ]
         },
         {
           "title": "Solve inequality",
@@ -690,7 +702,13 @@
         },
         {
           "title": "Useful points are",
-          "body": "Useful points are\n\n\\[\n(-1,3)\\to(-1,6)\n\\]\n\n\\[\n(2,0)\\to(2,0)\n\\]\n\n\\[\n(3,-1)\\to(3,-2)\n\\]\n\n\\[\n(4,0)\\to(4,0)\n\\]\n\n\\[\n(7,3)\\to(7,6)\n\\]"
+          "body": "Useful points are\n\n\\[\n(-1,3)\\to(-1,6)\n\\]\n\n\\[\n(2,0)\\to(2,0)\n\\]\n\n\\[\n(3,-1)\\to(3,-2)\n\\]\n\n\\[\n(4,0)\\to(4,0)\n\\]\n\n\\[\n(7,3)\\to(7,6)\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jan2022_P1HR__Q20__p24-25__m06__Transformations-of-Graphs.png",
+              "alt": "Graph of y = 2g(x)"
+            }
+          ]
         },
         {
           "title": "Solve inequality",

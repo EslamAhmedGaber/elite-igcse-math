@@ -443,7 +443,13 @@
       "steps": [
         {
           "title": "Construction answer",
-          "body": "To construct the bisector of angle \\(BAC\\):\n\n1. Put the compass point at \\(A\\) and draw an arc that cuts \\(AB\\) and \\(AC\\).\n2. From the two points where the arc cuts the arms, draw equal arcs inside the angle.\n3. Draw a straight line from \\(A\\) through the intersection of those two arcs."
+          "body": "To construct the bisector of angle \\(BAC\\):\n\n1. Put the compass point at \\(A\\) and draw an arc that cuts \\(AB\\) and \\(AC\\).\n2. From the two points where the arc cuts the arms, draw equal arcs inside the angle.\n3. Draw a straight line from \\(A\\) through the intersection of those two arcs.",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jan2020_P2H__Q05__p06-06__m02__Bearings-Scale-Drawing-and-Constructions.png",
+              "alt": "Construction of an angle bisector"
+            }
+          ]
         }
       ],
       "finalAnswer": "The ray from \\(A\\) through the arc intersection is the angle bisector of \\(BAC\\)."

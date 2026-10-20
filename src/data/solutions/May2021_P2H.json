@@ -297,7 +297,13 @@
         },
         {
           "title": "Plot the points and join",
-          "body": "Plot the points and join them with a smooth curve."
+          "body": "Plot the points and join them with a smooth curve.",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/May2021_P2H__Q15__p16-17__m04__Graphs-of-Functions.png",
+              "alt": "Graph of y = x + 4/x"
+            }
+          ]
         }
       ],
       "finalAnswer": "Missing values are \\(8.5,5,4,5\\)."
@@ -469,7 +475,13 @@
       "steps": [
         {
           "title": "Use cumulative frequency",
-          "body": "For Office A, the cumulative frequencies are\n\n\\[\n17,\\ 32,\\ 57,\\ 70,\\ 76,\\ 80\n\\]"
+          "body": "For Office A, the cumulative frequencies are\n\n\\[\n17,\\ 32,\\ 57,\\ 70,\\ 76,\\ 80\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/May2021_P2H__Q12__p12-13__m07__Cumulative-Frequency-Diagrams.png",
+              "alt": "Cumulative frequency graph"
+            }
+          ]
         },
         {
           "title": "The median is the th",

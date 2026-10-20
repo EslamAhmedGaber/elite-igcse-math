@@ -552,7 +552,13 @@
         },
         {
           "title": "Plot",
-          "body": "Plot\n\n\\[\n(10,0),(20,12),(30,27),(40,47),(50,65),(60,74),(70,80)\n\\]"
+          "body": "Plot\n\n\\[\n(10,0),(20,12),(30,27),(40,47),(50,65),(60,74),(70,80)\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jun2025_P1HR__Q12__p12-13__m06__Cumulative-Frequency-Diagrams.png",
+              "alt": "Cumulative frequency graph"
+            }
+          ]
         },
         {
           "title": "Use cumulative frequency",

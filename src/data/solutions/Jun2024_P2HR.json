@@ -603,7 +603,13 @@
         },
         {
           "title": "The image has vertices",
-          "body": "The image has vertices\n\n\\[\n(-4,-1),\\ (-6,-1),\\ (-5,-2),\\ (-4,-2)\n\\]"
+          "body": "The image has vertices\n\n\\[\n(-4,-1),\\ (-6,-1),\\ (-5,-2),\\ (-4,-2)\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jun2024_P2HR__Q02__p04-04__m04__Transformations.png",
+              "alt": "Shape and its image"
+            }
+          ]
         }
       ],
       "finalAnswer": "(a) translation by \\(\\begin{pmatrix}3\\\\-5\\end{pmatrix}\\); (b) vertices \\((-4,-1),(-6,-1),(-5,-2),(-4,-2)\\)."
@@ -637,7 +643,13 @@
         },
         {
           "title": "Plot",
-          "body": "Plot\n\n\\[\n(0,0),(5,6),(10,17),(15,27),(20,42),(25,53),(30,60)\n\\]"
+          "body": "Plot\n\n\\[\n(0,0),(5,6),(10,17),(15,27),(20,42),(25,53),(30,60)\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jun2024_P2HR__Q11__p12-13__m07__Cumulative-Frequency-Diagrams.png",
+              "alt": "Cumulative frequency graph"
+            }
+          ]
         },
         {
           "title": "Use cumulative frequency",

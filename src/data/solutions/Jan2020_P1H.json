@@ -279,7 +279,13 @@
         },
         {
           "title": "Solve inequality",
-          "body": "Since \\(a>4\\), the turning point is below the \\(x\\)-axis and the curve crosses the \\(x\\)-axis twice."
+          "body": "Since \\(a>4\\), the turning point is below the \\(x\\)-axis and the curve crosses the \\(x\\)-axis twice.",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jan2020_P1H__Q20__p24-24__m04__Graphs-of-Functions.png",
+              "alt": "Sketch of y = 4(x - 1)^2 - a"
+            }
+          ]
         }
       ],
       "finalAnswer": "turning point \\((1,-a)\\), \\(y\\)-intercept \\((0,4-a)\\), \\(x\\)-intercepts \\(\\left(1-\\frac{\\sqrt a}{2},0\\right)\\) and \\(\\left(1+\\frac{\\sqrt a}{2},0\\right)\\)"
@@ -455,7 +461,13 @@
         },
         {
           "title": "become",
-          "body": "become\n\n\\[\n(4,6),\\ (8,6),\\ (8,3),\\ (6,3)\n\\]"
+          "body": "become\n\n\\[\n(4,6),\\ (8,6),\\ (8,3),\\ (6,3)\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jan2020_P1H__Q08__p10-10__m02__Transformations.png",
+              "alt": "Shape and its image"
+            }
+          ]
         }
       ],
       "finalAnswer": "draw the enlarged shape with vertices \\((4,6),(8,6),(8,3),(6,3)\\)."
@@ -613,7 +625,13 @@
         },
         {
           "title": "Solve inequality",
-          "body": "Since \\(a>4\\), the turning point is below the \\(x\\)-axis and the curve crosses the \\(x\\)-axis twice."
+          "body": "Since \\(a>4\\), the turning point is below the \\(x\\)-axis and the curve crosses the \\(x\\)-axis twice.",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jan2020_P1H__Q20__p24-24__m04__Graphs-of-Functions.png",
+              "alt": "Sketch of y = 4(x - 1)^2 - a"
+            }
+          ]
         }
       ],
       "finalAnswer": "turning point \\((1,-a)\\), \\(y\\)-intercept \\((0,4-a)\\), \\(x\\)-intercepts \\(\\left(1-\\frac{\\sqrt a}{2},0\\right)\\) and \\(\\left(1+\\frac{\\sqrt a}{2},0\\right)\\)"

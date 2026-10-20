@@ -575,7 +575,13 @@
         },
         {
           "title": "(c) Rotate clockwise about",
-          "body": "(c) Rotate \\(P\\) \\(90^\\circ\\) clockwise about \\((3,5)\\). The image has vertices\n\n\\[\n(3,6),\\ (1,6),\\ (0,5),\\ (1,5)\n\\]"
+          "body": "(c) Rotate \\(P\\) \\(90^\\circ\\) clockwise about \\((3,5)\\). The image has vertices\n\n\\[\n(3,6),\\ (1,6),\\ (0,5),\\ (1,5)\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/May2023_P1H__Q04__p06-07__m08__Transformations.png",
+              "alt": "Shape and its image"
+            }
+          ]
         }
       ],
       "finalAnswer": "(a) \\(d=5,\\ e=7,\\ f=-4\\); (b) enlargement, scale factor \\(3\\), centre \\((0,2)\\); (c) vertices \\((3,6),(1,6),(0,5),(1,5)\\)."

@@ -10,10 +10,10 @@
     : pathway === "pure" ? "wma11" : "";
   const dataFiles = {
     baccalaureate: "data/EgyptianBaccalaureate/2026/English/baccalaureate-data.js?v=20260902c",
-    wma11: "ial/wma11/wma11-data.js?v=20260527c",
-    wma12: "ial/wma12/wma12-data.js?v=20260611a",
+    wma11: "ial/wma11/wma11-data.js?v=20261020fig",
+    wma12: "ial/wma12/wma12-data.js?v=20261020fig",
     wma13: "ial/wma13/wma13-data.js?v=wma13-20261020",
-    wme01: "ial/wme01/wme01-data.js?v=20260613a"
+    wme01: "ial/wme01/wme01-data.js?v=20261020fig"
   };
   const selectedData = baccalaureate ? dataFiles.baccalaureate : ialCourse ? dataFiles[ialCourse] : "questions-data.js?v=20261018a";
 
@@ -36,9 +36,9 @@
     setLoading(true);
     await root.EliteRuntime.loadScript(selectedData, { id: "eliteExamCourseData" });
     if (!ialCourse && !baccalaureate) {
-      await root.EliteRuntime.loadScript("topic-normalizer.js?v=20261018a", { id: "eliteExamTopicNormalizer" });
+      await root.EliteRuntime.loadScript("topic-normalizer.js?v=20261020fig", { id: "eliteExamTopicNormalizer" });
     }
-    await root.EliteRuntime.loadScript("exam.js?v=20261020w13", { id: "eliteExamApp" });
+    await root.EliteRuntime.loadScript("exam.js?v=20261020fig", { id: "eliteExamApp" });
     setLoading(false);
   }
 

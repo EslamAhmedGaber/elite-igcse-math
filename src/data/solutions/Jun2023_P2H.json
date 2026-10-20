@@ -309,7 +309,13 @@
         },
         {
           "title": "Plot the points and join",
-          "body": "Plot the points and join them with a smooth U-shaped curve."
+          "body": "Plot the points and join them with a smooth U-shaped curve.",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jun2023_P2H__Q04__p06-06__m04__Graphs-of-Functions.png",
+              "alt": "Graph of y = x^2 - x - 4"
+            }
+          ]
         }
       ],
       "finalAnswer": "Missing values are \\(8,-2,-4,-2,2\\)."

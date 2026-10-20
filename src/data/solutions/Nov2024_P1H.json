@@ -293,7 +293,13 @@
         },
         {
           "title": "Plot the points and join",
-          "body": "Plot the points and join them with a smooth curve."
+          "body": "Plot the points and join them with a smooth curve.",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Nov2024_P1H__Q11__p13-13__m04__Graphs-of-Functions.png",
+              "alt": "Graph of y = 2(x + 1/x)"
+            }
+          ]
         }
       ],
       "finalAnswer": "Missing values are \\(5,4,8.5,10.4\\)."
@@ -376,7 +382,13 @@
       "steps": [
         {
           "title": "Construction answer",
-          "body": "To construct the bisector of angle \\(ABC\\):\n\n1. Draw an arc centred at \\(B\\) cutting both arms of the angle.\n2. From the two cut points, draw equal arcs inside the angle.\n3. Draw the line from \\(B\\) through the intersection of these arcs."
+          "body": "To construct the bisector of angle \\(ABC\\):\n\n1. Draw an arc centred at \\(B\\) cutting both arms of the angle.\n2. From the two cut points, draw equal arcs inside the angle.\n3. Draw the line from \\(B\\) through the intersection of these arcs.",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Nov2024_P1H__Q02__p04-04__m02__Bearings-Scale-Drawing-and-Constructions.png",
+              "alt": "Construction of an angle bisector"
+            }
+          ]
         }
       ],
       "finalAnswer": "The constructed ray is the angle bisector of \\(ABC\\)."

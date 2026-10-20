@@ -312,7 +312,13 @@
         },
         {
           "title": "Plot the points and join",
-          "body": "Plot the points and join them with a smooth decreasing reciprocal curve."
+          "body": "Plot the points and join them with a smooth decreasing reciprocal curve.",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jan2022_P2HR__Q11__p15-15__m04__Graphs-of-Functions.png",
+              "alt": "Graph of y = 6/x"
+            }
+          ]
         }
       ],
       "finalAnswer": "Missing values are \\(12,3,1.5,1.2\\)."
@@ -346,7 +352,13 @@
         },
         {
           "title": "Use the inequalities",
-          "body": "For the region, use the inequalities:\n\\[\nx<6\n\\]\n\n\\[\ny>2\n\\]\n\n\\[\ny\\leq x+1\n\\]"
+          "body": "For the region, use the inequalities:\n\\[\nx<6\n\\]\n\n\\[\ny>2\n\\]\n\n\\[\ny\\leq x+1\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jan2022_P2HR__Q07__p10-10__m05__Graphing-Inequalities.png",
+              "alt": "Shaded region R"
+            }
+          ]
         }
       ],
       "finalAnswer": "(a) \\(y=-3x+5\\). (b) Shade \\(x<6\\), \\(y>2\\), \\(y\\leq x+1\\)."

@@ -456,7 +456,13 @@
       "steps": [
         {
           "title": "Frequency density",
-          "body": "Frequency density \\(=\\dfrac{\\text{frequency}}{\\text{class width}}\\).\n\n\\[\n0<h\\le 5: \\frac{12}{5}=2.4\n\\]\n\n\\[\n5<h\\le 15: \\frac{34}{10}=3.4\n\\]\n\n\\[\n15<h\\le 30: \\frac{45}{15}=3\n\\]\n\n\\[\n30<h\\le 50: \\frac{28}{20}=1.4\n\\]"
+          "body": "Frequency density \\(=\\dfrac{\\text{frequency}}{\\text{class width}}\\).\n\n\\[\n0<h\\le 5: \\frac{12}{5}=2.4\n\\]\n\n\\[\n5<h\\le 15: \\frac{34}{10}=3.4\n\\]\n\n\\[\n15<h\\le 30: \\frac{45}{15}=3\n\\]\n\n\\[\n30<h\\le 50: \\frac{28}{20}=1.4\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Nov2025_4WM1H__Q20__p18-18__m03__Standard-Compound-Units.png",
+              "alt": "Histogram"
+            }
+          ]
         }
       ],
       "finalAnswer": "draw bars with densities \\(2.4, 3.4, 3, 1.4\\)."
@@ -583,7 +589,13 @@
       "steps": [
         {
           "title": "Frequency density",
-          "body": "Frequency density \\(=\\dfrac{\\text{frequency}}{\\text{class width}}\\).\n\n\\[\n0<h\\le 5: \\frac{12}{5}=2.4\n\\]\n\n\\[\n5<h\\le 15: \\frac{34}{10}=3.4\n\\]\n\n\\[\n15<h\\le 30: \\frac{45}{15}=3\n\\]\n\n\\[\n30<h\\le 50: \\frac{28}{20}=1.4\n\\]"
+          "body": "Frequency density \\(=\\dfrac{\\text{frequency}}{\\text{class width}}\\).\n\n\\[\n0<h\\le 5: \\frac{12}{5}=2.4\n\\]\n\n\\[\n5<h\\le 15: \\frac{34}{10}=3.4\n\\]\n\n\\[\n15<h\\le 30: \\frac{45}{15}=3\n\\]\n\n\\[\n30<h\\le 50: \\frac{28}{20}=1.4\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Nov2025_4WM1H__Q20__p18-18__m03__Standard-Compound-Units.png",
+              "alt": "Histogram"
+            }
+          ]
         }
       ],
       "finalAnswer": "draw bars with densities \\(2.4, 3.4, 3, 1.4\\)."

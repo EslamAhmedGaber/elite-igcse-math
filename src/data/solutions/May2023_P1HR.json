@@ -496,7 +496,13 @@
         },
         {
           "title": "They become",
-          "body": "They become\n\n\\[\n(3,6),\\ (5,6),\\ (3,9)\n\\]"
+          "body": "They become\n\n\\[\n(3,6),\\ (5,6),\\ (3,9)\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/May2023_P1HR__Q10__p10-10__m02__Transformations.png",
+              "alt": "Shape and its image"
+            }
+          ]
         }
       ],
       "finalAnswer": "draw the triangle with vertices \\((3,6),(5,6),(3,9)\\)."
@@ -534,7 +540,13 @@
       "steps": [
         {
           "title": "The cumulative frequencies are",
-          "body": "The cumulative frequencies are\n\n\\[\n15,\\ 31,\\ 52,\\ 66,\\ 74,\\ 80\n\\]"
+          "body": "The cumulative frequencies are\n\n\\[\n15,\\ 31,\\ 52,\\ 66,\\ 74,\\ 80\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/May2023_P1HR__Q14__p14-15__m06__Cumulative-Frequency-Diagrams.png",
+              "alt": "Cumulative frequency graph"
+            }
+          ]
         },
         {
           "title": "Convert standard form",

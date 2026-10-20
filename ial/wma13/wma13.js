@@ -543,7 +543,7 @@
           </div>
           <div class="ial-paper-actions">
             <a class="button primary" href="downloads/IAL/WMA13/Papers/${slug}_QP.pdf" target="_blank" rel="noreferrer">Question Paper</a>
-            <a class="button solution" href="downloads/IAL/WMA13/Papers/${slug}_Solutions.pdf?v=wma13-20261020" target="_blank" rel="noreferrer">Worked Solution</a>
+            <a class="button solution" href="downloads/IAL/WMA13/Papers/${slug}_Solutions.pdf?v=books2027" target="_blank" rel="noreferrer">Worked Solution</a>
           </div>
         </article>
       `;

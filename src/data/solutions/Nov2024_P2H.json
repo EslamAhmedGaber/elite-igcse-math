@@ -269,7 +269,13 @@
         },
         {
           "title": "The required region is",
-          "body": "The required region is\n\\[\nx\\geq3\n\\]\n\n\\[\ny\\geq1\n\\]\n\n\\[\nx+y\\leq7\n\\]"
+          "body": "The required region is\n\\[\nx\\geq3\n\\]\n\n\\[\ny\\geq1\n\\]\n\n\\[\nx+y\\leq7\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Nov2024_P2H__Q07__p08-08__m04__Graphing-Inequalities.png",
+              "alt": "Shaded region R"
+            }
+          ]
         }
       ],
       "finalAnswer": "Shade \\(x\\geq3\\), \\(y\\geq1\\), \\(x+y\\leq7\\)."
@@ -556,7 +562,13 @@
       "steps": [
         {
           "title": "The cumulative frequencies are",
-          "body": "The cumulative frequencies are\n\n\\[\n4,\\ 19,\\ 39,\\ 50,\\ 56,\\ 60\n\\]"
+          "body": "The cumulative frequencies are\n\n\\[\n4,\\ 19,\\ 39,\\ 50,\\ 56,\\ 60\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Nov2024_P2H__Q13__p14-15__m06__Cumulative-Frequency-Diagrams.png",
+              "alt": "Cumulative frequency graph"
+            }
+          ]
         },
         {
           "title": "The median is the th",

@@ -390,7 +390,13 @@
       "steps": [
         {
           "title": "Construction answer",
-          "body": "To construct the bisector of angle \\(ABC\\):\n\n1. Use centre \\(B\\) to draw an arc crossing \\(BA\\) and \\(BC\\).\n2. Use the same compass width from the two crossing points to make two arcs inside the angle.\n3. Join \\(B\\) to the point where these two arcs meet."
+          "body": "To construct the bisector of angle \\(ABC\\):\n\n1. Use centre \\(B\\) to draw an arc crossing \\(BA\\) and \\(BC\\).\n2. Use the same compass width from the two crossing points to make two arcs inside the angle.\n3. Join \\(B\\) to the point where these two arcs meet.",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Nov2025_P1H__Q03__p04-04__m02__Bearings-Scale-Drawing-and-Constructions.png",
+              "alt": "Construction of an angle bisector"
+            }
+          ]
         }
       ],
       "finalAnswer": "That line is the required angle bisector."

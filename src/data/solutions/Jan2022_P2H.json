@@ -317,7 +317,13 @@
         },
         {
           "title": "Read the graph",
-          "body": "So draw the straight line\n\n\\[\ny=1-2x\n\\]"
+          "body": "So draw the straight line\n\n\\[\ny=1-2x\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jan2022_P2H__Q21__p23-23__m05__Graphs-of-Functions.png",
+              "alt": "Graph of y = 2x^2 - 4x - 1 with the line y = 1 - 2x"
+            }
+          ]
         },
         {
           "title": "The intersections of this line",
@@ -806,7 +812,13 @@
         },
         {
           "title": "Read the graph",
-          "body": "So draw the straight line\n\n\\[\ny=1-2x\n\\]"
+          "body": "So draw the straight line\n\n\\[\ny=1-2x\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jan2022_P2H__Q21__p23-23__m05__Graphs-of-Functions.png",
+              "alt": "Graph of y = 2x^2 - 4x - 1 with the line y = 1 - 2x"
+            }
+          ]
         },
         {
           "title": "The intersections of this line",

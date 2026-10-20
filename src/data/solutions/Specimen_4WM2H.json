@@ -109,7 +109,13 @@
         },
         {
           "title": "Read the graph",
-          "body": "So shade the triangular region above \\(y=1\\), to the right of \\(x=2\\), and below the line \\(x+y=7\\). Its vertices are\n\n\\[\n(2,1),\\quad (2,5),\\quad (6,1)\n\\]"
+          "body": "So shade the triangular region above \\(y=1\\), to the right of \\(x=2\\), and below the line \\(x+y=7\\). Its vertices are\n\n\\[\n(2,1),\\quad (2,5),\\quad (6,1)\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Specimen_4WM2H__Q05__p07-07__m04__Graphing-Inequalities.png",
+              "alt": "Shaded region R"
+            }
+          ]
         }
       ],
       "finalAnswer": "the shaded region \\(R\\) is the triangle with vertices \\((2,1)\\), \\((2,5)\\), and \\((6,1)\\)."
@@ -351,7 +357,13 @@
       "steps": [
         {
           "title": "Plot the cumulative frequency points",
-          "body": "Plot the cumulative frequency points and join with a smooth increasing curve:\n\n\\[\n(10,0),\\ (20,13),\\ (30,36),\\ (40,42),\\ (50,47),\\ (60,52),\\ (70,56),\\ (80,60)\n\\]"
+          "body": "Plot the cumulative frequency points and join with a smooth increasing curve:\n\n\\[\n(10,0),\\ (20,13),\\ (30,36),\\ (40,42),\\ (50,47),\\ (60,52),\\ (70,56),\\ (80,60)\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Specimen_4WM2H__Q15__p16-17__m07__Cumulative-Frequency-Diagrams.png",
+              "alt": "Cumulative frequency graph"
+            }
+          ]
         },
         {
           "title": "Use cumulative frequency",

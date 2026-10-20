@@ -191,33 +191,15 @@
     return patterns.some((pattern) => pattern.test(text));
   }
 
+  // Only clear inequality wording moves a question into "Inequalities".
+  // (2026-10-20: weak signals such as "at least", "region", "bound" or "0 < t < 5" in a frequency table
+  // were filing 156 histogram, circle, cumulative-frequency and graph questions under Inequalities.)
   function hasInequalitySignal(text) {
     return matches(text, [
       /\binequalit(?:y|ies)\b/,
-      /\bgraphing inequalities?\b/,
       /\blinear programming\b/,
-      /\bshaded?\s+region\b/,
-      /\bshade(?:d| the)?\b/,
-      /\binteger values?\b/,
-      /\brange of possible values\b/,
-      /\bvalues? of [xyztn] that satisfy\b/,
-      /\bsolve the inequality\b/,
-      /\brepresent the inequality\b/,
-      /\bat least\b/,
-      /\bat most\b/,
-      /\bgreater than\b/,
-      /\bless than\b/,
-      /\bno more than\b/,
-      /\bno less than\b/,
-      /\bregion\b/,
-      /\bbound(?:ed|ary)\b/,
-      /\bshading\b/,
-      /\bgraph the inequalit\b/,
-      /\by\s*[<>]=?/,
-      /\bx\s*[<>]=?/,
-      /\bn\s*[<>]=?/,
-      /\bt\s*[<>]=?/,
-      /\bp\s*[<>]=?/,
+      /\bvalues? of [a-z] (?:that|which) satisf/,
+      /\binteger values? of [a-z]\b/,
     ]);
   }
 

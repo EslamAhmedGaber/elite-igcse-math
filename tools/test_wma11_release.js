@@ -30,9 +30,9 @@ for (const item of mayJune) {
 }
 
 const page = read("ial/wma11/index.html");
-assert(page.includes("wma11-data.js?v=20260817b"), "WMA11 data cache version is stale");
+assert(page.includes("wma11-data.js?v=20261020fig"), "WMA11 data cache version is stale");
 assert(page.includes("wma11.css?v=20260818a"), "WMA11 stylesheet cache version is stale");
-assert(page.includes("wma11.js?v=20260929a"), "WMA11 runtime cache version is stale");
+assert(page.includes("wma11.js?v=books2027"), "WMA11 runtime cache version is stale");
 assert(page.includes("May/June 2026"), "WMA11 page does not name the latest session");
 assert(page.includes("data-ial-total>189"), "WMA11 page fallback count is stale");
 
@@ -43,7 +43,7 @@ assert(runtime.includes("paperFilesAvailable"), "Unavailable paper rows are not 
 const courseModules = read("course-modules.js");
 assert(courseModules.includes('"189 questions"'), "Shared WMA11 resource count is stale");
 assert(courseModules.includes("through May/June 2026"), "Shared WMA11 coverage text is stale");
-assert(courseModules.includes("WMA11_Classified_Questions.pdf?v=wma11-mayjune2026"), "Shared WMA11 book cache version is stale");
+assert(courseModules.includes("WMA11_Classified_Questions.pdf?v=books2027"), "Shared WMA11 book cache version is stale");
 
 const books = [
   "WMA11_Classified_Questions.pdf",

@@ -349,7 +349,7 @@
     if (!window.EliteRuntime?.loadScript) throw new Error("Solution loader is unavailable");
 
     setRuntimeBusy(control, true);
-    fullSolutionsPromise = window.EliteRuntime.loadScript("solutions-data.js?v=20261018a", {
+    fullSolutionsPromise = window.EliteRuntime.loadScript("solutions-data.js?v=20261020fig", {
       id: "eliteExamSolutions",
       test: () => hasFullSolutionBundle(window.SOLUTION_DATA)
     }).then(() => {

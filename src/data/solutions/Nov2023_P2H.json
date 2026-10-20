@@ -222,7 +222,13 @@
         },
         {
           "title": "Solve simultaneous equations",
-          "body": "Then\n\\[\ny=-1+2=1\n\\]"
+          "body": "Then\n\\[\ny=-1+2=1\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Nov2023_P2H__Q14__p13-13__m03__Simultaneous-Equations.png",
+              "alt": "The lines y = x + 2 and 2y + x = 1 meet at (-1, 1)"
+            }
+          ]
         }
       ],
       "finalAnswer": "\\(x=-1\\), \\(y=1\\)."
@@ -516,7 +522,13 @@
         },
         {
           "title": "The reflected T shape has",
-          "body": "The reflected T-shape has vertices\n\n\\[\n(6,1),(6,4),(5,4),(5,3),(4,3),(4,2),(5,2),(5,1)\n\\]"
+          "body": "The reflected T-shape has vertices\n\n\\[\n(6,1),(6,4),(5,4),(5,3),(4,3),(4,2),(5,2),(5,1)\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Nov2023_P2H__Q03__p05-05__m05__Transformations.png",
+              "alt": "Shape and its image"
+            }
+          ]
         },
         {
           "title": "Use trigonometry",

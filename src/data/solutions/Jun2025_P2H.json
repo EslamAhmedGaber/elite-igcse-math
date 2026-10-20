@@ -150,7 +150,13 @@
         },
         {
           "title": "Find intercepts",
-          "body": "So the \\(y\\)-intercept is\n\n\\[\n(0,28)\n\\]"
+          "body": "So the \\(y\\)-intercept is\n\n\\[\n(0,28)\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jun2025_P2H__Q25__p24-25__m06__Completing-the-Square.png",
+              "alt": "Sketch of y = 52 - 6(x - 2)^2"
+            }
+          ]
         }
       ],
       "finalAnswer": "(a) \\(52-6(x-2)^2\\). For the sketch, show a downward parabola with turning point \\((2,52)\\) and \\(y\\)-intercept \\((0,28)\\)."
@@ -360,7 +366,13 @@
       "steps": [
         {
           "title": "Construction answer",
-          "body": "To construct the perpendicular bisector of \\(AB\\):\n\n1. Open the compass to more than half the length of \\(AB\\).\n2. Draw equal arcs from \\(A\\) above and below \\(AB\\).\n3. Without changing the compass width, draw equal arcs from \\(B\\).\n4. Join the two arc intersections with a ruler."
+          "body": "To construct the perpendicular bisector of \\(AB\\):\n\n1. Open the compass to more than half the length of \\(AB\\).\n2. Draw equal arcs from \\(A\\) above and below \\(AB\\).\n3. Without changing the compass width, draw equal arcs from \\(B\\).\n4. Join the two arc intersections with a ruler.",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jun2025_P2H__Q04__p05-05__m02__Bearings-Scale-Drawing-and-Constructions.png",
+              "alt": "Construction of a perpendicular bisector"
+            }
+          ]
         }
       ],
       "finalAnswer": "The joined line is the perpendicular bisector of \\(AB\\)."
@@ -518,7 +530,13 @@
         },
         {
           "title": "The vertices become",
-          "body": "The vertices become\n\n\\[\n(3,1),\\ (9,1),\\ (9,10),\\ (6,10),\\ (6,4),\\ (3,4)\n\\]"
+          "body": "The vertices become\n\n\\[\n(3,1),\\ (9,1),\\ (9,10),\\ (6,10),\\ (6,4),\\ (3,4)\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jun2025_P2H__Q02__p04-04__m05__Transformations.png",
+              "alt": "Shape and its image"
+            }
+          ]
         },
         {
           "title": "Use trigonometry",
@@ -564,7 +582,13 @@
         },
         {
           "title": "Plot",
-          "body": "Plot\n\n\\[\n(0,0),(10,8),(20,21),(30,33),(40,50),(50,57),(60,60)\n\\]"
+          "body": "Plot\n\n\\[\n(0,0),(10,8),(20,21),(30,33),(40,50),(50,57),(60,60)\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jun2025_P2H__Q13__p12-13__m06__Cumulative-Frequency-Diagrams.png",
+              "alt": "Cumulative frequency graph"
+            }
+          ]
         },
         {
           "title": "The median is the th",
@@ -638,7 +662,13 @@
         },
         {
           "title": "Calculate value",
-          "body": "So the Venn regions are:\n\n\\[\nC\\text{ only}=10,\\quad P\\text{ only}=14,\\quad T\\text{ only}=14\n\\]\n\n\\[\nC\\cap P\\text{ only}=6,\\quad C\\cap T\\text{ only}=15,\\quad P\\cap T\\text{ only}=20\n\\]\n\n\\[\nC\\cap P\\cap T=12,\\quad \\text{outside}=29\n\\]"
+          "body": "So the Venn regions are:\n\n\\[\nC\\text{ only}=10,\\quad P\\text{ only}=14,\\quad T\\text{ only}=14\n\\]\n\n\\[\nC\\cap P\\text{ only}=6,\\quad C\\cap T\\text{ only}=15,\\quad P\\cap T\\text{ only}=20\n\\]\n\n\\[\nC\\cap P\\cap T=12,\\quad \\text{outside}=29\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jun2025_P2H__Q20__p18-18__m06__Probability-Diagrams-Venn-and-Tree-Diagrams.png",
+              "alt": "Completed Venn diagram"
+            }
+          ]
         },
         {
           "title": "Calculate value",
@@ -708,7 +738,13 @@
         },
         {
           "title": "Find intercepts",
-          "body": "So the \\(y\\)-intercept is\n\n\\[\n(0,28)\n\\]"
+          "body": "So the \\(y\\)-intercept is\n\n\\[\n(0,28)\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jun2025_P2H__Q25__p24-25__m06__Completing-the-Square.png",
+              "alt": "Sketch of y = 52 - 6(x - 2)^2"
+            }
+          ]
         }
       ],
       "finalAnswer": "(a) \\(52-6(x-2)^2\\). For the sketch, show a downward parabola with turning point \\((2,52)\\) and \\(y\\)-intercept \\((0,28)\\)."
@@ -861,7 +897,13 @@
         },
         {
           "title": "Calculate value",
-          "body": "So the Venn regions are:\n\n\\[\nC\\text{ only}=10,\\quad P\\text{ only}=14,\\quad T\\text{ only}=14\n\\]\n\n\\[\nC\\cap P\\text{ only}=6,\\quad C\\cap T\\text{ only}=15,\\quad P\\cap T\\text{ only}=20\n\\]\n\n\\[\nC\\cap P\\cap T=12,\\quad \\text{outside}=29\n\\]"
+          "body": "So the Venn regions are:\n\n\\[\nC\\text{ only}=10,\\quad P\\text{ only}=14,\\quad T\\text{ only}=14\n\\]\n\n\\[\nC\\cap P\\text{ only}=6,\\quad C\\cap T\\text{ only}=15,\\quad P\\cap T\\text{ only}=20\n\\]\n\n\\[\nC\\cap P\\cap T=12,\\quad \\text{outside}=29\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jun2025_P2H__Q20__p18-18__m06__Probability-Diagrams-Venn-and-Tree-Diagrams.png",
+              "alt": "Completed Venn diagram"
+            }
+          ]
         },
         {
           "title": "Calculate value",

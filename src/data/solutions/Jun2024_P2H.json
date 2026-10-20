@@ -367,7 +367,13 @@
         },
         {
           "title": "The required region is",
-          "body": "The required region is\n\\[\ny\\geq2\n\\]\n\n\\[\nx\\leq6\n\\]\n\n\\[\ny\\leq x+1\n\\]"
+          "body": "The required region is\n\\[\ny\\geq2\n\\]\n\n\\[\nx\\leq6\n\\]\n\n\\[\ny\\leq x+1\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jun2024_P2H__Q02__p04-04__m04__Graphing-Inequalities.png",
+              "alt": "Shaded region R"
+            }
+          ]
         }
       ],
       "finalAnswer": "Shade \\(y\\geq2\\), \\(x\\leq6\\), \\(y\\leq x+1\\)."
@@ -560,7 +566,13 @@
         },
         {
           "title": "Plot these points and join",
-          "body": "Plot these points and join them with a smooth curve:\n\n\\[\n(0,0),(10,7),(20,24),(30,42),(40,56),(50,66),(60,70)\n\\]"
+          "body": "Plot these points and join them with a smooth curve:\n\n\\[\n(0,0),(10,7),(20,24),(30,42),(40,56),(50,66),(60,70)\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jun2024_P2H__Q13__p12-13__m07__Cumulative-Frequency-Diagrams.png",
+              "alt": "Cumulative frequency graph"
+            }
+          ]
         },
         {
           "title": "Use cumulative frequency",
@@ -589,7 +601,13 @@
         },
         {
           "title": "There are students inside the",
-          "body": "There are \\(60-2=58\\) students inside the Venn diagram.\n\n\\[\nK\\text{ only}=58-(8+7+11+9+4+12)=7\n\\]\n\n\\[\nP(K\\mid P)=\\frac{17}{28}\n\\]\n\n\\[\nn(P\\cap K')=4+7=11\n\\]\n\n\\[\nn((P\\cup E)\\cap K)=8+11+9=28\n\\]"
+          "body": "There are \\(60-2=58\\) students inside the Venn diagram.\n\n\\[\nK\\text{ only}=58-(8+7+11+9+4+12)=7\n\\]\n\n\\[\nP(K\\mid P)=\\frac{17}{28}\n\\]\n\n\\[\nn(P\\cap K')=4+7=11\n\\]\n\n\\[\nn((P\\cup E)\\cap K)=8+11+9=28\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jun2024_P2H__Q16__p16-17__m07__Probability-Diagrams-Venn-and-Tree-Diagrams.png",
+              "alt": "Completed Venn diagram"
+            }
+          ]
         }
       ],
       "finalAnswer": "\\(\\frac{17}{28}\\), \\(11\\), \\(28\\)."

@@ -122,7 +122,13 @@
       "steps": [
         {
           "title": "Use a compass radius greater",
-          "body": "Use a compass radius greater than half of \\(AB\\). Draw matching arcs from \\(A\\) above and below the line, then draw matching arcs from \\(B\\) with the same radius. Join the two arc-intersection points."
+          "body": "Use a compass radius greater than half of \\(AB\\). Draw matching arcs from \\(A\\) above and below the line, then draw matching arcs from \\(B\\) with the same radius. Join the two arc-intersection points.",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/May2025_4WM2H__Q04__p05-05__m02__Coordinate-Geometry.png",
+              "alt": "Construction of a perpendicular bisector"
+            }
+          ]
         }
       ],
       "finalAnswer": "the joined line is the perpendicular bisector of \\(AB\\)."
@@ -274,7 +280,13 @@
         },
         {
           "title": "Plot the points",
-          "body": "Plot the points\n\n\\[\n(10,8),(20,21),(30,33),(40,50),(50,57),(60,60)\n\\]"
+          "body": "Plot the points\n\n\\[\n(10,8),(20,21),(30,33),(40,50),(50,57),(60,60)\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/May2025_4WM2H__Q14__p14-15__m06__Cumulative-Frequency-Diagrams.png",
+              "alt": "Cumulative frequency graph"
+            }
+          ]
         },
         {
           "title": "The median is the th",
@@ -559,7 +571,13 @@
         },
         {
           "title": "Useful transformed points are",
-          "body": "Useful transformed points are\n\n\\[\n(-4,1)\\to(-2,-2),\\quad (2,4)\\to(1,1),\\quad (6,2)\\to(3,-1)\n\\]"
+          "body": "Useful transformed points are\n\n\\[\n(-4,1)\\to(-2,-2),\\quad (2,4)\\to(1,1),\\quad (6,2)\\to(3,-1)\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/May2025_4WM2H__Q27__p28-29__m04__Graphs-of-Functions.png",
+              "alt": "Graph of y = g(2x) - 3"
+            }
+          ]
         },
         {
           "title": "Join these points with straight",
@@ -755,7 +773,13 @@
         },
         {
           "title": "Useful transformed points are",
-          "body": "Useful transformed points are\n\n\\[\n(-4,1)\\to(-2,-2),\\quad (2,4)\\to(1,1),\\quad (6,2)\\to(3,-1)\n\\]"
+          "body": "Useful transformed points are\n\n\\[\n(-4,1)\\to(-2,-2),\\quad (2,4)\\to(1,1),\\quad (6,2)\\to(3,-1)\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/May2025_4WM2H__Q27__p28-29__m04__Graphs-of-Functions.png",
+              "alt": "Graph of y = g(2x) - 3"
+            }
+          ]
         },
         {
           "title": "Join these points with straight",

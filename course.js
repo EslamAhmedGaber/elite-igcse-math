@@ -22,8 +22,8 @@
   // practice page shows it; topics = topic notes; papers = classified past papers.
   const FACTS = {
     linear: { topics: 58, questions: 1280, papers: 60, glyph: "π" },
-    unit1: { topics: 29, questions: 543, glyph: "√" },
-    unit2: { topics: 32, questions: 739, glyph: "x²" },
+    unit1: { topics: 29, questions: 596, glyph: "√" },
+    unit2: { topics: 32, questions: 686, glyph: "x²" },
     wma11: { topics: 13, questions: 189, papers: 19, glyph: "∫" },
     wma12: { topics: 12, questions: 190, papers: 19, glyph: "Σ" },
     wma13: { topics: 13, questions: 180, papers: 19, glyph: "eˣ" },

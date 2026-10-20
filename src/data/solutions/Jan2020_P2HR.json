@@ -21,7 +21,13 @@
         },
         {
           "title": "There are students outside all",
-          "body": "There are \\(5\\) students outside all three sets. The total number of students is \\(50\\), so\n\n\\[\n(25-x)+(16-x)+9+(x-6)+3+2+6+5=50\n\\]\n\n\\[\n60-x=50\n\\]\n\n\\[\nx=10\n\\]"
+          "body": "There are \\(5\\) students outside all three sets. The total number of students is \\(50\\), so\n\n\\[\n(25-x)+(16-x)+9+(x-6)+3+2+6+5=50\n\\]\n\n\\[\n60-x=50\n\\]\n\n\\[\nx=10\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jan2020_P2HR__Q17__p18-19__m06__Set-Notation-and-Venn-Diagrams.png",
+              "alt": "Completed Venn diagram"
+            }
+          ]
         },
         {
           "title": "Calculate value",
@@ -337,7 +343,13 @@
         },
         {
           "title": "Plot these points and join",
-          "body": "Plot these points and join them with a smooth U-shaped curve."
+          "body": "Plot these points and join them with a smooth U-shaped curve.",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jan2020_P2HR__Q15__p15-15__m04__Graphs-of-Functions.png",
+              "alt": "Graph of y = x^2 - x/2 - 3"
+            }
+          ]
         }
       ],
       "finalAnswer": "Missing values are \\(2,-1.5,-3,0\\)."
@@ -409,7 +421,13 @@
       "steps": [
         {
           "title": "Construction answer",
-          "body": "To construct the perpendicular bisector of \\(AB\\):\n\n1. Set the compass radius to more than half of \\(AB\\).\n2. With centre \\(A\\), draw arcs above and below the line.\n3. With the same radius and centre \\(B\\), draw arcs crossing the first pair.\n4. Draw the straight line through the two arc intersections."
+          "body": "To construct the perpendicular bisector of \\(AB\\):\n\n1. Set the compass radius to more than half of \\(AB\\).\n2. With centre \\(A\\), draw arcs above and below the line.\n3. With the same radius and centre \\(B\\), draw arcs crossing the first pair.\n4. Draw the straight line through the two arc intersections.",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jan2020_P2HR__Q06__p07-07__m02__Bearings-Scale-Drawing-and-Constructions.png",
+              "alt": "Construction of a perpendicular bisector"
+            }
+          ]
         }
       ],
       "finalAnswer": "This line is the perpendicular bisector of \\(AB\\)."

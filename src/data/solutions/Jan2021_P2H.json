@@ -291,7 +291,13 @@
         },
         {
           "title": "The required region satisfies",
-          "body": "The required region satisfies\n\\[\nx>1.5\n\\]\n\n\\[\ny\\geq x\n\\]\n\n\\[\nx+y\\leq6\n\\]"
+          "body": "The required region satisfies\n\\[\nx>1.5\n\\]\n\n\\[\ny\\geq x\n\\]\n\n\\[\nx+y\\leq6\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jan2021_P2H__Q04__p06-06__m04__Graphing-Inequalities.png",
+              "alt": "Shaded region R"
+            }
+          ]
         }
       ],
       "finalAnswer": "Shade the region \\(x>1.5\\), \\(y\\geq x\\), \\(x+y\\leq6\\)."

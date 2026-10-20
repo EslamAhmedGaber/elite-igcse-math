@@ -417,7 +417,13 @@
       "steps": [
         {
           "title": "The cumulative frequencies are",
-          "body": "The cumulative frequencies are\n\n\\[\n12,\\ 36,\\ 64,\\ 76,\\ 86,\\ 90\n\\]"
+          "body": "The cumulative frequencies are\n\n\\[\n12,\\ 36,\\ 64,\\ 76,\\ 86,\\ 90\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Nov2021_P1H__Q11__p10-11__m05__Cumulative-Frequency-Diagrams.png",
+              "alt": "Cumulative frequency graph"
+            }
+          ]
         },
         {
           "title": "Use cumulative frequency",
@@ -488,7 +494,13 @@
         },
         {
           "title": "Calculate probability",
-          "body": "So:\n\n\\[\nM\\cap E\\text{ only}=11,\\quad M\\cap F\\text{ only}=4,\\quad E\\cap F\\text{ only}=2\n\\]\n\n\\[\nE\\text{ only}=20-11-2-7=0\n\\]\n\n\\[\nF\\text{ only}=14-4-2-7=1\n\\]"
+          "body": "So:\n\n\\[\nM\\cap E\\text{ only}=11,\\quad M\\cap F\\text{ only}=4,\\quad E\\cap F\\text{ only}=2\n\\]\n\n\\[\nE\\text{ only}=20-11-2-7=0\n\\]\n\n\\[\nF\\text{ only}=14-4-2-7=1\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Nov2021_P1H__Q16__p18-19__m05__Probability-Diagrams-Venn-and-Tree-Diagrams.png",
+              "alt": "Completed Venn diagram"
+            }
+          ]
         },
         {
           "title": "Calculate probability",

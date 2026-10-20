@@ -614,7 +614,13 @@
         },
         {
           "title": "gives vertices",
-          "body": "gives vertices\n\n\\[\n(1,4),\\ (2,4),\\ (1,6)\n\\]"
+          "body": "gives vertices\n\n\\[\n(1,4),\\ (2,4),\\ (1,6)\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jun2022_P2HR__Q01__p03-03__m04__Transformations.png",
+              "alt": "Shape and its image"
+            }
+          ]
         }
       ],
       "finalAnswer": "(a) enlargement, scale factor \\(3\\), centre \\((3,0)\\); (b) vertices \\((1,4),(2,4),(1,6)\\)."
@@ -644,7 +650,13 @@
       "steps": [
         {
           "title": "Plot the points",
-          "body": "Plot the points\n\n\\[\n(10,0),(20,13),(30,36),(40,42),(50,47),(60,52),(70,56),(80,60)\n\\]"
+          "body": "Plot the points\n\n\\[\n(10,0),(20,13),(30,36),(40,42),(50,47),(60,52),(70,56),(80,60)\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jun2022_P2HR__Q11__p12-13__m07__Cumulative-Frequency-Diagrams.png",
+              "alt": "Cumulative frequency graph"
+            }
+          ]
         },
         {
           "title": "The median is at cumulative",

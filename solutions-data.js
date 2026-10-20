@@ -277,7 +277,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Solve inequality",
-        "body": "Since \\(a>4\\), the turning point is below the \\(x\\)-axis and the curve crosses the \\(x\\)-axis twice."
+        "body": "Since \\(a>4\\), the turning point is below the \\(x\\)-axis and the curve crosses the \\(x\\)-axis twice.",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jan2020_P1H__Q20__p24-24__m04__Graphs-of-Functions.png",
+            "alt": "Sketch of y = 4(x - 1)^2 - a"
+          }
+        ]
       }
     ],
     "finalAnswer": "turning point \\((1,-a)\\), \\(y\\)-intercept \\((0,4-a)\\), \\(x\\)-intercepts \\(\\left(1-\\frac{\\sqrt a}{2},0\\right)\\) and \\(\\left(1+\\frac{\\sqrt a}{2},0\\right)\\)"
@@ -453,7 +459,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "become",
-        "body": "become\n\n\\[\n(4,6),\\ (8,6),\\ (8,3),\\ (6,3)\n\\]"
+        "body": "become\n\n\\[\n(4,6),\\ (8,6),\\ (8,3),\\ (6,3)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jan2020_P1H__Q08__p10-10__m02__Transformations.png",
+            "alt": "Shape and its image"
+          }
+        ]
       }
     ],
     "finalAnswer": "draw the enlarged shape with vertices \\((4,6),(8,6),(8,3),(6,3)\\)."
@@ -611,7 +623,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Solve inequality",
-        "body": "Since \\(a>4\\), the turning point is below the \\(x\\)-axis and the curve crosses the \\(x\\)-axis twice."
+        "body": "Since \\(a>4\\), the turning point is below the \\(x\\)-axis and the curve crosses the \\(x\\)-axis twice.",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jan2020_P1H__Q20__p24-24__m04__Graphs-of-Functions.png",
+            "alt": "Sketch of y = 4(x - 1)^2 - a"
+          }
+        ]
       }
     ],
     "finalAnswer": "turning point \\((1,-a)\\), \\(y\\)-intercept \\((0,4-a)\\), \\(x\\)-intercepts \\(\\left(1-\\frac{\\sqrt a}{2},0\\right)\\) and \\(\\left(1+\\frac{\\sqrt a}{2},0\\right)\\)"
@@ -1849,7 +1867,13 @@ window.SOLUTION_DATA = {
     "steps": [
       {
         "title": "Construction answer",
-        "body": "To construct the bisector of angle \\(BAC\\):\n\n1. Put the compass point at \\(A\\) and draw an arc that cuts \\(AB\\) and \\(AC\\).\n2. From the two points where the arc cuts the arms, draw equal arcs inside the angle.\n3. Draw a straight line from \\(A\\) through the intersection of those two arcs."
+        "body": "To construct the bisector of angle \\(BAC\\):\n\n1. Put the compass point at \\(A\\) and draw an arc that cuts \\(AB\\) and \\(AC\\).\n2. From the two points where the arc cuts the arms, draw equal arcs inside the angle.\n3. Draw a straight line from \\(A\\) through the intersection of those two arcs.",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jan2020_P2H__Q05__p06-06__m02__Bearings-Scale-Drawing-and-Constructions.png",
+            "alt": "Construction of an angle bisector"
+          }
+        ]
       }
     ],
     "finalAnswer": "The ray from \\(A\\) through the arc intersection is the angle bisector of \\(BAC\\)."
@@ -2264,7 +2288,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "There are students outside all",
-        "body": "There are \\(5\\) students outside all three sets. The total number of students is \\(50\\), so\n\n\\[\n(25-x)+(16-x)+9+(x-6)+3+2+6+5=50\n\\]\n\n\\[\n60-x=50\n\\]\n\n\\[\nx=10\n\\]"
+        "body": "There are \\(5\\) students outside all three sets. The total number of students is \\(50\\), so\n\n\\[\n(25-x)+(16-x)+9+(x-6)+3+2+6+5=50\n\\]\n\n\\[\n60-x=50\n\\]\n\n\\[\nx=10\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jan2020_P2HR__Q17__p18-19__m06__Set-Notation-and-Venn-Diagrams.png",
+            "alt": "Completed Venn diagram"
+          }
+        ]
       },
       {
         "title": "Calculate value",
@@ -2580,7 +2610,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Plot these points and join",
-        "body": "Plot these points and join them with a smooth U-shaped curve."
+        "body": "Plot these points and join them with a smooth U-shaped curve.",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jan2020_P2HR__Q15__p15-15__m04__Graphs-of-Functions.png",
+            "alt": "Graph of y = x^2 - x/2 - 3"
+          }
+        ]
       }
     ],
     "finalAnswer": "Missing values are \\(2,-1.5,-3,0\\)."
@@ -2652,7 +2688,13 @@ window.SOLUTION_DATA = {
     "steps": [
       {
         "title": "Construction answer",
-        "body": "To construct the perpendicular bisector of \\(AB\\):\n\n1. Set the compass radius to more than half of \\(AB\\).\n2. With centre \\(A\\), draw arcs above and below the line.\n3. With the same radius and centre \\(B\\), draw arcs crossing the first pair.\n4. Draw the straight line through the two arc intersections."
+        "body": "To construct the perpendicular bisector of \\(AB\\):\n\n1. Set the compass radius to more than half of \\(AB\\).\n2. With centre \\(A\\), draw arcs above and below the line.\n3. With the same radius and centre \\(B\\), draw arcs crossing the first pair.\n4. Draw the straight line through the two arc intersections.",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jan2020_P2HR__Q06__p07-07__m02__Bearings-Scale-Drawing-and-Constructions.png",
+            "alt": "Construction of a perpendicular bisector"
+          }
+        ]
       }
     ],
     "finalAnswer": "This line is the perpendicular bisector of \\(AB\\)."
@@ -4415,7 +4457,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Plot the points",
-        "body": "Plot the points\n\n\\[\n(0,0),(5,8),(10,23),(15,40),(20,68),(25,101),(30,120)\n\\]"
+        "body": "Plot the points\n\n\\[\n(0,0),(5,8),(10,23),(15,40),(20,68),(25,101),(30,120)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jan2021_P1HR__Q11__p12-13__m06__Cumulative-Frequency-Diagrams.png",
+            "alt": "Cumulative frequency graph"
+          }
+        ]
       },
       {
         "title": "The median is at cumulative",
@@ -4829,7 +4877,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "The required region satisfies",
-        "body": "The required region satisfies\n\\[\nx>1.5\n\\]\n\n\\[\ny\\geq x\n\\]\n\n\\[\nx+y\\leq6\n\\]"
+        "body": "The required region satisfies\n\\[\nx>1.5\n\\]\n\n\\[\ny\\geq x\n\\]\n\n\\[\nx+y\\leq6\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jan2021_P2H__Q04__p06-06__m04__Graphing-Inequalities.png",
+            "alt": "Shaded region R"
+          }
+        ]
       }
     ],
     "finalAnswer": "Shade the region \\(x>1.5\\), \\(y\\geq x\\), \\(x+y\\leq6\\)."
@@ -5750,7 +5804,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "The image has vertices",
-        "body": "The image has vertices\n\n\\[\n(7,3),\\ (13,3),\\ (13,6),\\ (10,6)\n\\]"
+        "body": "The image has vertices\n\n\\[\n(7,3),\\ (13,3),\\ (13,6),\\ (10,6)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jan2021_P2HR__Q05__p06-07__m06__Transformations.png",
+            "alt": "Shape and its image"
+          }
+        ]
       },
       {
         "title": "Use trigonometry",
@@ -5853,7 +5913,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Calculate probability",
-        "body": "So the Venn diagram has:\n\n\\[\nA\\text{ only}=38,\\quad B\\text{ only}=6,\\quad A\\cap B=24,\\quad \\text{outside}=12\n\\]\n\n\\[\nP(A\\cap B)=\\frac{24}{80}=\\frac{3}{10}\n\\]\n\n\\[\nP(A\\cup B')=\\frac{74}{80}=\\frac{37}{40}\n\\]"
+        "body": "So the Venn diagram has:\n\n\\[\nA\\text{ only}=38,\\quad B\\text{ only}=6,\\quad A\\cap B=24,\\quad \\text{outside}=12\n\\]\n\n\\[\nP(A\\cap B)=\\frac{24}{80}=\\frac{3}{10}\n\\]\n\n\\[\nP(A\\cup B')=\\frac{74}{80}=\\frac{37}{40}\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jan2021_P2HR__Q16__p15-15__m05__Probability-Diagrams-Venn-and-Tree-Diagrams.png",
+            "alt": "Completed Venn diagram"
+          }
+        ]
       }
     ],
     "finalAnswer": "\\(\\frac{3}{10}\\), \\(\\frac{37}{40}\\)."
@@ -6017,7 +6083,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "only only outside both sets",
-        "body": "- \\(A\\cap B:\\ \\{5,10,15\\}\\)\n- \\(A\\) only: \\(\\{9,11,12,13\\}\\)\n- \\(B\\) only: \\(\\{4,6\\}\\)\n- outside both sets: \\(\\{7,8,14\\}\\)"
+        "body": "- \\(A\\cap B:\\ \\{5,10,15\\}\\)\n- \\(A\\) only: \\(\\{9,11,12,13\\}\\)\n- \\(B\\) only: \\(\\{4,6\\}\\)\n- outside both sets: \\(\\{7,8,14\\}\\)",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jan2022_P1H__Q07__p08-08__m03__Set-Notation-and-Venn-Diagrams.png",
+            "alt": "Completed Venn diagram"
+          }
+        ]
       }
     ],
     "finalAnswer": "Put \\(\\{5,10,15\\}\\) in the overlap, \\(\\{9,11,12,13\\}\\) in \\(A\\) only, \\(\\{4,6\\}\\) in \\(B\\) only, and \\(\\{7,8,14\\}\\) outside."
@@ -6567,7 +6639,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Plot the points",
-        "body": "Plot the points\n\n\\[\n(0,0),(10,7),(20,33),(30,57),(40,71),(50,78),(60,80)\n\\]"
+        "body": "Plot the points\n\n\\[\n(0,0),(10,7),(20,33),(30,57),(40,71),(50,78),(60,80)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jan2022_P1H__Q12__p12-13__m06__Cumulative-Frequency-Diagrams.png",
+            "alt": "Cumulative frequency graph"
+          }
+        ]
       },
       {
         "title": "The median is at cumulative",
@@ -7052,7 +7130,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Plot the points and join",
-        "body": "Plot the points and join them with a smooth U-shaped curve."
+        "body": "Plot the points and join them with a smooth U-shaped curve.",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jan2022_P1HR__Q04__p06-06__m04__Graphs-of-Functions.png",
+            "alt": "Graph of y = x^2 - 4x + 3"
+          }
+        ]
       }
     ],
     "finalAnswer": "Missing values are \\(15,0,-1,3\\)."
@@ -7089,7 +7173,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Useful points are",
-        "body": "Useful points are\n\n\\[\n(-1,3)\\to(-1,6)\n\\]\n\n\\[\n(2,0)\\to(2,0)\n\\]\n\n\\[\n(3,-1)\\to(3,-2)\n\\]\n\n\\[\n(4,0)\\to(4,0)\n\\]\n\n\\[\n(7,3)\\to(7,6)\n\\]"
+        "body": "Useful points are\n\n\\[\n(-1,3)\\to(-1,6)\n\\]\n\n\\[\n(2,0)\\to(2,0)\n\\]\n\n\\[\n(3,-1)\\to(3,-2)\n\\]\n\n\\[\n(4,0)\\to(4,0)\n\\]\n\n\\[\n(7,3)\\to(7,6)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jan2022_P1HR__Q20__p24-25__m06__Transformations-of-Graphs.png",
+            "alt": "Graph of y = 2g(x)"
+          }
+        ]
       },
       {
         "title": "Solve inequality",
@@ -7483,7 +7573,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Useful points are",
-        "body": "Useful points are\n\n\\[\n(-1,3)\\to(-1,6)\n\\]\n\n\\[\n(2,0)\\to(2,0)\n\\]\n\n\\[\n(3,-1)\\to(3,-2)\n\\]\n\n\\[\n(4,0)\\to(4,0)\n\\]\n\n\\[\n(7,3)\\to(7,6)\n\\]"
+        "body": "Useful points are\n\n\\[\n(-1,3)\\to(-1,6)\n\\]\n\n\\[\n(2,0)\\to(2,0)\n\\]\n\n\\[\n(3,-1)\\to(3,-2)\n\\]\n\n\\[\n(4,0)\\to(4,0)\n\\]\n\n\\[\n(7,3)\\to(7,6)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jan2022_P1HR__Q20__p24-25__m06__Transformations-of-Graphs.png",
+            "alt": "Graph of y = 2g(x)"
+          }
+        ]
       },
       {
         "title": "Solve inequality",
@@ -7911,7 +8007,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Read the graph",
-        "body": "So draw the straight line\n\n\\[\ny=1-2x\n\\]"
+        "body": "So draw the straight line\n\n\\[\ny=1-2x\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jan2022_P2H__Q21__p23-23__m05__Graphs-of-Functions.png",
+            "alt": "Graph of y = 2x^2 - 4x - 1 with the line y = 1 - 2x"
+          }
+        ]
       },
       {
         "title": "The intersections of this line",
@@ -8400,7 +8502,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Read the graph",
-        "body": "So draw the straight line\n\n\\[\ny=1-2x\n\\]"
+        "body": "So draw the straight line\n\n\\[\ny=1-2x\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jan2022_P2H__Q21__p23-23__m05__Graphs-of-Functions.png",
+            "alt": "Graph of y = 2x^2 - 4x - 1 with the line y = 1 - 2x"
+          }
+        ]
       },
       {
         "title": "The intersections of this line",
@@ -8819,7 +8927,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Plot the points and join",
-        "body": "Plot the points and join them with a smooth decreasing reciprocal curve."
+        "body": "Plot the points and join them with a smooth decreasing reciprocal curve.",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jan2022_P2HR__Q11__p15-15__m04__Graphs-of-Functions.png",
+            "alt": "Graph of y = 6/x"
+          }
+        ]
       }
     ],
     "finalAnswer": "Missing values are \\(12,3,1.5,1.2\\)."
@@ -8853,7 +8967,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Use the inequalities",
-        "body": "For the region, use the inequalities:\n\\[\nx<6\n\\]\n\n\\[\ny>2\n\\]\n\n\\[\ny\\leq x+1\n\\]"
+        "body": "For the region, use the inequalities:\n\\[\nx<6\n\\]\n\n\\[\ny>2\n\\]\n\n\\[\ny\\leq x+1\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jan2022_P2HR__Q07__p10-10__m05__Graphing-Inequalities.png",
+            "alt": "Shaded region R"
+          }
+        ]
       }
     ],
     "finalAnswer": "(a) \\(y=-3x+5\\). (b) Shade \\(x<6\\), \\(y>2\\), \\(y\\leq x+1\\)."
@@ -11108,7 +11228,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "The required region is",
-        "body": "The required region is\n\\[\ny\\geq1\n\\]\n\n\\[\nx\\geq2\n\\]\n\n\\[\nx+y\\leq7\n\\]"
+        "body": "The required region is\n\\[\ny\\geq1\n\\]\n\n\\[\nx\\geq2\n\\]\n\n\\[\nx+y\\leq7\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jun2022_P2H__Q02__p04-04__m04__Graphing-Inequalities.png",
+            "alt": "Shaded region R"
+          }
+        ]
       }
     ],
     "finalAnswer": "Shade \\(y\\geq1\\), \\(x\\geq2\\), \\(x+y\\leq7\\)."
@@ -11321,7 +11447,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Plot the points",
-        "body": "Plot the points\n\n\\[\n(0,0),(20,7),(30,32),(40,52),(50,66),(60,74),(70,80)\n\\]"
+        "body": "Plot the points\n\n\\[\n(0,0),(20,7),(30,32),(40,52),(50,66),(60,74),(70,80)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jun2022_P2H__Q13__p12-13__m07__Cumulative-Frequency-Diagrams.png",
+            "alt": "Cumulative frequency graph"
+          }
+        ]
       },
       {
         "title": "The median is at cumulative",
@@ -11362,7 +11494,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Calculate probability",
-        "body": "Then\n\n\\[\nG\\text{ only}=80-(9+24+5+11+12+6)=13\n\\]\n\n\\[\nn(G)=13+5+12+6=36\n\\]\n\n\\[\nn((G\\cup S)')=20+24=44\n\\]\n\n\\[\nn(G'\\cap C)=24+11=35\n\\]\n\n\\[\nP(G\\mid C)=\\frac{18}{53}\n\\]"
+        "body": "Then\n\n\\[\nG\\text{ only}=80-(9+24+5+11+12+6)=13\n\\]\n\n\\[\nn(G)=13+5+12+6=36\n\\]\n\n\\[\nn((G\\cup S)')=20+24=44\n\\]\n\n\\[\nn(G'\\cap C)=24+11=35\n\\]\n\n\\[\nP(G\\mid C)=\\frac{18}{53}\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jun2022_P2H__Q16__p16-17__m08__Probability-Diagrams-Venn-and-Tree-Diagrams.png",
+            "alt": "Completed Venn diagram"
+          }
+        ]
       }
     ],
     "finalAnswer": "\\(36\\), \\(44\\), \\(35\\), \\(\\frac{18}{53}\\)."
@@ -12153,7 +12291,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "gives vertices",
-        "body": "gives vertices\n\n\\[\n(1,4),\\ (2,4),\\ (1,6)\n\\]"
+        "body": "gives vertices\n\n\\[\n(1,4),\\ (2,4),\\ (1,6)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jun2022_P2HR__Q01__p03-03__m04__Transformations.png",
+            "alt": "Shape and its image"
+          }
+        ]
       }
     ],
     "finalAnswer": "(a) enlargement, scale factor \\(3\\), centre \\((3,0)\\); (b) vertices \\((1,4),(2,4),(1,6)\\)."
@@ -12183,7 +12327,13 @@ window.SOLUTION_DATA = {
     "steps": [
       {
         "title": "Plot the points",
-        "body": "Plot the points\n\n\\[\n(10,0),(20,13),(30,36),(40,42),(50,47),(60,52),(70,56),(80,60)\n\\]"
+        "body": "Plot the points\n\n\\[\n(10,0),(20,13),(30,36),(40,42),(50,47),(60,52),(70,56),(80,60)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jun2022_P2HR__Q11__p12-13__m07__Cumulative-Frequency-Diagrams.png",
+            "alt": "Cumulative frequency graph"
+          }
+        ]
       },
       {
         "title": "The median is at cumulative",
@@ -12763,7 +12913,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Plot the points and join",
-        "body": "Plot the points and join them with a smooth U-shaped curve."
+        "body": "Plot the points and join them with a smooth U-shaped curve.",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jun2023_P2H__Q04__p06-06__m04__Graphs-of-Functions.png",
+            "alt": "Graph of y = x^2 - x - 4"
+          }
+        ]
       }
     ],
     "finalAnswer": "Missing values are \\(8,-2,-4,-2,2\\)."
@@ -14465,7 +14621,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "The required region is",
-        "body": "The required region is\n\\[\ny\\geq2\n\\]\n\n\\[\nx\\leq6\n\\]\n\n\\[\ny\\leq x+1\n\\]"
+        "body": "The required region is\n\\[\ny\\geq2\n\\]\n\n\\[\nx\\leq6\n\\]\n\n\\[\ny\\leq x+1\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jun2024_P2H__Q02__p04-04__m04__Graphing-Inequalities.png",
+            "alt": "Shaded region R"
+          }
+        ]
       }
     ],
     "finalAnswer": "Shade \\(y\\geq2\\), \\(x\\leq6\\), \\(y\\leq x+1\\)."
@@ -14658,7 +14820,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Plot these points and join",
-        "body": "Plot these points and join them with a smooth curve:\n\n\\[\n(0,0),(10,7),(20,24),(30,42),(40,56),(50,66),(60,70)\n\\]"
+        "body": "Plot these points and join them with a smooth curve:\n\n\\[\n(0,0),(10,7),(20,24),(30,42),(40,56),(50,66),(60,70)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jun2024_P2H__Q13__p12-13__m07__Cumulative-Frequency-Diagrams.png",
+            "alt": "Cumulative frequency graph"
+          }
+        ]
       },
       {
         "title": "Use cumulative frequency",
@@ -14687,7 +14855,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "There are students inside the",
-        "body": "There are \\(60-2=58\\) students inside the Venn diagram.\n\n\\[\nK\\text{ only}=58-(8+7+11+9+4+12)=7\n\\]\n\n\\[\nP(K\\mid P)=\\frac{17}{28}\n\\]\n\n\\[\nn(P\\cap K')=4+7=11\n\\]\n\n\\[\nn((P\\cup E)\\cap K)=8+11+9=28\n\\]"
+        "body": "There are \\(60-2=58\\) students inside the Venn diagram.\n\n\\[\nK\\text{ only}=58-(8+7+11+9+4+12)=7\n\\]\n\n\\[\nP(K\\mid P)=\\frac{17}{28}\n\\]\n\n\\[\nn(P\\cap K')=4+7=11\n\\]\n\n\\[\nn((P\\cup E)\\cap K)=8+11+9=28\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jun2024_P2H__Q16__p16-17__m07__Probability-Diagrams-Venn-and-Tree-Diagrams.png",
+            "alt": "Completed Venn diagram"
+          }
+        ]
       }
     ],
     "finalAnswer": "\\(\\frac{17}{28}\\), \\(11\\), \\(28\\)."
@@ -15492,7 +15666,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "The image has vertices",
-        "body": "The image has vertices\n\n\\[\n(-4,-1),\\ (-6,-1),\\ (-5,-2),\\ (-4,-2)\n\\]"
+        "body": "The image has vertices\n\n\\[\n(-4,-1),\\ (-6,-1),\\ (-5,-2),\\ (-4,-2)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jun2024_P2HR__Q02__p04-04__m04__Transformations.png",
+            "alt": "Shape and its image"
+          }
+        ]
       }
     ],
     "finalAnswer": "(a) translation by \\(\\begin{pmatrix}3\\\\-5\\end{pmatrix}\\); (b) vertices \\((-4,-1),(-6,-1),(-5,-2),(-4,-2)\\)."
@@ -15526,7 +15706,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Plot",
-        "body": "Plot\n\n\\[\n(0,0),(5,6),(10,17),(15,27),(20,42),(25,53),(30,60)\n\\]"
+        "body": "Plot\n\n\\[\n(0,0),(5,6),(10,17),(15,27),(20,42),(25,53),(30,60)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jun2024_P2HR__Q11__p12-13__m07__Cumulative-Frequency-Diagrams.png",
+            "alt": "Cumulative frequency graph"
+          }
+        ]
       },
       {
         "title": "Use cumulative frequency",
@@ -16148,7 +16334,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Plot the points and join",
-        "body": "Plot the points and join them with a smooth cubic curve."
+        "body": "Plot the points and join them with a smooth cubic curve.",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jun2025_P1H__Q10__p11-11__m03__Graphs-of-Functions.png",
+            "alt": "Graph of y = x^3 + 2x + 3"
+          }
+        ]
       }
     ],
     "finalAnswer": "Missing values are \\(-30,15\\)."
@@ -17129,7 +17321,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Plot",
-        "body": "Plot\n\n\\[\n(10,0),(20,12),(30,27),(40,47),(50,65),(60,74),(70,80)\n\\]"
+        "body": "Plot\n\n\\[\n(10,0),(20,12),(30,27),(40,47),(50,65),(60,74),(70,80)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jun2025_P1HR__Q12__p12-13__m06__Cumulative-Frequency-Diagrams.png",
+            "alt": "Cumulative frequency graph"
+          }
+        ]
       },
       {
         "title": "Use cumulative frequency",
@@ -17556,7 +17754,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Find intercepts",
-        "body": "So the \\(y\\)-intercept is\n\n\\[\n(0,28)\n\\]"
+        "body": "So the \\(y\\)-intercept is\n\n\\[\n(0,28)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jun2025_P2H__Q25__p24-25__m06__Completing-the-Square.png",
+            "alt": "Sketch of y = 52 - 6(x - 2)^2"
+          }
+        ]
       }
     ],
     "finalAnswer": "(a) \\(52-6(x-2)^2\\). For the sketch, show a downward parabola with turning point \\((2,52)\\) and \\(y\\)-intercept \\((0,28)\\)."
@@ -17766,7 +17970,13 @@ window.SOLUTION_DATA = {
     "steps": [
       {
         "title": "Construction answer",
-        "body": "To construct the perpendicular bisector of \\(AB\\):\n\n1. Open the compass to more than half the length of \\(AB\\).\n2. Draw equal arcs from \\(A\\) above and below \\(AB\\).\n3. Without changing the compass width, draw equal arcs from \\(B\\).\n4. Join the two arc intersections with a ruler."
+        "body": "To construct the perpendicular bisector of \\(AB\\):\n\n1. Open the compass to more than half the length of \\(AB\\).\n2. Draw equal arcs from \\(A\\) above and below \\(AB\\).\n3. Without changing the compass width, draw equal arcs from \\(B\\).\n4. Join the two arc intersections with a ruler.",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jun2025_P2H__Q04__p05-05__m02__Bearings-Scale-Drawing-and-Constructions.png",
+            "alt": "Construction of a perpendicular bisector"
+          }
+        ]
       }
     ],
     "finalAnswer": "The joined line is the perpendicular bisector of \\(AB\\)."
@@ -17924,7 +18134,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "The vertices become",
-        "body": "The vertices become\n\n\\[\n(3,1),\\ (9,1),\\ (9,10),\\ (6,10),\\ (6,4),\\ (3,4)\n\\]"
+        "body": "The vertices become\n\n\\[\n(3,1),\\ (9,1),\\ (9,10),\\ (6,10),\\ (6,4),\\ (3,4)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jun2025_P2H__Q02__p04-04__m05__Transformations.png",
+            "alt": "Shape and its image"
+          }
+        ]
       },
       {
         "title": "Use trigonometry",
@@ -17970,7 +18186,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Plot",
-        "body": "Plot\n\n\\[\n(0,0),(10,8),(20,21),(30,33),(40,50),(50,57),(60,60)\n\\]"
+        "body": "Plot\n\n\\[\n(0,0),(10,8),(20,21),(30,33),(40,50),(50,57),(60,60)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jun2025_P2H__Q13__p12-13__m06__Cumulative-Frequency-Diagrams.png",
+            "alt": "Cumulative frequency graph"
+          }
+        ]
       },
       {
         "title": "The median is the th",
@@ -18044,7 +18266,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Calculate value",
-        "body": "So the Venn regions are:\n\n\\[\nC\\text{ only}=10,\\quad P\\text{ only}=14,\\quad T\\text{ only}=14\n\\]\n\n\\[\nC\\cap P\\text{ only}=6,\\quad C\\cap T\\text{ only}=15,\\quad P\\cap T\\text{ only}=20\n\\]\n\n\\[\nC\\cap P\\cap T=12,\\quad \\text{outside}=29\n\\]"
+        "body": "So the Venn regions are:\n\n\\[\nC\\text{ only}=10,\\quad P\\text{ only}=14,\\quad T\\text{ only}=14\n\\]\n\n\\[\nC\\cap P\\text{ only}=6,\\quad C\\cap T\\text{ only}=15,\\quad P\\cap T\\text{ only}=20\n\\]\n\n\\[\nC\\cap P\\cap T=12,\\quad \\text{outside}=29\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jun2025_P2H__Q20__p18-18__m06__Probability-Diagrams-Venn-and-Tree-Diagrams.png",
+            "alt": "Completed Venn diagram"
+          }
+        ]
       },
       {
         "title": "Calculate value",
@@ -18114,7 +18342,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Find intercepts",
-        "body": "So the \\(y\\)-intercept is\n\n\\[\n(0,28)\n\\]"
+        "body": "So the \\(y\\)-intercept is\n\n\\[\n(0,28)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jun2025_P2H__Q25__p24-25__m06__Completing-the-Square.png",
+            "alt": "Sketch of y = 52 - 6(x - 2)^2"
+          }
+        ]
       }
     ],
     "finalAnswer": "(a) \\(52-6(x-2)^2\\). For the sketch, show a downward parabola with turning point \\((2,52)\\) and \\(y\\)-intercept \\((0,28)\\)."
@@ -18267,7 +18501,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Calculate value",
-        "body": "So the Venn regions are:\n\n\\[\nC\\text{ only}=10,\\quad P\\text{ only}=14,\\quad T\\text{ only}=14\n\\]\n\n\\[\nC\\cap P\\text{ only}=6,\\quad C\\cap T\\text{ only}=15,\\quad P\\cap T\\text{ only}=20\n\\]\n\n\\[\nC\\cap P\\cap T=12,\\quad \\text{outside}=29\n\\]"
+        "body": "So the Venn regions are:\n\n\\[\nC\\text{ only}=10,\\quad P\\text{ only}=14,\\quad T\\text{ only}=14\n\\]\n\n\\[\nC\\cap P\\text{ only}=6,\\quad C\\cap T\\text{ only}=15,\\quad P\\cap T\\text{ only}=20\n\\]\n\n\\[\nC\\cap P\\cap T=12,\\quad \\text{outside}=29\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jun2025_P2H__Q20__p18-18__m06__Probability-Diagrams-Venn-and-Tree-Diagrams.png",
+            "alt": "Completed Venn diagram"
+          }
+        ]
       },
       {
         "title": "Calculate value",
@@ -18830,7 +19070,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "The image of has vertices",
-        "body": "The image of \\(A\\) has vertices\n\n\\[\n(2,5),\\ (2,8),\\ (3,7),\\ (3,6)\n\\]"
+        "body": "The image of \\(A\\) has vertices\n\n\\[\n(2,5),\\ (2,8),\\ (3,7),\\ (3,6)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jun2025_P2HR__Q05__p06-07__m04__Transformations.png",
+            "alt": "Shape and its image"
+          }
+        ]
       },
       {
         "title": "(b) Enlarge by scale factor",
@@ -18838,7 +19084,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "The vertices become",
-        "body": "The vertices become\n\n\\[\n(5,3),\\ (9,3),\\ (7,7),\\ (5,7)\n\\]"
+        "body": "The vertices become\n\n\\[\n(5,3),\\ (9,3),\\ (7,7),\\ (5,7)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Jun2025_P2HR__Q05__p06-07__m04__Transformations-2.png",
+            "alt": "Shape and its image"
+          }
+        ]
       }
     ],
     "finalAnswer": "(a) vertices \\((2,5),(2,8),(3,7),(3,6)\\); (b) vertices \\((5,3),(9,3),(7,7),(5,7)\\)."
@@ -24313,7 +24565,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Use histogram",
-        "body": "From the histogram, the missing frequencies are\n\n\\[\n10\\le d<15:\\ 35,\\qquad 15\\le d<20:\\ 40,\\qquad 20\\le d<30:\\ 60\n\\]"
+        "body": "From the histogram, the missing frequencies are\n\n\\[\n10\\le d<15:\\ 35,\\qquad 15\\le d<20:\\ 40,\\qquad 20\\le d<30:\\ 60\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/May2021_P1H__Q18__p16-17__m05__Histograms.png",
+            "alt": "Histogram"
+          }
+        ]
       },
       {
         "title": "Together with the table",
@@ -24858,7 +25116,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Plot the points and join",
-        "body": "Plot the points and join them with a smooth curve."
+        "body": "Plot the points and join them with a smooth curve.",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/May2021_P2H__Q15__p16-17__m04__Graphs-of-Functions.png",
+            "alt": "Graph of y = x + 4/x"
+          }
+        ]
       }
     ],
     "finalAnswer": "Missing values are \\(8.5,5,4,5\\)."
@@ -25030,7 +25294,13 @@ window.SOLUTION_DATA = {
     "steps": [
       {
         "title": "Use cumulative frequency",
-        "body": "For Office A, the cumulative frequencies are\n\n\\[\n17,\\ 32,\\ 57,\\ 70,\\ 76,\\ 80\n\\]"
+        "body": "For Office A, the cumulative frequencies are\n\n\\[\n17,\\ 32,\\ 57,\\ 70,\\ 76,\\ 80\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/May2021_P2H__Q12__p12-13__m07__Cumulative-Frequency-Diagrams.png",
+            "alt": "Cumulative frequency graph"
+          }
+        ]
       },
       {
         "title": "The median is the th",
@@ -25791,7 +26061,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "(c) Rotate clockwise about",
-        "body": "(c) Rotate \\(P\\) \\(90^\\circ\\) clockwise about \\((3,5)\\). The image has vertices\n\n\\[\n(3,6),\\ (1,6),\\ (0,5),\\ (1,5)\n\\]"
+        "body": "(c) Rotate \\(P\\) \\(90^\\circ\\) clockwise about \\((3,5)\\). The image has vertices\n\n\\[\n(3,6),\\ (1,6),\\ (0,5),\\ (1,5)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/May2023_P1H__Q04__p06-07__m08__Transformations.png",
+            "alt": "Shape and its image"
+          }
+        ]
       }
     ],
     "finalAnswer": "(a) \\(d=5,\\ e=7,\\ f=-4\\); (b) enlargement, scale factor \\(3\\), centre \\((0,2)\\); (c) vertices \\((3,6),(1,6),(0,5),(1,5)\\)."
@@ -26527,7 +26803,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "They become",
-        "body": "They become\n\n\\[\n(3,6),\\ (5,6),\\ (3,9)\n\\]"
+        "body": "They become\n\n\\[\n(3,6),\\ (5,6),\\ (3,9)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/May2023_P1HR__Q10__p10-10__m02__Transformations.png",
+            "alt": "Shape and its image"
+          }
+        ]
       }
     ],
     "finalAnswer": "draw the triangle with vertices \\((3,6),(5,6),(3,9)\\)."
@@ -26565,7 +26847,13 @@ window.SOLUTION_DATA = {
     "steps": [
       {
         "title": "The cumulative frequencies are",
-        "body": "The cumulative frequencies are\n\n\\[\n15,\\ 31,\\ 52,\\ 66,\\ 74,\\ 80\n\\]"
+        "body": "The cumulative frequencies are\n\n\\[\n15,\\ 31,\\ 52,\\ 66,\\ 74,\\ 80\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/May2023_P1HR__Q14__p14-15__m06__Cumulative-Frequency-Diagrams.png",
+            "alt": "Cumulative frequency graph"
+          }
+        ]
       },
       {
         "title": "Convert standard form",
@@ -27364,7 +27652,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "The missing class width is",
-        "body": "The missing class width is 10, so its frequency density is\n\n\\[\n\\frac{27}{10}=2.7\n\\]"
+        "body": "The missing class width is 10, so its frequency density is\n\n\\[\n\\frac{27}{10}=2.7\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/May2024_P1H__Q22__p23-23__m03__Histograms.png",
+            "alt": "Histogram"
+          }
+        ]
       }
     ],
     "finalAnswer": "draw the missing bar from \\(5\\) to \\(15\\) with frequency density \\(2.7\\)"
@@ -27605,7 +27899,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "The missing class width is",
-        "body": "The missing class width is 10, so its frequency density is\n\n\\[\n\\frac{27}{10}=2.7\n\\]"
+        "body": "The missing class width is 10, so its frequency density is\n\n\\[\n\\frac{27}{10}=2.7\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/May2024_P1H__Q22__p23-23__m03__Histograms.png",
+            "alt": "Histogram"
+          }
+        ]
       }
     ],
     "finalAnswer": "draw the missing bar from \\(5\\) to \\(15\\) with frequency density \\(2.7\\)"
@@ -28098,7 +28398,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "The bar heights are",
-        "body": "The bar heights are:\n\n\\[\n0<h\\le 2:\\frac52=2.5\n\\]\n\n\\[\n2<h\\le 5:\\frac{12}{3}=4\n\\]\n\n\\[\n5<h\\le 10:\\frac{18}{5}=3.6\n\\]\n\n\\[\n10<h\\le 20:\\frac{14}{10}=1.4\n\\]\n\n\\[\n20<h\\le 35:\\frac{9}{15}=0.6\n\\]"
+        "body": "The bar heights are:\n\n\\[\n0<h\\le 2:\\frac52=2.5\n\\]\n\n\\[\n2<h\\le 5:\\frac{12}{3}=4\n\\]\n\n\\[\n5<h\\le 10:\\frac{18}{5}=3.6\n\\]\n\n\\[\n10<h\\le 20:\\frac{14}{10}=1.4\n\\]\n\n\\[\n20<h\\le 35:\\frac{9}{15}=0.6\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/May2024_P1HR__Q16__p16-16__m03__Histograms.png",
+            "alt": "Histogram"
+          }
+        ]
       }
     ],
     "finalAnswer": "draw bars with heights \\(2.5,4,3.6,1.4,0.6\\)."
@@ -28617,7 +28923,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Plot these points and draw",
-        "body": "Plot these points and draw a smooth cubic curve through them."
+        "body": "Plot these points and draw a smooth cubic curve through them.",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/May2025_4WM1H__Q13__p15-15__m03__Graphs-of-Functions.png",
+            "alt": "Graph of y = x^3 + 2x + 3"
+          }
+        ]
       }
     ],
     "finalAnswer": "Missing values \\(-30\\) and \\(15\\); draw the smooth curve through the table points."
@@ -29810,7 +30122,13 @@ window.SOLUTION_DATA = {
     "steps": [
       {
         "title": "Use a compass radius greater",
-        "body": "Use a compass radius greater than half of \\(AB\\). Draw matching arcs from \\(A\\) above and below the line, then draw matching arcs from \\(B\\) with the same radius. Join the two arc-intersection points."
+        "body": "Use a compass radius greater than half of \\(AB\\). Draw matching arcs from \\(A\\) above and below the line, then draw matching arcs from \\(B\\) with the same radius. Join the two arc-intersection points.",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/May2025_4WM2H__Q04__p05-05__m02__Coordinate-Geometry.png",
+            "alt": "Construction of a perpendicular bisector"
+          }
+        ]
       }
     ],
     "finalAnswer": "the joined line is the perpendicular bisector of \\(AB\\)."
@@ -29962,7 +30280,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Plot the points",
-        "body": "Plot the points\n\n\\[\n(10,8),(20,21),(30,33),(40,50),(50,57),(60,60)\n\\]"
+        "body": "Plot the points\n\n\\[\n(10,8),(20,21),(30,33),(40,50),(50,57),(60,60)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/May2025_4WM2H__Q14__p14-15__m06__Cumulative-Frequency-Diagrams.png",
+            "alt": "Cumulative frequency graph"
+          }
+        ]
       },
       {
         "title": "The median is the th",
@@ -30247,7 +30571,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Useful transformed points are",
-        "body": "Useful transformed points are\n\n\\[\n(-4,1)\\to(-2,-2),\\quad (2,4)\\to(1,1),\\quad (6,2)\\to(3,-1)\n\\]"
+        "body": "Useful transformed points are\n\n\\[\n(-4,1)\\to(-2,-2),\\quad (2,4)\\to(1,1),\\quad (6,2)\\to(3,-1)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/May2025_4WM2H__Q27__p28-29__m04__Graphs-of-Functions.png",
+            "alt": "Graph of y = g(2x) - 3"
+          }
+        ]
       },
       {
         "title": "Join these points with straight",
@@ -30443,7 +30773,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Useful transformed points are",
-        "body": "Useful transformed points are\n\n\\[\n(-4,1)\\to(-2,-2),\\quad (2,4)\\to(1,1),\\quad (6,2)\\to(3,-1)\n\\]"
+        "body": "Useful transformed points are\n\n\\[\n(-4,1)\\to(-2,-2),\\quad (2,4)\\to(1,1),\\quad (6,2)\\to(3,-1)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/May2025_4WM2H__Q27__p28-29__m04__Graphs-of-Functions.png",
+            "alt": "Graph of y = g(2x) - 3"
+          }
+        ]
       },
       {
         "title": "Join these points with straight",
@@ -30779,7 +31115,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Answer",
-        "body": "Triangle B has vertices (−4,3), (−2,5), (−2,3)"
+        "body": "Triangle B has vertices (−4,3), (−2,5), (−2,3)",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/May2025_4WM2HR__Q04__p06-07__m04__Transformations.png",
+            "alt": "Shape and its image"
+          }
+        ]
       },
       {
         "title": "Identify corresponding vertices of C",
@@ -31711,7 +32053,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Plot these points and join",
-        "body": "Plot these points and join them with a straight line."
+        "body": "Plot these points and join them with a straight line.",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/MayNov2020_P1H__Q03__p05-05__m03__Linear-Graphs-y-mx-c.png",
+            "alt": "Graph of y = 7 - 4x"
+          }
+        ]
       }
     ],
     "finalAnswer": "The graph is the straight line \\(y=7-4x\\)."
@@ -31744,7 +32092,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Use points from the original",
-        "body": "Use points from the original graph:\n\n\\[\n(1,3)\\to(2,6)\n\\]\n\n\\[\n(2,0)\\to(3,0)\n\\]\n\n\\[\n(4,-3)\\to(5,-6)\n\\]\n\n\\[\n(6,0)\\to(7,0)\n\\]\n\n\\[\n(7,3)\\to(8,6)\n\\]"
+        "body": "Use points from the original graph:\n\n\\[\n(1,3)\\to(2,6)\n\\]\n\n\\[\n(2,0)\\to(3,0)\n\\]\n\n\\[\n(4,-3)\\to(5,-6)\n\\]\n\n\\[\n(6,0)\\to(7,0)\n\\]\n\n\\[\n(7,3)\\to(8,6)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/MayNov2020_P1H__Q25__p27-27__m03__Transformations-of-Graphs.png",
+            "alt": "Graph of y = 2f(x - 1)"
+          }
+        ]
       },
       {
         "title": "Apply transformation",
@@ -31932,7 +32286,13 @@ window.SOLUTION_DATA = {
     "steps": [
       {
         "title": "The histogram densities are",
-        "body": "The histogram densities are\n\n\\[\n\\frac{35}{10}=3.5,\\quad\n\\frac{45}{15}=3,\\quad\n\\frac{75}{15}=5,\\quad\n\\frac{40}{20}=2,\\quad\n\\frac{8}{10}=0.8\n\\]"
+        "body": "The histogram densities are\n\n\\[\n\\frac{35}{10}=3.5,\\quad\n\\frac{45}{15}=3,\\quad\n\\frac{75}{15}=5,\\quad\n\\frac{40}{20}=2,\\quad\n\\frac{8}{10}=0.8\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/MayNov2020_P1H__Q18__p20-21__m05__Histograms.png",
+            "alt": "Histogram"
+          }
+        ]
       },
       {
         "title": "Use histogram",
@@ -32151,7 +32511,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Use points from the original",
-        "body": "Use points from the original graph:\n\n\\[\n(1,3)\\to(2,6)\n\\]\n\n\\[\n(2,0)\\to(3,0)\n\\]\n\n\\[\n(4,-3)\\to(5,-6)\n\\]\n\n\\[\n(6,0)\\to(7,0)\n\\]\n\n\\[\n(7,3)\\to(8,6)\n\\]"
+        "body": "Use points from the original graph:\n\n\\[\n(1,3)\\to(2,6)\n\\]\n\n\\[\n(2,0)\\to(3,0)\n\\]\n\n\\[\n(4,-3)\\to(5,-6)\n\\]\n\n\\[\n(6,0)\\to(7,0)\n\\]\n\n\\[\n(7,3)\\to(8,6)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/MayNov2020_P1H__Q25__p27-27__m03__Transformations-of-Graphs.png",
+            "alt": "Graph of y = 2f(x - 1)"
+          }
+        ]
       },
       {
         "title": "Apply transformation",
@@ -32618,7 +32984,13 @@ window.SOLUTION_DATA = {
     "steps": [
       {
         "title": "Construction answer",
-        "body": "To construct the bisector of angle \\(ABC\\):\n\n1. Put the compass point at \\(B\\) and draw an arc cutting \\(BA\\) and \\(BC\\).\n2. From those two cut points, draw equal arcs inside the angle.\n3. Draw a straight line from \\(B\\) through the point where the two arcs cross."
+        "body": "To construct the bisector of angle \\(ABC\\):\n\n1. Put the compass point at \\(B\\) and draw an arc cutting \\(BA\\) and \\(BC\\).\n2. From those two cut points, draw equal arcs inside the angle.\n3. Draw a straight line from \\(B\\) through the point where the two arcs cross.",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/MayNov2020_P1HR__Q02__p03-03__m02__Bearings-Scale-Drawing-and-Constructions.png",
+            "alt": "Construction of an angle bisector"
+          }
+        ]
       }
     ],
     "finalAnswer": "This line bisects angle \\(ABC\\)."
@@ -32739,7 +33111,13 @@ window.SOLUTION_DATA = {
     "steps": [
       {
         "title": "The cumulative frequencies are",
-        "body": "The cumulative frequencies are\n\n\\[\n9,\\ 28,\\ 45,\\ 63,\\ 76,\\ 80\n\\]"
+        "body": "The cumulative frequencies are\n\n\\[\n9,\\ 28,\\ 45,\\ 63,\\ 76,\\ 80\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/MayNov2020_P1HR__Q11__p10-11__m05__Cumulative-Frequency-Diagrams.png",
+            "alt": "Cumulative frequency graph"
+          }
+        ]
       },
       {
         "title": "The median is the th",
@@ -33321,7 +33699,13 @@ window.SOLUTION_DATA = {
     "steps": [
       {
         "title": "The cumulative frequencies are",
-        "body": "The cumulative frequencies are\n\n\\[\n12,\\ 36,\\ 64,\\ 76,\\ 86,\\ 90\n\\]"
+        "body": "The cumulative frequencies are\n\n\\[\n12,\\ 36,\\ 64,\\ 76,\\ 86,\\ 90\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Nov2021_P1H__Q11__p10-11__m05__Cumulative-Frequency-Diagrams.png",
+            "alt": "Cumulative frequency graph"
+          }
+        ]
       },
       {
         "title": "Use cumulative frequency",
@@ -33392,7 +33776,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Calculate probability",
-        "body": "So:\n\n\\[\nM\\cap E\\text{ only}=11,\\quad M\\cap F\\text{ only}=4,\\quad E\\cap F\\text{ only}=2\n\\]\n\n\\[\nE\\text{ only}=20-11-2-7=0\n\\]\n\n\\[\nF\\text{ only}=14-4-2-7=1\n\\]"
+        "body": "So:\n\n\\[\nM\\cap E\\text{ only}=11,\\quad M\\cap F\\text{ only}=4,\\quad E\\cap F\\text{ only}=2\n\\]\n\n\\[\nE\\text{ only}=20-11-2-7=0\n\\]\n\n\\[\nF\\text{ only}=14-4-2-7=1\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Nov2021_P1H__Q16__p18-19__m05__Probability-Diagrams-Venn-and-Tree-Diagrams.png",
+            "alt": "Completed Venn diagram"
+          }
+        ]
       },
       {
         "title": "Calculate probability",
@@ -34006,7 +34396,13 @@ window.SOLUTION_DATA = {
     "steps": [
       {
         "title": "The histogram densities are",
-        "body": "The histogram densities are\n\n\\[\n0<L\\le 10:\\frac{8}{10}=0.8\n\\]\n\n\\[\n10<L\\le 15:\\frac{13}{5}=2.6\n\\]\n\n\\[\n15<L\\le 25:\\frac{19}{10}=1.9\n\\]\n\n\\[\n25<L\\le 40:\\frac{24}{15}=1.6\n\\]\n\n\\[\n40<L\\le 60:\\frac{6}{20}=0.3\n\\]"
+        "body": "The histogram densities are\n\n\\[\n0<L\\le 10:\\frac{8}{10}=0.8\n\\]\n\n\\[\n10<L\\le 15:\\frac{13}{5}=2.6\n\\]\n\n\\[\n15<L\\le 25:\\frac{19}{10}=1.9\n\\]\n\n\\[\n25<L\\le 40:\\frac{24}{15}=1.6\n\\]\n\n\\[\n40<L\\le 60:\\frac{6}{20}=0.3\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Nov2021_P2H__Q14__p17-17__m05__Histograms.png",
+            "alt": "Histogram"
+          }
+        ]
       },
       {
         "title": "Use histogram",
@@ -34405,7 +34801,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "The completed table is",
-        "body": "The completed table is:\n\n\\[\n\\begin{array}{c|rrrrr}\nx&-2&-1&0&1&2\\\\\n\\hline\ny&-1&3&1&-1&3\n\\end{array}\n\\]"
+        "body": "The completed table is:\n\n\\[\n\\begin{array}{c|rrrrr}\nx&-2&-1&0&1&2\\\\\n\\hline\ny&-1&3&1&-1&3\n\\end{array}\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Nov2023_P1H__Q12__p14-15__m05__Graphs-of-Functions.png",
+            "alt": "Graph of y = x^3 - 3x + 1"
+          }
+        ]
       },
       {
         "title": "The graph of is below",
@@ -35153,7 +35555,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Solve simultaneous equations",
-        "body": "Then\n\\[\ny=-1+2=1\n\\]"
+        "body": "Then\n\\[\ny=-1+2=1\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Nov2023_P2H__Q14__p13-13__m03__Simultaneous-Equations.png",
+            "alt": "The lines y = x + 2 and 2y + x = 1 meet at (-1, 1)"
+          }
+        ]
       }
     ],
     "finalAnswer": "\\(x=-1\\), \\(y=1\\)."
@@ -35447,7 +35855,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "The reflected T shape has",
-        "body": "The reflected T-shape has vertices\n\n\\[\n(6,1),(6,4),(5,4),(5,3),(4,3),(4,2),(5,2),(5,1)\n\\]"
+        "body": "The reflected T-shape has vertices\n\n\\[\n(6,1),(6,4),(5,4),(5,3),(4,3),(4,2),(5,2),(5,1)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Nov2023_P2H__Q03__p05-05__m05__Transformations.png",
+            "alt": "Shape and its image"
+          }
+        ]
       },
       {
         "title": "Use trigonometry",
@@ -36001,7 +36415,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Plot the points and join",
-        "body": "Plot the points and join them with a smooth curve."
+        "body": "Plot the points and join them with a smooth curve.",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Nov2024_P1H__Q11__p13-13__m04__Graphs-of-Functions.png",
+            "alt": "Graph of y = 2(x + 1/x)"
+          }
+        ]
       }
     ],
     "finalAnswer": "Missing values are \\(5,4,8.5,10.4\\)."
@@ -36084,7 +36504,13 @@ window.SOLUTION_DATA = {
     "steps": [
       {
         "title": "Construction answer",
-        "body": "To construct the bisector of angle \\(ABC\\):\n\n1. Draw an arc centred at \\(B\\) cutting both arms of the angle.\n2. From the two cut points, draw equal arcs inside the angle.\n3. Draw the line from \\(B\\) through the intersection of these arcs."
+        "body": "To construct the bisector of angle \\(ABC\\):\n\n1. Draw an arc centred at \\(B\\) cutting both arms of the angle.\n2. From the two cut points, draw equal arcs inside the angle.\n3. Draw the line from \\(B\\) through the intersection of these arcs.",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Nov2024_P1H__Q02__p04-04__m02__Bearings-Scale-Drawing-and-Constructions.png",
+            "alt": "Construction of an angle bisector"
+          }
+        ]
       }
     ],
     "finalAnswer": "The constructed ray is the angle bisector of \\(ABC\\)."
@@ -36752,7 +37178,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "The required region is",
-        "body": "The required region is\n\\[\nx\\geq3\n\\]\n\n\\[\ny\\geq1\n\\]\n\n\\[\nx+y\\leq7\n\\]"
+        "body": "The required region is\n\\[\nx\\geq3\n\\]\n\n\\[\ny\\geq1\n\\]\n\n\\[\nx+y\\leq7\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Nov2024_P2H__Q07__p08-08__m04__Graphing-Inequalities.png",
+            "alt": "Shaded region R"
+          }
+        ]
       }
     ],
     "finalAnswer": "Shade \\(x\\geq3\\), \\(y\\geq1\\), \\(x+y\\leq7\\)."
@@ -37039,7 +37471,13 @@ window.SOLUTION_DATA = {
     "steps": [
       {
         "title": "The cumulative frequencies are",
-        "body": "The cumulative frequencies are\n\n\\[\n4,\\ 19,\\ 39,\\ 50,\\ 56,\\ 60\n\\]"
+        "body": "The cumulative frequencies are\n\n\\[\n4,\\ 19,\\ 39,\\ 50,\\ 56,\\ 60\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Nov2024_P2H__Q13__p14-15__m06__Cumulative-Frequency-Diagrams.png",
+            "alt": "Cumulative frequency graph"
+          }
+        ]
       },
       {
         "title": "The median is the th",
@@ -37710,7 +38148,13 @@ window.SOLUTION_DATA = {
     "steps": [
       {
         "title": "Frequency density",
-        "body": "Frequency density \\(=\\dfrac{\\text{frequency}}{\\text{class width}}\\).\n\n\\[\n0<h\\le 5: \\frac{12}{5}=2.4\n\\]\n\n\\[\n5<h\\le 15: \\frac{34}{10}=3.4\n\\]\n\n\\[\n15<h\\le 30: \\frac{45}{15}=3\n\\]\n\n\\[\n30<h\\le 50: \\frac{28}{20}=1.4\n\\]"
+        "body": "Frequency density \\(=\\dfrac{\\text{frequency}}{\\text{class width}}\\).\n\n\\[\n0<h\\le 5: \\frac{12}{5}=2.4\n\\]\n\n\\[\n5<h\\le 15: \\frac{34}{10}=3.4\n\\]\n\n\\[\n15<h\\le 30: \\frac{45}{15}=3\n\\]\n\n\\[\n30<h\\le 50: \\frac{28}{20}=1.4\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Nov2025_4WM1H__Q20__p18-18__m03__Standard-Compound-Units.png",
+            "alt": "Histogram"
+          }
+        ]
       }
     ],
     "finalAnswer": "draw bars with densities \\(2.4, 3.4, 3, 1.4\\)."
@@ -37837,7 +38281,13 @@ window.SOLUTION_DATA = {
     "steps": [
       {
         "title": "Frequency density",
-        "body": "Frequency density \\(=\\dfrac{\\text{frequency}}{\\text{class width}}\\).\n\n\\[\n0<h\\le 5: \\frac{12}{5}=2.4\n\\]\n\n\\[\n5<h\\le 15: \\frac{34}{10}=3.4\n\\]\n\n\\[\n15<h\\le 30: \\frac{45}{15}=3\n\\]\n\n\\[\n30<h\\le 50: \\frac{28}{20}=1.4\n\\]"
+        "body": "Frequency density \\(=\\dfrac{\\text{frequency}}{\\text{class width}}\\).\n\n\\[\n0<h\\le 5: \\frac{12}{5}=2.4\n\\]\n\n\\[\n5<h\\le 15: \\frac{34}{10}=3.4\n\\]\n\n\\[\n15<h\\le 30: \\frac{45}{15}=3\n\\]\n\n\\[\n30<h\\le 50: \\frac{28}{20}=1.4\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Nov2025_4WM1H__Q20__p18-18__m03__Standard-Compound-Units.png",
+            "alt": "Histogram"
+          }
+        ]
       }
     ],
     "finalAnswer": "draw bars with densities \\(2.4, 3.4, 3, 1.4\\)."
@@ -38147,7 +38597,13 @@ window.SOLUTION_DATA = {
     "steps": [
       {
         "title": "Construct angle bisector",
-        "body": "**Step 1:** Place the point of the compass at the vertex *Q*. Draw an arc that intersects both arms *Q**P* and *Q**R*. Let’s call these intersection points *A* and *B*.\n**Step 2:** Without changing the compass width, place the compass point on *A* and draw an arc inside the angle.\n**Step 3:** Place the compass point on *B* and draw another arc to intersect the previous arc. Let this intersection be point *C*.\n**Step 4:** Draw a straight line from *Q* through *C*. This is the angle bisector."
+        "body": "**Step 1:** Place the point of the compass at the vertex *Q*. Draw an arc that intersects both arms *Q**P* and *Q**R*. Let’s call these intersection points *A* and *B*.\n**Step 2:** Without changing the compass width, place the compass point on *A* and draw an arc inside the angle.\n**Step 3:** Place the compass point on *B* and draw another arc to intersect the previous arc. Let this intersection be point *C*.\n**Step 4:** Draw a straight line from *Q* through *C*. This is the angle bisector.",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Nov2025_4WM2H__Q01__p03-03__m02__Circles-Arcs-Sectors.png",
+            "alt": "Construction of an angle bisector"
+          }
+        ]
       }
     ],
     "finalAnswer": "This is the angle bisector."
@@ -39134,7 +39590,13 @@ window.SOLUTION_DATA = {
     "steps": [
       {
         "title": "Construction answer",
-        "body": "To construct the bisector of angle \\(ABC\\):\n\n1. Use centre \\(B\\) to draw an arc crossing \\(BA\\) and \\(BC\\).\n2. Use the same compass width from the two crossing points to make two arcs inside the angle.\n3. Join \\(B\\) to the point where these two arcs meet."
+        "body": "To construct the bisector of angle \\(ABC\\):\n\n1. Use centre \\(B\\) to draw an arc crossing \\(BA\\) and \\(BC\\).\n2. Use the same compass width from the two crossing points to make two arcs inside the angle.\n3. Join \\(B\\) to the point where these two arcs meet.",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Nov2025_P1H__Q03__p04-04__m02__Bearings-Scale-Drawing-and-Constructions.png",
+            "alt": "Construction of an angle bisector"
+          }
+        ]
       }
     ],
     "finalAnswer": "That line is the required angle bisector."
@@ -40003,7 +40465,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Read the graph",
-        "body": "So draw the horizontal line \\(y=3\\) on the graph."
+        "body": "So draw the horizontal line \\(y=3\\) on the graph.",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Nov2025_P2H__Q12__p12-13__m05__Graphs-of-Functions.png",
+            "alt": "Graph of y = (x + 4/x)/2 with the line y = 3"
+          }
+        ]
       },
       {
         "title": "The intersections give approximately",
@@ -40761,7 +41229,13 @@ window.SOLUTION_DATA = {
     "steps": [
       {
         "title": "Complete the blue-first branch",
-        "body": "After a blue bead is taken first, there are \\(4\\) red and \\(6\\) blue beads left out of \\(10\\).\n\n\\[\nP(\\text{red second after blue})=\\frac4{10},\\qquad\nP(\\text{blue second after blue})=\\frac6{10}\n\\]"
+        "body": "After a blue bead is taken first, there are \\(4\\) red and \\(6\\) blue beads left out of \\(10\\).\n\n\\[\nP(\\text{red second after blue})=\\frac4{10},\\qquad\nP(\\text{blue second after blue})=\\frac6{10}\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Specimen_4WM1H__Q11__p12-13__m06__Probability-Diagrams-Venn-Tree-Diagrams.png",
+            "alt": "Completed tree diagram"
+          }
+        ]
       },
       {
         "title": "Find both red",
@@ -40836,7 +41310,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Fill the single-set regions",
-        "body": "\\[\nS\\text{ only}=31-5-11-6=9\n\\]\n\n\\[\nC\\text{ only}=53-11-12-6=24\n\\]\n\nSince \\(20\\) have none, the total inside the circles is \\(80\\).\n\n\\[\nG\\text{ only}=80-(5+11+12+6+9+24)=13\n\\]"
+        "body": "\\[\nS\\text{ only}=31-5-11-6=9\n\\]\n\n\\[\nC\\text{ only}=53-11-12-6=24\n\\]\n\nSince \\(20\\) have none, the total inside the circles is \\(80\\).\n\n\\[\nG\\text{ only}=80-(5+11+12+6+9+24)=13\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Specimen_4WM1H__Q14__p16-17__m08__Set-Notation-Venn-Diagrams.png",
+            "alt": "Completed Venn diagram"
+          }
+        ]
       },
       {
         "title": "Read the set values",
@@ -41258,7 +41738,13 @@ window.SOLUTION_DATA = {
       },
       {
         "title": "Read the graph",
-        "body": "So shade the triangular region above \\(y=1\\), to the right of \\(x=2\\), and below the line \\(x+y=7\\). Its vertices are\n\n\\[\n(2,1),\\quad (2,5),\\quad (6,1)\n\\]"
+        "body": "So shade the triangular region above \\(y=1\\), to the right of \\(x=2\\), and below the line \\(x+y=7\\). Its vertices are\n\n\\[\n(2,1),\\quad (2,5),\\quad (6,1)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Specimen_4WM2H__Q05__p07-07__m04__Graphing-Inequalities.png",
+            "alt": "Shaded region R"
+          }
+        ]
       }
     ],
     "finalAnswer": "the shaded region \\(R\\) is the triangle with vertices \\((2,1)\\), \\((2,5)\\), and \\((6,1)\\)."
@@ -41500,7 +41986,13 @@ window.SOLUTION_DATA = {
     "steps": [
       {
         "title": "Plot the cumulative frequency points",
-        "body": "Plot the cumulative frequency points and join with a smooth increasing curve:\n\n\\[\n(10,0),\\ (20,13),\\ (30,36),\\ (40,42),\\ (50,47),\\ (60,52),\\ (70,56),\\ (80,60)\n\\]"
+        "body": "Plot the cumulative frequency points and join with a smooth increasing curve:\n\n\\[\n(10,0),\\ (20,13),\\ (30,36),\\ (40,42),\\ (50,47),\\ (60,52),\\ (70,56),\\ (80,60)\n\\]",
+        "figures": [
+          {
+            "src": "assets/solution-diagrams/igcse/Specimen_4WM2H__Q15__p16-17__m07__Cumulative-Frequency-Diagrams.png",
+            "alt": "Cumulative frequency graph"
+          }
+        ]
       },
       {
         "title": "Use cumulative frequency",

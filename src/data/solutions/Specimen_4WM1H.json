@@ -235,7 +235,13 @@
       "steps": [
         {
           "title": "Complete the blue-first branch",
-          "body": "After a blue bead is taken first, there are \\(4\\) red and \\(6\\) blue beads left out of \\(10\\).\n\n\\[\nP(\\text{red second after blue})=\\frac4{10},\\qquad\nP(\\text{blue second after blue})=\\frac6{10}\n\\]"
+          "body": "After a blue bead is taken first, there are \\(4\\) red and \\(6\\) blue beads left out of \\(10\\).\n\n\\[\nP(\\text{red second after blue})=\\frac4{10},\\qquad\nP(\\text{blue second after blue})=\\frac6{10}\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Specimen_4WM1H__Q11__p12-13__m06__Probability-Diagrams-Venn-Tree-Diagrams.png",
+              "alt": "Completed tree diagram"
+            }
+          ]
         },
         {
           "title": "Find both red",
@@ -310,7 +316,13 @@
         },
         {
           "title": "Fill the single-set regions",
-          "body": "\\[\nS\\text{ only}=31-5-11-6=9\n\\]\n\n\\[\nC\\text{ only}=53-11-12-6=24\n\\]\n\nSince \\(20\\) have none, the total inside the circles is \\(80\\).\n\n\\[\nG\\text{ only}=80-(5+11+12+6+9+24)=13\n\\]"
+          "body": "\\[\nS\\text{ only}=31-5-11-6=9\n\\]\n\n\\[\nC\\text{ only}=53-11-12-6=24\n\\]\n\nSince \\(20\\) have none, the total inside the circles is \\(80\\).\n\n\\[\nG\\text{ only}=80-(5+11+12+6+9+24)=13\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Specimen_4WM1H__Q14__p16-17__m08__Set-Notation-Venn-Diagrams.png",
+              "alt": "Completed Venn diagram"
+            }
+          ]
         },
         {
           "title": "Read the set values",

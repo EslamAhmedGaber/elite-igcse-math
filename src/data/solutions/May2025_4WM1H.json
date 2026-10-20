@@ -301,7 +301,13 @@
         },
         {
           "title": "Plot these points and draw",
-          "body": "Plot these points and draw a smooth cubic curve through them."
+          "body": "Plot these points and draw a smooth cubic curve through them.",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/May2025_4WM1H__Q13__p15-15__m03__Graphs-of-Functions.png",
+              "alt": "Graph of y = x^3 + 2x + 3"
+            }
+          ]
         }
       ],
       "finalAnswer": "Missing values \\(-30\\) and \\(15\\); draw the smooth curve through the table points."

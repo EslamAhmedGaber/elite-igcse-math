@@ -328,7 +328,13 @@
         },
         {
           "title": "Answer",
-          "body": "Triangle B has vertices (−4,3), (−2,5), (−2,3)"
+          "body": "Triangle B has vertices (−4,3), (−2,5), (−2,3)",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/May2025_4WM2HR__Q04__p06-07__m04__Transformations.png",
+              "alt": "Shape and its image"
+            }
+          ]
         },
         {
           "title": "Identify corresponding vertices of C",

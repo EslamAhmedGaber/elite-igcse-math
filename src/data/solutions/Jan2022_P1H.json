@@ -37,7 +37,13 @@
         },
         {
           "title": "only only outside both sets",
-          "body": "- \\(A\\cap B:\\ \\{5,10,15\\}\\)\n- \\(A\\) only: \\(\\{9,11,12,13\\}\\)\n- \\(B\\) only: \\(\\{4,6\\}\\)\n- outside both sets: \\(\\{7,8,14\\}\\)"
+          "body": "- \\(A\\cap B:\\ \\{5,10,15\\}\\)\n- \\(A\\) only: \\(\\{9,11,12,13\\}\\)\n- \\(B\\) only: \\(\\{4,6\\}\\)\n- outside both sets: \\(\\{7,8,14\\}\\)",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jan2022_P1H__Q07__p08-08__m03__Set-Notation-and-Venn-Diagrams.png",
+              "alt": "Completed Venn diagram"
+            }
+          ]
         }
       ],
       "finalAnswer": "Put \\(\\{5,10,15\\}\\) in the overlap, \\(\\{9,11,12,13\\}\\) in \\(A\\) only, \\(\\{4,6\\}\\) in \\(B\\) only, and \\(\\{7,8,14\\}\\) outside."
@@ -587,7 +593,13 @@
         },
         {
           "title": "Plot the points",
-          "body": "Plot the points\n\n\\[\n(0,0),(10,7),(20,33),(30,57),(40,71),(50,78),(60,80)\n\\]"
+          "body": "Plot the points\n\n\\[\n(0,0),(10,7),(20,33),(30,57),(40,71),(50,78),(60,80)\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jan2022_P1H__Q12__p12-13__m06__Cumulative-Frequency-Diagrams.png",
+              "alt": "Cumulative frequency graph"
+            }
+          ]
         },
         {
           "title": "The median is at cumulative",

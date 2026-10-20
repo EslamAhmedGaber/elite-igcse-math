@@ -546,7 +546,13 @@
         },
         {
           "title": "Plot the points",
-          "body": "Plot the points\n\n\\[\n(0,0),(5,8),(10,23),(15,40),(20,68),(25,101),(30,120)\n\\]"
+          "body": "Plot the points\n\n\\[\n(0,0),(5,8),(10,23),(15,40),(20,68),(25,101),(30,120)\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/Jan2021_P1HR__Q11__p12-13__m06__Cumulative-Frequency-Diagrams.png",
+              "alt": "Cumulative frequency graph"
+            }
+          ]
         },
         {
           "title": "The median is at cumulative",

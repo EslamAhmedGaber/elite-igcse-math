@@ -597,7 +597,13 @@
         },
         {
           "title": "Use histogram",
-          "body": "From the histogram, the missing frequencies are\n\n\\[\n10\\le d<15:\\ 35,\\qquad 15\\le d<20:\\ 40,\\qquad 20\\le d<30:\\ 60\n\\]"
+          "body": "From the histogram, the missing frequencies are\n\n\\[\n10\\le d<15:\\ 35,\\qquad 15\\le d<20:\\ 40,\\qquad 20\\le d<30:\\ 60\n\\]",
+          "figures": [
+            {
+              "src": "assets/solution-diagrams/igcse/May2021_P1H__Q18__p16-17__m05__Histograms.png",
+              "alt": "Histogram"
+            }
+          ]
         },
         {
           "title": "Together with the table",
