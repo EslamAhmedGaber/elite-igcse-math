@@ -155,24 +155,34 @@
     });
   }
 
+  // The progress page has its own course picker (#quickCourse); the panel follows it.
+  const PICKER_IDS = { "modular-u1": "unit1", "modular-u2": "unit2" };
+
   function mount(el) {
     const mode = el.dataset.e27Today || "course";
-    let id = el.dataset.course || "";
-    if (mode === "home") {
-      try { id = localStorage.getItem("eliteLastCourse") || ""; } catch (e) { id = ""; }
-    }
-    if (!COURSES[id]) {
-      if (mode === "home") el.hidden = true;
-      return;
-    }
+    const picker = mode === "progress" ? document.getElementById("quickCourse") : null;
+    const courseNow = () => {
+      if (picker) return PICKER_IDS[picker.value] || picker.value;
+      if (mode === "home") {
+        try { return localStorage.getItem("eliteLastCourse") || ""; } catch (e) { return ""; }
+      }
+      return el.dataset.course || "";
+    };
     const render = () => {
-      el.innerHTML = mode === "home"
-        ? dailyCard(id, { showCourse: true }) + examCard(id)
-        : dailyCard(id) + examCard(id);
-      el.hidden = false;
+      const id = courseNow();
+      // On the progress page the tracker tabs own the hidden flag; an empty panel hides itself (CSS :empty).
+      const ownsHidden = mode !== "progress";
+      if (!COURSES[id]) {
+        el.innerHTML = "";
+        if (ownsHidden) el.hidden = true;
+        return;
+      }
+      el.innerHTML = dailyCard(id, { showCourse: mode !== "course" }) + examCard(id);
+      if (ownsHidden) el.hidden = false;
       bindExam(el, id, render);
     };
     render();
+    picker?.addEventListener("change", render);
     // Another tab (e.g. the Daily Challenge) changed the progress: show it.
     window.addEventListener("storage", (event) => { if ([DAILY_KEY, EXAM_KEY].includes(event.key)) render(); });
   }

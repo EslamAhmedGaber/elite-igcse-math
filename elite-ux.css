@@ -5223,3 +5223,17 @@ body[data-page="daily"] .page.e27-daily { max-width: none; width: 100%; padding:
   .e27-today-foot .e27-btn, .e27-today-form .e27-btn { flex: 1 1 auto; }
 }
 @media print { .e27-today { display: none !important; } }
+
+/* ---------- 5h. One brand on every page: the old royal-blue accent becomes Elite navy ---------- */
+:root:root {
+  --ux-royal: #16305c;
+  --ux-royal-hover: #0f2140;
+  --ux-royal-ink: #16305c;
+  --ux-royal-soft: #eaf0f8;
+  --ux-royal-line: #c3d1e6;
+  --ux-sh-focus: 0 0 0 3px rgba(226, 184, 79, .55);
+}
+:root:root { --hub-royal: #16305c; --e-royal: #16305c; }
+:root:root body.classified-edition, :root:root body[data-page="library"] { --lib-royal: #16305c; }
+:root:root body .eps-overlay { --eps-royal: #16305c; --eps-royal-hover: #0f2140; }
+.e27-today-progress { margin: 0 0 18px; }
