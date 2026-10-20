@@ -35,6 +35,18 @@
     WMA11_SOLVED_KEY,
     WMA11_MISTAKE_KEY
   ]);
+  // Course and tool keys synced generically (stored under payload.extra[key]).
+  // Add a new course or tool here and it syncs everywhere: no other change needed.
+  const EXTRA_SYNC_KEYS = [
+    "eliteWMA12SolvedV1", "eliteWMA12MistakeBoxV1",
+    "eliteWME01SolvedV1", "eliteWME01MistakeBoxV1",
+    "eliteWMA11FinalTrainerV1", "eliteWMA12FinalTrainerV1", "eliteWME01FinalTrainerV1",
+    "eliteFinalAnswerTrainerV1", "eliteNotesStudiedV1", "eliteSavedTestsV1",
+    "eliteMockExamV1:wma11", "eliteMockExamV1:wma12", "eliteMockExamV1:wme01"
+  ];
+  // Firestore documents are limited to 1 MiB; leave room for the core payload.
+  const EXTRA_BUDGET_BYTES = 600000;
+  EXTRA_SYNC_KEYS.forEach((key) => SYNC_KEYS.add(key));
 
   const state = {
     configured: false,
@@ -133,8 +145,27 @@
       mockHistory: readJSON(MOCK_HISTORY_KEY, []),
       activeMock: readJSON(EXAM_KEY, {}),
       studyPlan: readJSON(PLAN_KEY, {}),
-      leadInfo: readJSON(LEAD_KEY, {})
+      leadInfo: readJSON(LEAD_KEY, {}),
+      extra: extraPayload()
     };
+  }
+
+  function extraPayload() {
+    const extra = {};
+    let used = 0;
+    EXTRA_SYNC_KEYS.forEach((key) => {
+      const raw = localStorage.getItem(key);
+      if (raw === null) return;
+      // Skip a single key rather than fail the whole sync if it is unusually large.
+      if (used + raw.length > EXTRA_BUDGET_BYTES) return;
+      try {
+        extra[key] = JSON.parse(raw);
+        used += raw.length;
+      } catch (err) {
+        // Ignore unreadable local values.
+      }
+    });
+    return extra;
   }
 
   function applyPayload(data) {
@@ -155,6 +186,13 @@
     if (data.activeMock) writeJSON(EXAM_KEY, data.activeMock);
     if (data.studyPlan) writeJSON(PLAN_KEY, data.studyPlan);
     if (data.leadInfo) writeJSON(LEAD_KEY, data.leadInfo);
+    if (data.extra && typeof data.extra === "object") {
+      EXTRA_SYNC_KEYS.forEach((key) => {
+        if (Object.prototype.hasOwnProperty.call(data.extra, key) && data.extra[key] !== null) {
+          writeJSON(key, data.extra[key]);
+        }
+      });
+    }
   }
 
   function patchLocalStorageSync() {

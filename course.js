@@ -69,8 +69,37 @@
   }
 
   const params = new URLSearchParams(window.location.search);
-  const id = (params.get("c") || "").toLowerCase() || system.courseFromContext(params, params.get("pathway") === "modular" ? "modular" : "");
+  // Friendly names people type or share (?c=pure1, ?pathway=wme01, ...).
+  const ALIASES = {
+    linear: "linear", "4ma1": "linear",
+    unit1: "unit1", "4wm1": "unit1", unit2: "unit2", "4wm2": "unit2",
+    wma11: "wma11", pure1: "wma11", p1: "wma11",
+    wma12: "wma12", pure2: "wma12", p2: "wma12",
+    wme01: "wme01", mechanics1: "wme01", mech1: "wme01", m1: "wme01"
+  };
+  const KNOWN_PATHWAYS = ["", "linear", "modular", "pure"];
+  const norm = (value) => String(value || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  const asked = norm(params.get("c")) || norm(params.get("course"));
+  const pathway = norm(params.get("pathway"));
+  let id = ALIASES[asked] || ALIASES[pathway] || "";
+  const unknownLink = (asked && !ALIASES[asked]) || (!ALIASES[pathway] && !KNOWN_PATHWAYS.includes(pathway));
+  if (!id && !unknownLink) {
+    id = system.courseFromContext(params, pathway === "modular" ? "modular" : "");
+  }
   const course = system.courses.find((item) => item.id === id);
+
+  if (!course && unknownLink) {
+    // A mistyped or old link: never guess a course, let the student choose.
+    document.title = "Choose your course - Elite IGCSE Mathematics";
+    root.innerHTML = `
+      <nav class="hub-trail" aria-label="Breadcrumb"><a href="index.html">&larr; All courses</a></nav>
+      <section class="hub-head"><h1>Choose your course</h1><p>We couldn't find the course in this link.</p></section>
+      <div class="hub-grid">${system.courses.map((c) => `<a class="hub-card" href="course.html?${esc(c.query)}">
+        <span class="hub-card-code">${esc(c.family)} &middot; ${esc(c.code)}</span>
+        <span class="hub-card-text"><strong>${esc(c.name)}</strong><small>${esc(c.blurb)}</small></span>
+        <span class="hub-card-go" aria-hidden="true">&rarr;</span></a>`).join("")}</div>`;
+    return;
+  }
 
   if (!course) {
     // Modular without a unit: choose the unit first
