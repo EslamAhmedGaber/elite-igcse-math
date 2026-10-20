@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site statistics - Elite Mathematics</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0f2140">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="pathway-bootstrap.js?v=baccalaureate-20260902b"></script>
+  <link rel="stylesheet" href="styles.css?v=20260809a">
+  <link rel="stylesheet" href="elite-system.css?v=20260906b">
+  <link rel="stylesheet" href="elite-ux.css?v=20261020c">
+  <script defer src="firebase-config.js"></script>
+  <script defer src="cloud-progress.js?v=20261020d"></script>
+  <script defer src="course-modules.js?v=hub-20261018a"></script>
+  <script defer src="lead.js?v=20261020b"></script>
+  <script defer src="stats.js?v=20261020a"></script>
+</head>
+<body data-page="stats">
+
+  <header class="site-header">
+    <a class="site-brand" href="index.html" aria-label="Elite IGCSE Mathematics home">
+      <span class="brand-mark">TEACHER</span>
+      <span class="brand-title">Elite IGCSE Mathematics</span>
+    </a>
+    <button id="navToggle" class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav pathway-tabs" aria-label="Main"></nav>
+    <div class="site-cta">
+      <button class="button cloud-auth-button" type="button" data-cloud-login>Sign in free</button>
+      <a class="button cloud-account-button" href="progress.html" data-cloud-account hidden>My Progress</a>
+    </div>
+  </header>
+
+  <main class="page e27-members e27-stats" data-stats-root>
+    <div class="e27-wrap">
+      <section class="e27-block">
+        <div class="e27-head">
+          <div>
+            <span class="e27-kicker" style="color:var(--e-gold-ink)">Teacher only</span>
+            <h2>Site statistics</h2>
+            <p>How many people use the site and what they use. Anonymous counts, Cairo time. Your own visits are not counted.</p>
+          </div>
+          <div class="e27-members-actions">
+            <a class="e27-btn e27-btn-line" href="members.html">Signed-in students</a>
+            <a class="e27-btn e27-btn-line" href="admin.html">Teacher Studio</a>
+          </div>
+        </div>
+        <div class="e27-stats-range" role="group" aria-label="Date range" data-stats-range hidden>
+          <button type="button" data-days="1">Today</button>
+          <button type="button" data-days="7" aria-pressed="true">Last 7 days</button>
+          <button type="button" data-days="30">Last 30 days</button>
+          <button type="button" data-days="90">Last 90 days</button>
+        </div>
+        <p class="e27-members-status" data-stats-status role="status">Checking your sign-in&hellip;</p>
+        <div data-stats-body hidden>
+          <div class="e27-members-stats e27-stats-kpis" data-stats-kpis></div>
+          <section class="e27-stats-card">
+            <header><h3>Every day</h3><span class="e27-stats-legend"><i class="is-v"></i>Page views <i class="is-u"></i>Visitors</span></header>
+            <div class="e27-stats-chart" data-stats-chart></div>
+          </section>
+          <div class="e27-stats-grid">
+            <section class="e27-stats-card"><header><h3>Courses</h3><span>pages opened in each course</span></header><div data-stats-list="courses"></div></section>
+            <section class="e27-stats-card"><header><h3>Tools used</h3><span>clicks on each tool</span></header><div data-stats-list="tools"></div></section>
+            <section class="e27-stats-card"><header><h3>Pages</h3><span>page views by section</span></header><div data-stats-list="pages"></div></section>
+            <section class="e27-stats-card"><header><h3>Countries</h3><span>visitors, from the device time zone</span></header><div data-stats-list="countries"></div></section>
+            <section class="e27-stats-card"><header><h3>Studying</h3><span>what students did</span></header><div data-stats-list="actions"></div></section>
+            <section class="e27-stats-card"><header><h3>Devices &amp; sign-in</h3><span>visitors and the free account</span></header><div data-stats-list="devices"></div></section>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer hub-footer">
+    <p><strong>Elite IGCSE Academy</strong> &middot; Dr Eslam Ahmed &middot; <a href="about.html">About</a></p>
+  </footer>
+</body>
+</html>

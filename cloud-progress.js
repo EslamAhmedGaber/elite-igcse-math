@@ -195,12 +195,210 @@
     }
   }
 
+  // ---------- Anonymous site statistics ----------
+  // One small Firestore document per day (site_stats/YYYY-MM-DD, Cairo time) of plain counters.
+  // No names, no emails, no cookies: only "how many" and "what was used". Teacher-only view: stats.html.
+  // Every key must also be listed in docs/firestore.rules (tools/test_site_stats.js checks this).
+  const STATS_KEYS = [
+    "v", "u", "n", "dm", "dd",
+    "pv_home", "pv_course", "pv_practice", "pv_notes", "pv_papers", "pv_books", "pv_exam", "pv_progress", "pv_ial", "pv_about", "pv_bacc", "pv_other",
+    "c_linear", "c_unit1", "c_unit2", "c_wma11", "c_wma12", "c_wme01",
+    "t_notes", "t_books", "t_past_solutions", "t_build_test", "t_progress", "t_classified", "t_expertise", "t_revision_book", "t_mistake_box", "t_saved_tests", "t_interactive_lab", "t_question_visualizer",
+    "e_pdf", "e_print", "e_solved", "e_mistake", "e_saved", "e_signin", "e_invite", "e_invite_click", "e_whatsapp",
+    "g_eg", "g_qa", "g_ae", "g_sa", "g_kw", "g_om", "g_bh", "g_jo", "g_gb", "g_other"
+  ];
+  const STATS_KEY_SET = new Set(STATS_KEYS);
+  const STATS_DAY_KEY = "eliteStatsDayV1";
+  const STATS_FIRST_KEY = "eliteStatsFirstV1";
+  const STATS_IGNORE_KEY = "eliteStatsIgnoreV1";
+  const STATS_MAX_STEP = 5;
+  const STATS_STORAGE_RULES = [
+    [/^solvedExpertiseQuestions$|Solved/, "e_solved"],
+    [/MistakeBox/, "e_mistake"],
+    [/^eliteSavedTestsV1/, "e_saved"]
+  ];
+  const TIMEZONE_COUNTRY = {
+    "Africa/Cairo": "g_eg", "Asia/Qatar": "g_qa", "Asia/Dubai": "g_ae", "Asia/Riyadh": "g_sa", "Asia/Kuwait": "g_kw",
+    "Asia/Muscat": "g_om", "Asia/Bahrain": "g_bh", "Asia/Amman": "g_jo", "Europe/London": "g_gb"
+  };
+  const stats = { pending: {}, timer: null, printed: false };
+
+  function isTeacherEmail(email) {
+    const teachers = (window.ELITE_FIREBASE?.adminEmails || []).map((item) => String(item).toLowerCase());
+    return teachers.includes(String(email || "").toLowerCase());
+  }
+
+  // Dr Eslam's own browsing should not inflate the numbers.
+  function ignoreMyStats() {
+    try { localStorage.setItem(STATS_IGNORE_KEY, "1"); } catch (err) { /* private mode */ }
+    stats.pending = {};
+    clearTimeout(stats.timer);
+  }
+
+  function statsEnabled() {
+    if (navigator.webdriver) return false;
+    const liveHost = /(^|\.)eliteigcse\.com$/.test(window.location.hostname);
+    if (!liveHost && !/[?&]stats=test\b/.test(window.location.search)) return false;
+    try {
+      if (localStorage.getItem(STATS_IGNORE_KEY) === "1") return false;
+    } catch (err) {
+      // Storage blocked: still count the visit.
+    }
+    return true;
+  }
+
+  function statsDay() {
+    try {
+      return new Intl.DateTimeFormat("en-CA", { timeZone: "Africa/Cairo", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+    } catch (err) {
+      return new Date().toISOString().slice(0, 10);
+    }
+  }
+
+  function countStat(key, by = 1) {
+    if (!STATS_KEY_SET.has(key) || !statsEnabled()) return;
+    const step = Math.max(1, Math.min(STATS_MAX_STEP, Math.round(by)));
+    stats.pending[key] = (stats.pending[key] || 0) + step;
+    clearTimeout(stats.timer);
+    stats.timer = setTimeout(flushStats, 3000);
+  }
+
+  async function flushStats() {
+    const keys = Object.keys(stats.pending);
+    if (!keys.length) return;
+    if (!state.ready) {
+      stats.timer = setTimeout(flushStats, 3000);
+      return;
+    }
+    if (/[?&]stats=test\b/.test(window.location.search)) {
+      // Dry run for local checks: show what would be counted, never write.
+      window.__eliteStatsDryRun = { ...(window.__eliteStatsDryRun || {}) };
+      keys.forEach((key) => { window.__eliteStatsDryRun[key] = (window.__eliteStatsDryRun[key] || 0) + stats.pending[key]; });
+      stats.pending = {};
+      return;
+    }
+    const fs = state.modules.firestore;
+    const update = {};
+    keys.forEach((key) => { update[key] = fs.increment(stats.pending[key]); });
+    stats.pending = {};
+    try {
+      await fs.setDoc(fs.doc(state.db, "site_stats", statsDay()), update, { merge: true });
+    } catch (err) {
+      // Rules not published yet or offline: drop silently, never disturb the student.
+    }
+  }
+
+  function storageSize(raw) {
+    try {
+      const value = JSON.parse(raw || "null");
+      if (Array.isArray(value)) return value.length;
+      if (value && typeof value === "object") return Object.keys(value).length;
+    } catch (err) {
+      return 0;
+    }
+    return 0;
+  }
+
+  function statsFromStorage(key, before, after) {
+    const rule = STATS_STORAGE_RULES.find(([pattern]) => pattern.test(key));
+    if (!rule) return;
+    const added = storageSize(after) - storageSize(before);
+    if (added > 0) countStat(rule[1], added);
+  }
+
+  function statsSection() {
+    const path = window.location.pathname.toLowerCase();
+    if (path === "/" || path === "/index.html") return "pv_home";
+    if (path.includes("/ial/")) return "pv_ial";
+    const page = path.split("/").pop().replace(/\.html$/, "");
+    return {
+      course: "pv_course", practice: "pv_practice", library: "pv_notes", notes: "pv_notes", topics: "pv_notes",
+      pastpapers: "pv_papers", downloads: "pv_books", "classified-books": "pv_books", "modular-books": "pv_books",
+      exam: "pv_exam", progress: "pv_progress", about: "pv_about", "egyptian-baccalaureate": "pv_bacc"
+    }[page] || "pv_other";
+  }
+
+  function statsCourse() {
+    const params = new URLSearchParams(window.location.search);
+    const path = window.location.pathname.toLowerCase();
+    const named = String(params.get("c") || params.get("course") || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+    const aliases = { p1: "wma11", pure1: "wma11", p2: "wma12", pure2: "wma12", m1: "wme01", mech1: "wme01", mechanics1: "wme01", "4ma1": "linear", "4wm1": "unit1", "4wm2": "unit2" };
+    const fromName = aliases[named] || named;
+    if (["linear", "unit1", "unit2", "wma11", "wma12", "wme01"].includes(fromName)) return `c_${fromName}`;
+    const ial = path.match(/\/ial\/(wma11|wma12|wme01)\//);
+    if (ial) return `c_${ial[1]}`;
+    const unit = String(params.get("unit") || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+    if (unit === "unit1" || unit === "unit2") return `c_${unit}`;
+    if (String(params.get("pathway") || "").toLowerCase() === "linear") return "c_linear";
+    return "";
+  }
+
+  function countPageView() {
+    if (!statsEnabled()) return;
+    countStat("v");
+    countStat(statsSection());
+    const course = statsCourse();
+    if (course) countStat(course);
+    const today = statsDay();
+    try {
+      if (localStorage.getItem(STATS_DAY_KEY) !== today) {
+        localStorage.setItem(STATS_DAY_KEY, today);
+        countStat("u");
+        let zone = "";
+        try { zone = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (err) { zone = ""; }
+        countStat(TIMEZONE_COUNTRY[zone] || "g_other");
+        countStat(window.matchMedia("(max-width: 760px), (pointer: coarse)").matches ? "dm" : "dd");
+        if (!localStorage.getItem(STATS_FIRST_KEY)) {
+          localStorage.setItem(STATS_FIRST_KEY, today);
+          countStat("n");
+        }
+      }
+    } catch (err) {
+      // Storage blocked: page view is still counted above.
+    }
+  }
+
+  function initStats() {
+    if (!statsEnabled()) return;
+    countPageView();
+    document.addEventListener("click", (event) => {
+      const link = event.target.closest("a");
+      if (!link) return;
+      const module = link.dataset.module;
+      if (module) countStat(`t_${module.replace(/-/g, "_")}`);
+      const href = link.getAttribute("href") || "";
+      if (/\.pdf(\?|#|$)/i.test(href)) countStat("e_pdf");
+      if (/wa\.me\//.test(href) || link.hasAttribute("data-lead-trigger")) countStat("e_whatsapp");
+    }, true);
+    window.addEventListener("beforeprint", () => {
+      if (stats.printed) return;
+      stats.printed = true;
+      countStat("e_print");
+    });
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "hidden") flushStats();
+    });
+  }
+
   function patchLocalStorageSync() {
     if (window.__eliteCloudStoragePatched) return;
     window.__eliteCloudStoragePatched = true;
     const originalSetItem = Storage.prototype.setItem;
     Storage.prototype.setItem = function patchedSetItem(key, value) {
+      let before = null;
+      try {
+        if (this === localStorage && STATS_STORAGE_RULES.some(([pattern]) => pattern.test(String(key)))) {
+          before = this.getItem(key);
+        }
+      } catch (err) {
+        before = null;
+      }
       const result = originalSetItem.apply(this, arguments);
+      try {
+        if (this === localStorage) statsFromStorage(String(key), before, value);
+      } catch (err) {
+        // Statistics must never interfere with saving.
+      }
       try {
         if (this === localStorage && SYNC_KEYS.has(String(key)) && window.EliteCloud?.queueSync) {
           window.EliteCloud.queueSync();
@@ -260,7 +458,7 @@
   const INVITE_DISMISS_KEY = "eliteSignInInviteDismissedAt";
   const INVITE_SNOOZE_DAYS = 7;
   const INVITE_DELAY_MS = 5000;
-  const INVITE_SKIP_PAGES = new Set(["admin", "members", "exam", "progress"]);
+  const INVITE_SKIP_PAGES = new Set(["admin", "members", "stats", "exam", "progress"]);
   let inviteTimer = null;
 
   function inviteSnoozed() {
@@ -305,6 +503,8 @@
         </div>
         <small class="e27-invite-note">We keep your name, email and progress. Dr Eslam can see who has signed in.</small>`;
       document.body.append(card);
+      countStat("e_invite");
+      card.querySelector("[data-cloud-login]")?.addEventListener("click", () => countStat("e_invite_click"));
       card.querySelectorAll("[data-e27-invite-later]").forEach((button) => {
         button.addEventListener("click", () => hideInvite(true));
       });
@@ -426,6 +626,7 @@
         updateUi();
         emitState();
         if (user) {
+          if (isTeacherEmail(user.email)) ignoreMyStats();
           queueSync();
           recordVisit(user);
         } else {
@@ -448,6 +649,7 @@
     provider.setCustomParameters({ prompt: "select_account" });
     try {
       await state.modules.auth.signInWithPopup(state.auth, provider);
+      countStat("e_signin");
     } catch (err) {
       if (String(err.code || "").includes("popup")) {
         await state.modules.auth.signInWithRedirect(state.auth, provider);
@@ -592,9 +794,23 @@
     });
   }
 
+  // Teacher view (stats.html): daily counters from fromDay (YYYY-MM-DD) up to today.
+  async function listSiteStats(fromDay) {
+    if (!state.ready || !state.user) throw new Error("Sign in first.");
+    const fs = state.modules.firestore;
+    const snap = await fs.getDocs(fs.query(
+      fs.collection(state.db, "site_stats"),
+      fs.where(fs.documentId(), ">=", String(fromDay)),
+      fs.orderBy(fs.documentId())
+    ));
+    return snap.docs.map((doc) => ({ day: doc.id, ...(doc.data() || {}) }));
+  }
+
   window.EliteCloud = {
     init,
     listSiteUsers,
+    listSiteStats,
+    statsKeys: STATS_KEYS.slice(),
     signIn,
     signOut,
     syncNow,
@@ -604,5 +820,6 @@
   };
 
   patchLocalStorageSync();
+  initStats();
   init();
 })();

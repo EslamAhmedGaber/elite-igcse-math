@@ -459,7 +459,7 @@
     const group = NAV_GROUPS.find((item) => item.id === groupId);
     if (!group || groupId === "about") return null;
     const page = document.body?.dataset.page || "";
-    if (page === "home" || page === "members") return null;
+    if (page === "home" || page === "members" || page === "stats") return null;
     const params = new URLSearchParams(window.location.search);
     if (!group.units) return { title: group.label, detail: group.detail, intro: group.intro, links: group.links, groupId };
     if (params.get("choose") === "unit" || (!params.get("unit") && page === "practice" && params.get("pathway") === "modular")) {
