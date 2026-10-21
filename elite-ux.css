@@ -5310,3 +5310,17 @@ body[data-page="daily"] .page.e27-daily { max-width: none; width: 100%; padding:
   .exam-quick-ready-actions, :root:root body .exam-quick-ready-actions button { width: 100%; }
 }
 @media print { .exam-quick { display: none !important; } }
+
+/* ---------- 5l. Exam marking: estimated grade + practise what you missed (exam.js) ---------- */
+.exam-grade { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 12px; align-items: center; margin: 12px 0 0; padding: 10px 14px; border-radius: 10px; background: var(--e-gold-soft); border: 1px solid #ecd9a4; max-width: 520px; }
+.exam-grade span { grid-column: 2; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--e-gold-ink); }
+.exam-grade b { grid-row: 1 / span 2; grid-column: 1; display: grid; place-items: center; min-width: 48px; height: 48px; padding: 0 6px; border-radius: 10px; background: var(--e-navy); color: var(--e-gold); font-size: 26px; font-weight: 800; line-height: 1; }
+.exam-grade small { grid-column: 2; font-size: 13px; color: var(--e-ink); line-height: 1.4; }
+:root:root body .exam-weakness-grid .exam-retry-card { background: linear-gradient(135deg, var(--e-navy), var(--e-navy-2)); border-color: var(--e-navy); color: #fff; }
+:root:root body .exam-weakness-grid .exam-retry-card strong { color: #fff; }
+:root:root body .exam-weakness-grid .exam-retry-card p { color: rgba(255, 255, 255, .85); }
+:root:root body .exam-weakness-grid .exam-retry-card .button { background: var(--e-gold); border-color: var(--e-gold); color: var(--e-navy); }
+:root:root body .exam-weakness-grid .exam-retry-card .button:disabled { opacity: .55; cursor: not-allowed; }
+/* Score ring: a real ring (white centre) so the numbers never sit on the coloured arc. */
+:root:root body .exam-score-ring { background: radial-gradient(closest-side, #fff 76%, transparent 77% 100%), conic-gradient(var(--e-navy) var(--score), var(--e-line) 0); box-shadow: none; }
+:root:root body .exam-score-ring strong { color: var(--e-navy); font-size: 26px; }

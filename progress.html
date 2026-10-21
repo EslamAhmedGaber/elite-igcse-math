@@ -19,18 +19,35 @@
   <link rel="stylesheet" href="styles.css?v=20260809a">
   <link rel="stylesheet" href="elite-system.css?v=20260906b">
   <link rel="stylesheet" href="quick-progress.css?v=20260929a">
-  <link rel="stylesheet" href="elite-ux.css?v=20261021a">
+  <link rel="stylesheet" href="elite-ux.css?v=20261021b">
   <script defer src="pathway-mode.js?v=baccalaureate-20260902c"></script>
-  <script defer src="questions-data.js?v=20261018a"></script>
-  <script defer src="topic-normalizer.js?v=20261020fig"></script>
+  <script>
+    /* Load only the question bank this progress page shows (the course picker reloads the page).
+       Same rules as resolveProgressCoursePack() in progress.js. Was every bank: ~9 MB. */
+    (function () {
+      var params = new URLSearchParams(location.search);
+      var pathway = (params.get("pathway") || (window.ELITE_PATHWAY && window.ELITE_PATHWAY.mode) || "linear").toLowerCase();
+      var course = (params.get("course") || "").toLowerCase();
+      var ial = {
+        wma11: "ial/wma11/wma11-data.js?v=20261020fig",
+        wma12: "ial/wma12/wma12-data.js?v=20261020fig",
+        wma13: "ial/wma13/wma13-data.js?v=wma13-20261020",
+        wme01: "ial/wme01/wme01-data.js?v=20261020fig"
+      };
+      var files;
+      if (pathway === "baccalaureate" || course === "baccalaureate" || course === "egyptian-baccalaureate") {
+        files = ["data/EgyptianBaccalaureate/2026/English/baccalaureate-data.js?v=20260902a"];
+      } else if (pathway === "pure") {
+        files = [ial[course] || ial.wma11];
+      } else {
+        files = ["questions-data.js?v=20261018a", "topic-normalizer.js?v=20261020fig"];
+      }
+      files.forEach(function (src) { document.write('<script defer src="' + src + '"><\/script>'); });
+    }());
+  </script>
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js?v=20261020t1"></script>
   <script defer src="print-utils.js?v=20260809c"></script>
-  <script defer src="ial/wma11/wma11-data.js?v=20261020fig"></script>
-  <script defer src="ial/wma12/wma12-data.js?v=20261020fig"></script>
-  <script defer src="ial/wma13/wma13-data.js?v=wma13-20261020"></script>
-  <script defer src="ial/wme01/wme01-data.js?v=20261020fig"></script>
-  <script defer src="data/EgyptianBaccalaureate/2026/English/baccalaureate-data.js?v=20260902a"></script>
   <script defer src="quick-progress.js?v=20260929a"></script>
   <script defer src="progress.js?v=20261020w13"></script>
   <script defer src="planner.js"></script>

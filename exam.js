@@ -1892,17 +1892,34 @@
         : `${state.ids.length} questions, ${total} marks, ${Math.round(Number(state.durationSeconds || 0) / 60)} minutes.`
       : state.status === "running"
         ? "Answers stay private until you finish."
-        : "Enter your marks, then save to update the Mistake Box.";
+        : state.status === "complete"
+          ? "Marks saved. Questions you dropped marks on are now in your Mistake Box."
+          : "Enter your marks, then save to update the Mistake Box.";
     const code = displayTestCode();
     const levelMix = levelCounts(state.ids.map(questionById).filter(Boolean));
     const meta = `<p class="exam-paper-meta">${code ? `<span>Test code <b>${escapeHtml(code)}</b></span>` : ""}<span>Easy ${levelMix.easy} &middot; Medium ${levelMix.medium} &middot; Hard ${levelMix.hard} <small>(by marks)</small></span>${state.ids.length ? `<button type="button" class="exam-link-button" data-copy-link>Copy test link</button>` : ""}</p>`;
+    const grade = !ready && state.status !== "running" ? gradeGuide(score, total) : null;
+    const gradeHtml = grade ? `<div class="exam-grade" aria-label="Estimated grade ${escapeHtml(grade.grade)}">
+        <span>Estimated grade</span><b>${escapeHtml(grade.grade)}</b>
+        <small>${grade.next ? `${grade.need} more mark${grade.need === 1 ? "" : "s"} for grade ${escapeHtml(grade.next)}` : "Top grade on this paper"} &middot; a guide from recent Edexcel boundaries, which change every series</small>
+      </div>` : "";
     els.result.innerHTML = `<div class="exam-score-ring" style="--score:${percent}%"><strong>${ready ? total : percent + "%"}</strong><span>${ready ? "marks" : `${score}/${total}`}</span></div>
-      <div><strong>${label}</strong><p>${copy}</p>${meta}${notice ? `<p class="exam-notice" role="status">${escapeHtml(notice)}</p>` : ""}</div>`;
+      <div><strong>${label}</strong><p>${copy}</p>${meta}${gradeHtml}${notice ? `<p class="exam-notice" role="status">${escapeHtml(notice)}</p>` : ""}</div>`;
     if (state.status === "running" || ready) {
       els.weakness.innerHTML = "";
       return;
     }
-    els.weakness.innerHTML = topicBreakdown().slice(0, 4).map((row) => `<article>
+    const missed = topicBreakdown().filter((row) => row.lost > 0);
+    const retryCard = missed.length
+      ? `<article class="exam-retry-card">
+          <strong>Practise what you missed</strong>
+          <p>${state.status === "complete"
+            ? `A new paper with different questions on the ${missed.length === 1 ? "topic" : `${Math.min(missed.length, 6)} topics`} where you lost marks.`
+            : "Save your marks first, then build a new paper on the topics where you lost marks."}</p>
+          <button type="button" class="button primary" data-retry-missed${state.status === "complete" ? "" : " disabled"}>Build my practice paper</button>
+        </article>`
+      : "";
+    els.weakness.innerHTML = retryCard + topicBreakdown().slice(0, 4).map((row) => `<article>
       <strong>${escapeHtml(row.label || row.topic)}</strong>
       <p>${row.score}/${row.total} marks. Lost ${row.lost} mark${row.lost === 1 ? "" : "s"}.</p>
       <a class="button primary" href="${topicLink(row)}">Revise topic</a>
@@ -2634,6 +2651,40 @@
     }
   }
 
+  /* Rough guide only: Edexcel boundaries move every series. Minimum percent of the paper's marks. */
+  const GRADE_GUIDE = {
+    igcse: [["9", 75], ["8", 65], ["7", 55], ["6", 45], ["5", 36], ["4", 27], ["3", 17]],
+    ial: [["A", 80], ["B", 70], ["C", 60], ["D", 50], ["E", 40]]
+  };
+
+  function gradeGuide(score, total) {
+    if (!total || activePathway() === "baccalaureate") return null;
+    const table = activePathway() === "pure" ? GRADE_GUIDE.ial : GRADE_GUIDE.igcse;
+    const percent = (score * 100) / total;
+    const index = table.findIndex(([, min]) => percent >= min);
+    const grade = index >= 0 ? table[index][0] : "U";
+    const next = index === 0 ? null : table[index < 0 ? table.length - 1 : index - 1];
+    const need = next ? Math.max(1, Math.ceil((next[1] * total) / 100 - score)) : 0;
+    return { grade, next: next ? next[0] : "", need };
+  }
+
+  function buildMissedPaper() {
+    if (state.status !== "complete") return;
+    const topics = topicBreakdown().filter((row) => row.lost > 0).slice(0, 6).map((row) => row.topic);
+    if (!topics.length) return;
+    const unit = els.unit?.value || "";
+    const available = topics.reduce((sum, topic) => sum + topicPoolCount(topic, "all", unit, ""), 0);
+    if (!available) return;
+    // IAL questions are long: cap the paper at about 50 marks instead of 12 questions.
+    const marks = activePathway() === "pure" ? 50 : 0;
+    if (quickBuildRandom({ count: Math.min(12, available), marks, minutes: "auto" }, topics)) {
+      state.title = "Practise what you missed";
+      saveState();
+      render();
+      els.quickReady?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }
+
   /* ---------------------------------------------------------------- quick start
      Four one-click papers. Each fills the normal builder settings (so the
      student can still adjust them below) and builds the paper at once. */
@@ -2822,6 +2873,9 @@
   els.printSolution?.addEventListener("click", () => printCurrentSolutions(els.printSolution));
   els.download?.addEventListener("click", () => downloadCurrentPaper(els.download));
   els.downloadSolution?.addEventListener("click", () => downloadCurrentSolutions(els.downloadSolution));
+  els.weakness?.addEventListener("click", (event) => {
+    if (event.target.closest("[data-retry-missed]:not([disabled])")) buildMissedPaper();
+  });
   els.quickGrid?.addEventListener("click", (event) => {
     const button = event.target.closest("[data-quick]");
     if (button && !button.disabled) quickBuild(button.dataset.quick);
