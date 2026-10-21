@@ -19,16 +19,16 @@
   <link rel="stylesheet" href="styles.css?v=20260809a">
   <link rel="stylesheet" href="elite-system.css?v=20260906b">
   <link rel="stylesheet" href="exam-tools.css?v=20260926a">
-  <link rel="stylesheet" href="elite-ux.css?v=20261020t2">
+  <link rel="stylesheet" href="elite-ux.css?v=20261021a">
   <script defer src="pathway-mode.js?v=20260902c"></script>
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js?v=20261020t1"></script>
   <script defer src="worked-solution.js?v=20261020t1"></script>
   <script defer src="runtime-loader.js?v=20260809a"></script>
   <script defer src="print-utils.js?v=baccalaureate-20260902a"></script>
-  <script defer src="paper-print.js?v=20261018a"></script>
+  <script defer src="paper-print.js?v=20261021a"></script>
   <script defer src="revision-engine.js?v=20260530b"></script>
-  <script defer src="exam-bootstrap.js?v=20261020fig"></script>
+  <script defer src="exam-bootstrap.js?v=20261021a"></script>
   <script defer src="course-modules.js?v=20261020t2"></script>
   <script defer src="lead.js?v=20261020t1"></script>
 </head>
@@ -112,7 +112,7 @@
         <h1 id="examTitle">Build the exact paper you need.</h1>
         <p>Generate random mocks, hand-pick topic tests, or build quick revision quizzes and full prediction booklets from past-paper patterns, gaps, mistakes, and weak topics.</p>
         <div class="planner-hero-actions">
-          <a class="button primary" href="#examBuilder">Build paper</a>
+          <a class="button primary" href="#examQuick">Build a paper</a>
           <a class="button light" href="practice.html?bank=expertise">Train Q20+</a>
         </div>
       </div>
@@ -121,6 +121,16 @@
         <strong id="examTimer">90:00</strong>
         <p id="examTimerLabel">Ready to start</p>
       </div>
+    </section>
+
+    <section class="exam-quick" id="examQuick" aria-labelledby="examQuickTitle">
+      <div class="exam-quick-head">
+        <span class="eyebrow">Quick start</span>
+        <h2 id="examQuickTitle">One click, one ready paper.</h2>
+        <p>Real past-paper questions, laid out on A4. Download it, print it, or sit it with the timer. Want to choose every setting? Use the full builder below.</p>
+      </div>
+      <div class="exam-quick-grid" data-quick-grid></div>
+      <div class="exam-quick-ready" data-quick-ready role="status" aria-live="polite" hidden></div>
     </section>
 
     <section class="exam-builder" id="examBuilder" aria-labelledby="examBuilderTitle">
@@ -424,6 +434,8 @@
         <button id="saveExamBtn" type="button">Save marks</button>
         <button id="saveCurrentTestBtn" type="button">Save test</button>
         <button id="resetExamBtn" type="button">New paper</button>
+        <button id="downloadExamBtn" class="exam-download-btn" type="button">Download PDF</button>
+        <button id="downloadSolutionBtn" type="button">Download with solutions</button>
         <button id="printExamBtn" type="button">Print paper</button>
         <button id="printSolutionBtn" type="button">Print with solutions</button>
       </div>

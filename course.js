@@ -116,16 +116,24 @@
     if (!total) return "";
     const body = groups.map((group) => `
       ${group.title ? `<h3 class="e27-roadmap-chapter">${esc(group.title)}</h3>` : ""}
-      <div class="e27-roadmap">${group.topics.map((t) => t.href ? `
-        <a class="e27-topic" data-module="notes" href="${esc(t.href)}" target="_blank" rel="noopener">
+      <div class="e27-roadmap">${group.topics.map((t) => `
+        <div class="e27-topic" data-topic-num="${esc(t.num)}">
           <span class="n">${esc(t.num)}</span>
-          <span><strong>${esc(t.title)}</strong>${t.pages ? `<small>${esc(t.pages)} pages</small>` : ""}</span>
-          <span class="pdf">PDF</span>
-        </a>` : `
-        <div class="e27-topic"><span class="n">${esc(t.num)}</span><span><strong>${esc(t.title)}</strong><small>Coming soon</small></span><span></span></div>`).join("")}
+          <span class="e27-topic-main">
+            ${t.href
+              ? `<a class="e27-topic-title" data-module="notes" href="${esc(t.href)}" target="_blank" rel="noopener"><strong>${esc(t.title)}</strong></a>`
+              : `<strong>${esc(t.title)}</strong>`}
+            <small data-topic-meta>${t.href ? (t.pages ? `${esc(t.pages)} pages of notes` : "Notes") : "Notes coming soon"}</small>
+            <span class="e27-topic-bar" data-topic-bar hidden><i></i></span>
+          </span>
+          <span class="e27-topic-acts">
+            ${t.href ? `<a class="pdf" data-module="notes" href="${esc(t.href)}" target="_blank" rel="noopener" aria-label="${esc(t.title)} notes PDF">PDF</a>` : ""}
+            <a class="go" data-module="classified" data-topic-practice hidden aria-label="Practise ${esc(t.title)}">Practise</a>
+          </span>
+        </div>`).join("")}
       </div>`).join("");
     return `<section class="e27-block" aria-labelledby="roadmapTitle">
-      <div class="e27-head"><div><h2 id="roadmapTitle">Topic notes</h2><p>All ${total} topics in order. Open any topic's notes with answers.</p></div></div>
+      <div class="e27-head"><div><h2 id="roadmapTitle">Topics</h2><p>All ${total} topics in order: open the notes, then practise the topic's past-paper questions. Your progress shows on each topic.</p></div><div class="e27-roadmap-sum" data-roadmap-sum hidden></div></div>
       ${body}
     </section>`;
   }
@@ -215,5 +223,45 @@
       ${topicRoadmap(course)}
     </div>
   `;
+  // Per-topic progress: data/topic-index/<course>.js lists the bank questions behind each note.
+  const SOLVED_KEYS = { wma11: "eliteWMA11SolvedV1", wma12: "eliteWMA12SolvedV1", wma13: "eliteWMA13SolvedV1", wme01: "eliteWME01SolvedV1" };
+  function showTopicProgress() {
+    const index = window.ELITE_TOPIC_INDEX?.[course.id];
+    if (!index) return;
+    let solved;
+    try { solved = new Set(JSON.parse(localStorage.getItem(SOLVED_KEYS[course.id] || "solvedExpertiseQuestions") || "[]")); } catch (err) { solved = new Set(); }
+    let done = 0;
+    let all = 0;
+    root.querySelectorAll("[data-topic-num]").forEach((el) => {
+      const entry = index.topics[el.dataset.topicNum];
+      if (!entry || !entry.ids.length) return;
+      const count = entry.ids.filter((id) => solved.has(index.prefix + id) || solved.has(id)).length;
+      const total = entry.ids.length;
+      done += count;
+      all += total;
+      const pct = Math.round((count / total) * 100);
+      el.classList.toggle("is-started", count > 0);
+      el.classList.toggle("is-done", count === total);
+      const meta = el.querySelector("[data-topic-meta]");
+      if (meta) meta.textContent = count ? `${count} of ${total} questions solved` : `${total} past-paper question${total === 1 ? "" : "s"}`;
+      const bar = el.querySelector("[data-topic-bar]");
+      if (bar) { bar.hidden = false; bar.querySelector("i").style.width = `${pct}%`; bar.setAttribute("aria-label", `${pct}% solved`); bar.setAttribute("role", "img"); }
+      const go = el.querySelector("[data-topic-practice]");
+      if (go && entry.practice) { go.href = entry.practice; go.hidden = false; }
+    });
+    const sum = root.querySelector("[data-roadmap-sum]");
+    if (sum && all) {
+      sum.hidden = false;
+      sum.innerHTML = `<b class="e27-num">${Math.round((done / all) * 100)}%</b><span>${done.toLocaleString("en-GB")} of ${all.toLocaleString("en-GB")} solved</span>`;
+    }
+  }
+  if (root.querySelector("[data-topic-num]")) {
+    const script = document.createElement("script");
+    script.src = `data/topic-index/${course.id}.js?v=20261021a`;
+    script.async = true;
+    script.onload = showTopicProgress;
+    document.head.appendChild(script);
+    window.addEventListener("pageshow", (event) => { if (event.persisted) showTopicProgress(); });
+  }
   try { window.localStorage.setItem("eliteLastCourse", course.id); } catch (err) { /* private mode */ }
 })();

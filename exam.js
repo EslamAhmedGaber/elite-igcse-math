@@ -393,6 +393,10 @@
     saveTest: document.getElementById("saveCurrentTestBtn"),
     reset: document.getElementById("resetExamBtn"),
     print: document.getElementById("printExamBtn"),
+    download: document.getElementById("downloadExamBtn"),
+    downloadSolution: document.getElementById("downloadSolutionBtn"),
+    quickGrid: document.querySelector("[data-quick-grid]"),
+    quickReady: document.querySelector("[data-quick-ready]"),
     printSolution: document.getElementById("printSolutionBtn"),
     timer: document.getElementById("examTimer"),
     timerLabel: document.getElementById("examTimerLabel"),
@@ -1634,7 +1638,7 @@
     };
   }
 
-  async function openPrintStudio(version = "student", trigger = null) {
+  async function openPrintStudio(version = "student", trigger = null, extra = {}) {
     if (!state.ids.length) return false;
     if (!window.ElitePaperPrint?.open) {
       if (version === "solutions") {
@@ -1648,7 +1652,7 @@
       }
       return true;
     }
-    window.ElitePaperPrint.open(paperSpec(), { version });
+    window.ElitePaperPrint.open(paperSpec(), { version, ...extra });
     return true;
   }
 
@@ -1976,6 +1980,8 @@
     els.save.disabled = state.status !== "marking" && state.status !== "complete";
     els.print.disabled = !canPrint;
     if (els.printSolution) els.printSolution.disabled = !canPrint;
+    if (els.download) els.download.disabled = !canPrint;
+    if (els.downloadSolution) els.downloadSolution.disabled = !canPrint;
     els.saveTest.disabled = !state.ids.length;
     els.start.disabled = primary.disabled || state.status === "running";
     els.start.textContent = primary.label;
@@ -2208,7 +2214,7 @@
     else await window.MathJax.typesetPromise([els.paper]).catch(() => {});
   }
 
-  async function printCurrentSolutions(trigger = els.printSolution) {
+  async function printCurrentSolutions(trigger = els.printSolution, extra = {}) {
     if (!ensurePaperForCurrentMode()) return;
     if (!state.ids.length) return;
     try {
@@ -2218,7 +2224,7 @@
       els.result.innerHTML = `<strong>Solutions could not load.</strong><p>Check the connection, then press Print with solutions again.</p>`;
       return;
     }
-    await openPrintStudio("solutions", trigger);
+    await openPrintStudio("solutions", trigger, extra);
   }
 
   async function printDraftSolutionsAsPaper() {
@@ -2486,9 +2492,18 @@
     return Boolean(state.ids?.length);
   }
 
-  async function printCurrentPaper(trigger = els.print) {
+  async function printCurrentPaper(trigger = els.print, extra = {}) {
     if (!ensurePaperForCurrentMode()) return;
-    await openPrintStudio("student", trigger);
+    await openPrintStudio("student", trigger, extra);
+  }
+
+  /* One click to a saved file: the print window prepares the A4 pages, then saves the PDF itself. */
+  function downloadCurrentPaper(trigger = els.download) {
+    return printCurrentPaper(trigger, { autoDownload: true });
+  }
+
+  function downloadCurrentSolutions(trigger = els.downloadSolution) {
+    return printCurrentSolutions(trigger, { autoDownload: true });
   }
 
   function saveCurrentTest() {
@@ -2619,7 +2634,160 @@
     }
   }
 
+  /* ---------------------------------------------------------------- quick start
+     Four one-click papers. Each fills the normal builder settings (so the
+     student can still adjust them below) and builds the paper at once. */
+  let quickTopicsKey = "";
+
+  function ensureOption(select, value, label) {
+    if (!select) return;
+    const text = String(value);
+    if (![...select.options].some((option) => option.value === text)) select.add(new Option(label, text));
+    select.value = text;
+  }
+
+  function realExamShape() {
+    if (activePathway() === "baccalaureate") return { count: 25, marks: 0, minutes: "auto", label: "25 questions, timed at exam pace" };
+    // Balanced levels keep short opening questions in, as on a real paper.
+    if (activePathway() === "pure") return { count: 20, marks: 75, minutes: 90, levelMix: "balanced", label: "75 marks · 1 hour 30 minutes, like the real paper" };
+    return { count: 40, marks: 100, minutes: 120, levelMix: "balanced", label: "100 marks · 2 hours, like the real paper" };
+  }
+
+  function quickTopics() {
+    const unit = els.unit?.value || "";
+    return topicsForUnit(unit)
+      .map((topic) => ({ topic, label: topicDisplayLabel(topic, unit), count: topicPoolCount(topic, "all", unit, "") }))
+      .filter((entry) => entry.count > 0);
+  }
+
+  function renderQuickStart() {
+    if (!els.quickGrid) return;
+    const key = `${course.id}|${activePathway()}|${els.unit?.value || ""}`;
+    if (key !== quickTopicsKey) {
+      quickTopicsKey = key;
+      const real = realExamShape();
+      const topics = quickTopics();
+      // Start on a topic with enough questions for a real test.
+      const firstFull = topics.find((entry) => entry.count >= 8) || topics[0];
+      els.quickGrid.innerHTML = `
+        <article class="exam-quick-card is-main">
+          <span class="exam-quick-icon" aria-hidden="true">A4</span>
+          <strong>Real exam mock</strong>
+          <p>${escapeHtml(real.label)}. Questions run from easier to harder.</p>
+          <button type="button" class="exam-quick-go" data-quick="real">Build my mock</button>
+        </article>
+        <article class="exam-quick-card">
+          <span class="exam-quick-icon" aria-hidden="true">30</span>
+          <strong>30-minute quiz</strong>
+          <p>About 25 marks from every topic. Good for a lesson or homework.</p>
+          <button type="button" class="exam-quick-go" data-quick="quiz">Build quiz</button>
+        </article>
+        <article class="exam-quick-card">
+          <span class="exam-quick-icon" aria-hidden="true">T</span>
+          <strong>Topic test</strong>
+          <label class="exam-quick-field"><span class="sr-only">Topic</span>
+            <select data-quick-topic>${topics.map((entry) => `<option value="${escapeHtml(entry.topic)}"${entry === firstFull ? " selected" : ""}>${escapeHtml(entry.label)} (${entry.count})</option>`).join("")}</select>
+          </label>
+          <button type="button" class="exam-quick-go" data-quick="topic"${topics.length ? "" : " disabled"}>Build topic test</button>
+        </article>
+        <article class="exam-quick-card">
+          <span class="exam-quick-icon" aria-hidden="true">&#10003;</span>
+          <strong>Fix my mistakes</strong>
+          <p>Your Mistake Box, weakest topics and questions you have not solved yet.</p>
+          <button type="button" class="exam-quick-go" data-quick="mistakes">Build my test</button>
+        </article>`;
+    }
+    renderQuickReady();
+  }
+
+  function renderQuickReady() {
+    const box = els.quickReady;
+    if (!box) return;
+    if (!state.ids.length || state.status !== "idle") {
+      box.hidden = true;
+      box.innerHTML = "";
+      return;
+    }
+    const items = state.ids.map(questionById).filter(Boolean);
+    const minutes = Math.round(Number(state.durationSeconds || 0) / 60);
+    const time = minutes >= 60 ? `${Math.floor(minutes / 60)} h${minutes % 60 ? ` ${minutes % 60} min` : ""}` : `${minutes} min`;
+    const code = displayTestCode();
+    box.hidden = false;
+    box.innerHTML = `
+      <div class="exam-quick-ready-text">
+        <span class="exam-quick-ready-tick" aria-hidden="true">&#10003;</span>
+        <div><strong>Your paper is ready</strong>
+        <span>${items.length} questions &middot; ${totalMarksForQuestions(items)} marks &middot; ${time}${code ? ` &middot; code ${escapeHtml(code)}` : ""}</span></div>
+      </div>
+      <div class="exam-quick-ready-actions">
+        <button type="button" class="exam-quick-dl" data-quick-act="download">Download PDF</button>
+        <button type="button" data-quick-act="download-solutions">Download with solutions</button>
+        <button type="button" data-quick-act="start">Start timed exam</button>
+        <a href="#examPaper">See the questions</a>
+      </div>`;
+  }
+
+  function quickBuildRandom(shape, topics = []) {
+    switchMode("random");
+    if (els.randomPreset) els.randomPreset.value = "";
+    if (els.bank) els.bank.value = "all";
+    if (els.part) els.part.value = "";
+    refreshTopicOptions();
+    setTopicMix(els.topicMix, topics);
+    updateTopicMixSummary(els.topicMix, els.topicMixSummary);
+    ensureOption(els.count, shape.count, `${shape.count} questions`);
+    if (els.targetMarks) els.targetMarks.value = String(shape.marks || 0);
+    ensureOption(els.duration, shape.minutes, `${shape.minutes} minutes`);
+    if (els.levelMix) els.levelMix.value = shape.levelMix || "natural";
+    if (els.order) els.order.value = "exam";
+    if (els.seed) els.seed.value = "";
+    if (els.unsolvedOnly) els.unsolvedOnly.checked = false;
+    if (els.avoidRepeats) els.avoidRepeats.checked = true;
+    if (buildRandomPaper({ startNow: false })) return true;
+    // Not enough fresh questions: allow ones from recent papers, then any level mix, rather than fail.
+    if (els.avoidRepeats) els.avoidRepeats.checked = false;
+    if (buildRandomPaper({ startNow: false })) return true;
+    if (els.levelMix) els.levelMix.value = "natural";
+    return buildRandomPaper({ startNow: false });
+  }
+
+  function quickBuild(kind) {
+    notice = "";
+    let built = false;
+    if (kind === "real") built = quickBuildRandom(realExamShape());
+    else if (kind === "quiz") built = quickBuildRandom({ count: 15, marks: 25, minutes: 30, levelMix: "balanced" });
+    else if (kind === "topic") {
+      const topic = els.quickGrid.querySelector("[data-quick-topic]")?.value || "";
+      const available = topicPoolCount(topic, "all", els.unit?.value || "", "");
+      if (topic && available) built = quickBuildRandom({ count: Math.min(15, available), marks: 0, minutes: "auto" }, [topic]);
+    } else if (kind === "mistakes") {
+      switchMode("smart");
+      if (els.smartBank) els.smartBank.value = "all";
+      if (els.smartProfile) els.smartProfile.value = "weakness";
+      [els.smartMistakes, els.smartWeakTopics, els.smartUnsolved].forEach((box) => { if (box) box.checked = true; });
+      setTopicMix(els.smartTopicMix, []);
+      for (const count of [15, 10]) {
+        ensureOption(els.smartCount, count, `${count} questions`);
+        if (buildSmartRevision()) { built = true; break; }
+      }
+    }
+    if (built) {
+      renderQuickReady();
+      els.quickReady?.scrollIntoView({ behavior: "smooth", block: "center" });
+      els.quickReady?.querySelector("[data-quick-act='download']")?.focus({ preventScroll: true });
+    } else {
+      els.result.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }
+
+  function prefetchPaperImages() {
+    if (!state.ids.length || !window.ElitePaperPrint?.prefetch) return;
+    window.ElitePaperPrint.prefetch(state.ids.map(questionById).filter(Boolean).map((question) => question.image).filter(Boolean));
+  }
+
   function render() {
+    renderQuickStart();
+    prefetchPaperImages();
     renderButtons();
     renderPlanSummary();
     renderResult();
@@ -2652,6 +2820,20 @@
   els.reset.addEventListener("click", resetExam);
   els.print.addEventListener("click", () => printCurrentPaper(els.print));
   els.printSolution?.addEventListener("click", () => printCurrentSolutions(els.printSolution));
+  els.download?.addEventListener("click", () => downloadCurrentPaper(els.download));
+  els.downloadSolution?.addEventListener("click", () => downloadCurrentSolutions(els.downloadSolution));
+  els.quickGrid?.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-quick]");
+    if (button && !button.disabled) quickBuild(button.dataset.quick);
+  });
+  els.quickReady?.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-quick-act]");
+    if (!button) return;
+    const act = button.dataset.quickAct;
+    if (act === "download") downloadCurrentPaper(button);
+    else if (act === "download-solutions") downloadCurrentSolutions(button);
+    else if (act === "start" && startCurrentPaper()) document.getElementById("examPaper")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
   els.randomPreset?.addEventListener("change", () => {
     applyPreset(els.randomPreset.value);
     refreshTopicOptions();

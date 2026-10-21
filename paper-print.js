@@ -19,7 +19,7 @@
 (function (root) {
   "use strict";
 
-  const VERSION = "20261018a";
+  const VERSION = "20261021a";
   const MM = 96 / 25.4;
   const SCRIPT_SRC = document.currentScript?.src || "";
   const assetUrl = (name) => new URL(`${name}?v=${VERSION}`, SCRIPT_SRC || document.baseURI).href;
@@ -27,7 +27,10 @@
   const STUDIO_CSS = assetUrl("paper-studio.css");
   const FONT_CSS = "https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap";
   const MATHJAX_URL = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js";
-  const IMAGE_TIMEOUT_MS = 15000;
+  const IMAGE_TIMEOUT_MS = 45000;
+  /* Slow connections: never give up while images are still arriving. The paper
+     fails only when no image has finished for this long (after one retry each). */
+  const IMAGE_STALL_MS = 30000;
   const FONT_TIMEOUT_MS = 5000;
   const MATH_TIMEOUT_MS = 25000;
   const SAFETY_PX = 2 * MM;
@@ -239,19 +242,63 @@
       img.addEventListener("error", failed);
       if (img.complete) loaded();
     });
-    if (img.decode) {
-      await requireWithin(img.decode(), IMAGE_TIMEOUT_MS, "A question image could not finish rendering. Please retry.");
+    // Loaded is enough to print; decode() can stall in a background tab, so wait for it briefly only.
+    if (img.decode) await Promise.race([img.decode().catch(() => {}), new Promise((resolve) => setTimeout(resolve, 4000))]);
+  }
+
+  function fetchImage(doc, src, retry) {
+    return new Promise((resolve, reject) => {
+      const img = doc.createElement("img");
+      img.decoding = "sync";
+      img.loading = "eager";
+      img.alt = "";
+      img.onload = () => (img.naturalWidth > 0 ? resolve(img) : reject(new Error("A question image is empty.")));
+      img.onerror = () => reject(new Error("A question image could not load. Check the connection and try again."));
+      img.src = retry ? `${src}${src.includes("?") ? "&" : "?"}retry=${Date.now()}` : src;
+    });
+  }
+
+  /* Loads every question image in parallel, reports progress, retries a failed
+     image once, and only gives up when loading has stalled. */
+  async function loadQuestionImages(doc, srcs, onProgress = () => {}) {
+    const total = srcs.filter(Boolean).length;
+    let done = 0;
+    let lastProgress = Date.now();
+    let stallTimer = 0;
+    onProgress(0, total);
+    const stalled = new Promise((_, reject) => {
+      const check = () => {
+        if (Date.now() - lastProgress > IMAGE_STALL_MS) reject(new Error("The question images stopped loading. Check the connection and try again."));
+        else stallTimer = setTimeout(check, 1000);
+      };
+      stallTimer = setTimeout(check, 1000);
+    });
+    const jobs = srcs.map(async (src) => {
+      if (!src) return null;
+      const img = await fetchImage(doc, src, false).catch(() => fetchImage(doc, src, true));
+      done += 1;
+      lastProgress = Date.now();
+      onProgress(done, total);
+      // A hidden tab may never finish decode(); the pixels are readable once loaded anyway.
+      if (img.decode) await Promise.race([img.decode().catch(() => {}), new Promise((resolve) => setTimeout(resolve, 4000))]);
+      return img;
+    });
+    try {
+      return await Promise.race([Promise.all(jobs), stalled]);
+    } finally {
+      clearTimeout(stallTimer);
     }
   }
 
-  async function loadFrameImage(doc, src) {
-    const img = doc.createElement("img");
-    img.decoding = "sync";
-    img.loading = "eager";
-    img.alt = "";
-    img.src = src;
-    await requireImage(img);
-    return img;
+  /* Warm the browser cache as soon as a paper exists, so the print window opens fast. */
+  const prefetched = new Set();
+  function prefetch(srcs = []) {
+    srcs.filter((src) => src && !prefetched.has(src)).forEach((src) => {
+      prefetched.add(src);
+      const img = new Image();
+      img.decoding = "async";
+      img.src = src;
+    });
   }
 
   /* Row-by-row ink count. Returns null when pixels cannot be read. */
@@ -681,7 +728,7 @@
     return problems;
   }
 
-  async function renderPaper(frame, spec, opts, isCurrent = () => true) {
+  async function renderPaper(frame, spec, opts, isCurrent = () => true, onProgress = () => {}) {
     const report = {
       pages: 0,
       blankPages: 0,
@@ -718,7 +765,10 @@
     /* Load every question image and read its pixels. */
     const contentWidth = measureEl.clientWidth;
     const segWidth = contentWidth - 2.5 * MM;
-    const loaded = await Promise.all(items.map((item) => (item.image ? loadFrameImage(doc, item.image) : Promise.resolve(null))));
+    const loaded = await loadQuestionImages(doc, items.map((item) => item.image || ""), (done, total) => {
+      if (total) onProgress(`Loading question images ${done}/${total}...`);
+    });
+    onProgress("Laying out A4 pages...");
     const widths = loaded.filter((img) => img?.naturalWidth).map((img) => img.naturalWidth).sort((a, b) => a - b);
     const refWidth = widths.length ? widths[Math.min(widths.length - 1, Math.floor(widths.length * 0.75))] : 1;
     items.forEach((item, index) => {
@@ -971,7 +1021,9 @@
     const token = ++studio.token;
     setBusy("Preparing A4 pages...");
     try {
-      const report = await renderPaper(studio.frame, studio.spec, { ...studio.opts }, () => token === studio.token);
+      const report = await renderPaper(studio.frame, studio.spec, { ...studio.opts }, () => token === studio.token, (message) => {
+        if (token === studio.token) setBusy(message);
+      });
       if (!report || token !== studio.token) return;
       root.ElitePaperPrint.lastReport = report;
       if (report.problems.includes("raw LaTeX") || report.problems.includes("maths error")) {
@@ -979,6 +1031,10 @@
         return;
       }
       setReady(report);
+      if (studio.autoDownload) {
+        studio.autoDownload = false;
+        downloadPdf();
+      }
     } catch (error) {
       if (token !== studio.token) return;
       console.error("[paper-print]", error);
@@ -1021,7 +1077,8 @@
     ["html2canvas", assetUrl("assets/vendor/html2canvas-1.4.1.min.js")],
     ["jspdf", assetUrl("assets/vendor/jspdf-2.5.1.umd.min.js")]
   ];
-  const PDF_RENDER_SCALE = 2.2; // about 210 dpi: sharp text, reasonable file size
+  const PDF_RENDER_SCALE = 2; // about 190 dpi: sharp printed text, small file
+  const PDF_JPEG_QUALITY = 0.82;
 
   function exportWait(promise, signal, message, ms = 30000) {
     return new Promise((resolve, reject) => {
@@ -1138,7 +1195,7 @@
           scrollY: 0
         }), job.signal, "This PDF page took too long to render. Please try a shorter test.", 60000);
         if (index > 0) pdf.addPage("a4", "portrait");
-        pdf.addImage(canvas.toDataURL("image/jpeg", 0.9), "JPEG", 0, 0, 210, 297, undefined, "FAST");
+        pdf.addImage(canvas.toDataURL("image/jpeg", PDF_JPEG_QUALITY), "JPEG", 0, 0, 210, 297, undefined, "FAST");
         canvas.width = 0;
         canvas.height = 0;
         await exportWait(new Promise(resolve => window.setTimeout(resolve, 0)), job.signal, "PDF export paused.");
@@ -1202,9 +1259,11 @@
       ...spec,
       fileName: spec.fileName || slug(["Elite", spec.courseCode, spec.title, spec.testCode].filter(Boolean).join(" ")) || "Elite-Mathematics-paper"
     };
-    studio.opts = { ...DEFAULT_OPTIONS, ...(studio.remembered || {}), ...options };
+    const { autoDownload: _auto, onClose: _onClose, ...chosen } = options;
+    studio.opts = { ...DEFAULT_OPTIONS, ...(studio.remembered || {}), ...chosen };
     if (spec.allowSolutions === false) studio.opts.version = "student";
     studio.onClose = options.onClose || spec.onClose || null;
+    studio.autoDownload = Boolean(options.autoDownload);
     studio.lastFocus = document.activeElement;
     studio.overlay.hidden = false;
     showHint(DEFAULT_HINT);
@@ -1236,6 +1295,7 @@
     open,
     close,
     renderPaper,
+    prefetch,
     buildPdfBlob: (onProgress) => buildPdfBlob(onProgress),
     lastPdf: null,
     isOpen: () => Boolean(studio.overlay && !studio.overlay.hidden),
