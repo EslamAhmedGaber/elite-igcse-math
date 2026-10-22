@@ -1,0 +1,173 @@
+{
+  "version": 1,
+  "pages": [
+    {
+      "course": "linear",
+      "type": "course",
+      "path": "/edexcel-igcse/maths/linear/",
+      "title": "Edexcel IGCSE Maths A Higher (4MA1) Notes, Topic Questions & Past Papers | Elite"
+    },
+    {
+      "course": "linear",
+      "type": "notes",
+      "path": "/edexcel-igcse/maths/linear/notes/",
+      "title": "Edexcel IGCSE Maths A Higher (4MA1) Revision Notes & PDFs | Elite"
+    },
+    {
+      "course": "linear",
+      "type": "past-papers",
+      "path": "/edexcel-igcse/maths/linear/past-papers/",
+      "title": "Edexcel IGCSE Maths A Higher (4MA1) Past Papers & Worked Solutions | Elite"
+    },
+    {
+      "course": "linear",
+      "type": "books",
+      "path": "/edexcel-igcse/maths/linear/books/",
+      "title": "Edexcel IGCSE Maths A Higher (4MA1) Classified Questions & Answer Books | Elite"
+    },
+    {
+      "course": "unit1",
+      "type": "course",
+      "path": "/edexcel-igcse/maths/modular/unit-1/",
+      "title": "Edexcel IGCSE Maths Modular Unit 1 (4WM1H) Notes, Topic Questions & Past Papers | Elite"
+    },
+    {
+      "course": "unit1",
+      "type": "notes",
+      "path": "/edexcel-igcse/maths/modular/unit-1/notes/",
+      "title": "Edexcel IGCSE Maths Modular Unit 1 (4WM1H) Revision Notes & PDFs | Elite"
+    },
+    {
+      "course": "unit1",
+      "type": "past-papers",
+      "path": "/edexcel-igcse/maths/modular/unit-1/past-papers/",
+      "title": "Edexcel IGCSE Maths Modular Unit 1 (4WM1H) Past Papers & Worked Solutions | Elite"
+    },
+    {
+      "course": "unit1",
+      "type": "books",
+      "path": "/edexcel-igcse/maths/modular/unit-1/books/",
+      "title": "Edexcel IGCSE Maths Modular Unit 1 (4WM1H) Classified Questions & Answer Books | Elite"
+    },
+    {
+      "course": "unit2",
+      "type": "course",
+      "path": "/edexcel-igcse/maths/modular/unit-2/",
+      "title": "Edexcel IGCSE Maths Modular Unit 2 (4WM2H) Notes, Topic Questions & Past Papers | Elite"
+    },
+    {
+      "course": "unit2",
+      "type": "notes",
+      "path": "/edexcel-igcse/maths/modular/unit-2/notes/",
+      "title": "Edexcel IGCSE Maths Modular Unit 2 (4WM2H) Revision Notes & PDFs | Elite"
+    },
+    {
+      "course": "unit2",
+      "type": "past-papers",
+      "path": "/edexcel-igcse/maths/modular/unit-2/past-papers/",
+      "title": "Edexcel IGCSE Maths Modular Unit 2 (4WM2H) Past Papers & Worked Solutions | Elite"
+    },
+    {
+      "course": "unit2",
+      "type": "books",
+      "path": "/edexcel-igcse/maths/modular/unit-2/books/",
+      "title": "Edexcel IGCSE Maths Modular Unit 2 (4WM2H) Classified Questions & Answer Books | Elite"
+    },
+    {
+      "course": "wma11",
+      "type": "course",
+      "path": "/edexcel-ial/pure-1/",
+      "title": "Edexcel IAL Pure 1 (WMA11) Notes, Topic Questions & Past Papers | Elite"
+    },
+    {
+      "course": "wma11",
+      "type": "notes",
+      "path": "/edexcel-ial/pure-1/notes/",
+      "title": "Edexcel IAL Pure 1 (WMA11) Revision Notes & PDFs | Elite"
+    },
+    {
+      "course": "wma11",
+      "type": "past-papers",
+      "path": "/edexcel-ial/pure-1/past-papers/",
+      "title": "Edexcel IAL Pure 1 (WMA11) Past Papers & Worked Solutions | Elite"
+    },
+    {
+      "course": "wma11",
+      "type": "books",
+      "path": "/edexcel-ial/pure-1/books/",
+      "title": "Edexcel IAL Pure 1 (WMA11) Classified Questions & Answer Books | Elite"
+    },
+    {
+      "course": "wma12",
+      "type": "course",
+      "path": "/edexcel-ial/pure-2/",
+      "title": "Edexcel IAL Pure 2 (WMA12) Notes, Topic Questions & Past Papers | Elite"
+    },
+    {
+      "course": "wma12",
+      "type": "notes",
+      "path": "/edexcel-ial/pure-2/notes/",
+      "title": "Edexcel IAL Pure 2 (WMA12) Revision Notes & PDFs | Elite"
+    },
+    {
+      "course": "wma12",
+      "type": "past-papers",
+      "path": "/edexcel-ial/pure-2/past-papers/",
+      "title": "Edexcel IAL Pure 2 (WMA12) Past Papers & Worked Solutions | Elite"
+    },
+    {
+      "course": "wma12",
+      "type": "books",
+      "path": "/edexcel-ial/pure-2/books/",
+      "title": "Edexcel IAL Pure 2 (WMA12) Classified Questions & Answer Books | Elite"
+    },
+    {
+      "course": "wma13",
+      "type": "course",
+      "path": "/edexcel-ial/pure-3/",
+      "title": "Edexcel IAL Pure 3 (WMA13) Notes, Topic Questions & Past Papers | Elite"
+    },
+    {
+      "course": "wma13",
+      "type": "notes",
+      "path": "/edexcel-ial/pure-3/notes/",
+      "title": "Edexcel IAL Pure 3 (WMA13) Revision Notes & PDFs | Elite"
+    },
+    {
+      "course": "wma13",
+      "type": "past-papers",
+      "path": "/edexcel-ial/pure-3/past-papers/",
+      "title": "Edexcel IAL Pure 3 (WMA13) Past Papers & Worked Solutions | Elite"
+    },
+    {
+      "course": "wma13",
+      "type": "books",
+      "path": "/edexcel-ial/pure-3/books/",
+      "title": "Edexcel IAL Pure 3 (WMA13) Classified Questions & Answer Books | Elite"
+    },
+    {
+      "course": "wme01",
+      "type": "course",
+      "path": "/edexcel-ial/mechanics-1/",
+      "title": "Edexcel IAL Mechanics 1 (WME01) Notes, Topic Questions & Past Papers | Elite"
+    },
+    {
+      "course": "wme01",
+      "type": "notes",
+      "path": "/edexcel-ial/mechanics-1/notes/",
+      "title": "Edexcel IAL Mechanics 1 (WME01) Revision Notes & PDFs | Elite"
+    },
+    {
+      "course": "wme01",
+      "type": "past-papers",
+      "path": "/edexcel-ial/mechanics-1/past-papers/",
+      "title": "Edexcel IAL Mechanics 1 (WME01) Past Papers & Worked Solutions | Elite"
+    },
+    {
+      "course": "wme01",
+      "type": "books",
+      "path": "/edexcel-ial/mechanics-1/books/",
+      "title": "Edexcel IAL Mechanics 1 (WME01) Classified Questions & Answer Books | Elite"
+    }
+  ]
+}
