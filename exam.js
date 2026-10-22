@@ -396,6 +396,13 @@
     download: document.getElementById("downloadExamBtn"),
     downloadSolution: document.getElementById("downloadSolutionBtn"),
     quickGrid: document.querySelector("[data-quick-grid]"),
+    downloadKey: document.getElementById("downloadKeyBtn"),
+    versionB: document.getElementById("versionBBtn"),
+    share: document.getElementById("shareExamBtn"),
+    moreToggle: document.querySelector("[data-exam-more-toggle]"),
+    moreMenu: document.getElementById("examMoreMenu"),
+    liveBar: document.getElementById("examLiveBar"),
+    history: document.getElementById("examHistory"),
     quickReady: document.querySelector("[data-quick-ready]"),
     printSolution: document.getElementById("printSolutionBtn"),
     timer: document.getElementById("examTimer"),
@@ -1247,11 +1254,10 @@
     els.timer.textContent = formatTime(remaining);
     if (state.status === "running") {
       els.timerLabel.textContent = remaining <= 0 ? "Time is up" : "Exam running";
+      updateLiveClock();
       if (remaining <= 0) {
-        state.status = "marking";
-        state.finishedAt = Date.now();
-        saveState();
-        render();
+        notice = "Time is up. Your answers are kept: now mark your paper with the worked solutions.";
+        finishExam();
       }
     } else if (state.status === "marking") {
       els.timerLabel.textContent = "Mark your paper";
@@ -1741,7 +1747,8 @@
       ids: state.ids,
       score,
       total,
-      percent: total ? Math.round((score / total) * 100) : 0
+      percent: total ? Math.round((score / total) * 100) : 0,
+      minutes: state.startedAt && state.finishedAt ? Math.round((state.finishedAt - state.startedAt) / 60000) : null
     });
     writeJson(HISTORY_KEY, history.slice(0, 12));
   }
@@ -1954,7 +1961,9 @@
       const solutionHtml = formatStructuredSolution(solution, solutionOptions);
       const savedScore = state.scores?.[id] ?? "";
       const level = questionLevel(question);
-      return `<article class="exam-question" data-id="${escapeHtml(id)}">
+      const sitState = state.answers?.[id] || {};
+      const articleClass = ["exam-question", sitState.flag ? "is-flagged" : "", sitState.done ? "is-done" : ""].filter(Boolean).join(" ");
+      return `<article class="${articleClass}" data-id="${escapeHtml(id)}">
         <div class="print-paper-brand">
           <div class="print-brand-lockup">
             <span class="print-brand-mark">E</span>
@@ -1978,9 +1987,11 @@
           ${canMark
             ? `<label>Score <input data-score-id="${escapeHtml(id)}" type="number" min="0" max="${question.marks}" value="${savedScore}"> / ${question.marks}</label>`
             : state.status === "running"
-              ? `<span>Answers stay private during the exam</span>`
+              ? `<span class="exam-private-note">Solutions stay hidden until you finish</span>`
               : `<button type="button" class="exam-swap-button" data-swap-id="${escapeHtml(id)}" aria-label="Swap question ${index + 1} for another with the same topic and level">Swap question</button>`}
         </footer>
+        ${state.status === "running" ? sitControlsHtml(id) : ""}
+        ${canMark ? markControlsHtml(id, question, solution) : ""}
         ${canMark && hasSolution ? `<details class="exam-solution"><summary>Show worked solution</summary>${solutionHtml}</details>` : ""}
         <div class="print-paper-footer">Question ${index + 1} | eliteigcse.com | Dr Eslam Ahmed | +20 112 000 9622</div>
       </article>`;
@@ -1995,6 +2006,12 @@
     const primary = primaryActionState();
     els.finish.disabled = state.status !== "running";
     els.save.disabled = state.status !== "marking" && state.status !== "complete";
+    // Show only the buttons that make sense right now.
+    els.finish.hidden = state.status !== "running";
+    els.save.hidden = state.status !== "marking" && state.status !== "complete";
+    if (els.downloadKey) els.downloadKey.disabled = !canPrint;
+    if (els.versionB) els.versionB.disabled = !state.ids.length || state.status === "running";
+    if (els.share) els.share.disabled = !state.ids.length;
     els.print.disabled = !canPrint;
     if (els.printSolution) els.printSolution.disabled = !canPrint;
     if (els.download) els.download.disabled = !canPrint;
@@ -2651,6 +2668,283 @@
     }
   }
 
+  /* ---------------------------------------------------------------- sitting the exam
+     A sticky bar keeps the timer, progress and Finish in view. Each question gets an
+     optional final-answer box, a Done tick and a Flag. When marking, the student's
+     answer sits beside the correct final answer with one-tap Full / 0 buttons. */
+  let finishArmedUntil = 0;
+
+  function answerFor(id) {
+    if (!state.answers) state.answers = {};
+    if (!state.answers[id]) state.answers[id] = { text: "", done: false, flag: false };
+    return state.answers[id];
+  }
+
+  function isAnswered(id) {
+    const entry = state.answers?.[id];
+    return Boolean(entry && (entry.done || String(entry.text || "").trim()));
+  }
+
+  function markedCount() {
+    return [...els.paper.querySelectorAll("[data-score-id]")].filter((input) => input.value !== "").length;
+  }
+
+  function renderLiveBar() {
+    const bar = els.liveBar;
+    if (!bar) return;
+    const running = state.status === "running";
+    const marking = state.status === "marking";
+    // body has overflow-x: hidden site-wide, which stops position: sticky; the class swaps it for clip.
+    document.body.classList.toggle("exam-sitting", Boolean(state.ids.length && (running || marking)));
+    if (!state.ids.length || (!running && !marking)) {
+      bar.hidden = true;
+      bar.innerHTML = "";
+      return;
+    }
+    const total = state.ids.length;
+    const done = state.ids.filter(isAnswered).length;
+    const flagged = state.ids.filter((id) => state.answers?.[id]?.flag).length;
+    const chips = state.ids.map((id, index) => {
+      const entry = state.answers?.[id] || {};
+      const classes = [isAnswered(id) ? "is-done" : "", entry.flag ? "is-flag" : ""].filter(Boolean).join(" ");
+      const status = [entry.flag ? "flagged" : "", isAnswered(id) ? "done" : ""].filter(Boolean).join(", ");
+      return `<button type="button" class="exam-nav-chip ${classes}" data-jump="${escapeHtml(id)}" aria-label="Question ${index + 1}${status ? `, ${status}` : ""}">${index + 1}</button>`;
+    }).join("");
+    bar.hidden = false;
+    bar.innerHTML = `
+      <div class="exam-live-main">
+        ${running
+          ? `<div class="exam-live-clock" data-live-clock><b data-live-time>${formatTime(remainingSeconds())}</b><span>left</span></div>`
+          : `<div class="exam-live-clock is-marking"><b>${achievedMarks()}/${totalMarks()}</b><span>marks so far</span></div>`}
+        <div class="exam-live-count">${running
+          ? `<strong>${done}/${total}</strong> done${flagged ? ` &middot; <strong>${flagged}</strong> flagged` : ""}`
+          : `Marking: <strong>${markedCount()}/${total}</strong> questions`}</div>
+        ${running
+          ? `<button type="button" class="exam-live-action" data-live-finish>Finish exam</button>`
+          : `<button type="button" class="exam-live-action" data-live-save>Save marks</button>`}
+      </div>
+      <nav class="exam-nav" aria-label="Jump to a question">${chips}</nav>`;
+    updateLiveClock();
+    placeLiveBar();
+  }
+
+  // Sit just under the sticky site header, whose height changes when the page scrolls.
+  function placeLiveBar() {
+    if (!els.liveBar || els.liveBar.hidden) return;
+    const header = document.querySelector(".site-header");
+    const sticky = header && getComputedStyle(header).position === "sticky";
+    els.liveBar.style.top = `${sticky ? Math.round(header.getBoundingClientRect().height) + 8 : 8}px`;
+  }
+
+  function updateLiveClock() {
+    const clock = els.liveBar?.querySelector("[data-live-clock]");
+    if (!clock || state.status !== "running") return;
+    const left = remainingSeconds();
+    clock.querySelector("[data-live-time]").textContent = formatTime(left);
+    clock.classList.toggle("is-warn", left <= 600 && left > 300);
+    clock.classList.toggle("is-danger", left <= 300);
+  }
+
+  function sitControlsHtml(id) {
+    const answer = state.answers?.[id] || {};
+    return `<div class="exam-sit">
+      <label class="exam-sit-answer"><span>Final answer <small>(optional)</small></span>
+        <input type="text" data-answer-id="${escapeHtml(id)}" value="${escapeHtml(answer.text || "")}" autocomplete="off" spellcheck="false" placeholder="Type your final answer">
+      </label>
+      <button type="button" class="exam-sit-toggle${answer.done ? " is-on" : ""}" data-done-id="${escapeHtml(id)}" aria-pressed="${answer.done ? "true" : "false"}">&#10003; Done</button>
+      <button type="button" class="exam-sit-toggle is-flag${answer.flag ? " is-on" : ""}" data-flag-id="${escapeHtml(id)}" aria-pressed="${answer.flag ? "true" : "false"}">&#9873; Flag</button>
+    </div>`;
+  }
+
+  function markControlsHtml(id, question, solution) {
+    const typed = String(state.answers?.[id]?.text || "").trim();
+    const final = String(solution?.finalAnswer || "").trim();
+    const marks = Number(question.marks || 0);
+    return `<div class="exam-mark">
+      <div class="exam-mark-answers">
+        ${typed ? `<p class="exam-mark-yours"><span>Your answer</span>${escapeHtml(typed)}</p>` : ""}
+        ${final ? `<div class="exam-mark-final"><span>Correct final answer</span><div>${formatSolutionText(final)}</div></div>` : `<p class="exam-mark-none">Use the worked solution below to mark this one.</p>`}
+      </div>
+      ${state.status === "marking" ? `<div class="exam-mark-quick" role="group" aria-label="Quick marks">
+        <button type="button" data-mark-id="${escapeHtml(id)}" data-mark-value="${marks}">Full (${marks})</button>
+        <button type="button" data-mark-id="${escapeHtml(id)}" data-mark-value="0">0</button>
+      </div>` : ""}
+    </div>`;
+  }
+
+  function toggleSit(id, field) {
+    const entry = answerFor(id);
+    entry[field] = !entry[field];
+    saveState();
+    const button = els.paper.querySelector(`[data-${field}-id="${CSS.escape(id)}"]`);
+    button?.classList.toggle("is-on", entry[field]);
+    button?.setAttribute("aria-pressed", entry[field] ? "true" : "false");
+    els.paper.querySelector(`.exam-question[data-id="${CSS.escape(id)}"]`)?.classList.toggle(field === "flag" ? "is-flagged" : "is-done", entry[field]);
+    renderLiveBar();
+  }
+
+  function liveFinish(button) {
+    // Two taps to finish, so a stray tap never ends the exam.
+    if (Date.now() > finishArmedUntil) {
+      finishArmedUntil = Date.now() + 4000;
+      const left = state.ids.length - state.ids.filter(isAnswered).length;
+      button.textContent = left ? `Finish with ${left} not done? Tap again` : "Tap again to finish";
+      button.classList.add("is-armed");
+      setTimeout(() => { if (button.isConnected) { button.textContent = "Finish exam"; button.classList.remove("is-armed"); } }, 4000);
+      return;
+    }
+    finishArmedUntil = 0;
+    finishExam();
+  }
+
+  /* ---------------------------------------------------------------- history */
+  function renderHistory() {
+    const box = els.history;
+    if (!box) return;
+    const rows = readJson(HISTORY_KEY, []).slice(0, 12);
+    if (!rows.length || state.status === "running") {
+      box.hidden = true;
+      box.innerHTML = "";
+      return;
+    }
+    const points = rows.slice().reverse();
+    const w = 560;
+    const h = 130;
+    const pad = 34;
+    const step = points.length > 1 ? (w - 2 * pad) / (points.length - 1) : 0;
+    const xy = points.map((row, i) => [pad + i * step, h - pad - (Math.max(0, Math.min(100, Number(row.percent || 0))) / 100) * (h - 2 * pad)]);
+    const path = xy.map(([x, y], i) => `${i ? "L" : "M"}${x.toFixed(1)} ${y.toFixed(1)}`).join(" ");
+    const grid = [25, 50, 75].map((p) => {
+      const y = (h - pad - (p / 100) * (h - 2 * pad)).toFixed(1);
+      return `<line x1="${pad}" x2="${w - pad}" y1="${y}" y2="${y}"/><text x="2" y="${Number(y) + 4}">${p}%</text>`;
+    }).join("");
+    const chart = points.length > 1 ? `<svg class="exam-history-chart" viewBox="0 0 ${w} ${h}" role="img" aria-label="Score trend over your last ${points.length} papers">
+        <g class="grid">${grid}</g>
+        <path d="${path}"/>
+        ${xy.map(([x, y], i) => `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4"><title>${escapeHtml(String(points[i].percent))}%</title></circle>`).join("")}
+      </svg>` : "";
+    const best = Math.max(...rows.map((row) => Number(row.percent || 0)));
+    box.hidden = false;
+    box.innerHTML = `
+      <div class="exam-history-head">
+        <div><h2>My exam history</h2><p>Your last ${rows.length === 1 ? "marked paper" : `${rows.length} marked papers`} in ${escapeHtml(course.label || "this course")}. Best: ${best}%.</p></div>
+      </div>
+      ${chart}
+      <ol class="exam-history-list">${rows.map((row) => {
+        const grade = gradeGuide(Number(row.score || 0), Number(row.total || 0));
+        const when = row.date ? new Date(row.date).toLocaleDateString("en-GB", { day: "numeric", month: "short" }) : "";
+        return `<li><span class="when">${escapeHtml(when)}</span><strong>${escapeHtml(row.title || (row.kind === "revision-book" ? "Revision book" : "Mock"))}</strong><span class="score">${Number(row.score || 0)}/${Number(row.total || 0)}</span><b>${Number(row.percent || 0)}%</b>${grade ? `<em>${escapeHtml(grade.grade)}</em>` : ""}</li>`;
+      }).join("")}</ol>`;
+  }
+
+  /* ---------------------------------------------------------------- teacher tools */
+  // Version B: same topics and marks, every question different (no copying between rows).
+  function makeVersionB() {
+    if (!state.ids.length || state.status === "running") return;
+    const config = state.buildConfig || {};
+    const used = sourceSet(state.ids);
+    const pool = uniqueBySource(eligiblePool({
+      bank: config.bank || state.bank || "all",
+      part: config.part || "",
+      unit: config.unit || state.unit || "",
+      topics: []
+    })).filter((question) => !used.has(sourceKey(question)));
+    const taken = new Set();
+    const picked = [];
+    for (const id of state.ids) {
+      const current = questionById(id);
+      if (!current) continue;
+      const tiers = [
+        (q) => q.topic === current.topic && Number(q.marks) === Number(current.marks),
+        (q) => q.topic === current.topic && questionLevel(q) === questionLevel(current),
+        (q) => q.topic === current.topic,
+        (q) => questionLevel(q) === questionLevel(current)
+      ];
+      let next = null;
+      for (const test of tiers) {
+        const options = pool.filter((q) => !taken.has(sourceKey(q)) && test(q));
+        if (options.length) { next = options[Math.floor(Math.random() * options.length)]; break; }
+      }
+      if (!next) {
+        notice = `Version B needs another question like Question ${picked.length + 1}, but none is left under these filters.`;
+        renderResult();
+        return;
+      }
+      taken.add(sourceKey(next));
+      picked.push(next.id);
+    }
+    const original = displayTestCode();
+    const title = `${String(state.title || paperKindLabel()).replace(/ \(Version B\)$/, "")} (Version B)`;
+    createPaper(picked, {
+      kind: state.kind === "custom" ? "custom" : state.kind || "random",
+      bank: state.bank,
+      unit: state.unit,
+      durationMinutes: Number(state.durationSeconds || 0) / 60,
+      title,
+      buildConfig: state.buildConfig
+    });
+    notice = `Version B is ready: same topics and marks as ${original}, every question different.`;
+    render();
+    els.quickReady?.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  // One compact PDF of final answers, numbered like the paper, for quick marking.
+  async function downloadAnswerKey(trigger = els.downloadKey) {
+    if (!ensurePaperForCurrentMode() || !state.ids.length || !window.ElitePaperPrint?.open) return;
+    try {
+      await ensureExamSolutions(trigger);
+    } catch (error) {
+      console.error("[exam-solutions]", error);
+      els.result.innerHTML = `<strong>The answer key could not load.</strong><p>Check the connection, then try again.</p>`;
+      return;
+    }
+    const spec = paperSpec();
+    window.ElitePaperPrint.open({
+      ...spec,
+      title: `${spec.title} · Answer key`,
+      copyLabel: "Answer key",
+      instructions: "Final answers for quick marking, numbered like the paper. Use the worked solutions for method marks.",
+      fileSuffix: "",
+      durationMinutes: 0,
+      allowSolutions: false,
+      resolveSolutions: null,
+      questions: spec.questions.map((question) => {
+        const final = String(solutions[question.id]?.finalAnswer || "").trim();
+        return { ...question, image: "", options: [], solution: null, text: final || "No single final answer: see the worked solution." };
+      })
+    }, { version: "student", layout: "compact", autoDownload: true });
+  }
+
+  function shareOnWhatsApp() {
+    if (!state.ids.length) return;
+    const items = state.ids.map(questionById).filter(Boolean);
+    const minutes = Math.round(Number(state.durationSeconds || 0) / 60);
+    const text = `${courseLabelForPrint()}: ${state.title || paperKindLabel()} (${items.length} questions, ${totalMarksForQuestions(items)} marks, ${minutes} minutes). Test code ${displayTestCode()}.\nOpen it here: ${paperLink()}`;
+    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+  }
+
+  // Tap a question to read it full screen (pinch to zoom on phones).
+  function openQuestionViewer(img) {
+    const overlay = document.createElement("div");
+    overlay.className = "exam-viewer";
+    overlay.setAttribute("role", "dialog");
+    overlay.setAttribute("aria-modal", "true");
+    overlay.setAttribute("aria-label", img.alt || "Question");
+    overlay.innerHTML = `<button type="button" class="exam-viewer-close" aria-label="Close">&times;</button><img src="${escapeHtml(img.dataset.fullSrc || img.getAttribute("src"))}" alt="${escapeHtml(img.alt || "")}">`;
+    const close = () => { overlay.remove(); document.removeEventListener("keydown", onKey); img.focus?.(); };
+    const onKey = (event) => { if (event.key === "Escape") close(); };
+    overlay.addEventListener("click", (event) => { if (event.target === overlay || event.target.closest(".exam-viewer-close")) close(); });
+    document.addEventListener("keydown", onKey);
+    document.body.appendChild(overlay);
+    overlay.querySelector(".exam-viewer-close").focus();
+  }
+
+  function closeMoreMenu() {
+    if (!els.moreMenu || els.moreMenu.hidden) return;
+    els.moreMenu.hidden = true;
+    els.moreToggle?.setAttribute("aria-expanded", "false");
+  }
+
   /* Rough guide only: Edexcel boundaries move every series. Minimum percent of the paper's marks. */
   const GRADE_GUIDE = {
     igcse: [["9", 75], ["8", 65], ["7", 55], ["6", 45], ["5", 36], ["4", 27], ["3", 17]],
@@ -2837,6 +3131,8 @@
   }
 
   function render() {
+    renderLiveBar();
+    renderHistory();
     renderQuickStart();
     prefetchPaperImages();
     renderButtons();
@@ -2973,6 +3269,49 @@
   els.paper.addEventListener("click", (event) => {
     const swap = event.target.closest("[data-swap-id]");
     if (swap) swapQuestion(swap.dataset.swapId);
+    const done = event.target.closest("[data-done-id]");
+    if (done) toggleSit(done.dataset.doneId, "done");
+    const flag = event.target.closest("[data-flag-id]");
+    if (flag) toggleSit(flag.dataset.flagId, "flag");
+    const questionImage = event.target.closest(".exam-question > img");
+    if (questionImage) openQuestionViewer(questionImage);
+    const quick = event.target.closest("[data-mark-id]");
+    if (quick) {
+      const input = els.paper.querySelector(`[data-score-id="${CSS.escape(quick.dataset.markId)}"]`);
+      if (input) {
+        input.value = quick.dataset.markValue;
+        input.dispatchEvent(new Event("input", { bubbles: true }));
+      }
+    }
+  });
+  els.liveBar?.addEventListener("click", (event) => {
+    const jump = event.target.closest("[data-jump]");
+    if (jump) {
+      const target = els.paper.querySelector(`.exam-question[data-id="${CSS.escape(jump.dataset.jump)}"]`);
+      target?.scrollIntoView({ behavior: "smooth", block: "start" });
+      target?.querySelector("[data-answer-id], [data-score-id]")?.focus({ preventScroll: true });
+    }
+    const finish = event.target.closest("[data-live-finish]");
+    if (finish) liveFinish(finish);
+    if (event.target.closest("[data-live-save]")) saveMarks();
+  });
+  els.downloadKey?.addEventListener("click", () => { closeMoreMenu(); downloadAnswerKey(els.downloadKey); });
+  els.versionB?.addEventListener("click", makeVersionB);
+  window.addEventListener("scroll", placeLiveBar, { passive: true });
+  window.addEventListener("resize", placeLiveBar);
+  els.share?.addEventListener("click", shareOnWhatsApp);
+  els.moreToggle?.addEventListener("click", () => {
+    const open = els.moreMenu.hidden;
+    els.moreMenu.hidden = !open;
+    els.moreToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    if (open) els.moreMenu.querySelector("button:not([disabled])")?.focus();
+  });
+  els.moreMenu?.addEventListener("click", (event) => { if (event.target.closest("button")) closeMoreMenu(); });
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest("[data-exam-more]")) closeMoreMenu();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && els.moreMenu && !els.moreMenu.hidden) { closeMoreMenu(); els.moreToggle?.focus(); }
   });
   els.result.addEventListener("click", (event) => {
     const link = event.target.closest("[data-copy-link]");
@@ -2995,10 +3334,17 @@
     openPrintStudio("student");
   });
   els.paper.addEventListener("input", (event) => {
+    if (event.target.matches("[data-answer-id]")) {
+      answerFor(event.target.dataset.answerId).text = event.target.value.slice(0, 200);
+      saveState();
+      renderLiveBar();
+      return;
+    }
     if (!event.target.matches("[data-score-id]")) return;
     readScoreInputs();
     saveState();
     renderResult();
+    renderLiveBar();
   });
   els.duration.addEventListener("change", () => {
     if (state.status === "idle" && !state.ids.length) updateTimer();

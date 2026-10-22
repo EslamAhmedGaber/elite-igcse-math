@@ -19,7 +19,7 @@
 (function (root) {
   "use strict";
 
-  const VERSION = "20261021a";
+  const VERSION = "20261022a";
   const MM = 96 / 25.4;
   const SCRIPT_SRC = document.currentScript?.src || "";
   const assetUrl = (name) => new URL(`${name}?v=${VERSION}`, SCRIPT_SRC || document.baseURI).href;
@@ -118,14 +118,16 @@
 
   /* ---------------------------------------------------------- the document */
 
-  function copyLabel(opts) {
+  // A spec may name its own copy (e.g. "Answer key"); otherwise student or solutions copy.
+  function copyLabel(opts, spec = {}) {
+    if (spec.copyLabel) return spec.copyLabel;
     return opts.version === "solutions" ? "With worked solutions" : "Student copy";
   }
 
   function mastheadHtml(spec, opts) {
     const totalMarks = spec.questions.reduce((sum, item) => sum + Number(item.marks || 0), 0);
     const solutionsCopy = opts.version === "solutions";
-    const instructions = solutionsCopy
+    const instructions = spec.instructions ? spec.instructions : solutionsCopy
       ? opts.placement === "inline"
         ? "Each worked solution follows its question. Question numbers, marks and order match the student copy exactly."
         : "The questions match the student copy page for page. Worked solutions follow in a separate section, numbered to match."
@@ -139,7 +141,7 @@
           <span class="brand-by">Dr Eslam Ahmed</span>
         </div>
         <div class="brand-side">
-          <span class="copy-badge${solutionsCopy ? " is-solutions" : ""}">${escapeHtml(copyLabel(opts))}</span>
+          <span class="copy-badge${solutionsCopy ? " is-solutions" : ""}">${escapeHtml(copyLabel(opts, spec))}</span>
           <span class="brand-url">eliteigcse.com</span>
         </div>
       </div>
@@ -688,7 +690,7 @@
       this.sheets.forEach((page, index) => {
         page.sheet.dataset.page = String(index + 1);
         page.sheet.querySelector(".foot-page").textContent = `Page ${index + 1} of ${total}`;
-        page.sheet.querySelector(".foot-mid").textContent = page.section === "solutions" ? "Worked solutions" : copyLabel(this.opts);
+        page.sheet.querySelector(".foot-mid").textContent = page.section === "solutions" ? "Worked solutions" : copyLabel(this.opts, this.spec);
         if (!page.body.children.length) this.report.blankPages += 1;
         if (page.body.scrollHeight > page.body.clientHeight + 1) this.report.overflowPages.push(index + 1);
       });
@@ -1063,7 +1065,7 @@
       rerender();
       return;
     }
-    const title = fileNameFor(studio.spec.fileName || "Elite-Mathematics-paper", studio.opts);
+    const title = fileNameFor(studio.spec.fileName || "Elite-Mathematics-paper", studio.opts, studio.spec);
     root.ElitePaperPrint.lastPrint = { kind, at: Date.now(), options: { ...studio.opts }, method: "frame" };
     printInFrame(title);
     studio.overlay.querySelector(`[data-act="${kind}"]`)?.focus();
@@ -1216,7 +1218,7 @@
     const token = studio.token;
     const button = studio.overlay.querySelector('[data-act="download"]');
     const label = button.textContent;
-    const name = `${fileNameFor(studio.spec.fileName || "Elite-Mathematics-paper", studio.opts)}.pdf`;
+    const name = `${fileNameFor(studio.spec.fileName || "Elite-Mathematics-paper", studio.opts, studio.spec)}.pdf`;
     button.disabled = true;
     root.ElitePaperPrint.lastPrint = { kind: "download", at: Date.now(), options: { ...studio.opts }, method: "pdf" };
     try {
@@ -1247,7 +1249,8 @@
     if (hint) hint.textContent = message;
   }
 
-  function fileNameFor(base, opts) {
+  function fileNameFor(base, opts, spec = {}) {
+    if (spec.fileSuffix !== undefined) return `${base}${spec.fileSuffix}`;
     return `${base}${opts.version === "solutions" ? "-Solutions" : "-Student"}`;
   }
 

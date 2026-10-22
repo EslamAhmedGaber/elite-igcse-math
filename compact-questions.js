@@ -5,7 +5,7 @@
   // card. In the browser this trims the margins and footer and shortens long blank stretches. The
   // image files are untouched, so printed worksheets and the full-size zoom keep the original page.
 
-  const SELECTOR = ".question-card .thumb img, img.ial-question-image, .e27-dq-img img";
+  const SELECTOR = ".question-card .thumb img, img.ial-question-image, .e27-dq-img img, .exam-question > img";
   const MIN_RUN = 56; // blank rows longer than this (in image pixels) are shortened...
   const KEEP = 26; // ...to this many rows
   const MIN_COL_RUN = 90; // empty columns wider than this...
