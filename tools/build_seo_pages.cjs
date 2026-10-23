@@ -79,8 +79,7 @@ function overview(course,c,group,topicPages=[]){
   const list=topics(c);
   const topicLinks=`<ul class="resource-topic-grid">${list.filter(t=>t.href).map(t=>{const page=topicPageFor(course,t,topicPages);return `<li><a href="${page?page.path:`${r.path}notes/#${anchor(t.num)}`}">${esc(t.title)}</a>${page?` <small>${page.questions} questions</small>`:''}</li>`;}).join('')}</ul>`;
   const desc=course.id==='linear'?'Edexcel International GCSE Mathematics A Higher (4MA1), often called O Level Maths. The Linear route brings the six topic chapters together for whole-course revision.':course.unit?`Higher-tier resources for ${course.name} (${r.code}). The notes share the relevant Linear topics, selected here for this unit.`:`${course.blurb} (${course.code}). Use the topic notes alongside classified practice, then test your understanding with the available papers and worked solutions.`;
-  const guide=course.family==='IAL'?['/ar/ial-maths-units/','دليل بالعربي: ترتيب Pure 1 و Pure 2 و Mechanics 1']:['/ar/linear-vs-modular/','دليل بالعربي: الفرق بين Linear و Modular'];
-  return section('Choose a resource',`<div class="resource-grid">${cards.join('')}</div><a class="resource-guide-link" href="${guide[0]}" lang="ar" dir="rtl">${guide[1]}</a>`)+section('Course topics',`<p>${esc(desc)}</p>${topicLinks}`);
+  return section('Choose a resource',`<div class="resource-grid">${cards.join('')}</div>`)+section('Course topics',`<p>${esc(desc)}</p>${topicLinks}`);
 }
 function documentFor(course,c,group,type,topicPages=[]){
   const r=seo.routes[course.id],m=seo.metadata(course.id,type),suffix=type?seo.types[type].label:'Maths Resources';
@@ -98,7 +97,7 @@ function documentFor(course,c,group,type,topicPages=[]){
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(m.title)}</title><meta name="description" content="${esc(m.description)}"><link rel="canonical" href="${m.canonical}">
 <meta property="og:type" content="website"><meta property="og:title" content="${esc(m.title)}"><meta property="og:description" content="${esc(m.description)}"><meta property="og:url" content="${m.canonical}"><meta property="og:image" content="${seo.origin}/assets/og-image.png"><meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0f2140"><link rel="icon" href="/assets/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="/resource-pages.css?v=20261024b">
+<meta name="theme-color" content="#0f2140"><link rel="icon" href="/assets/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="/resource-pages.css?v=20261024c">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">${json(ld)}</script></head>
 <body data-stat="pv_resource"><a class="resource-skip" href="#main">Skip to content</a>
@@ -126,8 +125,7 @@ function build(root,output,{check=false}={}){
   const oldDates=new Map([...sitemapSource.matchAll(/<url>\s*<loc>([^<]+)<\/loc>\s*(?:<lastmod>([^<]+)<\/lastmod>)?/g)].map(m=>[m[1],m[2]]));
   const retained=['/','/about.html','/downloads.html','/pastpapers.html','/classified-books.html','/practice.html','/exam.html','/checkup.html','/topics.html','/egyptian-baccalaureate.html','/daily.html',...['wma11','wma12','wma13','wme01'].map(id=>`/ial/${id}/index.html`)];
   const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Africa/Cairo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
-  const guides=fs.existsSync(path.join(root,'data/arabic-guides.json'))?JSON.parse(fs.readFileSync(path.join(root,'data/arabic-guides.json'),'utf8')).pages.map(p=>p.path):[];
-  const entries=[...retained,...pages.map(p=>p.path),...topicPages.map(p=>p.path),...guides].map(p=>{
+  const entries=[...retained,...pages.map(p=>p.path),...topicPages.map(p=>p.path)].map(p=>{
     const url=seo.origin+p,file=p.endsWith('/')?p.slice(1)+'index.html':p.slice(1),rendered=generated.get(file);
     const old=fs.existsSync(path.join(root,file))?fs.readFileSync(path.join(root,file),'utf8'):null;
     const candidate=rendered || (fs.existsSync(path.join(output,file))?fs.readFileSync(path.join(output,file),'utf8'):null);

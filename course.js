@@ -133,7 +133,7 @@
         </div>`).join("")}
       </div>`).join("");
     return `<section class="e27-block" aria-labelledby="roadmapTitle">
-      <div class="e27-head"><div><h2 id="roadmapTitle">Topics</h2><p>All ${total} topics in order: open the notes, then practise the topic's past-paper questions. Your progress shows on each topic.</p></div><div class="e27-roadmap-sum" data-roadmap-sum hidden></div></div>
+      <div class="e27-head"><div><h2 id="roadmapTitle">Topics</h2><p>All ${total} topics in order: open the notes, then practise the topic's questions. Your progress shows on each topic.</p></div><div class="e27-roadmap-sum" data-roadmap-sum hidden></div></div>
       ${body}
     </section>`;
   }
@@ -243,7 +243,7 @@
       el.classList.toggle("is-started", count > 0);
       el.classList.toggle("is-done", count === total);
       const meta = el.querySelector("[data-topic-meta]");
-      if (meta) meta.textContent = count ? `${count} of ${total} questions solved` : `${total} past-paper question${total === 1 ? "" : "s"}`;
+      if (meta) meta.textContent = count ? `${count} of ${total} questions solved` : `${total} question${total === 1 ? "" : "s"}`;
       const bar = el.querySelector("[data-topic-bar]");
       if (bar) { bar.hidden = false; bar.querySelector("i").style.width = `${pct}%`; bar.setAttribute("aria-label", `${pct}% solved`); bar.setAttribute("role", "img"); }
       const go = el.querySelector("[data-topic-practice]");

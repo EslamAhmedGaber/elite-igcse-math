@@ -5462,11 +5462,6 @@ body[data-page="daily"] .page.e27-daily { max-width: none; width: 100%; padding:
 :root:root body .e27-course .e27-meta { border-top-style: solid; border-top-color: color-mix(in srgb, var(--c) 14%, var(--e-line)); }
 :root:root body .e27-go { transition: background .15s ease, color .15s ease; }
 
-/* Arabic guide link under the course cards */
-.e27-guide { display: flex; align-items: center; gap: 12px; margin-top: 18px; padding: 14px 18px; border: 1.5px solid #ecd9a8; border-radius: 12px; background: #fffaf0; color: var(--e-ink); text-decoration: none; font-family: "Cairo", system-ui, sans-serif; font-size: 16px; }
-.e27-guide b { color: var(--e-navy); }
-.e27-guide span:last-child { margin-inline-start: auto; font-weight: 700; color: #8a6414; white-space: nowrap; }
-.e27-guide:hover { border-color: var(--e-gold); color: var(--e-ink); }
 
 /* Topic finder (home-topic-finder.js) */
 .e27-finder { margin-top: 26px; padding: 22px; border: 1.5px solid #cfd8e6; border-radius: 14px; background: var(--e-paper); box-shadow: 0 1px 2px rgba(15, 33, 64, .06); }
@@ -5480,4 +5475,56 @@ body[data-page="daily"] .page.e27-daily { max-width: none; width: 100%; padding:
 .e27-finder li small { color: var(--e-muted); white-space: nowrap; font-size: 12.5px; }
 .e27-finder .e27-finder-empty { color: var(--e-muted); font-size: 14px; margin-top: 10px; }
 .e27-finder li a span { min-width: 0; }
-@media (max-width: 640px) { .e27-finder ul { grid-template-columns: 1fr; } .e27-finder li a { flex-direction: column; align-items: flex-start; gap: 2px; } .e27-finder li small { white-space: normal; } .e27-guide { font-size: 15px; flex-wrap: wrap; } }
+@media (max-width: 640px) { .e27-finder ul { grid-template-columns: 1fr; } .e27-finder li a { flex-direction: column; align-items: flex-start; gap: 2px; } .e27-finder li small { white-space: normal; } }
+
+/* ---------- 5o. Course page + home polish: firmer edges, course colour, motion (2026-10-24) ---------- */
+.e27-course-page .e27-stage, .e27-course-page .e27-topic { --c: var(--e-c-linear); }
+.e27-course-page[data-course="unit1"] .e27-stage, .e27-course-page[data-course="unit2"] .e27-stage { --c: var(--e-c-modular); }
+.e27-course-page[data-course="wma11"] .e27-stage { --c: var(--e-c-pure1); }
+.e27-course-page[data-course="wma12"] .e27-stage { --c: var(--e-c-pure2); }
+.e27-course-page[data-course="wma13"] .e27-stage { --c: var(--e-c-pure3); }
+.e27-course-page[data-course="wme01"] .e27-stage { --c: var(--e-c-mech); }
+
+/* Learn / Practise / Test blocks */
+:root:root body .e27-stage {
+  border: 1.5px solid color-mix(in srgb, var(--c) 20%, #cfd8e6);
+  border-top: 5px solid var(--c);
+  box-shadow: 0 1px 2px rgba(15, 33, 64, .07), 0 8px 22px rgba(15, 33, 64, .07);
+}
+:root:root body .e27-stage > header { background: color-mix(in srgb, var(--c) 5%, #fff); }
+:root:root body .e27-tile { transition: background .15s ease; }
+:root:root body .e27-tile:hover { background: color-mix(in srgb, var(--c) 6%, #fff); }
+:root:root body .e27-tile .i { transition: background .15s ease, color .15s ease; }
+:root:root body .e27-tile:hover .i { background: var(--c); color: #fff; }
+:root:root body .e27-tile .arrow { transition: transform .15s ease, color .15s ease; }
+:root:root body .e27-tile:hover .arrow { color: var(--c); transform: translateX(4px); }
+
+/* Topic cards: course-coloured left edge, firmer border, lift on hover */
+:root:root body .e27-topic {
+  border: 1.5px solid color-mix(in srgb, var(--c) 16%, #d3dbe7);
+  border-left: 4px solid var(--c);
+  box-shadow: 0 1px 2px rgba(15, 33, 64, .05);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+:root:root body .e27-topic:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--c) 50%, #d3dbe7); border-left-color: var(--c); box-shadow: 0 6px 18px color-mix(in srgb, var(--c) 14%, transparent); }
+:root:root body .e27-topic .n { background: color-mix(in srgb, var(--c) 10%, #fff); }
+
+/* Daily challenge / exam countdown cards and the home "How students use Elite" strip */
+:root:root body .e27-today-card { border-width: 1.5px; border-color: #cfd8e6; box-shadow: 0 1px 2px rgba(15, 33, 64, .07), 0 8px 22px rgba(15, 33, 64, .07); }
+:root:root body .e27-path { border: 1.5px solid #cfd8e6; box-shadow: 0 1px 2px rgba(15, 33, 64, .06); }
+:root:root body .e27-step { transition: background .15s ease; }
+:root:root body .e27-step:hover { background: #f8fafd; }
+:root:root body .e27-finder { transition: border-color .15s ease, box-shadow .15s ease; }
+:root:root body .e27-finder:focus-within { border-color: var(--e-navy); box-shadow: 0 8px 24px rgba(15, 33, 64, .10); }
+
+/* Gentle entrance for the cards near the top of the page (CSS only, so content never depends on a script) */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes e27-rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+  .e27-courses > .e27-course, .e27-stages > .e27-stage, .e27-today > *, .e27-hero .e27-figures > div { animation: e27-rise .45s cubic-bezier(.2, .7, .2, 1) both; }
+  .e27-courses > .e27-course:nth-child(2), .e27-stages > .e27-stage:nth-child(2), .e27-today > *:nth-child(2), .e27-hero .e27-figures > div:nth-child(2) { animation-delay: .06s; }
+  .e27-courses > .e27-course:nth-child(3), .e27-stages > .e27-stage:nth-child(3), .e27-hero .e27-figures > div:nth-child(3) { animation-delay: .12s; }
+  .e27-courses > .e27-course:nth-child(4) { animation-delay: .18s; }
+}
+@media (prefers-reduced-motion: reduce) {
+  :root:root body .e27-course, :root:root body .e27-topic, :root:root body .e27-tile .arrow { transition: none; transform: none !important; }
+}

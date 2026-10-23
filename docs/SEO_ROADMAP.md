@@ -42,7 +42,6 @@ Success measures: non-brand search impressions and clicks per course; useful pag
 
 ## Content and Arabic release (24 October 2026)
 
-- [x] Arabic guides at /ar/ (hub, Linear vs Modular, IAL unit order, how to study), facts from Pearson specifications with links; FAQPage markup; linked from home footer and every course hub. Not translations, so no hreflang.
 - [x] Elite Practice paper (tools/elite_practice): 37 original questions for topics recent Higher papers skip (Using a Calculator, Kinematic Graphs, FDP, Algebra Toolkit, Quadratic Formula, Powers & Roots, Number Toolkit). Topic pages call these practice questions, never past-paper questions, and exclude them from "% of papers".
 - [x] Counters pv_topic, pv_resource, pv_guide, e_solution_open (topic-pages.js, Firestore REST, live host only). Requires the updated docs/firestore.rules to be published.
 
@@ -51,7 +50,6 @@ Success measures: non-brand search impressions and clicks per course; useful pag
 When course-modules.js or library-data.js changes, rebuild the public directories from those sources:
 
 ```powershell
-node tools/build_arabic_guides.cjs
 node tools/build_topic_pages.cjs
 node tools/build_topic_pages.cjs --check
 node tools/build_seo_pages.cjs
