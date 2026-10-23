@@ -34,11 +34,19 @@ The legacy dynamic course dashboard and the public resource hub serve different 
 
 Success measures: non-brand search impressions and clicks per course; useful pages indexed; PDF/resource opens; mock usage; and relevant enquiries. Set numeric traffic targets after collecting the baseline. Rankings, rich results and AI citations are not guaranteed.
 
+## Topic pages release (24 October 2026)
+
+- [x] 97 topic pages + 5 topic hubs (Linear 49, Pure 1 13, Pure 2 12, Pure 3 13, Mechanics 1 10) from the live question bank: every question easiest first, checked worked solutions (MathJax loads only when a solution opens), exam-frequency stats, topic notes PDF, practice and topic-test links.
+- [x] Modular Unit 1/2 course hubs link to the shared Linear topic pages (matched by notes PDF), so no duplicate pages.
+- [x] Course hubs link every topic to its topic page; sitemap now 145 URLs. 8,466 internal links checked.
+
 ## Maintaining this release
 
 When course-modules.js or library-data.js changes, rebuild the public directories from those sources:
 
 ```powershell
+node tools/build_topic_pages.cjs
+node tools/build_topic_pages.cjs --check
 node tools/build_seo_pages.cjs
 node tools/build_seo_pages.cjs --check
 node tools/test_seo_pages.cjs
