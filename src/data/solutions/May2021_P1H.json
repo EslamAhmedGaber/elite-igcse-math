@@ -617,25 +617,25 @@
       "finalAnswer": "completed frequencies \\(35,40,60\\), missing histogram density \\(1\\), and probability \\(\\frac{12}{41}\\)."
     },
     "all::May2021_P1H__Q06__p07-07__m05__Probability-Toolkit": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "Let the probability of pink",
-          "body": "Let the probability of pink be \\(x\\). Then the probability of orange is \\(3x\\).\n\n\\[\n0.20+0.12+0.08+x+3x=1\n\\]\n\n\\[\n4x=0.60\n\\]\n\n\\[\nx=0.15\n\\]"
+          "title": "(a) Set up with the missing probabilities",
+          "body": "Let \\(P(\\text{pink})=x\\), so \\(P(\\text{orange})=3x\\).\n\n\\[\n0.20+0.12+0.08+3x+x=1 \\;\\Rightarrow\\; 4x=0.60 \\;\\Rightarrow\\; x=0.15\n\\]"
         },
         {
-          "title": "Calculate probability",
-          "body": "So the probability of orange is\n\n\\[\n3x=0.45\n\\]"
+          "title": "(a) Probability of orange",
+          "body": "\\[\n3x=0.45\n\\]"
         },
         {
-          "title": "Expected blue sweets",
-          "body": "Expected blue sweets:\n\n\\[\n150\\times 0.12=18\n\\]"
+          "title": "(b) Estimate for blue",
+          "body": "\\[\n150\\times0.12=18\n\\]"
         }
       ],
-      "finalAnswer": "pink \\(0.15\\), orange \\(0.45\\), blue \\(18\\)."
+      "finalAnswer": "(a) \\(0.45\\) (b) \\(18\\)"
     },
     "expertise::May2021_P1H__Q20__p19-19__m03__Rounding-Estimation-and-Bounds": {
       "status": "checked",

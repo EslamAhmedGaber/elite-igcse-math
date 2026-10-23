@@ -590,25 +590,21 @@
       "finalAnswer": "\\(21\\)."
     },
     "all::Nov2025_P1H__Q13__p11-11__m05__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Bag 1",
-          "body": "Bag 1:\n\n\\[\nP(Y)=\\frac25,\\qquad P(O)=\\frac35\n\\]"
+          "title": "(a) Complete the tree",
+          "body": "Bag: orange \\(\\frac35\\).\n\nBox (on both branches): yellow \\(\\frac38\\), green \\(\\frac58\\)."
         },
         {
-          "title": "Bag 2",
-          "body": "Bag 2:\n\n\\[\nP(Y)=\\frac38,\\qquad P(G)=\\frac58\n\\]"
-        },
-        {
-          "title": "The only way to get",
-          "body": "The only way to get the same colour is yellow then yellow.\n\n\\[\nP(\\text{different})=1-\\frac25\\times\\frac38\n\\]\n\n\\[\n=1-\\frac{3}{20}=\\frac{17}{20}\n\\]"
+          "title": "(b) Use the complement",
+          "body": "The only way to get the same colour is yellow from both, so\n\n\\[\nP(\\text{different})=1-\\frac25\\times\\frac38=1-\\frac{6}{40}=\\frac{17}{20}\n\\]"
         }
       ],
-      "finalAnswer": "\\(\\frac{17}{20}\\)."
+      "finalAnswer": "(a) \\(\\frac35\\); \\(\\frac38,\\frac58\\) on both branches (b) \\(\\dfrac{17}{20}\\)"
     },
     "all::Nov2025_P1H__Q22__p18-18__m03__Combined-and-Conditional-Probability": {
       "status": "checked",

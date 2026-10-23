@@ -1,4 +1,673 @@
 window.SOLUTION_DATA = {
+  "all::Elite_Practice__Q01__m02__Using-a-Calculator": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Using a Calculator. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "Work out the top and the bottom",
+        "body": "\\[\n5.7^2-\\sqrt{30.25}=32.49-5.5=26.99,\\qquad 1.8\\times0.65=1.17\n\\]"
+      },
+      {
+        "title": "Divide",
+        "body": "\\[\n\\frac{26.99}{1.17}=23.06837607\\ldots\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(23.06837607\\)"
+  },
+  "all::Elite_Practice__Q02__m03__Using-a-Calculator": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Using a Calculator. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "(a) Use the calculator",
+        "body": "\\[\n4.3^3-\\frac{1}{0.16}=79.507-6.25=73.257\n\\]"
+      },
+      {
+        "title": "(b) Round to 3 significant figures",
+        "body": "The fourth figure is \\(5\\), so round up: \\(73.3\\)."
+      }
+    ],
+    "finalAnswer": "(a) \\(73.257\\) (b) \\(73.3\\)"
+  },
+  "all::Elite_Practice__Q03__m02__Using-a-Calculator": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Using a Calculator. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "Check the calculator is in degrees",
+        "body": "Then\n\n\\[\n\\frac{8.4\\times\\tan35^\\circ}{\\cos62^\\circ}=\\frac{5.8817\\ldots}{0.46947\\ldots}=12.528\\ldots\n\\]"
+      },
+      {
+        "title": "Round",
+        "body": "\\(12.5\\) (3 significant figures)"
+      }
+    ],
+    "finalAnswer": "\\(12.5\\)"
+  },
+  "all::Elite_Practice__Q04__m03__Using-a-Calculator": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Using a Calculator. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "Add the top",
+        "body": "\\[\n3.7\\times10^5+2.9\\times10^4=370\\,000+29\\,000=399\\,000\n\\]"
+      },
+      {
+        "title": "Divide",
+        "body": "\\[\n\\frac{399\\,000}{8.1\\times10^{-3}}=49\\,259\\,259.26\\ldots\n\\]"
+      },
+      {
+        "title": "Standard form, 3 significant figures",
+        "body": "\\(4.93\\times10^7\\)"
+      }
+    ],
+    "finalAnswer": "\\(4.93\\times10^{7}\\)"
+  },
+  "all::Elite_Practice__Q05__m02__Using-a-Calculator": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Using a Calculator. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "Substitute (brackets round the negative)",
+        "body": "\\[\np^2-3q=2.6^2-3(-1.8)=6.76+5.4=12.16\n\\]\n\n\\[\n\\sqrt{p+q^2}=\\sqrt{2.6+(-1.8)^2}=\\sqrt{5.84}=2.4166\\ldots\n\\]"
+      },
+      {
+        "title": "Divide and round",
+        "body": "\\[\n\\frac{12.16}{2.4166\\ldots}=5.03184\\ldots\\approx5.032\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(5.032\\)"
+  },
+  "all::Elite_Practice__Q06__m02__Using-a-Calculator": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Using a Calculator. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "Evaluate each power",
+        "body": "\\[\n4.8^{-0.5}=\\frac{1}{\\sqrt{4.8}}=0.45643\\ldots,\\qquad 1.7^3=4.913\n\\]"
+      },
+      {
+        "title": "Add and round",
+        "body": "\\[\n0.45643\\ldots+4.913=5.36943\\ldots\\approx5.369\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(5.369\\)"
+  },
+  "all::Elite_Practice__Q07__m03__Using-a-Calculator": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Using a Calculator. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "(a) Round each number to 1 significant figure",
+        "body": "\\[\n\\frac{20\\times0.5}{4}=\\frac{10}{4}=2.5\n\\]"
+      },
+      {
+        "title": "(b) Calculator value",
+        "body": "\\[\n\\frac{19.6\\times0.48}{4.1}=2.2946\\ldots\\approx2.29\n\\]"
+      }
+    ],
+    "finalAnswer": "(a) \\(2.5\\) (b) \\(2.29\\)"
+  },
+  "all::Elite_Practice__Q08__m04__Kinematic-Graphs": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Kinematic Graphs. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "(a) Read the graph at 10 minutes",
+        "body": "The line from \\((0,0)\\) to \\((20,1.6)\\) is halfway up at \\(10\\) minutes: \\(0.8\\) km."
+      },
+      {
+        "title": "(b) The flat section",
+        "body": "From \\(20\\) to \\(30\\) minutes: \\(10\\) minutes."
+      },
+      {
+        "title": "(c) Speed = distance ÷ time",
+        "body": "He walks \\(1.6\\) km in \\(50-30=20\\) minutes \\(=\\frac13\\) hour.\n\n\\[\n1.6\\div\\frac13=4.8\\text{ km/h}\n\\]"
+      }
+    ],
+    "finalAnswer": "(a) \\(0.8\\) km (b) \\(10\\) minutes (c) \\(4.8\\) km/h"
+  },
+  "all::Elite_Practice__Q09__m05__Kinematic-Graphs": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Kinematic Graphs. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "(a) Acceleration = gradient",
+        "body": "\\[\n\\frac{18-0}{12}=1.5\\text{ m/s}^2\n\\]"
+      },
+      {
+        "title": "(b) Distance = area under the graph",
+        "body": "Split into a triangle, a rectangle and a triangle:\n\n\\[\n\\tfrac12\\times12\\times18+20\\times18+\\tfrac12\\times8\\times18=108+360+72=540\\text{ m}\n\\]"
+      }
+    ],
+    "finalAnswer": "(a) \\(1.5\\) m/s\\(^2\\) (b) \\(540\\) m"
+  },
+  "all::Elite_Practice__Q10__m04__Kinematic-Graphs": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Kinematic Graphs. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "(a) Area of the trapezium (first 10 s)",
+        "body": "\\[\n\\frac{4+16}{2}\\times10=100\\text{ m}\n\\]"
+      },
+      {
+        "title": "(a) Area of the rectangle (last 15 s)",
+        "body": "\\[\n16\\times15=240\\text{ m}\n\\]\n\nTotal: \\(100+240=340\\) m."
+      },
+      {
+        "title": "(b) Average speed = total distance ÷ total time",
+        "body": "\\[\n340\\div25=13.6\\text{ m/s}\n\\]"
+      }
+    ],
+    "finalAnswer": "(a) \\(340\\) m (b) \\(13.6\\) m/s"
+  },
+  "all::Elite_Practice__Q11__m04__Kinematic-Graphs": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Kinematic Graphs. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "(a) Where the lines cross",
+        "body": "The lines cross at \\(36\\) minutes after 10:00, so at \\(10{:}36\\)."
+      },
+      {
+        "title": "(b) Read across",
+        "body": "At the crossing point the distance from \\(A\\) is \\(9\\) km."
+      },
+      {
+        "title": "(c) Tom's speed",
+        "body": "Tom goes from \\(12\\) km to \\(7\\) km from \\(A\\) in \\(1\\) hour:\n\n\\[\n\\frac{12-7}{1}=5\\text{ km/h}\n\\]"
+      }
+    ],
+    "finalAnswer": "(a) \\(10{:}36\\) (b) \\(9\\) km (c) \\(5\\) km/h"
+  },
+  "all::Elite_Practice__Q12__m03__Kinematic-Graphs": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Kinematic Graphs. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "Distance = area under the graph",
+        "body": "Triangle: \\(\\tfrac12\\times T\\times12=6T\\). Rectangle: \\(30\\times12=360\\)."
+      },
+      {
+        "title": "Form and solve the equation",
+        "body": "\\[\n6T+360=450 \\;\\Rightarrow\\; 6T=90 \\;\\Rightarrow\\; T=15\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(T=15\\)"
+  },
+  "all::Elite_Practice__Q13__m04__Kinematic-Graphs": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Kinematic Graphs. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "(a) Gradient of the line",
+        "body": "\\[\n\\frac{5-20}{6}=-2.5\n\\]\n\nSo the deceleration is \\(2.5\\) m/s\\(^2\\)."
+      },
+      {
+        "title": "(b) Area of the trapezium",
+        "body": "\\[\n\\frac{20+5}{2}\\times6=75\\text{ m}\n\\]"
+      }
+    ],
+    "finalAnswer": "(a) \\(2.5\\) m/s\\(^2\\) (b) \\(75\\) m"
+  },
+  "all::Elite_Practice__Q14__m04__Kinematic-Graphs": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Kinematic Graphs. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "Sketch the speed-time graph",
+        "body": "A trapezium: up for \\(50\\) s, flat at \\(30\\) m/s for \\(t\\) s, down for \\(40\\) s."
+      },
+      {
+        "title": "Distance = area (in metres)",
+        "body": "\\[\n\\tfrac12\\times50\\times30+30t+\\tfrac12\\times40\\times30=750+30t+600\n\\]"
+      },
+      {
+        "title": "Form and solve the equation",
+        "body": "\\(6\\) km \\(=6000\\) m:\n\n\\[\n1350+30t=6000 \\;\\Rightarrow\\; 30t=4650 \\;\\Rightarrow\\; t=155\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(t=155\\)"
+  },
+  "all::Elite_Practice__Q15__m02__Fractions-Decimals-and-Percentages": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Fractions, Decimals & Percentages. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "Change every number to a decimal",
+        "body": "\\(0.62\\), \\(\\frac58=0.625\\), \\(61\\%=0.61\\), \\(\\frac23=0.666\\ldots\\), \\(\\frac35=0.6\\)"
+      },
+      {
+        "title": "Order them",
+        "body": "\\(0.6,\\ 0.61,\\ 0.62,\\ 0.625,\\ 0.666\\ldots\\)"
+      }
+    ],
+    "finalAnswer": "\\(\\frac35,\\ 61\\%,\\ 0.62,\\ \\frac58,\\ \\frac23\\)"
+  },
+  "all::Elite_Practice__Q16__m02__Fractions-Decimals-and-Percentages": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Fractions, Decimals & Percentages. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "(a) Divide",
+        "body": "\\[\n7\\div40=0.175\n\\]"
+      },
+      {
+        "title": "(b) Multiply by 100",
+        "body": "\\[\n0.175\\times100=17.5\\%\n\\]"
+      }
+    ],
+    "finalAnswer": "(a) \\(0.175\\) (b) \\(17.5\\%\\)"
+  },
+  "all::Elite_Practice__Q17__m03__Fractions-Decimals-and-Percentages": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Fractions, Decimals & Percentages. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "Proportion that walk or cycle",
+        "body": "\\[\n\\frac38+0.35=0.375+0.35=0.725\n\\]"
+      },
+      {
+        "title": "Proportion that travel by bus",
+        "body": "\\[\n1-0.725=0.275\n\\]"
+      },
+      {
+        "title": "Number of students",
+        "body": "\\[\n0.275\\times n=11 \\;\\Rightarrow\\; n=\\frac{11}{0.275}=40\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(40\\)"
+  },
+  "all::Elite_Practice__Q18__m02__Fractions-Decimals-and-Percentages": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Fractions, Decimals & Percentages. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "Write both as decimals",
+        "body": "\\[\n\\frac{13}{20}=13\\div20=0.65\n\\]"
+      },
+      {
+        "title": "Compare",
+        "body": "\\(0.66>0.65\\), so \\(0.66\\) is larger."
+      }
+    ],
+    "finalAnswer": "\\(0.66\\)"
+  },
+  "all::Elite_Practice__Q19__m02__Fractions-Decimals-and-Percentages": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Fractions, Decimals & Percentages. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "Change the first score to a percentage",
+        "body": "\\[\n\\frac{34}{40}\\times100=85\\%\n\\]"
+      },
+      {
+        "title": "Compare",
+        "body": "\\(87\\%>85\\%\\), so the second test was better."
+      }
+    ],
+    "finalAnswer": "The second test (\\(85\\%\\) against \\(87\\%\\))"
+  },
+  "all::Elite_Practice__Q20__m02__Fractions-Decimals-and-Percentages": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Fractions, Decimals & Percentages. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "Write over a power of 10",
+        "body": "\\[\n0.0375=\\frac{375}{10\\,000}\n\\]"
+      },
+      {
+        "title": "Simplify (divide by 125)",
+        "body": "\\[\n\\frac{375}{10\\,000}=\\frac{3}{80}\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(\\dfrac{3}{80}\\)"
+  },
+  "all::Elite_Practice__Q21__m03__Fractions-Decimals-and-Percentages": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Fractions, Decimals & Percentages. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "Change both amounts to percentages",
+        "body": "\\(\\frac25=40\\%\\), so the \\(120\\) litres fill \\(65\\%-40\\%=25\\%\\) of the tank."
+      },
+      {
+        "title": "Find 100%",
+        "body": "\\[\n25\\%\\to120 \\;\\Rightarrow\\; 100\\%\\to120\\times4=480\\text{ litres}\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(480\\) litres"
+  },
+  "all::Elite_Practice__Q22__m02__Algebra-Toolkit": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Algebra Toolkit. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "(a) Collect like terms",
+        "body": "\\[\n5a-2a=3a,\\qquad 3b+7b=10b \\;\\Rightarrow\\; 3a+10b\n\\]"
+      },
+      {
+        "title": "(b) Multiply the numbers, then the letters",
+        "body": "\\[\n4\\times3=12 \\;\\Rightarrow\\; 12xy\n\\]"
+      }
+    ],
+    "finalAnswer": "(a) \\(3a+10b\\) (b) \\(12xy\\)"
+  },
+  "all::Elite_Practice__Q23__m02__Algebra-Toolkit": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Algebra Toolkit. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "Substitute, with brackets round the negative",
+        "body": "\\[\n3(-4)^2-2(5)=3\\times16-10\n\\]"
+      },
+      {
+        "title": "Work it out",
+        "body": "\\[\n48-10=38\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(38\\)"
+  },
+  "all::Elite_Practice__Q24__m02__Algebra-Toolkit": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Algebra Toolkit. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "Substitute",
+        "body": "\\[\nv=12+(-3.5)\\times6\n\\]"
+      },
+      {
+        "title": "Work it out",
+        "body": "\\[\nv=12-21=-9\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(v=-9\\)"
+  },
+  "all::Elite_Practice__Q25__m02__Algebra-Toolkit": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Algebra Toolkit. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "Cost of each item × number bought",
+        "body": "\\(x\\) pens cost \\(35x\\) pence; \\(y\\) pencils cost \\(18y\\) pence."
+      },
+      {
+        "title": "Add",
+        "body": "\\(35x+18y\\)"
+      }
+    ],
+    "finalAnswer": "\\(35x+18y\\)"
+  },
+  "all::Elite_Practice__Q26__m02__Algebra-Toolkit": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Algebra Toolkit. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "Substitute",
+        "body": "\\[\nT=\\frac{(-3)^2+7}{2\\times0.5}=\\frac{9+7}{1}\n\\]"
+      },
+      {
+        "title": "Work it out",
+        "body": "\\(T=16\\)"
+      }
+    ],
+    "finalAnswer": "\\(T=16\\)"
+  },
+  "all::Elite_Practice__Q27__m02__Algebra-Toolkit": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Algebra Toolkit. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "Like terms have exactly the same letters and powers",
+        "body": "\\(x^2y\\) terms: \\(6+3=9\\). \\(xy^2\\) terms: \\(-2+5=3\\)."
+      },
+      {
+        "title": "Write the answer",
+        "body": "\\(9x^2y+3xy^2\\)"
+      }
+    ],
+    "finalAnswer": "\\(9x^2y+3xy^2\\)"
+  },
+  "all::Elite_Practice__Q28__m02__Algebra-Toolkit": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Algebra Toolkit. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "Perimeter = 2 lengths + 2 widths",
+        "body": "\\[\n2(3x+2)+2(x-1)\n\\]"
+      },
+      {
+        "title": "Expand and collect",
+        "body": "\\[\n6x+4+2x-2=8x+2\n\\]"
+      }
+    ],
+    "finalAnswer": "Shown: \\(8x+2\\)"
+  },
+  "all::Elite_Practice__Q29__m02__Algebra-Toolkit": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Algebra Toolkit. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "Substitute n = −2 into each expression",
+        "body": "\\[\n3n=-6,\\quad n+3=1,\\quad n^3=-8,\\quad 3n^2=3\\times4=12,\\quad -n=2\n\\]"
+      },
+      {
+        "title": "Pick the greatest",
+        "body": "\\(3n^2=12\\) is the greatest."
+      }
+    ],
+    "finalAnswer": "\\(3n^2\\) (value \\(12\\))"
+  },
+  "all::Elite_Practice__Q30__m03__Quadratic-Formula": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Quadratic Formula. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "Identify a, b and c",
+        "body": "\\(a=2,\\ b=-5,\\ c=-4\\)"
+      },
+      {
+        "title": "Substitute into the formula",
+        "body": "\\[\nx=\\frac{-(-5)\\pm\\sqrt{(-5)^2-4(2)(-4)}}{2(2)}=\\frac{5\\pm\\sqrt{57}}{4}\n\\]"
+      },
+      {
+        "title": "Work out both solutions",
+        "body": "\\[\nx=\\frac{5+7.5498\\ldots}{4}=3.14,\\qquad x=\\frac{5-7.5498\\ldots}{4}=-0.637\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(x=3.14\\) or \\(x=-0.637\\)"
+  },
+  "all::Elite_Practice__Q31__m03__Quadratic-Formula": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Quadratic Formula. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "Use the formula",
+        "body": "\\[\nx=\\frac{-6\\pm\\sqrt{36-8}}{2}=\\frac{-6\\pm\\sqrt{28}}{2}\n\\]"
+      },
+      {
+        "title": "Simplify the surd",
+        "body": "\\(\\sqrt{28}=2\\sqrt7\\), so\n\n\\[\nx=\\frac{-6\\pm2\\sqrt7}{2}=-3\\pm\\sqrt7\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(x=-3\\pm\\sqrt7\\)"
+  },
+  "all::Elite_Practice__Q32__m05__Quadratic-Formula": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Quadratic Formula. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "(a) Area = length × width",
+        "body": "\\[\n(x+3)(x-1)=20 \\;\\Rightarrow\\; x^2+2x-3=20 \\;\\Rightarrow\\; x^2+2x-23=0\n\\]"
+      },
+      {
+        "title": "(b) Use the formula",
+        "body": "\\[\nx=\\frac{-2\\pm\\sqrt{4+92}}{2}=\\frac{-2\\pm\\sqrt{96}}{2}=-1\\pm\\sqrt{24}\n\\]\n\nThe width \\(x-1\\) must be positive, so \\(x=-1+\\sqrt{24}=3.898\\ldots\\)"
+      },
+      {
+        "title": "(b) Length",
+        "body": "\\[\nx+3=6.898\\ldots\\approx6.90\\text{ cm}\n\\]"
+      }
+    ],
+    "finalAnswer": "(b) \\(6.90\\) cm"
+  },
+  "all::Elite_Practice__Q33__m03__Powers-and-Roots": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Powers & Roots. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "(a) Any non-zero number to the power 0",
+        "body": "\\(5^0=1\\)"
+      },
+      {
+        "title": "(b) Root first, then power",
+        "body": "\\[\n8^{2/3}=\\left(\\sqrt[3]{8}\\right)^2=2^2=4\n\\]"
+      },
+      {
+        "title": "(c) Negative power means reciprocal",
+        "body": "\\[\n16^{-1/2}=\\frac{1}{\\sqrt{16}}=\\frac14\n\\]"
+      }
+    ],
+    "finalAnswer": "(a) \\(1\\) (b) \\(4\\) (c) \\(\\frac14\\)"
+  },
+  "all::Elite_Practice__Q34__m02__Powers-and-Roots": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Powers & Roots. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "Multiply: add the powers",
+        "body": "\\(3^5\\times3^{-2}=3^{3}\\)"
+      },
+      {
+        "title": "Divide: subtract the powers",
+        "body": "\\[\n\\frac{3^3}{3^4}=3^{-1}\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(3^{-1}\\)"
+  },
+  "all::Elite_Practice__Q35__m03__Powers-and-Roots": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Powers & Roots. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "Write everything as a power of 2",
+        "body": "\\(8=2^3\\), so \\(8^4=2^{12}\\). \\(4=2^2\\), so \\(4^3=2^{6}\\)."
+      },
+      {
+        "title": "Divide",
+        "body": "\\[\n\\frac{2^{12}}{2^{6}}=2^{6} \\;\\Rightarrow\\; n=6\n\\]"
+      }
+    ],
+    "finalAnswer": "\\(n=6\\)"
+  },
+  "all::Elite_Practice__Q36__m03__Number-Toolkit": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Number Toolkit. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "(a) Exactly two factors",
+        "body": "\\(2\\) and \\(17\\) are prime (\\(15=3\\times5\\), \\(21=3\\times7\\))."
+      },
+      {
+        "title": "(b) Square numbers in the list",
+        "body": "\\(9=3^2\\) and \\(25=5^2\\); the odd one greater than \\(10\\) is \\(25\\)."
+      },
+      {
+        "title": "(c) Cube numbers",
+        "body": "\\(27=3^3\\)"
+      }
+    ],
+    "finalAnswer": "(a) \\(2, 17\\) (b) \\(25\\) (c) \\(27\\)"
+  },
+  "all::Elite_Practice__Q37__m02__Number-Toolkit": {
+    "status": "checked",
+    "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "Number Toolkit. Original Elite practice question.",
+    "steps": [
+      {
+        "title": "(a) Each number is ten times smaller",
+        "body": "\\(2.3\\times4.7=1081\\div100=10.81\\)"
+      },
+      {
+        "title": "(b) Reverse the multiplication",
+        "body": "\\(1081\\div47=23\\), and \\(4.7\\) is ten times smaller than \\(47\\), so \\(1081\\div4.7=230\\)."
+      }
+    ],
+    "finalAnswer": "(a) \\(10.81\\) (b) \\(230\\)"
+  },
   "all::Jan2020_P1H__Q02__p04-04__m02__Prime-Factors-HCF-and-LCM": {
     "status": "checked",
     "checkedBy": "Dr Eslam Ahmed + Codex",
@@ -521,17 +1190,21 @@ window.SOLUTION_DATA = {
     "finalAnswer": "IQR about \\(18\\) minutes, and about \\(70\\) men."
   },
   "all::Jan2020_P1H__Q18__p22-22__m04__Probability-Toolkit": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "There are sweets and are",
-        "body": "There are \\(16\\) sweets and \\(5\\) are lemon, so \\(11\\) are not lemon.\n\n\\[\nP(\\text{no lemon})=\\frac{11}{16}\\times\\frac{10}{15}\\times\\frac{9}{14}\n\\]\n\n\\[\n=\\frac{33}{112}\n\\]"
+        "title": "Count the sweets that are not lemon",
+        "body": "There are \\(16\\) sweets and \\(5\\) are lemon, so \\(11\\) are not lemon."
+      },
+      {
+        "title": "Three picks without replacement, none lemon",
+        "body": "All \\(5\\) lemon sweets stay in the bowl only if Anna, Ravi and Sam each take a non-lemon sweet:\n\n\\[\n\\frac{11}{16}\\times\\frac{10}{15}\\times\\frac{9}{14}=\\frac{990}{3360}=\\frac{33}{112}\n\\]"
       }
     ],
-    "finalAnswer": "\\(\\frac{33}{112}\\)."
+    "finalAnswer": "\\(\\dfrac{33}{112}\\)"
   },
   "expertise::Jan2020_P1H__Q21__p25-25__m05__Functions": {
     "status": "checked",
@@ -1249,25 +1922,25 @@ window.SOLUTION_DATA = {
     "finalAnswer": "median about \\(22.5\\) minutes, IQR about \\(12\\) minutes. Hospital A is quicker and more consistent."
   },
   "all::Jan2020_P1HR__Q16__p16-16__m04__Combined-and-Conditional-Probability": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Combined & Conditional Probability. The tag is correct.",
     "steps": [
       {
-        "title": "Calculate probability",
-        "body": "\\[\nP(\\text{win tennis})=0.6\n\\]\n\n\\[\nP(\\text{win both})=0.42\n\\]"
+        "title": "Find the probability of winning chess",
+        "body": "Treat the two games as independent:\n\n\\[\n0.6\\times P(\\text{win chess})=0.42 \\;\\Rightarrow\\; P(\\text{win chess})=0.42\\div0.6=0.7\n\\]"
       },
       {
-        "title": "Calculate probability",
-        "body": "So the chess win probability used with the tennis result is\n\n\\[\n0.42\\div 0.6=0.7\n\\]"
+        "title": "Probabilities of losing",
+        "body": "\\[\nP(\\text{not win tennis})=1-0.6=0.4,\\qquad P(\\text{not win chess})=1-0.7=0.3\n\\]"
       },
       {
-        "title": "Calculate probability",
-        "body": "Therefore\n\n\\[\nP(\\text{lose tennis})=0.4,\\qquad P(\\text{lose chess})=0.3\n\\]\n\n\\[\nP(\\text{not win either})=0.4\\times 0.3=0.12\n\\]"
+        "title": "Win neither game",
+        "body": "\\[\n0.4\\times0.3=0.12\n\\]"
       }
     ],
-    "finalAnswer": "\\(0.12\\)."
+    "finalAnswer": "\\(0.12\\)"
   },
   "expertise::Jan2020_P1HR__Q22__p23-23__m04__Transformations-of-Graphs": {
     "status": "checked",
@@ -2020,34 +2693,42 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(\\frac{23}{60}\\), then \\(\\frac35\\)."
   },
   "all::Jan2020_P2H__Q06__p07-07__m04__Probability-Toolkit": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "Let the probability of red",
-        "body": "Let the probability of red be \\(r\\). Then the probability of green is \\(2r\\).\n\n\\[\nr+0.24+2r+0.31=1\n\\]\n\n\\[\n3r=0.45\n\\]\n\n\\[\nr=0.15\n\\]"
+        "title": "Use the fact that probabilities add to 1",
+        "body": "Let \\(P(\\text{red})=r\\), so \\(P(\\text{green})=2r\\).\n\n\\[\nr+0.24+2r+0.31=1 \\;\\Rightarrow\\; 3r=0.45 \\;\\Rightarrow\\; r=0.15\n\\]"
       },
       {
-        "title": "Expected number of red counters",
-        "body": "Expected number of red counters:\n\n\\[\n180\\times 0.15=27\n\\]"
+        "title": "Expected number of red beads",
+        "body": "\\[\n180\\times0.15=27\n\\]"
       }
     ],
-    "finalAnswer": "\\(27\\)."
+    "finalAnswer": "\\(27\\)"
   },
   "all::Jan2020_P2H__Q14__p14-14__m04__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Calculate probability",
-        "body": "There are \\(13\\) large glasses and \\(7\\) small glasses.\n\n\\[\nP(\\text{two small})=\\frac{7}{20}\\times\\frac{6}{19}\n\\]\n\n\\[\n=\\frac{21}{190}\n\\]"
+        "title": "(a) First glass",
+        "body": "\\[\nP(\\text{large})=\\frac{13}{20},\\qquad P(\\text{small})=\\frac{7}{20}\n\\]"
+      },
+      {
+        "title": "(a) Second glass (one fewer glass left)",
+        "body": "After a large glass: large \\(\\frac{12}{19}\\), small \\(\\frac{7}{19}\\).\n\nAfter a small glass: large \\(\\frac{13}{19}\\), small \\(\\frac{6}{19}\\)."
+      },
+      {
+        "title": "(b) Two small glasses",
+        "body": "\\[\n\\frac{7}{20}\\times\\frac{6}{19}=\\frac{42}{380}=\\frac{21}{190}\n\\]"
       }
     ],
-    "finalAnswer": "\\(\\frac{21}{190}\\)."
+    "finalAnswer": "(a) \\(\\frac{13}{20},\\frac{7}{20}\\); \\(\\frac{12}{19},\\frac{7}{19}\\); \\(\\frac{13}{19},\\frac{6}{19}\\) (b) \\(\\dfrac{21}{190}\\)"
   },
   "expertise::Jan2020_P2H__Q20__p20-20__m03__Surds": {
     "status": "checked",
@@ -2504,29 +3185,25 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(x=-\\frac12\\), \\(y=\\frac32\\)."
   },
   "all::Jan2020_P2HR__Q03__p05-05__m04__Forming-and-Solving-Equations": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Corrected to Forming & Solving Equations.",
     "steps": [
       {
-        "title": "Why it moved The question",
-        "body": "**Why it moved:** The question asks us to form and solve an equation for the numbers of buttons in three tins. There is no probability event."
+        "title": "Write each tin in terms of x",
+        "body": "Tin A has \\(x\\) buttons, tin B has \\(4x\\), tin C has \\(x-7\\)."
       },
       {
-        "title": "Let the number of buttons",
-        "body": "Let the number of buttons in tin A be \\(x\\)."
+        "title": "Form and solve the equation",
+        "body": "\\[\nx+4x+(x-7)=137 \\;\\Rightarrow\\; 6x-7=137 \\;\\Rightarrow\\; 6x=144 \\;\\Rightarrow\\; x=24\n\\]"
       },
       {
-        "title": "Solve equation",
-        "body": "Then tin B has \\(4x\\) buttons and tin C has \\(x-7\\) buttons.\n\n\\[\nx+4x+(x-7)=137\n\\]\n\n\\[\n6x-7=137\n\\]\n\n\\[\n6x=144\n\\]\n\n\\[\nx=24\n\\]"
-      },
-      {
-        "title": "Tin C has",
-        "body": "Tin C has\n\n\\[\n24-7=17\n\\]"
+        "title": "Buttons in tin C",
+        "body": "\\[\n24-7=17\n\\]"
       }
     ],
-    "finalAnswer": "\\(17\\) buttons."
+    "finalAnswer": "\\(17\\) buttons"
   },
   "all::Jan2020_P2HR__Q22__p23-23__m04__Sequences": {
     "status": "checked",
@@ -2876,33 +3553,29 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(6\\)."
   },
   "all::Jan2020_P2HR__Q16__p16-17__m08__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Calculate probability",
-        "body": "For Cody:\n\n\\[\nP(A\\text{ odd})=\\frac{7}{10},\\qquad P(A\\text{ even})=\\frac{3}{10}\n\\]\n\n\\[\nP(B\\text{ odd})=\\frac{7}{12},\\qquad P(B\\text{ even})=\\frac{5}{12}\n\\]"
+        "title": "(a) Complete the tree",
+        "body": "Bag A: odd \\(\\frac{7}{10}\\), even \\(\\frac{3}{10}\\).\n\nBag B (on both branches): odd \\(\\frac{7}{12}\\), even \\(\\frac{5}{12}\\)."
       },
       {
-        "title": "Calculate probability",
-        "body": "An odd total comes from odd + even or even + odd:\n\n\\[\n\\frac{7}{10}\\times\\frac{5}{12}+\\frac{3}{10}\\times\\frac{7}{12}\n=\\frac{7}{15}\n\\]"
+        "title": "(b) Odd total = odd + even or even + odd",
+        "body": "\\[\n\\frac{7}{10}\\times\\frac{5}{12}+\\frac{3}{10}\\times\\frac{7}{12}=\\frac{35}{120}+\\frac{21}{120}=\\frac{56}{120}=\\frac{7}{15}\n\\]"
       },
       {
-        "title": "Cody takes two even counters",
-        "body": "Cody takes two even counters with probability\n\n\\[\n\\frac{3}{10}\\times\\frac{5}{12}=\\frac18\n\\]"
+        "title": "(c) Probability Harriet takes an even counter",
+        "body": "Cody takes two even counters with probability \\(\\frac{3}{10}\\times\\frac{5}{12}=\\frac{1}{8}\\).\n\n\\[\n\\frac18\\times p=\\frac{3}{100} \\;\\Rightarrow\\; p=\\frac{24}{100}=\\frac{6}{25}\n\\]"
       },
       {
-        "title": "Given Cody and Harriet both",
-        "body": "Given Cody and Harriet both take two even counters:\n\n\\[\n\\frac18\\times P(H\\text{ even})=\\frac{3}{100}\n\\]\n\n\\[\nP(H\\text{ even})=\\frac{6}{25}\n\\]"
-      },
-      {
-        "title": "Calculate probability",
-        "body": "So Harriet's bag must have at least \\(25\\) counters."
+        "title": "(c) Least number of counters",
+        "body": "\\(\\frac{6}{25}\\) is in its simplest form, so the number of counters must be a multiple of \\(25\\). The least number is \\(25\\)."
       }
     ],
-    "finalAnswer": "\\(\\frac{7}{15}\\), and \\(25\\)."
+    "finalAnswer": "(a) \\(\\frac{3}{10}\\); \\(\\frac{7}{12},\\frac{5}{12}\\) on both branches (b) \\(\\dfrac{7}{15}\\) (c) \\(25\\)"
   },
   "expertise::Jan2020_P2HR__Q21__p22-22__m07__Algebraic-Roots-and-Indices": {
     "status": "checked",
@@ -3739,21 +4412,21 @@ window.SOLUTION_DATA = {
     "finalAnswer": "median about \\(146\\text{ g}\\), and \\(d\\approx 150\\)."
   },
   "all::Jan2021_P1H__Q14__p16-16__m05__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Winning both frames",
-        "body": "Winning both frames:\n\n\\[\n0.6\\times 0.9=0.54\n\\]"
+        "title": "(a) Win both games",
+        "body": "Multiply along the \"win, win\" branch:\n\n\\[\n0.6\\times0.9=0.54\n\\]"
       },
       {
-        "title": "Winning exactly one frame",
-        "body": "Winning exactly one frame:\n\n\\[\n0.6\\times 0.1+0.4\\times 0.25\n\\]\n\n\\[\n=0.06+0.10=0.16\n\\]"
+        "title": "(b) Win exactly one game",
+        "body": "Win then lose, or lose then win:\n\n\\[\n0.6\\times0.1+0.4\\times0.25=0.06+0.10=0.16\n\\]"
       }
     ],
-    "finalAnswer": "\\(0.54\\), \\(0.16\\)."
+    "finalAnswer": "(a) \\(0.54\\) (b) \\(0.16\\)"
   },
   "expertise::Jan2021_P1H__Q24__p28-28__m04__Sequences": {
     "status": "checked",
@@ -5902,27 +6575,29 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(\\boxed{18}\\)"
   },
   "all::Jan2021_P2HR__Q16__p15-15__m05__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Calculate probability",
-        "body": "\\[\nn(A\\cap B)=62+30-68=24\n\\]"
+        "title": "(a) Find the intersection",
+        "body": "\\[\nn(A\\cap B)=n(A)+n(B)-n(A\\cup B)=62+30-68=24\n\\]"
       },
       {
-        "title": "Calculate probability",
-        "body": "So the Venn diagram has:\n\n\\[\nA\\text{ only}=38,\\quad B\\text{ only}=6,\\quad A\\cap B=24,\\quad \\text{outside}=12\n\\]\n\n\\[\nP(A\\cap B)=\\frac{24}{80}=\\frac{3}{10}\n\\]\n\n\\[\nP(A\\cup B')=\\frac{74}{80}=\\frac{37}{40}\n\\]",
-        "figures": [
-          {
-            "src": "assets/solution-diagrams/igcse/Jan2021_P2HR__Q16__p15-15__m05__Probability-Diagrams-Venn-and-Tree-Diagrams.png",
-            "alt": "Completed Venn diagram"
-          }
-        ]
+        "title": "(a) Fill every region",
+        "body": "\\(A\\) only \\(=62-24=38\\), \\(B\\) only \\(=30-24=6\\), outside \\(=80-68=12\\)."
+      },
+      {
+        "title": "(b)(i) In both A and B",
+        "body": "\\[\nP(A\\cap B)=\\frac{24}{80}=\\frac{3}{10}\n\\]"
+      },
+      {
+        "title": "(b)(ii) In A or not in B",
+        "body": "\\(A\\cup B'\\) is everything except \"\\(B\\) only\": \\(80-6=74\\).\n\n\\[\nP(A\\cup B')=\\frac{74}{80}=\\frac{37}{40}\n\\]"
       }
     ],
-    "finalAnswer": "\\(\\frac{3}{10}\\), \\(\\frac{37}{40}\\)."
+    "finalAnswer": "(a) \\(38, 24, 6\\), outside \\(12\\) (b)(i) \\(\\frac{3}{10}\\) (ii) \\(\\frac{37}{40}\\)"
   },
   "expertise::Jan2021_P2HR__Q20__p19-19__m05__Circles-Arcs-and-Sectors": {
     "status": "checked",
@@ -6671,25 +7346,21 @@ window.SOLUTION_DATA = {
     "finalAnswer": "cumulative frequencies \\(7,33,57,71,78,80\\), median about \\(23\\) minutes, probability about \\(0.095\\)."
   },
   "all::Jan2022_P1H__Q14__p15-15__m04__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Packet A",
-        "body": "Packet A:\n\n\\[\nP(\\text{sunflower})=\\frac{7}{12}\n\\]"
+        "title": "(a) Complete the tree",
+        "body": "Packet A: not sunflower \\(1-\\frac{7}{12}=\\frac{5}{12}\\).\n\nPacket B (on both branches): sunflower \\(\\frac{8}{15}\\), not sunflower \\(\\frac{7}{15}\\)."
       },
       {
-        "title": "Packet B",
-        "body": "Packet B:\n\n\\[\nP(\\text{sunflower})=\\frac{8}{15}\n\\]"
-      },
-      {
-        "title": "Calculate probability",
-        "body": "So\n\n\\[\nP(\\text{two sunflower seeds})=\\frac{7}{12}\\times\\frac{8}{15}\n\\]\n\n\\[\n=\\frac{14}{45}\n\\]"
+        "title": "(b) Two sunflower seeds",
+        "body": "\\[\n\\frac{7}{12}\\times\\frac{8}{15}=\\frac{56}{180}=\\frac{14}{45}\n\\]"
       }
     ],
-    "finalAnswer": "\\(\\frac{14}{45}\\)."
+    "finalAnswer": "(a) \\(\\frac{5}{12}\\); \\(\\frac{8}{15},\\frac{7}{15}\\) on both branches (b) \\(\\dfrac{14}{45}\\)"
   },
   "expertise::Jan2022_P1H__Q20__p21-21__m04__Completing-the-Square": {
     "status": "checked",
@@ -7483,38 +8154,42 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(102\\) watermelons"
   },
   "all::Jan2022_P1HR__Q02__p04-04__m02__Probability-Toolkit": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "Calculate probability",
-        "body": "\\[\n0.65\\times 300=195\n\\]"
+        "title": "Expected number = probability × number of games",
+        "body": "\\[\n0.65\\times300=195\n\\]"
       }
     ],
-    "finalAnswer": "\\(195\\)."
+    "finalAnswer": "\\(195\\)"
   },
   "all::Jan2022_P1HR__Q13__p16-17__m07__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Hector s probability of taking",
-        "body": "Hector's probability of taking one green and one red is\n\n\\[\n2\\times\\frac{7}{12}\\times\\frac{5}{12}=\\frac{35}{72}\n\\]"
+        "title": "(a) Complete the tree (counter is replaced)",
+        "body": "First counter red: \\(\\frac{5}{12}\\).\n\nAfter green, second counter: green \\(\\frac{7}{12}\\), red \\(\\frac{5}{12}\\)."
       },
       {
-        "title": "Calculate probability",
-        "body": "For all three counters to be different, Meghan must take a blue counter."
+        "title": "(b) Both red",
+        "body": "\\[\n\\frac{5}{12}\\times\\frac{5}{12}=\\frac{25}{144}\n\\]"
       },
       {
-        "title": "Let the number of blue",
-        "body": "Let the number of blue counters in Meghan's jar be \\(b\\). There are \\(15\\) counters in the jar.\n\n\\[\n\\frac{35}{72}\\times \\frac{b}{15}=\\frac{7}{24}\n\\]\n\n\\[\n\\frac{b}{15}=\\frac35\n\\]\n\n\\[\nb=9\n\\]"
+        "title": "(c) What \"three different colours\" needs",
+        "body": "Hector only has green and red, so he must take one green and one red (either order), and Meghan must take blue.\n\n\\[\nP(\\text{one green, one red})=2\\times\\frac{7}{12}\\times\\frac{5}{12}=\\frac{35}{72}\n\\]"
+      },
+      {
+        "title": "(c) Solve for the number of blue counters",
+        "body": "Let \\(b\\) be the number of blue counters out of \\(15\\).\n\n\\[\n\\frac{35}{72}\\times\\frac{b}{15}=\\frac{7}{24} \\;\\Rightarrow\\; \\frac{b}{15}=\\frac{7}{24}\\times\\frac{72}{35}=\\frac{3}{5} \\;\\Rightarrow\\; b=9\n\\]"
       }
     ],
-    "finalAnswer": "\\(9\\) blue counters."
+    "finalAnswer": "(a) \\(\\frac{5}{12}\\); \\(\\frac{7}{12},\\frac{5}{12}\\) (b) \\(\\dfrac{25}{144}\\) (c) \\(9\\)"
   },
   "expertise::Jan2022_P1HR__Q22__p27-27__m04__Rounding-Estimation-and-Bounds": {
     "status": "checked",
@@ -9211,21 +9886,21 @@ window.SOLUTION_DATA = {
     "finalAnswer": "median about \\(49\\), about \\(45\\) students, IQR about \\(17\\), Luis is correct, probability about \\(0.025\\)."
   },
   "all::Jan2022_P2HR__Q01__p03-03__m04__Probability-Toolkit": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "The missing probability is",
-        "body": "The missing probability is\n\n\\[\n1-0.38-0.24-0.16=0.22\n\\]"
+        "title": "(a) Probabilities add to 1",
+        "body": "\\[\nP(\\text{Nilgiri})=1-(0.38+0.24+0.16)=1-0.78=0.22\n\\]"
       },
       {
-        "title": "Calculate probability",
-        "body": "So\n\n\\[\nP(\\text{Darjeeling or Rize})=0.24+0.16=0.40\n\\]"
+        "title": "(b) Darjeeling or Rize",
+        "body": "\\[\n0.24+0.16=0.40\n\\]"
       }
     ],
-    "finalAnswer": "Nilgiri \\(0.22\\), Darjeeling or Rize \\(0.40\\)."
+    "finalAnswer": "(a) \\(0.22\\) (b) \\(0.4\\)"
   },
   "expertise::Jan2022_P2HR__Q20__p25-25__m04__Direct-and-Inverse-Proportion": {
     "status": "checked",
@@ -9893,63 +10568,67 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(87\\) children"
   },
   "all::Jun2022_P1H__Q02__p04-04__m04__Probability-Toolkit": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "The known probabilities are",
-        "body": "The known probabilities are\n\n\\[\n0.26+0.18=0.44\n\\]"
+        "title": "Probabilities of landing on 2 and on 4",
+        "body": "The probabilities add to \\(1\\), and \\(P(2)=P(4)\\):\n\n\\[\n1-(0.26+0.18)=0.56,\\qquad P(4)=0.56\\div2=0.28\n\\]"
       },
       {
-        "title": "Calculate probability",
-        "body": "So the probabilities for numbers \\(2\\) and \\(4\\) add to\n\n\\[\n1-0.44=0.56\n\\]"
+        "title": "Number of spins",
+        "body": "An estimate of \\(45\\) for the number 3 means\n\n\\[\n0.18\\times n=45 \\;\\Rightarrow\\; n=250\n\\]"
       },
       {
-        "title": "Calculate probability",
-        "body": "They are equal, so each is\n\n\\[\n0.56\\div 2=0.28\n\\]"
-      },
-      {
-        "title": "Calculate probability",
-        "body": "If the expected frequency for number \\(3\\) is \\(45\\),\n\n\\[\n0.18n=45\n\\]\n\n\\[\nn=250\n\\]"
-      },
-      {
-        "title": "Expected frequency for number",
-        "body": "Expected frequency for number \\(4\\):\n\n\\[\n250\\times 0.28=70\n\\]"
+        "title": "Estimate for landing on 4",
+        "body": "\\[\n250\\times0.28=70\n\\]"
       }
     ],
-    "finalAnswer": "\\(0.28\\), \\(250\\) spins, \\(70\\)."
+    "finalAnswer": "\\(70\\)"
   },
   "all::Jun2022_P1H__Q15__p16-16__m04__Probability-Toolkit": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "To have a total score",
-        "body": "To have a total score of \\(0\\) after three games:"
+        "title": "Ways to score a total of 0",
+        "body": "Three draws (\\(0+0+0\\)), or one win and two losses (\\(10-5-5=0\\)) in any order."
       },
       {
-        "title": "Calculate probability",
-        "body": "- all three games are draws, or\n- one game is won and two games are lost.\n\n\\[\nP(\\text{DDD})=0.5^3=0.125\n\\]\n\n\\[\nP(\\text{one win and two losses})=3(0.3)(0.2)^2=0.036\n\\]\n\n\\[\n0.125+0.036=0.161\n\\]"
+        "title": "Three draws",
+        "body": "\\[\n0.5^3=0.125\n\\]"
+      },
+      {
+        "title": "One win and two losses (3 orders)",
+        "body": "\\[\n3\\times0.3\\times0.2\\times0.2=0.036\n\\]"
+      },
+      {
+        "title": "Add the cases",
+        "body": "\\[\n0.125+0.036=0.161\n\\]"
       }
     ],
-    "finalAnswer": "\\(0.161\\)."
+    "finalAnswer": "\\(0.161\\)"
   },
   "all::Jun2022_P1H__Q12__p13-13__m04__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "The probability Rudolph uses both",
-        "body": "The probability Rudolph uses both machines is\n\n\\[\n0.8\\times 0.3=0.24\n\\]"
+        "title": "(a) Complete the tree",
+        "body": "Treadmill: use \\(0.8\\), not use \\(0.2\\).\n\nAfter using the treadmill: cross trainer \\(0.3\\), not \\(0.7\\).\n\nAfter not using the treadmill: cross trainer \\(0.6\\), not \\(0.4\\)."
+      },
+      {
+        "title": "(b) Treadmill and cross trainer",
+        "body": "\\[\n0.8\\times0.3=0.24\n\\]"
       }
     ],
-    "finalAnswer": "\\(0.24\\)."
+    "finalAnswer": "(a) \\(0.8, 0.2\\); \\(0.3, 0.7\\); \\(0.6, 0.4\\) (b) \\(0.24\\)"
   },
   "expertise::Jun2022_P1H__Q24__p26-26__m04__Completing-the-Square": {
     "status": "checked",
@@ -10640,25 +11319,25 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(14\\) trees."
   },
   "all::Jun2022_P1HR__Q01__p03-03__m04__Probability-Toolkit": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "Calculate probability",
-        "body": "\\[\nP(\\text{red or yellow})=0.25+0.20=0.45\n\\]"
+        "title": "(a) Red or yellow",
+        "body": "\\[\n0.25+0.2=0.45\n\\]"
       },
       {
-        "title": "The purple probability is",
-        "body": "The purple probability is\n\n\\[\n1-0.25-0.20-0.20=0.35\n\\]"
+        "title": "(b) Probability of purple",
+        "body": "\\[\n1-(0.25+0.2+0.2)=0.35\n\\]"
       },
       {
-        "title": "Expected purple spins",
-        "body": "Expected purple spins:\n\n\\[\n300\\times 0.35=105\n\\]"
+        "title": "(b) Estimate for 300 spins",
+        "body": "\\[\n300\\times0.35=105\n\\]"
       }
     ],
-    "finalAnswer": "\\(0.45\\), \\(0.35\\), \\(105\\)."
+    "finalAnswer": "(a) \\(0.45\\) (b) \\(105\\)"
   },
   "all::Jun2022_P1HR__Q24__p27-27__m05__Probability-Toolkit": {
     "status": "checked",
@@ -11479,31 +12158,37 @@ window.SOLUTION_DATA = {
     "finalAnswer": "cumulative frequencies \\(7,32,52,66,74,80\\), median about \\(34\\) years, about \\(42\\) people going to work."
   },
   "all::Jun2022_P2H__Q16__p16-17__m08__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "There are farmers and have",
-        "body": "There are \\(100\\) farmers and \\(20\\) have none of the three animals, so \\(80\\) are in the Venn diagram."
+        "title": "(a) Start from the centre",
+        "body": "All three: \\(6\\). Then the \"two only\" regions:\n\n\\[\nG\\cap S\\text{ only}=11-6=5,\\quad S\\cap C\\text{ only}=17-6=11,\\quad G\\cap C\\text{ only}=18-6=12\n\\]"
       },
       {
-        "title": "Pair only regions",
-        "body": "Pair-only regions:\n\n\\[\nS\\cap G\\text{ only}=11-6=5\n\\]\n\n\\[\nS\\cap C\\text{ only}=17-6=11\n\\]\n\n\\[\nG\\cap C\\text{ only}=18-6=12\n\\]\n\n\\[\nS\\text{ only}=31-5-11-6=9\n\\]\n\n\\[\nC\\text{ only}=53-11-12-6=24\n\\]"
+        "title": "(a) Single-animal regions",
+        "body": "\\[\nS\\text{ only}=31-5-11-6=9,\\qquad C\\text{ only}=53-11-12-6=24\n\\]\n\n\\(80\\) farmers are inside the circles (\\(100-20\\)), so\n\n\\[\nG\\text{ only}=80-(9+24+5+11+12+6)=13\n\\]\n\nOutside the circles: \\(20\\)."
       },
       {
-        "title": "Calculate probability",
-        "body": "Then\n\n\\[\nG\\text{ only}=80-(9+24+5+11+12+6)=13\n\\]\n\n\\[\nn(G)=13+5+12+6=36\n\\]\n\n\\[\nn((G\\cup S)')=20+24=44\n\\]\n\n\\[\nn(G'\\cap C)=24+11=35\n\\]\n\n\\[\nP(G\\mid C)=\\frac{18}{53}\n\\]",
-        "figures": [
-          {
-            "src": "assets/solution-diagrams/igcse/Jun2022_P2H__Q16__p16-17__m08__Probability-Diagrams-Venn-and-Tree-Diagrams.png",
-            "alt": "Completed Venn diagram"
-          }
-        ]
+        "title": "(b)(i) n(G)",
+        "body": "\\[\n13+5+12+6=36\n\\]"
+      },
+      {
+        "title": "(b)(ii) Not in G or S",
+        "body": "Only \"\\(C\\) only\" and the outside region: \\(24+20=44\\)."
+      },
+      {
+        "title": "(b)(iii) In C but not in G",
+        "body": "\"\\(C\\) only\" and \"\\(S\\cap C\\) only\": \\(24+11=35\\)."
+      },
+      {
+        "title": "(c) Chickens farmers who also have goats",
+        "body": "\\(53\\) farmers have chickens; \\(12+6=18\\) of them also have goats.\n\n\\[\n\\frac{18}{53}\n\\]"
       }
     ],
-    "finalAnswer": "\\(36\\), \\(44\\), \\(35\\), \\(\\frac{18}{53}\\)."
+    "finalAnswer": "(a) \\(G\\) only 13, \\(S\\) only 9, \\(C\\) only 24, \\(G\\cap S\\) only 5, \\(S\\cap C\\) only 11, \\(G\\cap C\\) only 12, centre 6, outside 20 (b)(i) \\(36\\) (ii) \\(44\\) (iii) \\(35\\) (c) \\(\\dfrac{18}{53}\\)"
   },
   "expertise::Jun2022_P2H__Q24__p24-24__m03__Algebraic-Roots-and-Indices": {
     "status": "checked",
@@ -12359,17 +13044,25 @@ window.SOLUTION_DATA = {
     "finalAnswer": "median about \\(27.4\\) years, IQR about \\(25.1\\) years, about \\(11\\) people older than \\(55\\)."
   },
   "all::Jun2022_P2HR__Q14__p16-16__m03__Combined-and-Conditional-Probability": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Combined & Conditional Probability. The tag is correct.",
     "steps": [
       {
-        "title": "The complement of at least",
-        "body": "The complement of \"at least one even number\" is \"both numbers are odd\".\n\n\\[\nP(\\text{odd})=\\frac12\n\\]\n\n\\[\nP(\\text{both odd})=\\frac12\\times\\frac12=\\frac14\n\\]\n\n\\[\nP(\\text{at least one even})=1-\\frac14=\\frac34\n\\]"
+        "title": "Use the complement",
+        "body": "\"At least one even\" is the opposite of \"all four dice are odd\". Each die is odd with probability \\(\\frac12\\)."
+      },
+      {
+        "title": "All four dice odd",
+        "body": "\\[\n\\left(\\frac12\\right)^4=\\frac{1}{16}\n\\]"
+      },
+      {
+        "title": "At least one even",
+        "body": "\\[\n1-\\frac{1}{16}=\\frac{15}{16}\n\\]"
       }
     ],
-    "finalAnswer": "\\(\\frac34\\)."
+    "finalAnswer": "\\(\\dfrac{15}{16}\\)"
   },
   "expertise::Jun2022_P2HR__Q23__p25-25__m03__Algebraic-Fractions": {
     "status": "checked",
@@ -13138,34 +13831,38 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(12\\)."
   },
   "all::Jun2023_P2H__Q02__p04-04__m03__Probability-Toolkit": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "The probability of pink is",
-        "body": "The probability of pink is\n\n\\[\n1-0.32-0.13-0.28=0.27\n\\]"
+        "title": "Probability of pink",
+        "body": "\\[\n1-(0.32+0.13+0.28)=1-0.73=0.27\n\\]"
       },
       {
-        "title": "Expected number of pink sweets",
-        "body": "Expected number of pink sweets:\n\n\\[\n200\\times 0.27=54\n\\]"
+        "title": "Estimate for 200 spins",
+        "body": "\\[\n200\\times0.27=54\n\\]"
       }
     ],
-    "finalAnswer": "\\(54\\)."
+    "finalAnswer": "\\(54\\)"
   },
   "all::Jun2023_P2H__Q13__p13-13__m04__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Dice A has yellow faces",
-        "body": "Dice A has \\(4\\) yellow faces out of \\(6\\).\nDice B has \\(5\\) yellow faces out of \\(6\\).\n\n\\[\nP(\\text{both yellow})=\\frac46\\times\\frac56\n\\]\n\n\\[\n=\\frac59\n\\]"
+        "title": "(a) Complete the tree",
+        "body": "Dice A: yellow \\(\\frac{4}{6}\\).\n\nDice B (on both branches): red \\(\\frac{1}{6}\\), yellow \\(\\frac{5}{6}\\)."
+      },
+      {
+        "title": "(b) Both yellow",
+        "body": "\\[\n\\frac46\\times\\frac56=\\frac{20}{36}=\\frac59\n\\]"
       }
     ],
-    "finalAnswer": "\\(\\frac59\\)."
+    "finalAnswer": "(a) \\(\\frac46\\); \\(\\frac16,\\frac56\\) on both branches (b) \\(\\dfrac59\\)"
   },
   "all::Jun2023_P2H__Q20__p20-20__m03__Combined-and-Conditional-Probability": {
     "status": "checked",
@@ -13971,46 +14668,38 @@ window.SOLUTION_DATA = {
     "finalAnswer": "Akari's IQR is \\(6\\), and Akari is more consistent."
   },
   "all::Jun2023_P2HR__Q15__p16-16__m03__Probability-Toolkit": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "Calculate probability",
-        "body": "\\[\nP(\\text{three heads})=\\frac{27}{64}\n\\]"
+        "title": "Find the probability of a head",
+        "body": "\\[\nP(H)^3=\\frac{27}{64} \\;\\Rightarrow\\; P(H)=\\sqrt[3]{\\frac{27}{64}}=\\frac34\n\\]"
       },
       {
-        "title": "Calculate probability",
-        "body": "So\n\n\\[\nP(H)^3=\\frac{27}{64}\n\\]\n\n\\[\nP(H)=\\frac{3}{4}\n\\]"
-      },
-      {
-        "title": "Calculate probability",
-        "body": "Therefore\n\n\\[\nP(T)=\\frac{1}{4}\n\\]\n\n\\[\nP(\\text{three tails})=\\left(\\frac14\\right)^3=\\frac{1}{64}\n\\]"
+        "title": "Three tails",
+        "body": "\\(P(T)=1-\\frac34=\\frac14\\), so\n\n\\[\nP(TTT)=\\left(\\frac14\\right)^3=\\frac{1}{64}\n\\]"
       }
     ],
-    "finalAnswer": "\\(\\frac{1}{64}\\)."
+    "finalAnswer": "\\(\\dfrac{1}{64}\\)"
   },
   "all::Jun2023_P2HR__Q19__p19-19__m04__Probability-Toolkit": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "There are adults",
-        "body": "There are \\(30\\) adults.\n\n\\[\nn(B)=19,\\quad n(D)=15,\\quad n(\\text{neither})=4\n\\]"
+        "title": "Adults who booked breakfast and dinner",
+        "body": "\\(30-4=26\\) adults booked at least one meal.\n\n\\[\nn(B\\cap D)=19+15-26=8\n\\]"
       },
       {
-        "title": "Calculate probability",
-        "body": "So\n\n\\[\nn(B\\cup D)=30-4=26\n\\]\n\n\\[\nn(B\\cap D)=19+15-26=8\n\\]"
-      },
-      {
-        "title": "The probability that two adults",
-        "body": "The probability that two adults both had breakfast and dinner is\n\n\\[\n\\frac{8}{30}\\times\\frac{7}{29}=\\frac{28}{435}\n\\]"
+        "title": "Choose two of them (without replacement)",
+        "body": "\\[\n\\frac{8}{30}\\times\\frac{7}{29}=\\frac{56}{870}=\\frac{28}{435}\n\\]"
       }
     ],
-    "finalAnswer": "\\(\\frac{28}{435}\\)."
+    "finalAnswer": "\\(\\dfrac{28}{435}\\)"
   },
   "expertise::Jun2023_P2HR__Q23__p24-24__m05__Sequences": {
     "status": "checked",
@@ -14809,62 +15498,58 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(12403\\)."
   },
   "all::Jun2024_P2H__Q13__p12-13__m07__Cumulative-Frequency-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "The cumulative frequencies are",
-        "body": "The cumulative frequencies are\n\n\\[\n7,\\ 24,\\ 42,\\ 56,\\ 66,\\ 70\n\\]"
+        "title": "(a) Running totals",
+        "body": "\\[\n7,\\ 24,\\ 42,\\ 56,\\ 66,\\ 70\n\\]"
       },
       {
-        "title": "Plot these points and join",
-        "body": "Plot these points and join them with a smooth curve:\n\n\\[\n(0,0),(10,7),(20,24),(30,42),(40,56),(50,66),(60,70)\n\\]",
-        "figures": [
-          {
-            "src": "assets/solution-diagrams/igcse/Jun2024_P2H__Q13__p12-13__m07__Cumulative-Frequency-Diagrams.png",
-            "alt": "Cumulative frequency graph"
-          }
-        ]
+        "title": "(b) Plot at the upper class boundaries",
+        "body": "Plot \\((10,7),(20,24),(30,42),(40,56),(50,66),(60,70)\\), start at \\((0,0)\\), and join with a smooth curve."
       },
       {
-        "title": "Use cumulative frequency",
-        "body": "For \\(70\\) teachers,\n\n\\[\nQ_1=17.5,\\qquad Q_3=52.5\n\\]"
+        "title": "(c) Read the quartiles",
+        "body": "Lower quartile at \\(\\frac{70}{4}=17.5\\): about \\(16\\) km. Upper quartile at \\(\\frac34\\times70=52.5\\): about \\(37.5\\) km.\n\n\\[\n\\text{IQR}\\approx37.5-16=21.5\\text{ km}\n\\]\n\n(Answers from about \\(19\\) to \\(23\\) km are accepted, depending on the curve.)"
       },
       {
-        "title": "Use cumulative frequency",
-        "body": "From the graph,\n\n\\[\nQ_1 \\approx 16.2,\\qquad Q_3 \\approx 37.5\n\\]\n\n\\[\n\\text{IQR}\\approx 37.5-16.2=21.3\n\\]"
-      },
-      {
-        "title": "Use cumulative frequency",
-        "body": "At \\(46\\) km, the cumulative frequency is about \\(62\\).\n\n\\[\n70-62=8\n\\]"
+        "title": "(d) More than 46 km",
+        "body": "At \\(46\\) km the curve reads about \\(62\\), so\n\n\\[\n70-62=8\\text{ teachers}\n\\]"
       }
     ],
-    "finalAnswer": "IQR about \\(21\\) km, and about \\(8\\) teachers."
+    "finalAnswer": "(a) \\(7, 24, 42, 56, 66, 70\\) (c) about \\(21\\) km (d) about \\(8\\)"
   },
   "all::Jun2024_P2H__Q16__p16-17__m07__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "The triple intersection is",
-        "body": "The triple intersection is \\(9\\).\n\n\\[\nK\\cap P\\text{ only}=17-9=8\n\\]\n\n\\[\nP\\cap E\\text{ only}=16-9=7\n\\]\n\n\\[\nK\\cap E\\text{ only}=20-9=11\n\\]\n\n\\[\nP\\text{ only}=28-8-7-9=4\n\\]\n\n\\[\nE\\text{ only}=39-11-7-9=12\n\\]"
+        "title": "(a) Start from the centre",
+        "body": "All three: \\(9\\).\n\n\\[\nK\\cap P\\text{ only}=17-9=8,\\quad P\\cap E\\text{ only}=16-9=7,\\quad K\\cap E\\text{ only}=20-9=11\n\\]"
       },
       {
-        "title": "There are students inside the",
-        "body": "There are \\(60-2=58\\) students inside the Venn diagram.\n\n\\[\nK\\text{ only}=58-(8+7+11+9+4+12)=7\n\\]\n\n\\[\nP(K\\mid P)=\\frac{17}{28}\n\\]\n\n\\[\nn(P\\cap K')=4+7=11\n\\]\n\n\\[\nn((P\\cup E)\\cap K)=8+11+9=28\n\\]",
-        "figures": [
-          {
-            "src": "assets/solution-diagrams/igcse/Jun2024_P2H__Q16__p16-17__m07__Probability-Diagrams-Venn-and-Tree-Diagrams.png",
-            "alt": "Completed Venn diagram"
-          }
-        ]
+        "title": "(a) Single regions",
+        "body": "\\[\nP\\text{ only}=28-8-7-9=4,\\qquad E\\text{ only}=39-11-7-9=12\n\\]\n\n\\(58\\) students are inside the circles (\\(60-2\\)):\n\n\\[\nK\\text{ only}=58-(8+7+11+9+4+12)=7\n\\]\n\nOutside: \\(2\\)."
+      },
+      {
+        "title": "(b) Knitting, given photography",
+        "body": "\\(28\\) chose photography; \\(8+9=17\\) of them also chose knitting.\n\n\\[\n\\frac{17}{28}\n\\]"
+      },
+      {
+        "title": "(c) Photography but not knitting",
+        "body": "\\(P\\) only and \\(P\\cap E\\) only: \\(4+7=11\\)."
+      },
+      {
+        "title": "(d) Knitting and (photography or embroidery)",
+        "body": "\\(8+9+11=28\\)"
       }
     ],
-    "finalAnswer": "\\(\\frac{17}{28}\\), \\(11\\), \\(28\\)."
+    "finalAnswer": "(a) \\(K\\) only 7, \\(P\\) only 4, \\(E\\) only 12, \\(K\\cap P\\) only 8, \\(P\\cap E\\) only 7, \\(K\\cap E\\) only 11, centre 9, outside 2 (b) \\(\\dfrac{17}{28}\\) (c) \\(11\\) (d) \\(28\\)"
   },
   "expertise::Jun2024_P2H__Q23__p23-23__m03__Algebraic-Roots-and-Indices": {
     "status": "checked",
@@ -15695,60 +16380,46 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(x=11,\\ y=14\\)."
   },
   "all::Jun2024_P2HR__Q11__p12-13__m07__Cumulative-Frequency-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "The cumulative frequencies are",
-        "body": "The cumulative frequencies are\n\n\\[\n6,\\ 17,\\ 27,\\ 42,\\ 53,\\ 60\n\\]"
+        "title": "(a) Plot the table",
+        "body": "Plot \\((5,6),(10,17),(15,27),(20,42),(25,53),(30,60)\\), start at \\((0,0)\\), and join with a smooth curve."
       },
       {
-        "title": "Plot",
-        "body": "Plot\n\n\\[\n(0,0),(5,6),(10,17),(15,27),(20,42),(25,53),(30,60)\n\\]",
-        "figures": [
-          {
-            "src": "assets/solution-diagrams/igcse/Jun2024_P2HR__Q11__p12-13__m07__Cumulative-Frequency-Diagrams.png",
-            "alt": "Cumulative frequency graph"
-          }
-        ]
+        "title": "(b) Read the quartiles",
+        "body": "Lower quartile at \\(\\frac{60}{4}=15\\): about \\(9\\) hours. Upper quartile at \\(45\\): about \\(21.4\\) hours.\n\n\\[\n\\text{IQR}\\approx21.4-9.1\\approx12.3\\text{ hours}\n\\]\n\n(Answers from about \\(11\\) to \\(14\\) are accepted, depending on the curve.)"
       },
       {
-        "title": "Use cumulative frequency",
-        "body": "For \\(60\\) workers,\n\n\\[\nQ_1=15,\\qquad Q_3=45\n\\]"
+        "title": "(c) 25 workers above W",
+        "body": "So \\(60-25=35\\) workers spent \\(W\\) hours or less. Reading across from \\(35\\): \\(W\\approx17.7\\)."
       },
       {
-        "title": "Use cumulative frequency",
-        "body": "From the graph,\n\n\\[\nQ_1\\approx 9.1,\\qquad Q_3\\approx 21.4\n\\]\n\n\\[\n\\text{IQR}\\approx 21.4-9.1=12.3\n\\]"
-      },
-      {
-        "title": "Use cumulative frequency",
-        "body": "If \\(25\\) workers did more than \\(W\\) hours, then \\(35\\) workers did \\(W\\) hours or less.\nFrom the graph, \\(W\\approx 17.7\\).\n\n\\[\nP(5<H\\leq 10)=\\frac{17-6}{60}=\\frac{11}{60}\n\\]"
+        "title": "(d) Between 5 and 10 hours",
+        "body": "\\(17-6=11\\) workers, so\n\n\\[\nP(5<H\\le10)=\\frac{11}{60}\n\\]"
       }
     ],
-    "finalAnswer": "IQR about \\(12.3\\), \\(W\\approx 17.7\\), and \\(\\frac{11}{60}\\)."
+    "finalAnswer": "(b) about \\(12.3\\) hours (c) \\(W\\approx17.7\\) (d) \\(\\dfrac{11}{60}\\)"
   },
   "all::Jun2024_P2HR__Q14__p16-16__m03__Probability-Toolkit": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "Calculate probability",
-        "body": "\\[\nP(H)=0.8\n\\]"
+        "title": "Find the probability of a 6",
+        "body": "The dice and the coin are independent:\n\n\\[\nP(6)\\times0.8=0.24 \\;\\Rightarrow\\; P(6)=0.3\n\\]"
       },
       {
-        "title": "Given",
-        "body": "Given\n\n\\[\nP(\\text{6 and H})=0.24\n\\]\n\n\\[\nP(6)=0.24\\div 0.8=0.3\n\\]"
-      },
-      {
-        "title": "Calculate probability",
-        "body": "Also\n\n\\[\nP(T)=1-0.8=0.2\n\\]\n\n\\[\nP(\\text{6 and T})=0.3\\times 0.2=0.06\n\\]"
+        "title": "6 and Tails",
+        "body": "\\(P(\\text{Tails})=1-0.8=0.2\\), so\n\n\\[\n0.3\\times0.2=0.06\n\\]"
       }
     ],
-    "finalAnswer": "\\(0.06\\)."
+    "finalAnswer": "\\(0.06\\)"
   },
   "expertise::Jun2024_P2HR__Q26__p30-30__m04__Algebraic-Fractions": {
     "status": "checked",
@@ -16580,17 +17251,21 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(\\frac{51}{76}\\)"
   },
   "all::Jun2025_P1H__Q14__p14-14__m04__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Calculate probability",
-        "body": "\\[\nP(\\text{loses badminton})=1-0.7=0.3\n\\]\n\n\\[\nP(\\text{loses tennis})=1-0.4=0.6\n\\]\n\n\\[\nP(\\text{loses both})=0.3\\times 0.6=0.18\n\\]"
+        "title": "(a) Complete the tree",
+        "body": "Badminton: win \\(0.7\\), lose \\(0.3\\).\n\nTennis (on both branches): win \\(0.4\\), lose \\(0.6\\)."
+      },
+      {
+        "title": "(b) Lose both",
+        "body": "\\[\n0.3\\times0.6=0.18\n\\]"
       }
     ],
-    "finalAnswer": "\\(0.18\\)."
+    "finalAnswer": "(a) \\(0.7, 0.3\\); \\(0.4, 0.6\\) on both branches (b) \\(0.18\\)"
   },
   "expertise::Jun2025_P1H__Q22__p21-21__m05__Simultaneous-Equations": {
     "status": "checked",
@@ -17310,89 +17985,75 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(8\\)."
   },
   "all::Jun2025_P1HR__Q12__p12-13__m06__Cumulative-Frequency-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "The cumulative frequencies are",
-        "body": "The cumulative frequencies are\n\n\\[\n12,\\ 27,\\ 47,\\ 65,\\ 74,\\ 80\n\\]"
+        "title": "(a) Running totals",
+        "body": "\\[\n12,\\ 27,\\ 47,\\ 65,\\ 74,\\ 80\n\\]"
       },
       {
-        "title": "Plot",
-        "body": "Plot\n\n\\[\n(10,0),(20,12),(30,27),(40,47),(50,65),(60,74),(70,80)\n\\]",
-        "figures": [
-          {
-            "src": "assets/solution-diagrams/igcse/Jun2025_P1HR__Q12__p12-13__m06__Cumulative-Frequency-Diagrams.png",
-            "alt": "Cumulative frequency graph"
-          }
-        ]
+        "title": "(b) Plot at the upper class boundaries",
+        "body": "Plot \\((20,12),(30,27),(40,47),(50,65),(60,74),(70,80)\\), start at \\((10,0)\\), and join with a smooth curve."
       },
       {
-        "title": "Use cumulative frequency",
-        "body": "At \\(46\\) years,\n\n\\[\nF(46)\\approx 47+\\frac{6}{10}(65-47)=57.8\n\\]"
+        "title": "(c) People aged 46 or under",
+        "body": "Read up from \\(46\\): about \\(58\\) people."
       },
       {
-        "title": "Convert standard form",
-        "body": "So the number older than \\(46\\) is\n\n\\[\n80-57.8=22.2\n\\]\n\n\\[\n\\frac{22.2}{80}\\times 100\\approx 27.75\\%\n\\]"
+        "title": "(c) Percentage older than 46",
+        "body": "\\(80-58=22\\) people.\n\n\\[\n\\frac{22}{80}\\times100\\approx28\\%\n\\]\n\n(About \\(26\\%\\) to \\(30\\%\\) is accepted, depending on the curve.)"
       }
     ],
-    "finalAnswer": "about \\(28\\%\\)."
+    "finalAnswer": "(a) \\(12, 27, 47, 65, 74, 80\\) (c) about \\(28\\%\\)"
   },
   "all::Jun2025_P1HR__Q04__p05-05__m05__Probability-Toolkit": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "Let the yellow probability be",
-        "body": "Let the yellow probability be \\(x\\). Then the red probability is \\(4x\\).\n\n\\[\n0.12+0.20+0.30+4x+x=1\n\\]\n\n\\[\n5x=0.38\n\\]\n\n\\[\nx=0.076\n\\]"
+        "title": "(a) Blue, green or purple",
+        "body": "\\[\n0.12+0.20+0.38=0.70\n\\]"
       },
       {
-        "title": "Calculate probability",
-        "body": "So\n\n\\[\nP(\\text{red})=4x=0.304\n\\]\n\n\\[\nP(\\text{blue, green or purple})=0.12+0.20+0.30=0.62\n\\]"
+        "title": "(b) Find x",
+        "body": "Red and yellow share the rest: \\(4x+x=1-0.70=0.30\\), so \\(5x=0.30\\) and \\(x=0.06\\)."
       },
       {
-        "title": "Expected red",
-        "body": "Expected red:\n\n\\[\n350\\times 0.304=106.4\n\\]"
+        "title": "(b) Probability of red",
+        "body": "\\[\n4x=4\\times0.06=0.24\n\\]"
+      },
+      {
+        "title": "(b) Estimate for 350 spins",
+        "body": "\\[\n350\\times0.24=84\n\\]"
       }
     ],
-    "finalAnswer": "\\(0.62\\), and about \\(106\\)."
+    "finalAnswer": "(a) \\(0.7\\) (b) \\(84\\)"
   },
   "all::Jun2025_P1HR__Q19__p19-19__m03__Probability-Toolkit": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "The counters are",
-        "body": "The counters are\n\n\\[\n1,\\ 1,\\ 2,\\ 3,\\ 3,\\ 3,\\ 5,\\ 6,\\ 6\n\\]"
+        "title": "Pairs with a sum less than 5",
+        "body": "The counters are \\(1,1,2,3,3,3,5,6,6\\). The only possible sums under \\(5\\) are \\(1+1\\), \\(1+2\\) and \\(1+3\\)."
       },
       {
-        "title": "There are",
-        "body": "There are\n\n\\[\n\\binom{9}{2}=36\n\\]"
+        "title": "First counter, then second (no replacement)",
+        "body": "\\[\nP(1,1)=\\frac29\\times\\frac18=\\frac{2}{72}\n\\]\n\n\\[\nP(1\\text{ and }2)=2\\times\\frac29\\times\\frac18=\\frac{4}{72},\\qquad P(1\\text{ and }3)=2\\times\\frac29\\times\\frac38=\\frac{12}{72}\n\\]"
       },
       {
-        "title": "ways to choose two counters",
-        "body": "ways to choose two counters."
-      },
-      {
-        "title": "Calculate probability",
-        "body": "For a sum less than \\(5\\), the pairs are:\n\n\\[\n(1,1),\\quad (1,2),\\quad (1,3)\n\\]"
-      },
-      {
-        "title": "Counting the repeated counters gives",
-        "body": "Counting the repeated counters gives\n\n\\[\n1+2+6=9\n\\]"
-      },
-      {
-        "title": "Calculate probability",
-        "body": "So\n\n\\[\nP(\\text{sum}<5)=\\frac{9}{36}=\\frac14\n\\]"
+        "title": "Add the cases",
+        "body": "\\[\n\\frac{2+4+12}{72}=\\frac{18}{72}=\\frac14\n\\]"
       }
     ],
-    "finalAnswer": "\\(\\frac14\\)."
+    "finalAnswer": "\\(\\dfrac14\\)"
   },
   "expertise::Jun2025_P1HR__Q22__p22-22__m05__Simultaneous-Equations": {
     "status": "checked",
@@ -18175,64 +18836,50 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(4,\\ 6,\\ 9\\)."
   },
   "all::Jun2025_P2H__Q13__p12-13__m06__Cumulative-Frequency-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "The cumulative frequencies are",
-        "body": "The cumulative frequencies are\n\n\\[\n8,\\ 21,\\ 33,\\ 50,\\ 57,\\ 60\n\\]"
+        "title": "(a) Running totals",
+        "body": "\\[\n8,\\ 21,\\ 33,\\ 50,\\ 57,\\ 60\n\\]"
       },
       {
-        "title": "Plot",
-        "body": "Plot\n\n\\[\n(0,0),(10,8),(20,21),(30,33),(40,50),(50,57),(60,60)\n\\]",
-        "figures": [
-          {
-            "src": "assets/solution-diagrams/igcse/Jun2025_P2H__Q13__p12-13__m06__Cumulative-Frequency-Diagrams.png",
-            "alt": "Cumulative frequency graph"
-          }
-        ]
+        "title": "(b) Plot at the upper class boundaries",
+        "body": "Plot \\((10,8),(20,21),(30,33),(40,50),(50,57),(60,60)\\), start at \\((0,0)\\), and join with a smooth curve."
       },
       {
-        "title": "The median is the th",
-        "body": "The median is the \\(30\\)th value.\n\n\\[\n20+\\frac{30-21}{33-21}\\times 10=27.5\n\\]"
+        "title": "(c) Median",
+        "body": "Read across from \\(\\frac{60}{2}=30\\): about \\(27.5\\) minutes."
       },
       {
-        "title": "Use cumulative frequency",
-        "body": "At \\(45\\) minutes,\n\n\\[\nF(45)\\approx 50+\\frac{5}{10}(57-50)=53.5\n\\]"
-      },
-      {
-        "title": "Use cumulative frequency",
-        "body": "So the number taking more than \\(45\\) minutes is\n\n\\[\n60-53.5=6.5\n\\]"
+        "title": "(d) More than 45 minutes",
+        "body": "At \\(45\\) minutes the curve reads about \\(54\\), so about \\(60-54=6\\) people. (Answers from about \\(5\\) to \\(8\\) are accepted, depending on the curve.)"
       }
     ],
-    "finalAnswer": "median about \\(27.5\\) minutes, and about \\(7\\) people."
+    "finalAnswer": "(a) \\(8, 21, 33, 50, 57, 60\\) (c) about \\(27.5\\) minutes (d) about \\(6\\)"
   },
   "all::Jun2025_P2H__Q11__p11-11__m03__Probability-Toolkit": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "There are counters that are",
-        "body": "There are \\(17+28=45\\) counters that are not orange.\n\n\\[\nP(\\text{orange})=\\frac49\n\\]"
+        "title": "Counters that are not orange",
+        "body": "\\(17+28=45\\) counters are not orange, and \\(P(\\text{not orange})=1-\\frac49=\\frac59\\)."
       },
       {
-        "title": "Calculate probability",
-        "body": "So\n\n\\[\nP(\\text{not orange})=\\frac59\n\\]"
+        "title": "Total number of counters",
+        "body": "\\[\n\\frac59\\times T=45 \\;\\Rightarrow\\; T=81\n\\]"
       },
       {
-        "title": "Calculate probability",
-        "body": "Let the total number of counters be \\(T\\).\n\n\\[\n\\frac{45}{T}=\\frac59\n\\]\n\n\\[\nT=81\n\\]"
-      },
-      {
-        "title": "Number of orange counters",
-        "body": "Number of orange counters:\n\n\\[\n81-45=36\n\\]"
+        "title": "Orange counters",
+        "body": "\\[\n81-45=36\n\\]"
       }
     ],
-    "finalAnswer": "\\(36\\)."
+    "finalAnswer": "\\(36\\)"
   },
   "all::Jun2025_P2H__Q20__p18-18__m06__Probability-Diagrams-Venn-and-Tree-Diagrams": {
     "status": "checked",
@@ -19154,33 +19801,29 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(\\frac{8}{29}\\) or \\(0.276\\) to 3 significant figures"
   },
   "all::Jun2025_P2HR__Q14__p14-15__m07__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Calculate probability",
-        "body": "Bag A has \\(5\\) red and \\(4\\) green beads:\n\n\\[\nP(A_R)=\\frac59,\\qquad P(A_G)=\\frac49\n\\]"
+        "title": "(a) Complete the tree",
+        "body": "Bag A: red \\(\\frac59\\), green \\(\\frac49\\).\n\nBag B (on both branches): red \\(\\frac{7}{10}\\), green \\(\\frac{3}{10}\\)."
       },
       {
-        "title": "Calculate probability",
-        "body": "Bag B has \\(7\\) red and \\(3\\) green beads:\n\n\\[\nP(B_R)=\\frac7{10},\\qquad P(B_G)=\\frac3{10}\n\\]"
+        "title": "(b) Two red beads",
+        "body": "\\[\n\\frac59\\times\\frac{7}{10}=\\frac{35}{90}=\\frac{7}{18}\n\\]"
       },
       {
-        "title": "Two red beads",
-        "body": "Two red beads:\n\n\\[\n\\frac59\\times\\frac7{10}=\\frac7{18}\n\\]"
+        "title": "(c) More red than green with three beads",
+        "body": "She needs at least two reds: RRR, RRG, RGR or GRR. The box gives red \\(\\frac{9}{11}\\), green \\(\\frac{2}{11}\\)."
       },
       {
-        "title": "Calculate probability",
-        "body": "For part (c), the box has\n\n\\[\nP(\\text{green})=\\frac2{11},\\qquad P(\\text{red})=\\frac9{11}\n\\]"
-      },
-      {
-        "title": "More red than green means",
-        "body": "More red than green means at least two red beads:\n\n\\[\nRRR+RRG+RGR+GRR\n\\]\n\n\\[\n\\frac59\\frac7{10}\\frac9{11}\n+\\frac59\\frac7{10}\\frac2{11}\n+\\frac59\\frac3{10}\\frac9{11}\n+\\frac49\\frac7{10}\\frac9{11}\n=\\frac{386}{495}\n\\]"
+        "title": "(c) Add the four cases",
+        "body": "\\[\n\\frac{5\\cdot7\\cdot9+5\\cdot7\\cdot2+5\\cdot3\\cdot9+4\\cdot7\\cdot9}{9\\cdot10\\cdot11}=\\frac{315+70+135+252}{990}=\\frac{772}{990}=\\frac{386}{495}\n\\]"
       }
     ],
-    "finalAnswer": "\\(\\frac7{18}\\), \\(\\frac{386}{495}\\)."
+    "finalAnswer": "(a) \\(\\frac59,\\frac49\\); \\(\\frac{7}{10},\\frac{3}{10}\\) on both branches (b) \\(\\dfrac{7}{18}\\) (c) \\(\\dfrac{386}{495}\\)"
   },
   "expertise::Jun2025_P2HR__Q21__p21-21__m03__Solving-Inequalities": {
     "status": "checked",
@@ -24585,25 +25228,25 @@ window.SOLUTION_DATA = {
     "finalAnswer": "completed frequencies \\(35,40,60\\), missing histogram density \\(1\\), and probability \\(\\frac{12}{41}\\)."
   },
   "all::May2021_P1H__Q06__p07-07__m05__Probability-Toolkit": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "Let the probability of pink",
-        "body": "Let the probability of pink be \\(x\\). Then the probability of orange is \\(3x\\).\n\n\\[\n0.20+0.12+0.08+x+3x=1\n\\]\n\n\\[\n4x=0.60\n\\]\n\n\\[\nx=0.15\n\\]"
+        "title": "(a) Set up with the missing probabilities",
+        "body": "Let \\(P(\\text{pink})=x\\), so \\(P(\\text{orange})=3x\\).\n\n\\[\n0.20+0.12+0.08+3x+x=1 \\;\\Rightarrow\\; 4x=0.60 \\;\\Rightarrow\\; x=0.15\n\\]"
       },
       {
-        "title": "Calculate probability",
-        "body": "So the probability of orange is\n\n\\[\n3x=0.45\n\\]"
+        "title": "(a) Probability of orange",
+        "body": "\\[\n3x=0.45\n\\]"
       },
       {
-        "title": "Expected blue sweets",
-        "body": "Expected blue sweets:\n\n\\[\n150\\times 0.12=18\n\\]"
+        "title": "(b) Estimate for blue",
+        "body": "\\[\n150\\times0.12=18\n\\]"
       }
     ],
-    "finalAnswer": "pink \\(0.15\\), orange \\(0.45\\), blue \\(18\\)."
+    "finalAnswer": "(a) \\(0.45\\) (b) \\(18\\)"
   },
   "expertise::May2021_P1H__Q20__p19-19__m03__Rounding-Estimation-and-Bounds": {
     "status": "checked",
@@ -25287,35 +25930,29 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(x=9.7\\text{ cm}\\)."
   },
   "all::May2021_P2H__Q12__p12-13__m07__Cumulative-Frequency-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Use cumulative frequency",
-        "body": "For Office A, the cumulative frequencies are\n\n\\[\n17,\\ 32,\\ 57,\\ 70,\\ 76,\\ 80\n\\]",
-        "figures": [
-          {
-            "src": "assets/solution-diagrams/igcse/May2021_P2H__Q12__p12-13__m07__Cumulative-Frequency-Diagrams.png",
-            "alt": "Cumulative frequency graph"
-          }
-        ]
+        "title": "(a) Plot the table",
+        "body": "Plot \\((5,17),(10,32),(15,57),(20,70),(25,76),(30,80)\\), start at \\((0,0)\\), and join with a smooth curve."
       },
       {
-        "title": "The median is the th",
-        "body": "The median is the \\(40\\)th value:\n\n\\[\n10+\\frac{40-32}{57-32}\\times 5=11.6\n\\]"
+        "title": "(b) Median",
+        "body": "Read across from \\(40\\): about \\(11.6\\) km."
       },
       {
-        "title": "The quartiles are the th",
-        "body": "The quartiles are the \\(20\\)th and \\(60\\)th values:\n\n\\[\nQ_1=5+\\frac{20-17}{32-17}\\times 5=6.0\n\\]\n\n\\[\nQ_3=15+\\frac{60-57}{70-57}\\times 5\\approx 16.2\n\\]\n\n\\[\n\\text{IQR}\\approx 16.2-6.0=10.2\n\\]"
+        "title": "(c) Interquartile range",
+        "body": "Lower quartile at \\(20\\): about \\(6\\) km. Upper quartile at \\(60\\): about \\(16.2\\) km.\n\n\\[\n\\text{IQR}\\approx16.2-6=10.2\\text{ km}\n\\]"
       },
       {
-        "title": "Office A has a smaller",
-        "body": "Office A has a smaller median than Office B, so the typical journey is shorter.\nOffice A has a larger IQR, so the distances are more spread out."
+        "title": "(d) Two comparisons",
+        "body": "1. Office A has a lower median (about \\(11.6\\) km against \\(15\\) km), so on average workers at Office A travel a shorter distance.\n\n2. Office A has a larger IQR (about \\(10\\) km against \\(5\\) km), so the distances at Office A are more varied (less consistent)."
       }
     ],
-    "finalAnswer": "median \\(11.6\\) km, IQR about \\(10.2\\) km."
+    "finalAnswer": "(b) about \\(11.6\\) km (c) about \\(10\\) km (d) A shorter on average; A more spread out"
   },
   "all::May2021_P2H__Q23__p26-27__m05__Probability-Toolkit": {
     "status": "checked",
@@ -25351,33 +25988,33 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(N=15\\) or \\(N=21\\)"
   },
   "all::May2021_P2H__Q13__p14-15__m08__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Calculate probability",
-        "body": "For the two races:\n\n\\[\nP(W_1)=0.7,\\quad P(L_1)=0.3\n\\]\n\n\\[\nP(W_2)=0.4,\\quad P(L_2)=0.6\n\\]"
+        "title": "(a) Complete the tree",
+        "body": "First race: does not win \\(0.3\\).\n\nSecond race: after a win, does not win \\(0.6\\); after not winning, wins \\(0.4\\) and does not win \\(0.6\\)."
       },
       {
-        "title": "Exactly one win",
-        "body": "Exactly one win:\n\n\\[\n0.7\\times 0.6+0.3\\times 0.4\n\\]\n\n\\[\n=0.42+0.12=0.54\n\\]"
+        "title": "(b) Exactly one win",
+        "body": "\\[\n0.7\\times0.6+0.3\\times0.4=0.42+0.12=0.54\n\\]"
       },
       {
-        "title": "Calculate probability",
-        "body": "For exactly two wins in three races:"
+        "title": "(c) Win the first two, lose the third",
+        "body": "\\(P(\\text{win both})=0.7\\times0.4=0.28\\), then lose the third with \\(1-0.6=0.4\\):\n\n\\[\n0.28\\times0.4=0.112\n\\]"
       },
       {
-        "title": "Calculate probability",
-        "body": "First two wins, then lose the third:\n\n\\[\n0.7\\times 0.4\\times 0.4=0.112\n\\]"
+        "title": "(c) Exactly one of the first two, then win the third",
+        "body": "\\[\n0.54\\times0.3=0.162\n\\]"
       },
       {
-        "title": "Exactly one win in the",
-        "body": "Exactly one win in the first two, then win the third:\n\n\\[\n0.54\\times 0.3=0.162\n\\]\n\n\\[\n0.112+0.162=0.274\n\\]"
+        "title": "(c) Add the cases",
+        "body": "\\[\n0.112+0.162=0.274\n\\]"
       }
     ],
-    "finalAnswer": "\\(0.54\\), \\(0.274\\)."
+    "finalAnswer": "(a) \\(0.3\\); \\(0.6\\); \\(0.4, 0.6\\) (b) \\(0.54\\) (c) \\(0.274\\)"
   },
   "expertise::May2021_P2H__Q22__p25-25__m04__Completing-the-Square": {
     "status": "checked",
@@ -26128,29 +26765,25 @@ window.SOLUTION_DATA = {
     "finalAnswer": "missing frequencies \\(25,60\\), and missing densities \\(4.6,1.8,0.7\\)."
   },
   "all::May2023_P1H__Q12__p14-14__m04__Cumulative-Frequency-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Use cumulative frequency",
-        "body": "There are \\(50\\) plants, so the median is the \\(25\\)th value."
+        "title": "(a) Median",
+        "body": "There are \\(50\\) plants, so read across from \\(25\\): the curve reaches \\(25\\) at about \\(28.5\\) cm."
       },
       {
-        "title": "Use cumulative frequency",
-        "body": "From the cumulative frequency graph,\n\n\\[\n\\text{median}\\approx 27\\text{ cm}\n\\]"
+        "title": "(b) Frequency for 30 < height ≤ 40",
+        "body": "Read the curve at both ends of the class: about \\(44\\) at \\(40\\) cm and \\(30\\) at \\(30\\) cm.\n\n\\[\n44-30=14\n\\]"
       },
       {
-        "title": "Use cumulative frequency",
-        "body": "For the interval \\(30<h\\leq 40\\),\n\n\\[\nF(40)-F(30)\\approx 44-31=13\n\\]"
-      },
-      {
-        "title": "Use cumulative frequency",
-        "body": "For plants taller than \\(35\\) cm,\n\n\\[\n50-F(35)\\approx 50-37=13\n\\]"
+        "title": "(c) Taller than 35 cm",
+        "body": "At \\(35\\) cm the curve reads about \\(37\\), so about \\(50-37=13\\) plants."
       }
     ],
-    "finalAnswer": "median about \\(27\\) cm, about \\(13\\) plants, about \\(13\\) plants."
+    "finalAnswer": "(a) about \\(28.5\\) cm (b) \\(14\\) (c) about \\(13\\)"
   },
   "expertise::May2023_P1H__Q20__p22-23__m06__Sequences": {
     "status": "checked",
@@ -26840,82 +27473,84 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(16.7\\%\\)"
   },
   "all::May2023_P1HR__Q14__p14-15__m06__Cumulative-Frequency-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "The cumulative frequencies are",
-        "body": "The cumulative frequencies are\n\n\\[\n15,\\ 31,\\ 52,\\ 66,\\ 74,\\ 80\n\\]",
-        "figures": [
-          {
-            "src": "assets/solution-diagrams/igcse/May2023_P1HR__Q14__p14-15__m06__Cumulative-Frequency-Diagrams.png",
-            "alt": "Cumulative frequency graph"
-          }
-        ]
+        "title": "(a) Running totals",
+        "body": "\\[\n15,\\ 31,\\ 52,\\ 66,\\ 74,\\ 80\n\\]"
       },
       {
-        "title": "Convert standard form",
-        "body": "For \\(80\\) runners,\n\n\\[\n\\text{median}=40,\\qquad Q_1=20,\\qquad Q_3=60\n\\]\n\n\\[\n\\text{median}=70+\\frac{40-31}{52-31}\\times 10\\approx 74.3\n\\]\n\n\\[\nQ_1=60+\\frac{20-15}{31-15}\\times 10\\approx 63.1\n\\]\n\n\\[\nQ_3=80+\\frac{60-52}{66-52}\\times 10\\approx 85.7\n\\]\n\n\\[\n\\text{IQR}\\approx 85.7-63.1=22.6\n\\]"
+        "title": "(b) Plot at the upper class boundaries",
+        "body": "Plot \\((60,15),(70,31),(80,52),(90,66),(100,74),(110,80)\\), start at \\((50,0)\\), and join with a smooth curve."
+      },
+      {
+        "title": "(c) Median",
+        "body": "Read across from \\(40\\): about \\(74\\) minutes."
+      },
+      {
+        "title": "(d) Interquartile range",
+        "body": "Lower quartile at \\(20\\): about \\(63\\) minutes. Upper quartile at \\(60\\): about \\(86\\) minutes.\n\n\\[\n\\text{IQR}\\approx86-63=23\\text{ minutes}\n\\]"
       }
     ],
-    "finalAnswer": "median about \\(74.3\\) min, IQR about \\(22.6\\) min."
+    "finalAnswer": "(a) \\(15, 31, 52, 66, 74, 80\\) (c) about \\(74\\) minutes (d) about \\(23\\) minutes"
   },
   "all::May2023_P1HR__Q05__p07-07__m02__Probability-Toolkit": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "Calculate probability",
-        "body": "\\[\nP(\\text{lose})=1-0.74=0.26\n\\]"
+        "title": "Probability of losing",
+        "body": "\\[\n1-0.74=0.26\n\\]"
       },
       {
-        "title": "Expected losses",
-        "body": "Expected losses:\n\n\\[\n300\\times 0.26=78\n\\]"
+        "title": "Estimate for 300 games",
+        "body": "\\[\n300\\times0.26=78\n\\]"
       }
     ],
-    "finalAnswer": "\\(78\\)."
+    "finalAnswer": "\\(78\\)"
   },
   "all::May2023_P1HR__Q13__p13-13__m03__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "The missing branch probabilities are",
-        "body": "The missing branch probabilities are\n\n\\[\n0.1,\\quad 0.6\n\\]"
+        "title": "(a) Complete the tree",
+        "body": "After a win: loses \\(1-0.9=0.1\\). After a loss: loses \\(1-0.4=0.6\\)."
       },
       {
-        "title": "Calculate probability",
-        "body": "Novak wins both games with probability\n\n\\[\n0.7\\times 0.9=0.63\n\\]"
+        "title": "(b) Wins both games",
+        "body": "\\[\n0.7\\times0.9=0.63\n\\]"
       }
     ],
-    "finalAnswer": "\\(0.63\\)."
+    "finalAnswer": "(a) \\(0.1\\), \\(0.6\\) (b) \\(0.63\\)"
   },
   "all::May2023_P1HR__Q12__p12-12__m05__Combined-and-Conditional-Probability": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Combined & Conditional Probability. The tag is correct.",
     "steps": [
       {
-        "title": "Calculate probability",
-        "body": "The probabilities add to \\(1\\):\n\n\\[\nx+0.15+0.50+y+0.13+0.03=1\n\\]\n\n\\[\nx+y=0.19\n\\]"
+        "title": "(a) Probabilities add to 1",
+        "body": "\\[\nx+0.15+0.5+y+0.13+0.03=1 \\;\\Rightarrow\\; x+y+0.81=1 \\;\\Rightarrow\\; x+y=0.19\n\\]"
       },
       {
-        "title": "Given",
-        "body": "Given\n\n\\[\n3x-y=0.09\n\\]"
+        "title": "(b) Add the two equations",
+        "body": "\\[\n(3x-y)+(x+y)=0.09+0.19 \\;\\Rightarrow\\; 4x=0.28 \\;\\Rightarrow\\; x=0.07\n\\]"
       },
       {
-        "title": "Add the two equations",
-        "body": "Add the two equations:\n\n\\[\n4x=0.28\n\\]\n\n\\[\nx=0.07\n\\]\n\n\\[\ny=0.19-0.07=0.12\n\\]"
+        "title": "(b) Find y",
+        "body": "\\[\ny=0.19-0.07=0.12\n\\]"
       }
     ],
-    "finalAnswer": "\\(x=0.07,\\ y=0.12\\)."
+    "finalAnswer": "(b) \\(x=0.07,\\ y=0.12\\)"
   },
   "expertise::May2023_P1HR__Q24__p25-25__m05__Algebraic-Roots-and-Indices": {
     "status": "checked",
@@ -27664,55 +28299,63 @@ window.SOLUTION_DATA = {
     "finalAnswer": "draw the missing bar from \\(5\\) to \\(15\\) with frequency density \\(2.7\\)"
   },
   "all::May2024_P1H__Q02__p04-04__m04__Probability-Toolkit": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "Let the probability of travelling",
-        "body": "Let the probability of travelling by bus be \\(x\\).\nThen the probability of travelling by car is \\(2x\\).\n\n\\[\n0.20+x+2x+0.26=1\n\\]\n\n\\[\n3x=0.54\n\\]\n\n\\[\nx=0.18\n\\]"
+        "title": "Find x",
+        "body": "\\[\n0.20+x+2x+0.26=1 \\;\\Rightarrow\\; 3x=0.54 \\;\\Rightarrow\\; x=0.18\n\\]"
       },
       {
-        "title": "Calculate probability",
-        "body": "So\n\n\\[\nP(\\text{car})=2x=0.36\n\\]"
+        "title": "Probability of travelling by car",
+        "body": "\\[\n2x=0.36\n\\]"
       },
       {
-        "title": "Number travelling by car",
-        "body": "Number travelling by car:\n\n\\[\n450\\times 0.36=162\n\\]"
+        "title": "Number of students",
+        "body": "\\[\n450\\times0.36=162\n\\]"
       }
     ],
-    "finalAnswer": "\\(162\\)."
+    "finalAnswer": "\\(162\\)"
   },
   "all::May2024_P1H__Q13__p14-14__m05__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Calculate probability",
-        "body": "Bag A has \\(3\\) white and \\(7\\) black counters.\nBag B has \\(5\\) white and \\(4\\) black counters."
+        "title": "(a) Complete the tree",
+        "body": "Bag A: white \\(\\frac{3}{10}\\), black \\(\\frac{7}{10}\\).\n\nBag B (on both branches): white \\(\\frac59\\), black \\(\\frac49\\)."
       },
       {
-        "title": "The same colour means both",
-        "body": "The same colour means both white or both black.\n\n\\[\nP(\\text{same})=\\frac3{10}\\times\\frac59+\\frac7{10}\\times\\frac49\n\\]\n\n\\[\n=\\frac16+\\frac{14}{45}\n\\]\n\n\\[\n=\\frac{43}{90}\n\\]"
+        "title": "(b) Same colour = both white or both black",
+        "body": "\\[\n\\frac{3}{10}\\times\\frac59+\\frac{7}{10}\\times\\frac49=\\frac{15}{90}+\\frac{28}{90}=\\frac{43}{90}\n\\]"
       }
     ],
-    "finalAnswer": "\\(\\frac{43}{90}\\)."
+    "finalAnswer": "(a) \\(\\frac{3}{10},\\frac{7}{10}\\); \\(\\frac59,\\frac49\\) on both branches (b) \\(\\dfrac{43}{90}\\)"
   },
   "all::May2024_P1H__Q16__p17-17__m04__Combined-and-Conditional-Probability": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Combined & Conditional Probability. The tag is correct.",
     "steps": [
       {
-        "title": "Calculate probability",
-        "body": "At least one sweet of each colour is the complement of all red or all yellow.\n\n\\[\nP(\\text{all red})=\\frac{15}{20}\\times\\frac{14}{19}\\times\\frac{13}{18}\n\\]\n\n\\[\nP(\\text{all yellow})=\\frac{5}{20}\\times\\frac{4}{19}\\times\\frac{3}{18}\n\\]\n\n\\[\nP(\\text{at least one of each})\n=1-P(\\text{all red})-P(\\text{all yellow})\n\\]\n\n\\[\n=1-\\frac{2730}{6840}-\\frac{60}{6840}\n\\]\n\n\\[\n=\\frac{45}{76}\n\\]"
+        "title": "Use the complement",
+        "body": "\"At least one of each colour\" fails only if all three sweets are red or all three are yellow."
+      },
+      {
+        "title": "All red, all yellow (no replacement)",
+        "body": "\\[\nP(RRR)=\\frac{15}{20}\\times\\frac{14}{19}\\times\\frac{13}{18}=\\frac{2730}{6840},\\qquad P(YYY)=\\frac{5}{20}\\times\\frac{4}{19}\\times\\frac{3}{18}=\\frac{60}{6840}\n\\]"
+      },
+      {
+        "title": "At least one of each",
+        "body": "\\[\n1-\\frac{2730+60}{6840}=\\frac{4050}{6840}=\\frac{45}{76}\n\\]"
       }
     ],
-    "finalAnswer": "\\(\\frac{45}{76}\\)."
+    "finalAnswer": "\\(\\dfrac{45}{76}\\)"
   },
   "expertise::May2024_P1H__Q25__p28-28__m04__Completing-the-Square": {
     "status": "checked",
@@ -28410,21 +29053,25 @@ window.SOLUTION_DATA = {
     "finalAnswer": "draw bars with heights \\(2.5,4,3.6,1.4,0.6\\)."
   },
   "all::May2024_P1HR__Q02__p04-04__m04__Probability-Toolkit": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "Let the probability of landing",
-        "body": "Let the probability of landing on \\(4\\) be \\(x\\). Then the probability of landing on \\(1\\) is \\(2x\\).\n\n\\[\n2x+0.27+0.04+x+0.12=1\n\\]\n\n\\[\n3x=0.57\n\\]\n\n\\[\nx=0.19\n\\]\n\n\\[\nP(\\text{odd})=0.38+0.04+0.12=0.54\n\\]"
+        "title": "Find x",
+        "body": "\\[\n2x+0.27+0.04+x+0.12=1 \\;\\Rightarrow\\; 3x=0.57 \\;\\Rightarrow\\; x=0.19\n\\]"
       },
       {
-        "title": "Expected odd numbers",
-        "body": "Expected odd numbers:\n\n\\[\n400\\times 0.54=216\n\\]"
+        "title": "Probability of an odd number (1, 3 or 5)",
+        "body": "\\[\n2x+0.04+0.12=0.38+0.04+0.12=0.54\n\\]"
+      },
+      {
+        "title": "Estimate for 400 spins",
+        "body": "\\[\n400\\times0.54=216\n\\]"
       }
     ],
-    "finalAnswer": "\\(0.19\\), \\(0.54\\), \\(216\\)."
+    "finalAnswer": "\\(216\\)"
   },
   "all::May2024_P1HR__Q21__p21-21__m05__Probability-Toolkit": {
     "status": "checked",
@@ -32314,75 +32961,63 @@ window.SOLUTION_DATA = {
     "finalAnswer": "draw bars with densities \\(3.5,3,5,2,0.8\\), and \\(98\\) plants."
   },
   "all::MayNov2020_P1H__Q02__p04-04__m04__Probability-Toolkit": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "Calculate probability",
-        "body": "\\[\n15\\text{ hours}=15\\times 60\\times 60=54000\\text{ seconds}\n\\]"
+        "title": "Seconds in a working day",
+        "body": "\\[\n15\\times60\\times60=54\\,000\\text{ seconds}\n\\]"
       },
       {
-        "title": "The machine makes cars every",
-        "body": "The machine makes \\(5\\) cars every \\(12\\) seconds, so it makes\n\n\\[\n\\frac{54000}{12}\\times 5=22500\n\\]"
+        "title": "Toy cars made each day",
+        "body": "\\[\n\\frac{54\\,000}{12}\\times5=22\\,500\n\\]"
       },
       {
-        "title": "cars",
-        "body": "cars."
-      },
-      {
-        "title": "Expected faulty cars",
-        "body": "Expected faulty cars:\n\n\\[\n22500\\times 0.002=45\n\\]"
+        "title": "Expected number of faulty cars",
+        "body": "\\[\n22\\,500\\times0.002=45\n\\]"
       }
     ],
-    "finalAnswer": "\\(45\\)."
+    "finalAnswer": "\\(45\\)"
   },
   "all::MayNov2020_P1H__Q01__p03-03__m04__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Calculate probability",
-        "body": "From the Venn diagram,\n\n\\[\nA\\cap B=\\{2,4,6,12\\}\n\\]"
+        "title": "(a) In both A and B",
+        "body": "\\(A\\cap B=\\{2,4,6,12\\}\\)"
       },
       {
-        "title": "The values not in are",
-        "body": "The values not in \\(B\\) are\n\n\\[\nB'=\\{5,7,8,9,10,11,13,14\\}\n\\]"
+        "title": "(b) Not in B",
+        "body": "Everything outside circle \\(B\\): \\(B'=\\{5,7,8,9,10,11,13,14\\}\\)"
       },
       {
-        "title": "The values in but not",
-        "body": "The values in \\(A\\) but not in \\(B\\) are\n\n\\[\n\\{8,10,14\\}\n\\]"
-      },
-      {
-        "title": "Calculate probability",
-        "body": "So\n\n\\[\nP(A\\cap B')=\\frac{3}{14}\n\\]"
+        "title": "(c) In A but not in B",
+        "body": "\\(\\{8,10,14\\}\\): \\(3\\) of the \\(14\\) numbers.\n\n\\[\n\\frac{3}{14}\n\\]"
       }
     ],
-    "finalAnswer": "\\(\\{2,4,6,12\\}\\), \\(\\{5,7,8,9,10,11,13,14\\}\\), \\(\\frac{3}{14}\\)."
+    "finalAnswer": "(a) \\(2,4,6,12\\) (b) \\(5,7,8,9,10,11,13,14\\) (c) \\(\\dfrac{3}{14}\\)"
   },
   "all::MayNov2020_P1H__Q15__p16-17__m05__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Spinner A has red sectors",
-        "body": "Spinner A has \\(2\\) red sectors and \\(3\\) green sectors:\n\n\\[\nP(A_R)=\\frac25,\\qquad P(A_G)=\\frac35\n\\]"
+        "title": "(a) Complete the tree",
+        "body": "Spinner A has \\(2\\) red and \\(3\\) green sections: red \\(\\frac25\\), green \\(\\frac35\\).\n\nSpinner B has \\(4\\) red and \\(1\\) green (on both branches): red \\(\\frac45\\), green \\(\\frac15\\)."
       },
       {
-        "title": "Spinner B has red sectors",
-        "body": "Spinner B has \\(4\\) red sectors and \\(1\\) green sector:\n\n\\[\nP(B_R)=\\frac45,\\qquad P(B_G)=\\frac15\n\\]"
-      },
-      {
-        "title": "At least one green is",
-        "body": "At least one green is the complement of both red.\n\n\\[\nP(\\text{at least one green})=1-\\frac25\\times\\frac45\n\\]\n\n\\[\n=1-\\frac{8}{25}=\\frac{17}{25}\n\\]"
+        "title": "(b) Use the complement",
+        "body": "\"At least one green\" is the opposite of \"both red\":\n\n\\[\n1-\\frac25\\times\\frac45=1-\\frac{8}{25}=\\frac{17}{25}\n\\]"
       }
     ],
-    "finalAnswer": "\\(\\frac{17}{25}\\)."
+    "finalAnswer": "(a) \\(\\frac25,\\frac35\\); \\(\\frac45,\\frac15\\) on both branches (b) \\(\\dfrac{17}{25}\\)"
   },
   "expertise::MayNov2020_P1H__Q21__p23-23__m05__Algebraic-Fractions": {
     "status": "checked",
@@ -33104,27 +33739,25 @@ window.SOLUTION_DATA = {
     "finalAnswer": "modal class \\(30<t\\le 40\\), estimated mean \\(28.2\\) minutes."
   },
   "all::MayNov2020_P1HR__Q11__p10-11__m05__Cumulative-Frequency-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "The cumulative frequencies are",
-        "body": "The cumulative frequencies are\n\n\\[\n9,\\ 28,\\ 45,\\ 63,\\ 76,\\ 80\n\\]",
-        "figures": [
-          {
-            "src": "assets/solution-diagrams/igcse/MayNov2020_P1HR__Q11__p10-11__m05__Cumulative-Frequency-Diagrams.png",
-            "alt": "Cumulative frequency graph"
-          }
-        ]
+        "title": "(a) Running totals",
+        "body": "\\[\n9,\\ 28,\\ 45,\\ 63,\\ 76,\\ 80\n\\]"
       },
       {
-        "title": "The median is the th",
-        "body": "The median is the \\(40\\)th value.\n\n\\[\n30+\\frac{40-28}{45-28}\\times 10\\approx 37.1\n\\]"
+        "title": "(b) Plot at the upper class boundaries",
+        "body": "Plot \\((20,9),(30,28),(40,45),(50,63),(60,76),(70,80)\\), start at \\((0,0)\\), and join with a smooth curve."
+      },
+      {
+        "title": "(c) Median",
+        "body": "Read across from \\(\\frac{80}{2}=40\\): about \\(37\\) years."
       }
     ],
-    "finalAnswer": "median about \\(37\\) years."
+    "finalAnswer": "(a) \\(9, 28, 45, 63, 76, 80\\) (c) about \\(37\\) years"
   },
   "all::MayNov2020_P1HR__Q23__p24-24__m04__Probability-Toolkit": {
     "status": "checked",
@@ -33692,27 +34325,29 @@ window.SOLUTION_DATA = {
     "finalAnswer": "(i) \\(\\mathbf b-\\mathbf a\\), (ii) \\(4\\mathbf b-2\\mathbf a\\), (iii) \\(2\\mathbf b-3\\mathbf a\\), (b) \\(90\\text{ cm}^2\\)."
   },
   "all::Nov2021_P1H__Q11__p10-11__m05__Cumulative-Frequency-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "The cumulative frequencies are",
-        "body": "The cumulative frequencies are\n\n\\[\n12,\\ 36,\\ 64,\\ 76,\\ 86,\\ 90\n\\]",
-        "figures": [
-          {
-            "src": "assets/solution-diagrams/igcse/Nov2021_P1H__Q11__p10-11__m05__Cumulative-Frequency-Diagrams.png",
-            "alt": "Cumulative frequency graph"
-          }
-        ]
+        "title": "(a) Running totals",
+        "body": "\\[\n12,\\ 36,\\ 64,\\ 76,\\ 86,\\ 90\n\\]"
       },
       {
-        "title": "Use cumulative frequency",
-        "body": "For \\(42<T\\leq 52\\),\n\n\\[\nF(52)\\approx 36+\\frac{7}{10}(64-36)=55.6\n\\]\n\n\\[\nF(42)\\approx 12+\\frac{7}{10}(36-12)=28.8\n\\]\n\n\\[\n55.6-28.8=26.8\n\\]"
+        "title": "(b) Plot at the upper class boundaries",
+        "body": "Plot \\((35,12),(45,36),(55,64),(65,76),(75,86),(85,90)\\), start at \\((25,0)\\), and join with a smooth curve."
+      },
+      {
+        "title": "(c) Read the curve at 52 and 42 minutes",
+        "body": "At \\(52\\) minutes: about \\(56\\). At \\(42\\) minutes: about \\(29\\)."
+      },
+      {
+        "title": "(c) Silver medals",
+        "body": "\\[\n56-29\\approx27\\text{ runners}\n\\]"
       }
     ],
-    "finalAnswer": "about \\(27\\) runners."
+    "finalAnswer": "(a) \\(12, 36, 64, 76, 86, 90\\) (c) about \\(27\\)"
   },
   "all::Nov2021_P1H__Q03__p04-04__m04__Probability-Toolkit": {
     "status": "checked",
@@ -33736,60 +34371,50 @@ window.SOLUTION_DATA = {
     "finalAnswer": "(a) \\(24\\) white fish, (b) \\(3\\) white fish."
   },
   "all::Nov2021_P1H__Q15__p16-17__m08__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Calculate probability",
-        "body": "For each chess game:\n\n\\[\nP(M\\text{ wins})=\\frac29,\\quad P(\\text{draw})=\\frac49,\\quad P(M\\text{ loses})=\\frac13\n\\]"
+        "title": "(a) Complete the tree",
+        "body": "Magnus loses: \\(1-\\frac29-\\frac49=\\frac39\\).\n\nEvery second-game branch repeats \\(\\frac29,\\ \\frac49,\\ \\frac39\\) (the games are independent)."
       },
       {
-        "title": "Calculate probability",
-        "body": "After two games, equal points happens if both games are drawn or Magnus wins one and loses one.\n\n\\[\n\\left(\\frac49\\right)^2+2\\left(\\frac29\\right)\\left(\\frac13\\right)\n\\]\n\n\\[\n=\\frac{16}{81}+\\frac{12}{81}=\\frac{28}{81}\n\\]"
+        "title": "(b) Equal points after 2 games",
+        "body": "Two draws, or one win and one loss (either order):\n\n\\[\n\\left(\\frac49\\right)^2+2\\times\\frac29\\times\\frac39=\\frac{16}{81}+\\frac{12}{81}=\\frac{28}{81}\n\\]"
       },
       {
-        "title": "Calculate probability",
-        "body": "After three games, equal points means Magnus scores \\(3\\) points in total."
+        "title": "(c) Equal points after 3 games",
+        "body": "Each player needs \\(3\\) of the \\(6\\) points: three draws, or one win, one draw and one loss (\\(3!=6\\) orders)."
       },
       {
-        "title": "Calculate probability",
-        "body": "This happens with three draws, or with one win, one draw and one loss.\n\n\\[\n\\left(\\frac49\\right)^3+6\\left(\\frac29\\right)\\left(\\frac49\\right)\\left(\\frac13\\right)\n\\]\n\n\\[\n=\\frac{64}{729}+\\frac{144}{729}=\\frac{208}{729}\n\\]"
+        "title": "(c) Add the cases",
+        "body": "\\[\n\\left(\\frac49\\right)^3+6\\times\\frac29\\times\\frac49\\times\\frac39=\\frac{64}{729}+\\frac{144}{729}=\\frac{208}{729}\n\\]"
       }
     ],
-    "finalAnswer": "\\(\\frac{28}{81}\\), \\(\\frac{208}{729}\\)."
+    "finalAnswer": "(a) \\(\\frac39\\); \\(\\frac29,\\frac49,\\frac39\\) on every branch (b) \\(\\dfrac{28}{81}\\) (c) \\(\\dfrac{208}{729}\\)"
   },
   "all::Nov2021_P1H__Q16__p18-19__m05__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Use the Maths circle",
-        "body": "Use the Maths circle.\n\n\\[\nM\\text{ only}=3\n\\]\n\n\\[\nM\\cap E\\text{ only}=18-x\n\\]\n\n\\[\nM\\cap F\\text{ only}=11-x\n\\]"
+        "title": "(a) Use the Maths circle",
+        "body": "Maths only \\(=3\\), Maths and English only \\(=18-x\\), Maths and French only \\(=11-x\\), all three \\(=x\\).\n\n\\[\n3+(18-x)+(11-x)+x=25 \\;\\Rightarrow\\; 32-x=25 \\;\\Rightarrow\\; x=7\n\\]"
       },
       {
-        "title": "The total in is",
-        "body": "The total in \\(M\\) is \\(25\\):\n\n\\[\n3+(18-x)+(11-x)+x=25\n\\]\n\n\\[\n32-x=25\n\\]\n\n\\[\nx=7\n\\]"
+        "title": "(b) Fill every region",
+        "body": "\\(M\\cap E\\) only \\(=11\\), \\(M\\cap F\\) only \\(=4\\), centre \\(=7\\), \\(E\\cap F\\) only \\(=2\\).\n\n\\[\nE\\text{ only}=20-11-7-2=0,\\qquad F\\text{ only}=14-4-7-2=1\n\\]\n\nOutside: \\(4\\). (Check: \\(3+11+4+7+0+2+1+4=32\\).)"
       },
       {
-        "title": "Calculate probability",
-        "body": "So:\n\n\\[\nM\\cap E\\text{ only}=11,\\quad M\\cap F\\text{ only}=4,\\quad E\\cap F\\text{ only}=2\n\\]\n\n\\[\nE\\text{ only}=20-11-2-7=0\n\\]\n\n\\[\nF\\text{ only}=14-4-2-7=1\n\\]",
-        "figures": [
-          {
-            "src": "assets/solution-diagrams/igcse/Nov2021_P1H__Q16__p18-19__m05__Probability-Diagrams-Venn-and-Tree-Diagrams.png",
-            "alt": "Completed Venn diagram"
-          }
-        ]
-      },
-      {
-        "title": "Calculate probability",
-        "body": "For a student who passed Maths, failed French means \\(M\\) but not \\(F\\):\n\n\\[\n\\frac{3+11}{25}=\\frac{14}{25}\n\\]"
+        "title": "(c) Passed Maths, failed French",
+        "body": "Maths only and Maths-and-English only: \\(3+11=14\\) of the \\(25\\).\n\n\\[\n\\frac{14}{25}\n\\]"
       }
     ],
-    "finalAnswer": "\\(x=7\\), and \\(\\frac{14}{25}\\)."
+    "finalAnswer": "(a) \\(x=7\\) (b) \\(M\\) only 3, \\(M\\cap E\\) only 11, \\(M\\cap F\\) only 4, centre 7, \\(E\\cap F\\) only 2, \\(E\\) only 0, \\(F\\) only 1, outside 4 (c) \\(\\dfrac{14}{25}\\)"
   },
   "expertise::Nov2021_P1H__Q20__p24-24__m07__Coordinate-Geometry": {
     "status": "checked",
@@ -34416,21 +35041,21 @@ window.SOLUTION_DATA = {
     "finalAnswer": "histogram densities \\(0.8,2.6,1.9,1.6,0.3\\), and probability \\(\\frac{1}{10}\\)."
   },
   "all::Nov2021_P2H__Q16__p19-19__m03__Combined-and-Conditional-Probability": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Combined & Conditional Probability. The tag is correct.",
     "steps": [
       {
-        "title": "Calculate probability",
-        "body": "There are \\(4\\) red, \\(5\\) green and \\(6\\) yellow counters."
+        "title": "Count the colours",
+        "body": "\\(4\\) red, \\(5\\) green and \\(15-9=6\\) yellow. The counter is replaced, so the second pick has the same probabilities."
       },
       {
-        "title": "Calculate probability",
-        "body": "The first counter is replaced, so the probabilities are the same for Niklas and Sasha.\n\n\\[\nP(\\text{same colour})=\n\\left(\\frac4{15}\\right)^2+\n\\left(\\frac5{15}\\right)^2+\n\\left(\\frac6{15}\\right)^2\n\\]\n\n\\[\n=\\frac{16+25+36}{225}\n\\]\n\n\\[\n=\\frac{77}{225}\n\\]"
+        "title": "Both the same colour",
+        "body": "\\[\n\\left(\\frac{4}{15}\\right)^2+\\left(\\frac{5}{15}\\right)^2+\\left(\\frac{6}{15}\\right)^2=\\frac{16+25+36}{225}=\\frac{77}{225}\n\\]"
       }
     ],
-    "finalAnswer": "\\(\\frac{77}{225}\\)."
+    "finalAnswer": "\\(\\dfrac{77}{225}\\)"
   },
   "expertise::Nov2021_P2H__Q20__p23-23__m05__Sequences": {
     "status": "checked",
@@ -35083,42 +35708,42 @@ window.SOLUTION_DATA = {
     "finalAnswer": "about \\(42\\) medium oranges."
   },
   "all::Nov2023_P1H__Q13__p16-16__m04__Cumulative-Frequency-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Use cumulative frequency",
-        "body": "There are \\(80\\) adults, so the median is the \\(40\\)th value."
+        "title": "(a) Median",
+        "body": "Read across from \\(\\frac{80}{2}=40\\): about \\(25\\) seconds."
       },
       {
-        "title": "Use cumulative frequency",
-        "body": "From the graph,\n\n\\[\n\\text{median}\\approx 25\\text{ seconds}\n\\]"
+        "title": "(b) Adults who took longer than 50 seconds",
+        "body": "At \\(50\\) seconds the curve reads about \\(75\\), so \\(80-75=5\\) adults."
       },
       {
-        "title": "Convert standard form",
-        "body": "At \\(50\\) seconds, the cumulative frequency is about \\(75\\).\n\n\\[\n80-75=5\n\\]\n\n\\[\n\\frac{5}{80}\\times 100=6.25\\%\n\\]"
+        "title": "(b) Percentage",
+        "body": "\\[\n\\frac{5}{80}\\times100=6.25\\%\n\\]"
       }
     ],
-    "finalAnswer": "median about \\(25\\) seconds, and about \\(6\\%\\)."
+    "finalAnswer": "(a) about \\(25\\) seconds (b) about \\(6.25\\%\\)"
   },
   "all::Nov2023_P1H__Q04__p06-06__m04__Probability-Toolkit": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "Let the probability of white",
-        "body": "Let the probability of white be \\(x\\). Then the probability of orange is \\(2x\\).\n\n\\[\n0.38+2x+x=1\n\\]\n\n\\[\n3x=0.62\n\\]\n\n\\[\nx\\approx 0.207\n\\]"
+        "title": "(a) Probabilities add to 1",
+        "body": "\\[\n0.58+2x+x=1 \\;\\Rightarrow\\; 3x=0.42 \\;\\Rightarrow\\; x=0.14\n\\]"
       },
       {
-        "title": "Expected blue sweets",
-        "body": "Expected blue sweets:\n\n\\[\n250\\times 0.38=95\n\\]"
+        "title": "(b) Estimate for blue in 250 spins",
+        "body": "\\[\n250\\times0.58=145\n\\]"
       }
     ],
-    "finalAnswer": "\\(0.207\\), and \\(95\\)."
+    "finalAnswer": "(a) \\(x=0.14\\) (b) \\(145\\)"
   },
   "all::Nov2023_P1H__Q20__p23-23__m04__Probability-Toolkit": {
     "status": "checked",
@@ -35930,21 +36555,21 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(9\\)."
   },
   "all::Nov2023_P2H__Q11__p11-11__m05__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Calculate probability",
-        "body": "Box X has \\(5\\) red and \\(11\\) not red crayons.\nBox Y has \\(7\\) red and \\(13\\) not red crayons."
+        "title": "(a) Complete the tree",
+        "body": "Box X: not red \\(\\frac{11}{16}\\).\n\nBox Y (on both branches): red \\(\\frac{7}{20}\\), not red \\(\\frac{13}{20}\\)."
       },
       {
-        "title": "Same colour type means both",
-        "body": "Same colour type means both red or both not red.\n\n\\[\nP(\\text{same})=\\frac5{16}\\times\\frac7{20}\n+\\frac{11}{16}\\times\\frac{13}{20}\n\\]\n\n\\[\n=\\frac{35}{320}+\\frac{143}{320}\n\\]\n\n\\[\n=\\frac{89}{160}\n\\]"
+        "title": "(b) Both red or both not red",
+        "body": "\\[\n\\frac{5}{16}\\times\\frac{7}{20}+\\frac{11}{16}\\times\\frac{13}{20}=\\frac{35}{320}+\\frac{143}{320}=\\frac{178}{320}=\\frac{89}{160}\n\\]"
       }
     ],
-    "finalAnswer": "\\(\\frac{89}{160}\\)."
+    "finalAnswer": "(a) \\(\\frac{11}{16}\\); \\(\\frac{7}{20},\\frac{13}{20}\\) on both branches (b) \\(\\dfrac{89}{160}\\)"
   },
   "expertise::Nov2023_P2H__Q24__p24-24__m05__Algebraic-Fractions": {
     "status": "checked",
@@ -36704,17 +37329,21 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(\\frac{99}{145}\\)."
   },
   "all::Nov2024_P1H__Q13__p15-15__m04__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Calculate probability",
-        "body": "\\[\nP(\\text{not early on Saturday})=1-0.7=0.3\n\\]\n\n\\[\nP(\\text{early on both days})=0.7\\times 0.9=0.63\n\\]"
+        "title": "(a) Complete the tree",
+        "body": "Saturday: not early \\(0.3\\).\n\nAfter early: Sunday early \\(0.9\\), not early \\(0.1\\). After not early: Sunday early \\(0.6\\), not early \\(0.4\\)."
+      },
+      {
+        "title": "(b) Early on both days",
+        "body": "\\[\n0.7\\times0.9=0.63\n\\]"
       }
     ],
-    "finalAnswer": "\\(0.63\\)."
+    "finalAnswer": "(a) \\(0.3\\); \\(0.9, 0.1\\); \\(0.6, 0.4\\) (b) \\(0.63\\)"
   },
   "expertise::Nov2024_P1H__Q21__p22-22__m03__Rounding-Estimation-and-Bounds": {
     "status": "checked",
@@ -37464,60 +38093,50 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(36\\) more students."
   },
   "all::Nov2024_P2H__Q13__p14-15__m06__Cumulative-Frequency-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "The cumulative frequencies are",
-        "body": "The cumulative frequencies are\n\n\\[\n4,\\ 19,\\ 39,\\ 50,\\ 56,\\ 60\n\\]",
-        "figures": [
-          {
-            "src": "assets/solution-diagrams/igcse/Nov2024_P2H__Q13__p14-15__m06__Cumulative-Frequency-Diagrams.png",
-            "alt": "Cumulative frequency graph"
-          }
-        ]
+        "title": "(a) Running totals",
+        "body": "\\[\n4,\\ 19,\\ 39,\\ 50,\\ 56,\\ 60\n\\]"
       },
       {
-        "title": "The median is the th",
-        "body": "The median is the \\(30\\)th value.\n\n\\[\n2+\\frac{30-19}{39-19}\\times 1=2.55\n\\]"
+        "title": "(b) Plot at the upper class boundaries",
+        "body": "Plot \\((1,4),(2,19),(3,39),(4,50),(5,56),(6,60)\\), start at \\((0,0)\\), and join with a smooth curve."
       },
       {
-        "title": "Use cumulative frequency",
-        "body": "At \\(3.7\\) kg,\n\n\\[\nF(3.7)\\approx 39+\\frac{0.7}{1}(50-39)=46.7\n\\]"
+        "title": "(c) Median",
+        "body": "Read across from \\(\\frac{60}{2}=30\\): about \\(2.55\\) kg."
       },
       {
-        "title": "Use cumulative frequency",
-        "body": "So the number heavier than \\(3.7\\) kg is\n\n\\[\n60-46.7=13.3\n\\]"
+        "title": "(d) Heavier than 3.7 kg",
+        "body": "At \\(3.7\\) kg the curve reads about \\(47\\), so about \\(60-47=13\\) parcels."
       }
     ],
-    "finalAnswer": "median about \\(2.55\\) kg, and about \\(13\\) parcels."
+    "finalAnswer": "(a) \\(4, 19, 39, 50, 56, 60\\) (c) about \\(2.55\\) kg (d) about \\(13\\)"
   },
   "all::Nov2024_P2H__Q05__p06-06__m04__Probability-Toolkit": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "Calculate probability",
-        "body": "The known probabilities add to\n\n\\[\n0.18+0.17+0.23=0.58\n\\]"
+        "title": "Probabilities of 1 and 4 together",
+        "body": "\\[\n1-(0.14+0.17+0.21)=1-0.52=0.48\n\\]"
       },
       {
-        "title": "Calculate probability",
-        "body": "So the probabilities for \\(1\\) and \\(4\\) add to\n\n\\[\n1-0.58=0.42\n\\]"
+        "title": "They are equal",
+        "body": "\\[\nP(4)=0.48\\div2=0.24\n\\]"
       },
       {
-        "title": "Calculate probability",
-        "body": "They are equal, so\n\n\\[\nP(4)=0.42\\div 2=0.21\n\\]"
-      },
-      {
-        "title": "Expected number of s",
-        "body": "Expected number of \\(4\\)s:\n\n\\[\n400\\times 0.21=84\n\\]"
+        "title": "Estimate for 400 spins",
+        "body": "\\[\n400\\times0.24=96\n\\]"
       }
     ],
-    "finalAnswer": "\\(84\\)."
+    "finalAnswer": "\\(96\\)"
   },
   "expertise::Nov2024_P2H__Q21__p21-21__m04__Set-Notation-and-Venn-Diagrams": {
     "status": "checked",
@@ -39790,25 +40409,21 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(21\\)."
   },
   "all::Nov2025_P1H__Q13__p11-11__m05__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "Bag 1",
-        "body": "Bag 1:\n\n\\[\nP(Y)=\\frac25,\\qquad P(O)=\\frac35\n\\]"
+        "title": "(a) Complete the tree",
+        "body": "Bag: orange \\(\\frac35\\).\n\nBox (on both branches): yellow \\(\\frac38\\), green \\(\\frac58\\)."
       },
       {
-        "title": "Bag 2",
-        "body": "Bag 2:\n\n\\[\nP(Y)=\\frac38,\\qquad P(G)=\\frac58\n\\]"
-      },
-      {
-        "title": "The only way to get",
-        "body": "The only way to get the same colour is yellow then yellow.\n\n\\[\nP(\\text{different})=1-\\frac25\\times\\frac38\n\\]\n\n\\[\n=1-\\frac{3}{20}=\\frac{17}{20}\n\\]"
+        "title": "(b) Use the complement",
+        "body": "The only way to get the same colour is yellow from both, so\n\n\\[\nP(\\text{different})=1-\\frac25\\times\\frac38=1-\\frac{6}{40}=\\frac{17}{20}\n\\]"
       }
     ],
-    "finalAnswer": "\\(\\frac{17}{20}\\)."
+    "finalAnswer": "(a) \\(\\frac35\\); \\(\\frac38,\\frac58\\) on both branches (b) \\(\\dfrac{17}{20}\\)"
   },
   "all::Nov2025_P1H__Q22__p18-18__m03__Combined-and-Conditional-Probability": {
     "status": "checked",
@@ -40706,83 +41321,59 @@ window.SOLUTION_DATA = {
     "finalAnswer": "\\(39\\) trains"
   },
   "all::Nov2025_P2H__Q14__p14-15__m05__Cumulative-Frequency-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "There are plants",
-        "body": "There are \\(40\\) plants."
+        "title": "(a) Median",
+        "body": "Read across from \\(\\frac{40}{2}=20\\): about \\(27\\) cm."
       },
       {
-        "title": "Use cumulative frequency",
-        "body": "From the graph,\n\n\\[\n\\text{median}\\approx 26\\text{ cm}\n\\]\n\n\\[\nQ_1\\approx 19\\text{ cm},\\qquad Q_3\\approx 35\\text{ cm}\n\\]\n\n\\[\n\\text{IQR}\\approx 35-19=16\\text{ cm}\n\\]"
+        "title": "(b) Interquartile range",
+        "body": "Lower quartile at \\(10\\): about \\(19\\) cm. Upper quartile at \\(30\\): about \\(35\\) cm.\n\n\\[\n\\text{IQR}\\approx35-19=16\\text{ cm}\n\\]"
       },
       {
-        "title": "Use cumulative frequency",
-        "body": "For premium plants, use height \\(>40\\) cm.\n\n\\[\nF(40)\\approx 34\n\\]\n\n\\[\n40-34=6\n\\]\n\n\\[\n6\\times 30=180\n\\]"
+        "title": "(c) Premium plants",
+        "body": "At \\(40\\) cm the curve reads about \\(34\\), so \\(40-34=6\\) plants are taller than \\(40\\) cm.\n\n\\[\n6\\times30=180\\text{ euros}\n\\]"
       }
     ],
-    "finalAnswer": "median about \\(26\\) cm, IQR about \\(16\\) cm, and \\(180\\) euros."
+    "finalAnswer": "(a) about \\(27\\) cm (b) about \\(16\\) cm (c) \\(180\\) euros"
   },
   "all::Nov2025_P2H__Q09__p09-09__m03__Probability-Toolkit": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Toolkit. The tag is correct.",
     "steps": [
       {
-        "title": "Bag A has",
-        "body": "Bag A has\n\n\\[\n120\\times 0.45=54\n\\]"
+        "title": "Red counters in each bag",
+        "body": "Bag A: \\(120\\times0.45=54\\). Bag B: \\(80\\times0.3=24\\)."
       },
       {
-        "title": "red counters",
-        "body": "red counters."
-      },
-      {
-        "title": "Bag B has",
-        "body": "Bag B has\n\n\\[\n80\\times 0.30=24\n\\]"
-      },
-      {
-        "title": "red counters",
-        "body": "red counters."
-      },
-      {
-        "title": "Calculate probability",
-        "body": "After combining the bags, the total number of red counters is\n\n\\[\n54+24=78\n\\]"
-      },
-      {
-        "title": "The total number of counters",
-        "body": "The total number of counters is\n\n\\[\n120+80=200\n\\]\n\n\\[\nP(\\text{red})=\\frac{78}{200}=0.39\n\\]"
+        "title": "Probability of red from bag C",
+        "body": "Bag C has \\(54+24=78\\) red counters out of \\(120+80=200\\).\n\n\\[\n\\frac{78}{200}=0.39\n\\]"
       }
     ],
-    "finalAnswer": "\\(0.39\\)."
+    "finalAnswer": "\\(0.39\\)"
   },
   "all::Nov2025_P2H__Q18__p18-18__m03__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-    "status": "needs-review",
-    "checkedBy": "Pending review",
-    "updated": "2026-05-06T18:49:24",
+    "status": "checked",
+    "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
     "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
     "steps": [
       {
-        "title": "The total is",
-        "body": "The total is \\(40\\)."
-      },
-      {
-        "title": "Calculate probability",
-        "body": "The regions shown add to\n\n\\[\n5+x+7+2x+4x+14\n\\]"
-      },
-      {
-        "title": "Calculate probability",
-        "body": "So\n\n\\[\n26+7x=40\n\\]\n\n\\[\n7x=14\n\\]\n\n\\[\nx=2\n\\]"
+        "title": "Find x (all regions add to 40)",
+        "body": "\\[\n5+x+7+2x+4x+14=40 \\;\\Rightarrow\\; 26+7x=40 \\;\\Rightarrow\\; x=2\n\\]"
       },
       {
         "title": "Latin or Sanskrit",
-        "body": "Latin or Sanskrit:\n\n\\[\n5+x+2x+4x=5+2+4+8=19\n\\]\n\n\\[\nP(L\\cup S)=\\frac{19}{40}\n\\]"
+        "body": "Regions in \\(L\\) or \\(S\\): \\(5+x+2x+4x=5+2+4+8=19\\).\n\n\\[\n\\frac{19}{40}\n\\]"
       }
     ],
-    "finalAnswer": "\\(\\frac{19}{40}\\)."
+    "finalAnswer": "\\(\\dfrac{19}{40}\\)"
   },
   "expertise::Nov2025_P2H__Q24__p24-24__m05__Rounding-Estimation-and-Bounds": {
     "status": "checked",

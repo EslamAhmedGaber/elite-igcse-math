@@ -60,7 +60,7 @@
       return items.map((q) => ({ id: q.id, image: q.image, topic: q.topicName, marks: q.marks, label: `${q.paper} · Q${q.qNo}`, steps: q.steps, finalAnswer: q.finalAnswer }));
     }
     window.ELITE_PATHWAY = { mode: course.mode, isModular: course.mode === "modular", label: () => (course.mode === "modular" ? "Unit" : "Chapter") };
-    await load("questions-data.js?v=20261018a");
+    await load("questions-data.js?v=20261024a");
     await load("topic-normalizer.js?v=20261023a");
     return (window.QUESTION_DATA || [])
       .filter((q) => q.bank === "all" && (!course.unit || q.unit === course.unit))
@@ -69,7 +69,7 @@
 
   async function solutionFor(item) {
     if (item.steps) return { steps: item.steps, finalAnswer: item.finalAnswer };
-    await window.EliteRuntime.loadScript("solutions-data.js?v=20261020fig", { test: () => Boolean(window.SOLUTION_DATA) });
+    await window.EliteRuntime.loadScript("solutions-data.js?v=20261024a", { test: () => Boolean(window.SOLUTION_DATA) });
     return (window.SOLUTION_DATA || {})[item.id] || null;
   }
 

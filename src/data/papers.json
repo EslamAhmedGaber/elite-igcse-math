@@ -598,5 +598,15 @@
     "paperSlug": "Nov2025_P2H",
     "questionCount": 33,
     "session": "Nov 2025"
+  },
+  {
+    "paper": "Elite Practice",
+    "paperSlug": "Elite_Practice",
+    "session": "Elite",
+    "code": "EP",
+    "isModular": false,
+    "modularUnit": null,
+    "marks": 101,
+    "questionCount": 37
   }
 ]

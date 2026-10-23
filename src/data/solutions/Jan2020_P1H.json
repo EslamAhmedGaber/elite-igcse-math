@@ -523,17 +523,21 @@
       "finalAnswer": "IQR about \\(18\\) minutes, and about \\(70\\) men."
     },
     "all::Jan2020_P1H__Q18__p22-22__m04__Probability-Toolkit": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "There are sweets and are",
-          "body": "There are \\(16\\) sweets and \\(5\\) are lemon, so \\(11\\) are not lemon.\n\n\\[\nP(\\text{no lemon})=\\frac{11}{16}\\times\\frac{10}{15}\\times\\frac{9}{14}\n\\]\n\n\\[\n=\\frac{33}{112}\n\\]"
+          "title": "Count the sweets that are not lemon",
+          "body": "There are \\(16\\) sweets and \\(5\\) are lemon, so \\(11\\) are not lemon."
+        },
+        {
+          "title": "Three picks without replacement, none lemon",
+          "body": "All \\(5\\) lemon sweets stay in the bowl only if Anna, Ravi and Sam each take a non-lemon sweet:\n\n\\[\n\\frac{11}{16}\\times\\frac{10}{15}\\times\\frac{9}{14}=\\frac{990}{3360}=\\frac{33}{112}\n\\]"
         }
       ],
-      "finalAnswer": "\\(\\frac{33}{112}\\)."
+      "finalAnswer": "\\(\\dfrac{33}{112}\\)"
     },
     "expertise::Jan2020_P1H__Q21__p25-25__m05__Functions": {
       "status": "checked",

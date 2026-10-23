@@ -616,25 +616,25 @@
       "finalAnswer": "median about \\(22.5\\) minutes, IQR about \\(12\\) minutes. Hospital A is quicker and more consistent."
     },
     "all::Jan2020_P1HR__Q16__p16-16__m04__Combined-and-Conditional-Probability": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Combined & Conditional Probability. The tag is correct.",
       "steps": [
         {
-          "title": "Calculate probability",
-          "body": "\\[\nP(\\text{win tennis})=0.6\n\\]\n\n\\[\nP(\\text{win both})=0.42\n\\]"
+          "title": "Find the probability of winning chess",
+          "body": "Treat the two games as independent:\n\n\\[\n0.6\\times P(\\text{win chess})=0.42 \\;\\Rightarrow\\; P(\\text{win chess})=0.42\\div0.6=0.7\n\\]"
         },
         {
-          "title": "Calculate probability",
-          "body": "So the chess win probability used with the tennis result is\n\n\\[\n0.42\\div 0.6=0.7\n\\]"
+          "title": "Probabilities of losing",
+          "body": "\\[\nP(\\text{not win tennis})=1-0.6=0.4,\\qquad P(\\text{not win chess})=1-0.7=0.3\n\\]"
         },
         {
-          "title": "Calculate probability",
-          "body": "Therefore\n\n\\[\nP(\\text{lose tennis})=0.4,\\qquad P(\\text{lose chess})=0.3\n\\]\n\n\\[\nP(\\text{not win either})=0.4\\times 0.3=0.12\n\\]"
+          "title": "Win neither game",
+          "body": "\\[\n0.4\\times0.3=0.12\n\\]"
         }
       ],
-      "finalAnswer": "\\(0.12\\)."
+      "finalAnswer": "\\(0.12\\)"
     },
     "expertise::Jan2020_P1HR__Q22__p23-23__m04__Transformations-of-Graphs": {
       "status": "checked",

@@ -523,63 +523,67 @@
       "finalAnswer": "\\(87\\) children"
     },
     "all::Jun2022_P1H__Q02__p04-04__m04__Probability-Toolkit": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "The known probabilities are",
-          "body": "The known probabilities are\n\n\\[\n0.26+0.18=0.44\n\\]"
+          "title": "Probabilities of landing on 2 and on 4",
+          "body": "The probabilities add to \\(1\\), and \\(P(2)=P(4)\\):\n\n\\[\n1-(0.26+0.18)=0.56,\\qquad P(4)=0.56\\div2=0.28\n\\]"
         },
         {
-          "title": "Calculate probability",
-          "body": "So the probabilities for numbers \\(2\\) and \\(4\\) add to\n\n\\[\n1-0.44=0.56\n\\]"
+          "title": "Number of spins",
+          "body": "An estimate of \\(45\\) for the number 3 means\n\n\\[\n0.18\\times n=45 \\;\\Rightarrow\\; n=250\n\\]"
         },
         {
-          "title": "Calculate probability",
-          "body": "They are equal, so each is\n\n\\[\n0.56\\div 2=0.28\n\\]"
-        },
-        {
-          "title": "Calculate probability",
-          "body": "If the expected frequency for number \\(3\\) is \\(45\\),\n\n\\[\n0.18n=45\n\\]\n\n\\[\nn=250\n\\]"
-        },
-        {
-          "title": "Expected frequency for number",
-          "body": "Expected frequency for number \\(4\\):\n\n\\[\n250\\times 0.28=70\n\\]"
+          "title": "Estimate for landing on 4",
+          "body": "\\[\n250\\times0.28=70\n\\]"
         }
       ],
-      "finalAnswer": "\\(0.28\\), \\(250\\) spins, \\(70\\)."
+      "finalAnswer": "\\(70\\)"
     },
     "all::Jun2022_P1H__Q15__p16-16__m04__Probability-Toolkit": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "To have a total score",
-          "body": "To have a total score of \\(0\\) after three games:"
+          "title": "Ways to score a total of 0",
+          "body": "Three draws (\\(0+0+0\\)), or one win and two losses (\\(10-5-5=0\\)) in any order."
         },
         {
-          "title": "Calculate probability",
-          "body": "- all three games are draws, or\n- one game is won and two games are lost.\n\n\\[\nP(\\text{DDD})=0.5^3=0.125\n\\]\n\n\\[\nP(\\text{one win and two losses})=3(0.3)(0.2)^2=0.036\n\\]\n\n\\[\n0.125+0.036=0.161\n\\]"
+          "title": "Three draws",
+          "body": "\\[\n0.5^3=0.125\n\\]"
+        },
+        {
+          "title": "One win and two losses (3 orders)",
+          "body": "\\[\n3\\times0.3\\times0.2\\times0.2=0.036\n\\]"
+        },
+        {
+          "title": "Add the cases",
+          "body": "\\[\n0.125+0.036=0.161\n\\]"
         }
       ],
-      "finalAnswer": "\\(0.161\\)."
+      "finalAnswer": "\\(0.161\\)"
     },
     "all::Jun2022_P1H__Q12__p13-13__m04__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "The probability Rudolph uses both",
-          "body": "The probability Rudolph uses both machines is\n\n\\[\n0.8\\times 0.3=0.24\n\\]"
+          "title": "(a) Complete the tree",
+          "body": "Treadmill: use \\(0.8\\), not use \\(0.2\\).\n\nAfter using the treadmill: cross trainer \\(0.3\\), not \\(0.7\\).\n\nAfter not using the treadmill: cross trainer \\(0.6\\), not \\(0.4\\)."
+        },
+        {
+          "title": "(b) Treadmill and cross trainer",
+          "body": "\\[\n0.8\\times0.3=0.24\n\\]"
         }
       ],
-      "finalAnswer": "\\(0.24\\)."
+      "finalAnswer": "(a) \\(0.8, 0.2\\); \\(0.3, 0.7\\); \\(0.6, 0.4\\) (b) \\(0.24\\)"
     },
     "expertise::Jun2022_P1H__Q24__p26-26__m04__Completing-the-Square": {
       "status": "checked",

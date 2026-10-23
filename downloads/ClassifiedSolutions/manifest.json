@@ -2,81 +2,81 @@
   {
     "title": "Complete Classified Solutions",
     "scope": "Full bank",
-    "questionBook": "downloads/classified_problems.pdf?v=books2027",
+    "questionBook": "downloads/classified_problems.pdf?v=books20261024",
     "source": "private_output/classified_answers.pdf",
     "files": [
       {
-        "href": "downloads/ClassifiedSolutions/classified_answers_Part1_of_2.pdf?v=books2027",
+        "href": "downloads/ClassifiedSolutions/classified_answers_Part1_of_2.pdf?v=books20261024",
         "name": "classified_answers_Part1_of_2.pdf",
-        "sizeBytes": 51972272
+        "sizeBytes": 51951146
       },
       {
-        "href": "downloads/ClassifiedSolutions/classified_answers_Part2_of_2.pdf?v=books2027",
+        "href": "downloads/ClassifiedSolutions/classified_answers_Part2_of_2.pdf?v=books20261024",
         "name": "classified_answers_Part2_of_2.pdf",
-        "sizeBytes": 55764352
+        "sizeBytes": 55087106
       }
     ]
   },
   {
     "title": "Classified Expertise Solutions",
     "scope": "Q20+",
-    "questionBook": "downloads/Classified_Expertise.pdf?v=books2027",
+    "questionBook": "downloads/Classified_Expertise.pdf?v=books20261024",
     "source": "private_output/Classified_Expertise_Answers.pdf",
     "files": [
       {
-        "href": "downloads/ClassifiedSolutions/Classified_Expertise_Answers.pdf?v=books2027",
+        "href": "downloads/ClassifiedSolutions/Classified_Expertise_Answers.pdf?v=books20261024",
         "name": "Classified_Expertise_Answers.pdf",
-        "sizeBytes": 25674352
+        "sizeBytes": 25671851
       }
     ]
   },
   {
     "title": "Unit 1 Classified Solutions",
     "scope": "4WM1",
-    "questionBook": "downloads/Classified_4WM1.pdf?v=books2027",
+    "questionBook": "downloads/Classified_4WM1.pdf?v=books20261024",
     "source": "private_output/Classified_4WM1_Answers.pdf",
     "files": [
       {
-        "href": "downloads/ClassifiedSolutions/Classified_4WM1_Answers.pdf?v=books2027",
+        "href": "downloads/ClassifiedSolutions/Classified_4WM1_Answers.pdf?v=books20261024",
         "name": "Classified_4WM1_Answers.pdf",
-        "sizeBytes": 50191805
+        "sizeBytes": 49912702
       }
     ]
   },
   {
     "title": "Unit 2 Classified Solutions",
     "scope": "4WM2",
-    "questionBook": "downloads/Classified_4WM2.pdf?v=books2027",
+    "questionBook": "downloads/Classified_4WM2.pdf?v=books20261024",
     "source": "private_output/Classified_4WM2_Answers.pdf",
     "files": [
       {
-        "href": "downloads/ClassifiedSolutions/Classified_4WM2_Answers.pdf?v=books2027",
+        "href": "downloads/ClassifiedSolutions/Classified_4WM2_Answers.pdf?v=books20261024",
         "name": "Classified_4WM2_Answers.pdf",
-        "sizeBytes": 57554191
+        "sizeBytes": 57134963
       }
     ]
   },
   {
     "title": "Unit 1 Expertise Solutions",
     "scope": "4WM1 Q20+",
-    "questionBook": "downloads/Classified_4WM1_Expertise.pdf?v=books2027",
+    "questionBook": "downloads/Classified_4WM1_Expertise.pdf?v=books20261024",
     "source": "private_output/Classified_4WM1_Expertise_Answers.pdf",
     "files": [
       {
-        "href": "downloads/ClassifiedSolutions/Classified_4WM1_Expertise_Answers.pdf?v=books2027",
+        "href": "downloads/ClassifiedSolutions/Classified_4WM1_Expertise_Answers.pdf?v=books20261024",
         "name": "Classified_4WM1_Expertise_Answers.pdf",
-        "sizeBytes": 12843519
+        "sizeBytes": 12840263
       }
     ]
   },
   {
     "title": "Unit 2 Expertise Solutions",
     "scope": "4WM2 Q20+",
-    "questionBook": "downloads/Classified_4WM2_Expertise.pdf?v=books2027",
+    "questionBook": "downloads/Classified_4WM2_Expertise.pdf?v=books20261024",
     "source": "private_output/Classified_4WM2_Expertise_Answers.pdf",
     "files": [
       {
-        "href": "downloads/ClassifiedSolutions/Classified_4WM2_Expertise_Answers.pdf?v=books2027",
+        "href": "downloads/ClassifiedSolutions/Classified_4WM2_Expertise_Answers.pdf?v=books20261024",
         "name": "Classified_4WM2_Expertise_Answers.pdf",
         "sizeBytes": 13079580
       }

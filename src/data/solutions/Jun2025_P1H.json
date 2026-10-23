@@ -584,17 +584,21 @@
       "finalAnswer": "\\(\\frac{51}{76}\\)"
     },
     "all::Jun2025_P1H__Q14__p14-14__m04__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Calculate probability",
-          "body": "\\[\nP(\\text{loses badminton})=1-0.7=0.3\n\\]\n\n\\[\nP(\\text{loses tennis})=1-0.4=0.6\n\\]\n\n\\[\nP(\\text{loses both})=0.3\\times 0.6=0.18\n\\]"
+          "title": "(a) Complete the tree",
+          "body": "Badminton: win \\(0.7\\), lose \\(0.3\\).\n\nTennis (on both branches): win \\(0.4\\), lose \\(0.6\\)."
+        },
+        {
+          "title": "(b) Lose both",
+          "body": "\\[\n0.3\\times0.6=0.18\n\\]"
         }
       ],
-      "finalAnswer": "\\(0.18\\)."
+      "finalAnswer": "(a) \\(0.7, 0.3\\); \\(0.4, 0.6\\) on both branches (b) \\(0.18\\)"
     },
     "expertise::Jun2025_P1H__Q22__p21-21__m05__Simultaneous-Equations": {
       "status": "checked",

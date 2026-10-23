@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "pages": [
+    {
+      "path": "/ar/",
+      "title": "دليل رياضيات IGCSE و IAL بالعربي للطالب وولي الأمر | Elite"
+    },
+    {
+      "path": "/ar/linear-vs-modular/",
+      "title": "الفرق بين Linear و Modular في IGCSE Maths Edexcel | Elite"
+    },
+    {
+      "path": "/ar/ial-maths-units/",
+      "title": "ترتيب مواد IAL Maths: Pure 1 و Pure 2 و Mechanics 1 | Elite"
+    },
+    {
+      "path": "/ar/how-to-study/",
+      "title": "إزاي تذاكر رياضيات IGCSE و IAL بالمصادر المجانية | Elite"
+    }
+  ]
+}

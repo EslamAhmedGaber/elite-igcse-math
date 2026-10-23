@@ -571,83 +571,59 @@
       "finalAnswer": "\\(39\\) trains"
     },
     "all::Nov2025_P2H__Q14__p14-15__m05__Cumulative-Frequency-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "There are plants",
-          "body": "There are \\(40\\) plants."
+          "title": "(a) Median",
+          "body": "Read across from \\(\\frac{40}{2}=20\\): about \\(27\\) cm."
         },
         {
-          "title": "Use cumulative frequency",
-          "body": "From the graph,\n\n\\[\n\\text{median}\\approx 26\\text{ cm}\n\\]\n\n\\[\nQ_1\\approx 19\\text{ cm},\\qquad Q_3\\approx 35\\text{ cm}\n\\]\n\n\\[\n\\text{IQR}\\approx 35-19=16\\text{ cm}\n\\]"
+          "title": "(b) Interquartile range",
+          "body": "Lower quartile at \\(10\\): about \\(19\\) cm. Upper quartile at \\(30\\): about \\(35\\) cm.\n\n\\[\n\\text{IQR}\\approx35-19=16\\text{ cm}\n\\]"
         },
         {
-          "title": "Use cumulative frequency",
-          "body": "For premium plants, use height \\(>40\\) cm.\n\n\\[\nF(40)\\approx 34\n\\]\n\n\\[\n40-34=6\n\\]\n\n\\[\n6\\times 30=180\n\\]"
+          "title": "(c) Premium plants",
+          "body": "At \\(40\\) cm the curve reads about \\(34\\), so \\(40-34=6\\) plants are taller than \\(40\\) cm.\n\n\\[\n6\\times30=180\\text{ euros}\n\\]"
         }
       ],
-      "finalAnswer": "median about \\(26\\) cm, IQR about \\(16\\) cm, and \\(180\\) euros."
+      "finalAnswer": "(a) about \\(27\\) cm (b) about \\(16\\) cm (c) \\(180\\) euros"
     },
     "all::Nov2025_P2H__Q09__p09-09__m03__Probability-Toolkit": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "Bag A has",
-          "body": "Bag A has\n\n\\[\n120\\times 0.45=54\n\\]"
+          "title": "Red counters in each bag",
+          "body": "Bag A: \\(120\\times0.45=54\\). Bag B: \\(80\\times0.3=24\\)."
         },
         {
-          "title": "red counters",
-          "body": "red counters."
-        },
-        {
-          "title": "Bag B has",
-          "body": "Bag B has\n\n\\[\n80\\times 0.30=24\n\\]"
-        },
-        {
-          "title": "red counters",
-          "body": "red counters."
-        },
-        {
-          "title": "Calculate probability",
-          "body": "After combining the bags, the total number of red counters is\n\n\\[\n54+24=78\n\\]"
-        },
-        {
-          "title": "The total number of counters",
-          "body": "The total number of counters is\n\n\\[\n120+80=200\n\\]\n\n\\[\nP(\\text{red})=\\frac{78}{200}=0.39\n\\]"
+          "title": "Probability of red from bag C",
+          "body": "Bag C has \\(54+24=78\\) red counters out of \\(120+80=200\\).\n\n\\[\n\\frac{78}{200}=0.39\n\\]"
         }
       ],
-      "finalAnswer": "\\(0.39\\)."
+      "finalAnswer": "\\(0.39\\)"
     },
     "all::Nov2025_P2H__Q18__p18-18__m03__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "The total is",
-          "body": "The total is \\(40\\)."
-        },
-        {
-          "title": "Calculate probability",
-          "body": "The regions shown add to\n\n\\[\n5+x+7+2x+4x+14\n\\]"
-        },
-        {
-          "title": "Calculate probability",
-          "body": "So\n\n\\[\n26+7x=40\n\\]\n\n\\[\n7x=14\n\\]\n\n\\[\nx=2\n\\]"
+          "title": "Find x (all regions add to 40)",
+          "body": "\\[\n5+x+7+2x+4x+14=40 \\;\\Rightarrow\\; 26+7x=40 \\;\\Rightarrow\\; x=2\n\\]"
         },
         {
           "title": "Latin or Sanskrit",
-          "body": "Latin or Sanskrit:\n\n\\[\n5+x+2x+4x=5+2+4+8=19\n\\]\n\n\\[\nP(L\\cup S)=\\frac{19}{40}\n\\]"
+          "body": "Regions in \\(L\\) or \\(S\\): \\(5+x+2x+4x=5+2+4+8=19\\).\n\n\\[\n\\frac{19}{40}\n\\]"
         }
       ],
-      "finalAnswer": "\\(\\frac{19}{40}\\)."
+      "finalAnswer": "\\(\\dfrac{19}{40}\\)"
     },
     "expertise::Nov2025_P2H__Q24__p24-24__m05__Rounding-Estimation-and-Bounds": {
       "status": "checked",

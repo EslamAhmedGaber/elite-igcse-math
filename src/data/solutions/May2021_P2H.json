@@ -468,35 +468,29 @@
       "finalAnswer": "\\(x=9.7\\text{ cm}\\)."
     },
     "all::May2021_P2H__Q12__p12-13__m07__Cumulative-Frequency-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Use cumulative frequency",
-          "body": "For Office A, the cumulative frequencies are\n\n\\[\n17,\\ 32,\\ 57,\\ 70,\\ 76,\\ 80\n\\]",
-          "figures": [
-            {
-              "src": "assets/solution-diagrams/igcse/May2021_P2H__Q12__p12-13__m07__Cumulative-Frequency-Diagrams.png",
-              "alt": "Cumulative frequency graph"
-            }
-          ]
+          "title": "(a) Plot the table",
+          "body": "Plot \\((5,17),(10,32),(15,57),(20,70),(25,76),(30,80)\\), start at \\((0,0)\\), and join with a smooth curve."
         },
         {
-          "title": "The median is the th",
-          "body": "The median is the \\(40\\)th value:\n\n\\[\n10+\\frac{40-32}{57-32}\\times 5=11.6\n\\]"
+          "title": "(b) Median",
+          "body": "Read across from \\(40\\): about \\(11.6\\) km."
         },
         {
-          "title": "The quartiles are the th",
-          "body": "The quartiles are the \\(20\\)th and \\(60\\)th values:\n\n\\[\nQ_1=5+\\frac{20-17}{32-17}\\times 5=6.0\n\\]\n\n\\[\nQ_3=15+\\frac{60-57}{70-57}\\times 5\\approx 16.2\n\\]\n\n\\[\n\\text{IQR}\\approx 16.2-6.0=10.2\n\\]"
+          "title": "(c) Interquartile range",
+          "body": "Lower quartile at \\(20\\): about \\(6\\) km. Upper quartile at \\(60\\): about \\(16.2\\) km.\n\n\\[\n\\text{IQR}\\approx16.2-6=10.2\\text{ km}\n\\]"
         },
         {
-          "title": "Office A has a smaller",
-          "body": "Office A has a smaller median than Office B, so the typical journey is shorter.\nOffice A has a larger IQR, so the distances are more spread out."
+          "title": "(d) Two comparisons",
+          "body": "1. Office A has a lower median (about \\(11.6\\) km against \\(15\\) km), so on average workers at Office A travel a shorter distance.\n\n2. Office A has a larger IQR (about \\(10\\) km against \\(5\\) km), so the distances at Office A are more varied (less consistent)."
         }
       ],
-      "finalAnswer": "median \\(11.6\\) km, IQR about \\(10.2\\) km."
+      "finalAnswer": "(b) about \\(11.6\\) km (c) about \\(10\\) km (d) A shorter on average; A more spread out"
     },
     "all::May2021_P2H__Q23__p26-27__m05__Probability-Toolkit": {
       "status": "checked",
@@ -532,33 +526,33 @@
       "finalAnswer": "\\(N=15\\) or \\(N=21\\)"
     },
     "all::May2021_P2H__Q13__p14-15__m08__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Calculate probability",
-          "body": "For the two races:\n\n\\[\nP(W_1)=0.7,\\quad P(L_1)=0.3\n\\]\n\n\\[\nP(W_2)=0.4,\\quad P(L_2)=0.6\n\\]"
+          "title": "(a) Complete the tree",
+          "body": "First race: does not win \\(0.3\\).\n\nSecond race: after a win, does not win \\(0.6\\); after not winning, wins \\(0.4\\) and does not win \\(0.6\\)."
         },
         {
-          "title": "Exactly one win",
-          "body": "Exactly one win:\n\n\\[\n0.7\\times 0.6+0.3\\times 0.4\n\\]\n\n\\[\n=0.42+0.12=0.54\n\\]"
+          "title": "(b) Exactly one win",
+          "body": "\\[\n0.7\\times0.6+0.3\\times0.4=0.42+0.12=0.54\n\\]"
         },
         {
-          "title": "Calculate probability",
-          "body": "For exactly two wins in three races:"
+          "title": "(c) Win the first two, lose the third",
+          "body": "\\(P(\\text{win both})=0.7\\times0.4=0.28\\), then lose the third with \\(1-0.6=0.4\\):\n\n\\[\n0.28\\times0.4=0.112\n\\]"
         },
         {
-          "title": "Calculate probability",
-          "body": "First two wins, then lose the third:\n\n\\[\n0.7\\times 0.4\\times 0.4=0.112\n\\]"
+          "title": "(c) Exactly one of the first two, then win the third",
+          "body": "\\[\n0.54\\times0.3=0.162\n\\]"
         },
         {
-          "title": "Exactly one win in the",
-          "body": "Exactly one win in the first two, then win the third:\n\n\\[\n0.54\\times 0.3=0.162\n\\]\n\n\\[\n0.112+0.162=0.274\n\\]"
+          "title": "(c) Add the cases",
+          "body": "\\[\n0.112+0.162=0.274\n\\]"
         }
       ],
-      "finalAnswer": "\\(0.54\\), \\(0.274\\)."
+      "finalAnswer": "(a) \\(0.3\\); \\(0.6\\); \\(0.4, 0.6\\) (b) \\(0.54\\) (c) \\(0.274\\)"
     },
     "expertise::May2021_P2H__Q22__p25-25__m04__Completing-the-Square": {
       "status": "checked",

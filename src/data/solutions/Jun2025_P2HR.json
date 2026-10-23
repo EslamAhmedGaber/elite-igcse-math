@@ -635,33 +635,29 @@
       "finalAnswer": "\\(\\frac{8}{29}\\) or \\(0.276\\) to 3 significant figures"
     },
     "all::Jun2025_P2HR__Q14__p14-15__m07__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Calculate probability",
-          "body": "Bag A has \\(5\\) red and \\(4\\) green beads:\n\n\\[\nP(A_R)=\\frac59,\\qquad P(A_G)=\\frac49\n\\]"
+          "title": "(a) Complete the tree",
+          "body": "Bag A: red \\(\\frac59\\), green \\(\\frac49\\).\n\nBag B (on both branches): red \\(\\frac{7}{10}\\), green \\(\\frac{3}{10}\\)."
         },
         {
-          "title": "Calculate probability",
-          "body": "Bag B has \\(7\\) red and \\(3\\) green beads:\n\n\\[\nP(B_R)=\\frac7{10},\\qquad P(B_G)=\\frac3{10}\n\\]"
+          "title": "(b) Two red beads",
+          "body": "\\[\n\\frac59\\times\\frac{7}{10}=\\frac{35}{90}=\\frac{7}{18}\n\\]"
         },
         {
-          "title": "Two red beads",
-          "body": "Two red beads:\n\n\\[\n\\frac59\\times\\frac7{10}=\\frac7{18}\n\\]"
+          "title": "(c) More red than green with three beads",
+          "body": "She needs at least two reds: RRR, RRG, RGR or GRR. The box gives red \\(\\frac{9}{11}\\), green \\(\\frac{2}{11}\\)."
         },
         {
-          "title": "Calculate probability",
-          "body": "For part (c), the box has\n\n\\[\nP(\\text{green})=\\frac2{11},\\qquad P(\\text{red})=\\frac9{11}\n\\]"
-        },
-        {
-          "title": "More red than green means",
-          "body": "More red than green means at least two red beads:\n\n\\[\nRRR+RRG+RGR+GRR\n\\]\n\n\\[\n\\frac59\\frac7{10}\\frac9{11}\n+\\frac59\\frac7{10}\\frac2{11}\n+\\frac59\\frac3{10}\\frac9{11}\n+\\frac49\\frac7{10}\\frac9{11}\n=\\frac{386}{495}\n\\]"
+          "title": "(c) Add the four cases",
+          "body": "\\[\n\\frac{5\\cdot7\\cdot9+5\\cdot7\\cdot2+5\\cdot3\\cdot9+4\\cdot7\\cdot9}{9\\cdot10\\cdot11}=\\frac{315+70+135+252}{990}=\\frac{772}{990}=\\frac{386}{495}\n\\]"
         }
       ],
-      "finalAnswer": "\\(\\frac7{18}\\), \\(\\frac{386}{495}\\)."
+      "finalAnswer": "(a) \\(\\frac59,\\frac49\\); \\(\\frac{7}{10},\\frac{3}{10}\\) on both branches (b) \\(\\dfrac{7}{18}\\) (c) \\(\\dfrac{386}{495}\\)"
     },
     "expertise::Jun2025_P2HR__Q21__p21-21__m03__Solving-Inequalities": {
       "status": "checked",

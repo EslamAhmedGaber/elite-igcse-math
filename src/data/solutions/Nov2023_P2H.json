@@ -597,21 +597,21 @@
       "finalAnswer": "\\(9\\)."
     },
     "all::Nov2023_P2H__Q11__p11-11__m05__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Calculate probability",
-          "body": "Box X has \\(5\\) red and \\(11\\) not red crayons.\nBox Y has \\(7\\) red and \\(13\\) not red crayons."
+          "title": "(a) Complete the tree",
+          "body": "Box X: not red \\(\\frac{11}{16}\\).\n\nBox Y (on both branches): red \\(\\frac{7}{20}\\), not red \\(\\frac{13}{20}\\)."
         },
         {
-          "title": "Same colour type means both",
-          "body": "Same colour type means both red or both not red.\n\n\\[\nP(\\text{same})=\\frac5{16}\\times\\frac7{20}\n+\\frac{11}{16}\\times\\frac{13}{20}\n\\]\n\n\\[\n=\\frac{35}{320}+\\frac{143}{320}\n\\]\n\n\\[\n=\\frac{89}{160}\n\\]"
+          "title": "(b) Both red or both not red",
+          "body": "\\[\n\\frac{5}{16}\\times\\frac{7}{20}+\\frac{11}{16}\\times\\frac{13}{20}=\\frac{35}{320}+\\frac{143}{320}=\\frac{178}{320}=\\frac{89}{160}\n\\]"
         }
       ],
-      "finalAnswer": "\\(\\frac{89}{160}\\)."
+      "finalAnswer": "(a) \\(\\frac{11}{16}\\); \\(\\frac{7}{20},\\frac{13}{20}\\) on both branches (b) \\(\\dfrac{89}{160}\\)"
     },
     "expertise::Nov2023_P2H__Q24__p24-24__m05__Algebraic-Fractions": {
       "status": "checked",

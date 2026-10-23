@@ -349,7 +349,7 @@
     if (!window.EliteRuntime?.loadScript) throw new Error("Solution loader is unavailable");
 
     setRuntimeBusy(control, true);
-    fullSolutionsPromise = window.EliteRuntime.loadScript("solutions-data.js?v=20261020fig", {
+    fullSolutionsPromise = window.EliteRuntime.loadScript("solutions-data.js?v=20261024a", {
       id: "eliteExamSolutions",
       test: () => hasFullSolutionBundle(window.SOLUTION_DATA)
     }).then(() => {
@@ -884,12 +884,35 @@
     return pool;
   }
 
-  /* ---- marks-based level: under 3 Easy, 3-4 Medium, over 4 Hard ---------- */
+  /* ---- marks-based level. IGCSE: 1-2 Easy, 3-4 Medium, 5+ Hard. IAL questions carry more
+     marks (3-18), so Pure/Mechanics use 1-6 / 7-8 / 9+ (about 30/31/39% of the IAL bank). ---- */
+  function levelBands() {
+    return activePathway() === "pure" ? { easy: 6, medium: 8 } : { easy: 2, medium: 4 };
+  }
+
+  function levelRangeText(level) {
+    const bands = levelBands();
+    if (level === "easy") return `${bands.easy} marks or fewer`;
+    if (level === "medium") return `${bands.easy + 1}–${bands.medium} marks`;
+    return `${bands.medium + 1}+ marks`;
+  }
+
   function questionLevel(question) {
     const marks = Number(question?.marks || 0);
-    if (marks < 3) return "easy";
-    if (marks <= 4) return "medium";
+    const bands = levelBands();
+    if (marks <= bands.easy) return "easy";
+    if (marks <= bands.medium) return "medium";
     return "hard";
+  }
+
+  function applyLevelLabels() {
+    const select = document.getElementById("builderDifficulty");
+    ["easy", "medium", "hard"].forEach((level) => {
+      const option = select?.querySelector(`option[value="${level}"]`);
+      if (option) option.textContent = `${LEVEL_LABELS[level]} (${levelRangeText(level)})`;
+    });
+    const mix = document.getElementById("examLevelMix")?.closest("label");
+    if (mix) mix.title = `Level is estimated from marks: Easy ${levelRangeText("easy")}, Medium ${levelRangeText("medium")}, Hard ${levelRangeText("hard")}`;
   }
 
   function levelCounts(items) {
@@ -1468,7 +1491,7 @@
         <article><strong>${minutes}</strong><span>minutes${els.duration?.value === "auto" ? " (auto)" : ""}</span></article>
         <article><strong>${plan.topics}</strong><span>topics</span></article>
       </div>
-      <p class="exam-plan-levels"><span>Levels by marks:</span> <b>Easy</b> ${levels.easy} <small>(under 3)</small> &middot; <b>Medium</b> ${levels.medium} <small>(3&ndash;4)</small> &middot; <b>Hard</b> ${levels.hard} <small>(5+)</small>${plan.avoided ? ` &middot; ${plan.avoided} recent question${plan.avoided === 1 ? "" : "s"} excluded` : ""}</p>
+      <p class="exam-plan-levels"><span>Levels by marks:</span> <b>Easy</b> ${levels.easy} <small>(${levelRangeText("easy")})</small> &middot; <b>Medium</b> ${levels.medium} <small>(${levelRangeText("medium")})</small> &middot; <b>Hard</b> ${levels.hard} <small>(${levelRangeText("hard")})</small>${plan.avoided ? ` &middot; ${plan.avoided} recent question${plan.avoided === 1 ? "" : "s"} excluded` : ""}</p>
       ${levelNote}
       ${warnings.length
         ? `<p class="exam-plan-warning" role="alert">${warnings.map(escapeHtml).join(" ")}</p>`
@@ -3367,6 +3390,7 @@
 
   applyCourseDom();
   populatePathwayFilters();
+  applyLevelLabels();
   applyUrlDefaults();
   loadPaperFromUrl();
   refreshBuilderPaperOptions();

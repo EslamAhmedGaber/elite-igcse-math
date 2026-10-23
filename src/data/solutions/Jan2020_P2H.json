@@ -596,34 +596,42 @@
       "finalAnswer": "\\(\\frac{23}{60}\\), then \\(\\frac35\\)."
     },
     "all::Jan2020_P2H__Q06__p07-07__m04__Probability-Toolkit": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "Let the probability of red",
-          "body": "Let the probability of red be \\(r\\). Then the probability of green is \\(2r\\).\n\n\\[\nr+0.24+2r+0.31=1\n\\]\n\n\\[\n3r=0.45\n\\]\n\n\\[\nr=0.15\n\\]"
+          "title": "Use the fact that probabilities add to 1",
+          "body": "Let \\(P(\\text{red})=r\\), so \\(P(\\text{green})=2r\\).\n\n\\[\nr+0.24+2r+0.31=1 \\;\\Rightarrow\\; 3r=0.45 \\;\\Rightarrow\\; r=0.15\n\\]"
         },
         {
-          "title": "Expected number of red counters",
-          "body": "Expected number of red counters:\n\n\\[\n180\\times 0.15=27\n\\]"
+          "title": "Expected number of red beads",
+          "body": "\\[\n180\\times0.15=27\n\\]"
         }
       ],
-      "finalAnswer": "\\(27\\)."
+      "finalAnswer": "\\(27\\)"
     },
     "all::Jan2020_P2H__Q14__p14-14__m04__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Calculate probability",
-          "body": "There are \\(13\\) large glasses and \\(7\\) small glasses.\n\n\\[\nP(\\text{two small})=\\frac{7}{20}\\times\\frac{6}{19}\n\\]\n\n\\[\n=\\frac{21}{190}\n\\]"
+          "title": "(a) First glass",
+          "body": "\\[\nP(\\text{large})=\\frac{13}{20},\\qquad P(\\text{small})=\\frac{7}{20}\n\\]"
+        },
+        {
+          "title": "(a) Second glass (one fewer glass left)",
+          "body": "After a large glass: large \\(\\frac{12}{19}\\), small \\(\\frac{7}{19}\\).\n\nAfter a small glass: large \\(\\frac{13}{19}\\), small \\(\\frac{6}{19}\\)."
+        },
+        {
+          "title": "(b) Two small glasses",
+          "body": "\\[\n\\frac{7}{20}\\times\\frac{6}{19}=\\frac{42}{380}=\\frac{21}{190}\n\\]"
         }
       ],
-      "finalAnswer": "\\(\\frac{21}{190}\\)."
+      "finalAnswer": "(a) \\(\\frac{13}{20},\\frac{7}{20}\\); \\(\\frac{12}{19},\\frac{7}{19}\\); \\(\\frac{13}{19},\\frac{6}{19}\\) (b) \\(\\dfrac{21}{190}\\)"
     },
     "expertise::Jan2020_P2H__Q20__p20-20__m03__Surds": {
       "status": "checked",

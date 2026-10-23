@@ -533,25 +533,25 @@
       "finalAnswer": "\\(14\\) trees."
     },
     "all::Jun2022_P1HR__Q01__p03-03__m04__Probability-Toolkit": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "Calculate probability",
-          "body": "\\[\nP(\\text{red or yellow})=0.25+0.20=0.45\n\\]"
+          "title": "(a) Red or yellow",
+          "body": "\\[\n0.25+0.2=0.45\n\\]"
         },
         {
-          "title": "The purple probability is",
-          "body": "The purple probability is\n\n\\[\n1-0.25-0.20-0.20=0.35\n\\]"
+          "title": "(b) Probability of purple",
+          "body": "\\[\n1-(0.25+0.2+0.2)=0.35\n\\]"
         },
         {
-          "title": "Expected purple spins",
-          "body": "Expected purple spins:\n\n\\[\n300\\times 0.35=105\n\\]"
+          "title": "(b) Estimate for 300 spins",
+          "body": "\\[\n300\\times0.35=105\n\\]"
         }
       ],
-      "finalAnswer": "\\(0.45\\), \\(0.35\\), \\(105\\)."
+      "finalAnswer": "(a) \\(0.45\\) (b) \\(105\\)"
     },
     "all::Jun2022_P1HR__Q24__p27-27__m05__Probability-Toolkit": {
       "status": "checked",

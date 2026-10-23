@@ -582,75 +582,63 @@
       "finalAnswer": "draw bars with densities \\(3.5,3,5,2,0.8\\), and \\(98\\) plants."
     },
     "all::MayNov2020_P1H__Q02__p04-04__m04__Probability-Toolkit": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "Calculate probability",
-          "body": "\\[\n15\\text{ hours}=15\\times 60\\times 60=54000\\text{ seconds}\n\\]"
+          "title": "Seconds in a working day",
+          "body": "\\[\n15\\times60\\times60=54\\,000\\text{ seconds}\n\\]"
         },
         {
-          "title": "The machine makes cars every",
-          "body": "The machine makes \\(5\\) cars every \\(12\\) seconds, so it makes\n\n\\[\n\\frac{54000}{12}\\times 5=22500\n\\]"
+          "title": "Toy cars made each day",
+          "body": "\\[\n\\frac{54\\,000}{12}\\times5=22\\,500\n\\]"
         },
         {
-          "title": "cars",
-          "body": "cars."
-        },
-        {
-          "title": "Expected faulty cars",
-          "body": "Expected faulty cars:\n\n\\[\n22500\\times 0.002=45\n\\]"
+          "title": "Expected number of faulty cars",
+          "body": "\\[\n22\\,500\\times0.002=45\n\\]"
         }
       ],
-      "finalAnswer": "\\(45\\)."
+      "finalAnswer": "\\(45\\)"
     },
     "all::MayNov2020_P1H__Q01__p03-03__m04__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Calculate probability",
-          "body": "From the Venn diagram,\n\n\\[\nA\\cap B=\\{2,4,6,12\\}\n\\]"
+          "title": "(a) In both A and B",
+          "body": "\\(A\\cap B=\\{2,4,6,12\\}\\)"
         },
         {
-          "title": "The values not in are",
-          "body": "The values not in \\(B\\) are\n\n\\[\nB'=\\{5,7,8,9,10,11,13,14\\}\n\\]"
+          "title": "(b) Not in B",
+          "body": "Everything outside circle \\(B\\): \\(B'=\\{5,7,8,9,10,11,13,14\\}\\)"
         },
         {
-          "title": "The values in but not",
-          "body": "The values in \\(A\\) but not in \\(B\\) are\n\n\\[\n\\{8,10,14\\}\n\\]"
-        },
-        {
-          "title": "Calculate probability",
-          "body": "So\n\n\\[\nP(A\\cap B')=\\frac{3}{14}\n\\]"
+          "title": "(c) In A but not in B",
+          "body": "\\(\\{8,10,14\\}\\): \\(3\\) of the \\(14\\) numbers.\n\n\\[\n\\frac{3}{14}\n\\]"
         }
       ],
-      "finalAnswer": "\\(\\{2,4,6,12\\}\\), \\(\\{5,7,8,9,10,11,13,14\\}\\), \\(\\frac{3}{14}\\)."
+      "finalAnswer": "(a) \\(2,4,6,12\\) (b) \\(5,7,8,9,10,11,13,14\\) (c) \\(\\dfrac{3}{14}\\)"
     },
     "all::MayNov2020_P1H__Q15__p16-17__m05__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Spinner A has red sectors",
-          "body": "Spinner A has \\(2\\) red sectors and \\(3\\) green sectors:\n\n\\[\nP(A_R)=\\frac25,\\qquad P(A_G)=\\frac35\n\\]"
+          "title": "(a) Complete the tree",
+          "body": "Spinner A has \\(2\\) red and \\(3\\) green sections: red \\(\\frac25\\), green \\(\\frac35\\).\n\nSpinner B has \\(4\\) red and \\(1\\) green (on both branches): red \\(\\frac45\\), green \\(\\frac15\\)."
         },
         {
-          "title": "Spinner B has red sectors",
-          "body": "Spinner B has \\(4\\) red sectors and \\(1\\) green sector:\n\n\\[\nP(B_R)=\\frac45,\\qquad P(B_G)=\\frac15\n\\]"
-        },
-        {
-          "title": "At least one green is",
-          "body": "At least one green is the complement of both red.\n\n\\[\nP(\\text{at least one green})=1-\\frac25\\times\\frac45\n\\]\n\n\\[\n=1-\\frac{8}{25}=\\frac{17}{25}\n\\]"
+          "title": "(b) Use the complement",
+          "body": "\"At least one green\" is the opposite of \"both red\":\n\n\\[\n1-\\frac25\\times\\frac45=1-\\frac{8}{25}=\\frac{17}{25}\n\\]"
         }
       ],
-      "finalAnswer": "\\(\\frac{17}{25}\\)."
+      "finalAnswer": "(a) \\(\\frac25,\\frac35\\); \\(\\frac45,\\frac15\\) on both branches (b) \\(\\dfrac{17}{25}\\)"
     },
     "expertise::MayNov2020_P1H__Q21__p23-23__m05__Algebraic-Fractions": {
       "status": "checked",

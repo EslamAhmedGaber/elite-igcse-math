@@ -581,21 +581,21 @@
       "finalAnswer": "histogram densities \\(0.8,2.6,1.9,1.6,0.3\\), and probability \\(\\frac{1}{10}\\)."
     },
     "all::Nov2021_P2H__Q16__p19-19__m03__Combined-and-Conditional-Probability": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Combined & Conditional Probability. The tag is correct.",
       "steps": [
         {
-          "title": "Calculate probability",
-          "body": "There are \\(4\\) red, \\(5\\) green and \\(6\\) yellow counters."
+          "title": "Count the colours",
+          "body": "\\(4\\) red, \\(5\\) green and \\(15-9=6\\) yellow. The counter is replaced, so the second pick has the same probabilities."
         },
         {
-          "title": "Calculate probability",
-          "body": "The first counter is replaced, so the probabilities are the same for Niklas and Sasha.\n\n\\[\nP(\\text{same colour})=\n\\left(\\frac4{15}\\right)^2+\n\\left(\\frac5{15}\\right)^2+\n\\left(\\frac6{15}\\right)^2\n\\]\n\n\\[\n=\\frac{16+25+36}{225}\n\\]\n\n\\[\n=\\frac{77}{225}\n\\]"
+          "title": "Both the same colour",
+          "body": "\\[\n\\left(\\frac{4}{15}\\right)^2+\\left(\\frac{5}{15}\\right)^2+\\left(\\frac{6}{15}\\right)^2=\\frac{16+25+36}{225}=\\frac{77}{225}\n\\]"
         }
       ],
-      "finalAnswer": "\\(\\frac{77}{225}\\)."
+      "finalAnswer": "\\(\\dfrac{77}{225}\\)"
     },
     "expertise::Nov2021_P2H__Q20__p23-23__m05__Sequences": {
       "status": "checked",

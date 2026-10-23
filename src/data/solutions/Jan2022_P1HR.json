@@ -612,38 +612,42 @@
       "finalAnswer": "\\(102\\) watermelons"
     },
     "all::Jan2022_P1HR__Q02__p04-04__m02__Probability-Toolkit": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "Calculate probability",
-          "body": "\\[\n0.65\\times 300=195\n\\]"
+          "title": "Expected number = probability × number of games",
+          "body": "\\[\n0.65\\times300=195\n\\]"
         }
       ],
-      "finalAnswer": "\\(195\\)."
+      "finalAnswer": "\\(195\\)"
     },
     "all::Jan2022_P1HR__Q13__p16-17__m07__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Hector s probability of taking",
-          "body": "Hector's probability of taking one green and one red is\n\n\\[\n2\\times\\frac{7}{12}\\times\\frac{5}{12}=\\frac{35}{72}\n\\]"
+          "title": "(a) Complete the tree (counter is replaced)",
+          "body": "First counter red: \\(\\frac{5}{12}\\).\n\nAfter green, second counter: green \\(\\frac{7}{12}\\), red \\(\\frac{5}{12}\\)."
         },
         {
-          "title": "Calculate probability",
-          "body": "For all three counters to be different, Meghan must take a blue counter."
+          "title": "(b) Both red",
+          "body": "\\[\n\\frac{5}{12}\\times\\frac{5}{12}=\\frac{25}{144}\n\\]"
         },
         {
-          "title": "Let the number of blue",
-          "body": "Let the number of blue counters in Meghan's jar be \\(b\\). There are \\(15\\) counters in the jar.\n\n\\[\n\\frac{35}{72}\\times \\frac{b}{15}=\\frac{7}{24}\n\\]\n\n\\[\n\\frac{b}{15}=\\frac35\n\\]\n\n\\[\nb=9\n\\]"
+          "title": "(c) What \"three different colours\" needs",
+          "body": "Hector only has green and red, so he must take one green and one red (either order), and Meghan must take blue.\n\n\\[\nP(\\text{one green, one red})=2\\times\\frac{7}{12}\\times\\frac{5}{12}=\\frac{35}{72}\n\\]"
+        },
+        {
+          "title": "(c) Solve for the number of blue counters",
+          "body": "Let \\(b\\) be the number of blue counters out of \\(15\\).\n\n\\[\n\\frac{35}{72}\\times\\frac{b}{15}=\\frac{7}{24} \\;\\Rightarrow\\; \\frac{b}{15}=\\frac{7}{24}\\times\\frac{72}{35}=\\frac{3}{5} \\;\\Rightarrow\\; b=9\n\\]"
         }
       ],
-      "finalAnswer": "\\(9\\) blue counters."
+      "finalAnswer": "(a) \\(\\frac{5}{12}\\); \\(\\frac{7}{12},\\frac{5}{12}\\) (b) \\(\\dfrac{25}{144}\\) (c) \\(9\\)"
     },
     "expertise::Jan2022_P1HR__Q22__p27-27__m04__Rounding-Estimation-and-Bounds": {
       "status": "checked",

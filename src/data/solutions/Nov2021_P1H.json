@@ -410,27 +410,29 @@
       "finalAnswer": "(i) \\(\\mathbf b-\\mathbf a\\), (ii) \\(4\\mathbf b-2\\mathbf a\\), (iii) \\(2\\mathbf b-3\\mathbf a\\), (b) \\(90\\text{ cm}^2\\)."
     },
     "all::Nov2021_P1H__Q11__p10-11__m05__Cumulative-Frequency-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "The cumulative frequencies are",
-          "body": "The cumulative frequencies are\n\n\\[\n12,\\ 36,\\ 64,\\ 76,\\ 86,\\ 90\n\\]",
-          "figures": [
-            {
-              "src": "assets/solution-diagrams/igcse/Nov2021_P1H__Q11__p10-11__m05__Cumulative-Frequency-Diagrams.png",
-              "alt": "Cumulative frequency graph"
-            }
-          ]
+          "title": "(a) Running totals",
+          "body": "\\[\n12,\\ 36,\\ 64,\\ 76,\\ 86,\\ 90\n\\]"
         },
         {
-          "title": "Use cumulative frequency",
-          "body": "For \\(42<T\\leq 52\\),\n\n\\[\nF(52)\\approx 36+\\frac{7}{10}(64-36)=55.6\n\\]\n\n\\[\nF(42)\\approx 12+\\frac{7}{10}(36-12)=28.8\n\\]\n\n\\[\n55.6-28.8=26.8\n\\]"
+          "title": "(b) Plot at the upper class boundaries",
+          "body": "Plot \\((35,12),(45,36),(55,64),(65,76),(75,86),(85,90)\\), start at \\((25,0)\\), and join with a smooth curve."
+        },
+        {
+          "title": "(c) Read the curve at 52 and 42 minutes",
+          "body": "At \\(52\\) minutes: about \\(56\\). At \\(42\\) minutes: about \\(29\\)."
+        },
+        {
+          "title": "(c) Silver medals",
+          "body": "\\[\n56-29\\approx27\\text{ runners}\n\\]"
         }
       ],
-      "finalAnswer": "about \\(27\\) runners."
+      "finalAnswer": "(a) \\(12, 36, 64, 76, 86, 90\\) (c) about \\(27\\)"
     },
     "all::Nov2021_P1H__Q03__p04-04__m04__Probability-Toolkit": {
       "status": "checked",
@@ -454,60 +456,50 @@
       "finalAnswer": "(a) \\(24\\) white fish, (b) \\(3\\) white fish."
     },
     "all::Nov2021_P1H__Q15__p16-17__m08__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Calculate probability",
-          "body": "For each chess game:\n\n\\[\nP(M\\text{ wins})=\\frac29,\\quad P(\\text{draw})=\\frac49,\\quad P(M\\text{ loses})=\\frac13\n\\]"
+          "title": "(a) Complete the tree",
+          "body": "Magnus loses: \\(1-\\frac29-\\frac49=\\frac39\\).\n\nEvery second-game branch repeats \\(\\frac29,\\ \\frac49,\\ \\frac39\\) (the games are independent)."
         },
         {
-          "title": "Calculate probability",
-          "body": "After two games, equal points happens if both games are drawn or Magnus wins one and loses one.\n\n\\[\n\\left(\\frac49\\right)^2+2\\left(\\frac29\\right)\\left(\\frac13\\right)\n\\]\n\n\\[\n=\\frac{16}{81}+\\frac{12}{81}=\\frac{28}{81}\n\\]"
+          "title": "(b) Equal points after 2 games",
+          "body": "Two draws, or one win and one loss (either order):\n\n\\[\n\\left(\\frac49\\right)^2+2\\times\\frac29\\times\\frac39=\\frac{16}{81}+\\frac{12}{81}=\\frac{28}{81}\n\\]"
         },
         {
-          "title": "Calculate probability",
-          "body": "After three games, equal points means Magnus scores \\(3\\) points in total."
+          "title": "(c) Equal points after 3 games",
+          "body": "Each player needs \\(3\\) of the \\(6\\) points: three draws, or one win, one draw and one loss (\\(3!=6\\) orders)."
         },
         {
-          "title": "Calculate probability",
-          "body": "This happens with three draws, or with one win, one draw and one loss.\n\n\\[\n\\left(\\frac49\\right)^3+6\\left(\\frac29\\right)\\left(\\frac49\\right)\\left(\\frac13\\right)\n\\]\n\n\\[\n=\\frac{64}{729}+\\frac{144}{729}=\\frac{208}{729}\n\\]"
+          "title": "(c) Add the cases",
+          "body": "\\[\n\\left(\\frac49\\right)^3+6\\times\\frac29\\times\\frac49\\times\\frac39=\\frac{64}{729}+\\frac{144}{729}=\\frac{208}{729}\n\\]"
         }
       ],
-      "finalAnswer": "\\(\\frac{28}{81}\\), \\(\\frac{208}{729}\\)."
+      "finalAnswer": "(a) \\(\\frac39\\); \\(\\frac29,\\frac49,\\frac39\\) on every branch (b) \\(\\dfrac{28}{81}\\) (c) \\(\\dfrac{208}{729}\\)"
     },
     "all::Nov2021_P1H__Q16__p18-19__m05__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Use the Maths circle",
-          "body": "Use the Maths circle.\n\n\\[\nM\\text{ only}=3\n\\]\n\n\\[\nM\\cap E\\text{ only}=18-x\n\\]\n\n\\[\nM\\cap F\\text{ only}=11-x\n\\]"
+          "title": "(a) Use the Maths circle",
+          "body": "Maths only \\(=3\\), Maths and English only \\(=18-x\\), Maths and French only \\(=11-x\\), all three \\(=x\\).\n\n\\[\n3+(18-x)+(11-x)+x=25 \\;\\Rightarrow\\; 32-x=25 \\;\\Rightarrow\\; x=7\n\\]"
         },
         {
-          "title": "The total in is",
-          "body": "The total in \\(M\\) is \\(25\\):\n\n\\[\n3+(18-x)+(11-x)+x=25\n\\]\n\n\\[\n32-x=25\n\\]\n\n\\[\nx=7\n\\]"
+          "title": "(b) Fill every region",
+          "body": "\\(M\\cap E\\) only \\(=11\\), \\(M\\cap F\\) only \\(=4\\), centre \\(=7\\), \\(E\\cap F\\) only \\(=2\\).\n\n\\[\nE\\text{ only}=20-11-7-2=0,\\qquad F\\text{ only}=14-4-7-2=1\n\\]\n\nOutside: \\(4\\). (Check: \\(3+11+4+7+0+2+1+4=32\\).)"
         },
         {
-          "title": "Calculate probability",
-          "body": "So:\n\n\\[\nM\\cap E\\text{ only}=11,\\quad M\\cap F\\text{ only}=4,\\quad E\\cap F\\text{ only}=2\n\\]\n\n\\[\nE\\text{ only}=20-11-2-7=0\n\\]\n\n\\[\nF\\text{ only}=14-4-2-7=1\n\\]",
-          "figures": [
-            {
-              "src": "assets/solution-diagrams/igcse/Nov2021_P1H__Q16__p18-19__m05__Probability-Diagrams-Venn-and-Tree-Diagrams.png",
-              "alt": "Completed Venn diagram"
-            }
-          ]
-        },
-        {
-          "title": "Calculate probability",
-          "body": "For a student who passed Maths, failed French means \\(M\\) but not \\(F\\):\n\n\\[\n\\frac{3+11}{25}=\\frac{14}{25}\n\\]"
+          "title": "(c) Passed Maths, failed French",
+          "body": "Maths only and Maths-and-English only: \\(3+11=14\\) of the \\(25\\).\n\n\\[\n\\frac{14}{25}\n\\]"
         }
       ],
-      "finalAnswer": "\\(x=7\\), and \\(\\frac{14}{25}\\)."
+      "finalAnswer": "(a) \\(x=7\\) (b) \\(M\\) only 3, \\(M\\cap E\\) only 11, \\(M\\cap F\\) only 4, centre 7, \\(E\\cap F\\) only 2, \\(E\\) only 0, \\(F\\) only 1, outside 4 (c) \\(\\dfrac{14}{25}\\)"
     },
     "expertise::Nov2021_P1H__Q20__p24-24__m07__Coordinate-Geometry": {
       "status": "checked",

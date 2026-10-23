@@ -257,7 +257,7 @@
   }
   if (root.querySelector("[data-topic-num]")) {
     const script = document.createElement("script");
-    script.src = `data/topic-index/${course.id}.js?v=20261021a`;
+    script.src = `data/topic-index/${course.id}.js?v=20261024a`;
     script.async = true;
     script.onload = showTopicProgress;
     document.head.appendChild(script);

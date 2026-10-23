@@ -87,6 +87,12 @@ const BANK_TO_NOTE = {
   "Cumulative Frequency Diagrams": "Cumulative Frequency",
   "Probability Toolkit": "Probability Toolkit",
   "Tree Diagrams & Conditional Probability": "Combined and Conditional Probability",
+  "Powers & Roots": "Powers, Roots and Standard Form",
+  "Quadratic Formula": "Solving Quadratics",
+  "Fractions, Decimals & Percentages": "Fractions, Decimals and Percentages",
+  "Using a Calculator": "Using a Calculator",
+  "Algebra Toolkit": "Algebra Toolkit",
+  "Kinematic Graphs": "Real-Life Graphs",
 };
 
 const IGCSE = {

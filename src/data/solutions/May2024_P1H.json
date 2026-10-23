@@ -550,55 +550,63 @@
       "finalAnswer": "draw the missing bar from \\(5\\) to \\(15\\) with frequency density \\(2.7\\)"
     },
     "all::May2024_P1H__Q02__p04-04__m04__Probability-Toolkit": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "Let the probability of travelling",
-          "body": "Let the probability of travelling by bus be \\(x\\).\nThen the probability of travelling by car is \\(2x\\).\n\n\\[\n0.20+x+2x+0.26=1\n\\]\n\n\\[\n3x=0.54\n\\]\n\n\\[\nx=0.18\n\\]"
+          "title": "Find x",
+          "body": "\\[\n0.20+x+2x+0.26=1 \\;\\Rightarrow\\; 3x=0.54 \\;\\Rightarrow\\; x=0.18\n\\]"
         },
         {
-          "title": "Calculate probability",
-          "body": "So\n\n\\[\nP(\\text{car})=2x=0.36\n\\]"
+          "title": "Probability of travelling by car",
+          "body": "\\[\n2x=0.36\n\\]"
         },
         {
-          "title": "Number travelling by car",
-          "body": "Number travelling by car:\n\n\\[\n450\\times 0.36=162\n\\]"
+          "title": "Number of students",
+          "body": "\\[\n450\\times0.36=162\n\\]"
         }
       ],
-      "finalAnswer": "\\(162\\)."
+      "finalAnswer": "\\(162\\)"
     },
     "all::May2024_P1H__Q13__p14-14__m05__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Calculate probability",
-          "body": "Bag A has \\(3\\) white and \\(7\\) black counters.\nBag B has \\(5\\) white and \\(4\\) black counters."
+          "title": "(a) Complete the tree",
+          "body": "Bag A: white \\(\\frac{3}{10}\\), black \\(\\frac{7}{10}\\).\n\nBag B (on both branches): white \\(\\frac59\\), black \\(\\frac49\\)."
         },
         {
-          "title": "The same colour means both",
-          "body": "The same colour means both white or both black.\n\n\\[\nP(\\text{same})=\\frac3{10}\\times\\frac59+\\frac7{10}\\times\\frac49\n\\]\n\n\\[\n=\\frac16+\\frac{14}{45}\n\\]\n\n\\[\n=\\frac{43}{90}\n\\]"
+          "title": "(b) Same colour = both white or both black",
+          "body": "\\[\n\\frac{3}{10}\\times\\frac59+\\frac{7}{10}\\times\\frac49=\\frac{15}{90}+\\frac{28}{90}=\\frac{43}{90}\n\\]"
         }
       ],
-      "finalAnswer": "\\(\\frac{43}{90}\\)."
+      "finalAnswer": "(a) \\(\\frac{3}{10},\\frac{7}{10}\\); \\(\\frac59,\\frac49\\) on both branches (b) \\(\\dfrac{43}{90}\\)"
     },
     "all::May2024_P1H__Q16__p17-17__m04__Combined-and-Conditional-Probability": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Combined & Conditional Probability. The tag is correct.",
       "steps": [
         {
-          "title": "Calculate probability",
-          "body": "At least one sweet of each colour is the complement of all red or all yellow.\n\n\\[\nP(\\text{all red})=\\frac{15}{20}\\times\\frac{14}{19}\\times\\frac{13}{18}\n\\]\n\n\\[\nP(\\text{all yellow})=\\frac{5}{20}\\times\\frac{4}{19}\\times\\frac{3}{18}\n\\]\n\n\\[\nP(\\text{at least one of each})\n=1-P(\\text{all red})-P(\\text{all yellow})\n\\]\n\n\\[\n=1-\\frac{2730}{6840}-\\frac{60}{6840}\n\\]\n\n\\[\n=\\frac{45}{76}\n\\]"
+          "title": "Use the complement",
+          "body": "\"At least one of each colour\" fails only if all three sweets are red or all three are yellow."
+        },
+        {
+          "title": "All red, all yellow (no replacement)",
+          "body": "\\[\nP(RRR)=\\frac{15}{20}\\times\\frac{14}{19}\\times\\frac{13}{18}=\\frac{2730}{6840},\\qquad P(YYY)=\\frac{5}{20}\\times\\frac{4}{19}\\times\\frac{3}{18}=\\frac{60}{6840}\n\\]"
+        },
+        {
+          "title": "At least one of each",
+          "body": "\\[\n1-\\frac{2730+60}{6840}=\\frac{4050}{6840}=\\frac{45}{76}\n\\]"
         }
       ],
-      "finalAnswer": "\\(\\frac{45}{76}\\)."
+      "finalAnswer": "\\(\\dfrac{45}{76}\\)"
     },
     "expertise::May2024_P1H__Q25__p28-28__m04__Completing-the-Square": {
       "status": "checked",

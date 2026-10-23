@@ -571,64 +571,50 @@
       "finalAnswer": "\\(4,\\ 6,\\ 9\\)."
     },
     "all::Jun2025_P2H__Q13__p12-13__m06__Cumulative-Frequency-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "The cumulative frequencies are",
-          "body": "The cumulative frequencies are\n\n\\[\n8,\\ 21,\\ 33,\\ 50,\\ 57,\\ 60\n\\]"
+          "title": "(a) Running totals",
+          "body": "\\[\n8,\\ 21,\\ 33,\\ 50,\\ 57,\\ 60\n\\]"
         },
         {
-          "title": "Plot",
-          "body": "Plot\n\n\\[\n(0,0),(10,8),(20,21),(30,33),(40,50),(50,57),(60,60)\n\\]",
-          "figures": [
-            {
-              "src": "assets/solution-diagrams/igcse/Jun2025_P2H__Q13__p12-13__m06__Cumulative-Frequency-Diagrams.png",
-              "alt": "Cumulative frequency graph"
-            }
-          ]
+          "title": "(b) Plot at the upper class boundaries",
+          "body": "Plot \\((10,8),(20,21),(30,33),(40,50),(50,57),(60,60)\\), start at \\((0,0)\\), and join with a smooth curve."
         },
         {
-          "title": "The median is the th",
-          "body": "The median is the \\(30\\)th value.\n\n\\[\n20+\\frac{30-21}{33-21}\\times 10=27.5\n\\]"
+          "title": "(c) Median",
+          "body": "Read across from \\(\\frac{60}{2}=30\\): about \\(27.5\\) minutes."
         },
         {
-          "title": "Use cumulative frequency",
-          "body": "At \\(45\\) minutes,\n\n\\[\nF(45)\\approx 50+\\frac{5}{10}(57-50)=53.5\n\\]"
-        },
-        {
-          "title": "Use cumulative frequency",
-          "body": "So the number taking more than \\(45\\) minutes is\n\n\\[\n60-53.5=6.5\n\\]"
+          "title": "(d) More than 45 minutes",
+          "body": "At \\(45\\) minutes the curve reads about \\(54\\), so about \\(60-54=6\\) people. (Answers from about \\(5\\) to \\(8\\) are accepted, depending on the curve.)"
         }
       ],
-      "finalAnswer": "median about \\(27.5\\) minutes, and about \\(7\\) people."
+      "finalAnswer": "(a) \\(8, 21, 33, 50, 57, 60\\) (c) about \\(27.5\\) minutes (d) about \\(6\\)"
     },
     "all::Jun2025_P2H__Q11__p11-11__m03__Probability-Toolkit": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "There are counters that are",
-          "body": "There are \\(17+28=45\\) counters that are not orange.\n\n\\[\nP(\\text{orange})=\\frac49\n\\]"
+          "title": "Counters that are not orange",
+          "body": "\\(17+28=45\\) counters are not orange, and \\(P(\\text{not orange})=1-\\frac49=\\frac59\\)."
         },
         {
-          "title": "Calculate probability",
-          "body": "So\n\n\\[\nP(\\text{not orange})=\\frac59\n\\]"
+          "title": "Total number of counters",
+          "body": "\\[\n\\frac59\\times T=45 \\;\\Rightarrow\\; T=81\n\\]"
         },
         {
-          "title": "Calculate probability",
-          "body": "Let the total number of counters be \\(T\\).\n\n\\[\n\\frac{45}{T}=\\frac59\n\\]\n\n\\[\nT=81\n\\]"
-        },
-        {
-          "title": "Number of orange counters",
-          "body": "Number of orange counters:\n\n\\[\n81-45=36\n\\]"
+          "title": "Orange counters",
+          "body": "\\[\n81-45=36\n\\]"
         }
       ],
-      "finalAnswer": "\\(36\\)."
+      "finalAnswer": "\\(36\\)"
     },
     "all::Jun2025_P2H__Q20__p18-18__m06__Probability-Diagrams-Venn-and-Tree-Diagrams": {
       "status": "checked",

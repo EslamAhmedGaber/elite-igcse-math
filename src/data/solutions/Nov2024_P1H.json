@@ -582,17 +582,21 @@
       "finalAnswer": "\\(\\frac{99}{145}\\)."
     },
     "all::Nov2024_P1H__Q13__p15-15__m04__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Calculate probability",
-          "body": "\\[\nP(\\text{not early on Saturday})=1-0.7=0.3\n\\]\n\n\\[\nP(\\text{early on both days})=0.7\\times 0.9=0.63\n\\]"
+          "title": "(a) Complete the tree",
+          "body": "Saturday: not early \\(0.3\\).\n\nAfter early: Sunday early \\(0.9\\), not early \\(0.1\\). After not early: Sunday early \\(0.6\\), not early \\(0.4\\)."
+        },
+        {
+          "title": "(b) Early on both days",
+          "body": "\\[\n0.7\\times0.9=0.63\n\\]"
         }
       ],
-      "finalAnswer": "\\(0.63\\)."
+      "finalAnswer": "(a) \\(0.3\\); \\(0.9, 0.1\\); \\(0.6, 0.4\\) (b) \\(0.63\\)"
     },
     "expertise::Nov2024_P1H__Q21__p22-22__m03__Rounding-Estimation-and-Bounds": {
       "status": "checked",

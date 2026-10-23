@@ -541,89 +541,75 @@
       "finalAnswer": "\\(8\\)."
     },
     "all::Jun2025_P1HR__Q12__p12-13__m06__Cumulative-Frequency-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "The cumulative frequencies are",
-          "body": "The cumulative frequencies are\n\n\\[\n12,\\ 27,\\ 47,\\ 65,\\ 74,\\ 80\n\\]"
+          "title": "(a) Running totals",
+          "body": "\\[\n12,\\ 27,\\ 47,\\ 65,\\ 74,\\ 80\n\\]"
         },
         {
-          "title": "Plot",
-          "body": "Plot\n\n\\[\n(10,0),(20,12),(30,27),(40,47),(50,65),(60,74),(70,80)\n\\]",
-          "figures": [
-            {
-              "src": "assets/solution-diagrams/igcse/Jun2025_P1HR__Q12__p12-13__m06__Cumulative-Frequency-Diagrams.png",
-              "alt": "Cumulative frequency graph"
-            }
-          ]
+          "title": "(b) Plot at the upper class boundaries",
+          "body": "Plot \\((20,12),(30,27),(40,47),(50,65),(60,74),(70,80)\\), start at \\((10,0)\\), and join with a smooth curve."
         },
         {
-          "title": "Use cumulative frequency",
-          "body": "At \\(46\\) years,\n\n\\[\nF(46)\\approx 47+\\frac{6}{10}(65-47)=57.8\n\\]"
+          "title": "(c) People aged 46 or under",
+          "body": "Read up from \\(46\\): about \\(58\\) people."
         },
         {
-          "title": "Convert standard form",
-          "body": "So the number older than \\(46\\) is\n\n\\[\n80-57.8=22.2\n\\]\n\n\\[\n\\frac{22.2}{80}\\times 100\\approx 27.75\\%\n\\]"
+          "title": "(c) Percentage older than 46",
+          "body": "\\(80-58=22\\) people.\n\n\\[\n\\frac{22}{80}\\times100\\approx28\\%\n\\]\n\n(About \\(26\\%\\) to \\(30\\%\\) is accepted, depending on the curve.)"
         }
       ],
-      "finalAnswer": "about \\(28\\%\\)."
+      "finalAnswer": "(a) \\(12, 27, 47, 65, 74, 80\\) (c) about \\(28\\%\\)"
     },
     "all::Jun2025_P1HR__Q04__p05-05__m05__Probability-Toolkit": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "Let the yellow probability be",
-          "body": "Let the yellow probability be \\(x\\). Then the red probability is \\(4x\\).\n\n\\[\n0.12+0.20+0.30+4x+x=1\n\\]\n\n\\[\n5x=0.38\n\\]\n\n\\[\nx=0.076\n\\]"
+          "title": "(a) Blue, green or purple",
+          "body": "\\[\n0.12+0.20+0.38=0.70\n\\]"
         },
         {
-          "title": "Calculate probability",
-          "body": "So\n\n\\[\nP(\\text{red})=4x=0.304\n\\]\n\n\\[\nP(\\text{blue, green or purple})=0.12+0.20+0.30=0.62\n\\]"
+          "title": "(b) Find x",
+          "body": "Red and yellow share the rest: \\(4x+x=1-0.70=0.30\\), so \\(5x=0.30\\) and \\(x=0.06\\)."
         },
         {
-          "title": "Expected red",
-          "body": "Expected red:\n\n\\[\n350\\times 0.304=106.4\n\\]"
+          "title": "(b) Probability of red",
+          "body": "\\[\n4x=4\\times0.06=0.24\n\\]"
+        },
+        {
+          "title": "(b) Estimate for 350 spins",
+          "body": "\\[\n350\\times0.24=84\n\\]"
         }
       ],
-      "finalAnswer": "\\(0.62\\), and about \\(106\\)."
+      "finalAnswer": "(a) \\(0.7\\) (b) \\(84\\)"
     },
     "all::Jun2025_P1HR__Q19__p19-19__m03__Probability-Toolkit": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "The counters are",
-          "body": "The counters are\n\n\\[\n1,\\ 1,\\ 2,\\ 3,\\ 3,\\ 3,\\ 5,\\ 6,\\ 6\n\\]"
+          "title": "Pairs with a sum less than 5",
+          "body": "The counters are \\(1,1,2,3,3,3,5,6,6\\). The only possible sums under \\(5\\) are \\(1+1\\), \\(1+2\\) and \\(1+3\\)."
         },
         {
-          "title": "There are",
-          "body": "There are\n\n\\[\n\\binom{9}{2}=36\n\\]"
+          "title": "First counter, then second (no replacement)",
+          "body": "\\[\nP(1,1)=\\frac29\\times\\frac18=\\frac{2}{72}\n\\]\n\n\\[\nP(1\\text{ and }2)=2\\times\\frac29\\times\\frac18=\\frac{4}{72},\\qquad P(1\\text{ and }3)=2\\times\\frac29\\times\\frac38=\\frac{12}{72}\n\\]"
         },
         {
-          "title": "ways to choose two counters",
-          "body": "ways to choose two counters."
-        },
-        {
-          "title": "Calculate probability",
-          "body": "For a sum less than \\(5\\), the pairs are:\n\n\\[\n(1,1),\\quad (1,2),\\quad (1,3)\n\\]"
-        },
-        {
-          "title": "Counting the repeated counters gives",
-          "body": "Counting the repeated counters gives\n\n\\[\n1+2+6=9\n\\]"
-        },
-        {
-          "title": "Calculate probability",
-          "body": "So\n\n\\[\nP(\\text{sum}<5)=\\frac{9}{36}=\\frac14\n\\]"
+          "title": "Add the cases",
+          "body": "\\[\n\\frac{2+4+12}{72}=\\frac{18}{72}=\\frac14\n\\]"
         }
       ],
-      "finalAnswer": "\\(\\frac14\\)."
+      "finalAnswer": "\\(\\dfrac14\\)"
     },
     "expertise::Jun2025_P1HR__Q22__p22-22__m05__Simultaneous-Equations": {
       "status": "checked",

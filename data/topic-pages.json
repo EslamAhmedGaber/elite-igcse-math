@@ -6,7 +6,7 @@
       "type": "topics",
       "path": "/edexcel-igcse/maths/linear/topics/",
       "title": "IGCSE Maths 4MA1 Past Paper Questions by Topic | Elite",
-      "questions": 1280
+      "questions": 1317
     },
     {
       "course": "linear",
@@ -16,7 +16,7 @@
       "topic": "Number Toolkit",
       "num": "1.1",
       "notes": "downloads/Linear/VisualNotes/C1_T01_Number_Toolkit/Number_Toolkit_Visual_Notes.pdf",
-      "questions": 3
+      "questions": 5
     },
     {
       "course": "linear",
@@ -46,7 +46,7 @@
       "topic": "Powers, Roots and Standard Form",
       "num": "1.4",
       "notes": "downloads/Linear/VisualNotes/C1_T04_Powers_Roots_Standard_Form/Powers_Roots_Standard_Form_Visual_Notes.pdf",
-      "questions": 31
+      "questions": 34
     },
     {
       "course": "linear",
@@ -86,7 +86,7 @@
       "topic": "Fractions, Decimals and Percentages",
       "num": "1.8",
       "notes": "downloads/Linear/VisualNotes/C1_T08_Fractions_Decimals_Percentages/Fractions_Decimals_Percentages_Visual_Notes.pdf",
-      "questions": 4
+      "questions": 11
     },
     {
       "course": "linear",
@@ -111,6 +111,16 @@
     {
       "course": "linear",
       "type": "topic",
+      "path": "/edexcel-igcse/maths/linear/topics/using-a-calculator/",
+      "title": "Using a Calculator – IGCSE Maths 4MA1 Practice Questions & Solutions | Elite",
+      "topic": "Using a Calculator",
+      "num": "1.11",
+      "notes": "downloads/Linear/VisualNotes/C1_T11_Using_a_Calculator/Using_a_Calculator_Visual_Notes.pdf",
+      "questions": 7
+    },
+    {
+      "course": "linear",
+      "type": "topic",
       "path": "/edexcel-igcse/maths/linear/topics/ratio-toolkit/",
       "title": "Ratio Toolkit – IGCSE Maths 4MA1 Past Paper Questions & Solutions | Elite",
       "topic": "Ratio Toolkit",
@@ -127,6 +137,16 @@
       "num": "1.15",
       "notes": "downloads/Linear/VisualNotes/C1_T15_Direct_Inverse_Proportion/Direct_Inverse_Proportion_Visual_Notes.pdf",
       "questions": 17
+    },
+    {
+      "course": "linear",
+      "type": "topic",
+      "path": "/edexcel-igcse/maths/linear/topics/algebra-toolkit/",
+      "title": "Algebra Toolkit – IGCSE Maths 4MA1 Practice Questions & Solutions | Elite",
+      "topic": "Algebra Toolkit",
+      "num": "2.1",
+      "notes": "downloads/Linear/VisualNotes/C2_T01_Algebra_Toolkit/Algebra_Toolkit_Visual_Notes.pdf",
+      "questions": 8
     },
     {
       "course": "linear",
@@ -216,7 +236,7 @@
       "topic": "Solving Quadratics",
       "num": "2.10",
       "notes": "downloads/Linear/VisualNotes/C2_T10_Solving_Quadratics/Solving_Quadratics_Visual_Notes.pdf",
-      "questions": 3
+      "questions": 6
     },
     {
       "course": "linear",
@@ -287,6 +307,16 @@
       "num": "3.5",
       "notes": "downloads/Linear/VisualNotes/C3_T05_Graphs_of_Functions/Graphs_of_Functions_Visual_Notes.pdf",
       "questions": 30
+    },
+    {
+      "course": "linear",
+      "type": "topic",
+      "path": "/edexcel-igcse/maths/linear/topics/real-life-graphs/",
+      "title": "Real-Life Graphs – IGCSE Maths 4MA1 Practice Questions & Solutions | Elite",
+      "topic": "Real-Life Graphs",
+      "num": "3.7",
+      "notes": "downloads/Linear/VisualNotes/C3_T07_Real_Life_Graphs/Real_Life_Graphs_Visual_Notes.pdf",
+      "questions": 7
     },
     {
       "course": "linear",

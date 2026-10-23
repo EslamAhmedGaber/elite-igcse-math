@@ -50,6 +50,23 @@ p{margin:0 0 16px}.resource-title p{max-width:800px;color:var(--resource-muted)}
 .tp-answer{margin:0 14px 14px;padding:10px 14px;background:#fff8e6;border-left:3px solid var(--resource-gold);border-radius:4px;overflow-x:auto}
 .tp-answer span{display:block;font-size:12px;font-weight:700;text-transform:uppercase;color:#6b5112}
 .tp-nosol{margin:12px 0 0;font-size:14px}.tp-others small{color:var(--resource-muted)}
+/* Arabic guides (tools/build_arabic_guides.cjs) */
+body.ar{font-family:'Cairo','Sora',Arial,sans-serif;line-height:1.85}
+body.ar .resource-kicker{text-transform:none;font-size:13px}
+body.ar .resource-card ul,body.ar .ar-steps{padding-inline-start:22px;margin:0}
+body.ar .resource-card li,body.ar .ar-steps li{margin-bottom:8px}
+.ar-big li{margin-bottom:16px;font-size:17px}
+.ar-table-wrap{overflow-x:auto;border:1px solid var(--resource-line);border-radius:8px;background:#fff}
+.ar-table{width:100%;border-collapse:collapse;min-width:520px;font-size:15px}
+.ar-table th,.ar-table td{padding:12px 14px;border-bottom:1px solid var(--resource-line);text-align:start;vertical-align:top}
+.ar-table thead th{background:#0f2140;color:#fff}.ar-table tbody th{background:#f3f6fb;width:24%}
+.ar-note{margin-top:14px;padding:12px 16px;background:#fff8e6;border-inline-start:3px solid var(--resource-gold);border-radius:4px;color:var(--resource-ink)!important}
+.ar-two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.ar-faq{background:#fff;border:1px solid var(--resource-line);border-radius:6px;margin-bottom:10px}
+.ar-faq summary{cursor:pointer;padding:12px 16px;font-weight:600}.ar-faq p{padding:0 16px 12px;margin:0}
+.ar-source{font-size:13px;color:var(--resource-muted)}
+.resource-guide-link{display:inline-block;margin-top:8px;font-weight:600}
+@media(max-width:760px){.ar-two{grid-template-columns:1fr}}
 @media(max-width:760px){.tp-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.tp-question{padding:14px}}
 @media print{.tp-solution{display:none}.tp-question{break-inside:avoid}}
 @media(max-width:760px){.resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.resource-row{align-items:flex-start;flex-direction:column;gap:12px}.resource-row .resource-actions{max-width:100%;justify-content:flex-start}.resource-header .resource-wrap{align-items:flex-start;flex-direction:column;gap:10px}.resource-header nav{gap:18px}h1{font-size:28px}}

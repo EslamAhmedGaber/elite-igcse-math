@@ -1,0 +1,674 @@
+{
+  "paperSlug": "Elite_Practice",
+  "solutions": {
+    "all::Elite_Practice__Q01__m02__Using-a-Calculator": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Using a Calculator. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "Work out the top and the bottom",
+          "body": "\\[\n5.7^2-\\sqrt{30.25}=32.49-5.5=26.99,\\qquad 1.8\\times0.65=1.17\n\\]"
+        },
+        {
+          "title": "Divide",
+          "body": "\\[\n\\frac{26.99}{1.17}=23.06837607\\ldots\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(23.06837607\\)"
+    },
+    "all::Elite_Practice__Q02__m03__Using-a-Calculator": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Using a Calculator. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "(a) Use the calculator",
+          "body": "\\[\n4.3^3-\\frac{1}{0.16}=79.507-6.25=73.257\n\\]"
+        },
+        {
+          "title": "(b) Round to 3 significant figures",
+          "body": "The fourth figure is \\(5\\), so round up: \\(73.3\\)."
+        }
+      ],
+      "finalAnswer": "(a) \\(73.257\\) (b) \\(73.3\\)"
+    },
+    "all::Elite_Practice__Q03__m02__Using-a-Calculator": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Using a Calculator. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "Check the calculator is in degrees",
+          "body": "Then\n\n\\[\n\\frac{8.4\\times\\tan35^\\circ}{\\cos62^\\circ}=\\frac{5.8817\\ldots}{0.46947\\ldots}=12.528\\ldots\n\\]"
+        },
+        {
+          "title": "Round",
+          "body": "\\(12.5\\) (3 significant figures)"
+        }
+      ],
+      "finalAnswer": "\\(12.5\\)"
+    },
+    "all::Elite_Practice__Q04__m03__Using-a-Calculator": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Using a Calculator. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "Add the top",
+          "body": "\\[\n3.7\\times10^5+2.9\\times10^4=370\\,000+29\\,000=399\\,000\n\\]"
+        },
+        {
+          "title": "Divide",
+          "body": "\\[\n\\frac{399\\,000}{8.1\\times10^{-3}}=49\\,259\\,259.26\\ldots\n\\]"
+        },
+        {
+          "title": "Standard form, 3 significant figures",
+          "body": "\\(4.93\\times10^7\\)"
+        }
+      ],
+      "finalAnswer": "\\(4.93\\times10^{7}\\)"
+    },
+    "all::Elite_Practice__Q05__m02__Using-a-Calculator": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Using a Calculator. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "Substitute (brackets round the negative)",
+          "body": "\\[\np^2-3q=2.6^2-3(-1.8)=6.76+5.4=12.16\n\\]\n\n\\[\n\\sqrt{p+q^2}=\\sqrt{2.6+(-1.8)^2}=\\sqrt{5.84}=2.4166\\ldots\n\\]"
+        },
+        {
+          "title": "Divide and round",
+          "body": "\\[\n\\frac{12.16}{2.4166\\ldots}=5.03184\\ldots\\approx5.032\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(5.032\\)"
+    },
+    "all::Elite_Practice__Q06__m02__Using-a-Calculator": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Using a Calculator. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "Evaluate each power",
+          "body": "\\[\n4.8^{-0.5}=\\frac{1}{\\sqrt{4.8}}=0.45643\\ldots,\\qquad 1.7^3=4.913\n\\]"
+        },
+        {
+          "title": "Add and round",
+          "body": "\\[\n0.45643\\ldots+4.913=5.36943\\ldots\\approx5.369\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(5.369\\)"
+    },
+    "all::Elite_Practice__Q07__m03__Using-a-Calculator": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Using a Calculator. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "(a) Round each number to 1 significant figure",
+          "body": "\\[\n\\frac{20\\times0.5}{4}=\\frac{10}{4}=2.5\n\\]"
+        },
+        {
+          "title": "(b) Calculator value",
+          "body": "\\[\n\\frac{19.6\\times0.48}{4.1}=2.2946\\ldots\\approx2.29\n\\]"
+        }
+      ],
+      "finalAnswer": "(a) \\(2.5\\) (b) \\(2.29\\)"
+    },
+    "all::Elite_Practice__Q08__m04__Kinematic-Graphs": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Kinematic Graphs. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "(a) Read the graph at 10 minutes",
+          "body": "The line from \\((0,0)\\) to \\((20,1.6)\\) is halfway up at \\(10\\) minutes: \\(0.8\\) km."
+        },
+        {
+          "title": "(b) The flat section",
+          "body": "From \\(20\\) to \\(30\\) minutes: \\(10\\) minutes."
+        },
+        {
+          "title": "(c) Speed = distance ÷ time",
+          "body": "He walks \\(1.6\\) km in \\(50-30=20\\) minutes \\(=\\frac13\\) hour.\n\n\\[\n1.6\\div\\frac13=4.8\\text{ km/h}\n\\]"
+        }
+      ],
+      "finalAnswer": "(a) \\(0.8\\) km (b) \\(10\\) minutes (c) \\(4.8\\) km/h"
+    },
+    "all::Elite_Practice__Q09__m05__Kinematic-Graphs": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Kinematic Graphs. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "(a) Acceleration = gradient",
+          "body": "\\[\n\\frac{18-0}{12}=1.5\\text{ m/s}^2\n\\]"
+        },
+        {
+          "title": "(b) Distance = area under the graph",
+          "body": "Split into a triangle, a rectangle and a triangle:\n\n\\[\n\\tfrac12\\times12\\times18+20\\times18+\\tfrac12\\times8\\times18=108+360+72=540\\text{ m}\n\\]"
+        }
+      ],
+      "finalAnswer": "(a) \\(1.5\\) m/s\\(^2\\) (b) \\(540\\) m"
+    },
+    "all::Elite_Practice__Q10__m04__Kinematic-Graphs": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Kinematic Graphs. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "(a) Area of the trapezium (first 10 s)",
+          "body": "\\[\n\\frac{4+16}{2}\\times10=100\\text{ m}\n\\]"
+        },
+        {
+          "title": "(a) Area of the rectangle (last 15 s)",
+          "body": "\\[\n16\\times15=240\\text{ m}\n\\]\n\nTotal: \\(100+240=340\\) m."
+        },
+        {
+          "title": "(b) Average speed = total distance ÷ total time",
+          "body": "\\[\n340\\div25=13.6\\text{ m/s}\n\\]"
+        }
+      ],
+      "finalAnswer": "(a) \\(340\\) m (b) \\(13.6\\) m/s"
+    },
+    "all::Elite_Practice__Q11__m04__Kinematic-Graphs": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Kinematic Graphs. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "(a) Where the lines cross",
+          "body": "The lines cross at \\(36\\) minutes after 10:00, so at \\(10{:}36\\)."
+        },
+        {
+          "title": "(b) Read across",
+          "body": "At the crossing point the distance from \\(A\\) is \\(9\\) km."
+        },
+        {
+          "title": "(c) Tom's speed",
+          "body": "Tom goes from \\(12\\) km to \\(7\\) km from \\(A\\) in \\(1\\) hour:\n\n\\[\n\\frac{12-7}{1}=5\\text{ km/h}\n\\]"
+        }
+      ],
+      "finalAnswer": "(a) \\(10{:}36\\) (b) \\(9\\) km (c) \\(5\\) km/h"
+    },
+    "all::Elite_Practice__Q12__m03__Kinematic-Graphs": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Kinematic Graphs. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "Distance = area under the graph",
+          "body": "Triangle: \\(\\tfrac12\\times T\\times12=6T\\). Rectangle: \\(30\\times12=360\\)."
+        },
+        {
+          "title": "Form and solve the equation",
+          "body": "\\[\n6T+360=450 \\;\\Rightarrow\\; 6T=90 \\;\\Rightarrow\\; T=15\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(T=15\\)"
+    },
+    "all::Elite_Practice__Q13__m04__Kinematic-Graphs": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Kinematic Graphs. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "(a) Gradient of the line",
+          "body": "\\[\n\\frac{5-20}{6}=-2.5\n\\]\n\nSo the deceleration is \\(2.5\\) m/s\\(^2\\)."
+        },
+        {
+          "title": "(b) Area of the trapezium",
+          "body": "\\[\n\\frac{20+5}{2}\\times6=75\\text{ m}\n\\]"
+        }
+      ],
+      "finalAnswer": "(a) \\(2.5\\) m/s\\(^2\\) (b) \\(75\\) m"
+    },
+    "all::Elite_Practice__Q14__m04__Kinematic-Graphs": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Kinematic Graphs. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "Sketch the speed-time graph",
+          "body": "A trapezium: up for \\(50\\) s, flat at \\(30\\) m/s for \\(t\\) s, down for \\(40\\) s."
+        },
+        {
+          "title": "Distance = area (in metres)",
+          "body": "\\[\n\\tfrac12\\times50\\times30+30t+\\tfrac12\\times40\\times30=750+30t+600\n\\]"
+        },
+        {
+          "title": "Form and solve the equation",
+          "body": "\\(6\\) km \\(=6000\\) m:\n\n\\[\n1350+30t=6000 \\;\\Rightarrow\\; 30t=4650 \\;\\Rightarrow\\; t=155\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(t=155\\)"
+    },
+    "all::Elite_Practice__Q15__m02__Fractions-Decimals-and-Percentages": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Fractions, Decimals & Percentages. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "Change every number to a decimal",
+          "body": "\\(0.62\\), \\(\\frac58=0.625\\), \\(61\\%=0.61\\), \\(\\frac23=0.666\\ldots\\), \\(\\frac35=0.6\\)"
+        },
+        {
+          "title": "Order them",
+          "body": "\\(0.6,\\ 0.61,\\ 0.62,\\ 0.625,\\ 0.666\\ldots\\)"
+        }
+      ],
+      "finalAnswer": "\\(\\frac35,\\ 61\\%,\\ 0.62,\\ \\frac58,\\ \\frac23\\)"
+    },
+    "all::Elite_Practice__Q16__m02__Fractions-Decimals-and-Percentages": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Fractions, Decimals & Percentages. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "(a) Divide",
+          "body": "\\[\n7\\div40=0.175\n\\]"
+        },
+        {
+          "title": "(b) Multiply by 100",
+          "body": "\\[\n0.175\\times100=17.5\\%\n\\]"
+        }
+      ],
+      "finalAnswer": "(a) \\(0.175\\) (b) \\(17.5\\%\\)"
+    },
+    "all::Elite_Practice__Q17__m03__Fractions-Decimals-and-Percentages": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Fractions, Decimals & Percentages. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "Proportion that walk or cycle",
+          "body": "\\[\n\\frac38+0.35=0.375+0.35=0.725\n\\]"
+        },
+        {
+          "title": "Proportion that travel by bus",
+          "body": "\\[\n1-0.725=0.275\n\\]"
+        },
+        {
+          "title": "Number of students",
+          "body": "\\[\n0.275\\times n=11 \\;\\Rightarrow\\; n=\\frac{11}{0.275}=40\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(40\\)"
+    },
+    "all::Elite_Practice__Q18__m02__Fractions-Decimals-and-Percentages": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Fractions, Decimals & Percentages. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "Write both as decimals",
+          "body": "\\[\n\\frac{13}{20}=13\\div20=0.65\n\\]"
+        },
+        {
+          "title": "Compare",
+          "body": "\\(0.66>0.65\\), so \\(0.66\\) is larger."
+        }
+      ],
+      "finalAnswer": "\\(0.66\\)"
+    },
+    "all::Elite_Practice__Q19__m02__Fractions-Decimals-and-Percentages": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Fractions, Decimals & Percentages. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "Change the first score to a percentage",
+          "body": "\\[\n\\frac{34}{40}\\times100=85\\%\n\\]"
+        },
+        {
+          "title": "Compare",
+          "body": "\\(87\\%>85\\%\\), so the second test was better."
+        }
+      ],
+      "finalAnswer": "The second test (\\(85\\%\\) against \\(87\\%\\))"
+    },
+    "all::Elite_Practice__Q20__m02__Fractions-Decimals-and-Percentages": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Fractions, Decimals & Percentages. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "Write over a power of 10",
+          "body": "\\[\n0.0375=\\frac{375}{10\\,000}\n\\]"
+        },
+        {
+          "title": "Simplify (divide by 125)",
+          "body": "\\[\n\\frac{375}{10\\,000}=\\frac{3}{80}\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(\\dfrac{3}{80}\\)"
+    },
+    "all::Elite_Practice__Q21__m03__Fractions-Decimals-and-Percentages": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Fractions, Decimals & Percentages. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "Change both amounts to percentages",
+          "body": "\\(\\frac25=40\\%\\), so the \\(120\\) litres fill \\(65\\%-40\\%=25\\%\\) of the tank."
+        },
+        {
+          "title": "Find 100%",
+          "body": "\\[\n25\\%\\to120 \\;\\Rightarrow\\; 100\\%\\to120\\times4=480\\text{ litres}\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(480\\) litres"
+    },
+    "all::Elite_Practice__Q22__m02__Algebra-Toolkit": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Algebra Toolkit. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "(a) Collect like terms",
+          "body": "\\[\n5a-2a=3a,\\qquad 3b+7b=10b \\;\\Rightarrow\\; 3a+10b\n\\]"
+        },
+        {
+          "title": "(b) Multiply the numbers, then the letters",
+          "body": "\\[\n4\\times3=12 \\;\\Rightarrow\\; 12xy\n\\]"
+        }
+      ],
+      "finalAnswer": "(a) \\(3a+10b\\) (b) \\(12xy\\)"
+    },
+    "all::Elite_Practice__Q23__m02__Algebra-Toolkit": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Algebra Toolkit. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "Substitute, with brackets round the negative",
+          "body": "\\[\n3(-4)^2-2(5)=3\\times16-10\n\\]"
+        },
+        {
+          "title": "Work it out",
+          "body": "\\[\n48-10=38\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(38\\)"
+    },
+    "all::Elite_Practice__Q24__m02__Algebra-Toolkit": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Algebra Toolkit. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "Substitute",
+          "body": "\\[\nv=12+(-3.5)\\times6\n\\]"
+        },
+        {
+          "title": "Work it out",
+          "body": "\\[\nv=12-21=-9\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(v=-9\\)"
+    },
+    "all::Elite_Practice__Q25__m02__Algebra-Toolkit": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Algebra Toolkit. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "Cost of each item × number bought",
+          "body": "\\(x\\) pens cost \\(35x\\) pence; \\(y\\) pencils cost \\(18y\\) pence."
+        },
+        {
+          "title": "Add",
+          "body": "\\(35x+18y\\)"
+        }
+      ],
+      "finalAnswer": "\\(35x+18y\\)"
+    },
+    "all::Elite_Practice__Q26__m02__Algebra-Toolkit": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Algebra Toolkit. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "Substitute",
+          "body": "\\[\nT=\\frac{(-3)^2+7}{2\\times0.5}=\\frac{9+7}{1}\n\\]"
+        },
+        {
+          "title": "Work it out",
+          "body": "\\(T=16\\)"
+        }
+      ],
+      "finalAnswer": "\\(T=16\\)"
+    },
+    "all::Elite_Practice__Q27__m02__Algebra-Toolkit": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Algebra Toolkit. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "Like terms have exactly the same letters and powers",
+          "body": "\\(x^2y\\) terms: \\(6+3=9\\). \\(xy^2\\) terms: \\(-2+5=3\\)."
+        },
+        {
+          "title": "Write the answer",
+          "body": "\\(9x^2y+3xy^2\\)"
+        }
+      ],
+      "finalAnswer": "\\(9x^2y+3xy^2\\)"
+    },
+    "all::Elite_Practice__Q28__m02__Algebra-Toolkit": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Algebra Toolkit. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "Perimeter = 2 lengths + 2 widths",
+          "body": "\\[\n2(3x+2)+2(x-1)\n\\]"
+        },
+        {
+          "title": "Expand and collect",
+          "body": "\\[\n6x+4+2x-2=8x+2\n\\]"
+        }
+      ],
+      "finalAnswer": "Shown: \\(8x+2\\)"
+    },
+    "all::Elite_Practice__Q29__m02__Algebra-Toolkit": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Algebra Toolkit. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "Substitute n = −2 into each expression",
+          "body": "\\[\n3n=-6,\\quad n+3=1,\\quad n^3=-8,\\quad 3n^2=3\\times4=12,\\quad -n=2\n\\]"
+        },
+        {
+          "title": "Pick the greatest",
+          "body": "\\(3n^2=12\\) is the greatest."
+        }
+      ],
+      "finalAnswer": "\\(3n^2\\) (value \\(12\\))"
+    },
+    "all::Elite_Practice__Q30__m03__Quadratic-Formula": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Quadratic Formula. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "Identify a, b and c",
+          "body": "\\(a=2,\\ b=-5,\\ c=-4\\)"
+        },
+        {
+          "title": "Substitute into the formula",
+          "body": "\\[\nx=\\frac{-(-5)\\pm\\sqrt{(-5)^2-4(2)(-4)}}{2(2)}=\\frac{5\\pm\\sqrt{57}}{4}\n\\]"
+        },
+        {
+          "title": "Work out both solutions",
+          "body": "\\[\nx=\\frac{5+7.5498\\ldots}{4}=3.14,\\qquad x=\\frac{5-7.5498\\ldots}{4}=-0.637\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(x=3.14\\) or \\(x=-0.637\\)"
+    },
+    "all::Elite_Practice__Q31__m03__Quadratic-Formula": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Quadratic Formula. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "Use the formula",
+          "body": "\\[\nx=\\frac{-6\\pm\\sqrt{36-8}}{2}=\\frac{-6\\pm\\sqrt{28}}{2}\n\\]"
+        },
+        {
+          "title": "Simplify the surd",
+          "body": "\\(\\sqrt{28}=2\\sqrt7\\), so\n\n\\[\nx=\\frac{-6\\pm2\\sqrt7}{2}=-3\\pm\\sqrt7\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(x=-3\\pm\\sqrt7\\)"
+    },
+    "all::Elite_Practice__Q32__m05__Quadratic-Formula": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Quadratic Formula. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "(a) Area = length × width",
+          "body": "\\[\n(x+3)(x-1)=20 \\;\\Rightarrow\\; x^2+2x-3=20 \\;\\Rightarrow\\; x^2+2x-23=0\n\\]"
+        },
+        {
+          "title": "(b) Use the formula",
+          "body": "\\[\nx=\\frac{-2\\pm\\sqrt{4+92}}{2}=\\frac{-2\\pm\\sqrt{96}}{2}=-1\\pm\\sqrt{24}\n\\]\n\nThe width \\(x-1\\) must be positive, so \\(x=-1+\\sqrt{24}=3.898\\ldots\\)"
+        },
+        {
+          "title": "(b) Length",
+          "body": "\\[\nx+3=6.898\\ldots\\approx6.90\\text{ cm}\n\\]"
+        }
+      ],
+      "finalAnswer": "(b) \\(6.90\\) cm"
+    },
+    "all::Elite_Practice__Q33__m03__Powers-and-Roots": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Powers & Roots. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "(a) Any non-zero number to the power 0",
+          "body": "\\(5^0=1\\)"
+        },
+        {
+          "title": "(b) Root first, then power",
+          "body": "\\[\n8^{2/3}=\\left(\\sqrt[3]{8}\\right)^2=2^2=4\n\\]"
+        },
+        {
+          "title": "(c) Negative power means reciprocal",
+          "body": "\\[\n16^{-1/2}=\\frac{1}{\\sqrt{16}}=\\frac14\n\\]"
+        }
+      ],
+      "finalAnswer": "(a) \\(1\\) (b) \\(4\\) (c) \\(\\frac14\\)"
+    },
+    "all::Elite_Practice__Q34__m02__Powers-and-Roots": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Powers & Roots. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "Multiply: add the powers",
+          "body": "\\(3^5\\times3^{-2}=3^{3}\\)"
+        },
+        {
+          "title": "Divide: subtract the powers",
+          "body": "\\[\n\\frac{3^3}{3^4}=3^{-1}\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(3^{-1}\\)"
+    },
+    "all::Elite_Practice__Q35__m03__Powers-and-Roots": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Powers & Roots. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "Write everything as a power of 2",
+          "body": "\\(8=2^3\\), so \\(8^4=2^{12}\\). \\(4=2^2\\), so \\(4^3=2^{6}\\)."
+        },
+        {
+          "title": "Divide",
+          "body": "\\[\n\\frac{2^{12}}{2^{6}}=2^{6} \\;\\Rightarrow\\; n=6\n\\]"
+        }
+      ],
+      "finalAnswer": "\\(n=6\\)"
+    },
+    "all::Elite_Practice__Q36__m03__Number-Toolkit": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Number Toolkit. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "(a) Exactly two factors",
+          "body": "\\(2\\) and \\(17\\) are prime (\\(15=3\\times5\\), \\(21=3\\times7\\))."
+        },
+        {
+          "title": "(b) Square numbers in the list",
+          "body": "\\(9=3^2\\) and \\(25=5^2\\); the odd one greater than \\(10\\) is \\(25\\)."
+        },
+        {
+          "title": "(c) Cube numbers",
+          "body": "\\(27=3^3\\)"
+        }
+      ],
+      "finalAnswer": "(a) \\(2, 17\\) (b) \\(25\\) (c) \\(27\\)"
+    },
+    "all::Elite_Practice__Q37__m02__Number-Toolkit": {
+      "status": "checked",
+      "checkedBy": "Elite original question (answers computed and checked, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
+      "topicNote": "Number Toolkit. Original Elite practice question.",
+      "steps": [
+        {
+          "title": "(a) Each number is ten times smaller",
+          "body": "\\(2.3\\times4.7=1081\\div100=10.81\\)"
+        },
+        {
+          "title": "(b) Reverse the multiplication",
+          "body": "\\(1081\\div47=23\\), and \\(4.7\\) is ten times smaller than \\(47\\), so \\(1081\\div4.7=230\\)."
+        }
+      ],
+      "finalAnswer": "(a) \\(10.81\\) (b) \\(230\\)"
+    }
+  }
+}

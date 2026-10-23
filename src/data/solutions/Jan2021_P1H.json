@@ -613,21 +613,21 @@
       "finalAnswer": "median about \\(146\\text{ g}\\), and \\(d\\approx 150\\)."
     },
     "all::Jan2021_P1H__Q14__p16-16__m05__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Winning both frames",
-          "body": "Winning both frames:\n\n\\[\n0.6\\times 0.9=0.54\n\\]"
+          "title": "(a) Win both games",
+          "body": "Multiply along the \"win, win\" branch:\n\n\\[\n0.6\\times0.9=0.54\n\\]"
         },
         {
-          "title": "Winning exactly one frame",
-          "body": "Winning exactly one frame:\n\n\\[\n0.6\\times 0.1+0.4\\times 0.25\n\\]\n\n\\[\n=0.06+0.10=0.16\n\\]"
+          "title": "(b) Win exactly one game",
+          "body": "Win then lose, or lose then win:\n\n\\[\n0.6\\times0.1+0.4\\times0.25=0.06+0.10=0.16\n\\]"
         }
       ],
-      "finalAnswer": "\\(0.54\\), \\(0.16\\)."
+      "finalAnswer": "(a) \\(0.54\\) (b) \\(0.16\\)"
     },
     "expertise::Jan2021_P1H__Q24__p28-28__m04__Sequences": {
       "status": "checked",

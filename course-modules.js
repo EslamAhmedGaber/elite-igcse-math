@@ -206,13 +206,13 @@
               label: "Jun 2026",
               papers: [
                   { kind: "paper", title: "Paper 1H", href: "downloads/PastPapers/Linear/Jun 2026 P1H.pdf" },
-                  { kind: "solution", title: "Solution 1H", href: "downloads/PastPaperSolutions/Jun2026_P1H_Solutions.pdf?v=books2027" },
+                  { kind: "solution", title: "Solution 1H", href: "downloads/PastPaperSolutions/Jun2026_P1H_Solutions.pdf?v=books20261024" },
                   { kind: "paper", title: "Paper 1HR", href: "downloads/PastPapers/Linear/Jun 2026 P1HR.pdf" },
-                  { kind: "solution", title: "Solution 1HR", href: "downloads/PastPaperSolutions/Jun2026_P1HR_Solutions.pdf?v=books2027" },
+                  { kind: "solution", title: "Solution 1HR", href: "downloads/PastPaperSolutions/Jun2026_P1HR_Solutions.pdf?v=books20261024" },
                   { kind: "paper", title: "Paper 2H", href: "downloads/PastPapers/Linear/Jun 2026 P2H.pdf" },
-                  { kind: "solution", title: "Solution 2H", href: "downloads/PastPaperSolutions/Jun2026_P2H_Solutions.pdf?v=books2027" },
+                  { kind: "solution", title: "Solution 2H", href: "downloads/PastPaperSolutions/Jun2026_P2H_Solutions.pdf?v=books20261024" },
                   { kind: "paper", title: "Paper 2HR", href: "downloads/PastPapers/Linear/Jun 2026 P2HR.pdf" },
-                  { kind: "solution", title: "Solution 2HR", href: "downloads/PastPaperSolutions/Jun2026_P2HR_Solutions.pdf?v=books2027" }
+                  { kind: "solution", title: "Solution 2HR", href: "downloads/PastPaperSolutions/Jun2026_P2HR_Solutions.pdf?v=books20261024" }
               ]
           }]
       },
@@ -230,7 +230,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/Nov2025_P1H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Nov2025_P1H_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -240,7 +240,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2H",
-                          "href": "downloads/PastPaperSolutions/Nov2025_P2H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Nov2025_P2H_Solutions.pdf?v=books20261024"
                       }
                   ]
               },
@@ -255,7 +255,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/Jun2025_P1H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Jun2025_P1H_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -265,7 +265,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1HR",
-                          "href": "downloads/PastPaperSolutions/Jun2025_P1HR_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Jun2025_P1HR_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -275,7 +275,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2H",
-                          "href": "downloads/PastPaperSolutions/Jun2025_P2H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Jun2025_P2H_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -285,7 +285,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2HR",
-                          "href": "downloads/PastPaperSolutions/Jun2025_P2HR_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Jun2025_P2HR_Solutions.pdf?v=books20261024"
                       }
                   ]
               }
@@ -305,7 +305,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/Nov2024_P1H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Nov2024_P1H_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -315,7 +315,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2H",
-                          "href": "downloads/PastPaperSolutions/Nov2024_P2H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Nov2024_P2H_Solutions.pdf?v=books20261024"
                       }
                   ]
               },
@@ -330,7 +330,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2H",
-                          "href": "downloads/PastPaperSolutions/Jun2024_P2H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Jun2024_P2H_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -340,7 +340,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2HR",
-                          "href": "downloads/PastPaperSolutions/Jun2024_P2HR_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Jun2024_P2HR_Solutions.pdf?v=books20261024"
                       }
                   ]
               },
@@ -355,7 +355,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/May2024_P1H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/May2024_P1H_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -365,7 +365,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1HR",
-                          "href": "downloads/PastPaperSolutions/May2024_P1HR_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/May2024_P1HR_Solutions.pdf?v=books20261024"
                       }
                   ]
               }
@@ -385,7 +385,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/Nov2023_P1H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Nov2023_P1H_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -395,7 +395,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2H",
-                          "href": "downloads/PastPaperSolutions/Nov2023_P2H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Nov2023_P2H_Solutions.pdf?v=books20261024"
                       }
                   ]
               },
@@ -410,7 +410,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2H",
-                          "href": "downloads/PastPaperSolutions/Jun2023_P2H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Jun2023_P2H_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -420,7 +420,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2HR",
-                          "href": "downloads/PastPaperSolutions/Jun2023_P2HR_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Jun2023_P2HR_Solutions.pdf?v=books20261024"
                       }
                   ]
               },
@@ -435,7 +435,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/May2023_P1H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/May2023_P1H_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -445,7 +445,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1HR",
-                          "href": "downloads/PastPaperSolutions/May2023_P1HR_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/May2023_P1HR_Solutions.pdf?v=books20261024"
                       }
                   ]
               }
@@ -465,7 +465,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/Jun2022_P1H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Jun2022_P1H_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -475,7 +475,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1HR",
-                          "href": "downloads/PastPaperSolutions/Jun2022_P1HR_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Jun2022_P1HR_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -485,7 +485,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2H",
-                          "href": "downloads/PastPaperSolutions/Jun2022_P2H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Jun2022_P2H_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -495,7 +495,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2HR",
-                          "href": "downloads/PastPaperSolutions/Jun2022_P2HR_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Jun2022_P2HR_Solutions.pdf?v=books20261024"
                       }
                   ]
               },
@@ -510,7 +510,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/Jan2022_P1H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Jan2022_P1H_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -520,7 +520,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1HR",
-                          "href": "downloads/PastPaperSolutions/Jan2022_P1HR_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Jan2022_P1HR_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -530,7 +530,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2H",
-                          "href": "downloads/PastPaperSolutions/Jan2022_P2H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Jan2022_P2H_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -540,7 +540,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2HR",
-                          "href": "downloads/PastPaperSolutions/Jan2022_P2HR_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Jan2022_P2HR_Solutions.pdf?v=books20261024"
                       }
                   ]
               }
@@ -560,7 +560,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/Nov2021_P1H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Nov2021_P1H_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -570,7 +570,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2H",
-                          "href": "downloads/PastPaperSolutions/Nov2021_P2H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Nov2021_P2H_Solutions.pdf?v=books20261024"
                       }
                   ]
               },
@@ -585,7 +585,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/May2021_P1H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/May2021_P1H_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -595,7 +595,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2H",
-                          "href": "downloads/PastPaperSolutions/May2021_P2H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/May2021_P2H_Solutions.pdf?v=books20261024"
                       }
                   ]
               },
@@ -610,7 +610,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/Jan2021_P1H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Jan2021_P1H_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -620,7 +620,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1HR",
-                          "href": "downloads/PastPaperSolutions/Jan2021_P1HR_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Jan2021_P1HR_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -630,7 +630,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2H",
-                          "href": "downloads/PastPaperSolutions/Jan2021_P2H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Jan2021_P2H_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -640,7 +640,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2HR",
-                          "href": "downloads/PastPaperSolutions/Jan2021_P2HR_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Jan2021_P2HR_Solutions.pdf?v=books20261024"
                       }
                   ]
               }
@@ -660,7 +660,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/MayNov2020_P1H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/MayNov2020_P1H_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -670,7 +670,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1HR",
-                          "href": "downloads/PastPaperSolutions/MayNov2020_P1HR_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/MayNov2020_P1HR_Solutions.pdf?v=books20261024"
                       }
                   ]
               },
@@ -685,7 +685,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1H",
-                          "href": "downloads/PastPaperSolutions/Jan2020_P1H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Jan2020_P1H_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -695,7 +695,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 1HR",
-                          "href": "downloads/PastPaperSolutions/Jan2020_P1HR_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Jan2020_P1HR_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -705,7 +705,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2H",
-                          "href": "downloads/PastPaperSolutions/Jan2020_P2H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Jan2020_P2H_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -715,7 +715,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution 2HR",
-                          "href": "downloads/PastPaperSolutions/Jan2020_P2HR_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Jan2020_P2HR_Solutions.pdf?v=books20261024"
                       }
                   ]
               }
@@ -738,7 +738,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution",
-                          "href": "downloads/PastPaperSolutions/Specimen_4WM1H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Specimen_4WM1H_Solutions.pdf?v=books20261024"
                       }
                   ]
               },
@@ -753,7 +753,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution",
-                          "href": "downloads/PastPaperSolutions/Nov2025_4WM1H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Nov2025_4WM1H_Solutions.pdf?v=books20261024"
                       }
                   ]
               },
@@ -768,7 +768,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution",
-                          "href": "downloads/PastPaperSolutions/May2025_4WM1H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/May2025_4WM1H_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -778,7 +778,7 @@
                       {
                           "kind": "solution",
                           "title": "R Solution",
-                          "href": "downloads/PastPaperSolutions/May2025_4WM1HR_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/May2025_4WM1HR_Solutions.pdf?v=books20261024"
                       }
                   ]
               }
@@ -798,7 +798,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution",
-                          "href": "downloads/PastPaperSolutions/Specimen_4WM2H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Specimen_4WM2H_Solutions.pdf?v=books20261024"
                       }
                   ]
               },
@@ -813,7 +813,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution",
-                          "href": "downloads/PastPaperSolutions/Nov2025_4WM2H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/Nov2025_4WM2H_Solutions.pdf?v=books20261024"
                       }
                   ]
               },
@@ -828,7 +828,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution",
-                          "href": "downloads/PastPaperSolutions/May2025_4WM2H_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/May2025_4WM2H_Solutions.pdf?v=books20261024"
                       },
                       {
                           "kind": "paper",
@@ -838,7 +838,7 @@
                       {
                           "kind": "solution",
                           "title": "R Solution",
-                          "href": "downloads/PastPaperSolutions/May2025_4WM2HR_Solutions.pdf?v=books2027"
+                          "href": "downloads/PastPaperSolutions/May2025_4WM2HR_Solutions.pdf?v=books20261024"
                       }
                   ]
               }
@@ -2081,19 +2081,19 @@
           "actions": [
               {
                   "label": "Questions PDF",
-                  "href": "downloads/classified_problems.pdf?v=books2027",
+                  "href": "downloads/classified_problems.pdf?v=books20261024",
                   "variant": "primary",
                   "target": "_blank"
               },
               {
                   "label": "Solutions Part 1",
-                  "href": "downloads/ClassifiedSolutions/classified_answers_Part1_of_2.pdf?v=books2027",
+                  "href": "downloads/ClassifiedSolutions/classified_answers_Part1_of_2.pdf?v=books20261024",
                   "variant": "solution",
                   "target": "_blank"
               },
               {
                   "label": "Solutions Part 2",
-                  "href": "downloads/ClassifiedSolutions/classified_answers_Part2_of_2.pdf?v=books2027",
+                  "href": "downloads/ClassifiedSolutions/classified_answers_Part2_of_2.pdf?v=books20261024",
                   "variant": "solution",
                   "target": "_blank"
               }
@@ -2113,13 +2113,13 @@
           "actions": [
               {
                   "label": "Questions PDF",
-                  "href": "downloads/Classified_Expertise.pdf?v=books2027",
+                  "href": "downloads/Classified_Expertise.pdf?v=books20261024",
                   "variant": "gold",
                   "target": "_blank"
               },
               {
                   "label": "Solutions PDF",
-                  "href": "downloads/ClassifiedSolutions/Classified_Expertise_Answers.pdf?v=books2027",
+                  "href": "downloads/ClassifiedSolutions/Classified_Expertise_Answers.pdf?v=books20261024",
                   "variant": "solution light-solution",
                   "target": "_blank"
               }
@@ -2189,13 +2189,13 @@
           "actions": [
               {
                   "label": "Questions PDF",
-                  "href": "downloads/Classified_4WM1.pdf?v=books2027",
+                  "href": "downloads/Classified_4WM1.pdf?v=books20261024",
                   "variant": "primary",
                   "target": "_blank"
               },
               {
                   "label": "Solutions PDF",
-                  "href": "downloads/ClassifiedSolutions/Classified_4WM1_Answers.pdf?v=books2027",
+                  "href": "downloads/ClassifiedSolutions/Classified_4WM1_Answers.pdf?v=books20261024",
                   "variant": "solution",
                   "target": "_blank"
               }
@@ -2215,13 +2215,13 @@
           "actions": [
               {
                   "label": "Questions PDF",
-                  "href": "downloads/Classified_4WM2.pdf?v=books2027",
+                  "href": "downloads/Classified_4WM2.pdf?v=books20261024",
                   "variant": "primary",
                   "target": "_blank"
               },
               {
                   "label": "Solutions PDF",
-                  "href": "downloads/ClassifiedSolutions/Classified_4WM2_Answers.pdf?v=books2027",
+                  "href": "downloads/ClassifiedSolutions/Classified_4WM2_Answers.pdf?v=books20261024",
                   "variant": "solution",
                   "target": "_blank"
               }
@@ -2242,13 +2242,13 @@
           "actions": [
               {
                   "label": "Questions PDF",
-                  "href": "downloads/Classified_4WM1_Expertise.pdf?v=books2027",
+                  "href": "downloads/Classified_4WM1_Expertise.pdf?v=books20261024",
                   "variant": "gold",
                   "target": "_blank"
               },
               {
                   "label": "Solutions PDF",
-                  "href": "downloads/ClassifiedSolutions/Classified_4WM1_Expertise_Answers.pdf?v=books2027",
+                  "href": "downloads/ClassifiedSolutions/Classified_4WM1_Expertise_Answers.pdf?v=books20261024",
                   "variant": "solution",
                   "target": "_blank"
               }
@@ -2269,13 +2269,13 @@
           "actions": [
               {
                   "label": "Questions PDF",
-                  "href": "downloads/Classified_4WM2_Expertise.pdf?v=books2027",
+                  "href": "downloads/Classified_4WM2_Expertise.pdf?v=books20261024",
                   "variant": "gold",
                   "target": "_blank"
               },
               {
                   "label": "Solutions PDF",
-                  "href": "downloads/ClassifiedSolutions/Classified_4WM2_Expertise_Answers.pdf?v=books2027",
+                  "href": "downloads/ClassifiedSolutions/Classified_4WM2_Expertise_Answers.pdf?v=books20261024",
                   "variant": "solution",
                   "target": "_blank"
               }

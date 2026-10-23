@@ -237,29 +237,25 @@
       "finalAnswer": "\\(x=-\\frac12\\), \\(y=\\frac32\\)."
     },
     "all::Jan2020_P2HR__Q03__p05-05__m04__Forming-and-Solving-Equations": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Corrected to Forming & Solving Equations.",
       "steps": [
         {
-          "title": "Why it moved The question",
-          "body": "**Why it moved:** The question asks us to form and solve an equation for the numbers of buttons in three tins. There is no probability event."
+          "title": "Write each tin in terms of x",
+          "body": "Tin A has \\(x\\) buttons, tin B has \\(4x\\), tin C has \\(x-7\\)."
         },
         {
-          "title": "Let the number of buttons",
-          "body": "Let the number of buttons in tin A be \\(x\\)."
+          "title": "Form and solve the equation",
+          "body": "\\[\nx+4x+(x-7)=137 \\;\\Rightarrow\\; 6x-7=137 \\;\\Rightarrow\\; 6x=144 \\;\\Rightarrow\\; x=24\n\\]"
         },
         {
-          "title": "Solve equation",
-          "body": "Then tin B has \\(4x\\) buttons and tin C has \\(x-7\\) buttons.\n\n\\[\nx+4x+(x-7)=137\n\\]\n\n\\[\n6x-7=137\n\\]\n\n\\[\n6x=144\n\\]\n\n\\[\nx=24\n\\]"
-        },
-        {
-          "title": "Tin C has",
-          "body": "Tin C has\n\n\\[\n24-7=17\n\\]"
+          "title": "Buttons in tin C",
+          "body": "\\[\n24-7=17\n\\]"
         }
       ],
-      "finalAnswer": "\\(17\\) buttons."
+      "finalAnswer": "\\(17\\) buttons"
     },
     "all::Jan2020_P2HR__Q22__p23-23__m04__Sequences": {
       "status": "checked",
@@ -609,33 +605,29 @@
       "finalAnswer": "\\(6\\)."
     },
     "all::Jan2020_P2HR__Q16__p16-17__m08__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Calculate probability",
-          "body": "For Cody:\n\n\\[\nP(A\\text{ odd})=\\frac{7}{10},\\qquad P(A\\text{ even})=\\frac{3}{10}\n\\]\n\n\\[\nP(B\\text{ odd})=\\frac{7}{12},\\qquad P(B\\text{ even})=\\frac{5}{12}\n\\]"
+          "title": "(a) Complete the tree",
+          "body": "Bag A: odd \\(\\frac{7}{10}\\), even \\(\\frac{3}{10}\\).\n\nBag B (on both branches): odd \\(\\frac{7}{12}\\), even \\(\\frac{5}{12}\\)."
         },
         {
-          "title": "Calculate probability",
-          "body": "An odd total comes from odd + even or even + odd:\n\n\\[\n\\frac{7}{10}\\times\\frac{5}{12}+\\frac{3}{10}\\times\\frac{7}{12}\n=\\frac{7}{15}\n\\]"
+          "title": "(b) Odd total = odd + even or even + odd",
+          "body": "\\[\n\\frac{7}{10}\\times\\frac{5}{12}+\\frac{3}{10}\\times\\frac{7}{12}=\\frac{35}{120}+\\frac{21}{120}=\\frac{56}{120}=\\frac{7}{15}\n\\]"
         },
         {
-          "title": "Cody takes two even counters",
-          "body": "Cody takes two even counters with probability\n\n\\[\n\\frac{3}{10}\\times\\frac{5}{12}=\\frac18\n\\]"
+          "title": "(c) Probability Harriet takes an even counter",
+          "body": "Cody takes two even counters with probability \\(\\frac{3}{10}\\times\\frac{5}{12}=\\frac{1}{8}\\).\n\n\\[\n\\frac18\\times p=\\frac{3}{100} \\;\\Rightarrow\\; p=\\frac{24}{100}=\\frac{6}{25}\n\\]"
         },
         {
-          "title": "Given Cody and Harriet both",
-          "body": "Given Cody and Harriet both take two even counters:\n\n\\[\n\\frac18\\times P(H\\text{ even})=\\frac{3}{100}\n\\]\n\n\\[\nP(H\\text{ even})=\\frac{6}{25}\n\\]"
-        },
-        {
-          "title": "Calculate probability",
-          "body": "So Harriet's bag must have at least \\(25\\) counters."
+          "title": "(c) Least number of counters",
+          "body": "\\(\\frac{6}{25}\\) is in its simplest form, so the number of counters must be a multiple of \\(25\\). The least number is \\(25\\)."
         }
       ],
-      "finalAnswer": "\\(\\frac{7}{15}\\), and \\(25\\)."
+      "finalAnswer": "(a) \\(\\frac{3}{10}\\); \\(\\frac{7}{12},\\frac{5}{12}\\) on both branches (b) \\(\\dfrac{7}{15}\\) (c) \\(25\\)"
     },
     "expertise::Jan2020_P2HR__Q21__p22-22__m07__Algebraic-Roots-and-Indices": {
       "status": "checked",

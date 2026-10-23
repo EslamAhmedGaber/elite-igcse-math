@@ -501,21 +501,25 @@
       "finalAnswer": "draw bars with heights \\(2.5,4,3.6,1.4,0.6\\)."
     },
     "all::May2024_P1HR__Q02__p04-04__m04__Probability-Toolkit": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "Let the probability of landing",
-          "body": "Let the probability of landing on \\(4\\) be \\(x\\). Then the probability of landing on \\(1\\) is \\(2x\\).\n\n\\[\n2x+0.27+0.04+x+0.12=1\n\\]\n\n\\[\n3x=0.57\n\\]\n\n\\[\nx=0.19\n\\]\n\n\\[\nP(\\text{odd})=0.38+0.04+0.12=0.54\n\\]"
+          "title": "Find x",
+          "body": "\\[\n2x+0.27+0.04+x+0.12=1 \\;\\Rightarrow\\; 3x=0.57 \\;\\Rightarrow\\; x=0.19\n\\]"
         },
         {
-          "title": "Expected odd numbers",
-          "body": "Expected odd numbers:\n\n\\[\n400\\times 0.54=216\n\\]"
+          "title": "Probability of an odd number (1, 3 or 5)",
+          "body": "\\[\n2x+0.04+0.12=0.38+0.04+0.12=0.54\n\\]"
+        },
+        {
+          "title": "Estimate for 400 spins",
+          "body": "\\[\n400\\times0.54=216\n\\]"
         }
       ],
-      "finalAnswer": "\\(0.19\\), \\(0.54\\), \\(216\\)."
+      "finalAnswer": "\\(216\\)"
     },
     "all::May2024_P1HR__Q21__p21-21__m05__Probability-Toolkit": {
       "status": "checked",

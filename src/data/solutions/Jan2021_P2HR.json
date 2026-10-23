@@ -577,27 +577,29 @@
       "finalAnswer": "\\(\\boxed{18}\\)"
     },
     "all::Jan2021_P2HR__Q16__p15-15__m05__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Calculate probability",
-          "body": "\\[\nn(A\\cap B)=62+30-68=24\n\\]"
+          "title": "(a) Find the intersection",
+          "body": "\\[\nn(A\\cap B)=n(A)+n(B)-n(A\\cup B)=62+30-68=24\n\\]"
         },
         {
-          "title": "Calculate probability",
-          "body": "So the Venn diagram has:\n\n\\[\nA\\text{ only}=38,\\quad B\\text{ only}=6,\\quad A\\cap B=24,\\quad \\text{outside}=12\n\\]\n\n\\[\nP(A\\cap B)=\\frac{24}{80}=\\frac{3}{10}\n\\]\n\n\\[\nP(A\\cup B')=\\frac{74}{80}=\\frac{37}{40}\n\\]",
-          "figures": [
-            {
-              "src": "assets/solution-diagrams/igcse/Jan2021_P2HR__Q16__p15-15__m05__Probability-Diagrams-Venn-and-Tree-Diagrams.png",
-              "alt": "Completed Venn diagram"
-            }
-          ]
+          "title": "(a) Fill every region",
+          "body": "\\(A\\) only \\(=62-24=38\\), \\(B\\) only \\(=30-24=6\\), outside \\(=80-68=12\\)."
+        },
+        {
+          "title": "(b)(i) In both A and B",
+          "body": "\\[\nP(A\\cap B)=\\frac{24}{80}=\\frac{3}{10}\n\\]"
+        },
+        {
+          "title": "(b)(ii) In A or not in B",
+          "body": "\\(A\\cup B'\\) is everything except \"\\(B\\) only\": \\(80-6=74\\).\n\n\\[\nP(A\\cup B')=\\frac{74}{80}=\\frac{37}{40}\n\\]"
         }
       ],
-      "finalAnswer": "\\(\\frac{3}{10}\\), \\(\\frac{37}{40}\\)."
+      "finalAnswer": "(a) \\(38, 24, 6\\), outside \\(12\\) (b)(i) \\(\\frac{3}{10}\\) (ii) \\(\\frac{37}{40}\\)"
     },
     "expertise::Jan2021_P2HR__Q20__p19-19__m05__Circles-Arcs-and-Sectors": {
       "status": "checked",

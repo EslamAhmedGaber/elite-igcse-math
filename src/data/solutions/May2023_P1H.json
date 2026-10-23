@@ -642,29 +642,25 @@
       "finalAnswer": "missing frequencies \\(25,60\\), and missing densities \\(4.6,1.8,0.7\\)."
     },
     "all::May2023_P1H__Q12__p14-14__m04__Cumulative-Frequency-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Use cumulative frequency",
-          "body": "There are \\(50\\) plants, so the median is the \\(25\\)th value."
+          "title": "(a) Median",
+          "body": "There are \\(50\\) plants, so read across from \\(25\\): the curve reaches \\(25\\) at about \\(28.5\\) cm."
         },
         {
-          "title": "Use cumulative frequency",
-          "body": "From the cumulative frequency graph,\n\n\\[\n\\text{median}\\approx 27\\text{ cm}\n\\]"
+          "title": "(b) Frequency for 30 < height ≤ 40",
+          "body": "Read the curve at both ends of the class: about \\(44\\) at \\(40\\) cm and \\(30\\) at \\(30\\) cm.\n\n\\[\n44-30=14\n\\]"
         },
         {
-          "title": "Use cumulative frequency",
-          "body": "For the interval \\(30<h\\leq 40\\),\n\n\\[\nF(40)-F(30)\\approx 44-31=13\n\\]"
-        },
-        {
-          "title": "Use cumulative frequency",
-          "body": "For plants taller than \\(35\\) cm,\n\n\\[\n50-F(35)\\approx 50-37=13\n\\]"
+          "title": "(c) Taller than 35 cm",
+          "body": "At \\(35\\) cm the curve reads about \\(37\\), so about \\(50-37=13\\) plants."
         }
       ],
-      "finalAnswer": "median about \\(27\\) cm, about \\(13\\) plants, about \\(13\\) plants."
+      "finalAnswer": "(a) about \\(28.5\\) cm (b) \\(14\\) (c) about \\(13\\)"
     },
     "expertise::May2023_P1H__Q20__p22-23__m06__Sequences": {
       "status": "checked",

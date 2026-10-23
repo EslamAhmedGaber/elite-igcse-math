@@ -632,60 +632,46 @@
       "finalAnswer": "\\(x=11,\\ y=14\\)."
     },
     "all::Jun2024_P2HR__Q11__p12-13__m07__Cumulative-Frequency-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "The cumulative frequencies are",
-          "body": "The cumulative frequencies are\n\n\\[\n6,\\ 17,\\ 27,\\ 42,\\ 53,\\ 60\n\\]"
+          "title": "(a) Plot the table",
+          "body": "Plot \\((5,6),(10,17),(15,27),(20,42),(25,53),(30,60)\\), start at \\((0,0)\\), and join with a smooth curve."
         },
         {
-          "title": "Plot",
-          "body": "Plot\n\n\\[\n(0,0),(5,6),(10,17),(15,27),(20,42),(25,53),(30,60)\n\\]",
-          "figures": [
-            {
-              "src": "assets/solution-diagrams/igcse/Jun2024_P2HR__Q11__p12-13__m07__Cumulative-Frequency-Diagrams.png",
-              "alt": "Cumulative frequency graph"
-            }
-          ]
+          "title": "(b) Read the quartiles",
+          "body": "Lower quartile at \\(\\frac{60}{4}=15\\): about \\(9\\) hours. Upper quartile at \\(45\\): about \\(21.4\\) hours.\n\n\\[\n\\text{IQR}\\approx21.4-9.1\\approx12.3\\text{ hours}\n\\]\n\n(Answers from about \\(11\\) to \\(14\\) are accepted, depending on the curve.)"
         },
         {
-          "title": "Use cumulative frequency",
-          "body": "For \\(60\\) workers,\n\n\\[\nQ_1=15,\\qquad Q_3=45\n\\]"
+          "title": "(c) 25 workers above W",
+          "body": "So \\(60-25=35\\) workers spent \\(W\\) hours or less. Reading across from \\(35\\): \\(W\\approx17.7\\)."
         },
         {
-          "title": "Use cumulative frequency",
-          "body": "From the graph,\n\n\\[\nQ_1\\approx 9.1,\\qquad Q_3\\approx 21.4\n\\]\n\n\\[\n\\text{IQR}\\approx 21.4-9.1=12.3\n\\]"
-        },
-        {
-          "title": "Use cumulative frequency",
-          "body": "If \\(25\\) workers did more than \\(W\\) hours, then \\(35\\) workers did \\(W\\) hours or less.\nFrom the graph, \\(W\\approx 17.7\\).\n\n\\[\nP(5<H\\leq 10)=\\frac{17-6}{60}=\\frac{11}{60}\n\\]"
+          "title": "(d) Between 5 and 10 hours",
+          "body": "\\(17-6=11\\) workers, so\n\n\\[\nP(5<H\\le10)=\\frac{11}{60}\n\\]"
         }
       ],
-      "finalAnswer": "IQR about \\(12.3\\), \\(W\\approx 17.7\\), and \\(\\frac{11}{60}\\)."
+      "finalAnswer": "(b) about \\(12.3\\) hours (c) \\(W\\approx17.7\\) (d) \\(\\dfrac{11}{60}\\)"
     },
     "all::Jun2024_P2HR__Q14__p16-16__m03__Probability-Toolkit": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "Calculate probability",
-          "body": "\\[\nP(H)=0.8\n\\]"
+          "title": "Find the probability of a 6",
+          "body": "The dice and the coin are independent:\n\n\\[\nP(6)\\times0.8=0.24 \\;\\Rightarrow\\; P(6)=0.3\n\\]"
         },
         {
-          "title": "Given",
-          "body": "Given\n\n\\[\nP(\\text{6 and H})=0.24\n\\]\n\n\\[\nP(6)=0.24\\div 0.8=0.3\n\\]"
-        },
-        {
-          "title": "Calculate probability",
-          "body": "Also\n\n\\[\nP(T)=1-0.8=0.2\n\\]\n\n\\[\nP(\\text{6 and T})=0.3\\times 0.2=0.06\n\\]"
+          "title": "6 and Tails",
+          "body": "\\(P(\\text{Tails})=1-0.8=0.2\\), so\n\n\\[\n0.3\\times0.2=0.06\n\\]"
         }
       ],
-      "finalAnswer": "\\(0.06\\)."
+      "finalAnswer": "\\(0.06\\)"
     },
     "expertise::Jun2024_P2HR__Q26__p30-30__m04__Algebraic-Fractions": {
       "status": "checked",

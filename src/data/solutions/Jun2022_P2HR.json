@@ -682,17 +682,25 @@
       "finalAnswer": "median about \\(27.4\\) years, IQR about \\(25.1\\) years, about \\(11\\) people older than \\(55\\)."
     },
     "all::Jun2022_P2HR__Q14__p16-16__m03__Combined-and-Conditional-Probability": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Combined & Conditional Probability. The tag is correct.",
       "steps": [
         {
-          "title": "The complement of at least",
-          "body": "The complement of \"at least one even number\" is \"both numbers are odd\".\n\n\\[\nP(\\text{odd})=\\frac12\n\\]\n\n\\[\nP(\\text{both odd})=\\frac12\\times\\frac12=\\frac14\n\\]\n\n\\[\nP(\\text{at least one even})=1-\\frac14=\\frac34\n\\]"
+          "title": "Use the complement",
+          "body": "\"At least one even\" is the opposite of \"all four dice are odd\". Each die is odd with probability \\(\\frac12\\)."
+        },
+        {
+          "title": "All four dice odd",
+          "body": "\\[\n\\left(\\frac12\\right)^4=\\frac{1}{16}\n\\]"
+        },
+        {
+          "title": "At least one even",
+          "body": "\\[\n1-\\frac{1}{16}=\\frac{15}{16}\n\\]"
         }
       ],
-      "finalAnswer": "\\(\\frac34\\)."
+      "finalAnswer": "\\(\\dfrac{15}{16}\\)"
     },
     "expertise::Jun2022_P2HR__Q23__p25-25__m03__Algebraic-Fractions": {
       "status": "checked",

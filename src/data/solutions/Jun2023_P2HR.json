@@ -590,46 +590,38 @@
       "finalAnswer": "Akari's IQR is \\(6\\), and Akari is more consistent."
     },
     "all::Jun2023_P2HR__Q15__p16-16__m03__Probability-Toolkit": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "Calculate probability",
-          "body": "\\[\nP(\\text{three heads})=\\frac{27}{64}\n\\]"
+          "title": "Find the probability of a head",
+          "body": "\\[\nP(H)^3=\\frac{27}{64} \\;\\Rightarrow\\; P(H)=\\sqrt[3]{\\frac{27}{64}}=\\frac34\n\\]"
         },
         {
-          "title": "Calculate probability",
-          "body": "So\n\n\\[\nP(H)^3=\\frac{27}{64}\n\\]\n\n\\[\nP(H)=\\frac{3}{4}\n\\]"
-        },
-        {
-          "title": "Calculate probability",
-          "body": "Therefore\n\n\\[\nP(T)=\\frac{1}{4}\n\\]\n\n\\[\nP(\\text{three tails})=\\left(\\frac14\\right)^3=\\frac{1}{64}\n\\]"
+          "title": "Three tails",
+          "body": "\\(P(T)=1-\\frac34=\\frac14\\), so\n\n\\[\nP(TTT)=\\left(\\frac14\\right)^3=\\frac{1}{64}\n\\]"
         }
       ],
-      "finalAnswer": "\\(\\frac{1}{64}\\)."
+      "finalAnswer": "\\(\\dfrac{1}{64}\\)"
     },
     "all::Jun2023_P2HR__Q19__p19-19__m04__Probability-Toolkit": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "There are adults",
-          "body": "There are \\(30\\) adults.\n\n\\[\nn(B)=19,\\quad n(D)=15,\\quad n(\\text{neither})=4\n\\]"
+          "title": "Adults who booked breakfast and dinner",
+          "body": "\\(30-4=26\\) adults booked at least one meal.\n\n\\[\nn(B\\cap D)=19+15-26=8\n\\]"
         },
         {
-          "title": "Calculate probability",
-          "body": "So\n\n\\[\nn(B\\cup D)=30-4=26\n\\]\n\n\\[\nn(B\\cap D)=19+15-26=8\n\\]"
-        },
-        {
-          "title": "The probability that two adults",
-          "body": "The probability that two adults both had breakfast and dinner is\n\n\\[\n\\frac{8}{30}\\times\\frac{7}{29}=\\frac{28}{435}\n\\]"
+          "title": "Choose two of them (without replacement)",
+          "body": "\\[\n\\frac{8}{30}\\times\\frac{7}{29}=\\frac{56}{870}=\\frac{28}{435}\n\\]"
         }
       ],
-      "finalAnswer": "\\(\\frac{28}{435}\\)."
+      "finalAnswer": "\\(\\dfrac{28}{435}\\)"
     },
     "expertise::Jun2023_P2HR__Q23__p24-24__m05__Sequences": {
       "status": "checked",

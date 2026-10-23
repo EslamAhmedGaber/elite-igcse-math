@@ -37,8 +37,11 @@ function pngSize(file) {
   return {width: buf.readUInt32BE(16), height: buf.readUInt32BE(20)};
 }
 
-// IGCSE matches the Mock Generator (1-2 / 3-4 / 5+). IAL questions carry more marks, so their bands are wider.
-const LEVEL_BANDS = {IGCSE: [2, 4], IAL: [5, 8]};
+// IGCSE matches the Mock Generator (1-2 / 3-4 / 5+). IAL bands match the Mock Generator (1-6 / 7-8 / 9+).
+const LEVEL_BANDS = {IGCSE: [2, 4], IAL: [6, 8]};
+// Original Elite questions (tools/elite_practice) are labelled as practice, never as past-paper questions.
+const isPractice = paper => /^Elite Practice/.test(String(paper));
+
 function level(marks, family = 'IGCSE') {
   const [easy, medium] = LEVEL_BANDS[family];
   return marks <= easy ? 'Easy' : marks <= medium ? 'Medium' : 'Hard';
@@ -85,7 +88,7 @@ function igcseTopics(library) {
   vm.runInContext(read('data/topic-index/linear.js'), ctx);
   const index = ctx.ELITE_TOPIC_INDEX.linear;
   const byId = new Map(ctx.QUESTION_DATA.map(q => [q.id, q]));
-  const allPapers = new Set(ctx.QUESTION_DATA.map(q => q.paper));
+  const allPapers = new Set(ctx.QUESTION_DATA.map(q => q.paper).filter(p => !isPractice(p)));
   const out = [];
   for (const note of noteTopics(library.courses.linear)) {
     const ids = index.topics[note.num]?.ids || [];
@@ -140,7 +143,7 @@ function ialTopics(library, id) {
 }
 
 // ---------- page ----------
-function shell({course, route, title, description, canonical, crumbs, body, ld}) {
+function shell({course, route, title, description, canonical, crumbs, body, ld, stat = 'pv_topic'}) {
   const graph = [
     {'@type': 'Organization', '@id': seo.origin + '/#organization', name: 'Elite Mathematics', url: seo.origin + '/', logo: seo.origin + '/assets/icon.svg'},
     {'@type': 'Person', '@id': seo.origin + '/about.html#eslam-ahmed', name: 'Dr Eslam Ahmed', url: seo.origin + '/about.html'},
@@ -151,16 +154,16 @@ function shell({course, route, title, description, canonical, crumbs, body, ld})
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(title)}</title><meta name="description" content="${esc(description)}"><link rel="canonical" href="${canonical}">
 <meta property="og:type" content="website"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${seo.origin}/assets/og-image.png"><meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0f2140"><link rel="icon" href="/assets/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="/resource-pages.css?v=20261024a">
+<meta name="theme-color" content="#0f2140"><link rel="icon" href="/assets/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="/resource-pages.css?v=20261024b">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">${json({'@context': 'https://schema.org', '@graph': graph})}</script></head>
-<body><a class="resource-skip" href="#main">Skip to content</a>
+<body data-stat="${stat}"><a class="resource-skip" href="#main">Skip to content</a>
 <header class="resource-header"><div class="resource-wrap"><a class="resource-brand" href="/"><img src="/assets/icon.svg" width="40" height="40" alt="">Elite Mathematics</a><nav aria-label="Main"><a href="/#courseLauncher">All courses</a><a href="/course.html?${esc(course.query)}">My course</a><a href="/progress.html?${esc(course.query)}">My progress</a></nav></div></header>
 <main id="main" class="resource-wrap"><nav class="resource-breadcrumb" aria-label="Breadcrumb">${crumbs.map((c, i) => i === crumbs.length - 1 ? `<span>${esc(c.name)}</span>` : `<a href="${c.path}">${esc(c.name)}</a>`).join('<span aria-hidden="true">/</span>')}</nav>
 ${body}
 <div class="resource-author"><img src="/assets/Eslam4-home.jpg" width="56" height="56" alt="Dr Eslam Ahmed" loading="lazy"><div><a href="/about.html">Dr Eslam Ahmed</a><p>Elite Mathematics &middot; Questions classified by topic, solutions checked by Dr Eslam</p></div></div></main>
 <footer class="resource-footer"><div class="resource-wrap"><nav aria-label="All course resources">${Object.entries(seo.routes).map(([id, r]) => `<a href="${r.path}">${esc(id === 'linear' ? 'Linear' : r.name.replace('Edexcel IGCSE Maths ', '').replace('Edexcel IAL ', ''))}</a>`).join('')}</nav><p>Elite Mathematics &middot; <a href="/about.html">About</a> &middot; <a href="https://wa.me/201120009622">WhatsApp Dr Eslam</a></p></div></footer>
-<script src="/topic-pages.js?v=20261024a" defer></script></body></html>
+<script src="/firebase-config.js" defer></script><script src="/topic-pages.js?v=20261024b" defer></script></body></html>
 `;
 }
 
@@ -172,7 +175,9 @@ function action(href, label, primary = false) {
 function topicPage(ctx, topic, siblings) {
   const {course, route, courseLabel, family} = ctx;
   const qs = [...topic.questions].sort((a, b) => a.marks - b.marks || b.year - a.year || (SESSION_ORDER[b.session] || 0) - (SESSION_ORDER[a.session] || 0) || a.qNo - b.qNo);
-  const papers = new Set(qs.map(q => q.paper));
+  const papers = new Set(qs.map(q => q.paper).filter(p => !isPractice(p)));
+  const practiceOnly = !papers.size;
+  const practiceCount = qs.filter(q => isPractice(q.paper)).length;
   const years = qs.map(q => q.year).filter(Boolean);
   const span = years.length ? (Math.min(...years) === Math.max(...years) ? `${Math.min(...years)}` : `${Math.min(...years)}–${Math.max(...years)}`) : '';
   const marks = qs.reduce((s, q) => s + q.marks, 0);
@@ -182,8 +187,8 @@ function topicPage(ctx, topic, siblings) {
   qs.forEach(q => counts[level(q.marks, family)]++);
   const pagePath = `${route.path}topics/${slug(topic.title)}/`;
   const canonical = seo.origin + pagePath;
-  const title = `${topic.title} – ${courseLabel} Past Paper Questions & Solutions | Elite`;
-  const description = `${qs.length} ${topic.title} questions from Edexcel ${route.code} past papers${span ? ` (${span})` : ''}, easiest first, ${solved === qs.length ? 'each with a worked solution' : `${solved} with worked solutions`}. Plus topic notes and an online topic test.`;
+  const title = practiceOnly ? `${topic.title} – ${courseLabel} Practice Questions & Solutions | Elite` : `${topic.title} – ${courseLabel} Past Paper Questions & Solutions | Elite`;
+  const description = practiceOnly ? `${qs.length} exam-style ${topic.title} practice questions for Edexcel ${route.code}, easiest first, each with a worked solution. Plus topic notes and an online topic test.` : `${qs.length} ${topic.title} questions from Edexcel ${route.code} past papers${span ? ` (${span})` : ''}${practiceCount ? ` and Elite practice` : ''}, easiest first, ${solved === qs.length ? 'each with a worked solution' : `${solved} with worked solutions`}. Plus topic notes and an online topic test.`;
   const testHref = `/exam.html?${course.query}&mode=custom&topic=${encodeURIComponent(topic.bankTopic)}`;
   const actions = [
     topic.note?.href ? action('/' + topic.note.href, 'Topic notes (PDF)', true) : '',
@@ -198,11 +203,11 @@ function topicPage(ctx, topic, siblings) {
 ${solutionHtml(q.solution) || `<p class="tp-nosol">Worked solution: <a href="${esc(q.practice)}">open it in the online practice</a>.</p>`}</article>`;
   }).join('\n');
   const others = siblings.filter(s => s !== topic).map(s => `<li><a href="${route.path}topics/${slug(s.title)}/">${esc(s.title)}</a> <small>${s.questions.length}</small></li>`).join('');
-  const body = `<div class="resource-title"><span class="resource-kicker">${esc(family)} &middot; ${esc(route.code)} &middot; Topic</span><h1>${esc(topic.title)}: past paper questions &amp; worked solutions</h1>
-<p>Every ${esc(topic.title)} question from the ${esc(route.code)} papers in our bank${span ? `, ${span}` : ''}, sorted from easiest to hardest. Try each one first, then open the worked solution.</p>
+  const body = `<div class="resource-title"><span class="resource-kicker">${esc(family)} &middot; ${esc(route.code)} &middot; Topic</span><h1>${esc(topic.title)}: ${practiceOnly ? 'practice questions' : 'past paper questions'} &amp; worked solutions</h1>
+<p>${practiceOnly ? `Recent ${esc(route.code)} Higher papers have not examined ${esc(topic.title)}, so these are original exam-style Elite practice questions` : `Every ${esc(topic.title)} question from the ${esc(route.code)} papers in our bank${span ? `, ${span}` : ''}${practiceCount ? ', plus original Elite practice questions' : ''}`}, sorted from easiest to hardest. Try each one first, then open the worked solution.</p>
 <div class="resource-actions">${actions}</div></div>
-<section class="resource-section tp-stats" aria-label="How often this topic is examined"><div><strong>${qs.length}</strong><span>questions</span></div><div><strong>${marks}</strong><span>marks in total</span></div><div><strong>${share}%</strong><span>of papers (${papers.size} of ${topic.totalPapers}) include it</span></div><div><strong>${counts.Easy}/${counts.Medium}/${counts.Hard}</strong><span>easy / medium / hard</span></div></section>
-<section class="resource-section"><h2>Questions, easiest first</h2><p>Level is estimated from marks: ${family === 'IAL' ? '1–5 easy, 6–8 medium, 9+ hard' : '1–2 easy, 3–4 medium, 5+ hard'}.</p>
+<section class="resource-section tp-stats" aria-label="How often this topic is examined"><div><strong>${qs.length}</strong><span>questions</span></div><div><strong>${marks}</strong><span>marks in total</span></div><div><strong>${share}%</strong><span>of papers (${papers.size} of ${topic.totalPapers}) include it${practiceOnly ? ' &ndash; practise it with the Elite questions below' : ''}</span></div><div><strong>${counts.Easy}/${counts.Medium}/${counts.Hard}</strong><span>easy / medium / hard</span></div></section>
+<section class="resource-section"><h2>Questions, easiest first</h2><p>Level is estimated from marks: ${family === 'IAL' ? '1–6 easy, 7–8 medium, 9+ hard' : '1–2 easy, 3–4 medium, 5+ hard'}.</p>
 <div class="tp-list">
 ${cards}
 </div></section>

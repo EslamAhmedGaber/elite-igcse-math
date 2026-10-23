@@ -625,25 +625,21 @@
       "finalAnswer": "cumulative frequencies \\(7,33,57,71,78,80\\), median about \\(23\\) minutes, probability about \\(0.095\\)."
     },
     "all::Jan2022_P1H__Q14__p15-15__m04__Probability-Diagrams-Venn-and-Tree-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Diagrams - Venn & Tree Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Packet A",
-          "body": "Packet A:\n\n\\[\nP(\\text{sunflower})=\\frac{7}{12}\n\\]"
+          "title": "(a) Complete the tree",
+          "body": "Packet A: not sunflower \\(1-\\frac{7}{12}=\\frac{5}{12}\\).\n\nPacket B (on both branches): sunflower \\(\\frac{8}{15}\\), not sunflower \\(\\frac{7}{15}\\)."
         },
         {
-          "title": "Packet B",
-          "body": "Packet B:\n\n\\[\nP(\\text{sunflower})=\\frac{8}{15}\n\\]"
-        },
-        {
-          "title": "Calculate probability",
-          "body": "So\n\n\\[\nP(\\text{two sunflower seeds})=\\frac{7}{12}\\times\\frac{8}{15}\n\\]\n\n\\[\n=\\frac{14}{45}\n\\]"
+          "title": "(b) Two sunflower seeds",
+          "body": "\\[\n\\frac{7}{12}\\times\\frac{8}{15}=\\frac{56}{180}=\\frac{14}{45}\n\\]"
         }
       ],
-      "finalAnswer": "\\(\\frac{14}{45}\\)."
+      "finalAnswer": "(a) \\(\\frac{5}{12}\\); \\(\\frac{8}{15},\\frac{7}{15}\\) on both branches (b) \\(\\dfrac{14}{45}\\)"
     },
     "expertise::Jan2022_P1H__Q20__p21-21__m04__Completing-the-Square": {
       "status": "checked",

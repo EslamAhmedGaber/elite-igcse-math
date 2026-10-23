@@ -525,42 +525,42 @@
       "finalAnswer": "about \\(42\\) medium oranges."
     },
     "all::Nov2023_P1H__Q13__p16-16__m04__Cumulative-Frequency-Diagrams": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Cumulative Frequency Diagrams. The tag is correct.",
       "steps": [
         {
-          "title": "Use cumulative frequency",
-          "body": "There are \\(80\\) adults, so the median is the \\(40\\)th value."
+          "title": "(a) Median",
+          "body": "Read across from \\(\\frac{80}{2}=40\\): about \\(25\\) seconds."
         },
         {
-          "title": "Use cumulative frequency",
-          "body": "From the graph,\n\n\\[\n\\text{median}\\approx 25\\text{ seconds}\n\\]"
+          "title": "(b) Adults who took longer than 50 seconds",
+          "body": "At \\(50\\) seconds the curve reads about \\(75\\), so \\(80-75=5\\) adults."
         },
         {
-          "title": "Convert standard form",
-          "body": "At \\(50\\) seconds, the cumulative frequency is about \\(75\\).\n\n\\[\n80-75=5\n\\]\n\n\\[\n\\frac{5}{80}\\times 100=6.25\\%\n\\]"
+          "title": "(b) Percentage",
+          "body": "\\[\n\\frac{5}{80}\\times100=6.25\\%\n\\]"
         }
       ],
-      "finalAnswer": "median about \\(25\\) seconds, and about \\(6\\%\\)."
+      "finalAnswer": "(a) about \\(25\\) seconds (b) about \\(6.25\\%\\)"
     },
     "all::Nov2023_P1H__Q04__p06-06__m04__Probability-Toolkit": {
-      "status": "needs-review",
-      "checkedBy": "Pending review",
-      "updated": "2026-05-06T18:49:24",
+      "status": "checked",
+      "checkedBy": "Reviewed against the question paper (Claude, 2026-10-24)",
+      "updated": "2026-10-24T00:00:00",
       "topicNote": "Probability Toolkit. The tag is correct.",
       "steps": [
         {
-          "title": "Let the probability of white",
-          "body": "Let the probability of white be \\(x\\). Then the probability of orange is \\(2x\\).\n\n\\[\n0.38+2x+x=1\n\\]\n\n\\[\n3x=0.62\n\\]\n\n\\[\nx\\approx 0.207\n\\]"
+          "title": "(a) Probabilities add to 1",
+          "body": "\\[\n0.58+2x+x=1 \\;\\Rightarrow\\; 3x=0.42 \\;\\Rightarrow\\; x=0.14\n\\]"
         },
         {
-          "title": "Expected blue sweets",
-          "body": "Expected blue sweets:\n\n\\[\n250\\times 0.38=95\n\\]"
+          "title": "(b) Estimate for blue in 250 spins",
+          "body": "\\[\n250\\times0.58=145\n\\]"
         }
       ],
-      "finalAnswer": "\\(0.207\\), and \\(95\\)."
+      "finalAnswer": "(a) \\(x=0.14\\) (b) \\(145\\)"
     },
     "all::Nov2023_P1H__Q20__p23-23__m04__Probability-Toolkit": {
       "status": "checked",
