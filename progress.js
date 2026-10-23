@@ -831,7 +831,7 @@
           </label>
         </td>
         <td>
-          <strong>${escapeHtml(row.topic)}</strong>
+          <strong>${escapeHtml((window.eliteTopicLabel || String)(row.topic))}</strong>
           <span>${escapeHtml(row.unit)}</span>
         </td>
         <td>${row.solved}/${row.total}</td>
@@ -897,7 +897,7 @@
     els.priorityRows.innerHTML = rows.map((row, index) => `<tr class="priority-${row.className}">
       <td><strong>${index + 1}</strong></td>
       <td>
-        <strong>${escapeHtml(row.topic)}</strong>
+        <strong>${escapeHtml((window.eliteTopicLabel || String)(row.topic))}</strong>
         <span>${escapeHtml(row.unit)}</span>
       </td>
       <td>
@@ -1283,7 +1283,7 @@
     document.getElementById("quickProgressHeading").textContent = unit ? `${unit} practice` : `${coursePack.label} practice`;
     document.getElementById("quickTopics").innerHTML = rows.map(row => {
       const percent = row.total ? Math.round(row.solved * 100 / row.total) : 0;
-      return `<a class="qp-topic" href="${escapeHtml(practiceLink(row))}"><span><strong>${escapeHtml(row.topic)}</strong><small>${row.solved ? (row.solved === row.total ? "All questions marked solved" : "In progress") : "Not yet practised"}</small></span><span>${row.solved}/${row.total}</span><progress max="100" value="${percent}" aria-label="${escapeHtml(row.topic)}: ${row.solved} of ${row.total} marked solved"></progress></a>`;
+      return `<a class="qp-topic" href="${escapeHtml(practiceLink(row))}"><span><strong>${escapeHtml((window.eliteTopicLabel || String)(row.topic))}</strong><small>${row.solved ? (row.solved === row.total ? "All questions marked solved" : "In progress") : "Not yet practised"}</small></span><span>${row.solved}/${row.total}</span><progress max="100" value="${percent}" aria-label="${escapeHtml(row.topic)}: ${row.solved} of ${row.total} marked solved"></progress></a>`;
     }).join("") || "<p>No questions are available in this course yet.</p>";
   }
 

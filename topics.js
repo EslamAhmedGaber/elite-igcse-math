@@ -146,7 +146,7 @@
       const empty = !total;
       return `<article class="roadmap-card is-${state}${empty ? " is-empty" : ""}">
         <div class="roadmap-card-head">
-          <strong>${escapeHtml(row.topic)}</strong>
+          <strong>${escapeHtml((window.eliteTopicLabel || String)(row.topic))}</strong>
           <span class="roadmap-facts">${facts}</span>
         </div>
         <div class="roadmap-meter" role="img" aria-label="${solvedCount} of ${total} solved">

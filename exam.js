@@ -575,12 +575,22 @@
   }
 
   function topicDisplayLabel(topic, unit = "") {
-    if (course.mode !== "baccalaureate") return topic;
+    if (course.mode !== "baccalaureate") return window.eliteTopicLabel ? window.eliteTopicLabel(topic) : topic;
     return (course.topics || []).find((entry) => entry.topic === topic && (!unit || entry.unit === unit))?.label || topic;
   }
 
   function questionTopicLabel(question) {
     return question?.topic_label || topicDisplayLabel(question?.topic || "", question?.unit || "");
+  }
+
+  // A question picked through one of its extra topics (e.g. "Factorise, hence solve" chosen for
+  // Quadratic Equations) is labelled with the topic the student asked for, main topic in brackets.
+  function paperTopicLabel(question) {
+    const main = questionTopicLabel(question);
+    const wanted = state.buildConfig?.topics || [];
+    if (!wanted.length || wanted.includes(question.topic)) return main;
+    const match = (question.topics || []).find((topic) => wanted.includes(topic));
+    return match ? `${topicDisplayLabel(match)} (${main})` : main;
   }
 
   function fillSelect(select, values, firstLabel, preserve = "", labelForValue = (value) => value) {
@@ -592,7 +602,7 @@
 
   function selectedTopicMix(container) {
     if (!container) return [];
-    return [...container.querySelectorAll("input[type='checkbox']:checked")].map((input) => input.value);
+    return [...container.querySelectorAll("input[type='checkbox']:checked:not(:disabled)")].map((input) => input.value);
   }
 
   function combinedTopicSelection(singleTopic, container) {
@@ -607,7 +617,7 @@
     if (!container) return;
     const wanted = new Set(topics.filter(Boolean));
     container.querySelectorAll("input[type='checkbox']").forEach((input) => {
-      input.checked = wanted.has(input.value);
+      input.checked = !input.disabled && wanted.has(input.value);
     });
   }
 
@@ -616,7 +626,7 @@
     container.querySelectorAll("input[type='checkbox']").forEach((input) => {
       const row = input.closest("label");
       const available = Number(row?.querySelector("em")?.textContent || 0) > 0;
-      input.checked = mode === "all" || (mode === "available" && available);
+      input.checked = !input.disabled && (mode === "all" || (mode === "available" && available));
     });
     container.dispatchEvent(new Event("change", { bubbles: true }));
   }
@@ -632,12 +642,17 @@
   function renderTopicMix(container, summary, unit = "", bank = "all", part = "") {
     if (!container) return;
     const previous = new Set(selectedTopicMix(container));
-    const topics = topicsForUnit(unit, part);
-    container.innerHTML = topics.map((topic) => {
-      const count = topicPoolCount(topic, bank, unit, part);
-      const checked = previous.has(topic) ? " checked" : "";
-      return `<label${count ? "" : ' class="is-empty" title="No questions in this bank for this topic"'}><input type="checkbox" value="${escapeHtml(topic)}"${checked}> <span>${escapeHtml(topicDisplayLabel(topic, unit))}</span><em>${count}</em></label>`;
-    }).join("") || `<div class="empty-roadmap">No topics match this chapter yet.</div>`;
+    const rows = topicsForUnit(unit, part).map((topic) => ({ topic, count: topicPoolCount(topic, bank, unit, part) }));
+    const row = ({ topic, count }) => {
+      const checked = count && previous.has(topic) ? " checked" : "";
+      return `<label${count ? "" : ' class="is-empty" title="No past-paper questions on this topic in this bank yet"'}><input type="checkbox" value="${escapeHtml(topic)}"${checked}${count ? "" : " disabled"}> <span>${escapeHtml(topicDisplayLabel(topic, unit))}</span><em>${count}</em></label>`;
+    };
+    // Every syllabus topic stays visible. Topics with no past-paper questions sit at the end, greyed,
+    // so students can see the whole course instead of wondering where a topic went.
+    const empty = rows.filter((item) => !item.count);
+    container.innerHTML = (rows.filter((item) => item.count).map(row).join("")
+      + (empty.length ? `<p class="topic-mix-empty-note">Not in this bank's past papers yet - practise these from the topic notes:</p>${empty.map(row).join("")}` : ""))
+      || `<div class="empty-roadmap">No topics match this chapter yet.</div>`;
     updateTopicMixSummary(container, summary);
   }
 
@@ -1983,7 +1998,7 @@
         </header>
         <img src="${question.image}" alt="${escapeHtml(question.paper)} Q${question.question}" loading="lazy">
         <footer>
-          <span>${escapeHtml(questionTopicLabel(question))} <em class="exam-level-tag level-${level}" title="Level estimated from marks">${LEVEL_LABELS[level]}</em></span>
+          <span>${escapeHtml(paperTopicLabel(question))} <em class="exam-level-tag level-${level}" title="Level estimated from marks">${LEVEL_LABELS[level]}</em></span>
           ${canMark
             ? `<label>Score <input data-score-id="${escapeHtml(id)}" type="number" min="0" max="${question.marks}" value="${savedScore}"> / ${question.marks}</label>`
             : state.status === "running"
@@ -2367,7 +2382,7 @@
       const selectedCopy = selectedRow ? `${selectedRow.count} chosen` : `${row.count} past`;
       const gapCopy = row.gapYears ? `${row.gapYears}y gap` : "recent";
       return `<article>
-        <div><strong>${escapeHtml(row.topic)}</strong><span>${selectedCopy} | ${gapCopy}</span></div>
+        <div><strong>${escapeHtml(topicDisplayLabel(row.topic))}</strong><span>${selectedCopy} | ${gapCopy}</span></div>
         <em>${row.probability}%</em>
       </article>`;
     }).join("") || `<div class="empty-roadmap">Choose a bank to see the revision topic plan.</div>`;

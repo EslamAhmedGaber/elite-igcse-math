@@ -5326,8 +5326,10 @@ body[data-page="daily"] .page.e27-daily { max-width: none; width: 100%; padding:
 :root:root body .exam-score-ring strong { color: var(--e-navy); font-size: 26px; }
 
 /* ---------- 5m. Exam builder: tidy actions, live exam bar, sit + mark controls, history (exam.js) ---------- */
-/* Topics with no questions are noise in the topic mix. */
-:root:root body .topic-mix-grid label.is-empty { display: none; }
+/* Topics with no past-paper questions stay visible (greyed, at the end) so the whole syllabus shows. */
+:root:root body .topic-mix-grid label.is-empty { opacity: .55; cursor: not-allowed; }
+:root:root body .topic-mix-grid label.is-empty em { background: transparent; }
+:root:root body .topic-mix-grid .topic-mix-empty-note { grid-column: 1 / -1; margin: 10px 0 2px; font-size: 13px; color: var(--e-muted, #5b6b84); }
 
 .exam-actions { align-items: center; }
 .exam-actions [hidden] { display: none !important; }

@@ -201,7 +201,7 @@ function uniqueSorted(values) {
 function fillSelect(select, values, label) {
   select.innerHTML = "";
   select.append(new Option(label, ""));
-  values.forEach((value) => select.append(new Option(value, value)));
+  values.forEach((value) => select.append(new Option((window.eliteTopicLabel || String)(value), value)));
 }
 
 function copySelectOptions(source, target) {
@@ -576,7 +576,7 @@ function renderHeroPreview(scope = getScopedQuestions()) {
     <img loading="lazy" src="${question.image}" alt="${escapeHtml(question.paper)} Q${question.question}">
     <div>
       <strong>${escapeHtml(question.paper)} Q${question.question} | ${question.marks}m</strong>
-      <span>${escapeHtml(question.topic)}</span>
+      <span>${escapeHtml((window.eliteTopicLabel || String)(question.topic))}</span>
     </div>
   </article>`).join("");
 }
@@ -588,7 +588,7 @@ function renderTopicStrip(scope = questions) {
   els.topicStrip.innerHTML = [
     `<button class="topic-chip active" type="button" data-topic="">All</button>`,
     ...(info.topics || uniqueSorted([...counts.keys()])).filter((topic) => counts.has(topic)).map((topic) =>
-      `<button class="topic-chip" type="button" data-topic="${escapeHtml(topic)}">${escapeHtml(topic)} (${counts.get(topic)})</button>`
+      `<button class="topic-chip" type="button" data-topic="${escapeHtml(topic)}">${escapeHtml((window.eliteTopicLabel || String)(topic))} (${counts.get(topic)})</button>`
     ),
   ].join("");
 }
@@ -817,7 +817,7 @@ function renderCards() {
       <div>
         <div class="card-title"><span class="question-ref">${escapeHtml(question.paper)} Q${question.question}</span><span class="marks-badge">${question.marks} marks</span></div>
         ${window.EliteQuickProgress.controls({id: question.id, solved: isSolved, review: Boolean(review && !review.masteredAt)})}
-        <div class="topic-name">${escapeHtml(question.topic)}</div>
+        <div class="topic-name">${escapeHtml((window.eliteTopicLabel || String)(question.topic))}</div>
         <div class="meta-line">${escapeHtml(question.unit)}</div>
         <div class="question-tags">
           <span class="tag-question">Q${question.question}</span>
@@ -909,7 +909,7 @@ function renderFocusQuestion() {
         <div>
           <span>${escapeHtml(question.paper)}</span>
           <h3>Question ${question.question}</h3>
-          <p>${escapeHtml(question.topic)} | ${escapeHtml(question.unit)}</p>
+          <p>${escapeHtml((window.eliteTopicLabel || String)(question.topic))} | ${escapeHtml(question.unit)}</p>
         </div>
         <div class="focus-marks">
           <strong>${question.marks}</strong>
@@ -968,7 +968,7 @@ function updateProgressSnapshot(selectedActive, solvedActive) {
   els.topicProgress.innerHTML = rows.map(([topic, counts]) => {
     const pct = counts.total ? Math.round((counts.solved / counts.total) * 100) : 0;
     return `<div class="topic-progress-row">
-      <div class="topic-progress-head"><strong>${escapeHtml(topic)}</strong><span>${counts.solved}/${counts.total}</span></div>
+      <div class="topic-progress-head"><strong>${escapeHtml((window.eliteTopicLabel || String)(topic))}</strong><span>${counts.solved}/${counts.total}</span></div>
       <div class="topic-bar"><i style="width:${pct}%"></i></div>
     </div>`;
   }).join("");

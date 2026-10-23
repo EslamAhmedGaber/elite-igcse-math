@@ -203,23 +203,45 @@
     ]);
   }
 
-  function hasLinearGraphSignal(text) {
+  // Student-facing names. The keys stay the stored topic names so saved mocks, progress and links keep working.
+  const TOPIC_LABELS = {
+    "Linear Equations": "Solving Linear Equations",
+    "Linear Graphs": "Straight-Line Graphs & Coordinate Geometry",
+  };
+
+  function topicLabel(topic) {
+    return TOPIC_LABELS[topic] || topic;
+  }
+
+  function hasFrequencyAverageSignal(text) {
     return matches(text, [
-      /\bgraph(?:s|ing)?\b/,
-      /\bplot\b/,
-      /\bgradient\b/,
-      /\by\s*=\s*m\s*x\b/,
-      /\bstraight line\b/,
-      /\bline\s+[a-z]\b/,
-      /\bperpendicular\b/,
-      /\bparallel\b/,
-      /\bintersect(?:s|ion)?\b/,
-      /\bequation of (?:a|the) line\b/,
-      /\bfind an equation\b/,
-      /\bwrite down an equation\b/,
-      /\bdraw the graph\b/,
-      /\bline l\b/,
+      /\bestimate (?:for|of) the mean\b/,
+      /\bfrequency table\b/,
+      /\bmodal class\b/,
+      /\bclass (?:interval )?(?:that |which )?contains the median\b/,
+      /\bmedian class\b/,
     ]);
+  }
+
+  // Extra topics a multi-part question also practises. The question keeps one main topic,
+  // and the Random Mock / topic filters also find it under these.
+  function secondaryTopics(question, canonical) {
+    const body = lower(question.question_text || "");
+    const original = String(question.original_topic || question.topic || "");
+    const extra = [];
+    const solvesQuadratic = /\bsolve\b[^.]{0,60}\bx\s?2\b[^.]{0,60}=\s*0/.test(body);
+    // "Give your solutions correct to 3 significant figures" = a quadratic that does not factorise.
+    if (/\bsolve\b/.test(body) && /\bsolutions correct to \d+ (?:significant figures|decimal places)/.test(body)) extra.push("Quadratic Formula");
+    else if (solvesQuadratic && !/simultaneous|inequalit/.test(body)) extra.push("Quadratic Equations");
+    if (hasFrequencyAverageSignal(body)) extra.push("Averages from Frequency Tables");
+    if (/\brecurring decimal\b/.test(body)) extra.push("Recurring Decimals");
+    if (original === "Powers, Roots & Standard Form" && matches(body, [
+      /\bvalue of [a-z]\s?0\b/,
+      /\bvalue of n\b/,
+      /\bsquare root\b/,
+      /\bcube root\b/,
+    ])) extra.push("Powers & Roots");
+    return [...new Set(extra)].filter((topic) => topic !== canonical);
   }
 
   function splitPowerTopic(question) {
@@ -276,8 +298,10 @@
         return "Ratio Toolkit";
       case "Solving Linear Equations":
         return hasInequalitySignal(text) ? "Inequalities (Solving & Graphing)" : "Linear Equations";
+      // Coordinate geometry (midpoints, gradients, lengths, lines through points) belongs with
+      // straight-line graphs, never with solving linear equations.
       case "Coordinate Geometry":
-        return hasLinearGraphSignal(text) ? "Linear Graphs" : "Linear Equations";
+        return "Linear Graphs";
       case "Linear Graphs (y = mx + c)":
         return "Linear Graphs";
       case "Solving Inequalities":
@@ -324,8 +348,10 @@
       case "Fractions, Decimals & Percentages":
         if (matches(text, [/recurring/, /repeating/])) return "Recurring Decimals";
         return "Fractions, Decimals & Percentages";
+      case "Algebraic Proof":
+        return matches(body, [/\brecurring decimal\b/]) ? "Recurring Decimals" : "Algebraic Proof";
       case "Statistics Toolkit":
-        if (matches(text, [/frequency table/, /grouped/, /estimate the mean/, /average from/, /\bmean\b.*\bfrequency\b/])) {
+        if (hasFrequencyAverageSignal(body) || matches(text, [/grouped/, /average from/, /\bmean\b.*\bfrequency\b/])) {
           return "Averages from Frequency Tables";
         }
         return "Statistics Toolkit";
@@ -382,6 +408,8 @@
     question.canonical_topic = canonical;
     question.canonical_topic_order = LINEAR_ORDER.get(canonical) || Number(question.topic_order || 999);
     question.topic = canonical;
+    question.topics = [canonical, ...secondaryTopics(question, canonical)];
+    question.topic_label = topicLabel(canonical);
     question.unit = displayUnit;
     question.topic_order = displayOrder;
     question.pathway = mode;
@@ -425,6 +453,8 @@
   window.TOPIC_ORDER_MAP = new Map(window.TOPIC_CATALOG.map((entry) => [entry.topic, entry.order]));
   window.TOPIC_UNIT_MAP = new Map(window.TOPIC_CATALOG.map((entry) => [entry.topic, entry.unit]));
   window.LINEAR_TOPIC_CATALOG = LINEAR_CATALOG;
+  window.TOPIC_LABELS = TOPIC_LABELS;
+  window.eliteTopicLabel = topicLabel;
   window.MODULAR_TOPIC_CATALOG = MODULAR_CATALOG;
   window.SITE_META = normalizeMeta(window.SITE_META || {});
 })();

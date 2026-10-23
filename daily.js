@@ -61,7 +61,7 @@
     }
     window.ELITE_PATHWAY = { mode: course.mode, isModular: course.mode === "modular", label: () => (course.mode === "modular" ? "Unit" : "Chapter") };
     await load("questions-data.js?v=20261018a");
-    await load("topic-normalizer.js?v=20261020fig");
+    await load("topic-normalizer.js?v=20261023a");
     return (window.QUESTION_DATA || [])
       .filter((q) => q.bank === "all" && (!course.unit || q.unit === course.unit))
       .map((q) => ({ id: q.id, image: q.image, topic: q.topic, marks: q.marks, label: `${q.paper} · Q${q.question}` }));
