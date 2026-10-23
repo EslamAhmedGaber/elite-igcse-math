@@ -19,12 +19,12 @@
     "question-visualizer": '<circle cx="12" cy="12" r="3"/><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/>',
   };
 
-  // Real counts (checked 2026-10-20): questions = the course's classified bank as the
-  // practice page shows it; topics = topic notes; papers = classified past papers.
+  // Real counts (checked 2026-10-24): questions = the course's classified bank as the
+  // practice page shows it (with the Elite Practice questions); topics = topic notes; papers = classified past papers.
   const FACTS = {
-    linear: { topics: 58, questions: 1280, papers: 60, glyph: "π" },
-    unit1: { topics: 29, questions: 596, glyph: "√" },
-    unit2: { topics: 32, questions: 686, glyph: "x²" },
+    linear: { topics: 58, questions: 1317, papers: 60, glyph: "π" },
+    unit1: { topics: 29, questions: 635, glyph: "√" },
+    unit2: { topics: 32, questions: 684, glyph: "x²" },
     wma11: { topics: 13, questions: 189, papers: 19, glyph: "∫" },
     wma12: { topics: 12, questions: 190, papers: 19, glyph: "Σ" },
     wma13: { topics: 13, questions: 180, papers: 19, glyph: "eˣ" },

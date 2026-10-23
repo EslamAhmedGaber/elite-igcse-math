@@ -30,13 +30,14 @@
   <script src="pathway-bootstrap.js?v=20261020w13"></script>
   <link rel="stylesheet" href="styles.css?v=20260809a">
   <link rel="stylesheet" href="elite-system.css?v=20260906b">
-  <link rel="stylesheet" href="elite-ux.css?v=20261023a">
+  <link rel="stylesheet" href="elite-ux.css?v=20261024a">
   <script defer src="pathway-mode.js?v=baccalaureate-20260902c"></script>
   <script defer src="firebase-config.js"></script>
   <script defer src="cloud-progress.js?v=20261024a"></script>
   <script defer src="course-modules.js?v=20261020t2"></script>
   <script defer src="lead.js?v=20261020t1"></script>
   <script defer src="today.js?v=20261020t2"></script>
+  <script defer src="home-topic-finder.js?v=20261024a"></script>
 </head>
 <body data-page="home">
 
@@ -69,7 +70,7 @@
           </div>
           <div class="e27-figures">
             <div><b class="e27-num">7</b><span>courses</span></div>
-            <div><b class="e27-num">1,280</b><span>Linear questions classified</span></div>
+            <div><b class="e27-num">2,000+</b><span>questions with worked solutions</span></div>
             <div><b class="e27-num">100%</b><span>free, no card, no fees</span></div>
           </div>
         </div>
@@ -119,21 +120,21 @@
             <span class="e27-chip">4MA1</span>
             <strong>Linear</strong>
             <small>International GCSE Mathematics A, Higher</small>
-            <span class="e27-meta"><span><b class="e27-num">58</b> topics &middot; <b class="e27-num">1,280</b> questions</span><span class="e27-go" aria-hidden="true">&rarr;</span></span>
+            <span class="e27-meta"><span><b class="e27-num">58</b> topics &middot; <b class="e27-num">1,317</b> questions</span><span class="e27-go" aria-hidden="true">&rarr;</span></span>
           </a>
           <a class="e27-course" data-course="unit1" href="course.html?pathway=modular&amp;unit=Unit+1">
             <span class="e27-glyph" aria-hidden="true">&radic;</span>
             <span class="e27-chip">4WM1</span>
             <strong>Modular Unit 1</strong>
             <small>International GCSE Modular, Unit 1</small>
-            <span class="e27-meta"><span><b class="e27-num">29</b> topics &middot; <b class="e27-num">596</b> questions</span><span class="e27-go" aria-hidden="true">&rarr;</span></span>
+            <span class="e27-meta"><span><b class="e27-num">29</b> topics &middot; <b class="e27-num">635</b> questions</span><span class="e27-go" aria-hidden="true">&rarr;</span></span>
           </a>
           <a class="e27-course" data-course="unit2" href="course.html?pathway=modular&amp;unit=Unit+2">
             <span class="e27-glyph" aria-hidden="true">x&sup2;</span>
             <span class="e27-chip">4WM2</span>
             <strong>Modular Unit 2</strong>
             <small>International GCSE Modular, Unit 2</small>
-            <span class="e27-meta"><span><b class="e27-num">32</b> topics &middot; <b class="e27-num">686</b> questions</span><span class="e27-go" aria-hidden="true">&rarr;</span></span>
+            <span class="e27-meta"><span><b class="e27-num">32</b> topics &middot; <b class="e27-num">684</b> questions</span><span class="e27-go" aria-hidden="true">&rarr;</span></span>
           </a>
         </div>
 
@@ -167,6 +168,16 @@
             <small>International A Level, Mechanics 1</small>
             <span class="e27-meta"><span><b class="e27-num">10</b> topics &middot; <b class="e27-num">138</b> questions</span><span class="e27-go" aria-hidden="true">&rarr;</span></span>
           </a>
+        </div>
+
+        <a class="e27-guide" href="/ar/linear-vs-modular/" lang="ar" dir="rtl"><span aria-hidden="true">&#128106;</span><span><b>لولي الأمر:</b> مش عارف تختار Linear ولا Modular، أو تبدأ IAL بإيه؟</span><span>اقرأ الدليل بالعربي &larr;</span></a>
+
+        <div class="e27-finder" data-topic-finder role="search">
+          <h3><label for="topicFinderInput">Find a topic</label></h3>
+          <p>Type a topic, for example <em>differentiation</em>, <em>vectors</em> or <em>histograms</em>, and open every past-paper question on it with worked solutions.</p>
+          <input id="topicFinderInput" type="search" placeholder="Search topics in every course" autocomplete="off" disabled>
+          <ul aria-live="polite"></ul>
+          <p class="e27-finder-empty" hidden>No topic matches yet. Try a shorter word, like <em>trig</em> or <em>graph</em>.</p>
         </div>
       </section>
 

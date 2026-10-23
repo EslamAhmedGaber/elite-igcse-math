@@ -5443,3 +5443,41 @@ body[data-page="daily"] .page.e27-daily { max-width: none; width: 100%; padding:
 .exam-viewer img { max-width: min(1000px, 100%); width: 100%; height: auto; background: #fff; border-radius: 8px; touch-action: pinch-zoom; }
 :root:root body .exam-viewer-close { position: fixed; top: 10px; right: 12px; width: 44px; height: 44px; border: 0; border-radius: 50%; background: var(--e-gold); color: var(--e-navy); font-size: 28px; line-height: 1; cursor: pointer; }
 .exam-viewer-close:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+
+/* ---------- 5n. Home course cards: clearer edges + course colour (2026-10-24) ---------- */
+/* A course-coloured top band, a firmer border and a resting shadow so each card reads as one block. */
+:root:root body .e27-course {
+  border: 1.5px solid color-mix(in srgb, var(--c) 24%, #cfd8e6);
+  box-shadow: 0 1px 2px rgba(15, 33, 64, .07), 0 4px 14px rgba(15, 33, 64, .06);
+  padding-top: 24px;
+}
+:root:root body .e27-course::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 5px; background: var(--c); }
+:root:root body .e27-course:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--c) 60%, #cfd8e6);
+  box-shadow: 0 2px 4px rgba(15, 33, 64, .08), 0 14px 32px color-mix(in srgb, var(--c) 18%, transparent);
+}
+:root:root body .e27-course:hover .e27-go { background: var(--c); color: #fff; }
+:root:root body .e27-course .e27-glyph { opacity: .13; }
+:root:root body .e27-course .e27-meta { border-top-style: solid; border-top-color: color-mix(in srgb, var(--c) 14%, var(--e-line)); }
+:root:root body .e27-go { transition: background .15s ease, color .15s ease; }
+
+/* Arabic guide link under the course cards */
+.e27-guide { display: flex; align-items: center; gap: 12px; margin-top: 18px; padding: 14px 18px; border: 1.5px solid #ecd9a8; border-radius: 12px; background: #fffaf0; color: var(--e-ink); text-decoration: none; font-family: "Cairo", system-ui, sans-serif; font-size: 16px; }
+.e27-guide b { color: var(--e-navy); }
+.e27-guide span:last-child { margin-inline-start: auto; font-weight: 700; color: #8a6414; white-space: nowrap; }
+.e27-guide:hover { border-color: var(--e-gold); color: var(--e-ink); }
+
+/* Topic finder (home-topic-finder.js) */
+.e27-finder { margin-top: 26px; padding: 22px; border: 1.5px solid #cfd8e6; border-radius: 14px; background: var(--e-paper); box-shadow: 0 1px 2px rgba(15, 33, 64, .06); }
+.e27-finder h3 { margin: 0 0 4px; font-size: 19px; }
+.e27-finder p { margin: 0 0 12px; color: var(--e-muted); font-size: 14.5px; }
+.e27-finder input { width: 100%; box-sizing: border-box; min-height: 48px; padding: 10px 14px; border: 1.5px solid #b9c6d9; border-radius: 10px; font: inherit; font-size: 16px; background: #fff; color: var(--e-ink); }
+.e27-finder input:focus { outline: 3px solid color-mix(in srgb, var(--e-gold) 70%, transparent); outline-offset: 1px; border-color: var(--e-navy); }
+.e27-finder ul { list-style: none; margin: 10px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.e27-finder li a { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid var(--e-line); border-radius: 8px; text-decoration: none; color: var(--e-ink); background: #fbfcfe; }
+.e27-finder li a:hover, .e27-finder li a:focus-visible { border-color: var(--e-navy); background: #f1f5fb; }
+.e27-finder li small { color: var(--e-muted); white-space: nowrap; font-size: 12.5px; }
+.e27-finder .e27-finder-empty { color: var(--e-muted); font-size: 14px; margin-top: 10px; }
+.e27-finder li a span { min-width: 0; }
+@media (max-width: 640px) { .e27-finder ul { grid-template-columns: 1fr; } .e27-finder li a { flex-direction: column; align-items: flex-start; gap: 2px; } .e27-finder li small { white-space: normal; } .e27-guide { font-size: 15px; flex-wrap: wrap; } }
