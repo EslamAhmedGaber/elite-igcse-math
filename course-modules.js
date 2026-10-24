@@ -206,13 +206,13 @@
               label: "Jun 2026",
               papers: [
                   { kind: "paper", title: "Paper 1H", href: "downloads/PastPapers/Linear/Jun 2026 P1H.pdf" },
-                  { kind: "solution", title: "Solution 1H", href: "downloads/PastPaperSolutions/Jun2026_P1H_Solutions.pdf?v=books20261024" },
+                  { kind: "solution", title: "Solution 1H", href: "downloads/PastPaperSolutions/Jun2026_P1H_Solutions.pdf?v=books20261024b" },
                   { kind: "paper", title: "Paper 1HR", href: "downloads/PastPapers/Linear/Jun 2026 P1HR.pdf" },
-                  { kind: "solution", title: "Solution 1HR", href: "downloads/PastPaperSolutions/Jun2026_P1HR_Solutions.pdf?v=books20261024" },
+                  { kind: "solution", title: "Solution 1HR", href: "downloads/PastPaperSolutions/Jun2026_P1HR_Solutions.pdf?v=books20261024b" },
                   { kind: "paper", title: "Paper 2H", href: "downloads/PastPapers/Linear/Jun 2026 P2H.pdf" },
-                  { kind: "solution", title: "Solution 2H", href: "downloads/PastPaperSolutions/Jun2026_P2H_Solutions.pdf?v=books20261024" },
+                  { kind: "solution", title: "Solution 2H", href: "downloads/PastPaperSolutions/Jun2026_P2H_Solutions.pdf?v=books20261024b" },
                   { kind: "paper", title: "Paper 2HR", href: "downloads/PastPapers/Linear/Jun 2026 P2HR.pdf" },
-                  { kind: "solution", title: "Solution 2HR", href: "downloads/PastPaperSolutions/Jun2026_P2HR_Solutions.pdf?v=books20261024" }
+                  { kind: "solution", title: "Solution 2HR", href: "downloads/PastPaperSolutions/Jun2026_P2HR_Solutions.pdf?v=books20261024b" }
               ]
           }]
       },
@@ -739,7 +739,7 @@
                       {
                           "kind": "solution",
                           "title": "Solution",
-                          "href": "downloads/PastPaperSolutions/May2026_4WM1H_Solutions.pdf?v=books20261024"
+                          "href": "downloads/PastPaperSolutions/May2026_4WM1H_Solutions.pdf?v=books20261024b"
                       }
                   ]
               },
@@ -803,6 +803,22 @@
       {
           "heading": "Unit 2 | 4WM2H",
           "sessions": [
+              {
+                  "label": "June 2026",
+                  "isNew": true,
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "R variant (Q11–25)",
+                          "href": "downloads/PastPapers/Modular/unit-2/4wm2h-01R-june-2026-exam-paper.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "R Solution",
+                          "href": "downloads/PastPaperSolutions/Jun2026_4WM2HR_Solutions.pdf?v=books20261024b"
+                      }
+                  ]
+              },
               {
                   "label": "Specimen",
                   "papers": [
@@ -2097,19 +2113,19 @@
           "actions": [
               {
                   "label": "Questions PDF",
-                  "href": "downloads/classified_problems.pdf?v=books20261024",
+                  "href": "downloads/classified_problems.pdf?v=books20261024b",
                   "variant": "primary",
                   "target": "_blank"
               },
               {
                   "label": "Solutions Part 1",
-                  "href": "downloads/ClassifiedSolutions/classified_answers_Part1_of_2.pdf?v=books20261024",
+                  "href": "downloads/ClassifiedSolutions/classified_answers_Part1_of_2.pdf?v=books20261024b",
                   "variant": "solution",
                   "target": "_blank"
               },
               {
                   "label": "Solutions Part 2",
-                  "href": "downloads/ClassifiedSolutions/classified_answers_Part2_of_2.pdf?v=books20261024",
+                  "href": "downloads/ClassifiedSolutions/classified_answers_Part2_of_2.pdf?v=books20261024b",
                   "variant": "solution",
                   "target": "_blank"
               }
@@ -2129,13 +2145,13 @@
           "actions": [
               {
                   "label": "Questions PDF",
-                  "href": "downloads/Classified_Expertise.pdf?v=books20261024",
+                  "href": "downloads/Classified_Expertise.pdf?v=books20261024b",
                   "variant": "gold",
                   "target": "_blank"
               },
               {
                   "label": "Solutions PDF",
-                  "href": "downloads/ClassifiedSolutions/Classified_Expertise_Answers.pdf?v=books20261024",
+                  "href": "downloads/ClassifiedSolutions/Classified_Expertise_Answers.pdf?v=books20261024b",
                   "variant": "solution light-solution",
                   "target": "_blank"
               }
@@ -2205,13 +2221,13 @@
           "actions": [
               {
                   "label": "Questions PDF",
-                  "href": "downloads/Classified_4WM1.pdf?v=books20261024",
+                  "href": "downloads/Classified_4WM1.pdf?v=books20261024b",
                   "variant": "primary",
                   "target": "_blank"
               },
               {
                   "label": "Solutions PDF",
-                  "href": "downloads/ClassifiedSolutions/Classified_4WM1_Answers.pdf?v=books20261024",
+                  "href": "downloads/ClassifiedSolutions/Classified_4WM1_Answers.pdf?v=books20261024b",
                   "variant": "solution",
                   "target": "_blank"
               }
@@ -2231,13 +2247,13 @@
           "actions": [
               {
                   "label": "Questions PDF",
-                  "href": "downloads/Classified_4WM2.pdf?v=books20261024",
+                  "href": "downloads/Classified_4WM2.pdf?v=books20261024b",
                   "variant": "primary",
                   "target": "_blank"
               },
               {
                   "label": "Solutions PDF",
-                  "href": "downloads/ClassifiedSolutions/Classified_4WM2_Answers.pdf?v=books20261024",
+                  "href": "downloads/ClassifiedSolutions/Classified_4WM2_Answers.pdf?v=books20261024b",
                   "variant": "solution",
                   "target": "_blank"
               }
@@ -2258,13 +2274,13 @@
           "actions": [
               {
                   "label": "Questions PDF",
-                  "href": "downloads/Classified_4WM1_Expertise.pdf?v=books20261024",
+                  "href": "downloads/Classified_4WM1_Expertise.pdf?v=books20261024b",
                   "variant": "gold",
                   "target": "_blank"
               },
               {
                   "label": "Solutions PDF",
-                  "href": "downloads/ClassifiedSolutions/Classified_4WM1_Expertise_Answers.pdf?v=books20261024",
+                  "href": "downloads/ClassifiedSolutions/Classified_4WM1_Expertise_Answers.pdf?v=books20261024b",
                   "variant": "solution",
                   "target": "_blank"
               }
@@ -2285,13 +2301,13 @@
           "actions": [
               {
                   "label": "Questions PDF",
-                  "href": "downloads/Classified_4WM2_Expertise.pdf?v=books20261024",
+                  "href": "downloads/Classified_4WM2_Expertise.pdf?v=books20261024b",
                   "variant": "gold",
                   "target": "_blank"
               },
               {
                   "label": "Solutions PDF",
-                  "href": "downloads/ClassifiedSolutions/Classified_4WM2_Expertise_Answers.pdf?v=books20261024",
+                  "href": "downloads/ClassifiedSolutions/Classified_4WM2_Expertise_Answers.pdf?v=books20261024b",
                   "variant": "solution",
                   "target": "_blank"
               }

@@ -250,6 +250,16 @@
     "hasSolutions": true
   },
   {
+    "paperSlug": "Jun2026_4WM2HR",
+    "paper": "Jun 2026 4WM2HR",
+    "session": "Jun2026",
+    "code": "4WM2HR",
+    "isModular": true,
+    "modularUnit": "Unit 2",
+    "questionCount": 17,
+    "hasSolutions": true
+  },
+  {
     "paperSlug": "Jun2026_Converted_4WM1H_P1H",
     "paper": "Jun 2026 P1H | L-to-M Unit 1",
     "session": "Jun 2026",
@@ -477,7 +487,7 @@
     "isModular": true,
     "modularUnit": "Unit 1",
     "questionCount": 29,
-    "hasSolutions": false
+    "hasSolutions": true
   },
   {
     "paperSlug": "MayNov2020_P1H",

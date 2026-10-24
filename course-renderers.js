@@ -108,12 +108,35 @@
     return `<a class="${paperButtonClass(paper)}" data-paper-kind="${escapeHtml(kind)}" data-paper-search="${escapeHtml(normalizedText(`${paper.title} ${paper.badge || ""} ${kind}`))}" href="${escapeHtml(paper.href)}" target="_blank" rel="noreferrer"><span class="pp-paper-label">${escapeHtml(paper.title)}</span>${badge}</a>`;
   }
 
+  function paperUnit(paperGroup) {
+    const match = /^(Unit \d+)/.exec(String(paperGroup.heading || ""));
+    return match ? match[1] : "";
+  }
+
+  function unitHref(unit) {
+    const url = new URL(window.location.href);
+    url.searchParams.set("pathway", "modular");
+    url.searchParams.set("unit", unit);
+    return `${url.pathname}${url.search}${url.hash}`;
+  }
+
+  // Modular papers show one unit at a time: Unit 1 / Unit 2 buttons instead of one long list.
+  function unitTabs(allGroups) {
+    const units = [...new Set(allGroups.map(paperUnit).filter(Boolean))];
+    if (units.length < 2) return { tabs: "", groups: allGroups };
+    const requested = normalizedText(new URLSearchParams(window.location.search).get("unit"));
+    const active = units.find((unit) => normalizedText(unit) === requested) || units[0];
+    const tabs = `<nav class="pp-unit-tabs" aria-label="Choose a unit">${units.map((unit) =>
+      `<a class="pp-unit-tab" href="${escapeHtml(unitHref(unit))}"${unit === active ? ' aria-current="page"' : ""}>${escapeHtml(unit)}</a>`).join("")}</nav>`;
+    return { tabs, groups: allGroups.filter((paperGroup) => paperUnit(paperGroup) === active) };
+  }
+
   function renderPaperSection(group) {
     const meta = sectionMeta(group);
     const sectionId = meta.id || group.id;
     const pathway = coursePathway(group);
     const className = ["pp-section", meta.className].filter(Boolean).join(" ");
-    const groups = group.pastPapers || [];
+    const { tabs, groups } = unitTabs(group.pastPapers || []);
     const yearBlocks = groups.length
       ? groups.map((paperGroup) => `
         <div class="pp-year-block" data-paper-year="${escapeHtml(paperGroup.heading)}">
@@ -139,6 +162,7 @@
           <h2 id="${escapeHtml(sectionId)}Title">${escapeHtml(meta.heading || meta.title)}</h2>
           <p>${escapeHtml(meta.intro)}</p>
         </div>
+        ${tabs}
         ${yearBlocks}
       </section>
     `;

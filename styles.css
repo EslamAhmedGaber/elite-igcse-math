@@ -8723,6 +8723,33 @@ body.pathway-unset .site-header .site-cta {
   min-width: 130px;
   font-weight: 800;
 }
+.pp-unit-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 4px 0 18px;
+}
+.pp-unit-tab {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 8px 22px;
+  border: 1.5px solid #0f2140;
+  border-radius: 999px;
+  color: #0f2140;
+  background: #fff;
+  font-weight: 800;
+  font-size: 15px;
+  text-decoration: none;
+}
+.pp-unit-tab:hover {
+  background: rgba(15, 33, 64, 0.06);
+}
+.pp-unit-tab[aria-current="page"] {
+  color: #fff;
+  background: #0f2140;
+  box-shadow: inset 0 -3px 0 #e8b84a;
+}
 .pp-new-badge {
   display: inline-flex;
   align-items: center;

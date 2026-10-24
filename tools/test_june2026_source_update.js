@@ -9,7 +9,7 @@ for (const mode of ['linear','modular']) {
   const context = {window,localStorage:{getItem:()=>null},Map};
   vm.runInNewContext(read('questions-data.js'),context);
   vm.runInNewContext(read('topic-normalizer.js'),context);
-  const rows = window.QUESTION_DATA.filter(q=>q.paper.startsWith('Jun 2026'));
+  const rows = window.QUESTION_DATA.filter(q=>q.paper.startsWith('Jun 2026') && !String(q.paper_code).startsWith('4WM'));
   assert.equal(rows.length,mode==='linear'?104:106);
   assert.equal(rows.reduce((total,q)=>total+q.marks,0),400);
   assert.equal(new Set(rows.map(q=>q.id)).size,rows.length);
@@ -28,7 +28,7 @@ vm.runInNewContext(read('answer-index.js'),{window});
 vm.runInNewContext(read('worked-solution.js'),{window});
 let figures=0;
 for (const [id,solution] of Object.entries(window.SOLUTION_DATA)) {
-  if (!id.includes('Jun2026')) continue;
+  if (!id.includes('Jun2026') || id.includes('_4WM')) continue;
   assert(solution.steps.length && solution.finalAnswer);
   assert.equal(window.ELITE_ANSWER_INDEX[id].finalAnswer,solution.finalAnswer);
   for (const step of solution.steps) {

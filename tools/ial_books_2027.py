@@ -110,7 +110,7 @@ def steps_html(item: dict) -> str:
         body = escape_math(step.get("body", "")).replace("\n\n", "\n")
         body = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", body)
         figures = "".join(
-            f'<img class="step-figure" src="{file_url(ROOT / fig["src"])}" alt="{html.escape(fig.get("alt", "Sketch"))}">'
+            f'<img class="step-figure" src="{file_url(ROOT / fig["src"].lstrip("/"))}" alt="{html.escape(fig.get("alt", "Sketch"))}">'
             for fig in step.get("figures", [])
         )
         parts.append(

@@ -6,7 +6,7 @@
       "type": "topics",
       "path": "/edexcel-igcse/maths/linear/topics/",
       "title": "IGCSE Maths 4MA1 Past Paper Questions by Topic | Elite",
-      "questions": 1341
+      "questions": 1354
     },
     {
       "course": "linear",
@@ -136,7 +136,7 @@
       "topic": "Direct & Inverse Proportion",
       "num": "1.15",
       "notes": "downloads/Linear/VisualNotes/C1_T15_Direct_Inverse_Proportion/Direct_Inverse_Proportion_Visual_Notes.pdf",
-      "questions": 17
+      "questions": 18
     },
     {
       "course": "linear",
@@ -206,7 +206,7 @@
       "topic": "Rearranging Formulas",
       "num": "2.7",
       "notes": "downloads/Linear/VisualNotes/C2_T07_Rearranging_Formulas/Rearranging_Formulas_Visual_Notes.pdf",
-      "questions": 21
+      "questions": 22
     },
     {
       "course": "linear",
@@ -246,7 +246,7 @@
       "topic": "Solving Inequalities",
       "num": "2.11",
       "notes": "downloads/Linear/VisualNotes/C2_T11_Inequalities/Inequalities_Visual_Notes.pdf",
-      "questions": 43
+      "questions": 44
     },
     {
       "course": "linear",
@@ -256,7 +256,7 @@
       "topic": "Simultaneous Equations",
       "num": "2.12",
       "notes": "downloads/Linear/VisualNotes/C2_T12_Simultaneous_Equations/Simultaneous_Equations_Visual_Notes.pdf",
-      "questions": 37
+      "questions": 38
     },
     {
       "course": "linear",
@@ -276,7 +276,7 @@
       "topic": "Sequences",
       "num": "3.1",
       "notes": "downloads/Linear/VisualNotes/C3_T01_Sequences/Sequences_Visual_Notes.pdf",
-      "questions": 34
+      "questions": 35
     },
     {
       "course": "linear",
@@ -286,7 +286,7 @@
       "topic": "Functions",
       "num": "3.3",
       "notes": "downloads/Linear/VisualNotes/C3_T03_Functions/Functions_Visual_Notes.pdf",
-      "questions": 25
+      "questions": 26
     },
     {
       "course": "linear",
@@ -336,7 +336,7 @@
       "topic": "Differentiation",
       "num": "3.10",
       "notes": "downloads/Linear/VisualNotes/C3_T10_Differentiation/Differentiation_Visual_Notes.pdf",
-      "questions": 28
+      "questions": 29
     },
     {
       "course": "linear",
@@ -376,7 +376,7 @@
       "topic": "Circle Theorems",
       "num": "4.4",
       "notes": "downloads/Linear/VisualNotes/C4_T04_Circle_Theorems/Circle_Theorems_Visual_Notes.pdf",
-      "questions": 32
+      "questions": 33
     },
     {
       "course": "linear",
@@ -406,7 +406,7 @@
       "topic": "Volume and Surface Area",
       "num": "4.7",
       "notes": "downloads/Linear/VisualNotes/C4_T07_Volume_Surface_Area/Volume_Surface_Area_Visual_Notes.pdf",
-      "questions": 28
+      "questions": 30
     },
     {
       "course": "linear",
@@ -466,7 +466,7 @@
       "topic": "Vectors",
       "num": "5.1",
       "notes": "downloads/Linear/VisualNotes/C5_T01_Vectors/Vectors_Visual_Notes.pdf",
-      "questions": 27
+      "questions": 28
     },
     {
       "course": "linear",
@@ -486,7 +486,7 @@
       "topic": "Statistics",
       "num": "6.1",
       "notes": "downloads/Linear/VisualNotes/C6_T01_Statistics/Statistics_Visual_Notes.pdf",
-      "questions": 63
+      "questions": 64
     },
     {
       "course": "linear",
@@ -506,7 +506,7 @@
       "topic": "Cumulative Frequency",
       "num": "6.3",
       "notes": "downloads/Linear/VisualNotes/C6_T03_Cumulative_Frequency/Cumulative_Frequency_Visual_Notes.pdf",
-      "questions": 26
+      "questions": 27
     },
     {
       "course": "linear",

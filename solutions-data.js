@@ -20064,6 +20064,389 @@ window.SOLUTION_DATA = {
     ],
     "finalAnswer": "\\(\\frac{8}{29}\\) or \\(0.276\\) to 3 significant figures"
   },
+  "all::Jun2026_4WM2HR__Q11__p12-12__m04__Volume-Surface-Area": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Find h from the volume",
+        "body": "\\[\\pi(10)^2h=5341\\Rightarrow h=\\frac{5341}{100\\pi}=17.00\\ldots\\text{ cm}\\]"
+      },
+      {
+        "title": "Curved surface",
+        "body": "\\[2\\pi rh=2\\pi(10)(17.00\\ldots)=1068.2\\]"
+      },
+      {
+        "title": "Two circular ends",
+        "body": "\\[2\\pi r^2=2\\pi(10)^2=200\\pi=628.31\\ldots\\]"
+      },
+      {
+        "title": "Total",
+        "body": "\\[1068.2+628.31\\ldots=1696.5\\ldots\\]\n\nKeep \\(h\\) unrounded; using \\(h=17\\) gives \\(1696\\)."
+      }
+    ],
+    "finalAnswer": "\\(1697\\) cm\\(^2\\)"
+  },
+  "all::Jun2026_4WM2HR__Q12__p13-13__m03__Graphing-Inequalities": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Boundary lines",
+        "body": "R lies to the left of the \\(y\\)-axis, above \\(y=-x\\) and below \\(2x+5y=12\\)."
+      },
+      {
+        "title": "Inequalities",
+        "body": "\\[x\\le 0,\\qquad y\\ge -x,\\qquad 2x+5y\\le 12\\]"
+      },
+      {
+        "title": "Check a point inside R",
+        "body": "\\((-1,2)\\): \\(-1\\le0\\), \\(2\\ge1\\), \\(-2+10=8\\le12\\) ✓"
+      }
+    ],
+    "finalAnswer": "\\(x\\le0\\), \\(y\\ge-x\\), \\(2x+5y\\le12\\)"
+  },
+  "all::Jun2026_4WM2HR__Q13__p14-15__m06__Cumulative-Frequency-Diagrams": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "(a) Plot at the upper class boundaries",
+        "body": "Plot \\((130,8),(140,35),(150,52),(160,58),(170,60)\\), start at \\((120,0)\\) and join with a smooth curve.",
+        "figures": [
+          {
+            "alt": "Question 13: cumulative frequency curve with the median, lower quartile and 155 cm readings",
+            "src": "/assets/solution-diagrams/Jun2026/U2R-Q13-cumulative-frequency.png"
+          }
+        ]
+      },
+      {
+        "title": "(b) Median",
+        "body": "\\(\\tfrac12\\times60=30\\): read across from 30 → about \\(138\\) cm."
+      },
+      {
+        "title": "(c) Lower quartile",
+        "body": "\\(\\tfrac14\\times60=15\\): read across from 15 → about \\(133\\) cm."
+      },
+      {
+        "title": "(d) Taller than 155 cm",
+        "body": "Up from 155 cm the curve reads about \\(55\\), so \\(60-55=5\\) plants."
+      }
+    ],
+    "finalAnswer": "(b) \\(138\\) cm (c) \\(133\\) cm (d) about \\(5\\) plants"
+  },
+  "all::Jun2026_4WM2HR__Q14__p16-16__m04__Circle-Theorems": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "(a)(i) Same segment",
+        "body": "\\[\\angle ABD=\\angle ACD=43^\\circ\\]"
+      },
+      {
+        "title": "(a)(ii) Reason",
+        "body": "Angles in the same segment are equal (both stand on the arc \\(AD\\))."
+      },
+      {
+        "title": "(b) Angle at the centre",
+        "body": "\\[\\angle AOD=2\\times43^\\circ=86^\\circ\\ \\ (\\text{angle at centre is twice the angle at the circumference})\\]"
+      },
+      {
+        "title": "Reflex angle",
+        "body": "\\[360^\\circ-86^\\circ=274^\\circ\\]"
+      }
+    ],
+    "finalAnswer": "(a) \\(43^\\circ\\), angles in the same segment are equal (b) \\(274^\\circ\\)"
+  },
+  "all::Jun2026_4WM2HR__Q15__p17-17__m02__Statistics-Toolkit": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Positions of the quartiles",
+        "body": "\\(n=11\\): LQ is the \\(\\tfrac{11+1}{4}=3\\)rd value, UQ is the \\(9\\)th value."
+      },
+      {
+        "title": "Read from the ordered list",
+        "body": "\\(2,2,\\mathbf{3},6,7,8,9,12,\\mathbf{13},17,20\\): LQ \\(=3\\), UQ \\(=13\\)."
+      },
+      {
+        "title": "Interquartile range",
+        "body": "\\[13-3=10\\]"
+      }
+    ],
+    "finalAnswer": "\\(10\\) minutes"
+  },
+  "all::Jun2026_4WM2HR__Q16__p17-17__m03__Direct-Inverse-Proportion": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Write the proportion",
+        "body": "\\[m=kr^2\\]"
+      },
+      {
+        "title": "Find k",
+        "body": "\\[180=k(6)^2\\Rightarrow k=5\\]"
+      },
+      {
+        "title": "Formula",
+        "body": "\\[m=5r^2\\]"
+      }
+    ],
+    "finalAnswer": "\\(m=5r^2\\)"
+  },
+  "all::Jun2026_4WM2HR__Q17__p18-18__m04__Functions": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "fg(x): put g into f",
+        "body": "\\[\\mathrm{fg}(x)=(2x+1)^2-5=4x^2+4x-4\\]"
+      },
+      {
+        "title": "gf(x): put f into g",
+        "body": "\\[\\mathrm{gf}(x)=2(x^2-5)+1=2x^2-9,\\qquad 2\\,\\mathrm{gf}(x)=4x^2-18\\]"
+      },
+      {
+        "title": "Solve",
+        "body": "\\[4x^2+4x-4=4x^2-18\\Rightarrow4x=-14\\Rightarrow x=-3.5\\]"
+      }
+    ],
+    "finalAnswer": "\\(x=-3.5\\)"
+  },
+  "all::Jun2026_4WM2HR__Q18__p19-19__m05__Vectors": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "(a) Reverse OA and double",
+        "body": "\\[\\overrightarrow{AO}=\\begin{pmatrix}-4\\\\3\\end{pmatrix},\\qquad 2\\overrightarrow{AO}=\\begin{pmatrix}-8\\\\6\\end{pmatrix}\\]"
+      },
+      {
+        "title": "(b) Route O → A → B",
+        "body": "\\[\\overrightarrow{OB}=\\overrightarrow{OA}+\\overrightarrow{AB}=\\begin{pmatrix}4\\\\-3\\end{pmatrix}+\\begin{pmatrix}15\\\\-8\\end{pmatrix}=\\begin{pmatrix}19\\\\-11\\end{pmatrix}\\]"
+      },
+      {
+        "title": "(c) Magnitude",
+        "body": "\\[|\\overrightarrow{BA}|=\\sqrt{(-15)^2+8^2}=\\sqrt{289}=17\\]"
+      }
+    ],
+    "finalAnswer": "(a) \\(\\begin{pmatrix}-8\\\\6\\end{pmatrix}\\) (b) \\(\\begin{pmatrix}19\\\\-11\\end{pmatrix}\\) (c) \\(17\\)"
+  },
+  "all::Jun2026_4WM2HR__Q19__p20-20__m03__Rearranging-Formulas": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Multiply out the fraction",
+        "body": "\\[y(4-2x)=3x+5\\Rightarrow4y-2xy=3x+5\\]"
+      },
+      {
+        "title": "Collect x terms on one side",
+        "body": "\\[4y-5=3x+2xy=x(3+2y)\\]"
+      },
+      {
+        "title": "Divide",
+        "body": "\\[x=\\frac{4y-5}{2y+3}\\]"
+      }
+    ],
+    "finalAnswer": "\\(x=\\dfrac{4y-5}{2y+3}\\)"
+  },
+  "all::Jun2026_4WM2HR__Q20__p21-21__m05__Volume-Surface-Area": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Volume of the solid",
+        "body": "\\[\\tfrac23\\pi(2x)^3-\\tfrac13\\pi x^2(x)=\\tfrac{16}{3}\\pi x^3-\\tfrac13\\pi x^3=5\\pi x^3\\]"
+      },
+      {
+        "title": "Solve for x",
+        "body": "\\[5\\pi x^3=\\frac{3645}{8}\\pi\\Rightarrow x^3=\\frac{729}{8}\\Rightarrow x=4.5\\]"
+      },
+      {
+        "title": "Outer curved surface = curved hemisphere",
+        "body": "Radius \\(2x=9\\): \\[2\\pi(9)^2=162\\pi=508.9\\ldots\\]"
+      }
+    ],
+    "finalAnswer": "\\(509\\) cm\\(^2\\)"
+  },
+  "expertise::Jun2026_4WM2HR__Q20__p21-21__m05__Volume-Surface-Area": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Volume of the solid",
+        "body": "\\[\\tfrac23\\pi(2x)^3-\\tfrac13\\pi x^2(x)=\\tfrac{16}{3}\\pi x^3-\\tfrac13\\pi x^3=5\\pi x^3\\]"
+      },
+      {
+        "title": "Solve for x",
+        "body": "\\[5\\pi x^3=\\frac{3645}{8}\\pi\\Rightarrow x^3=\\frac{729}{8}\\Rightarrow x=4.5\\]"
+      },
+      {
+        "title": "Outer curved surface = curved hemisphere",
+        "body": "Radius \\(2x=9\\): \\[2\\pi(9)^2=162\\pi=508.9\\ldots\\]"
+      }
+    ],
+    "finalAnswer": "\\(509\\) cm\\(^2\\)"
+  },
+  "all::Jun2026_4WM2HR__Q21__p22-22__m05__Simultaneous-Equations": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Substitute y = 3x − 5",
+        "body": "\\[(3x-5)^2=x^2+7\\Rightarrow9x^2-30x+25=x^2+7\\]"
+      },
+      {
+        "title": "Simplify and factorise",
+        "body": "\\[8x^2-30x+18=0\\Rightarrow4x^2-15x+9=0\\Rightarrow(x-3)(4x-3)=0\\]"
+      },
+      {
+        "title": "Find y for each x",
+        "body": "\\(x=3\\Rightarrow y=4\\);\\quad \\(x=\\tfrac34\\Rightarrow y=\\tfrac94-5=-\\tfrac{11}{4}\\)"
+      }
+    ],
+    "finalAnswer": "\\(x=3,\\ y=4\\) and \\(x=\\frac34,\\ y=-\\frac{11}{4}\\)"
+  },
+  "expertise::Jun2026_4WM2HR__Q21__p22-22__m05__Simultaneous-Equations": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Substitute y = 3x − 5",
+        "body": "\\[(3x-5)^2=x^2+7\\Rightarrow9x^2-30x+25=x^2+7\\]"
+      },
+      {
+        "title": "Simplify and factorise",
+        "body": "\\[8x^2-30x+18=0\\Rightarrow4x^2-15x+9=0\\Rightarrow(x-3)(4x-3)=0\\]"
+      },
+      {
+        "title": "Find y for each x",
+        "body": "\\(x=3\\Rightarrow y=4\\);\\quad \\(x=\\tfrac34\\Rightarrow y=\\tfrac94-5=-\\tfrac{11}{4}\\)"
+      }
+    ],
+    "finalAnswer": "\\(x=3,\\ y=4\\) and \\(x=\\frac34,\\ y=-\\frac{11}{4}\\)"
+  },
+  "all::Jun2026_4WM2HR__Q23__p24-24__m05__Differentiation": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Velocity",
+        "body": "\\[v=\\frac{ds}{dt}=30t-3t^2\\]"
+      },
+      {
+        "title": "Maximum when dv/dt = 0",
+        "body": "\\[\\frac{dv}{dt}=30-6t=0\\Rightarrow t=5\\quad\\left(\\tfrac{d^2v}{dt^2}=-6<0,\\ \\text{a maximum}\\right)\\]"
+      },
+      {
+        "title": "Maximum velocity",
+        "body": "\\[v=30(5)-3(5)^2=75\\]"
+      }
+    ],
+    "finalAnswer": "\\(75\\) m/s"
+  },
+  "expertise::Jun2026_4WM2HR__Q23__p24-24__m05__Differentiation": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Velocity",
+        "body": "\\[v=\\frac{ds}{dt}=30t-3t^2\\]"
+      },
+      {
+        "title": "Maximum when dv/dt = 0",
+        "body": "\\[\\frac{dv}{dt}=30-6t=0\\Rightarrow t=5\\quad\\left(\\tfrac{d^2v}{dt^2}=-6<0,\\ \\text{a maximum}\\right)\\]"
+      },
+      {
+        "title": "Maximum velocity",
+        "body": "\\[v=30(5)-3(5)^2=75\\]"
+      }
+    ],
+    "finalAnswer": "\\(75\\) m/s"
+  },
+  "all::Jun2026_4WM2HR__Q25__p26-26__m06__Sequences": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "First term and difference",
+        "body": "\\(a=k+2\\), \\(d=3\\)."
+      },
+      {
+        "title": "Use the sum formula",
+        "body": "\\[\\frac{2n}{2}\\big[2a+(2n-1)3\\big]=4\\times\\frac n2\\big[2a+(n-1)3\\big]\\]"
+      },
+      {
+        "title": "Simplify (divide by n)",
+        "body": "\\[2a+6n-3=4a+6n-6\\Rightarrow 2a=3\\Rightarrow a=1.5,\\ k=-\\tfrac12\\]"
+      },
+      {
+        "title": "100th term",
+        "body": "\\[a+99d=1.5+99(3)=298.5\\]"
+      }
+    ],
+    "finalAnswer": "\\(298.5\\)"
+  },
+  "expertise::Jun2026_4WM2HR__Q25__p26-26__m06__Sequences": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "First term and difference",
+        "body": "\\(a=k+2\\), \\(d=3\\)."
+      },
+      {
+        "title": "Use the sum formula",
+        "body": "\\[\\frac{2n}{2}\\big[2a+(2n-1)3\\big]=4\\times\\frac n2\\big[2a+(n-1)3\\big]\\]"
+      },
+      {
+        "title": "Simplify (divide by n)",
+        "body": "\\[2a+6n-3=4a+6n-6\\Rightarrow 2a=3\\Rightarrow a=1.5,\\ k=-\\tfrac12\\]"
+      },
+      {
+        "title": "100th term",
+        "body": "\\[a+99d=1.5+99(3)=298.5\\]"
+      }
+    ],
+    "finalAnswer": "\\(298.5\\)"
+  },
   "all::Jun2026_P1H__Q01-U1": {
     "checkedBy": "Elite independent solve and separate mathematical audit",
     "finalAnswer": "\\(1\\frac{19}{35}\\)",
