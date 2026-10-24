@@ -123,7 +123,7 @@
               const sessionSearch = normalizedText(`${group.label} ${group.detail} ${paperGroup.heading} ${session.label} ${(session.papers || []).map((paper) => paper.title).join(" ")}`);
               return `
                 <div class="pp-session${session.converted ? " pp-session-converted" : ""}" data-paper-session="${escapeHtml(session.label)}" data-paper-search="${escapeHtml(sessionSearch)}"><strong>${escapeHtml(session.label)}</strong>${session.note ? `<span class="pp-session-origin">${escapeHtml(session.note)}</span>` : ""}
-                  ${(session.papers || []).map(renderPaperLink).join("")}
+                  ${(session.papers || []).map(renderPaperLink).join("")}${session.isNew ? `<span class="pp-new-badge">New</span>` : ""}
                 </div>
               `;
             }).join("")}

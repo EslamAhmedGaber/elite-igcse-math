@@ -8723,6 +8723,19 @@ body.pathway-unset .site-header .site-cta {
   min-width: 130px;
   font-weight: 800;
 }
+.pp-new-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  color: #0f2140;
+  background: #e8b84a;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
 .pp-session-origin {
   display: inline-flex;
   align-items: center;

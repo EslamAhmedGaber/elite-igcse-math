@@ -44,7 +44,7 @@ function papersBody(course,group){
   let content=course.unit?'<p>Original Modular papers and Elite practice editions are listed separately below. <span class="resource-tag">L&rarr;M</span> identifies papers converted from Linear, with their actual marks.</p>':'';
   for(const s of sections){
     const regular=s.sessions.filter(r=>!r.converted),converted=s.sessions.filter(r=>r.converted);
-    const rows=list=>`<ul class="resource-list">${list.map(r=>row(r.label,r.converted?`${esc(r.note||'Converted from Linear Higher')} &middot; Elite practice edition`:'',r.papers.map(p=>action(p.href,p.title,p.kind==='solution')).join(''))).join('')}</ul>`;
+    const rows=list=>`<ul class="resource-list">${list.map(r=>row(r.label,r.converted?`${esc(r.note||'Converted from Linear Higher')} &middot; Elite practice edition`:'',r.papers.map(p=>action(p.href,p.title,p.kind==='solution')).join('')+(r.isNew?'<span class="resource-new">New</span>':''))).join('')}</ul>`;
     if(regular.length) content+=section(course.unit?'Original Modular papers':s.heading,rows(regular));
     if(converted.length) content+=section('Converted Linear practice papers',rows(converted),'converted-papers');
   }
@@ -97,7 +97,7 @@ function documentFor(course,c,group,type,topicPages=[]){
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(m.title)}</title><meta name="description" content="${esc(m.description)}"><link rel="canonical" href="${m.canonical}">
 <meta property="og:type" content="website"><meta property="og:title" content="${esc(m.title)}"><meta property="og:description" content="${esc(m.description)}"><meta property="og:url" content="${m.canonical}"><meta property="og:image" content="${seo.origin}/assets/og-image.png"><meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0f2140"><link rel="icon" href="/assets/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="/resource-pages.css?v=20261024c">
+<meta name="theme-color" content="#0f2140"><link rel="icon" href="/assets/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="/resource-pages.css?v=20261024n">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">${json(ld)}</script></head>
 <body data-stat="pv_resource"><a class="resource-skip" href="#main">Skip to content</a>

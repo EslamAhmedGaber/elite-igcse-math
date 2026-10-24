@@ -729,11 +729,17 @@
           "sessions": [
               {
                   "label": "May 2026",
+                  "isNew": true,
                   "papers": [
                       {
                           "kind": "paper",
                           "title": "Question paper",
                           "href": "downloads/PastPapers/Modular/unit-1/4wm1h-01-que-20260514.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Solution",
+                          "href": "downloads/PastPaperSolutions/May2026_4WM1H_Solutions.pdf?v=books20261024"
                       }
                   ]
               },

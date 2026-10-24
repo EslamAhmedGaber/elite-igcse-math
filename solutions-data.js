@@ -32380,6 +32380,673 @@ window.SOLUTION_DATA = {
     ],
     "finalAnswer": "*S*<sub>40</sub>(*Q*) = 6090"
   },
+  "all::May2026_4WM1H__Q01__p03-03__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Improper fractions",
+        "body": "\\[4\\tfrac17=\\frac{29}{7},\\qquad 2\\tfrac35=\\frac{13}{5}\\]"
+      },
+      {
+        "title": "Common denominator 35",
+        "body": "\\[\\frac{29}{7}-\\frac{13}{5}=\\frac{145}{35}-\\frac{91}{35}=\\frac{54}{35}\\]"
+      },
+      {
+        "title": "Back to a mixed number",
+        "body": "\\[\\frac{54}{35}=1\\tfrac{19}{35}\\quad\\text{as required.}\\]"
+      }
+    ],
+    "finalAnswer": "\\(\\frac{54}{35}=1\\frac{19}{35}\\) (shown)"
+  },
+  "all::May2026_4WM1H__Q02__p03-03__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Choose the ratio",
+        "body": "\\(x\\) is next to the \\(65^\\circ\\) angle and \\(10\\) cm is the hypotenuse, so use cosine."
+      },
+      {
+        "title": "Calculate",
+        "body": "\\[x=10\\cos 65^\\circ=4.2261\\ldots\\]"
+      }
+    ],
+    "finalAnswer": "\\(x=4.23\\)"
+  },
+  "all::May2026_4WM1H__Q03__p04-04__m05__Rounding-Estimation-Bounds": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "(a) Multiply: add powers",
+        "body": "\\[20^{70}\\times20^{8}=20^{78}\\Rightarrow n=78\\]"
+      },
+      {
+        "title": "(b) Divide: subtract powers",
+        "body": "\\[36^{80}\\div36^{5}=36^{75}\\Rightarrow m=75\\]"
+      },
+      {
+        "title": "(c) Power of a power: multiply",
+        "body": "\\[(52^4)^{16}=52^{64}\\Rightarrow p=64\\]"
+      },
+      {
+        "title": "(d) Lower bound",
+        "body": "Nearest metre means \\(\\pm0.5\\) m: lower bound \\(=99.5\\) m."
+      },
+      {
+        "title": "(e) Upper bound",
+        "body": "One decimal place means \\(\\pm0.05\\) s: upper bound \\(=16.35\\) s."
+      }
+    ],
+    "finalAnswer": "(a) \\(78\\) (b) \\(75\\) (c) \\(64\\) (d) \\(99.5\\) m (e) \\(16.35\\) s"
+  },
+  "all::May2026_4WM1H__Q04__p05-05__m05__Area-Perimeter": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Find BD with Pythagoras",
+        "body": "\\[BD=\\sqrt{26^2-10^2}=\\sqrt{576}=24\\text{ cm}\\]"
+      },
+      {
+        "title": "Semicircle arc",
+        "body": "Diameter \\(BD=24\\), so the arc is \\[\\tfrac12\\pi\\times24=12\\pi=37.699\\ldots\\text{ cm}\\]"
+      },
+      {
+        "title": "Perimeter (BD is inside, not counted)",
+        "body": "\\[10+26+12\\pi=73.699\\ldots\\]"
+      }
+    ],
+    "finalAnswer": "\\(73.7\\) cm"
+  },
+  "all::May2026_4WM1H__Q05__p06-06__m04__Set-Notation-Venn-Diagrams": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Find set B",
+        "body": "\\(B'=\\{3,4,6,7,9,11\\}\\), so \\(B=\\{1,2,5,8,10,12\\}\\)."
+      },
+      {
+        "title": "Fill each region",
+        "body": "\\(A\\cap B=\\{2,5\\}\\); \\(A\\) only \\(=\\{3,7,11\\}\\); \\(B\\) only \\(=\\{1,8,10,12\\}\\); outside both \\(=\\{4,6,9\\}\\).",
+        "figures": [
+          {
+            "alt": "Question 5 part a: completed Venn diagram",
+            "src": "/assets/solution-diagrams/May2026/Q05-a-venn.png"
+          }
+        ]
+      },
+      {
+        "title": "(b) Outside both circles",
+        "body": "\\[P\\big((A\\cup B)'\\big)=\\frac{3}{12}=\\frac14\\]"
+      }
+    ],
+    "finalAnswer": "(a) see diagram (b) \\(\\frac{3}{12}=\\frac14\\)"
+  },
+  "all::May2026_4WM1H__Q06__p06-06__m02__Algebra-Toolkit": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Cube every part",
+        "body": "\\[(4x^5y^6)^3=4^3x^{15}y^{18}=64x^{15}y^{18}\\]"
+      }
+    ],
+    "finalAnswer": "\\(64x^{15}y^{18}\\)"
+  },
+  "all::May2026_4WM1H__Q07__p07-07__m04__Probability-Toolkit": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Probabilities add to 1",
+        "body": "\\[0.12+x+2x+0.16=1\\Rightarrow 3x=0.72\\Rightarrow x=0.24\\]"
+      },
+      {
+        "title": "Even numbers are 2 and 4",
+        "body": "\\[P(\\text{even})=0.24+0.16=0.40\\]"
+      },
+      {
+        "title": "Expected number",
+        "body": "\\[500\\times0.40=200\\]"
+      }
+    ],
+    "finalAnswer": "\\(200\\)"
+  },
+  "all::May2026_4WM1H__Q08__p08-08__m03__Standard-Compound-Units": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Volume = mass ÷ density",
+        "body": "\\[V=\\frac{480}{640}=0.75\\text{ m}^3\\]"
+      }
+    ],
+    "finalAnswer": "\\(0.75\\) m\\(^3\\)"
+  },
+  "all::May2026_4WM1H__Q09__p09-09__m05__Factorising": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "(a) Take out the HCF",
+        "body": "HCF of \\(15g^4h\\) and \\(20gh^3\\) is \\(5gh\\): \\[15g^4h-20gh^3=5gh(3g^3-4h^2)\\]"
+      },
+      {
+        "title": "(b)(i) Two numbers: product −28, sum 3",
+        "body": "\\(7\\) and \\(-4\\): \\[x^2+3x-28=(x+7)(x-4)\\]"
+      },
+      {
+        "title": "(b)(ii) Each bracket = 0",
+        "body": "\\[x=-7\\quad\\text{or}\\quad x=4\\]"
+      }
+    ],
+    "finalAnswer": "(a) \\(5gh(3g^3-4h^2)\\) (b)(i) \\((x+7)(x-4)\\) (ii) \\(x=-7,\\ 4\\)"
+  },
+  "all::May2026_4WM1H__Q10__p10-10__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Read two points",
+        "body": "The line passes through \\((0,1)\\) and \\((2,5)\\)."
+      },
+      {
+        "title": "Gradient and intercept",
+        "body": "\\[m=\\frac{5-1}{2-0}=2,\\qquad c=1\\]"
+      },
+      {
+        "title": "Equation",
+        "body": "\\[y=2x+1\\]"
+      }
+    ],
+    "finalAnswer": "\\(y=2x+1\\)"
+  },
+  "all::May2026_4WM1H__Q11__p11-11__m03__Probability-Toolkit": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Let r red be added",
+        "body": "Then \\(2r\\) blue are added and the total is \\(40+3r\\)."
+      },
+      {
+        "title": "Use P(green)",
+        "body": "\\[\\frac{25}{40+3r}=\\frac{5}{11}\\Rightarrow 275=200+15r\\Rightarrow r=5\\]"
+      },
+      {
+        "title": "Blue added",
+        "body": "\\[2r=10\\]"
+      }
+    ],
+    "finalAnswer": "\\(10\\)"
+  },
+  "all::May2026_4WM1H__Q12__p12-12__m06__Expanding-Brackets": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "(a) Write everything as powers of 2",
+        "body": "\\[8^x=2^{3x},\\quad 64=2^6\\Rightarrow\\frac{2^{x/3}}{2^{3x}}=2^6\\]"
+      },
+      {
+        "title": "Compare powers",
+        "body": "\\[\\frac{x}{3}-3x=6\\Rightarrow -\\frac{8x}{3}=6\\Rightarrow x=-\\frac94\\]"
+      },
+      {
+        "title": "(b) Expand two brackets first",
+        "body": "\\[(t+5)(2t-3)=2t^2+7t-15\\]"
+      },
+      {
+        "title": "Multiply by 4t",
+        "body": "\\[4t(2t^2+7t-15)=8t^3+28t^2-60t\\]"
+      }
+    ],
+    "finalAnswer": "(a) \\(x=-\\frac94\\) (b) \\(8t^3+28t^2-60t\\)"
+  },
+  "all::May2026_4WM1H__Q13__p13-13__m04__Probability-Diagrams-Venn-Tree-Diagrams": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "(a) Branches add to 1",
+        "body": "Not win \\(=1-0.56=0.44\\) on every pair of branches.",
+        "figures": [
+          {
+            "alt": "Question 13 part a: completed tree diagram",
+            "src": "/assets/solution-diagrams/May2026/Q13-a-tree.png"
+          }
+        ]
+      },
+      {
+        "title": "(b) Win and win",
+        "body": "\\[0.56\\times0.56=0.3136\\]"
+      }
+    ],
+    "finalAnswer": "(a) see diagram (b) \\(0.3136\\)"
+  },
+  "all::May2026_4WM1H__Q14__p14-15__m06__Graphs-of-Functions": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "(a)(i) Positive quadratic",
+        "body": "\\(y=x^2-3x=x(x-3)\\): U-shape through \\(O\\) and \\(x=3\\) → graph D."
+      },
+      {
+        "title": "(a)(ii) Negative cubic",
+        "body": "\\(y=-x^3+9x\\): negative cubic through the origin → graph E."
+      },
+      {
+        "title": "(b) Substitute",
+        "body": "\\[x=1:\\ 12,\\quad x=2:\\ 3,\\quad x=4:\\ 0.75,\\quad x=5:\\ 0.48\\]"
+      },
+      {
+        "title": "(c) Plot and join with a smooth curve",
+        "body": "Plot all 7 points and draw a smooth curve (no straight segments).",
+        "figures": [
+          {
+            "alt": "Question 14 part c: graph of y = 12 over x squared",
+            "src": "/assets/solution-diagrams/May2026/Q14-c-graph.png"
+          }
+        ]
+      }
+    ],
+    "finalAnswer": "(a)(i) D (ii) E (b) \\(12,\\ 3,\\ 0.75,\\ 0.48\\) (c) smooth curve through the points"
+  },
+  "all::May2026_4WM1H__Q15__p16-16__m05__Algebra-Toolkit": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "(a) Cosine rule",
+        "body": "\\[BC^2=25^2+73^2-2(25)(73)\\cos65^\\circ=4411.4\\ldots\\]"
+      },
+      {
+        "title": "Square root",
+        "body": "\\[BC=66.418\\ldots\\]"
+      },
+      {
+        "title": "(b) Area formula",
+        "body": "\\[\\tfrac12(25)(73)\\sin65^\\circ=827.005\\ldots\\]"
+      }
+    ],
+    "finalAnswer": "(a) \\(66.4\\) cm (b) \\(827\\) cm\\(^2\\)"
+  },
+  "all::May2026_4WM1H__Q16__p17-17__m06__Algebra-Toolkit": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "(a) Quadratic formula",
+        "body": "\\[x=\\frac{2\\sqrt3\\pm\\sqrt{(2\\sqrt3)^2+4(13)}}{2}=\\frac{2\\sqrt3\\pm\\sqrt{64}}{2}\\]"
+      },
+      {
+        "title": "Simplify",
+        "body": "\\[x=\\frac{2\\sqrt3\\pm8}{2}=\\sqrt3\\pm4\\]"
+      },
+      {
+        "title": "(b) Rationalise",
+        "body": "\\[\\frac{\\sqrt{20}}{\\sqrt5+2}\\times\\frac{\\sqrt5-2}{\\sqrt5-2}=\\frac{2\\sqrt5(\\sqrt5-2)}{5-4}\\]"
+      },
+      {
+        "title": "Simplify",
+        "body": "\\[=10-4\\sqrt5=10-\\sqrt{80}\\quad(c=10,\\ d=80)\\]"
+      }
+    ],
+    "finalAnswer": "(a) \\(\\sqrt3\\pm4\\) (b) \\(10-\\sqrt{80}\\)"
+  },
+  "all::May2026_4WM1H__Q17__p18-18__m04__Coordinate-Geometry": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Perpendicular gradient",
+        "body": "\\(y=7+4x\\) has gradient \\(4\\), so \\(\\mathbf L\\) has gradient \\(-\\frac14\\)."
+      },
+      {
+        "title": "Equation of L",
+        "body": "\\[y=-\\tfrac14x+\\tfrac{19}{2}\\]"
+      },
+      {
+        "title": "Point B (y = 0)",
+        "body": "\\[0=-\\tfrac14x+\\tfrac{19}{2}\\Rightarrow x=38,\\ B=(38,0)\\]"
+      },
+      {
+        "title": "Area of triangle AOB",
+        "body": "\\[\\tfrac12\\times38\\times\\tfrac{19}{2}=180.5\\]"
+      }
+    ],
+    "finalAnswer": "\\(180.5\\)"
+  },
+  "all::May2026_4WM1H__Q18__p19-19__m05__Bearings-Scale-Drawing-Constructions": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Bounds",
+        "body": "\\(99.5\\le s<100.5\\), \\(1.675\\le t<1.685\\), \\(0.45\\le u<0.55\\)"
+      },
+      {
+        "title": "Upper bound of v",
+        "body": "Big \\(s\\), small \\(t\\), small \\(u\\): \\[v_{\\max}=2\\left(\\frac{100.5}{1.675}\\right)-0.45=119.55\\]"
+      },
+      {
+        "title": "Lower bound of v",
+        "body": "Small \\(s\\), big \\(t\\), big \\(u\\): \\[v_{\\min}=2\\left(\\frac{99.5}{1.685}\\right)-0.55=117.55\\ldots\\]"
+      },
+      {
+        "title": "Suitable accuracy",
+        "body": "Both bounds round to \\(120\\) to 2 s.f. (they differ to 3 s.f.), so \\(v=120\\)."
+      }
+    ],
+    "finalAnswer": "\\(v=120\\) m/s (2 s.f.)"
+  },
+  "all::May2026_4WM1H__Q19__p20-20__m03__Coordinate-Geometry": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Drop M to the base",
+        "body": "\\(M\\) is above the midpoint \\(N\\) of \\(QR\\), so \\(QN=5\\) and \\(MN=9\\)."
+      },
+      {
+        "title": "Length PN",
+        "body": "\\[PN=\\sqrt{12^2+5^2}=13\\]"
+      },
+      {
+        "title": "Angle",
+        "body": "\\[\\tan\\theta=\\frac{9}{13}\\Rightarrow\\theta=34.69\\ldots^\\circ\\]"
+      }
+    ],
+    "finalAnswer": "\\(34.7^\\circ\\)"
+  },
+  "all::May2026_4WM1H__Q20__p21-21__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Subtract the fractions",
+        "body": "\\[\\frac{5(3x-5)-3(4x-7)}{(4x-7)(3x-5)}=\\frac{3x-4}{(4x-7)(3x-5)}\\]"
+      },
+      {
+        "title": "Factorise the second fraction",
+        "body": "\\[9x^2-16=(3x-4)(3x+4),\\qquad 6x^2-7x-5=(3x-5)(2x+1)\\]"
+      },
+      {
+        "title": "Divide = multiply by the reciprocal",
+        "body": "\\[\\frac{3x-4}{(4x-7)(3x-5)}\\times\\frac{(3x-5)(2x+1)}{(3x-4)(3x+4)}\\]"
+      },
+      {
+        "title": "Cancel",
+        "body": "\\[=\\frac{2x+1}{(4x-7)(3x+4)}\\]"
+      }
+    ],
+    "finalAnswer": "\\(\\dfrac{2x+1}{(4x-7)(3x+4)}\\)"
+  },
+  "expertise::May2026_4WM1H__Q20__p21-21__m04__Algebra-Toolkit": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Subtract the fractions",
+        "body": "\\[\\frac{5(3x-5)-3(4x-7)}{(4x-7)(3x-5)}=\\frac{3x-4}{(4x-7)(3x-5)}\\]"
+      },
+      {
+        "title": "Factorise the second fraction",
+        "body": "\\[9x^2-16=(3x-4)(3x+4),\\qquad 6x^2-7x-5=(3x-5)(2x+1)\\]"
+      },
+      {
+        "title": "Divide = multiply by the reciprocal",
+        "body": "\\[\\frac{3x-4}{(4x-7)(3x-5)}\\times\\frac{(3x-5)(2x+1)}{(3x-4)(3x+4)}\\]"
+      },
+      {
+        "title": "Cancel",
+        "body": "\\[=\\frac{2x+1}{(4x-7)(3x+4)}\\]"
+      }
+    ],
+    "finalAnswer": "\\(\\dfrac{2x+1}{(4x-7)(3x+4)}\\)"
+  },
+  "all::May2026_4WM1H__Q21__p22-22__m03__Standard-Compound-Units": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Frequency = width × height",
+        "body": "\\[5(0.8)+10(1.8)+5(2.8)+6(1)=4+18+14+6=42\\]"
+      },
+      {
+        "title": "Half are in 22–34",
+        "body": "So the other half is also \\(42\\) parcels."
+      },
+      {
+        "title": "Height of the new bar",
+        "body": "\\[\\text{f.d.}=\\frac{42}{34-22}=3.5\\]",
+        "figures": [
+          {
+            "alt": "Question 21: histogram with the 22 to 34 kg bar drawn",
+            "src": "/assets/solution-diagrams/May2026/Q21-histogram.png"
+          }
+        ]
+      }
+    ],
+    "finalAnswer": "Bar from \\(22\\) to \\(34\\) kg, height \\(3.5\\)"
+  },
+  "expertise::May2026_4WM1H__Q21__p22-22__m03__Standard-Compound-Units": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Frequency = width × height",
+        "body": "\\[5(0.8)+10(1.8)+5(2.8)+6(1)=4+18+14+6=42\\]"
+      },
+      {
+        "title": "Half are in 22–34",
+        "body": "So the other half is also \\(42\\) parcels."
+      },
+      {
+        "title": "Height of the new bar",
+        "body": "\\[\\text{f.d.}=\\frac{42}{34-22}=3.5\\]",
+        "figures": [
+          {
+            "alt": "Question 21: histogram with the 22 to 34 kg bar drawn",
+            "src": "/assets/solution-diagrams/May2026/Q21-histogram.png"
+          }
+        ]
+      }
+    ],
+    "finalAnswer": "Bar from \\(22\\) to \\(34\\) kg, height \\(3.5\\)"
+  },
+  "all::May2026_4WM1H__Q22__p22-23__m05__Circles-Arcs-Sectors": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Pink then yellow, or yellow then pink",
+        "body": "\\[2\\times\\frac{12}{x}\\times\\frac{x-12}{x-1}=\\frac{18}{47}\\]"
+      },
+      {
+        "title": "Cross-multiply",
+        "body": "\\[1128(x-12)=18x(x-1)\\Rightarrow 18x^2-1146x+13536=0\\]"
+      },
+      {
+        "title": "Simplify (÷6) and solve",
+        "body": "\\[3x^2-191x+2256=0\\Rightarrow(x-48)(3x-47)=0\\]"
+      },
+      {
+        "title": "x must be a whole number",
+        "body": "\\[x=48\\]"
+      }
+    ],
+    "finalAnswer": "\\(x=48\\)"
+  },
+  "expertise::May2026_4WM1H__Q22__p22-23__m05__Circles-Arcs-Sectors": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Pink then yellow, or yellow then pink",
+        "body": "\\[2\\times\\frac{12}{x}\\times\\frac{x-12}{x-1}=\\frac{18}{47}\\]"
+      },
+      {
+        "title": "Cross-multiply",
+        "body": "\\[1128(x-12)=18x(x-1)\\Rightarrow 18x^2-1146x+13536=0\\]"
+      },
+      {
+        "title": "Simplify (÷6) and solve",
+        "body": "\\[3x^2-191x+2256=0\\Rightarrow(x-48)(3x-47)=0\\]"
+      },
+      {
+        "title": "x must be a whole number",
+        "body": "\\[x=48\\]"
+      }
+    ],
+    "finalAnswer": "\\(x=48\\)"
+  },
+  "all::May2026_4WM1H__Q23__p24-25__m06__Circles-Arcs-Sectors": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Let OP = r",
+        "body": "Then \\(OA=\\frac r4\\). Shaded area: \\[\\frac{50}{360}\\pi\\left(r^2-\\frac{r^2}{16}\\right)=\\frac{243}{16}\\pi\\]"
+      },
+      {
+        "title": "Solve for r",
+        "body": "\\[\\frac{75}{576}r^2=\\frac{243}{16}\\Rightarrow r^2=116.64\\Rightarrow r=10.8,\\ OA=2.7\\]"
+      },
+      {
+        "title": "Arcs",
+        "body": "\\[\\text{arc }PQ=\\frac{50}{360}\\times2\\pi(10.8)=3\\pi,\\qquad\\text{arc }AB=\\frac{50}{360}\\times2\\pi(2.7)=\\tfrac34\\pi\\]"
+      },
+      {
+        "title": "Straight edges and total",
+        "body": "\\(AP=BQ=10.8-2.7=8.1\\): \\[3\\pi+\\tfrac34\\pi+2(8.1)=\\tfrac{15}{4}\\pi+16.2\\]"
+      }
+    ],
+    "finalAnswer": "\\(\\frac{15}{4}\\pi+16.2\\) cm"
+  },
+  "expertise::May2026_4WM1H__Q23__p24-25__m06__Circles-Arcs-Sectors": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Let OP = r",
+        "body": "Then \\(OA=\\frac r4\\). Shaded area: \\[\\frac{50}{360}\\pi\\left(r^2-\\frac{r^2}{16}\\right)=\\frac{243}{16}\\pi\\]"
+      },
+      {
+        "title": "Solve for r",
+        "body": "\\[\\frac{75}{576}r^2=\\frac{243}{16}\\Rightarrow r^2=116.64\\Rightarrow r=10.8,\\ OA=2.7\\]"
+      },
+      {
+        "title": "Arcs",
+        "body": "\\[\\text{arc }PQ=\\frac{50}{360}\\times2\\pi(10.8)=3\\pi,\\qquad\\text{arc }AB=\\frac{50}{360}\\times2\\pi(2.7)=\\tfrac34\\pi\\]"
+      },
+      {
+        "title": "Straight edges and total",
+        "body": "\\(AP=BQ=10.8-2.7=8.1\\): \\[3\\pi+\\tfrac34\\pi+2(8.1)=\\tfrac{15}{4}\\pi+16.2\\]"
+      }
+    ],
+    "finalAnswer": "\\(\\frac{15}{4}\\pi+16.2\\) cm"
+  },
+  "all::May2026_4WM1H__Q24__p26-26__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Factor out −3 from the x terms",
+        "body": "\\[22-3x^2+30x=22-3(x^2-10x)\\]"
+      },
+      {
+        "title": "Complete the square",
+        "body": "\\[x^2-10x=(x-5)^2-25\\]"
+      },
+      {
+        "title": "Simplify",
+        "body": "\\[22-3\\big((x-5)^2-25\\big)=97-3(x-5)^2\\]"
+      }
+    ],
+    "finalAnswer": "\\(97-3(x-5)^2\\)"
+  },
+  "expertise::May2026_4WM1H__Q24__p26-26__m03__Algebra-Toolkit": {
+    "status": "checked",
+    "checkedBy": "Elite worked solution (answers checked with sympy, 2026-10-24)",
+    "updated": "2026-10-24T00:00:00",
+    "topicNote": "",
+    "steps": [
+      {
+        "title": "Factor out −3 from the x terms",
+        "body": "\\[22-3x^2+30x=22-3(x^2-10x)\\]"
+      },
+      {
+        "title": "Complete the square",
+        "body": "\\[x^2-10x=(x-5)^2-25\\]"
+      },
+      {
+        "title": "Simplify",
+        "body": "\\[22-3\\big((x-5)^2-25\\big)=97-3(x-5)^2\\]"
+      }
+    ],
+    "finalAnswer": "\\(97-3(x-5)^2\\)"
+  },
   "all::MayNov2020_P1H__Q10__p11-11__m03__Prime-Factors-HCF-and-LCM": {
     "status": "checked",
     "checkedBy": "Dr Eslam Ahmed + Codex",

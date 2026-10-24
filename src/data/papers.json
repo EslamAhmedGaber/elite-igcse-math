@@ -1,612 +1,622 @@
 [
   {
-    "code": "P1H",
-    "isModular": false,
-    "marks": 100,
-    "modularUnit": null,
-    "paper": "Jun 2026 P1H",
-    "paperSlug": "Jun2026_P1H",
-    "questionCount": 25,
-    "session": "Jun 2026"
-  },
-  {
-    "code": "P1HR",
-    "isModular": false,
-    "marks": 100,
-    "modularUnit": null,
-    "paper": "Jun 2026 P1HR",
-    "paperSlug": "Jun2026_P1HR",
-    "questionCount": 26,
-    "session": "Jun 2026"
-  },
-  {
-    "code": "P2H",
-    "isModular": false,
-    "marks": 100,
-    "modularUnit": null,
-    "paper": "Jun 2026 P2H",
-    "paperSlug": "Jun2026_P2H",
-    "questionCount": 26,
-    "session": "Jun 2026"
-  },
-  {
-    "code": "P2HR",
-    "isModular": false,
-    "marks": 100,
-    "modularUnit": null,
-    "paper": "Jun 2026 P2HR",
-    "paperSlug": "Jun2026_P2HR",
-    "questionCount": 27,
-    "session": "Jun 2026"
-  },
-  {
-    "code": "P1H",
-    "isModular": true,
-    "marks": 73,
-    "modularUnit": "Unit 1",
-    "paper": "Jun 2026 P1H | L-to-M Unit 1",
-    "paperSlug": "Jun2026_Converted_4WM1H_P1H",
-    "questionCount": 19,
-    "session": "Jun 2026"
-  },
-  {
-    "code": "P1HR",
-    "isModular": true,
-    "marks": 37,
-    "modularUnit": "Unit 1",
-    "paper": "Jun 2026 P1HR | L-to-M Unit 1",
-    "paperSlug": "Jun2026_Converted_4WM1H_P1HR",
-    "questionCount": 11,
-    "session": "Jun 2026"
-  },
-  {
-    "code": "P2H",
-    "isModular": true,
-    "marks": 18,
-    "modularUnit": "Unit 1",
-    "paper": "Jun 2026 P2H | L-to-M Unit 1",
-    "paperSlug": "Jun2026_Converted_4WM1H_P2H",
-    "questionCount": 5,
-    "session": "Jun 2026"
-  },
-  {
-    "code": "P2HR",
-    "isModular": true,
-    "marks": 43,
-    "modularUnit": "Unit 1",
-    "paper": "Jun 2026 P2HR | L-to-M Unit 1",
-    "paperSlug": "Jun2026_Converted_4WM1H_P2HR",
-    "questionCount": 12,
-    "session": "Jun 2026"
-  },
-  {
-    "code": "P1H",
-    "isModular": true,
-    "marks": 27,
-    "modularUnit": "Unit 2",
-    "paper": "Jun 2026 P1H | L-to-M Unit 2",
-    "paperSlug": "Jun2026_Converted_4WM2H_P1H",
-    "questionCount": 7,
-    "session": "Jun 2026"
-  },
-  {
-    "code": "P1HR",
-    "isModular": true,
-    "marks": 63,
-    "modularUnit": "Unit 2",
-    "paper": "Jun 2026 P1HR | L-to-M Unit 2",
-    "paperSlug": "Jun2026_Converted_4WM2H_P1HR",
-    "questionCount": 15,
-    "session": "Jun 2026"
-  },
-  {
-    "code": "P2H",
-    "isModular": true,
-    "marks": 82,
-    "modularUnit": "Unit 2",
-    "paper": "Jun 2026 P2H | L-to-M Unit 2",
-    "paperSlug": "Jun2026_Converted_4WM2H_P2H",
-    "questionCount": 21,
-    "session": "Jun 2026"
-  },
-  {
-    "code": "P2HR",
-    "isModular": true,
-    "marks": 57,
-    "modularUnit": "Unit 2",
-    "paper": "Jun 2026 P2HR | L-to-M Unit 2",
-    "paperSlug": "Jun2026_Converted_4WM2H_P2HR",
-    "questionCount": 16,
-    "session": "Jun 2026"
-  },
-  {
-    "code": "P1H",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Jan 2020 P1H",
-    "paperSlug": "Jan2020_P1H",
-    "questionCount": 25,
-    "session": "Jan 2020"
-  },
-  {
-    "code": "P1HR",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Jan 2020 P1HR",
-    "paperSlug": "Jan2020_P1HR",
-    "questionCount": 27,
-    "session": "Jan 2020"
-  },
-  {
-    "code": "P2H",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Jan 2020 P2H",
-    "paperSlug": "Jan2020_P2H",
-    "questionCount": 33,
-    "session": "Jan 2020"
-  },
-  {
-    "code": "P2HR",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Jan 2020 P2HR",
-    "paperSlug": "Jan2020_P2HR",
-    "questionCount": 33,
-    "session": "Jan 2020"
-  },
-  {
-    "code": "P1H",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Jan 2021 P1H",
-    "paperSlug": "Jan2021_P1H",
-    "questionCount": 29,
-    "session": "Jan 2021"
-  },
-  {
-    "code": "P1HR",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Jan 2021 P1HR",
-    "paperSlug": "Jan2021_P1HR",
-    "questionCount": 25,
-    "session": "Jan 2021"
-  },
-  {
-    "code": "P2H",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Jan 2021 P2H",
-    "paperSlug": "Jan2021_P2H",
-    "questionCount": 25,
-    "session": "Jan 2021"
-  },
-  {
-    "code": "P2HR",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Jan 2021 P2HR",
-    "paperSlug": "Jan2021_P2HR",
-    "questionCount": 25,
-    "session": "Jan 2021"
-  },
-  {
-    "code": "P1H",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Jan 2022 P1H",
-    "paperSlug": "Jan2022_P1H",
-    "questionCount": 29,
-    "session": "Jan 2022"
-  },
-  {
-    "code": "P1HR",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Jan 2022 P1HR",
-    "paperSlug": "Jan2022_P1HR",
-    "questionCount": 29,
-    "session": "Jan 2022"
-  },
-  {
-    "code": "P2H",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Jan 2022 P2H",
-    "paperSlug": "Jan2022_P2H",
-    "questionCount": 33,
-    "session": "Jan 2022"
-  },
-  {
-    "code": "P2HR",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Jan 2022 P2HR",
-    "paperSlug": "Jan2022_P2HR",
-    "questionCount": 27,
-    "session": "Jan 2022"
-  },
-  {
-    "code": "P1H",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Jun 2022 P1H",
-    "paperSlug": "Jun2022_P1H",
-    "questionCount": 29,
-    "session": "Jun 2022"
-  },
-  {
-    "code": "P1HR",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Jun 2022 P1HR",
-    "paperSlug": "Jun2022_P1HR",
-    "questionCount": 31,
-    "session": "Jun 2022"
-  },
-  {
-    "code": "P2H",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Jun 2022 P2H",
-    "paperSlug": "Jun2022_P2H",
-    "questionCount": 29,
-    "session": "Jun 2022"
-  },
-  {
-    "code": "P2HR",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Jun 2022 P2HR",
-    "paperSlug": "Jun2022_P2HR",
-    "questionCount": 31,
-    "session": "Jun 2022"
-  },
-  {
-    "code": "P2H",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Jun 2023 P2H",
-    "paperSlug": "Jun2023_P2H",
-    "questionCount": 31,
-    "session": "Jun 2023"
-  },
-  {
-    "code": "P2HR",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Jun 2023 P2HR",
-    "paperSlug": "Jun2023_P2HR",
-    "questionCount": 33,
-    "session": "Jun 2023"
-  },
-  {
-    "code": "P2H",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Jun 2024 P2H",
-    "paperSlug": "Jun2024_P2H",
-    "questionCount": 31,
-    "session": "Jun 2024"
-  },
-  {
-    "code": "P2HR",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Jun 2024 P2HR",
-    "paperSlug": "Jun2024_P2HR",
-    "questionCount": 33,
-    "session": "Jun 2024"
-  },
-  {
-    "code": "P1H",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Jun 2025 P1H",
-    "paperSlug": "Jun2025_P1H",
-    "questionCount": 31,
-    "session": "Jun 2025"
-  },
-  {
-    "code": "P1HR",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Jun 2025 P1HR",
-    "paperSlug": "Jun2025_P1HR",
-    "questionCount": 33,
-    "session": "Jun 2025"
-  },
-  {
-    "code": "P2H",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Jun 2025 P2H",
-    "paperSlug": "Jun2025_P2H",
-    "questionCount": 33,
-    "session": "Jun 2025"
-  },
-  {
-    "code": "P2HR",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Jun 2025 P2HR",
-    "paperSlug": "Jun2025_P2HR",
-    "questionCount": 33,
-    "session": "Jun 2025"
-  },
-  {
-    "code": "P1H",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "May 2021 P1H",
-    "paperSlug": "May2021_P1H",
-    "questionCount": 33,
-    "session": "May 2021"
-  },
-  {
-    "code": "P2H",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "May 2021 P2H",
-    "paperSlug": "May2021_P2H",
-    "questionCount": 27,
-    "session": "May 2021"
-  },
-  {
-    "code": "P1H",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "May 2023 P1H",
-    "paperSlug": "May2023_P1H",
-    "questionCount": 27,
-    "session": "May 2023"
-  },
-  {
-    "code": "P1HR",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "May 2023 P1HR",
-    "paperSlug": "May2023_P1HR",
-    "questionCount": 31,
-    "session": "May 2023"
-  },
-  {
-    "code": "P1H",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "May 2024 P1H",
-    "paperSlug": "May2024_P1H",
-    "questionCount": 31,
-    "session": "May 2024"
-  },
-  {
-    "code": "P1HR",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "May 2024 P1HR",
-    "paperSlug": "May2024_P1HR",
-    "questionCount": 27,
-    "session": "May 2024"
-  },
-  {
-    "code": "4WM1H",
-    "hasSolutions": true,
-    "isModular": true,
-    "modularUnit": "Unit 1",
-    "paper": "May 2025 4WM1H",
-    "paperSlug": "May2025_4WM1H",
-    "questionCount": 31,
-    "session": "May2025"
-  },
-  {
-    "code": "4WM1HR",
-    "hasSolutions": true,
-    "isModular": true,
-    "modularUnit": "Unit 1",
-    "paper": "May 2025 4WM1HR",
-    "paperSlug": "May2025_4WM1HR",
-    "questionCount": 29,
-    "session": "May2025"
-  },
-  {
-    "code": "4WM2H",
-    "hasSolutions": true,
-    "isModular": true,
-    "modularUnit": "Unit 2",
-    "paper": "May 2025 4WM2H",
-    "paperSlug": "May2025_4WM2H",
-    "questionCount": 35,
-    "session": "May2025"
-  },
-  {
-    "code": "4WM2HR",
-    "hasSolutions": true,
-    "isModular": true,
-    "modularUnit": "Unit 2",
-    "paper": "May 2025 4WM2HR",
-    "paperSlug": "May2025_4WM2HR",
-    "questionCount": 31,
-    "session": "May2025"
-  },
-  {
-    "code": "P1H",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "May-Nov 2020 P1H",
-    "paperSlug": "MayNov2020_P1H",
-    "questionCount": 31,
-    "session": "MayNov 2020"
-  },
-  {
-    "code": "P1HR",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "May-Nov 2020 P1HR",
-    "paperSlug": "MayNov2020_P1HR",
-    "questionCount": 27,
-    "session": "MayNov 2020"
-  },
-  {
-    "code": "P1H",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Nov 2021 P1H",
-    "paperSlug": "Nov2021_P1H",
-    "questionCount": 21,
-    "session": "Nov 2021"
-  },
-  {
-    "code": "P2H",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Nov 2021 P2H",
-    "paperSlug": "Nov2021_P2H",
-    "questionCount": 25,
-    "session": "Nov 2021"
-  },
-  {
-    "code": "P1H",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Nov 2023 P1H",
-    "paperSlug": "Nov2023_P1H",
-    "questionCount": 29,
-    "session": "Nov 2023"
-  },
-  {
-    "code": "P2H",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Nov 2023 P2H",
-    "paperSlug": "Nov2023_P2H",
-    "questionCount": 29,
-    "session": "Nov 2023"
-  },
-  {
-    "code": "P1H",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Nov 2024 P1H",
-    "paperSlug": "Nov2024_P1H",
-    "questionCount": 31,
-    "session": "Nov 2024"
-  },
-  {
-    "code": "P2H",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Nov 2024 P2H",
-    "paperSlug": "Nov2024_P2H",
-    "questionCount": 31,
-    "session": "Nov 2024"
-  },
-  {
-    "code": "4WM1H",
-    "hasSolutions": true,
-    "isModular": true,
-    "modularUnit": "Unit 1",
-    "paper": "Nov 2025 4WM1H",
-    "paperSlug": "Nov2025_4WM1H",
-    "questionCount": 37,
-    "session": "Nov2025"
-  },
-  {
-    "code": "4WM2H",
-    "hasSolutions": true,
-    "isModular": true,
-    "modularUnit": "Unit 2",
-    "paper": "Nov 2025 4WM2H",
-    "paperSlug": "Nov2025_4WM2H",
-    "questionCount": 33,
-    "session": "Nov2025"
-  },
-  {
-    "code": "4WM1H",
-    "hasSolutions": true,
-    "isModular": true,
-    "modularUnit": "Unit 1",
-    "paper": "Specimen 4WM1H",
-    "paperSlug": "Specimen_4WM1H",
-    "questionCount": 27,
-    "session": "Specimen"
-  },
-  {
-    "code": "4WM2H",
-    "hasSolutions": true,
-    "isModular": true,
-    "modularUnit": "Unit 2",
-    "paper": "Specimen 4WM2H",
-    "paperSlug": "Specimen_4WM2H",
-    "questionCount": 29,
-    "session": "Specimen"
-  },
-  {
-    "code": "P1H",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Nov 2025 P1H",
-    "paperSlug": "Nov2025_P1H",
-    "questionCount": 37,
-    "session": "Nov 2025"
-  },
-  {
-    "code": "P2H",
-    "hasSolutions": true,
-    "isModular": false,
-    "modularUnit": null,
-    "paper": "Nov 2025 P2H",
-    "paperSlug": "Nov2025_P2H",
-    "questionCount": 33,
-    "session": "Nov 2025"
-  },
-  {
-    "paper": "Elite Practice",
     "paperSlug": "Elite_Practice",
+    "paper": "Elite Practice",
     "session": "Elite",
     "code": "EP",
     "isModular": false,
     "modularUnit": null,
-    "marks": 101,
-    "questionCount": 37
+    "questionCount": 37,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jan2020_P1H",
+    "paper": "Jan 2020 P1H",
+    "session": "Jan 2020",
+    "code": "P1H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 25,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jan2020_P1HR",
+    "paper": "Jan 2020 P1HR",
+    "session": "Jan 2020",
+    "code": "P1HR",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 27,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jan2020_P2H",
+    "paper": "Jan 2020 P2H",
+    "session": "Jan 2020",
+    "code": "P2H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 33,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jan2020_P2HR",
+    "paper": "Jan 2020 P2HR",
+    "session": "Jan 2020",
+    "code": "P2HR",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 33,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jan2021_P1H",
+    "paper": "Jan 2021 P1H",
+    "session": "Jan 2021",
+    "code": "P1H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 29,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jan2021_P1HR",
+    "paper": "Jan 2021 P1HR",
+    "session": "Jan 2021",
+    "code": "P1HR",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 25,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jan2021_P2H",
+    "paper": "Jan 2021 P2H",
+    "session": "Jan 2021",
+    "code": "P2H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 25,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jan2021_P2HR",
+    "paper": "Jan 2021 P2HR",
+    "session": "Jan 2021",
+    "code": "P2HR",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 25,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jan2022_P1H",
+    "paper": "Jan 2022 P1H",
+    "session": "Jan 2022",
+    "code": "P1H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 29,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jan2022_P1HR",
+    "paper": "Jan 2022 P1HR",
+    "session": "Jan 2022",
+    "code": "P1HR",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 29,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jan2022_P2H",
+    "paper": "Jan 2022 P2H",
+    "session": "Jan 2022",
+    "code": "P2H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 33,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jan2022_P2HR",
+    "paper": "Jan 2022 P2HR",
+    "session": "Jan 2022",
+    "code": "P2HR",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 27,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jun2022_P1H",
+    "paper": "Jun 2022 P1H",
+    "session": "Jun 2022",
+    "code": "P1H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 29,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jun2022_P1HR",
+    "paper": "Jun 2022 P1HR",
+    "session": "Jun 2022",
+    "code": "P1HR",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 31,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jun2022_P2H",
+    "paper": "Jun 2022 P2H",
+    "session": "Jun 2022",
+    "code": "P2H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 29,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jun2022_P2HR",
+    "paper": "Jun 2022 P2HR",
+    "session": "Jun 2022",
+    "code": "P2HR",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 31,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jun2023_P2H",
+    "paper": "Jun 2023 P2H",
+    "session": "Jun 2023",
+    "code": "P2H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 31,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jun2023_P2HR",
+    "paper": "Jun 2023 P2HR",
+    "session": "Jun 2023",
+    "code": "P2HR",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 33,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jun2024_P2H",
+    "paper": "Jun 2024 P2H",
+    "session": "Jun 2024",
+    "code": "P2H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 31,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jun2024_P2HR",
+    "paper": "Jun 2024 P2HR",
+    "session": "Jun 2024",
+    "code": "P2HR",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 33,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jun2025_P1H",
+    "paper": "Jun 2025 P1H",
+    "session": "Jun 2025",
+    "code": "P1H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 31,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jun2025_P1HR",
+    "paper": "Jun 2025 P1HR",
+    "session": "Jun 2025",
+    "code": "P1HR",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 33,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jun2025_P2H",
+    "paper": "Jun 2025 P2H",
+    "session": "Jun 2025",
+    "code": "P2H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 33,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jun2025_P2HR",
+    "paper": "Jun 2025 P2HR",
+    "session": "Jun 2025",
+    "code": "P2HR",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 33,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jun2026_Converted_4WM1H_P1H",
+    "paper": "Jun 2026 P1H | L-to-M Unit 1",
+    "session": "Jun 2026",
+    "code": "P1H",
+    "isModular": true,
+    "modularUnit": "Unit 1",
+    "questionCount": 19,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jun2026_Converted_4WM1H_P1HR",
+    "paper": "Jun 2026 P1HR | L-to-M Unit 1",
+    "session": "Jun 2026",
+    "code": "P1HR",
+    "isModular": true,
+    "modularUnit": "Unit 1",
+    "questionCount": 11,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jun2026_Converted_4WM1H_P2H",
+    "paper": "Jun 2026 P2H | L-to-M Unit 1",
+    "session": "Jun 2026",
+    "code": "P2H",
+    "isModular": true,
+    "modularUnit": "Unit 1",
+    "questionCount": 5,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jun2026_Converted_4WM1H_P2HR",
+    "paper": "Jun 2026 P2HR | L-to-M Unit 1",
+    "session": "Jun 2026",
+    "code": "P2HR",
+    "isModular": true,
+    "modularUnit": "Unit 1",
+    "questionCount": 12,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jun2026_Converted_4WM2H_P1H",
+    "paper": "Jun 2026 P1H | L-to-M Unit 2",
+    "session": "Jun 2026",
+    "code": "P1H",
+    "isModular": true,
+    "modularUnit": "Unit 2",
+    "questionCount": 7,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jun2026_Converted_4WM2H_P1HR",
+    "paper": "Jun 2026 P1HR | L-to-M Unit 2",
+    "session": "Jun 2026",
+    "code": "P1HR",
+    "isModular": true,
+    "modularUnit": "Unit 2",
+    "questionCount": 15,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jun2026_Converted_4WM2H_P2H",
+    "paper": "Jun 2026 P2H | L-to-M Unit 2",
+    "session": "Jun 2026",
+    "code": "P2H",
+    "isModular": true,
+    "modularUnit": "Unit 2",
+    "questionCount": 21,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jun2026_Converted_4WM2H_P2HR",
+    "paper": "Jun 2026 P2HR | L-to-M Unit 2",
+    "session": "Jun 2026",
+    "code": "P2HR",
+    "isModular": true,
+    "modularUnit": "Unit 2",
+    "questionCount": 16,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jun2026_P1H",
+    "paper": "Jun 2026 P1H",
+    "session": "Jun 2026",
+    "code": "P1H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 25,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jun2026_P1HR",
+    "paper": "Jun 2026 P1HR",
+    "session": "Jun 2026",
+    "code": "P1HR",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 26,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jun2026_P2H",
+    "paper": "Jun 2026 P2H",
+    "session": "Jun 2026",
+    "code": "P2H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 26,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Jun2026_P2HR",
+    "paper": "Jun 2026 P2HR",
+    "session": "Jun 2026",
+    "code": "P2HR",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 27,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "May2021_P1H",
+    "paper": "May 2021 P1H",
+    "session": "May 2021",
+    "code": "P1H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 33,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "May2021_P2H",
+    "paper": "May 2021 P2H",
+    "session": "May 2021",
+    "code": "P2H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 27,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "May2023_P1H",
+    "paper": "May 2023 P1H",
+    "session": "May 2023",
+    "code": "P1H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 27,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "May2023_P1HR",
+    "paper": "May 2023 P1HR",
+    "session": "May 2023",
+    "code": "P1HR",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 31,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "May2024_P1H",
+    "paper": "May 2024 P1H",
+    "session": "May 2024",
+    "code": "P1H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 31,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "May2024_P1HR",
+    "paper": "May 2024 P1HR",
+    "session": "May 2024",
+    "code": "P1HR",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 27,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "May2025_4WM1H",
+    "paper": "May 2025 4WM1H",
+    "session": "May2025",
+    "code": "4WM1H",
+    "isModular": true,
+    "modularUnit": "Unit 1",
+    "questionCount": 31,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "May2025_4WM1HR",
+    "paper": "May 2025 4WM1HR",
+    "session": "May2025",
+    "code": "4WM1HR",
+    "isModular": true,
+    "modularUnit": "Unit 1",
+    "questionCount": 29,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "May2025_4WM2H",
+    "paper": "May 2025 4WM2H",
+    "session": "May2025",
+    "code": "4WM2H",
+    "isModular": true,
+    "modularUnit": "Unit 2",
+    "questionCount": 35,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "May2025_4WM2HR",
+    "paper": "May 2025 4WM2HR",
+    "session": "May2025",
+    "code": "4WM2HR",
+    "isModular": true,
+    "modularUnit": "Unit 2",
+    "questionCount": 31,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "May2026_4WM1H",
+    "paper": "May 2026 4WM1H",
+    "session": "May2026",
+    "code": "4WM1H",
+    "isModular": true,
+    "modularUnit": "Unit 1",
+    "questionCount": 29,
+    "hasSolutions": false
+  },
+  {
+    "paperSlug": "MayNov2020_P1H",
+    "paper": "May-Nov 2020 P1H",
+    "session": "MayNov 2020",
+    "code": "P1H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 31,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "MayNov2020_P1HR",
+    "paper": "May-Nov 2020 P1HR",
+    "session": "MayNov 2020",
+    "code": "P1HR",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 27,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Nov2021_P1H",
+    "paper": "Nov 2021 P1H",
+    "session": "Nov 2021",
+    "code": "P1H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 21,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Nov2021_P2H",
+    "paper": "Nov 2021 P2H",
+    "session": "Nov 2021",
+    "code": "P2H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 25,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Nov2023_P1H",
+    "paper": "Nov 2023 P1H",
+    "session": "Nov 2023",
+    "code": "P1H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 29,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Nov2023_P2H",
+    "paper": "Nov 2023 P2H",
+    "session": "Nov 2023",
+    "code": "P2H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 29,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Nov2024_P1H",
+    "paper": "Nov 2024 P1H",
+    "session": "Nov 2024",
+    "code": "P1H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 31,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Nov2024_P2H",
+    "paper": "Nov 2024 P2H",
+    "session": "Nov 2024",
+    "code": "P2H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 31,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Nov2025_4WM1H",
+    "paper": "Nov 2025 4WM1H",
+    "session": "Nov2025",
+    "code": "4WM1H",
+    "isModular": true,
+    "modularUnit": "Unit 1",
+    "questionCount": 37,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Nov2025_4WM2H",
+    "paper": "Nov 2025 4WM2H",
+    "session": "Nov2025",
+    "code": "4WM2H",
+    "isModular": true,
+    "modularUnit": "Unit 2",
+    "questionCount": 33,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Nov2025_P1H",
+    "paper": "Nov 2025 P1H",
+    "session": "Nov 2025",
+    "code": "P1H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 37,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Nov2025_P2H",
+    "paper": "Nov 2025 P2H",
+    "session": "Nov 2025",
+    "code": "P2H",
+    "isModular": false,
+    "modularUnit": null,
+    "questionCount": 33,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Specimen_4WM1H",
+    "paper": "Specimen 4WM1H",
+    "session": "Specimen",
+    "code": "4WM1H",
+    "isModular": true,
+    "modularUnit": "Unit 1",
+    "questionCount": 27,
+    "hasSolutions": true
+  },
+  {
+    "paperSlug": "Specimen_4WM2H",
+    "paper": "Specimen 4WM2H",
+    "session": "Specimen",
+    "code": "4WM2H",
+    "isModular": true,
+    "modularUnit": "Unit 2",
+    "questionCount": 29,
+    "hasSolutions": true
   }
 ]

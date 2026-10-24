@@ -6,7 +6,7 @@
       "type": "topics",
       "path": "/edexcel-igcse/maths/linear/topics/",
       "title": "IGCSE Maths 4MA1 Past Paper Questions by Topic | Elite",
-      "questions": 1317
+      "questions": 1341
     },
     {
       "course": "linear",
@@ -26,7 +26,7 @@
       "topic": "Set Notation and Venn Diagrams",
       "num": "1.2",
       "notes": "downloads/Linear/VisualNotes/C1_T02_Sets_and_Venn_Diagrams/Sets_and_Venn_Diagrams_Visual_Notes.pdf",
-      "questions": 33
+      "questions": 34
     },
     {
       "course": "linear",
@@ -46,7 +46,7 @@
       "topic": "Powers, Roots and Standard Form",
       "num": "1.4",
       "notes": "downloads/Linear/VisualNotes/C1_T04_Powers_Roots_Standard_Form/Powers_Roots_Standard_Form_Visual_Notes.pdf",
-      "questions": 34
+      "questions": 35
     },
     {
       "course": "linear",
@@ -56,7 +56,7 @@
       "topic": "Fractions",
       "num": "1.5",
       "notes": "downloads/Linear/VisualNotes/C1_T05_Fractions/Fractions_Visual_Notes.pdf",
-      "questions": 17
+      "questions": 18
     },
     {
       "course": "linear",
@@ -96,7 +96,7 @@
       "topic": "Rounding, Estimation and Bounds",
       "num": "1.9",
       "notes": "downloads/Linear/VisualNotes/C1_T09_Rounding_Estimation_Bounds/Rounding_Estimation_Bounds_Visual_Notes.pdf",
-      "questions": 34
+      "questions": 35
     },
     {
       "course": "linear",
@@ -106,7 +106,7 @@
       "topic": "Surds",
       "num": "1.10",
       "notes": "downloads/Linear/VisualNotes/C1_T10_Surds/Surds_Visual_Notes.pdf",
-      "questions": 12
+      "questions": 13
     },
     {
       "course": "linear",
@@ -156,7 +156,7 @@
       "topic": "Algebraic Roots & Indices",
       "num": "2.2",
       "notes": "downloads/Linear/VisualNotes/C2_T02_Roots_and_Indices/Roots_and_Indices_Visual_Notes.pdf",
-      "questions": 47
+      "questions": 49
     },
     {
       "course": "linear",
@@ -176,7 +176,7 @@
       "topic": "Factorisation",
       "num": "2.4",
       "notes": "downloads/Linear/VisualNotes/C2_T04_Factorisation/Factorisation_Visual_Notes.pdf",
-      "questions": 22
+      "questions": 23
     },
     {
       "course": "linear",
@@ -186,7 +186,7 @@
       "topic": "Completing the Square",
       "num": "2.5",
       "notes": "downloads/Linear/VisualNotes/C2_T05_Completing_the_Square/Completing_the_Square_Visual_Notes.pdf",
-      "questions": 17
+      "questions": 18
     },
     {
       "course": "linear",
@@ -196,7 +196,7 @@
       "topic": "Algebraic Fractions",
       "num": "2.6",
       "notes": "downloads/Linear/VisualNotes/C2_T06_Algebraic_Fractions/Algebraic_Fractions_Visual_Notes.pdf",
-      "questions": 27
+      "questions": 28
     },
     {
       "course": "linear",
@@ -296,7 +296,7 @@
       "topic": "Linear Graphs y = mx + c",
       "num": "3.4",
       "notes": "downloads/Linear/VisualNotes/C3_T04_Linear_Graphs/Linear_Graphs_Visual_Notes.pdf",
-      "questions": 46
+      "questions": 48
     },
     {
       "course": "linear",
@@ -306,7 +306,7 @@
       "topic": "Graphs of Functions",
       "num": "3.5",
       "notes": "downloads/Linear/VisualNotes/C3_T05_Graphs_of_Functions/Graphs_of_Functions_Visual_Notes.pdf",
-      "questions": 30
+      "questions": 31
     },
     {
       "course": "linear",
@@ -346,7 +346,7 @@
       "topic": "Standard and Compound Units",
       "num": "4.1",
       "notes": "downloads/Linear/VisualNotes/C4_T01_Standard_Compound_Units/Standard_Compound_Units_Visual_Notes.pdf",
-      "questions": 41
+      "questions": 42
     },
     {
       "course": "linear",
@@ -386,7 +386,7 @@
       "topic": "Area and Perimeter",
       "num": "4.5",
       "notes": "downloads/Linear/VisualNotes/C4_T05_Area_Perimeter/Area_Perimeter_Visual_Notes.pdf",
-      "questions": 30
+      "questions": 31
     },
     {
       "course": "linear",
@@ -396,7 +396,7 @@
       "topic": "Circles, Arcs and Sectors",
       "num": "4.6",
       "notes": "downloads/Linear/VisualNotes/C4_T06_Circles_Arcs_Sectors/Circles_Arcs_Sectors_Visual_Notes.pdf",
-      "questions": 31
+      "questions": 32
     },
     {
       "course": "linear",
@@ -436,7 +436,7 @@
       "topic": "Right-Angled Triangles: Pythagoras and Trigonometry",
       "num": "4.10",
       "notes": "downloads/Linear/VisualNotes/C4_T10_Pythagoras_Trigonometry/Pythagoras_Trigonometry_Visual_Notes.pdf",
-      "questions": 35
+      "questions": 36
     },
     {
       "course": "linear",
@@ -446,7 +446,7 @@
       "topic": "Sine Rule, Cosine Rule and Area of a Triangle",
       "num": "4.11",
       "notes": "downloads/Linear/VisualNotes/C4_T11_Sine_Cosine_Rule/Sine_Cosine_Rule_Visual_Notes.pdf",
-      "questions": 20
+      "questions": 21
     },
     {
       "course": "linear",
@@ -456,7 +456,7 @@
       "topic": "3D Pythagoras and Trigonometry",
       "num": "4.12",
       "notes": "downloads/Linear/VisualNotes/C4_T12_3D_Pythagoras_Trigonometry/3D_Pythagoras_Trigonometry_Visual_Notes.pdf",
-      "questions": 18
+      "questions": 19
     },
     {
       "course": "linear",
@@ -496,7 +496,7 @@
       "topic": "Histograms",
       "num": "6.2",
       "notes": "downloads/Linear/VisualNotes/C6_T02_Histograms/Histograms_Visual_Notes.pdf",
-      "questions": 26
+      "questions": 27
     },
     {
       "course": "linear",
@@ -516,7 +516,7 @@
       "topic": "Probability Toolkit",
       "num": "6.4",
       "notes": "downloads/Linear/VisualNotes/C6_T04_Probability_Toolkit/Probability_Toolkit_Visual_Notes.pdf",
-      "questions": 40
+      "questions": 42
     },
     {
       "course": "linear",
@@ -526,7 +526,7 @@
       "topic": "Combined and Conditional Probability",
       "num": "6.6",
       "notes": "downloads/Linear/VisualNotes/C6_T06_Combined_Conditional_Probability/Combined_Conditional_Probability_Visual_Notes.pdf",
-      "questions": 33
+      "questions": 35
     },
     {
       "course": "wma11",
