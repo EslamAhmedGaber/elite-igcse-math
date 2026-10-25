@@ -5528,3 +5528,72 @@ body[data-page="daily"] .page.e27-daily { max-width: none; width: 100%; padding:
 @media (prefers-reduced-motion: reduce) {
   :root:root body .e27-course, :root:root body .e27-topic, :root:root body .e27-tile .arrow { transition: none; transform: none !important; }
 }
+
+/* 16x. Visual Lab spotlight (Modular): home "3D Lab" flag, course banner, topic "See it" chips.
+   The glow pulses slowly; it stays still for reduced-motion users. */
+@keyframes e27-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(226, 184, 79, .55); }
+  50% { box-shadow: 0 0 0 7px rgba(226, 184, 79, 0); }
+}
+@keyframes e27-blink { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
+.e27-labflag {
+  position: absolute; right: 14px; top: 16px; z-index: 1; display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  background: var(--e-navy); color: var(--e-gold); border: 1px solid var(--e-gold); border-radius: 999px; padding: 4px 11px;
+  animation: e27-glow 2.2s ease-in-out infinite;
+}
+.e27-labline {
+  align-self: flex-start; display: inline-flex; align-items: center; gap: 7px; margin-top: 4px;
+  font-size: 13px; font-weight: 700; color: var(--e-gold-ink); background: var(--e-gold-soft);
+  border: 1px solid rgba(226, 184, 79, .7); border-radius: 8px; padding: 4px 10px;
+}
+.e27-course .e27-labline i { background: var(--e-gold-ink); }
+.e27-labflag i, .e27-labline i, .e27-labspot-pill i, .e27-see i {
+  width: 7px; height: 7px; border-radius: 50%; background: var(--e-gold); flex: none; animation: e27-blink 1.4s ease-in-out infinite;
+}
+.e27-labspot {
+  position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px 28px; align-items: center;
+  margin: -26px 0 0; padding: 22px 24px; border-radius: 14px; overflow: hidden; z-index: 1;
+  background: linear-gradient(120deg, var(--e-navy) 0%, var(--e-navy-2) 70%, #1d3d72 100%); color: #fff;
+  border: 1px solid rgba(226, 184, 79, .6); animation: e27-glow 2.6s ease-in-out infinite;
+}
+.e27-labspot::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(105deg, transparent 35%, rgba(226, 184, 79, .14) 50%, transparent 65%);
+  background-size: 250% 100%; animation: e27-sheen 4.5s ease-in-out infinite;
+}
+@keyframes e27-sheen { 0% { background-position: 120% 0; } 60%, 100% { background-position: -120% 0; } }
+.e27-labspot > * { position: relative; z-index: 1; }
+.e27-labspot + .e27-today, .e27-labspot + .e27-stages { margin-top: 20px; }
+.e27-labspot-pill {
+  display: inline-flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase;
+  color: var(--e-gold); border: 1px solid rgba(226, 184, 79, .7); border-radius: 999px; padding: 3px 11px;
+}
+.e27-labspot h2 { margin: 10px 0 6px; font-size: 22px; line-height: 1.25; color: #fff; }
+.e27-labspot p { margin: 0; max-width: 62ch; color: rgba(255, 255, 255, .82); font-size: 15px; line-height: 1.5; }
+.e27-labspot-chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
+.e27-labspot-chip {
+  font-size: 13px; font-weight: 600; color: #fff; text-decoration: none; padding: 4px 10px; border-radius: 999px;
+  background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .22);
+}
+.e27-labspot-chip:hover { background: rgba(226, 184, 79, .2); border-color: var(--e-gold); color: #fff; }
+.e27-labspot-acts { display: flex; flex-direction: column; gap: 10px; }
+.e27-labspot-acts .e27-btn { justify-content: center; white-space: nowrap; }
+.e27-see {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px; white-space: nowrap;
+  font-size: 11.5px; font-weight: 800; padding: 3px 8px; border-radius: 6px;
+  background: var(--e-navy); color: var(--e-gold); border: 1px solid var(--e-gold); animation: e27-glow 2.2s ease-in-out infinite;
+}
+.e27-see:hover { background: var(--e-navy-2); color: var(--e-gold-hover); }
+.e27-course-page[data-course="unit1"] .e27-tile[data-module="interactive-lab"],
+.e27-course-page[data-course="unit2"] .e27-tile[data-module="interactive-lab"] { border-color: var(--e-gold); animation: e27-glow 2.6s ease-in-out infinite; }
+@media (max-width: 720px) {
+  .e27-labspot { grid-template-columns: 1fr; padding: 18px 16px; }
+  .e27-labspot h2 { font-size: 19px; }
+  .e27-labspot-acts { flex-direction: row; flex-wrap: wrap; }
+  .e27-labspot-acts .e27-btn { flex: 1 1 auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .e27-labflag, .e27-labspot, .e27-labspot::after, .e27-see, .e27-labflag i, .e27-labline i, .e27-labspot-pill i, .e27-see i,
+  .e27-course-page .e27-tile[data-module="interactive-lab"] { animation: none !important; }
+}

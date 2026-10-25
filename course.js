@@ -54,6 +54,55 @@
     ] },
   ];
 
+  // Modular: the hard topics have a moving model on the Elite IG Lab. Shown as a glowing banner
+  // under the hero and a "See it" chip on the matching topic in the roadmap.
+  const LAB = "https://eliteiglab.com/lab/";
+  const LAB_SPOTLIGHT = {
+    unit1: {
+      title: "See it in 3D: every 3D question, animated",
+      text: "All the 3D Pythagoras and trigonometry past-paper questions as models you can rotate, one step at a time. Plus live labs for the hard ideas in this unit.",
+      main: ["3d/", "Open 3D Studio"],
+      topics: { "11": ["quadratics#square", "Completing the square"], "25": ["3d/", "3D Pythagoras & trig", "3D"], "28": ["probability#tree", "Tree diagrams"] },
+    },
+    unit2: {
+      title: "See it move: the hard topics, animated",
+      text: "Circle theorems, vectors, transformations and more as live models you can drag and play, step by step. Plus the 3D Studio for every 3D question.",
+      main: ["circle-theorems", "Open Circle Theorems"],
+      topics: {
+        "09": ["quadratics#square", "Completing the square"], "16": ["functions", "Functions"], "18": ["inequalities", "Graphing inequalities"],
+        "19": ["graph-transformations", "Graph transformations"], "20": ["differentiation", "Differentiation"], "23": ["constructions", "Constructions"],
+        "24": ["circle-theorems", "Circle theorems"], "26": ["solids", "Volume & surface area", "3D"], "28": ["similar-shapes", "Similar shapes"],
+        "29": ["vectors", "Vectors"], "30": ["transformations", "Transformations"],
+      },
+    },
+  };
+
+  function labSpotlight(course) {
+    const spot = LAB_SPOTLIGHT[course.id];
+    if (!spot) return "";
+    const link = (path, text, cls) => `<a class="${cls}" data-module="interactive-lab" href="${esc(LAB + path)}" target="_blank" rel="noopener">${text}</a>`;
+    const chips = Object.values(spot.topics).map(([path, name]) => link(path, esc(name), "e27-labspot-chip")).join("");
+    const second = course.id === "unit1" ? ["index.html?course=unit1", "All visual labs"] : ["3d/", "3D Studio"];
+    return `<section class="e27-labspot" aria-labelledby="labSpotTitle">
+      <div class="e27-labspot-txt">
+        <span class="e27-labspot-pill"><i aria-hidden="true"></i>New &middot; Visual Lab</span>
+        <h2 id="labSpotTitle">${esc(spot.title)}</h2>
+        <p>${esc(spot.text)}</p>
+        <div class="e27-labspot-chips">${chips}</div>
+      </div>
+      <div class="e27-labspot-acts">
+        ${link(spot.main[0], `${esc(spot.main[1])} &rarr;`, "e27-btn e27-btn-gold")}
+        ${link(second[0], esc(second[1]), "e27-btn e27-btn-ghost")}
+      </div>
+    </section>`;
+  }
+
+  function topicLab(course, num) {
+    const hit = LAB_SPOTLIGHT[course.id]?.topics[String(num).padStart(2, "0")];
+    if (!hit) return "";
+    return `<a class="e27-see" data-module="interactive-lab" href="${esc(LAB + hit[0])}" target="_blank" rel="noopener" aria-label="See ${esc(hit[1])} in the Visual Lab"><i aria-hidden="true"></i>${hit[2] ? "See it in 3D" : "See it move"}</a>`;
+  }
+
   function esc(value) {
     return String(value == null ? "" : value)
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -127,6 +176,7 @@
             <span class="e27-topic-bar" data-topic-bar hidden><i></i></span>
           </span>
           <span class="e27-topic-acts">
+            ${topicLab(course, t.num)}
             ${t.href ? `<a class="pdf" data-module="notes" href="${esc(t.href)}" target="_blank" rel="noopener" aria-label="${esc(t.title)} notes PDF">PDF</a>` : ""}
             <a class="go" data-module="classified" data-topic-practice hidden aria-label="Practise ${esc(t.title)}">Practise</a>
           </span>
@@ -212,6 +262,7 @@
       </div>
     </section>
     <div class="e27-wrap">
+      ${labSpotlight(course)}
       <div class="e27-today" data-e27-today="course" data-course="${esc(course.id)}" role="region" aria-label="Today"></div>
       <div class="e27-stages">${stages.map((stage) => {
         const tiles = stage.tiles.map((t) => tile(t, links[t[0]])).join("");
