@@ -486,7 +486,9 @@
 
   function scheduleInvite() {
     const page = document.body?.dataset.page || "";
-    if (!state.configured || state.user || INVITE_SKIP_PAGES.has(page) || inviteSnoozed()) return;
+    // ?signin=1 (the "Sign in free" button on static pages) shows the card at once, even if snoozed.
+    const asked = /[?&]signin=1\b/.test(window.location.search);
+    if (!state.configured || state.user || (!asked && (INVITE_SKIP_PAGES.has(page) || inviteSnoozed()))) return;
     if (document.querySelector(".e27-invite") || window.matchMedia("print").matches) return;
     clearTimeout(inviteTimer);
     inviteTimer = setTimeout(() => {
@@ -517,7 +519,7 @@
       // Force a layout so the fade-in transition runs (rAF would stall in background tabs).
       void card.offsetHeight;
       card.classList.add("is-visible");
-    }, INVITE_DELAY_MS);
+    }, asked ? 300 : INVITE_DELAY_MS);
   }
 
   // ---------- Who uses the site: one small record per signed-in student ----------

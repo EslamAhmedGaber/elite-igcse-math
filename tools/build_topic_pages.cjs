@@ -163,7 +163,7 @@ function shell({course, route, title, description, canonical, crumbs, body, ld, 
 ${body}
 <div class="resource-author"><img src="/assets/Eslam4-home.jpg" width="56" height="56" alt="Dr Eslam Ahmed" loading="lazy"><div><a href="/about.html">Dr Eslam Ahmed</a><p>Elite Mathematics &middot; Questions classified by topic, solutions checked by Dr Eslam</p></div></div></main>
 <footer class="resource-footer"><div class="resource-wrap"><nav aria-label="All course resources">${Object.entries(seo.routes).map(([id, r]) => `<a href="${r.path}">${esc(id === 'linear' ? 'Linear' : r.name.replace('Edexcel IGCSE Maths ', '').replace('Edexcel IAL ', ''))}</a>`).join('')}</nav><p>Elite Mathematics &middot; <a href="/about.html">About</a> &middot; <a href="https://wa.me/201120009622">WhatsApp Dr Eslam</a></p></div></footer>
-<script src="/firebase-config.js" defer></script><script src="/topic-pages.js?v=20261024b" defer></script><script src="/wa-float.js?v=20261026a" defer></script></body></html>
+<script src="/firebase-config.js" defer></script><script src="/topic-pages.js?v=20261024b" defer></script><script src="/wa-float.js?v=20261026b" defer></script></body></html>
 `;
 }
 

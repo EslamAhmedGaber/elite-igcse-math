@@ -5597,3 +5597,6 @@ body[data-page="daily"] .page.e27-daily { max-width: none; width: 100%; padding:
   .e27-labflag, .e27-labspot, .e27-labspot::after, .e27-see, .e27-labflag i, .e27-labline i, .e27-labspot-pill i, .e27-see i,
   .e27-course-page .e27-tile[data-module="interactive-lab"] { animation: none !important; }
 }
+
+/* Sign-in card sits above the floating "Sign in free" + WhatsApp buttons (wa-float.js sets --elite-fab-space). */
+:root:root body .e27-invite { bottom: var(--elite-fab-space, 20px); }
