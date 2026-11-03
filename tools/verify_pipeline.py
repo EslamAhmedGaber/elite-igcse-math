@@ -157,6 +157,8 @@ ALLOWED_PUBLIC_SOLUTION_DIRS = {
     "downloads/IAL/WME01/Notes",
     # Owner-authored Unit 1 final revision pack (expected paper + mark scheme), public by request 2026-11-03.
     "downloads/Modular/Unit1_Final_Revision_Nov2026",
+    "downloads/Modular/Unit2_Final_Revision_Nov2026",
+    "downloads/Linear/Linear_Final_Revision_Nov2026",
 }
 
 ALLOWED_PUBLIC_SOLUTION_FILES = {

@@ -92,12 +92,34 @@
         ["Unit1_Expected_Paper_MarkScheme", "Exam Solutions", "Mark scheme with every step and mark", "10 pages"],
       ],
     },
+    unit2: {
+      title: "Unit 2 Final Revision: Expected Exam + Revision Sheet",
+      text: "Written for the Unit 2 exam: the 12 ideas that come up every year, 20 must-do questions, and a full 100-mark expected paper in the real exam layout with a step-by-step mark scheme.",
+      dir: "downloads/Modular/Unit2_Final_Revision_Nov2026/",
+      items: [
+        ["Unit2_Revision_Sheet", "Revision Sheet", "One idea + one worked example per page", "13 pages"],
+        ["Unit2_Top20_Questions", "Top 20 Questions", "Must-do questions, full solutions at the back", "25 pages"],
+        ["Unit2_Expected_Paper", "Expected Exam", "26 questions · 100 marks · 2 hours", "17 pages", "exam"],
+        ["Unit2_Expected_Paper_MarkScheme", "Exam Solutions", "Mark scheme with every step and mark", "9 pages"],
+      ],
+    },
+    linear: {
+      title: "4MA1 Final Revision: Expected Exam + Revision Sheet",
+      text: "Written for the 4MA1 Higher exam: the 16 ideas that come up every year, 20 must-do questions, and a full 100-mark expected paper in the real exam layout with a step-by-step mark scheme.",
+      dir: "downloads/Linear/Linear_Final_Revision_Nov2026/",
+      items: [
+        ["Linear_Revision_Sheet", "Revision Sheet", "One idea + one worked example per page", "17 pages"],
+        ["Linear_Top20_Questions", "Top 20 Questions", "Must-do questions, full solutions at the back", "26 pages"],
+        ["Linear_Expected_Paper", "Expected Exam", "26 questions · 100 marks · 2 hours", "15 pages", "exam"],
+        ["Linear_Expected_Paper_MarkScheme", "Exam Solutions", "Mark scheme with every step and mark", "8 pages"],
+      ],
+    },
   };
 
   function finalRevision(course) {
     const pack = FINAL_REVISION[course.id];
     if (!pack) return "";
-    const urgent = new Date() < new Date(`${pack.urgentUntil}T00:00:00`);
+    const urgent = Boolean(pack.urgentUntil) && new Date() < new Date(`${pack.urgentUntil}T00:00:00`);
     const cards = pack.items.map(([file, title, detail, pages, kind]) => `
       <a class="e27-frev-card${kind === "exam" ? " is-exam" : ""}" data-module="final-revision" href="${esc(pack.dir + file)}.pdf?v=20261103" target="_blank" rel="noopener">
         <span class="e27-frev-cover"><img src="assets/final-revision/${esc(file)}.jpg?v=20261103" alt="" loading="lazy" width="446" height="631"></span>
@@ -105,7 +127,7 @@
       </a>`).join("");
     return `<section class="e27-frev" aria-labelledby="frevTitle">
       <div class="e27-frev-top">
-        <span class="e27-frev-flash"><i aria-hidden="true"></i>${urgent ? "New &middot; Exam tomorrow" : "New &middot; Final revision"}</span>
+        <span class="e27-frev-flash"><i aria-hidden="true"></i>${urgent ? "New &middot; Exam tomorrow" : "New &middot; Expected exam + revision"}</span>
         <h2 id="frevTitle">${esc(pack.title)}</h2>
         <p>${esc(pack.text)}</p>
       </div>
