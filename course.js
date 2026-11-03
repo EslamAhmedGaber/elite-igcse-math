@@ -77,6 +77,42 @@
     },
   };
 
+  // Final revision pack: a flashing banner at the very top of the course page, four big
+  // cover cards that open the PDFs. "urgent" shows the "Exam tomorrow" flash until that date.
+  const FINAL_REVISION = {
+    unit1: {
+      urgentUntil: "2026-11-05",
+      title: "Unit 1 Final Revision: Expected Exam + Revision Sheet",
+      text: "Written for the November 2026 Unit 1 exam: the ideas that come up every year, 20 must-do questions, and a full 100-mark expected paper in the real exam layout with a step-by-step mark scheme.",
+      dir: "downloads/Modular/Unit1_Final_Revision_Nov2026/",
+      items: [
+        ["Unit1_Revision_Sheet", "Revision Sheet", "One idea + one worked example per page", "15 pages"],
+        ["Unit1_Top20_Questions", "Top 20 Questions", "Must-do questions, full solutions at the back", "27 pages"],
+        ["Unit1_Expected_Paper", "Expected Exam", "26 questions · 100 marks · 2 hours", "16 pages", "exam"],
+        ["Unit1_Expected_Paper_MarkScheme", "Exam Solutions", "Mark scheme with every step and mark", "10 pages"],
+      ],
+    },
+  };
+
+  function finalRevision(course) {
+    const pack = FINAL_REVISION[course.id];
+    if (!pack) return "";
+    const urgent = new Date() < new Date(`${pack.urgentUntil}T00:00:00`);
+    const cards = pack.items.map(([file, title, detail, pages, kind]) => `
+      <a class="e27-frev-card${kind === "exam" ? " is-exam" : ""}" data-module="final-revision" href="${esc(pack.dir + file)}.pdf?v=20261103" target="_blank" rel="noopener">
+        <span class="e27-frev-cover"><img src="assets/final-revision/${esc(file)}.jpg?v=20261103" alt="" loading="lazy" width="446" height="631"></span>
+        <span class="e27-frev-meta"><strong>${esc(title)}</strong><small>${esc(detail)}</small><em>PDF &middot; ${esc(pages)} &middot; Open &rarr;</em></span>
+      </a>`).join("");
+    return `<section class="e27-frev" aria-labelledby="frevTitle">
+      <div class="e27-frev-top">
+        <span class="e27-frev-flash"><i aria-hidden="true"></i>${urgent ? "New &middot; Exam tomorrow" : "New &middot; Final revision"}</span>
+        <h2 id="frevTitle">${esc(pack.title)}</h2>
+        <p>${esc(pack.text)}</p>
+      </div>
+      <div class="e27-frev-grid">${cards}</div>
+    </section>`;
+  }
+
   function labSpotlight(course) {
     const spot = LAB_SPOTLIGHT[course.id];
     if (!spot) return "";
@@ -262,6 +298,7 @@
       </div>
     </section>
     <div class="e27-wrap">
+      ${finalRevision(course)}
       ${labSpotlight(course)}
       <div class="e27-today" data-e27-today="course" data-course="${esc(course.id)}" role="region" aria-label="Today"></div>
       <div class="e27-stages">${stages.map((stage) => {

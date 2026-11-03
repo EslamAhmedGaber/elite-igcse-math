@@ -5600,3 +5600,60 @@ body[data-page="daily"] .page.e27-daily { max-width: none; width: 100%; padding:
 
 /* Sign-in card sits above the floating "Sign in free" + WhatsApp buttons (wa-float.js sets --elite-fab-space). */
 :root:root body .e27-invite { bottom: var(--elite-fab-space, 20px); }
+
+/* Final revision pack (course.js FINAL_REVISION): flashing banner at the top of the course page. */
+.e27-frev {
+  position: relative; margin: -26px 0 0; padding: 22px 24px 24px; border-radius: 14px; overflow: hidden; z-index: 2;
+  background: linear-gradient(120deg, var(--e-navy) 0%, var(--e-navy-2) 70%, #1d3d72 100%); color: #fff;
+  border: 2px solid var(--e-gold); animation: e27-frev-pulse 1.6s ease-in-out infinite;
+}
+.e27-frev::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(105deg, transparent 35%, rgba(226, 184, 79, .16) 50%, transparent 65%);
+  background-size: 250% 100%; animation: e27-sheen 3.8s ease-in-out infinite;
+}
+.e27-frev > * { position: relative; z-index: 1; }
+.e27-frev + .e27-labspot { margin-top: 20px; }
+.e27-frev-flash {
+  display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--e-navy); background: var(--e-gold); border-radius: 999px; padding: 5px 14px;
+  animation: e27-frev-blink 1s steps(1, end) infinite;
+}
+.e27-frev-flash i { width: 8px; height: 8px; border-radius: 50%; background: #c0392b; flex: none; box-shadow: 0 0 0 3px rgba(192, 57, 43, .25); }
+@keyframes e27-frev-blink { 0%, 100% { background: var(--e-gold); color: var(--e-navy); } 50% { background: #fff; color: #c0392b; } }
+@keyframes e27-frev-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(226, 184, 79, .55), 0 10px 30px rgba(11, 27, 54, .25); }
+  50% { box-shadow: 0 0 0 7px rgba(226, 184, 79, 0), 0 10px 30px rgba(11, 27, 54, .25); }
+}
+.e27-frev h2 { margin: 12px 0 6px; font-size: 24px; line-height: 1.25; color: #fff; }
+.e27-frev p { margin: 0; max-width: 72ch; color: rgba(255, 255, 255, .84); font-size: 15px; line-height: 1.5; }
+.e27-frev-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
+.e27-frev-card {
+  display: flex; flex-direction: column; text-decoration: none; color: var(--e-navy); background: #fff;
+  border-radius: 10px; overflow: hidden; border: 2px solid transparent; transition: transform .15s ease, border-color .15s ease;
+}
+.e27-frev-card:hover, .e27-frev-card:focus-visible { transform: translateY(-3px); border-color: var(--e-gold); }
+.e27-frev-card.is-exam { border-color: var(--e-gold); }
+.e27-frev-cover { display: block; aspect-ratio: 446 / 300; overflow: hidden; background: #eef1f6; border-bottom: 1px solid #e3e7ee; }
+.e27-frev-cover img { display: block; width: 100%; height: auto; }
+.e27-frev-meta { display: flex; flex-direction: column; gap: 3px; padding: 10px 12px 12px; }
+.e27-frev-meta strong { font-size: 16px; line-height: 1.25; }
+.e27-frev-meta small { font-size: 13px; color: #4a5568; line-height: 1.35; }
+.e27-frev-meta em { font-style: normal; font-size: 12.5px; font-weight: 800; color: var(--e-gold-ink); margin-top: 4px; }
+@media (max-width: 860px) { .e27-frev-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 720px) {
+  .e27-frev { padding: 18px 14px 16px; }
+  .e27-frev h2 { font-size: 19px; }
+  .e27-frev-grid { gap: 10px; }
+  .e27-frev-meta strong { font-size: 14.5px; }
+}
+/* Home: flashing flag on the course card */
+.e27-newflag {
+  position: absolute; right: 14px; top: 16px; z-index: 2; display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; border-radius: 999px; padding: 4px 11px;
+  border: 1px solid var(--e-gold); animation: e27-frev-blink 1s steps(1, end) infinite;
+}
+.e27-newflag i { width: 7px; height: 7px; border-radius: 50%; background: #c0392b; flex: none; }
+@media (prefers-reduced-motion: reduce) {
+  .e27-frev, .e27-frev::after, .e27-frev-flash, .e27-newflag { animation: none !important; }
+}
