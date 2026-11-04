@@ -93,14 +93,16 @@
       ],
     },
     unit2: {
-      title: "Unit 2 Final Revision: Expected Exam + Revision Sheet",
-      text: "Written for the Unit 2 exam: the 12 ideas that come up every year, 20 must-do questions, and a full 100-mark expected paper in the real exam layout with a step-by-step mark scheme.",
+      title: "Unit 2 Final Revision: 2 Expected Exams + Revision Sheet",
+      text: "Written for the Unit 2 exam: the 12 ideas that come up every year, 20 must-do questions, and two full 100-mark expected papers in the real exam layout (Exam 2 has all-new ideas), each with a step-by-step mark scheme.",
       dir: "downloads/Modular/Unit2_Final_Revision_Nov2026/",
       items: [
         ["Unit2_Revision_Sheet", "Revision Sheet", "One idea + one worked example per page", "13 pages"],
         ["Unit2_Top20_Questions", "Top 20 Questions", "Must-do questions, full solutions at the back", "25 pages"],
-        ["Unit2_Expected_Paper", "Expected Exam", "26 questions · 100 marks · 2 hours", "17 pages", "exam"],
-        ["Unit2_Expected_Paper_MarkScheme", "Exam Solutions", "Mark scheme with every step and mark", "9 pages"],
+        ["Unit2_Expected_Paper", "Expected Exam 1", "26 questions · 100 marks · 2 hours", "17 pages", "exam"],
+        ["Unit2_Expected_Paper_MarkScheme", "Exam 1 Solutions", "Mark scheme with every step and mark", "9 pages"],
+        ["Unit2_Expected_Paper_2", "Expected Exam 2", "New ideas · 26 questions · 100 marks · 2 hours", "17 pages", "exam"],
+        ["Unit2_Expected_Paper_2_MarkScheme", "Exam 2 Solutions", "Mark scheme with every step and mark", "10 pages"],
       ],
     },
     linear: {
