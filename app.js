@@ -1477,6 +1477,7 @@ function practicePrintSpec(printable) {
       : "Edexcel IGCSE Mathematics A · 4MA1 Linear",
     courseCode: modular ? "4WM" : "4MA1",
     title: "Classified Practice",
+    cover: false,
     durationMinutes: Math.max(10, Math.round((marks * 1.2) / 5) * 5),
     questions: printable.map((question, index) => ({
       id: question.id,
@@ -1485,6 +1486,8 @@ function practicePrintSpec(printable) {
       topic: question.topic || "",
       sourceRef: `${question.paper} Q${question.question}`,
       image: question.image,
+      ocr: question.question_text || "",
+      sourceNumber: Number(question.question || 0),
       solution: solutionData[question.id] || null
     })),
     resolveSolutions: () => ensureFullSolutions()

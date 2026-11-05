@@ -1671,6 +1671,8 @@
         topic: questionTopicLabel(question),
         sourceRef: question.paper ? `${question.paper} Q${question.question}` : "",
         image: question.image || "",
+        ocr: question.image ? question.question_text || "" : "",
+        sourceNumber: Number(question.question || 0),
         text: question.image ? "" : question.question_text || "",
         options: question.image ? [] : question.options || [],
         solution: solutions[question.id] || null
@@ -2940,6 +2942,8 @@
     window.ElitePaperPrint.open({
       ...spec,
       title: `${spec.title} · Answer key`,
+      cover: false,
+      questionTotals: false,
       copyLabel: "Answer key",
       instructions: "Final answers for quick marking, numbered like the paper. Use the worked solutions for method marks.",
       fileSuffix: "",

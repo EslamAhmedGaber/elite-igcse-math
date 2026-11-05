@@ -25,6 +25,7 @@ const BROWSER = args.find((arg) => arg === "chrome" || arg === "edge") || "chrom
 const PDF_DIR = args.includes("--pdf-dir") ? path.resolve(args[args.indexOf("--pdf-dir") + 1]) : null;
 const QUICK = args.includes("--quick");
 const SKIP_NATIVE = args.includes("--skip-native");
+const PRINT_ONLY = args.includes("--print-only");
 const COURSE = args.includes("--course") ? args[args.indexOf("--course") + 1] : null;
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -335,10 +336,11 @@ async function printChecks(tab, twin, base, course, { count, variants }) {
       const doc = ElitePaperPrint.frame().contentDocument;
       return {
         html: "<!doctype html>" + doc.documentElement.outerHTML,
-        numbers: [...doc.querySelectorAll(".q-head:not(.is-continued) .q-num")].map((node) => node.textContent.trim()),
-        marks: [...doc.querySelectorAll(".q-head:not(.is-continued) .q-marks")].map((node) => node.textContent.trim()),
+        numbers: [...doc.querySelectorAll("#sheets .q-num")].map((node) => node.textContent.trim()),
+        marks: [...doc.querySelectorAll("#sheets .ig-total .q-marks")].map((node) => node.textContent.trim()),
         solutions: [...doc.querySelectorAll(".s-head strong")].map((node) => node.textContent.trim()),
-        footers: [...doc.querySelectorAll(".foot-page")].map((node) => node.textContent.trim())
+        footers: [...doc.querySelectorAll(".foot-page")].map((node) => node.textContent.trim()),
+        codes: [...doc.querySelectorAll(".foot-code b")].map((node) => node.textContent.trim())
       };
     })()`);
     const label = `${course.label} ${variant.name}`;
@@ -350,7 +352,8 @@ async function printChecks(tab, twin, base, course, { count, variants }) {
     assert.deepEqual(report.sheetSizeMm, { width: 210, height: 297 }, `${label}: sheets are 210 x 297 mm`);
     assert.equal(details.numbers.length, count, `${label}: every question appears once`);
     assert.deepEqual(details.numbers, Array.from({ length: count }, (_, index) => String(index + 1)), `${label}: questions numbered 1..n in order`);
-    assert.equal(details.footers.at(-1), `Page ${report.pages} of ${report.pages}`, `${label}: page numbering`);
+    assert.equal(details.footers.at(-1), String(report.pages), `${label}: page numbering`);
+    assert.ok(details.codes.length === report.pages - 1 && details.codes.every((code) => code === report.paperCode), `${label}: test code at the foot of every inner page`);
     if (variant.options.version === "solutions") {
       assert.deepEqual(details.solutions, details.numbers.map((n) => `Solution ${n}`), `${label}: solutions match question numbering`);
     }
@@ -460,14 +463,16 @@ async function main() {
   try {
     const courses = COURSES.filter(course => !COURSE || course.key === COURSE);
     assert.ok(courses.length, "Requested course exists");
-    for (const course of courses) {
-      await selectionChecks(tab, server.base, course);
-      console.log(`[${BROWSER}] selection ok: ${course.label}`);
+    if (!PRINT_ONLY) {
+      for (const course of courses) {
+        await selectionChecks(tab, server.base, course);
+        console.log(`[${BROWSER}] selection ok: ${course.label}`);
+      }
+      await levelMixChecks(tab, server.base);
+      console.log(`[${BROWSER}] level mix ok`);
+      await swapAndLinkChecks(tab, server.base);
+      console.log(`[${BROWSER}] swap + shared link ok`);
     }
-    await levelMixChecks(tab, server.base);
-    console.log(`[${BROWSER}] level mix ok`);
-    await swapAndLinkChecks(tab, server.base);
-    console.log(`[${BROWSER}] swap + shared link ok`);
     for (const course of courses) {
       const variants = QUICK ? VARIANTS.slice(0, 2) : VARIANTS;
       const rows = await printChecks(tab, twin, server.base, course, { count: 10, variants });

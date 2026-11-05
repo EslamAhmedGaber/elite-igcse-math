@@ -1,25 +1,35 @@
 /* ==========================================================================
    paper-print.js - Elite Mathematics A4 paper engine
-   One print path for every course (Linear, Modular, WMA11, WMA12, WME01,
-   Baccalaureate) and every entry point (Random Mock, Build Test, Revision
-   Book, Saved Tests, Classified selection, course hubs).
+   One print path for every course (Linear, Modular, WMA11, WMA12, WMA13,
+   WME01, Baccalaureate) and every entry point (Random Mock, Build Test,
+   Revision Book, Saved Tests, Classified selection, course hubs).
+
+   Every paper is printed in the Elite exam-paper design: an International
+   GCSE / IAL style cover (candidate boxes, instructions, paper reference),
+   the official formulae sheet where the real paper has one, "DO NOT WRITE IN
+   THIS AREA" margins, and the paper's test code at the foot of every page.
 
    How it works
    1. The paper is rendered inside an isolated iframe that loads ONLY
       paper-print.css. Screen stylesheets never reach the printed page.
-   2. Every block (question header, question image, working space, solution
-      step) is measured at the exact A4 content width, then packed into fixed
+   2. Every block (question image, working space, total line, solution step)
+      is measured at the exact A4 content width, then packed into fixed
       210 x 297 mm sheets. Nothing depends on the browser's page-break guesses.
-   3. Question images taller than the space left are cut at a blank row found
+   3. Question crops come from real papers, so each one still shows its
+      original number and "(Total for Question n is m marks)". The pixels are
+      read to find both; the old number is covered with the mock's own number
+      and the old total line is replaced by a new one, so the paper reads
+      1, 2, 3 ... like a real script. Working space goes above the answer line.
+   4. Question images taller than the space left are cut at a blank row found
       by scanning the pixels, so a line of text, an equation or a diagram is
       never sliced. Leftover space on a sheet becomes extra working space.
-   4. Print uses the prepared frame. Download PDF renders those same sheets
+   5. Print uses the prepared frame. Download PDF renders those same sheets
       one at a time, independently of the browser's print-preview service.
    ========================================================================== */
 (function (root) {
   "use strict";
 
-  const VERSION = "20261022a";
+  const VERSION = "20261104a";
   const MM = 96 / 25.4;
   const SCRIPT_SRC = document.currentScript?.src || "";
   const assetUrl = (name) => new URL(`${name}?v=${VERSION}`, SCRIPT_SRC || document.baseURI).href;
@@ -34,10 +44,24 @@
   const FONT_TIMEOUT_MS = 5000;
   const MATH_TIMEOUT_MS = 25000;
   const SAFETY_PX = 2 * MM;
-  /* Past-paper crops are shown at their original printed size (about 88% of
-     the 182 mm content width), not blown up to fill the page. */
-  const IMAGE_SCALE = 0.88;
+  /* Past-paper crops are shown at about their original printed size (95% of
+     the 166 mm column between the "do not write" margins), not blown up. */
+  const IMAGE_SCALE = 0.95;
   const RULE_PITCH_MM = 8;
+  const FORMULAE_IMAGE = assetUrl("assets/print/igcse-formulae-higher.png");
+  const BRAND = { name: "Elite IGCSE Academy", author: "Dr Eslam Ahmed", phone: "01120009622", site: "eliteigcse.com" };
+
+  /* What the cover says for each course (matched on the spec's course code). */
+  const COURSES = [
+    { test: /^4MA1/i, family: "igcse", level: "International GCSE", subject: "Mathematics A", route: "LINEAR · 4MA1", tier: "Higher Tier", calculator: true, formulae: "igcse" },
+    { test: /^4WM/i, family: "igcse", level: "International GCSE", subject: "Mathematics A", route: "MODULAR", tier: "Higher Tier", calculator: true, formulae: "igcse" },
+    { test: /^WMA11/i, family: "ial", level: "International Advanced Level", subject: "Pure Mathematics P1", route: "WMA11", calculator: false },
+    { test: /^WMA12/i, family: "ial", level: "International Advanced Level", subject: "Pure Mathematics P2", route: "WMA12", calculator: true },
+    { test: /^WMA13/i, family: "ial", level: "International Advanced Level", subject: "Pure Mathematics P3", route: "WMA13", calculator: true },
+    { test: /^WME01/i, family: "ial", level: "International Advanced Level", subject: "Mechanics M1", route: "WME01", calculator: true },
+    { test: /^EB/i, family: "other", level: "Egyptian Baccalaureate", subject: "Mathematics", route: "", calculator: true }
+  ];
+  const DEFAULT_COURSE = { family: "other", level: "Mathematics", subject: "Mathematics", route: "", calculator: true };
   const DEFAULT_HINT = "A4 portrait, 210 x 297 mm. Download PDF saves directly. For Print, use 100% scale and turn off browser headers and footers.";
 
   const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
@@ -55,7 +79,7 @@
     placement: "end",
     layout: "standard",
     ink: "colour",
-    lines: true
+    lines: false
   });
 
   /* ---------------------------------------------------------------- utils */
@@ -124,55 +148,196 @@
     return opts.version === "solutions" ? "With worked solutions" : "Student copy";
   }
 
-  function mastheadHtml(spec, opts) {
-    const totalMarks = spec.questions.reduce((sum, item) => sum + Number(item.marks || 0), 0);
+  function courseFor(spec) {
+    const code = String(spec.courseCode || "");
+    const found = COURSES.find((course) => course.test.test(code)) || DEFAULT_COURSE;
+    const unit = (String(spec.courseLabel || "").match(/Unit\s*\d+/i) || [""])[0].replace(/\s+/, " ");
+    return { ...found, unit };
+  }
+
+  function hashCode(text) {
+    let hash = 2166136261;
+    for (let i = 0; i < text.length; i += 1) {
+      hash ^= text.charCodeAt(i);
+      hash = Math.imul(hash, 16777619);
+    }
+    return (hash >>> 0).toString(36).toUpperCase().padStart(6, "0").slice(-6);
+  }
+
+  // Every printed paper carries a code at the foot of each page. Generated
+  // tests use their own test code; other prints get one from their questions.
+  function paperCode(spec) {
+    if (spec.testCode) return String(spec.testCode).toUpperCase();
+    const ids = (spec.questions || []).map((item) => item.id || item.image || "").join("|");
+    return `${String(spec.courseCode || "ELT").toUpperCase()}-${hashCode(ids)}`;
+  }
+
+  function totalMarksOf(spec) {
+    return spec.questions.reduce((sum, item) => sum + Number(item.marks || 0), 0);
+  }
+
+  function durationText(minutes) {
+    const total = Math.round(Number(minutes) || 0);
+    if (!total) return "";
+    const hours = Math.floor(total / 60);
+    const mins = total % 60;
+    return [hours ? plural(hours, "hour") : "", mins ? plural(mins, "minute") : ""].filter(Boolean).join(" ");
+  }
+
+  const WORDS = ["ZERO", "ONE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE", "TEN", "ELEVEN", "TWELVE",
+    "THIRTEEN", "FOURTEEN", "FIFTEEN", "SIXTEEN", "SEVENTEEN", "EIGHTEEN", "NINETEEN"];
+  const TENS = ["", "", "TWENTY", "THIRTY", "FORTY", "FIFTY", "SIXTY", "SEVENTY", "EIGHTY", "NINETY"];
+  function numberWords(n) {
+    if (n < 20) return WORDS[n];
+    if (n < 100) return `${TENS[Math.floor(n / 10)]}${n % 10 ? ` ${WORDS[n % 10]}` : ""}`;
+    return String(n);
+  }
+
+  function totalLineText(number, marks) {
+    return `(Total for Question ${number} is ${plural(marks, "mark")})`;
+  }
+
+  function logoHtml(extra = "") {
+    return `<span class="ig-logo${extra ? ` ${extra}` : ""}" aria-hidden="true"><b>E</b></span>`;
+  }
+
+  // A decorative bar code made from the test code, like the one on a real script.
+  function barcodeHtml(code) {
+    let seed = parseInt(hashCode(code), 36) || 7;
+    const bars = [];
+    for (let i = 0; i < 30; i += 1) {
+      seed = (Math.imul(seed, 1103515245) + 12345) >>> 0;
+      const width = [0.22, 0.45, 0.7, 0.22, 0.95][seed % 5];
+      const gap = [0.28, 0.45, 0.7][(seed >>> 9) % 3];
+      bars.push(`<i style="width:${width}mm;margin-right:${gap}mm"></i>`);
+    }
+    return `<span class="ig-barcode"><span class="ig-bars">${bars.join("")}</span><em>*${escapeHtml(code)}*</em></span>`;
+  }
+
+  function calculatorHtml(allowed) {
+    const keys = [];
+    for (let row = 0; row < 4; row += 1) {
+      for (let col = 0; col < 4; col += 1) keys.push(`<rect x="${5 + col * 7.5}" y="${19 + row * 6.2}" width="5.6" height="4.2" rx="0.8"/>`);
+    }
+    const cross = allowed ? "" : `<path d="M2 2 L38 46 M38 2 L2 46" stroke="#b3261e" stroke-width="3" stroke-linecap="round"/>`;
+    return `<div class="cv-calc"><svg viewBox="0 0 40 48" width="40" height="48" aria-hidden="true">
+      <rect x="1.5" y="1.5" width="37" height="45" rx="3" fill="#ffffff" stroke="#3c4250" stroke-width="2"/>
+      <rect x="5" y="5.5" width="30" height="9" rx="1" fill="#d9dee6" stroke="#3c4250" stroke-width="1.2"/>
+      <g fill="#3c4250">${keys.join("")}</g>${cross}</svg>
+      <small>${allowed ? "Calculator allowed" : "No calculator"}</small></div>`;
+  }
+
+  function coverLists(info, spec, opts, total, withFormulae) {
+    const count = spec.questions.length;
+    const calc = info.calculator;
+    if (info.family === "ial") {
+      return {
+        mustHave: `Mathematical Formulae and Statistical Tables (Yellow)${calc ? ", calculator" : ""}.`,
+        instructions: [
+          "Use <b>black</b> ink or ball-point pen.",
+          "If pencil is used for diagrams/sketches/graphs it must be dark (HB or B).",
+          "<b>Fill in the boxes</b> at the top of this page with your name, group and candidate number.",
+          "Answer <b>all</b> questions and ensure that your answers to parts of questions are clearly labelled.",
+          "Answer the questions in the spaces provided &ndash; <i>there may be more space than you need.</i>",
+          "You should show sufficient working to make your methods clear. Answers without working may not gain full credit.",
+          calc ? "Inexact answers should be given to three significant figures unless otherwise stated." : "<b>Calculators must not be used</b> for this paper."
+        ],
+        information: [
+          "A booklet &lsquo;Mathematical Formulae and Statistical Tables&rsquo; is provided.",
+          `There are <b>${count}</b> questions in this paper. The total mark for this paper is <b>${total}</b>.`,
+          "The marks for <b>each</b> question are shown in brackets &ndash; <i>use this as a guide as to how much time to spend on each question.</i>"
+        ],
+        advice: ["Read each question carefully before you start to answer it.", "Try to answer every question.", "Check your answers if you have time at the end."]
+      };
+    }
+    return {
+      mustHave: info.family === "igcse"
+        ? "Ruler graduated in centimetres and millimetres, protractor, pair of compasses, pen, HB pencil, eraser, calculator. Tracing paper may be used."
+        : `Pen, pencil, ruler, eraser${calc ? ", calculator" : ""}.`,
+      instructions: [
+        "Use <b>black</b> ink or ball-point pen.",
+        "<b>Fill in the boxes</b> at the top of this page with your name, group and candidate number.",
+        "Answer <b>all</b> questions.",
+        "Without sufficient working, correct answers may be awarded no marks.",
+        "Answer the questions in the spaces provided &ndash; <i>there may be more space than you need.</i>",
+        calc ? "<b>Calculators may be used.</b>" : "<b>Calculators must not be used.</b>",
+        withFormulae ? "You must <b>NOT</b> write anything on the formulae page. Anything you write on the formulae page will gain <b>NO</b> credit." : ""
+      ].filter(Boolean),
+      information: [
+        `The total mark for this paper is <b>${total}</b>.`,
+        `There are <b>${count}</b> questions in this paper.`,
+        "The marks for <b>each</b> question are shown in brackets &ndash; <i>use this as a guide as to how much time to spend on each question.</i>"
+      ],
+      advice: ["Read each question carefully before you start to answer it.", "Check your answers if you have time at the end."]
+    };
+  }
+
+  function coverHtml(spec, opts, ctx) {
+    const { info, code, total, withFormulae } = ctx;
+    const lists = coverLists(info, spec, opts, total, withFormulae);
+    const listHtml = (items) => `<ul>${items.map((item) => `<li>${item}</li>`).join("")}</ul>`;
+    const route = [info.route, info.unit ? info.unit.toUpperCase() : ""].filter(Boolean).join(" · ");
+    const time = durationText(spec.durationMinutes);
     const solutionsCopy = opts.version === "solutions";
-    const instructions = spec.instructions ? spec.instructions : solutionsCopy
-      ? opts.placement === "inline"
-        ? "Each worked solution follows its question. Question numbers, marks and order match the student copy exactly."
-        : "The questions match the student copy page for page. Worked solutions follow in a separate section, numbered to match."
-      : opts.layout === "compact"
-        ? "Answer every question on separate paper. Show clear working; the marks for each question are shown beside it."
-        : "Answer every question in the space provided. Show clear working; the marks for each question are shown beside it.";
-    return `<header class="masthead">
-      <div class="brand-row">
-        <div>
-          <span class="wordmark">ELITE MATHEMATICS</span>
-          <span class="brand-by">Dr Eslam Ahmed</span>
-        </div>
-        <div class="brand-side">
-          <span class="copy-badge${solutionsCopy ? " is-solutions" : ""}">${escapeHtml(copyLabel(opts, spec))}</span>
-          <span class="brand-url">eliteigcse.com</span>
-        </div>
+    const boxes = (n) => `<span class="cv-cells">${"<i></i>".repeat(n)}</span>`;
+    return `<section class="sheet is-cover">
+      <p class="cv-check">Please check the examination details below before entering your candidate information</p>
+      <div class="cv-cand"><div class="cv-field is-wide"><span>Candidate surname</span></div><div class="cv-field"><span>Other names</span></div></div>
+      <div class="cv-nums"><div><span>Group</span>${boxes(4)}</div><div><span>Candidate Number</span>${boxes(4)}</div></div>
+      <div class="cv-brandline"><strong>${BRAND.name}</strong><i aria-hidden="true"></i><span>${escapeHtml(info.level)}</span></div>
+      <div class="cv-title"><strong>${escapeHtml(spec.title || "Mathematics Test")}</strong><span>${escapeHtml(new Date().toLocaleDateString("en-GB", { month: "long", year: "numeric" }))}</span></div>
+      <div class="cv-timeref">
+        <div class="cv-time">${time ? `Time <b>${escapeHtml(time)}</b>` : ""}</div>
+        <div class="cv-ref"><span>Paper<br>reference</span><b>${escapeHtml(code)}</b></div>
       </div>
-      <p class="paper-course">${escapeHtml(spec.courseLabel || "")}</p>
-      <h1 class="paper-title">${escapeHtml(spec.title || "Mathematics Test")}</h1>
-      <div class="paper-facts">
-        <div><span>Time</span><strong>${spec.durationMinutes ? `${Math.round(spec.durationMinutes)} minutes` : "Untimed"}</strong></div>
-        <div><span>Total marks</span><strong>${totalMarks}</strong></div>
-        <div><span>Questions</span><strong>${spec.questions.length}</strong></div>
-        <div><span>Test code</span><strong>${escapeHtml(spec.testCode || "-")}</strong></div>
+      <div class="cv-main">
+        <div><h1>${escapeHtml(info.subject)}</h1>${route ? `<p class="cv-route">${escapeHtml(route)}</p>` : ""}<p class="cv-tier">${[info.tier, `<em>${escapeHtml(spec.title || "")}</em>`].filter(Boolean).join(" · ")}</p></div>
+        ${calculatorHtml(info.calculator)}
       </div>
-      <div class="student-row">
-        <span>Name</span>
-        <span>Date</span>
-        <span class="score-slot">Score <em>/ ${totalMarks}</em></span>
+      <div class="cv-have"><div class="cv-must"><b>You must have:</b> ${lists.mustHave}</div><div class="cv-total"><span>Total Marks</span></div></div>
+      ${solutionsCopy ? `<div class="cv-copy">${escapeHtml(copyLabel(opts, spec))} &middot; ${opts.placement === "inline" ? "each worked solution follows its question" : "worked solutions follow the questions"}</div>` : ""}
+      <div class="cv-lists">
+        <h3>Instructions</h3>${listHtml(lists.instructions)}
+        <h3>Information</h3>${listHtml(lists.information)}
+        <h3>Advice</h3>${listHtml(lists.advice)}
       </div>
-      <p class="instructions">${escapeHtml(instructions)}</p>
+      <div class="cv-foot">
+        <div class="cv-code"><b>${escapeHtml(code)}</b><small>&copy;${new Date().getFullYear()} ${BRAND.name}</small><small>Written by ${BRAND.author}. All rights reserved.</small></div>
+        <div class="cv-contact"><b>${BRAND.author}</b><span>Tel. ${BRAND.phone}</span><b>${BRAND.site}</b></div>
+        <div class="cv-mark"><span class="cv-turn">Turn over &#9658;</span>${logoHtml("is-big")}<span>ELITE IGCSE ACADEMY</span></div>
+      </div>
+    </section>`;
+  }
+
+  /* Margins, registration marks, bar code and the code line at the top of every inner page. */
+  function furnitureHtml(spec, ctx) {
+    const strip = (side) => `<div class="ig-strip is-${side}" aria-hidden="true"><span style="top:20%">DO NOT WRITE IN THIS AREA</span><span style="top:50%">DO NOT WRITE IN THIS AREA</span><span style="top:80%">DO NOT WRITE IN THIS AREA</span></div>`;
+    const meta = [ctx.code, [ctx.info.route === "MODULAR" ? "Modular" : ctx.info.route, ctx.info.unit].filter(Boolean).join(" "), spec.title].filter(Boolean).map(escapeHtml).join(" &middot; ");
+    return `${strip("left")}${strip("right")}<i class="ig-reg is-top" aria-hidden="true"></i><i class="ig-reg is-bottom" aria-hidden="true"></i>
+      <div class="ig-head"><span class="ig-head-meta">${meta}</span>${barcodeHtml(ctx.code)}</div>`;
+  }
+
+  function footHtml(ctx) {
+    return `<div class="ig-turn">Turn over &#9658;</div>
+      <div class="sheet-foot"><span class="foot-code"><b>${escapeHtml(ctx.code)}</b><span class="foot-mid"></span></span><span class="foot-brand">${logoHtml()}<b>${BRAND.name}</b> &middot; ${BRAND.author} &middot; ${BRAND.site}</span><span class="foot-page"></span></div>`;
+  }
+
+  /* First page of a print without a cover (practice sheets, answer keys). */
+  function slimHeadHtml(spec, opts, ctx) {
+    const instructions = spec.instructions || (opts.layout === "compact"
+      ? "Answer every question on separate paper. Show clear working."
+      : "Answer every question in the space provided. Show clear working.");
+    return `<header class="ig-slim">
+      <div class="ig-slim-brand">${logoHtml()}<strong>${BRAND.name}</strong><i aria-hidden="true"></i><span>${escapeHtml(ctx.info.level)}</span><em class="ig-copy">${escapeHtml(copyLabel(opts, spec))}</em></div>
+      <h1>${escapeHtml(spec.title || "Mathematics")}</h1>
+      <p class="ig-slim-course">${escapeHtml(spec.courseLabel || ctx.info.subject)}</p>
+      <div class="ig-slim-row"><span>Name</span><span>Date</span><span class="is-score">Score <em>/ ${ctx.total}</em></span></div>
+      <p class="ig-slim-note">${escapeHtml(instructions)}</p>
     </header>`;
   }
 
-  function runningHeadHtml(spec) {
-    const left = [spec.courseLabel, spec.title].filter(Boolean).map(escapeHtml).join(" &middot; ");
-    return `<div class="running-head"><span><strong>ELITE MATHEMATICS</strong> &middot; ${left}</span><span>${spec.testCode ? `Code ${escapeHtml(spec.testCode)}` : ""}</span></div>`;
-  }
-
-  function footHtml() {
-    return `<div class="sheet-foot"><span>eliteigcse.com &middot; Dr Eslam Ahmed</span><span class="foot-mid"></span><span class="foot-page"></span></div>`;
-  }
-
   function documentHtml(spec, opts) {
-    const classes = [opts.ink === "mono" ? "mono" : "", opts.lines ? "" : "plain-space"].filter(Boolean).join(" ");
+    const classes = ["ig-paper", opts.ink === "mono" ? "mono" : "", opts.lines ? "" : "plain-space"].filter(Boolean).join(" ");
     const title = spec.fileName || "Elite Mathematics paper";
     return `<!doctype html><html lang="en" class="${classes}"><head><meta charset="utf-8">
 <base href="${escapeHtml(spec.baseHref || document.baseURI)}">
@@ -182,21 +347,17 @@
 </head><body><div class="sheets" id="sheets"></div><div class="measure" id="measure" aria-hidden="true"></div></body></html>`;
   }
 
-  function questionHeadHtml(item, continued = false) {
-    const ref = item.sourceRef ? ` &middot; ${escapeHtml(item.sourceRef)}` : "";
-    const marks = Number(item.marks || 0);
-    return `<div class="blk q-head${continued ? " is-continued" : ""}">
-      <span class="q-num">${item.number}</span>
-      <div class="q-meta"><strong>${escapeHtml(item.topic || "Question")}</strong>${continued ? "Continued" : `Question ${item.number}`}${ref}</div>
-      <span class="q-marks">[${plural(marks, "mark")}]</span>
-    </div>`;
-  }
-
+  /* A question without an image (text questions, answer keys). */
   function questionTextHtml(item) {
     const options = Array.isArray(item.options) && item.options.length
       ? `<ol type="A">${item.options.map((option) => `<li>${formatText(String(option))}</li>`).join("")}</ol>`
       : "";
-    return `<div class="blk q-text">${formatText(item.text || "")}${options}</div>`;
+    return `<div class="blk q-text"><span class="q-num ig-num">${item.number}</span><div class="q-text-body">${formatText(item.text || "")}${options}</div></div>`;
+  }
+
+  function totalLineHtml(item, style = "") {
+    const marks = Number(item.marks || 0);
+    return `<div class="blk ig-total" data-number="${item.number}" data-marks="${marks}"${style ? ` style="${style}"` : ""}><span class="q-marks">${escapeHtml(totalLineText(item.number, marks))}</span></div>`;
   }
 
   function formatSolutionText(text) {
@@ -303,8 +464,9 @@
     });
   }
 
-  /* Row-by-row ink count. Returns null when pixels cannot be read. */
-  function inkProfile(doc, img) {
+  /* Row-by-row ink count, plus the crop analysis below. Returns null when
+     pixels cannot be read. */
+  function inkProfile(doc, img, hint = null) {
     const width = img.naturalWidth;
     const height = img.naturalHeight;
     if (!width || !height) return null;
@@ -318,23 +480,200 @@
       context.drawImage(img, 0, 0);
       const data = context.getImageData(0, 0, width, height).data;
       const rows = new Uint32Array(height);
+      const ink = new Uint8Array(width * height);
       for (let y = 0; y < height; y += 1) {
         let count = 0;
-        const offset = y * width * 4;
-        for (let x = 0; x < width; x += 2) {
-          const i = offset + x * 4;
-          if (data[i] * 0.299 + data[i + 1] * 0.587 + data[i + 2] * 0.114 < 228) count += 2;
+        const offset = y * width;
+        for (let x = 0; x < width; x += 1) {
+          const i = (offset + x) * 4;
+          if (data[i] * 0.299 + data[i + 1] * 0.587 + data[i + 2] * 0.114 < 228) {
+            ink[offset + x] = 1;
+            if ((x & 1) === 0) count += 2;
+          }
         }
         rows[y] = count;
       }
+      canvas.width = canvas.height = 0;
       // Vertical page rules put a few dark pixels on every row; treat that
       // floor as "blank" but count even pale dotted answer lines as ink.
       const sorted = Array.from(rows).sort((a, b) => a - b);
       const floor = sorted[Math.floor(sorted.length * 0.1)] || 0;
-      return { rows, width, height, blankLimit: floor + Math.max(3, Math.round(width * 0.003)) };
+      let crop = null;
+      try {
+        crop = analyseCrop(ink, width, height, hint);
+      } catch (error) {
+        crop = null;
+      }
+      return { rows, width, height, blankLimit: floor + Math.max(3, Math.round(width * 0.003)), crop };
     } catch (error) {
       return null;
     }
+  }
+
+  /* Runs of true values in 0..length-1; runs closer than minGap are merged. */
+  function runsOf(test, length, minGap) {
+    const out = [];
+    let start = -1;
+    let prev = -1;
+    for (let i = 0; i < length; i += 1) {
+      if (!test(i)) continue;
+      if (start < 0) {
+        start = i;
+      } else if (i - prev > minGap) {
+        out.push([start, prev + 1]);
+        start = i;
+      }
+      prev = i;
+    }
+    if (start >= 0) out.push([start, prev + 1]);
+    return out;
+  }
+
+  /* What the question text (from the paper's text layer) says about the crop. */
+  function cropHint(item) {
+    const text = String(item.ocr || "").trim();
+    if (!text) return null;
+    const lead = /^\s*(\d{1,2})\b/.exec(text);
+    const source = Number(item.sourceNumber || 0);
+    return {
+      // A different leading number vetoes; no leading number means "unknown".
+      number: lead ? (!source || Number(lead[1]) === source) : null,
+      header: /^\s*(Answer\s+ALL|\(?\s*Total\s+for\s+Question)/i.test(text),
+      total: /Total\s+for\s+Question\s+\d+\s+is\s+\d+\s+marks?/i.test(text.slice(-90))
+    };
+  }
+
+  /* Finds, in a past-paper crop, the original question number (top left),
+     the "(Total for Question n is m marks)" line (bottom right, plus a paper
+     total under it on a last question), the answer-line block above it, and
+     any header or stray total line above the number. Calibrated on all
+     1,733 IGCSE crops against their text layer. */
+  function analyseCrop(ink, W, H, hint) {
+    const colCount = new Uint32Array(W);
+    for (let y = 0; y < H; y += 1) {
+      const o = y * W;
+      for (let x = 0; x < W; x += 1) colCount[x] += ink[o + x];
+    }
+    const border = new Uint8Array(W);
+    for (let x = 0; x < W; x += 1) border[x] = colCount[x] > 0.5 * H ? 1 : 0;
+    const rows = new Float64Array(H);
+    const full = new Uint32Array(H);
+    for (let y = 0; y < H; y += 1) {
+      const o = y * W;
+      let half = 0;
+      let all = 0;
+      for (let x = 0; x < W; x += 1) {
+        if (ink[o + x] && !border[x]) {
+          all += 1;
+          if ((x & 1) === 0) half += 1;
+        }
+      }
+      rows[y] = half * 2;
+      full[y] = all;
+    }
+    const sorted = Array.from(rows).sort((a, b) => a - b);
+    const blank = sorted[Math.floor(H * 0.1)] + Math.max(3, Math.round(W * 0.003));
+    const lines = runsOf((y) => rows[y] > blank && full[y] <= 0.55 * W, H, Math.max(2, Math.round(W * 0.004)));
+    const edge = 0.012 * W;
+    const thin = Math.max(2, 0.003 * W);
+    const band = (y0, y1) => {
+      const c = new Uint32Array(W);
+      for (let y = y0; y < y1; y += 1) {
+        const o = y * W;
+        for (let x = 0; x < W; x += 1) if (ink[o + x] && !border[x]) c[x] += 1;
+      }
+      const clusters = runsOf((x) => c[x] > 0, W, Math.max(3, Math.round(W * 0.012)))
+        .filter(([a, b]) => !((a <= 1 || b >= W - 1) && b - a < edge) && b - a > thin);
+      if (!clusters.length) return null;
+      const x0 = clusters[0][0];
+      const x1 = clusters[clusters.length - 1][1];
+      let sum = 0;
+      for (let x = x0; x < x1; x += 1) sum += c[x];
+      return { y0, y1, x0, x1, h: y1 - y0, dens: sum / Math.max(1, (y1 - y0) * (x1 - x0)), c };
+    };
+    const bands = lines.map(([a, b]) => band(a, b)).filter(Boolean);
+    const result = { number: null, totals: [], answerTop: null, topCut: null, first: null, inkRight: 0, inkLeft: W };
+    if (!bands.length) return result;
+    bands.forEach((b) => {
+      result.inkRight = Math.max(result.inkRight, b.x1);
+      result.inkLeft = Math.min(result.inkLeft, b.x0);
+    });
+    const isTotal = (b) => Boolean(b) && b.x0 > 0.40 * W && b.x1 > 0.70 * W && b.x1 - b.x0 > 0.09 * W
+      && b.h / W > 0.009 && b.h / W < 0.05 && b.dens > 0.15;
+
+    /* top: stray total / paper header lines, then the number */
+    let first = 0;
+    if (bands.length > 1 && isTotal(bands[0])) first = 1;
+    if (hint?.header) {
+      let guard = 0;
+      while (first < bands.length - 1 && bands[first].x0 >= 0.15 * W && guard < 4) {
+        first += 1;
+        guard += 1;
+      }
+    }
+    while (first < bands.length - 1 && bands[first].h < 0.006 * W) first += 1;
+    const b0 = bands[first];
+    result.first = { x0: b0.x0, x1: b0.x1, y0: b0.y0, y1: b0.y1, h: b0.h };
+    if (first > 0) {
+      const prev = bands[first - 1];
+      result.topCut = Math.max(prev.y1, b0.y0 - Math.round(0.012 * W));
+    }
+    const words = runsOf((x) => b0.c[x] > 0, W, Math.max(2, Math.round(W * 0.005))).filter(([a, b]) => b - a > thin);
+    if (words.length) {
+      const [cx0, cx1] = words[0];
+      const nx0 = words.length > 1 ? words[1][0] : W;
+      let top = -1;
+      let bottom = -1;
+      for (let y = b0.y0; y < b0.y1; y += 1) {
+        const o = y * W;
+        for (let x = cx0; x < cx1; x += 1) {
+          if (ink[o + x] && !border[x]) {
+            if (top < 0) top = y;
+            bottom = y;
+            break;
+          }
+        }
+      }
+      const ch = top < 0 ? 0 : bottom - top + 1;
+      const ratio = (cx1 - cx0) / Math.max(1, ch);
+      const sure = hint?.number === true;
+      const looksLikeNumber = cx0 < 0.07 * W && cx1 < 0.11 * W
+        && ratio < (sure ? 2.4 : 1.9)
+        && nx0 - cx1 >= (sure ? 0.004 : 0.006) * W
+        && ch > 0.008 * W && ch < (sure ? 0.045 : 0.035) * W;
+      if (looksLikeNumber && hint?.number !== false) {
+        result.number = { x0: cx0, x1: cx1, y0: top, y1: bottom + 1, next: nx0 };
+      }
+    }
+
+    /* bottom: the total line (and a paper total under it), then the answer block */
+    let k = bands.length - 1;
+    while (k > first && isTotal(bands[k]) && result.totals.length < 2) {
+      const b = bands[k];
+      result.totals.push({ x0: b.x0, x1: b.x1, y0: b.y0, y1: b.y1, h: b.h });
+      k -= 1;
+    }
+    if (!result.totals.length && hint?.total && k > first) {
+      const b = bands[k];
+      if (b.x0 > 0.30 * W && b.h > 0.008 * W && b.h < 0.06 * W) {
+        result.totals.push({ x0: b.x0, x1: b.x1, y0: b.y0, y1: b.y1, h: b.h });
+        k -= 1;
+      }
+    }
+    if (result.totals.length) {
+      let j = k;
+      let top = null;
+      while (j > first && bands[j].x0 > 0.30 * W && bands[j].h < 0.06 * W) {
+        top = bands[j];
+        j -= 1;
+      }
+      if (top) {
+        const above = bands[j];
+        result.answerTop = Math.max(above ? above.y1 : 0, top.y0 - Math.round(0.01 * W));
+        result.gapAbove = above ? Math.max(0, top.y0 - above.y1) : 0;
+      }
+    }
+    return result;
   }
 
   function isBlankRow(profile, y) {
@@ -395,18 +734,60 @@
     return template.content.firstElementChild;
   }
 
+  /* Where to show a crop: rows start..end, working space inserted at `split`
+     (just above the answer line), where the mock's number is written, and
+     where the new total line sits. */
+  function layoutCrop(item, profile, bounds, width) {
+    const crop = profile?.crop || null;
+    let start = bounds.start;
+    let end = bounds.end;
+    const result = { start, end, split: end, profile, numberMark: null, totalRight: null, totalFontPx: 0, inkRight: width * 0.92, gapAbove: 0 };
+    if (!crop) return result;
+    result.inkRight = crop.inkRight || result.inkRight;
+    if (crop.topCut != null) start = Math.max(start, crop.topCut);
+    if (crop.totals.length) {
+      const own = crop.totals[crop.totals.length - 1];
+      end = Math.min(end, Math.max(start + 8, own.y0 - 2));
+      result.totalRight = own.x1;
+      result.totalFontPx = clamp((own.h * item.scale) / 0.95, 10, 18);
+    }
+    let split = end;
+    if (crop.answerTop != null && crop.answerTop > start + 0.02 * width && crop.answerTop < end - 4) {
+      split = crop.answerTop;
+      result.gapAbove = crop.gapAbove || 0;
+    }
+    const n = crop.number;
+    if (n && n.y0 >= start) {
+      const pad = Math.max(2, Math.round(0.004 * width));
+      result.numberMark = {
+        x0: n.x0,
+        y0: n.y0 - pad,
+        y1: n.y1 + pad,
+        baseline: n.y1,
+        fontPx: clamp(((n.y1 - n.y0) * item.scale) / 0.68, 10, 22),
+        mask: { x0: Math.max(0, n.x0 - pad), y0: n.y0 - pad, x1: Math.min(n.next - 1, n.x1 + pad), y1: n.y1 + pad }
+      };
+    } else if (crop.first && crop.first.x0 > 0.05 * width && crop.first.y0 >= start) {
+      const h = Math.min(crop.first.h, 0.022 * width);
+      result.numberMark = { x0: Math.round(0.012 * width), y0: crop.first.y0, y1: crop.first.y0 + h, baseline: crop.first.y0 + h * 0.8, fontPx: clamp((h * 0.8 * item.scale) / 0.68, 12, 18), mask: null };
+    }
+    return Object.assign(result, { start, end, split });
+  }
+
   class Paginator {
-    constructor(doc, spec, opts, report) {
+    constructor(doc, spec, opts, report, ctx) {
       this.doc = doc;
       this.spec = spec;
       this.opts = opts;
       this.report = report;
+      this.ctx = ctx;
       this.layout = LAYOUTS[opts.layout] || LAYOUTS.standard;
       this.sheetsEl = doc.getElementById("sheets");
       this.measureEl = doc.getElementById("measure");
       this.sheets = [];
       this.page = null;
       this.section = "questions";
+      this.slimPending = !ctx.cover;
     }
 
     measure(el) {
@@ -414,13 +795,27 @@
       return outerHeight(el);
     }
 
-    makeSheet(first) {
+    makeSheet(slim) {
       const sheet = this.doc.createElement("section");
-      sheet.className = "sheet";
-      sheet.innerHTML = `${first ? mastheadHtml(this.spec, this.opts) : runningHeadHtml(this.spec)}<div class="sheet-body"></div>${footHtml()}`;
+      sheet.className = `sheet ig-sheet${this.section === "solutions" ? " is-solutions" : ""}`;
+      sheet.innerHTML = `${furnitureHtml(this.spec, this.ctx)}${slim ? slimHeadHtml(this.spec, this.opts, this.ctx) : ""}<div class="sheet-body"></div>${footHtml(this.ctx)}`;
       this.sheetsEl.appendChild(sheet);
       const body = sheet.querySelector(".sheet-body");
       return { sheet, body, capacity: body.clientHeight - SAFETY_PX, used: 0, spaces: [], section: this.section };
+    }
+
+    /* Cover and formulae pages: fixed content, never filled with questions. */
+    addCover(html) {
+      const sheet = fragment(this.doc, html);
+      this.sheetsEl.appendChild(sheet);
+      this.sheets.push({ sheet, body: sheet, capacity: 0, used: 0, spaces: [], section: "front", isStatic: true });
+    }
+
+    addFormulae() {
+      const page = this.makeSheet(false);
+      page.sheet.classList.add("is-formulae");
+      page.body.innerHTML = `<div class="ig-formulae"><img src="${FORMULAE_IMAGE}" alt="International GCSE Mathematics formulae sheet, Higher Tier"><p>Do not write on this page. Anything written on the formulae page will gain no credit.</p></div>`;
+      this.sheets.push({ ...page, isStatic: true, section: "front" });
     }
 
     get bodyHeight() {
@@ -434,7 +829,9 @@
 
     newPage() {
       if (this.page) this.closePage(this.page);
-      this.page = this.makeSheet(this.sheets.length === 0);
+      const slim = this.slimPending;
+      this.slimPending = false;
+      this.page = this.makeSheet(slim);
       this.page.section = this.section;
       this.sheets.push(this.page);
       return this.page;
@@ -495,6 +892,8 @@
       this.place(el, height);
     }
 
+    /* One slice of a question crop. The original question number is covered
+       and the mock's number is written in its place. */
     imageSegmentHtml(item, start, end) {
       const scale = item.scale;
       const height = (end - start) * scale;
@@ -507,93 +906,120 @@
       img.style.width = `${item.displayWidth.toFixed(2)}px`;
       img.style.top = `${(-start * scale).toFixed(2)}px`;
       seg.appendChild(img);
+      const mark = item.imageInfo?.numberMark;
+      if (mark && mark.baseline > start && mark.baseline <= end) {
+        const px = (value) => `${(value * scale).toFixed(2)}px`;
+        if (mark.mask) {
+          const mask = this.doc.createElement("i");
+          mask.className = "ig-mask";
+          mask.style.cssText = `left:${px(mark.mask.x0)};top:${px(mark.mask.y0 - start)};width:${px(mark.mask.x1 - mark.mask.x0)};height:${px(mark.mask.y1 - mark.mask.y0)}`;
+          seg.appendChild(mask);
+        }
+        const fontPx = mark.fontPx;
+        const num = this.doc.createElement("span");
+        num.className = "q-num ig-qnum";
+        num.textContent = String(item.number);
+        num.style.cssText = `left:${px(mark.x0)};top:${((mark.baseline - start) * scale - 0.84 * fontPx).toFixed(2)}px;font-size:${fontPx.toFixed(2)}px`;
+        seg.appendChild(num);
+      }
       return el;
     }
 
-    placeQuestion(item, { withSpace }) {
-      const head = fragment(this.doc, questionHeadHtml(item));
-      const headH = this.measure(head);
-      const layout = this.layout;
-      const spaceMm = withSpace ? layout.space(Number(item.marks || 0)) : 0;
-      const spaceWrapH = spaceMm ? spaceMm * MM + 1.6 * MM : 0;
-      let bodyEl = null;
-      let bodyH = 0;
-      if (!item.imageInfo) {
-        bodyEl = item.textBlock || fragment(this.doc, questionTextHtml(item));
-        bodyH = this.measure(bodyEl);
-      } else {
-        bodyH = (item.imageInfo.end - item.imageInfo.start) * item.scale;
+    totalBlocks(item) {
+      if (!this.ctx.totals) return [];
+      const info = item.imageInfo;
+      let style = "";
+      if (info) {
+        const right = info.totalRight != null ? info.totalRight : info.inkRight;
+        const pad = Math.max(0, this.measureEl.clientWidth - right * item.scale);
+        style = `padding-right:${pad.toFixed(2)}px${info.totalFontPx ? `;font-size:${info.totalFontPx.toFixed(2)}px` : ""}`;
       }
-      const need = headH + bodyH + spaceWrapH;
-      if (layout.newPage && this.page.used > 0) this.newPage();
+      return [fragment(this.doc, totalLineHtml(item, style)), fragment(this.doc, `<div class="blk ig-rule"></div>`)];
+    }
 
+    placeQuestion(item, { withSpace }) {
+      const layout = this.layout;
+      const marks = Number(item.marks || 0);
+      const spaceMm = withSpace ? layout.space(marks) : 0;
+      if (layout.newPage && this.page.used > 0) this.newPage();
+      const tailEls = this.totalBlocks(item);
+
+      if (!item.imageInfo) {
+        const bodyEl = item.textBlock || fragment(this.doc, questionTextHtml(item));
+        const bodyH = this.measure(bodyEl);
+        const tailH = tailEls.reduce((sum, el) => sum + this.measure(el), 0);
+        const spaceH = spaceMm * MM;
+        if (bodyH + spaceH + tailH > this.remaining() && this.page.used > 0) this.newPage();
+        this.place(bodyEl, bodyH);
+        if (bodyH > this.page.capacity) this.report.overflowUnits.push(`question ${item.number}`);
+        if (spaceH) this.placeSpace(Math.min(spaceH, Math.max(0, this.remaining() - tailH - 1.6 * MM)), marks);
+        tailEls.forEach((el) => this.placeMeasured(el));
+        return;
+      }
+
+      const info = item.imageInfo;
+      const lead = info.numberMark ? null : fragment(this.doc, `<div class="blk ig-lead"><span class="q-num ig-num">${item.number}</span></div>`);
+      const leadH = lead ? this.measure(lead) : 0;
+      const aH = (info.split - info.start) * item.scale;
+      const bEl = info.split < info.end ? this.imageSegmentHtml(item, info.split, info.end) : null;
+      const tail = [bEl, ...tailEls].filter(Boolean);
+      const tailH = tail.reduce((sum, el) => sum + this.measure(el), 0);
+      const ownGap = (info.gapAbove || 0) * item.scale;
+      const spaceH = spaceMm ? Math.max(spaceMm * MM - ownGap, 6 * MM) : 0;
+      const spaceWrapH = spaceH ? spaceH + 1.6 * MM : 0;
+      const need = leadH + aH + spaceWrapH + tailH;
+      const placeAll = () => {
+        if (lead) this.place(lead, leadH);
+        const seg = this.imageSegmentHtml(item, info.start, info.split);
+        this.place(seg, this.measure(seg));
+        if (spaceH) this.placeSpace(spaceH, marks);
+        tail.forEach((el) => this.place(el, this.measure(el)));
+      };
       if (need <= this.remaining()) {
-        this.place(head, headH);
-        this.placeBody(item, bodyEl, bodyH);
-        if (spaceMm) this.placeSpace(spaceMm * MM, Number(item.marks || 0));
+        placeAll();
         return;
       }
       const fresh = this.bodyHeight;
-      // Never leave the current sheet empty: if nothing is on it yet, split here instead.
-      if (this.page.used > 0 && (need <= fresh || (!item.imageInfo && headH + bodyH <= fresh))) {
+      if (this.page.used > 0 && need <= fresh) {
         this.newPage();
-        this.place(head, headH);
-        this.placeBody(item, bodyEl, bodyH);
-        if (spaceMm) {
-          const room = Math.max(0, this.remaining() - 1.6 * MM);
-          this.placeSpace(Math.min(spaceMm * MM, room), Number(item.marks || 0));
-        }
+        placeAll();
         return;
       }
       /* Taller than the space available: split the image at blank rows. */
-      if (!item.imageInfo) {
-        this.place(head, headH);
-        this.placeBody(item, bodyEl, bodyH);
-        this.report.overflowUnits.push(`question ${item.number}`);
-        return;
+      if (this.page.used > 0 && (this.remaining() < 0.35 * fresh || this.remaining() < leadH + 40 * MM)) this.newPage();
+      if (lead) this.place(lead, leadH);
+      this.placeSplitImage(item, info.start, info.split);
+      const minSpace = spaceH ? Math.min(spaceH, 18 * MM) + 1.6 * MM : 0;
+      if (tailH + minSpace > this.remaining()) {
+        this.placeMeasured(fragment(this.doc, `<div class="blk q-continues">Question ${item.number} continues on the next page</div>`));
+        this.newPage();
+        this.placeMeasured(fragment(this.doc, `<div class="blk ig-cont">Question ${item.number} continued</div>`));
       }
-      if (this.page.used > 0 && (this.remaining() < 0.35 * fresh || this.remaining() < headH + 40 * MM)) this.newPage();
-      this.place(head, headH);
-      this.placeSplitImage(item);
-      if (spaceMm) {
-        const room = this.remaining() - 1.6 * MM;
-        // Long questions already carry their own answer lines; add space only if it fits.
-        if (room >= Math.min(spaceMm * MM, 18 * MM)) {
-          this.placeSpace(Math.min(spaceMm * MM, room), Number(item.marks || 0));
-        }
-      }
+      if (spaceH) this.placeSpace(Math.max(0, Math.min(spaceH, this.remaining() - tailH - 1.6 * MM)), marks);
+      tail.forEach((el) => this.place(el, this.measure(el)));
     }
 
-    placeBody(item, bodyEl, bodyH) {
-      if (bodyEl) {
-        this.place(bodyEl, bodyH);
-        return;
-      }
-      const seg = this.imageSegmentHtml(item, item.imageInfo.start, item.imageInfo.end);
-      this.place(seg, this.measure(seg));
-    }
-
-    placeSplitImage(item) {
+    placeSplitImage(item, start, end) {
       const info = item.imageInfo;
       const note = fragment(this.doc, `<div class="blk q-continues">Question ${item.number} continues on the next page</div>`);
       const noteH = this.measure(note);
       note.remove();
-      let from = info.start;
+      let from = start;
       let guard = 0;
-      while (from < info.end && guard < 40) {
+      while (from < end && guard < 40) {
         guard += 1;
         const room = this.remaining();
-        const needAll = (info.end - from) * item.scale;
+        const needAll = (end - from) * item.scale;
         if (needAll <= room) {
-          const seg = this.imageSegmentHtml(item, from, info.end);
+          const seg = this.imageSegmentHtml(item, from, end);
           this.place(seg, this.measure(seg));
-          from = info.end;
+          from = end;
           break;
         }
         const limit = Math.floor(from + (room - noteH) / item.scale);
         if (limit - from < 40) {
           this.newPage();
-          this.placeMeasured(fragment(this.doc, questionHeadHtml(item, true)));
+          this.placeMeasured(fragment(this.doc, `<div class="blk ig-cont">Question ${item.number} continued</div>`));
           continue;
         }
         const cut = findCut(info.profile, from, limit);
@@ -604,14 +1030,22 @@
         from = cut.at;
         // skip blank rows at the top of the next segment
         if (info.profile) {
-          while (from < info.end && isBlankRow(info.profile, from)) from += 1;
+          while (from < end && isBlankRow(info.profile, from)) from += 1;
           from = Math.max(from - 4, cut.at);
         }
-        if (from >= info.end) break;
+        if (from >= end) break;
         this.placeMeasured(fragment(this.doc, `<div class="blk q-continues">Question ${item.number} continues on the next page</div>`));
         this.newPage();
-        this.placeMeasured(fragment(this.doc, questionHeadHtml(item, true)));
+        this.placeMeasured(fragment(this.doc, `<div class="blk ig-cont">Question ${item.number} continued</div>`));
       }
+    }
+
+    /* The closing box of the question section, like a real paper. */
+    placePaperTotal(total) {
+      const el = fragment(this.doc, `<div class="blk ig-paper-total"><span>TOTAL FOR PAPER IS ${total} MARKS</span></div>`);
+      const height = this.measure(el);
+      if (height > this.remaining()) this.newPage();
+      this.place(el, height);
     }
 
     /* Solutions: header stays with its first unit; units never split mid-line. */
@@ -689,8 +1123,12 @@
       const total = this.sheets.length;
       this.sheets.forEach((page, index) => {
         page.sheet.dataset.page = String(index + 1);
-        page.sheet.querySelector(".foot-page").textContent = `Page ${index + 1} of ${total}`;
-        page.sheet.querySelector(".foot-mid").textContent = page.section === "solutions" ? "Worked solutions" : copyLabel(this.opts, this.spec);
+        const foot = page.sheet.querySelector(".foot-page");
+        if (foot) foot.textContent = String(index + 1);
+        const mid = page.sheet.querySelector(".foot-mid");
+        if (mid) mid.textContent = `Page ${index + 1} of ${total}`;
+        if (index === total - 1) page.sheet.classList.add("is-last");
+        if (page.isStatic) return;
         if (!page.body.children.length) this.report.blankPages += 1;
         if (page.body.scrollHeight > page.body.clientHeight + 1) this.report.overflowPages.push(index + 1);
       });
@@ -763,16 +1201,29 @@
       number: question.number || index + 1,
       solution: solutionMap && question.id in solutionMap ? solutionMap[question.id] : question.solution
     }));
+    const info = courseFor(spec);
+    const cover = spec.cover !== false;
+    const ctx = {
+      info,
+      code: paperCode(spec),
+      total: totalMarksOf(spec),
+      cover,
+      withFormulae: cover && info.formulae === "igcse" && spec.formulae !== false,
+      totals: spec.questionTotals !== false
+    };
+    report.paperCode = ctx.code;
 
     /* Load every question image and read its pixels. */
     const contentWidth = measureEl.clientWidth;
-    const segWidth = contentWidth - 2.5 * MM;
+    const segWidth = contentWidth;
     const loaded = await loadQuestionImages(doc, items.map((item) => item.image || ""), (done, total) => {
       if (total) onProgress(`Loading question images ${done}/${total}...`);
     });
     onProgress("Laying out A4 pages...");
     const widths = loaded.filter((img) => img?.naturalWidth).map((img) => img.naturalWidth).sort((a, b) => a - b);
     const refWidth = widths.length ? widths[Math.min(widths.length - 1, Math.floor(widths.length * 0.75))] : 1;
+    report.renumbered = 0;
+    report.kept = [];
     items.forEach((item, index) => {
       const img = loaded[index];
       if (!item.image) return;
@@ -782,15 +1233,13 @@
         item.text = item.text || `Question image could not be loaded (${item.sourceRef || item.id}).`;
         return;
       }
-      const profile = inkProfile(doc, img);
+      const profile = inkProfile(doc, img, cropHint(item));
       const bounds = contentBounds(profile, img.naturalHeight);
       item.displayWidth = segWidth * IMAGE_SCALE * Math.min(1, img.naturalWidth / refWidth);
       item.scale = item.displayWidth / img.naturalWidth;
-      let blankTail = 0;
-      if (profile) {
-        for (let y = bounds.end - 1; y > bounds.start && isBlankRow(profile, y); y -= 1) blankTail += 1;
-      }
-      item.imageInfo = { ...bounds, profile, hasOwnSpace: blankTail * item.scale > 25 * MM };
+      item.imageInfo = layoutCrop(item, profile, bounds, img.naturalWidth);
+      if (item.imageInfo.numberMark?.mask) report.renumbered += 1;
+      else report.kept.push(item.sourceRef || item.id);
     });
     if (items.some((item) => item.imageInfo && !item.imageInfo.profile)) {
       report.problems.push("pixel analysis unavailable; tall questions cut at page limit");
@@ -821,8 +1270,13 @@
     await nextFrame(win);
     if (!isCurrent()) return null;
 
-    const paginator = new Paginator(doc, spec, opts, report);
+    const paginator = new Paginator(doc, spec, opts, report, ctx);
+    if (ctx.cover) paginator.addCover(coverHtml(spec, opts, ctx));
+    if (ctx.withFormulae) paginator.addFormulae();
     paginator.newPage();
+    if (ctx.cover) {
+      paginator.placeMeasured(fragment(doc, `<div class="blk ig-intro"><b>Answer ALL ${numberWords(items.length)} questions.</b><b>Write your answers in the spaces provided.</b><b>You must write down all the stages in your working.</b></div>`));
+    }
     const inline = withSolutions && opts.placement === "inline";
     for (const item of items) {
       paginator.placeQuestion(item, { withSpace: !inline });
@@ -832,10 +1286,11 @@
       }
       paginator.gap(inline ? "s-gap" : "q-gap");
     }
+    if (ctx.totals && !inline) paginator.placePaperTotal(ctx.total);
     if (withSolutions && !inline) {
       paginator.section = "solutions";
       paginator.newPage();
-      paginator.placeMeasured(fragment(doc, `<div class="blk section-title">Worked solutions<small>${escapeHtml(spec.title || "")} &middot; numbered to match the questions</small></div>`));
+      paginator.placeMeasured(fragment(doc, `<div class="blk section-title">Worked solutions<small>${escapeHtml(spec.title || "")} &middot; ${escapeHtml(ctx.code)} &middot; numbered to match the questions</small></div>`));
       for (const item of items) {
         paginator.placeSolution(item, solutionBlocks.get(item.number));
         paginator.gap("s-gap");
@@ -1313,6 +1768,6 @@
     },
     lastReport: null,
     lastPrint: null,
-    _internals: { findCut, contentBounds, LAYOUTS, MM }
+    _internals: { findCut, contentBounds, LAYOUTS, MM, inkProfile, cropHint, analyseCrop, layoutCrop }
   };
 })(window);
