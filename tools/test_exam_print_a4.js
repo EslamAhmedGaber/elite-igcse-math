@@ -181,6 +181,7 @@ const COURSES = [
   { key: "modular-u2", label: "Modular Unit 2", query: "?pathway=modular&unit=Unit+2", stateKey: "eliteMockExamV1" },
   { key: "wma11", label: "Pure 1 WMA11", query: "?pathway=pure&course=wma11", stateKey: "eliteMockExamV1:wma11" },
   { key: "wma12", label: "Pure 2 WMA12", query: "?pathway=pure&course=wma12", stateKey: "eliteMockExamV1:wma12" },
+  { key: "wma13", label: "Pure 3 WMA13", query: "?pathway=pure&course=wma13", stateKey: "eliteMockExamV1:wma13" },
   { key: "wme01", label: "Mechanics 1 WME01", query: "?pathway=pure&course=wme01", stateKey: "eliteMockExamV1:wme01" }
 ];
 
@@ -256,7 +257,7 @@ async function levelMixChecks(tab, base) {
   assert.deepEqual(strict.levels, { easy: 6, medium: 8, hard: 6 }, "Linear: Balanced 30/40/30 should give exactly 6/8/6 of 20");
   assert.equal(strict.sources, 20, "Linear: strict mix must not repeat source questions");
 
-  const wme01 = COURSES[5];
+  const wme01 = COURSES.find((course) => course.key === "wme01");
   await openCourse(tab, base, wme01);
   const refused = await tab.eval(uiScript(wme01.stateKey, `
     await set("examCount", 10);

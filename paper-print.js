@@ -29,7 +29,7 @@
 (function (root) {
   "use strict";
 
-  const VERSION = "20261104a";
+  const VERSION = "20261105a";
   const MM = 96 / 25.4;
   const SCRIPT_SRC = document.currentScript?.src || "";
   const assetUrl = (name) => new URL(`${name}?v=${VERSION}`, SCRIPT_SRC || document.baseURI).href;
@@ -48,17 +48,24 @@
      the 166 mm column between the "do not write" margins), not blown up. */
   const IMAGE_SCALE = 0.95;
   const RULE_PITCH_MM = 8;
-  const FORMULAE_IMAGE = assetUrl("assets/print/igcse-formulae-higher.png");
+  /* Real formulae pages: the IGCSE sheet from a June 2026 4MA1 paper, and
+     extracts of the IAL booklet "Mathematical Formulae and Statistical Tables"
+     (Issue 2, January 2021). Each entry prints as one page after the cover. */
+  const FORMULAE = {
+    igcse: { src: assetUrl("assets/print/igcse-formulae-higher.png"), alt: "International GCSE Mathematics formulae sheet, Higher Tier", title: "", note: "" },
+    "ial-p12": { src: assetUrl("assets/print/ial-formulae-p1-p2.png"), alt: "Formulae for Pure Mathematics P1 and P2", title: "Mathematical Formulae – Pure Mathematics P1 and P2", note: "From the Pearson Edexcel IAL booklet ‘Mathematical Formulae and Statistical Tables’, Issue 2, January 2021." },
+    "ial-p3": { src: assetUrl("assets/print/ial-formulae-p3.png"), alt: "Formulae for Pure Mathematics P3", title: "Mathematical Formulae – Pure Mathematics P3", note: "From the Pearson Edexcel IAL booklet ‘Mathematical Formulae and Statistical Tables’, Issue 2, January 2021. P3 candidates may also need the P1 and P2 formulae." }
+  };
   const BRAND = { name: "Elite IGCSE Academy", author: "Dr Eslam Ahmed", phone: "01120009622", site: "eliteigcse.com" };
 
   /* What the cover says for each course (matched on the spec's course code). */
   const COURSES = [
-    { test: /^4MA1/i, family: "igcse", level: "International GCSE", subject: "Mathematics A", route: "LINEAR · 4MA1", tier: "Higher Tier", calculator: true, formulae: "igcse" },
-    { test: /^4WM/i, family: "igcse", level: "International GCSE", subject: "Mathematics A", route: "MODULAR", tier: "Higher Tier", calculator: true, formulae: "igcse" },
-    { test: /^WMA11/i, family: "ial", level: "International Advanced Level", subject: "Pure Mathematics P1", route: "WMA11", calculator: false },
-    { test: /^WMA12/i, family: "ial", level: "International Advanced Level", subject: "Pure Mathematics P2", route: "WMA12", calculator: true },
-    { test: /^WMA13/i, family: "ial", level: "International Advanced Level", subject: "Pure Mathematics P3", route: "WMA13", calculator: true },
-    { test: /^WME01/i, family: "ial", level: "International Advanced Level", subject: "Mechanics M1", route: "WME01", calculator: true },
+    { test: /^4MA1/i, family: "igcse", level: "International GCSE", subject: "Mathematics A", route: "LINEAR · 4MA1", tier: "Higher Tier", calculator: true, formulae: ["igcse"] },
+    { test: /^4WM/i, family: "igcse", level: "International GCSE", subject: "Mathematics A", route: "MODULAR", tier: "Higher Tier", calculator: true, formulae: ["igcse"] },
+    { test: /^WMA11/i, family: "ial", level: "International Advanced Level", subject: "Pure Mathematics P1", route: "WMA11", calculator: false, formulae: ["ial-p12"] },
+    { test: /^WMA12/i, family: "ial", level: "International Advanced Level", subject: "Pure Mathematics P2", route: "WMA12", calculator: true, formulae: ["ial-p12"] },
+    { test: /^WMA13/i, family: "ial", level: "International Advanced Level", subject: "Pure Mathematics P3", route: "WMA13", calculator: true, formulae: ["ial-p12", "ial-p3"] },
+    { test: /^WME01/i, family: "ial", level: "International Advanced Level", subject: "Mechanics M1", route: "WME01", calculator: true, formulae: ["ial-p12"] },
     { test: /^EB/i, family: "other", level: "Egyptian Baccalaureate", subject: "Mathematics", route: "", calculator: true }
   ];
   const DEFAULT_COURSE = { family: "other", level: "Mathematics", subject: "Mathematics", route: "", calculator: true };
@@ -232,7 +239,7 @@
     const calc = info.calculator;
     if (info.family === "ial") {
       return {
-        mustHave: `Mathematical Formulae and Statistical Tables (Yellow)${calc ? ", calculator" : ""}.`,
+        mustHave: withFormulae ? `Pen, HB pencil, ruler, eraser${calc ? ", calculator" : ""}. The formulae are printed in this paper.` : `Mathematical Formulae and Statistical Tables (Yellow)${calc ? ", calculator" : ""}.`,
         instructions: [
           "Use <b>black</b> ink or ball-point pen.",
           "If pencil is used for diagrams/sketches/graphs it must be dark (HB or B).",
@@ -240,10 +247,11 @@
           "Answer <b>all</b> questions and ensure that your answers to parts of questions are clearly labelled.",
           "Answer the questions in the spaces provided &ndash; <i>there may be more space than you need.</i>",
           "You should show sufficient working to make your methods clear. Answers without working may not gain full credit.",
-          calc ? "Inexact answers should be given to three significant figures unless otherwise stated." : "<b>Calculators must not be used</b> for this paper."
-        ],
+          calc ? "Inexact answers should be given to three significant figures unless otherwise stated." : "<b>Calculators must not be used</b> for this paper.",
+          withFormulae ? "You must <b>NOT</b> write anything on the formulae pages. Anything you write on the formulae pages will gain <b>NO</b> credit." : ""
+        ].filter(Boolean),
         information: [
-          "A booklet &lsquo;Mathematical Formulae and Statistical Tables&rsquo; is provided.",
+          withFormulae ? "The formulae you need from the booklet &lsquo;Mathematical Formulae and Statistical Tables&rsquo; are printed after this cover." : "A booklet &lsquo;Mathematical Formulae and Statistical Tables&rsquo; is provided.",
           `There are <b>${count}</b> questions in this paper. The total mark for this paper is <b>${total}</b>.`,
           "The marks for <b>each</b> question are shown in brackets &ndash; <i>use this as a guide as to how much time to spend on each question.</i>"
         ],
@@ -811,10 +819,12 @@
       this.sheets.push({ sheet, body: sheet, capacity: 0, used: 0, spaces: [], section: "front", isStatic: true });
     }
 
-    addFormulae() {
+    addFormulae(key) {
+      const sheet = FORMULAE[key];
+      if (!sheet) return;
       const page = this.makeSheet(false);
       page.sheet.classList.add("is-formulae");
-      page.body.innerHTML = `<div class="ig-formulae"><img src="${FORMULAE_IMAGE}" alt="International GCSE Mathematics formulae sheet, Higher Tier"><p>Do not write on this page. Anything written on the formulae page will gain no credit.</p></div>`;
+      page.body.innerHTML = `<div class="ig-formulae">${sheet.title ? `<h2>${escapeHtml(sheet.title)}</h2>` : ""}<img src="${sheet.src}" alt="${escapeHtml(sheet.alt)}">${sheet.note ? `<small>${escapeHtml(sheet.note)}</small>` : ""}<p>Do not write on this page. Anything written on the formulae page will gain no credit.</p></div>`;
       this.sheets.push({ ...page, isStatic: true, section: "front" });
     }
 
@@ -1208,7 +1218,7 @@
       code: paperCode(spec),
       total: totalMarksOf(spec),
       cover,
-      withFormulae: cover && info.formulae === "igcse" && spec.formulae !== false,
+      withFormulae: cover && spec.formulae !== false && Array.isArray(info.formulae) && info.formulae.length > 0,
       totals: spec.questionTotals !== false
     };
     report.paperCode = ctx.code;
@@ -1272,7 +1282,7 @@
 
     const paginator = new Paginator(doc, spec, opts, report, ctx);
     if (ctx.cover) paginator.addCover(coverHtml(spec, opts, ctx));
-    if (ctx.withFormulae) paginator.addFormulae();
+    if (ctx.withFormulae) info.formulae.forEach((key) => paginator.addFormulae(key));
     paginator.newPage();
     if (ctx.cover) {
       paginator.placeMeasured(fragment(doc, `<div class="blk ig-intro"><b>Answer ALL ${numberWords(items.length)} questions.</b><b>Write your answers in the spaces provided.</b><b>You must write down all the stages in your working.</b></div>`));

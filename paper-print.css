@@ -645,10 +645,23 @@ body {
   gap: 2mm;
 }
 
+.ig-formulae h2 {
+  margin: 0 0 1mm;
+  font: 700 12pt/1.2 var(--sans);
+}
+
 .ig-formulae img {
   display: block;
-  width: 150mm;
+  width: auto;
   height: auto;
+  max-width: 150mm;
+  max-height: 228mm;
+}
+
+.ig-formulae small {
+  color: var(--muted);
+  font-size: 6.8pt;
+  text-align: center;
 }
 
 .ig-formulae p {
