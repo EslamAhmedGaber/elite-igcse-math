@@ -7,9 +7,9 @@
   const DAILY_KEY = "eliteDailyV1";
   const EXAM_KEY = "eliteExamSessionV1";
   const COURSES = {
-    linear: { name: "Linear", code: "4MA1", family: "igcse", questions: 1280 },
-    unit1: { name: "Modular Unit 1", code: "4WM1", family: "igcse", questions: 596 },
-    unit2: { name: "Modular Unit 2", code: "4WM2", family: "igcse", questions: 686 },
+    linear: { name: "Linear", code: "4MA1", family: "igcse", questions: 1317 },
+    unit1: { name: "Modular Unit 1", code: "4WM1", family: "igcse", questions: 635 },
+    unit2: { name: "Modular Unit 2", code: "4WM2", family: "igcse", questions: 684 },
     wma11: { name: "Pure 1", code: "WMA11", family: "ial", questions: 189 },
     wma12: { name: "Pure 2", code: "WMA12", family: "ial", questions: 190 },
     wma13: { name: "Pure 3", code: "WMA13", family: "ial", questions: 180 },
@@ -187,7 +187,47 @@
     window.addEventListener("storage", (event) => { if ([DAILY_KEY, EXAM_KEY].includes(event.key)) render(); });
   }
 
-  function start() { document.querySelectorAll("[data-e27-today]").forEach(mount); }
+  // Home page for a student who has been here before: their course first, one tap to continue.
+  // (A first-time visitor has no saved course and sees the normal home page.)
+  function welcomeBack() {
+    if (document.body?.dataset.page !== "home") return;
+    let id = "";
+    try { id = localStorage.getItem("eliteLastCourse") || ""; } catch (e) { id = ""; }
+    const c = COURSES[id];
+    const card = document.querySelector(`.e27-course[data-course="${id}"]`);
+    const title = document.getElementById("homeTitle");
+    if (!c || !card || !title) return;
+    const s = dailyStatus(id);
+    const daily = s.finished ? "Today's 5 questions are done" : s.done ? `${s.done} of ${s.total} done today` : "Today's 5 questions are ready";
+    const strip = document.createElement("div");
+    strip.className = "e27-welcome";
+    strip.innerHTML = `
+      <div class="e27-welcome-txt">
+        <small data-e27-welcome-hello>Welcome back</small>
+        <strong>Continue ${esc(c.name)} (${esc(c.code)})</strong>
+        <span>${esc(daily)}${s.streak ? ` &middot; ${s.streak}-day streak` : ""}</span>
+      </div>
+      <div class="e27-welcome-acts">
+        <a class="e27-btn e27-btn-gold" href="${esc(card.getAttribute("href"))}">Open ${esc(c.name)} &rarr;</a>
+        <a class="e27-btn e27-btn-ghost" data-module="daily" href="daily.html?course=${esc(id)}">${s.finished ? "Review today's 5" : "Today's 5 questions"}</a>
+      </div>`;
+    title.insertAdjacentElement("afterend", strip);
+    document.body.classList.add("e27-returning");
+    // Their course leads its row, marked so the eye lands on it.
+    card.classList.add("is-mine");
+    card.insertAdjacentHTML("afterbegin", '<span class="e27-mine-flag">Your course</span>');
+    card.parentElement.prepend(card);
+    window.addEventListener("elite-cloud-state", (event) => {
+      const first = String(event.detail?.user?.name || "").split(/\s+/).filter(Boolean)[0];
+      const hello = strip.querySelector("[data-e27-welcome-hello]");
+      if (hello) hello.textContent = first ? `Welcome back, ${first}` : "Welcome back";
+    });
+  }
+
+  function start() {
+    welcomeBack();
+    document.querySelectorAll("[data-e27-today]").forEach(mount);
+  }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
   else start();
   window.EliteToday = { mount, dailyStatus };

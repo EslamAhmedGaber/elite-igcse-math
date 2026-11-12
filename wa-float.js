@@ -22,7 +22,32 @@
 .elite-fabs a:focus-visible,.elite-fabs button:focus-visible{outline:3px solid #e2c36d;outline-offset:3px}
 body.exam-sitting .elite-fabs{display:none}
 @media (max-width:640px){.elite-fabs{right:14px}.wa-float{width:52px;height:52px}.wa-float svg{width:28px;height:28px}.signin-float{min-height:40px;font-size:13px;padding:6px 14px 6px 8px}}
-@media print{.elite-fabs{display:none!important}}`;
+@media print{.elite-fabs{display:none!important}}
+.signin-card{position:fixed;right:18px;bottom:var(--elite-fab-space,150px);z-index:80;width:min(360px,calc(100vw - 32px));box-sizing:border-box;padding:18px 18px 14px;border-radius:16px;background:#0f2140;color:#fff;border:1px solid rgba(226,184,79,.55);box-shadow:0 18px 50px rgba(8,18,38,.4);font-family:inherit;transform:translateY(16px);opacity:0;transition:transform .25s ease,opacity .25s ease}
+.signin-card.is-on{transform:none;opacity:1}
+.signin-card small{display:block;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#e2b84f}
+.signin-card strong{display:block;margin:6px 26px 6px 0;font-size:18px;line-height:1.3;color:#fff}
+.signin-card p{margin:0 0 14px;font-size:14px;line-height:1.5;color:#c9d3e3}
+.signin-card div{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.signin-card .go{display:inline-flex;align-items:center;gap:9px;min-height:42px;padding:8px 14px;border-radius:10px;background:#fff;color:#1f2937;font-size:14.5px;font-weight:700;text-decoration:none}
+.signin-card .go:hover{background:#f1f5f9;color:#1f2937}
+.signin-card .go .g{display:grid;place-items:center}
+.signin-card .go svg{width:18px;height:18px}
+.signin-card .later{min-height:42px;padding:8px 12px;border:0;background:transparent;color:#c9d3e3;font:inherit;font-size:14px;cursor:pointer}
+.signin-card .later:hover{color:#fff;text-decoration:underline}
+.signin-card .x{position:absolute;top:8px;right:8px;width:32px;height:32px;border:0;border-radius:8px;background:transparent;color:#aebbd0;font-size:20px;line-height:1;cursor:pointer}
+.signin-card .x:hover{background:rgba(255,255,255,.1);color:#fff}
+.signin-card em{display:block;margin-top:10px;font-style:normal;font-size:12px;line-height:1.4;color:#8ea0ba}
+.signin-card a:focus-visible,.signin-card button:focus-visible{outline:3px solid #e2c36d;outline-offset:2px}
+@media (max-width:640px){.signin-card{right:16px;left:16px;width:auto}}
+@media (prefers-reduced-motion:reduce){.signin-card{transition:none}}
+@media print{.signin-card{display:none!important}}`;
+  const REMINDER_KEY = 'eliteSignInReminderV2'; // shared with cloud-progress.js
+  // After signing in on the home page the student is sent back to the page they were reading.
+  const SIGNIN_URL = `/?signin=1&next=${encodeURIComponent(location.pathname)}`;
+  function hasAccount() {
+    try { return localStorage.getItem('eliteSignedInV1') === '1'; } catch (err) { return false; }
+  }
 
   function add() {
     if (document.querySelector('.elite-fabs')) return;
@@ -38,10 +63,11 @@ body.exam-sitting .elite-fabs{display:none}
     const signin = document.createElement(hasCloud ? 'button' : 'a');
     signin.className = 'signin-float';
     if (hasCloud) { signin.type = 'button'; signin.setAttribute('data-cloud-login', ''); signin.setAttribute('data-cloud-label', 'Sign in free'); }
-    else signin.href = '/?signin=1';
+    else signin.href = SIGNIN_URL;
     signin.innerHTML = `<span class="g">${G_SVG}</span><span>Sign in free</span>`;
     signin.title = 'Sign in free with Google: save your progress on every device';
-    signin.hidden = hasCloud; // app pages: wait until we know the student is signed out
+    // App pages: wait until we know the student is signed out. Static pages: cloud-progress.js leaves a flag.
+    signin.hidden = hasCloud || hasAccount();
     box.appendChild(signin);
 
     const title = document.title.replace(/\s*[|–-]\s*Elite.*$/, '').trim();
@@ -77,6 +103,48 @@ body.exam-sitting .elite-fabs{display:none}
     layout();
     window.addEventListener('resize', layout);
     new MutationObserver(layout).observe(document.body, {childList: true});
+    if (!hasCloud) remind();
+  }
+
+  // Static pages (topic pages from Google): the same free sign-in reminder as the rest of the site.
+  // It shares the reminder memory with cloud-progress.js, so a student is not asked twice in a row.
+  function remind() {
+    if (hasAccount() || navigator.webdriver) return;
+    let saved;
+    try { saved = JSON.parse(localStorage.getItem(REMINDER_KEY) || 'null') || {}; } catch (err) { return; } // storage blocked: do not nag
+    const today = new Date().toISOString().slice(0, 10);
+    const pages = Number(saved.pages || 0) + 1;
+    const save = (next) => { try { localStorage.setItem(REMINDER_KEY, JSON.stringify(next)); } catch (err) { /* private mode */ } };
+    save({...saved, pages});
+    const due = !saved.shown || pages >= 3 || saved.staticDay !== today;
+    if (!due || Date.now() - Number(saved.lastAt || 0) < 90000) return;
+    setTimeout(() => {
+      if (hasAccount() || document.querySelector('.signin-card')) return;
+      const card = document.createElement('aside');
+      card.className = 'signin-card';
+      card.setAttribute('role', 'dialog');
+      card.setAttribute('aria-labelledby', 'signinCardTitle');
+      card.innerHTML = `<button class="x" type="button" aria-label="Close">&times;</button>
+        <small>Free student account</small>
+        <strong id="signinCardTitle">Sign in with Google, free forever</strong>
+        <p>Mark the questions you solve, build your Mistake Box and keep your progress on every device. No password, no payment.</p>
+        <div><a class="go" href="${SIGNIN_URL}"><span class="g">${G_SVG}</span>Continue with Google</a><button class="later" type="button">Not now</button></div>
+        <em>Free and optional. We keep your name, email and progress; Dr Eslam can see who signed in and how much they study.</em>`;
+      document.body.appendChild(card);
+      const now = JSON.parse(localStorage.getItem(REMINDER_KEY) || 'null') || {};
+      save({...now, shown: Number(now.shown || 0) + 1, lastAt: Date.now(), staticDay: today, pages: 0});
+      const close = () => {
+        card.classList.remove('is-on');
+        setTimeout(() => card.remove(), 260);
+        const then = JSON.parse(localStorage.getItem(REMINDER_KEY) || 'null') || {};
+        save({...then, dismissed: Number(then.dismissed || 0) + 1});
+      };
+      card.querySelector('.x').addEventListener('click', close);
+      card.querySelector('.later').addEventListener('click', close);
+      card.addEventListener('keydown', (event) => { if (event.key === 'Escape') close(); });
+      void card.offsetHeight;
+      card.classList.add('is-on');
+    }, 8000);
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', add, {once: true});

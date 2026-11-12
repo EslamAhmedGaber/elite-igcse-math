@@ -13,12 +13,12 @@
   <script src="pathway-bootstrap.js?v=20261020w13"></script>
   <link rel="stylesheet" href="styles.css?v=20261024u">
   <link rel="stylesheet" href="elite-system.css?v=20260906b">
-  <link rel="stylesheet" href="elite-ux.css?v=20261103a">
+  <link rel="stylesheet" href="elite-ux.css?v=20261112a">
   <script defer src="firebase-config.js"></script>
-  <script defer src="cloud-progress.js?v=20261026a"></script>
+  <script defer src="cloud-progress.js?v=20261112a"></script>
   <script defer src="course-modules.js?v=20261024r"></script>
   <script defer src="lead.js?v=20261020t1"></script>
-  <script defer src="stats.js?v=20261024a"></script>
+  <script defer src="stats.js?v=20261112a"></script>
 </head>
 <body data-page="stats">
 
@@ -44,10 +44,10 @@
           <div>
             <span class="e27-kicker" style="color:var(--e-gold-ink)">Teacher only</span>
             <h2>Site statistics</h2>
-            <p>How many people use the site and what they use. Anonymous counts, Cairo time. Your own visits are not counted.</p>
+            <p>How many people use the site, where they come from and what they do. Anonymous counts, Cairo time; the arrows compare with the same number of days before. Your own visits are not counted.</p>
           </div>
           <div class="e27-members-actions">
-            <a class="e27-btn e27-btn-line" href="members.html">Signed-in students</a>
+            <a class="e27-btn e27-btn-gold" href="members.html">Students: who is studying</a>
             <a class="e27-btn e27-btn-line" href="admin.html">Teacher Studio</a>
           </div>
         </div>
@@ -59,18 +59,29 @@
         </div>
         <p class="e27-members-status" data-stats-status role="status">Checking your sign-in&hellip;</p>
         <div data-stats-body hidden>
+          <p class="e27-members-status e27-stats-notice" data-stats-notice hidden>New counters (signed-in visitors, study time, where visitors come from, visitors per course, busiest hours) start recording once you publish the updated rules from <code>docs/firestore.rules</code> in the Firebase console. Everything else keeps counting meanwhile.</p>
           <div class="e27-members-stats e27-stats-kpis" data-stats-kpis></div>
           <section class="e27-stats-card">
             <header><h3>Every day</h3><span class="e27-stats-legend"><i class="is-v"></i>Page views <i class="is-u"></i>Visitors</span></header>
             <div class="e27-stats-chart" data-stats-chart></div>
           </section>
           <div class="e27-stats-grid">
-            <section class="e27-stats-card"><header><h3>Courses</h3><span>pages opened in each course</span></header><div data-stats-list="courses"></div></section>
+            <section class="e27-stats-card"><header><h3>Free account</h3><span>from visitor to signed-in student</span></header><div data-stats-funnel></div></section>
+            <section class="e27-stats-card"><header><h3>Students</h3><span>everyone who signed in, all time</span></header><div data-stats-students></div></section>
+          </div>
+          <section class="e27-stats-card">
+            <header><h3>When students study</h3><span>page views by hour, Cairo time</span></header>
+            <div class="e27-stats-chart" data-stats-hours></div>
+          </section>
+          <div class="e27-stats-grid">
+            <section class="e27-stats-card"><header><h3>Students per course</h3><span>visitors, one per device per day</span></header><div data-stats-list="courseVisitors"></div></section>
+            <section class="e27-stats-card"><header><h3>Where visitors come from</h3><span>first visit of the day</span></header><div data-stats-list="sources"></div></section>
             <section class="e27-stats-card"><header><h3>Tools used</h3><span>clicks on each tool</span></header><div data-stats-list="tools"></div></section>
-            <section class="e27-stats-card"><header><h3>Pages</h3><span>page views by section</span></header><div data-stats-list="pages"></div></section>
-            <section class="e27-stats-card"><header><h3>Countries</h3><span>visitors, from the device time zone</span></header><div data-stats-list="countries"></div></section>
             <section class="e27-stats-card"><header><h3>Studying</h3><span>what students did</span></header><div data-stats-list="actions"></div></section>
-            <section class="e27-stats-card"><header><h3>Devices &amp; sign-in</h3><span>visitors and the free account</span></header><div data-stats-list="devices"></div></section>
+            <section class="e27-stats-card"><header><h3>Pages</h3><span>page views by section</span></header><div data-stats-list="pages"></div></section>
+            <section class="e27-stats-card"><header><h3>Course pages opened</h3><span>every page view inside a course</span></header><div data-stats-list="courses"></div></section>
+            <section class="e27-stats-card"><header><h3>Countries</h3><span>visitors, from the device time zone</span></header><div data-stats-list="countries"></div></section>
+            <section class="e27-stats-card"><header><h3>Devices</h3><span>visitors</span></header><div data-stats-list="devices"></div></section>
           </div>
         </div>
       </section>
@@ -80,6 +91,6 @@
   <footer class="site-footer hub-footer">
     <p><strong>Elite IGCSE Academy</strong> &middot; Dr Eslam Ahmed &middot; <a href="about.html">About</a></p>
   </footer>
-  <script defer src="/wa-float.js?v=20261026b"></script>
+  <script defer src="/wa-float.js?v=20261112a"></script>
 </body>
 </html>

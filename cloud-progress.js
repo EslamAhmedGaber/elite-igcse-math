@@ -59,8 +59,14 @@
     modules: null,
     syncTimer: null,
     lastSyncAt: null,
-    error: ""
+    error: "",
+    authKnown: false,
+    pulledFor: ""
   };
+  // The untouched localStorage writer: used when saved progress is loaded from the account,
+  // so that loading is not counted as new work and does not start another upload.
+  const originalSetItem = window.__eliteOriginalSetItem || Storage.prototype.setItem;
+  window.__eliteOriginalSetItem = originalSetItem;
 
   const els = {
     panel: document.getElementById("cloudSyncPanel"),
@@ -78,20 +84,6 @@
 
   function firstName() {
     return (state.user?.displayName || "My").split(/\s+/).filter(Boolean)[0] || "My";
-  }
-
-  function ensureFloatingWidget() {
-    if (!document.body || document.body.dataset.page === "progress" || document.querySelector(".cloud-floating-widget")) return;
-    const widget = document.createElement("aside");
-    widget.className = "cloud-floating-widget";
-    widget.setAttribute("aria-label", "Google progress sync");
-    widget.innerHTML = `
-      <span data-cloud-mini-status>Save progress across devices</span>
-      <button class="cloud-floating-login" type="button" data-cloud-login>Continue with Google</button>
-      <a class="cloud-floating-account" href="progress.html" data-cloud-account hidden>My progress</a>
-      <button class="cloud-floating-sync" type="button" data-cloud-sync hidden>Sync</button>
-    `;
-    document.body.append(widget);
   }
 
   function readJSON(key, fallback) {
@@ -197,6 +189,153 @@
     }
   }
 
+  // ---------- Pull before push ----------
+  // Signing in on a second device must add to the saved progress, never replace it with an empty
+  // browser. Once per browser session the account copy is read and joined with this device:
+  // lists join (union), maps join by key, and this device wins a tie. Only then is anything uploaded.
+  const PULL_SESSION_KEY = "eliteCloudPulledV1";
+  const SIGNED_IN_FLAG_KEY = "eliteSignedInV1";
+  const CLOUD_FIELDS = [
+    ["profile", PROFILE_KEY], ["solved", SOLVED_KEY], ["selected", SELECTED_KEY], ["reviewItems", REVIEW_KEY],
+    ["readiness", READINESS_KEY], ["activity", ACTIVITY_KEY], ["paperAttempts", PAPER_ATTEMPTS_KEY],
+    ["studyTasks", STUDY_TASKS_KEY], ["assignmentsV2", ASSIGNMENTS_KEY], ["quizzesV2", QUIZZES_KEY],
+    ["wma11Solved", WMA11_SOLVED_KEY], ["wma11Mistakes", WMA11_MISTAKE_KEY], ["mockHistory", MOCK_HISTORY_KEY],
+    ["activeMock", EXAM_KEY], ["studyPlan", PLAN_KEY], ["leadInfo", LEAD_KEY]
+  ];
+  // A test in progress is one object: keep this device's copy, or take the saved one if there is none here.
+  const WHOLE_VALUE_KEYS = /^eliteMockExamV1(:|$)/;
+
+  function isPlainObject(value) {
+    return Boolean(value) && typeof value === "object" && !Array.isArray(value);
+  }
+
+  function isEmptyValue(value) {
+    if (value == null || value === "") return true;
+    if (Array.isArray(value)) return value.length === 0;
+    if (isPlainObject(value)) return Object.keys(value).length === 0;
+    return false;
+  }
+
+  function itemKey(item) {
+    if (item && typeof item === "object") return item.id != null ? `id:${item.id}` : JSON.stringify(item);
+    return `${typeof item}:${item}`;
+  }
+
+  // Returns `local` itself when the account copy adds nothing, so callers can tell whether anything changed.
+  function mergeValue(local, cloud, key) {
+    if (isEmptyValue(cloud)) return local;
+    if (isEmptyValue(local)) return cloud;
+    if (WHOLE_VALUE_KEYS.test(key)) return local;
+    if (Array.isArray(local) && Array.isArray(cloud)) {
+      const seen = new Set(local.map(itemKey));
+      const extra = cloud.filter((item) => {
+        const id = itemKey(item);
+        if (seen.has(id)) return false;
+        seen.add(id);
+        return true;
+      });
+      return extra.length ? local.concat(extra) : local;
+    }
+    if (isPlainObject(local) && isPlainObject(cloud)) {
+      let merged = local;
+      Object.keys(cloud).forEach((name) => {
+        if (Object.prototype.hasOwnProperty.call(local, name) || cloud[name] == null) return;
+        if (merged === local) merged = { ...local };
+        merged[name] = cloud[name];
+      });
+      return merged;
+    }
+    return local;
+  }
+
+  function mergeCloudIntoLocal(data) {
+    if (!data || typeof data !== "object") return false;
+    let changed = false;
+    const mergeKey = (key, cloudValue) => {
+      if (cloudValue == null) return;
+      let localValue = null;
+      try {
+        const raw = localStorage.getItem(key);
+        localValue = raw === null ? null : JSON.parse(raw);
+      } catch (err) {
+        localValue = null;
+      }
+      const merged = mergeValue(localValue, cloudValue, key);
+      if (merged === localValue || isEmptyValue(merged)) return;
+      try {
+        originalSetItem.call(localStorage, key, JSON.stringify(merged));
+        changed = true;
+      } catch (err) {
+        // Storage full or blocked: keep what this device has.
+      }
+    };
+    CLOUD_FIELDS.forEach(([field, key]) => mergeKey(key, data[field]));
+    if (data.extra && typeof data.extra === "object") {
+      EXTRA_SYNC_KEYS.forEach((key) => mergeKey(key, data.extra[key]));
+    }
+    return changed;
+  }
+
+  // true = the account copy has been read (and joined) for this student, so uploading is safe.
+  async function pullCloud(user) {
+    if (!state.ready || !user) return false;
+    if (state.pulledFor === user.uid) return true;
+    try {
+      if (sessionStorage.getItem(PULL_SESSION_KEY) === user.uid) {
+        state.pulledFor = user.uid;
+        return true;
+      }
+    } catch (err) {
+      // sessionStorage blocked: read the account copy on every page instead.
+    }
+    const fs = state.modules.firestore;
+    try {
+      const snap = await fs.getDoc(fs.doc(state.db, COLLECTION, user.uid));
+      const changed = snap.exists() ? mergeCloudIntoLocal(snap.data()) : false;
+      state.pulledFor = user.uid;
+      try { sessionStorage.setItem(PULL_SESSION_KEY, user.uid); } catch (err) { /* private mode */ }
+      if (changed) progressLoaded();
+      return true;
+    } catch (err) {
+      return false; // offline: nothing is uploaded until the account copy can be read
+    }
+  }
+
+  // Saved progress arrived after the page had already drawn itself: show it.
+  function progressLoaded() {
+    window.dispatchEvent(new CustomEvent("elite-cloud-restored"));
+    const page = document.body?.dataset.page || "";
+    if (page === "exam" || document.body?.classList.contains("exam-sitting")) return; // never interrupt a test
+    toast("Your saved progress was loaded from your account.");
+    setTimeout(() => window.location.reload(), 1100);
+  }
+
+  function toast(text) {
+    if (!document.body) return;
+    document.querySelector(".e27-toast")?.remove();
+    const note = document.createElement("div");
+    note.className = "e27-toast";
+    note.setAttribute("role", "status");
+    note.textContent = text;
+    document.body.append(note);
+    void note.offsetHeight;
+    note.classList.add("is-visible");
+    setTimeout(() => {
+      note.classList.remove("is-visible");
+      setTimeout(() => note.remove(), 300);
+    }, 4200);
+  }
+
+  // Static pages (topic pages) have no Firebase: this flag tells them the student already has an account.
+  function markSignedIn(user) {
+    try {
+      if (user) originalSetItem.call(localStorage, SIGNED_IN_FLAG_KEY, "1");
+      else localStorage.removeItem(SIGNED_IN_FLAG_KEY);
+    } catch (err) {
+      // private mode
+    }
+  }
+
   // ---------- Anonymous site statistics ----------
   // One small Firestore document per day (site_stats/YYYY-MM-DD, Cairo time) of plain counters.
   // No names, no emails, no cookies: only "how many" and "what was used". Teacher-only view: stats.html.
@@ -207,9 +346,44 @@
     "c_linear", "c_unit1", "c_unit2", "c_wma11", "c_wma12", "c_wma13", "c_wme01",
     "t_notes", "t_books", "t_past_solutions", "t_build_test", "t_progress", "t_classified", "t_expertise", "t_revision_book", "t_mistake_box", "t_saved_tests", "t_interactive_lab", "t_question_visualizer", "t_daily",
     "e_pdf", "e_print", "e_solved", "e_mistake", "e_saved", "e_signin", "e_invite", "e_invite_click", "e_whatsapp", "e_daily_done", "e_solution_open",
-    "g_eg", "g_qa", "g_ae", "g_sa", "g_kw", "g_om", "g_bh", "g_jo", "g_gb", "g_other"
+    "g_eg", "g_qa", "g_ae", "g_sa", "g_kw", "g_om", "g_bh", "g_jo", "g_gb", "g_other",
+    // Added 2026-11-12 (need the rules in docs/firestore.rules published; until then only these are skipped):
+    // us = visitors who were signed in, m = minutes of real study time, r_ = where the visit came from,
+    // cu_ = visitors per course (one per device per day), h_ = page views by hour of the day (Cairo).
+    "us", "m", "t_final_revision", "e_mock_finish", "e_search", "e_invite_dismiss",
+    "r_google", "r_search", "r_social", "r_whatsapp", "r_lab", "r_direct", "r_other",
+    "cu_linear", "cu_unit1", "cu_unit2", "cu_wma11", "cu_wma12", "cu_wma13", "cu_wme01",
+    "h_00", "h_01", "h_02", "h_03", "h_04", "h_05", "h_06", "h_07", "h_08", "h_09", "h_10", "h_11",
+    "h_12", "h_13", "h_14", "h_15", "h_16", "h_17", "h_18", "h_19", "h_20", "h_21", "h_22", "h_23"
   ];
   const STATS_KEY_SET = new Set(STATS_KEYS);
+  const STATS_V2_KEYS = new Set(STATS_KEYS.slice(STATS_KEYS.indexOf("us")));
+  const STATS_V2_DENIED_KEY = "eliteStatsV2DeniedAt";
+  const USER_V2_DENIED_KEY = "eliteUserV2DeniedAt";
+  const DENIED_RETRY_MS = 6 * 3600000;
+  const STATS_SIGNED_DAY_KEY = "eliteStatsSignedDayV1";
+  const STATS_COURSE_DAY_KEY = "eliteStatsCourseDayV1";
+  const ENGAGE_CARRY_KEY = "eliteEngageSecondsV1";
+  const USER_MINUTES_KEY = "eliteUserMinutesV1";
+
+  function isDenied(err) {
+    return /permission|insufficient/i.test(String(err && (err.code || err.message)));
+  }
+
+  // The new fields are refused until the latest rules are published. Remember that for a few hours
+  // so every write is still one request, and the old fields keep recording meanwhile.
+  function recentlyDenied(key) {
+    try {
+      const at = Number(localStorage.getItem(key) || 0);
+      return at > 0 && Date.now() - at < DENIED_RETRY_MS;
+    } catch (err) {
+      return false;
+    }
+  }
+
+  function markDenied(key) {
+    try { originalSetItem.call(localStorage, key, String(Date.now())); } catch (err) { /* private mode */ }
+  }
   const STATS_DAY_KEY = "eliteStatsDayV1";
   const STATS_FIRST_KEY = "eliteStatsFirstV1";
   const STATS_IGNORE_KEY = "eliteStatsIgnoreV1";
@@ -217,7 +391,8 @@
   const STATS_STORAGE_RULES = [
     [/^solvedExpertiseQuestions$|Solved/, "e_solved"],
     [/MistakeBox/, "e_mistake"],
-    [/^eliteSavedTestsV1/, "e_saved"]
+    [/^eliteSavedTestsV1/, "e_saved"],
+    [/^eliteMockExamHistoryV1/, "e_mock_finish"]
   ];
   const TIMEZONE_COUNTRY = {
     "Africa/Cairo": "g_eg", "Asia/Qatar": "g_qa", "Asia/Dubai": "g_ae", "Asia/Riyadh": "g_sa", "Asia/Kuwait": "g_kw",
@@ -280,13 +455,143 @@
       return;
     }
     const fs = state.modules.firestore;
-    const update = {};
-    keys.forEach((key) => { update[key] = fs.increment(stats.pending[key]); });
+    const counts = stats.pending;
     stats.pending = {};
+    const build = (filter) => {
+      const update = {};
+      keys.filter(filter).forEach((key) => { update[key] = fs.increment(counts[key]); });
+      return update;
+    };
+    const ref = fs.doc(state.db, "site_stats", statsDay());
+    if (keys.some((key) => STATS_V2_KEYS.has(key)) && !recentlyDenied(STATS_V2_DENIED_KEY)) {
+      try {
+        await fs.setDoc(ref, build(() => true), { merge: true });
+        return;
+      } catch (err) {
+        if (!isDenied(err)) return; // offline: drop silently, never disturb the student
+        markDenied(STATS_V2_DENIED_KEY);
+      }
+    }
+    const legacy = build((key) => !STATS_V2_KEYS.has(key));
+    if (!Object.keys(legacy).length) return;
     try {
-      await fs.setDoc(fs.doc(state.db, "site_stats", statsDay()), update, { merge: true });
+      await fs.setDoc(ref, legacy, { merge: true });
     } catch (err) {
       // Rules not published yet or offline: drop silently, never disturb the student.
+    }
+  }
+
+  // Larger steps than countStat allows (minutes of study time). Rides along with the next write.
+  function bumpStat(key, by) {
+    if (!STATS_KEY_SET.has(key) || !statsEnabled() || !(by > 0)) return;
+    stats.pending[key] = (stats.pending[key] || 0) + Math.min(60, Math.round(by));
+    clearTimeout(stats.timer);
+    stats.timer = setTimeout(flushStats, 3000);
+  }
+
+  // ---------- Study time ----------
+  // A minute counts only while the page is on screen and the student touched it in the last two minutes.
+  // Seconds are carried from page to page (sessionStorage) and written with the next page view,
+  // so measuring time costs no extra requests.
+  const engage = { seconds: 0, lastInput: Date.now(), hiddenTimer: null };
+
+  function readSessionNumber(key) {
+    try { return Number(sessionStorage.getItem(key) || 0) || 0; } catch (err) { return 0; }
+  }
+
+  function writeSessionNumber(key, value) {
+    try { sessionStorage.setItem(key, String(value)); } catch (err) { /* private mode */ }
+  }
+
+  function parkEngagement() {
+    if (!engage.seconds) return;
+    writeSessionNumber(ENGAGE_CARRY_KEY, readSessionNumber(ENGAGE_CARRY_KEY) + engage.seconds);
+    engage.seconds = 0;
+  }
+
+  function settleEngagement() {
+    parkEngagement();
+    const total = readSessionNumber(ENGAGE_CARRY_KEY);
+    const minutes = Math.floor(total / 60);
+    if (!minutes) return;
+    writeSessionNumber(ENGAGE_CARRY_KEY, total % 60);
+    writeSessionNumber(USER_MINUTES_KEY, readSessionNumber(USER_MINUTES_KEY) + minutes);
+    bumpStat("m", minutes);
+  }
+
+  function initEngagement() {
+    const touch = () => { engage.lastInput = Date.now(); };
+    ["pointerdown", "keydown", "scroll", "touchstart"].forEach((type) => {
+      window.addEventListener(type, touch, { passive: true, capture: true });
+    });
+    setInterval(() => {
+      if (document.visibilityState === "visible" && Date.now() - engage.lastInput < 120000) engage.seconds += 15;
+    }, 15000);
+    document.addEventListener("visibilitychange", () => {
+      clearTimeout(engage.hiddenTimer);
+      if (document.visibilityState !== "hidden") return;
+      parkEngagement();
+      // Still in the background after 20 s (not a move to the next page): write what has been earned.
+      engage.hiddenTimer = setTimeout(() => {
+        settleEngagement();
+        flushStats();
+        heartbeat();
+      }, 20000);
+    });
+    window.addEventListener("pagehide", parkEngagement);
+  }
+
+  function statsHour() {
+    try {
+      const hour = new Intl.DateTimeFormat("en-GB", { timeZone: "Africa/Cairo", hour: "2-digit", hour12: false }).format(new Date());
+      const value = Number(String(hour).replace(/\D/g, "")) % 24;
+      return `h_${String(value).padStart(2, "0")}`;
+    } catch (err) {
+      return "";
+    }
+  }
+
+  // Where today's first visit came from. Only the kind of site is kept, never the address.
+  function statsSource() {
+    const params = new URLSearchParams(window.location.search);
+    const tagged = String(params.get("utm_source") || params.get("src") || "").toLowerCase();
+    let host = "";
+    try { host = document.referrer ? new URL(document.referrer).hostname.toLowerCase() : ""; } catch (err) { host = ""; }
+    const from = `${tagged} ${host}`;
+    if (/whatsapp|wa\.me/.test(from)) return "r_whatsapp";
+    if (/eliteiglab\.com/.test(host)) return "r_lab";
+    if (/(^|\.)eliteigcse\.com$/.test(host)) return "r_direct";
+    if (/google\./.test(host) || /googlequicksearchbox/.test(document.referrer || "")) return "r_google";
+    if (/bing\.|yahoo\.|duckduckgo\.|yandex\.|baidu\.|ecosia\./.test(host)) return "r_search";
+    if (/facebook|fb\.|instagram|tiktok|youtube|youtu\.be|twitter|(^|\.)x\.com$|t\.co$|linkedin|telegram|t\.me$|snapchat/.test(from)) return "r_social";
+    if (!host && !tagged) return "r_direct";
+    return "r_other";
+  }
+
+  // One visitor per course per device per day (c_ counts every page opened; cu_ counts people).
+  function countCourseVisitor(courseKey, today) {
+    const id = courseKey.replace(/^c_/, "");
+    try {
+      const saved = JSON.parse(localStorage.getItem(STATS_COURSE_DAY_KEY) || "null");
+      const seen = saved && saved.day === today && Array.isArray(saved.ids) ? saved.ids : [];
+      if (seen.includes(id)) return;
+      originalSetItem.call(localStorage, STATS_COURSE_DAY_KEY, JSON.stringify({ day: today, ids: seen.concat(id) }));
+      countStat(`cu_${id}`);
+    } catch (err) {
+      // Storage blocked: the page view is still counted.
+    }
+  }
+
+  // Counted once per device per day, when Google confirms the student is signed in.
+  function countSignedInVisitor() {
+    if (!statsEnabled()) return;
+    const today = statsDay();
+    try {
+      if (localStorage.getItem(STATS_SIGNED_DAY_KEY) === today) return;
+      originalSetItem.call(localStorage, STATS_SIGNED_DAY_KEY, today);
+      countStat("us");
+    } catch (err) {
+      // Storage blocked: skip, otherwise every page would count again.
     }
   }
 
@@ -305,7 +610,10 @@
     const rule = STATS_STORAGE_RULES.find(([pattern]) => pattern.test(key));
     if (!rule) return;
     const added = storageSize(after) - storageSize(before);
-    if (added > 0) countStat(rule[1], added);
+    if (added <= 0) return;
+    countStat(rule[1], added);
+    // The student now has something worth keeping: a good moment to offer the free account.
+    studyMoment({ e_solved: "solved", e_mistake: "mistake", e_mock_finish: "mock" }[rule[1]]);
   }
 
   function statsSection() {
@@ -339,13 +647,18 @@
     if (!statsEnabled()) return;
     countStat("v");
     countStat(statsSection());
+    countStat(statsHour());
     const course = statsCourse();
-    if (course) countStat(course);
     const today = statsDay();
+    if (course) {
+      countStat(course);
+      countCourseVisitor(course, today);
+    }
     try {
       if (localStorage.getItem(STATS_DAY_KEY) !== today) {
         localStorage.setItem(STATS_DAY_KEY, today);
         countStat("u");
+        countStat(statsSource());
         let zone = "";
         try { zone = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (err) { zone = ""; }
         countStat(TIMEZONE_COUNTRY[zone] || "g_other");
@@ -361,18 +674,33 @@
   }
 
   function initStats() {
-    if (!statsEnabled()) return;
-    countPageView();
+    // The sign-in reminders below run everywhere; the counters only on the live site.
     document.addEventListener("click", (event) => {
       const link = event.target.closest("a");
       if (!link) return;
       const module = link.dataset.module;
       if (module) countStat(`t_${module.replace(/-/g, "_")}`);
       const href = link.getAttribute("href") || "";
-      if (/\.pdf(\?|#|$)/i.test(href)) countStat("e_pdf");
+      if (/\.pdf(\?|#|$)/i.test(href)) {
+        countStat("e_pdf");
+        studyMoment("pdf");
+      }
       if (/wa\.me\//.test(href) || link.hasAttribute("data-lead-trigger")) countStat("e_whatsapp");
     }, true);
-    window.addEventListener("elite:daily-complete", () => countStat("e_daily_done"));
+    window.addEventListener("elite:daily-complete", () => {
+      countStat("e_daily_done");
+      studyMoment("daily");
+    });
+    if (!statsEnabled()) return;
+    settleEngagement();
+    countPageView();
+    initEngagement();
+    let searched = false;
+    document.addEventListener("input", (event) => {
+      if (searched || !event.target.matches?.('input[type="search"]') || String(event.target.value || "").trim().length < 2) return;
+      searched = true;
+      countStat("e_search");
+    }, true);
     window.addEventListener("beforeprint", () => {
       if (stats.printed) return;
       stats.printed = true;
@@ -414,7 +742,6 @@
   }
 
   function updateGlobalUi(message = "") {
-    ensureFloatingWidget();
     const signedIn = Boolean(state.user);
     const miniStatus = message
       || (!state.configured ? "Local progress only"
@@ -457,104 +784,308 @@
     });
   }
 
-  // ---------- Free sign-in invite: friendly, optional, never blocks the page ----------
-  const INVITE_DISMISS_KEY = "eliteSignInInviteDismissedAt";
-  const INVITE_SNOOZE_DAYS = 7;
-  const INVITE_DELAY_MS = 5000;
-  const INVITE_SKIP_PAGES = new Set(["admin", "members", "stats", "exam", "progress"]);
+  // ---------- Free sign-in reminder ----------
+  // Signing in stays free and optional, and every card has "Not now". But the reminder comes back:
+  // after a few more pages, on the next day, and at the moments the student has something to lose
+  // (questions solved, the Mistake Box, a finished Daily Challenge or mock, a book download).
+  // The first card on arrival is a small corner card: a full-screen pop-up on a landing page pushes
+  // students away and is penalised by Google on phones. Every later reminder is a centred pop-up.
+  const INVITE_STATE_KEY = "eliteSignInReminderV2";
+  const INVITE_FIRST_DELAY_MS = 5000;
+  const INVITE_RETURN_DELAY_MS = 9000;
+  const INVITE_MOMENT_DELAY_MS = 1200;
+  const INVITE_EVERY_PAGES = 3;
+  const INVITE_MIN_GAP_MS = 90000;
+  const INVITE_SOLVED_STEPS = [3, 10, 25, 50];
+  const INVITE_SKIP_PAGES = new Set(["admin", "members", "stats", "exam"]);
+  const IAL_CODES = ["WMA11", "WMA12", "WMA13", "WME01"];
+  const GOOGLE_ICON = '<svg class="e27-g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3a12 12 0 0 1-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>';
   let inviteTimer = null;
+  let inviteReturnFocus = null;
 
-  function inviteSnoozed() {
+  // null = storage is blocked (private mode): then no timed reminders, or every page would nag.
+  function readInviteState() {
     try {
-      const at = Number(localStorage.getItem(INVITE_DISMISS_KEY) || 0);
-      return at > 0 && Date.now() - at < INVITE_SNOOZE_DAYS * 86400000;
+      const saved = JSON.parse(localStorage.getItem(INVITE_STATE_KEY) || "null");
+      return saved && typeof saved === "object" ? saved : {};
     } catch (err) {
-      return true; // storage blocked: do not nag on every page
+      return null;
+    }
+  }
+
+  function saveInviteState(next) {
+    try { originalSetItem.call(localStorage, INVITE_STATE_KEY, JSON.stringify(next)); } catch (err) { /* private mode */ }
+  }
+
+  function storedCount(key) {
+    try { return storageSize(localStorage.getItem(key)); } catch (err) { return 0; }
+  }
+
+  // What this device holds: shown in the reminder ("12 questions solved") and sent with the student record.
+  function deviceSnapshot() {
+    const total = (name) => IAL_CODES.reduce((sum, code) => sum + storedCount(name(code)), 0);
+    return {
+      solved: storedCount(SOLVED_KEY) + total((code) => `elite${code}SolvedV1`),
+      mistakes: storedCount(REVIEW_KEY) + total((code) => `elite${code}MistakeBoxV1`),
+      mocks: storedCount(MOCK_HISTORY_KEY) + total((code) => `${MOCK_HISTORY_KEY}:${code.toLowerCase()}`),
+      streak: Number(readJSON("eliteDailyV1", {})?.streak?.count || 0) || 0
+    };
+  }
+
+  function inviteCopy(reason) {
+    const { solved } = deviceSnapshot();
+    const many = `${solved.toLocaleString("en-GB")} question${solved === 1 ? "" : "s"}`;
+    switch (reason) {
+      case "solved":
+        return { title: `${many} solved. Don't lose them.`, text: "They are saved only in this browser. Sign in free with Google and they stay with you on every device." };
+      case "mistake":
+        return { title: "Keep your Mistake Box safe", text: "Your questions to redo are saved only in this browser. Sign in free with Google and they follow you to every device." };
+      case "daily":
+        return { title: "Keep your streak on every device", text: "Today's Daily Challenge is done. Sign in free with Google so your streak and results are never lost." };
+      case "mock":
+        return { title: "Keep your mock results", text: "Your marks and exam history are saved only in this browser. Sign in free with Google and keep them safe." };
+      case "pdf":
+        return { title: "Studying from the books?", text: "Sign in free with Google to mark what you finish online and keep your progress on every device." };
+      case "return":
+        return {
+          title: "Still studying without an account?",
+          text: solved
+            ? `You have ${many} solved on this device only. Sign in free with Google and keep them on every device.`
+            : "Sign in free with Google and your solved questions, Mistake Box and mocks follow you to any phone or laptop."
+        };
+      default:
+        return { title: "Sign in with Google, free forever", text: "Save your solved questions, Mistake Box and mocks on every device. No password, no payment." };
     }
   }
 
   function hideInvite(remember = false) {
     clearTimeout(inviteTimer);
-    if (remember) {
-      try { localStorage.setItem(INVITE_DISMISS_KEY, String(Date.now())); } catch (err) { /* private mode */ }
-    }
     const card = document.querySelector(".e27-invite");
+    if (remember && card) {
+      const saved = readInviteState();
+      if (saved) saveInviteState({ ...saved, dismissed: Number(saved.dismissed || 0) + 1 });
+      countStat("e_invite_dismiss");
+    }
     if (!card) return;
+    const shade = document.querySelector(".e27-invite-shade");
     card.classList.remove("is-visible");
-    setTimeout(() => card.remove(), 260);
+    shade?.classList.remove("is-visible");
+    setTimeout(() => {
+      card.remove();
+      shade?.remove();
+    }, 260);
+    if (inviteReturnFocus && document.contains(inviteReturnFocus)) inviteReturnFocus.focus({ preventScroll: true });
+    inviteReturnFocus = null;
   }
 
+  function canInvite(force) {
+    if (!state.configured || !state.authKnown || state.user || !document.body) return false;
+    if (!force && INVITE_SKIP_PAGES.has(document.body.dataset.page || "")) return false;
+    if (document.body.classList.contains("exam-sitting")) return false; // never during a timed test
+    if (document.querySelector(".e27-invite") || window.matchMedia("print").matches) return false;
+    return true;
+  }
+
+  function showInvite(reason, { force = false } = {}) {
+    if (!canInvite(force)) return;
+    const saved = readInviteState() || {};
+    if (!force && Date.now() - Number(saved.lastAt || 0) < INVITE_MIN_GAP_MS) return;
+    const modal = force || reason !== "welcome";
+    const copy = inviteCopy(reason);
+    const card = document.createElement("aside");
+    card.className = `e27-invite${modal ? " is-modal" : ""}`;
+    card.dataset.reason = reason;
+    card.setAttribute("role", "dialog");
+    card.setAttribute("aria-labelledby", "e27InviteTitle");
+    if (modal) card.setAttribute("aria-modal", "true");
+    card.innerHTML = `
+      <button class="e27-invite-close" type="button" aria-label="Close" data-e27-invite-later>&times;</button>
+      <span class="e27-kicker">Free student account</span>
+      <h2 id="e27InviteTitle"></h2>
+      <p data-e27-invite-text></p>
+      ${modal ? `<ul class="e27-invite-perks">
+        <li>Solved questions and Mistake Box on every device</li>
+        <li>Mock results and saved tests kept safely</li>
+        <li>Free forever. No password, no payment</li>
+      </ul>` : ""}
+      <div class="e27-invite-actions">
+        <button class="e27-btn e27-btn-google" type="button" data-cloud-login data-cloud-label="Continue with Google">${GOOGLE_ICON}Continue with Google</button>
+        <button class="e27-btn e27-invite-later" type="button" data-e27-invite-later>Not now</button>
+      </div>
+      <small class="e27-invite-note">Free and optional. We keep your name, email and progress; Dr Eslam can see who signed in and how much they study.</small>`;
+    card.querySelector("h2").textContent = copy.title;
+    card.querySelector("[data-e27-invite-text]").textContent = copy.text;
+    let shade = null;
+    if (modal) {
+      shade = document.createElement("div");
+      shade.className = "e27-invite-shade";
+      shade.addEventListener("click", () => hideInvite(true));
+      document.body.append(shade);
+    }
+    document.body.append(card);
+    saveInviteState({ ...saved, shown: Number(saved.shown || 0) + 1, lastAt: Date.now(), lastDay: statsDay(), pages: 0 });
+    countStat("e_invite");
+    card.querySelector("[data-cloud-login]").addEventListener("click", () => countStat("e_invite_click"));
+    card.querySelectorAll("[data-e27-invite-later]").forEach((button) => {
+      button.addEventListener("click", () => hideInvite(true));
+    });
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") hideInvite(true);
+    });
+    // Force a layout so the fade-in transition runs (rAF would stall in background tabs).
+    void card.offsetHeight;
+    card.classList.add("is-visible");
+    shade?.classList.add("is-visible");
+    if (modal) {
+      inviteReturnFocus = document.activeElement;
+      card.querySelector("[data-cloud-login]").focus({ preventScroll: true });
+    }
+  }
+
+  // Runs on every page once Google says nobody is signed in.
   function scheduleInvite() {
-    const page = document.body?.dataset.page || "";
-    // ?signin=1 (the "Sign in free" button on static pages) shows the card at once, even if snoozed.
-    const asked = /[?&]signin=1\b/.test(window.location.search);
-    if (!state.configured || state.user || (!asked && (INVITE_SKIP_PAGES.has(page) || inviteSnoozed()))) return;
-    if (document.querySelector(".e27-invite") || window.matchMedia("print").matches) return;
     clearTimeout(inviteTimer);
-    inviteTimer = setTimeout(() => {
-      if (state.user || document.querySelector(".e27-invite")) return;
-      const card = document.createElement("aside");
-      card.className = "e27-invite";
-      card.setAttribute("role", "dialog");
-      card.setAttribute("aria-labelledby", "e27InviteTitle");
-      card.innerHTML = `
-        <button class="e27-invite-close" type="button" aria-label="Close" data-e27-invite-later>&times;</button>
-        <span class="e27-kicker">Free student account</span>
-        <h2 id="e27InviteTitle">Sign in with Google, free forever</h2>
-        <p>Save your solved questions, Mistake Box and mocks on every device. No password, no payment. Optional: everything works without it.</p>
-        <div class="e27-invite-actions">
-          <button class="e27-btn e27-btn-gold" type="button" data-cloud-login data-cloud-label="Continue with Google">Continue with Google</button>
-          <button class="e27-btn e27-invite-later" type="button" data-e27-invite-later>Not now</button>
-        </div>
-        <small class="e27-invite-note">We keep your name, email and progress. Dr Eslam can see who has signed in.</small>`;
-      document.body.append(card);
-      countStat("e_invite");
-      card.querySelector("[data-cloud-login]")?.addEventListener("click", () => countStat("e_invite_click"));
-      card.querySelectorAll("[data-e27-invite-later]").forEach((button) => {
-        button.addEventListener("click", () => hideInvite(true));
-      });
-      card.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") hideInvite(true);
-      });
-      // Force a layout so the fade-in transition runs (rAF would stall in background tabs).
-      void card.offsetHeight;
-      card.classList.add("is-visible");
-    }, asked ? 300 : INVITE_DELAY_MS);
+    // ?signin=1 (the "Sign in free" button on static pages) opens the card at once.
+    if (/[?&]signin=1\b/.test(window.location.search)) {
+      inviteTimer = setTimeout(() => showInvite("welcome", { force: true }), 300);
+      return;
+    }
+    const saved = readInviteState();
+    if (!saved) return;
+    const pages = Number(saved.pages || 0) + 1;
+    saveInviteState({ ...saved, pages });
+    const first = !saved.shown;
+    if (!first && pages < INVITE_EVERY_PAGES && saved.lastDay === statsDay()) return;
+    inviteTimer = setTimeout(() => showInvite(first ? "welcome" : "return"), first ? INVITE_FIRST_DELAY_MS : INVITE_RETURN_DELAY_MS);
+  }
+
+  // The student just did something worth keeping while signed out.
+  function studyMoment(reason) {
+    if (!reason || !state.authKnown || state.user) return;
+    const saved = readInviteState();
+    if (!saved || Date.now() - Number(saved.lastAt || 0) < INVITE_MIN_GAP_MS) return;
+    const today = statsDay();
+    if (reason === "solved") {
+      const { solved } = deviceSnapshot();
+      const step = solved >= 100 ? Math.floor(solved / 50) * 50 : INVITE_SOLVED_STEPS.filter((n) => n <= solved).pop() || 0;
+      if (!step || step <= Number(saved.solvedStep || 0)) return;
+      saveInviteState({ ...saved, solvedStep: step });
+    } else if (reason === "mistake" || reason === "pdf") {
+      if (saved[`${reason}Day`] === today) return;
+      saveInviteState({ ...saved, [`${reason}Day`]: today });
+    }
+    clearTimeout(inviteTimer);
+    inviteTimer = setTimeout(() => showInvite(reason), INVITE_MOMENT_DELAY_MS);
+  }
+
+  // "Sign in free" on a static page opens /?signin=1&next=/that/page. Only a path on this site is accepted.
+  function signInReturnPath() {
+    const params = new URLSearchParams(window.location.search);
+    const next = params.get("next") || "";
+    return params.has("signin") && /^\/(?!\/)[\w\-./?=&%+#~]*$/.test(next) ? next : "";
   }
 
   // ---------- Who uses the site: one small record per signed-in student ----------
-  // site_users/{uid}: name, email, first/last visit, visit count, last page and course.
-  // Written at most once per browser session, so it costs almost nothing.
+  // site_users/{uid}: name, email, first/last visit, visit count, last page and course, plus a summary
+  // of the student's work (days active, questions solved, Mistake Box, mocks, streak, minutes, device).
+  // One write per browser session, then at most one every few minutes while the student is working.
   const VISIT_SESSION_KEY = "eliteVisitRecordedV1";
+  const HEARTBEAT_AT_KEY = "eliteUserHeartbeatAtV1";
+  const HEARTBEAT_SNAP_KEY = "eliteUserSnapV1";
+  const HEARTBEAT_GAP_MS = 180000;
 
-  async function recordVisit(user) {
-    if (!state.ready || !user) return;
-    try {
-      if (sessionStorage.getItem(VISIT_SESSION_KEY) === user.uid) return;
-      sessionStorage.setItem(VISIT_SESSION_KEY, user.uid);
-    } catch (err) {
-      // sessionStorage blocked: still record once for this page load.
-    }
-    const fs = state.modules.firestore;
-    const ref = fs.doc(state.db, "site_users", user.uid);
-    let lastCourse = "";
-    try { lastCourse = localStorage.getItem("eliteLastCourse") || ""; } catch (err) { /* private mode */ }
-    const record = {
+  function lastCourseId() {
+    try { return String(localStorage.getItem("eliteLastCourse") || "").slice(0, 20); } catch (err) { return ""; }
+  }
+
+  function userBase(user, fs) {
+    return {
       uid: user.uid,
       name: String(user.displayName || "").slice(0, 120),
       email: String(user.email || "").toLowerCase().slice(0, 200),
       lastSeen: fs.serverTimestamp(),
       lastPage: String(window.location.pathname || "/").slice(0, 200),
-      lastCourse: lastCourse.slice(0, 20),
-      visits: fs.increment(1)
+      lastCourse: lastCourseId()
     };
+  }
+
+  function userActivity(fs) {
+    const course = lastCourseId();
+    let zone = "";
+    try { zone = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (err) { zone = ""; }
+    const activity = {
+      ...deviceSnapshot(),
+      days: fs.arrayUnion(statsDay()),
+      device: window.matchMedia("(max-width: 760px), (pointer: coarse)").matches ? "phone" : "computer",
+      zone: zone.slice(0, 40),
+      exam: String(readJSON("eliteExamSessionV1", {})?.[course]?.label || "").slice(0, 40)
+    };
+    if (course) activity.courses = fs.arrayUnion(course);
+    return activity;
+  }
+
+  async function writeUserRecord(user, base) {
+    const fs = state.modules.firestore;
+    const ref = fs.doc(state.db, "site_users", user.uid);
+    if (!recentlyDenied(USER_V2_DENIED_KEY)) {
+      const activity = userActivity(fs);
+      const minutes = readSessionNumber(USER_MINUTES_KEY);
+      if (minutes > 0) activity.minutes = fs.increment(minutes);
+      try {
+        await fs.setDoc(ref, { ...base, ...activity }, { merge: true });
+        if (minutes > 0) writeSessionNumber(USER_MINUTES_KEY, Math.max(0, readSessionNumber(USER_MINUTES_KEY) - minutes));
+        writeSessionNumber(HEARTBEAT_AT_KEY, Date.now());
+        try { sessionStorage.setItem(HEARTBEAT_SNAP_KEY, JSON.stringify(deviceSnapshot())); } catch (err) { /* private mode */ }
+        return;
+      } catch (err) {
+        if (!isDenied(err)) return; // offline: never disturb the student
+        markDenied(USER_V2_DENIED_KEY);
+      }
+    }
+    if (!("visits" in base)) return; // the rules published before 2026-11-12 accept only the visit record
     try {
-      const snap = await fs.getDoc(ref);
-      if (!snap.exists()) record.firstSeen = fs.serverTimestamp();
-      await fs.setDoc(ref, record, { merge: true });
+      await fs.setDoc(ref, base, { merge: true });
     } catch (err) {
       // Rules not published yet or offline: never disturb the student.
     }
+  }
+
+  async function recordVisit(user) {
+    if (!state.ready || !user) return;
+    try {
+      if (sessionStorage.getItem(VISIT_SESSION_KEY) === user.uid) {
+        heartbeat();
+        return;
+      }
+      sessionStorage.setItem(VISIT_SESSION_KEY, user.uid);
+    } catch (err) {
+      // sessionStorage blocked: still record once for this page load.
+    }
+    const fs = state.modules.firestore;
+    const base = { ...userBase(user, fs), visits: fs.increment(1) };
+    try {
+      const snap = await fs.getDoc(fs.doc(state.db, "site_users", user.uid));
+      if (!snap.exists()) base.firstSeen = fs.serverTimestamp();
+    } catch (err) {
+      return; // rules not published yet or offline
+    }
+    await writeUserRecord(user, base);
+  }
+
+  // Later in the same session: refresh the summary when the student has studied or solved more.
+  function heartbeat() {
+    const user = state.user;
+    if (!state.ready || !user || recentlyDenied(USER_V2_DENIED_KEY)) return;
+    let last = "";
+    try {
+      if (sessionStorage.getItem(VISIT_SESSION_KEY) !== user.uid) return;
+      last = sessionStorage.getItem(HEARTBEAT_SNAP_KEY) || "";
+    } catch (err) {
+      return;
+    }
+    if (readSessionNumber(USER_MINUTES_KEY) < 1 && JSON.stringify(deviceSnapshot()) === last) return;
+    if (Date.now() - readSessionNumber(HEARTBEAT_AT_KEY) < HEARTBEAT_GAP_MS) return;
+    writeUserRecord(user, userBase(user, state.modules.firestore));
   }
 
   function updateUi(message = "") {
@@ -628,12 +1159,23 @@
       await modules.auth.getRedirectResult(state.auth).catch(() => null);
       modules.auth.onAuthStateChanged(state.auth, (user) => {
         state.user = user;
+        state.authKnown = true;
         updateUi();
         emitState();
+        markSignedIn(user);
         if (user) {
           if (isTeacherEmail(user.email)) ignoreMyStats();
-          queueSync();
-          recordVisit(user);
+          countSignedInVisitor();
+          const back = signInReturnPath();
+          pullCloud(user)
+            .then((pulled) => { if (pulled) queueSync(); })
+            .then(() => recordVisit(user))
+            .then(() => {
+              if (!back) return;
+              // Came from "Sign in free" on a topic page: go back to it.
+              flushStats();
+              setTimeout(() => window.location.replace(back), 700);
+            });
         } else {
           scheduleInvite();
         }
@@ -670,6 +1212,9 @@
     if (!state.ready) return;
     await state.modules.auth.signOut(state.auth);
     state.user = null;
+    state.pulledFor = "";
+    try { sessionStorage.removeItem(PULL_SESSION_KEY); } catch (err) { /* private mode */ }
+    markSignedIn(null);
     updateUi("Signed out. Local progress still remains on this device.");
     emitState();
   }
@@ -677,6 +1222,11 @@
   async function syncNow(source = "manual") {
     if (!state.ready || !state.user) {
       updateUi("Sign in with Google first.");
+      return false;
+    }
+    if (!(await pullCloud(state.user))) {
+      // Never upload over an account copy that has not been read: that is how progress gets lost.
+      if (source === "manual") updateUi("Could not reach your saved progress. Check your connection and try again.");
       return false;
     }
     const originalSyncText = els.sync?.textContent || "Sync now";
@@ -754,6 +1304,11 @@
 
   function queueSync() {
     if (!state.ready || !state.user) return;
+    if (state.pulledFor !== state.user.uid) {
+      // Read the account copy first; the upload follows once it has been joined with this device.
+      pullCloud(state.user).then((pulled) => { if (pulled && state.user) queueSync(); });
+      return;
+    }
     clearTimeout(state.syncTimer);
     state.syncTimer = setTimeout(() => syncNow("auto"), 1600);
   }
@@ -794,7 +1349,19 @@
         lastSeen: when(data.lastSeen),
         visits: Number(data.visits || 0),
         lastPage: data.lastPage || "",
-        lastCourse: data.lastCourse || ""
+        lastCourse: data.lastCourse || "",
+        // Activity summary (recorded from 2026-11-12, after the new rules are published).
+        tracked: Array.isArray(data.days),
+        days: Array.isArray(data.days) ? data.days.filter((day) => typeof day === "string").sort() : [],
+        solved: Number(data.solved || 0),
+        mistakes: Number(data.mistakes || 0),
+        mocks: Number(data.mocks || 0),
+        streak: Number(data.streak || 0),
+        minutes: Number(data.minutes || 0),
+        device: data.device || "",
+        zone: data.zone || "",
+        exam: data.exam || "",
+        courses: Array.isArray(data.courses) ? data.courses : []
       };
     });
   }

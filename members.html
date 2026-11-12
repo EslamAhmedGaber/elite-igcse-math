@@ -13,12 +13,12 @@
   <script src="pathway-bootstrap.js?v=20261020w13"></script>
   <link rel="stylesheet" href="styles.css?v=20261024u">
   <link rel="stylesheet" href="elite-system.css?v=20260906b">
-  <link rel="stylesheet" href="elite-ux.css?v=20261103a">
+  <link rel="stylesheet" href="elite-ux.css?v=20261112a">
   <script defer src="firebase-config.js"></script>
-  <script defer src="cloud-progress.js?v=20261026a"></script>
+  <script defer src="cloud-progress.js?v=20261112a"></script>
   <script defer src="course-modules.js?v=20261024r"></script>
   <script defer src="lead.js?v=20261020t1"></script>
-  <script defer src="members.js?v=20261020w13"></script>
+  <script defer src="members.js?v=20261112a"></script>
 </head>
 <body data-page="members">
 
@@ -44,7 +44,7 @@
           <div>
             <span class="e27-kicker" style="color:var(--e-gold-ink)">Teacher only</span>
             <h2>Students who signed in</h2>
-            <p>Everyone who signed in with Google, newest visit first. Visits are counted once per browser session.</p>
+            <p>Everyone who signed in with Google: who is studying, who went quiet and how much each one has done. Press a box to see those students.</p>
           </div>
           <div class="e27-members-actions">
             <a class="e27-btn e27-btn-line" href="stats.html">Site statistics</a>
@@ -54,10 +54,23 @@
         </div>
         <p class="e27-members-status" data-members-status role="status">Checking your sign-in&hellip;</p>
         <div class="e27-members-stats" data-members-stats hidden></div>
+        <p class="e27-members-status" data-members-notice hidden>Days active, questions solved and study time start recording once you publish the updated rules from <code>docs/firestore.rules</code> in the Firebase console. Until then the list shows visits only.</p>
         <div class="e27-members-tools" data-members-tools hidden>
           <label class="e27-members-search">
             <span>Search</span>
             <input type="search" data-members-search placeholder="Name or email" autocomplete="off">
+          </label>
+          <label class="e27-members-search">
+            <span>Show</span>
+            <select data-members-state>
+              <option value="">All students</option>
+              <option value="today">Here today</option>
+              <option value="week">Here this week (not today)</option>
+              <option value="away">Not seen for 7 days or more</option>
+              <option value="quiet">Quiet for 7 to 29 days</option>
+              <option value="gone">Gone for 30 days or more</option>
+              <option value="once">Signed in once, never came back</option>
+            </select>
           </label>
           <label class="e27-members-search">
             <span>Course</span>
@@ -72,11 +85,26 @@
               <option value="wme01">Mechanics 1</option>
             </select>
           </label>
+          <label class="e27-members-search">
+            <span>Sort by</span>
+            <select data-members-sort>
+              <option value="last">Last visit</option>
+              <option value="solved">Most questions solved</option>
+              <option value="days">Most days active</option>
+              <option value="minutes">Most study time</option>
+              <option value="newest">Newest account</option>
+              <option value="name">Name</option>
+            </select>
+          </label>
+          <div class="e27-members-side">
+            <span data-members-count></span>
+            <button class="e27-btn e27-btn-line" type="button" data-members-mail disabled>Copy e-mails</button>
+          </div>
         </div>
         <div class="e27-members-table" data-members-table hidden>
           <table>
             <thead>
-              <tr><th scope="col">Student</th><th scope="col">Last course</th><th scope="col">Visits</th><th scope="col">First visit</th><th scope="col">Last visit</th></tr>
+              <tr><th scope="col">Student</th><th scope="col">Status</th><th scope="col">Course</th><th scope="col">Solved</th><th scope="col">Days active</th><th scope="col">Study time</th><th scope="col">Visits</th><th scope="col">Last visit</th></tr>
             </thead>
             <tbody data-members-rows></tbody>
           </table>
@@ -88,6 +116,6 @@
   <footer class="site-footer hub-footer">
     <p><strong>Elite IGCSE Academy</strong> &middot; Dr Eslam Ahmed &middot; <a href="about.html">About</a></p>
   </footer>
-  <script defer src="/wa-float.js?v=20261026b"></script>
+  <script defer src="/wa-float.js?v=20261112a"></script>
 </body>
 </html>

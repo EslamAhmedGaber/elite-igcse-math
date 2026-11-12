@@ -5657,3 +5657,118 @@ body[data-page="daily"] .page.e27-daily { max-width: none; width: 100%; padding:
 @media (prefers-reduced-motion: reduce) {
   .e27-frev, .e27-frev::after, .e27-frev-flash, .e27-newflag { animation: none !important; }
 }
+
+/* ---------- 17. 2026-11-12: sign-in reminder pop-up, toast, returning-student home, teacher dashboards ---------- */
+/* Sign-in reminder as a centred pop-up (later reminders; the first card on arrival stays in the corner). */
+.e27-invite-shade {
+  position: fixed; inset: 0; z-index: 79; background: rgba(8, 18, 38, .58); opacity: 0; transition: opacity .25s ease;
+}
+.e27-invite-shade.is-visible { opacity: 1; }
+:root:root body .e27-invite.is-modal {
+  inset: 0; margin: auto; height: fit-content; max-height: calc(100vh - 32px); overflow-y: auto;
+  width: min(440px, calc(100vw - 32px)); padding: 26px 24px 20px; border-color: rgba(226, 184, 79, .55);
+  box-shadow: 0 30px 80px rgba(4, 10, 24, .6);
+}
+.e27-invite.is-modal h2 { font-size: 22px; margin: 8px 0 8px; padding-right: 26px; }
+.e27-invite.is-modal p { font-size: 15px; }
+.e27-invite-perks { list-style: none; margin: 0 0 16px; padding: 0; display: grid; gap: 7px; }
+.e27-invite-perks li { position: relative; padding-left: 26px; font-size: 14px; line-height: 1.45; color: #e6ecf5; }
+.e27-invite-perks li::before {
+  content: ""; position: absolute; left: 4px; top: 4px; width: 6px; height: 11px;
+  border: solid var(--e-gold); border-width: 0 2.5px 2.5px 0; transform: rotate(45deg);
+}
+.e27-invite .e27-btn-google { background: #fff; color: #1f2937; border: 0; font-weight: 700; display: inline-flex; align-items: center; gap: 9px; }
+.e27-invite .e27-btn-google:hover { background: #f1f5f9; }
+.e27-invite .e27-btn-google .e27-g { width: 18px; height: 18px; flex: none; }
+.e27-invite.is-modal .e27-btn-google { flex: 1 1 auto; justify-content: center; min-height: 48px; font-size: 15.5px; }
+.e27-invite .e27-btn:focus-visible { outline: 3px solid var(--e-gold); outline-offset: 2px; }
+
+/* Small confirmation at the bottom of the screen (saved progress loaded, signed in). */
+.e27-toast {
+  position: fixed; left: 50%; bottom: 24px; z-index: 90; max-width: calc(100vw - 32px);
+  transform: translate(-50%, 12px); opacity: 0; transition: transform .25s ease, opacity .25s ease;
+  background: var(--e-navy); color: #fff; border: 1px solid rgba(226, 184, 79, .6); border-radius: 12px;
+  padding: 12px 18px; font-size: 14.5px; font-weight: 600; box-shadow: 0 14px 40px rgba(8, 18, 38, .4);
+}
+.e27-toast.is-visible { transform: translate(-50%, 0); opacity: 1; }
+
+/* Home for a returning student: the course they use comes first, the sales pitch steps back. */
+.e27-welcome { display: none; }
+body.e27-returning .e27-welcome {
+  display: flex; align-items: center; gap: 14px 18px; flex-wrap: wrap; margin-top: 22px; padding: 16px 18px;
+  background: rgba(255, 255, 255, .07); border: 1px solid rgba(226, 184, 79, .5); border-radius: 14px;
+}
+.e27-welcome-txt { flex: 1 1 240px; min-width: 0; }
+.e27-welcome-txt small { display: block; font-size: 12.5px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--e-gold); }
+.e27-welcome-txt strong { display: block; font-size: 20px; line-height: 1.3; color: #fff; margin-top: 2px; }
+.e27-welcome-txt span { display: block; font-size: 14px; color: #c9d3e3; margin-top: 2px; }
+.e27-welcome-acts { display: flex; gap: 10px; flex-wrap: wrap; }
+body.e27-returning .e27-hero .e27-lead,
+body.e27-returning .e27-hero .e27-figures,
+body.e27-returning .e27-hero .e27-ctas { display: none; }
+body.e27-returning .e27-hero h1 { font-size: clamp(24px, 3.2vw, 34px); }
+.e27-course.is-mine { border-color: var(--e-gold); box-shadow: 0 0 0 2px var(--e-gold-soft), 0 10px 26px rgba(15, 33, 64, .12); }
+.e27-mine-flag {
+  align-self: flex-start; margin-bottom: 4px; background: var(--e-navy); color: var(--e-gold);
+  font-size: 11.5px; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; border-radius: 999px; padding: 3px 10px;
+}
+@media (max-width: 720px) {
+  body.e27-returning .e27-hero .e27-teacher { display: none; }
+  .e27-welcome-acts .e27-btn { flex: 1 1 auto; }
+}
+
+/* Teacher dashboards: trends, funnel, hours, student status. */
+.e27-stats-kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.e27-members-stats small { display: block; margin-top: 4px; font-size: 12.5px; color: var(--e-muted); }
+.e27-trend { display: inline-block; margin-left: 8px; font-style: normal; font-size: 12.5px; font-weight: 800; color: var(--e-muted); white-space: nowrap; }
+.e27-trend.is-up { color: #0f7a43; }
+.e27-trend.is-down { color: #b3261e; }
+.e27-trend.is-new { color: var(--e-gold-ink); }
+.e27-stats-foot { margin: 12px 0 0; font-size: 13.5px; color: var(--e-muted); }
+.e27-stats-foot a { color: var(--e-navy); font-weight: 700; }
+.e27-stats-empty { margin: 4px 0; font-size: 14px; color: var(--e-muted); }
+.e27-stats-notice { background: var(--e-gold-soft); border-color: var(--e-gold); color: var(--e-gold-ink); }
+.e27-stats-list b small { display: block; font-size: 11.5px; font-weight: 600; color: var(--e-muted); }
+.e27-stats-funnel li { grid-template-columns: minmax(0, 14rem) minmax(0, 1fr) 4.5rem; }
+.e27-stats-funnel .l { white-space: normal; }
+.e27-stats-funnel .l small { display: block; font-size: 12px; color: var(--e-muted); }
+.e27-stats-funnel .b i { background: var(--e-gold); }
+
+.e27-members-stats { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.e27-members-stats button {
+  display: grid; align-content: start; gap: 2px; text-align: left; font: inherit; cursor: pointer; background: var(--e-paper); border: 1px solid var(--e-line);
+  border-radius: 12px; padding: 14px 16px; transition: border-color .15s ease, box-shadow .15s ease;
+}
+.e27-members-stats button:hover { border-color: var(--e-navy); }
+.e27-members-stats button[aria-pressed="true"] { border-color: var(--e-gold); box-shadow: 0 0 0 2px var(--e-gold-soft); }
+.e27-members-stats button:focus-visible { outline: 3px solid var(--e-gold); outline-offset: 2px; }
+.e27-members-tools { align-items: flex-end; }
+.e27-members-search input, .e27-members-search select { min-width: 190px; }
+.e27-members-side { margin-left: auto; display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--e-muted); }
+.e27-members-table td { white-space: nowrap; }
+.e27-members-table td:first-child { white-space: normal; min-width: 200px; }
+.e27-members-table td small { display: block; }
+.e27-members-table td small a { color: inherit; }
+.e27-state { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 800; white-space: nowrap; }
+.e27-state.is-today { background: #dcf5e6; color: #0b5c32; }
+.e27-state.is-week { background: #e4ecf9; color: #16305c; }
+.e27-state.is-quiet { background: var(--e-gold-soft); color: var(--e-gold-ink); }
+.e27-state.is-gone { background: #fbe4e2; color: #8f1d17; }
+.e27-daystrip { display: flex; gap: 2px; margin-top: 6px; }
+.e27-daystrip i { width: 7px; height: 14px; border-radius: 2px; background: var(--e-line); }
+.e27-daystrip i.on { background: var(--e-navy); }
+@media (max-width: 1100px) { .e27-members-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 900px) {
+  .e27-stats-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .e27-members-side { margin-left: 0; width: 100%; justify-content: space-between; }
+}
+@media (max-width: 600px) {
+  .e27-members-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .e27-stats-funnel li { grid-template-columns: minmax(0, 9.5rem) minmax(0, 1fr) 3.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .e27-invite-shade, .e27-toast { transition: none; }
+}
+@media print {
+  .e27-invite-shade, .e27-toast { display: none !important; }
+}
