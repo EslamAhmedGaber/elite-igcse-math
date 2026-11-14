@@ -77,43 +77,33 @@
     },
   };
 
-  // Final revision pack: a flashing banner at the very top of the course page, four big
-  // cover cards that open the PDFs. "urgent" shows the "Exam tomorrow" flash until that date.
+  // Revision sheets and curated questions for the three IGCSE courses.
   const FINAL_REVISION = {
     unit1: {
-      urgentUntil: "2026-11-05",
-      title: "Unit 1 Final Revision: Expected Exam + Revision Sheet",
-      text: "Written for the November 2026 Unit 1 exam: the ideas that come up every year, 20 must-do questions, and a full 100-mark expected paper in the real exam layout with a step-by-step mark scheme.",
+      title: "Unit 1 Final Revision",
+      text: "A revision sheet and 20 worked practice questions.",
       dir: "downloads/Modular/Unit1_Final_Revision_Nov2026/",
       items: [
         ["Unit1_Revision_Sheet", "Revision Sheet", "One idea + one worked example per page", "15 pages"],
         ["Unit1_Top20_Questions", "Top 20 Questions", "Must-do questions, full solutions at the back", "27 pages"],
-        ["Unit1_Expected_Paper", "Expected Exam", "26 questions · 100 marks · 2 hours", "16 pages", "exam"],
-        ["Unit1_Expected_Paper_MarkScheme", "Exam Solutions", "Mark scheme with every step and mark", "10 pages"],
       ],
     },
     unit2: {
-      title: "Unit 2 Final Revision: 2 Expected Exams + Revision Sheet",
-      text: "Written for the Unit 2 exam: the 12 ideas that come up every year, 20 must-do questions, and two full 100-mark expected papers in the real exam layout (Exam 2 has all-new ideas), each with a step-by-step mark scheme.",
+      title: "Unit 2 Final Revision",
+      text: "A revision sheet and 20 worked practice questions.",
       dir: "downloads/Modular/Unit2_Final_Revision_Nov2026/",
       items: [
         ["Unit2_Revision_Sheet", "Revision Sheet", "One idea + one worked example per page", "13 pages"],
         ["Unit2_Top20_Questions", "Top 20 Questions", "Must-do questions, full solutions at the back", "25 pages"],
-        ["Unit2_Expected_Paper", "Expected Exam 1", "26 questions · 100 marks · 2 hours", "17 pages", "exam"],
-        ["Unit2_Expected_Paper_MarkScheme", "Exam 1 Solutions", "Mark scheme with every step and mark", "9 pages"],
-        ["Unit2_Expected_Paper_2", "Expected Exam 2", "New ideas · 26 questions · 100 marks · 2 hours", "17 pages", "exam"],
-        ["Unit2_Expected_Paper_2_MarkScheme", "Exam 2 Solutions", "Mark scheme with every step and mark", "10 pages"],
       ],
     },
     linear: {
-      title: "4MA1 Final Revision: Expected Exam + Revision Sheet",
-      text: "Written for the 4MA1 Higher exam: the 16 ideas that come up every year, 20 must-do questions, and a full 100-mark expected paper in the real exam layout with a step-by-step mark scheme.",
+      title: "4MA1 Final Revision",
+      text: "A revision sheet and 20 worked practice questions.",
       dir: "downloads/Linear/Linear_Final_Revision_Nov2026/",
       items: [
         ["Linear_Revision_Sheet", "Revision Sheet", "One idea + one worked example per page", "17 pages"],
         ["Linear_Top20_Questions", "Top 20 Questions", "Must-do questions, full solutions at the back", "26 pages"],
-        ["Linear_Expected_Paper", "Expected Exam", "26 questions · 100 marks · 2 hours", "15 pages", "exam"],
-        ["Linear_Expected_Paper_MarkScheme", "Exam Solutions", "Mark scheme with every step and mark", "8 pages"],
       ],
     },
   };
@@ -121,15 +111,13 @@
   function finalRevision(course) {
     const pack = FINAL_REVISION[course.id];
     if (!pack) return "";
-    const urgent = Boolean(pack.urgentUntil) && new Date() < new Date(`${pack.urgentUntil}T00:00:00`);
-    const cards = pack.items.map(([file, title, detail, pages, kind]) => `
-      <a class="e27-frev-card${kind === "exam" ? " is-exam" : ""}" data-module="final-revision" href="${esc(pack.dir + file)}.pdf?v=20261103" target="_blank" rel="noopener">
+    const cards = pack.items.map(([file, title, detail, pages]) => `
+      <a class="e27-frev-card" data-module="final-revision" href="${esc(pack.dir + file)}.pdf?v=20261103" target="_blank" rel="noopener">
         <span class="e27-frev-cover"><img src="assets/final-revision/${esc(file)}.jpg?v=20261103" alt="" loading="lazy" width="446" height="631"></span>
         <span class="e27-frev-meta"><strong>${esc(title)}</strong><small>${esc(detail)}</small><em>PDF &middot; ${esc(pages)} &middot; Open &rarr;</em></span>
       </a>`).join("");
     return `<section class="e27-frev" aria-labelledby="frevTitle">
       <div class="e27-frev-top">
-        <span class="e27-frev-flash"><i aria-hidden="true"></i>${urgent ? "New &middot; Exam tomorrow" : "New &middot; Expected exam + revision"}</span>
         <h2 id="frevTitle">${esc(pack.title)}</h2>
         <p>${esc(pack.text)}</p>
       </div>
