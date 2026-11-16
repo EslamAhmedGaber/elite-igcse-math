@@ -728,8 +728,23 @@
           "heading": "Unit 1 | 4WM1H",
           "sessions": [
               {
-                  "label": "May 2026",
+                  "label": "Nov 2026",
                   "isNew": true,
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/PastPapers/Modular/unit-1/Nov2026_4WM1H_Question_Paper.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Solution",
+                          "href": "downloads/PastPaperSolutions/Nov2026_4WM1H_Solutions.pdf?v=20261116"
+                      }
+                  ]
+              },
+              {
+                  "label": "May 2026",
                   "papers": [
                       {
                           "kind": "paper",
@@ -804,8 +819,23 @@
           "heading": "Unit 2 | 4WM2H",
           "sessions": [
               {
-                  "label": "June 2026",
+                  "label": "Nov 2026",
                   "isNew": true,
+                  "papers": [
+                      {
+                          "kind": "paper",
+                          "title": "Question paper",
+                          "href": "downloads/PastPapers/Modular/unit-2/Nov2026_4WM2H_Question_Paper.pdf"
+                      },
+                      {
+                          "kind": "solution",
+                          "title": "Solution",
+                          "href": "downloads/PastPaperSolutions/Nov2026_4WM2H_Solutions.pdf?v=20261116"
+                      }
+                  ]
+              },
+              {
+                  "label": "June 2026",
                   "papers": [
                       {
                           "kind": "paper",
