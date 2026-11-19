@@ -34,6 +34,9 @@
   let users = [];
   let days = 7;
   let loaded = false;
+  let accountGeneration = 0;
+  let teacherId = '';
+  const cairoDate = new Intl.DateTimeFormat('en-CA', {timeZone: 'Africa/Cairo', year: 'numeric', month: '2-digit', day: '2-digit'});
 
   function esc(value) {
     return String(value == null ? "" : value)
@@ -43,7 +46,7 @@
   function cairoDay(offset = 0) {
     const date = new Date(Date.now() - offset * DAY);
     try {
-      return new Intl.DateTimeFormat("en-CA", { timeZone: "Africa/Cairo", year: "numeric", month: "2-digit", day: "2-digit" }).format(date);
+      return cairoDate.format(date);
     } catch (err) {
       return date.toISOString().slice(0, 10);
     }
@@ -99,15 +102,15 @@
   function renderKpis(sum, prev, list) {
     const start = new Date(`${list[0]}T00:00:00`).getTime();
     const prevStart = start - days * DAY;
-    const joined = users.filter((u) => u.firstSeen && u.firstSeen.getTime() >= start).length;
-    const joinedBefore = users.filter((u) => u.firstSeen && u.firstSeen.getTime() >= prevStart && u.firstSeen.getTime() < start).length;
+    const joined = users?.filter((u) => u.firstSeen && u.firstSeen.getTime() >= start).length;
+    const joinedBefore = users?.filter((u) => u.firstSeen && u.firstSeen.getTime() >= prevStart && u.firstSeen.getTime() < start).length;
     const v = sum.v || 0;
     const u = sum.u || 0;
     const cards = [
       [fmt(v), "page views", trend(v, prev.v || 0), u ? `${(v / u).toFixed(1)} pages per visitor` : ""],
       [fmt(u), "visitors (one per device per day)", trend(u, prev.u || 0), `${fmt(Math.max(u - (sum.n || 0), 0))} came back, ${fmt(sum.n)} first time`],
       [fmt(sum.us), "visitors who were signed in", trend(sum.us || 0, prev.us || 0), u ? `${pct(sum.us || 0, u)} of all visitors` : ""],
-      [fmt(joined), "new students signed in", trend(joined, joinedBefore), `${fmt(users.length)} accounts in total`],
+      [users ? fmt(joined) : "—", "new students signed in", users ? trend(joined, joinedBefore) : "", users ? `${fmt(users.length)} accounts in total` : "Account data unavailable"],
       [duration(sum.m), "study time on the site", trend(sum.m || 0, prev.m || 0), u && sum.m ? `${Math.round(sum.m / u)} min per visitor` : ""],
       [fmt(sum.e_solved), "questions marked solved", trend(sum.e_solved || 0, prev.e_solved || 0), u ? `${((sum.e_solved || 0) / u).toFixed(1)} per visitor` : ""],
     ];
@@ -181,6 +184,7 @@
   }
 
   function renderStudents() {
+    if (!users) { els.students.textContent = "Account data could not load. Reload the page to try again."; return; }
     const now = Date.now();
     const seenWithin = (span) => users.filter((u) => u.lastSeen && now - u.lastSeen.getTime() < span).length;
     const quiet = users.filter((u) => u.lastSeen && now - u.lastSeen.getTime() >= 7 * DAY).length;
@@ -195,6 +199,41 @@
     els.students.innerHTML = `<ul class="e27-stats-list">${rows.map(([label, value]) => `
       <li><span class="l">${esc(label)}</span><span class="b"><i style="width:${(value / max) * 100}%"></i></span><b class="e27-num">${fmt(value)}</b></li>`).join("")}</ul>
       <p class="e27-stats-foot"><a href="members.html">Open the student list: who is studying and who stopped &rarr;</a></p>`;
+  }
+
+  function renderZones(list) {
+    const host = root.querySelector('[data-stats-zones]');
+    if (!users) { host.textContent = 'Account data could not load. Reload the page to try again.'; return; }
+    const daysInRange = new Set(list);
+    const active = users.filter((u) => u.lastSeen && daysInRange.has(cairoDate.format(u.lastSeen)));
+    if (!active.length) {
+      host.textContent = 'No signed-in accounts were active in this period.';
+      return;
+    }
+    const counts = new Map();
+    const aliases = new Map();
+    let unknown = 0;
+    for (const {zone} of active) {
+      if (!aliases.has(zone)) {
+        let label = '';
+        if (typeof zone === 'string' && zone.length <= 40 && zone.includes('/') && !zone.startsWith('Etc/')) {
+          try {
+            label = new Intl.DateTimeFormat('en', {timeZone: zone}).resolvedOptions().timeZone;
+          } catch { /* Older accounts can have an unrecognised device setting. */ }
+        }
+        aliases.set(zone, label);
+      }
+      const label = aliases.get(zone);
+      if (label) counts.set(label, (counts.get(label) || 0) + 1);
+      else unknown += 1;
+    }
+    const rows = [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+    if (unknown) rows.push(['Unknown or fixed offset', unknown]);
+    host.innerHTML = '<p class="e27-stats-foot">' + fmt(active.length - unknown) + ' of ' + fmt(active.length) +
+      ' active accounts reported a regional time zone.</p><ul class="e27-stats-list">' + rows.map(([label, count]) =>
+      '<li><span class="l">' + esc(label.replace(/_/g, ' ')) + '</span><span class="b"><i style="width:' +
+      (100 * count / active.length) + '%"></i></span><b class="e27-num">' + fmt(count) +
+      '<small>' + pct(count, active.length) + '</small></b></li>').join('') + '</ul>';
   }
 
   function renderList(name, sum) {
@@ -220,6 +259,7 @@
     renderHours(sum);
     renderFunnel(sum);
     renderStudents();
+    renderZones(list);
     Object.keys(LABELS).forEach((name) => renderList(name, sum));
     const everything = totals(allDays.map((d) => d.day));
     els.notice.hidden = NEW_KEYS.some((key) => everything[key] > 0);
@@ -231,15 +271,18 @@
   async function load() {
     if (loaded) return;
     loaded = true;
+    const generation = accountGeneration;
     setStatus("Loading statistics…");
     try {
       const [stats, people] = await Promise.all([
         window.EliteCloud.listSiteStats(cairoDay(179)),
-        window.EliteCloud.listSiteUsers().catch(() => []),
+        window.EliteCloud.listSiteUsers().catch(() => null),
       ]);
+      if (generation !== accountGeneration) return;
       allDays = stats;
       users = people;
     } catch (err) {
+      if (generation !== accountGeneration) return;
       loaded = false;
       const denied = /permission|insufficient/i.test(String(err && (err.code || err.message)));
       setStatus(denied
@@ -266,7 +309,7 @@
       for (let h = 0; h < 24; h += 1) doc[`h_${String(h).padStart(2, "0")}`] = Math.round(u * 6 * Math.max(0.004, Math.exp(-((h - 20) ** 2) / 18) * 0.12 + Math.exp(-((h - 15) ** 2) / 10) * 0.05));
       return doc;
     });
-    users = Array.from({ length: 64 }, (_, i) => ({ firstSeen: new Date(Date.now() - i * 2.6 * DAY), lastSeen: new Date(Date.now() - (i % 9) * (i % 4) * DAY) }));
+    users = Array.from({ length: 64 }, (_, i) => ({ zone: ['Africa/Cairo', 'Europe/Madrid', 'Asia/Kuala_Lumpur', '', 'UTC'][i % 5], firstSeen: new Date(Date.now() - i * 2.6 * DAY), lastSeen: new Date(Date.now() - (i % 9) * (i % 4) * DAY) }));
     setStatus("Preview with made-up numbers.");
     els.range.hidden = false;
     els.body.hidden = false;
@@ -286,16 +329,30 @@
     return;
   }
 
-  window.addEventListener("elite-cloud-state", (event) => {
-    const detail = event.detail || {};
+  function handleCloudState(detail) {
+    const email = String(detail.user?.email || '').toLowerCase();
+    const nextId = detail.configured && detail.ready && TEACHERS.includes(email) ? detail.user.uid || email : '';
+    if (nextId !== teacherId) {
+      teacherId = nextId;
+      accountGeneration += 1;
+      loaded = false;
+      users = [];
+      allDays = [];
+      els.range.hidden = true;
+      els.body.hidden = true;
+      root.querySelector('[data-stats-zones]').replaceChildren();
+    }
     if (!detail.configured) { setStatus("Google sign-in is not configured on this site."); return; }
     if (!detail.ready) return;
     const user = detail.user;
     if (!user) { setStatus("Sign in with the teacher Google account to see the statistics."); return; }
-    if (!TEACHERS.includes(String(user.email || "").toLowerCase())) {
+    if (!nextId) {
       setStatus("This page is for Dr Eslam only.");
       return;
     }
     load();
-  });
+  }
+  window.addEventListener("elite-cloud-state", (event) => handleCloudState(event.detail || {}));
+  const initial = window.EliteCloud?.state?.();
+  if (initial) handleCloudState(initial);
 })();

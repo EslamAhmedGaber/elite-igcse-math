@@ -37,7 +37,17 @@
   <script defer src="course-modules.js?v=20261116a"></script>
   <script defer src="lead.js?v=20261020t1"></script>
   <script defer src="today.js?v=20261112a"></script>
-  <script defer src="home-topic-finder.js?v=20261024a"></script>
+  <script defer src="data/topic-index/unit1.js?v=20261024a"></script>
+  <script defer src="data/topic-index/unit2.js?v=20261024a"></script>
+  <script defer src="home-topic-finder.js?v=20261119a"></script>
+  <style>
+    #find-a-topic { scroll-margin-top: 6rem; }
+    .e27-finder-controls { display: grid; grid-template-columns: minmax(9rem, 1fr) minmax(0, 3fr); gap: .75rem; }
+    .e27-finder-controls label { display: grid; gap: .3rem; font-weight: 600; }
+    .e27-finder-controls select { appearance: auto; min-height: 48px; padding: .5rem; color: inherit; font: inherit; border: 1.5px solid #b9c6d9; border-radius: 10px; background: white; }
+    .e27-finder [data-finder-status] { margin: .75rem 0 0; }
+    @media (max-width: 640px) { .e27-finder-controls { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body data-page="home">
 
@@ -110,7 +120,7 @@
     <div class="e27-wrap">
       <section class="e27-block" id="courseLauncher" aria-labelledby="coursesTitle">
         <div class="e27-head">
-          <div><h2 id="coursesTitle">Choose your course</h2><p>Everything inside is free. Open a course to see its notes, books, past papers and tools.</p></div>
+          <div><h2 id="coursesTitle">Choose your course</h2><p>Open a course for notes, books and past papers, or <a href="#find-a-topic">find a topic</a>.</p></div>
         </div>
 
         <div class="e27-group">International GCSE</div>
@@ -173,12 +183,17 @@
         </div>
 
 
-        <div class="e27-finder" data-topic-finder role="search">
-          <h3><label for="topicFinderInput">Find a topic</label></h3>
-          <p>Type a topic, for example <em>differentiation</em>, <em>vectors</em> or <em>histograms</em>, and open every past-paper question on it with worked solutions.</p>
-          <input id="topicFinderInput" type="search" placeholder="Search topics in every course" autocomplete="off" disabled>
-          <ul aria-live="polite"></ul>
-          <p class="e27-finder-empty" hidden>No topic matches yet. Try a shorter word, like <em>trig</em> or <em>graph</em>.</p>
+        <div class="e27-finder" id="find-a-topic" data-topic-finder role="search" aria-label="Find a maths topic">
+          <h3>Find a topic</h3>
+          <p>Choose a course to browse its topics, or search across courses.</p>
+          <div class="e27-finder-controls">
+            <label>Course<select data-finder-course><option value="">All courses</option></select></label>
+            <label>Topic<input id="topicFinderInput" type="search" placeholder="e.g. vectors or histograms" autocomplete="off"></label>
+          </div>
+          <p data-finder-status role="status"></p>
+          <ul></ul>
+          <button class="e27-btn e27-btn-line" type="button" data-finder-more hidden>Show more topics</button>
+          <noscript>Open a course above to browse its topics.</noscript>
         </div>
       </section>
 

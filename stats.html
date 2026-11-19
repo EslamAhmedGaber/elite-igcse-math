@@ -18,7 +18,7 @@
   <script defer src="cloud-progress.js?v=20261112a"></script>
   <script defer src="course-modules.js?v=20261116a"></script>
   <script defer src="lead.js?v=20261020t1"></script>
-  <script defer src="stats.js?v=20261112a"></script>
+  <script defer src="stats.js?v=20261119a"></script>
 </head>
 <body data-page="stats">
 
@@ -70,6 +70,11 @@
             <section class="e27-stats-card"><header><h3>Students</h3><span>everyone who signed in, all time</span></header><div data-stats-students></div></section>
           </div>
           <section class="e27-stats-card">
+            <header><h3>Student time zones</h3><span>signed-in accounts active during the selected period</span></header>
+            <div data-stats-zones></div>
+            <p class="e27-stats-foot">Each account counts once, using its last reported device setting. People travelling or using a different setting can appear under another region.</p>
+          </section>
+          <section class="e27-stats-card">
             <header><h3>When students study</h3><span>page views by hour, Cairo time</span></header>
             <div class="e27-stats-chart" data-stats-hours></div>
           </section>
@@ -80,7 +85,7 @@
             <section class="e27-stats-card"><header><h3>Studying</h3><span>what students did</span></header><div data-stats-list="actions"></div></section>
             <section class="e27-stats-card"><header><h3>Pages</h3><span>page views by section</span></header><div data-stats-list="pages"></div></section>
             <section class="e27-stats-card"><header><h3>Course pages opened</h3><span>every page view inside a course</span></header><div data-stats-list="courses"></div></section>
-            <section class="e27-stats-card"><header><h3>Countries</h3><span>visitors, from the device time zone</span></header><div data-stats-list="countries"></div></section>
+            <section class="e27-stats-card"><header><h3>Estimated visitor countries</h3><span>device time zone, one count per device per day</span></header><div data-stats-list="countries"></div></section>
             <section class="e27-stats-card"><header><h3>Devices</h3><span>visitors</span></header><div data-stats-list="devices"></div></section>
           </div>
         </div>
