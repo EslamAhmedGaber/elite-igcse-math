@@ -42,6 +42,7 @@
       (!course.value || t.definition.id === course.value) && words.every((w) => t.key.includes(w))) : [];
     const rank = (t) => query && t.title === query ? 0 : query && t.title.startsWith(query) ? 1 : 2;
     matches.sort((a, b) => rank(a) - rank(b) || a.topic.localeCompare(b.topic) || a.definition.name.localeCompare(b.definition.name));
+    const focusedUrl = list.contains(document.activeElement) ? document.activeElement.href : null;
     list.replaceChildren(...matches.slice(0, limit).map((t) => {
       const item = document.createElement('li');
       const link = document.createElement('a');
@@ -55,6 +56,10 @@
       item.append(link);
       return item;
     }));
+    if (focusedUrl) {
+      const previousLink = Array.from(list.querySelectorAll('a')).find((link) => link.href === focusedUrl);
+      (previousLink || input).focus({preventScroll: true});
+    }
     more.hidden = matches.length <= limit;
     const incomplete = course.value ? unavailable.has(course.value) : unavailable.size > 0;
     if (!searching) status.textContent = '';
