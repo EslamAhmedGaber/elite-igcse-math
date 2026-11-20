@@ -1,0 +1,978 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="A one-page decision map for Edexcel IGCSE 4MA1 Chapter 4 lessons 10-11: when to use Pythagoras, SOH CAH TOA, the sine rule, the cosine rule or ½ab sin C, with worked past-paper routes and exam traps.">
+<link rel="canonical" href="https://eliteigcse.com/cards/triangle-decision-map.html">
+<link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#12324a">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Elite IGCSE">
+<meta property="og:title" content="Triangle Decision Map · Elite IGCSE">
+<meta property="og:description" content="A one-page decision map for Edexcel IGCSE 4MA1 Chapter 4 lessons 10-11: when to use Pythagoras, SOH CAH TOA, the sine rule, the cosine rule or ½ab sin C, with worked past-paper routes and exam traps.">
+<meta property="og:url" content="https://eliteigcse.com/cards/triangle-decision-map.html">
+<meta property="og:image" content="https://eliteigcse.com/assets/og-image.png?v=20260527b">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+</style>
+<title>Triangle Decision Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=STIX+Two+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap">
+<style>
+/* Layout: blueprint-paper map first (the poster to memorise), then a click-through solver, then depth sections. Navy + gold = Elite brand; one colour per method. */
+:root {
+  --bg:#f3f6f9; --paper:#ffffff; --ink:#17222f; --muted:#56687a; --line:#d5dfe7; --grid:rgba(18,50,74,.07);
+  --navy:#12324a; --navy-2:#1a4566; --on-navy:#ffffff; --on-navy-muted:#bccddb; --chip-navy:rgba(255,255,255,.09);
+  --gold:#bb7d23; --gold-ink:#8a5a12; --gold-soft:#f8eddb;
+  --pyth:#0f766e; --pyth-soft:#e0f2ee;
+  --soh:#1f5fa6; --soh-soft:#e3edf8;
+  --sine:#7a3d9e; --sine-soft:#f1e8f7;
+  --cos:#b1364a; --cos-soft:#f9e5e8;
+  --area:#a5670f; --area-soft:#f8eedc;
+  --chain:#4b5d70; --chain-soft:#e7edf2;
+  --node:#12324a; --node-ink:#ffffff; --node-hint:#c3d3e1;
+  --on-method:#ffffff;
+  --font-display:'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+  --font-body:'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-math:'STIX Two Text', 'Cambria Math', 'Cambria', 'Times New Roman', serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg:#0a141e; --paper:#112030; --ink:#e3ebf3; --muted:#9bafc2; --line:#24384d; --grid:rgba(255,255,255,.045);
+  --navy:#0d2638; --navy-2:#173d5b; --on-navy:#f3f7fb; --on-navy-muted:#a8bed1; --chip-navy:rgba(255,255,255,.07);
+  --gold:#e2aa4c; --gold-ink:#f0c47a; --gold-soft:#33270f;
+  --pyth:#43c4b2; --pyth-soft:#0e2d2b; --soh:#72aaf0; --soh-soft:#122943;
+  --sine:#c79be8; --sine-soft:#271936; --cos:#f2899a; --cos-soft:#381820;
+  --area:#e8b65c; --area-soft:#30240e; --chain:#a3b5c8; --chain-soft:#192736;
+  --node:#1c4869; --node-ink:#ffffff; --node-hint:#b6cadc; --on-method:#0a141e;
+  color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg:#0a141e; --paper:#112030; --ink:#e3ebf3; --muted:#9bafc2; --line:#24384d; --grid:rgba(255,255,255,.045);
+  --navy:#0d2638; --navy-2:#173d5b; --on-navy:#f3f7fb; --on-navy-muted:#a8bed1; --chip-navy:rgba(255,255,255,.07);
+  --gold:#e2aa4c; --gold-ink:#f0c47a; --gold-soft:#33270f;
+  --pyth:#43c4b2; --pyth-soft:#0e2d2b; --soh:#72aaf0; --soh-soft:#122943;
+  --sine:#c79be8; --sine-soft:#271936; --cos:#f2899a; --cos-soft:#381820;
+  --area:#e8b65c; --area-soft:#30240e; --chain:#a3b5c8; --chain-soft:#192736;
+  --node:#1c4869; --node-ink:#ffffff; --node-hint:#b6cadc; --on-method:#0a141e;
+  color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.55; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.15; }
+.m { font-family: var(--font-math); font-style: italic; }
+.mu { font-family: var(--font-math); }
+.wrap { max-width: 1240px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; border-radius: 6px; }
+
+/* ---------- hero ---------- */
+.hero { background: var(--navy); color: var(--on-navy); position: relative; overflow: hidden; }
+.hero::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(var(--chip-navy) 1px, transparent 1px), linear-gradient(90deg, var(--chip-navy) 1px, transparent 1px); background-size: 28px 28px; pointer-events: none; }
+.hero .wrap { position: relative; padding-block: 40px 34px; display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 32px; align-items: center; }
+.eyebrow { font-family: var(--font-display); font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+.hero h1 { font-size: clamp(34px, 5.4vw, 58px); letter-spacing: -.02em; margin-top: 10px; }
+.hero p.lead { color: var(--on-navy-muted); font-size: 17px; max-width: 60ch; margin: 14px 0 0; }
+.gates { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.gate { display: inline-flex; align-items: center; gap: 10px; background: var(--chip-navy); border: 1px solid rgba(255,255,255,.14); border-radius: 999px; padding: 7px 16px 7px 7px; font-weight: 600; font-size: 15px; }
+.gate b { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--gold); color: #10283b; font-family: var(--font-display); font-size: 13px; }
+.gate span.or { color: var(--on-navy-muted); font-weight: 500; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 22px; font-size: 13px; color: var(--on-navy-muted); }
+.hero-meta strong { color: var(--on-navy); font-weight: 600; }
+.hero-art svg { width: 100%; height: auto; display: block; }
+.hero-art .hl { stroke: rgba(255,255,255,.75); fill: none; stroke-width: 2.4; stroke-linejoin: round; }
+.hero-art .hg { stroke: var(--gold); fill: none; stroke-width: 2.4; }
+.hero-art .hf { fill: rgba(226,170,76,.12); }
+.hero-art text { fill: var(--on-navy); font-family: var(--font-math); font-style: italic; font-size: 20px; }
+.hero-art .tg { fill: var(--gold); }
+
+/* ---------- section nav ---------- */
+.secnav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--paper); border-bottom: 1px solid var(--line); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--paper); }
+.secnav .wrap { display: flex; gap: 4px; overflow-x: auto; padding-block: 8px; scrollbar-width: none; }
+.secnav a { white-space: nowrap; text-decoration: none; font-weight: 600; font-size: 14px; color: var(--muted); padding: 7px 12px; border-radius: 8px; }
+.secnav a:hover { background: var(--bg); color: var(--ink); }
+
+/* ---------- sections ---------- */
+section.block { padding-block: 44px 8px; scroll-margin-top: 56px; }
+.sec-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 24px; margin-bottom: 18px; }
+.sec-head h2 { font-size: clamp(24px, 3vw, 32px); letter-spacing: -.01em; }
+.sec-head p { margin: 6px 0 0; color: var(--muted); max-width: 70ch; }
+.kicker { font-family: var(--font-display); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-ink); font-weight: 700; }
+
+/* ---------- the map ---------- */
+.map-frame { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.map-frame svg { display: block; width: 100%; min-width: 900px; height: auto; }
+.swipe-hint { display: none; font-size: 13px; color: var(--muted); margin: 0 0 8px; }
+@media (max-width: 900px) { .swipe-hint { display: block; } }
+svg .gridbg { stroke: var(--grid); fill: none; }
+svg .node { fill: var(--node); }
+svg .node-t { fill: var(--node-ink); font-family: var(--font-display); font-weight: 700; font-size: 16px; }
+svg .node-h { fill: var(--node-hint); font-family: var(--font-body); font-size: 12px; }
+svg .badge { fill: var(--gold); }
+svg .badge-t { fill: #10283b; font-family: var(--font-display); font-weight: 700; font-size: 13px; }
+svg .edge { stroke: var(--muted); stroke-width: 2; fill: none; }
+svg .edge-g { stroke: var(--gold); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+svg .ah { fill: var(--muted); }
+svg .ahg { fill: var(--gold); }
+svg .el { font-family: var(--font-display); font-weight: 700; font-size: 12.5px; letter-spacing: .06em; }
+svg .el-y { fill: var(--pyth); }
+svg .el-n { fill: var(--cos); }
+svg .zone { fill: var(--muted); font-family: var(--font-display); font-weight: 700; font-size: 12.5px; letter-spacing: .16em; }
+svg .box { fill: var(--paper); stroke: var(--line); stroke-width: 1.5; }
+svg .box-make { fill: var(--gold-soft); stroke: var(--gold); stroke-width: 1.5; }
+svg .box-chain { fill: var(--chain-soft); stroke: var(--chain); stroke-width: 1.5; }
+svg .bt { fill: var(--ink); font-family: var(--font-display); font-weight: 700; font-size: 14.5px; letter-spacing: .04em; }
+svg .bt-gold { fill: var(--gold-ink); }
+svg .tx { fill: var(--ink); font-family: var(--font-body); font-size: 13px; }
+svg .tx-s { fill: var(--ink); font-family: var(--font-body); font-size: 12.5px; }
+svg .tx-m { fill: var(--muted); font-family: var(--font-body); font-size: 12.5px; }
+svg .tx-b { font-weight: 700; }
+svg .foot-g { fill: var(--gold-ink); font-family: var(--font-display); font-weight: 700; font-size: 13px; }
+svg .foot-c { fill: var(--chain); font-family: var(--font-display); font-weight: 700; font-size: 13px; }
+svg .mth { font-family: var(--font-math); font-style: italic; }
+svg .mtu { font-family: var(--font-math); font-style: normal; }
+svg .fx { fill: var(--ink); font-family: var(--font-math); font-size: 21px; }
+svg .fx-s { fill: var(--ink); font-family: var(--font-math); font-size: 15px; }
+svg .card-title { fill: var(--on-method); font-family: var(--font-display); font-weight: 700; font-size: 16px; letter-spacing: .05em; }
+svg .card-tag { fill: var(--on-method); font-family: var(--font-body); font-weight: 500; font-size: 12px; opacity: .92; }
+svg .hd-pyth { fill: var(--pyth); } svg .hd-soh { fill: var(--soh); } svg .hd-sine { fill: var(--sine); } svg .hd-cos { fill: var(--cos); }
+svg .tri { fill: none; stroke: var(--ink); stroke-width: 2; stroke-linejoin: round; }
+svg .tri-fill { stroke: none; }
+svg .f-pyth { fill: var(--pyth-soft); } svg .f-soh { fill: var(--soh-soft); } svg .f-sine { fill: var(--sine-soft); } svg .f-cos { fill: var(--cos-soft); }
+svg .s-pyth { stroke: var(--pyth); stroke-width: 4; fill: none; stroke-linecap: round; }
+svg .s-soh { stroke: var(--soh); stroke-width: 4; fill: none; stroke-linecap: round; }
+svg .s-sine { stroke: var(--sine); stroke-width: 4; fill: none; stroke-linecap: round; }
+svg .s-cos { stroke: var(--cos); stroke-width: 4; fill: none; stroke-linecap: round; }
+svg .s-sine-d { stroke: var(--sine); stroke-width: 2.5; fill: none; stroke-dasharray: 5 4; }
+svg .ra { fill: none; stroke: var(--ink); stroke-width: 1.6; }
+svg .lab { fill: var(--ink); font-family: var(--font-math); font-style: italic; font-size: 17px; }
+svg .lab-pyth { fill: var(--pyth); font-weight: 600; } svg .lab-soh { fill: var(--soh); font-weight: 600; }
+svg .lab-sine { fill: var(--sine); font-weight: 600; } svg .lab-cos { fill: var(--cos); font-weight: 600; }
+svg .c-pyth { fill: var(--pyth); } svg .c-soh { fill: var(--soh); } svg .c-sine { fill: var(--sine); } svg .c-cos { fill: var(--cos); } svg .c-gold { fill: var(--gold-ink); }
+svg .area-band { fill: var(--area-soft); stroke: var(--area); stroke-width: 1.5; }
+svg .area-lab { fill: var(--area); }
+svg .finish { fill: var(--node); }
+svg .finish-t { fill: var(--gold); font-family: var(--font-display); font-weight: 700; font-size: 14px; letter-spacing: .14em; }
+svg .chip { fill: rgba(255,255,255,.08); stroke: rgba(255,255,255,.16); }
+svg .chip-t { fill: #ffffff; font-family: var(--font-body); font-weight: 500; font-size: 13px; }
+svg .fr { stroke: var(--ink); stroke-width: 1.4; fill: none; }
+.trail li.empty-li { display: block; }
+svg .chip-k { fill: var(--gold); font-family: var(--font-display); font-weight: 700; font-size: 14px; }
+
+/* ---------- navigator ---------- */
+.nav-shell { display: grid; grid-template-columns: 280px minmax(0, 1fr); background: var(--paper); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
+.trail { background: var(--navy); color: var(--on-navy); padding: 22px 20px; display: flex; flex-direction: column; gap: 14px; }
+.trail h3 { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+.trail ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.trail li { display: grid; grid-template-columns: 30px minmax(0,1fr); gap: 10px; align-items: start; font-size: 13.5px; color: var(--on-navy-muted); }
+.trail li b { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--chip-navy); border: 1px solid rgba(255,255,255,.18); font-family: var(--font-display); font-size: 12px; color: var(--on-navy); }
+.trail li.done b { background: var(--gold); color: #10283b; border-color: var(--gold); }
+.trail li .a { display: block; color: var(--on-navy); font-weight: 600; }
+.trail .empty { font-size: 13.5px; color: var(--on-navy-muted); }
+.restart { margin-top: auto; align-self: flex-start; background: transparent; color: var(--on-navy); border: 1px solid rgba(255,255,255,.3); border-radius: 10px; padding: 8px 14px; font: 600 14px var(--font-body); cursor: pointer; }
+.restart:hover { background: var(--chip-navy); }
+.stage { padding: 28px clamp(18px, 3vw, 36px) 30px; min-width: 0; }
+.stage .gate-tag { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-display); font-weight: 700; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-ink); }
+.stage h3 { font-size: clamp(21px, 2.4vw, 27px); margin-top: 8px; }
+.stage .hint { color: var(--muted); margin: 10px 0 0; max-width: 62ch; }
+.opts { display: grid; gap: 10px; margin-top: 22px; }
+.opt { text-align: left; background: var(--bg); color: var(--ink); border: 1.5px solid var(--line); border-radius: 12px; padding: 14px 16px; font: 500 15.5px var(--font-body); cursor: pointer; display: flex; gap: 12px; align-items: center; transition: border-color .15s, transform .15s; }
+.opt:hover { border-color: var(--gold); transform: translateX(3px); }
+.opt .k { flex: none; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 8px; background: var(--paper); border: 1px solid var(--line); font: 700 13px var(--font-display); color: var(--muted); }
+.res-head { border-radius: 14px; padding: 18px 20px; color: var(--on-method); }
+.res-head .rk { font-family: var(--font-display); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; opacity: .9; }
+.res-head h3 { color: var(--on-method); margin-top: 4px; }
+.res-head .fx { font-family: var(--font-math); font-size: clamp(20px, 2.6vw, 26px); margin-top: 8px; }
+.res-body { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 18px; margin-top: 18px; }
+.res-body h4 { margin: 0 0 8px; font: 700 12.5px var(--font-display); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.res-body ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.note { border-radius: 12px; padding: 14px 16px; background: var(--bg); border: 1px solid var(--line); }
+.note + .note { margin-top: 12px; }
+.note.trap { background: var(--cos-soft); border-color: transparent; }
+.note.ex { background: var(--gold-soft); border-color: transparent; }
+.note p { margin: 0; }
+.info-list { margin: 16px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 8px; }
+.info-list li { background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; font-size: 14px; }
+.info-list li b { display: block; font-family: var(--font-display); }
+.next-btn { margin-top: 20px; background: var(--gold); color: #10283b; border: 0; border-radius: 10px; padding: 11px 18px; font: 700 15px var(--font-body); cursor: pointer; }
+
+/* ---------- hidden triangles ---------- */
+.hid-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+.hid { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 6px; }
+.hid svg { width: 100%; height: auto; display: block; background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px); background-size: 14px 14px; border-radius: 10px; }
+.hid h3 { font-size: 16px; }
+.hid p { margin: 0; color: var(--muted); font-size: 14px; }
+.hid .sh { fill: none; stroke: var(--ink); stroke-width: 2; stroke-linejoin: round; }
+.hid .sh-d { fill: none; stroke: var(--muted); stroke-width: 1.6; stroke-dasharray: 5 4; }
+.hid .ht { fill: var(--gold-soft); stroke: var(--gold); stroke-width: 2.6; stroke-linejoin: round; }
+.hid .ra { fill: none; stroke: var(--gold-ink); stroke-width: 1.8; }
+.hid .tk { stroke: var(--ink); stroke-width: 1.8; }
+.hid .dot { fill: var(--ink); }
+.hid .lb { fill: var(--ink); font-family: var(--font-math); font-style: italic; font-size: 14px; }
+.hid .lg { fill: var(--gold-ink); font-family: var(--font-math); font-style: italic; font-size: 14px; font-weight: 600; }
+.hid .arc { fill: none; stroke: var(--gold-ink); stroke-width: 1.8; }
+
+/* ---------- worked routes ---------- */
+.routes { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }
+.route { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 18px 18px 16px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.route .ref { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; font-size: 13px; color: var(--muted); }
+.route .ref b { font-family: var(--font-display); color: var(--gold-ink); letter-spacing: .06em; font-size: 13px; }
+.route h3 { font-size: 17px; font-family: var(--font-body); font-weight: 600; line-height: 1.4; }
+.path { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.pc { font-size: 12.5px; font-weight: 600; padding: 4px 9px; border-radius: 999px; background: var(--bg); border: 1px solid var(--line); }
+.pc.pyth { background: var(--pyth-soft); color: var(--pyth); border-color: transparent; }
+.pc.soh { background: var(--soh-soft); color: var(--soh); border-color: transparent; }
+.pc.sine { background: var(--sine-soft); color: var(--sine); border-color: transparent; }
+.pc.cos { background: var(--cos-soft); color: var(--cos); border-color: transparent; }
+.pc.area { background: var(--area-soft); color: var(--area); border-color: transparent; }
+.pc.make { background: var(--gold-soft); color: var(--gold-ink); border-color: transparent; }
+.pc.chain { background: var(--chain-soft); color: var(--chain); border-color: transparent; }
+.arrow { color: var(--muted); font-size: 13px; }
+.route ol { margin: 0; padding-left: 20px; display: grid; gap: 5px; font-size: 14.5px; }
+.route .ans { margin-top: auto; display: flex; justify-content: space-between; align-items: center; gap: 10px; border-top: 1px dashed var(--line); padding-top: 12px; }
+.route .ans span { color: var(--muted); font-size: 13px; }
+.route .ans strong { font-family: var(--font-math); font-size: 22px; }
+.route .tip { font-size: 13.5px; color: var(--gold-ink); background: var(--gold-soft); border-radius: 10px; padding: 8px 12px; }
+
+/* ---------- traps ---------- */
+.traps { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 12px; counter-reset: trap; }
+.trap-card { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; }
+.trap-card::before { counter-increment: trap; content: counter(trap); display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--cos-soft); color: var(--cos); font: 700 15px var(--font-display); }
+.trap-card h3 { font-size: 15.5px; font-family: var(--font-body); font-weight: 700; }
+.trap-card p { margin: 4px 0 0; font-size: 14px; color: var(--muted); }
+.trap-card p.fix { color: var(--ink); }
+.trap-card p.fix::before { content: "Fix  "; font-weight: 700; color: var(--pyth); }
+.trap-card .src { display: inline-block; margin-top: 6px; font-size: 12px; font-weight: 600; color: var(--gold-ink); }
+
+footer { padding-block: 40px 48px; color: var(--muted); font-size: 13px; }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; border-top: 1px solid var(--line); padding-top: 18px; }
+
+@media (max-width: 860px) {
+  .hero .wrap { grid-template-columns: minmax(0, 1fr); }
+  .hero-art { max-width: 300px; }
+  .nav-shell { grid-template-columns: minmax(0, 1fr); }
+  .trail { padding: 16px; }
+  .trail ol { flex-direction: row; flex-wrap: wrap; }
+  .trail li { grid-template-columns: 30px auto; }
+  .res-body { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 420px) {
+  .routes, .traps { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) { .opt { transition: none; } .opt:hover { transform: none; } }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">4MA1 · Chapter 4 · Lessons 10 &amp; 11 · T48 + T49</div>
+      <h1>Triangle Decision Map</h1>
+      <p class="lead">Ask four questions, in this order. Your answers choose the method for every question on Pythagoras, SOH CAH TOA, the sine rule, the cosine rule and the area of a triangle.</p>
+      <div class="gates" aria-label="The four questions">
+        <span class="gate"><b>Q1</b>Is it in a triangle?</span>
+        <span class="gate"><b>Q2</b>One triangle enough?</span>
+        <span class="gate"><b>Q3</b>Right angle?</span>
+        <span class="gate"><b>Q4</b>Angle? <span class="or">or</span> Full pair?</span>
+      </div>
+      <div class="hero-meta">
+        <span><strong>8</strong> question families (T48 V1–V4, T49 V1–V4)</span>
+        <span><strong>135</strong> practice + past-paper questions, Jan 2020 – May 2026</span>
+        <span>Dr Eslam Ahmed · Elite</span>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 300 230">
+        <path class="hf" d="M40 200 L260 200 L110 40 Z"/>
+        <path class="hl" d="M40 200 L260 200 L110 40 Z"/>
+        <path class="hg" d="M110 40 L110 200" stroke-dasharray="7 6"/>
+        <path class="hg" d="M110 186 H124 V200" />
+        <path class="hg" d="M72 200 A32 32 0 0 0 52.8 170.7"/>
+        <path class="hg" d="M226 200 A34 34 0 0 1 236.7 175.2"/>
+        <text x="56" y="190">A</text>
+        <text x="206" y="190">B</text>
+        <text x="118" y="122" class="tg">h</text>
+        <text x="60" y="110">b</text>
+        <text x="194" y="110">a</text>
+        <text x="146" y="222">c</text>
+        <text x="16" y="30" class="tg" style="font-size:15px">h = b sin A = a sin B</text>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<nav class="secnav" aria-label="Sections">
+  <div class="wrap">
+    <a href="#map">The map</a>
+    <a href="#walk">Walk me through it</a>
+    <a href="#hidden">Hidden triangles</a>
+    <a href="#routes">Worked past papers</a>
+    <a href="#traps">Exam traps</a>
+  </div>
+</nav>
+
+<main>
+<section class="block" id="map">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker">The whole lesson on one page</div>
+        <h2>The map</h2>
+        <p>Start at the top. Every arrow is an answer to the question above it. Grey arrows go forward; gold dashed arrows send you back into the map after you have drawn or chained a triangle.</p>
+      </div>
+    </div>
+    <p class="swipe-hint">Swipe sideways to see the whole map, or use “Walk me through it” below.</p>
+    <div class="map-frame">
+<svg viewBox="0 0 1200 1290" role="img" aria-label="Decision flowchart for choosing Pythagoras, SOH CAH TOA, sine rule, cosine rule or area formula">
+  <defs>
+    <pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse"><path class="gridbg" d="M20 0H0V20"/></pattern>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="ah" d="M0 0 L10 5 L0 10 Z"/></marker>
+    <marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="ahg" d="M0 0 L10 5 L0 10 Z"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="1290" fill="url(#g)"/>
+
+  <!-- START -->
+  <rect class="box" x="330" y="16" width="540" height="82" rx="16"/>
+  <text class="bt" x="600" y="44" text-anchor="middle">START · READ AND LABEL</text>
+  <text class="tx" x="600" y="66" text-anchor="middle">Tick what is GIVEN. Put <tspan class="mth">x</tspan> on what is WANTED (side, angle, area).</text>
+  <text class="tx-m" x="600" y="86" text-anchor="middle">Copy every number onto the diagram. “Not accurately drawn” = never measure.</text>
+  <path class="edge" d="M600 98 V128" marker-end="url(#ah)"/>
+
+  <!-- Q1 -->
+  <rect class="node" x="400" y="130" width="400" height="56" rx="28"/>
+  <circle class="badge" cx="400" cy="158" r="18"/><text class="badge-t" x="400" y="162.5" text-anchor="middle">Q1</text>
+  <text class="node-t" x="610" y="155" text-anchor="middle">Is the unknown inside a triangle?</text>
+  <text class="node-h" x="610" y="174" text-anchor="middle">Can you point to a triangle that holds your x?</text>
+
+  <!-- Q1 NO → MAKE ONE -->
+  <path class="edge" d="M800 152 H878" marker-end="url(#ah)"/>
+  <text class="el el-n" x="822" y="144">NO</text>
+  <rect class="box-make" x="880" y="108" width="300" height="264" rx="16"/>
+  <text class="bt bt-gold" x="900" y="136">NO TRIANGLE? DRAW ONE</text>
+  <text class="tx-s" x="900" y="162"><tspan class="tx-b">Rectangle</tspan> → draw the diagonal</text>
+  <text class="tx-s" x="900" y="184"><tspan class="tx-b">Isosceles</tspan> → drop the height (it halves)</text>
+  <text class="tx-s" x="900" y="206"><tspan class="tx-b">Circle</tspan> → radius ⟂ tangent</text>
+  <text class="tx-s" x="900" y="228"><tspan class="tx-b">Semicircle</tspan> → angle at the edge = 90°</text>
+  <text class="tx-s" x="900" y="250"><tspan class="tx-b">Graph</tspan> → across = Δ<tspan class="mth">x</tspan>, up = Δ<tspan class="mth">y</tspan></text>
+  <text class="tx-s" x="900" y="272"><tspan class="tx-b">Height, ladder</tspan> → vertical ⟂ ground</text>
+  <text class="tx-s" x="900" y="294"><tspan class="tx-b">Elevation</tspan> → horizontal at eye level</text>
+  <text class="tx-s" x="900" y="316"><tspan class="tx-b">Bearings</tspan> → North ⟂ East</text>
+  <text class="tx-s" x="900" y="338"><tspan class="tx-b">Trapezium, polygon</tspan> → drop heights</text>
+  <text class="foot-g" x="900" y="362">↺ Back to Q1 with your new triangle</text>
+  <path class="edge-g" d="M880 344 H842 Q828 344 828 330 V186 Q828 172 814 172 H804" marker-end="url(#ahg)"/>
+
+  <!-- Q1 YES → Q2 -->
+  <path class="edge" d="M600 186 V236" marker-end="url(#ah)"/>
+  <text class="el el-y" x="612" y="216">YES</text>
+
+  <!-- Q2 -->
+  <rect class="node" x="400" y="238" width="400" height="56" rx="28"/>
+  <circle class="badge" cx="400" cy="266" r="18"/><text class="badge-t" x="400" y="270.5" text-anchor="middle">Q2</text>
+  <text class="node-t" x="610" y="263" text-anchor="middle">Can ONE triangle finish the job?</text>
+  <text class="node-h" x="610" y="282" text-anchor="middle">It needs x + 3 facts. The right angle counts.</text>
+
+  <!-- Q2 NO → CHAIN -->
+  <path class="edge" d="M382 262 H322" marker-end="url(#ah)"/>
+  <text class="el el-n" x="338" y="254">NO</text>
+  <rect class="box-chain" x="20" y="196" width="300" height="178" rx="16"/>
+  <text class="bt" x="40" y="224" style="fill:var(--chain)">TWO OR MORE? CHAIN THEM</text>
+  <text class="tx-s" x="40" y="250"><tspan class="tx-b">1</tspan>  Start in the triangle with 3 facts</text>
+  <text class="tx-s" x="40" y="272"><tspan class="tx-b">2</tspan>  Solve it for the SHARED side/angle</text>
+  <text class="tx-s" x="40" y="294"><tspan class="tx-b">3</tspan>  Carry the full value (ANS) across</text>
+  <text class="tx-s" x="40" y="316"><tspan class="tx-b">4</tspan>  Use 180° (triangle, straight line)</text>
+  <text class="tx-s" x="40" y="338"><tspan class="tx-b">5</tspan>  Add or subtract angles and lengths</text>
+  <text class="foot-c" x="40" y="364">↓ Send each triangle through Q3</text>
+  <path class="edge-g" d="M320 352 H586 Q600 352 600 366"/>
+
+  <!-- Q2 YES → Q3 -->
+  <path class="edge" d="M600 294 V398" marker-end="url(#ah)"/>
+  <text class="el el-y" x="612" y="326">YES</text>
+
+  <!-- Q3 -->
+  <rect class="node" x="380" y="400" width="440" height="58" rx="29"/>
+  <circle class="badge" cx="380" cy="429" r="18"/><text class="badge-t" x="380" y="433.5" text-anchor="middle">Q3</text>
+  <text class="node-t" x="610" y="425" text-anchor="middle">Is there a RIGHT ANGLE?</text>
+  <text class="node-h" x="610" y="445" text-anchor="middle">□ symbol · “perpendicular” · vertical + horizontal · height</text>
+
+  <!-- Q3 branches -->
+  <path class="edge" d="M362 429 H312 Q300 429 300 441 V488" marker-end="url(#ah)"/>
+  <text class="el el-y" x="318" y="420">YES</text>
+  <path class="edge" d="M820 429 H888 Q900 429 900 441 V488" marker-end="url(#ah)"/>
+  <text class="el el-n" x="852" y="420">NO</text>
+  <text class="zone" x="20" y="476">RIGHT-ANGLED TRIANGLE</text>
+  <text class="zone" x="1180" y="476" text-anchor="end">NO RIGHT ANGLE</text>
+
+  <!-- Q4a -->
+  <rect class="node" x="110" y="490" width="380" height="56" rx="28"/>
+  <circle class="badge" cx="110" cy="518" r="18"/><text class="badge-t" x="110" y="522.5" text-anchor="middle">Q4</text>
+  <text class="node-t" x="310" y="515" text-anchor="middle">Is an ANGLE given or wanted?</text>
+  <text class="node-h" x="310" y="534" text-anchor="middle">Any angle except the 90° itself</text>
+  <path class="edge" d="M155 546 V606" marker-end="url(#ah)"/>
+  <text class="el el-n" x="166" y="580">NO · SIDES ONLY</text>
+  <path class="edge" d="M445 546 V606" marker-end="url(#ah)"/>
+  <text class="el el-y" x="456" y="580">YES</text>
+
+  <!-- Q4b -->
+  <rect class="node" x="710" y="490" width="380" height="56" rx="28"/>
+  <circle class="badge" cx="710" cy="518" r="18"/><text class="badge-t" x="710" y="522.5" text-anchor="middle">Q4</text>
+  <text class="node-t" x="910" y="515" text-anchor="middle">Do you have a FULL PAIR?</text>
+  <text class="node-h" x="910" y="534" text-anchor="middle">A side AND the angle opposite it, both known</text>
+  <path class="edge" d="M755 546 V606" marker-end="url(#ah)"/>
+  <text class="el el-y" x="766" y="580">YES</text>
+  <path class="edge" d="M1045 546 V606" marker-end="url(#ah)"/>
+  <text class="el el-n" x="1056" y="580">NO</text>
+
+  <!-- CARD: PYTHAGORAS -->
+  <rect class="box" x="20" y="608" width="270" height="370" rx="14"/>
+  <path class="hd-pyth" d="M20 622 A14 14 0 0 1 34 608 H276 A14 14 0 0 1 290 622 V648 H20 Z"/>
+  <text class="card-title" x="36" y="634">PYTHAGORAS</text>
+  <text class="card-tag" x="274" y="634" text-anchor="end">2 sides → 3rd side</text>
+  <path class="tri-fill f-pyth" d="M70 668 L70 756 L250 756 Z"/>
+  <path class="tri" d="M70 668 L70 756 L250 756 Z"/>
+  <path class="s-pyth" d="M70 668 L250 756"/>
+  <path class="ra" d="M70 742 H84 V756"/>
+  <text class="lab" x="52" y="718">a</text>
+  <text class="lab" x="156" y="776">b</text>
+  <text class="lab lab-pyth" x="166" y="704">c</text>
+  <text class="fx" x="155" y="810" text-anchor="middle"><tspan class="mth">a</tspan>² + <tspan class="mth">b</tspan>² = <tspan class="mth c-pyth">c</tspan>²</text>
+  <text class="tx-s" x="36" y="842">Want <tspan class="mth c-pyth">c</tspan>, the longest? <tspan class="tx-b">ADD</tspan>, then √</text>
+  <text class="fx-s" x="52" y="862"><tspan class="mth">c</tspan> = √(<tspan class="mth">a</tspan>² + <tspan class="mth">b</tspan>²)</text>
+  <text class="tx-s" x="36" y="886">Want a shorter side? <tspan class="tx-b">SUBTRACT</tspan></text>
+  <text class="fx-s" x="52" y="906"><tspan class="mth">a</tspan> = √(<tspan class="mth">c</tspan>² − <tspan class="mth">b</tspan>²)</text>
+  <text class="tx-s" x="36" y="930">Right-angled? Test <tspan class="mth">c</tspan>² = <tspan class="mth">a</tspan>² + <tspan class="mth">b</tspan>²</text>
+  <text class="tx-m" x="36" y="952">Triples: 3,4,5 · 5,12,13 · 8,15,17</text>
+
+  <!-- CARD: SOH CAH TOA -->
+  <rect class="box" x="310" y="608" width="270" height="370" rx="14"/>
+  <path class="hd-soh" d="M310 622 A14 14 0 0 1 324 608 H566 A14 14 0 0 1 580 622 V648 H310 Z"/>
+  <text class="card-title" x="326" y="634">SOH CAH TOA</text>
+  <text class="card-tag" x="564" y="634" text-anchor="end">angle in play</text>
+  <path class="tri-fill f-soh" d="M350 668 L350 756 L540 756 Z"/>
+  <path class="tri" d="M350 668 L350 756 L540 756 Z"/>
+  <path class="ra" d="M350 742 H364 V756"/>
+  <path class="s-soh" d="M512 756 A28 28 0 0 1 514.7 743.9" style="stroke-width:2.5"/>
+  <text class="lab lab-soh" x="494" y="750" style="font-size:15px">θ</text>
+  <text class="lab" x="452" y="702">H</text>
+  <text class="lab" x="330" y="718">O</text>
+  <text class="lab" x="440" y="776">A</text>
+  <text class="fx" x="445" y="810" text-anchor="middle" style="font-style:normal;font-family:var(--font-display);font-weight:700;font-size:19px;letter-spacing:.06em"><tspan class="c-soh">S</tspan>OH · <tspan class="c-soh">C</tspan>AH · <tspan class="c-soh">T</tspan>OA</text>
+  <text class="tx-s" x="326" y="842"><tspan class="tx-b">1</tspan>  Label from θ: H (opp □), O, A</text>
+  <text class="tx-s" x="326" y="864"><tspan class="tx-b">2</tspan>  Cross out the side you don’t use</text>
+  <text class="tx-s" x="326" y="886"><tspan class="tx-b">3</tspan>  OH → sin · AH → cos · OA → tan</text>
+  <text class="tx-s" x="326" y="908"><tspan class="tx-b">4</tspan>  <tspan class="mth">x</tspan> on top → × : <tspan class="mtu">12 sin 35°</tspan></text>
+  <text class="tx-s" x="343" y="930"><tspan class="mth">x</tspan> underneath → ÷ : <tspan class="mtu">12 ÷ sin 35°</tspan></text>
+  <text class="tx-s" x="326" y="952"><tspan class="tx-b">5</tspan>  Angle → SHIFT: θ = tan⁻¹(O ÷ A)</text>
+
+  <!-- CARD: SINE RULE -->
+  <rect class="box" x="620" y="608" width="270" height="370" rx="14"/>
+  <path class="hd-sine" d="M620 622 A14 14 0 0 1 634 608 H876 A14 14 0 0 1 890 622 V648 H620 Z"/>
+  <text class="card-title" x="636" y="634">SINE RULE</text>
+  <text class="card-tag" x="874" y="634" text-anchor="end">you have a pair</text>
+  <path class="tri-fill f-sine" d="M650 756 L860 756 L720 668 Z"/>
+  <path class="tri" d="M650 756 L860 756 L720 668 Z"/>
+  <path class="s-sine" d="M650 756 L720 668"/>
+  <path class="s-sine" d="M832 756 A28 28 0 0 1 836.3 741.1" style="stroke-width:2.5"/>
+  <path class="s-sine-d" d="M860 756 L720 668"/>
+  <text class="lab lab-sine" x="668" y="708">a</text>
+  <text class="lab lab-sine" x="814" y="750">A</text>
+  <text class="lab" x="796" y="704">b</text>
+  <text class="lab" x="664" y="750">B</text>
+  <text class="fx" x="700" y="798" text-anchor="middle"><tspan class="mth c-sine">a</tspan></text>
+  <path class="fr" d="M672 805 H728"/>
+  <text class="fx-s" x="700" y="824" text-anchor="middle">sin <tspan class="mth c-sine">A</tspan></text>
+  <text class="fx" x="755" y="811" text-anchor="middle">=</text>
+  <text class="fx" x="810" y="798" text-anchor="middle"><tspan class="mth">b</tspan></text>
+  <path class="fr" d="M782 805 H838"/>
+  <text class="fx-s" x="810" y="824" text-anchor="middle">sin <tspan class="mth">B</tspan></text>
+  <text class="tx-s" x="636" y="852">Side wanted → sides on top</text>
+  <text class="tx-s" x="636" y="874">Angle wanted → flip: <tspan class="mtu">sin <tspan class="mth">A</tspan> ÷ <tspan class="mth">a</tspan></tspan></text>
+  <text class="tx-s" x="636" y="896">sin⁻¹ only gives ACUTE angles</text>
+  <text class="tx-s" x="636" y="918">Told “obtuse”? Use 180° − θ</text>
+  <text class="tx-s" x="636" y="940">Know 2 angles? 3rd = 180° − both</text>
+  <text class="tx-m" x="636" y="962">…and now you have your pair</text>
+
+  <!-- CARD: COSINE RULE -->
+  <rect class="box" x="910" y="608" width="270" height="370" rx="14"/>
+  <path class="hd-cos" d="M910 622 A14 14 0 0 1 924 608 H1166 A14 14 0 0 1 1180 622 V648 H910 Z"/>
+  <text class="card-title" x="926" y="634">COSINE RULE</text>
+  <text class="card-tag" x="1164" y="634" text-anchor="end">no pair</text>
+  <path class="tri-fill f-cos" d="M940 756 L1150 756 L1010 668 Z"/>
+  <path class="tri" d="M940 756 L1150 756 L1010 668 Z"/>
+  <path class="s-cos" d="M1150 756 L1010 668"/>
+  <path class="s-cos" d="M968 756 A28 28 0 0 0 957.4 734.1" style="stroke-width:2.5"/>
+  <text class="lab lab-cos" x="972" y="750">A</text>
+  <text class="lab" x="958" y="706">b</text>
+  <text class="lab" x="1040" y="776">c</text>
+  <text class="lab lab-cos" x="1088" y="702">a</text>
+  <text class="fx" x="1045" y="810" text-anchor="middle" style="font-size:18.5px"><tspan class="mth c-cos">a</tspan>² = <tspan class="mth">b</tspan>² + <tspan class="mth">c</tspan>² − 2<tspan class="mth">bc</tspan> cos <tspan class="mth c-cos">A</tspan></text>
+  <text class="tx-s" x="926" y="842"><tspan class="tx-b">SAS</tspan> → side opposite <tspan class="mth">A</tspan>, then √</text>
+  <text class="tx-s" x="926" y="864"><tspan class="tx-b">SSS</tspan> → an angle:</text>
+  <text class="fx-s" x="942" y="886">cos <tspan class="mth">A</tspan> = (<tspan class="mth">b</tspan>² + <tspan class="mth">c</tspan>² − <tspan class="mth">a</tspan>²) ÷ 2<tspan class="mth">bc</tspan></text>
+  <text class="tx-s" x="926" y="910"><tspan class="mth">A</tspan> is the angle BETWEEN <tspan class="mth">b</tspan> and <tspan class="mth">c</tspan></text>
+  <text class="tx-s" x="926" y="932"><tspan class="mth">a</tspan> is the side OPPOSITE <tspan class="mth">A</tspan></text>
+  <text class="tx-s" x="926" y="954">Obtuse? cos <tspan class="mth">A</tspan> &lt; 0 finds it for you</text>
+
+  <!-- AREA BAND -->
+  <rect class="area-band" x="20" y="1002" width="1160" height="112" rx="14"/>
+  <path class="area-lab" d="M20 1016 A14 14 0 0 1 34 1002 H200 V1114 H34 A14 14 0 0 1 20 1100 Z"/>
+  <text class="card-title" x="38" y="1036">AREA</text>
+  <text class="card-tag" x="38" y="1058">in the question?</text>
+  <text class="card-tag" x="38" y="1076">any triangle,</text>
+  <text class="card-tag" x="38" y="1094">any time</text>
+  <text class="fx" x="222" y="1042" style="font-size:22px">Area = ½ <tspan class="mth">ab</tspan> sin <tspan class="mth">C</tspan></text>
+  <text class="tx-s" x="222" y="1068"><tspan class="mth">C</tspan> is the angle BETWEEN <tspan class="mth">a</tspan> and <tspan class="mth">b</tspan></text>
+  <text class="tx-s" x="222" y="1090">Right-angled: ½ × base × height</text>
+  <text class="bt" x="560" y="1034" style="font-size:13px">AREA GIVEN? WORK BACKWARDS</text>
+  <text class="tx-s" x="560" y="1058">Side: <tspan class="mtu"><tspan class="mth">b</tspan> = 2 × Area ÷ (<tspan class="mth">a</tspan> sin <tspan class="mth">C</tspan>)</tspan></text>
+  <text class="tx-s" x="560" y="1080">Angle: <tspan class="mtu">sin <tspan class="mth">C</tspan> = 2 × Area ÷ <tspan class="mth">ab</tspan></tspan></text>
+  <text class="tx-s" x="560" y="1102">…then <tspan class="mth">C</tspan> or 180° − <tspan class="mth">C</tspan> (read the question)</text>
+  <text class="bt" x="880" y="1034" style="font-size:13px">NOT A TRIANGLE?</text>
+  <text class="tx-s" x="880" y="1058">Quadrilateral: cut on a diagonal, add</text>
+  <text class="tx-s" x="880" y="1080">Parallelogram = <tspan class="mtu"><tspan class="mth">ab</tspan> sin <tspan class="mth">C</tspan></tspan></text>
+  <text class="tx-s" x="880" y="1102">Segment = sector − <tspan class="mtu">½<tspan class="mth">r</tspan>² sin θ</tspan></text>
+
+  <!-- FINISH -->
+  <rect class="finish" x="20" y="1138" width="1160" height="134" rx="16"/>
+  <text class="finish-t" x="44" y="1168">FINISH · CHECK BEFORE YOU WRITE THE ANSWER</text>
+  <g>
+    <rect class="chip" x="44" y="1184" width="268" height="34" rx="10"/><text class="chip-k" x="58" y="1206">✓</text><text class="chip-t" x="78" y="1206">Calculator in DEG (sin 30 = 0.5)</text>
+    <rect class="chip" x="324" y="1184" width="268" height="34" rx="10"/><text class="chip-k" x="338" y="1206">✓</text><text class="chip-t" x="358" y="1206">Keep full values (ANS / memory)</text>
+    <rect class="chip" x="604" y="1184" width="268" height="34" rx="10"/><text class="chip-k" x="618" y="1206">✓</text><text class="chip-t" x="638" y="1206">Round once: 3 s.f. · angles 1 d.p.</text>
+    <rect class="chip" x="884" y="1184" width="272" height="34" rx="10"/><text class="chip-k" x="898" y="1206">✓</text><text class="chip-t" x="918" y="1206">Hypotenuse is the longest side</text>
+    <rect class="chip" x="44" y="1226" width="268" height="34" rx="10"/><text class="chip-k" x="58" y="1248">✓</text><text class="chip-t" x="78" y="1248">Biggest angle ↔ biggest side</text>
+    <rect class="chip" x="324" y="1226" width="268" height="34" rx="10"/><text class="chip-k" x="338" y="1248">✓</text><text class="chip-t" x="358" y="1248">Obtuse? 180° − the sin⁻¹ answer</text>
+    <rect class="chip" x="604" y="1226" width="268" height="34" rx="10"/><text class="chip-k" x="618" y="1248">✓</text><text class="chip-t" x="638" y="1248">Units: cm · cm² · m · degrees</text>
+    <rect class="chip" x="884" y="1226" width="272" height="34" rx="10"/><text class="chip-k" x="898" y="1248">✓</text><text class="chip-t" x="918" y="1248">Answer the question: cost, yes/no</text>
+  </g>
+</svg>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="walk">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker">Click-through mode</div>
+        <h2>Walk me through it</h2>
+        <p>Open any question from the book, then answer the map’s questions one at a time. You end on the method, its steps, a real past-paper example and the trap to avoid.</p>
+      </div>
+    </div>
+    <div class="nav-shell">
+      <aside class="trail" aria-live="polite">
+        <h3>Your route</h3>
+        <ol id="trail"></ol>
+        <button class="restart" id="restart" type="button">Start again</button>
+      </aside>
+      <div class="stage" id="stage" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="hidden">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker">Q1 says no? Look again</div>
+        <h2>Hidden triangles</h2>
+        <p>When the question shows a shape, a scene or a graph, the right triangle is already there. The gold triangle is the one to draw.</p>
+      </div>
+    </div>
+    <div class="hid-grid">
+      <article class="hid">
+        <svg viewBox="0 0 220 140" aria-hidden="true">
+          <rect class="sh" x="30" y="25" width="160" height="90"/>
+          <path class="ht" d="M30 115 L190 115 L190 25 Z"/>
+          <path class="ra" d="M178 115 V103 H190"/>
+          <text class="lg" x="100" y="62">d</text>
+        </svg>
+        <h3>Rectangle or square</h3>
+        <p>The diagonal cuts it into two right triangles. <span class="m">d</span>² = length² + width².</p>
+      </article>
+      <article class="hid">
+        <svg viewBox="0 0 220 140" aria-hidden="true">
+          <path class="sh" d="M110 18 L30 122 L190 122 Z"/>
+          <path class="ht" d="M110 18 L110 122 L190 122 Z"/>
+          <path class="ra" d="M110 110 H122 V122"/>
+          <path class="tk" d="M64 66 L76 75 M144 75 L156 66"/>
+          <text class="lg" x="114" y="78">h</text>
+        </svg>
+        <h3>Isosceles triangle</h3>
+        <p>Drop the height from the top. It cuts the base in half and the top angle in half.</p>
+      </article>
+      <article class="hid">
+        <svg viewBox="0 0 220 140" aria-hidden="true">
+          <path class="sh" d="M110 12 L190 70 L110 128 L30 70 Z"/>
+          <path class="sh-d" d="M110 12 V128 M30 70 H190"/>
+          <path class="ht" d="M110 70 L190 70 L110 12 Z"/>
+          <path class="ra" d="M110 58 H122 V70"/>
+        </svg>
+        <h3>Rhombus or kite</h3>
+        <p>The diagonals cross at 90°. A rhombus gives four equal right triangles.</p>
+      </article>
+      <article class="hid">
+        <svg viewBox="0 0 220 140" aria-hidden="true">
+          <path class="sh" d="M60 28 L160 28 L196 118 L24 118 Z"/>
+          <path class="sh-d" d="M160 28 V118"/>
+          <path class="ht" d="M24 118 L60 118 L60 28 Z"/>
+          <path class="ra" d="M48 118 V106 H60"/>
+          <text class="lg" x="64" y="80">h</text>
+        </svg>
+        <h3>Trapezium</h3>
+        <p>Drop the two heights. You get a rectangle in the middle and a right triangle at each end.</p>
+      </article>
+      <article class="hid">
+        <svg viewBox="0 0 220 140" aria-hidden="true">
+          <circle class="sh" cx="70" cy="84" r="44"/>
+          <path class="sh" d="M14 40 H206"/>
+          <path class="ht" d="M70 84 L70 40 L184 40 Z"/>
+          <path class="ra" d="M70 52 H82 V40"/>
+          <circle class="dot" cx="70" cy="84" r="3"/>
+          <text class="lb" x="52" y="98">O</text>
+          <text class="lg" x="54" y="66">r</text>
+        </svg>
+        <h3>Tangent to a circle</h3>
+        <p>The radius meets the tangent at 90°. Join the centre to the touching point.</p>
+      </article>
+      <article class="hid">
+        <svg viewBox="0 0 220 140" aria-hidden="true">
+          <path class="sh" d="M30 118 A80 80 0 0 1 190 118 Z"/>
+          <path class="ht" d="M30 118 L190 118 L72 47.6 Z"/>
+          <path class="ra" d="M66.9 56.2 L75.5 61.3 L80.6 52.7"/>
+          <circle class="dot" cx="110" cy="118" r="3"/>
+        </svg>
+        <h3>Semicircle</h3>
+        <p>An angle drawn from the two ends of a diameter to the curve is always 90°.</p>
+      </article>
+      <article class="hid">
+        <svg viewBox="0 0 220 140" aria-hidden="true">
+          <circle class="sh" cx="110" cy="62" r="54"/>
+          <path class="sh" d="M66 93.4 H154"/>
+          <path class="ht" d="M110 62 L110 93.4 L154 93.4 Z"/>
+          <path class="ra" d="M110 81.4 H122 V93.4"/>
+          <circle class="dot" cx="110" cy="62" r="3"/>
+          <text class="lg" x="134" y="72">r</text>
+        </svg>
+        <h3>Chord</h3>
+        <p>The line from the centre that meets a chord at 90° cuts the chord in half.</p>
+      </article>
+      <article class="hid">
+        <svg viewBox="0 0 220 140" aria-hidden="true">
+          <path class="sh-d" d="M20 124 H204 M24 130 V10"/>
+          <path class="ht" d="M46 112 L178 112 L178 30 Z"/>
+          <path class="ra" d="M166 112 V100 H178"/>
+          <circle class="dot" cx="46" cy="112" r="3.5"/><circle class="dot" cx="178" cy="30" r="3.5"/>
+          <text class="lg" x="104" y="106">Δx</text>
+          <text class="lg" x="184" y="76">Δy</text>
+        </svg>
+        <h3>Two points on a graph</h3>
+        <p>Across is the change in <span class="m">x</span>, up is the change in <span class="m">y</span>. Distance = √(Δ<span class="m">x</span>² + Δ<span class="m">y</span>²).</p>
+      </article>
+      <article class="hid">
+        <svg viewBox="0 0 220 140" aria-hidden="true">
+          <path class="sh" d="M18 122 H206 M40 122 V24"/>
+          <path class="sh-d" d="M40 24 H200"/>
+          <path class="ht" d="M40 24 L40 122 L186 122 Z"/>
+          <path class="ra" d="M40 110 H52 V122"/>
+          <path class="arc" d="M80 24 A40 40 0 0 1 73.2 46.2"/>
+          <path class="arc" d="M146 122 A40 40 0 0 1 152.8 99.8"/>
+          <text class="lg" x="84" y="44">d</text>
+          <text class="lg" x="128" y="116">e</text>
+        </svg>
+        <h3>Elevation and depression</h3>
+        <p>Both are measured from the horizontal. Depression from the top <span class="m">d</span> = elevation from the bottom <span class="m">e</span> (alternate angles).</p>
+      </article>
+      <article class="hid">
+        <svg viewBox="0 0 220 140" aria-hidden="true">
+          <path class="sh" d="M56 120 V14"/>
+          <path class="sh" d="M50 24 L56 12 L62 24"/>
+          <text class="lb" x="64" y="22">N</text>
+          <path class="ht" d="M56 120 L176 120 L176 40 Z"/>
+          <path class="ra" d="M164 120 V108 H176"/>
+          <path class="arc" d="M56 92 A28 28 0 0 1 79.3 104.5"/>
+          <text class="lg" x="100" y="136">East part</text>
+          <text class="lg" x="182" y="84">N</text>
+        </svg>
+        <h3>Bearings</h3>
+        <p>North and East meet at 90°. Split the journey into a North part and an East part.</p>
+      </article>
+      <article class="hid">
+        <svg viewBox="0 0 220 140" aria-hidden="true">
+          <path class="sh" d="M20 124 H200 M168 124 V10"/>
+          <path class="ht" d="M60 124 L168 124 L168 26 Z"/>
+          <path class="ra" d="M156 124 V112 H168"/>
+          <path class="arc" d="M88 124 A28 28 0 0 0 80.7 105.1"/>
+          <text class="lg" x="58" y="64">ladder</text>
+        </svg>
+        <h3>Ladder against a wall</h3>
+        <p>The wall is vertical and the ground is horizontal, so they meet at 90°. The ladder is the hypotenuse.</p>
+      </article>
+      <article class="hid">
+        <svg viewBox="0 0 220 140" aria-hidden="true">
+          <path class="sh" d="M168 70 L139 120.2 L81 120.2 L52 70 L81 19.8 L139 19.8 Z"/>
+          <path class="sh-d" d="M110 70 L81 120.2"/>
+          <path class="ht" d="M110 70 L110 120.2 L139 120.2 Z"/>
+          <path class="ra" d="M110 108.2 H122 V120.2"/>
+          <circle class="dot" cx="110" cy="70" r="3"/>
+        </svg>
+        <h3>Regular polygon</h3>
+        <p>Join the centre to two corners: angle = 360° ÷ <span class="m">n</span>. Halve that isosceles triangle. Interior angle = (<span class="m">n</span> − 2) × 180° ÷ <span class="m">n</span>.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="routes">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker">The map on real exam questions</div>
+        <h2>Worked past papers</h2>
+        <p>Six Edexcel 4MA1 questions from T48 and T49, each shown as its route through the map. Every number was checked by calculation.</p>
+      </div>
+    </div>
+    <div class="routes">
+      <article class="route">
+        <div class="ref"><b>JAN 2021 · 2HR · Q13</b><span>3 marks · T48 V3</span></div>
+        <h3>Two balloons are 500 m apart. The angle of depression of B from A is 23°. Find the vertical height of A above B.</h3>
+        <div class="path"><span class="pc make">Q1 No → horizontal at A</span><span class="arrow">→</span><span class="pc">Q3 Yes</span><span class="arrow">→</span><span class="pc soh">Q4 Angle given → SOH CAH TOA</span></div>
+        <ol>
+          <li>Draw the horizontal through A. The 23° sits between it and AB.</li>
+          <li>From the 23°: H = 500 and you want O, so use sin.</li>
+          <li><span class="mu">h = 500 sin 23° = 195.36…</span></li>
+        </ol>
+        <div class="ans"><span>Answer (1 d.p.)</span><strong>195.4 m</strong></div>
+      </article>
+      <article class="route">
+        <div class="ref"><b>JUN 2022 · 2HR · Q10</b><span>5 marks · T48 V4</span></div>
+        <h3>Right triangle ABP inside a regular hexagon: AB = 5 cm, BP = 2 cm, angle ABP = 90°. Find angle PAF.</h3>
+        <div class="path"><span class="pc make">Q1 No → hexagon angle</span><span class="arrow">→</span><span class="pc">Q3 Yes</span><span class="arrow">→</span><span class="pc soh">Q4 Angle wanted → tan</span></div>
+        <ol>
+          <li>Angle PAF is not inside one triangle. Split it: PAF = BAF − BAP.</li>
+          <li>Interior angle of a regular hexagon: <span class="mu">(6 − 2) × 180° ÷ 6 = 120°</span></li>
+          <li>From angle BAP: O = 2, A = 5, so <span class="mu">tan BAP = 2 ÷ 5 → 21.80°</span></li>
+          <li><span class="mu">PAF = 120° − 21.80° = 98.19…°</span></li>
+        </ol>
+        <div class="ans"><span>Answer (3 s.f.)</span><strong>98.2°</strong></div>
+      </article>
+      <article class="route">
+        <div class="ref"><b>NOV 2025 · 1H · Q11</b><span>4 marks · T48 V4</span></div>
+        <h3>Right angle at B, AC = 21 cm, BC = 15 cm, D on AB with DB = 9 cm. Find angle ACD.</h3>
+        <div class="path"><span class="pc chain">Q2 No → chain 2 triangles</span><span class="arrow">→</span><span class="pc">Q3 Yes ×2</span><span class="arrow">→</span><span class="pc soh">SOH CAH TOA ×2</span><span class="arrow">→</span><span class="pc chain">subtract</span></div>
+        <ol>
+          <li>Triangle ABC, from C: A = 15, H = 21, so <span class="mu">cos ACB = 15 ÷ 21 → 44.42°</span></li>
+          <li>Triangle DBC, from C: O = 9, A = 15, so <span class="mu">tan DCB = 9 ÷ 15 → 30.96°</span></li>
+          <li><span class="mu">ACD = 44.42° − 30.96° = 13.45…°</span></li>
+        </ol>
+        <p class="tip">Shortcut: you never need AB. Using the given 15 and 21 avoids a rounded √216.</p>
+        <div class="ans"><span>Answer (1 d.p.)</span><strong>13.5°</strong></div>
+      </article>
+      <article class="route">
+        <div class="ref"><b>JAN 2022 · 2H · Q23</b><span>6 marks · T49 V4</span></div>
+        <h3>PQ = 1.6 cm, PR = 4.2 cm, angle PRQ = 18°, angle PQR is obtuse. Find the area of triangle PQR.</h3>
+        <div class="path"><span class="pc">Q3 No</span><span class="arrow">→</span><span class="pc sine">Q4 Pair (PQ, 18°) → sine rule</span><span class="arrow">→</span><span class="pc">180°</span><span class="arrow">→</span><span class="pc area">½ab sin C</span></div>
+        <ol>
+          <li>PQ = 1.6 is opposite the 18°: that is the full pair.</li>
+          <li><span class="mu">sin Q ÷ 4.2 = sin 18° ÷ 1.6 → sin Q = 0.8112</span></li>
+          <li>sin⁻¹ gives 54.2°, but Q is obtuse: <span class="mu">Q = 180° − 54.2° = 125.8°</span></li>
+          <li><span class="mu">P = 180° − 18° − 125.8° = 36.2°</span>, the angle between PR and PQ</li>
+          <li><span class="mu">Area = ½ × 4.2 × 1.6 × sin 36.2° = 1.98…</span></li>
+        </ol>
+        <div class="ans"><span>Answer (3 s.f.)</span><strong>1.98 cm²</strong></div>
+      </article>
+      <article class="route">
+        <div class="ref"><b>MAY/JUN 2023 · 1HR · Q25</b><span>6 marks · T49 V1</span></div>
+        <h3>Sides (2<span class="m">x</span> − 1) and (2<span class="m">x</span> + 1) with 30° between them. The area is <span class="m">x</span>² + <span class="m">x</span> − 3.75. Find the largest angle.</h3>
+        <div class="path"><span class="pc area">Area given → equation</span><span class="arrow">→</span><span class="pc cos">SAS → cosine rule</span><span class="arrow">→</span><span class="pc cos">SSS → cosine rule</span></div>
+        <ol>
+          <li><span class="mu">½(2<span class="m">x</span> − 1)(2<span class="m">x</span> + 1) sin 30° = <span class="m">x</span>² + <span class="m">x</span> − 3.75</span></li>
+          <li><span class="mu"><span class="m">x</span>² − 0.25 = <span class="m">x</span>² + <span class="m">x</span> − 3.75 → <span class="m">x</span> = 3.5</span>, so the sides are 6 and 8</li>
+          <li><span class="mu">BC² = 6² + 8² − 2(6)(8) cos 30° → BC = 4.106</span></li>
+          <li>Largest angle is opposite the longest side (8), at B: <span class="mu">cos B = (6² + 4.106² − 8²) ÷ (2 × 6 × 4.106)</span></li>
+        </ol>
+        <div class="ans"><span>Answer (nearest degree)</span><strong>103°</strong></div>
+      </article>
+      <article class="route">
+        <div class="ref"><b>JAN 2020 · 1HR · Q21</b><span>6 marks · T49 V4</span></div>
+        <h3>Prism ABCDEF: angle BEC = 40°, CE = 13 cm, AC = 6 cm, area of ABC = 22 cm², angle ACB obtuse. Find AB.</h3>
+        <div class="path"><span class="pc chain">Q2 No → chain</span><span class="arrow">→</span><span class="pc make">hidden 90° at B</span><span class="arrow">→</span><span class="pc soh">sin</span><span class="arrow">→</span><span class="pc area">area backwards</span><span class="arrow">→</span><span class="pc cos">cosine rule</span></div>
+        <ol>
+          <li>Edge BE is perpendicular to the end face, so angle CBE = 90°.</li>
+          <li>From the 40°: H = 13, want O: <span class="mu">BC = 13 sin 40° = 8.356</span></li>
+          <li><span class="mu">½ × 6 × 8.356 × sin C = 22 → sin C = 0.8776</span></li>
+          <li>sin⁻¹ gives 61.4°, but C is obtuse: <span class="mu">C = 118.6°</span></li>
+          <li><span class="mu">AB² = 6² + 8.356² − 2(6)(8.356) cos 118.6°</span></li>
+        </ol>
+        <div class="ans"><span>Answer (1 d.p.)</span><strong>12.4 cm</strong></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="traps">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker">Where marks are lost</div>
+        <h2>Exam traps</h2>
+        <p>Each one has cost real marks on these two topics. Read the fix, not just the trap.</p>
+      </div>
+    </div>
+    <div class="traps">
+      <div class="trap-card"><div><h3>sin⁻¹ when the angle is obtuse</h3><p>Your calculator only returns angles up to 90°.</p><p class="fix">“Obtuse” in the question, or a wide angle in the diagram, means 180° − your answer.</p><span class="src">Jan 2022 2H Q23 · Jan 2020 1HR Q21</span></div></div>
+      <div class="trap-card"><div><h3>Pythagoras on a triangle with no right angle</h3><p>a² + b² = c² only works with a 90°.</p><p class="fix">Answer Q3 first. No right angle means sine or cosine rule.</p></div></div>
+      <div class="trap-card"><div><h3>Adding when you want a short side</h3><p>The hypotenuse came out shorter than your answer.</p><p class="fix">Short side = subtract. Hypotenuse = add. The hypotenuse is always the biggest number.</p></div></div>
+      <div class="trap-card"><div><h3>Rounding in the middle</h3><p>Two-triangle questions drift off the mark scheme.</p><p class="fix">Keep the full value on the calculator (ANS or memory). Round once, at the end.</p><span class="src">T48 V4 · T49 V4</span></div></div>
+      <div class="trap-card"><div><h3>Calculator in RAD or GRAD</h3><p>Every trig answer is wrong and you can’t see why.</p><p class="fix">Check sin 30 = 0.5 before the first trig question.</p></div></div>
+      <div class="trap-card"><div><h3>Wrong angle in ½ab sin C</h3><p>Using an angle that is not between the two sides.</p><p class="fix">C must sit between a and b. If it doesn’t, find the right angle first with the 180° rule or the sine rule.</p></div></div>
+      <div class="trap-card"><div><h3>Cosine rule in the wrong order</h3><p>Working out (b² + c² − 2bc) first, then × cos A.</p><p class="fix">Type it in one go: b² + c² − 2bc cos A, then press √ for a side.</p></div></div>
+      <div class="trap-card"><div><h3>Sine rule upside down</h3><p>Putting x/sin 31 when x is an angle.</p><p class="fix">Unknown angle → angles on top: sin x ÷ 31 = sin 72° ÷ 54.</p><span class="src">T49 practice P12</span></div></div>
+      <div class="trap-card"><div><h3>Depression angle in the wrong place</h3><p>Putting the angle at the bottom against the vertical.</p><p class="fix">Draw the horizontal at the top. Depression from the top equals elevation from the bottom.</p><span class="src">Jan 2021 2HR Q13</span></div></div>
+      <div class="trap-card"><div><h3>Using your own answer when a given value works</h3><p>A rounded √216 makes the final angle drift.</p><p class="fix">Pick the ratio that uses the numbers printed in the question.</p><span class="src">Nov 2025 1H Q11</span></div></div>
+      <div class="trap-card"><div><h3>Largest angle at the wrong corner</h3><p>Finding an angle that is not the biggest.</p><p class="fix">The largest angle is opposite the longest side. Find that side first.</p><span class="src">May/Jun 2023 1HR Q25</span></div></div>
+      <div class="trap-card"><div><h3>Stopping at the number</h3><p>The question asked for a cost, a time, “is it safe?” or “who arrives first?”.</p><p class="fix">Finish with the comparison or the money, plus a short sentence.</p><span class="src">May/Jun 2024 1H Q11 · T48 P32 · T49 P24</span></div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Triangle Decision Map · O-Level 4MA1 · Chapter 4, lessons 10–11 (OL-T48, OL-T49)</span>
+    <span>Dr Eslam Ahmed · <a href="/">eliteigcse.com</a></span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var M = {
+    pyth: 'var(--pyth)', soh: 'var(--soh)', sine: 'var(--sine)', cos: 'var(--cos)', area: 'var(--area)', make: 'var(--gold)', chain: 'var(--chain)'
+  };
+  var N = {
+    q1: { gate: 'Q1', title: 'Is the side or angle you want inside a triangle?',
+      hint: 'Look at the diagram. Can you point to one triangle that has your unknown in it?',
+      opts: [['Yes, I can see the triangle', 'q2', 'Inside a triangle'], ['No: it is in a shape, a real-life scene or on a graph', 'make', 'Draw one']] },
+    make: { kind: 'info', color: 'make', title: 'Draw the triangle first',
+      lead: 'Every question in these two lessons hides a triangle. Find the one that holds your unknown and draw it in.',
+      list: [['Rectangle or square', 'Draw the diagonal.'], ['Isosceles triangle', 'Drop the height: it halves the base and the top angle.'], ['Rhombus or kite', 'Diagonals cross at 90°.'], ['Trapezium', 'Drop the heights.'], ['Circle', 'Radius ⟂ tangent. Angle in a semicircle = 90°. Centre ⟂ chord halves it.'], ['Graph or grid', 'Across = Δx, up = Δy.'], ['Height, tower, ladder', 'Vertical meets horizontal at 90°.'], ['Elevation or depression', 'Draw the horizontal at eye level. Both angles start from it.'], ['Bearings', 'North and East meet at 90°.'], ['Regular polygon', 'Centre angle = 360° ÷ n. Halve it.'], ['Prism', 'Edges are perpendicular to the end face.']],
+      next: ['I have drawn it: back to Q1', 'q2', 'Triangle drawn'] },
+    q2: { gate: 'Q2', title: 'Can ONE triangle finish the job?',
+      hint: 'The triangle needs your unknown plus three facts (sides or angles). The right angle counts as one fact.',
+      opts: [['Yes, one triangle has enough', 'q3', 'One triangle'], ['No, I need a side or angle from another triangle first', 'chain', 'Chain triangles']] },
+    chain: { kind: 'info', color: 'chain', title: 'Chain the triangles',
+      lead: 'Plan the route before you press a single button. Write it down: Triangle 1 → shared side → Triangle 2.',
+      list: [['1 · Start where it is full', 'Pick the triangle that already has 3 facts.'], ['2 · Find the shared piece', 'Solve it for the side or angle the next triangle needs.'], ['3 · Carry the full value', 'Use ANS or memory. Do not round yet.'], ['4 · Use angle facts', '180° in a triangle and on a straight line.'], ['5 · Add or subtract', 'ACD = ACB − DCB; a length can be the sum of two parts.']],
+      next: ['Solve the first triangle', 'q3', 'Chain planned'] },
+    q3: { gate: 'Q3', title: 'Is there a right angle in this triangle?',
+      hint: 'Look for the □ symbol, the word “perpendicular”, a height, vertical + horizontal, a tangent and radius, or an angle in a semicircle.',
+      opts: [['Yes, it is right-angled', 'q4a', 'Right angle'], ['No right angle', 'q4b', 'No right angle']] },
+    q4a: { gate: 'Q4', title: 'Apart from the 90°, is an angle given or wanted?',
+      hint: 'If the question only talks about sides, it is Pythagoras. If any other angle is given or asked for, it is SOH CAH TOA.',
+      opts: [['No, only sides: two known, find the third', 'pyth', 'Sides only'], ['Yes, an angle is given or wanted', 'soh', 'Angle in play'], ['It is about area', 'area', 'Area']] },
+    q4b: { gate: 'Q4', title: 'What do you know about this triangle?',
+      hint: 'A full pair is a side and the angle opposite it, both known.',
+      opts: [['A full pair, plus one more side or angle', 'sine', 'Full pair'], ['Two angles and any side', 'sine2', 'Two angles'], ['Two sides and the angle between them', 'cosS', 'SAS'], ['All three sides', 'cosA', 'SSS'], ['The area is given or wanted', 'area', 'Area']] },
+
+    pyth: { kind: 'res', color: 'pyth', rk: 'Right-angled · sides only', name: 'Pythagoras', fx: 'a² + b² = c²',
+      steps: ['Mark the hypotenuse c: opposite the right angle, the longest side.', 'Want c? Square, ADD, square-root: c = √(a² + b²).', 'Want a shorter side? Square, SUBTRACT, square-root: a = √(c² − b²).', 'Asked “is it right-angled?” Compare the longest² with the sum of the other two².'],
+      ex: 'Nov 2025 1H Q11: AB = √(21² − 15²) = √216 = 14.7 cm',
+      trap: 'If your “short” side comes out longer than the hypotenuse, you added instead of subtracting.' },
+    soh: { kind: 'res', color: 'soh', rk: 'Right-angled · angle in play', name: 'SOH CAH TOA', fx: 'sin θ = O/H · cos θ = A/H · tan θ = O/A',
+      steps: ['Stand at the angle θ. Label H (opposite the □), O (opposite θ), A (next to θ).', 'Cross out the side that is neither given nor wanted.', 'The two sides left choose it: O,H → sin · A,H → cos · O,A → tan.', 'Side on top: multiply (x = 12 sin 35°). Side underneath: divide (x = 12 ÷ sin 35°).', 'Angle wanted: SHIFT, e.g. θ = tan⁻¹(O ÷ A).'],
+      ex: 'Jan 2021 2HR Q13: h = 500 sin 23° = 195.4 m',
+      trap: 'Labelling from the wrong angle. O and A swap when you move to the other corner.' },
+    sine: { kind: 'res', color: 'sine', rk: 'No right angle · full pair', name: 'Sine rule', fx: 'a / sin A = b / sin B',
+      steps: ['Write the pair you know and the pair you want, side over sin of its opposite angle.', 'Finding a side: keep sides on top, then multiply across.', 'Finding an angle: flip it, sin A ÷ a = sin B ÷ b, then sin⁻¹.', 'Could the angle be obtuse? Then the answer is 180° − your sin⁻¹ value.'],
+      ex: 'Jan 2022 2H Q23: sin Q = 4.2 sin 18° ÷ 1.6, Q obtuse → 125.8°',
+      trap: 'sin⁻¹ never gives an obtuse angle. Read the question for the word “obtuse”.' },
+    sine2: { kind: 'res', color: 'sine', rk: 'No right angle · two angles + a side', name: 'Third angle, then the sine rule', fx: '180° − A − B, then a / sin A = b / sin B',
+      steps: ['Third angle = 180° − the two you know.', 'Now every side has its opposite angle, so you have a full pair.', 'Sides on top for a side: a = b sin A ÷ sin B.'],
+      ex: 'Typical: two angles of a field and one fence length → find another fence.',
+      trap: 'Matching a side with the wrong angle. Each side pairs with the angle across from it.' },
+    cosS: { kind: 'res', color: 'cos', rk: 'No right angle · SAS', name: 'Cosine rule for a side', fx: 'a² = b² + c² − 2bc cos A',
+      steps: ['A is the angle between the two known sides b and c.', 'a is the side opposite A, the one you want.', 'Type it in one go, then square-root.'],
+      ex: 'May/Jun 2023 1HR Q25: BC² = 6² + 8² − 2(6)(8) cos 30° → BC = 4.106',
+      trap: 'Working out b² + c² − 2bc first and then multiplying by cos A.' },
+    cosA: { kind: 'res', color: 'cos', rk: 'No right angle · SSS', name: 'Cosine rule for an angle', fx: 'cos A = (b² + c² − a²) / 2bc',
+      steps: ['Choose the angle you want and call it A. The side opposite it is a.', 'Substitute, work out the fraction, then cos⁻¹.', 'Largest angle? It is opposite the longest side.', 'A negative cos A means the angle is obtuse; cos⁻¹ gives it directly.'],
+      ex: 'May/Jun 2023 1HR Q25: largest angle opposite the side 8 → 103°',
+      trap: 'Putting the opposite side a in the positive part of the top. It is the one you subtract.' },
+    area: { kind: 'res', color: 'area', rk: 'Any triangle · area', name: 'Area = ½ ab sin C', fx: 'Area = ½ ab sin C',
+      steps: ['C must be the angle between sides a and b.', 'Missing that angle or side? Use the rest of the map to find it first.', 'Area given: sin C = 2 × Area ÷ ab, then C or 180° − C.', 'Quadrilateral: cut along a diagonal, find both triangles, add.'],
+      ex: 'Jan 2020 1HR Q21: ½ × 6 × 8.356 × sin C = 22 → C = 118.6° (obtuse)',
+      trap: 'Using an angle that is not between the two sides you multiplied.' }
+  };
+
+  var trailEl = document.getElementById('trail');
+  var stage = document.getElementById('stage');
+  var history = [];
+
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+
+  function renderTrail() {
+    trailEl.innerHTML = '';
+    if (!history.length) { var e = el('li', 'empty-li'); e.innerHTML = '<span class="empty">Your answers appear here as you go.</span>'; trailEl.appendChild(e); return; }
+    history.forEach(function (h) {
+      var li = el('li', 'done'); li.appendChild(el('b', null, h.gate));
+      var d = el('div'); d.appendChild(el('span', 'a', h.ans)); li.appendChild(d); trailEl.appendChild(li);
+    });
+  }
+
+  function go(id) {
+    var n = N[id];
+    stage.innerHTML = '';
+    if (!n.kind) {
+      var t = el('div', 'gate-tag', 'Question ' + n.gate.slice(1)); stage.appendChild(t);
+      stage.appendChild(el('h3', null, n.title));
+      stage.appendChild(el('p', 'hint', n.hint));
+      var box = el('div', 'opts');
+      n.opts.forEach(function (o, i) {
+        var b = el('button', 'opt'); b.type = 'button'; b.id = 'opt-' + id + '-' + i;
+        b.appendChild(el('span', 'k', String.fromCharCode(65 + i)));
+        b.appendChild(el('span', null, o[0]));
+        b.addEventListener('click', function () { history.push({ gate: n.gate, ans: o[2] }); renderTrail(); go(o[1]); });
+        box.appendChild(b);
+      });
+      stage.appendChild(box);
+    } else if (n.kind === 'info') {
+      var head = el('div', 'res-head'); head.style.background = M[n.color];
+      head.appendChild(el('div', 'rk', n.color === 'make' ? 'Q1 said no' : 'Q2 said no'));
+      head.appendChild(el('h3', null, n.title)); stage.appendChild(head);
+      stage.appendChild(el('p', 'hint', n.lead));
+      var ul = el('ul', 'info-list');
+      n.list.forEach(function (it) { var li = el('li'); li.appendChild(el('b', null, it[0])); li.appendChild(document.createTextNode(it[1])); ul.appendChild(li); });
+      stage.appendChild(ul);
+      var nb = el('button', 'next-btn', n.next[0] + ' →'); nb.type = 'button'; nb.id = 'next-' + id;
+      nb.addEventListener('click', function () { history.push({ gate: n.color === 'make' ? '✎' : '⛓', ans: n.next[2] }); renderTrail(); go(n.next[1]); });
+      stage.appendChild(nb);
+    } else {
+      var h = el('div', 'res-head'); h.style.background = M[n.color];
+      h.appendChild(el('div', 'rk', n.rk)); h.appendChild(el('h3', null, n.name)); h.appendChild(el('div', 'fx', n.fx));
+      stage.appendChild(h);
+      var body = el('div', 'res-body');
+      var left = el('div'); left.appendChild(el('h4', null, 'Steps'));
+      var ol = el('ol'); n.steps.forEach(function (s) { ol.appendChild(el('li', null, s)); }); left.appendChild(ol);
+      var right = el('div');
+      var ex = el('div', 'note ex'); ex.appendChild(el('h4', null, 'From the past papers')); ex.appendChild(el('p', null, n.ex));
+      var tr = el('div', 'note trap'); tr.appendChild(el('h4', null, 'Trap')); tr.appendChild(el('p', null, n.trap));
+      right.appendChild(ex); right.appendChild(tr);
+      body.appendChild(left); body.appendChild(right); stage.appendChild(body);
+      var again = el('button', 'next-btn', 'Try another question →'); again.type = 'button'; again.id = 'again';
+      again.addEventListener('click', restart); stage.appendChild(again);
+    }
+  }
+
+  function restart() { history = []; renderTrail(); go('q1'); }
+  document.getElementById('restart').addEventListener('click', restart);
+  restart();
+})();
+</script>
+</body>
+</html>
