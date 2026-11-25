@@ -3745,7 +3745,7 @@
       "title": "Powers, Roots & Standard Form",
       "detail": "Chapter 1: Numbers & the Number System | 18 pages",
       "href": "/downloads/Linear/VisualNotes/C1_T04_Powers_Roots_Standard_Form/Powers_Roots_Standard_Form_Visual_Notes.pdf?v=20261009c",
-      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Powers%2C%20Roots%20%26%20Standard%20Form",
+      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Powers%20%26%20Roots",
       "secondaryLabel": "Practice",
       "keywords": [
         "Convert standard form, Use index laws, Handle negative and fractional powers",
@@ -4025,7 +4025,7 @@
       "title": "Ratio Problem Solving",
       "detail": "Chapter 1: Numbers & the Number System | 16 pages",
       "href": "/downloads/Linear/VisualNotes/C1_T13_Ratio_Problem_Solving/Ratio_Problem_Solving_Visual_Notes.pdf?v=20261009c",
-      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Ratio%20Problem%20Solving",
+      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Ratio%20Toolkit",
       "secondaryLabel": "Practice",
       "keywords": [
         "Find one share, Use total parts, Convert mixed information to parts",
@@ -4041,7 +4041,7 @@
       "title": "Exchange Rates & Best Buys",
       "detail": "Chapter 1: Numbers & the Number System | 12 pages",
       "href": "/downloads/Linear/VisualNotes/C1_T14_Exchange_Rates_Best_Buys/Exchange_Rates_Best_Buys_Visual_Notes.pdf?v=20261009c",
-      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Exchange%20Rates%20%26%20Best%20Buys",
+      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Ratio%20Toolkit",
       "secondaryLabel": "Practice",
       "keywords": [
         "Write the exchange direction, Convert to one currency, Compare unit prices",
@@ -4305,7 +4305,7 @@
       "title": "Rearranging Formulae",
       "detail": "Chapter 2: Equations, Formulae & Identities | 18 pages",
       "href": "/downloads/Linear/VisualNotes/C2_T07_Rearranging_Formulas/Rearranging_Formulas_Visual_Notes.pdf?v=20261009c",
-      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Rearranging%20Formulas",
+      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Rearranging%20Formulae",
       "secondaryLabel": "Practice",
       "keywords": [
         "Make the subject visible, Clear fractions first, Undo operations in order",
@@ -4388,7 +4388,7 @@
       "title": "Solving Linear Equations",
       "detail": "Chapter 2: Equations, Formulae & Identities | 22 pages",
       "href": "/downloads/Linear/VisualNotes/C2_T09_Linear_Equations/Linear_Equations_Visual_Notes.pdf?v=20261009c",
-      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Solving%20Linear%20Equations",
+      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Linear%20Equations",
       "secondaryLabel": "Practice",
       "keywords": [
         "Collect like terms, Solve with brackets, Form the equation from words",
@@ -4421,7 +4421,7 @@
       "title": "Solving Quadratics",
       "detail": "Chapter 2: Equations, Formulae & Identities | 20 pages",
       "href": "/downloads/Linear/VisualNotes/C2_T10_Solving_Quadratics/Solving_Quadratics_Visual_Notes.pdf?v=20261009c",
-      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Solving%20Quadratic%20Equations",
+      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Quadratic%20Equations",
       "secondaryLabel": "Practice",
       "keywords": [
         "Factorise then solve, Use the quadratic formula, Complete the square",
@@ -4437,7 +4437,7 @@
       "title": "Solving Inequalities",
       "detail": "Chapter 2: Equations, Formulae & Identities | 18 pages",
       "href": "/downloads/Linear/VisualNotes/C2_T11_Inequalities/Inequalities_Visual_Notes.pdf?v=20261009c",
-      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Solving%20Inequalities",
+      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Inequalities%20%28Solving%20%26%20Graphing%29",
       "secondaryLabel": "Practice",
       "keywords": [
         "Name the target, Write the first line, Calculate carefully",
@@ -4569,7 +4569,7 @@
       "title": "Coordinate Geometry",
       "detail": "Chapter 3: Sequences, Functions & Graphs | 16 pages",
       "href": "/downloads/Linear/VisualNotes/C3_T02_Coordinate_Geometry/Coordinate_Geometry_Visual_Notes.pdf?v=20261009c",
-      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Coordinate%20Geometry",
+      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Linear%20Graphs",
       "secondaryLabel": "Practice",
       "keywords": [
         "Use midpoint, Use gradient, Find equation of a line",
@@ -4618,7 +4618,7 @@
       "title": "Linear Graphs y = mx + c",
       "detail": "Chapter 3: Sequences, Functions & Graphs | 16 pages",
       "href": "/downloads/Linear/VisualNotes/C3_T04_Linear_Graphs/Linear_Graphs_Visual_Notes.pdf?v=20261009c",
-      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Linear%20Graphs%20%28y%20%3D%20mx%20%2B%20c%29",
+      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Linear%20Graphs",
       "secondaryLabel": "Practice",
       "keywords": [
         "Read gradient and intercept, Find equation from two points, Use parallel/perpendicular gradients",
@@ -4701,7 +4701,7 @@
       "title": "Estimating Gradients",
       "detail": "Chapter 3: Sequences, Functions & Graphs | 14 pages",
       "href": "/downloads/Linear/VisualNotes/C3_T06_Estimating_Gradients/Estimating_Gradients_Visual_Notes.pdf?v=20261009c",
-      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Estimating%20Gradients",
+      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Graphs%20of%20Functions",
       "secondaryLabel": "Practice",
       "keywords": [
         "Draw a tangent, Use a large gradient triangle, Estimate average gradient",
@@ -4733,7 +4733,7 @@
       "title": "Graphing Inequalities",
       "detail": "Chapter 3: Sequences, Functions & Graphs | 12 pages",
       "href": "/downloads/Linear/VisualNotes/C3_T08_Graphing_Inequalities/Graphing_Inequalities_Visual_Notes.pdf?v=20261009c",
-      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Graphing%20Inequalities",
+      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Inequalities%20%28Solving%20%26%20Graphing%29",
       "secondaryLabel": "Practice",
       "keywords": [
         "Draw the boundary line, Choose solid or dashed, Test one point",
@@ -4782,7 +4782,7 @@
       "title": "Differentiation & Turning Points",
       "detail": "Chapter 3: Sequences, Functions & Graphs | 16 pages",
       "href": "/downloads/Linear/VisualNotes/C3_T10_Differentiation/Differentiation_Visual_Notes.pdf?v=20261009c",
-      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Differentiation",
+      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Differentiation%20%26%20Turning%20Points",
       "secondaryLabel": "Practice",
       "keywords": [
         "Differentiate powers, Find gradient at a point, Find stationary points",
@@ -4898,7 +4898,7 @@
       "title": "Bearings, Scale Drawing & Constructions",
       "detail": "Chapter 4: Geometry & Trigonometry | 16 pages",
       "href": "/downloads/Linear/VisualNotes/C4_T03_Bearings_Scale_Constructions/Bearings_Scale_Constructions_Visual_Notes.pdf?v=20261009c",
-      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Bearings%2C%20Scale%20Drawing%20%26%20Constructions",
+      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Bearings",
       "secondaryLabel": "Practice",
       "keywords": [
         "Draw North first, Measure clockwise bearing, Use scale before real distance",
@@ -4964,7 +4964,7 @@
       "title": "Perimeter & Area",
       "detail": "Chapter 4: Geometry & Trigonometry | 14 pages",
       "href": "/downloads/Linear/VisualNotes/C4_T05_Area_Perimeter/Area_Perimeter_Visual_Notes.pdf?v=20261009c",
-      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Area%20%26%20Perimeter",
+      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Perimeter%20%26%20Area",
       "secondaryLabel": "Practice",
       "keywords": [
         "Split the compound shape, Build an equation from area, Use perimeter after missing sides",
@@ -5046,7 +5046,7 @@
       "title": "Congruence, Similarity & Geometrical Proof",
       "detail": "Chapter 4: Geometry & Trigonometry | 12 pages",
       "href": "/downloads/Linear/VisualNotes/C4_T08_Congruence_Similarity_Proof/Congruence_Similarity_Proof_Visual_Notes.pdf?v=20261009c",
-      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Congruence%2C%20Similarity%20%26%20Geometrical%20Proof",
+      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Similar%20Shapes",
       "secondaryLabel": "Practice",
       "keywords": [
         "Find the length scale factor, Square it for area, Cube it for volume",
@@ -5128,7 +5128,7 @@
       "title": "Sine & Cosine Rules",
       "detail": "Chapter 4: Geometry & Trigonometry | 14 pages",
       "href": "/downloads/Linear/VisualNotes/C4_T11_Sine_Cosine_Rule/Sine_Cosine_Rule_Visual_Notes.pdf?v=20261009c",
-      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Sine%2C%20Cosine%20Rule%20%26%20Area%20of%20Triangles",
+      "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Sine%20%26%20Cosine%20Rules",
       "secondaryLabel": "Practice",
       "keywords": [
         "Name the angle relationship, Use the polygon sum, Use exterior angles",

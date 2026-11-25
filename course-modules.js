@@ -3090,7 +3090,9 @@
             label: "Statistics 1",
             code: "WST01",
             palette: "amber",
-            href: "/ial/wst01/index.html",
+            // No href while planned: renderers must not be able to emit a
+            // link to /ial/wst01/ before the course exists (they already
+            // render non-"live" entries as non-clickable).
             status: "planned",
           },
         ],

@@ -512,6 +512,32 @@ function getScopedQuestions(source = questions) {
   return source.filter((question) => question.unit === unit || question.modular_unit === unit || question.modular_force_unit === unit);
 }
 
+// Legacy / notes-taxonomy names that appear in older ?topic= deep links
+// (notes PDFs, saved bookmarks, pre-unification data files). Each maps to the
+// canonical practice topic the site's own topic normaliser assigns those
+// questions to, so an old link still lands on the filtered bank instead of
+// silently showing everything. Canonical names and anything unrecognised
+// pass through unchanged.
+const TOPIC_PARAM_ALIASES = {
+  "Powers, Roots & Standard Form": "Powers & Roots",
+  "Ratio Problem Solving": "Ratio Toolkit",
+  "Exchange Rates & Best Buys": "Ratio Toolkit",
+  "Rearranging Formulas": "Rearranging Formulae",
+  "Solving Linear Equations": "Linear Equations",
+  "Straight-Line Graphs & Coordinate Geometry": "Linear Graphs",
+  "Solving Quadratic Equations": "Quadratic Equations",
+  "Solving Inequalities": "Inequalities (Solving & Graphing)",
+  "Graphing Inequalities": "Inequalities (Solving & Graphing)",
+  "Coordinate Geometry": "Linear Graphs",
+  "Linear Graphs (y = mx + c)": "Linear Graphs",
+  "Estimating Gradients": "Graphs of Functions",
+  "Differentiation": "Differentiation & Turning Points",
+  "Bearings, Scale Drawing & Constructions": "Bearings",
+  "Area & Perimeter": "Perimeter & Area",
+  "Congruence, Similarity & Geometrical Proof": "Similar Shapes",
+  "Sine, Cosine Rule & Area of Triangles": "Sine & Cosine Rules",
+};
+
 function applyInitialParams() {
   const params = new URLSearchParams(window.location.search);
   const requestedBank = params.get("bank");
@@ -520,7 +546,8 @@ function applyInitialParams() {
     localStorage.setItem("activeQuestionBank", activeBank);
     configureBank();
   }
-  const topic = params.get("topic");
+  const requestedTopic = params.get("topic");
+  const topic = requestedTopic ? (TOPIC_PARAM_ALIASES[requestedTopic] || requestedTopic) : requestedTopic;
   const unit = params.get("unit");
   const mode = params.get("mode");
   let unitChangedAfterConfigure = false;

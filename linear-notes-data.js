@@ -58,7 +58,7 @@
      "href": "downloads/Linear/VisualNotes/C1_T04_Powers_Roots_Standard_Form/Powers_Roots_Standard_Form_Visual_Notes.pdf?v=20261009c",
      "pages": 18,
      "focus": "Convert standard form, Use index laws, Handle negative and fractional powers",
-     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Powers%2C%20Roots%20%26%20Standard%20Form",
+     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Powers%20%26%20Roots",
      "practiceLabel": "Practice topic"
     },
     {
@@ -148,7 +148,7 @@
      "href": "downloads/Linear/VisualNotes/C1_T13_Ratio_Problem_Solving/Ratio_Problem_Solving_Visual_Notes.pdf?v=20261009c",
      "pages": 16,
      "focus": "Find one share, Use total parts, Convert mixed information to parts",
-     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Ratio%20Problem%20Solving",
+     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Ratio%20Toolkit",
      "practiceLabel": "Practice topic"
     },
     {
@@ -158,7 +158,7 @@
      "href": "downloads/Linear/VisualNotes/C1_T14_Exchange_Rates_Best_Buys/Exchange_Rates_Best_Buys_Visual_Notes.pdf?v=20261009c",
      "pages": 12,
      "focus": "Write the exchange direction, Convert to one currency, Compare unit prices",
-     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Exchange%20Rates%20%26%20Best%20Buys",
+     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Ratio%20Toolkit",
      "practiceLabel": "Practice topic"
     },
     {
@@ -249,7 +249,7 @@
      "href": "downloads/Linear/VisualNotes/C2_T07_Rearranging_Formulas/Rearranging_Formulas_Visual_Notes.pdf?v=20261009c",
      "pages": 18,
      "focus": "Make the subject visible, Clear fractions first, Undo operations in order",
-     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Rearranging%20Formulas",
+     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Rearranging%20Formulae",
      "practiceLabel": "Practice topic"
     },
     {
@@ -269,7 +269,7 @@
      "href": "downloads/Linear/VisualNotes/C2_T09_Linear_Equations/Linear_Equations_Visual_Notes.pdf?v=20261009c",
      "pages": 22,
      "focus": "Collect like terms, Solve with brackets, Form the equation from words",
-     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Solving%20Linear%20Equations",
+     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Linear%20Equations",
      "practiceLabel": "Practice topic"
     },
     {
@@ -279,7 +279,7 @@
      "href": "downloads/Linear/VisualNotes/C2_T10_Solving_Quadratics/Solving_Quadratics_Visual_Notes.pdf?v=20261009c",
      "pages": 20,
      "focus": "Factorise then solve, Use the quadratic formula, Complete the square",
-     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Solving%20Quadratic%20Equations",
+     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Quadratic%20Equations",
      "practiceLabel": "Practice topic"
     },
     {
@@ -289,7 +289,7 @@
      "href": "downloads/Linear/VisualNotes/C2_T11_Inequalities/Inequalities_Visual_Notes.pdf?v=20261009c",
      "pages": 18,
      "focus": "Name the target, Write the first line, Calculate carefully",
-     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Solving%20Inequalities",
+     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Inequalities%20%28Solving%20%26%20Graphing%29",
      "practiceLabel": "Practice topic"
     },
     {
@@ -340,7 +340,7 @@
      "href": "downloads/Linear/VisualNotes/C3_T02_Coordinate_Geometry/Coordinate_Geometry_Visual_Notes.pdf?v=20261009c",
      "pages": 16,
      "focus": "Use midpoint, Use gradient, Find equation of a line",
-     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Coordinate%20Geometry",
+     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Linear%20Graphs",
      "practiceLabel": "Practice topic"
     },
     {
@@ -360,7 +360,7 @@
      "href": "downloads/Linear/VisualNotes/C3_T04_Linear_Graphs/Linear_Graphs_Visual_Notes.pdf?v=20261009c",
      "pages": 16,
      "focus": "Read gradient and intercept, Find equation from two points, Use parallel/perpendicular gradients",
-     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Linear%20Graphs%20%28y%20%3D%20mx%20%2B%20c%29",
+     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Linear%20Graphs",
      "practiceLabel": "Practice topic"
     },
     {
@@ -380,7 +380,7 @@
      "href": "downloads/Linear/VisualNotes/C3_T06_Estimating_Gradients/Estimating_Gradients_Visual_Notes.pdf?v=20261009c",
      "pages": 14,
      "focus": "Draw a tangent, Use a large gradient triangle, Estimate average gradient",
-     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Estimating%20Gradients",
+     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Graphs%20of%20Functions",
      "practiceLabel": "Practice topic"
     },
     {
@@ -400,7 +400,7 @@
      "href": "downloads/Linear/VisualNotes/C3_T08_Graphing_Inequalities/Graphing_Inequalities_Visual_Notes.pdf?v=20261009c",
      "pages": 12,
      "focus": "Draw the boundary line, Choose solid or dashed, Test one point",
-     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Graphing%20Inequalities",
+     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Inequalities%20%28Solving%20%26%20Graphing%29",
      "practiceLabel": "Practice topic"
     },
     {
@@ -420,7 +420,7 @@
      "href": "downloads/Linear/VisualNotes/C3_T10_Differentiation/Differentiation_Visual_Notes.pdf?v=20261009c",
      "pages": 16,
      "focus": "Differentiate powers, Find gradient at a point, Find stationary points",
-     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Differentiation",
+     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Differentiation%20%26%20Turning%20Points",
      "practiceLabel": "Practice topic"
     }
    ]
@@ -461,7 +461,7 @@
      "href": "downloads/Linear/VisualNotes/C4_T03_Bearings_Scale_Constructions/Bearings_Scale_Constructions_Visual_Notes.pdf?v=20261009c",
      "pages": 16,
      "focus": "Draw North first, Measure clockwise bearing, Use scale before real distance",
-     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Bearings%2C%20Scale%20Drawing%20%26%20Constructions",
+     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Bearings",
      "practiceLabel": "Practice topic"
     },
     {
@@ -481,7 +481,7 @@
      "href": "downloads/Linear/VisualNotes/C4_T05_Area_Perimeter/Area_Perimeter_Visual_Notes.pdf?v=20261009c",
      "pages": 14,
      "focus": "Split the compound shape, Build an equation from area, Use perimeter after missing sides",
-     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Area%20%26%20Perimeter",
+     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Perimeter%20%26%20Area",
      "practiceLabel": "Practice topic"
     },
     {
@@ -511,7 +511,7 @@
      "href": "downloads/Linear/VisualNotes/C4_T08_Congruence_Similarity_Proof/Congruence_Similarity_Proof_Visual_Notes.pdf?v=20261009c",
      "pages": 12,
      "focus": "Find the length scale factor, Square it for area, Cube it for volume",
-     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Congruence%2C%20Similarity%20%26%20Geometrical%20Proof",
+     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Similar%20Shapes",
      "practiceLabel": "Practice topic"
     },
     {
@@ -541,7 +541,7 @@
      "href": "downloads/Linear/VisualNotes/C4_T11_Sine_Cosine_Rule/Sine_Cosine_Rule_Visual_Notes.pdf?v=20261009c",
      "pages": 14,
      "focus": "Name the angle relationship, Use the polygon sum, Use exterior angles",
-     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Sine%2C%20Cosine%20Rule%20%26%20Area%20of%20Triangles",
+     "practiceHref": "practice.html?pathway=linear&bank=all&topic=Sine%20%26%20Cosine%20Rules",
      "practiceLabel": "Practice topic"
     },
     {
