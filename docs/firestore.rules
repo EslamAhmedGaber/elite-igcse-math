@@ -2,6 +2,7 @@ rules_version = '2';
 
 // Elite Mathematics - Firestore security rules
 // Publish in Firebase console -> Firestore Database -> Rules -> paste -> Publish.
+// Synced with the rules published in Firebase Console on 2026-11-25 (includes teacher_students).
 //
 // student_progress : each signed-in student reads/writes only their own progress.
 // site_users       : who signed in (name, email, visits, days active, work done). Student writes own; teacher lists all.
@@ -55,7 +56,7 @@ service cloud.firestore {
         && request.resource.data.visits is int
         // Activity summary (2026-11-12): days active, work done, study minutes, device.
         && (!('days' in request.resource.data) || (request.resource.data.days is list && request.resource.data.days.size() <= 2000))
-        && (!('courses' in request.resource.data) || (request.resource.data.courses is list && request.resource.data.courses.size() <= 20))
+        && (!('courses' in request.resource.data) || (request.resource.data.courses is list && request.resource.data.courses.size() <= 200))
         && (!('solved' in request.resource.data) || request.resource.data.solved is int)
         && (!('mistakes' in request.resource.data) || request.resource.data.mistakes is int)
         && (!('mocks' in request.resource.data) || request.resource.data.mocks is int)
@@ -135,6 +136,15 @@ service cloud.firestore {
           allow write: if isTeacher();
         }
       }
+    }
+
+    match /teacher_students/{docId} {
+      allow read, write: if request.auth != null
+        && request.auth.token.email == "eslamahmedgaberali@gmail.com";
+    }
+    match /teacher_students/{studentId}/courses/{courseId} {
+      allow read, write: if request.auth != null
+        && request.auth.token.email == "eslamahmedgaberali@gmail.com";
     }
   }
 }
