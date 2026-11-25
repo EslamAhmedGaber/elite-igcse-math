@@ -1022,6 +1022,7 @@
       if (targetCount && target.length >= targetCount) return;
       const currentMarks = totalMarksForQuestions(target);
       if (targetMarks && currentMarks >= targetMarks && target.length) return;
+      if (targetMarks && currentMarks + Number(question.marks || 0) > targetMarks) return;
       target.push(question);
       used.add(sourceKey(question));
     });
@@ -1229,13 +1230,18 @@
     const targetReached = () => picked.length >= count || (targetMarks && picked.length && totalMarksForQuestions(picked) >= targetMarks);
     const tieBreak = new Map(topics.map((topic) => [topic, random()]));
     while (!targetReached()) {
+      /* With a marks target the paper must never overshoot it: only questions
+         that fit in the remaining marks are eligible, so the picker skips a
+         big question and tries smaller ones instead of crossing the target. */
+      const remainingMarks = targetMarks ? targetMarks - totalMarksForQuestions(picked) : 0;
+      const fitsTarget = (question) => !targetMarks || Number(question.marks || 0) <= remainingMarks;
       let best = null;
       topics.forEach((topic) => {
         LEVELS.forEach((level) => {
-          if (!groups.get(topic)[level].length) return;
+          if (!groups.get(topic)[level].some(fitsTarget)) return;
           const topicNeed = (topicQuota[topic] || 0) - pickedTopic[topic];
           const levelNeed = (levelQuota[level] || 0) - pickedLevel[level];
-          if (strict && levelNeed <= 0 && LEVELS.some((other) => (levelQuota[other] || 0) - pickedLevel[other] > 0 && topics.some((t) => groups.get(t)[other].length))) return;
+          if (strict && levelNeed <= 0 && LEVELS.some((other) => (levelQuota[other] || 0) - pickedLevel[other] > 0 && topics.some((t) => groups.get(t)[other].some(fitsTarget)))) return;
           const score = strict
             ? levelNeed * 100 + topicNeed * 10 + tieBreak.get(topic)
             : topicNeed * 100 + levelNeed * 10 + tieBreak.get(topic);
@@ -1243,7 +1249,8 @@
         });
       });
       if (!best) break;
-      const question = groups.get(best.topic)[best.level].shift();
+      const cell = groups.get(best.topic)[best.level];
+      const question = targetMarks ? cell.splice(cell.findIndex(fitsTarget), 1)[0] : cell.shift();
       picked.push(question);
       pickedTopic[best.topic] += 1;
       pickedLevel[best.level] += 1;
@@ -1487,7 +1494,7 @@
       <div class="exam-plan-grid">
         <article><strong>${pool.length}</strong><span>eligible questions</span></article>
         <article><strong>${plannedCount}</strong><span>questions planned</span></article>
-        <article><strong>${config.targetMarks ? "" : "≈ "}${plannedMarks}</strong><span>marks</span></article>
+        <article><strong>${config.targetMarks ? "≤ " : "≈ "}${plannedMarks}</strong><span>marks</span></article>
         <article><strong>${minutes}</strong><span>minutes${els.duration?.value === "auto" ? " (auto)" : ""}</span></article>
         <article><strong>${plan.topics}</strong><span>topics</span></article>
       </div>
