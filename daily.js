@@ -46,6 +46,16 @@
     const asked = String(params.get("course") || params.get("c") || "").toLowerCase().replace(/[^a-z0-9]/g, "");
     const id = ALIASES[asked] || asked;
     if (COURSES[id]) return id;
+    // The rest of the site also links with ?pathway= (+ &unit= / &course=) — the
+    // params pathway-bootstrap.js uses to theme this page and set the top nav.
+    // Translate them so the questions served match the pathway the nav presents.
+    // Without this, a ?pathway= visit ignored the pathway entirely and fell back
+    // to the student's last course, so nav and content could name different courses.
+    // (Pure links already work above: their &course=wma11 etc. is a COURSES id.)
+    const pathway = String(params.get("pathway") || "").toLowerCase();
+    const unit = String(params.get("unit") || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+    if (pathway === "linear") return "linear";
+    if (pathway === "modular") return unit === "unit2" || unit === "2" ? "unit2" : "unit1";
     try { const last = localStorage.getItem("eliteLastCourse"); if (COURSES[last]) return last; } catch (e) { /* ignore */ }
     return "";
   }

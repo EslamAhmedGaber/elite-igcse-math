@@ -14,8 +14,36 @@
   <link rel="stylesheet" href="elite-system.css?v=20260906b">
   <link rel="stylesheet" href="elite-ux.css?v=20261112a">
   <script defer src="pathway-mode.js?v=baccalaureate-20260902c"></script>
+  <style>
+    /* Static-page nav contrast: this page uses plain anchors in .site-nav instead of
+       the JS-generated .nav-tab-main items, and no shared stylesheet colours plain
+       .site-nav > a, so they fell back to the dark-blue body link colour
+       (elite-ux.css: a { color: var(--ux-royal-ink) }) on the navy header.
+       At >=981px the header is navy (styles.css body:not([data-page="admin"]) theme);
+       mirror the .nav-tab-main colours from elite-system.css there. */
+    @media screen and (min-width: 981px) {
+      .site-nav > a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 6px 11px;
+        border-radius: 8px;
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      .site-nav > a:hover,
+      .site-nav > a:focus-visible {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+  </style>
 </head>
 <body>
+  <a class="ux-skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <a class="site-brand" href="index.html" aria-label="Elite IGCSE Mathematics home">
       <span class="brand-mark">IGCSE</span>
@@ -34,7 +62,7 @@
     </div>
   </header>
 
-  <main class="page">
+  <main class="page" id="main">
     <section class="checkup-hero">
       <div>
         <span class="eyebrow">Privacy</span>
