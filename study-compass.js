@@ -553,6 +553,7 @@
           <p><a href="/about.html">About Dr Eslam</a></p>
           <p><a href="/privacy.html">Privacy Policy</a></p>
           <p><a href="/terms.html">Terms of Use</a></p>
+          <p><a href="/tools.html">Student &amp; Teacher Tools</a></p>
           <p><a href="https://wa.me/201120009622" data-lead-trigger="whatsapp">WhatsApp &middot; +20 112 000 9622</a></p>
         </div>
       </div>

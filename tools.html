@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student &amp; Teacher Tools | Elite IGCSE</title>
+  <meta name="description" content="Free study tools for Elite IGCSE students and teachers: a Pomodoro study timer, a marks and percentage calculator, a WhatsApp reminder builder, and quick links to mocks, progress and past papers.">
+  <link rel="canonical" href="https://eliteigcse.com/tools.html">
+  <meta name="theme-color" content="#161b2e">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <script src="pathway-bootstrap.js?v=20261020w13"></script>
+  <link rel="stylesheet" href="styles.css?v=20261024u">
+  <link rel="stylesheet" href="elite-system.css?v=20260906b">
+  <link rel="stylesheet" href="elite-ux.css?v=20261112a">
+  <script defer src="pathway-mode.js?v=baccalaureate-20260902c"></script>
+  <style>
+    /* Static-page nav contrast: this page uses plain anchors in .site-nav instead of
+       the JS-generated .nav-tab-main items, and no shared stylesheet colours plain
+       .site-nav > a, so they fell back to the dark-blue body link colour
+       (elite-ux.css: a { color: var(--ux-royal-ink) }) on the navy header.
+       At >=981px the header is navy (styles.css body:not([data-page="admin"]) theme);
+       mirror the .nav-tab-main colours from elite-system.css there. */
+    @media screen and (min-width: 981px) {
+      .site-nav > a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 6px 11px;
+        border-radius: 8px;
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      .site-nav > a:hover,
+      .site-nav > a:focus-visible {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+
+    /* Tools page layout (page-local, same precedent as the nav fix above —
+       shared stylesheets untouched). Colours use the e27 theme variables
+       from elite-ux.css with literal fallbacks. */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin: 16px 0 8px;
+    }
+    .tool-card {
+      display: block;
+      background: var(--e-paper, #ffffff);
+      border: 1px solid var(--e-line, #dfe6ef);
+      border-radius: 14px;
+      padding: 18px;
+      text-decoration: none;
+      color: var(--e-ink, #0e1b2e);
+    }
+    a.tool-card:hover, a.tool-card:focus-visible {
+      border-color: var(--e-gold, #e2b84f);
+      box-shadow: 0 4px 18px rgba(15, 33, 64, 0.12);
+    }
+    .tool-card h3 { margin: 0 0 6px; font-size: 17px; }
+    .tool-card p { margin: 0; font-size: 14px; line-height: 1.5; }
+    .tools-panel {
+      background: var(--e-paper, #ffffff);
+      border: 1px solid var(--e-line, #dfe6ef);
+      border-radius: 14px;
+      padding: 20px;
+      margin: 16px 0 8px;
+    }
+    .tools-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin: 12px 0;
+    }
+    .tools-row label { font-weight: 600; font-size: 14px; }
+    .preset-btn[aria-pressed="true"] {
+      background: var(--e-navy, #0f2140);
+      color: #fff;
+      border-color: var(--e-navy, #0f2140);
+    }
+    .timer-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+    .timer-ring { position: relative; width: 168px; height: 168px; flex: none; }
+    .timer-ring svg { transform: rotate(-90deg); display: block; }
+    .timer-ring .ring-bg { stroke: var(--e-line, #dfe6ef); }
+    .timer-ring .ring-fg { stroke: var(--e-gold, #e2b84f); transition: stroke-dashoffset 0.3s linear; }
+    .timer-display {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      color: var(--e-ink, #0e1b2e);
+    }
+    .timer-status { font-size: 15px; margin: 8px 0 0; }
+    .big-result { font-size: 22px; font-weight: 700; margin: 8px 0 0; }
+    .tools-note { font-size: 13px; line-height: 1.55; margin: 10px 0 0; }
+    .pct-bar {
+      height: 12px;
+      border-radius: 999px;
+      background: var(--e-line, #dfe6ef);
+      overflow: hidden;
+      margin: 10px 0 4px;
+      max-width: 420px;
+    }
+    .pct-bar > div {
+      height: 100%;
+      width: 0%;
+      background: var(--e-gold, #e2b84f);
+      transition: width 0.25s ease;
+    }
+    .tools-panel textarea { width: 100%; box-sizing: border-box; }
+    .tools-panel input[type="text"],
+    .tools-panel input[type="number"] { max-width: 220px; }
+  </style>
+</head>
+<body>
+  <a class="ux-skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="site-brand" href="index.html" aria-label="Elite IGCSE Mathematics home">
+      <span class="brand-mark">IGCSE</span>
+      <span class="brand-title">Elite IGCSE Mathematics</span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="index.html#courseLauncher">All courses</a>
+      <a href="course.html?pathway=linear">Linear 4MA1</a>
+      <a href="practice.html">Practice</a>
+      <a href="pastpapers.html">Past Papers</a>
+      <a href="exam.html">Mocks</a>
+    </nav>
+    <div class="site-cta">
+      <a class="button primary" href="https://wa.me/201120009622">WhatsApp Help</a>
+    </div>
+  </header>
+
+  <main class="page" id="main">
+    <section class="checkup-hero">
+      <div>
+        <span class="eyebrow">Tools</span>
+        <h1>Student &amp; Teacher Tools</h1>
+        <p>Small tools that make study sessions and teaching life easier — a focus timer, a marks calculator, and a one-tap WhatsApp reminder. Everything runs in your browser; nothing is uploaded.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Study timer</h2>
+      <p>Pick a session length, write what you are studying, and stay focused until the timer ends. Short, timed sessions beat long, distracted ones.</p>
+      <div class="tools-panel">
+        <div class="tools-row" role="group" aria-label="Session length">
+          <button type="button" class="button preset-btn" data-minutes="25" aria-pressed="true">25 min focus</button>
+          <button type="button" class="button preset-btn" data-minutes="50" aria-pressed="false">50 min exam-style</button>
+          <button type="button" class="button preset-btn" data-minutes="5" aria-pressed="false">5 min break</button>
+          <button type="button" class="button preset-btn" data-minutes="15" aria-pressed="false">15 min break</button>
+        </div>
+        <div class="tools-row">
+          <label for="timerTopic">What are you studying?</label>
+          <input type="text" id="timerTopic" placeholder="e.g. Circle theorems — past paper questions" autocomplete="off">
+        </div>
+        <div class="timer-wrap">
+          <div class="timer-ring" aria-hidden="true">
+            <svg width="168" height="168" viewBox="0 0 168 168">
+              <circle class="ring-bg" cx="84" cy="84" r="76" fill="none" stroke-width="10"></circle>
+              <circle class="ring-fg" id="timerRing" cx="84" cy="84" r="76" fill="none" stroke-width="10" stroke-linecap="round"></circle>
+            </svg>
+            <div class="timer-display" id="timerDisplay">25:00</div>
+          </div>
+          <div>
+            <div class="tools-row">
+              <button type="button" class="button primary" id="timerStartPause">Start</button>
+              <button type="button" class="button" id="timerReset">Reset</button>
+            </div>
+            <p class="timer-status" id="timerStatus" aria-live="polite">Ready when you are.</p>
+            <p class="timer-status">Sessions completed today: <strong id="sessionsToday">0</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Marks calculator</h2>
+      <p>Turn a test score into a percentage, or work out how many marks you need for the percentage you are aiming for.</p>
+      <div class="tools-panel">
+        <h3>Your score as a percentage</h3>
+        <div class="tools-row">
+          <label for="marksScored">Marks scored</label>
+          <input type="number" id="marksScored" min="0" step="any" placeholder="e.g. 64">
+          <label for="marksTotal">Total marks</label>
+          <input type="number" id="marksTotal" min="0" step="any" placeholder="e.g. 80">
+        </div>
+        <div class="pct-bar" aria-hidden="true"><div id="pctBarFill"></div></div>
+        <p class="big-result" id="pctResult" aria-live="polite">Enter your marks to see your percentage.</p>
+
+        <h3>Marks needed for a target</h3>
+        <div class="tools-row" role="group" aria-label="Target percentage">
+          <button type="button" class="button target-btn" data-target="70" aria-pressed="false">70%</button>
+          <button type="button" class="button target-btn" data-target="80" aria-pressed="false">80%</button>
+          <button type="button" class="button target-btn" data-target="90" aria-pressed="true">90%</button>
+          <label for="targetCustom">or target %</label>
+          <input type="number" id="targetCustom" min="0" max="100" step="any" placeholder="e.g. 85">
+        </div>
+        <div class="tools-row">
+          <label for="targetTotal">Paper total marks</label>
+          <input type="number" id="targetTotal" min="0" step="any" value="100">
+        </div>
+        <p class="big-result" id="targetResult" aria-live="polite"></p>
+        <p class="tools-note"><strong>Please note:</strong> grade boundaries change every session — use percentages to track your progress, and check the latest Edexcel boundaries for official grade estimates.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>WhatsApp reminder builder <span style="font-size:14px; font-weight:600;">(for teachers)</span></h2>
+      <p>Edit the message below, then open it in WhatsApp ready to send to your class group.</p>
+      <div class="tools-panel">
+        <label for="waMessage"><strong>Reminder message</strong></label>
+        <div class="tools-row">
+          <textarea id="waMessage" rows="4">Reminder: complete today's 5 Daily Challenge questions and your mock corrections — Dr Eslam, Elite IGCSE</textarea>
+        </div>
+        <div class="tools-row">
+          <button type="button" class="button primary" id="waOpen">Open in WhatsApp</button>
+        </div>
+        <p class="tools-note">Choose the group or contact in WhatsApp after it opens — the message will already be typed for you.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Quick links</h2>
+      <div class="tools-grid">
+        <a class="tool-card" href="exam.html">
+          <h3>Mock Generator</h3>
+          <p>Build a full, timed mock paper from real past-paper questions in one click.</p>
+        </a>
+        <a class="tool-card" href="daily.html">
+          <h3>Daily Challenge</h3>
+          <p>Five fresh questions every day — the fastest way to keep every topic warm.</p>
+        </a>
+        <a class="tool-card" href="progress.html">
+          <h3>My Progress</h3>
+          <p>See what you have solved, what is in your Mistake Box, and what to revise next.</p>
+        </a>
+        <a class="tool-card" href="teacher-groups.html">
+          <h3>Groups &amp; Results</h3>
+          <p>For teachers: follow your groups, see who is studying, and check results.</p>
+        </a>
+        <a class="tool-card" href="downloads.html">
+          <h3>Free Books</h3>
+          <p>Download the classified books and notes for every course — free, as always.</p>
+        </a>
+        <a class="tool-card" href="pastpapers.html">
+          <h3>Past Papers</h3>
+          <p>Every Edexcel paper and mark scheme, organised by course and session.</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer hub-footer">
+    <nav aria-label="Course resource libraries"><p><a href="/edexcel-igcse/maths/linear/">IGCSE Linear</a> &middot; <a href="/edexcel-igcse/maths/modular/unit-1/">Modular Unit 1</a> &middot; <a href="/edexcel-igcse/maths/modular/unit-2/">Modular Unit 2</a> &middot; <a href="/edexcel-ial/pure-1/">Pure 1</a> &middot; <a href="/edexcel-ial/pure-2/">Pure 2</a> &middot; <a href="/edexcel-ial/pure-3/">Pure 3</a> &middot; <a href="/edexcel-ial/mechanics-1/">Mechanics 1</a></p></nav>
+    <p><strong>Elite IGCSE Academy</strong> &middot; Dr Eslam Ahmed &middot; <a href="about.html">About</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="tools.html">Tools</a> &middot; <a href="https://wa.me/201120009622">WhatsApp +20&nbsp;112&nbsp;000&nbsp;9622</a></p>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+
+      /* ---------- Pure helpers (also exercised by the batch-4 node harness) ---------- */
+      function formatTime(totalSeconds) {
+        var s = Math.max(0, Math.round(totalSeconds));
+        var m = Math.floor(s / 60);
+        var r = s % 60;
+        return (m < 10 ? "0" : "") + m + ":" + (r < 10 ? "0" : "") + r;
+      }
+      function percentOf(scored, total) {
+        if (!(total > 0) || !(scored >= 0)) return null;
+        return (scored / total) * 100;
+      }
+      function marksNeeded(targetPercent, total) {
+        if (!(total > 0) || !(targetPercent >= 0)) return null;
+        return Math.ceil((targetPercent / 100) * total);
+      }
+      function todayKey(now) {
+        var d = now || new Date();
+        return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+      }
+      function loadSessions(storage, now) {
+        try {
+          var raw = storage.getItem("eliteToolsSessions");
+          if (!raw) return { date: todayKey(now), count: 0 };
+          var parsed = JSON.parse(raw);
+          if (!parsed || parsed.date !== todayKey(now) || typeof parsed.count !== "number") {
+            return { date: todayKey(now), count: 0 };
+          }
+          return parsed;
+        } catch (e) {
+          return { date: todayKey(now), count: 0 };
+        }
+      }
+      function saveSessions(storage, sessions) {
+        try { storage.setItem("eliteToolsSessions", JSON.stringify(sessions)); } catch (e) { /* private mode */ }
+      }
+
+      /* ---------- Study timer ---------- */
+      var RING_C = 2 * Math.PI * 76;
+      var ring = document.getElementById("timerRing");
+      ring.style.strokeDasharray = String(RING_C);
+      ring.style.strokeDashoffset = "0";
+
+      var display = document.getElementById("timerDisplay");
+      var statusEl = document.getElementById("timerStatus");
+      var topicInput = document.getElementById("timerTopic");
+      var startPauseBtn = document.getElementById("timerStartPause");
+      var sessionsEl = document.getElementById("sessionsToday");
+      var sessions = loadSessions(window.localStorage);
+      sessionsEl.textContent = String(sessions.count);
+
+      var presetMinutes = 25;
+      var totalMs = presetMinutes * 60 * 1000;
+      var remainingMs = totalMs;
+      var endAt = 0;
+      var intervalId = null;
+      var running = false;
+
+      function renderTimer() {
+        var secondsLeft = Math.ceil(remainingMs / 1000);
+        display.textContent = formatTime(secondsLeft);
+        var fraction = totalMs > 0 ? remainingMs / totalMs : 0;
+        ring.style.strokeDashoffset = String(RING_C * (1 - fraction));
+      }
+      function stopInterval() {
+        if (intervalId !== null) { clearInterval(intervalId); intervalId = null; }
+      }
+      function setPreset(minutes) {
+        stopInterval();
+        running = false;
+        presetMinutes = minutes;
+        totalMs = minutes * 60 * 1000;
+        remainingMs = totalMs;
+        startPauseBtn.textContent = "Start";
+        statusEl.textContent = "Ready when you are.";
+        renderTimer();
+      }
+      function finishSession() {
+        stopInterval();
+        running = false;
+        remainingMs = 0;
+        renderTimer();
+        startPauseBtn.textContent = "Start";
+        var topic = topicInput.value.trim();
+        statusEl.textContent = topic
+          ? "Session complete — nice work on " + topic + "! Take a short break."
+          : "Session complete — nice work! Take a short break.";
+        sessions = loadSessions(window.localStorage);
+        sessions.count += 1;
+        saveSessions(window.localStorage, sessions);
+        sessionsEl.textContent = String(sessions.count);
+        remainingMs = totalMs;
+        renderTimer();
+      }
+      function tick() {
+        remainingMs = endAt - Date.now();
+        if (remainingMs <= 0) { finishSession(); return; }
+        renderTimer();
+      }
+      document.querySelectorAll(".preset-btn").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          document.querySelectorAll(".preset-btn").forEach(function (b) { b.setAttribute("aria-pressed", "false"); });
+          btn.setAttribute("aria-pressed", "true");
+          setPreset(parseInt(btn.getAttribute("data-minutes"), 10));
+        });
+      });
+      startPauseBtn.addEventListener("click", function () {
+        if (running) {
+          remainingMs = Math.max(0, endAt - Date.now());
+          stopInterval();
+          running = false;
+          startPauseBtn.textContent = "Resume";
+          statusEl.textContent = "Paused. Press Resume when you are ready.";
+          renderTimer();
+        } else {
+          if (remainingMs <= 0) remainingMs = totalMs;
+          endAt = Date.now() + remainingMs;
+          intervalId = setInterval(tick, 250);
+          running = true;
+          startPauseBtn.textContent = "Pause";
+          var topic = topicInput.value.trim();
+          statusEl.textContent = topic ? "Focusing on: " + topic : "Timer running — stay focused.";
+        }
+      });
+      document.getElementById("timerReset").addEventListener("click", function () { setPreset(presetMinutes); });
+      renderTimer();
+
+      /* ---------- Marks calculator ---------- */
+      var scoredInput = document.getElementById("marksScored");
+      var totalInput = document.getElementById("marksTotal");
+      var pctResult = document.getElementById("pctResult");
+      var pctBarFill = document.getElementById("pctBarFill");
+      function updatePercent() {
+        var scored = parseFloat(scoredInput.value);
+        var total = parseFloat(totalInput.value);
+        var pct = percentOf(scored, total);
+        if (pct === null || isNaN(scored)) {
+          pctResult.textContent = "Enter your marks to see your percentage.";
+          pctBarFill.style.width = "0%";
+          return;
+        }
+        pctResult.textContent = scored + " / " + total + " = " + (Math.round(pct * 10) / 10) + "%";
+        pctBarFill.style.width = Math.min(100, pct) + "%";
+      }
+      scoredInput.addEventListener("input", updatePercent);
+      totalInput.addEventListener("input", updatePercent);
+
+      var targetPercent = 90;
+      var targetCustom = document.getElementById("targetCustom");
+      var targetTotal = document.getElementById("targetTotal");
+      var targetResult = document.getElementById("targetResult");
+      function updateTarget() {
+        var total = parseFloat(targetTotal.value);
+        var need = marksNeeded(targetPercent, total);
+        if (need === null) {
+          targetResult.textContent = "Enter the paper's total marks.";
+          return;
+        }
+        targetResult.textContent = "You need " + need + " of " + total + " marks for " + targetPercent + "%.";
+      }
+      document.querySelectorAll(".target-btn").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          document.querySelectorAll(".target-btn").forEach(function (b) { b.setAttribute("aria-pressed", "false"); });
+          btn.setAttribute("aria-pressed", "true");
+          targetCustom.value = "";
+          targetPercent = parseFloat(btn.getAttribute("data-target"));
+          updateTarget();
+        });
+      });
+      targetCustom.addEventListener("input", function () {
+        var v = parseFloat(targetCustom.value);
+        if (!isNaN(v) && v >= 0 && v <= 100) {
+          document.querySelectorAll(".target-btn").forEach(function (b) { b.setAttribute("aria-pressed", "false"); });
+          targetPercent = v;
+        }
+        updateTarget();
+      });
+      targetTotal.addEventListener("input", updateTarget);
+      updateTarget();
+
+      /* ---------- WhatsApp reminder builder ---------- */
+      document.getElementById("waOpen").addEventListener("click", function () {
+        var msg = document.getElementById("waMessage").value.trim();
+        if (!msg) return;
+        window.open("https://wa.me/?text=" + encodeURIComponent(msg), "_blank", "noopener");
+      });
+    })();
+  </script>
+</body>
+</html>
