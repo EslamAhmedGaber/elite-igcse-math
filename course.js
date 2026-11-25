@@ -23,13 +23,16 @@
   // (bank "all", pathway-filtered, including the Elite Practice questions) — the same set the
   // progress tracker counts; topics = practice-catalog topics (topic-normalizer.js), verified
   // against the bank in batch 9: every catalog topic has classified questions (Linear 59,
-  // Unit 1 30, Unit 2 29). The notes books merge/split some topics differently (58/29/32
+  // Unit 1 30, Unit 2 29). Cross-unit audit (batch 10): six topics are examined in BOTH
+  // modular units' real papers, so the catalog now dual-lists them — Unit 1 32, Unit 2 33
+  // topics; question counts unchanged (659/697), and every bank question's topic is now
+  // catalogued in its own unit. The notes books merge/split some topics differently (58/29/32
   // book topics in library-data.js / classified-books-data.js) — a separate, known taxonomy.
   // papers = classified past papers.
   const FACTS = {
     linear: { topics: 59, questions: 1354, papers: 60, glyph: "π" },
-    unit1: { topics: 30, questions: 659, glyph: "√" },
-    unit2: { topics: 29, questions: 697, glyph: "x²" },
+    unit1: { topics: 32, questions: 659, glyph: "√" },
+    unit2: { topics: 33, questions: 697, glyph: "x²" },
     wma11: { topics: 13, questions: 189, papers: 19, glyph: "∫" },
     wma12: { topics: 12, questions: 190, papers: 19, glyph: "Σ" },
     wma13: { topics: 13, questions: 180, papers: 19, glyph: "eˣ" },

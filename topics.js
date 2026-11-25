@@ -60,9 +60,13 @@
     questions.forEach((question) => {
       const topic = question.canonical_topic || question.topic;
       const catalogEntry = catalogByTopic.get(topic);
-      const key = `${(catalogEntry?.unit || question.unit || "Mixed")}|||${topic}`;
+      // Count each question under its OWN unit (in modular mode question.unit is
+      // the paper-aware modular unit), not the topic's home catalog unit:
+      // cross-unit topics are listed in both units' catalogs, and their questions
+      // from the other unit's papers belong to that unit's row.
+      const key = `${(question.unit || catalogEntry?.unit || "Mixed")}|||${topic}`;
       const row = byTopic.get(key) || {
-        unit: catalogEntry?.unit || question.unit || "Mixed",
+        unit: question.unit || catalogEntry?.unit || "Mixed",
         topic,
         topicOrder: catalogEntry?.order || question.topic_order || 999,
         all: 0,

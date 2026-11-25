@@ -107,8 +107,10 @@
       "Completing the Square",
       "Quadratic Formula",
       "Quadratic Equations",
+      "Algebraic Proof",
       "Linear Graphs",
       "Linear Equations",
+      "Forming & Solving Equations",
       "Graphs of Functions",
       "Kinematic Graphs",
       "Perimeter & Area",
@@ -128,14 +130,18 @@
       "Reverse Percentages",
       "Standard Form",
       "Ratio Toolkit",
+      "Standard & Compound Units",
       "Forming & Solving Equations",
       "Rearranging Formulae",
+      "Algebraic Roots & Indices",
+      "Algebraic Fractions",
       "Simultaneous Equations",
       "Inequalities (Solving & Graphing)",
       "Algebraic Proof",
       "Sequences",
       "Direct & Inverse Proportion",
       "Functions",
+      "Graphs of Functions",
       "Differentiation & Turning Points",
       "Transformations of Graphs",
       "Angles in Polygons & Parallel Lines",
@@ -172,8 +178,31 @@
 
   const LINEAR_UNIT = new Map(LINEAR_CATALOG.map((entry) => [entry.topic, entry.unit]));
   const LINEAR_ORDER = new Map(LINEAR_CATALOG.map((entry) => [entry.topic, entry.order]));
-  const MODULAR_UNIT = new Map(MODULAR_CATALOG.map((entry) => [entry.topic, entry.unit]));
-  const MODULAR_ORDER = new Map(MODULAR_CATALOG.map((entry) => [entry.topic, entry.order]));
+  // Cross-unit topics (examined in BOTH modular units, e.g. Graphs of Functions)
+  // are listed in both units of MODULAR_CATALOG so both units' topic lists include
+  // them. For question assignment each dual-listed topic keeps its HOME unit
+  // (below), and only a question's own paper (modular_force_unit) moves it to the
+  // other unit. Letting the maps below take either listing at random would
+  // silently reassign every unforced question of a dual-listed topic.
+  const MODULAR_DUAL_HOME = {
+    "Graphs of Functions": "Unit 1",
+    "Algebraic Roots & Indices": "Unit 1",
+    "Standard & Compound Units": "Unit 1",
+    "Algebraic Fractions": "Unit 1",
+    "Algebraic Proof": "Unit 2",
+    "Forming & Solving Equations": "Unit 2",
+  };
+  const MODULAR_UNIT = new Map();
+  const MODULAR_ORDER = new Map();
+  MODULAR_CATALOG.forEach((entry) => {
+    if (!MODULAR_UNIT.has(entry.topic)) MODULAR_UNIT.set(entry.topic, entry.unit);
+    if (!MODULAR_ORDER.has(entry.topic)) MODULAR_ORDER.set(entry.topic, entry.order);
+  });
+  Object.entries(MODULAR_DUAL_HOME).forEach(([topic, home]) => {
+    MODULAR_UNIT.set(topic, home);
+    const homeEntry = MODULAR_CATALOG.find((entry) => entry.topic === topic && entry.unit === home);
+    if (homeEntry) MODULAR_ORDER.set(topic, homeEntry.order);
+  });
 
   function activePathway() {
     return window.ELITE_PATHWAY?.mode === "modular" ? "modular" : "linear";
@@ -418,7 +447,9 @@
 
   function normalizeMeta(meta) {
     const catalog = activeCatalog();
-    const topics = catalog.map((entry) => entry.topic);
+    // Dual-listed topics appear once per unit in the catalog; the meta topic
+    // name list must stay unique.
+    const topics = [...new Set(catalog.map((entry) => entry.topic))];
     const unitLabel = window.ELITE_PATHWAY?.label?.("unit") || "Chapter";
     const subtitle = `${unitLabel}-aware practice with filters, worksheets, progress tracking, and private teacher support.`;
     return {
