@@ -21,16 +21,57 @@
 
   // Real counts (recount checked 2026-11-25): questions = the course's whole practice bank
   // (bank "all", pathway-filtered, including the Elite Practice questions) — the same set the
-  // progress tracker counts; topics = topic notes; papers = classified past papers.
+  // progress tracker counts; topics = practice-catalog topics (topic-normalizer.js), verified
+  // against the bank in batch 9: every catalog topic has classified questions (Linear 59,
+  // Unit 1 30, Unit 2 29). The notes books merge/split some topics differently (58/29/32
+  // book topics in library-data.js / classified-books-data.js) — a separate, known taxonomy.
+  // papers = classified past papers.
   const FACTS = {
-    linear: { topics: 58, questions: 1354, papers: 60, glyph: "π" },
-    unit1: { topics: 29, questions: 659, glyph: "√" },
-    unit2: { topics: 32, questions: 697, glyph: "x²" },
+    linear: { topics: 59, questions: 1354, papers: 60, glyph: "π" },
+    unit1: { topics: 30, questions: 659, glyph: "√" },
+    unit2: { topics: 29, questions: 697, glyph: "x²" },
     wma11: { topics: 13, questions: 189, papers: 19, glyph: "∫" },
     wma12: { topics: 12, questions: 190, papers: 19, glyph: "Σ" },
     wma13: { topics: 13, questions: 180, papers: 19, glyph: "eˣ" },
     wme01: { topics: 10, questions: 138, papers: 18, glyph: "F" },
   };
+
+  // Course structured data (schema.org) for Google, built from the same course + FACTS
+  // data the page renders — no separate numbers to drift out of sync.
+  const COURSE_URLS = {
+    linear: "course.html?pathway=linear",
+    unit1: "course.html?pathway=modular&unit=Unit+1",
+    unit2: "course.html?pathway=modular&unit=Unit+2",
+    wma11: "course.html?pathway=pure&course=wma11",
+    wma12: "course.html?pathway=pure&course=wma12",
+    wma13: "course.html?pathway=pure&course=wma13",
+    wme01: "course.html?pathway=pure&course=wme01",
+  };
+
+  function injectCourseSchema(course, facts) {
+    const bits = [course.blurb];
+    if (facts.topics) bits.push(`${facts.topics} topics`);
+    if (facts.questions) bits.push(`${Number(facts.questions).toLocaleString("en-GB")} classified questions`);
+    if (facts.papers) bits.push(`${facts.papers} past papers`);
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      name: `${course.name} (${course.code})`,
+      description: `${bits.join(" — ")}. Free notes, worked solutions and progress tracking on Elite IGCSE.`,
+      url: `https://eliteigcse.com/${COURSE_URLS[course.id] || "course.html"}`,
+      isAccessibleForFree: true,
+      provider: {
+        "@type": "Organization",
+        "@id": "https://eliteigcse.com/#organization",
+        name: "Elite IGCSE",
+        url: "https://eliteigcse.com/",
+      },
+    };
+    const tag = document.createElement("script");
+    tag.type = "application/ld+json";
+    tag.textContent = JSON.stringify(schema);
+    document.head.appendChild(tag);
+  }
 
   // Three stages, the same in every course. A tile appears only when the course has that resource.
   const STAGES = [
@@ -286,6 +327,7 @@
   ].filter(([value]) => value);
 
   document.title = `${course.name} (${course.code}) - Elite IGCSE Mathematics`;
+  injectCourseSchema(course, facts);
   root.classList.add("e27-course-page");
   root.dataset.course = course.id;
   root.innerHTML = `
