@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 160" role="img" aria-label="Elite IGCSE Mathematics">
+  <g transform="translate(8 8) scale(0.28125)">
+    <rect x="0" y="0" width="512" height="512" rx="112" fill="#161B2E"/>
+    <path d="M140 150 H300 V198 H188 V232 H340 V280 H188 V314 H380 V362 H140 Z" fill="#C08A3E"/>
+  </g>
+  <text x="178" y="90" font-family="'Sora','Segoe UI',Arial,sans-serif" font-size="57" font-weight="800" fill="#161B2E">Elite IGCSE</text>
+  <text x="181" y="126" font-family="'Sora','Segoe UI',Arial,sans-serif" font-size="21" font-weight="700" letter-spacing="7" fill="#C08A3E">MATHEMATICS</text>
+</svg>
