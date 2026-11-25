@@ -131,10 +131,27 @@
       name: String(fields.name || "").trim(),
       phone: String(fields.phone || "").trim(),
       note: capNote(fields.note || ""),
+      nextSession: cleanSessionDate(fields.nextSession || ""),
       archived: false,
       createdAt: now,
       editedAt: now
     };
+  }
+
+  /* Next-session dates are stored as "" or a real YYYY-MM-DD date.
+     Anything else is rejected so overdue comparisons can trust the
+     value (TRACKER_V2_PLAN audit A3). */
+  function cleanSessionDate(value) {
+    const text = String(value || "").trim();
+    if (!text) return "";
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(text)) {
+      throw new Error("Next-session date must look like 2026-12-01.");
+    }
+    const parsed = new Date(`${text}T12:00:00`);
+    if (Number.isNaN(parsed.getTime())) throw new Error("That is not a real calendar date.");
+    const back = `${parsed.getFullYear()}-${String(parsed.getMonth() + 1).padStart(2, "0")}-${String(parsed.getDate()).padStart(2, "0")}`;
+    if (back !== text) throw new Error("That is not a real calendar date.");
+    return text;
   }
 
   /* ------------------------------------------------------- tick editing */
@@ -303,6 +320,7 @@
         Object.entries(doc.ticks || {}).forEach(([topic, tick]) => {
           rows.push({
             date: tick.date || "",
+            at: tick.at || tick.updatedAt || 0,
             studentId: student.id,
             student: student.name,
             courseId: doc.courseId,
@@ -343,12 +361,275 @@
     return Object.keys((courseDoc && courseDoc.ticks) || {}).filter((name) => !known.has(name));
   }
 
+  /* ------------------------------------------- V2: dashboard analytics */
+  /* All V2 aggregations cover ACTIVE students only (audit A6) and are
+     derived from existing ticks - no new stored counters. topicsByCourse
+     maps courseId -> [{name, chapter}] (the UI's catalog shape).        */
+
+  function parseDay(dateStr) {
+    if (!dateStr || !/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) return null;
+    const parsed = new Date(`${dateStr}T12:00:00`); // local noon: DST-proof
+    return Number.isNaN(parsed.getTime()) ? null : parsed;
+  }
+
+  function daysBetween(fromStr, toStr) {
+    const from = parseDay(fromStr);
+    const to = parseDay(toStr);
+    if (!from || !to) return null;
+    return Math.round((to.getTime() - from.getTime()) / 86400000);
+  }
+
+  /* Whole days from a tick date to today; null when there is no date. */
+  function daysSince(dateStr, todayStr) {
+    if (!dateStr) return null;
+    return daysBetween(dateStr, todayStr);
+  }
+
+  function shiftDate(dateStr, deltaDays) {
+    const base = parseDay(dateStr);
+    if (!base) return dateStr;
+    base.setDate(base.getDate() + deltaDays);
+    return `${base.getFullYear()}-${String(base.getMonth() + 1).padStart(2, "0")}-${String(base.getDate()).padStart(2, "0")}`;
+  }
+
+  function enrolmentCards(dataset, topicsByCourse, todayStr) {
+    const cards = [];
+    Object.values(dataset.students || {}).forEach((student) => {
+      if (student.archived) return;
+      const byCourse = (dataset.courses && dataset.courses[student.id]) || {};
+      Object.keys(byCourse).forEach((courseId) => {
+        const doc = byCourse[courseId];
+        const topics = topicsByCourse[courseId] || [];
+        const ticks = (doc && doc.ticks) || {};
+        const progress = topics.length ? progressFor(topics, ticks) : null;
+        const lastDate = latestTickDate(doc);
+        const since = daysSince(lastDate, todayStr);
+        cards.push({
+          studentId: student.id,
+          name: student.name,
+          phone: student.phone || "",
+          courseId,
+          progress,
+          lastDate,
+          daysSince: since,
+          nextTopic: topics.length ? nextTopic(topics, ticks) : null,
+          nextSession: student.nextSession || "",
+          session: nextSessionInfo(student, todayStr),
+          // Needs-attention badge: amber 7-13 days, red 14+ (plan §1.1.1)
+          badge: since === null ? "new" : since >= 14 ? "red" : since >= 7 ? "amber" : ""
+        });
+      });
+    });
+    return cards;
+  }
+
+  /* Dashboard cards sorted "needs attention" first: longest since the
+     last session (never taught = longest of all), then lowest progress,
+     then name. */
+  function dashboardCards(dataset, topicsByCourse, todayStr) {
+    const cards = enrolmentCards(dataset, topicsByCourse, todayStr);
+    cards.sort((a, b) => {
+      const aSince = a.daysSince === null ? Infinity : a.daysSince;
+      const bSince = b.daysSince === null ? Infinity : b.daysSince;
+      if (aSince !== bSince) return bSince - aSince;
+      const aPct = a.progress ? a.progress.pct : 0;
+      const bPct = b.progress ? b.progress.pct : 0;
+      if (aPct !== bPct) return aPct - bPct;
+      return String(a.name).localeCompare(String(b.name));
+    });
+    return cards;
+  }
+
+  function dashboardStats(dataset, topicsByCourse, todayStr) {
+    const students = Object.values(dataset.students || {}).filter((s) => !s.archived);
+    const rows = flattenLog(dataset); // active students only, by default
+    const windowStart = shiftDate(todayStr, -6);
+    const sessions = new Set();
+    let last7 = 0;
+    rows.forEach((row) => {
+      if (row.date >= windowStart && row.date <= todayStr) {
+        sessions.add(`${row.studentId}|${row.date}`);
+        last7++;
+      }
+    });
+    const monthPrefix = String(todayStr || "").slice(0, 7);
+    const lessonsThisMonth = rows.filter((row) => row.date && row.date.slice(0, 7) === monthPrefix).length;
+    const cards = enrolmentCards(dataset, topicsByCourse, todayStr).filter((card) => card.progress);
+    const avgProgress = cards.length
+      ? Math.round(cards.reduce((sum, card) => sum + card.progress.pct, 0) / cards.length)
+      : 0;
+    return {
+      activeStudents: students.length,
+      sessionsLast7Days: sessions.size,
+      lessonsLast7Days: last7,
+      lessonsThisMonth,
+      avgProgress
+    };
+  }
+
+  /* Newest first: date desc, then the tick's write time, then name. */
+  function activityFeed(dataset, limit = 15) {
+    return flattenLog(dataset)
+      .sort((a, b) => {
+        if (a.date !== b.date) return a.date < b.date ? 1 : -1;
+        if ((b.at || 0) !== (a.at || 0)) return (b.at || 0) - (a.at || 0);
+        return String(a.student).localeCompare(String(b.student));
+      })
+      .slice(0, limit);
+  }
+
+  /* A student is "HW pending" when their single latest tick overall
+     (by date, then write time) has homework set. */
+  function homeworkPending(dataset) {
+    const latestByStudent = {};
+    flattenLog(dataset).forEach((row) => { // active students only
+      const current = latestByStudent[row.studentId];
+      if (!current || row.date > current.date || (row.date === current.date && (row.at || 0) > (current.at || 0))) {
+        latestByStudent[row.studentId] = row;
+      }
+    });
+    return Object.values(latestByStudent)
+      .filter((row) => row.hw)
+      .map((row) => {
+        const student = dataset.students[row.studentId];
+        return {
+          studentId: row.studentId,
+          name: row.student,
+          phone: (student && student.phone) || "",
+          courseId: row.courseId,
+          topic: row.topic,
+          date: row.date
+        };
+      })
+      .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : String(a.name).localeCompare(String(b.name))));
+  }
+
+  function nextSessionInfo(student, todayStr) {
+    const date = (student && student.nextSession) || "";
+    if (!date) return { date: "", overdue: false, daysUntil: null };
+    const daysUntil = daysBetween(todayStr, date);
+    return { date, overdue: daysUntil !== null && daysUntil < 0, daysUntil };
+  }
+
+  /* Parent progress report text (plan §1.1.6 + audit A9: the optional
+     note is typed per report - the stored student note is never
+     auto-included). */
+  function buildParentReport({ student, courseLabel, topics, doc, teacherNote = "" }) {
+    const ticks = (doc && doc.ticks) || {};
+    const progress = progressFor(topics || [], ticks);
+    const next = nextTopic(topics || [], ticks);
+    const recent = Object.entries(ticks)
+      .map(([topic, tick]) => ({ topic, date: tick.date || "", at: tick.at || tick.updatedAt || 0 }))
+      .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : (b.at - a.at)))
+      .slice(0, 3);
+    const lines = [
+      `Progress update for ${student.name}`,
+      `Course: ${courseLabel}`,
+      `Lessons completed: ${progress.done} of ${progress.total} (${progress.pct}%)`
+    ];
+    if (recent.length) {
+      lines.push(`Most recent lessons: ${recent.map((row) => row.topic).join(", ")}`);
+    }
+    if (next) lines.push(`Next lesson: ${next}`);
+    else lines.push("Course complete - every lesson has been covered.");
+    if (student.nextSession) lines.push(`Next session: ${student.nextSession}`);
+    const note = String(teacherNote || "").trim();
+    if (note) lines.push(`Teacher note: ${note}`);
+    lines.push("Elite IGCSE Mathematics - Dr Eslam Ahmed");
+    return lines.join("\n");
+  }
+
+  /* ----------------------------------------- V2: backup export/import */
+  /* Import is untrusted input (audit A2): rebuild the dataset field by
+     field, keep only known shapes, cap notes, coerce types. Anything
+     that is not an object with students/courses objects is rejected.  */
+
+  function sanitizeTick(raw) {
+    if (!raw || typeof raw !== "object") return null;
+    const date = typeof raw.date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(raw.date) ? raw.date : "";
+    return {
+      date,
+      hw: Boolean(raw.hw),
+      note: capNote(typeof raw.note === "string" ? raw.note : ""),
+      at: Number(raw.at) || 0,
+      updatedAt: Number(raw.updatedAt) || 0
+    };
+  }
+
+  function sanitizeDataset(raw) {
+    if (!raw || typeof raw !== "object" || Array.isArray(raw)) return null;
+    if (!raw.students || typeof raw.students !== "object" || Array.isArray(raw.students)) return null;
+    if (raw.courses !== undefined && (typeof raw.courses !== "object" || raw.courses === null || Array.isArray(raw.courses))) return null;
+    const clean = emptyDataset();
+    clean.lastFullSync = Number(raw.lastFullSync) || 0;
+    Object.entries(raw.rosterTombstones || {}).forEach(([id, tomb]) => {
+      if (tomb && typeof tomb === "object") clean.rosterTombstones[id] = { updatedAt: Number(tomb.updatedAt) || 0 };
+    });
+    Object.entries(raw.students).forEach(([id, rawStudent]) => {
+      if (!rawStudent || typeof rawStudent !== "object") return;
+      const name = String(rawStudent.name || "").trim();
+      if (!name) return;
+      let nextSession = "";
+      try { nextSession = cleanSessionDate(rawStudent.nextSession || ""); } catch (error) { nextSession = ""; }
+      clean.students[id] = {
+        id,
+        name,
+        phone: String(rawStudent.phone || "").trim(),
+        note: capNote(typeof rawStudent.note === "string" ? rawStudent.note : ""),
+        nextSession,
+        archived: Boolean(rawStudent.archived),
+        createdAt: Number(rawStudent.createdAt) || 0,
+        editedAt: Number(rawStudent.editedAt) || 0
+      };
+    });
+    Object.entries(raw.courses || {}).forEach(([studentId, byCourse]) => {
+      if (!clean.students[studentId] || !byCourse || typeof byCourse !== "object") return;
+      clean.courses[studentId] = {};
+      Object.entries(byCourse).forEach(([courseId, rawDoc]) => {
+        if (!rawDoc || typeof rawDoc !== "object") return;
+        const doc = emptyCourseDoc(courseId);
+        doc.updatedAt = Number(rawDoc.updatedAt) || 0;
+        Object.entries(rawDoc.ticks || {}).forEach(([topic, rawTick]) => {
+          const tick = sanitizeTick(rawTick);
+          if (tick) doc.ticks[topic] = tick;
+        });
+        Object.entries(rawDoc.tombstones || {}).forEach(([topic, tomb]) => {
+          if (tomb && typeof tomb === "object") doc.tombstones[topic] = { updatedAt: Number(tomb.updatedAt) || 0 };
+        });
+        clean.courses[studentId][courseId] = doc;
+      });
+    });
+    return clean;
+  }
+
+  function exportEnvelope(dataset, exportedAt) {
+    return {
+      app: "elite-lesson-tracker",
+      version: 1,
+      exportedAt: exportedAt || new Date().toISOString(),
+      dataset: clone(dataset)
+    };
+  }
+
+  /* Accepts the export envelope or a bare dataset object. Returns a
+     sanitised dataset, or null when the text is not a tracker backup. */
+  function parseImport(text) {
+    let parsed;
+    try { parsed = JSON.parse(text); } catch (error) { return null; }
+    if (!parsed || typeof parsed !== "object") return null;
+    const raw = parsed.dataset && typeof parsed.dataset === "object" ? parsed.dataset : parsed;
+    return sanitizeDataset(raw);
+  }
+
   const Core = {
     normEmail, isTeacherEmail, teacherEmails, normName, normalisePhone,
     cairoToday, genId, capNote, emptyDataset, emptyCourseDoc, createStudent,
     applyTick, applyUntick, mergeCourseDoc, mergeDatasets,
     nextTopic, progressFor, latestTickDate, flattenLog, weekRange,
-    buildDigest, unmatchedTicks, NOTE_CAP
+    buildDigest, unmatchedTicks, NOTE_CAP,
+    cleanSessionDate, daysBetween, daysSince, dashboardCards, dashboardStats,
+    activityFeed, homeworkPending, nextSessionInfo, buildParentReport,
+    sanitizeDataset, exportEnvelope, parseImport
   };
   root.EliteTrackerCore = Core;
 
@@ -361,6 +642,7 @@
     error: "",
     cloudOk: false,     // last cloud load/push succeeded
     syncIssue: false,   // a change is saved in this browser only
+    syncing: false,     // a cloud load/push is in flight right now (V2)
     dataset: null,      // merged dataset (teacher only)
     modules: null,
     auth: null,
@@ -371,6 +653,13 @@
     return Boolean(user && isTeacherEmail(user.email));
   }
 
+  function syncState() {
+    if (demoMode) return "demo";
+    if (state.syncing) return "syncing";
+    if (state.cloudOk && !state.syncIssue) return "cloud";
+    return "local";
+  }
+
   function snapshot() {
     return {
       ready: state.ready,
@@ -379,6 +668,7 @@
       demo: demoMode,
       cloudOk: state.cloudOk,
       syncIssue: state.syncIssue,
+      syncState: syncState(),
       error: state.error
     };
   }
@@ -427,8 +717,8 @@
     const now = Date.now();
     const today = cairoToday();
     const yesterday = cairoToday(new Date(Date.now() - 86400000));
-    const a = { id: "stu-demo-a", name: "Demo Student A", phone: "0100 123 4567", note: "Demo data - Year 11, exam June", archived: false, createdAt: now - 7 * 86400000, editedAt: now - 86400000 };
-    const b = { id: "stu-demo-b", name: "Demo Student B", phone: "", note: "Demo data", archived: false, createdAt: now - 3 * 86400000, editedAt: now - 3 * 86400000 };
+    const a = { id: "stu-demo-a", name: "Demo Student A", phone: "0100 123 4567", note: "Demo data - Year 11, exam June", nextSession: "", archived: false, createdAt: now - 7 * 86400000, editedAt: now - 86400000 };
+    const b = { id: "stu-demo-b", name: "Demo Student B", phone: "0102 345 6789", note: "Demo data", nextSession: cairoToday(new Date(Date.now() + 86400000)), archived: false, createdAt: now - 3 * 86400000, editedAt: now - 3 * 86400000 };
     const dataset = emptyDataset();
     dataset.students[a.id] = a;
     dataset.students[b.id] = b;
@@ -437,7 +727,13 @@
     docA.ticks["Fractions"] = { date: today, hw: false, note: "", at: now, updatedAt: now };
     docA.updatedAt = now;
     dataset.courses[a.id] = { "modular-2": docA };
-    dataset.courses[b.id] = { linear: emptyCourseDoc("linear") };
+    // Demo B: one older lesson with homework set, so the V2 dashboard
+    // shows a homework-pending entry and a next-session date.
+    const docB = emptyCourseDoc("linear");
+    const twoDaysAgo = cairoToday(new Date(Date.now() - 2 * 86400000));
+    docB.ticks["Number Toolkit"] = { date: twoDaysAgo, hw: true, note: "", at: now - 2 * 86400000, updatedAt: now - 2 * 86400000 };
+    docB.updatedAt = now - 2 * 86400000;
+    dataset.courses[b.id] = { linear: docB };
     return dataset;
   }
 
@@ -523,17 +819,32 @@
      raises the sync banner instead of losing the change (PLAN §2.2). */
   async function cloudPush(job) {
     if (demoMode) return true;
+    state.syncing = true;
+    emit();
     try {
       await job();
-      if (state.syncIssue) { state.syncIssue = false; emit(); }
+      if (state.syncIssue) { state.syncIssue = false; }
       state.cloudOk = true;
       return true;
     } catch (error) {
       console.warn("[lesson-tracker] cloud push failed; kept in this browser only.", error);
       state.syncIssue = true;
-      emit();
       return false;
+    } finally {
+      state.syncing = false;
+      emit();
     }
+  }
+
+  /* Push the entire merged dataset (used after an import). */
+  async function pushAllDataset() {
+    const jobs = [];
+    Object.values(state.dataset.students).forEach((student) => jobs.push(() => pushStudent(student)));
+    Object.entries(state.dataset.courses).forEach(([studentId, byCourse]) => {
+      Object.values(byCourse).forEach((doc) => jobs.push(() => pushCourseDoc(studentId, doc)));
+    });
+    jobs.push(() => pushMeta());
+    for (const job of jobs) await job();
   }
 
   function persistLocal() {
@@ -546,6 +857,8 @@
   async function loadRealData() {
     const mirror = readMirror();
     let cloud = null;
+    state.syncing = true;
+    emit();
     try {
       cloud = await loadCloudDataset();
       state.cloudOk = true;
@@ -554,6 +867,8 @@
       console.warn("[lesson-tracker] cloud load failed; opening from this browser's copy.", error);
       state.cloudOk = false;
       state.syncIssue = true;
+    } finally {
+      state.syncing = false;
     }
     if (cloud) {
       state.dataset = mergeDatasets(cloud, mirror, mirror.lastFullSync || 0);
@@ -665,6 +980,7 @@
       if (fields.name !== undefined) student.name = String(fields.name || "").trim();
       if (fields.phone !== undefined) student.phone = String(fields.phone || "").trim();
       if (fields.note !== undefined) student.note = capNote(fields.note || "");
+      if (fields.nextSession !== undefined) student.nextSession = cleanSessionDate(fields.nextSession);
       if (!student.name) throw new Error("A student name is required.");
       student.editedAt = Date.now();
       persistLocal();
@@ -680,6 +996,45 @@
       persistLocal();
       await cloudPush(() => pushStudent(student));
       return clone(student);
+    },
+
+    /* V2: optional next-session date on the student record. Rides the
+       existing roster LWW merge (editedAt) and pushStudent path - no
+       schema or rules change (TRACKER_V2_PLAN §1.2, audit A3). */
+    async setNextSession(studentId, date) {
+      const dataset = datasetOrThrow();
+      const student = getStudent(studentId);
+      student.nextSession = cleanSessionDate(date);
+      student.editedAt = Date.now();
+      persistLocal();
+      await cloudPush(() => pushStudent(student));
+      return clone(student);
+    },
+
+    /* V2: full backup export (teacher-only - datasetOrThrow asserts). */
+    async exportAll() {
+      const dataset = datasetOrThrow();
+      return JSON.stringify(exportEnvelope(dataset), null, 2);
+    },
+
+    /* V2: restore a backup by MERGING it through the same per-key
+       tombstone/LWW machinery as cloud<->mirror sync (audit A1). An
+       older backup can never clobber a newer tick or resurrect a
+       deleted student; a genuinely newer edit in the backup wins.
+       `imported` must already be sanitised (Core.parseImport). */
+    async importAll(imported) {
+      const dataset = datasetOrThrow();
+      if (!imported || typeof imported !== "object" || !imported.students) {
+        throw new Error("That file is not a valid tracker backup.");
+      }
+      const merged = mergeDatasets(dataset, imported, dataset.lastFullSync || 0);
+      state.dataset = merged;
+      persistLocal();
+      await cloudPush(() => pushAllDataset());
+      return {
+        students: Object.keys(merged.students).length,
+        courses: Object.values(merged.courses).reduce((sum, byCourse) => sum + Object.keys(byCourse).length, 0)
+      };
     },
 
     async deleteStudent(studentId) {

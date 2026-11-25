@@ -36,8 +36,11 @@
     studentId: null,
     search: "",
     showArchived: false,
-    tab: "checklist",
+    tab: "overview",
     topics: [],
+    topicsByCourse: {},
+    dashCourse: "",
+    report: null,
     editing: false,
     noteOpen: new Set(),
     logStudent: "",
@@ -149,6 +152,19 @@
   function renderSyncBanner() {
     const snap = view.snapshot;
     $("#ltSyncBanner").hidden = !(snap && !snap.demo && snap.syncIssue);
+    // V2 sync status pill (feature 9): driven by the data layer's
+    // connection state; the red banner above keeps its old behaviour.
+    const pill = $("#ltSyncPill");
+    if (pill && snap) {
+      const labels = {
+        cloud: "Cloud synced",
+        local: "Local only",
+        syncing: "Syncing...",
+        demo: "Demo - this browser only"
+      };
+      pill.textContent = labels[snap.syncState] || "Local only";
+      pill.dataset.state = snap.syncState || "local";
+    }
   }
 
   /* -------------------------------------------------------------- digest */
@@ -301,7 +317,7 @@
       </div>
       <div class="lt-student-actions">
         ${next ? `<button type="button" class="lt-btn is-gold is-large lt-done-btn" data-done>&#10003; Done: ${escapeHtml(next)} &mdash; today</button>` : ""}
-        ${phone && next ? `<a class="lt-btn" target="_blank" rel="noreferrer" href="https://wa.me/${phone}?text=${encodeURIComponent(`Hi ${student.name}, your next lesson is ${next}.`)}">WhatsApp: next lesson</a>` : ""}
+        ${phone && next ? `<a class="lt-btn" target="_blank" rel="noreferrer" href="https://wa.me/${phone}?text=${encodeURIComponent(`Hi ${student.name}, your next lesson is ${next}.${student.nextSession ? ` Next session: ${formatDate(student.nextSession)}.` : ""}`)}">WhatsApp: next lesson</a>` : ""}
         <button type="button" class="lt-btn" data-edit>${view.editing ? "Close edit" : "Edit student"}</button>
         <button type="button" class="lt-btn" data-archive>${student.archived ? "Unarchive" : "Archive"}</button>
         <button type="button" class="lt-btn is-danger" data-delete>Delete</button>
@@ -403,6 +419,180 @@
     setTimeout(() => URL.revokeObjectURL(url), 4000);
   }
 
+  /* ------------------------------------------------------------ overview */
+  /* V2 dashboard (TRACKER_V2_PLAN §1.4): stats strip, needs-attention
+     cards, recent activity, homework pending. Everything derives from
+     Core aggregations over the already-loaded dataset - no new fetch. */
+
+  function stepsBar(progress) {
+    const segments = 20;
+    const filled = progress ? Math.round((progress.pct / 100) * segments) : 0;
+    return `<div class="lt-steps" role="img" aria-label="${progress ? progress.pct : 0}% complete">${Array.from({ length: segments }, (_, i) => `<i class="${i < filled ? "is-on" : ""}"></i>`).join("")}</div>`;
+  }
+
+  function cardBadgeHtml(card) {
+    const badges = [];
+    if (card.badge === "red") badges.push(`<span class="lt-badge is-red">No session for ${card.daysSince} days</span>`);
+    else if (card.badge === "amber") badges.push(`<span class="lt-badge is-amber">${card.daysSince} days since last session</span>`);
+    else if (card.badge === "new") badges.push(`<span class="lt-badge">No sessions yet</span>`);
+    if (card.session.overdue) badges.push(`<span class="lt-badge is-red">Next session overdue</span>`);
+    return badges.join("");
+  }
+
+  function dashCardHtml(card) {
+    const courseLabel = COURSES[card.courseId] ? COURSES[card.courseId].label : card.courseId;
+    const phone = Core.normalisePhone(card.phone);
+    const key = `${card.studentId}|${card.courseId}`;
+    const lastLine = card.lastDate
+      ? `Last session ${escapeHtml(formatDate(card.lastDate))}${card.daysSince !== null ? ` &middot; ${card.daysSince === 0 ? "today" : card.daysSince === 1 ? "yesterday" : `${card.daysSince} days ago`}` : ""}`
+      : "No sessions recorded yet";
+    const waText = card.nextTopic
+      ? `Hi ${card.name}, your next lesson is ${card.nextTopic}.${card.nextSession ? ` Next session: ${formatDate(card.nextSession)}.` : ""}`
+      : "";
+    return `
+    <article class="lt-card">
+      <div class="lt-card-head">
+        <div>
+          <h3><button type="button" class="lt-card-name" data-open-student="${escapeHtml(key)}">${escapeHtml(card.name)}</button></h3>
+          <p class="lt-muted">${escapeHtml(courseLabel)}</p>
+        </div>
+        <div class="lt-card-badges">${cardBadgeHtml(card)}</div>
+      </div>
+      ${card.progress ? `
+      ${stepsBar(card.progress)}
+      <p class="lt-card-progress"><b>${card.progress.done} of ${card.progress.total}</b> lessons &middot; ${card.progress.pct}%</p>` : `<p class="lt-card-progress lt-muted">Topic list unavailable for this course.</p>`}
+      <p class="lt-card-line">${lastLine}</p>
+      ${card.nextTopic ? `<p class="lt-card-line">Next lesson: <b>${escapeHtml(card.nextTopic)}</b></p>` : `<p class="lt-card-line"><b>Course complete</b></p>`}
+      ${card.nextSession ? `<p class="lt-card-line">Next session: <b>${escapeHtml(formatDate(card.nextSession))}</b>${card.session.overdue ? ` <span class="lt-badge is-red">Overdue</span>` : ""}</p>` : ""}
+      <div class="lt-card-actions">
+        ${card.nextTopic ? `<button type="button" class="lt-btn is-gold is-small" data-dash-tick="${escapeHtml(key)}">&#10003; ${escapeHtml(card.nextTopic)}</button>` : ""}
+        ${phone && card.nextTopic ? `<a class="lt-btn is-small" target="_blank" rel="noreferrer" href="https://wa.me/${phone}?text=${encodeURIComponent(waText)}">WhatsApp</a>` : ""}
+        <button type="button" class="lt-btn is-small" data-report="${escapeHtml(key)}">Parent report</button>
+      </div>
+      <div class="lt-card-session">
+        <label class="lt-field"><span>Next session</span><input type="date" data-session-date="${escapeHtml(card.studentId)}" value="${escapeHtml(card.nextSession)}"></label>
+        <button type="button" class="lt-btn is-small" data-session-save="${escapeHtml(card.studentId)}">Save</button>
+        ${card.nextSession ? `<button type="button" class="lt-btn is-small" data-session-clear="${escapeHtml(card.studentId)}">Clear</button>` : ""}
+      </div>
+    </article>`;
+  }
+
+  function renderOverview() {
+    const panel = $("#ltOverviewView");
+    if (!view.dataset) { panel.innerHTML = ""; return; }
+    const today = Core.cairoToday();
+    const stats = Core.dashboardStats(view.dataset, view.topicsByCourse, today);
+    const query = Core.normName(view.search);
+    let cards = Core.dashboardCards(view.dataset, view.topicsByCourse, today);
+    if (view.dashCourse) cards = cards.filter((card) => card.courseId === view.dashCourse);
+    if (query) cards = cards.filter((card) => Core.normName(card.name).includes(query));
+    const feed = Core.activityFeed(view.dataset, 15);
+    const pending = Core.homeworkPending(view.dataset);
+    const courseOptions = [`<option value="">All courses</option>`]
+      .concat(COURSE_IDS.map((id) => `<option value="${id}"${id === view.dashCourse ? " selected" : ""}>${escapeHtml(COURSES[id].label)}</option>`)).join("");
+
+    panel.innerHTML = `
+      <div class="lt-stats">
+        <div class="lt-stat"><b>${stats.activeStudents}</b><span>Active students</span></div>
+        <div class="lt-stat"><b>${stats.sessionsLast7Days}</b><span>Sessions in last 7 days</span></div>
+        <div class="lt-stat"><b>${stats.lessonsThisMonth}</b><span>Lessons this month</span></div>
+        <div class="lt-stat"><b>${stats.avgProgress}%</b><span>Average progress</span></div>
+      </div>
+      <div class="lt-dash-tools">
+        <label class="lt-field"><span>Show course</span><select id="ltDashCourse">${courseOptions}</select></label>
+        <p class="lt-muted">Cards are sorted by who needs attention first - longest since their last session on top. The gold button ticks the next lesson for today; undo it any time from the checklist.</p>
+      </div>
+      ${cards.length ? `<div class="lt-cards">${cards.map(dashCardHtml).join("")}</div>` : `<div class="lt-empty"><p><b>No student cards to show.</b></p><p class="lt-muted">${query || view.dashCourse ? "Nothing matches the current search/filter." : "Add a student and enrol them in a course to see their card here."}</p></div>`}
+      <div class="lt-dash-cols">
+        <section class="lt-dash-block" aria-label="Recent activity">
+          <h3>Recent activity</h3>
+          ${feed.length ? `<ul class="lt-feed">${feed.map((row) => `
+            <li>
+              <span class="lt-feed-date">${escapeHtml(formatDate(row.date))}</span>
+              <span class="lt-feed-main"><b>${escapeHtml(row.student)}</b> &middot; ${escapeHtml(row.topic)} <small>(${escapeHtml(COURSES[row.courseId] ? COURSES[row.courseId].label : row.courseId)})</small></span>
+              ${row.hw ? `<span class="lt-chip is-on">HW set</span>` : ""}
+            </li>`).join("")}</ul>` : `<p class="lt-muted">No lessons recorded yet.</p>`}
+        </section>
+        <section class="lt-dash-block" aria-label="Homework pending">
+          <h3>Homework pending</h3>
+          ${pending.length ? `<ul class="lt-feed">${pending.map((item) => {
+            const phone = Core.normalisePhone(item.phone);
+            return `
+            <li>
+              <span class="lt-feed-main"><b>${escapeHtml(item.name)}</b> &middot; ${escapeHtml(item.topic)} <small>(${escapeHtml(formatDate(item.date))})</small></span>
+              ${phone ? `<a class="lt-btn is-small" target="_blank" rel="noreferrer" href="https://wa.me/${phone}?text=${encodeURIComponent(`Hi ${item.name}, did you do the homework for ${item.topic}?`)}">Ask on WhatsApp</a>` : `<span class="lt-muted">No phone saved</span>`}
+            </li>`;
+          }).join("")}</ul>` : `<p class="lt-muted">No homework outstanding - the latest lesson for every student had no homework set.</p>`}
+        </section>
+      </div>`;
+  }
+
+  /* -------------------------------------------------------- parent report */
+
+  function reportContext() {
+    if (!view.report) return null;
+    const student = (view.dataset.students || {})[view.report.studentId];
+    if (!student) return null;
+    const courseId = view.report.courseId;
+    const doc = ((view.dataset.courses || {})[student.id] || {})[courseId] || null;
+    return {
+      student,
+      courseId,
+      courseLabel: COURSES[courseId] ? COURSES[courseId].label : courseId,
+      topics: view.topicsByCourse[courseId] || [],
+      doc
+    };
+  }
+
+  function buildReportText() {
+    const ctx = reportContext();
+    if (!ctx) return "";
+    return Core.buildParentReport({
+      student: ctx.student,
+      courseLabel: ctx.courseLabel,
+      topics: ctx.topics,
+      doc: ctx.doc,
+      teacherNote: $("#ltReportNote").value
+    });
+  }
+
+  function syncReportModal() {
+    const ctx = reportContext();
+    if (!ctx) return;
+    const text = buildReportText();
+    $("#ltReportText").textContent = text;
+    $("#ltReportTitle").textContent = `Parent progress report - ${ctx.student.name}`;
+    const phone = Core.normalisePhone(ctx.student.phone);
+    const link = $("#ltReportWhats");
+    link.href = phone
+      ? `https://wa.me/${phone}?text=${encodeURIComponent(text)}`
+      : `https://wa.me/?text=${encodeURIComponent(text)}`;
+  }
+
+  function openReport(studentId, courseId) {
+    view.report = { studentId, courseId };
+    $("#ltReportNote").value = "";
+    syncReportModal();
+    $("#ltReportModal").hidden = false;
+  }
+
+  function printReport() {
+    const ctx = reportContext();
+    if (!ctx) return;
+    const win = window.open("", "_blank");
+    if (!win) {
+      toast("Popups are blocked - allow popups to open the print view.", "error");
+      return;
+    }
+    const text = escapeHtml(buildReportText()).replace(/\n/g, "<br>");
+    win.document.write(`<!doctype html><html><head><title>Progress report - ${escapeHtml(ctx.student.name)}</title>
+      <style>body{font-family:Georgia,serif;color:#0e1b2e;max-width:640px;margin:40px auto;padding:0 20px;line-height:1.7}
+      h1{font-size:20px;border-bottom:3px solid #e2b84f;padding-bottom:8px}p{font-size:15px}</style></head>
+      <body><h1>Progress report - ${escapeHtml(ctx.student.name)}</h1><p>${text}</p>
+      <script>window.onload=function(){window.print()}<\/script></body></html>`);
+    win.document.close();
+  }
+
   /* -------------------------------------------------------------- render */
 
   async function refresh() {
@@ -416,6 +606,13 @@
       if (first) view.studentId = first.id;
     }
     view.topics = await courseTopics(view.course);
+    // V2: the dashboard needs catalogs for every enrolled course.
+    const enrolledCourses = new Set();
+    students.forEach((student) => student.enrolments.forEach((courseId) => enrolledCourses.add(courseId)));
+    for (const courseId of enrolledCourses) {
+      if (!view.topicsByCourse[courseId]) view.topicsByCourse[courseId] = await courseTopics(courseId);
+    }
+    view.topicsByCourse[view.course] = view.topics;
     renderDigest();
     await renderStudentList();
     renderDetail();
@@ -424,9 +621,11 @@
 
   function renderDetail() {
     $$(".lt-tab").forEach((tab) => tab.classList.toggle("is-active", tab.dataset.tab === view.tab));
+    $("#ltOverviewView").hidden = view.tab !== "overview";
     $("#ltChecklistView").hidden = view.tab !== "checklist";
     $("#ltLogView").hidden = view.tab !== "log";
-    if (view.tab === "checklist") renderChecklist();
+    if (view.tab === "overview") renderOverview();
+    else if (view.tab === "checklist") renderChecklist();
     else renderLog();
   }
 
@@ -455,6 +654,7 @@
     $("#ltSearch").addEventListener("input", (event) => {
       view.search = event.target.value;
       renderStudentList();
+      if (view.tab === "overview") renderOverview();
     });
 
     $("#ltShowArchived").addEventListener("change", (event) => {
@@ -467,6 +667,7 @@
       if (!row) return;
       view.studentId = row.dataset.student;
       view.editing = false;
+      view.tab = "checklist"; // picking a student goes straight to their checklist (audit A12)
       renderStudentList();
       renderDetail();
     });
@@ -686,6 +887,114 @@
       T.clearLocalCopies();
       toast("Local copy cleared. Reloading...");
       setTimeout(() => window.location.reload(), 600);
+    });
+
+    /* V2: overview dashboard actions (delegated) */
+    const overview = $("#ltOverviewView");
+    overview.addEventListener("click", async (event) => {
+      const splitKey = (value) => String(value || "").split("|");
+      const tickBtn = event.target.closest("[data-dash-tick]");
+      if (tickBtn) {
+        const [studentId, courseId] = splitKey(tickBtn.dataset.dashTick);
+        const topics = view.topicsByCourse[courseId] || [];
+        const doc = ((view.dataset.courses[studentId] || {})[courseId]) || null;
+        const next = Core.nextTopic(topics, (doc && doc.ticks) || {});
+        if (!next) return;
+        const ok = await guard(() => T.api.setTick(studentId, courseId, next, { date: Core.cairoToday() }), `Ticked: ${next} (undo from the checklist)`);
+        if (ok !== undefined) await refresh();
+        return;
+      }
+      const openBtn = event.target.closest("[data-open-student]");
+      if (openBtn) {
+        const [studentId, courseId] = splitKey(openBtn.dataset.openStudent);
+        view.studentId = studentId;
+        view.editing = false;
+        if (courseId && COURSES[courseId] && courseId !== view.course) {
+          view.course = courseId;
+          $("#ltCourse").value = courseId;
+          try { localStorage.setItem(COURSE_PREF_KEY, courseId); } catch (error) { /* ignore */ }
+          view.topics = await courseTopics(courseId);
+        }
+        view.tab = "checklist";
+        await renderStudentList();
+        renderDetail();
+        return;
+      }
+      const reportBtn = event.target.closest("[data-report]");
+      if (reportBtn) {
+        const [studentId, courseId] = splitKey(reportBtn.dataset.report);
+        openReport(studentId, courseId);
+        return;
+      }
+      const saveBtn = event.target.closest("[data-session-save]");
+      if (saveBtn) {
+        const studentId = saveBtn.dataset.sessionSave;
+        const input = overview.querySelector(`[data-session-date="${CSS.escape(studentId)}"]`);
+        const ok = await guard(() => T.api.setNextSession(studentId, input ? input.value : ""), "Next session saved");
+        if (ok !== undefined) await refresh();
+        return;
+      }
+      const clearBtn = event.target.closest("[data-session-clear]");
+      if (clearBtn) {
+        const ok = await guard(() => T.api.setNextSession(clearBtn.dataset.sessionClear, ""), "Next session cleared");
+        if (ok !== undefined) await refresh();
+      }
+    });
+    overview.addEventListener("change", (event) => {
+      if (event.target.id === "ltDashCourse") {
+        view.dashCourse = event.target.value;
+        renderOverview();
+      }
+    });
+
+    /* V2: parent report modal */
+    $("#ltReportNote").addEventListener("input", syncReportModal);
+    $("#ltReportClose").addEventListener("click", () => { $("#ltReportModal").hidden = true; });
+    $("#ltReportModal").addEventListener("click", (event) => {
+      if (event.target.id === "ltReportModal") event.target.hidden = true;
+    });
+    $("#ltReportCopy").addEventListener("click", async () => {
+      const text = buildReportText();
+      try {
+        await navigator.clipboard.writeText(text);
+        toast("Report copied - paste it anywhere");
+      } catch (error) {
+        toast("Copy was blocked by the browser - select the text and copy it manually.", "error");
+      }
+    });
+    $("#ltReportPrint").addEventListener("click", printReport);
+
+    /* V2: backup export / import (merge, never blind-overwrite) */
+    $("#ltExportBackup").addEventListener("click", async () => {
+      const json = await guard(() => T.api.exportAll());
+      if (json === undefined) return;
+      const blob = new Blob([json], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `lesson-tracker-backup-${Core.cairoToday()}.json`;
+      link.click();
+      setTimeout(() => URL.revokeObjectURL(url), 4000);
+      toast("Backup downloaded");
+    });
+    $("#ltImportBackup").addEventListener("click", () => $("#ltImportFile").click());
+    $("#ltImportFile").addEventListener("change", async (event) => {
+      const file = event.target.files && event.target.files[0];
+      event.target.value = "";
+      if (!file) return;
+      let text = "";
+      try { text = await file.text(); } catch (error) { /* handled below */ }
+      const imported = text ? Core.parseImport(text) : null;
+      if (!imported) {
+        toast("That file is not a valid tracker backup.", "error");
+        return;
+      }
+      const studentCount = Object.keys(imported.students).length;
+      const tickCount = Object.values(imported.courses || {}).reduce(
+        (sum, byCourse) => sum + Object.values(byCourse).reduce((s, doc) => s + Object.keys(doc.ticks || {}).length, 0), 0);
+      if (!window.confirm(`Import this backup (${studentCount} student${studentCount === 1 ? "" : "s"}, ${tickCount} ticked lessons)?\n\nIt is MERGED with your current records: for every entry the newer version wins, deleted students stay deleted, and nothing newer is overwritten.`)) return;
+      const result = await guard(() => T.api.importAll(imported), "Backup imported and merged");
+      if (result !== undefined) await refresh();
     });
   }
 

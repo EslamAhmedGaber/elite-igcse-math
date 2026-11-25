@@ -17,12 +17,12 @@
   <link rel="stylesheet" href="styles.css?v=20261024u">
   <link rel="stylesheet" href="elite-system.css?v=20260906b">
   <link rel="stylesheet" href="elite-ux.css?v=20261112a">
-  <link rel="stylesheet" href="teacher-tracker.css?v=20261125a">
+  <link rel="stylesheet" href="teacher-tracker.css?v=20261125b">
   <script defer src="firebase-config.js"></script>
   <script defer src="runtime-loader.js?v=20260809a"></script>
   <script defer src="topic-normalizer.js?v=tracker-20261125a"></script>
-  <script defer src="lesson-tracker.js?v=20261125a"></script>
-  <script defer src="teacher-tracker-ui.js?v=20261125a"></script>
+  <script defer src="lesson-tracker.js?v=20261125b"></script>
+  <script defer src="teacher-tracker-ui.js?v=20261125b"></script>
 </head>
 <body data-page="tracker">
 
@@ -100,21 +100,43 @@
           </form>
           <label class="lt-checkline"><input type="checkbox" id="ltShowArchived"> Show archived students</label>
           <p class="lt-muted lt-who">Signed in as <span id="ltWho"></span> &middot; <button type="button" class="lt-link" data-sign-out>Sign out</button></p>
+          <p class="lt-sync-line"><span class="lt-pill" id="ltSyncPill" data-state="local">Local only</span></p>
         </aside>
 
         <section class="lt-detail" id="ltDetail" aria-live="polite">
           <div class="lt-tabs" role="tablist">
-            <button type="button" class="lt-tab is-active" data-tab="checklist" role="tab">Checklist</button>
+            <button type="button" class="lt-tab is-active" data-tab="overview" role="tab">Overview</button>
+            <button type="button" class="lt-tab" data-tab="checklist" role="tab">Checklist</button>
             <button type="button" class="lt-tab" data-tab="log" role="tab">Lessons log</button>
           </div>
-          <div id="ltChecklistView"></div>
+          <div id="ltOverviewView"></div>
+          <div id="ltChecklistView" hidden></div>
           <div id="ltLogView" hidden></div>
         </section>
       </div>
 
       <div class="lt-foot">
         <p class="lt-muted">Private records: student names and lesson ticks are stored under the teacher account only and are never shown to students or other accounts.</p>
-        <button type="button" class="lt-btn is-small" id="ltClearLocal">Clear the local copy on this device</button>
+        <div class="lt-foot-actions">
+          <button type="button" class="lt-btn is-small" id="ltExportBackup">Export backup (JSON)</button>
+          <button type="button" class="lt-btn is-small" id="ltImportBackup">Import backup</button>
+          <input type="file" id="ltImportFile" accept="application/json,.json" hidden>
+          <button type="button" class="lt-btn is-small" id="ltClearLocal">Clear the local copy on this device</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="lt-modal-backdrop" id="ltReportModal" hidden>
+      <div class="lt-modal" role="dialog" aria-modal="true" aria-labelledby="ltReportTitle">
+        <h3 id="ltReportTitle">Parent progress report</h3>
+        <label class="lt-field"><span>Teacher note for this report (optional)</span><input type="text" id="ltReportNote" maxlength="200" placeholder="e.g. Working hard - keep it up"></label>
+        <pre class="lt-report-text" id="ltReportText"></pre>
+        <div class="lt-form-actions">
+          <button type="button" class="lt-btn is-primary" id="ltReportCopy">Copy text</button>
+          <a class="lt-btn" id="ltReportWhats" target="_blank" rel="noreferrer" href="#">Send on WhatsApp</a>
+          <button type="button" class="lt-btn" id="ltReportPrint">Print view</button>
+          <button type="button" class="lt-btn" id="ltReportClose">Close</button>
+        </div>
       </div>
     </div>
 
