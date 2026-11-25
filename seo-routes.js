@@ -59,7 +59,18 @@
     }
     let canonical=document.querySelector('link[rel="canonical"]');
     if(!canonical){canonical=document.createElement('link');canonical.rel='canonical';document.head.appendChild(canonical);}
-    canonical.href=m.canonical;
+    // Self-canonical (fixed 2026-11-25): this runtime runs on the app pages
+    // library.html / pastpapers.html, but m.canonical is the OLD clean-URL
+    // duplicate (e.g. /edexcel-igcse/maths/linear/notes/). Pointing the
+    // canonical there told Google the old duplicate site was the original
+    // for the new app pages. Point canonical - and og:url, which should
+    // match it - at this page itself instead. Title/description above are
+    // unchanged. metadata() is left untouched: its canonical value is still
+    // correct for the clean-URL landing pages themselves.
+    const selfCanonical=origin+url.pathname+url.search;
+    canonical.href=selfCanonical;
+    const ogUrl=document.querySelector('meta[property="og:url"]');
+    if(ogUrl) ogUrl.content=selfCanonical;
   }
   return {origin,routes,types,courseFor,metadata,apply};
 });

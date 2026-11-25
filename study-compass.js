@@ -554,7 +554,7 @@
           <p><a href="https://wa.me/201120009622" data-lead-trigger="whatsapp">WhatsApp &middot; +20 112 000 9622</a></p>
         </div>
       </div>
-      <p class="footer-fineprint">&copy; Dr Eslam Ahmed &middot; Assistant Lecturer, Mathematics Department, Faculty of Engineering, Cairo University &middot; 8 years teaching IG O-Level and AS-Level Mathematics.</p>
+      <p class="footer-fineprint">&copy; Dr Eslam Ahmed &middot; Assistant Lecturer, Mathematics Department, Faculty of Engineering, Cairo University &middot; 8 years teaching IGCSE O-Level and AS-Level Mathematics.</p>
     `;
   }
 
