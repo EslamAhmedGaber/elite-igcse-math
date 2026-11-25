@@ -217,7 +217,7 @@
     return `<article class="e27-dq${result ? ` is-${result}` : ""}" data-qid="${esc(item.id)}">
       <header><span class="e27-dq-n">${index + 1}</span><div><strong>${esc(item.topic)}</strong><small>${esc(item.label)} &middot; ${esc(item.marks)} marks</small></div>
         <span class="e27-dq-status">${result === "got" ? "Got it" : result === "review" ? "In your Mistake Box" : ""}</span></header>
-      <div class="e27-dq-img"><img src="${esc(item.image)}" alt="Question ${index + 1}" loading="lazy"></div>
+      <div class="e27-dq-img"><img src="${esc(item.image)}" alt="Daily question ${index + 1} — ${esc(item.topic)}" loading="lazy"></div>
       <div class="e27-dq-actions">
         <button class="e27-btn e27-btn-line" type="button" data-show>Show solution</button>
         <span class="e27-dq-spacer"></span>

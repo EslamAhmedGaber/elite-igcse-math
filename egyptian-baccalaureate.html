@@ -23,6 +23,19 @@
     .bacc-hero { border: 1px solid rgba(11,102,112,.2); border-radius: 28px; padding: clamp(28px, 5vw, 64px); background: radial-gradient(circle at 92% 8%, rgba(11,102,112,.2), transparent 34%), linear-gradient(135deg, #e9f7f6, #fff); box-shadow: 0 22px 55px rgba(6,67,74,.1); }
     .bacc-hero h1 { max-width: 880px; margin: .45rem 0 1rem; color: var(--bacc-deep); }
     .bacc-hero p { max-width: 790px; font-size: 1.08rem; line-height: 1.75; }
+    /* Batch 5 contrast fixes (text colours only; layout/backgrounds unchanged).
+       Nav: at >=981px styles.css makes the header navy, but elite-ux.css restates
+       dark header text colours (brand title #0e1b2e = 1.07:1, nav #3d5068 = 2.24:1 on navy).
+       Values below mirror elite-system.css's own >=981px navy-header colours. */
+    @media screen and (min-width: 981px) {
+      body .site-header .site-brand, body .site-header .site-brand .brand-title { color: #fff; }
+      body .site-header .nav-tab-main { color: #c9d6e7; }
+      body .site-header .nav-tab-main small { color: #91a6c0; }
+      body .site-header .site-nav { border-color: transparent; background: transparent; }
+    }
+    /* Hero eyebrow: --brand-ochre resolves to #e2b84f (elite-ux) = ~1.75:1 on the light hero.
+       Darkened ochre, same hue family: #8a5a1d = 5.36:1 on #e9f7f6. */
+    .bacc-hero .eyebrow { color: #8a5a1d; }
     .bacc-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:24px; }
     .bacc-stats { display:grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap:12px; margin:24px 0 30px; }
     .bacc-stat { padding:18px 20px; border:1px solid rgba(11,102,112,.16); border-left:5px solid var(--bacc-accent); border-radius:14px; background:#fff; box-shadow:0 8px 25px rgba(6,67,74,.06); }
@@ -48,6 +61,7 @@
   </style>
 </head>
 <body data-page="baccalaureate" data-pathway="baccalaureate">
+  <a class="ux-skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <a class="site-brand" href="index.html" aria-label="Elite IGCSE Mathematics home">
       <span class="brand-mark">ELITE</span><span class="brand-title">Mathematics</span>
@@ -60,7 +74,7 @@
     <div class="site-cta"><a class="button primary" href="exam.html?pathway=baccalaureate&mode=custom">Build a test</a></div>
   </header>
 
-  <main class="page page-downloads">
+  <main class="page page-downloads" id="main">
     <section class="bacc-hero">
       <span class="eyebrow">Egyptian Baccalaureate · Mathematics 2026</span>
       <h1>One clear home for every public book.</h1>
@@ -89,7 +103,7 @@
   </main>
 
   <footer class="site-footer">
-    <div class="footer-grid"><div><span class="footer-brand-line">Elite Mathematics</span><p class="footer-brand-tagline">Egyptian Baccalaureate Mathematics 2026.</p><p class="footer-brand-blurb">Free public Student and Teacher editions prepared by Dr Eslam Ahmed, Cairo University Faculty of Engineering.</p></div><div><strong>Open</strong><p><a href="exam.html?pathway=baccalaureate&mode=custom">Build a test</a></p><p><a href="downloads.html?pathway=baccalaureate">Download Centre</a></p></div><div><strong>Contact</strong><p><a href="https://wa.me/201120009622">WhatsApp · +20 112 000 9622</a></p></div></div>
+    <div class="footer-grid"><div><span class="footer-brand-line">Elite Mathematics</span><p class="footer-brand-tagline">Egyptian Baccalaureate Mathematics 2026.</p><p class="footer-brand-blurb">Free public Student and Teacher editions prepared by Dr Eslam Ahmed, Cairo University Faculty of Engineering.</p></div><div><strong>Open</strong><p><a href="exam.html?pathway=baccalaureate&mode=custom">Build a test</a></p><p><a href="downloads.html?pathway=baccalaureate">Download Centre</a></p></div><div><strong>Contact</strong><p><a href="https://wa.me/201120009622">WhatsApp · +20 112 000 9622</a></p><p><a href="privacy.html">Privacy Policy</a></p><p><a href="terms.html">Terms of Use</a></p><p><a href="tools.html">Tools</a></p></div></div>
     <p class="footer-fineprint">© Dr Eslam Ahmed · Cairo University Faculty of Engineering · Public educational resources.</p>
   </footer>
 

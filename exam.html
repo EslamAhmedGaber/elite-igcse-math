@@ -35,6 +35,7 @@
   <script defer src="compact-questions.js?v=20261022a"></script>
 </head>
 <body data-page="exam">
+  <a class="ux-skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <a class="site-brand" href="index.html" aria-label="Elite IGCSE Mathematics home">
@@ -107,7 +108,7 @@
     </div>
   </header>
 
-  <main class="page page-exam">
+  <main class="page page-exam" id="main">
     <section class="exam-hero" aria-labelledby="examTitle">
       <div>
         <span class="eyebrow">Mocks &amp; Test Builder</span>
@@ -202,6 +203,7 @@
           </label>
           <label>Target marks
             <input id="examTargetMarks" type="number" min="0" step="1" value="0">
+            <small>0 = auto (full paper, 100 marks)</small>
           </label>
           <label title="Level is estimated from marks: under 3 Easy, 3 to 4 Medium, 5 or more Hard">Level mix
             <select id="examLevelMix">
