@@ -4,5 +4,6 @@ Disallow: /admin.html
 Disallow: /stats.html
 Disallow: /members.html
 Disallow: /teacher-groups.html
+Disallow: /teacher-tracker.html
 
 Sitemap: https://eliteigcse.com/sitemap.xml

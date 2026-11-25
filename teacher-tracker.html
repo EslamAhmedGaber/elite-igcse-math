@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lesson Tracker | Elite IGCSE</title>
+  <meta name="description" content="Teacher-only lesson tracker: which student has taken which lesson, ticked in one tap.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#161b2e">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261024u">
+  <link rel="stylesheet" href="elite-system.css?v=20260906b">
+  <link rel="stylesheet" href="elite-ux.css?v=20261112a">
+  <link rel="stylesheet" href="teacher-tracker.css?v=20261125a">
+  <script defer src="firebase-config.js"></script>
+  <script defer src="runtime-loader.js?v=20260809a"></script>
+  <script defer src="topic-normalizer.js?v=tracker-20261125a"></script>
+  <script defer src="lesson-tracker.js?v=20261125a"></script>
+  <script defer src="teacher-tracker-ui.js?v=20261125a"></script>
+</head>
+<body data-page="tracker">
+
+  <header class="site-header">
+    <a class="site-brand" href="index.html" aria-label="Elite IGCSE Mathematics home">
+      <span class="brand-mark">IGCSE</span>
+      <span class="brand-title">Elite IGCSE Mathematics</span>
+    </a>
+    <button id="navToggle" class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav pathway-tabs" aria-label="Main">
+      <div class="nav-group nav-group-about" data-nav-group="about">
+        <a class="nav-tab-main" href="admin.html" aria-expanded="false">
+          <span>Teacher Studio</span>
+          <small>Private</small>
+        </a>
+        <div class="nav-panel" aria-label="Teacher Studio links">
+          <a href="admin.html"><strong>Teacher Studio</strong><span>Planner and certificates</span></a>
+          <a href="teacher-groups.html"><strong>Groups &amp; Results</strong><span>Weekly exams and marks</span></a>
+          <a href="teacher-tracker.html"><strong>Lesson Tracker</strong><span>Who took which lesson</span></a>
+          <a href="members.html"><strong>Signed-in Students</strong><span>Website activity</span></a>
+          <a href="stats.html"><strong>Site Statistics</strong><span>Visits and usage</span></a>
+        </div>
+      </div>
+    </nav>
+    <div class="site-cta">
+      <a class="button primary" data-lead-trigger="whatsapp" href="https://wa.me/201120009622">WhatsApp Help</a>
+    </div>
+  </header>
+
+  <main class="lt-page" id="lessonTracker">
+    <p class="lt-banner lt-banner-demo" id="ltDemoBanner" hidden><strong>Demo mode:</strong> everything is stored in this browser only, with practice students. Remove <b>?demo=1</b> from the address to use the real tracker.</p>
+    <p class="lt-banner lt-banner-sync" id="ltSyncBanner" hidden><strong>Saving in this browser only</strong> &mdash; cloud sync needs attention. Your ticks are safe here and will sync when the connection or database rules allow. See the setup notes for the one Firebase step that turns sync on.</p>
+
+    <header class="lt-head">
+      <div class="lt-head-main">
+        <img class="lt-logo" src="assets/icon.svg" alt="Elite IGCSE" width="52" height="52">
+        <div>
+          <span class="lt-kicker">Teacher Studio</span>
+          <h1>Lesson Tracker</h1>
+          <p>Pick a course, pick a student, tick the lesson they took. No more guessing who had what.</p>
+        </div>
+      </div>
+      <a class="lt-btn" href="teacher-groups.html">Groups &amp; Results</a>
+    </header>
+
+    <section class="lt-gate" id="ltGate"><p class="lt-muted">Connecting...</p></section>
+
+    <div id="ltApp" hidden>
+      <section class="lt-digest" id="ltDigest" aria-label="Today digest"></section>
+
+      <div class="lt-layout">
+        <aside class="lt-side" aria-label="My students">
+          <label class="lt-field">
+            <span>Course</span>
+            <select id="ltCourse"></select>
+          </label>
+          <label class="lt-field">
+            <span>Find a student</span>
+            <input type="search" id="ltSearch" placeholder="Type a name..." autocomplete="off">
+          </label>
+          <div id="ltStudentList" class="lt-student-list"></div>
+          <button type="button" class="lt-btn is-primary lt-add-toggle" id="ltAddToggle">+ Add student</button>
+          <form id="ltAddForm" class="lt-form" hidden>
+            <label class="lt-field"><span>Student name *</span><input type="text" id="ltAddName" required maxlength="80" placeholder="Full name"></label>
+            <label class="lt-field"><span>WhatsApp number (optional)</span><input type="tel" id="ltAddPhone" maxlength="24" placeholder="e.g. 01x xxxx xxxx"></label>
+            <label class="lt-field"><span>Note (optional)</span><input type="text" id="ltAddNote" maxlength="500" placeholder="School, exam session, anything useful"></label>
+            <div id="ltDupWarning" class="lt-dup" hidden></div>
+            <div class="lt-form-actions">
+              <button type="submit" class="lt-btn is-primary">Add student</button>
+              <button type="button" class="lt-btn" id="ltAddCancel">Cancel</button>
+            </div>
+            <p class="lt-muted">The student is added to the course selected above.</p>
+          </form>
+          <label class="lt-checkline"><input type="checkbox" id="ltShowArchived"> Show archived students</label>
+          <p class="lt-muted lt-who">Signed in as <span id="ltWho"></span> &middot; <button type="button" class="lt-link" data-sign-out>Sign out</button></p>
+        </aside>
+
+        <section class="lt-detail" id="ltDetail" aria-live="polite">
+          <div class="lt-tabs" role="tablist">
+            <button type="button" class="lt-tab is-active" data-tab="checklist" role="tab">Checklist</button>
+            <button type="button" class="lt-tab" data-tab="log" role="tab">Lessons log</button>
+          </div>
+          <div id="ltChecklistView"></div>
+          <div id="ltLogView" hidden></div>
+        </section>
+      </div>
+
+      <div class="lt-foot">
+        <p class="lt-muted">Private records: student names and lesson ticks are stored under the teacher account only and are never shown to students or other accounts.</p>
+        <button type="button" class="lt-btn is-small" id="ltClearLocal">Clear the local copy on this device</button>
+      </div>
+    </div>
+
+    <div class="lt-toast" id="ltToast" role="status" hidden></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <span class="footer-brand-line">Elite IGCSE Academy</span>
+        <p class="footer-brand-tagline">Past-paper mastery, classified by topic.</p>
+        <p class="footer-brand-blurb">Edexcel IGCSE Mathematics, IAL Pure 1, and live online tutoring &mdash; prepared and signed by Dr Eslam Ahmed, Cairo University Faculty of Engineering.</p>
+      </div>
+      <div>
+        <strong>Teacher Studio</strong>
+        <p><a href="admin.html">Planner &amp; Certificates</a></p>
+        <p><a href="teacher-groups.html">Groups &amp; Results</a></p>
+        <p><a href="teacher-tracker.html">Lesson Tracker</a></p>
+      </div>
+      <div>
+        <strong>Modules</strong>
+        <p><a href="practice.html">Classified View</a></p>
+        <p><a href="exam.html">Build Test</a></p>
+        <p><a href="progress.html">Progress</a></p>
+        <p><a href="downloads.html">Books</a></p>
+      </div>
+      <div>
+        <strong>Connect</strong>
+        <p><a href="https://wa.me/201120009622" data-lead-trigger="whatsapp">WhatsApp &middot; +20&nbsp;112&nbsp;000&nbsp;9622</a></p>
+        <p><a href="about.html">About Dr Eslam</a></p>
+      </div>
+    </div>
+    <p class="footer-fineprint">&copy; Dr Eslam Ahmed &middot; Cairo University Faculty of Engineering</p>
+  </footer>
+
+</body>
+</html>
