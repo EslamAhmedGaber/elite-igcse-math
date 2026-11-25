@@ -551,6 +551,8 @@
           <p><a href="/downloads.html">Books &amp; Answers</a></p>
           <p><a href="/pastpapers.html">Past Papers &amp; Solutions</a></p>
           <p><a href="/about.html">About Dr Eslam</a></p>
+          <p><a href="/privacy.html">Privacy Policy</a></p>
+          <p><a href="/terms.html">Terms of Use</a></p>
           <p><a href="https://wa.me/201120009622" data-lead-trigger="whatsapp">WhatsApp &middot; +20 112 000 9622</a></p>
         </div>
       </div>
