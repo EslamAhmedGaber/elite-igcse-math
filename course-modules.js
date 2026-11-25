@@ -2596,7 +2596,7 @@
           "title": "WMA13 Classified Books",
           "description": "Standalone Edexcel IAL Pure 3 bank from January 2020 to June 2026 with topic practice, expertise books, and worked-solution archives.",
           "meta": [
-              "190 questions",
+              "180 questions",
               "13 Pure 3 topics",
               "Questions + worked answers"
           ],

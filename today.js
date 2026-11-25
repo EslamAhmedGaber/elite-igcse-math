@@ -7,9 +7,9 @@
   const DAILY_KEY = "eliteDailyV1";
   const EXAM_KEY = "eliteExamSessionV1";
   const COURSES = {
-    linear: { name: "Linear", code: "4MA1", family: "igcse", questions: 1317 },
-    unit1: { name: "Modular Unit 1", code: "4WM1", family: "igcse", questions: 635 },
-    unit2: { name: "Modular Unit 2", code: "4WM2", family: "igcse", questions: 684 },
+    linear: { name: "Linear", code: "4MA1", family: "igcse", questions: 1354 },
+    unit1: { name: "Modular Unit 1", code: "4WM1", family: "igcse", questions: 659 },
+    unit2: { name: "Modular Unit 2", code: "4WM2", family: "igcse", questions: 697 },
     wma11: { name: "Pure 1", code: "WMA11", family: "ial", questions: 189 },
     wma12: { name: "Pure 2", code: "WMA12", family: "ial", questions: 190 },
     wma13: { name: "Pure 3", code: "WMA13", family: "ial", questions: 180 },
