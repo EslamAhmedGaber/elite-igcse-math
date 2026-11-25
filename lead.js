@@ -1622,17 +1622,20 @@
     if (!("serviceWorker" in navigator)) return;
     if (!/^https?:$/.test(window.location.protocol)) return;
     window.addEventListener("load", () => {
-      navigator.serviceWorker.getRegistrations()
-        .then((registrations) => Promise.all(registrations.map((registration) => registration.unregister())))
-        .catch(() => {});
-      if ("caches" in window) {
-        caches.keys()
-          .then((keys) => Promise.all(
-            keys
-              .filter((key) => key.indexOf("elite-igcse") === 0)
-              .map((key) => caches.delete(key))
-          ))
-          .catch(() => {});
+      try {
+        // Resolve the worker against lead.js itself (it lives at the site
+        // root), so registration works from any page that loads this script
+        // and always targets the root-scope worker.
+        const leadScript = document.querySelector('script[src*="lead.js"]');
+        const swUrl = leadScript
+          ? new URL("service-worker.js", leadScript.src).href
+          : "service-worker.js";
+        const registration = navigator.serviceWorker.register(swUrl);
+        if (registration && typeof registration.catch === "function") {
+          registration.catch(() => {});
+        }
+      } catch (error) {
+        // Offline support is an enhancement only — never break the page.
       }
     });
   }
