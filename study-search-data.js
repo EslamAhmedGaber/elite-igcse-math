@@ -3627,13 +3627,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Number Toolkit",
-      "detail": "Chapter 1: Number | 16 pages",
+      "detail": "Chapter 1: Numbers & the Number System | 16 pages",
       "href": "/downloads/Linear/VisualNotes/C1_T01_Number_Toolkit/Number_Toolkit_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all",
       "secondaryLabel": "Practice",
       "keywords": [
         "Prime factor structure, Standard form conversion, Fractions and decimals",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "strategy",
         "booklet"
       ]
@@ -3649,7 +3649,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Prime factor structure, Standard form conversion, Fractions and decimals",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "Unit 1",
         "strategy",
         "shared notes"
@@ -3666,7 +3666,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Prime factor structure, Standard form conversion, Fractions and decimals",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -3676,14 +3676,14 @@
       "id": "linear:note:set-notation-and-venn-diagrams",
       "courseId": "linear",
       "type": "Note",
-      "title": "Set Notation and Venn Diagrams",
-      "detail": "Chapter 1: Number | 18 pages",
+      "title": "Set Notation & Venn Diagrams",
+      "detail": "Chapter 1: Numbers & the Number System | 18 pages",
       "href": "/downloads/Linear/VisualNotes/C1_T02_Sets_and_Venn_Diagrams/Sets_and_Venn_Diagrams_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Set%20Notation%20%26%20Venn%20Diagrams",
       "secondaryLabel": "Practice",
       "keywords": [
         "Fill the intersection first, Use union and intersection, Use complements",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "strategy",
         "booklet"
       ]
@@ -3692,14 +3692,14 @@
       "id": "modular1:note:set-notation-and-venn-diagrams",
       "courseId": "modular1",
       "type": "Note",
-      "title": "Set Notation and Venn Diagrams",
+      "title": "Set Notation & Venn Diagrams",
       "detail": "Shared strategy note | Unit 1",
       "href": "/downloads/Linear/VisualNotes/C1_T02_Sets_and_Venn_Diagrams/Sets_and_Venn_Diagrams_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Set+Notation+%26+Venn+Diagrams",
       "secondaryLabel": "Practice",
       "keywords": [
         "Fill the intersection first, Use union and intersection, Use complements",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "Unit 1",
         "strategy",
         "shared notes"
@@ -3709,14 +3709,14 @@
       "id": "linear:note:prime-factors-hcf-and-lcm",
       "courseId": "linear",
       "type": "Note",
-      "title": "Prime Factors, HCF and LCM",
-      "detail": "Chapter 1: Number | 16 pages",
+      "title": "Prime Factors, HCF & LCM",
+      "detail": "Chapter 1: Numbers & the Number System | 16 pages",
       "href": "/downloads/Linear/VisualNotes/C1_T03_Prime_Factors_HCF_LCM/Prime_Factors_HCF_LCM_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Prime%20Factors%2C%20HCF%20%26%20LCM",
       "secondaryLabel": "Practice",
       "keywords": [
         "Write prime factor trees, Find HCF, Find LCM",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "strategy",
         "booklet"
       ]
@@ -3725,14 +3725,14 @@
       "id": "modular2:note:prime-factors-hcf-and-lcm",
       "courseId": "modular2",
       "type": "Note",
-      "title": "Prime Factors, HCF and LCM",
+      "title": "Prime Factors, HCF & LCM",
       "detail": "Shared strategy note | Unit 2",
       "href": "/downloads/Linear/VisualNotes/C1_T03_Prime_Factors_HCF_LCM/Prime_Factors_HCF_LCM_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Prime+Factors%2C+HCF+%26+LCM",
       "secondaryLabel": "Practice",
       "keywords": [
         "Write prime factor trees, Find HCF, Find LCM",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -3742,14 +3742,14 @@
       "id": "linear:note:powers-roots-and-standard-form",
       "courseId": "linear",
       "type": "Note",
-      "title": "Powers, Roots and Standard Form",
-      "detail": "Chapter 1: Number | 18 pages",
+      "title": "Powers, Roots & Standard Form",
+      "detail": "Chapter 1: Numbers & the Number System | 18 pages",
       "href": "/downloads/Linear/VisualNotes/C1_T04_Powers_Roots_Standard_Form/Powers_Roots_Standard_Form_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Powers%2C%20Roots%20%26%20Standard%20Form",
       "secondaryLabel": "Practice",
       "keywords": [
         "Convert standard form, Use index laws, Handle negative and fractional powers",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "strategy",
         "booklet"
       ]
@@ -3758,14 +3758,14 @@
       "id": "modular2:note:powers-roots-and-standard-form",
       "courseId": "modular2",
       "type": "Note",
-      "title": "Powers, Roots and Standard Form",
+      "title": "Powers, Roots & Standard Form",
       "detail": "Shared strategy note | Unit 2",
       "href": "/downloads/Linear/VisualNotes/C1_T04_Powers_Roots_Standard_Form/Powers_Roots_Standard_Form_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Standard+Form",
       "secondaryLabel": "Practice",
       "keywords": [
         "Convert standard form, Use index laws, Handle negative and fractional powers",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -3776,13 +3776,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Fractions",
-      "detail": "Chapter 1: Number | 18 pages",
+      "detail": "Chapter 1: Numbers & the Number System | 18 pages",
       "href": "/downloads/Linear/VisualNotes/C1_T05_Fractions/Fractions_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Fractions",
       "secondaryLabel": "Practice",
       "keywords": [
         "Use a common denominator, Multiply and divide fractions, Simplify mixed numbers",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "strategy",
         "booklet"
       ]
@@ -3798,7 +3798,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Use a common denominator, Multiply and divide fractions, Simplify mixed numbers",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "Unit 1",
         "strategy",
         "shared notes"
@@ -3809,13 +3809,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Percentages",
-      "detail": "Chapter 1: Number | 18 pages",
+      "detail": "Chapter 1: Numbers & the Number System | 18 pages",
       "href": "/downloads/Linear/VisualNotes/C1_T06_Percentages/Percentages_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Percentages",
       "secondaryLabel": "Practice",
       "keywords": [
         "Use percentage multiplier, Reverse a percentage, Use compound change",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "strategy",
         "booklet"
       ]
@@ -3831,7 +3831,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Use percentage multiplier, Reverse a percentage, Use compound change",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -3841,14 +3841,14 @@
       "id": "linear:note:compound-interest-and-depreciation",
       "courseId": "linear",
       "type": "Note",
-      "title": "Compound Interest and Depreciation",
-      "detail": "Chapter 1: Number | 16 pages",
+      "title": "Compound Interest & Depreciation",
+      "detail": "Chapter 1: Numbers & the Number System | 16 pages",
       "href": "/downloads/Linear/VisualNotes/C1_T07_Compound_Interest/Compound_Interest_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Compound%20Interest%20%26%20Depreciation",
       "secondaryLabel": "Practice",
       "keywords": [
         "Use percentage multiplier, Reverse a percentage, Use compound change",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "strategy",
         "booklet"
       ]
@@ -3857,14 +3857,14 @@
       "id": "modular2:note:compound-interest-and-depreciation",
       "courseId": "modular2",
       "type": "Note",
-      "title": "Compound Interest and Depreciation",
+      "title": "Compound Interest & Depreciation",
       "detail": "Shared strategy note | Unit 2",
       "href": "/downloads/Linear/VisualNotes/C1_T07_Compound_Interest/Compound_Interest_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Compound+Interest+%26+Depreciation",
       "secondaryLabel": "Practice",
       "keywords": [
         "Use percentage multiplier, Reverse a percentage, Use compound change",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -3874,14 +3874,14 @@
       "id": "linear:note:fractions-decimals-and-percentages",
       "courseId": "linear",
       "type": "Note",
-      "title": "Fractions, Decimals and Percentages",
-      "detail": "Chapter 1: Number | 16 pages",
+      "title": "Fractions, Decimals & Percentages",
+      "detail": "Chapter 1: Numbers & the Number System | 16 pages",
       "href": "/downloads/Linear/VisualNotes/C1_T08_Fractions_Decimals_Percentages/Fractions_Decimals_Percentages_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Fractions%2C%20Decimals%20%26%20Percentages",
       "secondaryLabel": "Practice",
       "keywords": [
         "Convert fraction to decimal, Convert decimal to percentage, Use percentage multiplier",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "strategy",
         "booklet"
       ]
@@ -3890,14 +3890,14 @@
       "id": "modular1:note:fractions-decimals-and-percentages",
       "courseId": "modular1",
       "type": "Note",
-      "title": "Fractions, Decimals and Percentages",
+      "title": "Fractions, Decimals & Percentages",
       "detail": "Shared strategy note | Unit 1",
       "href": "/downloads/Linear/VisualNotes/C1_T08_Fractions_Decimals_Percentages/Fractions_Decimals_Percentages_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Fractions",
       "secondaryLabel": "Practice",
       "keywords": [
         "Convert fraction to decimal, Convert decimal to percentage, Use percentage multiplier",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "Unit 1",
         "strategy",
         "shared notes"
@@ -3907,14 +3907,14 @@
       "id": "linear:note:rounding-estimation-and-bounds",
       "courseId": "linear",
       "type": "Note",
-      "title": "Rounding, Estimation and Bounds",
-      "detail": "Chapter 1: Number | 18 pages",
+      "title": "Rounding, Estimation & Bounds",
+      "detail": "Chapter 1: Numbers & the Number System | 18 pages",
       "href": "/downloads/Linear/VisualNotes/C1_T09_Rounding_Estimation_Bounds/Rounding_Estimation_Bounds_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Rounding%2C%20Estimation%20%26%20Bounds",
       "secondaryLabel": "Practice",
       "keywords": [
         "Round to the requested accuracy, Find lower and upper bounds, Choose bounds for largest value",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "strategy",
         "booklet"
       ]
@@ -3923,14 +3923,14 @@
       "id": "modular1:note:rounding-estimation-and-bounds",
       "courseId": "modular1",
       "type": "Note",
-      "title": "Rounding, Estimation and Bounds",
+      "title": "Rounding, Estimation & Bounds",
       "detail": "Shared strategy note | Unit 1",
       "href": "/downloads/Linear/VisualNotes/C1_T09_Rounding_Estimation_Bounds/Rounding_Estimation_Bounds_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Rounding%2C+Estimation+%26+Bounds",
       "secondaryLabel": "Practice",
       "keywords": [
         "Round to the requested accuracy, Find lower and upper bounds, Choose bounds for largest value",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "Unit 1",
         "strategy",
         "shared notes"
@@ -3941,13 +3941,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Surds",
-      "detail": "Chapter 1: Number | 16 pages",
+      "detail": "Chapter 1: Numbers & the Number System | 16 pages",
       "href": "/downloads/Linear/VisualNotes/C1_T10_Surds/Surds_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Surds",
       "secondaryLabel": "Practice",
       "keywords": [
         "Simplify by square factors, Add and subtract like surds, Expand surd brackets",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "strategy",
         "booklet"
       ]
@@ -3963,7 +3963,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Simplify by square factors, Add and subtract like surds, Expand surd brackets",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "Unit 1",
         "strategy",
         "shared notes"
@@ -3974,13 +3974,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Using a Calculator",
-      "detail": "Chapter 1: Number | 14 pages",
+      "detail": "Chapter 1: Numbers & the Number System | 14 pages",
       "href": "/downloads/Linear/VisualNotes/C1_T11_Using_a_Calculator/Using_a_Calculator_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all",
       "secondaryLabel": "Practice",
       "keywords": [
         "Type the whole expression safely, Use brackets for fractions and powers, Read standard form display",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "strategy",
         "booklet"
       ]
@@ -3990,13 +3990,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Ratio Toolkit",
-      "detail": "Chapter 1: Number | 16 pages",
+      "detail": "Chapter 1: Numbers & the Number System | 16 pages",
       "href": "/downloads/Linear/VisualNotes/C1_T12_Ratio_Toolkit/Ratio_Toolkit_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Ratio%20Toolkit",
       "secondaryLabel": "Practice",
       "keywords": [
         "Find one share, Use total parts, Convert mixed information to parts",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "strategy",
         "booklet"
       ]
@@ -4012,7 +4012,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Find one share, Use total parts, Convert mixed information to parts",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -4023,13 +4023,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Ratio Problem Solving",
-      "detail": "Chapter 1: Number | 16 pages",
+      "detail": "Chapter 1: Numbers & the Number System | 16 pages",
       "href": "/downloads/Linear/VisualNotes/C1_T13_Ratio_Problem_Solving/Ratio_Problem_Solving_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Ratio%20Problem%20Solving",
       "secondaryLabel": "Practice",
       "keywords": [
         "Find one share, Use total parts, Convert mixed information to parts",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "strategy",
         "booklet"
       ]
@@ -4038,14 +4038,14 @@
       "id": "linear:note:exchange-rates-and-best-buys",
       "courseId": "linear",
       "type": "Note",
-      "title": "Exchange Rates and Best Buys",
-      "detail": "Chapter 1: Number | 12 pages",
+      "title": "Exchange Rates & Best Buys",
+      "detail": "Chapter 1: Numbers & the Number System | 12 pages",
       "href": "/downloads/Linear/VisualNotes/C1_T14_Exchange_Rates_Best_Buys/Exchange_Rates_Best_Buys_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Exchange%20Rates%20%26%20Best%20Buys",
       "secondaryLabel": "Practice",
       "keywords": [
         "Write the exchange direction, Convert to one currency, Compare unit prices",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "strategy",
         "booklet"
       ]
@@ -4055,13 +4055,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Direct & Inverse Proportion",
-      "detail": "Chapter 1: Number | 18 pages",
+      "detail": "Chapter 1: Numbers & the Number System | 18 pages",
       "href": "/downloads/Linear/VisualNotes/C1_T15_Direct_Inverse_Proportion/Direct_Inverse_Proportion_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Direct%20%26%20Inverse%20Proportion",
       "secondaryLabel": "Practice",
       "keywords": [
         "Choose direct or inverse, Find the constant k, Substitute the new value",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "strategy",
         "booklet"
       ]
@@ -4077,7 +4077,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Choose direct or inverse, Find the constant k, Substitute the new value",
-        "Chapter 1: Number",
+        "Chapter 1: Numbers & the Number System",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -4088,13 +4088,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Algebra Toolkit",
-      "detail": "Chapter 2: Algebra | 18 pages",
+      "detail": "Chapter 2: Equations, Formulae & Identities | 18 pages",
       "href": "/downloads/Linear/VisualNotes/C2_T01_Algebra_Toolkit/Algebra_Toolkit_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all",
       "secondaryLabel": "Practice",
       "keywords": [
         "Name the target, Write the first line, Calculate carefully",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "strategy",
         "booklet"
       ]
@@ -4104,13 +4104,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Algebraic Roots & Indices",
-      "detail": "Chapter 2: Algebra | 20 pages",
+      "detail": "Chapter 2: Equations, Formulae & Identities | 20 pages",
       "href": "/downloads/Linear/VisualNotes/C2_T02_Roots_and_Indices/Roots_and_Indices_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Algebraic%20Roots%20%26%20Indices",
       "secondaryLabel": "Practice",
       "keywords": [
         "Use index laws with letters, Use negative powers, Use fractional powers",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "strategy",
         "booklet"
       ]
@@ -4126,7 +4126,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Use index laws with letters, Use negative powers, Use fractional powers",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "Unit 1",
         "strategy",
         "shared notes"
@@ -4143,7 +4143,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Use index laws with letters, Use negative powers, Use fractional powers",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -4154,13 +4154,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Expanding Brackets",
-      "detail": "Chapter 2: Algebra | 20 pages",
+      "detail": "Chapter 2: Equations, Formulae & Identities | 20 pages",
       "href": "/downloads/Linear/VisualNotes/C2_T03_Expanding_Brackets/Expanding_Brackets_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Expanding%20Brackets",
       "secondaryLabel": "Practice",
       "keywords": [
         "Name the target, Write the first line, Calculate carefully",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "strategy",
         "booklet"
       ]
@@ -4176,7 +4176,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Name the target, Write the first line, Calculate carefully",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "Unit 1",
         "strategy",
         "shared notes"
@@ -4186,14 +4186,14 @@
       "id": "linear:note:factorisation",
       "courseId": "linear",
       "type": "Note",
-      "title": "Factorisation",
-      "detail": "Chapter 2: Algebra | 18 pages",
+      "title": "Factorising",
+      "detail": "Chapter 2: Equations, Formulae & Identities | 18 pages",
       "href": "/downloads/Linear/VisualNotes/C2_T04_Factorisation/Factorisation_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Factorising",
       "secondaryLabel": "Practice",
       "keywords": [
         "Take out the common factor, Factorise a quadratic, Use difference of squares",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "strategy",
         "booklet"
       ]
@@ -4203,13 +4203,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Completing the Square",
-      "detail": "Chapter 2: Algebra | 18 pages",
+      "detail": "Chapter 2: Equations, Formulae & Identities | 18 pages",
       "href": "/downloads/Linear/VisualNotes/C2_T05_Completing_the_Square/Completing_the_Square_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Completing%20the%20Square",
       "secondaryLabel": "Practice",
       "keywords": [
         "Halve the coefficient of x, Add and subtract the square, Find turning point form",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "strategy",
         "booklet"
       ]
@@ -4225,7 +4225,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Halve the coefficient of x, Add and subtract the square, Find turning point form",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "Unit 1",
         "strategy",
         "shared notes"
@@ -4242,7 +4242,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Halve the coefficient of x, Add and subtract the square, Find turning point form",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -4253,13 +4253,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Algebraic Fractions",
-      "detail": "Chapter 2: Algebra | 20 pages",
+      "detail": "Chapter 2: Equations, Formulae & Identities | 20 pages",
       "href": "/downloads/Linear/VisualNotes/C2_T06_Algebraic_Fractions/Algebraic_Fractions_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Algebraic%20Fractions",
       "secondaryLabel": "Practice",
       "keywords": [
         "Factorise before cancelling, Use common denominators, Multiply and divide algebraic fractions",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "strategy",
         "booklet"
       ]
@@ -4275,7 +4275,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Factorise before cancelling, Use common denominators, Multiply and divide algebraic fractions",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "Unit 1",
         "strategy",
         "shared notes"
@@ -4292,7 +4292,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Factorise before cancelling, Use common denominators, Multiply and divide algebraic fractions",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -4302,14 +4302,14 @@
       "id": "linear:note:rearranging-formulas",
       "courseId": "linear",
       "type": "Note",
-      "title": "Rearranging Formulas",
-      "detail": "Chapter 2: Algebra | 18 pages",
+      "title": "Rearranging Formulae",
+      "detail": "Chapter 2: Equations, Formulae & Identities | 18 pages",
       "href": "/downloads/Linear/VisualNotes/C2_T07_Rearranging_Formulas/Rearranging_Formulas_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Rearranging%20Formulas",
       "secondaryLabel": "Practice",
       "keywords": [
         "Make the subject visible, Clear fractions first, Undo operations in order",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "strategy",
         "booklet"
       ]
@@ -4318,14 +4318,14 @@
       "id": "modular2:note:rearranging-formulas",
       "courseId": "modular2",
       "type": "Note",
-      "title": "Rearranging Formulas",
+      "title": "Rearranging Formulae",
       "detail": "Shared strategy note | Unit 2",
       "href": "/downloads/Linear/VisualNotes/C2_T07_Rearranging_Formulas/Rearranging_Formulas_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Rearranging+Formulae",
       "secondaryLabel": "Practice",
       "keywords": [
         "Make the subject visible, Clear fractions first, Undo operations in order",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -4336,13 +4336,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Algebraic Proof",
-      "detail": "Chapter 2: Algebra | 18 pages",
+      "detail": "Chapter 2: Equations, Formulae & Identities | 18 pages",
       "href": "/downloads/Linear/VisualNotes/C2_T08_Algebraic_Proof/Algebraic_Proof_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Algebraic%20Proof",
       "secondaryLabel": "Practice",
       "keywords": [
         "Start from the expression, Expand and collect, Use parity or multiple language",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "strategy",
         "booklet"
       ]
@@ -4358,7 +4358,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Start from the expression, Expand and collect, Use parity or multiple language",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "Unit 1",
         "strategy",
         "shared notes"
@@ -4375,7 +4375,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Start from the expression, Expand and collect, Use parity or multiple language",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -4386,13 +4386,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Solving Linear Equations",
-      "detail": "Chapter 2: Algebra | 22 pages",
+      "detail": "Chapter 2: Equations, Formulae & Identities | 22 pages",
       "href": "/downloads/Linear/VisualNotes/C2_T09_Linear_Equations/Linear_Equations_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Solving%20Linear%20Equations",
       "secondaryLabel": "Practice",
       "keywords": [
         "Collect like terms, Solve with brackets, Form the equation from words",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "strategy",
         "booklet"
       ]
@@ -4408,7 +4408,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Collect like terms, Solve with brackets, Form the equation from words",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "Unit 1",
         "strategy",
         "shared notes"
@@ -4419,13 +4419,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Solving Quadratics",
-      "detail": "Chapter 2: Algebra | 20 pages",
+      "detail": "Chapter 2: Equations, Formulae & Identities | 20 pages",
       "href": "/downloads/Linear/VisualNotes/C2_T10_Solving_Quadratics/Solving_Quadratics_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Solving%20Quadratic%20Equations",
       "secondaryLabel": "Practice",
       "keywords": [
         "Factorise then solve, Use the quadratic formula, Complete the square",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "strategy",
         "booklet"
       ]
@@ -4435,13 +4435,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Solving Inequalities",
-      "detail": "Chapter 2: Algebra | 18 pages",
+      "detail": "Chapter 2: Equations, Formulae & Identities | 18 pages",
       "href": "/downloads/Linear/VisualNotes/C2_T11_Inequalities/Inequalities_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Solving%20Inequalities",
       "secondaryLabel": "Practice",
       "keywords": [
         "Name the target, Write the first line, Calculate carefully",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "strategy",
         "booklet"
       ]
@@ -4451,13 +4451,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Simultaneous Equations",
-      "detail": "Chapter 2: Algebra | 20 pages",
+      "detail": "Chapter 2: Equations, Formulae & Identities | 20 pages",
       "href": "/downloads/Linear/VisualNotes/C2_T12_Simultaneous_Equations/Simultaneous_Equations_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Simultaneous%20Equations",
       "secondaryLabel": "Practice",
       "keywords": [
         "Collect like terms, Solve with brackets, Form the equation from words",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "strategy",
         "booklet"
       ]
@@ -4473,7 +4473,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Collect like terms, Solve with brackets, Form the equation from words",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -4483,14 +4483,14 @@
       "id": "linear:note:forming-and-solving-equations",
       "courseId": "linear",
       "type": "Note",
-      "title": "Forming and Solving Equations",
-      "detail": "Chapter 2: Algebra | 18 pages",
+      "title": "Forming & Solving Equations",
+      "detail": "Chapter 2: Equations, Formulae & Identities | 18 pages",
       "href": "/downloads/Linear/VisualNotes/C2_T13_Forming_Equations/Forming_Equations_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Forming%20%26%20Solving%20Equations",
       "secondaryLabel": "Practice",
       "keywords": [
         "Collect like terms, Solve with brackets, Form the equation from words",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "strategy",
         "booklet"
       ]
@@ -4499,14 +4499,14 @@
       "id": "modular1:note:forming-and-solving-equations",
       "courseId": "modular1",
       "type": "Note",
-      "title": "Forming and Solving Equations",
+      "title": "Forming & Solving Equations",
       "detail": "Shared strategy note | Unit 1",
       "href": "/downloads/Linear/VisualNotes/C2_T13_Forming_Equations/Forming_Equations_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Forming+%26+Solving+Equations",
       "secondaryLabel": "Practice",
       "keywords": [
         "Collect like terms, Solve with brackets, Form the equation from words",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "Unit 1",
         "strategy",
         "shared notes"
@@ -4516,14 +4516,14 @@
       "id": "modular2:note:forming-and-solving-equations",
       "courseId": "modular2",
       "type": "Note",
-      "title": "Forming and Solving Equations",
+      "title": "Forming & Solving Equations",
       "detail": "Shared strategy note | Unit 2",
       "href": "/downloads/Linear/VisualNotes/C2_T13_Forming_Equations/Forming_Equations_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Forming+%26+Solving+Equations",
       "secondaryLabel": "Practice",
       "keywords": [
         "Collect like terms, Solve with brackets, Form the equation from words",
-        "Chapter 2: Algebra",
+        "Chapter 2: Equations, Formulae & Identities",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -4534,13 +4534,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Sequences",
-      "detail": "Chapter 3: Graphs and Functions | 18 pages",
+      "detail": "Chapter 3: Sequences, Functions & Graphs | 18 pages",
       "href": "/downloads/Linear/VisualNotes/C3_T01_Sequences/Sequences_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Sequences",
       "secondaryLabel": "Practice",
       "keywords": [
         "exam triggers, first lines, checked practice",
-        "Chapter 3: Graphs and Functions",
+        "Chapter 3: Sequences, Functions & Graphs",
         "strategy",
         "booklet"
       ]
@@ -4556,7 +4556,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "exam triggers, first lines, checked practice",
-        "Chapter 3: Graphs and Functions",
+        "Chapter 3: Sequences, Functions & Graphs",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -4567,13 +4567,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Coordinate Geometry",
-      "detail": "Chapter 3: Graphs and Functions | 16 pages",
+      "detail": "Chapter 3: Sequences, Functions & Graphs | 16 pages",
       "href": "/downloads/Linear/VisualNotes/C3_T02_Coordinate_Geometry/Coordinate_Geometry_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Coordinate%20Geometry",
       "secondaryLabel": "Practice",
       "keywords": [
         "Use midpoint, Use gradient, Find equation of a line",
-        "Chapter 3: Graphs and Functions",
+        "Chapter 3: Sequences, Functions & Graphs",
         "strategy",
         "booklet"
       ]
@@ -4583,13 +4583,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Functions",
-      "detail": "Chapter 3: Graphs and Functions | 18 pages",
+      "detail": "Chapter 3: Sequences, Functions & Graphs | 18 pages",
       "href": "/downloads/Linear/VisualNotes/C3_T03_Functions/Functions_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Functions",
       "secondaryLabel": "Practice",
       "keywords": [
         "Substitute into a function, Find an inverse, Use composite functions",
-        "Chapter 3: Graphs and Functions",
+        "Chapter 3: Sequences, Functions & Graphs",
         "strategy",
         "booklet"
       ]
@@ -4605,7 +4605,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Substitute into a function, Find an inverse, Use composite functions",
-        "Chapter 3: Graphs and Functions",
+        "Chapter 3: Sequences, Functions & Graphs",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -4616,13 +4616,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Linear Graphs y = mx + c",
-      "detail": "Chapter 3: Graphs and Functions | 16 pages",
+      "detail": "Chapter 3: Sequences, Functions & Graphs | 16 pages",
       "href": "/downloads/Linear/VisualNotes/C3_T04_Linear_Graphs/Linear_Graphs_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Linear%20Graphs%20%28y%20%3D%20mx%20%2B%20c%29",
       "secondaryLabel": "Practice",
       "keywords": [
         "Read gradient and intercept, Find equation from two points, Use parallel/perpendicular gradients",
-        "Chapter 3: Graphs and Functions",
+        "Chapter 3: Sequences, Functions & Graphs",
         "strategy",
         "booklet"
       ]
@@ -4638,7 +4638,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Read gradient and intercept, Find equation from two points, Use parallel/perpendicular gradients",
-        "Chapter 3: Graphs and Functions",
+        "Chapter 3: Sequences, Functions & Graphs",
         "Unit 1",
         "strategy",
         "shared notes"
@@ -4649,13 +4649,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Graphs of Functions",
-      "detail": "Chapter 3: Graphs and Functions | 16 pages",
+      "detail": "Chapter 3: Sequences, Functions & Graphs | 16 pages",
       "href": "/downloads/Linear/VisualNotes/C3_T05_Graphs_of_Functions/Graphs_of_Functions_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Graphs%20of%20Functions",
       "secondaryLabel": "Practice",
       "keywords": [
         "Complete a table of values, Plot the curve, Read roots and intersections",
-        "Chapter 3: Graphs and Functions",
+        "Chapter 3: Sequences, Functions & Graphs",
         "strategy",
         "booklet"
       ]
@@ -4671,7 +4671,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Complete a table of values, Plot the curve, Read roots and intersections",
-        "Chapter 3: Graphs and Functions",
+        "Chapter 3: Sequences, Functions & Graphs",
         "Unit 1",
         "strategy",
         "shared notes"
@@ -4688,7 +4688,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Complete a table of values, Plot the curve, Read roots and intersections",
-        "Chapter 3: Graphs and Functions",
+        "Chapter 3: Sequences, Functions & Graphs",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -4699,13 +4699,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Estimating Gradients",
-      "detail": "Chapter 3: Graphs and Functions | 14 pages",
+      "detail": "Chapter 3: Sequences, Functions & Graphs | 14 pages",
       "href": "/downloads/Linear/VisualNotes/C3_T06_Estimating_Gradients/Estimating_Gradients_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Estimating%20Gradients",
       "secondaryLabel": "Practice",
       "keywords": [
         "Draw a tangent, Use a large gradient triangle, Estimate average gradient",
-        "Chapter 3: Graphs and Functions",
+        "Chapter 3: Sequences, Functions & Graphs",
         "strategy",
         "booklet"
       ]
@@ -4715,13 +4715,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Real-Life Graphs",
-      "detail": "Chapter 3: Graphs and Functions | 14 pages",
+      "detail": "Chapter 3: Sequences, Functions & Graphs | 14 pages",
       "href": "/downloads/Linear/VisualNotes/C3_T07_Real_Life_Graphs/Real_Life_Graphs_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all",
       "secondaryLabel": "Practice",
       "keywords": [
         "Complete a table of values, Plot the curve, Read roots and intersections",
-        "Chapter 3: Graphs and Functions",
+        "Chapter 3: Sequences, Functions & Graphs",
         "strategy",
         "booklet"
       ]
@@ -4731,13 +4731,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Graphing Inequalities",
-      "detail": "Chapter 3: Graphs and Functions | 12 pages",
+      "detail": "Chapter 3: Sequences, Functions & Graphs | 12 pages",
       "href": "/downloads/Linear/VisualNotes/C3_T08_Graphing_Inequalities/Graphing_Inequalities_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Graphing%20Inequalities",
       "secondaryLabel": "Practice",
       "keywords": [
         "Draw the boundary line, Choose solid or dashed, Test one point",
-        "Chapter 3: Graphs and Functions",
+        "Chapter 3: Sequences, Functions & Graphs",
         "strategy",
         "booklet"
       ]
@@ -4747,13 +4747,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Transformations of Graphs",
-      "detail": "Chapter 3: Graphs and Functions | 16 pages",
+      "detail": "Chapter 3: Sequences, Functions & Graphs | 16 pages",
       "href": "/downloads/Linear/VisualNotes/C3_T09_Transformations_of_Graphs/Transformations_of_Graphs_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Transformations%20of%20Graphs",
       "secondaryLabel": "Practice",
       "keywords": [
         "Shift up or down, Shift left or right, Stretch vertically",
-        "Chapter 3: Graphs and Functions",
+        "Chapter 3: Sequences, Functions & Graphs",
         "strategy",
         "booklet"
       ]
@@ -4769,7 +4769,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Shift up or down, Shift left or right, Stretch vertically",
-        "Chapter 3: Graphs and Functions",
+        "Chapter 3: Sequences, Functions & Graphs",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -4779,14 +4779,14 @@
       "id": "linear:note:differentiation",
       "courseId": "linear",
       "type": "Note",
-      "title": "Differentiation",
-      "detail": "Chapter 3: Graphs and Functions | 16 pages",
+      "title": "Differentiation & Turning Points",
+      "detail": "Chapter 3: Sequences, Functions & Graphs | 16 pages",
       "href": "/downloads/Linear/VisualNotes/C3_T10_Differentiation/Differentiation_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Differentiation",
       "secondaryLabel": "Practice",
       "keywords": [
         "Differentiate powers, Find gradient at a point, Find stationary points",
-        "Chapter 3: Graphs and Functions",
+        "Chapter 3: Sequences, Functions & Graphs",
         "strategy",
         "booklet"
       ]
@@ -4795,14 +4795,14 @@
       "id": "modular2:note:differentiation",
       "courseId": "modular2",
       "type": "Note",
-      "title": "Differentiation",
+      "title": "Differentiation & Turning Points",
       "detail": "Shared strategy note | Unit 2",
       "href": "/downloads/Linear/VisualNotes/C3_T10_Differentiation/Differentiation_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Differentiation+%26+Turning+Points",
       "secondaryLabel": "Practice",
       "keywords": [
         "Differentiate powers, Find gradient at a point, Find stationary points",
-        "Chapter 3: Graphs and Functions",
+        "Chapter 3: Sequences, Functions & Graphs",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -4812,14 +4812,14 @@
       "id": "linear:note:standard-and-compound-units",
       "courseId": "linear",
       "type": "Note",
-      "title": "Standard and Compound Units",
-      "detail": "Chapter 4: Geometry and Measures | 16 pages",
+      "title": "Standard & Compound Units",
+      "detail": "Chapter 4: Geometry & Trigonometry | 16 pages",
       "href": "/downloads/Linear/VisualNotes/C4_T01_Standard_Compound_Units/Standard_Compound_Units_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Standard%20%26%20Compound%20Units",
       "secondaryLabel": "Practice",
       "keywords": [
         "Pressure: force over area, Density: mass and volume, Speed: distance over time",
-        "Chapter 4: Geometry and Measures",
+        "Chapter 4: Geometry & Trigonometry",
         "strategy",
         "booklet"
       ]
@@ -4828,14 +4828,14 @@
       "id": "modular1:note:standard-and-compound-units",
       "courseId": "modular1",
       "type": "Note",
-      "title": "Standard and Compound Units",
+      "title": "Standard & Compound Units",
       "detail": "Shared strategy note | Unit 1",
       "href": "/downloads/Linear/VisualNotes/C4_T01_Standard_Compound_Units/Standard_Compound_Units_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Standard+%26+Compound+Units",
       "secondaryLabel": "Practice",
       "keywords": [
         "Pressure: force over area, Density: mass and volume, Speed: distance over time",
-        "Chapter 4: Geometry and Measures",
+        "Chapter 4: Geometry & Trigonometry",
         "Unit 1",
         "strategy",
         "shared notes"
@@ -4845,14 +4845,14 @@
       "id": "modular2:note:standard-and-compound-units",
       "courseId": "modular2",
       "type": "Note",
-      "title": "Standard and Compound Units",
+      "title": "Standard & Compound Units",
       "detail": "Shared strategy note | Unit 2",
       "href": "/downloads/Linear/VisualNotes/C4_T01_Standard_Compound_Units/Standard_Compound_Units_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Standard+%26+Compound+Units",
       "secondaryLabel": "Practice",
       "keywords": [
         "Pressure: force over area, Density: mass and volume, Speed: distance over time",
-        "Chapter 4: Geometry and Measures",
+        "Chapter 4: Geometry & Trigonometry",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -4862,14 +4862,14 @@
       "id": "linear:note:angles-in-polygons-and-parallel-lines",
       "courseId": "linear",
       "type": "Note",
-      "title": "Angles in Polygons and Parallel Lines",
-      "detail": "Chapter 4: Geometry and Measures | 14 pages",
+      "title": "Angles in Polygons & Parallel Lines",
+      "detail": "Chapter 4: Geometry & Trigonometry | 14 pages",
       "href": "/downloads/Linear/VisualNotes/C4_T02_Angles_Polygons_Parallel_Lines/Angles_Polygons_Parallel_Lines_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Angles%20in%20Polygons%20%26%20Parallel%20Lines",
       "secondaryLabel": "Practice",
       "keywords": [
         "Name the angle relationship, Use the polygon sum, Use exterior angles",
-        "Chapter 4: Geometry and Measures",
+        "Chapter 4: Geometry & Trigonometry",
         "strategy",
         "booklet"
       ]
@@ -4878,14 +4878,14 @@
       "id": "modular2:note:angles-in-polygons-and-parallel-lines",
       "courseId": "modular2",
       "type": "Note",
-      "title": "Angles in Polygons and Parallel Lines",
+      "title": "Angles in Polygons & Parallel Lines",
       "detail": "Shared strategy note | Unit 2",
       "href": "/downloads/Linear/VisualNotes/C4_T02_Angles_Polygons_Parallel_Lines/Angles_Polygons_Parallel_Lines_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Angles+in+Polygons+%26+Parallel+Lines",
       "secondaryLabel": "Practice",
       "keywords": [
         "Name the angle relationship, Use the polygon sum, Use exterior angles",
-        "Chapter 4: Geometry and Measures",
+        "Chapter 4: Geometry & Trigonometry",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -4895,14 +4895,14 @@
       "id": "linear:note:bearings-scale-drawing-and-constructions",
       "courseId": "linear",
       "type": "Note",
-      "title": "Bearings, Scale Drawing and Constructions",
-      "detail": "Chapter 4: Geometry and Measures | 16 pages",
+      "title": "Bearings, Scale Drawing & Constructions",
+      "detail": "Chapter 4: Geometry & Trigonometry | 16 pages",
       "href": "/downloads/Linear/VisualNotes/C4_T03_Bearings_Scale_Constructions/Bearings_Scale_Constructions_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Bearings%2C%20Scale%20Drawing%20%26%20Constructions",
       "secondaryLabel": "Practice",
       "keywords": [
         "Draw North first, Measure clockwise bearing, Use scale before real distance",
-        "Chapter 4: Geometry and Measures",
+        "Chapter 4: Geometry & Trigonometry",
         "strategy",
         "booklet"
       ]
@@ -4911,14 +4911,14 @@
       "id": "modular2:note:bearings-scale-drawing-and-constructions",
       "courseId": "modular2",
       "type": "Note",
-      "title": "Bearings, Scale Drawing and Constructions",
+      "title": "Bearings, Scale Drawing & Constructions",
       "detail": "Shared strategy note | Unit 2",
       "href": "/downloads/Linear/VisualNotes/C4_T03_Bearings_Scale_Constructions/Bearings_Scale_Constructions_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Bearings",
       "secondaryLabel": "Practice",
       "keywords": [
         "Draw North first, Measure clockwise bearing, Use scale before real distance",
-        "Chapter 4: Geometry and Measures",
+        "Chapter 4: Geometry & Trigonometry",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -4929,13 +4929,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Circle Theorems",
-      "detail": "Chapter 4: Geometry and Measures | 16 pages",
+      "detail": "Chapter 4: Geometry & Trigonometry | 16 pages",
       "href": "/downloads/Linear/VisualNotes/C4_T04_Circle_Theorems/Circle_Theorems_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Circle%20Theorems",
       "secondaryLabel": "Practice",
       "keywords": [
         "Spot the theorem family, Use tangent-radius or alternate segment, Use cyclic quadrilateral angles",
-        "Chapter 4: Geometry and Measures",
+        "Chapter 4: Geometry & Trigonometry",
         "strategy",
         "booklet"
       ]
@@ -4951,7 +4951,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Spot the theorem family, Use tangent-radius or alternate segment, Use cyclic quadrilateral angles",
-        "Chapter 4: Geometry and Measures",
+        "Chapter 4: Geometry & Trigonometry",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -4961,14 +4961,14 @@
       "id": "linear:note:area-and-perimeter",
       "courseId": "linear",
       "type": "Note",
-      "title": "Area and Perimeter",
-      "detail": "Chapter 4: Geometry and Measures | 14 pages",
+      "title": "Perimeter & Area",
+      "detail": "Chapter 4: Geometry & Trigonometry | 14 pages",
       "href": "/downloads/Linear/VisualNotes/C4_T05_Area_Perimeter/Area_Perimeter_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Area%20%26%20Perimeter",
       "secondaryLabel": "Practice",
       "keywords": [
         "Split the compound shape, Build an equation from area, Use perimeter after missing sides",
-        "Chapter 4: Geometry and Measures",
+        "Chapter 4: Geometry & Trigonometry",
         "strategy",
         "booklet"
       ]
@@ -4977,14 +4977,14 @@
       "id": "linear:note:circles-arcs-and-sectors",
       "courseId": "linear",
       "type": "Note",
-      "title": "Circles, Arcs and Sectors",
-      "detail": "Chapter 4: Geometry and Measures | 14 pages",
+      "title": "Circles, Arcs & Sectors",
+      "detail": "Chapter 4: Geometry & Trigonometry | 14 pages",
       "href": "/downloads/Linear/VisualNotes/C4_T06_Circles_Arcs_Sectors/Circles_Arcs_Sectors_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Circles%2C%20Arcs%20%26%20Sectors",
       "secondaryLabel": "Practice",
       "keywords": [
         "Use fraction of the circle, Find sector area, Find arc length",
-        "Chapter 4: Geometry and Measures",
+        "Chapter 4: Geometry & Trigonometry",
         "strategy",
         "booklet"
       ]
@@ -4993,14 +4993,14 @@
       "id": "modular1:note:circles-arcs-and-sectors",
       "courseId": "modular1",
       "type": "Note",
-      "title": "Circles, Arcs and Sectors",
+      "title": "Circles, Arcs & Sectors",
       "detail": "Shared strategy note | Unit 1",
       "href": "/downloads/Linear/VisualNotes/C4_T06_Circles_Arcs_Sectors/Circles_Arcs_Sectors_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Circles%2C+Arcs+%26+Sectors",
       "secondaryLabel": "Practice",
       "keywords": [
         "Use fraction of the circle, Find sector area, Find arc length",
-        "Chapter 4: Geometry and Measures",
+        "Chapter 4: Geometry & Trigonometry",
         "Unit 1",
         "strategy",
         "shared notes"
@@ -5010,14 +5010,14 @@
       "id": "linear:note:volume-and-surface-area",
       "courseId": "linear",
       "type": "Note",
-      "title": "Volume and Surface Area",
-      "detail": "Chapter 4: Geometry and Measures | 14 pages",
+      "title": "Volume & Surface Area",
+      "detail": "Chapter 4: Geometry & Trigonometry | 14 pages",
       "href": "/downloads/Linear/VisualNotes/C4_T07_Volume_Surface_Area/Volume_Surface_Area_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Volume%20%26%20Surface%20Area",
       "secondaryLabel": "Practice",
       "keywords": [
         "Name the solid, Use prism volume, Unfold surface area",
-        "Chapter 4: Geometry and Measures",
+        "Chapter 4: Geometry & Trigonometry",
         "strategy",
         "booklet"
       ]
@@ -5026,14 +5026,14 @@
       "id": "modular2:note:volume-and-surface-area",
       "courseId": "modular2",
       "type": "Note",
-      "title": "Volume and Surface Area",
+      "title": "Volume & Surface Area",
       "detail": "Shared strategy note | Unit 2",
       "href": "/downloads/Linear/VisualNotes/C4_T07_Volume_Surface_Area/Volume_Surface_Area_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Volume+%26+Surface+Area",
       "secondaryLabel": "Practice",
       "keywords": [
         "Name the solid, Use prism volume, Unfold surface area",
-        "Chapter 4: Geometry and Measures",
+        "Chapter 4: Geometry & Trigonometry",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -5043,14 +5043,14 @@
       "id": "linear:note:congruence-similarity-and-geometrical-proof",
       "courseId": "linear",
       "type": "Note",
-      "title": "Congruence, Similarity and Geometrical Proof",
-      "detail": "Chapter 4: Geometry and Measures | 12 pages",
+      "title": "Congruence, Similarity & Geometrical Proof",
+      "detail": "Chapter 4: Geometry & Trigonometry | 12 pages",
       "href": "/downloads/Linear/VisualNotes/C4_T08_Congruence_Similarity_Proof/Congruence_Similarity_Proof_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Congruence%2C%20Similarity%20%26%20Geometrical%20Proof",
       "secondaryLabel": "Practice",
       "keywords": [
         "Find the length scale factor, Square it for area, Cube it for volume",
-        "Chapter 4: Geometry and Measures",
+        "Chapter 4: Geometry & Trigonometry",
         "strategy",
         "booklet"
       ]
@@ -5059,14 +5059,14 @@
       "id": "linear:note:area-and-volume-of-similar-shapes",
       "courseId": "linear",
       "type": "Note",
-      "title": "Area and Volume of Similar Shapes",
-      "detail": "Chapter 4: Geometry and Measures | 14 pages",
+      "title": "Area & Volume of Similar Shapes",
+      "detail": "Chapter 4: Geometry & Trigonometry | 14 pages",
       "href": "/downloads/Linear/VisualNotes/C4_T09_Area_Volume_Similar_Shapes/Area_Volume_Similar_Shapes_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Area%20%26%20Volume%20of%20Similar%20Shapes",
       "secondaryLabel": "Practice",
       "keywords": [
         "Find the length scale factor, Square it for area, Cube it for volume",
-        "Chapter 4: Geometry and Measures",
+        "Chapter 4: Geometry & Trigonometry",
         "strategy",
         "booklet"
       ]
@@ -5075,14 +5075,14 @@
       "id": "modular2:note:area-and-volume-of-similar-shapes",
       "courseId": "modular2",
       "type": "Note",
-      "title": "Area and Volume of Similar Shapes",
+      "title": "Area & Volume of Similar Shapes",
       "detail": "Shared strategy note | Unit 2",
       "href": "/downloads/Linear/VisualNotes/C4_T09_Area_Volume_Similar_Shapes/Area_Volume_Similar_Shapes_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Area+%26+Volume+of+Similar+Shapes",
       "secondaryLabel": "Practice",
       "keywords": [
         "Find the length scale factor, Square it for area, Cube it for volume",
-        "Chapter 4: Geometry and Measures",
+        "Chapter 4: Geometry & Trigonometry",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -5092,14 +5092,14 @@
       "id": "linear:note:right-angled-triangles-pythagoras-and-trigonometry",
       "courseId": "linear",
       "type": "Note",
-      "title": "Right-Angled Triangles: Pythagoras and Trigonometry",
-      "detail": "Chapter 4: Geometry and Measures | 14 pages",
+      "title": "Right-Angled Triangles - Pythagoras & Trigonometry",
+      "detail": "Chapter 4: Geometry & Trigonometry | 14 pages",
       "href": "/downloads/Linear/VisualNotes/C4_T10_Pythagoras_Trigonometry/Pythagoras_Trigonometry_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Right-Angled%20Triangles%20-%20Pythagoras%20%26%20Trigonometry",
       "secondaryLabel": "Practice",
       "keywords": [
         "Name the angle relationship, Use the polygon sum, Use exterior angles",
-        "Chapter 4: Geometry and Measures",
+        "Chapter 4: Geometry & Trigonometry",
         "strategy",
         "booklet"
       ]
@@ -5108,14 +5108,14 @@
       "id": "modular1:note:right-angled-triangles-pythagoras-and-trigonometry",
       "courseId": "modular1",
       "type": "Note",
-      "title": "Right-Angled Triangles: Pythagoras and Trigonometry",
+      "title": "Right-Angled Triangles - Pythagoras & Trigonometry",
       "detail": "Shared strategy note | Unit 1",
       "href": "/downloads/Linear/VisualNotes/C4_T10_Pythagoras_Trigonometry/Pythagoras_Trigonometry_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Right-Angled+Triangles+-+Pythagoras+%26+Trigonometry",
       "secondaryLabel": "Practice",
       "keywords": [
         "Name the angle relationship, Use the polygon sum, Use exterior angles",
-        "Chapter 4: Geometry and Measures",
+        "Chapter 4: Geometry & Trigonometry",
         "Unit 1",
         "strategy",
         "shared notes"
@@ -5125,14 +5125,14 @@
       "id": "linear:note:sine-rule-cosine-rule-and-area-of-a-triangle",
       "courseId": "linear",
       "type": "Note",
-      "title": "Sine Rule, Cosine Rule and Area of a Triangle",
-      "detail": "Chapter 4: Geometry and Measures | 14 pages",
+      "title": "Sine & Cosine Rules",
+      "detail": "Chapter 4: Geometry & Trigonometry | 14 pages",
       "href": "/downloads/Linear/VisualNotes/C4_T11_Sine_Cosine_Rule/Sine_Cosine_Rule_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Sine%2C%20Cosine%20Rule%20%26%20Area%20of%20Triangles",
       "secondaryLabel": "Practice",
       "keywords": [
         "Name the angle relationship, Use the polygon sum, Use exterior angles",
-        "Chapter 4: Geometry and Measures",
+        "Chapter 4: Geometry & Trigonometry",
         "strategy",
         "booklet"
       ]
@@ -5141,14 +5141,14 @@
       "id": "linear:note:3d-pythagoras-and-trigonometry",
       "courseId": "linear",
       "type": "Note",
-      "title": "3D Pythagoras and Trigonometry",
-      "detail": "Chapter 4: Geometry and Measures | 12 pages",
+      "title": "3D Pythagoras & Trigonometry",
+      "detail": "Chapter 4: Geometry & Trigonometry | 12 pages",
       "href": "/downloads/Linear/VisualNotes/C4_T12_3D_Pythagoras_Trigonometry/3D_Pythagoras_Trigonometry_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=3D%20Pythagoras%20%26%20Trigonometry",
       "secondaryLabel": "Practice",
       "keywords": [
         "Draw the hidden right triangle, Find the base diagonal first, Use 3D trig after Pythagoras",
-        "Chapter 4: Geometry and Measures",
+        "Chapter 4: Geometry & Trigonometry",
         "strategy",
         "booklet"
       ]
@@ -5157,14 +5157,14 @@
       "id": "modular1:note:3d-pythagoras-and-trigonometry",
       "courseId": "modular1",
       "type": "Note",
-      "title": "3D Pythagoras and Trigonometry",
+      "title": "3D Pythagoras & Trigonometry",
       "detail": "Shared strategy note | Unit 1",
       "href": "/downloads/Linear/VisualNotes/C4_T12_3D_Pythagoras_Trigonometry/3D_Pythagoras_Trigonometry_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=3D+Pythagoras+%26+Trigonometry",
       "secondaryLabel": "Practice",
       "keywords": [
         "Draw the hidden right triangle, Find the base diagonal first, Use 3D trig after Pythagoras",
-        "Chapter 4: Geometry and Measures",
+        "Chapter 4: Geometry & Trigonometry",
         "Unit 1",
         "strategy",
         "shared notes"
@@ -5175,13 +5175,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Vectors",
-      "detail": "Chapter 5: Vectors and Transformations | 16 pages",
+      "detail": "Chapter 5: Vectors & Transformation Geometry | 16 pages",
       "href": "/downloads/Linear/VisualNotes/C5_T01_Vectors/Vectors_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Vectors",
       "secondaryLabel": "Practice",
       "keywords": [
         "Follow the route, Use equal parallel vectors, Use midpoint or ratio",
-        "Chapter 5: Vectors and Transformations",
+        "Chapter 5: Vectors & Transformation Geometry",
         "strategy",
         "booklet"
       ]
@@ -5197,7 +5197,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Follow the route, Use equal parallel vectors, Use midpoint or ratio",
-        "Chapter 5: Vectors and Transformations",
+        "Chapter 5: Vectors & Transformation Geometry",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -5208,13 +5208,13 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Transformations",
-      "detail": "Chapter 5: Vectors and Transformations | 16 pages",
+      "detail": "Chapter 5: Vectors & Transformation Geometry | 16 pages",
       "href": "/downloads/Linear/VisualNotes/C5_T02_Transformations/Transformations_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all&topic=Transformations",
       "secondaryLabel": "Practice",
       "keywords": [
         "Identify the transformation, Use centre and scale factor, Write the vector translation",
-        "Chapter 5: Vectors and Transformations",
+        "Chapter 5: Vectors & Transformation Geometry",
         "strategy",
         "booklet"
       ]
@@ -5230,7 +5230,7 @@
       "secondaryLabel": "Practice",
       "keywords": [
         "Identify the transformation, Use centre and scale factor, Write the vector translation",
-        "Chapter 5: Vectors and Transformations",
+        "Chapter 5: Vectors & Transformation Geometry",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -5240,13 +5240,13 @@
       "id": "linear:note:statistics",
       "courseId": "linear",
       "type": "Note",
-      "title": "Statistics",
-      "detail": "Chapter 6: Statistics and Probability | 16 pages",
+      "title": "Statistics Toolkit",
+      "detail": "Chapter 6: Statistics & Probability | 16 pages",
       "href": "/downloads/Linear/VisualNotes/C6_T01_Statistics/Statistics_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all",
       "secondaryLabel": "Practice",
       "keywords": [
-        "Chapter 6: Statistics and Probability",
+        "Chapter 6: Statistics & Probability",
         "strategy",
         "booklet"
       ]
@@ -5255,13 +5255,13 @@
       "id": "modular2:note:statistics",
       "courseId": "modular2",
       "type": "Note",
-      "title": "Statistics",
+      "title": "Statistics Toolkit",
       "detail": "Shared strategy note | Unit 2",
       "href": "/downloads/Linear/VisualNotes/C6_T01_Statistics/Statistics_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Statistics+Toolkit",
       "secondaryLabel": "Practice",
       "keywords": [
-        "Chapter 6: Statistics and Probability",
+        "Chapter 6: Statistics & Probability",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -5272,12 +5272,12 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Histograms",
-      "detail": "Chapter 6: Statistics and Probability | 12 pages",
+      "detail": "Chapter 6: Statistics & Probability | 12 pages",
       "href": "/downloads/Linear/VisualNotes/C6_T02_Histograms/Histograms_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all",
       "secondaryLabel": "Practice",
       "keywords": [
-        "Chapter 6: Statistics and Probability",
+        "Chapter 6: Statistics & Probability",
         "strategy",
         "booklet"
       ]
@@ -5292,7 +5292,7 @@
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Histograms",
       "secondaryLabel": "Practice",
       "keywords": [
-        "Chapter 6: Statistics and Probability",
+        "Chapter 6: Statistics & Probability",
         "Unit 1",
         "strategy",
         "shared notes"
@@ -5302,13 +5302,13 @@
       "id": "linear:note:cumulative-frequency",
       "courseId": "linear",
       "type": "Note",
-      "title": "Cumulative Frequency",
-      "detail": "Chapter 6: Statistics and Probability | 12 pages",
+      "title": "Cumulative Frequency Diagrams",
+      "detail": "Chapter 6: Statistics & Probability | 12 pages",
       "href": "/downloads/Linear/VisualNotes/C6_T03_Cumulative_Frequency/Cumulative_Frequency_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all",
       "secondaryLabel": "Practice",
       "keywords": [
-        "Chapter 6: Statistics and Probability",
+        "Chapter 6: Statistics & Probability",
         "strategy",
         "booklet"
       ]
@@ -5317,13 +5317,13 @@
       "id": "modular2:note:cumulative-frequency",
       "courseId": "modular2",
       "type": "Note",
-      "title": "Cumulative Frequency",
+      "title": "Cumulative Frequency Diagrams",
       "detail": "Shared strategy note | Unit 2",
       "href": "/downloads/Linear/VisualNotes/C6_T03_Cumulative_Frequency/Cumulative_Frequency_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+2&bank=all&topic=Cumulative+Frequency+Diagrams",
       "secondaryLabel": "Practice",
       "keywords": [
-        "Chapter 6: Statistics and Probability",
+        "Chapter 6: Statistics & Probability",
         "Unit 2",
         "strategy",
         "shared notes"
@@ -5334,12 +5334,12 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Probability Toolkit",
-      "detail": "Chapter 6: Statistics and Probability | 14 pages",
+      "detail": "Chapter 6: Statistics & Probability | 14 pages",
       "href": "/downloads/Linear/VisualNotes/C6_T04_Probability_Toolkit/Probability_Toolkit_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all",
       "secondaryLabel": "Practice",
       "keywords": [
-        "Chapter 6: Statistics and Probability",
+        "Chapter 6: Statistics & Probability",
         "strategy",
         "booklet"
       ]
@@ -5354,7 +5354,7 @@
       "secondaryHref": "/practice.html?pathway=modular&unit=Unit+1&bank=all&topic=Probability+Toolkit",
       "secondaryLabel": "Practice",
       "keywords": [
-        "Chapter 6: Statistics and Probability",
+        "Chapter 6: Statistics & Probability",
         "Unit 1",
         "strategy",
         "shared notes"
@@ -5365,12 +5365,12 @@
       "courseId": "linear",
       "type": "Note",
       "title": "Venn and Tree Diagrams",
-      "detail": "Chapter 6: Statistics and Probability | 16 pages",
+      "detail": "Chapter 6: Statistics & Probability | 16 pages",
       "href": "/downloads/Linear/VisualNotes/C6_T05_Venn_Tree_Diagrams/Venn_Tree_Diagrams_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all",
       "secondaryLabel": "Practice",
       "keywords": [
-        "Chapter 6: Statistics and Probability",
+        "Chapter 6: Statistics & Probability",
         "strategy",
         "booklet"
       ]
@@ -5379,13 +5379,13 @@
       "id": "linear:note:combined-and-conditional-probability",
       "courseId": "linear",
       "type": "Note",
-      "title": "Combined and Conditional Probability",
-      "detail": "Chapter 6: Statistics and Probability | 14 pages",
+      "title": "Combined & Conditional Probability",
+      "detail": "Chapter 6: Statistics & Probability | 14 pages",
       "href": "/downloads/Linear/VisualNotes/C6_T06_Combined_Conditional_Probability/Combined_Conditional_Probability_Visual_Notes.pdf?v=20261009c",
       "secondaryHref": "/practice.html?pathway=linear&bank=all",
       "secondaryLabel": "Practice",
       "keywords": [
-        "Chapter 6: Statistics and Probability",
+        "Chapter 6: Statistics & Probability",
         "strategy",
         "booklet"
       ]
@@ -5394,7 +5394,7 @@
       "id": "wma11:note:indices-surds",
       "courseId": "wma11",
       "type": "Note",
-      "title": "Indices & Surds",
+      "title": "Laws of Indices & Surds",
       "detail": "WMA11 strategy note",
       "href": "/downloads/IAL/WMA11/Notes/WMA11_01_Laws_of_Indices_and_Surds_Notes_With_Answers.pdf?v=20261001",
       "secondaryHref": "/ial/wma11/index.html?topic=01_Indices_Surds#ialFilters",
@@ -5598,7 +5598,7 @@
       "id": "wma11:note:transformations",
       "courseId": "wma11",
       "type": "Note",
-      "title": "Transformations",
+      "title": "Transformations of Functions",
       "detail": "WMA11 strategy note",
       "href": "/downloads/IAL/WMA11/Notes/WMA11_07_Transformations_of_Functions_Notes_With_Answers.pdf?v=20261001",
       "secondaryHref": "/ial/wma11/index.html?topic=07_Transformations#ialFilters",
@@ -5632,7 +5632,7 @@
       "id": "wma11:note:straight-line",
       "courseId": "wma11",
       "type": "Note",
-      "title": "Straight Line",
+      "title": "Equation of a Straight Line",
       "detail": "WMA11 strategy note",
       "href": "/downloads/IAL/WMA11/Notes/WMA11_08_Equation_of_a_Straight_Line_Notes_With_Answers.pdf?v=20261001",
       "secondaryHref": "/ial/wma11/index.html?topic=08_StraightLine#ialFilters",
@@ -5870,7 +5870,7 @@
       "id": "wma12:note:polynomials",
       "courseId": "wma12",
       "type": "Note",
-      "title": "Polynomials",
+      "title": "Polynomials: Division, Remainder and Factor Theorems",
       "detail": "WMA12 strategy note",
       "href": "/downloads/IAL/WMA12/Notes/WMA12_02_Polynomials_Division_Remainder_and_Factor_Theorems_Notes_With_Answers.pdf?v=20261001",
       "secondaryHref": "/ial/wma12/index.html?topic=02_Polynomials#ialFilters",
@@ -5972,7 +5972,7 @@
       "id": "wma12:note:arithmetic-sequences",
       "courseId": "wma12",
       "type": "Note",
-      "title": "Arithmetic Sequences",
+      "title": "Arithmetic Sequences and Series",
       "detail": "WMA12 strategy note",
       "href": "/downloads/IAL/WMA12/Notes/WMA12_05_Arithmetic_Sequences_and_Series_Notes_With_Answers.pdf?v=20261001",
       "secondaryHref": "/ial/wma12/index.html?topic=05_ArithmeticSequences#ialFilters",
@@ -6006,7 +6006,7 @@
       "id": "wma12:note:geometric-sequences",
       "courseId": "wma12",
       "type": "Note",
-      "title": "Geometric Sequences",
+      "title": "Geometric Sequences and Series",
       "detail": "WMA12 strategy note",
       "href": "/downloads/IAL/WMA12/Notes/WMA12_06_Geometric_Sequences_and_Series_Notes_With_Answers.pdf?v=20261001",
       "secondaryHref": "/ial/wma12/index.html?topic=06_GeometricSequences#ialFilters",
@@ -6040,7 +6040,7 @@
       "id": "wma12:note:sequences-series",
       "courseId": "wma12",
       "type": "Note",
-      "title": "Sequences & Series",
+      "title": "Sequences and Series",
       "detail": "WMA12 strategy note",
       "href": "/downloads/IAL/WMA12/Notes/WMA12_07_Sequences_and_Series_Notes_With_Answers.pdf?v=20261001",
       "secondaryHref": "/ial/wma12/index.html?topic=07_SequencesSeries#ialFilters",
@@ -6074,7 +6074,7 @@
       "id": "wma12:note:modelling-with-sequences-series",
       "courseId": "wma12",
       "type": "Note",
-      "title": "Modelling with Sequences & Series",
+      "title": "Modelling with Sequences and Series",
       "detail": "WMA12 strategy note",
       "href": "/downloads/IAL/WMA12/Notes/WMA12_08_Modelling_with_Sequences_and_Series_Notes_With_Answers.pdf?v=20261001",
       "secondaryHref": "/ial/wma12/index.html?topic=08_ModellingSequencesSeries#ialFilters",
@@ -6108,7 +6108,7 @@
       "id": "wma12:note:laws-of-logarithms",
       "courseId": "wma12",
       "type": "Note",
-      "title": "Laws of Logarithms",
+      "title": "Exponentials and Logarithms",
       "detail": "WMA12 strategy note",
       "href": "/downloads/IAL/WMA12/Notes/WMA12_09_Exponentials_and_Logarithms_Notes_With_Answers.pdf?v=20261001",
       "secondaryHref": "/ial/wma12/index.html?topic=09_LawsOfLogarithms#ialFilters",
@@ -6142,7 +6142,7 @@
       "id": "wma12:note:trigonometric-equations",
       "courseId": "wma12",
       "type": "Note",
-      "title": "Trigonometric Equations",
+      "title": "Trigonometric Identities and Equations",
       "detail": "WMA12 strategy note",
       "href": "/downloads/IAL/WMA12/Notes/WMA12_10_Trigonometric_Identities_and_Equations_Notes_With_Answers.pdf?v=20261001",
       "secondaryHref": "/ial/wma12/index.html?topic=10_TrigonometricEquations#ialFilters",
@@ -6210,7 +6210,7 @@
       "id": "wma12:note:integration",
       "courseId": "wma12",
       "type": "Note",
-      "title": "Integration",
+      "title": "Integration: Areas and the Trapezium Rule",
       "detail": "WMA12 strategy note",
       "href": "/downloads/IAL/WMA12/Notes/WMA12_12_Integration_Areas_and_the_Trapezium_Rule_Notes_With_Answers.pdf?v=20261001",
       "secondaryHref": "/ial/wma12/index.html?topic=12_Integration#ialFilters",
@@ -6244,7 +6244,7 @@
       "id": "wme01:note:quantities-units-modelling",
       "courseId": "wme01",
       "type": "Note",
-      "title": "Quantities, Units & Modelling",
+      "title": "Quantities, Units and Modelling",
       "detail": "WME01 strategy note",
       "href": "/downloads/IAL/WME01/Notes/WME01_01_Quantities_Units_and_Modelling_Notes_With_Answers.pdf?v=20261001",
       "secondaryHref": "/ial/wme01/index.html?topic=01_QuantitiesUnitsModelling#ialFilters",
@@ -6414,7 +6414,7 @@
       "id": "wme01:note:forces",
       "courseId": "wme01",
       "type": "Note",
-      "title": "Forces",
+      "title": "Forces and Friction",
       "detail": "WME01 strategy note",
       "href": "/downloads/IAL/WME01/Notes/WME01_06_Forces_and_Friction_Notes_With_Answers.pdf?v=20261001",
       "secondaryHref": "/ial/wme01/index.html?topic=06_Forces#ialFilters",
@@ -6482,7 +6482,7 @@
       "id": "wme01:note:resolving-forces-inclined-planes",
       "courseId": "wme01",
       "type": "Note",
-      "title": "Resolving Forces, Inclined Planes",
+      "title": "Resolving Forces and Inclined Planes",
       "detail": "WME01 strategy note",
       "href": "/downloads/IAL/WME01/Notes/WME01_08_Resolving_Forces_and_Inclined_Planes_Notes_With_Answers.pdf?v=20261001",
       "secondaryHref": "/ial/wme01/index.html?topic=08_ResolvingForcesInclinedPlanes#ialFilters",
@@ -6788,7 +6788,7 @@
       "id": "wma13:note:trig-equations-r-form",
       "courseId": "wma13",
       "type": "Note",
-      "title": "Trig Equations & R-Form",
+      "title": "Trig Equations and R-Form",
       "detail": "WMA13 strategy note",
       "href": "/downloads/IAL/WMA13/Notes/WMA13_07_Trig_Equations_R_Form_Visual_Notes.pdf?v=20261020",
       "secondaryHref": "/ial/wma13/index.html?topic=07_TrigEquations#ialFilters",
@@ -6822,7 +6822,7 @@
       "id": "wma13:note:exponentials-logarithms",
       "courseId": "wma13",
       "type": "Note",
-      "title": "Exponentials & Logarithms",
+      "title": "Exponentials and Logarithms",
       "detail": "WMA13 strategy note",
       "href": "/downloads/IAL/WMA13/Notes/WMA13_08_Exp_and_Ln_Visual_Notes.pdf?v=20261020",
       "secondaryHref": "/ial/wma13/index.html?topic=08_ExponentialsLogs#ialFilters",
@@ -6856,7 +6856,7 @@
       "id": "wma13:note:log-graphs-models",
       "courseId": "wma13",
       "type": "Note",
-      "title": "Log Graphs & Models",
+      "title": "Log Graphs and Models",
       "detail": "WMA13 strategy note",
       "href": "/downloads/IAL/WMA13/Notes/WMA13_09_Log_Graphs_and_Models_Visual_Notes.pdf?v=20261020",
       "secondaryHref": "/ial/wma13/index.html?topic=09_LogGraphsModels#ialFilters",

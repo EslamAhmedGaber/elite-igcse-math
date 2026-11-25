@@ -14,7 +14,7 @@
     "chapters": [
      {
       "number": 1,
-      "title": "Number",
+      "title": "Numbers & the Number System",
       "booklet": null,
       "topics": [
        {
@@ -26,21 +26,21 @@
        },
        {
         "num": "1.2",
-        "title": "Set Notation and Venn Diagrams",
+        "title": "Set Notation & Venn Diagrams",
         "href": "downloads/Linear/VisualNotes/C1_T02_Sets_and_Venn_Diagrams/Sets_and_Venn_Diagrams_Visual_Notes.pdf?v=20261009c",
         "pages": 18,
         "mb": 0.42
        },
        {
         "num": "1.3",
-        "title": "Prime Factors, HCF and LCM",
+        "title": "Prime Factors, HCF & LCM",
         "href": "downloads/Linear/VisualNotes/C1_T03_Prime_Factors_HCF_LCM/Prime_Factors_HCF_LCM_Visual_Notes.pdf?v=20261009c",
         "pages": 16,
         "mb": 0.39
        },
        {
         "num": "1.4",
-        "title": "Powers, Roots and Standard Form",
+        "title": "Powers, Roots & Standard Form",
         "href": "downloads/Linear/VisualNotes/C1_T04_Powers_Roots_Standard_Form/Powers_Roots_Standard_Form_Visual_Notes.pdf?v=20261009c",
         "pages": 18,
         "mb": 0.42
@@ -61,21 +61,21 @@
        },
        {
         "num": "1.7",
-        "title": "Compound Interest and Depreciation",
+        "title": "Compound Interest & Depreciation",
         "href": "downloads/Linear/VisualNotes/C1_T07_Compound_Interest/Compound_Interest_Visual_Notes.pdf?v=20261009c",
         "pages": 16,
         "mb": 0.39
        },
        {
         "num": "1.8",
-        "title": "Fractions, Decimals and Percentages",
+        "title": "Fractions, Decimals & Percentages",
         "href": "downloads/Linear/VisualNotes/C1_T08_Fractions_Decimals_Percentages/Fractions_Decimals_Percentages_Visual_Notes.pdf?v=20261009c",
         "pages": 16,
         "mb": 0.39
        },
        {
         "num": "1.9",
-        "title": "Rounding, Estimation and Bounds",
+        "title": "Rounding, Estimation & Bounds",
         "href": "downloads/Linear/VisualNotes/C1_T09_Rounding_Estimation_Bounds/Rounding_Estimation_Bounds_Visual_Notes.pdf?v=20261009c",
         "pages": 18,
         "mb": 0.42
@@ -110,7 +110,7 @@
        },
        {
         "num": "1.14",
-        "title": "Exchange Rates and Best Buys",
+        "title": "Exchange Rates & Best Buys",
         "href": "downloads/Linear/VisualNotes/C1_T14_Exchange_Rates_Best_Buys/Exchange_Rates_Best_Buys_Visual_Notes.pdf?v=20261009c",
         "pages": 12,
         "mb": 0.32
@@ -126,7 +126,7 @@
      },
      {
       "number": 2,
-      "title": "Algebra",
+      "title": "Equations, Formulae & Identities",
       "booklet": null,
       "topics": [
        {
@@ -152,7 +152,7 @@
        },
        {
         "num": "2.4",
-        "title": "Factorisation",
+        "title": "Factorising",
         "href": "downloads/Linear/VisualNotes/C2_T04_Factorisation/Factorisation_Visual_Notes.pdf?v=20261009c",
         "pages": 18,
         "mb": 0.43
@@ -173,7 +173,7 @@
        },
        {
         "num": "2.7",
-        "title": "Rearranging Formulas",
+        "title": "Rearranging Formulae",
         "href": "downloads/Linear/VisualNotes/C2_T07_Rearranging_Formulas/Rearranging_Formulas_Visual_Notes.pdf?v=20261009c",
         "pages": 18,
         "mb": 0.43
@@ -215,7 +215,7 @@
        },
        {
         "num": "2.13",
-        "title": "Forming and Solving Equations",
+        "title": "Forming & Solving Equations",
         "href": "downloads/Linear/VisualNotes/C2_T13_Forming_Equations/Forming_Equations_Visual_Notes.pdf?v=20261009c",
         "pages": 18,
         "mb": 0.42
@@ -224,7 +224,7 @@
      },
      {
       "number": 3,
-      "title": "Graphs and Functions",
+      "title": "Sequences, Functions & Graphs",
       "booklet": null,
       "topics": [
        {
@@ -292,7 +292,7 @@
        },
        {
         "num": "3.10",
-        "title": "Differentiation",
+        "title": "Differentiation & Turning Points",
         "href": "downloads/Linear/VisualNotes/C3_T10_Differentiation/Differentiation_Visual_Notes.pdf?v=20261009c",
         "pages": 16,
         "mb": 0.4
@@ -301,26 +301,26 @@
      },
      {
       "number": 4,
-      "title": "Geometry and Measures",
+      "title": "Geometry & Trigonometry",
       "booklet": null,
       "topics": [
        {
         "num": "4.1",
-        "title": "Standard and Compound Units",
+        "title": "Standard & Compound Units",
         "href": "downloads/Linear/VisualNotes/C4_T01_Standard_Compound_Units/Standard_Compound_Units_Visual_Notes.pdf?v=20261009c",
         "pages": 16,
         "mb": 0.39
        },
        {
         "num": "4.2",
-        "title": "Angles in Polygons and Parallel Lines",
+        "title": "Angles in Polygons & Parallel Lines",
         "href": "downloads/Linear/VisualNotes/C4_T02_Angles_Polygons_Parallel_Lines/Angles_Polygons_Parallel_Lines_Visual_Notes.pdf?v=20261009c",
         "pages": 14,
         "mb": 0.36
        },
        {
         "num": "4.3",
-        "title": "Bearings, Scale Drawing and Constructions",
+        "title": "Bearings, Scale Drawing & Constructions",
         "href": "downloads/Linear/VisualNotes/C4_T03_Bearings_Scale_Constructions/Bearings_Scale_Constructions_Visual_Notes.pdf?v=20261009c",
         "pages": 16,
         "mb": 0.39
@@ -334,56 +334,56 @@
        },
        {
         "num": "4.5",
-        "title": "Area and Perimeter",
+        "title": "Perimeter & Area",
         "href": "downloads/Linear/VisualNotes/C4_T05_Area_Perimeter/Area_Perimeter_Visual_Notes.pdf?v=20261009c",
         "pages": 14,
         "mb": 0.35
        },
        {
         "num": "4.6",
-        "title": "Circles, Arcs and Sectors",
+        "title": "Circles, Arcs & Sectors",
         "href": "downloads/Linear/VisualNotes/C4_T06_Circles_Arcs_Sectors/Circles_Arcs_Sectors_Visual_Notes.pdf?v=20261009c",
         "pages": 14,
         "mb": 0.35
        },
        {
         "num": "4.7",
-        "title": "Volume and Surface Area",
+        "title": "Volume & Surface Area",
         "href": "downloads/Linear/VisualNotes/C4_T07_Volume_Surface_Area/Volume_Surface_Area_Visual_Notes.pdf?v=20261009c",
         "pages": 14,
         "mb": 0.35
        },
        {
         "num": "4.8",
-        "title": "Congruence, Similarity and Geometrical Proof",
+        "title": "Congruence, Similarity & Geometrical Proof",
         "href": "downloads/Linear/VisualNotes/C4_T08_Congruence_Similarity_Proof/Congruence_Similarity_Proof_Visual_Notes.pdf?v=20261009c",
         "pages": 12,
         "mb": 0.33
        },
        {
         "num": "4.9",
-        "title": "Area and Volume of Similar Shapes",
+        "title": "Area & Volume of Similar Shapes",
         "href": "downloads/Linear/VisualNotes/C4_T09_Area_Volume_Similar_Shapes/Area_Volume_Similar_Shapes_Visual_Notes.pdf?v=20261009c",
         "pages": 14,
         "mb": 0.35
        },
        {
         "num": "4.10",
-        "title": "Right-Angled Triangles: Pythagoras and Trigonometry",
+        "title": "Right-Angled Triangles - Pythagoras & Trigonometry",
         "href": "downloads/Linear/VisualNotes/C4_T10_Pythagoras_Trigonometry/Pythagoras_Trigonometry_Visual_Notes.pdf?v=20261009c",
         "pages": 14,
         "mb": 0.35
        },
        {
         "num": "4.11",
-        "title": "Sine Rule, Cosine Rule and Area of a Triangle",
+        "title": "Sine & Cosine Rules",
         "href": "downloads/Linear/VisualNotes/C4_T11_Sine_Cosine_Rule/Sine_Cosine_Rule_Visual_Notes.pdf?v=20261009c",
         "pages": 14,
         "mb": 0.35
        },
        {
         "num": "4.12",
-        "title": "3D Pythagoras and Trigonometry",
+        "title": "3D Pythagoras & Trigonometry",
         "href": "downloads/Linear/VisualNotes/C4_T12_3D_Pythagoras_Trigonometry/3D_Pythagoras_Trigonometry_Visual_Notes.pdf?v=20261009c",
         "pages": 12,
         "mb": 0.32
@@ -392,7 +392,7 @@
      },
      {
       "number": 5,
-      "title": "Vectors and Transformations",
+      "title": "Vectors & Transformation Geometry",
       "booklet": null,
       "topics": [
        {
@@ -413,12 +413,12 @@
      },
      {
       "number": 6,
-      "title": "Statistics and Probability",
+      "title": "Statistics & Probability",
       "booklet": null,
       "topics": [
        {
         "num": "6.1",
-        "title": "Statistics",
+        "title": "Statistics Toolkit",
         "href": "downloads/Linear/VisualNotes/C6_T01_Statistics/Statistics_Visual_Notes.pdf?v=20261009c",
         "pages": 16,
         "mb": 0.39
@@ -432,7 +432,7 @@
        },
        {
         "num": "6.3",
-        "title": "Cumulative Frequency",
+        "title": "Cumulative Frequency Diagrams",
         "href": "downloads/Linear/VisualNotes/C6_T03_Cumulative_Frequency/Cumulative_Frequency_Visual_Notes.pdf?v=20261009c",
         "pages": 12,
         "mb": 0.33
@@ -453,7 +453,7 @@
        },
        {
         "num": "6.6",
-        "title": "Combined and Conditional Probability",
+        "title": "Combined & Conditional Probability",
         "href": "downloads/Linear/VisualNotes/C6_T06_Combined_Conditional_Probability/Combined_Conditional_Probability_Visual_Notes.pdf?v=20261009c",
         "pages": 14,
         "mb": 0.36
@@ -480,7 +480,7 @@
     "topics": [
      {
       "num": "01",
-      "title": "Set Notation and Venn Diagrams",
+      "title": "Set Notation & Venn Diagrams",
       "olt": "OL-T02",
       "href": "downloads/Linear/VisualNotes/C1_T02_Sets_and_Venn_Diagrams/Sets_and_Venn_Diagrams_Visual_Notes.pdf?v=20261009c",
       "pages": 18,
@@ -488,7 +488,7 @@
      },
      {
       "num": "02",
-      "title": "Powers, Roots and Standard Form",
+      "title": "Powers, Roots & Standard Form",
       "olt": "OL-T04",
       "href": "downloads/Linear/VisualNotes/C1_T04_Powers_Roots_Standard_Form/Powers_Roots_Standard_Form_Visual_Notes.pdf?v=20261009c",
       "pages": 18,
@@ -504,7 +504,7 @@
      },
      {
       "num": "04",
-      "title": "Fractions, Decimals and Percentages",
+      "title": "Fractions, Decimals & Percentages",
       "olt": "OL-T08",
       "href": "downloads/Linear/VisualNotes/C1_T08_Fractions_Decimals_Percentages/Fractions_Decimals_Percentages_Visual_Notes.pdf?v=20261009c",
       "pages": 16,
@@ -512,7 +512,7 @@
      },
      {
       "num": "05",
-      "title": "Rounding, Estimation and Bounds",
+      "title": "Rounding, Estimation & Bounds",
       "olt": "OL-T09",
       "href": "downloads/Linear/VisualNotes/C1_T09_Rounding_Estimation_Bounds/Rounding_Estimation_Bounds_Visual_Notes.pdf?v=20261009c",
       "pages": 18,
@@ -528,7 +528,7 @@
      },
      {
       "num": "07",
-      "title": "Exchange Rates and Best Buys",
+      "title": "Exchange Rates & Best Buys",
       "olt": "OL-T14",
       "href": "downloads/Linear/VisualNotes/C1_T14_Exchange_Rates_Best_Buys/Exchange_Rates_Best_Buys_Visual_Notes.pdf?v=20261009c",
       "pages": 12,
@@ -552,7 +552,7 @@
      },
      {
       "num": "10",
-      "title": "Factorisation",
+      "title": "Factorising",
       "olt": "OL-T19",
       "href": "downloads/Linear/VisualNotes/C2_T04_Factorisation/Factorisation_Visual_Notes.pdf?v=20261009c",
       "pages": 18,
@@ -592,7 +592,7 @@
      },
      {
       "num": "15",
-      "title": "Forming and Solving Equations",
+      "title": "Forming & Solving Equations",
       "olt": "OL-T28",
       "href": "downloads/Linear/VisualNotes/C2_T13_Forming_Equations/Forming_Equations_Visual_Notes.pdf?v=20261009c",
       "pages": 18,
@@ -624,7 +624,7 @@
      },
      {
       "num": "19",
-      "title": "Standard and Compound Units",
+      "title": "Standard & Compound Units",
       "olt": "OL-T39",
       "href": "downloads/Linear/VisualNotes/C4_T01_Standard_Compound_Units/Standard_Compound_Units_Visual_Notes.pdf?v=20261009c",
       "pages": 16,
@@ -632,7 +632,7 @@
      },
      {
       "num": "20",
-      "title": "Angles in Polygons and Parallel Lines",
+      "title": "Angles in Polygons & Parallel Lines",
       "olt": "OL-T40",
       "href": "downloads/Linear/VisualNotes/C4_T02_Angles_Polygons_Parallel_Lines/Angles_Polygons_Parallel_Lines_Visual_Notes.pdf?v=20261009c",
       "pages": 14,
@@ -640,7 +640,7 @@
      },
      {
       "num": "21",
-      "title": "Area and Perimeter",
+      "title": "Perimeter & Area",
       "olt": "OL-T43",
       "href": "downloads/Linear/VisualNotes/C4_T05_Area_Perimeter/Area_Perimeter_Visual_Notes.pdf?v=20261009c",
       "pages": 14,
@@ -648,7 +648,7 @@
      },
      {
       "num": "22",
-      "title": "Circles, Arcs and Sectors",
+      "title": "Circles, Arcs & Sectors",
       "olt": "OL-T44",
       "href": "downloads/Linear/VisualNotes/C4_T06_Circles_Arcs_Sectors/Circles_Arcs_Sectors_Visual_Notes.pdf?v=20261009c",
       "pages": 14,
@@ -656,7 +656,7 @@
      },
      {
       "num": "23",
-      "title": "Right-Angled Triangles: Pythagoras and Trigonometry",
+      "title": "Right-Angled Triangles - Pythagoras & Trigonometry",
       "olt": "OL-T48",
       "href": "downloads/Linear/VisualNotes/C4_T10_Pythagoras_Trigonometry/Pythagoras_Trigonometry_Visual_Notes.pdf?v=20261009c",
       "pages": 14,
@@ -664,7 +664,7 @@
      },
      {
       "num": "24",
-      "title": "Sine Rule, Cosine Rule and Area of a Triangle",
+      "title": "Sine & Cosine Rules",
       "olt": "OL-T49",
       "href": "downloads/Linear/VisualNotes/C4_T11_Sine_Cosine_Rule/Sine_Cosine_Rule_Visual_Notes.pdf?v=20261009c",
       "pages": 14,
@@ -672,7 +672,7 @@
      },
      {
       "num": "25",
-      "title": "3D Pythagoras and Trigonometry",
+      "title": "3D Pythagoras & Trigonometry",
       "olt": "OL-T50",
       "href": "downloads/Linear/VisualNotes/C4_T12_3D_Pythagoras_Trigonometry/3D_Pythagoras_Trigonometry_Visual_Notes.pdf?v=20261009c",
       "pages": 12,
@@ -704,7 +704,7 @@
      },
      {
       "num": "29",
-      "title": "Combined and Conditional Probability",
+      "title": "Combined & Conditional Probability",
       "olt": "OL-T58",
       "href": "downloads/Linear/VisualNotes/C6_T06_Combined_Conditional_Probability/Combined_Conditional_Probability_Visual_Notes.pdf?v=20261009c",
       "pages": 14,
@@ -730,7 +730,7 @@
     "topics": [
      {
       "num": "01",
-      "title": "Prime Factors, HCF and LCM",
+      "title": "Prime Factors, HCF & LCM",
       "olt": "OL-T03",
       "href": "downloads/Linear/VisualNotes/C1_T03_Prime_Factors_HCF_LCM/Prime_Factors_HCF_LCM_Visual_Notes.pdf?v=20261009c",
       "pages": 16,
@@ -738,7 +738,7 @@
      },
      {
       "num": "02",
-      "title": "Powers, Roots and Standard Form",
+      "title": "Powers, Roots & Standard Form",
       "olt": "OL-T04",
       "href": "downloads/Linear/VisualNotes/C1_T04_Powers_Roots_Standard_Form/Powers_Roots_Standard_Form_Visual_Notes.pdf?v=20261009c",
       "pages": 18,
@@ -754,7 +754,7 @@
      },
      {
       "num": "04",
-      "title": "Compound Interest and Depreciation",
+      "title": "Compound Interest & Depreciation",
       "olt": "OL-T07",
       "href": "downloads/Linear/VisualNotes/C1_T07_Compound_Interest/Compound_Interest_Visual_Notes.pdf?v=20261009c",
       "pages": 16,
@@ -802,7 +802,7 @@
      },
      {
       "num": "10",
-      "title": "Rearranging Formulas",
+      "title": "Rearranging Formulae",
       "olt": "OL-T22",
       "href": "downloads/Linear/VisualNotes/C2_T07_Rearranging_Formulas/Rearranging_Formulas_Visual_Notes.pdf?v=20261009c",
       "pages": 18,
@@ -834,7 +834,7 @@
      },
      {
       "num": "14",
-      "title": "Forming and Solving Equations",
+      "title": "Forming & Solving Equations",
       "olt": "OL-T28",
       "href": "downloads/Linear/VisualNotes/C2_T13_Forming_Equations/Forming_Equations_Visual_Notes.pdf?v=20261009c",
       "pages": 18,
@@ -882,7 +882,7 @@
      },
      {
       "num": "20",
-      "title": "Differentiation",
+      "title": "Differentiation & Turning Points",
       "olt": "OL-T38",
       "href": "downloads/Linear/VisualNotes/C3_T10_Differentiation/Differentiation_Visual_Notes.pdf?v=20261009c",
       "pages": 16,
@@ -890,7 +890,7 @@
      },
      {
       "num": "21",
-      "title": "Standard and Compound Units",
+      "title": "Standard & Compound Units",
       "olt": "OL-T39",
       "href": "downloads/Linear/VisualNotes/C4_T01_Standard_Compound_Units/Standard_Compound_Units_Visual_Notes.pdf?v=20261009c",
       "pages": 16,
@@ -898,7 +898,7 @@
      },
      {
       "num": "22",
-      "title": "Angles in Polygons and Parallel Lines",
+      "title": "Angles in Polygons & Parallel Lines",
       "olt": "OL-T40",
       "href": "downloads/Linear/VisualNotes/C4_T02_Angles_Polygons_Parallel_Lines/Angles_Polygons_Parallel_Lines_Visual_Notes.pdf?v=20261009c",
       "pages": 14,
@@ -906,7 +906,7 @@
      },
      {
       "num": "23",
-      "title": "Bearings, Scale Drawing and Constructions",
+      "title": "Bearings, Scale Drawing & Constructions",
       "olt": "OL-T41",
       "href": "downloads/Linear/VisualNotes/C4_T03_Bearings_Scale_Constructions/Bearings_Scale_Constructions_Visual_Notes.pdf?v=20261009c",
       "pages": 16,
@@ -922,7 +922,7 @@
      },
      {
       "num": "25",
-      "title": "Circles, Arcs and Sectors",
+      "title": "Circles, Arcs & Sectors",
       "olt": "OL-T44",
       "href": "downloads/Linear/VisualNotes/C4_T06_Circles_Arcs_Sectors/Circles_Arcs_Sectors_Visual_Notes.pdf?v=20261009c",
       "pages": 14,
@@ -930,7 +930,7 @@
      },
      {
       "num": "26",
-      "title": "Volume and Surface Area",
+      "title": "Volume & Surface Area",
       "olt": "OL-T45",
       "href": "downloads/Linear/VisualNotes/C4_T07_Volume_Surface_Area/Volume_Surface_Area_Visual_Notes.pdf?v=20261009c",
       "pages": 14,
@@ -938,7 +938,7 @@
      },
      {
       "num": "27",
-      "title": "Congruence, Similarity and Geometrical Proof",
+      "title": "Congruence, Similarity & Geometrical Proof",
       "olt": "OL-T46",
       "href": "downloads/Linear/VisualNotes/C4_T08_Congruence_Similarity_Proof/Congruence_Similarity_Proof_Visual_Notes.pdf?v=20261009c",
       "pages": 12,
@@ -946,7 +946,7 @@
      },
      {
       "num": "28",
-      "title": "Area and Volume of Similar Shapes",
+      "title": "Area & Volume of Similar Shapes",
       "olt": "OL-T47",
       "href": "downloads/Linear/VisualNotes/C4_T09_Area_Volume_Similar_Shapes/Area_Volume_Similar_Shapes_Visual_Notes.pdf?v=20261009c",
       "pages": 14,
@@ -970,7 +970,7 @@
      },
      {
       "num": "31",
-      "title": "Statistics",
+      "title": "Statistics Toolkit",
       "olt": "OL-T53",
       "href": "downloads/Linear/VisualNotes/C6_T01_Statistics/Statistics_Visual_Notes.pdf?v=20261009c",
       "pages": 16,
@@ -978,7 +978,7 @@
      },
      {
       "num": "32",
-      "title": "Cumulative Frequency",
+      "title": "Cumulative Frequency Diagrams",
       "olt": "OL-T55",
       "href": "downloads/Linear/VisualNotes/C6_T03_Cumulative_Frequency/Cumulative_Frequency_Visual_Notes.pdf?v=20261009c",
       "pages": 12,

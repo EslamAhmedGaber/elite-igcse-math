@@ -17,7 +17,7 @@ window.ELITE_CLASSIFIED_2026 = {
       "chapters": [
         {
           "number": 1,
-          "title": "Number",
+          "title": "Numbers & the Number System",
           "book": {
             "asset": "OL_Chapter1_Number_Classified_Student.pdf",
             "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL_Chapter1_Number_Classified_Student.pdf",
@@ -48,7 +48,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "087ee340896a34b9522ade3ff404100e7867910bd47d49c50d680f6f9cac7ead",
               "id": "OL-T02",
               "num": "02",
-              "title": "Set Notation and Venn Diagrams",
+              "title": "Set Notation & Venn Diagrams",
               "chapter": 1
             },
             {
@@ -60,7 +60,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "f819f275cccbf5e037f7520a63afce3ea034607e338312f827ac029e60ac7d69",
               "id": "OL-T03",
               "num": "03",
-              "title": "Prime Factors HCF and LCM",
+              "title": "Prime Factors, HCF & LCM",
               "chapter": 1
             },
             {
@@ -72,7 +72,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "d9184144c0ef3921b956f122a02f190e78b5d0a8bf006f2fdd8dad0c21829edf",
               "id": "OL-T04",
               "num": "04",
-              "title": "Powers Roots and Standard Form",
+              "title": "Powers, Roots & Standard Form",
               "chapter": 1
             },
             {
@@ -108,7 +108,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "e3ae6487456f67abb21467eb508060682a9f7283becb3ed8821670df9df94030",
               "id": "OL-T07",
               "num": "07",
-              "title": "Compound Interest and Depreciation",
+              "title": "Compound Interest & Depreciation",
               "chapter": 1
             },
             {
@@ -120,7 +120,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "b964fb48b0a90a739690d29b5e0390c6f69673c69154793f2d23ac64a0b99259",
               "id": "OL-T08",
               "num": "08",
-              "title": "Fractions Decimals and Percentages",
+              "title": "Fractions, Decimals & Percentages",
               "chapter": 1
             },
             {
@@ -132,7 +132,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "26cb69aa724271bf40234b51e6e42db5422ae4ca219a1d7a9eaabf6a1e7a883c",
               "id": "OL-T09",
               "num": "09",
-              "title": "Rounding Estimation and Bounds",
+              "title": "Rounding, Estimation & Bounds",
               "chapter": 1
             },
             {
@@ -192,7 +192,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "61597d91bd64e220eb1693d220c401ef7f1acab6d0d2aa5f9d502b5b5d931d69",
               "id": "OL-T14",
               "num": "14",
-              "title": "Exchange Rates and Best Buys",
+              "title": "Exchange Rates & Best Buys",
               "chapter": 1
             },
             {
@@ -211,7 +211,7 @@ window.ELITE_CLASSIFIED_2026 = {
         },
         {
           "number": 2,
-          "title": "Algebra",
+          "title": "Equations, Formulae & Identities",
           "book": {
             "asset": "OL_Chapter2_Algebra_Classified_Student.pdf",
             "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL_Chapter2_Algebra_Classified_Student.pdf",
@@ -302,7 +302,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "b64ed07afaf14a54c30ea85a1766ce7f62f26713908ffbd8c11d02c3c60c8e7c",
               "id": "OL-T22",
               "num": "22",
-              "title": "Rearranging Formulas",
+              "title": "Rearranging Formulae",
               "chapter": 2
             },
             {
@@ -374,14 +374,14 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "314ab8f1ebbce5b573683824e36417c5e2f10c7a453936d9942a517925f23285",
               "id": "OL-T28",
               "num": "28",
-              "title": "Forming and Solving Equations",
+              "title": "Forming & Solving Equations",
               "chapter": 2
             }
           ]
         },
         {
           "number": 3,
-          "title": "Sequences, Functions and Graphs",
+          "title": "Sequences, Functions & Graphs",
           "book": {
             "asset": "OL_Chapter3_Sequences__Functions_and_Graphs_Classified_Student.pdf",
             "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL_Chapter3_Sequences__Functions_and_Graphs_Classified_Student.pdf",
@@ -472,7 +472,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "3f7e001a99c909d0cba3d24ddb70a23d306fdad8a1739caa63d3b8d0f4143d4e",
               "id": "OL-T35",
               "num": "35",
-              "title": "Real Life Graphs",
+              "title": "Real-Life Graphs",
               "chapter": 3
             },
             {
@@ -508,14 +508,14 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "b9b1e159dd4ff5673d4f36697fc0ea81591d02a92ace8f14907749d2065c9072",
               "id": "OL-T38",
               "num": "38",
-              "title": "Differentiation",
+              "title": "Differentiation & Turning Points",
               "chapter": 3
             }
           ]
         },
         {
           "number": 4,
-          "title": "Geometry and Measures",
+          "title": "Geometry & Trigonometry",
           "book": {
             "asset": "OL_Chapter4_Geometry_and_Measures_Classified_Student.pdf",
             "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL_Chapter4_Geometry_and_Measures_Classified_Student.pdf",
@@ -534,7 +534,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "28ea4b433df7648cfd68463661b06a77540a79a835d0cee93dabec82eebce306",
               "id": "OL-T39",
               "num": "39",
-              "title": "Standard and Compound Units",
+              "title": "Standard & Compound Units",
               "chapter": 4
             },
             {
@@ -546,7 +546,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "5b6577a8f473c391de42e2ee8809c5e5a8b9650e34d5bf76fc53974b5a327151",
               "id": "OL-T40",
               "num": "40",
-              "title": "Angles in Polygons and Parallel Lines",
+              "title": "Angles in Polygons & Parallel Lines",
               "chapter": 4
             },
             {
@@ -582,7 +582,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "8abbc36ba7e4445f2d317a99c82397fa5b9e58161617c77b76ad1fab4d7895ee",
               "id": "OL-T43",
               "num": "43",
-              "title": "Area and Perimeter",
+              "title": "Perimeter & Area",
               "chapter": 4
             },
             {
@@ -594,7 +594,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "3159c40d184b90e4b9ef76961bdd2557bbadee5120394ea4442c154126627531",
               "id": "OL-T44",
               "num": "44",
-              "title": "Circles Arcs and Sectors",
+              "title": "Circles, Arcs & Sectors",
               "chapter": 4
             },
             {
@@ -606,7 +606,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "6c8371786fc97ae07ef55cc530ce18b1bebeba1cb454313fa9762708098563e3",
               "id": "OL-T45",
               "num": "45",
-              "title": "Volume and Surface Area",
+              "title": "Volume & Surface Area",
               "chapter": 4
             },
             {
@@ -630,7 +630,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "f0c4a50ccf094c47261f099871fe33e3eee1533eb3aa31dbbc22b612e174a258",
               "id": "OL-T47",
               "num": "47",
-              "title": "Area and Volume of Similar Shapes",
+              "title": "Area & Volume of Similar Shapes",
               "chapter": 4
             },
             {
@@ -642,7 +642,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "8622ce198b2218ea45d101a607e43b017022f21a2129a04caef15b8befe22bd2",
               "id": "OL-T48",
               "num": "48",
-              "title": "Right Angled Triangles Pythagoras and Trigonometry",
+              "title": "Right-Angled Triangles - Pythagoras & Trigonometry",
               "chapter": 4
             },
             {
@@ -654,7 +654,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "5ce697870d506260c68e51768b0692db80961aecd9b4f37a66484736128ab1ed",
               "id": "OL-T49",
               "num": "49",
-              "title": "Sine Cosine Rule and Area of Triangles",
+              "title": "Sine & Cosine Rules",
               "chapter": 4
             },
             {
@@ -666,14 +666,14 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "350e9639b6351a8821ce39de764d71dda52932193eb6c6a710c4c5ac82dac8cb",
               "id": "OL-T50",
               "num": "50",
-              "title": "3D Pythagoras and Trigonometry",
+              "title": "3D Pythagoras & Trigonometry",
               "chapter": 4
             }
           ]
         },
         {
           "number": 5,
-          "title": "Vectors and Transformations",
+          "title": "Vectors & Transformation Geometry",
           "book": {
             "asset": "OL_Chapter5_Vectors_and_Transformations_Classified_Student.pdf",
             "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL_Chapter5_Vectors_and_Transformations_Classified_Student.pdf",
@@ -711,7 +711,7 @@ window.ELITE_CLASSIFIED_2026 = {
         },
         {
           "number": 6,
-          "title": "Statistics and Probability",
+          "title": "Statistics & Probability",
           "book": {
             "asset": "OL_Chapter6_Statistics_and_Probability_Classified_Student.pdf",
             "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/OL_Chapter6_Statistics_and_Probability_Classified_Student.pdf",
@@ -778,7 +778,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "04a5843ed635cff8020dd5e716de4cb886b78515f00f6a80730dd211f7b6a3c5",
               "id": "OL-T57",
               "num": "57",
-              "title": "Probability Diagrams Venn and Tree Diagrams",
+              "title": "Probability Diagrams - Venn & Tree Diagrams",
               "chapter": 6
             },
             {
@@ -790,7 +790,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "025c61d71232217f0196ae82b95e0bcfa4952b7fc194354b9ddf713edce5c5e4",
               "id": "OL-T58",
               "num": "58",
-              "title": "Combined and Conditional Probability",
+              "title": "Combined & Conditional Probability",
               "chapter": 6
             }
           ]
@@ -818,7 +818,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "087ee340896a34b9522ade3ff404100e7867910bd47d49c50d680f6f9cac7ead",
           "id": "OL-T02",
           "num": "02",
-          "title": "Set Notation and Venn Diagrams",
+          "title": "Set Notation & Venn Diagrams",
           "chapter": 1
         },
         {
@@ -830,7 +830,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "f819f275cccbf5e037f7520a63afce3ea034607e338312f827ac029e60ac7d69",
           "id": "OL-T03",
           "num": "03",
-          "title": "Prime Factors HCF and LCM",
+          "title": "Prime Factors, HCF & LCM",
           "chapter": 1
         },
         {
@@ -842,7 +842,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "d9184144c0ef3921b956f122a02f190e78b5d0a8bf006f2fdd8dad0c21829edf",
           "id": "OL-T04",
           "num": "04",
-          "title": "Powers Roots and Standard Form",
+          "title": "Powers, Roots & Standard Form",
           "chapter": 1
         },
         {
@@ -878,7 +878,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "e3ae6487456f67abb21467eb508060682a9f7283becb3ed8821670df9df94030",
           "id": "OL-T07",
           "num": "07",
-          "title": "Compound Interest and Depreciation",
+          "title": "Compound Interest & Depreciation",
           "chapter": 1
         },
         {
@@ -890,7 +890,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "b964fb48b0a90a739690d29b5e0390c6f69673c69154793f2d23ac64a0b99259",
           "id": "OL-T08",
           "num": "08",
-          "title": "Fractions Decimals and Percentages",
+          "title": "Fractions, Decimals & Percentages",
           "chapter": 1
         },
         {
@@ -902,7 +902,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "26cb69aa724271bf40234b51e6e42db5422ae4ca219a1d7a9eaabf6a1e7a883c",
           "id": "OL-T09",
           "num": "09",
-          "title": "Rounding Estimation and Bounds",
+          "title": "Rounding, Estimation & Bounds",
           "chapter": 1
         },
         {
@@ -962,7 +962,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "61597d91bd64e220eb1693d220c401ef7f1acab6d0d2aa5f9d502b5b5d931d69",
           "id": "OL-T14",
           "num": "14",
-          "title": "Exchange Rates and Best Buys",
+          "title": "Exchange Rates & Best Buys",
           "chapter": 1
         },
         {
@@ -1058,7 +1058,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "b64ed07afaf14a54c30ea85a1766ce7f62f26713908ffbd8c11d02c3c60c8e7c",
           "id": "OL-T22",
           "num": "22",
-          "title": "Rearranging Formulas",
+          "title": "Rearranging Formulae",
           "chapter": 2
         },
         {
@@ -1130,7 +1130,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "314ab8f1ebbce5b573683824e36417c5e2f10c7a453936d9942a517925f23285",
           "id": "OL-T28",
           "num": "28",
-          "title": "Forming and Solving Equations",
+          "title": "Forming & Solving Equations",
           "chapter": 2
         },
         {
@@ -1214,7 +1214,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "3f7e001a99c909d0cba3d24ddb70a23d306fdad8a1739caa63d3b8d0f4143d4e",
           "id": "OL-T35",
           "num": "35",
-          "title": "Real Life Graphs",
+          "title": "Real-Life Graphs",
           "chapter": 3
         },
         {
@@ -1250,7 +1250,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "b9b1e159dd4ff5673d4f36697fc0ea81591d02a92ace8f14907749d2065c9072",
           "id": "OL-T38",
           "num": "38",
-          "title": "Differentiation",
+          "title": "Differentiation & Turning Points",
           "chapter": 3
         },
         {
@@ -1262,7 +1262,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "28ea4b433df7648cfd68463661b06a77540a79a835d0cee93dabec82eebce306",
           "id": "OL-T39",
           "num": "39",
-          "title": "Standard and Compound Units",
+          "title": "Standard & Compound Units",
           "chapter": 4
         },
         {
@@ -1274,7 +1274,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "5b6577a8f473c391de42e2ee8809c5e5a8b9650e34d5bf76fc53974b5a327151",
           "id": "OL-T40",
           "num": "40",
-          "title": "Angles in Polygons and Parallel Lines",
+          "title": "Angles in Polygons & Parallel Lines",
           "chapter": 4
         },
         {
@@ -1310,7 +1310,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "8abbc36ba7e4445f2d317a99c82397fa5b9e58161617c77b76ad1fab4d7895ee",
           "id": "OL-T43",
           "num": "43",
-          "title": "Area and Perimeter",
+          "title": "Perimeter & Area",
           "chapter": 4
         },
         {
@@ -1322,7 +1322,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "3159c40d184b90e4b9ef76961bdd2557bbadee5120394ea4442c154126627531",
           "id": "OL-T44",
           "num": "44",
-          "title": "Circles Arcs and Sectors",
+          "title": "Circles, Arcs & Sectors",
           "chapter": 4
         },
         {
@@ -1334,7 +1334,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "6c8371786fc97ae07ef55cc530ce18b1bebeba1cb454313fa9762708098563e3",
           "id": "OL-T45",
           "num": "45",
-          "title": "Volume and Surface Area",
+          "title": "Volume & Surface Area",
           "chapter": 4
         },
         {
@@ -1358,7 +1358,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "f0c4a50ccf094c47261f099871fe33e3eee1533eb3aa31dbbc22b612e174a258",
           "id": "OL-T47",
           "num": "47",
-          "title": "Area and Volume of Similar Shapes",
+          "title": "Area & Volume of Similar Shapes",
           "chapter": 4
         },
         {
@@ -1370,7 +1370,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "8622ce198b2218ea45d101a607e43b017022f21a2129a04caef15b8befe22bd2",
           "id": "OL-T48",
           "num": "48",
-          "title": "Right Angled Triangles Pythagoras and Trigonometry",
+          "title": "Right-Angled Triangles - Pythagoras & Trigonometry",
           "chapter": 4
         },
         {
@@ -1382,7 +1382,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "5ce697870d506260c68e51768b0692db80961aecd9b4f37a66484736128ab1ed",
           "id": "OL-T49",
           "num": "49",
-          "title": "Sine Cosine Rule and Area of Triangles",
+          "title": "Sine & Cosine Rules",
           "chapter": 4
         },
         {
@@ -1394,7 +1394,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "350e9639b6351a8821ce39de764d71dda52932193eb6c6a710c4c5ac82dac8cb",
           "id": "OL-T50",
           "num": "50",
-          "title": "3D Pythagoras and Trigonometry",
+          "title": "3D Pythagoras & Trigonometry",
           "chapter": 4
         },
         {
@@ -1478,7 +1478,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "04a5843ed635cff8020dd5e716de4cb886b78515f00f6a80730dd211f7b6a3c5",
           "id": "OL-T57",
           "num": "57",
-          "title": "Probability Diagrams Venn and Tree Diagrams",
+          "title": "Probability Diagrams - Venn & Tree Diagrams",
           "chapter": 6
         },
         {
@@ -1490,7 +1490,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "025c61d71232217f0196ae82b95e0bcfa4952b7fc194354b9ddf713edce5c5e4",
           "id": "OL-T58",
           "num": "58",
-          "title": "Combined and Conditional Probability",
+          "title": "Combined & Conditional Probability",
           "chapter": 6
         }
       ]
@@ -1510,7 +1510,7 @@ window.ELITE_CLASSIFIED_2026 = {
       "chapters": [
         {
           "number": 1,
-          "title": "Number",
+          "title": "Numbers & the Number System",
           "book": {
             "asset": "Modular_Unit1_Chapter1_2026_Student.pdf",
             "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/Modular_Unit1_Chapter1_2026_Student.pdf",
@@ -1529,7 +1529,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "087ee340896a34b9522ade3ff404100e7867910bd47d49c50d680f6f9cac7ead",
               "id": "OL-T02",
               "num": "01",
-              "title": "Set Notation and Venn Diagrams",
+              "title": "Set Notation & Venn Diagrams",
               "chapter": 1
             },
             {
@@ -1541,7 +1541,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "d9184144c0ef3921b956f122a02f190e78b5d0a8bf006f2fdd8dad0c21829edf",
               "id": "OL-T04",
               "num": "02",
-              "title": "Powers Roots and Standard Form",
+              "title": "Powers, Roots & Standard Form",
               "chapter": 1
             },
             {
@@ -1565,7 +1565,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "b964fb48b0a90a739690d29b5e0390c6f69673c69154793f2d23ac64a0b99259",
               "id": "OL-T08",
               "num": "04",
-              "title": "Fractions Decimals and Percentages",
+              "title": "Fractions, Decimals & Percentages",
               "chapter": 1
             },
             {
@@ -1577,7 +1577,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "26cb69aa724271bf40234b51e6e42db5422ae4ca219a1d7a9eaabf6a1e7a883c",
               "id": "OL-T09",
               "num": "05",
-              "title": "Rounding Estimation and Bounds",
+              "title": "Rounding, Estimation & Bounds",
               "chapter": 1
             },
             {
@@ -1601,14 +1601,14 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "61597d91bd64e220eb1693d220c401ef7f1acab6d0d2aa5f9d502b5b5d931d69",
               "id": "OL-T14",
               "num": "07",
-              "title": "Exchange Rates and Best Buys",
+              "title": "Exchange Rates & Best Buys",
               "chapter": 1
             }
           ]
         },
         {
           "number": 2,
-          "title": "Algebra",
+          "title": "Equations, Formulae & Identities",
           "book": {
             "asset": "Modular_Unit1_Chapter2_2026_Student.pdf",
             "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/Modular_Unit1_Chapter2_2026_Student.pdf",
@@ -1711,14 +1711,14 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "314ab8f1ebbce5b573683824e36417c5e2f10c7a453936d9942a517925f23285",
               "id": "OL-T28",
               "num": "15",
-              "title": "Forming and Solving Equations",
+              "title": "Forming & Solving Equations",
               "chapter": 2
             }
           ]
         },
         {
           "number": 3,
-          "title": "Sequences, Functions and Graphs",
+          "title": "Sequences, Functions & Graphs",
           "book": {
             "asset": "Modular_Unit1_Chapter3_2026_Student.pdf",
             "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/Modular_Unit1_Chapter3_2026_Student.pdf",
@@ -1768,7 +1768,7 @@ window.ELITE_CLASSIFIED_2026 = {
         },
         {
           "number": 4,
-          "title": "Geometry and Measures",
+          "title": "Geometry & Trigonometry",
           "book": {
             "asset": "Modular_Unit1_Chapter4_2026_Student.pdf",
             "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/Modular_Unit1_Chapter4_2026_Student.pdf",
@@ -1787,7 +1787,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "28ea4b433df7648cfd68463661b06a77540a79a835d0cee93dabec82eebce306",
               "id": "OL-T39",
               "num": "19",
-              "title": "Standard and Compound Units",
+              "title": "Standard & Compound Units",
               "chapter": 4
             },
             {
@@ -1799,7 +1799,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "5b6577a8f473c391de42e2ee8809c5e5a8b9650e34d5bf76fc53974b5a327151",
               "id": "OL-T40",
               "num": "20",
-              "title": "Angles in Polygons and Parallel Lines",
+              "title": "Angles in Polygons & Parallel Lines",
               "chapter": 4
             },
             {
@@ -1811,7 +1811,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "8abbc36ba7e4445f2d317a99c82397fa5b9e58161617c77b76ad1fab4d7895ee",
               "id": "OL-T43",
               "num": "21",
-              "title": "Area and Perimeter",
+              "title": "Perimeter & Area",
               "chapter": 4
             },
             {
@@ -1823,7 +1823,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "3159c40d184b90e4b9ef76961bdd2557bbadee5120394ea4442c154126627531",
               "id": "OL-T44",
               "num": "22",
-              "title": "Circles Arcs and Sectors",
+              "title": "Circles, Arcs & Sectors",
               "chapter": 4
             },
             {
@@ -1835,7 +1835,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "8622ce198b2218ea45d101a607e43b017022f21a2129a04caef15b8befe22bd2",
               "id": "OL-T48",
               "num": "23",
-              "title": "Right Angled Triangles Pythagoras and Trigonometry",
+              "title": "Right-Angled Triangles - Pythagoras & Trigonometry",
               "chapter": 4
             },
             {
@@ -1847,7 +1847,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "5ce697870d506260c68e51768b0692db80961aecd9b4f37a66484736128ab1ed",
               "id": "OL-T49",
               "num": "24",
-              "title": "Sine Cosine Rule and Area of Triangles",
+              "title": "Sine & Cosine Rules",
               "chapter": 4
             },
             {
@@ -1859,14 +1859,14 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "350e9639b6351a8821ce39de764d71dda52932193eb6c6a710c4c5ac82dac8cb",
               "id": "OL-T50",
               "num": "25",
-              "title": "3D Pythagoras and Trigonometry",
+              "title": "3D Pythagoras & Trigonometry",
               "chapter": 4
             }
           ]
         },
         {
           "number": 6,
-          "title": "Statistics and Probability",
+          "title": "Statistics & Probability",
           "book": {
             "asset": "Modular_Unit1_Chapter6_2026_Student.pdf",
             "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/Modular_Unit1_Chapter6_2026_Student.pdf",
@@ -1909,7 +1909,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "04a5843ed635cff8020dd5e716de4cb886b78515f00f6a80730dd211f7b6a3c5",
               "id": "OL-T57",
               "num": "28",
-              "title": "Probability Diagrams Venn and Tree Diagrams",
+              "title": "Probability Diagrams - Venn & Tree Diagrams",
               "chapter": 6
             },
             {
@@ -1921,7 +1921,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "025c61d71232217f0196ae82b95e0bcfa4952b7fc194354b9ddf713edce5c5e4",
               "id": "OL-T58",
               "num": "29",
-              "title": "Combined and Conditional Probability",
+              "title": "Combined & Conditional Probability",
               "chapter": 6
             }
           ]
@@ -1937,7 +1937,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "087ee340896a34b9522ade3ff404100e7867910bd47d49c50d680f6f9cac7ead",
           "id": "OL-T02",
           "num": "01",
-          "title": "Set Notation and Venn Diagrams",
+          "title": "Set Notation & Venn Diagrams",
           "chapter": 1
         },
         {
@@ -1949,7 +1949,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "d9184144c0ef3921b956f122a02f190e78b5d0a8bf006f2fdd8dad0c21829edf",
           "id": "OL-T04",
           "num": "02",
-          "title": "Powers Roots and Standard Form",
+          "title": "Powers, Roots & Standard Form",
           "chapter": 1
         },
         {
@@ -1973,7 +1973,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "b964fb48b0a90a739690d29b5e0390c6f69673c69154793f2d23ac64a0b99259",
           "id": "OL-T08",
           "num": "04",
-          "title": "Fractions Decimals and Percentages",
+          "title": "Fractions, Decimals & Percentages",
           "chapter": 1
         },
         {
@@ -1985,7 +1985,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "26cb69aa724271bf40234b51e6e42db5422ae4ca219a1d7a9eaabf6a1e7a883c",
           "id": "OL-T09",
           "num": "05",
-          "title": "Rounding Estimation and Bounds",
+          "title": "Rounding, Estimation & Bounds",
           "chapter": 1
         },
         {
@@ -2009,7 +2009,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "61597d91bd64e220eb1693d220c401ef7f1acab6d0d2aa5f9d502b5b5d931d69",
           "id": "OL-T14",
           "num": "07",
-          "title": "Exchange Rates and Best Buys",
+          "title": "Exchange Rates & Best Buys",
           "chapter": 1
         },
         {
@@ -2105,7 +2105,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "314ab8f1ebbce5b573683824e36417c5e2f10c7a453936d9942a517925f23285",
           "id": "OL-T28",
           "num": "15",
-          "title": "Forming and Solving Equations",
+          "title": "Forming & Solving Equations",
           "chapter": 2
         },
         {
@@ -2153,7 +2153,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "28ea4b433df7648cfd68463661b06a77540a79a835d0cee93dabec82eebce306",
           "id": "OL-T39",
           "num": "19",
-          "title": "Standard and Compound Units",
+          "title": "Standard & Compound Units",
           "chapter": 4
         },
         {
@@ -2165,7 +2165,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "5b6577a8f473c391de42e2ee8809c5e5a8b9650e34d5bf76fc53974b5a327151",
           "id": "OL-T40",
           "num": "20",
-          "title": "Angles in Polygons and Parallel Lines",
+          "title": "Angles in Polygons & Parallel Lines",
           "chapter": 4
         },
         {
@@ -2177,7 +2177,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "8abbc36ba7e4445f2d317a99c82397fa5b9e58161617c77b76ad1fab4d7895ee",
           "id": "OL-T43",
           "num": "21",
-          "title": "Area and Perimeter",
+          "title": "Perimeter & Area",
           "chapter": 4
         },
         {
@@ -2189,7 +2189,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "3159c40d184b90e4b9ef76961bdd2557bbadee5120394ea4442c154126627531",
           "id": "OL-T44",
           "num": "22",
-          "title": "Circles Arcs and Sectors",
+          "title": "Circles, Arcs & Sectors",
           "chapter": 4
         },
         {
@@ -2201,7 +2201,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "8622ce198b2218ea45d101a607e43b017022f21a2129a04caef15b8befe22bd2",
           "id": "OL-T48",
           "num": "23",
-          "title": "Right Angled Triangles Pythagoras and Trigonometry",
+          "title": "Right-Angled Triangles - Pythagoras & Trigonometry",
           "chapter": 4
         },
         {
@@ -2213,7 +2213,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "5ce697870d506260c68e51768b0692db80961aecd9b4f37a66484736128ab1ed",
           "id": "OL-T49",
           "num": "24",
-          "title": "Sine Cosine Rule and Area of Triangles",
+          "title": "Sine & Cosine Rules",
           "chapter": 4
         },
         {
@@ -2225,7 +2225,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "350e9639b6351a8821ce39de764d71dda52932193eb6c6a710c4c5ac82dac8cb",
           "id": "OL-T50",
           "num": "25",
-          "title": "3D Pythagoras and Trigonometry",
+          "title": "3D Pythagoras & Trigonometry",
           "chapter": 4
         },
         {
@@ -2261,7 +2261,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "04a5843ed635cff8020dd5e716de4cb886b78515f00f6a80730dd211f7b6a3c5",
           "id": "OL-T57",
           "num": "28",
-          "title": "Probability Diagrams Venn and Tree Diagrams",
+          "title": "Probability Diagrams - Venn & Tree Diagrams",
           "chapter": 6
         },
         {
@@ -2273,7 +2273,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "025c61d71232217f0196ae82b95e0bcfa4952b7fc194354b9ddf713edce5c5e4",
           "id": "OL-T58",
           "num": "29",
-          "title": "Combined and Conditional Probability",
+          "title": "Combined & Conditional Probability",
           "chapter": 6
         }
       ]
@@ -2293,7 +2293,7 @@ window.ELITE_CLASSIFIED_2026 = {
       "chapters": [
         {
           "number": 1,
-          "title": "Number",
+          "title": "Numbers & the Number System",
           "book": {
             "asset": "Modular_Unit2_Chapter1_2026_Student.pdf",
             "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/Modular_Unit2_Chapter1_2026_Student.pdf",
@@ -2312,7 +2312,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "f819f275cccbf5e037f7520a63afce3ea034607e338312f827ac029e60ac7d69",
               "id": "OL-T03",
               "num": "01",
-              "title": "Prime Factors HCF and LCM",
+              "title": "Prime Factors, HCF & LCM",
               "chapter": 1
             },
             {
@@ -2324,7 +2324,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "d9184144c0ef3921b956f122a02f190e78b5d0a8bf006f2fdd8dad0c21829edf",
               "id": "OL-T04",
               "num": "02",
-              "title": "Powers Roots and Standard Form",
+              "title": "Powers, Roots & Standard Form",
               "chapter": 1
             },
             {
@@ -2348,7 +2348,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "e3ae6487456f67abb21467eb508060682a9f7283becb3ed8821670df9df94030",
               "id": "OL-T07",
               "num": "04",
-              "title": "Compound Interest and Depreciation",
+              "title": "Compound Interest & Depreciation",
               "chapter": 1
             },
             {
@@ -2391,7 +2391,7 @@ window.ELITE_CLASSIFIED_2026 = {
         },
         {
           "number": 2,
-          "title": "Algebra",
+          "title": "Equations, Formulae & Identities",
           "book": {
             "asset": "Modular_Unit2_Chapter2_2026_Student.pdf",
             "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/Modular_Unit2_Chapter2_2026_Student.pdf",
@@ -2434,7 +2434,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "b64ed07afaf14a54c30ea85a1766ce7f62f26713908ffbd8c11d02c3c60c8e7c",
               "id": "OL-T22",
               "num": "10",
-              "title": "Rearranging Formulas",
+              "title": "Rearranging Formulae",
               "chapter": 2
             },
             {
@@ -2482,14 +2482,14 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "314ab8f1ebbce5b573683824e36417c5e2f10c7a453936d9942a517925f23285",
               "id": "OL-T28",
               "num": "14",
-              "title": "Forming and Solving Equations",
+              "title": "Forming & Solving Equations",
               "chapter": 2
             }
           ]
         },
         {
           "number": 3,
-          "title": "Sequences, Functions and Graphs",
+          "title": "Sequences, Functions & Graphs",
           "book": {
             "asset": "Modular_Unit2_Chapter3_2026_Student.pdf",
             "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/Modular_Unit2_Chapter3_2026_Student.pdf",
@@ -2568,14 +2568,14 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "b9b1e159dd4ff5673d4f36697fc0ea81591d02a92ace8f14907749d2065c9072",
               "id": "OL-T38",
               "num": "20",
-              "title": "Differentiation",
+              "title": "Differentiation & Turning Points",
               "chapter": 3
             }
           ]
         },
         {
           "number": 4,
-          "title": "Geometry and Measures",
+          "title": "Geometry & Trigonometry",
           "book": {
             "asset": "Modular_Unit2_Chapter4_2026_Student.pdf",
             "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/Modular_Unit2_Chapter4_2026_Student.pdf",
@@ -2594,7 +2594,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "28ea4b433df7648cfd68463661b06a77540a79a835d0cee93dabec82eebce306",
               "id": "OL-T39",
               "num": "21",
-              "title": "Standard and Compound Units",
+              "title": "Standard & Compound Units",
               "chapter": 4
             },
             {
@@ -2606,7 +2606,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "5b6577a8f473c391de42e2ee8809c5e5a8b9650e34d5bf76fc53974b5a327151",
               "id": "OL-T40",
               "num": "22",
-              "title": "Angles in Polygons and Parallel Lines",
+              "title": "Angles in Polygons & Parallel Lines",
               "chapter": 4
             },
             {
@@ -2642,7 +2642,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "3159c40d184b90e4b9ef76961bdd2557bbadee5120394ea4442c154126627531",
               "id": "OL-T44",
               "num": "25",
-              "title": "Circles Arcs and Sectors",
+              "title": "Circles, Arcs & Sectors",
               "chapter": 4
             },
             {
@@ -2654,7 +2654,7 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "6c8371786fc97ae07ef55cc530ce18b1bebeba1cb454313fa9762708098563e3",
               "id": "OL-T45",
               "num": "26",
-              "title": "Volume and Surface Area",
+              "title": "Volume & Surface Area",
               "chapter": 4
             },
             {
@@ -2678,14 +2678,14 @@ window.ELITE_CLASSIFIED_2026 = {
               "sha256": "f0c4a50ccf094c47261f099871fe33e3eee1533eb3aa31dbbc22b612e174a258",
               "id": "OL-T47",
               "num": "28",
-              "title": "Area and Volume of Similar Shapes",
+              "title": "Area & Volume of Similar Shapes",
               "chapter": 4
             }
           ]
         },
         {
           "number": 5,
-          "title": "Vectors and Transformations",
+          "title": "Vectors & Transformation Geometry",
           "book": {
             "asset": "Modular_Unit2_Chapter5_2026_Student.pdf",
             "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/Modular_Unit2_Chapter5_2026_Student.pdf",
@@ -2723,7 +2723,7 @@ window.ELITE_CLASSIFIED_2026 = {
         },
         {
           "number": 6,
-          "title": "Statistics and Probability",
+          "title": "Statistics & Probability",
           "book": {
             "asset": "Modular_Unit2_Chapter6_2026_Student.pdf",
             "href": "https://github.com/EslamAhmedGaber/elite-igcse-math/releases/download/ol-classified-practice-20261010/Modular_Unit2_Chapter6_2026_Student.pdf",
@@ -2770,7 +2770,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "f819f275cccbf5e037f7520a63afce3ea034607e338312f827ac029e60ac7d69",
           "id": "OL-T03",
           "num": "01",
-          "title": "Prime Factors HCF and LCM",
+          "title": "Prime Factors, HCF & LCM",
           "chapter": 1
         },
         {
@@ -2782,7 +2782,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "d9184144c0ef3921b956f122a02f190e78b5d0a8bf006f2fdd8dad0c21829edf",
           "id": "OL-T04",
           "num": "02",
-          "title": "Powers Roots and Standard Form",
+          "title": "Powers, Roots & Standard Form",
           "chapter": 1
         },
         {
@@ -2806,7 +2806,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "e3ae6487456f67abb21467eb508060682a9f7283becb3ed8821670df9df94030",
           "id": "OL-T07",
           "num": "04",
-          "title": "Compound Interest and Depreciation",
+          "title": "Compound Interest & Depreciation",
           "chapter": 1
         },
         {
@@ -2878,7 +2878,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "b64ed07afaf14a54c30ea85a1766ce7f62f26713908ffbd8c11d02c3c60c8e7c",
           "id": "OL-T22",
           "num": "10",
-          "title": "Rearranging Formulas",
+          "title": "Rearranging Formulae",
           "chapter": 2
         },
         {
@@ -2926,7 +2926,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "314ab8f1ebbce5b573683824e36417c5e2f10c7a453936d9942a517925f23285",
           "id": "OL-T28",
           "num": "14",
-          "title": "Forming and Solving Equations",
+          "title": "Forming & Solving Equations",
           "chapter": 2
         },
         {
@@ -2998,7 +2998,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "b9b1e159dd4ff5673d4f36697fc0ea81591d02a92ace8f14907749d2065c9072",
           "id": "OL-T38",
           "num": "20",
-          "title": "Differentiation",
+          "title": "Differentiation & Turning Points",
           "chapter": 3
         },
         {
@@ -3010,7 +3010,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "28ea4b433df7648cfd68463661b06a77540a79a835d0cee93dabec82eebce306",
           "id": "OL-T39",
           "num": "21",
-          "title": "Standard and Compound Units",
+          "title": "Standard & Compound Units",
           "chapter": 4
         },
         {
@@ -3022,7 +3022,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "5b6577a8f473c391de42e2ee8809c5e5a8b9650e34d5bf76fc53974b5a327151",
           "id": "OL-T40",
           "num": "22",
-          "title": "Angles in Polygons and Parallel Lines",
+          "title": "Angles in Polygons & Parallel Lines",
           "chapter": 4
         },
         {
@@ -3058,7 +3058,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "3159c40d184b90e4b9ef76961bdd2557bbadee5120394ea4442c154126627531",
           "id": "OL-T44",
           "num": "25",
-          "title": "Circles Arcs and Sectors",
+          "title": "Circles, Arcs & Sectors",
           "chapter": 4
         },
         {
@@ -3070,7 +3070,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "6c8371786fc97ae07ef55cc530ce18b1bebeba1cb454313fa9762708098563e3",
           "id": "OL-T45",
           "num": "26",
-          "title": "Volume and Surface Area",
+          "title": "Volume & Surface Area",
           "chapter": 4
         },
         {
@@ -3094,7 +3094,7 @@ window.ELITE_CLASSIFIED_2026 = {
           "sha256": "f0c4a50ccf094c47261f099871fe33e3eee1533eb3aa31dbbc22b612e174a258",
           "id": "OL-T47",
           "num": "28",
-          "title": "Area and Volume of Similar Shapes",
+          "title": "Area & Volume of Similar Shapes",
           "chapter": 4
         },
         {

@@ -15,7 +15,7 @@
   {
    "id": "chapter-1",
    "number": 1,
-   "title": "Chapter 1: Number",
+   "title": "Chapter 1: Numbers & the Number System",
    "short": "Number",
    "href": null,
    "detail": "15 topic notes with answers",
@@ -34,7 +34,7 @@
     {
      "chapter": "chapter-1",
      "number": "1.2",
-     "title": "Set Notation and Venn Diagrams",
+     "title": "Set Notation & Venn Diagrams",
      "href": "downloads/Linear/VisualNotes/C1_T02_Sets_and_Venn_Diagrams/Sets_and_Venn_Diagrams_Visual_Notes.pdf?v=20261009c",
      "pages": 18,
      "focus": "Fill the intersection first, Use union and intersection, Use complements",
@@ -44,7 +44,7 @@
     {
      "chapter": "chapter-1",
      "number": "1.3",
-     "title": "Prime Factors, HCF and LCM",
+     "title": "Prime Factors, HCF & LCM",
      "href": "downloads/Linear/VisualNotes/C1_T03_Prime_Factors_HCF_LCM/Prime_Factors_HCF_LCM_Visual_Notes.pdf?v=20261009c",
      "pages": 16,
      "focus": "Write prime factor trees, Find HCF, Find LCM",
@@ -54,7 +54,7 @@
     {
      "chapter": "chapter-1",
      "number": "1.4",
-     "title": "Powers, Roots and Standard Form",
+     "title": "Powers, Roots & Standard Form",
      "href": "downloads/Linear/VisualNotes/C1_T04_Powers_Roots_Standard_Form/Powers_Roots_Standard_Form_Visual_Notes.pdf?v=20261009c",
      "pages": 18,
      "focus": "Convert standard form, Use index laws, Handle negative and fractional powers",
@@ -84,7 +84,7 @@
     {
      "chapter": "chapter-1",
      "number": "1.7",
-     "title": "Compound Interest and Depreciation",
+     "title": "Compound Interest & Depreciation",
      "href": "downloads/Linear/VisualNotes/C1_T07_Compound_Interest/Compound_Interest_Visual_Notes.pdf?v=20261009c",
      "pages": 16,
      "focus": "Use percentage multiplier, Reverse a percentage, Use compound change",
@@ -94,7 +94,7 @@
     {
      "chapter": "chapter-1",
      "number": "1.8",
-     "title": "Fractions, Decimals and Percentages",
+     "title": "Fractions, Decimals & Percentages",
      "href": "downloads/Linear/VisualNotes/C1_T08_Fractions_Decimals_Percentages/Fractions_Decimals_Percentages_Visual_Notes.pdf?v=20261009c",
      "pages": 16,
      "focus": "Convert fraction to decimal, Convert decimal to percentage, Use percentage multiplier",
@@ -104,7 +104,7 @@
     {
      "chapter": "chapter-1",
      "number": "1.9",
-     "title": "Rounding, Estimation and Bounds",
+     "title": "Rounding, Estimation & Bounds",
      "href": "downloads/Linear/VisualNotes/C1_T09_Rounding_Estimation_Bounds/Rounding_Estimation_Bounds_Visual_Notes.pdf?v=20261009c",
      "pages": 18,
      "focus": "Round to the requested accuracy, Find lower and upper bounds, Choose bounds for largest value",
@@ -154,7 +154,7 @@
     {
      "chapter": "chapter-1",
      "number": "1.14",
-     "title": "Exchange Rates and Best Buys",
+     "title": "Exchange Rates & Best Buys",
      "href": "downloads/Linear/VisualNotes/C1_T14_Exchange_Rates_Best_Buys/Exchange_Rates_Best_Buys_Visual_Notes.pdf?v=20261009c",
      "pages": 12,
      "focus": "Write the exchange direction, Convert to one currency, Compare unit prices",
@@ -176,7 +176,7 @@
   {
    "id": "chapter-2",
    "number": 2,
-   "title": "Chapter 2: Algebra",
+   "title": "Chapter 2: Equations, Formulae & Identities",
    "short": "Algebra",
    "href": null,
    "detail": "13 topic notes with answers",
@@ -215,7 +215,7 @@
     {
      "chapter": "chapter-2",
      "number": "2.4",
-     "title": "Factorisation",
+     "title": "Factorising",
      "href": "downloads/Linear/VisualNotes/C2_T04_Factorisation/Factorisation_Visual_Notes.pdf?v=20261009c",
      "pages": 18,
      "focus": "Take out the common factor, Factorise a quadratic, Use difference of squares",
@@ -245,7 +245,7 @@
     {
      "chapter": "chapter-2",
      "number": "2.7",
-     "title": "Rearranging Formulas",
+     "title": "Rearranging Formulae",
      "href": "downloads/Linear/VisualNotes/C2_T07_Rearranging_Formulas/Rearranging_Formulas_Visual_Notes.pdf?v=20261009c",
      "pages": 18,
      "focus": "Make the subject visible, Clear fractions first, Undo operations in order",
@@ -305,7 +305,7 @@
     {
      "chapter": "chapter-2",
      "number": "2.13",
-     "title": "Forming and Solving Equations",
+     "title": "Forming & Solving Equations",
      "href": "downloads/Linear/VisualNotes/C2_T13_Forming_Equations/Forming_Equations_Visual_Notes.pdf?v=20261009c",
      "pages": 18,
      "focus": "Collect like terms, Solve with brackets, Form the equation from words",
@@ -317,7 +317,7 @@
   {
    "id": "chapter-3",
    "number": 3,
-   "title": "Chapter 3: Graphs and Functions",
+   "title": "Chapter 3: Sequences, Functions & Graphs",
    "short": "Graphs and Functions",
    "href": null,
    "detail": "10 topic notes with answers",
@@ -416,7 +416,7 @@
     {
      "chapter": "chapter-3",
      "number": "3.10",
-     "title": "Differentiation",
+     "title": "Differentiation & Turning Points",
      "href": "downloads/Linear/VisualNotes/C3_T10_Differentiation/Differentiation_Visual_Notes.pdf?v=20261009c",
      "pages": 16,
      "focus": "Differentiate powers, Find gradient at a point, Find stationary points",
@@ -428,7 +428,7 @@
   {
    "id": "chapter-4",
    "number": 4,
-   "title": "Chapter 4: Geometry and Measures",
+   "title": "Chapter 4: Geometry & Trigonometry",
    "short": "Geometry and Measures",
    "href": null,
    "detail": "12 topic notes with answers",
@@ -437,7 +437,7 @@
     {
      "chapter": "chapter-4",
      "number": "4.1",
-     "title": "Standard and Compound Units",
+     "title": "Standard & Compound Units",
      "href": "downloads/Linear/VisualNotes/C4_T01_Standard_Compound_Units/Standard_Compound_Units_Visual_Notes.pdf?v=20261009c",
      "pages": 16,
      "focus": "Pressure: force over area, Density: mass and volume, Speed: distance over time",
@@ -447,7 +447,7 @@
     {
      "chapter": "chapter-4",
      "number": "4.2",
-     "title": "Angles in Polygons and Parallel Lines",
+     "title": "Angles in Polygons & Parallel Lines",
      "href": "downloads/Linear/VisualNotes/C4_T02_Angles_Polygons_Parallel_Lines/Angles_Polygons_Parallel_Lines_Visual_Notes.pdf?v=20261009c",
      "pages": 14,
      "focus": "Name the angle relationship, Use the polygon sum, Use exterior angles",
@@ -457,7 +457,7 @@
     {
      "chapter": "chapter-4",
      "number": "4.3",
-     "title": "Bearings, Scale Drawing and Constructions",
+     "title": "Bearings, Scale Drawing & Constructions",
      "href": "downloads/Linear/VisualNotes/C4_T03_Bearings_Scale_Constructions/Bearings_Scale_Constructions_Visual_Notes.pdf?v=20261009c",
      "pages": 16,
      "focus": "Draw North first, Measure clockwise bearing, Use scale before real distance",
@@ -477,7 +477,7 @@
     {
      "chapter": "chapter-4",
      "number": "4.5",
-     "title": "Area and Perimeter",
+     "title": "Perimeter & Area",
      "href": "downloads/Linear/VisualNotes/C4_T05_Area_Perimeter/Area_Perimeter_Visual_Notes.pdf?v=20261009c",
      "pages": 14,
      "focus": "Split the compound shape, Build an equation from area, Use perimeter after missing sides",
@@ -487,7 +487,7 @@
     {
      "chapter": "chapter-4",
      "number": "4.6",
-     "title": "Circles, Arcs and Sectors",
+     "title": "Circles, Arcs & Sectors",
      "href": "downloads/Linear/VisualNotes/C4_T06_Circles_Arcs_Sectors/Circles_Arcs_Sectors_Visual_Notes.pdf?v=20261009c",
      "pages": 14,
      "focus": "Use fraction of the circle, Find sector area, Find arc length",
@@ -497,7 +497,7 @@
     {
      "chapter": "chapter-4",
      "number": "4.7",
-     "title": "Volume and Surface Area",
+     "title": "Volume & Surface Area",
      "href": "downloads/Linear/VisualNotes/C4_T07_Volume_Surface_Area/Volume_Surface_Area_Visual_Notes.pdf?v=20261009c",
      "pages": 14,
      "focus": "Name the solid, Use prism volume, Unfold surface area",
@@ -507,7 +507,7 @@
     {
      "chapter": "chapter-4",
      "number": "4.8",
-     "title": "Congruence, Similarity and Geometrical Proof",
+     "title": "Congruence, Similarity & Geometrical Proof",
      "href": "downloads/Linear/VisualNotes/C4_T08_Congruence_Similarity_Proof/Congruence_Similarity_Proof_Visual_Notes.pdf?v=20261009c",
      "pages": 12,
      "focus": "Find the length scale factor, Square it for area, Cube it for volume",
@@ -517,7 +517,7 @@
     {
      "chapter": "chapter-4",
      "number": "4.9",
-     "title": "Area and Volume of Similar Shapes",
+     "title": "Area & Volume of Similar Shapes",
      "href": "downloads/Linear/VisualNotes/C4_T09_Area_Volume_Similar_Shapes/Area_Volume_Similar_Shapes_Visual_Notes.pdf?v=20261009c",
      "pages": 14,
      "focus": "Find the length scale factor, Square it for area, Cube it for volume",
@@ -527,7 +527,7 @@
     {
      "chapter": "chapter-4",
      "number": "4.10",
-     "title": "Right-Angled Triangles: Pythagoras and Trigonometry",
+     "title": "Right-Angled Triangles - Pythagoras & Trigonometry",
      "href": "downloads/Linear/VisualNotes/C4_T10_Pythagoras_Trigonometry/Pythagoras_Trigonometry_Visual_Notes.pdf?v=20261009c",
      "pages": 14,
      "focus": "Name the angle relationship, Use the polygon sum, Use exterior angles",
@@ -537,7 +537,7 @@
     {
      "chapter": "chapter-4",
      "number": "4.11",
-     "title": "Sine Rule, Cosine Rule and Area of a Triangle",
+     "title": "Sine & Cosine Rules",
      "href": "downloads/Linear/VisualNotes/C4_T11_Sine_Cosine_Rule/Sine_Cosine_Rule_Visual_Notes.pdf?v=20261009c",
      "pages": 14,
      "focus": "Name the angle relationship, Use the polygon sum, Use exterior angles",
@@ -547,7 +547,7 @@
     {
      "chapter": "chapter-4",
      "number": "4.12",
-     "title": "3D Pythagoras and Trigonometry",
+     "title": "3D Pythagoras & Trigonometry",
      "href": "downloads/Linear/VisualNotes/C4_T12_3D_Pythagoras_Trigonometry/3D_Pythagoras_Trigonometry_Visual_Notes.pdf?v=20261009c",
      "pages": 12,
      "focus": "Draw the hidden right triangle, Find the base diagonal first, Use 3D trig after Pythagoras",
@@ -559,7 +559,7 @@
   {
    "id": "chapter-5",
    "number": 5,
-   "title": "Chapter 5: Vectors and Transformations",
+   "title": "Chapter 5: Vectors & Transformation Geometry",
    "short": "Vectors and Transformations",
    "href": null,
    "detail": "2 topic notes with answers",
@@ -590,7 +590,7 @@
   {
    "id": "chapter-6",
    "number": 6,
-   "title": "Chapter 6: Statistics and Probability",
+   "title": "Chapter 6: Statistics & Probability",
    "short": "Statistics and Probability",
    "href": null,
    "detail": "6 topic notes with answers",
@@ -599,7 +599,7 @@
     {
      "chapter": "chapter-6",
      "number": "6.1",
-     "title": "Statistics",
+     "title": "Statistics Toolkit",
      "href": "downloads/Linear/VisualNotes/C6_T01_Statistics/Statistics_Visual_Notes.pdf?v=20261009c",
      "pages": 16,
      "focus": "",
@@ -619,7 +619,7 @@
     {
      "chapter": "chapter-6",
      "number": "6.3",
-     "title": "Cumulative Frequency",
+     "title": "Cumulative Frequency Diagrams",
      "href": "downloads/Linear/VisualNotes/C6_T03_Cumulative_Frequency/Cumulative_Frequency_Visual_Notes.pdf?v=20261009c",
      "pages": 12,
      "focus": "",
@@ -649,7 +649,7 @@
     {
      "chapter": "chapter-6",
      "number": "6.6",
-     "title": "Combined and Conditional Probability",
+     "title": "Combined & Conditional Probability",
      "href": "downloads/Linear/VisualNotes/C6_T06_Combined_Conditional_Probability/Combined_Conditional_Probability_Visual_Notes.pdf?v=20261009c",
      "pages": 14,
      "focus": "",
