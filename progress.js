@@ -1287,6 +1287,154 @@
     }).join("") || "<p>No questions are available in this course yet.</p>";
   }
 
+  /* Item 22 — "Due for review" queue. The computation lives in
+     review-queue.js (EliteReviewQueue) and is driven entirely by the
+     existing mistake-box store (REVIEW_KEY) through the same local
+     variables the rest of this page uses, so guests (localStorage) and
+     signed-in students (cloud-progress.js restores the same keys from
+     Firestore) see identical behaviour. No new storage is introduced. */
+  function renderDueReview() {
+    const list = document.getElementById("dueReviewList");
+    const empty = document.getElementById("dueReviewEmpty");
+    const meta = document.getElementById("dueReviewMeta");
+    if (!list || !window.EliteReviewQueue) return;
+    const rows = window.EliteReviewQueue.computeDueTopics({
+      reviewItems,
+      questionById: byId,
+      now: Date.now()
+    });
+    const topicRowByKey = new Map(topicRows().map((row) => [topicKey(row), row]));
+    if (meta) meta.textContent = rows.length ? `${rows.length} topic${rows.length === 1 ? "" : "s"} due` : "";
+    if (empty) empty.hidden = rows.length > 0;
+    list.innerHTML = rows.map((row) => {
+      const topicRow = topicRowByKey.get(`${row.unit}|||${row.topicSlug}`);
+      const href = topicRow ? practiceLink(topicRow) : "practice.html";
+      const overdue = row.daysOverdue > 0
+        ? `${row.daysOverdue} day${row.daysOverdue === 1 ? "" : "s"} overdue`
+        : "due today";
+      const detail = [
+        row.unit,
+        `${row.dueCount} question${row.dueCount === 1 ? "" : "s"} due`,
+        overdue
+      ].filter(Boolean).join(" · ");
+      return `<div class="qp-topic"><span><strong>${escapeHtml((window.eliteTopicLabel || String)(row.topic))}</strong><small>${escapeHtml(detail)}</small></span><a class="button light" href="${escapeHtml(href)}">Practise</a></div>`;
+    }).join("");
+  }
+
+  /* Item 23 — student-side parent progress report. Same plain-text,
+     line-per-fact style as the teacher tracker's parent report
+     (lesson-tracker.js buildParentReport), fed from the student's own
+     stores on this page. */
+  function scoredAverage(rows) {
+    const values = (Array.isArray(rows) ? rows : [])
+      .map((row) => scorePercent(row?.rawMark, row?.maxMark))
+      .filter((value) => value !== null);
+    return values.length ? { average: Math.round(average(values)), count: values.length } : null;
+  }
+
+  function otherCourseSolvedLines() {
+    const packs = [
+      { label: "Linear / Modular", key: "solvedExpertiseQuestions" },
+      { label: "IAL Pure 1 (WMA11)", key: "eliteWMA11SolvedV1" },
+      { label: "IAL Pure 2 (WMA12)", key: "eliteWMA12SolvedV1" },
+      { label: "IAL Pure 3 (WMA13)", key: "eliteWMA13SolvedV1" },
+      { label: "IAL Mechanics 1 (WME01)", key: "eliteWME01SolvedV1" }
+    ];
+    return packs
+      .filter((pack) => pack.key !== SOLVED_KEY)
+      .map((pack) => ({ label: pack.label, count: readJSON(pack.key, []).length }))
+      .filter((pack) => pack.count > 0)
+      .map((pack) => `${pack.label}: ${pack.count} questions solved`);
+  }
+
+  function buildParentReportText() {
+    const all = bankQuestions("all");
+    const solvedCount = all.filter(isSolved).length;
+    const rows = topicRows();
+    const touched = rows.filter((row) => row.solved > 0).length;
+    const review = window.EliteReviewQueue
+      ? window.EliteReviewQueue.summarizeReview({ reviewItems, questionById: byId, now: Date.now() })
+      : { dueTopics: [], dueQuestions: 0, activeQuestions: Object.keys(reviewItems || {}).length };
+    const papers = paperStats();
+    const assignments = scoredAverage(readJSON(ASSIGNMENTS_KEY, []));
+    const quizzes = scoredAverage(readJSON(QUIZZES_KEY, []));
+    const streak = streakCount(readActivity());
+    const lines = [
+      `Progress report — ${profile.name?.trim() || "Elite IGCSE student"}`,
+      `Course: ${coursePack.label}`,
+      profile.targetGrade ? `Target grade: ${profile.targetGrade}` : "",
+      profile.examSession ? `Exam session: ${profile.examSession}` : "",
+      `Topics practised: ${touched} of ${rows.length}`,
+      `Questions solved: ${solvedCount} of ${all.length} (${pct(solvedCount, all.length)}%)`,
+      streak ? `Study streak: ${streak} day${streak === 1 ? "" : "s"}` : "",
+      papers.count ? `Past papers attempted: ${papers.count} (average ${papers.average}%)` : "",
+      assignments ? `Assignments average: ${assignments.average}% across ${assignments.count} scored` : "",
+      quizzes ? `Quizzes average: ${quizzes.average}% across ${quizzes.count} scored` : "",
+      `Mistake box: ${review.activeQuestions} question${review.activeQuestions === 1 ? "" : "s"} saved for review${review.dueQuestions ? `, ${review.dueQuestions} due now` : ""}`
+    ];
+    if (review.dueTopics.length) {
+      lines.push("Due for review now:");
+      review.dueTopics.slice(0, 8).forEach((row) => {
+        const when = row.daysOverdue > 0
+          ? `${row.daysOverdue} day${row.daysOverdue === 1 ? "" : "s"} overdue`
+          : "due today";
+        lines.push(`- ${row.topic}${row.unit ? ` (${row.unit})` : ""} — ${when}`);
+      });
+    }
+    const others = otherCourseSolvedLines();
+    if (others.length) {
+      lines.push("Also saved on this device:");
+      others.forEach((line) => lines.push(`- ${line}`));
+    }
+    lines.push("Practise free at https://eliteigcse.com");
+    lines.push("Elite IGCSE Mathematics — Dr Eslam Ahmed");
+    return lines.filter(Boolean).join("\n");
+  }
+
+  function renderParentReport() {
+    const preview = document.getElementById("parentReportPreview");
+    const whats = document.getElementById("whatsParentReportBtn");
+    if (!preview && !whats) return;
+    const text = buildParentReportText();
+    if (preview) preview.textContent = text;
+    if (whats) whats.href = `https://wa.me/?text=${encodeURIComponent(text)}`;
+  }
+
+  async function copyParentReport() {
+    const text = buildParentReportText();
+    try {
+      await navigator.clipboard.writeText(text);
+      els.saveStatus.textContent = "Parent report copied — paste it anywhere to share it.";
+    } catch (err) {
+      const area = document.createElement("textarea");
+      area.value = text;
+      document.body.append(area);
+      area.select();
+      try {
+        document.execCommand("copy");
+        els.saveStatus.textContent = "Parent report copied — paste it anywhere to share it.";
+      } catch (fallbackErr) {
+        els.saveStatus.textContent = "Copy was blocked by the browser — the report text is shown in the Backup tab.";
+      }
+      area.remove();
+    }
+  }
+
+  async function printParentReport(trigger) {
+    if (!els.printArea || !window.ElitePrint) return;
+    const text = buildParentReportText();
+    els.printArea.innerHTML = `<section class="print-question">
+      <div class="print-paper-brand">
+        <strong>Elite IGCSE Mathematics - Dr Eslam Ahmed</strong>
+        <span>Assistant Lecturer, Cairo University Faculty of Engineering | WhatsApp: 01120009622 | eliteigcse.com</span>
+      </div>
+      <h2>Progress report</h2>
+      <pre style="white-space:pre-wrap;font:inherit">${escapeHtml(text)}</pre>
+      <div class="print-paper-footer">Prepared by Dr Eslam Ahmed | Assistant Lecturer, Cairo University Faculty of Engineering | 01120009622</div>
+    </section>`;
+    await window.ElitePrint.printWhenReady(els.printArea, trigger);
+  }
+
   document.getElementById("quickCourse").addEventListener("change", event => {
     const value = event.target.value;
     const url = new URL("progress.html", document.baseURI);
@@ -1307,6 +1455,8 @@
 
   function render() {
     renderQuickProgress();
+    renderDueReview();
+    renderParentReport();
     renderSummary();
     renderNextMoves();
     renderPriorityRows();
@@ -1327,6 +1477,8 @@
   render();
 
   els.form.addEventListener("submit", saveProfile);
+  document.getElementById("copyParentReportBtn")?.addEventListener("click", copyParentReport);
+  document.getElementById("printParentReportBtn")?.addEventListener("click", (event) => printParentReport(event.currentTarget));
   els.unitFilter.addEventListener("change", renderRows);
   els.statusFilter.addEventListener("change", renderRows);
   els.search.addEventListener("input", renderRows);

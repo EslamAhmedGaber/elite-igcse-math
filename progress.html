@@ -53,7 +53,8 @@
   <script defer src="cloud-progress.js?v=20261112a"></script>
   <script defer src="print-utils.js?v=20260809c"></script>
   <script defer src="quick-progress.js?v=20260929a"></script>
-  <script defer src="progress.js?v=20261023a"></script>
+  <script defer src="review-queue.js?v=20261125a"></script>
+  <script defer src="progress.js?v=20261125a"></script>
   <script defer src="planner.js"></script>
   <script defer src="tracker-v2.js?v=20260929a"></script>
   <script defer src="course-modules.js?v=20261116a"></script>
@@ -189,6 +190,16 @@
       <div class="qp-overall"><progress id="quickMeter" max="100" value="0" aria-label="Questions marked solved"></progress><span id="quickPercent">0% marked solved</span></div>
       <div class="qp-overview-actions"><a class="button primary" id="quickContinue" href="practice.html">Continue practice</a><a class="button light" id="quickReview" href="practice.html?mode=review">Review questions</a><button class="button light" type="button" data-tab-jump="topics">All topic details</button></div>
       <div id="quickTopics" class="qp-topic-list"></div>
+    </section>
+
+    <section class="qp-overview review-due-panel" data-tab="dashboard" aria-labelledby="dueReviewHeading">
+      <div class="qp-overview-head">
+        <h2 id="dueReviewHeading">Due for review</h2>
+        <span id="dueReviewMeta"></span>
+      </div>
+      <p class="muted">Mistake-box questions come back on a spaced schedule — straight away, then after 3 days, then 7 days — and a topic appears here as soon as one of its questions is due for another try.</p>
+      <div id="dueReviewList" class="qp-topic-list"></div>
+      <p id="dueReviewEmpty" class="muted">Nothing is due right now. Questions you save to the mistake box while practising will appear here when they are ready to retry.</p>
     </section>
 
 
@@ -999,6 +1010,20 @@
           </table>
         </div>
       </section>
+    </section>
+
+    <section class="progress-backup-panel" data-tab="backup" id="parentReportPanel" aria-labelledby="parentReportTitle">
+      <div>
+        <span class="eyebrow">For Parents</span>
+        <h2 id="parentReportTitle">Share progress with a parent.</h2>
+        <p>A short report built from your own saved progress on this page. Copy it, send it on WhatsApp, or print it — nothing is shared until you send it.</p>
+        <pre id="parentReportPreview" style="white-space:pre-wrap;font:inherit;font-size:14px;margin:14px 0 0"></pre>
+      </div>
+      <div class="progress-backup-actions">
+        <button class="primary" id="copyParentReportBtn" type="button">Copy report</button>
+        <a class="button light" id="whatsParentReportBtn" href="https://wa.me/" target="_blank" rel="noopener">Share on WhatsApp</a>
+        <button id="printParentReportBtn" type="button">Print report</button>
+      </div>
     </section>
 
     <section class="progress-backup-panel" data-tab="backup" id="backupPanel" aria-labelledby="backupTitle">
