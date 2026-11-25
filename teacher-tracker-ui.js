@@ -29,7 +29,9 @@
 
   const view = {
     snapshot: null,
-    loaded: false,
+    renderedVersion: -1, // dataVersion of the last completed render (-1 = none)
+    refreshing: false,
+    refreshQueued: false,
     dataset: null,
     students: [],
     course: DEFAULT_COURSE,
@@ -165,6 +167,24 @@
       pill.textContent = labels[snap.syncState] || "Local only";
       pill.dataset.state = snap.syncState || "local";
     }
+  }
+
+  /* ----------------------------------------------------- loading state */
+  /* Shown while the teacher is signed in but the dataset has not
+     landed yet (or is still empty while the cloud copy is in flight).
+     The true empty states ("No students yet...") may only appear after
+     a load has COMPLETED with zero students - never before it. */
+
+  function loadingHtml() {
+    return `<div class="lt-empty lt-empty-big"><h2>Loading your students&hellip;</h2><p>Your saved records are on their way - this only takes a moment.</p></div>`;
+  }
+
+  function renderLoadingState() {
+    $("#ltStudentList").innerHTML = `<div class="lt-empty"><p><b>Loading your students&hellip;</b></p><p class="lt-muted">Fetching your saved records.</p></div>`;
+    $("#ltOverviewView").innerHTML = loadingHtml();
+    $("#ltChecklistView").innerHTML = loadingHtml();
+    $("#ltLogView").innerHTML = loadingHtml();
+    $("#ltDigest").innerHTML = "";
   }
 
   /* -------------------------------------------------------------- digest */
@@ -479,7 +499,7 @@
 
   function renderOverview() {
     const panel = $("#ltOverviewView");
-    if (!view.dataset) { panel.innerHTML = ""; return; }
+    if (!view.dataset) { panel.innerHTML = loadingHtml(); return; }
     const today = Core.cairoToday();
     const stats = Core.dashboardStats(view.dataset, view.topicsByCourse, today);
     const query = Core.normName(view.search);
@@ -595,11 +615,20 @@
 
   /* -------------------------------------------------------------- render */
 
+  /* Returns true when a real render happened. When the dataset is
+     still empty AND the initial cloud load is in flight, the honest
+     loading state is kept instead of a misleading "no students" one,
+     and false is returned so the caller does not mark this version as
+     rendered - the load-completion snapshot re-runs the render. */
   async function refresh() {
-    if (!view.snapshot || !view.snapshot.isTeacher) return;
+    if (!view.snapshot || !view.snapshot.isTeacher) return false;
     const [students, dataset] = await Promise.all([T.api.listStudents(), T.api.getDataset()]);
     view.students = students;
     view.dataset = dataset;
+    if (!students.length && view.snapshot.loading) {
+      renderLoadingState();
+      return false;
+    }
     if (view.studentId && !students.some((s) => s.id === view.studentId)) view.studentId = null;
     if (!view.studentId) {
       const first = studentsForCourse()[0];
@@ -617,6 +646,33 @@
     await renderStudentList();
     renderDetail();
     renderSyncBanner();
+    return true;
+  }
+
+  /* Coalescing render driver: at most one refresh runs at a time, and
+     a dataset that lands mid-refresh queues exactly one more run, so a
+     late-arriving dataset always ends up rendered. renderedVersion is
+     set ONLY after a real render, so a failed or deferred (still
+     loading) pass is retried by the next snapshot instead of being
+     latched away - the original empty-on-open bug. */
+  async function runRefresh(version) {
+    if (view.refreshing) { view.refreshQueued = true; return; }
+    view.refreshing = true;
+    try {
+      const rendered = await refresh();
+      if (rendered) view.renderedVersion = version;
+    } catch (error) {
+      console.error("[teacher-tracker] refresh failed; will retry on the next update.", error);
+    } finally {
+      view.refreshing = false;
+      if (view.refreshQueued) {
+        view.refreshQueued = false;
+        const snap = view.snapshot;
+        if (snap && snap.isTeacher && snap.dataReady && snap.dataVersion !== view.renderedVersion) {
+          await runRefresh(snap.dataVersion);
+        }
+      }
+    }
   }
 
   function renderDetail() {
@@ -1008,11 +1064,25 @@
       view.snapshot = snapshot;
       const passed = renderGate(snapshot);
       renderSyncBanner();
-      if (passed && !view.loaded) {
-        view.loaded = true;
-        await refresh();
+      if (!passed) {
+        view.renderedVersion = -1;
+        return;
       }
-      if (!passed) view.loaded = false;
+      if (!snapshot.dataReady) {
+        // Teacher signed in, but no dataset has landed yet (the cloud
+        // load emits a "syncing" snapshot before it assigns one). Show
+        // the honest loading state and consume NOTHING: when the load
+        // completes, its snapshot carries dataReady + a new
+        // dataVersion and the render below runs then.
+        renderLoadingState();
+        return;
+      }
+      // Render whenever the dataset is newer than the last completed
+      // render: first load, mirror-then-cloud merge, re-sign-in, an
+      // import - any late-arriving dataset re-renders everything.
+      if (snapshot.dataVersion !== view.renderedVersion) {
+        await runRefresh(snapshot.dataVersion);
+      }
     });
     T.init();
   }

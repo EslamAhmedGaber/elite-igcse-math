@@ -644,6 +644,8 @@
     syncIssue: false,   // a change is saved in this browser only
     syncing: false,     // a cloud load/push is in flight right now (V2)
     dataset: null,      // merged dataset (teacher only)
+    dataVersion: 0,     // bumped on EVERY dataset assignment (load fix)
+    initialLoad: false, // the first cloud load for this sign-in is running
     modules: null,
     auth: null,
     db: null
@@ -669,8 +671,24 @@
       cloudOk: state.cloudOk,
       syncIssue: state.syncIssue,
       syncState: syncState(),
+      // Load-sequence contract for the UI: `dataReady` says a dataset
+      // object exists to render; `dataVersion` changes on every dataset
+      // assignment, so a late-arriving dataset (mirror first, then the
+      // merged cloud copy) always re-triggers a render; `loading` is
+      // true while the initial cloud load is still in flight, so the UI
+      // can show a loading state instead of a misleading empty one.
+      dataReady: state.dataset != null,
+      dataVersion: state.dataVersion,
+      loading: !demoMode && state.initialLoad,
       error: state.error
     };
+  }
+
+  /* Every dataset assignment goes through here so the version bump -
+     and therefore the UI re-render - can never be forgotten. */
+  function assignDataset(dataset) {
+    state.dataset = dataset;
+    state.dataVersion += 1;
   }
 
   function emit() {
@@ -856,6 +874,12 @@
 
   async function loadRealData() {
     const mirror = readMirror();
+    // Publish the local copy FIRST (the gate has already passed - this
+    // only runs for the signed-in teacher): the UI renders the mirror
+    // immediately, then re-renders when the merged cloud dataset lands
+    // (assignDataset bumps dataVersion on every assignment).
+    assignDataset(mirror);
+    state.initialLoad = true;
     let cloud = null;
     state.syncing = true;
     emit();
@@ -871,7 +895,7 @@
       state.syncing = false;
     }
     if (cloud) {
-      state.dataset = mergeDatasets(cloud, mirror, mirror.lastFullSync || 0);
+      assignDataset(mergeDatasets(cloud, mirror, mirror.lastFullSync || 0));
       writeMirror();
       // Push merged winners back so both sides converge (PLAN §2.2).
       const jobs = [];
@@ -891,9 +915,10 @@
       } else {
         state.syncIssue = true;
       }
-    } else {
-      state.dataset = mirror;
     }
+    // No else branch: when the cloud load failed, the mirror copy
+    // assigned at the top of this function is already the dataset.
+    state.initialLoad = false;
     emit();
   }
 
@@ -1028,7 +1053,7 @@
         throw new Error("That file is not a valid tracker backup.");
       }
       const merged = mergeDatasets(dataset, imported, dataset.lastFullSync || 0);
-      state.dataset = merged;
+      assignDataset(merged);
       persistLocal();
       await cloudPush(() => pushAllDataset());
       return {
@@ -1118,7 +1143,7 @@
       state.user = demoUser();
       state.ready = true;
       if (isTeacher()) {
-        state.dataset = readDemoDataset();
+        assignDataset(readDemoDataset());
         state.cloudOk = false;
       }
       emit();
@@ -1128,14 +1153,14 @@
       if (!address) return;
       lsSet(DEMO_USER_KEY, address);
       state.user = demoUser();
-      if (isTeacher()) state.dataset = readDemoDataset();
-      else state.dataset = null;
+      if (isTeacher()) assignDataset(readDemoDataset());
+      else assignDataset(null);
       emit();
     },
     async signOut() {
       lsRemove(DEMO_USER_KEY);
       state.user = null;
-      state.dataset = null;
+      assignDataset(null);
       emit();
     }
   };
@@ -1158,7 +1183,7 @@
             // PLAN §2.3: the mirror is written only after the gate
             // passes; any observed non-teacher / signed-out state
             // clears both local keys before anything renders.
-            state.dataset = null;
+            assignDataset(null);
             clearLocalCopies();
           }
           emit();
@@ -1171,7 +1196,7 @@
         // where the gate fails, both handled in the callback above).
         state.error = error.message || "Sign-in could not start. Check the connection.";
         state.ready = true;
-        state.dataset = null;
+        assignDataset(null);
         emit();
       }
     },
