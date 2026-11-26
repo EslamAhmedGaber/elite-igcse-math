@@ -582,12 +582,17 @@
 .asg-qmeta { color: #5b6b82; font-size: 0.85rem; }
 .asg-qmarks { margin-left: auto; font-weight: 700; font-size: 0.9rem; white-space: nowrap; }
 .asg-qimg { display: block; max-width: 100%; height: auto; }
+/* Working space: the height is set inline per question by the
+   assignment's print layout (paper-print.js semantics, in mm) -
+   standard/economy scale it by marks, single fixes 40mm, compact
+   renders no space at all. */
 .asg-space {
-  min-height: 150px;
   margin-top: 12px;
   border-radius: 6px;
   background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 27px, #e3eaf3 27px, #e3eaf3 28px);
 }
+/* Inter-question gap from the same layout table (height inline). */
+.asg-gap { }
 .asg-sol { margin-top: 12px; }
 .asg-sol-title { margin: 0 0 8px; font-size: 0.95rem; color: #1b4fd8; }
 .asg-step h4 { margin: 10px 0 4px; font-size: 0.92rem; }
@@ -620,4 +625,8 @@
   }
   body.asg-printing .asg-sheet.is-student .asg-q { break-inside: avoid; }
   body.asg-printing .asg-qimg { max-height: 240mm; }
+  /* "One question per page" layout: every question starts a fresh
+     printed page (the last one must not force a trailing blank). */
+  body.asg-printing .asg-sheet.is-layout-single .asg-q { break-after: page; page-break-after: always; }
+  body.asg-printing .asg-sheet.is-layout-single .asg-q:last-of-type { break-after: auto; page-break-after: auto; }
 }

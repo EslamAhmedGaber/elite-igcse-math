@@ -192,6 +192,9 @@
   const ASSIGNMENT_CAP = 50;
   const ASSIGNMENT_MAX_QUESTIONS = 40;
   const ASSIGNMENT_MAX_TOPICS = 70;
+  /* The print-layout keys assignment records may carry - mirrors
+     paper-print.js's LAYOUTS (via assignment-generator.js's port). */
+  const ASSIGNMENT_LAYOUT_KEYS = ["standard", "economy", "single", "compact"];
 
   function sanitizeAssignmentRecord(raw) {
     if (!raw || typeof raw !== "object" || Array.isArray(raw)) return null;
@@ -208,6 +211,12 @@
       : [];
     const date = typeof raw.date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(raw.date) ? raw.date : "";
     const nonNeg = (value) => Math.max(0, Math.floor(Number(value) || 0));
+    /* Print layout (assignment-generator's port of paper-print.js's
+       LAYOUTS keys). Only a known key is kept; anything else leaves
+       the field ABSENT, exactly like a v1 record that predates the
+       field - re-printing resolves a missing layout to the current
+       default ("single") in assignment-generator.js. */
+    const layout = ASSIGNMENT_LAYOUT_KEYS.includes(raw.layout) ? raw.layout : null;
     return {
       id,
       createdAt: nonNeg(raw.createdAt),
@@ -218,7 +227,8 @@
       targetMarks: nonNeg(raw.targetMarks),
       totalMarks: nonNeg(raw.totalMarks),
       estMinutes: nonNeg(raw.estMinutes),
-      includeEP: Boolean(raw.includeEP)
+      includeEP: Boolean(raw.includeEP),
+      ...(layout ? { layout } : {})
     };
   }
 
@@ -709,7 +719,7 @@
     cairoToday, genId, capNote, emptyDataset, emptyCourseDoc, createStudent,
     applyTick, applyUntick, mergeCourseDoc, mergeDatasets,
     sanitizeAssignmentRecord, sanitizeAssignmentMap, mergeAssignments,
-    applyAssignment, ASSIGNMENT_CAP,
+    applyAssignment, ASSIGNMENT_CAP, ASSIGNMENT_LAYOUT_KEYS,
     nextTopic, progressFor, latestTickDate, flattenLog, weekRange,
     buildDigest, unmatchedTicks, NOTE_CAP,
     cleanSessionDate, daysBetween, daysSince, dashboardCards, dashboardStats,

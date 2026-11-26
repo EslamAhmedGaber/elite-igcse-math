@@ -37,6 +37,53 @@
   const MINUTES_PER_MARK = 1.5; // owner's spec for assignments
   const MAX_COUNT = 40;
 
+  /* Print layouts - a faithful port of paper-print.js's LAYOUTS table
+     (the site's exam paper engine): same keys, same labels, same
+     millimetre semantics. ElitePaperPrint itself is NOT reused: it is
+     a singleton studio overlay whose pagination runs on pixel
+     analysis of past-paper crops (it needs per-question OCR text and
+     source numbers the tracker bank index does not capture), renders
+     into an isolated iframe under its own print discipline, and its
+     cover/formulae machinery is exam-paper furniture. The layout
+     contract is four small entries, so it is ported exactly instead
+     (see CHANGELOG_ASSIGNMENT.md). `fill` (the paginator redistributes
+     a page's leftover room into its working spaces) has no equivalent
+     in a browser-printed flow document and is carried for parity
+     only; the space/gap/newPage semantics are exact. */
+  const clampMm = (value, min, max) => Math.min(max, Math.max(min, value));
+  const LAYOUTS = {
+    standard: { label: "Standard", space: (marks) => clampMm(8 + 6 * marks, 18, 56), fill: true, gap: 5 },
+    economy: { label: "Economy (fewer pages)", space: (marks) => clampMm(3 + 3 * marks, 8, 26), fill: true, gap: 3.4 },
+    single: { label: "One question per page", space: () => 40, fill: true, gap: 0, newPage: true },
+    compact: { label: "Questions only (answer on separate paper)", space: () => 0, fill: false, gap: 3.4 }
+  };
+  const LAYOUT_KEYS = Object.keys(LAYOUTS);
+  /* The mock generator's printer defaults to "standard"; assignments
+     default to "single" - the owner's stated usual preference
+     (2026-11-26). Deliberate divergence, recorded in the changelog. */
+  const DEFAULT_LAYOUT = "single";
+
+  function layoutFor(key) {
+    const found = LAYOUTS[key];
+    return found ? { key, ...found } : { key: DEFAULT_LAYOUT, ...LAYOUTS[DEFAULT_LAYOUT] };
+  }
+
+  function layoutOptions() {
+    return LAYOUT_KEYS.map((key) => ({ key, label: LAYOUTS[key].label }));
+  }
+
+  /* Working space (mm) a layout gives a question of `marks` marks. */
+  function spaceMm(key, marks) {
+    return layoutFor(key).space(Number(marks || 0));
+  }
+
+  /* The layout a saved record prints with: its own saved layout when
+     present and known, else the current default. Records saved by v1
+     of this feature have no layout field and land on the default. */
+  function recordLayout(record) {
+    return layoutFor(record && record.layout).key;
+  }
+
   function questionLevel(marks, bands) {
     const value = Number(marks || 0);
     if (value <= bands.easy) return "easy";
@@ -318,7 +365,7 @@
     };
   }
 
-  function makeRecord({ topics, picked, count, targetMarks, includeEP, now, date }) {
+  function makeRecord({ topics, picked, count, targetMarks, includeEP, layout, now, date }) {
     const totalMarks = (picked || []).reduce((sum, q) => sum + Number(q.marks || 0), 0);
     return {
       id: `asg-${Number(now || Date.now()).toString(36)}-${Math.random().toString(36).slice(2, 6)}`,
@@ -330,12 +377,15 @@
       targetMarks: Number(targetMarks || 0),
       totalMarks,
       estMinutes: estimateMinutes(totalMarks),
-      includeEP: Boolean(includeEP)
+      includeEP: Boolean(includeEP),
+      layout: layoutFor(layout).key
     };
   }
 
   const Core = {
     LEVELS, BANDS, MINUTES_PER_MARK, MAX_COUNT,
+    LAYOUTS, LAYOUT_KEYS, DEFAULT_LAYOUT, layoutFor, layoutOptions,
+    spaceMm, recordLayout,
     questionLevel, mulberry32, shuffle, apportion, buildCourseIndex,
     indexFromPasses, ialIndex, defaultCount, estimateMinutes,
     selectAssignment, makeRecord
@@ -516,7 +566,7 @@
         <li class="lt-assign-item">
           <div class="lt-assign-meta">
             <b>${escapeHtml(formatDate(record.date))}</b>
-            <span>${record.questionIds.length} questions &middot; ${record.totalMarks} marks &middot; about ${record.estMinutes} min</span>
+            <span>${record.questionIds.length} questions &middot; ${record.totalMarks} marks &middot; about ${record.estMinutes} min &middot; ${escapeHtml(Core.LAYOUTS[Core.recordLayout(record)].label)}</span>
             <span class="lt-muted">${escapeHtml((record.topics || []).join(", "))}</span>
           </div>
           <div class="lt-assign-actions">
@@ -587,6 +637,11 @@
         <input type="number" id="asgTarget" min="0" step="1" placeholder="No target">
       </label>
       <label class="lt-checkline"><input type="checkbox" id="asgEP" checked> Include Elite Practice questions</label>
+      <label class="lt-field"><span>Print layout (same options as the mock exam printer)</span>
+        <select id="asgLayout">
+          ${Core.layoutOptions().map((option) => `<option value="${option.key}"${option.key === Core.DEFAULT_LAYOUT ? " selected" : ""}>${escapeHtml(option.label)}</option>`).join("")}
+        </select>
+      </label>
       <p class="lt-muted">Up to the chosen number of questions; estimated time is worked out at ${Core.MINUTES_PER_MARK} minutes per mark. Questions are picked at random - a question may appear again in a later assignment, never twice in the same one.</p>
       <div class="lt-warn" id="asgError" hidden></div>
       <div class="lt-form-actions">
@@ -608,6 +663,7 @@
     const count = Number(document.getElementById("asgCount").value || 0);
     const targetMarks = Number(document.getElementById("asgTarget").value || 0);
     const includeEP = document.getElementById("asgEP").checked;
+    const layout = document.getElementById("asgLayout").value;
     const errorBox = document.getElementById("asgError");
     const rng = Core.mulberry32(Date.now() % 2147483647);
     const result = Core.selectAssignment({
@@ -620,7 +676,7 @@
     }
     const now = Date.now();
     const record = Core.makeRecord({
-      topics, picked: result.picked, count, targetMarks, includeEP,
+      topics, picked: result.picked, count, targetMarks, includeEP, layout,
       now, date: ACore ? ACore.cairoToday() : new Date(now).toISOString().slice(0, 10)
     });
     const button = document.getElementById("asgDoGenerate");
@@ -691,13 +747,22 @@
     return fallbackSolutionHtml(solution);
   }
 
+  /* The paper renders in the record's saved layout (v1 records have
+     no layout field -> the current default, "single"). Student copy:
+     the layout's working space follows each question (nothing at all
+     in compact). Teacher copy: worked solutions replace the working
+     space, but the layout still drives the spacing - the same gap
+     between questions, and in "single" each question + solution
+     starts on its own printed page (teacher-tracker.css). */
   async function renderPaper(ctx, record, variant, index) {
+    const layout = Core.layoutFor(record.layout);
     const questions = record.questionIds.map((id) => questionById(index, id)).filter(Boolean);
     const missing = record.questionIds.length - questions.length;
     const parts = [];
     for (let i = 0; i < questions.length; i++) {
       const q = questions[i];
       const sol = variant === "teacher" ? await solutionHtml(ctx.courseId, index, q.id) : "";
+      const space = variant === "student" ? Core.spaceMm(layout.key, q.marks) : 0;
       parts.push(`
       <article class="asg-q">
         <header class="asg-q-head">
@@ -706,15 +771,18 @@
           <span class="asg-qmarks">(${q.marks} mark${q.marks === 1 ? "" : "s"})</span>
         </header>
         ${q.image ? `<img class="asg-qimg" src="${escapeHtml(q.image)}" alt="Question ${i + 1} from ${escapeHtml(q.paper || "a past paper")}">` : ""}
-        ${variant === "student" ? `<div class="asg-space" aria-hidden="true"></div>` : `
+        ${variant === "student" ? (space > 0 ? `<div class="asg-space" style="height:${space}mm" aria-hidden="true"></div>` : "") : `
         <div class="asg-sol">
           <h3 class="asg-sol-title">Worked solution</h3>
           ${sol}
         </div>`}
       </article>`);
     }
+    const gap = layout.gap > 0 && parts.length > 1
+      ? `<div class="asg-gap" style="height:${layout.gap}mm" aria-hidden="true"></div>`
+      : "";
     return `
-      <div class="asg-sheet is-${variant}">
+      <div class="asg-sheet is-${variant} is-layout-${layout.key}">
         <header class="asg-paper-head">
           <p class="asg-brand">Elite IGCSE <span>Maths, mastered step by step.</span></p>
           <h1>${variant === "teacher" ? "Assignment - Teacher copy (with worked solutions)" : "Assignment"}</h1>
@@ -725,10 +793,10 @@
             <p><b>Topics:</b> ${escapeHtml((record.topics || []).join(", "))}</p>
             <p><b>Total:</b> ${record.totalMarks} marks &middot; <b>Time:</b> about ${record.estMinutes} minutes (${Core.MINUTES_PER_MARK} min per mark)</p>
           </div>
-          ${variant === "student" ? `<p class="asg-instructions">Answer all questions. Show your working clearly in the spaces provided.</p>` : ""}
+          ${variant === "student" ? `<p class="asg-instructions">${layout.key === "compact" ? "Answer all questions on separate paper. Show your working clearly." : "Answer all questions. Show your working clearly in the spaces provided."}</p>` : ""}
           ${missing ? `<p class="asg-missing">${missing} question${missing === 1 ? "" : "s"} from this saved assignment could not be found in the current question bank and ${missing === 1 ? "is" : "are"} not shown.</p>` : ""}
         </header>
-        ${parts.join("")}
+        ${parts.join(gap)}
         <footer class="asg-paper-foot">Elite IGCSE Mathematics - Dr Eslam Ahmed &middot; eliteigcse.com</footer>
       </div>`;
   }
