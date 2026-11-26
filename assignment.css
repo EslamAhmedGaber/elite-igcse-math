@@ -1,0 +1,98 @@
+/* Public assignment page (assignment.html) - student copy only.
+   The .asg- paper styles are ported from teacher-tracker.css (the
+   tracker's student-copy styles); the solution styles are
+   deliberately NOT ported - this page never renders solutions. */
+
+.asg-page {
+  background: #e8edf5;
+  padding: 22px 12px 48px;
+  min-height: 60vh;
+}
+.asg-page-toolbar {
+  max-width: 860px;
+  margin: 0 auto 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.asg-page-note { margin: 0; color: #33465e; font-size: 0.92rem; max-width: 560px; }
+.asg-page-print {
+  font: inherit; font-weight: 700; cursor: pointer;
+  background: #e2b84f; color: #0e1b2e;
+  border: 0; border-radius: 10px; padding: 10px 18px;
+}
+.asg-page-print:disabled { opacity: 0.5; cursor: default; }
+.asg-page-state {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  color: #0e1b2e;
+  border-radius: 6px;
+  box-shadow: 0 10px 34px rgba(14, 27, 46, 0.16);
+  padding: 34px 40px;
+  font-family: "Sora", system-ui, sans-serif;
+}
+.asg-page-state h1 { margin: 0 0 10px; font-size: 1.35rem; }
+.asg-page-state p { margin: 6px 0; line-height: 1.55; }
+.asg-page-loading { color: #5b6b82; }
+
+/* The paper (ported student-copy styles). */
+.asg-sheet {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  color: #0e1b2e;
+  border-radius: 6px;
+  box-shadow: 0 10px 34px rgba(14, 27, 46, 0.22);
+  padding: 44px 48px 30px;
+  font-family: "Sora", system-ui, sans-serif;
+}
+.asg-paper-head { border-bottom: 3px solid #e2b84f; padding-bottom: 14px; margin-bottom: 20px; }
+.asg-brand { margin: 0 0 6px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.8rem; color: #1b4fd8; }
+.asg-brand span { color: #5b6b82; font-weight: 600; text-transform: none; letter-spacing: 0; }
+.asg-paper-head h1 { margin: 0 0 10px; font-size: 1.5rem; }
+.asg-paper-meta { display: flex; flex-wrap: wrap; gap: 4px 26px; }
+.asg-paper-meta p { margin: 2px 0; font-size: 0.92rem; }
+.asg-instructions { margin: 10px 0 0; font-size: 0.92rem; color: #33465e; }
+.asg-missing { margin: 10px 0 0; font-size: 0.9rem; color: #a8323c; }
+.asg-q { padding: 16px 0 18px; border-bottom: 1px solid #dbe3ef; }
+.asg-q-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 10px; }
+.asg-qno { font-weight: 800; font-size: 1.05rem; }
+.asg-qmeta { color: #5b6b82; font-size: 0.85rem; }
+.asg-qmarks { margin-left: auto; font-weight: 700; font-size: 0.9rem; white-space: nowrap; }
+.asg-qimg { display: block; max-width: 100%; height: auto; }
+/* Working space: height is set inline per question by the
+   assignment's print layout (same table as the tracker papers). */
+.asg-space {
+  margin-top: 12px;
+  border-radius: 6px;
+  background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 27px, #e3eaf3 27px, #e3eaf3 28px);
+}
+.asg-gap { }
+.asg-paper-foot { margin-top: 22px; padding-top: 10px; border-top: 1px solid #dbe3ef; color: #5b6b82; font-size: 0.8rem; text-align: center; }
+
+@media (max-width: 640px) {
+  .asg-sheet { padding: 26px 18px 22px; }
+  .asg-page-state { padding: 24px 20px; }
+}
+
+@media print {
+  /* Only the paper prints - no site chrome, no toolbar. */
+  .site-header, .site-footer, .asg-page-toolbar, .asg-page-state { display: none !important; }
+  .asg-page { background: #ffffff; padding: 0; }
+  .asg-sheet {
+    box-shadow: none;
+    border-radius: 0;
+    max-width: none;
+    margin: 0;
+    padding: 6mm 4mm;
+  }
+  .asg-sheet .asg-q { break-inside: avoid; }
+  .asg-qimg { max-height: 240mm; }
+  /* "One question per page" layout: every question starts a fresh
+     printed page (the last one must not force a trailing blank). */
+  .asg-sheet.is-layout-single .asg-q { break-after: page; page-break-after: always; }
+  .asg-sheet.is-layout-single .asg-q:last-of-type { break-after: auto; page-break-after: auto; }
+}

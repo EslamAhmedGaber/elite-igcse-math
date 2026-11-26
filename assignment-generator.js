@@ -365,7 +365,7 @@
     };
   }
 
-  function makeRecord({ topics, picked, count, targetMarks, includeEP, layout, now, date }) {
+  function makeRecord({ topics, picked, count, targetMarks, includeEP, layout, audience, now, date }) {
     const totalMarks = (picked || []).reduce((sum, q) => sum + Number(q.marks || 0), 0);
     return {
       id: `asg-${Number(now || Date.now()).toString(36)}-${Math.random().toString(36).slice(2, 6)}`,
@@ -378,8 +378,140 @@
       totalMarks,
       estMinutes: estimateMinutes(totalMarks),
       includeEP: Boolean(includeEP),
-      layout: layoutFor(layout).key
+      layout: layoutFor(layout).key,
+      ...(audience && audience.type === "group" && audience.groupName
+        ? { audience: { type: "group", groupName: String(audience.groupName).trim().slice(0, 80) } }
+        : {})
     };
+  }
+
+  /* --------------------------------------------------- share links -- */
+  /* The public assignment page (assignment.html) renders a student
+     copy from URL parameters alone - no login, no Firestore. The URL
+     carries only ids + display facts; marks, time and topics are
+     derived from the bank by studentPaperModel, never trusted from
+     the link (plan audits W5/X3). Bank ids contain no commas
+     (verified across all 7 courses), so comma-joining is safe. */
+  const SHARE_MAX_IDS = 40;
+  const SHARE_NAME_CAP = 80;
+
+  function cleanShareName(value) {
+    /* Control chars out, angle brackets out (the value lands in HTML
+       on the public page - escaped there too, but belt and braces),
+       whitespace collapsed, capped. */
+    return String(value || "").replace(/[\u0000-\u001F\u007F<>]/g, " ").replace(/\s+/g, " ").trim().slice(0, SHARE_NAME_CAP);
+  }
+
+  function buildShareQuery(record, { courseId, name } = {}) {
+    const params = new URLSearchParams();
+    params.set("c", String(courseId || ""));
+    const layout = recordLayout(record || {});
+    if (layout !== DEFAULT_LAYOUT) params.set("l", layout);
+    const displayName = cleanShareName(name || "");
+    if (displayName) params.set("n", displayName);
+    if (record && /^\d{4}-\d{2}-\d{2}$/.test(record.date || "")) params.set("d", record.date);
+    params.set("q", ((record && record.questionIds) || []).join(","));
+    return params.toString();
+  }
+
+  function buildShareUrl(base, record, opts) {
+    const cleanBase = String(base || "assignment.html");
+    return `${cleanBase}${cleanBase.includes("?") ? "&" : "?"}${buildShareQuery(record, opts)}`;
+  }
+
+  /* Strict parse of an untrusted link: unknown course or zero ids is
+     an error object (the page shows a clean error, never a blank);
+     layout/name/date fall back to safe values; ids are deduped and
+     capped. */
+  function parseShareQuery(search, validCourseIds) {
+    let params;
+    try { params = new URLSearchParams(String(search || "")); } catch (error) { return { error: "That assignment link could not be read." }; }
+    const courseId = params.get("c") || "";
+    if (!courseId || (validCourseIds && !validCourseIds.includes(courseId))) {
+      return { error: "That assignment link does not name a course on this site." };
+    }
+    const seen = new Set();
+    const questionIds = [];
+    String(params.get("q") || "").split(",").forEach((raw) => {
+      const id = raw.trim().slice(0, 200);
+      if (id && !seen.has(id)) { seen.add(id); questionIds.push(id); }
+    });
+    const capped = questionIds.slice(0, SHARE_MAX_IDS);
+    if (!capped.length) return { error: "That assignment link does not include any questions." };
+    const dateRaw = params.get("d") || "";
+    return {
+      courseId,
+      layout: layoutFor(params.get("l") || "").key,
+      name: cleanShareName(params.get("n") || ""),
+      date: /^\d{4}-\d{2}-\d{2}$/.test(dateRaw) ? dateRaw : "",
+      questionIds: capped
+    };
+  }
+
+  /* The public page's render model - the privacy boundary (audit X3).
+     Only display fields are copied out of the bank index; the IAL
+     index's inline solutions and every other bank internal never
+     enter the model. Totals are recomputed from the questions
+     actually found; unknown ids are counted as missing. */
+  function studentPaperModel(index, decoded) {
+    const questions = [];
+    ((decoded && decoded.questionIds) || []).forEach((id) => {
+      const q = index && index.byId ? index.byId[id] : null;
+      if (!q) return;
+      questions.push({ id: q.id, topic: q.topic || "", marks: Number(q.marks || 0), paper: q.paper || "", qno: Number(q.qno || 0), image: q.image || "" });
+    });
+    const topics = [];
+    questions.forEach((q) => { if (q.topic && !topics.includes(q.topic)) topics.push(q.topic); });
+    const totalMarks = questions.reduce((sum, q) => sum + q.marks, 0);
+    const requested = ((decoded && decoded.questionIds) || []).length;
+    return {
+      name: (decoded && decoded.name) || "",
+      courseId: (decoded && decoded.courseId) || "",
+      layout: layoutFor(decoded && decoded.layout).key,
+      date: (decoded && decoded.date) || "",
+      questions,
+      topics,
+      totalMarks,
+      estMinutes: estimateMinutes(totalMarks),
+      requested,
+      missing: requested - questions.length
+    };
+  }
+
+  function topicsSummary(topics, max = 3) {
+    const list = (topics || []).filter(Boolean);
+    if (!list.length) return "";
+    if (list.length <= max) return list.join(", ");
+    return `${list.slice(0, max).join(", ")} +${list.length - max} more`;
+  }
+
+  /* Group topic math (pure). members = [{ name, enrolled, topics }].
+     Only enrolled members count. Enrolled members with zero ticked
+     topics are EXCLUDED from the intersection (they would empty it
+     by definition) and reported by name, so the teacher sees exactly
+     who is holding the group back (audit X4). */
+  function groupTopicIntersection(members) {
+    const enrolled = (members || []).filter((m) => m && m.enrolled);
+    const included = enrolled.filter((m) => (m.topics || []).length > 0);
+    const excluded = enrolled.filter((m) => !(m.topics || []).length);
+    let topics = [];
+    if (included.length) {
+      topics = [...(included[0].topics || [])];
+      for (let i = 1; i < included.length; i++) {
+        const set = new Set(included[i].topics || []);
+        topics = topics.filter((t) => set.has(t));
+      }
+    }
+    return { topics, included: included.map((m) => m.name), excluded: excluded.map((m) => m.name) };
+  }
+
+  function groupTopicUnion(members) {
+    const enrolled = (members || []).filter((m) => m && m.enrolled);
+    const included = enrolled.filter((m) => (m.topics || []).length > 0);
+    const excluded = enrolled.filter((m) => !(m.topics || []).length);
+    const topics = [];
+    enrolled.forEach((m) => (m.topics || []).forEach((t) => { if (!topics.includes(t)) topics.push(t); }));
+    return { topics, included: included.map((m) => m.name), excluded: excluded.map((m) => m.name) };
   }
 
   const Core = {
@@ -388,7 +520,10 @@
     spaceMm, recordLayout,
     questionLevel, mulberry32, shuffle, apportion, buildCourseIndex,
     indexFromPasses, ialIndex, defaultCount, estimateMinutes,
-    selectAssignment, makeRecord
+    selectAssignment, makeRecord,
+    SHARE_MAX_IDS, cleanShareName, buildShareQuery, buildShareUrl,
+    parseShareQuery, studentPaperModel, topicsSummary,
+    groupTopicIntersection, groupTopicUnion
   };
   root.EliteAssignmentCore = Core;
 
@@ -551,6 +686,25 @@
     const records = Object.values((ctx.doc && ctx.doc.assignments) || {})
       .sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
     const completed = (ctx.completedTopics || []).length;
+    const share = ctx.share || null;
+    const groupRecords = share
+      ? Object.values(share.groupRecords || {}).sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0))
+      : [];
+    const itemHtml = (record, group) => `
+        <li class="lt-assign-item">
+          <div class="lt-assign-meta">
+            <b>${escapeHtml(formatDate(record.date))}</b>
+            <span>${record.questionIds.length} questions &middot; ${record.totalMarks} marks &middot; about ${record.estMinutes} min &middot; ${escapeHtml(Core.LAYOUTS[Core.recordLayout(record)].label)}</span>
+            <span class="lt-muted">${escapeHtml((record.topics || []).join(", "))}</span>
+          </div>
+          <div class="lt-assign-actions">
+            ${group
+              ? `<button type="button" class="lt-btn is-small" data-asg-open-group="${escapeHtml(key)}|${escapeHtml(record.id)}">Student copy</button>`
+              : `<button type="button" class="lt-btn is-small" data-asg-open="${escapeHtml(key)}|${escapeHtml(record.id)}|student">Student copy</button>
+                 <button type="button" class="lt-btn is-small" data-asg-open="${escapeHtml(key)}|${escapeHtml(record.id)}|teacher">Teacher copy</button>`}
+            ${share ? `<button type="button" class="lt-btn is-small is-gold" data-asg-share${group ? "-group" : ""}="${escapeHtml(key)}|${escapeHtml(record.id)}">Share</button>` : ""}
+          </div>
+        </li>`;
     container.innerHTML = `
       <div class="lt-assign-head">
         <h3>Assignments</h3>
@@ -561,20 +715,16 @@
       <p class="lt-muted">${completed
         ? `Random questions from the ${completed} completed topic${completed === 1 ? "" : "s"} above, in the site's exam style - student copy and worked-solutions teacher copy.`
         : "Tick at least one lesson above, then generate a practice assignment from the completed topics."}</p>
-      ${records.length ? `<ul class="lt-assign-list">
-        ${records.map((record) => `
-        <li class="lt-assign-item">
-          <div class="lt-assign-meta">
-            <b>${escapeHtml(formatDate(record.date))}</b>
-            <span>${record.questionIds.length} questions &middot; ${record.totalMarks} marks &middot; about ${record.estMinutes} min &middot; ${escapeHtml(Core.LAYOUTS[Core.recordLayout(record)].label)}</span>
-            <span class="lt-muted">${escapeHtml((record.topics || []).join(", "))}</span>
-          </div>
-          <div class="lt-assign-actions">
-            <button type="button" class="lt-btn is-small" data-asg-open="${escapeHtml(key)}|${escapeHtml(record.id)}|student">Student copy</button>
-            <button type="button" class="lt-btn is-small" data-asg-open="${escapeHtml(key)}|${escapeHtml(record.id)}|teacher">Teacher copy</button>
-          </div>
-        </li>`).join("")}
-      </ul>` : `<p class="lt-muted">No assignments generated yet for this course.</p>`}`;
+      ${records.length ? `<ul class="lt-assign-list">${records.map((record) => itemHtml(record, false)).join("")}</ul>` : `<p class="lt-muted">No assignments generated yet for this course.</p>`}
+      ${share && share.groupName ? `
+      <div class="lt-assign-group">
+        <div class="lt-assign-head">
+          <h4>Group: ${escapeHtml(share.groupName)}</h4>
+          <button type="button" class="lt-btn is-small" data-asg-group-generate="${escapeHtml(key)}">Group assignment&hellip;</button>
+        </div>
+        <p class="lt-muted">One assignment for the whole group, from the topics everyone in the group has completed in this course. Share it to yourself and forward it into the group.</p>
+        ${groupRecords.length ? `<ul class="lt-assign-list">${groupRecords.map((record) => itemHtml(record, true)).join("")}</ul>` : `<p class="lt-muted">No group assignments yet for this course.</p>`}
+      </div>` : ""}`;
   }
 
   /* -------------------------------------------------------------- modal */
@@ -703,6 +853,239 @@
     openPreview(freshCtx, freshRecord || record, "student");
   }
 
+  /* ------------------------------------------------------------- sharing */
+  /* Distribution is a LINK to the public student-copy page
+     (assignment.html): wa.me cannot attach PDFs. Two send options
+     only (owner decision 2026-11-26): the student's own numbers
+     (student template, one button per number) and "WhatsApp to me"
+     (forward template), so the teacher forwards it into the
+     student's WhatsApp group himself. */
+
+  function isGroupRecord(record) {
+    return Boolean(record && record.audience && record.audience.type === "group");
+  }
+
+  function shareUrl(ctx, record) {
+    const name = isGroupRecord(record) ? record.audience.groupName : ctx.name;
+    const base = new URL("assignment.html", root.location.href).href;
+    return Core.buildShareUrl(base, record, { courseId: ctx.courseId, name });
+  }
+
+  function shareValues(ctx, record, url) {
+    const groupName = isGroupRecord(record) ? record.audience.groupName : (ctx.share ? ctx.share.groupName : "");
+    return {
+      /* Group rule (plan section 7.3): a group assignment has no
+         single student, so {student} falls back to the group name. */
+      student: isGroupRecord(record) ? groupName : ctx.name,
+      group: groupName || "",
+      course: COURSE_META[ctx.courseId] ? COURSE_META[ctx.courseId].label : ctx.courseId,
+      topics: Core.topicsSummary(record.topics),
+      link: url,
+      date: formatDate(record.date)
+    };
+  }
+
+  function shareText(ctx, record, url, kind) {
+    const settings = ctx.share && ctx.share.settings ? ctx.share.settings() : {};
+    const values = shareValues(ctx, record, url);
+    if (ACore && ACore.templateOrDefault && ACore.renderTemplate) {
+      return ACore.renderTemplate(ACore.templateOrDefault(settings, kind), values);
+    }
+    return `${values.course} assignment for ${values.student}: ${url}`;
+  }
+
+  function waLink(digits, text) {
+    return `https://wa.me/${digits}?text=${encodeURIComponent(text)}`;
+  }
+
+  function openSharePanel(ctx, record) {
+    ensureChrome();
+    const share = ctx.share || {};
+    const group = isGroupRecord(record);
+    const url = shareUrl(ctx, record);
+    const settings = share.settings ? share.settings() : {};
+    const ownerDigits = ACore ? ACore.normalisePhone(ACore.effectiveOwnerPhone(settings)) : "";
+    const forwardText = shareText(ctx, record, url, "forward");
+    const studentText = group ? "" : shareText(ctx, record, url, "student");
+    const phones = group ? [] : (share.phones || []);
+    const forwardTpl = ACore && ACore.templateOrDefault ? ACore.templateOrDefault(settings, "forward") : "";
+    const studentTpl = ACore && ACore.templateOrDefault ? ACore.templateOrDefault(settings, "student") : "";
+    const modal = document.getElementById("asgModal");
+    document.getElementById("asgModalTitle").textContent = `Share assignment - ${group ? record.audience.groupName : ctx.name}`;
+    document.getElementById("asgModalBody").innerHTML = `
+      <p class="lt-muted">Anyone with this link can open the student copy - questions only, no solutions. The page has a Print / Save-as-PDF button.</p>
+      <p class="asg-share-link">${escapeHtml(url)}</p>
+      <div class="asg-share-actions">
+        ${phones.map((entry) => `
+          <a class="lt-btn is-gold" target="_blank" rel="noopener" href="${escapeHtml(waLink(ACore.normalisePhone(entry.number), studentText))}">WhatsApp: ${escapeHtml(entry.label || "Student")}</a>`).join("")}
+        ${!group && !phones.length ? `<p class="lt-muted">No WhatsApp number is saved for ${escapeHtml(ctx.name)} yet - add one from Edit student, or copy the link and send it another way.</p>` : ""}
+        ${!group && phones.length && ACore && !ACore.templateHasLink(studentTpl) ? `<p class="lt-warn">Your student message template does not include {link} - the message will go out without the link. Add {link} in Sharing settings.</p>` : ""}
+        ${ownerDigits ? `<a class="lt-btn is-primary" target="_blank" rel="noopener" href="${escapeHtml(waLink(ownerDigits, forwardText))}">WhatsApp to me (forward to the group)</a>` : ""}
+        ${ACore && forwardTpl && !ACore.templateHasLink(forwardTpl) ? `<p class="lt-warn">Your forward template does not include {link} - the message will go out without the link. Add {link} in Sharing settings.</p>` : ""}
+        <button type="button" class="lt-btn" id="asgShareCopy">Copy link</button>
+        <button type="button" class="lt-btn" id="asgShareClose">Close</button>
+      </div>`;
+    modal.hidden = false;
+    document.getElementById("asgShareClose").addEventListener("click", closeModal);
+    document.getElementById("asgShareCopy").addEventListener("click", async (event) => {
+      const btn = event.currentTarget;
+      try {
+        await navigator.clipboard.writeText(url);
+        btn.textContent = "Copied!";
+        if (ctx.toast) ctx.toast("Assignment link copied");
+      } catch (error) {
+        btn.textContent = "Copy failed - copy the link above manually";
+      }
+    });
+  }
+
+  /* ---------------------------------------------------- group generator */
+  function groupOptions(share) {
+    const byKey = new Map();
+    ((share && share.members) || []).forEach((m) => {
+      const key = ACore ? ACore.normName(m.groupName || "") : String(m.groupName || "").trim().toLowerCase();
+      if (key && !byKey.has(key)) byKey.set(key, m.groupName);
+    });
+    return [...byKey.entries()].map(([key, name]) => ({ key, name }));
+  }
+
+  async function openGroupGenerator(ctx, button) {
+    ensureChrome();
+    if (!ctx.share) return;
+    const original = button ? button.textContent : "";
+    if (button) { button.disabled = true; button.textContent = "Loading the question bank..."; }
+    let index;
+    try {
+      index = await loadBank(ctx.courseId);
+    } catch (error) {
+      if (button) { button.disabled = false; button.textContent = original; }
+      if (ctx.toast) ctx.toast("The question bank could not be loaded. Check the connection and try again.", "error");
+      return;
+    }
+    if (button) { button.disabled = false; button.textContent = original; }
+    const groups = groupOptions(ctx.share);
+    if (!groups.length) return;
+    const ownKey = ACore ? ACore.normName(ctx.share.groupName || "") : "";
+    const first = groups.find((g) => g.key === ownKey) || groups[0];
+    const bands = COURSE_META[ctx.courseId] && COURSE_META[ctx.courseId].family === "ial" ? Core.BANDS.ial : Core.BANDS.igcse;
+    modalState = { ctx, index, bands, groupKey: first.key, groupName: first.name, mode: "intersection", topics: [] };
+    renderGroupBody();
+  }
+
+  function renderGroupBody() {
+    if (!modalState || !modalState.ctx.share) return;
+    const { ctx, index } = modalState;
+    const groups = groupOptions(ctx.share);
+    const members = (ctx.share.members || []).filter((m) => (ACore ? ACore.normName(m.groupName || "") : "") === modalState.groupKey);
+    const calc = modalState.mode === "union" ? Core.groupTopicUnion(members) : Core.groupTopicIntersection(members);
+    modalState.topics = calc.topics;
+    const enrolled = members.filter((m) => m.enrolled);
+    const notEnrolled = members.filter((m) => !m.enrolled);
+    const avail = calc.topics.length ? availability(index, calc.topics, true) : { total: 0 };
+    const modal = document.getElementById("asgModal");
+    document.getElementById("asgModalTitle").textContent = "Group assignment";
+    document.getElementById("asgModalBody").innerHTML = `
+      <label class="lt-field"><span>Group</span>
+        <select id="asgGroupSelect">
+          ${groups.map((g) => `<option value="${escapeHtml(g.key)}"${g.key === modalState.groupKey ? " selected" : ""}>${escapeHtml(g.name)}</option>`).join("")}
+        </select>
+      </label>
+      <p class="lt-muted">${escapeHtml(COURSE_META[ctx.courseId] ? COURSE_META[ctx.courseId].label : ctx.courseId)} &middot; members in this course:</p>
+      <ul class="asg-member-list">
+        ${enrolled.map((m) => `<li>${escapeHtml(m.name)} - ${(m.topics || []).length} completed topic${(m.topics || []).length === 1 ? "" : "s"}</li>`).join("") || `<li class="lt-muted">Nobody in this group is enrolled in this course yet.</li>`}
+      </ul>
+      ${calc.excluded.length ? `<p class="lt-warn">Not counted (no completed topics in this course yet): ${escapeHtml(calc.excluded.join(", "))}</p>` : ""}
+      ${notEnrolled.length ? `<p class="lt-muted">In the group but not enrolled in this course: ${escapeHtml(notEnrolled.map((m) => m.name).join(", "))}</p>` : ""}
+      ${calc.topics.length ? `
+        <p class="lt-muted">${modalState.mode === "union" ? "Using the UNION of the group's topics (your choice):" : "Topics everyone counted above has completed:"} <b>${escapeHtml(calc.topics.join(", "))}</b></p>
+        <p class="lt-muted" id="asgAvail">${avail.total} bank questions across these topics.</p>
+        ${modalState.mode === "union" ? `<p><button type="button" class="lt-btn is-small" id="asgUseIntersection">Back to the shared topics only</button></p>` : ""}
+        <label class="lt-field"><span>Number of questions</span>
+          <input type="number" id="asgCount" min="1" max="${Core.MAX_COUNT}" step="1" value="${Core.defaultCount(calc.topics.length)}">
+        </label>
+        <label class="lt-field"><span>Target total marks (optional - the paper never goes over it)</span>
+          <input type="number" id="asgTarget" min="0" step="1" placeholder="No target">
+        </label>
+        <label class="lt-checkline"><input type="checkbox" id="asgEP" checked> Include Elite Practice questions</label>
+        <label class="lt-field"><span>Print layout (same options as the mock exam printer)</span>
+          <select id="asgLayout">
+            ${Core.layoutOptions().map((option) => `<option value="${option.key}"${option.key === Core.DEFAULT_LAYOUT ? " selected" : ""}>${escapeHtml(option.label)}</option>`).join("")}
+          </select>
+        </label>` : `
+        <div class="lt-warn"><strong>${modalState.mode === "union" ? "No topics at all yet." : "No topics in common."}</strong> ${modalState.mode === "union"
+          ? "Nobody counted above has completed any topic in this course yet, so there is nothing to build a group assignment from."
+          : "The counted members share no completed topic in this course, so there is nothing to build a fair group assignment from yet."}</div>
+        ${modalState.mode === "intersection" ? `<p><button type="button" class="lt-btn is-small" id="asgUseUnion">Use the union of the group's topics instead</button></p>` : ""}`}
+      <div class="lt-warn" id="asgError" hidden></div>
+      <div class="lt-form-actions">
+        ${calc.topics.length ? `<button type="button" class="lt-btn is-gold" id="asgDoGenerateGroup">Generate for the group</button>` : ""}
+        <button type="button" class="lt-btn" id="asgCancel">Cancel</button>
+      </div>`;
+    modal.hidden = false;
+    document.getElementById("asgGroupSelect").addEventListener("change", (event) => {
+      const picked = groups.find((g) => g.key === event.target.value);
+      if (picked) { modalState.groupKey = picked.key; modalState.groupName = picked.name; modalState.mode = "intersection"; renderGroupBody(); }
+    });
+    const unionBtn = document.getElementById("asgUseUnion");
+    if (unionBtn) unionBtn.addEventListener("click", () => { modalState.mode = "union"; renderGroupBody(); });
+    const interBtn = document.getElementById("asgUseIntersection");
+    if (interBtn) interBtn.addEventListener("click", () => { modalState.mode = "intersection"; renderGroupBody(); });
+    const ep = document.getElementById("asgEP");
+    if (ep) ep.addEventListener("change", (event) => {
+      const next = availability(index, modalState.topics, event.target.checked);
+      const availEl = document.getElementById("asgAvail");
+      if (availEl) availEl.textContent = `${next.total} bank questions across these topics.`;
+    });
+    document.getElementById("asgCancel").addEventListener("click", closeModal);
+    const gen = document.getElementById("asgDoGenerateGroup");
+    if (gen) gen.addEventListener("click", () => doGenerateGroup());
+  }
+
+  async function doGenerateGroup() {
+    if (!modalState) return;
+    const { ctx, index, topics, bands } = modalState;
+    const count = Number(document.getElementById("asgCount").value || 0);
+    const targetMarks = Number(document.getElementById("asgTarget").value || 0);
+    const includeEP = document.getElementById("asgEP").checked;
+    const layout = document.getElementById("asgLayout").value;
+    const errorBox = document.getElementById("asgError");
+    const rng = Core.mulberry32(Date.now() % 2147483647);
+    const result = Core.selectAssignment({
+      byTopic: index.byTopic, topics, count, targetMarks, includeEP, bands, rng
+    });
+    if (!result.picked.length) {
+      errorBox.hidden = false;
+      errorBox.innerHTML = `<strong>Nothing could be picked.</strong> ${result.warnings.map((w) => escapeHtml(w.message)).join(" ")}`;
+      return;
+    }
+    const now = Date.now();
+    const record = Core.makeRecord({
+      topics, picked: result.picked, count, targetMarks, includeEP, layout,
+      audience: { type: "group", groupName: modalState.groupName },
+      now, date: ACore ? ACore.cairoToday() : new Date(now).toISOString().slice(0, 10)
+    });
+    const button = document.getElementById("asgDoGenerateGroup");
+    button.disabled = true;
+    button.textContent = "Saving...";
+    try {
+      await ctx.share.saveGroupRecord(modalState.groupName, record);
+    } catch (error) {
+      button.disabled = false;
+      button.textContent = "Generate for the group";
+      errorBox.hidden = false;
+      errorBox.textContent = "The group assignment could not be saved. Your tracker data is unchanged - try again.";
+      return;
+    }
+    const groupName = modalState.groupName;
+    closeModal();
+    if (ctx.toast) ctx.toast(`Group assignment saved for ${groupName}: ${record.questionIds.length} questions, ${record.totalMarks} marks`);
+    if (result.warnings.length && ctx.toast) ctx.toast(result.warnings[0].message, "error");
+    /* Distribution is the point of a group assignment: open the share
+       panel straight away (WhatsApp to me / copy link). */
+    const freshCtx = contexts.get(`${ctx.studentId}|${ctx.courseId}`) || ctx;
+    openSharePanel(freshCtx, record);
+  }
+
   /* ------------------------------------------------------------- preview */
 
   function questionById(index, id) {
@@ -787,7 +1170,7 @@
           <p class="asg-brand">Elite IGCSE <span>Maths, mastered step by step.</span></p>
           <h1>${variant === "teacher" ? "Assignment - Teacher copy (with worked solutions)" : "Assignment"}</h1>
           <div class="asg-paper-meta">
-            <p><b>Student:</b> ${escapeHtml(ctx.name)}</p>
+            <p><b>${record.audience && record.audience.type === "group" ? "Group" : "Student"}:</b> ${escapeHtml(ctx.name)}</p>
             <p><b>Course:</b> ${escapeHtml(COURSE_META[ctx.courseId] ? COURSE_META[ctx.courseId].label : ctx.courseId)}</p>
             <p><b>Date:</b> ${escapeHtml(formatDate(record.date))}</p>
             <p><b>Topics:</b> ${escapeHtml((record.topics || []).join(", "))}</p>
@@ -801,7 +1184,7 @@
       </div>`;
   }
 
-  async function openPreview(ctx, record, variant) {
+  async function openPreview(ctx, record, variant, shareCtx) {
     ensureChrome();
     let index;
     try {
@@ -811,7 +1194,7 @@
       return;
     }
     if (variant === "teacher") await ensureSolutionView();
-    previewState = { ctx, record, variant, index };
+    previewState = { ctx, record, variant, index, shareCtx: shareCtx || ctx };
     const rootEl = document.getElementById("asgPrintRoot");
     rootEl.innerHTML = `
       <div class="asg-toolbar">
@@ -820,6 +1203,7 @@
           <button type="button" class="lt-btn is-small ${variant === "teacher" ? "is-primary" : ""}" data-asg-variant="teacher">Teacher copy</button>
         </div>
         <div class="asg-toolbar-group">
+          ${previewState.shareCtx && previewState.shareCtx.share ? `<button type="button" class="lt-btn is-small" data-asg-share-preview>Share</button>` : ""}
           <button type="button" class="lt-btn is-small is-gold" data-asg-print>Print / save PDF</button>
           <button type="button" class="lt-btn is-small" data-asg-close-preview>Close</button>
         </div>
@@ -886,12 +1270,49 @@
     }
     const variantBtn = event.target.closest("[data-asg-variant]");
     if (variantBtn && previewState) {
-      await openPreview(previewState.ctx, previewState.record, variantBtn.dataset.asgVariant);
+      await openPreview(previewState.ctx, previewState.record, variantBtn.dataset.asgVariant, previewState.shareCtx);
+      return;
+    }
+    const shareBtn = event.target.closest("[data-asg-share]");
+    if (shareBtn) {
+      const [studentId, courseId, recordId] = String(shareBtn.dataset.asgShare || "").split("|");
+      const ctx = contexts.get(`${studentId}|${courseId}`);
+      const record = ctx && ctx.doc && ctx.doc.assignments ? ctx.doc.assignments[recordId] : null;
+      if (ctx && record) openSharePanel(ctx, record);
+      return;
+    }
+    const shareGroupBtn = event.target.closest("[data-asg-share-group]");
+    if (shareGroupBtn) {
+      const [studentId, courseId, recordId] = String(shareGroupBtn.dataset.asgShareGroup || "").split("|");
+      const ctx = contexts.get(`${studentId}|${courseId}`);
+      const record = ctx && ctx.share && ctx.share.groupRecords ? ctx.share.groupRecords[recordId] : null;
+      if (ctx && record) openSharePanel(ctx, record);
+      return;
+    }
+    const openGroup = event.target.closest("[data-asg-open-group]");
+    if (openGroup) {
+      const [studentId, courseId, recordId] = String(openGroup.dataset.asgOpenGroup || "").split("|");
+      const ctx = contexts.get(`${studentId}|${courseId}`);
+      const record = ctx && ctx.share && ctx.share.groupRecords ? ctx.share.groupRecords[recordId] : null;
+      if (ctx && record) {
+        const displayCtx = { ...ctx, name: record.audience.groupName };
+        await openPreview(displayCtx, record, "student", ctx);
+      }
+      return;
+    }
+    const groupGen = event.target.closest("[data-asg-group-generate]");
+    if (groupGen) {
+      const ctx = contexts.get(groupGen.dataset.asgGroupGenerate);
+      if (ctx) await openGroupGenerator(ctx, groupGen);
+      return;
+    }
+    if (event.target.closest("[data-asg-share-preview]") && previewState) {
+      openSharePanel(previewState.shareCtx || previewState.ctx, previewState.record);
       return;
     }
     if (event.target.closest("[data-asg-print]")) { await printPreview(); return; }
     if (event.target.closest("[data-asg-close-preview]")) { closePreview(); }
   });
 
-  root.EliteAssignments = { renderSection, openPreview, closePreview };
+  root.EliteAssignments = { renderSection, openPreview, closePreview, loadBank, COURSE_META };
 })(window);

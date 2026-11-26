@@ -3,9 +3,16 @@
    Spec: tracker-plan/PLAN_FINAL.md (PLAN v2 + Audit 2 fixes N1-N8).
 
    Firestore layout (rules pinned to the teacher email - see PLAN §0.5/§6):
-     teacher_students/{studentId}            name, phone, note, archived,
+     teacher_students/{studentId}            name, phone (mirror of
+                                              phones[0]), phones[{number,
+                                              label}] (max 3), groupName,
+                                              groupWhatsApp, note, archived,
                                               createdAt, editedAt (client ms)
-     teacher_students/_meta                  rosterTombstones {id: {updatedAt}}
+     teacher_students/_meta                  rosterTombstones {id: {updatedAt}},
+                                              settings {ownerPhone,
+                                              studentTemplate, forwardTemplate
+                                              + LWW clocks}, groupAssignments
+                                              {groupKey: {courseId: {id: record}}}
      teacher_students/{id}/courses/{courseId}
                                               courseId, ticks{}, tombstones{}
 
@@ -117,8 +124,12 @@
      { students: {id: student}, courses: {studentId: {courseId: doc}},
        rosterTombstones: {studentId: {updatedAt}}, lastFullSync: ms }   */
 
+  function emptySettings() {
+    return { ownerPhone: "", ownerUpdatedAt: 0, studentTemplate: "", forwardTemplate: "", templatesUpdatedAt: 0 };
+  }
+
   function emptyDataset() {
-    return { students: {}, courses: {}, rosterTombstones: {}, lastFullSync: 0 };
+    return { students: {}, courses: {}, rosterTombstones: {}, settings: emptySettings(), groupAssignments: {}, lastFullSync: 0 };
   }
 
   function emptyCourseDoc(courseId) {
@@ -126,16 +137,74 @@
   }
 
   function createStudent(fields, now) {
+    const phones = sanitizePhones(fields.phones, fields.phone);
     return {
       id: genId("stu"),
       name: String(fields.name || "").trim(),
-      phone: String(fields.phone || "").trim(),
+      phone: phoneMirror(phones),
+      phones,
+      groupName: cleanGroupName(fields.groupName || ""),
+      groupWhatsApp: cleanGroupLink(fields.groupWhatsApp || ""),
       note: capNote(fields.note || ""),
       nextSession: cleanSessionDate(fields.nextSession || ""),
       archived: false,
       createdAt: now,
       editedAt: now
     };
+  }
+
+  /* WhatsApp group invite links become href/window.open targets from
+     stored data, so they are a security boundary (audit W6): only the
+     real invite shape is accepted. cleanGroupLink throws (form/API
+     boundary, like cleanSessionDate); safeGroupLink is the sanitizer
+     wrapper that drops a bad value to "" instead of killing an import. */
+  function cleanGroupLink(value) {
+    const text = String(value || "").trim();
+    if (!text) return "";
+    if (!/^https:\/\/chat\.whatsapp\.com\/[A-Za-z0-9_-]{6,}$/.test(text)) {
+      throw new Error("That does not look like a WhatsApp group invite link (https://chat.whatsapp.com/...).");
+    }
+    return text;
+  }
+
+  function safeGroupLink(value) {
+    try { return cleanGroupLink(value); } catch (error) { return ""; }
+  }
+
+  function cleanGroupName(value) {
+    return String(value || "").trim().slice(0, 80);
+  }
+
+  /* Up to 3 labelled numbers per student (owner decision 2026-11-26).
+     `phones` is the source of truth; the legacy single `phone` string
+     is kept as a mirror of the first entry so every existing reader
+     (parent report, homework follow-ups, dashboard) keeps working,
+     and old data or backups carrying only `phone` migrate to a
+     single "Student" entry. Labels are Student / Mother / Father or
+     free text, capped at 24 chars. */
+  const PHONE_CAP = 3;
+  const PHONE_LABELS = ["Student", "Mother", "Father", "Other"];
+
+  function sanitizePhones(rawPhones, legacyPhone) {
+    const out = [];
+    if (Array.isArray(rawPhones)) {
+      rawPhones.forEach((entry) => {
+        if (!entry || typeof entry !== "object") return;
+        const number = String(entry.number || "").trim().slice(0, 32);
+        if (!number) return;
+        const label = String(entry.label || "").trim().slice(0, 24) || "Student";
+        out.push({ number, label });
+      });
+    }
+    if (!out.length) {
+      const legacy = String(legacyPhone || "").trim().slice(0, 32);
+      if (legacy) out.push({ number: legacy, label: "Student" });
+    }
+    return out.slice(0, PHONE_CAP);
+  }
+
+  function phoneMirror(phones) {
+    return phones && phones.length ? phones[0].number : "";
   }
 
   /* Next-session dates are stored as "" or a real YYYY-MM-DD date.
@@ -217,6 +286,14 @@
        field - re-printing resolves a missing layout to the current
        default ("single") in assignment-generator.js. */
     const layout = ASSIGNMENT_LAYOUT_KEYS.includes(raw.layout) ? raw.layout : null;
+    /* Audience (WhatsApp distribution): absent = a student record. A
+       group record carries { type: "group", groupName } and lives in
+       dataset.groupAssignments, never in a course doc (audit W1).
+       Anything that is not exactly that shape is dropped. */
+    const audience = (raw.audience && typeof raw.audience === "object" && !Array.isArray(raw.audience)
+      && raw.audience.type === "group" && typeof raw.audience.groupName === "string" && raw.audience.groupName.trim())
+      ? { type: "group", groupName: raw.audience.groupName.trim().slice(0, 80) }
+      : null;
     return {
       id,
       createdAt: nonNeg(raw.createdAt),
@@ -228,7 +305,8 @@
       totalMarks: nonNeg(raw.totalMarks),
       estMinutes: nonNeg(raw.estMinutes),
       includeEP: Boolean(raw.includeEP),
-      ...(layout ? { layout } : {})
+      ...(layout ? { layout } : {}),
+      ...(audience ? { audience } : {})
     };
   }
 
@@ -361,6 +439,11 @@
       });
     });
 
+    // Sharing settings: per-field-group LWW (audit W8); group
+    // assignments: union per (group, course) bucket (audit W1).
+    merged.settings = mergeSettings(cloud.settings, mirror.settings);
+    merged.groupAssignments = mergeGroupAssignments(cloud.groupAssignments, mirror.groupAssignments);
+
     return merged;
   }
 
@@ -377,6 +460,130 @@
       }
     });
     return doc;
+  }
+
+  /* --------------------- sharing: settings + message templates ------ */
+  /* Tracker settings live at the dataset root and sync through the
+     _meta Firestore doc beside rosterTombstones. Two independent LWW
+     clocks (audit W8): the owner's own WhatsApp number (edited inline
+     from the share panel) and the message templates (edited together
+     in the settings form) must never roll each other back. An empty
+     stored template means "use the built-in default" - the defaults
+     live in code, so Reset is just saving empty strings. There is NO
+     assistant setting (owner decision 2026-11-26): he forwards group
+     assignments himself from his own number. */
+  const TEMPLATE_CAP = 1000;
+  const DEFAULT_STUDENT_TEMPLATE = "أهلاً {student}، ده الـ assignment بتاعك لمادة {course} — المواضيع: {topics}. افتحه من هنا: {link}";
+  const DEFAULT_FORWARD_TEMPLATE = "الـ assignment بتاع {student} — جروب {group} — {course} — المواضيع: {topics} — {link}";
+  const TEMPLATE_KEYS = ["student", "group", "course", "topics", "link", "date"];
+  /* The site's published contact number is the out-of-the-box value
+     for "WhatsApp to me"; an empty stored ownerPhone means this. */
+  const OWNER_PHONE_DEFAULT = "201120009622";
+
+  function sanitizeSettings(raw) {
+    const out = emptySettings();
+    if (!raw || typeof raw !== "object" || Array.isArray(raw)) return out;
+    out.ownerPhone = String(raw.ownerPhone || "").trim().slice(0, 32);
+    out.ownerUpdatedAt = Number(raw.ownerUpdatedAt) || 0;
+    out.studentTemplate = typeof raw.studentTemplate === "string" ? raw.studentTemplate.slice(0, TEMPLATE_CAP) : "";
+    out.forwardTemplate = typeof raw.forwardTemplate === "string" ? raw.forwardTemplate.slice(0, TEMPLATE_CAP) : "";
+    out.templatesUpdatedAt = Number(raw.templatesUpdatedAt) || 0;
+    return out;
+  }
+
+  function mergeSettings(cloudRaw, mirrorRaw) {
+    const c = sanitizeSettings(cloudRaw);
+    const m = sanitizeSettings(mirrorRaw);
+    const out = emptySettings();
+    const phoneWin = (m.ownerUpdatedAt || 0) > (c.ownerUpdatedAt || 0) ? m : c;
+    out.ownerPhone = phoneWin.ownerPhone;
+    out.ownerUpdatedAt = Math.max(c.ownerUpdatedAt || 0, m.ownerUpdatedAt || 0);
+    const tplWin = (m.templatesUpdatedAt || 0) > (c.templatesUpdatedAt || 0) ? m : c;
+    out.studentTemplate = tplWin.studentTemplate;
+    out.forwardTemplate = tplWin.forwardTemplate;
+    out.templatesUpdatedAt = Math.max(c.templatesUpdatedAt || 0, m.templatesUpdatedAt || 0);
+    return out;
+  }
+
+  /* The number "WhatsApp to me" sends to: the saved one, else the
+     site's published contact number. */
+  function effectiveOwnerPhone(settings) {
+    const s = sanitizeSettings(settings);
+    return s.ownerPhone || OWNER_PHONE_DEFAULT;
+  }
+
+  /* The effective template for a kind ("student" | "forward"): the
+     stored text when non-empty after trim, else the code default. */
+  function templateOrDefault(settings, kind) {
+    const s = sanitizeSettings(settings);
+    const stored = kind === "forward" ? s.forwardTemplate : s.studentTemplate;
+    if (stored.trim()) return stored;
+    return kind === "forward" ? DEFAULT_FORWARD_TEMPLATE : DEFAULT_STUDENT_TEMPLATE;
+  }
+
+  /* Dumb and safe by design (audit W7): only the six known {keys} are
+     substituted; unknown placeholders pass through literally. Values
+     are plain text destined for a wa.me text param or the clipboard. */
+  function renderTemplate(template, values) {
+    const vals = values || {};
+    return String(template || "").replace(/\{([a-z]+)\}/g, (match, key) => {
+      if (!TEMPLATE_KEYS.includes(key)) return match;
+      const value = vals[key];
+      return value === undefined || value === null ? "" : String(value);
+    });
+  }
+
+  function templateHasLink(template) {
+    return String(template || "").includes("{link}");
+  }
+
+  /* --------------------------- group assignments -------------------- */
+  /* Group records cannot live in a course doc: mergeDatasets only
+     merges docs of surviving students, so a group pseudo-enrolment
+     would be silently dropped (audit W1, the F1 lesson). They sit at
+     the dataset root keyed by normName(groupName) then courseId,
+     union-merged exactly like per-enrolment assignments, and sync
+     through the _meta doc. */
+  function sanitizeGroupAssignments(raw) {
+    const out = {};
+    if (!raw || typeof raw !== "object" || Array.isArray(raw)) return out;
+    Object.entries(raw).forEach(([groupKey, byCourse]) => {
+      const key = String(groupKey || "").slice(0, 120);
+      if (!key || !byCourse || typeof byCourse !== "object" || Array.isArray(byCourse)) return;
+      const courses = {};
+      Object.entries(byCourse).forEach(([courseId, rawMap]) => {
+        const map = sanitizeAssignmentMap(rawMap);
+        if (Object.keys(map).length) courses[String(courseId).slice(0, 40)] = map;
+      });
+      if (Object.keys(courses).length) out[key] = courses;
+    });
+    return out;
+  }
+
+  function mergeGroupAssignments(cloudRaw, mirrorRaw) {
+    const cloud = sanitizeGroupAssignments(cloudRaw);
+    const mirror = sanitizeGroupAssignments(mirrorRaw);
+    const out = clone(cloud);
+    Object.entries(mirror).forEach(([groupKey, byCourse]) => {
+      out[groupKey] = out[groupKey] || {};
+      Object.entries(byCourse).forEach(([courseId, map]) => {
+        out[groupKey][courseId] = mergeAssignments(out[groupKey][courseId] || {}, map);
+      });
+    });
+    return out;
+  }
+
+  /* Add a group record, pruning the bucket through the same tested
+     cap logic as per-enrolment assignments (applyAssignment on a
+     wrapper doc). Returns a new groupAssignments structure. */
+  function applyGroupAssignment(groupAssignments, groupName, courseId, record) {
+    const out = clone(groupAssignments) || {};
+    const key = normName(groupName || "");
+    if (!key) return out;
+    out[key] = out[key] || {};
+    const wrapper = { courseId, ticks: {}, tombstones: {}, assignments: out[key][courseId] || {}, updatedAt: 0 };
+    out[key][courseId] = applyAssignment(wrapper, record, record.createdAt || 0).assignments;
+    return out;
   }
 
   /* --------------------------------------------------------- analytics */
@@ -654,6 +861,8 @@
     if (raw.courses !== undefined && (typeof raw.courses !== "object" || raw.courses === null || Array.isArray(raw.courses))) return null;
     const clean = emptyDataset();
     clean.lastFullSync = Number(raw.lastFullSync) || 0;
+    clean.settings = sanitizeSettings(raw.settings);
+    clean.groupAssignments = sanitizeGroupAssignments(raw.groupAssignments);
     Object.entries(raw.rosterTombstones || {}).forEach(([id, tomb]) => {
       if (tomb && typeof tomb === "object") clean.rosterTombstones[id] = { updatedAt: Number(tomb.updatedAt) || 0 };
     });
@@ -663,10 +872,14 @@
       if (!name) return;
       let nextSession = "";
       try { nextSession = cleanSessionDate(rawStudent.nextSession || ""); } catch (error) { nextSession = ""; }
+      const phones = sanitizePhones(rawStudent.phones, rawStudent.phone);
       clean.students[id] = {
         id,
         name,
-        phone: String(rawStudent.phone || "").trim(),
+        phone: phoneMirror(phones),
+        phones,
+        groupName: cleanGroupName(rawStudent.groupName || ""),
+        groupWhatsApp: safeGroupLink(rawStudent.groupWhatsApp || ""),
         note: capNote(typeof rawStudent.note === "string" ? rawStudent.note : ""),
         nextSession,
         archived: Boolean(rawStudent.archived),
@@ -716,10 +929,16 @@
 
   const Core = {
     normEmail, isTeacherEmail, teacherEmails, normName, normalisePhone,
-    cairoToday, genId, capNote, emptyDataset, emptyCourseDoc, createStudent,
+    cairoToday, genId, capNote, emptyDataset, emptySettings, emptyCourseDoc, createStudent,
     applyTick, applyUntick, mergeCourseDoc, mergeDatasets,
     sanitizeAssignmentRecord, sanitizeAssignmentMap, mergeAssignments,
     applyAssignment, ASSIGNMENT_CAP, ASSIGNMENT_LAYOUT_KEYS,
+    cleanGroupLink, safeGroupLink, cleanGroupName,
+    sanitizePhones, phoneMirror, PHONE_CAP, PHONE_LABELS,
+    sanitizeSettings, mergeSettings, TEMPLATE_CAP, DEFAULT_STUDENT_TEMPLATE,
+    DEFAULT_FORWARD_TEMPLATE, TEMPLATE_KEYS, templateOrDefault,
+    renderTemplate, templateHasLink, OWNER_PHONE_DEFAULT, effectiveOwnerPhone,
+    sanitizeGroupAssignments, mergeGroupAssignments, applyGroupAssignment,
     nextTopic, progressFor, latestTickDate, flattenLog, weekRange,
     buildDigest, unmatchedTicks, NOTE_CAP,
     cleanSessionDate, daysBetween, daysSince, dashboardCards, dashboardStats,
@@ -830,8 +1049,8 @@
     const now = Date.now();
     const today = cairoToday();
     const yesterday = cairoToday(new Date(Date.now() - 86400000));
-    const a = { id: "stu-demo-a", name: "Demo Student A", phone: "0100 123 4567", note: "Demo data - Year 11, exam June", nextSession: "", archived: false, createdAt: now - 7 * 86400000, editedAt: now - 86400000 };
-    const b = { id: "stu-demo-b", name: "Demo Student B", phone: "0102 345 6789", note: "Demo data", nextSession: cairoToday(new Date(Date.now() + 86400000)), archived: false, createdAt: now - 3 * 86400000, editedAt: now - 3 * 86400000 };
+    const a = { id: "stu-demo-a", name: "Demo Student A", phone: "0100 123 4567", phones: [{ number: "0100 123 4567", label: "Student" }, { number: "0100 765 4321", label: "Mother" }], groupName: "Nasser Group", groupWhatsApp: "https://chat.whatsapp.com/DEMO-PLACEHOLDER", note: "Demo data - Year 11, exam June", nextSession: "", archived: false, createdAt: now - 7 * 86400000, editedAt: now - 86400000 };
+    const b = { id: "stu-demo-b", name: "Demo Student B", phone: "0102 345 6789", phones: [{ number: "0102 345 6789", label: "Student" }], groupName: "Nasser Group", groupWhatsApp: "", note: "Demo data", nextSession: cairoToday(new Date(Date.now() + 86400000)), archived: false, createdAt: now - 3 * 86400000, editedAt: now - 3 * 86400000 };
     const dataset = emptyDataset();
     dataset.students[a.id] = a;
     dataset.students[b.id] = b;
@@ -867,6 +1086,40 @@
     docB.ticks["Number Toolkit"] = { date: twoDaysAgo, hw: true, note: "", at: now - 2 * 86400000, updatedAt: now - 2 * 86400000 };
     docB.updatedAt = now - 2 * 86400000;
     dataset.courses[b.id] = { linear: docB };
+    // Demo B is also enrolled in the demo group on modular-2, ticked on
+    // exactly one of A's topics, so the group intersection (that one
+    // topic) is visible in demo mode.
+    const docB2 = emptyCourseDoc("modular-2");
+    docB2.ticks["Prime Factors, HCF & LCM"] = { date: yesterday, hw: false, note: "", at: now - 2 * 86400000, updatedAt: now - 2 * 86400000 };
+    docB2.updatedAt = now - 2 * 86400000;
+    dataset.courses[b.id]["modular-2"] = docB2;
+    // One past group assignment (same real question ids as asg-demo-1).
+    // Settings stay at defaults in demo: the owner number falls back
+    // to the site's published number, templates to the built-ins.
+    dataset.groupAssignments = {
+      "nasser group": {
+        "modular-2": {
+          "asg-demo-g1": {
+            id: "asg-demo-g1",
+            createdAt: now - 86400000,
+            date: yesterday,
+            topics: ["Prime Factors, HCF & LCM"],
+            questionIds: [
+              "all::Jan2020_P1H__Q02__p04-04__m02__Prime-Factors-HCF-and-LCM",
+              "all::Jan2021_P2H__Q09__p11-11__m02__Prime-Factors-HCF-and-LCM",
+              "all::Jun2025_P1HR__Q01__p03-03__m02__Prime-Factors-HCF-and-LCM",
+              "all::Jun2026_P2H__Q11-U2"
+            ],
+            count: 4,
+            targetMarks: 0,
+            totalMarks: 8,
+            estMinutes: 12,
+            includeEP: true,
+            audience: { type: "group", groupName: "Nasser Group" }
+          }
+        }
+      }
+    };
     return dataset;
   }
 
@@ -915,6 +1168,8 @@
       const data = docSnap.data() || {};
       if (docSnap.id === META_DOC_ID) {
         dataset.rosterTombstones = data.rosterTombstones || {};
+        dataset.settings = sanitizeSettings(data.settings);
+        dataset.groupAssignments = sanitizeGroupAssignments(data.groupAssignments);
         return;
       }
       dataset.students[docSnap.id] = { id: docSnap.id, ...data };
@@ -945,7 +1200,11 @@
   }
 
   async function pushMeta() {
-    await fire.f().setDoc(fire.ref("teacher_students", META_DOC_ID), { rosterTombstones: state.dataset.rosterTombstones || {} }, { merge: true });
+    await fire.f().setDoc(fire.ref("teacher_students", META_DOC_ID), {
+      rosterTombstones: state.dataset.rosterTombstones || {},
+      settings: state.dataset.settings || emptySettings(),
+      groupAssignments: state.dataset.groupAssignments || {}
+    }, { merge: true });
   }
 
   /* Push one mutation to the cloud; failure keeps the mirror copy and
@@ -1118,7 +1377,15 @@
       const dataset = datasetOrThrow();
       const student = getStudent(studentId);
       if (fields.name !== undefined) student.name = String(fields.name || "").trim();
-      if (fields.phone !== undefined) student.phone = String(fields.phone || "").trim();
+      if (fields.phones !== undefined) {
+        student.phones = sanitizePhones(fields.phones, "");
+        student.phone = phoneMirror(student.phones);
+      } else if (fields.phone !== undefined) {
+        student.phones = sanitizePhones(null, fields.phone);
+        student.phone = phoneMirror(student.phones);
+      }
+      if (fields.groupName !== undefined) student.groupName = cleanGroupName(fields.groupName || "");
+      if (fields.groupWhatsApp !== undefined) student.groupWhatsApp = cleanGroupLink(fields.groupWhatsApp || "");
       if (fields.note !== undefined) student.note = capNote(fields.note || "");
       if (fields.nextSession !== undefined) student.nextSession = cleanSessionDate(fields.nextSession);
       if (!student.name) throw new Error("A student name is required.");
@@ -1192,6 +1459,50 @@
       persistLocal();
       await cloudPush(() => pushCourseDoc(studentId, next));
       return clone(next);
+    },
+
+    /* WhatsApp distribution: the owner's own number for the
+       "WhatsApp to me" send option (he forwards to groups himself).
+       Settings sync through the _meta doc (pushMeta) with their own
+       LWW clock, independent of the templates (audit W8). An empty
+       value falls back to the site's published number. */
+    async setOwnerPhone(phone) {
+      const dataset = datasetOrThrow();
+      dataset.settings = sanitizeSettings(dataset.settings);
+      dataset.settings.ownerPhone = String(phone || "").trim().slice(0, 32);
+      dataset.settings.ownerUpdatedAt = Date.now();
+      persistLocal();
+      await cloudPush(() => pushMeta());
+      return clone(dataset.settings);
+    },
+
+    /* WhatsApp distribution: editable message templates (student +
+       forward-to-me). Saving "" restores the built-in default
+       (templateOrDefault). */
+    async setShareTemplates(templates) {
+      const dataset = datasetOrThrow();
+      dataset.settings = sanitizeSettings(dataset.settings);
+      if (templates && templates.student !== undefined) dataset.settings.studentTemplate = String(templates.student || "").slice(0, TEMPLATE_CAP);
+      if (templates && templates.forward !== undefined) dataset.settings.forwardTemplate = String(templates.forward || "").slice(0, TEMPLATE_CAP);
+      dataset.settings.templatesUpdatedAt = Date.now();
+      persistLocal();
+      await cloudPush(() => pushMeta());
+      return clone(dataset.settings);
+    },
+
+    /* WhatsApp distribution: save a group assignment record. The
+       record must carry a group audience; storage is the root-level
+       groupAssignments map synced via _meta (audit W1). */
+    async saveGroupAssignment(groupName, courseId, rawRecord) {
+      const dataset = datasetOrThrow();
+      const record = sanitizeAssignmentRecord(rawRecord);
+      if (!record) throw new Error("Invalid assignment record.");
+      if (!record.audience || record.audience.type !== "group") throw new Error("Group assignments must carry a group audience.");
+      if (!normName(groupName || "")) throw new Error("A group name is required.");
+      dataset.groupAssignments = applyGroupAssignment(dataset.groupAssignments, groupName, courseId, record);
+      persistLocal();
+      await cloudPush(() => pushMeta());
+      return clone(record);
     },
 
     async deleteStudent(studentId) {

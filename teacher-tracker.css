@@ -604,6 +604,33 @@
 .asg-sheet .worked-solution { font-size: 0.92rem; line-height: 1.55; }
 .asg-sheet .worked-solution img { max-width: 100%; height: auto; }
 
+/* WhatsApp distribution: share panel, group block, member list. */
+.asg-share-link {
+  margin: 10px 0; padding: 10px 12px;
+  border: 1px solid var(--ux-line, #dce5ef); border-radius: var(--ux-r-md, 12px);
+  background: var(--ux-soft, #f4f7fb);
+  font-size: 0.8rem; line-height: 1.5; word-break: break-all; direction: ltr; text-align: left;
+}
+.asg-share-actions { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+.asg-share-actions .lt-btn { text-align: center; }
+.asg-share-actions .lt-warn { margin: 0; }
+.lt-assign-group { margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--ux-line, #dce5ef); }
+.lt-assign-group h4 { margin: 0; font-size: 1rem; }
+.asg-member-list { margin: 6px 0 10px; padding-left: 20px; font-size: 0.92rem; line-height: 1.6; }
+
+/* Sharing settings (sidebar) + labelled phone rows in student forms. */
+.lt-settings { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--ux-line, #dce5ef); }
+.lt-settings h3 { margin: 0 0 10px; font-size: 0.95rem; }
+.lt-settings textarea {
+  width: 100%; box-sizing: border-box; resize: vertical;
+  font: inherit; font-size: 0.9rem; line-height: 1.5;
+  padding: 8px 10px; border: 1px solid var(--ux-line, #dce5ef); border-radius: 8px;
+}
+.lt-phone-row { display: flex; gap: 6px; align-items: center; margin-bottom: 6px; }
+.lt-phone-row input[type="tel"] { flex: 1 1 auto; min-width: 0; }
+.lt-phone-row select { flex: 0 0 auto; }
+.lt-phone-row input[data-phone-label-other] { flex: 0 1 110px; min-width: 0; }
+
 @media print {
   /* Assignment printing: ONLY the paper. Composes with the tracker
      print block above - when body.asg-printing is set, everything

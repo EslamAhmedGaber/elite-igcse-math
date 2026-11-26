@@ -17,13 +17,13 @@
   <link rel="stylesheet" href="styles.css?v=20261024u">
   <link rel="stylesheet" href="elite-system.css?v=20260906b">
   <link rel="stylesheet" href="elite-ux.css?v=20261112a">
-  <link rel="stylesheet" href="teacher-tracker.css?v=20261126b">
+  <link rel="stylesheet" href="teacher-tracker.css?v=20261126c">
   <script defer src="firebase-config.js"></script>
   <script defer src="runtime-loader.js?v=20260809a"></script>
   <script defer src="topic-normalizer.js?v=tracker-20261125a"></script>
-  <script defer src="lesson-tracker.js?v=20261126b"></script>
-  <script defer src="assignment-generator.js?v=20261126b"></script>
-  <script defer src="teacher-tracker-ui.js?v=20261126b"></script>
+  <script defer src="lesson-tracker.js?v=20261126c"></script>
+  <script defer src="assignment-generator.js?v=20261126c"></script>
+  <script defer src="teacher-tracker-ui.js?v=20261126c"></script>
 </head>
 <body data-page="tracker">
 
@@ -90,7 +90,9 @@
           <button type="button" class="lt-btn is-primary lt-add-toggle" id="ltAddToggle">+ Add student</button>
           <form id="ltAddForm" class="lt-form" hidden>
             <label class="lt-field"><span>Student name *</span><input type="text" id="ltAddName" required maxlength="80" placeholder="Full name"></label>
-            <label class="lt-field"><span>WhatsApp number (optional)</span><input type="tel" id="ltAddPhone" maxlength="24" placeholder="e.g. 01x xxxx xxxx"></label>
+            <div class="lt-field"><span>WhatsApp numbers (optional, up to 3)</span><div data-phones-wrap id="ltAddPhones"></div></div>
+            <label class="lt-field"><span>Group name (optional)</span><input type="text" id="ltAddGroup" maxlength="80" placeholder="e.g. Nasser Group"></label>
+            <label class="lt-field"><span>WhatsApp group link (optional)</span><input type="url" id="ltAddGroupLink" maxlength="200" placeholder="https://chat.whatsapp.com/..."></label>
             <label class="lt-field"><span>Note (optional)</span><input type="text" id="ltAddNote" maxlength="500" placeholder="School, exam session, anything useful"></label>
             <div id="ltDupWarning" class="lt-dup" hidden></div>
             <div class="lt-form-actions">
@@ -102,6 +104,19 @@
           <label class="lt-checkline"><input type="checkbox" id="ltShowArchived"> Show archived students</label>
           <p class="lt-muted lt-who">Signed in as <span id="ltWho"></span> &middot; <button type="button" class="lt-link" data-sign-out>Sign out</button></p>
           <p class="lt-sync-line"><span class="lt-pill" id="ltSyncPill" data-state="local">Local only</span></p>
+          <div class="lt-settings" id="ltShareSettings">
+            <h3>Sharing settings</h3>
+            <label class="lt-field"><span>My WhatsApp number (for &ldquo;WhatsApp to me&rdquo;)</span><input type="tel" id="ltOwnerPhone" maxlength="32" placeholder="Empty = the site number +20 112 000 9622"></label>
+            <label class="lt-field"><span>Message to the student</span><textarea id="ltStudentTemplate" rows="3" maxlength="1000"></textarea></label>
+            <p class="lt-muted" id="ltStudentTemplateHint"></p>
+            <label class="lt-field"><span>Message to me (forward to the group)</span><textarea id="ltForwardTemplate" rows="3" maxlength="1000"></textarea></label>
+            <p class="lt-muted" id="ltForwardTemplateHint"></p>
+            <p class="lt-muted">Placeholders, filled automatically per assignment: {student} {group} {course} {topics} {link} {date}. Leave a box empty to use the built-in default (shown greyed).</p>
+            <div class="lt-form-actions">
+              <button type="button" class="lt-btn is-primary is-small" id="ltShareSave">Save sharing settings</button>
+              <button type="button" class="lt-btn is-small" id="ltShareReset">Reset templates</button>
+            </div>
+          </div>
         </aside>
 
         <section class="lt-detail" id="ltDetail" aria-live="polite">

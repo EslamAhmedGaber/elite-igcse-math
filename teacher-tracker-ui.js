@@ -336,8 +336,104 @@
         if (saved === undefined) throw new Error("The assignment could not be saved.");
         await refresh();
       },
+      share: shareContextFor(student),
       toast
     });
+  }
+
+  /* WhatsApp distribution context for assignment-generator.js: the
+     student's numbers, the roster snapshot for group generation in
+     the current course, the group's saved records, live settings and
+     the save callback. The module never touches the dataset itself. */
+  function shareContextFor(student) {
+    const dataset = view.dataset || { students: {}, courses: {}, settings: {}, groupAssignments: {} };
+    const members = Object.values(dataset.students || {})
+      .filter((s) => !s.archived)
+      .map((s) => {
+        const sDoc = (dataset.courses[s.id] || {})[view.course] || null;
+        return {
+          id: s.id,
+          name: s.name,
+          groupName: s.groupName || "",
+          enrolled: Boolean(sDoc),
+          topics: Object.keys((sDoc && sDoc.ticks) || {})
+        };
+      });
+    const groupKey = Core.normName(student.groupName || "");
+    const groupRecords = groupKey ? (((dataset.groupAssignments || {})[groupKey] || {})[view.course] || {}) : {};
+    return {
+      phones: Core.sanitizePhones(student.phones, student.phone),
+      groupName: student.groupName || "",
+      members,
+      groupRecords,
+      settings: () => (view.dataset && view.dataset.settings) || {},
+      saveGroupRecord: async (groupName, record) => {
+        const saved = await guard(() => T.api.saveGroupAssignment(groupName, view.course, record));
+        if (saved === undefined) throw new Error("The group assignment could not be saved.");
+        await refresh();
+      }
+    };
+  }
+
+  /* Phone rows for the student forms: up to 3 labelled numbers
+     (Student / Mother / Father / Other + free text). Rows are plain
+     inputs read back on submit; at least one row is always shown. */
+  function phoneRowHtml(entry) {
+    const labels = Core.PHONE_LABELS || ["Student", "Mother", "Father", "Other"];
+    const current = entry && entry.label ? entry.label : "Student";
+    const isPreset = labels.includes(current);
+    return `
+      <div class="lt-phone-row" data-phone-row>
+        <input type="tel" data-phone-number maxlength="32" placeholder="e.g. 01x xxxx xxxx" value="${escapeHtml(entry ? entry.number : "")}" aria-label="WhatsApp number">
+        <select data-phone-label aria-label="Whose number this is">
+          ${labels.map((label) => `<option value="${escapeHtml(label)}"${current === label ? " selected" : ""}>${escapeHtml(label)}</option>`).join("")}
+        </select>
+        <input type="text" data-phone-label-other maxlength="24" placeholder="Label" value="${isPreset ? "" : escapeHtml(current)}" ${isPreset ? "hidden" : ""} aria-label="Custom label">
+        <button type="button" class="lt-btn is-small" data-phone-remove aria-label="Remove this number">&times;</button>
+      </div>`;
+  }
+
+  function phoneRowsHtml(phones) {
+    const list = phones && phones.length ? phones : [{ number: "", label: "Student" }];
+    return `<div class="lt-phones">${list.map((entry) => phoneRowHtml(entry)).join("")}</div>
+      <button type="button" class="lt-btn is-small" data-phone-add>+ Add another number</button>`;
+  }
+
+  function collectPhones(wrap) {
+    if (!wrap) return [];
+    return [...wrap.querySelectorAll("[data-phone-row]")].map((row) => {
+      const number = row.querySelector("[data-phone-number]").value.trim();
+      let label = row.querySelector("[data-phone-label]").value;
+      if (label === "Other") label = row.querySelector("[data-phone-label-other]").value.trim() || "Other";
+      return { number, label };
+    }).filter((entry) => entry.number);
+  }
+
+  /* Sharing settings block (sidebar): populated on refresh unless the
+     teacher is mid-edit in one of its fields. */
+  function templateHint(settings, kind) {
+    const stored = kind === "forward" ? settings.forwardTemplate : settings.studentTemplate;
+    const parts = [];
+    if (!stored || !stored.trim()) parts.push("Using the built-in default (shown greyed in the box).");
+    if (!Core.templateHasLink(Core.templateOrDefault(settings, kind))) parts.push("Warning: this message has no {link} - the assignment link will NOT be included.");
+    return parts.join(" ");
+  }
+
+  function syncShareSettingsForm() {
+    const phoneEl = $("#ltOwnerPhone");
+    const studentEl = $("#ltStudentTemplate");
+    const forwardEl = $("#ltForwardTemplate");
+    if (!phoneEl || !studentEl || !forwardEl) return;
+    const settings = (view.dataset && view.dataset.settings) || {};
+    if (document.activeElement !== phoneEl) phoneEl.value = settings.ownerPhone || "";
+    if (document.activeElement !== studentEl) studentEl.value = settings.studentTemplate || "";
+    if (document.activeElement !== forwardEl) forwardEl.value = settings.forwardTemplate || "";
+    studentEl.placeholder = Core.DEFAULT_STUDENT_TEMPLATE;
+    forwardEl.placeholder = Core.DEFAULT_FORWARD_TEMPLATE;
+    const studentHint = $("#ltStudentTemplateHint");
+    const forwardHint = $("#ltForwardTemplateHint");
+    if (studentHint) studentHint.textContent = templateHint(settings, "student");
+    if (forwardHint) forwardHint.textContent = templateHint(settings, "forward");
   }
 
   function studentHeaderHtml(student, info) {
@@ -375,7 +471,9 @@
     <form class="lt-form lt-edit-form" id="ltEditForm">
       <h3>Edit student</h3>
       <label class="lt-field"><span>Name</span><input type="text" id="ltEditName" value="${escapeHtml(student.name)}" maxlength="80" required></label>
-      <label class="lt-field"><span>WhatsApp number (optional)</span><input type="tel" id="ltEditPhone" value="${escapeHtml(student.phone)}" maxlength="24" placeholder="e.g. 01x xxxx xxxx"></label>
+      <div class="lt-field"><span>WhatsApp numbers (up to 3)</span><div data-phones-wrap id="ltEditPhones">${phoneRowsHtml(Core.sanitizePhones(student.phones, student.phone))}</div></div>
+      <label class="lt-field"><span>Group name (optional)</span><input type="text" id="ltEditGroup" value="${escapeHtml(student.groupName || "")}" maxlength="80" placeholder="e.g. Nasser Group"></label>
+      <label class="lt-field"><span>WhatsApp group link (optional)</span><input type="url" id="ltEditGroupLink" value="${escapeHtml(student.groupWhatsApp || "")}" maxlength="200" placeholder="https://chat.whatsapp.com/..."></label>
       <label class="lt-field"><span>Note (optional)</span><input type="text" id="ltEditNote" value="${escapeHtml(student.note)}" maxlength="500"></label>
       <fieldset class="lt-enrol">
         <legend>Courses</legend>
@@ -671,6 +769,7 @@
     await renderStudentList();
     renderDetail();
     renderSyncBanner();
+    syncShareSettingsForm();
     return true;
   }
 
@@ -753,6 +852,60 @@
       renderDetail();
     });
 
+    /* phone rows (add + edit student forms, delegated) */
+    const addPhonesInit = $("#ltAddPhones");
+    if (addPhonesInit) addPhonesInit.innerHTML = phoneRowsHtml([]);
+    document.addEventListener("click", (event) => {
+      const add = event.target.closest("[data-phone-add]");
+      if (add) {
+        const wrap = add.closest("[data-phones-wrap]");
+        const rows = wrap && wrap.querySelector(".lt-phones");
+        if (!rows) return;
+        if (rows.querySelectorAll("[data-phone-row]").length >= (Core.PHONE_CAP || 3)) {
+          toast("Up to 3 numbers per student.", "error");
+          return;
+        }
+        rows.insertAdjacentHTML("beforeend", phoneRowHtml(null));
+        return;
+      }
+      const remove = event.target.closest("[data-phone-remove]");
+      if (remove) {
+        const row = remove.closest("[data-phone-row]");
+        const rows = row && row.parentElement;
+        if (!row || !rows) return;
+        if (rows.querySelectorAll("[data-phone-row]").length <= 1) {
+          row.querySelectorAll("input").forEach((input) => { input.value = ""; });
+        } else {
+          row.remove();
+        }
+      }
+    });
+    document.addEventListener("change", (event) => {
+      const select = event.target.closest("[data-phone-label]");
+      if (!select) return;
+      const row = select.closest("[data-phone-row]");
+      const other = row && row.querySelector("[data-phone-label-other]");
+      if (other) other.hidden = select.value !== "Other";
+    });
+
+    /* sharing settings (sidebar) */
+    const shareSave = $("#ltShareSave");
+    if (shareSave) shareSave.addEventListener("click", async () => {
+      const phoneSaved = await guard(() => T.api.setOwnerPhone($("#ltOwnerPhone").value));
+      if (phoneSaved === undefined) return;
+      const saved = await guard(() => T.api.setShareTemplates({
+        student: $("#ltStudentTemplate").value,
+        forward: $("#ltForwardTemplate").value
+      }), "Sharing settings saved");
+      if (saved !== undefined) await refresh();
+    });
+    const shareReset = $("#ltShareReset");
+    if (shareReset) shareReset.addEventListener("click", async () => {
+      if (!window.confirm("Reset both message templates to the built-in defaults?")) return;
+      const saved = await guard(() => T.api.setShareTemplates({ student: "", forward: "" }), "Templates reset to the defaults");
+      if (saved !== undefined) await refresh();
+    });
+
     /* add student */
     $("#ltAddToggle").addEventListener("click", () => {
       const form = $("#ltAddForm");
@@ -769,7 +922,9 @@
       event.preventDefault();
       const fields = {
         name: $("#ltAddName").value.trim(),
-        phone: $("#ltAddPhone").value.trim(),
+        phones: collectPhones($("#ltAddPhones")),
+        groupName: $("#ltAddGroup").value.trim(),
+        groupWhatsApp: $("#ltAddGroupLink").value.trim(),
         note: $("#ltAddNote").value.trim(),
         courseId: view.course
       };
@@ -793,6 +948,8 @@
       const student = await guard(() => T.api.addStudent(fields), `Added ${fields.name}`);
       if (!student) return;
       $("#ltAddForm").reset();
+      const addPhones = $("#ltAddPhones");
+      if (addPhones) addPhones.innerHTML = phoneRowsHtml([]);
       $("#ltAddForm").hidden = true;
       $("#ltDupWarning").hidden = true;
       view.dupCheckedFor = null;
@@ -941,7 +1098,9 @@
       if (!student) return;
       const fields = {
         name: $("#ltEditName").value.trim(),
-        phone: $("#ltEditPhone").value.trim(),
+        phones: collectPhones($("#ltEditPhones")),
+        groupName: $("#ltEditGroup").value.trim(),
+        groupWhatsApp: $("#ltEditGroupLink").value.trim(),
         note: $("#ltEditNote").value.trim()
       };
       const ok = await guard(() => T.api.updateStudent(student.id, fields));
