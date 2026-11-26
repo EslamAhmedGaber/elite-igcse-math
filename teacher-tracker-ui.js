@@ -306,6 +306,7 @@
       ${view.editing ? editFormHtml(student) : ""}
       ${unmatched.length ? `<div class="lt-warn"><strong>Unmatched ticks:</strong> ${unmatched.map((name) => escapeHtml(name)).join(", ")} &mdash; these saved lessons no longer match the ${escapeHtml(COURSES[view.course].label)} topic list, so they are kept safe but not shown as rows. Nothing was deleted.</div>` : ""}
       ${next ? `<div class="lt-nextbar"><span>Next lesson: <b>${escapeHtml(next)}</b></span><button type="button" class="lt-btn is-small" data-jump-next>Jump to it</button></div>` : `<div class="lt-nextbar is-done"><span><b>Course complete.</b> Every lesson in ${escapeHtml(COURSES[view.course].label)} is ticked for ${escapeHtml(student.name)}.</span></div>`}
+      <div id="ltAssignSection"></div>
       ${chapters.map((chapter) => {
         const doneCount = chapter.topics.filter((topic) => ticks[topic.name]).length;
         return `
@@ -314,6 +315,29 @@
           ${chapter.topics.map((topic) => rowHtml(topic, ticks[topic.name])).join("")}
         </fieldset>`;
       }).join("")}`;
+    renderAssignmentsSection(student, doc, ticks);
+  }
+
+  /* Generate-assignment section (assignment-generator.js). Rendered
+     only here, inside the signed-in teacher checklist - the module is
+     inert for anyone who cannot see this panel. */
+  function renderAssignmentsSection(student, doc, ticks) {
+    const mount = $("#ltAssignSection");
+    if (!mount || !window.EliteAssignments) return;
+    window.EliteAssignments.renderSection(mount, {
+      studentId: student.id,
+      name: student.name,
+      courseId: view.course,
+      label: COURSES[view.course].label,
+      doc,
+      completedTopics: Object.keys(ticks || {}),
+      saveRecord: async (record) => {
+        const saved = await guard(() => T.api.saveAssignment(student.id, view.course, record));
+        if (saved === undefined) throw new Error("The assignment could not be saved.");
+        await refresh();
+      },
+      toast
+    });
   }
 
   function studentHeaderHtml(student, info) {
@@ -488,6 +512,7 @@
         ${card.nextTopic ? `<button type="button" class="lt-btn is-gold is-small" data-dash-tick="${escapeHtml(key)}">&#10003; ${escapeHtml(card.nextTopic)}</button>` : ""}
         ${phone && card.nextTopic ? `<a class="lt-btn is-small" target="_blank" rel="noreferrer" href="https://wa.me/${phone}?text=${encodeURIComponent(waText)}">WhatsApp</a>` : ""}
         <button type="button" class="lt-btn is-small" data-report="${escapeHtml(key)}">Parent report</button>
+        <button type="button" class="lt-btn is-small" data-asg-card="${escapeHtml(key)}" ${card.progress && card.progress.done ? "" : "disabled title=\"Tick at least one lesson first\""}>Assignment</button>
       </div>
       <div class="lt-card-session">
         <label class="lt-field"><span>Next session</span><input type="date" data-session-date="${escapeHtml(card.studentId)}" value="${escapeHtml(card.nextSession)}"></label>
@@ -958,6 +983,22 @@
         if (!next) return;
         const ok = await guard(() => T.api.setTick(studentId, courseId, next, { date: Core.cairoToday() }), `Ticked: ${next} (undo from the checklist)`);
         if (ok !== undefined) await refresh();
+        return;
+      }
+      const asgBtn = event.target.closest("[data-asg-card]");
+      if (asgBtn) {
+        const [studentId, courseId] = splitKey(asgBtn.dataset.asgCard);
+        view.studentId = studentId;
+        view.editing = false;
+        if (courseId && COURSES[courseId] && courseId !== view.course) {
+          view.course = courseId;
+          $("#ltCourse").value = courseId;
+          try { localStorage.setItem(COURSE_PREF_KEY, courseId); } catch (error) { /* ignore */ }
+          view.topics = await courseTopics(courseId);
+        }
+        view.tab = "checklist";
+        await renderStudentList();
+        renderDetail();
         return;
       }
       const openBtn = event.target.closest("[data-open-student]");

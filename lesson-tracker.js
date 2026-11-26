@@ -122,7 +122,7 @@
   }
 
   function emptyCourseDoc(courseId) {
-    return { courseId, ticks: {}, tombstones: {}, updatedAt: 0 };
+    return { courseId, ticks: {}, tombstones: {}, assignments: {}, updatedAt: 0 };
   }
 
   function createStudent(fields, now) {
@@ -157,7 +157,7 @@
   /* ------------------------------------------------------- tick editing */
 
   function applyTick(courseDoc, topic, data, now) {
-    const doc = clone(courseDoc) || emptyCourseDoc("");
+    const doc = clone(courseDoc) || emptyCourseDoc((courseDoc && courseDoc.courseId) || "");
     doc.ticks = doc.ticks || {};
     doc.tombstones = doc.tombstones || {};
     doc.ticks[topic] = {
@@ -182,6 +182,85 @@
     return doc;
   }
 
+  /* ------------------------------------- assignments (Generate assignment) */
+  /* Assignment records live inside the course doc (ASSIGNMENT_PLAN §3.1).
+     They are IMMUTABLE once saved (v1: re-open/re-print only), so their
+     merge is a union by id - no tombstones. Forward constraint (audit
+     G3): a future edit/delete must add a deletedAt/LWW field; plain
+     removal would resurrect via this union. The history is capped so
+     the shared Firestore doc stays far under its 1 MiB bound (F5).   */
+  const ASSIGNMENT_CAP = 50;
+  const ASSIGNMENT_MAX_QUESTIONS = 40;
+  const ASSIGNMENT_MAX_TOPICS = 70;
+
+  function sanitizeAssignmentRecord(raw) {
+    if (!raw || typeof raw !== "object" || Array.isArray(raw)) return null;
+    const id = typeof raw.id === "string" ? raw.id.slice(0, 80) : "";
+    if (!id) return null;
+    if (!Array.isArray(raw.questionIds)) return null;
+    const questionIds = raw.questionIds
+      .filter((value) => typeof value === "string" && value.length > 0)
+      .map((value) => value.slice(0, 200))
+      .slice(0, ASSIGNMENT_MAX_QUESTIONS);
+    if (!questionIds.length) return null;
+    const topics = Array.isArray(raw.topics)
+      ? raw.topics.filter((value) => typeof value === "string" && value.length > 0).map((value) => value.slice(0, 120)).slice(0, ASSIGNMENT_MAX_TOPICS)
+      : [];
+    const date = typeof raw.date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(raw.date) ? raw.date : "";
+    const nonNeg = (value) => Math.max(0, Math.floor(Number(value) || 0));
+    return {
+      id,
+      createdAt: nonNeg(raw.createdAt),
+      date,
+      topics,
+      questionIds,
+      count: nonNeg(raw.count) || questionIds.length,
+      targetMarks: nonNeg(raw.targetMarks),
+      totalMarks: nonNeg(raw.totalMarks),
+      estMinutes: nonNeg(raw.estMinutes),
+      includeEP: Boolean(raw.includeEP)
+    };
+  }
+
+  /* Sanitise a whole assignments map; malformed records are DROPPED
+     (imports never throw on one bad record - audit G5). */
+  function sanitizeAssignmentMap(raw) {
+    const out = {};
+    if (!raw || typeof raw !== "object" || Array.isArray(raw)) return out;
+    Object.values(raw).forEach((value) => {
+      const record = sanitizeAssignmentRecord(value);
+      if (record) out[record.id] = record;
+    });
+    return out;
+  }
+
+  function mergeAssignments(cloudMap, mirrorMap) {
+    const merged = {};
+    const ids = new Set([...Object.keys(cloudMap || {}), ...Object.keys(mirrorMap || {})]);
+    ids.forEach((id) => {
+      const c = cloudMap && cloudMap[id];
+      const m = mirrorMap && mirrorMap[id];
+      const winner = (c && m) ? ((m.createdAt || 0) > (c.createdAt || 0) ? m : c) : (c || m);
+      if (winner) merged[id] = clone(winner);
+    });
+    return merged;
+  }
+
+  /* Add a record to a course doc (returns a new doc), pruning the
+     history to the newest ASSIGNMENT_CAP records by createdAt. */
+  function applyAssignment(courseDoc, record, now) {
+    const doc = clone(courseDoc) || emptyCourseDoc("");
+    doc.assignments = { ...(doc.assignments || {}) };
+    doc.assignments[record.id] = clone(record);
+    const ids = Object.keys(doc.assignments);
+    if (ids.length > ASSIGNMENT_CAP) {
+      ids.sort((a, b) => (doc.assignments[a].createdAt || 0) - (doc.assignments[b].createdAt || 0));
+      ids.slice(0, ids.length - ASSIGNMENT_CAP).forEach((id) => { delete doc.assignments[id]; });
+    }
+    doc.updatedAt = now;
+    return doc;
+  }
+
   /* ------------------------------------------------------------ merging */
   /* Per-key last-writer-wins. For each topic key the candidates are
      {cloud tick, cloud tombstone, mirror tick, mirror tombstone}; the
@@ -195,6 +274,9 @@
       courseId: cloudDoc.courseId || mirrorDoc.courseId,
       ticks: {},
       tombstones: {},
+      // Assignments ride the same doc (F1): union-merged here too, or
+      // a cloud+mirror merge would silently drop the history.
+      assignments: mergeAssignments(sanitizeAssignmentMap(cloudDoc.assignments), sanitizeAssignmentMap(mirrorDoc.assignments)),
       updatedAt: Math.max(cloudDoc.updatedAt || 0, mirrorDoc.updatedAt || 0)
     };
     const keys = new Set([
@@ -596,6 +678,7 @@
         Object.entries(rawDoc.tombstones || {}).forEach(([topic, tomb]) => {
           if (tomb && typeof tomb === "object") doc.tombstones[topic] = { updatedAt: Number(tomb.updatedAt) || 0 };
         });
+        doc.assignments = sanitizeAssignmentMap(rawDoc.assignments);
         clean.courses[studentId][courseId] = doc;
       });
     });
@@ -625,6 +708,8 @@
     normEmail, isTeacherEmail, teacherEmails, normName, normalisePhone,
     cairoToday, genId, capNote, emptyDataset, emptyCourseDoc, createStudent,
     applyTick, applyUntick, mergeCourseDoc, mergeDatasets,
+    sanitizeAssignmentRecord, sanitizeAssignmentMap, mergeAssignments,
+    applyAssignment, ASSIGNMENT_CAP,
     nextTopic, progressFor, latestTickDate, flattenLog, weekRange,
     buildDigest, unmatchedTicks, NOTE_CAP,
     cleanSessionDate, daysBetween, daysSince, dashboardCards, dashboardStats,
@@ -743,6 +828,26 @@
     const docA = emptyCourseDoc("modular-2");
     docA.ticks["Prime Factors, HCF & LCM"] = { date: yesterday, hw: true, note: "Confident.", at: now - 86400000, updatedAt: now - 86400000 };
     docA.ticks["Fractions"] = { date: today, hw: false, note: "", at: now, updatedAt: now };
+    // One past assignment so the Generate-assignment history is visible
+    // in demo mode. These are real bank ids from the Unit 2 "Prime
+    // Factors, HCF & LCM" pool (2 marks each).
+    docA.assignments["asg-demo-1"] = {
+      id: "asg-demo-1",
+      createdAt: now - 86400000,
+      date: yesterday,
+      topics: ["Prime Factors, HCF & LCM"],
+      questionIds: [
+        "all::Jan2020_P1H__Q02__p04-04__m02__Prime-Factors-HCF-and-LCM",
+        "all::Jan2021_P2H__Q09__p11-11__m02__Prime-Factors-HCF-and-LCM",
+        "all::Jun2025_P1HR__Q01__p03-03__m02__Prime-Factors-HCF-and-LCM",
+        "all::Jun2026_P2H__Q11-U2"
+      ],
+      count: 4,
+      targetMarks: 0,
+      totalMarks: 8,
+      estMinutes: 12,
+      includeEP: true
+    };
     docA.updatedAt = now;
     dataset.courses[a.id] = { "modular-2": docA };
     // Demo B: one older lesson with homework set, so the V2 dashboard
@@ -824,7 +929,7 @@
   async function pushCourseDoc(studentId, doc) {
     await fire.f().setDoc(
       fire.ref("teacher_students", studentId, "courses", doc.courseId),
-      { courseId: doc.courseId, ticks: doc.ticks || {}, tombstones: doc.tombstones || {}, updatedAt: fire.f().serverTimestamp() },
+      { courseId: doc.courseId, ticks: doc.ticks || {}, tombstones: doc.tombstones || {}, assignments: doc.assignments || {}, updatedAt: fire.f().serverTimestamp() },
       { merge: true }
     );
   }
@@ -1062,6 +1167,23 @@
       };
     },
 
+    /* Save a generated assignment on the enrolment. The record is
+       sanitised strictly: an invalid record THROWS (audit G5) so a
+       broken generator can never write garbage into the shared doc. */
+    async saveAssignment(studentId, courseId, rawRecord) {
+      const dataset = datasetOrThrow();
+      const record = sanitizeAssignmentRecord(rawRecord);
+      if (!record) throw new Error("Invalid assignment record.");
+      getStudent(studentId);
+      const current = getCourseDoc(studentId, courseId, true);
+      const next = applyAssignment(current, record, Date.now());
+      next.courseId = courseId;
+      dataset.courses[studentId][courseId] = next;
+      persistLocal();
+      await cloudPush(() => pushCourseDoc(studentId, next));
+      return clone(next);
+    },
+
     async deleteStudent(studentId) {
       const dataset = datasetOrThrow();
       const student = getStudent(studentId);
@@ -1097,7 +1219,7 @@
       getStudent(studentId);
       const doc = getCourseDoc(studentId, courseId, false);
       if (!doc) return false;
-      if (Object.keys(doc.ticks || {}).length || Object.keys(doc.tombstones || {}).length) {
+      if (Object.keys(doc.ticks || {}).length || Object.keys(doc.tombstones || {}).length || Object.keys(doc.assignments || {}).length) {
         throw new Error("Only a course with no lesson records can be removed.");
       }
       delete dataset.courses[studentId][courseId];

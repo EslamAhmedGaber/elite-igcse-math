@@ -495,3 +495,129 @@
      from their own clean window. Keep a sane fallback anyway. */
   .lt-banner, .lt-head, .lt-side, .lt-tabs, .lt-foot, .lt-toast, .site-header, .site-footer { display: none !important; }
 }
+
+/* ---------------------------------------------------------------
+   Generate assignment (assignment-generator.js)
+   Section in the checklist, settings modal, and the printable
+   paper preview. The paper itself uses the site's exam tokens
+   (ink #0E1B2E, gold #E2B84F) on a white sheet so screen preview
+   and printout match.
+   --------------------------------------------------------------- */
+.lt-assign {
+  margin: 18px 0 6px;
+  padding: 16px 18px;
+  border: 1px solid var(--ux-line, #dbe3ef);
+  border-radius: 14px;
+  background: var(--ux-card, #ffffff);
+}
+.lt-assign-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.lt-assign-head h3 { margin: 0; }
+.lt-assign-history {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.lt-assign-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 10px 12px;
+  border: 1px solid var(--ux-line, #dbe3ef);
+  border-radius: 10px;
+  background: var(--ux-soft, #f4f7fb);
+}
+.lt-assign-item-main { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.lt-assign-item-actions { display: flex; gap: 8px; }
+.lt-checkline { display: flex; align-items: center; gap: 8px; margin: 10px 0; font-weight: 600; }
+
+#asgPrintRoot {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  overflow: auto;
+  background: #e8edf5;
+  padding: 18px 12px 40px;
+}
+#asgPrintRoot[hidden] { display: none; }
+.asg-toolbar {
+  max-width: 860px;
+  margin: 0 auto 14px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.asg-toolbar-group { display: flex; gap: 8px; }
+.asg-sheet {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  color: #0e1b2e;
+  border-radius: 6px;
+  box-shadow: 0 10px 34px rgba(14, 27, 46, 0.22);
+  padding: 44px 48px 30px;
+  font-family: "Sora", system-ui, sans-serif;
+}
+.asg-paper-head { border-bottom: 3px solid #e2b84f; padding-bottom: 14px; margin-bottom: 20px; }
+.asg-brand { margin: 0 0 6px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.8rem; color: #1b4fd8; }
+.asg-brand span { color: #5b6b82; font-weight: 600; text-transform: none; letter-spacing: 0; }
+.asg-paper-head h1 { margin: 0 0 10px; font-size: 1.5rem; }
+.asg-paper-meta { display: flex; flex-wrap: wrap; gap: 4px 26px; }
+.asg-paper-meta p { margin: 2px 0; font-size: 0.92rem; }
+.asg-instructions { margin: 10px 0 0; font-size: 0.92rem; color: #33465e; }
+.asg-missing { margin: 10px 0 0; font-size: 0.9rem; color: #a8323c; }
+.asg-q { padding: 16px 0 18px; border-bottom: 1px solid #dbe3ef; }
+.asg-q-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 10px; }
+.asg-qno { font-weight: 800; font-size: 1.05rem; }
+.asg-qmeta { color: #5b6b82; font-size: 0.85rem; }
+.asg-qmarks { margin-left: auto; font-weight: 700; font-size: 0.9rem; white-space: nowrap; }
+.asg-qimg { display: block; max-width: 100%; height: auto; }
+.asg-space {
+  min-height: 150px;
+  margin-top: 12px;
+  border-radius: 6px;
+  background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 27px, #e3eaf3 27px, #e3eaf3 28px);
+}
+.asg-sol { margin-top: 12px; }
+.asg-sol-title { margin: 0 0 8px; font-size: 0.95rem; color: #1b4fd8; }
+.asg-step h4 { margin: 10px 0 4px; font-size: 0.92rem; }
+.asg-step p { margin: 0 0 6px; font-size: 0.92rem; line-height: 1.55; }
+.asg-final { margin-top: 10px; padding: 8px 12px; background: #fdf6e0; border: 1px solid #e2b84f; border-radius: 8px; font-size: 0.92rem; }
+.asg-sol-empty { font-size: 0.9rem; color: #5b6b82; font-style: italic; }
+.asg-paper-foot { margin-top: 22px; padding-top: 10px; border-top: 1px solid #dbe3ef; color: #5b6b82; font-size: 0.8rem; text-align: center; }
+/* Worked-solution renderer output inside the teacher copy. */
+.asg-sheet .worked-solution { font-size: 0.92rem; line-height: 1.55; }
+.asg-sheet .worked-solution img { max-width: 100%; height: auto; }
+
+@media print {
+  /* Assignment printing: ONLY the paper. Composes with the tracker
+     print block above - when body.asg-printing is set, everything
+     except #asgPrintRoot is hidden and the sheet loses its chrome. */
+  body.asg-printing > *:not(#asgPrintRoot) { display: none !important; }
+  body.asg-printing #asgPrintRoot {
+    position: static;
+    overflow: visible;
+    background: #ffffff;
+    padding: 0;
+  }
+  body.asg-printing .asg-toolbar { display: none !important; }
+  body.asg-printing .asg-sheet {
+    box-shadow: none;
+    border-radius: 0;
+    max-width: none;
+    margin: 0;
+    padding: 6mm 4mm;
+  }
+  body.asg-printing .asg-sheet.is-student .asg-q { break-inside: avoid; }
+  body.asg-printing .asg-qimg { max-height: 240mm; }
+}
