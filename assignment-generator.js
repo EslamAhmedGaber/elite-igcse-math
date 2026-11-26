@@ -30,6 +30,12 @@
    lesson date), optionally routed to a group assignment over
    today's common topics, the record stamped origin: "session",
    and the share panel opened straight after saving.
+
+   Assignment follow-up (ASSIGNMENT_PLAN.md §28-§33) lives here too:
+   the history item shows the record's follow-up chip and the
+   Returned/Checked step toggles (state + transitions are tracker
+   Core's - this layer only renders and routes), and the share
+   panel's send actions stamp sentAt via share.markSent.
    ========================================================================== */
 (function (root) {
   "use strict";
@@ -736,12 +742,26 @@
     const groupRecords = share
       ? Object.values(share.groupRecords || {}).sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0))
       : [];
-    const itemHtml = (record, group) => `
+    const itemHtml = (record, group) => {
+      /* Follow-up (§28.7): the status chip (Open / Awaiting return /
+         Returned / Checked, stamps in the title) and the two step
+         toggles. State comes from tracker Core's followUpState -
+         the record itself is only ever changed through the API. */
+      const followState = ACore && ACore.followUpState ? ACore.followUpState(record) : null;
+      const followLabels = { open: "Open", awaiting: "Awaiting return", returned: "Returned", checked: "Checked" };
+      const followTitle = followState ? [
+        followState.sentDate ? `Sent ${formatDate(followState.sentDate)}` : "",
+        followState.returnedDate ? `Returned ${formatDate(followState.returnedDate)}` : "",
+        followState.checkedDate ? `Checked ${formatDate(followState.checkedDate)}` : ""
+      ].filter(Boolean).join(" · ") : "";
+      const followStatus = followState ? followState.key : "open";
+      return `
         <li class="lt-assign-item">
           <div class="lt-assign-meta">
             <b>${escapeHtml(formatDate(record.date))}</b>
             <span>${record.questionIds.length} questions &middot; ${record.totalMarks} marks &middot; about ${record.estMinutes} min &middot; ${escapeHtml(Core.LAYOUTS[Core.recordLayout(record)].label)}</span>
             ${record.origin === "session" ? `<span class="lt-chip is-on">Session homework</span>` : ""}
+            ${followState ? `<span class="lt-follow-chip is-${followState.key}"${followTitle ? ` title="${escapeHtml(followTitle)}"` : ""}>${escapeHtml(followLabels[followState.key] || "Open")}</span>` : ""}
             <span class="lt-muted">${escapeHtml((record.topics || []).join(", "))}</span>
           </div>
           <div class="lt-assign-actions">
@@ -750,9 +770,13 @@
                  <button type="button" class="lt-btn is-small" data-asg-open-group="${escapeHtml(key)}|${escapeHtml(record.id)}|teacher">Teacher copy</button>`
               : `<button type="button" class="lt-btn is-small" data-asg-open="${escapeHtml(key)}|${escapeHtml(record.id)}|student">Student copy</button>
                  <button type="button" class="lt-btn is-small" data-asg-open="${escapeHtml(key)}|${escapeHtml(record.id)}|teacher">Teacher copy</button>`}
+            ${ctx.followUp ? `
+            <button type="button" class="lt-chip lt-follow-toggle${followStatus === "returned" || followStatus === "checked" ? " is-on" : ""}" data-asg-follow${group ? "-group" : ""}="${escapeHtml(key)}|${escapeHtml(record.id)}|returned" title="Mark as returned (or step back)">Returned</button>
+            <button type="button" class="lt-chip lt-follow-toggle${followStatus === "checked" ? " is-on" : ""}" data-asg-follow${group ? "-group" : ""}="${escapeHtml(key)}|${escapeHtml(record.id)}|checked" title="Mark as checked (or step back)">Checked</button>` : ""}
             ${share ? `<button type="button" class="lt-btn is-small is-gold" data-asg-share${group ? "-group" : ""}="${escapeHtml(key)}|${escapeHtml(record.id)}">Share</button>` : ""}
           </div>
         </li>`;
+    };
     const todayTopics = ctx.todayTopics || [];
     container.innerHTML = `
       <div class="lt-assign-head">
@@ -1160,6 +1184,28 @@
         btn.textContent = "Copy failed - copy the link above manually";
       }
     });
+    /* Sent marking (§28.6): the first click on any send action in
+       this panel - a per-number WhatsApp button, "WhatsApp to me",
+       or Copy link - stamps the record's sentAt through the
+       tracker API, so the history chip flips to "Awaiting return"
+       and the dashboard starts counting the wait. Marking is a
+       side effect only (the anchors keep their default behaviour)
+       and the Core first-click rule makes repeats no-ops. */
+    let sentMarked = false;
+    const markSentOnce = () => {
+      if (sentMarked) return;
+      sentMarked = true;
+      if (share.markSent) {
+        try {
+          const pending = share.markSent(record);
+          if (pending && pending.catch) pending.catch(() => { /* the send itself already happened */ });
+        } catch (error) { /* marking never blocks a send */ }
+      }
+    };
+    modal.querySelectorAll('a[href^="https://wa.me/"]').forEach((anchor) => {
+      anchor.addEventListener("click", markSentOnce);
+    });
+    document.getElementById("asgShareCopy").addEventListener("click", markSentOnce);
   }
 
   /* ---------------------------------------------------- group generator */
@@ -1607,6 +1653,26 @@
       const ctx = contexts.get(`${studentId}|${courseId}`);
       const record = ctx && ctx.share && ctx.share.groupRecords ? ctx.share.groupRecords[recordId] : null;
       if (ctx && record) openSharePanel(ctx, record);
+      return;
+    }
+    /* Follow-up toggles (§28.7): one step along the
+       open -> returned -> checked ladder (or one step back). The
+       ctx callback routes to the right store API and refreshes;
+       the chip re-renders from the saved record. */
+    const followBtn = event.target.closest("[data-asg-follow]");
+    if (followBtn) {
+      const [studentId, courseId, recordId, action] = String(followBtn.dataset.asgFollow || "").split("|");
+      const ctx = contexts.get(`${studentId}|${courseId}`);
+      const record = ctx && ctx.doc && ctx.doc.assignments ? ctx.doc.assignments[recordId] : null;
+      if (ctx && record && ctx.followUp) await ctx.followUp(record, action);
+      return;
+    }
+    const followGroupBtn = event.target.closest("[data-asg-follow-group]");
+    if (followGroupBtn) {
+      const [studentId, courseId, recordId, action] = String(followGroupBtn.dataset.asgFollowGroup || "").split("|");
+      const ctx = contexts.get(`${studentId}|${courseId}`);
+      const record = ctx && ctx.share && ctx.share.groupRecords ? ctx.share.groupRecords[recordId] : null;
+      if (ctx && record && ctx.followUp) await ctx.followUp(record, action);
       return;
     }
     const openGroup = event.target.closest("[data-asg-open-group]");

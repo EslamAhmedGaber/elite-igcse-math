@@ -435,6 +435,23 @@
   }
   .lt-badge.is-amber { background: var(--ux-warn-soft, #fdf1dc); border-color: var(--ux-warn-line, #eecfa0); color: var(--ux-warn, #8a5a06); }
   .lt-badge.is-red { background: var(--ux-danger-soft, #fdecee); border-color: var(--ux-danger-line, #f0bcc1); color: var(--ux-danger, #a8323c); }
+  /* Assignment follow-up (§28.7): the status chip on history items -
+     neutral when never sent, amber while awaiting return, royal once
+     returned, green once checked. The Returned/Checked toggles reuse
+     .lt-chip (is-on = currently in that state). */
+  .lt-follow-chip {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 999px;
+    font-size: 11px; font-weight: 800; letter-spacing: .02em;
+    background: var(--ux-subtle, #eef3f9); color: var(--ux-ink-3, #3d5068);
+    border: 1px solid var(--ux-line, #dce5ef);
+    white-space: nowrap;
+  }
+  .lt-follow-chip.is-awaiting { background: var(--ux-warn-soft, #fdf1dc); border-color: var(--ux-warn-line, #eecfa0); color: var(--ux-warn, #8a5a06); }
+  .lt-follow-chip.is-returned { background: var(--ux-royal-soft, #e3ebfd); border-color: var(--ux-royal-line, #b9cdf5); color: var(--ux-royal-ink, #143da8); }
+  .lt-follow-chip.is-checked { background: var(--ux-ok-soft, #e4f4ee); border-color: var(--ux-ok-line, #a9d9c8); color: #14532d; }
+  button.lt-follow-toggle { cursor: pointer; font: inherit; }
   .lt-card-progress { margin: 0; font-size: 13px; color: var(--ux-muted, #5a6b80); }
   .lt-card-line { margin: 0; font-size: 14px; color: var(--ux-ink-3, #3d5068); }
   .lt-card-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 2px; }

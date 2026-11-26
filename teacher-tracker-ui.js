@@ -338,6 +338,18 @@
         await refresh();
       },
       share: shareContextFor(student),
+      /* Assignment follow-up (§28.7): the history toggles route by
+         the RECORD's audience - a group record updates through the
+         group API (its state lives in dataset.groupAssignments),
+         anything else through the per-enrolment API. */
+      followUp: async (record, action) => {
+        const groupName = record && record.audience ? record.audience.groupName : "";
+        await guard(async () => {
+          if (groupName) await T.api.setGroupAssignmentFollowUp(groupName, view.course, record.id, action);
+          else await T.api.setAssignmentFollowUp(student.id, view.course, record.id, action);
+        }, "Follow-up updated");
+        await refresh();
+      },
       toast
     });
   }
@@ -372,6 +384,18 @@
       saveGroupRecord: async (groupName, record) => {
         const saved = await guard(() => T.api.saveGroupAssignment(groupName, view.course, record));
         if (saved === undefined) throw new Error("The group assignment could not be saved.");
+        await refresh();
+      },
+      /* Sent marking (§28.6): the share panel's send actions call
+         this once per opening; the API stamps sentAt first-click-
+         only. Silent (no toast) - the panel stays open on top of
+         the refreshed section. */
+      markSent: async (record) => {
+        const groupName = record && record.audience ? record.audience.groupName : "";
+        await guard(async () => {
+          if (groupName) await T.api.setGroupAssignmentFollowUp(groupName, view.course, record.id, "sent");
+          else await T.api.setAssignmentFollowUp(student.id, view.course, record.id, "sent");
+        });
         await refresh();
       }
     };
@@ -414,7 +438,9 @@
   /* Sharing settings block (sidebar): populated on refresh unless the
      teacher is mid-edit in one of its fields. */
   function templateHint(settings, kind) {
-    const stored = kind === "forward" ? settings.forwardTemplate : settings.studentTemplate;
+    const stored = kind === "forward" ? settings.forwardTemplate
+      : kind === "reminder" ? settings.reminderTemplate
+      : settings.studentTemplate;
     const parts = [];
     if (!stored || !stored.trim()) parts.push("Using the built-in default (shown greyed in the box).");
     if (!Core.templateHasLink(Core.templateOrDefault(settings, kind))) parts.push("Warning: this message has no {link} - the assignment link will NOT be included.");
@@ -425,17 +451,22 @@
     const phoneEl = $("#ltOwnerPhone");
     const studentEl = $("#ltStudentTemplate");
     const forwardEl = $("#ltForwardTemplate");
+    const reminderEl = $("#ltReminderTemplate");
     if (!phoneEl || !studentEl || !forwardEl) return;
     const settings = (view.dataset && view.dataset.settings) || {};
     if (document.activeElement !== phoneEl) phoneEl.value = settings.ownerPhone || "";
     if (document.activeElement !== studentEl) studentEl.value = settings.studentTemplate || "";
     if (document.activeElement !== forwardEl) forwardEl.value = settings.forwardTemplate || "";
+    if (reminderEl && document.activeElement !== reminderEl) reminderEl.value = settings.reminderTemplate || "";
     studentEl.placeholder = Core.DEFAULT_STUDENT_TEMPLATE;
     forwardEl.placeholder = Core.DEFAULT_FORWARD_TEMPLATE;
+    if (reminderEl) reminderEl.placeholder = Core.DEFAULT_REMINDER_TEMPLATE;
     const studentHint = $("#ltStudentTemplateHint");
     const forwardHint = $("#ltForwardTemplateHint");
+    const reminderHint = $("#ltReminderTemplateHint");
     if (studentHint) studentHint.textContent = templateHint(settings, "student");
     if (forwardHint) forwardHint.textContent = templateHint(settings, "forward");
+    if (reminderHint) reminderHint.textContent = templateHint(settings, "reminder");
   }
 
   function studentHeaderHtml(student, info) {
@@ -634,6 +665,36 @@
     if (query) cards = cards.filter((card) => Core.normName(card.name).includes(query));
     const feed = Core.activityFeed(view.dataset, 15);
     const pending = Core.homeworkPending(view.dataset);
+    /* Assignment follow-up (§28.8): sent-but-not-returned records,
+       oldest first. The block renders ONLY when there is something
+       to chase - it is an action list, not a status report. */
+    const awaiting = Core.awaitingReturn ? Core.awaitingReturn(view.dataset, today) : [];
+    const dashSettings = view.dataset.settings || {};
+    const reminderEffective = Core.templateOrDefault(dashSettings, "reminder");
+    const reminderMissingLink = awaiting.length > 0 && !Core.templateHasLink(reminderEffective);
+    const awaitingHtml = awaiting.length ? `
+        <section class="lt-dash-block" aria-label="Awaiting return">
+          <h3>Awaiting return</h3>
+          ${reminderMissingLink ? `<p class="lt-muted">Heads up: your reminder template has no {link}, so reminders go out without the assignment link. Add it under Sharing settings.</p>` : ""}
+          <ul class="lt-feed">${awaiting.map((row) => {
+            const ACore = window.EliteAssignmentCore;
+            const link = ACore ? ACore.buildShareUrl(new URL("assignment.html", location.href).href, row.record, { courseId: row.courseId, name: row.name }) : "";
+            const text = Core.renderTemplate(reminderEffective, {
+              student: row.name,
+              group: row.groupName || "",
+              course: COURSES[row.courseId] ? COURSES[row.courseId].label : row.courseId,
+              topics: (row.record.topics || []).join(", "),
+              link,
+              date: formatDate(row.date)
+            });
+            const recipient = Core.normalisePhone(row.phone) || Core.normalisePhone(Core.effectiveOwnerPhone(dashSettings));
+            return `
+            <li>
+              <span class="lt-feed-main"><b>${escapeHtml(row.name)}</b> &middot; ${escapeHtml(COURSES[row.courseId] ? COURSES[row.courseId].label : row.courseId)} <small>(sent ${escapeHtml(formatDate(row.sentDate))} &middot; ${row.daysWaiting} day${row.daysWaiting === 1 ? "" : "s"} waiting &middot; ${row.count} questions)</small></span>
+              ${recipient ? `<a class="lt-btn is-small" target="_blank" rel="noreferrer" href="https://wa.me/${recipient}?text=${encodeURIComponent(text)}">Remind on WhatsApp</a>` : `<span class="lt-muted">No phone saved</span>`}
+            </li>`;
+          }).join("")}</ul>
+        </section>` : "";
     const courseOptions = [`<option value="">All courses</option>`]
       .concat(COURSE_IDS.map((id) => `<option value="${id}"${id === view.dashCourse ? " selected" : ""}>${escapeHtml(COURSES[id].label)}</option>`)).join("");
 
@@ -650,6 +711,7 @@
       </div>
       ${cards.length ? `<div class="lt-cards">${cards.map(dashCardHtml).join("")}</div>` : `<div class="lt-empty"><p><b>No student cards to show.</b></p><p class="lt-muted">${query || view.dashCourse ? "Nothing matches the current search/filter." : "Add a student and enrol them in a course to see their card here."}</p></div>`}
       <div class="lt-dash-cols">
+        ${awaitingHtml}
         <section class="lt-dash-block" aria-label="Recent activity">
           <h3>Recent activity</h3>
           ${feed.length ? `<ul class="lt-feed">${feed.map((row) => `
@@ -898,14 +960,15 @@
       if (phoneSaved === undefined) return;
       const saved = await guard(() => T.api.setShareTemplates({
         student: $("#ltStudentTemplate").value,
-        forward: $("#ltForwardTemplate").value
+        forward: $("#ltForwardTemplate").value,
+        reminder: $("#ltReminderTemplate") ? $("#ltReminderTemplate").value : ""
       }), "Sharing settings saved");
       if (saved !== undefined) await refresh();
     });
     const shareReset = $("#ltShareReset");
     if (shareReset) shareReset.addEventListener("click", async () => {
-      if (!window.confirm("Reset both message templates to the built-in defaults?")) return;
-      const saved = await guard(() => T.api.setShareTemplates({ student: "", forward: "" }), "Templates reset to the defaults");
+      if (!window.confirm("Reset all three message templates to the built-in defaults?")) return;
+      const saved = await guard(() => T.api.setShareTemplates({ student: "", forward: "", reminder: "" }), "Templates reset to the defaults");
       if (saved !== undefined) await refresh();
     });
 

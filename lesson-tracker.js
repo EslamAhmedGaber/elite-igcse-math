@@ -10,8 +10,9 @@
                                               createdAt, editedAt (client ms)
      teacher_students/_meta                  rosterTombstones {id: {updatedAt}},
                                               settings {ownerPhone,
-                                              studentTemplate, forwardTemplate
-                                              + LWW clocks}, groupAssignments
+                                              studentTemplate, forwardTemplate,
+                                              reminderTemplate + LWW clocks},
+                                              groupAssignments
                                               {groupKey: {courseId: {id: record}}}
      teacher_students/{id}/courses/{courseId}
                                               courseId, ticks{}, tombstones{}
@@ -44,7 +45,7 @@
      nothing). Real datasets never carry the field (emptyDataset
      is unchanged) and the migration only ever reads/writes
      DEMO_KEY. */
-  const DEMO_SEED_VERSION = 2;
+  const DEMO_SEED_VERSION = 3;
   const DEMO_USER_KEY = "eliteLessonTrackerDemoUserV1";
   const META_DOC_ID = "_meta";
   const NOTE_CAP = 500;
@@ -112,10 +113,23 @@
     return digits;
   }
 
+  const CAIRO_DATE_FMT = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Africa/Cairo", year: "numeric", month: "2-digit", day: "2-digit"
+  });
+
   function cairoToday(now = new Date()) {
-    return new Intl.DateTimeFormat("en-CA", {
-      timeZone: "Africa/Cairo", year: "numeric", month: "2-digit", day: "2-digit"
-    }).format(now);
+    return CAIRO_DATE_FMT.format(now);
+  }
+
+  /* The Cairo YYYY-MM-DD of an arbitrary instant (an ISO string or
+     ms). Follow-up stamps are ISO instants in UTC and Cairo is
+     UTC+2/+3, so the ISO string's own date part is the wrong day
+     for early-morning events - always go through the formatter.
+     Unparseable input yields "" rather than throwing. */
+  function cairoDateOf(value) {
+    const date = value instanceof Date ? value : new Date(value);
+    if (Number.isNaN(date.getTime())) return "";
+    return CAIRO_DATE_FMT.format(date);
   }
 
   function genId(prefix) {
@@ -136,7 +150,7 @@
        rosterTombstones: {studentId: {updatedAt}}, lastFullSync: ms }   */
 
   function emptySettings() {
-    return { ownerPhone: "", ownerUpdatedAt: 0, studentTemplate: "", forwardTemplate: "", templatesUpdatedAt: 0 };
+    return { ownerPhone: "", ownerUpdatedAt: 0, studentTemplate: "", forwardTemplate: "", reminderTemplate: "", templatesUpdatedAt: 0 };
   }
 
   function emptyDataset() {
@@ -276,6 +290,207 @@
      paper-print.js's LAYOUTS (via assignment-generator.js's port). */
   const ASSIGNMENT_LAYOUT_KEYS = ["standard", "economy", "single", "compact"];
 
+  /* --------------------- assignment follow-up ----------------------- */
+  /* The last leg of the loop (ASSIGNMENT_PLAN §28-§32): after an
+     assignment is generated and sent, the teacher tracks whether it
+     came back and whether he checked it. Every record may carry
+       followUp: { status, sentAt, returnedAt, checkedAt }
+       followUpdatedAt: <ms>   (sibling LWW clock for the object)
+     Timestamps are ISO instants (or null); the clock is a ms number
+     like every other LWW clock in the tracker. An ABSENT followUp
+     means open + never sent - every pre-feature record reads
+     correctly with no migration. The status is DERIVED from the
+     timestamps everywhere (checkedAt -> checked, returnedAt ->
+     returned, else open), never trusted from storage, so imported
+     or hand-edited data self-heals. */
+  const FOLLOWUP_ACTIONS = ["sent", "returned", "checked"];
+  const FOLLOWUP_RANK = { open: 0, returned: 1, checked: 2 };
+  const ISO_INSTANT_RE = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{1,3})?(Z|[+-]\d{2}:?\d{2})$/;
+
+  function cleanInstant(value) {
+    if (typeof value !== "string" || !ISO_INSTANT_RE.test(value)) return null;
+    return Number.isNaN(Date.parse(value)) ? null : value;
+  }
+
+  function deriveFollowStatus(followUp) {
+    if (followUp && followUp.checkedAt) return "checked";
+    if (followUp && followUp.returnedAt) return "returned";
+    return "open";
+  }
+
+  /* Sanitise a raw followUp value. Returns null when there is no
+     object to keep (the field then stays ABSENT, like a
+     pre-feature record). An object whose timestamps are all null
+     SURVIVES: un-marking back to open is meaningful data that must
+     be able to win a merge (§28.2). */
+  function sanitizeFollowUp(raw) {
+    if (!raw || typeof raw !== "object" || Array.isArray(raw)) return null;
+    const followUp = {
+      status: "open",
+      sentAt: cleanInstant(raw.sentAt),
+      returnedAt: cleanInstant(raw.returnedAt),
+      checkedAt: cleanInstant(raw.checkedAt)
+    };
+    followUp.status = deriveFollowStatus(followUp);
+    return followUp;
+  }
+
+  /* The record's normalized followUp: the sanitized stored object,
+     or the open/unsent default when the field is absent. */
+  function followUpOf(record) {
+    const clean = sanitizeFollowUp(record && record.followUp);
+    return clean || { status: "open", sentAt: null, returnedAt: null, checkedAt: null };
+  }
+
+  /* The follow-up state machine (§28.3). Pure: returns a NEW record
+     (the input is never mutated) with followUpdatedAt = now.
+       "sent"     - stamp sentAt; FIRST CLICK ONLY: an already-sent
+                    record is returned unchanged (same object, no
+                    clock bump, so a re-click can never win a merge
+                    over a real state change). The return ladder is
+                    untouched - sent is orthogonal to it.
+       "returned" - toggle: open -> returned (stamp returnedAt),
+                    returned -> open (clear returnedAt),
+                    checked -> returned (clear checkedAt, keep
+                    returnedAt). Backwards is one step at a time.
+       "checked"  - toggle: checked -> returned (clear checkedAt),
+                    returned -> checked (stamp checkedAt),
+                    open -> checked (stamp returnedAt if missing,
+                    stamp checkedAt). Checked implies returned.
+     Unknown actions throw - the API boundary is strict, like
+     saveAssignment. */
+  function applyFollowUp(record, action, now) {
+    if (!FOLLOWUP_ACTIONS.includes(action)) throw new Error(`Unknown follow-up action: ${action}`);
+    const stamp = new Date(now).toISOString();
+    const current = followUpOf(record);
+    if (action === "sent") {
+      if (current.sentAt) return record;
+      const next = clone(record);
+      next.followUp = { ...current, sentAt: stamp };
+      next.followUpdatedAt = now;
+      return next;
+    }
+    const next = clone(record);
+    const followUp = { ...current };
+    if (action === "returned") {
+      if (followUp.status === "open") { followUp.status = "returned"; followUp.returnedAt = stamp; }
+      else if (followUp.status === "returned") { followUp.status = "open"; followUp.returnedAt = null; }
+      else { followUp.status = "returned"; followUp.checkedAt = null; }
+    } else { // "checked"
+      if (followUp.status === "checked") { followUp.status = "returned"; followUp.checkedAt = null; }
+      else if (followUp.status === "returned") { followUp.status = "checked"; followUp.checkedAt = stamp; }
+      else { followUp.status = "checked"; followUp.returnedAt = followUp.returnedAt || stamp; followUp.checkedAt = stamp; }
+    }
+    next.followUp = followUp;
+    next.followUpdatedAt = now;
+    return next;
+  }
+
+  /* Merge two copies of one record's follow-up (§28.4). The ladder
+     state (status/returnedAt/checkedAt + the clock) comes from the
+     side with the greater followUpdatedAt; an absent followUp
+     counts as -1, so any explicit state beats none; ties go to the
+     more advanced derived status. EXCEPTION: sentAt is the
+     earliest non-null across both copies, always - it is
+     append-only in the whole design (never cleared, never
+     overwritten), so earliest-non-null is correct even when the
+     clock winner is a stale copy that never saw the send.
+     Returns { followUp, followUpdatedAt } or null when neither
+     side carries a followUp. */
+  function mergeFollowUp(cloudRecord, mirrorRecord) {
+    const cHas = Boolean(sanitizeFollowUp(cloudRecord && cloudRecord.followUp));
+    const mHas = Boolean(sanitizeFollowUp(mirrorRecord && mirrorRecord.followUp));
+    if (!cHas && !mHas) return null;
+    const cClock = cHas ? Math.max(0, Math.floor(Number(cloudRecord.followUpdatedAt) || 0)) : -1;
+    const mClock = mHas ? Math.max(0, Math.floor(Number(mirrorRecord.followUpdatedAt) || 0)) : -1;
+    const cFu = cHas ? followUpOf(cloudRecord) : null;
+    const mFu = mHas ? followUpOf(mirrorRecord) : null;
+    let winner;
+    if (cClock !== mClock) winner = cClock > mClock ? cFu : mFu;
+    else {
+      const cRank = cFu ? FOLLOWUP_RANK[cFu.status] : -1;
+      const mRank = mFu ? FOLLOWUP_RANK[mFu.status] : -1;
+      winner = mRank > cRank ? mFu : cFu; // cloud wins an exact tie
+    }
+    const followUp = { ...winner };
+    const sentStamps = [cFu && cFu.sentAt, mFu && mFu.sentAt].filter(Boolean);
+    if (sentStamps.length) {
+      followUp.sentAt = sentStamps.reduce((earliest, s) => (Date.parse(s) < Date.parse(earliest) ? s : earliest));
+    }
+    return { followUp, followUpdatedAt: Math.max(cClock, mClock, 0) };
+  }
+
+  /* Display state for the history chip (§28.7/§30.4): the key plus
+     the stamps' CAIRO dates (YYYY-MM-DD or ""). "awaiting" is the
+     open-but-sent state; a plain open record was never sent. */
+  function followUpState(record) {
+    const followUp = followUpOf(record);
+    const key = followUp.status !== "open" ? followUp.status : (followUp.sentAt ? "awaiting" : "open");
+    return {
+      key,
+      sentDate: followUp.sentAt ? cairoDateOf(followUp.sentAt) : "",
+      returnedDate: followUp.returnedAt ? cairoDateOf(followUp.returnedAt) : "",
+      checkedDate: followUp.checkedAt ? cairoDateOf(followUp.checkedAt) : ""
+    };
+  }
+
+  /* Dashboard model (§28.8): assignments that were SENT and have
+     not come back - normalized status open AND sentAt set. Scans
+     ACTIVE students' course docs (the dashboard's standing rule)
+     plus every group bucket. Oldest sent first. Rows carry the
+     sanitized record clone so the UI can rebuild the share link
+     and the reminder text without touching the dataset. */
+  function awaitingReturn(dataset, todayStr) {
+    const rows = [];
+    const pushRow = (base, record) => {
+      const followUp = followUpOf(record);
+      if (followUp.status !== "open" || !followUp.sentAt) return;
+      const sentDate = cairoDateOf(followUp.sentAt);
+      const waiting = daysBetween(sentDate, todayStr);
+      rows.push({
+        ...base,
+        recordId: record.id,
+        record: clone(record),
+        date: record.date || "",
+        sentAt: followUp.sentAt,
+        sentDate,
+        daysWaiting: waiting === null ? 0 : Math.max(0, waiting),
+        count: (record.questionIds || []).length
+      });
+    };
+    Object.values((dataset && dataset.students) || {}).forEach((student) => {
+      if (student.archived) return;
+      const byCourse = (dataset.courses && dataset.courses[student.id]) || {};
+      Object.entries(byCourse).forEach(([courseId, doc]) => {
+        Object.values((doc && doc.assignments) || {}).forEach((record) => {
+          pushRow({
+            kind: "student",
+            studentId: student.id,
+            name: student.name,
+            groupName: student.groupName || "",
+            courseId,
+            phone: student.phone || ""
+          }, record);
+        });
+      });
+    });
+    Object.entries((dataset && dataset.groupAssignments) || {}).forEach(([groupKey, byCourse]) => {
+      Object.entries(byCourse || {}).forEach(([courseId, map]) => {
+        Object.values(map || {}).forEach((record) => {
+          pushRow({
+            kind: "group",
+            name: (record.audience && record.audience.groupName) || groupKey,
+            groupName: (record.audience && record.audience.groupName) || groupKey,
+            courseId,
+            phone: ""
+          }, record);
+        });
+      });
+    });
+    rows.sort((a, b) => (Date.parse(a.sentAt) - Date.parse(b.sentAt)) || String(a.name).localeCompare(String(b.name)));
+    return rows;
+  }
+
   function sanitizeAssignmentRecord(raw) {
     if (!raw || typeof raw !== "object" || Array.isArray(raw)) return null;
     const id = typeof raw.id === "string" ? raw.id.slice(0, 80) : "";
@@ -315,6 +530,11 @@
     const sessionDate = origin && typeof raw.sessionDate === "string" && /^\d{4}-\d{2}-\d{2}$/.test(raw.sessionDate)
       ? raw.sessionDate
       : null;
+    /* Follow-up (assignment follow-up, §28.2): kept only when a
+       followUp object survives sanitizeFollowUp; the sibling LWW
+       clock rides with it and is dropped without it. */
+    const followUp = sanitizeFollowUp(raw.followUp);
+    const followUpdatedAt = followUp ? Math.max(0, Math.floor(Number(raw.followUpdatedAt) || 0)) : null;
     return {
       id,
       createdAt: nonNeg(raw.createdAt),
@@ -328,7 +548,8 @@
       includeEP: Boolean(raw.includeEP),
       ...(layout ? { layout } : {}),
       ...(audience ? { audience } : {}),
-      ...(origin ? { origin, sessionDate: sessionDate || "" } : {})
+      ...(origin ? { origin, sessionDate: sessionDate || "" } : {}),
+      ...(followUp ? { followUp, followUpdatedAt } : {})
     };
   }
 
@@ -351,7 +572,23 @@
       const c = cloudMap && cloudMap[id];
       const m = mirrorMap && mirrorMap[id];
       const winner = (c && m) ? ((m.createdAt || 0) > (c.createdAt || 0) ? m : c) : (c || m);
-      if (winner) merged[id] = clone(winner);
+      if (!winner) return;
+      const record = clone(winner);
+      /* Follow-up is the one mutable part of an otherwise immutable
+         record, so it merges on its own clock (mergeFollowUp) and
+         overlays the content winner - a createdAt pick alone would
+         lose whichever side marked/sent most recently. */
+      if (c && m) {
+        const follow = mergeFollowUp(c, m);
+        if (follow) {
+          record.followUp = follow.followUp;
+          record.followUpdatedAt = follow.followUpdatedAt;
+        } else {
+          delete record.followUp;
+          delete record.followUpdatedAt;
+        }
+      }
+      merged[id] = record;
     });
     return merged;
   }
@@ -497,6 +734,7 @@
   const TEMPLATE_CAP = 1000;
   const DEFAULT_STUDENT_TEMPLATE = "أهلاً {student}، ده الـ assignment بتاعك لمادة {course} — المواضيع: {topics}. افتحه من هنا: {link}";
   const DEFAULT_FORWARD_TEMPLATE = "الـ assignment بتاع {student} — جروب {group} — {course} — المواضيع: {topics} — {link}";
+  const DEFAULT_REMINDER_TEMPLATE = "أهلاً {student}، بفكّرك بالـ assignment بتاع {course} ({topics}) اللي بعتّه لك يوم {date} — لسه ما وصلنيش الحل بتاعه. لما تخلّصه ابعته لي على طول. اللينك: {link}";
   const TEMPLATE_KEYS = ["student", "group", "course", "topics", "link", "date"];
   /* The site's published contact number is the out-of-the-box value
      for "WhatsApp to me"; an empty stored ownerPhone means this. */
@@ -509,6 +747,7 @@
     out.ownerUpdatedAt = Number(raw.ownerUpdatedAt) || 0;
     out.studentTemplate = typeof raw.studentTemplate === "string" ? raw.studentTemplate.slice(0, TEMPLATE_CAP) : "";
     out.forwardTemplate = typeof raw.forwardTemplate === "string" ? raw.forwardTemplate.slice(0, TEMPLATE_CAP) : "";
+    out.reminderTemplate = typeof raw.reminderTemplate === "string" ? raw.reminderTemplate.slice(0, TEMPLATE_CAP) : "";
     out.templatesUpdatedAt = Number(raw.templatesUpdatedAt) || 0;
     return out;
   }
@@ -523,6 +762,7 @@
     const tplWin = (m.templatesUpdatedAt || 0) > (c.templatesUpdatedAt || 0) ? m : c;
     out.studentTemplate = tplWin.studentTemplate;
     out.forwardTemplate = tplWin.forwardTemplate;
+    out.reminderTemplate = tplWin.reminderTemplate;
     out.templatesUpdatedAt = Math.max(c.templatesUpdatedAt || 0, m.templatesUpdatedAt || 0);
     return out;
   }
@@ -534,13 +774,19 @@
     return s.ownerPhone || OWNER_PHONE_DEFAULT;
   }
 
-  /* The effective template for a kind ("student" | "forward"): the
-     stored text when non-empty after trim, else the code default. */
+  /* The effective template for a kind ("student" | "forward" |
+     "reminder"): the stored text when non-empty after trim, else
+     the code default. Unknown kinds fall through to "student",
+     exactly as the two-kind version behaved. */
   function templateOrDefault(settings, kind) {
     const s = sanitizeSettings(settings);
-    const stored = kind === "forward" ? s.forwardTemplate : s.studentTemplate;
+    const stored = kind === "forward" ? s.forwardTemplate
+      : kind === "reminder" ? s.reminderTemplate
+      : s.studentTemplate;
     if (stored.trim()) return stored;
-    return kind === "forward" ? DEFAULT_FORWARD_TEMPLATE : DEFAULT_STUDENT_TEMPLATE;
+    return kind === "forward" ? DEFAULT_FORWARD_TEMPLATE
+      : kind === "reminder" ? DEFAULT_REMINDER_TEMPLATE
+      : DEFAULT_STUDENT_TEMPLATE;
   }
 
   /* Dumb and safe by design (audit W7): only the six known {keys} are
@@ -967,15 +1213,17 @@
     applyTick, applyUntick, mergeCourseDoc, mergeDatasets,
     sanitizeAssignmentRecord, sanitizeAssignmentMap, mergeAssignments,
     applyAssignment, ASSIGNMENT_CAP, ASSIGNMENT_LAYOUT_KEYS,
+    sanitizeFollowUp, followUpOf, applyFollowUp, mergeFollowUp,
+    followUpState, awaitingReturn, FOLLOWUP_ACTIONS,
     cleanGroupLink, safeGroupLink, cleanGroupName,
     sanitizePhones, phoneMirror, PHONE_CAP, PHONE_LABELS,
     sanitizeSettings, mergeSettings, TEMPLATE_CAP, DEFAULT_STUDENT_TEMPLATE,
-    DEFAULT_FORWARD_TEMPLATE, TEMPLATE_KEYS, templateOrDefault,
+    DEFAULT_FORWARD_TEMPLATE, DEFAULT_REMINDER_TEMPLATE, TEMPLATE_KEYS, templateOrDefault,
     renderTemplate, templateHasLink, OWNER_PHONE_DEFAULT, effectiveOwnerPhone,
     sanitizeGroupAssignments, mergeGroupAssignments, applyGroupAssignment,
     nextTopic, progressFor, latestTickDate, topicsTickedOn, flattenLog, weekRange,
     buildDigest, unmatchedTicks, NOTE_CAP,
-    cleanSessionDate, daysBetween, daysSince, dashboardCards, dashboardStats,
+    cairoDateOf, cleanSessionDate, daysBetween, daysSince, dashboardCards, dashboardStats,
     activityFeed, homeworkPending, nextSessionInfo, buildParentReport,
     sanitizeDataset, exportEnvelope, parseImport
   };
@@ -1101,11 +1349,14 @@
     docA.ticks["Percentages"] = { date: today, hw: false, note: "", at: now, updatedAt: now };
     // One past assignment so the Generate-assignment history is visible
     // in demo mode. These are real bank ids from the Unit 2 "Prime
-    // Factors, HCF & LCM" pool (2 marks each).
+    // Factors, HCF & LCM" pool (2 marks each). It was generated and
+    // SENT 3 days ago and has not come back, so the dashboard's
+    // "Awaiting return" list (§28.8) has exactly one row in demo.
+    const threeDaysAgo = cairoToday(new Date(Date.now() - 3 * 86400000));
     docA.assignments["asg-demo-1"] = {
       id: "asg-demo-1",
-      createdAt: now - 86400000,
-      date: yesterday,
+      createdAt: now - 3 * 86400000,
+      date: threeDaysAgo,
       topics: ["Prime Factors, HCF & LCM"],
       questionIds: [
         "all::Jan2020_P1H__Q02__p04-04__m02__Prime-Factors-HCF-and-LCM",
@@ -1117,7 +1368,14 @@
       targetMarks: 0,
       totalMarks: 8,
       estMinutes: 12,
-      includeEP: true
+      includeEP: true,
+      followUp: {
+        status: "open",
+        sentAt: new Date(now - 3 * 86400000).toISOString(),
+        returnedAt: null,
+        checkedAt: null
+      },
+      followUpdatedAt: now - 3 * 86400000
     };
     docA.updatedAt = now;
     dataset.courses[a.id] = { "modular-2": docA };
@@ -1536,13 +1794,14 @@
     },
 
     /* WhatsApp distribution: editable message templates (student +
-       forward-to-me). Saving "" restores the built-in default
-       (templateOrDefault). */
+       forward-to-me + the follow-up reminder). Saving "" restores
+       the built-in default (templateOrDefault). */
     async setShareTemplates(templates) {
       const dataset = datasetOrThrow();
       dataset.settings = sanitizeSettings(dataset.settings);
       if (templates && templates.student !== undefined) dataset.settings.studentTemplate = String(templates.student || "").slice(0, TEMPLATE_CAP);
       if (templates && templates.forward !== undefined) dataset.settings.forwardTemplate = String(templates.forward || "").slice(0, TEMPLATE_CAP);
+      if (templates && templates.reminder !== undefined) dataset.settings.reminderTemplate = String(templates.reminder || "").slice(0, TEMPLATE_CAP);
       dataset.settings.templatesUpdatedAt = Date.now();
       persistLocal();
       await cloudPush(() => pushMeta());
@@ -1562,6 +1821,43 @@
       persistLocal();
       await cloudPush(() => pushMeta());
       return clone(record);
+    },
+
+    /* Assignment follow-up (§28.5): advance one record's follow-up
+       state machine ("sent" | "returned" | "checked"). Strict like
+       saveAssignment - an unknown record or action throws. A no-op
+       transition (re-clicking a send button on an already-sent
+       record) returns the record WITHOUT writing or pushing. */
+    async setAssignmentFollowUp(studentId, courseId, assignmentId, action) {
+      const dataset = datasetOrThrow();
+      getStudent(studentId);
+      const current = getCourseDoc(studentId, courseId, false);
+      const existing = current && current.assignments ? current.assignments[assignmentId] : null;
+      if (!existing) throw new Error("Assignment not found.");
+      const updated = applyFollowUp(existing, action, Date.now());
+      if (updated === existing) return clone(existing);
+      const next = applyAssignment(current, updated, Date.now());
+      next.courseId = courseId;
+      dataset.courses[studentId][courseId] = next;
+      persistLocal();
+      await cloudPush(() => pushCourseDoc(studentId, next));
+      return clone(updated);
+    },
+
+    /* Assignment follow-up for a group record: same state machine,
+       storage is the root-level groupAssignments map via _meta. */
+    async setGroupAssignmentFollowUp(groupName, courseId, assignmentId, action) {
+      const dataset = datasetOrThrow();
+      const key = normName(groupName || "");
+      const bucket = ((dataset.groupAssignments || {})[key] || {})[courseId] || {};
+      const existing = bucket[assignmentId] || null;
+      if (!existing) throw new Error("Group assignment not found.");
+      const updated = applyFollowUp(existing, action, Date.now());
+      if (updated === existing) return clone(existing);
+      dataset.groupAssignments[key][courseId][assignmentId] = updated;
+      persistLocal();
+      await cloudPush(() => pushMeta());
+      return clone(updated);
     },
 
     async deleteStudent(studentId) {

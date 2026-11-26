@@ -17,13 +17,13 @@
   <link rel="stylesheet" href="styles.css?v=20261024u">
   <link rel="stylesheet" href="elite-system.css?v=20260906b">
   <link rel="stylesheet" href="elite-ux.css?v=20261112a">
-  <link rel="stylesheet" href="teacher-tracker.css?v=20261126f">
+  <link rel="stylesheet" href="teacher-tracker.css?v=20261126g">
   <script defer src="firebase-config.js"></script>
   <script defer src="runtime-loader.js?v=20260809a"></script>
   <script defer src="topic-normalizer.js?v=tracker-20261125a"></script>
-  <script defer src="lesson-tracker.js?v=20261126f"></script>
-  <script defer src="assignment-generator.js?v=20261126f"></script>
-  <script defer src="teacher-tracker-ui.js?v=20261126f"></script>
+  <script defer src="lesson-tracker.js?v=20261126g"></script>
+  <script defer src="assignment-generator.js?v=20261126g"></script>
+  <script defer src="teacher-tracker-ui.js?v=20261126g"></script>
 </head>
 <body data-page="tracker">
 
@@ -111,6 +111,8 @@
             <p class="lt-muted" id="ltStudentTemplateHint"></p>
             <label class="lt-field"><span>Message to me (forward to the group)</span><textarea id="ltForwardTemplate" rows="3" maxlength="1000"></textarea></label>
             <p class="lt-muted" id="ltForwardTemplateHint"></p>
+            <label class="lt-field"><span>Reminder message (homework not returned)</span><textarea id="ltReminderTemplate" rows="3" maxlength="1000"></textarea></label>
+            <p class="lt-muted" id="ltReminderTemplateHint"></p>
             <p class="lt-muted">Placeholders, filled automatically per assignment: {student} {group} {course} {topics} {link} {date}. Leave a box empty to use the built-in default (shown greyed).</p>
             <div class="lt-form-actions">
               <button type="button" class="lt-btn is-primary is-small" id="ltShareSave">Save sharing settings</button>
