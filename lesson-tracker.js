@@ -34,6 +34,17 @@
   const APP_NAME = "elite-tracker";
   const REAL_KEY = "eliteLessonTrackerV1";
   const DEMO_KEY = "eliteLessonTrackerDemoV1";
+  /* Demo seed versioning (ASSIGNMENT_PLAN §24): the demo dataset
+     stored under DEMO_KEY carries its seed version as a top-level
+     `seedVersion` field. The unversioned original seed is implicitly
+     v1. BUMP THIS CONSTANT whenever seedDemoDataset's content
+     changes; a stored demo dataset whose version is missing or
+     different is discarded and re-seeded on the next demo load
+     (demo data is disposable by design, so re-seeding preserves
+     nothing). Real datasets never carry the field (emptyDataset
+     is unchanged) and the migration only ever reads/writes
+     DEMO_KEY. */
+  const DEMO_SEED_VERSION = 2;
   const DEMO_USER_KEY = "eliteLessonTrackerDemoUserV1";
   const META_DOC_ID = "_meta";
   const NOTE_CAP = 500;
@@ -1075,6 +1086,7 @@
     const a = { id: "stu-demo-a", name: "Demo Student A", phone: "0100 123 4567", phones: [{ number: "0100 123 4567", label: "Student" }, { number: "0100 765 4321", label: "Mother" }], groupName: "Nasser Group", groupWhatsApp: "https://chat.whatsapp.com/DEMO-PLACEHOLDER", note: "Demo data - Year 11, exam June", nextSession: "", archived: false, createdAt: now - 7 * 86400000, editedAt: now - 86400000 };
     const b = { id: "stu-demo-b", name: "Demo Student B", phone: "0102 345 6789", phones: [{ number: "0102 345 6789", label: "Student" }], groupName: "Nasser Group", groupWhatsApp: "", note: "Demo data", nextSession: cairoToday(new Date(Date.now() + 86400000)), archived: false, createdAt: now - 3 * 86400000, editedAt: now - 3 * 86400000 };
     const dataset = emptyDataset();
+    dataset.seedVersion = DEMO_SEED_VERSION;
     dataset.students[a.id] = a;
     dataset.students[b.id] = b;
     const docA = emptyCourseDoc("modular-2");
@@ -1155,7 +1167,14 @@
 
   function readDemoDataset() {
     const raw = lsGet(DEMO_KEY);
-    if (!raw) {
+    /* A stored demo dataset from an older seed — or from before
+       seed versioning, when seedVersion is absent — is discarded
+       and re-seeded: the seed's content changed under it and the
+       stored copy can never refresh itself. Demo data is
+       disposable, so nothing is preserved. This runs inside
+       demoStore.init()/signIn() before assignDataset/emit, so the
+       UI never renders the stale copy. */
+    if (!raw || raw.seedVersion !== DEMO_SEED_VERSION) {
       const seeded = seedDemoDataset();
       lsSet(DEMO_KEY, seeded);
       return seeded;
@@ -1164,7 +1183,17 @@
   }
 
   function writeDemoDataset() {
-    if (state.dataset) lsSet(DEMO_KEY, state.dataset);
+    if (!state.dataset) return;
+    /* Stamp the current seed version on every demo write: an
+       imported backup passes through sanitizeDataset /
+       mergeDatasets, which rebuild from emptyDataset() and drop
+       the field — without the stamp the import would be re-seeded
+       away on the next load. Stamping here is safe because every
+       dataset reaching this function has already passed
+       readDemoDataset, which discards stale seeds, so it can never
+       preserve one. */
+    state.dataset.seedVersion = DEMO_SEED_VERSION;
+    lsSet(DEMO_KEY, state.dataset);
   }
 
   function demoUser() {
