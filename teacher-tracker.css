@@ -618,6 +618,24 @@
 .lt-assign-group h4 { margin: 0; font-size: 1rem; }
 .asg-member-list { margin: 6px 0 10px; padding-left: 20px; font-size: 0.92rem; line-height: 1.6; }
 
+/* Finish & send homework: section head actions + session modal. */
+.lt-assign-head-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.asg-session-block {
+  margin-bottom: 12px; padding: 10px 12px;
+  border: 1px solid var(--ux-line, #dce5ef); border-radius: var(--ux-r-md, 12px);
+  background: var(--ux-soft, #f4f7fb);
+}
+.asg-session-block .lt-warn { margin: 8px 0 0; }
+.asg-scope { display: flex; gap: 8px; flex-wrap: wrap; }
+.asg-scope-opt {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 10px; border: 1px solid var(--ux-line, #dce5ef); border-radius: 999px;
+  background: #fff; font-size: 0.9rem; cursor: pointer;
+}
+.asg-scope-opt:has(input:checked) { border-color: var(--ux-royal, #1b4fd8); color: var(--ux-royal-ink, #143da8); font-weight: 600; }
+.asg-scope-opt:has(input:disabled) { opacity: 0.55; cursor: not-allowed; }
+.asg-group-today-info p { margin: 6px 0 0; }
+
 /* Sharing settings (sidebar) + labelled phone rows in student forms. */
 .lt-settings { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--ux-line, #dce5ef); }
 .lt-settings h3 { margin: 0 0 10px; font-size: 0.95rem; }

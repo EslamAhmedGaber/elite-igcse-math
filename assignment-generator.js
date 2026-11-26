@@ -24,6 +24,12 @@
    pages): bank "all" only; Linear = canonical topic in the Linear
    catalog; Modular U = the question's modular_unit; IAL = the
    question's primaryTopicName in that course's own data file.
+
+   "Finish & send homework" (ASSIGNMENT_PLAN.md §14-§19) is a mode
+   of the same modal: pre-set to the topics ticked TODAY (the tick's
+   lesson date), optionally routed to a group assignment over
+   today's common topics, the record stamped origin: "session",
+   and the share panel opened straight after saving.
    ========================================================================== */
 (function (root) {
   "use strict";
@@ -365,8 +371,15 @@
     };
   }
 
-  function makeRecord({ topics, picked, count, targetMarks, includeEP, layout, audience, now, date }) {
+  function makeRecord({ topics, picked, count, targetMarks, includeEP, layout, audience, origin, sessionDate, now, date }) {
     const totalMarks = (picked || []).reduce((sum, q) => sum + Number(q.marks || 0), 0);
+    /* Origin (Finish & send homework): emitted only for a session
+       generation with a date-shaped session date; plain generations
+       stay byte-identical to before (fields absent, the sanitizer
+       resolves absence exactly like a pre-feature record). */
+    const session = origin === "session" && typeof sessionDate === "string" && /^\d{4}-\d{2}-\d{2}$/.test(sessionDate)
+      ? { origin: "session", sessionDate }
+      : {};
     return {
       id: `asg-${Number(now || Date.now()).toString(36)}-${Math.random().toString(36).slice(2, 6)}`,
       createdAt: Number(now || Date.now()),
@@ -381,7 +394,8 @@
       layout: layoutFor(layout).key,
       ...(audience && audience.type === "group" && audience.groupName
         ? { audience: { type: "group", groupName: String(audience.groupName).trim().slice(0, 80) } }
-        : {})
+        : {}),
+      ...session
     };
   }
 
@@ -514,6 +528,28 @@
     return { topics, included: included.map((m) => m.name), excluded: excluded.map((m) => m.name) };
   }
 
+  /* The same intersection over TODAY's ticked topics only (Finish &
+     send homework, ASSIGNMENT_PLAN §14-§16): members carry a
+     `todayTopics` list next to their all-completed `topics`; the
+     group math is re-run over that list so the inclusion/exclusion
+     reporting behaves identically. */
+  function groupTodayIntersection(members) {
+    const rekeyed = (members || []).map((m) => ({ ...m, topics: (m && m.todayTopics) || [] }));
+    return groupTopicIntersection(rekeyed);
+  }
+
+  /* Finish & send scope precedence (plan audit S5): the group
+     switch, when on, always wins - group homework is built from
+     today's common topics whatever the scope radio says. Otherwise
+     the scope decides. Pure and dumb on purpose (audit T1): the
+     modal owns the nothing-ticked-today forcing, this helper only
+     resolves. Returns the effective topic list. */
+  function sessionTopics({ scope, completedTopics, todayTopics, groupToday, groupTopics } = {}) {
+    if (groupToday) return [...(groupTopics || [])];
+    if (scope === "today") return [...(todayTopics || [])];
+    return [...(completedTopics || [])];
+  }
+
   const Core = {
     LEVELS, BANDS, MINUTES_PER_MARK, MAX_COUNT,
     LAYOUTS, LAYOUT_KEYS, DEFAULT_LAYOUT, layoutFor, layoutOptions,
@@ -523,7 +559,8 @@
     selectAssignment, makeRecord,
     SHARE_MAX_IDS, cleanShareName, buildShareQuery, buildShareUrl,
     parseShareQuery, studentPaperModel, topicsSummary,
-    groupTopicIntersection, groupTopicUnion
+    groupTopicIntersection, groupTopicUnion, groupTodayIntersection,
+    sessionTopics
   };
   root.EliteAssignmentCore = Core;
 
@@ -695,6 +732,7 @@
           <div class="lt-assign-meta">
             <b>${escapeHtml(formatDate(record.date))}</b>
             <span>${record.questionIds.length} questions &middot; ${record.totalMarks} marks &middot; about ${record.estMinutes} min &middot; ${escapeHtml(Core.LAYOUTS[Core.recordLayout(record)].label)}</span>
+            ${record.origin === "session" ? `<span class="lt-chip is-on">Session homework</span>` : ""}
             <span class="lt-muted">${escapeHtml((record.topics || []).join(", "))}</span>
           </div>
           <div class="lt-assign-actions">
@@ -705,15 +743,21 @@
             ${share ? `<button type="button" class="lt-btn is-small is-gold" data-asg-share${group ? "-group" : ""}="${escapeHtml(key)}|${escapeHtml(record.id)}">Share</button>` : ""}
           </div>
         </li>`;
+    const todayTopics = ctx.todayTopics || [];
     container.innerHTML = `
       <div class="lt-assign-head">
         <h3>Assignments</h3>
-        <button type="button" class="lt-btn is-gold" data-asg-generate="${escapeHtml(key)}" ${completed ? "" : "disabled"}>
-          Generate assignment
-        </button>
+        <div class="lt-assign-head-actions">
+          <button type="button" class="lt-btn is-primary" data-asg-finish="${escapeHtml(key)}" ${completed ? "" : "disabled"}>
+            Finish &amp; send homework
+          </button>
+          <button type="button" class="lt-btn is-gold" data-asg-generate="${escapeHtml(key)}" ${completed ? "" : "disabled"}>
+            Generate assignment
+          </button>
+        </div>
       </div>
       <p class="lt-muted">${completed
-        ? `Random questions from the ${completed} completed topic${completed === 1 ? "" : "s"} above, in the site's exam style - student copy and worked-solutions teacher copy.`
+        ? `Random questions from the ${completed} completed topic${completed === 1 ? "" : "s"} above, in the site's exam style - student copy and worked-solutions teacher copy.${todayTopics.length ? ` Ticked today: ${escapeHtml(todayTopics.join(", "))} - <b>Finish &amp; send homework</b> turns ${todayTopics.length === 1 ? "it" : "them"} into homework and opens the share panel.` : ""}`
         : "Tick at least one lesson above, then generate a practice assignment from the completed topics."}</p>
       ${records.length ? `<ul class="lt-assign-list">${records.map((record) => itemHtml(record, false)).join("")}</ul>` : `<p class="lt-muted">No assignments generated yet for this course.</p>`}
       ${share && share.groupName ? `
@@ -757,7 +801,45 @@
     modalState = null;
   }
 
-  async function openGenerator(ctx, button) {
+  /* The effective topic set for the open modal (plan audit S5/T7):
+     session mode resolves through Core.sessionTopics so the scope
+     radios, the group switch, the availability line and the picker
+     can never disagree; plain mode is always the completed topics. */
+  function effectiveTopics() {
+    if (!modalState) return [];
+    if (!modalState.session) return [...modalState.completedTopics];
+    return Core.sessionTopics({
+      scope: modalState.scope,
+      completedTopics: modalState.completedTopics,
+      todayTopics: modalState.todayTopics,
+      groupToday: modalState.groupToday,
+      groupTopics: modalState.group ? modalState.group.topics : []
+    });
+  }
+
+  /* Refresh the modal's dynamic lines after a scope/group flip:
+     topics line, availability (following the EP toggle), and the
+     question count - reset to the new scope's default ONLY when the
+     field still holds the previous scope's default (audit S6). */
+  function refreshSessionLines() {
+    if (!modalState) return;
+    modalState.topics = effectiveTopics();
+    const topics = modalState.topics;
+    const topicsEl = document.getElementById("asgTopicsLine");
+    if (topicsEl) topicsEl.textContent = `${COURSE_META[modalState.ctx.courseId] ? COURSE_META[modalState.ctx.courseId].label : modalState.ctx.courseId} · from the topics: ${topics.join(", ")}`;
+    const ep = document.getElementById("asgEP");
+    const availEl = document.getElementById("asgAvail");
+    if (availEl) {
+      const avail = availability(modalState.index, topics, ep ? ep.checked : true);
+      availEl.textContent = `${avail.total} bank questions across these topics.`;
+    }
+    const countEl = document.getElementById("asgCount");
+    const nextDefault = Core.defaultCount(topics.length);
+    if (countEl && Number(countEl.value || 0) === modalState.lastDefault) countEl.value = nextDefault;
+    modalState.lastDefault = nextDefault;
+  }
+
+  async function openGenerator(ctx, button, opts = {}) {
     ensureChrome();
     const original = button ? button.textContent : "";
     if (button) { button.disabled = true; button.textContent = "Loading the question bank..."; }
@@ -770,15 +852,59 @@
       return;
     }
     if (button) { button.disabled = false; button.textContent = original; }
-    const topics = [...(ctx.completedTopics || [])];
-    modalState = { ctx, index, topics };
+    const session = Boolean(opts.session);
+    const completedTopics = [...(ctx.completedTopics || [])];
+    const todayTopics = [...(ctx.todayTopics || [])];
     const bands = COURSE_META[ctx.courseId] && COURSE_META[ctx.courseId].family === "ial" ? Core.BANDS.ial : Core.BANDS.igcse;
-    modalState.bands = bands;
+    /* Group-today snapshot (session mode only, audit S10): the
+       switch exists only when at least one OTHER member of the
+       student's group is enrolled in this course. The intersection
+       is computed once, at open, from the ctx snapshot - the same
+       freshness contract as the group modal. */
+    let group = null;
+    if (session && ctx.share && ctx.share.groupName) {
+      const ownKey = ACore ? ACore.normName(ctx.share.groupName) : "";
+      const members = (ctx.share.members || []).filter((m) => (ACore ? ACore.normName(m.groupName || "") : "") === ownKey);
+      if (members.some((m) => m.enrolled && m.id !== ctx.studentId)) {
+        const calc = Core.groupTodayIntersection(members);
+        group = { name: ctx.share.groupName, topics: calc.topics, excluded: calc.excluded };
+      }
+    }
+    modalState = {
+      ctx, index, bands, session,
+      completedTopics, todayTopics,
+      scope: session && todayTopics.length ? "today" : "all",
+      groupToday: false,
+      group,
+      topics: [],
+      lastDefault: 0
+    };
+    modalState.topics = effectiveTopics();
+    modalState.lastDefault = Core.defaultCount(modalState.topics.length);
+    const topics = modalState.topics;
     const avail = availability(index, topics, true);
     const modal = document.getElementById("asgModal");
-    document.getElementById("asgModalTitle").textContent = `Generate assignment - ${ctx.name}`;
+    document.getElementById("asgModalTitle").textContent = session
+      ? `Finish & send homework - ${ctx.name}`
+      : `Generate assignment - ${ctx.name}`;
     document.getElementById("asgModalBody").innerHTML = `
-      <p class="lt-muted">${escapeHtml(COURSE_META[ctx.courseId] ? COURSE_META[ctx.courseId].label : ctx.courseId)} &middot; from the completed topics: ${escapeHtml(topics.join(", "))}</p>
+      ${session ? `
+      <div class="asg-session-block">
+        <div class="asg-scope" role="radiogroup" aria-label="Topic scope">
+          <label class="asg-scope-opt"><input type="radio" name="asgScope" value="today" ${modalState.scope === "today" ? "checked" : ""} ${todayTopics.length ? "" : "disabled"}> Today's topics (${todayTopics.length})</label>
+          <label class="asg-scope-opt"><input type="radio" name="asgScope" value="all" ${modalState.scope === "all" ? "checked" : ""}> All completed topics (${completedTopics.length})</label>
+        </div>
+        ${todayTopics.length ? "" : `<p class="lt-warn">No lessons ticked today yet for ${escapeHtml(ctx.name)} - the homework will use all completed topics, or close this and tick today's lessons first.</p>`}
+        ${group ? `
+        <label class="lt-checkline"><input type="checkbox" id="asgGroupToday" ${group.topics.length ? "" : "disabled"}> Send as group assignment (today's common topics)</label>
+        <div class="asg-group-today-info">
+          ${group.topics.length
+            ? `<p class="lt-muted">Common topics ticked today across ${escapeHtml(group.name)}: <b>${escapeHtml(group.topics.join(", "))}</b>. Group homework always uses today's common topics.</p>`
+            : `<p class="lt-warn">${escapeHtml(group.name)} shares no topic ticked today, so a group homework cannot be built from today's lessons yet.</p>`}
+          ${group.excluded.length ? `<p class="lt-muted">Not counted today (no lessons ticked today): ${escapeHtml(group.excluded.join(", "))}</p>` : ""}
+        </div>` : ""}
+      </div>` : ""}
+      <p class="lt-muted" id="asgTopicsLine">${escapeHtml(COURSE_META[ctx.courseId] ? COURSE_META[ctx.courseId].label : ctx.courseId)} &middot; from the ${session ? "topics" : "completed topics"}: ${escapeHtml(topics.join(", "))}</p>
       <p class="lt-muted" id="asgAvail">${avail.total} bank questions across these topics.</p>
       <label class="lt-field"><span>Number of questions</span>
         <input type="number" id="asgCount" min="1" max="${Core.MAX_COUNT}" step="1" value="${Core.defaultCount(topics.length)}">
@@ -795,21 +921,50 @@
       <p class="lt-muted">Up to the chosen number of questions; estimated time is worked out at ${Core.MINUTES_PER_MARK} minutes per mark. Questions are picked at random - a question may appear again in a later assignment, never twice in the same one.</p>
       <div class="lt-warn" id="asgError" hidden></div>
       <div class="lt-form-actions">
-        <button type="button" class="lt-btn is-gold" id="asgDoGenerate">Generate</button>
+        <button type="button" class="lt-btn is-gold" id="asgDoGenerate">${session ? "Generate &amp; share" : "Generate"}</button>
         <button type="button" class="lt-btn" id="asgCancel">Cancel</button>
       </div>`;
     modal.hidden = false;
+    if (session) {
+      document.querySelectorAll('input[name="asgScope"]').forEach((radio) => {
+        radio.addEventListener("change", (event) => {
+          modalState.scope = event.target.value === "today" ? "today" : "all";
+          refreshSessionLines();
+        });
+      });
+      const groupBox = document.getElementById("asgGroupToday");
+      if (groupBox) {
+        groupBox.addEventListener("change", (event) => {
+          modalState.groupToday = event.target.checked;
+          document.querySelectorAll('input[name="asgScope"]').forEach((radio) => { radio.disabled = modalState.groupToday || (radio.value === "today" && !todayTopics.length); });
+          refreshSessionLines();
+        });
+      }
+    }
     document.getElementById("asgEP").addEventListener("change", (event) => {
-      const next = availability(index, topics, event.target.checked);
+      const next = availability(index, modalState.topics, event.target.checked);
       document.getElementById("asgAvail").textContent = `${next.total} bank questions across these topics.`;
     });
     document.getElementById("asgCancel").addEventListener("click", closeModal);
     document.getElementById("asgDoGenerate").addEventListener("click", () => doGenerate());
   }
 
+  /* Dashboard entry point (plan audit S2): the Overview card button
+     navigates to the checklist first - which registers this
+     enrolment's context - then calls this to open the session modal
+     straight away. Unknown context = the section never rendered;
+     stay silent (the teacher is already on the checklist). */
+  function openSession(studentId, courseId) {
+    const ctx = contexts.get(`${studentId}|${courseId}`);
+    if (ctx) return openGenerator(ctx, null, { session: true });
+    return Promise.resolve();
+  }
+
   async function doGenerate() {
     if (!modalState) return;
     const { ctx, index, topics, bands } = modalState;
+    const session = Boolean(modalState.session);
+    const groupRoute = Boolean(session && modalState.groupToday && modalState.group);
     const count = Number(document.getElementById("asgCount").value || 0);
     const targetMarks = Number(document.getElementById("asgTarget").value || 0);
     const includeEP = document.getElementById("asgEP").checked;
@@ -825,30 +980,47 @@
       return;
     }
     const now = Date.now();
+    const today = ACore ? ACore.cairoToday() : new Date(now).toISOString().slice(0, 10);
     const record = Core.makeRecord({
       topics, picked: result.picked, count, targetMarks, includeEP, layout,
-      now, date: ACore ? ACore.cairoToday() : new Date(now).toISOString().slice(0, 10)
+      ...(groupRoute ? { audience: { type: "group", groupName: modalState.group.name } } : {}),
+      ...(session ? { origin: "session", sessionDate: today } : {}),
+      now, date: today
     });
     const button = document.getElementById("asgDoGenerate");
+    const generateLabel = button.textContent;
     button.disabled = true;
     button.textContent = "Saving...";
     try {
-      await ctx.saveRecord(record);
+      if (groupRoute) await ctx.share.saveGroupRecord(modalState.group.name, record);
+      else await ctx.saveRecord(record);
     } catch (error) {
       button.disabled = false;
-      button.textContent = "Generate";
+      button.textContent = generateLabel;
       errorBox.hidden = false;
       errorBox.textContent = "The assignment could not be saved. Your tracker data is unchanged - try again.";
       return;
     }
     closeModal();
-    if (ctx.toast) ctx.toast(`Assignment saved: ${record.questionIds.length} questions, ${record.totalMarks} marks`);
+    if (ctx.toast) {
+      ctx.toast(groupRoute
+        ? `Group session homework saved for ${record.audience.groupName}: ${record.questionIds.length} questions, ${record.totalMarks} marks`
+        : session
+          ? `Session homework saved: ${record.questionIds.length} questions, ${record.totalMarks} marks`
+          : `Assignment saved: ${record.questionIds.length} questions, ${record.totalMarks} marks`);
+    }
     if (result.warnings.length && ctx.toast) {
       ctx.toast(result.warnings[0].message, "error");
     }
+    const freshCtx = contexts.get(`${ctx.studentId}|${ctx.courseId}`) || ctx;
+    if (session) {
+      /* Sending is the point of the session flow: land on the share
+         panel, like a group generation does - no extra navigation. */
+      openSharePanel(freshCtx, record);
+      return;
+    }
     // The saved record replaces the in-memory one (the store returns
     // the sanitised copy); re-open from the refreshed section context.
-    const freshCtx = contexts.get(`${ctx.studentId}|${ctx.courseId}`) || ctx;
     const freshRecord = freshCtx.doc && freshCtx.doc.assignments ? freshCtx.doc.assignments[record.id] : null;
     openPreview(freshCtx, freshRecord || record, "student");
   }
@@ -1260,6 +1432,12 @@
       if (ctx) await openGenerator(ctx, generate);
       return;
     }
+    const finish = event.target.closest("[data-asg-finish]");
+    if (finish) {
+      const ctx = contexts.get(finish.dataset.asgFinish);
+      if (ctx) await openGenerator(ctx, finish, { session: true });
+      return;
+    }
     const open = event.target.closest("[data-asg-open]");
     if (open) {
       const [studentId, courseId, recordId, variant] = String(open.dataset.asgOpen || "").split("|");
@@ -1314,5 +1492,5 @@
     if (event.target.closest("[data-asg-close-preview]")) { closePreview(); }
   });
 
-  root.EliteAssignments = { renderSection, openPreview, closePreview, loadBank, COURSE_META };
+  root.EliteAssignments = { renderSection, openPreview, closePreview, openSession, loadBank, COURSE_META };
 })(window);

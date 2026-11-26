@@ -294,6 +294,16 @@
       && raw.audience.type === "group" && typeof raw.audience.groupName === "string" && raw.audience.groupName.trim())
       ? { type: "group", groupName: raw.audience.groupName.trim().slice(0, 80) }
       : null;
+    /* Origin (Finish & send homework): "session" marks a record
+       generated from today's ticked topics at the end of a session;
+       sessionDate is that session's Cairo date. Only the exact
+       "session" value is kept, and sessionDate only alongside it -
+       anything else leaves both fields ABSENT, exactly like a
+       record that predates the feature. */
+    const origin = raw.origin === "session" ? "session" : null;
+    const sessionDate = origin && typeof raw.sessionDate === "string" && /^\d{4}-\d{2}-\d{2}$/.test(raw.sessionDate)
+      ? raw.sessionDate
+      : null;
     return {
       id,
       createdAt: nonNeg(raw.createdAt),
@@ -306,7 +316,8 @@
       estMinutes: nonNeg(raw.estMinutes),
       includeEP: Boolean(raw.includeEP),
       ...(layout ? { layout } : {}),
-      ...(audience ? { audience } : {})
+      ...(audience ? { audience } : {}),
+      ...(origin ? { origin, sessionDate: sessionDate || "" } : {})
     };
   }
 
@@ -610,6 +621,17 @@
     return latest;
   }
 
+  /* Topics whose LESSON date is `dateStr` (Finish & send homework,
+     ASSIGNMENT_PLAN §14-§16). A tick's `date` is the session's Cairo
+     date - set explicitly by every tick path and editable per row -
+     so this is lesson-date semantics; the `at`/`updatedAt` edit
+     timestamps are deliberately NOT used (a lesson backfilled today
+     was still taught on its own date). */
+  function topicsTickedOn(ticks, dateStr) {
+    if (!dateStr) return [];
+    return Object.keys(ticks || {}).filter((topic) => ticks[topic] && ticks[topic].date === dateStr);
+  }
+
   function flattenLog(dataset, { includeArchived = false } = {}) {
     const rows = [];
     Object.values(dataset.students || {}).forEach((student) => {
@@ -712,6 +734,7 @@
           lastDate,
           daysSince: since,
           nextTopic: topics.length ? nextTopic(topics, ticks) : null,
+          todayTopics: topicsTickedOn(ticks, todayStr),
           nextSession: student.nextSession || "",
           session: nextSessionInfo(student, todayStr),
           // Needs-attention badge: amber 7-13 days, red 14+ (plan §1.1.1)
@@ -939,7 +962,7 @@
     DEFAULT_FORWARD_TEMPLATE, TEMPLATE_KEYS, templateOrDefault,
     renderTemplate, templateHasLink, OWNER_PHONE_DEFAULT, effectiveOwnerPhone,
     sanitizeGroupAssignments, mergeGroupAssignments, applyGroupAssignment,
-    nextTopic, progressFor, latestTickDate, flattenLog, weekRange,
+    nextTopic, progressFor, latestTickDate, topicsTickedOn, flattenLog, weekRange,
     buildDigest, unmatchedTicks, NOTE_CAP,
     cleanSessionDate, daysBetween, daysSince, dashboardCards, dashboardStats,
     activityFeed, homeworkPending, nextSessionInfo, buildParentReport,

@@ -331,6 +331,7 @@
       label: COURSES[view.course].label,
       doc,
       completedTopics: Object.keys(ticks || {}),
+      todayTopics: Core.topicsTickedOn(ticks || {}, Core.cairoToday()),
       saveRecord: async (record) => {
         const saved = await guard(() => T.api.saveAssignment(student.id, view.course, record));
         if (saved === undefined) throw new Error("The assignment could not be saved.");
@@ -356,7 +357,8 @@
           name: s.name,
           groupName: s.groupName || "",
           enrolled: Boolean(sDoc),
-          topics: Object.keys((sDoc && sDoc.ticks) || {})
+          topics: Object.keys((sDoc && sDoc.ticks) || {}),
+          todayTopics: Core.topicsTickedOn((sDoc && sDoc.ticks) || {}, Core.cairoToday())
         };
       });
     const groupKey = Core.normName(student.groupName || "");
@@ -611,6 +613,7 @@
         ${phone && card.nextTopic ? `<a class="lt-btn is-small" target="_blank" rel="noreferrer" href="https://wa.me/${phone}?text=${encodeURIComponent(waText)}">WhatsApp</a>` : ""}
         <button type="button" class="lt-btn is-small" data-report="${escapeHtml(key)}">Parent report</button>
         <button type="button" class="lt-btn is-small" data-asg-card="${escapeHtml(key)}" ${card.progress && card.progress.done ? "" : "disabled title=\"Tick at least one lesson first\""}>Assignment</button>
+        <button type="button" class="lt-btn is-small is-primary" data-asg-finish-card="${escapeHtml(key)}" ${card.todayTopics && card.todayTopics.length ? "" : "disabled title=\"No lessons ticked today\""}>Finish &amp; send</button>
       </div>
       <div class="lt-card-session">
         <label class="lt-field"><span>Next session</span><input type="date" data-session-date="${escapeHtml(card.studentId)}" value="${escapeHtml(card.nextSession)}"></label>
@@ -1144,9 +1147,9 @@
         if (ok !== undefined) await refresh();
         return;
       }
-      const asgBtn = event.target.closest("[data-asg-card]");
-      if (asgBtn) {
-        const [studentId, courseId] = splitKey(asgBtn.dataset.asgCard);
+      /* Shared navigation for the card buttons that land on a
+         student's checklist (registers the assignment context). */
+      const gotoChecklist = async (studentId, courseId) => {
         view.studentId = studentId;
         view.editing = false;
         if (courseId && COURSES[courseId] && courseId !== view.course) {
@@ -1158,6 +1161,25 @@
         view.tab = "checklist";
         await renderStudentList();
         renderDetail();
+      };
+      const asgBtn = event.target.closest("[data-asg-card]");
+      if (asgBtn) {
+        const [studentId, courseId] = splitKey(asgBtn.dataset.asgCard);
+        await gotoChecklist(studentId, courseId);
+        return;
+      }
+      /* Finish & send homework (ASSIGNMENT_PLAN §14-§16): land on
+         the checklist, whose render registers the enrolment's
+         assignment context, then open the session modal pre-set to
+         today's topics. If the generator module failed to load,
+         the navigation alone is the graceful fallback. */
+      const finishBtn = event.target.closest("[data-asg-finish-card]");
+      if (finishBtn) {
+        const [studentId, courseId] = splitKey(finishBtn.dataset.asgFinishCard);
+        await gotoChecklist(studentId, courseId);
+        if (window.EliteAssignments && window.EliteAssignments.openSession) {
+          await window.EliteAssignments.openSession(studentId, courseId);
+        }
         return;
       }
       const openBtn = event.target.closest("[data-open-student]");
