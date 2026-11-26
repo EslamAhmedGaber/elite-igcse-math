@@ -90,6 +90,15 @@
     return layoutFor(record && record.layout).key;
   }
 
+  /* The layout the VIEWER shows (live-test fix §20.6): a known
+     override key wins - it is a view-only choice and the record is
+     never written - anything else falls back to the record's own
+     layout. */
+  function effectiveLayoutKey(record, override) {
+    if (override && LAYOUTS[override]) return override;
+    return recordLayout(record);
+  }
+
   function questionLevel(marks, bands) {
     const value = Number(marks || 0);
     if (value <= bands.easy) return "easy";
@@ -553,7 +562,7 @@
   const Core = {
     LEVELS, BANDS, MINUTES_PER_MARK, MAX_COUNT,
     LAYOUTS, LAYOUT_KEYS, DEFAULT_LAYOUT, layoutFor, layoutOptions,
-    spaceMm, recordLayout,
+    spaceMm, recordLayout, effectiveLayoutKey,
     questionLevel, mulberry32, shuffle, apportion, buildCourseIndex,
     indexFromPasses, ialIndex, defaultCount, estimateMinutes,
     selectAssignment, makeRecord,
@@ -585,7 +594,7 @@
   let answersCache = null;       // window.ELITE_ANSWER_INDEX (fallback)
   const contexts = new Map();    // "studentId|courseId" -> section ctx
   let modalState = null;         // { ctx, index, availability }
-  let previewState = null;       // { ctx, record, variant }
+  let previewState = null;       // { ctx, record, variant, index, shareCtx, layoutKey }
 
   function escapeHtml(value) {
     return String(value ?? "").replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
@@ -737,7 +746,8 @@
           </div>
           <div class="lt-assign-actions">
             ${group
-              ? `<button type="button" class="lt-btn is-small" data-asg-open-group="${escapeHtml(key)}|${escapeHtml(record.id)}">Student copy</button>`
+              ? `<button type="button" class="lt-btn is-small" data-asg-open-group="${escapeHtml(key)}|${escapeHtml(record.id)}|student">Student copy</button>
+                 <button type="button" class="lt-btn is-small" data-asg-open-group="${escapeHtml(key)}|${escapeHtml(record.id)}|teacher">Teacher copy</button>`
               : `<button type="button" class="lt-btn is-small" data-asg-open="${escapeHtml(key)}|${escapeHtml(record.id)}|student">Student copy</button>
                  <button type="button" class="lt-btn is-small" data-asg-open="${escapeHtml(key)}|${escapeHtml(record.id)}|teacher">Teacher copy</button>`}
             ${share ? `<button type="button" class="lt-btn is-small is-gold" data-asg-share${group ? "-group" : ""}="${escapeHtml(key)}|${escapeHtml(record.id)}">Share</button>` : ""}
@@ -976,6 +986,47 @@
     });
     if (!result.picked.length) {
       errorBox.hidden = false;
+      /* Live-test fix (§20.3): a narrowed session scope (today's
+         topics, or the group's common topics) that yields nothing
+         pickable is not a dead end - name the topics with no bank
+         questions and offer the one-click fallback to ALL completed
+         topics, which flips the scope and regenerates. When the
+         scope already IS all completed topics there is nothing
+         broader, and the warnings (which name the empty topics)
+         stand as the message. */
+      const narrowerThanAll = session && (groupRoute || modalState.scope !== "all");
+      if (narrowerThanAll && modalState.completedTopics.length) {
+        const emptyNames = result.warnings
+          .filter((w) => w.type === "empty-topic" || w.type === "ep-only-topic")
+          .map((w) => w.topic);
+        errorBox.innerHTML = `
+          <strong>Nothing could be picked from ${groupRoute ? "today's common topics" : "today's topics"}.</strong>
+          ${emptyNames.length
+            ? `No bank questions in this course for: ${escapeHtml(emptyNames.join(", "))}.`
+            : result.warnings.map((w) => escapeHtml(w.message)).join(" ")}
+          <div class="lt-form-actions">
+            <button type="button" class="lt-btn is-small is-gold" id="asgUseAllTopics">Use all completed topics instead</button>
+          </div>
+          <p class="lt-muted">This builds an individual assignment for ${escapeHtml(ctx.name)} from every completed topic - it is not sent as a group assignment.</p>`;
+        const fallbackBtn = document.getElementById("asgUseAllTopics");
+        if (fallbackBtn) {
+          fallbackBtn.addEventListener("click", () => {
+            modalState.scope = "all";
+            modalState.groupToday = false;
+            const groupBox = document.getElementById("asgGroupToday");
+            if (groupBox) groupBox.checked = false;
+            document.querySelectorAll('input[name="asgScope"]').forEach((radio) => {
+              radio.checked = radio.value === "all";
+              radio.disabled = radio.value === "today" && !modalState.todayTopics.length;
+            });
+            errorBox.hidden = true;
+            errorBox.innerHTML = "";
+            refreshSessionLines();
+            doGenerate();
+          });
+        }
+        return;
+      }
       errorBox.innerHTML = `<strong>Nothing could be picked.</strong> ${result.warnings.map((w) => escapeHtml(w.message)).join(" ")}`;
       return;
     }
@@ -1303,14 +1354,17 @@
   }
 
   /* The paper renders in the record's saved layout (v1 records have
-     no layout field -> the current default, "single"). Student copy:
-     the layout's working space follows each question (nothing at all
-     in compact). Teacher copy: worked solutions replace the working
-     space, but the layout still drives the spacing - the same gap
-     between questions, and in "single" each question + solution
-     starts on its own printed page (teacher-tracker.css). */
-  async function renderPaper(ctx, record, variant, index) {
-    const layout = Core.layoutFor(record.layout);
+     no layout field -> the current default, "single"), unless the
+     viewer passes a view-only layout override (live-test fix
+     §20.6 - Core.effectiveLayoutKey resolves it; the record itself
+     is never written). Student copy: the layout's working space
+     follows each question (nothing at all in compact). Teacher
+     copy: worked solutions replace the working space, but the
+     layout still drives the spacing - the same gap between
+     questions, and in "single" each question + solution starts on
+     its own printed page (teacher-tracker.css). */
+  async function renderPaper(ctx, record, variant, index, layoutKey) {
+    const layout = Core.layoutFor(Core.effectiveLayoutKey(record, layoutKey));
     const questions = record.questionIds.map((id) => questionById(index, id)).filter(Boolean);
     const missing = record.questionIds.length - questions.length;
     const parts = [];
@@ -1356,7 +1410,49 @@
       </div>`;
   }
 
-  async function openPreview(ctx, record, variant, shareCtx) {
+  /* Bounded MathJax typeset, following the site's own pattern
+     (app.js / daily.js / exam.js: ensureMathJax, then
+     EliteSolutionView.typeset, else MathJax.typesetPromise).
+     Live-test fix (§20.4/§20.5): the viewer previously typeset
+     ONLY at print time and only for the teacher copy, so on
+     screen the worked solutions showed raw LaTeX; and the print
+     path's await had no timeout, so a stalled CDN load could
+     hang the click forever. The 6s race bounds every caller -
+     on failure the maths stays as readable LaTeX source, the
+     same graceful degradation as the rest of the site. */
+  function withTimeout(promise, ms) {
+    return Promise.race([
+      promise,
+      new Promise((resolve) => setTimeout(resolve, ms))
+    ]);
+  }
+
+  async function typesetPaper(el) {
+    if (!el) return;
+    try {
+      await withTimeout((async () => {
+        if (root.EliteRuntime && root.EliteRuntime.ensureMathJax) await root.EliteRuntime.ensureMathJax();
+        if (root.EliteSolutionView && root.EliteSolutionView.typeset) await root.EliteSolutionView.typeset([el]);
+        else if (root.MathJax && root.MathJax.typesetPromise) await root.MathJax.typesetPromise([el]);
+      })(), 6000);
+    } catch (error) { /* print/show anyway - the LaTeX source stays readable */ }
+  }
+
+  /* Wait (bounded) for question images that have not loaded yet,
+     so a printed PDF never misses a diagram. */
+  async function settleImages(el) {
+    const images = [...el.querySelectorAll("img")].filter((img) => !img.complete);
+    if (!images.length) return;
+    await Promise.race([
+      Promise.all(images.map((img) => new Promise((resolve) => {
+        img.addEventListener("load", resolve, { once: true });
+        img.addEventListener("error", resolve, { once: true });
+      }))),
+      new Promise((resolve) => setTimeout(resolve, 4000))
+    ]);
+  }
+
+  async function openPreview(ctx, record, variant, shareCtx, layoutKey) {
     ensureChrome();
     let index;
     try {
@@ -1366,7 +1462,14 @@
       return;
     }
     if (variant === "teacher") await ensureSolutionView();
-    previewState = { ctx, record, variant, index, shareCtx: shareCtx || ctx };
+    previewState = {
+      ctx, record, variant, index,
+      shareCtx: shareCtx || ctx,
+      /* View-only layout override (§20.6): starts at the record's
+         own layout; the toolbar switcher changes it without ever
+         writing the record. Variant switches pass it through. */
+      layoutKey: Core.effectiveLayoutKey(record, layoutKey)
+    };
     const rootEl = document.getElementById("asgPrintRoot");
     rootEl.innerHTML = `
       <div class="asg-toolbar">
@@ -1375,14 +1478,36 @@
           <button type="button" class="lt-btn is-small ${variant === "teacher" ? "is-primary" : ""}" data-asg-variant="teacher">Teacher copy</button>
         </div>
         <div class="asg-toolbar-group">
+          <label class="asg-toolbar-layout"><span>Layout</span>
+            <select data-asg-layout-select aria-label="View layout (does not change the saved assignment)">
+              ${Core.layoutOptions().map((option) => `<option value="${option.key}"${option.key === previewState.layoutKey ? " selected" : ""}>${escapeHtml(option.label)}</option>`).join("")}
+            </select>
+          </label>
           ${previewState.shareCtx && previewState.shareCtx.share ? `<button type="button" class="lt-btn is-small" data-asg-share-preview>Share</button>` : ""}
           <button type="button" class="lt-btn is-small is-gold" data-asg-print>Print / save PDF</button>
           <button type="button" class="lt-btn is-small" data-asg-close-preview>Close</button>
         </div>
       </div>
-      <div class="asg-paper-wrap">${await renderPaper(ctx, record, variant, index)}</div>`;
+      <div class="asg-paper-wrap">${await renderPaper(ctx, record, variant, index, previewState.layoutKey)}</div>`;
     rootEl.hidden = false;
     rootEl.scrollTop = 0;
+    /* Typeset AFTER the paper is on screen (§20.5): the teacher
+       copy's worked solutions arrive as LaTeX source and must be
+       typeset for display, not only for print. Unhidden first so
+       a slow MathJax CDN never leaves a blank overlay - the maths
+       pops in when ready, like the rest of the site. */
+    await typesetPaper(rootEl);
+  }
+
+  /* Re-render just the paper inside the open viewer (layout
+     switcher): toolbar, scroll container and preview state stay. */
+  async function renderPreviewPaper() {
+    if (!previewState) return;
+    const rootEl = document.getElementById("asgPrintRoot");
+    const wrap = rootEl ? rootEl.querySelector(".asg-paper-wrap") : null;
+    if (!wrap) return;
+    wrap.innerHTML = await renderPaper(previewState.ctx, previewState.record, previewState.variant, previewState.index, previewState.layoutKey);
+    await typesetPaper(rootEl);
   }
 
   function closePreview() {
@@ -1391,36 +1516,52 @@
     previewState = null;
   }
 
-  /* Print: typeset maths first, wait for question images to settle,
-     then print with only the paper visible (teacher-tracker.css
-     @media print + body.asg-printing). */
+  /* Print: typeset maths first (bounded), wait for question
+     images to settle, then print with only the paper visible
+     (teacher-tracker.css @media print + body.asg-printing).
+     Live-test hardening (§20.4): exiting the print state must
+     ALWAYS restore interactivity. Cleanup is idempotent and is
+     triggered by whichever fires first - `afterprint`, the
+     print media query flipping back to not-print, or a prompt
+     backstop (1s / 10s) scheduled after window.print() returns.
+     In blocking browsers print() returns only once the dialog
+     has closed and the print rendering is already made; in
+     non-blocking browsers the print document is a snapshot, so
+     a post-return cleanup cannot corrupt the output. (The old
+     code waited on afterprint alone with a 60s backstop, and
+     afterprint never fires in several automated/headless print
+     flows - part of the observed freeze is that harness's own
+     print state, but the class now always comes off promptly.) */
   async function printPreview() {
     if (!previewState) return;
     const rootEl = document.getElementById("asgPrintRoot");
-    if (previewState.variant === "teacher" && root.EliteRuntime && root.EliteRuntime.ensureMathJax) {
-      try {
-        const mathJax = await root.EliteRuntime.ensureMathJax();
-        if (mathJax && mathJax.typesetPromise) await mathJax.typesetPromise([rootEl]);
-      } catch (error) { /* print anyway - final answers are plain text */ }
-    }
-    const images = [...rootEl.querySelectorAll("img")].filter((img) => !img.complete);
-    if (images.length) {
-      await Promise.race([
-        Promise.all(images.map((img) => new Promise((resolve) => {
-          img.addEventListener("load", resolve, { once: true });
-          img.addEventListener("error", resolve, { once: true });
-        }))),
-        new Promise((resolve) => setTimeout(resolve, 4000))
-      ]);
-    }
+    await typesetPaper(rootEl);
+    await settleImages(rootEl);
     document.body.classList.add("asg-printing");
+    const printMedia = root.matchMedia ? root.matchMedia("print") : null;
+    let cleaned = false;
+    const onMediaChange = (event) => { if (!event.matches) cleanup(); };
     const cleanup = () => {
+      if (cleaned) return;
+      cleaned = true;
       document.body.classList.remove("asg-printing");
       root.removeEventListener("afterprint", cleanup);
+      if (printMedia) {
+        if (printMedia.removeEventListener) printMedia.removeEventListener("change", onMediaChange);
+        else if (printMedia.removeListener) printMedia.removeListener(onMediaChange);
+      }
     };
     root.addEventListener("afterprint", cleanup);
-    setTimeout(cleanup, 60000);
-    root.print();
+    if (printMedia) {
+      if (printMedia.addEventListener) printMedia.addEventListener("change", onMediaChange);
+      else if (printMedia.addListener) printMedia.addListener(onMediaChange);
+    }
+    try {
+      root.print();
+    } finally {
+      setTimeout(cleanup, 1000);
+      setTimeout(cleanup, 10000);
+    }
   }
 
   /* -------------------------------------------------------------- events */
@@ -1448,7 +1589,8 @@
     }
     const variantBtn = event.target.closest("[data-asg-variant]");
     if (variantBtn && previewState) {
-      await openPreview(previewState.ctx, previewState.record, variantBtn.dataset.asgVariant, previewState.shareCtx);
+      /* The view-only layout override survives the copy switch. */
+      await openPreview(previewState.ctx, previewState.record, variantBtn.dataset.asgVariant, previewState.shareCtx, previewState.layoutKey);
       return;
     }
     const shareBtn = event.target.closest("[data-asg-share]");
@@ -1469,12 +1611,12 @@
     }
     const openGroup = event.target.closest("[data-asg-open-group]");
     if (openGroup) {
-      const [studentId, courseId, recordId] = String(openGroup.dataset.asgOpenGroup || "").split("|");
+      const [studentId, courseId, recordId, variant] = String(openGroup.dataset.asgOpenGroup || "").split("|");
       const ctx = contexts.get(`${studentId}|${courseId}`);
       const record = ctx && ctx.share && ctx.share.groupRecords ? ctx.share.groupRecords[recordId] : null;
       if (ctx && record) {
         const displayCtx = { ...ctx, name: record.audience.groupName };
-        await openPreview(displayCtx, record, "student", ctx);
+        await openPreview(displayCtx, record, variant === "teacher" ? "teacher" : "student", ctx);
       }
       return;
     }
@@ -1490,6 +1632,27 @@
     }
     if (event.target.closest("[data-asg-print]")) { await printPreview(); return; }
     if (event.target.closest("[data-asg-close-preview]")) { closePreview(); }
+  });
+
+  /* Viewer layout switcher (§20.6): re-render the open copy in the
+     chosen layout. The stored record is never written - the share
+     link and the history label keep the record's own layout. */
+  document.addEventListener("change", async (event) => {
+    const select = event.target.closest("[data-asg-layout-select]");
+    if (select && previewState) {
+      previewState.layoutKey = Core.effectiveLayoutKey(previewState.record, select.value);
+      await renderPreviewPaper();
+    }
+  });
+
+  /* Escape closes the viewer (live-test fix §20.4 - the viewer had
+     no keyboard exit at all). When the share dialog is open above
+     the viewer it owns the keyboard; leave Escape to it then. */
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || !previewState) return;
+    const modal = document.getElementById("asgModal");
+    if (modal && !modal.hidden) return;
+    closePreview();
   });
 
   root.EliteAssignments = { renderSection, openPreview, closePreview, openSession, loadBank, COURSE_META };

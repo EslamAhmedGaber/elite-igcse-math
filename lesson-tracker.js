@@ -1079,7 +1079,14 @@
     dataset.students[b.id] = b;
     const docA = emptyCourseDoc("modular-2");
     docA.ticks["Prime Factors, HCF & LCM"] = { date: yesterday, hw: true, note: "Confident.", at: now - 86400000, updatedAt: now - 86400000 };
-    docA.ticks["Fractions"] = { date: today, hw: false, note: "", at: now, updatedAt: now };
+    /* Today's tick is "Percentages": the Unit 2 catalogue's
+       number-work topic (the fractions/decimals/percentages strand
+       itself is a Unit 1 topic in this taxonomy - a "Fractions"
+       tick here would be unmatched and its Unit 2 bank pool is 0,
+       which dead-ended the demo's Finish & send flow; live-test
+       fix, ASSIGNMENT_PLAN §20.2). Percentages has a real Unit 2
+       pool, so the session flow succeeds end-to-end in demo. */
+    docA.ticks["Percentages"] = { date: today, hw: false, note: "", at: now, updatedAt: now };
     // One past assignment so the Generate-assignment history is visible
     // in demo mode. These are real bank ids from the Unit 2 "Prime
     // Factors, HCF & LCM" pool (2 marks each).
