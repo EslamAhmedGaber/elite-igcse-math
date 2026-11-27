@@ -420,7 +420,14 @@
     // the Edexcel paper code is a stronger signal than the question text.
     const forcedModular = question.modular_force_unit;
 
-    const modularUnit = forcedModular || MODULAR_UNIT.get(canonical) || "Unit 2";
+    // Unit-own content inside a dual-listed topic (2026-11-27): the 4WM2
+    // papers ask the trig-graph and gradient/tangent questions of Graphs of
+    // Functions; the 4WM1 papers ask plotting and matching graph shapes.
+    const unitByContent = !forcedModular && canonical === "Graphs of Functions"
+      && /\b(sin|cos|tan)\b|gradient|tangent/i.test(question.question_text || "")
+      && !/Here are (\w+ )?graphs/i.test(question.question_text || "")
+      ? "Unit 2" : "";
+    const modularUnit = forcedModular || unitByContent || MODULAR_UNIT.get(canonical) || "Unit 2";
     const displayUnit = mode === "modular"
       ? modularUnit
       : LINEAR_UNIT.get(canonical) || originalUnit || "";

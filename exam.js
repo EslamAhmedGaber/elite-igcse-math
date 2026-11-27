@@ -1183,6 +1183,56 @@
     return result;
   }
 
+  /* Student mock (from the Lesson Tracker, 2026-11-27): the topics a
+     student has been taught, each with its lesson date. The newest
+     lesson date gets the biggest share of the questions, older dates
+     less, falling linearly with the date rank (4 dates -> 4:3:2:1), and
+     every topic keeps at least one question when the count allows.
+     A topic never gets more than its pool; the spare goes to the rest. */
+  function recencyWeights(topics, topicDates = {}) {
+    const dateOf = (topic) => String(topicDates[topic] || "");
+    const dates = [...new Set(topics.map(dateOf))].sort().reverse();
+    return Object.fromEntries(topics.map((topic) => [topic, dates.length - dates.indexOf(dateOf(topic))]));
+  }
+
+  function recencyQuotas(topics, topicDates, count, sizes) {
+    const eligible = topics.filter((topic) => Number(sizes[topic] || 0) > 0);
+    const quotas = Object.fromEntries(topics.map((topic) => [topic, 0]));
+    if (!eligible.length || count <= 0) return quotas;
+    const weights = recencyWeights(eligible, topicDates);
+    let open = [...eligible];
+    let left = Math.min(count, eligible.reduce((sum, topic) => sum + Number(sizes[topic]), 0));
+    while (left > 0 && open.length) {
+      const share = apportion(Object.fromEntries(open.map((topic) => [topic, weights[topic]])), left);
+      let spare = 0;
+      open.forEach((topic) => {
+        const room = Number(sizes[topic]) - quotas[topic];
+        const add = Math.min(room, share[topic]);
+        quotas[topic] += add;
+        spare += share[topic] - add;
+      });
+      open = open.filter((topic) => quotas[topic] < Number(sizes[topic]));
+      if (spare === left) break;
+      left = spare;
+    }
+    if (count >= eligible.length) {
+      eligible.forEach((topic) => {
+        if (quotas[topic] > 0) return;
+        const donor = eligible.reduce((a, b) => (quotas[a] >= quotas[b] ? a : b));
+        if (quotas[donor] > 1) { quotas[donor] -= 1; quotas[topic] = 1; }
+      });
+    }
+    return quotas;
+  }
+
+  /* Question count the topic plan is built for: the count, or with a
+     marks target the number of average questions that fill it. */
+  function plannedQuestionCount(pool, count, targetMarks) {
+    if (!targetMarks) return count;
+    const average = pool.length ? totalMarksForQuestions(pool) / pool.length : 3;
+    return Math.max(1, Math.min(count || 99, Math.round(targetMarks / (average || 3))));
+  }
+
   function levelQuotas(pool, count, mix) {
     const available = levelCounts(pool);
     const shares = LEVEL_MIXES[mix] || available;
@@ -1212,9 +1262,12 @@
     });
     const topics = [...groups.keys()];
     const topicSizes = Object.fromEntries(topics.map((topic) => [topic, LEVELS.reduce((sum, level) => sum + groups.get(topic)[level].length, 0)]));
-    const topicQuota = selectedTopics.length >= 2
-      ? Object.fromEntries([...buildTopicQuotas(topics, count, new Map(Object.entries(topicSizes))).entries()])
-      : apportion(topicSizes, count);
+    const studentDates = options.topicDates && Object.keys(options.topicDates).length ? options.topicDates : null;
+    const topicQuota = selectedTopics.length >= 2 && studentDates
+      ? recencyQuotas(topics, studentDates, plannedQuestionCount(pool, count, targetMarks), topicSizes)
+      : selectedTopics.length >= 2
+        ? Object.fromEntries([...buildTopicQuotas(topics, count, new Map(Object.entries(topicSizes))).entries()])
+        : apportion(topicSizes, count);
     const { quotas: levelQuota, available } = levelQuotas(pool, count, mix);
 
     if (strict) {
@@ -1357,8 +1410,34 @@
     return Number(value);
   }
 
+  /* Student mock handed over by the Lesson Tracker:
+     exam.html?...&mode=random&topics=A|B|C&dates=2026-11-20|...&student=Name
+     dates line up with topics. Active while the URL carries it. */
+  const STUDENT_MOCK = (() => {
+    const name = String(params.get("student") || "").replace(/[\u0000-\u001F<>]/g, " ").trim().slice(0, 80);
+    const topics = String(params.get("topics") || "").split("|").map((item) => item.trim()).filter(Boolean);
+    const dates = String(params.get("dates") || "").split("|").map((item) => item.trim());
+    if (!name || !topics.length || !dates.some((date) => /^\d{4}-\d{2}-\d{2}$/.test(date))) return null;
+    const topicDates = {};
+    topics.forEach((topic, index) => {
+      const date = dates[index] || "";
+      topicDates[topic] = /^\d{4}-\d{2}-\d{2}$/.test(date) ? date : "";
+    });
+    return { name, topicDates };
+  })();
+
+  function studentTopicDates(topics) {
+    if (!STUDENT_MOCK) return null;
+    const out = {};
+    (topics || []).forEach((topic) => { if (topic in STUDENT_MOCK.topicDates) out[topic] = STUDENT_MOCK.topicDates[topic]; });
+    return Object.keys(out).length ? out : null;
+  }
+
   function randomBuildConfig() {
+    const topics = randomTopicSelection();
+    const topicDates = studentTopicDates(topics);
     return {
+      ...(topicDates ? { student: STUDENT_MOCK.name, topicDates } : {}),
       mode: "random",
       buildVersion: RANDOM_BUILD_VERSION,
       course: course.id,
@@ -1366,7 +1445,7 @@
       bank: els.bank?.value || "all",
       part: els.part?.value || "",
       unit: els.unit?.value || "",
-      topics: randomTopicSelection(),
+      topics,
       count: Math.max(1, Number(els.count?.value || 25)),
       targetMarks: Number(els.targetMarks?.value || 0),
       levelMix: els.levelMix?.value || "natural",
@@ -1385,6 +1464,7 @@
       unit: config.unit,
       topic: "",
       topics: config.topics,
+      topicDates: config.topicDates || null,
       count: config.count,
       targetMarks: config.targetMarks,
       levelMix: config.levelMix,
@@ -1455,11 +1535,33 @@
         unit: config.unit,
         seed,
         durationMinutes: selectedDuration(els.duration, totalMarksForQuestions(picked)),
-        title: config.topics.length ? "Mixed topic mock" : "Random mock",
+        title: config.student ? `Mock · ${config.student}` : config.topics.length ? "Mixed topic mock" : "Random mock",
         buildConfig: config
       }
     );
     return true;
+  }
+
+  /* Student mock: who it is for and how many questions each taught
+     topic gets (newest lesson first). Shown above the plan summary. */
+  function studentPlanHtml(config, pool, plannedCount) {
+    if (!config.student || !config.topicDates) return "";
+    const topics = Object.keys(config.topicDates);
+    const sizes = Object.fromEntries(topics.map((topic) => [topic, pool.filter((question) => questionMatchesTopic(question, topic)).length]));
+    const quotas = recencyQuotas(topics, config.topicDates, plannedCount, sizes);
+    const order = [...topics].sort((a, b) => String(config.topicDates[b] || "").localeCompare(String(config.topicDates[a] || "")));
+    const fmt = (value) => {
+      const date = new Date(`${value}T12:00:00`);
+      return value && !Number.isNaN(date.getTime()) ? date.toLocaleDateString("en-GB", { day: "numeric", month: "short" }) : "";
+    };
+    return `<div class="exam-student-plan">
+      <div class="exam-student-plan-head"><span>Student mock</span><strong>${escapeHtml(config.student)}</strong><small>Newest lessons get the most questions &middot; every topic at least one</small></div>
+      <ol>${order.map((topic, index) => `<li><span class="esp-topic">${escapeHtml(topicLabelText(topic))}</span><span class="esp-date">${escapeHtml(fmt(config.topicDates[topic]))}${index === 0 ? " &middot; <b>newest</b>" : ""}</span><span class="esp-count"${sizes[topic] ? "" : ' title="No questions in this bank"'}>${sizes[topic] ? `&asymp; ${quotas[topic]}` : "none"}</span></li>`).join("")}</ol>
+    </div>`;
+  }
+
+  function topicLabelText(topic) {
+    return typeof window.eliteTopicLabel === "function" ? window.eliteTopicLabel(topic) : topic;
   }
 
   /* Live summary under the Random Mock options, shown before anything is built. */
@@ -1490,7 +1592,7 @@
     const levelNote = pool.length && levels.hard / pool.length > 0.8
       ? `<p class="exam-plan-levels"><small>Most questions in this bank are full multi-part questions worth 5+ marks, so the marks-based level puts them in Hard. Use Natural mix here.</small></p>`
       : "";
-    els.plan.innerHTML = `
+    els.plan.innerHTML = `${studentPlanHtml(config, pool, plannedCount)}
       <div class="exam-plan-grid">
         <article><strong>${pool.length}</strong><span>eligible questions</span></article>
         <article><strong>${plannedCount}</strong><span>questions planned</span></article>
@@ -3047,6 +3149,12 @@
     return { count: 40, marks: 100, minutes: 120, levelMix: "balanced", label: "100 marks · 2 hours, like the real paper" };
   }
 
+  /* A student mock keeps the student's taught topics in the quick
+     builds too (real-paper mock and 30-minute quiz). */
+  function studentQuickTopics() {
+    return STUDENT_MOCK ? Object.keys(STUDENT_MOCK.topicDates) : [];
+  }
+
   function quickTopics() {
     const unit = els.unit?.value || "";
     return topicsForUnit(unit)
@@ -3066,7 +3174,7 @@
       els.quickGrid.innerHTML = `
         <article class="exam-quick-card is-main">
           <span class="exam-quick-icon" aria-hidden="true">A4</span>
-          <strong>Real exam mock</strong>
+          <strong>${STUDENT_MOCK ? `Real exam mock for ${escapeHtml(STUDENT_MOCK.name)}` : "Real exam mock"}</strong>
           <p>${escapeHtml(real.label)}. Questions run from easier to harder.</p>
           <button type="button" class="exam-quick-go" data-quick="real">Build my mock</button>
         </article>
@@ -3148,8 +3256,8 @@
   function quickBuild(kind) {
     notice = "";
     let built = false;
-    if (kind === "real") built = quickBuildRandom(realExamShape());
-    else if (kind === "quiz") built = quickBuildRandom({ count: 15, marks: 25, minutes: 30, levelMix: "balanced" });
+    if (kind === "real") built = quickBuildRandom(realExamShape(), studentQuickTopics());
+    else if (kind === "quiz") built = quickBuildRandom({ count: 15, marks: 25, minutes: 30, levelMix: "balanced" }, studentQuickTopics());
     else if (kind === "topic") {
       const topic = els.quickGrid.querySelector("[data-quick-topic]")?.value || "";
       const available = topicPoolCount(topic, "all", els.unit?.value || "", "");

@@ -880,3 +880,23 @@
     .lt-head { padding: 20px 18px; }
   }
 }
+
+/* Student mock card (2026-11-27): the main action on a student's page. */
+@media screen {
+  .lt-mock-card {
+    display: flex; flex-wrap: wrap; gap: 14px 20px; align-items: center; justify-content: space-between;
+    margin: 0 0 18px; padding: 18px 20px;
+    border-radius: 16px;
+    background:
+      radial-gradient(120% 160% at 100% 0%, rgba(226,184,79,.22), transparent 55%),
+      linear-gradient(135deg, #16305c, #0d1f3f);
+    color: #fff;
+    box-shadow: 0 10px 26px rgba(13,31,63,.16);
+  }
+  .lt-mock-text { flex: 1 1 320px; min-width: 0; }
+  .lt-mock-card .lt-kicker { color: #e2b84f; }
+  .lt-mock-card h3 { margin: 4px 0 6px; font-size: 20px; color: #fff; }
+  .lt-mock-card p { margin: 0; color: rgba(255,255,255,.82); font-size: 13.5px; line-height: 1.55; }
+  .lt-mock-card p b { color: #fff; }
+  .lt-mock-card .lt-btn.is-large { flex: none; }
+}

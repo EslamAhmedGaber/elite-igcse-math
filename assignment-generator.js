@@ -815,6 +815,31 @@
     return { total };
   }
 
+  /* Student mock (owner request 2026-11-27): the real Random Mock
+     builder (exam.html), pre-set to this course, this student's taught
+     topics and their lesson dates; exam.js weights the topics by date. */
+  const MOCK_COURSE_QUERY = {
+    linear: { pathway: "linear" },
+    "modular-1": { pathway: "modular", unit: "Unit 1" },
+    "modular-2": { pathway: "modular", unit: "Unit 2" },
+    wma11: { pathway: "pure", course: "wma11" },
+    wma12: { pathway: "pure", course: "wma12" },
+    wma13: { pathway: "pure", course: "wma13" },
+    wme01: { pathway: "pure", course: "wme01" }
+  };
+
+  function studentMockUrl(ctx) {
+    const dates = tickDates(ctx.doc);
+    const topics = (ctx.completedTopics || []).filter((topic) => topic in dates)
+      .sort((a, b) => String(dates[b]).localeCompare(String(dates[a])));
+    const params = new URLSearchParams(MOCK_COURSE_QUERY[ctx.courseId] || {});
+    params.set("mode", "random");
+    params.set("topics", topics.join("|"));
+    params.set("dates", topics.map((topic) => dates[topic] || "").join("|"));
+    params.set("student", String(ctx.name || "").slice(0, 80));
+    return `exam.html?${params.toString()}`;
+  }
+
   /* ------------------------------------------------------------ section */
 
   function renderSection(container, ctx) {
@@ -864,15 +889,29 @@
         </li>`;
     };
     const todayTopics = ctx.todayTopics || [];
+    const mockUrl = completed ? studentMockUrl(ctx) : "";
+    const dated = Object.entries(tickDates(ctx.doc)).sort((a, b) => String(b[1]).localeCompare(String(a[1])));
     container.innerHTML = `
+      <div class="lt-mock-card">
+        <div class="lt-mock-text">
+          <span class="lt-kicker">Student mock</span>
+          <h3>Mock exam for ${escapeHtml(ctx.name)}</h3>
+          <p>${completed
+            ? `Opens the Random Mock builder with ${escapeHtml(ctx.name)}'s ${completed} taught topic${completed === 1 ? "" : "s"} only. The newest lessons get the most questions and every older topic keeps at least one${dated.length ? ` (newest: <b>${escapeHtml(dated[0][0])}</b>)` : ""}. Same paper, timer, levels, Version B, answer key and PDF as every mock.`
+            : "Tick the lessons this student has taken, then build a mock from them."}</p>
+        </div>
+        ${completed
+          ? `<a class="lt-btn is-gold is-large" href="${escapeHtml(mockUrl)}" target="_blank" rel="noopener">Generate mock</a>`
+          : `<button type="button" class="lt-btn is-gold is-large" disabled>Generate mock</button>`}
+      </div>
       <div class="lt-assign-head">
-        <h3>Assignments</h3>
+        <h3>Homework sheets</h3>
         <div class="lt-assign-head-actions">
           <button type="button" class="lt-btn is-primary" data-asg-finish="${escapeHtml(key)}" ${completed ? "" : "disabled"}>
             Finish &amp; send homework
           </button>
-          <button type="button" class="lt-btn is-gold" data-asg-generate="${escapeHtml(key)}" ${completed ? "" : "disabled"}>
-            Generate assignment
+          <button type="button" class="lt-btn" data-asg-generate="${escapeHtml(key)}" ${completed ? "" : "disabled"}>
+            Homework sheet
           </button>
         </div>
       </div>

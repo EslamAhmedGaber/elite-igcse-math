@@ -209,3 +209,52 @@
     }
   }
 }
+
+/* Student mock from the Lesson Tracker (2026-11-27): who the mock is for and
+   the per-topic plan, newest lesson first. */
+.exam-student-plan {
+  margin: 0 0 14px;
+  border: 1px solid #dfe5ef;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+.exam-student-plan-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #16305c, #0d1f3f);
+  border-bottom: 3px solid #e2b84f;
+  color: #fff;
+}
+.exam-student-plan-head span {
+  color: #e2b84f;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.exam-student-plan-head strong { font-size: 17px; }
+.exam-student-plan-head small { flex-basis: 100%; color: rgba(255, 255, 255, .78); font-size: 12.5px; }
+.exam-student-plan ol { margin: 0; padding: 0; list-style: none; }
+.exam-student-plan li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto 64px;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 16px;
+  border-bottom: 1px solid #eef1f6;
+  font-size: 14px;
+}
+.exam-student-plan li:last-child { border-bottom: 0; }
+.exam-student-plan .esp-topic { font-weight: 600; color: #0e1b2e; }
+.exam-student-plan .esp-date { color: #5a6b80; font-size: 12.5px; }
+.exam-student-plan .esp-date b { color: #16305c; }
+.exam-student-plan .esp-count { text-align: right; font-weight: 800; color: #16305c; }
+@media (max-width: 560px) {
+  .exam-student-plan li { grid-template-columns: minmax(0, 1fr) 56px; }
+  .exam-student-plan .esp-date { grid-row: 2; grid-column: 1; }
+  .exam-student-plan .esp-count { grid-row: 1 / span 2; grid-column: 2; }
+}
