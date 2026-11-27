@@ -535,11 +535,25 @@
        clock rides with it and is dropped without it. */
     const followUp = sanitizeFollowUp(raw.followUp);
     const followUpdatedAt = followUp ? Math.max(0, Math.floor(Number(raw.followUpdatedAt) || 0)) : null;
+    /* Recency plan (2026-11-27): questions per topic as generated,
+       and the weighting used. Absent on older records. */
+    let plan = null;
+    if (raw.plan && typeof raw.plan === "object" && !Array.isArray(raw.plan)) {
+      plan = {};
+      Object.entries(raw.plan).slice(0, ASSIGNMENT_MAX_TOPICS).forEach(([topic, value]) => {
+        const n = Math.floor(Number(value) || 0);
+        if (topic && n > 0) plan[String(topic).slice(0, 120)] = Math.min(ASSIGNMENT_MAX_QUESTIONS, n);
+      });
+      if (!Object.keys(plan).length) plan = null;
+    }
+    const weighting = raw.weighting === "recent" || raw.weighting === "even" ? raw.weighting : null;
     return {
       id,
       createdAt: nonNeg(raw.createdAt),
       date,
       topics,
+      ...(plan ? { plan } : {}),
+      ...(weighting ? { weighting } : {}),
       questionIds,
       count: nonNeg(raw.count) || questionIds.length,
       targetMarks: nonNeg(raw.targetMarks),

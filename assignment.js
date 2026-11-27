@@ -78,6 +78,7 @@
     stateEl.hidden = true;
     paperEl.hidden = false;
     printBtn.disabled = false;
+    printBtn.textContent = "Print / Download PDF";
     document.title = `Assignment${model.name ? ` for ${model.name}` : ""} | Elite IGCSE`;
   }
 
@@ -103,12 +104,39 @@
       showError("None of the questions in this link could be found", "The link may be out of date.");
       return;
     }
+    current = { model, index, decoded };
     render(model);
   }
 
   /* Print once question images have settled, like the tracker
      preview, so the PDF never misses a diagram. */
+  let current = null; // { model, index, decoded }
+
+  /* Same A4 exam-paper engine as the mock exams (student copy only:
+     the public page never offers solutions). Falls back to the
+     browser print of the on-page copy if the engine cannot load. */
+  async function openPaperEngine() {
+    if (!current || !window.EliteAssignments.ensurePaperEngine) return false;
+    if (!(await window.EliteAssignments.ensurePaperEngine())) return false;
+    const { model, index } = current;
+    let hash = 0;
+    model.questions.map((q) => q.id).join(",").split("").forEach((ch) => { hash = (hash * 31 + ch.charCodeAt(0)) >>> 0; });
+    const record = {
+      id: `asg-${hash.toString(36)}`,
+      date: model.date,
+      questionIds: model.questions.map((q) => q.id),
+      estMinutes: model.estMinutes,
+      layout: model.layout
+    };
+    const ctx = { courseId: model.courseId, name: model.name };
+    const bands = (window.EliteAssignments.COURSE_META[model.courseId] || {}).family === "ial" ? Core.BANDS.ial : Core.BANDS.igcse;
+    const spec = window.EliteAssignments.assignmentPaperSpec(ctx, record, index, bands, { allowSolutions: false });
+    window.ElitePaperPrint.open(spec, { version: "student", layout: Core.layoutFor(model.layout).key });
+    return true;
+  }
+
   printBtn.addEventListener("click", async () => {
+    if (await openPaperEngine()) return;
     const images = [...paperEl.querySelectorAll("img")].filter((img) => !img.complete);
     if (images.length) {
       await Promise.race([

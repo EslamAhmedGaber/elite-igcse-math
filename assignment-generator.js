@@ -204,6 +204,28 @@
      plain snapshots: { id, bank, canonical, modularUnit, marks, paper,
      qno, image, paperCode }. linearTopics = Set of Linear catalog
      topic names. Returns { linear, 'modular-1', 'modular-2' } indexes. */
+  /* Unit-own topics (owner request 2026-11-27): Unit 1 and Unit 2 are
+     separate courses, so a topic listed in BOTH units must not hand
+     one unit the other unit's questions. A question from a real
+     modular paper (4WM1 / 4WM2, modular_force_unit) always stays in
+     its own unit. A Linear-paper question of a dual-listed topic goes
+     to its home unit, EXCEPT where its content is examined in the
+     other unit's papers. The rules below come from the real 4WM
+     papers: Unit 2 asks the trig-graph and gradient/tangent
+     questions of "Graphs of Functions" (e.g. y = a sin(x + b) + c is
+     May 2025 4WM2HR Q23), Unit 1 asks plotting from a table and
+     matching graph shapes. */
+  const UNIT_CONTENT_RULES = [
+    { topic: "Graphs of Functions", unit: "Unit 2", test: /\b(sin|cos|tan)\b|gradient|tangent/i, unless: /Here are (\w+ )?graphs/i }
+  ];
+
+  function modularUnitFor(row) {
+    if (row.forcedUnit) return row.forcedUnit;
+    const text = String(row.text || "");
+    const rule = UNIT_CONTENT_RULES.find((entry) => entry.topic === row.canonical && entry.test.test(text) && !(entry.unless && entry.unless.test(text)));
+    return rule ? rule.unit : row.modularUnit;
+  }
+
   function indexFromPasses(linearRows, modularRows, linearTopics) {
     const toRecord = (row) => ({
       id: row.id,
@@ -212,6 +234,8 @@
       paper: row.paper || "",
       qno: Number(row.qno || 0),
       image: row.image || "",
+      ocr: row.image ? String(row.text || "") : "",
+      text: row.image ? "" : String(row.text || ""),
       ep: row.paperCode === "EP"
     });
     const linear = (linearRows || [])
@@ -220,7 +244,7 @@
     const modular = { "Unit 1": [], "Unit 2": [] };
     (modularRows || []).forEach((row) => {
       if (row.bank !== "all") return;
-      const bucket = modular[row.modularUnit];
+      const bucket = modular[modularUnitFor(row)];
       if (bucket) bucket.push(toRecord(row));
     });
     return {
@@ -240,6 +264,9 @@
       paper: q.paper || "",
       qno: Number(q.qNo || 0),
       image: q.image || "",
+      /* Same crop hint text the mock exam passes for IAL papers. */
+      ocr: [q.id, q.paper, q.primaryTopicName || q.topicName || "", ...(q.topicNames || []), `Question ${q.qNo}`, `${q.marks} marks`].join(" "),
+      text: "",
       ep: false
     }));
     const index = buildCourseIndex(records);
@@ -250,10 +277,45 @@
     return index;
   }
 
+  /* Default question count: two per topic, at least 4, at most 30 -
+     but never fewer than one per topic (every topic must appear). */
   function defaultCount(completedTopics) {
     const n = Math.max(0, Number(completedTopics || 0));
     if (!n) return 0;
-    return Math.min(30, Math.max(4, 2 * n));
+    return Math.min(MAX_COUNT, Math.max(n, Math.min(30, Math.max(4, 2 * n))));
+  }
+
+  /* ---- Recency plan (owner rule 2026-11-27) ----------------------
+     Each tick carries the lesson date. When an assignment is built,
+     the topics are ranked by that date: the newest lesson date gets
+     the biggest share of the questions, the one before it a smaller
+     share, and so on down to the oldest - but every topic keeps at
+     least ONE question (whenever the count allows one per topic).
+     Topics taught on the same day share the same weight.
+     Weights fall linearly with the date rank: with 4 lesson dates
+     the weights are 4, 3, 2, 1, so 10 questions split 4 / 3 / 2 / 1
+     (the owner's own example). A topic's share never exceeds the
+     questions its pool holds; the spare goes to the others. */
+  function recencyWeights(topics, topicDates) {
+    const dateOf = (topic) => String((topicDates && topicDates[topic]) || "");
+    const dates = [...new Set((topics || []).map(dateOf))].sort().reverse(); // newest first, undated last
+    return Object.fromEntries((topics || []).map((topic) => [topic, dates.length - dates.indexOf(dateOf(topic))]));
+  }
+
+  /* Returns { plan: {topic: n}, order: [topics newest first], weights }.
+     poolSizes caps each topic; topics with an empty pool get 0. */
+  function planQuestions({ topics, topicDates = {}, count, poolSizes = {}, weighting = "recent" }) {
+    const usable = (topics || []).filter((topic) => (poolSizes[topic] || 0) > 0);
+    const weights = weighting === "even"
+      ? Object.fromEntries(usable.map((topic) => [topic, 1]))
+      : recencyWeights(usable, topicDates);
+    const total = Math.max(0, Math.min(MAX_COUNT, Math.floor(Number(count || 0))));
+    const plan = usable.length ? apportion(weights, total, poolSizes) : {};
+    const order = [...(topics || [])].sort((a, b) =>
+      String((topicDates || {})[b] || "").localeCompare(String((topicDates || {})[a] || "")) ||
+      (topics || []).indexOf(a) - (topics || []).indexOf(b));
+    order.forEach((topic) => { if (plan[topic] === undefined) plan[topic] = 0; });
+    return { plan, order, weights };
   }
 
   function estimateMinutes(totalMarks) {
@@ -325,7 +387,14 @@
      size with the leftover redistributed; level quotas follow the
      pool's natural mix. Returns { picked, totalMarks, warnings,
      perTopic }. */
-  function selectAssignment({ byTopic, topics, count, targetMarks = 0, includeEP = true, bands = BANDS.igcse, rng = Math.random }) {
+  function selectAssignment({ byTopic, topics, count, targetMarks = 0, includeEP = true, bands = BANDS.igcse, rng = Math.random, plan = null }) {
+    /* A per-topic plan (recency plan, possibly edited by the teacher)
+       fixes how many questions each topic gets; the count is then
+       the plan's total. Topics planned at 0 are left out. */
+    if (plan) {
+      topics = (topics || []).filter((topic) => Number(plan[topic] || 0) > 0);
+      count = topics.reduce((sum, topic) => sum + Math.max(0, Math.floor(Number(plan[topic] || 0))), 0);
+    }
     const wanted = Math.max(0, Math.min(MAX_COUNT, Math.floor(Number(count || 0))));
     const target = Math.max(0, Math.floor(Number(targetMarks || 0)));
     const warnings = [];
@@ -352,8 +421,16 @@
     // that topic's pool; topics that cannot reach their share are
     // flagged so the teacher is never surprised by a lopsided paper.
     const evenWeights = Object.fromEntries(present.map((topic) => [topic, 1]));
-    const topicQuota = present.length ? apportion(evenWeights, wanted, poolSizes) : {};
+    const topicQuota = !present.length ? {}
+      : plan ? Object.fromEntries(present.map((topic) => [topic, Math.min(poolSizes[topic], Math.max(0, Math.floor(Number(plan[topic] || 0))))]))
+        : apportion(evenWeights, wanted, poolSizes);
     present.forEach((topic) => {
+      if (plan) {
+        if (Number(plan[topic] || 0) > pool[topic].length) {
+          warnings.push({ type: "tiny-pool", topic, message: `Only ${pool[topic].length} bank question${pool[topic].length === 1 ? "" : "s"} for "${topic}" - it contributes all of them.` });
+        }
+        return;
+      }
       const fairShare = present.length ? Math.floor(wanted / present.length) : 0;
       if (fairShare >= 2 && pool[topic].length < fairShare) {
         warnings.push({ type: "tiny-pool", topic, message: `Only ${pool[topic].length} bank question${pool[topic].length === 1 ? "" : "s"} for "${topic}" - fewer than an even share, so it contributes all of them.` });
@@ -386,8 +463,12 @@
     };
   }
 
-  function makeRecord({ topics, picked, count, targetMarks, includeEP, layout, audience, origin, sessionDate, now, date }) {
+  function makeRecord({ topics, picked, count, targetMarks, includeEP, layout, audience, origin, sessionDate, now, date, weighting }) {
     const totalMarks = (picked || []).reduce((sum, q) => sum + Number(q.marks || 0), 0);
+    /* How many questions each topic actually got - shown in the
+       history so the teacher sees the recency split at a glance. */
+    const plan = {};
+    (picked || []).forEach((q) => { plan[q.topic] = (plan[q.topic] || 0) + 1; });
     /* Origin (Finish & send homework): emitted only for a session
        generation with a date-shaped session date; plain generations
        stay byte-identical to before (fields absent, the sanitizer
@@ -407,6 +488,8 @@
       estMinutes: estimateMinutes(totalMarks),
       includeEP: Boolean(includeEP),
       layout: layoutFor(layout).key,
+      plan,
+      ...(weighting === "even" || weighting === "recent" ? { weighting } : {}),
       ...(audience && audience.type === "group" && audience.groupName
         ? { audience: { type: "group", groupName: String(audience.groupName).trim().slice(0, 80) } }
         : {}),
@@ -571,6 +654,7 @@
     spaceMm, recordLayout, effectiveLayoutKey,
     questionLevel, mulberry32, shuffle, apportion, buildCourseIndex,
     indexFromPasses, ialIndex, defaultCount, estimateMinutes,
+    recencyWeights, planQuestions, modularUnitFor, UNIT_CONTENT_RULES,
     selectAssignment, makeRecord,
     SHARE_MAX_IDS, cleanShareName, buildShareQuery, buildShareUrl,
     parseShareQuery, studentPaperModel, topicsSummary,
@@ -622,6 +706,8 @@
       bank: q.bank,
       canonical: q.canonical_topic || q.topic,
       modularUnit: q.modular_unit || "",
+      forcedUnit: q.modular_force_unit || "",
+      text: q.question_text || "",
       marks: q.marks,
       paper: q.paper,
       qno: q.question,
@@ -835,6 +921,129 @@
     modalState = null;
   }
 
+  /* ---- question plan (recency weighting, editable per topic) ---- */
+
+  function tickDates(doc) {
+    const out = {};
+    Object.entries((doc && doc.ticks) || {}).forEach(([topic, tick]) => { out[topic] = (tick && tick.date) || ""; });
+    return out;
+  }
+
+  /* Group: a topic's lesson date is the latest date any counted
+     member had it, so the group's newest lesson still weighs most. */
+  function groupTickDates(members) {
+    const out = {};
+    (members || []).forEach((m) => Object.entries((m && m.topicDates) || {}).forEach(([topic, date]) => {
+      if (!out[topic] || String(date) > out[topic]) out[topic] = String(date || "");
+    }));
+    return out;
+  }
+
+  function poolSizesFor(index, topics, includeEP) {
+    return Object.fromEntries((topics || []).map((topic) => [topic,
+      ((index && index.byTopic[topic]) || []).filter((q) => includeEP || !q.ep).length]));
+  }
+
+  function planBlockHtml() {
+    return `
+      <div class="asg-plan" id="asgPlan">
+        <div class="asg-plan-head">
+          <div>
+            <strong>Question plan</strong>
+            <span class="lt-muted">Newest lessons get more questions; every topic keeps at least one.</span>
+          </div>
+          <label class="asg-plan-mode"><span>Split</span>
+            <select id="asgWeighting">
+              <option value="recent" selected>Recent lessons weigh more</option>
+              <option value="even">Even across topics</option>
+            </select>
+          </label>
+        </div>
+        <div class="asg-plan-table" role="table" aria-label="Questions per topic">
+          <div class="asg-plan-row is-head" role="row"><span role="columnheader">Topic</span><span role="columnheader">Taught</span><span role="columnheader">In bank</span><span role="columnheader">Questions</span></div>
+          <div id="asgPlanBody"></div>
+        </div>
+      </div>`;
+  }
+
+  function renderPlanRows() {
+    const body = document.getElementById("asgPlanBody");
+    if (!body || !modalState) return;
+    const { planOrder = [], plan = {}, poolSizes = {}, topicDates = {} } = modalState;
+    const dates = [...new Set(planOrder.map((topic) => topicDates[topic] || ""))].filter(Boolean).sort().reverse();
+    body.innerHTML = planOrder.map((topic) => {
+      const date = topicDates[topic] || "";
+      const pool = poolSizes[topic] || 0;
+      const n = plan[topic] || 0;
+      const rank = date ? dates.indexOf(date) : -1;
+      const tag = rank === 0 ? `<em class="asg-tag is-new">Newest</em>` : rank === dates.length - 1 && dates.length > 1 ? `<em class="asg-tag is-old">Oldest</em>` : "";
+      return `<div class="asg-plan-row${pool ? "" : " is-empty"}" role="row">
+        <span class="asg-plan-topic" role="cell">${escapeHtml(topic)}</span>
+        <span role="cell">${date ? escapeHtml(formatDate(date)) : "&ndash;"} ${tag}</span>
+        <span role="cell">${pool || `<b class="asg-none">none</b>`}</span>
+        <span class="asg-stepper" role="cell">
+          <button type="button" data-plan-step="-1" data-plan-topic="${escapeHtml(topic)}" ${pool && n > 0 ? "" : "disabled"} aria-label="One fewer ${escapeHtml(topic)} question">&minus;</button>
+          <b>${n}</b>
+          <button type="button" data-plan-step="1" data-plan-topic="${escapeHtml(topic)}" ${pool && n < pool ? "" : "disabled"} aria-label="One more ${escapeHtml(topic)} question">+</button>
+        </span>
+      </div>`;
+    }).join("");
+    const total = Object.values(plan).reduce((sum, value) => sum + value, 0);
+    const countEl = document.getElementById("asgCount");
+    if (countEl && Number(countEl.value || 0) !== total && modalState.planEdited) countEl.value = total;
+    const missing = planOrder.filter((topic) => (poolSizes[topic] || 0) > 0 && !(plan[topic] > 0));
+    const warn = document.getElementById("asgPlanWarn");
+    if (warn) {
+      warn.hidden = !missing.length;
+      warn.textContent = missing.length ? `${missing.length} topic${missing.length === 1 ? " has" : "s have"} no question at this count - raise the number of questions to at least ${planOrder.filter((t) => (poolSizes[t] || 0) > 0).length} so every topic appears.` : "";
+    }
+  }
+
+  function recomputePlan() {
+    if (!modalState) return;
+    const ep = document.getElementById("asgEP");
+    const countEl = document.getElementById("asgCount");
+    const weightingEl = document.getElementById("asgWeighting");
+    modalState.weighting = weightingEl ? weightingEl.value : "recent";
+    modalState.poolSizes = poolSizesFor(modalState.index, modalState.topics, ep ? ep.checked : true);
+    const result = Core.planQuestions({
+      topics: modalState.topics,
+      topicDates: modalState.topicDates,
+      count: countEl ? Number(countEl.value || 0) : Core.defaultCount(modalState.topics.length),
+      poolSizes: modalState.poolSizes,
+      weighting: modalState.weighting
+    });
+    modalState.plan = result.plan;
+    modalState.planOrder = result.order;
+    modalState.planEdited = false;
+    renderPlanRows();
+  }
+
+  function wirePlan() {
+    const body = document.getElementById("asgModalBody");
+    if (!body || body.dataset.planWired) return;
+    body.dataset.planWired = "1";
+    body.addEventListener("click", (event) => {
+      const step = event.target.closest("[data-plan-step]");
+      if (!step || !modalState || !modalState.plan) return;
+      const topic = step.dataset.planTopic;
+      const next = (modalState.plan[topic] || 0) + Number(step.dataset.planStep);
+      if (next < 0 || next > (modalState.poolSizes[topic] || 0)) return;
+      const total = Object.values(modalState.plan).reduce((sum, value) => sum + value, 0) + Number(step.dataset.planStep);
+      if (total > Core.MAX_COUNT) return;
+      modalState.plan[topic] = next;
+      modalState.planEdited = true;
+      renderPlanRows();
+    });
+    body.addEventListener("change", (event) => {
+      if (!modalState || !modalState.plan) return;
+      if (event.target.id === "asgWeighting" || event.target.id === "asgEP") recomputePlan();
+    });
+    body.addEventListener("input", (event) => {
+      if (modalState && modalState.plan && event.target.id === "asgCount") recomputePlan();
+    });
+  }
+
   /* The effective topic set for the open modal (plan audit S5/T7):
      session mode resolves through Core.sessionTopics so the scope
      radios, the group switch, the availability line and the picker
@@ -871,6 +1080,7 @@
     const nextDefault = Core.defaultCount(topics.length);
     if (countEl && Number(countEl.value || 0) === modalState.lastDefault) countEl.value = nextDefault;
     modalState.lastDefault = nextDefault;
+    recomputePlan();
   }
 
   async function openGenerator(ctx, button, opts = {}) {
@@ -901,7 +1111,7 @@
       const members = (ctx.share.members || []).filter((m) => (ACore ? ACore.normName(m.groupName || "") : "") === ownKey);
       if (members.some((m) => m.enrolled && m.id !== ctx.studentId)) {
         const calc = Core.groupTodayIntersection(members);
-        group = { name: ctx.share.groupName, topics: calc.topics, excluded: calc.excluded };
+        group = { name: ctx.share.groupName, topics: calc.topics, excluded: calc.excluded, members };
       }
     }
     modalState = {
@@ -911,7 +1121,8 @@
       groupToday: false,
       group,
       topics: [],
-      lastDefault: 0
+      lastDefault: 0,
+      topicDates: { ...groupTickDates(group ? group.members : []), ...tickDates(ctx.doc) }
     };
     modalState.topics = effectiveTopics();
     modalState.lastDefault = Core.defaultCount(modalState.topics.length);
@@ -940,19 +1151,25 @@
       </div>` : ""}
       <p class="lt-muted" id="asgTopicsLine">${escapeHtml(COURSE_META[ctx.courseId] ? COURSE_META[ctx.courseId].label : ctx.courseId)} &middot; from the ${session ? "topics" : "completed topics"}: ${escapeHtml(topics.join(", "))}</p>
       <p class="lt-muted" id="asgAvail">${avail.total} bank questions across these topics.</p>
-      <label class="lt-field"><span>Number of questions</span>
-        <input type="number" id="asgCount" min="1" max="${Core.MAX_COUNT}" step="1" value="${Core.defaultCount(topics.length)}">
-      </label>
-      <label class="lt-field"><span>Target total marks (optional - the paper never goes over it)</span>
-        <input type="number" id="asgTarget" min="0" step="1" placeholder="No target">
-      </label>
-      <label class="lt-checkline"><input type="checkbox" id="asgEP" checked> Include Elite Practice questions</label>
-      <label class="lt-field"><span>Print layout (same options as the mock exam printer)</span>
-        <select id="asgLayout">
-          ${Core.layoutOptions().map((option) => `<option value="${option.key}"${option.key === Core.DEFAULT_LAYOUT ? " selected" : ""}>${escapeHtml(option.label)}</option>`).join("")}
-        </select>
-      </label>
-      <p class="lt-muted">Up to the chosen number of questions; estimated time is worked out at ${Core.MINUTES_PER_MARK} minutes per mark. Questions are picked at random - a question may appear again in a later assignment, never twice in the same one.</p>
+      <div class="asg-grid">
+        <label class="lt-field"><span>Number of questions</span>
+          <input type="number" id="asgCount" min="1" max="${Core.MAX_COUNT}" step="1" value="${Core.defaultCount(topics.length)}">
+        </label>
+        <label class="lt-field"><span>Target marks (optional)</span>
+          <input type="number" id="asgTarget" min="0" step="1" placeholder="No target">
+        </label>
+      </div>
+      ${planBlockHtml()}
+      <p class="lt-warn" id="asgPlanWarn" hidden></p>
+      <div class="asg-grid">
+        <label class="lt-field"><span>Print layout</span>
+          <select id="asgLayout">
+            ${Core.layoutOptions().map((option) => `<option value="${option.key}"${option.key === Core.DEFAULT_LAYOUT ? " selected" : ""}>${escapeHtml(option.label)}</option>`).join("")}
+          </select>
+        </label>
+        <label class="lt-checkline asg-ep"><input type="checkbox" id="asgEP" checked> Include Elite Practice questions</label>
+      </div>
+      <p class="lt-muted">Printed in the mock-exam paper design (cover, formulae sheet, test code). Time is estimated at ${Core.MINUTES_PER_MARK} minutes per mark. A question never repeats inside one assignment.</p>
       <div class="lt-warn" id="asgError" hidden></div>
       <div class="lt-form-actions">
         <button type="button" class="lt-btn is-gold" id="asgDoGenerate">${session ? "Generate &amp; share" : "Generate"}</button>
@@ -981,6 +1198,8 @@
     });
     document.getElementById("asgCancel").addEventListener("click", closeModal);
     document.getElementById("asgDoGenerate").addEventListener("click", () => doGenerate());
+    wirePlan();
+    recomputePlan();
   }
 
   /* Dashboard entry point (plan audit S2): the Overview card button
@@ -1006,7 +1225,8 @@
     const errorBox = document.getElementById("asgError");
     const rng = Core.mulberry32(Date.now() % 2147483647);
     const result = Core.selectAssignment({
-      byTopic: index.byTopic, topics, count, targetMarks, includeEP, bands, rng
+      byTopic: index.byTopic, topics, count, targetMarks, includeEP, bands, rng,
+      plan: modalState.plan || null
     });
     if (!result.picked.length) {
       errorBox.hidden = false;
@@ -1057,7 +1277,8 @@
     const now = Date.now();
     const today = ACore ? ACore.cairoToday() : new Date(now).toISOString().slice(0, 10);
     const record = Core.makeRecord({
-      topics, picked: result.picked, count, targetMarks, includeEP, layout,
+      topics, picked: result.picked, count: result.picked.length, targetMarks, includeEP, layout,
+      weighting: modalState.weighting || "recent",
       ...(groupRoute ? { audience: { type: "group", groupName: modalState.group.name } } : {}),
       ...(session ? { origin: "session", sessionDate: today } : {}),
       now, date: today
@@ -1269,18 +1490,24 @@
         <p class="lt-muted">${modalState.mode === "union" ? "Using the UNION of the group's topics (your choice):" : "Topics everyone counted above has completed:"} <b>${escapeHtml(calc.topics.join(", "))}</b></p>
         <p class="lt-muted" id="asgAvail">${avail.total} bank questions across these topics.</p>
         ${modalState.mode === "union" ? `<p><button type="button" class="lt-btn is-small" id="asgUseIntersection">Back to the shared topics only</button></p>` : ""}
-        <label class="lt-field"><span>Number of questions</span>
-          <input type="number" id="asgCount" min="1" max="${Core.MAX_COUNT}" step="1" value="${Core.defaultCount(calc.topics.length)}">
-        </label>
-        <label class="lt-field"><span>Target total marks (optional - the paper never goes over it)</span>
-          <input type="number" id="asgTarget" min="0" step="1" placeholder="No target">
-        </label>
-        <label class="lt-checkline"><input type="checkbox" id="asgEP" checked> Include Elite Practice questions</label>
-        <label class="lt-field"><span>Print layout (same options as the mock exam printer)</span>
-          <select id="asgLayout">
-            ${Core.layoutOptions().map((option) => `<option value="${option.key}"${option.key === Core.DEFAULT_LAYOUT ? " selected" : ""}>${escapeHtml(option.label)}</option>`).join("")}
-          </select>
-        </label>` : `
+        <div class="asg-grid">
+          <label class="lt-field"><span>Number of questions</span>
+            <input type="number" id="asgCount" min="1" max="${Core.MAX_COUNT}" step="1" value="${Core.defaultCount(calc.topics.length)}">
+          </label>
+          <label class="lt-field"><span>Target marks (optional)</span>
+            <input type="number" id="asgTarget" min="0" step="1" placeholder="No target">
+          </label>
+        </div>
+        ${planBlockHtml()}
+        <p class="lt-warn" id="asgPlanWarn" hidden></p>
+        <div class="asg-grid">
+          <label class="lt-field"><span>Print layout</span>
+            <select id="asgLayout">
+              ${Core.layoutOptions().map((option) => `<option value="${option.key}"${option.key === Core.DEFAULT_LAYOUT ? " selected" : ""}>${escapeHtml(option.label)}</option>`).join("")}
+            </select>
+          </label>
+          <label class="lt-checkline asg-ep"><input type="checkbox" id="asgEP" checked> Include Elite Practice questions</label>
+        </div>` : `
         <div class="lt-warn"><strong>${modalState.mode === "union" ? "No topics at all yet." : "No topics in common."}</strong> ${modalState.mode === "union"
           ? "Nobody counted above has completed any topic in this course yet, so there is nothing to build a group assignment from."
           : "The counted members share no completed topic in this course, so there is nothing to build a fair group assignment from yet."}</div>
@@ -1308,6 +1535,9 @@
     document.getElementById("asgCancel").addEventListener("click", closeModal);
     const gen = document.getElementById("asgDoGenerateGroup");
     if (gen) gen.addEventListener("click", () => doGenerateGroup());
+    modalState.topicDates = groupTickDates(members.filter((m) => m.enrolled));
+    modalState.plan = null;
+    if (calc.topics.length) { wirePlan(); recomputePlan(); }
   }
 
   async function doGenerateGroup() {
@@ -1320,7 +1550,8 @@
     const errorBox = document.getElementById("asgError");
     const rng = Core.mulberry32(Date.now() % 2147483647);
     const result = Core.selectAssignment({
-      byTopic: index.byTopic, topics, count, targetMarks, includeEP, bands, rng
+      byTopic: index.byTopic, topics, count, targetMarks, includeEP, bands, rng,
+      plan: modalState.plan || null
     });
     if (!result.picked.length) {
       errorBox.hidden = false;
@@ -1329,7 +1560,8 @@
     }
     const now = Date.now();
     const record = Core.makeRecord({
-      topics, picked: result.picked, count, targetMarks, includeEP, layout,
+      topics, picked: result.picked, count: result.picked.length, targetMarks, includeEP, layout,
+      weighting: modalState.weighting || "recent",
       audience: { type: "group", groupName: modalState.groupName },
       now, date: ACore ? ACore.cairoToday() : new Date(now).toISOString().slice(0, 10)
     });
@@ -1498,7 +1730,104 @@
     ]);
   }
 
+  /* ---- Mock-exam paper engine (owner request 2026-11-27) ---------
+     Assignments print through ElitePaperPrint - the SAME A4 engine,
+     cover, formulae sheet, margins, renumbering and Download PDF as
+     the Random Mock - instead of a separate look. The studio has its
+     own Student copy / With worked solutions switch. */
+  const PAPER_CODES = { linear: "4MA1", "modular-1": "4WM1", "modular-2": "4WM2", wma11: "WMA11", wma12: "WMA12", wma13: "WMA13", wme01: "WME01" };
+  const PAPER_LABELS = {
+    linear: "Edexcel IGCSE Mathematics A · 4MA1 Linear",
+    "modular-1": "Edexcel IGCSE Mathematics · Modular 4WM · Unit 1",
+    "modular-2": "Edexcel IGCSE Mathematics · Modular 4WM · Unit 2"
+  };
+
+  function assignmentTestCode(courseId, record) {
+    const stamp = String((record && record.id) || "").split("-")[1] || "";
+    return `${PAPER_CODES[courseId] || "EL"}-A${stamp.toUpperCase().slice(-6)}`;
+  }
+
+  function assignmentPaperSpec(ctx, record, index, bands, opts = {}) {
+    const isGroup = Boolean(record.audience && record.audience.type === "group");
+    const who = isGroup ? record.audience.groupName : ctx.name;
+    const title = `${record.origin === "session" ? "Homework" : "Assignment"}${who ? ` · ${who}` : ""}`;
+    const items = (record.questionIds || []).map((id) => index.byId[id]).filter(Boolean);
+    const meta = COURSE_META[ctx.courseId] || {};
+    return {
+      courseLabel: PAPER_LABELS[ctx.courseId] || `${meta.label || ""} · ${PAPER_CODES[ctx.courseId] || ""}`,
+      courseCode: PAPER_CODES[ctx.courseId] || "",
+      title,
+      durationMinutes: Number(record.estMinutes || estimateMinutesOf(items)),
+      testCode: assignmentTestCode(ctx.courseId, record),
+      bankVersion: `assignment-${record.id}`,
+      fileName: `Elite ${PAPER_CODES[ctx.courseId] || ""} ${title} ${record.date || ""}`.replace(/[^A-Za-z0-9 _-]+/g, " ").trim().replace(/\s+/g, "-"),
+      allowSolutions: opts.allowSolutions !== false,
+      questions: items.map((q, i) => ({
+        id: q.id,
+        number: i + 1,
+        marks: Number(q.marks || 0),
+        level: Core.questionLevel(q.marks, bands || Core.BANDS.igcse),
+        topic: q.topic || "",
+        sourceRef: q.paper ? `${q.paper} Q${q.qno}` : "",
+        image: q.image || "",
+        ocr: q.image ? q.ocr || "" : "",
+        sourceNumber: Number(q.qno || 0),
+        text: q.image ? "" : q.text || "",
+        options: [],
+        solution: null
+      })),
+      resolveSolutions: opts.allowSolutions === false ? null : async () => {
+        const map = {};
+        for (const q of items) {
+          const solution = await solutionFor(ctx.courseId, index, q.id);
+          if (solution) map[q.id] = solution;
+        }
+        return map;
+      }
+    };
+  }
+
+  function estimateMinutesOf(items) {
+    return estimateMinutes((items || []).reduce((sum, q) => sum + Number(q.marks || 0), 0));
+  }
+
+  async function ensurePaperEngine() {
+    if (root.ElitePaperPrint && root.ElitePaperPrint.open) return true;
+    try {
+      await loadScript("paper-print.js?v=20261105a", "asg-paper-print");
+    } catch (error) { return false; }
+    return Boolean(root.ElitePaperPrint && root.ElitePaperPrint.open);
+  }
+
+  async function openStudio(ctx, record, variant, layoutKey) {
+    let index;
+    try {
+      index = await loadBank(ctx.courseId);
+    } catch (error) {
+      if (ctx.toast) ctx.toast("The question bank could not be loaded, so this assignment cannot be shown right now.", "error");
+      return true;
+    }
+    if (!(await ensurePaperEngine())) return false;
+    /* The engine formats worked solutions ($$...$$, bold, lists)
+       through worked-solution.js, as on the mock page. */
+    await ensureSolutionView();
+    const bands = COURSE_META[ctx.courseId] && COURSE_META[ctx.courseId].family === "ial" ? Core.BANDS.ial : Core.BANDS.igcse;
+    const spec = assignmentPaperSpec(ctx, record, index, bands);
+    if (!spec.questions.length) {
+      if (ctx.toast) ctx.toast("None of this assignment's questions are in the current question bank.", "error");
+      return true;
+    }
+    root.ElitePaperPrint.open(spec, {
+      version: variant === "teacher" ? "solutions" : "student",
+      layout: Core.effectiveLayoutKey(record, layoutKey)
+    });
+    return true;
+  }
+
   async function openPreview(ctx, record, variant, shareCtx, layoutKey) {
+    /* The mock-exam engine first; the old in-page viewer below stays
+       only as a fallback if paper-print.js cannot load. */
+    if (await openStudio(ctx, record, variant, layoutKey)) return;
     ensureChrome();
     let index;
     try {
@@ -1721,5 +2050,5 @@
     closePreview();
   });
 
-  root.EliteAssignments = { renderSection, openPreview, closePreview, openSession, loadBank, COURSE_META };
+  root.EliteAssignments = { renderSection, openPreview, closePreview, openSession, loadBank, COURSE_META, assignmentPaperSpec, ensurePaperEngine };
 })(window);

@@ -1195,6 +1195,28 @@
       setTimeout(() => window.location.reload(), 600);
     });
 
+    /* Start fresh (owner, 2026-11-27: the first students were only
+       tests). Deletes every student - archived ones too - with their
+       lesson ticks and assignments, through the normal delete API so
+       the cloud copy is cleared as well. Two confirmations. */
+    $("#ltDeleteAll").addEventListener("click", async () => {
+      const ids = Object.keys((view.dataset && view.dataset.students) || {});
+      if (!ids.length) { toast("There are no students to delete."); return; }
+      if (!window.confirm(`Delete ALL ${ids.length} student${ids.length === 1 ? "" : "s"} with every lesson tick and assignment? This cannot be undone.`)) return;
+      if (!window.confirm("Last check: export a backup first if you might need these records. Delete everything now?")) return;
+      const button = $("#ltDeleteAll");
+      button.disabled = true;
+      let deleted = 0;
+      for (const id of ids) {
+        const ok = await guard(() => T.api.deleteStudent(id));
+        if (ok !== undefined) deleted += 1;
+      }
+      button.disabled = false;
+      view.studentId = null;
+      await refresh();
+      toast(`Deleted ${deleted} student${deleted === 1 ? "" : "s"}. The tracker is empty and ready.`);
+    });
+
     /* V2: overview dashboard actions (delegated) */
     const overview = $("#ltOverviewView");
     overview.addEventListener("click", async (event) => {

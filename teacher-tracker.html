@@ -17,42 +17,29 @@
   <link rel="stylesheet" href="styles.css?v=20261024u">
   <link rel="stylesheet" href="elite-system.css?v=20260906b">
   <link rel="stylesheet" href="elite-ux.css?v=20261112a">
-  <link rel="stylesheet" href="teacher-tracker.css?v=20261126g">
+  <link rel="stylesheet" href="teacher-tracker.css?v=20261127a">
   <script defer src="firebase-config.js"></script>
   <script defer src="runtime-loader.js?v=20260809a"></script>
   <script defer src="topic-normalizer.js?v=tracker-20261125a"></script>
-  <script defer src="lesson-tracker.js?v=20261126g"></script>
-  <script defer src="assignment-generator.js?v=20261126g"></script>
-  <script defer src="teacher-tracker-ui.js?v=20261126g"></script>
+  <script defer src="lesson-tracker.js?v=20261127a"></script>
+  <script defer src="assignment-generator.js?v=20261127a"></script>
+  <script defer src="teacher-tracker-ui.js?v=20261127a"></script>
 </head>
 <body data-page="tracker">
 
-  <header class="site-header">
-    <a class="site-brand" href="index.html" aria-label="Elite IGCSE Mathematics home">
-      <span class="brand-mark">IGCSE</span>
-      <span class="brand-title">Elite IGCSE Mathematics</span>
+  <header class="lt-topbar">
+    <a class="lt-topbar-brand" href="index.html" aria-label="Elite IGCSE home">
+      <img src="assets/icon.svg" alt="" width="34" height="34">
+      <span><b>Elite IGCSE</b><small>Teacher Studio</small></span>
     </a>
-    <button id="navToggle" class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="site-nav pathway-tabs" aria-label="Main">
-      <div class="nav-group nav-group-about" data-nav-group="about">
-        <a class="nav-tab-main" href="admin.html" aria-expanded="false">
-          <span>Teacher Studio</span>
-          <small>Private</small>
-        </a>
-        <div class="nav-panel" aria-label="Teacher Studio links">
-          <a href="admin.html"><strong>Teacher Studio</strong><span>Planner and certificates</span></a>
-          <a href="teacher-groups.html"><strong>Groups &amp; Results</strong><span>Weekly exams and marks</span></a>
-          <a href="teacher-tracker.html"><strong>Lesson Tracker</strong><span>Who took which lesson</span></a>
-          <a href="members.html"><strong>Signed-in Students</strong><span>Website activity</span></a>
-          <a href="stats.html"><strong>Site Statistics</strong><span>Visits and usage</span></a>
-        </div>
-      </div>
+    <nav class="lt-topbar-nav" aria-label="Teacher Studio">
+      <a href="teacher-tracker.html" aria-current="page">Lesson Tracker</a>
+      <a href="teacher-groups.html">Groups &amp; Results</a>
+      <a href="exam.html">Mock Builder</a>
+      <a href="members.html">Students Online</a>
+      <a href="stats.html">Statistics</a>
+      <a href="admin.html">Studio</a>
     </nav>
-    <div class="site-cta">
-      <a class="button primary" data-lead-trigger="whatsapp" href="https://wa.me/201120009622">WhatsApp Help</a>
-    </div>
   </header>
 
   <main class="lt-page" id="lessonTracker">
@@ -61,14 +48,14 @@
 
     <header class="lt-head">
       <div class="lt-head-main">
-        <img class="lt-logo" src="assets/icon.svg" alt="Elite IGCSE" width="52" height="52">
-        <div>
-          <span class="lt-kicker">Teacher Studio</span>
-          <h1>Lesson Tracker</h1>
-          <p>Pick a course, pick a student, tick the lesson they took. No more guessing who had what.</p>
-        </div>
+        <span class="lt-kicker">Teacher Studio &middot; Private</span>
+        <h1>Lesson Tracker</h1>
+        <p>Tick each lesson as you teach it. Assignments are built from the ticked topics &mdash; the newest lessons get the most questions, every older topic keeps at least one &mdash; and print in the same exam-paper design as the mocks.</p>
       </div>
-      <a class="lt-btn" href="teacher-groups.html">Groups &amp; Results</a>
+      <div class="lt-head-side">
+        <a class="lt-btn is-ghost" href="teacher-groups.html">Groups &amp; Results</a>
+        <a class="lt-btn is-gold" href="exam.html">Mock Builder</a>
+      </div>
     </header>
 
     <section class="lt-gate" id="ltGate"><p class="lt-muted">Connecting...</p></section>
@@ -104,8 +91,8 @@
           <label class="lt-checkline"><input type="checkbox" id="ltShowArchived"> Show archived students</label>
           <p class="lt-muted lt-who">Signed in as <span id="ltWho"></span> &middot; <button type="button" class="lt-link" data-sign-out>Sign out</button></p>
           <p class="lt-sync-line"><span class="lt-pill" id="ltSyncPill" data-state="local">Local only</span></p>
-          <div class="lt-settings" id="ltShareSettings">
-            <h3>Sharing settings</h3>
+          <details class="lt-settings" id="ltShareSettings">
+            <summary>WhatsApp sharing settings</summary>
             <label class="lt-field"><span>My WhatsApp number (for &ldquo;WhatsApp to me&rdquo;)</span><input type="tel" id="ltOwnerPhone" maxlength="32" placeholder="Empty = the site number +20 112 000 9622"></label>
             <label class="lt-field"><span>Message to the student</span><textarea id="ltStudentTemplate" rows="3" maxlength="1000"></textarea></label>
             <p class="lt-muted" id="ltStudentTemplateHint"></p>
@@ -118,7 +105,7 @@
               <button type="button" class="lt-btn is-primary is-small" id="ltShareSave">Save sharing settings</button>
               <button type="button" class="lt-btn is-small" id="ltShareReset">Reset templates</button>
             </div>
-          </div>
+          </details>
         </aside>
 
         <section class="lt-detail" id="ltDetail" aria-live="polite">
@@ -140,6 +127,7 @@
           <button type="button" class="lt-btn is-small" id="ltImportBackup">Import backup</button>
           <input type="file" id="ltImportFile" accept="application/json,.json" hidden>
           <button type="button" class="lt-btn is-small" id="ltClearLocal">Clear the local copy on this device</button>
+          <button type="button" class="lt-btn is-small is-danger" id="ltDeleteAll">Delete all students (start fresh)</button>
         </div>
       </div>
     </div>
