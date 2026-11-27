@@ -37,7 +37,7 @@ function notesBody(c) {
   }else content+=section('Notes by topic',noteRows(n.topics||[]));
   return content;
 }
-function noteRows(list){return `<ul class="resource-list">${list.map(t=>row(`${t.num}. ${t.title}`,t.href?fileInfo(t):esc(t.status||'In preparation'),t.href?action(t.href,'Open notes'): '<span class="resource-tag">In preparation</span>',anchor(t.num))).join('')}</ul>`;}
+function noteRows(list){return `<ul class="resource-list">${list.map(t=>row(`${t.num}. ${t.title}`,t.href?fileInfo(t):esc(t.status||'In preparation'),t.href?action(t.href,'Open notes'): '<span class="resource-tag">In preparation</span>',anchor(t.anchor || t.num))).join('')}</ul>`;}
 function papersFor(course,group){return course.unit ? (group.pastPapers||[]).filter(s=>s.heading.startsWith(course.unit+' |')) : group.pastPapers||[];}
 function papersBody(course,group){
   const sections=papersFor(course,group);
@@ -63,7 +63,7 @@ function booksBody(course,group){
 // Topic pages come from tools/build_topic_pages.cjs. Modular units share the Linear topic pages (matched by notes PDF).
 function loadTopicPages(root){const f=path.join(root,'data/topic-pages.json');return fs.existsSync(f)?JSON.parse(fs.readFileSync(f,'utf8')).pages:[];}
 function topicPageFor(course,t,topicPages){
-  const home=course.unit?'linear':course.id,key=String(t.href||'').split('?')[0];
+  const home=course.unit?'linear':course.id,key=String(t.practiceNotesHref||t.href||'').split('?')[0];
   return topicPages.find(p=>p.type==='topic'&&p.course===home&&(course.unit?p.notes&&p.notes===key:String(p.num)===String(t.num)));
 }
 function overview(course,c,group,topicPages=[]){
@@ -77,8 +77,8 @@ function overview(course,c,group,topicPages=[]){
   cards.push(`<article class="resource-card"><h2>Mock generator</h2><p>Build a random mock or choose questions for a printable A4 test.</p>${action(`/exam.html?${course.query}&mode=custom`,'Build a test')}</article>`);
   cards.push(`<article class="resource-card"><h2>My course &amp; progress</h2><p>Continue your learning path, review mistakes and open saved tests.</p>${action(`/course.html?${course.query}`,'Open my course')}</article>`);
   const list=topics(c);
-  const topicLinks=`<ul class="resource-topic-grid">${list.filter(t=>t.href).map(t=>{const page=topicPageFor(course,t,topicPages);return `<li><a href="${page?page.path:`${r.path}notes/#${anchor(t.num)}`}">${esc(t.title)}</a>${page?` <small>${page.questions} questions</small>`:''}</li>`;}).join('')}</ul>`;
-  const desc=course.id==='linear'?'Edexcel International GCSE Mathematics A Higher (4MA1), often called O Level Maths. The Linear route brings the six topic chapters together for whole-course revision.':course.unit?`Higher-tier resources for ${course.name} (${r.code}). The notes share the relevant Linear topics, selected here for this unit.`:`${course.blurb} (${course.code}). Use the topic notes alongside classified practice, then test your understanding with the available papers and worked solutions.`;
+  const topicLinks=`<ul class="resource-topic-grid">${list.filter(t=>t.href).map(t=>{const page=topicPageFor(course,t,topicPages);return `<li><a href="${page?page.path:`${r.path}notes/#${anchor(t.anchor || t.num)}`}">${esc(t.title)}</a>${page?` <small>${page.questions} questions</small>`:''}</li>`;}).join('')}</ul>`;
+  const desc=course.id==='linear'?'Edexcel International GCSE Mathematics A Higher (4MA1), often called O Level Maths. The Linear route brings the six topic chapters together for whole-course revision.':course.unit?`Higher-tier resources for ${course.name} (${r.code}). V7 revision notes and worked examples follow the topic order for this unit.`:`${course.blurb} (${course.code}). Use the topic notes alongside classified practice, then test your understanding with the available papers and worked solutions.`;
   return section('Choose a resource',`<div class="resource-grid">${cards.join('')}</div>`)+section('Course topics',`<p>${esc(desc)}</p>${topicLinks}`);
 }
 function documentFor(course,c,group,type,topicPages=[]){

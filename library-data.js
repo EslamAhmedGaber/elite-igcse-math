@@ -476,246 +476,388 @@
    "unit": "Topic",
    "coverage": "",
    "notes": {
-    "complete": [],
+    "complete": [
+     {
+      "asset": "Unit1_Complete_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/Unit1_Complete_Notes.pdf",
+      "pages": 451,
+      "mb": 9.37,
+      "bytes": 9825875,
+      "sha256": "361d9cfdc42d43dffe43178c9a742fef412e87d041a77fedbc664a86c8511053"
+     }
+    ],
     "topics": [
      {
       "num": "01",
-      "title": "Set Notation & Venn Diagrams",
-      "olt": "OL-T02",
-      "href": "downloads/Linear/VisualNotes/C1_T02_Sets_and_Venn_Diagrams/Sets_and_Venn_Diagrams_Visual_Notes.pdf?v=20261009c",
-      "pages": 18,
-      "mb": 0.42
+      "title": "Number Toolkit",
+      "olt": "OL-T01",
+      "anchor": "U1T01",
+      "practiceNotesHref": "",
+      "href": "downloads/Modular/V7/Unit1/U1T01_Notes.pdf",
+      "pages": 17,
+      "mb": 0.53
      },
      {
       "num": "02",
-      "title": "Powers, Roots & Standard Form",
-      "olt": "OL-T04",
-      "href": "downloads/Linear/VisualNotes/C1_T04_Powers_Roots_Standard_Form/Powers_Roots_Standard_Form_Visual_Notes.pdf?v=20261009c",
-      "pages": 18,
-      "mb": 0.42
+      "title": "Set Notation and Venn Diagrams",
+      "olt": "OL-T02",
+      "anchor": "01",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C1_T02_Sets_and_Venn_Diagrams/Sets_and_Venn_Diagrams_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T02_Notes.pdf",
+      "pages": 17,
+      "mb": 0.53
      },
      {
       "num": "03",
-      "title": "Fractions",
-      "olt": "OL-T05",
-      "href": "downloads/Linear/VisualNotes/C1_T05_Fractions/Fractions_Visual_Notes.pdf?v=20261009c",
-      "pages": 18,
-      "mb": 0.42
+      "title": "Prime Numbers, Factors and Multiples",
+      "olt": "OL-T03",
+      "anchor": "U1T03",
+      "practiceNotesHref": "",
+      "href": "downloads/Modular/V7/Unit1/U1T03_Notes.pdf",
+      "pages": 3,
+      "mb": 0.03
      },
      {
       "num": "04",
-      "title": "Fractions, Decimals & Percentages",
-      "olt": "OL-T08",
-      "href": "downloads/Linear/VisualNotes/C1_T08_Fractions_Decimals_Percentages/Fractions_Decimals_Percentages_Visual_Notes.pdf?v=20261009c",
-      "pages": 16,
-      "mb": 0.39
+      "title": "Numerical Indices and Roots",
+      "olt": "OL-T04",
+      "anchor": "02",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C1_T04_Powers_Roots_Standard_Form/Powers_Roots_Standard_Form_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T04_Notes.pdf",
+      "pages": 2,
+      "mb": 0.03
      },
      {
       "num": "05",
-      "title": "Rounding, Estimation & Bounds",
-      "olt": "OL-T09",
-      "href": "downloads/Linear/VisualNotes/C1_T09_Rounding_Estimation_Bounds/Rounding_Estimation_Bounds_Visual_Notes.pdf?v=20261009c",
+      "title": "Fractions",
+      "olt": "OL-T05",
+      "anchor": "03",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C1_T05_Fractions/Fractions_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T05_Notes.pdf",
       "pages": 18,
-      "mb": 0.42
+      "mb": 0.53
      },
      {
       "num": "06",
-      "title": "Surds",
-      "olt": "OL-T10",
-      "href": "downloads/Linear/VisualNotes/C1_T10_Surds/Surds_Visual_Notes.pdf?v=20261009c",
-      "pages": 16,
-      "mb": 0.39
+      "title": "Percentage Meaning and Conversions",
+      "olt": "OL-T06",
+      "anchor": "U1T06",
+      "practiceNotesHref": "",
+      "href": "downloads/Modular/V7/Unit1/U1T06_Notes.pdf",
+      "pages": 3,
+      "mb": 0.03
      },
      {
       "num": "07",
-      "title": "Exchange Rates & Best Buys",
-      "olt": "OL-T14",
-      "href": "downloads/Linear/VisualNotes/C1_T14_Exchange_Rates_Best_Buys/Exchange_Rates_Best_Buys_Visual_Notes.pdf?v=20261009c",
-      "pages": 12,
-      "mb": 0.32
+      "title": "Fractions Decimals and Percentages",
+      "olt": "OL-T08",
+      "anchor": "04",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C1_T08_Fractions_Decimals_Percentages/Fractions_Decimals_Percentages_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T08_Notes.pdf",
+      "pages": 16,
+      "mb": 0.5
      },
      {
       "num": "08",
-      "title": "Algebraic Roots & Indices",
-      "olt": "OL-T17",
-      "href": "downloads/Linear/VisualNotes/C2_T02_Roots_and_Indices/Roots_and_Indices_Visual_Notes.pdf?v=20261009c",
-      "pages": 20,
-      "mb": 0.47
+      "title": "Rounding Estimation and Bounds",
+      "olt": "OL-T09",
+      "anchor": "05",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C1_T09_Rounding_Estimation_Bounds/Rounding_Estimation_Bounds_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T09_Notes.pdf",
+      "pages": 17,
+      "mb": 0.53
      },
      {
       "num": "09",
-      "title": "Expanding Brackets",
-      "olt": "OL-T18",
-      "href": "downloads/Linear/VisualNotes/C2_T03_Expanding_Brackets/Expanding_Brackets_Visual_Notes.pdf?v=20261009c",
-      "pages": 20,
-      "mb": 0.45
-     },
-     {
-      "num": "10",
-      "title": "Factorising",
-      "olt": "OL-T19",
-      "href": "downloads/Linear/VisualNotes/C2_T04_Factorisation/Factorisation_Visual_Notes.pdf?v=20261009c",
-      "pages": 18,
-      "mb": 0.43
-     },
-     {
-      "num": "11",
-      "title": "Completing the Square",
-      "olt": "OL-T20",
-      "href": "downloads/Linear/VisualNotes/C2_T05_Completing_the_Square/Completing_the_Square_Visual_Notes.pdf?v=20261009c",
-      "pages": 18,
-      "mb": 0.43
-     },
-     {
-      "num": "12",
-      "title": "Algebraic Fractions",
-      "olt": "OL-T21",
-      "href": "downloads/Linear/VisualNotes/C2_T06_Algebraic_Fractions/Algebraic_Fractions_Visual_Notes.pdf?v=20261009c",
-      "pages": 20,
-      "mb": 0.46
-     },
-     {
-      "num": "13",
-      "title": "Solving Linear Equations",
-      "olt": "OL-T24",
-      "href": "downloads/Linear/VisualNotes/C2_T09_Linear_Equations/Linear_Equations_Visual_Notes.pdf?v=20261009c",
-      "pages": 22,
+      "title": "Surds",
+      "olt": "OL-T10",
+      "anchor": "06",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C1_T10_Surds/Surds_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T10_Notes.pdf",
+      "pages": 17,
       "mb": 0.52
      },
      {
-      "num": "14",
-      "title": "Solving Quadratics",
-      "olt": "OL-T25",
-      "href": "downloads/Linear/VisualNotes/C2_T10_Solving_Quadratics/Solving_Quadratics_Visual_Notes.pdf?v=20261009c",
-      "pages": 20,
+      "num": "10",
+      "title": "Using a Calculator",
+      "olt": "OL-T11",
+      "anchor": "U1T11",
+      "practiceNotesHref": "",
+      "href": "downloads/Modular/V7/Unit1/U1T11_Notes.pdf",
+      "pages": 15,
       "mb": 0.46
      },
      {
-      "num": "15",
-      "title": "Forming & Solving Equations",
-      "olt": "OL-T28",
-      "href": "downloads/Linear/VisualNotes/C2_T13_Forming_Equations/Forming_Equations_Visual_Notes.pdf?v=20261009c",
-      "pages": 18,
-      "mb": 0.42
-     },
-     {
-      "num": "16",
-      "title": "Coordinate Geometry",
-      "olt": "OL-T31",
-      "href": "downloads/Linear/VisualNotes/C3_T03_Functions/Functions_Visual_Notes.pdf?v=20261009c",
-      "pages": 18,
-      "mb": 0.43
-     },
-     {
-      "num": "17",
-      "title": "Linear Graphs y = mx + c",
-      "olt": "OL-T32",
-      "href": "downloads/Linear/VisualNotes/C3_T04_Linear_Graphs/Linear_Graphs_Visual_Notes.pdf?v=20261009c",
-      "pages": 16,
-      "mb": 0.39
-     },
-     {
-      "num": "18",
-      "title": "Graphs of Functions",
-      "olt": "OL-T33",
-      "href": "downloads/Linear/VisualNotes/C3_T05_Graphs_of_Functions/Graphs_of_Functions_Visual_Notes.pdf?v=20261009c",
-      "pages": 16,
+      "num": "11",
+      "title": "Exchange Rates and Best Buys",
+      "olt": "OL-T14",
+      "anchor": "07",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C1_T14_Exchange_Rates_Best_Buys/Exchange_Rates_Best_Buys_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T14_Notes.pdf",
+      "pages": 13,
       "mb": 0.4
      },
      {
+      "num": "12",
+      "title": "Algebraic Notation and Simplifying Expressions",
+      "olt": "OL-T16",
+      "anchor": "U1T16",
+      "practiceNotesHref": "",
+      "href": "downloads/Modular/V7/Unit1/U1T16_Notes.pdf",
+      "pages": 3,
+      "mb": 0.03
+     },
+     {
+      "num": "13",
+      "title": "Algebraic Roots and Indices",
+      "olt": "OL-T17",
+      "anchor": "08",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C2_T02_Roots_and_Indices/Roots_and_Indices_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T17_Notes.pdf",
+      "pages": 20,
+      "mb": 0.58
+     },
+     {
+      "num": "14",
+      "title": "Expanding Brackets",
+      "olt": "OL-T18",
+      "anchor": "09",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C2_T03_Expanding_Brackets/Expanding_Brackets_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T18_Notes.pdf",
+      "pages": 20,
+      "mb": 0.53
+     },
+     {
+      "num": "15",
+      "title": "Factorising",
+      "olt": "OL-T19",
+      "anchor": "10",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C2_T04_Factorisation/Factorisation_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T19_Notes.pdf",
+      "pages": 17,
+      "mb": 0.53
+     },
+     {
+      "num": "16",
+      "title": "Completing the Square",
+      "olt": "OL-T20",
+      "anchor": "11",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C2_T05_Completing_the_Square/Completing_the_Square_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T20_Notes.pdf",
+      "pages": 17,
+      "mb": 0.54
+     },
+     {
+      "num": "17",
+      "title": "Algebraic Fractions",
+      "olt": "OL-T21",
+      "anchor": "12",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C2_T06_Algebraic_Fractions/Algebraic_Fractions_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T21_Notes.pdf",
+      "pages": 20,
+      "mb": 0.55
+     },
+     {
+      "num": "18",
+      "title": "Solving Linear Equations",
+      "olt": "OL-T24",
+      "anchor": "13",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C2_T09_Linear_Equations/Linear_Equations_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T24_Notes.pdf",
+      "pages": 20,
+      "mb": 0.56
+     },
+     {
       "num": "19",
-      "title": "Standard & Compound Units",
-      "olt": "OL-T39",
-      "href": "downloads/Linear/VisualNotes/C4_T01_Standard_Compound_Units/Standard_Compound_Units_Visual_Notes.pdf?v=20261009c",
-      "pages": 16,
-      "mb": 0.39
+      "title": "Solving Quadratic Equations",
+      "olt": "OL-T25",
+      "anchor": "14",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C2_T10_Solving_Quadratics/Solving_Quadratics_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T25_Notes.pdf",
+      "pages": 18,
+      "mb": 0.53
      },
      {
       "num": "20",
-      "title": "Angles in Polygons & Parallel Lines",
-      "olt": "OL-T40",
-      "href": "downloads/Linear/VisualNotes/C4_T02_Angles_Polygons_Parallel_Lines/Angles_Polygons_Parallel_Lines_Visual_Notes.pdf?v=20261009c",
-      "pages": 14,
-      "mb": 0.36
+      "title": "Forming and Solving Equations",
+      "olt": "OL-T28",
+      "anchor": "15",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C2_T13_Forming_Equations/Forming_Equations_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T28_Notes.pdf",
+      "pages": 2,
+      "mb": 0.03
      },
      {
       "num": "21",
-      "title": "Perimeter & Area",
-      "olt": "OL-T43",
-      "href": "downloads/Linear/VisualNotes/C4_T05_Area_Perimeter/Area_Perimeter_Visual_Notes.pdf?v=20261009c",
-      "pages": 14,
-      "mb": 0.35
+      "title": "Coordinate Geometry",
+      "olt": "OL-T31",
+      "anchor": "16",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C3_T03_Functions/Functions_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T31_Notes.pdf",
+      "pages": 16,
+      "mb": 0.49
      },
      {
       "num": "22",
-      "title": "Circles, Arcs & Sectors",
-      "olt": "OL-T44",
-      "href": "downloads/Linear/VisualNotes/C4_T06_Circles_Arcs_Sectors/Circles_Arcs_Sectors_Visual_Notes.pdf?v=20261009c",
-      "pages": 14,
-      "mb": 0.35
+      "title": "Linear Graphs",
+      "olt": "OL-T32",
+      "anchor": "17",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C3_T04_Linear_Graphs/Linear_Graphs_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T32_Notes.pdf",
+      "pages": 16,
+      "mb": 0.47
      },
      {
       "num": "23",
-      "title": "Right-Angled Triangles - Pythagoras & Trigonometry",
-      "olt": "OL-T48",
-      "href": "downloads/Linear/VisualNotes/C4_T10_Pythagoras_Trigonometry/Pythagoras_Trigonometry_Visual_Notes.pdf?v=20261009c",
-      "pages": 14,
-      "mb": 0.35
+      "title": "Drawing and Recognising Function Graphs",
+      "olt": "OL-T33",
+      "anchor": "18",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C3_T05_Graphs_of_Functions/Graphs_of_Functions_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T33_Notes.pdf",
+      "pages": 3,
+      "mb": 0.04
      },
      {
       "num": "24",
-      "title": "Sine & Cosine Rules",
-      "olt": "OL-T49",
-      "href": "downloads/Linear/VisualNotes/C4_T11_Sine_Cosine_Rule/Sine_Cosine_Rule_Visual_Notes.pdf?v=20261009c",
+      "title": "Real-Life Graphs",
+      "olt": "OL-T35",
+      "anchor": "U1T35",
+      "practiceNotesHref": "",
+      "href": "downloads/Modular/V7/Unit1/U1T35_Notes.pdf",
       "pages": 14,
-      "mb": 0.35
+      "mb": 0.41
      },
      {
       "num": "25",
-      "title": "3D Pythagoras & Trigonometry",
-      "olt": "OL-T50",
-      "href": "downloads/Linear/VisualNotes/C4_T12_3D_Pythagoras_Trigonometry/3D_Pythagoras_Trigonometry_Visual_Notes.pdf?v=20261009c",
-      "pages": 12,
-      "mb": 0.32
+      "title": "Speed, Density and Pressure",
+      "olt": "OL-T39",
+      "anchor": "19",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C4_T01_Standard_Compound_Units/Standard_Compound_Units_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T39_Notes.pdf",
+      "pages": 3,
+      "mb": 0.03
      },
      {
       "num": "26",
-      "title": "Histograms",
-      "olt": "OL-T54",
-      "href": "downloads/Linear/VisualNotes/C6_T02_Histograms/Histograms_Visual_Notes.pdf?v=20261009c",
-      "pages": 12,
-      "mb": 0.32
+      "title": "Angles, Lines, Triangles and Quadrilaterals",
+      "olt": "OL-T40",
+      "anchor": "20",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C4_T02_Angles_Polygons_Parallel_Lines/Angles_Polygons_Parallel_Lines_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T40_Notes.pdf",
+      "pages": 2,
+      "mb": 0.03
      },
      {
       "num": "27",
-      "title": "Probability Toolkit",
-      "olt": "OL-T56",
-      "href": "downloads/Linear/VisualNotes/C6_T04_Probability_Toolkit/Probability_Toolkit_Visual_Notes.pdf?v=20261009c",
-      "pages": 14,
-      "mb": 0.36
+      "title": "Area and Perimeter",
+      "olt": "OL-T43",
+      "anchor": "21",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C4_T05_Area_Perimeter/Area_Perimeter_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T43_Notes.pdf",
+      "pages": 15,
+      "mb": 0.45
      },
      {
       "num": "28",
-      "title": "Venn and Tree Diagrams",
-      "olt": "OL-T57",
-      "href": "downloads/Linear/VisualNotes/C6_T05_Venn_Tree_Diagrams/Venn_Tree_Diagrams_Visual_Notes.pdf?v=20261009c",
-      "pages": 16,
-      "mb": 0.38
+      "title": "Circumference, Area, Arcs and Sectors",
+      "olt": "OL-T44",
+      "anchor": "22",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C4_T06_Circles_Arcs_Sectors/Circles_Arcs_Sectors_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T44_Notes.pdf",
+      "pages": 2,
+      "mb": 0.03
      },
      {
       "num": "29",
-      "title": "Combined & Conditional Probability",
-      "olt": "OL-T58",
-      "href": "downloads/Linear/VisualNotes/C6_T06_Combined_Conditional_Probability/Combined_Conditional_Probability_Visual_Notes.pdf?v=20261009c",
+      "title": "Recognising Solids, Faces, Edges and Vertices",
+      "olt": "OL-T45",
+      "anchor": "U1T45",
+      "practiceNotesHref": "",
+      "href": "downloads/Modular/V7/Unit1/U1T45_Notes.pdf",
+      "pages": 3,
+      "mb": 0.03
+     },
+     {
+      "num": "30",
+      "title": "Right-Angled Triangles",
+      "olt": "OL-T48",
+      "anchor": "23",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C4_T10_Pythagoras_Trigonometry/Pythagoras_Trigonometry_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T48_Notes.pdf",
       "pages": 14,
-      "mb": 0.36
+      "mb": 0.43
+     },
+     {
+      "num": "31",
+      "title": "Sine Rule, Cosine Rule and Triangle Area",
+      "olt": "OL-T49",
+      "anchor": "24",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C4_T11_Sine_Cosine_Rule/Sine_Cosine_Rule_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T49_Notes.pdf",
+      "pages": 14,
+      "mb": 0.43
+     },
+     {
+      "num": "32",
+      "title": "3D Pythagoras and Trigonometry",
+      "olt": "OL-T50",
+      "anchor": "25",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C4_T12_3D_Pythagoras_Trigonometry/3D_Pythagoras_Trigonometry_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T50_Notes.pdf",
+      "pages": 13,
+      "mb": 0.38
+     },
+     {
+      "num": "33",
+      "title": "Two-Way Tables",
+      "olt": "OL-T53",
+      "anchor": "U1T53",
+      "practiceNotesHref": "",
+      "href": "downloads/Modular/V7/Unit1/U1T53_Notes.pdf",
+      "pages": 3,
+      "mb": 0.03
+     },
+     {
+      "num": "34",
+      "title": "Histograms",
+      "olt": "OL-T54",
+      "anchor": "26",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C6_T02_Histograms/Histograms_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T54_Notes.pdf",
+      "pages": 13,
+      "mb": 0.38
+     },
+     {
+      "num": "35",
+      "title": "Probability Toolkit",
+      "olt": "OL-T56",
+      "anchor": "27",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C6_T04_Probability_Toolkit/Probability_Toolkit_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T56_Notes.pdf",
+      "pages": 14,
+      "mb": 0.41
+     },
+     {
+      "num": "36",
+      "title": "Probability Diagrams Venn and Tree Diagrams",
+      "olt": "OL-T57",
+      "anchor": "28",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C6_T05_Venn_Tree_Diagrams/Venn_Tree_Diagrams_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T57_Notes.pdf",
+      "pages": 15,
+      "mb": 0.42
+     },
+     {
+      "num": "37",
+      "title": "Combined and Conditional Probability",
+      "olt": "OL-T58",
+      "anchor": "29",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C6_T06_Combined_Conditional_Probability/Combined_Conditional_Probability_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit1/U1T58_Notes.pdf",
+      "pages": 14,
+      "mb": 0.41
      }
-    ],
-    "releaseStatus": {
-     "availableTopics": 29,
-     "totalTopics": 29,
-     "message": "All 29 Unit 1 visual notes with answers are live."
-    }
+    ]
    }
   },
   "unit2": {
@@ -726,270 +868,338 @@
    "unit": "Topic",
    "coverage": "",
    "notes": {
-    "complete": [],
+    "complete": [
+     {
+      "asset": "Unit2_Complete_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/Unit2_Complete_Notes.pdf",
+      "pages": 367,
+      "mb": 7.5,
+      "bytes": 7860946,
+      "sha256": "ef368341198df0bbadda8cdb5788c2634201ca768711a41c8fddc4aec4cea523"
+     }
+    ],
     "topics": [
      {
       "num": "01",
-      "title": "Prime Factors, HCF & LCM",
+      "title": "Prime Factorisation, HCF and LCM",
       "olt": "OL-T03",
-      "href": "downloads/Linear/VisualNotes/C1_T03_Prime_Factors_HCF_LCM/Prime_Factors_HCF_LCM_Visual_Notes.pdf?v=20261009c",
-      "pages": 16,
-      "mb": 0.39
+      "anchor": "01",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C1_T03_Prime_Factors_HCF_LCM/Prime_Factors_HCF_LCM_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T03_Notes.pdf",
+      "pages": 3,
+      "mb": 0.03
      },
      {
       "num": "02",
-      "title": "Powers, Roots & Standard Form",
+      "title": "Standard Form",
       "olt": "OL-T04",
-      "href": "downloads/Linear/VisualNotes/C1_T04_Powers_Roots_Standard_Form/Powers_Roots_Standard_Form_Visual_Notes.pdf?v=20261009c",
-      "pages": 18,
-      "mb": 0.42
+      "anchor": "02",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C1_T04_Powers_Roots_Standard_Form/Powers_Roots_Standard_Form_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T04_Notes.pdf",
+      "pages": 2,
+      "mb": 0.03
      },
      {
       "num": "03",
-      "title": "Percentages",
+      "title": "Percentage Change and Reverse Percentages",
       "olt": "OL-T06",
-      "href": "downloads/Linear/VisualNotes/C1_T06_Percentages/Percentages_Visual_Notes.pdf?v=20261009c",
-      "pages": 18,
-      "mb": 0.42
+      "anchor": "03",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C1_T06_Percentages/Percentages_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T06_Notes.pdf",
+      "pages": 4,
+      "mb": 0.04
      },
      {
       "num": "04",
-      "title": "Compound Interest & Depreciation",
+      "title": "Compound Interest and Depreciation",
       "olt": "OL-T07",
-      "href": "downloads/Linear/VisualNotes/C1_T07_Compound_Interest/Compound_Interest_Visual_Notes.pdf?v=20261009c",
-      "pages": 16,
-      "mb": 0.39
+      "anchor": "04",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C1_T07_Compound_Interest/Compound_Interest_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T07_Notes.pdf",
+      "pages": 17,
+      "mb": 0.54
      },
      {
       "num": "05",
       "title": "Ratio Toolkit",
       "olt": "OL-T12",
-      "href": "downloads/Linear/VisualNotes/C1_T12_Ratio_Toolkit/Ratio_Toolkit_Visual_Notes.pdf?v=20261009c",
+      "anchor": "05",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C1_T12_Ratio_Toolkit/Ratio_Toolkit_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T12_Notes.pdf",
       "pages": 16,
-      "mb": 0.39
+      "mb": 0.5
      },
      {
       "num": "06",
       "title": "Ratio Problem Solving",
       "olt": "OL-T13",
-      "href": "downloads/Linear/VisualNotes/C1_T13_Ratio_Problem_Solving/Ratio_Problem_Solving_Visual_Notes.pdf?v=20261009c",
+      "anchor": "06",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C1_T13_Ratio_Problem_Solving/Ratio_Problem_Solving_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T13_Notes.pdf",
       "pages": 16,
-      "mb": 0.39
+      "mb": 0.48
      },
      {
       "num": "07",
-      "title": "Direct & Inverse Proportion",
+      "title": "Direct and Inverse Proportion",
       "olt": "OL-T15",
-      "href": "downloads/Linear/VisualNotes/C1_T15_Direct_Inverse_Proportion/Direct_Inverse_Proportion_Visual_Notes.pdf?v=20261009c",
+      "anchor": "07",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C1_T15_Direct_Inverse_Proportion/Direct_Inverse_Proportion_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T15_Notes.pdf",
       "pages": 18,
-      "mb": 0.43
+      "mb": 0.52
      },
      {
       "num": "08",
-      "title": "Algebra Toolkit",
+      "title": "Substitution, Expressions and Formulae",
       "olt": "OL-T16",
-      "href": "downloads/Linear/VisualNotes/C2_T01_Algebra_Toolkit/Algebra_Toolkit_Visual_Notes.pdf?v=20261009c",
-      "pages": 18,
-      "mb": 0.43
+      "anchor": "08",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C2_T01_Algebra_Toolkit/Algebra_Toolkit_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T16_Notes.pdf",
+      "pages": 2,
+      "mb": 0.03
      },
      {
       "num": "09",
-      "title": "Completing the Square",
-      "olt": "OL-T20",
-      "href": "downloads/Linear/VisualNotes/C2_T05_Completing_the_Square/Completing_the_Square_Visual_Notes.pdf?v=20261009c",
-      "pages": 18,
-      "mb": 0.43
+      "title": "Rearranging Formulas",
+      "olt": "OL-T22",
+      "anchor": "10",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C2_T07_Rearranging_Formulas/Rearranging_Formulas_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T22_Notes.pdf",
+      "pages": 17,
+      "mb": 0.53
      },
      {
       "num": "10",
-      "title": "Rearranging Formulae",
-      "olt": "OL-T22",
-      "href": "downloads/Linear/VisualNotes/C2_T07_Rearranging_Formulas/Rearranging_Formulas_Visual_Notes.pdf?v=20261009c",
+      "title": "Algebraic Proof",
+      "olt": "OL-T23",
+      "anchor": "11",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C2_T08_Algebraic_Proof/Algebraic_Proof_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T23_Notes.pdf",
       "pages": 18,
-      "mb": 0.43
+      "mb": 0.51
      },
      {
       "num": "11",
-      "title": "Algebraic Proof",
-      "olt": "OL-T23",
-      "href": "downloads/Linear/VisualNotes/C2_T08_Algebraic_Proof/Algebraic_Proof_Visual_Notes.pdf?v=20261009c",
+      "title": "Solving Inequalities",
+      "olt": "OL-T26",
+      "anchor": "12",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C2_T11_Inequalities/Inequalities_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T26_Notes.pdf",
       "pages": 18,
-      "mb": 0.43
+      "mb": 0.51
      },
      {
       "num": "12",
-      "title": "Solving Inequalities",
-      "olt": "OL-T26",
-      "href": "downloads/Linear/VisualNotes/C2_T11_Inequalities/Inequalities_Visual_Notes.pdf?v=20261009c",
+      "title": "Simultaneous Equations",
+      "olt": "OL-T27",
+      "anchor": "13",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C2_T12_Simultaneous_Equations/Simultaneous_Equations_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T27_Notes.pdf",
       "pages": 18,
-      "mb": 0.42
+      "mb": 0.52
      },
      {
       "num": "13",
-      "title": "Simultaneous Equations",
-      "olt": "OL-T27",
-      "href": "downloads/Linear/VisualNotes/C2_T12_Simultaneous_Equations/Simultaneous_Equations_Visual_Notes.pdf?v=20261009c",
-      "pages": 20,
-      "mb": 0.45
+      "title": "Deriving General Formulae",
+      "olt": "OL-T28",
+      "anchor": "14",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C2_T13_Forming_Equations/Forming_Equations_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T28_Notes.pdf",
+      "pages": 2,
+      "mb": 0.03
      },
      {
       "num": "14",
-      "title": "Forming & Solving Equations",
-      "olt": "OL-T28",
-      "href": "downloads/Linear/VisualNotes/C2_T13_Forming_Equations/Forming_Equations_Visual_Notes.pdf?v=20261009c",
-      "pages": 18,
-      "mb": 0.42
+      "title": "Sequences",
+      "olt": "OL-T29",
+      "anchor": "15",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C3_T01_Sequences/Sequences_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T29_Notes.pdf",
+      "pages": 17,
+      "mb": 0.51
      },
      {
       "num": "15",
-      "title": "Sequences",
-      "olt": "OL-T29",
-      "href": "downloads/Linear/VisualNotes/C3_T01_Sequences/Sequences_Visual_Notes.pdf?v=20261009c",
-      "pages": 18,
-      "mb": 0.42
+      "title": "Functions",
+      "olt": "OL-T30",
+      "anchor": "16",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C3_T02_Coordinate_Geometry/Coordinate_Geometry_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T30_Notes.pdf",
+      "pages": 17,
+      "mb": 0.53
      },
      {
       "num": "16",
-      "title": "Functions",
-      "olt": "OL-T30",
-      "href": "downloads/Linear/VisualNotes/C3_T02_Coordinate_Geometry/Coordinate_Geometry_Visual_Notes.pdf?v=20261009c",
-      "pages": 16,
-      "mb": 0.4
+      "title": "Graphical Roots and Intersections",
+      "olt": "OL-T33",
+      "anchor": "17",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C3_T05_Graphs_of_Functions/Graphs_of_Functions_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T33_Notes.pdf",
+      "pages": 4,
+      "mb": 0.04
      },
      {
       "num": "17",
-      "title": "Graphs of Functions",
-      "olt": "OL-T33",
-      "href": "downloads/Linear/VisualNotes/C3_T05_Graphs_of_Functions/Graphs_of_Functions_Visual_Notes.pdf?v=20261009c",
-      "pages": 16,
-      "mb": 0.4
+      "title": "Estimating Gradients",
+      "olt": "OL-T34",
+      "anchor": "U2T34",
+      "practiceNotesHref": "",
+      "href": "downloads/Modular/V7/Unit2/U2T34_Notes.pdf",
+      "pages": 14,
+      "mb": 0.42
      },
      {
       "num": "18",
       "title": "Graphing Inequalities",
       "olt": "OL-T36",
-      "href": "downloads/Linear/VisualNotes/C3_T08_Graphing_Inequalities/Graphing_Inequalities_Visual_Notes.pdf?v=20261009c",
-      "pages": 12,
-      "mb": 0.32
+      "anchor": "18",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C3_T08_Graphing_Inequalities/Graphing_Inequalities_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T36_Notes.pdf",
+      "pages": 13,
+      "mb": 0.35
      },
      {
       "num": "19",
       "title": "Transformations of Graphs",
       "olt": "OL-T37",
-      "href": "downloads/Linear/VisualNotes/C3_T09_Transformations_of_Graphs/Transformations_of_Graphs_Visual_Notes.pdf?v=20261009c",
-      "pages": 16,
-      "mb": 0.4
+      "anchor": "19",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C3_T09_Transformations_of_Graphs/Transformations_of_Graphs_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T37_Notes.pdf",
+      "pages": 17,
+      "mb": 0.49
      },
      {
       "num": "20",
-      "title": "Differentiation & Turning Points",
+      "title": "Differentiation",
       "olt": "OL-T38",
-      "href": "downloads/Linear/VisualNotes/C3_T10_Differentiation/Differentiation_Visual_Notes.pdf?v=20261009c",
-      "pages": 16,
-      "mb": 0.4
+      "anchor": "20",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C3_T10_Differentiation/Differentiation_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T38_Notes.pdf",
+      "pages": 18,
+      "mb": 0.52
      },
      {
       "num": "21",
-      "title": "Standard & Compound Units",
+      "title": "Measures, Time and Conversions",
       "olt": "OL-T39",
-      "href": "downloads/Linear/VisualNotes/C4_T01_Standard_Compound_Units/Standard_Compound_Units_Visual_Notes.pdf?v=20261009c",
-      "pages": 16,
-      "mb": 0.39
+      "anchor": "21",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C4_T01_Standard_Compound_Units/Standard_Compound_Units_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T39_Notes.pdf",
+      "pages": 3,
+      "mb": 0.03
      },
      {
       "num": "22",
-      "title": "Angles in Polygons & Parallel Lines",
+      "title": "Polygon Angle Sums and Regular Polygons",
       "olt": "OL-T40",
-      "href": "downloads/Linear/VisualNotes/C4_T02_Angles_Polygons_Parallel_Lines/Angles_Polygons_Parallel_Lines_Visual_Notes.pdf?v=20261009c",
-      "pages": 14,
-      "mb": 0.36
+      "anchor": "22",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C4_T02_Angles_Polygons_Parallel_Lines/Angles_Polygons_Parallel_Lines_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T40_Notes.pdf",
+      "pages": 2,
+      "mb": 0.03
      },
      {
       "num": "23",
-      "title": "Bearings, Scale Drawing & Constructions",
+      "title": "Bearings Scale Drawing and Constructions",
       "olt": "OL-T41",
-      "href": "downloads/Linear/VisualNotes/C4_T03_Bearings_Scale_Constructions/Bearings_Scale_Constructions_Visual_Notes.pdf?v=20261009c",
+      "anchor": "23",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C4_T03_Bearings_Scale_Constructions/Bearings_Scale_Constructions_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T41_Notes.pdf",
       "pages": 16,
-      "mb": 0.39
+      "mb": 0.48
      },
      {
       "num": "24",
       "title": "Circle Theorems",
       "olt": "OL-T42",
-      "href": "downloads/Linear/VisualNotes/C4_T04_Circle_Theorems/Circle_Theorems_Visual_Notes.pdf?v=20261009c",
+      "anchor": "24",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C4_T04_Circle_Theorems/Circle_Theorems_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T42_Notes.pdf",
       "pages": 16,
-      "mb": 0.39
+      "mb": 0.48
      },
      {
       "num": "25",
-      "title": "Circles, Arcs & Sectors",
+      "title": "Parts of a Circle",
       "olt": "OL-T44",
-      "href": "downloads/Linear/VisualNotes/C4_T06_Circles_Arcs_Sectors/Circles_Arcs_Sectors_Visual_Notes.pdf?v=20261009c",
-      "pages": 14,
-      "mb": 0.35
+      "anchor": "25",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C4_T06_Circles_Arcs_Sectors/Circles_Arcs_Sectors_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T44_Notes.pdf",
+      "pages": 2,
+      "mb": 0.03
      },
      {
       "num": "26",
-      "title": "Volume & Surface Area",
+      "title": "Volume and Surface Area",
       "olt": "OL-T45",
-      "href": "downloads/Linear/VisualNotes/C4_T07_Volume_Surface_Area/Volume_Surface_Area_Visual_Notes.pdf?v=20261009c",
-      "pages": 14,
-      "mb": 0.35
+      "anchor": "26",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C4_T07_Volume_Surface_Area/Volume_Surface_Area_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T45_Notes.pdf",
+      "pages": 2,
+      "mb": 0.03
      },
      {
       "num": "27",
-      "title": "Congruence, Similarity & Geometrical Proof",
+      "title": "Congruence Similarity and Geometrical Proof",
       "olt": "OL-T46",
-      "href": "downloads/Linear/VisualNotes/C4_T08_Congruence_Similarity_Proof/Congruence_Similarity_Proof_Visual_Notes.pdf?v=20261009c",
-      "pages": 12,
-      "mb": 0.33
+      "anchor": "27",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C4_T08_Congruence_Similarity_Proof/Congruence_Similarity_Proof_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T46_Notes.pdf",
+      "pages": 13,
+      "mb": 0.38
      },
      {
       "num": "28",
-      "title": "Area & Volume of Similar Shapes",
+      "title": "Area and Volume of Similar Shapes",
       "olt": "OL-T47",
-      "href": "downloads/Linear/VisualNotes/C4_T09_Area_Volume_Similar_Shapes/Area_Volume_Similar_Shapes_Visual_Notes.pdf?v=20261009c",
+      "anchor": "28",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C4_T09_Area_Volume_Similar_Shapes/Area_Volume_Similar_Shapes_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T47_Notes.pdf",
       "pages": 14,
-      "mb": 0.35
+      "mb": 0.41
      },
      {
       "num": "29",
       "title": "Vectors",
       "olt": "OL-T51",
-      "href": "downloads/Linear/VisualNotes/C5_T01_Vectors/Vectors_Visual_Notes.pdf?v=20261009c",
-      "pages": 16,
-      "mb": 0.39
+      "anchor": "29",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C5_T01_Vectors/Vectors_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T51_Notes.pdf",
+      "pages": 15,
+      "mb": 0.45
      },
      {
       "num": "30",
       "title": "Transformations",
       "olt": "OL-T52",
-      "href": "downloads/Linear/VisualNotes/C5_T02_Transformations/Transformations_Visual_Notes.pdf?v=20261009c",
-      "pages": 16,
-      "mb": 0.39
+      "anchor": "30",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C5_T02_Transformations/Transformations_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T52_Notes.pdf",
+      "pages": 15,
+      "mb": 0.44
      },
      {
       "num": "31",
-      "title": "Statistics Toolkit",
+      "title": "Statistical Diagrams, Averages and Spread",
       "olt": "OL-T53",
-      "href": "downloads/Linear/VisualNotes/C6_T01_Statistics/Statistics_Visual_Notes.pdf?v=20261009c",
-      "pages": 16,
-      "mb": 0.39
+      "anchor": "31",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C6_T01_Statistics/Statistics_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T53_Notes.pdf",
+      "pages": 3,
+      "mb": 0.03
      },
      {
       "num": "32",
       "title": "Cumulative Frequency Diagrams",
       "olt": "OL-T55",
-      "href": "downloads/Linear/VisualNotes/C6_T03_Cumulative_Frequency/Cumulative_Frequency_Visual_Notes.pdf?v=20261009c",
-      "pages": 12,
-      "mb": 0.33
+      "anchor": "32",
+      "practiceNotesHref": "downloads/Linear/VisualNotes/C6_T03_Cumulative_Frequency/Cumulative_Frequency_Visual_Notes.pdf",
+      "href": "downloads/Modular/V7/Unit2/U2T55_Notes.pdf",
+      "pages": 13,
+      "mb": 0.39
      }
-    ],
-    "releaseStatus": {
-     "availableTopics": 32,
-     "totalTopics": 32,
-     "message": "All 32 Unit 2 visual notes with answers are live."
-    }
+    ]
    }
   },
   "wma11": {

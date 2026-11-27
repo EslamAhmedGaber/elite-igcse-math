@@ -25,8 +25,8 @@
     return [...map.values()];
   };
   const byRole = (records) => ({
-    student: records.find((record) => /_Student\.pdf$/i.test(record.path)),
-    solutions: records.find((record) => /_Solutions\.pdf$/i.test(record.path)),
+    student: records.find((record) => /_Student\.pdf$/i.test(record.path) || / - Student$/i.test(record.title)),
+    solutions: records.find((record) => /_Solutions\.pdf$/i.test(record.path) || / - Solutions$/i.test(record.title)),
   });
   const labelFor = (record) => String(record?.title || "").replace(/^\d+_/, "").replace(/_/g, " ");
   const typeOf = (record) => {
@@ -44,7 +44,7 @@
       const expertise = pair.some((record) => /Expertise/.test(record.title));
       const title = expertise ? `${unit} Expertise Q16+` : `${unit} Total Classified`;
       const search = normalize(`${title} ${unit} Modular 4WM`);
-      return `<article class="modular-release-card ${expertise ? "expertise" : ""}" data-release-item data-release-kind="${expertise ? "expertise" : "classified"}" data-release-unit="${escapeHtml(unit)}" data-release-search="${escapeHtml(search)}"><span class="release-pill">${escapeHtml(unit)} · ${expertise ? "Q16+" : "All topics"}</span><h3>${escapeHtml(title)}</h3><p>${expertise ? "Focused challenge collection from the updated cross-session bank." : "Complete topic-classified question bank with synchronized worked solutions."}</p><div class="release-meta"><span class="release-pill">Updated 24 Aug 2026</span><span class="release-pill">${escapeHtml(expertise ? "Student + solutions" : "Student + solutions")}</span></div><div class="release-actions">${roles.student ? link(roles.student, "Questions book") : ""}${roles.solutions ? link(roles.solutions, "Solutions book") : ""}</div></article>`;
+      return `<article class="modular-release-card ${expertise ? "expertise" : ""}" data-release-item data-release-kind="${expertise ? "expertise" : "classified"}" data-release-unit="${escapeHtml(unit)}" data-release-search="${escapeHtml(search)}"><span class="release-pill">${escapeHtml(unit)} · ${expertise ? "Q16+" : "All topics"}</span><h3>${escapeHtml(title)}</h3><p>${expertise ? "Focused challenge collection from the updated cross-session bank." : "Concept practice and mixed exam-style questions with matching worked answers."}</p><div class="release-meta"><span class="release-pill">${expertise ? "Exam collection" : "V7 · November 2026"}</span><span class="release-pill">${escapeHtml(expertise ? "Student + solutions" : "Student + solutions")}</span></div><div class="release-actions">${roles.student ? link(roles.student, "Questions book") : ""}${roles.solutions ? link(roles.solutions, "Solutions book") : ""}</div></article>`;
     }).join("");
   }
 
@@ -123,7 +123,13 @@
       return response.json();
     })
     .then((manifest) => {
-      const records = Array.isArray(manifest.artifacts) ? manifest.artifacts : [];
+      const records = (manifest.artifacts || []).filter((r) => r.kind !== "classified_topic_book" && (r.kind !== "classified_exam_book" || /expertise/i.test(r.title)));
+      for (const [key, course] of Object.entries(window.ELITE_MODULAR_V7)) {
+        const unit = key === "unit1" ? "Unit 1" : "Unit 2";
+        for (const [book, kind] of [[course.complete, "classified_exam_book"], ...course.topics.map((t) => [t, "classified_topic_book"])]) {
+          for (const file of [book, book.solutions]) records.push({unit, kind, title: book.title || unit, path: file.href});
+        }
+      }
       renderCore(records);
       renderTopicTable(records, "[data-release-topics]", "classified_topic_book", "Classified per Topic");
       renderTopicTable(records, "[data-release-expertise-topics]", "expertise_topic_book", "Expertise per Topic");

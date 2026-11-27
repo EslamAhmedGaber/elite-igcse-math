@@ -50,7 +50,7 @@
     const complete = n.complete && n.complete.length ? `
       <article class="lib-block">
         <h3>Complete Book</h3>
-        <p class="lib-note">All ${c.id === "linear" ? "58" : esc((n.topics || []).length)} topics: notes, worked examples and practice, with the answers at the end of each topic.${n.complete.length > 1 ? " Split into parts so each file opens quickly." : ""}</p>
+        <p class="lib-note">All ${c.id === "linear" ? "58" : esc((n.topics || []).length)} topics: ${/^unit[12]$/.test(c.id) ? "V7 notes and worked examples, in unit order." : "notes, worked examples and practice, with the answers at the end of each topic."}${n.complete.length > 1 ? " Split into parts so each file opens quickly." : ""}</p>
         <ul class="lib-list">${partRows(n.complete, "With Answers")}</ul>
       </article>`
       : n.releaseStatus ? `

@@ -9,20 +9,21 @@
   const unit = (query.get("unit") || "").toLowerCase().replace(/[^a-z0-9]/g, "");
   const selected = catalog.courses[query.get("course")] ? query.get("course")
     : ["unit1", "4wm1"].includes(unit) ? "unit1" : ["unit2", "4wm2"].includes(unit) ? "unit2" : "linear";
-  const course = catalog.courses[selected];
+  const current = query.get("edition") !== "2026" && window.ELITE_MODULAR_V7?.[selected];
+  const course = current || catalog.courses[selected];
   const params = (id) => id === "linear" ? "pathway=linear" : `pathway=modular&unit=Unit+${id === "unit1" ? "1" : "2"}`;
   const size = (book) => `${book.pages.toLocaleString("en-GB")} pages &middot; ${book.mb} MB`;
-  const download = (book, title) => `<a class="lib-btn lib-btn-dl" href="${esc(book.href)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(`Download ${title} PDF`)}">Download PDF</a>`;
+  const download = (book, title) => `<a class="lib-btn lib-btn-dl" href="${esc(book.href)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(`Download ${title} PDF`)}">Open PDF</a>`;
   const row = (book, title, num = "", attrs = "") => `<li class="lib-row" ${attrs}>
     <span class="lib-row-title">${num ? `<b class="lib-num">${esc(num)}</b>` : ""}<strong>${esc(title)}</strong><small>${size(book)}</small></span>
-    <span class="lib-actions">${download(book, title)}</span></li>`;
+    <span class="lib-actions">${download(book, title)}${book.solutions ? ` <a class="lib-btn" href="${esc(book.solutions.href)}" target="_blank" rel="noopener">Worked answers</a>` : ""}</span></li>`;
   document.title = `${course.name} | 2026 Classified + Practice | Elite Mathematics`;
   root.innerHTML = `
     <section class="lib-hero"><div><span class="lib-eyebrow">${esc(course.code)} &middot; Student edition &middot; 2026</span>
-    <h1>${esc(course.name)} Classified + Practice</h1><p>Practice questions, past-paper questions and topic answer keys.</p></div></section>
+    <h1>${esc(course.name)} Classified + Practice</h1><p>${current ? "V7 concept practice, mixed exam-style questions and worked answers." : "Practice questions, past-paper questions and topic answer keys."}</p></div></section>
     <nav class="lib-courses" aria-label="Choose course">${Object.values(catalog.courses).map((c) => `<a href="classified-books.html?${params(c.id)}" ${c.id === selected ? 'class="is-active" aria-current="page"' : ""}><strong>${esc(c.name)}</strong><small>${esc(c.code)}</small></a>`).join("")}</nav>
     <p class="lib-foot"><a href="downloads.html?${params(selected)}">All book editions</a> &middot; <a href="library.html?${params(selected)}#notes">Notes</a></p>
-    ${selected !== "linear" ? '<p class="lib-note">Linear topic books matched to this Modular unit.</p>' : ""}
+    ${current ? `<p class="lib-foot"><a href="${esc(course.notes.href)}">Complete V7 notes</a> &middot; <a href="classified-books.html?${params(selected)}&amp;edition=2026">Previous past-paper collection</a></p>` : selected !== "linear" ? '<p class="lib-note">Linear topic books matched to this Modular unit.</p>' : ""}
     <section class="lib-section" id="complete"><div class="lib-section-head"><h2>Complete book</h2></div>
       <ul class="lib-list">${row(course.complete, `${course.name} - all ${course.topics.length} topics`)}</ul></section>
     <section class="lib-section" id="chapters"><div class="lib-section-head"><h2>By chapter</h2></div>
