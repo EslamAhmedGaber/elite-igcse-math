@@ -746,7 +746,8 @@
      (just above the answer line), where the mock's number is written, and
      where the new total line sits. */
   function layoutCrop(item, profile, bounds, width) {
-    const crop = profile?.crop || null;
+    // V7 images contain only the prompt. A leading numeral or a graph axis is part of the question.
+    const crop = item.image?.includes("assets/questions/modular-v7/") ? null : profile?.crop || null;
     let start = bounds.start;
     let end = bounds.end;
     const result = { start, end, split: end, profile, numberMark: null, totalRight: null, totalFontPx: 0, inkRight: width * 0.92, gapAbove: 0 };

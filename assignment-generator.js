@@ -763,6 +763,8 @@
     let index;
     if (meta.family === "igcse") {
       index = (await loadIgcseIndexes())[courseId];
+      const lessons = root.EliteModularV7?.courses[courseId];
+      if (lessons) index = Core.buildCourseIndex([...Object.values(index.byId), ...lessons.questions]);
     } else {
       if (!Array.isArray(root[meta.global])) {
         await loadScript(meta.script, `asg-ial-${courseId}`);
@@ -1633,6 +1635,8 @@
   }
 
   async function solutionFor(courseId, index, questionId) {
+    const v7 = root.EliteModularV7?.worked[questionId];
+    if (v7 && index.byId[questionId]) return v7;
     const meta = COURSE_META[courseId];
     if (meta && meta.family === "ial") {
       return (index.solutions && index.solutions[questionId]) || null;
@@ -1667,6 +1671,8 @@
         return root.EliteSolutionView.render(solution, { variant: "print" });
       } catch (error) { /* fall through to the local renderer */ }
     }
+    const figure = root.EliteModularV7?.worked[questionId]?.steps[0].figures[0];
+    if (figure) return '<img class="asg-qimg" src="' + escapeHtml(figure.src) + '" alt="' + escapeHtml(figure.alt) + '">';
     return fallbackSolutionHtml(solution);
   }
 
@@ -1833,7 +1839,7 @@
   async function ensurePaperEngine() {
     if (root.ElitePaperPrint && root.ElitePaperPrint.open) return true;
     try {
-      await loadScript("paper-print.js?v=20261105a", "asg-paper-print");
+      await loadScript("paper-print.js?v=20261127v7", "asg-paper-print");
     } catch (error) { return false; }
     return Boolean(root.ElitePaperPrint && root.ElitePaperPrint.open);
   }

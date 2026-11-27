@@ -55,6 +55,9 @@
     if (saved && COURSES[saved]) view.course = saved;
   } catch (error) { /* first run: Modular Unit 2 */ }
 
+  const linkedUnit = new URLSearchParams(window.location.search).get("unit");
+  if (linkedUnit === "1" || linkedUnit === "2") view.course = "modular-" + linkedUnit;
+
   /* ------------------------------------------------------------- helpers */
 
   function escapeHtml(value) {
@@ -100,7 +103,8 @@
     if (course.script && !course.topics().length && window.EliteRuntime && window.EliteRuntime.loadScript) {
       await window.EliteRuntime.loadScript(course.script, { id: `ltTopics-${courseKey}` }).catch(() => {});
     }
-    return course.topics();
+    const lessons = window.EliteModularV7?.courses[courseKey]?.lessons || [];
+    return [...lessons, ...course.topics()];
   }
 
   function selectedStudent() {

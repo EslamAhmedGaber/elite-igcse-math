@@ -286,8 +286,11 @@
         selectedKey: "selectedExpertiseQuestions"
       };
 
-  const questions = course.questions;
-  let solutions = course.solutions;
+  const modularV7 = window.EliteModularV7;
+  const v7Courses = Object.values(modularV7?.courses || {});
+  const questions = [...course.questions, ...v7Courses.flatMap((unit) => unit.questions)];
+  if (v7Courses.length) window.QUESTION_DATA = questions;
+  let solutions = { ...course.solutions, ...modularV7?.worked };
   let fullSolutionsPromise = null;
   const ialPrintPalettes = { wma11: "pure", wma12: "mulberry", wma13: "pure", wme01: "teal" };
   const activePrintPalette = course.mode === "baccalaureate"
@@ -329,7 +332,7 @@
   const REVISION_BUILD_VERSION = "revision-book-v2";
   const CUSTOM_BUILD_VERSION = "custom-test-v2";
 
-  function hasFullSolutionBundle(bundle = solutions) {
+  function hasFullSolutionBundle(bundle = course.mode === "igcse" ? window.SOLUTION_DATA : solutions) {
     return Object.values(bundle || {}).some((solution) => Boolean(
       solution?.source || (Array.isArray(solution?.steps) && solution.steps.length)
     ));
@@ -356,7 +359,7 @@
       if (!hasFullSolutionBundle(window.SOLUTION_DATA)) {
         throw new Error("The worked-solution bundle is incomplete");
       }
-      solutions = window.SOLUTION_DATA;
+      solutions = { ...window.SOLUTION_DATA, ...modularV7?.worked };
       course.solutions = solutions;
       return solutions;
     }).catch((error) => {
@@ -571,7 +574,8 @@
       return (course.topics || []).filter((entry) => !unit || entry.unit === unit).map((entry) => entry.topic);
     }
     const catalog = activePathway() === "modular" ? window.MODULAR_TOPIC_CATALOG || [] : window.LINEAR_TOPIC_CATALOG || [];
-    return catalog.filter((entry) => !unit || entry.unit === unit).map((entry) => entry.topic);
+    const lessons = v7Courses.flatMap((group) => group.questions[0]?.modular_unit === unit || !unit ? group.lessons.map((lesson) => lesson.name) : []);
+    return [...lessons, ...catalog.filter((entry) => !unit || entry.unit === unit).map((entry) => entry.topic)];
   }
 
   function topicDisplayLabel(topic, unit = "") {
@@ -714,6 +718,16 @@
     setTopicMix(els.smartTopicMix, urlTopics);
     updateTopicMixSummary(els.topicMix, els.topicMixSummary);
     updateTopicMixSummary(els.smartTopicMix, els.smartTopicMixSummary);
+    if (STUDENT_MOCK && activeMode === "random" && urlTopics.length) {
+      const available = planRandomPaper().pool.length;
+      if (available > 0 && available < Number(els.count.value)) {
+        const value = String(available);
+        if (![...els.count.options].some((option) => option.value === value)) {
+          els.count.add(new Option(value + " questions", value));
+        }
+        els.count.value = value;
+      }
+    }
     resetStaleStateForUrl({ unit, part, topics: urlTopics, mode });
   }
 
@@ -2010,7 +2024,7 @@
       .map((step, index) => `
         <section class="solution-step">
           <strong>${escapeHtml(step.title || `Step ${index + 1}`)}</strong>
-          <div>${formatSolutionText(step.body || "")}</div>
+          <div>${formatSolutionText(step.body || "")}${window.EliteSolutionView?.renderFigures?.(step) || ""}</div>
         </section>
       `)
       .join("");
