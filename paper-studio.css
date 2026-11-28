@@ -292,3 +292,11 @@
   .eps-send { padding: 8px 12px; }
   .eps-send-buttons button { flex: 1 1 100%; }
 }
+
+/* WhatsApp send mode (wa-send.js modeControlHtml) */
+.wa-mode { margin: 10px 0 0; padding: 8px 10px; border: 1px solid #dfe5ef; border-radius: 10px; background: #fff; flex-basis: 100%; }
+.wa-mode legend { padding: 0 4px; font-size: 12px; font-weight: 800; color: #16305c; text-transform: uppercase; letter-spacing: .04em; }
+.wa-mode label { display: flex; align-items: flex-start; gap: 8px; margin: 4px 0; font-size: 12.5px; line-height: 1.35; color: #3d475c; cursor: pointer; }
+.wa-mode label b { color: #16305c; }
+.wa-mode label.is-off { opacity: .55; cursor: default; }
+.wa-mode input { margin-top: 2px; accent-color: #16305c; }

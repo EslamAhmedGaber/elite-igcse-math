@@ -29,7 +29,7 @@
 (function (root) {
   "use strict";
 
-  const VERSION = "20261128w";
+  const VERSION = "20261128x";
   const MM = 96 / 25.4;
   const SCRIPT_SRC = document.currentScript?.src || "";
   const assetUrl = (name) => new URL(`${name}?v=${VERSION}`, SCRIPT_SRC || document.baseURI).href;
@@ -1415,8 +1415,8 @@
       else printFrame(button.dataset.act);
     });
     overlay.addEventListener("change", (event) => {
-      if (!event.target.matches("[data-send-fallback]")) return;
-      studio.sendFallback = event.target.checked;
+      if (!event.target.matches("[data-wa-mode]")) return;
+      if (root.EliteWaSend) root.EliteWaSend.setMode(event.target.value);
       renderSend();
     });
     overlay.addEventListener("keydown", (event) => {
@@ -1744,7 +1744,6 @@
     }
     const solutions = studio.opts.version === "solutions";
     const ready = !solutions && Boolean(studio.sendFile && studio.sendToken === studio.token);
-    const sheet = ready && Wa.canShareFiles([studio.sendFile]);
     const status = solutions ? "Switch Copy to Student copy to send - the worked solutions are never sent from here." : ready
       ? `PDF ready · ${Math.max(1, Math.round(studio.sendFile.size / 1024))} KB`
       : studio.sendBusy ? studio.sendBusy : "Preparing the PDF...";
@@ -1752,7 +1751,7 @@
     wrap.innerHTML = `
       <span class="eps-send-label"><b>Send the PDF on WhatsApp</b><small>${escapeHtml(status)}</small></span>
       <span class="eps-send-buttons">${send.targets.map((t) => `<button type="button" data-act="send" data-target="${escapeHtml(t.key)}" class="${t.kind === "group" ? "is-gold" : t.kind === "phone" ? "is-green" : ""}" ${ready ? "" : "disabled"}>${escapeHtml(t.label)}</button>`).join("")}</span>
-      ${sheet ? `<label class="eps-send-alt"><input type="checkbox" data-send-fallback ${studio.sendFallback ? "checked" : ""}> WhatsApp not in the share window? Download + open the chat instead</label>` : ""}`;
+      ${Wa.modeControlHtml ? Wa.modeControlHtml("epsSendMode") : ""}`;
   }
 
   async function prepareSendPdf() {
@@ -1788,7 +1787,7 @@
     const target = send.targets.find((t) => t.key === key);
     if (!target) return;
     const caption = typeof send.caption === "function" ? send.caption(target) : String(send.caption || "");
-    const result = await Wa.send({ files: [studio.sendFile], text: caption, target, title: studio.spec.title || "", forceFallback: studio.sendFallback });
+    const result = await Wa.send({ files: [studio.sendFile], text: caption, target, title: studio.spec.title || "" });
     showHint(Wa.resultMessage(result, target));
     if (result.mode !== "cancelled" && result.mode !== "needs-tap" && send.onSent) {
       try { send.onSent(result, target); } catch (error) { /* marking never blocks a send */ }

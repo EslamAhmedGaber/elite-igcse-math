@@ -1896,7 +1896,7 @@
   async function ensurePaperEngine() {
     if (root.ElitePaperPrint && root.ElitePaperPrint.open) return true;
     try {
-      await loadScript("paper-print.js?v=20261128w", "asg-paper-print");
+      await loadScript("paper-print.js?v=20261128x", "asg-paper-print");
     } catch (error) { return false; }
     return Boolean(root.ElitePaperPrint && root.ElitePaperPrint.open);
   }

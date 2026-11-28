@@ -246,7 +246,8 @@
   function captionFor(targetLabel) {
     const files = selectedFiles();
     const names = files.map((f) => f.label).join(" + ");
-    const links = files.filter((f) => !state.ready.get(f.kind)).map((f) => `${f.label}: ${absolute(f.href)}`);
+    const direct = !root.EliteWaSend || root.EliteWaSend.getMode() === "direct";
+    const links = direct ? [] : files.filter((f) => !state.ready.get(f.kind)).map((f) => `${f.label}: ${absolute(f.href)}`);
     const who = state.ctx.studentName || "";
     const lines = [
       `📘 ${state.matched || state.topic}${who && targetLabel !== "group" ? ` — ${who}` : ""}`,
@@ -284,8 +285,7 @@
     const chosen = selectedFiles();
     const waiting = chosen.some((f) => !state.ready.has(f.kind));
     const Wa = root.EliteWaSend;
-    const shareable = chosen.map((f) => state.ready.get(f.kind)).filter(Boolean);
-    const sheet = Wa && Wa.canShareFiles(shareable);
+    const direct = !Wa || Wa.getMode() === "direct";
     if (!files.length) {
       body.innerHTML = `<p class="lt-muted">No notes or classified book was found for <b>${escapeHtml(state.topic)}</b> in the site library.</p>
         <div class="lt-form-actions"><button type="button" class="lt-btn" data-lr-close>Close</button></div>`;
@@ -296,7 +296,7 @@
       <p class="lt-muted">${state.matched && norm(state.matched) !== norm(state.topic) ? `Books for <b>${escapeHtml(state.matched)}</b>. ` : ""}Tick what to send:</p>
       <div class="lr-files">
         ${files.map((f) => {
-          const st = state.chosen.has(f.kind) ? (state.pending.has(f.kind) || !state.ready.has(f.kind) ? "Preparing…" : state.ready.get(f.kind) ? `PDF ready · ${Math.max(1, Math.round(state.ready.get(f.kind).size / 1024))} KB` : "Sent as a link") : "";
+          const st = state.chosen.has(f.kind) ? (state.pending.has(f.kind) || !state.ready.has(f.kind) ? "Preparing…" : state.ready.get(f.kind) ? `PDF ready · ${Math.max(1, Math.round(state.ready.get(f.kind).size / 1024))} KB` : direct ? "PDF - downloads when you send" : "The share window cannot attach this book (stored on GitHub) - it goes as a link. Choose \"Open the chat directly\" to send it as a PDF.") : "";
           return `<label class="lt-checkline lr-file"><input type="checkbox" data-lr-kind="${f.kind}" ${state.chosen.has(f.kind) ? "checked" : ""}>
             <span><b>${escapeHtml(f.label)}</b>${f.pages ? ` <small>${f.pages} pages</small>` : ""} <a href="${escapeHtml(absolute(f.href))}" target="_blank" rel="noopener">open</a></span>
             <small class="lr-state">${escapeHtml(st)}</small></label>`;
@@ -306,10 +306,7 @@
         ${targets.map((t) => `<button type="button" class="lt-btn ${t.kind === "group" ? "is-gold" : t.kind === "phone" ? "is-primary" : ""}" data-lr-send="${escapeHtml(t.key)}" ${waiting || !chosen.length ? "disabled" : ""}>${waiting ? "Preparing PDFs…" : escapeHtml(t.label)}</button>`).join("")}
         <button type="button" class="lt-btn" data-lr-close>Close</button>
       </div>
-      <p class="lt-muted lr-how">${sheet && !state.forceFallback
-        ? "Your device's share window opens with the PDFs attached - choose WhatsApp, then the chat. The message is attached too."
-        : "The PDFs download, the message is copied, and the WhatsApp chat opens (the group link when saved) - drag the PDFs in and paste."}</p>
-      ${sheet ? `<label class="lt-checkline lr-alt"><input type="checkbox" data-lr-fallback ${state.forceFallback ? "checked" : ""}> WhatsApp is not in the share window - download the PDFs and open the chat instead</label>` : ""}
+      ${Wa ? Wa.modeControlHtml("lrMode") : ""}
       <p class="lt-muted" id="lrHint" aria-live="polite"></p>`;
   }
 
@@ -318,9 +315,11 @@
     if (!state || !Wa) return;
     const target = Wa.targets(state.ctx).find((t) => t.key === key);
     if (!target) return;
-    const files = selectedFiles().map((f) => state.ready.get(f.kind)).filter(Boolean);
+    const chosen = selectedFiles();
+    const files = chosen.map((f) => state.ready.get(f.kind)).filter(Boolean);
+    const links = chosen.filter((f) => !state.ready.get(f.kind)).map((f) => ({ href: absolute(f.href), name: fileName(f) }));
     const text = captionFor(target.kind);
-    const result = await Wa.send({ files, text, target, title: state.matched || state.topic, forceFallback: Boolean(state.forceFallback) });
+    const result = await Wa.send({ files, links, text, target, title: state.matched || state.topic });
     const hint = modal.querySelector("#lrHint");
     if (hint) hint.textContent = Wa.resultMessage(result, target);
     if (result.mode !== "cancelled" && state.ctx.toast) state.ctx.toast(`Sent: ${state.matched || state.topic}`);
@@ -343,8 +342,8 @@
   }
 
   document.addEventListener("change", (event) => {
-    if (event.target.closest("[data-lr-fallback]") && state) {
-      state.forceFallback = event.target.checked;
+    if (event.target.closest("[data-wa-mode]") && state && modal && modal.contains(event.target)) {
+      if (root.EliteWaSend) root.EliteWaSend.setMode(event.target.value);
       renderBody();
       return;
     }
