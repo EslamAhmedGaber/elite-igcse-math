@@ -39,8 +39,8 @@
       await root.EliteRuntime.loadScript("topic-normalizer.js?v=20261127a", { id: "eliteExamTopicNormalizer" });
     }
     if (!ialCourse && !baccalaureate && (pathway === "modular" || root.ELITE_PATHWAY?.mode === "modular")) {
-      await root.EliteRuntime.loadScript("data/modular-v7-lessons.js?v=1", { id: "examV7Lessons" });
-      await root.EliteRuntime.loadScript("modular-v7-bank.js?v=1", { id: "examV7Bank" });
+      await root.EliteRuntime.loadScript("data/modular-v7-lessons.js?v=20261128", { id: "examV7Lessons" });
+      await root.EliteRuntime.loadScript("modular-v7-bank.js?v=20261128", { id: "examV7Bank" });
     }
     await root.EliteRuntime.loadScript("exam.js?v=20261127v7", { id: "eliteExamApp" });
     setLoading(false);
