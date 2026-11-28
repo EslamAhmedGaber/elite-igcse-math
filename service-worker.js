@@ -33,7 +33,7 @@
  *     unregisters the worker and clears caches from the page side.
  */
 
-const SW_VERSION = "v201-tracker-direct-group";
+const SW_VERSION = "v202-tracker-group-dates";
 const SHELL_CACHE = "elite-igcse-shell-" + SW_VERSION;
 const RUNTIME_CACHE = "elite-igcse-runtime-" + SW_VERSION;
 const CURRENT_CACHES = [SHELL_CACHE, RUNTIME_CACHE];

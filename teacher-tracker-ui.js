@@ -376,6 +376,9 @@
           groupName: s.groupName || "",
           enrolled: Boolean(sDoc),
           topics: Object.keys((sDoc && sDoc.ticks) || {}),
+          /* lesson date per topic - the group question plan weights the
+             newest lessons by these (without them every topic ties). */
+          topicDates: Object.fromEntries(Object.entries((sDoc && sDoc.ticks) || {}).map(([topic, tick]) => [topic, (tick && tick.date) || ""])),
           todayTopics: Core.topicsTickedOn((sDoc && sDoc.ticks) || {}, Core.cairoToday())
         };
       });
