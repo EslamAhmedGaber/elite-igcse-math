@@ -1407,6 +1407,53 @@
     return `https://wa.me/${digits}?text=${encodeURIComponent(text)}`;
   }
 
+  /* PDF sending (wa-send.js + paper-print.js send bar). The PDF is the
+     student copy in the mock-exam design; targets are the saved WhatsApp
+     group link and the student's own numbers. */
+  function pdfTargets(ctx, record) {
+    const Wa = root.EliteWaSend;
+    const share = (ctx && ctx.share) || null;
+    if (!Wa || !share) return [];
+    if (isGroupRecord(record)) {
+      const groupName = record.audience.groupName;
+      const link = share.groupLinkFor ? share.groupLinkFor(groupName) : "";
+      return Wa.targets({ groupName, groupLink: link, phones: [] });
+    }
+    return Wa.targets(share.sendTargets || { studentName: ctx.name, phones: [] });
+  }
+
+  function pdfCaption(ctx, record, target) {
+    const v = shareValues(ctx, record, "");
+    const what = record && record.origin === "session" ? "واجب الحصة" : "الـ assignment";
+    if (target && target.kind === "phone") {
+      return `أهلاً ${v.student}، ده ${what} بتاعك لمادة ${v.course} — المواضيع: ${v.topics}. الملف PDF مرفق، حلّه وابعتهولي.`;
+    }
+    return `${what} — ${v.student}${v.group && v.group !== v.student ? ` (جروب ${v.group})` : ""} — ${v.course} — المواضيع: ${v.topics}. الملف PDF مرفق.`;
+  }
+
+  function sendConfigFor(ctx, record) {
+    const targets = pdfTargets(ctx, record);
+    if (!targets.length) return null;
+    return {
+      targets,
+      caption: (target) => pdfCaption(ctx, record, target),
+      onSent: () => {
+        const share = ctx.share || {};
+        if (!share.markSent) return;
+        try {
+          const pending = share.markSent(record);
+          if (pending && pending.catch) pending.catch(() => {});
+        } catch (error) { /* marking never blocks a send */ }
+      }
+    };
+  }
+
+  async function sendAsPdf(ctx, record) {
+    closeModal();
+    const ok = await openStudio(ctx, record, "student", undefined, ctx);
+    if (!ok && ctx.toast) ctx.toast("The exam-paper engine could not load - use Copy link instead.", "error");
+  }
+
   function openSharePanel(ctx, record) {
     ensureChrome();
     const share = ctx.share || {};
@@ -1421,8 +1468,16 @@
     const studentTpl = ACore && ACore.templateOrDefault ? ACore.templateOrDefault(settings, "student") : "";
     const modal = document.getElementById("asgModal");
     document.getElementById("asgModalTitle").textContent = `Share assignment - ${group ? record.audience.groupName : ctx.name}`;
+    const pdfTo = pdfTargets(ctx, record).filter((t) => t.kind !== "any");
     document.getElementById("asgModalBody").innerHTML = `
-      <p class="lt-muted">Anyone with this link can open the student copy - questions only, no solutions. The page has a Print / Save-as-PDF button.</p>
+      <div class="asg-pdf-send">
+        <p><b>Send the PDF</b> &mdash; the student copy in the mock-exam paper design, attached straight to WhatsApp.</p>
+        <p class="lt-muted">${pdfTo.length ? `Goes to: ${pdfTo.map((t) => escapeHtml(t.label.replace(/^Send to /, ""))).join(" &middot; ")}` : `No WhatsApp group link or number is saved${group ? " for this group" : ` for ${escapeHtml(ctx.name)}`} - you can still pick the chat yourself. Save the group link once in Edit student and it is used every time.`}</p>
+        <button type="button" class="lt-btn is-gold" id="asgSendPdf">&#128206; Send as PDF</button>
+      </div>
+      <details class="asg-link-send">
+        <summary>Or send a link instead</summary>
+      <p class="lt-muted">Anyone with this link can open the student copy - questions only, no solutions. The page opens in the same exam-paper design, with Download PDF.</p>
       <p class="asg-share-link">${escapeHtml(url)}</p>
       <div class="asg-share-actions">
         ${phones.map((entry) => `
@@ -1432,9 +1487,11 @@
         ${ownerDigits ? `<a class="lt-btn is-primary" target="_blank" rel="noopener" href="${escapeHtml(waLink(ownerDigits, forwardText))}">WhatsApp to me (forward to the group)</a>` : ""}
         ${ACore && forwardTpl && !ACore.templateHasLink(forwardTpl) ? `<p class="lt-warn">Your forward template does not include {link} - the message will go out without the link. Add {link} in Sharing settings.</p>` : ""}
         <button type="button" class="lt-btn" id="asgShareCopy">Copy link</button>
-        <button type="button" class="lt-btn" id="asgShareClose">Close</button>
-      </div>`;
+      </div>
+      </details>
+      <div class="lt-form-actions"><button type="button" class="lt-btn" id="asgShareClose">Close</button></div>`;
     modal.hidden = false;
+    document.getElementById("asgSendPdf").addEventListener("click", () => sendAsPdf(ctx, record));
     document.getElementById("asgShareClose").addEventListener("click", closeModal);
     document.getElementById("asgShareCopy").addEventListener("click", async (event) => {
       const btn = event.currentTarget;
@@ -1839,12 +1896,12 @@
   async function ensurePaperEngine() {
     if (root.ElitePaperPrint && root.ElitePaperPrint.open) return true;
     try {
-      await loadScript("paper-print.js?v=20261127v7", "asg-paper-print");
+      await loadScript("paper-print.js?v=20261128w", "asg-paper-print");
     } catch (error) { return false; }
     return Boolean(root.ElitePaperPrint && root.ElitePaperPrint.open);
   }
 
-  async function openStudio(ctx, record, variant, layoutKey) {
+  async function openStudio(ctx, record, variant, layoutKey, shareCtx) {
     let index;
     try {
       index = await loadBank(ctx.courseId);
@@ -1862,9 +1919,11 @@
       if (ctx.toast) ctx.toast("None of this assignment's questions are in the current question bank.", "error");
       return true;
     }
+    const send = shareCtx && shareCtx.share ? sendConfigFor(shareCtx, record) : null;
     root.ElitePaperPrint.open(spec, {
       version: variant === "teacher" ? "solutions" : "student",
-      layout: Core.effectiveLayoutKey(record, layoutKey)
+      layout: Core.effectiveLayoutKey(record, layoutKey),
+      ...(send ? { send } : {})
     });
     return true;
   }
@@ -1872,7 +1931,7 @@
   async function openPreview(ctx, record, variant, shareCtx, layoutKey) {
     /* The mock-exam engine first; the old in-page viewer below stays
        only as a fallback if paper-print.js cannot load. */
-    if (await openStudio(ctx, record, variant, layoutKey)) return;
+    if (await openStudio(ctx, record, variant, layoutKey, shareCtx || ctx)) return;
     ensureChrome();
     let index;
     try {

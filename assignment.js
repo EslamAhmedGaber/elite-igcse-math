@@ -78,7 +78,7 @@
     stateEl.hidden = true;
     paperEl.hidden = false;
     printBtn.disabled = false;
-    printBtn.textContent = "Print / Download PDF";
+    printBtn.textContent = "Open the exam paper · Download PDF";
     document.title = `Assignment${model.name ? ` for ${model.name}` : ""} | Elite IGCSE`;
   }
 
@@ -106,6 +106,10 @@
     }
     current = { model, index, decoded };
     render(model);
+    /* Open straight in the mock-exam paper design (same A4 engine,
+       cover and Download PDF as the mocks). The plain copy below stays
+       as the fallback and behind the paper when it is closed. */
+    openPaperEngine().catch(() => {});
   }
 
   /* Print once question images have settled, like the tracker

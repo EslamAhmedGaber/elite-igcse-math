@@ -45,6 +45,7 @@
     report: null,
     editing: false,
     noteOpen: new Set(),
+    justTicked: null, // { studentId, course, topic } - the "send the notes" bar after a tick
     logStudent: "",
     logCourse: "",
     dupCheckedFor: null
@@ -310,6 +311,7 @@
       ${view.editing ? editFormHtml(student) : ""}
       ${unmatched.length ? `<div class="lt-warn"><strong>Unmatched ticks:</strong> ${unmatched.map((name) => escapeHtml(name)).join(", ")} &mdash; these saved lessons no longer match the ${escapeHtml(COURSES[view.course].label)} topic list, so they are kept safe but not shown as rows. Nothing was deleted.</div>` : ""}
       ${next ? `<div class="lt-nextbar"><span>Next lesson: <b>${escapeHtml(next)}</b></span><button type="button" class="lt-btn is-small" data-jump-next>Jump to it</button></div>` : `<div class="lt-nextbar is-done"><span><b>Course complete.</b> Every lesson in ${escapeHtml(COURSES[view.course].label)} is ticked for ${escapeHtml(student.name)}.</span></div>`}
+      ${justTickedBarHtml(student, ticks)}
       <div id="ltAssignSection"></div>
       ${chapters.map((chapter) => {
         const doneCount = chapter.topics.filter((topic) => ticks[topic.name]).length;
@@ -382,6 +384,11 @@
     return {
       phones: Core.sanitizePhones(student.phones, student.phone),
       groupName: student.groupName || "",
+      /* PDF sending (wa-send.js): the saved WhatsApp group link and
+         the student's numbers as digits. groupLinkFor(name) finds the
+         link of any group by name (group assignments). */
+      sendTargets: sendTargetsFor(student),
+      groupLinkFor: (name) => groupLinkFor({ groupName: name || "" }),
       members,
       groupRecords,
       settings: () => (view.dataset && view.dataset.settings) || {},
@@ -528,6 +535,50 @@
     </form>`;
   }
 
+  /* "Send the notes + classified" (lesson-resources.js). The bar shows
+     right after a lesson is ticked; every ticked row also has a chip. */
+  function justTickedBarHtml(student, ticks) {
+    const jt = view.justTicked;
+    if (!jt || jt.studentId !== student.id || jt.course !== view.course || !ticks[jt.topic] || !window.EliteLessonResources) return "";
+    return `<div class="lt-sendbar" role="status">
+      <span>&#10003; <b>${escapeHtml(jt.topic)}</b> done. Send ${escapeHtml(student.name)} the notes + classified for this lesson now?</span>
+      <span class="lt-sendbar-actions">
+        <button type="button" class="lt-btn is-gold is-small" data-res="${escapeHtml(jt.topic)}">&#128206; Send notes + classified</button>
+        <button type="button" class="lt-btn is-small" data-res-dismiss aria-label="Hide this bar">Not now</button>
+      </span>
+    </div>`;
+  }
+
+  /* The student's own WhatsApp group link, or one saved on another
+     student with the same group name. */
+  function groupLinkFor(student) {
+    if (student.groupWhatsApp) return student.groupWhatsApp;
+    const key = Core.normName(student.groupName || "");
+    if (!key || !view.dataset) return "";
+    const other = Object.values(view.dataset.students || {}).find((s) => !s.archived && s.groupWhatsApp && Core.normName(s.groupName || "") === key);
+    return other ? other.groupWhatsApp : "";
+  }
+
+  function sendTargetsFor(student) {
+    return {
+      studentName: student.name,
+      groupName: student.groupName || "",
+      groupLink: groupLinkFor(student),
+      phones: Core.sanitizePhones(student.phones, student.phone).map((entry) => ({ number: Core.normalisePhone(entry.number), label: entry.label }))
+    };
+  }
+
+  function openLessonResources(student, topic) {
+    if (!window.EliteLessonResources) return;
+    window.EliteLessonResources.open({
+      ...sendTargetsFor(student),
+      courseId: view.course,
+      topic,
+      courseTopics: view.topics.map((t) => t.name),
+      toast
+    });
+  }
+
   function rowHtml(topic, tick) {
     const ticked = Boolean(tick);
     const noteOpen = view.noteOpen.has(topic.name);
@@ -550,6 +601,7 @@
       <div class="lt-row-actions">
         <button type="button" class="lt-chip${tick.hw ? " is-on" : ""}" data-hw="${escapeHtml(topic.name)}" title="Homework set">${tick.hw ? "HW set" : "Set HW"}</button>
         <button type="button" class="lt-chip" data-note-toggle="${escapeHtml(topic.name)}">${noteOpen ? "Close" : "Note"}</button>
+        <button type="button" class="lt-chip is-send" data-res="${escapeHtml(topic.name)}" title="Send this lesson's notes and classified PDFs on WhatsApp">&#128206; Notes + classified</button>
       </div>` : ""}
     </div>`;
   }
@@ -1060,7 +1112,20 @@
         const next = Core.nextTopic(view.topics, (doc && doc.ticks) || {});
         if (!next) return;
         const ok = await guard(() => T.api.setTick(student.id, view.course, next, { date: Core.cairoToday() }), `Ticked: ${next}`);
-        if (ok !== undefined) await refresh();
+        if (ok !== undefined) {
+          view.justTicked = { studentId: student.id, course: view.course, topic: next };
+          await refresh();
+        }
+        return;
+      }
+      const resBtn = event.target.closest("[data-res]");
+      if (resBtn && student) {
+        openLessonResources(student, resBtn.dataset.res);
+        return;
+      }
+      if (event.target.closest("[data-res-dismiss]")) {
+        view.justTicked = null;
+        renderDetail();
         return;
       }
       if (event.target.closest("[data-jump-next]") && student) {
@@ -1142,7 +1207,10 @@
         const topic = tickBox.dataset.tick;
         if (tickBox.checked) {
           const ok = await guard(() => T.api.setTick(student.id, view.course, topic, { date: Core.cairoToday() }), `Ticked: ${topic}`);
-          if (ok !== undefined) await refresh();
+          if (ok !== undefined) {
+            view.justTicked = { studentId: student.id, course: view.course, topic };
+            await refresh();
+          }
         } else {
           const tick = ((currentDoc() || {}).ticks || {})[topic] || {};
           if ((tick.note || tick.hw) && !window.confirm("This lesson has a note or homework flag saved. Remove the tick anyway?")) {

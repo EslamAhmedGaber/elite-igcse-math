@@ -29,7 +29,7 @@
 (function (root) {
   "use strict";
 
-  const VERSION = "20261105a";
+  const VERSION = "20261128w";
   const MM = 96 / 25.4;
   const SCRIPT_SRC = document.currentScript?.src || "";
   const assetUrl = (name) => new URL(`${name}?v=${VERSION}`, SCRIPT_SRC || document.baseURI).href;
@@ -1343,7 +1343,12 @@
     report: null,
     lastFocus: null,
     onClose: null,
-    exportJob: null
+    exportJob: null,
+    send: null,        // { targets, caption, onSent } - WhatsApp PDF sending (wa-send.js)
+    sendFile: null,    // the prepared PDF File for the current render
+    sendToken: -1,
+    sendBusy: false,
+    sendFallback: false
   };
 
   function ensureStudioCss() {
@@ -1386,6 +1391,7 @@
           <button type="button" class="eps-close" data-act="close" aria-label="Close print preview">Close</button>
         </div>
       </div>
+      <div class="eps-send" data-send hidden></div>
       <p class="eps-hint" data-hint>A4 portrait, 210 &times; 297 mm. In the print dialog keep <b>Scale: Default (100%)</b>; for a PDF choose <b>Destination: Save as PDF</b>.</p>
       <div class="eps-stage">
         <iframe class="eps-frame" title="A4 paper preview"></iframe>
@@ -1405,7 +1411,13 @@
       if (!button || button.disabled) return;
       if (button.dataset.act === "close") close();
       else if (button.dataset.act === "download") downloadPdf();
+      else if (button.dataset.act === "send") sendPdf(button.dataset.target);
       else printFrame(button.dataset.act);
+    });
+    overlay.addEventListener("change", (event) => {
+      if (!event.target.matches("[data-send-fallback]")) return;
+      studio.sendFallback = event.target.checked;
+      renderSend();
     });
     overlay.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
@@ -1487,6 +1499,9 @@
 
   async function rerender() {
     const token = ++studio.token;
+    studio.sendFile = null;
+    studio.sendToken = -1;
+    renderSend();
     setBusy("Preparing A4 pages...");
     try {
       const report = await renderPaper(studio.frame, studio.spec, { ...studio.opts }, () => token === studio.token, (message) => {
@@ -1499,6 +1514,7 @@
         return;
       }
       setReady(report);
+      if (studio.send) prepareSendPdf();
       if (studio.autoDownload) {
         studio.autoDownload = false;
         downloadPdf();
@@ -1688,7 +1704,9 @@
     button.disabled = true;
     root.ElitePaperPrint.lastPrint = { kind: "download", at: Date.now(), options: { ...studio.opts }, method: "pdf" };
     try {
-      const blob = await buildPdfBlob((page, total) => { button.textContent = `Creating PDF ${page}/${total}...`; });
+      const blob = studio.sendFile && studio.sendToken === token
+        ? studio.sendFile
+        : await buildPdfBlob((page, total) => { button.textContent = `Creating PDF ${page}/${total}...`; });
       if (token !== studio.token) return;
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
@@ -1710,6 +1728,73 @@
     }
   }
 
+  /* ---- Send the PDF on WhatsApp (wa-send.js) ---------------------------
+     When the caller passes options.send, the PDF is built as soon as the
+     pages are ready, so the Send click opens the share window at once
+     (browsers only allow it straight after a click). */
+  function renderSend() {
+    const wrap = studio.overlay && studio.overlay.querySelector("[data-send]");
+    if (!wrap) return;
+    const send = studio.send;
+    const Wa = root.EliteWaSend;
+    if (!send || !Wa || !send.targets || !send.targets.length) {
+      wrap.hidden = true;
+      wrap.innerHTML = "";
+      return;
+    }
+    const solutions = studio.opts.version === "solutions";
+    const ready = !solutions && Boolean(studio.sendFile && studio.sendToken === studio.token);
+    const sheet = ready && Wa.canShareFiles([studio.sendFile]);
+    const status = solutions ? "Switch Copy to Student copy to send - the worked solutions are never sent from here." : ready
+      ? `PDF ready · ${Math.max(1, Math.round(studio.sendFile.size / 1024))} KB`
+      : studio.sendBusy ? studio.sendBusy : "Preparing the PDF...";
+    wrap.hidden = false;
+    wrap.innerHTML = `
+      <span class="eps-send-label"><b>Send the PDF on WhatsApp</b><small>${escapeHtml(status)}</small></span>
+      <span class="eps-send-buttons">${send.targets.map((t) => `<button type="button" data-act="send" data-target="${escapeHtml(t.key)}" class="${t.kind === "group" ? "is-gold" : t.kind === "phone" ? "is-green" : ""}" ${ready ? "" : "disabled"}>${escapeHtml(t.label)}</button>`).join("")}</span>
+      ${sheet ? `<label class="eps-send-alt"><input type="checkbox" data-send-fallback ${studio.sendFallback ? "checked" : ""}> WhatsApp not in the share window? Download + open the chat instead</label>` : ""}`;
+  }
+
+  async function prepareSendPdf() {
+    if (!studio.send || !studio.ready || studio.exportJob || studio.opts.version === "solutions") return;
+    const token = studio.token;
+    studio.sendBusy = "Preparing the PDF...";
+    renderSend();
+    try {
+      const blob = await buildPdfBlob((page, total) => {
+        if (token !== studio.token) return;
+        studio.sendBusy = `Preparing the PDF ${page}/${total}...`;
+        renderSend();
+      });
+      if (token !== studio.token) return;
+      const name = `${fileNameFor(studio.spec.fileName || "Elite-Mathematics-paper", studio.opts, studio.spec)}.pdf`;
+      studio.sendFile = new File([blob], name, { type: "application/pdf" });
+      studio.sendToken = token;
+    } catch (error) {
+      if (error.name !== "AbortError" && token === studio.token) {
+        console.error("[paper-print send]", error);
+        showHint(`${error.message || "The PDF could not be created."} You can still use Download PDF.`);
+      }
+    } finally {
+      studio.sendBusy = false;
+      renderSend();
+    }
+  }
+
+  async function sendPdf(key) {
+    const send = studio.send;
+    const Wa = root.EliteWaSend;
+    if (!send || !Wa || !studio.sendFile || studio.sendToken !== studio.token || studio.opts.version === "solutions") return;
+    const target = send.targets.find((t) => t.key === key);
+    if (!target) return;
+    const caption = typeof send.caption === "function" ? send.caption(target) : String(send.caption || "");
+    const result = await Wa.send({ files: [studio.sendFile], text: caption, target, title: studio.spec.title || "", forceFallback: studio.sendFallback });
+    showHint(Wa.resultMessage(result, target));
+    if (result.mode !== "cancelled" && result.mode !== "needs-tap" && send.onSent) {
+      try { send.onSent(result, target); } catch (error) { /* marking never blocks a send */ }
+    }
+  }
+
   function showHint(message) {
     const hint = studio.overlay.querySelector("[data-hint]");
     if (hint) hint.textContent = message;
@@ -1728,11 +1813,13 @@
       ...spec,
       fileName: spec.fileName || slug(["Elite", spec.courseCode, spec.title, spec.testCode].filter(Boolean).join(" ")) || "Elite-Mathematics-paper"
     };
-    const { autoDownload: _auto, onClose: _onClose, ...chosen } = options;
+    const { autoDownload: _auto, onClose: _onClose, send: _send, ...chosen } = options;
     studio.opts = { ...DEFAULT_OPTIONS, ...(studio.remembered || {}), ...chosen };
     if (spec.allowSolutions === false) studio.opts.version = "student";
     studio.onClose = options.onClose || spec.onClose || null;
     studio.autoDownload = Boolean(options.autoDownload);
+    studio.send = options.send && options.send.targets && options.send.targets.length ? options.send : null;
+    studio.sendFallback = false;
     studio.lastFocus = document.activeElement;
     studio.overlay.hidden = false;
     showHint(DEFAULT_HINT);
@@ -1750,6 +1837,9 @@
     studio.token += 1;
     studio.remembered = { layout: studio.opts.layout, ink: studio.opts.ink, lines: studio.opts.lines, placement: studio.opts.placement };
     studio.overlay.hidden = true;
+    studio.send = null;
+    studio.sendFile = null;
+    renderSend();
     document.documentElement.classList.remove("eps-open");
     studio.frame.srcdoc = "<!doctype html><title>closed</title>";
     const callback = studio.onClose;

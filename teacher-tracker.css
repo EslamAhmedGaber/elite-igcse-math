@@ -900,3 +900,38 @@
   .lt-mock-card p b { color: #fff; }
   .lt-mock-card .lt-btn.is-large { flex: none; }
 }
+
+/* ---- Send PDFs on WhatsApp (2026-11-28) ------------------------------
+   Lesson "notes + classified" bar/chip/modal and the assignment share
+   panel's PDF block. */
+.lt-sendbar {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 10px 14px; margin: 10px 0 12px; padding: 12px 14px;
+  border: 1px solid var(--lt-gold, #c9a24a); border-left-width: 5px; border-radius: 12px;
+  background: var(--lt-gold-soft, #fbf3df); color: var(--lt-navy, #16305c);
+}
+.lt-sendbar-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.lt-chip.is-send { border-color: var(--lt-gold, #c9a24a); color: var(--lt-navy, #16305c); background: var(--lt-gold-soft, #fbf3df); }
+.lt-chip.is-send:hover { background: var(--lt-gold, #c9a24a); color: #fff; }
+.lr-modal { max-width: 560px; }
+.lr-files { display: grid; gap: 8px; margin: 10px 0 4px; }
+.lr-file {
+  display: grid; grid-template-columns: auto 1fr; align-items: start; gap: 2px 10px;
+  padding: 10px 12px; border: 1px solid var(--ux-line, #dfe5ef); border-radius: 10px; background: #fff;
+}
+.lr-file small { color: var(--ux-muted, #5b6378); font-weight: 600; }
+.lr-file a { margin-left: 6px; font-size: 12.5px; }
+.lr-state { grid-column: 2; }
+.lr-how, .lr-alt { font-size: 12.5px; }
+.lr-alt { margin-top: 6px; }
+.asg-pdf-send {
+  padding: 12px 14px; margin-bottom: 12px; border-radius: 12px;
+  background: var(--lt-gold-soft, #fbf3df); border: 1px solid var(--lt-gold, #c9a24a);
+}
+.asg-pdf-send p { margin: 0 0 8px; }
+.asg-pdf-send .lt-btn { width: 100%; text-align: center; }
+.asg-link-send { margin: 6px 0 10px; }
+.asg-link-send summary { cursor: pointer; font-weight: 700; color: var(--lt-navy, #16305c); }
+@media (max-width: 600px) {
+  .lt-sendbar-actions, .lt-sendbar-actions .lt-btn { width: 100%; }
+}
